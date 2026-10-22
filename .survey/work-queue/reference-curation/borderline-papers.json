@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T14:50:45+00:00",
-  "record_count": 5285,
+  "updated_at": "2026-10-22T15:36:22+00:00",
+  "record_count": 5291,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81972,11 +81972,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2410.03051",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.03051",
         "arXiv:2410.03051"
       ],
-      "reason": "一次要旨は動画キャプション生成とVDC評価ベンチマークを中心とするが、視覚トークンの統合により入力トークン数を減らし、品質低下を小さく抑える設計も含む。推論時のトークン削減という関連要素がある一方、汎用LLM配信基盤・GPUカーネル・処理量を直接評価する論文ではないため境界扱いとする。",
+      "reason": "一次要旨は動画詳細キャプション生成モデルAuroraCapと評価ベンチマークVDCを提案し、動画トークン統合により入力視覚トークンを減らしてオーバーヘッドを抑える。トークン削減はマルチモーダル推論費用に接するが、中心は動画キャプション品質・指標で、汎用LLMランタイムやキャッシュ管理の研究ではないため保留。",
       "first_checked_at": "2026-10-21T15:27:51+00:00",
-      "last_checked_at": "2026-10-22T04:51:39+00:00",
+      "last_checked_at": "2026-10-22T15:36:17+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
@@ -82006,6 +82007,90 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "From Prompt to Service: An SLM-Based Agent Orchestration Gateway for AI-Driven Virtual Worlds"
+    },
+    "arXiv:2402.12289": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.12289",
+        "arXiv:2402.12289"
+      ],
+      "reason": "一次要旨は視覚言語モデルを用いた自動運転のシーン理解・階層的計画、従来の車載処理系と組み合わせたDriveVLM-Dualを提案し、実車での推論実行にも言及する。実時間性と重い推論の組合せというシステム接点はあるが、目的と評価は運転タスクであり汎用LLMサービング・GPUメモリ階層・KVキャッシュ最適化そのものではないため関連性保留。",
+      "first_checked_at": "2026-10-22T15:36:14+00:00",
+      "last_checked_at": "2026-10-22T15:36:14+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+    },
+    "arXiv:2011.00241": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2011.00241",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2011.00241",
+        "arXiv:2011.00241"
+      ],
+      "reason": "一次要旨は深層ネットワーク枝刈り150件超の研究を大きさ・クラスタ・感度に整理するレビューで、AlexNet、ResNet、DenseNet、VGGの画像分類精度と圧縮率が主要比較対象。圧縮手法一般はLLM量子化・剪定の背景知識になるが、LLM固有推論・LLMサービングでの実装検証を扱わないため境界として保留。",
+      "first_checked_at": "2026-10-22T15:36:16+00:00",
+      "last_checked_at": "2026-10-22T15:36:16+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Methods for Pruning Deep Neural Networks"
+    },
+    "arXiv:2512.04678": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.04678",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.04678",
+        "arXiv:2512.04678"
+      ],
+      "reason": "一次要旨は動画拡散モデルのストリーミング生成でsliding-window注意とEMA-Sinkによる固定長トークン更新を使い、単一H100で23.1FPSの動画生成を報告する。状態維持・注意窓の制御は推論メモリ研究に接するが、主対象は動画生成拡散モデルと学習蒸留であり自己回帰LLMのKVキャッシュ/サービング改善は直接評価されない。",
+      "first_checked_at": "2026-10-22T15:36:18+00:00",
+      "last_checked_at": "2026-10-22T15:36:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
+    },
+    "arXiv:2512.08186": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.08186",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.08186",
+        "arXiv:2512.08186"
+      ],
+      "reason": "一次要旨はVLMの高水準経路計画と軽量拡散Transformerポリシーを二系統に分け、実時間の視覚言語ナビゲーションを改善する。モデル分離・遅延抑制の実行系接点はあるが、主要成果はロボットの経路計画と制御であり汎用LLM推論エンジンの設計ではない。",
+      "first_checked_at": "2026-10-22T15:36:20+00:00",
+      "last_checked_at": "2026-10-22T15:36:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+    },
+    "arXiv:2208.00406": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2208.00406",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2208.00406",
+        "arXiv:2208.00406"
+      ],
+      "reason": "一次要旨は機械学習モデルの学習・推論のエネルギー消費と地域別CO2排出量を計測するPythonパッケージeco2AIを提案する。LLM推論運用のエネルギー計測にも間接利用できるが、LLM特有の推論効率化や実行・スケジューリング機構を開発・評価する論文ではないため収録優先度が低い。",
+      "first_checked_at": "2026-10-22T15:36:20+00:00",
+      "last_checked_at": "2026-10-22T15:36:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI"
+    },
+    "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": [
+        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+        "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945"
+      ],
+      "reason": "OSDI 2018一次要旨はCPU・メモリ・ストレージをネットワーク接続コンポーネントとして分離し、splitkernelに基づき管理する分散OSを提案する。LLMの階層メモリ・資源分離基盤に応用可能な周辺技術だが、2018年の原論文にLLMやLLM推論の測定・設計はなく、現行サーベイへの直接適合は限定的。",
+      "first_checked_at": "2026-10-22T15:36:22+00:00",
+      "last_checked_at": "2026-10-22T15:36:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
     }
   }
 }

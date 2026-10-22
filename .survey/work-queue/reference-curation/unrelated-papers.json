@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T14:50:47+00:00",
-  "record_count": 12449,
+  "updated_at": "2026-10-22T15:36:22+00:00",
+  "record_count": 12443,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162871,11 +162871,11 @@
         "DOI:10.48550/arxiv.2403.09898",
         "arXiv:2403.09898"
       ],
-      "reason": "多変量時系列の長期予測精度を上げるため、4つのMambaを組み合わせて時間スケールとチャネル依存を扱うモデル。省メモリ性・線形スケーリングには触れるが、最終用途は時系列予測であり、LLM推論ランタイムやサービングの技術的改善は要旨に存在しない。",
+      "reason": "一次要旨はMamba状態空間モデル4系統を使った長期多変量時系列予測で、予測精度・線形スケーラビリティ・小メモリフットプリントを評価する。対象が時系列予測でありLLM生成推論のサービング、状態キャッシュ、GPU実行への直接適用を示さない。",
       "first_checked_at": "2026-10-10T21:46:55+00:00",
-      "last_checked_at": "2026-10-21T15:27:55+00:00",
+      "last_checked_at": "2026-10-22T15:36:21+00:00",
       "linked_from": [],
-      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting"
+      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-Term Forecasting"
     },
     "DOI:10.1145/3452296.3472904": {
       "classification": "unrelated",
@@ -162910,9 +162910,9 @@
         "id:arXiv:2301.09474",
         "url:https://arxiv.org/abs/2301.09474"
       ],
-      "reason": "エネルギー制約付き拡散によるグラフ上の表現学習器を提案し、ノード分類、画像・文章の半教師あり分類、時空間予測を評価する。線形計算量の変種を含むが、対象は一般グラフ・表現学習であり、LLMの実行時推論・GPU配信・KVキャッシュ等への適用を要旨で示していない。",
+      "reason": "一次要旨はエネルギー制約付き拡散によるグラフ表現エンコーダDIFFormerを提案し、ノード分類や画像・テキスト分類、時空間予測で評価する。線形計算量のTransformerという表現はあるものの、自己回帰LLMの実行・メモリ管理・配信性能の研究ではない。",
       "first_checked_at": "2026-10-11T00:45:52+00:00",
-      "last_checked_at": "2026-10-22T14:47:09+00:00",
+      "last_checked_at": "2026-10-22T15:36:18+00:00",
       "linked_from": [],
       "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
     },
@@ -163072,15 +163072,16 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2204.13767",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2204.13767",
         "arXiv:2204.13767",
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "一次要旨では多変量時系列予測に特化した三角形のパッチ注意と変数別パラメータで線形計算量を狙う。長系列注意の計算量は関連するが、評価は時系列予測であり、自己回帰LLMの復号、KVキャッシュ、サービング基盤、MoE推論を直接扱わない。",
+      "reason": "一次要旨は多変量時系列予測用の変数別・三角構造の線形注意を提案し、時系列予測精度と処理効率を評価する。注意計算量の一般的低減は参考になるが、研究対象は非LLMの時系列モデルでありLLMデコード・KV管理・LLMサービングへの適用証拠がない。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-22T01:48:55+00:00",
+      "last_checked_at": "2026-10-22T15:36:15+00:00",
       "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
     },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
@@ -163939,9 +163940,9 @@
         "id:arXiv:2303.05511",
         "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "GANの画像生成をLAIONなどの大規模画像データで拡張するGigaGANの研究。一次要旨は512px画像を0.13秒で合成する画像生成モデルの性能を報告するが、LLMのテキスト推論、KVキャッシュ、MoE推論、LLMサービングの高速化機構を扱っていない。",
+      "reason": "一次要旨によればGigaGANはテキストから画像を合成するGANモデルのスケール拡張・高解像度生成・生成速度を対象とする。512px画像0.13秒の推論結果は画像生成モデル固有の性能で、自己回帰LLMの実行基盤、KVキャッシュ、LLMサービング、MoE推論には直接接続しない。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-22T14:47:07+00:00",
+      "last_checked_at": "2026-10-22T15:36:16+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -164633,12 +164634,13 @@
       "canonical_id": "arXiv:2210.13452",
       "identity_tokens": [
         "DOI:10.1109/tpami.2023.3329173",
+        "DOI:10.48550/arxiv.2210.13452",
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "画像認識用MetaFormerのトークン混合器を恒等写像・ランダム行列・深さ方向畳み込み・自己注意に置換し、ImageNet-1K分類精度やStarReLUの演算量を評価する視覚モデル構造の研究。画像分類精度と活性化演算の比較が中心で、LLMの学習・推論基盤、実運用の生成遅延、GPUサービング、KVキャッシュ最適化を扱わない。",
+      "reason": "一次要旨はIdentityFormer、RandFormer、ConvFormer、CAFormerの画像分類精度やStarReLUの演算量削減をImageNet-1Kで示す。主対象は画像認識のモデル構造・学習性能であり、LLM推論サービング、自己回帰デコード、KVキャッシュ、GPU実行システムの新規貢献は確認できない。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-21T21:44:13+00:00",
+      "last_checked_at": "2026-10-22T15:36:22+00:00",
       "linked_from": [],
       "title": "MetaFormer Baselines for Vision"
     },
@@ -164898,20 +164900,6 @@
       "linked_from": [],
       "title": "Overcoming Oscillations in Quantization-Aware Training"
     },
-    "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
-      "classification": "unrelated",
-      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
-      "identity_tokens": [
-        "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
-        "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945",
-        "title:legoos-a-disseminated-distributed-os-for-hardware-resource-disaggregation"
-      ],
-      "reason": "USENIX OSDI 2018の一次要旨では、CPU・メモリ・ストレージをネットワーク接続機器として分離し、各機器上のモニタで管理する分散OS（splitkernel）の設計・評価が主題。実験は汎用OSとしてのLinux相当性能、資源集約、故障率を評価するもので、LLM推論・KVキャッシュ・MoE・LLMサービングの最適化を対象としない。ハードウェア資源分離の一般的背景としては参考になるが、現在のLLM推論技術サーベイの直接収録範囲外。",
-      "first_checked_at": "2026-10-12T13:50:18+00:00",
-      "last_checked_at": "2026-10-22T00:52:48+00:00",
-      "linked_from": [],
-      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
-    },
     "arXiv:2306.08543": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2306.08543",
@@ -164923,20 +164911,6 @@
       "last_checked_at": "2026-10-12T17:45:22+00:00",
       "linked_from": [],
       "title": "MiniLLM: On-Policy Distillation of Large Language Models"
-    },
-    "arXiv:2512.04678": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.04678",
-      "identity_tokens": [
-        "arXiv:2512.04678",
-        "id:arXiv:2512.04678",
-        "url:https://arxiv.org/abs/2512.04678"
-      ],
-      "reason": "報酬付き分布整合蒸留によるストリーミング動画生成の研究であり、動画生成モデルの蒸留・生成品質を主眼とする。LLM推論サービングの実装技術ではない。",
-      "first_checked_at": "2026-10-12T18:49:58+00:00",
-      "last_checked_at": "2026-10-20T13:06:12+00:00",
-      "linked_from": [],
-      "title": "Reward Forcing: Efficient Streaming Video Generation with Rewarded Distribution Matching Distillation"
     },
     "arXiv:1807.08887": {
       "classification": "unrelated",
@@ -168389,9 +168363,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "一次要旨によればPubMedの要旨・全文で学習した27億パラメータの生物医学特化言語モデルを公開し、MedMCQAやMMLU Medical Genetics等の医療QA精度を評価する。小型化の利点は動機として述べるが、学習基盤の並列化・省メモリ化、LLM推論ランタイム、GPUスケジューリング、KVキャッシュの新しいシステム技術を提案・比較していない。",
+      "reason": "一次要旨はPubMed文献で学習した27億パラメータ言語モデルの公開と医療QAにおける微調整・正答精度を評価する。小型化による実行コストの動機はあるが、モデル訓練・領域特化性能が研究の中心で、LLM推論基盤の新しい実装や資源最適化機構は提示していない。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-22T03:46:12+00:00",
+      "last_checked_at": "2026-10-22T15:36:19+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -178696,20 +178670,6 @@
       "linked_from": [],
       "title": "Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs"
     },
-    "arXiv:2011.00241": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2011.00241",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2011.00241",
-        "arXiv:2011.00241",
-        "title:methods for pruning deep neural networks"
-      ],
-      "reason": "原著要旨では150件以上の深層ニューラルネット枝刈り研究を重みの大きさ、クラスタリング、感度分析に分類し、AlexNet・ResNet・DenseNet・VGG等をImageNet/CIFAR10で比較する総説。LLM推論向け圧縮や実行時メモリ・サービング最適化の固有機構・評価は扱わないため、現在の推論システム専門サーベイの収録対象外。",
-      "first_checked_at": "2026-10-16T09:21:25+00:00",
-      "last_checked_at": "2026-10-20T08:45:51+00:00",
-      "linked_from": [],
-      "title": "Methods for Pruning Deep Neural Networks"
-    },
     "DOI:10.1016/j.ress.2025.111891": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1016/j.ress.2025.111891",
@@ -178747,19 +178707,6 @@
       "last_checked_at": "2026-10-16T09:27:36+00:00",
       "linked_from": [],
       "title": "BubbleSpec: Turning Long-Tail Bubbles into Speculative Rollout Drafts for Synchronous Reinforcement Learning"
-    },
-    "arXiv:2402.12289": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2402.12289",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2402.12289",
-        "arXiv:2402.12289"
-      ],
-      "reason": "自動運転向けの視覚言語モデルを用いて道路状況の説明・場面分析・階層的走行計画を構成し、nuScenes、SUP-ADおよび実車で自動運転性能を評価する応用研究。DriveVLM-Dualで従来の運転パイプラインを併用するが、汎用LLMの推論サービング、KVキャッシュ、カーネル、オフロード、分散処理や学習効率を最適化する研究ではない。",
-      "first_checked_at": "2026-10-16T18:54:53+00:00",
-      "last_checked_at": "2026-10-21T21:44:13+00:00",
-      "linked_from": [],
-      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
     },
     "arXiv:2602.22663": {
       "classification": "unrelated",
@@ -178904,18 +178851,6 @@
       "last_checked_at": "2026-10-18T10:00:29+00:00",
       "linked_from": [],
       "title": "Improving Task-Agnostic BERT Distillation with Layer Mapping Search"
-    },
-    "arXiv:2512.08186": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2512.08186",
-      "identity_tokens": [
-        "arXiv:2512.08186"
-      ],
-      "reason": "一次要旨では視覚言語ナビゲーションに対しVLMの大域的ウェイポイント推論と拡散Transformerの局所軌道生成を組み合わせ、ロボットの実時間制御と障害物回避を改善する。推論の遅延に触れるが、LLMサービング、KVキャッシュ、GPU資源配置、一般的なトークン生成最適化を対象としない。",
-      "first_checked_at": "2026-10-18T10:00:30+00:00",
-      "last_checked_at": "2026-10-22T04:51:41+00:00",
-      "linked_from": [],
-      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
     },
     "arXiv:2503.22184": {
       "classification": "unrelated",
@@ -179218,18 +179153,6 @@
       "last_checked_at": "2026-10-20T13:06:19+00:00",
       "linked_from": [],
       "title": "Diversify-verify-adapt: Efficient and Robust Retrieval-Augmented Ambiguous Question Answering"
-    },
-    "arXiv:2208.00406": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2208.00406",
-      "identity_tokens": [
-        "arXiv:2208.00406"
-      ],
-      "reason": "一次要旨では機械学習モデルの学習・推論に伴う消費電力と地域別CO2排出係数を記録するPython計測パッケージを提案する。推論サービングのKVキャッシュ、復号、MoE、オフロード、スケジューリングを高速化する研究ではなく、計測ツール・環境負荷会計が中心。LLM推論基盤の直接的な最適化論文としては対象外。",
-      "first_checked_at": "2026-10-20T13:06:25+00:00",
-      "last_checked_at": "2026-10-22T01:48:56+00:00",
-      "linked_from": [],
-      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     },
     "arXiv:2609.30579": {
       "classification": "unrelated",

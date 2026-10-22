@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd4e6dcfaf1cd82f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+    "identity_tokens": [
+      "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "semanticscholar:7945684818786fcb32cf92bace2566d7d6bc8945"
+    ],
+    "reason": "OSDI 2018一次要旨はCPU・メモリ・ストレージをネットワーク接続コンポーネントとして分離し、splitkernelに基づき管理する分散OSを提案する。LLMの階層メモリ・資源分離基盤に応用可能な周辺技術だが、2018年の原論文にLLMやLLM推論の測定・設計はなく、現行サーベイへの直接適合は限定的。",
+    "first_checked_at": "2026-10-22T15:36:22+00:00",
+    "last_checked_at": "2026-10-22T15:36:22+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
+  },
+  "processed_at": "2026-10-22T15:36:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd4e6dcfaf1c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

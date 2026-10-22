@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c2e0bce582c78fbc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.08186",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.08186",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.08186",
+      "arXiv:2512.08186"
+    ],
+    "reason": "一次要旨はVLMの高水準経路計画と軽量拡散Transformerポリシーを二系統に分け、実時間の視覚言語ナビゲーションを改善する。モデル分離・遅延抑制の実行系接点はあるが、主要成果はロボットの経路計画と制御であり汎用LLM推論エンジンの設計ではない。",
+    "first_checked_at": "2026-10-22T15:36:20+00:00",
+    "last_checked_at": "2026-10-22T15:36:20+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-10-22T15:36:20+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c2e0bce582c7",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

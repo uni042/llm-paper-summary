@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-018c0085bff1ac0a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.12289",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.12289",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2402.12289",
+      "arXiv:2402.12289"
+    ],
+    "reason": "一次要旨は視覚言語モデルを用いた自動運転のシーン理解・階層的計画、従来の車載処理系と組み合わせたDriveVLM-Dualを提案し、実車での推論実行にも言及する。実時間性と重い推論の組合せというシステム接点はあるが、目的と評価は運転タスクであり汎用LLMサービング・GPUメモリ階層・KVキャッシュ最適化そのものではないため関連性保留。",
+    "first_checked_at": "2026-10-22T15:36:14+00:00",
+    "last_checked_at": "2026-10-22T15:36:14+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
+  },
+  "processed_at": "2026-10-22T15:36:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-018c0085bff1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
