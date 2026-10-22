@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（947本）
+## 自動生成の論文一覧（949本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1296,6 +1296,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPUの演算能力が向上しても、ノード間ネットワークの帯域が不足すると通信待ちが律速になる。通信前に量子化すればデータ量を減らせるものの、量子化だけでは記号の偏りを利用しきれず、さらに符号化・復号のGPU計算が通信時間を上回る場合もある。論文の要旨はNCCL比最大9.65倍、既存の圧縮集合通信ライブラリ比最大3.34倍と報告する。
 
+- **2026-05 · [N-vium: Mixture-of-Exits Transformer for Accelerated Exact Generation](2026-2605.13190-n-vium-mixture-of-exits-transformer-for-accelerated-exact-generation.md)**  
+  実装：[✓](https://github.com/ETH-DISCO/n-vium) ・ リポジトリ内被引用：0  
+  N-viumは、自己回帰言語モデルの「次のトークンを確定する処理」と「将来の注意計算に必要な全層のKVキャッシュを作る処理」を切り離す推論方式である。
+
 - **2026-05 · [MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations](2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MixFP4は、4ビット浮動小数点（FP4）量子化で生じる精度低下を、同じ4ビットの中で表現方式を切り替えて緩和する研究である。テンソル Core相当の合成回路では面積3.1%、電力1.5%増に収まる。
@@ -2565,6 +2569,10 @@
 - **2024-11 · [ShowUI: One Vision-Language-Action Model for GUI Visual Agent](2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md)**  
   実装：[✓](https://github.com/showlab/ShowUI) ・ リポジトリ内被引用：1  
   一方、画像を粗く統合してしまうと、クリック対象の小さな部品の座標を失いやすい。Qwen2-VL-2Bを基盤に、25.6万件の指示データで学習したモデルは、ScreenSpotのゼロショット画面要素特定で75.1%を報告した。
+
+- **2025-10 · [TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination](2025-2510.22767-tell-tale-task-efficient-llms-with-task-aware-layer-elimination.md)**  
+  実装：[✓](https://github.com/omyokun/tale) ・ リポジトリ内被引用：0  
+  本研究は、ある層を除去するとモデルが小さくなるだけでなく、対象タスクの正答率がむしろ上がる場合があることに着目し、タスク認識型層除去（Task-Aware 層 Elimination、TALE）を提案する。著者はゼロショット（zero-shot）と少数例提示（少数例）、通常の選択肢評価と生成文を読む評価を使い分け、削減層の選択がタスクに依存することを示す。
 
 - **2025-10 · [Learning to Inference Adaptively for Multimodal Large Language Models](2025-2503.10905-learning-to-inference-adaptively-for-multimodal-large-language-models.md)**  
   実装：[✓](https://github.com/zhuoyan-xu/AdaLLaVA) ・ リポジトリ内被引用：0  
