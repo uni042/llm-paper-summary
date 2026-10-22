@@ -2596,6 +2596,10 @@
   実装：[✓](https://github.com/showlab/ShowUI) ・ リポジトリ内被引用：1  
   一方、画像を粗く統合してしまうと、クリック対象の小さな部品の座標を失いやすい。Qwen2-VL-2Bを基盤に、25.6万件の指示データで学習したモデルは、ScreenSpotのゼロショット画面要素特定で75.1%を報告した。
 
+- **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
+  実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：1  
+  近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
+
 - **2025-10 · [TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination](2025-2510.22767-tell-tale-task-efficient-llms-with-task-aware-layer-elimination.md)**  
   実装：[✓](https://github.com/omyokun/tale) ・ リポジトリ内被引用：0  
   本研究は、ある層を除去するとモデルが小さくなるだけでなく、対象タスクの正答率がむしろ上がる場合があることに着目し、タスク認識型層除去（Task-Aware 層 Elimination、TALE）を提案する。著者はゼロショット（zero-shot）と少数例提示（少数例）、通常の選択肢評価と生成文を読む評価を使い分け、削減層の選択がタスクに依存することを示す。
@@ -2727,10 +2731,6 @@
 - **2024-11 · [MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map](2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md)**  
   実装：[✓](https://github.com/BICLab/MetaLA) ・ リポジトリ内被引用：0  
   MetaLAは、従来別々の系列モデルとして説明される線形Transformer、状態空間モデル（State Space モデル; SSM）、線形再帰ニューラルネット（Linear RNN）を、有限サイズの隠れ状態を更新する線形注意（linear 注意機構）の共通形式で扱う研究である。
-
-- **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
-  実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：0  
-  近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
 
 - **2024-11 · [Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction](2024-2412.00556-accelerating-multimodal-large-language-models-by-searching-optimal-visio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3158,6 +3158,10 @@
   実装：[✓](https://github.com/plageon/SlimPlm) ・ リポジトリ内被引用：3  
   従来の自己評価型方式は大型言語モデル自身に暫定回答や判断を作らせるため、検索要否を知る段階で高価な大型モデル推論が増える。
 
+- **2024-02 · [HiRE: High Recall Approximate Top-k Estimation for Efficient LLM Inference](2024-2402.09360-hire-high-recall-approximate-top-k-estimation-for-efficient-llm-inferenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  HiRE（High Recall Approximate Top-k Estimation）は、自己回帰型の大規模言語モデル（LLM）で次トークンを生成するとき、必要な重み行・列を入力に応じて少数だけ読み込む方式である。
+
 - **2024-10 · [Temperature-Centric Investigation of Speculative Decoding with Knowledge Distillation](2024-2410.10141-temperature-centric-investigation-of-speculative-decoding-with-knowledge-distillation.md)**  
   実装：[✓](https://github.com/ozyyshr/TempSpec) ・ リポジトリ内被引用：2  
   対象モデルの重みや注意機構を変えるのではなく、下書きモデルと対象モデルの出力分布の整合を、蒸留データの生成条件から改善する研究である。さらに、目的の復号温度に近い複数温度で生成した蒸留データを混合する方式を提案し、温度0.8のGSM8Kではオフライン蒸留の通常復号比4.93倍を5.62倍へ改善した。
@@ -3185,10 +3189,6 @@
 - **2024-02 · [LongHeads: Multi-Head Attention is Secretly a Long Context Processor](2024-2402.10685-longheads-multi-head-attention-is-secretly-a-long-context-processor.md)**  
   実装：[✓](https://github.com/LuLuLuyi/LongHeads) ・ リポジトリ内被引用：2  
   LongHeadsは、事前学習時よりはるかに長い文章を既存の大規模言語モデルへ与える際、各注意頭が全文へ注意する必要はないという観察を利用した、追加学習不要の長文推論方式である。LLaMA-2-7Bを単一NVIDIA A100で評価し、32Kのパスキー検索でほぼ100%、CPUへKVキャッシュを退避した128K条件でも2K注意窓で100%を報告する。
-
-- **2024-02 · [HiRE: High Recall Approximate Top-k Estimation for Efficient LLM Inference](2024-2402.09360-hire-high-recall-approximate-top-k-estimation-for-efficient-llm-inferenc.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  HiRE（High Recall Approximate Top-k Estimation）は、自己回帰型の大規模言語モデル（LLM）で次トークンを生成するとき、必要な重み行・列を入力に応じて少数だけ読み込む方式である。
 
 - **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
   実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：2  
@@ -3301,11 +3301,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：393  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：394  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
-  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：335  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：336  
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -3571,7 +3571,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：524  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：525  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -3579,7 +3579,7 @@
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：105  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：106  
   大規模言語モデルの量子化では、重みを16ビットから8ビットへ減らすだけでメモリ転送量は小さくなる。INT8では追加の学習や校正なしでBERT・GPT系の品質をほぼ保ち、NVIDIA A100上のBERT-baseで最大5.19倍、GPT-3 350Mで4.16倍の速度向上を示した。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
@@ -3723,7 +3723,7 @@
   第一の制約は、全トークン対の内積を求める標準自己注意が系列長の二乗に比例する計算を要することである。
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：110  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：111  
   Performerは、通常の全ランクのソフトマックス注意を正の直交ランダム特徴で近似するFAVOR+を提案し、注意行列を明示的に保持しない線形時間・線形空間の実行を可能にする。
 
 - **2020-04 · [DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference](2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md)**  
@@ -3739,7 +3739,7 @@
   この設計は文章生成の各トークンを省略する方式ではなく、主に文章分類と文対照合に適用される。例えば中国語THUCNewsでは閾値0.1で分類精度96.71%を維持しつつ計算量が約6.05分の1、英語DBpediaでは同閾値で99.31%から99.28%への微小な低下と引き換えに約10.57分の1となる。
 
 - **2020-05 · [GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference](2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md)**  
-  実装：✓ ・ リポジトリ内被引用：26  
+  実装：✓ ・ リポジトリ内被引用：27  
   GOBOは、BERTなどの注意機構を使う自然言語処理モデルの重みを、学習後に大幅に圧縮する手法である。重みの約99.9%を少数の代表値への索引で表し、残る約0.1%の外れ値だけを元の32ビット浮動小数点のまま保持する。
 
 - **2019-11 · [Blockwise Self-Attention for Long Document Understanding](2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md)**  
@@ -3821,7 +3821,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：191  
+  実装：✓ ・ リポジトリ内被引用：192  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
