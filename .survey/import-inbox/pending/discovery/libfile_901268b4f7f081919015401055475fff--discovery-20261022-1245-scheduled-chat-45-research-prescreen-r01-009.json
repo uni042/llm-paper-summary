@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261022-1245-scheduled-chat-45/r01/research-prescreen-009",
+  "reference_main_sha": "206801e92f6f3ef8276f50eb514f604118d2297a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "arXiv:2407.18370"
+      ],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+      "reason": "一次要旨は人間との判定一致を統計的に保証する選択的LLM評価が中心だが、安価な判定モデルから高価なモデルへ必要時のみエスカレーションするカスケードで計算費用を抑える。LLM推論の資源割当との接点はあるが、推論サーバーのスケジューリング・メモリ管理・カーネルを直接最適化する研究ではないため境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2407.18370",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T12:48:45+09:00",
+      "last_checked_at": "2026-10-22T12:48:45+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
