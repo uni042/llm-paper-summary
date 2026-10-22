@@ -28,6 +28,10 @@ on:
     paths:
       - 'papers/**/*.md'
       - '.survey/work-queue/maintenance-cycle.json'
+      # Durable Research states and relevance decisions must refresh worklists.
+      - '.survey/work-queue/jobs/**'
+      - '.survey/work-queue/reference-curation/borderline-papers.json'
+      - '.survey/work-queue/reference-curation/unrelated-papers.json'
       - '.survey/scripts/build_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard.py'
       - '.survey/scripts/render_status_dashboard_core.py'
@@ -50,8 +54,11 @@ on:
   # Hot work-queue ingress stays decoupled. A semantic re-audit queue refresh
   # directly changes the top-line remaining count and must republish STATUS.
   # Paper-only repair also refreshes without waiting for cron.
-  # If the authoritative paper commit already carried STATUS.md, publish exits
-  # without adding a second dashboard commit.
+  # Never treat an updated STATUS.md as proof that the worker worklists are current.
+  # Regeneration is idempotent: unchanged worklists keep their generated_at.
+  # The schedule is a backstop for missed push events, not the primary trigger.
+  schedule:
+    - cron: '17 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -103,13 +110,6 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-
-          if [ "${{ github.event_name }}" = "push" ]; then
-            if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep -Fxq 'STATUS.md'; then
-              echo 'Triggering paper push already included STATUS.md; dashboard refresh is already atomic.'
-              exit 0
-            fi
-          fi
 
           for attempt in 1 2 3 4; do
             git fetch origin main
