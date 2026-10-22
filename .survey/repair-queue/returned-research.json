@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T16:42:46+00:00",
+  "generated_at": "2026-10-22T16:53:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 35,
+  "count": 37,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -974,8 +974,8 @@
     },
     {
       "canonical_id": "arXiv:2609.32663",
-      "title": "Distance-KV: Exploiting Relative Distance for Efficient Long-Context Inference",
-      "source_url": "https://arxiv.org/abs/2609.32663",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T16:39:10+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -999,6 +999,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.json",
       "worker_run_key": "20261022-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.20375",
+      "title": "GRAFT: Adaptive DLM-Based Draft Tree Construction with Target-Distilled Edge Scoring",
+      "source_url": "https://arxiv.org/abs/2608.20375",
+      "returned_at": "2026-10-22T16:50:55+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5236,
+        "body_paragraphs": 35,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 973,
+        "limitation_chars": 621,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.23130",
+      "title": "From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving",
+      "source_url": "https://arxiv.org/html/2609.23130v1",
+      "returned_at": "2026-10-22T16:50:56+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7851,
+        "body_paragraphs": 41,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 492,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261022-2201-scheduled-chat-00/r01"
     }
   ]
 }

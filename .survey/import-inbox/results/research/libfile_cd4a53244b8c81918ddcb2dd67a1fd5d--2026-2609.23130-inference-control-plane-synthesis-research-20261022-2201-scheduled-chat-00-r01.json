@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f1589323e5f36ca55c0c3160833e635e9d858fc23c6d442738235d658e0a3071",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2609.23130",
+  "worker_completed_at": "2026-10-22T22:14:48+09:00",
+  "worker_run_key": "20261022-2201-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7851,
+    "body_paragraphs": 41,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 492,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-22T16:50:56+00:00"
+}

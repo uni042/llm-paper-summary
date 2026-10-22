@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **2919本**。
+収録論文: **2921本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**2919本**。
+推論論文：**2921本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -47,7 +47,7 @@
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 20 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/) |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 306 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 53 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 150 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 151 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 107 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/) |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 421 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 53 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/) |
@@ -58,5 +58,5 @@
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 26 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/) |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/18-pipeline-native-cpu-inference/) |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 59 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 973 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 974 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
 <!-- survey:auto:end -->
