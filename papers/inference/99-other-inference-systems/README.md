@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（949本）
+## 自動生成の論文一覧（951本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -964,6 +964,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   疎な注意マップだけではKV圧縮を正当化できないことを理論化し、値分散配分と末尾要約を厳密な物理予算で実装するCertKVを提案。
 
+- **2026-08 · [Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference](2026-2608.00077-beyond-accuracy-auditing-spatial-provenance-in-visual-token-pruning-for-.md)**  
+  実装：[✓](https://github.com/SouthWinter/spatial-provenance-audit) ・ リポジトリ内被引用：0  
+  高解像度の書類や画面画像では、視覚トークンが長い入力接頭辞（prefix）を作り、言語モデルの事前処理（プリフィル）時間とメモリ使用量を増やす。著者らは正解根拠領域の保持、紛らわしい不正解語の元領域の保持、画像を差し替えたときの挙動、短縮接頭辞を実際にGPUへ流した速度を同時に測る監査手順を提案する。
+
 - **2026-08 · [AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks](2026-2608.04974-asymspec-efficient-cloud-edge-speculative-decoding-over-asymmetric-networks.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   非対称回線向けの証明付き段階補正と確認済み要求間パイプラインを組み合わせ、クラウド・エッジ投機的復号の通信待ちと無効先読みを削減する。
@@ -1603,6 +1607,10 @@
 - **2026-04 · [Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion](2026-2604.05688-attention-editing-a-versatile-framework-for-cross-architecture-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の長文脈推論では、過去トークンの鍵・値（Key-Value; KV）を保存するメモリと、その読出し帯域が制約となる。グループ化問い合わせ注意（Grouped Query 注意機構; GQA）はKVヘッドの共有によって容量を抑えるが、長い系列や多数の同時要求ではKVが増え続ける。
+
+- **2026-04 · [AgentOpt v0.1 Technical Report: Client-Side Optimization for LLM-Based Agent](2026-2604.06296-agentopt-v0-1-technical-report-client-side-optimization-for-llm-based-ag.md)**  
+  実装：[✓](https://agentoptimizer.github.io/agentopt/) ・ リポジトリ内被引用：0  
+  AgentOptは、複数のLLM呼び出しから成るエージェントのモデル選択を、開発者側の品質・遅延・API費用の制約に従って最適化する基盤である。9種類のモデルを2役割へ割り当てれば81通りになる。
 
 - **2026-04 · [AEGIS: Scaling Long-Sequence Homomorphic Encrypted Transformer Inference via Hybrid Parallelism on Multi-GPU Systems](2026-2604.03425-aegis-scaling-long-sequence-homomorphic-encrypted-transformer-inference-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

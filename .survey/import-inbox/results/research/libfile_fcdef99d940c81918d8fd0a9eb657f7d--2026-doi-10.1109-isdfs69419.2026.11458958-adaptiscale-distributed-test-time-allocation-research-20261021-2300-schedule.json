@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e1fe1c9f426b76ec367eb63f7942bc7c42a5d132ae6426a5d3fcfc0874f07d0c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_fcdef99d940c81918d8fd0a9eb657f7d--2026-doi-10.1109-isdfs69419.2026.11458958-adaptiscale-distributed-test-time-allocation-research-20261021-2300-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.1109/ISDFS69419.2026.11458958",
+  "worker_completed_at": "2026-10-21T23:05:21+09:00",
+  "worker_run_key": "scheduled-chat-00/20261021-2300/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7572,
+    "body_paragraphs": 50,
+    "method_chars": 440,
+    "method_paragraphs": 2,
+    "evaluation_chars": 0,
+    "limitation_chars": 739,
+    "insufficiency_flags": [
+      "手法説明量 440 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 440 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-22T01:18:35+00:00"
+}
