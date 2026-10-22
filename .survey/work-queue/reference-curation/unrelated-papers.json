@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T00:52:48+00:00",
+  "updated_at": "2026-10-22T01:48:56+00:00",
   "record_count": 12447,
   "records": {
     "arXiv:2303.08774": {
@@ -163076,9 +163076,9 @@
         "id:arXiv:2204.13767",
         "url:https://arxiv.org/abs/2204.13767"
       ],
-      "reason": "一次要旨の提案は多変量時系列予測のための三角形階層パッチ注意と変数別パラメータであり、線形計算量と予測精度を時系列データ4集合で評価する。注意演算を軽量化する点は一般に関連するが、LLMトークン生成・配信・KVキャッシュ・学習基盤への適用や性能評価が主要対象ではないため、現行のLLM推論サーベイから除外する。",
+      "reason": "一次要旨では多変量時系列予測に特化した三角形のパッチ注意と変数別パラメータで線形計算量を狙う。長系列注意の計算量は関連するが、評価は時系列予測であり、自己回帰LLMの復号、KVキャッシュ、サービング基盤、MoE推論を直接扱わない。",
       "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-21T13:45:31+00:00",
+      "last_checked_at": "2026-10-22T01:48:55+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     },
@@ -179225,9 +179225,9 @@
       "identity_tokens": [
         "arXiv:2208.00406"
       ],
-      "reason": "一次要旨によれば、eco2AIは機械学習コードの実行時電力と地域別CO2排出量を記録するPython計測パッケージであり、LLMの注意計算、KVキャッシュ、生成時スケジューリング、MoE推論、学習アルゴリズム自体を改善する手法ではない。計測対象に推論が含まれ得ても、研究の主要機構は汎用の環境負荷トラッキングなのでサーベイの凍結対象外。",
+      "reason": "一次要旨では機械学習モデルの学習・推論に伴う消費電力と地域別CO2排出係数を記録するPython計測パッケージを提案する。推論サービングのKVキャッシュ、復号、MoE、オフロード、スケジューリングを高速化する研究ではなく、計測ツール・環境負荷会計が中心。LLM推論基盤の直接的な最適化論文としては対象外。",
       "first_checked_at": "2026-10-20T13:06:25+00:00",
-      "last_checked_at": "2026-10-21T13:45:32+00:00",
+      "last_checked_at": "2026-10-22T01:48:56+00:00",
       "linked_from": [],
       "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     },
