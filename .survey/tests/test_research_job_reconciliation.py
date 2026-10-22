@@ -14,6 +14,7 @@ sys.path.insert(0, str(SCRIPTS))
 import build_worker_worklist  # noqa: E402
 import refresh_queue_snapshot  # noqa: E402
 import research_job_reconciliation  # noqa: E402
+import reference_relevance_ledger  # noqa: E402
 
 
 def _write_json(path: Path, payload: dict) -> None:
@@ -208,6 +209,71 @@ identity: arXiv:2607.08780
             self.assertEqual(
                 job["represented_paper_path"],
                 legacy.relative_to(repo).as_posix(),
+            )
+
+
+
+    def test_relevance_ledgers_hide_ready_research_but_preserve_audits(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            jobs = repo / ".survey/work-queue/jobs"
+            for suffix, kind, canonical_id in (
+                ("borderline", "research", "arXiv:2609.99901"),
+                ("unrelated", "research", "arXiv:2609.99902"),
+                ("kept", "research", "arXiv:2609.99903"),
+                ("audit", "audit", "arXiv:2609.99901"),
+            ):
+                _write_json(
+                    jobs / f"job-{suffix}.json",
+                    {
+                        "job_id": f"job-{suffix}",
+                        "status": "ready",
+                        "type": kind,
+                        "canonical_id": canonical_id,
+                        "title": f"Test {suffix}",
+                        "source_url": (
+                            "https://arxiv.org/abs/" + canonical_id.split(":")[1]
+                        ),
+                        "priority": 10,
+                    },
+                )
+            ledger_dir = repo / ".survey/work-queue/reference-curation"
+            reference_relevance_ledger.mark_borderline(
+                ledger_dir / "borderline-papers.json",
+                canonical_id="DOI:10.48550/arxiv.2609.99901",
+                identity_tokens=["arXiv:2609.99901"],
+                reason="LLM runtime relevance is indirect",
+            )
+            reference_relevance_ledger.mark_unrelated(
+                ledger_dir / "unrelated-papers.json",
+                canonical_id="arXiv:2609.99902",
+                reason="not related to LLM inference systems",
+            )
+
+            def listed():
+                payloads = build_worker_worklist.build(repo, limit=100)
+                return [
+                    row["job_id"]
+                    for worker in ("00", "30", "45")
+                    for row in payloads[worker]["research_audit"]["rows"]
+                ], payloads
+
+            selected, payloads = listed()
+            self.assertCountEqual(selected, ["job-kept", "job-audit"])
+            self.assertEqual(payloads["00"]["research_audit"]["ready_total"], 2)
+            self.assertEqual(
+                json.loads((jobs / "job-borderline.json").read_text())["status"],
+                "ready",
+            )
+
+            # Borderline is reversible; clearing the ledger restores eligibility.
+            reference_relevance_ledger.clear_borderline(
+                ledger_dir / "borderline-papers.json",
+                canonical_id="arXiv:2609.99901",
+            )
+            selected, _ = listed()
+            self.assertCountEqual(
+                selected, ["job-kept", "job-audit", "job-borderline"]
             )
 
 
