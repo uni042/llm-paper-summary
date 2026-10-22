@@ -78,6 +78,13 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-21 — llama.cpp b11800〜b11803（開発ビルド）
+- **b11800**: `ggml_top_k_mask`を一般化し、Qwen4系 / GLM5.3-nextのQSAに加えてDeepSeek V4 CSA等のtop-k maskを融合。backendが演算を実装しない場合は既存経路を使う。releaseに実機速度倍率はない。
+- **b11801**: SenseNova U1（NEOChatModel）のdense理解枝とvision encoderをGGUF変換・model実装へ追加。MoT生成枝は非対応。
+- **b11802**: Jinja namespace属性と辞書method名が衝突する問題を修正。
+- **b11803**: Recursive Flint（`FlintForCausalLM`）のmodel構造を追加。Windows x64 CUDA 12.4 / CUDA 13系buildの配布を確認。GGUF量子化版や12GB VRAMでの実用動作は別途確認が必要。
+- 開発ビルドの更新として記録し、一般的な速度向上とは解釈しない。[b11800](https://github.com/ggml-org/llama.cpp/releases/tag/b11800) / [b11801](https://github.com/ggml-org/llama.cpp/releases/tag/b11801) / [b11802](https://github.com/ggml-org/llama.cpp/releases/tag/b11802) / [b11803](https://github.com/ggml-org/llama.cpp/releases/tag/b11803)
+
 ### 2026-10-20 — b11744〜b11765（開発版）
 
 - **b11744**: `llama-server --connect`の実験的P2P接続を追加。LAN外から到達できる経路に関わるため、利用時はbind先・外部到達性・アクセス制御を確認する。

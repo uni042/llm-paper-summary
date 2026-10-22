@@ -27,6 +27,14 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-21 — Ollama v0.40.8（正式版）
+- Recursive Flint対応を追加。公式release案内ではFlintの実行はmacOS限定で、Windowsや一般NVIDIA GPUでの対応を示さない。
+- 本releaseのFlint対応から12GB VRAMでの実用性や生成速度は推定しない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.8)
+
+### 2026-10-18 — Ollama v0.40.7（正式版）
+- Responses APIでthinking有無が異なるmodelへ切り替えた際の継続処理、streaming tool-call eventの順序・重複、切断時のremote実行中止を修正。draft種別の自動判定対象を拡大し、`ollama show` / APIへ`renderer`、`parser`、`template_source`を追加。
+- 正式版として公開候補版と区別する。release noteは端から端の速度改善値を示していない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.7)
+
 ### 2026-10-18 — Ollama v0.40.7-rc0（公開候補版）
 
 - Responses APIで、非thinking modelでもrequestの `effort` parameterを受け付ける変更、内蔵llama-serverによるdraft speculative decoding方式の自動判定、MLX backendのPPLX Decider v1.2対応を追加。

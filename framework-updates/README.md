@@ -2,7 +2,7 @@
 
 主要LLMフレームワークで起きた、**推論速度・学習速度・memory使用量・GPU間通信・offload方式を実質的に変える更新**を、このページから追えるように継続管理する。
 
-- フレームワーク差分の最終確認: **2026-10-12**
+- フレームワーク差分の最終確認: **2026-10-22**
 - 用語・可読性の最終監査: **2026-09-07**
 
 この2つは分けて扱う。2026-10-02の差分確認で、TensorRT Edge-LLMとvLLM-Omniを独立した継続監視対象へ追加した。TensorRT-LLM / vLLM本体とは別ページで、edge / physical-AI推論とomni-modality multi-stage serving固有の主要更新を追跡する。
@@ -15,6 +15,7 @@
 
 | Framework | 現在できること | 最近の更新が強化している部分 |
 |---|---|---|
+| [DeepSeek DeepInfer](inference-engines/deepinfer/) | DeepSeek-V4.1-Flash向けoffline inference。Linux上のNVIDIA SM100 / Huawei Ascend 950を対象とし、公開版にproduction serving stackは同梱しない。 | FlashMLA / DeepGEMM / DeepEP / DeepSelect / TileLang、Attention DP/CP、MoE EP/EPLB、DSpark verification、非同期scheduler |
 | [llama.cpp](inference-engines/llama-cpp/) | CPU / GPUをまたぐローカル推論、量子化、複数GPU分割、KV cache管理、投機的デコード、部分的weight offload | MoE kernel fusion、CUDA Graph、CPU offloadしたexpertのVRAM cache、multi-GPU同時実行 |
 | [vLLM](inference-engines/vllm/) | continuous batching、paged / tiered KV cache、P/D分離、MoE、投機的デコード、weight offload、分散serving | KV階層化、NIXL転送、adaptive speculative decoding、E/P/D分離、MoE通信・kernel fusion |
 | [vLLM-Omni](inference-engines/vllm-omni/) | speech / image / video / diffusion / VLAを含むomni-modality multi-stage serving、full-duplex、stage分離 | cross-stage KV / payload transfer、realtime duplex、streaming video、diffusion batching / cache、component offload |
@@ -67,6 +68,15 @@
 ---
 
 ## 最新更新
+
+### 2026-10-20〜21 — DeepSeek / ローカル推論の更新
+
+- **DeepSeek DeepInfer**: DeepSeek-V4.1-Flash向けの公開offline inference runtimeを追加。NVIDIA SM100 / Huawei Ascend 950、Linux等の条件と、公開版にKV cache system・prefill/decode disaggregation・replica load balancerがない点を[個別ページ](inference-engines/deepinfer/)に記録。
+- **Ollama v0.40.7 / v0.40.8**: 10月18日と21日の正式版を公開候補版と区別して追記。Flint対応はmacOS限定で、速度改善の測定値とは区別。[Ollama](inference-engines/ollama/)
+- **llama.cpp b11800〜b11803**: QSA/DSA/CSA mask演算、SenseNova U1のdense理解枝、FlintForCausalLM等を開発ビルドとして追記。一般的な速度倍率は未提示。[llama.cpp](inference-engines/llama-cpp/)
+- **ExLlamaV3 v1.6.4**: model対応、公平なprefill/decode scheduling、TP/shared-memory等の修正を追記。速度・VRAM値は未提示。[ExLlama](inference-engines/exllama/)
+- **DeepSeek Recipe**: V4/V4.1向けAPI互換部品として記録し、推論engineやHTTP serviceとは区別。[詳細](integration-libraries/deepseek-recipe.md)
+- **Recursive Flint 40B-A2.5B**: model family一覧に追加。BF16配布規模とOllamaのmacOS限定条件は[個別ページ](../llm-releases/recursive.md)を参照。
 
 ### 2026-10-10〜12 — 推論基盤・モデル更新
 - **Ollama v0.40.3**: v0.40.2の自動モデル移行を処理負荷対策で一時停止。[Ollama](inference-engines/ollama/)
@@ -425,6 +435,7 @@
 
 ### 推論エンジン（inference engines）
 
+- [DeepSeek DeepInfer](inference-engines/deepinfer/) — DeepSeek-V4.1-Flash向けoffline inference runtime。production serving機能の未同梱範囲を記載
 - [llama.cpp](inference-engines/llama-cpp/) — MoE kernel fusion、DSpark投機的デコード、CUDA Graph、dense FFN CPU offload、CPUへ退避したMoE expert向けGPU LRU cache（Draft）、Vulkan TQ1_0、RMSNorm fusion
 - [vLLM](inference-engines/vllm/) — multi-tier KV cache、prefill/decode分離、adaptive speculative decoding、weight offload、MoE通信、activation量子化fusion
 - [vLLM-Omni](inference-engines/vllm-omni/) — omni-modality multi-stage serving、full-duplex、cross-stage KV / payload transfer、streaming audio / video、diffusion serving
@@ -446,6 +457,10 @@
 - [LightLLM](inference-engines/lightllm/) — Hybrid Radix Cache、GPU→CPU→disk階層、NIXL、RL online weight update
 - [FlexFlow Serve](inference-engines/flexflow-serve/) — 対象期間の本質的更新なし
 - [Modular MAX](inference-engines/modular-max/) — FP8 / MXint8 KV、tiered KV、VMM allocator、speculative decoding
+
+### API互換・integration libraries
+
+- [DeepSeek Recipe](integration-libraries/deepseek-recipe.md) — V4/V4.1向けMessages / Chat Completions / Responses変換とprompt / token ID処理。推論実行は行わない
 
 ### 学習フレームワーク（training frameworks）
 

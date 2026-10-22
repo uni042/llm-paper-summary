@@ -3,12 +3,14 @@
 主要LLMの新規公開・一般提供を**model family別**に整理する。
 
 - 初回バックフィル対象: **2026-03-04〜2026-09-05**
-- リリース情報の最終確認: **2026-10-18**
+- リリース情報の最終確認: **2026-10-22**
 - 用語・可読性の最終監査: **2026-09-07**
 
 2026-09-24に主要提供元の公式公開を再確認し、OpenAIのGPT-6 Sol / LunaとAnthropicのClaude Opus 5.5を追加した。GPT-6 Sol / LunaはAstra世代の能力をより低cost帯へ展開し、Claude Opus 5.5はOpus 5比の性能・効率・安全性を更新する。トップ表は各model familyの最新リリースを示す。
 
 噂・リーク・単なる軽微variantは原則含めない。著名なmodel familyで直近半年に主要リリースがない場合は、その系統自体が一覧から消えないよう**直近の主要モデル1件だけ**を期間外として残す。
+
+2026-10-22の確認でRecursive Flint 40B-A2.5Bを追加した。公式BF16配布、Apache-2.0、モデル規模とcontext設定、Ollama v0.40.8のmacOS限定対応を分けて記録する。
 
 ## この一覧の読み方
 
@@ -26,6 +28,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 
 | リリース日 | モデル | 系統 | 概要 | 詳細 |
 |---|---|---|---|---|
+| 2026-10-21 | Recursive Flint 40B-A2.5B | Recursive | 総39.8B / 有効約2.5BのApache-2.0 MoE。公式BF16 checkpointは約80GB、設定上の最大262K context。Ollama対応はmacOS限定。 | [Recursive系](recursive.md) |
 | 2026-10-15 | Nemotron 3.5 Super VL | NVIDIA Nemotron | 総120B / 有効12Bのopen-weight視覚言語MoE。Mamba-2 / TransformerとC-RADIOを組み合わせ、最大1M context。 | [NVIDIA Nemotron系](nvidia.md) |
 | 2026-10-15 | Nemotron 3.5 Bolt 74B-A9B 24GB | NVIDIA Nemotron | 総74B / 有効9Bの視覚言語MoE。24GB GPU向け設計値と約25GBの配布ファイル表示を区別する。 | [NVIDIA Nemotron系](nvidia.md) |
 | 2026-09-23 | GPT-6 Sol / Luna | OpenAI GPT | GPT-6 Astraで導入したprofessional work、factuality、coding、computer use等の改善を高速・低cost帯へ展開。API IDは`gpt-6-sol` / `gpt-6-luna`。GPT-5.6のpromotional pricing比でSol / Lunaとも大幅に低価格化。 | [OpenAI GPT系](openai-gpt.md) |
@@ -46,6 +49,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 
 ## 系統別ページ
 
+- [Recursive系](recursive.md)
 - [Qwen系](qwen.md)
 - [Llama系](llama.md)
 - [OpenAI GPT系](openai-gpt.md)

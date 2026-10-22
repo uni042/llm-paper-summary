@@ -28,6 +28,11 @@ ExLlamaV2には期間内の本質的更新がなく、後継のExLlamaV3を同�
 
 ## 主要更新
 
+### 2026-10-20 — ExLlamaV3 v1.6.4（正式版）
+- `Lfm2VlForConditionalGeneration`とNemotron 3.5 Bolt（NemotronH拡張）への対応を追加し、並列要求間のprefill / decode schedulingをより公平に調整。
+- tensor parallelism / shared memoryの問題と、投機的draft有効時にrequestを再queueするとcontext上限を超える不具合を修正。
+- releaseに速度倍率やVRAM使用量の数値はない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.4)
+
 ### 2026-10-17 — ExLlamaV3 v1.6.3（正式版）
 - Ling-3.0 / 3.1の`BailingMoeV3ForCausalLM`構造に対応し、不具合修正を含む。release noteは修正の詳細や速度倍率を示していない。
 - Windows x64 CUDA 12.8（cu128）wheelが配布されているが、手元のCUDA環境での動作保証や12GB VRAMへのmodel収容を意味しない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.3)

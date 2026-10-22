@@ -1,16 +1,29 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-20261022-maintenance-20261021",
+  "attempt_id": "library-import-maint-20261022T145053Z-e3d0376a-r02",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "llm-releases/mistral.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
+    "llm-releases/README.md",
+    "llm-releases/recursive.md",
+    "framework-updates/README.md",
+    "framework-updates/inference-engines/deepinfer/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/exllama/README.md",
+    "framework-updates/integration-libraries/deepseek-recipe.md"
   ],
-  "created_paths": [],
+  "created_paths": [
+    "llm-releases/recursive.md",
+    "framework-updates/inference-engines/deepinfer/README.md",
+    "framework-updates/integration-libraries/deepseek-recipe.md"
+  ],
   "updated_existing_paths": [
-    "llm-releases/mistral.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
+    "llm-releases/README.md",
+    "framework-updates/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md",
+    "framework-updates/inference-engines/exllama/README.md"
   ],
-  "summary": "Applied Library maintenance dated 2026-10-21: Mistral Voxtral 3 audio model family and llama.cpp b11744–b11765. Kept API preview separate from weight availability, stated latency and hardware conditions, and linked official model and release sources."
+  "summary": "Applied the 2026-10-22 Library maintenance: add DeepInfer as offline-only, distinguish DeepSeek Recipe from an inference engine, record Ollama v0.40.7/v0.40.8, llama.cpp b11800-b11803 and ExLlamaV3 v1.6.4, and add Recursive Flint with license, model scale and platform limits."
 }
