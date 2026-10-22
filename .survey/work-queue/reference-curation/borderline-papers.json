@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T14:47:08+00:00",
+  "updated_at": "2026-10-22T14:50:45+00:00",
   "record_count": 5285,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -71617,9 +71617,9 @@
       "identity_tokens": [
         "arXiv:2512.18706"
       ],
-      "reason": "一次要旨は音声区間検出、音声強調、音声認識、感情・環境音解析、LLM、検索拡張生成、道具利用を接続したモジュール型音声対話パイプラインを扱い、サブ秒応答遅延を主張する。LLMを含むシステムの応答性には関連するが、主眼は音声対話機能と複合モジュール設計であり、LLMのKV管理、バッチ形成、生成カーネルなど汎用推論基盤の直接改善は要旨から確認できないため境界判定。",
+      "reason": "一次要旨は音声認識・LLM・音声生成を分離した音声対話システムを提案し、ストリーミングと非同期連携により1秒未満の対話遅延を目指す。システム遅延最適化の接点はあるが、LLM単体の推論カーネル・KVキャッシュ・GPU配信性能を主題としないため境界扱いとする。",
       "first_checked_at": "2026-10-12T17:45:21+00:00",
-      "last_checked_at": "2026-10-20T14:46:03+00:00",
+      "last_checked_at": "2026-10-22T14:50:44+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
@@ -81246,9 +81246,9 @@
       "identity_tokens": [
         "arXiv:2601.10120"
       ],
-      "reason": "一次要旨はLLM複数エージェントの通信トポロジーを一回で構築し、反復的な協調会話を省くことで総トークン消費を46.41%削減し平均課題性能を1.50%改善すると報告する。推論時の計算・通信費用削減に接点はあるが、対象はエージェントの協調方針とタスク性能であり、LLMデコードカーネル、KVキャッシュ、バッチスケジューラなど汎用推論基盤への直接貢献は要旨から不明なので境界判定。",
+      "reason": "一次要旨はLLM複数エージェント間の通信構造を一度で生成し、反復的な対話による遅延・トークン消費を削減する。総トークン消費46.41%削減という推論計算節約に関連する一方、対象はエージェントの協調アルゴリズムで、LLMランタイムやGPU資源管理を直接扱わないため境界扱いとする。",
       "first_checked_at": "2026-10-18T03:52:46+00:00",
-      "last_checked_at": "2026-10-21T15:27:49+00:00",
+      "last_checked_at": "2026-10-22T14:50:45+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"

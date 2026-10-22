@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1e72b2c65fa6a60f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.10120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.10120",
+    "identity_tokens": [
+      "arXiv:2601.10120"
+    ],
+    "reason": "一次要旨はLLM複数エージェント間の通信構造を一度で生成し、反復的な対話による遅延・トークン消費を削減する。総トークン消費46.41%削減という推論計算節約に関連する一方、対象はエージェントの協調アルゴリズムで、LLMランタイムやGPU資源管理を直接扱わないため境界扱いとする。",
+    "first_checked_at": "2026-10-18T03:52:46+00:00",
+    "last_checked_at": "2026-10-22T14:50:45+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-22T14:50:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1e72b2c65fa6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

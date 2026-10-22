@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T14:47:09+00:00",
+  "updated_at": "2026-10-22T14:50:47+00:00",
   "record_count": 12449,
   "records": {
     "arXiv:2303.08774": {
@@ -164160,9 +164160,9 @@
         "id:arXiv:2203.10314",
         "url:https://arxiv.org/abs/2203.10314"
       ],
-      "reason": "題名は点群からの三次元物体検出を目的とするVoxel Set Transformerを明示している。点群認識用の集合間変換であり、LLMの生成推論、推論サービング、KVキャッシュ管理やMoE実行を最終適用先としていないため対象外。",
+      "reason": "点群のボクセル内集合注意を二つの交差注意で近似するVoxSeTで、KITTI・Waymoの3D物体検出を評価。Transformerと線形計算量という用語はあるが、対象は点群の画像・空間認識でありLLM推論システムの実装・配信・資源最適化ではない。",
       "first_checked_at": "2026-10-11T14:41:43+00:00",
-      "last_checked_at": "2026-10-21T08:53:29+00:00",
+      "last_checked_at": "2026-10-22T14:50:47+00:00",
       "linked_from": [],
       "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds"
     },
@@ -164994,9 +164994,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "グラフの局所・大域構造を使う多項式表現の線形時間グラフTransformerを提案し、グラフの分類・予測データセット13件で評価する。線形時間注意は技術的な類似点だが、LLMの言語生成、KVキャッシュ、分散サービングを対象としないため本サーベイでは対象外。",
+      "reason": "一次要旨はグラフ変換器の多項式表現力と線形計算量を両立する局所・大域注意を提案し、同質・異質グラフの13データセットでグラフ学習精度を比較する。対象はグラフニューラルネットワークであり、自己回帰LLMの学習・推論基盤やKVキャッシュ、GPU実装の性能改善を直接扱わない。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-21T10:19:37+00:00",
+      "last_checked_at": "2026-10-22T14:50:46+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
