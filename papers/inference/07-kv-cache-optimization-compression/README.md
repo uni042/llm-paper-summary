@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（286本）
+## 自動生成の論文一覧（287本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -628,6 +628,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [NestedKV: Nested Memory Routing for Long-Context KV Cache Compression](2026-2605.26678-nestedkv-nested-memory-routing-for-long-context-kv-cache-compression.md)**  
   実装：[✓](https://github.com/ChenHong30/NestedKV) ・ リポジトリ内被引用：0  
   学習不要のKV圧縮では、注意重みが大きいトークン、最近のトークン、鍵ベクトルが平均から離れたトークンなどを残す方法が使われる。Qwen3-4B、RULERの4,000トークン文脈、KVの75%を削除する条件でNestedKVは79.32点、単一の全文平均方向を使うKeyDiffは60.22点だった。
+
+- **2026-05 · [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](2026-2605.12471-kv-fold-one-step-kv-cache-recurrence-for-long-context-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長い入力を一度に処理する大規模言語モデル（LLM）の事前処理では、全トークンに対する注意演算と、各層の鍵・値キャッシュ（KV キャッシュ）を保持するための記憶容量が問題になる。新しい注意カーネルや学習済み圧縮器の提案ではなく、既存Transformerの推論操作に対する実証的な分析が中心となる。
 
 - **2026-05 · [Hurwitz Quaternion Multiplicative Quantization for KV Cache Compression](2026-2605.27646-hurwitz-quaternion-multiplicative-quantization-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

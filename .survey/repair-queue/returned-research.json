@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T01:40:51+00:00",
+  "generated_at": "2026-10-22T01:54:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 21,
+  "count": 18,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -239,36 +239,6 @@
       "worker_run_key": "20261021-0030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.12471",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T00:06:00+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 681 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6256,
-        "body_paragraphs": 36,
-        "method_chars": 681,
-        "method_paragraphs": 4,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 681 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dd81b022a4ac81919dcf981ab9a823a1--2026-2605.12471-kvfold-chunk-recurrence-research-20261021-2231-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_dd81b022a4ac81919dcf981ab9a823a1--2026-2605.12471-kvfold-chunk-recurrence-research-20261021-2231-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.20874",
       "title": null,
       "source_url": null,
@@ -295,36 +265,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2311.08623",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T00:27:48+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 184 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6123,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 184,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 184 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e972d94cb720819192d504ccb4c997d8--2024-2311.08623-deed-dynamic-early-exit-returned-repair-20261022-0157-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e972d94cb720819192d504ccb4c997d8--2024-2311.08623-deed-dynamic-early-exit-returned-repair-20261022-0157-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261022-0157-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2508.01002",
@@ -357,34 +297,6 @@
       "worker_run_key": "20261022-0445-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2112.06749",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T00:38:13+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 183 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6351,
-        "body_paragraphs": 36,
-        "method_chars": 2481,
-        "method_paragraphs": 14,
-        "evaluation_chars": 183,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 183 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ee0af9312d288191b4260a6c3d0a1570--2021-2112.06749-sundae-step-unrolled-denoising-nonautoregressive-research-20261021-1900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ee0af9312d288191b4260a6c3d0a1570--2021-2112.06749-sundae-step-unrolled-denoising-nonautoregressive-research-20261021-1900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261021-1900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.04642",
       "title": null,
       "source_url": null,
@@ -410,35 +322,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_f92e0f4c4cb88191b1a1f57b21c3ae2a--2025-2506.04642-tada-mean-centered-kv-cache-research-20261020-1056-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_f92e0f4c4cb88191b1a1f57b21c3ae2a--2025-2506.04642-tada-mean-centered-kv-cache-research-20261020-1056-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-1056-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1109/ISDFS69419.2026.11458958",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T01:18:35+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 440 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7572,
-        "body_paragraphs": 50,
-        "method_chars": 440,
-        "method_paragraphs": 2,
-        "evaluation_chars": 0,
-        "limitation_chars": 739,
-        "insufficiency_flags": [
-          "手法説明量 440 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fcdef99d940c81918d8fd0a9eb657f7d--2026-doi-10.1109-isdfs69419.2026.11458958-adaptiscale-distributed-test-time-allocation-research-20261021-2300-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fcdef99d940c81918d8fd0a9eb657f7d--2026-doi-10.1109-isdfs69419.2026.11458958-adaptiscale-distributed-test-time-allocation-research-20261021-2300-schedule.json",
-      "worker_run_key": "scheduled-chat-00/20261021-2300/r01"
     },
     {
       "canonical_id": "arXiv:2609.16450",
@@ -498,8 +381,8 @@
     },
     {
       "canonical_id": "arXiv:2506.04118",
-      "title": "Guided Speculative Inference for Efficient Test-Time Alignment of LLMs",
-      "source_url": "https://arxiv.org/html/2506.04118v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T01:40:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -526,8 +409,8 @@
     },
     {
       "canonical_id": "arXiv:2609.35065",
-      "title": "TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash",
-      "source_url": "https://arxiv.org/abs/2609.35065",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T01:40:47+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -554,8 +437,8 @@
     },
     {
       "canonical_id": "arXiv:2605.06046",
-      "title": "Requests of a Feather Must Flock Together: Batch Size vs. Prefix Homogeneity in LLM Inference",
-      "source_url": "https://arxiv.org/html/2605.06046v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T01:40:48+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -582,8 +465,8 @@
     },
     {
       "canonical_id": "arXiv:2412.00099",
-      "title": "Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference",
-      "source_url": "https://arxiv.org/pdf/2412.00099",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T01:40:50+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -607,6 +490,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1c383939958f--libfile_ca8dd37579788191a2c7f53a7a46793d--2024-2412.00099-cache-conditional-experts-mobile-moe-research-20261021-0956-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1c383939958f--libfile_ca8dd37579788191a2c7f53a7a46793d--2024-2412.00099-cache-conditional-experts-mobile-moe-research-20261021-0956-scheduled-cha.json",
       "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ISDFS69419.2026.11458958",
+      "title": "Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems",
+      "source_url": "https://doi.org/10.1109/ISDFS69419.2026.11458958",
+      "returned_at": "2026-10-22T01:53:05+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 440 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7572,
+        "body_paragraphs": 50,
+        "method_chars": 440,
+        "method_paragraphs": 2,
+        "evaluation_chars": 0,
+        "limitation_chars": 739,
+        "insufficiency_flags": [
+          "手法説明量 440 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e7189c70ea8--libfile_fcdef99d940c81918d8fd0a9eb657f7d--2026-doi-10.1109-isdfs69419.2026.11458958-adaptiscale-distributed-test-time-allocation-research-20261021-2300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1e7189c70ea8--libfile_fcdef99d940c81918d8fd0a9eb657f7d--2026-doi-10.1109-isdfs69419.2026.11458958-adaptiscale-distributed-test-time-allocation-re.json",
+      "worker_run_key": "scheduled-chat-00/20261021-2300/r01"
     }
   ]
 }

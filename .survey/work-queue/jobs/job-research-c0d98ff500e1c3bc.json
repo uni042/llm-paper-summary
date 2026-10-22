@@ -35,10 +35,15 @@
   "selection_reason": "非自己回帰型SUNDAEが反復denoisingを少数stepへ収束させ、Transformer Baseの自己回帰decodingに対して4 stepで4.7倍、8 stepで2.6倍、10 stepで2.2倍の生成高速化を実測する。言語生成推論のdecoding algorithmを直接高速化するため対象。",
   "semantic_scholar_id": "2da2a44f78e1bd9735d94fee3bd944d47d45742b",
   "source_url": "https://arxiv.org/abs/2112.06749",
-  "status": "ready",
+  "status": "superseded",
   "title": "Step-unrolled Denoising Autoencoders for Text Generation",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2021
+  "year": 2021,
+  "superseded_at": "2026-10-22T01:54:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2112.06749-step-unrolled-denoising-autoencoders-for-text-generation.md",
+  "represented_canonical_id": "arXiv:2112.06749",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

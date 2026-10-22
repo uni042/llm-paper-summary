@@ -26,6 +26,8 @@ reference_main_sha: "d25a355629740b22fe4a42b3333e82cb31b8a383"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_scope: "distributed LLM serving / test-time scaling / adaptive compute allocation"
+last_audited: null
+audit_version: 0
 ---
 
 # AdaptiScale：推論時の難易度に応じた計算資源配分と分散サービング

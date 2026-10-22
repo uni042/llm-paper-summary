@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（953本）
+## 自動生成の論文一覧（956本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1728,6 +1728,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、小型言語モデル（SLM）にまず問題を解かせ、答えへの自己申告確信度が低いときだけ大型言語モデル（LLM）へ委譲する二段推論方式COREAを提案する。大型モデル単独との比較で、領域外の数理問題では推定費用21.5%減・正答率1.7ポイント減、非数理問題では16.8%減・正答率1.7ポイント減となった。
 
+- **2026-03 · [Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems](2026-bbf3ba61cdaa-compute-optimal-resource-allocation-for-distributed-large-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）の推論時に、複数の候補回答を生成して最良の回答を選ぶ手法は、単一の貪欲復号より高い正答率を得られる場合がある。Mistral-7B-v0.1とNVIDIA A4000を使った評価では、GSM8K正答率が固定best-of-16の65.1%から67.2%へ上がり、1,000要求当たり費用は0.85ドルから0.52ドルへ下がった。
+
 - **2026-03 · [CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents](2026-2603.15421-clag-adaptive-memory-organization-via-agent-driven-clustering-for-small-.md)**  
   実装：[✓](https://github.com/dmis-lab/CLAG) ・ リポジトリ内被引用：0  
   CLAGは、記憶を話題ごとのクラスタへ割り当てるエージェント主導のルーティング、割当先クラスタ内だけでリンク生成・要約更新を行う局所的進化、質問に関連するクラスタを先に選んでから個別記憶を検索する二段階検索の三つを結合する。原著付録Cによれば、200件のBioASQ質問で二段階検索が除外した記憶は平均8.02%にとどまる。
@@ -3196,6 +3200,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号（投機的復号）は小さなドラフトモデルが複数トークンを先読みし、大きな対象モデルがまとめて検証することで逐次生成の遅延を削減する。
 
+- **2024-06 · [DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models](2024-2311.08623-deed-dynamic-early-exit-on-decoder-for-accelerating-encoder-decoder-tran.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  浅い層の表現を深い層の状態としてそのままコピーする従来の停止・コピー方式は、層間の意味表現の違いを無視して精度を損なう。正式版のT5-large・SQuADでは、総遅延が221.9msから57.6ms（約74.0%短縮）、F1が92.1から91.6となった。
+
 - **2024-06 · [Adam-mini: Use Fewer Learning Rates To Gain More](2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md)**  
   実装：[✓](https://github.com/zyushun/Adam-mini) ・ リポジトリ内被引用：1  
   大規模言語モデルの事前学習や追加学習では、モデル重みだけでなく勾配とオプティマイザ（optimizer）の内部状態がGPUメモリを消費する。CPUへのオフロードや分散シャーディングは容量不足を緩和できる一方、転送・同期の追加費用が発生する。
@@ -3595,6 +3603,10 @@
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
   UNはTransformerのオフライン 正規化を、活性値/勾配統計の平滑化と適応型 外れ値除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
+
+- **2022-04 · [Step-unrolled Denoising Autoencoders for Text Generation](2022-2112.06749-step-unrolled-denoising-autoencoders-for-text-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデルの典型的な自己回帰生成は、先行トークンが確定してから次トークンを計算する。注意演算の内部を高速化しても、長い出力を作るにはトークン数にほぼ比例した生成ステップが必要になる。最初はランダムなトークン列を用意し、各反復で全体の整合性を改善して最終文を得る。しかし生成中のモデルが自分で作った中間文は、人工的なランダム破損文と同じ分布ではない。
 
 - **2022-03 · [Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection](2022-2203.14380-pyramid-bert-reducing-complexity-via-successive-core-set-based-token-sel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
