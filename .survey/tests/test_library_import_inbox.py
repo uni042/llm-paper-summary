@@ -922,6 +922,16 @@ source: https://arxiv.org/abs/2609.12345
         )
         self.assertNotIn("lineage_proposal", unmatched)
 
+        same_title_different_stable_ids = inbox.merge_library_reason(
+            {"canonical_id": "arXiv:2607.24306", "title": "Shared title"},
+            [{
+                "canonical_id": "arXiv:2607.99999",
+                "title": "Shared title",
+                "lineage_proposal": proposal,
+            }],
+        )
+        self.assertNotIn("lineage_proposal", same_title_different_stable_ids)
+
         malformed = inbox.merge_library_reason(
             provider,
             [{"canonical_id": "arXiv:2607.24306", "lineage_proposal": "invalid"}],
