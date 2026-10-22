@@ -6,7 +6,7 @@
 
 1. 最新mainのSHAを固定し、対象のproject指示・paper workflow・identity、citation、path resolver、系統proposalの実装を読みます。
 2. 99-other-inference-systemsと、候補が近い既存lineageの双方を監査します。候補ごとにcanonical ID、全alias、現在path、一次資料URLと確認節、主貢献、移動先と根拠、引用・内部path link、main SHAを記録します。
-3. paper、identity、citation、STATUS、README等を書き得る全active/queued workflowを調べ、対象paperのResearch job、submission、retryも確認します。最新mainとSTATUSの一致、最低5分のwriter-free window、対象pathを書き得るjobがないことを満たさなければwriteを始めません。
+3. active/queued workflowと対象paperのResearch job、submission、retryを確認します。全repository共通のwriter-free windowは要求しません。候補source/destination、またはその分類根拠に関わるidentity/citation/taxonomyを更新中の処理だけを競合対象として扱います。別pathだけを更新する処理が動いていても、隔離worktreeでbatchを準備してPRを作れます。
 4. source SHA、alias、path衝突、inbound citation、相対linkを照合します。identity不一致または一次根拠不足は移動manifestから外します。
 
 ## 2. 新しい系統の提案
@@ -20,20 +20,23 @@
 mainに入った `.survey/scripts/paper_lineage_migration.py` を使います。manifestは `source_main_sha` と各entryのrepository相対 `old_path` / `new_path`、`canonical_id`、frontmatterと一致する `aliases`、元内容の `expected_sha256` を含めます。移行対象全件をひとつのbounded batchに含め、reviewします。CLIは最大25件・元本文合計64 MiBまでです。
 
 ```powershell
-python .survey/scripts/paper_lineage_migration.py dry-run --manifest migration.json
-python .survey/scripts/paper_lineage_migration.py apply --manifest migration.json
+python .survey/scripts/paper_lineage_migration.py refresh-manifest --manifest reviewed.json --output refreshed.json --report refresh-report.json
+python .survey/scripts/paper_lineage_migration.py dry-run --manifest refreshed.json
+python .survey/scripts/paper_lineage_migration.py apply --manifest refreshed.json
 python .survey/scripts/paper_lineage_migration.py recover --transaction <32桁のtransaction-id> --action rollback
 ```
 
-まず最新mainから隔離branchを作り、migration manifestをcurrent HEADへpinします。dry-runはread-onlyです。ID、hash、snapshot、aliases、identity delta、path/symlink/target、既存paper inventoryとMoved suffix衝突を検証し、失敗したらapplyしません。CLIが確認しないactive-job、workflow writer、citation、相対linkは担当者が別に確認して記録します。
+manifestの元ファイルはレビュー済み計画として不変保存します。mainとPRのpath差分が独立していれば既存PRをそのまま進めます。共有identity indexなどが重なった場合は、最新 `origin/main` から新しい隔離branch/worktreeを作り、`refresh-manifest` で計画を再照合します。このコマンドはcleanな最新 `origin/main` checkoutだけで動き、元の各論文本文hash、canonical ID、frontmatter alias、identity snapshotのpath/hash/alias mappingを検証します。本文やidentityが変わった項目、sourceが消えた項目、移動先が埋まった項目は新manifestから外し、理由をreportへ出します。本文hashやaliasを自動更新して古い分類根拠を引き継ぐことはありません。出力manifestとreportは上書きせず、repository外に保存します。全項目が除外された場合はmanifestを作りません。
+
+更新されていない項目は新しい `source_main_sha` のmanifestへ再pinされるので、旧branchのaggregate identity snapshotを手で合成せず、公式CLIが最新mainの全inventoryからindexを再生成します。refresh後に通常の `dry-run` を実行し、ID、hash、snapshot、aliases、identity delta、path/symlink/target、既存paper inventoryとMoved suffix衝突を確認してからapplyします。CLIが確認しないactive-job、同じpaper pathを書き得るworkflow、citation、相対linkは担当者が別に確認して記録します。
 
 applyは同じ本文bytesをnew pathへ置き、old pathをfrontmatterなし・先頭非空行 `# Moved` のstubにし、ignored-stub entryを加えてidentity snapshotを既存builderで再生成します。jobs、submissions、results、citation source records、paper本文は更新しません。scriptはjournalを使ってrollbackを試みます。復旧はcurrent HEADがjournalのsource SHAと一致する場合だけ実行できます。中断後はbranch/HEADを固定してdry-run結果、old/new path、snapshot、journal、temporary bytesを照合してからrollbackします。bytesやpathが曖昧なら手で削除・再試行せず停止します。
 
 ## 4. branch検証、commit、readback
 
-applyと検証は非公開branchで行います。CLIは複数fileとsnapshotをOSレベルで原子的に置換せず、repository-wide writer lockも取得しません。そのためwriter-free gateを保ち、検証完了までHEADを変えません。検証が失敗したらHEADを固定したままCLIのrollbackを行い、復旧を検証してから調査をやり直します。
+applyと検証は最新mainから作った非公開branch/worktreeで行います。CLIは複数fileとsnapshotをOSレベルで原子的に置換せず、repository-wide writer lockも取得しませんが、隔離worktree内では他workflowのcheckoutやfileを変更しません。HEADとindexを固定して検証し、失敗したらCLIのrollbackを行って復旧を検証します。別pathの更新が続いても、paper batchの調査、apply、PR作成を止めません。
 
-作業中にmainが進んだ場合は、branchのbaseから最新mainまでのcommitと変更pathを比較します。変更がSTATUSや独立したwork-queue等に限られ、候補paper、identity snapshot/delta、citation、taxonomy、生成indexの前提に触れなければ、そのPRを最新mainへそのまま出してCIとmergeabilityを確認します。無関係なcommitをmigration branchへ取り込む必要はありません。候補paper、alias、identity、citation evidence、taxonomyまたは移動先indexが変わった場合は、そのbatchを最新mainへrepinし、manifestとdry-runを作り直します。status/work-queue writerが終わった後にSTATUS整合性とwriter-free条件も再確認します。各PRのmerge後は、その時点のmainから次batchを作ります。
+作業中にmainが進んだ場合は、branchのbaseから最新mainまでのcommitと変更pathを比較します。変更pathがbatchと重ならず、分類前提にも触れない場合は古いbranchをrebaseせず、そのPRをそのまま提出できます。paper path、identity snapshot/delta、citation evidence、taxonomyまたは生成indexが重なった場合は、競合を手作業で解消せず、新しい最新main worktreeで `refresh-manifest` → `dry-run` → `apply` を行い、差し替えPRを作ります。元PRは差し替えPRのCI/readbackが確認できた後に閉じます。PR作成前後のmain更新はpath比較をやり直し、対象pathに変更がなければ無関係なcommit待ちはしません。merge直前には現在のmain、CI、active writerが同じ対象pathを変更していないことを再確認し、head/baseが変われば再比較します。各PRのmerge後は、その時点のmainから次batchを作ります。
 
 同一候補commitで次を確認します。
 
