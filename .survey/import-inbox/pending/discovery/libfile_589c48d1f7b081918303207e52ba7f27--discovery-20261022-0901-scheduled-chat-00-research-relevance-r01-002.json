@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261022-0901-scheduled-chat-00/r01/research-prescreen-002",
+  "reference_main_sha": "45ada827660f092b36cfe5500eacbb8b15e5e017",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945",
+      "identity_tokens": ["SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945"],
+      "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation",
+      "reason": "USENIX OSDI 2018の一次要旨では、CPU・メモリ・ストレージをネットワーク接続機器として分離し、各機器上のモニタで管理する分散OS（splitkernel）の設計・評価が主題。実験は汎用OSとしてのLinux相当性能、資源集約、故障率を評価するもので、LLM推論・KVキャッシュ・MoE・LLMサービングの最適化を対象としない。ハードウェア資源分離の一般的背景としては参考になるが、現在のLLM推論技術サーベイの直接収録範囲外。",
+      "source_url": "https://www.usenix.org/conference/osdi18/presentation/shan",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T09:01:46+09:00",
+      "last_checked_at": "2026-10-22T09:01:46+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 2
+    }
+  ]
+}
