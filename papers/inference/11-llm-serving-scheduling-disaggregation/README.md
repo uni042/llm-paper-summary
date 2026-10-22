@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（418本）
+## 自動生成の論文一覧（420本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -936,6 +936,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   短文・長文でvLLMプールを分離し、自己校正した総トークン予算で振り分けてGPU台数を約17〜39%削減するフリート経路制御。
 
+- **2026-03 · [Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking](2026-2603.12831-serving-hybrid-llm-loads-with-slo-guarantees-using-cpu-gpu-attention-piggybacking.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CPUへ逃がした低優先度要求の注意計算を非同期化し、後続GPU密計算へ層単位で相乗りさせることで、SLOを守りながら低優先度スループットを最大9.85倍にする。
+
 - **2026-03 · [S-HPLB: Efficient LLM Attention Serving via Sparsity-Aware Head Parallelism Load Balance](2026-2603.10353-s-hplb-efficient-llm-attention-serving-via-sparsity-aware-head-paralleli.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意行列の全要素を計算せず重要なトークンだけを残す疎注意（sparse 注意機構）は有効だが、各注意ヘッドに同じトークン数を割り当てると、少数のトークンで十分なヘッドには過剰計算を与え、多くのトークンを必要とするヘッドでは重要な情報を捨てる。
@@ -951,6 +955,10 @@
 - **2026-03 · [Duration Aware Scheduling for ASR Serving Under Workload Drift](2026-2603.11273-duration-aware-scheduling-for-asr-serving-under-workload-drift.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案するのは、短い要求を先に処理する最短仕事優先（Shortest Job First、SJF）と、待ち時間に応じて長い要求の優先度を上げる最高応答比率優先（Highest Response Ratio Next、HRRN）である。
+
+- **2026-03 · [Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems](2026-bbf3ba61cdaa-compute-optimal-resource-allocation-for-distributed-large-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）の推論時に、複数の候補回答を生成して最良の回答を選ぶ手法は、単一の貪欲復号より高い正答率を得られる場合がある。Mistral-7B-v0.1とNVIDIA A4000を使った評価では、GSM8K正答率が固定best-of-16の65.1%から67.2%へ上がり、1,000要求当たり費用は0.85ドルから0.52ドルへ下がった。
 
 - **2026-03 · [CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands](2026-2603.21257-calvo-network-aware-kv-loading-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
