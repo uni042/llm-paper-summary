@@ -1283,11 +1283,21 @@ def relevance_request_id(token: str, index: int, classification: str) -> str:
 def merge_library_reason(provider_record: dict[str, Any], library_records: list[dict[str, Any]]) -> dict[str, Any]:
     candidate = dict(provider_record)
     candidate_tokens = paper_identity.identity_tokens(candidate)
+    candidate_stable_tokens = paper_identity.stable_identity_tokens(candidate)
     for record in library_records:
+        record_stable_tokens = paper_identity.stable_identity_tokens(record)
+        # A title overlap must not bridge records whose stable identifiers conflict.
+        # When either side lacks stable identifiers, retain the existing title fallback.
+        if (candidate_stable_tokens and record_stable_tokens
+                and not candidate_stable_tokens & record_stable_tokens):
+            continue
         if candidate_tokens & paper_identity.identity_tokens(record):
             candidate["reason"] = record.get("reason")
             if record.get("lineage"):
                 candidate["lineage"] = record.get("lineage")
+            proposal = record.get("lineage_proposal")
+            if isinstance(proposal, dict):
+                candidate["lineage_proposal"] = proposal
             candidate["library_body_check"] = record.get("body_check")
             candidate["library_source_run_file"] = record.get("source_run_file")
             if record.get("origin"):

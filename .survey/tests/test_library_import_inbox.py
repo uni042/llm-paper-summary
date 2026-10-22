@@ -902,5 +902,42 @@ source: https://arxiv.org/abs/2609.12345
                 os.chdir(original_cwd)
 
 
+    def test_merge_library_reason_preserves_only_matched_dict_lineage_proposal(self) -> None:
+        provider = {"canonical_id": "arXiv:2607.24306", "reason": "provider"}
+        proposal = {"slug": "diffusion-llm-decoding", "confidence": "high"}
+
+        merged = inbox.merge_library_reason(
+            provider,
+            [{
+                "canonical_id": "arXiv:2607.24306",
+                "reason": "library evidence",
+                "lineage_proposal": proposal,
+            }],
+        )
+        self.assertEqual(merged.get("lineage_proposal"), proposal)
+
+        unmatched = inbox.merge_library_reason(
+            provider,
+            [{"canonical_id": "arXiv:2607.99999", "lineage_proposal": proposal}],
+        )
+        self.assertNotIn("lineage_proposal", unmatched)
+
+        same_title_different_stable_ids = inbox.merge_library_reason(
+            {"canonical_id": "arXiv:2607.24306", "title": "Shared title"},
+            [{
+                "canonical_id": "arXiv:2607.99999",
+                "title": "Shared title",
+                "lineage_proposal": proposal,
+            }],
+        )
+        self.assertNotIn("lineage_proposal", same_title_different_stable_ids)
+
+        malformed = inbox.merge_library_reason(
+            provider,
+            [{"canonical_id": "arXiv:2607.24306", "lineage_proposal": "invalid"}],
+        )
+        self.assertNotIn("lineage_proposal", malformed)
+
+
 if __name__ == "__main__":
     unittest.main()
