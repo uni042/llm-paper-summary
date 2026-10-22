@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（282本）
+## 自動生成の論文一覧（283本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -312,6 +312,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意ヘッドの安定性と層内冗長性に応じてKV予算を細粒度配分し、代表ヘッドの注意ドリフト検知時だけCPUから非同期取得することで、224K文脈の復号を完全注意計算比約3倍高速化する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-10 · [Dual-QK: Sharp Queries and Flat Keys for Prunable 2-bit KV Caches](2026-2610.09827-dual-qk-sharp-queries-and-flat-keys-for-prunable-2-bit-kv-caches.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）の長文推論では、過去トークンの鍵・値キャッシュ（KV キャッシュ）がGPUメモリを圧迫し、復号のたびに大量のキーを読み直す。KVを2ビットへ量子化すれば保存容量は減るが、注意スコアに敏感な外れ値が量子化範囲を広げ、精度が崩れる。保存容量の約6.8倍削減と読出量の約8.3倍削減は形式・アクセス量の推定であり、実測速度そのものではない。
 
 - **2026-09 · [What Matters for Aggressive Decoding-Time KV Eviction? Temporal Aggregation and Ranking Preservation](2026-2609.03515-inertiakv-temporal-aggregation-ranking-preservation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

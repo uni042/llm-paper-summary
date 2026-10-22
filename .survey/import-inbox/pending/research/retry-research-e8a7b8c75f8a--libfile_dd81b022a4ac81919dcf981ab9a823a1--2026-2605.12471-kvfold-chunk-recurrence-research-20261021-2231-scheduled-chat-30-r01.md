@@ -34,6 +34,8 @@ worker_run_key: '20261021-2231-scheduled-chat-30/r01'
 reference_main_sha: 'eb7631fc9ae2bfc2b83537b751c8e2657282c663'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # KV-Fold：チャンク間KV引継ぎの安定性と長距離検索の実測

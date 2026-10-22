@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（103本）
+## 自動生成の論文一覧（104本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -199,6 +199,10 @@
 - **2026-05 · [Stochastic Sparse Attention for Memory-Bound Inference](2026-2605.01910-stochastic-sparse-attention-for-memory-bound-inference.md)**  
   実装：[✓](https://github.com/OPUSLab/SANTA) ・ リポジトリ内被引用：0  
   SANTA（Stochastic Additive No-mulT 注意機構）は、注意確率を使って少数の値ベクトルだけを抽出し、その平均で密な注意出力を近似する。RTX 6000 Ada上の32K文脈では、精度が密注意と統計的に同等な設定で注意カーネルが約1.5倍高速化した。
+
+- **2026-05 · [PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models](2026-2605.20813-pulsecol-periodically-refreshed-column-sparse-attention-for-accelerating.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  自己回帰型モデルのように確定済みの接頭辞だけを伸ばすわけではないため、各反復で系列全体の隠れ状態が変化し、双方向の注意を再計算する費用が大きい。PulseColは、問い合わせ位置を群に分けて重要な鍵列を選択する列疎注意（column-sparse 注意機構）を導入する。
 
 - **2026-05 · [Position: LLM Inference Should Be Evaluated as Energy-to-Token Production](2026-2605.11733-position-llm-inference-should-be-evaluated-as-energy-to-token-production.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

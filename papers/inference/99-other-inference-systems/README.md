@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（946本）
+## 自動生成の論文一覧（947本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -1419,6 +1419,10 @@
 - **2026-05 · [AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices](2026-2605.15206-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-d.md)**  
   実装：[✓](https://github.com/brave-experiments/AgentStop) ・ リポジトリ内被引用：0  
   LLMエージェントは通常の一問一答と異なり、推論、検索、コード実行、失敗後の再試行を何度も繰り返す。これをクラウドではなく利用者の端末で動かすと、ネットワーク依存や外部へのデータ送信を減らせる一方、長時間のGPU稼働、発熱、電池消費が利用者に直接影響する。特に失敗する実行が長く続いた場合、最終的な課題成功に結び付かない電力が大量に消費される。
+
+- **2026-05 · [Adaptive Inverted-Index Routing for Granular Mixtures-of-Experts](2026-2605.04952-adaptive-inverted-index-routing-for-granular-mixtures-of-experts.md)**  
+  実装：[✓](https://anonymous.4open.science/r/adaptive_inverted_index_routing_code-D6FE/) ・ リポジトリ内被引用：0  
+  本研究が解くのは、非常に多数の小さな専門家を使う混合専門家モデル（Mixture-of-Experts、MoE）で、専門家を選ぶルータ自身が高価になるという問題である。具体的には、入力トークンを最も近い符号語へ割り当て、その符号語に結び付いた専門家番号の候補表を取得する。著者は最大約10%の相対困惑度改善をPEERとの比較で報告する。
 
 - **2026-04 · [VFA: Relieving Vector Operations in Flash Attention with Global Maximum Pre-computation](2026-2604.12798-vfa-relieving-vector-operations-in-flash-attention-with-global-maximum-p.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
