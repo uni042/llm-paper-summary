@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（971本）
+## 自動生成の論文一覧（972本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1625,6 +1625,10 @@
 - **2026-04 · [Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment](2026-2604.24447-characterizing-vision-language-action-models-across-xpus-constraints-and.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、視覚・言語・行動モデル（Vision-Language-Action、VLA）をロボットに搭載するときの「制御周期内に推論を終えられるか」「何ワット時・いくらで実行できるか」という推論システムの問題を扱う。
+
+- **2026-04 · [BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs](2026-2604.05942-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全注意（full 注意機構）の鍵・値キャッシュ（KV キャッシュ）は生成文脈とともに増大する。Qwen3 1.7B/8B/14B/30B-A3Bの4モデル、SWA率25/50/75/87.5%を用いた原著表1・2では、BOSCHは多くの設定で層単位の単純な交互配置や静的ヘッド順位より高いNIAH/LongBenchスコアを保つ。
 
 - **2026-04 · [Attention Editing: A Versatile Framework for Cross-Architecture Attention Conversion](2026-2604.05688-attention-editing-a-versatile-framework-for-cross-architecture-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

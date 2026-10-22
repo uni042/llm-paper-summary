@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "e2b8d47b4ead08859dd753fa9bc8d37b433bf47e874e1d6ca94cea2fd38d855f",
-  "canonical_id": "arXiv:2604.07857",
-  "paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md",
-  "lineage": "14-agentic-inference-serving-runtime",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_ada18ac86c5c8191bf26c640c69d8861--2026-2604.07857-networking-energy-agentic-survey-returned-repair-20261022-0303-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.07857",
   "worker_completed_at": "2026-10-22T03:03:00+09:00",
   "worker_run_key": "20261022-0303-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-21T23:10:27+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/14-agentic-inference-serving-runtime/2026-2604.07857-networking-aware-energy-efficiency-in-agentic-ai-inference-a-survey.md と 14 段落 / 2847文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T16:16:22+00:00"
 }

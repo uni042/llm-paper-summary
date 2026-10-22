@@ -33,6 +33,8 @@ reference_main_sha: "ca0f7eb45422ddf8d9aa768cbe41d96e2e02376c"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 worker_completed_at: "2026-10-22T16:26:45+09:00"
+last_audited: null
+audit_version: 0
 ---
 
 # HyperOffload：計算グラフで遠隔メモリ転送を先読みするSuperNode向け階層メモリ管理

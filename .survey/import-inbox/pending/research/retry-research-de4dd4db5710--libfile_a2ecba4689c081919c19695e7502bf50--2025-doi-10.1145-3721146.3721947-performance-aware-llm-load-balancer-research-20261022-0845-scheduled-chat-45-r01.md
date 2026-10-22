@@ -33,6 +33,8 @@ worker_completed_at: "2026-10-22T08:57:03+09:00"
 worker_run_key: "20261022-0845-scheduled-chat-45/r01"
 research_scope: "LLM inference serving / multi-instance request routing / scheduling"
 reference_main_sha: "dc4c25b960ab2435599267288bce2e12b64da75d"
+last_audited: null
+audit_version: 0
 ---
 
 # Performance Aware LLM Load Balancer for Mixed Workloads
