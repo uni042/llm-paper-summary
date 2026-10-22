@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-interactive-llm-relevance/r02/00-8-e4303095",
+  "reference_main_sha": "64549bfeacc243f3aba6273c4f705ea24b40ebaf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.00081",
+      "identity_tokens": [
+        "arxiv:2412.00081",
+        "doi:10.48550/arxiv.2412.00081"
+      ],
+      "title": "Task Singular Vectors: Reducing Task Interference in Model Merging",
+      "reason": "CVPR 2025一次要旨では、複数タスクのモデル結合における干渉を特異値分解で解析し、タスクベクトルを圧縮して統合精度を高める。10%への圧縮はタスク差分表現が対象であり、LLM推論時の重み量子化、実行時メモリ・レイテンシ・スループットを最適化する手法ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2412.00081",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:49:23+09:00",
+      "last_checked_at": "2026-10-23T00:49:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-e4303095d387dfcb",
+      "worklist_rank": 8,
+      "original_worklist_worker": "scheduled-chat-00",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
