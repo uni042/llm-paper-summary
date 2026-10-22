@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8c70e2288e6f4382-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.00041",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.00041",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.00041",
+      "arXiv:2512.00041"
+    ],
+    "reason": "行動系列に条件づけた将来視点画像を潜在拡散モデルで予測し、価値マップへ変換して屋内ロボットの経路計画を補助する研究。疎復号や蒸留サンプラで単一GPU実行を可能にするが、主要評価はMP3D・RoboTHORのナビゲーション性能であり、LLMテキスト生成の推論サービングとは異なる。",
+    "first_checked_at": "2026-10-17T05:04:56+00:00",
+    "last_checked_at": "2026-10-22T23:53:31+00:00",
+    "linked_from": [],
+    "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-10-22T23:53:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8c70e2288e6f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

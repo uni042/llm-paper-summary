@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T21:13:44+00:00",
-  "record_count": 12447,
+  "updated_at": "2026-10-22T23:53:32+00:00",
+  "record_count": 12446,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -178720,11 +178720,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2512.00041",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.00041",
         "arXiv:2512.00041"
       ],
-      "reason": "一次要旨で、行動条件付き動画拡散モデルによりロボットの短期未来視点を生成し、言語指示に合わせた価値地図をオンライン経路計画へ統合する研究と確認。VAE潜在空間や疎な復号で単一GPU推論に対応するが、主要課題と評価は室内ナビゲーション成功率・経路効率であり、LLM推論基盤・学習システムの最適化を検証しないため対象外。",
+      "reason": "行動系列に条件づけた将来視点画像を潜在拡散モデルで予測し、価値マップへ変換して屋内ロボットの経路計画を補助する研究。疎復号や蒸留サンプラで単一GPU実行を可能にするが、主要評価はMP3D・RoboTHORのナビゲーション性能であり、LLMテキスト生成の推論サービングとは異なる。",
       "first_checked_at": "2026-10-17T05:04:56+00:00",
-      "last_checked_at": "2026-10-17T05:04:56+00:00",
+      "last_checked_at": "2026-10-22T23:53:31+00:00",
       "linked_from": [],
       "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
     },
@@ -179210,18 +179211,6 @@
       "last_checked_at": "2026-10-21T08:53:32+00:00",
       "linked_from": [],
       "title": "Limited Reasoning Space: The cage of long-horizon reasoning in LLMs"
-    },
-    "arXiv:2603.21269": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2603.21269",
-      "identity_tokens": [
-        "arXiv:2603.21269"
-      ],
-      "reason": "題名は動的幾何の基盤モデルを視覚言語ナビゲーションへ組み込む応用モデルを示している。幾何情報の活用とナビゲーション能力が対象で、LLM推論サービングやKVキャッシュ・GPUカーネルの効率化ではないため対象外。",
-      "first_checked_at": "2026-10-21T08:53:34+00:00",
-      "last_checked_at": "2026-10-21T08:53:34+00:00",
-      "linked_from": [],
-      "title": "DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation"
     },
     "arXiv:2604.00292": {
       "classification": "unrelated",
