@@ -37,6 +37,8 @@ reference_main_sha: a12c60279b6ad80ba29ea8157230cadfb08b70d6
 research_origin: returned_research_queue
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # エージェント型AI推論のネットワーク認識型省エネルギー設計：研究分類と課題

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（972本）
+## 自動生成の論文一覧（973本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -925,6 +925,10 @@
 - **2026-08 · [M-LoRA: Efficient Serving for Concurrent LoRA Adapters with Memory-Aware Speculative Scheduler on Single GPU](2026-bbf40b71b5e2-m-lora-efficient-serving-for-concurrent-lora-adapters-with-memory-aware-speculative-scheduler-on-single-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   要求ごとの生成長をモデル別LoRA予測器で見積もり、鍵値キャッシュとアダプタのピークメモリを同時制約する整数線形計画で、単一GPUの複数LoRA要求を高並行に割り当てるサービング方式。
+
+- **2026-08 · [LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression](2026-2608.26389-lowrankarena-a-standardized-evaluation-platform-for-svd-based-llm-compre.md)**  
+  実装：[✓](https://github.com/Zishan-Shao/lowrankarena) ・ リポジトリ内被引用：0  
+  特異値分解（Singular Value Decomposition; SVD）を使う低ランク圧縮は、重み行列を二つの小さな行列の積に分解し、保存するパラメータと演算量を減らす。
 
 - **2026-08 · [Learning how to Forget: Fine-tuning for Long-Context Sparse Attention](2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md)**  
   実装：[✓](https://github.com/awslabs/keys_values) ・ リポジトリ内被引用：0  
