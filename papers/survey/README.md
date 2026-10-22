@@ -16,18 +16,19 @@ LLMシステム研究を横断的に整理する **survey / review 論文** を�
 ## 自動生成の収録状況
 
 サーベイ論文：**14本**。
+[この区分だけ検索](https://uni042.github.io/llm-paper-summary/survey/)
 
-| 系統 | 本数 |
-|---|---:|
-| [01-kv-cache-optimization](01-kv-cache-optimization/README.md) | 1 |
-| [01-kv-cache-systems](01-kv-cache-systems/README.md) | 1 |
-| [02-diffusion-llm-inference](02-diffusion-llm-inference/README.md) | 1 |
-| [03-inference-engines](03-inference-engines/README.md) | 3 |
-| [04-distributed-training-systems](04-distributed-training-systems/README.md) | 1 |
-| [05-moe-inference-optimization](05-moe-inference-optimization/README.md) | 1 |
-| [06-long-context-serving](06-long-context-serving/README.md) | 1 |
-| [07-speculative-decoding](07-speculative-decoding/README.md) | 1 |
-| [08-low-bit-llm](08-low-bit-llm/README.md) | 1 |
-| [09-edge-llm](09-edge-llm/README.md) | 1 |
-| [llm-serving-systems](llm-serving-systems/README.md) | 2 |
+| 系統 | 本数 | 検索 |
+|---|---:|---|
+| [01-kv-cache-optimization](01-kv-cache-optimization/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/01-kv-cache-optimization/) |
+| [01-kv-cache-systems](01-kv-cache-systems/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/01-kv-cache-systems/) |
+| [02-diffusion-llm-inference](02-diffusion-llm-inference/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/02-diffusion-llm-inference/) |
+| [03-inference-engines](03-inference-engines/README.md) | 3 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/03-inference-engines/) |
+| [04-distributed-training-systems](04-distributed-training-systems/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/04-distributed-training-systems/) |
+| [05-moe-inference-optimization](05-moe-inference-optimization/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/05-moe-inference-optimization/) |
+| [06-long-context-serving](06-long-context-serving/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/06-long-context-serving/) |
+| [07-speculative-decoding](07-speculative-decoding/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/07-speculative-decoding/) |
+| [08-low-bit-llm](08-low-bit-llm/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/08-low-bit-llm/) |
+| [09-edge-llm](09-edge-llm/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/09-edge-llm/) |
+| [llm-serving-systems](llm-serving-systems/README.md) | 2 | [この系統を検索](https://uni042.github.io/llm-paper-summary/survey/llm-serving-systems/) |
 <!-- survey:auto:end -->

@@ -18,6 +18,8 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（304本）
 
+[この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
+
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
@@ -1017,7 +1019,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2025-06 · [TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering](2025-2506.04642-tada-training-free-recipe-for-decoding-with-adaptive-kv-cache-compressio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  長い入力や長い思考連鎖ではKVキャッシュがGPUメモリを圧迫し、同時実行できる要求数を制限する。Key/Valueを2〜4ビットへ量子化すれば容量を削れるが、一部の大きな外れ値が量子化範囲を広げ、他の値の分解能を損なう。
+  TaDAは、自己回帰型の大規模言語モデル（LLM）で生成済みトークンの鍵・値を保存するKVキャッシュを、重み再学習なしに小さくする方式である。これは容量を27%まで削減したという意味であり、「27%だけ削減」とは異なる。
 
 - **2025-03 · [Efficient Many-Shot In-Context Learning with Dynamic Block-Sparse Attention](2025-2503.08640-efficient-many-shot-in-context-learning-with-dynamic-block-sparse-attent.md)**  
   実装：[✓](https://github.com/millix19/dbsa) ・ リポジトリ内被引用：0  

@@ -25,6 +25,8 @@
 <!-- survey:auto:start -->
 ## 自動生成の論文一覧（104本）
 
+[この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
+
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
@@ -210,7 +212,7 @@
 
 - **2026-05 · [PulseCol: Periodically Refreshed Column-Sparse Attention for Accelerating Diffusion Language Models](2026-2605.20813-pulsecol-periodically-refreshed-column-sparse-attention-for-accelerating.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  自己回帰型モデルのように確定済みの接頭辞だけを伸ばすわけではないため、各反復で系列全体の隠れ状態が変化し、双方向の注意を再計算する費用が大きい。PulseColは、問い合わせ位置を群に分けて重要な鍵列を選択する列疎注意（column-sparse 注意機構）を導入する。
+  PulseColは、拡散言語モデル（diffusion language モデル、dLLM）の生成で同じ系列に対する双方向の自己注意を何度も計算する費用を減らす方式である。
 
 - **2026-05 · [Position: LLM Inference Should Be Evaluated as Energy-to-Token Production](2026-2605.11733-position-llm-inference-should-be-evaluated-as-energy-to-token-production.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

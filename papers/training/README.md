@@ -21,10 +21,11 @@
 ## 自動生成の収録状況
 
 学習論文：**25本**。
+[この区分だけ検索](https://uni042.github.io/llm-paper-summary/training/)
 
-| 系統 | 本数 |
-|---|---:|
-| [01-training-offload-memory-systems](01-training-offload-memory-systems/README.md) | 14 |
-| [02-distributed-heterogeneous-moe-training](02-distributed-heterogeneous-moe-training/README.md) | 8 |
-| [03-pipeline-parallel-modular-training](03-pipeline-parallel-modular-training/README.md) | 3 |
+| 系統 | 本数 | 検索 |
+|---|---:|---|
+| [01-training-offload-memory-systems](01-training-offload-memory-systems/README.md) | 14 | [この系統を検索](https://uni042.github.io/llm-paper-summary/training/01-training-offload-memory-systems/) |
+| [02-distributed-heterogeneous-moe-training](02-distributed-heterogeneous-moe-training/README.md) | 8 | [この系統を検索](https://uni042.github.io/llm-paper-summary/training/02-distributed-heterogeneous-moe-training/) |
+| [03-pipeline-parallel-modular-training](03-pipeline-parallel-modular-training/README.md) | 3 | [この系統を検索](https://uni042.github.io/llm-paper-summary/training/03-pipeline-parallel-modular-training/) |
 <!-- survey:auto:end -->

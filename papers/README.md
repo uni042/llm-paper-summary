@@ -42,5 +42,7 @@
 → [Survey一覧](survey/)
 
 <!-- survey:auto:start -->
+[全収録論文を検索](https://uni042.github.io/llm-paper-summary/)
+
 推論：**2905本** ／ 学習：**25本** ／ サーベイ：**14本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)
 <!-- survey:auto:end -->

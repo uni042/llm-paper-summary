@@ -27,5 +27,7 @@ LLMの**推論システム研究**を中心に、論文サーベイ、主要フ�
 Framework更新とLLMリリースは論文サーベイとは別に整理します。
 
 <!-- survey:auto:start -->
+[全収録論文を検索](https://uni042.github.io/llm-paper-summary/)
+
 推論：**2905本** ／ 学習：**25本** ／ サーベイ：**14本**。 [推論一覧](papers/inference/README.md) ／ [学習一覧](papers/training/README.md) ／ [サーベイ一覧](papers/survey/README.md) ／ [研究比較](papers/inference/comparison.md)
 <!-- survey:auto:end -->
