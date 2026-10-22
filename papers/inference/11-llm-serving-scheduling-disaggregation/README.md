@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（421本）
+## 自動生成の論文一覧（422本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -801,6 +801,10 @@
 - **2026-06 · [Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs](2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有GPU上の複数LLMについて、要求配置・SM分割・GPU周波数・低負荷時集約をSLO制約下で協調し、同居モデルの周波数不一致を避けてクラスタ全体の推論エネルギーを削減するサーバレス制御方式。
+
+- **2026-06 · [DriftSched: Adaptive QoS-Aware Scheduling under Runtime Token Drift for Multi-Tenant GPU Inference](2026-2606.02982-driftsched-adaptive-qos-aware-scheduling-under-runtime-token-drift-for-m.md)**  
+  実装：[✓](https://github.com/kpalania1/driftsched) ・ リポジトリ内被引用：0  
+  DriftSchedは、複数利用者が共有するGPUで大規模言語モデル（LLM）の生成要求を処理するとき、要求を受け付けた時点の予想トークン数と、実際に生成されたトークン数のずれが待ち行列の順序と遅延に及ぼす影響を検証するシステムである。
 
 - **2026-06 · [Beyond Prediction: Tail-Aware Scheduling for LLM Inference](2026-2606.18431-tail-aware-prediction-free-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

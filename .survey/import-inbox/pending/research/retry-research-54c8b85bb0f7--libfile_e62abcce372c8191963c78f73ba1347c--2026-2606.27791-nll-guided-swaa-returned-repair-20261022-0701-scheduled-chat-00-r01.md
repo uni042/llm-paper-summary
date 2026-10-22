@@ -32,6 +32,8 @@ worker_completed_at: "2026-10-22T07:11:21+09:00"
 worker_run_key: "20261022-0701-scheduled-chat-00/r01"
 reference_main_sha: "63b971afbfcf01da77f59159be0b68611d7dfc46"
 research_origin: "returned_research_repair"
+last_audited: null
+audit_version: 0
 ---
 
 # NLLに基づく全注意層選択：学習なしで滑動窓注意へ適応する方法
