@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261022-1245-scheduled-chat-45/r01/research-prescreen-015",
+  "reference_main_sha": "206801e92f6f3ef8276f50eb514f604118d2297a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19575",
+      "identity_tokens": [
+        "arXiv:2511.19575"
+      ],
+      "title": "HunyuanOCR Technical Report",
+      "reason": "一次要旨はOCR専用の10億パラメータ視覚言語モデルの構造、学習データ、強化学習、文字認識・情報抽出・翻訳の精度を中心に報告する。軽量性とvLLM配備に触れるが、汎用LLMの推論エンジン・メモリ階層・カーネル・分散学習の新規システム手法を提案していないため対象外とする。",
+      "source_url": "https://arxiv.org/abs/2511.19575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T12:48:45+09:00",
+      "last_checked_at": "2026-10-22T12:48:45+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 15
+    }
+  ]
+}
