@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T19:52:39+00:00",
-  "record_count": 12445,
+  "updated_at": "2026-10-22T21:13:44+00:00",
+  "record_count": 12447,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179367,6 +179367,30 @@
         ".survey/work-queue/WORKLIST-45.md"
       ],
       "title": "Multi-scale orthogonal Gabor filters based ConvNets for illumination robust single sample face recognition"
+    },
+    "arXiv:2604.24622": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24622",
+      "identity_tokens": [
+        "arXiv:2604.24622"
+      ],
+      "reason": "一次要旨はflow-based VLA方策のロボット行動生成を粗い初期化と一段階の細部修正に分け、CALVIN/LIBEROで行動サンプリング遅延の短縮を報告する。改善対象はロボット制御ポリシーのaction samplingであり、LLM生成/serving、KV管理、推論ランタイム等の系統を対象としていないため無関係とする。",
+      "first_checked_at": "2026-10-22T21:13:44+00:00",
+      "last_checked_at": "2026-10-22T21:13:44+00:00",
+      "linked_from": [],
+      "title": "CF-VLA: Efficient Coarse-to-Fine Action Generation for Vision-Language-Action Policies"
+    },
+    "DOI:10.1007/s11042-021-11224-0": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s11042-021-11224-0",
+      "identity_tokens": [
+        "DOI:10.1007/s11042-021-11224-0"
+      ],
+      "reason": "出版社の一次要旨では、channel-wise pruned YOLOv3で火災・煙の画像検知を軽量化する独立の監視応用を扱う。計算量削減はCNNによる火災検出向けで、LLM推論のserving・KV cache・言語モデル圧縮などの系統への具体的接続が確認できないため無関係とする。",
+      "first_checked_at": "2026-10-22T21:13:44+00:00",
+      "last_checked_at": "2026-10-22T21:13:44+00:00",
+      "linked_from": [],
+      "title": "A fire monitoring and alarm system based on channel-wise pruned YOLOv3"
     }
   }
 }

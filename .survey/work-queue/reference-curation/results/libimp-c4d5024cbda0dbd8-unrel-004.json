@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4d5024cbda0dbd8-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s11042-021-11224-0",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s11042-021-11224-0",
+    "identity_tokens": [
+      "DOI:10.1007/s11042-021-11224-0"
+    ],
+    "reason": "出版社の一次要旨では、channel-wise pruned YOLOv3で火災・煙の画像検知を軽量化する独立の監視応用を扱う。計算量削減はCNNによる火災検出向けで、LLM推論のserving・KV cache・言語モデル圧縮などの系統への具体的接続が確認できないため無関係とする。",
+    "first_checked_at": "2026-10-22T21:13:44+00:00",
+    "last_checked_at": "2026-10-22T21:13:44+00:00",
+    "linked_from": [],
+    "title": "A fire monitoring and alarm system based on channel-wise pruned YOLOv3"
+  },
+  "processed_at": "2026-10-22T21:13:45+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4d5024cbda0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

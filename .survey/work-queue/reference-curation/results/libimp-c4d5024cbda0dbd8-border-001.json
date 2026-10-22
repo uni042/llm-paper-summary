@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c4d5024cbda0dbd8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.08302",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.08302",
+    "identity_tokens": [
+      "arXiv:2606.08302"
+    ],
+    "reason": "一次要旨では、視覚自己回帰VARの尺度間に蓄積するKVキャッシュをhead別予算で圧縮し、attention計算量とメモリ負荷を抑える方式を提案する。LLM由来のKV圧縮を参考にしており技術上の接点は強いが、評価対象はtext-to-image等の視覚生成VARで、LLMのprefill/decodeやservingへの適用を検証していないため境界扱いとする。",
+    "first_checked_at": "2026-10-22T21:13:43+00:00",
+    "last_checked_at": "2026-10-22T21:13:43+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "HACK++: Towards More Effective Head-Aware Key-Value Compression for Efficient Visual Autoregressive Modeling"
+  },
+  "processed_at": "2026-10-22T21:13:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c4d5024cbda0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
