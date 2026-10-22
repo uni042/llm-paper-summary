@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261022-1245-scheduled-chat-45/r01/research-prescreen-011",
+  "reference_main_sha": "206801e92f6f3ef8276f50eb514f604118d2297a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18706",
+      "identity_tokens": [
+        "arXiv:2512.18706"
+      ],
+      "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System",
+      "reason": "一次要旨は音声認識・LLM・音声生成を分離した音声対話システムを提案し、ストリーミングと非同期連携により1秒未満の対話遅延を目指す。システム遅延最適化の接点はあるが、LLM単体の推論カーネル・KVキャッシュ・GPU配信性能を主題としないため境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2512.18706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T12:48:45+09:00",
+      "last_checked_at": "2026-10-22T12:48:45+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    }
+  ]
+}
