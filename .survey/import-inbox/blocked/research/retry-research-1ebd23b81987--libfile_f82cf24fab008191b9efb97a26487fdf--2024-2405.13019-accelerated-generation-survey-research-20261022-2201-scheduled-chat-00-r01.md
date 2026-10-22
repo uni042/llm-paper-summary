@@ -31,6 +31,8 @@ worker_run_key: '20261022-2201-scheduled-chat-00/r01'
 reference_main_sha: '6c141ee8daa1f155f43c4a4babf5286f80f07803'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # 大規模言語モデルの高速生成技術総説：投機的復号・早期終了・非自己回帰生成

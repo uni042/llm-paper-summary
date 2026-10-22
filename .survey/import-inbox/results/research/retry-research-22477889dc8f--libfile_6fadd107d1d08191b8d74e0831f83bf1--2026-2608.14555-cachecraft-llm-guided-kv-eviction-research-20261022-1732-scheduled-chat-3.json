@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f894cd7c47a5a3ac9aea7c28f631df6b68dbfd1ca81d5a84f7d1e717b8692151",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-22477889dc8f--libfile_6fadd107d1d08191b8d74e0831f83bf1--2026-2608.14555-cachecraft-llm-guided-kv-eviction-research-20261022-1732-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2608.14555",
+  "worker_completed_at": "2026-10-22T17:47:00+09:00",
+  "worker_run_key": "20261022-1732-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6141,
+    "body_paragraphs": 33,
+    "method_chars": 2222,
+    "method_paragraphs": 13,
+    "evaluation_chars": 309,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 309 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 309 < 500"
+  ],
+  "processed_at": "2026-10-22T17:23:56+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T17:18:45+00:00",
+  "generated_at": "2026-10-22T17:23:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -578,34 +578,6 @@
       "worker_run_key": "20261022-1830-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.14555",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T15:26:30+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 309 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6141,
-        "body_paragraphs": 33,
-        "method_chars": 2222,
-        "method_paragraphs": 13,
-        "evaluation_chars": 309,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 309 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6fadd107d1d08191b8d74e0831f83bf1--2026-2608.14555-cachecraft-llm-guided-kv-eviction-research-20261022-1732-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6fadd107d1d08191b8d74e0831f83bf1--2026-2608.14555-cachecraft-llm-guided-kv-eviction-research-20261022-1732-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.03333",
       "title": null,
       "source_url": null,
@@ -633,33 +605,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_72dc5a7f8d4c81918f5f32441d9605ba--2026-2603.03333-dropmatch-mc-dropout-speculative-acceptance-research-20261022-1932-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_72dc5a7f8d4c81918f5f32441d9605ba--2026-2603.03333-dropmatch-mc-dropout-speculative-acceptance-research-20261022-1932-scheduled-chat-30-r01.json",
       "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.16054",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T15:38:41+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5067,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1060,
-        "limitation_chars": 520,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_77e1703fa5e48191ae141a1dcf1e7501--2026-2602.16054-claa-cross-layer-prefill-research-20261022-1626-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_77e1703fa5e48191ae141a1dcf1e7501--2026-2602.16054-claa-cross-layer-prefill-research-20261022-1626-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2402.02750",
@@ -859,62 +804,6 @@
       "worker_run_key": "20261022-0845-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2605.15626",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T16:17:06+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7118,
-        "body_paragraphs": 48,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2367,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.32663",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T16:39:10+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 202 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6177,
-        "body_paragraphs": 34,
-        "method_chars": 1534,
-        "method_paragraphs": 8,
-        "evaluation_chars": 202,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 202 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1830-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.20375",
       "title": null,
       "source_url": null,
@@ -1057,38 +946,9 @@
       "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2405.13019",
-      "title": "A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models",
-      "source_url": "https://arxiv.org/html/2405.13019v2",
-      "returned_at": "2026-10-22T17:16:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7520,
-        "body_paragraphs": 45,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 501,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f82cf24fab008191b9efb97a26487fdf--2024-2405.13019-accelerated-generation-survey-research-20261022-2201-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f82cf24fab008191b9efb97a26487fdf--2024-2405.13019-accelerated-generation-survey-research-20261022-2201-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261022-2201-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.20191",
-      "title": "MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM",
-      "source_url": "https://arxiv.org/pdf/2602.20191",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:17:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1110,6 +970,146 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0b80a199a539--libfile_de4f280439ac8191a0d73d3cd923bb80--2026-2602.20191-mobiquant-token-adaptive-any-precision-quantization-research-20261022-1932-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-0b80a199a539--libfile_de4f280439ac8191a0d73d3cd923bb80--2026-2602.20191-mobiquant-token-adaptive-any-precision-quantization-research-20261022-193.json",
+      "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.16054",
+      "title": "CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill",
+      "source_url": "https://arxiv.org/abs/2602.16054",
+      "returned_at": "2026-10-22T17:23:54+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5067,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1060,
+        "limitation_chars": 520,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0c03ecb3fb2b--libfile_77e1703fa5e48191ae141a1dcf1e7501--2026-2602.16054-claa-cross-layer-prefill-research-20261022-1626-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0c03ecb3fb2b--libfile_77e1703fa5e48191ae141a1dcf1e7501--2026-2602.16054-claa-cross-layer-prefill-research-20261022-1626-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2405.13019",
+      "title": "A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models",
+      "source_url": "https://arxiv.org/html/2405.13019v2",
+      "returned_at": "2026-10-22T17:23:55+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7520,
+        "body_paragraphs": 45,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 501,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1ebd23b81987--libfile_f82cf24fab008191b9efb97a26487fdf--2024-2405.13019-accelerated-generation-survey-research-20261022-2201-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1ebd23b81987--libfile_f82cf24fab008191b9efb97a26487fdf--2024-2405.13019-accelerated-generation-survey-research-20261022-2201-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261022-2201-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.14555",
+      "title": "Discovering KV Cache Eviction Policies via LLM-Guided Program Evolution",
+      "source_url": "https://arxiv.org/html/2608.14555",
+      "returned_at": "2026-10-22T17:23:56+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 309 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6141,
+        "body_paragraphs": 33,
+        "method_chars": 2222,
+        "method_paragraphs": 13,
+        "evaluation_chars": 309,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 309 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-22477889dc8f--libfile_6fadd107d1d08191b8d74e0831f83bf1--2026-2608.14555-cachecraft-llm-guided-kv-eviction-research-20261022-1732-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-22477889dc8f--libfile_6fadd107d1d08191b8d74e0831f83bf1--2026-2608.14555-cachecraft-llm-guided-kv-eviction-research-20261022-1732-scheduled-chat-3.json",
+      "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.32663",
+      "title": "Distance-KV: Exploiting Relative Distance for Efficient Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2609.32663",
+      "returned_at": "2026-10-22T17:23:57+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 202 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6177,
+        "body_paragraphs": 34,
+        "method_chars": 1534,
+        "method_paragraphs": 8,
+        "evaluation_chars": 202,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 202 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2b4afbb4a45e--libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2b4afbb4a45e--libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-.json",
+      "worker_run_key": "20261022-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.15626",
+      "title": "IO-SVD: Input-Output Whitened SVD for Adaptive-Rank LLM Compression",
+      "source_url": "https://arxiv.org/pdf/2605.15626",
+      "returned_at": "2026-10-22T17:23:58+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7118,
+        "body_paragraphs": 48,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2367,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-32171058e770--libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-32171058e770--libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-sche.json",
       "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
     }
   ]
