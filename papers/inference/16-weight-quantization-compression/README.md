@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（66本）
+## 自動生成の論文一覧（67本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -99,6 +99,10 @@
 - **2026-08 · [FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy](2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md)**  
   実装：[✓](https://github.com/nicyyyy/FluxBin) ・ リポジトリ内被引用：0  
   重要列だけをヘッセ行列で選んで追加二値基底を与え、逆量子化を避けるLUT融合CUDAカーネルで約2〜3ビットLLMを実行し、A100で最大5.92倍高速化・10.19倍省エネルギーを報告する。
+
+- **2026-07 · [BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression](2026-2607.08643-bisco-llm-lookup-free-binary-spherical-coding-for-extreme-low-bit-large-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  BiSCo-LLMは、大規模言語モデル（LLM）の重みを2ビット級へ圧縮する際、単純なスカラー量子化では表現力が不足し、ベクトル量子化では明示的なコードブックの記憶容量と検索費用が増える問題に対処する研究である。BiSCo-LLMは較正データと元の重みから重要チャネルを選び、約1%を8ビットで保護する。
 
 - **2026-06 · [SPEAR: A System for Post-Quantization Error-Adaptive Recovery Enabling Efficient Low-Bit LLM Serving](2026-2606.11244-spear-error-adaptive-low-bit-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -28,10 +28,15 @@
   "selection_reason": "Implemented LLM inference scheduling work that jointly addresses prefill/decode fairness, adaptive batch capacity, SLO preservation, and cluster load estimation. Trace-based evaluation reports tail-latency and capacity improvements, making it a useful scheduling-lineage omission despite being older than the newest papers.",
   "semantic_scholar_id": "a44828f5e61dd7bf2b0bfff64146dc5aa13dc516",
   "source_url": "https://arxiv.org/abs/2510.14392",
-  "status": "ready",
+  "status": "superseded",
   "title": "FairBatching: Fairness-Aware Batch Formation for LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-22T17:11:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2510.14392-fairbatching-fairness-aware-batch-formation-for-llm-inference.md",
+  "represented_canonical_id": "arXiv:2510.14392",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

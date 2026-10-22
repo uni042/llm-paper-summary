@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（975本）
+## 自動生成の論文一覧（976本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2415,6 +2415,10 @@
 - **2025-10 · [UltraLLaDA: Scaling the Context Length to 128K for Diffusion Large Language Models](2025-2510.10481-ultrallada-scaling-the-context-length-to-128k-for-diffusion-large-langua.md)**  
   実装：[✓](https://github.com/Relaxed-System-Lab/UltraLLaDA) ・ リポジトリ内被引用：5  
   UltraLLaDAは、マスク拡散型言語モデル（masked diffusion language モデル）のLLaDA-8B-Baseを、事前学習からやり直さずに最大128Kトークンの文脈を利用できるモデルへ追加学習する手法である。
+
+- **2025-10 · [FairBatching: Fairness-Aware Batch Formation for LLM Inference](2025-2510.14392-fairbatching-fairness-aware-batch-formation-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  FairBatching-vanilla単体の有効要求処理量（有効スループット）改善は、最良の比較方式に対する幾何平均で20.0%である。
 
 - **2025-09 · [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](2025-2509.25140-reasoningbank-scaling-agent-self-evolving-with-reasoning-memory.md)**  
   実装：[✓](https://github.com/google-research/reasoning-bank) ・ リポジトリ内被引用：5  
