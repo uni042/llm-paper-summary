@@ -59,6 +59,14 @@ on:
   # The schedule is a backstop for missed push events, not the primary trigger.
   schedule:
     - cron: '17 * * * *'
+  # GitHub Actions commits made with GITHUB_TOKEN don't start a new push workflow.
+  # Workflow completion events do, so refresh from the latest main after intake.
+  workflow_run:
+    workflows:
+      - Library import processor
+      - Library Discovery fast intake
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -90,6 +98,7 @@ jobs:
   publish:
     if: >-
       github.event_name == 'push' ||
+      github.event_name == 'workflow_run' ||
       github.event_name == 'schedule' ||
       github.event_name == 'workflow_dispatch'
     needs: validate
