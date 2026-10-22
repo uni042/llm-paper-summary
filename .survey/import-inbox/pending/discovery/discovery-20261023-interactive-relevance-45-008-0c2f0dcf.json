@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-0025-interactive-llm-relevance/r01/45-8-0c2f0",
+  "reference_main_sha": "da63d442cb29de892b2c6590c8dcd829f1c4e5d0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03051",
+      "identity_tokens": [
+        "arxiv:2410.03051",
+        "doi:10.48550/arxiv.2410.03051"
+      ],
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "reason": "一次要旨は動画詳細キャプション生成モデルAuroraCapと評価ベンチマークVDCを提案し、動画トークン統合により入力視覚トークンを減らしてオーバーヘッドを抑える。トークン削減はマルチモーダル推論費用に接するが、中心は動画キャプション品質・指標で、汎用LLMランタイムやキャッシュ管理の研究ではないため保留。",
+      "source_url": "https://arxiv.org/abs/2410.03051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:25:19+09:00",
+      "last_checked_at": "2026-10-23T00:25:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-0c2f0dcfbf1d9623",
+      "worklist_rank": 8,
+      "original_worklist_worker": "scheduled-chat-45",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
