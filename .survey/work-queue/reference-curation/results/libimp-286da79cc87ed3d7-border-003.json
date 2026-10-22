@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-286da79cc87ed3d7-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2204.05424",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2204.05424",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2204.05424",
+      "arXiv:2204.05424"
+    ],
+    "reason": "beam decodingの停止条件をpatience factorで調整し、要約・機械翻訳の生成品質を改善する手法で、テキスト生成デコーディングには直接隣接する。要旨では推論の遅れはわずかとされる一方、高速化・メモリ削減・serving改善が主貢献ではないため微妙とする。",
+    "first_checked_at": "2026-10-22T17:37:55+00:00",
+    "last_checked_at": "2026-10-22T17:37:55+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "A Call for Clarity in Beam Search: How It Works and When It Stops"
+  },
+  "processed_at": "2026-10-22T17:37:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-286da79cc87e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

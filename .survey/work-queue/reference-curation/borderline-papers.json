@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T17:29:11+00:00",
-  "record_count": 5306,
+  "updated_at": "2026-10-22T17:37:55+00:00",
+  "record_count": 5308,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82331,6 +82331,38 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Limits of Confidence in Diffusion"
+    },
+    "arXiv:2412.04786": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.04786",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.04786",
+        "arXiv:2412.04786"
+      ],
+      "reason": "Scalaは幅の異なるViT部分ネットワークを用意し、資源制約が変わる環境で実行規模を切り替える柔軟な推論を狙うため、適応的な推論実行という接点はある。一方、一次要旨の対象は画像分類とImageNet上のViTで、LLM推論や言語生成への適用は示されないため微妙とする。",
+      "first_checked_at": "2026-10-22T17:37:55+00:00",
+      "last_checked_at": "2026-10-22T17:37:55+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Slicing Vision Transformer for Flexible Inference"
+    },
+    "arXiv:2204.05424": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.05424",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2204.05424",
+        "arXiv:2204.05424"
+      ],
+      "reason": "beam decodingの停止条件をpatience factorで調整し、要約・機械翻訳の生成品質を改善する手法で、テキスト生成デコーディングには直接隣接する。要旨では推論の遅れはわずかとされる一方、高速化・メモリ削減・serving改善が主貢献ではないため微妙とする。",
+      "first_checked_at": "2026-10-22T17:37:55+00:00",
+      "last_checked_at": "2026-10-22T17:37:55+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "A Call for Clarity in Beam Search: How It Works and When It Stops"
     }
   }
 }

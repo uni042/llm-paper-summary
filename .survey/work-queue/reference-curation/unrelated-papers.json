@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T17:25:23+00:00",
-  "record_count": 12442,
+  "updated_at": "2026-10-22T17:37:55+00:00",
+  "record_count": 12443,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179324,6 +179324,21 @@
         ".survey/work-queue/WORKLIST-45.md"
       ],
       "title": "LLM-Guided Measurement Credibility Correction for Trustworthy Industrial Process Inference"
+    },
+    "arXiv:2406.05815": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05815",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2406.05815",
+        "arXiv:2406.05815"
+      ],
+      "reason": "GSSCはグラフ構造データ向けのstate-space convolutionで、グラフTransformerの計算負荷や長距離依存を扱い、グラフベンチマーク上の表現力・精度を評価する。対象はノード関係のグラフ学習であり、LLMの系列生成、言語モデル推論、serving効率への具体的接続が一次要旨にないため無関係とする。",
+      "first_checked_at": "2026-10-22T17:37:55+00:00",
+      "last_checked_at": "2026-10-22T17:37:55+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "title": "What Can We Learn from State Space Models for Machine Learning on Graphs?"
     }
   }
 }
