@@ -31,6 +31,8 @@ reference_main_sha: "4197cebb2e9a959b6779030c4b99ba35f88bb5a8"
 research_origin: "returned_research_quality_repair"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # PayPal商取引エージェントにおけるEAGLE3投機的復号の実測評価

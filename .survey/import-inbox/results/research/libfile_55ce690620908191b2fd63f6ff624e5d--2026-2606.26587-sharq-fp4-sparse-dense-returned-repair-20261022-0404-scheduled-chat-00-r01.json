@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "c505c14d57dd90ff53529ccdf8bf2ceecb09f3b43728f1a1bde663c966e21d97",
-  "canonical_id": "arXiv:2606.26587",
-  "paper_path": "papers/inference/06-moe-quantization-compression/2026-2606.26587-sharq-bridging-activation-sparsity-and-fp4-quantization-for-llm-inferenc.md",
-  "lineage": "06-moe-quantization-compression",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_55ce690620908191b2fd63f6ff624e5d--2026-2606.26587-sharq-fp4-sparse-dense-returned-repair-20261022-0404-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.26587",
   "worker_completed_at": "2026-10-22T04:06:00+09:00",
   "worker_run_key": "20261022-0404-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 559,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-21T23:09:05+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/06-moe-quantization-compression/2026-2606.26587-sharq-bridging-activation-sparsity-and-fp4-quantization-for-llm-inferenc.md と 17 段落 / 3744文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T15:10:29+00:00"
 }

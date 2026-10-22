@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T14:56:40+00:00",
+  "generated_at": "2026-10-22T15:13:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 30,
+  "count": 29,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -322,36 +322,6 @@
       "worker_run_key": "20261021-2200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2606.26587",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T02:02:18+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 427 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5669,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 427,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 427 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-33496a1d7d67--libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-33496a1d7d67--libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2411.04013",
       "title": null,
       "source_url": null,
@@ -377,36 +347,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-40dada793dc1--libfile_59529e070c448191881ec93fc2e7c5d6--2024-2411.04013-knn-attention-theory-research-20261021-1604-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-40dada793dc1--libfile_59529e070c448191881ec93fc2e7c5d6--2024-2411.04013-knn-attention-theory-research-20261021-1604-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261021-1604-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2402.05964",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T02:13:02+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5733,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-85acff00e98e--libfile_856ede44e7748191aa43153439af775e--2024-2402.05964-transformer-compression-survey-research-20261021-1604-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-85acff00e98e--libfile_856ede44e7748191aa43153439af775e--2024-2402.05964-transformer-compression-survey-research-20261021-1604-scheduled-chat-00-r.json",
       "worker_run_key": "20261021-1604-scheduled-chat-00/r01"
     },
     {
@@ -842,8 +782,8 @@
     },
     {
       "canonical_id": "arXiv:2604.19767",
-      "title": "Accelerating PayPal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models",
-      "source_url": "https://arxiv.org/pdf/2604.19767",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T14:54:30+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -867,6 +807,34 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_18af5356fdbc819195db56ac7bec1e60--2026-2604.19767-paypal-eagle3-empirical-returned-repair-20261022-0745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_18af5356fdbc819195db56ac7bec1e60--2026-2604.19767-paypal-eagle3-empirical-returned-repair-20261022-0745-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261022-0742-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.28051",
+      "title": "Beyond Surrogate Gradients: Fully Differentiable Token Pruning for Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2605.28051v1",
+      "returned_at": "2026-10-22T15:09:29+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6718,
+        "body_paragraphs": 35,
+        "method_chars": 1912,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5091b85fd62881918838ec734d38bac7--2026-2605.28051-diffprune-vlm-token-pruning-returned-repair-20261022-0742-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5091b85fd62881918838ec734d38bac7--2026-2605.28051-diffprune-vlm-token-pruning-returned-repair-20261022-0742-scheduled-chat-45-r01.json",
       "worker_run_key": "20261022-0742-scheduled-chat-45/r01"
     }
   ]

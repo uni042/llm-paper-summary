@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **2903本**。
+収録論文: **2905本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**2903本**。
+推論論文：**2905本**。
 
 | 系統 | 本数 |
 |---|---:|
@@ -42,7 +42,7 @@
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 112 |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 15 |
 | [04-conditional-computation](04-conditional-computation/README.md) | 18 |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 204 |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 205 |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 20 |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 304 |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 53 |
@@ -52,7 +52,7 @@
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 53 |
 | [13-sparse-attention](13-sparse-attention/README.md) | 104 |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 67 |
-| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 40 |
+| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 41 |
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 65 |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 26 |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 |
