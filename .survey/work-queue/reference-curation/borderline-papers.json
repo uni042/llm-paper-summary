@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-21T21:44:12+00:00",
-  "record_count": 5287,
+  "updated_at": "2026-10-22T04:51:41+00:00",
+  "record_count": 5286,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81773,19 +81773,6 @@
       "borderline_recheck_count": 0,
       "title": "Rethinking Chain-of-Thought Reasoning for Videos"
     },
-    "arXiv:2511.19575": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2511.19575",
-      "identity_tokens": [
-        "arXiv:2511.19575"
-      ],
-      "reason": "1B規模の視覚言語モデルでOCRの検出・解析・翻訳を統合し、データと強化学習により認識品質を高める技術報告。vLLMを用いた高速配備にも言及するが、主要寄与はOCR向けモデル構造と学習・品質であり、汎用推論エンジンに新しい最適化を導入したとまでは要旨から判断できない。",
-      "first_checked_at": "2026-10-20T11:55:38+00:00",
-      "last_checked_at": "2026-10-20T11:55:38+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "HunyuanOCR Technical Report"
-    },
     "arXiv:2606.31796": {
       "classification": "borderline",
       "canonical_id": "arXiv:2606.31796",
@@ -82000,9 +81987,9 @@
       "identity_tokens": [
         "arXiv:2410.03051"
       ],
-      "reason": "一次要旨では長い動画系列の視覚トークンを統合して入力トークン数を減らす方式を採用しており、マルチモーダルLLMの入力圧縮という推論最適化に接点がある。一方、中心貢献は動画詳細キャプションモデルとVDC評価基盤で、定量結果はキャプション品質（Flickr30k CIDEr 88.9等）に重点があり、汎用LLM配信のトークン生成速度・KVメモリ・サービング負荷改善を直接示すものではないためborderlineとする。",
+      "reason": "一次要旨は動画キャプション生成とVDC評価ベンチマークを中心とするが、視覚トークンの統合により入力トークン数を減らし、品質低下を小さく抑える設計も含む。推論時のトークン削減という関連要素がある一方、汎用LLM配信基盤・GPUカーネル・処理量を直接評価する論文ではないため境界扱いとする。",
       "first_checked_at": "2026-10-21T15:27:51+00:00",
-      "last_checked_at": "2026-10-21T15:27:51+00:00",
+      "last_checked_at": "2026-10-22T04:51:39+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
@@ -82013,9 +82000,9 @@
       "identity_tokens": [
         "arXiv:2407.18370"
       ],
-      "reason": "LLMによる回答評価で人間との一致率を保証する選択的判定が主題。安価な判定モデルから高価な判定モデルへ必要時だけ切り替えるカスケードで評価費用を抑えるが、主たる貢献は判定信頼度の較正と人間一致率保証であり、一般的なLLM推論基盤のスケジューリング・メモリ・処理量改善を主眼としないため境界扱い。",
+      "reason": "一次要旨は人間との判定一致を統計的に保証する選択的LLM評価が中心だが、安価な判定モデルから高価なモデルへ必要時のみエスカレーションするカスケードで計算費用を抑える。LLM推論の資源割当との接点はあるが、推論サーバーのスケジューリング・メモリ管理・カーネルを直接最適化する研究ではないため境界扱いとする。",
       "first_checked_at": "2026-10-21T15:27:52+00:00",
-      "last_checked_at": "2026-10-21T15:27:52+00:00",
+      "last_checked_at": "2026-10-22T04:51:39+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T03:46:12+00:00",
-  "record_count": 12447,
+  "updated_at": "2026-10-22T04:51:41+00:00",
+  "record_count": 12448,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -178911,9 +178911,9 @@
       "identity_tokens": [
         "arXiv:2512.08186"
       ],
-      "reason": "視覚と言語を用いたナビゲーションのための二系統基盤モデルを扱う。モデルの環境理解・移動行動が対象であり、LLM推論基盤の処理時間・メモリ・並列化を改善するシステム研究ではないため対象外。",
+      "reason": "一次要旨では視覚言語ナビゲーションに対しVLMの大域的ウェイポイント推論と拡散Transformerの局所軌道生成を組み合わせ、ロボットの実時間制御と障害物回避を改善する。推論の遅延に触れるが、LLMサービング、KVキャッシュ、GPU資源配置、一般的なトークン生成最適化を対象としない。",
       "first_checked_at": "2026-10-18T10:00:30+00:00",
-      "last_checked_at": "2026-10-21T15:27:51+00:00",
+      "last_checked_at": "2026-10-22T04:51:41+00:00",
       "linked_from": [],
       "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
     },
@@ -179386,6 +179386,18 @@
       "last_checked_at": "2026-10-21T15:27:55+00:00",
       "linked_from": [],
       "title": "ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning"
+    },
+    "arXiv:2511.19575": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.19575",
+      "identity_tokens": [
+        "arXiv:2511.19575"
+      ],
+      "reason": "一次要旨はOCR専用の10億パラメータ視覚言語モデルの構造、学習データ、強化学習、文字認識・情報抽出・翻訳の精度を中心に報告する。軽量性とvLLM配備に触れるが、汎用LLMの推論エンジン・メモリ階層・カーネル・分散学習の新規システム手法を提案していないため対象外とする。",
+      "first_checked_at": "2026-10-22T04:51:40+00:00",
+      "last_checked_at": "2026-10-22T04:51:40+00:00",
+      "linked_from": [],
+      "title": "HunyuanOCR Technical Report"
     }
   }
 }

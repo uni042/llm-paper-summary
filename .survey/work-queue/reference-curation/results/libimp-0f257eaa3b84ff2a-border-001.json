@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0f257eaa3b84ff2a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.03051",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.03051",
+    "identity_tokens": [
+      "arXiv:2410.03051"
+    ],
+    "reason": "一次要旨は動画キャプション生成とVDC評価ベンチマークを中心とするが、視覚トークンの統合により入力トークン数を減らし、品質低下を小さく抑える設計も含む。推論時のトークン削減という関連要素がある一方、汎用LLM配信基盤・GPUカーネル・処理量を直接評価する論文ではないため境界扱いとする。",
+    "first_checked_at": "2026-10-21T15:27:51+00:00",
+    "last_checked_at": "2026-10-22T04:51:39+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
+  },
+  "processed_at": "2026-10-22T04:51:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0f257eaa3b84",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
