@@ -33,6 +33,8 @@ applyは同じ本文bytesをnew pathへ置き、old pathをfrontmatterなし・�
 
 applyと検証は非公開branchで行います。CLIは複数fileとsnapshotをOSレベルで原子的に置換せず、repository-wide writer lockも取得しません。そのためwriter-free gateを保ち、検証完了までHEADを変えません。検証が失敗したらHEADを固定したままCLIのrollbackを行い、復旧を検証してから調査をやり直します。
 
+作業中にmainが進んだ場合は、branchのbaseから最新mainまでのcommitと変更pathを比較します。変更がSTATUSや独立したwork-queue等に限られ、候補paper、identity snapshot/delta、citation、taxonomy、生成indexの前提に触れなければ、そのPRを最新mainへそのまま出してCIとmergeabilityを確認します。無関係なcommitをmigration branchへ取り込む必要はありません。候補paper、alias、identity、citation evidence、taxonomyまたは移動先indexが変わった場合は、そのbatchを最新mainへrepinし、manifestとdry-runを作り直します。status/work-queue writerが終わった後にSTATUS整合性とwriter-free条件も再確認します。各PRのmerge後は、その時点のmainから次batchを作ります。
+
 同一候補commitで次を確認します。
 
 - 各canonical IDがnew path一件に解決し、aliasが同じIDを指す。
