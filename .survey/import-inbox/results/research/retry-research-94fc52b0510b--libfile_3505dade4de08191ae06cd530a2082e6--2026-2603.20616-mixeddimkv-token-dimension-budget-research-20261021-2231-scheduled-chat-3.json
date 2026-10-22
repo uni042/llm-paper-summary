@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2f677366e996f0164e35449c22bc87150ec895a04959ff544b1923841404a4ac",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-94fc52b0510b--libfile_3505dade4de08191ae06cd530a2082e6--2026-2603.20616-mixeddimkv-token-dimension-budget-research-20261021-2231-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.20616",
+  "worker_completed_at": "2026-10-21T22:31:00+09:00",
+  "worker_run_key": "20261021-2231-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6586,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1737,
+    "limitation_chars": 716,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2026-2603.20616-beyond-token-eviction-mixed-dimension-budget-allocation-for-efficient-kv.md と 20 段落 / 4728文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T02:20:07+00:00"
+}
