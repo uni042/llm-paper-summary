@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T15:39:55+00:00",
+  "generated_at": "2026-10-22T15:48:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 33,
+  "count": 35,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -523,36 +523,6 @@
       "worker_run_key": "20261021-1900-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2508.01002",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T02:45:45+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 142 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4464,
-        "body_paragraphs": 22,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 142,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 142 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dfbc1e30babd--libfile_164ea39f39ec81918a522bc872a17b35--2025-2508.01002-slai-rad-scheduling-research-20261020-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-dfbc1e30babd--libfile_164ea39f39ec81918a522bc872a17b35--2025-2508.01002-slai-rad-scheduling-research-20261020-2230-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.12471",
       "title": null,
       "source_url": null,
@@ -866,8 +836,8 @@
     },
     {
       "canonical_id": "arXiv:2603.03333",
-      "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
-      "source_url": "https://arxiv.org/pdf/2603.03333",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T15:37:57+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -895,8 +865,8 @@
     },
     {
       "canonical_id": "arXiv:2602.16054",
-      "title": "CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill",
-      "source_url": "https://arxiv.org/abs/2602.16054",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T15:38:41+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -922,8 +892,8 @@
     },
     {
       "canonical_id": "arXiv:2402.02750",
-      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
-      "source_url": "https://arxiv.org/html/2402.02750",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T15:38:43+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -946,6 +916,89 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_79312e304b748191a14038bdd26233af--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261022-0701-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_79312e304b748191a14038bdd26233af--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261022-0701-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.01002",
+      "title": "Optimal Scheduling Algorithms for LLM Inference: Theory and Practice",
+      "source_url": "https://arxiv.org/pdf/2508.01002",
+      "returned_at": "2026-10-22T15:46:54+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6029,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 535,
+        "limitation_chars": 858,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261022-1803-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3706418",
+      "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey",
+      "source_url": "https://doi.org/10.1145/3706418",
+      "returned_at": "2026-10-22T15:46:55+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5739,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 634,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7e30f24e15148191a819aee7dd0c6ce2--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-research-20261022-0732-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7e30f24e15148191a819aee7dd0c6ce2--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-research-20261022-0732-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261022-0732-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.00077",
+      "title": "Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference",
+      "source_url": "https://arxiv.org/html/2608.00077",
+      "returned_at": "2026-10-22T15:47:28+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 201 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6789,
+        "body_paragraphs": 40,
+        "method_chars": 1829,
+        "method_paragraphs": 9,
+        "evaluation_chars": 201,
+        "limitation_chars": 755,
+        "insufficiency_flags": [
+          "評価説明量 201 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7f967b092d508191942ce31e0aeb287b--2026-2608.00077-visual-provenance-pruning-returned-repair-20261022-0701-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7f967b092d508191942ce31e0aeb287b--2026-2608.00077-visual-provenance-pruning-returned-repair-20261022-0701-scheduled-chat-00-r01.json",
       "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
     }
   ]

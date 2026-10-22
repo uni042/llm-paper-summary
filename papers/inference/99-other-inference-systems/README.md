@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（966本）
+## 自動生成の論文一覧（967本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1341,6 +1341,10 @@
 - **2026-05 · [Mind the Delay: Latency-aware Query Routing for Heterogeneous LLM pools](2026-2607.18253-mind-the-delay-latency-aware-query-routing-for-heterogeneous-llm-pools.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来のモデルルータは入力質問の難しさを見て品質と費用を比較し、負荷分散器はモデルが決まった後にキュー長などからインスタンスを選ぶことが多い。しかし、この二段階の分離では、能力が高くても現在混雑しているモデルへ要求を送り、初回トークン遅延（Time To First Token、TTFT）の期限を破る場合がある。
+
+- **2026-05 · [MeMo: Memory as a Model](2026-2605.15156-memo-memory-as-a-model.md)**  
+  実装：[✓](https://github.com/arunv3rma/MeMo) ・ リポジトリ内被引用：0  
+  従来の検索拡張生成（RAG）は質問ごとに検索索引から文書を取得するため、検索雑音、複数文書にまたがる関係の取りこぼし、長い引用文脈の投入が問題になる。MeMoは、知識を記憶する小型モデルと、推論・回答を担当する凍結モデルを分離する。
 
 - **2026-05 · [Lodestar：オンライン学習によるLLM推論リクエストルータ](2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md)**  
   実装：[✓](https://github.com/gangmuk/Lodestar) ・ リポジトリ内被引用：0  
