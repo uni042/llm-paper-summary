@@ -1,9 +1,13 @@
 import hashlib
+import inspect
+import io
 import json
+import re
 import sys
+import tempfile
+import unittest
+from contextlib import contextmanager, redirect_stderr, redirect_stdout
 from pathlib import Path
-
-import pytest
 
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
@@ -24,7 +28,6 @@ NEW = "papers/inference/new/paper.md"
 RAW = b"---\ncanonical_id: arXiv:2401.00001\narxiv_id: 2401.00001\ndoi: 10.1000/sample\ntitle: Sample\n---\nBody bytes stay exact.\n"
 
 
-@pytest.fixture
 def world(tmp_path, monkeypatch):
     root = tmp_path / "repo"
     (root / OLD).parent.mkdir(parents=True)
@@ -62,9 +65,35 @@ def world(tmp_path, monkeypatch):
 
 
 def cli(args, capsys):
-    code = migration.main(args)
-    captured = capsys.readouterr()
-    return code, captured.out, captured.err
+    stdout, stderr = io.StringIO(), io.StringIO()
+    with redirect_stdout(stdout), redirect_stderr(stderr):
+        code = migration.main(args)
+    return code, stdout.getvalue(), stderr.getvalue()
+
+
+@contextmanager
+def raises(expected, match=None):
+    try:
+        yield
+    except expected as exc:
+        if match and not re.search(match, str(exc)):
+            raise AssertionError(f"{str(exc)!r} does not match {match!r}") from exc
+    else:
+        raise AssertionError(f"expected {expected.__name__} to be raised")
+
+
+class MonkeyPatch:
+    def __init__(self):
+        self._changes = []
+
+    def setattr(self, target, name, value):
+        self._changes.append((target, name, getattr(target, name)))
+        setattr(target, name, value)
+
+    def undo(self):
+        for target, name, old_value in reversed(self._changes):
+            setattr(target, name, old_value)
+        self._changes.clear()
 
 
 def add_second_entry(root, manifest, manifest_path, index):
@@ -113,10 +142,6 @@ def test_valid_apply_preserves_bytes_stub_and_alias_lookup(world, capsys):
     assert result["transaction_id"]
 
 
-@pytest.mark.parametrize("mutation,expected", [
-    ("pin", "source_main_sha"), ("hash", "hash"), ("id", "canonical"),
-    ("snapshot", "snapshot"), ("alias", "alias"),
-])
 def test_stale_hash_id_snapshot_and_alias_fail_closed(world, mutation, expected, capsys):
     root, manifest, manifest_path, index = world
     if mutation == "pin":
@@ -152,7 +177,6 @@ def test_target_collision_and_traversal_fail_before_mutation(world, capsys):
     assert (root / OLD).read_bytes() == RAW
 
 
-@pytest.mark.parametrize("collision", ["other-family-paper", "registered-stub"])
 def test_dry_run_rejects_moved_stub_suffix_collision(world, collision, capsys):
     root, _manifest, manifest_path, index = world
     suffix = OLD.split("/", 2)[-1]
@@ -293,7 +317,6 @@ class SimulatedCrash(BaseException):
     pass
 
 
-@pytest.mark.parametrize("phase", DURABLE_PHASES)
 def test_recover_rollback_after_crash_at_each_phase(world, capsys, monkeypatch, phase):
     root, manifest, manifest_path, index = world
     old2, new2, raw2, _cid2 = add_second_entry(root, manifest, manifest_path, index)
@@ -301,7 +324,7 @@ def test_recover_rollback_after_crash_at_each_phase(world, capsys, monkeypatch, 
     def crash(current):
         if current == phase: raise SimulatedCrash(current)
     monkeypatch.setattr(migration, "_after_phase", crash)
-    with pytest.raises(SimulatedCrash):
+    with raises(SimulatedCrash):
         migration.apply_manifest(manifest_path)
     monkeypatch.setattr(migration, "_after_phase", lambda _phase: None)
     journals = list((root / "survey-state/lineage-migrations").glob("*.json"))
@@ -322,11 +345,11 @@ def test_recovery_refuses_ambiguous_bytes_without_deleting_source(world, monkeyp
     def crash(phase):
         if phase == "target-installed:0": raise SimulatedCrash(phase)
     monkeypatch.setattr(migration, "_after_phase", crash)
-    with pytest.raises(SimulatedCrash): migration.apply_manifest(manifest_path)
+    with raises(SimulatedCrash): migration.apply_manifest(manifest_path)
     monkeypatch.setattr(migration, "_after_phase", lambda _phase: None)
     txid = migration.find_active_transaction(root)
     (root / NEW).write_bytes(b"ambiguous")
-    with pytest.raises(migration.RecoveryConflict): migration.recover(root, txid, "rollback")
+    with raises(migration.RecoveryConflict): migration.recover(root, txid, "rollback")
     assert (root / OLD).read_bytes() == RAW
     assert (root / NEW).read_bytes() == b"ambiguous"
 
@@ -336,29 +359,23 @@ def test_recovery_journal_sha_must_match_current_worktree(world, monkeypatch):
     def crash(phase):
         if phase == "target-installed:0": raise SimulatedCrash(phase)
     monkeypatch.setattr(migration, "_after_phase", crash)
-    with pytest.raises(SimulatedCrash): migration.apply_manifest(manifest_path)
+    with raises(SimulatedCrash): migration.apply_manifest(manifest_path)
     monkeypatch.setattr(migration, "_after_phase", lambda _phase: None)
     txid = migration.find_active_transaction(root)
     monkeypatch.setattr(migration, "current_worktree_sha", lambda: "f" * 40)
-    with pytest.raises(migration.RecoveryConflict, match="source pin mismatch"):
+    with raises(migration.RecoveryConflict, match="source pin mismatch"):
         migration.recover(root, txid, "rollback")
     assert (root / OLD).read_bytes() == RAW
     assert (root / NEW).read_bytes() == RAW
 
 
-@pytest.mark.parametrize("field,value", [
-    ("snapshot_path", "../../outside.json"),
-    ("snapshot_temp", "../outside.tmp"),
-    ("target_temp", "../../outside.tmp"),
-    ("stub_temp", "C:/outside.tmp"),
-])
 def test_recovery_rejects_tampered_journal_paths_before_mutation(world, monkeypatch, field, value):
     root, _manifest, manifest_path, index = world
     before_index = index.read_bytes()
     def crash(phase):
         if phase == "target-installed:0": raise SimulatedCrash(phase)
     monkeypatch.setattr(migration, "_after_phase", crash)
-    with pytest.raises(SimulatedCrash): migration.apply_manifest(manifest_path)
+    with raises(SimulatedCrash): migration.apply_manifest(manifest_path)
     monkeypatch.setattr(migration, "_after_phase", lambda _phase: None)
     txid = migration.find_active_transaction(root)
     journal_path = next((root / "survey-state/lineage-migrations").glob("*.json"))
@@ -368,7 +385,7 @@ def test_recovery_rejects_tampered_journal_paths_before_mutation(world, monkeypa
     else:
         journal["entries"][0][field] = value
     journal_path.write_text(json.dumps(journal), encoding="utf-8")
-    with pytest.raises(migration.RecoveryConflict, match="journal .* path"):
+    with raises(migration.RecoveryConflict, match="journal .* path"):
         migration.recover(root, txid, "rollback")
     assert (root / OLD).read_bytes() == RAW
     assert (root / NEW).read_bytes() == RAW
@@ -381,15 +398,79 @@ def test_recovery_refuses_symlink_staging_path_before_mutation(world, monkeypatc
     def crash(phase):
         if phase == "target-installed:0": raise SimulatedCrash(phase)
     monkeypatch.setattr(migration, "_after_phase", crash)
-    with pytest.raises(SimulatedCrash): migration.apply_manifest(manifest_path)
+    with raises(SimulatedCrash): migration.apply_manifest(manifest_path)
     monkeypatch.setattr(migration, "_after_phase", lambda _phase: None)
     txid = migration.find_active_transaction(root)
     target_temp = root / f"{NEW.rsplit('/', 1)[0]}/.{NEW.rsplit('/', 1)[1]}.{txid}.target.tmp"
     original_is_symlink = Path.is_symlink
     monkeypatch.setattr(Path, "is_symlink", lambda self: self == target_temp or original_is_symlink(self))
-    with pytest.raises(migration.RecoveryConflict, match="staging path is a symlink"):
+    with raises(migration.RecoveryConflict, match="staging path is a symlink"):
         migration.recover(root, txid, "rollback")
     assert (root / OLD).read_bytes() == RAW
     assert (root / NEW).read_bytes() == RAW
     assert index.read_bytes() == before_index
+
+
+PARAMETER_CASES = [
+    (test_stale_hash_id_snapshot_and_alias_fail_closed, [
+        ("pin", "source_main_sha"), ("hash", "hash"), ("id", "canonical"),
+        ("snapshot", "snapshot"), ("alias", "alias"),
+    ]),
+    (test_dry_run_rejects_moved_stub_suffix_collision, [
+        ("other-family-paper",), ("registered-stub",),
+    ]),
+    (test_recover_rollback_after_crash_at_each_phase, [(phase,) for phase in DURABLE_PHASES]),
+    (test_recovery_rejects_tampered_journal_paths_before_mutation, [
+        ("snapshot_path", "../../outside.json"),
+        ("snapshot_temp", "../outside.tmp"),
+        ("target_temp", "../../outside.tmp"),
+        ("stub_temp", "C:/outside.tmp"),
+    ]),
+]
+
+
+def _run_unittest_case(function, parameter_values):
+    temporary = tempfile.TemporaryDirectory(prefix="lineage-migration-")
+    tmp_path = Path(temporary.name)
+    monkeypatch = MonkeyPatch()
+    old_survey_root, old_delta_root = survey.ROOT, identity_delta.ROOT
+    try:
+        args = []
+        for parameter in inspect.signature(function).parameters:
+            if parameter == "world":
+                args.append(world(tmp_path, monkeypatch))
+            elif parameter == "tmp_path":
+                args.append(tmp_path)
+            elif parameter == "monkeypatch":
+                args.append(monkeypatch)
+            elif parameter == "capsys":
+                args.append(None)
+            else:
+                args.append(parameter_values.pop(0))
+        function(*args)
+    finally:
+        monkeypatch.undo()
+        survey.ROOT = old_survey_root
+        identity_delta.ROOT = old_delta_root
+        temporary.cleanup()
+
+
+class TestPaperLineageMigration(unittest.TestCase):
+    pass
+
+
+_parameterized_functions = {function for function, _values in PARAMETER_CASES}
+_parameter_values = {function: values for function, values in PARAMETER_CASES}
+for _function in [value for value in globals().values()
+                  if inspect.isfunction(value) and value.__name__.startswith("test_")]:
+    if _function in _parameterized_functions:
+        for _index, _values in enumerate(_parameter_values[_function]):
+            def _test(self, function=_function, values=_values):
+                _run_unittest_case(function, list(values))
+            setattr(TestPaperLineageMigration, f"{_function.__name__}_{_index:02d}", _test)
+    else:
+        def _test(self, function=_function):
+            _run_unittest_case(function, [])
+        setattr(TestPaperLineageMigration, _function.__name__, _test)
+
 
