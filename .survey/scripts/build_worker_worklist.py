@@ -196,6 +196,16 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
     paper_index = research_job_reconciliation.build_paper_index(root)
     cache = candidate_priority.load_cache(root)
     config = candidate_priority.load_config(root)
+    # Relevance records are authoritative even if an older Research job remains
+    # ready. Keep borderline exclusions reversible without mutating that job.
+    relevance_excluded = (
+        reference_pool._load_ledger_tokens(
+            root / reference_pool.DEFAULT_UNRELATED_LEDGER, label="unrelated-paper"
+        )
+        | reference_pool._load_ledger_tokens(
+            root / reference_pool.DEFAULT_BORDERLINE_LEDGER, label="borderline-paper"
+        )
+    )
     ready = [
         row
         for row in jobs
@@ -203,9 +213,12 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
         and row.get("type") in {"research", "audit"}
         and not (
             row.get("type") == "research"
-            and research_job_reconciliation.match_represented_research_job(
-                row, paper_index
-            ) is not None
+            and (
+                bool(_worklist_identity_tokens(row) & relevance_excluded)
+                or research_job_reconciliation.match_represented_research_job(
+                    row, paper_index
+                ) is not None
+            )
         )
     ]
     claimable = [
