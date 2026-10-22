@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-0025-interactive-llm-relevance/r01/45-1-0f98f",
+  "reference_main_sha": "da63d442cb29de892b2c6590c8dcd829f1c4e5d0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.12289",
+      "identity_tokens": [
+        "arxiv:2402.12289",
+        "doi:10.48550/arxiv.2402.12289"
+      ],
+      "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models",
+      "reason": "一次要旨は視覚言語モデルを用いた自動運転のシーン理解・階層的計画、従来の車載処理系と組み合わせたDriveVLM-Dualを提案し、実車での推論実行にも言及する。実時間性と重い推論の組合せというシステム接点はあるが、目的と評価は運転タスクであり汎用LLMサービング・GPUメモリ階層・KVキャッシュ最適化そのものではないため関連性保留。",
+      "source_url": "https://arxiv.org/abs/2402.12289",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:25:19+09:00",
+      "last_checked_at": "2026-10-23T00:25:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-0f98f66f0ec3b70d",
+      "worklist_rank": 1,
+      "original_worklist_worker": "scheduled-chat-45",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
