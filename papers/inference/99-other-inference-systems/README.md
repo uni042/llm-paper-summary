@@ -58,6 +58,10 @@
   実装：[✓](https://github.com/IntelChina-AI/BitTern) ・ リポジトリ内被引用：4  
   CAT-Qは、高精度で事前学習された大規模言語モデル（LLM）を、重みが負一・零・正一の三値しか取らない形式へ変換する学習後量子化（Post-学習 量子化; PTQ）方式である。235Bモデルの三値化にはA100 80GBを8枚使って最大60時間を要する。
 
+- **2026-04 · [Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding](2026-2604.12358-why-and-when-visual-token-pruning-fails-a-study-on-relevant-visual-infor.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  そのうえで、生成中の注意分布が初期状態から変化した時だけ、退避しておいた視覚トークンを選び直す生成段階移動対応トークン削減（デコード-stage Shift-aware トークン 枝刈り; DSTP）を提案する。
+
 - **2025-11 · [From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models](2025-2511.21103-from-bits-to-rounds-parallel-decoding-with-exploration-for-diffusion-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   通常の自己回帰モデルとは異なり、左から一語ずつ確定する必要がないため、並列復号によって生成の反復回数を減らせる可能性がある。実験ではGSM8K、MATH、HumanEval、MMLU-Proを対象に、同程度の正答率で必要なモデル順伝播回数を26〜61%削減する代表結果を示す。
@@ -77,10 +81,6 @@
 - **2026-05 · [SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems](2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   将来要求の助言信号でKVキャッシュを事前移動し、層優先度と協調HBM管理で不確実性を吸収して計算・メモリ分離を低遅延化する。
-
-- **2026-04 · [Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding](2026-2604.12358-why-and-when-visual-token-pruning-fails-a-study-on-relevant-visual-infor.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  そのうえで、生成中の注意分布が初期状態から変化した時だけ、退避しておいた視覚トークンを選び直す生成段階移動対応トークン削減（デコード-stage Shift-aware トークン 枝刈り; DSTP）を提案する。
 
 - **2026-04 · [DORA: A Scalable Asynchronous Reinforcement Learning System for Language Model Training](2026-2604.26256-dora-a-scalable-asynchronous-reinforcement-learning-system-for-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -141,6 +141,10 @@
 - **2026-05 · [An Efficient Hybrid Sparse Attention with CPU-GPU Parallelism for Long-Context Inference](2026-2605.07719-an-efficient-hybrid-sparse-attention-with-cpu-gpu-parallelism-for-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   CPU常駐KV向けに出力寄与ベース予算配分とCPU・GPU協調疎注意を統合し、長文復号を最大3.7倍高速化する。
+
+- **2026-04 · [HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models](2026-2604.07812-hawk-head-importance-aware-visual-token-pruning-in-multimodal-models.md)**  
+  実装：[✓](https://github.com/peppery77/HAWK) ・ リポジトリ内被引用：2  
+  画像の解像度や動画のフレーム数が増えると、入力長、注意計算、キー・値キャッシュの負荷が増える。視覚トークンを削減する既存方式には、画像特徴の類似性や注意得点で残すトークンを選ぶものがあるが、注意ヘッドを単純平均すると、画像理解に重要なヘッドとそうでないヘッドを同等に扱ってしまう。
 
 - **2026-03 · [SLO-Aware Compute Resource Allocation for Prefill-Decode Disaggregated LLM Inference](2026-2603.04716-slo-aware-compute-resource-allocation-for-prefill-decode-disaggregated-l.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -337,10 +341,6 @@
 - **2026-04 · [LearnPruner: Rethinking Attention-based Token Pruning in Vision Language Models](2026-2604.23950-learnpruner-rethinking-attention-based-token-pruning-in-vision-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLaVA-v1.5では1画像576トークン、LLaVA-NeXTの高解像度入力では最大2,880トークンとなり、画像の背景や類似領域にも長い系列を割り当てる。LLaVA-v1.5-7Bの8課題では、視覚トークンを平均576個から32個へ削減しても、元モデルを100%とした平均相対性能94.8%を維持した。
-
-- **2026-04 · [HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models](2026-2604.07812-hawk-head-importance-aware-visual-token-pruning-in-multimodal-models.md)**  
-  実装：[✓](https://github.com/peppery77/HAWK) ・ リポジトリ内被引用：1  
-  画像の解像度や動画のフレーム数が増えると、入力長、注意計算、キー・値キャッシュの負荷が増える。視覚トークンを削減する既存方式には、画像特徴の類似性や注意得点で残すトークンを選ぶものがあるが、注意ヘッドを単純平均すると、画像理解に重要なヘッドとそうでないヘッドを同等に扱ってしまう。
 
 - **2026-04 · [Cactus: Accelerating Auto-Regressive Decoding with Constrained Acceptance Speculative Sampling](2026-2604.04987-cactus-accelerating-auto-regressive-decoding-with-constrained-acceptance.md)**  
   実装：[✓](https://github.com/MANGA-UOFA/Cactus) ・ リポジトリ内被引用：1  
@@ -2155,7 +2155,7 @@
   提案方式は、情報量が高そうな個々のトークンを選ぶのではなく、選んだトークン同士が似過ぎないようにすることで、短い視覚列に異なる意味的領域を残そうとする。提案された距離選択を、言語モデルの最初の層より前、または途中層の視覚対応隠れ状態へ挿入できるが、主要な実験で最も良好だったのは最初の層の前に削減する構成である。
 
 - **2025-02 · [Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More](2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md)**  
-  実装：[✓](https://github.com/ZichenWen1/DART) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/ZichenWen1/DART) ・ リポジトリ内被引用：28  
   従来は注意重みを使って重要そうなトークンを残す方式が多かった。LLaVA-Next-7Bの画像トークンを2880から320へ削減した条件では、総推論時間が36分16秒から18分13秒、事前充填時間が22分51秒から7分38秒へ短縮し、鍵値キャッシュは1512.1MBから168.0MBへ減少した。
 
 - **2025-03 · [Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques](2025-2406.02500-towards-efficient-mixture-of-experts-a-holistic-study-of-compression-tec.md)**  
@@ -2287,7 +2287,7 @@
   CODI（Continuous Chain-of-Thought via Self-Distillation）は、推論過程を自然言語の単語列として毎回生成する費用を減らすため、明示的な思考連鎖（Chain-of-Thought; CoT）を少数の連続潜在状態へ移す学習方式である。
 
 - **2025-06 · [Beyond Attention or Similarity: Maximizing Conditional Diversity for Token Pruning in MLLMs](2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md)**  
-  実装：[✓](https://github.com/Theia-4869/CDPruner) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/Theia-4869/CDPruner) ・ リポジトリ内被引用：10  
   本論文は、質問に必要な画像情報を残しながら視覚トークンを減らすCDPrunerを提案する。LLaVA-1.5-7Bで視覚トークン576個から128個へ減らすと、10種類の評価指標の平均相対性能は99.0%である。
 
 - **2025-05 · [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md)**  
@@ -2390,6 +2390,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   異種GPUへドラフト生成と検証を分離し、専門ドラフタ協調と動的パイプライン制御で投機推論の資源利用と受理率を改善する。
 
+- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
+  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：4  
+  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
+
 - **2025-05 · [ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor](2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   応答長を50トークンごとに再予測して短い残作業を優先し、LLM servingの先頭待ちを減らすKubernetes/vLLMスケジューラ。
@@ -2430,10 +2434,6 @@
   実装：✓ ・ リポジトリ内被引用：3  
   意味的に近い別プロンプトをトークンLSHで対応付け、位置補正と層別再計算により完全一致なしでもKVを選択再利用する。
 
-- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
-  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：3  
-  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
-
 - **2025-08 · [TinyServe: Query-Aware Cache Selection for Efficient LLM Serving](2025-2509.12211-tinyserve-query-aware-cache-selection.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   QueryごとにKVページの関連度を軽量メタデータで推定し、必要ページだけを融合CUDAカーネルで読むことで小型LLMサービングの復号とメモリ移動を削減する。
@@ -2449,6 +2449,10 @@
 - **2025-05 · [WINA: Weight Informed Neuron Activation for Accelerating Large Language Model Inference](2025-2505.19427-wina-weight-informed-neuron-activation-for-accelerating-large-language-m.md)**  
   実装：[✓](https://github.com/microsoft/wina) ・ リポジトリ内被引用：3  
   WINAは、既存の大規模言語モデル（LLM）を再学習せず、各層で計算に参加させる活性成分を選択する疎活性化方式である。代表例としてLlama-2-7Bの常識推論8課題平均では、65%の活性疎性でWINAが65.14、TEALが61.07、R-Sparseが59.37となった。
+
+- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
+  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：3  
+  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
 
 - **2025-01 · [MoE²: Optimizing Collaborative Inference for Edge Large Language Models](2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2513,10 +2517,6 @@
 - **2025-04 · [Dynamic-Width Speculative Beam Decoding for LLM Inference](2025-2409.16560-dynamic-width-speculative-beam-decoding-for-llm-inference.md)**  
   実装：[✓](https://github.com/ZongyueQin/DSBD) ・ リポジトリ内被引用：2  
   動的幅投機的ビーム復号（Dynamic-Width 投機的 Beam Decoding; DSBD）は、単一系列の投機的復号（投機的復号）の速度利得と、複数候補系列を保持するビームサンプリング（beam sampling）の品質利得を両立するための方式である。
-
-- **2025-02 · [OmniRouter: Budget and Performance Controllable Multi-LLM Routing](2025-2502.20576-omnirouter-budget-and-performance-controllable-multi-llm-routing.md)**  
-  実装：[✓](https://github.com/dongyuanjushi/OmniRouter) ・ リポジトリ内被引用：2  
-  評価では、MMLU、GPQA-Diamond、Math-500、GSM8Kの合計2,698問（本文では約2.7千問）を10モデルに割り当て、OmniRouterが正答率75.19%、一問当たりの金銭費用0.0515ドルを報告した。
 
 - **2025-07 · [RAT: Bridging RNN Efficiency and Attention Accuracy via Chunk-based Sequence Modeling](2025-2507.04416-rat-bridging-rnn-efficiency-and-attention-accuracy-via-chunk-based-seque.md)**  
   実装：[✓](https://github.com/CLAIRE-Labo/RAT) ・ リポジトリ内被引用：1  
@@ -2705,7 +2705,7 @@
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：106  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：107  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
@@ -2713,7 +2713,7 @@
   QuIP#は、学習済みの大規模言語モデルを再学習せずに2〜4ビット/重みへ圧縮する事後学習量子化（Post-学習 量子化、PTQ）である。試作推論実装はRTX 4090上で70Bの2ビット重みを32.74トークン/秒で生成し、実効メモリ帯域利用率56.84%を記録した（表5）。
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
-  実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：82  
+  実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：83  
   LLaVA-1.5では一枚の336×336画像が576トークンになり、高解像度化や動画の複数フレーム処理では数千トークンへ増える。初期層では画像情報が広く注意される一方、深い層では少数のシステム指示や文章トークンへ注意が集中し、画像トークン一個当たりの注意効率が非常に低くなる。代表設定は二層後に視覚トークンの50%を削除する方式である。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -2737,7 +2737,7 @@
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2024-03 · [LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md)**  
-  実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：56  
+  実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：57  
   LLaVA-PruMergeは、画像を大規模言語モデルへ渡す際の視覚トークン数を削減する方式である。LLaVA-1.5は336×336画素の画像から24×24個、すなわち576個の視覚トークンを生成する。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
@@ -2756,13 +2756,13 @@
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：48  
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
+- **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：47  
+  そのため、簡単な予測位置も難しい予測位置も同じ計算を受ける。方式の要点は、処理するトークンの「個数」kを事前に固定し、「どのトークンか」だけを学習済みルータが動的に選ぶ点にある。論文の代表構成では系列長2048に対し、一つおきの層で上位256トークン、すなわち12.5%だけを自己注意とMLPへ通す。
+
 - **2024-04 · [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](2024-2404.12457-ragcache-efficient-knowledge-caching-for-retrieval-augmented-generation.md)**  
   実装：✓ ・ リポジトリ内被引用：46  
   RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
-
-- **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  
-  実装：✓ ・ リポジトリ内被引用：46  
-  そのため、簡単な予測位置も難しい予測位置も同じ計算を受ける。方式の要点は、処理するトークンの「個数」kを事前に固定し、「どのトークンか」だけを学習済みルータが動的に選ぶ点にある。論文の代表構成では系列長2048に対し、一つおきの層で上位256トークン、すなわち12.5%だけを自己注意とMLPへ通す。
 
 - **2024-07 · [PQCache: Product Quantization-based KVCache for Long Context LLM Inference](2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md)**  
   実装：[✓](https://github.com/HugoZHL/PQCache) ・ リポジトリ内被引用：45  
@@ -2880,13 +2880,13 @@
   実装：[✓](https://github.com/msr-fiddle/dejavu) ・ リポジトリ内被引用：19  
   また各マイクロバッチのKVキャッシュをGPUに保持し続けるとメモリを過剰確保し、障害時には失われたKV状態を再計算するため復旧が遅い。DéjàVuはこれらをKVキャッシュの高速な非同期転送という一つの機構で扱う。
 
+- **2024-05 · [Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference](2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md)**  
+  実装：[✓](https://github.com/lzhxmu/VTW) ・ リポジトリ内被引用：18  
+  例えばLLaVAでは336×336画像を576個の視覚トークンに変換し、システム指示、ユーザー質問、生成済みのテキストトークンとともにデコーダへ流す。
+
 - **2024-02 · [OneBit: Towards Extremely Low-bit Large Language Models](2024-2402.11295-onebit-towards-extremely-low-bit-large-language-models.md)**  
   実装：[✓](https://github.com/xuyuzhuang11/OneBit) ・ リポジトリ内被引用：18  
   OneBitは、学習済み大規模言語モデル（LLM）の重みを極端に低いビット数で保存する際に生じる精度劣化を、線形層の表現形式そのものを変更することで緩和する研究である。査読版の表3では、LLaMA-7Bの重み保存量が13.5 GBから1.3 GBへ、LLaMA-13Bでは26.0 GBから2.2 GBへ減る。
-
-- **2024-05 · [Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference](2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md)**  
-  実装：[✓](https://github.com/lzhxmu/VTW) ・ リポジトリ内被引用：17  
-  例えばLLaVAでは336×336画像を576個の視覚トークンに変換し、システム指示、ユーザー質問、生成済みのテキストトークンとともにデコーダへ流す。
 
 - **2024-04 · [HGRN2: Gated Linear RNNs with State Expansion](2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md)**  
   実装：[✓](https://github.com/OpenNLPLab/HGRN2) ・ リポジトリ内被引用：17  
@@ -2908,6 +2908,10 @@
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：14  
   JetMoE-8Bは、混合専門家モデル（Mixture of エキスパート、MoE）の条件付き計算を順伝播ネットワーク（FFN）だけでなく自己注意機構へも拡張した、総パラメータ約80億の言語モデルである。論文はLlama2-7Bとの比較で推論演算量を約70%削減できると述べるが、これは実測の生成遅延が70%減るという意味ではない。
 
+- **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
+  実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：14  
+  FLAP（FLuctuation-based 適応的 Structured Pruning）は、大規模言語モデル（LLM）の重みを再学習せずに構造化枝刈りする手法である。
+
 - **2024-05 · [Dynamic Mixture of Experts: An Auto-Tuning Approach for Efficient Transformer Models](2024-2405.14297-dynamic-mixture-of-experts-an-auto-tuning-approach-for-efficient-transfo.md)**  
   実装：[✓](https://github.com/LINs-lab/DynMoE) ・ リポジトリ内被引用：13  
   DynMoE（動的 Mixture of エキスパート）は、混合専門家モデル（Mixture of エキスパート、MoE）を構成するときに通常手作業で指定する二つの数、すなわち各層に置く専門家の総数Kと、各トークンが使う専門家数kを、学習の過程で調整する方式である。
@@ -2915,10 +2919,6 @@
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
   実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：13  
   入力はモデルの計算グラフと装置構成であり、出力は演算子別・推論段階別の遅延、チップ面積、製造費用の推定値である。性能推定と面積・費用推定を同一の設計空間で組み合わせるため、最速のチップだけでなく、価格に見合った推論性能を評価できる。
-
-- **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
-  実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：13  
-  FLAP（FLuctuation-based 適応的 Structured Pruning）は、大規模言語モデル（LLM）の重みを再学習せずに構造化枝刈りする手法である。
 
 - **2024-10 · [MatryoshkaKV: Adaptive KV Compression via Trainable Orthogonal Projection](2024-2410.14731-matryoshkakv-adaptive-kv-compression-via-trainable-orthogonal-projection.md)**  
   実装：[✓](https://github.com/The-kamisato/MatryoshkaKV-cache) ・ リポジトリ内被引用：11  
@@ -3024,6 +3024,10 @@
   実装：[✓](https://github.com/ziplab/LongVLM) ・ リポジトリ内被引用：6  
   LongVLMは、長時間動画を入力する視覚言語モデル（Vision-Language モデル; VLM）で、画像符号化器から出る大量の視覚トークンを短時間区間ごとに統合する。100フレームを224×224画素で符号化し、元のパッチ特徴が約25,600トークンになる設定で、10区間×30トークンと全体特徴5トークンの計305視覚トークンへまとめる。
 
+- **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  ALTO（Automatic Language Token Orchestrator）は、言語モデルの生成結果を複数の検索・再順位付け・追加生成段へ渡す複合AIシステムの実行基盤である。論文の実機評価では、応答遅延4秒を目標とする条件で、非逐次転送の比較方式より最大3倍の要求到着負荷を処理し、低負荷での99パーセンタイル遅延を1.8分の1にした。
+
 - **2024-03 · [Scattered Mixture-of-Experts Implementation](2024-2403.08245-scattered-mixture-of-experts-implementation.md)**  
   実装：[✓](https://github.com/shawntan/scattermoe) ・ リポジトリ内被引用：6  
   特にバッチが大きい学習や複数要求の推論では、中間のトークン表現を何度も高帯域メモリへ書き戻すことが問題になる。ScatterMoEは専門家へ割り当てたトークンを実体の配列として並べ替える代わりに、専門家順の索引を並べ替え、カーネルが入力の必要な位置を直接読み込む。
@@ -3043,10 +3047,6 @@
 - **2024-04 · [Mitigating the Impact of Outlier Channels for Language Model Quantization with Activation Regularization](2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantizatio.md)**  
   実装：[✓](https://github.com/aninrusimha/qat-pretrain) ・ リポジトリ内被引用：5  
   本研究は、言語モデルの重みと活性値の両方を4ビット整数にするW4A4量子化を、事前学習の段階から成立させる方法を調べる。300Mモデルを後からQAT微調整した試験では、基準に対しパープレキシティが16%悪化したという負の結果が重要である。
-
-- **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  ALTO（Automatic Language Token Orchestrator）は、言語モデルの生成結果を複数の検索・再順位付け・追加生成段へ渡す複合AIシステムの実行基盤である。論文の実機評価では、応答遅延4秒を目標とする条件で、非逐次転送の比較方式より最大3倍の要求到着負荷を処理し、低負荷での99パーセンタイル遅延を1.8分の1にした。
 
 - **2024-03 · [AI and Memory Wall](2024-2403.14123-ai-and-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -3255,7 +3255,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：389  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：390  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
@@ -3263,7 +3263,7 @@
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：302  
+  実装：✓ ・ リポジトリ内被引用：304  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
@@ -3271,11 +3271,11 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：155  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：156  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：151  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：152  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
@@ -3287,7 +3287,7 @@
   大規模言語モデルの重みを16ビットから4ビット、3ビット、2ビットへ縮めると、保存容量と重み転送量を大きく削減できる。一方、極低ビットでは重みや活性値の少数の外れ値が量子化範囲を広げ、重要な値の量子化刻みが粗くなって出力品質が崩れる。LLaMA-2 7B～70Bは128個の校正系列とA100 40GB 1基で1～16時間の処理が可能と報告される。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
-  実装：✓ ・ リポジトリ内被引用：104  
+  実装：✓ ・ リポジトリ内被引用：105  
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
 - **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
@@ -3319,7 +3319,7 @@
   枝刈り直後に失われた能力は継続事前学習で回復するが、その際にも学習データを元の比率で使い続けず、領域別の損失回復状況に応じて再配分する。A100 80GB上の単一生成で、13億パラメータの均一形状は毎秒58トークン、非均一形状は51トークン、27億では43対37トークンであった。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：49  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：50  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
@@ -3386,6 +3386,10 @@
   実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：16  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
+- **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
+  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：13  
+  大規模言語モデル（LLM）で多段階推論の精度を上げる自己整合性（自己整合性）は、同じ質問に対して複数の思考連鎖を標本化し、最終回答を多数決する方式である。最大7.9倍の節約は個別条件の値であり、全条件平均ではない。
+
 - **2023-10 · [Merging Experts into One: Improving Computational Efficiency of Mixture of Experts](2023-2310.09832-merging-experts-into-one-improving-computational-efficiency-of-mixture-o.md)**  
   実装：[✓](https://github.com/Shwai-He/MEO) ・ リポジトリ内被引用：12  
   混合専門家（Mixture of エキスパート; MoE）モデルは、入力ごとに一部の専門家だけを選んで計算することで、全パラメータを常に実行する密モデルより計算費用を抑える。
@@ -3405,10 +3409,6 @@
 - **2023-05 · [Memory-Efficient Fine-Tuning of Compressed Large Language Models via sub-4-bit Integer Quantization](2023-2305.14152-memory-efficient-fine-tuning-of-compressed-large-language-models-via-sub.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   提案するPEQA（パラメータ-Efficient and 量子化-aware Adaptation）は、事前学習済みの重みを3～4ビットなどの整数表現へ量子化した後、整数値を凍結し、量子化尺度だけを学習する。
-
-- **2023-05 · [Let's Sample Step by Step: Adaptive-Consistency for Efficient Reasoning and Coding with LLMs](2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md)**  
-  実装：[✓](https://sample-step-by-step.info) ・ リポジトリ内被引用：12  
-  大規模言語モデル（LLM）で多段階推論の精度を上げる自己整合性（自己整合性）は、同じ質問に対して複数の思考連鎖を標本化し、最終回答を多数決する方式である。最大7.9倍の節約は個別条件の値であり、全条件平均ではない。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
   実装：[✓](https://github.com/VITA-Group/llm-kick) ・ リポジトリ内被引用：10  
@@ -3458,6 +3458,10 @@
   実装：[✓](https://github.com/SALT-NLP/DyLAN) ・ リポジトリ内被引用：6  
   複数の大規模言語モデルエージェントを協調させる方式では、担当する役割や通信順序を固定すると、問題によっては不得意なエージェントの発言が増え、余計なモデル呼出しと品質低下を招く。原著のHumanEvalコード生成評価では、単一実行の正答率73.2%に対してDyLANは82.9%、平均モデルAPI呼出し数は16.85回だった。
 
+- **2023-10 · [Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs](2023-2310.08915-dynamic-sparse-no-training-training-free-fine-tuning-for-sparse-llms.md)**  
+  実装：[✓](https://github.com/zyxxmu/DSnoT) ・ リポジトリ内被引用：4  
+  DSnoT（動的 Sparse No 学習）は、既存の枝刈り手法で疎化した大規模言語モデル（Large Language モデル、LLM）を、勾配逆伝播も重み値の更新も行わずに改善する方法である。
+
 - **2023-09 · [Transformer-VQ: Linear-Time Transformers via Vector Quantization](2023-2309.16354-transformer-vq-linear-time-transformers-via-vector-quantization.md)**  
   実装：[✓](https://github.com/transformer-vq/transformer_vq) ・ リポジトリ内被引用：4  
   基本の着想は、過去の鍵ベクトルを学習可能なコードブックの少数の代表ベクトルへ量子化すると、異なるトークン位置でも同じコードを持つ鍵は同じ注意得点になる、という性質にある。TPU v3での訓練処理率は同規模の二次注意モデルと比べ、系列長8192で3倍超、32768で12倍超となり、131072トークンまで大きな処理率低下なく動作した。
@@ -3469,10 +3473,6 @@
 - **2023-10 · [Look-Up mAI GeMM: Increasing AI GeMMs Performance by Nearly 2.5x via msGeMM](2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   重みを4ビット整数へ量子化すれば、各重みが取れる値は16種類に限られる。約2.5倍という代表値を、現在のGPUにおける推論遅延やトークン生成速度の改善と解釈してはならない。
-
-- **2023-10 · [Dynamic Sparse No Training: Training-Free Fine-tuning for Sparse LLMs](2023-2310.08915-dynamic-sparse-no-training-training-free-fine-tuning-for-sparse-llms.md)**  
-  実装：[✓](https://github.com/zyxxmu/DSnoT) ・ リポジトリ内被引用：3  
-  DSnoT（動的 Sparse No 学習）は、既存の枝刈り手法で疎化した大規模言語モデル（Large Language モデル、LLM）を、勾配逆伝播も重み値の更新も行わずに改善する方法である。
 
 - **2023-06 · [Augmenting Language Models with Long-Term Memory](2023-2306.07174-augmenting-language-models-with-long-term-memory.md)**  
   実装：[✓](https://github.com/Victorwz/LongMem) ・ リポジトリ内被引用：3  
@@ -3525,7 +3525,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：513  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：514  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -3537,7 +3537,7 @@
   大規模言語モデルの量子化では、重みを16ビットから8ビットへ減らすだけでメモリ転送量は小さくなる。INT8では追加の学習や校正なしでBERT・GPT系の品質をほぼ保ち、NVIDIA A100上のBERT-baseで最大5.19倍、GPT-3 350Mで4.16倍の速度向上を示した。
 
 - **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：69  
+  実装：✓ ・ リポジトリ内被引用：70  
   総パラメータ数と一トークンで実際に使用するパラメータ数を分離することで、巨大な容量を持ちながら密なモデルほどの計算を必要としない。最大構成GLaM（64B/64E）は総1.2兆パラメータを持つが、トークン当たり活性化するのは約96.6B、全体の約8%である。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
@@ -3580,13 +3580,13 @@
   実装：[✓](https://github.com/google-research/google-research/tree/master/f_net) ・ リポジトリ内被引用：8  
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
+- **2022-03 · [Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space](2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md)**  
+  実装：[✓](https://github.com/aviclu/ffn-values) ・ リポジトリ内被引用：4  
+  Transformerの順伝播層（feed-順伝播 network、FFN）は、自己注意層で得た表現を更新するが、どのような内部操作が次トークンの予測を形作るかは分かりにくい。本論文は、FFNが出力するベクトルを、個々の値ベクトルに入力依存の係数を掛けた小さな加算成分の和として分解し、各成分が語彙中のどのトークンを押し上げるかを調べる。
+
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   AlphaCodeは、自然言語で与えられた競技プログラミング問題から、正しい実行プログラムを見つけるための生成・探索・選別システムである。評価では2021年12月のCodeforcesの10大会を後から模擬し、各問題最大10提出という条件で、参加者中の順位が平均して上位54.3%に相当した。
-
-- **2022-03 · [Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space](2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md)**  
-  実装：[✓](https://github.com/aviclu/ffn-values) ・ リポジトリ内被引用：3  
-  Transformerの順伝播層（feed-順伝播 network、FFN）は、自己注意層で得た表現を更新するが、どのような内部操作が次トークンの予測を形作るかは分かりにくい。本論文は、FFNが出力するベクトルを、個々の値ベクトルに入力依存の係数を掛けた小さな加算成分の和として分解し、各成分が語彙中のどのトークンを押し上げるかを調べる。
 
 - **2021-11 · [Memory-efficient Transformers via Top-k Attention](2021-c7730f7e7292-memory-efficient-transformers-via-top-k-attention.md)**  
   実装：[✓](https://github.com/ag1988/top_k_attention) ・ リポジトリ内被引用：3  
@@ -3615,7 +3615,7 @@
   Transformerの重みと行列積を8ビット整数へ量子化しても、推論全体が整数だけで実行できるとは限らない。Tesla T4上の予備的な整数カーネル実装では、FP32比で2.4～4.0倍の推論高速化を報告する。
 
 - **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  
-  実装：[✓](https://github.com/huggingface/nn_pruning) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/huggingface/nn_pruning) ・ リポジトリ内被引用：21  
   Block Pruningは移動量に基づく枝刈り（movement 枝刈り）を重みブロック単位へ拡張し、フィードフォワード層の次元や注意ヘッドを構造的に除去できる形へ誘導する。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -3634,13 +3634,13 @@
   実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：10  
   Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
+- **2021-04 · [BERxiT: Early Exiting for BERT with Better Fine-Tuning and Extension to Regression](2021-3c0f54f14532-berxit-early-exiting-for-bert-with-better-fine-tuning-and-extension-to-r.md)**  
+  実装：[✓](https://github.com/castorini/berxit) ・ リポジトリ内被引用：10  
+  従来の早期終了では、最後の層で良い予測を得ることと、中間層でも十分に良い予測を得ることの学習目標が競合しやすい。BERxiTはこの二つを別々の機構で解決する。例えばBERTBASEのSST-2試験集合では、交互微調整によって元モデルの得点の98%を保ちながら実行層数を65%減らす条件があり、より強い早期終了では96%の得点に対して79%の層削減を得る。
+
 - **2020-11 · [EdgeBERT: Sentence-Level Energy Optimizations for Latency-Aware Multi-Task NLP Inference](2020-2011.14203-edgebert-sentence-level-energy-optimizations-for-latency-aware-multi-tas.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   EdgeBERTは、資源制約の厳しい端末上で、自然言語分類を決められた応答時間内に実行しながら消費エネルギーを最小化するための、アルゴリズムと回路の共同設計である。これらは別々の比較であり、同一実行条件の速度改善倍率でも、LLMのトークン生成性能でもない（原著要旨、§8.2）。
-
-- **2021-04 · [BERxiT: Early Exiting for BERT with Better Fine-Tuning and Extension to Regression](2021-3c0f54f14532-berxit-early-exiting-for-bert-with-better-fine-tuning-and-extension-to-r.md)**  
-  実装：[✓](https://github.com/castorini/berxit) ・ リポジトリ内被引用：9  
-  従来の早期終了では、最後の層で良い予測を得ることと、中間層でも十分に良い予測を得ることの学習目標が競合しやすい。BERxiTはこの二つを別々の機構で解決する。例えばBERTBASEのSST-2試験集合では、交互微調整によって元モデルの得点の98%を保ちながら実行層数を65%減らす条件があり、より強い早期終了では96%の得点に対して79%の層削減を得る。
 
 - **2021-06 · [TR-BERT: Dynamic Token Reduction for Accelerating BERT Inference](2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md)**  
   実装：[✓](https://github.com/thunlp/TR-BERT) ・ リポジトリ内被引用：6  
@@ -3669,7 +3669,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：124  
+  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：125  
   第一の制約は、全トークン対の内積を求める標準自己注意が系列長の二乗に比例する計算を要することである。
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
@@ -3677,23 +3677,23 @@
   Performerは、通常の全ランクのソフトマックス注意を正の直交ランダム特徴で近似するFAVOR+を提案し、注意行列を明示的に保持しない線形時間・線形空間の実行を可能にする。
 
 - **2020-04 · [DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference](2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md)**  
-  実装：[✓](https://github.com/castorini/DeeBERT) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/castorini/DeeBERT) ・ リポジトリ内被引用：36  
   DeeBERTは、BERT系の分類モデルで入力ごとに必要なTransformer層数が異なることを利用し、浅い層ですでに十分確信度の高い予測が得られた例を途中で返す動的早期終了（動的 early exiting）方式である。
+
+- **2020-06 · [BERT Loses Patience: Fast and Robust Inference with Early Exit](2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md)**  
+  実装：✓ ・ リポジトリ内被引用：28  
+  浅い層で正しい分類がほぼ確定している入力にも後段層の計算を続けるため、不要な遅延が生じる。従来の早期終了方式は中間分類器の最大確率やエントロピーなど、一つの層での自信の強さを停止信号にすることが多かった。
 
 - **2020-04 · [FastBERT: a Self-distilling BERT with Adaptive Inference Time](2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md)**  
   実装：[✓](https://github.com/autoliuweijie/FastBERT) ・ リポジトリ内被引用：28  
   この設計は文章生成の各トークンを省略する方式ではなく、主に文章分類と文対照合に適用される。例えば中国語THUCNewsでは閾値0.1で分類精度96.71%を維持しつつ計算量が約6.05分の1、英語DBpediaでは同閾値で99.31%から99.28%への微小な低下と引き換えに約10.57分の1となる。
 
-- **2020-06 · [BERT Loses Patience: Fast and Robust Inference with Early Exit](2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md)**  
-  実装：✓ ・ リポジトリ内被引用：27  
-  浅い層で正しい分類がほぼ確定している入力にも後段層の計算を続けるため、不要な遅延が生じる。従来の早期終了方式は中間分類器の最大確率やエントロピーなど、一つの層での自信の強さを停止信号にすることが多かった。
-
 - **2020-05 · [GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference](2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   GOBOは、BERTなどの注意機構を使う自然言語処理モデルの重みを、学習後に大幅に圧縮する手法である。重みの約99.9%を少数の代表値への索引で表し、残る約0.1%の外れ値だけを元の32ビット浮動小数点のまま保持する。
 
 - **2019-11 · [Blockwise Self-Attention for Long Document Understanding](2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md)**  
-  実装：[✓](https://github.com/xptree/BlockBERT) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/xptree/BlockBERT) ・ リポジトリ内被引用：25  
   BlockBERTは、長文の読解に使う双方向エンコーダBERTで、自己注意の計算と活性値保存が系列長の二乗に増える問題を、注意を計算するブロックの組合せを注意頭ごとに限定することで軽減する方式である。系列長1024の事前学習ではRoBERTa-1seq比で最大36.1%のGPUメモリ削減、25.1%の学習時間短縮を示す。
 
 - **2020-09 · [TernaryBERT: Distillation-aware Ultra-low Bit BERT](2020-2009.12812-ternarybert-distillation-aware-ultra-low-bit-bert.md)**  
@@ -3705,7 +3705,7 @@
   学習済みモデルの重みを低ビットや積量子化で保存すると、推論時の重み容量を減らせるが、各層で生じた量子化誤差が次層の入力へ蓄積し、精度が急激に落ちることがある。ICLR 2021の原著では、16層Transformerの942MBを反復積量子化で38MBへ圧縮した場合、量子化雑音なしのテスト困惑度25.2に対して20.7へ改善した。
 
 - **2020-04 · [On the Effect of Dropping Layers of Pre-trained Transformer Models](2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md)**  
-  実装：[✓](https://github.com/hsajjad/transformers/) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/hsajjad/transformers/) ・ リポジトリ内被引用：14  
   事前学習済みBERT系モデルの上位層を削除して推論時間を約半減し、モデル・タスクごとの精度低下と下位層の重要性を比較した構造的圧縮研究。
 
 - **2020-02 · [Compressing BERT: Studying the Effects of Weight Pruning on Transfer Learning](2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md)**  
@@ -3775,28 +3775,28 @@
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：85  
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
-  実装：[✓](https://github.com/pmichel31415/are-16-heads-really-better-than-1) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/pmichel31415/are-16-heads-really-better-than-1) ・ リポジトリ内被引用：53  
   Michelらは、学習済みの翻訳用TransformerとBERTの各注意ヘッドを無効化して、品質の変化、ヘッド重要度の推定、構造的な枝刈り後の推論速度を実験した。WMT14英仏翻訳のTransformerでは全ヘッドの約20%、MultiNLIに微調整したBERTでは約40%を重要度順に削っても顕著な品質低下が生じなかった。
 
 - **2019-05 · [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md)**  
-  実装：[✓](https://github.com/lena-voita/the-story-of-heads) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/lena-voita/the-story-of-heads) ・ リポジトリ内被引用：51  
   本論文は、翻訳用Transformerの多頭注意機構において、各ヘッドの計算が同じだけ必要なのかを、予測への寄与と実際の削除耐性の両側面から調べた研究である。一方、これは2019年の機械翻訳Transformerにおける品質評価であり、現代の生成専用LLMで実際に同じ割合の実行時間や鍵・値キャッシュ容量を削減できると証明した結果ではない。
+
+- **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
+  実装：✓ ・ リポジトリ内被引用：50  
+  深いTransformerは学習時に層をすべて使用する前提で最適化されるため、学習後に連続した層を削ると、残った層が想定しない中間表現を受け取り品質が悪化する。深度ごとに新しいモデルを一から学習したり知識蒸留を繰り返したりする方法では、必要な配備構成が増えるほど学習費用が増える。深度削減は品質低下を完全に取り除くわけではない。
+
+- **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
+  実装：✓ ・ リポジトリ内被引用：50  
+  Q-BERTは、BERTの各層へ同じビット数を割り当てる均一量子化ではなく、損失関数の二階微分から層ごとの誤差感度を推定し、敏感な層へ高い精度を残す混合精度量子化手法である。論文はSST-2、MNLI、CoNLL-03、SQuADの四課題で、重みの最大13倍圧縮、埋め込みと活性値の最大4倍圧縮を報告し、強圧縮でも性能低下を最大2.3%以内に抑えたと説明する。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
   実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：50  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
-
-- **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
-  実装：✓ ・ リポジトリ内被引用：49  
-  深いTransformerは学習時に層をすべて使用する前提で最適化されるため、学習後に連続した層を削ると、残った層が想定しない中間表現を受け取り品質が悪化する。深度ごとに新しいモデルを一から学習したり知識蒸留を繰り返したりする方法では、必要な配備構成が増えるほど学習費用が増える。深度削減は品質低下を完全に取り除くわけではない。
-
-- **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：49  
-  Q-BERTは、BERTの各層へ同じビット数を割り当てる均一量子化ではなく、損失関数の二階微分から層ごとの誤差感度を推定し、敏感な層へ高い精度を残す混合精度量子化手法である。論文はSST-2、MNLI、CoNLL-03、SQuADの四課題で、重みの最大13倍圧縮、埋め込みと活性値の最大4倍圧縮を報告し、強圧縮でも性能低下を最大2.3%以内に抑えたと説明する。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
   実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：25  

@@ -497,7 +497,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
 - **2024-03 · [AIOS: LLM Agent Operating System](2024-2403.16971-aios-llm-agent-operating-system.md)**  
-  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：11  
   従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
 
 - **2024-08 · [STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs](2024-2408.01803-stbllm-breaking-the-1-bit-barrier-with-structured-binary-llms.md)**  
@@ -599,16 +599,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：124  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：125  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：23  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：24  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：42  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->
