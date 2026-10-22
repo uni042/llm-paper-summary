@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-22T05:26:26+00:00`
+Generated: `2026-10-22T05:42:38+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -43,7 +43,7 @@ ready総数: **1203** / 未claim総数: **1203** / このworker向け: **200**
 | 24 | 104 | research | arXiv:2605.15156 | MeMo: Memory as a Model | [primary](https://arxiv.org/abs/2605.15156) | `papers/inference/99-other-inference-systems/2026-2605.15156-memo-memory-as-a-model.md` |
 | 25 | 104 | research | DOI:10.1109/TON.2025.3645806 | Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling | [primary](https://doi.org/10.1109/TON.2025.3645806) | `papers/inference/99-other-inference-systems/0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.md` |
 | 26 | 103 | research | arXiv:2604.24110 | Latency and Cost of Multi-Agent Intelligent Tutoring at Scale | [primary](https://arxiv.org/abs/2604.24110) | `papers/inference/99-other-inference-systems/2026-2604.24110-latency-and-cost-of-multi-agent-intelligent-tutoring-at-scale.md` |
-| 27 | 103 | research | DOI:10.1016/j.dcan.2026.03.010 | Generative IoT: advancing IoT with generative AI and large language models | [primary](https://doi.org/10.1016/j.dcan.2026.03.010) | `papers/inference/99-other-inference-systems/2026-00368177de6f-generative-iot-advancing-iot-with-generative-ai-and-large-language-models.md` |
+| 27 | 103 | research | arXiv:2603.21269 | DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation | [primary](https://arxiv.org/abs/2603.21269) | `papers/inference/99-other-inference-systems/2026-2603.21269-dygeovln-infusing-dynamic-geometry-foundation-model-into-vision-language-navigation.md` |
 | 28 | 103 | research | arXiv:2602.19281 | Limited Reasoning Space: The cage of long-horizon reasoning in LLMs | [primary](https://arxiv.org/abs/2602.19281) | `papers/inference/99-other-inference-systems/2026-2602.19281-limited-reasoning-space-the-cage-of-long-horizon-reasoning-in-llms.md` |
 | 29 | 102 | research | DOI:10.1145/3789240.3829201 | Balancing and Beyond: Communication-Centric Optimizations in Expert Parallelism | [primary](https://doi.org/10.1145/3789240.3829201) | `papers/inference/99-other-inference-systems/2026-0e42e21dd7f9-balancing-and-beyond-communication-centric-optimizations-in-expert-parallelism.md` |
 | 30 | 102 | research | arXiv:2607.29600 | HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation | [primary](https://arxiv.org/abs/2607.29600) | `papers/inference/99-other-inference-systems/2026-2607.29600-ham-vln-harnessing-hierarchical-agentic-memory-for-zero-shot-vision-and-language-navigation.md` |

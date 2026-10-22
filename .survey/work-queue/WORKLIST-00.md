@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-22T05:26:26+00:00`
+Generated: `2026-10-22T05:42:38+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -44,7 +44,7 @@ ready総数: **1203** / 未claim総数: **1203** / このworker向け: **200**
 | 25 | 104 | research | arXiv:2604.23477 | SEMA-SQL: Beyond Traditional Relational Querying with Large Language Models | [primary](https://arxiv.org/abs/2604.23477) | `papers/inference/99-other-inference-systems/2026-2604.23477-sema-sql-beyond-traditional-relational-querying-with-large-language-models.md` |
 | 26 | 104 | research | DOI:10.1016/j.asoc.2025.114398 | Attention distillation for low-cost driver behavior recognition | [primary](https://doi.org/10.1016/j.asoc.2025.114398) | `papers/inference/99-other-inference-systems/2025-e0861be528e5-attention-distillation-for-low-cost-driver-behavior-recognition.md` |
 | 27 | 103 | research | arXiv:2604.24622 | CF-VLA: Efficient Coarse-to-Fine Action Generation for Vision-Language-Action Policies | [primary](https://arxiv.org/abs/2604.24622) | `papers/inference/99-other-inference-systems/2026-2604.24622-cf-vla-efficient-coarse-to-fine-action-generation-for-vision-language-action-policies.md` |
-| 28 | 103 | research | arXiv:2603.21269 | DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation | [primary](https://arxiv.org/abs/2603.21269) | `papers/inference/99-other-inference-systems/2026-2603.21269-dygeovln-infusing-dynamic-geometry-foundation-model-into-vision-language-navigation.md` |
+| 28 | 103 | research | DOI:10.1145/3779212.3790246 | SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference | [primary](https://doi.org/10.1145/3779212.3790246) | `papers/inference/99-other-inference-systems/2026-92272744585e-swiftspec-disaggregated-speculative-decoding-and-fused-kernels-for-low-latency-llm-inference.md` |
 | 29 | 103 | research | arXiv:2602.07878 | Rethinking Latency Denial-of-Service: Attacking the LLM Serving Framework, Not the Model | [primary](https://arxiv.org/abs/2602.07878) | `papers/inference/99-other-inference-systems/2026-2602.07878-rethinking-latency-denial-of-service-attacking-the-llm-serving-framework-not-the-model.md` |
 | 30 | 102 | research | arXiv:2608.10430 | Actionable Hallucination Detection: Translating Latent Uncertainty into Agentic Critique | [primary](https://arxiv.org/abs/2608.10430) | `papers/inference/99-other-inference-systems/2026-2608.10430-actionable-hallucination-detection-translating-latent-uncertainty-into-agentic-critique.md` |
 | 31 | 102 | research | arXiv:2607.10438 | Large Language Model Enhanced Differentiable Trajectory Planning for IoT-Enabled Autonomous Driving | [primary](https://arxiv.org/abs/2607.10438) | `papers/inference/99-other-inference-systems/2026-2607.10438-large-language-model-enhanced-differentiable-trajectory-planning-for-iot-enabled-autonomous-driving.md` |
