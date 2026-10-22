@@ -31,6 +31,8 @@ reference_main_sha: "e873355fd434a1cb606a395be18e6b72ea303a50"
 research_origin: "returned_research_queue"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # RADとSLAI：LLM推論の処理量最適性と異種SLOを両立するスケジューリング

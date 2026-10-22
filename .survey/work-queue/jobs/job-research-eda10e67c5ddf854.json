@@ -35,10 +35,15 @@
   "selection_reason": "The abstract studies shared KV-cache correctness across adapters, weights, and sharing domains, then proposes provenance-bound keys and a differential checker. It eliminates unsafe reuse while preserving legitimate sharing with low hit-path latency impact.",
   "semantic_scholar_id": "b29f1c09161c210d899d6b424d09213c03a6f8f0",
   "source_url": "https://arxiv.org/abs/2609.38706",
-  "status": "ready",
+  "status": "superseded",
   "title": "Preserving Provenance in Shared KV Caches for LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-22T00:53:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.38706-preserving-provenance-in-shared-kv-caches-for-llm-serving.md",
+  "represented_canonical_id": "arXiv:2609.38706",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
