@@ -27,6 +27,8 @@ worker_completed_at: '2026-10-21T23:05:21+09:00'
 worker_run_key: 'scheduled-chat-00/20261021-2300/r01'
 research_worklist_rank: 24
 reference_main_sha: '466033bc0e22cad6f698f51cc10b59b3665ca884'
+last_audited: null
+audit_version: 0
 ---
 
 # AdaptiScale：問い合わせ難度と分散GPU資源を共同最適化する推論時計算量配分

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "1444a08e71b1ccea79fddf279da88cb29b088ef342a72f602b14257b9a580703",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-03218cde5935--libfile_04b27cbfabcc81918538a5736ce454bf--2026-2605.04952-air-moe-inverted-index-routing-research-20261021-1926-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.04952",
+  "worker_completed_at": "2026-10-21T19:26:00+09:00",
+  "worker_run_key": "20261021-1926-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3338,
+    "body_paragraphs": 19,
+    "method_chars": 1495,
+    "method_paragraphs": 9,
+    "evaluation_chars": 231,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 231 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 231 < 500"
+  ],
+  "processed_at": "2026-10-22T01:30:31+00:00"
+}
