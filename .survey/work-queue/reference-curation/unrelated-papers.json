@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T15:52:11+00:00",
-  "record_count": 12441,
+  "updated_at": "2026-10-22T16:52:14+00:00",
+  "record_count": 12442,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179308,6 +179308,20 @@
       "last_checked_at": "2026-10-22T15:52:07+00:00",
       "linked_from": [],
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
+    },
+    "DOI:10.1609/aaai.v36i10.21354": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1609/aaai.v36i10.21354",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v36i10.21354"
+      ],
+      "reason": "本文はイベント間関係抽出の精度を上げるため、BERT/RoBERTaの入力文脈を強化学習で選ぶ手法を提案し、評価も関係抽出タスクの品質に置かれている。LLM推論の計算・メモリ・レイテンシや配信基盤を改善する研究ではないため無関係とする。",
+      "first_checked_at": "2026-10-22T16:52:14+00:00",
+      "last_checked_at": "2026-10-22T16:52:14+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-00.md"
+      ],
+      "title": "Selecting Optimal Context Sentences for Event-Event Relation Extraction"
     }
   }
 }

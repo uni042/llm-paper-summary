@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T16:49:12+00:00",
-  "record_count": 5295,
+  "updated_at": "2026-10-22T16:52:13+00:00",
+  "record_count": 5298,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82150,6 +82150,54 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Optimizing Diversity and Quality through Base-Aligned Model Collaboration"
+    },
+    "arXiv:2602.03067": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.03067",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.03067",
+        "arXiv:2602.03067"
+      ],
+      "reason": "主題はGPUのHBM転送とkernel起動を減らす最適輸送（Sinkhorn）実装で、評価もpoint-cloud OTやOTDD等に限られる。FlashAttention型のタイル処理とattentionのLogSumExp形式に共通点があり、基盤技術としての接点はあるが、LLM推論・配信の実装や性能は扱わないため周辺候補として微妙に分類する。",
+      "first_checked_at": "2026-10-22T16:52:12+00:00",
+      "last_checked_at": "2026-10-22T16:52:12+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-00.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "FlashSinkhorn: IO-Aware Entropic Optimal Transport on GPU"
+    },
+    "arXiv:2603.18174": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18174",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.18174",
+        "arXiv:2603.18174"
+      ],
+      "reason": "LLM推論用のSemantic Router DSLに対する確率的シグナルの競合検出・抑止を実装する一方、中心課題はルーティング方針の正しさと形式的意味論で、性能評価もスループット・レイテンシ・メモリ改善を測るものではない。推論ルーターとの接点は直接あるが、実行効率化への接続が限定的なため微妙に分類する。",
+      "first_checked_at": "2026-10-22T16:52:13+00:00",
+      "last_checked_at": "2026-10-22T16:52:13+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-00.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Conflict-Free Policy Languages for Probabilistic ML Predicates: A Framework and Case Study with the Semantic Router DSL"
+    },
+    "arXiv:2602.00874": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.00874",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.00874",
+        "arXiv:2602.00874"
+      ],
+      "reason": "Transformerのattention行を量子データ構造で劣線形時間近似する理論研究で、OLMo2の統計量による仮定確認はあるが、量子RAMを前提とし実用的な推論サーバーや古典GPU上の性能を評価していない。attention計算との接点は明確だが実システムへの適用が遠いため微妙に分類する。",
+      "first_checked_at": "2026-10-22T16:52:13+00:00",
+      "last_checked_at": "2026-10-22T16:52:13+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-00.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Sublinear Time Quantum Algorithm for Attention Approximation"
     }
   }
 }
