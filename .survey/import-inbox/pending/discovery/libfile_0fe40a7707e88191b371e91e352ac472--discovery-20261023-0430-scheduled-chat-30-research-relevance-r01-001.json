@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "reference_main_sha": "23ec450e6a672bcefe0c36218104afb17653e251",
+  "record_count": 1,
+  "run_key": "20261023-0430-scheduled-chat-30/r01/research-relevance-001",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s00530-025-02179-5",
+      "identity_tokens": [
+        "doi:10.1007/s00530-025-02179-5"
+      ],
+      "title": "Towards balancing the efficiency and effectiveness: a unified edit-based framework for automatic image captioning",
+      "reason": "主対象は画像からの説明文生成と画像キャプションの編集方式であり、LLM推論ランタイム、量子化、KVキャッシュ、サービング、分散推論の資源最適化を扱うものではない。タイトルと研究対象から明白にスコープ外と判定。",
+      "source_url": "https://doi.org/10.1007/s00530-025-02179-5",
+      "body_check": "title_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T04:35:40+09:00",
+      "last_checked_at": "2026-10-23T04:35:40+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 165
+    }
+  ]
+}
