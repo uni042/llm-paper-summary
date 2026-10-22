@@ -27,6 +27,7 @@ from paper_taxonomy import canonical_lineage
 ROOT = Path(__file__).resolve().parents[1]
 STATE = "survey-state/"
 PAPER_FAMILIES = ("inference", "training", "survey")
+PAPER_SEARCH_BASE = "https://uni042.github.io/llm-paper-summary/"
 
 
 def repository_root() -> Path:
@@ -338,8 +339,12 @@ def _render_taxonomy_list(rows, citations, base_dir, now=None):
     unclassified.sort(key=lambda r: (citations.get(r["path"], 0),) + _sort_recent(r), reverse=True)
 
     period = f"{start[0]:04d}-{start[1]:02d}〜{end[0]:04d}-{end[1]:02d}"
+    base_parts = Path(base_dir).as_posix().split("/")
+    search_scope = "/".join(base_parts[1:3]) if len(base_parts) >= 3 and base_parts[0] == "papers" else ""
     lines = [
         f"## 自動生成の論文一覧（{len(rows)}本）",
+        "",
+        f"[この系統だけ検索]({PAPER_SEARCH_BASE}{search_scope}/)" if search_scope else f"[論文検索]({PAPER_SEARCH_BASE})",
         "",
         f"分類は相互排他的。直近12か月は公開年月ベース（現在は **{period}**）。"
         "直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。"
@@ -383,13 +388,14 @@ def _render_family_overview(family, rows):
         "## 自動生成の収録状況",
         "",
         f"{label}論文：**{len(rows)}本**。",
+        f"[この区分だけ検索]({PAPER_SEARCH_BASE}{family}/)",
         "",
-        "| 系統 | 本数 |",
-        "|---|---:|",
+        "| 系統 | 本数 | 検索 |",
+        "|---|---:|---|",
     ]
-    lines += [f"| [{k}]({k}/README.md) | {len(v)} |" for k, v in sorted(grouped.items(), key=_lineage_sort_key)]
+    lines += [f"| [{k}]({k}/README.md) | {len(v)} | [この系統を検索]({PAPER_SEARCH_BASE}{family}/{k}/) |" for k, v in sorted(grouped.items(), key=_lineage_sort_key)]
     if not grouped:
-        lines.append("| — | 0 |")
+        lines.append("| — | 0 | — |")
     family_readme = repository_root() / "papers" / family / "README.md"
     if family_readme.exists():
         content = family_readme.read_text(encoding="utf-8")
@@ -440,7 +446,7 @@ def _update_catalog_counts(by_family):
                 pattern = r"(\]\(" + re.escape(f"{family}/{lineage}/") + r"\)\s*—\s*)\d+本"
                 content = re.sub(pattern, lambda m, count=count: m.group(1) + str(count) + "本", content)
         p.write_text(content, encoding="utf-8")
-        block("papers/README.md", f"推論：**{counts['inference']}本** ／ 学習：**{counts['training']}本** ／ サーベイ：**{counts['survey']}本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)")
+        block("papers/README.md", f"[全収録論文を検索]({PAPER_SEARCH_BASE})\n\n推論：**{counts['inference']}本** ／ 学習：**{counts['training']}本** ／ サーベイ：**{counts['survey']}本**。 [推論一覧](inference/README.md) ／ [学習一覧](training/README.md) ／ [サーベイ一覧](survey/README.md) ／ [研究比較](inference/comparison.md)")
     root = repo / "README.md"
     if root.exists():
         content = root.read_text(encoding="utf-8")
@@ -455,7 +461,7 @@ def _update_catalog_counts(by_family):
         else:
             content = re.sub(r"^  - \[Survey / サーベイ\]\(papers/survey/\) — \*\*\d+本\*\*$", survey_line, content, flags=re.M)
         root.write_text(content, encoding="utf-8")
-        block("README.md", f"推論：**{counts['inference']}本** ／ 学習：**{counts['training']}本** ／ サーベイ：**{counts['survey']}本**。 [推論一覧](papers/inference/README.md) ／ [学習一覧](papers/training/README.md) ／ [サーベイ一覧](papers/survey/README.md) ／ [研究比較](papers/inference/comparison.md)")
+        block("README.md", f"[全収録論文を検索]({PAPER_SEARCH_BASE})\n\n推論：**{counts['inference']}本** ／ 学習：**{counts['training']}本** ／ サーベイ：**{counts['survey']}本**。 [推論一覧](papers/inference/README.md) ／ [学習一覧](papers/training/README.md) ／ [サーベイ一覧](papers/survey/README.md) ／ [研究比較](papers/inference/comparison.md)")
 
 
 def _comparison_link(path):

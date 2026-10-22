@@ -1,0 +1,83 @@
+name: Build and deploy paper search
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'papers/**/*.md'
+      - '.survey/scripts/survey.py'
+      - '.survey/scripts/build_paper_search.py'
+      - '.survey/scripts/paper_taxonomy.py'
+      - '.survey/scripts/list_summary.py'
+      - '.survey/scripts/citation_graph.py'
+      - '.survey/config/promoted-inference-lineages.json'
+      - 'web/paper-search/**'
+      - '.github/workflows/paper-search-pages.yml'
+  pull_request:
+    paths:
+      - 'papers/**/*.md'
+      - '.survey/scripts/survey.py'
+      - '.survey/scripts/build_paper_search.py'
+      - '.survey/scripts/paper_taxonomy.py'
+      - '.survey/scripts/list_summary.py'
+      - '.survey/scripts/citation_graph.py'
+      - '.survey/config/promoted-inference-lineages.json'
+      - 'web/paper-search/**'
+      - '.github/workflows/paper-search-pages.yml'
+  workflow_run:
+    workflows: [Library import processor]
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-search-pages-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install builder dependency
+        run: python -m pip install 'PyYAML>=6.0,<7'
+
+      - name: Build scoped search pages
+        run: |
+          python -m py_compile .survey/scripts/build_paper_search.py .survey/scripts/survey.py
+          python .survey/scripts/build_paper_search.py --repo-root . --out _site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
