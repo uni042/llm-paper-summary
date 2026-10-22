@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T02:28:46+00:00",
+  "generated_at": "2026-10-22T02:37:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -211,36 +211,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e0ae22cc5d988191af94eb8e8e4d9b30--2026-2609.20874-predictive-kubernetes-autoscaling-returned-repair-20261020-2000-scheduled-chat-00-r01.json",
       "worker_run_key": "20261020-2000-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.01002",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T00:36:16+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 144 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6696,
-        "body_paragraphs": 36,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 144,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 144 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ec7a7fcef60c8191aab3f8bfc83a101b--2025-2508.01002-slai-rad-scheduling-returned-repair-20261022-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ec7a7fcef60c8191aab3f8bfc83a101b--2025-2508.01002-slai-rad-scheduling-returned-repair-20261022-0445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261022-0445-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2506.04642",
@@ -695,8 +665,8 @@
     },
     {
       "canonical_id": "arXiv:2609.37626",
-      "title": "SPLASH: Switching Parallel Layouts of Attention with Seamless Handoff for LLM Serving",
-      "source_url": "https://arxiv.org/abs/2609.37626",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T02:28:40+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -725,8 +695,8 @@
     },
     {
       "canonical_id": "arXiv:2601.21444",
-      "title": "APB-V: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention",
-      "source_url": "https://arxiv.org/pdf/2601.21444",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T02:28:42+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -754,8 +724,8 @@
     },
     {
       "canonical_id": "arXiv:2604.07857",
-      "title": "Networking-Aware Energy Efficiency in Agentic AI Inference: A Survey",
-      "source_url": "https://arxiv.org/abs/2604.07857",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T02:28:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -783,8 +753,8 @@
     },
     {
       "canonical_id": "arXiv:2112.06749",
-      "title": "Step-unrolled Denoising Autoencoders for Text Generation",
-      "source_url": "https://arxiv.org/html/2112.06749v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T02:28:45+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -808,6 +778,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c1ad332a7b30--libfile_ee0af9312d288191b4260a6c3d0a1570--2021-2112.06749-sundae-step-unrolled-denoising-nonautoregressive-research-20261021-1900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c1ad332a7b30--libfile_ee0af9312d288191b4260a6c3d0a1570--2021-2112.06749-sundae-step-unrolled-denoising-nonautoregressive-research-20261021-1900-s.json",
       "worker_run_key": "20261021-1900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.01002",
+      "title": "Optimal Scheduling Algorithms for LLM Inference: Theory and Practice",
+      "source_url": "https://arxiv.org/pdf/2508.01002",
+      "returned_at": "2026-10-22T02:37:09+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 144 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6696,
+        "body_paragraphs": 36,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 144,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 144 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dbe80b3104ef--libfile_ec7a7fcef60c8191aab3f8bfc83a101b--2025-2508.01002-slai-rad-scheduling-returned-repair-20261022-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-dbe80b3104ef--libfile_ec7a7fcef60c8191aab3f8bfc83a101b--2025-2508.01002-slai-rad-scheduling-returned-repair-20261022-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261022-0445-scheduled-chat-45/r01"
     }
   ]
 }
