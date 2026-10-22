@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T16:59:00+00:00",
-  "record_count": 5300,
+  "updated_at": "2026-10-22T17:12:51+00:00",
+  "record_count": 5302,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82130,10 +82130,12 @@
         "DOI:10.48550/arxiv.2604.08782",
         "arXiv:2604.08782"
       ],
-      "reason": "複数ターン会話の履歴を少数例推論のCondenserと軽量Deciderで非同期圧縮し、10ターンで入力トークンを最大72%削減すると一次要旨が報告する。入力長削減による遅延・費用低減との接点はあるが、主たる寄与は会話情報の保持と応答精度の改善であり、KVキャッシュやサービングのGPUスケジューラ・メモリ階層を直接最適化する機構ではないため境界扱い。",
+      "reason": "背景で対話履歴を逐次要約し、Deciderで適用を選ぶことで長い会話の入力トークン数と推論レイテンシを抑えるLLM向け手法である。10ターン会話で履歴トークンを最大72%削減し、13種のLLMで評価する点は推論効率に直接接点がある。一方、貢献は会話履歴の圧縮・対話品質にあり、配信スケジューリング、KV管理、GPUカーネルや汎用サービング基盤は扱わない。レイテンシ改善もトークン数からの推定で、基盤性能の直接計測ではないため境界扱いとする。",
       "first_checked_at": "2026-10-22T16:49:12+00:00",
-      "last_checked_at": "2026-10-22T16:49:12+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-22T17:12:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
       "borderline_recheck_count": 0,
       "title": "MT-OSC: Path for LLMs that Get Lost in Multi-Turn Conversation"
     },
@@ -82230,6 +82232,37 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Don't Wait to Reply: Towards Responsive yet Thoughtful Dialogue through Proactive Thinking"
+    },
+    "arXiv:2605.20084": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20084",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.20084",
+        "arXiv:2605.20084"
+      ],
+      "reason": "LLM単独応答の不確実性が高い場合だけRAGへ切り替える二段ルーティングに対し、回答リスクを保証する閾値対を逐次グラフィカル検定で校正し、不要な検索呼出しを減らす手法である。推論経路の選択、検索回数、レイテンシ・メモリ・トークン負荷に関わるため接点はあるが、主貢献はQAの信頼度校正とRAGルーティングで、汎用サービング基盤、KV管理、GPUカーネルの最適化ではないため境界扱いとする。",
+      "first_checked_at": "2026-10-22T17:12:51+00:00",
+      "last_checked_at": "2026-10-22T17:12:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "BalanceRAG: Joint Risk Calibration for Cascaded Retrieval-Augmented Generation"
+    },
+    "DOI:10.1109/tce.2025.3644688": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tce.2025.3644688",
+      "identity_tokens": [
+        "DOI:10.1109/tce.2025.3644688"
+      ],
+      "reason": "車両・エッジ・クラウド上のLLMサービスライフサイクルを扱い、軽量アダプタや増分更新の配布、タスク移行・スケジューリングをIDMACで協調し、レイテンシ・エネルギー・サービス品質を評価するため、LLM配信運用には直接接点がある。一方、主眼は車載エッジでの個人化とモデル更新を行うマルチエージェント制御で、汎用推論ランタイム、KV管理、GPUカーネルの性能最適化ではないため境界扱いとする。",
+      "first_checked_at": "2026-10-22T17:12:51+00:00",
+      "last_checked_at": "2026-10-22T17:12:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Personalized LLM Service Updating in Collaborative Edge-Enabled Vehicle Autonomous System"
     }
   }
 }
