@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261022-1830-scheduled-chat-30/r01/research-relevance-003",
+  "reference_main_sha": "8ac230f3806920a5ec3344472cead2ce757a57cf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2203.10314",
+      "identity_tokens": [
+        "arXiv:2203.10314"
+      ],
+      "title": "Voxel Set Transformer: A Set-to-Set Approach to 3D Object Detection from Point Clouds",
+      "reason": "点群のボクセル内集合注意を二つの交差注意で近似するVoxSeTで、KITTI・Waymoの3D物体検出を評価。Transformerと線形計算量という用語はあるが、対象は点群の画像・空間認識でありLLM推論システムの実装・配信・資源最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2203.10314",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T18:33:51+09:00",
+      "last_checked_at": "2026-10-22T18:33:51+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 3
+    }
+  ]
+}
