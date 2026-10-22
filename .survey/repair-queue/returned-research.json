@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T16:29:41+00:00",
+  "generated_at": "2026-10-22T16:42:46+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -580,34 +580,6 @@
       "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2601.14279",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T14:30:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 137 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4914,
-        "body_paragraphs": 35,
-        "method_chars": 928,
-        "method_paragraphs": 6,
-        "evaluation_chars": 137,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 137 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3e2efd7cba1c81919e59ce78122c9a07--2026-2601.14279-limits-learned-kv-importance-research-20261022-1626-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3e2efd7cba1c81919e59ce78122c9a07--2026-2601.14279-limits-learned-kv-importance-research-20261022-1626-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.19767",
       "title": null,
       "source_url": null,
@@ -999,6 +971,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-scheduled-chat-30-r01.json",
       "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.32663",
+      "title": "Distance-KV: Exploiting Relative Distance for Efficient Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2609.32663",
+      "returned_at": "2026-10-22T16:39:10+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 202 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6177,
+        "body_paragraphs": 34,
+        "method_chars": 1534,
+        "method_paragraphs": 8,
+        "evaluation_chars": 202,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 202 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261022-1830-scheduled-chat-30/r01"
     }
   ]
 }

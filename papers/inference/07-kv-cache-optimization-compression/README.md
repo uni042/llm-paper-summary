@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（305本）
+## 自動生成の論文一覧（306本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -746,6 +746,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache](2026-2601.04359-packcache-a-training-free-acceleration-method-for-unified-autoregressive.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   過去の鍵・値（KV）をキャッシュすれば再計算を避けられるものの、フレーム数が増えるほど保存トークンが累積し、自己注意の計算時間とGPUメモリ消費が増える。この外挿比較を「完走した二方式の実測倍率」と同一視してはならない。
+
+- **2026-01 · [On the Limits of Learned Importance Scoring for KV Cache Compression](2026-2601.14279-on-the-limits-of-learned-importance-scoring-for-kv-cache-compression.md)**  
+  実装：[✓](https://github.com/BradySteele/kv-cache-compression-limits) ・ リポジトリ内被引用：0  
+  しかし、TinyLlama-1.1B-Chat-v1.0、最大2048トークンの評価では、5乱数種・4保持率・3課題のいずれでも、SIPは単純な基準方式に対する統計的に有意な優位を示さなかった。
 
 - **2026-01 · [Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions](2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

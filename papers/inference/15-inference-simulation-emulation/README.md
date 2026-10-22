@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（41本）
+## 自動生成の論文一覧（42本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -85,6 +85,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-09 · [Trillion-Parameter MoE in a Box: Decoupling Memory Provisioning with High-Bandwidth Flash](2026-2609.15636-trillion-parameter-moe-in-a-box-decoupling-memory-provisioning-with-high.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、総パラメータ数が1兆を超える混合専門家モデル（Mixture-of-Experts、MoE）を、多数の要求で負荷を平準化するクラスタではなく、同時要求数1〜8程度の単一装置で動かす場合のメモリ設計を検討する。
+
+- **2026-09 · [Hot–Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving](2026-2609.25782-hot-cold-tiering-of-hbm-and-high-bandwidth-flash-for-agentic-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全セッションのKVを高帯域メモリ（High Bandwidth メモリ; HBM）に残せば容量が不足し、CPUメモリなどへ退避すると復帰時の転送待ちが増える。Qwen3-Coder-30B-A3Bを用いたエージェント作業のトレースで、HBM単独の165セッションに対してHBF追加構成は3900セッションを保持する（約23.6倍）。
 
 - **2026-09 · [Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays](2026-2609.20874-decomposing-predictive-kubernetes-autoscaling-for-large-language-model-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

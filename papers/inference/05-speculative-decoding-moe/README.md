@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（205本）
+## 自動生成の論文一覧（206本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -351,6 +351,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-08 · [Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets](2026-2608.19147-pre-compiled-pipeline-shards-for-distributed-llm-inference-on-intel-ai-p.md)**  
   実装：[✓](https://github.com/labscommunity/pipeline-sharded-inference-paper) ・ リポジトリ内被引用：0  
   本論文は、単独のメモリ容量では700億パラメータ級の大規模言語モデルを保持できない民生用AIパソコンを、通常のネットワーク越しに束ねる分散推論方式を示す。Llama 3.1 8Bの2台構成では、単一利用者の分散実行16.33トークン/秒から、2利用者合計43.97トークン/秒へ改善する。
+
+- **2026-08 · [Oilbird: Training-Free Speculative Decoding with Keys the Verifier Already Computes](2026-2608.03839-oilbird-training-free-speculative-decoding-with-keys-the-verifier-alread.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Oilbirdは、学習不要の投機的復号（学習不要 投機的復号）における「保存済みの正解候補を検索できない」という問題を対象とする。提案方式は、対象モデルの検証計算で既に得られた中間隠れ状態を位置ごとに保存し、次回の候補検索で意味的な近傍検索を行う。
 
 - **2026-08 · [MemSpec: Memory-Aware Runtime for Adaptive Draft Scheduling in Speculative Decoding on Edge Devices](2026-2608.10362-memspec-memory-aware-adaptive-draft-scheduling-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

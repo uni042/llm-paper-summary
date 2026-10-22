@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "dc2a9d86eba7e60e04d563dbfbb2ec128a4a03dc54b4a33a89e6cab98eadce55",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_c0496b35e2dc8191af307135003d5858--2026-2609.32663-distance-kv-relative-distance-retention-research-20261022-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.32663",
+  "worker_completed_at": "2026-10-22T18:36:00+09:00",
+  "worker_run_key": "20261022-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6177,
+    "body_paragraphs": 34,
+    "method_chars": 1534,
+    "method_paragraphs": 8,
+    "evaluation_chars": 202,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 202 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 202 < 500"
+  ],
+  "processed_at": "2026-10-22T16:39:10+00:00"
+}
