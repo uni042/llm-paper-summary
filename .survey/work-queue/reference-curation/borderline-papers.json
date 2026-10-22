@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T17:37:55+00:00",
-  "record_count": 5308,
+  "updated_at": "2026-10-22T17:44:11+00:00",
+  "record_count": 5309,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82363,6 +82363,22 @@
       ],
       "borderline_recheck_count": 0,
       "title": "A Call for Clarity in Beam Search: How It Works and When It Stops"
+    },
+    "arXiv:2110.04711": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2110.04711",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2110.04711",
+        "arXiv:2110.04711"
+      ],
+      "reason": "SuperShaperは幅の異なるBERT部分ネットワークを同時に事前学習し、モデルサイズと精度の選択や複数CPU・GPUでのレイテンシ比較を扱うため、言語モデルを資源制約に合わせる点で接点がある。一方、対象はBERTによるNLUで、主貢献は事前学習と形状探索であり、自己回帰LLMの推論、KV cache、serving基盤の最適化は扱わないため微妙とする。",
+      "first_checked_at": "2026-10-22T17:44:11+00:00",
+      "last_checked_at": "2026-10-22T17:44:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "SuperShaper: Task-Agnostic Super Pre-training of BERT Models with Variable Hidden Dimensions"
     }
   }
 }
