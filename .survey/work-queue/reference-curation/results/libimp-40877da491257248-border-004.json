@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-40877da491257248-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.07486",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.07486",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.07486",
+      "arXiv:2512.07486"
+    ],
+    "reason": "Materiumは結晶構造を要素・座標などのtoken列へ変換して自己回帰Transformerで生成し、GPU/CPU上で拡散法より速く生成するため、自己回帰系列生成とデコード効率の接点がある。一方、適用先は材料科学の結晶生成であり、LLM推論・serving向けの最適化ではないため微妙とする。",
+    "first_checked_at": "2026-10-22T17:50:43+00:00",
+    "last_checked_at": "2026-10-22T17:50:43+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Materium: An Autoregressive Approach for Material Generation"
+  },
+  "processed_at": "2026-10-22T17:50:44+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-40877da49125",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

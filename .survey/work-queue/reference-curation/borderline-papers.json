@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T17:44:11+00:00",
-  "record_count": 5309,
+  "updated_at": "2026-10-22T17:50:43+00:00",
+  "record_count": 5311,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82379,6 +82379,38 @@
       ],
       "borderline_recheck_count": 0,
       "title": "SuperShaper: Task-Agnostic Super Pre-training of BERT Models with Variable Hidden Dimensions"
+    },
+    "arXiv:2605.13869": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13869",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.13869",
+        "arXiv:2605.13869"
+      ],
+      "reason": "Elastic Spiking Transformerは幅やattention headを推論時に切り替えて、ニューロモルフィック機器のメモリ制約と演算エネルギーを抑える設計であり、可変規模のTransformer推論という接点がある。一方、対象はSNNによるジェスチャー認識で、LLM推論やservingの実証ではないため微妙とする。",
+      "first_checked_at": "2026-10-22T17:50:43+00:00",
+      "last_checked_at": "2026-10-22T17:50:43+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Elastic Spiking Transformers for Efficient Gesture Understanding"
+    },
+    "arXiv:2512.07486": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.07486",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.07486",
+        "arXiv:2512.07486"
+      ],
+      "reason": "Materiumは結晶構造を要素・座標などのtoken列へ変換して自己回帰Transformerで生成し、GPU/CPU上で拡散法より速く生成するため、自己回帰系列生成とデコード効率の接点がある。一方、適用先は材料科学の結晶生成であり、LLM推論・serving向けの最適化ではないため微妙とする。",
+      "first_checked_at": "2026-10-22T17:50:43+00:00",
+      "last_checked_at": "2026-10-22T17:50:43+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Materium: An Autoregressive Approach for Material Generation"
     }
   }
 }
