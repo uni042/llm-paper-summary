@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-22 17:37:07 JST**
+> 自動生成: **2026-10-22 17:54:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1201** |
 | 直近24hのResearch処理完了 | **73** |
 | 最終Research処理完了 | **10-22 13:30:00 JST** |
-| 最終Discovery探索完了 | **10-22 12:45:00 JST** |
+| 最終Discovery探索完了 | **10-22 15:05:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-22 08:09:46 JST（9時間27分前）** |
+| 最終maintenance完了 | **10-22 08:09:46 JST（9時間44分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **4** |
-| 直近6hのDiscovery run | **5** |
-| 直近6hのDiscovery本文確認・分類 | **5** |
+| 直近6hのDiscovery run | **4** |
+| 直近6hのDiscovery本文確認・分類 | **4** |
 | 最終Research完了 | **10-22 13:30:00 JST** |
-| 最終Discovery完了 | **10-22 12:45:00 JST** |
+| 最終Discovery完了 | **10-22 15:05:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-22 13:30:00 JST** / worker — / run 20261022-1330-scheduled-chat-30/r01 / 成果 **2件**
   - evidence: .survey/import-inbox/results/research/libfile_74b78ca4cdc48191a34a45653e449539--2026-2607.16213-selkv-selective-kv-merging-attention-compensation-research-20261022-1330-scheduled-chat-30-r01.json
-- Discovery: **10-22 12:45:00 JST** / worker scheduled-chat-45 / run 20261022-1245-scheduled-chat-45/r01/research-prescreen-008
-  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_11c4a82586b08191a04cd7f65bfb8147--discovery-20261022-1245-scheduled-chat-45-research-prescreen-r01-008.json
+- Discovery: **10-22 15:05:00 JST** / worker codex-local / run 20261022-lineage-diffusion-decoding-10
+  - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/20261022-lineage-diffusion-decoding-10--4dd3df57388f4581541673cbee14fd27e001d0bed423c98fb24189908144612b--discovery-diffusion-lineage-20261022.json
 
 ### Codex探索成果の反映状況
 
@@ -157,14 +157,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **2998ファイル / 16579件** |
-| Codex成果の取り込み待機中 | **0ファイル / 0件** |
-| └ 待機中のaccept | **0件** |
+| Codex成果の取り込み待機中 | **1ファイル / 1件** |
+| └ 待機中のaccept | **1件** |
 | └ 待機中のunrelated | **0件** |
 | └ 待機中のborderline | **0件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-16 15:30:27 JST** / results / discovery-20261016-local-screen-02-part-03-156f5feb5e72
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261016-local-screen-02--3f72d1327cc02d141120b166d4c5e0be25b5a9762362ce1961bcb2bfeb8c1d8d--discovery-20261016-local-screen-02-part-03-156f5feb5e72.json
+- 最終Codex分類・受渡し証拠: **10-22 15:05:00 JST** / waiting / 20261022-lineage-diffusion-decoding-10
+  - evidence: .survey/import-inbox/waiting/discovery/20261022-lineage-diffusion-decoding-10--4dd3df57388f4581541673cbee14fd27e001d0bed423c98fb24189908144612b--discovery-diffusion-lineage-20261022.json
 
 
 ## 件数サマリー（旧immutable transport診断）
