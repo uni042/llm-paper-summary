@@ -1288,6 +1288,9 @@ def merge_library_reason(provider_record: dict[str, Any], library_records: list[
             candidate["reason"] = record.get("reason")
             if record.get("lineage"):
                 candidate["lineage"] = record.get("lineage")
+            proposal = record.get("lineage_proposal")
+            if isinstance(proposal, dict):
+                candidate["lineage_proposal"] = proposal
             candidate["library_body_check"] = record.get("body_check")
             candidate["library_source_run_file"] = record.get("source_run_file")
             if record.get("origin"):
