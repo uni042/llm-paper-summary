@@ -1,38 +1,64 @@
 ---
-canonical_id: "DOI:10.1109/TCE.2025.3642866"
-title: "Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization"
-summary: "RAS-MQは端末の空きメモリ・計算能力とモデルの層別量子化誤差を推定し、整数線形計画で層のビット幅を選び、重み群の重要度に応じて高低ビット幅を相殺配分する学習不要の混合精度量子化方式である。Jetson Orin NX 16GB上のLLaMA2-13Bの2ビット設定でゼロショット平均精度57.21%、比較したSqueezeLLMの56.36%を0.85ポイント上回り、重み容量は24.5GBから4.1GBへ減った。ただし量子化は別のA100サーバーで実行され、推論の性能測定と量子化前処理の費用は区別する必要がある。"
-list_summary: "端末のメモリ・遅延制約を整数線形計画に取り込み、層別ビット幅を重み群の重要度で補正するRAS-MQ。Jetson上の低ビット推論で精度と容量を改善する一方、量子化自体はサーバー側で行う。"
+canonical_id: DOI:10.1109/TCE.2025.3642866
+title: Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization
+summary: RAS-MQは端末の空きメモリ・計算能力とモデルの層別量子化誤差を推定し、整数線形計画で層のビット幅を選び、重み群の重要度に応じて高低ビット幅を相殺配分する学習不要の混合精度量子化方式である。Jetson Orin NX 16GB上のLLaMA2-13Bの2ビット設定でゼロショット平均精度57.21%、比較したSqueezeLLMの56.36%を0.85ポイント上回り、重み容量は24.5GBから4.1GBへ減った。ただし量子化は別のA100サーバーで実行され、推論の性能測定と量子化前処理の費用は区別する必要がある。
+list_summary: 端末のメモリ・遅延制約を整数線形計画に取り込み、層別ビット幅を重み群の重要度で補正するRAS-MQ。Jetson上の低ビット推論で精度と容量を改善する一方、量子化自体はサーバー側で行う。
 authors:
-  - Tianfu Pang
-  - Yingchi Mao
-  - Zhenxiang Pan
-  - Rongzhi Qi
-  - Benteng Zhang
-  - Xiaoming He
-  - Jie Wu
-published: "2025-12-11"
+- Tianfu Pang
+- Yingchi Mao
+- Zhenxiang Pan
+- Rongzhi Qi
+- Benteng Zhang
+- Xiaoming He
+- Jie Wu
+published: '2025-12-11'
 published_year: 2025
-publication: "IEEE Transactions on Consumer Electronics, 72(1), 2122–2134 (February 2026 issue)"
-publication_type: "査読付き学術誌論文"
+publication: IEEE Transactions on Consumer Electronics, 72(1), 2122–2134 (February 2026 issue)
+publication_type: 査読付き学術誌論文
 publication_status: published
-source: "https://doi.org/10.1109/TCE.2025.3642866"
+source: https://doi.org/10.1109/TCE.2025.3642866
 sources:
-  - "https://cis.temple.edu/~wu/research/publications/Publication_files/Efficient_LLM_Deployment_in_Consumer_Electronics_Applications_via_Resource-Aware_and_Salience-Guided_Quantization.pdf"
-  - "https://doi.org/10.1109/TCE.2025.3642866"
-doi: "10.1109/TCE.2025.3642866"
+- https://cis.temple.edu/~wu/research/publications/Publication_files/Efficient_LLM_Deployment_in_Consumer_Electronics_Applications_via_Resource-Aware_and_Salience-Guided_Quantization.pdf
+- https://doi.org/10.1109/TCE.2025.3642866
+doi: 10.1109/TCE.2025.3642866
 code: null
-implementation: "量子化処理はIntel Xeon Gold 6326・128GB RAM・NVIDIA A100 80GB搭載のUbuntu 20.04サーバー（PyTorch 2.0.0/CUDA 11.7）で実施し、量子化済みLLaMA系モデルをJetson AGX Orin 64GBとOrin NX 16GBで評価する。層別ビット幅最適化にはGurobi、重みの誤差補償にはGPTQ系処理を用いる。著者の公式実装コードの公開は一次論文中で確認できない。"
-implementation_status: "official-code-not-confirmed"
-last_checked: "2026-10-22"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261022-1900-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-22T19:04:38+09:00"
-reference_main_sha: "9867b85dfab98006a704568525c911bee188bafd"
+implementation: 量子化処理はIntel Xeon Gold 6326・128GB RAM・NVIDIA A100 80GB搭載のUbuntu 20.04サーバー（PyTorch 2.0.0/CUDA 11.7）で実施し、量子化済みLLaMA系モデルをJetson AGX Orin 64GBとOrin NX 16GBで評価する。層別ビット幅最適化にはGurobi、重みの誤差補償にはGPTQ系処理を用いる。著者の公式実装コードの公開は一次論文中で確認できない。
+implementation_status: official-code-not-confirmed
+last_checked: '2026-10-22'
+worker_id: scheduled-chat-00
+worker_run_key: 20261022-1900-scheduled-chat-00/r01
+worker_completed_at: '2026-10-22T19:04:38+09:00'
+reference_main_sha: 9867b85dfab98006a704568525c911bee188bafd
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2211.05100
+  arxiv_id: '2211.05100'
+- canonical_id: arXiv:2307.13304
+- canonical_id: arXiv:2306.03078
+- canonical_id: arXiv:2310.00034
+  arxiv_id: '2310.00034'
+- canonical_id: arXiv:2402.04396
+- canonical_id: arXiv:2401.06118
+- canonical_id: arXiv:2406.08155
+  arxiv_id: '2406.08155'
+- canonical_id: arXiv:2306.02272
+- canonical_id: arXiv:2310.19102
+- canonical_id: arXiv:2306.07629
+- canonical_id: arXiv:2504.19746
+  arxiv_id: '2504.19746'
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+references_checked_at: '2026-10-22'
+references_source: primary-pdf-reference-section
+references_total: 44
 ---
 
 # Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization
