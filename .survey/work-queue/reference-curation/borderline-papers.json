@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T15:36:22+00:00",
+  "updated_at": "2026-10-22T15:48:04+00:00",
   "record_count": 5291,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -81165,9 +81165,9 @@
         "DOI:10.48550/arxiv.2205.08084",
         "arXiv:2205.08084"
       ],
-      "reason": "主要貢献はM6事前学習モデルを推薦システムの検索・順位付け・説明生成・対話推薦へ統合する産業応用であり、一般のLLM生成サービングやKV/MoE最適化を直接対象としない。一方で§3.3のセグメント別遅延相互作用では24層中21層を事前計算・キャッシュし、表6でCTR推論の57msを16msへ短縮する独自の推論構成がある。§3.5では端末向け蒸留・枝刈り・8ビット量子化・早期終了も扱うため、明白な無関係ではなく、推論システム技術の収録境界として保留する。なお同じ表6でAUCは0.7995から0.7731へ悪化する。",
+      "reason": "M6を産業用推薦の検索・順位付け・説明生成へ適応する研究。要旨には多区間の遅延相互作用、早期終了、パラメータ共有、枝刈りによる推論時間とモデル規模の削減があるため、単純な対象外とはしない。一方、主たる新規性・評価対象は推薦アプリケーションと省データ適応であり、汎用LLMサービングの処理量・KV管理・GPU実行を直接評価したことは要旨から確認できないため、収録可否は保留。",
       "first_checked_at": "2026-10-16T17:49:37+00:00",
-      "last_checked_at": "2026-10-21T21:44:12+00:00",
+      "last_checked_at": "2026-10-22T15:48:04+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "M6-Rec: Generative Pretrained Language Models are Open-Ended Recommender Systems"

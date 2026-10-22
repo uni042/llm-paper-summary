@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T15:36:22+00:00",
+  "updated_at": "2026-10-22T15:48:05+00:00",
   "record_count": 12443,
   "records": {
     "arXiv:2303.08774": {
@@ -163924,9 +163924,9 @@
         "id:arXiv:2008.05000",
         "url:https://arxiv.org/abs/2008.05000"
       ],
-      "reason": "グラフニューラルネットワークの次数依存の量子化誤差を抑える学習法であり、INT8でCPU推論最大4.7倍高速化を報告する。ただし対象はグラフ演算・グラフデータで、LLM、Transformer推論、KVキャッシュ等の実行系への直接適用を要旨に示さないため本サーベイの収録対象外。",
+      "reason": "要旨の対象はグラフニューラルネットワーク（GNN）の次数依存量子化誤差と量子化考慮学習であり、6データセットとCPUのINT8/INT4推論を評価する。低精度演算による推論高速化は扱うが、LLM・Transformer・LLMサービング・KVキャッシュへの直接適用は示されていないため、現行LLM推論システム調査の対象外。",
       "first_checked_at": "2026-10-11T07:45:44+00:00",
-      "last_checked_at": "2026-10-21T15:27:46+00:00",
+      "last_checked_at": "2026-10-22T15:48:05+00:00",
       "linked_from": [],
       "title": "Degree-Quant: Quantization-Aware Training for Graph Neural Networks"
     },
