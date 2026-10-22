@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T15:52:12+00:00",
-  "record_count": 5293,
+  "updated_at": "2026-10-22T16:49:12+00:00",
+  "record_count": 5295,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82122,6 +82122,34 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments"
+    },
+    "arXiv:2604.08782": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.08782",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.08782",
+        "arXiv:2604.08782"
+      ],
+      "reason": "複数ターン会話の履歴を少数例推論のCondenserと軽量Deciderで非同期圧縮し、10ターンで入力トークンを最大72%削減すると一次要旨が報告する。入力長削減による遅延・費用低減との接点はあるが、主たる寄与は会話情報の保持と応答精度の改善であり、KVキャッシュやサービングのGPUスケジューラ・メモリ階層を直接最適化する機構ではないため境界扱い。",
+      "first_checked_at": "2026-10-22T16:49:12+00:00",
+      "last_checked_at": "2026-10-22T16:49:12+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MT-OSC: Path for LLMs that Get Lost in Multi-Turn Conversation"
+    },
+    "arXiv:2511.05650": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.05650",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.05650",
+        "arXiv:2511.05650"
+      ],
+      "reason": "一次要旨で、整列前の基盤モデルと整列済みモデルをトークン単位で切り替えるBACoのルータを提案し、不確実性と語の意味役割を用いて多様性と品質の両立を図る。推論時のモデル選択機構という接点はあるが、主要指標は多様性・品質の13指標であり、処理量・GPUメモリ・遅延・計算節約の実装上の貢献が中心ではないため境界扱い。",
+      "first_checked_at": "2026-10-22T16:49:12+00:00",
+      "last_checked_at": "2026-10-22T16:49:12+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing Diversity and Quality through Base-Aligned Model Collaboration"
     }
   }
 }
