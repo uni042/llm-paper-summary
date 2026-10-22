@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c38a6f9c8ab182aa-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2303.03982",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2303.03982",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2303.03982",
+      "arXiv:2303.03982"
+    ],
+    "reason": "一次要旨はS4系の状態空間モデルを強化学習の系列処理へ拡張し、TransformerやRNNとの推論速度比較および部分観測環境での学習性能を示す。長系列モデルの計算効率との技術的接点はある一方、主たる対象はin-context強化学習の方策モデルであり、自己回帰LLMのサービング、KVキャッシュ、GPU実行基盤ではないため保留。",
+    "first_checked_at": "2026-10-21T15:27:47+00:00",
+    "last_checked_at": "2026-10-22T15:52:09+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Structured State Space Models for In-Context Reinforcement Learning"
+  },
+  "processed_at": "2026-10-22T15:52:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c38a6f9c8ab1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

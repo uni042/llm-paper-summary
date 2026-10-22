@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T15:48:05+00:00",
-  "record_count": 12443,
+  "updated_at": "2026-10-22T15:52:11+00:00",
+  "record_count": 12441,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164872,21 +164872,6 @@
       "linked_from": [],
       "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
     },
-    "arXiv:2311.17049": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2311.17049",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2311.17049",
-        "arXiv:2311.17049",
-        "id:arXiv:2311.17049",
-        "url:https://arxiv.org/abs/2311.17049"
-      ],
-      "reason": "題名は画像・テキストの対照的表現モデルMobileCLIPを強化されたマルチモーダル学習で構築する研究を示す。主眼は画像とテキストの表現学習であり、LLM生成推論の実行系、KVキャッシュ、サービング性能の改善ではないため対象外。",
-      "first_checked_at": "2026-10-12T10:58:05+00:00",
-      "last_checked_at": "2026-10-21T09:53:03+00:00",
-      "linked_from": [],
-      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
-    },
     "arXiv:2203.11086": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2203.11086",
@@ -179046,18 +179031,6 @@
       "linked_from": [],
       "title": "AsyncTool: Evaluating the Asynchronous Function Calling Capability under Multi-Task Scenarios"
     },
-    "arXiv:2602.05384": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.05384",
-      "identity_tokens": [
-        "arXiv:2602.05384"
-      ],
-      "reason": "一次要旨の提案は撮影文書とデジタル文書を識別し、前者はページ全体、後者は検出したレイアウト要素を並列解析する文書画像解析モデルである。OmniDocBenchでの解析精度改善と撮影文書の誤り低減が主な評価で、並列推論は文書解析の実装手段であり、汎用LLM生成基盤・KVキャッシュ・モデル配信の機構改善は主張していないため対象外とする。",
-      "first_checked_at": "2026-10-20T07:56:50+00:00",
-      "last_checked_at": "2026-10-21T14:44:40+00:00",
-      "linked_from": [],
-      "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
-    },
     "DOI:10.1145/3373376.3378530": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1145/3373376.3378530",
@@ -179086,11 +179059,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2412.00081",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2412.00081",
         "arXiv:2412.00081"
       ],
-      "reason": "複数タスクの重み差分を層単位の特異ベクトルへ分解し、タスク干渉を抑えてモデルを統合する研究。TSV-Cによる10%への圧縮はタスク差分行列が対象であり、実行時のLLM重み・KVキャッシュ・推論計算を削減する機構や性能評価ではないため対象外。",
+      "reason": "CVPR 2025一次要旨では、複数タスクのモデル結合における干渉を特異値分解で解析し、タスクベクトルを圧縮して統合精度を高める。10%への圧縮はタスク差分表現が対象であり、LLM推論時の重み量子化、実行時メモリ・レイテンシ・スループットを最適化する手法ではないため対象外。",
       "first_checked_at": "2026-10-20T11:55:37+00:00",
-      "last_checked_at": "2026-10-21T15:27:50+00:00",
+      "last_checked_at": "2026-10-22T15:52:10+00:00",
       "linked_from": [],
       "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
     },
@@ -179262,18 +179236,6 @@
       "linked_from": [],
       "title": "DyGeoVLN: Infusing Dynamic Geometry Foundation Model into Vision-Language Navigation"
     },
-    "arXiv:2602.02459": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.02459",
-      "identity_tokens": [
-        "arXiv:2602.02459"
-      ],
-      "reason": "題名は動的環境でのロボットナビゲーションを目的とした視覚・言語・行動モデルの制御方式を示している。ロボット行動決定のモデル研究であり、LLM推論カーネル、KVキャッシュ、サービング基盤の資源最適化ではないため対象外。",
-      "first_checked_at": "2026-10-21T08:53:34+00:00",
-      "last_checked_at": "2026-10-21T08:53:34+00:00",
-      "linked_from": [],
-      "title": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments"
-    },
     "arXiv:2604.00292": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2604.00292",
@@ -179333,6 +179295,19 @@
       "last_checked_at": "2026-10-22T14:47:08+00:00",
       "linked_from": [],
       "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
+    },
+    "arXiv:2407.18370": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2407.18370",
+        "arXiv:2407.18370"
+      ],
+      "reason": "ICLR 2025公式要旨はLLM審判の人間判断との一致を信頼度校正・選択的評価・階層的な判定モデルで保証する方法を提案する。安価な審判モデルへの振分けで評価費用を抑えるが、主眼はモデル評価の校正と合意保証で、LLM推論サービングの資源・カーネル・通信・メモリ効率を改善する基盤技術ではないため対象外。",
+      "first_checked_at": "2026-10-22T15:52:07+00:00",
+      "last_checked_at": "2026-10-22T15:52:07+00:00",
+      "linked_from": [],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
     }
   }
 }

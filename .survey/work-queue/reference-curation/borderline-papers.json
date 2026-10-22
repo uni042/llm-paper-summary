@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T15:48:04+00:00",
-  "record_count": 5291,
+  "updated_at": "2026-10-22T15:52:12+00:00",
+  "record_count": 5293,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71037,9 +71037,9 @@
         "SemanticScholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7",
         "semanticscholar:a5fa6e7565dca654eab9372ace4b1ba7f63655f7"
       ],
-      "reason": "NeurIPS 2020の著者公開論文・要旨は、BERTの512トークン制約に対しJudgeが重要文を選択しReasonerへ渡すMemRecall（反復選択・保持・減衰）を提案し、長文QA・分類で入力長に依存しないメモリ使用量を報告する。長文処理の計算・メモリ効率には接点があるが、生成LLMのKVキャッシュ、デコード、推論サービングやGPU実行系の最適化を対象にしていないため境界的。",
+      "reason": "NeurIPS 2020公式要旨は長文BERTの計算量・メモリ増大を、重要文抽出と再読による入力選択で抑え、元テキスト長に依存しないメモリ使用量を報告する。長文脈の計算削減には技術的接点があるが、抽出的BERTの質問応答・分類を主対象とし、自己回帰LLMのKVキャッシュ管理やサービングを扱わないため保留。",
       "first_checked_at": "2026-10-11T10:43:45+00:00",
-      "last_checked_at": "2026-10-20T08:45:52+00:00",
+      "last_checked_at": "2026-10-22T15:52:12+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CogLTX: Applying BERT to Long Texts"
@@ -81933,11 +81933,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2303.03982",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2303.03982",
         "arXiv:2303.03982"
       ],
-      "reason": "S4型状態空間モデルの隠れ状態を並列初期化・リセット可能に改変し、部分観測強化学習でRNN比5倍超の速度を報告。系列処理の効率化という移転可能な技術的接点はあるが、評価対象は強化学習の制御環境で、LLM推論や言語モデルのサービングへの直接適用は要旨から確認できない。",
+      "reason": "一次要旨はS4系の状態空間モデルを強化学習の系列処理へ拡張し、TransformerやRNNとの推論速度比較および部分観測環境での学習性能を示す。長系列モデルの計算効率との技術的接点はある一方、主たる対象はin-context強化学習の方策モデルであり、自己回帰LLMのサービング、KVキャッシュ、GPU実行基盤ではないため保留。",
       "first_checked_at": "2026-10-21T15:27:47+00:00",
-      "last_checked_at": "2026-10-21T15:27:47+00:00",
+      "last_checked_at": "2026-10-22T15:52:09+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Structured State Space Models for In-Context Reinforcement Learning"
@@ -81946,14 +81947,15 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2104.10640",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2104.10640",
         "arXiv:2104.10640"
       ],
-      "reason": "一次要旨ではBERT/GPT等の自然言語処理アーキテクチャを横断的に整理し、転移学習、枝刈り、量子化、知識蒸留、長文注意などの効率化技術も概説している。一方で論文の中心は多様な自然言語処理課題向けモデルの分類と比較であり、LLM推論サービング基盤の固有アルゴリズムや性能評価に直接寄与する研究ではない。関連する圧縮・注意の概説を含むため境界扱いとする。",
+      "reason": "一次要旨はTransformer系NLPモデルの全般的なサーベイで、枝刈り、量子化、知識蒸留、長系列注意の効率化を既存技術として概説する。圧縮と推論効率の章題は現行サーベイに関連するが、個別LLM推論基盤の新規機構・検証ではなく幅広いNLPモデル解説が主目的のため収録を保留。",
       "first_checked_at": "2026-10-21T15:27:48+00:00",
-      "last_checked_at": "2026-10-21T15:27:48+00:00",
+      "last_checked_at": "2026-10-22T15:52:09+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
-      "title": "The NLP Cookbook: Modern Recipes for Transformer based Deep Learning Architectures"
+      "title": "The NLP Cookbook: Modern Recipes for Transformer Based Deep Learning Architectures"
     },
     "arXiv:2606.05158": {
       "classification": "borderline",
@@ -81981,19 +81983,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark"
-    },
-    "arXiv:2407.18370": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2407.18370",
-      "identity_tokens": [
-        "arXiv:2407.18370"
-      ],
-      "reason": "一次要旨は人間との判定一致を統計的に保証する選択的LLM評価が中心だが、安価な判定モデルから高価なモデルへ必要時のみエスカレーションするカスケードで計算費用を抑える。LLM推論の資源割当との接点はあるが、推論サーバーのスケジューリング・メモリ管理・カーネルを直接最適化する研究ではないため境界扱いとする。",
-      "first_checked_at": "2026-10-21T15:27:52+00:00",
-      "last_checked_at": "2026-10-22T04:51:39+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
     },
     "arXiv:2606.03557": {
       "classification": "borderline",
@@ -82091,6 +82080,48 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation"
+    },
+    "arXiv:2602.05384": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05384",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.05384",
+        "arXiv:2602.05384"
+      ],
+      "reason": "一次要旨は文書画像の種類・レイアウトを検出し、スキャン文書をページ全体処理、電子文書を要素単位の並列処理で解析する。要素単位推論の並列化は性能効率に接点があるが、主対象は文書解析モデルの精度と幾何歪みへの頑健性で、汎用LLMサービング・KVキャッシュ・GPUランタイムの改善は直接扱わないため保留。",
+      "first_checked_at": "2026-10-22T15:52:08+00:00",
+      "last_checked_at": "2026-10-22T15:52:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
+    },
+    "arXiv:2311.17049": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.17049",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.17049",
+        "arXiv:2311.17049"
+      ],
+      "reason": "CVPR 2024一次要旨はモバイル環境向けCLIP画像テキスト埋め込みモデルを設計し、モデルの推論速度・メモリと精度のトレードオフを検証する。低遅延推論モデルの設計としては関連するが、主対象はCLIPエンコーダの画像分類・検索と訓練データ強化であり、生成LLMの実行ランタイムやKVキャッシュは対象外なので境界扱い。",
+      "first_checked_at": "2026-10-22T15:52:10+00:00",
+      "last_checked_at": "2026-10-22T15:52:10+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
+    },
+    "arXiv:2602.02459": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02459",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.02459",
+        "arXiv:2602.02459"
+      ],
+      "reason": "ICML 2026公式要旨は視覚言語推論の遅延をメタデータとしてロボットの行動生成に伝える非同期な意味推論・制御方式を提案し、実時間ロボット制御の遅延耐性を評価する。非同期推論遅延の扱いには接点があるが、最終適用先はロボットナビゲーションの方策制御で、LLMサービング基盤を直接改善するものではないため境界扱い。",
+      "first_checked_at": "2026-10-22T15:52:11+00:00",
+      "last_checked_at": "2026-10-22T15:52:11+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "TIC-VLA: A Think-in-Control Vision-Language-Action Model for Robot Navigation in Dynamic Environments"
     }
   }
 }
