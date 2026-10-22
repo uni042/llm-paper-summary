@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-0025-interactive-llm-relevance/r01/30-1-77e11",
+  "reference_main_sha": "da63d442cb29de892b2c6590c8dcd829f1c4e5d0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.05511",
+      "identity_tokens": [
+        "arxiv:2303.05511",
+        "doi:10.48550/arxiv.2303.05511"
+      ],
+      "title": "Scaling up GANs for Text-to-Image Synthesis",
+      "reason": "一次要旨によればGigaGANはテキストから画像を合成するGANモデルのスケール拡張・高解像度生成・生成速度を対象とする。512px画像0.13秒の推論結果は画像生成モデル固有の性能で、自己回帰LLMの実行基盤、KVキャッシュ、LLMサービング、MoE推論には直接接続しない。",
+      "source_url": "https://arxiv.org/abs/2303.05511",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:25:19+09:00",
+      "last_checked_at": "2026-10-23T00:25:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-77e116c3da561871",
+      "worklist_rank": 1,
+      "original_worklist_worker": "scheduled-chat-30",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
