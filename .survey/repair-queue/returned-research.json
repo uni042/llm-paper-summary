@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T01:54:42+00:00",
+  "generated_at": "2026-10-22T02:02:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 18,
+  "count": 21,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -183,33 +183,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-schedule.json",
       "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.19767",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T20:16:03+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5179,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1767,
-        "limitation_chars": 584,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ded7292da70819189cf39439b4576c3--2026-2604.19767-paypal-eagle3-nemotron-research-20261021-2126-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8ded7292da70819189cf39439b4576c3--2026-2604.19767-paypal-eagle3-nemotron-research-20261021-2126-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261021-2126-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.21264",
@@ -493,8 +466,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/ISDFS69419.2026.11458958",
-      "title": "Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems",
-      "source_url": "https://doi.org/10.1109/ISDFS69419.2026.11458958",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T01:53:05+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -519,6 +492,119 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1e7189c70ea8--libfile_fcdef99d940c81918d8fd0a9eb657f7d--2026-doi-10.1109-isdfs69419.2026.11458958-adaptiscale-distributed-test-time-allocation-research-20261021-2300-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1e7189c70ea8--libfile_fcdef99d940c81918d8fd0a9eb657f7d--2026-doi-10.1109-isdfs69419.2026.11458958-adaptiscale-distributed-test-time-allocation-re.json",
       "worker_run_key": "scheduled-chat-00/20261021-2300/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.19767",
+      "title": "Accelerating PayPal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models",
+      "source_url": "https://arxiv.org/abs/2604.19767",
+      "returned_at": "2026-10-22T02:02:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5179,
+        "body_paragraphs": 26,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1767,
+        "limitation_chars": 584,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-218213fafd5f--libfile_8ded7292da70819189cf39439b4576c3--2026-2604.19767-paypal-eagle3-nemotron-research-20261021-2126-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-218213fafd5f--libfile_8ded7292da70819189cf39439b4576c3--2026-2604.19767-paypal-eagle3-nemotron-research-20261021-2126-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-2126-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.03031",
+      "title": "Radio: Rate–Distortion Optimization for Large Language Model Compression",
+      "source_url": "https://arxiv.org/pdf/2505.03031",
+      "returned_at": "2026-10-22T02:02:17+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6432,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 725,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2a2b584e98c9--libfile_3dbe2aad20608191881a0b006fd438d5--2025-2505.03031-radio-rate-distortion-llm-quantization-research-20261021-2200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2a2b584e98c9--libfile_3dbe2aad20608191881a0b006fd438d5--2025-2505.03031-radio-rate-distortion-llm-quantization-research-20261021-2200-scheduled-c.json",
+      "worker_run_key": "20261021-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.26587",
+      "title": "SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2606.26587",
+      "returned_at": "2026-10-22T02:02:18+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 427 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5669,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 427,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 427 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-33496a1d7d67--libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-33496a1d7d67--libfile_68da10e789fc8191a73292818808130e--2026-2606.26587-sharq-sparse-dense-fp4-research-20261021-2231-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2411.04013",
+      "title": "kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers",
+      "source_url": "https://arxiv.org/abs/2411.04013",
+      "returned_at": "2026-10-22T02:02:21+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5782,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 878,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-40dada793dc1--libfile_59529e070c448191881ec93fc2e7c5d6--2024-2411.04013-knn-attention-theory-research-20261021-1604-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-40dada793dc1--libfile_59529e070c448191881ec93fc2e7c5d6--2024-2411.04013-knn-attention-theory-research-20261021-1604-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261021-1604-scheduled-chat-00/r01"
     }
   ]
 }
