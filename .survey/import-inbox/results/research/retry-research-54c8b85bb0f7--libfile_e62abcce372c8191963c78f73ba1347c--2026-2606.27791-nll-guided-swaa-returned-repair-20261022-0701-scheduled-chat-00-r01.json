@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "89cf6c4952b5002d6d2f7bc4ff28aa0942bc7b14ccae350af84d4fc3fb762484",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54c8b85bb0f7--libfile_e62abcce372c8191963c78f73ba1347c--2026-2606.27791-nll-guided-swaa-returned-repair-20261022-0701-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2606.27791",
+  "worker_completed_at": "2026-10-22T07:11:21+09:00",
+  "worker_run_key": "20261022-0701-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5676,
+    "body_paragraphs": 38,
+    "method_chars": 1411,
+    "method_paragraphs": 9,
+    "evaluation_chars": 170,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 170 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 170 < 500"
+  ],
+  "processed_at": "2026-10-22T17:31:10+00:00"
+}

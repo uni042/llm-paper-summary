@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T17:23:59+00:00",
+  "generated_at": "2026-10-22T17:31:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -578,35 +578,6 @@
       "worker_run_key": "20261022-1830-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2603.03333",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T15:37:57+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6208,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 683,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_72dc5a7f8d4c81918f5f32441d9605ba--2026-2603.03333-dropmatch-mc-dropout-speculative-acceptance-research-20261022-1932-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_72dc5a7f8d4c81918f5f32441d9605ba--2026-2603.03333-dropmatch-mc-dropout-speculative-acceptance-research-20261022-1932-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2402.02750",
       "title": null,
       "source_url": null,
@@ -804,62 +775,6 @@
       "worker_run_key": "20261022-0845-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2608.20375",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T16:50:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5236,
-        "body_paragraphs": 35,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 973,
-        "limitation_chars": 621,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.23130",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T16:50:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7851,
-        "body_paragraphs": 41,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 492,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261022-2201-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.08411",
       "title": null,
       "source_url": null,
@@ -886,64 +801,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_d6f98b5db0fc8191aca72274f2500859--2026-2606.08411-asynclane-refinement-advancement-returned-repair-20261022-2345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_d6f98b5db0fc8191aca72274f2500859--2026-2606.08411-asynclane-refinement-advancement-returned-repair-20261022-2345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261022-2345-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.14452",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T17:10:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 276 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5640,
-        "body_paragraphs": 40,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 276,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 276 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6d1c99d39308191918ddcca3b34a5b0--2026-2602.14452-wisparse-weight-aware-activation-sparsity-research-20261022-1932-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e6d1c99d39308191918ddcca3b34a5b0--2026-2602.14452-wisparse-weight-aware-activation-sparsity-research-20261022-1932-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.27791",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T17:10:56+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 170 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5676,
-        "body_paragraphs": 38,
-        "method_chars": 1411,
-        "method_paragraphs": 9,
-        "evaluation_chars": 170,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 170 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e62abcce372c8191963c78f73ba1347c--2026-2606.27791-nll-guided-swaa-returned-repair-20261022-0701-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e62abcce372c8191963c78f73ba1347c--2026-2606.27791-nll-guided-swaa-returned-repair-20261022-0701-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2602.20191",
@@ -974,8 +831,8 @@
     },
     {
       "canonical_id": "arXiv:2602.16054",
-      "title": "CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill",
-      "source_url": "https://arxiv.org/abs/2602.16054",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:23:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1001,8 +858,8 @@
     },
     {
       "canonical_id": "arXiv:2405.13019",
-      "title": "A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models",
-      "source_url": "https://arxiv.org/html/2405.13019v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:23:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1030,8 +887,8 @@
     },
     {
       "canonical_id": "arXiv:2608.14555",
-      "title": "Discovering KV Cache Eviction Policies via LLM-Guided Program Evolution",
-      "source_url": "https://arxiv.org/html/2608.14555",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:23:56+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1058,8 +915,8 @@
     },
     {
       "canonical_id": "arXiv:2609.32663",
-      "title": "Distance-KV: Exploiting Relative Distance for Efficient Long-Context Inference",
-      "source_url": "https://arxiv.org/abs/2609.32663",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:23:57+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1086,8 +943,8 @@
     },
     {
       "canonical_id": "arXiv:2605.15626",
-      "title": "IO-SVD: Input-Output Whitened SVD for Adaptive-Rank LLM Compression",
-      "source_url": "https://arxiv.org/pdf/2605.15626",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T17:23:58+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1110,6 +967,149 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-32171058e770--libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-32171058e770--libfile_b2424f7303948191bf3371b95554211a--2026-2605.15626-io-svd-double-sided-whitening-llm-compression-research-20261022-1932-sche.json",
+      "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.23130",
+      "title": "From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving",
+      "source_url": "https://arxiv.org/html/2609.23130v1",
+      "returned_at": "2026-10-22T17:31:06+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7851,
+        "body_paragraphs": 41,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 492,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-448962d6a3eb--libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-448962d6a3eb--libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-0.json",
+      "worker_run_key": "20261022-2201-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.03333",
+      "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
+      "source_url": "https://arxiv.org/pdf/2603.03333",
+      "returned_at": "2026-10-22T17:31:08+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6208,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 683,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-53e20cd6cb85--libfile_72dc5a7f8d4c81918f5f32441d9605ba--2026-2603.03333-dropmatch-mc-dropout-speculative-acceptance-research-20261022-1932-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-53e20cd6cb85--libfile_72dc5a7f8d4c81918f5f32441d9605ba--2026-2603.03333-dropmatch-mc-dropout-speculative-acceptance-research-20261022-1932-schedu.json",
+      "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.27791",
+      "title": "NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation",
+      "source_url": "https://arxiv.org/abs/2606.27791",
+      "returned_at": "2026-10-22T17:31:10+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 170 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5676,
+        "body_paragraphs": 38,
+        "method_chars": 1411,
+        "method_paragraphs": 9,
+        "evaluation_chars": 170,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 170 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54c8b85bb0f7--libfile_e62abcce372c8191963c78f73ba1347c--2026-2606.27791-nll-guided-swaa-returned-repair-20261022-0701-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-54c8b85bb0f7--libfile_e62abcce372c8191963c78f73ba1347c--2026-2606.27791-nll-guided-swaa-returned-repair-20261022-0701-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.20375",
+      "title": "GRAFT: Adaptive DLM-Based Draft Tree Construction with Target-Distilled Edge Scoring",
+      "source_url": "https://arxiv.org/abs/2608.20375",
+      "returned_at": "2026-10-22T17:31:12+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5236,
+        "body_paragraphs": 35,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 973,
+        "limitation_chars": 621,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6e61617051fb--libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6e61617051fb--libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat.json",
+      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.14452",
+      "title": "WiSparse: Boosting LLM Inference Efficiency with Weight-Aware Mixed Activation Sparsity",
+      "source_url": "https://arxiv.org/pdf/2602.14452",
+      "returned_at": "2026-10-22T17:31:13+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 276 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5640,
+        "body_paragraphs": 40,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 276,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 276 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-73a40d5bc709--libfile_e6d1c99d39308191918ddcca3b34a5b0--2026-2602.14452-wisparse-weight-aware-activation-sparsity-research-20261022-1932-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-73a40d5bc709--libfile_e6d1c99d39308191918ddcca3b34a5b0--2026-2602.14452-wisparse-weight-aware-activation-sparsity-research-20261022-1932-schedule.json",
       "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
     }
   ]
