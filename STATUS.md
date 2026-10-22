@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-23 07:10:09 JST**
+> 自動生成: **2026-10-23 08:10:27 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **1170** |
 | 未claim Research job | **1170** |
-| 直近24hのResearch処理完了 | **58** |
+| 直近24hのResearch処理完了 | **55** |
 | 最終Research処理完了 | **10-23 00:42:12 JST** |
 | 最終Discovery探索完了 | **10-23 06:59:00 JST** |
 | 整合性異常 | **0** |
@@ -88,7 +88,7 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.7%**
-- 現在の生在庫: 後方references **56352件** / 前方引用 **69044件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 現在の生在庫: 後方references **56352件** / 前方引用 **69042件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
 - 前方・後方を統合してidentity重複を除いた未処理面は **124723件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
@@ -104,11 +104,11 @@
 | 巡回中 | **10** |
 | 未巡回 | **0** |
 | 今回run開始時due | **10** |
-| 前方引用から保持中の未処理候補 | **69044** |
+| 前方引用から保持中の未処理候補 | **69042** |
 | エラー状態保持seed | **10** |
 
 - 初回カバレッジ完了率: **99.7%**
-- state最終更新: **10-23 06:50:19 JST**
+- state最終更新: **10-23 07:50:44 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-23 03:14:52 JST（3時間55分前）** |
+| 最終maintenance完了 | **10-23 03:14:52 JST（4時間55分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,8 +137,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **14** |
-| 直近6hのDiscovery本文確認・分類 | **35** |
+| 直近6hのDiscovery run | **12** |
+| 直近6hのDiscovery本文確認・分類 | **29** |
 | 最終Research完了 | **10-23 00:42:12 JST** |
 | 最終Discovery完了 | **10-23 06:59:00 JST** |
 
