@@ -31,6 +31,8 @@ quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 worker_completed_at: "2026-10-22T22:35:59+09:00"
 last_checked: "2026-10-22"
+last_audited: null
+audit_version: 0
 ---
 
 # Conv-Basis：畳み込み基底による注意計算と勾配計算の高速化

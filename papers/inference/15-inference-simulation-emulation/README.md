@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（42本）
+## 自動生成の論文一覧（44本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -122,6 +122,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/bettyguo/RouteNLP) ・ リポジトリ内被引用：0  
   提案方式は、タスク条件付きの難易度予測器、共形リスク制御で初期化した品質確認付きの段階的移行、失敗した問い合わせを分類して小型モデルを再蒸留する閉ループという三つの機構を連結する。8週間・1日約5,000件の顧客サービス試験運用では、費用58%削減、専門家による応答受理率91%を報告した。
 
+- **2026-04 · [Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing](2026-cedb2b11ea50-adaptive-load-balancing-for-multi-tier-llm-inference-with-dynamic-model-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  論文の代表結果は、5,000件の合成要求を使ったシミュレーションで、ラウンドロビン方式に対して平均応答時間を101.36 msから49.48 msへ51.18%短縮し、総費用を4.3322米ドルから1.2964米ドルへ70.08%削減したというものである。
+
 - **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TOMは、三値重み（ternary 重み）を持つ大規模言語モデル（LLM）をエッジ端末で低遅延・低消費電力に動かすための、読出し専用メモリ（ROM）と静的ランダムアクセスメモリ（SRAM）の混合専用回路である。重みを毎トークン外部メモリから転送する方式と異なり、固定ベースモデルの重みをROMとしてオンチップへ焼き込み、各演算器の近くに分散配置する。
@@ -163,6 +167,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-11 · [DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution](2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md)**  
   実装：[✓](https://github.com/yueyang130/DeeR-VLA) ・ リポジトリ内被引用：3  
   DeeR-VLA（動的 Early-Exit for Robotic Multimodal Large Language Models）は、画像と自然言語の指示からロボットの行動を決める視覚・言語・行動モデルに、複数の中間出口（early exit）を設ける推論時の計算資源配分方式である。
+
+- **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
+  実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：2  
+  大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
 
 - **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：0  

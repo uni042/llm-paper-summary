@@ -46,6 +46,8 @@ references:
   - canonical_id: arXiv:2404.00456
 references_checked_at: '2026-10-22'
 references_source: 'primary_pdf_selected_references; not exhaustive'
+last_audited: null
+audit_version: 0
 ---
 
 # LLM.265：動画符号化器を汎用テンソル圧縮器として使うLLM推論基盤

@@ -27,6 +27,8 @@ worker_run_key: '20261022-2201-scheduled-chat-00/r01'
 reference_main_sha: '6c141ee8daa1f155f43c4a4babf5286f80f07803'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # LLM推論エンジンから推論制御プレーンへ：vLLMとllm-dの役割分担と実行計画
