@@ -371,6 +371,11 @@ def _preflight(manifest_path: Path) -> dict:
         if not record or record["canonical_id"] != item["canonical_id"] or record["source_hash"] != item["source_hash"]:
             raise MigrationError(f"paper inventory does not match entry {item['old_rel']}")
         record["path"] = item["new_rel"]
+    # survey.papers() orders records by their current filesystem paths. Moving
+    # papers can change that order, so mirror the post-move order before serializing
+    # the planned identity snapshot. Otherwise apply regenerates equivalent data
+    # in a different insertion order and rejects its own preflight plan.
+    records.sort(key=lambda record: record["path"])
     staged_snapshot = dict(snapshot)
     staged_snapshot["ignored_moved_stubs"] = sorted(set(snapshot.get("ignored_moved_stubs", [])) | set(moved_stubs))
     original_read = survey.read

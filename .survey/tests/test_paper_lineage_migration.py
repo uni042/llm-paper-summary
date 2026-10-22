@@ -304,6 +304,13 @@ def test_batch_apply_failure_rolls_back_every_entry(world, capsys, monkeypatch):
 def test_batch_apply_moves_all_entries(world, capsys):
     root, manifest, manifest_path, index = world
     old2, new2, raw2, cid2 = add_second_entry(root, manifest, manifest_path, index)
+    # Move the second paper ahead of the first in filesystem path order. The
+    # planned snapshot must use the same insertion order as survey.papers() after
+    # the moves have been applied.
+    new2 = "papers/inference/00-first/second.md"
+    (root / new2).parent.mkdir(parents=True)
+    manifest["entries"][1]["new_path"] = new2
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     code, out, err = cli(["apply", "--manifest", str(manifest_path)], capsys)
     assert code == 0, err
     assert json.loads(out)["entry_count"] == 2
