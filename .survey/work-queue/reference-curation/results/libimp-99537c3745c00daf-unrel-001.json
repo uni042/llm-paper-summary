@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-99537c3745c00daf-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.18421",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.18421",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.18421",
+      "arXiv:2403.18421"
+    ],
+    "reason": "一次要旨によればPubMedの要旨・全文で学習した27億パラメータの生物医学特化言語モデルを公開し、MedMCQAやMMLU Medical Genetics等の医療QA精度を評価する。小型化の利点は動機として述べるが、学習基盤の並列化・省メモリ化、LLM推論ランタイム、GPUスケジューリング、KVキャッシュの新しいシステム技術を提案・比較していない。",
+    "first_checked_at": "2026-10-13T13:47:00+00:00",
+    "last_checked_at": "2026-10-22T03:46:12+00:00",
+    "linked_from": [],
+    "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
+  },
+  "processed_at": "2026-10-22T03:46:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-99537c3745c0",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

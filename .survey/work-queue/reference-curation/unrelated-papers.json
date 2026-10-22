@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T01:48:56+00:00",
+  "updated_at": "2026-10-22T03:46:12+00:00",
   "record_count": 12447,
   "records": {
     "arXiv:2303.08774": {
@@ -168376,9 +168376,9 @@
         "id:arXiv:2601.08665",
         "url:https://arxiv.org/abs/2601.08665"
       ],
-      "reason": "一次要旨は視覚・言語・行動モデルを用いる実世界のロボット経路探索を主題とし、必要時だけ明示的推論を行う適応的思考連鎖と、視覚を補助とする長期言語記憶、航行データと強化学習を提案する。主要評価は身体化ナビゲーションの成功と実機への転移であり、LLM推論サービングの実行器、KV管理、GPU資源制御を改善する研究ではないため対象外。",
+      "reason": "一次要旨では視覚言語行動モデルの適応的思考連鎖と視覚支援言語記憶を、長時間のロボットナビゲーションへ適用する。Nav-AdaCoT-2.9Mによる学習、オンライン専門家誘導強化学習、実機ゼロショット移行が主要成果であり、汎用LLMサービングや学習システムの計算・通信・メモリ最適化を検証する研究ではない。",
       "first_checked_at": "2026-10-13T10:42:58+00:00",
-      "last_checked_at": "2026-10-21T15:27:47+00:00",
+      "last_checked_at": "2026-10-22T03:46:12+00:00",
       "linked_from": [],
       "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
     },
@@ -168389,9 +168389,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "題名が明示する主題は生物医学テキストで学習した基盤言語モデルの構築である。推論実行器・GPUメモリ階層・KVキャッシュ・MoEオフロード・サービングの効率化を主題とする論文ではなく、モデル学習と領域適用を扱うため、推論基盤サーベイの対象外とする。",
+      "reason": "一次要旨によればPubMedの要旨・全文で学習した27億パラメータの生物医学特化言語モデルを公開し、MedMCQAやMMLU Medical Genetics等の医療QA精度を評価する。小型化の利点は動機として述べるが、学習基盤の並列化・省メモリ化、LLM推論ランタイム、GPUスケジューリング、KVキャッシュの新しいシステム技術を提案・比較していない。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-21T15:27:50+00:00",
+      "last_checked_at": "2026-10-22T03:46:12+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
