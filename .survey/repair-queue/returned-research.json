@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T18:00:15+00:00",
+  "generated_at": "2026-10-22T18:08:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -382,33 +382,6 @@
       "worker_run_key": "20261020-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2026.acl-long.2145",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T14:21:48+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5439,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 649,
-        "limitation_chars": 527,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b4a1d01ff7a08191bb79c548cfb45f81--2026-doi-10.18653-v1-2026.acl-long.2145-edsd-entropy-driven-speculative-decoding-research-20261022-2134-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b4a1d01ff7a08191bb79c548cfb45f81--2026-doi-10.18653-v1-2026.acl-long.2145-edsd-entropy-driven-speculative-decoding-research-20261022-2134-scheduled-chat.json",
-      "worker_run_key": "20261022-2134-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.28051",
       "title": null,
       "source_url": null,
@@ -463,35 +436,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_79312e304b748191a14038bdd26233af--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261022-0701-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_79312e304b748191a14038bdd26233af--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261022-0701-scheduled-chat-00-r01.json",
       "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3706418",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T15:46:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5739,
-        "body_paragraphs": 28,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 634,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7e30f24e15148191a819aee7dd0c6ce2--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-research-20261022-0732-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7e30f24e15148191a819aee7dd0c6ce2--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-research-20261022-0732-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-0732-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2608.00077",
@@ -1029,8 +973,8 @@
     },
     {
       "canonical_id": "arXiv:2602.00748",
-      "title": "HyperOffload: Graph-Driven Hierarchical Memory Management for Large Language Models on SuperNode Architectures",
-      "source_url": "https://arxiv.org/abs/2602.00748",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T18:00:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1056,8 +1000,8 @@
     },
     {
       "canonical_id": "arXiv:2604.19767",
-      "title": "Accelerating PayPal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models",
-      "source_url": "https://arxiv.org/pdf/2604.19767",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T18:00:09+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -1085,8 +1029,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3721146.3721947",
-      "title": "Performance Aware LLM Load Balancer for Mixed Workloads",
-      "source_url": "https://euromlsys.eu/pdf/euromlsys25-20.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-22T18:00:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1111,6 +1055,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-de4dd4db5710--libfile_a2ecba4689c081919c19695e7502bf50--2025-doi-10.1145-3721146.3721947-performance-aware-llm-load-balancer-research-20261022-0845-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-de4dd4db5710--libfile_a2ecba4689c081919c19695e7502bf50--2025-doi-10.1145-3721146.3721947-performance-aware-llm-load-balancer-research-20261022-08.json",
       "worker_run_key": "20261022-0845-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3706418",
+      "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey",
+      "source_url": "https://doi.org/10.1145/3706418",
+      "returned_at": "2026-10-22T18:08:21+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5739,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 634,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-eb1d7fa3b868--libfile_7e30f24e15148191a819aee7dd0c6ce2--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-research-20261022-0732-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-eb1d7fa3b868--libfile_7e30f24e15148191a819aee7dd0c6ce2--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-research-20261022-073.json",
+      "worker_run_key": "20261022-0732-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.2145",
+      "title": "EDSD: Entropy-Driven Design for Faster Speculative Decoding",
+      "source_url": "https://aclanthology.org/2026.acl-long.2145/",
+      "returned_at": "2026-10-22T18:08:24+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5439,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 649,
+        "limitation_chars": 527,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fd8c3ffdf19c--libfile_b4a1d01ff7a08191bb79c548cfb45f81--2026-doi-10.18653-v1-2026.acl-long.2145-edsd-entropy-driven-speculative-decoding-research-20261022-2134-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-fd8c3ffdf19c--libfile_b4a1d01ff7a08191bb79c548cfb45f81--2026-doi-10.18653-v1-2026.acl-long.2145-edsd-entropy-driven-speculative-decoding-research.json",
+      "worker_run_key": "20261022-2134-scheduled-chat-30/r01"
     }
   ]
 }

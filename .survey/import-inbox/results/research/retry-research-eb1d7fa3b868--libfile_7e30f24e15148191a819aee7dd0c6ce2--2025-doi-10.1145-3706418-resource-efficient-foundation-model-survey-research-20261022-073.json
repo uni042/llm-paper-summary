@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "626d78bb51328a10f69963b429d67c2e17a6881d563001b713dd5e4810692809",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-eb1d7fa3b868--libfile_7e30f24e15148191a819aee7dd0c6ce2--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-research-20261022-0732-scheduled-chat-30-r01.md",
+  "canonical_id": "DOI:10.1145/3706418",
+  "worker_completed_at": "2026-10-22T07:32:42+09:00",
+  "worker_run_key": "20261022-0732-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5739,
+    "body_paragraphs": 28,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 634,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-22T18:08:21+00:00"
+}
