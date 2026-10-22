@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T17:50:43+00:00",
-  "record_count": 5311,
+  "updated_at": "2026-10-22T18:31:34+00:00",
+  "record_count": 5312,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82411,6 +82411,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Materium: An Autoregressive Approach for Material Generation"
+    },
+    "DOI:10.1109/cgo68049.2026.11395206": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cgo68049.2026.11395206",
+      "identity_tokens": [
+        "DOI:10.1109/cgo68049.2026.11395206"
+      ],
+      "reason": "Seleneは不規則な入れ子ループ向けの高位合成compilerとパイプライン制御を提案し、要旨では機械学習などのdomain-specific accelerator設計を背景に置くため、推論アクセラレータのcompiler／hardware最適化と隣接する。一方、LLM推論やその専用workload・servingを直接評価する内容は要旨から確認できず、接続が限定的なため微妙とする。",
+      "first_checked_at": "2026-10-22T18:31:34+00:00",
+      "last_checked_at": "2026-10-22T18:31:34+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Selene: Cross-Level Barrier-Free Pipelining for Irregular Nested Loops in High-Level Synthesis"
     }
   }
 }
