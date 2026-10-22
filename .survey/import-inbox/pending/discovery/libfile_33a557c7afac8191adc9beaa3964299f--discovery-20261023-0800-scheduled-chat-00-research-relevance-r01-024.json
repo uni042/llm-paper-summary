@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-0800-scheduled-chat-00/r01/research-prescreen-024",
+  "reference_main_sha": "1a6eb82cdc53752cff7bebaa24ef92318830b573",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.00041",
+      "identity_tokens": [
+        "arxiv:2512.00041",
+        "doi:10.48550/arxiv.2512.00041"
+      ],
+      "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation",
+      "reason": "行動系列に条件づけた将来視点画像を潜在拡散モデルで予測し、価値マップへ変換して屋内ロボットの経路計画を補助する研究。疎復号や蒸留サンプラで単一GPU実行を可能にするが、主要評価はMP3D・RoboTHORのナビゲーション性能であり、LLMテキスト生成の推論サービングとは異なる。",
+      "source_url": "https://arxiv.org/abs/2512.00041",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T08:06:27+09:00",
+      "last_checked_at": "2026-10-23T08:06:27+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 24
+    }
+  ]
+}
