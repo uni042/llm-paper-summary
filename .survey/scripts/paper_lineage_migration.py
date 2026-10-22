@@ -245,6 +245,148 @@ def _load_manifest(path: Path) -> dict:
     return manifest
 
 
+def _latest_main_checkout_sha() -> str:
+    """Require a clean checkout of the most recently fetched origin/main."""
+    root = _root()
+    head = current_worktree_sha()
+    try:
+        remote = subprocess.run(
+            ["git", "rev-parse", "--verify", "refs/remotes/origin/main"],
+            cwd=root, check=True, capture_output=True, text=True,
+        ).stdout.strip().lower()
+        status = subprocess.run(
+            ["git", "status", "--porcelain", "--untracked-files=normal"],
+            cwd=root, check=True, capture_output=True, text=True,
+        ).stdout
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise MigrationError(f"cannot verify latest-main checkout: {exc}") from exc
+    if not re.fullmatch(r"[0-9a-f]{40}", remote):
+        raise MigrationError("origin/main does not resolve to a commit SHA")
+    if head != remote:
+        raise MigrationError(
+            f"checkout is not the latest fetched origin/main (HEAD={head}, origin/main={remote}); fetch and recreate the isolated worktree"
+        )
+    if status:
+        raise MigrationError("manifest refresh requires a clean isolated checkout")
+    return head
+
+
+def refresh_manifest(manifest_path: Path | str, output_path: Path | str,
+                     report_path: Path | str) -> dict:
+    """Repin an immutable reviewed manifest while retaining only unchanged papers.
+
+    This does not update paper hashes or identity evidence. Changed or occupied
+    entries are emitted in a review report and excluded from the refreshed batch.
+    """
+    root = _root()
+    current_sha = _latest_main_checkout_sha()
+    source_input = Path(manifest_path)
+    destination_input = Path(output_path)
+    report_input = Path(report_path)
+    if source_input.is_symlink() or not source_input.is_file():
+        raise MigrationError("manifest must be a regular non-symlink file")
+    if destination_input.is_symlink() or report_input.is_symlink():
+        raise MigrationError("output paths must not be symlinks")
+    source_path = source_input.resolve(strict=True)
+    destination_path = destination_input.resolve()
+    report_file = report_input.resolve()
+    if source_path == destination_path or source_path == report_file or destination_path == report_file:
+        raise MigrationError("input manifest, refreshed manifest, and report must use distinct paths")
+    for path, label in ((destination_path, "refreshed manifest"), (report_file, "refresh report")):
+        try:
+            path.relative_to(root)
+        except ValueError:
+            pass
+        else:
+            raise MigrationError(f"{label} must be outside the repository to avoid accidental staging")
+        if path.exists() or path.is_symlink():
+            raise MigrationError(f"{label} already exists: {path}")
+        if not path.parent.is_dir():
+            raise MigrationError(f"{label} parent directory does not exist: {path.parent}")
+    try:
+        original = json.loads(source_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise MigrationError(f"cannot read manifest: {exc}") from exc
+    entries = original.get("entries") if isinstance(original, dict) else None
+    if not isinstance(entries, list) or not entries or len(entries) > MAX_ENTRIES:
+        raise MigrationError(f"manifest entries must contain between 1 and {MAX_ENTRIES} items")
+    if not re.fullmatch(r"[0-9a-f]{40}", str(original.get("source_main_sha", "")).lower()):
+        raise MigrationError("original manifest source_main_sha must be a 40-character commit SHA")
+    state_path = survey.ROOT / "survey-state/paper-identity-index.json"
+    if state_path.is_symlink() or not state_path.is_file():
+        raise MigrationError("format-3 identity snapshot must be a regular file")
+    try:
+        snapshot = json.loads(state_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeDecodeError, ValueError) as exc:
+        raise MigrationError(f"identity snapshot is invalid: {exc}") from exc
+    if snapshot.get("schema_version") != 3:
+        raise MigrationError("identity snapshot must use schema version 3")
+
+    retained: list[dict] = []
+    rejected: list[dict] = []
+    retained_bytes = 0
+    for index, item in enumerate(entries):
+        cid = item.get("canonical_id") if isinstance(item, dict) else None
+        old_rel = item.get("old_path") if isinstance(item, dict) else None
+        new_rel = item.get("new_path") if isinstance(item, dict) else None
+        context = {"entry": index, "canonical_id": cid, "old_path": old_rel,
+                   "new_path": new_rel}
+        try:
+            if not isinstance(item, dict):
+                raise MigrationError("entry must be an object")
+            old_path = _path(old_rel, f"entry {index} old_path", must_exist=True)
+            new_path = _path(new_rel, f"entry {index} new_path", must_exist=False, target=True)
+            source = old_path.read_bytes()
+            source_hash = _sha(source)
+            if item.get("expected_sha256") != source_hash:
+                raise MigrationError("source paper bytes changed; re-review this entry")
+            meta, _body = survey.front(old_path)
+            normalized_cid = survey.norm_id(cid or "")
+            if not normalized_cid or survey.norm_id(meta.get("canonical_id", "")) != normalized_cid:
+                raise MigrationError("canonical ID changed; re-review this entry")
+            raw_aliases = item.get("aliases")
+            if not isinstance(raw_aliases, list) or not all(isinstance(value, str) for value in raw_aliases):
+                raise MigrationError("manifest aliases must be a string list")
+            aliases = tuple(sorted(survey.norm_id(value) for value in raw_aliases))
+            direct_aliases = _frontmatter_aliases(meta)
+            if not aliases or len(set(aliases)) != len(aliases) or aliases != direct_aliases:
+                raise MigrationError("frontmatter aliases changed; re-review this entry")
+            record = snapshot.get("papers", {}).get(normalized_cid)
+            if (not record or record.get("path") != old_rel
+                    or record.get("source_hash") != source_hash
+                    or tuple(sorted(record.get("identifiers", []))) != aliases):
+                raise MigrationError("identity snapshot changed; re-review this entry")
+            if any(snapshot.get("identifier_to_canonical", {}).get(alias) != normalized_cid
+                   for alias in aliases):
+                raise MigrationError("identity alias mapping changed; re-review this entry")
+            retained_bytes += len(source)
+            retained.append(dict(item))
+        except (MigrationError, OSError, ValueError, TypeError) as exc:
+            rejected.append({**context, "reason": str(exc)})
+    if retained_bytes > MAX_TOTAL_SOURCE_BYTES:
+        raise MigrationError(f"retained papers exceed {MAX_TOTAL_SOURCE_BYTES} source bytes")
+    if not retained:
+        raise MigrationError("no unchanged entries remain; review the report and prepare a new manifest")
+
+    refreshed = dict(original)
+    refreshed["source_main_sha"] = current_sha
+    refreshed["entries"] = retained
+    report = {
+        "schema_version": 1,
+        "original_source_main_sha": original.get("source_main_sha"),
+        "refreshed_source_main_sha": current_sha,
+        "retained_count": len(retained),
+        "rejected_count": len(rejected),
+        "rejected_entries": rejected,
+        "note": "Rejected entries require renewed identity/source review; hashes were never refreshed automatically.",
+    }
+    _atomic_write(report_file, (json.dumps(report, ensure_ascii=False, indent=2) + "\n").encode("utf-8"), exclusive=True)
+    _atomic_write(destination_path, (json.dumps(refreshed, ensure_ascii=False, indent=2) + "\n").encode("utf-8"), exclusive=True)
+    return {"refreshed": True, "source_main_sha": current_sha,
+            "retained_count": len(retained), "rejected_count": len(rejected),
+            "manifest": str(destination_path), "report": str(report_file)}
+
+
 def _preflight(manifest_path: Path) -> dict:
     manifest = _load_manifest(manifest_path)
     root = _root()
@@ -609,6 +751,10 @@ def main(argv: list[str] | None = None) -> int:
     dry.add_argument("--manifest", required=True)
     apply = sub.add_parser("apply")
     apply.add_argument("--manifest", required=True)
+    refresh = sub.add_parser("refresh-manifest")
+    refresh.add_argument("--manifest", required=True, help="immutable reviewed source manifest")
+    refresh.add_argument("--output", required=True, help="new refreshed manifest path")
+    refresh.add_argument("--report", required=True, help="rejected-entry report path")
     recover_parser = sub.add_parser("recover")
     recover_parser.add_argument("--transaction", required=True)
     recover_parser.add_argument("--action", choices=("rollback",), required=True)
@@ -620,6 +766,8 @@ def main(argv: list[str] | None = None) -> int:
                       "snapshot_sha256": _sha(plan["snapshot_after"])}
         elif args.command == "apply":
             result = apply_manifest(args.manifest)
+        elif args.command == "refresh-manifest":
+            result = refresh_manifest(args.manifest, args.output, args.report)
         else:
             result = recover(_root(), args.transaction, args.action)
         print(json.dumps(result, ensure_ascii=False))
