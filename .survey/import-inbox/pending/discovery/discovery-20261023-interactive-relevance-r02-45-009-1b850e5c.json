@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-interactive-llm-relevance/r02/45-9-1b850e5c",
+  "reference_main_sha": "64549bfeacc243f3aba6273c4f705ea24b40ebaf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "arxiv:2407.18370",
+        "doi:10.48550/arxiv.2407.18370"
+      ],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+      "reason": "ICLR 2025公式要旨はLLM審判の人間判断との一致を信頼度校正・選択的評価・階層的な判定モデルで保証する方法を提案する。安価な審判モデルへの振分けで評価費用を抑えるが、主眼はモデル評価の校正と合意保証で、LLM推論サービングの資源・カーネル・通信・メモリ効率を改善する基盤技術ではないため対象外。",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/08dabd5345b37fffcbe335bd578b15a0-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:49:23+09:00",
+      "last_checked_at": "2026-10-23T00:49:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-1b850e5c3a849e1c",
+      "worklist_rank": 9,
+      "original_worklist_worker": "scheduled-chat-45",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
