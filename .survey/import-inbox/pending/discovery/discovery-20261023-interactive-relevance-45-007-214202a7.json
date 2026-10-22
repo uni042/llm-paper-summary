@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "interactive-llm-relevance",
+  "run_key": "20261023-0025-interactive-llm-relevance/r01/45-7-21420",
+  "reference_main_sha": "da63d442cb29de892b2c6590c8dcd829f1c4e5d0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.18421",
+      "identity_tokens": [
+        "arxiv:2403.18421",
+        "doi:10.48550/arxiv.2403.18421"
+      ],
+      "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text",
+      "reason": "一次要旨はPubMed文献で学習した27億パラメータ言語モデルの公開と医療QAにおける微調整・正答精度を評価する。小型化による実行コストの動機はあるが、モデル訓練・領域特化性能が研究の中心で、LLM推論基盤の新しい実装や資源最適化機構は提示していない。",
+      "source_url": "https://arxiv.org/abs/2403.18421",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T00:25:19+09:00",
+      "last_checked_at": "2026-10-23T00:25:19+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "research_job_id": "job-research-214202a712009683",
+      "worklist_rank": 7,
+      "original_worklist_worker": "scheduled-chat-45",
+      "evidence_scope": "primary_abstract_only"
+    }
+  ]
+}
