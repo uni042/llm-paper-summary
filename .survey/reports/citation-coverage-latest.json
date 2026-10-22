@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-22T00:53:37+00:00",
+  "checked_at": "2026-10-22T00:57:18+00:00",
   "summary": {
-    "total": 2887,
-    "complete": 2885,
-    "incomplete": 2
+    "total": 2890,
+    "complete": 2887,
+    "incomplete": 3
   },
   "families": {
     "inference": {
-      "total": 2848,
-      "complete": 2846
+      "total": 2851,
+      "complete": 2848
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-9b451e22fa70-speculative-verification-exploiting-information-gain-for-speculative-dec.md",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1809",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
