@@ -307,7 +307,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 2年前（2024-11〜2025-10）
 
 - **2024-11 · [HOBBIT: A Mixed Precision Expert Offloading System for Fast MoE Inference](2024-2411.01433-hobbit.md)**  
-  実装：✓ ・ リポジトリ内被引用：45  
+  実装：✓ ・ リポジトリ内被引用：46  
   重要度の低いキャッシュミス専門家だけを低精度化し、適応プリフェッチと多次元キャッシュを組み合わせてMoEオフロードの読込み遅延を削減する基盤。
 
 - **2025-02 · [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)**  
@@ -421,23 +421,23 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：96  
+  実装：✓ ・ リポジトリ内被引用：97  
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：90  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：91  
   MoE-Infinityは、混合専門家モデル（Mixture of エキスパート、MoE）の重みが単一GPUのメモリに収まらない場合に、ホスト主記憶から専門家重みを転送する時間を削減する推論システムである。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
-  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：72  
+  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：73  
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-02 · [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)**  
-  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：70  
+  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：71  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで選ばれる専門家が少ないため計算量は疎だが、モデル全体の専門家重みをGPUメモリに収めるのは難しい。Fiddlerは、この二つの実行経路の長所を入力トークン数に応じて使い分ける推論システムである。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
-  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：44  
+  実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：45  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
 
 - **2024-03 · [HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
@@ -489,13 +489,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [MoESys: A Distributed and Efficient Mixture-of-Experts Training and Inference System for Internet Services](2022-2205.10034-moesys-a-distributed-and-efficient-mixture-of-experts-training-and-inference-system-for-internet-services.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
+  実装：✓ ・ リポジトリ内被引用：26  
   MoEの不均衡とGPU容量不足を、訓練時のElastic MoE＋2D先読みと、推論時のCPU/GPU ring型section実行で処理し、DeepSpeed比で訓練33%・推論13%のスループット向上を報告する。
 
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [ZeRO-Offload: Democratizing Billion-Scale Model Training](2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：14  
   ZeRO-Offloadは、巨大モデルの学習時に必要な状態をCPUとGPUへ分担させ、GPUメモリの制約を緩和しながら、低速なホスト–デバイス転送を抑える方式である。著者らはNVIDIA V100 32GB単体で130億パラメータのGPT型モデルを学習可能にし、標準PyTorchの14億に比べ9倍超の規模へ拡大した。
 
 - **2021-10 · [M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining](2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md)**  
