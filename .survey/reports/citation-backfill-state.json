@@ -24939,7 +24939,7 @@
       "status": "blocked",
       "source_fingerprint": "55e11e7d8a9612c5eecdbdf940b1649c20ab483fc247ae65c1a79ca065293708",
       "error": "PDF fallback failed: no primary PDF URL discovered",
-      "checked_at": "2026-10-22T00:34:02+00:00"
+      "checked_at": "2026-10-22T01:04:19+00:00"
     },
     "papers/inference/09-kernel-runtime-compilation/2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md": {
       "status": "complete",
@@ -25499,8 +25499,8 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2026-be8124062d48-bit-serial-acceleration-of-llm-inference-with-mixture-of-datatype-quanti.md": {
       "status": "blocked",
       "source_fingerprint": "ef4fb3cc3edbc081684bbf8753d85c873d41f7a1d6a2acab5fc7eaac41a64a46",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-10-22T00:51:49+00:00"
+      "error": "PDF fallback failed: no primary PDF URL discovered",
+      "checked_at": "2026-10-22T01:04:27+00:00"
     },
     "papers/inference/02-adaptive-expert-computation-compression/2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md": {
       "status": "complete",
@@ -25511,10 +25511,13 @@
       "checked_at": "2026-10-22T00:55:21+00:00"
     },
     "papers/inference/05-speculative-decoding-moe/2026-9b451e22fa70-speculative-verification-exploiting-information-gain-for-speculative-dec.md": {
-      "status": "blocked",
+      "status": "complete",
       "source_fingerprint": "96abecdb86bee6846e3519e301b2928ecb70a92bb7173d04dad1fbfd58e0044a",
-      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
-      "checked_at": "2026-10-22T00:55:23+00:00"
+      "references_total": 1,
+      "normalized_references": 15,
+      "source": "primary-pdf-reference-section",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1809.pdf",
+      "checked_at": "2026-10-22T01:04:15+00:00"
     },
     "papers/inference/07-kv-cache-optimization-compression/2026-2609.38706-preserving-provenance-in-shared-kv-caches-for-llm-serving.md": {
       "status": "complete",
@@ -25525,5 +25528,5 @@
       "checked_at": "2026-10-22T00:55:26+00:00"
     }
   },
-  "updated_at": "2026-10-22T01:00:02+00:00"
+  "updated_at": "2026-10-22T01:05:16+00:00"
 }
