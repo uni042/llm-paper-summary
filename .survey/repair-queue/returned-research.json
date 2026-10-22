@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T03:05:39+00:00",
+  "generated_at": "2026-10-22T13:47:16+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 28,
+  "count": 29,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -183,6 +183,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-8553bd83bc27--libfile_f57d143ca85c8191906aefbecaa27fd0--2026-2606.27791-nll-guided-full-attention-layer-selection-research-20261019-2130-schedule.json",
       "worker_run_key": "20261019-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.01805",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-21T23:46:26+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2410.01805-locret-enhancing-eviction-in-long-context-llm-inference-with-trained-ret.md と 18 段落 / 3975文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6940,
+        "body_paragraphs": 40,
+        "method_chars": 1739,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2505,
+        "limitation_chars": 684,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261020-1930-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.20874",
