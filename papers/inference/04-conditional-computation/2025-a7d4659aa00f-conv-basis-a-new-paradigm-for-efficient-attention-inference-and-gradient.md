@@ -1,38 +1,58 @@
 ---
-canonical_id: "DOI:10.18653/v1/2025.findings-emnlp.363"
-doi: "10.18653/v1/2025.findings-emnlp.363"
-title: "Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers"
+canonical_id: DOI:10.18653/v1/2025.findings-emnlp.363
+doi: 10.18653/v1/2025.findings-emnlp.363
+title: 'Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers'
 authors:
-  - "Yingyu Liang"
-  - "Heshan Liu"
-  - "Zhenmei Shi"
-  - "Zhao Song"
-  - "Zhuoyan Xu"
-  - "Jiale Zhao"
-  - "Zhen Zhuang"
-published: "2025-11"
-publication: "Findings of the Association for Computational Linguistics: EMNLP 2025, pp. 6857–6894"
-publication_type: "conference"
-publication_status: "published"
-source: "https://aclanthology.org/2025.findings-emnlp.363.pdf"
+- Yingyu Liang
+- Heshan Liu
+- Zhenmei Shi
+- Zhao Song
+- Zhuoyan Xu
+- Jiale Zhao
+- Zhen Zhuang
+published: 2025-11
+publication: 'Findings of the Association for Computational Linguistics: EMNLP 2025, pp. 6857–6894'
+publication_type: conference
+publication_status: published
+source: https://aclanthology.org/2025.findings-emnlp.363.pdf
 sources:
-  - "https://aclanthology.org/2025.findings-emnlp.363.pdf"
-  - "https://aclanthology.org/2025.findings-emnlp.363/"
+- https://aclanthology.org/2025.findings-emnlp.363.pdf
+- https://aclanthology.org/2025.findings-emnlp.363/
 code: null
-implementation: "事前学習済みLlama3 8B Instructの注意機構を畳み込み基底近似へ置換し、IMDBで予備評価。論文にはNumPyのFFT計算比較を掲載するが、本番GPU推論サービングの速度測定ではない。"
-summary: >-
-  Conv-Basisは因果マスク付き注意行列を部分畳み込み行列の和として近似し、基底位置を二分探索で復元して高速フーリエ変換で注意出力を計算する。条件付き計算量O(knd log n)と誤差上界を証明し、Llama3 8B InstructのIMDB分類で基底数512（文脈長2048）なら原方式の正答率へ到達したと報告する。実機推論高速化倍率の実証ではない。
-list_summary: "因果注意行列をk個の部分畳み込み基底に分解し、二分探索と高速フーリエ変換で注意出力を近似計算する理論方式。誤差上界と計算量を示し、Llama3で予備的な精度評価を行う。"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261022-2232-scheduled-chat-30/r01"
-reference_main_sha: "c1e509b44c1cbb240c6ea9dcd9bde76f79e7903e"
+implementation: 事前学習済みLlama3 8B Instructの注意機構を畳み込み基底近似へ置換し、IMDBで予備評価。論文にはNumPyのFFT計算比較を掲載するが、本番GPU推論サービングの速度測定ではない。
+summary: Conv-Basisは因果マスク付き注意行列を部分畳み込み行列の和として近似し、基底位置を二分探索で復元して高速フーリエ変換で注意出力を計算する。条件付き計算量O(knd log n)と誤差上界を証明し、Llama3 8B InstructのIMDB分類で基底数512（文脈長2048）なら原方式の正答率へ到達したと報告する。実機推論高速化倍率の実証ではない。
+list_summary: 因果注意行列をk個の部分畳み込み基底に分解し、二分探索と高速フーリエ変換で注意出力を近似計算する理論方式。誤差上界と計算量を示し、Llama3で予備的な精度評価を行う。
+worker_id: scheduled-chat-30
+worker_run_key: 20261022-2232-scheduled-chat-30/r01
+reference_main_sha: c1e509b44c1cbb240c6ea9dcd9bde76f79e7903e
 worklist_rank: 185
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-worker_completed_at: "2026-10-22T22:35:59+09:00"
-last_checked: "2026-10-22"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+worker_completed_at: '2026-10-22T22:35:59+09:00'
+last_checked: '2026-10-22'
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2409.17422
+- canonical_id: arXiv:2402.15220
+- canonical_id: arXiv:2307.08621
+- canonical_id: arXiv:2111.00396
+- canonical_id: arXiv:2305.01625
+- canonical_id: arXiv:2309.00071
+- canonical_id: arXiv:2312.00752
+- canonical_id: arXiv:2302.10866
+- canonical_id: arXiv:2402.17463
+- canonical_id: arXiv:2310.05869
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2305.13048
+- canonical_id: arXiv:2410.10165
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2009.14794
+references_checked_at: '2026-10-22'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Conv-Basis：畳み込み基底による注意計算と勾配計算の高速化
