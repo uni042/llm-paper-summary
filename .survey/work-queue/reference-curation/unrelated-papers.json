@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T17:50:44+00:00",
+  "updated_at": "2026-10-22T19:52:39+00:00",
   "record_count": 12445,
   "records": {
     "arXiv:2303.08774": {
@@ -113550,9 +113550,9 @@
       "identity_tokens": [
         "DOI:10.1007/s00530-025-02179-5"
       ],
-      "reason": "Automatic image-captioning edit framework does not claim direct LLM inference compute, memory, latency, or serving optimization.",
+      "reason": "主対象は画像からの説明文生成と画像キャプションの編集方式であり、LLM推論ランタイム、量子化、KVキャッシュ、サービング、分散推論の資源最適化を扱うものではない。タイトルと研究対象から明白にスコープ外と判定。",
       "first_checked_at": "2026-10-06T11:11:29+00:00",
-      "last_checked_at": "2026-10-06T11:11:29+00:00",
+      "last_checked_at": "2026-10-22T19:52:39+00:00",
       "linked_from": [
         "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
       ],

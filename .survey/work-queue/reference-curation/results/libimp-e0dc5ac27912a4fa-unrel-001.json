@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0dc5ac27912a4fa-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1007/s00530-025-02179-5",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1007/s00530-025-02179-5",
+    "identity_tokens": [
+      "DOI:10.1007/s00530-025-02179-5"
+    ],
+    "reason": "主対象は画像からの説明文生成と画像キャプションの編集方式であり、LLM推論ランタイム、量子化、KVキャッシュ、サービング、分散推論の資源最適化を扱うものではない。タイトルと研究対象から明白にスコープ外と判定。",
+    "first_checked_at": "2026-10-06T11:11:29+00:00",
+    "last_checked_at": "2026-10-22T19:52:39+00:00",
+    "linked_from": [
+      "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md"
+    ],
+    "title": "Towards balancing the efficiency and effectiveness: a unified edit-based framework for automatic image captioning"
+  },
+  "processed_at": "2026-10-22T19:52:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0dc5ac27912",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
