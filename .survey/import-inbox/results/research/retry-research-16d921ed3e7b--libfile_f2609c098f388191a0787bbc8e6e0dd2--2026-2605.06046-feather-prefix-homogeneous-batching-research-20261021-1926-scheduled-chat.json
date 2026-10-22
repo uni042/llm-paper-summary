@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5665d0f4cadcab3e9586cef703656b4b03abc5b91a4baa1b78a5387359ae2d4d",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-16d921ed3e7b--libfile_f2609c098f388191a0787bbc8e6e0dd2--2026-2605.06046-feather-prefix-homogeneous-batching-research-20261021-1926-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2605.06046",
+  "worker_completed_at": "2026-10-21T19:26:00+09:00",
+  "worker_run_key": "20261021-1926-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3612,
+    "body_paragraphs": 19,
+    "method_chars": 1387,
+    "method_paragraphs": 8,
+    "evaluation_chars": 200,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 200 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 200 < 500"
+  ],
+  "processed_at": "2026-10-22T01:40:48+00:00"
+}

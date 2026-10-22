@@ -26,6 +26,8 @@ reference_main_sha: "46e0e61ddeead083501784c48015ee79e27d5062"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 worker_completed_at: "2026-10-22T02:00:39+09:00"
+last_audited: null
+audit_version: 0
 ---
 
 # Early-Bird Decoding：可変長ブロック選択と早期確定による拡散型LLM復号
