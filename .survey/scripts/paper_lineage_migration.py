@@ -365,12 +365,6 @@ def refresh_manifest(manifest_path: Path | str, output_path: Path | str,
             rejected.append({**context, "reason": str(exc)})
     if retained_bytes > MAX_TOTAL_SOURCE_BYTES:
         raise MigrationError(f"retained papers exceed {MAX_TOTAL_SOURCE_BYTES} source bytes")
-    if not retained:
-        raise MigrationError("no unchanged entries remain; review the report and prepare a new manifest")
-
-    refreshed = dict(original)
-    refreshed["source_main_sha"] = current_sha
-    refreshed["entries"] = retained
     report = {
         "schema_version": 1,
         "original_source_main_sha": original.get("source_main_sha"),
@@ -381,6 +375,14 @@ def refresh_manifest(manifest_path: Path | str, output_path: Path | str,
         "note": "Rejected entries require renewed identity/source review; hashes were never refreshed automatically.",
     }
     _atomic_write(report_file, (json.dumps(report, ensure_ascii=False, indent=2) + "\n").encode("utf-8"), exclusive=True)
+    if not retained:
+        return {"refreshed": False, "source_main_sha": current_sha,
+                "retained_count": 0, "rejected_count": len(rejected),
+                "manifest": None, "report": str(report_file)}
+
+    refreshed = dict(original)
+    refreshed["source_main_sha"] = current_sha
+    refreshed["entries"] = retained
     _atomic_write(destination_path, (json.dumps(refreshed, ensure_ascii=False, indent=2) + "\n").encode("utf-8"), exclusive=True)
     return {"refreshed": True, "source_main_sha": current_sha,
             "retained_count": len(retained), "rejected_count": len(rejected),
