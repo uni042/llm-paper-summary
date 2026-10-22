@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8bb19204dac6914c9aca6373ccbe9d450a615c127d60771ec48cb0b6316e9342",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-55107383ee84--libfile_bc597e99427881918c84f9a3f978bcf2--2026-2605.20982-dodoco-moe-dispatch-observatory-research-20261020-0056-scheduled-chat-00-r01-v2.md",
+  "canonical_id": "arXiv:2605.20982",
+  "worker_completed_at": "2026-10-20T01:02:29+09:00",
+  "worker_run_key": "20261020-0056-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6698,
+    "body_paragraphs": 36,
+    "method_chars": 1850,
+    "method_paragraphs": 9,
+    "evaluation_chars": 2004,
+    "limitation_chars": 694,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/12-moe-parallelism-communication/2026-2605.20982-diagnosing-overhead-in-dispatch-operations-cross-architecture-observator.md と 19 段落 / 4538文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-22T02:08:01+00:00"
+}
