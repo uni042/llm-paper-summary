@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "codex-worklist-outscope-20261022-w45-round3",
+  "reference_main_sha": "42e19beb6bf6d58b5700791c03a94fd35aa2e1e9",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.03626",
+      "identity_tokens": [
+        "arXiv:2404.03626",
+        "DOI:10.48550/arXiv.2404.03626"
+      ],
+      "title": "Training LLMs over Neurally Compressed Text",
+      "reason": "Equal-Info Windowsでニューラル圧縮テキスト上のLLM学習を可能にし、より短い系列での生成によって推論ステップ数とレイテンシを抑える研究である。圧縮表現と系列長は推論コストに直結するため接点がある。一方、中心的貢献は圧縮トークナイザと学習可能性の検討で、サービングランタイム、KV管理、スケジューリング、カーネル最適化を扱わないため境界扱いとする。",
+      "source_url": "https://arxiv.org/pdf/2404.03626v1",
+      "body_check": "本文確認済み（arXiv v1、2024-04-04）：§3 Equal-Info Windowsによる圧縮表現とLLM学習、§4 圧縮率・FLOPs/byte・推論速度の比較、系列長と自己回帰生成ステップの関係を確認。",
+      "first_checked_at": "2026-10-22T17:15:58Z",
+      "last_checked_at": "2026-10-22T17:15:58Z",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.19342",
+      "identity_tokens": [
+        "arXiv:2604.19342",
+        "DOI:10.48550/arXiv.2604.19342"
+      ],
+      "title": "Are Large Language Models Economically Viable for Industry Deployment?",
+      "reason": "Edge-EvalとしてLLaMA/Qwenの適応・量子化・推論をTesla T4上で測り、レイテンシ、スループット、電力、リクエスト当たりエネルギーなど運用指標を体系化するため、LLM推論の実配備評価に接点がある。一方、貢献はライフサイクルの経済・効率ベンチマークで、配信アルゴリズム、サービングランタイムやカーネルを提案しないため境界扱いとする。",
+      "source_url": "https://arxiv.org/pdf/2604.19342v1",
+      "body_check": "本文確認済み（arXiv v1、2026-04-21）：§3 Edge-Evalの適応・圧縮・推論パイプラインとTesla T4、§5.3–5.4 INT4で約1.82–1.94倍のスループットと57–61%のリクエスト当たりエネルギー削減、§6 結論を確認。",
+      "first_checked_at": "2026-10-22T17:15:58Z",
+      "last_checked_at": "2026-10-22T17:15:58Z",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ]
+    }
+  ]
+}
