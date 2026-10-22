@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261022-1245-scheduled-chat-45/r01/research-prescreen-008",
+  "reference_main_sha": "206801e92f6f3ef8276f50eb514f604118d2297a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.03051",
+      "identity_tokens": [
+        "arXiv:2410.03051"
+      ],
+      "title": "AuroraCap: Efficient, Performant Video Detailed Captioning and a New Benchmark",
+      "reason": "一次要旨は動画キャプション生成とVDC評価ベンチマークを中心とするが、視覚トークンの統合により入力トークン数を減らし、品質低下を小さく抑える設計も含む。推論時のトークン削減という関連要素がある一方、汎用LLM配信基盤・GPUカーネル・処理量を直接評価する論文ではないため境界扱いとする。",
+      "source_url": "https://arxiv.org/abs/2410.03051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T12:48:45+09:00",
+      "last_checked_at": "2026-10-22T12:48:45+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 8
+    }
+  ]
+}
