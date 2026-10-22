@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-22T18:28:18+00:00",
+  "generated_at": "2026-10-22T19:55:58+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -208,34 +208,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-03218cde5935--libfile_04b27cbfabcc81918538a5736ce454bf--2026-2605.04952-air-moe-inverted-index-routing-research-20261021-1926-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-03218cde5935--libfile_04b27cbfabcc81918538a5736ce454bf--2026-2605.04952-air-moe-inverted-index-routing-research-20261021-1926-scheduled-chat-30-r.json",
       "worker_run_key": "20261021-1926-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.03031",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T02:02:17+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6432,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 725,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2a2b584e98c9--libfile_3dbe2aad20608191881a0b006fd438d5--2025-2505.03031-radio-rate-distortion-llm-quantization-research-20261021-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2a2b584e98c9--libfile_3dbe2aad20608191881a0b006fd438d5--2025-2505.03031-radio-rate-distortion-llm-quantization-research-20261021-2200-scheduled-c.json",
-      "worker_run_key": "20261021-2200-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.21264",
@@ -1111,6 +1083,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fd8c3ffdf19c--libfile_b4a1d01ff7a08191bb79c548cfb45f81--2026-doi-10.18653-v1-2026.acl-long.2145-edsd-entropy-driven-speculative-decoding-research-20261022-2134-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fd8c3ffdf19c--libfile_b4a1d01ff7a08191bb79c548cfb45f81--2026-doi-10.18653-v1-2026.acl-long.2145-edsd-entropy-driven-speculative-decoding-research.json",
       "worker_run_key": "20261022-2134-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.03031",
+      "title": "Radio: Rate-Distortion Optimization for Large Language Model Compression",
+      "source_url": "https://proceedings.mlr.press/v267/young25b.html",
+      "returned_at": "2026-10-22T19:55:56+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 239 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7756,
+        "body_paragraphs": 37,
+        "method_chars": 2025,
+        "method_paragraphs": 10,
+        "evaluation_chars": 239,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 239 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8ea4c655e508191b10ae205a04bc33d--2025-2505.03031-radio-rate-distortion-quantization-returned-repair-20261023-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c8ea4c655e508191b10ae205a04bc33d--2025-2505.03031-radio-rate-distortion-quantization-returned-repair-20261023-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
     }
   ]
 }
