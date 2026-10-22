@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cbb98b7c839535c6-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.08186",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.08186",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.08186",
+      "arXiv:2512.08186"
+    ],
+    "reason": "DualVLNは7BのVLMによる低頻度の全体計画と軽量拡散ポリシーによる高速制御を分け、非同期推論で頻繁なVLM呼び出しによる遅延を抑える。推論頻度を設計する接点はあるが、主目的はロボット視覚言語ナビゲーションで、汎用LLM servingや実行基盤の最適化ではないため微妙とする。",
+    "first_checked_at": "2026-10-22T15:36:20+00:00",
+    "last_checked_at": "2026-10-22T17:25:21+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-45.md"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-10-22T17:25:22+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cbb98b7c8395",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

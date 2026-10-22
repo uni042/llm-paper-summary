@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T16:52:14+00:00",
+  "updated_at": "2026-10-22T17:25:23+00:00",
   "record_count": 12442,
   "records": {
     "arXiv:2303.08774": {
@@ -163068,21 +163068,6 @@
       "linked_from": [],
       "title": "PackCache: A Training-Free Acceleration Method for Unified Autoregressive Video Generation via Compact KV-Cache"
     },
-    "arXiv:2204.13767": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2204.13767",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2204.13767",
-        "arXiv:2204.13767",
-        "id:arXiv:2204.13767",
-        "url:https://arxiv.org/abs/2204.13767"
-      ],
-      "reason": "一次要旨は多変量時系列予測用の変数別・三角構造の線形注意を提案し、時系列予測精度と処理効率を評価する。注意計算量の一般的低減は参考になるが、研究対象は非LLMの時系列モデルでありLLMデコード・KV管理・LLMサービングへの適用証拠がない。",
-      "first_checked_at": "2026-10-11T02:48:44+00:00",
-      "last_checked_at": "2026-10-22T15:36:15+00:00",
-      "linked_from": [],
-      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting-Full Version"
-    },
     "DOI:10.1109/tcsvt.2026.3661516": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1109/tcsvt.2026.3661516",
@@ -164638,10 +164623,12 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "一次要旨はIdentityFormer、RandFormer、ConvFormer、CAFormerの画像分類精度やStarReLUの演算量削減をImageNet-1Kで示す。主対象は画像認識のモデル構造・学習性能であり、LLM推論サービング、自己回帰デコード、KVキャッシュ、GPU実行システムの新規貢献は確認できない。",
+      "reason": "本文の中心はMetaFormer系画像認識モデルの設計とImageNet-1Kでの性能比較であり、LLM推論・サービング・実行時メモリやカーネルの効率化は扱わない。StarReLUの活性化FLOPs削減は示すが、対象は一般的な画像認識アーキテクチャで、LLM推論システムへの具体的な接続がないため無関係とする。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-22T15:36:22+00:00",
-      "linked_from": [],
+      "last_checked_at": "2026-10-22T17:25:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
       "title": "MetaFormer Baselines for Vision"
     },
     "arXiv:2605.28426": {
@@ -179322,6 +179309,21 @@
         ".survey/work-queue/WORKLIST-00.md"
       ],
       "title": "Selecting Optimal Context Sentences for Event-Event Relation Extraction"
+    },
+    "arXiv:2607.06111": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2607.06111",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.06111",
+        "arXiv:2607.06111"
+      ],
+      "reason": "本文ではLLMをオフラインで使い、産業プロセス文書から測定意味情報を抽出する。オンライン処理はその情報でセンサー値を補正して数値予測器へ渡すもので、LLM自体の推論速度・serving・memory・kernel最適化には寄与しない。LLMを異分野の計測予測に補助利用する研究のため無関係とする。",
+      "first_checked_at": "2026-10-22T17:25:23+00:00",
+      "last_checked_at": "2026-10-22T17:25:23+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "title": "LLM-Guided Measurement Credibility Correction for Trustworthy Industrial Process Inference"
     }
   }
 }
