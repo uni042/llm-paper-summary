@@ -1,34 +1,57 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.eacl-long.309"
-doi: "10.18653/v1/2026.eacl-long.309"
-title: "CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks"
+canonical_id: DOI:10.18653/v1/2026.eacl-long.309
+doi: 10.18653/v1/2026.eacl-long.309
+title: 'CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks'
 authors:
-  - Giulio Corallo
-  - Orion Weller
-  - Fabio Petroni
-  - Paolo Papotti
-published: "2026-03-24"
-publication: "EACL 2026, Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), 6571–6590"
-publication_type: "conference"
-publication_status: "published"
-source: "https://aclanthology.org/2026.eacl-long.309/"
+- Giulio Corallo
+- Orion Weller
+- Fabio Petroni
+- Paolo Papotti
+published: '2026-03-24'
+publication: 'EACL 2026, Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers), 6571–6590'
+publication_type: conference
+publication_status: published
+source: https://aclanthology.org/2026.eacl-long.309/
 sources:
-  - "https://aclanthology.org/2026.eacl-long.309/"
-  - "https://aclanthology.org/2026.eacl-long.309.pdf"
-code: "https://github.com/giulio98/cachenotes"
-implementation: "タスク説明とコーパスからCPTsをオフライン生成し、CPTsの問い合わせとコーパスの鍵の注意重みから保持するKV位置を選ぶ。チャンク化した厳密softmax集計で選択スコア計算のメモリを抑制。H100単体のオンラインTTFT・メモリ評価とLongBench、RULER、企業技術文書、合成データを実施。"
-summary: "コーパスに対しタスク別の圧縮計画トークン（CPTs）を生成し、CPTsからの注意を用いてコーパスKVキャッシュを一度だけ圧縮する。個々の質問ごとに検索・再圧縮せず、保存KVを使って回答。H100の128KコーパスでTTFT 0.13秒、RAG 0.61秒、全再入力15.88秒。ただしCPTs生成と圧縮のオフライン費用が別途発生し、局所的な直接検索やコード補完ではRAG等が優位な条件がある。"
-list_summary: "タスク記述から生成した圧縮計画トークンでコーパスKVを事前選別する、問い合わせ非依存のキャッシュ圧縮。多文書推論に有利だが、初期圧縮費用・タスク適合性・直接検索への弱さが制約。"
-last_checked: "2026-10-22"
-worker_completed_at: "2026-10-22T21:42:28+09:00"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261022-2134-scheduled-chat-30/r01"
-reference_main_sha: "c5b697a6d94489cffb2c0cc4075630b347e9dfb6"
+- https://aclanthology.org/2026.eacl-long.309/
+- https://aclanthology.org/2026.eacl-long.309.pdf
+code: https://github.com/giulio98/cachenotes
+implementation: タスク説明とコーパスからCPTsをオフライン生成し、CPTsの問い合わせとコーパスの鍵の注意重みから保持するKV位置を選ぶ。チャンク化した厳密softmax集計で選択スコア計算のメモリを抑制。H100単体のオンラインTTFT・メモリ評価とLongBench、RULER、企業技術文書、合成データを実施。
+summary: コーパスに対しタスク別の圧縮計画トークン（CPTs）を生成し、CPTsからの注意を用いてコーパスKVキャッシュを一度だけ圧縮する。個々の質問ごとに検索・再圧縮せず、保存KVを使って回答。H100の128KコーパスでTTFT 0.13秒、RAG 0.61秒、全再入力15.88秒。ただしCPTs生成と圧縮のオフライン費用が別途発生し、局所的な直接検索やコード補完ではRAG等が優位な条件がある。
+list_summary: タスク記述から生成した圧縮計画トークンでコーパスKVを事前選別する、問い合わせ非依存のキャッシュ圧縮。多文書推論に有利だが、初期圧縮費用・タスク適合性・直接検索への弱さが制約。
+last_checked: '2026-10-22'
+worker_completed_at: '2026-10-22T21:42:28+09:00'
+worker_id: scheduled-chat-30
+worker_run_key: 20261022-2134-scheduled-chat-30/r01
+reference_main_sha: c5b697a6d94489cffb2c0cc4075630b347e9dfb6
 worklist_rank: 173
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2510.00636
+  arxiv_id: '2510.00636'
+- canonical_id: arXiv:2410.00161
+  arxiv_id: '2410.00161'
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2306.14048
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2405.16444
+- canonical_id: arXiv:2412.15605
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2505.23416
+- canonical_id: arXiv:2502.16002
+- canonical_id: arXiv:2406.11430
+- canonical_id: arXiv:2410.01518
+- canonical_id: arXiv:2309.00071
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2005.08025
+- canonical_id: arXiv:2407.21018
+references_checked_at: '2026-10-22'
+references_source: primary-pdf-reference-section
+references_total: 4
 ---
 
 # CacheNotes：タスク別圧縮計画を用いた再利用可能なKVキャッシュ
