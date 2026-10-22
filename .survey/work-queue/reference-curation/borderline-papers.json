@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T17:25:22+00:00",
-  "record_count": 5305,
+  "updated_at": "2026-10-22T17:29:11+00:00",
+  "record_count": 5306,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82315,6 +82315,22 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting–Full Version"
+    },
+    "arXiv:2609.20581": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.20581",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.20581",
+        "arXiv:2609.20581"
+      ],
+      "reason": "離散拡散で複数token位置を同時に確定する際のconfidence rankingと依存関係を解析し、拡散言語モデルの並列decodingに隣接する。主貢献は生成分布の正しさに関する理論・合成課題で、推論時間、メモリ、throughput、runtimeを改善する仕組みや評価はないため微妙とする。",
+      "first_checked_at": "2026-10-22T17:29:11+00:00",
+      "last_checked_at": "2026-10-22T17:29:11+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Limits of Confidence in Diffusion"
     }
   }
 }
