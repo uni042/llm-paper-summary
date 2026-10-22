@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-22T04:51:41+00:00",
-  "record_count": 5286,
+  "updated_at": "2026-10-22T14:47:08+00:00",
+  "record_count": 5285,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -78726,9 +78726,9 @@
       "identity_tokens": [
         "arXiv:2605.06850"
       ],
-      "reason": "一次書誌と要旨はRL後学習のロールアウト中のKV圧縮に伴う方策ずれを扱い、システムメモリとの関連がある。しかし著者が2026-09-16に実験結果の誤りを理由として論文を取り下げたため、定量結果を信頼できる収録成果として扱えない。原著v2はwithdrawnでPDFも提供されない。",
+      "reason": "対象はLLMの強化学習後訓練におけるロールアウトKVキャッシュ圧縮で、LLM推論時メモリと学習の両方に直接関連する。ただしarXivの2026-09-16付v2に著者による撤回が明示され、理由は実験結果に誤りが見つかったこと。2026-10-22現在の書誌では論文の性能数値を信頼してResearch収録できないため、撤回を理由に保留分類する。",
       "first_checked_at": "2026-10-14T09:44:19+00:00",
-      "last_checked_at": "2026-10-14T09:44:19+00:00",
+      "last_checked_at": "2026-10-22T14:47:07+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment"
@@ -81601,19 +81601,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving"
-    },
-    "arXiv:2605.05278": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2605.05278",
-      "identity_tokens": [
-        "arXiv:2605.05278"
-      ],
-      "reason": "MoEルーティングを通信レート・相互情報量の観点から分析する理論はLLM推論資源設計に関連するが、本文第III〜VI節の実証対象はMNIST上の事前学習済みCNN 25モデルの有限候補バンクであり、LLMの専門家トークン配送、GPU間通信、KV、推論遅延、スループットの実機検証がない。現行LLM推論サーベイの主要収録対象か判断を保留する。",
-      "first_checked_at": "2026-10-19T01:45:57+00:00",
-      "last_checked_at": "2026-10-21T16:46:47+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
     },
     "arXiv:2511.00603": {
       "classification": "borderline",

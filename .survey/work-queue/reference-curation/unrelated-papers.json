@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T04:51:41+00:00",
-  "record_count": 12448,
+  "updated_at": "2026-10-22T14:47:09+00:00",
+  "record_count": 12449,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -162910,9 +162910,9 @@
         "id:arXiv:2301.09474",
         "url:https://arxiv.org/abs/2301.09474"
       ],
-      "reason": "題名の対象はエネルギー制約付き拡散から導くグラフ変換器（Graph Transformer）の設計である。グラフ学習・グラフ表現のモデル方式であり、LLM推論時の計算・通信・キャッシュ最適化を直接扱うと示されていないため対象外。",
+      "reason": "エネルギー制約付き拡散によるグラフ上の表現学習器を提案し、ノード分類、画像・文章の半教師あり分類、時空間予測を評価する。線形計算量の変種を含むが、対象は一般グラフ・表現学習であり、LLMの実行時推論・GPU配信・KVキャッシュ等への適用を要旨で示していない。",
       "first_checked_at": "2026-10-11T00:45:52+00:00",
-      "last_checked_at": "2026-10-21T08:53:32+00:00",
+      "last_checked_at": "2026-10-22T14:47:09+00:00",
       "linked_from": [],
       "title": "DIFFormer: Scalable (Graph) Transformers Induced by Energy Constrained Diffusion"
     },
@@ -163939,9 +163939,9 @@
         "id:arXiv:2303.05511",
         "url:https://arxiv.org/abs/2303.05511"
       ],
-      "reason": "題名が扱う対象はテキストから画像を合成する敵対的生成ネットワーク（GAN）の規模拡大である。大規模言語モデルの推論サービング、KVキャッシュ、GPU上のLLMデコードや推論基盤の高速化ではなく、画像生成モデルの設計・品質に属するため対象外。",
+      "reason": "GANの画像生成をLAIONなどの大規模画像データで拡張するGigaGANの研究。一次要旨は512px画像を0.13秒で合成する画像生成モデルの性能を報告するが、LLMのテキスト推論、KVキャッシュ、MoE推論、LLMサービングの高速化機構を扱っていない。",
       "first_checked_at": "2026-10-11T08:49:39+00:00",
-      "last_checked_at": "2026-10-21T08:53:35+00:00",
+      "last_checked_at": "2026-10-22T14:47:07+00:00",
       "linked_from": [],
       "title": "Scaling up GANs for Text-to-Image Synthesis"
     },
@@ -179398,6 +179398,18 @@
       "last_checked_at": "2026-10-22T04:51:40+00:00",
       "linked_from": [],
       "title": "HunyuanOCR Technical Report"
+    },
+    "arXiv:2605.05278": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05278",
+      "identity_tokens": [
+        "arXiv:2605.05278"
+      ],
+      "reason": "タイトルにはMoE推論の通信効率があるが、一次論文の実体はMNIST上の事前学習済みCNN 25候補からのモデル選択と、サンプル依存性I(S;W)・入力からルータへの相互情報量I(X;T)の統計的推定である。表IはR=25、標本数m=256、反復M=300、訓練誤差0.0802、テスト誤差0.0846を報告。実際のLLM、トークン単位MoE、専門家並列通信、GPU推論時間、KVキャッシュを評価しておらず、現行LLM推論・学習効率サーベイの主対象から外す。",
+      "first_checked_at": "2026-10-22T14:47:08+00:00",
+      "last_checked_at": "2026-10-22T14:47:08+00:00",
+      "linked_from": [],
+      "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
     }
   }
 }
