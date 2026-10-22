@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "codex-worklist-outscope-20261022-w45-round6",
+  "reference_main_sha": "3a84a8be51cc57eaac11714dbf43327844ce035c",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.05815",
+      "identity_tokens": [
+        "arXiv:2406.05815",
+        "DOI:10.48550/arxiv.2406.05815"
+      ],
+      "title": "What Can We Learn from State Space Models for Machine Learning on Graphs?",
+      "reason": "GSSCはグラフ構造データ向けのstate-space convolutionで、グラフTransformerの計算負荷や長距離依存を扱い、グラフベンチマーク上の表現力・精度を評価する。対象はノード関係のグラフ学習であり、LLMの系列生成、言語モデル推論、serving効率への具体的接続が一次要旨にないため無関係とする。",
+      "source_url": "https://arxiv.org/abs/2406.05815v2",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T17:34:51Z",
+      "last_checked_at": "2026-10-22T17:34:51Z",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2412.04786",
+      "identity_tokens": [
+        "arXiv:2412.04786",
+        "DOI:10.48550/arxiv.2412.04786"
+      ],
+      "title": "Slicing Vision Transformer for Flexible Inference",
+      "reason": "Scalaは幅の異なるViT部分ネットワークを用意し、資源制約が変わる環境で実行規模を切り替える柔軟な推論を狙うため、適応的な推論実行という接点はある。一方、一次要旨の対象は画像分類とImageNet上のViTで、LLM推論や言語生成への適用は示されないため微妙とする。",
+      "source_url": "https://arxiv.org/abs/2412.04786v1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T17:34:51Z",
+      "last_checked_at": "2026-10-22T17:34:51Z",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ]
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.05424",
+      "identity_tokens": [
+        "arXiv:2204.05424",
+        "DOI:10.48550/arxiv.2204.05424"
+      ],
+      "title": "A Call for Clarity in Beam Search: How It Works and When It Stops",
+      "reason": "beam decodingの停止条件をpatience factorで調整し、要約・機械翻訳の生成品質を改善する手法で、テキスト生成デコーディングには直接隣接する。要旨では推論の遅れはわずかとされる一方、高速化・メモリ削減・serving改善が主貢献ではないため微妙とする。",
+      "source_url": "https://arxiv.org/abs/2204.05424v3",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-22T17:34:51Z",
+      "last_checked_at": "2026-10-22T17:34:51Z",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ]
+    }
+  ]
+}
