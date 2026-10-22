@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-21T23:57:52+00:00",
+  "generated_at": "2026-10-22T00:10:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -126,33 +126,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-7674b7a14ad0--libfile_bf64d1d864488191b3cf0e73ea18cb34--2025-2510.16807-skipv1former-first-value-skip-kv-research-20261018-0430-scheduled-chat-30.json",
       "worker_run_key": "20261018-0430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.21264",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-18T14:00:16+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8704,
-        "body_paragraphs": 56,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 770,
-        "limitation_chars": 826,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3d377bab2ad8--libfile_3d26323ba68c8191a20a1c298d019db2--2026-2609.21264-amd-xdna-flashattention-open-compiler-research-20261018-2130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3d377bab2ad8--libfile_3d26323ba68c8191a20a1c298d019db2--2026-2609.21264-amd-xdna-flashattention-open-compiler-research-20261018-2130-scheduled-ch.json",
-      "worker_run_key": "20261018-2130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.16450",
@@ -630,33 +603,6 @@
       "worker_run_key": "20261022-0332-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2605.18226",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-21T23:21:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6931,
-        "body_paragraphs": 40,
-        "method_chars": 2025,
-        "method_paragraphs": 13,
-        "evaluation_chars": 0,
-        "limitation_chars": 763,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c4c7c543c8108191b17a05ff296be15f--2026-2605.18226-attention-state-memory-context-memorization-quality-repair-20261020-1945-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261020-1945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2412.00099",
       "title": null,
       "source_url": null,
@@ -683,6 +629,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ca8dd37579788191a2c7f53a7a46793d--2024-2412.00099-cache-conditional-experts-mobile-moe-research-20261021-0956-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ca8dd37579788191a2c7f53a7a46793d--2024-2412.00099-cache-conditional-experts-mobile-moe-research-20261021-0956-scheduled-chat-00-r01.json",
       "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.21264",
+      "title": "Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study",
+      "source_url": "https://arxiv.org/abs/2609.21264",
+      "returned_at": "2026-10-22T00:05:59+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5852,
+        "body_paragraphs": 35,
+        "method_chars": 1424,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 640,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_db8ceb782c048191873c6d830d4db022--2026-2609.21264-xdna-flashattention-mapping-research-20261021-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_db8ceb782c048191873c6d830d4db022--2026-2609.21264-xdna-flashattention-mapping-research-20261021-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.12471",
+      "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
+      "source_url": "https://arxiv.org/pdf/2605.12471",
+      "returned_at": "2026-10-22T00:06:00+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 681 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6256,
+        "body_paragraphs": 36,
+        "method_chars": 681,
+        "method_paragraphs": 4,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 681 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dd81b022a4ac81919dcf981ab9a823a1--2026-2605.12471-kvfold-chunk-recurrence-research-20261021-2231-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_dd81b022a4ac81919dcf981ab9a823a1--2026-2605.12471-kvfold-chunk-recurrence-research-20261021-2231-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261021-2231-scheduled-chat-30/r01"
     }
   ]
 }
