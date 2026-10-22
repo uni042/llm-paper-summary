@@ -206,6 +206,12 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
             root / reference_pool.DEFAULT_BORDERLINE_LEDGER, label="borderline-paper"
         )
     )
+    # Ledger identifiers use e.g. "arxiv:...", while worklist identifiers
+    # are namespaced as "id:arxiv:..."; compare normalized exact IDs.
+    relevance_excluded_ids = {
+        "id:" + token for token in relevance_excluded
+        if token and not token.startswith(("id:", "url:", "title-hash:"))
+    }
     ready = [
         row
         for row in jobs
@@ -214,7 +220,7 @@ def _research_candidates(root: Path) -> tuple[list[dict[str, Any]], int, list[di
         and not (
             row.get("type") == "research"
             and (
-                bool(_worklist_identity_tokens(row) & relevance_excluded)
+                bool(_worklist_identity_tokens(row) & relevance_excluded_ids)
                 or research_job_reconciliation.match_represented_research_job(
                     row, paper_index
                 ) is not None
