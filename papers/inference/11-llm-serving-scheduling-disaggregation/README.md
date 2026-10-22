@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（415本）
+## 自動生成の論文一覧（416本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -919,6 +919,10 @@
 - **2026-04 · [Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC](2026-2604.07609-blink-cpu-free-llm-inference-gpu-smartnic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   定常状態のLLM推論でCPUが行うバッチ更新・KV管理・GPU起動をGPU常駐制御へ移し、要求受付とトークン送受信をSmartNICへ分離して、CPU干渉によるGPU待ちとコピー待ちを減らす実機システム。
+
+- **2026-04 · [AUTOPOIESIS: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics](2026-2604.07144-autopoiesis-a-self-evolving-system-paradigm-for-llm-serving-under-runtim.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存のシステムは負荷に応じて配置計画を更新できても、その計画を作るアルゴリズム自体は事前に人間が設計した固定方針であることが多い。実行完了時間はそれぞれ平均27%、30%、44%短縮し、全体では平均34%、最大53%の改善を報告する。
 
 - **2026-03 · [WWW.Serve: Interconnecting Global LLM Services through Decentralization](2026-2603.20661-www-serve-decentralized-global-llm-serving.md)**  
   実装：[✓](https://github.com/Infini-AI-Lab/WWW.Serve) ・ リポジトリ内被引用：0  

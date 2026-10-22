@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（51本）
+## 自動生成の論文一覧（52本）
 
 分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
@@ -127,6 +127,10 @@
 - **2026-04 · [EdgeFlow: Fast Cold Starts for LLMs on Mobile Devices](2026-2604.09083-edgeflow-fast-cold-starts-mobile-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モバイルLLMのコールドスタートで浪費されるフラッシュ帯域を、重要度別の可変精度量子化・SIMD向け重み格納・CPU/NPU協調実行で削減し、同等精度条件の初回応答を最大4.07倍高速化する。
+
+- **2026-04 · [A Unified Model and Document Representation for On-Device Retrieval-Augmented Generation](2026-2604.14403-a-unified-model-and-document-representation-for-on-device-retrieval-augm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  検索拡張生成（retrieval-augmented generation、RAG）をスマートフォンや小型計算機だけで動かす場合、サーバーへ個人文書を送らずに利用できる反面、二つのメモリ費用が問題となる。従来は検索用の埋め込みと生成用の圧縮文脈を別々に作ることが多く、文書ごとに二重の表現を保持する。
 
 - **2026-03 · [Trust-Aware Routing for Distributed Generative AI Inference at the Edge](2026-2603.28622-trust-aware-routing-for-distributed-generative-ai-inference-at-the-edge.md)**  
   実装：[✓](https://github.com/anonymous-123qh/g-trac/tree/main/deployment) ・ リポジトリ内被引用：0  
