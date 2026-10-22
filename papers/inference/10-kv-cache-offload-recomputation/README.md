@@ -327,7 +327,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
-  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：46  
+  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：47  
   オンラインの大規模言語モデル推論では、要求をまとめて実行することでGPUの行列積を効率化できる。MLSys 2025正式論文は、同一ホストのCPUを使う条件で、GPUのみの実行と比べてT4で最大7.5倍、A10Gで最大26%、H100で最大14%の処理率改善を報告する。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  

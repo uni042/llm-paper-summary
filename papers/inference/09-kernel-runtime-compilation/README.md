@@ -433,7 +433,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
-  実装：[✓](https://github.com/thustorage/Medusa) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/thustorage/Medusa) ・ リポジトリ内被引用：17  
   Medusaは、大規模言語モデル（large language モデル; LLM）を必要なときだけ起動するサーバーレス推論において、モデル重みの読み込み以外にも無視できない起動費用があることに着目したシステム論文である。
 
 - **2025-10 · [KTransformers: Unleashing the Full Potential of CPU/GPU Hybrid Inference for MoE Models](2025-b4e11ada8105-ktransformers-unleashing-the-full-potential-of-cpu-gpu-hybrid-inference-.md)**  
@@ -570,6 +570,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/SqueezeBits/QUICK) ・ リポジトリ内被引用：2  
   4ビットに量子化した大規模言語モデルでは、重みの保存容量を減らせても、行列積の際には高精度の活性値と掛け合わせるために重みを半精度へ戻す処理が必要になる。原著の行列積単体の比較ではバッチ256でAutoAWQのカーネル比1.33〜1.91倍、モデル生成の比較では最大1.94倍の処理量を報告した。
 
+- **2024-02 · [L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models](2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  巨大言語モデル（LLM）の低ビット量子化は推論時の重み容量とメモリ帯域を減らすが、精度低下を起こす。LLaMA-1 7Bの学習ピークメモリはLoRAの25.1GBに対してL4Qが25.4GB、通常QATは79.5GBである。
+
 - **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
   実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：1  
   LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
@@ -581,10 +585,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-06 · [Optimized Speculative Sampling for GPU Hardware Accelerators](2024-2406.11016-optimized-speculative-sampling-for-gpu-hardware-accelerators.md)**  
   実装：[✓](https://github.com/dwgnr/optimized-speculative-sampling) ・ リポジトリ内被引用：1  
   投機的復号では、小型のドラフトモデルが生成した複数の候補トークンを大型のターゲットモデルが並列に検証する。確率的な投機的標本化（投機的 sampling）では、ドラフト分布とターゲット分布から候補の受理確率を計算し、拒否した位置では補正分布から再標本化する。本論文は、モデルを変更せず、投機的標本化の検証・補正部分をGPU向けに再実装する。
-
-- **2024-02 · [L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models](2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  巨大言語モデル（LLM）の低ビット量子化は推論時の重み容量とメモリ帯域を減らすが、精度低下を起こす。LLaMA-1 7Bの学習ピークメモリはLoRAの25.1GBに対してL4Qが25.4GB、通常QATは79.5GBである。
 
 ### 4年前（2022-11〜2023-10）
 
