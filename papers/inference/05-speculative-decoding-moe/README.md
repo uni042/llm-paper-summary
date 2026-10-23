@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（206本）
+## 自動生成の論文一覧（207本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -459,6 +459,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-02 · [Benchmarking the Energy Savings with Speculative Decoding Strategies](2026-2602.09113-benchmarking-the-energy-savings-with-speculative-decoding-strategies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   論文は、一定長の草案を生成するCOGA、草案長を動的に変えるDYGA、EAGLE-2、EAGLE-3、Medusaを、Vicuna、Llama、Flan-T5、Qwen3などのモデル系列と、コード生成、数学推論、要約の課題で比較する。
+
+- **2026-01 · [TABED: Test-Time Adaptive Ensemble Drafting for Robust Speculative Decoding in LVLMs](2026-2601.20357-tabed-test-time-adaptive-ensemble-drafting-for-robust-speculative-decodi.md)**  
+  実装：[✓](https://github.com/furiosa-ai/TABED) ・ リポジトリ内被引用：0  
+  TABED（Test-Time 適応的 Ensemble Drafting）は、画像と文章を処理する大規模視覚言語モデル（LVLM）の出力生成を速くするための、実行時適応型の投機的復号方式である。
 
 - **2026-01 · [StarSD: One-for-Many Speculative Decoding](2026-2601.21622-starsd-one-for-many-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

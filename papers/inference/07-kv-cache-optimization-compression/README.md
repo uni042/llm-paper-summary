@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（306本）
+## 自動生成の論文一覧（307本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -690,6 +690,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing](2026-2605.17447-fastocr-dynamic-visual-fixation-via-kv-cache-pruning-for-efficient-docum.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FastOCRは追加学習不要で、焦点層誘導型の枝刈り（Focal-Guided Pruning、FGP）とステップ間注視再利用（Cross-Step Fixation Reuse、CSFR）を組み合わせる。Qwen2.5-VLでは画像トークンの保持率5%でOmniDocBench総合スコア72.76から71.34（98.0%保持）となる。
+
+- **2026-05 · [Discovering KV Cache Eviction Policies via LLM-Guided Program Evolution](2026-2608.14555-discovering-kv-cache-eviction-policies-via-llm-guided-program-evolution.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この論文が扱うのは、長い入力文を処理した直後に、後続の生成に必要な鍵・値キャッシュ（Key-Value Cache、以下KVキャッシュ）のどの位置を残すかという選択問題である。キャッシュを圧縮すると生成中のメモリ使用量は減るが、削除した位置へ再び注意を向けられなくなるため、根拠検索や長文理解の精度が低下する。
 
 - **2026-05 · [Context Memorization for Efficient Long Context Generation](2026-2605.18226-context-memorization-for-efficient-long-context-generation.md)**  
   実装：[✓](https://github.com/yasu0001/AttentionMemory) ・ リポジトリ内被引用：0  
