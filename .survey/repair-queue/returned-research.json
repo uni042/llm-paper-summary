@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T17:21:15+00:00",
+  "generated_at": "2026-10-23T17:29:20+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1140,117 +1140,6 @@
       "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2605.09516",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T15:53:00+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4611,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1169,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ed3a5b0f0d888191ad04b0bcfbbfc189--2026-2605.09516-mixture-of-layers-hybrid-attention-research-20261024-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ed3a5b0f0d888191ad04b0bcfbbfc189--2026-2605.09516-mixture-of-layers-hybrid-attention-research-20261024-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261024-0030-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.38697",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T16:17:00+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6861,
-        "body_paragraphs": 45,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 869,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_44914ee044c08191998b70909be00dcc--2026-2609.38697-cascadia-decentralized-ai-pc-llm-serving-research-20261023-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_44914ee044c08191998b70909be00dcc--2026-2609.38697-cascadia-decentralized-ai-pc-llm-serving-research-20261023-2200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261023-2200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2507.02591",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T16:39:41+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5060,
-        "body_paragraphs": 26,
-        "method_chars": 1725,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 503,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_10c0064907288191ba654918d2416f2e--2025-2507.02591-auroralong-recurrent-video-llm-research-20261023-1733-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_10c0064907288191ba654918d2416f2e--2025-2507.02591-auroralong-recurrent-video-llm-research-20261023-1733-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.28099",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T16:40:15+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 122 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5683,
-        "body_paragraphs": 33,
-        "method_chars": 1559,
-        "method_paragraphs": 10,
-        "evaluation_chars": 122,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 122 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2580ebe004d081918c647cacb7d8f790--2026-2608.28099-speculative-probing-mtp-monitoring-research-20261023-1733-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2580ebe004d081918c647cacb7d8f790--2026-2608.28099-speculative-probing-mtp-monitoring-research-20261023-1733-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3830418.3843867",
       "title": null,
       "source_url": null,
@@ -1277,35 +1166,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-1500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-1500-scheduled-chat-00-r01.json",
       "worker_run_key": "20261023-1500-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.05534",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T16:46:35+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 126 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5617,
-        "body_paragraphs": 35,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 126,
-        "limitation_chars": 774,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 126 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3b154c8afa5081918de17f4fd2be3225--2025-2511.05534-flowmm-multimodal-kv-merging-research-20261023-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3b154c8afa5081918de17f4fd2be3225--2025-2511.05534-flowmm-multimodal-kv-merging-research-20261023-1430-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261023-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2608.06763",
@@ -1365,8 +1225,8 @@
     },
     {
       "canonical_id": "arXiv:2504.15302",
-      "title": "RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU",
-      "source_url": "https://arxiv.org/html/2504.15302",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-23T17:21:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1395,8 +1255,8 @@
     },
     {
       "canonical_id": "arXiv:2408.15518",
-      "title": "Squid: Long Context as a New Modality for Energy-Efficient On-Device Language Models",
-      "source_url": "https://arxiv.org/pdf/2408.15518",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-23T17:21:12+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1425,8 +1285,8 @@
     },
     {
       "canonical_id": "DOI:10.1609/aaai.v38i17.29908",
-      "title": "Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation",
-      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29908/31587",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-23T17:21:13+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1452,8 +1312,8 @@
     },
     {
       "canonical_id": "arXiv:2505.00019",
-      "title": "An Empirical Study on Prompt Compression for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2505.00019",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-23T17:21:14+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1481,8 +1341,8 @@
     },
     {
       "canonical_id": "arXiv:2609.05565",
-      "title": "Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane",
-      "source_url": "https://arxiv.org/html/2609.05565",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-23T17:21:15+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1506,6 +1366,146 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6c601a54c4dd--libfile_323ccd2d3db081918cbf879107fe28a0--2026-2609.05565-sustainable-llm-d-control-plane-survey-research-20261023-2130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6c601a54c4dd--libfile_323ccd2d3db081918cbf879107fe28a0--2026-2609.05565-sustainable-llm-d-control-plane-survey-research-20261023-2130-scheduled-c.json",
       "worker_run_key": "20261023-2130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.38697",
+      "title": "Cascadia: A Control-Plane-Free Alternative to Hyperconverged AI Infrastructure",
+      "source_url": "https://arxiv.org/abs/2609.38697",
+      "returned_at": "2026-10-23T17:29:14+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6861,
+        "body_paragraphs": 45,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 869,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-70427fa3caef--libfile_44914ee044c08191998b70909be00dcc--2026-2609.38697-cascadia-decentralized-ai-pc-llm-serving-research-20261023-2200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-70427fa3caef--libfile_44914ee044c08191998b70909be00dcc--2026-2609.38697-cascadia-decentralized-ai-pc-llm-serving-research-20261023-2200-scheduled.json",
+      "worker_run_key": "20261023-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.09516",
+      "title": "Mixture of Layers with Hybrid Attention: Parallel Thin Blocks for Sparse Transformer Compute",
+      "source_url": "https://arxiv.org/html/2605.09516v1",
+      "returned_at": "2026-10-23T17:29:15+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4611,
+        "body_paragraphs": 26,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1169,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-788abec65130--libfile_ed3a5b0f0d888191ad04b0bcfbbfc189--2026-2605.09516-mixture-of-layers-hybrid-attention-research-20261024-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-788abec65130--libfile_ed3a5b0f0d888191ad04b0bcfbbfc189--2026-2605.09516-mixture-of-layers-hybrid-attention-research-20261024-0030-scheduled-chat-.json",
+      "worker_run_key": "20261024-0030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.05534",
+      "title": "FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference",
+      "source_url": "https://arxiv.org/pdf/2511.05534",
+      "returned_at": "2026-10-23T17:29:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 126 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5617,
+        "body_paragraphs": 35,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 126,
+        "limitation_chars": 774,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 126 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-946c60a6ed5d--libfile_3b154c8afa5081918de17f4fd2be3225--2025-2511.05534-flowmm-multimodal-kv-merging-research-20261023-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-946c60a6ed5d--libfile_3b154c8afa5081918de17f4fd2be3225--2025-2511.05534-flowmm-multimodal-kv-merging-research-20261023-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261023-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28099",
+      "title": "Speculative Probing: LLM Monitoring at Speculative-Decoding Cost",
+      "source_url": "https://arxiv.org/pdf/2608.28099",
+      "returned_at": "2026-10-23T17:29:18+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 122 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5683,
+        "body_paragraphs": 33,
+        "method_chars": 1559,
+        "method_paragraphs": 10,
+        "evaluation_chars": 122,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 122 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9a357dfc77f8--libfile_2580ebe004d081918c647cacb7d8f790--2026-2608.28099-speculative-probing-mtp-monitoring-research-20261023-1733-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9a357dfc77f8--libfile_2580ebe004d081918c647cacb7d8f790--2026-2608.28099-speculative-probing-mtp-monitoring-research-20261023-1733-scheduled-chat-.json",
+      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.02591",
+      "title": "AuroraLong: Bringing RNNs Back to Efficient Open-Ended Video Understanding",
+      "source_url": "https://arxiv.org/pdf/2507.02591",
+      "returned_at": "2026-10-23T17:29:19+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5060,
+        "body_paragraphs": 26,
+        "method_chars": 1725,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 503,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ad1f726d570d--libfile_10c0064907288191ba654918d2416f2e--2025-2507.02591-auroralong-recurrent-video-llm-research-20261023-1733-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ad1f726d570d--libfile_10c0064907288191ba654918d2416f2e--2025-2507.02591-auroralong-recurrent-video-llm-research-20261023-1733-scheduled-chat-30-r.json",
+      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
     }
   ]
 }
