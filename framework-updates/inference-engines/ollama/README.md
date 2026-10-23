@@ -27,6 +27,11 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 ## 主要更新
 
+### 2026-10-22 — Ollama v0.40.9-rc2（公開候補版）
+- Release一覧はv0.40.9を表示するが、本文の版表記は**v0.40.9-rc2 / Pre-release**。正式版と区別し、正式版の最新確認はv0.40.8とする。
+- 公開本文が明示する変更は内蔵llama.cppの更新のみ。取り込まれた個別修正、Windows/NVIDIA GPUのFlint対応、モデル別速度向上はこのrelease情報だけでは確定しない。
+- [公式RC2](https://github.com/ollama/ollama/releases/tag/v0.40.9-rc2)
+
 ### 2026-10-21 — Ollama v0.40.8（正式版）
 - Recursive Flint対応を追加。公式release案内ではFlintの実行はmacOS限定で、Windowsや一般NVIDIA GPUでの対応を示さない。
 - 本releaseのFlint対応から12GB VRAMでの実用性や生成速度は推定しない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.8)

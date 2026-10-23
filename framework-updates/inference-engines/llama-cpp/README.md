@@ -78,6 +78,17 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
+### 2026-10-22 — llama.cpp b11813〜b11827（開発ビルド）
+- **b11822**: Qwen4ExpでDFlash草稿を使うとhyper-connection残差の形状が合わず最初の要求が停止する問題を修正。草稿が要求する層だけ残差ストリームの平均を構築する。
+- **b11823**: GLM5で不要な`sel_mask_2d`と`new_pool_flat`を渡さない入力グラフへ整理。速度倍率は示されていない。
+- **b11826**: MiniCPM-OCR 1.0のマルチモーダル処理を追加。全GGUF・GPU構成の動作保証ではない。
+- **b11827**: Qualcomm Adreno向けOpenCLのdepthwise 2D convolutionを追加。NVIDIA CUDA向け改善と混同しない。
+- **b11819**: Nemotron系の非標準GQA、BPE tokenizer、Domyn small pre-typeへ対応。
+- **b11821**: Intel XMX/SYCL量子化行列積の複数列処理を拡張。投機的検証2〜8 tokenまたは短入力9〜80 token向けの経路で、Intel XMX専用。
+- **b11818**: reranking APIの型付きcontent入力と画像対応を改善し、template非対応モデルへの画像入力は黙って捨てず拒否する。
+- **b11815**: SYCLの非連続入力で起きるCONV_2D誤計算を修正。対象テストは16失敗から0へ回復（速度測定ではない）。
+- いずれも開発ビルドの更新で、一般的な高速化倍率はreleaseにない。b11827は2026-10-22 UTC時点の最新確認版。Windows x64 CUDA配布や12GB VRAMでの実機性能は別途確認が必要。[b11815](https://github.com/ggml-org/llama.cpp/releases/tag/b11815) / [b11818](https://github.com/ggml-org/llama.cpp/releases/tag/b11818) / [b11819](https://github.com/ggml-org/llama.cpp/releases/tag/b11819) / [b11821](https://github.com/ggml-org/llama.cpp/releases/tag/b11821) / [b11822](https://github.com/ggml-org/llama.cpp/releases/tag/b11822) / [b11823](https://github.com/ggml-org/llama.cpp/releases/tag/b11823) / [b11826](https://github.com/ggml-org/llama.cpp/releases/tag/b11826) / [b11827](https://github.com/ggml-org/llama.cpp/releases/tag/b11827)
+
 ### 2026-10-21 — llama.cpp b11800〜b11803（開発ビルド）
 - **b11800**: `ggml_top_k_mask`を一般化し、Qwen4系 / GLM5.3-nextのQSAに加えてDeepSeek V4 CSA等のtop-k maskを融合。backendが演算を実装しない場合は既存経路を使う。releaseに実機速度倍率はない。
 - **b11801**: SenseNova U1（NEOChatModel）のdense理解枝とvision encoderをGGUF変換・model実装へ追加。MoT生成枝は非対応。

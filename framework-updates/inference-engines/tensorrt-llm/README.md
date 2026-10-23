@@ -40,6 +40,13 @@ TensorRT-LLMの主要な機能・性能更新を継続的に記録する集約�
 
 ## 主要更新
 
+### 2026-10-22 — TensorRT-LLM v1.4.0rc1（公開候補版）
+- **RC1であり正式版ではない。** KV cache manager V2とPython KV cache transceiverを既定にし、未使用の`LlmRequest` fieldを削除、C++ `ArrayView`を`std::span`へ変更するなど破壊的API変更を含む。既存連携は互換性試験が必要。
+- **追加モデル経路**: DeepSeek-V4.1-Flash、GLM-5.3-Flash NVFP4、Qwen3.8-Flash-Next NVFP4（実験的Modeling V2）、DFlashのLiLiCorr草稿checkpoint。対応範囲はモデルごとに異なる。
+- **推論基盤**: Mooncake connectorとKV cache V2の統合、ホスト階層への段階的充填、NVFP4冷却ページ圧縮でのRoPE精度選択、信頼度に基づく可変長DSpark検証、要求ごとのseed再現性、piecewise CUDA Graphの選択的compileを追加。
+- **既知の問題**: A100でstreaming requestをcancelした後、既定Python KV transceiverを使うprefill/decode分離要求がKV転送エラーになる場合がある。Qwen3のJSON schema例が上限のない長さで応答する場合がある。
+- release noteはこの更新全体の公平なend-to-end速度倍率を示していない。Windows 11 / RTX 4070 SUPER 12GBの正式な対応や速度・VRAM改善へ外挿しない。[公式RC1](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc1)
+
 ### 2026-10-14 — TensorRT-LLM v1.4.0rc0（公開候補版）
 - GLM-5.3-Flash、K-EXAONE-2、Nemotron Super 3.5 VL、MiniMax-M3のNVFP4 KV cacheなどへ対応を拡張。疎KV構成、階層認識lock / offload、DeepSeek V4向け疎KV offload準備、小batch（8 token以下）のMoE routing、MTP draft loopを更新。
 - **RC0であり正式版ではない**。KVCacheManagerV2のPython backend削除、LlmRequest field移行は破壊的変更。H100のmulti-GPU worker pool再利用でhangする可能性、SM120/121のDeepSeek MLAでCUDA Graph capture時の不正memory accessという既知問題がある。[公式RC](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc0)。
