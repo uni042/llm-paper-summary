@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（58本）
+## 自動生成の論文一覧（59本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -142,6 +142,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-05 · [Parallelism Strategies and Concurrency Effects for Mixture-of-Experts Inference on GPU Systems](2026-ed9cd1f7c49b-parallelism-strategies-and-concurrency-effects-for-mixture-of-experts-in.md)**  
   実装：[✓](https://github.com/ananya-mh/optimizing-moe-inference) ・ リポジトリ内被引用：0  
   単純なTP+EP併用は全モデルの平均でTPの38～54%の処理量にとどまり、実機構成が2台の80GB GPU対4台の40GB GPUと異なる点が大きな解釈上の制約となる。
+
+- **2026-05 · [GEM: GPU-Variability-Aware Expert-to-GPU Mapping For Mixture-of-Experts Models](2026-2605.19945-gem-gpu-variability-aware-expert-to-gpu-mapping-for-mixture-of-experts-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  専門家並列（専門家 Parallelism; EP）を使う推論基盤は、専門家の重みを複数GPUに配置し、ルータが選んだ専門家へトークンを送信する。
 
 - **2026-05 · [Federation of Experts: Communication Efficient Distributed Inference for Large Language Models](2026-2605.06206-federation-of-experts-communication-efficient-distributed-inference-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

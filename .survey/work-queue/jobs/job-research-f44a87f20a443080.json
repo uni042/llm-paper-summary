@@ -35,10 +35,15 @@
   "selection_reason": "一次要旨はquantization・pruning・mergingを同一long-context serving条件で比較し、task quality、output throughput、TTFT、圧縮率を測る。cache機構の実運用性能選択に直接関係するbenchmarkである。",
   "semantic_scholar_id": "d5ce699c6b36ad5b83d7635ac1e8b61de96efccb",
   "source_url": "https://arxiv.org/abs/2607.05399",
-  "status": "ready",
+  "status": "superseded",
   "title": "Benchmarking KV-Cache Optimizations across Task Quality and System Performance for Long-Context Serving",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-23T17:03:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.05399-benchmarking-kv-cache-optimizations-across-task-quality-and-system-perfo.md",
+  "represented_canonical_id": "arXiv:2607.05399",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

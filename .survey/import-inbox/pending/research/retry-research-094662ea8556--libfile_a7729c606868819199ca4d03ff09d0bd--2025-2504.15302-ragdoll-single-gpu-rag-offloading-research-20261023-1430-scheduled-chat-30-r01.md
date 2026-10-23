@@ -33,6 +33,8 @@ scheduled_slot: '30'
 reference_main_sha: 2d298feed75a5284780053f887ec64aa6b765c06
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 ## 概要
 

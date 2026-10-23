@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（120本）
+## 自動生成の論文一覧（121本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -273,6 +273,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-05 · [MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving](2026-2605.02960-moe-prefill-async-expert-weight-streaming.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィル専用MoEで活性値AllToAllを次層専門家重みの非同期AllGatherへ置換し、CPUオフロードと接頭辞・実FLOPs対応スケジューリングで通信を計算へ隠す。
+
+- **2026-05 · [HCInfer: An Efficient Inference System via Error Compensation for Resource-Constrained Devices](2026-2605.05819-hcinfer-an-efficient-inference-system-via-error-compensation-for-resourc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  数十億〜数百億パラメータのLLMを一般向けGPUで動かすには、重みを低ビット化してGPUメモリに収めるか、収まりきらない重みをCPUメモリへ置いて必要時に転送することが多い。低ビット量子化は速度とメモリ効率を改善するが、極端な3〜4ビットでは正答率が低下し得る。
 
 - **2026-05 · [Fast MoE Inference via Predictive Prefetching and Expert Replication](2026-2605.11537-predictive-prefetching-expert-replication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

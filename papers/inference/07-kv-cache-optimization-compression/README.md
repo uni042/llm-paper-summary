@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（315本）
+## 自動生成の論文一覧（317本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -695,6 +695,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   送信側が既に計算した注意機構の鍵・値キャッシュ（KVキャッシュ）を、受信側がテキストから再計算する再事前充填（re-プリフィル）は無駄が大きい。
 
+- **2026-05 · [Polynomial Context-Truncation Sensitivity in Autoregressive Language Models: Sequential Wyner-Ziv Bounds for KV Cache Compression](2026-2605.25085-polynomial-context-truncation-sensitivity-in-autoregressive-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  逐次Wyner–Ziv符号化としてKVキャッシュ圧縮を定式化し、末尾窓だけを保持する方式の必要窓長が、追加の両側リスク条件下で許容分布誤差εに対してΘ(ε^{-1/α})となることを示す。
+
 - **2026-05 · [NestedKV: Nested Memory Routing for Long-Context KV Cache Compression](2026-2605.26678-nestedkv-nested-memory-routing-for-long-context-kv-cache-compression.md)**  
   実装：[✓](https://github.com/ChenHong30/NestedKV) ・ リポジトリ内被引用：0  
   学習不要のKV圧縮では、注意重みが大きいトークン、最近のトークン、鍵ベクトルが平均から離れたトークンなどを残す方法が使われる。Qwen3-4B、RULERの4,000トークン文脈、KVの75%を削除する条件でNestedKVは79.32点、単一の全文平均方向を使うKeyDiffは60.22点だった。
@@ -726,6 +730,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [CONF-KV: Confidence-Aware KV Cache Eviction with Mixed-Precision Storage for Long-Horizon LLM Inference](2026-2605.24786-conf-kv-confidence-aware-kv-cache-eviction-with-mixed-precision-storage-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   過去の注意重みに基づく方式は、重要そうなトークンを選別できる反面、将来どの情報が必要になるかを正確には予測できない。
+
+- **2026-05 · [Benchmarking KV-Cache Optimizations across Task Quality and System Performance for Long-Context Serving](2026-2607.05399-benchmarking-kv-cache-optimizations-across-task-quality-and-system-perfo.md)**  
+  実装：[✓](https://github.com/nikagrwal/Benchmarking-KV-Cache-Optimizations-across-Task-Quality-and-System-Performance) ・ リポジトリ内被引用：0  
+  本研究の目的は、鍵・値キャッシュ（Key–Value キャッシュ; KVキャッシュ）の削減率だけで方式を選んだときに、実際の長文脈推論が速くなるとは限らないという問題を、同じモデル・負荷・測定指標のもとで検証することである。A100 40GBの単一GPU評価では、KIVI4が比較的安定した品質を示し、SnapKVは高い復号処理量を維持した。
 
 - **2026-05 · [ArborKV: Structure-Aware KV Cache Management for Scaling Tree-based LLM Reasoning](2026-2605.22106-arborkv-structure-aware-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
