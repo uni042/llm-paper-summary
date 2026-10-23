@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-2200-scheduled-chat-00/r01/research-relevance-023",
+  "reference_main_sha": "3d7cfb45857c3b812b00b37ca58b1a1fd8418a01",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.06704",
+      "identity_tokens": [
+        "arxiv:2504.06704",
+        "doi:10.48550/arxiv.2504.06704"
+      ],
+      "title": "CAT: Circular-Convolutional Attention for Sub-Quadratic Transformers",
+      "reason": "一次論文§4では循環行列をFFTで乗算するO(N log N)の注意演算を提案するが、§5.1では自己回帰の因果制約を課すとO(N²)に戻ると明記する。表2でGPT-2 smallの因果言語モデルPPLは標準27.84に対しCAT 32.36と悪化し、実験対象もGPT-2 smallとTransformer-XLでありLLMサービングの実測はない。効率的注意機構として理論的な関連はあるが、現行のLLM自己回帰推論基盤へ直接適用できる高速化は未実証。",
+      "source_url": "https://arxiv.org/html/2504.06704v2",
+      "body_check": "research_fulltext_relevance_review: arXiv v2の§4.1 FFT版とgather版、§5.1因果制約、表2 WikiText-103のGPT-2 smallとTransformer-XLのcausal PPL、Appendix BのV100訓練反復時間を確認。非因果FFTの漸近計算量と因果生成の実測を区別した。",
+      "first_checked_at": "2026-10-23T22:09:33+09:00",
+      "last_checked_at": "2026-10-23T22:09:33+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 23
+    }
+  ]
+}
