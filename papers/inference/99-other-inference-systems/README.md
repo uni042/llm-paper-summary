@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（930本）
+## 自動生成の論文一覧（931本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2427,6 +2427,10 @@
 - **2025-08 · [MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices](2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md)**  
   実装：[✓](https://github.com/ngavhane/moe-beyond) ・ リポジトリ内被引用：2  
   トークン埋め込みと層IDから次のMoEエキスパートを予測する4層Transformerを学習し、10%容量のGPUキャッシュでMoE-Infinityの17%に対し約72%の適中率を示す。
+
+- **2025-07 · [R-Stitch: Dynamic Trajectory Stitching for Efficient Reasoning](2025-2507.17307-r-stitch-dynamic-trajectory-stitching-for-efficient-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  R-Stitchは、長い思考過程（Chain-of-Thought、CoT）を生成する際、小型言語モデル（SLM）が確信を持って生成できる部分は小型側に任せ、難しいトークンだけ大型言語モデル（LLM）へ移す方式である。
 
 - **2025-07 · [BlockBPE: Parallel BPE Tokenization](2025-2507.11941-blockbpe-parallel-bpe-tokenization.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

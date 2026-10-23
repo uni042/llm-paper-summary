@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（317本）
+## 自動生成の論文一覧（318本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -802,6 +802,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models](2026-2601.04719-gpu-accelerated-int8-quantization-for-kv-cache-compression-in-large-lang.md)**  
   実装：[✓](https://github.com/MaanasTaneja/cuda-kv-cache-compression) ・ リポジトリ内被引用：0  
   再計算を避けるため、各層・各注意ヘッドの過去の鍵と値を保持するKVキャッシュ（KV キャッシュ）が必要になる。そこで本論文は、FP32の鍵・値行列をINT8へ変換する列別量子化と、その変換処理を高速化するCUDAカーネルを実装・比較する。
+
+- **2025-11 · [SWAN: Sparse Winnowed Attention for Reduced Inference Memory via Decompression-Free KV-Cache Compression](2025-2511.18936-swan-sparse-winnowed-attention-for-reduced-inference-memory-via-decompre.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SWAN（Sparse Winnowed 注意機構）は、大規模言語モデルの生成時に増え続ける鍵・値キャッシュ（key-value キャッシュ、KVキャッシュ）を、次元方向に疎な形式へ変換して保存する方式である。50～60%程度のKVメモリ削減で多くの課題の性能が保たれると報告する一方、保持次元を減らしすぎると数学推論が大きく悪化する。
 
 - **2025-11 · [Revisiting Multimodal KV Cache Compression: A Frequency-Domain-Guided Outlier-KV-Aware Approach](2025-2511.16786-revisiting-multimodal-kv-cache-compression-a-frequency-domain-guided-out.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

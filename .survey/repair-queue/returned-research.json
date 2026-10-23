@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T21:10:21+00:00",
+  "generated_at": "2026-10-23T21:23:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 47,
+  "count": 46,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -492,35 +492,6 @@
       "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.23130",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T17:31:06+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7851,
-        "body_paragraphs": 41,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 492,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-448962d6a3eb--libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-448962d6a3eb--libfile_cd4a53244b8c81918ddcb2dd67a1fd5d--2026-2609.23130-inference-control-plane-synthesis-research-20261022-2201-scheduled-chat-0.json",
-      "worker_run_key": "20261022-2201-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.03333",
       "title": null,
       "source_url": null,
@@ -688,33 +659,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c68bf512268a--libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c68bf512268a--libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-schedul.json",
       "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.01002",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T17:50:12+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6029,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 535,
-        "limitation_chars": 858,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cd7556f48d02--libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cd7556f48d02--libfile_7cff01601c788191ab67fea6ff5fbdc2--2025-2508.01002-slai-optimal-llm-scheduling-research-20261022-1803-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261022-1803-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2602.00748",
@@ -1278,8 +1222,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3731569.3764834",
-      "title": "PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications",
-      "source_url": "https://arxiv.org/pdf/2505.07203",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-23T21:07:36+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1302,6 +1246,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b006904f30081918606ad21ad63cf54--2025-doi-10.1145-3731569.3764834-prefillonly-single-token-serving-research-20261024-0502-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7b006904f30081918606ad21ad63cf54--2025-doi-10.1145-3731569.3764834-prefillonly-single-token-serving-research-20261024-0502-scheduled-chat-00-r01.json",
       "worker_run_key": "20261024-0502-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.23130",
+      "title": "From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving",
+      "source_url": "https://arxiv.org/pdf/2609.23130",
+      "returned_at": "2026-10-23T21:19:07+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 472 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3839,
+        "body_paragraphs": 20,
+        "method_chars": 1903,
+        "method_paragraphs": 9,
+        "evaluation_chars": 472,
+        "limitation_chars": 451,
+        "insufficiency_flags": [
+          "評価説明量 472 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7c77c507bb208191a9b484f4475eb3cb--2026-2609.23130-inference-control-plane-synthesis-returned-repair-20261023-0245-scheduled-chat-45-r01-section-normalized-20261024-0445-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7c77c507bb208191a9b484f4475eb3cb--2026-2609.23130-inference-control-plane-synthesis-returned-repair-20261023-0245-scheduled-chat-45-r01-section-normaliz.json",
+      "worker_run_key": "20261024-0445-scheduled-chat-45/r02"
     }
   ]
 }
