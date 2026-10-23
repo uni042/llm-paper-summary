@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T06:47:31+00:00",
-  "record_count": 5323,
+  "updated_at": "2026-10-23T07:53:14+00:00",
+  "record_count": 5324,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82573,6 +82573,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
+    },
+    "arXiv:2601.08665": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.08665",
+      "identity_tokens": [
+        "arXiv:2601.08665"
+      ],
+      "reason": "一次要旨は視覚言語行動モデルのロボット移動で必要なときだけ明示的な思考連鎖を発動する適応推論と、過去観測を保持する視覚支援言語メモリを提案する。思考頻度の制御と永続メモリは推論効率・メモリ管理と概念上接点があるが、最終評価は実世界のナビゲーション成功・汎化であり、LLMサービングの計算資源・生成遅延の直接最適化は要旨では確認できない。",
+      "first_checked_at": "2026-10-23T07:53:14+00:00",
+      "last_checked_at": "2026-10-23T07:53:14+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
     }
   }
 }
