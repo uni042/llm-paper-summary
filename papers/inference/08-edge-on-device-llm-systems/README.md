@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（55本）
+## 自動生成の論文一覧（56本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -221,6 +221,10 @@
 - **2024-01 · [BlockFFN: Towards End-Side Acceleration-Friendly Mixture-of-Experts with Chunk-Level Activation Sparsity](2025-2507.08771-blockffn-towards-end-side-acceleration-friendly-mixture-of-experts.md)**  
   実装：[✓](https://github.com/thunlp/BlockFFN) ・ リポジトリ内被引用：5  
   要点: BlockFFNは、混合専門家（Mixture-of-Experts; MoE）の「1トークン当たりは疎でも、複数トークンをまとめるとほぼ全専門家が必要になる」という弱点を狙う。
+
+- **2024-08 · [Squid: Long Context as a New Modality for Energy-Efficient On-Device Language Models](2024-2408.15518-squid-long-context-as-a-new-modality-for-energy-efficient-on-device-lang.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Squidは、長文脈を扱う言語モデルの入力処理を小型モデルへ移し、回答を生成する大型モデルには短い潜在表現だけを渡す方式である。原著は単一のNVIDIA A100 80GB上で、直接Qwen2-7Bへ入力する方式の平均推論時間20.71秒に対してSquidは4.32秒、比率4.79倍を報告する。
 
 ### 4年前（2022-11〜2023-10）
 

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（60本）
+## 自動生成の論文一覧（61本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -237,6 +237,10 @@
 - **2024-02 · [Benchmarking and Dissecting the Nvidia Hopper GPU Architecture](2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   Hopper世代のGPUは第4世代テンソル Core、8ビット浮動小数点（FP8）、ワープグループ行列積（wgmma）、動的計画法命令（DPX）、テンソルメモリアクセラレータ（TMA）、分散共有メモリ（DSM）を備える。しかし仕様表のピーク演算量や帯域だけでは、行列形状、オペランド配置、電力、精度変換、カーネル起動の費用を含む実性能は分からない。
+
+- **2024-09 · [Art and Science of Quantizing Large-Scale Models: A Comprehensive Overview](2024-2409.11650-art-and-science-of-quantizing-large-scale-models-a-comprehensive-overvie.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、大規模モデルの量子化（量子化）を、重みと活性値の数値表現、学習後量子化（post-学習 量子化; PTQ）、量子化認識学習（量子化-aware 学習; QAT）、知識蒸留（knowledge distillation）、鍵・値キャッシュ（key-value キャッシュ; KV キャッシュ）の圧縮という複数の切り口から整理した概説論文である。
 
 ### 4年前（2022-11〜2023-10）
 

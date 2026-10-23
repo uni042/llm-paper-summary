@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（927本）
+## 自動生成の論文一覧（928本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1909,6 +1909,10 @@
 - **2026-01 · [GlimpRouter: Efficient Collaborative Inference by Glimpsing One Token of Thoughts](2026-2601.05110-glimprouter-efficient-collaborative-inference-by-glimpsing-one-token-of-.md)**  
   実装：[✓](https://github.com/Zengwh02/GlimpRouter) ・ リポジトリ内被引用：0  
   大規模推論モデルは長い思考過程を生成するため、回答までの待ち時間と計算費用が大きい。トークン単位で常時切り替えると、判定とモデル切替が頻繁になりやすい。
+
+- **2026-01 · [Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths](2026-2601.06463-gecko-an-efficient-neural-architecture-inherently-processing-sequences-w.md)**  
+  実装：[✓](https://github.com/XuezheMax/gecko-llm) ・ リポジトリ内被引用：0  
+  Geckoは、従来のTransformerで長い系列を扱う際の二乗注意計算と、固定窓に分割する方式で過去の情報が失われる問題を、モデル構造そのものから扱う研究である。
 
 - **2026-01 · [Fast-ThinkAct: Efficient Vision-Language-Action Reasoning via Verbalizable Latent Planning](2026-2601.09708-fast-thinkact-efficient-vision-language-action-reasoning-via-verbalizabl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

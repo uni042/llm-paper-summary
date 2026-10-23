@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（436本）
+## 自動生成の論文一覧（437本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1041,6 +1041,10 @@
 - **2025-12 · [MS-SSM: A Multi-Scale State Space Model for Efficient Sequence Modeling](2025-2512.23824-ms-ssm-a-multi-scale-state-space-model-for-efficient-sequence-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   状態空間モデル（state space モデル; SSM）は、過去の情報を有限次元の内部状態へ圧縮し、入力を逐次取り込むことで長い系列を効率よく処理する。ListOpsの階層演算予測ではMambaの38.02%に対してMS-SSM(S6)は63.04%、MS-SSM(S4)は62.83%を報告する。
+
+- **2025-12 · [Efficient Mixture-of-Agents Serving via Tree-Structured Routing, Adaptive Pruning, and Dependency-Aware Prefill-Decode Overlap](2025-2512.18126-efficient-mixture-of-agents-serving-via-tree-structured-routing-adaptive.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FaSTeR-MoAは、複数の大規模言語モデル（large language モデル、LLM）が候補回答を生成し、別のモデルが統合するエージェント混合（mixture of agents、MoA）の推論処理を高速化する方式である。
 
 - **2025-11 · [Safety-Preserving PTQ via Contrastive Alignment Loss](2025-2511.07842-safety-preserving-ptq-via-contrastive-alignment-loss.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（153本）
+## 自動生成の論文一覧（154本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -365,6 +365,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [Kernel-Smith: A Unified Recipe for Evolutionary Kernel Optimization](2026-2603.28342-kernel-smith-a-unified-recipe-for-evolutionary-kernel-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLM推論エンジンの実効性能は、モデル演算そのものだけでなく、GPU上で実行される個別カーネルの融合、メモリ移動、起動費用、並列化に左右される。しかし一度だけコードを生成する方式は、コンパイルできても数値が間違っていたり、正しくても実測速度が遅かったりする。
+
+- **2026-02 · [RaBiT: Residual-Aware Binarization Training for Accurate and Efficient LLMs](2026-2602.05367-rabit-residual-aware-binarization-training-for-accurate-and-efficient-ll.md)**  
+  実装：[✓](https://github.com/SamsungLabs/RaBiT) ・ リポジトリ内被引用：0  
+  RaBiT（Residual-Aware Binarization 学習）は、複数の二値行列の和によって全精度の重みを近似する残差二値化（residual binarization）を、量子化認識学習（量子化-aware 学習; QAT）で安定させる方式である。
 
 - **2026-02 · [OptiML: An End-to-End Framework for Program Synthesis and CUDA Kernel Optimization](2026-2602.12305-optiml-an-end-to-end-framework-for-program-synthesis-and-cuda-kernel-opt.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
