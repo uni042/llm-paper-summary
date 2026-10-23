@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T14:48:52+00:00",
-  "record_count": 5336,
+  "updated_at": "2026-10-23T14:51:41+00:00",
+  "record_count": 5338,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82742,6 +82742,34 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "FPMoE: A Sparse Mixture-of-Experts Approach to Functional Code Generation"
+    },
+    "arXiv:2504.06704": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.06704",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2504.06704",
+        "arXiv:2504.06704"
+      ],
+      "reason": "一次論文§4では循環行列をFFTで乗算するO(N log N)の注意演算を提案するが、§5.1では自己回帰の因果制約を課すとO(N²)に戻ると明記する。表2でGPT-2 smallの因果言語モデルPPLは標準27.84に対しCAT 32.36と悪化し、実験対象もGPT-2 smallとTransformer-XLでありLLMサービングの実測はない。効率的注意機構として理論的な関連はあるが、現行のLLM自己回帰推論基盤へ直接適用できる高速化は未実証。",
+      "first_checked_at": "2026-10-23T14:51:40+00:00",
+      "last_checked_at": "2026-10-23T14:51:40+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CAT: Circular-Convolutional Attention for Sub-Quadratic Transformers"
+    },
+    "arXiv:2605.09735": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09735",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.09735",
+        "arXiv:2605.09735"
+      ],
+      "reason": "KVキャッシュの物理配置と静的グラフ実行を調停する提案はLLMサービングに直接関連する。しかしarXivの2026年6月30日v2で著者が論文を取り下げ、結果の解釈と主要結論を左右する実質的な誤りがあるため現版を信頼しないよう明記している。一次研究として採録するには訂正版・再検証が必要。",
+      "first_checked_at": "2026-10-23T14:51:41+00:00",
+      "last_checked_at": "2026-10-23T14:51:41+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "KV-RM: Regularizing KV-Cache Movement for Static-Graph LLM Serving"
     }
   }
 }
