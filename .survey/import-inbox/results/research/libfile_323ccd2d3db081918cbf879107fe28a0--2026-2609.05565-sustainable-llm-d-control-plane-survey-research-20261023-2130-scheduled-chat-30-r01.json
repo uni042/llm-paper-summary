@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6cf183e48266a94156c1bb557e36e045ef505c088728ac305f6986d1663cbcad",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_323ccd2d3db081918cbf879107fe28a0--2026-2609.05565-sustainable-llm-d-control-plane-survey-research-20261023-2130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.05565",
+  "worker_completed_at": "2026-10-23T21:30:00+09:00",
+  "worker_run_key": "20261023-2130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5535,
+    "body_paragraphs": 31,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 926,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-23T16:16:59+00:00"
+}
