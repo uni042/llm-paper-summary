@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T04:50:05+00:00",
+  "updated_at": "2026-10-23T06:46:04+00:00",
   "record_count": 12443,
   "records": {
     "arXiv:2303.08774": {
@@ -45674,9 +45674,9 @@
         "DOI:10.48550/arxiv.2609.19909",
         "arXiv:2609.19909"
       ],
-      "reason": "一次要旨を確認。Xronosは異種エッジCPU間の共同LLM微調整で、CPUの計算・通信競合と高速ノードの待機を軽減するため、計測に基づく異種性対応のテンソル分割を行う。比較対象に対し微調整時間を18〜56%短縮し、端末遊休時間を約5.9倍削減するという学習実験である。LLMの生成推論・サービング性能改善を評価する研究ではなく、学習単独最適化の凍結範囲に該当するため対象外。",
+      "reason": "一次要旨は異種CPU端末での協調LLM微調整に特化する。テンソル並列の負荷分割で学習時間を既存テンソル並列比18%、パイプライン並列比56%短縮するが、測定対象は勾配を伴う微調整とCPU待機率であり、デコード時の推論遅延・サービング性能は評価されない。学習単独最適化のため現行収録対象外。",
       "first_checked_at": "2026-10-05T06:23:11+00:00",
-      "last_checked_at": "2026-10-18T10:51:28+00:00",
+      "last_checked_at": "2026-10-23T06:46:04+00:00",
       "linked_from": [
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md"
       ],
@@ -164929,9 +164929,9 @@
         "id:arXiv:2403.01232",
         "url:https://arxiv.org/abs/2403.01232"
       ],
-      "reason": "一次要旨はグラフ変換器の多項式表現力と線形計算量を両立する局所・大域注意を提案し、同質・異質グラフの13データセットでグラフ学習精度を比較する。対象はグラフニューラルネットワークであり、自己回帰LLMの学習・推論基盤やKVキャッシュ、GPU実装の性能改善を直接扱わない。",
+      "reason": "一次要旨はグラフTransformerの多項式表現力と線形計算量を両立させる局所・大域注意を提案し、13種類のグラフデータセットでノード分類等を評価する。計算量削減はあるが、対象はグラフニューラルネットワークの表現力であり、自己回帰言語生成、LLMサービング、KVキャッシュ等への適用は示されていない。",
       "first_checked_at": "2026-10-12T21:38:02+00:00",
-      "last_checked_at": "2026-10-22T14:50:46+00:00",
+      "last_checked_at": "2026-10-23T06:46:02+00:00",
       "linked_from": [],
       "title": "Polynormer: Polynomial-Expressive Graph Transformer in Linear Time"
     },
@@ -168310,9 +168310,9 @@
         "DOI:10.48550/arxiv.2403.18421",
         "arXiv:2403.18421"
       ],
-      "reason": "一次要旨はPubMed文献で学習した27億パラメータ言語モデルの公開と医療QAにおける微調整・正答精度を評価する。小型化による実行コストの動機はあるが、モデル訓練・領域特化性能が研究の中心で、LLM推論基盤の新しい実装や資源最適化機構は提示していない。",
+      "reason": "一次要旨は、PubMedの要旨・論文本文だけで学習した27億パラメータの医療言語モデルを公開し、医療質問応答の正解率を評価する。小規模モデルの実行費用に触れるが、主な貢献は医療特化学習とタスク品質であり、推論ランタイム、量子化、オフロード、サービングなどのシステム最適化機構は提案していない。",
       "first_checked_at": "2026-10-13T13:47:00+00:00",
-      "last_checked_at": "2026-10-22T15:36:19+00:00",
+      "last_checked_at": "2026-10-23T06:46:01+00:00",
       "linked_from": [],
       "title": "BioMedLM: A 2.7B Parameter Language Model Trained On Biomedical Text"
     },
@@ -179236,19 +179236,6 @@
       "linked_from": [],
       "title": "Expert Routing for Communication-Efficient MoE via Finite Expert Banks"
     },
-    "arXiv:2407.18370": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2407.18370",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2407.18370",
-        "arXiv:2407.18370"
-      ],
-      "reason": "ICLR 2025公式要旨はLLM審判の人間判断との一致を信頼度校正・選択的評価・階層的な判定モデルで保証する方法を提案する。安価な審判モデルへの振分けで評価費用を抑えるが、主眼はモデル評価の校正と合意保証で、LLM推論サービングの資源・カーネル・通信・メモリ効率を改善する基盤技術ではないため対象外。",
-      "first_checked_at": "2026-10-22T15:52:07+00:00",
-      "last_checked_at": "2026-10-22T15:52:07+00:00",
-      "linked_from": [],
-      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement"
-    },
     "DOI:10.1609/aaai.v36i10.21354": {
       "classification": "unrelated",
       "canonical_id": "DOI:10.1609/aaai.v36i10.21354",
@@ -179344,6 +179331,18 @@
       "last_checked_at": "2026-10-22T21:13:44+00:00",
       "linked_from": [],
       "title": "A fire monitoring and alarm system based on channel-wise pruned YOLOv3"
+    },
+    "arXiv:2204.13767": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.13767",
+      "identity_tokens": [
+        "arXiv:2204.13767"
+      ],
+      "reason": "一次要旨は、多変量時系列予測でパッチ注意と三角形の層縮小により系列長に線形の計算量を実現し、変数別の投影パラメータで予測精度を高める方式を示す。評価対象は時系列予測4データセットの精度・効率であり、生成LLMの自己回帰復号、推論サービング、KVキャッシュ最適化への適用は示されていない。",
+      "first_checked_at": "2026-10-23T06:46:02+00:00",
+      "last_checked_at": "2026-10-23T06:46:02+00:00",
+      "linked_from": [],
+      "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
     }
   }
 }
