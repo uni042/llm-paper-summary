@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T17:51:12+00:00",
-  "record_count": 12453,
+  "updated_at": "2026-10-23T19:53:15+00:00",
+  "record_count": 12454,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179466,6 +179466,18 @@
       "last_checked_at": "2026-10-23T17:51:12+00:00",
       "linked_from": [],
       "title": "Neural dynamical systems on ferroelectric compute-in-memory for real-time forecasting"
+    },
+    "DOI:10.1016/j.neunet.2025.108459": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neunet.2025.108459",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2025.108459"
+      ],
+      "reason": "一次要旨で実験対象が長系列時系列予測（LSTF）と音声生成であることを確認。線形時不変SSMの周波数領域近似と連続時間モデルのパラメータ共有を高速化する研究で、LLM推論・学習、Transformer/LLM向けSSMモデル、言語モデルの評価は提示されない。LLM推論基盤サーベイの対象から外す。",
+      "first_checked_at": "2026-10-23T19:53:15+00:00",
+      "last_checked_at": "2026-10-23T19:53:15+00:00",
+      "linked_from": [],
+      "title": "fastiSSM: Fast inference of state space model with online model approximation in frequency-domain"
     }
   }
 }

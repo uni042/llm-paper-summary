@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b64aef8d8a5b1b98-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1016/j.neunet.2025.108459",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1016/j.neunet.2025.108459",
+    "identity_tokens": [
+      "DOI:10.1016/j.neunet.2025.108459"
+    ],
+    "reason": "一次要旨で実験対象が長系列時系列予測（LSTF）と音声生成であることを確認。線形時不変SSMの周波数領域近似と連続時間モデルのパラメータ共有を高速化する研究で、LLM推論・学習、Transformer/LLM向けSSMモデル、言語モデルの評価は提示されない。LLM推論基盤サーベイの対象から外す。",
+    "first_checked_at": "2026-10-23T19:53:15+00:00",
+    "last_checked_at": "2026-10-23T19:53:15+00:00",
+    "linked_from": [],
+    "title": "fastiSSM: Fast inference of state space model with online model approximation in frequency-domain"
+  },
+  "processed_at": "2026-10-23T19:53:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b64aef8d8a5b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
