@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261023-1445-scheduled-chat-45/r01/research-prescreen-014",
+  "reference_main_sha": "8268f9266745b107c1a8c4843b9247bbaf6a62da",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.10120",
+      "identity_tokens": [
+        "arxiv:2601.10120"
+      ],
+      "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems",
+      "reason": "一次要旨は複数LLMエージェント間の対話を逐次繰り返さず、一度の通信トポロジー生成で異種の相互作用を決める方式を提案し、トークン消費を46.41%削減しつつ平均タスク性能を1.50%改善したと報告する。生成トークン数と多エージェント遅延削減は推論費用と直接接点があるが、中心はエージェント協調方式で、LLMランタイム・GPUスケジューラ・KVキャッシュの一般的最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2601.10120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T14:48:13+09:00",
+      "last_checked_at": "2026-10-23T14:48:13+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 14
+    }
+  ]
+}
