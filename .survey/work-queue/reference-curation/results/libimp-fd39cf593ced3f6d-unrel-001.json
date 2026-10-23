@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fd39cf593ced3f6d-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.06804",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.06804",
+    "identity_tokens": [
+      "arXiv:2604.06804"
+    ],
+    "reason": "一次要旨の対象はデータベースのSQLクエリ書換え。SQL-MCTSで遅いSQL例を生成し、SQL-GRPOで小型言語モデルの書換え能力を訓練する。改善指標は書換え後SQLの実行効率とデータセット・学習方法であり、LLM推論エンジン、KVキャッシュ、サービング、MoE実行などの高速化を提案・評価する研究ではない。",
+    "first_checked_at": "2026-10-23T14:48:54+00:00",
+    "last_checked_at": "2026-10-23T14:48:54+00:00",
+    "linked_from": [],
+    "title": "LASER: A Data-Centric Method for Low-Cost and Efficient SQL Rewriting based on SQL-GRPO"
+  },
+  "processed_at": "2026-10-23T14:48:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fd39cf593ced",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

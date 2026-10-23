@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T08:43:00+00:00",
-  "record_count": 5335,
+  "updated_at": "2026-10-23T14:48:52+00:00",
+  "record_count": 5336,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82729,6 +82729,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "You Only Scan Once: Efficient Multi-dimension Sequential Modeling with LightNet"
+    },
+    "arXiv:2605.27849": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27849",
+      "identity_tokens": [
+        "arXiv:2605.27849"
+      ],
+      "reason": "一次要旨ではHaskell・OCaml・Scalaの関数型コード生成精度向上を主目的とし、言語別3専門家と共通専門家を持つ疎なMoE構成を提案する。稼働パラメータ3Bという推論コストに関係する情報はあるが、エキスパート配置・GPU実行・通信・推論速度やメモリ管理の最適化を主要貢献として検証していない。MoEアーキテクチャとの接点はあるため対象外確定ではなく境界的と判定。",
+      "first_checked_at": "2026-10-23T14:48:52+00:00",
+      "last_checked_at": "2026-10-23T14:48:52+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "FPMoE: A Sparse Mixture-of-Experts Approach to Functional Code Generation"
     }
   }
 }

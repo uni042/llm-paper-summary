@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T08:43:00+00:00",
-  "record_count": 12443,
+  "updated_at": "2026-10-23T14:48:54+00:00",
+  "record_count": 12448,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179341,6 +179341,67 @@
       "last_checked_at": "2026-10-23T08:43:00+00:00",
       "linked_from": [],
       "title": "ImpRAG: Retrieval-Augmented Generation with Implicit Queries"
+    },
+    "DOI:10.1109/ipdpsw63119.2024.00187": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ipdpsw63119.2024.00187",
+      "identity_tokens": [
+        "DOI:10.1109/ipdpsw63119.2024.00187"
+      ],
+      "reason": "Pythonの一般的なタスク並列化の分析が主題であり、LLM推論エンジン、MoE、KVキャッシュ、LLMモデル圧縮、生成要求のサービングを研究対象として明示していない。タイトルから対象領域外と判断する。",
+      "first_checked_at": "2026-10-23T14:48:51+00:00",
+      "last_checked_at": "2026-10-23T14:48:51+00:00",
+      "linked_from": [],
+      "title": "A Deep Dive into Task-Based Parallelism in Python"
+    },
+    "DOI:10.1016/j.eswa.2026.133227": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133227",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133227"
+      ],
+      "reason": "タイトルが研究対象を文脈欠落したウェブマークアップ文の翻訳と明示しており、並列・選択的なQ&A駆動のLLM翻訳手法を扱う。LLM推論基盤、GPUメモリ、推論カーネル、モデルサービングの改善を示す主題ではない。タイトル段階の対象外判定であり、翻訳品質・速度など本文の実験結果は未確認。",
+      "first_checked_at": "2026-10-23T14:48:52+00:00",
+      "last_checked_at": "2026-10-23T14:48:52+00:00",
+      "linked_from": [],
+      "title": "Overcoming contextless web markup text translation: A parallel and selective Q&A-driven LLM approach"
+    },
+    "DOI:10.1007/s44443-025-00071-w": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s44443-025-00071-w",
+      "identity_tokens": [
+        "DOI:10.1007/s44443-025-00071-w"
+      ],
+      "reason": "特定分野のウェブサイトに対してLLMエージェントがXPathを自動生成するアプリケーション研究であり、LLM推論のメモリ・カーネル・実行スケジューリング等の基盤最適化を主題としない。タイトルで生成物と適用先がXPathに限定されるため先行除外する。",
+      "first_checked_at": "2026-10-23T14:48:52+00:00",
+      "last_checked_at": "2026-10-23T14:48:52+00:00",
+      "linked_from": [],
+      "title": "Automatic XPath generation agents for vertical websites by LLMs"
+    },
+    "arXiv:2503.08719": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.08719",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.08719",
+        "arXiv:2503.08719"
+      ],
+      "reason": "ウェアラブル医用画像処理向けU-Netの量子化ビット幅を学習可能にする研究であり、生成LLMやLLMサービング向けの量子化ではない。タイトルから医用画像用U-Netへの適用が明白なため先行除外する。",
+      "first_checked_at": "2026-10-23T14:48:53+00:00",
+      "last_checked_at": "2026-10-23T14:48:53+00:00",
+      "linked_from": [],
+      "title": "QuantU-Net: Efficient Wearable Medical Imaging Using Bitwidth as a Trainable Parameter"
+    },
+    "arXiv:2604.06804": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06804",
+      "identity_tokens": [
+        "arXiv:2604.06804"
+      ],
+      "reason": "一次要旨の対象はデータベースのSQLクエリ書換え。SQL-MCTSで遅いSQL例を生成し、SQL-GRPOで小型言語モデルの書換え能力を訓練する。改善指標は書換え後SQLの実行効率とデータセット・学習方法であり、LLM推論エンジン、KVキャッシュ、サービング、MoE実行などの高速化を提案・評価する研究ではない。",
+      "first_checked_at": "2026-10-23T14:48:54+00:00",
+      "last_checked_at": "2026-10-23T14:48:54+00:00",
+      "linked_from": [],
+      "title": "LASER: A Data-Centric Method for Low-Cost and Efficient SQL Rewriting based on SQL-GRPO"
     }
   }
 }
