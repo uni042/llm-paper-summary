@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-0900-scheduled-chat-00/r01/research-prescreen-037",
+  "reference_main_sha": "ee48984f2ca01677e114dfc8eb2748a31714a223",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.01415",
+      "identity_tokens": [
+        "arxiv:2610.01415",
+        "doi:10.48550/arxiv.2610.01415"
+      ],
+      "title": "Beyond Memory: Harnessing Long-Horizon Agents with Explicit Belief States",
+      "reason": "一次要旨に基づく。長期実行LLMエージェントに明示的な信念状態を維持し、整合性検証・進捗停滞検知・復帰処理によって行動成功率と長文脈耐性を改善する。推論時の履歴・文脈管理とは関連するが、KVキャッシュ圧縮、生成エンジン、GPUメモリ、スループットやトークン遅延の直接的な定量評価は要旨にない。したがって推論基盤サーベイの中心領域からは外れ、周辺候補として微妙とする。",
+      "source_url": "https://arxiv.org/abs/2610.01415",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T09:04:23+09:00",
+      "last_checked_at": "2026-10-23T09:04:23+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 37
+    }
+  ]
+}
