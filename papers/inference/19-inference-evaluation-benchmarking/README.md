@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（59本）
+## 自動生成の論文一覧（60本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -73,6 +73,10 @@
 - **2026-08 · [Beyond Tokens: A Survey on Decoding Methods for Large Language and Vision-Language Models](2026-2608.14797-beyond-tokens-a-survey-on-decoding-methods-for-large-language-and-vision.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対象はモデルの重みを更新する学習ではなく、既存モデルが出力した確率分布を、推論時にどのようなトークン列へ変換するかという復号（デコード）の設計である。表1の年代と分類は文献整理の結果であり、速度・品質の絶対値や改善倍率を示す統一ベンチマークではない。
+
+- **2026-07 · [Rethinking the Generation Order of Block Diffusion Language Models](2026-2607.24306-rethinking-the-generation-order-of-block-diffusion-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ブロック内の位置は任意順で確定できるように見えるが、既存の並列サンプリング方式をそのまま移植すると、先の位置だけを確定して前方の未確定位置を残し、コードや推論の構造を壊す場合がある。
 
 - **2026-07 · [CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents](2026-2607.22711-corvus-context-optimization-and-reduction-via-underlying-synchronization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **2929本**。
+収録論文: **2930本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**2929本**。
+推論論文：**2930本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -57,6 +57,6 @@
 | [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 67 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 26 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/) |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/18-pipeline-native-cpu-inference/) |
-| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 59 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
+| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 60 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
 | [99-other-inference-systems](99-other-inference-systems/README.md) | 977 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
 <!-- survey:auto:end -->

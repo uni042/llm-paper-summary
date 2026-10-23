@@ -35,10 +35,15 @@
   "selection_reason": "一次資料の本文でPARDを確認。block diffusion language model向けのtraining-free plug-in samplerとして、確信度の高い左端prefixを並列commitし、既存dLLMの生成順とsampling policyを改善する。3モデル・6ベンチマークで品質と速度を比較し、論文のtoken/s表ではpure ARに対し最大3.64倍のdecode throughputを報告する。token unmask/commit orderおよびdenoising iterationを中心に最適化するため、提案するDiffusion LLM Decodingの境界に合う。",
   "semantic_scholar_id": "0ba1f48c3f9b42b551f6bc70207a6c86c4e4e63b",
   "source_url": "https://arxiv.org/abs/2607.24306",
-  "status": "ready",
+  "status": "superseded",
   "title": "Rethinking the Generation Order of Block Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-23T00:49:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2607.24306-rethinking-the-generation-order-of-block-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2607.24306",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
