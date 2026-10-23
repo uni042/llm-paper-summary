@@ -32,6 +32,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   CXLハイブリッドメモリ内のDRAM+NVMeをTB級の遠隔メモリとして公開し、重みと長文KVの予測可能なアクセスを多段DMA先読み・読出し優先I/Oで隠して、CPU DRAMを超える推論状態を保持する階層メモリ方式。
 
+- **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
+
 - **2025-11 · [In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading](2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   本論文は、GPUメモリに全専門家重みを置けない混合専門家モデル（MoE）の推論について、CPUメモリからの重み転送を削減するキャッシュと、次層で必要になる専門家を早めに予測する先読みを分析する。実測では、A6000上の固定プロンプトにおける生成速度がLRUの2.34トークン毎秒からLFUの4.32トークン毎秒へ改善し、約84.6%の速度向上を報告する。
@@ -75,10 +79,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-02 · [DALI: A Workload-Aware Offloading Framework for Efficient MoE Inference on Local PCs](2026-2602.03495-dali-workload-aware-moe-offloading-local-pcs.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   DALIは入力ごとの専門家負荷を測ってCPU/GPU配置を各層で動的に変え、残差から次層を先読みし負荷履歴でGPUキャッシュを交換して、ローカルPCのPCIe待ちを減らす。
-
-- **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
 
 - **2026-01 · [FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices](2026-2601.17063-flashmoe-ssd-io-cache-replacement.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

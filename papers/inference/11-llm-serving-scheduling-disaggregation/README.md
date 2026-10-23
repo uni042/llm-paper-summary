@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：254  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：255  
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
@@ -21,7 +21,7 @@
   ツール呼出しを挟む多ターンLLMエージェントで、ツール待ち時間・KV再構築費用・残りターンを見てKVキャッシュの保持期限を動的に決め、短い待ちではGPUに固定し長い待ちでは解放してターン間待ちを減らすスケジューラ。
 
 - **2026-07 · [Kimi K3: Open Frontier Intelligence](2026-2607.24653-kimi-k3-open-frontier-intelligence.md)**  
-  実装：✓ ・ リポジトリ内被引用：22  
+  実装：✓ ・ リポジトリ内被引用：23  
   KDA状態とMLAのKVを統合する接頭辞キャッシュ、512トークン境界の再利用、クラスタ親和ルーティングを記述するKimi K3技術報告。配信機構は具体的だが、節内に比較測定はない。
 
 - **2025-12 · [TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale](2025-2512.18194-tract-rack-scale-cxl-shared-kv.md)**  
@@ -33,7 +33,7 @@
   地域ごとに異なるLLM推論需要を別地域へ逃がしつつ、接頭辞木でKVキャッシュ共有と要求待ち行列を見て経路を選び、同等処理量を9台で達成して費用を25%削減する。
 
 - **2026-04 · [Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter](2026-2604.15039-prefill-as-a-service-cross-datacenter-kv-cache.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   KVキャッシュ量が小さいハイブリッド注意機構を利用し、長い未キャッシュ入力のプリフィルだけを遠隔GPU群へ振り分け、KVをデータセンター間転送して異種GPU資源の利用効率と処理能力を高める。
 
 - **2026-09 · [GreenLLM: SLO-Aware Dynamic Frequency Scaling for Energy-Efficient LLM Serving](2025-2508.16449-greenllm-slo-aware-dvfs-serving.md)**  
@@ -52,21 +52,21 @@
   実装：✓ ・ リポジトリ内被引用：8  
   反復する道具系列と引数依存から次の具体的な道具呼出しを先行実行し、言語モデル側の混雑も共同制御して平均タスク完了時間を最大43.5%削減する。
 
+- **2026-02 · [DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving](2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md)**  
+  実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：8  
+  DualMapは、分散LLM推論でプロンプト接頭辞のKVキャッシュを再利用したいという要求と、各推論インスタンスへ負荷を均等に分けたいという要求の衝突を解く配車方式である。ICLR 2026の論文は、vLLMを用いた分散推論クラスタで実際の会話・ツール利用負荷を評価し、同じTTFT目標を満たす有効要求容量を既存方式比で最大2.25倍に改善したと報告する。
+
 - **2026-04 · [Introspective Diffusion Language Models](2026-2604.11035-introspective-diffusion-language-models.md)**  
   実装：[✓](https://github.com/Introspective-Diffusion/I-DLM) ・ リポジトリ内被引用：7  
   本論文は、拡散言語モデル（diffusion language モデル; DLM）が複数トークンを同時に提案できるにもかかわらず、同規模の自己回帰言語モデル（autoregressive language モデル; ARモデル）より推論品質が低く、複数要求を処理する実運用で期待ほど高速化しない原因を、生成アルゴリズムと推論エンジンの双方から調べる。
 
+- **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
+  実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：7  
+  fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
+
 - **2026-02 · [vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models](2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md)**  
   実装：[✓](https://github.com/vllm-project/vllm-omni) ・ リポジトリ内被引用：7  
   複数LLM・拡散モデル・音声/画像生成器を段階グラフへ分解し、各段階を独立バッチ・独立GPU配置・共通コネクタで実行することで、any-to-any型マルチモーダル推論を単一モデル用サービング基盤から拡張する方式。
-
-- **2026-02 · [DualMap: Enabling Both Cache Affinity and Load Balancing for Distributed LLM Serving](2026-2602.06502-dualmap-enabling-both-cache-affinity-and-load-balancing-for-distributed-.md)**  
-  実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：7  
-  DualMapは、分散LLM推論でプロンプト接頭辞のKVキャッシュを再利用したいという要求と、各推論インスタンスへ負荷を均等に分けたいという要求の衝突を解く配車方式である。ICLR 2026の論文は、vLLMを用いた分散推論クラスタで実際の会話・ツール利用負荷を評価し、同じTTFT目標を満たす有効要求容量を既存方式比で最大2.25倍に改善したと報告する。
-
-- **2026-04 · [fabric-lib: RDMA Point-to-Point Communication for LLM Systems](2026-2510.27656-fabric-lib-rdma-point-to-point-communication-for-llm-systems.md)**  
-  実装：[✓](https://github.com/perplexityai/pplx-garden) ・ リポジトリ内被引用：6  
-  fabric-libは、大規模言語モデルの分離推論、混合専門家モデルのトークン配送、非同期強化学習における重み更新を、異なるネットワーク機器でも共通の遠隔直接メモリアクセス（Remote Direct メモリ Access、RDMA）操作で実行する通信基盤である。
 
 - **2026-02 · [Efficient Multi-round LLM Inference over Disaggregated Serving](2026-2602.14516-ampd-multi-round-disaggregated-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -116,6 +116,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   セッションの初回だけ負荷分散し、後続要求はKV局所性を優先しつつ過負荷・キャッシュ消失時だけ再配置することで、エージェント配信のクラスタTPSを10〜16%改善する。
 
+- **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
+  実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：4  
+  本論文のdLLM-Serveは、出力語彙の計算を小分けにして一時活性値の上限を固定する仕組み、更新局面と再利用局面を同じ実行回に詰め合わせるスケジューラ、注意ヘッドごとに重要なトークンを選びながら鍵・値を物理的に連続配置するキャッシュ管理を統合した。
+
 - **2026-07 · [AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving](2025-2512.04013-augserve-adaptive-request-scheduling-augmented-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   外部APIや検索を待つ拡張LLMで、停止・再開状態、出力長・外部呼出し時間、KV保持・退避・再計算費用を観測して要求順位と反復トークン予算を変え、先頭待ちとGPUメモリ圧迫を減らすスケジューラ。
@@ -143,10 +147,6 @@
 - **2026-09 · [Astrolabe: Balancing Load in LLM Serving with Randomized Prediction-Guided Scheduling](2025-2508.03611-block-predictive-load-balancing.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   出力長予測とインスタンス局所シミュレーションを2択無作為配送へ統合し、KV移送なしでLLMクラスタの負荷分散を改善する。
-
-- **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
-  実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：3  
-  本論文のdLLM-Serveは、出力語彙の計算を小分けにして一時活性値の上限を固定する仕組み、更新局面と再利用局面を同じ実行回に詰め合わせるスケジューラ、注意ヘッドごとに重要なトークンを選びながら鍵・値を物理的に連続配置するキャッシュ管理を統合した。
 
 - **2026-05 · [STAR: Decode-Phase Rescheduling for LLM Inference](2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -187,6 +187,10 @@
 - **2026-07 · [SmartGen: Seamless Disaggregated LLM Inference with Selective KV Cache Transfer](2026-2607.28150-smartgen-selective-kv-cache-transfer.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   プリフィル中に重要KVだけを先送りし、デコード時は不足分をローカル読出しと並列取得、残りを背景転送へ回して、全量転送の待ちと部分転送の後続停止を減らす。
+
+- **2026-07 · [Sangam: Efficiently Serving Diffusion LLMs with the AR Stack](2026-2607.04206-sangam-diffusion-llm-serving.md)**  
+  実装：[✓](https://github.com/UT-InfraAI/sangam) ・ リポジトリ内被引用：2  
+  拡散LLMの不可分な再プリフィルをデコードの残りトークン予算と繰越不足額で受け入れ、プリフィル混雑時だけデコードGPUへ溢れさせて、待ち時間と資源偏りを抑える。
 
 - **2026-07 · [ELDR: Expert-Locality-Aware Decode Routing for PD-Disaggregated MoE Serving](2026-2607.00466-eldr-expert-locality-decode-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -252,6 +256,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   動的なエージェント記憶向けに多段インデックスキャッシュ、複数エージェント協調インデックス、CPU-GPU協調を統合し、既存メモリ基盤比で端から端まで平均4.29倍超の性能向上を示す。
 
+- **2026-02 · [Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control](2026-2602.02987-prefill-decode-contention-optimal-control.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  大規模LLM推論で異なる入力・出力長の要求を混在処理する際、実測反復時間からプリフィル混在/デコード単独のサービス率を求め、流体最適化の占有率に追従してプリフィル受入れとデコード配置をゲート・ルート制御する研究。
+
 - **2026-02 · [GORGO: Online Tuning for Cross-Region Network-Aware LLM Serving](2026-2602.11688-gorgo-online-tuning-for-cross-region-network-aware-llm-serving.md)**  
   実装：[✓](https://github.com/atoniolo76/GORGO) ・ リポジトリ内被引用：2  
   接頭辞再利用率だけを最大化すると負荷が一部のサーバーへ集中し、空いているサーバーを選ぶだけでは長い接頭辞を再計算してしまう。地域間の通信遅延が数十〜数百ミリ秒以上変動する場合、二つの指標だけを考慮する方式では、最初のトークンが返るまでの時間を適切に見積もれない。
@@ -299,10 +307,6 @@
 - **2026-07 · [Serving Agentic Workflows with a Physical-Plan Compiler and Adaptive Runtime](2026-2607.02942-dyserve-agentic-physical-plan-runtime.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   モデル・検証・実行先をワークフロー全体で共同選択し、混雑度別の事前計画を未送信部分だけ切り替えることで、品質を保ちながらエージェント処理の遅延と有効スループットを改善する。
-
-- **2026-07 · [Sangam: Efficiently Serving Diffusion LLMs with the AR Stack](2026-2607.04206-sangam-diffusion-llm-serving.md)**  
-  実装：[✓](https://github.com/UT-InfraAI/sangam) ・ リポジトリ内被引用：1  
-  拡散LLMの不可分な再プリフィルをデコードの残りトークン予算と繰越不足額で受け入れ、プリフィル混雑時だけデコードGPUへ溢れさせて、待ち時間と資源偏りを抑える。
 
 - **2026-07 · [Robust KV Cache Management for LLM Serving under Output Token Length Uncertainty](2026-2607.16892-robust-kv-cache-management-output-length-uncertainty.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -376,6 +380,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   現在のGPU負荷だけでなく、配置後に残るモデル常駐・親出力局所性・接頭辞再利用を有限先読みで評価し、ワークフローDAGの次段階に有利な状態を残すスケジューラ。
 
+- **2026-05 · [Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs](2026-2605.18165-elastic-dllm-position-preserving-context-compression-and-augmentation-of.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Elastic-dLLMは、この計算を削減する一方で、各[MASK]の位置情報と終端位置が持つ意味を維持する、追加学習不要の推論時方式である。LLaDA-1.5でElastic単独1.52倍、Fast-dLLMとの併用7.28倍という速度倍率を報告する。
+
 - **2026-05 · [DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback](2026-2605.22781-deltabox-agent-sandbox-checkpoint-rollback.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ファイルとプロセスの連続状態差分だけを保存し、動的overlay層切替と凍結テンプレートforkを組み合わせて、状態を持つAIエージェントのチェックポイント・ロールバックをミリ秒級にする。
@@ -431,10 +439,6 @@
 - **2026-02 · [PASCAL: A Phase-Aware Scheduling Algorithm for Serving Reasoning-based Large Language Models](2026-2602.11530-pascal-phase-aware-reasoning-llm-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   推論型大規模言語モデルの非表示推論と表示回答を別の利用者目標として扱い、優先度待ち行列・出力平滑化・フェーズ境界での鍵値キャッシュ移行により、最初の回答が見えるまでの裾の待ち時間を最大七十二パーセント削減する。
-
-- **2026-02 · [Large-Scale LLM Inference with Heterogeneous Workloads: Prefill-Decode Contention and Asymptotically Optimal Control](2026-2602.02987-prefill-decode-contention-optimal-control.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  大規模LLM推論で異なる入力・出力長の要求を混在処理する際、実測反復時間からプリフィル混在/デコード単独のサービス率を求め、流体最適化の占有率に追従してプリフィル受入れとデコード配置をゲート・ルート制御する研究。
 
 - **2026-02 · [FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving](2026-2602.16603-flowprefill-operator-level-preemption.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -898,10 +902,6 @@
   実装：[✓](https://github.com/ProjectDMX/DMI) ・ リポジトリ内被引用：0  
   本論文が対象とするのは、大規模言語モデル（LLM）の出力やGPU使用率だけでなく、推論中に生成される残差流、注意機構の射影、隠れ状態、全結合層の活性値などを継続的に取り出すシステムである。H100 80GBを使うオフライン推論では、観測点を多数設置しても、元の推論に対する追加時間は0.4～6.8%（柔軟な観測点を使う条件の平均3.6%）だった。
 
-- **2026-05 · [Elastic-dLLM: Position Preserving Context Compression and Augmentation of Diffusion LLMs](2026-2605.18165-elastic-dllm-position-preserving-context-compression-and-augmentation-of.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Elastic-dLLMは、この計算を削減する一方で、各[MASK]の位置情報と終端位置が持つ意味を維持する、追加学習不要の推論時方式である。LLaDA-1.5でElastic単独1.52倍、Fast-dLLMとの併用7.28倍という速度倍率を報告する。
-
 - **2026-05 · [DisagFusion: Asynchronous Pipeline Parallelism and Elastic Scheduling for Disaggregated Diffusion Serving](2026-2605.25550-disagfusion-asynchronous-pipeline-parallelism-and-elastic-scheduling-for.md)**  
   実装：[✓](https://github.com/ModelTC/LightX2V) ・ リポジトリ内被引用：0  
   DisagFusionは、画像・動画を生成する拡散モデル（diffusion モデル）の配信を、符号化器（Encoder）、拡散Transformer（Diffusion Transformer、DiT）、復号器（Decoder）の三段階に分離するシステムである。
@@ -1220,6 +1220,10 @@
   実装：✓ ・ リポジトリ内被引用：10  
   二つの段階を同じGPU群で混在させる同居方式は、片方を最適化するともう片方が悪化しやすい。
 
+- **2025-04 · [FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling](2025-2504.03775-flowkv-low-latency-transfer-load-aware.md)**  
+  実装：✓ ・ リポジトリ内被引用：10  
+  KVキャッシュを連続セグメントへ寄せてNCCL転送をまとめ、全体負荷に応じてプリフィル／デコード役割も切り替える分離推論基盤。転送遅延を最大96.8%削減し、LongBenchで15.2〜48.9%短縮。
+
 - **2025-03 · [Seesaw: High-throughput LLM Inference via Model Re-sharding](2025-2503.06433-seesaw-high-throughput-llm-inference-via-model-re-sharding.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
   プリフィルとデコードでモデルの並列分割を動的に切り替え、CPU階層KVバッファと遷移最小化で再配置費用を償却し、vLLM比最大1.78倍・平均1.36倍のスループットを達成する。
@@ -1231,10 +1235,6 @@
 - **2025-05 · [HydraInfer: Hybrid Disaggregated Scheduling for Multimodal Large Language Model Serving](2025-2505.12658-hydrainfer-hybrid-epd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   画像符号化・入力処理・デコードを異種段階として扱い、負荷とSLOに応じてE+P+D、EP+D、ED+Pを選ぶ混成分離と段階別バッチ・二重ストリームを組み合わせ、マルチモーダル配信のグッドプットを高める。
-
-- **2025-04 · [FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling](2025-2504.03775-flowkv-low-latency-transfer-load-aware.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
-  KVキャッシュを連続セグメントへ寄せてNCCL転送をまとめ、全体負荷に応じてプリフィル／デコード役割も切り替える分離推論基盤。転送遅延を最大96.8%削減し、LongBenchで15.2〜48.9%短縮。
 
 - **2025-03 · [throttLL’eM: Predictive GPU Throttling for Energy Efficient LLM Inference Serving](2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：9  
@@ -1328,6 +1328,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   分離サービングの固定GPU配分と接頭辞キャッシュ偏在を、層単位の重み移動・注意ヘッド単位のKV移動・CPU/SSD共有KVストアで切り離し、負荷だけを見た再配置とルーティングを可能にする。
 
+- **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
+  実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：4  
+  マスクを順に外す標準的な復号では、各反復で最も確信度の高い一位置だけを確定する保守的方式が品質維持のために用いられる。LLaDA-8B-InstructのGSM8K・生成長512では、逐次確定の7.76トークン/秒を53.82トークン/秒へ、反復512回を73回へ削減し、正答率は78.24%から78.54%であった。
+
 - **2025-05 · [ELIS: Efficient LLM Iterative Scheduling System with Response Length Predictor](2025-2505.09142-elis-efficient-llm-iterative-scheduling-system-with-response-length-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   応答長を50トークンごとに再予測して短い残作業を優先し、LLM servingの先頭待ちを減らすKubernetes/vLLMスケジューラ。
@@ -1347,10 +1351,6 @@
 - **2025-10 · [MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving](2025-2510.14557-mx-pushing-the-limits-of-microscaling-formats-for-efficient-large-langua.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   しかし4ビットの浮動小数点形式では、活性の一部に現れる極端に大きな値が量子化尺度を押し上げ、他の値がゼロへ丸められることがある。
-
-- **2025-10 · [Accelerating Diffusion LLM Inference via Local Determinism Propagation](2025-2510.07081-accelerating-diffusion-llm-inference-via-local-determinism-propagation.md)**  
-  実装：[✓](https://github.com/friedrichor/LocalLeap) ・ リポジトリ内被引用：3  
-  マスクを順に外す標準的な復号では、各反復で最も確信度の高い一位置だけを確定する保守的方式が品質維持のために用いられる。LLaDA-8B-InstructのGSM8K・生成長512では、逐次確定の7.76トークン/秒を53.82トークン/秒へ、反復512回を73回へ削減し、正答率は78.24%から78.54%であった。
 
 - **2025-09 · [Ranking Before Serving: Low-Latency LLM Serving via Pairwise Learning-to-Rank](2025-2510.03243-ranking-before-serving-low-latency-llm-serving-via-pairwise-ranking.md)**  
   実装：[✓](https://github.com/SPEAR-UIC/PARS) ・ リポジトリ内被引用：3  
@@ -1487,15 +1487,15 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：574  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：575  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
-  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：535  
+  実装：[✓](https://github.com/LLMServe/DistServe) ・ リポジトリ内被引用：536  
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：450  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：451  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
@@ -1511,7 +1511,7 @@
   本研究は、対話型の大規模言語モデル（LLM）において、利用者が同じ会話を再開するたびに過去の文章を読み直して注意機構の鍵・値（KV）を作り直す無駄を、会話状態の耐久保存で削減する。原著が調べたShareGPT会話では73%が複数ターンで、長く続いた会話の新規ターンでは過去の内容に由来する再計算が事前計算時間の最大99%に達する。
 
 - **2024-01 · [Inference without Interference: Disaggregate LLM Inference for Mixed Downstream Workloads](2024-2401.11181-tetriinfer.md)**  
-  実装：✓ ・ リポジトリ内被引用：105  
+  実装：✓ ・ リポジトリ内被引用：106  
   事前充填を固定長チャンク化して復号インスタンスから分離し、生成長予測付き二段階配置で混合LLM要求の干渉を抑える配信システム。
 
 - **2024-01 · [ServerlessLLM: Low-Latency Serverless Inference for Large Language Models](2024-2401.14351-serverlessllm-low-latency-serverless-inference.md)**  
@@ -1542,13 +1542,13 @@
   実装：[✓](https://github.com/efeslab/Nanoflow) ・ リポジトリ内被引用：70  
   異種GPU資源を使う演算をナノバッチ化して同一装置内で重畳し、自動探索で高スループットな推論パイプラインを構成する。
 
+- **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
+  実装：✓ ・ リポジトリ内被引用：69  
+  同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
+
 - **2024-06 · [MemServe: Context Caching for Disaggregated LLM Serving with Elastic Memory Pool](2024-2406.17565-memserve-context-caching-disaggregated-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：68  
   プリフィルとデコードを別実行単位へ分ける推論提供で、GPU / CPU上のKVキャッシュを実行単位横断で検索・共有・転送できる共通メモリプールを作り、過去接頭部の再利用と処理段階間KV移動を同じ仕組みで扱うシステム。
-
-- **2024-05 · [Preble: Efficient Distributed Prompt Scheduling for LLM Serving](2024-2407.00023-preble-efficient-distributed-prompt-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：68  
-  同じプレフィックスのKVをすでに持つGPUへリクエストを送ればプリフィルを省ける一方、そのGPUだけ混むことがあるため、KV再利用で節約できる計算時間とGPUの混雑による待ち時間を比較してリクエストの送り先を決めるdistributed サービング スケジューラ。
 
 - **2024-08 · [Efficient LLM Scheduling by Learning to Rank](2024-2408.15792-efficient-llm-scheduling-learning-to-rank.md)**  
   実装：[✓](https://github.com/hao-ai-lab/vllm-ltr) ・ リポジトリ内被引用：64  
@@ -1701,7 +1701,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1286  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1288  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
@@ -1735,7 +1735,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：549  
+  実装：✓ ・ リポジトリ内被引用：550  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  
