@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（978本）
+## 自動生成の論文一覧（982本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2372,6 +2372,10 @@
   実装：[✓](https://github.com/infinigence/FlashOverlap) ・ リポジトリ内被引用：7  
   FlashOverlapは、複数GPUで大規模言語モデルを推論・学習するとき、行列積（general matrix multiplication、GEMM）と、それに依存するGPU間集団通信を重ねて実行する仕組みである。テンソル並列では、各GPUが計算した部分結果を全GPUで合計するAllReduceや、部分ごとに配布するReduceScatterを行う。
 
+- **2025-02 · [TransMLA: Migrating GQA Models to MLA with Full DeepSeek Compatibility and Speedup](2025-2502.07864-transmla-migrating-gqa-models-to-mla-with-full-deepseek-compatibility-an.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  TransMLAは、すでに学習済みのグループ化問い合わせ注意（Grouped Query 注意機構、GQA）モデルを、DeepSeek系の多頭潜在注意（Multi-head Latent 注意機構、MLA）へ変換するための手法である。
+
 - **2025-02 · [M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type](2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   一般的なINT4量子化は整数演算に向くが、各値の分布が一様でないと量子化誤差が大きくなる。専用アクセラレータのシミュレーションでは、先行するLLMアクセラレータに対して平均2.99倍、最大4.46倍の高速化と、平均2.81倍、最大4.10倍のエネルギー削減を報告する。
@@ -2639,6 +2643,10 @@
 - **2025-10 · [TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination](2025-2510.22767-tell-tale-task-efficient-llms-with-task-aware-layer-elimination.md)**  
   実装：[✓](https://github.com/omyokun/tale) ・ リポジトリ内被引用：0  
   本研究は、ある層を除去するとモデルが小さくなるだけでなく、対象タスクの正答率がむしろ上がる場合があることに着目し、タスク認識型層除去（Task-Aware 層 Elimination、TALE）を提案する。著者はゼロショット（zero-shot）と少数例提示（少数例）、通常の選択肢評価と生成文を読む評価を使い分け、削減層の選択がタスクに依存することを示す。
+
+- **2025-10 · [Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space](2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md)**  
+  実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：0  
+  視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
 
 - **2025-10 · [MeSH: Memory-as-State-Highways for Recursive Transformers](2025-2510.07739-mesh-memory-as-state-highways-for-recursive-transformers.md)**  
   実装：[✓](https://github.com/LivingFutureLab/MeSH/) ・ リポジトリ内被引用：0  
@@ -3322,6 +3330,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPUから通信とオプティマイザ状態をSmartNIC・SmartSwitch・単一パラメータサーバへ分離し、100B級モデル分割データ並列の干渉と容量制約を同時に減らす。
 
+- **2024-07 · [Let the Code LLM Edit Itself When You Edit the Code](2024-2407.03157-let-the-code-llm-edit-itself-when-you-edit-the-code.md)**  
+  実装：[✓](https://github.com/zhenyuhe00/PIE) ・ リポジトリ内被引用：0  
+  本研究は、開発者が既存コードの途中に行を挿入・削除した直後に、コード補完用の大規模言語モデル（LLM）が次の行を予測し直す場面を対象とする。
+
 - **2024-07 · [2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc](2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md)**  
   実装：— ・ リポジトリ内被引用：0  
   未記録
@@ -3587,6 +3599,10 @@
 - **2023-06 · [Block-State Transformers](2023-2306.09539-block-state-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   GPUで測った層単体の順方向計算は、ブロック再帰方式に対して単一頭BSTが6〜11倍速い。
+
+- **2023-01 · [Alternating Updates for Efficient Transformers](2023-2301.13310-alternating-updates-for-efficient-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  AltUp（Alternating Updates）は、表現の幅と層内部の演算幅を分離し、幅Kdの状態を保持しながら各層で実際にTransformerを通すのはd次元の部分ブロック一つに限る方式である。NeurIPS 2023採択論文のT5実験では、同じ予測精度を持つ密なTransformerに対して最大87%の相対速度向上を報告する。
 
 - **2023-10 · [Dual Grained Quantization: Efficient Fine-Grained Quantization for LLM](2023-2310.04836-dual-grained-quantization-efficient-fine-grained-quantization-for-llm.md)**  
   実装：[✓](https://github.com/ilur98/DGQ) ・ リポジトリ内被引用：1  
