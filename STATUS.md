@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-23 14:10:51 JST**
+> 自動生成: **2026-10-23 14:56:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **1167** |
 | 直近24hのResearch処理完了 | **22** |
 | 最終Research処理完了 | **10-23 12:47:50 JST** |
-| 最終Discovery探索完了 | **10-23 13:00:00 JST** |
+| 最終Discovery探索完了 | **10-23 14:37:57 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -88,7 +88,7 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.7%**
-- 現在の生在庫: 後方references **56358件** / 前方引用 **69040件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 現在の生在庫: 後方references **56358件** / 前方引用 **69038件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
 - 前方・後方を統合してidentity重複を除いた未処理面は **124725件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
@@ -97,18 +97,18 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **2944** |
-| provider巡回可能 | **2939** |
+| 収録論文seed台帳 | **2946** |
+| provider巡回可能 | **2941** |
 | provider巡回不能 | **5** |
-| 1周以上完了 | **2929** |
+| 1周以上完了 | **2931** |
 | 巡回中 | **10** |
 | 未巡回 | **0** |
-| 今回run開始時due | **10** |
-| 前方引用から保持中の未処理候補 | **69040** |
+| 今回run開始時due | **12** |
+| 前方引用から保持中の未処理候補 | **69038** |
 | エラー状態保持seed | **10** |
 
 - 初回カバレッジ完了率: **99.7%**
-- state最終更新: **10-23 13:41:51 JST**
+- state最終更新: **10-23 14:43:18 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-23 03:14:52 JST（10時間55分前）** |
+| 最終maintenance完了 | **10-23 03:14:52 JST（11時間41分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **3** |
-| 直近6hのDiscovery run | **6** |
-| 直近6hのDiscovery本文確認・分類 | **8** |
+| 直近6hのResearch完了 | **2** |
+| 直近6hのDiscovery run | **7** |
+| 直近6hのDiscovery本文確認・分類 | **9** |
 | 最終Research完了 | **10-23 12:47:50 JST** |
-| 最終Discovery完了 | **10-23 13:00:00 JST** |
+| 最終Discovery完了 | **10-23 14:37:57 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-23 12:47:50 JST** / worker — / run 20261023-1245-scheduled-chat-45/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_68342ea1684c8191a8ad2f3c47a76a24--2026-2601.20357-tabed-returned-repair-20261023-1245-scheduled-chat-45-r01.json
-- Discovery: **10-23 13:00:00 JST** / worker scheduled-chat-00 / run 20261023-1300-scheduled-chat-00/r02/research-prescreen-015
-  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/results/discovery/libfile_071008fd73a8819184cbdad663ad972c--discovery-20261023-1300-scheduled-chat-00-research-relevance-r02-015.json
+- Discovery: **10-23 14:37:57 JST** / worker codex-local / run 20261023-linear-recurrent-lineage-b08
+  - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/20261023-linear-recurrent-lineage-b08--8e652d8d22adaa8e9d5ace1580ba2f0d151f9631c80fbf2dc50c66b3f37f7b9b--discovery-recurrent-lineage-20261023.json
 
 ### Codex探索成果の反映状況
 
@@ -157,14 +157,14 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 件数 |
 |---|---:|
 | Codex成果の取り込み済み（receipt） | **3002ファイル / 16588件** |
-| Codex成果の取り込み待機中 | **0ファイル / 0件** |
-| └ 待機中のaccept | **0件** |
+| Codex成果の取り込み待機中 | **1ファイル / 1件** |
+| └ 待機中のaccept | **1件** |
 | └ 待機中のunrelated | **0件** |
 | └ 待機中のborderline | **0件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-23 06:59:00 JST** / results / 20261023-0659-codex-lineage-review/r04/research-relevance-001
-  - evidence: .survey/import-inbox/results/discovery/discovery-20261023-0659-codex-lineage-review-r04-001.json
+- 最終Codex分類・受渡し証拠: **10-23 14:37:57 JST** / waiting / 20261023-linear-recurrent-lineage-b08
+  - evidence: .survey/import-inbox/waiting/discovery/20261023-linear-recurrent-lineage-b08--8e652d8d22adaa8e9d5ace1580ba2f0d151f9631c80fbf2dc50c66b3f37f7b9b--discovery-recurrent-lineage-20261023.json
 
 
 ## 件数サマリー（旧immutable transport診断）
@@ -320,11 +320,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **232** |
+| 成功result未照合のimmutable submission | **233** |
 | └ Research | **86** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **1** |
+| └ Other/Unknown | **2** |
 
 ### 厳格検証が未成立のcompleted job
 
