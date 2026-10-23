@@ -97,7 +97,7 @@ references:
 - canonical_id: arXiv:2502.07578
 - canonical_id: arXiv:2403.11421
   arxiv_id: '2403.11421'
-- canonical_id: DOI:10.1145/3676641.3716009
+- canonical_id: arXiv:2502.15470
   doi: 10.1145/3676641.3716009
 - canonical_id: DOI:10.1109/micro56248.2022.00051
   doi: 10.1109/micro56248.2022.00051
@@ -141,6 +141,7 @@ references:
   doi: 10.48550/arxiv.2012.03112
 - canonical_id: arXiv:2303.08774
   arxiv_id: '2303.08774'
+- canonical_id: DOI:10.1145/3620665.3640422
 - canonical_id: arXiv:2311.18677
   arxiv_id: '2311.18677'
 - canonical_id: DOI:10.1109/isca59077.2024.00079
@@ -152,7 +153,6 @@ references:
 - canonical_id: DOI:10.1145/3620666.3651324
   doi: 10.1145/3620666.3651324
 - canonical_id: arXiv:1909.08053
-  arxiv_id: '1909.08053'
 - canonical_id: DOI:10.1109/hpca61900.2025.00116
   doi: 10.1109/hpca61900.2025.00116
 - canonical_id: DOI:10.1145/3446804.3446845
@@ -170,7 +170,7 @@ references:
   doi: 10.18653/v1/2021.naacl-main.472
 - canonical_id: DOI:10.1109/hpca53966.2022.00082
   doi: 10.1109/hpca53966.2022.00082
-references_checked_at: '2026-09-27'
+references_checked_at: '2026-10-23'
 references_source: arxiv-html-reference-section
 references_total: 75
 ---

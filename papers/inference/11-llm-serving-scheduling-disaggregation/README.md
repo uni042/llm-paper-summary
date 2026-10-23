@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving](2024-2407.00079-mooncake-kvcache-centric-disaggregated-architecture.md)**  
-  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：256  
+  実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：254  
   Mooncakeは、大規模言語モデル（Large Language モデル、LLM）の推論サービスで、GPUの計算能力とメモリを同時に効率よく使うための分散サービング基盤である。中心にあるのは、KVの所在と移動費用を知る全体スケジューラ（Global Scheduler）であるConductorである。
 
 - **2025-11 · [Continnum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live](2025-2511.02230-continuum-agent-kv-cache-ttl-scheduling.md)**  
@@ -1097,7 +1097,7 @@
   言語モデルの接頭辞キャッシュ（Prefix Caching）は、複数要求が共有するシステム指示や会話履歴の前半部分について、過去に計算した内部状態を再利用して初回トークン生成までの時間を短縮する。主要評価では、拡張vLLMに対するトークン命中率がLMSysで平均4.5倍、ShareGPTで7.3倍、SWEBenchで34.4倍となる。
 
 - **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
-  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：20  
   長文LLMでは、プリフィルでは系列長に対して二乗で増える注意計算、デコードでは過去KVを毎トークン読み直すメモリ帯域が別々の律速になる。LServeは両者をブロック疎注意（block-sparse 注意機構）という共通の実行形式へ落とし、オフラインで決めるストリーミングヘッドと、実行時に選ぶ重要KVページを同じカーネル群で処理する。
 
 - **2025-04 · [Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints](2025-2504.11320-fluid-guided-online-scheduling.md)**  
@@ -1128,6 +1128,10 @@
   実装：✓ ・ リポジトリ内被引用：15  
   同一GPU内でプリフィル/デコードをproactiveにSM分割し、計算飽和とメモリ帯域競合をモデル化してvLLM比最大2.2倍スループット・20倍TTFT改善を達成する。
 
+- **2024-11 · [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：15  
+  本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
+
 - **2025-08 · [LLM Serving Optimization with Variable Prefill and Decode Lengths](2025-2508.06133-llm-serving-optimization-variable-prefill-decode-lengths.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   要求ごとのプリフィル長とデコード長を考慮し、KV容量を守るバッチをF指標で選ぶスケジューラ。Vidur時間モデルでは混合2000要求の平均遅延をFCFS比4.87倍改善した。
@@ -1143,10 +1147,6 @@
 - **2024-12 · [Efficiently Scaling LLM Reasoning with Certaindex](2024-2412.20993-efficiently-scaling-llm-reasoning-with-certaindex.md)**  
   実装：[✓](https://github.com/hao-ai-lab/Dynasor) ・ リポジトリ内被引用：14  
   複雑な問題に対して大規模言語モデル（LLM）が長い思考過程を生成したり、複数経路を探索したりする場合、計算を増やすほど正答率が上がるとは限らない。本研究の焦点は、難度を入力問題の外見から事前に予測するのではなく、推論を実際に進めた結果、回答がどこまで安定したかを観測することである。
-
-- **2024-11 · [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
-  本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
 
 - **2025-01 · [Locality-aware Fair Scheduling in LLM Serving](2025-2501.14312-locality-aware-fair-scheduling-dlpm.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
@@ -1167,6 +1167,10 @@
 - **2025-01 · [Hierarchical Autoscaling for Large Language Model Serving with Chiron](2025-2501.08090-chiron-hierarchical-autoscaling.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   対話型リクエストの遅延目標を守りながら余ったGPU容量をバッチリクエストへ使うため、各GPUで同時処理するリクエスト数を素早く増減する制御と、クラスタ全体のGPUインスタンス数を遅い周期で増減する制御を分けたLLM自動スケーラ。
+
+- **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
+  実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：12  
+  一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
 
 - **2025-09 · [Parallax: Efficient LLM Inference Service over Decentralized Environment](2025-2509.26182-parallax-decentralized-heterogeneous-serving.md)**  
   実装：[✓](https://github.com/GradientHQ/parallax) ・ リポジトリ内被引用：11  
@@ -1191,10 +1195,6 @@
 - **2025-02 · [HydraServe: Minimizing Cold Start Latency for Serverless LLM Serving in Public Clouds](2025-2502.15524-hydraserve-serverless-cold-start.md)**  
   実装：[✓](https://github.com/LLMServe/hydraserve) ・ リポジトリ内被引用：11  
   起動時だけモデル層を複数サーバーへ分散して帯域を束ね、重み取得・GPU転送・実行環境初期化を重ね、起動後にワーカーを集約することでサーバーレスLLMのコールドスタートを1.7〜4.7倍短縮する。
-
-- **2024-12 · [BLITZSCALE: Fast and Live Large Model Autoscaling with O(1) Host Caching](2024-2412.17246-blitzscale-fast-and-live-large-model-autoscaling-with-o-1-host-caching.md)**  
-  実装：[✓](https://github.com/blitz-serving/blitz-scale) ・ リポジトリ内被引用：11  
-  一方、需要を観測してから新しい提供インスタンスを起動する従来方式では、数十GBから数百GBの重みをストレージやホストメモリからGPUへロードする時間が長く、急な要求増加に追いつけない。
 
 - **2025-08 · [Kairos: Low-latency Multi-Agent Serving with Shared LLMs and Excessive Loads in the Public Cloud](2025-2508.06948-kairos-multi-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：10  
@@ -1547,7 +1547,7 @@
   Pensieveは、会話型の大規模言語モデルを複数往復にわたって提供するとき、前回までの履歴を毎回最初から入力処理する重複計算を減らす状態保持型の推論提供システムである。
 
 - **2024-04 · [Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction](2024-2404.08509-ssjf.md)**  
-  実装：[✓](https://github.com/James-QiuHaoran/LLM-serving-with-proxy-models) ・ リポジトリ内被引用：52  
+  実装：[✓](https://github.com/James-QiuHaoran/LLM-serving-with-proxy-models) ・ リポジトリ内被引用：53  
   SSJFはBERT-base代理モデルでLLMの出力長を予測して短い要求を先に処理し、FCFS比で平均完了時間を30.5〜39.6%削減する。
 
 - **2024-01 · [Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache](2024-2401.02669-infinite-llm-distattention-distributed-kvcache.md)**  
@@ -1701,7 +1701,7 @@
   異なるLoRAアダプタの要求をSGMVカーネルで同一バッチ処理し、基盤LLMを共有したまま多テナント推論を集約するサービング基盤。固定GPU資源で最大12倍のスループットを報告。
 
 - **2023-05 · [Response Length Perception and Sequence Scheduling: An LLM-Empowered LLM Inference Pipeline](2023-2305.13144-response-length-perception-and-sequence-scheduling-an-llm-empowered-llm-inference-pipeline.md)**  
-  実装：✓ ・ リポジトリ内被引用：29  
+  実装：✓ ・ リポジトリ内被引用：31  
   Vicuna自身を軽量な応答長予測器として使い、生成前に要求を長さ別へ並べ替える。予測外れを失敗回収・再計算で隔離し、短い要求には大きなバッチを使うことで、可変長生成に特有のバッチ内遊休を減らす。
 
 - **2023-09 · [LLMCarbon: Modeling the End-To-End Carbon Footprint of Large Language Models](2023-2309.14393-llmcarbon-modeling-the-end-to-end-carbon-footprint-of-large-language-mod.md)**  
@@ -1725,7 +1725,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2020-11 · [Serving DNNs like Clockwork: Performance Predictability from the Bottom Up](2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：15  
   Clockworkは、深層ニューラルネットワーク（DNN）のオンライン推論で、平均速度ではなく要求ごとの締切と尾部遅延を中心に設計した分散モデル提供システムである。
 
 - **2021-10 · [OneFlow: Redesign the Distributed Deep Learning Framework from Scratch](2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md)**  

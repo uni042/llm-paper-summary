@@ -822,7 +822,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   DLMの復号済みトークンK/Vを1ステップ遅延して再利用し、未確定位置だけを再計算することで、学習なしに2〜10倍級の推論高速化を実現する。
 
 - **2025-04 · [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md)**  
-  実装：✓ ・ リポジトリ内被引用：35  
+  実装：✓ ・ リポジトリ内被引用：36  
   TurboQuantは、高次元ベクトルを入力データセットに合わせて学習し直さずに低ビット化する、オンライン量子化方式である。理論面では、復元二乗誤差と内積誤差の両方について、ビット幅bに対して概ね4のマイナスb乗で減る上界を示し、情報理論的な下限との差が最大約2.7倍の定数内であると証明する。
 
 - **2024-12 · [ClusterKV: Manipulating LLM KV Cache in Semantic Space for Recallable Compression](2024-2412.03213-clusterkv-manipulating-llm-kv-cache-in-semantic-space-for-recallable-com.md)**  
@@ -853,6 +853,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/thu-nics/C2C) ・ リポジトリ内被引用：19  
   複数の大規模言語モデル（LLM）が協調するシステムでは、あるモデルが推論や分析の結果を文章として生成し、別のモデルがその文章を読み込んで次の応答を作ることが多い。
 
+- **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
+  実装：[✓](https://github.com/zyqCSL/DiffKV) ・ リポジトリ内被引用：19  
+  鍵・値・トークン・注意ヘッドを異なる粒度で圧縮し、不規則な空き容量をGPU内で並列コンパクションするDiffKV。KVを2.7〜5.7倍圧縮しスループットを1.9〜5.4倍改善する。
+
 - **2025-06 · [KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider](2025-2506.02634-kvcache-cache-in-the-wild-characterizing-and-optimizing-kvcache-cache-at.md)**  
   実装：[✓](https://github.com/vllm-project/vllm/pull/22236) ・ リポジトリ内被引用：18  
   合成トレースではなく本番サービスのトレースに基づく設計材料が不足しているという問題に対し、本研究はAliyun Tongyiの大規模serving クラスタから得た顧客向け(to-C)と企業向け(to-B)のトレースを特徴付け、観測した分布を使う追い出し 方策を提案する。
@@ -864,10 +868,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-02 · [Online Scheduling for LLM Inference with KV Cache Constraints](2025-2502.07115-online-scheduling-for-llm-inference-with-kv-cache-constraints.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
   本研究は、大規模言語モデル（LLM）の複数要求を一つの推論ワーカーで処理する際に、生成が進むほど増える鍵・値キャッシュ（KVキャッシュ）を将来時点まで予測し、どの要求をいつ開始するかを決めるオンラインスケジューリング（online スケジューラ）を扱う。
-
-- **2024-12 · [DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction](2024-2412.03131-diffkv-differentiated-memory-management-for-large-language-models-with-parallel-kv-compaction.md)**  
-  実装：[✓](https://github.com/zyqCSL/DiffKV) ・ リポジトリ内被引用：18  
-  鍵・値・トークン・注意ヘッドを異なる粒度で圧縮し、不規則な空き容量をGPU内で並列コンパクションするDiffKV。KVを2.7〜5.7倍圧縮しスループットを1.9〜5.4倍改善する。
 
 - **2025-03 · [xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction](2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/xKV) ・ リポジトリ内被引用：17  
@@ -1080,7 +1080,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   注意の層間集約パターンに合わせてKV予算を下層から上層へ逓減させ、同じ総メモリで固定予算型より長文脈性能を保つKVキャッシュ圧縮法。
 
 - **2024-06 · [InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management](2024-2406.19707-infinigen-dynamic-kv-cache-management.md)**  
-  実装：[✓](https://github.com/snu-comparch/InfiniGen) ・ リポジトリ内被引用：124  
+  実装：[✓](https://github.com/snu-comparch/InfiniGen) ・ リポジトリ内被引用：125  
   CPU側の全KVキャッシュから次レイヤーで重要なトークンだけを予測してGPUへ先読みし、長文オフロード推論のPCIe転送を削減して最大3.00倍高速化する。
 
 - **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
@@ -1108,7 +1108,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   LSHの衝突確率を注意分布の提案分布として使い、CPUへ置いたKVから少数だけをサンプリングして疎注意を計算する方式。全注意の2〜5%程度の計算で精度を保ち、最大5倍のデコードスループットを示す。
 
 - **2024-07 · [PQCache: Product Quantization-based KVCache for Long Context LLM Inference](2024-2407.12820-pqcache-product-quantization-based-kvcache-for-long-context-llm-inferenc.md)**  
-  実装：[✓](https://github.com/HugoZHL/PQCache) ・ リポジトリ内被引用：47  
+  実装：[✓](https://github.com/HugoZHL/PQCache) ・ リポジトリ内被引用：48  
   文脈が長くなるほどKVキャッシュは大きくなり、GPUメモリへ収まらない場合にはCPUメモリへの退避と転送が必要になる。Llama-3.1-8Bの128K文脈を用いたInfiniteBenchでは、過去トークンの1/10だけを選択する条件で平均スコア46.80を報告し、比較方式に対する改善は+4.60%である。
 
 - **2024-02 · [No Token Left Behind: Reliable KV Cache Compression via Importance-Aware Mixed Precision Quantization](2024-2402.18096-no-token-left-behind-reliable-kv-cache-compression-via-importance-aware-.md)**  

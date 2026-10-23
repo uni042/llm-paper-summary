@@ -157,7 +157,7 @@
   HeteroInferは、携帯端末のシステムオンチップ（システム-on-Chip; SoC）に同居するGPUとニューラル処理装置（Neural Processing Unit; NPU）を同時利用し、大規模言語モデル（LLM）の前処理と自己回帰復号を高速化する推論基盤である。
 
 - **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
 - **2025-09 · [Scaling LLM Test-Time Compute with Mobile NPU on Smartphones](2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md)**  
@@ -207,7 +207,7 @@
   SwapMoEは、全専門家をメモリに置けない問題に対し、層ごとの仮想枠へ入力で選ばれた専門家重みを入れ替え、メモリ容量と重み転送を抑える方式。
 
 - **2024-07 · [Mobile Edge Intelligence for Large Language Models: A Contemporary Survey](2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   本論文は、LLM向けの移動体エッジ知能をMEI4LLMと呼び、その設計空間を通信・計算・記憶の三資源で整理する。
 
 - **2024-03 · [MELTing point: Mobile Evaluation of Language Transformers](2024-2403.12844-melting-point-mobile-evaluation-of-language-transformers.md)**  
