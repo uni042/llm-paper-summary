@@ -1,32 +1,67 @@
 ---
-canonical_id: "DOI:10.65109/YPTR3460"
-title: "GAPS: Global-Aware Prediction-driven Scheduling for Large-Scale LLM Inference"
+canonical_id: DOI:10.65109/YPTR3460
+title: 'GAPS: Global-Aware Prediction-driven Scheduling for Large-Scale LLM Inference'
 authors:
-  - "Zhengyu Liu"
-  - "Fan Zhang"
-  - "Fengzhe Zhang"
-  - "Shuaikang Hou"
-published: "2026-05"
-publication: "AAMAS 2026, Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems, pp. 1084–1090"
-publication_type: "conference"
-publication_status: "査読付き会議論文"
-source: "https://ifaamas.org/Proceedings/aamas2026/pdfs/YPTR3460.pdf"
+- Zhengyu Liu
+- Fan Zhang
+- Fengzhe Zhang
+- Shuaikang Hou
+published: 2026-05
+publication: AAMAS 2026, Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems, pp. 1084–1090
+publication_type: conference
+publication_status: 査読付き会議論文
+source: https://ifaamas.org/Proceedings/aamas2026/pdfs/YPTR3460.pdf
 sources:
-  - "https://ifaamas.org/Proceedings/aamas2026/pdfs/YPTR3460.pdf"
-  - "https://doi.org/10.65109/YPTR3460"
-implementation: "Azureのコード生成・会話生成トレースを用い、4/8/16/32 GPUインスタンスをモデル化する離散事象シミュレータで全域監視・予測・負荷再配分を評価。実GPUサービングの直接実測ではない。公式公開コードは一次論文から確認できない。"
+- https://ifaamas.org/Proceedings/aamas2026/pdfs/YPTR3460.pdf
+- https://doi.org/10.65109/YPTR3460
+implementation: Azureのコード生成・会話生成トレースを用い、4/8/16/32 GPUインスタンスをモデル化する離散事象シミュレータで全域監視・予測・負荷再配分を評価。実GPUサービングの直接実測ではない。公式公開コードは一次論文から確認できない。
 code: null
-summary: "GAPSはGPUクラスタのキュー長・利用率・SLO違反率を全域監視し、要求の入力長・用途から推定した実行時間をオンライン誤差で補正して、負荷に応じた初期割当と費用対効果が正の要求再配置を行うLLM推論スケジューラ。Azure由来のコード・会話トレースによる4～32 GPUの離散事象シミュレーションでは、P99遅延を最大25%削減し、SLO違反率を比較方式より10～15ポイント低下。予測停止でP99が30%超悪化、再配置停止で違反率が8～10ポイント悪化する。ただしスループットの一貫した改善はなく、実GPU実装・KV移送の実測もない。"
-list_summary: "全域キュー監視、誤差補正付き実行時間予測、選択的再配置を統合するLLMクラスタスケジューラ。シミュレーションでP99最大25%減、SLO違反10～15ポイント減。"
-last_checked: "2026-10-24"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-24T02:35:00+09:00"
-worker_run_key: "20261024-0230-scheduled-chat-30/r01"
-reference_main_sha: "2ba886d13245e4f2aa6129fb59f68c18e437c94c"
+summary: GAPSはGPUクラスタのキュー長・利用率・SLO違反率を全域監視し、要求の入力長・用途から推定した実行時間をオンライン誤差で補正して、負荷に応じた初期割当と費用対効果が正の要求再配置を行うLLM推論スケジューラ。Azure由来のコード・会話トレースによる4～32 GPUの離散事象シミュレーションでは、P99遅延を最大25%削減し、SLO違反率を比較方式より10～15ポイント低下。予測停止でP99が30%超悪化、再配置停止で違反率が8～10ポイント悪化する。ただしスループットの一貫した改善はなく、実GPU実装・KV移送の実測もない。
+list_summary: 全域キュー監視、誤差補正付き実行時間予測、選択的再配置を統合するLLMクラスタスケジューラ。シミュレーションでP99最大25%減、SLO違反10～15ポイント減。
+last_checked: '2026-10-24'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-24T02:35:00+09:00'
+worker_run_key: 20261024-0230-scheduled-chat-30/r01
+reference_main_sha: 2ba886d13245e4f2aa6129fb59f68c18e437c94c
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: arXiv:2508.03611
+  arxiv_id: '2508.03611'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2505.12658
+  arxiv_id: '2505.12658'
+- canonical_id: arXiv:2408.15792
+- canonical_id: arXiv:2504.14966
+  arxiv_id: '2504.14966'
+- canonical_id: DOI:10.1145/3676641.3716245
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2504.07347
+  arxiv_id: '2504.07347'
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2411.10803
+  arxiv_id: '2411.10803'
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2006.09864
+  arxiv_id: '2006.09864'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: arXiv:2407.00023
+  arxiv_id: '2407.00023'
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2410.14257
+  arxiv_id: '2410.14257'
+- canonical_id: arXiv:2501.01005
+  arxiv_id: '2501.01005'
+- canonical_id: arXiv:2409.15104
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 32
 ---
 
 # GAPS：実行時間の予測誤差を補正してGPUクラスタの末尾遅延を抑える

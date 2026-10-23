@@ -1,32 +1,51 @@
 ---
-canonical_id: "DOI:10.1109/CloudSummit68932.2026.00026"
-title: "Cold Start Latency of Quantized Small Language Models on Serverless CPU Infrastructure"
+canonical_id: DOI:10.1109/CloudSummit68932.2026.00026
+title: Cold Start Latency of Quantized Small Language Models on Serverless CPU Infrastructure
 authors:
-  - "Ming Hu"
-  - "Khushan Adatiya"
-published: "2026-06"
-publication_date_note: "会議開催月（2026年6月）を記載。電子版の厳密な公開日は一次資料で未確認。"
-publication: "2026 IEEE Cloud Summit, pp. 116–121"
-publication_type: "conference"
-publication_status: "査読付き会議論文"
-source: "https://storage.googleapis.com/gweb-research2023-media/pubtools/1046363.pdf"
+- Ming Hu
+- Khushan Adatiya
+published: 2026-06
+publication_date_note: 会議開催月（2026年6月）を記載。電子版の厳密な公開日は一次資料で未確認。
+publication: 2026 IEEE Cloud Summit, pp. 116–121
+publication_type: conference
+publication_status: 査読付き会議論文
+source: https://storage.googleapis.com/gweb-research2023-media/pubtools/1046363.pdf
 sources:
-  - "https://storage.googleapis.com/gweb-research2023-media/pubtools/1046363.pdf"
-  - "https://research.google/pubs/cold-start-latency-of-quantized-small-language-models-on-serverless-cpu-infrastructure/"
-  - "https://doi.org/10.1109/CloudSummit68932.2026.00026"
-implementation: "著者公開の再現用コードと測定・解析資材を使用。Google Cloud Run gen-2のCPU専用インスタンスでllama-cpp-python、GGUF量子化モデル、FastAPIを評価する。"
-code: "https://github.com/mingwho/slm-research"
-summary: "CPU専用サーバーレス環境で小型言語モデルのコールドスタート遅延を、コンテナ起動・重み読込・生成に分解し、量子化、割当メモリに連動するCPU数、品質、費用を横断比較した実測研究。Google Cloud Runの5モデル・4/8GiB環境では重み読込がコールドスタートの55～70%を占め、8GiB側の2 vCPUで温間推論が40～53%短縮。LLaMA 3.2 1BのQ4_K_MはQ8_0に対しPPL12.79対12.30と近い一方、Q2_Kは23.60に悪化。料金損益分岐と遅延回帰モデルも報告するが、短い生成、単一地域・CPUのみでの結果である。"
-list_summary: "CPU専用Cloud Run上の量子化小型LLMを実測し、コールドスタートの55～70%を重み読込が占めることと、量子化・vCPU割当・品質・料金の交換条件を定量化。"
-last_checked: "2026-10-24"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-24T02:30:00+09:00"
-worker_run_key: "20261024-0230-scheduled-chat-30/r01"
-reference_main_sha: "2ba886d13245e4f2aa6129fb59f68c18e437c94c"
+- https://storage.googleapis.com/gweb-research2023-media/pubtools/1046363.pdf
+- https://research.google/pubs/cold-start-latency-of-quantized-small-language-models-on-serverless-cpu-infrastructure/
+- https://doi.org/10.1109/CloudSummit68932.2026.00026
+implementation: 著者公開の再現用コードと測定・解析資材を使用。Google Cloud Run gen-2のCPU専用インスタンスでllama-cpp-python、GGUF量子化モデル、FastAPIを評価する。
+code: https://github.com/mingwho/slm-research
+summary: CPU専用サーバーレス環境で小型言語モデルのコールドスタート遅延を、コンテナ起動・重み読込・生成に分解し、量子化、割当メモリに連動するCPU数、品質、費用を横断比較した実測研究。Google Cloud Runの5モデル・4/8GiB環境では重み読込がコールドスタートの55～70%を占め、8GiB側の2 vCPUで温間推論が40～53%短縮。LLaMA 3.2 1BのQ4_K_MはQ8_0に対しPPL12.79対12.30と近い一方、Q2_Kは23.60に悪化。料金損益分岐と遅延回帰モデルも報告するが、短い生成、単一地域・CPUのみでの結果である。
+list_summary: CPU専用Cloud Run上の量子化小型LLMを実測し、コールドスタートの55～70%を重み読込が占めることと、量子化・vCPU割当・品質・料金の交換条件を定量化。
+last_checked: '2026-10-24'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-24T02:30:00+09:00'
+worker_run_key: 20261024-0230-scheduled-chat-30/r01
+reference_main_sha: 2ba886d13245e4f2aa6129fb59f68c18e437c94c
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2411.03350
+  arxiv_id: '2411.03350'
+- canonical_id: arXiv:2404.14219
+  arxiv_id: '2404.14219'
+- canonical_id: arXiv:2403.08295
+  arxiv_id: '2403.08295'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:1902.03383
+  arxiv_id: '1902.03383'
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2401.14351
+- canonical_id: arXiv:2212.09720
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 22
 ---
 
 # CPU専用サーバーレス上の量子化小型言語モデル：コールドスタート・生成・品質・費用を分離して測る
