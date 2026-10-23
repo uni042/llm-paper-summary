@@ -175,7 +175,8 @@ jobs:
               --root .survey --max-submissions 64 --library-discovery-only \
               > /tmp/library-discovery-submissions.json
             if publish 'library-discovery: register verified candidates' \
-                .survey/work-queue .survey/survey-state papers README.md; then break; fi
+                .survey/work-queue .survey/survey-state \
+                .survey/config/promoted-inference-lineages.json papers README.md; then break; fi
             if [ "$attempt" -eq 4 ]; then exit 1; fi
           done
           advance 'settle'
