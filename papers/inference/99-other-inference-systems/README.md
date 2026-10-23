@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（931本）
+## 自動生成の論文一覧（933本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -854,6 +854,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   通常の事後量子化では中間の線形層を2〜4ビットにしても、この最終出力層だけを16ビットで残すことが多い。例えばLlama-3.2-1Bの出力層は約2.63億パラメータ、モデル全体の21.3%であり、本体を低ビット化すると出力層の相対的な容量負担がさらに増える。
 
+- **2026-08 · [SlimVLM: Sensitivity-aware Dynamic Structured Pruning with Adaptive Visual Token Selection for Efficient Vision-Language Models](2026-2608.03580-slimvlm-sensitivity-aware-dynamic-structured-pruning-with-adaptive-visua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚言語モデル（Vision-Language モデル; VLM）を小型化するとき、単に言語モデル向けの重み枝刈りを適用しても、画像由来の多数の視覚トークンがモジュールの重要度推定を歪める。一次論文のLLaVA-1.5-7Bの20%枝刈りでは、8種類の評価群における元モデルに対する平均相対性能93.80%を維持した。
+
 - **2026-08 · [Sliding-window beats linear attention](2026-2608.28444-sliding-window-beats-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意は固定サイズの再帰状態に集約することで、この増加を抑える。窓64・先頭シンク4の方式は、一般知識6課題平均で元モデルの99.0%を回復し、11の比較例のうち9例で元モデルを除く最高の平均値を得た。
@@ -1345,6 +1349,10 @@
 - **2026-05 · [Language Modeling with Hyperspherical Flows](2026-2605.11125-language-modeling-with-hyperspherical-flows.md)**  
   実装：[✓](https://github.com/jdeschena/s-flm) ・ リポジトリ内被引用：0  
   S-FLMは代わりに次元 d の単位超球面 S^{d-1} 上へトークンを配置し、雑音ベクトルから正しい単語埋め込みへ回転する経路を学習する。
+
+- **2026-05 · [InfoQuant: Shaping Activation Distributions for Low-Bit LLM Quantization](2026-2605.26175-infoquant-shaping-activation-distributions-for-low-bit-llm-quantization.md)**  
+  実装：[✓](https://github.com/LLIKKE/InfoQuant) ・ リポジトリ内被引用：0  
+  InfoQuantは、LLMの低ビット事後量子化（post-学習 量子化; PTQ）における活性値の量子化誤差を、単純な外れ値除去ではなく、量子化器に入力する分布の形から最適化する方式である。
 
 - **2026-05 · [Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization](2026-2605.25203-influence-inspired-spectral-rotations-for-extreme-low-bit-llm-quantizati.md)**  
   実装：[✓](https://github.com/gogipav14/spectral-llm) ・ リポジトリ内被引用：0  

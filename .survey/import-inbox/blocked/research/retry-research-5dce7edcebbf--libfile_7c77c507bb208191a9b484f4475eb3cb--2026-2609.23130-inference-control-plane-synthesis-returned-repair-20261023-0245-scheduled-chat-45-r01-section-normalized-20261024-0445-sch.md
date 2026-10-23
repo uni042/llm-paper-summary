@@ -30,6 +30,8 @@ worker_completed_at: "2026-10-24T04:54:07+09:00"
 reference_main_sha: "2cb1638b685e214e5a34cf00f93e60fc7c9467de"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # LLM推論エンジンから分散推論制御面への発展：vLLMとllm-dの役割を統合するレビュー
