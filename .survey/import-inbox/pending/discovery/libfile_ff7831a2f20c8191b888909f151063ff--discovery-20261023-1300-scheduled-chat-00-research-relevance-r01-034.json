@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1300-scheduled-chat-00/r01/research-prescreen-034",
+  "reference_main_sha": "8fc11ec0197d46d95d8b5330766d32f1f9390370",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11722",
+      "identity_tokens": [
+        "arxiv:2605.11722",
+        "doi:10.48550/arxiv.2605.11722"
+      ],
+      "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation",
+      "reason": "一次要旨では、画像生成プロンプトの物体・数・属性・関係を述語へ変換し、画像の検証結果に応じて局所編集または再生成を選択する。GenEval2の画像合成条件達成率と画像モデル呼出し数を改善するが、対象は画像生成品質の制御であり、LLM推論サービングの計算・メモリ・通信基盤の新規手法ではない。inference-timeの語だけでは収録対象とならない。",
+      "source_url": "https://arxiv.org/abs/2605.11722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T13:04:37+09:00",
+      "last_checked_at": "2026-10-23T13:04:37+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 34
+    }
+  ]
+}
