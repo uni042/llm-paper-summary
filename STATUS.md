@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-23 15:03:14 JST**
+> 自動生成: **2026-10-23 15:29:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,11 +11,11 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1167** |
-| 未claim Research job | **1167** |
+| 収録候補論文数 | **1168** |
+| 未claim Research job | **1168** |
 | 直近24hのResearch処理完了 | **22** |
 | 最終Research処理完了 | **10-23 12:47:50 JST** |
-| 最終Discovery探索完了 | **10-23 14:37:57 JST** |
+| 最終Discovery探索完了 | **10-23 15:15:59 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1167** |
+| canonical_id確認済みの一意な候補論文 | **1168** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1167** |
+| 非終端Research job合計 | **1168** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -52,10 +52,10 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **144698** |
-| 処理済み | **21255** |
-| 未処理Discovery候補 | **123443** |
+| 処理済み | **21256** |
+| 未処理Discovery候補 | **123442** |
 | 収録済み | **2942** |
-| Research / Audit候補へ昇格済み | **888** |
+| Research / Audit候補へ昇格済み | **889** |
 | 無関係として除外 | **12309** |
 | 微妙として除外 | **5116** |
 
@@ -63,12 +63,12 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **123443** |
+| 未処理候補（フィルタ前） | **123442** |
 | 機械規則による暫定隔離 | **2128** |
 | 拡張機械規則による追加隔離 | **1358** |
-| 機械規則通過後 | **119957** |
-| 系統内前方引用スコアによる選抜保留 | **113959** |
-| 暫定隔離合計 | **117445** |
+| 機械規則通過後 | **119956** |
+| 系統内前方引用スコアによる選抜保留 | **113958** |
+| 暫定隔離合計 | **117444** |
 | **読解可能候補（隔離後）** | **5998** |
 | 前方引用が同一系統で2本以上の候補 | **15056** |
 | 前方引用が同一系統で3本以上の候補 | **6563** |
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-23 03:14:52 JST（11時間48分前）** |
+| 最終maintenance完了 | **10-23 03:14:52 JST（12時間14分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **2** |
+| 直近6hのResearch完了 | **1** |
 | 直近6hのDiscovery run | **6** |
 | 直近6hのDiscovery本文確認・分類 | **8** |
 | 最終Research完了 | **10-23 12:47:50 JST** |
-| 最終Discovery完了 | **10-23 14:37:57 JST** |
+| 最終Discovery完了 | **10-23 15:15:59 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-23 12:47:50 JST** / worker — / run 20261023-1245-scheduled-chat-45/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_68342ea1684c8191a8ad2f3c47a76a24--2026-2601.20357-tabed-returned-repair-20261023-1245-scheduled-chat-45-r01.json
-- Discovery: **10-23 14:37:57 JST** / worker codex-local / run 20261023-linear-recurrent-lineage-b08
+- Discovery: **10-23 15:15:59 JST** / worker codex-local / run 20261023-linear-recurrent-lineage-b08
   - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/20261023-linear-recurrent-lineage-b08--8e652d8d22adaa8e9d5ace1580ba2f0d151f9631c80fbf2dc50c66b3f37f7b9b--discovery-recurrent-lineage-20261023.json
+  - evidence: .survey/import-inbox/results/discovery/20261023-linear-recurrent-lineage-b08--8e652d8d22adaa8e9d5ace1580ba2f0d151f9631c80fbf2dc50c66b3f37f7b9b--discovery-recurrent-lineage-20261023.json
 
 ### Codex探索成果の反映状況
 
@@ -156,15 +156,15 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| Codex成果の取り込み済み（receipt） | **3002ファイル / 16588件** |
-| Codex成果の取り込み待機中 | **1ファイル / 1件** |
-| └ 待機中のaccept | **1件** |
+| Codex成果の取り込み済み（receipt） | **3003ファイル / 16589件** |
+| Codex成果の取り込み待機中 | **0ファイル / 0件** |
+| └ 待機中のaccept | **0件** |
 | └ 待機中のunrelated | **0件** |
 | └ 待機中のborderline | **0件** |
 | Codex成果のblocked（要対処） | **0ファイル** |
 
-- 最終Codex分類・受渡し証拠: **10-23 14:37:57 JST** / waiting / 20261023-linear-recurrent-lineage-b08
-  - evidence: .survey/import-inbox/waiting/discovery/20261023-linear-recurrent-lineage-b08--8e652d8d22adaa8e9d5ace1580ba2f0d151f9631c80fbf2dc50c66b3f37f7b9b--discovery-recurrent-lineage-20261023.json
+- 最終Codex分類・受渡し証拠: **10-23 15:15:59 JST** / results / 20261023-linear-recurrent-lineage-b08
+  - evidence: .survey/import-inbox/results/discovery/20261023-linear-recurrent-lineage-b08--8e652d8d22adaa8e9d5ace1580ba2f0d151f9631c80fbf2dc50c66b3f37f7b9b--discovery-recurrent-lineage-20261023.json
 
 
 ## 件数サマリー（旧immutable transport診断）
@@ -292,7 +292,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1167** |
+| ready | **1168** |
 
 ### 候補の重複・識別情報欠損
 
