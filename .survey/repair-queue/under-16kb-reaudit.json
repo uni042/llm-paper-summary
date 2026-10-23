@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-22T15:00:13.218725+00:00",
+  "generated_at": "2026-10-23T19:07:49.902165+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 4,
+  "count": 5,
   "worker_counts": {
     "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 1
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -97,6 +97,26 @@
         "method_chars": 1000,
         "evaluation_chars": 887,
         "limitation_chars": 366
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2602.16054-claa-cross-layer-attention-aggregation-for-accelerating-llm-prefill.md",
+      "canonical_id": "arXiv:2602.16054",
+      "title": "CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill",
+      "file_bytes": 15890,
+      "source_sha256": "1f0ee3377be02b3a2d840c8ca5fb7e39622007418ebceac250c73b9bd034878c",
+      "source_git_blob_sha": "2276c9f5d5a893ad34b29e507c5ae48726d9657e",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.954532,
+      "quality_metrics": {
+        "body_chars": 3970,
+        "method_chars": 859,
+        "evaluation_chars": 998,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
