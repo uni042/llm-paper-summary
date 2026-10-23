@@ -1,31 +1,45 @@
 ---
 canonical_id: DOI:10.18653/v1/2025.findings-emnlp.1286
 title: 'FractalLLM: Lossless Self-Speculative Decoding with Layer Embedded Self-Compression'
-list_summary: '元のデコーダ層間に8ビット圧縮した同一モデル由来の補助層を埋め込み、1回の順伝播中に複数草稿トークンを提案して元モデルで検証する。RTX 3090上のKVキャッシュ不使用実験で最大2.47倍の生成高速化を報告。'
-summary: >-
-  FractalLLMは、元モデルとは別の草稿モデルを常駐させず、量子化した埋込み・デコーダ・出力ヘッドを元のデコーダ途中に挿入する自己投機的復号方式である。複数のFractal Layerが1回の元モデル順伝播の途中で草稿を更新し、検証時は補助層を迂回して元モデルの出力と照合する。Llama-3 3B/8BとCodeLlama-13BをRTX 3090で評価し、HumanEvalのCodeLlama-13Bで1.79から4.43トークン/秒、2.47倍の改善を報告した。草稿窓幅と挿入層数の交換条件も評価したが、主要実験はKVキャッシュを使わない簡略化設定であり、通常のキャッシュ付き推論に対する同倍率の高速化は未検証である。
+list_summary: 元のデコーダ層間に8ビット圧縮した同一モデル由来の補助層を埋め込み、1回の順伝播中に複数草稿トークンを提案して元モデルで検証する。RTX 3090上のKVキャッシュ不使用実験で最大2.47倍の生成高速化を報告。
+summary: FractalLLMは、元モデルとは別の草稿モデルを常駐させず、量子化した埋込み・デコーダ・出力ヘッドを元のデコーダ途中に挿入する自己投機的復号方式である。複数のFractal Layerが1回の元モデル順伝播の途中で草稿を更新し、検証時は補助層を迂回して元モデルの出力と照合する。Llama-3 3B/8BとCodeLlama-13BをRTX 3090で評価し、HumanEvalのCodeLlama-13Bで1.79から4.43トークン/秒、2.47倍の改善を報告した。草稿窓幅と挿入層数の交換条件も評価したが、主要実験はKVキャッシュを使わない簡略化設定であり、通常のキャッシュ付き推論に対する同倍率の高速化は未検証である。
 authors:
-  - Juhyeong Kim
-  - Sangyeon Yu
-  - Gyunyeop Kim
-  - Sangwoo Kang
-published: '2025-11'
+- Juhyeong Kim
+- Sangyeon Yu
+- Gyunyeop Kim
+- Sangwoo Kang
+published: 2025-11
 publication: 'Findings of the Association for Computational Linguistics: EMNLP 2025, pp. 23666-23673'
 publication_type: conference
 publication_status: published
 source: https://aclanthology.org/2025.findings-emnlp.1286.pdf
 sources:
-  - https://aclanthology.org/2025.findings-emnlp.1286.pdf
-  - https://aclanthology.org/2025.findings-emnlp.1286/
+- https://aclanthology.org/2025.findings-emnlp.1286.pdf
+- https://aclanthology.org/2025.findings-emnlp.1286/
 doi: 10.18653/v1/2025.findings-emnlp.1286
-implementation: '元デコーダ層間へ8ビット線形量子化した補助埋込み・補助デコーダ層・補助LMヘッドを挿入し、草稿段階と元モデルの検証段階を分離。RTX 3090でLlama-3 3B/8B、CodeLlama-13Bを測定。ただし主要評価ではKVキャッシュを使用しない。公式実装の公開URLは一次資料中で確認できなかった。'
+implementation: 元デコーダ層間へ8ビット線形量子化した補助埋込み・補助デコーダ層・補助LMヘッドを挿入し、草稿段階と元モデルの検証段階を分離。RTX 3090でLlama-3 3B/8B、CodeLlama-13Bを測定。ただし主要評価ではKVキャッシュを使用しない。公式実装の公開URLは一次資料中で確認できなかった。
 code: null
 last_checked: '2026-10-23'
 worker_completed_at: '2026-10-23T23:40:06+09:00'
 worker_id: scheduled-chat-30
-worker_run_key: '20261023-2330-scheduled-chat-30/r01'
+worker_run_key: 20261023-2330-scheduled-chat-30/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: DOI:10.1145/3579371.3589038
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2402.13720
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2410.01028
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:1909.11556
+- canonical_id: arXiv:1811.03115
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # FractalLLM：デコーダ層内に圧縮モデルを埋め込む自己投機的復号

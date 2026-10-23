@@ -1,31 +1,55 @@
 ---
 canonical_id: DOI:10.18653/v1/2026.acl-long.46
 title: 'RoBSA: RoPE-based Blockwise Sparse Multi-head Latent Attention'
-list_summary: 'MLAの回転位置埋込み成分だけで注意候補を近似し、層別の精度保護と16トークン単位の動的ブロック選択で長文脈復号の注意計算を減らす。DeepSeek-V3/R1の実GPU評価で最大2.55倍の出力トークン遅延短縮を報告。'
-summary: >-
-  RoBSAは、DeepSeek系の多頭潜在注意（MLA）で位置情報を担うRoPE成分から軽量な注意スコアを計算し、重要なKVブロックだけを選んで完全な注意計算を行う学習不要の疎注意方式である。校正用100プロンプトから層ごとの近似適合性を測り、不適合層では完全な注意スコアによる選択へ戻す。2ノード・計16基のH100を用いるvLLMベースのDeepSeek-V3/R1実験では、長文脈の出力トークン間遅延を最大2.55倍改善し、8要求同時処理ではスループット最大1.79倍を報告した。ただしR1の長文推論精度は低下する条件があり、初回入力処理や一般のGQA/MHAへは適用しない。
+list_summary: MLAの回転位置埋込み成分だけで注意候補を近似し、層別の精度保護と16トークン単位の動的ブロック選択で長文脈復号の注意計算を減らす。DeepSeek-V3/R1の実GPU評価で最大2.55倍の出力トークン遅延短縮を報告。
+summary: RoBSAは、DeepSeek系の多頭潜在注意（MLA）で位置情報を担うRoPE成分から軽量な注意スコアを計算し、重要なKVブロックだけを選んで完全な注意計算を行う学習不要の疎注意方式である。校正用100プロンプトから層ごとの近似適合性を測り、不適合層では完全な注意スコアによる選択へ戻す。2ノード・計16基のH100を用いるvLLMベースのDeepSeek-V3/R1実験では、長文脈の出力トークン間遅延を最大2.55倍改善し、8要求同時処理ではスループット最大1.79倍を報告した。ただしR1の長文推論精度は低下する条件があり、初回入力処理や一般のGQA/MHAへは適用しない。
 authors:
-  - Xinyu Shi
-  - Kairong Luo
-  - Zhen Zheng
-  - Wenguang Chen
-published: '2026-07'
-publication: 'Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Long Papers, pp. 1028-1044'
+- Xinyu Shi
+- Kairong Luo
+- Zhen Zheng
+- Wenguang Chen
+published: 2026-07
+publication: Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Long Papers, pp. 1028-1044
 publication_type: conference
 publication_status: published
 source: https://aclanthology.org/2026.acl-long.46.pdf
 sources:
-  - https://aclanthology.org/2026.acl-long.46.pdf
-  - https://aclanthology.org/2026.acl-long.46/
+- https://aclanthology.org/2026.acl-long.46.pdf
+- https://aclanthology.org/2026.acl-long.46/
 doi: 10.18653/v1/2026.acl-long.46
-implementation: 'vLLMベースのページ管理KVキャッシュへ疎注意のブロック選択を実装。2ノード・各8基のNVIDIA H100 80GBで、テンソル並列8、パイプライン並列2としてDeepSeek-V3/R1を評価。一次論文で独立した公式コード配布先は確認できなかった。'
+implementation: vLLMベースのページ管理KVキャッシュへ疎注意のブロック選択を実装。2ノード・各8基のNVIDIA H100 80GBで、テンソル並列8、パイプライン並列2としてDeepSeek-V3/R1を評価。一次論文で独立した公式コード配布先は確認できなかった。
 code: null
 last_checked: '2026-10-23'
 worker_completed_at: '2026-10-23T23:37:39+09:00'
 worker_id: scheduled-chat-30
-worker_run_key: '20261023-2330-scheduled-chat-30/r01'
+worker_run_key: 20261023-2330-scheduled-chat-30/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3600006.3613165
+  arxiv_id: '2309.06180'
+- canonical_id: arXiv:2502.18137
+- canonical_id: arXiv:2407.02490
+- canonical_id: arXiv:2402.04617
+- canonical_id: arXiv:2410.10819
+- canonical_id: arXiv:2012.09852
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2502.11089
+- canonical_id: arXiv:2210.17323
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14294
+- canonical_id: arXiv:1911.02150
+- canonical_id: arXiv:2502.13189
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2410.16179
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 3
 ---
 
 # RoBSA：多頭潜在注意の位置情報だけで重要ブロックを選ぶ長文脈疎注意
