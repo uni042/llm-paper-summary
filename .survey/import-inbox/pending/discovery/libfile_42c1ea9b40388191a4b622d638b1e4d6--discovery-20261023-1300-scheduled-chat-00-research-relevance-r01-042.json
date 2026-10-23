@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1300-scheduled-chat-00/r01/research-prescreen-042",
+  "reference_main_sha": "8fc11ec0197d46d95d8b5330766d32f1f9390370",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05532",
+      "identity_tokens": [
+        "arxiv:2605.05532",
+        "doi:10.48550/arxiv.2605.05532"
+      ],
+      "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction",
+      "reason": "一次要旨では、法務契約書の構造化抽出で法律特化小型MoEと汎用LLM5種のF1・誤抽出・推論費用を比較し、特化モデルのマクロF1 0.812と費用削減を報告する。法務アプリのモデル選択・タスク品質比較であり、MoEルーティングやモデル配置、KVキャッシュ、推論カーネル、汎用サービングの設計を新規提案しないため対象外。",
+      "source_url": "https://arxiv.org/abs/2605.05532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T13:04:37+09:00",
+      "last_checked_at": "2026-10-23T13:04:37+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 42
+    }
+  ]
+}
