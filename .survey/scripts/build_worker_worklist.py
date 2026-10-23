@@ -433,12 +433,20 @@ def _worklist_identity_tokens(row: dict[str, Any]) -> set[str]:
     return tokens
 
 
-def _dedupe_rows_by_identity(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Keep the first ranked row for each paper identity, propagating aliases."""
+def _dedupe_rows_by_identity(
+    rows: list[dict[str, Any]], *, preserve_distinct_job_types: bool = False
+) -> list[dict[str, Any]]:
+    """Keep the first ranked row per identity, optionally separating job types."""
     seen: set[str] = set()
     out: list[dict[str, Any]] = []
     for row in rows:
         tokens = _worklist_identity_tokens(row)
+        if (
+            preserve_distinct_job_types
+            and row.get("job_id")
+            and row.get("type") in {"research", "audit"}
+        ):
+            tokens = {f"job-type:{row['type']}:{token}" for token in tokens}
         duplicate = bool(tokens and seen.intersection(tokens))
         seen.update(tokens)
         if duplicate:
@@ -513,7 +521,9 @@ def build(
     # A paper that already has a ready Research/Audit job must never be offered
     # again as Discovery work, even if it is claimed by the other scheduled worker
     # or appears through a DOI/arXiv/URL/title alias. Research/Audit takes precedence.
-    research_all = _dedupe_rows_by_identity(research_all)
+    research_all = _dedupe_rows_by_identity(
+        research_all, preserve_distinct_job_types=True
+    )
     discovery_all = _exclude_reserved_identities(
         discovery_all,
         reserved_rows=research_reserved + _current_research_reservations(root),

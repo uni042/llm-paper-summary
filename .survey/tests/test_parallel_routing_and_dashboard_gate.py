@@ -84,14 +84,22 @@ class CommonThresholdRoutingTests(unittest.TestCase):
         self.assertNotIn("append_research_throughput_status.py", text)
         self.assertNotIn("refine_status_observability.py", text)
 
-    def test_status_workflow_refreshes_paper_only_pushes_without_double_publish(self):
+    def test_status_workflow_regenerates_status_and_worklists_idempotently(self):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn("push:", text)
         self.assertIn("- 'papers/**/*.md'", text)
         self.assertIn("github.event_name == 'push'", text)
-        self.assertIn("git diff --name-only", text)
-        self.assertIn("grep -Fxq 'STATUS.md'", text)
-        self.assertIn("Triggering paper push already included STATUS.md", text)
+        self.assertIn(
+            "python .survey/scripts/build_worker_worklist.py --repo-root .", text
+        )
+        self.assertIn(
+            "git add -A STATUS.md .survey/work-queue/jobs .survey/work-queue/next-jobs.json "
+            ".survey/work-queue/WORKLIST-00.md .survey/work-queue/WORKLIST-30.md "
+            ".survey/work-queue/WORKLIST-45.md .survey/work-queue/worker-worklist-00.json "
+            ".survey/work-queue/worker-worklist-30.json .survey/work-queue/worker-worklist-45.json",
+            text,
+        )
+        self.assertIn("git diff --cached --quiet", text)
 
     def test_claim_fast_lane_defers_dashboard_rendering_to_status_lane(self):
         text = CLAIM_WORKFLOW.read_text(encoding="utf-8")
