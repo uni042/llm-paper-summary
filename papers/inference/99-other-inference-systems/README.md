@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（921本）
+## 自動生成の論文一覧（923本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1138,6 +1138,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   VeriAttn（通信-efficient TEE-GPU 注意機構）は、注意の線形演算と非線形の指数関数をともにGPUで計算させ、TEEには結果の検証と最終的な正規化を担当させる。Intel TDX、16仮想CPU、128 GBホストメモリ、NVIDIA H20 96 GBの環境で、4種類の3B～14Bモデルを評価した。
 
+- **2026-06 · [Cold Start Latency of Quantized Small Language Models on Serverless CPU Infrastructure](2026-9a95feba0c73-cold-start-latency-of-quantized-small-language-models-on-serverless-cpu-.md)**  
+  実装：[✓](https://github.com/mingwho/slm-research) ・ リポジトリ内被引用：0  
+  本論文は、アクセス頻度の低い小型言語モデル（Small Language モデル; SLM）を、要求が来たときだけ起動するサーバーレス基盤で提供する際の遅延を測る研究である。利用者の要求がないときに実行環境をゼロへ縮退させられる反面、次の要求時にはコンテナを起こし、量子化重みを読み込み、トークンを生成する必要がある。
+
 - **2026-06 · [CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield](2026-2606.31796-cherry-compressed-hierarchical-experts-with-recurrent-representational-y.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   学習済みモデルの隣接層を平均してパラメータを圧縮し、同じ層を複数回使う再帰的深さ変換（Recurrent Depth Transformation; RDT）で有効深さを回復する。1B級の韓国語モデルで、重要トークン比率は平均15.3%。
@@ -1693,6 +1697,10 @@
 - **2026-03 · [ASAP: Attention-Shift-Aware Pruning for Efficient LVLM Inference](2026-2603.14549-asap-attention-shift-aware-pruning-for-efficient-lvlm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ASAPはこの注意の位置偏り（注意機構 shift）を緩和するため、視覚トークン同士に限り、重要度の高い未来位置への注意を段階的に許可する。
+
+- **2026-02 · [WiSparse: Boosting LLM Inference Efficiency with Weight-Aware Mixed Activation Sparsity](2026-2602.14452-wisparse-boosting-llm-inference-efficiency-with-weight-aware-mixed-activ.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  WiSparseは、学習済みLLMの重みを変更せず、推論時の入力トークンごとに重要度の低い線形層の入力チャネルを省略する手法である。Llama-3.1-8B-Instructの50%疎化では、6課題の平均正答率が密モデル65.57から63.57となり、R-Sparseの61.34、TEALの59.62を上回った。
 
 - **2026-02 · [Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL](2026-2602.03839-understanding-and-exploiting-weight-update-sparsity-for-communication-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

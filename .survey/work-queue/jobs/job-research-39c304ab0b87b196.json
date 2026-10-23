@@ -35,10 +35,15 @@
   "selection_reason": "LayerTrimはattentionとdepthを保ち、MLP featureを物理削除して入力によらず同じ小型dense checkpointを作る。新系統の静的structured pruningに直接一致する。",
   "semantic_scholar_id": "74da60b1dceddcc8541a55632692d24780b704e1",
   "source_url": "https://arxiv.org/abs/2610.19121",
-  "status": "ready",
+  "status": "superseded",
   "title": "Unlocking Structured Pruning for Reasoning Language Models via Attention-Preserving MLP Trimming",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-23T18:02:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.19121-unlocking-structured-pruning-for-reasoning-language-models-via-attention.md",
+  "represented_canonical_id": "arXiv:2610.19121",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
