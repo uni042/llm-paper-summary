@@ -1,39 +1,72 @@
 ---
-canonical_id: "DOI:10.52202/079017-3595"
-title: "ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction"
-summary: "長文脈推論で一度破棄したKVキャッシュのページが後続の生成で再び重要になる問題に対し、ArkValeはページをCPUメモリへ非同期退避し、鍵ベクトル群の包囲直方体による小さな要約をGPUに保持する。現在の問い合わせと要約から全ページの重要度を推定し、重要ページを必要時に呼び戻して注意計算を行う。LongChat-7BとLongBenchの6課題、パスキー検索、A100実機で評価し、2,048〜4,096トークンのGPUキャッシュ予算で品質をおおむね保持しながら、復号遅延を最大2.2倍、40GBのKV予算下でのバッチ処理量を最大4.6倍改善した。CPU側の退避容量と事前充填時のコピーが制約となる。"
-list_summary: "KVページをCPUへ退避し、鍵の幾何学的要約で重要度を推定して必要なページだけ呼び戻す長文脈LLM推論方式。"
+canonical_id: DOI:10.52202/079017-3595
+title: 'ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction'
+summary: 長文脈推論で一度破棄したKVキャッシュのページが後続の生成で再び重要になる問題に対し、ArkValeはページをCPUメモリへ非同期退避し、鍵ベクトル群の包囲直方体による小さな要約をGPUに保持する。現在の問い合わせと要約から全ページの重要度を推定し、重要ページを必要時に呼び戻して注意計算を行う。LongChat-7BとLongBenchの6課題、パスキー検索、A100実機で評価し、2,048〜4,096トークンのGPUキャッシュ予算で品質をおおむね保持しながら、復号遅延を最大2.2倍、40GBのKV予算下でのバッチ処理量を最大4.6倍改善した。CPU側の退避容量と事前充填時のコピーが制約となる。
+list_summary: KVページをCPUへ退避し、鍵の幾何学的要約で重要度を推定して必要なページだけ呼び戻す長文脈LLM推論方式。
 authors:
-  - "Renze Chen"
-  - "Zhuofeng Wang"
-  - "Beiquan Cao"
-  - "Tong Wu"
-  - "Size Zheng"
-  - "Xiuhong Li"
-  - "Xuechao Wei"
-  - "Shengen Yan"
-  - "Meng Li"
-  - "Yun Liang"
-published: "2024-12"
-publication: "Advances in Neural Information Processing Systems 37 (NeurIPS 2024)"
-publication_type: "査読付き国際会議論文"
-publication_status: "published"
-doi: "10.52202/079017-3595"
-source: "https://papers.nips.cc/paper_files/paper/2024/file/cd4b49379efac6e84186a3ffce108c37-Paper-Conference.pdf"
+- Renze Chen
+- Zhuofeng Wang
+- Beiquan Cao
+- Tong Wu
+- Size Zheng
+- Xiuhong Li
+- Xuechao Wei
+- Shengen Yan
+- Meng Li
+- Yun Liang
+published: 2024-12
+publication: Advances in Neural Information Processing Systems 37 (NeurIPS 2024)
+publication_type: 査読付き国際会議論文
+publication_status: published
+doi: 10.52202/079017-3595
+source: https://papers.nips.cc/paper_files/paper/2024/file/cd4b49379efac6e84186a3ffce108c37-Paper-Conference.pdf
 sources:
-  - "https://papers.nips.cc/paper_files/paper/2024/file/cd4b49379efac6e84186a3ffce108c37-Paper-Conference.pdf"
-  - "https://papers.nips.cc/paper_files/paper/2024/hash/cd4b49379efac6e84186a3ffce108c37-Abstract-Conference.html"
-implementation: "Hugging Face Transformers 4.40.0を基盤とし、CUDA 12.3、PyTorch 2.3.0、CUTLASS、FlashInfer、RAFTを一部カーネルに利用。公開リポジトリに実装と実行例がある。"
-code: "https://github.com/pku-liang/ArkVale"
-last_checked: "2026-10-23"
-worker_id: "scheduled-chat-45"
-worker_completed_at: "2026-10-23T21:55:25+09:00"
-worker_run_key: "20261023-2145-scheduled-chat-45/r01"
-reference_main_sha: "53be5bd29484627f92a339551a6bddab9d9fc545"
+- https://papers.nips.cc/paper_files/paper/2024/file/cd4b49379efac6e84186a3ffce108c37-Paper-Conference.pdf
+- https://papers.nips.cc/paper_files/paper/2024/hash/cd4b49379efac6e84186a3ffce108c37-Abstract-Conference.html
+implementation: Hugging Face Transformers 4.40.0を基盤とし、CUDA 12.3、PyTorch 2.3.0、CUTLASS、FlashInfer、RAFTを一部カーネルに利用。公開リポジトリに実装と実行例がある。
+code: https://github.com/pku-liang/ArkVale
+last_checked: '2026-10-23'
+worker_id: scheduled-chat-45
+worker_completed_at: '2026-10-23T21:55:25+09:00'
+worker_run_key: 20261023-2145-scheduled-chat-45/r01
+reference_main_sha: 53be5bd29484627f92a339551a6bddab9d9fc545
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.09054
+- canonical_id: arXiv:2305.13245
+- canonical_id: DOI:10.1145/3620665.3640366
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2312.00752
+- canonical_id: arXiv:2311.01282
+  arxiv_id: '2311.01282'
+- canonical_id: arXiv:2006.09616
+- canonical_id: arXiv:2001.04451
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2405.02842
+- canonical_id: arXiv:2305.16300
+- canonical_id: arXiv:2305.13048
+- canonical_id: arXiv:2309.00071
+- canonical_id: arXiv:1911.02150
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2307.08621
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2012.09852
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2403.17312
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 68
 ---
 
 # ArkVale：重要度が復活するKVページを呼び戻す長文脈推論

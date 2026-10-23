@@ -1,45 +1,104 @@
 ---
-canonical_id: "DOI:10.1109/ISCA66397.2026.00173"
-title: "Symbiotic MLLM Serving: Dynamically Balancing Parallelism Across GPUs and Resources Within GPUs"
+canonical_id: DOI:10.1109/ISCA66397.2026.00173
+title: 'Symbiotic MLLM Serving: Dynamically Balancing Parallelism Across GPUs and Resources Within GPUs'
 authors:
-  - "Zhicheng Li"
-  - "Jiacheng Zhao"
-  - "Yangyu Zhang"
-  - "Zhaolin Duan"
-  - "Xinyu Liu"
-  - "Siqi Li"
-  - "Shuoming Zhang"
-  - "Shuaijiang Li"
-  - "Donglin Yu"
-  - "Yuan Wen"
-  - "Chunwei Xia"
-  - "Xiyu Shi"
-  - "Huimin Cui"
-published: "2026-08-04"
-publication: "53rd ACM/IEEE International Symposium on Computer Architecture (ISCA 2026)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://zhangshuoming990105.github.io/_pdfs/isca2026_resonator.pdf"
+- Zhicheng Li
+- Jiacheng Zhao
+- Yangyu Zhang
+- Zhaolin Duan
+- Xinyu Liu
+- Siqi Li
+- Shuoming Zhang
+- Shuaijiang Li
+- Donglin Yu
+- Yuan Wen
+- Chunwei Xia
+- Xiyu Shi
+- Huimin Cui
+published: '2026-08-04'
+publication: 53rd ACM/IEEE International Symposium on Computer Architecture (ISCA 2026)
+publication_type: conference
+publication_status: published
+source: https://zhangshuoming990105.github.io/_pdfs/isca2026_resonator.pdf
 sources:
-  - "https://zhangshuoming990105.github.io/_pdfs/isca2026_resonator.pdf"
-  - "https://doi.org/10.1109/ISCA66397.2026.00173"
-summary: "RESONATORは、画像符号化器とLLM本体で演算器・メモリ帯域の需要が異なることに着目した多模態LLMサービング基盤である。性能予測表（Performance Atlas）を用いてGPU内では復号保護のためのSM分割と事前充填時のカーネル単位ストリーム共有を切り替え、GPU間ではPRISM動的計画法で画像符号化器のデータ並列・テンソル並列を要求バッチごとに選ぶ。画像符号化器の全重みを各GPUに常駐させた論理分割により再配置転送を避ける。8台のA100を備えた単一サーバでQwen2-VL-7B、Qwen2-VL-72B、Kimi-VL-16Bを評価し、基準方式に対して平均初回トークン遅延を最大5.1倍、トークン間遅延を最大3.0倍、全体処理量を最大3.4倍改善した。"
-list_summary: "RESONATORは多模態LLMの画像符号化器と復号器のGPU内資源共有を実行段階別に切り替え、画像解像度と負荷に応じてGPU間並列度を動的選択する。A100で最大3.4倍の処理量改善を報告する。"
-implementation: "SGLang 0.4.7上にResonatorを実装。性能予測表（Performance Atlas）、GPU内SM分割とCUDAストリーム切替、GPU間PRISM動的計画、全GPUへの画像符号化器重み複製と論理的テンソル分割を組み合わせて評価した。公式実装の公開URLは一次資料から特定できない。"
+- https://zhangshuoming990105.github.io/_pdfs/isca2026_resonator.pdf
+- https://doi.org/10.1109/ISCA66397.2026.00173
+summary: RESONATORは、画像符号化器とLLM本体で演算器・メモリ帯域の需要が異なることに着目した多模態LLMサービング基盤である。性能予測表（Performance Atlas）を用いてGPU内では復号保護のためのSM分割と事前充填時のカーネル単位ストリーム共有を切り替え、GPU間ではPRISM動的計画法で画像符号化器のデータ並列・テンソル並列を要求バッチごとに選ぶ。画像符号化器の全重みを各GPUに常駐させた論理分割により再配置転送を避ける。8台のA100を備えた単一サーバでQwen2-VL-7B、Qwen2-VL-72B、Kimi-VL-16Bを評価し、基準方式に対して平均初回トークン遅延を最大5.1倍、トークン間遅延を最大3.0倍、全体処理量を最大3.4倍改善した。
+list_summary: RESONATORは多模態LLMの画像符号化器と復号器のGPU内資源共有を実行段階別に切り替え、画像解像度と負荷に応じてGPU間並列度を動的選択する。A100で最大3.4倍の処理量改善を報告する。
+implementation: SGLang 0.4.7上にResonatorを実装。性能予測表（Performance Atlas）、GPU内SM分割とCUDAストリーム切替、GPU間PRISM動的計画、全GPUへの画像符号化器重み複製と論理的テンソル分割を組み合わせて評価した。公式実装の公開URLは一次資料から特定できない。
 code: null
-last_checked: "2026-10-23"
-worker_completed_at: "2026-10-23T21:51:39+09:00"
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261023-2145-scheduled-chat-45/r01"
-reference_main_sha: "53be5bd29484627f92a339551a6bddab9d9fc545"
+last_checked: '2026-10-23'
+worker_completed_at: '2026-10-23T21:51:39+09:00'
+worker_id: scheduled-chat-45
+worker_run_key: 20261023-2145-scheduled-chat-45/r01
+reference_main_sha: 53be5bd29484627f92a339551a6bddab9d9fc545
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-source_worker_id: "scheduled-chat-00"
-source_worker_run_key: "20261023-2000-scheduled-chat-00/r01"
-quality_repair_type: "required_frontmatter_completion"
-quality_repair_note: "既存原稿の手法・評価・限界本文は変更せず、先行稿で検証済みの実装情報と未確認公式コードのnullを補完。"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+source_worker_id: scheduled-chat-00
+source_worker_run_key: 20261023-2000-scheduled-chat-00/r01
+quality_repair_type: required_frontmatter_completion
+quality_repair_note: 既存原稿の手法・評価・限界本文は変更せず、先行稿で検証済みの実装情報と未確認公式コードのnullを補完。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2410.21276
+  arxiv_id: '2410.21276'
+- canonical_id: arXiv:2312.11805
+  arxiv_id: '2312.11805'
+- canonical_id: arXiv:2409.12191
+  arxiv_id: '2409.12191'
+- canonical_id: arXiv:2502.13923
+  arxiv_id: '2502.13923'
+- canonical_id: arXiv:2504.07491
+  arxiv_id: '2504.07491'
+- canonical_id: arXiv:2311.16483
+  arxiv_id: '2311.16483'
+- canonical_id: OpenReview:YicbFdNTTy
+  openreview_id: YicbFdNTTy
+- canonical_id: arXiv:2506.10423
+  arxiv_id: '2506.10423'
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2312.07104
+  openreview_id: VqkAKQibpq
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2503.06433
+  arxiv_id: '2503.06433'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2501.01005
+  openreview_id: RXPofAsL8F
+- canonical_id: DOI:10.1145/3627535.3638466
+  doi: 10.1145/3627535.3638466
+- canonical_id: DOI:10.1145/3710848.3710871
+  doi: 10.1145/3710848.3710871
+- canonical_id: arXiv:2501.05460
+  openreview_id: n7VLFYNoCb
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2408.08147
+  arxiv_id: '2408.08147'
+- canonical_id: arXiv:1909.08053
+- canonical_id: arXiv:2312.06742
+- canonical_id: arXiv:2409.02813
+  arxiv_id: '2409.02813'
+- canonical_id: arXiv:2303.06865
+  arxiv_id: '2303.06865'
+- canonical_id: arXiv:2010.05680
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2404.02015
+- canonical_id: arXiv:2404.14469
+  openreview_id: poE54GOq2l
+- canonical_id: arXiv:2409.09086
+  arxiv_id: '2409.09086'
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2312.05516
+- canonical_id: arXiv:2502.00937
+  doi: 10.1145/3772052.3772254
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 45
 ---
 
 # RESONATOR：GPU内資源共有とGPU間動的並列化を統合した多模態LLMサービング
