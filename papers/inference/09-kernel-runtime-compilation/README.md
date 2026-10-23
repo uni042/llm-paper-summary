@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（152本）
+## 自動生成の論文一覧（153本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -165,6 +165,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [UnionSparse: An Index-Efficient Sparsity Framework for Low-Bit Sparse LLM Inference on Edge](2026-2608.09291-unionsparse-index-efficient-low-bit-sparse-inference.md)**  
   実装：[✓](https://github.com/Victor-Alen/UnionSparse) ・ リポジトリ内被引用：0  
   低ビット化で相対的に増える疎行列の位置情報負担をPMRで定量化し、共有ビットマップ表現と並列復号カーネルを共同設計してJetson上の小バッチ疎推論を高速化する。
+
+- **2026-08 · [Symbiotic MLLM Serving: Dynamically Balancing Parallelism Across GPUs and Resources Within GPUs](2026-a953baa22bb6-symbiotic-mllm-serving-dynamically-balancing-parallelism-across-gpus-and.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の文字列専用LLMサービングを拡張する場合、画像符号化器を生成器と同居させるか、固定されたGPU群へ分離することが多い。実装はSGLang 0.4.7を基礎とし、8基のNVIDIA A100 SXM 80GBとNVLinkを備える単一サーバで評価された。
 
 - **2026-08 · [Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware](2026-2608.23807-serving-masked-diffusion-llms-characterization-and-design-principles-fro.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

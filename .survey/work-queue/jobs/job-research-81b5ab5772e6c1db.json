@@ -35,10 +35,15 @@
   "selection_reason": "ArkVale uses a page-based KV-cache manager that scores page digests to recall evicted tokens when their importance rises and evict less important pages; the official abstract reports up to 2.2x lower decoding latency and 4.6x batching throughput at 2k–4k cache budgets, a direct LLM serving-efficiency contribution.",
   "semantic_scholar_id": "8153906992cc87084010e170ce52c638c94ee04e",
   "source_url": "https://doi.org/10.52202/079017-3595",
-  "status": "ready",
+  "status": "superseded",
   "title": "ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-23T13:51:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md",
+  "represented_canonical_id": "DOI:10.52202/079017-3595",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

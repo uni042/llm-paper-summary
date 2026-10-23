@@ -38,6 +38,8 @@ source_worker_id: "scheduled-chat-00"
 source_worker_run_key: "20261023-2000-scheduled-chat-00/r01"
 quality_repair_type: "required_frontmatter_completion"
 quality_repair_note: "既存原稿の手法・評価・限界本文は変更せず、先行稿で検証済みの実装情報と未確認公式コードのnullを補完。"
+last_audited: null
+audit_version: 0
 ---
 
 # RESONATOR：GPU内資源共有とGPU間動的並列化を統合した多模態LLMサービング

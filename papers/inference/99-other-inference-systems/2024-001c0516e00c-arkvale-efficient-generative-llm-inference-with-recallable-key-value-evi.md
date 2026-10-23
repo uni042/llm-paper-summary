@@ -32,6 +32,8 @@ worker_run_key: "20261023-2145-scheduled-chat-45/r01"
 reference_main_sha: "53be5bd29484627f92a339551a6bddab9d9fc545"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # ArkVale：重要度が復活するKVページを呼び戻す長文脈推論
