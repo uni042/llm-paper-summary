@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261024-0300-scheduled-chat-00/r01/relevance-022",
+  "reference_main_sha": "b0747ae4952a61a02cb0e83dcfd3be1de64c1025",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.539",
+      "identity_tokens": [
+        "doi:10.18653/v1/2024.findings-emnlp.539",
+        "acl:2024.findings-emnlp.539"
+      ],
+      "title": "LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters",
+      "reason": "査読済み全文の§3.1はBERT等の識別型Transformerによる多クラス分類を対象と明記し、§4.1–4.2の実験はGLUEの7分類課題、BERT/ALBERT/DeBERTaを使用する。複数の早期終了分岐に独立LoRAを付け、優位な後段分岐から蒸留し、GPU上で主幹GEMMとLoRA用SGMVをバッチ実行するため、推論時の遅延・メモリ効率への直接寄与はある。一方、自己回帰の生成、KVキャッシュ、LLMサービング負荷での有効性は未評価で、原著§7も生成型LLMへの拡張を将来課題と明記。現行の生成型LLM推論基盤サーベイへの採録は境界的としてborderline。",
+      "source_url": "https://aclanthology.org/2024.findings-emnlp.539.pdf",
+      "body_check": "research_fulltext_relevance_review: ACL Anthology著者原著PDF全15頁。§3.1（p.9214）で識別型LLMの分類課題と明示、§3.3（p.9215）でGEMM/SGMV併用と確信度早期終了、§4.1–4.2（p.9215–）でGLUE/BERT/ALBERT/DeBERTa、§7（p.9219）で生成型LLM未評価を確認。表3のBERT-baseで相対遅延0.78・GLUE平均81.51、基準BERT-base遅延1.00・平均82.83と品質との交換条件も確認。abstractのみの判定ではない。",
+      "first_checked_at": "2026-10-24T03:04:35+09:00",
+      "last_checked_at": "2026-10-24T03:04:35+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 22,
+      "worker_id": "scheduled-chat-00",
+      "research_job_id": null,
+      "reference_main_sha": "b0747ae4952a61a02cb0e83dcfd3be1de64c1025"
+    }
+  ]
+}
