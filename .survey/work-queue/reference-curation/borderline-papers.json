@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T00:45:19+00:00",
+  "updated_at": "2026-10-23T02:43:51+00:00",
   "record_count": 5322,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -82006,9 +82006,9 @@
         "DOI:10.48550/arxiv.2402.12289",
         "arXiv:2402.12289"
       ],
-      "reason": "一次要旨は視覚言語モデルを用いた自動運転のシーン理解・階層的計画、従来の車載処理系と組み合わせたDriveVLM-Dualを提案し、実車での推論実行にも言及する。実時間性と重い推論の組合せというシステム接点はあるが、目的と評価は運転タスクであり汎用LLMサービング・GPUメモリ階層・KVキャッシュ最適化そのものではないため関連性保留。",
+      "reason": "一次要旨は、都市部の長尾運転場面を理解するために視覚言語モデルの場面記述・分析・階層計画を組み合わせるDriveVLMを提案し、計算負担と空間推論の制約に対して従来の自動運転パイプラインと併用するDriveVLM-Dualを導入する。ハイブリッド化には実行効率との接点があるが、主目的は自動運転の認識・計画性能であり、LLMサービングやKV管理等の独立した推論基盤改善ではないため境界扱い。",
       "first_checked_at": "2026-10-22T15:36:14+00:00",
-      "last_checked_at": "2026-10-22T15:36:14+00:00",
+      "last_checked_at": "2026-10-23T02:43:51+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models"
@@ -82064,12 +82064,12 @@
         "DOI:10.48550/arxiv.2208.00406",
         "arXiv:2208.00406"
       ],
-      "reason": "一次要旨は機械学習モデルの学習・推論のエネルギー消費と地域別CO2排出量を計測するPythonパッケージeco2AIを提案する。LLM推論運用のエネルギー計測にも間接利用できるが、LLM特有の推論効率化や実行・スケジューリング機構を開発・評価する論文ではないため収録優先度が低い。",
+      "reason": "一次要旨は機械学習の学習・推論時の電力消費と地域別CO2排出係数を記録する汎用計測パッケージeco2AIを提案する。推論基盤のエネルギー計測という接点はあるが、LLM専用の実行スケジューラ・メモリ・カーネル最適化やLLM推論の定量的高速化が直接の主張ではないため境界扱い。",
       "first_checked_at": "2026-10-22T15:36:20+00:00",
-      "last_checked_at": "2026-10-22T15:36:20+00:00",
+      "last_checked_at": "2026-10-23T02:43:51+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
-      "title": "eco2AI: Carbon Emissions Tracking of Machine Learning Models as the First Step Towards Sustainable AI"
+      "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
     },
     "SemanticScholar:7945684818786fcb32cf92bace2566d7d6bc8945": {
       "classification": "borderline",

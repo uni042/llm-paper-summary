@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-1c78d817ad0a6ce3-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2208.00406",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2208.00406",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2208.00406",
+      "arXiv:2208.00406"
+    ],
+    "reason": "一次要旨は機械学習の学習・推論時の電力消費と地域別CO2排出係数を記録する汎用計測パッケージeco2AIを提案する。推論基盤のエネルギー計測という接点はあるが、LLM専用の実行スケジューラ・メモリ・カーネル最適化やLLM推論の定量的高速化が直接の主張ではないため境界扱い。",
+    "first_checked_at": "2026-10-22T15:36:20+00:00",
+    "last_checked_at": "2026-10-23T02:43:51+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Eco2AI: carbon emissions tracking of machine learning models as the first step towards sustainable AI"
+  },
+  "processed_at": "2026-10-23T02:43:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1c78d817ad0a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

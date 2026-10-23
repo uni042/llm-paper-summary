@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T01:49:30+00:00",
+  "updated_at": "2026-10-23T02:43:51+00:00",
   "record_count": 12444,
   "records": {
     "arXiv:2303.08774": {
@@ -164623,9 +164623,9 @@
         "arXiv:2210.13452",
         "semanticscholar:fc4cbc7a75f5a3bbca59db5513231555f078fe78"
       ],
-      "reason": "本文の中心はMetaFormer系画像認識モデルの設計とImageNet-1Kでの性能比較であり、LLM推論・サービング・実行時メモリやカーネルの効率化は扱わない。StarReLUの活性化FLOPs削減は示すが、対象は一般的な画像認識アーキテクチャで、LLM推論システムへの具体的な接続がないため無関係とする。",
+      "reason": "一次要旨は画像認識向けMetaFormerのトークン混合器を恒等写像・ランダム行列・畳み込み・自己注意で置換し、ImageNet精度とStarReLUの活性化計算量を比較する。主な寄与は視覚バックボーンの表現能力・分類精度であり、LLMの逐次トークン生成、KVキャッシュ、MoE配置、サービングスケジューリングを扱わない。",
       "first_checked_at": "2026-10-11T20:48:40+00:00",
-      "last_checked_at": "2026-10-22T17:25:23+00:00",
+      "last_checked_at": "2026-10-23T02:43:51+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-45.md"
       ],
