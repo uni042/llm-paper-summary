@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（121本）
+## 自動生成の論文一覧（122本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -305,6 +305,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-03 · [FluxMem: Adaptive Hierarchical Memory for Streaming Video Understanding](2026-2603.02096-fluxmem-adaptive-hierarchical-memory-for-streaming-video-understanding.md)**  
   実装：[✓](https://github.com/YiwengXie/FluxMem) ・ リポジトリ内被引用：0  
   すべての視覚トークンを保持すると、時間の経過とともに事前充填（プリフィル）の費用、KVキャッシュ、GPUメモリ使用量が増加する。直近のフレームは細部を残し、少し古いフレームは隣接時刻との重複を除き、さらに古いフレームは空間的に類似する領域を一つの代表トークンへ統合する。
+
+- **2026-02 · [DynSplit-KV: Dynamic Semantic Splitting for KVCache Compression in Efficient Long-Context LLM Inference](2026-2602.03184-dynsplit-kv-dynamic-semantic-splitting-for-kvcache-compression-in-effici.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長い入力や長い生成では、過去トークンのキーと値を保持するKVキャッシュが大きくなり、GPUメモリ容量とメモリ帯域が律速になる。トークン単位で古い情報を捨てる方式は遠方の重要情報を失いやすい。原著LongBenchのKV保持率10%条件では、9タスク平均42.64点で全KV保持の42.72点に近い。
 
 - **2025-12 · [ODMA: On-Demand Memory Allocation Framework for LLM Serving on LPDDR-Class Accelerators](2025-2512.09427-odma-on-demand-memory-allocation-lpddr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

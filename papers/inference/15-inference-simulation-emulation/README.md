@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（46本）
+## 自動生成の論文一覧（47本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -145,6 +145,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-01 · [Mugi: Value Level Parallelism For Efficient LLMs](2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md)**  
   実装：[✓](https://zenodo.org/records/18063514) ・ リポジトリ内被引用：0  
   Mugiは、値レベル並列性（Value Level Parallelism; VLP）という、数値が一致する複数の演算に対して中間結果を共有するハードウェア方式を、LLMの推論へ適用した研究である。
+
+- **2025-12 · [DCO: Dynamic Cache Orchestration for LLM Accelerators through Predictive Management](2025-2512.07312-dco-dynamic-cache-orchestration-for-llm-accelerators-through-predictive-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DCOは、複数の人工知能演算コアが共有する最終段キャッシュ（last-level キャッシュ、LLC）を、単なる過去のアクセス時刻ではなく、演算グラフから分かるテンソルの参照予定回数とデータフローに従って管理する提案である。論文v2のHTML本文は従来LRUに対する最大1.90倍の速度向上を記す。
 
 - **2025-11 · [Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism](2025-832f2fc32711-multiplexed-heterogeneous-llm-serving-via-stage-aligned-parallelism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

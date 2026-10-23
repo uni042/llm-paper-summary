@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（211本）
+## 自動生成の論文一覧（212本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -471,6 +471,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-02 · [Vegas: Self-Speculative Decoding with Verification-Guided Sparse Attention](2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md)**  
   実装：[✓](https://github.com/platformxlab/vegas) ・ リポジトリ内被引用：0  
   検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
+
+- **2026-02 · [Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding](2026-2602.16994-dynamic-delayed-tree-expansion-for-improved-multi-path-speculative-decod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数候補を木状に展開する多経路方式では、同じ対象モデル呼び出しで複数の分岐を評価できる一方、木を大きくすると下書き計算と対象モデルの検証計算が増える。比較した既存方式では木走査検証が3モデル系統平均15.89 トークン/sで最良だったが、NDEを組み込んだSpecInferは16.69 トークン/sとなり約5.0%上回った。
 
 - **2026-02 · [Benchmarking the Energy Savings with Speculative Decoding Strategies](2026-2602.09113-benchmarking-the-energy-savings-with-speculative-decoding-strategies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

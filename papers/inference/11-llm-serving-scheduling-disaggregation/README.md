@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（437本）
+## 自動生成の論文一覧（438本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -411,6 +411,10 @@
 - **2026-03 · [SUN: Shared Use of Next-token Prediction for Efficient Multi-LLM Disaggregated Serving](2026-2603.02599-sun-shared-use-of-next-token-prediction-for-efficient-multi-llm-disaggre.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   通常の分離配信（disaggregated serving）は、入力を一括処理するプリフィル（プリフィル）と、出力を1トークンずつ生成するデコード（デコード）を異なるGPUへ割り当てる。
+
+- **2026-03 · [Simple is Better: Multiplication May Be All You Need for LLM Request Scheduling](2026-2603.15202-simple-is-better-multiplication-may-be-all-you-need-for-llm-request-sche.md)**  
+  実装：[✓](https://github.com/blitz-serving/blitz-router) ・ リポジトリ内被引用：1  
+  複数の推論インスタンスを持つLLMサービスでは、到着した要求をどのインスタンスへ割り当てるかで、初回トークン遅延（Time To First Token、TTFT）と出力トークン当たり遅延（Time Per Output Token、TPOT）が変わる。
 
 - **2026-03 · [SageSched: Efficient LLM Scheduling Confronting Demand Uncertainty and Hybridity](2026-2603.07917-sagesched-demand-uncertainty-hybrid-cost-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
