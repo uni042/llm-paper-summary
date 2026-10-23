@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（105本）
+## 自動生成の論文一覧（106本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -193,6 +193,10 @@
 - **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Beyondは、長文脈の大規模言語モデル（LLM）でキー・値キャッシュ（KVキャッシュ）が画像処理装置（GPU）の高帯域メモリ（HBM）からあふれた際、中央処理装置（CPU）の主記憶を単なる退避場所にせず、CPU側でも注意計算を実行する仕組みである。
+
+- **2026-07 · [RoBSA: RoPE-based Blockwise Sparse Multi-head Latent Attention](2026-2a77ad945c5e-robsa-rope-based-blockwise-sparse-multi-head-latent-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RoBSAは、DeepSeek-V3やDeepSeek-R1が採用する多頭潜在注意（Multi-head Latent 注意機構; MLA）の復号段階を対象とする、学習不要のブロック単位疎注意方式である。入力が128Kトークン程度まで伸びると、論文の測定条件では注意計算が復号時間の90%以上を占める。
 
 - **2026-07 · [RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention](2026-2607.21927-ris-kernel-a-model-agnostic-architecture-for-long-context-llm-inference-.md)**  
   実装：[✓](https://github.com/santosardr/riskernel) ・ リポジトリ内被引用：0  

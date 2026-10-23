@@ -24,6 +24,8 @@ last_checked: '2026-10-23'
 worker_completed_at: '2026-10-23T23:40:06+09:00'
 worker_id: scheduled-chat-30
 worker_run_key: '20261023-2330-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # FractalLLM：デコーダ層内に圧縮モデルを埋め込む自己投機的復号

@@ -24,6 +24,8 @@ last_checked: '2026-10-23'
 worker_completed_at: '2026-10-23T23:37:39+09:00'
 worker_id: scheduled-chat-30
 worker_run_key: '20261023-2330-scheduled-chat-30/r01'
+last_audited: null
+audit_version: 0
 ---
 
 # RoBSA：多頭潜在注意の位置情報だけで重要ブロックを選ぶ長文脈疎注意

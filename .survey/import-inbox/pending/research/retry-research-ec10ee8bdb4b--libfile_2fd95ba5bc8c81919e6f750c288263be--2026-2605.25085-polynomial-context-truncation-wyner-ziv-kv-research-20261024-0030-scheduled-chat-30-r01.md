@@ -26,6 +26,8 @@ worker_run_key: "20261024-0030-scheduled-chat-30/r01"
 worker_completed_at: "2026-10-24T00:30:46+09:00"
 reference_main_sha: "0c91e8442c5092d9b6d2f6fd44c54e87f72e4886"
 last_checked: "2026-10-24"
+last_audited: null
+audit_version: 0
 ---
 
 # 文脈切り捨て感度の冪則とKVキャッシュの保持窓の理論的限界

@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（67本）
+## 自動生成の論文一覧（68本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -178,6 +178,10 @@
 - **2026-06 · [Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows](2026-2606.14672-towards-direct-latent-space-synthesis-for-parallel-branches-in-llm-agent-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   並列エージェントの生成済みKVを位置再符号化・キャッシュ写像・合成器LoRAで直接統合し、再プリフィルを省いて9課題中7課題で品質を維持・改善しつつ最初のトークンまでを2.5〜11倍高速化する。
+
+- **2026-06 · [Toward Scalable LLM-Based Multi-Agent Collaboration: A Dynamic Task Graph Approach with Asynchronous Parallel Execution](2026-80a8722a219c-toward-scalable-llm-based-multi-agent-collaboration-a-dynamic-task-graph.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  意味選別型文脈管理（Semantic-Aware Context Management システム; SACMS）は受信者に関係する文脈のみを配送し、適応型ワークフロー管理器（適応的 Workflow Manager; AWM）が観測負荷を使って優先順位・割当を調整する。
 
 - **2026-06 · [Streaming Communication in Multi-Agent Reasoning](2026-2606.05158-streaming-communication-in-multi-agent-reasoning.md)**  
   実装：[✓](https://github.com/EnVision-Research/StreamMA) ・ リポジトリ内被引用：0  

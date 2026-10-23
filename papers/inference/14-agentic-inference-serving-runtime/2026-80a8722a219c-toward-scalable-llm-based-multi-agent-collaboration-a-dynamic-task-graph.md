@@ -28,6 +28,8 @@ worker_run_key: "20261023-2256-scheduled-chat-00/r01"
 reference_main_sha: "527caa3afc08a648d93958c1cbf54c50e6cd4e77"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # DynTaskMAS：動的タスクグラフと非同期並列実行による複合LLMエージェントの実行最適化

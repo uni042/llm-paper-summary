@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（209本）
+## 自動生成の論文一覧（210本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -503,6 +503,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-11 · [Scaling LLM Speculative Decoding: Non-Autoregressive Forecasting in Large-Batch Scenarios](2025-2511.20340-scaling-llm-speculative-decoding-non-autoregressive-forecasting-in-large.md)**  
   実装：[✓](https://github.com/ShiLuohe/SpecFormer) ・ リポジトリ内被引用：0  
   投機的復号は小さなモデルが複数トークンを先読みし、大きな目標モデルで一括検証することにより、目標モデルを直列に呼び出す回数を減らす。著者はQwenおよびLlama系で評価し、特定の草案予算制約下では従来のHASSやEAGLE-3より高い総トークン処理速度を示した。
+
+- **2025-11 · [FractalLLM: Lossless Self-Speculative Decoding with Layer Embedded Self-Compression](2025-2d13577b2303-fractalllm-lossless-self-speculative-decoding-with-layer-embedded-self-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FractalLLMは、自己回帰言語モデルのトークン逐次生成を減らすため、元のデコーダの途中に小さな圧縮モデルを挿入する自己投機的復号（自己投機的復号）の方式である。論文のRTX 3090実験では、CodeLlama-13BのHumanEvalで基準の1.79トークン/秒が4.43トークン/秒となり、2.47倍の高速化を報告する。
 
 ### 2年前（2024-11〜2025-10）
 
