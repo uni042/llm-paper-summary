@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-23T13:52:09+00:00",
-  "paper_count": 2959,
-  "edge_count": 38458,
+  "generated_at": "2026-10-23T14:11:24+00:00",
+  "paper_count": 2961,
+  "edge_count": 38460,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 15,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -1015,6 +1015,7 @@
     "papers/inference/09-kernel-runtime-compilation/2026-2609.37402-routing-should-pay-for-itself-sparse-supervision-for-economical-llm-rout.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.39816-beyond-accuracy-prefix-invariant-realizations-of-low-precision-fast-matr.md": 0,
+    "papers/inference/09-kernel-runtime-compilation/2026-a953baa22bb6-symbiotic-mllm-serving-dynamically-balancing-parallelism-across-gpus-and.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md": 0,
     "papers/inference/10-kv-cache-offload-recomputation/2023-2311.04934-prompt-cache.md": 106,
     "papers/inference/10-kv-cache-offload-recomputation/2024-2310.07240-cachegen.md": 117,
@@ -2151,6 +2152,7 @@
     "papers/inference/99-other-inference-systems/2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md": 15,
     "papers/inference/99-other-inference-systems/2023-2312.12728-lookahead-an-inference-acceleration-framework-for-large-language-model-w.md": 17,
     "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md": 4,
+    "papers/inference/99-other-inference-systems/2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md": 2,
     "papers/inference/99-other-inference-systems/2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md": 6,
     "papers/inference/99-other-inference-systems/2024-2310.03094-large-language-model-cascades-with-mixture-of-thought-representations-fo.md": 6,
     "papers/inference/99-other-inference-systems/2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md": 23,
@@ -19627,6 +19629,7 @@
       "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
       "papers/inference/99-other-inference-systems/2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md"
     ],
+    "papers/inference/09-kernel-runtime-compilation/2026-a953baa22bb6-symbiotic-mllm-serving-dynamically-balancing-parallelism-across-gpus-and.md": [],
     "papers/inference/09-kernel-runtime-compilation/2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2402.06262-on-the-efficacy-of-eviction-policy-for-key-value-constrained-generative-language-model-inference.md",
@@ -30863,6 +30866,7 @@
       "papers/inference/99-other-inference-systems/2019-1904.10509-generating-long-sequences-with-sparse-transformers.md",
       "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
       "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
+      "papers/inference/99-other-inference-systems/2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md",
       "papers/inference/99-other-inference-systems/2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md",
       "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md"
     ],
@@ -32034,7 +32038,8 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2403.19708-cachedattention-multi-turn-conversation-serving.md",
       "papers/inference/14-agentic-inference-serving-runtime/2025-2507.07400-kvflow.md",
       "papers/inference/14-agentic-inference-serving-runtime/2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md",
-      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md"
+      "papers/inference/99-other-inference-systems/2023-2310.01889-ring-attention-blockwise-transformers.md",
+      "papers/inference/99-other-inference-systems/2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md"
     ],
     "papers/inference/14-agentic-inference-serving-runtime/2026-2604.25917-recursive-multi-agent-systems.md": [
       "papers/inference/07-kv-cache-optimization-compression/2025-2507.10524-mixture-of-recursions-learning-dynamic-recursive-depths-for-adaptive-tok.md",
@@ -36507,6 +36512,7 @@
       "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
       "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md"
     ],
+    "papers/inference/99-other-inference-systems/2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md": [],
     "papers/inference/99-other-inference-systems/2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md": [
       "papers/inference/07-kv-cache-optimization-compression/2024-2402.05099-hydragen-high-throughput-llm-inference-shared-prefixes.md",
       "papers/inference/09-kernel-runtime-compilation/2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md",
