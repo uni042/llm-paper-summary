@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1700-scheduled-chat-00/r01/prescreen-021",
+  "reference_main_sha": "d1781364c073fddb460e92810096228795da36f2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.12276",
+      "identity_tokens": [
+        "arXiv:2203.12276"
+      ],
+      "title": "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention",
+      "reason": "階層的疎Transformerと注意トポロジー間の自己注意正則化を組み合わせ、長系列分類・質問応答の品質を改善するモデル学習研究。疎注意による計算量削減は推論効率と接点があるが、要旨の定量結果はLRA、分類、QAの精度であり、LLMデコード速度やKVキャッシュ使用量の実測はないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2203.12276",
+      "body_check": "abstract_screen_only; body_not_read; arXiv一次要旨でHSTとSARの二機構、LRA 57.78%対55.01%、QA 74.67%対71.43%を確認。本文未読。",
+      "first_checked_at": "2026-10-23T17:02:37+09:00",
+      "last_checked_at": "2026-10-23T17:02:37+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 21
+    }
+  ]
+}
