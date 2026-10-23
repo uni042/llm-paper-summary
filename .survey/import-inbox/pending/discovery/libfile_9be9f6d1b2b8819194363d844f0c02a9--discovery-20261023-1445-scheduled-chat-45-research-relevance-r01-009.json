@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261023-1445-scheduled-chat-45/r01/research-prescreen-009",
+  "reference_main_sha": "8268f9266745b107c1a8c4843b9247bbaf6a62da",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18370",
+      "identity_tokens": [
+        "arxiv:2407.18370"
+      ],
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+      "reason": "一次要旨は、LLM評価器の信頼度に応じて安価な判定器から高性能判定器へ段階的にエスカレーションする方式を示し、人間との一致率を保証しながら費用を抑える。要求ごとのモデル選択・推論費用削減と接点はあるが、最終目的は人間評価との一致を保証するLLM審判の評価方式であり、一般的なLLMサービング基盤の負荷分散やGPU実行最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2407.18370",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T14:47:12+09:00",
+      "last_checked_at": "2026-10-23T14:47:12+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 9
+    }
+  ]
+}
