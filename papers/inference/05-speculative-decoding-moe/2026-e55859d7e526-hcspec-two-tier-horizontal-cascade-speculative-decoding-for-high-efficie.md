@@ -30,6 +30,8 @@ returned_research_repair_of: ".survey/import-inbox/blocked/research/retry-resear
 returned_research_original_failure: "説明不足トリガー: 評価説明量 0 < 500"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # HCSpec：二段横方向カスケードによる投機的復号の効率化
