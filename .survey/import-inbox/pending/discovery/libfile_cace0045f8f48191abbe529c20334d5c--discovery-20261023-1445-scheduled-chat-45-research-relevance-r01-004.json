@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261023-1445-scheduled-chat-45/r01/research-prescreen-004",
+  "reference_main_sha": "8268f9266745b107c1a8c4843b9247bbaf6a62da",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.08186",
+      "identity_tokens": [
+        "arxiv:2512.08186"
+      ],
+      "title": "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-and-Language Navigation",
+      "reason": "一次要旨は、視覚言語モデルを用いた大域的な経由点推論と軽量な拡散Transformerによる局所軌道生成を分離するDualVLNを提案し、ロボットの動的障害物回避と実時間ナビゲーションを評価する。重いVLMを低頻度の計画へ分離する設計は推論遅延削減と接点があるが、LLMサービング、GPUスケジューリング、KVキャッシュ等の汎用推論基盤を直接最適化する研究ではないため保留。",
+      "source_url": "https://arxiv.org/abs/2512.08186",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T14:47:12+09:00",
+      "last_checked_at": "2026-10-23T14:47:12+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 4
+    }
+  ]
+}
