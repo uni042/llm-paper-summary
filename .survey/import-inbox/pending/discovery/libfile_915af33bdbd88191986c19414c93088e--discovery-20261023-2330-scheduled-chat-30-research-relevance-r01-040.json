@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261023-2330-scheduled-chat-30/r01/prescreen-040",
+  "reference_main_sha": "bbc7ed65100999470aead6e2c95d237c385c7f0f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133227",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133227"
+      ],
+      "title": "Overcoming contextless web markup text translation: A parallel and selective Q&A-driven LLM approach",
+      "reason": "タイトルが研究対象を文脈欠落したウェブマークアップ文の翻訳と明示しており、並列・選択的なQ&A駆動のLLM翻訳手法を扱う。LLM推論基盤、GPUメモリ、推論カーネル、モデルサービングの改善を示す主題ではない。タイトル段階の対象外判定であり、翻訳品質・速度など本文の実験結果は未確認。",
+      "source_url": "https://doi.org/10.1016/j.eswa.2026.133227",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-23T23:34:06+09:00",
+      "last_checked_at": "2026-10-23T23:34:06+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 40
+    }
+  ]
+}
