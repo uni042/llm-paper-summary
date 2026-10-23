@@ -27,6 +27,8 @@ worker_run_key: '20261023-2130-scheduled-chat-30/r01'
 reference_main_sha: 'b7f359e9d601295f283579edfc4018871745dec3'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 # 分散LLM推論の持続可能性：llm-dにエネルギー・炭素・キャッシュ判断を統合する設計構想
 

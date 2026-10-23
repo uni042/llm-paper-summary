@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（313本）
+## 自動生成の論文一覧（315本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -339,6 +339,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
+- **2026-10 · [Efficient KV Cache Migration for Geo-Distributed LLM Inference in Collaborative Edge Computing](2026-2610.22172-efficient-kv-cache-migration-for-geo-distributed-llm-inference-in-collab.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層単位で両方式を混合して通信と再計算を重ね、さらに複数の送信元に対する移動先の選択を最適化することで、移送の完了時刻を短縮する。条件によって直接転送比で約35～45%の移送時間短縮を報告する。
+
 - **2026-10 · [Dual-QK: Sharp Queries and Flat Keys for Prunable 2-bit KV Caches](2026-2610.09827-dual-qk-sharp-queries-and-flat-keys-for-prunable-2-bit-kv-caches.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の長文推論では、過去トークンの鍵・値キャッシュ（KV キャッシュ）がGPUメモリを圧迫し、復号のたびに大量のキーを読み直す。KVを2ビットへ量子化すれば保存容量は減るが、注意スコアに敏感な外れ値が量子化範囲を広げ、精度が崩れる。保存容量の約6.8倍削減と読出量の約8.3倍削減は形式・アクセス量の推定であり、実測速度そのものではない。
@@ -570,6 +574,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [KV Cache Compression Through the Lens of Transform Coding](2026-2608.14191-kv-cache-compression-through-the-lens-of-transform-coding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   保存精度を下げれば容量を削減できるが、鍵と値の数値的な再構成誤差が小さいことと、注意機構の出力が変化しないことは同義ではない。約5.82倍の鍵値キャッシュ圧縮時に、原著の標準誤差による判定では、両モデルの主要18評価セルすべてで非圧縮基準との統計的な区別がつかないと報告する。
+
+- **2026-08 · [ImpactHO: Importance-Aware KV Cache Transfer for Multi-User Edge LLM Handover](2026-2608.10545-impactho-importance-aware-kv-cache-transfer-for-multi-user-edge-llm-hand.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  元の入力文字列だけを送れば転送量は小さいが、移動先で全履歴を再度事前処理しなければならない。一方、KVキャッシュを丸ごと転送すると再計算は避けられるが、複数利用者の移動が重なるとノード間回線が詰まる。転送が途中で切れても、届いた上位要素を使って推論を再開できる「途中再開可能性」が中心的な設計である。
 
 - **2026-08 · [Entropy-Constrained Adaptive Stochastic Quantization](2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
