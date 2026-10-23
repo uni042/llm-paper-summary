@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T07:53:14+00:00",
-  "record_count": 5324,
+  "updated_at": "2026-10-23T08:43:00+00:00",
+  "record_count": 5335,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82586,6 +82586,149 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "VLingNav: Embodied Navigation with Adaptive Reasoning and Visual-Assisted Linguistic Memory"
+    },
+    "arXiv:2609.08663": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08663",
+      "identity_tokens": [
+        "arXiv:2609.08663"
+      ],
+      "reason": "MoEMBは単一ベクトルの非自己回帰マルチモーダル埋め込み器を混合専門家モデルで拡張し、適応的な計算量削減も調べる。専門家の動的計算という技術的接点は強いが、主な用途は検索・推薦向け埋め込みで、LLMデコードやサービングスケジューラの評価とは異なるため、収録可否を本文確認に委ねる境界扱い。",
+      "first_checked_at": "2026-10-23T08:42:54+00:00",
+      "last_checked_at": "2026-10-23T08:42:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MoEMB: Scaling Universal Multimodal Embeddings with Efficient Mixture-of-Experts Models"
+    },
+    "arXiv:2510.26083": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.26083",
+      "identity_tokens": [
+        "arXiv:2510.26083"
+      ],
+      "reason": "Task-Aware Memory Triggerが入力ごとに自己教師あり適応を行い、Specialized Memory Updaterがタスク情報に応じて文脈を更新する線形時間モデル。動的メモリ機構はLLM効率化に隣接するが、主評価は言語能力とMRI再構成品質であり、推論基盤のKVオフロード、GPU処理量、サービング遅延の直接測定が要旨にないため境界扱い。",
+      "first_checked_at": "2026-10-23T08:42:54+00:00",
+      "last_checked_at": "2026-10-23T08:42:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Nirvana: A Specialized Generalist Model With Task-Aware Memory Mechanism"
+    },
+    "arXiv:2303.04185": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2303.04185",
+      "identity_tokens": [
+        "arXiv:2303.04185"
+      ],
+      "reason": "一次論文全文はBERT_BASE・DistilBERTのエンコーダ型モデルに対するFFN構造枝刈りを扱う。Kernelized Convex Masking（KCM）とR2D2は推論計算量を削減するが、生成LLMの自己回帰復号・KVキャッシュ・MoE・サービング基盤での評価はない。圧縮技術の先行研究として接点があるためborderlineとし、生成LLM推論の直接的なResearchには算入しない。",
+      "first_checked_at": "2026-10-23T08:42:55+00:00",
+      "last_checked_at": "2026-10-23T08:42:55+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Gradient-Free Structured Pruning with Unlabeled Data"
+    },
+    "arXiv:2503.06594": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.06594",
+      "identity_tokens": [
+        "arXiv:2503.06594"
+      ],
+      "reason": "一次要旨ではLLMを機械翻訳のエンコーダに転用し従来の翻訳デコーダを維持する。翻訳品質を保ちながら推論2.4～6.5倍高速化とKVキャッシュ75%削減を報告し、推論効率に直接的な接点がある。一方、汎用LLMサービングのスケジューリングやKVオフロードではなく翻訳特化のモデル構成・適応が主題であるため、本文読解前の暫定分類としてborderlineとする。",
+      "first_checked_at": "2026-10-23T08:42:56+00:00",
+      "last_checked_at": "2026-10-23T08:42:56+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Decoder-only: Large Language Models Can be Good Encoders for Machine Translation"
+    },
+    "arXiv:2203.12276": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2203.12276",
+      "identity_tokens": [
+        "arXiv:2203.12276"
+      ],
+      "reason": "階層的疎Transformerと注意トポロジー間の自己注意正則化を組み合わせ、長系列分類・質問応答の品質を改善するモデル学習研究。疎注意による計算量削減は推論効率と接点があるが、要旨の定量結果はLRA、分類、QAの精度であり、LLMデコード速度やKVキャッシュ使用量の実測はないため境界扱い。",
+      "first_checked_at": "2026-10-23T08:42:56+00:00",
+      "last_checked_at": "2026-10-23T08:42:56+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention"
+    },
+    "DOI:10.14778/3796195.3796204": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3796195.3796204",
+      "identity_tokens": [
+        "DOI:10.14778/3796195.3796204"
+      ],
+      "reason": "非構造化データベースの問合せ実行器であり、関係演算子の物理実装として小型専用モデルとLLMなどを選択し、問合せの遅延と精度の交換関係を改善する。LLMを演算子に利用する点は推論実行と接するが、主対象はデータベース問合せの演算子選択で、LLM自体のデコード、KVキャッシュ、GPU実行基盤の最適化を直接提案しないため境界扱い。",
+      "first_checked_at": "2026-10-23T08:42:57+00:00",
+      "last_checked_at": "2026-10-23T08:42:57+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "KEN: An Execution Engine for Unstructured Database Systems"
+    },
+    "arXiv:2204.04977": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.04977",
+      "identity_tokens": [
+        "arXiv:2204.04977"
+      ],
+      "reason": "重み減衰を改良した正則化で不要重みを選択的に縮小し、反復的な枝刈りで疎なニューラルネットを得る汎用圧縮研究。画像分類と自然言語生成を評価しており、圧縮という共通技術はあるが、LLM専用量子化・推論カーネル・サービング・実機推論の効率改善を主張する一次要旨ではないため境界扱い。",
+      "first_checked_at": "2026-10-23T08:42:57+00:00",
+      "last_checked_at": "2026-10-23T08:42:57+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Regularization-based Pruning of Irrelevant Weights in Deep Neural Architectures"
+    },
+    "arXiv:2409.12963": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.12963",
+      "identity_tokens": [
+        "arXiv:2409.12963"
+      ],
+      "reason": "INTP-Video-LLMsは学習済み映像符号化器・射影器を固定したまま動画トークンの再配置と文脈窓の拡張を行い、より長い動画の理解を可能にする。長文脈推論時のトークン管理には接点があるが、主目的は映像理解モデルの入力拡張で、汎用LLMのKV管理・GPU実行・配信遅延最適化は一次要旨の主要評価ではないため境界扱い。",
+      "first_checked_at": "2026-10-23T08:42:58+00:00",
+      "last_checked_at": "2026-10-23T08:42:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Interpolating Video-LLMs: Toward Longer-sequence LMMs in a Training-free Manner"
+    },
+    "arXiv:2410.06846": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.06846",
+      "identity_tokens": [
+        "arXiv:2410.06846"
+      ],
+      "reason": "CALDは既存TransformerをLinformerやMambaのような線形時間構造へ層単位蒸留で変換し、対象タスクへ同時に微調整する方式。変換後の推論計算量には関連する一方、主たる新規性は学習時のアーキテクチャ変換と性能保持であり、汎用LLM推論ランタイム、KVキャッシュ、実測サービングの貢献は一次要旨にない。学習凍結範囲との境界として保留。",
+      "first_checked_at": "2026-10-23T08:42:58+00:00",
+      "last_checked_at": "2026-10-23T08:42:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Joint Fine-tuning and Conversion of Pretrained Speech and Language Models towards Linear Complexity"
+    },
+    "arXiv:2510.12603": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12603",
+      "identity_tokens": [
+        "arXiv:2510.12603"
+      ],
+      "reason": "IVT-LRは視覚特徴と前段の隠れ状態を潜在推論ステップへ交互に渡し、明示的な中間推論文を生成しないことで推論を短縮する。M3CoT・ScienceQAで精度向上と5倍超の速度向上を報告するが、主要寄与はマルチモーダル推論モデルと段階的訓練であり、汎用LLMサービングやKV管理のシステム方式ではない。速度面の直接接点があるため無関係とは断定せず境界扱い。",
+      "first_checked_at": "2026-10-23T08:42:59+00:00",
+      "last_checked_at": "2026-10-23T08:42:59+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space"
+    },
+    "arXiv:2405.21022": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.21022",
+      "identity_tokens": [
+        "arXiv:2405.21022"
+      ],
+      "reason": "LightNetは多次元データの繰返し走査を避ける加算型線形再帰と多次元位置符号化を提案するモデル構造研究。自己回帰言語モデリングも評価するため関連性はあるが、主題は画像・多次元系列を含む汎用表現学習で、LLM配信基盤やKVオフロードの直接実証が一次要旨にないため境界扱い。",
+      "first_checked_at": "2026-10-23T08:43:00+00:00",
+      "last_checked_at": "2026-10-23T08:43:00+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "You Only Scan Once: Efficient Multi-dimension Sequential Modeling with LightNet"
     }
   }
 }

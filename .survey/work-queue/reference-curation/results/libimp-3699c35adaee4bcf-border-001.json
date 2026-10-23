@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3699c35adaee4bcf-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.26083",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.26083",
+    "identity_tokens": [
+      "arXiv:2510.26083"
+    ],
+    "reason": "Task-Aware Memory Triggerが入力ごとに自己教師あり適応を行い、Specialized Memory Updaterがタスク情報に応じて文脈を更新する線形時間モデル。動的メモリ機構はLLM効率化に隣接するが、主評価は言語能力とMRI再構成品質であり、推論基盤のKVオフロード、GPU処理量、サービング遅延の直接測定が要旨にないため境界扱い。",
+    "first_checked_at": "2026-10-23T08:42:54+00:00",
+    "last_checked_at": "2026-10-23T08:42:54+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Nirvana: A Specialized Generalist Model With Task-Aware Memory Mechanism"
+  },
+  "processed_at": "2026-10-23T08:42:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3699c35adaee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-721185c4a6ce4a89-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2203.12276",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2203.12276",
+    "identity_tokens": [
+      "arXiv:2203.12276"
+    ],
+    "reason": "階層的疎Transformerと注意トポロジー間の自己注意正則化を組み合わせ、長系列分類・質問応答の品質を改善するモデル学習研究。疎注意による計算量削減は推論効率と接点があるが、要旨の定量結果はLRA、分類、QAの精度であり、LLMデコード速度やKVキャッシュ使用量の実測はないため境界扱い。",
+    "first_checked_at": "2026-10-23T08:42:56+00:00",
+    "last_checked_at": "2026-10-23T08:42:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ERNIE-SPARSE: Learning Hierarchical Efficient Transformer Through Regularized Self-Attention"
+  },
+  "processed_at": "2026-10-23T08:42:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-721185c4a6ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

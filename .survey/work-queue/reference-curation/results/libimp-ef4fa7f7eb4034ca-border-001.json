@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ef4fa7f7eb4034ca-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.21022",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.21022",
+    "identity_tokens": [
+      "arXiv:2405.21022"
+    ],
+    "reason": "LightNetは多次元データの繰返し走査を避ける加算型線形再帰と多次元位置符号化を提案するモデル構造研究。自己回帰言語モデリングも評価するため関連性はあるが、主題は画像・多次元系列を含む汎用表現学習で、LLM配信基盤やKVオフロードの直接実証が一次要旨にないため境界扱い。",
+    "first_checked_at": "2026-10-23T08:43:00+00:00",
+    "last_checked_at": "2026-10-23T08:43:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "You Only Scan Once: Efficient Multi-dimension Sequential Modeling with LightNet"
+  },
+  "processed_at": "2026-10-23T08:43:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ef4fa7f7eb40",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

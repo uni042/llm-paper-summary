@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-98de2f2f365d3617-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.06846",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.06846",
+    "identity_tokens": [
+      "arXiv:2410.06846"
+    ],
+    "reason": "CALDは既存TransformerをLinformerやMambaのような線形時間構造へ層単位蒸留で変換し、対象タスクへ同時に微調整する方式。変換後の推論計算量には関連する一方、主たる新規性は学習時のアーキテクチャ変換と性能保持であり、汎用LLM推論ランタイム、KVキャッシュ、実測サービングの貢献は一次要旨にない。学習凍結範囲との境界として保留。",
+    "first_checked_at": "2026-10-23T08:42:58+00:00",
+    "last_checked_at": "2026-10-23T08:42:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Joint Fine-tuning and Conversion of Pretrained Speech and Language Models towards Linear Complexity"
+  },
+  "processed_at": "2026-10-23T08:42:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-98de2f2f365d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

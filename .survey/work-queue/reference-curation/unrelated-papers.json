@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T07:53:15+00:00",
-  "record_count": 12442,
+  "updated_at": "2026-10-23T08:43:00+00:00",
+  "record_count": 12443,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179329,6 +179329,18 @@
       "last_checked_at": "2026-10-23T06:46:02+00:00",
       "linked_from": [],
       "title": "Triformer: Triangular, Variable-Specific Attentions for Long Sequence Multivariate Time Series Forecasting--Full Version"
+    },
+    "arXiv:2506.02279": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.02279",
+      "identity_tokens": [
+        "arXiv:2506.02279"
+      ],
+      "reason": "明示的な検索クエリを介さず、デコーダの層群を検索・生成に分けて同じモデルの推論パスを利用するRAG方式。8つの知識集約型タスクで完全一致精度の改善を測るのが主眼で、KVキャッシュ、スケジューリング、モデル配置、GPUメモリ、実行時間短縮など推論基盤の直接的な改善は要旨で示されない。検索生成能力の改善研究として現行サーベイ対象外。",
+      "first_checked_at": "2026-10-23T08:43:00+00:00",
+      "last_checked_at": "2026-10-23T08:43:00+00:00",
+      "linked_from": [],
+      "title": "ImpRAG: Retrieval-Augmented Generation with Implicit Queries"
     }
   }
 }
