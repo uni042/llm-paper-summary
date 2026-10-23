@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（920本）
+## 自動生成の論文一覧（921本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1273,6 +1273,10 @@
 - **2026-05 · [N-vium: Mixture-of-Exits Transformer for Accelerated Exact Generation](2026-2605.13190-n-vium-mixture-of-exits-transformer-for-accelerated-exact-generation.md)**  
   実装：[✓](https://github.com/ETH-DISCO/n-vium) ・ リポジトリ内被引用：0  
   N-viumは、自己回帰言語モデルの「次のトークンを確定する処理」と「将来の注意計算に必要な全層のKVキャッシュを作る処理」を切り離す推論方式である。
+
+- **2026-05 · [Multi-Mixer Models: Flexible Sequence Modeling with Shared Representations](2026-2605.28769-multi-mixer-models-flexible-sequence-modeling-with-shared-representation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、自己注意（Self-注意機構）と線形再帰型の系列混合（Linear Recurrent Sequence Mixing）を、モデルの異なる層に固定配置するのではなく、同一層・同一系列の異なる区間で切り替えるOryxアーキテクチャを提案する。
 
 - **2026-05 · [MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations](2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

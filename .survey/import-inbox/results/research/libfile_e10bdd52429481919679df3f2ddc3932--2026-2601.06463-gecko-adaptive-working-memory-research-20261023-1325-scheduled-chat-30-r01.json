@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "81424e30d0bca57f32ed9066fa206951310daadafe0b24ccb8b385f6b4d73119",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_e10bdd52429481919679df3f2ddc3932--2026-2601.06463-gecko-adaptive-working-memory-research-20261023-1325-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2601.06463",
+  "worker_completed_at": "2026-10-23T13:34:00+09:00",
+  "worker_run_key": "20261023-1325-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6970,
+    "body_paragraphs": 38,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1542,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-23T17:11:05+00:00"
+}

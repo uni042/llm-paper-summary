@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T17:03:11+00:00",
+  "generated_at": "2026-10-23T17:15:07+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1140,36 +1140,6 @@
       "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2604.04599",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T15:52:59+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 115 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4403,
-        "body_paragraphs": 25,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 115,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 115 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_577af2a625808191b5675e61562b7cfb--2026-2604.04599-lp-gemm-layout-propagation-research-20261024-0030-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_577af2a625808191b5675e61562b7cfb--2026-2604.04599-lp-gemm-layout-propagation-research-20261024-0030-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261024-0030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.09516",
       "title": null,
       "source_url": null,
@@ -1508,6 +1478,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b66a29af47548191ab15280cef6dadfd--2026-2608.06763-cubicquant-parametric-lowbit-weights-research-20261023-1733-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b66a29af47548191ab15280cef6dadfd--2026-2608.06763-cubicquant-parametric-lowbit-weights-research-20261023-1733-scheduled-chat-30-r01.json",
       "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.06463",
+      "title": "Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths",
+      "source_url": "https://arxiv.org/html/2601.06463v1",
+      "returned_at": "2026-10-23T17:11:05+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6970,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1542,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e10bdd52429481919679df3f2ddc3932--2026-2601.06463-gecko-adaptive-working-memory-research-20261023-1325-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e10bdd52429481919679df3f2ddc3932--2026-2601.06463-gecko-adaptive-working-memory-research-20261023-1325-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261023-1325-scheduled-chat-30/r01"
     }
   ]
 }
