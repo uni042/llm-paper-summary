@@ -15597,12 +15597,10 @@
       "checked_at": "2026-10-11T05:08:26+00:00"
     },
     "papers/inference/09-kernel-runtime-compilation/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md": {
-      "status": "complete",
-      "source_fingerprint": "e29c0857c6468860dd4ba41c4c176ad2c21601e41ca6a1ca9c1aa23da658c1b1",
-      "references_total": 87,
-      "normalized_references": 46,
-      "source": "arxiv-html-reference-section",
-      "checked_at": "2026-10-10T09:24:27+00:00"
+      "status": "blocked",
+      "source_fingerprint": "8a1044f504c86251d20aaa4e34bb32cdf351f3ada0d60a98bdbb6a72a80272c1",
+      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
+      "checked_at": "2026-10-23T15:04:21+00:00"
     },
     "papers/inference/99-other-inference-systems/2020-2005.03842-gobo-quantizing-attention-based-nlp-models-for-low-latency-and-energy-ef.md": {
       "status": "complete",
@@ -15742,12 +15740,10 @@
       "checked_at": "2026-10-09T23:13:47+00:00"
     },
     "papers/inference/13-sparse-attention/2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md": {
-      "status": "complete",
-      "source_fingerprint": "d544b7a8cff7167eebe93e59e3b4b3a9dc5e20add5deb42a3ef887e1918edb03",
-      "references_total": 24,
-      "normalized_references": 23,
-      "source": "arxiv-html-reference-section",
-      "checked_at": "2026-10-08T12:53:53+00:00"
+      "status": "blocked",
+      "source_fingerprint": "8a1044f504c86251d20aaa4e34bb32cdf351f3ada0d60a98bdbb6a72a80272c1",
+      "error": "ValueError: no supported primary reference extractor for non-arXiv paper",
+      "checked_at": "2026-10-23T15:04:28+00:00"
     },
     "papers/inference/13-sparse-attention/2026-2604.22312-guess-verify-refine-data-aware-top-k-for-sparse-attention-decoding-on-bl.md": {
       "status": "complete",
@@ -26411,7 +26407,191 @@
       "source": "primary-pdf-reference-section",
       "source_url": "https://papers.nips.cc/paper_files/paper/2024/file/cd4b49379efac6e84186a3ffce108c37-Paper-Conference.pdf",
       "checked_at": "2026-10-23T14:19:24+00:00"
+    },
+    "papers/inference/05-speculative-decoding-moe/2025-2409.16560-dynamic-width-speculative-beam-decoding-for-llm-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "3ca8b95b700e5110310e12c39c4d7210c84aa4b4d997c5e7ae1463cc32a42528",
+      "references_total": 37,
+      "normalized_references": 28,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:16+00:00"
+    },
+    "papers/inference/07-kv-cache-optimization-compression/2026-2607.20538-codec-gauge-learning-compression-friendly-gauges-for-transformer-kv-cach.md": {
+      "status": "complete",
+      "source_fingerprint": "5817eb46c4b0404abb695535832347b5b2ad2121226c37ee591e3727a1f5c459",
+      "references_total": 39,
+      "normalized_references": 37,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:20+00:00"
+    },
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md": {
+      "status": "complete",
+      "source_fingerprint": "d544b7a8cff7167eebe93e59e3b4b3a9dc5e20add5deb42a3ef887e1918edb03",
+      "references_total": 24,
+      "normalized_references": 23,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:25+00:00"
+    },
+    "papers/inference/16-weight-quantization-compression/2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md": {
+      "status": "complete",
+      "source_fingerprint": "0dae8016274e15c35ad1ee269b23e738499cf3b57848be08e9e0174808392745",
+      "references_total": 79,
+      "normalized_references": 48,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:31+00:00"
+    },
+    "papers/inference/16-weight-quantization-compression/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md": {
+      "status": "complete",
+      "source_fingerprint": "7899e58be564ea4d6236058c4302a9e9812e161716f772410fbe3491404b8372",
+      "references_total": 47,
+      "normalized_references": 26,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:32+00:00"
+    },
+    "papers/inference/16-weight-quantization-compression/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md": {
+      "status": "complete",
+      "source_fingerprint": "120224ad9f95dac5e4ae8dc14b337922870bdc5933414c3f4a5cc7a589258b6e",
+      "references_total": 41,
+      "normalized_references": 29,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:32+00:00"
+    },
+    "papers/inference/16-weight-quantization-compression/2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md": {
+      "status": "complete",
+      "source_fingerprint": "7d7a708364125dea6d7bc3a5b511113b7e22dd9452d313f5b224d6804bfb786d",
+      "references_total": 44,
+      "normalized_references": 26,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:34+00:00"
+    },
+    "papers/inference/16-weight-quantization-compression/2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md": {
+      "status": "complete",
+      "source_fingerprint": "71e59bcb0bcc4e04c5894a504eb2eb4e16e696a424229a66647233e1942ea3d0",
+      "references_total": 76,
+      "normalized_references": 49,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:35+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md": {
+      "status": "complete",
+      "source_fingerprint": "859d4b9b2ca505e65ae5933f66c026b08b90088ca605bf8e5ebc39e602f78e88",
+      "references_total": 46,
+      "normalized_references": 29,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:37+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2022-2212.14052-hungry-hungry-hippos-towards-language-modeling-with-state-space-models.md": {
+      "status": "complete",
+      "source_fingerprint": "b576f2ac2aa35d75ce39737cfe5e7153023b5d5f3d7fa276615ac00710a8d749",
+      "references_total": 66,
+      "normalized_references": 20,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:38+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2023-2305.13048-rwkv-reinventing-rnns-for-the-transformer-era.md": {
+      "status": "complete",
+      "source_fingerprint": "e2cbf8c8afd9a931da37917223455a1492fac5da67a8cdefe206eb205bf0576c",
+      "references_total": 95,
+      "normalized_references": 52,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:39+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2023-2307.08621-retentive-network-a-successor-to-transformer-for-large-language-models.md": {
+      "status": "complete",
+      "source_fingerprint": "bb8a9848fccd65cf561a929c73e4e7976fc5a1bb064b307bf363c7e0639c23f7",
+      "references_total": 40,
+      "normalized_references": 18,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:40+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2023-2311.01927-gateloop-fully-data-controlled-linear-recurrence-for-sequence-modeling.md": {
+      "status": "complete",
+      "source_fingerprint": "0f51f2fae9e7e4f77f90a6d02e8fd60b575e60b9814ffeaaf1a570024a7308d3",
+      "references_total": 17,
+      "normalized_references": 7,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:41+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2023-2312.00752-mamba-selective-state-space-linear-time-inference.md": {
+      "status": "complete",
+      "source_fingerprint": "c5344d02522de2fea004fdf7d6e81588649aa352237c7ccd9c498aa782959e5f",
+      "references_total": 116,
+      "normalized_references": 38,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:42+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2312.06635-gated-linear-attention-transformers-with-hardware-efficient-training.md": {
+      "status": "complete",
+      "source_fingerprint": "1402fcad8f0c18be9fba263002955be64260d3794c1ff199848bc4f8d942b6a6",
+      "references_total": 109,
+      "normalized_references": 15,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:43+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md": {
+      "status": "complete",
+      "source_fingerprint": "8dd25010df93590cf342ad9c7ffa829ba7d5c22ef3e37e7658d02cecd301a5e6",
+      "references_total": 44,
+      "normalized_references": 25,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:44+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2402.18668-simple-linear-attention-language-models-balance-the-recall-throughput-tr.md": {
+      "status": "complete",
+      "source_fingerprint": "e29c0857c6468860dd4ba41c4c176ad2c21601e41ca6a1ca9c1aa23da658c1b1",
+      "references_total": 87,
+      "normalized_references": 49,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:46+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2402.19427-griffin-mixing-gated-linear-recurrences-with-local-attention-for-efficie.md": {
+      "status": "complete",
+      "source_fingerprint": "ebd904de58a4c92141a1e919f2d3bb9f447b7ca6fca42221e53873737b67974c",
+      "references_total": 65,
+      "normalized_references": 41,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:46+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2404.05892-eagle-and-finch-rwkv-with-matrix-valued-states-and-dynamic-recurrence.md": {
+      "status": "complete",
+      "source_fingerprint": "3d595e3c1c298325620206a6449c46f0d23a41025709236c7954ca6917f6dec6",
+      "references_total": 121,
+      "normalized_references": 45,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:48+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2404.07904-hgrn2-gated-linear-rnns-with-state-expansion.md": {
+      "status": "complete",
+      "source_fingerprint": "e9ee5a28c24c699b7ed45d6c23eca74065f8c4001bc35af591923894a03886d5",
+      "references_total": 68,
+      "normalized_references": 32,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:49+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md": {
+      "status": "complete",
+      "source_fingerprint": "a556879003c26a4249278bb6dbd5a153738a08e4e48ec15ab0fc3e7adb122d46",
+      "references_total": 105,
+      "normalized_references": 93,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:49+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md": {
+      "status": "complete",
+      "source_fingerprint": "973528bec993f98c5c7f6f1a7a5d2c8ca9a0f4624a85fc7965d0c429a6bfdba0",
+      "references_total": 107,
+      "normalized_references": 74,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:51+00:00"
+    },
+    "papers/inference/20-linear-recurrent-language-models/2026-2604.19021-fg-2-gdn-enhancing-long-context-gated-delta-networks-with-doubly-fine-gr.md": {
+      "status": "complete",
+      "source_fingerprint": "b30ae5bfd4fe8ab6361f05f6721efc5873cccfb07176f8f4d031e969ba19a056",
+      "references_total": 37,
+      "normalized_references": 23,
+      "source": "arxiv-html-reference-section",
+      "checked_at": "2026-10-23T15:04:52+00:00"
     }
   },
-  "updated_at": "2026-10-23T14:20:46+00:00"
+  "updated_at": "2026-10-23T15:05:22+00:00"
 }
