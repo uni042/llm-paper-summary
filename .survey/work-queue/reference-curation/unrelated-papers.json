@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T15:08:41+00:00",
-  "record_count": 12452,
+  "updated_at": "2026-10-23T17:51:12+00:00",
+  "record_count": 12453,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179454,6 +179454,18 @@
       "last_checked_at": "2026-10-23T15:08:41+00:00",
       "linked_from": [],
       "title": "Structured State Space Models for In-Context Reinforcement Learning"
+    },
+    "arXiv:2606.16896": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.16896",
+      "identity_tokens": [
+        "arXiv:2606.16896"
+      ],
+      "reason": "FerroNDSは強誘電体ダイオードを使うアナログ計算インメモリの積分器・発振器を組み合わせ、128ニューロンで短時間フーリエ変換と周期・準周期・カオス信号の500ms先予測を実装する。LLMのTransformer推論、KVキャッシュ、LLM向け演算・サービング・学習の改善を対象にしておらず、評価も信号予測の電力・遅延・面積であるため、現行LLM推論・学習サーベイから除外。",
+      "first_checked_at": "2026-10-23T17:51:12+00:00",
+      "last_checked_at": "2026-10-23T17:51:12+00:00",
+      "linked_from": [],
+      "title": "Neural dynamical systems on ferroelectric compute-in-memory for real-time forecasting"
     }
   }
 }
