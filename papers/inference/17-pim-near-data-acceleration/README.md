@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（26本）
+## 自動生成の論文一覧（28本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -32,6 +32,10 @@
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+
+- **2026-03 · [PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System](2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  長文脈のLLMがトークンを一つずつ生成するとき、注意機構はこれまでの各トークンに対応する鍵・値キャッシュ（KV キャッシュ）を読み返す。動的PIMアクセス（動的 PIM Access; DPA）は生成中のトークン数に応じたループとアドレス変換を使い、KVキャッシュを実行時に1MB単位で追加する。
 
 - **2026-03 · [Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator](2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -90,6 +94,10 @@
 - **2026-03 · [PIM-SHERPA: Software Method for On-device LLM Inference by Resolving PIM Memory Attribute and Layout Inconsistencies](2026-2603.09216-pim-sherpa-software-method-for-on-device-llm-inference-by-resolving-pim-memory-attribute-and-layout-inconsistencies.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PIM向け重みを一つだけ保持し、キャッシュ可能バッファへの実行時並べ替えで前処理と生成の属性・配置矛盾を解消してDRAM容量を約半減する。
+
+- **2025-12 · [CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference](2026-2601.19908-chime-chiplet-near-memory-mllm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
 - **2025-11 · [Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing](2025-2511.12286-sangam-chiplet-based-dram-pim-accelerator-with-cxl-integration-for-llm-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
