@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T02:43:51+00:00",
-  "record_count": 5322,
+  "updated_at": "2026-10-23T04:50:05+00:00",
+  "record_count": 5323,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -81725,11 +81725,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2602.00471",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.00471",
         "arXiv:2602.00471"
       ],
-      "reason": "視覚マルチエージェント間で知覚と推論の二種類の潜在メモリを共有し、エントロピー駆動の選択的呼出で通信トークンを21.3～44.8%削減する。エージェント推論費用の低減には関係するが、主な評価は視覚協調タスクの精度・トークン数で、汎用LLMサービング基盤の設計ではない。",
+      "reason": "一次要旨では、視覚マルチエージェント間の情報共有を知覚・思考の二重潜在記憶へ置換し、トークン使用量21.3～44.8%削減を報告する。メモリの再利用とトークン削減は推論効率と隣接するが、提案の中心はマルチエージェントの協調表現で、GPUキャッシュ・サービングスケジューリング・通信ランタイムの改善ではない。",
       "first_checked_at": "2026-10-19T17:53:01+00:00",
-      "last_checked_at": "2026-10-19T17:54:38+00:00",
+      "last_checked_at": "2026-10-23T04:50:01+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Dual Latent Memory for Visual Multi-agent System"
@@ -82561,6 +82562,20 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness"
+    },
+    "arXiv:2501.15061": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2501.15061",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.15061",
+        "arXiv:2501.15061"
+      ],
+      "reason": "一次要旨は正負のクエリ・キー相互作用を保持する線形注意を提案し、注意計算量の低減と視覚タスク精度を評価する。線形注意の設計はLLMの効率化と技術的に隣接するが、原著の対象はVision Transformerの画像タスクであり、LLM推論サービングや長文脈生成でのGPU実測は要旨から確認できない。",
+      "first_checked_at": "2026-10-23T04:50:05+00:00",
+      "last_checked_at": "2026-10-23T04:50:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
     }
   }
 }

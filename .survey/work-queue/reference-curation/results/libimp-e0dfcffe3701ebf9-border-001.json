@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0dfcffe3701ebf9-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2501.15061",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2501.15061",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2501.15061",
+      "arXiv:2501.15061"
+    ],
+    "reason": "一次要旨は正負のクエリ・キー相互作用を保持する線形注意を提案し、注意計算量の低減と視覚タスク精度を評価する。線形注意の設計はLLMの効率化と技術的に隣接するが、原著の対象はVision Transformerの画像タスクであり、LLM推論サービングや長文脈生成でのGPU実測は要旨から確認できない。",
+    "first_checked_at": "2026-10-23T04:50:05+00:00",
+    "last_checked_at": "2026-10-23T04:50:05+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
+  },
+  "processed_at": "2026-10-23T04:50:05+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0dfcffe3701",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

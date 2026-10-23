@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-08f44bf6c6bd3615-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.00471",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.00471",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2602.00471",
+      "arXiv:2602.00471"
+    ],
+    "reason": "一次要旨では、視覚マルチエージェント間の情報共有を知覚・思考の二重潜在記憶へ置換し、トークン使用量21.3～44.8%削減を報告する。メモリの再利用とトークン削減は推論効率と隣接するが、提案の中心はマルチエージェントの協調表現で、GPUキャッシュ・サービングスケジューリング・通信ランタイムの改善ではない。",
+    "first_checked_at": "2026-10-19T17:53:01+00:00",
+    "last_checked_at": "2026-10-23T04:50:01+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Dual Latent Memory for Visual Multi-agent System"
+  },
+  "processed_at": "2026-10-23T04:50:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-08f44bf6c6bd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

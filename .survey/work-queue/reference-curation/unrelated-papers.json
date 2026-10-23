@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T02:43:51+00:00",
-  "record_count": 12444,
+  "updated_at": "2026-10-23T04:50:05+00:00",
+  "record_count": 12443,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164847,19 +164847,6 @@
       ],
       "title": "WASIL: In-the-Wild Arabic Spoken Interactions with LLMs"
     },
-    "arXiv:2501.15061": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2501.15061",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2501.15061",
-        "arXiv:2501.15061"
-      ],
-      "reason": "符号が同じ／異なるクエリ・キーの相互作用を分離し、学習可能な冪関数で注意分布の識別性を高める視覚Transformer向け線形注意方式。一次要旨の実験は画像認識などの視覚タスクであり、LLMの自己回帰生成、長文脈サービング、推論時KVキャッシュ削減を評価していない。",
-      "first_checked_at": "2026-10-11T21:44:20+00:00",
-      "last_checked_at": "2026-10-23T00:45:15+00:00",
-      "linked_from": [],
-      "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
-    },
     "arXiv:2203.11086": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2203.11086",
@@ -164913,11 +164900,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.05532",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.05532",
         "arXiv:2605.05532"
       ],
-      "reason": "法務契約からの構造化情報抽出において特化型小規模MoEモデルOlava Extractと外部提供の大型モデル5種の抽出品質とAPI費用を比較する応用研究。macro F1 0.812、micro F1 0.842、推論料金78〜97%削減という実務的比較はあるが、新規の生成復号アルゴリズム、GPU推論基盤、KV管理、負荷分散、スケジューリングを提案・検証する研究ではない。法務領域の抽出品質が主題のため対象外。",
+      "reason": "一次要旨では、法務契約書の構造化抽出で法律特化小型MoEと汎用LLM5種のF1・誤抽出・推論費用を比較し、特化モデルのマクロF1 0.812と費用削減を報告する。法務アプリのモデル選択・タスク品質比較であり、MoEルーティングやモデル配置、KVキャッシュ、推論カーネル、汎用サービングの設計を新規提案しないため対象外。",
       "first_checked_at": "2026-10-12T19:45:24+00:00",
-      "last_checked_at": "2026-10-18T10:00:26+00:00",
+      "last_checked_at": "2026-10-23T04:50:04+00:00",
       "linked_from": [],
       "title": "A Few Good Clauses: Comparing LLMs vs Domain-Trained Small Language Models on Structured Contract Extraction"
     },
@@ -170530,11 +170518,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2605.11722",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.11722",
         "arXiv:2605.11722"
       ],
-      "reason": "タイトルに明示された対象はテキストから画像を生成する際の述語条件による合成画像生成制御であり、LLMの推論基盤・量子化・KVキャッシュ・分散サービングの効率化を直接示していない。タイトル段階の対象外判定であり、要旨・本文は未確認。",
+      "reason": "一次要旨では、画像生成プロンプトの物体・数・属性・関係を述語へ変換し、画像の検証結果に応じて局所編集または再生成を選択する。GenEval2の画像合成条件達成率と画像モデル呼出し数を改善するが、対象は画像生成品質の制御であり、LLM推論サービングの計算・メモリ・通信基盤の新規手法ではない。inference-timeの語だけでは収録対象とならない。",
       "first_checked_at": "2026-10-13T21:31:16+00:00",
-      "last_checked_at": "2026-10-20T13:06:17+00:00",
+      "last_checked_at": "2026-10-23T04:50:03+00:00",
       "linked_from": [],
       "title": "EPIC: Efficient Predicate-Guided Inference-Time Control for Compositional Text-to-Image Generation"
     },
