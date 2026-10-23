@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1700-scheduled-chat-00/r01/prescreen-007",
+  "reference_main_sha": "d1781364c073fddb460e92810096228795da36f2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.14778/3796195.3796204",
+      "identity_tokens": [
+        "DOI:10.14778/3796195.3796204"
+      ],
+      "title": "KEN: An Execution Engine for Unstructured Database Systems",
+      "reason": "非構造化データベースの問合せ実行器であり、関係演算子の物理実装として小型専用モデルとLLMなどを選択し、問合せの遅延と精度の交換関係を改善する。LLMを演算子に利用する点は推論実行と接するが、主対象はデータベース問合せの演算子選択で、LLM自体のデコード、KVキャッシュ、GPU実行基盤の最適化を直接提案しないため境界扱い。",
+      "source_url": "https://doi.org/10.14778/3796195.3796204",
+      "body_check": "abstract_screen_only; body_not_read; 著者所属機関公開の論文要旨で、非構造化DBMSの演算子ごとに精度と問合せ遅延の中間選択肢が不足する問題、LLMと小型モデルを物理演算子候補とする設定を確認。本文未読。",
+      "first_checked_at": "2026-10-23T17:02:37+09:00",
+      "last_checked_at": "2026-10-23T17:02:37+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 7
+    }
+  ]
+}
