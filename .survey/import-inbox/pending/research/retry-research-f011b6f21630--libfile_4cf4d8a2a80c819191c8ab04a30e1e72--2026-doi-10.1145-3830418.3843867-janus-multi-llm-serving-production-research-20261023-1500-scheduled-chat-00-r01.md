@@ -39,6 +39,8 @@ worker_run_key: "20261023-1500-scheduled-chat-00/r01"
 reference_main_sha: "7bfeaa1ca99ecf45f52791b5a644ac33b259d63e"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Janus：本番環境の多モデルLLMサービングを対象とした二時間尺度の資源管理

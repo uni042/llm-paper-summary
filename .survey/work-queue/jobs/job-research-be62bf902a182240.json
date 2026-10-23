@@ -35,10 +35,15 @@
   "selection_reason": "The primary full text confirms TRIMS is an inference-time decoding method that improves parallelism and token throughput while retaining similar accuracy; the training data curation is much cheaper than distillation but is not the basis for this classification. Body review: TRIMS is presented as low-latency DLM inference and raises parallelism/TPS up to about 3× with similar accuracy. The paper also reports 0.6 GPU-hours curation versus 287 GPU-hours distillation; this training-side comparison is separate from the inference contribution.",
   "semantic_scholar_id": "1202277a17551604d62dd7e5d993a57201504e55",
   "source_url": "https://arxiv.org/abs/2604.00666",
-  "status": "ready",
+  "status": "superseded",
   "title": "TRIMS: Trajectory-Ranked Instruction Masked Supervision for Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-23T16:48:01+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.00666-trims-trajectory-ranked-instruction-masked-supervision-for-diffusion-lan.md",
+  "represented_canonical_id": "arXiv:2604.00666",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
