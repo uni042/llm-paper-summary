@@ -45,10 +45,15 @@
   "selection_reason": "router-only lightweight adaptationで生じるrouter norm変化をexpert重要度としてone-shot pruningに使う。Mixtralでexpert半減時にmemory 49%減・per-token latency 37%減を報告し、理論的pruning signalを低コスト適応で実用化する点がCompression系統に有用。",
   "semantic_scholar_id": "c73451e00298a222446d5d822528fcb3f18496e3",
   "source_url": "https://arxiv.org/abs/2608.07890",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-a7b827dd3ec3e848ee83f4c2.json",
   "title": "Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models",
   "type": "research",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-23T10:54:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.07890-router-sensitivity-under-lightweight-fine-tuning-identifies-prunable-exp.md",
+  "represented_canonical_id": "arXiv:2608.07890",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（982本）
+## 自動生成の論文一覧（984本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -873,6 +873,10 @@
 - **2026-08 · [Sliding-window beats linear attention](2026-2608.28444-sliding-window-beats-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意は固定サイズの再帰状態に集約することで、この増加を抑える。窓64・先頭シンク4の方式は、一般知識6課題平均で元モデルの99.0%を回復し、11の比較例のうち9例で元モデルを除く最高の平均値を得た。
+
+- **2026-08 · [Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models](2026-2608.07890-router-sensitivity-under-lightweight-fine-tuning-identifies-prunable-exp.md)**  
+  実装：[✓](https://github.com/ianKa1/MoE_pruning) ・ リポジトリ内被引用：0  
+  混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで一部の専門家しか動かさないため演算量を抑えられるが、選択される可能性のある専門家の重み全体をメモリに保持する必要がある。専門家を丸ごと削除すればGPUメモリを減らせるものの、使用頻度や重みの大きさだけでは重要な専門家を誤って削除し、推論品質が急落することがある。
 
 - **2026-08 · [RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention](2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3717,6 +3721,10 @@
 - **2022-02 · [Flowformer: Linearizing Transformers with Conservation Flows](2022-2202.06258-flowformer-linearizing-transformers-with-conservation-flows.md)**  
   実装：[✓](https://github.com/thuml/Flowformer) ・ リポジトリ内被引用：0  
   Flowformerは、自己注意（Self-注意機構）の計算量を系列長に対して線形に抑えつつ、通常のsoftmax注意が持つ「重要な位置を選んで重みを集中させる」性質を残そうとする研究である。
+
+- **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Transformerの注意機構では、各入力位置が他の位置へどれだけ注意を向けるかを表す重みを計算し、その重みに基づいて値ベクトルを集約する。BERT、DistilBERT、Longformerに適用した実験では、GLUEの分類・類似度評価で精度をおおむね維持しつつ注意演算の計算量を大幅に減らせると報告する。
 
 ### 6年前（2020-11〜2021-10）
 
