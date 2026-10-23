@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（53本）
+## 自動生成の論文一覧（58本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -40,6 +40,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-02 · [Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters](2026-2602.10604-step-3-5-flash-open-frontier-level-intelligence-with-11b-active-paramete.md)**  
   実装：[✓](https://github.com/stepfun-ai/Step-3.5-Flash) ・ リポジトリ内被引用：5  
   長文脈への対応では、512トークンの滑動窓注意（Sliding Window 注意機構、SWA）を3層、全注意を1層とする交互配置を使う。
+
+- **2025-12 · [JANUS: Disaggregating Attention and Experts for Scalable MoE Inference](2025-2512.13525-janus-disaggregating-attention-and-experts-for-scalable-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  JANUSは、専門家混合（Mixture-of-Experts、MoE）モデルのオンライン推論を、注意機構と専門家層を別々のGPU群へ配置して独立に伸縮するシステムである。
 
 - **2026-03 · [NCCL EP: Towards a Unified Expert Parallel Communication API for NCCL](2026-2603.13606-nccl-ep-towards-a-unified-expert-parallel-communication-api-for-nccl.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -72,6 +76,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2026-05 · [Surviving Partial Rank Failures in Wide Expert-Parallel MoE Inference](2026-2605.10670-surviving-partial-rank-failures-wide-ep-moe.md)**  
   実装：[✓](https://github.com/kvcache-ai/Mooncake) ・ リポジトリ内被引用：1  
   専門家並列の部分ランク障害を、通信相手・専門家被覆・CUDAグラフ可視経路の個別修復で全体再起動なしに復旧するEEPを提案する。
+
+- **2026-05 · [How Far Can Disaggregation Go? A Design-Space Exploration of Attention-FFN Disaggregation for Efficient MoE LLM Serving](2026-2605.28302-how-far-can-disaggregation-go-a-design-space-exploration-of-attention-ffn-disaggregation-for-efficient-moe-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  注意とMoE-FFNの演算・通信を別GPU群へ分離する価値を、負荷・モデル・SLO・ネットワークを横断して設計空間探索する。
 
 - **2026-04 · [Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns](2026-2604.23150-scaling-multinode-moe-expert-activation-patterns.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -135,6 +143,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/ananya-mh/optimizing-moe-inference) ・ リポジトリ内被引用：0  
   単純なTP+EP併用は全モデルの平均でTPの38～54%の処理量にとどまり、実機構成が2台の80GB GPU対4台の40GB GPUと異なる点が大きな解釈上の制約となる。
 
+- **2026-05 · [Federation of Experts: Communication Efficient Distributed Inference for Large Language Models](2026-2605.06206-federation-of-experts-communication-efficient-distributed-inference-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Federation of Experts（FoE）は、配送アルゴリズムだけを改善するのではなく、モデルの注意ヘッドと専門家の構造を一緒に分割する。著者は7B級と1B級のモデルを通常MoEと同条件で最初から学習し、単一ノードH100×8と2ノードH100×16で比較した。
+
 - **2026-05 · [EnergyLens: Predictive Energy-Aware Exploration for Multi-GPU LLM Inference Optimization](2026-2605.14249-energylens-predictive-energy-aware-exploration-for-multi-gpu-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   EnergyLensは、演算を記号的に指定するだけで推論時のエネルギーと遅延を予測し、構成間のトレードオフを探索する枠組みである。
@@ -177,6 +189,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 ### 2年前（2024-11〜2025-10）
 
+- **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：26  
+  Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
+
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
   層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。
@@ -212,6 +228,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2025-10 · [ElasticMoE: An Efficient Auto Scaling Method for Mixture-of-Experts Models](2025-2510.02613-elasticmoe-an-efficient-auto-scaling-method-for-mixture-of-experts-model.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   数十台の装置にまたがる複製を丸ごと増やす方式は容量を大きな単位でしか増減できず、追加のために全重みを読み直す時間もかかる。拡張操作の所要時間は最速の比較方式の約0.11倍であり、最良条件では約9倍短い。
+
+- **2025-08 · [HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference](2025-2508.19373-hap-hybrid-adaptive-parallelism-for-efficient-mixture-of-experts-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  入力処理では多数トークンをまとめて計算するため通信量と演算量が大きいが、復号では1トークンずつ進むため重み読出しと専門家間の負荷不均衡が目立つ。各候補の遅延を演算・通信の実測から予測し、GPUメモリに収まる組合せだけを残す。
 
 - **2025-05 · [Occult: Optimizing Collaborative Communication across Experts for Accelerated Parallel MoE Training and Inference](2025-2505.13345-occult-collaborative-expert-communication.md)**  
   実装：[✓](https://github.com/UNITES-Lab/Occult) ・ リポジトリ内被引用：2  
