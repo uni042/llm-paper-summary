@@ -1,110 +1,41 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261022T145053Z-e3d0376a-r02",
+  "attempt_id": "library-import-maint-20261023T151254-35a982",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "llm-releases/README.md",
-      "expected_blob_sha": "abc929736e6fbda276fcc2920be7350af59f4f71",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "- リリース情報の最終確認: **2026-10-18**",
-          "new": "- リリース情報の最終確認: **2026-10-22**"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "## この一覧の読み方",
-          "text": "2026-10-22の確認でRecursive Flint 40B-A2.5Bを追加した。公式BF16配布、Apache-2.0、モデル規模とcontext設定、Ollama v0.40.8のmacOS限定対応を分けて記録する。\n\n"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "| 2026-10-15 | Nemotron 3.5 Super VL |",
-          "text": "| 2026-10-21 | Recursive Flint 40B-A2.5B | Recursive | 総39.8B / 有効約2.5BのApache-2.0 MoE。公式BF16 checkpointは約80GB、設定上の最大262K context。Ollama対応はmacOS限定。 | [Recursive系](recursive.md) |\n"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "- [Qwen系](qwen.md)",
-          "text": "- [Recursive系](recursive.md)\n"
-        }
-      ]
-    },
-    {
-      "path": "llm-releases/recursive.md",
-      "content": "# Recursive Flint\n\nRecursive Flint 40B-A2.5Bは、Recursiveが公開するコード作成と段階的なtool利用を想定したopen-weightモデルである。\n\n## 構成\n\n- **公開確認**: 2026-10-21 UTC。Ollama v0.40.8の正式リリースで配布対応が確認できる。公式モデルカードはApache-2.0ライセンスとBF16 checkpoint、SGLangでの配信手順を案内する。\n- **規模**: 総39.8B、tokenごとの有効約2.5BのMoE Transformer。49層（dense 2層、MoE 47層）で、各MoE層は256専門家から6つと共有専門家を選ぶ。\n- **注意機構**: 35層は512履歴tokenのsliding-window attention、14層はfull attention。設定上の最大contextは262,144 token。\n- **開発者報告の評価**: Terminal-Bench 2.1で54.9%、SWE-bench Verifiedで74.2%。実行環境と評価手順に依存する値として扱う。\n\n## 配布と実行上の制約\n\n公式のBF16 checkpointは約80GB。公式SGLang手順の例は単一B300またはH200であり、Ollama v0.40.8のFlint対応はmacOS限定と案内される。Windows 11 / RTX 4070 SUPER 12GBでの正式なOllama対応や実行性能、12GB内に収まる量子化配布物は確認できていない。これらの記載は、一般的なconsumer GPUで動作することを意味しない。\n\n## 一次資料\n\n- [Recursive Flint model card](https://huggingface.co/RecursiveSI/flint)\n- [Ollama v0.40.8 release](https://github.com/ollama/ollama/releases/tag/v0.40.8)\n"
-    },
-    {
-      "path": "framework-updates/README.md",
-      "expected_blob_sha": "29e1c13a8728eaf5e5df97d951f9763fe00190f5",
-      "edits": [
-        {
-          "op": "replace_once",
-          "old": "- フレームワーク差分の最終確認: **2026-10-12**",
-          "new": "- フレームワーク差分の最終確認: **2026-10-22**"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "| [llama.cpp](inference-engines/llama-cpp/) |",
-          "text": "| [DeepSeek DeepInfer](inference-engines/deepinfer/) | DeepSeek-V4.1-Flash向けoffline inference。Linux上のNVIDIA SM100 / Huawei Ascend 950を対象とし、公開版にproduction serving stackは同梱しない。 | FlashMLA / DeepGEMM / DeepEP / DeepSelect / TileLang、Attention DP/CP、MoE EP/EPLB、DSpark verification、非同期scheduler |\n"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "### 2026-10-10〜12 — 推論基盤・モデル更新",
-          "text": "### 2026-10-20〜21 — DeepSeek / ローカル推論の更新\n\n- **DeepSeek DeepInfer**: DeepSeek-V4.1-Flash向けの公開offline inference runtimeを追加。NVIDIA SM100 / Huawei Ascend 950、Linux等の条件と、公開版にKV cache system・prefill/decode disaggregation・replica load balancerがない点を[個別ページ](inference-engines/deepinfer/)に記録。\n- **Ollama v0.40.7 / v0.40.8**: 10月18日と21日の正式版を公開候補版と区別して追記。Flint対応はmacOS限定で、速度改善の測定値とは区別。[Ollama](inference-engines/ollama/)\n- **llama.cpp b11800〜b11803**: QSA/DSA/CSA mask演算、SenseNova U1のdense理解枝、FlintForCausalLM等を開発ビルドとして追記。一般的な速度倍率は未提示。[llama.cpp](inference-engines/llama-cpp/)\n- **ExLlamaV3 v1.6.4**: model対応、公平なprefill/decode scheduling、TP/shared-memory等の修正を追記。速度・VRAM値は未提示。[ExLlama](inference-engines/exllama/)\n- **DeepSeek Recipe**: V4/V4.1向けAPI互換部品として記録し、推論engineやHTTP serviceとは区別。[詳細](integration-libraries/deepseek-recipe.md)\n- **Recursive Flint 40B-A2.5B**: model family一覧に追加。BF16配布規模とOllamaのmacOS限定条件は[個別ページ](../llm-releases/recursive.md)を参照。\n\n"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "- [llama.cpp](inference-engines/llama-cpp/) —",
-          "text": "- [DeepSeek DeepInfer](inference-engines/deepinfer/) — DeepSeek-V4.1-Flash向けoffline inference runtime。production serving機能の未同梱範囲を記載\n"
-        },
-        {
-          "op": "insert_before_once",
-          "anchor": "### 学習フレームワーク（training frameworks）",
-          "text": "### API互換・integration libraries\n\n- [DeepSeek Recipe](integration-libraries/deepseek-recipe.md) — V4/V4.1向けMessages / Chat Completions / Responses変換とprompt / token ID処理。推論実行は行わない\n\n"
-        }
-      ]
-    },
-    {
-      "path": "framework-updates/inference-engines/deepinfer/README.md",
-      "content": "# DeepSeek DeepInfer\n\nDeepInferはDeepSeek-V4.1-Flash向けに公開されたDeepSeekのoffline inference runtime。2026-10-20の一般公開を確認した。公式GitHub repositoryの作成は2026-10-16 UTCで、確認時点ではタグ付き正式releaseはない。\n\n## 対応構成\n\n現在の公開READMEで示される対象はDeepSeek-V4.1-Flash、NVIDIA SM100 GPUまたはHuawei Ascend 950 NPU、Linuxである。Python 3.12、GCC 13以降を要求し、NVIDIA経路はCUDA 13を必要とする。\n\n## 実行方式\n\nFlashMLA、DeepGEMM、DeepEP、DeepSelect、TileLang等を組み合わせる。Attention DP / CP、MoE EP / EPLB、DSparkと信頼度ベースのverification、SWAのbounded replay、非同期scheduling、batch構成に依存しない決定的sampling、structured outputを含む。\n\n## 適用範囲と比較上の注意\n\n公開版はoffline inferenceが中心で、完全なproduction serving stackではない。公式READMEはKV cache system、prefill / decode disaggregation、DP replica間のload balancerが公開版に含まれないと説明しているため、repository名だけからvLLMやSGLangの完全な代替と扱わない。\n\nApache-2.0で公開される。公式benchmarkのprefill条件（4×SM100）とdecode条件（64×SM100）は規模が異なるため、相互の直接比較や単一GPU性能への外挿はできない。Windows / RTX 4070 SUPERは記載された対応構成に含まれない。\n\n## 一次資料\n\n- [DeepInfer repository](https://github.com/deepseek-ai/DeepInfer)\n- [DeepInfer README](https://github.com/deepseek-ai/DeepInfer/blob/main/README.md)\n"
-    },
-    {
-      "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "6c48cd74f451b624b4338b28a2ec3b580907a8f7",
+      "path": "framework-updates/inference-engines/tensorrt-llm/README.md",
+      "expected_blob_sha": "f17d4e18afbac6d928f30a41c996b520b1cb3db7",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-10-18 — Ollama v0.40.7-rc0（公開候補版）",
-          "text": "### 2026-10-21 — Ollama v0.40.8（正式版）\n- Recursive Flint対応を追加。公式release案内ではFlintの実行はmacOS限定で、Windowsや一般NVIDIA GPUでの対応を示さない。\n- 本releaseのFlint対応から12GB VRAMでの実用性や生成速度は推定しない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.8)\n\n### 2026-10-18 — Ollama v0.40.7（正式版）\n- Responses APIでthinking有無が異なるmodelへ切り替えた際の継続処理、streaming tool-call eventの順序・重複、切断時のremote実行中止を修正。draft種別の自動判定対象を拡大し、`ollama show` / APIへ`renderer`、`parser`、`template_source`を追加。\n- 正式版として公開候補版と区別する。release noteは端から端の速度改善値を示していない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.7)\n\n"
+          "anchor": "### 2026-10-14 — TensorRT-LLM v1.4.0rc0（公開候補版）",
+          "text": "### 2026-10-22 — TensorRT-LLM v1.4.0rc1（公開候補版）\n- **RC1であり正式版ではない。** KV cache manager V2とPython KV cache transceiverを既定にし、未使用の`LlmRequest` fieldを削除、C++ `ArrayView`を`std::span`へ変更するなど破壊的API変更を含む。既存連携は互換性試験が必要。\n- **追加モデル経路**: DeepSeek-V4.1-Flash、GLM-5.3-Flash NVFP4、Qwen3.8-Flash-Next NVFP4（実験的Modeling V2）、DFlashのLiLiCorr草稿checkpoint。対応範囲はモデルごとに異なる。\n- **推論基盤**: Mooncake connectorとKV cache V2の統合、ホスト階層への段階的充填、NVFP4冷却ページ圧縮でのRoPE精度選択、信頼度に基づく可変長DSpark検証、要求ごとのseed再現性、piecewise CUDA Graphの選択的compileを追加。\n- **既知の問題**: A100でstreaming requestをcancelした後、既定Python KV transceiverを使うprefill/decode分離要求がKV転送エラーになる場合がある。Qwen3のJSON schema例が上限のない長さで応答する場合がある。\n- release noteはこの更新全体の公平なend-to-end速度倍率を示していない。Windows 11 / RTX 4070 SUPER 12GBの正式な対応や速度・VRAM改善へ外挿しない。[公式RC1](https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.4.0rc1)\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "f4e6b94306fe929df6694c1542e0d16a715f4f39",
+      "expected_blob_sha": "184360f66cbae3ff15aa6391def33088d3df2d59",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-10-20 — b11744〜b11765（開発版）",
-          "text": "### 2026-10-21 — llama.cpp b11800〜b11803（開発ビルド）\n- **b11800**: `ggml_top_k_mask`を一般化し、Qwen4系 / GLM5.3-nextのQSAに加えてDeepSeek V4 CSA等のtop-k maskを融合。backendが演算を実装しない場合は既存経路を使う。releaseに実機速度倍率はない。\n- **b11801**: SenseNova U1（NEOChatModel）のdense理解枝とvision encoderをGGUF変換・model実装へ追加。MoT生成枝は非対応。\n- **b11802**: Jinja namespace属性と辞書method名が衝突する問題を修正。\n- **b11803**: Recursive Flint（`FlintForCausalLM`）のmodel構造を追加。Windows x64 CUDA 12.4 / CUDA 13系buildの配布を確認。GGUF量子化版や12GB VRAMでの実用動作は別途確認が必要。\n- 開発ビルドの更新として記録し、一般的な速度向上とは解釈しない。[b11800](https://github.com/ggml-org/llama.cpp/releases/tag/b11800) / [b11801](https://github.com/ggml-org/llama.cpp/releases/tag/b11801) / [b11802](https://github.com/ggml-org/llama.cpp/releases/tag/b11802) / [b11803](https://github.com/ggml-org/llama.cpp/releases/tag/b11803)\n\n"
+          "anchor": "### 2026-10-21 — llama.cpp b11800〜b11803（開発ビルド）",
+          "text": "### 2026-10-22 — llama.cpp b11813〜b11827（開発ビルド）\n- **b11822**: Qwen4ExpでDFlash草稿を使うとhyper-connection残差の形状が合わず最初の要求が停止する問題を修正。草稿が要求する層だけ残差ストリームの平均を構築する。\n- **b11823**: GLM5で不要な`sel_mask_2d`と`new_pool_flat`を渡さない入力グラフへ整理。速度倍率は示されていない。\n- **b11826**: MiniCPM-OCR 1.0のマルチモーダル処理を追加。全GGUF・GPU構成の動作保証ではない。\n- **b11827**: Qualcomm Adreno向けOpenCLのdepthwise 2D convolutionを追加。NVIDIA CUDA向け改善と混同しない。\n- **b11819**: Nemotron系の非標準GQA、BPE tokenizer、Domyn small pre-typeへ対応。\n- **b11821**: Intel XMX/SYCL量子化行列積の複数列処理を拡張。投機的検証2〜8 tokenまたは短入力9〜80 token向けの経路で、Intel XMX専用。\n- **b11818**: reranking APIの型付きcontent入力と画像対応を改善し、template非対応モデルへの画像入力は黙って捨てず拒否する。\n- **b11815**: SYCLの非連続入力で起きるCONV_2D誤計算を修正。対象テストは16失敗から0へ回復（速度測定ではない）。\n- いずれも開発ビルドの更新で、一般的な高速化倍率はreleaseにない。b11827は2026-10-22 UTC時点の最新確認版。Windows x64 CUDA配布や12GB VRAMでの実機性能は別途確認が必要。[b11815](https://github.com/ggml-org/llama.cpp/releases/tag/b11815) / [b11818](https://github.com/ggml-org/llama.cpp/releases/tag/b11818) / [b11819](https://github.com/ggml-org/llama.cpp/releases/tag/b11819) / [b11821](https://github.com/ggml-org/llama.cpp/releases/tag/b11821) / [b11822](https://github.com/ggml-org/llama.cpp/releases/tag/b11822) / [b11823](https://github.com/ggml-org/llama.cpp/releases/tag/b11823) / [b11826](https://github.com/ggml-org/llama.cpp/releases/tag/b11826) / [b11827](https://github.com/ggml-org/llama.cpp/releases/tag/b11827)\n\n"
         }
       ]
     },
     {
-      "path": "framework-updates/inference-engines/exllama/README.md",
-      "expected_blob_sha": "6da2816e12d3d65dfbafea164095c89d676f3026",
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "fa50f0ab1e0761c959d222e3b1d7e1850e12a322",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-10-17 — ExLlamaV3 v1.6.3（正式版）",
-          "text": "### 2026-10-20 — ExLlamaV3 v1.6.4（正式版）\n- `Lfm2VlForConditionalGeneration`とNemotron 3.5 Bolt（NemotronH拡張）への対応を追加し、並列要求間のprefill / decode schedulingをより公平に調整。\n- tensor parallelism / shared memoryの問題と、投機的draft有効時にrequestを再queueするとcontext上限を超える不具合を修正。\n- releaseに速度倍率やVRAM使用量の数値はない。[正式版](https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.4)\n\n"
+          "anchor": "### 2026-10-21 — Ollama v0.40.8（正式版）",
+          "text": "### 2026-10-22 — Ollama v0.40.9-rc2（公開候補版）\n- Release一覧はv0.40.9を表示するが、本文の版表記は**v0.40.9-rc2 / Pre-release**。正式版と区別し、正式版の最新確認はv0.40.8とする。\n- 公開本文が明示する変更は内蔵llama.cppの更新のみ。取り込まれた個別修正、Windows/NVIDIA GPUのFlint対応、モデル別速度向上はこのrelease情報だけでは確定しない。\n- [公式RC2](https://github.com/ollama/ollama/releases/tag/v0.40.9-rc2)\n\n"
         }
       ]
-    },
-    {
-      "path": "framework-updates/integration-libraries/deepseek-recipe.md",
-      "content": "# DeepSeek Recipe\n\nDeepSeek RecipeはDeepSeek V4 / V4.1向けのAPI互換・prompt変換ライブラリで、独立した推論engineではない。公式GitHub repositoryにsourceとREADMEが公開され、repository metadata上の最終更新日は2026-10-19 UTC。\n\n## 役割\n\nRust libraryとPython bindingsを提供する。Messages、Chat Completions、Responses APIの入力を内部Conversation形式へ正規化し、DeepSeek V4 / V4.1用のpromptとtoken IDへ変換する。生成結果からreasoning、tool calls、JSON schema等をAPI responseへ戻す。\n\nmodel推論、tool実行、HTTP転送は利用側が用意する。DeepSeek Recipe単体をserving runtimeとして扱わない。\n\n## 安全上の注意\n\n公式READMEによると、外部画像URLを取得する`ReqwestImageFetcher`は既定で宛先を制限しない。非信頼入力のURLを受けるserviceでは`DestinationFilter`を適用する。\n\nMIT license。\n\n## 一次資料\n\n- [DeepSeek Recipe repository](https://github.com/deepseek-ai/deepseek-recipe)\n"
     }
   ],
-  "summary": "Applied the 2026-10-22 Library maintenance: add DeepInfer as offline-only, distinguish DeepSeek Recipe from an inference engine, record Ollama v0.40.7/v0.40.8, llama.cpp b11800-b11803 and ExLlamaV3 v1.6.4, and add Recursive Flint with license, model scale and platform limits."
+  "summary": "2026-10-23 Library maintenance update: add TensorRT-LLM v1.4.0rc1 with breaking changes and known issues; record llama.cpp b11813-b11827 development fixes and backend-specific support; distinguish Ollama v0.40.9-rc2 from the stable release."
 }
