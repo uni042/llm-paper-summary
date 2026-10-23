@@ -26,7 +26,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-03 · [Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction](2025-2508.02558-sparse-dllm-dynamic-cache-eviction.md)**  
-  実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/OpenMOSS/Sparse-dLLM) ・ リポジトリ内被引用：20  
   拡散型LLMの安定した注意重要度を利用した遅延双方向鍵値破棄で、長文脈推論を最大10倍高速化する。
 
 - **2026-07 · [Gemma 4 Technical Report](2026-2607.02770-gemma-4-technical-report.md)**  
@@ -34,7 +34,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   密モデルと混合専門家モデルを含むGemma 4の技術報告。局所・大域注意の配置、キー・値キャッシュ共有、キーの値への再利用、部分回転位置符号化、量子化対応学習、複数トークン予測ドラフタ、12Bの符号化器不要構成を組み合わせ、推論時の重み容量・KV容量・復号費用をそれぞれ減らす。数値はモデル系列・量子化形式・文脈長ごとに区別して読む必要がある。
 
 - **2025-11 · [TiDAR: Think in Diffusion, Talk in Autoregression](2025-2511.08923-tidar-think-in-diffusion-talk-in-autoregression.md)**  
-  実装：✓ ・ リポジトリ内被引用：15  
+  実装：✓ ・ リポジトリ内被引用：16  
   論文が対象にするのは、単に「拡散型言語モデルを速くする」ことではない。確定した接頭辞の鍵・値（KV）キャッシュは再利用でき、拡散型で問題になりやすい過去全体の再計算も避けられる。8B版の生成六課題平均正答率65.31%はQwen3-8Bの68.09%を下回り、元モデルと同じ出力分布を厳密に保存する手法ではない。
 
 - **2026-01 · [KVzap: Fast, Adaptive, and Faithful KV Cache Pruning](2026-2601.07891-kvzap-fast-adaptive-and-faithful-kv-cache-pruning.md)**  
@@ -806,7 +806,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-11〜2025-10）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：80  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：81  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
@@ -818,7 +818,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   キャッシュを減らせば容量は空くが、注意品質の低下、検索・量子化の追加計算、CPU/SSD転送、再計算など別の費用が発生する。
 
 - **2025-05 · [dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching](2025-2506.06295-dllm-cache-adaptive-caching.md)**  
-  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：45  
+  実装：[✓](https://github.com/maomaocun/dLLM-cache) ・ リポジトリ内被引用：46  
   プロンプトの長間隔キャッシュとV類似度による応答トークン選択更新で、拡散LLM推論の再計算を学習なしに削減する。
 
 - **2025-10 · [Expected Attention: KV Cache Compression by Estimating Attention from Future Queries Distribution](2025-2510.00636-expected-attention-kv-cache-compression-by-estimating-attention-from-fut.md)**  
@@ -830,7 +830,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   元文脈の再構成時に使われるKVを重要とみなし、将来クエリを知らずに再利用可能な長文脈KVキャッシュを3〜4倍圧縮する。
 
 - **2025-05 · [dKV-Cache: The Cache for Diffusion Language Models](2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/horseee/dKV-Cache) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/horseee/dKV-Cache) ・ リポジトリ内被引用：42  
   DLMの復号済みトークンK/Vを1ステップ遅延して再利用し、未確定位置だけを再計算することで、学習なしに2〜10倍級の推論高速化を実現する。
 
 - **2025-04 · [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](2025-2504.19874-turboquant-online-vector-quantization-with-near-optimal-distortion-rate.md)**  
