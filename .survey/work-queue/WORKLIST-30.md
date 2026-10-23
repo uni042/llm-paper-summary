@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-23T06:34:46+00:00`
+Generated: `2026-10-23T07:25:54+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -475,7 +475,7 @@ ready総数: **897** / 未claim総数: **897** / このworker向け: **200**
 | 248 | 27 | 6 | 9 | arXiv:2110.02442 | PoNet: Pooling Network for Efficient Token Mixing in Long Sequences | 2021-10-06 | International Conference on Learning Representations | 17 | 9 | sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2110.02442) |
 | 249 | 3 | 6 | 9 | arXiv:2510.05064 | Boomerang Distillation Enables Zero-Shot Model Size Interpolation | 2025-10-06 | arXiv.org | 3 | 9 | Conditional Computation, inference-systems | [source](https://arxiv.org/abs/2510.05064) |
 | 250 | 10 | 6 | 8 | arXiv:2509.11961 | Spec-LLaVA: Accelerating Vision-Language Models with Dynamic Tree-Based Speculative Decoding | 2025-09-15 | arXiv.org | 10 | 8 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2509.11961) |
-| 251 | 2 | 6 | 8 | DOI:10.1109/DAC63849.2025.11132534 | LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration | 2025-06-22 | Proceedings - ACM IEEE Design Automation Conference | 2 | 8 | KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/dac63849.2025.11132534) |
+| 251 | 3 | 6 | 8 | DOI:10.1109/DAC63849.2025.11132534 | LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration | 2025-06-22 | Design Automation Conference | 3 | 8 | KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/DAC63849.2025.11132534) |
 | 252 | 10 | 6 | 8 | DOI:10.18653/v1/2025.findings-emnlp.957 | Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication | 2025 | Conference on Empirical Methods in Natural Language Processing | 0 | 8 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, llm-serving-scheduling-disaggregation, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.18653/v1/2025.findings-emnlp.957) |
 | 253 | 11 | 6 | 8 | DOI:10.1109/ICMLA55696.2022.00030 | A Robust Approach to Fine-tune Pre-trained Transformer-based models for Text Summarization through Latent Space Compression | 2022-12-01 | International Conference on Machine Learning and Applications | 1 | 8 |  | [source](https://doi.org/10.1109/ICMLA55696.2022.00030) |
 | 254 | 10 | 6 | 8 | arXiv:2607.24788 | GLIDE: Guided Layerwise Hybrid Attention for Efficient LLM Inference | 2026-06-26 | arXiv.org | 0 | 8 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV-cache compression / attention-based token selection / long-context inference, inference-systems | [source](https://arxiv.org/abs/2607.24788) |
