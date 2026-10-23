@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1400-scheduled-chat-00/r01/research-prescreen-114",
+  "reference_main_sha": "620eb1da667b853a8c6dcad1e109e61217f1c987",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.04515",
+      "identity_tokens": [
+        "arxiv:2608.04515",
+        "doi:10.48550/arxiv.2608.04515"
+      ],
+      "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding",
+      "reason": "一次要旨はCT/MRIの断層間で重複する視覚トークンを、深さ方向の窓と代表断層のアンカーへ再配分する学習不要の圧縮方式。視覚トークンを約80%削減して医療画像の報告生成・質問応答品質を維持するためMLLM推論効率と直接接点がある。一方、機構と評価が3D医療ボリュームに特化し、一般画像・動画・文章LLMのサービングへの汎用性は要旨段階では未確定。",
+      "source_url": "https://arxiv.org/abs/2608.04515",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T14:00:00+09:00",
+      "last_checked_at": "2026-10-23T14:00:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 114
+    }
+  ]
+}
