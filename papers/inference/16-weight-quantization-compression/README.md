@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（67本）
+## 自動生成の論文一覧（72本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -256,7 +256,15 @@
   実装：✓ ・ リポジトリ内被引用：3  
   学習後量子化（Post-学習 量子化、PTQ）は、学習済み大規模言語モデルの重みや活性を少ないビット数で表現し、メモリ使用量や演算費用を下げる技術である。65Bの4ビット重み量子化を単一GPUで4.3時間で行ったという処理費用の報告はあるが、量子化後の推論速度を4.3倍にしたという意味ではない。
 
+- **2023-12 · [ZeroQuant(4+2): Redefining LLMs Quantization with a New FP6-Centric Strategy for Diverse Generative Tasks](2023-2312.08583-zeroquant-4-2-redefining-llms-quantization-with-a-new-fp6-centric-strate.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  4ビット整数量子化（INT4）が自由生成課題で不安定になる条件を測り、6ビット浮動小数点（FP6）の品質を、4+2ビットの格納・復号方式と指数バイアスの事前変換によって既存GPU上で利用する研究。
+
 ### 4年前（2022-11〜2023-10）
+
+- **2022-11 · [SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models](2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md)**  
+  実装：[✓](https://github.com/mit-han-lab/smoothquant) ・ リポジトリ内被引用：342  
+  活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
   実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：208  
@@ -278,6 +286,10 @@
   実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：108  
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
+- **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
+  実装：[✓](https://github.com/facebookresearch/LLM-QAT) ・ リポジトリ内被引用：96  
+  LLM-QATは、学習後量子化（Post-学習 量子化: PTQ）では精度が大きく低下する低ビット領域に対し、量子化誤差を学習中に経験させる量子化対応学習（Quantization-Aware 学習: QAT）を大規模言語モデルへ適用する研究である。
+
 - **2023-10 · [Atom: Low-bit Quantization for Efficient and Accurate LLM Serving](2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md)**  
   実装：[✓](https://github.com/efeslab/Atom) ・ リポジトリ内被引用：77  
   外れ値チャネルだけ高精度に残して重み・活性・KVキャッシュを低ビット化し、再配置と融合カーネルで4ビットGPU演算器を直接使ってLLM配信を高速化する。
@@ -293,6 +305,10 @@
 - **2023-06 · [OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization](2023-olive-accelerating-large-language-models-via-hardware-friendly-outlier-victim-pair-quantization.md)**  
   実装：[✓](https://github.com/clevercool/ANT-Quantization) ・ リポジトリ内被引用：27  
   外れ値を別の疎データ構造へ逃がすのではなく、隣接する低重要度の通常値を「犠牲値（victim）」として使い、外れ値を同じ固定幅ペアの中へ埋め込む。これにより外れ値対応量子化で問題になる座標リストと別演算経路をなくし、4ビットの整列アクセスをテンソルコアやシストリック配列へ直接載せる。
+
+- **2023-03 · [ZeroQuant-V2: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md)**  
+  実装：✓ ・ リポジトリ内被引用：23  
+  ZeroQuant-V2は、大規模言語モデルの学習後量子化（Post-学習 量子化、PTQ）を、特定の一手法の成功例だけで評価するのではなく、量子化対象、数値精度、粒度、モデル系列、最適化方式を組み合わせて調べた研究である。元の16ビットモデルは10.33なので、この設定では測定上ほぼ同等となる。
 
 - **2023-06 · [LoSparse: Structured Compression of Large Language Models based on Low-Rank and Sparse Approximation](2023-2306.11222-losparse-structured-compression-of-large-language-models-based-on-low-rank-and-sparse-approximation.md)**  
   実装：[✓](https://github.com/yxli2123/LoSparse) ・ リポジトリ内被引用：15  
@@ -311,4 +327,8 @@
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
   実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：392  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
+
+- **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：111  
+  大規模言語モデルの量子化では、重みを16ビットから8ビットへ減らすだけでメモリ転送量は小さくなる。INT8では追加の学習や校正なしでBERT・GPT系の品質をほぼ保ち、NVIDIA A100上のBERT-baseで最大5.19倍、GPT-3 350Mで4.16倍の速度向上を示した。
 <!-- survey:auto:end -->

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（432本）
+## 自動生成の論文一覧（433本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -139,6 +139,10 @@
 - **2025-11 · [ContextPilot: Fast Long-Context Inference via Context Reuse](2025-2511.03475-contextpilot-fast-long-context-inference-via-context-reuse.md)**  
   実装：[✓](https://github.com/EfficientContext/ContextPilot) ・ リポジトリ内被引用：4  
   ContextPilotは、検索拡張生成（Retrieval-Augmented Generation; RAG）、会話記憶、複数エージェントが同じ資料を繰り返し参照する状況で、長文脈の前処理（プリフィル）を減らす推論前段システムである。主要なRAG条件では既存方式比でプリフィル処理率が最大約3倍に改善する。
+
+- **2026-07 · [dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving](2026-2512.17077-dllm-serve-bridging-the-memory-gap-in-diffusion-language-model-serving.md)**  
+  実装：[✓](https://github.com/chosen-ox/dLLM-Serve) ・ リポジトリ内被引用：3  
+  本論文のdLLM-Serveは、出力語彙の計算を小分けにして一時活性値の上限を固定する仕組み、更新局面と再利用局面を同じ実行回に詰め合わせるスケジューラ、注意ヘッドごとに重要なトークンを選びながら鍵・値を物理的に連続配置するキャッシュ管理を統合した。
 
 - **2026-05 · [STAR: Decode-Phase Rescheduling for LLM Inference](2026-2510.13668-star-decode-phase-rescheduling-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

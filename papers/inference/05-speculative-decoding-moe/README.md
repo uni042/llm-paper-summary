@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（208本）
+## 自動生成の論文一覧（209本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -633,6 +633,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-07 · [OmniDraft: A Cross-vocabulary, Online Adaptive Drafter for On-device Speculative Decoding](2025-2507.02659-omnidraft-a-cross-vocabulary-online-adaptive-drafter-for-on-device-specu.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号（投機的復号）は、小型の下書きモデルが提案した複数トークンを大きな対象モデルが一括検証することで、対象モデルの逐次呼出しを減らす。
+
+- **2025-04 · [Dynamic-Width Speculative Beam Decoding for LLM Inference](2025-2409.16560-dynamic-width-speculative-beam-decoding-for-llm-inference.md)**  
+  実装：[✓](https://github.com/ZongyueQin/DSBD) ・ リポジトリ内被引用：2  
+  動的幅投機的ビーム復号（Dynamic-Width 投機的 Beam Decoding; DSBD）は、単一系列の投機的復号（投機的復号）の速度利得と、複数候補系列を保持するビームサンプリング（beam sampling）の品質利得を両立するための方式である。
 
 - **2025-04 · [DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding](2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md)**  
   実装：[✓](https://github.com/hoenza/DEL) ・ リポジトリ内被引用：2  
