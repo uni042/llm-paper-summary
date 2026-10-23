@@ -35,6 +35,8 @@ summary: "画像と文章を扱う大規模視覚言語モデルの投機的復�
 list_summary: "視覚あり／文章のみの草稿を同一小型モデルのバッチで生成し、標的モデルの過去の検証分布から混合重みを動的に選ぶことで、視覚言語モデルの投機的復号を入力状況の変化に頑健化する。"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # TABED：視覚言語モデルの草稿分布を実行時に組み合わせる投機的復号
