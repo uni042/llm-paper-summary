@@ -236,6 +236,8 @@ def _view_identifiers(meta, path):
 def paper_views():
     """Return render-only records for inference, training, and survey papers."""
     repo = repository_root()
+    snapshot = read(STATE + "paper-identity-index.json", {}) or {}
+    moved_stubs = set(snapshot.get("ignored_moved_stubs", []))
     records = []
     for family in PAPER_FAMILIES:
         root = repo / "papers" / family
@@ -245,6 +247,8 @@ def paper_views():
             if p.name == "README.md" or p.name == "comparison.md":
                 continue
             rel = p.relative_to(repo).as_posix()
+            if rel.split("/", 2)[-1] in moved_stubs:
+                continue
             source_lineage = p.parent.name
             meta, body = front(p)
             year, month = _publication_month(meta, p)
