@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1700-scheduled-chat-00/r01/prescreen-036",
+  "reference_main_sha": "d1781364c073fddb460e92810096228795da36f2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08663",
+      "identity_tokens": [
+        "arXiv:2609.08663"
+      ],
+      "title": "MoEMB: Scaling Universal Multimodal Embeddings with Efficient Mixture-of-Experts Models",
+      "reason": "MoEMBは単一ベクトルの非自己回帰マルチモーダル埋め込み器を混合専門家モデルで拡張し、適応的な計算量削減も調べる。専門家の動的計算という技術的接点は強いが、主な用途は検索・推薦向け埋め込みで、LLMデコードやサービングスケジューラの評価とは異なるため、収録可否を本文確認に委ねる境界扱い。",
+      "source_url": "https://arxiv.org/abs/2609.08663",
+      "body_check": "abstract_screen_only; body_not_read; arXiv一次要旨でMMEB-V2/MRMR、約3B稼働パラメータ、推論時の適応計算検討、非自己回帰埋め込み用途を確認。本文未読。",
+      "first_checked_at": "2026-10-23T17:04:22+09:00",
+      "last_checked_at": "2026-10-23T17:04:22+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 36
+    }
+  ]
+}
