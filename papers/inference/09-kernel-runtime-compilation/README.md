@@ -433,11 +433,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：140  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：141  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
-  実装：[✓](https://github.com/microsoft/vattention/tree/main/pod_attn) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/microsoft/vattention/tree/main/pod_attn) ・ リポジトリ内被引用：42  
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
@@ -613,7 +613,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   提案はNVIDIAの推論エンジンFasterTransformerを拡張し、専門家番号でトークンを基数ソートする経路、CUTLASSの複数行列積統合、重みだけの4/8ビット量子化を行列積の中で復号する処理、翻訳完了文をバッチから除く処理を組み合わせる。
 
 - **2023-10 · [QUIK: Towards End-to-end 4-Bit Inference on Generative Large Language Models](2023-2310.09259-quik-towards-end-to-end-4-bit-inference-on-generative-large-language-mod.md)**  
-  実装：[✓](https://github.com/IST-DASLab/QUIK) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/IST-DASLab/QUIK) ・ リポジトリ内被引用：15  
   QUIKは、生成大規模言語モデルの線形層を重み・活性値の双方が4ビット整数であるW4A4へ移すための量子化方式である。CUTLASSによる低ビット行列積と量子化・逆量子化の融合カーネルを実装し、RTX3090の2048トークン入力一括処理でFP16比最大3.4倍の処理量改善を報告する。
 
 - **2023-05 · [Blockwise Parallel Transformer for Large Context Models](2023-2305.19370-blockwise-parallel-transformer-for-large-context-models.md)**  
