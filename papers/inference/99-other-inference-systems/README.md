@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（923本）
+## 自動生成の論文一覧（926本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -846,6 +846,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意は固定サイズの再帰状態に集約することで、この増加を抑える。窓64・先頭シンク4の方式は、一般知識6課題平均で元モデルの99.0%を回復し、11の比較例のうち9例で元モデルを除く最高の平均値を得た。
 
+- **2026-08 · [SANE: State Anomaly Neutralization for Stable Extreme-Context Delta-Rule Models](2026-2608.22354-sane-state-anomaly-neutralization-for-stable-extreme-context-delta-rule-.md)**  
+  実装：[✓](https://github.com/pass-lin/rwkv_ops) ・ リポジトリ内被引用：0  
+  SANEはこの形状に合わせ、各チャンク末尾の状態行列を、入力に応じたヘッド別のしきい値で滑らかに圧縮する。
+
 - **2026-08 · [Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models](2026-2608.07890-router-sensitivity-under-lightweight-fine-tuning-identifies-prunable-exp.md)**  
   実装：[✓](https://github.com/ianKa1/MoE_pruning) ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで一部の専門家しか動かさないため演算量を抑えられるが、選択される可能性のある専門家の重み全体をメモリに保持する必要がある。専門家を丸ごと削除すればGPUメモリを減らせるものの、使用頻度や重みの大きさだけでは重要な専門家を誤って削除し、推論品質が急落することがある。
@@ -1178,6 +1182,10 @@
   実装：[✓](https://github.com/Tambe-Lab/agent-memory-profiling) ・ リポジトリ内被引用：0  
   本研究は、長期にわたり複数のセッションをまたいで稼働する大規模言語モデル（LLM）エージェントの「記憶」を、回答品質を高める機能としてだけでなく、計算・メモリ・入出力・スケジューリングの対象となる実行時システムとして捉え直す。後者は前者の約26.5倍である。
 
+- **2026-06 · [Affix Cache for Diffusion Large Language Models](2026-2608.26140-affix-cache-for-diffusion-large-language-models.md)**  
+  実装：[✓](https://github.com/sands-lab/ACache) ・ リポジトリ内被引用：0  
+  ACache（Affix Cache）は、拡散型大規模言語モデル（Diffusion Large Language モデル; DLLM）において、複数の生成要求が同じ文脈を共有する際に、共有文脈の鍵・値キャッシュ（KV キャッシュ）を一度だけ保存し、要求ごとに必要な一部だけを再計算する推論基盤である。
+
 - **2026-06 · [AdaCodec: A Predictive Visual Code for Video MLLMs](2026-2606.02569-adacodec-a-predictive-visual-code-for-video-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは再生用動画符号化の考え方を、動画の画素を忠実に再生するためではなく、言語モデルが必要とする視覚情報を少ないトークンで伝えるために再設計した。Qwen3-VL-8Bを基盤とする原著の11種類の動画理解評価では、比較可能な視覚トークン予算で各評価の基準方式を上回った。
@@ -1301,6 +1309,10 @@
 - **2026-05 · [MeMo: Memory as a Model](2026-2605.15156-memo-memory-as-a-model.md)**  
   実装：[✓](https://github.com/arunv3rma/MeMo) ・ リポジトリ内被引用：0  
   従来の検索拡張生成（RAG）は質問ごとに検索索引から文書を取得するため、検索雑音、複数文書にまたがる関係の取りこぼし、長い引用文脈の投入が問題になる。MeMoは、知識を記憶する小型モデルと、推論・回答を担当する凍結モデルを分離する。
+
+- **2026-05 · [Measuring Maximum Activations in Open Large Language Models](2026-2605.15572-measuring-maximum-activations-in-open-large-language-models.md)**  
+  実装：[✓](https://github.com/clx1415926/Max_act_llm) ・ リポジトリ内被引用：0  
+  低ビット推論では、活性値を少数の離散水準へ写すときに、値の最大絶対値が量子化尺度の決定を左右する。近い規模のMoEモデルは密モデルより14.0〜23.4倍低い極大値を示す。
 
 - **2026-05 · [Lodestar：オンライン学習によるLLM推論リクエストルータ](2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md)**  
   実装：[✓](https://github.com/gangmuk/Lodestar) ・ リポジトリ内被引用：0  

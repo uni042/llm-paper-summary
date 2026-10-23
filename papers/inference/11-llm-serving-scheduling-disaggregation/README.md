@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（435本）
+## 自動生成の論文一覧（436本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -817,6 +817,10 @@
 - **2026-06 · [DriftSched: Adaptive QoS-Aware Scheduling under Runtime Token Drift for Multi-Tenant GPU Inference](2026-2606.02982-driftsched-adaptive-qos-aware-scheduling-under-runtime-token-drift-for-m.md)**  
   実装：[✓](https://github.com/kpalania1/driftsched) ・ リポジトリ内被引用：0  
   DriftSchedは、複数利用者が共有するGPUで大規模言語モデル（LLM）の生成要求を処理するとき、要求を受け付けた時点の予想トークン数と、実際に生成されたトークン数のずれが待ち行列の順序と遅延に及ぼす影響を検証するシステムである。
+
+- **2026-06 · [Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving](2026-2606.29708-demystifying-the-design-space-and-best-practices-for-heterogeneous-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）の推論を事前充填（プリフィル）と逐次復号（デコード）に分離すると、各段階を異なるアクセラレータで実行できる。ただしこれは制約下で処理可能な到着率の変化であり、すべての推論処理が一律10倍速くなったという意味ではない。
 
 - **2026-06 · [Beyond Prediction: Tail-Aware Scheduling for LLM Inference](2026-2606.18431-tail-aware-prediction-free-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

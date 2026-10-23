@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T18:02:15+00:00",
+  "generated_at": "2026-10-23T18:53:32+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 51,
+  "count": 50,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -181,34 +181,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.json",
       "worker_run_key": "20261020-1930-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.04952",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T01:30:31+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 231 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3338,
-        "body_paragraphs": 19,
-        "method_chars": 1495,
-        "method_paragraphs": 9,
-        "evaluation_chars": 231,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 231 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-03218cde5935--libfile_04b27cbfabcc81918538a5736ce454bf--2026-2605.04952-air-moe-inverted-index-routing-research-20261021-1926-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-03218cde5935--libfile_04b27cbfabcc81918538a5736ce454bf--2026-2605.04952-air-moe-inverted-index-routing-research-20261021-1926-scheduled-chat-30-r.json",
-      "worker_run_key": "20261021-1926-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.21264",
