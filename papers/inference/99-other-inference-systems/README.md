@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（934本）
+## 自動生成の論文一覧（937本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -143,6 +143,10 @@
 - **2026-04 · [HAWK: Head Importance-Aware Visual Token Pruning in Multimodal Models](2026-2604.07812-hawk-head-importance-aware-visual-token-pruning-in-multimodal-models.md)**  
   実装：[✓](https://github.com/peppery77/HAWK) ・ リポジトリ内被引用：2  
   画像の解像度や動画のフレーム数が増えると、入力長、注意計算、キー・値キャッシュの負荷が増える。視覚トークンを削減する既存方式には、画像特徴の類似性や注意得点で残すトークンを選ぶものがあるが、注意ヘッドを単純平均すると、画像理解に重要なヘッドとそうでないヘッドを同等に扱ってしまう。
+
+- **2026-04 · [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](2026-2604.02560-dependency-guided-parallel-decoding-in-discrete-diffusion-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  依存推定は拡散モデルの1回の前向き計算で得た状態を利用し、正確な依存行列を作るためにマスク位置ごとに追加推論する方式を避ける。
 
 - **2026-03 · [The Model Knows Which Tokens Matter: Automatic Token Selection via Noise Gating](2026-2603.07135-the-model-knows-which-tokens-matter-automatic-token-selection-via-noise-.md)**  
   実装：[✓](https://github.com/MedHK23/AutoSelect) ・ リポジトリ内被引用：2  
@@ -1309,6 +1313,10 @@
 - **2026-05 · [Multi-Mixer Models: Flexible Sequence Modeling with Shared Representations](2026-2605.28769-multi-mixer-models-flexible-sequence-modeling-with-shared-representation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、自己注意（Self-注意機構）と線形再帰型の系列混合（Linear Recurrent Sequence Mixing）を、モデルの異なる層に固定配置するのではなく、同一層・同一系列の異なる区間で切り替えるOryxアーキテクチャを提案する。
+
+- **2026-05 · [Mixture of Layers with Hybrid Attention: Parallel Thin Blocks for Sparse Transformer Compute](2026-2605.09516-mixture-of-layers-with-hybrid-attention-parallel-thin-blocks-for-sparse-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  標準的な専門家混合（Mixture of エキスパート; MoE）は各Transformer層の主にフィードフォワードネットワーク（FFN）を複数の専門家に分け、トークンごとに一部を使う。しかし注意計算と層の入出力は幅の広い一つのブロックのままであり、モデルの容量とトークン当たりの計算を別々に増減できる範囲は限られる。
 
 - **2026-05 · [MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations](2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2555,6 +2563,10 @@
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：1  
   近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
+
+- **2024-11 · [AdaCM^2: On Understanding Extremely Long-Term Video with Adaptive Cross-Modality Memory Reduction](2024-2411.12593-adacm-2-on-understanding-extremely-long-term-video-with-adaptive-cross-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  AdaCM²は、長時間動画を言語モデルへ渡す際、すべてのフレームの視覚特徴を保存し続ける代わりに、テキスト質問と強く関連する視覚トークンだけを古いキャッシュから残す方式である。
 
 - **2025-10 · [TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination](2025-2510.22767-tell-tale-task-efficient-llms-with-task-aware-layer-elimination.md)**  
   実装：[✓](https://github.com/omyokun/tale) ・ リポジトリ内被引用：0  

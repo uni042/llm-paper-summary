@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（122本）
+## 自動生成の論文一覧（123本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -277,6 +277,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-05 · [HCInfer: An Efficient Inference System via Error Compensation for Resource-Constrained Devices](2026-2605.05819-hcinfer-an-efficient-inference-system-via-error-compensation-for-resourc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   数十億〜数百億パラメータのLLMを一般向けGPUで動かすには、重みを低ビット化してGPUメモリに収めるか、収まりきらない重みをCPUメモリへ置いて必要時に転送することが多い。低ビット量子化は速度とメモリ効率を改善するが、極端な3〜4ビットでは正答率が低下し得る。
+
+- **2026-05 · [Gaze Attention: Query-Adaptive Visual Routing for Efficient Multimodal LLMs](2026-2605.13080-gaze-attention-query-adaptive-visual-routing-for-efficient-multimodal-ll.md)**  
+  実装：[✓](https://github.com/junha1125/Gaze-Attention) ・ リポジトリ内被引用：0  
+  通常の密注意（dense 注意機構）は、生成する単語が画像の一部分だけに関係していても、全視覚トークンへ注意計算を行う。原著§4.4では、未融合のPyTorch実装による壁時計時間は密注意の1.5〜1.6倍となり、むしろ遅い。
 
 - **2026-05 · [Fast MoE Inference via Predictive Prefetching and Expert Replication](2026-2605.11537-predictive-prefetching-expert-replication.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
