@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-22T23:53:32+00:00",
-  "record_count": 12446,
+  "updated_at": "2026-10-23T00:45:19+00:00",
+  "record_count": 12444,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -164851,11 +164851,12 @@
       "classification": "unrelated",
       "canonical_id": "arXiv:2501.15061",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.15061",
         "arXiv:2501.15061"
       ],
-      "reason": "一次要旨で、正負のクエリ・キー相互作用を取り込む線形注意を画像分類などの視覚Transformerへ適用する研究と確認。LLMの推論サービング、KVキャッシュ、言語生成や分散学習の実装・評価は示されず、対象外。",
+      "reason": "符号が同じ／異なるクエリ・キーの相互作用を分離し、学習可能な冪関数で注意分布の識別性を高める視覚Transformer向け線形注意方式。一次要旨の実験は画像認識などの視覚タスクであり、LLMの自己回帰生成、長文脈サービング、推論時KVキャッシュ削減を評価していない。",
       "first_checked_at": "2026-10-11T21:44:20+00:00",
-      "last_checked_at": "2026-10-17T04:46:12+00:00",
+      "last_checked_at": "2026-10-23T00:45:15+00:00",
       "linked_from": [],
       "title": "PolaFormer: Polarity-aware Linear Attention for Vision Transformers"
     },
@@ -168285,20 +168286,6 @@
         "papers/inference/99-other-inference-systems/2025-2505.00949-llama-nemotron-efficient-reasoning-models.md"
       ],
       "title": "Trustworthy AI in Digital Health: A Comprehensive Review of Robustness and Explainability"
-    },
-    "arXiv:2606.10577": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2606.10577",
-      "identity_tokens": [
-        "arXiv:2606.10577",
-        "id:arXiv:2606.10577",
-        "url:https://arxiv.org/abs/2606.10577"
-      ],
-      "reason": "題名はツール呼び出しを使ったゼロショット視覚言語ナビゲーションを主題としている。ツール呼び出しの応用先はナビゲーションであり、LLM推論基盤のレイテンシ、GPUメモリ、通信・スケジューリング改善を直接扱わないため対象外。",
-      "first_checked_at": "2026-10-13T10:40:03+00:00",
-      "last_checked_at": "2026-10-21T08:53:31+00:00",
-      "linked_from": [],
-      "title": "AgenticNav: Zero-Shot Vision-and-Language Navigation as a Tool-Calling Harness"
     },
     "arXiv:2602.04789": {
       "classification": "unrelated",
@@ -179187,18 +179174,6 @@
       "last_checked_at": "2026-10-21T03:42:37+00:00",
       "linked_from": [],
       "title": "GA-VLN: Geometry-Aware BEV Representation for Efficient Vision-Language Navigation"
-    },
-    "arXiv:2511.21285": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2511.21285",
-      "identity_tokens": [
-        "arXiv:2511.21285"
-      ],
-      "reason": "題名はパラメータ効率の高い追加学習（PEFT）手法の比較基準を示す。比較対象は微調整の学習手法であり、学習専用の評価は現在凍結された範囲で、LLM生成推論のランタイム・メモリ・通信最適化を直接扱わないため対象外。",
-      "first_checked_at": "2026-10-21T08:53:30+00:00",
-      "last_checked_at": "2026-10-21T08:53:30+00:00",
-      "linked_from": [],
-      "title": "PEFT-Bench: A Parameter-Efficient Fine-Tuning Methods Benchmark"
     },
     "arXiv:2602.19281": {
       "classification": "unrelated",
