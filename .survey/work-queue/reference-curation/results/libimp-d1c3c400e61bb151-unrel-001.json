@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d1c3c400e61bb151-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2403.09898",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2403.09898",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2403.09898",
+      "arXiv:2403.09898"
+    ],
+    "reason": "Mambaの状態空間モデルを4本組み合わせて多変量時系列の長期予測を改善する研究。一次要旨の評価対象は時系列予測精度、長期依存、線形計算量、予測器のメモリ効率であり、LLMのトークン生成、推論サービング、KVキャッシュ、MoE推論の最適化は扱わない。モデル内部のMamba利用だけでは本サーベイの対象にならない。",
+    "first_checked_at": "2026-10-10T21:46:55+00:00",
+    "last_checked_at": "2026-10-23T01:49:30+00:00",
+    "linked_from": [],
+    "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting"
+  },
+  "processed_at": "2026-10-23T01:49:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d1c3c400e61b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

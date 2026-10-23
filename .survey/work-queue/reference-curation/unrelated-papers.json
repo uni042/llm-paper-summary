@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T00:45:19+00:00",
+  "updated_at": "2026-10-23T01:49:30+00:00",
   "record_count": 12444,
   "records": {
     "arXiv:2303.08774": {
@@ -162871,11 +162871,11 @@
         "DOI:10.48550/arxiv.2403.09898",
         "arXiv:2403.09898"
       ],
-      "reason": "一次要旨はMamba状態空間モデル4系統を使った長期多変量時系列予測で、予測精度・線形スケーラビリティ・小メモリフットプリントを評価する。対象が時系列予測でありLLM生成推論のサービング、状態キャッシュ、GPU実行への直接適用を示さない。",
+      "reason": "Mambaの状態空間モデルを4本組み合わせて多変量時系列の長期予測を改善する研究。一次要旨の評価対象は時系列予測精度、長期依存、線形計算量、予測器のメモリ効率であり、LLMのトークン生成、推論サービング、KVキャッシュ、MoE推論の最適化は扱わない。モデル内部のMamba利用だけでは本サーベイの対象にならない。",
       "first_checked_at": "2026-10-10T21:46:55+00:00",
-      "last_checked_at": "2026-10-22T15:36:21+00:00",
+      "last_checked_at": "2026-10-23T01:49:30+00:00",
       "linked_from": [],
-      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-Term Forecasting"
+      "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting"
     },
     "DOI:10.1145/3452296.3472904": {
       "classification": "unrelated",
