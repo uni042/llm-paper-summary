@@ -1,41 +1,99 @@
 ---
-canonical_id: "DOI:10.52202/085713-2340"
-title: "Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression"
-summary: "Glance2Gazeは視覚言語モデルの画像トークン削減で細部情報が失われる問題に対し、ViTの複数層の特徴をテキスト指示に応じて融合するGlance Fusionと、言語モデルの深い層で共有学習クエリにより画像トークンを段階的に圧縮するGaze Compressionを組み合わせる。LLaVA-1.5-7Bでは視覚トークン処理FLOPsを11%に抑えて10課題の平均相対性能95.6%を保持し、LLaVA-NeXT-7BのTextVQAではA100上の初回処理313msを49ms、全文処理475msを151msに短縮した。"
-list_summary: "テキスト指示に応じた多層ViT融合と、共有クエリによる深層視覚トークン圧縮を組み合わせ、精度と推論費用を両立する。"
+canonical_id: DOI:10.52202/085713-2340
+title: 'Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression'
+summary: Glance2Gazeは視覚言語モデルの画像トークン削減で細部情報が失われる問題に対し、ViTの複数層の特徴をテキスト指示に応じて融合するGlance Fusionと、言語モデルの深い層で共有学習クエリにより画像トークンを段階的に圧縮するGaze Compressionを組み合わせる。LLaVA-1.5-7Bでは視覚トークン処理FLOPsを11%に抑えて10課題の平均相対性能95.6%を保持し、LLaVA-NeXT-7BのTextVQAではA100上の初回処理313msを49ms、全文処理475msを151msに短縮した。
+list_summary: テキスト指示に応じた多層ViT融合と、共有クエリによる深層視覚トークン圧縮を組み合わせ、精度と推論費用を両立する。
 authors:
-  - "Juan Chen"
-  - "Honglin Liu"
-  - "Yingying Ao"
-  - "Ting Zhang"
-  - "Yan Huang"
-  - "Xudong Liu"
-  - "Biao Li"
-  - "Jintao Fang"
-published: "2025-12"
-publication: "Advances in Neural Information Processing Systems 38 (NeurIPS 2025)"
-publication_type: "査読付き国際会議論文"
-publication_status: "published"
-doi: "10.52202/085713-2340"
-source: "https://papers.nips.cc/paper_files/paper/2025/file/64ad7b36b497f375ded2e6f15713ed4c-Paper-Conference.pdf"
+- Juan Chen
+- Honglin Liu
+- Yingying Ao
+- Ting Zhang
+- Yan Huang
+- Xudong Liu
+- Biao Li
+- Jintao Fang
+published: 2025-12
+publication: Advances in Neural Information Processing Systems 38 (NeurIPS 2025)
+publication_type: 査読付き国際会議論文
+publication_status: published
+doi: 10.52202/085713-2340
+source: https://papers.nips.cc/paper_files/paper/2025/file/64ad7b36b497f375ded2e6f15713ed4c-Paper-Conference.pdf
 sources:
-  - "https://papers.nips.cc/paper_files/paper/2025/file/64ad7b36b497f375ded2e6f15713ed4c-Paper-Conference.pdf"
-  - "https://papers.nips.cc/paper_files/paper/2025/hash/64ad7b36b497f375ded2e6f15713ed4c-Abstract-Conference.html"
-implementation: "LLaVA-1.5-7B、Open-LLaVA-NeXT-7B、Video-LLaVAに多層視覚特徴融合と共有クエリ圧縮を適用。学習はA100-80GB×8、推論遅延はA100-80GB×1で測定。著者の独立した公式実装URLは本文で確認できない。"
+- https://papers.nips.cc/paper_files/paper/2025/file/64ad7b36b497f375ded2e6f15713ed4c-Paper-Conference.pdf
+- https://papers.nips.cc/paper_files/paper/2025/hash/64ad7b36b497f375ded2e6f15713ed4c-Abstract-Conference.html
+implementation: LLaVA-1.5-7B、Open-LLaVA-NeXT-7B、Video-LLaVAに多層視覚特徴融合と共有クエリ圧縮を適用。学習はA100-80GB×8、推論遅延はA100-80GB×1で測定。著者の独立した公式実装URLは本文で確認できない。
 code: null
-last_checked: "2026-10-23"
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261023-2045-scheduled-chat-45/r01"
-worker_completed_at: "2026-10-23T20:59:00+09:00"
-reference_main_sha: "5e76453082f8ff0dc1ce7033d200c11e2f245353"
-repair_origin: "returned_research"
+last_checked: '2026-10-23'
+worker_id: scheduled-chat-45
+worker_run_key: 20261023-2045-scheduled-chat-45/r01
+worker_completed_at: '2026-10-23T20:59:00+09:00'
+reference_main_sha: 5e76453082f8ff0dc1ce7033d200c11e2f245353
+repair_origin: returned_research
 returned_research_repair: true
-returned_research_repair_of: ".survey/import-inbox/blocked/research/retry-research-d8b2e4014f8d--libfile_dfa57340d9f88191822f55c3bcca1075--2025-doi-10.52202-085713-2340-glance2gaze-visual-token-compression-research-20261023-1928-scheduled-chat-30-r01.md"
-returned_research_original_failure: "説明不足トリガー: 評価説明量 438 < 500"
+returned_research_repair_of: .survey/import-inbox/blocked/research/retry-research-d8b2e4014f8d--libfile_dfa57340d9f88191822f55c3bcca1075--2025-doi-10.52202-085713-2340-glance2gaze-visual-token-compression-research-20261023-1928-scheduled-chat-30-r01.md
+returned_research_original_failure: '説明不足トリガー: 評価説明量 438 < 500'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2312.11805
+  arxiv_id: '2312.11805'
+- canonical_id: arXiv:2409.12191
+  arxiv_id: '2409.12191'
+- canonical_id: arXiv:2304.10592
+  arxiv_id: '2304.10592'
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2412.15115
+  arxiv_id: '2412.15115'
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2303.15389
+  arxiv_id: '2303.15389'
+- canonical_id: arXiv:2309.15112
+  arxiv_id: '2309.15112'
+- canonical_id: arXiv:2210.09461
+  arxiv_id: '2210.09461'
+- canonical_id: arXiv:2403.06764
+- canonical_id: arXiv:2411.10803
+  arxiv_id: '2411.10803'
+- canonical_id: arXiv:2403.15388
+  arxiv_id: '2403.15388'
+- canonical_id: arXiv:2410.17247
+  arxiv_id: '2410.17247'
+- canonical_id: arXiv:2412.04467
+  arxiv_id: '2412.04467'
+- canonical_id: arXiv:2410.04417
+  arxiv_id: '2410.04417'
+- canonical_id: arXiv:2501.03895
+  arxiv_id: '2501.03895'
+- canonical_id: arXiv:2412.00876
+  arxiv_id: '2412.00876'
+- canonical_id: arXiv:2311.10122
+  arxiv_id: '2311.10122'
+- canonical_id: arXiv:2401.15947
+  arxiv_id: '2401.15947'
+- canonical_id: arXiv:2407.02392
+  arxiv_id: '2407.02392'
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2410.11829
+  arxiv_id: '2410.11829'
+- canonical_id: arXiv:2305.10355
+  arxiv_id: '2305.10355'
+- canonical_id: arXiv:2307.16125
+  arxiv_id: '2307.16125'
+- canonical_id: arXiv:2308.02490
+  arxiv_id: '2308.02490'
+- canonical_id: arXiv:2310.01852
+  arxiv_id: '2310.01852'
+- canonical_id: arXiv:2306.07207
+  arxiv_id: '2306.07207'
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 58
 ---
 
 # Glance2Gaze：多層の視覚情報を融合してから言語モデル深層で段階的に圧縮する

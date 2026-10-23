@@ -1,37 +1,50 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.findings-acl.1888"
-title: "QUARTZ: Quantile-Aware Routing and Queueing for TTFT SLOs in LLM Serving"
-summary: "QUARTZは大規模言語モデルのオンライン提供で初回トークン遅延の尾部が待ち行列により悪化する問題に対し、ルータが観測できる入力長・接頭辞再利用・作業者負荷から処理時間の条件付き分位点を予測し、作業者振分けと受け入れ順序を同時に最適化する。4基のRTX 6000上のSGLangで14Bモデルの混合負荷を測定し、P99初回トークン遅延を4547msから3216msへ、SLO違反率を26.4%から15.8%へ改善した。"
-list_summary: "条件付き分位点予測と公平性付き待ち行列で、LLMサービングの初回応答尾部遅延を削減するルータ方式。"
+canonical_id: DOI:10.18653/v1/2026.findings-acl.1888
+title: 'QUARTZ: Quantile-Aware Routing and Queueing for TTFT SLOs in LLM Serving'
+summary: QUARTZは大規模言語モデルのオンライン提供で初回トークン遅延の尾部が待ち行列により悪化する問題に対し、ルータが観測できる入力長・接頭辞再利用・作業者負荷から処理時間の条件付き分位点を予測し、作業者振分けと受け入れ順序を同時に最適化する。4基のRTX 6000上のSGLangで14Bモデルの混合負荷を測定し、P99初回トークン遅延を4547msから3216msへ、SLO違反率を26.4%から15.8%へ改善した。
+list_summary: 条件付き分位点予測と公平性付き待ち行列で、LLMサービングの初回応答尾部遅延を削減するルータ方式。
 authors:
-  - "Zhipeng Liu"
-  - "Yifan Zheng"
-  - "Fanqi Kong"
-  - "Ziming Zhao"
-published: "2026-07"
-publication: "Findings of ACL 2026, pp. 37886–37896"
-publication_type: "査読付き国際会議論文"
-publication_status: "published"
-doi: "10.18653/v1/2026.findings-acl.1888"
-source: "https://aclanthology.org/2026.findings-acl.1888.pdf"
+- Zhipeng Liu
+- Yifan Zheng
+- Fanqi Kong
+- Ziming Zhao
+published: 2026-07
+publication: Findings of ACL 2026, pp. 37886–37896
+publication_type: 査読付き国際会議論文
+publication_status: published
+doi: 10.18653/v1/2026.findings-acl.1888
+source: https://aclanthology.org/2026.findings-acl.1888.pdf
 sources:
-  - "https://aclanthology.org/2026.findings-acl.1888.pdf"
-  - "https://aclanthology.org/2026.findings-acl.1888/"
-implementation: "SGLangのルータ待ち行列と要求振分けを変更し、分位点予測、オンライン残差補正、要求別優先度の二分ヒープを実装。GPU側の実行エンジンは変更しない。独立した著者公式コードURLは原著で確認できない。"
+- https://aclanthology.org/2026.findings-acl.1888.pdf
+- https://aclanthology.org/2026.findings-acl.1888/
+implementation: SGLangのルータ待ち行列と要求振分けを変更し、分位点予測、オンライン残差補正、要求別優先度の二分ヒープを実装。GPU側の実行エンジンは変更しない。独立した著者公式コードURLは原著で確認できない。
 code: null
-last_checked: "2026-10-23"
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261023-2045-scheduled-chat-45/r01"
-worker_completed_at: "2026-10-23T20:56:00+09:00"
-reference_main_sha: "5e76453082f8ff0dc1ce7033d200c11e2f245353"
-repair_origin: "returned_research"
+last_checked: '2026-10-23'
+worker_id: scheduled-chat-45
+worker_run_key: 20261023-2045-scheduled-chat-45/r01
+worker_completed_at: '2026-10-23T20:56:00+09:00'
+reference_main_sha: 5e76453082f8ff0dc1ce7033d200c11e2f245353
+repair_origin: returned_research
 returned_research_repair: true
-returned_research_repair_of: ".survey/import-inbox/blocked/research/retry-research-38a76f408a2a--libfile_58e1e1b5b1388191bfda57ee39406a3e--2026-doi-10.18653-v1-2026.findings-acl.1888-quartz-quantile-aware-llm-serving-research-20261023-1928-scheduled-chat-30-r01.md"
-returned_research_original_failure: "説明不足トリガー: 評価説明量 284 < 500"
+returned_research_repair_of: .survey/import-inbox/blocked/research/retry-research-38a76f408a2a--libfile_58e1e1b5b1388191bfda57ee39406a3e--2026-doi-10.18653-v1-2026.findings-acl.1888-quartz-quantile-aware-llm-serving-research-20261023-1928-scheduled-chat-30-r01.md
+returned_research_original_failure: '説明不足トリガー: 評価説明量 284 < 500'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2407.00047
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2501.14312
+- canonical_id: arXiv:2408.15792
+- canonical_id: arXiv:2401.00588
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 2
 ---
 
 # QUARTZ：分位点に基づくルーティングと待ち行列で初回応答の尾部遅延を抑える
