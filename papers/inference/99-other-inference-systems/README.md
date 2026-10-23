@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（926本）
+## 自動生成の論文一覧（927本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1809,6 +1809,10 @@
 - **2026-02 · [CoMoL: Efficient Mixture of LoRA Experts via Dynamic Core Space Merging](2026-2603.00573-comol-efficient-mixture-of-lora-experts-via-dynamic-core-space-merging.md)**  
   実装：[✓](https://github.com/DCDmllm/CoMoL) ・ リポジトリ内被引用：0  
   本論文は、低ランク適応（LoRA）を複数の専門家へ拡張する際に、専門家の数に比例して増える学習パラメータと計算量を抑えつつ、トークン単位の細かな経路選択を維持するCoMoLを提案する。
+
+- **2026-02 · [CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill](2026-2602.16054-claa-cross-layer-attention-aggregation-for-accelerating-llm-prefill.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全トークンを全層で処理する代わりに、ある層で入力トークンを順位付けし、上位だけを残す方式が提案されている。Llama-3.1-8B-InstructのLongBenchでは、保持率10%で平均47.13点となり、全保持49.32点に近づく。
 
 - **2026-02 · [AttnPO: Attention-Guided Process Supervision for Efficient Reasoning](2026-2602.09953-attnpo-attention-guided-process-supervision-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

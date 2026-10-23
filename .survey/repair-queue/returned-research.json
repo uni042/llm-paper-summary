@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T18:53:32+00:00",
+  "generated_at": "2026-10-23T19:04:23+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 50,
+  "count": 49,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -435,33 +435,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0b80a199a539--libfile_de4f280439ac8191a0d73d3cd923bb80--2026-2602.20191-mobiquant-token-adaptive-any-precision-quantization-research-20261022-1932-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-0b80a199a539--libfile_de4f280439ac8191a0d73d3cd923bb80--2026-2602.20191-mobiquant-token-adaptive-any-precision-quantization-research-20261022-193.json",
       "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.16054",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T17:23:54+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5067,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1060,
-        "limitation_chars": 520,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0c03ecb3fb2b--libfile_77e1703fa5e48191ae141a1dcf1e7501--2026-2602.16054-claa-cross-layer-prefill-research-20261022-1626-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0c03ecb3fb2b--libfile_77e1703fa5e48191ae141a1dcf1e7501--2026-2602.16054-claa-cross-layer-prefill-research-20261022-1626-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2405.13019",
