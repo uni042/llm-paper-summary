@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T16:32:09+00:00",
+  "generated_at": "2026-10-23T16:41:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 50,
+  "count": 54,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -1395,6 +1395,118 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b88268e6c78881918b1c9294e1a104f7--2024-doi-10.1609-aaai.v38i17.29908-ptq-lorc-research-20261023-2228-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b88268e6c78881918b1c9294e1a104f7--2024-doi-10.1609-aaai.v38i17.29908-ptq-lorc-research-20261023-2228-scheduled-chat-30-r01.json",
       "worker_run_key": "20261023-2228-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.02591",
+      "title": "AuroraLong: Bringing RNNs Back to Efficient Open-Ended Video Understanding",
+      "source_url": "https://arxiv.org/pdf/2507.02591",
+      "returned_at": "2026-10-23T16:39:41+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5060,
+        "body_paragraphs": 26,
+        "method_chars": 1725,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 503,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_10c0064907288191ba654918d2416f2e--2025-2507.02591-auroralong-recurrent-video-llm-research-20261023-1733-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_10c0064907288191ba654918d2416f2e--2025-2507.02591-auroralong-recurrent-video-llm-research-20261023-1733-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28099",
+      "title": "Speculative Probing: LLM Monitoring at Speculative-Decoding Cost",
+      "source_url": "https://arxiv.org/pdf/2608.28099",
+      "returned_at": "2026-10-23T16:40:15+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 122 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5683,
+        "body_paragraphs": 33,
+        "method_chars": 1559,
+        "method_paragraphs": 10,
+        "evaluation_chars": 122,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 122 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2580ebe004d081918c647cacb7d8f790--2026-2608.28099-speculative-probing-mtp-monitoring-research-20261023-1733-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2580ebe004d081918c647cacb7d8f790--2026-2608.28099-speculative-probing-mtp-monitoring-research-20261023-1733-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3830418.3843867",
+      "title": "Janus: Multi-LLM Serving at Production Scale",
+      "source_url": "https://zirui.cool/assets/pdf/Janus_SOSP26.pdf",
+      "returned_at": "2026-10-23T16:40:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8504,
+        "body_paragraphs": 49,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2368,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-1500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-1500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261023-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.00019",
+      "title": "An Empirical Study on Prompt Compression for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2505.00019",
+      "returned_at": "2026-10-23T16:40:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5324,
+        "body_paragraphs": 27,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 358,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7789f669e2348191994dc00f90771fcc--2025-2505.00019-empirical-prompt-compression-evaluation-research-20261023-1733-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7789f669e2348191994dc00f90771fcc--2025-2505.00019-empirical-prompt-compression-evaluation-research-20261023-1733-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
     }
   ]
 }
