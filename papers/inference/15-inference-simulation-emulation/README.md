@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（45本）
+## 自動生成の論文一覧（46本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -113,6 +113,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-05 · [MoE-Hub: Taming Software Complexity for Seamless MoE Overlap with Hardware-Accelerated Communication on Multi-GPU Systems](2026-2605.05888-moe-hub-taming-software-complexity-for-seamless-moe-overlap-with-hardwar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案方式は、ルータが決めた論理宛先だけでトークン行を送信できるst.rowsp命令と、受信側で実際の格納行を割り当てるアドレス割当装置（Address Allocation Unit; AAU）を導入する。
+
+- **2026-05 · [GAPS: Global-Aware Prediction-driven Scheduling for Large-Scale LLM Inference](2026-334dba8993b3-gaps-global-aware-prediction-driven-scheduling-for-large-scale-llm-infer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GAPS（Global-Aware Prediction-driven Scheduling）は、複数GPUで大規模言語モデル（Large Language モデル; LLM）の推論要求を受け付けるとき、全インスタンスの負荷を監視し、要求の処理時間を予測して割当と再配置を決めるスケジューラである。
 
 - **2026-05 · [Dooly: Configuration-Agnostic, Redundancy-Aware Profiling for LLM Inference Simulation](2026-2605.07985-dooly-configuration-agnostic-redundancy-aware-profiling-for-llm-inferenc.md)**  
   実装：[✓](https://github.com/dooly-project) ・ リポジトリ内被引用：0  

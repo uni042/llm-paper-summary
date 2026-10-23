@@ -25,6 +25,8 @@ worker_run_key: "20261024-0230-scheduled-chat-30/r01"
 reference_main_sha: "2ba886d13245e4f2aa6129fb59f68c18e437c94c"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # GAPS：実行時間の予測誤差を補正してGPUクラスタの末尾遅延を抑える

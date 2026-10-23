@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "506cc0ec8c2ba87c6f4765db5e1100f51464329795babb155649adc839636e99",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0d9c7b1cb8c8191b606bb51547447d4--2025-2503.15369-efficientllava-section-normalized-returned-repair-20261024-0130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2503.15369",
+  "worker_completed_at": "2026-10-24T01:30:00+09:00",
+  "worker_run_key": "20261024-0130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7871,
+    "body_paragraphs": 43,
+    "method_chars": 2364,
+    "method_paragraphs": 14,
+    "evaluation_chars": 2781,
+    "limitation_chars": 753,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2503.15369-efficientllava-generalizable-auto-pruning-for-large-vision-language-mode.md と 25 段落 / 5283文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-23T18:12:05+00:00"
+}

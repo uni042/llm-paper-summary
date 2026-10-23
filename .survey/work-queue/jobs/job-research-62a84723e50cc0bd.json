@@ -35,10 +35,15 @@
   "selection_reason": "The official IFAAMAS AAMAS 2026 paper presents a global-aware LLM cluster scheduler combining online monitoring, bias-corrected prediction, request assignment, and selective migration. Its discrete-event simulation on code and conversational workloads reports reduced P99 latency and SLO violations, directly addressing large-scale LLM inference serving; the evidence is simulation-based, not production deployment.",
   "semantic_scholar_id": "5eb9d75e1053b27c587dc7f08a6888cd10797d6d",
   "source_url": "https://doi.org/10.65109/YPTR3460",
-  "status": "ready",
+  "status": "superseded",
   "title": "GAPS: Global-Aware Prediction-driven Scheduling for Large-Scale LLM Inference",
   "type": "research",
   "venue": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-23T18:13:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-334dba8993b3-gaps-global-aware-prediction-driven-scheduling-for-large-scale-llm-infer.md",
+  "represented_canonical_id": "DOI:10.65109/YPTR3460",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
