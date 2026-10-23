@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261023-1445-scheduled-chat-45/r01/research-prescreen-011",
+  "reference_main_sha": "8268f9266745b107c1a8c4843b9247bbaf6a62da",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18706",
+      "identity_tokens": [
+        "arxiv:2512.18706"
+      ],
+      "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System",
+      "reason": "一次要旨は音声対話システムを音声活動検出・音声認識・感情解析・LLM・音声合成などのモジュールに分離したカスケード構成で、1秒未満の応答遅延を達成すると報告する。モジュール化と終端間遅延最適化は推論システムと接点があるが、対象は音声対話パイプライン固有で、LLMデコード・GPU資源管理・一般的サービングの新機構は要旨からは確認できない。",
+      "source_url": "https://arxiv.org/abs/2512.18706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-23T14:48:13+09:00",
+      "last_checked_at": "2026-10-23T14:48:13+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 11
+    }
+  ]
+}
