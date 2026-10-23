@@ -1,37 +1,58 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.acl-long.353"
-title: "HCSpec: Two-Tier Horizontal Cascade Speculative Decoding for High-Efficiency Large Language Model Inference"
-summary: "HCSpecは投機的復号の草稿系列で前半ほど将来の連続受理への寄与が大きい点を利用し、初期位置に二層・二経路の高精度草稿器、後半に単層の軽量草稿器を配置する。Qwen2.5-7B、Llama3.1-8B、Qwen3-8B/14BをSGLangで測定し、EAGLE-3比で15～30%高い相対高速化率、通常の自己回帰復号比で最大3.72倍の端から端までの高速化を報告する。"
-list_summary: "投機的復号の前半位置では草稿精度、後半位置では草稿計算費用を優先する二段横方向カスケードを構築し、EAGLE-3より高い実測生成高速化率を示した。"
+canonical_id: DOI:10.18653/v1/2026.acl-long.353
+title: 'HCSpec: Two-Tier Horizontal Cascade Speculative Decoding for High-Efficiency Large Language Model Inference'
+summary: HCSpecは投機的復号の草稿系列で前半ほど将来の連続受理への寄与が大きい点を利用し、初期位置に二層・二経路の高精度草稿器、後半に単層の軽量草稿器を配置する。Qwen2.5-7B、Llama3.1-8B、Qwen3-8B/14BをSGLangで測定し、EAGLE-3比で15～30%高い相対高速化率、通常の自己回帰復号比で最大3.72倍の端から端までの高速化を報告する。
+list_summary: 投機的復号の前半位置では草稿精度、後半位置では草稿計算費用を優先する二段横方向カスケードを構築し、EAGLE-3より高い実測生成高速化率を示した。
 authors:
-  - "Yizhou Zhang"
-  - "Siming Chen"
-  - "Hao Ye"
-  - "Erhu Feng"
-published: "2026-07"
-publication: "Proceedings of ACL 2026, Volume 1: Long Papers, pp. 7773–7783"
-publication_type: "査読付き国際会議論文"
-publication_status: "published"
-doi: "10.18653/v1/2026.acl-long.353"
-source: "https://aclanthology.org/2026.acl-long.353.pdf"
+- Yizhou Zhang
+- Siming Chen
+- Hao Ye
+- Erhu Feng
+published: 2026-07
+publication: 'Proceedings of ACL 2026, Volume 1: Long Papers, pp. 7773–7783'
+publication_type: 査読付き国際会議論文
+publication_status: published
+doi: 10.18653/v1/2026.acl-long.353
+source: https://aclanthology.org/2026.acl-long.353.pdf
 sources:
-  - "https://aclanthology.org/2026.acl-long.353.pdf"
-  - "https://aclanthology.org/2026.acl-long.353/"
-implementation: "著者はSGLang v0.5.3.post1上で推論速度を測定し、草稿器を三段階で学習。論文ではコードを補足資料に同梱したと記載するが、独立した公式公開リポジトリURLは本文から確認できない。"
+- https://aclanthology.org/2026.acl-long.353.pdf
+- https://aclanthology.org/2026.acl-long.353/
+implementation: 著者はSGLang v0.5.3.post1上で推論速度を測定し、草稿器を三段階で学習。論文ではコードを補足資料に同梱したと記載するが、独立した公式公開リポジトリURLは本文から確認できない。
 code: null
-last_checked: "2026-10-23"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261023-2030-scheduled-chat-30/repair-r01"
-worker_completed_at: "2026-10-23T20:30:46+09:00"
-reference_main_sha: "235ac15a024c42cac3a4a2b95c0b164a3acfd45b"
+last_checked: '2026-10-23'
+worker_id: scheduled-chat-30
+worker_run_key: 20261023-2030-scheduled-chat-30/repair-r01
+worker_completed_at: '2026-10-23T20:30:46+09:00'
+reference_main_sha: 235ac15a024c42cac3a4a2b95c0b164a3acfd45b
 repair_origin: returned_research
 returned_research_repair: true
-returned_research_repair_of: ".survey/import-inbox/blocked/research/retry-research-f5db4ffb35fb--libfile_094ce721aae48191a260796fa5d6fe37--2026-doi-10.18653-v1-2026.acl-long.353-hcspec-horizontal-cascade-speculative-decoding-research-20261023-1928-scheduled-chat-30-r01.md"
-returned_research_original_failure: "説明不足トリガー: 評価説明量 0 < 500"
+returned_research_repair_of: .survey/import-inbox/blocked/research/retry-research-f5db4ffb35fb--libfile_094ce721aae48191a260796fa5d6fe37--2026-doi-10.18653-v1-2026.acl-long.353-hcspec-horizontal-cascade-speculative-decoding-research-20261023-1928-scheduled-chat-30-r01.md
+returned_research_original_failure: '説明不足トリガー: 評価説明量 0 < 500'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2402.05109
+  arxiv_id: '2402.05109'
+- canonical_id: arXiv:2505.01658
+- canonical_id: arXiv:2503.01840
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2405.00263
+- canonical_id: arXiv:2402.02057
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2402.12374
+- canonical_id: arXiv:2406.17276
+- canonical_id: arXiv:2408.15766
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2312.11462
+- canonical_id: arXiv:2403.10444
+references_checked_at: '2026-10-23'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # HCSpec：二段横方向カスケードによる投機的復号の効率化
