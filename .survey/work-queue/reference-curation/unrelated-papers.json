@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T15:07:13+00:00",
-  "record_count": 12449,
+  "updated_at": "2026-10-23T15:08:41+00:00",
+  "record_count": 12452,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179000,9 +179000,9 @@
         "DOI:10.48550/arxiv.2412.00081",
         "arXiv:2412.00081"
       ],
-      "reason": "CVPR 2025一次要旨では、複数タスクのモデル結合における干渉を特異値分解で解析し、タスクベクトルを圧縮して統合精度を高める。10%への圧縮はタスク差分表現が対象であり、LLM推論時の重み量子化、実行時メモリ・レイテンシ・スループットを最適化する手法ではないため対象外。",
+      "reason": "微調整済みモデルの重み差分を層別に特異値分解し、タスク干渉を抑えながらモデル統合・タスクベクトル圧縮を行う研究。要旨の主たる目的は学習後のモデル統合精度と重み表現の縮小であり、LLM実行時の重み量子化、サービング速度、メモリ階層、推論カーネルの性能改善は評価対象ではない。",
       "first_checked_at": "2026-10-20T11:55:37+00:00",
-      "last_checked_at": "2026-10-22T15:52:10+00:00",
+      "last_checked_at": "2026-10-23T15:08:41+00:00",
       "linked_from": [],
       "title": "Task Singular Vectors: Reducing Task Interference in Model Merging"
     },
@@ -179415,6 +179415,45 @@
       "last_checked_at": "2026-10-23T15:07:11+00:00",
       "linked_from": [],
       "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
+    },
+    "arXiv:2601.21964": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.21964",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.21964",
+        "arXiv:2601.21964"
+      ],
+      "reason": "SoftMol/SoftBDの対象は薬剤探索の分子構造・SMILES生成で、評価は化学的妥当性、結合親和性、多様性、分子生成の速度。ブロック拡散や言語モデルの用語は共通するが、汎用LLMの推論基盤・配信・メモリ階層の改善を直接評価する研究ではない。原著要旨を確認して除外。",
+      "first_checked_at": "2026-10-23T15:08:39+00:00",
+      "last_checked_at": "2026-10-23T15:08:39+00:00",
+      "linked_from": [],
+      "title": "From Tokens to Blocks: A Block-Diffusion Perspective on Molecular Generation"
+    },
+    "arXiv:2311.17049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.17049",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2311.17049",
+        "arXiv:2311.17049"
+      ],
+      "reason": "携帯端末向けCLIP画像・テキスト対照エンコーダを、強化データセットによる知識転移で高速・高精度化する研究。要旨に2.3倍の実行速度を含むが、評価タスクはゼロショット画像分類と画像テキスト検索であり、自己回帰LLMの生成、KVキャッシュ、LLMサービングの改善ではない。",
+      "first_checked_at": "2026-10-23T15:08:40+00:00",
+      "last_checked_at": "2026-10-23T15:08:40+00:00",
+      "linked_from": [],
+      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
+    },
+    "arXiv:2303.03982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.03982",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2303.03982",
+        "arXiv:2303.03982"
+      ],
+      "reason": "S4状態空間系列モデルの隠れ状態初期化・リセットを並列化し、部分観測環境の強化学習と連続制御メタ学習へ適用する研究。要旨に推論速度の比較はあるが、対象は強化学習エージェントの環境応答であり、LLM生成・LLMサービング・GPU推論基盤の実装改善ではない。",
+      "first_checked_at": "2026-10-23T15:08:41+00:00",
+      "last_checked_at": "2026-10-23T15:08:41+00:00",
+      "linked_from": [],
+      "title": "Structured State Space Models for In-Context Reinforcement Learning"
     }
   }
 }

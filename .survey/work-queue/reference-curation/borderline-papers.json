@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T15:07:13+00:00",
-  "record_count": 5340,
+  "updated_at": "2026-10-23T15:08:42+00:00",
+  "record_count": 5338,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -71055,9 +71055,9 @@
         "semanticscholar:5e364810740f92046868a4ddb7a1b30576439e4d",
         "url:https://arxiv.org/abs/2512.06688"
       ],
-      "reason": "利用者の暗黙的嗜好を学習・検索するエージェント記憶と個人化のベンチマークが主題。32K履歴を2K記憶へ縮約し入力トークンを16分の1にするため推論コストへの接点はあるが、主たる貢献は個人化精度と記憶学習であり、汎用LLM推論基盤の実測処理量・メモリ管理機構は要旨から確認できない。",
+      "reason": "主な寄与は暗黙の利用者嗜好を測るパーソナライズデータセット、強化微調整、および読みやすい利用者記憶を保つエージェント記憶の学習。要旨は2kトークンの記憶で32k会話履歴と比較して入力トークンを16分の1に減らすと報告するため、長文脈入力削減には関連する。しかしKVキャッシュ、推論ランタイム、サービングの遅延・処理量・メモリ階層の改善は主たる評価対象ではなく、現行のシステム技術調査への直接性が弱いため保留。",
       "first_checked_at": "2026-10-11T10:43:47+00:00",
-      "last_checked_at": "2026-10-21T15:27:52+00:00",
+      "last_checked_at": "2026-10-23T15:08:39+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "PersonaMem-v2: Towards Personalized Intelligence via Learning Implicit User Personas and Agentic Memory"
@@ -78725,11 +78725,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2605.06850",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.06850",
         "arXiv:2605.06850"
       ],
-      "reason": "対象はLLMの強化学習後訓練におけるロールアウトKVキャッシュ圧縮で、LLM推論時メモリと学習の両方に直接関連する。ただしarXivの2026-09-16付v2に著者による撤回が明示され、理由は実験結果に誤りが見つかったこと。2026-10-22現在の書誌では論文の性能数値を信頼してResearch収録できないため、撤回を理由に保留分類する。",
+      "reason": "提案するShadow Mask Distillationは、強化学習のrollout生成でKVキャッシュを間引いた際、学習器側でも同じ注意マスクを再現して方策不一致を抑え、密な経路から蒸留する方式。KV圧縮・rolloutのメモリ節約には直接接点がある一方、主たる最終適用先はRLHF/GRPOによる事後学習の安定化・性能であり、汎用LLMの本番推論サービングや独立したデコードカーネル最適化を主目的としない。学習単独の高速化は現在凍結範囲なので境界扱い。実験結果の独立検証は行っていない。",
       "first_checked_at": "2026-10-14T09:44:19+00:00",
-      "last_checked_at": "2026-10-22T14:47:07+00:00",
+      "last_checked_at": "2026-10-23T15:08:42+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "How to Compress KV Cache in RL Post-Training? Shadow Mask Distillation for Memory-Efficient Alignment"
@@ -81919,20 +81920,6 @@
       "borderline_recheck_count": 0,
       "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System"
     },
-    "arXiv:2303.03982": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2303.03982",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2303.03982",
-        "arXiv:2303.03982"
-      ],
-      "reason": "一次要旨はS4系の状態空間モデルを強化学習の系列処理へ拡張し、TransformerやRNNとの推論速度比較および部分観測環境での学習性能を示す。長系列モデルの計算効率との技術的接点はある一方、主たる対象はin-context強化学習の方策モデルであり、自己回帰LLMのサービング、KVキャッシュ、GPU実行基盤ではないため保留。",
-      "first_checked_at": "2026-10-21T15:27:47+00:00",
-      "last_checked_at": "2026-10-22T15:52:09+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Structured State Space Models for In-Context Reinforcement Learning"
-    },
     "arXiv:2104.10640": {
       "classification": "borderline",
       "canonical_id": "arXiv:2104.10640",
@@ -82088,20 +82075,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Dolphin-v2: Universal Document Parsing via Scalable Anchor Prompting"
-    },
-    "arXiv:2311.17049": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2311.17049",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2311.17049",
-        "arXiv:2311.17049"
-      ],
-      "reason": "CVPR 2024一次要旨はモバイル環境向けCLIP画像テキスト埋め込みモデルを設計し、モデルの推論速度・メモリと精度のトレードオフを検証する。低遅延推論モデルの設計としては関連するが、主対象はCLIPエンコーダの画像分類・検索と訓練データ強化であり、生成LLMの実行ランタイムやKVキャッシュは対象外なので境界扱い。",
-      "first_checked_at": "2026-10-22T15:52:10+00:00",
-      "last_checked_at": "2026-10-22T15:52:10+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "MobileCLIP: Fast Image-Text Models through Multi-Modal Reinforced Training"
     },
     "arXiv:2602.02459": {
       "classification": "borderline",
