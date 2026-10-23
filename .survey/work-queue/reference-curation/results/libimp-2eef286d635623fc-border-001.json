@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2eef286d635623fc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.10120",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.10120",
+    "identity_tokens": [
+      "arXiv:2601.10120"
+    ],
+    "reason": "一次要旨は複数LLMエージェント間の対話を逐次繰り返さず、一度の通信トポロジー生成で異種の相互作用を決める方式を提案し、トークン消費を46.41%削減しつつ平均タスク性能を1.50%改善したと報告する。生成トークン数と多エージェント遅延削減は推論費用と直接接点があるが、中心はエージェント協調方式で、LLMランタイム・GPUスケジューラ・KVキャッシュの一般的最適化ではない。",
+    "first_checked_at": "2026-10-18T03:52:46+00:00",
+    "last_checked_at": "2026-10-23T06:47:31+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "TopoDIM: One-shot Topology Generation of Diverse Interaction Modes for Multi-Agent Systems"
+  },
+  "processed_at": "2026-10-23T06:47:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2eef286d6356",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
