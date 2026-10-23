@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1700-scheduled-chat-00/r01/prescreen-031",
+  "reference_main_sha": "d1781364c073fddb460e92810096228795da36f2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.04977",
+      "identity_tokens": [
+        "arXiv:2204.04977"
+      ],
+      "title": "Regularization-based Pruning of Irrelevant Weights in Deep Neural Architectures",
+      "reason": "重み減衰を改良した正則化で不要重みを選択的に縮小し、反復的な枝刈りで疎なニューラルネットを得る汎用圧縮研究。画像分類と自然言語生成を評価しており、圧縮という共通技術はあるが、LLM専用量子化・推論カーネル・サービング・実機推論の効率改善を主張する一次要旨ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2204.04977",
+      "body_check": "abstract_screen_only; body_not_read; arXiv一次要旨で重み選択正則化、反復枝刈り、画像分類と自然言語生成での圧縮評価を確認。本文未読。",
+      "first_checked_at": "2026-10-23T17:02:37+09:00",
+      "last_checked_at": "2026-10-23T17:02:37+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 31
+    }
+  ]
+}
