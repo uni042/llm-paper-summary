@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-bb28a06e1b636255-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2607.29600",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2607.29600",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2607.29600",
+      "arXiv:2607.29600"
+    ],
+    "reason": "一次要旨では、ロボットの世界グラフ、最近の経路、失敗履歴を選択的に文脈へ戻し、LLMの追加呼出しなしで入力文脈を65%以上削減する。文脈予算管理という汎用的な接点はあるが、原著の設計・評価はロボットのナビゲーション成功率を中心とし、GPU推論カーネルや汎用サービングの改善を実証していない。",
+    "first_checked_at": "2026-10-20T13:06:15+00:00",
+    "last_checked_at": "2026-10-23T15:07:13+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation"
+  },
+  "processed_at": "2026-10-23T15:07:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-bb28a06e1b63",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

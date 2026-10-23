@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T14:51:41+00:00",
-  "record_count": 5338,
+  "updated_at": "2026-10-23T15:07:13+00:00",
+  "record_count": 5340,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -48942,11 +48942,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2604.24110",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.24110",
         "arXiv:2604.24110"
       ],
-      "reason": "Useful deployed latency/cost measurements, but no proposed inference optimization; retain for systems context.",
+      "reason": "一次要旨では、4エージェントの教育支援サービスITASでGemini 2.5 Flash/Vertex AIの3料金・処理量階層を、同時利用者最大50人・3000超の要求で測定する。遅延、同時実行、容量飽和と費用の実測はLLMサービング評価に近いが、対象は教育アプリの既存APIプラン選択であり、汎用サービングの新しいスケジューラやカーネル、キャッシュ制御を提案していない。直接的な基盤技術貢献が薄いため境界扱い。",
       "first_checked_at": "2026-10-06T14:21:58+00:00",
-      "last_checked_at": "2026-10-06T14:21:58+00:00",
+      "last_checked_at": "2026-10-23T15:07:09+00:00",
       "linked_from": [
         "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
         "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md",
@@ -71617,9 +71618,9 @@
       "identity_tokens": [
         "arXiv:2512.18706"
       ],
-      "reason": "一次要旨は音声認識・LLM・音声生成を分離した音声対話システムを提案し、ストリーミングと非同期連携により1秒未満の対話遅延を目指す。システム遅延最適化の接点はあるが、LLM単体の推論カーネル・KVキャッシュ・GPU配信性能を主題としないため境界扱いとする。",
+      "reason": "一次要旨は音声対話システムを音声活動検出・音声認識・感情解析・LLM・音声合成などのモジュールに分離したカスケード構成で、1秒未満の応答遅延を達成すると報告する。モジュール化と終端間遅延最適化は推論システムと接点があるが、対象は音声対話パイプライン固有で、LLMデコード・GPU資源管理・一般的サービングの新機構は要旨からは確認できない。",
       "first_checked_at": "2026-10-12T17:45:21+00:00",
-      "last_checked_at": "2026-10-22T14:50:44+00:00",
+      "last_checked_at": "2026-10-23T15:07:12+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "X-Talk: On the Underestimated Potential of Modular Speech-to-Speech Dialogue System"
@@ -81233,9 +81234,9 @@
       "identity_tokens": [
         "arXiv:2601.10011"
       ],
-      "reason": "一次要旨は自然言語からSQLを生成する応用において、構造化した質問分解と過去の誤り修正事例の検索で推論時の自己修正を行う。BIRDで実行正答率68.5%、従来の推論時拡張方式より10倍超の資源削減を報告するが、削減対象はNL2SQLの候補生成・反復推論であり、LLMサービング一般のスケジューラやKVキャッシュの改良ではない。推論計算予算の配分という接点があるため境界判定。",
+      "reason": "一次要旨は自然言語からSQLを生成する際、質問の構造的分解と過去の誤り修正事例を検索して推論時に自己訂正する方式を提案する。BIRDで実行正解率68.5%を示し、従来の推論時スケーリング手法より10倍以上少ない資源を使うという効率面の接点はあるが、改善はSQL生成の推論戦略・タスク精度が中心で、汎用LLMランタイムやKVメモリの最適化ではない。",
       "first_checked_at": "2026-10-18T01:47:11+00:00",
-      "last_checked_at": "2026-10-20T14:46:06+00:00",
+      "last_checked_at": "2026-10-23T15:07:09+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Memo-SQL: Structured Decomposition and Experience-Driven Self-Correction for Training-Free NL2SQL"
@@ -81582,9 +81583,9 @@
         "DOI:10.48550/arxiv.2609.16503",
         "arXiv:2609.16503"
       ],
-      "reason": "一次要旨ではロボット向け視覚・言語・行動モデルの密なFFNをMoEへ変換し、微調整中のルータ利用統計から専門家保持マスクを更新するAdaDEを提案する。LLM側パラメータの40%を無効化してLIBERO/RobotWin2.0のタスク成功率を報告するため、推論時のモデル縮小と関連する。ただし主眼はロボット方策の適応学習と成功率維持で、一般的なLLM推論サービングの実測高速化は一次要旨から確認できず、対象境界として保留する。",
+      "reason": "一次要旨はロボット向け視覚言語行動（VLA）モデルの密結合FFNをMoEへ変換し、ルータ統計に応じて専門家を動的に無効化するAdaDEを提案。LLM部分の40%のパラメータを無効化してもLIBEROで95.1%の成功率を維持するため圧縮手法として接点はあるが、評価の最終指標はロボット操作成功率であり、汎用生成LLM推論基盤での性能改善は要旨から確認できない。",
       "first_checked_at": "2026-10-18T20:47:11+00:00",
-      "last_checked_at": "2026-10-18T20:47:11+00:00",
+      "last_checked_at": "2026-10-23T15:07:11+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Dense to MoE Adaptation for Compact Vision Language Action Policies"
@@ -81649,9 +81650,9 @@
         "DOI:10.48550/arxiv.2608.04515",
         "arXiv:2608.04515"
       ],
-      "reason": "一次要旨では医療用3次元画像の隣接スライス間重複を利用し、視覚トークンを約80%削減して医療VQAの性能を保つ訓練不要のCARVEを提案する。LLM投入前のトークン圧縮と計算量削減は対象に近い一方、深さ方向の解剖学的画像冗長性と医療用スライスVLMに特化し、一般のテキストLLM推論基盤への適用は評価されていないため境界的。",
+      "reason": "一次要旨はCT/MRIの断層間で重複する視覚トークンを、深さ方向の窓と代表断層のアンカーへ再配分する学習不要の圧縮方式。視覚トークンを約80%削減して医療画像の報告生成・質問応答品質を維持するためMLLM推論効率と直接接点がある。一方、機構と評価が3D医療ボリュームに特化し、一般画像・動画・文章LLMのサービングへの汎用性は要旨段階では未確定。",
       "first_checked_at": "2026-10-19T08:44:11+00:00",
-      "last_checked_at": "2026-10-19T08:44:11+00:00",
+      "last_checked_at": "2026-10-23T15:07:12+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding"
@@ -81817,11 +81818,12 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2607.29600",
       "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.29600",
         "arXiv:2607.29600"
       ],
-      "reason": "一次要旨ではロボットの視覚言語ナビゲーションで、直近経路を保持し過去履歴を関連性・新しさ・顕著性で検索する階層メモリにより文脈長を65%以上削減する。推論トークン量には影響するが、主な貢献と評価はロボット航法で、一般的なLLMサービングやKV管理基盤の改善ではない。",
+      "reason": "一次要旨では、ロボットの世界グラフ、最近の経路、失敗履歴を選択的に文脈へ戻し、LLMの追加呼出しなしで入力文脈を65%以上削減する。文脈予算管理という汎用的な接点はあるが、原著の設計・評価はロボットのナビゲーション成功率を中心とし、GPU推論カーネルや汎用サービングの改善を実証していない。",
       "first_checked_at": "2026-10-20T13:06:15+00:00",
-      "last_checked_at": "2026-10-20T13:06:15+00:00",
+      "last_checked_at": "2026-10-23T15:07:13+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "HAM-VLN: Harnessing Hierarchical Agentic Memory for Zero-Shot Vision-and-Language Navigation"
@@ -81877,19 +81879,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Co-LMLM: Continuous-Query Limited Memory Language Models"
-    },
-    "arXiv:2606.15869": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2606.15869",
-      "identity_tokens": [
-        "arXiv:2606.15869"
-      ],
-      "reason": "一次要旨では動画生成専門部と行動予測専門部を分離した混合Transformerと非対称注意マスクを用い、学習時に協調させつつ推論時は明示的な未来動画生成を省略して計算費用を減らす。推論経路短縮は技術的に関連するが、最終対象と評価は自動運転・都市ナビゲーションであり、汎用LLMのトークン生成・サービング基盤には直接適用していない。",
-      "first_checked_at": "2026-10-20T22:49:09+00:00",
-      "last_checked_at": "2026-10-21T15:27:52+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
     },
     "arXiv:2602.05827": {
       "classification": "borderline",
@@ -82049,9 +82038,9 @@
         "DOI:10.48550/arxiv.2512.08186",
         "arXiv:2512.08186"
       ],
-      "reason": "DualVLNは7BのVLMによる低頻度の全体計画と軽量拡散ポリシーによる高速制御を分け、非同期推論で頻繁なVLM呼び出しによる遅延を抑える。推論頻度を設計する接点はあるが、主目的はロボット視覚言語ナビゲーションで、汎用LLM servingや実行基盤の最適化ではないため微妙とする。",
+      "reason": "一次要旨は、視覚言語モデルを用いた大域的な経由点推論と軽量な拡散Transformerによる局所軌道生成を分離するDualVLNを提案し、ロボットの動的障害物回避と実時間ナビゲーションを評価する。重いVLMを低頻度の計画へ分離する設計は推論遅延削減と接点があるが、LLMサービング、GPUスケジューリング、KVキャッシュ等の汎用推論基盤を直接最適化する研究ではないため保留。",
       "first_checked_at": "2026-10-22T15:36:20+00:00",
-      "last_checked_at": "2026-10-22T17:25:21+00:00",
+      "last_checked_at": "2026-10-23T15:07:10+00:00",
       "linked_from": [
         ".survey/work-queue/WORKLIST-45.md"
       ],
@@ -82770,6 +82759,47 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "KV-RM: Regularizing KV-Cache Movement for Static-Graph LLM Serving"
+    },
+    "DOI:10.1007/s11432-026-5028-5": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/s11432-026-5028-5",
+      "identity_tokens": [
+        "DOI:10.1007/s11432-026-5028-5"
+      ],
+      "reason": "出版社の一次要旨では、トランジスタからデータセンターまでの時間定数τを共通最適化指標とする半導体・システム設計の展望を提案し、LogicFoldingやUnified Bus、光I/Oを扱う。AIシステムのメモリ・通信階層に間接的な関連はあるが、LLM推論向けの具体的なサービング手法、KV管理、MoE配置や推論実行の比較実験を主題としない。汎用計算基盤との境界案件。",
+      "first_checked_at": "2026-10-23T15:07:09+00:00",
+      "last_checked_at": "2026-10-23T15:07:09+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A time scaling theory for multi-layer electronic systems"
+    },
+    "arXiv:2602.19281": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.19281",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.19281",
+        "arXiv:2602.19281"
+      ],
+      "reason": "一次要旨では、推論時の思考予算を増やすと性能が低下し得る現象を理論化し、エントロピー駆動の二重制御器Haloで長期推論の計画長を適応的に調整する。テスト時の計算予算制御は推論効率に接するが、評価の中心は長期タスクの推論品質と計画制御で、サービング処理量、GPUメモリ、カーネル実装など基盤側の具体的性能改善は要旨から確認できない。収録境界として保留。",
+      "first_checked_at": "2026-10-23T15:07:11+00:00",
+      "last_checked_at": "2026-10-23T15:07:11+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Limited Reasoning Space: The cage of long-horizon reasoning in LLMs"
+    },
+    "arXiv:2602.02050": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02050",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.02050",
+        "arXiv:2602.02050"
+      ],
+      "reason": "一次要旨では、ツール呼出し前後のエントロピー低下を報酬信号としてエージェントの方策を強化学習し、疎な結果報酬でツール呼出し回数を削減する。ツール呼出し回数72.07%削減は推論運用コストに間接的に関係するが、提案の中心はエージェントの行動学習と回答品質であり、GPU推論ランタイム、サービングのスケジューリング、KVキャッシュや通信基盤を最適化する技術ではない。関連境界として保留。",
+      "first_checked_at": "2026-10-23T15:07:13+00:00",
+      "last_checked_at": "2026-10-23T15:07:13+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
     }
   }
 }

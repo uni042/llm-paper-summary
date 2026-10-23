@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T14:51:41+00:00",
-  "record_count": 12450,
+  "updated_at": "2026-10-23T15:07:13+00:00",
+  "record_count": 12449,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -178685,9 +178685,9 @@
         "DOI:10.48550/arxiv.2512.00041",
         "arXiv:2512.00041"
       ],
-      "reason": "行動系列に条件づけた将来視点画像を潜在拡散モデルで予測し、価値マップへ変換して屋内ロボットの経路計画を補助する研究。疎復号や蒸留サンプラで単一GPU実行を可能にするが、主要評価はMP3D・RoboTHORのナビゲーション性能であり、LLMテキスト生成の推論サービングとは異なる。",
+      "reason": "一次要旨では、室内ナビゲーションの未来視点を拡散型動画予測器で生成し、行動候補の価値地図へ統合する。VAE潜在空間と疎復号で単一GPU実行を可能にするが、主要な研究対象はロボット行動計画とナビゲーション性能であり、LLM推論・学習基盤の共通システム最適化を扱わない。",
       "first_checked_at": "2026-10-17T05:04:56+00:00",
-      "last_checked_at": "2026-10-22T23:53:31+00:00",
+      "last_checked_at": "2026-10-23T15:07:10+00:00",
       "linked_from": [],
       "title": "VISTAv2: World Imagination for Indoor Vision-and-Language Navigation"
     },
@@ -178818,9 +178818,9 @@
         "DOI:10.48550/arxiv.2609.24456",
         "arXiv:2609.24456"
       ],
-      "reason": "一次要旨が最適化対象を分散強化学習の経験バッファ経路と明記する。経験データの取り込み・CPU/GPU階層への配置・学習器への配送を独立したデータ面（EDP）として制御し、RLlib学習反復の経験処理待ち時間と反復時間を削減する。最大1,024 GPUの実験も学習収束を評価し、LLMの推論・デコード・サービングを最終適用先としないため、学習専用システムとして対象外。",
+      "reason": "一次要旨で、経験バッファの取り込み・配置・配送を独立データ面にし、RLlibの分散強化学習を1,024 GPUまで拡張、学習反復時間を最大38%削減する。CPU/GPU階層メモリを使うが、最終用途は強化学習の経験処理と学習反復であり、LLM推論・生成・サービングへの適用は実証されていない。現行の学習単独最適化凍結対象。",
       "first_checked_at": "2026-10-18T10:51:29+00:00",
-      "last_checked_at": "2026-10-19T11:26:31+00:00",
+      "last_checked_at": "2026-10-23T15:07:12+00:00",
       "linked_from": [],
       "title": "Conduit: An Experience Data Plane for Distributed Reinforcement Learning"
     },
@@ -178956,18 +178956,6 @@
       "last_checked_at": "2026-10-19T21:45:41+00:00",
       "linked_from": [],
       "title": "Predictive Exit: Prediction of Fine-Grained Early Exits for Computation- and Energy-Efficient Inference"
-    },
-    "DOI:10.1007/s11432-026-5028-5": {
-      "classification": "unrelated",
-      "canonical_id": "DOI:10.1007/s11432-026-5028-5",
-      "identity_tokens": [
-        "DOI:10.1007/s11432-026-5028-5"
-      ],
-      "reason": "題名は多層電子システムの時間スケーリング理論であり、LLM・GPU推論サービング・KVキャッシュ・MoE・モデル圧縮・推論用カーネルを対象とする論文ではないことが明白。",
-      "first_checked_at": "2026-10-20T07:54:59+00:00",
-      "last_checked_at": "2026-10-20T07:54:59+00:00",
-      "linked_from": [],
-      "title": "A time scaling theory for multi-layer electronic systems"
     },
     "arXiv:2605.27995": {
       "classification": "unrelated",
@@ -179150,18 +179138,6 @@
       "linked_from": [],
       "title": "GA-VLN: Geometry-Aware BEV Representation for Efficient Vision-Language Navigation"
     },
-    "arXiv:2602.19281": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.19281",
-      "identity_tokens": [
-        "arXiv:2602.19281"
-      ],
-      "reason": "題名は大規模言語モデルの長期推論における思考空間の制約を分析する研究である。推論の能力・探索空間の問題であり、推論基盤の計算・通信・メモリ管理やサービングの実装最適化を示していないため対象外。",
-      "first_checked_at": "2026-10-21T08:53:32+00:00",
-      "last_checked_at": "2026-10-21T08:53:32+00:00",
-      "linked_from": [],
-      "title": "Limited Reasoning Space: The cage of long-horizon reasoning in LLMs"
-    },
     "arXiv:2604.00292": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2604.00292",
@@ -179173,18 +179149,6 @@
       "last_checked_at": "2026-10-21T15:27:53+00:00",
       "linked_from": [],
       "title": "MambaVoiceCloning: Efficient and Expressive Text-to-Speech via State-Space Modeling and Diffusion Control"
-    },
-    "arXiv:2602.02050": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2602.02050",
-      "identity_tokens": [
-        "arXiv:2602.02050"
-      ],
-      "reason": "題名が扱うのはLLMエージェントのツール使用行動をエントロピーに基づき最適化するモデルの振る舞いである。推論サービングの計算資源配置、カーネル、キャッシュや並列化の実装技術を示しておらず、行動品質・最適化の研究であるため対象外。",
-      "first_checked_at": "2026-10-21T15:27:53+00:00",
-      "last_checked_at": "2026-10-21T15:27:53+00:00",
-      "linked_from": [],
-      "title": "Rethinking the Role of Entropy in Optimizing Tool-Use Behaviors for Large Language Model Agents"
     },
     "arXiv:2606.03503": {
       "classification": "unrelated",
@@ -179426,6 +179390,31 @@
       "last_checked_at": "2026-10-23T14:51:41+00:00",
       "linked_from": [],
       "title": "Adaptation-Preserving Structured Pruning for Efficient Transfer Learning in Deep Neural Networks"
+    },
+    "DOI:10.1016/j.ipm.2025.104449": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.ipm.2025.104449",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2025.104449"
+      ],
+      "reason": "会話履歴を利用して検索拡張生成の回答内容を改善する応用研究。検索・回答の質を高める主題であり、推論実行のメモリ階層、GPUカーネル、サービング遅延の改善を扱う研究ではない。",
+      "first_checked_at": "2026-10-23T15:07:10+00:00",
+      "last_checked_at": "2026-10-23T15:07:10+00:00",
+      "linked_from": [],
+      "title": "Leveraging historical information to boost retrieval-augmented generation in conversations"
+    },
+    "arXiv:2606.15869": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.15869",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2606.15869",
+        "arXiv:2606.15869"
+      ],
+      "reason": "動画生成用と行動予測用のTransformerを分け、推論時の動画生成を省略して自動運転・都市歩行の計画を高速化する世界行動モデル。要旨の速度改善は車両・ロボットの行動予測パイプライン内であり、自己回帰LLMの言語生成、MoEサービング、KVキャッシュや推論カーネルの最適化を目的としない。",
+      "first_checked_at": "2026-10-23T15:07:11+00:00",
+      "last_checked_at": "2026-10-23T15:07:11+00:00",
+      "linked_from": [],
+      "title": "Metis: A Generalizable and Efficient World-Action Model for Autonomous Driving and Urban Navigation"
     }
   }
 }
