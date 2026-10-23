@@ -26,6 +26,8 @@ worker_completed_at: "2026-10-23T19:31:48+09:00"
 reference_main_sha: "7e41d46caefdef58d5830edbb35f0e732de51e26"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # HCSpec：二段横方向カスケードによる投機的復号の効率化

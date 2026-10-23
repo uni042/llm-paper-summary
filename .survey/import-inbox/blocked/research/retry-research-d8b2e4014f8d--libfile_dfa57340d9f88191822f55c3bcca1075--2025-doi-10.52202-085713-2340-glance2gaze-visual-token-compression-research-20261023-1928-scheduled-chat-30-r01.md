@@ -30,6 +30,8 @@ worker_completed_at: "2026-10-23T19:33:46+09:00"
 reference_main_sha: "7e41d46caefdef58d5830edbb35f0e732de51e26"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Glance2Gaze：多層視覚情報の融合と段階的視覚トークン圧縮
