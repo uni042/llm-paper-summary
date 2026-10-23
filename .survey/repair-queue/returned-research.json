@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T15:00:45+00:00",
+  "generated_at": "2026-10-23T15:18:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -131,35 +131,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-schedu.json",
       "worker_run_key": "20261020-1655-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2412.12706",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-20T14:27:39+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6403,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 592,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_38ff9371f1688191a601ff77e19ff400--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261020-0204-scheduled-chat-00-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_38ff9371f1688191a601ff77e19ff400--2024-2412.12706-quantized-pruning-token-precision-tradeoff-research-20261020-0204-scheduled-chat-00-r01-v2.json",
-      "worker_run_key": "20261020-0204-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2605.24330",
@@ -1168,6 +1139,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-25661f688107--libfile_bd133ca803d081919bfc3269c644f06f--2025-2502.17605-picaso-permutation-invariant-ssm-context-composition-research-20261023-1234-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-25661f688107--libfile_bd133ca803d081919bfc3269c644f06f--2025-2502.17605-picaso-permutation-invariant-ssm-context-composition-research-20261023-12.json",
       "worker_run_key": "20261023-1234-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.12706",
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "source_url": "https://arxiv.org/pdf/2412.12706",
+      "returned_at": "2026-10-23T15:18:26+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7090,
+        "body_paragraphs": 35,
+        "method_chars": 1379,
+        "method_paragraphs": 7,
+        "evaluation_chars": 0,
+        "limitation_chars": 794,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ff6fee9f803881918475fdac981a89bb--2024-2412.12706-more-tokens-lower-precision-under16kb-reaudit-20261023-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ff6fee9f803881918475fdac981a89bb--2024-2412.12706-more-tokens-lower-precision-under16kb-reaudit-20261023-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
     }
   ]
 }
