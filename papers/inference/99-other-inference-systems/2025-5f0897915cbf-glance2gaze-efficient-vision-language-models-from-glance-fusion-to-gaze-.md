@@ -34,6 +34,8 @@ returned_research_repair_of: ".survey/import-inbox/blocked/research/retry-resear
 returned_research_original_failure: "説明不足トリガー: 評価説明量 438 < 500"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Glance2Gaze：多層の視覚情報を融合してから言語モデル深層で段階的に圧縮する

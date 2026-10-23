@@ -30,6 +30,8 @@ returned_research_repair_of: ".survey/import-inbox/blocked/research/retry-resear
 returned_research_original_failure: "説明不足トリガー: 評価説明量 284 < 500"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # QUARTZ：分位点に基づくルーティングと待ち行列で初回応答の尾部遅延を抑える

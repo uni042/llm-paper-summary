@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（935本）
+## 自動生成の論文一覧（937本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1126,6 +1126,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   対象側の過去注意とドラフト側の先読み注意を融合し、少数の意味検索ヘッドだけで検証用KVを選ぶことで、長文投機的デコードのKV読込を削減する。
 
+- **2026-06 · [Diffusion Language Model Parallel Decoding via Product-of-Experts Bridge](2026-2606.08048-diffusion-language-model-parallel-decoding-via-product-of-experts-bridge.md)**  
+  実装：[✓](https://github.com/juntongshi48/poe-bridge) ・ リポジトリ内被引用：0  
+  PoE-Bridgeは、拡散言語モデル（Diffusion Language モデル、DLM）の複数トークン並列生成と、自己回帰モデル（Autoregressive モデル、AR）の高い文章品質を両立させるための復号方式である。
+
 - **2026-06 · [Communication-Efficient Verifiable Attention for LLM Inference](2026-2606.16352-communication-efficient-verifiable-attention-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   VeriAttn（通信-efficient TEE-GPU 注意機構）は、注意の線形演算と非線形の指数関数をともにGPUで計算させ、TEEには結果の検証と最終的な正規化を担当させる。Intel TDX、16仮想CPU、128 GBホストメモリ、NVIDIA H20 96 GBの環境で、4種類の3B～14Bモデルを評価した。
@@ -1957,6 +1961,10 @@
 - **2025-12 · [Interleaved Latent Visual Reasoning with Selective Perceptual Modeling](2025-2512.05665-interleaved-latent-visual-reasoning-with-selective-perceptual-modeling.md)**  
   実装：[✓](https://github.com/XD111ds/ILVR) ・ リポジトリ内被引用：0  
   既存の方法には、画像を切り出す外部道具を繰り返し呼ぶもの、中間画像を新たに生成するもの、画像の特徴を短い潜在ベクトルへ圧縮するものがある。Qwen2.5-VL-7Bでの原著評価では、COMTの平均正答率60.8%、VSPの正答率81.5%を達成し、静的潜在方式Mirageの56.0%・76.0%を上回った。
+
+- **2025-12 · [Glance2Gaze: Efficient Vision-Language Models from Glance Fusion to Gaze Compression](2025-5f0897915cbf-glance2gaze-efficient-vision-language-models-from-glance-fusion-to-gaze-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  高解像度画像や動画では視覚トークン数が大きくなり、言語モデルの注意計算、鍵・値キャッシュ（KV キャッシュ）、初回トークン生成までの遅延が増加する。Glance2Gazeは、最初に画像全体を眺めて必要な細部へ視線を絞るという着想を二つの計算機構へ具体化する。
 
 - **2025-12 · [Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees](2025-2512.21857-fast-inference-of-visual-autoregressive-model-with-adjacency-adaptive-dy.md)**  
   実装：[✓](https://github.com/Haodong-Lei-Ray/ADT-Tree) ・ リポジトリ内被引用：0  

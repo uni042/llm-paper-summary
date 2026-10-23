@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（431本）
+## 自動生成の論文一覧（432本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -705,6 +705,10 @@
 - **2026-07 · [SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving](2026-2607.23933-specbox-speculative-sandbox-scheduling-agent-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SpecBoxはLLM生成中に将来のツール利用を推測して隔離実行環境を投機起動し、依存グラフ先読み・結果キャッシュ・共有メモリ転送を組み合わせてエージェントサービングの初回起動遅延と常時予約メモリを両立改善する。
+
+- **2026-07 · [QUARTZ: Quantile-Aware Routing and Queueing for TTFT SLOs in LLM Serving](2026-925996defd10-quartz-quantile-aware-routing-and-queueing-for-ttft-slos-in-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）のオンライン推論では、初回トークン時間（Time To First Token; TTFT）が対話の応答性を左右する。平均遅延が小さくても、長い検索拡張生成（Retrieval-Augmented Generation; RAG）の要求が先頭に並ぶと、短い対話要求まで待たされ、99パーセンタイル（P99）の遅延が悪化する。
 
 - **2026-07 · [PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation](2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
