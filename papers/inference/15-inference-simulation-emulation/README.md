@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（47本）
+## 自動生成の論文一覧（48本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -145,6 +145,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-01 · [Mugi: Value Level Parallelism For Efficient LLMs](2026-2601.10823-mugi-value-level-parallelism-for-efficient-llms.md)**  
   実装：[✓](https://zenodo.org/records/18063514) ・ リポジトリ内被引用：0  
   Mugiは、値レベル並列性（Value Level Parallelism; VLP）という、数値が一致する複数の演算に対して中間結果を共有するハードウェア方式を、LLMの推論へ適用した研究である。
+
+- **2025-12 · [SQ-format: A Unified Sparse-Quantized Hardware-friendly Data Format for LLMs](2025-2512.05409-sq-format-a-unified-sparse-quantized-hardware-friendly-data-format-for-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  非構造的な任意位置の疎性より、ハードウェアが扱う要素数を予測しやすく、低精度の密な経路と高精度の疎な経路を組み合わせやすい。Llama-3-70Bの入力処理（プリフィル）では、W4A8基準の10分8秒に対し、静的活性SQ方式の疎性0.875で5分55秒となり、1.71倍の高速化を報告する。
 
 - **2025-12 · [DCO: Dynamic Cache Orchestration for LLM Accelerators through Predictive Management](2025-2512.07312-dco-dynamic-cache-orchestration-for-llm-accelerators-through-predictive-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

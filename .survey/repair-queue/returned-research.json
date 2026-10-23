@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T20:55:58+00:00",
+  "generated_at": "2026-10-23T21:10:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 46,
+  "count": 47,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -1275,6 +1275,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f011b6f21630--libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-1500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f011b6f21630--libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-150.json",
       "worker_run_key": "20261023-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3731569.3764834",
+      "title": "PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications",
+      "source_url": "https://arxiv.org/pdf/2505.07203",
+      "returned_at": "2026-10-23T21:07:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 446 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9330,
+        "body_paragraphs": 48,
+        "method_chars": 2751,
+        "method_paragraphs": 12,
+        "evaluation_chars": 446,
+        "limitation_chars": 944,
+        "insufficiency_flags": [
+          "評価説明量 446 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b006904f30081918606ad21ad63cf54--2025-doi-10.1145-3731569.3764834-prefillonly-single-token-serving-research-20261024-0502-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7b006904f30081918606ad21ad63cf54--2025-doi-10.1145-3731569.3764834-prefillonly-single-token-serving-research-20261024-0502-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261024-0502-scheduled-chat-00/r01"
     }
   ]
 }

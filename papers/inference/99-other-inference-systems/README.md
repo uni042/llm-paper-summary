@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（928本）
+## 自動生成の論文一覧（930本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1353,6 +1353,10 @@
 - **2026-05 · [Hierarchical Mixture-of-Experts with Two-Stage Optimization](2026-2605.08292-hierarchical-mixture-of-experts-with-two-stage-optimization.md)**  
   実装：[✓](https://github.com/brain-lab-research/Hi-MoE) ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture-of-Experts、MoE）は、多数の専門家ネットワークを用意し、各トークンで少数だけ実行することで総パラメータ数と実行計算量を分離する。パープレキシティ（perplexity、PPL）は11検証領域の10領域で改善するが、下流課題の一部では悪化し、実測の生成トークン毎秒が40%改善したという意味ではない。
+
+- **2026-05 · [GRIP-VLM: Group-Relative Importance Pruning for Efficient Vision-Language Models](2026-2605.13375-grip-vlm-group-relative-importance-pruning-for-efficient-vision-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GRIP-VLM（Group-Relative Importance Pruning for Efficient Vision-Language Models）は、視覚言語モデル（VLM）へ渡す大量の画像トークンを、入力ごと・層ごと・保持予算ごとに選び直す手法である。
 
 - **2026-05 · [GQLA: Group-Query Latent Attention for Hardware-Adaptive Large Language Model Decoding](2026-2605.15250-gqla-group-query-latent-attention-for-hardware-adaptive-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3145,6 +3149,10 @@
 - **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実験は画像分類用の視覚Transformer（ViT）であり、LLMのKVキャッシュ圧縮やGPU推論時間の改善を直接実証したものではない。
+
+- **2024-10 · [Approximately Aligned Decoding](2024-2410.01103-approximately-aligned-decoding.md)**  
+  実装：[✓](https://github.com/amazon-science/Approximately-Aligned-Decoding) ・ リポジトリ内被引用：0  
+  Approximately Aligned Decoding（AprAD）は、大規模言語モデルの生成途中で禁止文字、構文違反、存在しないAPIの呼び出しなどを検出したとき、生成済み接頭辞をどこまで残して再開するかを投機的サンプリング（投機的 sampling）の受理・棄却計算で決める方式である。
 
 - **2024-09 · [DisDP: Disaggregating Compute, Network, and Storage for Model-Sharded Data-Parallel Training](2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
