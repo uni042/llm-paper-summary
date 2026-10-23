@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261023-1700-scheduled-chat-00/r01/prescreen-013",
+  "reference_main_sha": "d1781364c073fddb460e92810096228795da36f2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12603",
+      "identity_tokens": [
+        "arXiv:2510.12603"
+      ],
+      "title": "Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space",
+      "reason": "IVT-LRは視覚特徴と前段の隠れ状態を潜在推論ステップへ交互に渡し、明示的な中間推論文を生成しないことで推論を短縮する。M3CoT・ScienceQAで精度向上と5倍超の速度向上を報告するが、主要寄与はマルチモーダル推論モデルと段階的訓練であり、汎用LLMサービングやKV管理のシステム方式ではない。速度面の直接接点があるため無関係とは断定せず境界扱い。",
+      "source_url": "https://arxiv.org/abs/2510.12603",
+      "body_check": "abstract_screen_only; body_not_read; arXiv一次要旨で潜在視覚・テキスト推論、段階的訓練、M3CoT・ScienceQA評価、速度向上の記載を確認。本文未読。",
+      "first_checked_at": "2026-10-23T17:02:37+09:00",
+      "last_checked_at": "2026-10-23T17:02:37+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 13
+    }
+  ]
+}
