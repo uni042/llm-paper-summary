@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T03:21:13+00:00",
+  "generated_at": "2026-10-23T03:47:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 40,
+  "count": 41,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/HCS59251.2023.10254711",
@@ -1138,6 +1138,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-39faa3696ac5--libfile_31bcb48f33c481918e2af7f498f862be--2026-2601.20357-tabed-adaptive-ensemble-speculative-decoding-research-20261023-1132-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-39faa3696ac5--libfile_31bcb48f33c481918e2af7f498f862be--2026-2601.20357-tabed-adaptive-ensemble-speculative-decoding-research-20261023-1132-sched.json",
       "worker_run_key": "20261023-1132-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.17605",
+      "title": "PICASO: Permutation-Invariant Context Composition with State Space Models",
+      "source_url": "https://arxiv.org/pdf/2502.17605",
+      "returned_at": "2026-10-23T03:47:09+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5517,
+        "body_paragraphs": 36,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 574,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_bd133ca803d081919bfc3269c644f06f--2025-2502.17605-picaso-permutation-invariant-ssm-context-composition-research-20261023-1234-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_bd133ca803d081919bfc3269c644f06f--2025-2502.17605-picaso-permutation-invariant-ssm-context-composition-research-20261023-1234-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261023-1234-scheduled-chat-30/r01"
     }
   ]
 }
