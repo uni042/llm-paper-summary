@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（444本）
+## 自動生成の論文一覧（445本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -649,6 +649,10 @@
 - **2026-09 · [Analytical Power-Aware Provisioning for Prefill-Decode Disaggregated AI Inference](2026-2609.24639-analytical-power-aware-provisioning-for-prefill-decode-disaggregated-ai-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、入力処理（プリフィル）と復号（デコード）を別々のGPU群に割り当てる分離型サービング（プリフィル–デコード Disaggregation、PD分離）で、何台の入力処理インスタンスと復号インスタンスを稼働させれば、要求処理容量を満たしながらGPU電力を最小化できるかを扱う。
+
+- **2026-09 · [An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference](2026-2609.12378-an-open-source-end-to-end-fhe-implementation-for-privacy-preserving-llam.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  問題は単一演算を高速化するだけではなく、各演算の入出力の暗号文配置を接続できるようにすることにある。arXiv:2609.12378の2026年10月14日改訂v3本文は、提案方式をThemisと呼ぶ。
 
 - **2026-09 · [An Approximate Queueing Model of LLM Inference Serving for SLO-Driven Autoscaling](2026-2609.20957-an-approximate-queueing-model-of-llm-inference-serving-for-slo-driven-au.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -30,7 +30,7 @@
   "selection_reason": "完全準同型暗号（FHE）の暗号文配置とLlama実行を共同設計するOdinを提案し、Llama-3-8Bの32層を単一H100 80GBでエンドツーエンド実行する公開実装を報告する。128-token入力で366.4秒・ピーク58.9GiB、同条件のTHOR比4.51倍高速としており、暗号化推論の実システム実装・GPUメモリ制約を扱う推論基盤候補として独立性がある。",
   "semantic_scholar_id": "041b2473727ddeaef023b972d6634be2317b92cd",
   "source_url": "https://arxiv.org/abs/2609.12378",
-  "status": "ready",
+  "status": "superseded",
   "title": "An Open-Source End-to-End FHE Implementation for Privacy-Preserving Llama 3 8B Inference",
   "type": "research",
   "validation_error": "RecordValidationError: problem_method.components[1].description is too short",
@@ -38,5 +38,10 @@
     "problem_method.components[1].description is too short"
   ],
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-24T16:58:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2609.12378-an-open-source-end-to-end-fhe-implementation-for-privacy-preserving-llam.md",
+  "represented_canonical_id": "arXiv:2609.12378",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
