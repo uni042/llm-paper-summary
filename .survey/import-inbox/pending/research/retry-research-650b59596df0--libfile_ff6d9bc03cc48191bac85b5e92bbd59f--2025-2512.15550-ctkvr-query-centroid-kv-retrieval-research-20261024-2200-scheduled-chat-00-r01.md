@@ -35,6 +35,8 @@ worker_run_key: "20261024-2200-scheduled-chat-00/r01"
 reference_main_sha: "016d51dfef63de3886fab2d1a1ea782d8279ac1e"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # CTkvr：問い合わせ重心とトークン再順位付けを組み合わせた長文KVキャッシュ検索

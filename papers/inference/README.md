@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **3040本**。
+収録論文: **3042本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**3040本**。
+推論論文：**3042本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -49,7 +49,7 @@
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 56 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 155 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 108 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/) |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 442 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 443 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 59 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/) |
 | [13-sparse-attention](13-sparse-attention/README.md) | 108 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/) |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 68 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/) |
@@ -60,5 +60,5 @@
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 64 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
 | [20-linear-recurrent-language-models](20-linear-recurrent-language-models/README.md) | 29 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/) |
 | [21-static-structured-pruning](21-static-structured-pruning/README.md) | 13 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/21-static-structured-pruning/) |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 948 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 949 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
 <!-- survey:auto:end -->

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（948本）
+## 自動生成の論文一覧（949本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1193,6 +1193,10 @@
 - **2026-06 · [Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding](2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対象側の過去注意とドラフト側の先読み注意を融合し、少数の意味検索ヘッドだけで検証用KVを選ぶことで、長文投機的デコードのKV読込を削減する。
+
+- **2026-06 · [Do Value Vectors in Deep Layers Need Context from the Residual Stream?](2026-2606.02780-do-value-vectors-in-deep-layers-need-context-from-the-residual-stream.md)**  
+  実装：[✓](https://github.com/RiddleHe/nanochat) ・ リポジトリ内被引用：0  
+  通常の自己注意（self-注意機構）は、各層の残差ストリームから問い合わせベクトル（Query）、鍵ベクトル（Key）、値ベクトル（Value）を計算する。結果として、深い層では元のトークン自体の情報から作った値だけを用いる方が、標準の文脈依存値より良い検証損失を示した。
 
 - **2026-06 · [Do Language Models Need Sleep? Offline Recurrence for Improved Online Inference](2026-2605.26099-do-language-models-need-sleep-offline-recurrence-for-improved-online-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3273,11 +3277,11 @@
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：326  
+  実装：✓ ・ リポジトリ内被引用：325  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：216  
+  実装：✓ ・ リポジトリ内被引用：215  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  

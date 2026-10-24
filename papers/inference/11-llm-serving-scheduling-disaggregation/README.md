@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（442本）
+## 自動生成の論文一覧（443本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -925,6 +925,10 @@
 - **2026-05 · [C2CServe: Leveraging NVLink-C2C for Elastic Serverless LLM Serving on MIG](2026-2605.19481-c2cserve-serverless-mig-nvlink-c2c.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GH200のCPUメモリをNVLink-C2C経由の能動的な重み格納層として使い、MIGごとのHBM不足を回避するサーバレスLLM基盤。HybridGEMMと競合対応スケジューラで密モデルのコールドスタートを最大7.1倍短縮する。
+
+- **2026-05 · [BIRDS: Characterizing and Understanding Biodiversity Impact of Large Language Model Serving](2026-2605.27480-birds-characterizing-and-understanding-biodiversity-impact-of-large-lang.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  炭素排出量または水消費量だけでGPU配置先を選ぶと、酸性化、富栄養化、光化学オゾン生成等を経由する生態系損失を取りこぼす。原著の特徴は、電力1 kWh当たりの地域係数を直接比べるだけでなく、GPU電力／SLOを満たした単位時間当たりの完了リクエスト数を経由する点にある。推論時のトークン長、GPU世代、バッチ効率、MoEの稼働GPU数が環境影響へ反映される。
 
 - **2026-05 · [Adaptive Memory Decay for Log-Linear Attention](2026-2605.06946-adaptive-memory-decay-for-log-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
