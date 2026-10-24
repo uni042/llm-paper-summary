@@ -51,6 +51,8 @@ topics:
   - 要求スケジューリング
 hardware_evaluation: '48台のAtlas 800T A3サーバー、各8 Ascend 910Cモジュール、各モジュール2ダイを独立デバイスとして合計768デバイス。ダイ当たり64GB HBM、376 TFLOPS。デバイス間片方向実測163.6GB/s、ホストからデバイス実測59.0GB/s。'
 quality_effect: '生成モデルの回答品質・推論精度を直接改善する研究ではない。TTFT/TPOTの期限達成率、正常処理量、デバイス時間を評価。受入制御による要求破棄はサービス可用性との交換条件になる。'
+last_audited: null
+audit_version: 0
 ---
 
 # Janus：本番規模の複数LLMサービングを資源予測・二重時間軸の制御・共有HBMで最適化

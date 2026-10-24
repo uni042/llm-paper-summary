@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b04161b3b8562c331bc91b875106ea7fb7cdb87967dcd248e188e540c071b97c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/file_00000000d728820c9a59db4347dd82fa--2026-2608.26112-treegraft-multi-drafter-speculative-decoding-research-20261024-0857-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.26112",
+  "worker_completed_at": "2026-10-24T09:14:00+09:00",
+  "worker_run_key": "20261024-0857-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6199,
+    "body_paragraphs": 34,
+    "method_chars": 2594,
+    "method_paragraphs": 14,
+    "evaluation_chars": 147,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 147 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 147 < 500"
+  ],
+  "processed_at": "2026-10-24T00:48:02+00:00"
+}

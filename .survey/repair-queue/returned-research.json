@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-23T23:55:33+00:00",
+  "generated_at": "2026-10-24T00:50:39+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1022,34 +1022,6 @@
       "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3830418.3843867",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T17:39:19+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8504,
-        "body_paragraphs": 49,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2368,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f011b6f21630--libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-1500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f011b6f21630--libfile_4cf4d8a2a80c819191c8ab04a30e1e72--2026-doi-10.1145-3830418.3843867-janus-multi-llm-serving-production-research-20261023-150.json",
-      "worker_run_key": "20261023-1500-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3731569.3764834",
       "title": null,
       "source_url": null,
@@ -1102,6 +1074,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5dce7edcebbf--libfile_7c77c507bb208191a9b484f4475eb3cb--2026-2609.23130-inference-control-plane-synthesis-returned-repair-20261023-0245-scheduled-chat-45-r01-section-normalized-20261024-0445-sch.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-5dce7edcebbf--libfile_7c77c507bb208191a9b484f4475eb3cb--2026-2609.23130-inference-control-plane-synthesis-returned-repair-20261023-0245-scheduled.json",
       "worker_run_key": "20261024-0445-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "arXiv:2608.26112",
+      "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.26112",
+      "returned_at": "2026-10-24T00:48:02+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 147 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6199,
+        "body_paragraphs": 34,
+        "method_chars": 2594,
+        "method_paragraphs": 14,
+        "evaluation_chars": 147,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 147 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/file_00000000d728820c9a59db4347dd82fa--2026-2608.26112-treegraft-multi-drafter-speculative-decoding-research-20261024-0857-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/file_00000000d728820c9a59db4347dd82fa--2026-2608.26112-treegraft-multi-drafter-speculative-decoding-research-20261024-0857-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261024-0857-scheduled-chat-00/r01"
     }
   ]
 }
