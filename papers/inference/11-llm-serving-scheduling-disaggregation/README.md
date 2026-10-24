@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（446本）
+## 自動生成の論文一覧（447本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1041,6 +1041,10 @@
 - **2026-02 · [A State-Transition Framework for Efficient LLM Reasoning](2026-2602.01198-a-state-transition-framework-for-efficient-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、長い思考連鎖（Chain-of-Thought; CoT）を生成する言語モデルで、思考トークンを短く削ることなく、過去の推論を保持するためのKVキャッシュと注意計算を減らす方式を提案する。Qwen2.5-1.5Bの数学5課題平均正答率は基盤モデルの51.5%から56.2%、平均推論遅延は300.0秒から253.0秒となった。
+
+- **2026-01 · [RelServe: Fast LLM Inference Serving on Relational Data](2026-2601.11546-relserve-fast-llm-inference-serving-on-relational-data.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RelServeは、表の各行へ同じテンプレートのLLM処理を適用する問い合わせ（relQuery）を、オンラインで低遅延に実行するための推論基盤である。静的な短い仕事優先方式は開始前の待ち時間を減らせても、処理が進んだ後の残作業や共有接頭辞キャッシュの利用状況を反映しない。
 
 - **2026-01 · [RelayGR: Scaling Long-Sequence Generative Recommendation via Cross-Stage Relay-Race Inference](2026-2601.01712-relaygr-scaling-long-sequence-generative-recommendation-via-cross-stage-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
