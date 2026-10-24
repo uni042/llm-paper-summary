@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-79c69359fffc1bd4-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.11056",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.11056",
+    "identity_tokens": [
+      "arXiv:2510.11056"
+    ],
+    "reason": "一次要旨で電子商取引検索の関連性判定を対象とし、LLM教師のドメイン適応・教師生成した推論経路のBERT生徒への対照的蒸留を主要貢献とすることを確認。実運用での推論は軽量なBERT分類器であり、LLM生成推論基盤、KVキャッシュ、推論サービング、分散実行などのシステム技術を改善する論文ではない。現在凍結中の学習・蒸留中心の応用研究として対象外。",
+    "first_checked_at": "2026-10-24T03:47:23+00:00",
+    "last_checked_at": "2026-10-24T03:47:23+00:00",
+    "linked_from": [],
+    "title": "From Reasoning LLMs to BERT: A Two-Stage Distillation Framework for Search Relevance"
+  },
+  "processed_at": "2026-10-24T03:47:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-79c69359fffc",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-23T18:49:51+00:00",
-  "record_count": 5340,
+  "updated_at": "2026-10-24T03:47:25+00:00",
+  "record_count": 5345,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82800,6 +82800,72 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters"
+    },
+    "arXiv:2609.13486": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13486",
+      "identity_tokens": [
+        "arXiv:2609.13486"
+      ],
+      "reason": "一次要旨では、MoE言語モデルを第一段階検索器として微調整し、密モデルと同じサービング条件でクエリ符号化時間を測定する。8B密検索器に対し有効パラメータ59%減・クエリ符号化時間18%減の構成と、再学習・再索引なしに使用専門家数を減らして検索性能99%以上を維持しつつ符号化時間を最大26%短縮する結果がある。専門家数削減の推論効率は本サーベイに関連する一方、主要用途は検索埋め込み生成であり、自己回帰LLMのトークン生成・MoEサービングへの直接適用は示されていないため境界的とした。",
+      "first_checked_at": "2026-10-24T03:47:21+00:00",
+      "last_checked_at": "2026-10-24T03:47:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers"
+    },
+    "arXiv:2310.15724": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.15724",
+      "identity_tokens": [
+        "arXiv:2310.15724"
+      ],
+      "reason": "一次要旨では、凍結した事前学習済み言語モデルの隠れ状態列を圧縮する小型プラグインを学習し、負荷に応じて圧縮率の異なるプラグインを選ぶ。7データセットで追加パラメータ0.9%・計算量53%削減・性能低下2%未満を報告する。推論時の系列長・演算量削減は関連するが、対象は汎用の事前学習済み言語モデルと下流タスクであり、生成LLMのデコーダ・KVキャッシュ・サービングの評価が要旨から確認できないため境界的とした。",
+      "first_checked_at": "2026-10-24T03:47:21+00:00",
+      "last_checked_at": "2026-10-24T03:47:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Variator: Accelerating Pre-trained Models with Plug-and-Play Compression Modules"
+    },
+    "arXiv:2505.01475": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.01475",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.emnlp-main.1735",
+        "arXiv:2505.01475"
+      ],
+      "reason": "一次要旨でコード検索・分類・クローン検出向けの状態空間モデルを学習・評価し、長さ2048でTransformer比最大64%の推論メモリ削減を報告する点を確認。線形再帰モデルの推論効率という接点はあるが、主対象はコード理解用の符号化モデルであり、生成LLMのサービング、KVキャッシュ、デコーダ実行の直接的最適化ではない。モデル構造の効率研究として境界的と判断する。",
+      "first_checked_at": "2026-10-24T03:47:23+00:00",
+      "last_checked_at": "2026-10-24T03:47:23+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CodeSSM: Towards State Space Models for Code Understanding"
+    },
+    "arXiv:2605.11335": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.11335",
+      "identity_tokens": [
+        "arXiv:2605.11335"
+      ],
+      "reason": "一次要旨では、画像等の拡散Transformer（DiT）推論において、GPU層ごとのCPUメモリからの先読み転送とGPU間集合通信がPCIe経路を競合する問題を解析し、通信を優先するチャンク単位の適応オフロードを実装する。2基のH100と3種のDiTで既存SGLang層別オフロード比最大1.28倍のステップ高速化を報告する。通信とオフロードの共通ボトルネックはLLMにも転用可能だが、一次評価は拡散画像系モデルであり、LLM推論・生成への直接検証がないため境界的とした。",
+      "first_checked_at": "2026-10-24T03:47:24+00:00",
+      "last_checked_at": "2026-10-24T03:47:24+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference"
+    },
+    "arXiv:2605.17410": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17410",
+      "identity_tokens": [
+        "arXiv:2605.17410"
+      ],
+      "reason": "一次要旨では、LLMのリアルタイム推論基盤でトークン単位の価値計算、資源制約下の割当、経済的目的を持つシステム設計が競合するという「Token Economics Trilemma」を提示する。低遅延資源配分・最適化の論点は推論スケジューリングと接するが、要旨上は実装済みのスケジューラ、測定済み高速化、メモリ管理方式を提示せず研究課題を整理する概念論文であるため、技術的サーベイへの直接収録は境界的とした。",
+      "first_checked_at": "2026-10-24T03:47:25+00:00",
+      "last_checked_at": "2026-10-24T03:47:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Computational Challenges in Token Economics: Bridging Economic Theory and AI System Design"
     }
   }
 }

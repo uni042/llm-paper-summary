@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-83a74565c10add68-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2505.01475",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2505.01475",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.emnlp-main.1735",
+      "arXiv:2505.01475"
+    ],
+    "reason": "一次要旨でコード検索・分類・クローン検出向けの状態空間モデルを学習・評価し、長さ2048でTransformer比最大64%の推論メモリ削減を報告する点を確認。線形再帰モデルの推論効率という接点はあるが、主対象はコード理解用の符号化モデルであり、生成LLMのサービング、KVキャッシュ、デコーダ実行の直接的最適化ではない。モデル構造の効率研究として境界的と判断する。",
+    "first_checked_at": "2026-10-24T03:47:23+00:00",
+    "last_checked_at": "2026-10-24T03:47:23+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CodeSSM: Towards State Space Models for Code Understanding"
+  },
+  "processed_at": "2026-10-24T03:47:23+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-83a74565c10a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

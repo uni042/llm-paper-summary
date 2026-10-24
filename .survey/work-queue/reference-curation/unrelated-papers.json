@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-23T19:53:15+00:00",
-  "record_count": 12454,
+  "updated_at": "2026-10-24T03:47:23+00:00",
+  "record_count": 12455,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179478,6 +179478,18 @@
       "last_checked_at": "2026-10-23T19:53:15+00:00",
       "linked_from": [],
       "title": "fastiSSM: Fast inference of state space model with online model approximation in frequency-domain"
+    },
+    "arXiv:2510.11056": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.11056",
+      "identity_tokens": [
+        "arXiv:2510.11056"
+      ],
+      "reason": "一次要旨で電子商取引検索の関連性判定を対象とし、LLM教師のドメイン適応・教師生成した推論経路のBERT生徒への対照的蒸留を主要貢献とすることを確認。実運用での推論は軽量なBERT分類器であり、LLM生成推論基盤、KVキャッシュ、推論サービング、分散実行などのシステム技術を改善する論文ではない。現在凍結中の学習・蒸留中心の応用研究として対象外。",
+      "first_checked_at": "2026-10-24T03:47:23+00:00",
+      "last_checked_at": "2026-10-24T03:47:23+00:00",
+      "linked_from": [],
+      "title": "From Reasoning LLMs to BERT: A Two-Stage Distillation Framework for Search Relevance"
     }
   }
 }

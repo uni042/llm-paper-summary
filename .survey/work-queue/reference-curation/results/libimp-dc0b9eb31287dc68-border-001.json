@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-dc0b9eb31287dc68-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.11335",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.11335",
+    "identity_tokens": [
+      "arXiv:2605.11335"
+    ],
+    "reason": "一次要旨では、画像等の拡散Transformer（DiT）推論において、GPU層ごとのCPUメモリからの先読み転送とGPU間集合通信がPCIe経路を競合する問題を解析し、通信を優先するチャンク単位の適応オフロードを実装する。2基のH100と3種のDiTで既存SGLang層別オフロード比最大1.28倍のステップ高速化を報告する。通信とオフロードの共通ボトルネックはLLMにも転用可能だが、一次評価は拡散画像系モデルであり、LLM推論・生成への直接検証がないため境界的とした。",
+    "first_checked_at": "2026-10-24T03:47:24+00:00",
+    "last_checked_at": "2026-10-24T03:47:24+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ChunkFlow: Communication-Aware Chunked Prefetching for Layerwise Offloading in Distributed Diffusion Transformer Inference"
+  },
+  "processed_at": "2026-10-24T03:47:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-dc0b9eb31287",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
