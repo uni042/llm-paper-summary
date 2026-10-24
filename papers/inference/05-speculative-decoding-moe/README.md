@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（213本）
+## 自動生成の論文一覧（214本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -479,6 +479,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-02 · [Vegas: Self-Speculative Decoding with Verification-Guided Sparse Attention](2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md)**  
   実装：[✓](https://github.com/platformxlab/vegas) ・ リポジトリ内被引用：0  
   検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
+
+- **2026-02 · [Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple](2026-2603.11053-speculative-decoding-scaling-laws-sdsl-throughput-optimization-made-simp.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号（投機的復号）は、軽量な草稿モデルが複数の次トークン候補を作り、大きな検証モデルがまとめて確認することで生成の逐次的な費用を減らす。結果は「大きい草稿ほど採択率が高い」だけでなく、採択率の改善と草稿費用の競合が中間規模に最適点を作ることを示す。
 
 - **2026-02 · [Dynamic Delayed Tree Expansion For Improved Multi-Path Speculative Decoding](2026-2602.16994-dynamic-delayed-tree-expansion-for-improved-multi-path-speculative-decod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

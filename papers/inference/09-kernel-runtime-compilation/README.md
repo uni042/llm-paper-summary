@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（154本）
+## 自動生成の論文一覧（155本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -141,6 +141,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing](2026-2609.37402-routing-should-pay-for-itself-sparse-supervision-for-economical-llm-rout.md)**  
   実装：[✓](https://github.com/LAMDA-Model-Reuse/SaveRouter) ・ リポジトリ内被引用：0  
   LLMの品質と推論単価はモデルごとに異なるため、容易な問い合わせを小型・安価なモデルへ送り、難しい問い合わせを高性能モデルへ送れば総費用を下げられる。しかし、どの問い合わせにどのモデルが適するかを学習するには、通常は大量の過去問い合わせに複数モデルを実行し、品質の教師信号を取得する必要がある。従来方式で最も早い損益分岐は11,500件である。
+
+- **2026-09 · [Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study](2026-2609.21264-programming-amd-xdna-npus-with-open-source-compiler-tools-a-flashattenti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  XDNAは複数の計算タイルと小さな局所メモリ、共有メモリタイル（MemTile）、外部メモリとの入出力を担うshimタイルから構成され、DMAとストリームの経路をソフトウェアが明示的に設計する。
 
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

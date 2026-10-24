@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（939本）
+## 自動生成の論文一覧（942本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -986,6 +986,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
 
+- **2026-08 · [CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights](2026-2608.06763-cubicquant-parametric-non-uniform-codebooks-for-high-throughput-llm-infe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究が扱うのは、大規模言語モデル（LLM）の重みをGPUメモリに置き、自己回帰復号の各段階で行列演算に供給する際の表現形式である。提案形式は、1〜8ビットの重み符号を連続したビット列へ保存し、重み群ごとに尺度 s と二つの形状係数 a,b を付加する。
+
 - **2026-08 · [Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State](2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md)**  
   実装：[✓](https://github.com/StarkLeeSunny/Flexkv-doublenode) ・ リポジトリ内被引用：0  
   外部KV状態の全ヒットを先に把握しつつ、復元はWチャンク窓だけを順次ステージングして解放することで、長大な外部状態とローカル復元メモリを分離する方式。
@@ -1345,6 +1349,10 @@
 - **2026-05 · [Measuring Maximum Activations in Open Large Language Models](2026-2605.15572-measuring-maximum-activations-in-open-large-language-models.md)**  
   実装：[✓](https://github.com/clx1415926/Max_act_llm) ・ リポジトリ内被引用：0  
   低ビット推論では、活性値を少数の離散水準へ写すときに、値の最大絶対値が量子化尺度の決定を左右する。近い規模のMoEモデルは密モデルより14.0〜23.4倍低い極大値を示す。
+
+- **2026-05 · [MARR: Module-Adaptive Residual Reconstruction for Low-Bit Post-Training Quantization](2026-2605.17997-marr-module-adaptive-residual-reconstruction-for-low-bit-post-training-q.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MARR（Module-適応的 Residual Reconstruction）は、学習済みモデルを追加学習せず低ビットへ変換する学習後量子化（post-学習 量子化; PTQ）で、層をまたぐ量子化誤差の補正を強めすぎないための方法である。
 
 - **2026-05 · [Lodestar：オンライン学習によるLLM推論リクエストルータ](2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md)**  
   実装：[✓](https://github.com/gangmuk/Lodestar) ・ リポジトリ内被引用：0  
@@ -1777,6 +1785,10 @@
 - **2026-02 · [SALAAD: Sparse And Low-Rank Adaptation via ADMM for Large Language Model Inference](2026-2602.00942-salaad-sparse-and-low-rank-adaptation-via-admm-for-large-language-model-.md)**  
   実装：[✓](https://github.com/HaoMAFRLu/salaad) ・ リポジトリ内被引用：0  
   SALAADは、言語モデルの重みを疎成分と低ランク成分の和として表現できるように事前学習中から構造を誘導し、配置時には必要なメモリ予算に応じて同じ学習済みチェックポイントを縮小できる方式である。
+
+- **2026-02 · [QTALE: Quantization-Robust Token-Adaptive Layer Execution for LLMs](2026-2602.10431-qtale-quantization-robust-token-adaptive-layer-execution-for-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの推論負荷を下げるには、重みを少ないビットで保持する量子化（量子化）と、トークンごとに不要なTransformer層を省く動的層実行（トークン-適応的 層 execution）が補完的である。
 
 - **2026-02 · [Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models](2026-2602.07804-pruning-as-a-cooperative-game-surrogate-assisted-layer-contribution-esti.md)**  
   実装：[✓](https://github.com/920927/Pruning_As_A_Cooperative_Game) ・ リポジトリ内被引用：0  
