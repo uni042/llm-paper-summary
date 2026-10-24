@@ -31,6 +31,8 @@ last_checked: '2026-10-23'
 worker_completed_at: '2026-10-23T08:08:55+09:00'
 worker_run_key: '20261023-0800-scheduled-chat-00/r01'
 lineage: 11-llm-serving-systems
+last_audited: null
+audit_version: 0
 ---
 
 # BIRDS: LLMサービングにおける生物多様性影響の計測と品質を考慮した比較

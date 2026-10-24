@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "d97c40d1414847c032eb3c2e312ad2047053e461f06655c70348d580c28af18a",
-  "canonical_id": "arXiv:2509.15940",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2509.15940-efficient-pre-training-of-llms-via-topology-aware-communication-alignmen.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3d435b9d53cc8191a0508eebd5c6bd2f--2025-2509.15940-arnold-topology-aware-pretraining-research-20261023-1100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2509.15940",
   "worker_completed_at": "2026-10-23T11:02:44+09:00",
   "worker_run_key": "20261023-1100-scheduled-chat-00/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 613,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-24T15:04:46+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2509.15940-efficient-pre-training-of-llms-via-topology-aware-communication-alignmen.md と 20 段落 / 4516文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T16:14:36+00:00"
 }
