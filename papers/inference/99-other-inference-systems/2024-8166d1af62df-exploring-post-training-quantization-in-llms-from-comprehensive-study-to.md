@@ -1,35 +1,93 @@
 ---
 canonical_id: DOI:10.1609/aaai.v38i17.29908
-title: 'Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation'
-summary: 'OPTとBLOOMの125M〜176Bモデルで学習後量子化の重み・活性化精度、量子化粒度、最適化手法を体系比較し、量子化誤差行列を低ランク特異値分解で補うLoRCを提案する。重みINT4と活性化INT8ではモデル系列によって誤差特性が大きく異なり、LoRCと細粒度量子化を併用すると、低い追加メモリでパープレキシティを回復できる。'
-list_summary: 'OPT/BLOOMの量子化誤差を重み・活性化・粒度別に比較し、重み量子化残差の低ランク補正LoRCでINT4〜INT2の精度劣化を軽減する。'
+title: Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation
+summary: OPTとBLOOMの125M〜176Bモデルで学習後量子化の重み・活性化精度、量子化粒度、最適化手法を体系比較し、量子化誤差行列を低ランク特異値分解で補うLoRCを提案する。重みINT4と活性化INT8ではモデル系列によって誤差特性が大きく異なり、LoRCと細粒度量子化を併用すると、低い追加メモリでパープレキシティを回復できる。
+list_summary: OPT/BLOOMの量子化誤差を重み・活性化・粒度別に比較し、重み量子化残差の低ランク補正LoRCでINT4〜INT2の精度劣化を軽減する。
 authors:
-  - Zhewei Yao
-  - Xiaoxia Wu
-  - Cheng Li
-  - Stephen Youn
-  - Yuxiong He
+- Zhewei Yao
+- Xiaoxia Wu
+- Cheng Li
+- Stephen Youn
+- Yuxiong He
 published: '2024-03-24'
-publication: 'Proceedings of the AAAI Conference on Artificial Intelligence, 38(17), 19377–19385'
+publication: Proceedings of the AAAI Conference on Artificial Intelligence, 38(17), 19377–19385
 publication_type: conference
 publication_status: published
 source: https://ojs.aaai.org/index.php/AAAI/article/view/29908/31587
 sources:
-  - https://ojs.aaai.org/index.php/AAAI/article/view/29908/31587
-  - https://ojs.aaai.org/index.php/AAAI/article/view/29908
-  - https://arxiv.org/abs/2303.08302
-implementation: '学習後量子化手法RTN・GPTQ・ZeroQuantをOPT/BLOOM系列へ適用し、低ランク補正LoRCを重みの量子化誤差に加える実験。AAAI掲載版は再現コードの公開予定に言及するが、この確認では著者公式コード配布先を確定できない。GPU上の生成スループット実測より、主としてゼロショット検証パープレキシティを比較。'
+- https://ojs.aaai.org/index.php/AAAI/article/view/29908/31587
+- https://ojs.aaai.org/index.php/AAAI/article/view/29908
+- https://arxiv.org/abs/2303.08302
+implementation: 学習後量子化手法RTN・GPTQ・ZeroQuantをOPT/BLOOM系列へ適用し、低ランク補正LoRCを重みの量子化誤差に加える実験。AAAI掲載版は再現コードの公開予定に言及するが、この確認では著者公式コード配布先を確定できない。GPU上の生成スループット実測より、主としてゼロショット検証パープレキシティを比較。
 code: null
 last_checked: '2026-10-23'
 worker_id: scheduled-chat-45
 worker_completed_at: '2026-10-24T00:02:09+09:00'
-worker_run_key: '20261023-2345-scheduled-chat-45/r02'
-reference_main_sha: '1001e8ee976372ccef7921a769d3d6dcd9be54b8'
+worker_run_key: 20261023-2345-scheduled-chat-45/r02
+reference_main_sha: 1001e8ee976372ccef7921a769d3d6dcd9be54b8
 last_audited: null
 audit_version: 0
 repair_of_worker_run_key: 20261023-2228-scheduled-chat-30/r01
-repair_type: "section-heading-normalization; original technical text and numeric results preserved"
-
+repair_type: section-heading-normalization; original technical text and numeric results preserved
+references:
+- canonical_id: arXiv:2012.15701
+  arxiv_id: '2012.15701'
+- canonical_id: arXiv:2109.12948
+  arxiv_id: '2109.12948'
+- canonical_id: arXiv:2005.14165
+  arxiv_id: '2005.14165'
+- canonical_id: arXiv:2208.07339
+  arxiv_id: '2208.07339'
+- canonical_id: arXiv:2212.09720
+  arxiv_id: '2212.09720'
+- canonical_id: arXiv:1902.08153
+  arxiv_id: '1902.08153'
+- canonical_id: arXiv:2004.07320
+  arxiv_id: '2004.07320'
+- canonical_id: arXiv:2208.11580
+  arxiv_id: '2208.11580'
+- canonical_id: arXiv:2301.00774
+  arxiv_id: '2301.00774'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2103.13630
+  arxiv_id: '2103.13630'
+- canonical_id: arXiv:1909.10351
+  arxiv_id: '1909.10351'
+- canonical_id: arXiv:2101.01321
+- canonical_id: arXiv:2204.09656
+  arxiv_id: '2204.09656'
+- canonical_id: arXiv:1802.05668
+  arxiv_id: '1802.05668'
+- canonical_id: arXiv:2211.05102
+  arxiv_id: '2211.05102'
+- canonical_id: arXiv:2211.05100
+  arxiv_id: '2211.05100'
+- canonical_id: arXiv:1909.05840
+- canonical_id: arXiv:2201.11990
+  arxiv_id: '2201.11990'
+- canonical_id: arXiv:2203.10705
+  arxiv_id: '2203.10705'
+- canonical_id: arXiv:2301.12017
+  arxiv_id: '2301.12017'
+- canonical_id: arXiv:2206.01859
+  arxiv_id: '2206.01859'
+- canonical_id: arXiv:2211.10438
+  arxiv_id: '2211.10438'
+- canonical_id: arXiv:2206.01861
+  arxiv_id: '2206.01861'
+- canonical_id: arXiv:2005.03842
+- canonical_id: arXiv:1910.06188
+  arxiv_id: '1910.06188'
+- canonical_id: arXiv:2210.02414
+  arxiv_id: '2210.02414'
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2009.12812
+  arxiv_id: '2009.12812'
+references_checked_at: '2026-10-24'
+references_source: arxiv-html-reference-section
+references_total: 41
 ---
 
 # Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation
