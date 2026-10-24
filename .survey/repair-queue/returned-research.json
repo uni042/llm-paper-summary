@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T20:07:31+00:00",
+  "generated_at": "2026-10-24T20:14:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -432,62 +432,6 @@
       "worker_run_key": "20261024-1030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.32579",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T19:34:00+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 205 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2626,
-        "body_paragraphs": 12,
-        "method_chars": 733,
-        "method_paragraphs": 4,
-        "evaluation_chars": 205,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 205 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2605.19218",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T19:34:02+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 371 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2775,
-        "body_paragraphs": 12,
-        "method_chars": 858,
-        "method_paragraphs": 4,
-        "evaluation_chars": 371,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 371 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1162/tacl.a.39",
       "title": null,
       "source_url": null,
@@ -516,34 +460,6 @@
       "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2608.28846",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T19:43:13+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 131 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6147,
-        "body_paragraphs": 37,
-        "method_chars": 1626,
-        "method_paragraphs": 9,
-        "evaluation_chars": 131,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 131 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-.json",
-      "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.539",
       "title": null,
       "source_url": null,
@@ -570,6 +486,90 @@
       "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-20261023-0500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-202610.json",
       "worker_run_key": "20261023-0500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.19218",
+      "title": "Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference",
+      "source_url": "https://arxiv.org/html/2605.19218",
+      "returned_at": "2026-10-24T20:14:33+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 371 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2775,
+        "body_paragraphs": 12,
+        "method_chars": 858,
+        "method_paragraphs": 4,
+        "evaluation_chars": 371,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 371 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-35a0166f6c6b--0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-35a0166f6c6b--0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-.json",
+      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.32579",
+      "title": "DimPO: Dimensionality Reduction for Attention using Preference Optimization",
+      "source_url": "https://arxiv.org/html/2609.32579",
+      "returned_at": "2026-10-24T20:14:34+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 205 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2626,
+        "body_paragraphs": 12,
+        "method_chars": 733,
+        "method_paragraphs": 4,
+        "evaluation_chars": 205,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 205 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bdb5704e070--0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4bdb5704e070--0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-202610.json",
+      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28846",
+      "title": "A Rigor-Matched Audit of Periodic-Step Layer Skipping for Efficient LLM Inference: ConfLayers versus SWIFT, with a Supplemental Analysis of Trained Routing Alternatives",
+      "source_url": "https://arxiv.org/abs/2608.28846",
+      "returned_at": "2026-10-24T20:14:35+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 131 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6147,
+        "body_paragraphs": 37,
+        "method_chars": 1626,
+        "method_paragraphs": 9,
+        "evaluation_chars": 131,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 131 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-546b5e5d7668--0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-546b5e5d7668--0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-rese.json",
+      "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
     }
   ]
 }
