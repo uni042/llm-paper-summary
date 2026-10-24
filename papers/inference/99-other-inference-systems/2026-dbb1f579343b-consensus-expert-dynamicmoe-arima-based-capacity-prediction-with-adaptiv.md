@@ -26,6 +26,8 @@ worker_run_key: '20261023-1100-scheduled-chat-00/r01'
 reference_main_sha: '1d002b50d74417b22d432b2910c0b44c44811d00'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Consensus-Expert DynamicMoE：負荷予測と共有専門家によるMoEの学習時容量制御

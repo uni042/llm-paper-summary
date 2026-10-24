@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（967本）
+## 自動生成の論文一覧（969本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1802,6 +1802,10 @@
   実装：[✓](https://github.com/HJSang/CRISP_Reasoning_Compression) ・ リポジトリ内被引用：0  
   CRISP（Compressed Reasoning via Iterative Self-Policy Distillation）は、この余分な思考を生成後に切り落とすのではなく、モデルが自発的に短い推論を出すように学習する方式である。
 
+- **2026-03 · [Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models](2026-dbb1f579343b-consensus-expert-dynamicmoe-arima-based-capacity-prediction-with-adaptiv.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  主要実験では、Switch Transformer-base-8の9種類のGLUE評価指標を単純平均した値が、従来構成の80.5、共有専門家だけを導入した構成の81.0に対して、提案構成で81.6となる（原著表4。
+
 - **2026-03 · [Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning](2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、小型言語モデル（SLM）にまず問題を解かせ、答えへの自己申告確信度が低いときだけ大型言語モデル（LLM）へ委譲する二段推論方式COREAを提案する。大型モデル単独との比較で、領域外の数理問題では推定費用21.5%減・正答率1.7ポイント減、非数理問題では16.8%減・正答率1.7ポイント減となった。
@@ -2165,6 +2169,10 @@
 - **2025-12 · [ELANA: A Simple Energy and Latency Analyzer for LLMs](2025-2512.09946-elana-a-simple-energy-and-latency-analyzer-for-llms.md)**  
   実装：[✓](https://github.com/enyac-group/Elana) ・ リポジトリ内被引用：0  
   本論文は新しい推論アルゴリズムの高速化倍率を主張するものではなく、計測方法と計測例を提示する研究である。
+
+- **2025-12 · [Efficient-VLN: A Simple yet Strong Baseline for Efficient Vision-Language Navigation](2025-2512.10310-efficient-vln-a-simple-yet-strong-baseline-for-efficient-vision-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論の中核は、回転位置埋め込み（Rotary Position Embedding; RoPE）を適用する前のKVをフレームごとに保存し、次の行動では必要な過去フレームのKVだけを選択して連続した位置IDで再回転する仕組みである。
 
 - **2025-12 · [Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization](2025-38c6f5463687-efficient-llm-deployment-in-consumer-electronics-applications-via-resour.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

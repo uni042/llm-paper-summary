@@ -35,10 +35,15 @@
   "selection_reason": "Efficient-VLN reuses the vision-language model KV cache and applies contiguous RoPE so inference processes only the newly observed frame, directly reducing repeated computation for real-time navigation.",
   "semantic_scholar_id": "91626567b5cd7fdca205f306662598fccf0b140e",
   "source_url": "https://arxiv.org/abs/2512.10310",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient-VLN: A Simple yet Strong Baseline for Efficient Vision-Language Navigation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-24T18:12:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.10310-efficient-vln-a-simple-yet-strong-baseline-for-efficient-vision-language.md",
+  "represented_canonical_id": "arXiv:2512.10310",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
