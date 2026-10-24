@@ -1,36 +1,56 @@
 ---
-canonical_id: "DOI:10.1162/tacl.a.39"
-title: "TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination"
-summary: "TALEはKVキャッシュの値行列をトークン重要度に応じて複数ランクへ圧縮し、現在トークンの全精度計算を保つ遅延近似と、位置回転のため再構成が必要になるキー側の低ランク化回避を組み合わせる。Llama-3.1-8B-InstructでKVキャッシュを9.14倍圧縮し、GSM8Kを81.65から81.88へ維持した。ただしRULER平均は81.09から79.03へ低下し、低資源言語でも悪化が見られる。"
-list_summary: "重要トークンのランクを保ち、値KVの遅延近似・再構成除去・段階的量子化で約9.14倍圧縮する、学習不要のKVキャッシュ手法。"
+canonical_id: DOI:10.1162/tacl.a.39
+title: 'TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination'
+summary: TALEはKVキャッシュの値行列をトークン重要度に応じて複数ランクへ圧縮し、現在トークンの全精度計算を保つ遅延近似と、位置回転のため再構成が必要になるキー側の低ランク化回避を組み合わせる。Llama-3.1-8B-InstructでKVキャッシュを9.14倍圧縮し、GSM8Kを81.65から81.88へ維持した。ただしRULER平均は81.09から79.03へ低下し、低資源言語でも悪化が見られる。
+list_summary: 重要トークンのランクを保ち、値KVの遅延近似・再構成除去・段階的量子化で約9.14倍圧縮する、学習不要のKVキャッシュ手法。
 authors:
-  - Jaeseong Lee
-  - Seung-won Hwang
-  - Aurick Qiao
-  - Daniel Campos
-  - Zhewei Yao
-  - Yuxiong He
-published: "2025-10"
-publication: "Transactions of the Association for Computational Linguistics, volume 13, pages 1298–1318"
-publication_type: "査読付き学術誌論文"
-publication_status: "published"
-source: "https://aclanthology.org/2025.tacl-1.59/"
+- Jaeseong Lee
+- Seung-won Hwang
+- Aurick Qiao
+- Daniel Campos
+- Zhewei Yao
+- Yuxiong He
+published: 2025-10
+publication: Transactions of the Association for Computational Linguistics, volume 13, pages 1298–1318
+publication_type: 査読付き学術誌論文
+publication_status: published
+source: https://aclanthology.org/2025.tacl-1.59/
 sources:
-  - "https://aclanthology.org/2025.tacl-1.59.pdf"
-  - "https://aclanthology.org/2025.tacl-1.59/"
-  - "https://doi.org/10.1162/tacl.a.39"
-code: "https://github.com/thnkinbtfly/TALE"
-implementation: "論文は公開コードを明示し、低ランク化した値キャッシュと専用注意演算を実装している。主評価は単一H100 80GB GPU、LongBenchはPalu評価コード、その他はLM Evaluation Harnessを使用。"
-last_checked: "2026-10-25"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261025-0256-scheduled-chat-00/r01"
-reference_main_sha: "26413b929c063c4338a98696ffb3aae33722dbe5"
-worker_completed_at: "2026-10-25T03:04:00+09:00"
+- https://aclanthology.org/2025.tacl-1.59.pdf
+- https://aclanthology.org/2025.tacl-1.59/
+- https://doi.org/10.1162/tacl.a.39
+code: https://github.com/thnkinbtfly/TALE
+implementation: 論文は公開コードを明示し、低ランク化した値キャッシュと専用注意演算を実装している。主評価は単一H100 80GB GPU、LongBenchはPalu評価コード、その他はLM Evaluation Harnessを使用。
+last_checked: '2026-10-25'
+worker_id: scheduled-chat-00
+worker_run_key: 20261025-0256-scheduled-chat-00/r01
+reference_main_sha: 26413b929c063c4338a98696ffb3aae33722dbe5
+worker_completed_at: '2026-10-25T03:04:00+09:00'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-lineage: "07-kv-cache-optimization-compression"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+lineage: 07-kv-cache-optimization-compression
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.18653/v1
+  doi: 10.18653/v1
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2410.03111
+- canonical_id: arXiv:2307.08691
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2410.21465
+- canonical_id: arXiv:2405.05254
+- canonical_id: arXiv:2405.12981
+- canonical_id: arXiv:2408.05646
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2402.16363
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination
