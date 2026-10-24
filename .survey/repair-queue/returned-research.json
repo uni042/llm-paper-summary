@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T14:55:29+00:00",
+  "generated_at": "2026-10-24T15:07:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -485,33 +485,6 @@
       "worker_run_key": "20261024-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3706418",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T10:57:17+00:00",
-      "return_count": 8,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 342 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6078,
-        "body_paragraphs": 30,
-        "method_chars": 3025,
-        "method_paragraphs": 13,
-        "evaluation_chars": 342,
-        "limitation_chars": 634,
-        "insufficiency_flags": [
-          "評価説明量 342 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-83f04bc7fe3e--libfile_cc0d9ab3f13c8191bdc7cf7035350525--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-returned-repair-20261023-0134-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-83f04bc7fe3e--libfile_cc0d9ab3f13c8191bdc7cf7035350525--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-returned-repair-20261.json",
-      "worker_run_key": "20261023-0134-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.16440",
       "title": null,
       "source_url": null,
@@ -651,6 +624,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3706418",
+      "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey",
+      "source_url": "https://doi.org/10.1145/3706418",
+      "returned_at": "2026-10-24T15:04:48+00:00",
+      "return_count": 8,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6967,
+        "body_paragraphs": 42,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--2025-doi-10.1145-3706418-foundation-model-resource-efficiency-survey-returned-repair-20261024-1030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--2025-doi-10.1145-3706418-foundation-model-resource-efficiency-survey-returned-repair-20261024-1030-scheduled-chat-30-r.json",
+      "worker_run_key": "20261024-1030-scheduled-chat-30/r01"
     }
   ]
 }
