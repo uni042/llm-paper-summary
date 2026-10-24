@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（441本）
+## 自動生成の論文一覧（442本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -997,6 +997,10 @@
 - **2026-03 · [Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems](2026-bbf3ba61cdaa-compute-optimal-resource-allocation-for-distributed-large-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の推論時に、複数の候補回答を生成して最良の回答を選ぶ手法は、単一の貪欲復号より高い正答率を得られる場合がある。Mistral-7B-v0.1とNVIDIA A4000を使った評価では、GSM8K正答率が固定best-of-16の65.1%から67.2%へ上がり、1,000要求当たり費用は0.85ドルから0.52ドルへ下がった。
+
+- **2026-03 · [CoLLM: Continuous Adaptation for SLO-Aware LLM Serving on Shared GPU Clusters](2026-2604.16400-collm-continuous-adaptation-for-slo-aware-llm-serving-on-shared-gpu-clus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CoLLMは、低ランク適応（Low-Rank Adaptation; LoRA）を利用するLLMサービスにおいて、推論専用に確保したGPUの遊休時間を、同じモデルの追加学習に再利用する共同実行システムである。
 
 - **2026-03 · [CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands](2026-2603.21257-calvo-network-aware-kv-loading-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

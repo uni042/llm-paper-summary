@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（72本）
+## 自動生成の論文一覧（73本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -119,6 +119,10 @@
 - **2026-05 · [Fitting Is Not Enough: Smoothness in Extremely Quantized LLMs](2026-2605.08894-fitting-is-not-enough-smoothness-in-extremely-quantized-llms.md)**  
   実装：[✓](https://github.com/xuyuzhuang11/FINE) ・ リポジトリ内被引用：0  
   極低ビットの大規模言語モデル（LLM）量子化では、元の浮動小数点モデルと量子化モデルの中間出力を近付ける「順方向の再構成誤差」が一般的な最適化対象である。
+
+- **2026-05 · [BCJR-QAT: A Differentiable Relaxation of Trellis-Coded Weight Quantization](2026-2605.10655-bcjr-qat-a-differentiable-relaxation-of-trellis-coded-weight-quantizatio.md)**  
+  実装：[✓](https://github.com/Venugopalan2610/quant-2bit) ・ リポジトリ内被引用：0  
+  BCJR-QATは、トレリス符号化量子化（Trellis-Coded Quantization; TCQ）を使うLLMの2ビット重み表現に対し、量子化認識学習（Quantization-Aware 学習; QAT）を適用する方法である。
 
 - **2026-05 · [ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization of Large Language Models](2026-2605.11222-admm-q-an-improved-hessian-based-weight-quantizer-for-post-training-quan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

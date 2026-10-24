@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（942本）
+## 自動生成の論文一覧（944本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1202,6 +1202,10 @@
   実装：[✓](https://github.com/juntongshi48/poe-bridge) ・ リポジトリ内被引用：0  
   PoE-Bridgeは、拡散言語モデル（Diffusion Language モデル、DLM）の複数トークン並列生成と、自己回帰モデル（Autoregressive モデル、AR）の高い文章品質を両立させるための復号方式である。
 
+- **2026-06 · [Delay-Adaptive Speculation Control for Low-Latency Edge-Cloud LLM Inference](2026-2606.20591-delay-adaptive-speculation-control-for-low-latency-edge-cloud-llm-infere.md)**  
+  実装：[✓](https://github.com/szpsunkk/UCB-SpecStop) ・ リポジトリ内被引用：0  
+  本論文は、端末・クラウド分散推論（edge-cloud inference）で投機的復号（投機的復号）を行うとき、草稿モデルが一度に生成するトークン数を通信遅延に応じて決める問題を扱う。時間と採択数の「平均の比」を使う点が、各回の時間／採択数を単純平均する方式と異なる。
+
 - **2026-06 · [Communication-Efficient Verifiable Attention for LLM Inference](2026-2606.16352-communication-efficient-verifiable-attention-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   VeriAttn（通信-efficient TEE-GPU 注意機構）は、注意の線形演算と非線形の指数関数をともにGPUで計算させ、TEEには結果の検証と最終的な正規化を担当させる。Intel TDX、16仮想CPU、128 GBホストメモリ、NVIDIA H20 96 GBの環境で、4種類の3B～14Bモデルを評価した。
@@ -1481,6 +1485,10 @@
 - **2026-05 · [Efficient Diffusion LLMs via Temporal-Spatial Parallel Decoding and Confidence Extrapolation](2026-2605.30753-efficient-diffusion-llms-via-temporal-spatial-parallel-decoding-and-conf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   自己回帰型モデルは基本的に次の一語を順番に生成するのに対し、マスク型dLLMは多数の未確定位置を同時に予測し、確信度の低い位置を再びマスクして次の反復で修正する。
+
+- **2026-05 · [Efficient Cooperation-Aware Key and Value Management for LLM Inference](2026-3089a0084f72-efficient-cooperation-aware-key-and-value-management-for-llm-inference.md)**  
+  実装：[✓](https://github.com/ZJU-DIVER/CoKV) ・ リポジトリ内被引用：0  
+  得られたSSVは事前にモデルと検証データから計算し、実行時にはヘッド群別の保持トークン数やKV量子化ビット数の重みとして使う。Qwen3-32Bで平均128組のKVを保持する設定では、GSM8Kの正答率82.10%、MATH 46.17%を報告し、比較した圧縮方式を上回る。
 
 - **2026-05 · [DREAM-R: Multimodal Speculative Reasoning with RL-Based Refined Drafting, Precise Verification, and Fully Parallel Execution](2026-2605.28678-dream-r-multimodal-speculative-reasoning-with-rl-based-refined-drafting-.md)**  
   実装：[✓](https://github.com/HuYunhai-Alex/DREAM-R) ・ リポジトリ内被引用：0  

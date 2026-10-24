@@ -29,6 +29,8 @@ worker_run_key: "20261024-2130-scheduled-chat-30/r01"
 reference_main_sha: "e47762104e1ae6e3de319ebbda1384be1f42b095"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # CoKV：協力ゲームに基づく注意ヘッド間のKVキャッシュ予算配分
