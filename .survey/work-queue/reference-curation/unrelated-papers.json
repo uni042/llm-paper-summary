@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-24T03:47:23+00:00",
-  "record_count": 12455,
+  "updated_at": "2026-10-24T22:49:05+00:00",
+  "record_count": 12456,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179490,6 +179490,19 @@
       "last_checked_at": "2026-10-24T03:47:23+00:00",
       "linked_from": [],
       "title": "From Reasoning LLMs to BERT: A Two-Stage Distillation Framework for Search Relevance"
+    },
+    "arXiv:2604.10064": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10064",
+      "identity_tokens": [
+        "arXiv:2604.10064",
+        "url:https://arxiv.org/abs/2604.10064"
+      ],
+      "reason": "一次要旨ではViT-S/16・ViT-B/16・ViT-L/16をLAION-400Mで学習し、ImageNet-21Kゼロショット分類で線形注意の計算量と精度を評価する研究である。LLMの自己回帰復号、KVキャッシュ、LLMサービング、生成モデル推論の性能を直接評価していないため、本サーベイのLLM推論システム対象から除外する。線形注意の一般的な計算量削減自体は関連技術だが、論文の最終実証対象は画像分類である。",
+      "first_checked_at": "2026-10-24T22:49:05+00:00",
+      "last_checked_at": "2026-10-24T22:49:05+00:00",
+      "linked_from": [],
+      "title": "On The Application of Linear Attention in Multimodal Transformers"
     }
   }
 }
