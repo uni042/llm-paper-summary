@@ -35,10 +35,15 @@
   "selection_reason": "LLM Banditは要求ごとに複数の独立LLMの一つを選び、利用者が指定する品質対費用の選好に応じて推論モデルを切り替える。実行時に全モデルの回答を集約する方式ではなく、選択後に一モデルを呼び出すため、model-routing/cascade系統の新規候補に合致する。",
   "semantic_scholar_id": "2617cc5165b058bee846687057fe5b523b244d3f",
   "source_url": "https://arxiv.org/abs/2502.02743",
-  "status": "ready",
+  "status": "superseded",
   "title": "LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-24T13:07:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md",
+  "represented_canonical_id": "arXiv:2502.02743",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
