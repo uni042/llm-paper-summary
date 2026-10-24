@@ -32,6 +32,31 @@ repair_kind: section_heading_normalization
 repair_note: 既存Researchの見出し階層のみ正規化。技術本文・数値・引用は変更なし。今回のrunで一次論文全文の独立再監査は行っていない。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.10403
+  arxiv_id: '2305.10403'
+- canonical_id: arXiv:2402.11809
+- canonical_id: arXiv:2404.11912
+- canonical_id: arXiv:2406.02532
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2503.01840
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2505.13254
+- canonical_id: arXiv:2501.19309
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2503.10135
+- canonical_id: arXiv:2402.02057
+- canonical_id: ACL:2024.acl-long.681
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2405.19715
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2410.05589
+- canonical_id: arXiv:2402.05109
+- canonical_id: arXiv:2211.17192
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # LinguaSpec：言語学的事前知識を用いた追加学習不要の適応的投機的復号
