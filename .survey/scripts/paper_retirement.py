@@ -11,6 +11,7 @@ import contextlib
 import hashlib
 import json
 import os
+import posixpath
 import re
 import subprocess
 import sys
@@ -171,6 +172,74 @@ def _markdown_destinations(markdown: str):
             yield unquote(raw.split("#", 1)[0])
 
 
+def _markdown_link_records(markdown: str):
+    patterns = (
+        ("inline", re.compile(r"\[([^\]]*)\]\(\s*(<[^>]+>|[^\s)*]+)")),
+        ("reference", re.compile(r"(?m)^\s{0,3}\[([^\]]+)\]:\s*(<[^>]+>|[^\s]+)")),
+    )
+    for kind, pattern in patterns:
+        for match in pattern.finditer(markdown):
+            raw = match.group(2).strip()
+            is_angle = raw.startswith("<") and raw.endswith(">")
+            if kind == "inline":
+                complete_syntax = f"[{match.group(1)}]({raw})"
+                has_image_prefix = match.start() > 0 and markdown[match.start() - 1] == "!"
+                exact_inline_syntax = (
+                    complete_syntax
+                    if not has_image_prefix and markdown.startswith(complete_syntax, match.start())
+                    else None
+                )
+            else:
+                exact_inline_syntax = None
+            if is_angle:
+                raw = raw[1:-1]
+            raw = re.sub(r"\\(.)", r"\1", raw)
+            yield {
+                "kind": kind,
+                "label": match.group(1),
+                "destination": unquote(raw.split("#", 1)[0]),
+                "angle_destination": is_angle,
+                "exact_inline_syntax": exact_inline_syntax,
+                "start": match.start(),
+            }
+
+
+def _generated_index_link(root: Path, target: Path, meta: dict[str, Any], source: Path, markdown: str, link: dict[str, Any]) -> bool:
+    """Recognize only paper links emitted by survey.py's canonical builders."""
+    if link["kind"] != "inline" or link["angle_destination"]:
+        return False
+    try:
+        source_rel = source.relative_to(root).as_posix()
+        target_rel = target.relative_to(root).as_posix()
+    except ValueError:
+        return False
+    parts = PurePosixPath(target_rel).parts
+    if len(parts) != 4 or parts[0] != "papers" or parts[1] not in survey.PAPER_FAMILIES or not parts[3].endswith(".md"):
+        return False
+    family = parts[1]
+    lineage = survey.canonical_lineage(family, parts[2], repo_root=root)
+    title = survey.cell(meta.get("title") or target.stem)
+    expected: str | None = None
+    if family == "inference" and source_rel == "papers/inference/comparison.md":
+        expected = survey._comparison_link(target_rel)
+    elif source_rel == f"papers/{family}/{lineage}/README.md":
+        start_marker = "<!-- survey:auto:start -->"
+        end_marker = "<!-- survey:auto:end -->"
+        if markdown.count(start_marker) != 1 or markdown.count(end_marker) != 1:
+            return False
+        start = markdown.index(start_marker) + len(start_marker)
+        end = markdown.index(end_marker)
+        if end <= start or not (start <= link["start"] < end):
+            return False
+        expected = posixpath.relpath(target_rel, start=f"papers/{family}/{lineage}")
+    if expected is None or link["label"] != title or link["destination"] != expected:
+        return False
+    if link["exact_inline_syntax"] != f"[{title}]({expected})":
+        return False
+    tracked = subprocess.run(["git", "ls-files", "--error-unmatch", source_rel], cwd=root, capture_output=True)
+    return tracked.returncode == 0
+
+
 def preflight(root: Path, manifest_path: Path) -> dict[str, Any]:
     root = root.resolve()
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -191,6 +260,7 @@ def preflight(root: Path, manifest_path: Path) -> dict[str, Any]:
     aliases: dict[str, str] = {}
     total = 0
     checked = []
+    generated_links_requiring_rebuild: list[dict[str, str]] = []
     active_index = research_job_reconciliation.build_paper_index(root)
     for index, entry in enumerate(rows):
         if not isinstance(entry, dict):
@@ -254,15 +324,32 @@ def preflight(root: Path, manifest_path: Path) -> dict[str, Any]:
             if other == target:
                 continue
             markdown = other.read_text(encoding="utf-8", errors="ignore")
-            for linked in _markdown_destinations(markdown):
+            for link in _markdown_link_records(markdown):
+                linked = link["destination"]
                 if not linked or "://" in linked or linked.startswith("mailto:"):
                     continue
                 linked_path = Path(linked.lstrip("/"))
                 resolved_link = ((root / linked_path) if linked.startswith("/") else (other.parent / linked_path)).resolve()
                 if resolved_link == target:
+                    if _generated_index_link(root, target, meta, other, markdown, link):
+                        generated_links_requiring_rebuild.append({
+                            "canonical_id": canonical,
+                            "source_path": other.relative_to(root).as_posix(),
+                            "destination": linked,
+                        })
+                        continue
                     raise ValueError(f"inbound local markdown link requires reviewed rewrite: {path_text}")
         checked.append({**entry, "path": path.as_posix(), "original_path": path.as_posix(), "canonical_id": canonical, "verified_aliases": expected_aliases, "source_commit": actual_commit, "source_sha256": sha, "source_git_blob_sha": blob, "_source_bytes": len(content)})
-    return {"schema_version": 1, "source_commit": actual_commit, "entry_count": len(checked), "source_bytes": total, "entries": checked}
+    generated_links_requiring_rebuild.sort(key=lambda row: (row["canonical_id"], row["source_path"], row["destination"]))
+    return {
+        "schema_version": 1,
+        "source_commit": actual_commit,
+        "entry_count": len(checked),
+        "source_bytes": total,
+        "entries": checked,
+        "generated_links_requiring_rebuild": generated_links_requiring_rebuild,
+        "canonical_rebuild_required": bool(generated_links_requiring_rebuild),
+    }
 
 
 def apply(root: Path, manifest_path: Path) -> dict[str, Any]:
