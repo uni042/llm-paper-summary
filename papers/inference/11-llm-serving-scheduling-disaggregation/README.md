@@ -1523,7 +1523,7 @@
   DistServeは、二段階を異なるGPU群へ分離し、事前入力処理側と逐次復号側の装置配分、モデル並列化、要求の束ね方を独立に決める。OSDI 2024の論文は、四ノード・計32台のA100 80GBを用い、OPT-13B、OPT-66B、OPT-175Bと三種のアプリケーションを評価した。
 
 - **2023-11 · [Splitwise: Efficient Generative LLM Inference Using Phase Splitting](2023-2311.18677-splitwise-efficient-generative-llm-inference-phase-splitting.md)**  
-  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：461  
+  実装：[✓](https://github.com/Mutinifni/splitwise-sim) ・ リポジトリ内被引用：462  
   プリフィルとデコードを別の計算機群へ分け、それぞれに向くGPU世代・電力設定・台数を使い分けて、クラスタ全体のスループット・コスト・消費電力を改善するサービング設計。
 
 - **2024-03 · [Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve](2024-2403.02310-sarathi-serve-chunked-prefills-stall-free-scheduling.md)**  
@@ -1614,6 +1614,10 @@
   実装：✓ ・ リポジトリ内被引用：37  
   本論文はこの問題を機械学習システム（MLSys）の観点から整理し、アルゴリズム側のモデル圧縮・効率的復号と、システム側のメモリ管理・バッチ化・並列化・スケジューリングを同じサービング設計空間に置く。
 
+- **2024-06 · [Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs](2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md)**  
+  実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：34  
+  異種GPUとネットワークを容量付き有向グラフへ写像し、最大流を目的に層配置をMILPで決め、最大流比率に沿って要求ごとの経路を選ぶことで、固定パイプラインの遊休GPUと通信混雑を減らすLLMサービング方式。
+
 - **2024-04 · [Andes: Defining and Enhancing Quality-of-Experience in LLM-Based Text Streaming Services](2024-2404.16283-andes-qoe-text-streaming-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：34  
   提案は、理想的なトークン消費時系列と実際の消費時系列の差から体感品質（Quality of Experience、QoE）を定義し、各要求に今GPU時間を割り当てた場合のQoE改善量を予測してトークン単位で実行要求を入れ替えるもの。
@@ -1621,10 +1625,6 @@
 - **2024-06 · [TurboSpec: Closed-loop Speculation Control System for Optimizing LLM Serving Goodput](2024-2406.14066-turbospec-closed-loop-speculation-control-system-for-optimizing-llm-serv.md)**  
   実装：✓ ・ リポジトリ内被引用：33  
   TurboSpecは、大規模言語モデル（LLM）の複数要求をまとめる連続バッチ処理と、単一要求内で複数候補を先読みする投機的復号（投機的復号）を、現在の負荷に応じて切り替える制御システムである。
-
-- **2024-06 · [Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs](2024-2406.01566-helix-maxflow-heterogeneous-gpu-serving.md)**  
-  実装：[✓](https://github.com/Thesys-lab/Helix-ASPLOS25) ・ リポジトリ内被引用：33  
-  異種GPUとネットワークを容量付き有向グラフへ写像し、最大流を目的に層配置をMILPで決め、最大流比率に沿って要求ごとの経路を選ぶことで、固定パイプラインの遊休GPUと通信混雑を減らすLLMサービング方式。
 
 - **2024-04 · [Mélange: Cost Efficient Large Language Model Serving by Exploiting GPU Heterogeneity](2024-2404.14527-m-lange-cost-efficient-large-language-model-serving-by-exploiting-gpu-he.md)**  
   実装：✓ ・ リポジトリ内被引用：31  
@@ -1702,6 +1702,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   LoRA読込中にCPUでプリフィル計算を先行し、ランク依存のバッチ遅延を予測してSLO違反が少ないサーバへ配分することで、多数アダプタ提供のコールドスタートを隠す。
 
+- **2023-12 · [Unicron: Economizing Self-Healing LLM Training at Scale](2023-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  しかし、通常時の学習速度を犠牲にする方式や、障害を受けた一つのジョブだけを回復させる方式では、複数ジョブが共存するクラスタの長期的な総計算量が最適になるとは限らない。論文が示す最大1.9倍という値は、128枚のA800 GPUを用いた高頻度障害シナリオでの累積重み付き有効演算量のMegatron比である。
+
 - **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
   実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：5  
   VideoLLM-onlineは、動画が流れている最中に発話すべき瞬間だけ応答する仕組みを、動画ストリーム内学習（Learning-In-Video-strEam、LIVE）として設計した。
@@ -1713,10 +1717,6 @@
 - **2024-04 · [Prepacking: A Simple Method for Fast Prefilling and Increased Throughput in Large Language Models](2024-2404.09529-prepacking-a-simple-method-for-fast-prefilling-and-increased-throughput-in-large-language-models.md)**  
   実装：[✓](https://github.com/siyan-zhao/prepacking) ・ リポジトリ内被引用：5  
   Prepackingは、長さの異なる複数の入力プロンプトを一括処理する際、短いプロンプトを最長プロンプトまでパディングすることで発生する無駄な計算とGPUメモリ消費を減らす方式である。論文は単一のNVIDIA A6000-48GBで、1.3Bから13Bまでのモデルを使って検証する。
-
-- **2023-12 · [Unicron: Economizing Self-Healing LLM Training at Scale](2023-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  しかし、通常時の学習速度を犠牲にする方式や、障害を受けた一つのジョブだけを回復させる方式では、複数ジョブが共存するクラスタの長期的な総計算量が最適になるとは限らない。論文が示す最大1.9倍という値は、128枚のA800 GPUを用いた高頻度障害シナリオでの累積重み付き有効演算量のMegatron比である。
 
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：4  
