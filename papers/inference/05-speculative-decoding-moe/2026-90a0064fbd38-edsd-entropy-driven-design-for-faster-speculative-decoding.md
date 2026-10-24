@@ -31,6 +31,8 @@ worker_completed_at: '2026-10-24T18:05:22+09:00'
 reference_main_sha: '230ed018bff46cee67303f2a2219ec122f547627'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # EDSD：エントロピーに基づく草稿モデルの学習・構造同時設計

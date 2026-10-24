@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（220本）
+## 自動生成の論文一覧（221本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -427,6 +427,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [HCSpec: Two-Tier Horizontal Cascade Speculative Decoding for High-Efficiency Large Language Model Inference](2026-e55859d7e526-hcspec-two-tier-horizontal-cascade-speculative-decoding-for-high-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小さな草稿モデルが先読みした複数トークンを標的モデルが一括検証し、標的モデルの逐次呼び出しを削減する。
+
+- **2026-07 · [EDSD: Entropy-Driven Design for Faster Speculative Decoding](2026-90a0064fbd38-edsd-entropy-driven-design-for-faster-speculative-decoding.md)**  
+  実装：[✓](https://github.com/KerwinKai/EDSD) ・ リポジトリ内被引用：0  
+  EDSDは、投機的復号（投機的復号）の草稿モデルを、対象となる大規模言語モデルの不確実性に応じて学習・設計する研究である。代表例のLlama-3.1-Instruct 8B、温度0では、EAGLE-3の平均受理長6.34・通常復号比3.73倍に対してEDSDは6.56・3.92倍となる。
 
 - **2026-07 · [Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding](2026-2607.27269-beyond-kv-reconstruction-functional-reconstruction-for-mla-draft-models-.md)**  
   実装：[✓](https://github.com/swyhahaha/FunctionalMLA) ・ リポジトリ内被引用：0  

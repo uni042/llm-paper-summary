@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（937本）
+## 自動生成の論文一覧（938本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1201,6 +1201,10 @@
 - **2026-06 · [Cold Start Latency of Quantized Small Language Models on Serverless CPU Infrastructure](2026-9a95feba0c73-cold-start-latency-of-quantized-small-language-models-on-serverless-cpu-.md)**  
   実装：[✓](https://github.com/mingwho/slm-research) ・ リポジトリ内被引用：0  
   本論文は、アクセス頻度の低い小型言語モデル（Small Language モデル; SLM）を、要求が来たときだけ起動するサーバーレス基盤で提供する際の遅延を測る研究である。利用者の要求がないときに実行環境をゼロへ縮退させられる反面、次の要求時にはコンテナを起こし、量子化重みを読み込み、トークンを生成する必要がある。
+
+- **2026-06 · [CLP: Collocation-Length Prediction for Zero-Loss Adaptive Multi-Token Inference](2026-2606.10935-clp-collocation-length-prediction-for-zero-loss-adaptive-multi-token-inf.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  残りの課題は、追加ヘッドが正しく予測できそうな連続トークン数を決めることである。追加ヘッドの学習は必要だが、独立した小型草稿モデルを毎回起動する方式ではない。Qwen2.5-1.5B-Instructの原著表IVでは、k=3のCLPが67.47トークン/秒、通常の貪欲復号比1.294倍、反復3-gram比率0.018となった。
 
 - **2026-06 · [CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield](2026-2606.31796-cherry-compressed-hierarchical-experts-with-recurrent-representational-y.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
