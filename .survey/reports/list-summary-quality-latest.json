@@ -14188,6 +14188,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-922addb5dfb2-janus-multi-llm-serving-at-production-scale.md",
+      "status": "PASS",
+      "summary": "LLMごとのHBM・演算・帯域需要を予測し、30秒周期の共存配置と0.5秒周期の増減、共有HBMとデバイス間重み複製を組み合わせて大規模サービングの期限達成率と設備効率を改善する。",
+      "char_count": 90,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-925996defd10-quartz-quantile-aware-routing-and-queueing-for-ttft-slos-in-llm-serving.md",
       "status": "PASS",
       "summary": "条件付き分位点予測と公平性付き待ち行列で、LLMサービングの初回応答尾部遅延を削減するルータ方式。",
@@ -17827,6 +17836,15 @@
       "status": "PASS",
       "summary": "250課題で生成GPUカーネルの正しさと実測速度を同時評価し、単発生成の弱さと、実行・性能解析の反復フィードバックで改善する条件を明らかにする。",
       "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md",
+      "status": "PASS",
+      "summary": "浅い補助層の学習により視覚トークンの選別精度を上げ、同じ補助層を自己投機的復号の草稿器にも使って入力処理と長文生成の双方を高速化する。",
+      "char_count": 67,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -24644,6 +24662,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2605.15626-io-svd-input-output-whitened-svd-for-adaptive-rank-llm-compression.md",
+      "status": "PASS",
+      "summary": "入力活性と出力予測分布のKL感度を両側白色化へ組み込み、特異成分の損失影響による適応階数配分と量子化行選択で、LLM/VLMの低階数圧縮時の精度を維持する。",
+      "char_count": 78,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2605.16928-full-attention-strikes-back-transferring-full-attention-into-sparse-with.md",
       "status": "PASS",
       "summary": "全注意モデルの検索ヘッドと局所ヘッドを分離し、16次元索引と動的top-p選択で少量の追加学習から長文脈の疎注意推論へ変換する。",
@@ -25288,6 +25315,15 @@
       "summary": "ストリーミング映像の古いKVを固定容量の意味・空間プロトタイプと残差統計に集約し、疑似トークンで遅延問い合わせに応える。長時間後の精度を改善するが、映像取り込み時の更新費用が生じる。",
       "char_count": 91,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2606.29228-understanding-evaluation-illusion-in-diffusion-large-language-models.md",
+      "status": "PASS",
+      "summary": "拡散LLMの並列復号の評価順位がプロンプトテンプレート、生成長、few-shot、GPUで変動することを実証し、複数テンプレートでの速度・品質比較を推奨する。",
+      "char_count": 79,
+      "japanese_ratio": 0.8955223880597015,
       "failures": [],
       "warnings": []
     },
