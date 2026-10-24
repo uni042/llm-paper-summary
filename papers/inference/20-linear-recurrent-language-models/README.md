@@ -32,7 +32,7 @@
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（18本）
+## 自動生成の論文一覧（29本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/)
 
@@ -41,9 +41,19 @@
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
-該当なし。
+- **2026-03 · [M²RNN: Non-Linear RNNs with Matrix-Valued States for Scalable Language Modeling](2026-2603.14360-m-rnn-non-linear-rnns-with-matrix-valued-states-for-scalable-language-mo.md)**  
+  実装：[✓](https://github.com/open-lm-engine/lm-engine) ・ リポジトリ内被引用：1  
+  線形注意やMamba-2、Gated DeltaNetなどの再帰型方式は固定サイズの状態へ過去を畳み込み、生成時のメモリを一定に保ちやすい。
+
+- **2025-11 · [DiffuMamba: High-Throughput Diffusion LMs with Mamba Backbone](2025-2511.15927-diffumamba-high-throughput-diffusion-lms-with-mamba-backbone.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  しかし拡散Transformerは各ステップで系列全体の注意を再計算し、系列長Lが長くなると注意演算の二乗計算量と中間状態の読み書きが負担になる。一方、過去ブロックの状態を再利用する方式では純Mamba版が2.3倍、混合版が1.9倍と報告され、倍率は復号方式ごとに異なる。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-09 · [Switching Linear Attention](2026-2609.39034-switching-linear-attention.md)**  
+  実装：[✓](https://github.com/lindermanlab/switching-linear-attention) ・ リポジトリ内被引用：0  
+  ソフトマックス注意（softmax 注意機構）は過去の各トークンの鍵と値を保持し、現在の問い合わせとの類似度に応じて必要な値を取り出す。1.3Bモデルの単一H100上の生成ではTransformer基準に対して全体スループットが4〜5倍になる一方、より単純なゲート付きDeltaNetより推論で1.25〜1.5倍遅く、学習では約2倍遅い。
 
 - **2026-09 · [Kalman Delta Networks: Uncertainty-aware Associative Memory](2026-2609.07816-kalman-delta-networks-associative-memory.md)**  
   実装：[✓](https://github.com/ngocbh/kalman-delta-networks) ・ リポジトリ内被引用：0  
@@ -61,11 +71,31 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長い文脈の自己回帰推論では、通常のソフトマックス注意（softmax 注意機構）が鍵・値キャッシュ（Key-Value Cache、KV Cache）を系列長に応じて保持し、入力一括処理の計算も系列長の二乗で増える。
 
+- **2026-02 · [Online Vector Quantized Attention](2026-2602.03922-online-vector-quantized-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
+
 ### 2年前（2024-11〜2025-10）
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
   実装：[✓](https://github.com/NVlabs/GatedDeltaNet) ・ リポジトリ内被引用：84  
   本論文は、長文脈を固定容量の状態へ圧縮する線形再帰言語モデルが、記憶の保持と更新を両立しにくい問題を扱う。
+
+- **2025-02 · [PICASO: Permutation-Invariant Context Composition with State Space Models](2025-2502.17605-picaso-permutation-invariant-context-composition-with-state-space-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  PICASOは、状態空間モデル（State Space モデル、SSM）で検索拡張生成を行うとき、検索された文章を毎回トークン列として読み直す費用を削減する方式である。後者は文章の個数に線形な計算量を持ち、実験では全順列版と近い予測品質を示した。
+
+- **2024-11 · [MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map](2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md)**  
+  実装：[✓](https://github.com/BICLab/MetaLA) ・ リポジトリ内被引用：1  
+  MetaLAは、従来別々の系列モデルとして説明される線形Transformer、状態空間モデル（State Space モデル; SSM）、線形再帰ニューラルネット（Linear RNN）を、有限サイズの隠れ状態を更新する線形注意（linear 注意機構）の共通形式で扱う研究である。
+
+- **2025-10 · [MeSH: Memory-as-State-Highways for Recursive Transformers](2025-2510.07739-mesh-memory-as-state-highways-for-recursive-transformers.md)**  
+  実装：[✓](https://github.com/LivingFutureLab/MeSH/) ・ リポジトリ内被引用：0  
+  MeSH（メモリ-as-State-Highways）は、同じTransformerブロックを複数回適用する再帰Transformer（recursive transformer）の性能低下を抑えるため、反復ごとに読み書きを制御する状態メモリを導入する手法である。
+
+- **2025-07 · [Scaling up the State Size of RNN LLMs for Long-Context Scenarios](2025-21fc56600ade-scaling-up-the-state-size-of-rnn-llms-for-long-context-scenarios.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Transformerの自己注意（self-注意機構）は、過去の鍵・値（KV）を系列長に比例して保持し、特定位置の情報を取り出せる。400M級Gated DeltaNetの状態を8倍にすると、FDA・SWDE・SQuADの検索課題平均が28.03から37.39へ改善した。
 
 ### 3年前（2023-11〜2024-10）
 
@@ -85,6 +115,10 @@
   実装：✓ ・ リポジトリ内被引用：32  
   Griffinは、自己回帰言語モデルの推論において、文脈が伸びるたびに増える鍵・値キャッシュ（KVキャッシュ）の読み出し費用を抑えるため、固定長の再帰状態と有限窓の注意機構を組み合わせたモデル構造である。
 
+- **2024-04 · [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：30  
+  Infini-注意機構は、入力文脈が数十万から100万トークンに達しても、過去の全トークンに対応する鍵・値（KV）を保存し続けずに情報を参照するための注意機構である。
+
 - **2024-06 · [Samba: Simple Hybrid State Space Models for Efficient Unlimited Context Language Modeling](2024-2406.07522-samba-simple-hybrid-state-space-models-for-efficient-unlimited-context-language-modeling.md)**  
   実装：[✓](https://github.com/microsoft/Samba) ・ リポジトリ内被引用：28  
   Sambaは、選択的状態空間モデル（Selective State Space モデル; SSM）で遠い過去を固定サイズ状態へ畳み込み、スライディング窓注意（Sliding Window 注意機構; SWA）で直近トークンを正確に参照する。
@@ -97,6 +131,10 @@
   実装：[✓](https://github.com/OpenNLPLab/HGRN2) ・ リポジトリ内被引用：17  
   これに対し、線形再帰モデルは固定サイズの状態へ履歴を圧縮して次のトークンを生成できるため、推論時の状態保存量を系列長に依存させない。
 
+- **2024-01 · [Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models](2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md)**  
+  実装：[✓](https://github.com/OpenNLPLab/lightning-attention) ・ リポジトリ内被引用：9  
+  一覧用要約：Lightning 注意機構-2は因果線形注意を現在のタイル内と過去タイルからの寄与に分解し、タイル内を因果マスク付き通常行列積、タイル間を固定サイズの累積KV状態による右積で計算する。前向き・逆向きの両方をTritonで入出力認識型に実装し、長系列でも学習速度と作業メモリを安定させる。
+
 - **2023-11 · [GateLoop: Fully Data-Controlled Linear Recurrence for Sequence Modeling](2023-2311.01927-gateloop-fully-data-controlled-linear-recurrence-for-sequence-modeling.md)**  
   実装：[✓](https://github.com/tobiaskatsch/GatedLinearRNN) ・ リポジトリ内被引用：9  
   一方、状態空間モデルや線形再帰モデルは、過去を有限の隠れ状態へ圧縮して逐次更新できるが、保持・忘却の速度を固定の状態遷移係数に依存させる方式では、入力内容に応じて重要な情報だけを残す操作が難しい。
@@ -104,6 +142,10 @@
 - **2024-02 · [BlackMamba: Mixture of Experts for State-Space Models](2024-2402.01771-blackmamba-mixture-of-experts-for-state-space-models.md)**  
   実装：[✓](https://github.com/Zyphra/BlackMamba) ・ リポジトリ内被引用：4  
   選択的状態空間モデルの固定状態生成と、混合専門家層の疎な全結合計算を一つの言語モデルに組み込み、長系列生成・学習計算量・専門家の割当てを同時に評価した。
+
+- **2024-03 · [Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference](2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md)**  
+  実装：[✓](https://github.com/h-zhao1997/cobra) ・ リポジトリ内被引用：2  
+  提案の中心は、既存のMamba言語モデルへ視覚情報を接続する設計と学習方法を評価した点にある。単一のNVIDIA A100 PCIe 80GBで、画像1枚と同じ質問を入力し256トークンを生成する実験では、Cobra-3.5Bが1.54秒・166.47トークン/秒、MobileVLM v2-3Bが5.17秒・49.50トークン/秒である。
 
 ### 4年前（2022-11〜2023-10）
 

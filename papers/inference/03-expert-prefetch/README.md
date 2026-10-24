@@ -5,7 +5,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 一部の手法はexpertを小さく分けたり、予測したexpertをそのまま使うなどして、予測ミス時の追加I/Oまで減らす。将来需要の予測をcache保持判断に使い、必ずしも先読み転送しない方式も含む。最終目的が推論高速化であるため、予測器自体に学習が必要でもこの系統に分類する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（15本）
+## 自動生成の論文一覧（16本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/)
 
@@ -65,6 +65,10 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 - **2025-10 · [ExpertFlow: Adaptive Expert Scheduling and Memory Coordination for Efficient MoE Inference](2025-2510.26730-expertflow-adaptive-prefetch.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   固定先読み幅を帯域・入力・待機フィードバックで動的化し、予測器・二段LRU・キャッシュ認識ルーティングを協調させてMoEエキスパート転送待ちを隠蔽する実行時システム。
+
+- **2025-08 · [MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices](2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md)**  
+  実装：[✓](https://github.com/ngavhane/moe-beyond) ・ リポジトリ内被引用：2  
+  トークン埋め込みと層IDから次のMoEエキスパートを予測する4層Transformerを学習し、10%容量のGPUキャッシュでMoE-Infinityの17%に対し約72%の適中率を示す。
 
 ### 3年前（2023-11〜2024-10）
 

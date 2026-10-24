@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（937本）
+## 自動生成の論文一覧（912本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -372,10 +372,6 @@
   実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：1  
   TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
 
-- **2026-03 · [M²RNN: Non-Linear RNNs with Matrix-Valued States for Scalable Language Modeling](2026-2603.14360-m-rnn-non-linear-rnns-with-matrix-valued-states-for-scalable-language-mo.md)**  
-  実装：[✓](https://github.com/open-lm-engine/lm-engine) ・ リポジトリ内被引用：1  
-  線形注意やMamba-2、Gated DeltaNetなどの再帰型方式は固定サイズの状態へ過去を畳み込み、生成時のメモリを一定に保ちやすい。
-
 - **2026-03 · [CSAttention: Centroid-Scoring Attention for Accelerating LLM Inference](2026-2604.08584-csattention-centroid-scoring-attention-for-accelerating-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   長文脈の自己注意では、現在の問い合わせベクトルと過去の鍵ベクトルとの内積を計算し、対応する値を重み付き集約する。多くの鍵の寄与が小さいため、一部の鍵だけを使う疎注意で演算量と転送量を削減できる。しかし95%もの鍵を捨てる場合、実際に重要な鍵を取りこぼすと正答率が急落する。鍵の全件走査をオンラインで繰り返さない設計である。
@@ -528,10 +524,6 @@
   実装：[✓](https://github.com/april-tools/mtpc) ・ リポジトリ内被引用：1  
   本論文は、バイト単位の大規模言語モデルで複数の将来バイトを同時に予測する際、予測位置間の依存関係と候補生成の遅延を同時に制御する確率回路方式MtPCを提案する。
 
-- **2025-11 · [DiffuMamba: High-Throughput Diffusion LMs with Mamba Backbone](2025-2511.15927-diffumamba-high-throughput-diffusion-lms-with-mamba-backbone.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  しかし拡散Transformerは各ステップで系列全体の注意を再計算し、系列長Lが長くなると注意演算の二乗計算量と中間状態の読み書きが負担になる。一方、過去ブロックの状態を再利用する方式では純Mamba版が2.3倍、混合版が1.9倍と報告され、倍率は復号方式ごとに異なる。
-
 - **2025-11 · [DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF](2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   DeCoRLは、長い推論手順を単一の大規模言語モデル（LLM）が順番に生成する代わりに、役割の異なる小さな推論モジュールへ分解して同時に実行し、出力を統合する枠組みである。著者はNVIDIA A100を使った10段階の推論問題で、逐次実行1,202ミリ秒に対してDeCoRLが316ミリ秒となり、約3.8倍高速化したと報告する。
@@ -597,10 +589,6 @@
 - **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。
-
-- **2026-09 · [Switching Linear Attention](2026-2609.39034-switching-linear-attention.md)**  
-  実装：[✓](https://github.com/lindermanlab/switching-linear-attention) ・ リポジトリ内被引用：0  
-  ソフトマックス注意（softmax 注意機構）は過去の各トークンの鍵と値を保持し、現在の問い合わせとの類似度に応じて必要な値を取り出す。1.3Bモデルの単一H100上の生成ではTransformer基準に対して全体スループットが4〜5倍になる一方、より単純なゲート付きDeltaNetより推論で1.25〜1.5倍遅く、学習では約2倍遅い。
 
 - **2026-09 · [SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing](2026-2609.15039-splitee-improving-llm-inference-on-trusted-hardware-with-differentially-private-gpu-outsourcing.md)**  
   実装：[✓](https://github.com/DPVault/SpliTEE) ・ リポジトリ内被引用：0  
@@ -1570,10 +1558,6 @@
   実装：[✓](https://github.com/IST-DASLab/GSQ) ・ リポジトリ内被引用：0  
   大規模言語モデルを2～3ビット程度に圧縮すると、重みの転送量と常駐メモリを大幅に減らせる。Llama-3.1-8B/70Bの2ビット評価で従来スカラー量子化より高い精度を示し、Qwen3-8Bの既存GGUF K-Quantチェックポイントを同じ保存形式のまま改善する点が実用上重要である。
 
-- **2026-04 · [GRASPrune: Global Gating for Budgeted Structured Pruning of Large Language Models](2026-2604.19398-grasprune-global-gating-for-budgeted-structured-pruning-of-large-languag.md)**  
-  実装：[✓](https://github.com/ZiY-Wang/GRASPrune) ・ リポジトリ内被引用：0  
-  本論文は、大規模言語モデル（LLM）の推論時に重みメモリと鍵・値キャッシュ（KV キャッシュ）がともに大きな資源を消費する点を背景に、フィードフォワードネットワーク（Feed-順伝播 Network; FFN）の中間チャネルと、注意機構のKVヘッド群を一つの予算で選ぶ構造化枝刈り（structured 枝刈り）を提案する。
-
 - **2026-04 · [Geometry-Guided 3D Visual Token Pruning for Video-Language Models](2026-2604.18260-geometry-guided-3d-visual-token-pruning-for-video-language-models.md)**  
   実装：[✓](https://github.com/homothetic/Geo3DPruner) ・ リポジトリ内被引用：0  
   動画言語モデル（Video Language モデル）は、動画フレームを多数の画像パッチに分割して言語モデルへ入力する。三次元場面理解では同じ机や椅子が異なるカメラ位置から繰り返し写るため、入力トークンが増えても新しい空間情報が比例して増えるとは限らない。比較対象FastVは81.0%、VisPrunerは84.9%である。
@@ -1782,10 +1766,6 @@
   実装：[✓](https://github.com/xiwenc1/OTPrune) ・ リポジトリ内被引用：0  
   OTPruneは、画像と言語を組み合わせて推論する多モーダル大規模言語モデルにおいて、画像から得られる多数の視覚トークンを追加学習なしで削減する手法である。原著が証明する約63%の最悪時近似保証は代理目的の最大化に対するものであり、元のワッサースタイン距離や言語モデルの回答品質が63%保証されるという意味ではない。
 
-- **2026-02 · [Online Vector Quantized Attention](2026-2602.03922-online-vector-quantized-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
-
 - **2026-02 · [On the Limits of Layer Pruning for Generative Reasoning in Large Language Models](2026-2602.01997-on-the-limits-of-layer-pruning-for-generative-reasoning-in-large-languag.md)**  
   実装：[✓](https://github.com/safal312/on-the-limits-of-layer-pruning) ・ リポジトリ内被引用：0  
   本研究は大規模言語モデルの層を丸ごと削る深さ方向の枝刈り（層 枝刈り）が、分類課題と生成型推論課題で異なる品質低下を起こす原因を調べる。主な実験では、層の約25%を除去し、元モデルが生成した回答を教師にして再学習する。
@@ -1926,10 +1906,6 @@
   実装：[✓](https://github.com/sunshy-1/JuDi) ・ リポジトリ内被引用：0  
   著者らは学習済み判定器の「重要トークン」スコアが、二つのモデルのカルバック・ライブラー発散（Kullback–Leibler divergence; KL発散）と相関することを確認し、KL値が閾値を下回る候補を受理する学習不要の方式JuDiを提案する。
 
-- **2026-01 · [Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration](2026-2601.02674-iterative-structured-pruning-for-large-language-models-with-multi-domain.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  本論文は大規模言語モデル（LLM）の構造化枝刈り（structured 枝刈り）で、削除すべきチャネルの選択をより正確にするため、多領域の較正データと反復的な重要度の再計算を組み合わせる。Qwen2.5-32Bを50%構造化枝刈りした6課題ゼロショット評価では、FLAPの平均36.59点に対して提案法は46.65点となる。
-
 - **2026-01 · [Is Finer Better? The Limits of Microscaling Formats in Large Language Models](2026-2601.19026-is-finer-better-the-limits-of-microscaling-formats-in-large-language-mod.md)**  
   実装：[✓](https://github.com/iclr2016codeshare/microscaling) ・ リポジトリ内被引用：0  
   本論文は、大規模言語モデルの重みと活性を4ビット浮動小数点（FP4）へ圧縮する際、「量子化のブロックを小さくするほど精度が良くなる」という一般的な期待が破れる条件を明らかにした研究である。
@@ -1993,10 +1969,6 @@
 - **2025-12 · [Script: Graph-Structured and Query-Conditioned Semantic Token Pruning for Multimodal Large Language Models](2025-2512.01949-script-graph-structured-and-query-conditioned-semantic-token-pruning-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   手法は、余弦類似度の二部グラフを用いて冗長な視覚トークンを削るグラフ構造化枝刈り（Graph-Structured Pruning; GSP）と、質問との関連性に加えて特徴の多様性を考慮する質問条件付き意味枝刈り（Query-Conditioned Semantic Pruning; QCSP）から成る。
-
-- **2025-12 · [SAP: Syntactic Attention Pruning for Transformer-based Language Models](2025-2512.19125-sap-syntactic-attention-pruning-for-transformer-based-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  SAP（Syntactic 注意機構 枝刈り）は、Transformerの複数頭注意（multi-head 注意機構）に含まれる各注意頭（注意機構 head）が、文の構文依存関係をどの程度捉えているかを調べ、言語理解にとって重要でないと判定した頭を再学習なしで削除する構造的枝刈り（structured 枝刈り）手法である。
 
 - **2025-12 · [RouteRAG: Efficient Retrieval-Augmented Generation from Text and Graph via Reinforcement Learning](2025-2512.09487-routerag-efficient-retrieval-augmented-generation-from-text-and-graph-vi.md)**  
   実装：[✓](https://github.com/YucanGuo/RouteRAG) ・ リポジトリ内被引用：0  
@@ -2089,10 +2061,6 @@
 - **2025-11 · [NeuroPath: Neurobiology-Inspired Path Tracking and Reflection for Semantically Coherent Retrieval](2025-2511.14096-neuropath-neurobiology-inspired-path-tracking-and-reflection-for-semanti.md)**  
   実装：[✓](https://github.com/KennyCaty/NeuroPath) ・ リポジトリ内被引用：0  
   知識グラフ（Knowledge Graph; KG）上の隣接性だけを重視する既存方式は、質問に答えるための関係の向きや意味を無視して文書を集める場合がある。原著の多段質問応答3データセットでは、主要なグラフ検索方式に比べて平均Recall@2を16.3%、Recall@5を13.5%改善したと報告する。
-
-- **2025-11 · [INTERLACE: Interleaved Layer Pruning and Efficient Adaptation in Large Vision-Language Models](2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md)**  
-  実装：[✓](https://github.com/pmadinei/Interlace) ・ リポジトリ内被引用：0  
-  3層組は重複しないよう選択し、同じ層が複数の役割を持たないようにする。原著の表1では、Qwen3-VL-8Bの言語デコーダ層を25%削除し、FineVisionの1%を1エポック微調整すると、12課題平均の元モデルに対する性能保持率は86.1%だった。
 
 - **2025-11 · [GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training](2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2444,10 +2412,6 @@
   実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：2  
   混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。
 
-- **2025-08 · [MoE-Beyond: Learning-Based Expert Activation Prediction on Edge Devices](2025-2508.17137-moe-beyond-learning-based-expert-activation-prediction-on-edge-devices.md)**  
-  実装：[✓](https://github.com/ngavhane/moe-beyond) ・ リポジトリ内被引用：2  
-  トークン埋め込みと層IDから次のMoEエキスパートを予測する4層Transformerを学習し、10%容量のGPUキャッシュでMoE-Infinityの17%に対し約72%の適中率を示す。
-
 - **2025-07 · [R-Stitch: Dynamic Trajectory Stitching for Efficient Reasoning](2025-2507.17307-r-stitch-dynamic-trajectory-stitching-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   R-Stitchは、長い思考過程（Chain-of-Thought、CoT）を生成する際、小型言語モデル（SLM）が確信を持って生成できる部分は小型側に任せ、難しいトークンだけ大型言語モデル（LLM）へ移す方式である。
@@ -2528,10 +2492,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   SPECTREは、系列長$n$に対して二乗で増える通常の自己注意（Self-注意機構）を、実数高速フーリエ変換（Real Fast Fourier Transform、RFFT）、内容適応の周波数ゲート、逆変換の組合せで置き換える方式である。
 
-- **2025-02 · [PICASO: Permutation-Invariant Context Composition with State Space Models](2025-2502.17605-picaso-permutation-invariant-context-composition-with-state-space-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  PICASOは、状態空間モデル（State Space モデル、SSM）で検索拡張生成を行うとき、検索された文章を毎回トークン列として読み直す費用を削減する方式である。後者は文章の個数に線形な計算量を持ち、実験では全順列版と近い予測品質を示した。
-
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  
   実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：1  
   入力とモデル重みをそれぞれ秘匿したままBERT、GPT-2、LLaMA-7B、ViTを実行し、従来方式に比べて実測の転送量と実行時間を改善する。
@@ -2556,10 +2516,6 @@
   実装：[✓](https://github.com/showlab/ShowUI) ・ リポジトリ内被引用：1  
   一方、画像を粗く統合してしまうと、クリック対象の小さな部品の座標を失いやすい。Qwen2-VL-2Bを基盤に、25.6万件の指示データで学習したモデルは、ScreenSpotのゼロショット画面要素特定で75.1%を報告した。
 
-- **2024-11 · [MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map](2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md)**  
-  実装：[✓](https://github.com/BICLab/MetaLA) ・ リポジトリ内被引用：1  
-  MetaLAは、従来別々の系列モデルとして説明される線形Transformer、状態空間モデル（State Space モデル; SSM）、線形再帰ニューラルネット（Linear RNN）を、有限サイズの隠れ状態を更新する線形注意（linear 注意機構）の共通形式で扱う研究である。
-
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：1  
   近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
@@ -2568,17 +2524,9 @@
   実装：✓ ・ リポジトリ内被引用：1  
   AdaCM²は、長時間動画を言語モデルへ渡す際、すべてのフレームの視覚特徴を保存し続ける代わりに、テキスト質問と強く関連する視覚トークンだけを古いキャッシュから残す方式である。
 
-- **2025-10 · [TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination](2025-2510.22767-tell-tale-task-efficient-llms-with-task-aware-layer-elimination.md)**  
-  実装：[✓](https://github.com/omyokun/tale) ・ リポジトリ内被引用：0  
-  本研究は、ある層を除去するとモデルが小さくなるだけでなく、対象タスクの正答率がむしろ上がる場合があることに着目し、タスク認識型層除去（Task-Aware 層 Elimination、TALE）を提案する。著者はゼロショット（zero-shot）と少数例提示（少数例）、通常の選択肢評価と生成文を読む評価を使い分け、削減層の選択がタスクに依存することを示す。
-
 - **2025-10 · [Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space](2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md)**  
   実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：0  
   視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
-
-- **2025-10 · [MeSH: Memory-as-State-Highways for Recursive Transformers](2025-2510.07739-mesh-memory-as-state-highways-for-recursive-transformers.md)**  
-  実装：[✓](https://github.com/LivingFutureLab/MeSH/) ・ リポジトリ内被引用：0  
-  MeSH（メモリ-as-State-Highways）は、同じTransformerブロックを複数回適用する再帰Transformer（recursive transformer）の性能低下を抑えるため、反復ごとに読み書きを制御する状態メモリを導入する手法である。
 
 - **2025-10 · [Learning to Inference Adaptively for Multimodal Large Language Models](2025-2503.10905-learning-to-inference-adaptively-for-multimodal-large-language-models.md)**  
   実装：[✓](https://github.com/zhuoyan-xu/AdaLLaVA) ・ リポジトリ内被引用：0  
@@ -2607,10 +2555,6 @@
 - **2025-07 · [Towards Resource-Efficient Serverless LLM Inference with SLINFER](2025-2507.00507-towards-resource-efficient-serverless-llm-inference-with-slinfer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SLINFERは、個別モデルへの要求が少なく断続的に発生する私設大規模言語モデル（LLM）サービスを対象に、CPUとGPUの両方を推論実行先として扱い、同一ノードで複数モデルを弾力的に共有するシステムである。論文の事前調査では、ServerlessLLMで各インスタンスへGPU全体を割り当てたときの平均GPUメモリ利用率が23%にとどまる条件が示される。
-
-- **2025-07 · [Scaling up the State Size of RNN LLMs for Long-Context Scenarios](2025-21fc56600ade-scaling-up-the-state-size-of-rnn-llms-for-long-context-scenarios.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Transformerの自己注意（self-注意機構）は、過去の鍵・値（KV）を系列長に比例して保持し、特定位置の情報を取り出せる。400M級Gated DeltaNetの状態を8倍にすると、FDA・SWDE・SQuADの検索課題平均が28.03から37.39へ改善した。
 
 - **2025-07 · [Multi-matrix Factorization Attention](2025-98e1f6bbeb53-multi-matrix-factorization-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2643,10 +2587,6 @@
 - **2025-05 · [Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs](2025-2505.19155-sparse-to-dense-a-free-lunch-for-lossless-acceleration-of-video-understa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動画を扱う大規模言語モデルでは、数百フレームの映像が数万から十数万の視覚トークンへ展開される。例えば原著が挙げるVILAの設定では、1時間の映像を5秒間隔で720フレーム抽出すると141,120視覚トークンになる。この小さいKV集合で同じモデルを繰り返し実行して候補トークンを作り、元の全KVを使うモデルが候補列をまとめて検証する。
-
-- **2025-05 · [One-for-All Pruning: A Universal Model for Customized Compression of Large Language Models](2025-2505.12216-one-for-all-pruning-a-universal-model-for-customized-compression-of-larg.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  この論文の主眼は、枝刈り済み大規模言語モデルを一つだけ作ることではなく、利用者ごとに異なる圧縮率・品質の希望を受け、適切な枝刈り構成を何度も短時間で作ることである。UniCuCoは多数の要求から一度学習した写像を再利用し、要求に応じた層別の枝刈り率を1秒未満で出力する。
 
 - **2025-05 · [DenoiseRotator: Enhance Pruning Robustness for LLMs via Importance Concentration](2025-2505.23049-denoiserotator-enhance-pruning-robustness-for-llms-via-importance-concen.md)**  
   実装：[✓](https://github.com/Axel-gu/DenoiseRotator) ・ リポジトリ内被引用：0  
@@ -2754,10 +2694,6 @@
   実装：✓ ・ リポジトリ内被引用：47  
   RAGCacheは、検索拡張生成（Retrieval-Augmented Generation; RAG）で同じ知識文書が何度も検索されることに着目し、その文書を言語モデルが処理したときの鍵・値キャッシュ（KVキャッシュ）を複数要求で再利用する推論提供システムである。
 
-- **2024-03 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：46  
-  本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
-
 - **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
   実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：44  
   大規模視覚言語モデル（Large Vision-Language モデル; LVLM）は、画像を数百から数千の画像トークンへ変換して、文章の質問と一緒に言語モデルへ入力する。画像解像度が上がると画像トークンが増え、注意計算と全結合層の演算量が大きくなる。複数の視覚言語ベンチマークで品質は概ね維持されるが、個別の高解像度課題では小さな低下もある。
@@ -2801,10 +2737,6 @@
 - **2024-04 · [SEER-MoE: Sparse Expert Efficiency through Regularization for Mixture-of-Experts](2024-2404.05089-seer-moe-sparse-expert-efficiency-through-regularization-for-mixture-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：32  
   SEER-MoEは、事前学習済みの混合専門家モデル（Mixture of エキスパート、MoE）のメモリ消費とトークン当たりの演算量を、別々の制約として削減する方式である。Mixtral 8×7Bは通常各トークンを二つの専門家へ送り、専門家部分の演算は推論全体の約55%を占める。
-
-- **2024-04 · [Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention](2024-2404.07143-leave-no-context-behind-efficient-infinite-context-transformers-with-infini-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
-  Infini-注意機構は、入力文脈が数十万から100万トークンに達しても、過去の全トークンに対応する鍵・値（KV）を保存し続けずに情報を参照するための注意機構である。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：26  
@@ -2866,10 +2798,6 @@
   実装：[✓](https://github.com/ZhenweiAn/Dynamic_MoE) ・ リポジトリ内被引用：17  
   多くの方式では、ルータが計算した専門家の確率上位K個を固定的に選ぶ。24層・16専門家/層のLLaMA型モデルをRedPajama 100Bトークンで訓練した評価では、Top-2方式の5課題平均41.6に対し、動的方式は42.3を達成した。
 
-- **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
-  実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：17  
-  FLAP（FLuctuation-based 適応的 Structured Pruning）は、大規模言語モデル（LLM）の重みを再学習せずに構造化枝刈りする手法である。
-
 - **2024-04 · [JetMoE: Reaching Llama2 Performance with 0.1M Dollars](2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md)**  
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：15  
   JetMoE-8Bは、混合専門家モデル（Mixture of エキスパート、MoE）の条件付き計算を順伝播ネットワーク（FFN）だけでなく自己注意機構へも拡張した、総パラメータ約80億の言語モデルである。論文はLlama2-7Bとの比較で推論演算量を約70%削減できると述べるが、これは実測の生成遅延が70%減るという意味ではない。
@@ -2925,10 +2853,6 @@
 - **2024-03 · [Optimizing LLM Queries in Relational Data Analytics Workloads](2024-2403.05821-optimizing-llm-queries-in-relational-data-analytics-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   理論上の最適解を探す最適接頭辞ヒット再帰（Optimal Prefix Hit Recursion、OPHR）は組合せ爆発を起こすため、実用方式として貪欲群再帰（Greedy Group Recursion、GGR）を設計する。
-
-- **2024-01 · [Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models](2024-2401.04658-lightning-attention-2-a-free-lunch-for-handling-unlimited-sequence-lengt.md)**  
-  実装：[✓](https://github.com/OpenNLPLab/lightning-attention) ・ リポジトリ内被引用：9  
-  一覧用要約：Lightning 注意機構-2は因果線形注意を現在のタイル内と過去タイルからの寄与に分解し、タイル内を因果マスク付き通常行列積、タイル間を固定サイズの累積KV状態による右積で計算する。前向き・逆向きの両方をTritonで入出力認識型に実装し、長系列でも学習速度と作業メモリを安定させる。
 
 - **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
   実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：9  
@@ -3102,10 +3026,6 @@
   実装：[✓](https://github.com/amazon-science/Repoformer) ・ リポジトリ内被引用：2  
   Repoformerは、ソースコードの現在のファイルだけでは分からない別ファイルの関数定義や呼出し関係を、必要な場合だけ検索するコード補完方式である。RepoEvalで複数のコード言語モデルを調べると、検索によって補完が改善した例は概ね20%以下、変わらない例が60%以上、悪化する例も約20%あった。
 
-- **2024-03 · [Cobra: Extending Mamba to Multi-Modal Large Language Model for Efficient Inference](2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md)**  
-  実装：[✓](https://github.com/h-zhao1997/cobra) ・ リポジトリ内被引用：2  
-  提案の中心は、既存のMamba言語モデルへ視覚情報を接続する設計と学習方法を評価した点にある。単一のNVIDIA A100 PCIe 80GBで、画像1枚と同じ質問を入力し256トークンを生成する実験では、Cobra-3.5Bが1.54秒・166.47トークン/秒、MobileVLM v2-3Bが5.17秒・49.50トークン/秒である。
-
 - **2024-02 · [LongHeads: Multi-Head Attention is Secretly a Long Context Processor](2024-2402.10685-longheads-multi-head-attention-is-secretly-a-long-context-processor.md)**  
   実装：[✓](https://github.com/LuLuLuyi/LongHeads) ・ リポジトリ内被引用：2  
   LongHeadsは、事前学習時よりはるかに長い文章を既存の大規模言語モデルへ与える際、各注意頭が全文へ注意する必要はないという観察を利用した、追加学習不要の長文推論方式である。LLaMA-2-7Bを単一NVIDIA A100で評価し、32Kのパスキー検索でほぼ100%、CPUへKVキャッシュを退避した128K条件でも2K注意窓で100%を報告する。
@@ -3129,14 +3049,6 @@
 - **2024-10 · [SIGMA: Secure GPT Inference with Function Secret Sharing](2024-c544a15b6867-sigma-secure-gpt-inference-with-function-secret-sharing.md)**  
   実装：[✓](https://github.com/mpc-msri/EzPC/tree/master/GPU-MPC/experiments/sigma) ・ リポジトリ内被引用：1  
   SIGMAは関数秘密分散（Function Secret Sharing; FSS）によって複雑な非線形演算を二者間で実現し、事前に作った暗号鍵を使ってオンライン時の通信を抑える。代表結果は、系列長128の二者間オンライン推論において、既存のGPU秘匿計算系CrypTenより12.2～19倍短い実行時間である。
-
-- **2024-09 · [CFSP: An Efficient Structured Pruning Framework for LLMs with Coarse-to-Fine Activation Information](2024-2409.13199-cfsp-an-efficient-structured-pruning-framework-for-llms-with-coarse-to-f.md)**  
-  実装：[✓](https://github.com/wyxscir/CFSP) ・ リポジトリ内被引用：1  
-  CFSPは、大規模言語モデル（LLM）から推論に不要な重み構造を除去する構造化枝刈り（structured 枝刈り）の手法である。50%という論文上の枝刈り設定では、LLaMA3-8Bのパラメータ数が8.03Bから5.21B、表記メモリ量が16.06GBから10.42GB、積和演算量（MAC）が3.64Tから2.19Tに減少した。
-
-- **2024-08 · [Pruning Large Language Models to Intra-module Low-rank Architecture with Transitional Activations](2024-2407.05690-pruning-large-language-models-to-intra-module-low-rank-architecture-with.md)**  
-  実装：[✓](https://github.com/sbwww/TransAct-pruning) ・ リポジトリ内被引用：1  
-  本論文の対象は、大規模言語モデル（LLM）を端末に配置する際に必要となる重みの格納容量、推論中の計算量、そして鍵・値キャッシュ（KV キャッシュ）のメモリ使用量である。重みだけを低ビット化しても、注意機構の過去トークンの鍵・値を保持する領域は高精度のまま残る。
 
 - **2024-08 · [Fortify the Shortest Stave in Attention: Enhancing Context Awareness of Large Language Models for Effective Tool Use](2024-2312.04455-fortify-the-shortest-stave-in-attention-enhancing-context-awareness-of-l.md)**  
   実装：[✓](https://github.com/Fiorina1212/Attention-buckets) ・ リポジトリ内被引用：1  
@@ -3232,10 +3144,6 @@
   実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：161  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
-- **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：133  
-  LLM-Prunerは、大規模言語モデルのパラメータを実際に削除して小さい密行列モデルへ変換する構造枝刈り手法である。LLaMA-7B、Vicuna-7B、ChatGLM-6Bを評価し、LLaMA-7Bでは20%の構造削減でゼロショット七課題平均が63.25から56.82へ下がり、低ランク適応後60.07まで回復した。
-
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
   実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：129  
   大規模言語モデルの重みを16ビットから4ビット、3ビット、2ビットへ縮めると、保存容量と重み転送量を大きく削減できる。一方、極低ビットでは重みや活性値の少数の外れ値が量子化範囲を広げ、重要な値の量子化刻みが粗くなって出力品質が崩れる。LLaMA-2 7B～70Bは128個の校正系列とA100 40GB 1基で1～16時間の処理が可能と報告される。
@@ -3255,10 +3163,6 @@
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
   実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：64  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
-
-- **2023-10 · [Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning](2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md)**  
-  実装：[✓](https://github.com/princeton-nlp/LLM-Shearing) ・ リポジトリ内被引用：59  
-  枝刈り直後に失われた能力は継続事前学習で回復するが、その際にも学習データを元の比率で使い続けず、領域別の損失回復状況に応じて再配分する。A100 80GB上の単一生成で、13億パラメータの均一形状は毎秒58トークン、非均一形状は51トークン、27億では43対37トークンであった。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
   実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：52  
@@ -3415,10 +3319,6 @@
 - **2023-01 · [Alternating Updates for Efficient Transformers](2023-2301.13310-alternating-updates-for-efficient-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   AltUp（Alternating Updates）は、表現の幅と層内部の演算幅を分離し、幅Kdの状態を保持しながら各層で実際にTransformerを通すのはd次元の部分ブロック一つに限る方式である。NeurIPS 2023採択論文のT5実験では、同じ予測精度を持つ密なTransformerに対して最大87%の相対速度向上を報告する。
-
-- **2023-10 · [Compresso: Structured Pruning with Collaborative Prompting Learns Compact Large Language Models](2023-2310.05015-compresso-structured-pruning-with-collaborative-prompting-learns-compact.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  Compressoは、大規模言語モデルの注意ヘッド、中間層のチャネル、隠れ次元をまとめて削除する構造化枝刈りの手法である。評価の中心はモデル規模と正答率であり、実機のトークン毎秒や消費電力の改善倍率は示されていない。
 
 - **2023-09 · [Pruning Large Language Models via Accuracy Predictor](2023-2309.09507-pruning-large-language-models-via-accuracy-predictor.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
