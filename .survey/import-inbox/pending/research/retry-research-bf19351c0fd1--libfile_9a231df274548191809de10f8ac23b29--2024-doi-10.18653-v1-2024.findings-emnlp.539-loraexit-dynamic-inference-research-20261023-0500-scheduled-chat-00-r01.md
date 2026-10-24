@@ -27,6 +27,8 @@ reference_main_sha: 074b19777554875d37c6b2e45411ea2e41a2ad7c
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 doi: 10.18653/v1/2024.findings-emnlp.539
+last_audited: null
+audit_version: 0
 ---
 
 # LoRAExit：独立LoRA出口と隣接出口蒸留による分類モデルの動的推論

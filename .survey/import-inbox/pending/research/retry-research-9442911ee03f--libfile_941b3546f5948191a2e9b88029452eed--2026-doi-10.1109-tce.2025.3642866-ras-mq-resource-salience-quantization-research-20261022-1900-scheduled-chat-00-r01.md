@@ -31,6 +31,8 @@ worker_completed_at: "2026-10-22T19:04:38+09:00"
 reference_main_sha: "9867b85dfab98006a704568525c911bee188bafd"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Efficient LLM Deployment in Consumer Electronics Applications via Resource-Aware and Salience-Guided Quantization
