@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "99e817d5c2f8ed7cba628d6c800bbb5e2ca8fb820bb92bbf34e3d6f29e17268f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2605.19218",
+  "worker_completed_at": "2026-10-23T04:05:12+09:00",
+  "worker_run_key": "20261023-0400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2775,
+    "body_paragraphs": 12,
+    "method_chars": 858,
+    "method_paragraphs": 4,
+    "evaluation_chars": 371,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 371 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 371 < 500"
+  ],
+  "processed_at": "2026-10-24T19:34:02+00:00"
+}

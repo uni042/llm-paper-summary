@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T19:25:01+00:00",
+  "generated_at": "2026-10-24T19:34:08+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -317,34 +317,6 @@
       "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.19218",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T14:46:47+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 371 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2775,
-        "body_paragraphs": 12,
-        "method_chars": 858,
-        "method_paragraphs": 4,
-        "evaluation_chars": 371,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 371 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.08088",
       "title": null,
       "source_url": null,
@@ -488,34 +460,6 @@
       "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.32579",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T18:00:57+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 205 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2626,
-        "body_paragraphs": 12,
-        "method_chars": 733,
-        "method_paragraphs": 4,
-        "evaluation_chars": 205,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 205 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.21704",
       "title": null,
       "source_url": null,
@@ -625,6 +569,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/0-libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--start-snapshot-20261024.md",
       "import_result_path": ".survey/import-inbox/results/research/0-libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--start-snapshot-20261024.json",
       "worker_run_key": "20261024-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.32579",
+      "title": "DimPO: Dimensionality Reduction for Attention using Preference Optimization",
+      "source_url": "https://arxiv.org/html/2609.32579",
+      "returned_at": "2026-10-24T19:34:00+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 205 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2626,
+        "body_paragraphs": 12,
+        "method_chars": 733,
+        "method_paragraphs": 4,
+        "evaluation_chars": 205,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 205 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.19218",
+      "title": "Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference",
+      "source_url": "https://arxiv.org/html/2605.19218",
+      "returned_at": "2026-10-24T19:34:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 371 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2775,
+        "body_paragraphs": 12,
+        "method_chars": 858,
+        "method_paragraphs": 4,
+        "evaluation_chars": 371,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 371 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
     }
   ]
 }
