@@ -46,6 +46,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：5  
   しかしルータが選び得る専門家の重みをすべてGPUに保持できなければ、選択された専門家をCPUメモリからPCIe経由で転送しなければならない。先読み（プリフェッチ）が当たれば転送を隠せるが、外れたときの同期読み込みは生成を止める。
 
+- **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
+  実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：4  
+  全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
+
 - **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
   実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：4  
   バッチ内で重複して活性化するMoEエキスパートを類似する主要エキスパートへ動的に再ルーティングし、品質を保ちながら復号を最大2倍高速化する。
@@ -65,10 +69,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-04 · [Alloc-MoE: Budget-Aware Expert Activation Allocation for Efficient Mixture-of-Experts Inference](2026-2604.08133-alloc-moe-budget-aware-expert-activation-allocation-for-efficient-mixture-of-exp.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   本論文は混合専門家（Mixture-of-Experts、MoE）モデルで、各層・各トークンが起動する専門家数を一律に減らすと品質が大きく悪化する問題に対し、モデル全体の専門家起動回数を固定したまま、層間とトークン間で予算を再配分するAlloc-MoEを提案する。
-
-- **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
-  実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：3  
-  全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
 
 - **2026-01 · [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](2026-2601.18089-latentmoe-accuracy-per-flop-parameter.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

@@ -30,6 +30,28 @@ repair_kind: section_heading_normalization
 repair_note: 既存のAAMAS 2026一次論文確認済み原稿の見出し階層のみ修正。今回のrunでは原著全文の独立再読解は実施していない。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2402.01528
+  arxiv_id: '2411.10666'
+- canonical_id: arXiv:2405.19715
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2410.06916
+- canonical_id: arXiv:2401.07851
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 20
 ---
 
 # RAC：要求適応型の投機的復号構成選択

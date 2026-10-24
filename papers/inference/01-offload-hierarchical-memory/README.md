@@ -368,6 +368,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：8  
   過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。
 
+- **2025-05 · [Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models](2025-2505.16056-local-routing-consistency-expert-offloading.md)**  
+  実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：7  
+  20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
+
 - **2025-08 · [SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution](2025-2508.18983-smoe-expert-substitution-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   低得点の活性専門家をGPU常駐の類似得点専門家へ置換し、重要専門家だけを先読みしてPCIe転送を減らす端末向けMoE推論方式。
@@ -375,10 +379,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-06 · [HarMoEny: Efficient Multi-GPU Inference of MoE Models](2025-2506.12417-harmoeny-efficient-multi-gpu-moe-inference.md)**  
   実装：[✓](https://github.com/sacs-epfl/HarMoEny) ・ リポジトリ内被引用：6  
   MoEの動的な専門家人気偏りに対し、トークンを空きGPUへ再配置し必要な専門家重みを非同期先読みして同期待ちを削減する。
-
-- **2025-05 · [Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models](2025-2505.16056-local-routing-consistency-expert-offloading.md)**  
-  実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：6  
-  20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
 
 - **2025-08 · [Accelerating Mixture-of-Experts Inference by Hiding Offloading Latency with Speculative Decoding](2025-2508.21706-specmoeoff-speculative-decoding-offload.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -439,7 +439,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：126  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：127  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
@@ -505,7 +505,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：427  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：428  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
