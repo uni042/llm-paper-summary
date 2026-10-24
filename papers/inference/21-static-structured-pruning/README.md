@@ -28,7 +28,7 @@
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（19本）
+## 自動生成の論文一覧（25本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/21-static-structured-pruning/)
 
@@ -41,9 +41,21 @@
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
+- **2026-08 · [SlimVLM: Sensitivity-aware Dynamic Structured Pruning with Adaptive Visual Token Selection for Efficient Vision-Language Models](2026-2608.03580-slimvlm-sensitivity-aware-dynamic-structured-pruning-with-adaptive-visua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚言語モデル（Vision-Language モデル; VLM）を小型化するとき、単に言語モデル向けの重み枝刈りを適用しても、画像由来の多数の視覚トークンがモジュールの重要度推定を歪める。一次論文のLLaVA-1.5-7Bの20%枝刈りでは、8種類の評価群における元モデルに対する平均相対性能93.80%を維持した。
+
+- **2026-05 · [Relative Kinetic Utility: Calibrating Cross-Layer Credit for Global Structured LLM Pruning](2026-2605.09008-relative-kinetic-utility-calibrating-cross-layer-credit-for-global-struc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Global RKU（Global Relative Kinetic Utility）は、大規模言語モデル（LLM）のフィードフォワード層（Feed-順伝播 Network; FFN）からチャネルを削る構造化枝刈りにおいて、同じ層内で重要なチャネルを選ぶ問題と、異なる層のチャネルを共通予算で比較する問題を分離する方式である。
+
 - **2026-04 · [GRASPrune: Global Gating for Budgeted Structured Pruning of Large Language Models](2026-2604.19398-grasprune-global-gating-for-budgeted-structured-pruning-of-large-languag.md)**  
   実装：[✓](https://github.com/ZiY-Wang/GRASPrune) ・ リポジトリ内被引用：0  
   本論文は、大規模言語モデル（LLM）の推論時に重みメモリと鍵・値キャッシュ（KV キャッシュ）がともに大きな資源を消費する点を背景に、フィードフォワードネットワーク（Feed-順伝播 Network; FFN）の中間チャネルと、注意機構のKVヘッド群を一つの予算で選ぶ構造化枝刈り（structured 枝刈り）を提案する。
+
+- **2026-02 · [FlattenGPT: Depth Compression for Transformer with Layer Flattening](2026-2602.08858-flattengpt-depth-compression-for-transformer-with-layer-flattening.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FlattenGPTは、変換器（Transformer）の隣接層が似た隠れ状態を受け取ることに着目し、層全体を削除するのではなく、隣接2層を幅の広い1層へ平坦化し、その内部の冗長な注意頭と多層パーセプトロン（MLP）チャネルを削る方式である。
 
 - **2026-01 · [Iterative Structured Pruning for Large Language Models with Multi-Domain Calibration](2026-2601.02674-iterative-structured-pruning-for-large-language-models-with-multi-domain.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -126,4 +138,18 @@
 - **2020-04 · [On the Effect of Dropping Layers of Pre-trained Transformer Models](2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md)**  
   実装：[✓](https://github.com/hsajjad/transformers/) ・ リポジトリ内被引用：14  
   事前学習済みBERT系モデルの上位層を削除して推論時間を約半減し、モデル・タスクごとの精度低下と下位層の重要性を比較した構造的圧縮研究。
+
+### 8年前（2018-11〜2019-10）
+
+- **2019-05 · [Are Sixteen Heads Really Better than One?](2019-1905.10650-are-sixteen-heads-really-better-than-one.md)**  
+  実装：[✓](https://github.com/pmichel31415/are-16-heads-really-better-than-1) ・ リポジトリ内被引用：59  
+  Michelらは、学習済みの翻訳用TransformerとBERTの各注意ヘッドを無効化して、品質の変化、ヘッド重要度の推定、構造的な枝刈り後の推論速度を実験した。WMT14英仏翻訳のTransformerでは全ヘッドの約20%、MultiNLIに微調整したBERTでは約40%を重要度順に削っても顕著な品質低下が生じなかった。
+
+- **2019-05 · [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](2019-1905.09418-analyzing-multi-head-self-attention-specialized-heads-do-the-heavy-lifti.md)**  
+  実装：[✓](https://github.com/lena-voita/the-story-of-heads) ・ リポジトリ内被引用：56  
+  本論文は、翻訳用Transformerの多頭注意機構において、各ヘッドの計算が同じだけ必要なのかを、予測への寄与と実際の削除耐性の両側面から調べた研究である。一方、これは2019年の機械翻訳Transformerにおける品質評価であり、現代の生成専用LLMで実際に同じ割合の実行時間や鍵・値キャッシュ容量を削減できると証明した結果ではない。
+
+- **2019-09 · [Reducing Transformer Depth on Demand with Structured Dropout](2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md)**  
+  実装：✓ ・ リポジトリ内被引用：53  
+  深いTransformerは学習時に層をすべて使用する前提で最適化されるため、学習後に連続した層を削ると、残った層が想定しない中間表現を受け取り品質が悪化する。深度ごとに新しいモデルを一から学習したり知識蒸留を繰り返したりする方法では、必要な配備構成が増えるほど学習費用が増える。深度削減は品質低下を完全に取り除くわけではない。
 <!-- survey:auto:end -->
