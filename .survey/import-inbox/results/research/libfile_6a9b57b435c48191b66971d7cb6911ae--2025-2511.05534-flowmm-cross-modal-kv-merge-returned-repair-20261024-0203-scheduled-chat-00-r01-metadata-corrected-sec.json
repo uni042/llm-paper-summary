@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e10f829c0cd863ae8c7bda81ed6ff27574a94e2f31128c4a878f6a6e3c5f91be",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6a9b57b435c48191b66971d7cb6911ae--2025-2511.05534-flowmm-cross-modal-kv-merge-returned-repair-20261024-0203-scheduled-chat-00-r01-metadata-corrected-section-normalized-20261024-0345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2511.05534",
+  "worker_completed_at": "2026-10-24T03:50:37+09:00",
+  "worker_run_key": "20261024-0345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4992,
+    "body_paragraphs": 22,
+    "method_chars": 1148,
+    "method_paragraphs": 6,
+    "evaluation_chars": 1606,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/07-kv-cache-optimization-compression/2025-2511.05534-flowmm-cross-modal-information-flow-guided-kv-cache-merging-for-efficien.md と 19 段落 / 4752文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T15:42:17+00:00"
+}
