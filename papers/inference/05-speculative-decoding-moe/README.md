@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（214本）
+## 自動生成の論文一覧（215本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -295,6 +295,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [DRelay: Global Draft Context for Prefix-Aware Parallel Speculative Decoding Repair](2026-2610.01439-drelay-global-draft-context-for-prefix-aware-parallel-speculative-decodi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DRelayは、大規模言語モデルの投機的復号（投機的復号）において、並列下書き（parallel drafting）が既に予測した複数位置の候補情報を、早い位置の誤った候補選択を修復する証拠として再利用する方式である。
+
+- **2026-10 · [An Empirical Study of Speculative Decoding on Software Engineering Tasks](2026-2604.26469-an-empirical-study-of-speculative-decoding-on-software-engineering-tasks.md)**  
+  実装：[✓](https://github.com/AltriaSetsuna/speculative-decoding-empirical) ・ リポジトリ内被引用：0  
+  投機的復号（投機的復号）は、安価な草稿生成器が複数トークンを先読みし、大きな対象モデルが一度の前向き計算でまとめて検証することで、通常の逐次復号に必要な対象モデル呼び出し回数を減らす。一般的な対話ベンチマークでの高速化は、ソフトウェア工学の作業にそのまま当てはまらない。
 
 - **2026-10 · [AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines](2026-2610.01108-agspec-pushing-the-limits-of-retrieval-based-speculative-decoding-in-cod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
