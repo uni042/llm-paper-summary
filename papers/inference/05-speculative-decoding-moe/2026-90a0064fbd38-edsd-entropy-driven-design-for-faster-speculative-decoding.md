@@ -1,38 +1,59 @@
 ---
-canonical_id: 'DOI:10.18653/v1/2026.acl-long.2145'
-doi: '10.18653/v1/2026.acl-long.2145'
+canonical_id: DOI:10.18653/v1/2026.acl-long.2145
+doi: 10.18653/v1/2026.acl-long.2145
 identity_tokens:
-  - 'DOI:10.18653/v1/2026.acl-long.2145'
-  - 'ACL:2026.acl-long.2145'
+- DOI:10.18653/v1/2026.acl-long.2145
+- ACL:2026.acl-long.2145
 title: 'EDSD: Entropy-Driven Design for Faster Speculative Decoding'
-summary: 'EDSDは投機的復号の草稿モデルにおける学習時と検証時の情報不一致を、対象モデルの出力エントロピーと内部表現の解析から修正する方式である。低エントロピートークンから高エントロピートークンへ学習を進めるEDTrainと、Curvature・Lidarによる特徴抽出層選択およびトークン埋め込みを優先するEDFuseを組み合わせる。ACL 2026論文では7モデル・5タスクの比較で受理長と実測速度を改善し、訓練費用、システムプロンプト変化、SGLang実装のサービング遅延も評価する。ただし推論速度の相対改善は概ね数%で、主な利点は学習費用と頑健性にもある。'
-list_summary: '草稿モデルの高エントロピートークン学習順序、予測段数、対象モデル特徴抽出層、トークン・特徴融合を同時設計し、投機的復号の受理長・実測速度・プロンプト変化耐性を改善する。'
+summary: EDSDは投機的復号の草稿モデルにおける学習時と検証時の情報不一致を、対象モデルの出力エントロピーと内部表現の解析から修正する方式である。低エントロピートークンから高エントロピートークンへ学習を進めるEDTrainと、Curvature・Lidarによる特徴抽出層選択およびトークン埋め込みを優先するEDFuseを組み合わせる。ACL 2026論文では7モデル・5タスクの比較で受理長と実測速度を改善し、訓練費用、システムプロンプト変化、SGLang実装のサービング遅延も評価する。ただし推論速度の相対改善は概ね数%で、主な利点は学習費用と頑健性にもある。
+list_summary: 草稿モデルの高エントロピートークン学習順序、予測段数、対象モデル特徴抽出層、トークン・特徴融合を同時設計し、投機的復号の受理長・実測速度・プロンプト変化耐性を改善する。
 authors:
-  - Longkai Cheng
-  - Ximing Wang
-  - Jiangcai Zhu
-  - Kailai Shao
-  - Chao Chen
-  - Haixiang Hu
-published: '2026-07'
-publication: 'Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Volume 1, pages 46243–46260'
-publication_type: '査読付き国際会議論文'
+- Longkai Cheng
+- Ximing Wang
+- Jiangcai Zhu
+- Kailai Shao
+- Chao Chen
+- Haixiang Hu
+published: 2026-07
+publication: Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), Volume 1, pages 46243–46260
+publication_type: 査読付き国際会議論文
 publication_status: published
-source: 'https://aclanthology.org/2026.acl-long.2145.pdf'
+source: https://aclanthology.org/2026.acl-long.2145.pdf
 sources:
-  - 'https://aclanthology.org/2026.acl-long.2145.pdf'
-  - 'https://aclanthology.org/2026.acl-long.2145/'
-implementation: '草稿モデル訓練はSpecForgeを使用。8基のH800で訓練し、通常の速度・受理長はSpec-Bench、実サービス型評価はSGLang v0.5.6.post2を改造して実施。EDFuse演算を別CUDAストリームへ重ね、深さ4の直列草稿鎖を使用。著者は草稿重みと実装の公開先を提示。'
-code: 'https://github.com/KerwinKai/EDSD'
+- https://aclanthology.org/2026.acl-long.2145.pdf
+- https://aclanthology.org/2026.acl-long.2145/
+implementation: 草稿モデル訓練はSpecForgeを使用。8基のH800で訓練し、通常の速度・受理長はSpec-Bench、実サービス型評価はSGLang v0.5.6.post2を改造して実施。EDFuse演算を別CUDAストリームへ重ね、深さ4の直列草稿鎖を使用。著者は草稿重みと実装の公開先を提示。
+code: https://github.com/KerwinKai/EDSD
 last_checked: '2026-10-24'
 worker_id: scheduled-chat-00
-worker_run_key: '20261024-1800-scheduled-chat-00/r01'
+worker_run_key: 20261024-1800-scheduled-chat-00/r01
 worker_completed_at: '2026-10-24T18:05:22+09:00'
-reference_main_sha: '230ed018bff46cee67303f2a2219ec122f547627'
+reference_main_sha: 230ed018bff46cee67303f2a2219ec122f547627
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2408.11049
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2411.18462
+- canonical_id: arXiv:2503.01840
+- canonical_id: arXiv:2402.02057
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2502.11018
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2408.15766
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2311.08252
+- canonical_id: arXiv:2310.07177
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # EDSD：エントロピーに基づく草稿モデルの学習・構造同時設計
