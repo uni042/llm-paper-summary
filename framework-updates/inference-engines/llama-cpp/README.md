@@ -78,7 +78,7 @@ llama.cppの主要な機能・性能更新を継続的に記録する集約ペ�
 
 ## 主要更新
 
-### 2026-10-22 — llama.cpp b11813〜b11827（開発ビルド）
+### 2026-10-23 — llama.cpp b11828〜b11840（開発ビルド）\n- **b11829**: reranking用templateの置換を修正。**b11835**: SYCL/oneDNNのdevice引渡しを修正。**b11838**: `ggml_time_us`の時間overflowを修正。**b11840**: Qualcomm Hexagon NPUにCEIL演算（f32/f16）を追加。\n- いずれも開発ビルドの更新で、一般的な速度倍率は示されていない。b11840のHexagon機能をNVIDIA CUDAの改善と読み替えない。[b11829](https://github.com/ggml-org/llama.cpp/releases/tag/b11829) / [b11835](https://github.com/ggml-org/llama.cpp/releases/tag/b11835) / [b11838](https://github.com/ggml-org/llama.cpp/releases/tag/b11838) / [b11840](https://github.com/ggml-org/llama.cpp/releases/tag/b11840)\n\n### 2026-10-22 — llama.cpp b11813〜b11827（開発ビルド）
 - **b11822**: Qwen4ExpでDFlash草稿を使うとhyper-connection残差の形状が合わず最初の要求が停止する問題を修正。草稿が要求する層だけ残差ストリームの平均を構築する。
 - **b11823**: GLM5で不要な`sel_mask_2d`と`new_pool_flat`を渡さない入力グラフへ整理。速度倍率は示されていない。
 - **b11826**: MiniCPM-OCR 1.0のマルチモーダル処理を追加。全GGUF・GPU構成の動作保証ではない。
