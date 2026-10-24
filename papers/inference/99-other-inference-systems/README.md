@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（941本）
+## 自動生成の論文一覧（942本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -997,6 +997,10 @@
 - **2026-08 · [CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights](2026-2608.06763-cubicquant-parametric-non-uniform-codebooks-for-high-throughput-llm-infe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究が扱うのは、大規模言語モデル（LLM）の重みをGPUメモリに置き、自己回帰復号の各段階で行列演算に供給する際の表現形式である。提案形式は、1〜8ビットの重み符号を連続したビット列へ保存し、重み群ごとに尺度 s と二つの形状係数 a,b を付加する。
+
+- **2026-08 · [Budget-Aware LLM Quantization and Low-Rank Correction via Information-Guided Subspace Matrices](2026-b373673622df-budget-aware-llm-quantization-and-low-rank-correction-via-information-gu.md)**  
+  実装：[✓](https://github.com/sinuofan/IJCAI2026-BALANCER) ・ リポジトリ内被引用：0  
+  BALANCERは、限られた記憶容量で大規模言語モデル（LLM）を実行するため、各重み行列の量子化精度と低ランク補正の階数を全モデル共通のビット予算で割り当てる学習不要の圧縮方式である。
 
 - **2026-08 · [Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State](2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md)**  
   実装：[✓](https://github.com/StarkLeeSunny/Flexkv-doublenode) ・ リポジトリ内被引用：0  

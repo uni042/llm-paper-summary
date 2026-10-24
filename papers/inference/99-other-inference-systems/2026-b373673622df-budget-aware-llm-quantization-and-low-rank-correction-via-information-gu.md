@@ -25,6 +25,8 @@ worker_run_key: "20261024-2033-scheduled-chat-30/r01"
 reference_main_sha: "143a57c2f128220ff348a939d024329061625867"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # BALANCER：情報誘導部分空間による全モデル共通予算の量子化・低ランク補正

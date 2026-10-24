@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（62本）
+## 自動生成の論文一覧（64本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -69,6 +69,10 @@
 - **2026-09 · [KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity](2026-2609.30057-krex-concurrent-kernel-benchmarking-on-shared-gpus-via-region-granular-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実行時間のわずかな差が候補順位を変えるため、他の処理が同じGPUへ負荷をかけると測定が歪み、エージェントは遅い候補を良いものと誤認する。さらにGPUコンテキストを毎回作り直さず、長寿命のコンテキスト保持プロセスを再利用することで、GPU初期化時のノード全体の直列化を避ける。
+
+- **2026-09 · [From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving](2026-2609.23130-from-inference-engine-to-inference-control-plane-connecting-vllm-llm-d-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLM推論最適化の単位が単一推論エンジンのバッチ処理・KV管理から、分散したGPU群のルーティング、KV転送、プリフィル/デコード分離、入場制御、拡縮と耐障害性を束ねる制御面へ移行していることを整理したシステム統合レビュー。
 
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  
@@ -261,6 +265,10 @@
 - **2022-02 · [A Survey on Model Compression and Acceleration for Pretrained Language Models](2022-2202.07105-a-survey-on-model-compression-and-acceleration-for-pretrained-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   著者らは推論段階を対象に、重み共有、低ランク分解、枝刈り、量子化、知識蒸留、早期終了、トークン省略の七系統を比較する。
+
+- **2022-08 · [Momentum Transformer: Closing the Performance Gap Between Self-attention and Its Linearization](2022-2208.00579-momentum-transformer-closing-the-performance-gap-between-self-attention-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  モーメンタム Transformerは、通常のソフトマックス注意を線形化した際に失われる表現力を、最適化アルゴリズムのモーメンタムに着想を得た状態更新で補おうとする研究である。だが、LRAの平均正答率は標準ソフトマックスの58.70%を下回る56.04%であり、翻訳の生成速度も標準ソフトマックスの方が大きい。
 
 ### 6年前（2020-11〜2021-10）
 

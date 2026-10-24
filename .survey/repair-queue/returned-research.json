@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T11:09:28+00:00",
+  "generated_at": "2026-10-24T11:59:30+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 24,
+  "count": 22,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -459,61 +459,6 @@
       "worker_run_key": "20261023-1000-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2412.12706",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T15:52:53+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7090,
-        "body_paragraphs": 35,
-        "method_chars": 1379,
-        "method_paragraphs": 7,
-        "evaluation_chars": 0,
-        "limitation_chars": 794,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1b7363f0d213--libfile_ff6fee9f803881918475fdac981a89bb--2024-2412.12706-more-tokens-lower-precision-under16kb-reaudit-20261023-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1b7363f0d213--libfile_ff6fee9f803881918475fdac981a89bb--2024-2412.12706-more-tokens-lower-precision-under16kb-reaudit-20261023-0345-scheduled-cha.json",
-      "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.38697",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T17:29:14+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6861,
-        "body_paragraphs": 45,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 869,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-70427fa3caef--libfile_44914ee044c08191998b70909be00dcc--2026-2609.38697-cascadia-decentralized-ai-pc-llm-serving-research-20261023-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-70427fa3caef--libfile_44914ee044c08191998b70909be00dcc--2026-2609.38697-cascadia-decentralized-ai-pc-llm-serving-research-20261023-2200-scheduled.json",
-      "worker_run_key": "20261023-2200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.28099",
       "title": null,
       "source_url": null,
@@ -597,33 +542,6 @@
       "worker_run_key": "20261024-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.23130",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T09:00:29+00:00",
-      "return_count": 8,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 472 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3839,
-        "body_paragraphs": 20,
-        "method_chars": 1903,
-        "method_paragraphs": 9,
-        "evaluation_chars": 472,
-        "limitation_chars": 451,
-        "insufficiency_flags": [
-          "評価説明量 472 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-70074f2615c4--libfile_a2738798dd1c8191902e63bada863669--2026-2609.23130-inference-control-plane-section-repair-20261024-1657-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-70074f2615c4--libfile_a2738798dd1c8191902e63bada863669--2026-2609.23130-inference-control-plane-section-repair-20261024-1657-scheduled-chat-45-r0.json",
-      "worker_run_key": "20261024-1645-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3706418",
       "title": null,
       "source_url": null,
@@ -649,6 +567,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-83f04bc7fe3e--libfile_cc0d9ab3f13c8191bdc7cf7035350525--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-returned-repair-20261023-0134-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-83f04bc7fe3e--libfile_cc0d9ab3f13c8191bdc7cf7035350525--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-returned-repair-20261.json",
       "worker_run_key": "20261023-0134-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.12706",
+      "title": "More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression",
+      "source_url": "https://arxiv.org/pdf/2412.12706",
+      "returned_at": "2026-10-24T11:53:11+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7090,
+        "body_paragraphs": 35,
+        "method_chars": 1379,
+        "method_paragraphs": 7,
+        "evaluation_chars": 0,
+        "limitation_chars": 794,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ff6fee9f803881918475fdac981a89bb--2024-2412.12706-more-tokens-lower-precision-under16kb-reaudit-20261023-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ff6fee9f803881918475fdac981a89bb--2024-2412.12706-more-tokens-lower-precision-under16kb-reaudit-20261023-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
     }
   ]
 }
