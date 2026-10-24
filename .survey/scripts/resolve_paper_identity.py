@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any
 
 import paper_identity
+import paper_retirement_registry
 import research_job_reconciliation
 
 
@@ -39,6 +40,20 @@ def resolve(repo_root: Path, record: dict[str, Any]) -> dict[str, Any]:
             "stable paper identity required: canonical_id/arxiv_id/doi/"
             "openreview_id/source_url"
         )
+
+    retired = paper_retirement_registry.find_retirement(repo_root, record)
+    if retired is not None:
+        return {
+            "schema_version": 1,
+            "status": "retired",
+            "query_identifiers": sorted(paper_identity.record_identifiers(record)),
+            "query_identity_tokens": stable_tokens,
+            "paper_path": None,
+            "canonical_id": retired["canonical_id"],
+            "matched_identifiers": retired["verified_aliases"],
+            "retirement_id": retired["retirement_id"],
+            "retired_path": retired["original_path"],
+        }
 
     index = research_job_reconciliation.build_paper_index(repo_root)
     matches: dict[str, dict[str, Any]] = {}
