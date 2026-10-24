@@ -30,6 +30,8 @@ under16kb_reaudit_passed: true
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 repair_type: "under16kb_semantic_reaudit"
+last_audited: null
+audit_version: 0
 ---
 
 # CLAA：層間の注意順位を集約して長文脈の事前充填を高速化する
