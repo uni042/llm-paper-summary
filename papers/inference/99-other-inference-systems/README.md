@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（964本）
+## 自動生成の論文一覧（966本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1814,6 +1814,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   新しい推論カーネルの提案ではなく、既存の推論基盤をどの条件でどう設定すると効率が変わるかを調べる。A100 40GB上でLlama-2-7Bを使い、入力長、出力長、バッチサイズ、GPU電力上限を変える。
 
+- **2026-03 · [Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models](2026-2603.16440-capability-guided-compression-toward-interpretability-aware-budget-alloc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、言語モデルの枝刈りや量子化が重みの大きさ、活性化、再構成誤差を重視する一方、部品が担う機能を直接考慮していないという「能力を見ない圧縮」を問題にする。GPT-2 Mediumの注意ヘッド出力射影を50%保持する実験では、均一圧縮のパープレキシティ（Perplexity; PPL）27.57に対しCGC-Lは27.87で悪化した。
+
 - **2026-03 · [CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks](2026-04cca81d3e08-cachenotes-task-aware-key-value-cache-compression-for-reasoning-intensiv.md)**  
   実装：[✓](https://github.com/giulio98/cachenotes) ・ リポジトリ内被引用：0  
   コーパスに対しタスク別の圧縮計画トークン（CPTs）を生成し、CPTsからの注意を用いてコーパスKVキャッシュを一度だけ圧縮する。H100の128KコーパスでTTFT 0.13秒、RAG 0.61秒、全再入力15.88秒。
@@ -1985,6 +1989,10 @@
 - **2026-01 · [Towards Understanding Best Practices for Quantization of Vision-Language Models](2026-2601.15287-towards-understanding-best-practices-for-quantization-of-vision-language.md)**  
   実装：[✓](https://github.com/gautomdas/mmq) ・ リポジトリ内被引用：0  
   本論文は、視覚言語モデル（Vision-Language モデル; VLM）を低ビット化するとき、視覚符号化器（Vision Transformer; ViT）、視覚と言語の接続器、言語モデル（LLM）のどこを何ビットにするのが有利かを、複数のタスクと量子化方式で比較する実証研究である。
+
+- **2026-01 · [Speculative Sampling with Reinforcement Learning](2026-2601.12212-speculative-sampling-with-reinforcement-learning.md)**  
+  実装：[✓](https://github.com/wmd3i/ReSpS) ・ リポジトリ内被引用：0  
+  Re-SpS（Reinforcement Learning for 投機的 Sampling）は、投機的復号（投機的復号）における草稿木（下書き木）の全体トークン上限、深さ、分岐展開数を、文脈に応じて強化学習で切り替える方式である。
 
 - **2026-01 · [SimMerge: Learning to Select Merge Operators from Similarity Signals](2026-2601.09473-simmerge-learning-to-select-merge-operators-from-similarity-signals.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

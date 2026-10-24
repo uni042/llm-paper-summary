@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T17:21:03+00:00",
+  "generated_at": "2026-10-24T17:30:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -402,34 +402,6 @@
       "worker_run_key": "20261023-0100-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2603.16440",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T14:05:42+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6117,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1216,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e1c5fb5de1f08191966f7b0609e90c2a--2026-2603.16440-capability-guided-compression-critical-evaluation-research-20261024-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e1c5fb5de1f08191966f7b0609e90c2a--2026-2603.16440-capability-guided-compression-critical-evaluation-research-20261024-2200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261024-2200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.28846",
       "title": null,
       "source_url": null,
@@ -573,8 +545,8 @@
     },
     {
       "canonical_id": "DOI:10.1162/tacl.a.39",
-      "title": "TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination",
-      "source_url": "https://aclanthology.org/2025.tacl-1.59.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-24T17:21:02+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -598,6 +570,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8cc645130d6081918d4f0ddb52f990e7--2025-doi-tacl-a39-tale-kvcache-research-20261023-0400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8cc645130d6081918d4f0ddb52f990e7--2025-doi-tacl-a39-tale-kvcache-research-20261023-0400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.539",
+      "title": "LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters",
+      "source_url": "https://aclanthology.org/2024.findings-emnlp.539/",
+      "returned_at": "2026-10-24T17:29:35+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4068,
+        "body_paragraphs": 22,
+        "method_chars": 1289,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-20261023-0500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-20261023-0500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261023-0500-scheduled-chat-00/r01"
     }
   ]
 }

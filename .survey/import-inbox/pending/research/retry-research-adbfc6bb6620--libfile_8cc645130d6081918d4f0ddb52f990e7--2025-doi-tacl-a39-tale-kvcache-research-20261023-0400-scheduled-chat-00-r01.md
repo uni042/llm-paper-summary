@@ -27,6 +27,8 @@ reference_main_sha: edda341fb13b9b760b059d80b4d33cbbbf6ad082
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 doi: 10.1162/tacl.a.39
+last_audited: null
+audit_version: 0
 ---
 
 # TALE：トークン適応低階数KVキャッシュ近似と復元省略
