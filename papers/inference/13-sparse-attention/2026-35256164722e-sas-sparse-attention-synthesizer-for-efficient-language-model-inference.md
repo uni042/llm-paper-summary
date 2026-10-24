@@ -58,6 +58,8 @@ references:
 references_checked_at: '2026-10-24'
 references_source: publisher-pdf-reference-section
 references_total: 13
+last_audited: null
+audit_version: 0
 ---
 
 # SAS：静的・動的な疎注意を合成しKVキャッシュ管理まで生成する推論カーネル基盤

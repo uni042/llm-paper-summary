@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T08:11:12+00:00",
+  "generated_at": "2026-10-24T08:51:58+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 30,
+  "count": 29,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -459,34 +459,6 @@
       "worker_run_key": "20261022-2134-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2505.03031",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T19:55:56+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 239 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7756,
-        "body_paragraphs": 37,
-        "method_chars": 2025,
-        "method_paragraphs": 10,
-        "evaluation_chars": 239,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 239 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c8ea4c655e508191b10ae205a04bc33d--2025-2505.03031-radio-rate-distortion-quantization-returned-repair-20261023-0345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c8ea4c655e508191b10ae205a04bc33d--2025-2505.03031-radio-rate-distortion-quantization-returned-repair-20261023-0345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2601.23180",
       "title": null,
       "source_url": null,
@@ -681,33 +653,6 @@
       "worker_run_key": "20261023-0100-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.23130",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T02:18:26+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 472 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3839,
-        "body_paragraphs": 20,
-        "method_chars": 1903,
-        "method_paragraphs": 9,
-        "evaluation_chars": 472,
-        "limitation_chars": 451,
-        "insufficiency_flags": [
-          "評価説明量 472 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dfc56327c104--file_00000000d6a881f8b1198ca9ff7e4f37--2026-2609.23130-inference-control-plane-synthesis-section-repair-20261024-0845-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-dfc56327c104--file_00000000d6a881f8b1198ca9ff7e4f37--2026-2609.23130-inference-control-plane-synthesis-section-repair-20261024-0845-scheduled-cha.json",
-      "worker_run_key": "20261024-0845-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3731569.3764834",
       "title": null,
       "source_url": null,
@@ -819,6 +764,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-69c4d83a5126--libfile_979006ae8fa08191bb9f057e3315843d--2026-2606.10935-clp-collocation-length-prediction-research-20261024-1530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-69c4d83a5126--libfile_979006ae8fa08191bb9f057e3315843d--2026-2606.10935-clp-collocation-length-prediction-research-20261024-1530-scheduled-chat-3.json",
       "worker_run_key": "20261024-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.23130",
+      "title": "From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving",
+      "source_url": "https://arxiv.org/pdf/2609.23130",
+      "returned_at": "2026-10-24T08:49:14+00:00",
+      "return_count": 7,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 472 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3839,
+        "body_paragraphs": 20,
+        "method_chars": 1903,
+        "method_paragraphs": 9,
+        "evaluation_chars": 472,
+        "limitation_chars": 451,
+        "insufficiency_flags": [
+          "評価説明量 472 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a2738798dd1c8191902e63bada863669--2026-2609.23130-inference-control-plane-section-repair-20261024-1657-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a2738798dd1c8191902e63bada863669--2026-2609.23130-inference-control-plane-section-repair-20261024-1657-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261024-1645-scheduled-chat-45/r01"
     }
   ]
 }
