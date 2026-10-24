@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（68本）
+## 自動生成の論文一覧（69本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -194,6 +194,10 @@
 - **2026-05 · [Stateful Inference for Low-Latency Multi-Agent Tool Calling](2026-2605.26289-stateful-inference-for-low-latency-multi-agent-tool-calling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、複数のエージェントが道具呼出し（tool calling）を繰り返す大規模言語モデル（LLM）推論で、各ターンの会話履歴がほぼ前ターンの接頭辞になっている点を利用する推論サーバー設計を提案する。
+
+- **2026-05 · [MemReread: Enhancing Agentic Long-Context Reasoning via Memory-Guided Rereading](2026-2605.10268-memreread-enhancing-agentic-long-context-reasoning-via-memory-guided-rer.md)**  
+  実装：[✓](https://github.com/iiGray/MemReread) ・ リポジトリ内被引用：0  
+  MemRereadは、長い文書を固定容量の作業メモリへ逐次要約するエージェントに、不足した証拠を後から原文で再読する処理を加える研究である。履歴メモリを検索する方式でも、捨てられた情報が履歴に保存されていなければ検索対象にならない。
 
 - **2026-05 · [Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems](2026-2605.22883-energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

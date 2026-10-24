@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T19:55:52+00:00",
+  "generated_at": "2026-10-24T20:07:31+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 22,
+  "count": 21,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -371,36 +371,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a23e29c3693481919bc24caeddf9cce0--2026-2605.26175-infoquant-activation-quantization-research-20261023-0400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a23e29c3693481919bc24caeddf9cce0--2026-2605.26175-infoquant-activation-quantization-research-20261023-0400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.02823",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T17:49:20+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 149 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5582,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 149,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 149 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a95e9a667c8c8191a9350c1f0bc4b691--2026-2606.02823-qift-shift-friendly-w2-quantization-research-20261023-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a95e9a667c8c8191a9350c1f0bc4b691--2026-2606.02823-qift-shift-friendly-w2-quantization-research-20261023-0200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2607.05399",
