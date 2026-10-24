@@ -31,6 +31,8 @@ quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 returned_research_canonical_id: DOI:10.1145/3706418
 repair_reason: 2026-10-24 10:30修復稿の手法説明量0判定を解消。ACM正式公開版の分類（構造・アルゴリズム・システム）を確認し、標準「## 手法」「## 評価」節へ再編成。独自の統一実験がない点を維持。
+last_audited: null
+audit_version: 0
 ---
 
 # 基盤モデルの資源効率化：構造・アルゴリズム・システムを横断するサーベイ
