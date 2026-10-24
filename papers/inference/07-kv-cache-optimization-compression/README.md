@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（323本）
+## 自動生成の論文一覧（324本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1080,6 +1080,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-12 · [More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression](2024-2412.12706-more-tokens-lower-precision-towards-the-optimal-token-precision-trade-of.md)**  
   実装：[✓](https://github.com/zhzihao/QPruningKV) ・ リポジトリ内被引用：1  
   KVキャッシュの容量制約下で、残すトークン数と量子化精度を別々に決めず、両者の積で予算を配分する「量子化付き間引き」を検証した研究。
+
+- **2025-10 · [TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination](2025-ffb681f1a4fd-tale-token-adaptive-low-rank-kvcache-approximation-with-reconstruction-e.md)**  
+  実装：[✓](https://github.com/thnkinbtfly/TALE) ・ リポジトリ内被引用：0  
+  TALE（トークン-適応的 Low-Rank KVCache Approximation with Reconstruction Elimination）は、既存の大規模言語モデル（LLM）の重みを再学習せずに、生成時のキー・バリューキャッシュ（KV キャッシュ）を削減する方式である。
 
 - **2025-10 · [GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness](2025-2510.00536-gui-kv-efficient-gui-agents-via-kv-cache-with-spatio-temporal-awareness.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/GUI-KV) ・ リポジトリ内被引用：0  

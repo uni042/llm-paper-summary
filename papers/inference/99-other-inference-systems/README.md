@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（972本）
+## 自動生成の論文一覧（975本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1674,6 +1674,10 @@
   実装：[✓](https://github.com/abdelfattah-lab/smcsd) ・ リポジトリ内被引用：0  
   本論文は、従来の投機的復号（投機的復号; SD）で候補トークンが最初に棄却されると、その後の候補まで捨てなければならない問題に対し、逐次モンテカルロ法（sequential Monte Carlo; SMC）を用いた近似的な復号方式SMC-SDを提案する。
 
+- **2026-04 · [Expert Upcycling: Shifting the Compute-Efficient Frontier of Mixture-of-Experts](2026-2604.19835-expert-upcycling-shifting-the-compute-efficient-frontier-of-mixture-of-e.md)**  
+  実装：[✓](https://github.com/amazon-science/expert-upcycling) ・ リポジトリ内被引用：0  
+  混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンが多数の専門家のうち一部だけを実行することで、総パラメータ数とトークン当たり演算量を切り離す。32専門家を64専門家へ増やした場合、50%の継続事前学習予算で13Bを最初から訓練する方式よりGPU時間を約32%節約し、検証損失を1.308から1.305へ下げた。
+
 - **2026-04 · [ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving](2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBメモリ上の頻出エキスパート上位ビットをキャッシュ兼自己ドラフトとして使い、MoEの投機的デコードと重み転送を一体最適化する3D積層HW-SW協調方式。
@@ -1824,7 +1828,7 @@
 
 - **2026-03 · [Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models](2026-2603.16440-capability-guided-compression-toward-interpretability-aware-budget-alloc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本論文は、言語モデルの枝刈りや量子化が重みの大きさ、活性化、再構成誤差を重視する一方、部品が担う機能を直接考慮していないという「能力を見ない圧縮」を問題にする。GPT-2 Mediumの注意ヘッド出力射影を50%保持する実験では、均一圧縮のパープレキシティ（Perplexity; PPL）27.57に対しCGC-Lは27.87で悪化した。
+  モデル圧縮では重みの絶対値、活性値、曲率や再構成誤差を基準に枝刈り・量子化の強さを選ぶ。従来のWanda重要度とのスピアマン順位相関は−0.054だったものの、ヘッド除去によるパープレキシティ悪化との相関は有意でなく、50%保持ではCGC-Lのパープレキシティ27.87が均一枝刈り27.57より悪化した。
 
 - **2026-03 · [CacheNotes: Task-Aware Key-Value Cache Compression for Reasoning-Intensive Knowledge Tasks](2026-04cca81d3e08-cachenotes-task-aware-key-value-cache-compression-for-reasoning-intensiv.md)**  
   実装：[✓](https://github.com/giulio98/cachenotes) ・ リポジトリ内被引用：0  
@@ -2712,6 +2716,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   RadioはLLM重みの事後量子化を、平均ビット数の制約下で元モデルとの出力歪みを最小化するレート・歪み最適化として定式化する。
 
+- **2025-04 · [AccLLM: Accelerating Long-Context LLM Inference Via Algorithm-Hardware Co-Design](2025-2505.03745-accllm-accelerating-long-context-llm-inference-via-algorithm-hardware-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデル（LLM）を資源制約の強い端末向けFPGAに載せるため、圧縮アルゴリズムと演算器・データフローを同時に設計する。主要な評価ではLlama-2-7Bを12.1GBのFP16モデルから1.53GBへ縮小し、Xilinx Alveo U280 FPGA上で164 トークン/s、33W、4.96 トークン/Jを報告した。
+
 - **2025-03 · [AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding](2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md)**  
   実装：[✓](https://github.com/SCZwangxiao/video-FlexReduc) ・ リポジトリ内被引用：1  
   動画を長くするほど事前充填で扱う系列が増え、言語モデルの鍵・値キャッシュ（KVキャッシュ）がGPUメモリを圧迫する。すべてのフレームを同じ割合で圧縮すると、静止区間へ不要な容量を割り当てる一方、質問に必要な短い場面の情報を失う。これは処理可能な動画情報量と理解精度の結果であり、トークン生成速度が同倍率で向上するという主張ではない。
@@ -2847,6 +2855,10 @@
 - **2024-11 · [LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters](2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案は、共通の基盤重みを残したまま、出口ごとに独立した低階数適応器（Low-Rank Adaptation; LoRA）を配置する方式である。
+
+- **2024-11 · [freePruner: A Training-free Approach for Large Multimodal Model Acceleration](2024-2411.15446-freepruner-a-training-free-approach-for-large-multimodal-model-accelerat.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  主目的は視覚トークンの数を減らしてLLM側の事前入力処理（プリフィル）を軽くすることで、視覚エンコーダそのものを低ビット化する手法ではない。LLaVA-1.5では視覚トークンを約50%へ減らして複数の画像質問応答指標を維持し、Video-LLaVAではさらに高い冗長性を利用した削減を報告する。
 
 - **2024-11 · [Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction](2024-2412.00556-accelerating-multimodal-large-language-models-by-searching-optimal-visio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

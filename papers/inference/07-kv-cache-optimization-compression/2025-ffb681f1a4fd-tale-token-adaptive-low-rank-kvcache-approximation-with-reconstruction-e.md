@@ -29,6 +29,8 @@ worker_completed_at: "2026-10-25T03:04:00+09:00"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 lineage: "07-kv-cache-optimization-compression"
+last_audited: null
+audit_version: 0
 ---
 
 # TALE: Token-Adaptive Low-Rank KVCache Approximation with Reconstruction Elimination
