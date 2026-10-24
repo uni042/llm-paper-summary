@@ -34,6 +34,8 @@ worker_completed_at: '2026-10-24T12:50:00+09:00'
 reference_main_sha: d382ad4825cc889b5ac8b894aeae405300f5ef40
 quality_self_review_passed: true
 repair_kind: returned_research_metadata_completion
+last_audited: null
+audit_version: 0
 ---
 
 # TreeGraft：複数の草稿器を共有木へ接ぎ木し、強い草稿器を必要な段階だけ呼ぶ投機的復号
