@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-24T02:53:09.671591+00:00",
+  "generated_at": "2026-10-24T06:14:48.953854+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 4,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 1
   },
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -60,6 +60,26 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2601.17334-power-based-partial-attention-bridging-linear-complexity-and-full-attent.md",
+      "canonical_id": "arXiv:2601.17334",
+      "title": "Power-based Partial Attention: Bridging Linear-Complexity and Full Attention",
+      "file_bytes": 12445,
+      "source_sha256": "741f906460fdafc70fdb4e900b0c5021d6ff24b0f52332914c8506731d920219",
+      "source_git_blob_sha": "3b5c90ffdf9b34bb4188716cc7e82f6e5a0dc7a6",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.953081,
+      "quality_metrics": {
+        "body_chars": 3615,
+        "method_chars": 1465,
+        "evaluation_chars": 567,
+        "limitation_chars": 371
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
