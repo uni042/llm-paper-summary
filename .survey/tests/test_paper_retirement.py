@@ -285,6 +285,148 @@ class PaperRetirementResolverTests(unittest.TestCase):
                 paper_retirement.preflight(root, manifest)
             self.assertTrue(paper.exists())
 
+    def test_canonical_generated_indexes_are_reported_for_rebuild(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            base = Path(td)
+            root = base / "repo"
+            root.mkdir()
+            paper, _ = self._synthetic_repo(root)
+            generated_lineage = paper_retirement.survey.canonical_lineage(
+                "inference", paper.parent.name, repo_root=root
+            )
+            survey = paper_retirement.survey
+            old_root = survey.ROOT
+            try:
+                survey.ROOT = root / ".survey"
+                view_records = survey.paper_views()
+                survey.render_indexes(view_records)
+                survey.render_comparison(survey.papers())
+            finally:
+                survey.ROOT = old_root
+            subprocess.run(["git", "add", "papers"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "canonical generated indexes"], cwd=root, check=True)
+
+            plan = paper_retirement.preflight(root, self._manifest(root, base, paper))
+
+            self.assertEqual(plan["entry_count"], 1)
+            self.assertEqual(
+                plan["generated_links_requiring_rebuild"],
+                [
+                    {
+                        "canonical_id": "arXiv:2609.99993",
+                        "source_path": f"papers/inference/{generated_lineage}/README.md",
+                        "destination": f"../test/{paper.name}",
+                    },
+                    {
+                        "canonical_id": "arXiv:2609.99993",
+                        "source_path": "papers/inference/comparison.md",
+                        "destination": "test/2026-2609.99993-retired.md",
+                    },
+                ],
+            )
+            self.assertTrue(plan["canonical_rebuild_required"])
+
+    def test_manual_and_noncanonical_links_remain_blocking(self) -> None:
+        cases = (
+            (
+                "manual content outside generated block",
+                "papers/inference/test/README.md",
+                lambda paper: "<!-- survey:auto:start -->\n<!-- survey:auto:end -->\n"
+                f"Manual link: [paper]({paper.name})\n",
+            ),
+            (
+                "sibling README",
+                "papers/inference/sibling/README.md",
+                lambda paper: f"[paper](../test/{paper.name})\n",
+            ),
+            (
+                "reference-style link in generated block",
+                "papers/inference/test/README.md",
+                lambda paper: "<!-- survey:auto:start -->\n[paper][target]\n"
+                f"[target]: {paper.name}\n<!-- survey:auto:end -->\n",
+            ),
+            (
+                "angle destination in generated block",
+                "papers/inference/test/README.md",
+                lambda paper: "<!-- survey:auto:start -->\n"
+                f"[Retired test](<{paper.name}>)\n<!-- survey:auto:end -->\n",
+            ),
+        )
+        for name, source_path, content_for in cases:
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as td:
+                base = Path(td)
+                root = base / "repo"
+                root.mkdir()
+                paper, _ = self._synthetic_repo(root)
+                source = root / source_path
+                source.parent.mkdir(parents=True, exist_ok=True)
+                source.write_text(content_for(paper), encoding="utf-8")
+                subprocess.run(["git", "add", "papers"], cwd=root, check=True)
+                subprocess.run(["git", "commit", "-qm", "manual inbound link"], cwd=root, check=True)
+
+                with self.assertRaisesRegex(ValueError, "inbound local markdown link"):
+                    paper_retirement.preflight(root, self._manifest(root, base, paper))
+
+    def test_external_link_is_not_reported_as_generated_rebuild_link(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            base = Path(td)
+            root = base / "repo"
+            root.mkdir()
+            paper, _ = self._synthetic_repo(root)
+            source = root / "papers/inference/test/README.md"
+            source.write_text(
+                "<!-- survey:auto:start -->\n"
+                "[external](https://example.invalid/paper)\n"
+                "<!-- survey:auto:end -->\n",
+                encoding="utf-8",
+            )
+            subprocess.run(["git", "add", "papers"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "external link"], cwd=root, check=True)
+
+            plan = paper_retirement.preflight(root, self._manifest(root, base, paper))
+
+            self.assertEqual(plan["generated_links_requiring_rebuild"], [])
+            self.assertFalse(plan["canonical_rebuild_required"])
+
+    def test_image_form_of_builder_link_remains_blocking(self) -> None:
+        self._assert_noncanonical_builder_link_blocks(lambda link: "!" + link)
+
+    def test_title_trailer_on_builder_link_remains_blocking(self) -> None:
+        self._assert_noncanonical_builder_link_blocks(
+            lambda link: link[:-1] + ' "manual title")'
+        )
+
+    def test_missing_closing_parenthesis_on_builder_link_remains_blocking(self) -> None:
+        self._assert_noncanonical_builder_link_blocks(lambda link: link[:-1])
+
+    def _assert_noncanonical_builder_link_blocks(self, transform) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            base = Path(td)
+            root = base / "repo"
+            root.mkdir()
+            paper, _ = self._synthetic_repo(root)
+            survey = paper_retirement.survey
+            old_root = survey.ROOT
+            try:
+                survey.ROOT = root / ".survey"
+                survey.render_indexes(survey.paper_views())
+                survey.render_comparison(survey.papers())
+            finally:
+                survey.ROOT = old_root
+            generated_lineage = survey.canonical_lineage(
+                "inference", paper.parent.name, repo_root=root
+            )
+            index = root / "papers/inference" / generated_lineage / "README.md"
+            generated_link = f"[Retired test](../test/{paper.name})"
+            content = index.read_text(encoding="utf-8")
+            self.assertIn(generated_link, content)
+            index.write_text(content.replace(generated_link, transform(generated_link), 1), encoding="utf-8")
+            subprocess.run(["git", "add", "papers"], cwd=root, check=True)
+            subprocess.run(["git", "commit", "-qm", "noncanonical builder link"], cwd=root, check=True)
+
+            with self.assertRaisesRegex(ValueError, "inbound local markdown link"):
+                paper_retirement.preflight(root, self._manifest(root, base, paper))
+
     def test_recovery_rejects_tampered_prior_registry_without_changes(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             base = Path(td)
