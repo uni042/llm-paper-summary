@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-24T12:07:26+00:00`
+Generated: `2026-10-24T12:25:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **743** / 未claim総数: **743** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **124274** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **118235** / 監査再投入 **0** / 機械規則適用後 **120779** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **124280** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **118240** / 監査再投入 **0** / 機械規則適用後 **120785** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -364,7 +364,7 @@ ready総数: **743** / 未claim総数: **743** / このworker向け: **200**
 | 137 | 10 | 7 | 10 | arXiv:2608.26581 | Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs | 2026-08-27 |  | 0 | 10 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2608.26581) |
 | 138 | 11 | 7 | 10 | arXiv:2510.08798 | Learning What to Remember: Adaptive Probabilistic Memory Retention for Memory-Efficient Language Models | 2025-10-09 | Conference on Empirical Methods in Natural Language Processing | 1 | 10 | KV cache memory management / streaming inference / attention sinks / length extrapolation, sparse attention / long-context Transformer, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2510.08798) |
 | 139 | 0 | 7 | 10 | arXiv:2012.02030 | Data-Informed Global Sparseness in Attention Mechanisms for Deep Neural Networks | 2020-11-20 | International Conference on Language Resources and Evaluation | 0 | 10 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2012.02030) |
-| 140 | 3 | 7 | 10 | arXiv:2506.17254 | Near-Optimal Online Deployment and Routing for Streaming LLMs | 2025-06-08 |  | 3 | 10 | LLM routing、hybrid inference、quality-aware model selection, inference-systems | [source](https://arxiv.org/abs/2506.17254) |
+| 140 | 106 | 7 | 10 | arXiv:2601.20467 | CtrlCoT: Dual-Granularity Chain-of-Thought Compression for Controllable Reasoning | 2026-01-28 | arXiv.org | 6 | 10 | inference-systems, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.20467) |
 | 141 | 2 | 7 | 10 | SemanticScholar:f83740ef449e705187a0f7d6f76b819c99340bd1 | Exploring the Limits of Small Language Models | 2023 |  | 2 | 10 | Inference / Structured Model Compression and Pruning, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/f83740ef449e705187a0f7d6f76b819c99340bd1) |
 | 142 | 2 | 7 | 10 | arXiv:2312.11142 | Efficiency-oriented approaches for self-supervised speech representation learning | 2023-12-18 | International Journal of Speech Technology | 2 | 10 | inference-systems, sparse attention / long-context Transformer, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2312.11142) |
 | 143 | 2 | 7 | 9 | arXiv:2509.20416 | FastEagle: Cascaded Drafting for Accelerating Speculative Decoding | 2025-09-24 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 2 | 9 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2509.20416) |

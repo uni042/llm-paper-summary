@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-24T12:07:26+00:00`
+Generated: `2026-10-24T12:25:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **743** / 未claim総数: **743** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **124274** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **118235** / 監査再投入 **0** / 機械規則適用後 **120779** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **124280** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **118240** / 監査再投入 **0** / 機械規則適用後 **120785** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -364,7 +364,7 @@ ready総数: **743** / 未claim総数: **743** / このworker向け: **200**
 | 137 | 104 | 7 | 10 | arXiv:2603.16054 | inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference | 2026-03-17 | arXiv.org | 4 | 10 | 15-inference-simulation-emulation, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2603.16054) |
 | 138 | 10 | 7 | 10 | arXiv:2604.08118 | Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization | 2026-04-09 | arXiv.org | 0 | 10 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2604.08118) |
 | 139 | 114 | 7 | 10 | arXiv:2512.14256 | TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips | 2025-12-16 | International Symposium on High-Performance Computer Architecture | 4 | 10 | Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers, serving-scheduling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.14256) |
-| 140 | 106 | 7 | 10 | arXiv:2601.20467 | CtrlCoT: Dual-Granularity Chain-of-Thought Compression for Controllable Reasoning | 2026-01-28 | arXiv.org | 6 | 10 | inference-systems, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.20467) |
+| 140 | 27 | 7 | 10 | SemanticScholar:b42e3a759348f27cca2f918a6bd0b139a5312e44 | A Survey of Pretrained Language Models Based Text Generation | 2022 | arXiv.org | 27 | 10 | 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://www.semanticscholar.org/paper/b42e3a759348f27cca2f918a6bd0b139a5312e44) |
 | 141 | 32 | 7 | 10 | SemanticScholar:c49c292e1fb1d215c88828a52134b7ccfa52be44 | Sparse Attention with Learning to Hash | 2022 | International Conference on Learning Representations | 22 | 10 | inference-systems, sparse attention / long-context Transformer | [source](https://www.semanticscholar.org/paper/c49c292e1fb1d215c88828a52134b7ccfa52be44) |
 | 142 | 0 | 7 | 10 | SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f | E 2 -RAG: Towards Editable Efficient RAG by Editing Compressed KV Caches |  |  | 0 | 10 | LLM Serving / Scheduling / Disaggregation, augmented LLM serving / KV cache management / predictive scheduling / vLLM, inference-systems, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://www.semanticscholar.org/paper/57ca2300b616bd1c4ccc05e7e9649d7088fa823f) |
 | 143 | 10 | 7 | 9 | arXiv:2607.02522 | Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge-Cloud Networks | 2026-05-06 | arXiv.org | 0 | 9 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2607.02522) |

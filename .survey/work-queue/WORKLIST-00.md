@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-24T12:07:26+00:00`
+Generated: `2026-10-24T12:25:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -220,8 +220,8 @@ ready総数: **743** / 未claim総数: **743** / このworker向け: **200**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **124274** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **118235** / 監査再投入 **0** / 機械規則適用後 **120779** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **124280** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **118240** / 監査再投入 **0** / 機械規則適用後 **120785** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -364,8 +364,8 @@ ready総数: **743** / 未claim総数: **743** / このworker向け: **200**
 | 137 | 104 | 7 | 10 | arXiv:2603.16514 | FleetOpt: Analytical Fleet Provisioning for LLM Inference with Compress-and-Route as Implementation Mechanism | 2026-03-17 | arXiv.org | 4 | 10 | LLM Serving / Scheduling / Disaggregation, LLM serving fleet routing / KV-cache-aware provisioning, serving-scheduling | [source](https://arxiv.org/abs/2603.16514) |
 | 138 | 48 | 7 | 10 | DOI:10.52202/068431-2026 | Improving Transformer with an Admixture of Attention Heads | 2022 | Neural Information Processing Systems | 38 | 10 | inference-systems, sparse attention / long-context Transformer | [source](https://doi.org/10.52202/068431-2026) |
 | 139 | 10 | 7 | 10 | arXiv:2609.26484 | From Token Importance to Conditional Removability: Rethinking Visual Token Pruning in Multimodal Large Language Models | 2026-09-22 |  | 0 | 10 | inference-systems | [source](https://arxiv.org/abs/2609.26484) |
-| 140 | 17 | 7 | 10 | arXiv:2110.07034 | How does momentum benefit deep neural networks architecture design? A few case studies | 2021-10-13 | Research in the Mathematical Sciences | 17 | 10 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2110.07034) |
-| 141 | 27 | 7 | 10 | SemanticScholar:b42e3a759348f27cca2f918a6bd0b139a5312e44 | A Survey of Pretrained Language Models Based Text Generation | 2022 | arXiv.org | 27 | 10 | 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://www.semanticscholar.org/paper/b42e3a759348f27cca2f918a6bd0b139a5312e44) |
+| 140 | 3 | 7 | 10 | arXiv:2506.17254 | Near-Optimal Online Deployment and Routing for Streaming LLMs | 2025-06-08 |  | 3 | 10 | LLM routing、hybrid inference、quality-aware model selection, inference-systems | [source](https://arxiv.org/abs/2506.17254) |
+| 141 | 17 | 7 | 10 | arXiv:2110.07034 | How does momentum benefit deep neural networks architecture design? A few case studies | 2021-10-13 | Research in the Mathematical Sciences | 17 | 1 |  | [source](https://arxiv.org/abs/2110.07034) |
 | 142 | 10 | 7 | 10 | arXiv:2609.36259 | CyFA: Linear Sequence Modeling with Relative-Time-Partitioned Memory | 2026-09-28 |  | 0 | 11 | linear attention / delta-rule associative memory / state-space models / Bayesian filtering, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2609.36259) |
 | 143 | 0 | 7 | 10 | SemanticScholar:e4b5968f3d63d0ae23b583fbec6b5a456e650996 | CASD: E NHANCING G ENERATION A CCURACY VIA C ONTEXT -A WARE S PECULATIVE D ECODING |  |  | 0 | 10 | Speculative Decoding, survey-speculative-decoding, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/e4b5968f3d63d0ae23b583fbec6b5a456e650996) |
 | 144 | 10 | 7 | 9 | DOI:10.1109/ICICSE66971.2025.11430117 | SwiftServe: Efficient Disaggregated LLM Inference Serving via Hierarchical Max-Flow in Heterogeneous GPUs and Network | 2025-12-12 | 2025 5th International Conference on Information Communication and Software Engineering (ICICSE) | 0 | 9 | LLM Serving / Scheduling / Disaggregation, LLM inference surveys、roofline performance analysis | [source](https://doi.org/10.1109/ICICSE66971.2025.11430117) |
