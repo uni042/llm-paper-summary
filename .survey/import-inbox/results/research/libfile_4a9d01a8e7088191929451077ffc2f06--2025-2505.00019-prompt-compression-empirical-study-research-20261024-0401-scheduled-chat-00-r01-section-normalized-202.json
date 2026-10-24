@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "c1a6a34e0d7fdad86eeffdb61375a25619ba6f5b35dd3b238fcd733fa07fd892",
-  "canonical_id": "arXiv:2505.00019",
-  "paper_path": "papers/inference/99-other-inference-systems/2025-2505.00019-an-empirical-study-on-prompt-compression-for-large-language-models.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "WARN",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_4a9d01a8e7088191929451077ffc2f06--2025-2505.00019-prompt-compression-empirical-study-research-20261024-0401-scheduled-chat-00-r01-section-normalized-20261024-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2505.00019",
   "worker_completed_at": "2026-10-24T04:54:07+09:00",
   "worker_run_key": "20261024-0445-scheduled-chat-45/r01",
   "quality_metrics": {
@@ -22,5 +21,8 @@
       "限界説明量 0 < 推奨 120"
     ]
   },
-  "processed_at": "2026-10-24T05:53:02+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2505.00019-an-empirical-study-on-prompt-compression-for-large-language-models.md と 18 段落 / 3925文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T15:17:05+00:00"
 }

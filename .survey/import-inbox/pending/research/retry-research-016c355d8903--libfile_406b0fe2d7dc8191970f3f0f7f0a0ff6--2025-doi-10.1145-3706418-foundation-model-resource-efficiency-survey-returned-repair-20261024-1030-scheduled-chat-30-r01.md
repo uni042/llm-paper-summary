@@ -21,6 +21,8 @@ worker_run_key: "20261024-1030-scheduled-chat-30/r01"
 reference_main_sha: "3a09cb2c49eac0442b583a7fce40b41c34171134"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # 基盤モデルの資源効率化：構造・アルゴリズム・システムを横断するサーベイ
