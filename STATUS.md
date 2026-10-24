@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-25 03:02:52 JST**
+> 自動生成: **2026-10-25 03:12:21 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **1004** |
-| 未claim Research job | **1004** |
-| 直近24hのResearch処理完了 | **127** |
+| 収録候補論文数 | **1002** |
+| 未claim Research job | **1002** |
+| 直近24hのResearch処理完了 | **124** |
 | 最終Research処理完了 | **10-25 02:37:30 JST** |
 | 最終Discovery探索完了 | **10-25 01:56:00 JST** |
 | 整合性異常 | **0** |
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **1004** |
+| canonical_id確認済みの一意な候補論文 | **1002** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **1004** |
+| 非終端Research job合計 | **1002** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -54,9 +54,9 @@
 | 探索候補総数 | **145292** |
 | 処理済み | **21259** |
 | 未処理Discovery候補 | **124033** |
-| 収録済み | **3109** |
+| 収録済み | **3111** |
 | Research / Audit候補へ昇格済み | **695** |
-| 無関係として除外 | **12320** |
+| 無関係として除外 | **12318** |
 | 微妙として除外 | **5135** |
 
 ### 探索候補の事前フィルタリング（可逆）
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-24 11:02:09 JST（16時間0分前）** |
+| 最終maintenance完了 | **10-24 11:02:09 JST（16時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **34** |
+| 直近6hのResearch完了 | **35** |
 | 直近6hのDiscovery run | **1** |
 | 直近6hのDiscovery本文確認・分類 | **1** |
 | 最終Research完了 | **10-25 02:37:30 JST** |
@@ -292,7 +292,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **1004** |
+| ready | **1002** |
 
 ### 候補の重複・識別情報欠損
 
@@ -312,7 +312,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| inference/training/survey配下の論文Markdown実体 | **3113** |
+| inference/training/survey配下の論文Markdown実体 | **3115** |
 
 ### immutable submissionの未照合
 
