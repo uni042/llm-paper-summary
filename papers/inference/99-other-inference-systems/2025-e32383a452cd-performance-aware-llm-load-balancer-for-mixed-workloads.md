@@ -1,46 +1,117 @@
 ---
-canonical_id: "DOI:10.1145/3721146.3721947"
-title: "Performance Aware LLM Load Balancer for Mixed Workloads"
-summary: "複数の同一LLM実行インスタンスへ混合負荷を配分する際、入力の事前処理と逐次復号の相互干渉を明示的に見積もる負荷分散器を提案。出力長の範囲予測、既存要求への干渉費用の推定、誘導付き強化学習によるルーティングを接続する。Llama-2-7Bを4基のV100で提供する混合負荷実験ではラウンドロビン比で平均エンドツーエンド遅延を11.43%削減。Llama-3.1-8B/A100の別構成、8インスタンス、実運用トレースでも検証し、長入力・短出力の実運用トレースでは改善が7.84%に縮小することも示す。"
-list_summary: "出力長予測と事前処理・復号の混在干渉モデルを誘導付き強化学習のインスタンス選択へ組み込み、4基のV100上の混合要求で平均応答遅延をラウンドロビン比11.43%短縮した負荷分散方式。"
+canonical_id: DOI:10.1145/3721146.3721947
+title: Performance Aware LLM Load Balancer for Mixed Workloads
+summary: 複数の同一LLM実行インスタンスへ混合負荷を配分する際、入力の事前処理と逐次復号の相互干渉を明示的に見積もる負荷分散器を提案。出力長の範囲予測、既存要求への干渉費用の推定、誘導付き強化学習によるルーティングを接続する。Llama-2-7Bを4基のV100で提供する混合負荷実験ではラウンドロビン比で平均エンドツーエンド遅延を11.43%削減。Llama-3.1-8B/A100の別構成、8インスタンス、実運用トレースでも検証し、長入力・短出力の実運用トレースでは改善が7.84%に縮小することも示す。
+list_summary: 出力長予測と事前処理・復号の混在干渉モデルを誘導付き強化学習のインスタンス選択へ組み込み、4基のV100上の混合要求で平均応答遅延をラウンドロビン比11.43%短縮した負荷分散方式。
 authors:
-  - Kunal Jain
-  - Anjaly Parayil
-  - Ankur Mallick
-  - Esha Choukse
-  - Xiaoting Qin
-  - Jue Zhang
-  - Íñigo Goiri
-  - Rujia Wang
-  - Chetan Bansal
-  - Victor Rühle
-  - Anoop Kulkarni
-  - Steve Kofsky
-  - Saravan Rajmohan
-published: "2025-03-30"
-publication: "Proceedings of the 5th Workshop on Machine Learning and Systems (EuroMLSys '25), pp. 19–30"
-publication_type: "conference_workshop_paper"
-publication_status: "published_peer_reviewed"
-source: "https://euromlsys.eu/pdf/euromlsys25-20.pdf"
+- Kunal Jain
+- Anjaly Parayil
+- Ankur Mallick
+- Esha Choukse
+- Xiaoting Qin
+- Jue Zhang
+- Íñigo Goiri
+- Rujia Wang
+- Chetan Bansal
+- Victor Rühle
+- Anoop Kulkarni
+- Steve Kofsky
+- Saravan Rajmohan
+published: '2025-03-30'
+publication: Proceedings of the 5th Workshop on Machine Learning and Systems (EuroMLSys '25), pp. 19–30
+publication_type: conference_workshop_paper
+publication_status: published_peer_reviewed
+source: https://euromlsys.eu/pdf/euromlsys25-20.pdf
 sources:
-  - "https://euromlsys.eu/pdf/euromlsys25-20.pdf"
-  - "https://doi.org/10.1145/3721146.3721947"
-  - "https://kjain1810.github.io/publication/intelligent_router"
-implementation: "vLLMの反復単位の先着順スケジューラ上に、出力長範囲予測器と負荷干渉推定器、二重深層Q学習に基づくルータを組み合わせた実験実装。V100×4上のLlama-2-7BとA100上のLlama-3.1-8Bで評価。一次論文に再現可能な公式コード公開URLの明示を確認できず。"
+- https://euromlsys.eu/pdf/euromlsys25-20.pdf
+- https://doi.org/10.1145/3721146.3721947
+- https://kjain1810.github.io/publication/intelligent_router
+implementation: vLLMの反復単位の先着順スケジューラ上に、出力長範囲予測器と負荷干渉推定器、二重深層Q学習に基づくルータを組み合わせた実験実装。V100×4上のLlama-2-7BとA100上のLlama-3.1-8Bで評価。一次論文に再現可能な公式コード公開URLの明示を確認できず。
 code: null
-last_checked: "2026-10-23"
-worker_completed_at: "2026-10-23T10:50:24+09:00"
-worker_run_key: "20261023-1045-scheduled-chat-45/r01"
-research_scope: "LLM inference serving / multi-instance request routing / scheduling"
-reference_main_sha: "da90d15b0b71b53580c0bfa1e53a83d9ede184f7"
-
-worker_id: "scheduled-chat-45"
-repair_source_library_file_id: "libfile_e08c37565150819182286553ed92647d"
-repair_reason: "Repair missing YAML frontmatter delimiter in prior quality-verified draft; preserve technical body and evidence unchanged"
+last_checked: '2026-10-23'
+worker_completed_at: '2026-10-23T10:50:24+09:00'
+worker_run_key: 20261023-1045-scheduled-chat-45/r01
+research_scope: LLM inference serving / multi-instance request routing / scheduling
+reference_main_sha: da90d15b0b71b53580c0bfa1e53a83d9ede184f7
+worker_id: scheduled-chat-45
+repair_source_library_file_id: libfile_e08c37565150819182286553ed92647d
+repair_reason: Repair missing YAML frontmatter delimiter in prior quality-verified draft; preserve technical body and evidence unchanged
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2001.09977
+  arxiv_id: '2001.09977'
+- canonical_id: arXiv:2403.02310
+  arxiv_id: '2403.02310'
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: DOI:10.1109/parcomptech.2013.6621389
+  doi: 10.1109/parcomptech.2013.6621389
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2205.14135
+- canonical_id: DOI:10.18653/v1/w17-4418
+  doi: 10.18653/v1/w17-4418
+- canonical_id: arXiv:2206.02845
+  arxiv_id: '2206.02845'
+- canonical_id: arXiv:2404.14618
+  arxiv_id: '2404.14618'
+- canonical_id: DOI:10.18653/v1/p19-1346
+  doi: 10.18653/v1/p19-1346
+- canonical_id: arXiv:2401.11181
+  arxiv_id: '2401.11181'
+- canonical_id: arXiv:2402.01147
+  arxiv_id: '2402.01147'
+- canonical_id: arXiv:2401.07886
+  arxiv_id: '2401.07886'
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: OpenReview:zUYfbdNl1m.
+  openreview_id: zUYfbdNl1m.
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2404.18322
+  arxiv_id: '2404.18322'
+- canonical_id: arXiv:2401.02669
+  arxiv_id: '2401.02669'
+- canonical_id: arXiv:2404.16283
+  arxiv_id: '2404.16283'
+- canonical_id: DOI:10.5555/2002472.2002491
+  doi: 10.5555/2002472.2002491
+- canonical_id: arXiv:2406.18665
+  arxiv_id: '2406.18665'
+- canonical_id: arXiv:2311.18677
+  arxiv_id: '2311.18677'
+- canonical_id: arXiv:2407.00047
+  arxiv_id: '2407.00047'
+- canonical_id: arXiv:2405.04437
+  arxiv_id: '2405.04437'
+- canonical_id: arXiv:2404.08509
+  arxiv_id: '2404.08509'
+- canonical_id: DOI:10.18653/v1/d16-1264
+  doi: 10.18653/v1/d16-1264
+- canonical_id: arXiv:2004.13637
+  arxiv_id: '2004.13637'
+  doi: 10.18653/v1/2021.eacl-main.24
+- canonical_id: arXiv:2308.04623
+  arxiv_id: '2308.04623'
+- canonical_id: DOI:10.1109/tpds.2022.3231981
+  doi: 10.1109/tpds.2022.3231981
+- canonical_id: arXiv:2406.03243
+  arxiv_id: '2406.03243'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2305.05920
+  arxiv_id: '2305.05920'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2401.09670
+  arxiv_id: '2401.09670'
+references_checked_at: '2026-10-24'
+references_source: crossref-deposited-reference-metadata
+references_total: 44
 ---
 
 # Performance Aware LLM Load Balancer for Mixed Workloads
