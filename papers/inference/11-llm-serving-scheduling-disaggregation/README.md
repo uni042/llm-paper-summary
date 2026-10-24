@@ -1733,7 +1733,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1322  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1323  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
@@ -1780,13 +1780,13 @@
   実装：✓ ・ リポジトリ内被引用：16  
   Clockworkは、深層ニューラルネットワーク（DNN）のオンライン推論で、平均速度ではなく要求ごとの締切と尾部遅延を中心に設計した分散モデル提供システムである。
 
+- **2021-07 · [Long-Short Transformer: Efficient Transformers for Language and Vision](2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md)**  
+  実装：[✓](https://github.com/NVIDIA/transformer-ls) ・ リポジトリ内被引用：4  
+  Transformer-LSは、系列長を長くしたときの自己注意の二乗計算量を減らしながら、近傍の細部と遠方の関係を同じ層で扱うための注意機構である。ただし実験の中心は2021年当時の文字単位言語モデルと画像分類モデルであり、現代の数十億パラメータ級LLMサービングにおける鍵・値キャッシュ削減や連続バッチ処理を直接評価したものではない。
+
 - **2021-10 · [OneFlow: Redesign the Distributed Deep Learning Framework from Scratch](2021-2110.15032-oneflow-redesign-the-distributed-deep-learning-framework-from-scratch.md)**  
   実装：[✓](https://github.com/Oneflow-Inc/oneflow) ・ リポジトリ内被引用：3  
   論文は分散学習を二つの問題に分解する。OneFlowはコンパイラと実行系を一体で設計し、これらを明示的に扱う。
-
-- **2021-07 · [Long-Short Transformer: Efficient Transformers for Language and Vision](2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md)**  
-  実装：[✓](https://github.com/NVIDIA/transformer-ls) ・ リポジトリ内被引用：3  
-  Transformer-LSは、系列長を長くしたときの自己注意の二乗計算量を減らしながら、近傍の細部と遠方の関係を同じ層で扱うための注意機構である。ただし実験の中心は2021年当時の文字単位言語モデルと画像分類モデルであり、現代の数十億パラメータ級LLMサービングにおける鍵・値キャッシュ削減や連続バッチ処理を直接評価したものではない。
 
 - **2021-09 · [Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning](2021-2109.01611-multi-model-machine-learning-inference-serving-with-gpu-spatial-partitio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

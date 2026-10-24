@@ -487,7 +487,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   NPUと演算機能付きNANDフラッシュをチップレット接続し、重み近傍計算とハードウェア認識タイル化で70B級の端末内推論を実現する。
 
 - **2024-01 · [FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs](2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md)**  
-  実装：[✓](https://zenodo.org/doi/10.5281/zenodo.10422477) ・ リポジトリ内被引用：10  
+  実装：[✓](https://zenodo.org/doi/10.5281/zenodo.10422477) ・ リポジトリ内被引用：11  
   復号時は演算量に比べて大量の重みを毎回読み出すため、メモリ帯域と小粒度I/Oが律速しやすい。圧縮により理論上の演算量・容量を減らしても、実ハードウェアが不規則な疎パターンや異なるビット幅を効率的に扱えなければ処理時間は縮まらない。
 
 - **2024-05 · [IceFormer: Accelerated Inference with Long-Sequence Transformers on CPUs](2024-2405.02842-iceformer.md)**  
