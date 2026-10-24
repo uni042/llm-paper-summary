@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（125本）
+## 自動生成の論文一覧（126本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -321,6 +321,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-02 · [DynSplit-KV: Dynamic Semantic Splitting for KVCache Compression in Efficient Long-Context LLM Inference](2026-2602.03184-dynsplit-kv-dynamic-semantic-splitting-for-kvcache-compression-in-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い入力や長い生成では、過去トークンのキーと値を保持するKVキャッシュが大きくなり、GPUメモリ容量とメモリ帯域が律速になる。トークン単位で古い情報を捨てる方式は遠方の重要情報を失いやすい。原著LongBenchのKV保持率10%条件では、9タスク平均42.64点で全KV保持の42.72点に近い。
+
+- **2026-01 · [HyperOffload: Graph-Driven Hierarchical Memory Management for Large Language Models on SuperNode Architectures](2026-2602.00748-hyperoffload-graph-driven-hierarchical-memory-management-for-large-langu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルの長文脈推論では、モデル重みと鍵・値キャッシュ（KVキャッシュ）がアクセラレータ上の高帯域メモリ（HBM）を圧迫する。ホストや遠隔の共有メモリへテンソルを退避すれば容量不足は緩和できるが、実行時に「メモリが足りなくなったら移す」という方式では、必要なデータを戻す転送が計算の直前に発生し、待機時間を隠せない。
 
 - **2025-12 · [ODMA: On-Demand Memory Allocation Framework for LLM Serving on LPDDR-Class Accelerators](2025-2512.09427-odma-on-demand-memory-allocation-lpddr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
