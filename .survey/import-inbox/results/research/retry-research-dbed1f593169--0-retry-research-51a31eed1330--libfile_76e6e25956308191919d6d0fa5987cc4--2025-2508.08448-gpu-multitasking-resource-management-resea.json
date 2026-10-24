@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "34e29bc649f9f8af9e39725a17be1aad65ef1fa7f303106e766c7af66f419d27",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dbed1f593169--0-retry-research-51a31eed1330--libfile_76e6e25956308191919d6d0fa5987cc4--2025-2508.08448-gpu-multitasking-resource-management-research-20261022-2326-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2508.08448",
+  "worker_completed_at": "2026-10-22T23:32:43+09:00",
+  "worker_run_key": "20261022-2326-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6861,
+    "body_paragraphs": 38,
+    "method_chars": 2926,
+    "method_paragraphs": 15,
+    "evaluation_chars": 1208,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md と 20 段落 / 4208文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T22:26:22+00:00"
+}

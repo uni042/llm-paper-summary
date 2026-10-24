@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6bab4b72266ed3e162aea1a3c502b66629f7972d2057200dc2d9839090c966d3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d52c1daabec4--0-retry-research-1ff59c19c839--libfile_5649d164d78c8191afddb568b36d5598--2026-2606.07116-offq-frontmatter-quality-repair-20261023-0945-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2606.07116",
+  "worker_completed_at": "2026-10-23T09:48:32+09:00",
+  "worker_run_key": "20261023-0945-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5078,
+    "body_paragraphs": 27,
+    "method_chars": 1607,
+    "method_paragraphs": 9,
+    "evaluation_chars": 1303,
+    "limitation_chars": 514,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2606.07116-offq-taming-structured-outliers-in-llm-quantization-by-offsetting.md と 17 段落 / 3646文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T22:26:19+00:00"
+}
