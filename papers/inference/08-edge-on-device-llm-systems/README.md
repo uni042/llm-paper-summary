@@ -156,13 +156,13 @@
 
 ### 2年前（2024-11〜2025-10）
 
+- **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
+
 - **2025-06 · [Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference](2025-2412.00099-mixture-of-cache-conditional-experts-for-efficient-mobile-device-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   提案するキャッシュ優先ルーティング（Cache-Prior ルーティング）は、既存ルータのスコアに「DRAM内に既にある専門家」への加算項を導入し、上位K個の専門家の選択を変更する。
-
-- **2025-05 · [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](2025-d6d0a70f5bc4-edgeshard-efficient-llm-inference-via-collaborative-edge-computing.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
 - **2025-10 · [Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference](2025-d56c08fb1c58-characterizing-mobile-soc-for-accelerating-heterogeneous-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：10  

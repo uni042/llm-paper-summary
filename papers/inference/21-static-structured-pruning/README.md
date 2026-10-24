@@ -104,7 +104,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：144  
+  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：145  
   LLM-Prunerは、大規模言語モデルのパラメータを実際に削除して小さい密行列モデルへ変換する構造枝刈り手法である。LLaMA-7B、Vicuna-7B、ChatGLM-6Bを評価し、LLaMA-7Bでは20%の構造削減でゼロショット七課題平均が63.25から56.82へ下がり、低ランク適応後60.07まで回復した。
 
 - **2023-10 · [Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning](2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md)**  
@@ -126,7 +126,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-04 · [Structured Pruning Learns Compact and Accurate Models](2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md)**  
-  実装：[✓](https://github.com/princeton-nlp/CoFiPruning) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/princeton-nlp/CoFiPruning) ・ リポジトリ内被引用：21  
   一方、あらかじめ小型の学生モデルを定めて知識蒸留する方式は、推論しやすい構造を得られるが、大量の未ラベル文章で一般蒸留を行う費用が大きい。MNLIの約95%剪定条件ではBERT-base比12.1倍の推論高速化と精度80.6を報告し、QNLIでも12.1倍・86.1を報告する。
 
 - **2022-04 · [A Fast Post-Training Pruning Framework for Transformers](2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md)**  
