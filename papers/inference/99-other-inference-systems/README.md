@@ -1016,7 +1016,7 @@
 
 - **2026-08 · [Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference](2026-2608.00077-beyond-accuracy-auditing-spatial-provenance-in-visual-token-pruning-for-.md)**  
   実装：[✓](https://github.com/SouthWinter/spatial-provenance-audit) ・ リポジトリ内被引用：0  
-  高解像度の書類や画面画像では、視覚トークンが長い入力接頭辞（prefix）を作り、言語モデルの事前処理（プリフィル）時間とメモリ使用量を増やす。著者らは正解根拠領域の保持、紛らわしい不正解語の元領域の保持、画像を差し替えたときの挙動、短縮接頭辞を実際にGPUへ流した速度を同時に測る監査手順を提案する。
+  視覚トークンを間引けば言語モデル側の事前計算（プリフィル）とその作業用メモリを削減できるが、単に「保持率30%で正答率がほぼ同じ」という評価には穴がある。さらにトークンを統合する手法については、統合出力の出自集合と、代表位置で局所的に追跡できる範囲を区別する。
 
 - **2026-08 · [AsymSpec: Efficient Cloud-Edge Speculative Decoding over Asymmetric Networks](2026-2608.04974-asymspec-efficient-cloud-edge-speculative-decoding-over-asymmetric-networks.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1848,7 +1848,7 @@
 
 - **2026-02 · [WiSparse: Boosting LLM Inference Efficiency with Weight-Aware Mixed Activation Sparsity](2026-2602.14452-wisparse-boosting-llm-inference-efficiency-with-weight-aware-mixed-activ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  WiSparseは、学習済みLLMの重みを変更せず、推論時の入力トークンごとに重要度の低い線形層の入力チャネルを省略する手法である。Llama-3.1-8B-Instructの50%疎化では、6課題の平均正答率が密モデル65.57から63.57となり、R-Sparseの61.34、TEALの59.62を上回った。
+  大規模言語モデル（LLM）の推論では、各層の線形射影が多数の乗算と重み読出を必要とする。WiSparseは、活性と重みの両方からチャネル重要度を推定し、モデル全体の疎性率をブロック・層の二段階で割り当てる学習不要の活性疎化（学習不要 活性値 sparsity）方式である。
 
 - **2026-02 · [Understanding and Exploiting Weight Update Sparsity for Communication-Efficient Distributed RL](2026-2602.03839-understanding-and-exploiting-weight-update-sparsity-for-communication-ef.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
