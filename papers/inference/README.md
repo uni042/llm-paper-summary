@@ -54,11 +54,12 @@
 | [13-sparse-attention](13-sparse-attention/README.md) | 110 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/) |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 69 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/) |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 52 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/) |
-| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 74 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 76 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 29 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/) |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/18-pipeline-native-cpu-inference/) |
-| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 64 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
-| [20-linear-recurrent-language-models](20-linear-recurrent-language-models/README.md) | 29 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/) |
-| [21-static-structured-pruning](21-static-structured-pruning/README.md) | 13 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/21-static-structured-pruning/) |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 976 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
+| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 65 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
+| [20-linear-recurrent-language-models](20-linear-recurrent-language-models/README.md) | 37 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/) |
+| [21-static-structured-pruning](21-static-structured-pruning/README.md) | 19 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/21-static-structured-pruning/) |
+| [22-diffusion-decoding-efficiency](22-diffusion-decoding-efficiency/README.md) | 8 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/22-diffusion-decoding-efficiency/) |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 951 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
 <!-- survey:auto:end -->
