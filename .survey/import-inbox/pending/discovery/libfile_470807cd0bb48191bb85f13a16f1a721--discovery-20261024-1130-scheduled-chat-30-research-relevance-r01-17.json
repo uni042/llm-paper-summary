@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "reference_main_sha": "9a27faa3b71c1ea1e816500bf1e108c5f25c6438",
+  "record_count": 1,
+  "run_key": "20261024-1130-scheduled-chat-30/r01/relevance-017",
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.11056",
+      "identity_tokens": [
+        "arXiv:2510.11056"
+      ],
+      "title": "From Reasoning LLMs to BERT: A Two-Stage Distillation Framework for Search Relevance",
+      "reason": "一次要旨で電子商取引検索の関連性判定を対象とし、LLM教師のドメイン適応・教師生成した推論経路のBERT生徒への対照的蒸留を主要貢献とすることを確認。実運用での推論は軽量なBERT分類器であり、LLM生成推論基盤、KVキャッシュ、推論サービング、分散実行などのシステム技術を改善する論文ではない。現在凍結中の学習・蒸留中心の応用研究として対象外。",
+      "source_url": "https://arxiv.org/abs/2510.11056",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-24T11:34:20+09:00",
+      "last_checked_at": "2026-10-24T11:34:20+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 17
+    }
+  ]
+}
