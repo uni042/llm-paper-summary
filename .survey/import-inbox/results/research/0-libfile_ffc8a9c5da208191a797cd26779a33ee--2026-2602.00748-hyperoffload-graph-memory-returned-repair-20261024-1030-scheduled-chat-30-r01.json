@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9f0852f4ad9c890191c83239420771ec86525282faf2be7e16fdff6699688e0c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/0-libfile_ffc8a9c5da208191a797cd26779a33ee--2026-2602.00748-hyperoffload-graph-memory-returned-repair-20261024-1030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2602.00748",
+  "worker_completed_at": "2026-10-24T10:34:45+09:00",
+  "worker_run_key": "20261024-1030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6224,
+    "body_paragraphs": 35,
+    "method_chars": 2036,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1179,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/01-offload-hierarchical-memory/2026-2602.00748-hyperoffload-graph-driven-hierarchical-memory-management-for-large-langu.md と 23 段落 / 4978文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T19:07:01+00:00"
+}
