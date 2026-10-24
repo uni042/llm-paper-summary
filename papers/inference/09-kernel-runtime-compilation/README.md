@@ -92,6 +92,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/egorlifar/watersic) ・ リポジトリ内被引用：1  
   WaterSICは、大規模言語モデルの線形層を学習後量子化（post-学習 量子化）するとき、入力チャネルごとに異なる格子幅を与えることで、同じ圧縮容量でも出力のずれを小さくする手法である。ただし論文が評価する主軸は品質対圧縮率であり、llama.cppなどの推論器に載せたトークン/秒、展開カーネルの速度、メモリ帯域削減の実測ではない。
 
+- **2026-03 · [Mixture-of-Depths Attention](2026-2603.15619-mixture-of-depths-attention.md)**  
+  実装：[✓](https://github.com/hustvl/MoDA) ・ リポジトリ内被引用：1  
+  Mixture-of-Depths 注意機構（MoDA）は、深い大規模言語モデル（Large Language モデル; LLM）で浅い層に形成された情報が、繰り返す残差更新により後段で薄まる問題を対象とする。
+
 - **2026-03 · [FlashSampling: Fast and Memory-Efficient Exact Sampling](2026-2603.15854-flashsampling-fast-and-memory-efficient-exact-sampling.md)**  
   実装：[✓](https://github.com/FlashSampling/FlashSampling) ・ リポジトリ内被引用：1  
   一般的な実装では、この語彙投影を行列積として実行し、バッチ数×語彙数のロジット配列をGPUの高帯域メモリ（HBM）へ保存する。一次論文第3版は、H100、H200、B200、B300の4種類のGPUでのカーネル単体測定と、B200上でのvLLMへの統合測定を報告する。
@@ -357,10 +361,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [Model2Kernel: Model-Aware Symbolic Execution For Safe CUDA Kernels](2026-2603.24595-model2kernel-safe-cuda-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデル側からCUDA呼出し条件を抽出するHFProbeと、動的テンソル・全CUDAスレッドを記号化するcuKLEEを組み合わせ、LLM推論カーネルの未知メモリバグ353件を9誤検出で検出した。
-
-- **2026-03 · [Mixture-of-Depths Attention](2026-2603.15619-mixture-of-depths-attention.md)**  
-  実装：[✓](https://github.com/hustvl/MoDA) ・ リポジトリ内被引用：0  
-  Mixture-of-Depths 注意機構（MoDA）は、深い大規模言語モデル（Large Language モデル; LLM）で浅い層に形成された情報が、繰り返す残差更新により後段で薄まる問題を対象とする。
 
 - **2026-03 · [Making LLMs Optimize Multi-Scenario CUDA Kernels Like Experts](2026-2603.07169-cudamaster-multi-scenario-kernel-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
