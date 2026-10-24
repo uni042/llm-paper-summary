@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 import survey
+import paper_retirement_registry
 
 
 def _read_json(path: Path, default: Any = None) -> Any:
@@ -60,6 +61,18 @@ def collect_represented_records(root: Path, jobs_dir: Path | None = None) -> lis
             record = _read_json(path, {}) or {}
             if isinstance(record, dict):
                 records.append(dict(record))
+
+    registry = paper_retirement_registry.load_registry(root)
+    for retired in registry["records"].values():
+        records.append(
+            {
+                "canonical_id": retired["canonical_id"],
+                "identifiers": list(retired["verified_aliases"]),
+                "identity_disposition": "retired",
+                "retirement_id": retired["retirement_id"],
+                "title": retired.get("title"),
+            }
+        )
 
     old_root = survey.ROOT
     try:

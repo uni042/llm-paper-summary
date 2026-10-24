@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 import paper_identity
+import paper_retirement_registry
 import re
 
 import survey
@@ -184,6 +185,20 @@ def build_paper_index(repo_root: Path) -> dict[str, Any]:
             for token in paper["stable_identity_tokens"]:
                 add_lookup(by_token, token_conflicts, token, paper)
 
+    registry = paper_retirement_registry.load_registry(repo_root)
+    for retired in registry["records"].values():
+        paper = {
+            "canonical_id": retired["canonical_id"],
+            "path": retired["original_path"],
+            "identifiers": list(retired["verified_aliases"]),
+            "stable_identity_tokens": sorted(paper_identity.stable_identity_tokens({"identifiers": retired["verified_aliases"]})),
+            "identity_disposition": "retired",
+            "retirement_id": retired["retirement_id"],
+        }
+        by_path[paper["path"]] = paper
+        for token in paper["stable_identity_tokens"]:
+            add_lookup(by_token, token_conflicts, token, paper)
+
     return {
         "by_path": by_path,
         "by_identifier": by_identifier,
@@ -276,9 +291,12 @@ def reconcile(
 
         job["status"] = "superseded"
         job["superseded_at"] = stamp
-        job["superseded_reason"] = "paper_already_represented"
+        retired = paper.get("identity_disposition") == "retired"
+        job["superseded_reason"] = "paper_retired" if retired else "paper_already_represented"
         job["represented_paper_path"] = paper.get("path")
         job["represented_canonical_id"] = paper.get("canonical_id")
+        if retired:
+            job["retirement_id"] = paper.get("retirement_id")
         job["reconciled_by"] = "reconcile_represented_research_jobs.py"
         if not dry_run:
             _write_json(path, job)

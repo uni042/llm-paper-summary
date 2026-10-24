@@ -20,6 +20,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+import paper_retirement_registry
+
 SCHEMA_VERSION = 1
 QUEUE_REL = Path(".survey/work-queue")
 TERMINAL = {"completed", "rejected", "superseded", "blocked_permanent"}
@@ -349,7 +351,26 @@ def _evaluate_archive(repo_root: Path, archive_path: Path) -> tuple[str, dict[st
         if paper_path is None or artifact.get("paper") != paper_path:
             return "waiting", _waiting(envelope, archive_path, "paper_identity_mismatch")
         if kind == "research" and not (repo_root / paper_path).is_file():
-            return "waiting", _waiting(envelope, archive_path, "paper_missing")
+            identity = dict(envelope)
+            identity.update({k: v for k, v in descriptor.items() if k not in identity})
+            identity.update({k: v for k, v in job.items() if k not in identity})
+            try:
+                retired = paper_retirement_registry.find_retirement(repo_root, identity)
+            except ValueError:
+                retired = None
+            if (
+                retired is None
+                or retired.get("original_path") != paper_path
+                or not paper_retirement_registry.validate_source_pin(repo_root, retired)
+            ):
+                return "waiting", _waiting(envelope, archive_path, "paper_missing")
+            retired_row = _superseded_row(
+                repo_root, archive_path, envelope, descriptor_path, result_path, job_path,
+                canonical_attempt_id=attempt_id, paper_path=paper_path,
+            )
+            retired_row["reason"] = "paper_retired"
+            retired_row["retirement_id"] = retired["retirement_id"]
+            return "superseded", retired_row
     elif descriptor_status == "rejected":
         if job_status != "rejected" or job.get("status_submission") != relative_submission:
             return "waiting", _waiting(envelope, archive_path, "rejected_attempt_not_canonical")

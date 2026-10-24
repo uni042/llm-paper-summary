@@ -933,6 +933,26 @@ def process_research(
             record = dict(meta)
             record.setdefault("source_url", meta.get("source"))
             resolution = resolve_paper_identity.resolve(repo_root, record)
+            if resolution["status"] == "retired":
+                source.unlink()
+                replace_json(
+                    result_path,
+                    {
+                        "schema_version": 1,
+                        "artifact_type": "research",
+                        "status": "already_represented",
+                        "identity_disposition": "retired",
+                        "retirement_id": resolution["retirement_id"],
+                        "source_sha256": payload_hash,
+                        "canonical_id": resolution["canonical_id"],
+                        "worker_completed_at": meta.get("worker_completed_at"),
+                        "worker_run_key": meta.get("worker_run_key"),
+                        "quality_metrics": research_quality_metrics(audit),
+                        "processed_at": now(),
+                    },
+                )
+                terminal += 1
+                continue
             if resolution["status"] == "represented":
                 if reaud_target:
                     version = str(meta.get("under16kb_reaudit_version") or "").strip()
