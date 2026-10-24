@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d8556cfe3b15174ab1fb60cee6e48a34a1c8aedb02d0c3a42146b59e5683589a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9c3340f47800--0-retry-research-43d5473a76f3--libfile_1cd4ee6a356c81919766311302819651--2026-2602.05499-sdfp-method-evaluation-quality-repair-20261023-0845-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2602.05499",
+  "worker_completed_at": "2026-10-23T08:59:00+09:00",
+  "worker_run_key": "20261023-0845-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6027,
+    "body_paragraphs": 34,
+    "method_chars": 2134,
+    "method_paragraphs": 13,
+    "evaluation_chars": 1237,
+    "limitation_chars": 797,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/05-speculative-decoding-moe/2026-2602.05499-sdfp-speculative-decoding-with-fit-pruned-models-for-training-free-and-p.md と 14 段落 / 3005文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T22:08:26+00:00"
+}

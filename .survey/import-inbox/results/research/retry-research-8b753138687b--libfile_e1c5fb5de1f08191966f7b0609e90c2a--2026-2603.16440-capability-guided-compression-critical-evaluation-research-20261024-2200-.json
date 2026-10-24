@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "429e52f1a3e401f4844a6d49a0cba18a4907a40f8322099204306d62a8b392eb",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8b753138687b--libfile_e1c5fb5de1f08191966f7b0609e90c2a--2026-2603.16440-capability-guided-compression-critical-evaluation-research-20261024-2200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.16440",
+  "worker_completed_at": "2026-10-24T22:03:44+09:00",
+  "worker_run_key": "20261024-2200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6117,
+    "body_paragraphs": 31,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1216,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-24T22:08:23+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "08993c382ff740d838a5486b904e4bcee89268b9e5a003a9b40fb7593c3b7766",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-232a4bb07363--libfile_a533b15b074c81918162bb1f527beb68--2026-2605.19218-rotatek-evaluation-structure-repair-20261025-0445-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2605.19218",
+  "worker_completed_at": "2026-10-25T04:49:00+09:00",
+  "worker_run_key": "20261025-0445-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2775,
+    "body_paragraphs": 12,
+    "method_chars": 858,
+    "method_paragraphs": 4,
+    "evaluation_chars": 371,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 371 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 371 < 500"
+  ],
+  "processed_at": "2026-10-24T22:08:21+00:00"
+}
