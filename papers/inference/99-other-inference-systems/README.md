@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（931本）
+## 自動生成の論文一覧（932本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3181,6 +3181,10 @@
 - **2024-05 · [VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos](2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md)**  
   実装：[✓](https://github.com/Ziyang412/VideoTree) ・ リポジトリ内被引用：0  
   高関連クラスタだけを再分割して細部を調べるため、動画全体を均一に密な説明文へ変換する方式より、不要なフレーム説明や冗長な言語入力を減らせる。原著の主な根拠は、EgoSchema検証部分集合で66.2%の正答率、LLoVi-bestの61.2%に対して20.1秒対24.8秒という比較である。
+
+- **2024-05 · [Switchable Decision: Dynamic Neural Generation Networks](2024-2405.04513-switchable-decision-dynamic-neural-generation-networks.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  問題設定。事前学習したTransformerを軽量化する一般的な方法は、枝刈り、量子化、知識蒸留などによって固定された小型モデルを作る。
 
 - **2024-02 · [User-LLM: Efficient LLM Contextualization with User Embeddings](2024-2402.13598-user-llm-efficient-llm-contextualization-with-user-embeddings.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

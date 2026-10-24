@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（320本）
+## 自動生成の論文一覧（321本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -822,6 +822,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-11 · [Lethe: Layer- and Time-Adaptive KV Cache Pruning for Reasoning-Intensive LLM Serving](2025-2511.06029-lethe-layer-and-time-adaptive-kv-cache-pruning-for-reasoning-intensive-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Letheは、長い思考過程を文章として生成する大規模言語モデル（LLM）の推論時に、鍵・値キャッシュ（KVキャッシュ）を保持し続けることによるメモリ消費と注意計算の増大を抑える方式である。
+
+- **2025-11 · [FlowMM: Cross-Modal Information Flow Guided KV Cache Merging for Efficient Multimodal Context Inference](2025-2511.05534-flowmm-cross-modal-information-flow-guided-kv-cache-merging-for-efficien.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FlowMMは画像と文章が混在する多模態大規模言語モデル（MLLM）の推論時に、注意のキー・値キャッシュ（KVキャッシュ）を破棄ではなく結合によって圧縮する方式である。KV保持予算20%では、InternVL2.5-8Bの平均指標が全KV保持の27.97から27.85へと0.12ポイントの低下にとどまる。
 
 ### 2年前（2024-11〜2025-10）
 
