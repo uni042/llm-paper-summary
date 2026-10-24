@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "cf99230737c12aedebb2e681e761dd37f26cab5ecc161de54c7eae5fd751fce5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_86a02a3d4ee081919709eb61fa6323d2--2026-doi-10.18653-v1-2026.acl-long.46-robsa-mla-sparse-attention-research-20261023-2330-scheduled-chat-30-r01-section-normalized-20261023-2345-scheduled-chat-45-r01.md",
+  "canonical_id": "DOI:10.18653/v1/2026.acl-long.46",
+  "worker_completed_at": "2026-10-24T00:00:26+09:00",
+  "worker_run_key": "20261023-2345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5931,
+    "body_paragraphs": 32,
+    "method_chars": 1826,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1565,
+    "limitation_chars": 694,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/13-sparse-attention/2026-2a77ad945c5e-robsa-rope-based-blockwise-sparse-multi-head-latent-attention.md と 19 段落 / 4116文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T16:43:21+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d4c33bc48da5c7dda63cb6842ffa3794d70899dd636820dc8f970d08c3069241",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_7f6402242c9c819199403b3ab02bec7c--2026-2603.08088-eagle-pangu-ascend-tree-speculation-research-20261023-0400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2603.08088",
+  "worker_completed_at": "2026-10-23T04:05:12+09:00",
+  "worker_run_key": "20261023-0400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 2799,
+    "body_paragraphs": 13,
+    "method_chars": 868,
+    "method_paragraphs": 4,
+    "evaluation_chars": 346,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 346 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 346 < 500"
+  ],
+  "processed_at": "2026-10-24T16:41:32+00:00"
+}
