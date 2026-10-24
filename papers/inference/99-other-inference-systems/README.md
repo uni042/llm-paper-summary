@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（928本）
+## 自動生成の論文一覧（932本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1238,6 +1238,10 @@
   実装：[✓](https://github.com/infiniteYuanyl/VRCD) ・ リポジトリ内被引用：0  
   マスク付き拡散言語モデル（masked diffusion language モデル）は、未確定の多数のトークン位置を一度に予測し、確信の高い一部を確定する処理を繰り返して文章を生成する。主要な結果は推論高速化ではなく品質改善である。
 
+- **2026-05 · [VideoRouter: Query-Adaptive Dual Routing for Efficient Long-Video Understanding](2026-2605.05848-videorouter-query-adaptive-dual-routing-for-efficient-long-video-underst.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  VideoRouterは、固定の視覚トークン予算を「広く浅く」か「重要な場面へ厚く」かに配分する方式を質問ごとに決める。
+
 - **2026-05 · [Triplet-Block Diffusion RWKV](2026-2605.25969-triplet-block-diffusion-rwkv.md)**  
   実装：[✓](https://github.com/leonardodalinky/B3D-RWKV) ・ リポジトリ内被引用：0  
   この論文は、片方向にしか情報が流れない再帰型言語モデルを、内部構造を変更せずに双方向の拡散型生成へ転換する方法を扱う。自己回帰型Transformerは生成位置を順番に確定するため、1回の復号で出せるトークン数が限られる。離散拡散型言語モデルは複数位置を並列に修正できるが、通常はブロック内の未マスク位置を左右両方向から参照する。
@@ -1505,6 +1509,10 @@
 - **2026-04 · [TRIMS: Trajectory-Ranked Instruction Masked Supervision for Diffusion Language Models](2026-2604.00666-trims-trajectory-ranked-instruction-masked-supervision-for-diffusion-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TRIMS（Trajectory-Ranked Instruction Masked Supervision）は、マスク拡散言語モデル（Masked Diffusion Language モデル; MDLM）の反復生成で、どのトークンを先に確定するかを学習中から誘導する方式である。
+
+- **2026-04 · [Towards Faster Language Model Inference Using Mixture-of-Experts Flow Matching](2026-2604.15009-towards-faster-language-model-inference-using-mixture-of-experts-flow-ma.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、通常の自己回帰（autoregressive; AR）生成が1トークンごとに逐次的な前向き計算を必要とする問題に対し、連続潜在空間上の流れ合わせ（flow matching）と混合専門家（mixture of エキスパート; MoE）を組み合わせる非自己回帰（non-autoregressive; NAR）モデルYANを提案する。
 
 - **2026-04 · [Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought](2026-2604.22709-thinking-without-words-efficient-latent-reasoning-with-abstract-chain-of.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2078,6 +2086,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   単なる量子化誤差の研究ではなく、Ascendの演算子テンプレートライブラリCATLASSへ、量子化された重み配置、逆量子化、行列積を組み込み、不要な形式変換を避ける実行経路を構築する点が推論基盤上の寄与である。実測の前処理（プリフィル）では、バッチ32のFP16遅延5419msがINT8で3611msへ減少し、1.50倍の高速化となる。
 
+- **2025-12 · [Multiscale Aggregated Hierarchical Attention (MAHA): A Game-Theoretic and Optimization-Driven Approach to Efficient Contextual Modeling in Large Language Models](2025-2512.14925-multiscale-aggregated-hierarchical-attention-maha-a-game-theoretic-and-o.md)**  
+  実装：[✓](https://github.com/canererden/MAHA-Project) ・ リポジトリ内被引用：0  
+  MAHA（Multiscale Aggregated Hierarchical 注意機構）は、入力トークンを複数の解像度へ縮約し、それぞれの尺度で注意を計算した後、尺度ごとの出力を凸最適化またはゲーム理論に基づく重みで統合する注意機構である。
+
 - **2025-12 · [Modality Inflation: Energy Characterization and Optimization Opportunities for MLLM Inference](2025-2512.22695-modality-inflation-energy-characterization-and-optimization-opportunitie.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   画像入力を追加すると、視覚符号化器（vision encoder）が必要になるだけでなく、符号化結果が多数の視覚トークンとして言語モデルへ渡される。モデルはおおむね7B～8Bの言語モデル本体を持つが、視覚符号化器と画像のトークン化方式が異なる。代表的な条件では、画像入力によるエネルギー上乗せは17～94%の範囲だったと報告する。
@@ -2571,6 +2583,10 @@
 - **2025-05 · [DLP: Dynamic Layerwise Pruning in Large Language Models](2025-2505.23807-dlp-dynamic-layerwise-pruning-in-large-language-models.md)**  
   実装：[✓](https://github.com/ironartisan/DLP) ・ リポジトリ内被引用：2  
   DLP（動的 Layerwise 枝刈り、動的層別刈り込み）は、重みのどれを削るかだけでなく、各層に何割の重みを残すかを決めるためのモデル圧縮方式である。ただし同じ70%の疎化率でも、重要な層を一律に70%削ると、あまり重要でない層を多く削る場合より予測品質が大きく損なわれる。
+
+- **2025-04 · [SentenceKV: Efficient LLM Inference via Sentence-Level Semantic KV Caching](2025-2504.00970-sentencekv-efficient-llm-inference-via-sentence-level-semantic-kv-cachin.md)**  
+  実装：[✓](https://github.com/zzbright1998/SentenceKV) ・ リポジトリ内被引用：2  
+  SentenceKVは、長い入力を文ごとのまとまりに分け、文の意味を表す小さなキー索引だけをGPUに残して、個々の鍵・値（KV）対をCPU側へ退避する長文脈推論方式である。
 
 - **2025-04 · [Hawkeye: Model Collaboration for Efficient Reasoning](2025-2504.00424-hawkeye-model-collaboration-for-efficient-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

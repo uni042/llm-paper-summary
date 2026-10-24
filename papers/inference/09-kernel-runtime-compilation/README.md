@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（156本）
+## 自動生成の論文一覧（157本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -417,6 +417,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-12 · [gpu_ext: Extensible OS Policies for GPUs via eBPF](2025-2512.12615-gpu-ext-extensible-os-policies-for-gpus-via-ebpf.md)**  
   実装：[✓](https://github.com/eunomia-bpf/gpu_ext) ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の推論性能は、GPUの演算能力だけでなく、GPUメモリへ何を保持し、何をCPU側へ退避させ、いつ事前読み込みし、複数処理へどのように実行時間を割り当てるかに大きく左右される。
+
+- **2025-12 · [GatedFWA: Linear Flash Windowed Attention with Gated Associative Memory](2025-2512.07782-gatedfwa-linear-flash-windowed-attention-with-gated-associative-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GatedFWAは、自己回帰型言語モデルのスライディング窓注意（sliding-window 注意機構; SWA）に、トークン位置と注意ヘッドに依存する記憶ゲートを組み込む方式である。
 
 - **2025-12 · [Exact Flow Linear Attention: Exact Solution from Continuous-Time Dynamics](2025-2512.12602-exact-flow-linear-attention-exact-solution-from-continuous-time-dynamics.md)**  
   実装：[✓](https://github.com/declare-lab/EFLA) ・ リポジトリ内被引用：0  
