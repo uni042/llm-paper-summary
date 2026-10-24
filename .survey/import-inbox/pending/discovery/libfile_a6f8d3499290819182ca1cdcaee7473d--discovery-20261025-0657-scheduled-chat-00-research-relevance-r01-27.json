@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261025-0657-scheduled-chat-00/r01",
+  "reference_main_sha": "a184951364d2da80fc000336fd0ea15f94bb8f9e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.10064",
+      "identity_tokens": [
+        "arxiv:2604.10064",
+        "url:https://arxiv.org/abs/2604.10064"
+      ],
+      "title": "On The Application of Linear Attention in Multimodal Transformers",
+      "reason": "一次要旨ではViT-S/16・ViT-B/16・ViT-L/16をLAION-400Mで学習し、ImageNet-21Kゼロショット分類で線形注意の計算量と精度を評価する研究である。LLMの自己回帰復号、KVキャッシュ、LLMサービング、生成モデル推論の性能を直接評価していないため、本サーベイのLLM推論システム対象から除外する。線形注意の一般的な計算量削減自体は関連技術だが、論文の最終実証対象は画像分類である。",
+      "source_url": "https://arxiv.org/abs/2604.10064",
+      "body_check": "abstract_screen_only; body_not_read; arXiv abstract explicitly names ViT-S/16, ViT-B/16, ViT-L/16, LAION-400M, ImageNet-21K zero-shot; no LLM inference serving or autoregressive evaluation.",
+      "first_checked_at": "2026-10-25T07:23:00+09:00",
+      "last_checked_at": "2026-10-25T07:23:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 27
+    }
+  ]
+}
