@@ -36,6 +36,8 @@ worker_run_key: '20261023-1100-scheduled-chat-00/r01'
 reference_main_sha: '1d002b50d74417b22d432b2910c0b44c44811d00'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Arnold：9600超GPUのLLM事前学習で通信グループとネットワーク階層を一致させる配置最適化

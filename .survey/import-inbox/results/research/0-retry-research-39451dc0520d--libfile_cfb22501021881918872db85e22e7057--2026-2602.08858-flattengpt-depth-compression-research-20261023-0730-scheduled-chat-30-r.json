@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "fc67c36a8b695d63d2b66cc59a3fe0e7b478e3ce5499620f200127c8d17418ac",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-39451dc0520d--libfile_cfb22501021881918872db85e22e7057--2026-2602.08858-flattengpt-depth-compression-research-20261023-0730-scheduled-chat-30-r01-v2-section-normalized-20261024-0345-scheduled-ch.md",
+  "canonical_id": "arXiv:2602.08858",
+  "worker_completed_at": "2026-10-24T03:57:30+09:00",
+  "worker_run_key": "20261024-0345-scheduled-chat-45/r03",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4805,
+    "body_paragraphs": 27,
+    "method_chars": 1559,
+    "method_paragraphs": 10,
+    "evaluation_chars": 1377,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.08858-flattengpt-depth-compression-for-transformer-with-layer-flattening.md と 13 段落 / 2718文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T19:24:53+00:00"
+}
