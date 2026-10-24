@@ -46,6 +46,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：5  
   しかしルータが選び得る専門家の重みをすべてGPUに保持できなければ、選択された専門家をCPUメモリからPCIe経由で転送しなければならない。先読み（プリフェッチ）が当たれば転送を隠せるが、外れたときの同期読み込みは生成を止める。
 
+- **2026-06 · [DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training](2025-2512.13996-dtop-p-dynamic-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  比例積分制御でTop-p閾値を動かして平均専門家数を予算へ追従させ、層別正規化でトークン・深さごとに計算を再配分する事前学習MoE。
+
 - **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
   実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：4  
   全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
@@ -57,10 +61,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-01 · [Dynamic Expert Sharing: Decoupling Memory from Parallelism in Mixture-of-Experts Diffusion LLMs](2026-2602.00879-dynamic-expert-sharing.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   並列dLLMのトークン群で専門家コア集合を共有し、MoEのユニーク重み転送を約55%削減しつつ相対精度99.5%を維持、MoE層遅延を最大38%短縮する。
-
-- **2026-06 · [DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training](2025-2512.13996-dtop-p-dynamic-routing.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  比例積分制御でTop-p閾値を動かして平均専門家数を予算へ追従させ、層別正規化でトークン・深さごとに計算を再配分する事前学習MoE。
 
 - **2026-04 · [Does a Global Perspective Help Prune Sparse MoEs Elegantly?](2026-2604.06542-global-perspective-moe-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -408,13 +408,13 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/wazenmai/HC-SMoE) ・ リポジトリ内被引用：27  
   専門家の平均出力を用いる階層的クラスタリングと頻度重み付き統合により、再学習なしでQwen/Mixtralの専門家を最大50%削減しつつ比較手法より高い性能保持を示す。
 
+- **2024-10 · [MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts](2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md)**  
+  実装：[✓](https://github.com/SkyworkAI/MoE-plus-plus) ・ リポジトリ内被引用：24  
+  さらに前の層で選ばれた経路をルータ得点に反映する経路認識ルータと、FFNと軽量専門家へ異なる容量を割り当てる負荷均衡を導入する。例えば1B規模・100B学習トークン・τ=0.75では、通常MoEの専門家順伝播610.9ミリ秒に対しMoE++は500.3ミリ秒で、処理能力は22.1%向上した。
+
 - **2024-10 · [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md)**  
   実装：✓ ・ リポジトリ内被引用：24  
   一方、GPUメモリに置く重みの総量は大きく、単一GPUでは容量不足になりやすい。使わない専門家をCPU主記憶に退避し、必要なものだけGPUへ移す方式は容量問題を緩和するが、どの専門家が選ばれるかは入力トークンと各層のルータに依存する。
-
-- **2024-10 · [MoE++: Accelerating Mixture-of-Experts Methods with Zero-Computation Experts](2024-2410.07348-moe-accelerating-mixture-of-experts-methods-with-zero-computation-experts.md)**  
-  実装：[✓](https://github.com/SkyworkAI/MoE-plus-plus) ・ リポジトリ内被引用：23  
-  さらに前の層で選ばれた経路をルータ得点に反映する経路認識ルータと、FFNと軽量専門家へ異なる容量を割り当てる負荷均衡を導入する。例えば1B規模・100B学習トークン・τ=0.75では、通常MoEの専門家順伝播610.9ミリ秒に対しMoE++は500.3ミリ秒で、処理能力は22.1%向上した。
 
 - **2024-07 · [Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts](2024-2407.09590-task-agnostic-expert-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
@@ -425,7 +425,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   重みを個別にゼロ化する非構造化枝刈り（unstructured 枝刈り）は高い自由度を持つが、強く削ると数学的な文章生成能力が急落し、不規則なゼロ配置はGPUの実行時間削減にも直結しない。原著のACL 2025版では、Snowflake Arcticを40%疎化したとき、数学文章題GSM8Kの正解率は未圧縮70.74から70.28となった。
 
 - **2024-06 · [AdaMoE: Token-Adaptive Routing with Null Experts for Mixture-of-Experts Language Models](2024-2406.13233-adamoe-token-adaptive-routing-with-null-experts-for-mixture-of-experts-language-.md)**  
-  実装：[✓](https://github.com/CengZihao/AdaMoE) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/CengZihao/AdaMoE) ・ リポジトリ内被引用：20  
   単純なトークンにも固定のk個を実行すると計算が余り、逆に難しいトークンへ多く割り当てる自由度がなくなる。原著は既存のMixtral-8x7Bを微調整した6課題で、通常の上位2専門家選択の平均実行数2.00に対し、AdaMoEの設定m=8、k=3では1.66へ低下し、浮動小数点演算量（FLOPs）が平均15.21%減ったと報告する。
 
 - **2024-02 · [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md)**  
@@ -453,7 +453,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：122  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：123  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  
