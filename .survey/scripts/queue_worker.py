@@ -21,6 +21,7 @@ from urllib.parse import parse_qs, urlparse
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import paper_identity  # noqa: E402
+import paper_retirement_registry  # noqa: E402
 import survey  # noqa: E402
 import candidate_priority  # noqa: E402
 import claim_state  # noqa: E402
@@ -1491,6 +1492,14 @@ def apply_artifact(sub: dict, job: dict):
     if not isinstance(loaded, str) or len(loaded.strip()) < 500:
         raise ValueError("completed artifact requires complete Markdown content or payload_path")
     content = loaded.rstrip() + "\n"
+    frontmatter = content.split("---", 2)
+    if len(frontmatter) >= 3:
+        import yaml
+        candidate_meta = yaml.safe_load(frontmatter[1]) or {}
+        if isinstance(candidate_meta, dict):
+            retired = paper_retirement_registry.find_retirement(ROOT.parent, candidate_meta)
+            if retired is not None:
+                raise ValueError(f"paper identity is retired ({retired['retirement_id']}); refusing artifact write")
     target = ROOT.parent / paper
     paper_parts = PurePosixPath(str(paper)).parts
     if (
