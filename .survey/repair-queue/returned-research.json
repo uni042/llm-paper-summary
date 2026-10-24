@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T01:02:04+00:00",
+  "generated_at": "2026-10-24T01:11:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1048,36 +1048,9 @@
       "worker_run_key": "20261024-0445-scheduled-chat-45/r02"
     },
     {
-      "canonical_id": "arXiv:2512.10310",
-      "title": "Efficient-VLN: A Simple yet Strong Baseline for Efficient Vision-Language Navigation",
-      "source_url": "https://arxiv.org/pdf/2512.10310",
-      "returned_at": "2026-10-24T00:59:49+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 150 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5001,
-        "body_paragraphs": 27,
-        "method_chars": 1507,
-        "method_paragraphs": 8,
-        "evaluation_chars": 150,
-        "limitation_chars": 809,
-        "insufficiency_flags": [
-          "評価説明量 150 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_99dc314c4b008191abae35af65e05789--2025-2512.10310-efficient-vln-contiguous-rope-kv-reuse-research-20261023-0100-scheduled-chat-00-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_99dc314c4b008191abae35af65e05789--2025-2512.10310-efficient-vln-contiguous-rope-kv-reuse-research-20261023-0100-scheduled-chat-00-r01-v2.json",
-      "worker_run_key": "20261023-0100-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.26112",
-      "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2608.26112",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-24T01:00:22+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1101,6 +1074,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-537988957321--file_00000000d728820c9a59db4347dd82fa--2026-2608.26112-treegraft-multi-drafter-speculative-decoding-research-20261024-0857-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-537988957321--file_00000000d728820c9a59db4347dd82fa--2026-2608.26112-treegraft-multi-drafter-speculative-decoding-research-20261024-0857-schedule.json",
       "worker_run_key": "20261024-0857-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.10310",
+      "title": "Efficient-VLN: A Simple yet Strong Baseline for Efficient Vision-Language Navigation",
+      "source_url": "https://arxiv.org/pdf/2512.10310",
+      "returned_at": "2026-10-24T01:11:00+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 150 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5001,
+        "body_paragraphs": 27,
+        "method_chars": 1507,
+        "method_paragraphs": 8,
+        "evaluation_chars": 150,
+        "limitation_chars": 809,
+        "insufficiency_flags": [
+          "評価説明量 150 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0293bab85b79--libfile_99dc314c4b008191abae35af65e05789--2025-2512.10310-efficient-vln-contiguous-rope-kv-reuse-research-20261023-0100-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0293bab85b79--libfile_99dc314c4b008191abae35af65e05789--2025-2512.10310-efficient-vln-contiguous-rope-kv-reuse-research-20261023-0100-scheduled-c.json",
+      "worker_run_key": "20261023-0100-scheduled-chat-00/r01"
     }
   ]
 }
