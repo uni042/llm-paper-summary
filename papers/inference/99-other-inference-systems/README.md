@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（952本）
+## 自動生成の論文一覧（954本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1162,6 +1162,10 @@
   実装：[✓](https://github.com/meituan-longcat/omni-flow) ・ リポジトリ内被引用：0  
   マルチモーダル推論を制御・データ・計算の3層へ分離し、Python DSL、GPU/CPU/SSD分散KV、SGLang互換実行を統合する。LongCat-NextやHunyuanImage-3を同じ配信抽象へ載せる基盤。
 
+- **2026-06 · [OffQ: Taming Structured Outliers in LLM Quantization by Offsetting](2026-2606.07116-offq-taming-structured-outliers-in-llm-quantization-by-offsetting.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ビット量子化は、大規模言語モデル（LLM）の重み転送量と行列積の費用を削減する。一次論文の表1では、Llama 3-8BのWikiText困惑度が16ビットの6.1、比較方式ResQの7.1に対してOffQは6.98、8課題平均ゼロショット正解率はResQの63.91%に対して65.49%だった。
+
 - **2026-06 · [Multi-Bitwidth Quantization for LLMs Using Additive Codebooks](2026-2606.12876-multi-bitwidth-quantization-for-llms-using-additive-codebooks.md)**  
   実装：[✓](https://anonymous.4open.science/r/DropbyDrop2026/) ・ リポジトリ内被引用：0  
   大規模言語モデルを異なる記憶容量の機器へ展開するとき、通常の学習後量子化（post-学習 量子化、PTQ）は3ビット、4ビット、5ビットといった精度ごとに別の圧縮モデルを作る必要がある。
@@ -1853,6 +1857,10 @@
 - **2026-02 · [Pruning as a Cooperative Game: Surrogate-Assisted Layer Contribution Estimation for Large Language Models](2026-2602.07804-pruning-as-a-cooperative-game-surrogate-assisted-layer-contribution-esti.md)**  
   実装：[✓](https://github.com/920927/Pruning_As_A_Cooperative_Game) ・ リポジトリ内被引用：0  
   本論文は、推論時に実行するTransformer層を丸ごと減らす深さ方向の構造化枝刈り（depth-wise structured 枝刈り）を対象とする。
+
+- **2026-02 · [PRISM: Parametrically Refactoring Inference for Speculative Sampling Draft Models](2026-2602.01762-prism-parametrically-refactoring-inference-for-speculative-sampling-draf.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号（投機的復号）は、小型の草稿モデルに将来のトークンを提案させ、対象の大規模言語モデルがまとめて検証することで、対象モデルの逐次呼出し回数を減らす。
 
 - **2026-02 · [Prism: Efficient Test-Time Scaling via Hierarchical Search and Self-Verification for Discrete Diffusion Language Models](2026-2602.01842-prism-efficient-test-time-scaling-via-hierarchical-search-and-self-verif.md)**  
   実装：[✓](https://github.com/viiika/Prism) ・ リポジトリ内被引用：0  
