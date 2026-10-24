@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（923本）
+## 自動生成の論文一覧（926本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -786,6 +786,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   文を長さに応じて1〜3区間へ分割し、重要トークンを重み付けした潜在表現を生成・復号するDSEI。固定文圧縮より品質を改善し、トークン単位推論より系列長とメモリ負荷を削減する。
 
+- **2026-09 · [Distance-KV: Exploiting Relative Distance for Efficient Long-Context Inference](2026-2609.32663-distance-kv-exploiting-relative-distance-for-efficient-long-context-infe.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  復号時の注意演算は過去のKVを繰り返し参照するため、メモリ容量と帯域がボトルネックになる。既存の圧縮方式には、最近のトークンだけを残す方式、注意重みで重要トークンを選ぶ方式、層や注意ヘッドごとに異なる保持予算を割り当てる方式がある。
+
 - **2026-09 · [Dissecting GPU Utilization for LLM Inference on Nvidia Hopper](2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
@@ -1241,6 +1245,10 @@
 - **2026-05 · [When Are Experts Misrouted? Counterfactual Routing Analysis in Mixture-of-Experts Language Models](2026-2605.07260-when-are-experts-misrouted-counterfactual-routing-analysis-in-mixture-of.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家（Mixture-of-Experts; MoE）言語モデルは、各トークンについて多数の専門家ネットワークのうち少数だけを実行する。Qwen3-30B-A3Bでは、確信度の高いトークンは標準経路と最良候補の差がほぼないが、難しいトークンでは大きく乖離する。ただし、この論文は推論時に32個の候補を毎回試す高速化方式を提案したわけではない。
+
+- **2026-05 · [VLMaxxing through FrameMogging: Training-Free Anti-Recomputation for Video Vision-Language Models](2026-2605.03351-vlmaxxing-through-framemogging-training-free-anti-recomputation-for-vide.md)**  
+  実装：[✓](https://github.com/jfbastien/VLMaxxing) ・ リポジトリ内被引用：0  
+  本研究は「再利用で何を省くか」と「どの時間を分母にするか」を分け、異なる三つの機構を評価する。Qwen2.5-VL-7B-Instruct-4bitで、同一動画の後続質問を14.90〜35.92倍高速化し、VideoMMEの93対では選択肢・正誤の変化を観測しなかった。
 
 - **2026-05 · [Visual-Redundancy-Controlled Parallel Decoding for Diffusion-Based Multimodal Large Language Models](2026-2605.25820-visual-redundancy-controlled-parallel-decoding-for-diffusion-based-multi.md)**  
   実装：[✓](https://github.com/infiniteYuanyl/VRCD) ・ リポジトリ内被引用：0  
@@ -1917,6 +1925,10 @@
 - **2026-01 · [RadixMLP -- Intra-batch Deduplication for Causal Transformers](2026-2601.15013-radixmlp-intra-batch-deduplication.md)**  
   実装：[✓](https://github.com/michaelfeil/radix-mlp) ・ リポジトリ内被引用：0  
   RadixMLPは、同一バッチに入った複数の系列が長い接頭辞を共有している場合、共有部分の多層パーセプトロン（MLP）、層正規化（LayerNorm）、線形射影、埋め込みなどを何度も実行する無駄を削減する方式である。
+
+- **2026-01 · [Power-based Partial Attention: Bridging Linear-Complexity and Full Attention](2026-2601.17334-power-based-partial-attention-bridging-linear-complexity-and-full-attent.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この論文は、完全注意（Full 注意機構）の二乗計算量と、局所窓注意（Sliding-Window 注意機構）の線形計算量の間を、単一パラメータpで連続的に調整できる因果注意マスクを提案する。
 
 - **2026-01 · [PLA-Serve: A Prefill-Length-Aware LLM Serving System](2026-a30e37ff7d4b-pla-serve-a-prefill-length-aware-llm-serving-system.md)**  
   実装：[✓](https://github.com/Jianshu-She/LAPS) ・ リポジトリ内被引用：0  
