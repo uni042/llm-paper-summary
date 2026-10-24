@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（325本）
+## 自動生成の論文一覧（326本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -734,6 +734,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Hurwitz Quaternion Multiplicative Quantization for KV Cache Compression](2026-2605.27646-hurwitz-quaternion-multiplicative-quantization-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の半精度浮動小数点（FP16）で保存すると、文脈長に比例してKVのメモリ占有量が増える。ノルムである半径は別に量子化する。これに、チャンクの半径が同一集団の中央値の3倍を超えたときだけFP16で保存する外れ値退避（Med3×）を組み合わせる。
+
+- **2026-05 · [HeadQ: Model-Visible Distortion and Score-Space Correction for KV-Cache Quantization](2026-2605.03562-headq-model-visible-distortion-and-score-space-correction-for-kv-cache-q.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  保存精度を下げれば容量と読み出し帯域を削減できるが、単純に保存値の平均二乗誤差が小さい量子化方式を選んでも、生成品質が良いとは限らない。
 
 - **2026-05 · [FastOCR: Dynamic Visual Fixation via KV Cache Pruning for Efficient Document Parsing](2026-2605.17447-fastocr-dynamic-visual-fixation-via-kv-cache-pruning-for-efficient-docum.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
