@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（975本）
+## 自動生成の論文一覧（976本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2691,6 +2691,10 @@
 - **2025-10 · [AuroraLong: Bringing RNNs Back to Efficient Open-Ended Video Understanding](2025-2507.02591-auroralong-bringing-rnns-back-to-efficient-open-ended-video-understandin.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AuroraLongは、動画質問応答や詳細な動画字幕生成で問題となる、画像フレーム数に比例して増える視覚トークンを低メモリで処理する多模態言語モデルである。学習済みRWKVの4,096トークンという文脈長と、多数の画像を入力する動画処理との隔たりを埋める設計である。
+
+- **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
+  実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：1  
+  通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
 
 - **2025-09 · [PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation](2025-2509.19128-pipelinerl-faster-on-policy-reinforcement-learning-for-long-sequence-gen.md)**  
   実装：[✓](https://github.com/ServiceNow/pipelinerl) ・ リポジトリ内被引用：1  

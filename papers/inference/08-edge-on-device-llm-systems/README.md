@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（56本）
+## 自動生成の論文一覧（57本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -199,6 +199,10 @@
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   D²MoEは、端末上でMoEを動かすときの専門家の重みをどの精度で読み込むかと、SSDなどからの重み読込とGPU計算をどう重ねるかを同時に設計する。二重ルーティングは専門家IDとビット幅の二つの選択を意味し、トークンを二回生成する方式ではない。
+
+- **2024-12 · [Deploying Foundation Model Powered Agent Services: A Survey](2024-2412.13437-deploying-foundation-model-powered-agent-services-a-survey.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、基盤モデル（foundation モデル）を使うエージェントサービスを、端末、エッジ、クラウドにまたがる異種資源上へ配備する際のシステム技術を整理した文献サーベイである。
 
 ### 3年前（2023-11〜2024-10）
 
