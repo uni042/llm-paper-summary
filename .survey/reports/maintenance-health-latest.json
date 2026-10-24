@@ -1,28 +1,28 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-22T18:11:58+00:00",
+  "checked_at": "2026-10-24T00:39:10+00:00",
   "status": "issues_found",
   "error_count": 1,
   "warning_count": 0,
-  "paper_count": 2943,
-  "latest_paper_commit": "2026-10-22T17:26:02+00:00",
+  "paper_count": 3015,
+  "latest_paper_commit": "2026-10-24T00:11:04+00:00",
   "queue": {
-    "job_count": 1951,
+    "job_count": 1838,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
     "counts": {
       "discovery": {
         "processing": 7,
-        "completed": 12,
+        "completed": 5,
         "ready": 1
       },
       "audit": {
         "ready": 2
       },
       "research": {
-        "superseded": 728,
-        "ready": 1170,
+        "superseded": 691,
+        "ready": 1101,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -54,22 +54,22 @@
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-22T18:11:25+00:00",
-      "total": 2943,
-      "incomplete": 5,
+      "checked_at": "2026-10-24T00:38:20+00:00",
+      "total": 3015,
+      "incomplete": 6,
       "findings": [
         {
           "severity": "error",
           "code": "citation_coverage_incomplete",
-          "detail": "citation coverage has 5 incomplete paper(s)",
-          "incomplete": 5
+          "detail": "citation coverage has 6 incomplete paper(s)",
+          "incomplete": 6
         }
       ]
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-22T18:11:25+00:00",
-      "total": 2943,
+      "checked_at": "2026-10-24T00:38:20+00:00",
+      "total": 3015,
       "incomplete": 0,
       "findings": []
     }
@@ -78,8 +78,8 @@
     {
       "severity": "error",
       "code": "citation_coverage_incomplete",
-      "detail": "citation coverage has 5 incomplete paper(s)",
-      "incomplete": 5
+      "detail": "citation coverage has 6 incomplete paper(s)",
+      "incomplete": 6
     }
   ]
 }
