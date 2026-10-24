@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（124本）
+## 自動生成の論文一覧（125本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -269,6 +269,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-05 · [PipeMax: Enhancing Offline LLM Inference on Commodity GPU Servers](2026-2605.02189-pipemax-offline-llm-inference-commodity-gpu-servers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   パイプライン並列で今使わないバッチのKVキャッシュをCPUへ退避し、現在の計算時間に収まる量だけ次バッチ用に先読みすることで、GPUメモリとPCIe帯域を有効活用しオフラインLLM推論を高速化する。
+
+- **2026-05 · [OOM-Free Alpamayo via CPU-GPU Memory Swapping for Vision-Language-Action Models](2026-2605.11678-oom-free-alpamayo-via-cpu-gpu-memory-swapping-for-vision-language-action.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Alpamayo-R1-10BのようなVLAモデルは、カメラ入力から説明と運転行動を導く一連の処理を統合するが、モデル重みと作業領域の合計が一般的な12〜16GB GPUのVRAMを超える。
 
 - **2026-05 · [MoE-Prefill: Zero Redundancy Overheads in MoE Prefill Serving](2026-2605.02960-moe-prefill-async-expert-weight-streaming.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

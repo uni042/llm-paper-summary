@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T05:10:58+00:00",
+  "generated_at": "2026-10-24T05:57:47+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 34,
+  "count": 36,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -47,6 +47,60 @@
       "worker_run_key": "research-revalidation-arxiv-2601.19908-20261003t225905jst"
     },
     {
+      "canonical_id": "arXiv:2511.19676",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T12:39:16+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19676-interlace-interleaved-layer-pruning-and-efficient-adaptation-in-large-vi.md と 18 段落 / 3803文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5070,
+        "body_paragraphs": 28,
+        "method_chars": 1426,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1543,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2403.14520",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T13:08:17+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2403.14520-cobra-extending-mamba-to-multi-modal-large-language-model-for-efficient-.md と 20 段落 / 4170文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6691,
+        "body_paragraphs": 38,
+        "method_chars": 1925,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1967,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9ffd55868e63--libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9ffd55868e63--libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-schedul.json",
+      "worker_run_key": "20261014-0745-scheduled-chat-45/r01"
+    },
+    {
       "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
       "title": null,
       "source_url": null,
@@ -73,6 +127,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.json",
       "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2310.05015",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-17T17:03:42+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500",
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2310.05015-compresso-structured-pruning-with-collaborative-prompting-learns-compact.md と 17 段落 / 3711文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4850,
+        "body_paragraphs": 25,
+        "method_chars": 1920,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9623cd3b8880--libfile_fa5f0b7267248191893fb43f0c4ccf9c--2023-2310.05015-compresso-structured-pruning-collaborative-prompting-research-20261017-2255-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9623cd3b8880--libfile_fa5f0b7267248191893fb43f0c4ccf9c--2023-2310.05015-compresso-structured-pruning-collaborative-prompting-research-20261017-22.json",
+      "worker_run_key": "20261017-2255-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.06850",
@@ -294,34 +377,6 @@
       "worker_run_key": "20261022-1932-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.27791",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T17:31:10+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 170 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5676,
-        "body_paragraphs": 38,
-        "method_chars": 1411,
-        "method_paragraphs": 9,
-        "evaluation_chars": 170,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 170 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54c8b85bb0f7--libfile_e62abcce372c8191963c78f73ba1347c--2026-2606.27791-nll-guided-swaa-returned-repair-20261022-0701-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-54c8b85bb0f7--libfile_e62abcce372c8191963c78f73ba1347c--2026-2606.27791-nll-guided-swaa-returned-repair-20261022-0701-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261022-0701-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.20375",
       "title": null,
       "source_url": null,
@@ -405,6 +460,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c68bf512268a--libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c68bf512268a--libfile_9a73d80318bc8191b59790a6104ecd41--2026-2602.05499-sdfp-fit-pruned-draft-speculative-decoding-research-20261022-1732-schedul.json",
       "worker_run_key": "20261022-1732-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2411.10741",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-22T17:50:10+00:00",
+      "return_count": 8,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md と 12 段落 / 2868文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4454,
+        "body_paragraphs": 27,
+        "method_chars": 1058,
+        "method_paragraphs": 6,
+        "evaluation_chars": 990,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca7d4c1f8efd--libfile_ce2da32ba1888191bdbe22bf3388cd78--2024-2411.10741-metala-linear-attention-optimal-approximation-research-20261021-0956-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca7d4c1f8efd--libfile_ce2da32ba1888191bdbe22bf3388cd78--2024-2411.10741-metala-linear-attention-optimal-approximation-research-20261021-0956-sche.json",
+      "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2602.00748",
@@ -685,35 +767,6 @@
       "worker_run_key": "20261023-2228-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2505.00019",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T17:21:14+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5324,
-        "body_paragraphs": 27,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 358,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-40a02577fe8c--libfile_7789f669e2348191994dc00f90771fcc--2025-2505.00019-empirical-prompt-compression-evaluation-research-20261023-1733-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-40a02577fe8c--libfile_7789f669e2348191994dc00f90771fcc--2025-2505.00019-empirical-prompt-compression-evaluation-research-20261023-1733-scheduled-.json",
-      "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.38697",
       "title": null,
       "source_url": null,
@@ -908,8 +961,8 @@
     },
     {
       "canonical_id": "arXiv:2608.26112",
-      "title": "TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding",
-      "source_url": "https://arxiv.org/abs/2608.26112",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-24T05:10:57+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",

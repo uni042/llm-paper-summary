@@ -28,6 +28,8 @@ quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 repair_kind: section_heading_normalization
 repair_note: 既存のAAMAS 2026一次論文確認済み原稿の見出し階層のみ修正。今回のrunでは原著全文の独立再読解は実施していない。
+last_audited: null
+audit_version: 0
 ---
 
 # RAC：要求適応型の投機的復号構成選択

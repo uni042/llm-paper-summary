@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（218本）
+## 自動生成の論文一覧（219本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -451,6 +451,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-05 · [SlimSpec: Low-Rank Draft LM-Head for Accelerated Speculative Decoding](2026-2605.10453-slimspec-low-rank-draft-lm-head-for-accelerated-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小さなドラフトモデルが先に複数トークンを提案し、大きな対象モデルが一括して検証することで生成を高速化する。
+
+- **2026-05 · [RAC: Request-adaptive Configuration for Efficient Speculative Decoding](2026-2ebee891fde4-rac-request-adaptive-configuration-for-efficient-speculative-decoding.md)**  
+  実装：[✓](https://github.com/JhSheng/RAC-) ・ リポジトリ内被引用：0  
+  RAC（リクエスト-適応的 Configuration selection）は、投機的復号（投機的復号）で使う草稿モデルと草稿長を要求ごとに同時選択する方式である。表1ではVicuna-33B-v1.3を目標モデルとし、HumanEvalの生成速度を通常の自己回帰復号29.369 トークン/sからRACの59.343 トークン/sへ改善した（2.021倍）。
 
 - **2026-05 · [Performance-Driven Policy Optimization for Speculative Decoding with Adaptive Windowing](2026-2605.14978-performance-driven-policy-optimization-for-speculative-decoding-with-ada.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

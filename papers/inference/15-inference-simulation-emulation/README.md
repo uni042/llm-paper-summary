@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（49本）
+## 自動生成の論文一覧（50本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -133,6 +133,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization](2026-2604.23577-routenlp-closed-loop-llm-routing-with-conformal-cascading-and-distillati.md)**  
   実装：[✓](https://github.com/bettyguo/RouteNLP) ・ リポジトリ内被引用：0  
   提案方式は、タスク条件付きの難易度予測器、共形リスク制御で初期化した品質確認付きの段階的移行、失敗した問い合わせを分類して小型モデルを再蒸留する閉ループという三つの機構を連結する。8週間・1日約5,000件の顧客サービス試験運用では、費用58%削減、専門家による応答受理率91%を報告した。
+
+- **2026-04 · [CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts](2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoot.md)**  
+  実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：0  
+  これを低ビット化するとGPUメモリ使用量を減らせるものの、活性値や重みに少数の大きな外れ値があると、均一な量子化の刻み幅が粗くなり、特に4ビット級で精度が悪化する。主要評価はPhi-mini-MoE-Instruct、DeepSeek-V2-Lite、Qwen3-30B-A3B、Mixtral 8×7Bを対象とする。
 
 - **2026-04 · [Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing](2026-cedb2b11ea50-adaptive-load-balancing-for-multi-tier-llm-inference-with-dynamic-model-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "The official IFAAMAS AAMAS 2026 Extended Abstract confirms RAC uses request features and historical execution feedback in an RL/MDP policy to select draft model and speculative length per request. Its text-generation benchmark results report maximum speedups of 2.02× over autoregressive decoding and 1.37× over vanilla speculative decoding; this is a direct LLM inference-efficiency contribution.",
   "semantic_scholar_id": "1f44997f067d28ae279e23f5bf141715a0e18eb7",
   "source_url": "https://doi.org/10.65109/SGXL4097",
-  "status": "ready",
+  "status": "superseded",
   "title": "RAC: Request-adaptive Configuration for Efficient Speculative Decoding",
   "type": "research",
   "venue": "Proceedings of the 25th International Conference on Autonomous Agents and Multiagent Systems",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-24T05:57:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2ebee891fde4-rac-request-adaptive-configuration-for-efficient-speculative-decoding.md",
+  "represented_canonical_id": "DOI:10.65109/SGXL4097",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
