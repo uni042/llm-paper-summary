@@ -1,32 +1,51 @@
 ---
-canonical_id: "DOI:10.24963/ijcai.2026/475"
-doi: "10.24963/ijcai.2026/475"
-title: "Budget-Aware LLM Quantization and Low-Rank Correction via Information-Guided Subspace Matrices"
-summary: "BALANCERはモデル全体の平均ビット予算を固定し、各射影行列への量子化ビット数と低ランク残差補正の階数を同時配分する学習不要の圧縮方式。活性値の二乗平均、参照モデルの勾配、曲率の対角近似を情報誘導部分空間行列へ統合し、重み付け残差の特異値から追加ビット当たりの誤差回復利得を計算する。LLaMA-3.1-8Bの平均3.6ビット構成でWikiText-2パープレキシティ6.78、FP16の6.63に近い値を報告し、Jetson Orin Nano 8GBで実行可能とした。一方、比較対象によって優劣は異なり、圧縮前の信号抽出・SVDには別途大きなGPU資源を要する。"
-list_summary: "活性・勾配・曲率で量子化残差の重要方向を評価し、各行列の量子化ビットと低ランク補正階数を全モデル共通の記憶予算内で貪欲配分する。"
+canonical_id: DOI:10.24963/ijcai.2026/475
+doi: 10.24963/ijcai.2026/475
+title: Budget-Aware LLM Quantization and Low-Rank Correction via Information-Guided Subspace Matrices
+summary: BALANCERはモデル全体の平均ビット予算を固定し、各射影行列への量子化ビット数と低ランク残差補正の階数を同時配分する学習不要の圧縮方式。活性値の二乗平均、参照モデルの勾配、曲率の対角近似を情報誘導部分空間行列へ統合し、重み付け残差の特異値から追加ビット当たりの誤差回復利得を計算する。LLaMA-3.1-8Bの平均3.6ビット構成でWikiText-2パープレキシティ6.78、FP16の6.63に近い値を報告し、Jetson Orin Nano 8GBで実行可能とした。一方、比較対象によって優劣は異なり、圧縮前の信号抽出・SVDには別途大きなGPU資源を要する。
+list_summary: 活性・勾配・曲率で量子化残差の重要方向を評価し、各行列の量子化ビットと低ランク補正階数を全モデル共通の記憶予算内で貪欲配分する。
 authors:
-  - "Sinuo Fan"
-  - "Yingjie Lao"
-published: "2026-08-15"
-publication: "Proceedings of IJCAI-ECAI 2026, Main Track, pp. 4269-4277 (conference 2026-08-15 to 2026-08-21; individual online publication date not specified)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://ijcai.org/proceedings/2026/0475.pdf"
+- Sinuo Fan
+- Yingjie Lao
+published: '2026-08-15'
+publication: Proceedings of IJCAI-ECAI 2026, Main Track, pp. 4269-4277 (conference 2026-08-15 to 2026-08-21; individual online publication date not specified)
+publication_type: conference
+publication_status: published
+source: https://ijcai.org/proceedings/2026/0475.pdf
 sources:
-  - "https://ijcai.org/proceedings/2026/475"
-  - "https://ijcai.org/proceedings/2026/0475.pdf"
-  - "https://doi.org/10.24963/ijcai.2026/475"
-implementation: "公開実装はPython 3.10/PyTorch 2.1で試験され、活性統計のみの簡易実行と、勾配・曲率プロファイルを別途生成する3信号版を用意。LLaMA-2-7Bの信号抽出に少なくとも24GB、LLaMA-3.1-8Bには40GB以上のGPUメモリを推奨する旨をREADMEで確認。論文の端末推論評価はJetson Orin Nano 8GBの15Wモード、TensorRT-LLMと標準GEMMカーネルを使用。"
-code: "https://github.com/sinuofan/IJCAI2026-BALANCER"
-last_checked: "2026-10-24"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-24T20:40:47+09:00"
-worker_run_key: "20261024-2033-scheduled-chat-30/r01"
-reference_main_sha: "143a57c2f128220ff348a939d024329061625867"
+- https://ijcai.org/proceedings/2026/475
+- https://ijcai.org/proceedings/2026/0475.pdf
+- https://doi.org/10.24963/ijcai.2026/475
+implementation: 公開実装はPython 3.10/PyTorch 2.1で試験され、活性統計のみの簡易実行と、勾配・曲率プロファイルを別途生成する3信号版を用意。LLaMA-2-7Bの信号抽出に少なくとも24GB、LLaMA-3.1-8Bには40GB以上のGPUメモリを推奨する旨をREADMEで確認。論文の端末推論評価はJetson Orin Nano 8GBの15Wモード、TensorRT-LLMと標準GEMMカーネルを使用。
+code: https://github.com/sinuofan/IJCAI2026-BALANCER
+last_checked: '2026-10-24'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-24T20:40:47+09:00'
+worker_run_key: 20261024-2033-scheduled-chat-30/r01
+reference_main_sha: 143a57c2f128220ff348a939d024329061625867
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1609/aaai.v38i17.29908
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2402.04396
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2401.06118
+- canonical_id: arXiv:2402.10517
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2312.17238
+- canonical_id: arXiv:2306.11695
+- canonical_id: arXiv:2310.19102
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2310.01382
+- canonical_id: arXiv:2404.00456
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # BALANCER：情報誘導部分空間による全モデル共通予算の量子化・低ランク補正
