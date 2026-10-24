@@ -41,7 +41,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   演算子単位の多数カーネル起動をSM粒度の依存グラフへ分解し、単一常駐巨大カーネル内の分散スケジューラで演算・通信・タスク間パイプラインを重ね、vLLM/SGLang比で最大1.7倍の推論遅延改善を示す。
 
 - **2026-03 · [Mamba-3: Improved Sequence Modeling using State Space Principles](2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：10  
   Mamba-3は、状態空間モデル（State Space モデル、SSM）を使う系列モデルを学習時の並列性だけでなく推論時の実行効率から設計し直す研究である。
 
 - **2025-12 · [SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations](2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md)**  
@@ -60,9 +60,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/bingreeky/MemEvolve) ・ リポジトリ内被引用：2  
   しかし既存の自己改善型エージェントでは、記憶をどの形式で要約するか、どこへ保存するか、いつ検索するか、どの記憶を忘れるかといった記憶機構の設計自体は人手で固定されていることが多い。
 
+- **2025-12 · [Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space](2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  原著は平均4トークンを1概念へ圧縮するR=4の条件を中心に、通常の1.3B Transformerと、概念段に容量を再配分した2.3B DLCMを比較した。両者の推論浮動小数点演算量（FLOPs）を近づけた条件で、12種類のゼロショット課題の平均正解率は41.23%から43.92%へ2.69ポイント改善した。
+
 - **2026-09 · [Taming Bitwise Behavior in GPU Kernels with Tensor Core: Black-Box Reconstruction, Compiler Enforcement, and Static Verification](2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GPU縮約順序を記述子化し、非公開行列積のビット挙動復元、コンパイラでの平衡木強制、命令列の静的同値判定を接続して再現性と自動調整を両立する。
+
+- **2026-09 · [Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing](2026-2609.37402-routing-should-pay-for-itself-sparse-supervision-for-economical-llm-rout.md)**  
+  実装：[✓](https://github.com/LAMDA-Model-Reuse/SaveRouter) ・ リポジトリ内被引用：1  
+  LLMの品質と推論単価はモデルごとに異なるため、容易な問い合わせを小型・安価なモデルへ送り、難しい問い合わせを高性能モデルへ送れば総費用を下げられる。しかし、どの問い合わせにどのモデルが適するかを学習するには、通常は大量の過去問い合わせに複数モデルを実行し、品質の教師信号を取得する必要がある。従来方式で最も早い損益分岐は11,500件である。
 
 - **2026-06 · [Prefilling-dLLM: Predictive Prefilling for Long-Context Inference in Diffusion Language Models](2026-2606.10537-prefilling-dllm-predictive-prefilling-for-long-context-inference-in-diff.md)**  
   実装：[✓](https://github.com/menik1126/Prefilling-dLLM) ・ リポジトリ内被引用：1  
@@ -104,10 +112,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（Large Language モデル; LLM）の推論電力量は、モデルのパラメータ数や重みのビット幅だけでは決まらない。同じモデルを同じGPUで実行しても、事前充填（プリフィル）と逐次復号（デコード）では計算律速かメモリ律速かが異なり、要求を逐次処理するか連続バッチ化するかによってGPUの待機時間が大きく変わる。重要な結論は三つある。
 
-- **2025-12 · [Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space](2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  原著は平均4トークンを1概念へ圧縮するR=4の条件を中心に、通常の1.3B Transformerと、概念段に容量を再配分した2.3B DLCMを比較した。両者の推論浮動小数点演算量（FLOPs）を近づけた条件で、12種類のゼロショット課題の平均正解率は41.23%から43.92%へ2.69ポイント改善した。
-
 - **2025-11 · [KernelBand: Steering LLM-based Kernel Optimization via Hardware-Aware Multi-Armed Bandits](2025-2511.18868-kernelband-steering-llm-based-kernel-optimization-via-hardware-aware-mul.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   高性能な実装では、演算量だけでなく、レジスタ圧迫、共有メモリ、キャッシュ利用、メモリ帯域、スレッド配置を同時に考える必要がある。KernelBandは、この探索判断を文脈付き多腕バンディット（contextual multi-armed bandit、MAB）へ置き換える方式である。
@@ -137,10 +141,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Shift-Accumulate Attention: Multiplier-Free Query--Key Products for Transformer Decoding](2026-2609.09208-shift-accumulate-attention-multiplier-free-query-key-products-for-transf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の2の冪乗（power-of-two、PoT）量子化は、主として後者の重みをシフト演算に変える用途で使われてきた。RTX 4090のTinyLlama-1.1B-Chatでは、バッチ8、文脈32,768の条件で4ビット鍵を使う注意カーネルがFP16 SDPA比4.60倍高速だった。
-
-- **2026-09 · [Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing](2026-2609.37402-routing-should-pay-for-itself-sparse-supervision-for-economical-llm-rout.md)**  
-  実装：[✓](https://github.com/LAMDA-Model-Reuse/SaveRouter) ・ リポジトリ内被引用：0  
-  LLMの品質と推論単価はモデルごとに異なるため、容易な問い合わせを小型・安価なモデルへ送り、難しい問い合わせを高性能モデルへ送れば総費用を下げられる。しかし、どの問い合わせにどのモデルが適するかを学習するには、通常は大量の過去問い合わせに複数モデルを実行し、品質の教師信号を取得する必要がある。従来方式で最も早い損益分岐は11,500件である。
 
 - **2026-09 · [Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study](2026-2609.21264-programming-amd-xdna-npus-with-open-source-compiler-tools-a-flashattenti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -154,6 +154,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：1  
   ヌル専門家をトークン選択型MoEへ組み込み、因果性を保ったまま情報量に応じて実専門家数を変え、同一期待計算量で損失・下流性能の効率前線を改善する。
 
+- **2026-01 · [ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation](2026-2601.21420-conceptmoe-token-concept-compression.md)**  
+  実装：[✓](https://github.com/ZihaoHuang-notabot/ConceptMoE) ・ リポジトリ内被引用：1  
+  意味類似トークンを概念へ適応圧縮し、同一パラメータ・同一平均演算量下で節約計算を専門家混合モデルへ再配分して性能と長文脈推論効率を同時改善する。
+
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
 - **2026-09 · [You Only Need 2/3 of the Chosen Experts: An Empirical Study of Dynamic Expert Pruning in Fine-Grained MoE LLMs](2026-2609.25809-you-only-need-2-3-of-the-chosen-experts-an-empirical-study-of-dynamic-ex.md)**  
@@ -267,10 +271,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-02 · [OmniMoE: An Efficient MoE by Orchestrating Atomic Experts at Scale](2026-2602.05711-omnimoe-atomic-experts.md)**  
   実装：[✓](https://github.com/HKUSTDial/omni-moe) ・ リポジトリ内被引用：0  
   ベクトル単位Atomic エキスパート、直積ルータ、専門家中心スケジューリングを統合し、PEER比10.9倍高速で7ベンチ平均50.9%を達成する細粒度MoE。
-
-- **2026-01 · [ConceptMoE: Adaptive Token-to-Concept Compression for Implicit Compute Allocation](2026-2601.21420-conceptmoe-token-concept-compression.md)**  
-  実装：[✓](https://github.com/ZihaoHuang-notabot/ConceptMoE) ・ リポジトリ内被引用：0  
-  意味類似トークンを概念へ適応圧縮し、同一パラメータ・同一平均演算量下で節約計算を専門家混合モデルへ再配分して性能と長文脈推論効率を同時改善する。
 
 - **2025-11 · [AnyExperts: On-Demand Expert Allocation for Multimodal Language Models with Mixture of Expert](2025-2511.18314-anyexperts-on-demand-expert-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
