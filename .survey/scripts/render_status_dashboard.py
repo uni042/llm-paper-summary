@@ -403,6 +403,8 @@ def _import_progress_activity(repo_root: Path, now):
     ):
         if str(payload.get("status") or "") not in {"imported", "already_represented"}:
             continue
+        if payload.get("identity_disposition") == "retired":
+            continue
         stamp = _core.evidence._parse_dt(payload.get("worker_completed_at"))
         if stamp is None:
             stamp = _core.evidence._parse_dt(payload.get("processed_at"))
