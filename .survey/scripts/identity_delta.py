@@ -16,6 +16,7 @@ from urllib.parse import quote
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import survey  # noqa: E402
+import paper_retirement_registry  # noqa: E402
 
 ROOT = survey.ROOT
 STATE = "survey-state/"
@@ -122,6 +123,9 @@ def _atomic_write_json(target: Path, record: dict) -> None:
 
 def prepare(relpath: str) -> str:
     record = paper_record(relpath)
+    retired = paper_retirement_registry.find_retirement(ROOT.parent, record)
+    if retired is not None:
+        raise ValueError(f"paper identity is retired ({retired['retirement_id']}); refusing stale identity delta")
     assert_no_conflicts(record)
     target = ROOT / delta_path(record["canonical_id"])
     _atomic_write_json(target, record)
