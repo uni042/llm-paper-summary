@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（928本）
+## 自動生成の論文一覧（931本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1346,6 +1346,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈LLMのKVキャッシュを元の鍵・値対の部分集合へ縮約する際、全てのノルム有界な問い合わせに対して注意出力誤差をε以内に保つコアセットの存在上界と情報理論的下界を証明。計算可能な高速KV削除アルゴリズムや実モデルの品質・速度改善を実証する論文ではない。
 
+- **2026-05 · [NCO: A Versatile Plug-in for Handling Negative Constraints in Decoding](2026-2605.10065-nco-a-versatile-plug-in-for-handling-negative-constraints-in-decoding.md)**  
+  実装：[✓](https://github.com/hyundong98/NCO-Decoding) ・ リポジトリ内被引用：0  
+  一般的な制約付き復号は「出力が指定文法に属する」正制約を扱うことが多い。NCO（Negative Constraint Optimization）は逆に、複数の禁止文字列または正規表現が生成結果のどの位置にも現れないことを要求する。ただしGUARDの評価は同手法全体ではなくトライ成分に限定される。
+
 - **2026-05 · [NCCLZ: Compression-Enabled GPU Collectives with Decoupled Quantization and Entropy Coding](2026-2605.12396-ncclz-compression-enabled-gpu-collectives-with-decoupled-quantization-an.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPUの演算能力が向上しても、ノード間ネットワークの帯域が不足すると通信待ちが律速になる。通信前に量子化すればデータ量を減らせるものの、量子化だけでは記号の偏りを利用しきれず、さらに符号化・復号のGPU計算が通信時間を上回る場合もある。論文の要旨はNCCL比最大9.65倍、既存の圧縮集合通信ライブラリ比最大3.34倍と報告する。
@@ -1853,6 +1857,14 @@
 - **2026-02 · [Focus-Scan-Refine: From Human Visual Perception to Efficient Visual Token Pruning](2026-2602.05809-focus-scan-refine-from-human-visual-perception-to-efficient-visual-token.md)**  
   実装：[✓](https://github.com/ILOT-code/FSR) ・ リポジトリ内被引用：0  
   高解像度画像や複数フレームの動画ではトークン数が増え、事前充填の演算量、注意機構に必要な記憶量、鍵・値キャッシュ（KV キャッシュ）の容量が増加する。LLaVA-1.5-7Bで視覚トークンを576個から64個へ削減すると、9種類の評価を正規化した平均性能保持率は96.1%であり、比較対象のCDPrunerは95.7%、VisPrunerは93.5%だった。
+
+- **2026-02 · [FlattenGPT: Depth Compression for Transformer with Layer Flattening](2026-2602.08858-flattengpt-depth-compression-for-transformer-with-layer-flattening.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FlattenGPTは、変換器（Transformer）の隣接層が似た隠れ状態を受け取ることに着目し、層全体を削除するのではなく、隣接2層を幅の広い1層へ平坦化し、その内部の冗長な注意頭と多層パーセプトロン（MLP）チャネルを削る方式である。
+
+- **2026-02 · [Every Bit Counts: A Theoretical Study of Precision–Expressivity Tradeoffs in Quantized Transformers](2026-2602.02707-every-bit-counts-a-theoretical-study-of-precision-expressivity-tradeoffs.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この研究は「量子化すると平均的な正答率がどの程度下がるか」ではなく、「限られた数値精度の演算だけで、Transformerがそもそも実現できなくなる関数は存在するか」を扱う。
 
 - **2026-02 · [EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models](2026-2602.17196-entropyprune-matrix-entropy-guided-visual-token-pruning-for-multimodal-l.md)**  
   実装：[✓](https://github.com/YahongWang1/EntropyPrune) ・ リポジトリ内被引用：0  
