@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（962本）
+## 自動生成の論文一覧（964本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1890,6 +1890,10 @@
   実装：[✓](https://github.com/automl/NeuralAttentionSearchLinear) ・ リポジトリ内被引用：0  
   NAtS-L（Neural 注意機構 Search Linear）は、従来の「ある層はソフトマックス注意、別の層は線形注意」という固定的な混成構成を、同じ層の中で入力トークン塊ごとに注意演算を選択する構成へ拡張した研究である。
 
+- **2026-02 · [MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM](2026-2602.20191-mobiquant-mixture-of-bits-quantization-for-token-adaptive-any-precision-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（Large Language モデル; LLM）の推論における重み量子化は、GPUメモリ容量と重み読み出し帯域を節約する一方、ビット幅を下げるほど丸め誤差を増やす。
+
 - **2026-02 · [MentorCollab: Large-to-Small Inference-Time Mentorship for Concise Reasoning in Language Models](2026-2602.05307-mentorcollab-large-to-small-inference-time-mentorship-for-concise-reason.md)**  
   実装：[✓](https://github.com/haojinw0027/Mentorcollab) ・ リポジトリ内被引用：0  
   大型推論モデルは複雑な問題を解ける反面、解答までの思考列が長く、生成トークンの費用が増える。大型モデルが出力するトークンを小型モデルへ逐次注入する従来の協調方式では、大型モデルの「考え直し」「前段階への後戻り」まで取り込んでしまい、小型モデルの簡潔さを損なう場合がある。メンター由来のトークンが最終生成列に占める割合は平均18.4%と記述される。
@@ -2117,6 +2121,10 @@
 - **2025-12 · [Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models](2025-2512.21651-rethinking-output-alignment-for-1-bit-post-training-quantization-of-larg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）を事後量子化（Post-学習 量子化; PTQ）で1ビットへ圧縮すると、重みをほぼ±1に制限するため、4ビットなどの量子化より精度劣化が大きい。
+
+- **2025-12 · [RADAR: Accelerate Large Language Model Inference With RL-Based Dynamic Draft Trees](2025-2512.14069-radar-accelerate-large-language-model-inference-with-rl-based-dynamic-dr.md)**  
+  実装：[✓](https://github.com/minaduki-sora/RADAR) ・ リポジトリ内被引用：0  
+  大規模言語モデルの逐次生成を高速化する投機的復号（投機的復号）は、小さな草稿モデルが将来の候補トークンを作り、大きな対象モデルがまとめて検証する。木構造の草稿を使うEAGLE-3では候補の枝を増やすことで検証一回当たりの採用長を延ばせるが、草稿モデルの呼出し回数を固定すると、既に有望な枝が乏しい状態でも計算を続けてしまう。
 
 - **2025-12 · [Post-Training Quantization of OpenPangu Models for Efficient Deployment on Atlas A2](2025-2512.23367-post-training-quantization-of-openpangu-models-for-efficient-deployment-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

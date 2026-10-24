@@ -29,6 +29,8 @@ worker_run_key: "20261025-0103-scheduled-chat-00/r01"
 reference_main_sha: "b1cc9a3eef7df6fa74728271a097267c7c5c2c3f"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # X-former Elucidator：長文脈LLMの効率的注意を四系統で比較するサーベイ
