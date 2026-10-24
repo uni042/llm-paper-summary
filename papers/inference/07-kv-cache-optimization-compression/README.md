@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（318本）
+## 自動生成の論文一覧（319本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -714,6 +714,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Meta-Soft: Leveraging Composable Meta-Tokens for Context-Preserving KV Cache Compression](2026-2605.22337-meta-soft-leveraging-composable-meta-tokens-for-context-preserving-kv-ca.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈LLMの生成では、過去トークンの鍵・値（KV）キャッシュが入力長にほぼ比例して増え、GPUメモリと注意計算の負担になる。Meta-Softは二つの機構を組み合わせる。生成1万トークンの別実験では、完全KVより大きなバッチと高い処理量を達成するが、SnapKVより生成処理量は低い。
+
+- **2026-05 · [Make Your LVLM KV Cache More Lightweight](2026-2605.00789-make-your-lvlm-kv-cache-more-lightweight.md)**  
+  実装：[✓](https://github.com/howtoosee/LightKV) ・ リポジトリ内被引用：0  
+  自己回帰復号では過去のキー・値（KV）を保存するため、視覚トークンが多いほどGPUメモリを消費する。LightKVが速度でも品質でもすべての比較方式に勝つわけではない。
 
 - **2026-05 · [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](2026-2605.12471-kv-fold-one-step-kv-cache-recurrence-for-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
