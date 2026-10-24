@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（217本）
+## 自動生成の論文一覧（218本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -371,6 +371,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [Acceptance-Aware Draft Model Training for Speculative Decoding](2026-2609.24150-acceptance-aware-draft-model-training-for-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小型の下書きモデルが生成した複数の候補トークンを、大型の目標モデルが一度に検証することで自己回帰復号の待機を減らす。
+
+- **2026-08 · [WA-SpecDec: World-Aware Speculative Decoding for Vision-Language-Action Models](2026-2608.08725-wa-specdec-world-aware-speculative-decoding-for-vision-language-action-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  WA-SpecDecは受理しきい値自体を動的に変えるのではない。LIBERO四系列の評価では、通常の投機的復号に対し、同一の受理方式と比較条件で成功率と速度を改善した。
 
 - **2026-08 · [Vision Is Not Overhead: One-Pass Block Drafting for Lossless Speculative Decoding in Vision-Language Models](2026-2609.00355-glance-vlm-speculative-decoding.md)**  
   実装：[✓](https://github.com/js-lee-AI/GLANCE。実運用比較はSGLang) ・ リポジトリ内被引用：0  

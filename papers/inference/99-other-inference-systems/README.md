@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（944本）
+## 自動生成の論文一覧（947本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1258,6 +1258,10 @@
   実装：[✓](https://github.com/sxp11/Training-Inference-Consistent-Segmented-Execution) ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデル（LLM）は、通常の全注意力（full self-注意機構）を使うと、入力が長くなるにつれて注意演算と中間状態の記憶費用が増大する。16K/32K事前充填でのGPUピークメモリは18.56/19.06GBで、全注意力の23.61/34.67GBより小さい。
 
+- **2026-05 · [TileQ: Efficient Low-Rank Quantization of Mixture-of-Experts with 2D Tiling](2026-2605.09281-tileq-efficient-low-rank-quantization-of-mixture-of-experts-with-2d-tili.md)**  
+  実装：[✓](https://anonymous.4open.science/r/TileQ-BE20) ・ リポジトリ内被引用：0  
+  TileQは、混合専門家モデル（Mixture-of-Experts; MoE）の推論用重みを低ビット量子化する際、量子化誤差を修復する低ランク行列そのものが大量の専門家ごとに増殖する問題を扱う。
+
 - **2026-05 · [The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces](2026-2605.27965-the-shape-of-overthinking-backtracking-bursts-in-long-reasoning-traces.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   行単位に分割した推論文へ、別の注釈実行で「継続・停滞・後戻り・終了」の確信度を割り当て、後戻りの強度に閾値を設ける。固定2000語の打切りでは残存軌跡の正解率がAIME2024で10.0%、AIME2025で6.7%になるのに対し、接頭部分の後戻り特徴で選別すると73.5%・64.5%となり、それぞれ21.7%・27.0%の軌跡を終了対象にできる。
@@ -1301,6 +1305,10 @@
 - **2026-05 · [Requests of a Feather Must Flock Together: Batch Size vs. Prefix Homogeneity in LLM Inference](2026-2605.06046-requests-of-a-feather-must-flock-together-batch-size-vs-prefix-homogenei.md)**  
   実装：[✓](https://github.com/networkedsystemsIITB/Feather) ・ リポジトリ内被引用：0  
   例えば共通のシステム指示や長い文書を前置きした多数の要求を同時に扱うと、複数要求の注意計算は同じキー・値キャッシュ（KV キャッシュ）を読む。著者は接頭辞を共有する負荷で、既存方式に対して最大2〜10倍のエンドツーエンド処理量を報告する。
+
+- **2026-05 · [Relative Kinetic Utility: Calibrating Cross-Layer Credit for Global Structured LLM Pruning](2026-2605.09008-relative-kinetic-utility-calibrating-cross-layer-credit-for-global-struc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Global RKU（Global Relative Kinetic Utility）は、大規模言語モデル（LLM）のフィードフォワード層（Feed-順伝播 Network; FFN）からチャネルを削る構造化枝刈りにおいて、同じ層内で重要なチャネルを選ぶ問題と、異なる層のチャネルを共通予算で比較する問題を分離する方式である。
 
 - **2026-05 · [QAM-W: Joint 2D Codebook Quantization for LLM Weights via Hadamard Rotation and Activation-Aware Scaling](2026-2605.26339-qam-w-joint-2d-codebook-quantization-for-llm-weights-via-hadamard-rotati.md)**  
   実装：[✓](https://github.com/white07S/qam-w) ・ リポジトリ内被引用：0  
@@ -1429,6 +1437,10 @@
 - **2026-05 · [Full Attention Strikes Back: Transferring Full Attention into Sparse within Hundred Training Steps](2026-2605.16928-full-attention-strikes-back-transferring-full-attention-into-sparse-with.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデル（Large Language モデル; LLM）は、すべてのトークンへ注意を計算する全注意（Full 注意機構）を使うと、系列長の増加に伴って注意計算とキー・値（Key-Value; KV）キャッシュの負荷が増える。著者は100万トークン文脈のプリフィルで最大9.36倍、復号で約2.01倍の速度向上を報告する。
+
+- **2026-05 · [Fre-Res: Frequency-Residual Video Token Compression for Efficient Video MLLMs](2026-2605.16366-fre-res-frequency-residual-video-token-compression-for-efficient-video-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  動画対応マルチモーダルLLMにおいて、疎な高精細空間アンカーフレームと、フレーム間残差の時間方向DCT低周波成分を別経路で圧縮・統合するFre-Resを提案。Qwen2-VL-7Bの約2.1倍圧縮でNExT-QA 70.08、LongVideoBench 53.52、EgoSchema 63.58を達成。
 
 - **2026-05 · [Enhancing Visual Token Representations for Video Large Language Models via Training-Free Spatial-Temporal Pooling and Gridding](2026-2605.22078-enhancing-visual-token-representations-for-video-large-language-models-v.md)**  
   実装：[✓](https://github.com/bingjunluo/ST-GridPool) ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "The abstract identifies repeated target-model forward passes as the closed-loop latency bottleneck in autoregressive VLA policies and adds world-aware prefill to speculative decoding; it reports 1.5x matched-success speedup. The deployment domain is robotics/VLA, but the concrete method is LLM-style speculative inference acceleration.",
   "semantic_scholar_id": "931110ff627c618d02e4505627fe4bb4ccc84d51",
   "source_url": "https://arxiv.org/abs/2608.08725",
-  "status": "ready",
+  "status": "superseded",
   "title": "WA-SpecDec: World-Aware Speculative Decoding for Vision-Language-Action Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-24T05:01:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2608.08725-wa-specdec-world-aware-speculative-decoding-for-vision-language-action-m.md",
+  "represented_canonical_id": "arXiv:2608.08725",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
