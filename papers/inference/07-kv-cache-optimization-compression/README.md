@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（322本）
+## 自動生成の論文一覧（323本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -814,6 +814,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models](2026-2601.04719-gpu-accelerated-int8-quantization-for-kv-cache-compression-in-large-lang.md)**  
   実装：[✓](https://github.com/MaanasTaneja/cuda-kv-cache-compression) ・ リポジトリ内被引用：0  
   再計算を避けるため、各層・各注意ヘッドの過去の鍵と値を保持するKVキャッシュ（KV キャッシュ）が必要になる。そこで本論文は、FP32の鍵・値行列をINT8へ変換する列別量子化と、その変換処理を高速化するCUDAカーネルを実装・比較する。
+
+- **2025-12 · [CTkvr: KV Cache Retrieval for Long-Context LLMs via Centroid then Token Indexing](2025-2512.15550-ctkvr-kv-cache-retrieval-for-long-context-llms-via-centroid-then-token-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全履歴をGPUの高帯域メモリに置くと文脈長と同時要求数に比例して容量を圧迫する。一方、CPUの主記憶へ退避すると、必要な過去トークンを効率よく特定しなければ検索と転送の費用が新たな律速になる。原著は96Kトークンの復号でLlama-3-8Bに最大3倍、Yi-9Bに最大4倍の処理量改善、GPU容量制約下で最大10倍・20倍のバッチ数を報告する。
 
 - **2025-11 · [SWAN: Sparse Winnowed Attention for Reduced Inference Memory via Decompression-Free KV-Cache Compression](2025-2511.18936-swan-sparse-winnowed-attention-for-reduced-inference-memory-via-decompre.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

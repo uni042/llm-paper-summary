@@ -55,6 +55,8 @@ quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 repair_source_worker_run_key: "20261024-1833-scheduled-chat-30/r01"
 repair_kind: "heading_structure_and_verified_metadata"
+last_audited: null
+audit_version: 0
 ---
 
 # Efficient Attention Methods：注意計算の高速化・省メモリ化を四系統で整理するサーベイ

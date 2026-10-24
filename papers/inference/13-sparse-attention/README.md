@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（108本）
+## 自動生成の論文一覧（109本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -375,6 +375,10 @@
 - **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
   実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：1  
   Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとの上位k選択（top-k）を避けて注意計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1程度まで減らす条件を示す一方、強い疎化や実装条件によって品質・実速度の利得が変わる。
+
+- **2025-08 · [Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention](2025-483ca98d7491-efficient-attention-methods-hardware-efficient-sparse-compact-and-linear.md)**  
+  実装：[✓](https://github.com/attention-survey/Efficient_Attention_Survey) ・ リポジトリ内被引用：0  
+  原著は20ページで、注意計算の数式、GPUの演算性能とメモリ帯域、事前入力処理と復号の律速差を説明したうえで、ハードウェア効率化、コンパクト注意（Compact 注意機構）、疎注意（Sparse 注意機構）、線形注意（Linear 注意機構）の四系統を共通の記法で比較する。
 
 - **2025-05 · [AnchorAttention: Difference-Aware Sparse Attention with Stripe Granularity](2025-2505.23520-anchorattention-difference-aware-sparse-attention-with-stripe-granularit.md)**  
   実装：[✓](https://github.com/yuzhouzhang9/Anchor-Attention) ・ リポジトリ内被引用：0  
