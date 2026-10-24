@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T14:34:58+00:00",
+  "generated_at": "2026-10-24T14:46:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 23,
+  "count": 25,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -625,6 +625,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_ff6d9bc03cc48191bac85b5e92bbd59f--2025-2512.15550-ctkvr-query-centroid-kv-retrieval-research-20261024-2200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_ff6d9bc03cc48191bac85b5e92bbd59f--2025-2512.15550-ctkvr-query-centroid-kv-retrieval-research-20261024-2200-scheduled-chat-00-r01.json",
       "worker_run_key": "20261024-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.28846",
+      "title": "A Rigor-Matched Audit of Periodic-Step Layer Skipping for Efficient LLM Inference: ConfLayers versus SWIFT, with a Supplemental Analysis of Trained Routing Alternatives",
+      "source_url": "https://arxiv.org/abs/2608.28846",
+      "returned_at": "2026-10-24T14:46:44+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 131 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6147,
+        "body_paragraphs": 37,
+        "method_chars": 1626,
+        "method_paragraphs": 9,
+        "evaluation_chars": 131,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 131 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.19218",
+      "title": "Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference",
+      "source_url": "https://arxiv.org/html/2605.19218",
+      "returned_at": "2026-10-24T14:46:47+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 371 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2775,
+        "body_paragraphs": 12,
+        "method_chars": 858,
+        "method_paragraphs": 4,
+        "evaluation_chars": 371,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 371 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
     }
   ]
 }
