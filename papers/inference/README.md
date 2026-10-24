@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **3078本**。
+収録論文: **3081本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**3078本**。
+推論論文：**3081本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -60,5 +60,5 @@
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 64 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
 | [20-linear-recurrent-language-models](20-linear-recurrent-language-models/README.md) | 29 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/) |
 | [21-static-structured-pruning](21-static-structured-pruning/README.md) | 13 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/21-static-structured-pruning/) |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 969 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 972 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
 <!-- survey:auto:end -->
