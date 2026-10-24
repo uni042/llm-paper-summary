@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T07:30:25+00:00",
+  "generated_at": "2026-10-24T07:41:44+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -875,37 +875,9 @@
       "worker_run_key": "20261024-1430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2606.10935",
+      "canonical_id": "DOI:10.1145/3706418",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-24T07:05:28+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 171 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5475,
-        "body_paragraphs": 29,
-        "method_chars": 1253,
-        "method_paragraphs": 7,
-        "evaluation_chars": 171,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 171 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_979006ae8fa08191bb9f057e3315843d--2026-2606.10935-clp-collocation-length-prediction-research-20261024-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_979006ae8fa08191bb9f057e3315843d--2026-2606.10935-clp-collocation-length-prediction-research-20261024-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261024-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3706418",
-      "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey",
-      "source_url": "https://doi.org/10.1145/3706418",
       "returned_at": "2026-10-24T07:28:44+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -934,8 +906,8 @@
     },
     {
       "canonical_id": "arXiv:2405.13019",
-      "title": "A Comprehensive Survey of Accelerated Generation Techniques in Large Language Models",
-      "source_url": "https://arxiv.org/html/2405.13019v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-24T07:28:46+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -961,6 +933,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-511e6b18ad09--libfile_a00339e8a610819189dbcafc71a9e74c--2024-2405.13019-accelerated-generation-survey-returned-repair-20261024-1030-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-511e6b18ad09--libfile_a00339e8a610819189dbcafc71a9e74c--2024-2405.13019-accelerated-generation-survey-returned-repair-20261024-1030-scheduled-cha.json",
       "worker_run_key": "20261024-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.10935",
+      "title": "CLP: Collocation-Length Prediction for Zero-Loss Adaptive Multi-Token Inference",
+      "source_url": "https://arxiv.org/html/2606.10935v1",
+      "returned_at": "2026-10-24T07:41:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 171 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5475,
+        "body_paragraphs": 29,
+        "method_chars": 1253,
+        "method_paragraphs": 7,
+        "evaluation_chars": 171,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 171 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-69c4d83a5126--libfile_979006ae8fa08191bb9f057e3315843d--2026-2606.10935-clp-collocation-length-prediction-research-20261024-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-69c4d83a5126--libfile_979006ae8fa08191bb9f057e3315843d--2026-2606.10935-clp-collocation-length-prediction-research-20261024-1530-scheduled-chat-3.json",
+      "worker_run_key": "20261024-1530-scheduled-chat-30/r01"
     }
   ]
 }

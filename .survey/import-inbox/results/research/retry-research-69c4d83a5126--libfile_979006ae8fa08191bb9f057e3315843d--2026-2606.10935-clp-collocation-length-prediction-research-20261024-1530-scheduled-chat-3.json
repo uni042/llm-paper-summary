@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4189165001400dea97381679ec8950ff91a249f55e06eef97535e05c206fb9b7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-69c4d83a5126--libfile_979006ae8fa08191bb9f057e3315843d--2026-2606.10935-clp-collocation-length-prediction-research-20261024-1530-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2606.10935",
+  "worker_completed_at": "2026-10-24T15:31:20+09:00",
+  "worker_run_key": "20261024-1530-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5475,
+    "body_paragraphs": 29,
+    "method_chars": 1253,
+    "method_paragraphs": 7,
+    "evaluation_chars": 171,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 171 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 171 < 500"
+  ],
+  "processed_at": "2026-10-24T07:41:43+00:00"
+}
