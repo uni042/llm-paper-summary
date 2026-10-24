@@ -1,36 +1,115 @@
 ---
-canonical_id: "DOI:10.14778/3819518.3819541"
-doi: "10.14778/3819518.3819541"
-title: "Efficient Cooperation-Aware Key and Value Management for LLM Inference"
-summary: "CoKVはLLMの注意ヘッド群を協力ゲームの参加者とみなし、他のヘッドとの組合せによって決まるモデル性能への寄与を近似してKVキャッシュ予算を配分する方式。全組合せのシャープレイ値計算は高価なため、補集合との効用差を利用し、少数の連合サイズに限定したSliced Shapley Valueを事前計算する。推論時はその値に応じてヘッド群別の保持トークン数や量子化ビット数を配分する。Qwen3-32BのKV予算128ではGSM8K 82.10%、MATH 46.17%で比較圧縮方式中最高だが、無圧縮の93.47%・52.53%には届かない。Qwen3-32BのNIAHでも73.86%に対し無圧縮100%であり、重要度の推定と完全な品質保存を区別する必要がある。"
-list_summary: "注意ヘッド群の協調的寄与をスライス化シャープレイ値で近似し、KV保持数・量子化精度を全体予算内で配分。長文脈・数学課題で既存圧縮方式を改善するが、強い圧縮では無圧縮品質に届かない。"
+canonical_id: DOI:10.14778/3819518.3819541
+doi: 10.14778/3819518.3819541
+title: Efficient Cooperation-Aware Key and Value Management for LLM Inference
+summary: CoKVはLLMの注意ヘッド群を協力ゲームの参加者とみなし、他のヘッドとの組合せによって決まるモデル性能への寄与を近似してKVキャッシュ予算を配分する方式。全組合せのシャープレイ値計算は高価なため、補集合との効用差を利用し、少数の連合サイズに限定したSliced Shapley Valueを事前計算する。推論時はその値に応じてヘッド群別の保持トークン数や量子化ビット数を配分する。Qwen3-32BのKV予算128ではGSM8K 82.10%、MATH 46.17%で比較圧縮方式中最高だが、無圧縮の93.47%・52.53%には届かない。Qwen3-32BのNIAHでも73.86%に対し無圧縮100%であり、重要度の推定と完全な品質保存を区別する必要がある。
+list_summary: 注意ヘッド群の協調的寄与をスライス化シャープレイ値で近似し、KV保持数・量子化精度を全体予算内で配分。長文脈・数学課題で既存圧縮方式を改善するが、強い圧縮では無圧縮品質に届かない。
 authors:
-  - "Qiheng Sun"
-  - "Hongwei Zhang"
-  - "Junxu Liu"
-  - "Haocheng Xia"
-  - "Jinfei Liu"
-  - "Kui Ren"
-  - "Haibo Hu"
-published: "2026-05"
-publication: "Proceedings of the VLDB Endowment 19(9):2154-2167, 2026"
-publication_type: "journal"
-publication_status: "published"
-source: "https://upenn.ferric.systems/dbscholar/vldb_papers/2026/p2154-hu.pdf"
+- Qiheng Sun
+- Hongwei Zhang
+- Junxu Liu
+- Haocheng Xia
+- Jinfei Liu
+- Kui Ren
+- Haibo Hu
+published: 2026-05
+publication: Proceedings of the VLDB Endowment 19(9):2154-2167, 2026
+publication_type: journal
+publication_status: published
+source: https://upenn.ferric.systems/dbscholar/vldb_papers/2026/p2154-hu.pdf
 sources:
-  - "https://doi.org/10.14778/3819518.3819541"
-  - "https://upenn.ferric.systems/dbscholar/vldb_papers/2026/p2154-hu.pdf"
-implementation: "Qwen3-32B、Llama-3-8B-Instruct、Mistral-7B-Instruct-v0.2でLongBench、NIAH、RULER、GSM8K、MATHを評価。GQA・FlashAttentionを比較方式間で統一。LongBenchの各タスクから20件を重要度の校正に使用。"
-code: "https://github.com/ZJU-DIVER/CoKV"
-last_checked: "2026-10-24"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-24T21:33:00+09:00"
-worker_run_key: "20261024-2130-scheduled-chat-30/r01"
-reference_main_sha: "e47762104e1ae6e3de319ebbda1384be1f42b095"
+- https://doi.org/10.14778/3819518.3819541
+- https://upenn.ferric.systems/dbscholar/vldb_papers/2026/p2154-hu.pdf
+implementation: Qwen3-32B、Llama-3-8B-Instruct、Mistral-7B-Instruct-v0.2でLongBench、NIAH、RULER、GSM8K、MATHを評価。GQA・FlashAttentionを比較方式間で統一。LongBenchの各タスクから20件を重要度の校正に使用。
+code: https://github.com/ZJU-DIVER/CoKV
+last_checked: '2026-10-24'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-24T21:33:00+09:00'
+worker_run_key: 20261024-2130-scheduled-chat-30/r01
+reference_main_sha: e47762104e1ae6e3de319ebbda1384be1f42b095
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.13245
+- canonical_id: DOI:10.14778/3311880.3311887
+  doi: 10.14778/3311880.3311887
+- canonical_id: DOI:10.18653/v1/2024.acl-long.172
+  doi: 10.18653/v1/2024.acl-long.172
+- canonical_id: arXiv:2406.02069
+  arxiv_id: '2406.02069'
+- canonical_id: DOI:10.1007/s11280-024-01276-1
+  doi: 10.1007/s11280-024-01276-1
+- canonical_id: DOI:10.52202/079017-3595
+- canonical_id: arXiv:2412.12465
+  arxiv_id: '2412.12465'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2205.14135
+- canonical_id: DOI:10.1287/moor.19.2.257
+  doi: 10.1287/moor.19.2.257
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+  doi: 10.48550/arxiv.2407.21783
+- canonical_id: arXiv:2407.11550
+  arxiv_id: '2407.11550'
+- canonical_id: arXiv:2410.19258
+  openreview_id: FJFVmeXusW
+- canonical_id: arXiv:2504.07494
+  doi: 10.1145/3725394
+- canonical_id: arXiv:2310.01801
+  openreview_id: uNrFpDPMyo
+- canonical_id: arXiv:2103.03874
+  arxiv_id: '2103.03874'
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2404.06654
+  arxiv_id: '2404.06654'
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: DOI:10.1145/3649449
+  doi: 10.1145/3649449
+- canonical_id: DOI:10.1145/3749168
+  doi: 10.1145/3749168
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2408.02416
+  arxiv_id: '2408.02416'
+  doi: 10.48550/arxiv
+- canonical_id: arXiv:2305.17118
+  openreview_id: JZfg6wGi6g
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2410.01917
+  arxiv_id: '2410.01917'
+- canonical_id: arXiv:2309.00071
+  arxiv_id: '2309.00071'
+- canonical_id: DOI:10.1109/tkde.2024.3438213
+  doi: 10.1109/tkde.2024.3438213
+- canonical_id: arXiv:2407.15891
+  openreview_id: tkiZQlL04w
+- canonical_id: DOI:10.14778/3625054.3625068
+  doi: 10.14778/3625054.3625068
+- canonical_id: DOI:10.14778/3397230.3397247
+  doi: 10.14778/3397230.3397247
+- canonical_id: arXiv:2410.10819
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2505.16831
+  arxiv_id: '2505.16831'
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2402.18096
+  arxiv_id: '2402.18096'
+  doi: 10.48550/arxiv.2402.18096
+- canonical_id: DOI:10.1145/3588728
+  doi: 10.1145/3588728
+- canonical_id: DOI:10.14778/3503585.3503587
+  doi: 10.14778/3503585.3503587
+- canonical_id: arXiv:2601.21531
+  arxiv_id: '2601.21531'
+- canonical_id: arXiv:2306.14048
+  openreview_id: RkRrPp7GKO
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 58
 ---
 
 # CoKV：協力ゲームに基づく注意ヘッド間のKVキャッシュ予算配分
