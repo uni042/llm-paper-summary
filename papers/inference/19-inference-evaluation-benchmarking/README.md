@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（64本）
+## 自動生成の論文一覧（65本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -69,6 +69,10 @@
 - **2026-09 · [KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity](2026-2609.30057-krex-concurrent-kernel-benchmarking-on-shared-gpus-via-region-granular-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実行時間のわずかな差が候補順位を変えるため、他の処理が同じGPUへ負荷をかけると測定が歪み、エージェントは遅い候補を良いものと誤認する。さらにGPUコンテキストを毎回作り直さず、長寿命のコンテキスト保持プロセスを再利用することで、GPU初期化時のノード全体の直列化を避ける。
+
+- **2026-09 · [HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications](2026-2609.12412-holibench-a-cross-platform-benchmarking-and-deployment-toolkit-for-foundation-models-in-cps-iot-applications.md)**  
+  実装：[✓](https://github.com/beesfleas/HoliBench) ・ リポジトリ内被引用：0  
+  20モデル×7デバイス×3量子化×8推論系を精度・遅延・電力・メモリで統一測定し、実測プロファイルから制約付き配備構成まで選ぶ基盤。
 
 - **2026-09 · [From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving](2026-2609.23130-from-inference-engine-to-inference-control-plane-connecting-vllm-llm-d-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
