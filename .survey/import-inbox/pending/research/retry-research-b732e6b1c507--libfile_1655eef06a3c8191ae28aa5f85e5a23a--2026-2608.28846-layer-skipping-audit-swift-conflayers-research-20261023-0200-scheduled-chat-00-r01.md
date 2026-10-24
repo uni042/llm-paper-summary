@@ -30,6 +30,8 @@ worker_id: "scheduled-chat-00"
 worker_run_key: "20261023-0200-scheduled-chat-00/r01"
 worker_completed_at: "2026-10-23T02:02:00+09:00"
 reference_main_sha: "45dc462f92f5571776765c321036d8c2a9c70853"
+last_audited: null
+audit_version: 0
 ---
 
 # LLM層スキップの公平な比較監査：ConfLayers、SWIFT、学習済みルータ

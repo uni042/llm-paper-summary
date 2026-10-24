@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（50本）
+## 自動生成の論文一覧（51本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -141,6 +141,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing](2026-cedb2b11ea50-adaptive-load-balancing-for-multi-tier-llm-inference-with-dynamic-model-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   論文の代表結果は、5,000件の合成要求を使ったシミュレーションで、ラウンドロビン方式に対して平均応答時間を101.36 msから49.48 msへ51.18%短縮し、総費用を4.3322米ドルから1.2964米ドルへ70.08%削減したというものである。
+
+- **2026-03 · [Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization](2026-2603.07810-temperature-aware-scheduling-of-llm-inference-in-large-scale-geo-distrib.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  地理的に離れた複数のデータセンターへ大規模言語モデル（LLM）の推論要求を割り振るとき、要求の到着場所、GPUの処理能力、通信遅延だけでなく、各拠点の外気温も運用費を左右する。本論文は、これらをLLM推論要求の配置問題に統合する。ただし原著は主要結果をSplitwise比で正規化した図として示し、本文中に個別指標の絶対値・改善率・信頼区間を列挙していない。
 
 - **2026-02 · [TOM: A Ternary Read-only Memory Accelerator for LLM-powered Edge Intelligence](2026-2602.20662-tom-a-ternary-read-only-memory-accelerator-for-llm-powered-edge-intellig.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -28,10 +28,15 @@
   "selection_reason": "地理分散edge data centerで、LLM推論のTTFTだけでなく外気温に依存する冷却電力、炭素排出、水消費を同時に扱い、ADMMによる分散最適化で配置・routingを決める研究。通常のGPU負荷均衡やKV locality中心のschedulerと異なり、場所ごとの冷却効率を資源制約として明示するため、geo-distributed servingの隣接系統として研究価値がある。",
   "semantic_scholar_id": "70029b123c00558d036bf5fd3de1347487c324bc",
   "source_url": "https://arxiv.org/abs/2603.07810",
-  "status": "ready",
+  "status": "superseded",
   "title": "Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-24T14:55:28+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2603.07810-temperature-aware-scheduling-of-llm-inference-in-large-scale-geo-distrib.md",
+  "represented_canonical_id": "arXiv:2603.07810",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

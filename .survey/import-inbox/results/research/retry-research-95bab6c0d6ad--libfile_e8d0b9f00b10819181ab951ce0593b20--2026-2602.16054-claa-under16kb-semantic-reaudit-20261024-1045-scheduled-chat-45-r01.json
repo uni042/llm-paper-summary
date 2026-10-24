@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9eeabdfa05458817a981da34c7d62b94045f5e86c774247f82e4e2bd3248b28b",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-95bab6c0d6ad--libfile_e8d0b9f00b10819181ab951ce0593b20--2026-2602.16054-claa-under16kb-semantic-reaudit-20261024-1045-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2602.16054",
+  "worker_completed_at": "2026-10-24T10:54:00+09:00",
+  "worker_run_key": "20261024-1045-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5402,
+    "body_paragraphs": 29,
+    "method_chars": 1061,
+    "method_paragraphs": 6,
+    "evaluation_chars": 1461,
+    "limitation_chars": 552,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.16054-claa-cross-layer-attention-aggregation-for-accelerating-llm-prefill.md と 22 段落 / 4592文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T14:52:53+00:00"
+}
