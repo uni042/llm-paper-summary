@@ -1686,6 +1686,10 @@
   実装：[✓](https://github.com/FlexLLM/artifact) ・ リポジトリ内被引用：6  
   推論要求を優先しながら、パラメータ効率微調整（PEFT）の順伝播と逆伝播をトークン窓へ分解し、同じ基盤モデルを使うGPU反復へ混載する。推論の遅延制約を満たす範囲で学習トークン数を動的に選び、分離クラスタ方式より学習処理量を増やすシステムである。
 
+- **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
+  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：5  
+  VideoLLM-onlineは、動画が流れている最中に発話すべき瞬間だけ応答する仕組みを、動画ストリーム内学習（Learning-In-Video-strEam、LIVE）として設計した。
+
 - **2024-05 · [PerLLM: Personalized Inference Scheduling with Edge-Cloud Collaboration for Diverse LLM Services](2024-2405.14636-perllm-personalized-inference-scheduling-with-edge-cloud-collaboration-f.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   LLMの推論要求をすべてクラウドへ送ると、集中するネットワーク転送とGPU待ち行列が遅延・エネルギーを増やす。PerLLMは、要求をエッジとクラウドのどのサーバーへ割り当てるかを、処理期限・利用可能帯域・計算能力の制約の下で決める。
@@ -1697,10 +1701,6 @@
 - **2023-12 · [Unicron: Economizing Self-Healing LLM Training at Scale](2023-2401.00134-unicron-economizing-self-healing-llm-training-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   しかし、通常時の学習速度を犠牲にする方式や、障害を受けた一つのジョブだけを回復させる方式では、複数ジョブが共存するクラスタの長期的な総計算量が最適になるとは限らない。論文が示す最大1.9倍という値は、128枚のA800 GPUを用いた高頻度障害シナリオでの累積重み付き有効演算量のMegatron比である。
-
-- **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
-  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：4  
-  VideoLLM-onlineは、動画が流れている最中に発話すべき瞬間だけ応答する仕組みを、動画ストリーム内学習（Learning-In-Video-strEam、LIVE）として設計した。
 
 - **2024-08 · [SLO-aware GPU Frequency Scaling for Energy Efficient LLM Inference Serving](2024-2408.05235-slo-aware-gpu-frequency-scaling-for-energy-efficient-llm-inference-serving.md)**  
   実装：[✓](https://github.com/WilliamBlaskowicz/throttLL-eM) ・ リポジトリ内被引用：3  
