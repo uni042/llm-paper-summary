@@ -3,56 +3,146 @@ canonical_id: DOI:10.1145/3830418.3843867
 doi: 10.1145/3830418.3843867
 title: 'Janus: Multi-LLM Serving at Production Scale'
 authors:
-  - Tianbao Zhou
-  - Yi Wang
-  - Yu Zhou
-  - Zirui Liu
-  - Zhiming Wang
-  - Yebo Peng
-  - Yongfu Wang
-  - Yi Zhang
-  - Jinrun Yin
-  - Kemeng Tian
-  - Fangcheng Fu
-  - Tongxuan Liu
-  - Tao Peng
-  - Tong Yang
-  - Bin Cui
-  - Xupeng Miao
-  - Ke Zhang
+- Tianbao Zhou
+- Yi Wang
+- Yu Zhou
+- Zirui Liu
+- Zhiming Wang
+- Yebo Peng
+- Yongfu Wang
+- Yi Zhang
+- Jinrun Yin
+- Kemeng Tian
+- Fangcheng Fu
+- Tongxuan Liu
+- Tao Peng
+- Tong Yang
+- Bin Cui
+- Xupeng Miao
+- Ke Zhang
 published: '2026-09-28'
-publication: 'Proceedings of the 32nd ACM Symposium on Operating Systems Principles (SOSP 2026)'
+publication: Proceedings of the 32nd ACM Symposium on Operating Systems Principles (SOSP 2026)
 publication_type: conference paper
 publication_status: published
 source: https://doi.org/10.1145/3830418.3843867
 sources:
-  - https://doi.org/10.1145/3830418.3843867
-  - https://zirui.cool/assets/pdf/Janus_SOSP26.pdf
-  - https://sigops.org/s/conferences/sosp/2026/schedule.html
+- https://doi.org/10.1145/3830418.3843867
+- https://zirui.cool/assets/pdf/Janus_SOSP26.pdf
+- https://sigops.org/s/conferences/sosp/2026/schedule.html
 code: https://github.com/Janus2026/Janus
-implementation: 'Janus ServiceとxLLM由来のJanus Engineを公開。Serviceに約8千行、Engineに約2.1万行のC++を追加。Ascend 910Cの768デバイス実機で評価。'
-summary: '本番環境の多数のLLMを同一クラスタで提供する際の突発負荷、人気度の偏り、計算・HBM容量・帯域の相補性を同時に扱うJanusを提案する。サービス層のガウス過程性能予測器を用いて30秒ごとに低頻度モデルを多次元配置し、0.5秒ごとに高頻度モデルを増減させる。要求は期限を考慮するLST-IMHで振り分け、実行層ではxTensorによるHBM仮想化とデバイス間の重み複製で切替を高速化する。768デバイス・62アプリケーション・60.3万要求の開ループ再生でSLO達成率0.97〜1.0、固定割当のServerlessLLM比27%少ないデバイス時間を報告する。'
-list_summary: 'LLMごとのHBM・演算・帯域需要を予測し、30秒周期の共存配置と0.5秒周期の増減、共有HBMとデバイス間重み複製を組み合わせて大規模サービングの期限達成率と設備効率を改善する。'
+implementation: Janus ServiceとxLLM由来のJanus Engineを公開。Serviceに約8千行、Engineに約2.1万行のC++を追加。Ascend 910Cの768デバイス実機で評価。
+summary: 本番環境の多数のLLMを同一クラスタで提供する際の突発負荷、人気度の偏り、計算・HBM容量・帯域の相補性を同時に扱うJanusを提案する。サービス層のガウス過程性能予測器を用いて30秒ごとに低頻度モデルを多次元配置し、0.5秒ごとに高頻度モデルを増減させる。要求は期限を考慮するLST-IMHで振り分け、実行層ではxTensorによるHBM仮想化とデバイス間の重み複製で切替を高速化する。768デバイス・62アプリケーション・60.3万要求の開ループ再生でSLO達成率0.97〜1.0、固定割当のServerlessLLM比27%少ないデバイス時間を報告する。
+list_summary: LLMごとのHBM・演算・帯域需要を予測し、30秒周期の共存配置と0.5秒周期の増減、共有HBMとデバイス間重み複製を組み合わせて大規模サービングの期限達成率と設備効率を改善する。
 worker_id: scheduled-chat-30
 scheduled_slot: '30'
-worker_run_key: '20261024-0932-scheduled-chat-30/r01'
+worker_run_key: 20261024-0932-scheduled-chat-30/r01
 worker_completed_at: '2026-10-24T09:36:08+09:00'
 reference_main_sha: 51d562b24f13ca1da40d760d1bd2dd053ab46e92
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_checked: '2026-10-24'
-lineage: '複数LLMの推論サービング、資源配置、動的拡縮、HBM仮想化、要求期限スケジューリング'
+lineage: 複数LLMの推論サービング、資源配置、動的拡縮、HBM仮想化、要求期限スケジューリング
 topics:
-  - 多モデル推論サービング
-  - サービス水準目標
-  - モデル配置
-  - HBM仮想化
-  - 弾力的拡縮
-  - 要求スケジューリング
-hardware_evaluation: '48台のAtlas 800T A3サーバー、各8 Ascend 910Cモジュール、各モジュール2ダイを独立デバイスとして合計768デバイス。ダイ当たり64GB HBM、376 TFLOPS。デバイス間片方向実測163.6GB/s、ホストからデバイス実測59.0GB/s。'
-quality_effect: '生成モデルの回答品質・推論精度を直接改善する研究ではない。TTFT/TPOTの期限達成率、正常処理量、デバイス時間を評価。受入制御による要求破棄はサービス可用性との交換条件になる。'
+- 多モデル推論サービング
+- サービス水準目標
+- モデル配置
+- HBM仮想化
+- 弾力的拡縮
+- 要求スケジューリング
+hardware_evaluation: 48台のAtlas 800T A3サーバー、各8 Ascend 910Cモジュール、各モジュール2ダイを独立デバイスとして合計768デバイス。ダイ当たり64GB HBM、376 TFLOPS。デバイス間片方向実測163.6GB/s、ホストからデバイス実測59.0GB/s。
+quality_effect: 生成モデルの回答品質・推論精度を直接改善する研究ではない。TTFT/TPOTの期限達成率、正常処理量、デバイス時間を評価。受入制御による要求破棄はサービス可用性との交換条件になる。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.5555/3691938.3691945
+  doi: 10.5555/3691938.3691945
+- canonical_id: DOI:10.1109/jsac.2023.3345401
+  doi: 10.1109/jsac.2023.3345401
+- canonical_id: arXiv:2310.18547
+- canonical_id: arXiv:2505.02922
+  arxiv_id: '2505.02922'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2404.02015
+- canonical_id: arXiv:2401.14351
+- canonical_id: arXiv:2403.19708
+- canonical_id: DOI:10.1145/2619239.2626334
+  doi: 10.1145/2619239.2626334
+- canonical_id: arXiv:2501.14417
+- canonical_id: DOI:10.1145/3830418.3843867
+- canonical_id: DOI:10.1145/3689031.3696073
+  doi: 10.1145/3689031.3696073
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2406.19707
+- canonical_id: DOI:10.52202/079017-0722
+  doi: 10.52202/079017-0722
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2404.16283
+- canonical_id: arXiv:2502.15524
+- canonical_id: arXiv:2512.09472
+  arxiv_id: '2512.09472'
+- canonical_id: DOI:10.1145/3620665.3640411
+  doi: 10.1145/3620665.3640411
+- canonical_id: DOI:10.1287/mnsc.15.1.102
+  doi: 10.1287/mnsc.15.1.102
+- canonical_id: DOI:10.1007/978-3-031-44505-7_39
+  doi: 10.1007/978-3-031-44505-7_39
+- canonical_id: DOI:10.1145/3458817.3476209
+  doi: 10.1145/3458817.3476209
+- canonical_id: DOI:10.1145/3620665.3640383
+  doi: 10.1145/3620665.3640383
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2405.04437
+  doi: 10.1145/3669940.3707256
+- canonical_id: arXiv:2008.12260
+- canonical_id: DOI:10.5555/3691938.3691990
+  doi: 10.5555/3691938.3691990
+- canonical_id: arXiv:2303.06865
+- canonical_id: DOI:10.1214/aoms/1177729893
+  doi: 10.1214/aoms/1177729893
+- canonical_id: DOI:10.1145/3627703.3629578
+  doi: 10.1145/3627703.3629578
+- canonical_id: arXiv:2406.03243
+- canonical_id: DOI:10.1145/3694715.3695975
+  doi: 10.1145/3694715.3695975
+- canonical_id: DOI:10.1145/3711896.3737413
+  doi: 10.1145/3711896.3737413
+- canonical_id: arXiv:2404.09526
+  doi: 10.1145/3694715.3695948
+- canonical_id: arXiv:2305.05920
+- canonical_id: DOI:10.1145/3731569.3764815
+  doi: 10.1145/3731569.3764815
+- canonical_id: arXiv:2407.15309
+- canonical_id: arXiv:2505.09388
+  arxiv_id: '2505.09388'
+- canonical_id: arXiv:2407.10671
+  arxiv_id: '2407.10671'
+- canonical_id: arXiv:2412.15115
+  arxiv_id: '2412.15115'
+- canonical_id: DOI:10.1145/3689031.3717468
+  doi: 10.1145/3689031.3717468
+- canonical_id: arXiv:2508.15919
+  arxiv_id: '2508.15919'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2412.17246
+- canonical_id: DOI:10.1145/3725338
+  doi: 10.1145/3725338
+- canonical_id: arXiv:2504.20068
+- canonical_id: DOI:10.52202/075280-1506
+  doi: 10.52202/075280-1506
+- canonical_id: arXiv:2309.11998
+  arxiv_id: '2309.11998'
+- canonical_id: DOI:10.52202/079017-2000
+  doi: 10.52202/079017-2000
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2506.12708
+  arxiv_id: '2506.12708'
+references_checked_at: '2026-10-24'
+references_source: crossref-deposited-reference-metadata
+references_total: 79
 ---
 
 # Janus：本番規模の複数LLMサービングを資源予測・二重時間軸の制御・共有HBMで最適化
