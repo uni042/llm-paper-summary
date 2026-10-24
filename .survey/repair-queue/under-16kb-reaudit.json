@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-24T16:03:25.803176+00:00",
+  "generated_at": "2026-10-24T17:33:25.081037+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 3,
+  "count": 4,
   "worker_counts": {
     "scheduled-chat-00": 1,
-    "scheduled-chat-30": 1,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 1
   },
   "entries": [
@@ -76,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.16440-capability-guided-compression-toward-interpretability-aware-budget-alloc.md",
+      "canonical_id": "arXiv:2603.16440",
+      "title": "Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models",
+      "file_bytes": 15178,
+      "source_sha256": "13045302a9b21a795ca67a6daceb6f7d4245622d376b469448d1ad9cfd66fc42",
+      "source_git_blob_sha": "31ee5c7a28cd1fcb3dc0bc4a21d73cc6c5557041",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.969638,
+      "quality_metrics": {
+        "body_chars": 4018,
+        "method_chars": 1572,
+        "evaluation_chars": 933,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
