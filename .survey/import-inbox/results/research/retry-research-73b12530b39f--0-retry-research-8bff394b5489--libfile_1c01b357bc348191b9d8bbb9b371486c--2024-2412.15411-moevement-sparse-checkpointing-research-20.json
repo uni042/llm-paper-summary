@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c5e0e9b16f74f624e9612d3b924a3c7f0a1a5a6a507f9896755e8894515b5ada",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-73b12530b39f--0-retry-research-8bff394b5489--libfile_1c01b357bc348191b9d8bbb9b371486c--2024-2412.15411-moevement-sparse-checkpointing-research-20261023-1100-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2412.15411",
+  "worker_completed_at": "2026-10-23T11:04:27+09:00",
+  "worker_run_key": "20261023-1100-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6567,
+    "body_paragraphs": 37,
+    "method_chars": 2113,
+    "method_paragraphs": 11,
+    "evaluation_chars": 1893,
+    "limitation_chars": 563,
+    "insufficiency_flags": []
+  },
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2412.15411-sparse-checkpointing-for-fast-and-reliable-moe-training.md と 19 段落 / 4222文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T20:21:05+00:00"
+}
