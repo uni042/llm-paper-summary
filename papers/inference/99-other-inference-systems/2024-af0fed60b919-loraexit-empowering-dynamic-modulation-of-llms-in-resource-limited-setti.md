@@ -27,6 +27,8 @@ worker_completed_at: "2026-10-25T02:37:30+09:00"
 reference_main_sha: "2a00bbf9af4da591ec03052affdf94bd2dbb030b"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # LoRAExit：独立した低階数経路を持つ早期終了分類モデル
