@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（955本）
+## 自動生成の論文一覧（957本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1542,6 +1542,10 @@
   実装：[✓](https://anonymous.4open.science/r/adaptive_inverted_index_routing_code-D6FE/) ・ リポジトリ内被引用：0  
   本研究が解くのは、非常に多数の小さな専門家を使う混合専門家モデル（Mixture-of-Experts、MoE）で、専門家を選ぶルータ自身が高価になるという問題である。具体的には、入力トークンを最も近い符号語へ割り当て、その符号語に結び付いた専門家番号の候補表を取得する。著者は最大約10%の相対困惑度改善をPEERとの比較で報告する。
 
+- **2026-05 · [A general tensor-structured compression scheme for efficient large language models](2026-2605.25344-a-general-tensor-structured-compression-scheme-for-efficient-large-langu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MixT（Mixture of Tensors）は、Transformer内の密な線形変換を、局所的なテンソル演算子を複数重ねた構造に置き換える方式である。
+
 - **2026-04 · [VFA: Relieving Vector Operations in Flash Attention with Global Maximum Pre-computation](2026-2604.12798-vfa-relieving-vector-operations-in-flash-attention-with-global-maximum-p.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FlashAttentionは、巨大な注意行列をGPUの高帯域メモリへ書き出さず、クエリ・キー・値を小さなブロックに分割してオンチップメモリで処理する。VFA（Vector Relieved Flash 注意機構）はこの残った部分に焦点を当てる。要旨ではC16V32という計算器構成を基準にC8V32、C4V32、C4V16で約2倍の高速化を報告する。
@@ -2169,6 +2173,10 @@
 - **2025-11 · [Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving](2025-2511.01633-graph-cot-multi-agent-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Graph-CoTを分類・推論・行動・検索へ分業し、頂点単位KV再利用、優先度追い出し、検索と生成の重畳を組み合わせ、遅延最大90.3%減・スループット最大15.1倍を報告。
+
+- **2025-11 · [R2Q: Towards Robust 2-Bit Large Language Models via Residual Refinement Quantization](2025-2511.21736-r2q-towards-robust-2-bit-large-language-models-via-residual-refinement-q.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  R2Q（Residual Refinement Quantization）は、2ビットの重み量子化を1回の4値への丸めではなく、元重みを二値近似した後、その残差をさらに二値近似する2段階へ分解する方式である。2ビットで品質を完全に保てる方式ではなく、比較対象の崩壊が極端な条件で改善幅が大きく見える点を区別する必要がある。
 
 - **2025-11 · [Optimal Self-Consistency for Efficient Reasoning with Large Language Models](2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

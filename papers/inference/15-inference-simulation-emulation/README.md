@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（51本）
+## 自動生成の論文一覧（52本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -109,6 +109,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-08 · [BALANCE: Hybrid Autoregressive-Speculative LLM Inference at the Network Edge](2026-2608.05926-balance-hybrid-autoregressive-speculative-llm-inference-at-the-network-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（SD）は小規模言語モデル（SLM）が複数トークンを提案し、LLMがまとめて検証するため遅延を下げられる一方、LLMとSLM双方の重み、両方式のKVキャッシュ、複数トークンの検証に必要なメモリがGPUに載る。
+
+- **2026-07 · [ELiTeFormer: An Efficient Transformer for FPGAs](2026-2607.03652-eliteformer-an-efficient-transformer-for-fpgas.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ELiTeFormerは、言語モデルの注意機構と全結合層を個別に高速化するだけでは、再構成可能な論理回路（Field-Programmable Gate Array; FPGA）の特性を十分に利用できないという問題に取り組む。
 
 - **2026-07 · [Auto-Scaling Heterogeneous Neural Processing Units for Energy and Cost-Efficient LLM Serving](2026-2607.16488-auto-scaling-heterogeneous-neural-processing-units-for-energy-and-cost-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

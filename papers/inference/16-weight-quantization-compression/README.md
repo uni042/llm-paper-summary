@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（73本）
+## 自動生成の論文一覧（74本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -131,6 +131,10 @@
 - **2026-02 · [SFMP: Fine-Grained, Hardware-Friendly and Search-Free Mixed-Precision Quantization for Large Language Models](2026-2602.01027-sfmp-fine-grained-hardware-friendly-and-search-free-mixed-precision-quan.md)**  
   実装：[✓](https://github.com/Nkniexin/SFMP) ・ リポジトリ内被引用：0  
   重み量子化は、大規模言語モデル（LLM）の重みを16ビットなどの高精度形式から2～4ビット程度の表現へ圧縮し、GPUメモリ使用量を削減する。
+
+- **2026-02 · [LittleBit-2: Maximizing the Spectral Energy Gain in Sub-1-Bit LLMs via Latent Geometry Alignment](2026-2603.00042-littlebit-2-maximizing-the-spectral-energy-gain-in-sub-1-bit-llms-via-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LittleBit-2は、学習済み大規模言語モデル（LLM）の重み行列を低ランクの二値因子に分解するLittleBit方式を改良し、二値化の直前に潜在空間を回転して量子化誤差を小さくする研究である。
 
 - **2026-01 · [StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths](2026-2601.19320-stableqat-stable-quantization-aware-training-at-ultra-low-bitwidths.md)**  
   実装：[✓](https://github.com/microsoft/StableQAT) ・ リポジトリ内被引用：0  
