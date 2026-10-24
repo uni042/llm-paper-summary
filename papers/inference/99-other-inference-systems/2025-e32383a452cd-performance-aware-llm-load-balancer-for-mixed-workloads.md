@@ -39,6 +39,8 @@ repair_source_library_file_id: "libfile_e08c37565150819182286553ed92647d"
 repair_reason: "Repair missing YAML frontmatter delimiter in prior quality-verified draft; preserve technical body and evidence unchanged"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Performance Aware LLM Load Balancer for Mixed Workloads
