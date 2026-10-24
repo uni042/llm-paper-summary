@@ -1,62 +1,195 @@
 ---
-canonical_id: "SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7"
-title: "Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention"
+canonical_id: SemanticScholar:c562bfd521a14c3f1ed9708a3e871a0de2eecef7
+title: 'Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention'
 authors:
-  - "Jintao Zhang"
-  - "Rundong Su"
-  - "Chunyu Liu"
-  - "Jia Wei"
-  - "Ziteng Wang"
-  - "Haoxu Wang"
-  - "Pengle Zhang"
-  - "Huiqiang Jiang"
-  - "Haofeng Huang"
-  - "Chendong Xiang"
-  - "Haocheng Xi"
-  - "Shuo Yang"
-  - "Xingyang Li"
-  - "Yilong Zhao"
-  - "Yuezhou Hu"
-  - "Tianyu Fu"
-  - "Tianchen Zhao"
-  - "Yicheng Zhang"
-  - "Boqun Cao"
-  - "Youhe Jiang"
-  - "Chang Chen"
-  - "Kai Jiang"
-  - "Huayu Chen"
-  - "Min Zhao"
-  - "Xiaoming Xu"
-  - "Yi Wu"
-  - "Fan Bao"
-  - "Ion Stoica"
-  - "Joseph E. Gonzalez"
-  - "Jianfei Chen"
-  - "Jun Zhu"
-published: "2025-08-19"
-publication: "Author-hosted 20-page survey; public release noted 2025-08-19"
-publication_type: "preprint"
-publication_status: "preprint"
-source: "https://attention-survey.github.io/files/Attention_Survey.pdf"
+- Jintao Zhang
+- Rundong Su
+- Chunyu Liu
+- Jia Wei
+- Ziteng Wang
+- Haoxu Wang
+- Pengle Zhang
+- Huiqiang Jiang
+- Haofeng Huang
+- Chendong Xiang
+- Haocheng Xi
+- Shuo Yang
+- Xingyang Li
+- Yilong Zhao
+- Yuezhou Hu
+- Tianyu Fu
+- Tianchen Zhao
+- Yicheng Zhang
+- Boqun Cao
+- Youhe Jiang
+- Chang Chen
+- Kai Jiang
+- Huayu Chen
+- Min Zhao
+- Xiaoming Xu
+- Yi Wu
+- Fan Bao
+- Ion Stoica
+- Joseph E. Gonzalez
+- Jianfei Chen
+- Jun Zhu
+published: '2025-08-19'
+publication: Author-hosted 20-page survey; public release noted 2025-08-19
+publication_type: preprint
+publication_status: preprint
+source: https://attention-survey.github.io/files/Attention_Survey.pdf
 sources:
-  - "https://attention-survey.github.io/files/Attention_Survey.pdf"
-  - "https://attention-survey.github.io/"
-  - "https://github.com/attention-survey/Efficient_Attention_Survey"
-implementation: "実装提案ではなく既存の注意計算最適化をハードウェア効率化・KV圧縮・疎化・線形化の4分類に整理する20ページのサーベイ。各分類の共通数式、GPUの律速、代表方式の比較表、適用上の制約を提供する。実験による単一の統一ベンチマークは実施していない。"
-code: "https://github.com/attention-survey/Efficient_Attention_Survey"
-summary: "既存の効率的注意方式を、元の注意演算を維持してGPUのデータ移動を最適化するハードウェア効率化、保存するKV状態を縮小するCompact Attention、重要な注意接続だけを計算する疎注意、softmaxを再構成して再帰状態に集約する線形注意の4系統に分類する。各系統の共通式と代表手法を比較し、計算量・KV容量・情報損失・装置依存性の交換条件を整理する。新規アルゴリズムの実機高速化実験ではなく、既存研究の体系化が主成果である。"
-list_summary: "FlashAttention系のGPU実装最適化、GQA/MLA系のKV状態圧縮、固定・動的な疎注意、再帰状態を用いる線形注意を4分類し、計算・記憶・品質・ハードウェア依存性の違いを統一数式と比較表で整理したサーベイ。"
-last_checked: "2026-10-24"
-worker_completed_at: "2026-10-24T23:50:31+09:00"
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261024-2345-scheduled-chat-45/r02"
-reference_main_sha: "643af45d5f9a3c3732e0321902caea1ee47381dc"
+- https://attention-survey.github.io/files/Attention_Survey.pdf
+- https://attention-survey.github.io/
+- https://github.com/attention-survey/Efficient_Attention_Survey
+implementation: 実装提案ではなく既存の注意計算最適化をハードウェア効率化・KV圧縮・疎化・線形化の4分類に整理する20ページのサーベイ。各分類の共通数式、GPUの律速、代表方式の比較表、適用上の制約を提供する。実験による単一の統一ベンチマークは実施していない。
+code: https://github.com/attention-survey/Efficient_Attention_Survey
+summary: 既存の効率的注意方式を、元の注意演算を維持してGPUのデータ移動を最適化するハードウェア効率化、保存するKV状態を縮小するCompact Attention、重要な注意接続だけを計算する疎注意、softmaxを再構成して再帰状態に集約する線形注意の4系統に分類する。各系統の共通式と代表手法を比較し、計算量・KV容量・情報損失・装置依存性の交換条件を整理する。新規アルゴリズムの実機高速化実験ではなく、既存研究の体系化が主成果である。
+list_summary: FlashAttention系のGPU実装最適化、GQA/MLA系のKV状態圧縮、固定・動的な疎注意、再帰状態を用いる線形注意を4分類し、計算・記憶・品質・ハードウェア依存性の違いを統一数式と比較表で整理したサーベイ。
+last_checked: '2026-10-24'
+worker_completed_at: '2026-10-24T23:50:31+09:00'
+worker_id: scheduled-chat-45
+worker_run_key: 20261024-2345-scheduled-chat-45/r02
+reference_main_sha: 643af45d5f9a3c3732e0321902caea1ee47381dc
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-repair_source_worker_run_key: "20261024-1833-scheduled-chat-30/r01"
-repair_kind: "heading_structure_and_verified_metadata"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+repair_source_worker_run_key: 20261024-1833-scheduled-chat-30/r01
+repair_kind: heading_structure_and_verified_metadata
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2410.02367
+- canonical_id: arXiv:2411.10958
+  arxiv_id: '2411.10958'
+- canonical_id: arXiv:2505.11594
+  arxiv_id: '2505.11594'
+- canonical_id: arXiv:2505.21136
+  arxiv_id: '2505.21136'
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:2303.18223
+  arxiv_id: '2303.18223'
+- canonical_id: arXiv:2305.13245
+  arxiv_id: '2305.13245'
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  arxiv_id: '2405.04434'
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2502.18137
+  arxiv_id: '2502.18137'
+- canonical_id: arXiv:1804.06826
+  arxiv_id: '1804.06826'
+- canonical_id: arXiv:1805.02867
+  arxiv_id: '1805.02867'
+- canonical_id: arXiv:2103.11943
+  arxiv_id: '2103.11943'
+- canonical_id: arXiv:1904.10509
+  arxiv_id: '1904.10509'
+- canonical_id: arXiv:2407.04620
+  arxiv_id: '2407.04620'
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2402.02750
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2501.01005
+  arxiv_id: '2501.01005'
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:1911.02150
+  arxiv_id: '1911.02150'
+- canonical_id: DOI:10.18653/v1/2025.findings-acl.1288
+  arxiv_id: '2412.19255'
+- canonical_id: arXiv:2501.06425
+  arxiv_id: '2501.06425'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2406.15486
+- canonical_id: arXiv:2406.14909
+  arxiv_id: '2406.14909'
+- canonical_id: arXiv:2410.10819
+- canonical_id: arXiv:2502.01776
+  arxiv_id: '2502.01776'
+- canonical_id: arXiv:2506.19852
+  arxiv_id: '2506.19852'
+- canonical_id: arXiv:2502.04507
+  arxiv_id: '2502.04507'
+- canonical_id: arXiv:2506.16054
+  arxiv_id: '2506.16054'
+- canonical_id: arXiv:2509.24006
+  arxiv_id: '2509.24006'
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2402.04617
+- canonical_id: arXiv:2407.02490
+- canonical_id: arXiv:2502.20766
+- canonical_id: arXiv:2406.02542
+- canonical_id: arXiv:2410.13276
+  arxiv_id: '2410.13276'
+- canonical_id: arXiv:2409.10516
+  arxiv_id: '2409.10516'
+- canonical_id: arXiv:2502.11089
+- canonical_id: arXiv:2502.13189
+  arxiv_id: '2502.13189'
+- canonical_id: arXiv:2506.23858
+  arxiv_id: '2506.23858'
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2410.16179
+  arxiv_id: '2410.16179'
+- canonical_id: arXiv:2503.16428
+- canonical_id: arXiv:2505.13389
+  arxiv_id: '2505.13389'
+- canonical_id: arXiv:2505.18875
+  arxiv_id: '2505.18875'
+- canonical_id: arXiv:2502.02770
+  arxiv_id: '2502.02770'
+- canonical_id: arXiv:2404.02690
+  arxiv_id: '2404.02690'
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2207.12598
+  arxiv_id: '2207.12598'
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:1701.06538
+  arxiv_id: '1701.06538'
+- canonical_id: arXiv:2406.08128
+  arxiv_id: '2406.08128'
+- canonical_id: arXiv:2405.17381
+  arxiv_id: '2405.17381'
+- canonical_id: arXiv:2405.11582
+  arxiv_id: '2405.11582'
+- canonical_id: arXiv:2307.08621
+  arxiv_id: '2307.08621'
+- canonical_id: arXiv:2312.06635
+  arxiv_id: '2312.06635'
+- canonical_id: arXiv:2305.13048
+  arxiv_id: '2305.13048'
+- canonical_id: arXiv:2404.05892
+  arxiv_id: '2404.05892'
+- canonical_id: arXiv:2503.14456
+  arxiv_id: '2503.14456'
+- canonical_id: arXiv:2411.10741
+- canonical_id: arXiv:2406.06484
+  arxiv_id: '2406.06484'
+- canonical_id: arXiv:2312.00752
+  arxiv_id: '2312.00752'
+- canonical_id: arXiv:2412.06464
+  arxiv_id: '2412.06464'
+- canonical_id: arXiv:2405.21060
+  arxiv_id: '2405.21060'
+- canonical_id: arXiv:2111.00396
+  arxiv_id: '2111.00396'
+- canonical_id: arXiv:1606.08415
+  arxiv_id: '1606.08415'
+- canonical_id: arXiv:2501.00663
+  arxiv_id: '2501.00663'
+- canonical_id: arXiv:2505.23884
+  arxiv_id: '2505.23884'
+- canonical_id: arXiv:2002.05202
+  arxiv_id: '2002.05202'
+- canonical_id: arXiv:2506.04761
+  arxiv_id: '2506.04761'
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 116
 ---
 
 # Efficient Attention Methods：注意計算の高速化・省メモリ化を四系統で整理するサーベイ
