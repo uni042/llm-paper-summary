@@ -1,34 +1,47 @@
 ---
-canonical_id: "DOI:10.18653/v1/2024.findings-emnlp.539"
-title: "LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters"
-summary: "LoRAExitは判別型Transformerの中間層から分類結果を返す早期終了方式を、出口ごとに分離した低階数適応器、隣接出口からの知識蒸留、一括行列演算で実装する。BERT-baseでは基準モデルに対する正規化推論時間0.78、平均使用層数6.56を報告する一方、GLUE平均スコアは82.83から81.51へ低下した。生成型LLMのトークン生成性能は未評価である。"
-list_summary: "判別型Transformerの早期終了経路を独立した低階数適応器で学習し、隣接出口蒸留と一括演算で分類精度と推論時間の交換条件を改善する。"
+canonical_id: DOI:10.18653/v1/2024.findings-emnlp.539
+title: 'LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters'
+summary: LoRAExitは判別型Transformerの中間層から分類結果を返す早期終了方式を、出口ごとに分離した低階数適応器、隣接出口からの知識蒸留、一括行列演算で実装する。BERT-baseでは基準モデルに対する正規化推論時間0.78、平均使用層数6.56を報告する一方、GLUE平均スコアは82.83から81.51へ低下した。生成型LLMのトークン生成性能は未評価である。
+list_summary: 判別型Transformerの早期終了経路を独立した低階数適応器で学習し、隣接出口蒸留と一括演算で分類精度と推論時間の交換条件を改善する。
 authors:
-  - Jiacheng Liu
-  - Peng Tang
-  - Xiaofeng Hou
-  - Chao Li
-  - Pheng-Ann Heng
-published: "2024-11"
-publication: "Findings of the Association for Computational Linguistics: EMNLP 2024, 9211–9225"
-publication_type: "査読付き国際会議論文"
+- Jiacheng Liu
+- Peng Tang
+- Xiaofeng Hou
+- Chao Li
+- Pheng-Ann Heng
+published: 2024-11
+publication: 'Findings of the Association for Computational Linguistics: EMNLP 2024, 9211–9225'
+publication_type: 査読付き国際会議論文
 publication_status: published
-doi: "10.18653/v1/2024.findings-emnlp.539"
-source: "https://aclanthology.org/2024.findings-emnlp.539/"
+doi: 10.18653/v1/2024.findings-emnlp.539
+source: https://aclanthology.org/2024.findings-emnlp.539/
 sources:
-  - "https://aclanthology.org/2024.findings-emnlp.539/"
-  - "https://aclanthology.org/2024.findings-emnlp.539.pdf"
+- https://aclanthology.org/2024.findings-emnlp.539/
+- https://aclanthology.org/2024.findings-emnlp.539.pdf
 code: null
-implementation: "BERT/ALBERT/DeBERTaの分類用中間出口へLoRAを配置し、共通行列積と分割行列ベクトル積（SGMV）で実行する。公式コード公開先は原著から確定できない。"
-last_checked: "2026-10-25"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261025-0231-scheduled-chat-30/r01"
-worker_completed_at: "2026-10-25T02:37:30+09:00"
-reference_main_sha: "2a00bbf9af4da591ec03052affdf94bd2dbb030b"
+implementation: BERT/ALBERT/DeBERTaの分類用中間出口へLoRAを配置し、共通行列積と分割行列ベクトル積（SGMV）で実行する。公式コード公開先は原著から確定できない。
+last_checked: '2026-10-25'
+worker_id: scheduled-chat-30
+worker_run_key: 20261025-0231-scheduled-chat-30/r01
+worker_completed_at: '2026-10-25T02:37:30+09:00'
+reference_main_sha: 2a00bbf9af4da591ec03052affdf94bd2dbb030b
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:1708.00055
+  arxiv_id: '1708.00055'
+- canonical_id: arXiv:2012.14682
+- canonical_id: arXiv:2312.15234
+- canonical_id: DOI:10.18653/v1/2021.eacl-main.8
+- canonical_id: arXiv:2312.00752
+- canonical_id: arXiv:2004.12993
+- canonical_id: arXiv:2006.04152
+- canonical_id: arXiv:2310.18547
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # LoRAExit：独立した低階数経路を持つ早期終了分類モデル
