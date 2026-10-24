@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "4117e9773bd37fe1d41234976d41b589544eaa587d407c094fbb6ece30c8b11c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_25993d9cacfc8191b45d5e3a3f30debc--2025-doi-10.1145-3725338-pqcache-product-quantization-kv-cache-research-20261024-1430-scheduled-chat-30-r01.md",
+  "canonical_id": "DOI:10.1145/3725338",
+  "worker_completed_at": "2026-10-24T14:30:00+09:00",
+  "worker_run_key": "20261024-1430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6669,
+    "body_paragraphs": 34,
+    "method_chars": 2543,
+    "method_paragraphs": 14,
+    "evaluation_chars": 144,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 144 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 144 < 500"
+  ],
+  "processed_at": "2026-10-24T06:47:40+00:00"
+}
