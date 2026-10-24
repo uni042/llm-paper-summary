@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T10:07:39+00:00",
+  "generated_at": "2026-10-24T10:59:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 25,
+  "count": 24,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -486,36 +486,6 @@
       "worker_run_key": "20261023-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2504.15302",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T17:21:11+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 193 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7868,
-        "body_paragraphs": 46,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 193,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 193 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-094662ea8556--libfile_a7729c606868819199ca4d03ff09d0bd--2025-2504.15302-ragdoll-single-gpu-rag-offloading-research-20261023-1430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-094662ea8556--libfile_a7729c606868819199ca4d03ff09d0bd--2025-2504.15302-ragdoll-single-gpu-rag-offloading-research-20261023-1430-scheduled-chat-3.json",
-      "worker_run_key": "20261023-1430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.38697",
       "title": null,
       "source_url": null,
@@ -657,29 +627,28 @@
       "canonical_id": "DOI:10.1145/3706418",
       "title": "Resource-efficient Algorithms and Systems of Foundation Models: A Survey",
       "source_url": "https://doi.org/10.1145/3706418",
-      "returned_at": "2026-10-24T10:05:56+00:00",
-      "return_count": 7,
+      "returned_at": "2026-10-24T10:57:17+00:00",
+      "return_count": 8,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 220 < 500"
+        "説明不足トリガー: 評価説明量 342 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7168,
-        "body_paragraphs": 44,
-        "method_chars": 3521,
-        "method_paragraphs": 21,
-        "evaluation_chars": 220,
-        "limitation_chars": 0,
+        "body_chars": 6078,
+        "body_paragraphs": 30,
+        "method_chars": 3025,
+        "method_paragraphs": 13,
+        "evaluation_chars": 342,
+        "limitation_chars": 634,
         "insufficiency_flags": [
-          "評価説明量 220 < 500",
-          "限界説明量 0 < 推奨 120"
+          "評価説明量 342 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dafef15f9d9d--libfile_1c2da2b5bf5c8191b15db815c73a468c--2025-doi-10.1145-3706418-foundation-model-resource-efficiency-survey-returned-repair-20261024-1631-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-dafef15f9d9d--libfile_1c2da2b5bf5c8191b15db815c73a468c--2025-doi-10.1145-3706418-foundation-model-resource-efficiency-survey-returned-repair-2026.json",
-      "worker_run_key": "20261024-1631-scheduled-chat-30/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-83f04bc7fe3e--libfile_cc0d9ab3f13c8191bdc7cf7035350525--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-returned-repair-20261023-0134-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-83f04bc7fe3e--libfile_cc0d9ab3f13c8191bdc7cf7035350525--2025-doi-10.1145-3706418-resource-efficient-foundation-model-survey-returned-repair-20261.json",
+      "worker_run_key": "20261023-0134-scheduled-chat-30/r01"
     }
   ]
 }

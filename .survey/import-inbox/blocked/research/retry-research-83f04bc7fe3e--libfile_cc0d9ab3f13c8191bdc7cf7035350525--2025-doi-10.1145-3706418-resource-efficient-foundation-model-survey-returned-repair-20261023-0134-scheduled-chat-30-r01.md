@@ -30,6 +30,8 @@ quality_self_review_passed: true
 returned_repair: true
 returned_repair_reason: "サーベイの調査手法・文献比較評価の章立てが機械品質検査で認識されなかったため、一次資料と照合し節構造を修復"
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Resource-efficient Algorithms and Systems of Foundation Models: A Survey

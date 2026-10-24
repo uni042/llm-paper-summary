@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（126本）
+## 自動生成の論文一覧（127本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -436,6 +436,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。
 
+- **2025-04 · [RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU](2025-2504.15302-ragdoll-efficient-offloading-based-online-rag-system-on-a-single-gpu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  RAGDollは、検索拡張生成（retrieval-augmented generation; RAG）を単一GPUと限られたメモリで運用するとき、検索側とLLM生成側を個別に最適化するだけでは全体の待ち時間が短くならない問題を扱う。さらに、先読み転送を計算と重ね、事前の性能測定と実行時の待ち行列長からバッチサイズを切り替える。
+
 - **2025-04 · [Hardware-based Heterogeneous Memory Management for Large Language Model Inference](2025-2504.14893-h2m2-hardware-heterogeneous-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HBM3とLPDDR5Xを両側計算器付きで並列利用し、動的なヘッド単位割当とハードウェアメモリ抽象化によりLPDDRのみ比で最大2.94倍高速化する。
@@ -509,7 +513,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：428  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：429  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
