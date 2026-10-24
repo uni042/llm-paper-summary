@@ -1,36 +1,68 @@
 ---
-canonical_id: "DOI:10.24963/ijcai.2024/904"
-title: "X-former Elucidator: Reviving Efficient Attention for Long Context Language Modeling"
-summary: "X-former Elucidatorは長文脈LLMの効率的注意を、位置選択・文脈圧縮・活性カーネル化・低ランク分解の四系統に整理し、古典的注意法と2023年以降のLLM手法の関係を検証するIJCAI 2024サーベイ。12方式を再実装しTitan RTX 24GB群で計21,114 GPU時間のLRA/NLP/CV評価を行う。LRA長系列では位置選択法が全注意比1.81倍以上の速度、8.07倍のメモリ節約を示すが、系列512のNLPでは多くの疎注意が全注意より遅い。実験は主として学習スループットでありLLMデコードTPSの直接比較ではない。"
-list_summary: "長文脈注意を位置選択・文脈圧縮・カーネル化・低ランク分解に分類。12方式を21,114 GPU時間比較し、長系列の高速化と短系列の逆転を報告。測定は主に学習速度。"
+canonical_id: DOI:10.24963/ijcai.2024/904
+title: 'X-former Elucidator: Reviving Efficient Attention for Long Context Language Modeling'
+summary: X-former Elucidatorは長文脈LLMの効率的注意を、位置選択・文脈圧縮・活性カーネル化・低ランク分解の四系統に整理し、古典的注意法と2023年以降のLLM手法の関係を検証するIJCAI 2024サーベイ。12方式を再実装しTitan RTX 24GB群で計21,114 GPU時間のLRA/NLP/CV評価を行う。LRA長系列では位置選択法が全注意比1.81倍以上の速度、8.07倍のメモリ節約を示すが、系列512のNLPでは多くの疎注意が全注意より遅い。実験は主として学習スループットでありLLMデコードTPSの直接比較ではない。
+list_summary: 長文脈注意を位置選択・文脈圧縮・カーネル化・低ランク分解に分類。12方式を21,114 GPU時間比較し、長系列の高速化と短系列の逆転を報告。測定は主に学習速度。
 authors:
-  - "Xupeng Miao"
-  - "Shenhan Zhu"
-  - "Fangcheng Fu"
-  - "Ziyu Guo"
-  - "Zhi Yang"
-  - "Yaofeng Tu"
-  - "Zhihao Jia"
-  - "Bin Cui"
-published: "2024-08"
-publication: "Proceedings of the 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024), Survey Track, pp. 8179–8187"
-publication_type: "査読付き国際会議サーベイ"
-publication_status: "Published"
-source: "https://www.ijcai.org/proceedings/2024/0904.pdf"
+- Xupeng Miao
+- Shenhan Zhu
+- Fangcheng Fu
+- Ziyu Guo
+- Zhi Yang
+- Yaofeng Tu
+- Zhihao Jia
+- Bin Cui
+published: 2024-08
+publication: Proceedings of the 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024), Survey Track, pp. 8179–8187
+publication_type: 査読付き国際会議サーベイ
+publication_status: Published
+source: https://www.ijcai.org/proceedings/2024/0904.pdf
 sources:
-  - "https://www.ijcai.org/proceedings/2024/0904.pdf"
-  - "https://www.ijcai.org/proceedings/2024/904"
-implementation: "12種類の効率的注意をPyTorchで再実装し、疎行列演算にはブロック疎GPUカーネルを使用。NVIDIA Titan RTX 24GB群でLRA/NLP/CVの学習処理量・精度・メモリを比較。著者らは詳細実験を公式技術報告とコードリポジトリへ公開。"
-code: "https://github.com/Hsword/X-former-Elucidator"
-last_checked: "2026-10-25"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-25T01:03:26+09:00"
-worker_run_key: "20261025-0103-scheduled-chat-00/r01"
-reference_main_sha: "b1cc9a3eef7df6fa74728271a097267c7c5c2c3f"
+- https://www.ijcai.org/proceedings/2024/0904.pdf
+- https://www.ijcai.org/proceedings/2024/904
+implementation: 12種類の効率的注意をPyTorchで再実装し、疎行列演算にはブロック疎GPUカーネルを使用。NVIDIA Titan RTX 24GB群でLRA/NLP/CVの学習処理量・精度・メモリを比較。著者らは詳細実験を公式技術報告とコードリポジトリへ公開。
+code: https://github.com/Hsword/X-former-Elucidator
+last_checked: '2026-10-25'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-25T01:03:26+09:00'
+worker_run_key: 20261025-0103-scheduled-chat-00/r01
+reference_main_sha: b1cc9a3eef7df6fa74728271a097267c7c5c2c3f
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2310.06839
+- canonical_id: arXiv:2312.15234
+- canonical_id: arXiv:2305.15805
+- canonical_id: arXiv:2305.13245
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2310.06201
+- canonical_id: arXiv:2102.03902
+- canonical_id: arXiv:2307.06945
+- canonical_id: arXiv:2003.05997
+- canonical_id: arXiv:2309.16354
+- canonical_id: arXiv:2310.17157
+- canonical_id: arXiv:2312.00752
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2310.05869
+- canonical_id: arXiv:1904.10509
+- canonical_id: arXiv:2307.02486
+- canonical_id: arXiv:2106.06899
+- canonical_id: DOI:10.18653/v1/2021.sustainlp-1.5
+- canonical_id: arXiv:2305.13048
+- canonical_id: arXiv:2304.08467
+- canonical_id: arXiv:2007.04825
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2202.08791
+- canonical_id: arXiv:2009.14794
+- canonical_id: arXiv:2001.04451
+references_checked_at: '2026-10-24'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # X-former Elucidator：長文脈LLMの効率的注意を四系統で比較するサーベイ
