@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T20:21:08+00:00",
+  "generated_at": "2026-10-24T21:47:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 23,
+  "count": 27,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -45,6 +45,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/local-batch-20261003-f3ff487c07dc5aca--arxiv-2601-19908.md",
       "import_result_path": ".survey/import-inbox/results/research/local-batch-20261003-f3ff487c07dc5aca--arxiv-2601-19908.json",
       "worker_run_key": "research-revalidation-arxiv-2601.19908-20261003t225905jst"
+    },
+    {
+      "canonical_id": "arXiv:2302.13939",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-13T23:09:07+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2302.13939-spikegpt-generative-pre-trained-language-model-with-spiking-neural-netwo.md と 16 段落 / 3603文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7069,
+        "body_paragraphs": 46,
+        "method_chars": 1830,
+        "method_paragraphs": 11,
+        "evaluation_chars": 2173,
+        "limitation_chars": 630,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0a8d20f2211d--libfile_1643dacabf5081918f8c4f94130ef4dc--2023-2302.13939-spikegpt-spiking-rwkv-research-20261014-0645-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0a8d20f2211d--libfile_1643dacabf5081918f8c4f94130ef4dc--2023-2302.13939-spikegpt-spiking-rwkv-research-20261014-0645-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-0645-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2511.19676",
@@ -99,6 +124,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9ffd55868e63--libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-9ffd55868e63--libfile_2d7cce50f7d08191959745f07531dc21--2024-2403.14520-cobra-mamba-multimodal-efficient-inference-research-20261014-0745-schedul.json",
       "worker_run_key": "20261014-0745-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.07832",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T13:36:48+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md と 21 段落 / 4745文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7660,
+        "body_paragraphs": 49,
+        "method_chars": 1597,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2443,
+        "limitation_chars": 855,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed1b38a44c8d--libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed1b38a44c8d--libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-4.json",
+      "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
@@ -373,6 +423,33 @@
       "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
     },
     {
+      "canonical_id": "arXiv:2405.04513",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-24T17:41:50+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2405.04513-switchable-decision-dynamic-neural-generation-networks.md と 20 段落 / 4582文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6851,
+        "body_paragraphs": 39,
+        "method_chars": 1758,
+        "method_paragraphs": 10,
+        "evaluation_chars": 2225,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a6d3cf160e188191ae3b5a84c50b0e08--2024-2405.04513-switchable-decision-dynamic-neural-generation-research-20261022-2326-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a6d3cf160e188191ae3b5a84c50b0e08--2024-2405.04513-switchable-decision-dynamic-neural-generation-research-20261022-2326-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261022-2326-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2607.05399",
       "title": null,
       "source_url": null,
@@ -400,6 +477,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a9f9c26d48308191a71761a0c28c4078--2026-2607.05399-kv-cache-benchmark-quality-throughput-research-20261023-0200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a9f9c26d48308191a71761a0c28c4078--2026-2607.05399-kv-cache-benchmark-quality-throughput-research-20261023-0200-scheduled-chat-00-r01.json",
       "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.02591",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-24T19:06:59+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2507.02591-auroralong-bringing-rnns-back-to-efficient-open-ended-video-understandin.md と 19 段落 / 4536文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4862,
+        "body_paragraphs": 22,
+        "method_chars": 1532,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1039,
+        "limitation_chars": 614,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/0-libfile_fcab8b40e4348191a72596a1fc245f16--2025-2507.02591-auroralong-rwkv-sorted-visual-token-merge-returned-repair-20261024-0203-scheduled-chat-00-r01-metadata-corrected-section-normalized-20261024-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/0-libfile_fcab8b40e4348191a72596a1fc245f16--2025-2507.02591-auroralong-rwkv-sorted-visual-token-merge-returned-repair-20261024-0203-scheduled-chat-00-r01-metada.json",
+      "worker_run_key": "20261024-0345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3706418",
@@ -430,6 +532,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/0-libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--start-snapshot-20261024.md",
       "import_result_path": ".survey/import-inbox/results/research/0-libfile_406b0fe2d7dc8191970f3f0f7f0a0ff6--start-snapshot-20261024.json",
       "worker_run_key": "20261024-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.26099",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-24T19:24:58+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.26099-do-language-models-need-sleep-offline-recurrence-for-improved-online-inf.md と 21 段落 / 4723文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5820,
+        "body_paragraphs": 32,
+        "method_chars": 1458,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1640,
+        "limitation_chars": 662,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-503a8b7c2494--libfile_4baab29970b081919ca828b319fad166--2026-2605.26099-offline-recurrent-memory-consolidation-sleep-research-20261024-1104-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/0-retry-research-503a8b7c2494--libfile_4baab29970b081919ca828b319fad166--2026-2605.26099-offline-recurrent-memory-consolidation-sleep-research-20261024-1104-sch.json",
+      "worker_run_key": "20261024-1104-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.1162/tacl.a.39",
@@ -488,93 +615,36 @@
       "worker_run_key": "20261023-0500-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2605.19218",
+      "canonical_id": "arXiv:2602.08858",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-24T20:14:33+00:00",
+      "returned_at": "2026-10-24T20:14:31+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 371 < 500"
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.08858-flattengpt-depth-compression-for-transformer-with-layer-flattening.md と 13 段落 / 2718文字 (100.0%) が完全一致"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2775,
-        "body_paragraphs": 12,
-        "method_chars": 858,
-        "method_paragraphs": 4,
-        "evaluation_chars": 371,
+        "body_chars": 4805,
+        "body_paragraphs": 27,
+        "method_chars": 1559,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1377,
         "limitation_chars": 0,
         "insufficiency_flags": [
-          "評価説明量 371 < 500",
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-35a0166f6c6b--0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-35a0166f6c6b--0-retry-research-8372bf84a2d4--libfile_1967547bad9081919588922a45bc29fa--2026-2605.19218-rotatek-channel-pruning-research-20261023-.json",
-      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.32579",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T20:14:34+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 205 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2626,
-        "body_paragraphs": 12,
-        "method_chars": 733,
-        "method_paragraphs": 4,
-        "evaluation_chars": 205,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 205 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bdb5704e070--0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-20261023-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4bdb5704e070--0-retry-research-57e7127aac40--libfile_c575911f77e48191a3c2d8a11819534a--2026-2609.32579-dimpo-attention-projection-research-202610.json",
-      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.28846",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T20:14:35+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 131 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6147,
-        "body_paragraphs": 37,
-        "method_chars": 1626,
-        "method_paragraphs": 9,
-        "evaluation_chars": 131,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 131 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-546b5e5d7668--0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-research-20261023-0200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-546b5e5d7668--0-retry-research-b732e6b1c507--libfile_1655eef06a3c8191ae28aa5f85e5a23a--2026-2608.28846-layer-skipping-audit-swift-conflayers-rese.json",
-      "worker_run_key": "20261023-0200-scheduled-chat-00/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-28df560400c1--0-retry-research-39451dc0520d--libfile_cfb22501021881918872db85e22e7057--2026-2602.08858-flattengpt-depth-compression-research-20261023-0730-scheduled-chat-30-r01-v2-section-normal.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-28df560400c1--0-retry-research-39451dc0520d--libfile_cfb22501021881918872db85e22e7057--2026-2602.08858-flattengpt-depth-compression-research-2026.json",
+      "worker_run_key": "20261024-0345-scheduled-chat-45/r03"
     },
     {
       "canonical_id": "arXiv:2512.15550",
-      "title": "CTkvr: KV Cache Retrieval for Long-Context LLMs via Centroid then Token Indexing",
-      "source_url": "https://arxiv.org/pdf/2512.15550",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-24T20:21:01+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -601,8 +671,8 @@
     },
     {
       "canonical_id": "arXiv:2609.21704",
-      "title": "SpecQuant – Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference",
-      "source_url": "https://arxiv.org/html/2609.21704",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-24T20:21:06+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -625,6 +695,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-75c6cccba0b8--0-retry-research-b196cceacd79--libfile_c981147318d08191a7ea25630d82bbc0--2026-2609.21704-specquant-multiparent-quantization-research-20261023-0400-scheduled-chat-00-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-75c6cccba0b8--0-retry-research-b196cceacd79--libfile_c981147318d08191a7ea25630d82bbc0--2026-2609.21704-specquant-multiparent-quantization-researc.json",
       "worker_run_key": "20261023-0400-scheduled-chat-00/r02"
+    },
+    {
+      "canonical_id": "arXiv:2605.19218",
+      "title": "Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference",
+      "source_url": "https://arxiv.org/html/2605.19218",
+      "returned_at": "2026-10-24T21:46:13+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 371 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2775,
+        "body_paragraphs": 12,
+        "method_chars": 858,
+        "method_paragraphs": 4,
+        "evaluation_chars": 371,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 371 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a533b15b074c81918162bb1f527beb68--2026-2605.19218-rotatek-evaluation-structure-repair-20261025-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a533b15b074c81918162bb1f527beb68--2026-2605.19218-rotatek-evaluation-structure-repair-20261025-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261025-0445-scheduled-chat-45/r01"
     }
   ]
 }

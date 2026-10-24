@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（926本）
+## 自動生成の論文一覧（927本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -757,6 +757,10 @@
 - **2026-09 · [Dissecting GPU Utilization for LLM Inference on Nvidia Hopper](2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
+
+- **2026-09 · [DimPO: Dimensionality Reduction for Attention using Preference Optimization](2026-2609.32579-dimpo-dimensionality-reduction-for-attention-using-preference-optimizati.md)**  
+  実装：[✓](https://github.com/lanzv/dimpo) ・ リポジトリ内被引用：0  
+  DimPOは、大規模言語モデル（LLM）の注意計算におけるクエリとキーのベクトル次元を縮める際、元の注意重みを数値的に完全再現することと、モデルの下流課題性能を保つことは別の目的だと実証する研究である。提案は、事前学習済みモデルを追加学習し直す方式ではなく、各層に一つの小さな線形写像をオフラインで学習する方式である。
 
 - **2026-09 · [DeepSeek-V4-Flash on AMD gfx90a: Correctness Recovery and Inference Performance Engineering](2026-2609.15627-deepseek-v4-flash-on-amd-gfx90a-correctness-recovery-and-inference-performance-engineering.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
