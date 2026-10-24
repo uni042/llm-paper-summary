@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-24T03:56:29+00:00",
+  "generated_at": "2026-10-24T04:05:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -826,33 +826,6 @@
       "worker_run_key": "20261023-1733-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3731569.3764834",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-23T21:07:36+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 446 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9330,
-        "body_paragraphs": 48,
-        "method_chars": 2751,
-        "method_paragraphs": 12,
-        "evaluation_chars": 446,
-        "limitation_chars": 944,
-        "insufficiency_flags": [
-          "評価説明量 446 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b006904f30081918606ad21ad63cf54--2025-doi-10.1145-3731569.3764834-prefillonly-single-token-serving-research-20261024-0502-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7b006904f30081918606ad21ad63cf54--2025-doi-10.1145-3731569.3764834-prefillonly-single-token-serving-research-20261024-0502-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261024-0502-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.26112",
       "title": null,
       "source_url": null,
@@ -933,6 +906,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-dfc56327c104--file_00000000d6a881f8b1198ca9ff7e4f37--2026-2609.23130-inference-control-plane-synthesis-section-repair-20261024-0845-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-dfc56327c104--file_00000000d6a881f8b1198ca9ff7e4f37--2026-2609.23130-inference-control-plane-synthesis-section-repair-20261024-0845-scheduled-cha.json",
       "worker_run_key": "20261024-0845-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3731569.3764834",
+      "title": "PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications",
+      "source_url": "https://arxiv.org/html/2505.07203v1",
+      "returned_at": "2026-10-24T04:04:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7782,
+        "body_paragraphs": 45,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2318,
+        "limitation_chars": 671,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f1cf436779e48191aaca14d0bd95e94d--2025-doi-10.1145-3731569.3764834-prefillonly-evaluation-repaired-20261024-1155-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f1cf436779e48191aaca14d0bd95e94d--2025-doi-10.1145-3731569.3764834-prefillonly-evaluation-repaired-20261024-1155-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261024-1155-scheduled-chat-00/r01"
     }
   ]
 }

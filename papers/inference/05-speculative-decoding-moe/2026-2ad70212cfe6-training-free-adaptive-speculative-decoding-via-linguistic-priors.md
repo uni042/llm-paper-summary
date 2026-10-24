@@ -30,6 +30,8 @@ quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 repair_kind: section_heading_normalization
 repair_note: 既存Researchの見出し階層のみ正規化。技術本文・数値・引用は変更なし。今回のrunで一次論文全文の独立再監査は行っていない。
+last_audited: null
+audit_version: 0
 ---
 
 # LinguaSpec：言語学的事前知識を用いた追加学習不要の適応的投機的復号
