@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（221本）
+## 自動生成の論文一覧（222本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -499,6 +499,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-04 · [AHASD: Asynchronous Heterogeneous Architecture for LLM Adaptive Drafting Speculative Decoding on Mobile Devices](2026-2604.25326-ahasd-asynchronous-heterogeneous-architecture-for-llm-adaptive-drafting-.md)**  
   実装：[✓](https://github.com/MAdrid1011/AHASD) ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小さな草稿モデル（下書き language モデル, DLM）が複数の候補トークンを生成し、大きな目標モデル（target language モデル, TLM）がまとめて検証することで、高価な目標モデルの逐次実行回数を減らす。
+
+- **2026-03 · [EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs](2026-2603.08088-eagle-pangu-accelerator-safe-tree-speculative-decoding-on-ascend-npus.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号（投機的復号）は小さな草稿モデルで複数候補を先に生成し、教師モデルがまとめて検証することで教師モデルの呼び出し回数を減らす。240ターンの単一要求評価で、教師単独の平均17.65トークン/秒から22.42トークン/秒へ改善し、平均速度比1.27倍を報告する（原著表1）。
 
 - **2026-03 · [Accelerating PayPal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models](2026-2604.19767-accelerating-paypal-s-commerce-agent-with-speculative-decoding-an-empiri.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
