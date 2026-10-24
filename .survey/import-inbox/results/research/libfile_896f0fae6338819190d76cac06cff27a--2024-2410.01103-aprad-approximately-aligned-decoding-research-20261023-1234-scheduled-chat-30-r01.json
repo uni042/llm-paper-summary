@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "ef3f065a2d17cc38dd50c1fcbcf94450c1a4b3cb63b522b2603966e9d6c1ec44",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_896f0fae6338819190d76cac06cff27a--2024-2410.01103-aprad-approximately-aligned-decoding-research-20261023-1234-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2410.01103",
+  "worker_completed_at": "2026-10-23T12:39:19+09:00",
+  "worker_run_key": "20261023-1234-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5407,
+    "body_paragraphs": 31,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 766,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2410.01103-approximately-aligned-decoding.md と 15 段落 / 3365文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-24T17:21:00+00:00"
+}
