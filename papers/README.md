@@ -11,7 +11,7 @@
 - [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 128本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
 - [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 112本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
 - [Expert Prefetch](inference/03-expert-prefetch/) — 16本 — 将来使うexpertをrouting確定前に予測し、GPU cacheの保持や先読みを制御してweight転送待ち・転送量を減らす。
-- [Conditional Computation](inference/04-conditional-computation/) — 20本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。
+- [Conditional Computation](inference/04-conditional-computation/) — 23本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。
 - [Speculative Decoding / MoE](inference/05-speculative-decoding-moe/) — 227本 — draft候補を並列生成・検証して1回のtarget実行で複数tokenを確定し、MoEではexpert読込・検証costも抑える。
 - [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 20本 — expert weightを低bit化・pruning・mixed precision等で小さくし、VRAM・bandwidth・計算量を削減する。
 - [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 324本 — KV cacheを圧縮・選別・動的配分・GPU内prefetchして、容量とmemory bandwidthの負荷を減らす。
@@ -25,7 +25,7 @@
 - [Inference Simulation / Emulation](inference/15-inference-simulation-emulation/) — 52本 — LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。
 - [Weight Quantization / Compression](inference/16-weight-quantization-compression/) — 76本 — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
 - [PIM / Near-Data Acceleration](inference/17-pim-near-data-acceleration/) — 29本 — メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
-- [Other Inference Systems](inference/99-other-inference-systems/) — 951本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
+- [Other Inference Systems](inference/99-other-inference-systems/) — 926本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 → [Inference一覧](inference/)
 

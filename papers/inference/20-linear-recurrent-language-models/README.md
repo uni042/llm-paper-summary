@@ -32,7 +32,7 @@
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（37本）
+## 自動生成の論文一覧（45本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/)
 
@@ -59,9 +59,21 @@
   実装：[✓](https://github.com/ngocbh/kalman-delta-networks) ・ リポジトリ内被引用：0  
   固定サイズの線形注意メモリに推定不確実性を持たせ、蓄積証拠に応じて上書き強度をカルマン利得から決めることで、長文脈検索と生成精度を改善する。
 
+- **2026-08 · [SANE: State Anomaly Neutralization for Stable Extreme-Context Delta-Rule Models](2026-2608.22354-sane-state-anomaly-neutralization-for-stable-extreme-context-delta-rule-.md)**  
+  実装：[✓](https://github.com/pass-lin/rwkv_ops) ・ リポジトリ内被引用：0  
+  SANEはこの形状に合わせ、各チャンク末尾の状態行列を、入力に応じたヘッド別のしきい値で滑らかに圧縮する。
+
+- **2026-06 · [Do Language Models Need Sleep? Offline Recurrence for Improved Online Inference](2026-2605.26099-do-language-models-need-sleep-offline-recurrence-for-improved-online-inf.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Transformerの注意機構は過去トークンをキー・値（KV）キャッシュとして保持する。
+
 - **2026-05 · [Interdomain Attention: Beyond Token-Level Key-Value Memory](2026-2605.24330-interdomain-attention-beyond-token-level-key-value-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この方式は必要な過去情報を内容に基づいて選べるが、復号が進むほどKVキャッシュ容量と参照帯域が増える。FineWeb-Eduを用いて125M〜1.3Bパラメータの復号型モデルを学習した結果、同じ再帰状態予算のS4Dだけのモデルより検証パープレキシティが13〜16%低い。
+
+- **2026-05 · [Don't Read Everything: A Curvature-Conditioned Query for Linear Attention](2026-2606.01294-don-t-read-everything-a-curvature-conditioned-query-for-linear-attention.md)**  
+  実装：[✓](https://github.com/ledong0110/ccq) ・ リポジトリ内被引用：0  
+  線形注意（Linear 注意機構）は、通常のsoftmax注意のように過去トークン全体との注意行列を毎回計算する代わりに、過去の鍵・値の情報を固定サイズの再帰状態へ蓄積する。
 
 - **2026-05 · [Blurry Window Attention](2026-2606.09862-blurry-window-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -75,6 +87,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   オンラインベクトル量子化注意（Online Vector Quantized 注意機構、OVQ-注意機構）は、長い系列の情報を比較的大きな固定上限の記憶状態へ圧縮しながら、自己注意（self-注意機構）の長距離検索能力に近づける系列混合層である。
 
+- **2026-01 · [MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head](2026-2601.07832-mhla-restoring-expressivity-of-linear-attention-via-token-level-multi-he.md)**  
+  実装：[✓](https://github.com/DAGroup-PKU/MHLA) ・ リポジトリ内被引用：0  
+  MHLA（Multi-Head Linear 注意機構）は、系列長に対して計算量が線形に増える注意機構を維持しながら、従来の線形注意（linear 注意機構）で失われるトークン間の選択性を回復する構造である。DeiT-TのImageNet-1K正答率は通常の線形注意69.8%からMHLA75.8%へ、通常のソフトマックス注意72.2%も上回った。
+
+- **2026-01 · [Gecko: An Efficient Neural Architecture Inherently Processing Sequences with Arbitrary Lengths](2026-2601.06463-gecko-an-efficient-neural-architecture-inherently-processing-sequences-w.md)**  
+  実装：[✓](https://github.com/XuezheMax/gecko-llm) ・ リポジトリ内被引用：0  
+  Geckoは、従来のTransformerで長い系列を扱う際の二乗注意計算と、固定窓に分割する方式で過去の情報が失われる問題を、モデル構造そのものから扱う研究である。
+
 ### 2年前（2024-11〜2025-10）
 
 - **2024-12 · [Gated Delta Networks: Improving Mamba2 with Delta Rule](2024-2412.06464-gated-delta-networks-improving-mamba2-with-delta-rule.md)**  
@@ -84,6 +104,10 @@
 - **2024-11 · [MetaLA: Unified Optimal Linear Approximation to Softmax Attention Map](2024-2411.10741-metala-unified-optimal-linear-approximation-to-softmax-attention-map.md)**  
   実装：[✓](https://github.com/BICLab/MetaLA) ・ リポジトリ内被引用：2  
   MetaLAは、従来別々の系列モデルとして説明される線形Transformer、状態空間モデル（State Space モデル; SSM）、線形再帰ニューラルネット（Linear RNN）を、有限サイズの隠れ状態を更新する線形注意（linear 注意機構）の共通形式で扱う研究である。
+
+- **2025-10 · [AuroraLong: Bringing RNNs Back to Efficient Open-Ended Video Understanding](2025-2507.02591-auroralong-bringing-rnns-back-to-efficient-open-ended-video-understandin.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  AuroraLongは、動画質問応答や詳細な動画字幕生成で問題となる、画像フレーム数に比例して増える視覚トークンを低メモリで処理する多模態言語モデルである。学習済みRWKVの4,096トークンという文脈長と、多数の画像を入力する動画処理との隔たりを埋める設計である。
 
 - **2025-02 · [PICASO: Permutation-Invariant Context Composition with State Space Models](2025-2502.17605-picaso-permutation-invariant-context-composition-with-state-space-models.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -173,6 +197,10 @@
   実装：[✓](https://github.com/booydar/t5-experiments/tree/aaai24) ・ リポジトリ内被引用：10  
   再帰メモリトランスフォーマー（Recurrent メモリ Transformer; RMT）は、長い入力を固定長の区間に分け、直前の区間から受け取った少数のメモリトークンを次の区間に引き渡す方式である。自然言語の実験は、主に履歴区間の追加によってパープレキシティ（perplexity、正解系列の予測の難しさを表す指標）が改善するかを測っている。
 
+- **2023-09 · [Transformer-VQ: Linear-Time Transformers via Vector Quantization](2023-2309.16354-transformer-vq-linear-time-transformers-via-vector-quantization.md)**  
+  実装：[✓](https://github.com/transformer-vq/transformer_vq) ・ リポジトリ内被引用：5  
+  基本の着想は、過去の鍵ベクトルを学習可能なコードブックの少数の代表ベクトルへ量子化すると、異なるトークン位置でも同じコードを持つ鍵は同じ注意得点になる、という性質にある。TPU v3での訓練処理率は同規模の二次注意モデルと比べ、系列長8192で3倍超、32768で12倍超となり、131072トークンまで大きな処理率低下なく動作した。
+
 - **2023-06 · [Block-State Transformers](2023-2306.09539-block-state-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   GPUで測った層単体の順方向計算は、ブロック再帰方式に対して単一頭BSTが6〜11倍速い。
@@ -182,6 +210,10 @@
   従来のスパイク型ネットワークは画像分類などでは有効だったが、語彙数が大きく長距離依存を必要とする言語生成では、二値活性による情報の欠落と訓練の不安定性が課題だった。SpikeGPTは再帰的な言語モデルRWKVのトークン混合をスパイク型ニューロンと組み合わせ、時系列の情報を内部状態へ蓄積することで、二値発火を用いながら自己回帰的な文章生成を行う。
 
 ### 5年前（2021-11〜2022-10）
+
+- **2022-02 · [Transformer Quality in Linear Time](2022-2202.10447-transformer-quality-in-linear-time.md)**  
+  実装：✓ ・ リポジトリ内被引用：30  
+  FLASHは、注意計算を系列長に対して線形に近づける方式が、理論計算量を減らしても実機で速くならず、強いTransformerを比較対象にすると品質が落ちるという問題に取り組む。
 
 - **2022-06 · [Long Range Language Modeling via Gated State Spaces](2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md)**  
   実装：✓ ・ リポジトリ内被引用：20  

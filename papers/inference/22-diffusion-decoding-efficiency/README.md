@@ -29,7 +29,7 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（8本）
+## 自動生成の論文一覧（10本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/22-diffusion-decoding-efficiency/)
 
@@ -41,6 +41,10 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 - **2025-11 · [From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models](2025-2511.21103-from-bits-to-rounds-parallel-decoding-with-exploration-for-diffusion-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   通常の自己回帰モデルとは異なり、左から一語ずつ確定する必要がないため、並列復号によって生成の反復回数を減らせる可能性がある。実験ではGSM8K、MATH、HumanEval、MMLU-Proを対象に、同程度の正答率で必要なモデル順伝播回数を26〜61%削減する代表結果を示す。
+
+- **2026-04 · [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](2026-2604.02560-dependency-guided-parallel-decoding-in-discrete-diffusion-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  依存推定は拡散モデルの1回の前向き計算で得た状態を利用し、正確な依存行列を作るためにマスク位置ごとに追加推論する方式を避ける。
 
 - **2026-03 · [DAPD: Dependency-Aware Parallel Decoding via Attention for Diffusion LLMs](2026-2603.12996-dapd-dependency-aware-parallel-decoding-via-attention-for-diffusion-llms.md)**  
   実装：[✓](https://github.com/quasar529/DAPD) ・ リポジトリ内被引用：2  
@@ -63,6 +67,10 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 - **2026-09 · [Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling](2026-2609.16450-early-bird-decoding-accelerating-diffusion-llms-with-learnable-block-siz.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散型大規模言語モデル（diffusion LLM、dLLM）は、未確定位置をマスクした系列に対し、双方向Transformerで各位置の語彙分布を同時に予測し、確信できる位置を確定して再び推論する。
+
+- **2026-08 · [Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models](2026-2608.02625-speculative-correction-draft-then-refine-decoding-for-diffusion-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的 Correctionは、拡散言語モデル（Diffusion Language モデル、DLM）が持つ双方向の修正能力を、実際の文章生成へ生かすための二段階復号方式である。flash–flashではGSM8Kの正答率を0.848から0.899へ改善し、同じ問題集合のモデル実行時間を18.77秒から15.96秒へ短縮した。
 
 - **2026-06 · [AsyncLane: Decoupling Refinement from Advancement in Diffusion Language Model Decoding](2026-2606.08411-asynclane-decoupling-refinement-from-advancement-in-diffusion-language-m.md)**  
   実装：[✓](https://github.com/renyingxuan/AsyncLane) ・ リポジトリ内被引用：0  
