@@ -35,10 +35,15 @@
   "selection_reason": "batch speculative decodingのragged tensorで位置ID/mask/KV同期が崩れる問題を解析し、整合性維持法とthroughput改善策を示す。",
   "semantic_scholar_id": "fd42d6d3c09a6d2d44f0e6f5f488d19db5290e6a",
   "source_url": "https://arxiv.org/abs/2510.22876",
-  "status": "ready",
+  "status": "superseded",
   "title": "Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-25T05:00:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2025-2510.22876-correctness-forensics-for-batch-speculative-decoding-diagnosing-the-ragg.md",
+  "represented_canonical_id": "arXiv:2510.22876",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
