@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T12:27:59+00:00",
+  "generated_at": "2026-10-25T13:49:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 37,
+  "count": 34,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -310,34 +310,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca7d4c1f8efd--libfile_ce2da32ba1888191bdbe22bf3388cd78--2024-2411.10741-metala-linear-attention-optimal-approximation-research-20261021-0956-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ca7d4c1f8efd--libfile_ce2da32ba1888191bdbe22bf3388cd78--2024-2411.10741-metala-linear-attention-optimal-approximation-research-20261021-0956-sche.json",
       "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2603.08088",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T16:41:32+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 346 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2799,
-        "body_paragraphs": 13,
-        "method_chars": 868,
-        "method_paragraphs": 4,
-        "evaluation_chars": 346,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 346 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7f6402242c9c819199403b3ab02bec7c--2026-2603.08088-eagle-pangu-ascend-tree-speculation-research-20261023-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7f6402242c9c819199403b3ab02bec7c--2026-2603.08088-eagle-pangu-ascend-tree-speculation-research-20261023-0400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261023-0400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -784,33 +756,6 @@
       "worker_run_key": "20261025-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2504.15720",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T11:16:57+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 444 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5449,
-        "body_paragraphs": 30,
-        "method_chars": 2303,
-        "method_paragraphs": 13,
-        "evaluation_chars": 444,
-        "limitation_chars": 1025,
-        "insufficiency_flags": [
-          "評価説明量 444 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0b88c93e6159--libfile_f4fe40798eb48191aceb3dd0bc34b157--2025-2504.15720-seallm-multi-service-scheduling-research-20261025-1500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0b88c93e6159--libfile_f4fe40798eb48191aceb3dd0bc34b157--2025-2504.15720-seallm-multi-service-scheduling-research-20261025-1500-scheduled-chat-00-.json",
-      "worker_run_key": "20261025-1500-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2501.04987",
       "title": null,
       "source_url": null,
@@ -950,34 +895,9 @@
       "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2510.17196",
+      "canonical_id": "arXiv:2505.07861",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-25T11:57:03+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4105,
-        "body_paragraphs": 22,
-        "method_chars": 1375,
-        "method_paragraphs": 7,
-        "evaluation_chars": 989,
-        "limitation_chars": 441,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_084d61949ec0819180cea42eacf5156c--2025-2510.17196-hsa-length-generalization-research-20261025-1945-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_084d61949ec0819180cea42eacf5156c--2025-2510.17196-hsa-length-generalization-research-20261025-1945-scheduled-chat-45-r02.json",
-      "worker_run_key": "20261025-1945-scheduled-chat-45/r02"
-    },
-    {
-      "canonical_id": "arXiv:2505.07861",
-      "title": "Scalable LLM Reasoning Acceleration with Low-rank Distillation",
-      "source_url": "https://arxiv.org/html/2505.07861v3",
       "returned_at": "2026-10-25T12:24:07+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",

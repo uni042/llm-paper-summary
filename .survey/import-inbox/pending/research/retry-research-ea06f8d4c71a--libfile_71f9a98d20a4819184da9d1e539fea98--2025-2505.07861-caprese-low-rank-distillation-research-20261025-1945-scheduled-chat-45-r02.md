@@ -45,6 +45,8 @@ worker_id: "scheduled-chat-45"
 worker_run_key: "20261025-1945-scheduled-chat-45/r02"
 worker_completed_at: "2026-10-25T19:48:00+09:00"
 quality_self_review_passed: true
+last_audited: null
+audit_version: 0
 ---
 
 # Caprese：FFN疎化の推論誤差を低ランク蒸留で補償する
