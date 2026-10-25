@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4a0890a758ee4491-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2407.01049",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2407.01049",
+    "identity_tokens": [
+      "arXiv:2407.01049"
+    ],
+    "reason": "対象はSE(3)等変学習の演算子であり、3次元幾何学的な等変表現の学習に関する研究である。生成型LLM推論基盤を直接扱うタイトルではないため先行除外する。",
+    "first_checked_at": "2026-10-25T07:51:27+00:00",
+    "last_checked_at": "2026-10-25T07:51:27+00:00",
+    "linked_from": [],
+    "title": "SE(3)-Hyena Operator for Scalable Equivariant Learning"
+  },
+  "processed_at": "2026-10-25T07:51:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4a0890a758ee",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

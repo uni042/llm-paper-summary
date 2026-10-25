@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-25T06:44:20+00:00",
-  "record_count": 12469,
+  "updated_at": "2026-10-25T07:51:35+00:00",
+  "record_count": 12476,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179674,6 +179674,93 @@
       "last_checked_at": "2026-10-25T06:44:20+00:00",
       "linked_from": [],
       "title": "Role-Based Fault Tolerance System for LLM RL Post-Training"
+    },
+    "arXiv:2210.13361": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.13361",
+      "identity_tokens": [
+        "arXiv:2210.13361"
+      ],
+      "reason": "タイトルが示す対象はハードウェア指向ハイブリッドニューラルネットワークのアーキテクチャ探索であり、生成型LLM推論基盤の固有問題・モデル・評価対象がタイトルから認められない。現行LLM推論サーベイの対象外として先行除外する。",
+      "first_checked_at": "2026-10-25T07:51:24+00:00",
+      "last_checked_at": "2026-10-25T07:51:24+00:00",
+      "linked_from": [],
+      "title": "NASA: Neural Architecture Search and Acceleration for Hardware Inspired Hybrid Networks"
+    },
+    "arXiv:2407.01049": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01049",
+      "identity_tokens": [
+        "arXiv:2407.01049"
+      ],
+      "reason": "対象はSE(3)等変学習の演算子であり、3次元幾何学的な等変表現の学習に関する研究である。生成型LLM推論基盤を直接扱うタイトルではないため先行除外する。",
+      "first_checked_at": "2026-10-25T07:51:27+00:00",
+      "last_checked_at": "2026-10-25T07:51:27+00:00",
+      "linked_from": [],
+      "title": "SE(3)-Hyena Operator for Scalable Equivariant Learning"
+    },
+    "arXiv:2510.18863": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.18863",
+      "identity_tokens": [
+        "arXiv:2510.18863"
+      ],
+      "reason": "対象はコード翻訳の推論能力を強化するRL最適化であり、LLM推論エンジンの高速化、メモリ管理、圧縮、分散配置を扱うものではない。タイトルから明白な分野違いとして先行除外する。",
+      "first_checked_at": "2026-10-25T07:51:28+00:00",
+      "last_checked_at": "2026-10-25T07:51:28+00:00",
+      "linked_from": [],
+      "title": "EffiReasonTrans: RL-Optimized Reasoning for Code Translation"
+    },
+    "DOI:10.1145/3587464": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3587464",
+      "identity_tokens": [
+        "DOI:10.1145/3587464"
+      ],
+      "reason": "著者所属機関の一次要旨によると、対象はBERTのユーザー意図分類器であり、ECDT、SNIPS、FDQuestion上の分類推論を途中層の分類ヘッドから早期終了させる。主目的は生成型LLMのトークン復号、KV管理、MoE、LLMサービング基盤ではないため、現在の推論基盤サーベイ対象から除外する。",
+      "first_checked_at": "2026-10-25T07:51:32+00:00",
+      "last_checked_at": "2026-10-25T07:51:32+00:00",
+      "linked_from": [],
+      "title": "OdeBERT: One-stage Deep-supervised Early-exiting BERT for Fast Inference in User Intent Classification"
+    },
+    "arXiv:2511.07876": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07876",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v40i38.40445",
+        "DOI:10.48550/arxiv.2511.07876",
+        "arXiv:2511.07876",
+        "semanticscholar:a5135bbd16116246c6a143b1700517a8efb6b18b"
+      ],
+      "reason": "一次要旨で確認した主目的は、繰返し生成を誘発する攻撃プロンプトの最適化と異種モデル間の攻撃転移性であり、LLM推論サービングの効率化・スケジューリング・圧縮・オフロード等の改善機構ではない。生成長・エネルギー・遅延を攻撃効果として測るセキュリティ研究で、現行推論基盤サーベイの収録対象外と判定する。",
+      "first_checked_at": "2026-10-25T07:51:33+00:00",
+      "last_checked_at": "2026-10-25T07:51:33+00:00",
+      "linked_from": [],
+      "title": "LoopLLM: Transferable Energy-Latency Attacks in LLMs via Repetitive Generation"
+    },
+    "arXiv:2402.05948": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.05948",
+      "identity_tokens": [
+        "arXiv:2402.05948"
+      ],
+      "reason": "対象はBERTの距離・プロトタイプに基づく早期終了であり、生成型LLMの逐次復号やサービング、MoE、KV管理を対象としない。タイトル段階で現行サーベイの対象外と判断する。",
+      "first_checked_at": "2026-10-25T07:51:34+00:00",
+      "last_checked_at": "2026-10-25T07:51:34+00:00",
+      "linked_from": [],
+      "title": "DE3-BERT: Distance-Enhanced Early Exiting for BERT based on Prototypical Networks"
+    },
+    "arXiv:2210.08164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.08164",
+      "identity_tokens": [
+        "arXiv:2210.08164"
+      ],
+      "reason": "対象は映像Transformerの特徴固定と線形化であり、言語モデルの推論基盤・サービングではない。タイトル段階で明白に分野外と判断する。",
+      "first_checked_at": "2026-10-25T07:51:35+00:00",
+      "last_checked_at": "2026-10-25T07:51:35+00:00",
+      "linked_from": [],
+      "title": "Linear Video Transformer with Feature Fixation"
     }
   }
 }
