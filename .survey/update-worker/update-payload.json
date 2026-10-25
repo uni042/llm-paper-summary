@@ -1,41 +1,51 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261024T2331-4e3472",
+  "attempt_id": "library-import-maint-20261025T1740-0830",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "llm-releases/nvidia.md",
-      "expected_blob_sha": "d709d7f8505816a929b3719bb9d99ec9a1b82977",
+      "path": "llm-releases/minimax.md",
+      "expected_blob_sha": "483ac3974b5f5ab45ddde645a247338434698a8b",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "| 2026-10-15 | Nemotron 3.5 Super VL |",
-          "text": "| 2026-10-23 | Nemotron 3.5 Bolt E4B | 総8B / 有効4B。Gemma-4-E4B-itを追加学習したモデル。Q4_K_M版は最大64K入力・64K出力のtext/text、BF16版も公開。tool use、指示追従、入力groundingを強化し、DFlash草稿モデルとの投機的復号に対応。 | OpenMDW-1.1。NVIDIA公式評価ではRoleBench 71.21（Gemma-4-E4B-it 60.51）、RULER 64Kは85.76（86.14）と、全指標で上回るわけではない。ベンダー評価値で独立再現ではない。[Q4_K_M](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB) / [BF16](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-BF16) / [DFlash](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB-DFlash)。\\n"
+          "anchor": "| 2026-06-01 | MiniMax M3 |",
+          "text": "| 2026-10-23 | MiniMax M3.1 Flash | 2026-10-19にAPI提供を開始し、公式重みは10-23公開。総428B・有効約23BのMoEで、全層MiniMax Sparse Attention、量子化考慮学習、DSpark草稿ヘッドを採用。MXFP8配布、最大1M-token context。DeepSWE v1.1 73.7%、OSWorld V2 61.7、Terminal Bench 4.0 38.1は公式評価値。MiniMax Community Licenseは表示・通知等の条件があり、単純なApache/MITではない。重みは数百GB級で12GB GPU単体の対象外。 | https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash |\\n"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/kimi.md",
+      "expected_blob_sha": "e2321434545b3abeed5659bcf36180b304aecd40",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "| 2026-07-16 | Kimi K3 |",
+          "text": "| 2026-10-23 | Kimi K3.1 Pro / Highspeed | K3の事後学習を強化したAPI提供モデル。MoonshotはHighspeedを通常Pro比2〜3倍と説明するが、API提供間のベンダー値でローカル性能ではない。最大1M-token context・3T級MoEと説明される一方、2026-10-25時点でK3.1固有の重み・検証可能なmodel cardは未公開。11-04までの公開は予定であり、公開済みcheckpointとして扱わない。 | https://www.kimi.com/en/blog/kimi-k3-1-pro |\\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/ollama/README.md",
-      "expected_blob_sha": "971e345669f6d9cdef7c354a9d36d42919a2dbb8",
+      "expected_blob_sha": "401c80000d9662987a02f3f2df91cb55f950cb86",
       "edits": [
         {
-          "op": "insert_before_once",
-          "anchor": "### 2026-10-22 — Ollama v0.40.9-rc2（公開候補版）",
-          "text": "### 2026-10-23 — Ollama v0.40.10（正式版）\\n- NVIDIA Nemotron 3.5 Bolt E4Bを配布し、DFlash草稿による投機的復号を案内する。Ollamaのrelease本文は128K context・vision-languageとする一方、NVIDIA Q4_K_Mモデルカードは64K・text/textと記載するため、variant差を確認できるまで両仕様を混同しない。\\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.10)\\n\\n### 2026-10-22 — Ollama v0.40.9（正式版）\\n- Apple SiliconでPhononによる音声生成とOpenAI互換`/v1/audio/speech`のstreamingに対応。d3判定model（2B/4B/9B/27B）を追加し、Flintの実行対象をLinux・Windowsへ拡張。streaming生成失敗を部分出力後に黙って終了せず報告する。\\n- 音声機能はApple Silicon向け。release noteは一般的な生成速度倍率を示していない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.9)\\n\\n"
+          "op": "replace_once",
+          "anchor": "### 2026-10-23 — Ollama v0.40.10（正式版）\\n- NVIDIA Nemotron 3.5 Bolt E4Bを配布し、DFlash草稿による投機的復号を案内する。Ollamaのrelease本文は128K context・vision-languageとする一方、NVIDIA Q4_K_Mモデルカードは64K・text/textと記載するため、variant差を確認できるまで両仕様を混同しない。\\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.10)\\n\\n### 2026-10-22 — Ollama v0.40.9（正式版）\\n- Apple SiliconでPhononによる音声生成とOpenAI互換`/v1/audio/speech`のstreamingに対応。d3判定model（2B/4B/9B/27B）を追加し、Flintの実行対象をLinux・Windowsへ拡張。streaming生成失敗を部分出力後に黙って終了せず報告する。\\n- 音声機能はApple Silicon向け。release noteは一般的な生成速度倍率を示していない。[正式版](https://github.com/ollama/ollama/releases/tag/v0.40.9)\\n\\n",
+          "text": "### 2026-10-24 — Ollama v0.40.11（正式版）\\n- macOSでPhonon音声生成を`ollama run phonon`およびOpenAI互換`/v1/audio/speech`から利用可能にし、d3判定model（2B/4B/9B/27B）を追加。d3はtext・構造化状態・画像の分類や選択肢スコアを返す。音声機能はmacOS向けであり、Windows CUDA対応や一般的な生成速度倍率を示さない。\\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.11)\\n\\n### 2026-10-23 — Ollama v0.40.10（正式版）\\n- Nemotron 3.5 Bolt E4Bの配布とDFlash草稿による投機的復号を追加。Ollama release本文は128K context・vision-languageとする一方、NVIDIA Q4_K_M model cardは64K・text/text。variant差が解決するまで仕様を混同しない。\\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.10)\\n\\n### 2026-10-22 — Ollama v0.40.9（正式版）\\n- Flintの実行対象をLinux・Windowsへ拡張し、streaming生成失敗を部分出力後に黙って終えず報告する修正を含む。Phonon音声生成とd3判定modelの正式告知はv0.40.11へ帰属させる。\\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.9)\\n\\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "19360f39c366bd10d8df5f4fa30b1123b7022feb",
+      "expected_blob_sha": "3058348fbf091e94619f95a1d6e174c11599fed6",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "### 2026-10-22 — llama.cpp b11813〜b11827（開発ビルド）",
-          "text": "### 2026-10-23 — llama.cpp b11828〜b11840（開発ビルド）\\n- **b11829**: reranking用templateの置換を修正。**b11835**: SYCL/oneDNNのdevice引渡しを修正。**b11838**: `ggml_time_us`の時間overflowを修正。**b11840**: Qualcomm Hexagon NPUにCEIL演算（f32/f16）を追加。\\n- いずれも開発ビルドの更新で、一般的な速度倍率は示されていない。b11840のHexagon機能をNVIDIA CUDAの改善と読み替えない。[b11829](https://github.com/ggml-org/llama.cpp/releases/tag/b11829) / [b11835](https://github.com/ggml-org/llama.cpp/releases/tag/b11835) / [b11838](https://github.com/ggml-org/llama.cpp/releases/tag/b11838) / [b11840](https://github.com/ggml-org/llama.cpp/releases/tag/b11840)\\n\\n"
+          "anchor": "### 2026-10-23 — llama.cpp b11828〜b11840（開発ビルド）",
+          "text": "### 2026-10-24 — llama.cpp b11846〜b11869（開発ビルド）\\n- **b11850**: Soprano-80M / Soprano-1.1-80Mの音声生成に対応。Qwen3系backboneとVocosを使い、音声は生成後に1 chunkで返す。逐次streamingではない。\\n- **b11854**: Vulkan行列演算の精度・overflow処理を調整。backend・shapeごとの検証が必要。\\n- **b11861**: MiniMax M3系NVFP4/MXFP8 scaleを計算graphへ渡さない不具合を修正。対象構成では数値異常を避ける正確性修正で、一般CUDA高速化ではない。\\n- **b11868**: Qualcomm Hexagonの複数core Flash Attentionを調整。Snapdragon向けでRTX CUDAの改善ではない。\\n- **b11869**: Jinja templateの`select` / `selectattr`引数処理を修正し、model template互換性を改善。\\n- b11869は開発build（pre-release）。Windows x64 CUDA 12系 / CUDA 13系assetの配布は確認済みだが、Windows 11 + RTX 4070 SUPERの実測性能は未確認。\\n- 出典: [b11850](https://github.com/ggml-org/llama.cpp/releases/tag/b11850) / [b11854](https://github.com/ggml-org/llama.cpp/releases/tag/b11854) / [b11861](https://github.com/ggml-org/llama.cpp/releases/tag/b11861) / [b11868](https://github.com/ggml-org/llama.cpp/releases/tag/b11868) / [b11869](https://github.com/ggml-org/llama.cpp/releases/tag/b11869)\\n\\n"
         }
       ]
     }
-  ],
-  "summary": "2026-10-24 Library maintenance update: add NVIDIA Nemotron 3.5 Bolt E4B with variant-specific context/modality caveat; record Ollama v0.40.9/v0.40.10 stable releases; extend llama.cpp development-build coverage through b11840."
+  ]
 }
