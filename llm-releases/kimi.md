@@ -6,7 +6,7 @@ Kimiの大規模MoEでは、model file全体の大きさと1 tokenを処理す�
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
-| 2026-07-16 | Kimi K3 | 総2.8T parameterの重み公開（open-weight）native multimodal MoE。896個のrouted expertを持ち、各tokenではそのうち16 expertを選んで実行するため、2.8T全parameterを毎token計算するわけではない。最大1M-token context、image / video理解、長時間のcoding / agent taskを対象とする。full weightは7月27日公開。 | https://github.com/MoonshotAI/Kimi-K3 |
+| 2026-10-23 | Kimi K3.1 Pro / Highspeed | K3の事後学習を強化したAPI提供モデル。MoonshotはHighspeedを通常Pro比2〜3倍と説明するが、API提供間のベンダー値でローカル性能ではない。最大1M-token context・3T級MoEと説明される一方、2026-10-25時点でK3.1固有の重み・検証可能なmodel cardは未公開。11-04までの公開は予定であり、公開済みcheckpointとして扱わない。 | https://www.kimi.com/en/blog/kimi-k3-1-pro |\n| 2026-07-16 | Kimi K3 | 総2.8T parameterの重み公開（open-weight）native multimodal MoE。896個のrouted expertを持ち、各tokenではそのうち16 expertを選んで実行するため、2.8T全parameterを毎token計算するわけではない。最大1M-token context、image / video理解、長時間のcoding / agent taskを対象とする。full weightは7月27日公開。 | https://github.com/MoonshotAI/Kimi-K3 |
 | 2026-04-20 | Kimi K2.6 | coding、長時間実行、複数agentを並行利用するAgent Swarmを強化したKimi K2系更新。重みも公開され、自前runtimeでの実行対象にできる。 | https://github.com/MoonshotAI/kimi-help-center/blob/master/en-US/agent/overview.md |
 
 ## Kimi K3の構造を読むときの注意

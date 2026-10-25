@@ -6,7 +6,7 @@ MiniMax系ではcoding benchmarkの強さだけでなく、**重み公開（open
 
 | リリース日 | モデル | 簡単な説明 | 公式リンク |
 |---|---|---|---|
-| 2026-06-01 | MiniMax M3 | coding、エージェント型業務（agentic work）、最大1M-token context、image / video入力を統合した重み公開（open-weight）multimodalモデル。APIだけでなく自前runtimeでの実行対象にもできる一方、実際に1M contextを使う際のmemory量はruntimeとKV cache方式に依存する。 | https://www.minimax.io/blog/minimax-m3 |
+| 2026-10-23 | MiniMax M3.1 Flash | 2026-10-19にAPI提供を開始し、公式重みは10-23公開。総428B・有効約23BのMoEで、全層MiniMax Sparse Attention、量子化考慮学習、DSpark草稿ヘッドを採用。MXFP8配布、最大1M-token context。DeepSWE v1.1 73.7%、OSWorld V2 61.7、Terminal Bench 4.0 38.1は公式評価値。MiniMax Community Licenseは表示・通知等の条件があり、単純なApache/MITではない。重みは数百GB級で12GB GPU単体の対象外。 | https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash |\n| 2026-06-01 | MiniMax M3 | coding、エージェント型業務（agentic work）、最大1M-token context、image / video入力を統合した重み公開（open-weight）multimodalモデル。APIだけでなく自前runtimeでの実行対象にもできる一方、実際に1M contextを使う際のmemory量はruntimeとKV cache方式に依存する。 | https://www.minimax.io/blog/minimax-m3 |
 | 2026-03-18 | MiniMax M2.7 | software engineering、professional work、複数agentを役割分担させるAgent Teams、実行結果を基にworkflowを改善するself-evolutionを重点にしたM2系更新。単発chatより長いmulti-step taskを主用途として記録。 | https://www.minimax.io/news/minimax-m27-en |
 
 ## 用語メモ
