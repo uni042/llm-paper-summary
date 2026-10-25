@@ -202,7 +202,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   層間のトークン遷移統計を二段階ILPへ入力し、MoEのエキスパート配置を計算負荷とGPU間通信の両方が均衡するよう最適化する。
 
 - **2025-09 · [Expert-as-a-Service: Towards Efficient, Scalable, and Robust Large-scale MoE Serving](2025-2509.17863-expert-as-a-service-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   MoEの専門家を状態のない独立GPUサービスへ分離し、CPU不要のIBGDA一対一通信、動的バッチ、専門家複製で、GPU単位の伸縮・負荷分散・障害迂回を可能にする大規模MoEサービング方式。
 
 - **2025-03 · [Semantic Parallelism: Redefining Efficient MoE Inference via Model-Data Co-Scheduling](2025-2503.04398-semantic-parallelism.md)**  
@@ -262,7 +262,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   提案する三機構は動的ゲート（動的 Gating）、専門家バッファ（専門家 Buffering）、専門家負荷分散（専門家 読み込み Balancing）である。動的ゲートによる最大スループットは、静的方式比で言語モデル6.21～11.23倍、機械翻訳エンコーダ5.75～10.98倍、デコーダ2.58～5.71倍へ改善した。
 
 - **2023-06 · [ZeRO++: Extremely Efficient Collective Communication for Giant Model Training](2023-2306.10209-zero-extremely-efficient-collective-communication-for-giant-model-traini.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：6  
   大規模言語モデル（LLM）を多数のGPUで学習する場合、重みや勾配、最適化器状態を分割してメモリ使用量を下げるZeRO-3は、各層の計算時に必要な重みを集め直す。ZeRO++は前向き重みをINT8に圧縮して0.5M、逆向き重みをノード内で再構成してノード間0、勾配をINT4で通信して0.25Mにする。
 
 ### 5年前（2021-11〜2022-10）

@@ -188,13 +188,13 @@
   実装：✓ ・ リポジトリ内被引用：4  
   NPUで重要トークン位置だけを近似推定し、高精度疎注意をCPU/GPUへ限定してパイプライン化することで、モバイルLLMの注意フォールバックを削減する。
 
+- **2025-04 · [Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash](2025-2504.08378-scaling-up-on-device-llms-via-active-weight-swapping-between-dram-and-fl.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  スマートフォン上で大規模言語モデルを動かす際、モデルの全重みをDRAMに置けないことが最大の制約になる。さらに現在の層の活性化ベクトルから数層先の活性重みを予測して先読みし、複数層の重みをフラッシュ上で近接配置する。
+
 - **2025-01 · [MoE²: Optimizing Collaborative Inference for Edge Large Language Models](2025-2501.09410-moe-optimizing-collaborative-inference-for-edge-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   MoE²（Mixture-of-Edge-Experts）は、単一の大規模言語モデル内部に小さな専門家層を並べる方式ではなく、独立した端末・サーバーに配置された複数の大規模言語モデルそのものを専門家として扱う協調推論基盤である。
-
-- **2025-04 · [Scaling Up On-Device LLMs via Active-Weight Swapping Between DRAM and Flash](2025-2504.08378-scaling-up-on-device-llms-via-active-weight-swapping-between-dram-and-fl.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  スマートフォン上で大規模言語モデルを動かす際、モデルの全重みをDRAMに置けないことが最大の制約になる。さらに現在の層の活性化ベクトルから数層先の活性重みを予測して先読みし、複数層の重みをフラッシュ上で近接配置する。
 
 - **2025-03 · [Optimal Expert Selection for Distributed Mixture-of-Experts at the Wireless Edge](2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -211,7 +211,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](2024-2406.06282-powerinfer-2-fast-large-language-model-inference-on-a-smartphone.md)**  
-  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：57  
+  実装：[✓](https://github.com/Tiiny-AI/PowerInfer) ・ リポジトリ内被引用：58  
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
