@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-25T03:56:24.597968+00:00",
+  "generated_at": "2026-10-25T08:40:35.905390+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 3,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 1,
-    "scheduled-chat-45": 1
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -77,6 +77,46 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2505.16333-understanding-differential-transformer-unchains-pretrained-self-attentio.md",
+      "canonical_id": "arXiv:2505.16333",
+      "title": "Understanding Differential Transformer Unchains Pretrained Self-Attentions",
+      "file_bytes": 13991,
+      "source_sha256": "f6bf720b8f5d76069ed872f29845f074febc1f07bdc4d7ccae8bf5d1ec8fc3c6",
+      "source_git_blob_sha": "4db0f040b8cb92aa60bbfa0a750a7da10d4768a9",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.89385,
+      "quality_metrics": {
+        "body_chars": 3777,
+        "method_chars": 1088,
+        "evaluation_chars": 929,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2409.11057-kvpruner-structural-pruning-for-faster-and-memory-efficient-large-langua.md",
+      "canonical_id": "arXiv:2409.11057",
+      "title": "KVPruner: Structural Pruning for Faster and Memory-Efficient Large Language Models",
+      "file_bytes": 14345,
+      "source_sha256": "78cf6704fa927aa76e8351465895dc0baf764b43e0fd00bd179e819cf85b6771",
+      "source_git_blob_sha": "eb1b5b7a8c3ea9a82ae31b51e3e2c6dd7acd7c9d",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.931484,
+      "quality_metrics": {
+        "body_chars": 3681,
+        "method_chars": 1304,
+        "evaluation_chars": 992,
+        "limitation_chars": 363
       },
       "mechanical_failures": [],
       "warnings": []
