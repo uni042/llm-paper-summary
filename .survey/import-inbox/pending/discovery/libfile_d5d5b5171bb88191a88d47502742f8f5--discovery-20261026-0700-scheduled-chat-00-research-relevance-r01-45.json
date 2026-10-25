@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261026-0700-scheduled-chat-00/r01/research-relevance-45",
+  "reference_main_sha": "65ad1adf8cbd8b4ebf1f9d451f95be5c8eb05c81",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.04239",
+      "identity_tokens": [
+        "arxiv:2402.04239"
+      ],
+      "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers",
+      "reason": "一次全文§3〜§5.5で、学習可能なsurrogate tokenによるクラスタ内注意とクラスタ間要約でLong Range Arenaのエンコーダ型分類タスクを高速化する研究と確認。Table 2はLRA分類精度（CAST Top-K平均59.32、S4 86.09、MEGA 88.21）を評価し、§5.5で著者自身が『生成自然言語のdecoding版が存在しない』と明記。推論カーネル・attention設計への間接的示唆はあるが、現行のLLM生成推論、KV cache、サービングに直接適用した実測がないためborderlineとし、Research完成原稿へは進めない。",
+      "source_url": "https://arxiv.org/html/2402.04239v1",
+      "body_check": "research_fulltext_relevance_review: arXiv v1の§3でsurrogate-tokenクラスタ注意、§4/5でLRA分類・訓練効率、§5.5で生成デコーダ未実装と明記した箇所を確認。",
+      "first_checked_at": "2026-10-26T07:00:00+09:00",
+      "last_checked_at": "2026-10-26T07:00:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 45
+    }
+  ]
+}
