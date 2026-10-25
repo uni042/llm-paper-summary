@@ -1,37 +1,55 @@
 ---
-canonical_id: "DOI:10.18653/v1/2024.findings-eacl.143"
+canonical_id: DOI:10.18653/v1/2024.findings-eacl.143
 arxiv_id: null
-doi: "10.18653/v1/2024.findings-eacl.143"
-title: "Hierarchical and Dynamic Prompt Compression for Efficient Zero-shot API Usage"
+doi: 10.18653/v1/2024.findings-eacl.143
+title: Hierarchical and Dynamic Prompt Compression for Efficient Zero-shot API Usage
 authors:
-  - "Yichen Jiang"
-  - "Marco Del Vecchio"
-  - "Mohit Bansal"
-  - "Anders Johannsen"
-published: "2024-03-17"
-publication: "Findings of EACL 2024, pp.2162–2174"
-publication_type: "査読付き国際会議論文"
-publication_status: "ACL Anthology掲載の公式13ページPDFを確認"
-source: "https://aclanthology.org/2024.findings-eacl.143.pdf"
+- Yichen Jiang
+- Marco Del Vecchio
+- Mohit Bansal
+- Anders Johannsen
+published: '2024-03-17'
+publication: Findings of EACL 2024, pp.2162–2174
+publication_type: 査読付き国際会議論文
+publication_status: ACL Anthology掲載の公式13ページPDFを確認
+source: https://aclanthology.org/2024.findings-eacl.143.pdf
 sources:
-  - "https://aclanthology.org/2024.findings-eacl.143.pdf"
-  - "https://doi.org/10.18653/v1/2024.findings-eacl.143"
-implementation: "LLaMA 7BをAPI呼出し生成用にfinetuneし、引数階層に挿入したgist tokenと動的attention mask、API文書再構成損失を用いる。推論性能はPyTorch 2.0/A100 40GB単機で100例のground-truth API出力を計測。"
-code: "https://github.com/jiangycTarheel/HD-Gist"
-summary: "HD-GistはAPIドキュメントを引数単位のGistargとカテゴリ値単位のGistvalueへ階層圧縮し、API呼出しを生成するときだけ該当引数のGistvalueをattention maskで開く。文書再構成損失を加えることで未使用引数も符号化する。LLaMA 7BのSGD joint-goal accuracyは非圧縮72.66%、静的gist最大46.47%、HD-Gist+再構成71.22%、SGD-Xでは非圧縮64.78%を上回る69.24%。一方、長いモデルカードを含むAPIBenchでは55.64%で非圧縮84.38%に大きく劣る。A100のAPI文書KV保持よりメモリ17.9%減、CUDA時間は727.6→705.7msで小幅改善。"
-list_summary: "API引数とカテゴリ値を階層gistに圧縮し、必要な値だけ動的に開くことでSGDの精度を非圧縮に近づけつつ、A100の推論メモリを全文書KV保持比17.9%削減。"
-lineage: "hierarchical-dynamic-gist-api-compression"
-topics: ["prompt compression", "KV cache", "tool use", "API calling", "attention mask"]
-last_checked: "2026-10-25"
-worker_id: "scheduled-chat-45"
-scheduled_slot: "45"
-worker_run_key: "20261025-2145-scheduled-chat-45/r01"
-reference_main_sha: "a0a5bb77cc124d35c5e511a435396dacc8105df3"
-worker_completed_at: "2026-10-25T21:55:54+09:00"
+- https://aclanthology.org/2024.findings-eacl.143.pdf
+- https://doi.org/10.18653/v1/2024.findings-eacl.143
+implementation: LLaMA 7BをAPI呼出し生成用にfinetuneし、引数階層に挿入したgist tokenと動的attention mask、API文書再構成損失を用いる。推論性能はPyTorch 2.0/A100 40GB単機で100例のground-truth API出力を計測。
+code: https://github.com/jiangycTarheel/HD-Gist
+summary: HD-GistはAPIドキュメントを引数単位のGistargとカテゴリ値単位のGistvalueへ階層圧縮し、API呼出しを生成するときだけ該当引数のGistvalueをattention maskで開く。文書再構成損失を加えることで未使用引数も符号化する。LLaMA 7BのSGD joint-goal accuracyは非圧縮72.66%、静的gist最大46.47%、HD-Gist+再構成71.22%、SGD-Xでは非圧縮64.78%を上回る69.24%。一方、長いモデルカードを含むAPIBenchでは55.64%で非圧縮84.38%に大きく劣る。A100のAPI文書KV保持よりメモリ17.9%減、CUDA時間は727.6→705.7msで小幅改善。
+list_summary: API引数とカテゴリ値を階層gistに圧縮し、必要な値だけ動的に開くことでSGDの精度を非圧縮に近づけつつ、A100の推論メモリを全文書KV保持比17.9%削減。
+lineage: hierarchical-dynamic-gist-api-compression
+topics:
+- prompt compression
+- KV cache
+- tool use
+- API calling
+- attention mask
+last_checked: '2026-10-25'
+worker_id: scheduled-chat-45
+scheduled_slot: '45'
+worker_run_key: 20261025-2145-scheduled-chat-45/r01
+reference_main_sha: a0a5bb77cc124d35c5e511a435396dacc8105df3
+worker_completed_at: '2026-10-25T21:55:54+09:00'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2310.06839
+- canonical_id: arXiv:2310.06201
+- canonical_id: arXiv:2310.08152
+- canonical_id: arXiv:2307.06945
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2304.08467
+- canonical_id: arXiv:2211.05102
+references_checked_at: '2026-10-25'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # HD-Gist — API仕様を階層的に圧縮し必要な値だけ展開するプロンプト圧縮

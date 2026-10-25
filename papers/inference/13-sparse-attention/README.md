@@ -469,7 +469,7 @@
   局所性鋭敏ハッシュで注意行列の大きな要素を効率的に見つけ、残りの小さい成分をサンプリングで近似する。全注意行列を作らずに正規化と値の加重和を計算し、長文脈での計算量を削減する。
 
 - **2023-10 · [Context Compression for Auto-regressive Transformers with Sentinel Tokens](2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md)**  
-  実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：2  
   Ren・Jia・Zhuの研究は、自己回帰型の大規模言語モデル（Large Language モデル; LLM）で、長い入力に伴って増える鍵・値キャッシュ（Key–Value キャッシュ; KVキャッシュ）を、捨てる前に情報を短い表現へ移すことで削減する方式を提案する。
 
 ### 6年前（2020-11〜2021-10）
