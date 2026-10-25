@@ -42,6 +42,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：✓ ・ リポジトリ内被引用：5  
   バッチ全体のルーター得点を集約して専門家集合を動的共有し、再学習なしで専門家混合推論の活性数・GPU負荷・投機デコード性能を改善する。
 
+- **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
+  実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：5  
+  全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
+
 - **2025-11 · [BuddyMoE: Exploiting Expert Redundancy to Accelerate Memory-Constrained Mixture-of-Experts Inference](2025-2511.10054-buddymoe-exploiting-expert-redundancy-to-accelerate-memory-constrained-mixture-o.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   しかしルータが選び得る専門家の重みをすべてGPUに保持できなければ、選択された専門家をCPUメモリからPCIe経由で転送しなければならない。先読み（プリフェッチ）が当たれば転送を隠せるが、外れたときの同期読み込みは生成を止める。
@@ -49,10 +53,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [DTop-p MoE: Sparsity-Controlled Dynamic Top-p MoE for Foundation Model Pre-training](2025-2512.13996-dtop-p-dynamic-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   比例積分制御でTop-p閾値を動かして平均専門家数を予算へ追従させ、層別正規化でトークン・深さごとに計算を再配分する事前学習MoE。
-
-- **2026-02 · [Unveiling Super Experts in Mixture-of-Experts Large Language Models](2025-2507.23279-super-experts-pruning-sensitivity.md)**  
-  実装：[✓](https://github.com/ZunhaiSu/Super-Experts-Profilling) ・ リポジトリ内被引用：4  
-  全専門家の0.5%未満しかないスーパー専門家が巨大活性と注意シンクの起点であり、Qwen3-30B-A3Bでは6144個中わずか3個を削るだけで推論課題平均が69.37から4.02へ崩壊することを示す。
 
 - **2026-02 · [SERE: Similarity-based Expert Re-routing for Efficient Batch Decoding in MoE Models](2026-2602.07616-sere-similarity-expert-rerouting.md)**  
   実装：[✓](https://github.com/JL-Cheng/SERE) ・ リポジトリ内被引用：4  
@@ -429,7 +429,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   単純なトークンにも固定のk個を実行すると計算が余り、逆に難しいトークンへ多く割り当てる自由度がなくなる。原著は既存のMixtral-8x7Bを微調整した6課題で、通常の上位2専門家選択の平均実行数2.00に対し、AdaMoEの設定m=8、k=3では1.66へ低下し、浮動小数点演算量（FLOPs）が平均15.21%減ったと報告する。
 
 - **2024-02 · [XMoE: Sparse Models with Fine-grained and Adaptive Expert Selection](2024-2403.18926-xmoe-sparse-models-with-fine-grained-and-adaptive-expert-selection.md)**  
-  実装：[✓](https://github.com/ysngki/XMoE) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/ysngki/XMoE) ・ リポジトリ内被引用：16  
   XMoEは、混合専門家モデル（Mixture-of-Experts、MoE）の計算を、専門家を細かく分割することとトークンごとに選ぶ専門家数を変えることで適応的に配分する手法である。
 
 ### 4年前（2022-11〜2023-10）
@@ -453,7 +453,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：125  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：127  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  

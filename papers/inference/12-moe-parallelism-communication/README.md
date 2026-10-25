@@ -194,7 +194,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：27  
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
@@ -282,6 +282,6 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：236  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：238  
   論文は、専門家容量、容量超過トークンの扱い、負荷分散補助損失、ルータだけを高精度で計算する選択的精度、初期値スケールの縮小、専門家専用ドロップアウト、データ・モデル・専門家並列の組合せまで含め、巨大な疎モデルを実際に安定学習するための設計をまとめている。
 <!-- survey:auto:end -->
