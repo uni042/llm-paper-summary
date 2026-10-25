@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-25T10:24:25.976154+00:00",
+  "generated_at": "2026-10-25T10:57:50.779524+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -68,7 +68,7 @@
       "file_bytes": 12962,
       "source_sha256": "7339d45eab389550de731537c7d36627aebdc75a270dab101b94bfd899cb2660",
       "source_git_blob_sha": "5166ab3aea106a5261f0e4caeea36b7bb9205d47",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.990361,
@@ -76,46 +76,6 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2409.11057-kvpruner-structural-pruning-for-faster-and-memory-efficient-large-langua.md",
-      "canonical_id": "arXiv:2409.11057",
-      "title": "KVPruner: Structural Pruning for Faster and Memory-Efficient Large Language Models",
-      "file_bytes": 15361,
-      "source_sha256": "ec42cc26ccca5020d3aad0c72f6b906f409eb0906c3a91d5426a7001e53368f9",
-      "source_git_blob_sha": "c495ae506ce69f7e187406c037de077f3c68c9b6",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.931484,
-      "quality_metrics": {
-        "body_chars": 3681,
-        "method_chars": 1304,
-        "evaluation_chars": 992,
-        "limitation_chars": 363
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md",
-      "canonical_id": "arXiv:2506.15733",
-      "title": "SPECS: Faster Test-Time Scaling through Speculative Drafts and Dynamic Switching",
-      "file_bytes": 15417,
-      "source_sha256": "fd7a05ba0a08fe80d76f0fe91195dde15004b722fa8d24759650dbe1788c98cb",
-      "source_git_blob_sha": "2c77e31fcc956c2fccca2cb3fc894f9d90655c7c",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.965089,
-      "quality_metrics": {
-        "body_chars": 4056,
-        "method_chars": 1382,
-        "evaluation_chars": 1178,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -156,6 +116,26 @@
         "body_chars": 3777,
         "method_chars": 1088,
         "evaluation_chars": 929,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md",
+      "canonical_id": "arXiv:2506.15733",
+      "title": "SPECS: Faster Test-Time Scaling through Speculative Drafts and Dynamic Switching",
+      "file_bytes": 17699,
+      "source_sha256": "e5bf07c216b108a3da5f79b9cad3aac75e56f887556a54d281f008be97cf9ef6",
+      "source_git_blob_sha": "77980df44ebe37d6f58bb1424f70720f2fcab47c",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.965089,
+      "quality_metrics": {
+        "body_chars": 4056,
+        "method_chars": 1382,
+        "evaluation_chars": 1178,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
