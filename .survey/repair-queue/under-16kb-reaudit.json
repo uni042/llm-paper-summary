@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T15:59:35.795375+00:00",
+  "generated_at": "2026-10-25T17:04:30.805956+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -85,9 +85,9 @@
       "path": "papers/inference/99-other-inference-systems/2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md",
       "canonical_id": "arXiv:2312.12682",
       "title": "Mini-GPTs: Efficient Large Language Models through Contextual Pruning",
-      "file_bytes": 15673,
-      "source_sha256": "579530376c2c15d642c0a8cbae0876d6fd471931f32bb0fff067c2c861245d13",
-      "source_git_blob_sha": "d0bb9e6bbad0016b184a5d72dbdcdfe476892472",
+      "file_bytes": 15829,
+      "source_sha256": "4d4f84dce5bf59a3fa87b798b0853bde9813e7226fde8cf291491a1c895366d5",
+      "source_git_blob_sha": "3bd656376e5dac27c8f9a01a4833430549ce9e12",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -97,46 +97,6 @@
         "method_chars": 1208,
         "evaluation_chars": 1248,
         "limitation_chars": 459
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
-      "canonical_id": "arXiv:2307.03738",
-      "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
-      "file_bytes": 15796,
-      "source_sha256": "f72ae4d0162180f2615e3561073ccd4d0ba056e29006b364c00217dbfdb90ddd",
-      "source_git_blob_sha": "fc381bcf943ae0530781697bbd5af6b795e375e8",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.94702,
-      "quality_metrics": {
-        "body_chars": 4513,
-        "method_chars": 1287,
-        "evaluation_chars": 1065,
-        "limitation_chars": 453
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md",
-      "canonical_id": "arXiv:2509.02512",
-      "title": "MoPEQ: Mixture of Mixed Precision Quantized Experts",
-      "file_bytes": 15818,
-      "source_sha256": "668b1d8649fabaabefa0172cc4881d9419804ed42d39345d787fb4959b216a6c",
-      "source_git_blob_sha": "78d9694e0505d6e481d1f207368ea87faa388b79",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.879587,
-      "quality_metrics": {
-        "body_chars": 4501,
-        "method_chars": 1437,
-        "evaluation_chars": 1144,
-        "limitation_chars": 487
       },
       "mechanical_failures": [],
       "warnings": []
@@ -162,6 +122,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
+      "canonical_id": "arXiv:2307.03738",
+      "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
+      "file_bytes": 16421,
+      "source_sha256": "e34d45ec415f854659dc3c618a19e795ce75825b20a04fd876f8c2b827d03ae4",
+      "source_git_blob_sha": "f3f0d1fec05c91aa4ea271bec21442c92774b7e9",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.94702,
+      "quality_metrics": {
+        "body_chars": 4513,
+        "method_chars": 1287,
+        "evaluation_chars": 1065,
+        "limitation_chars": 453
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2505.16333-understanding-differential-transformer-unchains-pretrained-self-attentio.md",
       "canonical_id": "arXiv:2505.16333",
       "title": "Understanding Differential Transformer Unchains Pretrained Self-Attentions",
@@ -177,6 +157,26 @@
         "method_chars": 1088,
         "evaluation_chars": 929,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md",
+      "canonical_id": "arXiv:2509.02512",
+      "title": "MoPEQ: Mixture of Mixed Precision Quantized Experts",
+      "file_bytes": 17238,
+      "source_sha256": "e1af406ef4753a6694e8413c0218ffaeeeb9c20abe4e65a2ba9baffb7110ecd1",
+      "source_git_blob_sha": "2d1c6f8cca215c77a70aa7b63131274c67b555c1",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.879587,
+      "quality_metrics": {
+        "body_chars": 4501,
+        "method_chars": 1437,
+        "evaluation_chars": 1144,
+        "limitation_chars": 487
       },
       "mechanical_failures": [],
       "warnings": []
