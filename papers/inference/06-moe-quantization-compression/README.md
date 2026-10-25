@@ -81,11 +81,11 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
-  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：44  
   第一に、専門家ごとに必要な重み精度が異なるため、全専門家を同じビット幅へ量子化する必要はない。原著表4のMixtral 8×7Bでは、平均2.54ビットのPMQだけで平均ゼロショット正解率67.50%、保存重み16.24GB、活性化パラメータ4.53GB、基準比1.63倍の速度となる。
 
 - **2024-06 · [QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
-  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：25  
   一律ビット幅ではなく、注意層・共有専門家・使用頻度・ブロック位置・線形重みの外れ値を手掛かりに精度を配分する効果を、同じ平均ビット予算で比較したベンチマーク。
 
 - **2024-05 · [A Provably Effective Method for Pruning Experts in Fine-tuned Sparse Mixture-of-Experts](2024-2405.16646-provably-effective-pruning-finetuned-sparse-moe.md)**  
