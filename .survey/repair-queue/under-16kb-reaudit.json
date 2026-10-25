@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-25T09:42:51.129812+00:00",
+  "generated_at": "2026-10-25T10:24:25.976154+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 3,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -97,6 +97,26 @@
         "method_chars": 1304,
         "evaluation_chars": 992,
         "limitation_chars": 363
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md",
+      "canonical_id": "arXiv:2506.15733",
+      "title": "SPECS: Faster Test-Time Scaling through Speculative Drafts and Dynamic Switching",
+      "file_bytes": 15417,
+      "source_sha256": "fd7a05ba0a08fe80d76f0fe91195dde15004b722fa8d24759650dbe1788c98cb",
+      "source_git_blob_sha": "2c77e31fcc956c2fccca2cb3fc894f9d90655c7c",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.965089,
+      "quality_metrics": {
+        "body_chars": 4056,
+        "method_chars": 1382,
+        "evaluation_chars": 1178,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
