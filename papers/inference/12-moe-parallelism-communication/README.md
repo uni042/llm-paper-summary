@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（59本）
+## 自動生成の論文一覧（60本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -240,6 +240,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2025-08 · [HAP: Hybrid Adaptive Parallelism for Efficient Mixture-of-Experts Inference](2025-2508.19373-hap-hybrid-adaptive-parallelism-for-efficient-mixture-of-experts-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   入力処理では多数トークンをまとめて計算するため通信量と演算量が大きいが、復号では1トークンずつ進むため重み読出しと専門家間の負荷不均衡が目立つ。各候補の遅延を演算・通信の実測から予測し、GPUメモリに収まる組合せだけを残す。
+
+- **2025-05 · [FLAME-MoE: A Transparent End-to-End Research Platform for Mixture-of-Experts Language Models](2025-2505.20225-flame-moe-a-transparent-end-to-end-research-platform-for-mixture-of-expe.md)**  
+  実装：[✓](https://github.com/cmu-flame/FLAME-MoE) ・ リポジトリ内被引用：2  
+  FLAME-MoEは、Mixture-of-Experts（MoE）言語モデルの学習再現性と専門家ルーティングの分析を目的とする公開研究基盤である。MoEはトークンごとに少数の専門家ネットワークを選ぶため、全パラメータ数を大きくしても活性化するパラメータを限定できる。
 
 ### 3年前（2023-11〜2024-10）
 

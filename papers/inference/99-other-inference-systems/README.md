@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（946本）
+## 自動生成の論文一覧（948本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1041,6 +1041,10 @@
 - **2026-07 · [LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving](2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。
+
+- **2026-07 · [LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference](2026-2607.27704-lightrot-a-light-weighted-rotation-scheme-and-architecture-for-accurate-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ビットLLM推論では重みだけでなく、推論時に生成される入力活性（IA）とKVキャッシュを4ビットへ量子化したい。
 
 - **2026-07 · [LaCo: Layer-wise Compensation for Pruned Large Language Models](2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2783,6 +2787,10 @@
 - **2025-07 · [Accelerating Dense LLMs via L0-regularized Mixture-of-Experts](2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   既存の密な大規模言語モデル（LLM）を高速化するには、量子化・枝刈り・知識蒸留が使われるが、強い圧縮では能力低下が生じやすい。MMLU、GSM8K、HumanEval、BBHの4課題平均はほぼ維持され、推論速度は2.0〜2.5倍となる。
+
+- **2025-06 · [SPECS: Faster Test-Time Scaling through Speculative Drafts and Dynamic Switching](2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SPECSは小型の草稿モデルと大型の対象モデルを組み合わせ、候補の生成と検証を分離する。v2のMATH500評価でQwen2.5系列、ビーム幅8の場合、大型モデルだけのビーム探索は正答率71.3%、平均遅延13.6秒、SPECSは正答率79.5%、平均遅延11.3秒である。
 
 - **2025-06 · [Routing Mamba: Scaling State Space Models with Mixture-of-Experts Projection](2025-2506.18145-routing-mamba-scaling-state-space-models-with-mixture-of-experts-project.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
