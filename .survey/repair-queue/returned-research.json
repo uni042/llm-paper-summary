@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T10:20:52+00:00",
+  "generated_at": "2026-10-25T10:40:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -837,36 +837,6 @@
       "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2502.15955",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T09:22:07+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5682,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_868c868d49308191878fd3bc5d34b6c1--2025-2502.15955-compression-barriers-transformers-research-20261025-1703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_868c868d49308191878fd3bc5d34b6c1--2025-2502.15955-compression-barriers-transformers-research-20261025-1703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2410.12513",
       "title": null,
       "source_url": null,
@@ -948,6 +918,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_b42736d650bc8191b921524eb4f7610b--2025-2506.03762-ahakv-adaptive-holistic-eviction-critical-research-20261025-1600-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_b42736d650bc8191b921524eb4f7610b--2025-2506.03762-ahakv-adaptive-holistic-eviction-critical-research-20261025-1600-scheduled-chat-00-r01.json",
       "worker_run_key": "20261025-1600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.14847",
+      "title": "A Survey of RWKV",
+      "source_url": "https://arxiv.org/pdf/2412.14847",
+      "returned_at": "2026-10-25T10:39:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5913,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e7cd78a751c88191aee15c7d4e181648--2024-2412.14847-rwkv-architecture-survey-research-20261025-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e7cd78a751c88191aee15c7d4e181648--2024-2412.14847-rwkv-architecture-survey-research-20261025-1830-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261025-1830-scheduled-chat-30/r01"
     }
   ]
 }
