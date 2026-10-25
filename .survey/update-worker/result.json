@@ -1,18 +1,6 @@
 {
   "schema_version": 1,
-  "ok": true,
-  "attempt_id": "library-import-maint-20261024T2331-4e3472",
-  "kind": "framework_llm_update",
-  "updated_paths": [
-    "llm-releases/nvidia.md",
-    "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
-  ],
-  "created_paths": [],
-  "updated_existing_paths": [
-    "llm-releases/nvidia.md",
-    "framework-updates/inference-engines/ollama/README.md",
-    "framework-updates/inference-engines/llama-cpp/README.md"
-  ],
-  "summary": "2026-10-24 Library maintenance update: add NVIDIA Nemotron 3.5 Bolt E4B with variant-specific context/modality caveat; record Ollama v0.40.9/v0.40.10 stable releases; extend llama.cpp development-build coverage through b11840."
+  "ok": false,
+  "attempt_id": "library-import-maint-20261025T1740-0830",
+  "error": "ValueError: replace_once.old must be non-empty for framework-updates/inference-engines/ollama/README.md"
 }
