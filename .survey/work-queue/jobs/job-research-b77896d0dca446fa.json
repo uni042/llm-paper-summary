@@ -31,10 +31,15 @@
   "schema_version": 1,
   "selection_reason": "既存の投機的復号・長文脈推論系統から直接参照される2026年のMoEモデル技術報告。圧縮疎注意と強圧縮注意を組み合わせ、100万トークン文脈でDeepSeek-V3.2比27%の単一トークン推論FLOPs、10%のKVキャッシュを報告しており、推論効率系統への直接性が高い。",
   "source_url": "https://arxiv.org/abs/2606.19348",
-  "status": "ready",
+  "status": "superseded",
   "title": "DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence",
   "type": "research",
   "venue": "arXiv (Cornell University)",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-25T19:11:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md",
+  "represented_canonical_id": "arXiv:2606.19348",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

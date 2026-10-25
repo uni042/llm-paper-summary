@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（963本）
+## 自動生成の論文一覧（965本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1782,6 +1782,10 @@
   実装：[✓](https://github.com/hxixixh/gumbel-distill) ・ リポジトリ内被引用：0  
   自己回帰言語モデル（autoregressive language モデル）は、前のトークンを条件に次の一個を順番に予測するため、隣接する語の依存関係を扱いやすい。例えば「San Francisco」を同時に予測する場合、「San」を選んだ条件で「Francisco」を選ぶという自己回帰的な関係が明示されない。
 
+- **2026-03 · [Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation](2026-2603.22333-graph-signal-processing-meets-mamba2-adaptive-filter-bank-via-delta-modu.md)**  
+  実装：[✓](https://github.com/yehjin-shin/HADES) ・ リポジトリ内被引用：0  
+  トークン列を線状グラフとみなし、状態空間モデルの再帰ヘッドを時変フィルタとして解釈するGraph Signal Processing（グラフ信号処理）の観点から設計する。
+
 - **2026-03 · [GradMem: Learning to Write Context into Memory with Test-Time Gradient Descent](2026-2603.13875-gradmem-learning-to-write-context-into-memory-with-test-time-gradient-de.md)**  
   実装：[✓](https://github.com/yurakuratov/gradmem) ・ リポジトリ内被引用：0  
   長文脈の大規模言語モデル（LLM）では、過去の情報を再利用するために鍵・値キャッシュ（KV キャッシュ）を保持するのが一般的である。しかしキャッシュは通常、層数と文脈長に比例して増える。GradMemはこの記憶形成を、単なる順伝播による要約ではなく、推論時に小さな記憶ベクトルへ勾配降下を行う最適化問題として定義する。モデル本体の重みは推論時に更新しない。
@@ -2807,6 +2811,10 @@
 - **2025-08 · [Reward-Shifted Speculative Sampling Is An Efficient Test-Time Weak-to-Strong Aligner](2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-st.md)**  
   実装：[✓](https://github.com/lblaoke/CARDS) ・ リポジトリ内被引用：0  
   本論文は、投機的標本化（投機的 sampling）の目的を「大型対象モデルと同じ分布を保って高速化する」ことから、「大型対象モデルを追加学習せず、人間の選好に整合した理想的な大型モデルの分布を生成する」ことへ変更する。従来の投機的標本化では、小型ドラフトモデルが候補トークンを生成し、大型対象モデルの確率との比率で候補を受理する。
+
+- **2025-08 · [GPT-OSS-20B: A Comprehensive Deployment-Centric Analysis of OpenAI's Open-Weight Mixture of Experts Model](2025-2508.16700-gpt-oss-20b-a-comprehensive-deployment-centric-analysis-of-openai-s-open.md)**  
+  実装：[✓](https://github.com/deepdik/GPT-OSS-20B-analysis) ・ リポジトリ内被引用：0  
+  MoEは全重みの一部だけを各トークンで活性化するため、演算量はDenseの同規模モデルより小さくなり得る。しかし、未活性のエキスパート重みがメモリから消えるわけではなく、ルーティング、メモリアクセス、KV保持、プリフィルの費用も発生する。GPUのCUDA allocatorピークメモリはそれぞれ43,461MB、63,650MB、66,459MB。
 
 - **2025-07 · [Towards Resource-Efficient Serverless LLM Inference with SLINFER](2025-2507.00507-towards-resource-efficient-serverless-llm-inference-with-slinfer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

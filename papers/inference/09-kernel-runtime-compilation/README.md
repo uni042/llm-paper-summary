@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（163本）
+## 自動生成の論文一覧（164本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -527,6 +527,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
   実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：0  
   本論文は2025年9月公開のarXivプレプリントで、低ビット量子化と枝刈りを同時に適用する大規模言語モデルの圧縮を扱う。対象はLlama2、Llama3、Qwen2.5系列であり、重み4ビット・活性4ビット・KVキャッシュ4ビット（W4A4KV4）と50%の疎性を組み合わせることを主な目標とする。
+
+- **2025-07 · [Cloud Native System for LLM Inference Serving](2025-2507.18007-cloud-native-system-for-llm-inference-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、LLM推論を一体のモデルプロセスとして固定配置する方式では、あるTransformer層だけが過負荷になってもモデル全体を複製するしかなく、必要な資源へ局所的に対処しにくいと指摘する。実験はLLaMA-2-13B、A100 80GBを備えた3ノードのKubernetesクラスタで行う。
 
 - **2025-05 · [M-Wanda: Improving One-Shot Pruning for Multilingual LLMs](2025-2505.21171-m-wanda-improving-one-shot-pruning-for-multilingual-llms.md)**  
   実装：[✓](https://github.com/RochelleChoenni/M-Wanda) ・ リポジトリ内被引用：0  

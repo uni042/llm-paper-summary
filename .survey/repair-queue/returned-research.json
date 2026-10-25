@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T18:07:15+00:00",
+  "generated_at": "2026-10-25T19:11:26+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 33,
+  "count": 31,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -748,34 +748,6 @@
       "worker_run_key": "20261025-1945-scheduled-chat-45/r02"
     },
     {
-      "canonical_id": "arXiv:2603.22333",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T17:33:06+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 322 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6192,
-        "body_paragraphs": 30,
-        "method_chars": 1911,
-        "method_paragraphs": 10,
-        "evaluation_chars": 322,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 322 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6880438de0ef--libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6880438de0ef--libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r.json",
-      "worker_run_key": "20261026-0130-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.14290",
       "title": null,
       "source_url": null,
@@ -803,36 +775,9 @@
       "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2507.18007",
+      "canonical_id": "arXiv:2506.09613",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-25T17:52:32+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 402 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5387,
-        "body_paragraphs": 34,
-        "method_chars": 1342,
-        "method_paragraphs": 7,
-        "evaluation_chars": 402,
-        "limitation_chars": 696,
-        "insufficiency_flags": [
-          "評価説明量 402 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/file_000000009aa881f5ba9411abe875a2a7--2025-2507.18007-cloud-native-layer-microservice-autoscaling-research-20261026-0230-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/file_000000009aa881f5ba9411abe875a2a7--2025-2507.18007-cloud-native-layer-microservice-autoscaling-research-20261026-0230-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.09613",
-      "title": "SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot",
-      "source_url": "https://proceedings.mlr.press/v306/tuo26a.html",
       "returned_at": "2026-10-25T18:03:26+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -858,8 +803,8 @@
     },
     {
       "canonical_id": "arXiv:2504.04514",
-      "title": "Saliency-driven Dynamic Token Pruning for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2504.04514",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T18:05:31+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
