@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "06f4ee912388990c6bc8373a0ad5f6e5943c039a5cd89ff5fe32cada79117624",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_f4fe40798eb48191aceb3dd0bc34b157--2025-2504.15720-seallm-multi-service-scheduling-research-20261025-1500-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2504.15720",
+  "worker_completed_at": "2026-10-25T15:00:00+09:00",
+  "worker_run_key": "20261025-1500-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5449,
+    "body_paragraphs": 30,
+    "method_chars": 2303,
+    "method_paragraphs": 13,
+    "evaluation_chars": 444,
+    "limitation_chars": 1025,
+    "insufficiency_flags": [
+      "評価説明量 444 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 444 < 500"
+  ],
+  "processed_at": "2026-10-25T11:07:33+00:00"
+}

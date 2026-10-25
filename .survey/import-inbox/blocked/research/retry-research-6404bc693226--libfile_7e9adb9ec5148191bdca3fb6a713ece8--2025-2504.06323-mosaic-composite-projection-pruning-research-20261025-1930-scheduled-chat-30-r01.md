@@ -29,6 +29,8 @@ worker_completed_at: "2026-10-25T19:36:01+09:00"
 worker_id: "scheduled-chat-30"
 worker_run_key: "20261025-1930-scheduled-chat-30/r01"
 reference_main_sha: "ea6bc8e3c2c118e0ec7a1f1936c4f12b0b31f625"
+last_audited: null
+audit_version: 0
 ---
 
 # Mosaic: 射影単位の非均一・複合枝刈りによるLLMの軽量化

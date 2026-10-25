@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T10:54:38+00:00",
+  "generated_at": "2026-10-25T11:07:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 36,
+  "count": 37,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -699,33 +699,6 @@
       "worker_run_key": "20261025-1056-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2509.10798",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T06:11:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 449 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5049,
-        "body_paragraphs": 21,
-        "method_chars": 823,
-        "method_paragraphs": 4,
-        "evaluation_chars": 449,
-        "limitation_chars": 297,
-        "insufficiency_flags": [
-          "評価説明量 449 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-00-r01-validated.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-00-r01-validated.json",
-      "worker_run_key": "20261025-1400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2501.04987",
       "title": null,
       "source_url": null,
@@ -837,33 +810,6 @@
       "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2410.12513",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T10:01:51+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 153 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5847,
-        "body_paragraphs": 32,
-        "method_chars": 1680,
-        "method_paragraphs": 10,
-        "evaluation_chars": 153,
-        "limitation_chars": 605,
-        "insufficiency_flags": [
-          "評価説明量 153 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_38e97e3940608191a8d05c6f4b7ab405--2024-2410.12513-first-input-adaptive-layer-skipping-research-20261025-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_38e97e3940608191a8d05c6f4b7ab405--2024-2410.12513-first-input-adaptive-layer-skipping-research-20261025-1830-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261025-1830-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2502.14644",
       "title": null,
       "source_url": null,
@@ -920,11 +866,38 @@
       "worker_run_key": "20261025-1600-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2412.14847",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T10:39:07+00:00",
+      "canonical_id": "arXiv:2504.15720",
+      "title": "SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2504.15720",
+      "returned_at": "2026-10-25T11:07:33+00:00",
       "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 444 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5449,
+        "body_paragraphs": 30,
+        "method_chars": 2303,
+        "method_paragraphs": 13,
+        "evaluation_chars": 444,
+        "limitation_chars": 1025,
+        "insufficiency_flags": [
+          "評価説明量 444 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f4fe40798eb48191aceb3dd0bc34b157--2025-2504.15720-seallm-multi-service-scheduling-research-20261025-1500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f4fe40798eb48191aceb3dd0bc34b157--2025-2504.15720-seallm-multi-service-scheduling-research-20261025-1500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.14847",
+      "title": "A Survey of RWKV",
+      "source_url": "https://arxiv.org/pdf/2412.14847",
+      "returned_at": "2026-10-25T11:07:35+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -945,16 +918,43 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e7cd78a751c88191aee15c7d4e181648--2024-2412.14847-rwkv-architecture-survey-research-20261025-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e7cd78a751c88191aee15c7d4e181648--2024-2412.14847-rwkv-architecture-survey-research-20261025-1830-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2bdae3dcc6d9--libfile_e7cd78a751c88191aee15c7d4e181648--2024-2412.14847-rwkv-architecture-survey-research-20261025-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-2bdae3dcc6d9--libfile_e7cd78a751c88191aee15c7d4e181648--2024-2412.14847-rwkv-architecture-survey-research-20261025-1830-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261025-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.12513",
+      "title": "FiRST: Finetuning Router-Selective Transformers for Input-Adaptive Latency Reduction",
+      "source_url": "https://arxiv.org/pdf/2410.12513",
+      "returned_at": "2026-10-25T11:07:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 153 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5847,
+        "body_paragraphs": 32,
+        "method_chars": 1680,
+        "method_paragraphs": 10,
+        "evaluation_chars": 153,
+        "limitation_chars": 605,
+        "insufficiency_flags": [
+          "評価説明量 153 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5e8eba356297--libfile_38e97e3940608191a8d05c6f4b7ab405--2024-2410.12513-first-input-adaptive-layer-skipping-research-20261025-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5e8eba356297--libfile_38e97e3940608191a8d05c6f4b7ab405--2024-2410.12513-first-input-adaptive-layer-skipping-research-20261025-1830-scheduled-chat.json",
       "worker_run_key": "20261025-1830-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2504.06323",
       "title": "Mosaic: Composite Projection Pruning for Resource-efficient LLMs",
       "source_url": "https://research-repository.st-andrews.ac.uk/handle/10023/32746",
-      "returned_at": "2026-10-25T10:50:11+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-25T11:07:38+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -973,9 +973,36 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7e9adb9ec5148191bdca3fb6a713ece8--2025-2504.06323-mosaic-composite-projection-pruning-research-20261025-1930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7e9adb9ec5148191bdca3fb6a713ece8--2025-2504.06323-mosaic-composite-projection-pruning-research-20261025-1930-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6404bc693226--libfile_7e9adb9ec5148191bdca3fb6a713ece8--2025-2504.06323-mosaic-composite-projection-pruning-research-20261025-1930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6404bc693226--libfile_7e9adb9ec5148191bdca3fb6a713ece8--2025-2504.06323-mosaic-composite-projection-pruning-research-20261025-1930-scheduled-chat.json",
       "worker_run_key": "20261025-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2509.10798",
+      "title": "Judge Q: Trainable Queries for Optimized Information Retention in KV Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2509.10798",
+      "returned_at": "2026-10-25T11:07:40+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 449 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5049,
+        "body_paragraphs": 21,
+        "method_chars": 823,
+        "method_paragraphs": 4,
+        "evaluation_chars": 449,
+        "limitation_chars": 297,
+        "insufficiency_flags": [
+          "評価説明量 449 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-694edb968afe--libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-00-r01-validated.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-694edb968afe--libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-.json",
+      "worker_run_key": "20261025-1400-scheduled-chat-00/r01"
     }
   ]
 }
