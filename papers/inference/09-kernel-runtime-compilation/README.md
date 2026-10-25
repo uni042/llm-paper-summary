@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（161本）
+## 自動生成の論文一覧（162本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -651,6 +651,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2023-10 · [Sparse Fine-tuning for Inference Acceleration of Large Language Models](2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md)**  
   実装：[✓](https://github.com/IST-DASLab/SparseFinetuning) ・ リポジトリ内被引用：3  
   本研究は、大規模言語モデル（LLM）を高い重み疎性へ枝刈りしたうえで下流タスクへ微調整し、精度を回復する学習法と、その疎性をCPU/GPUの実際の推論高速化へ変換する実行系を一体で評価する。
+
+- **2023-07 · [QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models](2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md)**  
+  実装：[✓](https://github.com/IST-DASLab/QIGen) ・ リポジトリ内被引用：0  
+  QIGenは、量子化済み大規模言語モデルの逐次生成に使う行列ベクトル積を、CPUの実行資源に合わせて自動生成する研究である。AMD EPYC 7742上のLLaMA-7B/13B/30Bを使った2023年の評価では、4ビット列全体量子化の13Bで7.04トークン/秒、当時のllama.cppのq40では2.63トークン/秒だった。
 
 ### 5年前（2021-11〜2022-10）
 

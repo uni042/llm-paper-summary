@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（20本）
+## 自動生成の論文一覧（21本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -69,6 +69,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2025-10 · [MC#: Mixture Compressor for Mixture-of-Experts Large Models](2025-2510.10962-mc-mixture-compressor-for-mixture-of-experts-large-models.md)**  
   実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート、MoE）は、トークンごとに一部の専門家だけを実行することで、総パラメータ数の大きさと実行計算量を切り離す。Mixtral-8x7Bでは、PMQにより16ビット版96.80GBの重みを平均2.05ビット・13.41GBへ圧縮する。
+
+- **2025-09 · [MoPEQ: Mixture of Mixed Precision Quantized Experts](2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md)**  
+  実装：[✓](https://github.com/krishnateja95/MoE-Mixed-Prec) ・ リポジトリ内被引用：0  
+  MoPEQ（Mixture of Mixed Precision Quantized Experts）は、混合専門家モデル（MoE）のエキスパートごとに異なる重みビット幅を割り当てる事後量子化手法である。
 
 - **2025-03 · [ResMoE: Space-efficient Compression of Mixture of Experts LLMs via Residual Restoration](2025-2503.06881-resmoe-space-efficient-compression-of-mixture-of-experts-llms-via-residual-restoration.md)**  
   実装：[✓](https://github.com/iDEA-iSAIL-Lab-UIUC/ResMoE) ・ リポジトリ内被引用：0  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T15:40:29+00:00",
+  "generated_at": "2026-10-25T15:55:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 35,
+  "count": 33,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -668,61 +668,6 @@
       "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2412.13437",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T14:41:14+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5267,
-        "body_paragraphs": 26,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e7a3e46f40848191ac87407b5bef3dc8--2024-2412.13437-agent-serving-survey-returned-repair-20261025-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e7a3e46f40848191ac87407b5bef3dc8--2024-2412.13437-agent-serving-survey-returned-repair-20261025-2200-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261025-2200-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2307.03738",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T14:42:19+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3813,
-        "body_paragraphs": 24,
-        "method_chars": 1122,
-        "method_paragraphs": 6,
-        "evaluation_chars": 925,
-        "limitation_chars": 412,
-        "insufficiency_flags": []
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2bafcbf62cc6--libfile_e0ca7ca620cc8191aec77a72ae7143e9--2023-2307.03738-qigen-cpu-quantized-kernel-generation-research-20261025-1945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2bafcbf62cc6--libfile_e0ca7ca620cc8191aec77a72ae7143e9--2023-2307.03738-qigen-cpu-quantized-kernel-generation-research-20261025-1945-scheduled-ch.json",
-      "worker_run_key": "20261025-1945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2410.16663",
       "title": null,
       "source_url": null,
@@ -861,33 +806,6 @@
       "worker_run_key": "20261025-2200-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2509.02512",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T15:14:26+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_version が空"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4004,
-        "body_paragraphs": 21,
-        "method_chars": 1079,
-        "method_paragraphs": 5,
-        "evaluation_chars": 1159,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d50708698478--libfile_a5658552fc5881918f2b35b6afba25e7--2025-2509.02512-mopeq-expert-mixed-precision-research-20261025-1945-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d50708698478--libfile_a5658552fc5881918f2b35b6afba25e7--2025-2509.02512-mopeq-expert-mixed-precision-research-20261025-1945-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261025-1945-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.17196",
       "title": null,
       "source_url": null,
@@ -938,6 +856,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea06f8d4c71a--libfile_71f9a98d20a4819184da9d1e539fea98--2025-2505.07861-caprese-low-rank-distillation-research-20261025-1945-scheduled-chat-45-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ea06f8d4c71a--libfile_71f9a98d20a4819184da9d1e539fea98--2025-2505.07861-caprese-low-rank-distillation-research-20261025-1945-scheduled-chat-45-r0.json",
       "worker_run_key": "20261025-1945-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "arXiv:2412.13437",
+      "title": "Deploying Foundation Model Powered Agent Services: A Survey",
+      "source_url": "https://arxiv.org/html/2412.13437",
+      "returned_at": "2026-10-25T15:51:32+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 436 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5267,
+        "body_paragraphs": 26,
+        "method_chars": 2791,
+        "method_paragraphs": 13,
+        "evaluation_chars": 436,
+        "limitation_chars": 597,
+        "insufficiency_flags": [
+          "評価説明量 436 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_68df00346864819186775560b5693ef8--2024-2412.13437-agent-serving-survey-heading-repair-20261026-0000-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_68df00346864819186775560b5693ef8--2024-2412.13437-agent-serving-survey-heading-repair-20261026-0000-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261026-0000-scheduled-chat-00/r01"
     }
   ]
 }
