@@ -511,7 +511,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   GPUメモリに収まらない場合、ホストメモリから選択された専門家の重みを転送して計算する。本論文の重要な前提は、演算機能付き拡張メモリを新たに設計する研究であり、既存の通常DRAMやSSDにそのまま適用できるCPUオフロード手法ではないことである。
 
 - **2024-03 · [OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization](2024-2403.12983-osscar-one-shot-structured-pruning-in-vision-and-language-models-with-co.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデル（LLM）の推論負荷を下げるために重みの一部をゼロにしても、非構造化疎行列を通常のGPU行列積で実行すると必ずしも高速にならない。事前学習済みの重みから一度だけ枝刈りし、元の学習目的で追加の勾配学習を行わない「一回限りの事後構造化枝刈り」である。
 
 - **2024-06 · [Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference](2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md)**  
