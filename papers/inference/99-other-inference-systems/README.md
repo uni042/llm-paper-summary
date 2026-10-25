@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（948本）
+## 自動生成の論文一覧（950本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2054,6 +2054,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   小型の草稿モデルが作った途中の推論を大型の対象モデルで検証する既存方式は、単語列が異なっていても意味が同じである推論を扱える一方、すべてのステップを高価な検証器へ送ると加速効果が弱くなる。論文の表2では、DeepSeek-R1-Distill 1.5B/32B構成で5課題平均の高速化が1.68倍、平均正答率が対象モデル81.99%に対して81.51%である。
 
+- **2026-01 · [ChunkWise LoRA: Adaptive Sequence Partitioning for Memory-Efficient Low-Rank Adaptation and Accelerated LLM Inference](2026-2601.21109-chunkwise-lora-adaptive-sequence-partitioning-for-memory-efficient-low-r.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ランク適応（LoRA）は、事前学習済みの重みを固定し、少数の低ランク行列を追加学習することで、モデルの更新費用を抑える。原著表Iでは、LLaMA-7Bを用いた比較で、通常のモデルが22.5ms/トークン、ピークGPUメモリ14.6GBに対し、提案方式は14.9ms/トークン、9.1GBを報告する。
+
 - **2026-01 · [Can Vision-Language Models Handle Long-Context Code? An Empirical Study on Visual Compression](2026-2602.00746-can-vision-language-models-handle-long-context-code-an-empirical-study-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LongCodeOCRは、長大なプログラムの文脈を削除型のテキスト圧縮で短くする代わりに、コード全体を二次元画像へ描画し、視覚言語モデル（Vision-Language モデル; VLM）で読ませる方式である。
@@ -2823,6 +2827,10 @@
 - **2025-03 · [PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices](2025-2504.03664-pipo-pipelined-offloading-for-efficient-inference-on-consumer-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU/NVMeオフロードを計算・重み読込・KV読込/保存の細粒度タスクへ分解し、転送パイプラインとINT4 CUDAカーネルで6GB RTX 3060上のGPU利用率を90%超へ高める。
+
+- **2025-03 · [MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration](2025-2503.23817-mvdram-enabling-gemv-execution-in-unmodified-dram-for-low-bit-llm-accele.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MVDRAMは、メモリそのものを演算資源にすることで、大規模言語モデル（LLM）の逐次生成における重み読み出しを減らす実機システムである。著者らはXilinx Alveo U200上のメモリ制御器と市販DDR4-2400モジュール4枚で実験し、2ビットLlama2-13Bのトークン生成処理量をCPU基準比2.18倍、4ビットでは1.31倍にした。
 
 - **2025-03 · [Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques](2025-2503.11816-key-value-compress-a-systematic-exploration-of-kv-cache-compression-tech.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

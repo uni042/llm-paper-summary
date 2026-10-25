@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（69本）
+## 自動生成の論文一覧（70本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -308,6 +308,10 @@
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
   実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：5  
   Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
+
+- **2025-10 · [Staircase Streaming for Low-Latency Multi-Agent Inference](2025-2510.05059-staircase-streaming-for-low-latency-multi-agent-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  前段の提案者が最初の8トークン程度を生成した時点で集約者を起動し、後続の生成と集約を重ねる。提案者の全出力を待たないため、MoAでTTFTを10.6秒から0.47秒、MADで6.70秒から0.45秒へ削減する条件がある。
 
 - **2025-09 · [Nova: Real-Time Agentic Vision-Language Model Serving with Adaptive Cross-Stage Parallelization](2025-2509.21301-nova-real-time-agentic-vision-language-model-serving-with-adaptive-cross.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

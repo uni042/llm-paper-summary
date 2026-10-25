@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T03:54:19+00:00",
+  "generated_at": "2026-10-25T06:13:39+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 28,
+  "count": 29,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -752,6 +752,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-45638413f3de--libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-45638413f3de--libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-.json",
       "worker_run_key": "20261025-1056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2509.10798",
+      "title": "Judge Q: Trainable Queries for Optimized Information Retention in KV Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2509.10798",
+      "returned_at": "2026-10-25T06:11:54+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 449 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5049,
+        "body_paragraphs": 21,
+        "method_chars": 823,
+        "method_paragraphs": 4,
+        "evaluation_chars": 449,
+        "limitation_chars": 297,
+        "insufficiency_flags": [
+          "評価説明量 449 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-00-r01-validated.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-00-r01-validated.json",
+      "worker_run_key": "20261025-1400-scheduled-chat-00/r01"
     }
   ]
 }

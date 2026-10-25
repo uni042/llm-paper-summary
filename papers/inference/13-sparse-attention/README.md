@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（113本）
+## 自動生成の論文一覧（114本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -359,6 +359,10 @@
 - **2025-10 · [NOSA: Native and Offloadable Sparse Attention](2025-2510.13602-nosa-native-and-offloadable-sparse-attention.md)**  
   実装：[✓](https://github.com/thunlp/NOSA) ・ リポジトリ内被引用：6  
   NOSAは、学習可能な疎注意（trainable sparse 注意機構）とCPUへのKVキャッシュ退避を両立させるために、注意先の選択パターンを学習段階から転送局所性の高いものへ制約する手法である。
+
+- **2025-08 · [Sparse Attention across Multiple-context KV Cache](2025-2508.11661-sparse-attention-across-multiple-context-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  一般の単一文書KV圧縮とは異なり、文書ごとのKVキャッシュはそれぞれ独立した位置関係のもとで作られている。原著表1の系列保持率は14.9%、再計算率は14.3%である。
 
 - **2025-03 · [Progressive Sparse Attention: Algorithm and System Co-design for Efficient Attention in LLM Serving](2025-2503.00392-progressive-sparse-attention-algorithm-and-system-co-design-for-efficien.md)**  
   実装：[✓](https://github.com/ASISys/PSAttention) ・ リポジトリ内被引用：4  

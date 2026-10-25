@@ -35,10 +35,15 @@
   "selection_reason": "The method has runtime chunking, per-chunk rank selection and KV-cache policy; primary full text reports latency, peak GPU memory and task metrics on LLaMA-7B.",
   "semantic_scholar_id": "386a426c8048102241c9c89f38eaa3cd76758b3e",
   "source_url": "https://arxiv.org/abs/2601.21109",
-  "status": "ready",
+  "status": "superseded",
   "title": "ChunkWise LoRA: Adaptive Sequence Partitioning for Memory-Efficient Low-Rank Adaptation and Accelerated LLM Inference",
   "type": "research",
   "venue": "International Symposium on Embedded Computing and System Design",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-25T06:13:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.21109-chunkwise-lora-adaptive-sequence-partitioning-for-memory-efficient-low-r.md",
+  "represented_canonical_id": "arXiv:2601.21109",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
