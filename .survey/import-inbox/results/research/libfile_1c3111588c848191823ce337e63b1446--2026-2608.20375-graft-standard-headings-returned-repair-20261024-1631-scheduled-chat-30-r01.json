@@ -1,13 +1,12 @@
 {
   "schema_version": 1,
   "artifact_type": "research",
-  "status": "imported",
+  "status": "blocked_quality",
   "source_sha256": "d2720fac2d612c5b5a39d126bf54cb27a0cdbc0e927372c73f02b355ed359db3",
-  "canonical_id": "arXiv:2608.20375",
-  "paper_path": "papers/inference/99-other-inference-systems/2026-2608.20375-graft-adaptive-dlm-based-draft-tree-construction-with-target-distilled-e.md",
-  "lineage": "99-other-inference-systems",
-  "audit_status": "PASS",
+  "normalized_source_sha256": null,
   "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_1c3111588c848191823ce337e63b1446--2026-2608.20375-graft-standard-headings-returned-repair-20261024-1631-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2608.20375",
   "worker_completed_at": "2026-10-24T16:36:01+09:00",
   "worker_run_key": "20261024-1631-scheduled-chat-30/r01",
   "quality_metrics": {
@@ -20,5 +19,8 @@
     "limitation_chars": 621,
     "insufficiency_flags": []
   },
-  "processed_at": "2026-10-25T09:04:52+00:00"
+  "failures": [
+    "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.20375-graft-adaptive-dlm-based-draft-tree-construction-with-target-distilled-e.md と 16 段落 / 3414文字 (100.0%) が完全一致"
+  ],
+  "processed_at": "2026-10-25T10:01:49+00:00"
 }
