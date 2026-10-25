@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-25T10:57:50.779524+00:00",
+  "generated_at": "2026-10-25T12:05:42.541369+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 4,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -68,7 +68,7 @@
       "file_bytes": 12962,
       "source_sha256": "7339d45eab389550de731537c7d36627aebdc75a270dab101b94bfd899cb2660",
       "source_git_blob_sha": "5166ab3aea106a5261f0e4caeea36b7bb9205d47",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.990361,
@@ -77,26 +77,6 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2512.12744-resting-neurons-active-insights-improving-input-sparsification-for-large.md",
-      "canonical_id": "arXiv:2512.12744",
-      "title": "Resting Neurons, Active Insights: Improving Input Sparsification for Large Language Models",
-      "file_bytes": 16834,
-      "source_sha256": "5fc58559b9f61e607464667eb5a5ec1194793fa56db10be731e7dbc474a8dfc1",
-      "source_git_blob_sha": "cb8a32e7d5e8c38cbaccda16d3caa982edd590bd",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.924313,
-      "quality_metrics": {
-        "body_chars": 3815,
-        "method_chars": 1320,
-        "evaluation_chars": 1074,
-        "limitation_chars": 293
       },
       "mechanical_failures": [],
       "warnings": []
@@ -116,26 +96,6 @@
         "body_chars": 3777,
         "method_chars": 1088,
         "evaluation_chars": 929,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md",
-      "canonical_id": "arXiv:2506.15733",
-      "title": "SPECS: Faster Test-Time Scaling through Speculative Drafts and Dynamic Switching",
-      "file_bytes": 17699,
-      "source_sha256": "e5bf07c216b108a3da5f79b9cad3aac75e56f887556a54d281f008be97cf9ef6",
-      "source_git_blob_sha": "77980df44ebe37d6f58bb1424f70720f2fcab47c",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.965089,
-      "quality_metrics": {
-        "body_chars": 4056,
-        "method_chars": 1382,
-        "evaluation_chars": 1178,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
