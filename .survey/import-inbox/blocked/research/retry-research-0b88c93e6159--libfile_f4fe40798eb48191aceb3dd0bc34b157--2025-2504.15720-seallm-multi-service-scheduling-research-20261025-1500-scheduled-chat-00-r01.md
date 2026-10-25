@@ -42,6 +42,8 @@ worker_run_key: '20261025-1500-scheduled-chat-00/r01'
 reference_main_sha: 'b325a4a3132e44c7f911f971de1dd7ccdb8e489d'
 last_checked: '2026-10-25'
 worker_completed_at: '2026-10-25T15:00:00+09:00'
+last_audited: null
+audit_version: 0
 ---
 
 # SeaLLM — 複数LLMサービスの配置と待ち行列を同時最適化する
