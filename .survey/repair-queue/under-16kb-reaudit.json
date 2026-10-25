@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-25T20:59:13.842413+00:00",
+  "generated_at": "2026-10-25T22:03:20.788875+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 1,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -76,26 +76,6 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2020-2009.06823-real-time-execution-of-large-scale-language-models-on-mobile.md",
-      "canonical_id": "arXiv:2009.06823",
-      "title": "Real-Time Execution of Large-scale Language Models on Mobile",
-      "file_bytes": 15295,
-      "source_sha256": "04763949fdcc621751581adc94f45a316ce9142db028ccebdf7784fa59cc145b",
-      "source_git_blob_sha": "cf7a89a027f2648463c10ee8154a112961408ff3",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.936842,
-      "quality_metrics": {
-        "body_chars": 4643,
-        "method_chars": 1199,
-        "evaluation_chars": 1253,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
