@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T08:36:53+00:00",
+  "generated_at": "2026-10-25T09:07:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 28,
+  "count": 29,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -283,33 +283,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.json",
       "worker_run_key": "20261020-1930-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.20375",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-22T17:31:12+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5236,
-        "body_paragraphs": 35,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 973,
-        "limitation_chars": 621,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6e61617051fb--libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6e61617051fb--libfile_cc6a205ee3e08191bf031e4eeeba8905--2026-2608.20375-graft-dlm-tree-speculative-decoding-research-20261022-1626-scheduled-chat.json",
-      "worker_run_key": "20261022-1626-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2411.10741",
@@ -751,6 +724,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-00-r01-validated.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e6852d4a053c8191a07c3457034715b1--2025-2509.10798-judge-q-trainable-eviction-queries-research-20261025-1400-scheduled-chat-00-r01-validated.json",
       "worker_run_key": "20261025-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2501.04987",
+      "title": "TreeKV: Smooth Key-Value Cache Compression with Tree Structures",
+      "source_url": "https://arxiv.org/abs/2501.04987",
+      "returned_at": "2026-10-25T09:03:49+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5988,
+        "body_paragraphs": 29,
+        "method_chars": 1693,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 614,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_19cab8f5cf2c819189f3eede5958abfc--2025-2501.04987-treekv-smooth-kv-cache-research-20261025-1703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_19cab8f5cf2c819189f3eede5958abfc--2025-2501.04987-treekv-smooth-kv-cache-research-20261025-1703-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.13932",
+      "title": "Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining",
+      "source_url": "https://arxiv.org/abs/2504.13932",
+      "returned_at": "2026-10-25T09:04:54+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5279,
+        "body_paragraphs": 27,
+        "method_chars": 1486,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     }
   ]
 }
