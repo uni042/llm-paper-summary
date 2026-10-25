@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（70本）
+## 自動生成の論文一覧（71本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -146,6 +146,10 @@
 - **2026-09 · [LIMBO: Lifelong Inference-Time Memory and Budget Optimization for LLM Agents](2026-2609.14138-limbo-lifelong-inference-time-memory-and-budget-optimization-for-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   経験再生方式と生成予算を軽量な文脈付きバンディットでタスクごとにオンライン選択し、生涯学習エージェントの精度を保ちながら推論コストを削減する。
+
+- **2026-09 · [From Monolithic Blending to Agentic Orchestration: Dynamic Response for Conversational Assistants at Scale](2026-2609.05758-from-monolithic-blending-to-agentic-orchestration-dynamic-response-for-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、月間数百万件の会話を扱う宿泊予約サービスの顧客支援において、回答方針の選択と文章の生成を一つの大規模言語モデルに任せる方式から、二つのモデルと型付きツールで役割を分ける方式への移行を報告する。対象は11言語、全体応答時間の90パーセンタイルを10秒以内に抑える本番システムである。
 
 - **2026-09 · [End-to-End Latency-Minimizing and Load-Balanced Request Scheduling for Edge LLM Inference in Agentic AI Services](2026-2609.17193-end-to-end-latency-minimizing-and-load-balanced-request-scheduling-for-edge-llm-inference-in-agentic-ai-services.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
