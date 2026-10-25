@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（328本）
+## 自動生成の論文一覧（329本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1322,6 +1322,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-10 · [Exploring CXL-based KV Cache Storage for LLM Serving](2024-fcda582bb2a7-exploring-cxl-based-kv-cache-storage-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPUの主記憶へ退避しても、複数の長文脈要求を保持するには容量が足りなくなる可能性がある。
+
+- **2024-09 · [KVPruner: Structural Pruning for Faster and Memory-Efficient Large Language Models](2024-2409.11057-kvpruner-structural-pruning-for-faster-and-memory-efficient-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVPrunerは、長い入力や複数の同時要求で増大する鍵・値キャッシュを、事前にモデルの注意チャネルを削除することで小さくする手法である。原著のLLaMA-7B実験では、鍵・値チャネルを50%削減した構成で鍵・値保存量が8GBから4GB、モデルパラメータ数が7Bから5.5Bになる。
 
 ### 4年前（2022-11〜2023-10）
 
