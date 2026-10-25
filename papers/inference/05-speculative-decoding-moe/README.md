@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（236本）
+## 自動生成の論文一覧（238本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -584,6 +584,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   FractalLLMは、自己回帰言語モデルのトークン逐次生成を減らすため、元のデコーダの途中に小さな圧縮モデルを挿入する自己投機的復号（自己投機的復号）の方式である。論文のRTX 3090実験では、CodeLlama-13BのHumanEvalで基準の1.79トークン/秒が4.43トークン/秒となり、2.47倍の高速化を報告する。
 
+- **2025-11 · [Democratizing LLM Efficiency: From Hyperscale Optimizations to Universal Deployability](2025-2511.20662-democratizing-llm-efficiency-from-hyperscale-optimizations-to-universal-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、LLM推論効率を「演算量・トークン毎秒・GPUのピーク処理率」だけで測る研究慣行に対し、導入する組織の規模と運用条件を含めて効率を評価すべきだと提案する立場表明である。
+
 ### 2年前（2024-11〜2025-10）
 
 - **2025-03 · [EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test](2025-2503.01840-eagle-3.md)**  
@@ -725,6 +729,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-07 · [OmniDraft: A Cross-vocabulary, Online Adaptive Drafter for On-device Speculative Decoding](2025-2507.02659-omnidraft-a-cross-vocabulary-online-adaptive-drafter-for-on-device-specu.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号（投機的復号）は、小型の下書きモデルが提案した複数トークンを大きな対象モデルが一括検証することで、対象モデルの逐次呼出しを減らす。
+
+- **2025-06 · [POSS: Position Specialist Generates Better Draft for Speculative Decoding](2025-2506.03566-poss-position-specialist-generates-better-draft-for-speculative-decoding.md)**  
+  実装：[✓](https://github.com/shrango/PosS) ・ リポジトリ内被引用：2  
+  PosS（Position Specialists）は、投機的デコードのドラフトモデルが後半の投機位置ほど予測に失敗しやすい問題を、位置別に学習した複数のドラフト層で改善する研究である。最初の位置では対象LLMの正確な隠れ状態を利用できるが、後半の位置では前のドラフトが予測した不完全な特徴を入力にするため、誤差が累積する。
 
 - **2025-04 · [DEL: Context-Aware Dynamic Exit Layer for Efficient Self-Speculative Decoding](2025-2504.05598-del-context-aware-dynamic-exit-layer-for-efficient-self-speculative-deco.md)**  
   実装：[✓](https://github.com/hoenza/DEL) ・ リポジトリ内被引用：2  

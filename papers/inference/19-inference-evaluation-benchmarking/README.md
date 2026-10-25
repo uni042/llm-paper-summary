@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（68本）
+## 自動生成の論文一覧（69本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -235,6 +235,10 @@
 - **2024-12 · [A Survey of RWKV](2024-2412.14847-a-survey-of-rwkv.md)**  
   実装：[✓](https://github.com/MLGroupJLU/RWKV-Survey) ・ リポジトリ内被引用：1  
   RWKVは、過去の情報を固定形状の再帰状態へ畳み込むことで、生成時に全トークンのKVを保持しない設計を取る。
+
+- **2025-08 · [TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill and Decode Inference](2025-2508.15881-tpla-tensor-parallel-latent-attention-for-efficient-disaggregated-prefil.md)**  
+  実装：[✓](https://github.com/fxmeng/TransMLA) ・ リポジトリ内被引用：0  
+  TPLA（テンソル-Parallel Latent 注意機構）は、DeepSeek系列などで使われるMulti-Head Latent 注意機構（MLA）のKVキャッシュをGPUごとに複製する問題を解消するテンソル parallel（TP）方式である。
 
 ### 3年前（2023-11〜2024-10）
 
