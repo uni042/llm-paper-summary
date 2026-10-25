@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-25 09:17:24 JST**
+> 自動生成: **2026-10-25 09:32:20 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **973** |
 | 未claim Research job | **973** |
-| 直近24hのResearch処理完了 | **124** |
+| 直近24hのResearch処理完了 | **123** |
 | 最終Research処理完了 | **10-25 08:15:00 JST** |
 | 最終Discovery探索完了 | **10-25 06:57:00 JST** |
 | 整合性異常 | **0** |
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **145383** |
+| 探索候補総数 | **145384** |
 | 処理済み | **21259** |
-| 未処理Discovery候補 | **124124** |
+| 未処理Discovery候補 | **124125** |
 | 収録済み | **3140** |
 | Research / Audit候補へ昇格済み | **665** |
 | 無関係として除外 | **12319** |
@@ -63,12 +63,12 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **124124** |
+| 未処理候補（フィルタ前） | **124125** |
 | 機械規則による暫定隔離 | **2132** |
 | 拡張機械規則による追加隔離 | **1361** |
-| 機械規則通過後 | **120631** |
-| 系統内前方引用スコアによる選抜保留 | **114599** |
-| 暫定隔離合計 | **118092** |
+| 機械規則通過後 | **120632** |
+| 系統内前方引用スコアによる選抜保留 | **114600** |
+| 暫定隔離合計 | **118093** |
 | **読解可能候補（隔離後）** | **6032** |
 | 前方引用が同一系統で2本以上の候補 | **13571** |
 | 前方引用が同一系統で3本以上の候補 | **5478** |
@@ -89,7 +89,7 @@
 
 - 消化率: **14.6%**
 - 現在の生在庫: 後方references **57098件** / 前方引用 **68793件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **125194件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **125195件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,14 +116,14 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-24 11:02:09 JST（22時間15分前）** |
+| 最終maintenance完了 | **10-25 09:32:16 JST（4秒前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
 | health errors / warnings | **1 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **0** |
+| GC削除件数 | **209** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
 | quality regressions | **0** |
@@ -320,11 +320,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **232** |
-| └ Research | **83** |
+| 成功result未照合のimmutable submission | **226** |
+| └ Research | **80** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **4** |
+| └ Other/Unknown | **1** |
 
 ### 厳格検証が未成立のcompleted job
 
