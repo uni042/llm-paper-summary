@@ -22,7 +22,7 @@ import paper_identity  # noqa: E402
 import survey  # noqa: E402
 
 JOURNAL_DIR = "survey-state/lineage-migrations"
-MAX_ENTRIES = 25
+MAX_ENTRIES = 100
 MAX_TOTAL_SOURCE_BYTES = 64 * 1024 * 1024
 DURABLE_PHASES = (
     "prepared",

@@ -114,6 +114,53 @@ def add_second_entry(root, manifest, manifest_path, index):
     return old2, new2, raw2, cid2
 
 
+def batch_world(tmp_path, monkeypatch, count, *, extra_body_bytes=0):
+    root = tmp_path / "batch-repo"
+    state = root / "survey-state"
+    state.mkdir(parents=True)
+    survey.ROOT = root
+    identity_delta.ROOT = root
+    monkeypatch.setattr(migration, "current_worktree_sha", lambda: SOURCE_MAIN)
+    monkeypatch.setattr(migration, "_after_phase", lambda _phase: None)
+    papers = {}
+    identifier_to_canonical = {}
+    entries = []
+    original_bytes = {}
+    for index in range(count):
+        suffix = f"{index:03d}"
+        arxiv = f"2401.{index + 1:05d}"
+        cid = f"arXiv:{arxiv}"
+        doi = f"DOI:10.1000/migration-{suffix}"
+        aliases = sorted([cid, doi])
+        old_path = f"papers/inference/old/{suffix}-paper.md"
+        new_path = f"papers/inference/new/{suffix}-paper.md"
+        raw = (
+            f"---\ncanonical_id: {cid}\narxiv_id: '{arxiv}'\n"
+            f"doi: 10.1000/migration-{suffix}\ntitle: Synthetic {suffix}\n---\n"
+            "Synthetic body bytes stay exact.\n"
+        ).encode("utf-8")
+        if extra_body_bytes:
+            raw += b"x" * extra_body_bytes
+        old_file = root / old_path
+        old_file.parent.mkdir(parents=True, exist_ok=True)
+        (root / new_path).parent.mkdir(parents=True, exist_ok=True)
+        old_file.write_bytes(raw)
+        source_hash = hashlib.sha256(raw).hexdigest()
+        original_bytes[old_path] = raw
+        papers[cid] = {"path": old_path, "identifiers": aliases, "source_hash": source_hash}
+        identifier_to_canonical.update({alias: cid for alias in aliases})
+        entries.append({"old_path": old_path, "new_path": new_path, "canonical_id": cid,
+                        "aliases": aliases, "expected_sha256": source_hash})
+    snapshot = {"schema_version": 3, "active_count": count, "papers": papers,
+                "identifier_to_canonical": identifier_to_canonical, "ignored_moved_stubs": []}
+    index = state / "paper-identity-index.json"
+    index.write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
+    manifest_path = root / "batch-manifest.json"
+    manifest_path.write_text(json.dumps({"source_main_sha": SOURCE_MAIN, "entries": entries}, indent=2),
+                             encoding="utf-8")
+    return root, manifest_path, index, original_bytes
+
+
 def test_dry_run_is_read_only(world, capsys):
     root, _manifest, manifest_path, index = world
     before = {p.relative_to(root).as_posix(): p.read_bytes() for p in root.rglob("*") if p.is_file()}
@@ -318,6 +365,81 @@ def test_batch_apply_moves_all_entries(world, capsys):
     snapshot = json.loads(index.read_text(encoding="utf-8"))
     assert snapshot["papers"][CID]["path"] == NEW
     assert snapshot["papers"][cid2]["path"] == new2
+
+
+def test_apply_accepts_100_entries_and_moves_all_original_bytes(tmp_path, monkeypatch, capsys):
+    root, manifest_path, index, original_bytes = batch_world(tmp_path, monkeypatch, 100)
+    before_index = index.read_bytes()
+    code, out, err = cli(["dry-run", "--manifest", str(manifest_path)], capsys)
+    assert code == 0, err
+    assert json.loads(out)["entry_count"] == 100
+    assert index.read_bytes() == before_index
+    code, out, err = cli(["apply", "--manifest", str(manifest_path)], capsys)
+    assert code == 0, err
+    assert json.loads(out)["entry_count"] == 100
+    snapshot = json.loads(index.read_text(encoding="utf-8"))
+    for entry in json.loads(manifest_path.read_text(encoding="utf-8"))["entries"]:
+        old_path, new_path = entry["old_path"], entry["new_path"]
+        assert (root / new_path).read_bytes() == original_bytes[old_path]
+        assert next(line for line in (root / old_path).read_text(encoding="utf-8").splitlines()
+                    if line.strip()) == "# Moved"
+        assert snapshot["papers"][entry["canonical_id"]]["path"] == new_path
+        assert all(snapshot["identifier_to_canonical"][alias] == entry["canonical_id"]
+                   for alias in entry["aliases"])
+    assert len(snapshot["papers"]) == len(snapshot["identifier_to_canonical"]) // 2 == 100
+
+
+def test_101_entries_rejected_before_any_mutation(tmp_path, monkeypatch, capsys):
+    root, manifest_path, index, original_bytes = batch_world(tmp_path, monkeypatch, 101)
+    before_index = index.read_bytes()
+    code, out, err = cli(["apply", "--manifest", str(manifest_path)], capsys)
+    assert code != 0 and "100 entries" in (out + err)
+    assert index.read_bytes() == before_index
+    assert all((root / path).read_bytes() == raw for path, raw in original_bytes.items())
+    assert not any((root / entry["new_path"]).exists()
+                   for entry in json.loads(manifest_path.read_text(encoding="utf-8"))["entries"])
+    assert not (root / "survey-state/lineage-migrations").exists()
+
+
+def test_source_bytes_above_64_mib_rejected_before_any_mutation(tmp_path, monkeypatch, capsys):
+    root, manifest_path, index, original_bytes = batch_world(
+        tmp_path, monkeypatch, 1, extra_body_bytes=64 * 1024 * 1024 + 1
+    )
+    old_path, raw = next(iter(original_bytes.items()))
+    before_index = index.read_bytes()
+    code, out, err = cli(["apply", "--manifest", str(manifest_path)], capsys)
+    assert code != 0 and "source bytes" in (out + err).lower()
+    assert index.read_bytes() == before_index
+    assert (root / old_path).read_bytes() == raw
+    assert not (root / "papers/inference/new/000-paper.md").exists()
+    assert not (root / "survey-state/lineage-migrations").exists()
+
+
+def test_late_batch_failure_after_entry_25_recovers_exact_original_state(
+        tmp_path, monkeypatch, capsys):
+    root, manifest_path, index, original_bytes = batch_world(tmp_path, monkeypatch, 30)
+    before_index = index.read_bytes()
+    def crash(phase):
+        if phase == "target-installed:25":
+            raise SimulatedCrash(phase)
+    monkeypatch.setattr(migration, "_after_phase", crash)
+    with raises(SimulatedCrash, match="target-installed:25"):
+        migration.apply_manifest(manifest_path)
+    monkeypatch.setattr(migration, "_after_phase", lambda _phase: None)
+    journals = list((root / "survey-state/lineage-migrations").glob("*.json"))
+    assert len(journals) == 1
+    txid = journals[0].stem
+    code, out, err = cli(["recover", "--transaction", txid, "--action", "rollback"], capsys)
+    assert code == 0, err
+    assert json.loads(out)["status"] == "rolled_back"
+    assert index.read_bytes() == before_index
+    for entry in json.loads(manifest_path.read_text(encoding="utf-8"))["entries"]:
+        old_path, new_path = entry["old_path"], entry["new_path"]
+        assert (root / old_path).read_bytes() == original_bytes[old_path]
+        assert not (root / new_path).exists()
+    journal = json.loads(journals[0].read_text(encoding="utf-8"))
+    assert journal["source_main_sha"] == SOURCE_MAIN
+    assert journal["status"] == "rolled_back"
 
 
 class SimulatedCrash(BaseException):
