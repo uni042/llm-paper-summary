@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-25T16:54:00+00:00",
-  "record_count": 5348,
+  "updated_at": "2026-10-25T22:48:58+00:00",
+  "record_count": 5349,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82903,6 +82903,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Need a Small Specialized Language Model? Plan Early!"
+    },
+    "arXiv:2402.04239": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.04239",
+      "identity_tokens": [
+        "arXiv:2402.04239"
+      ],
+      "reason": "一次全文§3〜§5.5で、学習可能なsurrogate tokenによるクラスタ内注意とクラスタ間要約でLong Range Arenaのエンコーダ型分類タスクを高速化する研究と確認。Table 2はLRA分類精度（CAST Top-K平均59.32、S4 86.09、MEGA 88.21）を評価し、§5.5で著者自身が『生成自然言語のdecoding版が存在しない』と明記。推論カーネル・attention設計への間接的示唆はあるが、現行のLLM生成推論、KV cache、サービングに直接適用した実測がないためborderlineとし、Research完成原稿へは進めない。",
+      "first_checked_at": "2026-10-25T22:48:58+00:00",
+      "last_checked_at": "2026-10-25T22:48:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers"
     }
   }
 }
