@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T01:07:05+00:00",
+  "generated_at": "2026-10-25T03:01:21+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 28,
+  "count": 29,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -728,8 +728,8 @@
     },
     {
       "canonical_id": "arXiv:2409.11057",
-      "title": "KVPruner: Structural Pruning for Faster and Memory-Efficient Large Language Models",
-      "source_url": "https://arxiv.org/abs/2409.11057",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T01:05:21+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -753,6 +753,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-64bd8d2c192b--libfile_4758e79ea5fc8191bbd37fc3381624a9--2024-2409.11057-kvpruner-structural-kv-pruning-research-20261025-0900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-64bd8d2c192b--libfile_4758e79ea5fc8191bbd37fc3381624a9--2024-2409.11057-kvpruner-structural-kv-pruning-research-20261025-0900-scheduled-chat-00-r.json",
       "worker_run_key": "20261025-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.08018",
+      "title": "KVmix: Gradient-Based Layer Importance-Aware Mixed-Precision Quantization for KV Cache",
+      "source_url": "https://arxiv.org/html/2506.08018v3",
+      "returned_at": "2026-10-25T02:56:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6268,
+        "body_paragraphs": 36,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1411,
+        "limitation_chars": 864,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1056-scheduled-chat-00/r01"
     }
   ]
 }
