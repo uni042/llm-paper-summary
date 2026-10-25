@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（157本）
+## 自動生成の論文一覧（158本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -515,6 +515,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-03 · [Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores](2025-2503.10725-samoyeds-accelerating-moe-models-with-structured-sparsity-leveraging-spa.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   全専門家を毎回動かさないことで計算量を抑えられるが、実装上はトークンを専門家ごとに並べ替える入力転置、専門家の行列積、出力の再結合、GPUメモリの読み書きが必要になる。従来の高速化では、重みの構造化枝刈りによる疎性と、トークンが選択された専門家にだけ存在するという活性側の疎性を別々に扱うことが多かった。
+
+- **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
+  実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：0  
+  本論文は2025年9月公開のarXivプレプリントで、低ビット量子化と枝刈りを同時に適用する大規模言語モデルの圧縮を扱う。対象はLlama2、Llama3、Qwen2.5系列であり、重み4ビット・活性4ビット・KVキャッシュ4ビット（W4A4KV4）と50%の疎性を組み合わせることを主な目標とする。
 
 - **2025-05 · [M-Wanda: Improving One-Shot Pruning for Multilingual LLMs](2025-2505.21171-m-wanda-improving-one-shot-pruning-for-multilingual-llms.md)**  
   実装：[✓](https://github.com/RochelleChoenni/M-Wanda) ・ リポジトリ内被引用：0  

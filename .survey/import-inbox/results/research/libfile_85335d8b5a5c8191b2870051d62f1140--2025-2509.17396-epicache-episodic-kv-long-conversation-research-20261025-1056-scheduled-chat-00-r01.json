@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5a775353e9b0bcdffdcd5c7b60f013dc83ee08c45b1d922e25a7bd1433cd3ac2",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_85335d8b5a5c8191b2870051d62f1140--2025-2509.17396-epicache-episodic-kv-long-conversation-research-20261025-1056-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2509.17396",
+  "worker_completed_at": "2026-10-25T11:06:00+09:00",
+  "worker_run_key": "20261025-1056-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6426,
+    "body_paragraphs": 35,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 416,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 416 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 416 < 500"
+  ],
+  "processed_at": "2026-10-25T03:15:08+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T03:01:21+00:00",
+  "generated_at": "2026-10-25T03:19:31+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -614,34 +614,6 @@
       "worker_run_key": "20261023-0400-scheduled-chat-00/r02"
     },
     {
-      "canonical_id": "arXiv:2605.19218",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T22:08:21+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 371 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2775,
-        "body_paragraphs": 12,
-        "method_chars": 858,
-        "method_paragraphs": 4,
-        "evaluation_chars": 371,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 371 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-232a4bb07363--libfile_a533b15b074c81918162bb1f527beb68--2026-2605.19218-rotatek-evaluation-structure-repair-20261025-0445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-232a4bb07363--libfile_a533b15b074c81918162bb1f527beb68--2026-2605.19218-rotatek-evaluation-structure-repair-20261025-0445-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261025-0445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.16440",
       "title": null,
       "source_url": null,
@@ -756,8 +728,8 @@
     },
     {
       "canonical_id": "arXiv:2506.08018",
-      "title": "KVmix: Gradient-Based Layer Importance-Aware Mixed-Precision Quantization for KV Cache",
-      "source_url": "https://arxiv.org/html/2506.08018v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T02:56:28+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -779,6 +751,36 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1056-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2509.17396",
+      "title": "EpiCache: Episodic KV Cache Management for Long-Term Conversation on Resource-Constrained Environments",
+      "source_url": "https://arxiv.org/html/2509.17396v4",
+      "returned_at": "2026-10-25T03:15:08+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 416 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6426,
+        "body_paragraphs": 35,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 416,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 416 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_85335d8b5a5c8191b2870051d62f1140--2025-2509.17396-epicache-episodic-kv-long-conversation-research-20261025-1056-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_85335d8b5a5c8191b2870051d62f1140--2025-2509.17396-epicache-episodic-kv-long-conversation-research-20261025-1056-scheduled-chat-00-r01.json",
       "worker_run_key": "20261025-1056-scheduled-chat-00/r01"
     }
   ]
