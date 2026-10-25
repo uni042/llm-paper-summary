@@ -17,7 +17,7 @@
 
 ## 3. manifestと移行CLI
 
-mainに入った `.survey/scripts/paper_lineage_migration.py` を使います。manifestは `source_main_sha` と各entryのrepository相対 `old_path` / `new_path`、`canonical_id`、frontmatterと一致する `aliases`、元内容の `expected_sha256` を含めます。移行対象全件をひとつのbounded batchに含め、reviewします。CLIは最大25件・元本文合計64 MiBまでです。
+mainに入った `.survey/scripts/paper_lineage_migration.py` を使います。manifestは `source_main_sha` と各entryのrepository相対 `old_path` / `new_path`、`canonical_id`、frontmatterと一致する `aliases`、元内容の `expected_sha256` を含めます。移行対象をひとつのbounded batchにまとめてreviewします。従来どおり通常のbatchは25件以下で作成し、明示的に準備・reviewしたmanifestでは必要に応じて最大100件まで指定できます。CLIの上限は100件・元本文合計64 MiBです。100件は1つのtransactionの上限であり、複数transactionを独自に束ねません。各batchは1つのsource main SHAにpinし、次batchは前batchがmainへ受け入れられてから、その時点のmainで作ります。件数上限を広げてもhash・identity・alias・pathの全件preflight、journal、snapshot検証、recoveryは省略しません。
 
 ```powershell
 python .survey/scripts/paper_lineage_migration.py refresh-manifest --manifest reviewed.json --output refreshed.json --report refresh-report.json
