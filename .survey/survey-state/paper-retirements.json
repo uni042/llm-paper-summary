@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "records": {
+    "arXiv:2006.09616": {
+      "retirement_id": "pr206-retire-01",
+      "canonical_id": "arXiv:2006.09616",
+      "verified_aliases": [
+        "arXiv:2006.09616"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2020-2006.09616-dynamic-tensor-rematerialization.md",
+      "source_sha256": "803ff996d145728712b179810e135291bdce3a2ab79414279928cc73fb83364f",
+      "source_git_blob_sha": "0ee5292e237ebdb5711071fbeb75210f5b4be48e",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "Dynamic Tensor Rematerializationはtraining autograd graphのmemoryを再計算で節約する。",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2006.09616v4; sections_checked=4 Heuristic Evaluation; 7 Conclusion; A.5 Proofs of Intermediate Results.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-94a03da652",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-94a03da652"
+    },
+    "arXiv:2310.07188": {
+      "retirement_id": "pr206-retire-02",
+      "canonical_id": "arXiv:2310.07188",
+      "verified_aliases": [
+        "arXiv:2310.07188"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2023-2310.07188-adaptive-gating-in-mixture-of-experts-based-language-models.md",
+      "source_sha256": "02225fafd9082e4dc5a0e46b5d26bcbe9bee512fafd8f47ec4da3458a8985c99",
+      "source_git_blob_sha": "c61bd16c53be5618fe3773332b088e7e672a1cb9",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "一次本文の中心課題・評価はtrainingまたは一般model qualityであり、推論効率の直接機構・評価がない。 Paper-specific scope evidence: 混合専門家モデル（MoE）の学習時に、各トークンへ固定で2専門家を割り当てる代わりに、ルータの上位2専門家の確率差が閾値内なら2専門家、差が大きければ1専門家だけを割り当てる適応ゲート方式。上位1専門家の負荷分散制約と、2専門家が必要なトークンの比率を使うカリキュラム学習を組み合わせ、BERT、FSMT、BART、GPT-2、DialoGPTの6課題で学習時間を短縮しながら同程度の推論品質を維持する。原著の要旨では最大22.5%短縮とする一方、第4節の翻訳の記述には25.6%短縮とあり、数値が不一致である。実験は16専門家・閾値0.1を基本とし、実測利益の主対象は学習時間であって、既存MoEモデルを無学習で推論高速化する手法ではない。",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2310.07188v1; sections_checked=Abstract; 3 Design; 4 Evaluation; 5 Conclusion; Limitations.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-52d4b3fd72",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-52d4b3fd72"
+    },
+    "arXiv:2312.04455": {
+      "retirement_id": "pr206-retire-03",
+      "canonical_id": "arXiv:2312.04455",
+      "verified_aliases": [
+        "arXiv:2312.04455"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2024-2312.04455-fortify-the-shortest-stave-in-attention-enhancing-context-awareness-of-l.md",
+      "source_sha256": "56c81fc5014bbec2956ee3ee322858ee070747184d213f226477738636509019",
+      "source_git_blob_sha": "1c8f8e63ed5708095cadf65f2b9fc15c46e2cf00",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "Attention Buckets augments attention patterns to improve tool-use/context understanding, with no inference efficiency objective or measured cost reduction. The checked primary method/evaluation does not establish a concrete LLM inference optimization or measurement.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2312.04455v4; sections_checked=Abstract; 4 Experiments; 8 Conclusion.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-e0932c2125",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-e0932c2125"
+    },
+    "arXiv:2406.08334": {
+      "retirement_id": "pr206-retire-04",
+      "canonical_id": "arXiv:2406.08334",
+      "verified_aliases": [
+        "DOI:10.48550/arxiv.2406.08334",
+        "arXiv:2406.08334"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2024-2406.08334-protrain-efficient-llm-training-via-memory-aware-techniques.md",
+      "source_sha256": "653b735a30550564ae0315d8ebf2f09262160cf48efdcf7d99979723c69d78f1",
+      "source_git_blob_sha": "5fa5811b1a21c95d64ea56e26e5901262f2f3f9a",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "ProTrain automatically chooses memory management and offload strategies for LLM training; its workloads and measurements are training-only. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2406.08334v2; sections_checked=Abstract; 5 Evaluation; 6 Discussion; 7 Conclusion.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-8d4188d7af",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-8d4188d7af"
+    },
+    "arXiv:2406.16793": {
+      "retirement_id": "pr206-retire-05",
+      "canonical_id": "arXiv:2406.16793",
+      "verified_aliases": [
+        "arXiv:2406.16793"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2024-2406.16793-adam-mini-use-fewer-learning-rates-to-gain-more.md",
+      "source_sha256": "a80cd6500ec97d9eaa329c9c668bacb3b19e21e5578ffca0b4c3d66c5946bd84",
+      "source_git_blob_sha": "edc5e22ea3b21dff3776a6d52d82019c3c41a27b",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "Adam-mini reduces optimizer-state memory during pretraining, supervised fine-tuning, and RLHF; it does not optimize model inference. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2406.16793v7; sections_checked=Abstract; 2 Method; 3 Experiments.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-c958a44b4e",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-c958a44b4e"
+    },
+    "arXiv:2407.04656": {
+      "retirement_id": "pr206-retire-06",
+      "canonical_id": "arXiv:2407.04656",
+      "verified_aliases": [
+        "arXiv:2407.04656"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2024-2407.04656-lazarus-resilient-and-elastic-training-of-mixture-of-experts-models.md",
+      "source_sha256": "c45481a630edee00374fc8d7a31a747709367ca3193b0ea327ae69fcb32b5b28",
+      "source_git_blob_sha": "7c37e3f80cce98c787510d91637b723a90e46a69",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "Lazarus allocates expert replicas and recovers from failures in distributed MoE training; the measured workload is training only. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2407.04656v2; sections_checked=Abstract; 3. System Overview; 4. Design; 6. Evaluation; 8. Conclusion.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-5e1fc47513",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-5e1fc47513"
+    },
+    "arXiv:2409.00918": {
+      "retirement_id": "pr206-retire-07",
+      "canonical_id": "arXiv:2409.00918",
+      "verified_aliases": [
+        "DOI:10.48550/arxiv.2409.00918",
+        "arXiv:2409.00918"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2024-2409.00918-luwu-an-end-to-end-in-network-out-of-core-optimizer-for-100b-scale-model-in-network-data-parallel-training-on-distribute.md",
+      "source_sha256": "dbeae89a8610f69834f464ae8fe2fd98ad5b2a7445a346fae5a4a227ebc43f1d",
+      "source_git_blob_sha": "9880769ec0815332126e17efbef63ac504502e05",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "DisDP disaggregates compute, network collectives, and optimizer/storage for model-sharded data-parallel training; no inference execution is evaluated. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2409.00918v2; sections_checked=Abstract; III Design and Implementation of DisDP; IV Evaluation; VI Conclusion.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-f714435a80",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-f714435a80"
+    },
+    "arXiv:2503.01890": {
+      "retirement_id": "pr206-retire-08",
+      "canonical_id": "arXiv:2503.01890",
+      "verified_aliases": [
+        "DOI:10.48550/arxiv.2503.01890",
+        "arXiv:2503.01890"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2025-2503.01890-autohete-an-automatic-and-efficient-heterogeneous-training-system-for-llms.md",
+      "source_sha256": "90bfe86556c29a78ae2715a23e61dc1f5b67dfa3b7668c61d99fd69260def73a",
+      "source_git_blob_sha": "7bb42de5018c261a0979e55ca3c7a2c81583bb3f",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "The source evaluates optimizer/activation/parameter management during model training, not LLM inference efficiency; do not infer serving relevance from parameter offload alone.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2503.01890v1; sections_checked=§3 method; §4 evaluation; §5 conclusion.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-165f7b8209",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-165f7b8209"
+    },
+    "arXiv:2510.10481": {
+      "retirement_id": "pr206-retire-09",
+      "canonical_id": "arXiv:2510.10481",
+      "verified_aliases": [
+        "arXiv:2510.10481"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2025-2510.10481-ultrallada-scaling-the-context-length-to-128k-for-diffusion-large-langua.md",
+      "source_sha256": "4a158850e9bdc4a07b707a97e7644dfd96cfa8e2aff5c7768e1c74ad960f54db",
+      "source_git_blob_sha": "ccac396f439546067592726f6ff4e0e8cf9ce85e",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "Longer context alone is not efficiency; outside scope.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2510.10481v1; sections_checked=§3 Method; §4 Experiments; §4.1 Results; §5 Conclusion.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-60dd142abe",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-60dd142abe"
+    },
+    "arXiv:2511.07035": {
+      "retirement_id": "pr206-retire-10",
+      "canonical_id": "arXiv:2511.07035",
+      "verified_aliases": [
+        "DOI:10.48550/arxiv.2511.07035",
+        "arXiv:2511.07035"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2025-2511.07035-gockpt-gradient-assisted-multi-step-overlapped-checkpointing-for-efficient-llm-training.md",
+      "source_sha256": "beb21b4ab8d8df7d7784bdb73fa34773836d7e8e4d8fad61c21ed2967b69551d",
+      "source_git_blob_sha": "9048573409abdbc33a70f50de15bc0935efb68d3",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "Unrelated training bottleneck.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2511.07035v1; sections_checked=§3 Method; §4 Experiments; §5 Conclusion.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-c95545a532",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-c95545a532"
+    },
+    "arXiv:2512.22492": {
+      "retirement_id": "pr206-retire-11",
+      "canonical_id": "arXiv:2512.22492",
+      "verified_aliases": [
+        "arXiv:2512.22492"
+      ],
+      "original_path": "papers/inference/99-other-inference-systems/2025-2512.22492-role-based-fault-tolerance-system-for-llm-rl-post-training.md",
+      "source_sha256": "a13fc69e8ecfc4682cddaa6f3f2e712c751373032ef9265f74e99deae5b7f98e",
+      "source_git_blob_sha": "a6cec3e67d423831a4b9bd13d16f68f76dfcccdf",
+      "source_commit": "1b7941035daa9b02a035ef2bb179dc2691c098e7",
+      "classification": "unrelated",
+      "reason": "Optimizes training fault tolerance, not inference efficiency or serving; disposition unrelated.",
+      "evidence": "Prior reviewed record: drafts/other-removal-reviewed-v2-20261024.json; independent_review_ref=reports/20261024-other-removal-independent-review.md; primary_url=https://arxiv.org/html/2512.22492v1; sections_checked=6 Implementation; 7 Evaluation; 8 Discussion and Limitation.",
+      "relevance_request_id": "retire11-refresh-1b7941-20261025-47cc6d020d",
+      "relevance_result_id": "retire11-refresh-1b7941-20261025-47cc6d020d"
+    }
+  }
+}

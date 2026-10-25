@@ -51,13 +51,13 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 3年前（2023-11〜2024-10）
 
 - **2024-04 · [Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping](2024-2404.19429-lancet.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：11  
   MoE学習の全対全通信をエキスパートだけでなく非MoE計算と重み勾配計算まで学習グラフ全体で重ね、最大1.3倍高速化する。
 
 ### 4年前（2022-11〜2023-10）
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
-  実装：✓ ・ リポジトリ内被引用：24  
+  実装：✓ ・ リポジトリ内被引用：23  
   この疎な計算は理論上、パラメータを増やしても一トークン当たりの演算量を抑えられるが、複数のGPUに専門家を分散した学習ではトークンの偏りが大きな問題になる。FlexMoEはモデル側のトークン選択を変えず、同じ専門家の複製を複数GPUに配置し、実際の負荷に合わせて複製数と配置を調整する。
 
 ### 6年前（2020-11〜2021-10）
@@ -69,6 +69,6 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 7年前（2019-11〜2020-10）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：275  
+  実装：✓ ・ リポジトリ内被引用：273  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->

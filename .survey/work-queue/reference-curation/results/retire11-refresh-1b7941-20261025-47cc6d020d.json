@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "retire11-refresh-1b7941-20261025-47cc6d020d",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2512.22492",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2512.22492",
+    "identity_tokens": [
+      "arXiv:2512.22492",
+      "id:arXiv:2512.22492"
+    ],
+    "reason": "Optimizes training fault tolerance, not inference efficiency or serving; disposition unrelated.",
+    "first_checked_at": "2026-10-25T06:44:20+00:00",
+    "last_checked_at": "2026-10-25T06:44:20+00:00",
+    "linked_from": [],
+    "title": "Role-Based Fault Tolerance System for LLM RL Post-Training"
+  },
+  "processed_at": "2026-10-25T06:44:20+00:00",
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
