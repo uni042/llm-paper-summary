@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-25T13:47:39+00:00",
-  "record_count": 12478,
+  "updated_at": "2026-10-25T16:54:01+00:00",
+  "record_count": 12480,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179785,6 +179785,30 @@
       "last_checked_at": "2026-10-25T13:47:39+00:00",
       "linked_from": [],
       "title": "Learning to Schedule Multi-Server Jobs With Fluctuated Processing Speeds"
+    },
+    "arXiv:2009.07460": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2009.07460",
+      "identity_tokens": [
+        "arXiv:2009.07460"
+      ],
+      "reason": "原著要旨はFPGAのLUTとDSPを同時活用するCNN/DNN向け量子化であり、ResNet系画像分類を主な評価対象とする。生成LLM、Transformer、SSM、KVキャッシュ、MoE、サービングへの実証を扱わない。FPGA量子化という周辺技術としては参考になるが、現行のLLM推論・学習サーベイの直接対象から外れる。",
+      "first_checked_at": "2026-10-25T16:53:57+00:00",
+      "last_checked_at": "2026-10-25T16:53:57+00:00",
+      "linked_from": [],
+      "title": "MSP: An FPGA-Specific Mixed-Scheme, Multi-Precision Deep Neural Network Quantization Framework"
+    },
+    "DOI:10.1155/2022/1090777": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1155/2022/1090777",
+      "identity_tokens": [
+        "DOI:10.1155/2022/1090777"
+      ],
+      "reason": "出版社の一次要旨によれば、研究対象は上場企業と投資家の対話テキストからの金融センチメント分類であり、既存のDeeBERT早期終了と逐次三分岐意思決定（S3WD）を組み合わせ、分類の処理時間と精度を調整する応用研究である。生成LLMの推論基盤・サービング・KVキャッシュ・MoE・オフロード等に対する新しいシステム機構を提案・評価しておらず、対象系統から外れる。",
+      "first_checked_at": "2026-10-25T16:54:01+00:00",
+      "last_checked_at": "2026-10-25T16:54:01+00:00",
+      "linked_from": [],
+      "title": "DeeBERT-S3WD: Three-Way Multigranularity Decision for Interactive Information Sentiment Analysis Research"
     }
   }
 }

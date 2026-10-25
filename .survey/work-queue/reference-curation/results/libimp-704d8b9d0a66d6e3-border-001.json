@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-704d8b9d0a66d6e3-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2402.01093",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2402.01093",
+    "identity_tokens": [
+      "arXiv:2402.01093"
+    ],
+    "reason": "小型専門言語モデルを低推論予算で運用するため、重要度サンプリングによる事前学習データの再配分と、共通大モデルから小モデルへ投影するProjected Networksを提案。小型生成モデルの導入費用に関連するが、中心的な貢献は学習データ設計・特化学習であり、推論エンジン、KVキャッシュ、メモリ階層、サービング最適化の実測を要旨では示さないため境界扱い。",
+    "first_checked_at": "2026-10-25T16:54:00+00:00",
+    "last_checked_at": "2026-10-25T16:54:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Need a Small Specialized Language Model? Plan Early!"
+  },
+  "processed_at": "2026-10-25T16:54:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-704d8b9d0a66",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

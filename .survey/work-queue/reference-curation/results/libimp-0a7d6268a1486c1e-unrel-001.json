@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0a7d6268a1486c1e-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2009.07460",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2009.07460",
+    "identity_tokens": [
+      "arXiv:2009.07460"
+    ],
+    "reason": "原著要旨はFPGAのLUTとDSPを同時活用するCNN/DNN向け量子化であり、ResNet系画像分類を主な評価対象とする。生成LLM、Transformer、SSM、KVキャッシュ、MoE、サービングへの実証を扱わない。FPGA量子化という周辺技術としては参考になるが、現行のLLM推論・学習サーベイの直接対象から外れる。",
+    "first_checked_at": "2026-10-25T16:53:57+00:00",
+    "last_checked_at": "2026-10-25T16:53:57+00:00",
+    "linked_from": [],
+    "title": "MSP: An FPGA-Specific Mixed-Scheme, Multi-Precision Deep Neural Network Quantization Framework"
+  },
+  "processed_at": "2026-10-25T16:53:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0a7d6268a148",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
