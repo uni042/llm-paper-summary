@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-25T15:09:09.233168+00:00",
+  "generated_at": "2026-10-25T15:59:35.795375+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 8,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
-    "scheduled-chat-45": 1
+    "scheduled-chat-00": 3,
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -77,6 +77,66 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md",
+      "canonical_id": "arXiv:2312.12682",
+      "title": "Mini-GPTs: Efficient Large Language Models through Contextual Pruning",
+      "file_bytes": 15673,
+      "source_sha256": "579530376c2c15d642c0a8cbae0876d6fd471931f32bb0fff067c2c861245d13",
+      "source_git_blob_sha": "d0bb9e6bbad0016b184a5d72dbdcdfe476892472",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.955252,
+      "quality_metrics": {
+        "body_chars": 4578,
+        "method_chars": 1208,
+        "evaluation_chars": 1248,
+        "limitation_chars": 459
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
+      "canonical_id": "arXiv:2307.03738",
+      "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
+      "file_bytes": 15796,
+      "source_sha256": "f72ae4d0162180f2615e3561073ccd4d0ba056e29006b364c00217dbfdb90ddd",
+      "source_git_blob_sha": "fc381bcf943ae0530781697bbd5af6b795e375e8",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.94702,
+      "quality_metrics": {
+        "body_chars": 4513,
+        "method_chars": 1287,
+        "evaluation_chars": 1065,
+        "limitation_chars": 453
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/06-moe-quantization-compression/2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md",
+      "canonical_id": "arXiv:2509.02512",
+      "title": "MoPEQ: Mixture of Mixed Precision Quantized Experts",
+      "file_bytes": 15818,
+      "source_sha256": "668b1d8649fabaabefa0172cc4881d9419804ed42d39345d787fb4959b216a6c",
+      "source_git_blob_sha": "78d9694e0505d6e481d1f207368ea87faa388b79",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.879587,
+      "quality_metrics": {
+        "body_chars": 4501,
+        "method_chars": 1437,
+        "evaluation_chars": 1144,
+        "limitation_chars": 487
       },
       "mechanical_failures": [],
       "warnings": []
