@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "71497539606c49626fa7736d0929ba8c7254a04297a820fb709505a94025327a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-45638413f3de--libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2506.08018",
+  "worker_completed_at": "2026-10-25T11:08:00+09:00",
+  "worker_run_key": "20261025-1056-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6268,
+    "body_paragraphs": 36,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1411,
+    "limitation_chars": 864,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-25T03:29:16+00:00"
+}
