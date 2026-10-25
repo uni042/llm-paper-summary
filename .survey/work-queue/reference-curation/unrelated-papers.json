@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-24T22:49:05+00:00",
-  "record_count": 12456,
+  "updated_at": "2026-10-25T04:51:34+00:00",
+  "record_count": 12458,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179503,6 +179503,30 @@
       "last_checked_at": "2026-10-24T22:49:05+00:00",
       "linked_from": [],
       "title": "On The Application of Linear Attention in Multimodal Transformers"
+    },
+    "arXiv:2409.01988": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01988",
+      "identity_tokens": [
+        "arXiv:2409.01988"
+      ],
+      "reason": "原著は衛星・ドローン等の地球観測画像を、機上の疎な線形変換で圧縮し、地上でunrolled NA-ALISTAと画像分類器へ渡す通信路を扱う。最終評価は画像の意味圧縮と分類であり、LLMの重み・KVキャッシュ圧縮やテキスト生成の実行系ではない。",
+      "first_checked_at": "2026-10-25T04:51:26+00:00",
+      "last_checked_at": "2026-10-25T04:51:26+00:00",
+      "linked_from": [],
+      "title": "Compressed learning based onboard semantic compression for remote sensing platforms"
+    },
+    "arXiv:2209.00625": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2209.00625",
+      "identity_tokens": [
+        "arXiv:2209.00625"
+      ],
+      "reason": "原著第3節はBing広告検索におけるクエリと広告の関連性をBERT-Miniで判定するCPUオンラインサービスを最終適用先とする。第4節は広告向け4層BERTのattention head/FFN次元の層別構造枝刈りと強化進化探索を説明し、第5節は広告AUC、1900マイクロ秒のCPU遅延、広告の不良表示率を評価する。自己回帰LLMのトークン生成、KVキャッシュ、MoE、推論サービングを評価しておらず、現行の生成LLM推論系統には直接対応しない。",
+      "first_checked_at": "2026-10-25T04:51:34+00:00",
+      "last_checked_at": "2026-10-25T04:51:34+00:00",
+      "linked_from": [],
+      "title": "SwiftPruner: Reinforced Evolutionary Pruning for Efficient Ad Relevance"
     }
   }
 }
