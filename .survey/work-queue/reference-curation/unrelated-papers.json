@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-25T16:54:01+00:00",
-  "record_count": 12480,
+  "updated_at": "2026-10-25T21:49:15+00:00",
+  "record_count": 12490,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179809,6 +179809,126 @@
       "last_checked_at": "2026-10-25T16:54:01+00:00",
       "linked_from": [],
       "title": "DeeBERT-S3WD: Three-Way Multigranularity Decision for Interactive Information Sentiment Analysis Research"
+    },
+    "arXiv:2508.01505": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.01505",
+      "identity_tokens": [
+        "arXiv:2508.01505"
+      ],
+      "reason": "題名は汎用のハードウェア認識型ニューラル構造探索に用いる代理モデル構築であり、LLM推論の実行時最適化や生成サービングを主対象としていない。",
+      "first_checked_at": "2026-10-25T21:49:07+00:00",
+      "last_checked_at": "2026-10-25T21:49:07+00:00",
+      "linked_from": [],
+      "title": "ESM: A Framework for Building Effective Surrogate Models for Hardware-Aware Neural Architecture Search"
+    },
+    "arXiv:2506.08026": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.08026",
+      "identity_tokens": [
+        "arXiv:2506.08026"
+      ],
+      "reason": "題名は市場予測向け推論タスクのスケジューリングであり、LLMの自己回帰生成やKVキャッシュ・MoE推論のサービングを対象としていない。",
+      "first_checked_at": "2026-10-25T21:49:08+00:00",
+      "last_checked_at": "2026-10-25T21:49:08+00:00",
+      "linked_from": [],
+      "title": "TIP-Search: Time-Predictable Inference Scheduling for Market Prediction under Uncertain Load"
+    },
+    "arXiv:2301.08353": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.08353",
+      "identity_tokens": [
+        "arXiv:2301.08353"
+      ],
+      "reason": "題名の対象は広告クリック率予測向けの疎なアンサンブルネットワーク学習であり、自己回帰LLM推論や推論基盤の効率化とは研究対象が異なる。",
+      "first_checked_at": "2026-10-25T21:49:09+00:00",
+      "last_checked_at": "2026-10-25T21:49:09+00:00",
+      "linked_from": [],
+      "title": "AdaEnsemble: Learning Adaptively Sparse Structured Ensemble Network for Click-Through Rate Prediction"
+    },
+    "arXiv:2504.14992": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.14992",
+      "identity_tokens": [
+        "arXiv:2504.14992"
+      ],
+      "reason": "題名の中心は事前学習時の系列長スケーリングであり、推論時の系列長処理・KVメモリ・生成高速化を対象とする技術であるとは確認できない。学習専用の効率化として除外する。",
+      "first_checked_at": "2026-10-25T21:49:10+00:00",
+      "last_checked_at": "2026-10-25T21:49:10+00:00",
+      "linked_from": [],
+      "title": "Efficient Pretraining Length Scaling"
+    },
+    "arXiv:2502.03092": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.03092",
+      "identity_tokens": [
+        "arXiv:2502.03092"
+      ],
+      "reason": "題名は双方向特徴合成を用いた連合学習の通信効率化であり、学習時の通信を対象とする。LLM推論やサービングの実行経路ではなく、学習単独最適化の凍結範囲に該当する。",
+      "first_checked_at": "2026-10-25T21:49:11+00:00",
+      "last_checked_at": "2026-10-25T21:49:11+00:00",
+      "linked_from": [],
+      "title": "E-3SFC: Communication-Efficient Federated Learning With Double-Way Features Synthesizing"
+    },
+    "arXiv:2509.21201": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21201",
+      "identity_tokens": [
+        "arXiv:2509.21201"
+      ],
+      "reason": "題名はRIS支援無線伝送での特徴量子化とビームフォーミングを組み合わせたエッジAI推論の通信最適化であり、LLM生成推論のモデル・カーネル・サービングではない。",
+      "first_checked_at": "2026-10-25T21:49:12+00:00",
+      "last_checked_at": "2026-10-25T21:49:12+00:00",
+      "linked_from": [],
+      "title": "Hybrid RIS-Aided Digital Over-the-Air Computing for Edge AI Inference: Joint Feature Quantization and Active-Passive Beamforming Design"
+    },
+    "arXiv:2506.12537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.12537",
+      "identity_tokens": [
+        "arXiv:2506.12537"
+      ],
+      "reason": "題名の主題は音声生成向けトークナイザの比較・評価であり、LLM推論基盤のメモリ・計算・サービング効率を改善する方式ではない。",
+      "first_checked_at": "2026-10-25T21:49:12+00:00",
+      "last_checked_at": "2026-10-25T21:49:12+00:00",
+      "linked_from": [],
+      "title": "What Makes a Good Speech Tokenizer for LLM-Centric Speech Generation? A Systematic Study"
+    },
+    "arXiv:2409.02743": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.02743",
+      "identity_tokens": [
+        "arXiv:2409.02743"
+      ],
+      "reason": "題名は状態空間モデルを用いた画像圧縮であり、圧縮対象は画像データ。LLMの重み量子化、KVキャッシュ、生成推論の効率化ではない。",
+      "first_checked_at": "2026-10-25T21:49:13+00:00",
+      "last_checked_at": "2026-10-25T21:49:13+00:00",
+      "linked_from": [],
+      "title": "Efficient Image Compression Using Advanced State Space Models"
+    },
+    "arXiv:2311.12537": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2311.12537",
+      "identity_tokens": [
+        "arXiv:2311.12537"
+      ],
+      "reason": "題名はLLM事前学習のためのデータ収集・評価基盤であり、学習データの品質管理を主目的とする。LLMの実行時推論・サービング効率とは異なる。",
+      "first_checked_at": "2026-10-25T21:49:14+00:00",
+      "last_checked_at": "2026-10-25T21:49:14+00:00",
+      "linked_from": [],
+      "title": "Oasis: Data Curation and Assessment System for Pretraining of Large Language Models"
+    },
+    "arXiv:2310.07664": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07664",
+      "identity_tokens": [
+        "arXiv:2310.07664"
+      ],
+      "reason": "題名は画像認識向けVision Transformerの注意パターンを高速化する研究であり、自己回帰LLMの推論・サービング、KVキャッシュ管理の実装を対象としていない。",
+      "first_checked_at": "2026-10-25T21:49:15+00:00",
+      "last_checked_at": "2026-10-25T21:49:15+00:00",
+      "linked_from": [],
+      "title": "Accelerating Vision Transformers Based on Heterogeneous Attention Patterns"
     }
   }
 }

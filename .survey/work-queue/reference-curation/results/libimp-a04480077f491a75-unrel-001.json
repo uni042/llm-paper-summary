@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a04480077f491a75-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2509.21201",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2509.21201",
+    "identity_tokens": [
+      "arXiv:2509.21201"
+    ],
+    "reason": "題名はRIS支援無線伝送での特徴量子化とビームフォーミングを組み合わせたエッジAI推論の通信最適化であり、LLM生成推論のモデル・カーネル・サービングではない。",
+    "first_checked_at": "2026-10-25T21:49:12+00:00",
+    "last_checked_at": "2026-10-25T21:49:12+00:00",
+    "linked_from": [],
+    "title": "Hybrid RIS-Aided Digital Over-the-Air Computing for Edge AI Inference: Joint Feature Quantization and Active-Passive Beamforming Design"
+  },
+  "processed_at": "2026-10-25T21:49:12+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a04480077f49",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

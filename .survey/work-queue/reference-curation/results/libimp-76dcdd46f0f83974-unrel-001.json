@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-76dcdd46f0f83974-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2504.14992",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2504.14992",
+    "identity_tokens": [
+      "arXiv:2504.14992"
+    ],
+    "reason": "題名の中心は事前学習時の系列長スケーリングであり、推論時の系列長処理・KVメモリ・生成高速化を対象とする技術であるとは確認できない。学習専用の効率化として除外する。",
+    "first_checked_at": "2026-10-25T21:49:10+00:00",
+    "last_checked_at": "2026-10-25T21:49:10+00:00",
+    "linked_from": [],
+    "title": "Efficient Pretraining Length Scaling"
+  },
+  "processed_at": "2026-10-25T21:49:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-76dcdd46f0f8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
