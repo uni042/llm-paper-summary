@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（943本）
+## 自動生成の論文一覧（944本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2105,6 +2105,10 @@
 - **2025-12 · [Rethinking Output Alignment For 1-bit Post-Training Quantization of Large Language Models](2025-2512.21651-rethinking-output-alignment-for-1-bit-post-training-quantization-of-larg.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）を事後量子化（Post-学習 量子化; PTQ）で1ビットへ圧縮すると、重みをほぼ±1に制限するため、4ビットなどの量子化より精度劣化が大きい。
+
+- **2025-12 · [Resting Neurons, Active Insights: Improving Input Sparsification for Large Language Models](2025-2512.12744-resting-neurons-active-insights-improving-input-sparsification-for-large.md)**  
+  実装：[✓](https://github.com/hxu105/SPON) ・ リポジトリ内被引用：0  
+  この論文は、事前学習済み大規模言語モデルに入力活性の疎化を適用すると、計算の省略と引き換えに言語理解性能が落ちる問題を扱う。提案する自発ニューロン（Spontaneous Neurons; SPON）は、入力ごとに選択される活性とは別に、層ごとに固定された少数の補正活性を学習する。
 
 - **2025-12 · [RAPID-LLM: Runtime Analysis of Parallel Infrastructure for Distributed LLM Training and Inference](2025-2512.19606-rapid-llm-runtime-analysis-of-parallel-infrastructure-for-distributed-ll.md)**  
   実装：[✓](https://github.com/nanocad-lab/Rapid-LLM) ・ リポジトリ内被引用：0  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T09:07:11+00:00",
+  "generated_at": "2026-10-25T09:23:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 29,
+  "count": 32,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -727,8 +727,8 @@
     },
     {
       "canonical_id": "arXiv:2501.04987",
-      "title": "TreeKV: Smooth Key-Value Cache Compression with Tree Structures",
-      "source_url": "https://arxiv.org/abs/2501.04987",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T09:03:49+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -754,8 +754,8 @@
     },
     {
       "canonical_id": "arXiv:2504.13932",
-      "title": "Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining",
-      "source_url": "https://arxiv.org/abs/2504.13932",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T09:04:54+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -778,6 +778,92 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.10714",
+      "title": "SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators",
+      "source_url": "https://arxiv.org/abs/2410.10714",
+      "returned_at": "2026-10-25T09:21:33+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5611,
+        "body_paragraphs": 32,
+        "method_chars": 1855,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_5eb827f4c0708191a2138357bc381658--2024-2410.10714-seedlm-lfsr-weight-compression-research-20261025-1703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_5eb827f4c0708191a2138357bc381658--2024-2410.10714-seedlm-lfsr-weight-compression-research-20261025-1703-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.06766",
+      "title": "Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2502.06766",
+      "returned_at": "2026-10-25T09:21:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5670,
+        "body_paragraphs": 29,
+        "method_chars": 1801,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.15955",
+      "title": "Compression Barriers in Autoregressive Transformers",
+      "source_url": "https://arxiv.org/abs/2502.15955",
+      "returned_at": "2026-10-25T09:22:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5682,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_868c868d49308191878fd3bc5d34b6c1--2025-2502.15955-compression-barriers-transformers-research-20261025-1703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_868c868d49308191878fd3bc5d34b6c1--2025-2502.15955-compression-barriers-transformers-research-20261025-1703-scheduled-chat-00-r01.json",
       "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     }
   ]

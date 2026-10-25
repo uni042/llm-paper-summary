@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（114本）
+## 自動生成の論文一覧（115本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -391,6 +391,10 @@
 - **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
   実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：1  
   Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとの上位k選択（top-k）を避けて注意計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1程度まで減らす条件を示す一方、強い疎化や実装条件によって品質・実速度の利得が変わる。
+
+- **2025-10 · [Adamas: Hadamard Sparse Attention for Efficient Long-Context Inference](2025-2510.18413-adamas-hadamard-sparse-attention-for-efficient-long-context-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Adamasは、長文脈LLMの復号時に、過去のすべてのKey/Value（KV）を読み込んで正確な注意を計算する代わりに、現在のQueryに関連する過去トークンだけを選択する疎注意方式である。
 
 - **2025-08 · [Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention](2025-483ca98d7491-efficient-attention-methods-hardware-efficient-sparse-compact-and-linear.md)**  
   実装：[✓](https://github.com/attention-survey/Efficient_Attention_Survey) ・ リポジトリ内被引用：0  

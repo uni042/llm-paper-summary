@@ -27,6 +27,8 @@ worker_run_key: "20261025-1703-scheduled-chat-00/r01"
 reference_main_sha: "6ad4830e92ee1130f2fc6145e621bd64d0a7f36d"
 summary: "TreeKVは、遠い過去のKVを粗く、最近のKVを密に残す木状の保持分布を、隣接二候補からの循環的な追放で作る学習不要の固定容量KVキャッシュ圧縮方式。復号では累積注意の平均で二候補を比較し、事前入力では最終ブロックを観測窓としてブロック単位で選別する。Llama-2-7Bの16K文脈・1024 KV予算でPG19 PPL 6.91（TOVA 7.15）、OpenWebText2 PPL 5.18（TOVA 5.24）。Llama-3.2-1BのLongBenchでは2K予算で平均31.70（SnapKV 31.50）、8K予算で32.80（全KV 32.86）だが、個別の多文書QA・要約でSnapKVに劣る。"
 list_summary: "循環する隣接二候補のKV追放で古い文脈を疎、最近を密に残す。16K文脈・1024 KVでPG19 PPL 6.91、LongBench 8K予算では平均32.80。"
+last_audited: null
+audit_version: 0
 ---
 
 # TreeKV: Smooth Key-Value Cache Compression with Tree Structures
