@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（957本）
+## 自動生成の論文一覧（958本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2835,6 +2835,10 @@
 - **2025-05 · [Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs](2025-2505.19155-sparse-to-dense-a-free-lunch-for-lossless-acceleration-of-video-understa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動画を扱う大規模言語モデルでは、数百フレームの映像が数万から十数万の視覚トークンへ展開される。例えば原著が挙げるVILAの設定では、1時間の映像を5秒間隔で720フレーム抽出すると141,120視覚トークンになる。この小さいKV集合で同じモデルを繰り返し実行して候補トークンを作り、元の全KVを使うモデルが候補列をまとめて検証する。
+
+- **2025-05 · [Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models](2025-2505.11271-semantic-caching-of-contextual-summaries-for-efficient-question-answerin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、文書検索とLLM呼出しを組み合わせる質問応答で、回答そのものでもKVキャッシュでもなく、質問に合わせて生成した中間の文書要約をキャッシュする方法を扱う。文書を検索した後に要約し、その要約と質問を使って回答する複数段階のワークフローでは、同じ文書に対して似た質問が繰り返される。
 
 - **2025-05 · [DenoiseRotator: Enhance Pruning Robustness for LLMs via Importance Concentration](2025-2505.23049-denoiserotator-enhance-pruning-robustness-for-llms-via-importance-concen.md)**  
   実装：[✓](https://github.com/Axel-gu/DenoiseRotator) ・ リポジトリ内被引用：0  

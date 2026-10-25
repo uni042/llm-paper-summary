@@ -30,6 +30,8 @@ reference_main_sha: "a0a5bb77cc124d35c5e511a435396dacc8105df3"
 worker_completed_at: "2026-10-25T21:55:54+09:00"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # HD-Gist — API仕様を階層的に圧縮し必要な値だけ展開するプロンプト圧縮

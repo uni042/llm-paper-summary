@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T14:03:55+00:00",
+  "generated_at": "2026-10-25T14:17:47+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 32,
+  "count": 33,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -838,8 +838,8 @@
     },
     {
       "canonical_id": "arXiv:2412.14847",
-      "title": "A Survey of RWKV",
-      "source_url": "https://arxiv.org/html/2412.14847",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T14:01:08+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -863,6 +863,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_6492c7432e2481919727c07e8e288787--2024-2412.14847-rwkv-survey-returned-repair-20261025-2200-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_6492c7432e2481919727c07e8e288787--2024-2412.14847-rwkv-survey-returned-repair-20261025-2200-scheduled-chat-00-r01.json",
       "worker_run_key": "20261025-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2509.02512",
+      "title": "MoPEQ: Mixture of Mixed Precision Quantized Experts",
+      "source_url": "https://arxiv.org/html/2509.02512v1",
+      "returned_at": "2026-10-25T14:16:12+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4004,
+        "body_paragraphs": 21,
+        "method_chars": 1079,
+        "method_paragraphs": 5,
+        "evaluation_chars": 1159,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a5658552fc5881918f2b35b6afba25e7--2025-2509.02512-mopeq-expert-mixed-precision-research-20261025-1945-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a5658552fc5881918f2b35b6afba25e7--2025-2509.02512-mopeq-expert-mixed-precision-research-20261025-1945-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261025-1945-scheduled-chat-45/r01"
     }
   ]
 }

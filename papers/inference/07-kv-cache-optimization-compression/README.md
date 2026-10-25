@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（333本）
+## 自動生成の論文一覧（334本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1342,6 +1342,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-09 · [CSKV: Training-Efficient Channel Shrinking for KV Cache in Long-Context Scenarios](2024-2409.10593-cskv-training-efficient-channel-shrinking-for-kv-cache-in-long-context-s.md)**  
   実装：[✓](https://github.com/wln20/CSKV) ・ リポジトリ内被引用：0  
   過去トークンの表現を毎回計算し直さずに済む一方、保存容量は文脈長にほぼ比例して増え、長い文書の読解や検索でGPUメモリを圧迫する。量子化は保存ビット数を減らすが、高圧縮では誤差が増える。LongChat-7B-v1.5-32kでは80%のKV容量圧縮時、LongEvalの10K検索正答率が無圧縮0.98に対してCSKV0.90となる。
+
+- **2024-03 · [Hierarchical and Dynamic Prompt Compression for Efficient Zero-shot API Usage](2024-60b566817f9b-hierarchical-and-dynamic-prompt-compression-for-efficient-zero-shot-api-.md)**  
+  実装：[✓](https://github.com/jiangycTarheel/HD-Gist) ・ リポジトリ内被引用：0  
+  従来のgist トークン方式は文書を固定個数の特殊トークンの隠れ状態へ圧縮できるが、API呼出しのように細かい引数名・値の正確さが必要なタスクでは情報が失われ、圧縮前より大きく精度が低下する。
 
 ### 4年前（2022-11〜2023-10）
 
