@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（162本）
+## 自動生成の論文一覧（163本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -531,6 +531,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [M-Wanda: Improving One-Shot Pruning for Multilingual LLMs](2025-2505.21171-m-wanda-improving-one-shot-pruning-for-multilingual-llms.md)**  
   実装：[✓](https://github.com/RochelleChoenni/M-Wanda) ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の重みを一部ゼロにする枝刈り（枝刈り）は、保存する非ゼロ重みを減らすための圧縮方法である。50%の非構造化疎化率で、Llama3-8BのFlores平均パープレキシティ（perplexity、低いほど次トークン予測が良好）はWandaの19.59からM-Wandaの18.57へ下がった。
+
+- **2025-05 · [Low-Cost FlashAttention with Fused Exponential and Multiplication Hardware Operators](2025-2505.14314-low-cost-flashattention-with-fused-exponential-and-multiplication-hardwa.md)**  
+  実装：[✓](https://github.com/ic-lab-duth/Fused-ExpMul) ・ リポジトリ内被引用：0  
+  本論文は、FlashAttention-2の計算アルゴリズムを変えるのではなく、オンラインsoftmaxに必要な指数関数とValueベクトル乗算をASIC上の一つの演算器へまとめるハードウェア最適化を提案する。
 
 - **2024-11 · [TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture](2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

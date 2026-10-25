@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T17:52:56+00:00",
+  "generated_at": "2026-10-25T18:07:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 32,
+  "count": 33,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -777,8 +777,8 @@
     },
     {
       "canonical_id": "arXiv:2608.14290",
-      "title": "Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning",
-      "source_url": "https://arxiv.org/pdf/2608.14290",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T17:52:29+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -803,38 +803,9 @@
       "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2504.04514",
-      "title": "Saliency-driven Dynamic Token Pruning for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2504.04514",
-      "returned_at": "2026-10-25T17:52:31+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 363 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6546,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 363,
-        "limitation_chars": 711,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 363 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/file_000000008e1c81f7954c5aa55070170f--2025-2504.04514-sdtp-saliency-dynamic-token-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/file_000000008e1c81f7954c5aa55070170f--2025-2504.04514-sdtp-saliency-dynamic-token-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2507.18007",
-      "title": "Cloud Native System for LLM Inference Serving",
-      "source_url": "https://arxiv.org/pdf/2507.18007",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T17:52:32+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -856,6 +827,62 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/file_000000009aa881f5ba9411abe875a2a7--2025-2507.18007-cloud-native-layer-microservice-autoscaling-research-20261026-0230-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/file_000000009aa881f5ba9411abe875a2a7--2025-2507.18007-cloud-native-layer-microservice-autoscaling-research-20261026-0230-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.09613",
+      "title": "SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot",
+      "source_url": "https://proceedings.mlr.press/v306/tuo26a.html",
+      "returned_at": "2026-10-25T18:03:26+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6615,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1175,
+        "limitation_chars": 812,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/file_00000000cd6881f5a61135da7ca66aa1--2025-2506.09613-sparsessm-time-shared-ssm-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/file_00000000cd6881f5a61135da7ca66aa1--2025-2506.09613-sparsessm-time-shared-ssm-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.04514",
+      "title": "Saliency-driven Dynamic Token Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2504.04514",
+      "returned_at": "2026-10-25T18:05:31+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 363 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6546,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 363,
+        "limitation_chars": 711,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 363 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b95c5a4569a3--file_000000008e1c81f7954c5aa55070170f--2025-2504.04514-sdtp-saliency-dynamic-token-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b95c5a4569a3--file_000000008e1c81f7954c5aa55070170f--2025-2504.04514-sdtp-saliency-dynamic-token-pruning-research-20261026-0230-scheduled-chat-30.json",
       "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
     }
   ]

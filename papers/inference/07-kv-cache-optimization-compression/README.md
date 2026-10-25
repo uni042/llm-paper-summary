@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（335本）
+## 自動生成の論文一覧（336本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1072,6 +1072,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-08 · [KV Cache Compression for Inference Efficiency in LLMs: A Review](2025-2508.06297-kv-cache-compression-for-inference-efficiency-in-llms-a-review.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   著者はKV圧縮を、重要なトークンを選んで残す方式、K/Vのビット幅を下げる量子化、注意構造やヘッドの冗長性を利用する方式、複数の技術を組み合わせる方式に分類する。
+
+- **2025-06 · [AnTKV: Anchor Token-Aware Sub-Bit Vector Quantization for KV Cache in Large Language Models](2025-2506.19505-antkv-anchor-token-aware-sub-bit-vector-quantization-for-kv-cache-in-lar.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  AnTKVは、TransformerのKVキャッシュを極端に低いビット幅へ圧縮したときの品質劣化を、トークンごとの誤差感度が均一ではないという観察から抑える方式である。FP16のアンカーが全体の1%でも、1bit以下の領域で大きな品質改善が報告される。
 
 - **2025-05 · [KVmix: Gradient-Based Layer Importance-Aware Mixed-Precision Quantization for KV Cache](2025-2506.08018-kvmix-gradient-based-layer-importance-aware-mixed-precision-quantization.md)**  
   実装：[✓](https://github.com/LfLab-AI/KVmix) ・ リポジトリ内被引用：2  

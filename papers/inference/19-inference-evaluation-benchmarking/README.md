@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（67本）
+## 自動生成の論文一覧（68本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -219,6 +219,10 @@
 - **2025-10 · [Growing a Twig to Accelerate Large Vision-Language Models](2025-2503.14075-growing-a-twig-to-accelerate-large-vision-language-models.md)**  
   実装：[✓](https://github.com/MILVLG/twigvlm) ・ リポジトリ内被引用：6  
   初期の視覚トークン枝刈り方式は、入力処理（プリフィル）の計算量を減らす一方、初期層の注意得点が質問内容を十分反映しないため、削除してはいけない視覚トークンを捨てやすい。ICCV 2025論文の主結果では、LLaVA-1.5-7Bの平均視覚トークンを576から64へ減らした設定（88.9%削減）で、6課題の平均相対性能96.0%を維持した。
+
+- **2025-09 · [Training Matryoshka Mixture-of-Experts for Elastic Inference-Time Expert Utilization](2025-2509.26520-training-matryoshka-mixture-of-experts-for-elastic-inference-time-expert.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  1T トークンをk=1で事前学習したcheckpointから、各方式でさらに80B トークンを継続学習する。
 
 - **2025-07 · [Collaborative Inference and Learning between Edge SLMs and Cloud LLMs: A Survey of Algorithms, Execution, and Open Challenges](2025-2507.16731-collaborative-inference-and-learning-between-edge-slms-and-cloud-llms-a-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
