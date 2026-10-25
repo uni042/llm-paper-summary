@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "31adf47c19d7df6f3d9567d09c30c815918be5a0cb653ae570a59a49fb7794b5",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c674aef40dfc--libfile_a752345bfd588191bba6062af5765d05--2025-2502.14644-lift-long-input-finetuning-research-20261025-1830-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2502.14644",
+  "worker_completed_at": "2026-10-25T18:30:00+09:00",
+  "worker_run_key": "20261025-1830-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5607,
+    "body_paragraphs": 32,
+    "method_chars": 1597,
+    "method_paragraphs": 9,
+    "evaluation_chars": 146,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 146 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 146 < 500"
+  ],
+  "processed_at": "2026-10-25T11:26:26+00:00"
+}

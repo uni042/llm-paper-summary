@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T11:17:06+00:00",
+  "generated_at": "2026-10-25T11:26:31+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -699,90 +699,6 @@
       "worker_run_key": "20261025-1056-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2504.13932",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T09:04:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5279,
-        "body_paragraphs": 27,
-        "method_chars": 1486,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.06766",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T09:21:34+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5670,
-        "body_paragraphs": 29,
-        "method_chars": 1801,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.14644",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T10:02:55+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 146 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5607,
-        "body_paragraphs": 32,
-        "method_chars": 1597,
-        "method_paragraphs": 9,
-        "evaluation_chars": 146,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 146 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a752345bfd588191bba6062af5765d05--2025-2502.14644-lift-long-input-finetuning-research-20261025-1830-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a752345bfd588191bba6062af5765d05--2025-2502.14644-lift-long-input-finetuning-research-20261025-1830-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261025-1830-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2412.14847",
       "title": null,
       "source_url": null,
@@ -896,8 +812,8 @@
     },
     {
       "canonical_id": "arXiv:2504.15720",
-      "title": "SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference",
-      "source_url": "https://arxiv.org/abs/2504.15720",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T11:16:57+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -923,8 +839,8 @@
     },
     {
       "canonical_id": "arXiv:2501.04987",
-      "title": "TreeKV: Smooth Key-Value Cache Compression with Tree Structures",
-      "source_url": "https://arxiv.org/abs/2501.04987",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T11:16:59+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -950,8 +866,8 @@
     },
     {
       "canonical_id": "arXiv:2506.03762",
-      "title": "AhaKV: Adaptive Holistic Attention-Driven KV Cache Eviction for Efficient Inference of Large Language Models",
-      "source_url": "https://arxiv.org/abs/2506.03762",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T11:17:01+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -978,8 +894,8 @@
     },
     {
       "canonical_id": "arXiv:2410.10714",
-      "title": "SeedLM: Compressing LLM Weights into Seeds of Pseudo-Random Generators",
-      "source_url": "https://arxiv.org/abs/2410.10714",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T11:17:04+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1002,6 +918,90 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9c89cdae625b--libfile_5eb827f4c0708191a2138357bc381658--2024-2410.10714-seedlm-lfsr-weight-compression-research-20261025-1703-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-9c89cdae625b--libfile_5eb827f4c0708191a2138357bc381658--2024-2410.10714-seedlm-lfsr-weight-compression-research-20261025-1703-scheduled-chat-00-r.json",
+      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.13932",
+      "title": "Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining",
+      "source_url": "https://arxiv.org/abs/2504.13932",
+      "returned_at": "2026-10-25T11:26:25+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5279,
+        "body_paragraphs": 27,
+        "method_chars": 1486,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ac4206bc99d1--libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ac4206bc99d1--libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.14644",
+      "title": "LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning",
+      "source_url": "https://arxiv.org/pdf/2502.14644",
+      "returned_at": "2026-10-25T11:26:26+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 146 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5607,
+        "body_paragraphs": 32,
+        "method_chars": 1597,
+        "method_paragraphs": 9,
+        "evaluation_chars": 146,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 146 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c674aef40dfc--libfile_a752345bfd588191bba6062af5765d05--2025-2502.14644-lift-long-input-finetuning-research-20261025-1830-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c674aef40dfc--libfile_a752345bfd588191bba6062af5765d05--2025-2502.14644-lift-long-input-finetuning-research-20261025-1830-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261025-1830-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.06766",
+      "title": "Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs",
+      "source_url": "https://arxiv.org/abs/2502.06766",
+      "returned_at": "2026-10-25T11:26:28+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5670,
+        "body_paragraphs": 29,
+        "method_chars": 1801,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca06ce64698d--libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca06ce64698d--libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r.json",
       "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     }
   ]
