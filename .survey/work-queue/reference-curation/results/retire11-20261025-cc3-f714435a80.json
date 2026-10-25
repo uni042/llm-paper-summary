@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "retire11-20261025-cc3-f714435a80",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2409.00918",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2409.00918",
+    "identity_tokens": [
+      "arXiv:2409.00918",
+      "id:DOI:10.48550/arxiv.2409.00918",
+      "id:arXiv:2409.00918"
+    ],
+    "reason": "DisDP disaggregates compute, network collectives, and optimizer/storage for model-sharded data-parallel training; no inference execution is evaluated. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+    "first_checked_at": "2026-10-25T01:54:03+00:00",
+    "last_checked_at": "2026-10-25T01:54:03+00:00",
+    "linked_from": [],
+    "title": "DisDP: Disaggregating Compute, Network, and Storage for Model-Sharded Data-Parallel Training"
+  },
+  "processed_at": "2026-10-25T01:54:03+00:00",
+  "worker_id": null,
+  "run_key": null,
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

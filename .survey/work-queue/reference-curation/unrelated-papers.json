@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-24T22:49:05+00:00",
-  "record_count": 12456,
+  "updated_at": "2026-10-25T01:54:04+00:00",
+  "record_count": 12467,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179503,6 +179503,153 @@
       "last_checked_at": "2026-10-24T22:49:05+00:00",
       "linked_from": [],
       "title": "On The Application of Linear Attention in Multimodal Transformers"
+    },
+    "arXiv:2006.09616": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2006.09616",
+      "identity_tokens": [
+        "arXiv:2006.09616",
+        "id:arXiv:2006.09616"
+      ],
+      "reason": "Dynamic Tensor Rematerializationはtraining autograd graphのmemoryを再計算で節約する。",
+      "first_checked_at": "2026-10-25T01:54:01+00:00",
+      "last_checked_at": "2026-10-25T01:54:01+00:00",
+      "linked_from": [],
+      "title": "Dynamic Tensor Rematerialization"
+    },
+    "arXiv:2310.07188": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07188",
+      "identity_tokens": [
+        "arXiv:2310.07188",
+        "id:arXiv:2310.07188"
+      ],
+      "reason": "一次本文の中心課題・評価はtrainingまたは一般model qualityであり、推論効率の直接機構・評価がない。 Paper-specific scope evidence: 混合専門家モデル（MoE）の学習時に、各トークンへ固定で2専門家を割り当てる代わりに、ルータの上位2専門家の確率差が閾値内なら2専門家、差が大きければ1専門家だけを割り当てる適応ゲート方式。上位1専門家の負荷分散制約と、2専門家が必要なトークンの比率を使うカリキュラム学習を組み合わせ、BERT、FSMT、BART、GPT-2、DialoGPTの6課題で学習時間を短縮しながら同程度の推論品質を維持する。原著の要旨では最大22.5%短縮とする一方、第4節の翻訳の記述には25.6%短縮とあり、数値が不一致である。実験は16専門家・閾値0.1を基本とし、実測利益の主対象は学習時間であって、既存MoEモデルを無学習で推論高速化する手法ではない。",
+      "first_checked_at": "2026-10-25T01:54:01+00:00",
+      "last_checked_at": "2026-10-25T01:54:01+00:00",
+      "linked_from": [],
+      "title": "Adaptive Gating in Mixture-of-Experts based Language Models"
+    },
+    "arXiv:2312.04455": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.04455",
+      "identity_tokens": [
+        "arXiv:2312.04455",
+        "id:arXiv:2312.04455"
+      ],
+      "reason": "Attention Buckets augments attention patterns to improve tool-use/context understanding, with no inference efficiency objective or measured cost reduction. The checked primary method/evaluation does not establish a concrete LLM inference optimization or measurement.",
+      "first_checked_at": "2026-10-25T01:54:02+00:00",
+      "last_checked_at": "2026-10-25T01:54:02+00:00",
+      "linked_from": [],
+      "title": "Fortify the Shortest Stave in Attention: Enhancing Context Awareness of Large Language Models for Effective Tool Use"
+    },
+    "arXiv:2406.08334": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08334",
+      "identity_tokens": [
+        "arXiv:2406.08334",
+        "id:DOI:10.48550/arxiv.2406.08334",
+        "id:arXiv:2406.08334"
+      ],
+      "reason": "ProTrain automatically chooses memory management and offload strategies for LLM training; its workloads and measurements are training-only. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "first_checked_at": "2026-10-25T01:54:02+00:00",
+      "last_checked_at": "2026-10-25T01:54:02+00:00",
+      "linked_from": [],
+      "title": "ProTrain: Efficient LLM Training via Memory-Aware Techniques"
+    },
+    "arXiv:2406.16793": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.16793",
+      "identity_tokens": [
+        "arXiv:2406.16793",
+        "id:arXiv:2406.16793"
+      ],
+      "reason": "Adam-mini reduces optimizer-state memory during pretraining, supervised fine-tuning, and RLHF; it does not optimize model inference. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "first_checked_at": "2026-10-25T01:54:02+00:00",
+      "last_checked_at": "2026-10-25T01:54:02+00:00",
+      "linked_from": [],
+      "title": "Adam-mini: Use Fewer Learning Rates To Gain More"
+    },
+    "arXiv:2407.04656": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04656",
+      "identity_tokens": [
+        "arXiv:2407.04656",
+        "id:arXiv:2407.04656"
+      ],
+      "reason": "Lazarus allocates expert replicas and recovers from failures in distributed MoE training; the measured workload is training only. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "first_checked_at": "2026-10-25T01:54:02+00:00",
+      "last_checked_at": "2026-10-25T01:54:02+00:00",
+      "linked_from": [],
+      "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models"
+    },
+    "arXiv:2409.00918": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.00918",
+      "identity_tokens": [
+        "arXiv:2409.00918",
+        "id:DOI:10.48550/arxiv.2409.00918",
+        "id:arXiv:2409.00918"
+      ],
+      "reason": "DisDP disaggregates compute, network collectives, and optimizer/storage for model-sharded data-parallel training; no inference execution is evaluated. No deployment inference method or inference efficiency result is established in the checked primary sections.",
+      "first_checked_at": "2026-10-25T01:54:03+00:00",
+      "last_checked_at": "2026-10-25T01:54:03+00:00",
+      "linked_from": [],
+      "title": "DisDP: Disaggregating Compute, Network, and Storage for Model-Sharded Data-Parallel Training"
+    },
+    "arXiv:2503.01890": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.01890",
+      "identity_tokens": [
+        "arXiv:2503.01890",
+        "id:DOI:10.48550/arxiv.2503.01890",
+        "id:arXiv:2503.01890"
+      ],
+      "reason": "The source evaluates optimizer/activation/parameter management during model training, not LLM inference efficiency; do not infer serving relevance from parameter offload alone.",
+      "first_checked_at": "2026-10-25T01:54:03+00:00",
+      "last_checked_at": "2026-10-25T01:54:03+00:00",
+      "linked_from": [],
+      "title": "AutoHete: An Automatic and Efficient Heterogeneous Training System for LLMs"
+    },
+    "arXiv:2510.10481": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.10481",
+      "identity_tokens": [
+        "arXiv:2510.10481",
+        "id:arXiv:2510.10481"
+      ],
+      "reason": "Longer context alone is not efficiency; outside scope.",
+      "first_checked_at": "2026-10-25T01:54:03+00:00",
+      "last_checked_at": "2026-10-25T01:54:03+00:00",
+      "linked_from": [],
+      "title": "UltraLLaDA: Scaling the Context Length to 128K for Diffusion Large Language Models"
+    },
+    "arXiv:2511.07035": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.07035",
+      "identity_tokens": [
+        "arXiv:2511.07035",
+        "id:DOI:10.48550/arxiv.2511.07035",
+        "id:arXiv:2511.07035"
+      ],
+      "reason": "Unrelated training bottleneck.",
+      "first_checked_at": "2026-10-25T01:54:03+00:00",
+      "last_checked_at": "2026-10-25T01:54:03+00:00",
+      "linked_from": [],
+      "title": "GoCkpt: Gradient-Assisted Multi-Step overlapped Checkpointing for Efficient LLM Training"
+    },
+    "arXiv:2512.22492": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22492",
+      "identity_tokens": [
+        "arXiv:2512.22492",
+        "id:arXiv:2512.22492"
+      ],
+      "reason": "Optimizes training fault tolerance, not inference efficiency or serving; disposition unrelated.",
+      "first_checked_at": "2026-10-25T01:54:04+00:00",
+      "last_checked_at": "2026-10-25T01:54:04+00:00",
+      "linked_from": [],
+      "title": "Role-Based Fault Tolerance System for LLM RL Post-Training"
     }
   }
 }

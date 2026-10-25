@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-24T17:50:36+00:00",
-  "record_count": 5346,
+  "updated_at": "2026-10-25T01:54:04+00:00",
+  "record_count": 5343,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -5514,21 +5514,6 @@
         "worker-worklist-00 discovery_review rank 473"
       ],
       "title": "LLaVA-Phi: Efficient Multi-Modal Assistant with Small Language Model"
-    },
-    "arXiv:2312.04455": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2312.04455",
-      "identity_tokens": [
-        "DOI:10.48550/arxiv.2312.04455",
-        "arXiv:2312.04455"
-      ],
-      "reason": "Attention Bucketsは推論時に複数のRoPE基準角で並列処理し文脈位置の見落としを補うため推論方式には該当するが、主目的はtool-use/RAGの品質改善であり、速度・メモリ・throughput削減を狙う効率化方式ではないため境界扱い。",
-      "first_checked_at": "2026-10-03T10:59:05+00:00",
-      "last_checked_at": "2026-10-03T18:18:27+00:00",
-      "linked_from": [
-        "papers/survey/06-long-context-serving/2024-2405.11299-cap-principle-long-context-llm-serving.md"
-      ],
-      "title": "Fortify the Shortest Stave in Attention: Enhancing Context Awareness of Large Language Models for Effective Tool Use"
     },
     "arXiv:2311.13381": {
       "classification": "borderline",
@@ -71692,19 +71677,6 @@
       "borderline_recheck_count": 0,
       "title": "A Unified Structured Query Understanding Framework for Industrial Semantic Search"
     },
-    "arXiv:2512.22492": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2512.22492",
-      "identity_tokens": [
-        "arXiv:2512.22492"
-      ],
-      "reason": "一次要旨で、RobustRLは強化学習による事後学習におけるtrainer・rolloutの役割別障害隔離、障害役割だけの再起動、UCX通信による再接続を提案すると確認した。256 GPU、Qwen3-8B-Math、10%障害注入下の実効学習時間率80%超（ByteRobust約60%）と学習時間8.4〜17.4%短縮は事後学習の耐障害性評価であり、オンライン推論サービスの可用性や推論時メモリ・遅延の改善は直接示していない。rollout生成という推論実行要素を含むため完全無関係とはせず、現行の推論中心の収録範囲では微妙とする。",
-      "first_checked_at": "2026-10-12T20:48:21+00:00",
-      "last_checked_at": "2026-10-12T20:48:21+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Role-Based Fault Tolerance System for LLM RL Post-Training"
-    },
     "arXiv:2601.01885": {
       "classification": "borderline",
       "canonical_id": "arXiv:2601.01885",
@@ -71756,19 +71728,6 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Compiling Agentic Workflows into LLM Weights: Near-Frontier Quality at Two Orders of Magnitude Less Cost"
-    },
-    "arXiv:2407.04656": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2407.04656",
-      "identity_tokens": [
-        "arXiv:2407.04656"
-      ],
-      "reason": "一次要旨で、LazarusはMoE学習の障害回復を目的に、expertの負荷偏りを緩和する複製配置、回復確率を最大化する配置最適化、障害後も残存ノードを活用する柔軟なtoken dispatcherを提案すると確認した。障害頻発時最大5.7倍、スポットインスタンス障害履歴で3.4倍の改善はMoE学習処理に関する結果であり、オンラインMoE推論のexpertキャッシュ、遅延、スループットを直接測定していない。expert配置技術は推論への概念的関連性があるものの、現在の推論中心の凍結スコープでは微妙とする。",
-      "first_checked_at": "2026-10-12T21:38:05+00:00",
-      "last_checked_at": "2026-10-12T21:38:05+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "Lazarus: Resilient and Elastic Training of Mixture-of-Experts Models with Adaptive Expert Placement"
     },
     "arXiv:2607.27881": {
       "classification": "borderline",
