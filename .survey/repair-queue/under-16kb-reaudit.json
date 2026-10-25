@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-25T20:19:51.825287+00:00",
+  "generated_at": "2026-10-25T20:59:13.842413+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -85,9 +85,9 @@
       "path": "papers/inference/09-kernel-runtime-compilation/2020-2009.06823-real-time-execution-of-large-scale-language-models-on-mobile.md",
       "canonical_id": "arXiv:2009.06823",
       "title": "Real-Time Execution of Large-scale Language Models on Mobile",
-      "file_bytes": 15042,
-      "source_sha256": "ffe67422352e38b4e2e4effdea0a9c079adb16b63426bad34a779524932ab377",
-      "source_git_blob_sha": "b768b02840be415fa14800b913dbed319a4fac55",
+      "file_bytes": 15295,
+      "source_sha256": "04763949fdcc621751581adc94f45a316ce9142db028ccebdf7784fa59cc145b",
+      "source_git_blob_sha": "cf7a89a027f2648463c10ee8154a112961408ff3",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -137,26 +137,6 @@
         "method_chars": 1088,
         "evaluation_chars": 929,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/06-moe-quantization-compression/2025-2509.02512-mopeq-mixture-of-mixed-precision-quantized-experts.md",
-      "canonical_id": "arXiv:2509.02512",
-      "title": "MoPEQ: Mixture of Mixed Precision Quantized Experts",
-      "file_bytes": 17238,
-      "source_sha256": "e1af406ef4753a6694e8413c0218ffaeeeb9c20abe4e65a2ba9baffb7110ecd1",
-      "source_git_blob_sha": "2d1c6f8cca215c77a70aa7b63131274c67b555c1",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.879587,
-      "quality_metrics": {
-        "body_chars": 4501,
-        "method_chars": 1437,
-        "evaluation_chars": 1144,
-        "limitation_chars": 487
       },
       "mechanical_failures": [],
       "warnings": []
