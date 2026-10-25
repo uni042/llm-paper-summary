@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261026-0630-scheduled-chat-30/r01",
+  "reference_main_sha": "a1c23c9b67d11253f910b3cdee93a408a71b0d90",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2310.07664",
+      "identity_tokens": [
+        "arXiv:2310.07664",
+        "arxiv:2310.07664"
+      ],
+      "title": "Accelerating Vision Transformers Based on Heterogeneous Attention Patterns",
+      "reason": "題名は画像認識向けVision Transformerの注意パターンを高速化する研究であり、自己回帰LLMの推論・サービング、KVキャッシュ管理の実装を対象としていない。",
+      "source_url": "https://arxiv.org/abs/2310.07664",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-26T06:39:42+09:00",
+      "last_checked_at": "2026-10-26T06:39:42+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 99
+    }
+  ]
+}
