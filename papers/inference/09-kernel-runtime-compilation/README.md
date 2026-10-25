@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（165本）
+## 自動生成の論文一覧（166本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -693,6 +693,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2020-10 · [LightSeq: A High Performance Inference Library for Transformers](2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md)**  
   実装：[✓](https://github.com/bytedance/lightseq) ・ リポジトリ内被引用：21  
   LightSeqは、Transformerの推論を汎用学習フレームワークから直接実行するときに生じる多数の小規模GPU演算、自己回帰探索の不要な候補処理、可変長系列に伴うメモリ割当を、推論専用のCUDA実装で削減するライブラリである。2020年に公開された研究であり、後年の大規模言語モデル提供基盤を直接評価したものではない。中核は三つの独立した最適化である。
+
+- **2020-09 · [Real-Time Execution of Large-scale Language Models on Mobile](2020-2009.06823-real-time-execution-of-large-scale-language-models-on-mobile.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  パラメータ数や浮動小数点演算回数を減らしても、非常に深いネットワークでは演算子ごとの起動、途中結果の生成、メモリ転送が積み重なり、実際の端末上で期待どおり速くならない。著者らはニューラル構造探索（NAS）に、コンパイラが最適化した実際の実行遅延・融合状況をフィードバックする枠組みを提案する。これはCPUで約5.24倍、GPUで約4.13倍の高速化に相当する。
 
 ### 8年前（2018-11〜2019-10）
 
