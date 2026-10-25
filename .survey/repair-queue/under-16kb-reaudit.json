@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-24T18:58:01.442178+00:00",
+  "generated_at": "2026-10-25T01:10:35.488096+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 3,
+  "count": 4,
   "worker_counts": {
     "scheduled-chat-00": 1,
-    "scheduled-chat-30": 1,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 1
   },
   "entries": [
@@ -76,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.14481-sasq-static-activation-scaling-for-quantization-aware-training-in-large-.md",
+      "canonical_id": "arXiv:2512.14481",
+      "title": "SASQ: Static Activation Scaling for Quantization-Aware Training in Large Language Models",
+      "file_bytes": 15606,
+      "source_sha256": "9a69dac122670bb798ccb84f52fde3e14150fcfb0e09e0d76ca4f260281ca7fa",
+      "source_git_blob_sha": "10d164b4bf6caa0660401745a9cabb7a710b5ad4",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.988409,
+      "quality_metrics": {
+        "body_chars": 4418,
+        "method_chars": 1402,
+        "evaluation_chars": 1287,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
