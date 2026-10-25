@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（450本）
+## 自動生成の論文一覧（452本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1082,6 +1082,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、大規模言語モデル（Large Language モデル、LLM）の学習後量子化（Post-学習 量子化、PTQ）における目的関数の不足を扱う。LLaMA3.1-8B-Instructの重み4ビット・活性値4ビット（W4A4）条件で、安全性評価SafetyBenchは比較方式OSTQuantの57.5からCAQの60.1へ2.6ポイント改善した。
 
+- **2025-11 · [Parallel Vision Token Scheduling for Fast and Accurate Multimodal LMMs Inference](2025-2511.18875-parallel-vision-token-scheduling-for-fast-and-accurate-multimodal-lmms-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ParVTS（Parallel Vision Token Scheduling）は、高解像度画像を入力するマルチモーダル大規模言語モデル（MLLM）において、視覚トークンを一律に残すか捨てるかという二者択一を避ける推論時手法である。
+
 - **2025-11 · [Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism](2025-2511.06247-optimizing-long-context-llm-serving-via-fine-grained-sequence-parallelis.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   系列並列化（sequence parallelism、SP）は一つの入力系列を複数GPUへ分けて注意計算を実行する技術だが、要求全体に固定のSP数を割り当てると、先に空いたGPUだけでは開始できず、同期相手を待つ時間が生じる。
@@ -1753,6 +1757,10 @@
 - **2024-04 · [Deferred Continuous Batching in Resource-Efficient Large Language Model Serving](2024-cd0254f5f44d-deferred-continuous-batching-in-resource-efficient-large-language-model-.md)**  
   実装：[✓](https://github.com/llm-db/FineInfer) ・ リポジトリ内被引用：3  
   前者では微調整の処理率が低下し、後者では利用者の応答遅延が増える。FineInferは、凍結済みの基盤モデル重みを両仕事で共有し、微調整・推論の各反復を細粒度に切り替える。
+
+- **2024-04 · [Performance Characterization of Expert Router for Scalable LLM Inference](2024-2404.15153-performance-characterization-of-expert-router-for-scalable-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MoE層内部で複数のFFNエキスパートをtop-k選択する方式とは異なり、リクエスト全体を一つの独立したLLMへルーティングする。評価には8基のNVIDIA H100（各80GB）を搭載したDGX H100を用い、Llama 3 70Bと8Bの量子化・非量子化構成を比較する。
 
 ### 4年前（2022-11〜2023-10）
 
