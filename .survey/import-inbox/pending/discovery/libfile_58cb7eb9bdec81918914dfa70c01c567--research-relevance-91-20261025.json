@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261025-1300-scheduled-chat-00/r01",
+  "reference_main_sha": "f28bbb9d188b2100160a6f1c16b2bc62e806933a",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.01988",
+      "identity_tokens": [
+        "arxiv:2409.01988"
+      ],
+      "title": "Compressed learning based onboard semantic compression for remote sensing platforms",
+      "reason": "原著は衛星・ドローン等の地球観測画像を、機上の疎な線形変換で圧縮し、地上でunrolled NA-ALISTAと画像分類器へ渡す通信路を扱う。最終評価は画像の意味圧縮と分類であり、LLMの重み・KVキャッシュ圧縮やテキスト生成の実行系ではない。",
+      "source_url": "https://arxiv.org/html/2409.01988v1",
+      "body_check": "research_fulltext_relevance_review: arXiv HTML v1の導入・方法・実験と画像分類の評価目的を確認。圧縮対象は地球観測画像、実行場所は衛星側エンコーダと地上デコーダであり、LLM推論ではない。",
+      "first_checked_at": "2026-10-25T13:00:00+09:00",
+      "last_checked_at": "2026-10-25T13:00:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 91
+    }
+  ]
+}
