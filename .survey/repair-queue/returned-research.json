@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T17:34:02+00:00",
+  "generated_at": "2026-10-25T17:52:56+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 29,
+  "count": 32,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -749,8 +749,8 @@
     },
     {
       "canonical_id": "arXiv:2603.22333",
-      "title": "Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation",
-      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/058373e239c542eae6cb796e4dc521da-Paper-Conference.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T17:33:06+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -774,6 +774,89 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6880438de0ef--libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6880438de0ef--libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r.json",
       "worker_run_key": "20261026-0130-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.14290",
+      "title": "Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning",
+      "source_url": "https://arxiv.org/pdf/2608.14290",
+      "returned_at": "2026-10-25T17:52:29+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 190 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5266,
+        "body_paragraphs": 34,
+        "method_chars": 933,
+        "method_paragraphs": 5,
+        "evaluation_chars": 190,
+        "limitation_chars": 700,
+        "insufficiency_flags": [
+          "評価説明量 190 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/file_0000000076f881f5bf967cb23ae40857--2026-2608.14290-intern-s2-mobius-shared-memory-latent-reasoning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/file_0000000076f881f5bf967cb23ae40857--2026-2608.14290-intern-s2-mobius-shared-memory-latent-reasoning-research-20261026-0230-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.04514",
+      "title": "Saliency-driven Dynamic Token Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2504.04514",
+      "returned_at": "2026-10-25T17:52:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 363 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6546,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 363,
+        "limitation_chars": 711,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 363 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/file_000000008e1c81f7954c5aa55070170f--2025-2504.04514-sdtp-saliency-dynamic-token-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/file_000000008e1c81f7954c5aa55070170f--2025-2504.04514-sdtp-saliency-dynamic-token-pruning-research-20261026-0230-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.18007",
+      "title": "Cloud Native System for LLM Inference Serving",
+      "source_url": "https://arxiv.org/pdf/2507.18007",
+      "returned_at": "2026-10-25T17:52:32+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 402 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5387,
+        "body_paragraphs": 34,
+        "method_chars": 1342,
+        "method_paragraphs": 7,
+        "evaluation_chars": 402,
+        "limitation_chars": 696,
+        "insufficiency_flags": [
+          "評価説明量 402 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/file_000000009aa881f5ba9411abe875a2a7--2025-2507.18007-cloud-native-layer-microservice-autoscaling-research-20261026-0230-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/file_000000009aa881f5ba9411abe875a2a7--2025-2507.18007-cloud-native-layer-microservice-autoscaling-research-20261026-0230-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
     }
   ]
 }
