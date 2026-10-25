@@ -244,7 +244,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-08 · [LongVILA: Scaling Long-Context Visual Language Models for Long Videos](2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md)**  
-  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：25  
   LongVILAは、長時間動画を理解する視覚言語モデル（Vision-Language モデル、VLM）の学習手順と分散実行基盤を同時に設計した研究である。256基のGPUを使うと勾配チェックポイントを使わず約200万トークンの学習文脈を扱え、従来のリング型系列並列に対して2.1〜5.7倍の訓練処理量を得る。
 
 - **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture of Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
@@ -272,7 +272,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   Tutelは、混合専門家モデル（Mixture-of-Experts; MoE）で反復ごとに変わる専門家負荷へ実行系を追従させる分散実行基盤である。固定の並列化方式や固定の通信・計算パイプラインは、この変動に対して一つの実行形態しか使えず、通信時間または専門家計算時間のどちらかを無駄にしやすい。
 
 - **2022-10 · [Accelerating Distributed MoE Training and Inference with Lina](2022-2210.17223-accelerating-distributed-moe-training-and-inference-with-lina.md)**  
-  実装：✓ ・ リポジトリ内被引用：31  
+  実装：✓ ・ リポジトリ内被引用：32  
   Linaは、分散した混合専門家モデル（Mixture of エキスパート、MoE）の通信を、学習と推論で異なる原因に分解して高速化するシステムである。論文の事前計測では、全対全通信が処理段階時間の平均34.1%、ある層の順伝播時間の74.9%を占め、通信中のGPU演算器利用率は平均3.7%にとどまった。
 
 ### 6年前（2020-11〜2021-10）

@@ -293,7 +293,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：111  
+  実装：✓ ・ リポジトリ内被引用：112  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
@@ -395,15 +395,15 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：228  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：229  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：149  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：150  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
-  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：58  
+  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：59  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
@@ -411,7 +411,7 @@
   キーの低ランク性を使い、低次元スコアで候補KVを選んでから全次元注意を計算し、品質を保ちながら注意計算を最大約45%短縮する疎注意法。
 
 - **2024-08 · [Post-Training Sparse Attention with Double Sparsity](2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md)**  
-  実装：[✓](https://github.com/andy-yang-1/DoubleSparse) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/andy-yang-1/DoubleSparse) ・ リポジトリ内被引用：22  
   長文脈の自己回帰生成では、各新規トークンの問い合わせに対して過去の鍵・値キャッシュ（KVキャッシュ）を読み出すため、注意計算がGPUのメモリ帯域に律速されやすい。注意スコアへ大きく寄与する特徴チャネルを学習後の少量データで層別に校正し、そのチャネルだけを連続配置した小さなラベルキャッシュを作る。
 
 - **2024-06 · [SampleAttention: Near-Lossless Acceleration of Long Context LLM Inference with Adaptive Structured Sparse Attention](2024-2406.15486-sampleattention-near-lossless-acceleration-of-long-context-llm-inference.md)**  
