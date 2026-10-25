@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（336本）
+## 自動生成の論文一覧（337本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1140,6 +1140,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-02 · [Compression Barriers in Autoregressive Transformers](2025-2502.15955-compression-barriers-in-autoregressive-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   近年のKV圧縮は重要トークンの選択、疎性、低次元表現、クラスタリング等で保存量を削減しているが、これらの成功が任意の入力でも保証できるかは別問題である。
+
+- **2025-01 · [MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference](2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md)**  
+  実装：[✓](https://github.com/zwxandy/MPCache) ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）のKVキャッシュ圧縮は、通常のGPU推論では過去トークンの一部を削除・選択することで注意計算量とメモリを減らす。さらに粗いクラスタから細かいクラスタへ選択を絞り、近接Transformer層の選択インデックスを共有することで、MPC特有の比較と秘密インデックスgatherの費用を削減する。
 
 ### 3年前（2023-11〜2024-10）
 

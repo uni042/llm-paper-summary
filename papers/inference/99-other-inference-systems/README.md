@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（976本）
+## 自動生成の論文一覧（977本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1937,6 +1937,10 @@
 - **2026-02 · [Every Bit Counts: A Theoretical Study of Precision–Expressivity Tradeoffs in Quantized Transformers](2026-2602.02707-every-bit-counts-a-theoretical-study-of-precision-expressivity-tradeoffs.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、Transformerの量子化が単に近似誤差を増やすだけなのか、それとも十分な学習を行っても表現できない関数を生むのかを問う理論研究である。補助実験では、2ヘッド・埋め込み次元4の単層モデルに合成等値判定を学習させ、長さ100の課題で学習後量子化した場合、INT12の平均正答率94.95%に対してINT4は58.72%となる。
+
+- **2026-02 · [Evaluating the Impact of Post-Training Quantization on Reliable VQA with Multimodal LLMs](2026-2602.13289-evaluating-the-impact-of-post-training-quantization-on-reliable-vqa-with.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  画像と言語を入力するマルチモーダル大規模言語モデル（MLLM）では、モデルの重みを低ビット量子化することで端末配置を容易にできる。VQAv2上のIdefics3ではbf16の精度79.3に対し、int4 HQQが77.2、int4 MBQが78.1、int3 HQQが64.0、int3 MBQが71.2となる。
 
 - **2026-02 · [EntropyPrune: Matrix Entropy Guided Visual Token Pruning for Multimodal Large Language Models](2026-2602.17196-entropyprune-matrix-entropy-guided-visual-token-pruning-for-multimodal-l.md)**  
   実装：[✓](https://github.com/YahongWang1/EntropyPrune) ・ リポジトリ内被引用：0  

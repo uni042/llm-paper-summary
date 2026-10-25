@@ -35,10 +35,15 @@
   "selection_reason": "一次要旨はsecure multi-party computation下のLLM推論向けにstatic evictionとquery-aware dynamic KV選択、階層clustering、cross-layer index sharingを組み合わせ、decode latencyと通信量を下げる。",
   "semantic_scholar_id": "56730702fea87d367a93a8a1ab989b3ec8b0681f",
   "source_url": "https://arxiv.org/abs/2501.06807",
-  "status": "ready",
+  "status": "superseded",
   "title": "MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-25T22:17:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md",
+  "represented_canonical_id": "arXiv:2501.06807",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
