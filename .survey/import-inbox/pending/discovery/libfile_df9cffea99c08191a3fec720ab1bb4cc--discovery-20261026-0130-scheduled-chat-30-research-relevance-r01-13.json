@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261026-0130-scheduled-chat-30/r01",
+  "reference_main_sha": "871172681a58c73d7d70a20e43b1f0ea620cc2c4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neunet.2024.106164",
+      "identity_tokens": [
+        "DOI:10.1016/j.neunet.2024.106164"
+      ],
+      "title": "DDK: Dynamic structure pruning based on differentiable search and recursive knowledge distillation for BERT",
+      "reason": "原著要旨の対象はBERTエンコーダの構造枝刈りと再帰的知識蒸留。各層のFFNチャネルと自己注意ヘッド数を微分可能探索で調整し、GLUEの判別課題で検証する。推論計算量の削減という隣接技術はあるが、生成LLMのdecode・KVキャッシュ・サービング基盤への直接評価は示されないため境界候補とする。",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/38367353/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-26T01:38:21+09:00",
+      "last_checked_at": "2026-10-26T01:38:21+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 13
+    }
+  ]
+}
