@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T14:44:07+00:00",
+  "generated_at": "2026-10-25T15:07:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 31,
+  "count": 32,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -149,34 +149,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed1b38a44c8d--libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ed1b38a44c8d--libfile_a40d63159fac8191a1bcf3ec675947b7--2026-2601.07832-mhla-token-level-linear-attention-research-20261014-0145-scheduled-chat-4.json",
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-16T11:51:13+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5982,
-        "body_paragraphs": 29,
-        "method_chars": 1935,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_743e62328d4c81918b50337600a1b24e--2024-2402.02750-kivi-asymmetric-2bit-kv-cache-research-20261016-1330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261016-1330-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2310.05015",
@@ -752,8 +724,8 @@
     },
     {
       "canonical_id": "arXiv:2412.13437",
-      "title": "Deploying Foundation Model Powered Agent Services: A Survey",
-      "source_url": "https://arxiv.org/html/2412.13437",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T14:41:14+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -782,8 +754,8 @@
     },
     {
       "canonical_id": "arXiv:2307.03738",
-      "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
-      "source_url": "https://arxiv.org/html/2307.03738v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T14:42:19+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -807,8 +779,8 @@
     },
     {
       "canonical_id": "arXiv:2410.16663",
-      "title": "FastAttention: Extend FlashAttention2 to NPUs and Low-resource GPUs",
-      "source_url": "https://arxiv.org/html/2410.16663",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T14:42:20+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -832,6 +804,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b4e559c9b961--libfile_e0c012ecdce48191946f6b3f18e1977f--2024-2410.16663-fastattention-npu-volta-research-20261025-2200-scheduled-chat-00-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-b4e559c9b961--libfile_e0c012ecdce48191946f6b3f18e1977f--2024-2410.16663-fastattention-npu-volta-research-20261025-2200-scheduled-chat-00-r01-v2.json",
       "worker_run_key": "20261025-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
+      "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+      "source_url": "https://arxiv.org/html/2402.02750v2",
+      "returned_at": "2026-10-25T15:05:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 167 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4940,
+        "body_paragraphs": 29,
+        "method_chars": 1475,
+        "method_paragraphs": 9,
+        "evaluation_chars": 167,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 167 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8441398cf3508191a7247a771d89863e--2024-doi-10.13140-rg.2.2.28167.37282-kivi-asymmetric-2bit-kv-research-20261025-2300-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8441398cf3508191a7247a771d89863e--2024-doi-10.13140-rg.2.2.28167.37282-kivi-asymmetric-2bit-kv-research-20261025-2300-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261025-2300-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3731569.3764823",
+      "title": "Jenga: Effective Memory Management for Serving LLM with Heterogeneity",
+      "source_url": "https://doi.org/10.1145/3731569.3764823",
+      "returned_at": "2026-10-25T15:05:37+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 444 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5405,
+        "body_paragraphs": 32,
+        "method_chars": 1779,
+        "method_paragraphs": 11,
+        "evaluation_chars": 444,
+        "limitation_chars": 492,
+        "insufficiency_flags": [
+          "評価説明量 444 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a23486dcd1088191bc6b3e872663db97--2025-doi-10.1145-3731569.3764823-jenga-heterogeneous-llm-memory-research-20261025-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a23486dcd1088191bc6b3e872663db97--2025-doi-10.1145-3731569.3764823-jenga-heterogeneous-llm-memory-research-20261025-2330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261025-2330-scheduled-chat-30/r01"
     }
   ]
 }
