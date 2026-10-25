@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（71本）
+## 自動生成の論文一覧（72本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -158,6 +158,10 @@
 - **2026-09 · [DynBranch: Speculative Subgraph Reuse for Dynamic Agentic LLM Serving](2026-2609.31047-dynbranch-speculative-subgraph-reuse-for-dynamic-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DynBranchは、エージェント型大規模言語モデルの推論基盤で生じる分岐解決障壁（branch-resolution barrier）を短縮するサービング方式である。4枚のH200 NVLでQwen3-32Bを提供する評価では、4種類のエージェント処理の各条件で、外部比較方式のうち最良のものに対して低負荷時の平均遅延を14～32%削減した。
+
+- **2026-09 · [DeepEdu-v1: Efficient and Scalable Agentic LLMs for Vietnamese Education](2026-2609.31568-deepedu-v1-efficient-and-scalable-agentic-llms-for-vietnamese-education.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  教育アプリケーション論文という題名だが、SCRはLLM推論基盤へ独立に適用できる方式であり、本サーベイではこちらを中心に扱う。
 
 - **2026-09 · [BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents](2026-2609.08566-bio-memart-biometric-aware-kv-cache-memory-for-multi-user-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

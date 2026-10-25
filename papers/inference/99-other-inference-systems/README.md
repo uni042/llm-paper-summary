@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（955本）
+## 自動生成の論文一覧（957本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2716,6 +2716,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
 
+- **2025-05 · [Scalable LLM Reasoning Acceleration with Low-rank Distillation](2025-2505.07861-scalable-llm-reasoning-acceleration-with-low-rank-distillation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Capreseは、大規模言語モデルのフィードフォワードネットワーク（FFN）を疎化したとき、長い数学的推論で顕著になる精度低下を、小さな低ランク補正で回復する手法である。
+
 - **2025-05 · [RWKVQuant: Quantizing the RWKV Family with Proxy Guided Hybrid of Scalar and Vector Quantization](2025-2505.03803-rwkvquant-quantizing-the-rwkv-family-with-proxy-guided-hybrid-of-scalar-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Transformer向けに有効な学習後量子化（PTQ）をそのままRWKVへ移すと、重み分布と非線形演算の違いから精度が大きく落ちたり、量子化前後の変換演算が追加されたりする。
@@ -2871,6 +2875,10 @@
 - **2025-03 · [EfficientLLaVA:Generalizable Auto-Pruning for Large Vision-language Models](2025-2503.15369-efficientllava-generalizable-auto-pruning-for-large-vision-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   EfficientLLaVAは、画像と文章を扱う大規模視覚言語モデル（Large Vision-Language モデル; LVLM）の重みを、元の巨大な学習データを持たずに削減するための自動枝刈り方式である。
+
+- **2025-02 · [LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning](2025-2502.14644-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-.md)**  
+  実装：[✓](https://github.com/MuLabPKU/LIFT) ・ リポジトリ内被引用：0  
+  LIFT（Long Input 微調整）は、長い文書をそのままLLMの入力コンテキストへ入れる代わりに、文書から生成した質問・回答（QA）で短文脈モデルをテスト時に微調整し、文書の情報をモデルのパラメータへ内在化させる方式である。
 
 - **2025-02 · [Infinite Retrieval: Attention Enhanced LLMs in Long-Context Processing](2025-2502.12962-infinite-retrieval-attention-enhanced-llms-in-long-context-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

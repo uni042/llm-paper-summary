@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "8ed05c067e35974a1e368fd0ab34c48696d0b56482283925579a13827a9af887",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_6492c7432e2481919727c07e8e288787--2024-2412.14847-rwkv-survey-returned-repair-20261025-2200-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2412.14847",
+  "worker_completed_at": "2026-10-25T22:00:00+09:00",
+  "worker_run_key": "20261025-2200-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4698,
+    "body_paragraphs": 27,
+    "method_chars": 1835,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-25T14:01:08+00:00"
+}
