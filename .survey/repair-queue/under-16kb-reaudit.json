@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-25T17:04:30.805956+00:00",
+  "generated_at": "2026-10-25T19:15:07.567008+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 3,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-00": 2,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -77,46 +77,6 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md",
-      "canonical_id": "arXiv:2312.12682",
-      "title": "Mini-GPTs: Efficient Large Language Models through Contextual Pruning",
-      "file_bytes": 15829,
-      "source_sha256": "4d4f84dce5bf59a3fa87b798b0853bde9813e7226fde8cf291491a1c895366d5",
-      "source_git_blob_sha": "3bd656376e5dac27c8f9a01a4833430549ce9e12",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.955252,
-      "quality_metrics": {
-        "body_chars": 4578,
-        "method_chars": 1208,
-        "evaluation_chars": 1248,
-        "limitation_chars": 459
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2504.00030-token-driven-gammatune-adaptive-calibration-for-enhanced-speculative-dec.md",
-      "canonical_id": "arXiv:2504.00030",
-      "title": "Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding",
-      "file_bytes": 16392,
-      "source_sha256": "b3106afd5fe87d71be9c7b28c6f4d67bb01ca3ce8f1746c0ea4d457e66e0f9f3",
-      "source_git_blob_sha": "1582cac34f567c007b00c661d2cda477ba692638",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.946775,
-      "quality_metrics": {
-        "body_chars": 4519,
-        "method_chars": 1278,
-        "evaluation_chars": 1173,
-        "limitation_chars": 490
       },
       "mechanical_failures": [],
       "warnings": []
