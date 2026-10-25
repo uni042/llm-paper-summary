@@ -47,6 +47,8 @@ worker_id: "scheduled-chat-45"
 worker_run_key: "20261025-1945-scheduled-chat-45/r02"
 worker_completed_at: "2026-10-25T19:47:00+09:00"
 quality_self_review_passed: true
+last_audited: null
+audit_version: 0
 ---
 
 # 階層疎注意の長さ外挿：Chunk Encoder、CLS、Bypass、訓練時疎性

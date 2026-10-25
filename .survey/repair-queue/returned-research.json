@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T12:02:08+00:00",
+  "generated_at": "2026-10-25T12:27:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 38,
+  "count": 37,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -672,33 +672,6 @@
       "worker_run_key": "20261024-1030-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2506.08018",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T03:29:16+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6268,
-        "body_paragraphs": 36,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1411,
-        "limitation_chars": 864,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-45638413f3de--libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-45638413f3de--libfile_1e8fc752b9a88191ac747f735675c2d6--2025-2506.08018-kvmix-gradient-layer-kv-mixed-precision-research-20261025-1056-scheduled-.json",
-      "worker_run_key": "20261025-1056-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2412.14847",
       "title": null,
       "source_url": null,
@@ -921,34 +894,6 @@
       "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2504.13932",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T11:26:25+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5279,
-        "body_paragraphs": 27,
-        "method_chars": 1486,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ac4206bc99d1--libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ac4206bc99d1--libfile_1c95b08817448191b01b201bccfea7e2--2025-2504.13932-sapr-ultralowbit-quantization-research-20261025-1703-scheduled-chat-00-r0.json",
-      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2502.14644",
       "title": null,
       "source_url": null,
@@ -1006,8 +951,8 @@
     },
     {
       "canonical_id": "arXiv:2510.17196",
-      "title": "Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models",
-      "source_url": "https://arxiv.org/html/2510.17196v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-25T11:57:03+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1027,6 +972,33 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_084d61949ec0819180cea42eacf5156c--2025-2510.17196-hsa-length-generalization-research-20261025-1945-scheduled-chat-45-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_084d61949ec0819180cea42eacf5156c--2025-2510.17196-hsa-length-generalization-research-20261025-1945-scheduled-chat-45-r02.json",
+      "worker_run_key": "20261025-1945-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "arXiv:2505.07861",
+      "title": "Scalable LLM Reasoning Acceleration with Low-rank Distillation",
+      "source_url": "https://arxiv.org/html/2505.07861v3",
+      "returned_at": "2026-10-25T12:24:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_version が空"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3601,
+        "body_paragraphs": 20,
+        "method_chars": 1046,
+        "method_paragraphs": 6,
+        "evaluation_chars": 914,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_71f9a98d20a4819184da9d1e539fea98--2025-2505.07861-caprese-low-rank-distillation-research-20261025-1945-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_71f9a98d20a4819184da9d1e539fea98--2025-2505.07861-caprese-low-rank-distillation-research-20261025-1945-scheduled-chat-45-r02.json",
       "worker_run_key": "20261025-1945-scheduled-chat-45/r02"
     }
   ]
