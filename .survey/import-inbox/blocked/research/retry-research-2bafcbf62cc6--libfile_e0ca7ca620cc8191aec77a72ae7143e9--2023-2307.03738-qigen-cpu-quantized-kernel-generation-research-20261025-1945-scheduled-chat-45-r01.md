@@ -45,6 +45,8 @@ worker_id: "scheduled-chat-45"
 worker_run_key: "20261025-1945-scheduled-chat-45/r01"
 worker_completed_at: "2026-10-25T19:46:41+09:00"
 quality_self_review_passed: true
+last_audited: null
+audit_version: 0
 ---
 
 # QIGen：量子化LLMのCPU復号カーネルを自動生成する
