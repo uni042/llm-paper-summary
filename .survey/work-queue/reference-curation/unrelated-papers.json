@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-25T07:51:35+00:00",
-  "record_count": 12476,
+  "updated_at": "2026-10-25T13:47:39+00:00",
+  "record_count": 12478,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179761,6 +179761,30 @@
       "last_checked_at": "2026-10-25T07:51:35+00:00",
       "linked_from": [],
       "title": "Linear Video Transformer with Feature Fixation"
+    },
+    "arXiv:2301.02989": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.02989",
+      "identity_tokens": [
+        "arXiv:2301.02989"
+      ],
+      "reason": "一次要旨によれば、顔属性分類における公平性の悪化を緩和するため、複数の中間分類器と信頼度に基づく早期終了を使う研究である。評価対象はCelebA/UTK Faceの顔属性・公平性で、LLM推論の高速化・サービング・メモリ階層への直接の技術的貢献は示されない。",
+      "first_checked_at": "2026-10-25T13:47:36+00:00",
+      "last_checked_at": "2026-10-25T13:47:36+00:00",
+      "linked_from": [],
+      "title": "Fair Multi-Exit Framework for Facial Attribute Classification"
+    },
+    "arXiv:2204.04371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.04371",
+      "identity_tokens": [
+        "arXiv:2204.04371"
+      ],
+      "reason": "複数サーバを同時に占有する一般クラウドジョブのオンライン割当を対象とする。一次要旨のESDPはDVFS等による処理速度の揺らぎをサンプリングして効用を最大化する汎用スケジューラであり、LLM推論、KVキャッシュ、MoE、推論サービングの固有機構や評価を扱わない。",
+      "first_checked_at": "2026-10-25T13:47:39+00:00",
+      "last_checked_at": "2026-10-25T13:47:39+00:00",
+      "linked_from": [],
+      "title": "Learning to Schedule Multi-Server Jobs With Fluctuated Processing Speeds"
     }
   }
 }

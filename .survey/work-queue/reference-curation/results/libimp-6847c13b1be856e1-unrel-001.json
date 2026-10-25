@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6847c13b1be856e1-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2301.02989",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2301.02989",
+    "identity_tokens": [
+      "arXiv:2301.02989"
+    ],
+    "reason": "一次要旨によれば、顔属性分類における公平性の悪化を緩和するため、複数の中間分類器と信頼度に基づく早期終了を使う研究である。評価対象はCelebA/UTK Faceの顔属性・公平性で、LLM推論の高速化・サービング・メモリ階層への直接の技術的貢献は示されない。",
+    "first_checked_at": "2026-10-25T13:47:36+00:00",
+    "last_checked_at": "2026-10-25T13:47:36+00:00",
+    "linked_from": [],
+    "title": "Fair Multi-Exit Framework for Facial Attribute Classification"
+  },
+  "processed_at": "2026-10-25T13:47:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6847c13b1be8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
