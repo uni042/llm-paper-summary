@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-26 08:14:59 JST**
+> 自動生成: **2026-10-26 08:20:33 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **853** |
 | 未claim Research job | **853** |
-| 直近24hのResearch処理完了 | **152** |
+| 直近24hのResearch処理完了 | **151** |
 | 最終Research処理完了 | **10-26 07:39:00 JST** |
 | 最終Discovery探索完了 | **10-26 07:00:00 JST** |
 | 整合性異常 | **0** |
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **145606** |
+| 探索候補総数 | **145614** |
 | 処理済み | **21259** |
-| 未処理Discovery候補 | **124347** |
+| 未処理Discovery候補 | **124355** |
 | 収録済み | **3249** |
 | Research / Audit候補へ昇格済み | **516** |
 | 無関係として除外 | **12354** |
@@ -63,15 +63,15 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **124347** |
+| 未処理候補（フィルタ前） | **124355** |
 | 機械規則による暫定隔離 | **2135** |
-| 拡張機械規則による追加隔離 | **1364** |
-| 機械規則通過後 | **120848** |
-| 系統内前方引用スコアによる選抜保留 | **114805** |
-| 暫定隔離合計 | **118304** |
+| 拡張機械規則による追加隔離 | **1365** |
+| 機械規則通過後 | **120855** |
+| 系統内前方引用スコアによる選抜保留 | **114812** |
+| 暫定隔離合計 | **118312** |
 | **読解可能候補（隔離後）** | **6043** |
 | 前方引用が同一系統で2本以上の候補 | **13478** |
-| 前方引用が同一系統で3本以上の候補 | **5424** |
+| 前方引用が同一系統で3本以上の候補 | **5426** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
 - 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6043件**（監査復活枠なし）。
@@ -79,17 +79,17 @@
 ### 拡張規則の判定と適用状況
 
 - 拡張規則モード: **quarantine**
-- 拡張規則に一致した候補: **1364件**（基本規則との重複を除去）
-- 実際の追加隔離: **1364件**
-- 分野別内訳: **{'expanded_domain:clinical_applications': 102, 'expanded_domain:content_moderation': 25, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 9, 'expanded_domain:financial_applications': 55, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 31, 'expanded_domain:vision_applications': 1060}**
+- 拡張規則に一致した候補: **1365件**（基本規則との重複を除去）
+- 実際の追加隔離: **1365件**
+- 分野別内訳: **{'expanded_domain:clinical_applications': 102, 'expanded_domain:content_moderation': 25, 'expanded_domain:educational_legal_applications': 25, 'expanded_domain:environmental_applications': 9, 'expanded_domain:financial_applications': 55, 'expanded_domain:geoscience_applications': 57, 'expanded_domain:materials_applications': 31, 'expanded_domain:vision_applications': 1061}**
 - 拡張規則がshadowの場合は件数だけを測定し隔離には含めない。quarantineの場合は上記の隔離合計へ算入する。一次論文・候補台帳は削除せず、隔離候補の自動監査再投入は行わない。
 
 - モード: 規則 **quarantine** / 教師あり分類器は撤去済み。
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.6%**
-- 現在の生在庫: 後方references **57308件** / 前方引用 **68679件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **125276件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **57308件** / 前方引用 **68674件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **125284件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -97,18 +97,18 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 収録論文seed台帳 | **3243** |
-| provider巡回可能 | **3238** |
+| 収録論文seed台帳 | **3249** |
+| provider巡回可能 | **3244** |
 | provider巡回不能 | **5** |
-| 1周以上完了 | **3210** |
-| 巡回中 | **39** |
+| 1周以上完了 | **3218** |
+| 巡回中 | **37** |
 | 未巡回 | **0** |
-| 今回run開始時due | **53** |
-| 前方引用から保持中の未処理候補 | **68679** |
-| エラー状態保持seed | **39** |
+| 今回run開始時due | **47** |
+| 前方引用から保持中の未処理候補 | **68674** |
+| エラー状態保持seed | **37** |
 
-- 初回カバレッジ完了率: **99.1%**
-- state最終更新: **10-26 07:06:57 JST**
+- 初回カバレッジ完了率: **99.2%**
+- state最終更新: **10-26 08:14:19 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-25 09:32:16 JST（22時間42分前）** |
+| 最終maintenance完了 | **10-25 09:32:16 JST（22時間48分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
