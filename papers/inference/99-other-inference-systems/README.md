@@ -2468,6 +2468,10 @@
   実装：[✓](https://github.com/google-research/reasoning-bank) ・ リポジトリ内被引用：5  
   長期間にわたってウェブ操作やソフトウェア修正を行う大規模言語モデル（LLM）エージェントは、過去に成功した手順を別の課題で再発見したり、既に失敗した操作を繰り返したりする。過去の実行軌跡を丸ごと検索する方式では、現在の課題に関係ない画面遷移や局所的な操作が混ざる。
 
+- **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
+
 - **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
   実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：4  
   動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
@@ -2499,10 +2503,6 @@
 - **2025-02 · [LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing](2025-2502.02743-llm-bandit-cost-efficient-llm-generation-via-preference-conditioned-dyna.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   安価なモデルだけを使えば費用を抑えられるが、難しい質問で誤答が増える。複数モデルを順番に呼び出すカスケード方式は品質を確認してから高価なモデルへ移れる一方、複数回の推論が必要になる。
-
-- **2025-01 · [Rope to Nope and Back Again: A New Hybrid Attention Strategy](2025-2501.18795-rope-to-nope-and-back-again-a-new-hybrid-attention-strategy.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  大規模言語モデル（large language モデル; LLM）で長い入力を処理すると、全トークン同士の注意（注意機構）計算は入力長Lの二乗に近い費用を要する。長文脈評価では256Kトークンでの検索・質問応答が改善し、局所層を増やすことで長文推論時のキー・値キャッシュ（key-value キャッシュ; KVキャッシュ）も減らせる。
 
 - **2024-12 · [METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation](2024-2412.10543-metis-fast-quality-aware-rag-systems-with-configuration-adaptation.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
@@ -3313,7 +3313,7 @@
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：87  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
@@ -3340,13 +3340,13 @@
   実装：✓ ・ リポジトリ内被引用：48  
   量子化では、1パラメータ当たりのビット数を下げるほど同じ重みメモリへ大きなモデルを置ける。
 
+- **2023-07 · [Hyena Hierarchy: Towards Larger Convolutional Language Models](2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md)**  
+  実装：[✓](https://github.com/HazyResearch/safari) ・ リポジトリ内被引用：36  
+  従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
+
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
   実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：35  
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
-
-- **2023-07 · [Hyena Hierarchy: Towards Larger Convolutional Language Models](2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/safari) ・ リポジトリ内被引用：35  
-  従来の線形注意や疎注意はこの費用を減らせる一方、長距離の連想記憶や文脈内での規則適用に必要な表現能力が不足し、密な注意層を混ぜないと大規模モデルの品質に届かない場合があった。著者らは、注意機構が持つ三つの性質、すなわち入力に応じて演算内容が変わること、系列長に対してパラメータ数が線形に増えないこと、任意の過去位置を参照できることに注目した。
 
 - **2023-06 · [MiniLLM: On-Policy Distillation of Large Language Models](2023-2306.08543-minillm-on-policy-distillation-of-large-language-models.md)**  
   実装：[✓](https://github.com/microsoft/LMOps/tree/main/minillm) ・ リポジトリ内被引用：34  

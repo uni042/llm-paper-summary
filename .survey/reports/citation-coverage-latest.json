@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-24T23:21:35+00:00",
+  "checked_at": "2026-10-25T00:02:51+00:00",
   "summary": {
-    "total": 3142,
-    "complete": 3135,
-    "incomplete": 7
+    "total": 3144,
+    "complete": 3136,
+    "incomplete": 8
   },
   "families": {
     "inference": {
-      "total": 3103,
-      "complete": 3096
+      "total": 3105,
+      "complete": 3097
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.03562-headq-model-visible-distortion-and-score-space-correction-for-kv-cache-q.md",
+      "canonical_id": "arXiv:2605.03562",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
