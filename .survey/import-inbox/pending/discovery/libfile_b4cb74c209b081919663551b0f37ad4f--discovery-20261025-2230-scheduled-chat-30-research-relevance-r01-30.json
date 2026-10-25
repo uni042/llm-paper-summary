@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261025-2230-scheduled-chat-30/r01",
+  "reference_main_sha": "3d7636d57cb3344623a672df3c1e03fc0463d4a0",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2204.04371",
+      "identity_tokens": [
+        "arxiv:2204.04371"
+      ],
+      "title": "Learning to Schedule Multi-Server Jobs With Fluctuated Processing Speeds",
+      "reason": "複数サーバを同時に占有する一般クラウドジョブのオンライン割当を対象とする。一次要旨のESDPはDVFS等による処理速度の揺らぎをサンプリングして効用を最大化する汎用スケジューラであり、LLM推論、KVキャッシュ、MoE、推論サービングの固有機構や評価を扱わない。",
+      "source_url": "https://arxiv.org/abs/2204.04371",
+      "body_check": "abstract_screen_only; body_not_read; primary arXiv abstract: ESDP, fluctuating processing speeds, online multi-server scheduling",
+      "first_checked_at": "2026-10-25T22:34:58+09:00",
+      "last_checked_at": "2026-10-25T22:34:58+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 30
+    }
+  ]
+}
