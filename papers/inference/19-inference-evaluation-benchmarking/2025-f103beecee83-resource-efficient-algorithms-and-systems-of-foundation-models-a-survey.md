@@ -37,6 +37,8 @@ references:
   - canonical_id: "arXiv:2312.00752"
 references_checked_at: "2026-10-25"
 references_source: "published-primary-PDF-reference-list"
+last_audited: null
+audit_version: 0
 ---
 
 # Resource-efficient Algorithms and Systems of Foundation Models — 基盤モデル効率化の階層横断サーベイ

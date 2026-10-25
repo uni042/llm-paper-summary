@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（59本）
+## 自動生成の論文一覧（60本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -207,6 +207,10 @@
 - **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoBiLEは、総パラメータがGPUメモリに収まらないMixture-of-Experts（MoE）言語モデルを、消費者向けGPUとCPU DRAMの組合せで実行するときの転送ボトルネックを削減する推論方式である。
+
+- **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
+  実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：0  
+  Mosaicは、事前学習済み大規模言語モデルを限られたメモリの装置へ配置するため、Transformerの各線形射影に異なる削減率を割り当てる方式である。通常の非構造化枝刈りは重みを零化するため品質を比較的保てるが、重み行列の寸法を縮めない限り汎用の密行列演算ではメモリや時間の削減に結びつきにくい。
 
 - **2024-12 · [Deploying Foundation Model Powered Agent Services: A Survey](2024-2412.13437-deploying-foundation-model-powered-agent-services-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
