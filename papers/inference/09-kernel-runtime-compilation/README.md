@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（164本）
+## 自動生成の論文一覧（165本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -197,6 +197,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [LLM4LLM: Bridging Kernel Benchmarks and Real Deployment via Closed-Loop Agentic Optimization](2026-2608.21836-llm4llm-bridging-kernel-benchmarks-and-real-deployment-via-closed-loop-agentic-optimization.md)**  
   実装：[✓](https://github.com/hzeng2000/LLM4LLM) ・ リポジトリ内被引用：0  
   実モデルを計測して段階別カーネルを探索し、モデル内検証まで閉ループ化してA100/H100で幾何平均3.91倍/6.98倍の端から端までの高速化を達成する。
+
+- **2026-08 · [Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning](2026-2608.14290-intern-s2-mobius-foundation-model-with-decoupled-knowledge-and-reasoning.md)**  
+  実装：[✓](https://github.com/InternLM/Intern-S2-Mobius) ・ リポジトリ内被引用：0  
+  通常のTransformerは各層でSelf-注意機構とFFNが対になり、前の層の隠れ状態を次の層へ送る。スクラッチ学習では7B-A1BのMobiusがTransformerと同程度のMMLUを達成するのに0.626倍の訓練トークンしか必要としない。
 
 - **2026-08 · [CoRun: Padding is Simple and Efficient for Deterministic LLM Inference](2026-2608.14376-corun-padding-is-simple-and-efficient-for-deterministic-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

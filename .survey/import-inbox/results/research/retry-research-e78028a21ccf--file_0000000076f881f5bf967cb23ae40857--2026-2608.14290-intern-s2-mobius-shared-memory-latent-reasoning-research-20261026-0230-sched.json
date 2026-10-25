@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "75a0aee5c4554ca14b89b8f4a6d4f41a5310af96f53c52af341edaf91032b230",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e78028a21ccf--file_0000000076f881f5bf967cb23ae40857--2026-2608.14290-intern-s2-mobius-shared-memory-latent-reasoning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
+  "canonical_id": "arXiv:2608.14290",
+  "worker_completed_at": "2026-10-26T02:36:20+09:00",
+  "worker_run_key": "20261026-0230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5266,
+    "body_paragraphs": 34,
+    "method_chars": 933,
+    "method_paragraphs": 5,
+    "evaluation_chars": 190,
+    "limitation_chars": 700,
+    "insufficiency_flags": [
+      "評価説明量 190 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 190 < 500",
+    "長文定型文の再利用を検出: papers/inference/09-kernel-runtime-compilation/2026-2608.14290-intern-s2-mobius-foundation-model-with-decoupled-knowledge-and-reasoning.md と 18 段落 / 3890文字 (83.3%) が完全一致"
+  ],
+  "processed_at": "2026-10-25T19:26:26+00:00"
+}
