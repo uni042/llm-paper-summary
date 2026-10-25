@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-25T21:49:15+00:00",
-  "record_count": 12490,
+  "updated_at": "2026-10-25T21:50:32+00:00",
+  "record_count": 12491,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179929,6 +179929,18 @@
       "last_checked_at": "2026-10-25T21:49:15+00:00",
       "linked_from": [],
       "title": "Accelerating Vision Transformers Based on Heterogeneous Attention Patterns"
+    },
+    "DOI:10.1145/3606557.3606559": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3606557.3606559",
+      "identity_tokens": [
+        "DOI:10.1145/3606557.3606559"
+      ],
+      "reason": "題名の主対象は物理的に分離した汎用データセンターの実装であり、LLM推論、KVキャッシュ、推論スケジューリングへの具体的な適用を示していない。汎用データセンター技術として本サーベイの直接対象外。",
+      "first_checked_at": "2026-10-25T21:50:32+00:00",
+      "last_checked_at": "2026-10-25T21:50:32+00:00",
+      "linked_from": [],
+      "title": "Make It Real: An End-to-End Implementation of A Physically Disaggregated Data Center"
     }
   }
 }
