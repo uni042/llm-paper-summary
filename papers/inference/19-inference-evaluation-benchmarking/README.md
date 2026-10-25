@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（66本）
+## 自動生成の論文一覧（67本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -227,6 +227,10 @@
 - **2025-01 · [Resource-efficient Algorithms and Systems of Foundation Models: A Survey](2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Xu・Cai・Yin・Wang・Jin・Liuによる39ページの査読付きサーベイは、基盤モデルの「効率」を単一のモデル圧縮率やGPU演算速度として扱わず、モデル構造、学習・圧縮・推論アルゴリズム、実行システムという異なる介入点に分解する。
+
+- **2024-12 · [A Survey of RWKV](2024-2412.14847-a-survey-of-rwkv.md)**  
+  実装：[✓](https://github.com/MLGroupJLU/RWKV-Survey) ・ リポジトリ内被引用：1  
+  RWKVは、過去の情報を固定形状の再帰状態へ畳み込むことで、生成時に全トークンのKVを保持しない設計を取る。
 
 ### 3年前（2023-11〜2024-10）
 
