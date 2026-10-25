@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261025-1630-scheduled-chat-30/r01",
+  "reference_main_sha": "2455a98af94353c814f9d23fc524804ee497fd57",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.01049",
+      "identity_tokens": [
+        "arxiv:2407.01049"
+      ],
+      "title": "SE(3)-Hyena Operator for Scalable Equivariant Learning",
+      "reason": "対象はSE(3)等変学習の演算子であり、3次元幾何学的な等変表現の学習に関する研究である。生成型LLM推論基盤を直接扱うタイトルではないため先行除外する。",
+      "source_url": "https://arxiv.org/abs/2407.01049",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read; worklist title identifies non-generative-LLM-inference domain",
+      "first_checked_at": "2026-10-25T16:34:50+09:00",
+      "last_checked_at": "2026-10-25T16:34:50+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 41
+    }
+  ]
+}
