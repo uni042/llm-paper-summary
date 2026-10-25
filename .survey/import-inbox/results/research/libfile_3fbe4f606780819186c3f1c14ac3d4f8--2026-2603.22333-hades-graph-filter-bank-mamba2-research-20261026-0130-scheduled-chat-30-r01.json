@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "c318302decdd2431a2dca1dc1d4b162f4c23ba94c0a5734ab350b8d88478fd37",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.22333",
+  "worker_completed_at": "2026-10-26T01:37:00+09:00",
+  "worker_run_key": "20261026-0130-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6192,
+    "body_paragraphs": 30,
+    "method_chars": 1911,
+    "method_paragraphs": 10,
+    "evaluation_chars": 322,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 322 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 322 < 500"
+  ],
+  "processed_at": "2026-10-25T16:57:35+00:00"
+}

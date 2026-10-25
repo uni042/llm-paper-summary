@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（128本）
+## 自動生成の論文一覧（129本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -435,6 +435,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
   実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：1  
   SLO・モデル/入出力長・GPU価格/VRAM/帯域からKVオフロード率と実効TPSを予測し、AWS上で最も安価に要件を満たすVMを自動選択する。
+
+- **2025-08 · [Profiling Large Language Model Inference on Apple Silicon: A Quantization Perspective](2025-2508.08531-profiling-large-language-model-inference-on-apple-silicon-a-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ローカルLLMの実行環境を選ぶ際、モデルが何GBに収まるか、何bitで量子化できるか、GPUの理論FLOPSがいくつかという指標だけでは実際の生成速度を予測できない。DeepSeek 236BのM2 Ultra上ではIQ2Mが57.33ms/トークンで最も遅く、サイズが約1.73倍のIQ4NLは1.21倍速い。
 
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **3175本**。
+収録論文: **3176本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,12 +34,12 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**3175本**。
+推論論文：**3176本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
 |---|---:|---|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 128 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/) |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 129 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/) |
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 112 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/) |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 16 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/) |
 | [04-conditional-computation](04-conditional-computation/README.md) | 23 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/04-conditional-computation/) |
