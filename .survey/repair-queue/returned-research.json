@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T17:23:56+00:00",
+  "generated_at": "2026-10-25T17:34:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -749,10 +749,10 @@
     },
     {
       "canonical_id": "arXiv:2603.22333",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T16:57:35+00:00",
-      "return_count": 1,
+      "title": "Graph Signal Processing Meets Mamba2: Adaptive Filter Bank via Delta Modulation",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/058373e239c542eae6cb796e4dc521da-Paper-Conference.pdf",
+      "returned_at": "2026-10-25T17:33:06+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -771,8 +771,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6880438de0ef--libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6880438de0ef--libfile_3fbe4f606780819186c3f1c14ac3d4f8--2026-2603.22333-hades-graph-filter-bank-mamba2-research-20261026-0130-scheduled-chat-30-r.json",
       "worker_run_key": "20261026-0130-scheduled-chat-30/r01"
     }
   ]
