@@ -14,7 +14,9 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
-該当なし。
+- **2025-11 · [Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers](2025-a7d4659aa00f-conv-basis-a-new-paradigm-for-efficient-attention-inference-and-gradient.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  提案方式は、相対位置差に沿った対角線状の反復パターンを「畳み込み基底（conv basis）」として表し、各基底に対応する畳み込みとVの積を高速フーリエ変換（Fast Fourier Transform; FFT）で計算する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
@@ -33,10 +35,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2025-12 · [Mixture of Attention Schemes (MoAS): Learning to Route Between MHA, GQA, and MQA](2025-2512.20650-mixture-of-attention-schemes-moas-learning-to-route-between-mha-gqa-and-.md)**  
   実装：[✓](https://github.com/Esmail-ibraheem/Mixture-of-Attention-Schemes-MoAS) ・ リポジトリ内被引用：0  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各問い合わせ頭に独立したキー・バリュー（Key-Value; KV）頭を持ち、表現力が高い一方、生成時のKVキャッシュが大きくなる。これは条件付き計算の可能性を示す探索的結果であって、LLM推論の実用的高速化を実証した結果ではない。
-
-- **2025-11 · [Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers](2025-a7d4659aa00f-conv-basis-a-new-paradigm-for-efficient-attention-inference-and-gradient.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  提案方式は、相対位置差に沿った対角線状の反復パターンを「畳み込み基底（conv basis）」として表し、各基底に対応する畳み込みとVの積を高速フーリエ変換（Fast Fourier Transform; FFT）で計算する。
 
 ### 2年前（2024-11〜2025-10）
 
