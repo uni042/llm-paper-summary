@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T07:03:00+00:00",
+  "generated_at": "2026-10-26T07:08:48+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1077,34 +1077,6 @@
       "worker_run_key": "20261026-1257-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2507.21526",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T06:07:40+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 224 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3083,
-        "body_paragraphs": 15,
-        "method_chars": 1054,
-        "method_paragraphs": 5,
-        "evaluation_chars": 224,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 224 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2508.10251",
       "title": null,
       "source_url": null,
@@ -1129,60 +1101,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_64a7f7f6f1bc819186ea2ab23213513c--2025-2508.10251-fmwork-meta-metrics-benchmarking-research-20261026-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_64a7f7f6f1bc819186ea2ab23213513c--2025-2508.10251-fmwork-meta-metrics-benchmarking-research-20261026-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.24544",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T06:19:13+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3550,
-        "body_paragraphs": 18,
-        "method_chars": 1414,
-        "method_paragraphs": 7,
-        "evaluation_chars": 0,
-        "limitation_chars": 313,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.13472",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T06:31:49+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 223 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 2986,
-        "body_paragraphs": 17,
-        "method_chars": 1265,
-        "method_paragraphs": 8,
-        "evaluation_chars": 223,
-        "limitation_chars": 369,
-        "insufficiency_flags": [
-          "評価説明量 223 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cf7457187f9481918a5fdcb39c85c0a0--2025-2506.13472-rosaq-pca-saliency-quantization-research-20261026-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cf7457187f9481918a5fdcb39c85c0a0--2025-2506.13472-rosaq-pca-saliency-quantization-research-20261026-1400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     },
     {
@@ -1321,65 +1239,9 @@
       "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2506.11044",
+      "canonical_id": "arXiv:2506.12204",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-26T06:52:05+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 307 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6165,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 307,
-        "limitation_chars": 744,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 307 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2511.06010",
-      "title": "MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference",
-      "source_url": "https://arxiv.org/pdf/2511.06010",
-      "returned_at": "2026-10-26T07:01:31+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6300,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 990,
-        "limitation_chars": 766,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b484270154f88191b0c37c415e654d02--2025-2511.06010-moska-shared-kv-attention-research-20261026-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b484270154f88191b0c37c415e654d02--2025-2511.06010-moska-shared-kv-attention-research-20261026-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.12204",
-      "title": "Semantic Scheduling for LLM Inference",
-      "source_url": "https://arxiv.org/pdf/2506.12204",
       "returned_at": "2026-10-26T07:02:04+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1407,8 +1269,8 @@
     },
     {
       "canonical_id": "arXiv:2506.05229",
-      "title": "Diagonal Batching Unlocks Parallelism in Recurrent Memory Transformers for Long Contexts",
-      "source_url": "https://arxiv.org/pdf/2506.05229",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T07:02:05+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1431,6 +1293,144 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-820d18797a6b--libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-820d18797a6b--libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-.json",
       "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.06010",
+      "title": "MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2511.06010",
+      "returned_at": "2026-10-26T07:08:43+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6300,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 990,
+        "limitation_chars": 766,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-50370187ffb2--libfile_b484270154f88191b0c37c415e654d02--2025-2511.06010-moska-shared-kv-attention-research-20261026-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-50370187ffb2--libfile_b484270154f88191b0c37c415e654d02--2025-2511.06010-moska-shared-kv-attention-research-20261026-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.13472",
+      "title": "ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models",
+      "source_url": "https://arxiv.org/html/2506.13472v2",
+      "returned_at": "2026-10-26T07:08:44+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 223 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 2986,
+        "body_paragraphs": 17,
+        "method_chars": 1265,
+        "method_paragraphs": 8,
+        "evaluation_chars": 223,
+        "limitation_chars": 369,
+        "insufficiency_flags": [
+          "評価説明量 223 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-922d322048e6--libfile_cf7457187f9481918a5fdcb39c85c0a0--2025-2506.13472-rosaq-pca-saliency-quantization-research-20261026-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-922d322048e6--libfile_cf7457187f9481918a5fdcb39c85c0a0--2025-2506.13472-rosaq-pca-saliency-quantization-research-20261026-1400-scheduled-chat-00-.json",
+      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.24544",
+      "title": "Cross-Attention Speculative Decoding",
+      "source_url": "https://arxiv.org/pdf/2505.24544",
+      "returned_at": "2026-10-26T07:08:45+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3550,
+        "body_paragraphs": 18,
+        "method_chars": 1414,
+        "method_paragraphs": 7,
+        "evaluation_chars": 0,
+        "limitation_chars": 313,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bf43566fb93b--libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-bf43566fb93b--libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-schedu.json",
+      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.11044",
+      "title": "Boost Post-Training Quantization via Null Space Optimization for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2506.11044",
+      "returned_at": "2026-10-26T07:08:46+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 307 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6165,
+        "body_paragraphs": 38,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 307,
+        "limitation_chars": 744,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 307 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c9f17108b2be--libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c9f17108b2be--libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.21526",
+      "title": "Accelerating Prefilling via Decoding-time Contribution Sparsity",
+      "source_url": "https://arxiv.org/pdf/2507.21526",
+      "returned_at": "2026-10-26T07:08:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 224 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3083,
+        "body_paragraphs": 15,
+        "method_chars": 1054,
+        "method_paragraphs": 5,
+        "evaluation_chars": 224,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 224 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed93831a5dcc--libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed93831a5dcc--libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-schedule.json",
+      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     }
   ]
 }
