@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（190本）
+## 自動生成の論文一覧（191本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -608,6 +608,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   ParallelFlowは、線形注意機構や行列値状態空間モデル（SSM）の逐次更新を、制御微分方程式（CDE）の区間フローとして表現する理論・アルゴリズム研究である。
 
+- **2025-04 · [GPU Performance Portability needs Autotuning](2025-2505.03780-gpu-performance-portability-needs-autotuning.md)**  
+  実装：[✓](https://github.com/foundation-model-stack/vllm-triton-backend) ・ リポジトリ内被引用：0  
+  行列のタイル寸法、warp数、パイプライン段数、共有メモリ、レジスタ割当てをあるGPUへ手作業で合わせると、別のGPUでは速度が落ち、カーネルを移植するたびにCUDA/HIPの実装と検証を繰り返す必要がある。モデル全体の学習やサービングスケジューラを新しくする研究ではない。
+
 - **2024-11 · [TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture](2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   前者は8ビット整数（int8）へ量子化すると、整数積和演算器を高密度に並べたシストリック配列（systolic array）で効率よく実行できる。比較する既存FPGA研究に対してエンドツーエンド処理量最大1.45倍、DSP当たりの効率最大2.29倍、GPUとの比較ではRTX 4090に対し特定BERT条件で電力効率2.19倍を示す。
@@ -699,7 +703,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   IntelのxFasterTransformerに、CPU向けSlimAttention、トークン・ヘッド単位のINT8 KVキャッシュ、oneCCLによる分散推論とゼロコピー通信を組み込む。Xeon 8563C環境でLlama2-70Bの次トークン遅延を2ソケット249.7msから8ソケット87.7msへ短縮した。
 
 - **2024-02 · [QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference](2024-2402.10076-quick-quantization-aware-interleaving-and-conflict-free-kernel-for-effic.md)**  
-  実装：[✓](https://github.com/SqueezeBits/QUICK) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/SqueezeBits/QUICK) ・ リポジトリ内被引用：2  
   4ビットに量子化した大規模言語モデルでは、重みの保存容量を減らせても、行列積の際には高精度の活性値と掛け合わせるために重みを半精度へ戻す処理が必要になる。原著の行列積単体の比較ではバッチ256でAutoAWQのカーネル比1.33〜1.91倍、モデル生成の比較では最大1.94倍の処理量を報告した。
 
 - **2024-10 · [MatMamba: A Matryoshka State Space Model](2024-2410.06718-matmamba-a-matryoshka-state-space-model.md)**  

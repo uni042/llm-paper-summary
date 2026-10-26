@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（751本）
+## 自動生成の論文一覧（755本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2076,6 +2076,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   事前学習済みTransformerの通常のsoftmax注意を線形注意（LA）へ置き換えれば、過去のキーと値を全トークン分保持せず、一定サイズの再帰状態へ集約できる。しかし注意機構を変更しただけでは元モデルの精度が下がるため、注意転写と追加微調整を行う。
 
+- **2025-10 · [Key and Value Weights Are Probably All You Need: On the Necessity of the Query, Key, Value weight Triplet in Self-Attention Transformers](2025-2510.23912-key-and-value-weights-are-probably-all-you-need-on-the-necessity-of-the-.md)**  
+  実装：[✓](https://github.com/MarkoKarbevski/Wqkv_necessity) ・ リポジトリ内被引用：1  
+  各射影が表現力に独立して必要なのかは、モデルのパラメータ数・学習時の最適化・推論時のメモリ使用量を考えるうえで重要である。理論の出発点は、注意機構が元の入力Xを直接見るのではなく、XWQ、XWK、XWVという射影後の値に依存する点である。これは非埋込パラメータ約8.3%削減であり、総モデルパラメータが25%減るわけではない。
+
 - **2025-10 · [ARMOR: High-Performance Semi-Structured Pruning via Adaptive Matrix Factorization](2025-2510.05528-armor-high-performance-semi-structured-pruning-via-adaptive-matrix-facto.md)**  
   実装：[✓](https://github.com/LawrenceRLiu/ARMOR) ・ リポジトリ内被引用：1  
   一方、どの4要素からも2要素を消すという硬い制約は、同じ50%剪定率の非構造化剪定よりも言語モデルの品質を大きく悪化させやすい。ARMORは、この損失をマスク選択だけで解決するのではなく、疎行列の前後へ小さい学習可能な線形変換を配置して重み表現を変える方式である。
@@ -2220,6 +2224,10 @@
   実装：[✓](https://github.com/compressionOrg/ARA) ・ リポジトリ内被引用：0  
   ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% 残存比率」はパラメータの80%を残すという意味で、80%を削る意味ではない。
 
+- **2025-10 · [Adaptive Dual Reasoner: Large Reasoning Models Can Think Efficiently by Hybrid Reasoning](2025-2510.10207-adaptive-dual-reasoner-large-reasoning-models-can-think-efficiently-by-h.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  適応的 Dual Reasoner（ADR）は、大規模推論モデルが簡単な計算でも長いChain-of-Thoughtを出力する「過剰思考」を抑えるため、推論途中の難しさに応じてeasy（簡潔な思考）とhard（深い思考）を切り替える方式である。
+
 - **2025-09 · [Thinking-Free Policy Initialization Makes Distilled Reasoning Models More Effective and Efficient Reasoners](2025-2509.26226-thinking-free-policy-initialization-makes-distilled-reasoning-models-mor.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   推論モデルを検証可能報酬で強化学習するRLVR（Reinforcement Learning with Verifiable Rewards）では、正解が自動判定できる数学・コード課題を多数解かせ、rolloutごとの成否からpolicyを更新する。最大応答長を短く制限すれば安くなるが、途中の検証・再考を切り捨てることで、学習後の正答率が戻らない場合がある。
@@ -2231,6 +2239,10 @@
 - **2025-09 · [Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance](2025-2509.15704-pyramid-token-pruning-for-high-resolution-large-vision-language-models-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Pyramid Token Pruning（PTP）は、追加学習なしで、画像全体に対するタイルの重要度、タイル内部のパッチ重要度、ユーザーの指示文に対するパッチ関連度を三段階で組み合わせる方式である。
+
+- **2025-09 · [HiPO: Hybrid Policy Optimization for Dynamic Reasoning in LLMs](2025-2509.23967-hipo-hybrid-policy-optimization-for-dynamic-reasoning-in-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HiPO（Hybrid Policy Optimization）は、各入力に対して詳細推論を行うThink-onと直接回答するThink-offを選ぶ能力をモデル自体に学習させる方式である。
 
 - **2025-09 · [EfficientUICoder: Efficient MLLM-based UI Code Generation via Input and Output Token Compression](2025-2509.12159-efficientuicoder-efficient-mllm-based-ui-code-generation-via-input-and-o.md)**  
   実装：[✓](https://github.com/WebPAI/EfficientUICoder) ・ リポジトリ内被引用：0  
@@ -2303,6 +2315,10 @@
 - **2025-05 · [Understanding Differential Transformer Unchains Pretrained Self-Attentions](2025-2505.16333-understanding-differential-transformer-unchains-pretrained-self-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   差分注意を備えたDifferential Transformerは、通常の注意行列を二組計算し、片方からもう片方を係数付きで引くことで、重要でない位置に共通する注意を抑える設計である。Llama-3Bの11課題平均正答率は60.2%から64.2%、長文脈の針検索では66.9%から78.3%へ改善した。
+
+- **2025-05 · [STAR: Stage-Wise Attention-Guided Token Reduction for Efficient Large Vision-Language Models Inference](2025-2505.12359-star-stage-wise-attention-guided-token-reduction-for-efficient-large-vis.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  STAR（Stage-Wise 注意機構-Guided Token Reduction）は、画像とテキストを扱う大規模Vision-Language モデル（LVLM）の推論で、視覚トークンを視覚エンコーダ直後とLLMデコーダ中間層の二段階で削る学習不要の手法である。
 
 - **2025-05 · [Semantic Retention and Extreme Compression in LLMs: Can We Have Both?](2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2451,7 +2467,7 @@
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits](2024-2402.17764-the-era-of-1-bit-llms-all-large-language-models-are-in-1-58-bits.md)**  
-  実装：✓ ・ リポジトリ内被引用：46  
+  実装：✓ ・ リポジトリ内被引用：45  
   狙いは、学習済みFP16/BF16モデルを後から近似する事後学習量子化ではなく、モデル自体を極低bit表現へ適応させ、品質を維持したまま重み転送・行列積・メモリ容量の支配項を小さくすることにある。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
@@ -2562,10 +2578,6 @@
   実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：5  
   Mambaは選択的状態空間モデル（Selective State Space モデル; SSM）の一種で、注意機構のように系列長の二乗へ比例する全組合せを直接計算せず、再帰的な隠れ状態へ過去の情報を集約する。
 
-- **2024-03 · [Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2024-8166d1af62df-exploring-post-training-quantization-in-llms-from-comprehensive-study-to.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  この論文は、大規模言語モデル（Large Language モデル; LLM）の学習後量子化（Post-学習 量子化; PTQ）について、「何ビットにするか」だけでなく、重みと活性化のどちらを量子化するか、どの範囲で尺度を共有するか、誤差をどの方法で補正するか、モデル系列と規模によって結果がどう変わるかを分離して調べる。
-
 - **2024-01 · [APAR: LLMs Can Do Auto-Parallel Auto-Regressive Decoding](2024-2401.06761-apar-llms-can-do-auto-parallel-auto-regressive-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   各トークンの生成にはモデル重みの読み込みと注意計算が必要で、単一要求ではGPUの演算器が十分使われない一方、多数要求では注意計算とKVキャッシュ容量が制約になる。重要なのは独立した段落を別々の生成系列として同時に進めることであり、単に次の複数トークンを予測して検証する投機的復号（投機的復号）とは異なる。
@@ -2577,6 +2589,10 @@
 - **2024-04 · [Cherry on Top: Parameter Heterogeneity and Quantization in Large Language Models](2024-2404.02837-cherry-on-top-parameter-heterogeneity-and-quantization-in-large-language.md)**  
   実装：[✓](https://github.com/wangitu/CherryQ) ・ リポジトリ内被引用：4  
   大規模言語モデル（LLM）の重みを一律に低ビットへ量子化すると、保存容量を減らせる反面、ごく少数の重要な重みに発生した誤差が出力品質を大きく損なう。
+
+- **2024-03 · [Exploring Post-training Quantization in LLMs from Comprehensive Study to Low Rank Compensation](2024-8166d1af62df-exploring-post-training-quantization-in-llms-from-comprehensive-study-to.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  この論文は、大規模言語モデル（Large Language モデル; LLM）の学習後量子化（Post-学習 量子化; PTQ）について、「何ビットにするか」だけでなく、重みと活性化のどちらを量子化するか、どの範囲で尺度を共有するか、誤差をどの方法で補正するか、モデル系列と規模によって結果がどう変わるかを分離して調べる。
 
 - **2024-03 · [Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression](2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md)**  
   実装：[✓](https://github.com/decoding-comp-trust/comp-trust) ・ リポジトリ内被引用：4  
