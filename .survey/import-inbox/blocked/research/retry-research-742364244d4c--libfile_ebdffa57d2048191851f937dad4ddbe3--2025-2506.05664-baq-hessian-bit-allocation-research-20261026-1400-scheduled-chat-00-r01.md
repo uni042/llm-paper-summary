@@ -35,6 +35,8 @@ published_year: 2025
 year: 2025
 lineage: 99-other-inference-systems
 implementation_status: research-prototype
+last_audited: null
+audit_version: 0
 ---
 
 # BAQ: Efficient Bit Allocation Quantization for Large Language Models
