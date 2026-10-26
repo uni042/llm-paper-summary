@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（484本）
+## 自動生成の論文一覧（485本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1502,7 +1502,7 @@
 
 - **2025-06 · [Efficient Serving of LLM Applications with Probabilistic Demand Modeling](2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
-  現代のLLMアプリは単一のテキスト生成要求で終わらない。文書を分割して並列要約し、生成したコードをDockerで試し、必要に応じて検索や画像モデルを呼ぶなど、複数のLLM・非LLM処理が依存関係を持つ。既存のサービングは個々のLLM要求の待ち時間を最適化することが多いが、ユーザーにとって重要なのはアプリケーション全体が完了するまでの時間（ACT）である。
+  Hermesは、一回のLLM生成要求ではなく、複数の生成、検索、コード実行、画像処理が連鎖するアプリケーション全体の終了時間を最適化する。既存のvLLMの要求単位の先着順や、アプリ単位でも処理量を推定しない先着順では、短いアプリが長いアプリの後ろに並ぶ。推定した分布からGittins指標でアプリの優先度を決め、次のバックエンドの事前準備を行う。
 
 - **2025-05 · [Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately](2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -1619,6 +1619,10 @@
 - **2025-06 · [On-the-Fly Adaptive Distillation of Transformer to Dual-State Linear Attention for Long-Context LLM Serving](2025-2506.09316-on-the-fly-adaptive-distillation-of-transformer-to-dual-state-linear-att.md)**  
   実装：[✓](https://github.com/utnslab/DSLA-Serve) ・ リポジトリ内被引用：0  
   DSLA-Serveは、大規模言語モデル（LLM）の長文推論で増大する自己注意（self-注意機構）の計算量とKVキャッシュ容量を、自己注意層の一部を線形注意へ置き換えることで削減する方式である。報告された代表値は、元のLlama2-7Bに対して約2.29倍、ハイブリッドモデルZamba-7Bに対して約3.0倍の推論高速化である。
+
+- **2025-06 · [Diagonal Batching Unlocks Parallelism in Recurrent Memory Transformers for Long Contexts](2025-2506.05229-diagonal-batching-unlocks-parallelism-in-recurrent-memory-transformers-f.md)**  
+  実装：[✓](https://github.com/svtdanny/diagonal-batching) ・ リポジトリ内被引用：0  
+  Recurrent メモリ Transformer（RMT）は入力を短いセグメントに分け、固定サイズのメモリ状態を次のセグメントへ引き継ぐことで、文脈全体を一度に注意へ載せずに処理できる。この手法は重みを削る、近似注意へ変える、再帰状態を近似する方法ではなく、既存モデルの計算順序を依存関係の許す範囲で入れ替えるランタイムスケジューリングである。
 
 - **2025-06 · [Adaptive Request Scheduling for CodeLLM Serving with SLA Guarantees](2025-2506.19677-adaptive-request-scheduling-for-codellm-serving-with-sla-guarantees.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

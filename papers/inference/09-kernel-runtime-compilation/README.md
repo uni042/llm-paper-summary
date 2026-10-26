@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（185本）
+## 自動生成の論文一覧（186本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -559,6 +559,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
   実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：0  
   本論文は2025年9月公開のarXivプレプリントで、低ビット量子化と枝刈りを同時に適用する大規模言語モデルの圧縮を扱う。対象はLlama2、Llama3、Qwen2.5系列であり、重み4ビット・活性4ビット・KVキャッシュ4ビット（W4A4KV4）と50%の疎性を組み合わせることを主な目標とする。
+
+- **2025-08 · [FlexQ: Efficient Post-training INT6 Quantization for LLM Serving via Algorithm-System Co-Design](2025-2508.04405-flexq-efficient-post-training-int6-quantization-for-llm-serving-via-algo.md)**  
+  実装：[✓](https://github.com/FlyFoxPlayer/FlexQ) ・ リポジトリ内被引用：0  
+  FlexQは、LLMの重みと活性値を6bitへ量子化して品質を維持しつつ、GPU上で本当に高速に実行するための方式である。
 
 - **2025-08 · [ExpertWeave: Efficiently Serving Expert-Specialized Fine-Tuned Adapters at Scale](2025-2508.17624-expertweave-efficiently-serving-expert-specialized-fine-tuned-adapters-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T15:39:31+00:00",
+  "generated_at": "2026-10-26T15:52:30+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 57,
+  "count": 55,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1308,33 +1308,6 @@
       "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2506.05229",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T07:02:05+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6154,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 523,
-        "limitation_chars": 723,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-820d18797a6b--libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-820d18797a6b--libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-.json",
-      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.13472",
       "title": null,
       "source_url": null,
@@ -1417,33 +1390,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed93831a5dcc--libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ed93831a5dcc--libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-schedule.json",
       "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.09035",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T14:31:44+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5858,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 821,
-        "limitation_chars": 788,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fff5039535a5--libfile_6c354fcb98ec8191b7ad8c2d2ec6ff60--2025-2508.09035-pd-device-cloud-edge-disaggregation-research-20261026-2100-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-fff5039535a5--libfile_6c354fcb98ec8191b7ad8c2d2ec6ff60--2025-2508.09035-pd-device-cloud-edge-disaggregation-research-20261026-2100-scheduled-chat.json",
-      "worker_run_key": "20261026-2100-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2508.18376",
