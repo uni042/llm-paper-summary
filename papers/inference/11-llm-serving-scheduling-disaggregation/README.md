@@ -1929,7 +1929,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2020-11 · [Serving DNNs like Clockwork: Performance Predictability from the Bottom Up](2020-2006.02464-serving-dnns-like-clockwork-performance-predictability-from-the-bottom-u.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   Clockworkは、深層ニューラルネットワーク（DNN）のオンライン推論で、平均速度ではなく要求ごとの締切と尾部遅延を中心に設計した分散モデル提供システムである。
 
 - **2021-07 · [Long-Short Transformer: Efficient Transformers for Language and Vision](2021-2107.02192-long-short-transformer-efficient-transformers-for-language-and-vision.md)**  
