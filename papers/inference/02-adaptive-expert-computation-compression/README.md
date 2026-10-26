@@ -401,7 +401,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   本研究は、学習済みモデルを大規模に再学習せず、①各層の出力をできるだけ保つ専門家の集合を探索して重みを恒久的に削除する事後専門家枝刈り、②実行時にルータが選んだ2専門家のうち寄与の小さい第2専門家だけをトークン単位で省く動的専門家省略を組み合わせる。
 
 - **2024-10 · [MoE-Pruner: Pruning Mixture-of-Experts Large Language Model using the Hints from Its Router](2024-2410.12013-moe-pruner-router-hints.md)**  
-  実装：✓ ・ リポジトリ内被引用：48  
+  実装：✓ ・ リポジトリ内被引用：49  
   重み・入力活性・ルータ重みを組み合わせたMoE専用重要度でエキスパート 重みをone-shot枝刈りし、エキスパート-wise蒸留で50%疎性でも元性能の約99%まで回復する。
 
 - **2024-07 · [Efficient Expert Pruning for Sparse Mixture-of-Experts Language Models: Enhancing Performance and Reducing Inference Costs](2024-2407.00945-efficient-expert-pruning-for-sparse-mixture-of-experts-language-models-e.md)**  
@@ -481,7 +481,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-01 · [DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale](2022-2201.05596-deepspeed-moe-inference-compression.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：130  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：131  
   PR-MoE/MoSでMoEサイズを最大3.7倍縮小し、多次元並列・通信・融合カーネルを統合してPyTorch比最大7.3倍、同等品質dense比最大4.5倍高速な推論を実現。
 
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  

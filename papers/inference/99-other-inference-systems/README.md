@@ -2120,6 +2120,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   RadioはLLM重みの事後量子化を、平均ビット数の制約下で元モデルとの出力歪みを最小化するレート・歪み最適化として定式化する。
 
+- **2025-05 · [DenoiseRotator: Enhance Pruning Robustness for LLMs via Importance Concentration](2025-2505.23049-denoiserotator-enhance-pruning-robustness-for-llms-via-importance-concen.md)**  
+  実装：[✓](https://github.com/Axel-gu/DenoiseRotator) ・ リポジトリ内被引用：1  
+  DenoiseRotatorは、大規模言語モデル（LLM）の枝刈り（枝刈り）を行う前に、どの重みが重要かという分布自体を変える方式である。推論時の速度も重要で、A100上のLLaMA3-8B単層では、密行列5.80ms、回転なし2:4疎行列4.37ms、回転を含む2:4疎行列4.69msだった。
+
 - **2025-04 · [AccLLM: Accelerating Long-Context LLM Inference Via Algorithm-Hardware Co-Design](2025-2505.03745-accllm-accelerating-long-context-llm-inference-via-algorithm-hardware-co.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）を資源制約の強い端末向けFPGAに載せるため、圧縮アルゴリズムと演算器・データフローを同時に設計する。主要な評価ではLlama-2-7Bを12.1GBのFP16モデルから1.53GBへ縮小し、Xilinx Alveo U280 FPGA上で164 トークン/s、33W、4.96 トークン/Jを報告した。
@@ -2239,10 +2243,6 @@
 - **2025-05 · [Exploring Federated Pruning for Large Language Models](2025-2505.13547-exploring-federated-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/Pengxin-Guo/FedPrLLM) ・ リポジトリ内被引用：0  
   LLMの重みを削ってメモリ使用量を減らす剪定（枝刈り）は、モデルの入力活性化を校正データで観測して「消しても影響の小さい重み」を選ぶことが多い。LLaMA 7Bの50%疎化では、WikiText2の困惑度（PPL）が密モデル5.67、全データを集める集中剪定7.25、FedPrLLM層one-shot 7.32、クライアント単独7.44となる。
-
-- **2025-05 · [DenoiseRotator: Enhance Pruning Robustness for LLMs via Importance Concentration](2025-2505.23049-denoiserotator-enhance-pruning-robustness-for-llms-via-importance-concen.md)**  
-  実装：[✓](https://github.com/Axel-gu/DenoiseRotator) ・ リポジトリ内被引用：0  
-  DenoiseRotatorは、大規模言語モデル（LLM）の枝刈り（枝刈り）を行う前に、どの重みが重要かという分布自体を変える方式である。推論時の速度も重要で、A100上のLLaMA3-8B単層では、密行列5.80ms、回転なし2:4疎行列4.37ms、回転を含む2:4疎行列4.69msだった。
 
 - **2025-05 · [$\mu$-MoE: Test-Time Pruning as Micro-Grained Mixture-of-Experts](2025-2505.18451-mu-moe-test-time-pruning-as-micro-grained-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2371,7 +2371,7 @@
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：31  
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
@@ -2633,7 +2633,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：201  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：203  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
@@ -2785,7 +2785,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：64  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -2853,11 +2853,11 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：293  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：294  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：224  
+  実装：✓ ・ リポジトリ内被引用：225  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
@@ -2895,7 +2895,7 @@
 ### 9年前（2017-11〜2018-10）
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：74  
+  実装：✓ ・ リポジトリ内被引用：75  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
