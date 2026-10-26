@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（748本）
+## 自動生成の論文一覧（751本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2096,6 +2096,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   クラウドのLLMサービングではプリフィルとデコードを別のインスタンスへ配置するP/D分離が普及している。著者のAscend NPUクラウド・Kirin SoC端末による4k～32k入力の実験では、端末が自分のプリフィルを完了するまでの平均時間が端末単独より60%短くなり、利用者にはそれより早いクラウドの第1トークン到着時点で応答を表示できる。
 
+- **2025-08 · [DTRNet: Dynamic Token Routing Network to Reduce Quadratic Costs in Transformers](2025-2509.00925-dtrnet-dynamic-token-routing-network-to-reduce-quadratic-costs-in-transf.md)**  
+  実装：[✓](https://github.com/Aman26Sharma/DTRNet) ・ リポジトリ内被引用：1  
+  各層で学習済みルーティングがトークンごとにfull 注意機構経路と軽量な自己投影経路を選ぶ。FineWeb-Eduで事前学習した360Mモデルでは、DTRNet-BiLayerがdense SmolLM比FLOPs 0.84倍で平均ゼロショット精度44.36%、denseの44.23%とほぼ同等だった。
+
 - **2025-07 · [Squeeze10-LLM: Squeezing LLMs’ Weights by 10 Times via a Staged Mixed-Precision Quantization Method](2025-2507.18073-squeeze10-llm-squeezing-llms-weights-by-10-times-via-a-staged-mixed-prec.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   しかし均一に1～2bitへ量子化すると、外れ値や重要なチャネルの情報が失われ、出力活性が層を通るたびにずれていく。Squeeze10-LLMは、すべての重みをいきなり1bitにせず、まず4bitへ変換してから重要度を測定し、80%を1bit、残り20%を4bitで保存する段階的な重み専用post-学習 量子化（PTQ）を提案する。
@@ -2183,6 +2187,10 @@
 - **2024-11 · [AdaCM^2: On Understanding Extremely Long-Term Video with Adaptive Cross-Modality Memory Reduction](2024-2411.12593-adacm-2-on-understanding-extremely-long-term-video-with-adaptive-cross-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AdaCM²は、長時間動画を言語モデルへ渡す際、すべてのフレームの視覚特徴を保存し続ける代わりに、テキスト質問と強く関連する視覚トークンだけを古いキャッシュから残す方式である。
+
+- **2025-10 · [video-SALMONN S: Memory-Enhanced Streaming Audio-Visual LLM](2025-2510.11129-video-salmonn-s-memory-enhanced-streaming-audio-visual-llm.md)**  
+  実装：[✓](https://github.com/bytedance/SALMONN/tree/video-salmonn-S) ・ リポジトリ内被引用：0  
+  後者では将来の質問も動画長も未知であり、長時間の履歴を固定のGPUメモリ予算へ保持しなければならない。類似トークンをまとめるだけの方式は新しいフレームが来るたび古い細部を失い、数十分前に見た手順を問われる課題では精度が下がり得る。
 
 - **2025-10 · [To Compress or Not? Pushing the Frontier of Lossless GenAI Model Weights Compression with Exponent Concentration](2025-2510.02676-to-compress-or-not-pushing-the-frontier-of-lossless-genai-model-weights-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2717,6 +2725,10 @@
 - **2024-02 · [User-LLM: Efficient LLM Contextualization with User Embeddings](2024-2402.13598-user-llm-efficient-llm-contextualization-with-user-embeddings.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   履歴を項目IDと属性IDの列として符号化し、小型の自己回帰型利用者エンコーダで密なベクトル列へ変換した後、LLMの中間層に交差注意（cross-注意機構）で取り込ませる。MovieLens 20M、Google Review、Amazon Reviewを用いた実験では、長い履歴を使うほど計算量削減が顕著になった。
+
+- **2024-02 · [Unifying Linear-Time Attention via Latent Probabilistic Modelling](2024-2402.17512-unifying-linear-time-attention-via-latent-probabilistic-modelling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  標準Transformerの自己注意は、系列内の各トークンが過去の各トークンを参照するため、長い入力のプリフィルではトークン数の二乗に比例する注意計算を必要とする。生成時には過去のKey/ValueをKVキャッシュへ保持するため、文脈長とともにメモリ容量も増える。本論文は、線形注意を潜在変数を介した確率分布として解釈する。
 
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  

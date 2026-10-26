@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（189本）
+## 自動生成の論文一覧（190本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -595,6 +595,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [Low-Cost FlashAttention with Fused Exponential and Multiplication Hardware Operators](2025-2505.14314-low-cost-flashattention-with-fused-exponential-and-multiplication-hardwa.md)**  
   実装：[✓](https://github.com/ic-lab-duth/Fused-ExpMul) ・ リポジトリ内被引用：0  
   本論文は、FlashAttention-2の計算アルゴリズムを変えるのではなく、オンラインsoftmaxに必要な指数関数とValueベクトル乗算をASIC上の一つの演算器へまとめるハードウェア最適化を提案する。
+
+- **2025-05 · [HybridServe: Efficient Serving of Large AI Models with Confidence-Based Cascade Routing](2025-2505.12566-hybridserve-efficient-serving-of-large-ai-models-with-confidence-based-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  小型モデルへ置き換える蒸留・量子化は電力を削減できるが、難しい要求で品質を落としやすい。論文は最大19.8倍の省電力と記載するが、丸め済み表の値から計算すると115/6=19.17倍である。
 
 - **2025-04 · [Pruning Laws for Large Language Models](2025-2504.04342-pruning-laws-for-large-language-models.md)**  
   実装：[✓](https://github.com/parmanu-lcs2/pruning_laws) ・ リポジトリ内被引用：0  
