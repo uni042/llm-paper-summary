@@ -1,38 +1,65 @@
 ---
-canonical_id: "DOI:10.18653/v1/2025.emnlp-main.366"
-doi: "10.18653/v1/2025.emnlp-main.366"
-title: "SPECVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning"
-summary: "SPECVLMは動画LLM向けの学習不要な投機的復号法。長い動画入力によりドラフト側KVキャッシュの読み出しが律速となる問題に対し、ターゲット（verifier）のlanguage-to-video attentionを用いて重要な動画トークンを選び、低注意の残余トークンは空間的に均一に間引く。ターゲット側の元の動画情報は保持し、ドラフト側のみ最大約90%の動画トークンを剪定するため、正しい受理・補正則を使う限りターゲット出力分布を保つ。EMNLP 2025の原著表1・2では、LLaVA-OneVision 72B-7BのVideoDetailedCaptionで2.94→7.88 tokens/s（2.68倍）、Qwen2.5-VL 32B-7BのLongVideoBenchで4.91→10.35 tokens/s（2.11倍）。ただし短い入力、帯域非律速、ドラフト選択不適切の場合の利得は保証されず、90%剪定はターゲットモデルを直接剪定したことを意味しない。"
-list_summary: "ターゲットの注意から重要動画トークンを選びドラフトKVのみ最大90%縮小する投機的復号。LLaVA-OneVisionで最大2.68倍、Qwen2.5-VLで2.11倍のdecode速度。"
+canonical_id: DOI:10.18653/v1/2025.emnlp-main.366
+doi: 10.18653/v1/2025.emnlp-main.366
+title: 'SPECVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning'
+summary: SPECVLMは動画LLM向けの学習不要な投機的復号法。長い動画入力によりドラフト側KVキャッシュの読み出しが律速となる問題に対し、ターゲット（verifier）のlanguage-to-video attentionを用いて重要な動画トークンを選び、低注意の残余トークンは空間的に均一に間引く。ターゲット側の元の動画情報は保持し、ドラフト側のみ最大約90%の動画トークンを剪定するため、正しい受理・補正則を使う限りターゲット出力分布を保つ。EMNLP 2025の原著表1・2では、LLaVA-OneVision 72B-7BのVideoDetailedCaptionで2.94→7.88 tokens/s（2.68倍）、Qwen2.5-VL 32B-7BのLongVideoBenchで4.91→10.35 tokens/s（2.11倍）。ただし短い入力、帯域非律速、ドラフト選択不適切の場合の利得は保証されず、90%剪定はターゲットモデルを直接剪定したことを意味しない。
+list_summary: ターゲットの注意から重要動画トークンを選びドラフトKVのみ最大90%縮小する投機的復号。LLaVA-OneVisionで最大2.68倍、Qwen2.5-VLで2.11倍のdecode速度。
 authors:
-  - "Yicheng Ji"
-  - "Jun Zhang"
-  - "Heming Xia"
-  - "Jinpeng Chen"
-  - "Lidan Shou"
-  - "Gang Chen"
-  - "Huan Li"
-published: "2025-11"
+- Yicheng Ji
+- Jun Zhang
+- Heming Xia
+- Jinpeng Chen
+- Lidan Shou
+- Gang Chen
+- Huan Li
+published: 2025-11
 published_year: 2025
-publication: "Proceedings of EMNLP 2025, pp. 7205–7219"
-publication_type: "peer-reviewed conference paper"
-publication_status: "EMNLP 2025 proceedings"
-source: "https://aclanthology.org/2025.emnlp-main.366.pdf"
+publication: Proceedings of EMNLP 2025, pp. 7205–7219
+publication_type: peer-reviewed conference paper
+publication_status: EMNLP 2025 proceedings
+source: https://aclanthology.org/2025.emnlp-main.366.pdf
 sources:
-  - "https://aclanthology.org/2025.emnlp-main.366.pdf"
-  - "https://doi.org/10.18653/v1/2025.emnlp-main.366"
-code: "https://github.com/zju-jiyicheng/SpecVLM"
-implementation: "LLaVA-OneVision 72B target/7B draftおよび7B Self-SD、Qwen2.5-VL 32B target/7B draftおよび7B Self-SD。VideoDetailedCaption、MVBench、MVLU（LLaVAのみ）、LongVideoBenchを評価。標準SD、ランダム剪定、二段階剪定を比較。原著図2(a)はA100単一GPU上で100トークンのドラフト遅延を測定。"
-last_checked: "2026-10-27"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261027-0500-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-27T05:07:30+09:00"
-reference_main_sha: "59e01e73cfd59c20f0b8bb5a6a493d3696dd9d86"
+- https://aclanthology.org/2025.emnlp-main.366.pdf
+- https://doi.org/10.18653/v1/2025.emnlp-main.366
+code: https://github.com/zju-jiyicheng/SpecVLM
+implementation: LLaVA-OneVision 72B target/7B draftおよび7B Self-SD、Qwen2.5-VL 32B target/7B draftおよび7B Self-SD。VideoDetailedCaption、MVBench、MVLU（LLaVAのみ）、LongVideoBenchを評価。標準SD、ランダム剪定、二段階剪定を比較。原著図2(a)はA100単一GPU上で100トークンのドラフト遅延を測定。
+last_checked: '2026-10-27'
+worker_id: scheduled-chat-00
+worker_run_key: 20261027-0500-scheduled-chat-00/r01
+worker_completed_at: '2026-10-27T05:07:30+09:00'
+reference_main_sha: 59e01e73cfd59c20f0b8bb5a6a493d3696dd9d86
 worklist_rank: 89
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.06764
+- canonical_id: arXiv:2408.11049
+- canonical_id: arXiv:2410.17247
+- canonical_id: arXiv:2404.11912
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2407.11550
+- canonical_id: arXiv:2502.11494
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2410.04417
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2403.15388
+- canonical_id: arXiv:2411.15024
+- canonical_id: arXiv:2410.06916
+- canonical_id: arXiv:2402.02082
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2408.10188
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2404.08856
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2309.17453
+- canonical_id: DOI:10.1109/iccv51701.2025.01866
+- canonical_id: arXiv:2505.05950
+- canonical_id: arXiv:2302.07863
+references_checked_at: '2026-10-26'
+references_source: primary-pdf-reference-section
+references_total: 2
 ---
 
 # SPECVLM：検証モデルの注意を使ってドラフト側だけ動画トークンを削る投機的復号
