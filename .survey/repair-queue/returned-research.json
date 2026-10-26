@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T08:31:16+00:00",
+  "generated_at": "2026-10-26T08:44:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 49,
+  "count": 46,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1048,60 +1048,6 @@
       "worker_run_key": "20261026-0900-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2503.01820",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T06:32:26+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6163,
-        "body_paragraphs": 40,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 622,
-        "limitation_chars": 820,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-013510b247ce--libfile_31c7346cfb288191bcb5b8e4a642cb68--2025-2503.01820-rsq-important-token-weight-quantization-research-20261026-1330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-013510b247ce--libfile_31c7346cfb288191bcb5b8e4a642cb68--2025-2503.01820-rsq-important-token-weight-quantization-research-20261026-1330-scheduled-.json",
-      "worker_run_key": "20261026-1330-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.10964",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T06:41:15+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6113,
-        "body_paragraphs": 36,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2163,
-        "limitation_chars": 837,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-11f0b6f1bfc3--libfile_d7b1a72fcf1c81919d9874af4e90334b--2025-2510.10964-scale-dependent-reasoning-memory-research-20261026-1330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-11f0b6f1bfc3--libfile_d7b1a72fcf1c81919d9874af4e90334b--2025-2510.10964-scale-dependent-reasoning-memory-research-20261026-1330-scheduled-chat-30.json",
-      "worker_run_key": "20261026-1330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.05664",
       "title": null,
       "source_url": null,
@@ -1180,33 +1126,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-922d322048e6--libfile_cf7457187f9481918a5fdcb39c85c0a0--2025-2506.13472-rosaq-pca-saliency-quantization-research-20261026-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-922d322048e6--libfile_cf7457187f9481918a5fdcb39c85c0a0--2025-2506.13472-rosaq-pca-saliency-quantization-research-20261026-1400-scheduled-chat-00-.json",
-      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.24544",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T07:08:45+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3550,
-        "body_paragraphs": 18,
-        "method_chars": 1414,
-        "method_paragraphs": 7,
-        "evaluation_chars": 0,
-        "limitation_chars": 313,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bf43566fb93b--libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-bf43566fb93b--libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-schedu.json",
       "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     },
     {
