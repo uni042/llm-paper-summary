@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（108本）
+## 自動生成の論文一覧（110本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -141,6 +141,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [ForesightKV: Optimizing KV Cache Eviction for Reasoning Models by Learning Long-Term Contribution](2026-2602.03203-foresightkv-long-term-contribution-eviction.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   ForesightKVは将来の注意履歴から数百〜数千トークン後に参照されるKVを教師化し、軽量評価器で長期寄与を予測して追い出し、早すぎる削除を減らす方式。
+
+- **2025-11 · [DynaKV: Enabling Accurate and Efficient Long-Sequence LLM Decoding on Smartphones](2025-2511.07427-dynakv-enabling-accurate-and-efficient-long-sequence-llm-decoding-on-sma.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  キャッシュをフラッシュへ退避して必要な部分だけ読み出す方式では、鍵の類似度でまとめたクラスタの代表ベクトルをDRAMに置き、クエリに近いクラスタだけを検索する。論文の主要な結果は、比較したPQCacheに対して端から端までの遅延が平均1.47倍高速、ClusterKVに対して平均1.31倍高速である。
 
 - **2026-09 · [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -389,6 +393,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-09 · [SparseServe: Unlocking Parallelism for Dynamic Sparse Attention in Long-Context LLM Serving](2025-2509.24626-sparseserve-dynamic-sparse-attention-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   動的疎注意で未使用KVをDRAMへ逃がし、断片化転送・HBM競合・長文プリフィルを専用機構で抑えることで、vLLM比で初回トークン時間を最大9.26倍短縮し生成スループットを最大3.14倍高めた長文LLMサービング基盤。
+
+- **2025-06 · [Breaking the Boundaries of Long-Context LLM Inference: Adaptive KV Management on a Single Commodity GPU](2025-2506.20187-breaking-the-boundaries-of-long-context-llm-inference-adaptive-kv-manage.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  KV容量は系列長・バッチ数にほぼ比例し、GPUのメモリを超えるとCPUメモリやSSDへ退避せざるを得ない。論文はRTX 4090を用いた単一PC上で平均3.46倍、バッチ8で最大5.47倍の推論遅延改善を報告するが、比較対象は特定のH2O類似・先読み類似のオフロード実装であり、通常のvLLMやllama.cppの全ての設定を上回るとの主張ではない。
 
 - **2025-10 · [Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits](2025-2511.00321-cxl-pnm-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

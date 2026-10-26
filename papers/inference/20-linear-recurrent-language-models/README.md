@@ -32,7 +32,7 @@
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（45本）
+## 自動生成の論文一覧（46本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/)
 
@@ -78,6 +78,10 @@
 - **2026-05 · [Blurry Window Attention](2026-2606.09862-blurry-window-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Blurry Window 注意機構（BLA）は、長い系列の全トークンに注意を向ける通常の自己注意の代わりに、有限サイズの状態から過去の鍵・値情報を補間して読み出す注意機構である。規則学習課題RegBenchでは、比較した線形注意系の中でBLAとSWAが状態量の増加に応じて精度を改善し、BLAは小さな状態でも優位な条件があった。
+
+- **2026-04 · [Long-Context Aware Upcycling: A New Frontier for Hybrid LLM Scaling](2026-2604.24715-long-context-aware-upcycling-a-new-frontier-for-hybrid-llm-scaling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルを長文脈で使う場合、通常の全注意機構は過去のキーと値をトークン数に応じて保存し続けるため、GPUメモリが推論可能な文脈長を制約する。実行基盤側も改修し、8基のAMD MI300Xを使って最大約200万トークンの推論を実行した。
 
 - **2026-04 · [FG^2-GDN: Enhancing Long-Context Gated Delta Networks with Doubly Fine-Grained Control](2026-2604.19021-fg-2-gdn-enhancing-long-context-gated-delta-networks-with-doubly-fine-gr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

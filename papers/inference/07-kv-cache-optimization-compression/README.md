@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（338本）
+## 自動生成の論文一覧（347本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -687,6 +687,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   検索拡張生成では、回答に必要な文書をプロンプトへ入れると、文書内容が鍵・値キャッシュ（KVキャッシュ）へ保存され、回答中に参照される。さらにLoRAを文書の事前処理（プリフィル）、KV圧縮の重要度採点、回答復号のどの段階で有効にするかを分けた。
 
+- **2026-06 · [HybridThinker: Efficient Chain-of-Thought Reasoning via Compressed Memory and Transient Thought Steps](2026-2606.03768-hybridthinker-efficient-chain-of-thought-reasoning-via-compressed-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LightThinkerのような方式は、各思考段階を少数の記憶トークンへ圧縮して、元の思考トークンのKVを即座に削除する。
+
 - **2026-06 · [High-accuracy Low-Bit KV-Cache Quantization via Local Distribution Restoration](2026-2607.16248-high-accuracy-low-bit-kv-cache-quantization-via-local-distribution-restoration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   1ビットKVキャッシュを維持したまま、量子化で崩れた高確率候補の局所順位だけを検出・補正し、RULER精度を47.8%から83.2%へ回復するDGAP。
@@ -706,6 +710,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Scratchpad Patching: Decoupling Compute from Patch Size in Byte-Level Language Models](2026-2605.09630-scratchpad-patching-decoupling-compute-from-patch-size-in-byte-level-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この「パッチ遅延（patch lag）」が、大きなパッチの精度劣化を招く。したがって、パッチ長が決めるKVキャッシュ圧縮率と、内部で追加実行する計算回数を別々に調整できる。約20億パラメータの実験で、固定16バイト/パッチの自然言語理解平均精度はSPなし48.0からSPあり54.2へ改善し、バイト単位基準の主幹系列短縮16倍を維持する。
+
+- **2026-05 · [Rotation-Aligned Key Channel Pruning for Efficient Vision-Language Model Inference](2026-2605.19218-rotation-aligned-key-channel-pruning-for-efficient-vision-language-model.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来は重要度の低い視覚トークンを丸ごと削除する方式が多いが、文書の小さな文字や画像全体に散らばる情報を必要とする質問では、削除した位置の証拠を復元できない。
 
 - **2026-05 · [ReST-KV: Robust KV Cache Eviction with Layer-wise Output Reconstruction and Spatial-Temporal Smoothing](2026-2605.08840-rest-kv-robust-kv-cache-eviction-with-layer-wise-output-reconstruction-a.md)**  
   実装：[✓](https://github.com/an-yongqi/rest-kv) ・ リポジトリ内被引用：0  
@@ -985,6 +993,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：8  
   KV外れ値の境界だけをオフライン学習し、オンライン3群量子化と専用DMA量子化・メモリ管理器を共同設計して、大規模バッチのKV帯域・容量を同時に削減する。
 
+- **2025-02 · [TransMLA: Migrating GQA Models to MLA with Full DeepSeek Compatibility and Speedup](2025-2502.07864-transmla-migrating-gqa-models-to-mla-with-full-deepseek-compatibility-an.md)**  
+  実装：✓ ・ リポジトリ内被引用：8  
+  TransMLAは、すでに学習済みのグループ化問い合わせ注意（Grouped Query 注意機構、GQA）モデルを、DeepSeek系の多頭潜在注意（Multi-head Latent 注意機構、MLA）へ変換するための手法である。
+
 - **2025-05 · [FreeKV: Boosting KV Cache Retrieval for Efficient LLM Inference](2025-2505.13109-freekv-boosting-kv-cache-retrieval-for-efficient-llm-inference.md)**  
   実装：[✓](https://github.com/sjtu-zhao-lab/FreeKV) ・ リポジトリ内被引用：7  
   全KVをGPUメモリに保持すると長文脈・同時要求数の増加に耐えにくい。そこで全KVをCPUメモリに保持し、注意計算に必要なページだけGPUへ呼び戻す検索型圧縮が考えられる。原著の32K文脈・バッチ1の分析では、ArkValeの時間の約94%、ShadowKVの約73%が選択と呼び戻しに費やされる。
@@ -1081,6 +1093,14 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/LfLab-AI/KVmix) ・ リポジトリ内被引用：2  
   KVmixは、長い文脈や多数の同時要求でGPUメモリを圧迫するKVキャッシュを、モデルの品質に影響しやすい層と影響しにくい層に分けて量子化する方式である。RTX 4090 24GBで入力688トークン・最大生成1024トークンの実験では、最大バッチサイズを増やせることを含めた処理率が194.06から1032.06 トークン/sへ上昇する。
 
+- **2025-05 · [FreqKV: Key-Value Compression in Frequency Domain for Context Window Extension](2025-2505.00570-freqkv-key-value-compression-in-frequency-domain-for-context-window-exte.md)**  
+  実装：[✓](https://github.com/LUMIA-Group/FreqKV) ・ リポジトリ内被引用：2  
+  全履歴を保持する方式では文脈長に応じてKV容量が増え、長い事前入力では注意の計算量も増える。
+
+- **2025-04 · [SentenceKV: Efficient LLM Inference via Sentence-Level Semantic KV Caching](2025-2504.00970-sentencekv-efficient-llm-inference-via-sentence-level-semantic-kv-cachin.md)**  
+  実装：[✓](https://github.com/zzbright1998/SentenceKV) ・ リポジトリ内被引用：2  
+  SentenceKVは、長い入力を文ごとのまとまりに分け、文の意味を表す小さなキー索引だけをGPUに残して、個々の鍵・値（KV）対をCPU側へ退避する長文脈推論方式である。
+
 - **2025-03 · [Rethinking Key-Value Cache Compression Techniques for Large Language Model Serving](2025-2503.24000-rethinking-key-value-cache-compression-techniques-for-large-language-mod.md)**  
   実装：[✓](https://github.com/LLMkvsys/rethink-kv-compression) ・ リポジトリ内被引用：2  
   鍵値キャッシュ（Key-Value Cache、KVキャッシュ）の圧縮は、大規模言語モデル（Large Language モデル、LLM）の復号で過去トークンの状態を保持するGPUメモリを減らす。
@@ -1124,6 +1144,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-10 · [GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness](2025-2510.00536-gui-kv-efficient-gui-agents-via-kv-cache-with-spatio-temporal-awareness.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/GUI-KV) ・ リポジトリ内被引用：0  
   論文はUI-TARS-1.5-7Bについて、5画面・最大50段階の条件でGPUメモリ消費が80GBを超え得ると説明し、単なる計算高速化ではなく、履歴を保持するためのメモリ節約を主課題とする。GUI-KVは、自然画像用の圧縮方式をそのまま転用せず、画面固有の二種類の冗長性を利用する。
+
+- **2025-08 · [Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models](2025-2508.01261-unifying-mixture-of-experts-and-multi-head-latent-attention-for-efficien.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Unifying Mixture of エキスパート and Multi-Head Latent 注意機構 for Efficient Language Modelsは、小型言語モデルの計算量とKVキャッシュ量を同時に抑えるため、Mixture-of-Experts（MoE）、Multi-head Latent 注意機構（MLA）…
 
 - **2025-08 · [Spotlight Attention: Towards Efficient LLM Generation via Non-linear Hashing-based KV Cache Retrieval](2025-2508.19740-spotlight-attention-towards-efficient-llm-generation-via-non-linear-hash.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1283,6 +1307,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/alessiodevoto/l2compress) ・ リポジトリ内被引用：28  
   キーのL2ノルムと注意重みの逆相関を利用し、注意重みを計算せず重要KVを残す学習不要の圧縮法。FlashAttention互換のまま、長文検索では50〜90%のKV削減でも高精度を維持する。
 
+- **2024-01 · [Long Context Compression with Activation Beacon](2024-2401.03462-long-context-compression-with-activation-beacon.md)**  
+  実装：[✓](https://github.com/FlagOpen/FlagEmbedding) ・ リポジトリ内被引用：27  
+  活性値 Beaconは、文章そのものを短く書き換えるのではなく、Transformerの各層に生じる鍵・値活性を、追加したビーコントークンの活性へ直接圧縮する。圧縮率を8倍にした128K文脈の実験では、非圧縮で同じデータにより微調整した比較モデルに対し、推論時間を約半分、KVキャッシュを約8分の1にした。
+
 - **2024-07 · [Model Tells You Where to Merge: Adaptive KV Cache Merging for LLMs on Long-Context Tasks](2024-2407.08454-model-tells-you-where-to-merge-adaptive-kv-cache-merging-for-llms-on-lon.md)**  
   実装：✓ ・ リポジトリ内被引用：26  
   既存のKV圧縮は、量子化で各要素のビット数を減らす、注意重要度の低いトークンを削除する、複数トークンを一つへ統合する、という三系統に分けられる。
@@ -1322,6 +1350,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-04 · [SqueezeAttention: 2D Management of KV-Cache in LLM Inference via Layer-wise Optimal Budget](2024-2404.04793-squeezeattention-2d-management-of-kv-cache-in-llm-inference-via-layer-wi.md)**  
   実装：[✓](https://github.com/hetailang/SqueezeAttention) ・ リポジトリ内被引用：13  
   SqueezeAttentionは、大規模言語モデルの推論で必要になる鍵・値キャッシュ（KVキャッシュ）を、系列中のトークン方向だけでなく、注意機構を構成する層の方向からも最適化する方式である。
+
+- **2023-12 · [Compressed Context Memory For Online Language Model Interaction](2023-2312.03414-compressed-context-memory-for-online-language-model-interaction.md)**  
+  実装：[✓](https://github.com/snu-mllab/context-memory) ・ リポジトリ内被引用：13  
+  オンライン対話、個人化推薦、複数課題の逐次学習では、要求を受けるたびに新しい文脈が追加される。Compressed Context メモリ（CCM）は、過去の鍵値キャッシュを、専用の圧縮トークンが生成する少数の鍵値へ繰り返し統合する。
 
 - **2024-07 · [vTensor: Flexible Virtual Tensor Management for Efficient LLM Serving](2024-2407.15309-vtensor-virtual-memory-management.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -1380,6 +1412,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  
   実装：✓ ・ リポジトリ内被引用：176  
   Scissorhandsは、過去の注意重みが大きかったトークンは将来の生成でも高い注意を受けやすいという「重要性の持続性仮説（Persistence of Importance Hypothesis）」を提案する。
+
+- **2023-06 · [Augmenting Language Models with Long-Term Memory](2023-2306.07174-augmenting-language-models-with-long-term-memory.md)**  
+  実装：[✓](https://github.com/Victorwz/LongMem) ・ リポジトリ内被引用：6  
+  過去のキー・値（KV）を外部バンクへ保持して必要な箇所だけ取り出す方式は有望だが、モデルを学習しながら記憶を書き込むと、古いモデルが生成した記憶表現と現在のモデルの表現が食い違う問題が生じる。
 
 ### 7年前（2019-11〜2020-10）
 

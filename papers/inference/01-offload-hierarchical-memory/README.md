@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（129本）
+## 自動生成の論文一覧（130本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -477,6 +477,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
   実装：[✓](https://github.com/PKU-SEC-Lab/AdapMoE) ・ リポジトリ内被引用：46  
   層感度に応じたエキスパート数削減、後続層ゲートによる先読み、動的キャッシュ配分を統合し、端末上のMoEオフロード待ちを削減する。
+
+- **2024-09 · [HybridFlow: A Flexible and Efficient RLHF Framework](2024-2409.19256-hybridflow-a-flexible-and-efficient-rlhf-framework.md)**  
+  実装：[✓](https://github.com/volcengine/verl) ・ リポジトリ内被引用：39  
+  HybridFlowは、人間フィードバックによる強化学習（Reinforcement Learning from Human Feedback: RLHF）を複数の大規模言語モデルからなる分散データフローとして扱い、その制御の柔軟性と学習処理率を両立するシステムである。
 
 - **2024-03 · [HeteGen: Heterogeneous Parallel Inference for Large Language Models on Resource-Constrained Devices](2024-2403.01164-hetegen-efficient-heterogeneous-parallel-inference-for-large-language-models-on-resource-constrained-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：22  

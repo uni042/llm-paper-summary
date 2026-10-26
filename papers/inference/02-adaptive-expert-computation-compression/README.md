@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（112本）
+## 自動生成の論文一覧（114本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -442,6 +442,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/naver/nllb-pruning) ・ リポジトリ内被引用：21  
   翻訳時ゲート統計で言語別に重要な専門家を選び、NLLB-200の専門家を最大80%枝刈りして単一32GB GPU推論を可能にする方式。
 
+- **2023-10 · [Merging Experts into One: Improving Computational Efficiency of Mixture of Experts](2023-2310.09832-merging-experts-into-one-improving-computational-efficiency-of-mixture-o.md)**  
+  実装：[✓](https://github.com/Shwai-He/MEO) ・ リポジトリ内被引用：12  
+  混合専門家（Mixture of エキスパート; MoE）モデルは、入力ごとに一部の専門家だけを選んで計算することで、全パラメータを常に実行する密モデルより計算費用を抑える。
+
 - **2023-06 · [Soft Merging of Experts with Adaptive Routing](2023-2306.03745-smear-soft-merging-adaptive-routing.md)**  
   実装：[✓](https://github.com/r-three/smear) ・ リポジトリ内被引用：12  
   経路選択確率でエキスパート重みを入力ごとに合成して離散選択を消し、標準的な誤差逆伝播のまま適応的な専門化と単一エキスパート相当の活性計算を両立する。
@@ -459,6 +463,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2022-02 · [Mixture-of-Experts with Expert Choice Routing](2022-2202.09368-expert-choice-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：82  
   専門家側が固定容量ぶんの上位トークンを選ぶことで完全な負荷均衡とトークンごとの可変計算量を同時に実現するMoEルーティング。
+
+- **2021-12 · [GLaM: Efficient Scaling of Language Models with Mixture-of-Experts](2021-2112.06905-glam-efficient-scaling-of-language-models-with-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：74  
+  総パラメータ数と一トークンで実際に使用するパラメータ数を分離することで、巨大な容量を持ちながら密なモデルほどの計算を必要としない。最大構成GLaM（64B/64E）は総1.2兆パラメータを持つが、トークン当たり活性化するのは約96.6B、全体の約8%である。
 
 - **2022-06 · [Task-Specific Expert Pruning for Sparse Mixture-of-Experts](2022-2206.00277-task-specific-expert-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：53  
