@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261027-0347-scheduled-chat-45/r01",
+  "reference_main_sha": "05bb91f38f3e96301faa05a3aa15c81917ac8944",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.10252",
+      "identity_tokens": [
+        "arXiv:2512.10252"
+      ],
+      "title": "GDKVM: Echocardiography Video Segmentation via Spatiotemporal Key-Value Memory with Gated Delta Rule",
+      "reason": "arXiv一次abstractでは超音波心臓動画の心腔セグメンテーション専用モデルを提案し、LKVA・GDR・KPFFを用いCAMUS/EchoNet-Dynamicのセグメンテーション精度と実時間性能を評価する。Key-Value Memoryという語はあるが、LLMのKVキャッシュではなく医療動画の時空間記憶であり、サーベイのLLM推論・学習基盤から除外する。",
+      "source_url": "https://arxiv.org/abs/2512.10252",
+      "body_check": "abstract_screen_only; body_not_read; arXiv公式abstractで超音波動画、LKVA/GDR/KPFF、CAMUS/EchoNet-Dynamicを確認",
+      "first_checked_at": "2026-10-27T03:54:59+09:00",
+      "last_checked_at": "2026-10-27T03:54:59+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 47
+    }
+  ]
+}
