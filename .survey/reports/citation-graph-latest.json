@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T13:33:05+00:00",
+  "generated_at": "2026-10-26T13:37:09+00:00",
   "paper_count": 3320,
-  "edge_count": 44014,
+  "edge_count": 44018,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 20,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -2581,7 +2581,7 @@
     "papers/inference/99-other-inference-systems/2019-1905.07799-adaptive-attention-span-in-transformers.md": 28,
     "papers/inference/99-other-inference-systems/2019-1907.05242-large-memory-layers-with-product-keys.md": 11,
     "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md": 58,
-    "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md": 292,
+    "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md": 293,
     "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md": 17,
     "papers/inference/99-other-inference-systems/2020-2002.11985-compressing-large-scale-transformer-based-models-a-case-study-on-bert.md": 8,
     "papers/inference/99-other-inference-systems/2020-2004.11886-lite-transformer-with-long-short-range-attention.md": 9,
@@ -2596,7 +2596,7 @@
     "papers/inference/99-other-inference-systems/2020-e4ac6d84ba9c-efficient-sparse-collective-communication-and-its-application-to-acceler.md": 2,
     "papers/inference/99-other-inference-systems/2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md": 31,
     "papers/inference/99-other-inference-systems/2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md": 7,
-    "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md": 62,
+    "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md": 63,
     "papers/inference/99-other-inference-systems/2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md": 12,
     "papers/inference/99-other-inference-systems/2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md": 29,
     "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md": 6,
@@ -3299,8 +3299,8 @@
     "papers/survey/09-edge-llm/2025-2410.11845-edge-llm-review.md": 19,
     "papers/survey/llm-serving-systems/2026-2604.22906-network-edge-inference-for-large-language-models-principles-techniques-and-opportunities.md": 1,
     "papers/survey/llm-serving-systems/2026-2608.03036-llm-serving-in-the-wild.md": 0,
-    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md": 107,
-    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md": 62,
+    "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md": 108,
+    "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md": 63,
     "papers/training/01-training-offload-memory-systems/2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md": 6,
     "papers/training/01-training-offload-memory-systems/2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md": 15,
     "papers/training/01-training-offload-memory-systems/2024-2406.10181-practical-offloading-for-fine-tuning-llm-on-commodity-gpu-via-learned-sparse-pro.md": 2,
@@ -42303,7 +42303,12 @@
       "papers/inference/99-other-inference-systems/2023-2305.13245-gqa.md",
       "papers/inference/99-other-inference-systems/2024-2410.14731-matryoshkakv-adaptive-kv-compression-via-trainable-orthogonal-projection.md"
     ],
-    "papers/inference/19-inference-evaluation-benchmarking/2025-2509.22832-efficient-fine-grained-gpu-performance-modeling-for-distributed-deep-lea.md": [],
+    "papers/inference/19-inference-evaluation-benchmarking/2025-2509.22832-efficient-fine-grained-gpu-performance-modeling-for-distributed-deep-lea.md": [
+      "papers/inference/99-other-inference-systems/2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md",
+      "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
+      "papers/training/01-training-offload-memory-systems/2019-1910.02054-zero.md",
+      "papers/training/01-training-offload-memory-systems/2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md"
+    ],
     "papers/inference/19-inference-evaluation-benchmarking/2025-2509.26520-training-matryoshka-mixture-of-experts-for-elastic-inference-time-expert.md": [
       "papers/inference/02-adaptive-expert-computation-compression/2022-2201.05596-deepspeed-moe-inference-compression.md",
       "papers/inference/02-adaptive-expert-computation-compression/2024-2403.07652-harder-tasks-need-more-experts-dynamic-routing-in-moe-models.md",
