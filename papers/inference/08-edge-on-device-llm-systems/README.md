@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（64本）
+## 自動生成の論文一覧（65本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -219,6 +219,10 @@
 - **2025-04 · [Mosaic: Composite Projection Pruning for Resource-efficient LLMs](2025-2504.06323-mosaic-composite-projection-pruning-for-resource-efficient-llms.md)**  
   実装：[✓](https://github.com/blessonvar/Mosaic) ・ リポジトリ内被引用：0  
   Mosaicは、事前学習済み大規模言語モデルを限られたメモリの装置へ配置するため、Transformerの各線形射影に異なる削減率を割り当てる方式である。通常の非構造化枝刈りは重みを零化するため品質を比較的保てるが、重み行列の寸法を縮めない限り汎用の密行列演算ではメモリや時間の削減に結びつきにくい。
+
+- **2025-01 · [Lightweight and Post-Training Structured Pruning for On-Device Large Lanaguage Models](2025-2501.15255-lightweight-and-post-training-structured-pruning-for-on-device-large-lan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMを小型GPUやエッジデバイスへ配置する際、重み行列の疎化だけでは、専用の疎行列カーネルがなければ実行速度を改善しにくい。層やニューロンを物理的に削除する構造化剪定は、通常の密行列演算でもパラメータ数・演算量を減らせるが、削除による品質低下が大きくなりやすい。削除後は、校正入力に対する元の線形出力を最小二乗問題で再構成するマスク調整を行う。
 
 - **2024-12 · [Deploying Foundation Model Powered Agent Services: A Survey](2024-2412.13437-deploying-foundation-model-powered-agent-services-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
