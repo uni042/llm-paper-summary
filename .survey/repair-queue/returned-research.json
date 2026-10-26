@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T21:04:24+00:00",
+  "generated_at": "2026-10-26T21:22:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 50,
+  "count": 51,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1309,6 +1309,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-43acbb6eca2f--libfile_ecd9237b2adc81918576435795b8fe23--2025-2508.18376-dualsparse-moe-research-20261026-2100-scheduled-chat-00-r01-metadata-corrected.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-43acbb6eca2f--libfile_ecd9237b2adc81918576435795b8fe23--2025-2508.18376-dualsparse-moe-research-20261026-2100-scheduled-chat-00-r01-metadata-corr.json",
       "worker_run_key": "20261026-2100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.498",
+      "title": "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models",
+      "source_url": "https://aclanthology.org/2026.findings-acl.498.pdf",
+      "returned_at": "2026-10-26T21:16:19+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 391 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4931,
+        "body_paragraphs": 25,
+        "method_chars": 2320,
+        "method_paragraphs": 12,
+        "evaluation_chars": 391,
+        "limitation_chars": 577,
+        "insufficiency_flags": [
+          "評価説明量 391 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7a4265e1fa8c8191803cbea95beca98d--2026-doi-10.18653-v1-2026.findings-acl.498-streaming-llm-survey-research-20261027-0500-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7a4265e1fa8c8191803cbea95beca98d--2026-doi-10.18653-v1-2026.findings-acl.498-streaming-llm-survey-research-20261027-0500-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261027-0500-scheduled-chat-00/r01"
     }
   ]
 }

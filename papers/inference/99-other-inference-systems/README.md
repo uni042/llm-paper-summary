@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（743本）
+## 自動生成の論文一覧（746本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2638,6 +2638,10 @@
   実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：1  
   通常のTransformerは、学習時の文脈窓を超えると品質が落ちやすいという別の問題もある。Recurrent Context Compression（RCC）は、長文を短い区間へ分割し、各区間の情報を少数の隠れベクトルへ圧縮して復号器に渡す方式である。主張する32倍圧縮時のBLEU-4約0.95は、特定の短文再構成タスクでの値である。
 
+- **2024-05 · [STAT: Shrinking Transformers After Training](2024-2406.00061-stat-shrinking-transformers-after-training.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  STATは、学習済みTransformerを再学習せずに小さくするため、フィードフォワードネットワーク（FFN）のニューロンと自己注意ヘッドを構造ごと除去する事後剪定手法である。いずれもA6000 48GBを1枚使った剪定計算が約2時間半で、これはモデル圧縮の処理時間である。
+
 - **2024-02 · [Why Lift so Heavy? Slimming Large Language Models by Cutting Off the Layers](2024-2402.11700-why-lift-so-heavy-slimming-large-language-models-by-cutting-off-the-laye.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）は多数のTransformer層を積み重ねることで表現能力を獲得する。重要な限定条件は、すべて分類タスク向けに再微調整した後の結果である。
@@ -2665,6 +2669,10 @@
 - **2024-10 · [Efficiently Deploying LLMs with Controlled Risk](2024-2410.02173-efficiently-deploying-llms-with-controlled-risk.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの運用費用を下げるために、小型モデルで簡単な質問へ回答し、難しい質問だけを大型モデルへ渡す階層的ルーティングが利用される。しかし、従来の費用最適化型ルータは「自信がないときには回答しない」という選択的予測の運用要件を、ルーティングの設計変数として十分に扱っていなかった。
+
+- **2024-10 · [COrAL: Order-Agnostic Language Modeling for Efficient Iterative Refinement](2024-2410.09675-coral-order-agnostic-language-modeling-for-efficient-iterative-refinemen.md)**  
+  実装：[✓](https://github.com/YuxiXie/COrAL) ・ リポジトリ内被引用：0  
+  COrAL（Context-Wise Order-Agnostic Language Modeling）は、短い局所window内だけで生成順序を柔軟にし、前方の複数トークン予測と既出トークンの後方再構成を同じdecoder-onlyモデルへ学習させる方式である。
 
 - **2024-10 · [Approximately Aligned Decoding](2024-2410.01103-approximately-aligned-decoding.md)**  
   実装：[✓](https://github.com/amazon-science/Approximately-Aligned-Decoding) ・ リポジトリ内被引用：0  
@@ -2827,6 +2835,10 @@
 - **2023-05 · [Infor-Coef: Information Bottleneck-based Dynamic Token Downsampling for Compact and Efficient language model](2023-2305.12458-infor-coef-information-bottleneck-based-dynamic-token-downsampling-for-c.md)**  
   実装：[✓](https://github.com/twwwwx/Infor-Coef) ・ リポジトリ内被引用：0  
   Infor-Coefが扱うのは、BERTのモデル重みを固定比率で減らすだけでは、簡単な入力と難しい入力に同じ計算を割り当てるという問題である。BERT-base比で16.2倍という原著の代表値は、バッチ内最大長へpaddingしたときの推定FLOPs比である。
+
+- **2023-02 · [Auto-Parallelizing Large Models with Rhino: A Systematic Approach on Production AI Platform](2023-2302.08141-auto-parallelizing-large-models-with-rhino-a-systematic-approach-on-prod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Rhinoは、単一デバイス向けに記述されたテンソル計算を、複数GPUへ自動分散する学習システムである。評価では、V100 32GBと100Gb RoCEのクラスタでGPTとGShard MoEを最大16GPUまで実行し、Alpa、Megatron/DeepSpeedと比較した。
 
 - **2023-01 · [AttMemo: Accelerating Self-Attention with Memoization on Big Memory Systems](2023-2301.09262-attmemo-accelerating-self-attention-with-memoization-on-big-memory-syste.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
