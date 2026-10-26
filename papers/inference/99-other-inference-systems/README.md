@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（800本）
+## 自動生成の論文一覧（801本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2251,6 +2251,10 @@
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：2  
   近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
+
+- **2025-10 · [Untangling Component Imbalance in Hybrid Linear Attention Conversion Methods](2025-2510.05901-untangling-component-imbalance-in-hybrid-linear-attention-conversion-met.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  事前学習済みTransformerの通常のsoftmax注意を線形注意（LA）へ置き換えれば、過去のキーと値を全トークン分保持せず、一定サイズの再帰状態へ集約できる。しかし注意機構を変更しただけでは元モデルの精度が下がるため、注意転写と追加微調整を行う。
 
 - **2025-10 · [Learning to Inference Adaptively for Multimodal Large Language Models](2025-2503.10905-learning-to-inference-adaptively-for-multimodal-large-language-models.md)**  
   実装：[✓](https://github.com/zhuoyan-xu/AdaLLaVA) ・ リポジトリ内被引用：1  
