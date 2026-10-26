@@ -35,10 +35,15 @@
   "selection_reason": "Judge Qはsoft query tokensでKV eviction時のglobal information importanceを推定し、同一cache budgetでLongBench/RULER品質を改善。",
   "semantic_scholar_id": "d1dcced94c2fbc71a861fda4be060c4deb7cdee0",
   "source_url": "https://arxiv.org/abs/2509.10798",
-  "status": "ready",
+  "status": "superseded",
   "title": "Judge Q: Trainable Queries for Optimized Information Retention in KV Cache Eviction",
   "type": "research",
   "venue": "AAAI Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-26T20:09:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2509.10798-judge-q-trainable-queries-for-optimized-information-retention-in-kv-cach.md",
+  "represented_canonical_id": "arXiv:2509.10798",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
