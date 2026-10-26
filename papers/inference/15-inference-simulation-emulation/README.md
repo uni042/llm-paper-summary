@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（54本）
+## 自動生成の論文一覧（56本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -166,6 +166,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   非構造的な任意位置の疎性より、ハードウェアが扱う要素数を予測しやすく、低精度の密な経路と高精度の疎な経路を組み合わせやすい。Llama-3-70Bの入力処理（プリフィル）では、W4A8基準の10分8秒に対し、静的活性SQ方式の疎性0.875で5分55秒となり、1.71倍の高速化を報告する。
 
+- **2025-12 · [RAPID-LLM: Runtime Analysis of Parallel Infrastructure for Distributed LLM Training and Inference](2025-2512.19606-rapid-llm-runtime-analysis-of-parallel-infrastructure-for-distributed-ll.md)**  
+  実装：[✓](https://github.com/nanocad-lab/Rapid-LLM) ・ リポジトリ内被引用：0  
+  RAPID-LLMは、大規模言語モデル（LLM）の分散学習と推論について、モデル構造、並列化方式、GPU仕様、通信網構成を与えると実行時間を予測する基盤である。A100とH100における学習・推論124条件の実測値に対し、全体の平均絶対百分率誤差（Mean Absolute Percentage Error; MAPE）は10.0%である。
+
 - **2025-12 · [DCO: Dynamic Cache Orchestration for LLM Accelerators through Predictive Management](2025-2512.07312-dco-dynamic-cache-orchestration-for-llm-accelerators-through-predictive-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DCOは、複数の人工知能演算コアが共有する最終段キャッシュ（last-level キャッシュ、LLC）を、単なる過去のアクセス時刻ではなく、演算グラフから分かるテンソルの参照予定回数とデータフローに従って管理する提案である。論文v2のHTML本文は従来LRUに対する最大1.90倍の速度向上を記す。
@@ -225,6 +229,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
   実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：48  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
+
+- **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
+  実装：[✓](https://github.com/PrincetonUniversity/LLMCompass) ・ リポジトリ内被引用：16  
+  入力はモデルの計算グラフと装置構成であり、出力は演算子別・推論段階別の遅延、チップ面積、製造費用の推定値である。性能推定と面積・費用推定を同一の設計空間で組み合わせるため、最速のチップだけでなく、価格に見合った推論性能を評価できる。
 
 - **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  
   実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：12  
