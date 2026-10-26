@@ -5,7 +5,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 一部の手法はexpertを小さく分けたり、予測したexpertをそのまま使うなどして、予測ミス時の追加I/Oまで減らす。将来需要の予測をcache保持判断に使い、必ずしも先読み転送しない方式も含む。最終目的が推論高速化であるため、予測器自体に学習が必要でもこの系統に分類する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（16本）
+## 自動生成の論文一覧（18本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/)
 
@@ -44,9 +44,17 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
   実装：[✓](https://anonymous.4open.science/r/SPICE) ・ リポジトリ内被引用：0  
   一文解説： GPUに全専門家の重みが載らない混合専門家モデルで、SPICEは将来必要になる専門家を予測して早めに転送し、予測を外した場合も「近似して即時に進む」「CPUで正確に計算する」「GPUへ重みを移して正確に計算する」の三経路を選び、転送待ちを減らす。
 
+- **2026-05 · [Efficient MoE Inference on Single Consumer-grade GPU with Dynamic Expert Caching](2020-2026.00101-efficient-moe-inference-on-single-consumer-grade-gpu-with-dynamic-expert-caching.md)**  
+  実装：[✓](https://github.com/rzhang772/SMOE) ・ リポジトリ内被引用：0  
+  プリフィルの動的エキスパート配置とデコードのトークン-wise予測取得を組み合わせ、単一RTX 4090で671B級MoEを高速化するCPU/GPUハイブリッド基盤。
+
 - **2026-03 · [CasMoE: A Cascaded Framework for Efficient MoE Inference on Resource-constrained Devices](2026-casmoe-a-cascaded-framework-for-efficient-moe-inference-on-resource-constrained-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし専門家の総重量は大きく、GPUにすべて常駐させると容量不足になりやすい。CPU側へ非活性専門家を退避し、必要なものだけGPUへ移せば容量は節約できるが、専門家が決まってから転送するとPCIeの待機が推論時間へ直接加算される。
+
+- **2026-02 · [Two-Stage Expert Offloading for Domain-Aware MoE Inference](2026-dacc3922b5b4-two-stage-expert-offloading-for-domain-aware-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  領域別プリフィル事前読込と時間・層間・領域局所性によるデコード先読みを組み合わせ、MoEのCPU退避でI/O待ち50%削減、投影TPOT 3.45倍高速化、全常駐比33%メモリ削減を狙う。
 
 ### 2年前（2024-11〜2025-10）
 
