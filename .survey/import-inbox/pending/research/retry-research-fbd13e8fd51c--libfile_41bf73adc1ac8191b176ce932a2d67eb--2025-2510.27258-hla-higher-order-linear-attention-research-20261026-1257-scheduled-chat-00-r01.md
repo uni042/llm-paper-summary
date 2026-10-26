@@ -31,6 +31,8 @@ worker_completed_at: '2026-10-26T12:57:00+09:00'
 reference_main_sha: a90b4fc5c1ac59e07d325a3942f9b257fae91599
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # Higher-order Linear Attention：高次の因果注意を有限状態で逐次計算する方法

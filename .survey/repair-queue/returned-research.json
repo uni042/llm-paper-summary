@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T05:52:27+00:00",
+  "generated_at": "2026-10-26T06:09:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 43,
+  "count": 46,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1049,8 +1049,8 @@
     },
     {
       "canonical_id": "arXiv:2510.05901",
-      "title": "Untangling Component Imbalance in Hybrid Linear Attention Conversion Methods",
-      "source_url": "https://arxiv.org/pdf/2510.05901",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T05:49:33+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1076,8 +1076,8 @@
     },
     {
       "canonical_id": "arXiv:2503.01820",
-      "title": "RSQ: Learning from Important Tokens Leads to Better Quantized LLMs",
-      "source_url": "https://arxiv.org/pdf/2503.01820",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T05:49:35+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1103,8 +1103,8 @@
     },
     {
       "canonical_id": "arXiv:2510.27258",
-      "title": "Higher-order Linear Attention",
-      "source_url": "https://arxiv.org/pdf/2510.27258",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T05:49:36+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1129,6 +1129,88 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_41bf73adc1ac8191b176ce932a2d67eb--2025-2510.27258-hla-higher-order-linear-attention-research-20261026-1257-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_41bf73adc1ac8191b176ce932a2d67eb--2025-2510.27258-hla-higher-order-linear-attention-research-20261026-1257-scheduled-chat-00-r01.json",
       "worker_run_key": "20261026-1257-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.13235",
+      "title": "Intelligence Delivery Network: Toward an Internet Architecture for the AI Age",
+      "source_url": "https://arxiv.org/pdf/2605.13235",
+      "returned_at": "2026-10-26T06:05:28+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 474 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6227,
+        "body_paragraphs": 37,
+        "method_chars": 2573,
+        "method_paragraphs": 15,
+        "evaluation_chars": 474,
+        "limitation_chars": 805,
+        "insufficiency_flags": [
+          "評価説明量 474 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_09debd1280d48191adaf694a4cd73a2a--2026-2605.13235-intelligence-delivery-network-architecture-research-20261026-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_09debd1280d48191adaf694a4cd73a2a--2026-2605.13235-intelligence-delivery-network-architecture-research-20261026-1345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261026-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2501.18015",
+      "title": "A Proximal Operator for Inducing 2:4-Sparsity",
+      "source_url": "https://arxiv.org/pdf/2501.18015",
+      "returned_at": "2026-10-26T06:06:34+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6296,
+        "body_paragraphs": 38,
+        "method_chars": 1993,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 800,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4898bfa9711c8191a449cdf6ee1c9296--2025-2501.18015-proximal-operator-2-4-sparsity-research-20261026-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4898bfa9711c8191a449cdf6ee1c9296--2025-2501.18015-proximal-operator-2-4-sparsity-research-20261026-1345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261026-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.21526",
+      "title": "Accelerating Prefilling via Decoding-time Contribution Sparsity",
+      "source_url": "https://arxiv.org/pdf/2507.21526",
+      "returned_at": "2026-10-26T06:07:40+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 224 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3083,
+        "body_paragraphs": 15,
+        "method_chars": 1054,
+        "method_paragraphs": 5,
+        "evaluation_chars": 224,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 224 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     }
   ]
 }
