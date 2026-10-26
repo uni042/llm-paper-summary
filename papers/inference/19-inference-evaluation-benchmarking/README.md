@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（93本）
+## 自動生成の論文一覧（94本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -323,6 +323,10 @@
 - **2025-10 · [Higher-order Linear Attention](2025-2510.27258-higher-order-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Higher-order Linear 注意機構（HLA）は、より高次の相互作用を、低次のモーメントと補正統計の組合せへ因数分解する。
+
+- **2025-09 · [Efficient Fine-Grained GPU Performance Modeling for Distributed Deep Learning of LLM](2025-2509.22832-efficient-fine-grained-gpu-performance-modeling-for-distributed-deep-lea.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、こうした複雑さをブラックボックスの「モデルサイズから学習時間を推定する式」だけで扱うのではなく、演算・通信プリミティブの実測回帰器と、実行依存関係を反映した時間軸モデルを組み合わせることで、実際の学習反復時間を予測する手法を提案する。
 
 - **2025-08 · [TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill and Decode Inference](2025-2508.15881-tpla-tensor-parallel-latent-attention-for-efficient-disaggregated-prefil.md)**  
   実装：[✓](https://github.com/fxmeng/TransMLA) ・ リポジトリ内被引用：0  
