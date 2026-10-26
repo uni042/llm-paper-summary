@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-26T16:59:42.405474+00:00",
+  "generated_at": "2026-10-26T20:13:05.476861+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -77,6 +77,26 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2510.20878-ha-rag-hotness-aware-rag-acceleration-via-mixed-precision-and-data-place.md",
+      "canonical_id": "arXiv:2510.20878",
+      "title": "HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement",
+      "file_bytes": 15848,
+      "source_sha256": "ba937ad2b831a380a1fc7b7e31b10d0415c2b23b1924b8f515c3b5a39b8d4eab",
+      "source_git_blob_sha": "6292e6bd5017c09c29cca7c3d7a39b75c7766a64",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.941417,
+      "quality_metrics": {
+        "body_chars": 4836,
+        "method_chars": 1701,
+        "evaluation_chars": 1011,
+        "limitation_chars": 525
       },
       "mechanical_failures": [],
       "warnings": []
