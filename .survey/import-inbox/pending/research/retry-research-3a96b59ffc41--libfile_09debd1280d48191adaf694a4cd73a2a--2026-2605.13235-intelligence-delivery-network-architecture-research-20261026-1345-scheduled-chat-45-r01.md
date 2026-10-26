@@ -35,6 +35,8 @@ worker_completed_at: '2026-10-26T13:56:00+09:00'
 reference_main_sha: 'e9c03e35d41f2e71bf77e59a17030ac874e94ca5'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Intelligence Delivery Network：LLMの能力・実行状態をネットワークで配信する構想

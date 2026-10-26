@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T06:09:28+00:00",
+  "generated_at": "2026-10-26T06:24:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 46,
+  "count": 48,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1132,8 +1132,8 @@
     },
     {
       "canonical_id": "arXiv:2605.13235",
-      "title": "Intelligence Delivery Network: Toward an Internet Architecture for the AI Age",
-      "source_url": "https://arxiv.org/pdf/2605.13235",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T06:05:28+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1159,8 +1159,8 @@
     },
     {
       "canonical_id": "arXiv:2501.18015",
-      "title": "A Proximal Operator for Inducing 2:4-Sparsity",
-      "source_url": "https://arxiv.org/pdf/2501.18015",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T06:06:34+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1186,8 +1186,8 @@
     },
     {
       "canonical_id": "arXiv:2507.21526",
-      "title": "Accelerating Prefilling via Decoding-time Contribution Sparsity",
-      "source_url": "https://arxiv.org/pdf/2507.21526",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T06:07:40+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1210,6 +1210,60 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.10251",
+      "title": "Meta-Metrics and Best Practices for System-Level Inference Performance Benchmarking",
+      "source_url": "https://arxiv.org/html/2508.10251",
+      "returned_at": "2026-10-26T06:19:09+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 370 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3730,
+        "body_paragraphs": 20,
+        "method_chars": 1539,
+        "method_paragraphs": 8,
+        "evaluation_chars": 370,
+        "limitation_chars": 418,
+        "insufficiency_flags": [
+          "評価説明量 370 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_64a7f7f6f1bc819186ea2ab23213513c--2025-2508.10251-fmwork-meta-metrics-benchmarking-research-20261026-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_64a7f7f6f1bc819186ea2ab23213513c--2025-2508.10251-fmwork-meta-metrics-benchmarking-research-20261026-1400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.24544",
+      "title": "Cross-Attention Speculative Decoding",
+      "source_url": "https://arxiv.org/pdf/2505.24544",
+      "returned_at": "2026-10-26T06:19:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3550,
+        "body_paragraphs": 18,
+        "method_chars": 1414,
+        "method_paragraphs": 7,
+        "evaluation_chars": 0,
+        "limitation_chars": 313,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7b42f483c0f88191a84bc85c258868de--2025-2505.24544-beagle-cross-attention-speculative-decoding-research-20261026-1400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     }
   ]

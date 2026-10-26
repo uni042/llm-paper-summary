@@ -35,10 +35,15 @@
   "selection_reason": "一次要旨でdraftとverification計算をpipeline化して重ね、失敗予測の無駄を抑えるself-speculative decodingを提案。LLM autoregressive inference costの低減を直接狙うためaccept。",
   "semantic_scholar_id": "9fab64766d5ceaa1d3286b4f7e4f7873e8469d79",
   "source_url": "https://arxiv.org/abs/2509.19368",
-  "status": "ready",
+  "status": "superseded",
   "title": "Pipeline Parallelism is All You Need for Optimized Early-Exit Based Self-Speculative Decoding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-26T06:24:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2025-2509.19368-pipeline-parallelism-is-all-you-need-for-optimized-early-exit-based-self.md",
+  "represented_canonical_id": "arXiv:2509.19368",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
