@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "537bc1c9d52f0a17d380d0d3f2202138e77b6dfbc0b1d4a9476dc5724dcda93a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_41bf73adc1ac8191b176ce932a2d67eb--2025-2510.27258-hla-higher-order-linear-attention-research-20261026-1257-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2510.27258",
+  "worker_completed_at": "2026-10-26T12:57:00+09:00",
+  "worker_run_key": "20261026-1257-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5006,
+    "body_paragraphs": 34,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 573,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-26T05:49:36+00:00"
+}

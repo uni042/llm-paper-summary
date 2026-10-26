@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T02:55:24+00:00",
+  "generated_at": "2026-10-26T05:52:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,8 +12,24 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 34,
+  "count": 43,
   "entries": [
+    {
+      "canonical_id": "arXiv:2608.21952",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-03T14:27:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.21952-ssdi8-accurate-and-efficient-8-bit-quantization-for-state-space-duality.md と 16 段落 / 3794文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": null,
+      "blocked_path": ".survey/import-inbox/blocked/research/local-batch-20261003-178c5a5ec357a780--arxiv-2608-21952.md",
+      "import_result_path": ".survey/import-inbox/results/research/local-batch-20261003-178c5a5ec357a780--arxiv-2608-21952.json",
+      "worker_run_key": "research-revalidation-arxiv-2608.21952-20261003t225905jst"
+    },
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
       "title": null,
@@ -72,6 +88,56 @@
       "worker_run_key": "20261014-0645-scheduled-chat-45/r01"
     },
     {
+      "canonical_id": "arXiv:2604.22575",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T08:58:57+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2604.22575-spikingbrain2-0-brain-inspired-foundation-models-for-efficient-long-cont.md と 21 段落 / 4760文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6535,
+        "body_paragraphs": 33,
+        "method_chars": 1774,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1712,
+        "limitation_chars": 730,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ac11628c50c8191bda8984fc37bc078--2026-2604.22575-spikingbrain2-hybrid-long-context-research-20261014-1730-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9ac11628c50c8191bda8984fc37bc078--2026-2604.22575-spikingbrain2-hybrid-long-context-research-20261014-1730-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1730-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2605.31035",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T12:18:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md と 21 段落 / 4482文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5838,
+        "body_paragraphs": 33,
+        "method_chars": 1709,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1396,
+        "limitation_chars": 590,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-03816f0da83d--libfile_2cbe61294c608191ac974d9b417097c4--2026-2605.31035-mixfp4-research-20261014-0430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-03816f0da83d--libfile_2cbe61294c608191ac974d9b417097c4--2026-2605.31035-mixfp4-research-20261014-0430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2511.19676",
       "title": null,
       "source_url": null,
@@ -97,6 +163,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T12:56:21+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-439132b7c6e4-lightseq-a-high-performance-inference-library-for-transformers.md と 18 段落 / 4162文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5901,
+        "body_paragraphs": 30,
+        "method_chars": 1305,
+        "method_paragraphs": 8,
+        "evaluation_chars": 2074,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-72c2c9a424c9--libfile_d363acd88e20819195f8f9dc7895d435--2021-lightseq-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-72c2c9a424c9--libfile_d363acd88e20819195f8f9dc7895d435--2021-lightseq-returned-repair-20261013-2130-scheduled-chat-30-r01-v2.json",
+      "worker_run_key": "20261013-2130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2403.14520",
@@ -280,6 +373,37 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6f22ec23bfe7--library-final-audit--2503.10135--gumiho.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6f22ec23bfe7--library-final-audit--2503.10135--gumiho.json",
       "worker_run_key": "20261018-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.39223",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-18T14:32:23+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 367 < 500",
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2609.39223-qatfactory-a-versatile-deployment-aligned-framework-for-quantization-awa.md と 18 段落 / 3843文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5821,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 367,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 367 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1a065f8327d--libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e1a065f8327d--libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-schedul.json",
+      "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.06850",
@@ -573,6 +697,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-20261023-0500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/0-retry-research-bf19351c0fd1--libfile_9a231df274548191809de10f8ac23b29--2024-doi-10.18653-v1-2024.findings-emnlp.539-loraexit-dynamic-inference-research-202610.json",
       "worker_run_key": "20261023-0500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TCE.2025.3642866",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-24T20:05:52+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-38c6f5463687-efficient-llm-deployment-in-consumer-electronics-applications-via-resour.md と 16 段落 / 3773文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4867,
+        "body_paragraphs": 25,
+        "method_chars": 1594,
+        "method_paragraphs": 8,
+        "evaluation_chars": 910,
+        "limitation_chars": 609,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-03835e5b82ff--0-retry-research-9442911ee03f--libfile_941b3546f5948191a2e9b88029452eed--2026-doi-10.1109-tce.2025.3642866-ras-mq-resource-salience-quantization-research-20261022-1900-scheduled-ch.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-03835e5b82ff--0-retry-research-9442911ee03f--libfile_941b3546f5948191a2e9b88029452eed--2026-doi-10.1109-tce.2025.3642866-ras-mq-resource-salience.json",
+      "worker_run_key": "20261022-1900-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2602.08858",
@@ -897,6 +1046,89 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c2dc3650ee5c--libfile_fb121b644708819199183afb1cbd2f8f--2024-2408.03130-inference-optimization-survey-research-20261026-0900-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c2dc3650ee5c--libfile_fb121b644708819199183afb1cbd2f8f--2024-2408.03130-inference-optimization-survey-research-20261026-0900-scheduled-chat-00-r0.json",
       "worker_run_key": "20261026-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.05901",
+      "title": "Untangling Component Imbalance in Hybrid Linear Attention Conversion Methods",
+      "source_url": "https://arxiv.org/pdf/2510.05901",
+      "returned_at": "2026-10-26T05:49:33+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 133 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5890,
+        "body_paragraphs": 33,
+        "method_chars": 2503,
+        "method_paragraphs": 13,
+        "evaluation_chars": 133,
+        "limitation_chars": 732,
+        "insufficiency_flags": [
+          "評価説明量 133 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_14a23d98a6408191830f222f6ad9700f--2025-2510.05901-hybrid-linear-attention-component-collapse-research-20261026-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_14a23d98a6408191830f222f6ad9700f--2025-2510.05901-hybrid-linear-attention-component-collapse-research-20261026-1330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261026-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.01820",
+      "title": "RSQ: Learning from Important Tokens Leads to Better Quantized LLMs",
+      "source_url": "https://arxiv.org/pdf/2503.01820",
+      "returned_at": "2026-10-26T05:49:35+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6163,
+        "body_paragraphs": 40,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 622,
+        "limitation_chars": 820,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_31c7346cfb288191bcb5b8e4a642cb68--2025-2503.01820-rsq-important-token-weight-quantization-research-20261026-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_31c7346cfb288191bcb5b8e4a642cb68--2025-2503.01820-rsq-important-token-weight-quantization-research-20261026-1330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261026-1330-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.27258",
+      "title": "Higher-order Linear Attention",
+      "source_url": "https://arxiv.org/pdf/2510.27258",
+      "returned_at": "2026-10-26T05:49:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5006,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 573,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_41bf73adc1ac8191b176ce932a2d67eb--2025-2510.27258-hla-higher-order-linear-attention-research-20261026-1257-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_41bf73adc1ac8191b176ce932a2d67eb--2025-2510.27258-hla-higher-order-linear-attention-research-20261026-1257-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261026-1257-scheduled-chat-00/r01"
     }
   ]
 }

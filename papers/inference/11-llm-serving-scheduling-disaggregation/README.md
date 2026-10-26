@@ -1558,7 +1558,7 @@
 
 - **2025-09 · [MACE: A Hybrid LLM Serving System with Colocated SLO-aware Continuous Retraining Alignment](2025-2510.03283-mace-a-hybrid-llm-serving-system-with-colocated-slo-aware-continuous-ret.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  一定時間ごとに再学習する方式はモデル更新が遅れ、更新を最優先する方式は利用者への応答を待たせる。A6000 AdaではAdaInf比で10%再学習率の推論スループット最大1.46倍、プリフィル遅延最大63%削減を報告する。
+  一定時間ごとに再学習する方式はモデル更新が遅れ、更新を最優先する方式は利用者への応答を待たせる。A6000 AdaではAdaInf比で10%再学習率の推論スループット最大1.46倍、入力事前計算遅延最大63%削減を報告する。
 
 - **2025-06 · [Optimizing MoE Routers: Design, Implementation, and Evaluation in Transformer Models](2025-2506.16419-optimizing-moe-routers-design-implementation-and-evaluation-in-transform.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

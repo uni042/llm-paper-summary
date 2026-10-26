@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（794本）
+## 自動生成の論文一覧（796本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2264,6 +2264,10 @@
   実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：1  
   重みの量子化や枝刈りとは別に、入力活性の多くをゼロにできれば、ゼロに対応する重み列を読み込まずに済む。論文の代表例では、LLaMA2-7Bのモデル全体の活性疎性40%で困惑度の悪化が5.47から5.64への0.17にとどまり、7種のゼロ例示タスクの平均得点は66.69から66.15への0.54ポイント低下である。
 
+- **2025-07 · [CCQ: Convolutional Code for Extreme Low-bit Quantization in LLMs](2025-2507.07145-ccq-convolutional-code-for-extreme-low-bit-quantization-in-llms.md)**  
+  実装：[✓](https://github.com/PaddlePaddle/FastDeploy/tree/develop) ・ リポジトリ内被引用：1  
+  2bit級の重み量子化では、単純な整数丸めでは表現可能な値が少なすぎて精度が大きく落ちる。原著Table 2ではDeepSeek-V3-0324の8bit版642GBに対し、CCQ 2.06bpw版は184GBで、GSM8K/C-Eval/MMLU平均が90.01から87.76へ低下する。
+
 - **2025-06 · [SparseSSM: Efficient Selective Structured State Space Models Can Be Pruned in One-Shot](2025-2506.09613-sparsessm-efficient-selective-structured-state-space-models-can-be-prune.md)**  
   実装：[✓](https://github.com/CFinTech/SparseSSM) ・ リポジトリ内被引用：1  
   入力依存の離散化係数と、系列の全時刻で使い回す状態遷移パラメータが組み合わさるため、通常の線形層向け剪定手法を状態遷移重みにそのまま適用すると、削除してよい状態を見誤りやすい。正式版の要旨は、SSM重み50%を微調整なしで削除した際の品質低下が「限定的」であると説明する。
@@ -2344,9 +2348,13 @@
   実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：0  
   視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
 
+- **2025-10 · [AsyncSpade: Efficient Test-Time Scaling with Asynchronous Sparse Decoding](2025-2510.07486-asyncspade-efficient-test-time-scaling-with-asynchronous-sparse-decoding.md)**  
+  実装：[✓](https://github.com/UNITES-Lab/AsyncSpade) ・ リポジトリ内被引用：0  
+  疎注意で参照トークン数を減らしても、現在のクエリを計算してから参照ページを選ぶ方式では、選別処理が注意計算の直前に直列化される。長文推論の性能を比較する際には、生成品質を維持したまま演算量を減らせるかと、実際のトークン生成遅延が短くなるかを分けて見る必要がある。
+
 - **2025-10 · [ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression](2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% compression ratio」はパラメータの80%を残すという意味で、80%を削る意味ではない。
+  実装：[✓](https://github.com/compressionOrg/ARA) ・ リポジトリ内被引用：0  
+  ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% 残存比率」はパラメータの80%を残すという意味で、80%を削る意味ではない。
 
 - **2025-09 · [Self-Aligned Reward: Towards Effective and Efficient Reasoners](2025-2509.05489-self-aligned-reward-towards-effective-and-efficient-reasoners.md)**  
   実装：[✓](https://github.com/amazon-science/Self-Aligned-Reward-Towards_Effective_and_Efficient_Reasoners) ・ リポジトリ内被引用：0  
@@ -2374,7 +2382,7 @@
 
 - **2025-07 · [SpeLLM: Character-Level Multi-Head Decoding](2025-2507.16323-spellm-character-level-multi-head-decoding.md)**  
   実装：[✓](https://github.com/schwartz-lab-NLP/SpeLLM) ・ リポジトリ内被引用：0  
-  一つの出力トークンの綴りをk文字まで並列予測し、文字列を連結して次トークンを得る。Llama3.2-3B、Llama3-8B、Gemma2-2B、Gemma2-9Bで、元の教師モデルのtop-5候補との完全一致率は平均91.75%、AutoCorrectを使うと94.93%。
+  SpeLLMは入力のBPE語彙を残したまま、出力の予測表現だけを文字単位に分離する。4つの公開モデルを変換した実験では、教師の上位5候補のいずれかと文字列が完全一致する割合が平均91.75%、AutoCorrectありでは94.93%となった。
 
 - **2025-07 · [Smooth Reading: Bridging the Gap of Recurrent LLM to Self-Attention LLM on Long-Context Tasks](2025-2507.19353-smooth-reading-bridging-the-gap-of-recurrent-llm-to-self-attention-llm-o.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2515,7 +2523,7 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：74  
+  実装：✓ ・ リポジトリ内被引用：73  
   一般的な自己回帰言語モデルは、各位置までの文脈から直後の一つのトークンを予測する。これに対して複数トークン予測（Multi-トークン Prediction; MTP）は、同じ位置の共有表現から、1個先だけでなく2個先、3個先、4個先など複数の未来トークンを別々の出力ヘッドで予測するよう学習する。この研究には二つの独立した成果がある。
 
 - **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  
@@ -3097,7 +3105,7 @@
   選択しなかったトークンの表現はその層で凍結し、最終予測時には終了時の表現を回収する。表2の代表条件では、SQuAD 2.0でBERTのF1 77.12に対しTR-BERT12は75.66、演算回数の比で2.08倍の削減である。
 
 - **2021-03 · [Softermax: Hardware/Software Co-Design of an Efficient Softmax for Transformers](2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
+  実装：✓ ・ リポジトリ内被引用：6  
   Transformerの自己注意機構では、クエリとキーの積から得た各スコアをsoftmaxで正規化し、値ベクトルへの重みを生成する。原著のTSMC 7nm設計評価では、非正規化部の面積0.25倍・エネルギー0.10倍、正規化部の面積0.65倍・エネルギー0.39倍、MAC等を含む演算器全体の面積0.90倍・エネルギー0.43倍を報告する。
 
 ### 7年前（2019-11〜2020-10）
