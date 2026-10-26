@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（886本）
+## 自動生成の論文一覧（889本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2644,6 +2644,10 @@
   実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：1  
   ETS（Efficient Tree Search）は、LLMの推論時演算量拡大（inference-time scaling）で用いる木探索の費用を、単なるモデル呼出回数ではなく分岐間の鍵・値キャッシュ（KV キャッシュ）共有量に基づいて最適化する方式である。
 
+- **2025-01 · [RedundancyLens: Revealing and Exploiting Visual Token Processing Redundancy for Efficient Decoder-Only MLLMs](2025-2501.19036-redundancylens-revealing-and-exploiting-visual-token-processing-redundan.md)**  
+  実装：[✓](https://github.com/L-Hugh/RedundancyLens) ・ リポジトリ内被引用：1  
+  この構成は実装が単純で精度も高い一方、画像由来のトークン数が増えると、LLMのself-注意機構とFFNの両方で大量の演算が発生する。約半数の層へ演算削減を適用すると、FLOPs比が約71〜72%に下がり、元モデルに近い品質を維持する。
+
 - **2025-01 · [DiscQuant: A Quantization Method for Neural Networks Inspired by Discrepancy Theory](2025-2501.06417-discquant-a-quantization-method-for-neural-networks-inspired-by-discrepa.md)**  
   実装：[✓](https://github.com/jerry-chee/DiscQuant) ・ リポジトリ内被引用：1  
   DiscQuantは、事前学習済みLLMの重みを低ビット化する際、量子化格子を設計した後の「各重みを上側と下側のどちらへ丸めるか」という問題を解く。原著の代表例では、Phi-3-mini-4k-instructを平均3.25ビットで量子化したGSM8kの正答率が、DiscQuant64%、GPTQ54%、RTN31%、無量子化84%である。
@@ -2659,6 +2663,10 @@
 - **2024-11 · [ShowUI: One Vision-Language-Action Model for GUI Visual Agent](2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md)**  
   実装：[✓](https://github.com/showlab/ShowUI) ・ リポジトリ内被引用：1  
   一方、画像を粗く統合してしまうと、クリック対象の小さな部品の座標を失いやすい。Qwen2-VL-2Bを基盤に、25.6万件の指示データで学習したモデルは、ScreenSpotのゼロショット画面要素特定で75.1%を報告した。
+
+- **2024-11 · [CLOVER: Cross-Layer Orthogonal Vectors Pruning and Fine-Tuning](2024-2411.17426-clover-cross-layer-orthogonal-vectors-pruning-and-fine-tuning.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  重要度の小さい方向を剪定したり、特異値を学習対象にしたりすることで、既存モデルの構造を利用した圧縮と効率的な微調整を行う。
 
 - **2024-11 · [AdaCM^2: On Understanding Extremely Long-Term Video with Adaptive Cross-Modality Memory Reduction](2024-2411.12593-adacm-2-on-understanding-extremely-long-term-video-with-adaptive-cross-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2767,6 +2775,10 @@
 - **2025-04 · [An Empirical Study on Prompt Compression for Large Language Models](2025-2505.00019-an-empirical-study-on-prompt-compression-for-large-language-models.md)**  
   実装：[✓](https://github.com/3DAgentWorld/Toolkit-for-Prompt-Compression) ・ リポジトリ内被引用：0  
   本論文は、長いプロンプトを事前に短縮してLLMへ渡すテキスト入力の圧縮について、6種類の方式を同一の評価枠組みで比較する実証研究である。また、単一A6000 GPU上の圧縮器処理時間はSCRLの67ms/入力からKiSの2410ms/入力まで大きく異なる。
+
+- **2025-03 · [Universality of Layer-Level Entropy-Weighted Quantization Beyond Model Architecture and Size](2025-2503.04704-universality-of-layer-level-entropy-weighted-quantization-beyond-model-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMを一律4bitに量子化すると、容量は大幅に減るが、精度に敏感な層も同じビット幅へ押し込まれる。原著は1.6B〜70B級の複数モデルを対象に、MMLUで元モデルから概ね0.5%以内の精度差を目標とし、最大18%のメモリ削減を報告する。
 
 - **2025-03 · [Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design](2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

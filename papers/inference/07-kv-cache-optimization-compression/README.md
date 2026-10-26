@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（347本）
+## 自動生成の論文一覧（348本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1124,6 +1124,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-07 · [HCAttention: Extreme KV Cache Compression via Heterogeneous Attention Computing for LLMs](2025-2507.19823-hcattention-heterogeneous-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   キー量子化・値のCPU退避・層別の動的KV削除を統合し、GPU KV予算25%でLlama-3-8BのLongBench平均43.2を全注意と同値に保ち、12.5%でも42.5（0.7ポイント差）に抑える異種GPU/CPU注意方式。
+
+- **2025-06 · [AhaKV: Adaptive Holistic Attention-Driven KV Cache Eviction for Efficient Inference of Large Language Models](2025-2506.03762-ahakv-adaptive-holistic-attention-driven-kv-cache-eviction-for-efficient.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  AhaKVは、LLM推論でKVキャッシュを固定予算へ圧縮するとき、過去トークンの重要度を累積注意スコアだけで決めることの偏りを修正する方式である。
 
 - **2025-05 · [EFIM: Efficient Serving of LLMs for Infilling Tasks with Improved KV Cache Reuse](2025-2505.21889-efim-infilling-kv-cache-reuse.md)**  
   実装：[✓](https://github.com/gty111/EFIM) ・ リポジトリ内被引用：1  
