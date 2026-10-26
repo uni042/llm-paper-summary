@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（133本）
+## 自動生成の論文一覧（134本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -91,6 +91,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-12 · [Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation](2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本研究は、専門家混合（MoE）モデルの重みをGPU外のメモリから必要に応じて読み込むオフロード推論で、低ビット化による帯域節約と推論品質を両立する手法を扱う。
+
+- **2026-08 · [The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks](2026-2608.12114-the-ingestion-tax-adopting-file-backed-weights-in-tensor-frameworks.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  統合メモリのApple Silicon、CPU–GPU間の一貫性接続を持つGH200、共有主記憶を使うAMD APUなどで問題になる。この三条件が揃うと、Apple M5 Maxの単一トークン用int8行列・ベクトル積では、標準的なテンソル生成経路の53〜82 GB/sに対して、公開APIを用いた直接採用が516 GB/sを記録する。
 
 - **2026-08 · [DASH: Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths](2026-2608.14333-dash-beyond-capacity-scalable-moe-llm-inference-via-high-bandwidth-flash-with-di.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
