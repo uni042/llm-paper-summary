@@ -35,10 +35,15 @@
   "selection_reason": "共有KV attentionでメモリ律速演算をGEMMへ変換し、LLM servingのthroughputを上げる。",
   "semantic_scholar_id": "3914821856ed3a34617223f9506e4b9c5b14076d",
   "source_url": "https://arxiv.org/abs/2511.06010",
-  "status": "ready",
+  "status": "superseded",
   "title": "MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference",
   "type": "research",
   "venue": "IEEE computer architecture letters",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-26T08:31:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2511.06010-moska-mixture-of-shared-kv-attention-for-efficient-long-sequence-llm-inf.md",
+  "represented_canonical_id": "arXiv:2511.06010",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
