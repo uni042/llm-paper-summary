@@ -424,6 +424,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：4  
   Select-NはSLO・系列長・バッチサイズに応じてGPUに残す層とCPUへ退避する層の間隔を動的に調整し、オフロード量とスループットを両立する。
 
+- **2025-04 · [Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs](2025-2504.11765-shared-disk-kv-cache-rag.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。
+
 - **2025-09 · [Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism](2025-2509.08342-moepic-adaptive-expert-split.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   専門家を上部・下部へ分割し、頻出専門家の上部だけをGPUへ広く常駐させ、下部を次層予測で先読みするMoEオフロード方式。層別VRAM・分割比も適応設定し、TPOTを37.51〜65.73%削減する。
@@ -432,13 +436,13 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：[✓](https://github.com/foundation-model-stack/fastsafetensors) ・ リポジトリ内被引用：2  
   fastsafetensorsは、safetensors形式の大規模モデルをストレージからGPUへロードする際、各テンソルをいったんホストメモリ上のPython/PyTorchオブジェクトとして逐次生成してからGPUへコピーする従来経路を改め、ファイル上の複数テンソルをまとめてGPUへ搬送し、GPU上でテンソル実体化・分割などの前処理を行うローダである。
 
-- **2025-04 · [Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs](2025-2504.11765-shared-disk-kv-cache-rag.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。
-
 - **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   プリフィル計算中の余剰HBM帯域で次層KVを先読みし、512MB〜1GB級M3Dオンチップメモリへ保持して、長文デコードのKV転送待ちを隠すハードウェア・スケジューラ協調方式。
+
+- **2025-04 · [RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU](2025-2504.15302-ragdoll-efficient-offloading-based-online-rag-system-on-a-single-gpu.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  RAGDollは、検索拡張生成（retrieval-augmented generation; RAG）を単一GPUと限られたメモリで運用するとき、検索側とLLM生成側を個別に最適化するだけでは全体の待ち時間が短くならない問題を扱う。さらに、先読み転送を計算と重ね、事前の性能測定と実行時の待ち行列長からバッチサイズを切り替える。
 
 - **2025-04 · [Cost-Efficient LLM Serving in the Cloud: VM Selection with KV Cache Offloading](2025-2504.11816-infersave-vm-selection-kv-offloading.md)**  
   実装：[✓](https://github.com/lass-lab/InferSave) ・ リポジトリ内被引用：1  
@@ -451,10 +455,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-07 · [SLIM: A Heterogeneous Accelerator for Edge Inference of Sparse Large Language Model via Adaptive Thresholding](2025-2507.09201-slim-near-storage-pim-sparse-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   適応しきい値で活性FFNニューロンだけを読み、3D NAND近傍処理とDRAM内処理を統合してエッジLLMのPCIe重量転送を回避する。
-
-- **2025-04 · [RAGDoll: Efficient Offloading-based Online RAG System on a Single GPU](2025-2504.15302-ragdoll-efficient-offloading-based-online-rag-system-on-a-single-gpu.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  RAGDollは、検索拡張生成（retrieval-augmented generation; RAG）を単一GPUと限られたメモリで運用するとき、検索側とLLM生成側を個別に最適化するだけでは全体の待ち時間が短くならない問題を扱う。さらに、先読み転送を計算と重ね、事前の性能測定と実行時の待ち行列長からバッチサイズを切り替える。
 
 - **2025-04 · [MOM: Memory-Efficient Offloaded Mini-Sequence Inference for Long Context Language Models](2025-2504.12526-mom-memory-efficient-offloaded-mini-sequence-inference-for-long-context-.md)**  
   実装：[✓](https://github.com/TianyiZhu877/MOM) ・ リポジトリ内被引用：0  
