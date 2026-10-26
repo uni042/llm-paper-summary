@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（729本）
+## 自動生成の論文一覧（730本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2183,6 +2183,10 @@
 - **2025-09 · [Self-Aligned Reward: Towards Effective and Efficient Reasoners](2025-2509.05489-self-aligned-reward-towards-effective-and-efficient-reasoners.md)**  
   実装：[✓](https://github.com/amazon-science/Self-Aligned-Reward-Towards_Effective_and_Efficient_Reasoners) ・ リポジトリ内被引用：0  
   提案する自己整合報酬（Self-Aligned Reward; SAR）は、同じ回答 $a$ の困惑度を、質問 $q$ を与えた場合と与えない場合で計算する。例えばQwen3-1.7Bでは、GRPOの平均正答率53.37%、回答長762.8トークンに対して、SAR付きGRPOは54.13%、602.0トークンだった。
+
+- **2025-09 · [Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance](2025-2509.15704-pyramid-token-pruning-for-high-resolution-large-vision-language-models-v.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Pyramid Token Pruning（PTP）は、追加学習なしで、画像全体に対するタイルの重要度、タイル内部のパッチ重要度、ユーザーの指示文に対するパッチ関連度を三段階で組み合わせる方式である。
 
 - **2025-09 · [EfficientUICoder: Efficient MLLM-based UI Code Generation via Input and Output Token Compression](2025-2509.12159-efficientuicoder-efficient-mllm-based-ui-code-generation-via-input-and-o.md)**  
   実装：[✓](https://github.com/WebPAI/EfficientUICoder) ・ リポジトリ内被引用：0  

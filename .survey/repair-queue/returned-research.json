@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T14:33:34+00:00",
+  "generated_at": "2026-10-26T14:58:40+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 57,
+  "count": 58,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1447,8 +1447,8 @@
     },
     {
       "canonical_id": "arXiv:2508.18376",
-      "title": "DualSparse-MoE: Coordinating Tensor/Neuron-Level Sparsity with Expert Partition and Reconstruction",
-      "source_url": "https://arxiv.org/html/2508.18376",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T14:30:38+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1475,8 +1475,8 @@
     },
     {
       "canonical_id": "arXiv:2508.09035",
-      "title": "P/D-Device: Disaggregated Large Language Model between Cloud and Devices",
-      "source_url": "https://arxiv.org/html/2508.09035",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T14:31:44+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1499,6 +1499,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fff5039535a5--libfile_6c354fcb98ec8191b7ad8c2d2ec6ff60--2025-2508.09035-pd-device-cloud-edge-disaggregation-research-20261026-2100-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fff5039535a5--libfile_6c354fcb98ec8191b7ad8c2d2ec6ff60--2025-2508.09035-pd-device-cloud-edge-disaggregation-research-20261026-2100-scheduled-chat.json",
       "worker_run_key": "20261026-2100-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.08600",
+      "title": "Automatic Task Detection and Heterogeneous LLM Speculative Decoding",
+      "source_url": "https://arxiv.org/pdf/2505.08600",
+      "returned_at": "2026-10-26T14:55:52+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 161 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5137,
+        "body_paragraphs": 33,
+        "method_chars": 1727,
+        "method_paragraphs": 9,
+        "evaluation_chars": 161,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 161 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0a581e67a78c819197c78585477c62bd--2025-2505.08600-taskspec-heterogeneous-speculative-decoding-research-20261026-2319-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0a581e67a78c819197c78585477c62bd--2025-2505.08600-taskspec-heterogeneous-speculative-decoding-research-20261026-2319-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261026-2319-scheduled-chat-00/r01"
     }
   ]
 }

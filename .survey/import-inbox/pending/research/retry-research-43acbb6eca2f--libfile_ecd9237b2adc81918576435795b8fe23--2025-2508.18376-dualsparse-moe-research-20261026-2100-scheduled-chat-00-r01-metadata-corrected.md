@@ -31,6 +31,8 @@ worker_run_key: '20261026-2100-scheduled-chat-00/r01'
 reference_main_sha: '3ce30db79f1b2b562c4b63574d2f4c344044dd84'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # DualSparse-MoE：expertとニューロンの二重疎性を利用する推論高速化

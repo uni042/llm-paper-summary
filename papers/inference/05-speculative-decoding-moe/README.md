@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（268本）
+## 自動生成の論文一覧（269本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -109,6 +109,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [SelfJudge: Faster Speculative Decoding via Self-Supervised Judge Verification](2026-2510.02329-selfjudge-faster-speculative-decoding-via-self-supervised-judge-verifica.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   通常の投機的復号（投機的復号）は、小さな草稿モデルが複数トークンを先読みし、大きなターゲットモデルが一度の順伝播でまとめて検証する。増加率はそれぞれ23.5%と46.3%である。
+
+- **2026-07 · [LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation](2026-df65c3a3c97c-logitspec-accelerating-retrieval-based-speculative-decoding-via-next-nex.md)**  
+  実装：[✓](https://github.com/smart-lty/LogitSpec) ・ リポジトリ内被引用：3  
+  投機的デコードは、軽い下書き側が将来トークン候補を提案し、大きなtargetモデルが複数候補を一度の順伝播で検証する。target分布を保つ検証規則を使えば、逐次生成と同じ出力分布を維持したまま1回のtarget 順伝播で複数トークンを確定できる。
 
 - **2026-07 · [HeteroSpec: Leveraging Contextual Heterogeneity for Efficient Speculative Decoding](2026-2505.13254-heterospec-leveraging-contextual-heterogeneity-for-efficient-speculative.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
