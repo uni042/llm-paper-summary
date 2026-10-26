@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-26 14:52:39 JST**
+> 自動生成: **2026-10-26 14:56:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **9** |
-| 機械検査未達（FAIL） | **3** |
-| 機械検査適合・警告のみ（PASS/WARN） | **6** |
-| :00ワーカー担当残 | **3** |
-| :30ワーカー担当残 | **3** |
-| :45ワーカー担当残 | **3** |
+| **再監査残件数** | **6** |
+| 機械検査未達（FAIL） | **2** |
+| 機械検査適合・警告のみ（PASS/WARN） | **4** |
+| :00ワーカー担当残 | **2** |
+| :30ワーカー担当残 | **2** |
+| :45ワーカー担当残 | **2** |
 
-- キュー最終生成: **2026-10-26 11:57:28 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-26 14:56:06 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -55,9 +55,9 @@
 | 処理済み | **21259** |
 | 未処理Discovery候補 | **124442** |
 | 収録済み | **3279** |
-| Research / Audit候補へ昇格済み | **486** |
+| Research / Audit候補へ昇格済み | **484** |
 | 無関係として除外 | **12354** |
-| 微妙として除外 | **5140** |
+| 微妙として除外 | **5142** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
@@ -89,7 +89,7 @@
 
 - 消化率: **14.6%**
 - 現在の生在庫: 後方references **57433件** / 前方引用 **68611件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **125346件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **125344件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-26 10:46:01 JST（4時間6分前）** |
+| 最終maintenance完了 | **10-26 10:46:01 JST（4時間10分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **29** |
+| 直近6hのResearch完了 | **28** |
 | 直近6hのDiscovery run | **2** |
 | 直近6hのDiscovery本文確認・分類 | **2** |
 | 最終Research完了 | **10-26 13:42:00 JST** |
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/libfile_6a4ebfa637848191a8515ca82eec79e6--2025-2507.07145-ccq-convolutional-code-low-bit-quantization-research-20261026-1330-scheduled-chat-30-r01.json
 - Discovery: **10-26 14:00:00 JST** / worker scheduled-chat-00 / run 20261026-1400-scheduled-chat-00/r02/relevance-73
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_1423adc18134819184b3115e0cb264c9--discovery-20261026-1400-scheduled-chat-00-research-relevance-r02-73.json
+  - evidence: .survey/import-inbox/results/discovery/libfile_1423adc18134819184b3115e0cb264c9--discovery-20261026-1400-scheduled-chat-00-research-relevance-r02-73.json
 
 ### Codex探索成果の反映状況
 
