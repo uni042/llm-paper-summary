@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（69本）
+## 自動生成の論文一覧（70本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -113,6 +113,10 @@
 - **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   OnePlus 12上の測定では、フラッシュ常駐標的モデルの検証時間のうち約78〜93%を入出力が占める条件があり、演算高速化だけではこの待ち時間を解消できない。Leverは投機的復号（投機的復号）を「サーバGPUで標的モデルの計算回数を減らす方式」ではなく、「フラッシュ常駐モデルの呼出し回数を複数トークンへ償却する方式」として再設計する。
+
+- **2026-05 · [Keyword Matters: Unveiling the Energy Sensitivity of On-Device LLM Prompting](2026-2607.22568-keyword-matters-unveiling-the-energy-sensitivity-of-on-device-llm-prompt.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の推論効率化は量子化、剪定、推論カーネル、KVキャッシュ管理などモデル・実装側の変更が中心だった。論文で強調される18.5%、62.6%等は後者の相対値であり、別モデルや別端末の絶対エネルギーをそのまま比較した値ではない。
 
 - **2026-05 · [Intelligence Delivery Network: Toward an Internet Architecture for the AI Age](2026-2605.13235-intelligence-delivery-network-toward-an-internet-architecture-for-the-ai.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

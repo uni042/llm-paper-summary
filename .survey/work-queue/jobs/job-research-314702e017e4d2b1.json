@@ -35,10 +35,15 @@
   "selection_reason": "DeltaLLMはTransformer block間のweight sharingとlow-rank差分でLLM parameter数・保存量を圧縮し、基礎モデルに近い評価性能を保つ。",
   "semantic_scholar_id": "0632c7b510d4ea15200f41d80575961a9f386ad7",
   "source_url": "https://arxiv.org/abs/2501.18596",
-  "status": "ready",
+  "status": "superseded",
   "title": "DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-26T13:40:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2501.18596-deltallm-compress-llms-with-low-rank-deltas-between-shared-weights.md",
+  "represented_canonical_id": "arXiv:2501.18596",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

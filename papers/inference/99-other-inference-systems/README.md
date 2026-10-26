@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（718本）
+## 自動生成の論文一覧（721本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2216,6 +2216,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは115Mから10B総パラメータまでの構成、Mamba、Mamba2、Gated DeltaNet、注意機構とのハイブリッドであるSambaを評価する。
 
+- **2025-06 · [Advancing Decoding Strategies: Enhancements in Locally Typical Sampling for LLMs](2025-2506.05387-advancing-decoding-strategies-enhancements-in-locally-typical-sampling-f.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  提案する適応的 Semantic-Aware Typicality Sampling（ASTS）は、(1) 過去のエントロピー変動を用いた候補区間の適応化、(2) 意味的類似度・関連度・多様性の複合採点、(3) 報酬と反復ペナルティによる確率再重み付け、(4) 正規化と温度調整、という段階を組み合わせる。
+
 - **2025-06 · [Accurate Sublayer Pruning for Large Language Models by Exploiting Latency and Tunability Information](2025-2506.03510-accurate-sublayer-pruning-for-large-language-models-by-exploiting-latenc.md)**  
   実装：[✓](https://github.com/snudm-starlab/SPRINT) ・ リポジトリ内被引用：0  
   しかし注意とMLPは遅延への寄与が違い、削除後に残った層を補正することで回復できる誤差も異なる。Llama-2/3系モデルで、同程度の推論高速化を達成する従来方式と比較し、ゼロショット常識推論の正答率を最大23.88パーセントポイント改善したと報告する。
@@ -2311,6 +2315,10 @@
 - **2025-02 · [Exploiting Sparsity for Long Context Inference: Million Token Contexts on Commodity GPUs](2025-2502.06766-exploiting-sparsity-for-long-context-inference-million-token-contexts-on.md)**  
   実装：[✓](https://github.com/ryansynk/topk-decoding) ・ リポジトリ内被引用：0  
   長文脈の推論では、モデル重みだけでなく過去のkey/valueを保持するKVキャッシュがGPUメモリを圧迫する。すべてのKVをCPUへオフロードしても、生成トークンごとに全量をGPUへ戻せばPCIe転送がボトルネックになる。特に重要なのは、100万トークン文脈のプリフィルを16GB級GPUだけで実行した研究ではないという点である。
+
+- **2025-02 · [DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights](2025-2501.18596-deltallm-compress-llms-with-low-rank-deltas-between-shared-weights.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  提案は単なる重みの複製ではない。Phi-3.5由来のDeltaPhi 3.35Bは3.8Bから約12%のパラメータ削減で、原著Table 1の5課題平均が0.66から0.59となる。
 
 - **2025-01 · [TreeKV: Smooth Key-Value Cache Compression with Tree Structures](2025-2501.04987-treekv-smooth-key-value-cache-compression-with-tree-structures.md)**  
   実装：[✓](https://github.com/ZiweiHe/TreeKV) ・ リポジトリ内被引用：0  
@@ -2561,6 +2569,10 @@
 - **2024-01 · [With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation](2024-2401.11504-with-greater-text-comes-greater-necessity-inference-time-training-helps-.md)**  
   実装：[✓](https://github.com/TemporaryLoRA/Temp-LoRA) ・ リポジトリ内被引用：1  
   本論文が扱うのは、数十万トークン規模の小説生成や長編翻訳を、短い注意窓しか持たない言語モデルで継続するときに発生する「古い情報の消失」と「長い鍵・値キャッシュ（KVキャッシュ）の費用」の両立問題である。近い文脈は通常の注意機構で直接読み、古い情報は一時的に変化した重みを介して利用する。
+
+- **2024-10 · [Two are better than one: Context window extension with multi-grained self-injection](2024-2410.19318-two-are-better-than-one-context-window-extension-with-multi-grained-self.md)**  
+  実装：[✓](https://github.com/Clement25/SharedLLM) ・ リポジトリ内被引用：0  
+  一方、単純に過去文脈を一様圧縮すると、質問に必要な細かい事実まで失われやすい。論文要旨の速度改善（ストリーミング型比約2倍、エンコーダ・デコーダ型比約3倍）は対象実装・装置での比較であり、一般的なLLM推論のトークン/s改善倍率と同一視しない。
 
 - **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
