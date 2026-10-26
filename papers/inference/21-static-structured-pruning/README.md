@@ -136,7 +136,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-04 · [On the Effect of Dropping Layers of Pre-trained Transformer Models](2020-2004.03844-on-the-effect-of-dropping-layers-of-pre-trained-transformer-models.md)**  
-  実装：[✓](https://github.com/hsajjad/transformers/) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/hsajjad/transformers/) ・ リポジトリ内被引用：16  
   事前学習済みBERT系モデルの上位層を削除して推論時間を約半減し、モデル・タスクごとの精度低下と下位層の重要性を比較した構造的圧縮研究。
 
 ### 8年前（2018-11〜2019-10）
