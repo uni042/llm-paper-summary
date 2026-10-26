@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（167本）
+## 自動生成の論文一覧（169本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -59,6 +59,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-12 · [MemEvolve: Meta-Evolution of Agent Memory Systems](2025-2512.18746-memevolve-meta-evolution-of-agent-memory-systems.md)**  
   実装：[✓](https://github.com/bingreeky/MemEvolve) ・ リポジトリ内被引用：2  
   しかし既存の自己改善型エージェントでは、記憶をどの形式で要約するか、どこへ保存するか、いつ検索するか、どの記憶を忘れるかといった記憶機構の設計自体は人手で固定されていることが多い。
+
+- **2025-12 · [Kitsune: Enabling Dataflow Execution on GPUs with Spatial Pipelines](2025-2502.18403-kitsune-enabling-dataflow-execution-on-gpus-with-spatial-pipelines.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  カーネル境界で中間テンソルが高帯域メモリへ書き戻され、次のカーネルが再び読む。さらに、一般命令主体のCTAとテンソル演算主体のCTAを同じストリーミングマルチプロセッサ（SM）へ配置できるようグリッドスケジューラを拡張する。
 
 - **2025-12 · [Dynamic Large Concept Models: Latent Reasoning in an Adaptive Semantic Space](2025-2512.24617-dynamic-large-concept-models-latent-reasoning-in-an-adaptive-semantic-sp.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -557,6 +561,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   さらに、音声認識、文章生成、音声合成を独立したシステムとして直列に接続すると、応答開始までの待ち時間が積み重なる。主要結果として、音声入力によるWebQuestionsの正答率は44.73%で、同じ基盤LLMに文章を入力した45.13%と近い。
 
 ### 3年前（2023-11〜2024-10）
+
+- **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：45  
+  FlashDecoding++は、自己回帰型の大規模言語モデルで一語ずつ出力する復号段階を、GPUの演算資源とメモリ階層に合わせて高速化する推論エンジンである。論文が分離した三つの障害は、長い注意系列を分割したときの部分ソフトマックス結合同期、少数トークンを入力する細長い行列積のゼロ埋め、行列形状とGPUの種類を無視する固定実行方式である。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
   実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：42  
