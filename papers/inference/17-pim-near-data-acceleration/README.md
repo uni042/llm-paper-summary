@@ -110,7 +110,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：10  
+  実装：✓ ・ リポジトリ内被引用：11  
   Mono3D DRAM＋近メモリ処理をGPUと統合し、層ごとの遅延差を8-階層化、話題別の高頻度 専門家配置へ利用してGPU比最大8.29倍の復号スループットを示す。
 
 - **2025-09 · [Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference](2025-2509.09505-combating-the-memory-walls-optimization-pathways-for-long-context-agentic-llm-inference.md)**  
@@ -148,7 +148,7 @@
   IANUSは、大規模言語モデル（LLM）の入力処理と逐次生成を、演算特性の異なる二種類のハードウェアへ分担させる推論専用システムである。論文の主結果は、GPT-2系列におけるNVIDIA A100比平均6.2倍、先行DFX比平均3.2倍の推論高速化である。
 
 - **2024-09 · [Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching](2024-2409.01141-duplex-a-device-for-large-language-models-with-mixture-of-experts-groupe.md)**  
-  実装：✓ ・ リポジトリ内被引用：6  
+  実装：✓ ・ リポジトリ内被引用：7  
   グループ化クエリ注意（Grouped-Query 注意機構; GQA）はKVキャッシュを減らすが、各要求の注意計算は依然として独立したKVにアクセスするため、メモリ帯域が性能を制限する。著者はMICRO 2024の論文で、GPU基準に対し最大2.67倍の推論処理量、最大2.57倍の端から端までの遅延改善、最大42.03%のエネルギー削減を報告する。
 
 - **2024-10 · [A Survey: Collaborative Hardware and Software Design in the Era of Large Language Models](2024-2410.07265-a-survey-collaborative-hardware-and-software-design-in-the-era-of-large-.md)**  

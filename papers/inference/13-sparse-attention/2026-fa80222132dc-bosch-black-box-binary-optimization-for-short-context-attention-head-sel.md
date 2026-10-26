@@ -92,7 +92,7 @@ references:
 - canonical_id: arXiv:2412.06464
   openreview_id: r8H7xhYPwz
 - canonical_id: arXiv:2309.08168
-references_checked_at: '2026-10-21'
+references_checked_at: '2026-10-26'
 references_source: arxiv-html-reference-section
 references_total: 67
 ---
