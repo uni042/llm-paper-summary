@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-26T21:41:43.346584+00:00",
+  "generated_at": "2026-10-26T23:03:23.069617+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 5,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 1,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -117,26 +117,6 @@
         "method_chars": 1088,
         "evaluation_chars": 929,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2025-2506.13472-rosaq-rotation-based-saliency-aware-weight-quantization-for-efficiently-.md",
-      "canonical_id": "arXiv:2506.13472",
-      "title": "ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models",
-      "file_bytes": 17597,
-      "source_sha256": "4a0068cd734f01c3537b77a16fcf7d089125b2adb15a14fc80ab59ad7ea78eb5",
-      "source_git_blob_sha": "f2aa69d4a43f8f51cc167776f2d8b218b1ca6986",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.906583,
-      "quality_metrics": {
-        "body_chars": 4856,
-        "method_chars": 1411,
-        "evaluation_chars": 1322,
-        "limitation_chars": 590
       },
       "mechanical_failures": [],
       "warnings": []
