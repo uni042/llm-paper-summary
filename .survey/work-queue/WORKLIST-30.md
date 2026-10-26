@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-26T22:14:04+00:00`
+Generated: `2026-10-26T22:31:26+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -149,8 +149,8 @@ ready総数: **387** / 未claim総数: **387** / このworker向け: **129**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **125007** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **118931** / 監査再投入 **0** / 機械規則適用後 **121501** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **125009** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **118933** / 監査再投入 **0** / 機械規則適用後 **121503** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -565,8 +565,8 @@ ready総数: **387** / 未claim総数: **387** / このworker向け: **129**
 | 409 | 3 | 4 | 10 | arXiv:2504.09983 | DeepCompile: A Compiler-Driven Approach to Optimizing Distributed Deep Learning Training | 2025-04-14 | arXiv.org | 3 | 10 | 07-kv-cache-optimization-compression, PyTorch 2 torch.compileの設計と評価を報告する論文。, distributed attention / sequence parallelism / blockwise attention / long-context transformers, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2504.09983) |
 | 410 | 0 | 4 | 10 | arXiv:2505.12832 | Performance Characterization of Distributed Deep Learning Strategies: A Quantitative Evaluation of DDP, FSDP, and Parameter Server Architectures on GPU Clusters | 2025-05-19 |  | 0 | 10 | MoE inference systems / expert parallelism / model compression / knowledge distillation, Training Offload / Memory Systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2505.12832) |
 | 411 | 103 | 4 | 10 | arXiv:2601.22132 | Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference | 2026-01-29 | arXiv.org | 3 | 10 | LLM routing、hybrid inference、quality-aware model selection, Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://arxiv.org/abs/2601.22132) |
-| 412 | 10 | 4 | 10 | arXiv:2607.13500 | Attention-Free and Lightweight Token Reduction for Efficient Vision-Language Models | 2026-07-15 | arXiv.org | 0 | 10 | LLM Serving / Scheduling / Disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2607.13500) |
-| 413 | 0 | 4 | 10 | arXiv:2509.00935 | SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers | 2025-08-31 | arXiv.org | 0 | 10 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 選択的状態空間モデル・Mamba長文脈推論・動的トークン間引き | [source](https://arxiv.org/abs/2509.00935) |
+| 412 | 6 | 4 | 10 | DOI:10.1109/ASAP65064.2025.00031 | ELLIE: Energy-Efficient LLM Inference at the Edge Via Prefill-Decode Splitting | 2025-07-01 | IEEE International Conference on Application-specific Systems, Architectures and Processors (ASAP) | 6 | 10 | 07-kv-cache-optimization-compression, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, on-device LLM / heterogeneous inference / NPU offloading, survey-edge-llm | [source](https://doi.org/10.1109/asap65064.2025.00031) |
+| 413 | 0 | 4 | 10 | arXiv:2510.20111 | AsyncHZP: Hierarchical ZeRO Parallelism with Asynchronous Scheduling for Scalable LLM Training | 2025-10-23 | arXiv.org | 0 | 10 | LLM Serving / Scheduling / Disaggregation, Training Offload / Memory Systems, distributed attention / sequence parallelism / blockwise attention / long-context transformers, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2510.20111) |
 | 414 | 1 | 4 | 10 | arXiv:2508.09505 | Verify Distributed Deep Learning Model Implementation Refinement with Iterative Relation Inference | 2025-08-13 | arXiv.org | 1 | 10 | PyTorch 2 torch.compileの設計と評価を報告する論文。, distributed attention / sequence parallelism / blockwise attention / long-context transformers, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2508.09505) |
 | 415 | 7 | 4 | 10 | arXiv:2502.02790 | Leveraging the true depth of LLMs | 2025-02-05 | Trans. Mach. Learn. Res. | 7 | 10 | Sparse Attention, Speculative Decoding | [source](https://arxiv.org/abs/2502.02790) |
 | 416 | 108 | 4 | 10 | arXiv:2607.14557 | Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation | 2026-07-16 | arXiv.org | 8 | 10 | Speculative Decoding, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, speculative decoding / parallel drafting / diffusion-inspired language modeling, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2607.14557) |

@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-26T22:14:04+00:00`
+Generated: `2026-10-26T22:31:26+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -149,8 +149,8 @@ ready総数: **387** / 未claim総数: **387** / このworker向け: **129**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **125007** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **118931** / 監査再投入 **0** / 機械規則適用後 **121501** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **125009** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **118933** / 監査再投入 **0** / 機械規則適用後 **121503** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -565,8 +565,8 @@ ready総数: **387** / 未claim総数: **387** / このworker向け: **129**
 | 409 | 2 | 4 | 10 | DOI:10.48550/arXiv.2506.12876 | MaskPro: Linear-Space Probabilistic Learning for Strict (N:M)-Sparsity on Large Language Models | 2025-06-15 | arXiv.org | 2 | 10 | MoE inference / task-specific expert pruning / sparse-to-dense conversion, MoE weight pruning / router-aware compression / post-training pruning / knowledge distillation, inference-systems | [source](https://doi.org/10.48550/arXiv.2506.12876) |
 | 410 | 113 | 4 | 10 | arXiv:2603.04257 | Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory | 2026-03-04 | arXiv.org | 13 | 10 | LLM Serving / Scheduling / Disaggregation, agentic inference / persistent memory | [source](https://arxiv.org/abs/2603.04257) |
 | 411 | 102 | 4 | 10 | arXiv:2607.02391 | WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs | 2026-07-02 | arXiv.org | 2 | 10 | inference-systems | [source](https://arxiv.org/abs/2607.02391) |
-| 412 | 6 | 4 | 10 | DOI:10.1109/ASAP65064.2025.00031 | ELLIE: Energy-Efficient LLM Inference at the Edge Via Prefill-Decode Splitting | 2025-07-01 | IEEE International Conference on Application-specific Systems, Architectures and Processors (ASAP) | 6 | 10 | 07-kv-cache-optimization-compression, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, on-device LLM / heterogeneous inference / NPU offloading, survey-edge-llm | [source](https://doi.org/10.1109/asap65064.2025.00031) |
-| 413 | 0 | 4 | 10 | arXiv:2510.20111 | AsyncHZP: Hierarchical ZeRO Parallelism with Asynchronous Scheduling for Scalable LLM Training | 2025-10-23 | arXiv.org | 0 | 10 | LLM Serving / Scheduling / Disaggregation, Training Offload / Memory Systems, distributed attention / sequence parallelism / blockwise attention / long-context transformers, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2510.20111) |
+| 412 | 0 | 4 | 10 | arXiv:2012.02030 | Data-Informed Global Sparseness in Attention Mechanisms for Deep Neural Networks | 2020-11-20 | International Conference on Language Resources and Evaluation | 0 | 10 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2012.02030) |
+| 413 | 18 | 4 | 10 | arXiv:2507.03865 | OrthoRank: Token Selection via Sink Token Orthogonality for Efficient LLM inference | 2025-07-05 | International Conference on Machine Learning | 8 | 1 |  | [source](https://arxiv.org/abs/2507.03865) |
 | 414 | 0 | 4 | 10 | SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6 | Accelerating On-Device LLM Inference via Activation-guided FFN Distillation on Raspberry Pi |  |  | 0 | 10 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/0d44c22c05f777b6f269846c4c6ebfff98747ea6) |
 | 415 | 113 | 4 | 10 | arXiv:2511.15503 | DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures | 2025-11-19 | International Symposium on Computer Architecture | 3 | 10 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, cpu-offload, inference-systems, kernel-runtime-compilation, kv-cache-memory | [source](https://arxiv.org/abs/2511.15503) |
 | 416 | 101 | 4 | 10 | arXiv:2608.13057 | TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes | 2026-08-13 |  | 1 | 10 | Adaptive Expert Computation / Compression, その他システム研究, オフロード／階層メモリ, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2608.13057) |

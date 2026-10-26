@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-26T22:14:04+00:00`
+Generated: `2026-10-26T22:31:26+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -149,8 +149,8 @@ ready総数: **387** / 未claim総数: **387** / このworker向け: **129**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **125007** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **118931** / 監査再投入 **0** / 機械規則適用後 **121501** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **125009** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **118933** / 監査再投入 **0** / 機械規則適用後 **121503** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -565,8 +565,8 @@ ready総数: **387** / 未claim総数: **387** / このworker向け: **129**
 | 409 | 10 | 4 | 10 | arXiv:2609.40127 | Learning Functional Subspaces for Neural Network Compression | 2026-09-30 |  | 0 | 10 | inference-systems | [source](https://arxiv.org/abs/2609.40127) |
 | 410 | 0 | 4 | 10 | DOI:10.1109/ICCAD66269.2025.11240951 | Enabling Decoder-only Language Model Inference on a CNN Accelerator | 2025-10-26 | 2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD) | 0 | 10 | LLM inference surveys、roofline performance analysis, Sparse Attention, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ICCAD66269.2025.11240951) |
 | 411 | 106 | 4 | 10 | arXiv:2602.01203 | Attention Sink Forges Native MoE in Attention Layers: Sink-Aware Training to Address Head Collapse | 2026-02-01 | arXiv.org | 6 | 10 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, Weight Quantization / Compression, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2602.01203) |
-| 412 | 18 | 4 | 10 | arXiv:2507.03865 | OrthoRank: Token Selection via Sink Token Orthogonality for Efficient LLM inference | 2025-07-05 | International Conference on Machine Learning | 8 | 10 | Conditional Computation, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference | [source](https://arxiv.org/abs/2507.03865) |
-| 413 | 0 | 4 | 10 | arXiv:2012.02030 | Data-Informed Global Sparseness in Attention Mechanisms for Deep Neural Networks | 2020-11-20 | International Conference on Language Resources and Evaluation | 0 | 10 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2012.02030) |
+| 412 | 10 | 4 | 10 | arXiv:2607.13500 | Attention-Free and Lightweight Token Reduction for Efficient Vision-Language Models | 2026-07-15 | arXiv.org | 0 | 10 | LLM Serving / Scheduling / Disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2607.13500) |
+| 413 | 0 | 4 | 10 | arXiv:2509.00935 | SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers | 2025-08-31 | arXiv.org | 0 | 10 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 選択的状態空間モデル・Mamba長文脈推論・動的トークン間引き | [source](https://arxiv.org/abs/2509.00935) |
 | 414 | 6 | 4 | 10 | SemanticScholar:8d3afec4b9114afed276997d483c284deb60eb64 | Efficient Distributed LLM Inference with Dynamic Partitioning |  |  | 6 | 10 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/8d3afec4b9114afed276997d483c284deb60eb64) |
 | 415 | 103 | 4 | 10 | arXiv:2605.08044 | Fast Byte Latent Transformer | 2026-05-08 | arXiv.org | 3 | 10 | Inference / Parallel and Non-Autoregressive Decoding, LLM Serving / Scheduling / Disaggregation, LLM inference surveys、roofline performance analysis, Speculative Decoding, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 投機的復号 / 無損失復号高速化, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2605.08044) |
 | 416 | 112 | 4 | 10 | arXiv:2602.03060 | IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning | 2026-02-03 | arXiv.org | 12 | 10 | KV cache memory management / streaming inference / attention sinks / length extrapolation, long-context inference / dynamic sparse attention / prefill acceleration, 視覚トークン枝刈り、マルチモーダル推論高速化、自己投機的復号 | [source](https://arxiv.org/abs/2602.03060) |
