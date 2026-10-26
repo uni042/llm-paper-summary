@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T02:15:28.912188+00:00",
+  "generated_at": "2026-10-26T02:57:28.503216+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -62,26 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2507.16323-spellm-character-level-multi-head-decoding.md",
-      "canonical_id": "arXiv:2507.16323",
-      "title": "SpeLLM: Character-Level Multi-Head Decoding",
-      "file_bytes": 12638,
-      "source_sha256": "8832e9cd68209fb97efc89d5bdc2cb333227a5ae11adde216c969402c386e9c8",
-      "source_git_blob_sha": "b274bbe338da19294482543f63f15ff2e12156f6",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.858437,
-      "quality_metrics": {
-        "body_chars": 3313,
-        "method_chars": 1003,
-        "evaluation_chars": 763,
-        "limitation_chars": 381
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -105,9 +85,9 @@
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03283-mace-a-hybrid-llm-serving-system-with-colocated-slo-aware-continuous-ret.md",
       "canonical_id": "arXiv:2510.03283",
       "title": "MACE: A Hybrid LLM Serving System with Colocated SLO-aware Continuous Retraining Alignment",
-      "file_bytes": 13308,
-      "source_sha256": "b4128e03712330c2ac7cdc1fca17a2ab8881b9e677253ccb2950097fd4313f35",
-      "source_git_blob_sha": "b0f88ba7d3efc9dff5879d2bd1be770e9eb5eca5",
+      "file_bytes": 14721,
+      "source_sha256": "277b96a8b5c378bb6db0f4df2a4b1b79d67104b093abfa21dae3646ab9deaad8",
+      "source_git_blob_sha": "58cf1e36bab88e7a3302f421474063096b4179b4",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
@@ -126,41 +106,21 @@
       ]
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md",
-      "canonical_id": "arXiv:2506.14851",
-      "title": "Efficient Serving of LLM Applications with Probabilistic Demand Modeling",
-      "file_bytes": 15122,
-      "source_sha256": "76ddf56a06f32b17f3c6d3a38d3a6ff650fbfc5e4f88ba8d61a4a6ac696ea7b5",
-      "source_git_blob_sha": "d960bcbd2d947feff0d1a4c010e245cc67eb3658",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/99-other-inference-systems/2025-2507.16323-spellm-character-level-multi-head-decoding.md",
+      "canonical_id": "arXiv:2507.16323",
+      "title": "SpeLLM: Character-Level Multi-Head Decoding",
+      "file_bytes": 14917,
+      "source_sha256": "f09ccb1e1600201a1d2989323ff759f5eb171f937de7b158d6d4ac4a59d8e04a",
+      "source_git_blob_sha": "170d92eb53e963952d7cf54509f563b16c6f9e18",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.809329,
+      "japanese_ratio": 0.858437,
       "quality_metrics": {
-        "body_chars": 4046,
-        "method_chars": 1596,
-        "evaluation_chars": 604,
-        "limitation_chars": 441
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md",
-      "canonical_id": "arXiv:2510.19389",
-      "title": "ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression",
-      "file_bytes": 15339,
-      "source_sha256": "e3bfa0455dc5a5d376d6614ebabf77762e9cbe66a62004972270dd437043b000",
-      "source_git_blob_sha": "fb89d1deb53ac5a808e12b7133584a62a6462a02",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.872934,
-      "quality_metrics": {
-        "body_chars": 4359,
-        "method_chars": 1199,
-        "evaluation_chars": 1145,
-        "limitation_chars": 453
+        "body_chars": 3313,
+        "method_chars": 1003,
+        "evaluation_chars": 763,
+        "limitation_chars": 381
       },
       "mechanical_failures": [],
       "warnings": []
@@ -201,6 +161,46 @@
         "method_chars": 1088,
         "evaluation_chars": 929,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md",
+      "canonical_id": "arXiv:2510.19389",
+      "title": "ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression",
+      "file_bytes": 16982,
+      "source_sha256": "d66184fc6b7bf87cda03ba0d30c4d7c4d49d3bc876fcf640d56d65c91a2b678e",
+      "source_git_blob_sha": "8d4fe284b38f089412d73a23cc33254e18cf2dd8",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.872934,
+      "quality_metrics": {
+        "body_chars": 4359,
+        "method_chars": 1199,
+        "evaluation_chars": 1145,
+        "limitation_chars": 453
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md",
+      "canonical_id": "arXiv:2506.14851",
+      "title": "Efficient Serving of LLM Applications with Probabilistic Demand Modeling",
+      "file_bytes": 17248,
+      "source_sha256": "4b73ff23bb65024b77928a1a41061427879635f8c2da9d1a8f8008d889e17c23",
+      "source_git_blob_sha": "02e551522dcc860401e46a2e7c525dde49344a9d",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.809329,
+      "quality_metrics": {
+        "body_chars": 4046,
+        "method_chars": 1596,
+        "evaluation_chars": 604,
+        "limitation_chars": 441
       },
       "mechanical_failures": [],
       "warnings": []
