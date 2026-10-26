@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-26T10:46:38+00:00",
-  "record_count": 5354,
+  "updated_at": "2026-10-26T11:52:54+00:00",
+  "record_count": 5355,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83012,6 +83012,19 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Software Performance Engineering for Foundation Model-Powered Software"
+    },
+    "arXiv:2505.20316": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.20316",
+      "identity_tokens": [
+        "arXiv:2505.20316"
+      ],
+      "reason": "一次論文4節と5節を確認。RSDはLLMの通常テキスト生成用の投機的デコード基盤ではなく、情報検索・推薦の候補アイテム20〜25件を対象とするランキング生成専用方式。候補全体の順位を修正する軽量方策ネットワークを教師あり初期化後にRPOで強化学習し、固定T=5回のターゲットLLM評価で順位を近似する。評価はMS MARCO/Quora/ML-1M/Amazon-GamesのKendall/Spearman/順位距離であり、一般LLMサービングのE2E tok/s、TTFT、KV容量やGPU推論基盤の性能改善は主要評価ではない。投機的検証の考え方はサーベイに関連するが、最終適用先はランキング応用なのでborderline。",
+      "first_checked_at": "2026-10-26T11:52:54+00:00",
+      "last_checked_at": "2026-10-26T11:52:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Reinforcement Speculative Decoding for Fast Ranking"
     }
   }
 }
