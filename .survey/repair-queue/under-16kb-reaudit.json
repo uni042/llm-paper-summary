@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-26T02:57:28.503216+00:00",
+  "generated_at": "2026-10-26T05:56:06.616505+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 9,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 3,
-    "scheduled-chat-30": 3,
-    "scheduled-chat-45": 3
+    "scheduled-chat-00": 2,
+    "scheduled-chat-30": 2,
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -82,50 +82,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03283-mace-a-hybrid-llm-serving-system-with-colocated-slo-aware-continuous-ret.md",
-      "canonical_id": "arXiv:2510.03283",
-      "title": "MACE: A Hybrid LLM Serving System with Colocated SLO-aware Continuous Retraining Alignment",
-      "file_bytes": 14721,
-      "source_sha256": "277b96a8b5c378bb6db0f4df2a4b1b79d67104b093abfa21dae3646ab9deaad8",
-      "source_git_blob_sha": "58cf1e36bab88e7a3302f421474063096b4179b4",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.766835,
-      "quality_metrics": {
-        "body_chars": 3724,
-        "method_chars": 1247,
-        "evaluation_chars": 942,
-        "limitation_chars": 368
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.7% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2507.16323-spellm-character-level-multi-head-decoding.md",
-      "canonical_id": "arXiv:2507.16323",
-      "title": "SpeLLM: Character-Level Multi-Head Decoding",
-      "file_bytes": 14917,
-      "source_sha256": "f09ccb1e1600201a1d2989323ff759f5eb171f937de7b158d6d4ac4a59d8e04a",
-      "source_git_blob_sha": "170d92eb53e963952d7cf54509f563b16c6f9e18",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.858437,
-      "quality_metrics": {
-        "body_chars": 3313,
-        "method_chars": 1003,
-        "evaluation_chars": 763,
-        "limitation_chars": 381
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
       "canonical_id": "arXiv:2307.03738",
       "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
@@ -161,26 +117,6 @@
         "method_chars": 1088,
         "evaluation_chars": 929,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md",
-      "canonical_id": "arXiv:2510.19389",
-      "title": "ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression",
-      "file_bytes": 16982,
-      "source_sha256": "d66184fc6b7bf87cda03ba0d30c4d7c4d49d3bc876fcf640d56d65c91a2b678e",
-      "source_git_blob_sha": "8d4fe284b38f089412d73a23cc33254e18cf2dd8",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.872934,
-      "quality_metrics": {
-        "body_chars": 4359,
-        "method_chars": 1199,
-        "evaluation_chars": 1145,
-        "limitation_chars": 453
       },
       "mechanical_failures": [],
       "warnings": []
