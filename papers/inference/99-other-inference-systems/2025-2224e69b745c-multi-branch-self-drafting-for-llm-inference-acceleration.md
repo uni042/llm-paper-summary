@@ -28,6 +28,8 @@ worker_run_key: "20261026-1156-scheduled-chat-00/r01"
 reference_main_sha: "00a6f0a2bbc5402d0292142f1c6f664c72cc5906"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Self-Draft：単一LLMの分岐を使った学習不要の投機的復号

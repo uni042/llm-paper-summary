@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（799本）
+## 自動生成の論文一覧（800本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2451,6 +2451,10 @@
 - **2025-04 · [Saliency-driven Dynamic Token Pruning for Large Language Models](2025-2504.04514-saliency-driven-dynamic-token-pruning-for-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVキャッシュを削減する方式は、生成段階のメモリと注意計算を減らす一方、既に全入力を処理した後でKVを捨てるだけではプリフィル計算を取り戻せない。
+
+- **2025-04 · [Multi-Branch Self-Drafting for LLM Inference Acceleration](2025-2224e69b745c-multi-branch-self-drafting-for-llm-inference-acceleration.md)**  
+  実装：[✓](https://github.com/ZipECHO/Self-Draft) ・ リポジトリ内被引用：0  
+  重みをメモリから読み出す費用が大きい状況では、1回の順伝播で得られるトークン数を増やすことが有効である。コーパスから固定的なn-gram候補を検索する方式も、実際の対話・コード生成との分布ずれに弱い。
 
 - **2025-04 · [Enhancing Ultra-Low-Bit Quantization of Large Language Models Through Saliency-Aware Partial Retraining](2025-2504.13932-enhancing-ultra-low-bit-quantization-of-large-language-models-through-sa.md)**  
   実装：[✓](https://github.com/TokuyuSou/ULB-SAPR) ・ リポジトリ内被引用：0  
