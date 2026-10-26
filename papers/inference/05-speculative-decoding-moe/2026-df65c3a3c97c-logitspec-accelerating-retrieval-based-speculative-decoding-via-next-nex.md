@@ -1,36 +1,64 @@
 ---
-canonical_id: 'DOI:10.18653/v1/2026.findings-acl.1655'
+canonical_id: DOI:10.18653/v1/2026.findings-acl.1655
 arxiv_id: null
 arxiv_categories: null
 title: 'LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation'
-summary: '検索ベースの投機的生成は追加draftモデルを不要にするが、prompt中のn-gramが一致しないと候補を得られない。LogitSpecはtarget LLMの直近logit上位kに次々トークンが含まれやすい経験的性質を使い、次トークンと次々トークンの両方を鍵にprompt・生成済み文脈から後続列を検索する。候補木を作りtargetモデルで並列検証する。Vicuna 7B・CNN/DMで平均受理長3.28、自己回帰比2.61倍、4課題平均2.26倍。A100上のbatch1・greedyを中心に評価し、検索対象が少ない短いpromptや実運用のcontinuous batchingで同じ利得を保証しない。'
-list_summary: 'LogitSpecはtargetの直近logitから次々トークン候補を推定し、prompt内n-gram検索の照合範囲を広げる学習不要の投機的生成。Vicuna 7B/CNN-DMで2.61倍、平均受理3.28。'
+summary: 検索ベースの投機的生成は追加draftモデルを不要にするが、prompt中のn-gramが一致しないと候補を得られない。LogitSpecはtarget LLMの直近logit上位kに次々トークンが含まれやすい経験的性質を使い、次トークンと次々トークンの両方を鍵にprompt・生成済み文脈から後続列を検索する。候補木を作りtargetモデルで並列検証する。Vicuna 7B・CNN/DMで平均受理長3.28、自己回帰比2.61倍、4課題平均2.26倍。A100上のbatch1・greedyを中心に評価し、検索対象が少ない短いpromptや実運用のcontinuous batchingで同じ利得を保証しない。
+list_summary: LogitSpecはtargetの直近logitから次々トークン候補を推定し、prompt内n-gram検索の照合範囲を広げる学習不要の投機的生成。Vicuna 7B/CNN-DMで2.61倍、平均受理3.28。
 authors:
-  - Tianyu Liu
-  - Qitan Lv
-  - Hao Li
-  - Xing Gao
-  - Xiao Sun
-  - Xiaoyan Sun
+- Tianyu Liu
+- Qitan Lv
+- Hao Li
+- Xing Gao
+- Xiao Sun
+- Xiaoyan Sun
 published: '2026-07-02'
-publication: 'Findings of ACL 2026, pp. 33070–33092'
+publication: Findings of ACL 2026, pp. 33070–33092
 publication_type: conference
 publication_status: published
-source: 'https://aclanthology.org/2026.findings-acl.1655.pdf'
+source: https://aclanthology.org/2026.findings-acl.1655.pdf
 sources:
-  - 'https://aclanthology.org/2026.findings-acl.1655.pdf'
-  - 'https://aclanthology.org/2026.findings-acl.1655/'
-implementation: 'PyTorch 2.6.0、CUDA 12.4、Transformers 4.37.1（Vicuna/Llama2）および4.57.1（Llama3.1/Qwen3）。7～33BはA100 SXM 80GB×1、70Bは×2。prompt由来n-gramをhash索引へ格納し、候補木をtree attentionで検証。原著が実装URLを明示する。'
-code: 'https://github.com/smart-lty/LogitSpec'
+- https://aclanthology.org/2026.findings-acl.1655.pdf
+- https://aclanthology.org/2026.findings-acl.1655/
+implementation: PyTorch 2.6.0、CUDA 12.4、Transformers 4.37.1（Vicuna/Llama2）および4.57.1（Llama3.1/Qwen3）。7～33BはA100 SXM 80GB×1、70Bは×2。prompt由来n-gramをhash索引へ格納し、候補木をtree attentionで検証。原著が実装URLを明示する。
+code: https://github.com/smart-lty/LogitSpec
 last_checked: '2026-10-26'
-worker_id: 'scheduled-chat-45'
+worker_id: scheduled-chat-45
 worker_completed_at: '2026-10-26T22:56:50+09:00'
-worker_run_key: '20261026-2245-scheduled-chat-45/r01'
-reference_main_sha: '4bc39e85c86cd398a0c6f441df3c7789a7f22785'
+worker_run_key: 20261026-2245-scheduled-chat-45/r01
+reference_main_sha: 4bc39e85c86cd398a0c6f441df3c7789a7f22785
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2502.17421
+- canonical_id: arXiv:2503.01840
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2501.19309
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2405.00263
+- canonical_id: arXiv:2503.10135
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2410.06916
+- canonical_id: ACL:2024.acl-long.681
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2405.19715
+- canonical_id: arXiv:2402.02082
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2406.17276
+- canonical_id: arXiv:2408.11850
+- canonical_id: arXiv:2408.15766
+- canonical_id: arXiv:2310.12072
+- canonical_id: arXiv:2404.19737
+- canonical_id: arXiv:2402.05109
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2311.08252
+- canonical_id: arXiv:2402.01528
+references_checked_at: '2026-10-26'
+references_source: primary-pdf-reference-section
+references_total: 4
 ---
 
 # LogitSpec：次々トークン予測を検索キーに加える投機的デコード
