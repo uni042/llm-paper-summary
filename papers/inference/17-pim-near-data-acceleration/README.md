@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（29本）
+## 自動生成の論文一覧（30本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -124,6 +124,10 @@
 - **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   PAPIは、大規模言語モデルの復号時に生じる同じ全結合層でも並列度によって計算律速とメモリ律速が入れ替わる現象を、実行先の動的選択へ結び付けたメモリ内処理（Processing-in-メモリ、PIM）型の異種計算機構である。
+
+- **2025-03 · [MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration](2025-2503.23817-mvdram-enabling-gemv-execution-in-unmodified-dram-for-low-bit-llm-accele.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MVDRAMは、メモリそのものを演算資源にすることで、大規模言語モデル（LLM）の逐次生成における重み読み出しを減らす実機システムである。著者らはXilinx Alveo U200上のメモリ制御器と市販DDR4-2400モジュール4枚で実験し、2ビットLlama2-13Bのトークン生成処理量をCPU基準比2.18倍、4ビットでは1.31倍にした。
 
 ### 3年前（2023-11〜2024-10）
 
