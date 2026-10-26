@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T06:54:18+00:00",
+  "generated_at": "2026-10-26T07:03:00+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 53,
+  "count": 54,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1321,38 +1321,9 @@
       "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2506.12204",
-      "title": "Semantic Scheduling for LLM Inference",
-      "source_url": "https://arxiv.org/pdf/2506.12204",
-      "returned_at": "2026-10-26T06:52:03+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 290 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5941,
-        "body_paragraphs": 35,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 290,
-        "limitation_chars": 734,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 290 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_29062c05bab48191b98f276735d09637--2025-2506.12204-semantic-scheduling-llm-inference-research-20261026-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_29062c05bab48191b98f276735d09637--2025-2506.12204-semantic-scheduling-llm-inference-research-20261026-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.11044",
-      "title": "Boost Post-Training Quantization via Null Space Optimization for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2506.11044",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-26T06:52:05+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1379,11 +1350,67 @@
       "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2511.06010",
+      "title": "MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2511.06010",
+      "returned_at": "2026-10-26T07:01:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6300,
+        "body_paragraphs": 33,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 990,
+        "limitation_chars": 766,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b484270154f88191b0c37c415e654d02--2025-2511.06010-moska-shared-kv-attention-research-20261026-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b484270154f88191b0c37c415e654d02--2025-2511.06010-moska-shared-kv-attention-research-20261026-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2506.12204",
+      "title": "Semantic Scheduling for LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2506.12204",
+      "returned_at": "2026-10-26T07:02:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 290 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5941,
+        "body_paragraphs": 35,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 290,
+        "limitation_chars": 734,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 290 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-801d086cac20--libfile_29062c05bab48191b98f276735d09637--2025-2506.12204-semantic-scheduling-llm-inference-research-20261026-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-801d086cac20--libfile_29062c05bab48191b98f276735d09637--2025-2506.12204-semantic-scheduling-llm-inference-research-20261026-1530-scheduled-chat-3.json",
+      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2506.05229",
       "title": "Diagonal Batching Unlocks Parallelism in Recurrent Memory Transformers for Long Contexts",
       "source_url": "https://arxiv.org/pdf/2506.05229",
-      "returned_at": "2026-10-26T06:52:06+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-26T07:02:05+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -1401,8 +1428,8 @@
           "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-820d18797a6b--libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-820d18797a6b--libfile_58bad3af4c1c8191ad6057a06ec0ac2d--2025-2506.05229-diagonal-batching-recurrent-memory-research-20261026-1530-scheduled-chat-.json",
       "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
     }
   ]

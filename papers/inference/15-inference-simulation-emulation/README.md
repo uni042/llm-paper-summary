@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（59本）
+## 自動生成の論文一覧（60本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -227,6 +227,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-09 · [SAIL: SRAM-Accelerated LLM Inference System with Lookup-Table-based GEMV](2025-2509.25853-sail-sram-accelerated-llm-inference-system-with-lookup-table-based-gemv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SAIL（SRAM-Accelerated Inference of LLMs）は、量子化されたLLMをCPUベースのサーバで効率的に推論するため、CPUのLast-Level Cache（LLC）の各sliceの近傍に演算可能なSRAM（C-SRAM）を追加し…
+
+- **2025-08 · [COMET: A Framework for Modeling Compound Operation Dataflows with Explicit Collectives](2025-2509.00599-comet-a-framework-for-modeling-compound-operation-dataflows-with-explici.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  原著はLlama-3とGPT-2由来の演算形状を使い、GEMM-Softmax、GEMM-LayerNorm、self-注意機構を、edge/cloudの二つの仮想アクセラレータ構成で評価する。非融合のデータフローを基準に、最適化したマッピングの幾何平均速度比は順に1.42倍、3.46倍、1.82倍と報告する。
 
 - **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：0  

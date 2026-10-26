@@ -31,6 +31,8 @@ worker_completed_at: '2026-10-26T15:37:48+09:00'
 reference_main_sha: '34f2653e050327080b7ce3f4a301ff293578bfc6'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # Diagonal Batching：再帰メモリTransformerを対角線で束ねる長文推論高速化

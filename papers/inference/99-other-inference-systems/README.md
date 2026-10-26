@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（801本）
+## 自動生成の論文一覧（802本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2487,6 +2487,10 @@
 - **2025-03 · [PIPO: Pipelined Offloading for Efficient Inference on Consumer Devices](2025-2504.03664-pipo-pipelined-offloading-for-efficient-inference-on-consumer-devices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU/NVMeオフロードを計算・重み読込・KV読込/保存の細粒度タスクへ分解し、転送パイプラインとINT4 CUDAカーネルで6GB RTX 3060上のGPU利用率を90%超へ高める。
+
+- **2025-03 · [Multi-Cue Adaptive Visual Token Pruning for Large Vision-Language Models](2025-2503.08019-multi-cue-adaptive-visual-token-pruning-for-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/bzluan/AdaptPrune) ・ リポジトリ内被引用：0  
+  画像を扱う大規模視覚言語モデル（LVLM）では、視覚エンコーダが作る数百から数千の画像パッチ表現が言語モデルへトークンとして挿入される。画像が高解像度になると、視覚トークンは言語側の自己注意やFFNにも流れ、プリフィル計算量、後続のKVキャッシュ容量、生成時の注意計算に影響する。画像トークンの一部を早い層で取り除けば、後続層の計算と記憶を減らせる。
 
 - **2025-03 · [Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques](2025-2503.11816-key-value-compress-a-systematic-exploration-of-kv-cache-compression-tech.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
