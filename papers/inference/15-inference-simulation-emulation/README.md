@@ -253,7 +253,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-10 · [Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling](2023-2c2071afa90d-sia-heterogeneity-aware-goodput-optimized-ml-cluster-scheduling.md)**  
-  実装：[✓](https://github.com/siasosp23/artifacts) ・ リポジトリ内被引用：3  
+  実装：[✓](https://github.com/siasosp23/artifacts) ・ リポジトリ内被引用：4  
   Siaは、GPUの種類が混在する深層学習訓練クラスタで、各ジョブへ割り当てるGPUの種類・台数・バッチサイズを同時に決めるスケジューラである。原著は、44GPUの実機クラスタで既存のPolluxより平均ジョブ完了時間を約35〜50%、Gavelより約50%短縮したと報告する。
 
 ### 7年前（2019-11〜2020-10）
