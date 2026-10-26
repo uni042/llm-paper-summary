@@ -75,22 +75,22 @@
   実装：[✓](https://github.com/huggingface/lerobot) ・ リポジトリ内被引用：6  
   中核は、SmolVLM-2を使う視覚言語部の上位層を省略し、1画像の視覚トークンを64個に抑え、行動専門家（action 専門家）に交差注意と自己注意を交互に配置する設計である。実機のPick-Placeでは同期推論の平均完了時間13.75秒に対し、非同期推論は9.70秒、固定時間内の成功した物体移動数は9個から19個へ増えた。
 
+- **2025-05 · [One-for-All Pruning: A Universal Model for Customized Compression of Large Language Models](2025-2505.12216-one-for-all-pruning-a-universal-model-for-customized-compression-of-larg.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  この論文の主眼は、枝刈り済み大規模言語モデルを一つだけ作ることではなく、利用者ごとに異なる圧縮率・品質の希望を受け、適切な枝刈り構成を何度も短時間で作ることである。UniCuCoは多数の要求から一度学習した写像を再利用し、要求に応じた層別の枝刈り率を1秒未満で出力する。
+
 - **2025-10 · [TELL-TALE: Task Efficient LLMs with Task Aware Layer Elimination](2025-2510.22767-tell-tale-task-efficient-llms-with-task-aware-layer-elimination.md)**  
   実装：[✓](https://github.com/omyokun/tale) ・ リポジトリ内被引用：0  
   本研究は、ある層を除去するとモデルが小さくなるだけでなく、対象タスクの正答率がむしろ上がる場合があることに着目し、タスク認識型層除去（Task-Aware 層 Elimination、TALE）を提案する。著者はゼロショット（zero-shot）と少数例提示（少数例）、通常の選択肢評価と生成文を読む評価を使い分け、削減層の選択がタスクに依存することを示す。
 
-- **2025-05 · [One-for-All Pruning: A Universal Model for Customized Compression of Large Language Models](2025-2505.12216-one-for-all-pruning-a-universal-model-for-customized-compression-of-larg.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  この論文の主眼は、枝刈り済み大規模言語モデルを一つだけ作ることではなく、利用者ごとに異なる圧縮率・品質の希望を受け、適切な枝刈り構成を何度も短時間で作ることである。UniCuCoは多数の要求から一度学習した写像を再利用し、要求に応じた層別の枝刈り率を1秒未満で出力する。
-
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [ShortGPT: Layers in Large Language Models are More Redundant Than You Expect](2024-2403.03853-shortgpt-layers-in-large-language-models-are-more-redundant-than-you-exp.md)**  
-  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：61  
+  実装：[✓](https://github.com/icip-cas/ShortGPT) ・ リポジトリ内被引用：63  
   本論文は、大規模言語モデルの全ての変換層が同程度に必要とは限らないという観察から、計算の一部を省略する二種類の方式を提案する。ACL 2025掲載版の代表例では、Llama2-13Bの40層から10層を対象とする条件で、多肢選択指標の平均値は58.49から53.57となり、元の約91.59%を維持した。
 
 - **2023-12 · [Fluctuation-based Adaptive Structured Pruning for Large Language Models](2023-2312.11983-fluctuation-based-adaptive-structured-pruning-for-large-language-models.md)**  
-  実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/CASIA-IVA-Lab/FLAP) ・ リポジトリ内被引用：28  
   FLAP（FLuctuation-based 適応的 Structured Pruning）は、大規模言語モデル（LLM）の重みを再学習せずに構造化枝刈りする手法である。
 
 - **2024-09 · [CFSP: An Efficient Structured Pruning Framework for LLMs with Coarse-to-Fine Activation Information](2024-2409.13199-cfsp-an-efficient-structured-pruning-framework-for-llms-with-coarse-to-f.md)**  
@@ -104,11 +104,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-05 · [LLM-Pruner: On the Structural Pruning of Large Language Models](2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：175  
+  実装：[✓](https://github.com/horseee/LLM-Pruner) ・ リポジトリ内被引用：176  
   LLM-Prunerは、大規模言語モデルのパラメータを実際に削除して小さい密行列モデルへ変換する構造枝刈り手法である。LLaMA-7B、Vicuna-7B、ChatGLM-6Bを評価し、LLaMA-7Bでは20%の構造削減でゼロショット七課題平均が63.25から56.82へ下がり、低ランク適応後60.07まで回復した。
 
 - **2023-10 · [Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning](2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md)**  
-  実装：[✓](https://github.com/princeton-nlp/LLM-Shearing) ・ リポジトリ内被引用：73  
+  実装：[✓](https://github.com/princeton-nlp/LLM-Shearing) ・ リポジトリ内被引用：74  
   枝刈り直後に失われた能力は継続事前学習で回復するが、その際にも学習データを元の比率で使い続けず、領域別の損失回復状況に応じて再配分する。A100 80GB上の単一生成で、13億パラメータの均一形状は毎秒58トークン、非均一形状は51トークン、27億では43対37トークンであった。
 
 - **2023-05 · [LoRAPrune: Structured Pruning Meets Low-Rank Parameter-Efficient Fine-Tuning](2023-2305.18403-loraprune-structured-pruning-meets-low-rank-parameter-efficient-fine-tun.md)**  
@@ -126,7 +126,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-04 · [Structured Pruning Learns Compact and Accurate Models](2022-2204.00408-structured-pruning-learns-compact-and-accurate-models.md)**  
-  実装：[✓](https://github.com/princeton-nlp/CoFiPruning) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/princeton-nlp/CoFiPruning) ・ リポジトリ内被引用：25  
   一方、あらかじめ小型の学生モデルを定めて知識蒸留する方式は、推論しやすい構造を得られるが、大量の未ラベル文章で一般蒸留を行う費用が大きい。MNLIの約95%剪定条件ではBERT-base比12.1倍の推論高速化と精度80.6を報告し、QNLIでも12.1倍・86.1を報告する。
 
 - **2022-04 · [A Fast Post-Training Pruning Framework for Transformers](2022-2204.09656-a-fast-post-training-pruning-framework-for-transformers.md)**  

@@ -197,7 +197,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 2年前（2024-11〜2025-10）
 
 - **2024-11 · [APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving](2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md)**  
-  実装：[✓](https://github.com/microsoft/apex_plus) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/microsoft/apex_plus) ・ リポジトリ内被引用：12  
   APEXは、大規模言語モデル（LLM）を複数GPUで提供する際に、どの並列化方式を組み合わせるべきかを実機へ総当たりで配備せず、CPU上のシミュレーションで比較するシステムである。
 
 - **2025-07 · [Rethinking LLM Inference Bottlenecks: Insights from Latent Attention and Mixture-of-Experts](2025-2507.15465-rethinking-llm-inference-bottlenecks-insights-from-latent-attention-and-.md)**  
@@ -279,7 +279,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 7年前（2019-11〜2020-10）
 
 - **2020-02 · [A3: Accelerating Attention Mechanisms in Neural Networks with Approximation](2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
+  実装：✓ ・ リポジトリ内被引用：18  
   通常の注意機構は、クエリベクトルと全キー行の内積を求め、softmaxで正規化し、値ベクトルを重み付き合成する。保守的設定は近似によるタスク精度の低下をおおむね1%に抑える一方、積極的設定はおおむね8%の精度低下を伴う。
 
 ### 9年前（2017-11〜2018-10）
