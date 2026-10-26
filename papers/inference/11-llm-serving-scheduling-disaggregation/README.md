@@ -1857,6 +1857,6 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-01 · [Pay Less Attention with Lightweight and Dynamic Convolutions](2019-1901.10430-pay-less-attention-with-lightweight-and-dynamic-convolutions.md)**  
-  実装：[✓](https://github.com/pytorch/fairseq) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/pytorch/fairseq) ・ リポジトリ内被引用：9  
   自己注意（self-注意機構）は各時刻の問い合わせと文脈中の鍵を比較して重みを求めるため、系列長に対して二次の計算費用が生じる。速度面でも高度に最適化された自己注意方式より約20%速い実行を報告するが、この倍率は特定の実験設定の結果であり、全ての系列長やGPUで保証されない。
 <!-- survey:auto:end -->
