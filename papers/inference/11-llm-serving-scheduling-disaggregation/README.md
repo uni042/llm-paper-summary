@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（463本）
+## 自動生成の論文一覧（464本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1539,6 +1539,10 @@
 - **2025-05 · [QoS-Efficient Serving of Multiple Mixture-of-Expert LLMs Using Partial Runtime Reconfiguration](2025-2505.06481-qos-efficient-serving-of-multiple-mixture-of-expert-llms-using-partial-r.md)**  
   実装：[✓](https://github.com/hamid-74/Multi-MoE) ・ リポジトリ内被引用：1  
   混合専門家モデル（Mixture-of-Experts; MoE）は、入力ごとに少数の専門家だけを選択して計算するため、全パラメータ数が大きくても演算量を抑えられる。
+
+- **2025-02 · [Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization](2025-2502.15763-hybrid-offline-online-scheduling-method-for-large-language-model-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLaMA-65B、GSM8Kの1319要求、8基のAscend計算ユニットで、ベースラインの総完了時間201.00秒・利用率80.2%を、全方式併用で190.58秒・89.06%へ改善した（原著§V、図6–9）。
 
 - **2025-01 · [iServe: An Intent-based Serving System for LLMs](2025-2501.13111-iserve-intent-based-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
