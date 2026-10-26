@@ -35,10 +35,15 @@
   "selection_reason": "The abstract describes serving multiple MoE expert-specialized adapters over a shared base model using virtual-memory-assisted expert placement and fused rerouting; it targets accelerator memory and throughput, reporting higher KV-cache capacity and throughput.",
   "semantic_scholar_id": "cb00fc1bbdfff12abe1e51375cab91220240620f",
   "source_url": "https://arxiv.org/abs/2508.17624",
-  "status": "ready",
+  "status": "superseded",
   "title": "ExpertWeave: Efficiently Serving Expert-Specialized Fine-Tuned Adapters at Scale",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-26T13:56:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2508.17624-expertweave-efficiently-serving-expert-specialized-fine-tuned-adapters-a.md",
+  "represented_canonical_id": "arXiv:2508.17624",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
