@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-26T05:56:06.616505+00:00",
+  "generated_at": "2026-10-26T09:45:24.243863+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 3,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -77,6 +77,26 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2410.18234-multi-draft-speculative-sampling-canonical-decomposition-and-theoretical.md",
+      "canonical_id": "arXiv:2410.18234",
+      "title": "Multi-Draft Speculative Sampling: Canonical Decomposition and Theoretical Limits",
+      "file_bytes": 15318,
+      "source_sha256": "986b17b391c342fd0b99cb8bd120bd6b18a8f73efa2c136c9267e17fb688a718",
+      "source_git_blob_sha": "b996e12c2daa833fb7c5bc8d8c0acfcaca87bd09",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.818,
+      "quality_metrics": {
+        "body_chars": 4699,
+        "method_chars": 1578,
+        "evaluation_chars": 911,
+        "limitation_chars": 611
       },
       "mechanical_failures": [],
       "warnings": []
