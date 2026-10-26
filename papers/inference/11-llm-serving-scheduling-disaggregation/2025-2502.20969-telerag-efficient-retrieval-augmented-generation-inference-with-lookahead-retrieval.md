@@ -1,0 +1,225 @@
+---
+canonical_id: arXiv:2502.20969
+arxiv_id: '2502.20969'
+doi: 10.48550/arxiv.2502.20969
+title: 'TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval'
+summary: TeleRAGは、検索拡張生成（retrieval-augmented generation; RAG）の検索直前に生成されるクエリと実際の検索クエリが近いことを利用し、転置ファイル索引（inverted file index; IVF）の候補クラスタをLLM生成中にCPUからGPUへ非同期先読みする。外したクラスタはCPUで同時検索して結果を統合し、キャッシュと複数GPU向けスケジューラも組み合わせる。61GBのWikipedia索引と16GBのLlama-3-8Bを24GB RTX 4090で共存させ、単一要求で平均1.53倍のエンドツーエンド高速化、H100のバッチ8で平均1.98倍の処理量向上を報告する。
+list_summary: RAGの前段生成から次のIVF検索クラスタを予測し、LLM生成とCPU→GPU先読みを重ねつつ外れクラスタをCPU検索で補完して、大規模索引をGPU常駐せず検索待ちを隠す。
+publication: arXiv
+publication_type: preprint
+publication_status: Preprint
+lineage: inference-systems
+topics:
+- RAG
+- 階層メモリ
+- 先読み
+- 複数GPU配信
+source: https://arxiv.org/abs/2502.20969
+sources:
+- https://arxiv.org/abs/2502.20969
+- https://github.com/uw-syfi/TeleRAG
+last_checked: '2026-09-28'
+authors:
+- Lin, Chien-Yu
+- Kamahori, Keisuke
+- Liu, Yiyu
+- Shi, Xiaoxiang
+- Kashyap, Madhav
+- Gu, Yile
+- Shao, Rulin
+- Ye, Zihao
+- Zhu, Kan
+- Kadekodi, Rohan
+- Wang, Stephanie
+- Krishnamurthy, Arvind
+- Ceze, Luis
+- Kasikci, Baris
+published: '2025-02-28'
+arxiv_categories:
+  primary: cs.DC
+  cross_list: []
+code: https://github.com/uw-syfi/TeleRAG
+implementation: Pythonのragaccライブラリとして実装し、SGLangでLLM推論、FaissでIVF検索を行う。先読み、GPUキャッシュ、バッチ用先読みスケジューラ、複数GPU用キャッシュ認識スケジューラを統合する。
+implementation_status: official-code
+references:
+- canonical_id: arXiv:2407.07858
+  arxiv_id: '2407.07858'
+- canonical_id: DOI:10.1145/3620665.3640366
+  doi: 10.1145/3620665.3640366
+- canonical_id: arXiv:2411.14199
+  arxiv_id: '2411.14199'
+- canonical_id: arXiv:2403.03187
+  arxiv_id: '2403.03187'
+- canonical_id: arXiv:2111.08566
+  arxiv_id: '2111.08566'
+- canonical_id: arXiv:2401.08281
+  arxiv_id: '2401.08281'
+- canonical_id: arXiv:2312.10997
+  arxiv_id: '2312.10997'
+- canonical_id: arXiv:2305.18466
+  arxiv_id: '2305.18466'
+- canonical_id: arXiv:2112.09118
+  arxiv_id: '2112.09118'
+- canonical_id: arXiv:2305.03653
+  arxiv_id: '2305.03653'
+- canonical_id: arXiv:2310.06839
+  arxiv_id: '2310.06839'
+- canonical_id: arXiv:2403.05676
+  arxiv_id: '2403.05676'
+- canonical_id: arXiv:2404.12457
+  arxiv_id: '2404.12457'
+- canonical_id: arXiv:2405.13576
+  arxiv_id: '2405.13576'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: DOI:10.5281/zenodo.1234
+  doi: 10.5281/zenodo.1234
+- canonical_id: arXiv:2410.07590
+  arxiv_id: '2410.07590'
+- canonical_id: DOI:10.1109/tpami.2018.2889473
+  doi: 10.1109/tpami.2018.2889473
+- canonical_id: DOI:10.1145/3669940.3707264
+  doi: 10.1145/3669940.3707264
+- canonical_id: arXiv:2412.21023
+  arxiv_id: '2412.21023'
+- canonical_id: arXiv:2506.08276
+  arxiv_id: '2506.08276'
+- canonical_id: arXiv:2411.03519
+  arxiv_id: '2411.03519'
+- canonical_id: arXiv:2405.16444
+  arxiv_id: '2405.16444'
+- canonical_id: arXiv:2401.14021
+  arxiv_id: '2401.14021'
+- canonical_id: arXiv:2310.06117
+  arxiv_id: '2310.06117'
+- canonical_id: arXiv:2312.07104
+  arxiv_id: '2312.07104'
+references_checked_at: '2026-10-03'
+references_source: arxiv-html-reference-section
+references_total: 90
+
+
+last_audited: '2026-10-08'
+audit_version: 2
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2025-2502.20969-telerag-efficient-retrieval-augmented-generation-inference-with-lookahead-retrieval.md
+under16kb_reaudit_source_git_blob_sha: '7777f78c863f16d48865c1d3858088e6dafa6c6d'
+under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_passed: true
+quality_self_review_passed: true
+quality_self_review_version: '2026-10-07-v1'
+worker_run_key: 'interactive-20261008-bottom-up-reaudit-r2-2502.20969'
+worker_completed_at: '2026-10-07T22:50:56.755Z'
+
+---
+
+# TeleRAG: Efficient Retrieval-Augmented Generation Inference with Lookahead Retrieval
+
+> RAGの前段生成から次のIVF検索クラスタを予測し、LLM生成とCPU→GPU先読みを重ねつつ外れクラスタをCPU検索で補完して、大規模索引をGPU常駐せず検索待ちを隠す。
+
+## 概要
+
+検索拡張生成（retrieval-augmented generation; RAG）は、LLMの生成途中で外部文書を検索して回答へ取り込む。大規模データストアでは全ベクトルをGPUへ置けず、CPUメモリ上の転置ファイル索引（inverted file index; IVF）を検索するか、必要なクラスタだけGPUへ移す必要がある。後者はGPU検索自体は速いが、検索開始後にCPU→GPU転送すると転送時間が直列に加わり、LLMが待つ。
+
+TeleRAGは、RAGの「検索前生成」に入力されるクエリ (q_{in}) と、その生成後に実際の検索へ渡るクエリ (q_{out}) が意味的に近く、選ばれるIVFクラスタも大きく重なることを利用する。(q_{out}) が完成する前、LLMが生成している時間に (q_{in}) から候補クラスタを予測し、GPUの直接メモリアクセス（direct memory access; DMA）で非同期転送する。実検索時には先読み済みクラスタをGPUで、外れたクラスタをCPUで並列検索し、GPU上で結果を統合するため、予測外れでも検索精度を落とさない。
+
+さらに、頻出クラスタをGPUに残す動的キャッシュ、似たクエリを同じ小バッチへ集める先読みスケジューラ、各GPUのキャッシュとの重なりが大きい要求を割り当てるキャッシュ認識スケジューラを組み合わせる。61GBのWikipedia索引と16GBのLlama-3-8Bを24GB RTX 4090で動かし、単一要求では平均1.53倍のエンドツーエンド高速化、H100でバッチ8では平均1.98倍の処理量向上、H200 4基では1基比3.8倍のスケーリングを報告する。
+
+## 背景: RAGではLLM計算と検索用データ移動が直列になりやすい
+
+IVFはベクトルをクラスタへ分割し、クエリに近い一部クラスタだけ検索することで総当たり検索を避ける。CPUメモリなら大きな索引を保持できるが、検索処理はGPUより遅い。逆に索引全体をGPUへ置けば高速だが、LLM重みとKVキャッシュ（key-value cache）が同じGPUメモリを使うため、数十GB級索引との同居が難しい。
+
+そこで「検索時に必要なクラスタだけGPUへ持ってくる」と、容量問題は解けるが転送が検索のクリティカルパスへ入る。TeleRAGの着眼点は、RAGには検索前にLLM生成区間があり、その間GPU計算とPCIe転送を重ねられることである。必要クラスタを完全に当てる必要もなく、外れた部分をCPU側で検索して統合すれば検索結果を保てる。
+
+## 問題設定
+
+TeleRAGが対象とするのは、複数回の生成・検索を繰り返すモジュール型RAGである。データストアがGPUメモリより大きく、CPU側IVFを使うと検索遅延が大きい一方、毎回全候補をGPUへ移すと転送量とGPUメモリが増える。
+
+課題は、(1) 実検索クエリが確定する前に有望クラスタを予測する、(2) 先読み量を増やしすぎて生成時間より転送時間が長くならないようにする、(3) 予測外れでも検索精度を維持する、(4) バッチ・複数GPUで要求ごとの候補集合が異なるときにもキャッシュ局所性を保つ、の4点である。
+
+## 手法
+
+### 1. 検索前後クエリのクラスタ重複を利用する
+
+TeleRAGは検索前段の入力 (q_{in}) と実際の検索入力 (q_{out}) の埋め込みが近いことを利用する。NQ、HotpotQA、TriviaQAと6種類のRAGパイプラインで、256クラスタを先読みしたとき最も低い条件でもクラスタ被覆率61.6%以上を確認している。
+
+この重複が、予測専用モデルを追加せず先読みできる根拠になる。(q_{in}) と各IVFクラスタ中心の距離から近いクラスタを選び、実検索に先立って転送する。
+
+### 2. LLM生成とCPU→GPU転送を重ねる
+
+LLMが検索前生成を行っている間、候補クラスタをGPUへDMA転送する。(q_{out}) が完成した時点で、予測が当たった集合 (C_{overlap}) はGPUで検索し、未先読み集合 (C_{miss}) はCPUで同時検索する。両者の距離結果をGPUで統合して上位文書を決める。
+
+この構成では先読みが外れても対象クラスタを捨てないため、近似検索精度を先読み命中率へ依存させない。失敗は主に性能側へ現れ、命中率が低いほどCPU検索が多く残る。
+
+### 3. 先読み量を生成時間に合わせる
+
+クラスタを多く先読みすればGPU側で処理できる範囲は増えるが、転送が検索前生成時間を超えると隠蔽できず、かえって待ち時間になる。TeleRAGは較正用要求から平均検索前生成時間 (ar t_{LLM}) を測り、CPU–GPU帯域 (B_{link}) との積 (B_{link}ar t_{LLM}) を先読みバイト予算の目安にする。
+
+クラスタ数ではなくバイト数を固定するのは、IVFクラスタの大きさが不均一だからである。残り予算へ収まらないクラスタは飛ばし、転送時間を予測しやすくする。
+
+### 4. キャッシュ・バッチ・複数GPUへ拡張する
+
+検索後に全クラスタを捨てず、頻出クラスタをGPUへ残す。バッチでは要求ごとの先読み集合がばらけるため、先読みスケジューラが埋め込み距離の近い問い合わせを貪欲に小バッチ化し、共通クラスタを増やす。
+
+複数GPUでは、各小バッチと各GPUキャッシュのクラスタ重複を計算し、重複が最大の組合せから割り当てる。バッチ256までの先読みスケジューリングは0.1秒未満、4基H200・128要求の例では先読みスケジューラ約37ms、キャッシュ認識スケジューラ約180msの追加費用と報告される。
+
+## 評価
+
+### 代表的な評価条件
+
+| 項目 | 条件 |
+| --- | --- |
+| データストア | wiki_dpr由来、Wikipedia 21億トークン、100トークン単位の文書片、768次元埋め込み |
+| IVF | 61GB、4096クラスタ、既定の探索クラスタ数（nprobe）256、返却文書数 top-k=3 |
+| LLM | Llama-3.2-3B、Llama-3-8B、Mistral-Small-22B |
+| RAG | HyDE、SubQuestion、Iterative、Iter-RetGen、FLARE、Self-RAG |
+| データ | NQ、HotpotQA、TriviaQA、各1024要求 |
+| Desktop | Threadripper 5975、CPUメモリ512GB、RTX 4090 24GB、PCIe 4 約32GB/s |
+| Server1 | EPYC 9554、CPUメモリ1.5TB、H100 80GB、PCIe 5 約64GB/s |
+| Server2 | EPYC 9534、CPUメモリ1.5TB、H200 140GB×8、PCIe 5 約64GB/s |
+| 実行基盤 | LLMはSGLang、検索はFaiss |
+| 比較 | CPUオフロードIVFを使う素直なRAG実行 |
+| 主指標 | エンドツーエンド遅延、処理量、クラスタ被覆率、スケーリング |
+
+### 代表的な評価結果
+
+| 条件 | 結果 | 読み取れること |
+| --- | --- | --- |
+| RTX 4090、単一要求 | 平均1.53倍のエンドツーエンド高速化 | 生成中の先読みでCPU検索と転送のクリティカルパスを短縮 |
+| 61GB索引 + Llama-3-8B 16GB | RTX 4090 24GBで共存 | 索引全体をGPUへ置かず、必要クラスタだけを載せる設計の容量効果 |
+| H100、バッチ8 | 平均1.98倍の処理量向上 | 類似要求をまとめる先読みスケジューラがバッチでの命中率低下を緩和 |
+| H200 4基 | 1基比3.8倍 | キャッシュ認識割当で複数GPUでも局所性を利用 |
+| 256クラスタ先読み | 最低条件でも被覆率61.6%以上 | (q_{in}) が (q_{out}) の検索領域を予測する信号として有効 |
+| キャッシュ除去実験 | 1/2/4/8 GPUで処理量 +2/+12/+21/+18% | GPU数と総キャッシュ容量が増えるほどキャッシュの寄与が大きい |
+| 低予算の失敗分析 | 一部で命中率<5%の要求がある | クエリ書換えが大きい場合は先読み予測が外れるが、CPU検索で正しさは補完 |
+
+キャッシュ評価では冷間開始（cold start）の影響を避けるため512要求でウォームアップし、別の512要求で測定する。先読み予算が2GB未満では命中率が50%未満になる条件もあるが、CPU仕事量削減とGPU側の距離ソートにより1.2〜1.6倍のエンドツーエンド改善が残ると報告される。
+
+### 評価指標と索引先読みの有効条件
+
+単一要求では、先読みを使わない検索と生成の逐次処理に対し、RTX 4090上で平均約1.53倍のエンドツーエンド高速化が報告されている。ここで重要なのは、言語モデル自体の一トークン当たりの計算を単純に速くしたわけではない点である。生成が進んでいる間に次の検索候補が属する索引の領域を予測し、その領域をCPUからGPUへ転送しておくことで、後続の検索処理が待つ時間を短くした。入力の生成内容が次の検索語と強く結び付くほど、先読みの予測が当たりやすい。
+
+容量の観点では、約61GBの索引を全てGPUへ常駐させることなく、約16GBの言語モデルとともに24GBの画像処理装置上で検索を実行できる構成を示した。索引そのものが小さくなったわけではなく、全体はCPU側の主記憶へ保持し、必要なクラスタのみ転送する仕組みである。転送する候補クラスタが外れた場合でもCPU側の検索結果を利用するため、先読みミスによって検索対象が消える設計ではない。
+
+バッチ8のH100評価では処理量の平均改善が約1.98倍と報告され、複数GPUでは四台時に一台比で約3.8倍の処理量が得られた。ただし単一要求の遅延改善と複数要求の処理量改善は違う指標であり、同一の倍率として比較するべきではない。検索対象の局所性を利用するキャッシュ割当てが効果を出す条件も、要求同士で参照する索引領域が重複するかによって変わる。
+
+先読みには失敗する条件もある。検索前後で問い合わせを大きく書き換える場合、先読みした領域と実際の検索領域が一致せず、命中率が非常に低くなることがある。先読み用のGPU容量を狭めると有効な領域を保てず、再転送が増える。索引の転送時間、生成時間、問い合わせ書換えの程度の三つが性能を左右するため、検索語の相関が弱い用途へ同じ改善率を外挿してはならない。
+
+## 既存研究との差
+
+RAG高速化には取得文書のKVキャッシュ再利用など、主にLLMのプリフィルを減らす方式がある。TeleRAGはLLM側ではなく、モジュール型RAGで独立に発生する検索とCPU–GPUデータ移動を対象にする。
+
+また、索引全体をGPUへ常駐させる方式とも異なり、検索前生成から次のクラスタを予測し、必要な部分だけ一時配置する。予測外れをCPU検索で補完するため、先読みを検索結果の近似そのものには使わない点も重要である。
+
+## 限界・実装状況
+
+効果は検索前後クエリの意味的相関、PCIe帯域、検索前生成時間、GPUに確保できる先読み領域へ依存する。クエリ書換えが大きいパイプラインでは命中率が低下し、CPU検索が多く残る。生成時間が短い要求では隠せる転送量も小さい。
+
+評価はIVFを中心としており、HNSWなど別索引構造へ同じ先読み機構をそのまま適用できるとは限らない。公式実装は公開されているが、論文自身も実行時負荷、温度、PCIe競合で性能値が変動し得ると記載する。
+
+## 一次資料
+
+- https://arxiv.org/abs/2502.20969
+- https://github.com/uw-syfi/TeleRAG
+
+## 修正履歴
+
+- 2026-09-28（修正済み）: 旧テンプレートの一般的な推論最適化説明を削除し、検索前後クエリ相関、IVFクラスタ先読み、GPU/CPU協調検索、バイト予算、キャッシュ、バッチ・複数GPUスケジューリングへ全面的に書き換え。61GB索引、3種の実機構成、6 RAGパイプライン、単一要求・バッチ・複数GPU・失敗条件を評価表に整理した。
