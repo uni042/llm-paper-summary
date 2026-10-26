@@ -442,6 +442,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/naver/nllb-pruning) ・ リポジトリ内被引用：21  
   翻訳時ゲート統計で言語別に重要な専門家を選び、NLLB-200の専門家を最大80%枝刈りして単一32GB GPU推論を可能にする方式。
 
+- **2023-03 · [Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers](2023-2303.01610-smoe-dropout-self-slimmable.md)**  
+  実装：[✓](https://github.com/VITA-Group/Random-MoE-as-Dropout) ・ リポジトリ内被引用：13  
+  固定ランダム経路選択器と学習中の活性エキスパート数漸増により、1回の事前学習から推論資源に応じて容量を可変化できる自己スリム化SMoEを作る。
+
 - **2023-10 · [Merging Experts into One: Improving Computational Efficiency of Mixture of Experts](2023-2310.09832-merging-experts-into-one-improving-computational-efficiency-of-mixture-o.md)**  
   実装：[✓](https://github.com/Shwai-He/MEO) ・ リポジトリ内被引用：12  
   混合専門家（Mixture of エキスパート; MoE）モデルは、入力ごとに一部の専門家だけを選んで計算することで、全パラメータを常に実行する密モデルより計算費用を抑える。
@@ -449,10 +453,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2023-06 · [Soft Merging of Experts with Adaptive Routing](2023-2306.03745-smear-soft-merging-adaptive-routing.md)**  
   実装：[✓](https://github.com/r-three/smear) ・ リポジトリ内被引用：12  
   経路選択確率でエキスパート重みを入力ごとに合成して離散選択を消し、標準的な誤差逆伝播のまま適応的な専門化と単一エキスパート相当の活性計算を両立する。
-
-- **2023-03 · [Sparse MoE as the New Dropout: Scaling Dense and Self-Slimmable Transformers](2023-2303.01610-smoe-dropout-self-slimmable.md)**  
-  実装：[✓](https://github.com/VITA-Group/Random-MoE-as-Dropout) ・ リポジトリ内被引用：12  
-  固定ランダム経路選択器と学習中の活性エキスパート数漸増により、1回の事前学習から推論資源に応じて容量を可変化できる自己スリム化SMoEを作る。
 
 ### 5年前（2021-11〜2022-10）
 
