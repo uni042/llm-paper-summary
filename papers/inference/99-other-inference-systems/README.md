@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（758本）
+## 自動生成の論文一覧（759本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2303,6 +2303,10 @@
 - **2025-06 · [MoTE: Mixture of Ternary Experts for Memory-efficient Large Multimodal Models](2025-2506.14435-mote-mixture-of-ternary-experts-for-memory-efficient-large-multimodal-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoTE（Mixture of Ternary Experts）は、画像と言語を扱うマルチモーダル言語モデルを密な事前学習済みモデルからMoEへ拡張する際、既存のFFNを高精度の共有専門家として保持し、新たな経路選択専門家だけを三値の重みで学習する方式である。
+
+- **2025-06 · [Attention2D: Communication Efficient Distributed Self-Attention Mechanism](2025-2503.15758-attention2d-communication-efficient-distributed-self-attention-mechanism.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈の自己注意をGPU間で分割する際、Ring 注意機構などの従来の一次元コンテキスト並列では、各GPUが自分のクエリ部分を担当しても、全てのキー・バリュー（KV）を順に受け取る必要がある。A100を16枚または64枚使用したGPT-3型モデルの学習では、Ring 注意機構に対してNOがそれぞれ2.4倍以上・4倍以上の学習性能を示す。
 
 - **2025-06 · [Advancing Decoding Strategies: Enhancements in Locally Typical Sampling for LLMs](2025-2506.05387-advancing-decoding-strategies-enhancements-in-locally-typical-sampling-f.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
