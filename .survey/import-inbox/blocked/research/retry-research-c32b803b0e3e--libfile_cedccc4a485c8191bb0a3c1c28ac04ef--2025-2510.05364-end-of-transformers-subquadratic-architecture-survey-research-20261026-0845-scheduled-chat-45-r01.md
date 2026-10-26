@@ -32,6 +32,8 @@ worker_completed_at: "2026-10-26T08:57:00+09:00"
 reference_main_sha: "147242baffb4583a392162d52ddc58a2fe393743"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # The End of Transformers?：非二乗系列モデルの設計・性能・限界を横断するサーベイ
