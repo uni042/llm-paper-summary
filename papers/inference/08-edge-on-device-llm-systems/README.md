@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（70本）
+## 自動生成の論文一覧（78本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -42,6 +42,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   サーバーGPUと異なりスマートフォンはOSや他アプリとDRAMを共有し、メモリ上限を超えるとプロセスが強制終了される場合がある。TierKVは、キャッシュを正確なFP16形式の階層0、低ランク圧縮したDRAM内の階層1、フラッシュへ退避した階層2に分ける。
 
+- **2026-09 · [PELM: Power Efficient On-Device LLM Inference with Speculative Decoding and Dynamic Voltage Frequency Scaling](2026-2609.09662-pelm-speculative-decoding-dvfs.md)**  
+  実装：[✓](https://github.com/imec-nu/PELM) ・ リポジトリ内被引用：0  
+  DVFS・自己投機的デコード・可変検証深度を深層強化学習で共同制御し、端末LLMで最大23.1%高速化・52.4%エネルギー削減を達成する。
+
+- **2026-09 · [Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution](2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  演算子のCPU-GPU分割とDAG上の実行順を共同最適化し、段階化・臨界度標本化・遅延予測による配備時反復探索でオフライン最適化に近いモバイル推論遅延を得る。
+
 - **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   スマートフォンで大規模言語モデル（LLM）を端末内実行すると、モデル重みだけでなく、会話履歴を再計算せずに利用する鍵・値キャッシュ（KVキャッシュ）が長時間RAMを占有する。mzCacheはこの問題を、端末での退避後の復帰時間を最小化するメモリ管理として扱う。
@@ -50,13 +58,29 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Jetson統合メモリの隠れた帯域競合を監視し、締切危険時だけ背景LLMを一時停止してロボット処理を保護する軽量実行時スケジューラ。
 
+- **2026-09 · [JustFit: 200K-Token LLM Serving on a 24 GiB Laptop with Just-in-Time State Management](2026-2609.17475-justfit-200k-token-llm-serving-on-a-24-gib-laptop-with-just-in-time-state-management.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  圧縮キー・バリュー実行、部品常駐切替、状態保持遷移を統合し、24 GiB機で27B級モデルの約213K位置の単一要求を完走する推論実行系。
+
+- **2026-09 · [FoldQuantVLA: Native Low-Bit Quantization of Vision-Language-Action Models via Consistent Folding](2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md)**  
+  実装：[✓](https://github.com/cair-vinuni/FoldQuantVLA) ・ リポジトリ内被引用：0  
+  VLAの共有活性値変換を校正から重み丸め、TensorRT実行まで一貫させる学習後量子化を設計し、W4A4でOrin上の推論を浮動小数点TensorRT比1.20〜1.33倍に高速化した。
+
 - **2026-09 · [EStream: Fast and Memory-Efficient MoE Prefill through Expert Virtualization on Mobile NPUs](2026-2609.06551-estream.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   EStreamはMoE入力処理で必要な専門家をUFSから固定作業領域へ順次読み込み、NPU計算と重ね、静的共有グラフでDRAM不足と読出し待ちを減らす方式。
 
+- **2026-09 · [BigMoMo: Efficient Inference of Large-Scale MoE with Speculative Decoding on Mobile Devices](2609.14643.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号の複数トークン窓でエキスパート再利用・フラッシュ連続読出し・NPU計算との移動重畳を行い、30B級MoEのスマホ推論を平均4.83倍高速化する。
+
 - **2026-09 · [AceSpec: An Asymmetric Edge-Cloud Collaborative Framework for Communication-Efficient LLM Inference](2026-2609.02514-acespec-asymmetric-edge-cloud-collaborative-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   AceSpecは端末–クラウド投機的復号で棄却分岐をWAN待ち中に先回り生成して状態キャッシュへ保存し、棄却後の再下書きと往復通信を減らす方式。
+
+- **2026-08 · [RotaryQuant: Fitting 120B MoE Models on Consumer Hardware via Fused Compressed-Space Attention](2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重み・3ビット鍵値キャッシュ・専門家退避を統合し、圧縮表現のまま注意計算して120B MoEを17.2GB、14.85トークン毎秒で実行する。
 
 - **2026-08 · [Hydra: Phase-Aware Workload Characterization of LLM Inference across Edge SoC Generations, Backends, and Quantization Levels](2026-2608.25053-hydra-phase-aware-workload-characterization-of-llm-inference-across-edge.md)**  
   実装：[✓](https://github.com/amirtaherin/hydra) ・ リポジトリ内被引用：0  
@@ -65,6 +89,10 @@
 - **2026-08 · [FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving](2026-2608.12932-flashdrive-flash-vision-language-action-inference-for-autonomous-driving.md)**  
   実装：[✓](https://github.com/z-lab/flashdrive) ・ リポジトリ内被引用：0  
   FlashDriveは、映像と鍵・値キャッシュ（KVキャッシュ）の時系列再利用、拡散モデルによる複数推論トークンの投機的生成、軌跡生成の中間速度再利用、CUDA実行グラフと演算融合、重み4ビット・活性値8ビット量子化を組み合わせる。最終構成では716.9→151.4ミリ秒、約4.7倍の実測高速化となる。
+
+- **2026-08 · [EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding](2026-2608.05303-edgexpert-moe-speculative-decoding.md)**  
+  実装：[✓](https://doi.org/10.5281/zenodo.21481269) ・ リポジトリ内被引用：0  
+  MoEと投機的復号の併用で増える専門家外部メモリアクセスを、プリフィルの共有専門家再利用とデコードの深さ認識チャネル統合で直接削減するエッジ向け協調設計。
 
 - **2026-07 · [Transition-Aware Backend Dispatch for Edge LLM Inference](2026-2607.17415-transition-aware-backend-dispatch-for-edge-llm-inference.md)**  
   実装：[✓](https://anonymous.4open.science/r/power_aware_edge_inference_public-3B71/README.md) ・ リポジトリ内被引用：0  
@@ -169,6 +197,10 @@
 - **2025-12 · [LOIP: Collaborative LLM Inference with Offloading-based Pipeline Parallelism on Edge Devices](2025-2512.21835-loip-collaborative-llm-inference-with-offloading-based-pipeline-parallel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LOIPは、端末ごとのメモリ容量・演算性能が異なる複数のNVIDIA Jetsonを連携させ、モデルのパラメータを量子化・枝刈りせずに推論するための実行基盤である。
+
+- **2025-11 · [Federated Attention: A Distributed Paradigm for Collaborative LLM Inference over Edge Networks](2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Federated 注意機構（FedAttn）は、この協調推論を注意機構の段階で分散する方式として提案された。
 
 ### 2年前（2024-11〜2025-10）
 
