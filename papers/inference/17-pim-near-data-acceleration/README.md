@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（31本）
+## 自動生成の論文一覧（32本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -128,6 +128,10 @@
 - **2025-02 · [PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System](2025-2502.15470-papi-exploiting-dynamic-parallelism-in-large-language-model-decoding-wit.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   PAPIは、大規模言語モデルの復号時に生じる同じ全結合層でも並列度によって計算律速とメモリ律速が入れ替わる現象を、実行先の動的選択へ結び付けたメモリ内処理（Processing-in-メモリ、PIM）型の異種計算機構である。
+
+- **2025-09 · [HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference](2025-2509.12993-hpim-heterogeneous-processing-in-memory-based-accelerator-for-large-lang.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HPIMは、単一リクエスト・単一バッチのLLMデコードにおいて、重みを毎トークン読み込むGEMVの帯域制約と、KVキャッシュを使う注意演算の低遅延・複雑な演算制約を、異なるPIM（Processing-In-メモリ）メモリ階層で処理するハードウェア・ソフトウェア協調設計である。
 
 - **2025-03 · [MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration](2025-2503.23817-mvdram-enabling-gemv-execution-in-unmodified-dram-for-low-bit-llm-accele.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -46,11 +46,16 @@
   "selection_reason": "SRAM-PIMをattention、HBM-PIMをweight-intensive GEMVへ割り当て、両者をpipelineする異種PIM設計。cycle-accurate評価でA100比最大22.8倍を報告し、memory-centric inference architectureとして有力。",
   "semantic_scholar_id": "f767d20955fd1a8bb04e53bd4272f51f38f3d19e",
   "source_url": "https://arxiv.org/abs/2509.12993",
-  "status": "ready",
+  "status": "superseded",
   "status_submission": ".survey/work-queue/submissions/research/attempt-preload-62fb2b4c96a75b8d5555856a.json",
   "title": "HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference",
   "type": "research",
   "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-26T18:09:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/17-pim-near-data-acceleration/2025-2509.12993-hpim-heterogeneous-processing-in-memory-based-accelerator-for-large-lang.md",
+  "represented_canonical_id": "arXiv:2509.12993",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
