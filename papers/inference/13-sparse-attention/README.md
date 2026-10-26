@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（119本）
+## 自動生成の論文一覧（131本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -282,6 +282,10 @@
   実装：[✓](https://github.com/LCM-Lab/Elastic-Attention) ・ リポジトリ内被引用：0  
   既存の混合注意方式は、どのヘッドを全注意に残すかを学習後に固定しがちで、同じモデルへ異なる種類の依頼が来たときの配分変更が難しい。
 
+- **2025-12 · [Leveraging KV Similarity for Online Structured Pruning in LLMs](2025-2512.07090-leveraging-kv-similarity-for-online-structured-pruning-in-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  事前学習済み言語モデルの構造化枝刈りは、重みや注意ヘッドを削ることで推論費用を下げるが、較正用の入力分布が実際の生成入力と異なる場合、精度低下が大きい。著者のLLaMA-2-13B実験では50%省略条件の常識推論7課題平均が無省略69.51%から65.90%となり、バッチ128では遅延を46.6%、メモリを33.6%削減した。
+
 - **2025-12 · [A Unified Sparse Attention via Multi-Granularity Compression](2025-2512.14082-a-unified-sparse-attention-via-multi-granularity-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   疎注意（sparse 注意機構）は重要なブロックだけを計算して演算数を減らす一方、「重要なブロックを決めるための計算」が重くなると、疎化で節約した時間が消えてしまう。
@@ -364,6 +368,10 @@
   実装：[✓](https://github.com/thunlp/NOSA) ・ リポジトリ内被引用：6  
   NOSAは、学習可能な疎注意（trainable sparse 注意機構）とCPUへのKVキャッシュ退避を両立させるために、注意先の選択パターンを学習段階から転送局所性の高いものへ制約する手法である。
 
+- **2025-08 · [TinyServe: Query-Aware Cache Selection for Efficient LLM Serving](2025-2509.12211-tinyserve-query-aware-cache-selection.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  QueryごとにKVページの関連度を軽量メタデータで推定し、必要ページだけを融合CUDAカーネルで読むことで小型LLMサービングの復号とメモリ移動を削減する。
+
 - **2025-08 · [Sparse Attention across Multiple-context KV Cache](2025-2508.11661-sparse-attention-across-multiple-context-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   一般の単一文書KV圧縮とは異なり、文書ごとのKVキャッシュはそれぞれ独立した位置関係のもとで作られている。原著表1の系列保持率は14.9%、再計算率は14.3%である。
@@ -371,6 +379,10 @@
 - **2025-03 · [Progressive Sparse Attention: Algorithm and System Co-design for Efficient Attention in LLM Serving](2025-2503.00392-progressive-sparse-attention-algorithm-and-system-co-design-for-efficien.md)**  
   実装：[✓](https://github.com/ASISys/PSAttention) ・ リポジトリ内被引用：4  
   Progressive Sparse 注意機構（PSA）は、長文脈大規模言語モデルの推論サービングで、必要なKVキャッシュのブロックを要求ごと・層ごとに動的に選ぶ方式である。
+
+- **2025-08 · [Trainable Dynamic Mask Sparse Attention](2025-2508.02124-trainable-dynamic-mask-sparse-attention.md)**  
+  実装：[✓](https://github.com/flash-algo/flash-sparse-attention) ・ リポジトリ内被引用：3  
+  動的 Mask 注意機構（DMA）は、長文脈Transformerの注意機構で「どの過去位置を参照するか」を入力内容から学習しつつ、GPUで効率的に実行できる疎な注意演算へ変換する方式である。
 
 - **2025-10 · [VideoNSA: Native Sparse Attention Scales Video Understanding](2025-2510.02295-videonsa-native-sparse-attention-scales-video-understanding.md)**  
   実装：[✓](https://github.com/Espere-1119-Song/VideoNSA) ・ リポジトリ内被引用：2  
@@ -462,6 +474,10 @@
   実装：[✓](https://github.com/DerrickYLJ/TidalDecode) ・ リポジトリ内被引用：13  
   系列が長くなるほど鍵値キャッシュは線形に増えるため、1トークンずつ生成する復号では演算より高帯域メモリからの読出しが律速になりやすい。論文の例ではLLaMA-2-7Bを半精度、128K文脈で使うと鍵値キャッシュだけで64GBになる。疎注意（sparse 注意機構）は全過去トークンの一部だけを注意計算へ入れることで、この読出し量を減らす。
 
+- **2023-11 · [One Pass Streaming Algorithm for Super Long Token Attention Approximation in Sublinear Space](2023-2311.14652-one-pass-streaming-algorithm-for-super-long-token-attention-approximatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  長大な文脈を扱う注意機構では、問い合わせ、鍵、値の各行列から計算される注意重みが系列長に伴って大きくなる。主結果は実験的な高速化ではなく、厳密な入力条件の下での確率的な誤差・空間・復元時間の保証である。
+
 - **2024-10 · [HSR-Enhanced Sparse Attention Acceleration](2024-2410.10165-hsr-enhanced-sparse-attention-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   最新版v2の付録Aには、提案HSRアルゴリズム自体を実装していないことが明記されている。実験で確認したのはSoftmax近似の品質側である。
@@ -472,6 +488,18 @@
 
 ### 4年前（2022-11〜2023-10）
 
+- **2023-08 · [LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models](2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md)**  
+  実装：[✓](https://github.com/Glaciohound/LM-Infinite) ・ リポジトリ内被引用：55  
+  LM-Infiniteは、短い系列で学習した大規模言語モデルを追加学習なしで長文脈へ外挿するため、推論時の注意範囲と位置距離の扱いだけを変更する方式である。論文は元の完全注意に対してデコードを約2.7倍高速化し、GPUメモリを最大7.5倍削減したと報告する。
+
+- **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
+  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：36  
+  LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
+
+- **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
+  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：36  
+  目印注意（Landmark 注意機構）は、長い文章を一定長のブロックに分け、それぞれの末尾へ特別な目印トークンを挿入し、注意機構そのものに「どの過去ブロックを読み戻すべきか」を学習させる方式である。また、LLaMA-7Bを長さ512の文脈で15,000ステップ微調整した実験では、32Kを超える入力から埋め込んだ合言葉を検索できることを示した。
+
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  
   実装：[✓](https://github.com/sanagno/adaptively_sparse_attention) ・ リポジトリ内被引用：24  
   動的 Context 枝刈りは、生成の途中で「今後のトークンが参照する価値が低い」と学習した過去トークンを、注意対象とキー・バリュー（Key-Value; KV）キャッシュから動的に削除する。固定窓のように距離だけで落とさず、層ごとの学習可能な相互作用スコアで削除時点を決める。
@@ -480,9 +508,19 @@
   実装：[✓](https://github.com/insuhan/hyper-attn) ・ リポジトリ内被引用：19  
   局所性鋭敏ハッシュで注意行列の大きな要素を効率的に見つけ、残りの小さい成分をサンプリングで近似する。全注意行列を作らずに正規化と値の加重和を計算し、長文脈での計算量を削減する。
 
+- **2023-05 · [Unlimiformer: Long-Range Transformers with Unlimited Length Input](2023-2305.01625-unlimiformer-long-range-transformers-with-unlimited-length-input.md)**  
+  実装：[✓](https://github.com/abertsch72/unlimiformer) ・ リポジトリ内被引用：14  
+  文書が長いほど参照すべきキーと値の数が増え、推論時のメモリ使用量と注意計算が膨らむ。長文専用の注意構造へモデルを変更する方式は再事前学習や追加の位置埋め込み学習を要する場合がある。
+
 - **2023-10 · [Context Compression for Auto-regressive Transformers with Sentinel Tokens](2023-2310.08152-context-compression-for-auto-regressive-transformers-with-sentinel-token.md)**  
   実装：[✓](https://github.com/DRSY/KV_Compression) ・ リポジトリ内被引用：2  
   Ren・Jia・Zhuの研究は、自己回帰型の大規模言語モデル（Large Language モデル; LLM）で、長い入力に伴って増える鍵・値キャッシュ（Key–Value キャッシュ; KVキャッシュ）を、捨てる前に情報を短い表現へ移すことで削減する方式を提案する。
+
+### 5年前（2021-11〜2022-10）
+
+- **2021-12 · [LongT5: Efficient Text-To-Text Transformer for Long Sequences](2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md)**  
+  実装：[✓](https://github.com/google-research/longt5) ・ リポジトリ内被引用：13  
+  T5のエンコーダを長文向けに置き換え、各層でブロック集約した大域トークンを一時的に作る注意機構を提案する。重要文生成による事前学習と組み合わせ、要約・質問応答で長い入力の情報を利用する。論文の主な評価はモデル品質と学習時の計算費用であり、デコード専用の推論サービング実験とは区別する。
 
 ### 6年前（2020-11〜2021-10）
 
@@ -510,13 +548,25 @@
   実装：✓ ・ リポジトリ内被引用：3  
   本論文は、Transformerの注意機構が系列長に対して二次の計算・記憶費用を持つという問題を起点に、モデル一般に使える効率化とTransformer固有の構造を変更する効率化を区別して、研究成果を整理した文献調査である。
 
+- **2021-05 · [Poolingformer: Long Document Modeling with Pooling Attention](2021-2105.04371-poolingformer-long-document-modeling-with-pooling-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本論文は、長文を処理する変換器（Transformer）の自己注意を、近い単語を精密に参照する第一段と、遠い単語を圧縮して参照する第二段に分ける「Poolingformer」を提案する。
+
 ### 7年前（2019-11〜2020-10）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
   実装：✓ ・ リポジトリ内被引用：181  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
+- **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
+  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：150  
+  第一の制約は、全トークン対の内積を求める標準自己注意が系列長の二乗に比例する計算を要することである。
+
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  
   実装：[✓](https://github.com/google-research/google-research/tree/master/routing_transformer) ・ リポジトリ内被引用：68  
   固定した近傍窓ではなく「内容が近いトークン」をクラスタリングして注意先を決める。局所注意だけでは拾いにくい遠距離依存を残しつつ、各トークンが全系列を見る密な自己注意の二乗コストを削る、初期の内容依存疎注意方式。
+
+- **2019-11 · [Blockwise Self-Attention for Long Document Understanding](2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md)**  
+  実装：[✓](https://github.com/xptree/BlockBERT) ・ リポジトリ内被引用：31  
+  BlockBERTは、長文の読解に使う双方向エンコーダBERTで、自己注意の計算と活性値保存が系列長の二乗に増える問題を、注意を計算するブロックの組合せを注意頭ごとに限定することで軽減する方式である。系列長1024の事前学習ではRoBERTa-1seq比で最大36.1%のGPUメモリ削減、25.1%の学習時間短縮を示す。
 <!-- survey:auto:end -->
