@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（94本）
+## 自動生成の論文一覧（95本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -331,6 +331,10 @@
 - **2025-08 · [TPLA: Tensor Parallel Latent Attention for Efficient Disaggregated Prefill and Decode Inference](2025-2508.15881-tpla-tensor-parallel-latent-attention-for-efficient-disaggregated-prefil.md)**  
   実装：[✓](https://github.com/fxmeng/TransMLA) ・ リポジトリ内被引用：0  
   TPLA（テンソル-Parallel Latent 注意機構）は、DeepSeek系列などで使われるMulti-Head Latent 注意機構（MLA）のKVキャッシュをGPUごとに複製する問題を解消するテンソル parallel（TP）方式である。
+
+- **2025-08 · [Meta-Metrics and Best Practices for System-Level Inference Performance Benchmarking](2025-2508.10251-meta-metrics-and-best-practices-for-system-level-inference-performance-b.md)**  
+  実装：[✓](https://github.com/IBM/fmwork) ・ リポジトリ内被引用：0  
+  入力トークン長、出力トークン長、同時実行数、重み精度、テンソル並列数、推論エンジン、スケジューラ設定を変えると、初回トークン遅延（TTFT）、トークン間遅延（ITL）、総スループット（THP）は異なる。
 
 ### 3年前（2023-11〜2024-10）
 

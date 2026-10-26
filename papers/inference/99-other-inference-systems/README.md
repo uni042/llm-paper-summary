@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（730本）
+## 自動生成の論文一覧（731本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2367,6 +2367,10 @@
 - **2024-11 · [freePruner: A Training-free Approach for Large Multimodal Model Acceleration](2024-2411.15446-freepruner-a-training-free-approach-for-large-multimodal-model-accelerat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   主目的は視覚トークンの数を減らしてLLM側の事前入力処理（プリフィル）を軽くすることで、視覚エンコーダそのものを低ビット化する手法ではない。LLaVA-1.5では視覚トークンを約50%へ減らして複数の画像質問応答指標を維持し、Video-LLaVAではさらに高い冗長性を利用した削減を報告する。
+
+- **2024-11 · [Anchor Attention, Small Cache: Code Generation with Large Language Models](2024-2411.06680-anchor-attention-small-cache-code-generation-with-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  手法は、行単位のトークン-wise Anchor 注意機構（TAA）、位置情報をアンカー内へ保持するMulti-Head Positional Encoding（MHPE）、浅い層のアンカーKVを深い層へ直接参照させる層-wise Anchor 注意機構（LAA）からなる。
 
 ### 3年前（2023-11〜2024-10）
 
