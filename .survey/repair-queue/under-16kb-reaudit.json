@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-26T12:54:19.977320+00:00",
+  "generated_at": "2026-10-26T15:55:11.589801+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -137,26 +137,6 @@
         "method_chars": 1088,
         "evaluation_chars": 929,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md",
-      "canonical_id": "arXiv:2506.14851",
-      "title": "Efficient Serving of LLM Applications with Probabilistic Demand Modeling",
-      "file_bytes": 17248,
-      "source_sha256": "4b73ff23bb65024b77928a1a41061427879635f8c2da9d1a8f8008d889e17c23",
-      "source_git_blob_sha": "02e551522dcc860401e46a2e7c525dde49344a9d",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.809329,
-      "quality_metrics": {
-        "body_chars": 4046,
-        "method_chars": 1596,
-        "evaluation_chars": 604,
-        "limitation_chars": 441
       },
       "mechanical_failures": [],
       "warnings": []
