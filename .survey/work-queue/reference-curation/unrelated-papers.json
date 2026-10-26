@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-26T16:46:07+00:00",
-  "record_count": 12494,
+  "updated_at": "2026-10-26T19:48:41+00:00",
+  "record_count": 12496,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179977,6 +179977,30 @@
       "last_checked_at": "2026-10-26T16:46:07+00:00",
       "linked_from": [],
       "title": "Diffusion-based Symbolic Music Generation with Structured State Space Models"
+    },
+    "DOI:10.1109/nmitcon62075.2024.10699069": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/nmitcon62075.2024.10699069",
+      "identity_tokens": [
+        "DOI:10.1109/nmitcon62075.2024.10699069"
+      ],
+      "reason": "IEEE公式abstractではEuroSat衛星画像データに対するCustomNetsを含むCNN/DNNのFP64/FP32/FP16/INT8比較とXilinx DPU実装を評価する。LLM/Transformerの推論・学習基盤、MoE、KVキャッシュ、オフロードなどの対象機構を評価していないため現行サーベイから除外する。",
+      "first_checked_at": "2026-10-26T19:48:39+00:00",
+      "last_checked_at": "2026-10-26T19:48:39+00:00",
+      "linked_from": [],
+      "title": "Enhancing CNN Inference Time and Reducing Latency on Edge and Resource-Constrained Systems through Quantization"
+    },
+    "arXiv:2512.10252": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.10252",
+      "identity_tokens": [
+        "arXiv:2512.10252"
+      ],
+      "reason": "arXiv一次abstractでは超音波心臓動画の心腔セグメンテーション専用モデルを提案し、LKVA・GDR・KPFFを用いCAMUS/EchoNet-Dynamicのセグメンテーション精度と実時間性能を評価する。Key-Value Memoryという語はあるが、LLMのKVキャッシュではなく医療動画の時空間記憶であり、サーベイのLLM推論・学習基盤から除外する。",
+      "first_checked_at": "2026-10-26T19:48:41+00:00",
+      "last_checked_at": "2026-10-26T19:48:41+00:00",
+      "linked_from": [],
+      "title": "GDKVM: Echocardiography Video Segmentation via Spatiotemporal Key-Value Memory with Gated Delta Rule"
     }
   }
 }
