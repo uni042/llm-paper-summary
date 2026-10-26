@@ -2320,6 +2320,10 @@
   実装：[✓](https://github.com/LiangrunFlora/Slow-Fast-Sampling) ・ リポジトリ内被引用：15  
   単独の信頼度閾値だけではなく、連続区間の終端が最近の複数反復で安定したかを検査し、探索段階（Slow）から高速段階（Fast）へ切り替える。原著図2のGPQA・8-shot・生成長1024という特定条件では、LLaDAの通常復号が1.60トークン/秒、SlowFast単独が25.00トークン/秒で15.63倍となる。
 
+- **2025-02 · [CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation](2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md)**  
+  実装：[✓](https://github.com/zhenyi4/codi) ・ リポジトリ内被引用：15  
+  CODI（Continuous Chain-of-Thought via Self-Distillation）は、推論過程を自然言語の単語列として毎回生成する費用を減らすため、明示的な思考連鎖（Chain-of-Thought; CoT）を少数の連続潜在状態へ移す学習方式である。
+
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
   実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：15  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
@@ -2327,10 +2331,6 @@
 - **2025-04 · [Energy Considerations of Large Language Model Inference and Efficiency Optimizations](2025-2504.17674-energy-considerations-of-large-language-model-inference-and-efficiency-o.md)**  
   実装：✓ ・ リポジトリ内被引用：14  
   LLM推論の電力量を、入力長・出力長・バッチ数・GPU・推論基盤・復号方式・モデル並列の組合せで実測し、実トラフィックの入出力長分布を区間化して総消費量を推定する。適切なソフトウェア最適化で未最適化PyTorch比最大73%削減できる一方、投機的復号や複数GPUは条件によって逆に電力量を増やす。
-
-- **2025-02 · [CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation](2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md)**  
-  実装：[✓](https://github.com/zhenyi4/codi) ・ リポジトリ内被引用：14  
-  CODI（Continuous Chain-of-Thought via Self-Distillation）は、推論過程を自然言語の単語列として毎回生成する費用を減らすため、明示的な思考連鎖（Chain-of-Thought; CoT）を少数の連続潜在状態へ移す学習方式である。
 
 - **2025-10 · [Pie: A Programmable Serving System for Emerging LLM Applications](2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md)**  
   実装：[✓](https://github.com/pie-project/pie) ・ リポジトリ内被引用：13  
@@ -2858,13 +2858,13 @@
   実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：69  
   SparseVLMは、視覚言語モデル（VLM）の入力画像から生じる大量の視覚トークンを、現在の質問に必要な情報をできるだけ残しながら削減する追加学習不要の方式である。
 
+- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：66  
+  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
+
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
   実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：66  
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
-
-- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：65  
-  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
   実装：✓ ・ リポジトリ内被引用：59  
@@ -2974,6 +2974,10 @@
   実装：✓ ・ リポジトリ内被引用：12  
   混合専門家（Mixture of エキスパート、MoE）は多数の専門家のうち一部だけを活性化することで、総パラメータ容量と各トークンの計算を分離する。
 
+- **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
+  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：12  
+  検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
+
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
   実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：11  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
@@ -2981,10 +2985,6 @@
 - **2024-08 · [Harder Task Needs More Experts: Dynamic Routing in MoE Models](unknown-7f27cb4187bc-harder-task-needs-more-experts-dynamic-routing-in-moe-models.md)**  
   実装：[✓](https://github.com/ZhenweiAn/Dynamic_MoE) ・ リポジトリ内被引用：11  
   HuangらのACL 2024論文は、ルータの専門家確率を高い順に累積し、閾値を超えた時点で専門家の追加を止める動的ルーティング（動的 ルーティング）を提案する。
-
-- **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
-  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：11  
-  検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-10 · [LightTransfer: Your Long-Context LLM is Secretly a Hybrid Model with Effortless Adaptation](2024-2410.13846-lighttransfer-your-long-context-llm-is-secretly-a-hybrid-model-with-effo.md)**  
   実装：[✓](https://github.com/sail-sg/LightTrans) ・ リポジトリ内被引用：10  
@@ -3202,6 +3202,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号（投機的復号）は小さなドラフトモデルが複数トークンを先読みし、大きな対象モデルがまとめて検証することで逐次生成の遅延を削減する。
 
+- **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
+  実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：1  
+  通常のTransformerは、学習時の文脈窓を超えると品質が落ちやすいという別の問題もある。Recurrent Context Compression（RCC）は、長文を短い区間へ分割し、各区間の情報を少数の隠れベクトルへ圧縮して復号器に渡す方式である。主張する32倍圧縮時のBLEU-4約0.95は、特定の短文再構成タスクでの値である。
+
 - **2024-05 · [VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos](2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md)**  
   実装：[✓](https://github.com/Ziyang412/VideoTree) ・ リポジトリ内被引用：1  
   高関連クラスタだけを再分割して細部を調べるため、動画全体を均一に密な説明文へ変換する方式より、不要なフレーム説明や冗長な言語入力を減らせる。原著の主な根拠は、EgoSchema検証部分集合で66.2%の正答率、LLoVi-bestの61.2%に対して20.1秒対24.8秒という比較である。
@@ -3229,10 +3233,6 @@
 - **2024-07 · [Let the Code LLM Edit Itself When You Edit the Code](2024-2407.03157-let-the-code-llm-edit-itself-when-you-edit-the-code.md)**  
   実装：[✓](https://github.com/zhenyuhe00/PIE) ・ リポジトリ内被引用：0  
   本研究は、開発者が既存コードの途中に行を挿入・削除した直後に、コード補完用の大規模言語モデル（LLM）が次の行を予測し直す場面を対象とする。
-
-- **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
-  実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：0  
-  通常のTransformerは、学習時の文脈窓を超えると品質が落ちやすいという別の問題もある。Recurrent Context Compression（RCC）は、長文を短い区間へ分割し、各区間の情報を少数の隠れベクトルへ圧縮して復号器に渡す方式である。主張する32倍圧縮時のBLEU-4約0.95は、特定の短文再構成タスクでの値である。
 
 - **2024-06 · [On Efficient Language and Vision Assistants for Visually-Situated Natural Language Understanding: What Matters in Reading and Reasoning](2024-2406.11823-on-efficient-language-and-vision-assistants-for-visually-situated-natura.md)**  
   実装：[✓](https://github.com/naver-ai/elva) ・ リポジトリ内被引用：0  
@@ -3265,23 +3265,23 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：439  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：440  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：350  
+  実装：✓ ・ リポジトリ内被引用：351  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：228  
+  実装：✓ ・ リポジトリ内被引用：229  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：198  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：199  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：185  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：186  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
@@ -3293,15 +3293,15 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：84  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：85  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
-  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：74  
+  実装：[✓](https://github.com/jayelm/gisting) ・ リポジトリ内被引用：75  
   指示の鍵・値状態をそのままキャッシュすれば再計算は減るものの、保持する状態の長さは指示トークン数に比例する。Jesse Muらの研究は、指示の意味を短い要旨トークン（gist トークン）の内部状態へ集約し、後続の異なる入力に再利用する「要旨化（gisting）」を提案する。
 
 - **2023-07 · [In-context Autoencoder for Context Compression in a Large Language Model](2023-2307.06945-in-context-autoencoder-for-context-compression-in-a-large-language-model.md)**  
-  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：60  
+  実装：[✓](https://github.com/getao/icae) ・ リポジトリ内被引用：61  
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
@@ -3391,7 +3391,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：604  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：605  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
@@ -3415,7 +3415,7 @@
   AlphaCodeは、自然言語で与えられた競技プログラミング問題から、正しい実行プログラムを見つけるための生成・探索・選別システムである。評価では2021年12月のCodeforcesの10大会を後から模擬し、各問題最大10提出という条件で、参加者中の順位が平均して上位54.3%に相当した。
 
 - **2021-11 · [Memory-efficient Transformers via Top-k Attention](2021-c7730f7e7292-memory-efficient-transformers-via-top-k-attention.md)**  
-  実装：[✓](https://github.com/ag1988/top_k_attention) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/ag1988/top_k_attention) ・ リポジトリ内被引用：5  
   既存の効率的注意には、ハッシュや局所窓で計算する組合せを制限する方式と、注意関数自体を近似する線形注意がある。
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
@@ -3517,7 +3517,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：219  
+  実装：✓ ・ リポジトリ内被引用：220  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  

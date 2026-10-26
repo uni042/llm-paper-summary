@@ -501,7 +501,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   メモリ-R1は、記憶を管理するエージェント（メモリ Manager）と、検索した記憶から回答するエージェント（Answer Agent）を分離し、どちらも最終回答の正しさを報酬とする強化学習（reinforcement learning）で訓練する。
 
 - **2025-04 · [70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float (DFloat11)](2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md)**  
-  実装：[✓](https://github.com/LeanModels/DFloat11) ・ リポジトリ内被引用：4  
+  実装：[✓](https://github.com/LeanModels/DFloat11) ・ リポジトリ内被引用：5  
   DFloat11は、大規模言語モデルのBFloat16重みを数値を変えずに圧縮し、推論時にGPU上で必要な部分だけ復号する方式である。Llama 3.1 405Bの重み容量は約811.71GBから551.22GBへ減り、8台の80GB GPUを持つ単一ノードで可逆推論できる。
 
 - **2025-06 · [LittleBit: Ultra Low-Bit Quantization via Latent Factorization](2025-2506.13771-littlebit-ultra-low-bit-quantization-via-latent-factorization.md)**  
@@ -630,13 +630,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/ZeonfaiHo/CHESS) ・ リポジトリ内被引用：6  
   注意機構には同じ閾値を機械的に適用せず、問い合わせ射影と出力射影に限定して活性疎化を行う。Intel Core i9-12900K、64GB DDR4、単一要求、FP32というCPU測定条件で、注意投影も選択的に疎化した構成の復号高速化は最大1.27倍である。
 
+- **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
+  実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：5  
+  LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
+
 - **2024-02 · [L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models](2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   巨大言語モデル（LLM）の低ビット量子化は推論時の重み容量とメモリ帯域を減らすが、精度低下を起こす。LLaMA-1 7Bの学習ピークメモリはLoRAの25.1GBに対してL4Qが25.4GB、通常QATは79.5GBである。
-
-- **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
-  実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：4  
-  LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
   実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：4  
