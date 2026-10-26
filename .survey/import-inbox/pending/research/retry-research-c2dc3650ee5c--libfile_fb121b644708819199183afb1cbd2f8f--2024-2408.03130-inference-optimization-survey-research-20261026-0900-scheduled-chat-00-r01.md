@@ -28,6 +28,8 @@ worker_completed_at: "2026-10-26T09:00:00+09:00"
 reference_main_sha: "147242baffb4583a392162d52ddc58a2fe393743"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # LLM推論最適化の実用上の制約：量子化・剪定・蒸留・注意・デコードの比較レビュー

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（889本）
+## 自動生成の論文一覧（893本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2688,6 +2688,10 @@
   実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：0  
   視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
 
+- **2025-10 · [ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression](2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% compression ratio」はパラメータの80%を残すという意味で、80%を削る意味ではない。
+
 - **2025-09 · [Self-Aligned Reward: Towards Effective and Efficient Reasoners](2025-2509.05489-self-aligned-reward-towards-effective-and-efficient-reasoners.md)**  
   実装：[✓](https://github.com/amazon-science/Self-Aligned-Reward-Towards_Effective_and_Efficient_Reasoners) ・ リポジトリ内被引用：0  
   提案する自己整合報酬（Self-Aligned Reward; SAR）は、同じ回答 $a$ の困惑度を、質問 $q$ を与えた場合と与えない場合で計算する。例えばQwen3-1.7Bでは、GRPOの平均正答率53.37%、回答長762.8トークンに対して、SAR付きGRPOは54.13%、602.0トークンだった。
@@ -2715,6 +2719,14 @@
 - **2025-07 · [Towards Resource-Efficient Serverless LLM Inference with SLINFER](2025-2507.00507-towards-resource-efficient-serverless-llm-inference-with-slinfer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SLINFERは、個別モデルへの要求が少なく断続的に発生する私設大規模言語モデル（LLM）サービスを対象に、CPUとGPUの両方を推論実行先として扱い、同一ノードで複数モデルを弾力的に共有するシステムである。論文の事前調査では、ServerlessLLMで各インスタンスへGPU全体を割り当てたときの平均GPUメモリ利用率が23%にとどまる条件が示される。
+
+- **2025-07 · [SpeLLM: Character-Level Multi-Head Decoding](2025-2507.16323-spellm-character-level-multi-head-decoding.md)**  
+  実装：[✓](https://github.com/schwartz-lab-NLP/SpeLLM) ・ リポジトリ内被引用：0  
+  一つの出力トークンの綴りをk文字まで並列予測し、文字列を連結して次トークンを得る。Llama3.2-3B、Llama3-8B、Gemma2-2B、Gemma2-9Bで、元の教師モデルのtop-5候補との完全一致率は平均91.75%、AutoCorrectを使うと94.93%。
+
+- **2025-07 · [Smooth Reading: Bridging the Gap of Recurrent LLM to Self-Attention LLM on Long-Context Tasks](2025-2507.19353-smooth-reading-bridging-the-gap-of-recurrent-llm-to-self-attention-llm-o.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし一度に大量の文書を読み込ませると、必要な情報が後続トークンによって上書き・圧縮され、長文質問応答や要約の精度が下がりやすい。主な評価ではSWA-3B-4k-SRがLongBenchで自己注意のQwen2.5-3Bの平均を3.61ポイント上回る。
 
 - **2025-07 · [CateKV: On Sequential Consistency for Long-Context LLM Inference Acceleration](2026-2608.30295-catekv-on-sequential-consistency-for-long-context-llm-inference-acceleration.md)**  
   実装：[✓](https://github.com/haoyun-jiang/CateKV) ・ リポジトリ内被引用：0  
@@ -3395,6 +3407,10 @@
 - **2023-06 · [Modular Transformers: Compressing Transformers into Modularized Layers for Flexible Efficient Inference](2023-2306.02379-modular-transformers-compressing-transformers-into-modularized-layers-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文の主題は、圧縮済みモデルを一種類だけ作るのではなく、一度の圧縮学習から異なる実行時予算に対応できる層構成を取り出すことである。
+
+- **2023-05 · [Infor-Coef: Information Bottleneck-based Dynamic Token Downsampling for Compact and Efficient language model](2023-2305.12458-infor-coef-information-bottleneck-based-dynamic-token-downsampling-for-c.md)**  
+  実装：[✓](https://github.com/twwwwx/Infor-Coef) ・ リポジトリ内被引用：0  
+  Infor-Coefが扱うのは、BERTのモデル重みを固定比率で減らすだけでは、簡単な入力と難しい入力に同じ計算を割り当てるという問題である。BERT-base比で16.2倍という原著の代表値は、バッチ内最大長へpaddingしたときの推定FLOPs比である。
 
 - **2023-01 · [AttMemo: Accelerating Self-Attention with Memoization on Big Memory Systems](2023-2301.09262-attmemo-accelerating-self-attention-with-memoization-on-big-memory-syste.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（460本）
+## 自動生成の論文一覧（461本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1455,6 +1455,10 @@
 - **2025-08 · [Equinox: Holistic Fair Scheduling in Serving Large Language Models](2025-2508.16646-equinox-holistic-fair-scheduling-in-serving-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   利用者QoSとGPU効率を別カウンタで追い、MoPEで未知の実行コストを予測して統一公平性スコア順に要求を組むEquinox。
+
+- **2025-06 · [Efficient Serving of LLM Applications with Probabilistic Demand Modeling](2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  現代のLLMアプリは単一のテキスト生成要求で終わらない。文書を分割して並列要約し、生成したコードをDockerで試し、必要に応じて検索や画像モデルを呼ぶなど、複数のLLM・非LLM処理が依存関係を持つ。既存のサービングは個々のLLM要求の待ち時間を最適化することが多いが、ユーザーにとって重要なのはアプリケーション全体が完了するまでの時間（ACT）である。
 
 - **2025-05 · [Thinking Short and Right Over Thinking Long: Serving LLM Reasoning Efficiently and Accurately](2025-2505.13326-thinking-short-and-right-over-thinking-long-serving-llm-reasoning-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
