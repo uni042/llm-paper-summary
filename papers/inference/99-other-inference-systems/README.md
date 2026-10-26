@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（727本）
+## 自動生成の論文一覧（729本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2212,6 +2212,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   しかし一度に大量の文書を読み込ませると、必要な情報が後続トークンによって上書き・圧縮され、長文質問応答や要約の精度が下がりやすい。主な評価ではSWA-3B-4k-SRがLongBenchで自己注意のQwen2.5-3Bの平均を3.61ポイント上回る。
 
+- **2025-07 · [Characterizing State Space Model and Hybrid Language Model Performance with Long Context](2025-2507.12442-characterizing-state-space-model-and-hybrid-language-model-performance-w.md)**  
+  実装：[✓](https://github.com/sapmitra/ssm-scope) ・ リポジトリ内被引用：0  
+  近年はSSMと注意機構を組み合わせたHybridモデルも登場した。本論文は、RTX 4090（24GB）とJetson Orin Nano（8GB共有メモリ）を対象に、Transformer・SSM・Hybridの文脈長による性能逆転、メモリ上限、消費エネルギー、演算子別のボトルネックを計測したシステム特性評価である。
+
 - **2025-07 · [CateKV: On Sequential Consistency for Long-Context LLM Inference Acceleration](2026-2608.30295-catekv-on-sequential-consistency-for-long-context-llm-inference-acceleration.md)**  
   実装：[✓](https://github.com/haoyun-jiang/CateKV) ・ リポジトリ内被引用：0  
   プリフィルからデコードまで注意先が安定するヘッドだけKVを強く削減し、動的ヘッドは大半を保持するハイブリッドKVキャッシュで、精度を保ちながら長文推論のメモリ・デコード・バッチ性能を改善する。
@@ -2219,6 +2223,10 @@
 - **2025-07 · [Accelerating Dense LLMs via L0-regularized Mixture-of-Experts](2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   既存の密な大規模言語モデル（LLM）を高速化するには、量子化・枝刈り・知識蒸留が使われるが、強い圧縮では能力低下が生じやすい。MMLU、GSM8K、HumanEval、BBHの4課題平均はほぼ維持され、推論速度は2.0〜2.5倍となる。
+
+- **2025-06 · [Task-Related Token Compression in Multimodal Large Language Models from an Explainability Perspective](2025-2506.01097-task-related-token-compression-in-multimodal-large-language-models-from-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この研究は、画像や動画を扱うマルチモーダル大規模言語モデル（MLLM）で、ユーザーの指示に関係しない視覚トークンをLLM入力段階で取り除くための方式を提案する。
 
 - **2025-06 · [SPECS: Faster Test-Time Scaling through Speculative Drafts and Dynamic Switching](2025-2506.15733-specs-faster-test-time-scaling-through-speculative-drafts-and-dynamic-sw.md)**  
   実装：[✓](https://github.com/mert-cemri/SPECS) ・ リポジトリ内被引用：0  
