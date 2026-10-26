@@ -35,10 +35,15 @@
   "selection_reason": "The abstract prunes task-irrelevant LLM weights via output-aligned low-rank projections and adaptive search, retaining task performance while removing 20–75% of weights; it explicitly targets resource-constrained deployment and integrates with quantization.",
   "semantic_scholar_id": "a8acd216f04da2ded237463ae0e65998421aa4cf",
   "source_url": "https://arxiv.org/abs/2505.18350",
-  "status": "ready",
+  "status": "superseded",
   "title": "How Many Parameters Does Your Task Really Need? Task Specific Pruning with LLM-Sieve",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-26T01:23:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2505.18350-how-many-parameters-does-your-task-really-need-task-specific-pruning-wit.md",
+  "represented_canonical_id": "arXiv:2505.18350",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
