@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0d38d421ea44cbd8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.22909",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.22909",
+    "identity_tokens": [
+      "arXiv:2510.22909"
+    ],
+    "reason": "一次要旨は、端末・エッジ・クラウド間で深層学習モデルを分割・オフロードする既存研究を、推論遅延、通信遅延、プライバシー、費用の多目的最適化として俯瞰する。LLMチャットボットは例示されるが対象は広く一般のDL推論であり、LLM固有のKVキャッシュ・MoE・生成復号等に直接作用する新しいシステム実装の報告ではないため境界候補とする。",
+    "first_checked_at": "2026-10-26T10:46:33+00:00",
+    "last_checked_at": "2026-10-26T10:46:33+00:00",
+    "linked_from": [
+      "-",
+      "0",
+      "6",
+      "7",
+      "a",
+      "i",
+      "k",
+      "l",
+      "n",
+      "o",
+      "r",
+      "s",
+      "t",
+      "w"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Rethinking Inference Placement for Deep Learning across Edge and Cloud Platforms: A Multi-Objective Optimization Perspective and Future Directions"
+  },
+  "processed_at": "2026-10-26T10:46:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0d38d421ea44",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b4bdc24ee77f4fa0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.09580",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.09580",
+    "identity_tokens": [
+      "arXiv:2411.09580"
+    ],
+    "reason": "一次要旨は、基盤モデルを使うソフトウェアのスループット・遅延・資源利用を対象とし、認知アーキテクチャ、通信プロトコル、調整、配備という4つの性能工学上の課題を既存研究と社内システムの経験から整理する。LLMサービングと関連するが、特定の推論カーネル、KV管理、配置最適化アルゴリズムなどを新たに実装・評価する論文ではないため、技術的直接寄与が弱い境界候補とする。",
+    "first_checked_at": "2026-10-26T10:46:38+00:00",
+    "last_checked_at": "2026-10-26T10:46:38+00:00",
+    "linked_from": [
+      "-",
+      "0",
+      "6",
+      "9",
+      "a",
+      "i",
+      "k",
+      "l",
+      "n",
+      "o",
+      "r",
+      "s",
+      "t",
+      "w"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Software Performance Engineering for Foundation Model-Powered Software"
+  },
+  "processed_at": "2026-10-26T10:46:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b4bdc24ee77f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
