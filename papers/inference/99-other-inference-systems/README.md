@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（738本）
+## 自動生成の論文一覧（739本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2383,6 +2383,10 @@
 - **2024-12 · [Sparse Checkpointing for Fast and Reliable MoE Training](2024-2412.15411-sparse-checkpointing-for-fast-and-reliable-moe-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   これらの最大値は比較方式・モデル・障害条件が異なるため、同一条件で「4×31×8倍」を掛け合わせられるわけではない。
+
+- **2024-12 · [GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments](2024-2412.04788-guide-a-global-unified-inference-engine-for-deploying-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルを実運用に配置する際、同じモデルでもGPU、推論ランタイム、入力長、バッチ数、GPU分割方式が変わると、初トークン遅延（TTFT）、復号スループット、GPUメモリ使用量が大きく変化する。
 
 - **2024-11 · [LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters](2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

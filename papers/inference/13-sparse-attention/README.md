@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（147本）
+## 自動生成の論文一覧（148本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -427,6 +427,10 @@
 - **2025-08 · [Trainable Dynamic Mask Sparse Attention](2025-2508.02124-trainable-dynamic-mask-sparse-attention.md)**  
   実装：[✓](https://github.com/flash-algo/flash-sparse-attention) ・ リポジトリ内被引用：3  
   動的 Mask 注意機構（DMA）は、長文脈Transformerの注意機構で「どの過去位置を参照するか」を入力内容から学習しつつ、GPUで効率的に実行できる疎な注意演算へ変換する方式である。
+
+- **2025-07 · [Accelerating Prefilling via Decoding-time Contribution Sparsity](2025-2507.21526-accelerating-prefilling-via-decoding-time-contribution-sparsity.md)**  
+  実装：[✓](https://aka.ms/TriangleMix) ・ リポジトリ内被引用：3  
+  TriangleMixは、長文脈言語モデルのプリフィルを高速化するために、注意スコアが大きいことと、最終的なデコード予測へ大きく寄与することは同じではないという性質を利用する。従来の動的疎注意は、注意スコアが大きそうなブロックを入力から推定し、それらだけを計算する。その層だけを単純な三角形状の静的注意へ置き換え、他の層は密注意または動的疎注意を維持する。
 
 - **2025-06 · [Kinetics: Rethinking Test-Time Scaling Laws](2025-2506.05333-kinetics-rethinking-test-time-scaling-laws.md)**  
   実装：[✓](https://github.com/Infini-AI-Lab/Kinetics) ・ リポジトリ内被引用：3  

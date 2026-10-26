@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T18:09:12+00:00",
+  "generated_at": "2026-10-26T18:18:23+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 53,
+  "count": 52,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1335,34 +1335,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c9f17108b2be--libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c9f17108b2be--libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2507.21526",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T07:08:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 224 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3083,
-        "body_paragraphs": 15,
-        "method_chars": 1054,
-        "method_paragraphs": 5,
-        "evaluation_chars": 224,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 224 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed93831a5dcc--libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ed93831a5dcc--libfile_564ed8b29afc8191ad752b45263ce13c--2025-2507.21526-trianglemix-prefill-contribution-sparsity-research-20261026-1400-schedule.json",
-      "worker_run_key": "20261026-1400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2508.18376",
