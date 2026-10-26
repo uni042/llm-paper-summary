@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-26T13:48:58+00:00",
-  "record_count": 12492,
+  "updated_at": "2026-10-26T13:51:00+00:00",
+  "record_count": 12493,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -179953,6 +179953,18 @@
       "last_checked_at": "2026-10-26T13:48:58+00:00",
       "linked_from": [],
       "title": "Deep is a Luxury We Don't Have"
+    },
+    "DOI:10.3390/bioengineering12101030": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3390/bioengineering12101030",
+      "identity_tokens": [
+        "DOI:10.3390/bioengineering12101030"
+      ],
+      "reason": "タイトルが明示する対象は皮膚病変の画像分類とVision Mambaであり、LLM推論・学習、LLMの状態空間系列モデル、MoE/量子化/オフロード/サービング基盤ではない。LLMサーベイ対象外としてタイトル段階で先行除外。",
+      "first_checked_at": "2026-10-26T13:51:00+00:00",
+      "last_checked_at": "2026-10-26T13:51:00+00:00",
+      "linked_from": [],
+      "title": "DermaMamba: A Dual-Branch Vision Mamba Architecture with Linear Complexity for Efficient Skin Lesion Classification"
     }
   }
 }
