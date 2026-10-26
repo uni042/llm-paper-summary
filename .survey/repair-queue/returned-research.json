@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T01:56:17+00:00",
+  "generated_at": "2026-10-26T02:12:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -872,33 +872,6 @@
       "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2408.03130",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T01:31:31+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 378 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6061,
-        "body_paragraphs": 37,
-        "method_chars": 3405,
-        "method_paragraphs": 21,
-        "evaluation_chars": 378,
-        "limitation_chars": 632,
-        "insufficiency_flags": [
-          "評価説明量 378 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fb121b644708819199183afb1cbd2f8f--2024-2408.03130-inference-optimization-survey-research-20261026-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fb121b644708819199183afb1cbd2f8f--2024-2408.03130-inference-optimization-survey-research-20261026-0900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261026-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.05364",
       "title": null,
       "source_url": null,
@@ -924,6 +897,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c32b803b0e3e--libfile_cedccc4a485c8191bb0a3c1c28ac04ef--2025-2510.05364-end-of-transformers-subquadratic-architecture-survey-research-20261026-0845-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c32b803b0e3e--libfile_cedccc4a485c8191bb0a3c1c28ac04ef--2025-2510.05364-end-of-transformers-subquadratic-architecture-survey-research-20261026-08.json",
       "worker_run_key": "20261026-0845-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2408.03130",
+      "title": "Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations",
+      "source_url": "https://arxiv.org/pdf/2408.03130",
+      "returned_at": "2026-10-26T02:11:37+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 378 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6061,
+        "body_paragraphs": 37,
+        "method_chars": 3405,
+        "method_paragraphs": 21,
+        "evaluation_chars": 378,
+        "limitation_chars": 632,
+        "insufficiency_flags": [
+          "評価説明量 378 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c2dc3650ee5c--libfile_fb121b644708819199183afb1cbd2f8f--2024-2408.03130-inference-optimization-survey-research-20261026-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c2dc3650ee5c--libfile_fb121b644708819199183afb1cbd2f8f--2024-2408.03130-inference-optimization-survey-research-20261026-0900-scheduled-chat-00-r0.json",
+      "worker_run_key": "20261026-0900-scheduled-chat-00/r01"
     }
   ]
 }
