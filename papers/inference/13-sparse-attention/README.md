@@ -33,7 +33,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：39  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：40  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
@@ -432,6 +432,10 @@
   実装：[✓](https://github.com/Espere-1119-Song/VideoNSA) ・ リポジトリ内被引用：2  
   視覚トークンを事前にまとめて削る方式は計算量を抑えられるが、削った後に質問に必要な細部を復元できないという問題がある。ただし長動画ベンチマークすべてで最良ではなく、推論の理論演算量削減がそのまま実測高速化になっていない。
 
+- **2025-10 · [Long-Context Modeling with Dynamic Hierarchical Sparse Attention for Memory-Constrained LLM Inference](2025-2510.24606-long-context-modeling-with-dynamic-hierarchical-sparse-attention-for-mem.md)**  
+  実装：[✓](https://github.com/xiongsiheng/DHSA) ・ リポジトリ内被引用：2  
+  動的 Hierarchical Sparse 注意機構（DHSA）は、長い入力に対する自己注意の計算を削減するため、注意行列のどこを残すかを入力内容に応じて予測する方式である。128K文脈で最大10.66倍という値はFlashAttention-2と比較した注意カーネル単体の速度である。
+
 - **2025-04 · [RWKV-X: A Linear Complexity Hybrid Language Model](2025-2504.21463-rwkv-x-a-linear-complexity-hybrid-language-model.md)**  
   実装：[✓](https://github.com/howardhou/RWKV-X) ・ リポジトリ内被引用：2  
   RWKV-Xは、RWKV-7の線形再帰モデルに、長距離の証拠を選択して参照するTop-k Chunk Sparse 注意機構を周期的に挿入するハイブリッド言語モデルである。128K プリフィルではFlashAttention-3を使う密なTransformerとの比較で1.37倍の速度改善を報告する。
@@ -451,10 +455,6 @@
 - **2025-10 · [PureKV: Plug-and-Play KV Cache Optimization with Spatial-Temporal Sparse Attention for Vision-Language Large Models](2025-2510.25600-purekv-plug-and-play-kv-cache-optimization-with-spatial-temporal-sparse-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   長い動画はフレームごとに多数の視覚トークンを持つため、事前入力（プリフィル）では注意計算量が増え、生成（デコード）では過去のKVを保持するメモリが増える。従来の重要度に基づくKV削除は、各層の注意スコアを集計して重要トークンを残す方式が多い。
-
-- **2025-10 · [Long-Context Modeling with Dynamic Hierarchical Sparse Attention for Memory-Constrained LLM Inference](2025-2510.24606-long-context-modeling-with-dynamic-hierarchical-sparse-attention-for-mem.md)**  
-  実装：[✓](https://github.com/xiongsiheng/DHSA) ・ リポジトリ内被引用：1  
-  動的 Hierarchical Sparse 注意機構（DHSA）は、長い入力に対する自己注意の計算を削減するため、注意行列のどこを残すかを入力内容に応じて予測する方式である。128K文脈で最大10.66倍という値はFlashAttention-2と比較した注意カーネル単体の速度である。
 
 - **2025-10 · [Alleviating Forgetfulness of Linear Attention by Hybrid Sparse Attention and Contextualized Learnable Token Eviction](2025-2510.20787-alleviating-forgetfulness-of-linear-attention-by-hybrid-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -491,7 +491,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：244  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：245  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -615,7 +615,7 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：190  
+  実装：✓ ・ リポジトリ内被引用：191  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
