@@ -1376,6 +1376,10 @@
   実装：✓ ・ リポジトリ内被引用：5  
   TokenFlowが扱うのは、生成済みトークンを逐次ユーザーへ渡すストリーミング配信である。通常の推論器はできるだけ多くのトークンを生成するが、人が文章を読む速度はモデルの生成速度より遅い場合が多い。既に多くのトークンを生成した利用者の要求をGPU上で走らせ続ける一方、新しい利用者を長く待たせることは、総生成トークン数が高くても体感応答性を悪化させる。
 
+- **2025-10 · [MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving](2025-2510.14557-mx-pushing-the-limits-of-microscaling-formats-for-efficient-large-langua.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  しかし4ビットの浮動小数点形式では、活性の一部に現れる極端に大きな値が量子化尺度を押し上げ、他の値がゼロへ丸められることがある。
+
 - **2025-07 · [BucketServe: Bucket-Based Dynamic Batching for Smart and Efficient LLM Inference Serving](2025-2507.17120-bucketserve-dynamic-batching.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   系列長バケットを負荷に応じて分割・統合し、KV容量から安全なバッチ数を動的計算して、パディング・OOM・SLO違反を抑えるLLMサービング方式。
@@ -1439,10 +1443,6 @@
 - **2025-10 · [When to Reason: Semantic Router for vLLM](2025-2510.08731-when-to-reason-semantic-router-for-vllm.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   問い合わせの処理をGPU上で実行するモデル内部へ直接埋め込むのではなく、HTTP要求の経路に配置できる点が設計上の特徴である。
-
-- **2025-10 · [MX+: Pushing the Limits of Microscaling Formats for Efficient Large Language Model Serving](2025-2510.14557-mx-pushing-the-limits-of-microscaling-formats-for-efficient-large-langua.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  しかし4ビットの浮動小数点形式では、活性の一部に現れる極端に大きな値が量子化尺度を押し上げ、他の値がゼロへ丸められることがある。
 
 - **2025-09 · [RServe: Overlapping Encoding and Prefill for Efficient LMM Inference](2025-2509.24381-rserve-overlapping-encoding-and-prefill-for-efficient-lmm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  

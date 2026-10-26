@@ -320,6 +320,10 @@
   実装：[✓](https://github.com/multimodal-art-projection/TACO) ・ リポジトリ内被引用：1  
   TACO（Terminal Agent Compression）は、コマンド出力をエージェントの履歴へ入れる直前に圧縮する追加層である。MiniMax-M2.5によるTerminalBench 1.0では成功率42.30%→45.25%、総トークン29.74→23.43百万（21.2%減）である。
 
+- **2026-03 · [Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients](2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/ucas-xiang/QIG) ・ リポジトリ内被引用：1  
+  重みと活性値を低ビット化すればメモリ使用量を抑えられるが、量子化誤差の影響は画像と文章という二つのモダリティの間だけでなく、同じモダリティ内の各トークンや層によっても異なる。著者はこれを1.60%の改善と説明するが、表の数値としては1.60ポイントの上昇である。
+
 - **2026-03 · [CSAttention: Centroid-Scoring Attention for Accelerating LLM Inference](2026-2604.08584-csattention-centroid-scoring-attention-for-accelerating-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   長文脈の自己注意では、現在の問い合わせベクトルと過去の鍵ベクトルとの内積を計算し、対応する値を重み付き集約する。多くの鍵の寄与が小さいため、一部の鍵だけを使う疎注意で演算量と転送量を削減できる。しかし95%もの鍵を捨てる場合、実際に重要な鍵を取りこぼすと正答率が急落する。鍵の全件走査をオンラインで繰り返さない設計である。
@@ -1454,10 +1458,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   FMVR（Frequency-Modulated Visual Restoration）は、削減済み視覚表現の平均値からの残差と最大値からの残差をそれぞれ学習可能な係数で変調し、目立つ特徴と埋もれた特徴の両方を補強する方式である。原著表3では36トークン時に初期入力処理時間が58.1から18.0ミリ秒へ短縮し、総メモリが21.6から13.8GBへ減少する。
 
-- **2026-03 · [Fine-Grained Post-Training Quantization for Large Vision Language Models with Quantization-Aware Integrated Gradients](2026-2603.17809-fine-grained-post-training-quantization-for-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/ucas-xiang/QIG) ・ リポジトリ内被引用：0  
-  重みと活性値を低ビット化すればメモリ使用量を抑えられるが、量子化誤差の影響は画像と文章という二つのモダリティの間だけでなく、同じモダリティ内の各トークンや層によっても異なる。著者はこれを1.60%の改善と説明するが、表の数値としては1.60ポイントの上昇である。
-
 - **2026-03 · [ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models](2026-2603.25766-eta-vla-efficient-token-adaptation-via-temporal-fusion-and-intra-llm-spa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数カメラの過去画像を視覚言語行動モデル（Vision-Language-Action モデル; VLA）へ入力すると、フレーム数とカメラ数に比例して視覚トークンが増える。主題は車両の制御アルゴリズムそのものよりも、VLAにおける視覚系列の効率的な処理である。
@@ -2188,6 +2188,10 @@
   実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：3  
   入力とモデル重みをそれぞれ秘匿したままBERT、GPT-2、LLaMA-7B、ViTを実行し、従来方式に比べて実測の転送量と実行時間を改善する。
 
+- **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
+  実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：2  
+  通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
+
 - **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：2  
   混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。
@@ -2240,6 +2244,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   指示追従枝刈り（Instruction-Following Pruning、IFPruning）は、利用者の指示文から小型の疎性予測器が必要なフィードフォワード層（FFN）の中間次元を選び、その指示に対する応答の復号中は同じ部分ネットワークを固定して実行する手法である。
 
+- **2025-01 · [BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference](2025-2501.01144-blockdialect-block-wise-fine-grained-mixed-format-quantization-for-energ.md)**  
+  実装：[✓](https://code.stanford.edu/tambe-lab/blockdialect) ・ リポジトリ内被引用：2  
+  著者らは、符号1ビットと値索引3ビットという4ビット格納形式を保ちつつ、16種類の表現可能値集合を用意するDialectFP4を提案する。LLaMA3-8Bで注意行列積まで含めて量子化した場合、最良のブロック混合設定では7課題平均正答率69.00%、比較対象のMXFP4-16は58.22%、全精度FP16は74.45%である（原著Table 1）。
+
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：2  
   近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
@@ -2247,10 +2255,6 @@
 - **2025-10 · [Learning to Inference Adaptively for Multimodal Large Language Models](2025-2503.10905-learning-to-inference-adaptively-for-multimodal-large-language-models.md)**  
   実装：[✓](https://github.com/zhuoyan-xu/AdaLLaVA) ・ リポジトリ内被引用：1  
   一般的な軽量化方式では、視覚トークン削除数や層構成が推論開始前に固定され、要求ごとの計算予算や画像・質問の難しさに合わせて変更できない。LLaVA-1.5の7B構成で層単位版を60%予算にすると、論文のMME計測ではプリフィル計算量が8.6兆から5.1兆浮動小数点演算へ、時間が81msから49msへ減り、VQAv2正解率は78.5から75.0へ下がる。
-
-- **2025-09 · [SINQ: Sinkhorn-Normalized Quantization for Calibration-Free Low-Precision LLM Weights](2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md)**  
-  実装：[✓](https://github.com/huawei-csl/SINQ) ・ リポジトリ内被引用：1  
-  通常の4ビットあるいは3ビット重み量子化では、同じ量子化群に非常に大きな重みが混ざると、その外れ値に合わせて量子化刻みを広げる必要がある。これを「モデル全体が3.5倍高速になった」と解釈してはいけない。
 
 - **2025-09 · [PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation](2025-2509.19128-pipelinerl-faster-on-policy-reinforcement-learning-for-long-sequence-gen.md)**  
   実装：[✓](https://github.com/ServiceNow/pipelinerl) ・ リポジトリ内被引用：1  
@@ -2323,10 +2327,6 @@
 - **2025-01 · [DiscQuant: A Quantization Method for Neural Networks Inspired by Discrepancy Theory](2025-2501.06417-discquant-a-quantization-method-for-neural-networks-inspired-by-discrepa.md)**  
   実装：[✓](https://github.com/jerry-chee/DiscQuant) ・ リポジトリ内被引用：1  
   DiscQuantは、事前学習済みLLMの重みを低ビット化する際、量子化格子を設計した後の「各重みを上側と下側のどちらへ丸めるか」という問題を解く。原著の代表例では、Phi-3-mini-4k-instructを平均3.25ビットで量子化したGSM8kの正答率が、DiscQuant64%、GPTQ54%、RTN31%、無量子化84%である。
-
-- **2025-01 · [BlockDialect: Block-wise Fine-grained Mixed Format Quantization for Energy-Efficient LLM Inference](2025-2501.01144-blockdialect-block-wise-fine-grained-mixed-format-quantization-for-energ.md)**  
-  実装：[✓](https://code.stanford.edu/tambe-lab/blockdialect) ・ リポジトリ内被引用：1  
-  著者らは、符号1ビットと値索引3ビットという4ビット格納形式を保ちつつ、16種類の表現可能値集合を用意するDialectFP4を提案する。LLaMA3-8Bで注意行列積まで含めて量子化した場合、最良のブロック混合設定では7課題平均正答率69.00%、比較対象のMXFP4-16は58.22%、全精度FP16は74.45%である（原著Table 1）。
 
 - **2024-11 · [ShowUI: One Vision-Language-Action Model for GUI Visual Agent](2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md)**  
   実装：[✓](https://github.com/showlab/ShowUI) ・ リポジトリ内被引用：1  

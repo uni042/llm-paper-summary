@@ -619,7 +619,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   各演算ごとに大量のCUDA制御コードを書く代わりに、タイル演算と「ロード・計算・保存・終了」の4段階を指定し、共有メモリの配置や同期の多くを共通部品に任せる。さらに、行列積の段数を1から4へ増やすと260→760 TFLOPS、L2再利用を意識したブロック順序では805対392 TFLOPSという差があり、性能改善の機構を個別に検証している。
 
 - **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
-  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：14  
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
 
 - **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  
@@ -650,13 +650,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/ZeonfaiHo/CHESS) ・ リポジトリ内被引用：6  
   注意機構には同じ閾値を機械的に適用せず、問い合わせ射影と出力射影に限定して活性疎化を行う。Intel Core i9-12900K、64GB DDR4、単一要求、FP32というCPU測定条件で、注意投影も選択的に疎化した構成の復号高速化は最大1.27倍である。
 
+- **2024-02 · [L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models](2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  巨大言語モデル（LLM）の低ビット量子化は推論時の重み容量とメモリ帯域を減らすが、精度低下を起こす。LLaMA-1 7Bの学習ピークメモリはLoRAの25.1GBに対してL4Qが25.4GB、通常QATは79.5GBである。
+
 - **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
   実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：5  
   LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
-
-- **2024-02 · [L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models](2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  巨大言語モデル（LLM）の低ビット量子化は推論時の重み容量とメモリ帯域を減らすが、精度低下を起こす。LLaMA-1 7Bの学習ピークメモリはLoRAの25.1GBに対してL4Qが25.4GB、通常QATは79.5GBである。
 
 - **2024-07 · [Inference Performance Optimization for Large Language Models on CPUs](2024-2407.07304-inference-performance-optimization-for-large-language-models-on-cpus.md)**  
   実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：4  
