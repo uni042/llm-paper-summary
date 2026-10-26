@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-88edb9d22bbfc94a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2504.14872",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2504.14872",
+    "identity_tokens": [
+      "arXiv:2504.14872"
+    ],
+    "reason": "LLMOrchはLLMが生成した外部ツール呼び出しをdef-use依存関係、相互排他関係、利用可能なプロセッサの負荷からスケジューリングする。原著の改善対象はI/O・計算集約型の関数実行待ち時間であり、LLM自身のprefill/decode、KVキャッシュ、量子化、MoE、モデルサービングの内部効率ではない。エージェントのエンドツーエンド遅延には関係するが、現行推論基盤サーベイの中心対象からは外れるためborderline。",
+    "first_checked_at": "2026-10-26T05:52:50+00:00",
+    "last_checked_at": "2026-10-26T05:52:50+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Function Orchestration for Large Language Models"
+  },
+  "processed_at": "2026-10-26T05:52:51+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-88edb9d22bbf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

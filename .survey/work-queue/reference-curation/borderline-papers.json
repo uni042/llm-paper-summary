@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-25T22:48:58+00:00",
-  "record_count": 5349,
+  "updated_at": "2026-10-26T05:52:50+00:00",
+  "record_count": 5351,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -82916,6 +82916,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "CAST: Clustering Self-Attention using Surrogate Tokens for Efficient Transformers"
+    },
+    "arXiv:2503.23174": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.23174",
+      "identity_tokens": [
+        "arXiv:2503.23174"
+      ],
+      "reason": "TRAは閾値で無関係keyをsoftmaxから除去し、残存するkey間だけの文脈化相対距離と忘却ゲートを学習する注意機構。小型4層モデルを新規学習し、Flip-Flop/Copy/InductやWikiText-103で学習長128から最大4096への長さ外挿を評価する。推論時のカーネル速度、prefill/TPOT、KVキャッシュ節約を実証した方式ではなく、長文脈の品質一般化が主目的であるため、推論効率サーベイへの直接適合は境界的。",
+      "first_checked_at": "2026-10-26T05:52:48+00:00",
+      "last_checked_at": "2026-10-26T05:52:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "TRA: Better Length Generalisation with Threshold Relative Attention"
+    },
+    "arXiv:2504.14872": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2504.14872",
+      "identity_tokens": [
+        "arXiv:2504.14872"
+      ],
+      "reason": "LLMOrchはLLMが生成した外部ツール呼び出しをdef-use依存関係、相互排他関係、利用可能なプロセッサの負荷からスケジューリングする。原著の改善対象はI/O・計算集約型の関数実行待ち時間であり、LLM自身のprefill/decode、KVキャッシュ、量子化、MoE、モデルサービングの内部効率ではない。エージェントのエンドツーエンド遅延には関係するが、現行推論基盤サーベイの中心対象からは外れるためborderline。",
+      "first_checked_at": "2026-10-26T05:52:50+00:00",
+      "last_checked_at": "2026-10-26T05:52:50+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Function Orchestration for Large Language Models"
     }
   }
 }
