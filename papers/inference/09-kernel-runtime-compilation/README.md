@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（172本）
+## 自動生成の論文一覧（173本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -555,6 +555,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-05 · [Low-Cost FlashAttention with Fused Exponential and Multiplication Hardware Operators](2025-2505.14314-low-cost-flashattention-with-fused-exponential-and-multiplication-hardwa.md)**  
   実装：[✓](https://github.com/ic-lab-duth/Fused-ExpMul) ・ リポジトリ内被引用：0  
   本論文は、FlashAttention-2の計算アルゴリズムを変えるのではなく、オンラインsoftmaxに必要な指数関数とValueベクトル乗算をASIC上の一つの演算器へまとめるハードウェア最適化を提案する。
+
+- **2025-04 · [Pruning Laws for Large Language Models](2025-2504.04342-pruning-laws-for-large-language-models.md)**  
+  実装：[✓](https://github.com/parmanu-lcs2/pruning_laws) ・ リポジトリ内被引用：0  
+  LLMの構造化・非構造化枝刈りは、重み容量や推論演算量を減らすが、何%を削ると下流課題の正答率がどの程度低下するかを事前に知るのは難しい。モデル未剪定時の性能をL0、削除した割合をrとすると、枝刈り後の性能Lを L = L0 × P0 × (1−r)^α と近似する。
 
 - **2025-04 · [ParallelFlow: Parallelizing Linear Transformers via Flow Discretization](2025-2504.00492-parallelflow-parallelizing-linear-transformers-via-flow-discretization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
