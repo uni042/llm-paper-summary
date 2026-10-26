@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-25T20:55:40+00:00",
+  "generated_at": "2026-10-26T00:42:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 30,
+  "count": 34,
   "entries": [
     {
       "canonical_id": "DOI:10.1109/hpca68181.2026.11408592",
@@ -151,6 +151,83 @@
       "worker_run_key": "20261014-0145-scheduled-chat-45/r01"
     },
     {
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.543",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T14:07:10+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md と 19 段落 / 4271文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5847,
+        "body_paragraphs": 31,
+        "method_chars": 1991,
+        "method_paragraphs": 11,
+        "evaluation_chars": 1255,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-156601224fec--libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-156601224fec--libfile_ae4970e3a4508191bd816a7d1a094fd3--2025-higgs-linearity-quantization-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.04716",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-16T15:29:47+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2603.04716-slo-aware-compute-resource-allocation-for-prefill-decode-disaggregated-l.md と 17 段落 / 4205文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7630,
+        "body_paragraphs": 45,
+        "method_chars": 3102,
+        "method_paragraphs": 22,
+        "evaluation_chars": 1171,
+        "limitation_chars": 722,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bfb616a2359--libfile_db8e1e6a355881918730a1c709ebb43e--2026-2603.04716-slo-aware-pd-quality-repair-20261016-1840.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4bfb616a2359--libfile_db8e1e6a355881918730a1c709ebb43e--2026-2603.04716-slo-aware-pd-quality-repair-20261016-1840.json",
+      "worker_run_key": "20261016-1645-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2306.07174",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-17T05:54:46+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2306.07174-augmenting-language-models-with-long-term-memory.md と 15 段落 / 3334文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5933,
+        "body_paragraphs": 35,
+        "method_chars": 1937,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1260,
+        "limitation_chars": 900,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_34a662b0db648191bebfd33ef3014e2d--2023-2306.07174-longmem-decoupled-long-term-memory-research-20261014-1645-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1645-scheduled-chat-45/r01"
+    },
+    {
       "canonical_id": "arXiv:2310.05015",
       "title": null,
       "source_url": null,
@@ -180,6 +257,31 @@
       "worker_run_key": "20261017-2255-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2503.10135",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-17T18:13:38+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2503.10135-gumiho-a-hybrid-architecture-to-prioritize-early-tokens-in-speculative-decoding.md と 14 段落 / 2831文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4566,
+        "body_paragraphs": 29,
+        "method_chars": 1596,
+        "method_paragraphs": 9,
+        "evaluation_chars": 666,
+        "limitation_chars": 491,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6f22ec23bfe7--library-final-audit--2503.10135--gumiho.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6f22ec23bfe7--library-final-audit--2503.10135--gumiho.json",
+      "worker_run_key": "20261018-0230-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2605.06850",
       "title": null,
       "source_url": null,
@@ -205,6 +307,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ffdb69accf09--libfile_329445c90bf4819199ba7e5b73738587--2026-2605.06850-shadow-mask-distillation-kv-rl-posttraining-research-20261020-1655-schedu.json",
       "worker_run_key": "20261020-1655-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:1911.02972",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-21T19:22:06+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md と 24 段落 / 5705文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6236,
+        "body_paragraphs": 28,
+        "method_chars": 1707,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1576,
+        "limitation_chars": 742,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_755b923e7ea88191864605f6e7cb9325--2019-1911.02972-blockbert-standard-limit-heading-repair-20261021-1845-scheduled-chat-45-r02-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_755b923e7ea88191864605f6e7cb9325--2019-1911.02972-blockbert-standard-limit-heading-repair-20261021-1845-scheduled-chat-45-r02-v2.json",
+      "worker_run_key": "20261021-1845-scheduled-chat-45/r02"
     },
     {
       "canonical_id": "arXiv:2605.24330",
@@ -255,6 +382,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_cfea78de8fd08191bdd7e277edd5dc88--2024-2410.01805-locret-returned-repair-20261020-1930-scheduled-chat-30-r01-v2.json",
       "worker_run_key": "20261020-1930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2305.14706",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-22T00:19:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2023-2305.14706-prumux-augmenting-data-multiplexing-with-model-compression.md と 15 段落 / 3109文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4847,
+        "body_paragraphs": 27,
+        "method_chars": 1125,
+        "method_paragraphs": 6,
+        "evaluation_chars": 882,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e464be7014348191b904a13c09dcb9a8--2023-2305.14706-prumux-research-20261020-2127-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_e464be7014348191b904a13c09dcb9a8--2023-2305.14706-prumux-research-20261020-2127-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-2127-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2411.10741",
@@ -530,33 +684,6 @@
       "worker_run_key": "20261025-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2501.04987",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T11:16:59+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5988,
-        "body_paragraphs": 29,
-        "method_chars": 1693,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 614,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6fa2c4aed434--libfile_19cab8f5cf2c819189f3eede5958abfc--2025-2501.04987-treekv-smooth-kv-cache-research-20261025-1703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-6fa2c4aed434--libfile_19cab8f5cf2c819189f3eede5958abfc--2025-2501.04987-treekv-smooth-kv-cache-research-20261025-1703-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.03762",
       "title": null,
       "source_url": null,
@@ -585,60 +712,29 @@
       "worker_run_key": "20261025-1600-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2410.10714",
+      "canonical_id": "arXiv:2608.20375",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-25T11:17:04+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
+      "returned_at": "2026-10-25T11:17:02+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.20375-graft-adaptive-dlm-based-draft-tree-construction-with-target-distilled-e.md と 16 段落 / 3414文字 (100.0%) が完全一致"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5611,
-        "body_paragraphs": 32,
-        "method_chars": 1855,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
+        "body_chars": 5236,
+        "body_paragraphs": 35,
+        "method_chars": 1788,
+        "method_paragraphs": 11,
+        "evaluation_chars": 973,
+        "limitation_chars": 621,
+        "insufficiency_flags": []
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9c89cdae625b--libfile_5eb827f4c0708191a2138357bc381658--2024-2410.10714-seedlm-lfsr-weight-compression-research-20261025-1703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9c89cdae625b--libfile_5eb827f4c0708191a2138357bc381658--2024-2410.10714-seedlm-lfsr-weight-compression-research-20261025-1703-scheduled-chat-00-r.json",
-      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.06766",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T11:26:28+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5670,
-        "body_paragraphs": 29,
-        "method_chars": 1801,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca06ce64698d--libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ca06ce64698d--libfile_698f9509389c81918db9b217bfb6e7b5--2025-2502.06766-topk-cpu-index-million-context-research-20261025-1703-scheduled-chat-00-r.json",
-      "worker_run_key": "20261025-1703-scheduled-chat-00/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-93d3b4c8ebd4--libfile_1c3111588c848191823ce337e63b1446--2026-2608.20375-graft-standard-headings-returned-repair-20261024-1631-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-93d3b4c8ebd4--libfile_1c3111588c848191823ce337e63b1446--2026-2608.20375-graft-standard-headings-returned-repair-20261024-1631-scheduled-chat-30-r.json",
+      "worker_run_key": "20261024-1631-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.13140/rg.2.2.28167.37282",
