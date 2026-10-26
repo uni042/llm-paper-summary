@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-26T01:59:52.603536+00:00",
+  "generated_at": "2026-10-26T02:15:28.912188+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 9,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 3,
     "scheduled-chat-30": 3,
     "scheduled-chat-45": 3
   },
@@ -100,6 +100,30 @@
       },
       "mechanical_failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03283-mace-a-hybrid-llm-serving-system-with-colocated-slo-aware-continuous-ret.md",
+      "canonical_id": "arXiv:2510.03283",
+      "title": "MACE: A Hybrid LLM Serving System with Colocated SLO-aware Continuous Retraining Alignment",
+      "file_bytes": 13308,
+      "source_sha256": "b4128e03712330c2ac7cdc1fca17a2ab8881b9e677253ccb2950097fd4313f35",
+      "source_git_blob_sha": "b0f88ba7d3efc9dff5879d2bd1be770e9eb5eca5",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.766835,
+      "quality_metrics": {
+        "body_chars": 3724,
+        "method_chars": 1247,
+        "evaluation_chars": 942,
+        "limitation_chars": 368
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 76.7% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 76.7% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md",
