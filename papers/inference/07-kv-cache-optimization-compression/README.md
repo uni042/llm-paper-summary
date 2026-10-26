@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（366本）
+## 自動生成の論文一覧（367本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1192,6 +1192,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-02 · [Compression Barriers in Autoregressive Transformers](2025-2502.15955-compression-barriers-in-autoregressive-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   近年のKV圧縮は重要トークンの選択、疎性、低次元表現、クラスタリング等で保存量を削減しているが、これらの成功が任意の入力でも保証できるかは別問題である。
+
+- **2025-02 · [CoKV: Optimizing KV Cache Allocation via Cooperative Game](2025-2502.17501-cokv-optimizing-kv-cache-allocation-via-cooperative-game.md)**  
+  実装：[✓](https://github.com/nawei1010/CoKV) ・ リポジトリ内被引用：1  
+  Mistral-7B-Instruct-v0.2をA100 40GBで動かした実測では、28kトークン入力の生成総時間がFullKVの半分未満、32k入力のピークGPUメモリは64%削減された。オンライン要求ごとにゲーム理論の評価をやり直す方式ではない。
 
 - **2024-12 · [More Tokens, Lower Precision: Towards the Optimal Token-Precision Trade-off in KV Cache Compression](2024-2412.12706-more-tokens-lower-precision-towards-the-optimal-token-precision-trade-of.md)**  
   実装：[✓](https://github.com/zhzihao/QPruningKV) ・ リポジトリ内被引用：1  

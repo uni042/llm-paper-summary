@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T22:32:50+00:00",
+  "generated_at": "2026-10-26T23:23:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 51,
+  "count": 50,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1308,34 +1308,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d6dc5bb13c0e--libfile_7a4265e1fa8c8191803cbea95beca98d--2026-doi-10.18653-v1-2026.findings-acl.498-streaming-llm-survey-research-20261027-0500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d6dc5bb13c0e--libfile_7a4265e1fa8c8191803cbea95beca98d--2026-doi-10.18653-v1-2026.findings-acl.498-streaming-llm-survey-research-20261027-0500-sc.json",
-      "worker_run_key": "20261027-0500-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2408.03130",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T22:15:33+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 315 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5476,
-        "body_paragraphs": 27,
-        "method_chars": 2891,
-        "method_paragraphs": 14,
-        "evaluation_chars": 315,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 315 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ea74d4144cc2--libfile_ff772efce3488191b17d54bb3460fdfe--2024-2408.03130-inference-optimizations-practical-survey-research-20261027-0500-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ea74d4144cc2--libfile_ff772efce3488191b17d54bb3460fdfe--2024-2408.03130-inference-optimizations-practical-survey-research-20261027-0500-scheduled.json",
       "worker_run_key": "20261027-0500-scheduled-chat-00/r01"
     }
   ]

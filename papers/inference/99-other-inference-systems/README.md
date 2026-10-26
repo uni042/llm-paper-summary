@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（755本）
+## 自動生成の論文一覧（758本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2626,6 +2626,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   ドラフトが提案したトークンを受理できれば大型モデルの逐次呼出し回数を減らせるが、分布の一致を保証するには棄却後の補正サンプリングが必要である。実験ではA100 80GB、ドラフトOPT-125M、ターゲットOPT-13Bを使い、XSUMとDollyなどで候補数・サンプリング温度・切り詰め量を変えて比較した。
 
+- **2024-10 · [BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments](2024-2410.23918-bitstack-any-size-compression-of-large-language-models-in-variable-memor.md)**  
+  実装：[✓](https://github.com/xinghaow99/BitStack) ・ リポジトリ内被引用：2  
+  BitStackは、LLMの重みを固定の2bit、3bit、4bitなどへ一度だけ量子化する代わりに、複数の小さな残差ブロックへ分解して優先順位を付け、使えるメモリ量に応じて必要なブロックだけを読み込む学習不要の圧縮方式である。
+
 - **2024-06 · [Divergent Token Metrics: Measuring degradation to prune away LLM components -- and optimize quantization](2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md)**  
   実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：2  
   大規模言語モデルの圧縮では、重みを0にする枝刈りや、浮動小数点数を整数へ変換する量子化が、生成文をどの時点から変えてしまうかを把握する必要がある。この指標を使って行列ごとの枝刈り率を配分すると、Llama-2-13Bを全体75%疎化したとき、同じ平均疎化率の一様な大きさ基準の枝刈りより、WikiText2のPPLを13.512から8.101へ抑えられる。
@@ -2669,6 +2673,10 @@
 - **2024-10 · [FiRST: Finetuning Router-Selective Transformers for Input-Adaptive Latency Reduction](2024-2410.12513-first-finetuning-router-selective-transformers-for-input-adaptive-latenc.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   FiRST（Finetuning Router-Selective Transformers）は、入力系列によって必要なTransformer層が異なるという観察に基づき、各層の前へ軽量ルータを挿入して推論時に通過層を選択する方式である。
+
+- **2024-08 · [Inference Optimizations for Large Language Models: Effects, Challenges, and Practical Considerations](2024-2408.03130-inference-optimizations-for-large-language-models-effects-challenges-and.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Donisch、Schacht、Lanquillonの論文は、LLMの推論資源を削減する研究を、量子化、剪定、知識蒸留、アーキテクチャ最適化という四群に分けた文献レビューである。§III-Dで紹介する投機的復号の2〜3倍の遅延改善は参照論文に帰属する値であり、このレビューの独立した再現結果ではない。
 
 - **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
   実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：1  
@@ -2913,6 +2921,10 @@
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
   実装：[✓](https://github.com/hikvision-research/Unified-Normalization) ・ リポジトリ内被引用：2  
   UNはTransformerのオフライン 正規化を、活性値/勾配統計の平滑化と適応型 外れ値除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
+
+- **2022-01 · [Latency Adjustable Transformer Encoder for Language Understanding](2022-2201.03327-latency-adjustable-transformer-encoder-for-language-understanding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Transformerの推論では、すべての入力トークンに対して各層の注意機構とFFNを実行する。
 
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

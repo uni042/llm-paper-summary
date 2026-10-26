@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（95本）
+## 自動生成の論文一覧（96本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -315,6 +315,10 @@
 - **2025-01 · [Resource-efficient Algorithms and Systems of Foundation Models: A Survey](2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Xu・Cai・Yin・Wang・Jin・Liuによる39ページの査読付きサーベイは、基盤モデルの「効率」を単一のモデル圧縮率やGPU演算速度として扱わず、モデル構造、学習・圧縮・推論アルゴリズム、実行システムという異なる介入点に分解する。
+
+- **2025-02 · [Binary Neural Networks for Large Language Model: A Survey](2025-2502.19008-binary-neural-networks-for-large-language-model-a-survey.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  中心となるのは、BitNet、BitNet b1.58、BitNet a4.8、FBI-LLM、Bi-Mambaなど、重みの二値化・三値化を学習時から組み込む方式である。
 
 - **2024-12 · [A Survey of RWKV](2024-2412.14847-a-survey-of-rwkv.md)**  
   実装：[✓](https://github.com/MLGroupJLU/RWKV-Survey) ・ リポジトリ内被引用：1  
