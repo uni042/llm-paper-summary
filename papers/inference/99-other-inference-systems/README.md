@@ -2390,13 +2390,13 @@
   実装：✓ ・ リポジトリ内被引用：14  
   本論文が解こうとする問題は、異なる得意分野を持つ既製の大規模言語モデル（LLM）を組み合わせる際、問い合わせごとに候補すべてを実行すると生成計算量が膨らむことである。一方、回答をすべて生成して報酬モデル（reward モデル）で順位付けする方式は品質の良い候補を後から選べるが、候補数に比例する生成費用を必要とする。
 
+- **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
+  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：13  
+  線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
+
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
   実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：12  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
-
-- **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
-  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：12  
-  線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
   実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：11  
@@ -2625,7 +2625,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  
-  実装：✓ ・ リポジトリ内被引用：123  
+  実装：✓ ・ リポジトリ内被引用：124  
   ドラフト自身の生成データと課題別の分布間距離でターゲットとの整合を蒸留し、投機的デコードの候補受理率を上げる手法。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -2739,7 +2739,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：159  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：160  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
@@ -2755,7 +2755,7 @@
   標準的な変換器（Transformer）の自己注意（self-注意機構）は、入力系列内のトークン間の重みを入力内容に応じて計算する。特にこの論文の「学習80%高速化」は約1.8倍の処理速度を意味し、処理時間が80%減ったという意味ではない。
 
 - **2022-02 · [Competition-Level Code Generation with AlphaCode](2022-2203.07814-competition-level-code-generation-with-alphacode.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   AlphaCodeは、自然言語で与えられた競技プログラミング問題から、正しい実行プログラムを見つけるための生成・探索・選別システムである。評価では2021年12月のCodeforcesの10大会を後から模擬し、各問題最大10提出という条件で、参加者中の順位が平均して上位54.3%に相当した。
 
 - **2022-08 · [Unified Normalization for Accelerating and Stabilizing Transformers](2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md)**  
@@ -2849,7 +2849,7 @@
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：100  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：102  
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  

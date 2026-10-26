@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T13:21:09+00:00",
+  "generated_at": "2026-10-26T13:25:03+00:00",
   "paper_count": 3315,
-  "edge_count": 43936,
+  "edge_count": 43946,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 20,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -349,8 +349,8 @@
     "papers/inference/04-conditional-computation/2026-2602.16054-claa-cross-layer-attention-aggregation-for-accelerating-llm-prefill.md": 0,
     "papers/inference/04-conditional-computation/2026-2605.05848-videorouter-query-adaptive-dual-routing-for-efficient-long-video-underst.md": 0,
     "papers/inference/04-conditional-computation/2026-2609.08189-hero-history-aware-routing-efficient-llm-inference.md": 0,
-    "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md": 58,
-    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md": 526,
+    "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md": 59,
+    "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md": 527,
     "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md": 393,
     "papers/inference/05-speculative-decoding-moe/2023-2302.07863-speculative-decoding-with-big-little-decoder.md": 72,
     "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md": 177,
@@ -1091,7 +1091,7 @@
     "papers/inference/09-kernel-runtime-compilation/2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md": 27,
     "papers/inference/09-kernel-runtime-compilation/2023-2310.06927-sparse-fine-tuning-for-inference-acceleration-of-large-language-models.md": 3,
     "papers/inference/09-kernel-runtime-compilation/2023-2310.09259-quik-towards-end-to-end-4-bit-inference-on-generative-large-language-mod.md": 19,
-    "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md": 84,
+    "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md": 85,
     "papers/inference/09-kernel-runtime-compilation/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md": 45,
     "papers/inference/09-kernel-runtime-compilation/2023-2312.04511-an-llm-compiler-for-parallel-function-calling.md": 12,
     "papers/inference/09-kernel-runtime-compilation/2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md": 35,
@@ -2211,7 +2211,7 @@
     "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md": 467,
     "papers/inference/16-weight-quantization-compression/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md": 405,
     "papers/inference/16-weight-quantization-compression/2022-2212.09720-the-case-for-4-bit-precision-k-bit-inference-scaling-laws.md": 53,
-    "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md": 213,
+    "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md": 214,
     "papers/inference/16-weight-quantization-compression/2023-2302.08007-with-shared-microexponents-a-little-shifting-goes-a-long-way.md": 10,
     "papers/inference/16-weight-quantization-compression/2023-2303.08302-zeroquant-v2-exploring-post-training-quantization-in-llms-from-comprehen.md": 24,
     "papers/inference/16-weight-quantization-compression/2023-2304.09145-outlier-suppression-accurate-quantization-of-large-language-models-by-eq.md": 35,
@@ -2570,7 +2570,7 @@
     "papers/inference/99-other-inference-systems/2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md": 18,
     "papers/inference/99-other-inference-systems/2018-1802.06901-deterministic-non-autoregressive-neural-sequence-modeling-by-iterative-r.md": 16,
     "papers/inference/99-other-inference-systems/2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md": 74,
-    "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md": 100,
+    "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md": 102,
     "papers/inference/99-other-inference-systems/2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md": 66,
     "papers/inference/99-other-inference-systems/2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md": 3,
     "papers/inference/99-other-inference-systems/2019-1807.08887-supporting-very-large-models-using-automatic-dataflow-graph-partitioning.md": 3,
@@ -2602,8 +2602,8 @@
     "papers/inference/99-other-inference-systems/2022-2112.06749-step-unrolled-denoising-autoencoders-for-text-generation.md": 2,
     "papers/inference/99-other-inference-systems/2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md": 0,
     "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md": 72,
-    "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md": 9,
-    "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md": 159,
+    "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md": 10,
+    "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md": 160,
     "papers/inference/99-other-inference-systems/2022-2208.01313-unified-normalization-for-accelerating-and-stabilizing-transformers.md": 2,
     "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md": 232,
     "papers/inference/99-other-inference-systems/2022-2211.16368-dba-efficient-transformer-with-dynamic-bilinear-low-rank-attention.md": 0,
@@ -2634,11 +2634,11 @@
     "papers/inference/99-other-inference-systems/2023-2310.04408-recomp-improving-retrieval-augmented-lms-with-compression-and-selective-.md": 10,
     "papers/inference/99-other-inference-systems/2023-2310.06178-look-up-mai-gemm-increasing-ai-gemms-performance-by-nearly-2-5x-via-msge.md": 3,
     "papers/inference/99-other-inference-systems/2023-2310.07707-matformer-nested-transformer-for-elastic-inference.md": 11,
-    "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md": 123,
+    "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md": 124,
     "papers/inference/99-other-inference-systems/2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md": 14,
     "papers/inference/99-other-inference-systems/2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md": 39,
     "papers/inference/99-other-inference-systems/2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md": 30,
-    "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md": 12,
+    "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md": 13,
     "papers/inference/99-other-inference-systems/2023-2312.12472-a-performance-evaluation-of-a-quantized-large-language-model-on-various-.md": 0,
     "papers/inference/99-other-inference-systems/2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md": 2,
     "papers/inference/99-other-inference-systems/2023-2312.13211-dsformer-effective-compression-of-text-transformers-by-dense-sparse-weig.md": 3,
@@ -7640,7 +7640,8 @@
       "papers/inference/07-kv-cache-optimization-compression/2024-2407.18003-keep-the-cost-down-a-review-on-methods-to-optimize-llm-s-kv-cache-consum.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2410.13846-lighttransfer-your-long-context-llm-is-secretly-a-hybrid-model-with-effo.md",
       "papers/inference/13-sparse-attention/2023-2308.16137-lm-infinite-zero-shot-extreme-length-generalization-for-large-language-m.md",
-      "papers/inference/13-sparse-attention/2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md"
+      "papers/inference/13-sparse-attention/2024-2410.05076-tidaldecode-fast-and-accurate-llm-decoding-with-position-persistent-spar.md",
+      "papers/inference/99-other-inference-systems/2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md"
     ],
     "papers/inference/04-conditional-computation/2024-d-llm-a-token-adaptive-computing-resource-allocation-strategy-for-large-language.md": [
       "papers/inference/04-conditional-computation/2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md",
@@ -8164,6 +8165,8 @@
       "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2024-2402.01528-decoding-speculative-decoding.md": [
+      "papers/inference/05-speculative-decoding-moe/2022-2203.16487-speculative-decoding-exploiting-speculative-execution-for-accelerating-s.md",
+      "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
       "papers/inference/05-speculative-decoding-moe/2023-2305.09781-specinfer-tree-speculative-inference.md",
       "papers/inference/05-speculative-decoding-moe/2023-2307.05908-predictive-pipelined-decoding-a-compute-latency-trade-off-for-exact-llm-.md",
@@ -8175,11 +8178,15 @@
       "papers/inference/05-speculative-decoding-moe/2024-2404.11912-triforce-lossless-acceleration-of-long-sequence-generation-with-hierarch.md",
       "papers/inference/05-speculative-decoding-moe/2025-2408.11049-magicdec-breaking-the-latency-throughput-tradeoff-for-long-context-gener.md",
       "papers/inference/09-kernel-runtime-compilation/2020-2010.13887-lightseq-a-high-performance-inference-library-for-transformers.md",
+      "papers/inference/09-kernel-runtime-compilation/2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md",
       "papers/inference/09-kernel-runtime-compilation/2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2022-osdi22-orca-iteration-level-scheduling-selective-batching.md",
       "papers/inference/11-llm-serving-scheduling-disaggregation/2023-2309.06180-vllm-pagedattention-efficient-memory-management.md",
       "papers/inference/16-weight-quantization-compression/2024-2407.14679-compact-language-models-via-pruning-and-knowledge-distillation.md",
-      "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md"
+      "papers/inference/21-static-structured-pruning/2023-2310.06694-sheared-llama-accelerating-language-model-pre-training-via-structured-pr.md",
+      "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+      "papers/inference/99-other-inference-systems/2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md",
+      "papers/inference/99-other-inference-systems/2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2024-2402.02057-lookahead-decoding.md": [
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
@@ -8310,6 +8317,7 @@
     ],
     "papers/inference/05-speculative-decoding-moe/2024-2402.15678-minions-accelerating-large-language-model-inference-with-aggregated-speculative-execution.md": [
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+      "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
       "papers/inference/21-static-structured-pruning/2019-1909.11556-reducing-transformer-depth-on-demand-with-structured-dropout.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md": [
@@ -8452,7 +8460,9 @@
     ],
     "papers/inference/05-speculative-decoding-moe/2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
-      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md"
+      "papers/inference/05-speculative-decoding-moe/2024-2401.10774-medusa-multiple-decoding-heads.md",
+      "papers/inference/99-other-inference-systems/2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md",
+      "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md"
     ],
     "papers/inference/05-speculative-decoding-moe/2024-2405.00263-clover-regressive-lightweight-speculative-decoding-with-sequential-knowl.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
