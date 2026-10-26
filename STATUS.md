@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-27 07:09:44 JST**
+> 自動生成: **2026-10-27 07:15:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **727** |
 | 未claim Research job | **727** |
-| 直近24hのResearch処理完了 | **139** |
-| 最終Research処理完了 | **10-27 06:01:00 JST** |
+| 直近24hのResearch処理完了 | **140** |
+| 最終Research処理完了 | **10-27 06:02:00 JST** |
 | 最終Discovery探索完了 | **10-27 03:47:00 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-26 10:46:01 JST（20時間23分前）** |
+| 最終maintenance完了 | **10-26 10:46:01 JST（20時間29分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **30** |
+| 直近6hのResearch完了 | **31** |
 | 直近6hのDiscovery run | **2** |
 | 直近6hのDiscovery本文確認・分類 | **2** |
-| 最終Research完了 | **10-27 06:01:00 JST** |
+| 最終Research完了 | **10-27 06:02:00 JST** |
 | 最終Discovery完了 | **10-27 03:47:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-27 06:01:00 JST** / worker — / run 20261027-0555-scheduled-chat-00/r01 / 成果 **2件**
-  - evidence: .survey/import-inbox/results/research/libfile_17b3f6b50cf48191940541e610cd1226--2025-2505.12566-hybridserve-confidence-cascade-research-20261027-0555-scheduled-chat-00-r01.json
+- Research: **10-27 06:02:00 JST** / worker — / run 20261027-0555-scheduled-chat-00/r01 / 成果 **3件**
+  - evidence: .survey/import-inbox/results/research/libfile_f5b37b3047ec8191b6a7eebf5132655a--2025-2504.12526-mom-mini-sequence-kv-offload-research-20261027-0555-scheduled-chat-00-r01.json
 - Discovery: **10-27 03:47:00 JST** / worker scheduled-chat-45 / run 20261027-0347-scheduled-chat-45/r01
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_02f96ba3de1c8191bf4e0ef2e0d21d08--discovery-20261027-0347-scheduled-chat-45-research-relevance-r01-028.json
