@@ -216,11 +216,11 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-02 · [Transformer Quality in Linear Time](2022-2202.10447-transformer-quality-in-linear-time.md)**  
-  実装：✓ ・ リポジトリ内被引用：33  
+  実装：✓ ・ リポジトリ内被引用：34  
   FLASHは、注意計算を系列長に対して線形に近づける方式が、理論計算量を減らしても実機で速くならず、強いTransformerを比較対象にすると品質が落ちるという問題に取り組む。
 
 - **2022-02 · [cosFormer: Rethinking Softmax in Attention](2022-2202.08791-cosformer-rethinking-softmax-in-attention.md)**  
-  実装：[✓](https://github.com/OpenNLPLab/cosFormer) ・ リポジトリ内被引用：25  
+  実装：[✓](https://github.com/OpenNLPLab/cosFormer) ・ リポジトリ内被引用：27  
   cosFormerはソフトマックスの関数形をそのまま近似するのでなく、注意係数が非負であることと、関連性の高い位置へ重みを集中させることを抽出して設計する。
 
 - **2022-06 · [Long Range Language Modeling via Gated State Spaces](2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md)**  
@@ -228,12 +228,12 @@
   対象：自己回帰言語モデルの状態空間層をTPUで効率よく学習し、学習系列長を超える長距離依存を扱う研究。学習速度と推論速度の主張を分けて読む。一次論文は2022年7月2日改訂の第3版。
 
 - **2022-02 · [Flowformer: Linearizing Transformers with Conservation Flows](2022-2202.06258-flowformer-linearizing-transformers-with-conservation-flows.md)**  
-  実装：[✓](https://github.com/thuml/Flowformer) ・ リポジトリ内被引用：1  
+  実装：[✓](https://github.com/thuml/Flowformer) ・ リポジトリ内被引用：2  
   Flowformerは、自己注意（Self-注意機構）の計算量を系列長に対して線形に抑えつつ、通常のsoftmax注意が持つ「重要な位置を選んで重みを集中させる」性質を残そうとする研究である。
 
 ### 7年前（2019-11〜2020-10）
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：142  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：144  
   Performerは、通常の全ランクのソフトマックス注意を正の直交ランダム特徴で近似するFAVOR+を提案し、注意行列を明示的に保持しない線形時間・線形空間の実行を可能にする。
 <!-- survey:auto:end -->
