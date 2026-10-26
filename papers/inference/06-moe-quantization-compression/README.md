@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（21本）
+## 自動生成の論文一覧（25本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -40,7 +40,15 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：0  
   総パラメータ数が大きいモデルをGPUメモリへ載せるためには量子化が有効だが、すべての専門家を同じビット幅へ圧縮すると、特に1〜2ビットという極低精度で品質が大きく崩れる。
 
+- **2025-11 · [Exploiting the Experts: Unauthorized Compression in MoE-LLMs](2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  疎な実行によって計算量を抑えられる反面、特定課題で頻繁に使われるエキスパートを見分け、不要な部分を除いた小型派生モデルを作れる可能性がある。Mixtral-8x7Bを用いたGLUE分類では、全エキスパートを用いた平均精度86.1%に対し、各層で上位2エキスパートだけを保持すると78.9%、上位1のみでは71.4%となる。
+
 ### 2年前（2024-11〜2025-10）
+
+- **2025-03 · [Towards Efficient Mixture of Experts: A Holistic Study of Compression Techniques](2025-2406.02500-towards-efficient-mixture-of-experts-a-holistic-study-of-compression-tec.md)**  
+  実装：[✓](https://github.com/CASE-Lab-UMD/Unified-MoE-Compression) ・ リポジトリ内被引用：28  
+  混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンについて多数の専門家から少数を選択することで、総パラメータ数の割に活性化計算量を抑える。例えばMixtral-8×7Bは総計約470億パラメータを持つが、1トークンで活性化するのは約130億パラメータであり、元モデルの重みメモリは原著の環境で87.7GBに達する。
 
 - **2025-07 · [EAC-MoE: Expert-Selection Aware Compressor for Mixture-of-Experts Large Language Models](2025-eac-moe-expert-selection-aware-compressor-for-mixture-of-experts-large-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：19  
@@ -57,6 +65,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2025-02 · [Delta Decompression for MoE-based LLMs Compression](2025-2502.17298-delta-decompression-for-moe-based-llms-compression.md)**  
   実装：[✓](https://github.com/lliai/D2MoE) ・ リポジトリ内被引用：11  
   しかし、推論環境には多数の専門家の重みを保持する必要があり、GPUメモリ・ホストメモリ・ストレージ容量が大きくなる。専門家を丸ごと削除すると特化した能力を失い、複数専門家を単純に統合すると固有の知識が平均化される。
+
+- **2025-07 · [MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE](2025-2507.00390-mone-replacing-redundant-experts-with-lightweight-novices-for-structured.md)**  
+  実装：[✓](https://github.com/zxgx/mode-pd) ・ リポジトリ内被引用：8  
+  MoNE（Mixture of Novices and エキスパート）は、混合専門家モデル（Mixture-of-Experts、MoE）における専門家の枝刈りを、単純な削除ではなく軽量な初心者表現（novice）への置換として実装する圧縮方式である。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  
   実装：[✓](https://github.com/darren-fzq/EAQuant) ・ リポジトリ内被引用：6  
@@ -83,6 +95,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2024-10 · [Mixture Compressor for Mixture-of-Experts LLMs Gains More](2024-2410.06270-mixture-compressor-for-mixture-of-experts-llms-gains-more.md)**  
   実装：[✓](https://github.com/Aaronhuang-778/Mixture-Compressor-MoE) ・ リポジトリ内被引用：45  
   第一に、専門家ごとに必要な重み精度が異なるため、全専門家を同じビット幅へ量子化する必要はない。原著表4のMixtral 8×7Bでは、平均2.54ビットのPMQだけで平均ゼロショット正解率67.50%、保存重み16.24GB、活性化パラメータ4.53GB、基準比1.63倍の速度となる。
+
+- **2024-04 · [SEER-MoE: Sparse Expert Efficiency through Regularization for Mixture-of-Experts](2024-2404.05089-seer-moe-sparse-expert-efficiency-through-regularization-for-mixture-of-.md)**  
+  実装：✓ ・ リポジトリ内被引用：32  
+  SEER-MoEは、事前学習済みの混合専門家モデル（Mixture of エキスパート、MoE）のメモリ消費とトークン当たりの演算量を、別々の制約として削減する方式である。Mixtral 8×7Bは通常各トークンを二つの専門家へ送り、専門家部分の演算は推論全体の約55%を占める。
 
 - **2024-06 · [QuantMoE-Bench: Examining Post-Training Quantization for Mixture-of-Experts](2024-2406.08155-examining-post-training-quantization-for-mixture-of-experts-a-benchmark.md)**  
   実装：[✓](https://github.com/UNITES-Lab/moe-quantization) ・ リポジトリ内被引用：25  
