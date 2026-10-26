@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（483本）
+## 自動生成の論文一覧（484本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1881,6 +1881,10 @@
 - **2024-04 · [Performance Characterization of Expert Router for Scalable LLM Inference](2024-2404.15153-performance-characterization-of-expert-router-for-scalable-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   MoE層内部で複数のFFNエキスパートをtop-k選択する方式とは異なり、リクエスト全体を一つの独立したLLMへルーティングする。評価には8基のNVIDIA H100（各80GB）を搭載したDGX H100を用い、Llama 3 70Bと8Bの量子化・非量子化構成を比較する。
+
+- **2023-12 · [Linear Attention via Orthogonal Memory](2023-2312.11135-linear-attention-via-orthogonal-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形注意はその費用を下げる有力な手段だが、双方向の文脈全体を一度に圧縮する設計を、そのまま因果的な次トークン予測へ移すと、問い合わせごとに圧縮を作り直すことになり得る。A100 80GBの測定では、16,384トークン時のLAVOメモリは9,337MB、相対速度は通常注意比22.0倍と記載されている。
 
 ### 4年前（2022-11〜2023-10）
 
