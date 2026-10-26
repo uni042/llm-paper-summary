@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-25T00:29:33+00:00",
+  "checked_at": "2026-10-26T01:41:23+00:00",
   "status": "issues_found",
-  "error_count": 1,
+  "error_count": 2,
   "warning_count": 0,
-  "paper_count": 3144,
-  "latest_paper_commit": "2026-10-25T00:14:33+00:00",
+  "paper_count": 3268,
+  "latest_paper_commit": "2026-10-26T01:27:06+00:00",
   "queue": {
-    "job_count": 1661,
+    "job_count": 1565,
     "snapshot_drift": true,
     "snapshot_repaired": true,
     "snapshot_repair_safe": true,
@@ -21,8 +21,8 @@
         "ready": 2
       },
       "research": {
-        "superseded": 641,
-        "ready": 973,
+        "superseded": 680,
+        "ready": 838,
         "deferred": 8,
         "completed": 22,
         "rejected": 1
@@ -37,12 +37,16 @@
     "baseline_initialized": false,
     "failures": {
       "paper": [],
-      "list_summary": [],
+      "list_summary": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md"
+      ],
       "overview": []
     },
     "new_failures": {
       "paper": [],
-      "list_summary": [],
+      "list_summary": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md"
+      ],
       "overview": []
     },
     "resolved_failures": {
@@ -54,22 +58,22 @@
   "coverage": {
     "citation": {
       "kind": "citation",
-      "checked_at": "2026-10-25T00:29:03+00:00",
-      "total": 3144,
-      "incomplete": 7,
+      "checked_at": "2026-10-26T01:40:28+00:00",
+      "total": 3268,
+      "incomplete": 9,
       "findings": [
         {
           "severity": "error",
           "code": "citation_coverage_incomplete",
-          "detail": "citation coverage has 7 incomplete paper(s)",
-          "incomplete": 7
+          "detail": "citation coverage has 9 incomplete paper(s)",
+          "incomplete": 9
         }
       ]
     },
     "metadata": {
       "kind": "metadata",
-      "checked_at": "2026-10-25T00:29:03+00:00",
-      "total": 3144,
+      "checked_at": "2026-10-26T01:40:28+00:00",
+      "total": 3268,
       "incomplete": 0,
       "findings": []
     }
@@ -77,9 +81,18 @@
   "findings": [
     {
       "severity": "error",
+      "code": "quality_regression",
+      "detail": "New list_summary quality failures appeared since the previous maintenance baseline",
+      "scope": "list_summary",
+      "paths": [
+        "papers/inference/09-kernel-runtime-compilation/2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md"
+      ]
+    },
+    {
+      "severity": "error",
       "code": "citation_coverage_incomplete",
-      "detail": "citation coverage has 7 incomplete paper(s)",
-      "incomplete": 7
+      "detail": "citation coverage has 9 incomplete paper(s)",
+      "incomplete": 9
     }
   ]
 }
