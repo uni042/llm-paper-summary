@@ -3408,6 +3408,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2505.22179-speculative-decoding-meets-quantization-compatibility-evaluation-and-hie.md",
+      "status": "PASS",
+      "summary": "4bit量子化とEAGLE-2の併用で木状検証が律速になる問題を解明。小型中間モデルで木を系列へ変換するHierSpecによりW4A16 Llama-3-70Bで2.78倍。",
+      "char_count": 87,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/05-speculative-decoding-moe/2025-2505.23219-ghidorah-fast-llm-inference-on-edge-with-speculative-decoding-and-hetero.md",
       "status": "PASS",
       "summary": "Medusaの検証木を統合メモリ型CPU/GPUへ適応配置し、密・疎注意の分業とARM疎演算で、制限クロックのJetson NX上の単一要求デコードを最大7.6倍高速化する。",
@@ -5912,6 +5921,15 @@
       "summary": "多例文脈学習の例を疎注意でブロック別事前符号化し、要求ごとに検索したKVだけ再利用。90k文脈で平均精度0.90、非キャッシュ検索ICL比遅延0.053倍。",
       "char_count": 78,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2503.11108-time-and-memory-trade-off-of-kv-cache-compression-in-tensor-transformer-.md",
+      "status": "PASS",
+      "summary": "Tensor attentionの4行列型と事前展開2行列型のKVキャッシュについて、通信複雑性から空間下界と計算時間の交換条件、クラスタ化近似の保証を導く理論研究。",
+      "char_count": 83,
+      "japanese_ratio": 0.8,
       "failures": [],
       "warnings": []
     },
@@ -8449,6 +8467,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2501.15255-lightweight-and-post-training-structured-pruning-for-on-device-large-lan.md",
+      "status": "PASS",
+      "summary": "層単位とニューロン単位の構造化剪定を組み合わせ、条件数に基づく重要度と最小二乗マスク調整で再学習なしの軽量圧縮を実現するCOMP。",
+      "char_count": 65,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/08-edge-on-device-llm-systems/2025-2503.13421-optimal-expert-selection-for-distributed-mixture-of-experts-at-the-wireless-edge.md",
       "status": "PASS",
       "summary": "分散MoEの専門家を無線品質とタスク適合度で選択し、OFDMA副搬送波と共同最適化するDES/JESA。精度を保つ層に高性能専門家を残し、後段の省エネルギー化を狙う。",
@@ -8944,6 +8971,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2021-439132b7c6e4-lightseq-a-high-performance-inference-library-for-transformers.md",
+      "status": "PASS",
+      "summary": "演算融合、階層型ビーム探索、GPUメモリ共有で可変長Transformer推論を高速化する2021年のCUDA実装。",
+      "char_count": 58,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2022-2205.14135-flashattention.md",
+      "status": "PASS",
+      "summary": "タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。",
+      "char_count": 57,
+      "japanese_ratio": 0.8703703703703703,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md",
       "status": "PASS",
       "summary": "二値符号化した低ビット重みを逆量子化せず、活性値から生成した参照表の部分積を引くGPU行列積により、OPT-175Bの3ビット生成をOPTQ比約2.1倍高速化する。",
@@ -8985,6 +9030,15 @@
       "summary": "CPUのL1キャッシュとSIMDレジスタ制約から低ビットLLMの量子化GEMVを自動生成し、2023年当時のllama.cppと速度・精度の交換関係を検証する。",
       "char_count": 80,
       "japanese_ratio": 0.8596491228070176,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.08691-flashattention-2.md",
+      "status": "PASS",
+      "summary": "初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。",
+      "char_count": 105,
+      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -9169,6 +9223,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
+      "status": "PASS",
+      "summary": "H100のTMA・WGMMA非同期実行とソフトマックス重畳を利用して注意演算を高速化し、FP8の外れ値誤差をブロック量子化と直交変換で低減する。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md",
       "status": "PASS",
       "summary": "逆ヘッセ対角に基づく重み別損失感度で量子化格子を学習し、3ビットの精度と405Bモデルまでの量子化処理の拡張性を改善する。",
@@ -9304,6 +9367,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-2504.04342-pruning-laws-for-large-language-models.md",
+      "status": "PASS",
+      "summary": "LLMの枝刈り率と精度低下・推論速度の関係を2係数のべき乗則で近似し、課題・枝刈り方式ごとの感度、未知モデルへの外挿可能性と破綻条件を測定する。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2025-2504.11651-70-size-100-accuracy-lossless-llm-compression-for-efficient-gpu-inferenc.md",
       "status": "PASS",
       "summary": "BFloat16指数を可変長符号へ可逆圧縮し、GPU上の階層参照表・二段階カーネルでオンライン展開して重み容量を約30%削減。",
@@ -9382,6 +9454,15 @@
       "status": "PASS",
       "summary": "低ランク因子を二値化し三軸スケール・残差経路・Dual-SVIDで0.1 BPWまで圧縮。重みメモリとKV潜在状態の節約を示すが、11.6倍は層カーネル速度。",
       "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2025-2507.12205-toward-efficient-spmv-in-sparse-llms-via-block-extraction-and-compressed.md",
+      "status": "PASS",
+      "summary": "疎LLMのバッチ1デコード用SpMVを階層的ブロック抽出と差分列番号のEC-CSR形式で高速化。FP16カーネルはDASP比幾何平均2.43倍、Llama2-7B実生成は約11〜15%改善。",
+      "char_count": 95,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -10244,6 +10325,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md",
+      "status": "PASS",
+      "summary": "線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。",
+      "char_count": 56,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md",
       "status": "PASS",
       "summary": "FIBERはスレッドとレジスタの結び付きを外し、SM内共有レジスタと細粒度依存管理でTensor Core周辺の固定並列度・データ移動を抑えるGPU設計で、LLM配信をシミュレータ上で世代別に最大2.25倍高速化する。",
@@ -10311,6 +10401,15 @@
       "status": "PASS",
       "summary": "行列積前のRoPEまで表現する注意専用言語をTritonへコンパイルし、GPU世代・系列長ごとの融合損益とKV復号・疎注意の実測を示す。",
       "char_count": 68,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.15627-deepseek-v4-flash-on-amd-gfx90a-correctness-recovery-and-inference-performance-engineering.md",
+      "status": "PASS",
+      "summary": "MI250上のDeepSeek-V4-Flashで数値不具合を修復し、CDNA2向けカーネル・通信・事前充填最適化によりTP8復号をC64で1327.10トークン/秒まで実測した。",
+      "char_count": 90,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -12741,6 +12840,17 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.14851-efficient-serving-of-llm-applications-with-probabilistic-demand-modeling.md",
+      "status": "WARN",
+      "summary": "PDGraphでLLMアプリ全体の確率的需要を推定し、Gittins順序とbackend事前warmを最適化するHermes。A100条件で平均ACT最大77%短縮。",
+      "char_count": 83,
+      "japanese_ratio": 0.7659574468085106,
+      "failures": [],
+      "warnings": [
+        "日本語比率 76.6% < 警告基準 80.0%"
+      ]
+    },
+    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2506.16419-optimizing-moe-routers-design-implementation-and-evaluation-in-transform.md",
       "status": "PASS",
       "summary": "6種類のMoE routerを共通実装で比較し、Linearの低遅延、MLP-Hadamardの集中ルーティング、量子化Qwenへの差し替え時の互換性問題を報告した実装・評価研究。",
@@ -13007,6 +13117,15 @@
       "summary": "絶対出力長の回帰ではなく「どちらが長いか」を成対順位学習し、vLLM待機列を近似SJF順へ並べて先頭待ちを抑える。FCFS比最大15.7倍の遅延削減を報告。",
       "char_count": 78,
       "japanese_ratio": 0.9354838709677419,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2510.03283-mace-a-hybrid-llm-serving-system-with-colocated-slo-aware-continuous-ret.md",
+      "status": "PASS",
+      "summary": "単一GPUでLLM推論と継続LoRA再学習を反復単位で混載するMACE。A6000でスループット最大1.46倍、KV枝刈りには精度損失。",
+      "char_count": 68,
+      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -15753,6 +15872,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md",
+      "status": "PASS",
+      "summary": "200B〜1000B級MoE四モデル・2.4万超要求の専門家選択を時間・空間方向から測定して六つのデータ移動則を抽出し、ウェハ級GPUで平均6.6倍、既存GPUのMoE計算で最大1.25倍の高速化へ結び付ける。",
+      "char_count": 105,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/12-moe-parallelism-communication/2025-2510.20171-collective-communication-for-100k-gpus.md",
+      "status": "PASS",
+      "summary": "GPU常駐可変長AllToAll・零コピーRDMA・CPU制御最適化によりMoE分散推論と超大規模LLM学習の通信を改善するNCCLX。",
+      "char_count": 68,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/12-moe-parallelism-communication/2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md",
       "status": "PASS",
       "summary": "MI300XのDMA放送・連続コピー・事前発行で小粒度通信の起動費用を削減。DMA集団通信が最大4.5倍、CPU退避KVの取得を含むLLM推論でTTFT最大1.65倍改善。",
@@ -16095,6 +16232,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/12-moe-parallelism-communication/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md",
+      "status": "PASS",
+      "summary": "共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。",
+      "char_count": 74,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/12-moe-parallelism-communication/2026-ed9cd1f7c49b-parallelism-strategies-and-concurrency-effects-for-mixture-of-experts-in.md",
       "status": "PASS",
       "summary": "A100上のMoE推論でTP・EP・併用配置を比較。60専門家Qwenの高同時要求ではEPが32.5%高速だが、単純併用は劣後し、同時要求数の調整が重要と示した。",
@@ -16208,6 +16354,15 @@
       "summary": "T5エンコーダの局所注意に各層で生成・破棄するブロック集約大域トークンを加え、長文入力を扱う注意計算の費用を抑えながら要約・質問応答性能を高める。",
       "char_count": 73,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2021-c7730f7e7292-memory-efficient-transformers-via-top-k-attention.md",
+      "status": "PASS",
+      "summary": "全鍵との内積から問い合わせごとに上位k位置だけを保持し、分割処理と逆伝播時の選択値再構成によって、既存注意・フィードフォワード層を再事前学習なしで省メモリ化する。",
+      "char_count": 81,
+      "japanese_ratio": 0.9871794871794872,
       "failures": [],
       "warnings": []
     },
@@ -16349,6 +16504,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md",
+      "status": "PASS",
+      "summary": "質問分布を反映したCPU上の鍵値索引とGPU静的鍵値を組み合わせ、128K文脈を24GB RTX 4090で0.188秒/トークンで生成。",
+      "char_count": 69,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2024-2409.15355-block-attention-for-efficient-prefilling.md",
       "status": "PASS",
       "summary": "検索拡張生成の取得文書を独立ブロックとして事前計算し、位置を再符号化してKV状態を要求間で再利用する。32K入力では最初のトークンまでの時間を3638msから45msへ削減し、FLOPsを99.8%削減する。",
@@ -16434,6 +16598,15 @@
       "status": "PASS",
       "summary": "圧縮・ブロック選択・局所窓の三枝を学習時から統合し、GQA群での連続KV読出しにより長文脈注意の学習と推論を高速化する。",
       "char_count": 60,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2025-2502.12085-apb-accelerating-distributed-long-context-inference-by-passing-compresse.md",
+      "status": "PASS",
+      "summary": "長文をGPU間で分割し、局所重要KVを圧縮して過去ブロックへ渡すAPB。アンカーと改変FlashAttentionを併用し、最大9.2倍の推論速度改善と128K長文評価での品質維持を報告。",
+      "char_count": 94,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -16614,6 +16787,15 @@
       "status": "PASS",
       "summary": "動画トークンには圧縮・重要ブロック選択・直近窓の3経路を学習可能なゲートで組み合わせ、文字トークンは密な注意を保つVideoNSAを提案。長動画理解と計算量・実測遅延の交換条件を評価する。",
       "char_count": 94,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2025-2510.05364-the-end-of-transformers-on-challenging-attention-and-the-rise-of-sub-qua.md",
+      "status": "PASS",
+      "summary": "注意・RNN・SSM・混成方式を計算量、固定状態の検索限界、公開品質指標から横断比較するサーベイ。",
+      "char_count": 49,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -16954,6 +17136,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-2604.22442-hubrouter-a-pluggable-sub-quadratic-routing-primitive-for-hybrid-sequenc.md",
+      "status": "PASS",
+      "summary": "学習ハブでトークンの重要度を推定し、選抜位置だけに注意を適用する軽量ルーティング機構。小規模モデルの高速化と因果性・品質の代償を実験で検証。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2604.22575-spikingbrain2-0-brain-inspired-foundation-models-for-efficient-long-cont.md",
+      "status": "PASS",
+      "summary": "MoBA＋SSEのDSSAハイブリッド5BをTransformerから蒸留変換し、512k入力のvLLM TTFTを67.50→15.03秒に短縮。極長文では10M入力も処理可能だが応答時間は長い。",
+      "char_count": 99,
+      "japanese_ratio": 0.9166666666666666,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2026-2605.01910-stochastic-sparse-attention-for-memory-bound-inference.md",
       "status": "PASS",
       "summary": "ソフトマックス確率に基づく値キャッシュ行の確率抽出とGPU向けの分散低減・タイル予算配分により、長文脈復号時の値読み出し帯域を削減する。",
@@ -17134,6 +17334,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
+      "status": "PASS",
+      "summary": "任意のKVキャッシュ方策を学習中に再現し、二重チェックポイントとKV差分符号化で推論級メモリの長文脈疎注意微調整を実現する。",
+      "char_count": 62,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2608.26070-prefix-sliding-for-efficient-test-time-scaling.md",
+      "status": "PASS",
+      "summary": "推論の指示・問題文を固定保持し、古い中間思考だけを滑動窓から追い出す疎注意方式。4096トークン窓のQwen3-1.7Bでは128K時に全注意比11.7倍の処理量とほぼ同等の推論正解率を報告。",
+      "char_count": 96,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2026-2608.29058-routesparse-input-conditional-pattern-routing-for-budgeted-long-context-.md",
       "status": "PASS",
       "summary": "RouteSparseは入力ごとに疎注意パターンと予算を実測遅延制約下で選び、危険なヘッドを密注意へ戻す。Llama 3.1-8B・128K事前充填6.5倍、RULER低下0.2ポイント。",
@@ -17154,10 +17372,37 @@
       ]
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-2609.07237-cedar-error-bounded-residual-routing-for-efficient-long-context-attention.md",
+      "status": "PASS",
+      "summary": "選外チャンクも要約経路で全域可視性を残し、鍵・値分散に基づく誤差上界で必要なチャンクだけ正確注意へ展開して、128Kで約3倍のカーネル高速化と品質回復を両立する疎注意方式。",
+      "char_count": 86,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2026-2609.07306-routerelay-cross-layer-route-reuse.md",
       "status": "PASS",
       "summary": "動的疎注意の前層経路IDを監視候補付きで再利用し、変化した行だけ再ルーティングして経路スコア計算を約38～52%へ削減するが、現CPU実装は未融合処理で逆に低速。",
       "char_count": 81,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md",
+      "status": "PASS",
+      "summary": "HPC-Ops Top-Kは、標本で上位候補境界を予測し、全行の一回走査で十分性を証明、足りない時だけ回復して正確なK個を選び、長文疎注意の再走査を減らす。",
+      "char_count": 78,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
+      "status": "PASS",
+      "summary": "言語モデル損失を注意ソフトマックス内の連続ゲートへ直接流してコンテキスト順位を学習し、固定Top-K疎注意の精度と長文脈デコード効率を改善する。",
+      "char_count": 72,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -17181,10 +17426,37 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md",
+      "status": "PASS",
+      "summary": "クエリ依存の学習可能な注意閾値とSiLU型の滑らかなロジット圧縮を組み合わせ、推論時にKVブロックを幾何・確率境界で選別して長文脈復号のHBM転送を削減する。",
+      "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2026-2609.20971-rbs-attention.md",
       "status": "PASS",
       "summary": "キーブロック重心と内部半径の二枝選択で平均希釈による重要トークンの見落としを緩和し、長文脈事前入力処理の疎注意を高速化する。",
       "char_count": 62,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md",
+      "status": "PASS",
+      "summary": "平均補償後に残る注意誤差を注意質量とブロック内得点分散の積で推定し、厳密に読む鍵・値ブロックを選ぶことで、長文脈の疎な注意計算の精度と中央処理装置退避効率を改善する。",
+      "char_count": 83,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
+      "status": "PASS",
+      "summary": "再帰型言語モデルで注意の参照先が表現より早く安定する性質を利用し、初期段で発見したブロック作業集合へ後半の注意だけを限定して、再学習なしで深い再帰実行を高速化する。",
+      "char_count": 82,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -17289,6 +17561,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/13-sparse-attention/2026-fa80222132dc-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md",
+      "status": "PASS",
+      "summary": "LLMのSWA化する注意頭を、層感度・層別予算・共同黒箱探索で選び、固定順位方式より長文脈の検索・QA性能を保持する。",
+      "char_count": 59,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md",
       "status": "PASS",
       "summary": "時間認識知識グラフで長期エージェント記憶を管理し、LongMemEval_sで平均115kトークンの全履歴を約1.6kへ圧縮してgpt-4o精度60.2%→71.2%、遅延28.9秒→2.58秒。",
@@ -17352,6 +17633,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2509.01920-dynamic-speculative-agent-planning.md",
+      "status": "PASS",
+      "summary": "エージェントの投機的計画深さをオンライン強化学習で調整し、対象エージェントの計画を保持しつつAPI費用と遅延の交換条件を改善する。",
+      "char_count": 65,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2509.02121-batch-query-processing-and-optimization-for-agentic-workflows.md",
       "status": "PASS",
       "summary": "GPU推論とCPUツールを同一DAGでまとめて配置・バッチ・再利用し、最新版v2で強いエージェント基盤比バッチ最大3.6倍、オンライン処理量最大2.58倍を報告。",
@@ -17365,6 +17655,15 @@
       "status": "PASS",
       "summary": "画像符号化・入力処理・復号にGPUのSMを適応配分し、視覚言語エージェントの要求遅延を抑えつつ画像符号器の重みをCPUへ退避する単一GPU推論基盤。",
       "char_count": 74,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2509.25140-reasoningbank-scaling-agent-self-evolving-with-reasoning-memory.md",
+      "status": "PASS",
+      "summary": "エージェントの成功・失敗履歴から再利用可能な推論戦略を抽出・検索し、並列試行の対比と逐次修正を通じて記憶とテスト時探索を相互改善する。",
+      "char_count": 67,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -17410,6 +17709,24 @@
       "status": "PASS",
       "summary": "分岐するエージェント学習軌跡の共有接頭辞を順・逆伝播で一度だけ処理し、損失等価性を保つ木構造学習。",
       "char_count": 49,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md",
+      "status": "PASS",
+      "summary": "Graph-CoTを分類・推論・行動・検索へ分業し、頂点単位KV再利用、優先度追い出し、検索と生成の重畳を組み合わせ、遅延最大90.3%減・スループット最大15.1倍を報告。",
+      "char_count": 87,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2025-2511.13593-o-mem-omni-memory-system-for-personalized-long-horizon-self-evolving-age.md",
+      "status": "PASS",
+      "summary": "人物属性・出来事・話題・希少語索引を並列検索する長期エージェント記憶。LoCoMoのF1と対話遅延を改善するが、品質比較の再現性に制約がある。",
+      "char_count": 71,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -17757,6 +18074,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2607.15593-scalable-llm-agent-tool-access-in-the-cloud.md",
+      "status": "PASS",
+      "summary": "大量のMCP/OpenAPIツールをゲートウェイで統合し、意味・語彙の混合検索とセッション整合ルーティングにより、LLMエージェントのツール選択時間と文脈消費を削減する実運用基盤。",
+      "char_count": 90,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md",
       "status": "PASS",
       "summary": "元観測を追い出しても後続イベントKVが意味状態を保持する現象をドナー対で分離し、意図的な値非明示の記録でQwen3-8Bの追随率を6%から51%へ改善。保持・読み出し・検索の違いを測定した。",
@@ -17797,6 +18123,15 @@
       "status": "PASS",
       "summary": "タスク単位のKV保持、参照・学習モデルの二方式パイプライン、GPUの弾性再配分を準備済みデータ量で連動させ、複数ターン強化学習の有効処理量を改善する。",
       "char_count": 75,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2608.22237-read-less-solve-more-token-efficient-sparse-reading-for-ai-agents.md",
+      "status": "PASS",
+      "summary": "外部資料の全文投入前に、読解意図と根拠状態を管理して必要部分だけ取得するエージェント読解層。適用判定器で全文読解へ切替え、入力トークンと作業時間を削減する。",
+      "char_count": 78,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -17860,6 +18195,15 @@
       "status": "PASS",
       "summary": "経験再生方式と生成予算を軽量な文脈付きバンディットでタスクごとにオンライン選択し、生涯学習エージェントの精度を保ちながら推論コストを削減する。",
       "char_count": 71,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.14773-pull-lazy-working-memory-materialization.md",
+      "status": "PASS",
+      "summary": "長期対話を決定論的な索引で管理し、質問ごとに必要な原文ターンだけを可逆的に実体化して入力トークンを削減するセッションルータ。",
+      "char_count": 62,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -18351,6 +18695,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/15-inference-simulation-emulation/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md",
+      "status": "PASS",
+      "summary": "LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。",
+      "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/15-inference-simulation-emulation/2026-2608.05926-balance-hybrid-autoregressive-speculative-llm-inference-at-the-network-e.md",
       "status": "PASS",
       "summary": "エッジ上でADとSDを同時運用し、利用者の受け入れ・方式割当・GPU計算時間とメモリを共同最適化する。RTX 4090で計算時間を実測し、無線遅延はシミュレーションで評価した結果、AD-only/SD-onlyに対する平均スループット改善と、厳密探索に対する計算時間短縮を報告する。",
@@ -18373,6 +18726,24 @@
       "status": "PASS",
       "summary": "推論提供の制御判断まで動的グラフ化し、エージェントが検証付きで新機構を局所実装できる高速なシミュレータを構築する。",
       "char_count": 57,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/15-inference-simulation-emulation/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md",
+      "status": "PASS",
+      "summary": "RoofLangはLLM推論を計算・ハードウェアグラフと意味保存変換で表し、実装非依存のシミュレーションを評価器としてAIに配置・並列化・通信構成を探索させる設計基盤である。",
+      "char_count": 87,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/15-inference-simulation-emulation/2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md",
+      "status": "PASS",
+      "summary": "Hopper/Blackwellの非同期GPU機構とTriton AIカーネルを実行駆動で再現し、131構成でサイクル誤差5.24%、16スレッドで7.86倍高速化した現代GPUシミュレータ。",
+      "char_count": 96,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -18544,6 +18915,15 @@
       "status": "PASS",
       "summary": "固定した総モデルビット数でモデル規模と重み精度を比較し、調査範囲では4ビットがほぼ一貫した最適点となることと、その成立条件・例外候補を整理する。",
       "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+      "status": "PASS",
+      "summary": "校正入力と共有逆ヘッセ情報を使う列同期補償で175B級GPTを再学習なしに50〜60%疎化し、量子化と半構造疎化にも対応する。",
+      "char_count": 63,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -18864,6 +19244,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
+      "status": "PASS",
+      "summary": "出力不変の回転で活性化外れ値を分散し、重み・活性化・KVキャッシュを例外チャネルなしで4bit化する。",
+      "char_count": 51,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantizatio.md",
+      "status": "PASS",
+      "summary": "入力の学習可能クリップ値による量子化認識学習と出力尖度正則化を組み合わせ、1B言語モデルでW4A4の精度劣化と重み側への外れ値移動を抑制する。",
+      "char_count": 71,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2024-2405.04532-qserve.md",
       "status": "PASS",
       "summary": "W4A8KV4の段階的量子化とGPUレジスタ内復元、重み再配置、KV4注意を共同設計し、大バッチLLMサービングの実測処理率を改善する。",
@@ -18904,6 +19302,15 @@
       "status": "PASS",
       "summary": "重要重みが構造的に偏る性質を利用し、グループごとにビット幅を割り当てつつ重要度を量子化器校正にも反映する。LLaMA-7Bの2ビット化でメモリを約6分の1にし、従来勾配不要方式よりパープレキシティを48%改善。",
       "char_count": 105,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2024-2405.17849-i-llm-efficient-integer-only-inference-for-fully-quantized-low-bit-large.md",
+      "status": "PASS",
+      "summary": "活性値のチャネル・トークン変動を平滑化と動的整数量子化で抑え、Softmax・SwiGLU・正規化も整数演算化するLLM用学習後量子化方式。",
+      "char_count": 70,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19053,6 +19460,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md",
+      "status": "PASS",
+      "summary": "グループごとに分布適応する低ビット数値型MANTを重みとKVキャッシュへ適用し、専用処理要素で復号・演算を融合する。ASIC評価で平均2.99倍高速化。",
+      "char_count": 76,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2025-2504.02658-milo-efficient-quantized-moe-inference-with-mixture-of-low-rank-compensa.md",
       "status": "PASS",
       "summary": "MoEの3ビット量子化誤差を層・専門家別の低ランク補償で回復し、隙間なしの3ビット詰め込みと融合GPU演算でバッチ推論を高速化する。",
@@ -19116,6 +19532,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2025-2510.01240-rsavq-riemannian-sensitivity-aware-vector-quantization-for-large-languag.md",
+      "status": "PASS",
+      "summary": "フィッシャー情報行列から量子化誤差方向とチャネル別ビット配分を制御し、2〜4ビットLLMの品質と容量効率を改善する。",
+      "char_count": 58,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2025-2510.03274-quant-dllm-post-training-extreme-low-bit-quantization-for-diffusion-larg.md",
       "status": "PASS",
       "summary": "拡散型LLMのマスク復元過程を模擬した校正、データ依存の二値近似、重要度別1/2/3ビット配分により、平均2ビットの重み容量を維持しながら推論品質を改善する。",
@@ -19129,6 +19554,51 @@
       "status": "PASS",
       "summary": "Q/K/Vの共同SVD、層横断ランク配分、回転・β最適化量子化でVLMの重みとKV中間表現を圧縮。RTX 4070 12GBでオフロード回避を含む最大13.1倍。",
       "char_count": 81,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md",
+      "status": "PASS",
+      "summary": "ブロック内の外れ値比κと量子化誤差を理論化し、MXINT8がMXFP8を12モデルで上回る一方、NVINT4の優劣はHadamard回転で反転することを示す。",
+      "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2025-2511.04063-dartquant-efficient-rotational-distribution-calibration-for-llm-quantiza.md",
+      "status": "PASS",
+      "summary": "Whip損失とQR直交化で量子化向けの活性分布を高速校正。70Bの回転校正で約47倍のGPU時間削減と約10倍のピークメモリ削減を報告。",
+      "char_count": 68,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2025-2511.11663-specquant-spectral-decomposition-and-adaptive-truncation-for-ultra-low-b.md",
+      "status": "PASS",
+      "summary": "活性外れ値の尺度移送、チャネル別フーリエ低周波保持、高精度枝路と4ビット残差を組み合わせ、重み・活性の同時低ビット量子化時の精度を改善する。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2025-2511.17809-adaptive-layer-wise-transformations-for-post-training-quantization-of-la.md",
+      "status": "PASS",
+      "summary": "注意層とFFN層で尖度と適切な変換の相関が逆になることを利用し、回転・アフィン変換を層別選択。極低ビット量子化の品質を改善し、変換選択時間を微分探索の約3分の1にする。",
+      "char_count": 84,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2025-38c6f5463687-efficient-llm-deployment-in-consumer-electronics-applications-via-resour.md",
+      "status": "PASS",
+      "summary": "端末のメモリ・遅延制約を整数線形計画に取り込み、層別ビット幅を重み群の重要度で補正するRAS-MQ。Jetson上の低ビット推論で精度と容量を改善する一方、量子化自体はサーバー側で行う。",
+      "char_count": 93,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19224,6 +19694,53 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2604.07955-rethinking-residual-errors-in-compensation-based-llm-quantization.md",
+      "status": "PASS",
+      "summary": "GPTQ/GPTAQの逐次重み補償で、元の全精度層出力からのずれを補償認識誤差として明示的に補正する事後量子化改良。",
+      "char_count": 58,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2604.13806-robust-ultra-low-bit-post-training-quantization-via-stable-diagonal-curv.md",
+      "status": "PASS",
+      "summary": "雑音に弱いヘッセ非対角項を捨て、対角重要度と交互の重み付き回帰で2ビット量子化後の推論品質を改善するDASH-Q。",
+      "char_count": 57,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2604.23475-supernodes-and-halos-loss-critical-hubs-in-llm-feed-forward-layers.md",
+      "status": "WARN",
+      "summary": "FFNの活性×勾配に基づく損失重要チャネルsupernodeと次層のread haloを特定し、これらを保護するSCAR構造化枝刈りで高疎化時の性能崩壊を抑える研究。",
+      "char_count": 83,
+      "japanese_ratio": 0.7638888888888888,
+      "failures": [],
+      "warnings": [
+        "日本語比率 76.4% < 警告基準 80.0%"
+      ]
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2605.04062-edgerazor-a-lightweight-framework-for-large-language-models-via-mixed-pr.md",
+      "status": "PASS",
+      "summary": "4ビットと1.58ビットの周期配置、入力適応型の教師層選択、教師エントロピーに基づく蒸留損失を組み合わせ、極低ビットLLMの精度と端末実行効率を両立する。",
+      "char_count": 77,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2605.04738-osaq-outlier-self-absorption-for-accurate-low-bit-llm-quantization.md",
+      "status": "PASS",
+      "summary": "近似ヘッセ零空間で外れ値を加法的に吸収する低ビット重み量子化前処理。2ビットGPTQのPPLを36.8→21.2、推論時追加演算なし。",
+      "char_count": 67,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2605.08894-fitting-is-not-enough-smoothness-in-extremely-quantized-llms.md",
       "status": "PASS",
       "summary": "極低ビットLLMの品質劣化を勾配平滑性と次トークン候補の縮退で分析し、学習後量子化LGPと量子化認識学習LGRで補完する。",
@@ -19251,10 +19768,55 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2605.25203-influence-inspired-spectral-rotations-for-extreme-low-bit-llm-quantizati.md",
+      "status": "PASS",
+      "summary": "固定Hadamard回転と活性化スペクトルエネルギーに基づく列スケールで2ビット丸め誤差を再配分。Qwen3正規化・RoPE互換拡張も検証するが、4ビットでは利得が消える。",
+      "char_count": 86,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2605.25880-the-quantization-benefits-of-residual-free-transformers.md",
+      "status": "PASS",
+      "summary": "残差接続が活性値の尖度と外れ値を増やし低ビット量子化を難しくすることを検証。残差なし＋直交初期化＋KL ShampooでW8A6平均精度0.414、残差ありの0.348を上回る。",
+      "char_count": 89,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2605.26339-qam-w-joint-2d-codebook-quantization-for-llm-weights-via-hadamard-rotati.md",
+      "status": "PASS",
+      "summary": "重みをHadamard回転後に2次元コードブックで圧縮。5.5ビット相当でBF16に近いPPLを保つが、4ビットではQTIPに劣り実測推論高速化は未確認。",
+      "char_count": 77,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2605.29843-harp-hadamard-preconditioned-adaptive-rotation-processor-for-extreme-llm.md",
       "status": "PASS",
       "summary": "低ビット量子化の固定アダマール回転を、層別の曲率と量子化符号帳へ適応する学習可能な多段直交変換へ置き換え、2ビットでの精度損失を軽減する。",
       "char_count": 69,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md",
+      "status": "PASS",
+      "summary": "NVFP4のブロック別にE2M1/E1M2を選び、FP8スケール符号ビットへ形式情報を格納。4ビット量子化精度を改善し、合成回路の面積増は3.1%。",
+      "char_count": 74,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2606.01412-gptq-intrinsic-lora-a-near-optimal-algorithm-for-low-precision-quantizat.md",
+      "status": "PASS",
+      "summary": "GPTQ量子化時に低ランク補正を拡張Hessianへ組み込み、較正行列の低ランク残差に依存する誤差保証とBid-Up反復改善を与える学習不要の量子化方式。",
+      "char_count": 77,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19269,11 +19831,38 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2606.04620-qublast-a-framework-for-quantizing-large-language-models-with-block-leve.md",
+      "status": "PASS",
+      "summary": "ブロック別の交差エントロピー感度から許容ビット幅を選別し、活性値外れ値の縮尺補正を加えて、品質制約内で最小容量となる混合精度LLM量子化構成を選ぶ。",
+      "char_count": 74,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2606.11244-spear-error-adaptive-low-bit-serving.md",
       "status": "PASS",
       "summary": "トークン適応型量子化誤差補償とカーネル・通信・SLOスケジューリングを共同設計し、W4–FP16のperplexity差を56–75%回復。",
       "char_count": 70,
       "japanese_ratio": 0.8076923076923077,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2606.12876-multi-bitwidth-quantization-for-llms-using-additive-codebooks.md",
+      "status": "PASS",
+      "summary": "加算型コードブックの各接頭部分を同時に量子化学習し、単一モデルを3〜5ビット相当で運用。通常の単純切捨てによる精度崩壊を抑制するが実測速度は未検証。",
+      "char_count": 74,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2606.13054-twla-achieving-ternary-weights-and-low-bit-activations-for-llms-via-post.md",
+      "status": "PASS",
+      "summary": "三値符号帳に合わせる重みの直交変換、活性値外れ値の緩和、隣接層の量子化誤差を考慮した混合精度配分により、既存LLMのW1.58A4事後量子化を実現する。",
+      "char_count": 76,
+      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -19296,6 +19885,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
+      "status": "PASS",
+      "summary": "重みの平均・尺度・しきい値を変調し、滑らかな三値化から硬い三値化へ移行して、既存LLMを少量較正データで1.58ビット重みへ変換する。",
+      "char_count": 67,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2607.07964-kronq-llm-quantization-via-kronecker-factored-hessian.md",
+      "status": "PASS",
+      "summary": "入力共分散に加えて出力勾配共分散を用い、双方向回転・スケーリングと感度別混合精度で超低ビット量子化を安定化。LLaMA-3-70BのW2でPPL 7.93、単一GPUの7B〜13Bで復号1.25〜2.51倍。",
+      "char_count": 104,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2607.08643-bisco-llm-lookup-free-binary-spherical-coding-for-extreme-low-bit-large-.md",
       "status": "PASS",
       "summary": "コードブック不要の二値球面符号を基底＋残差の2段で重みへ適用し、重要チャネル保護と種別別蒸留で2ビット級の精度を回復。Qwen3-8Bで元モデルとの差1.87ポイントだが、未報告評価と復号実行コストに注意。",
@@ -19305,10 +19912,55 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2608.01078-attend-to-your-own-thoughts-breaking-the-barrier-for-post-training-quant.md",
+      "status": "PASS",
+      "summary": "元の推論モデル自身が生成した思考過程を校正に使うAYOTをCAT-Qへ組み込み、推論型LLMの三値学習後量子化での精度崩壊を抑え、llama.cppで実際のメモリ・復号速度改善も示す。",
+      "char_count": 92,
+      "japanese_ratio": 0.8947368421052632,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md",
+      "status": "PASS",
+      "summary": "4ビット化後に高精度のまま残る出力ヘッドを、量子化核と活性値計量による低ランク残差補正で3.7〜3.9倍圧縮し、Qwen3-8Bで相対困惑度1.007を達成した。",
+      "char_count": 81,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md",
+      "status": "PASS",
+      "summary": "ブロックごとの精度回復方式と重み・活性値ごとの表現を適応選択するAdaMXと22nm試作アクセラレータを提案し、同等ビット幅のままMXFP4の常識推論精度損失を83%、MMLU損失を82%回復する。",
+      "char_count": 99,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2608.04048-recurrent-residual-quantization-a-progressive-multi-precision-representa.md",
       "status": "PASS",
       "summary": "2ビット基底と2ビット残差を段階的に合成して、単一重みパッケージから2/4/6/8ビットを選べる後学習量子化。",
       "char_count": 55,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2608.11045-reround-reconstructive-rounding-to-resolve-midpoint-ambiguity-in-calibra.md",
+      "status": "PASS",
+      "summary": "元のLLM重みから学習した拡散モデルで中点付近の量子化丸めを選び直し、主要特異値の保存で候補を選択して3・4ビットの精度を改善する。",
+      "char_count": 66,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md",
+      "status": "PASS",
+      "summary": "外れ値認識W4A16の密行列積と高精度疎補正を同一タイルで融合し、非融合方式比で最大1.53倍高速化する。バッチ1〜2のパディング悪化と品質・メモリの交換条件も評価する。",
+      "char_count": 85,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19332,10 +19984,28 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2608.21952-ssdi8-accurate-and-efficient-8-bit-quantization-for-state-space-duality.md",
+      "status": "PASS",
+      "summary": "Mamba-2のSSD内部で活性値をINT8のまま再利用し、要素積を等価変形して疎な入力を低精度行列積へつなぐ。A5000のMamba-2 2.7BではSSD処理がFP16比最大1.47倍となり、Orin NXでも遅延を減らす。",
+      "char_count": 114,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2608.24173-sandwichquant-which-parameters-matter-before-and-after-quantization.md",
       "status": "PASS",
       "summary": "正規化層の少数アフィン係数だけを量子化前後で二度適応させ、低次元の高効率補正方向を利用することで、強いW2A4KV4量子化でも困惑度と下流精度を一貫して改善する。",
       "char_count": 81,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md",
+      "status": "PASS",
+      "summary": "実量子化ノイズでFisher情報の層別感度を測り、PPOで全体ビット予算を層へ配分して、3〜4bit域の品質劣化を一様量子化より抑える。",
+      "char_count": 68,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19354,6 +20024,15 @@
       "status": "PASS",
       "summary": "二値行列の二重因子化をヌル空間補償で安定化し、Shapley値で層・モジュールの容量を配分することで、対象線形重みを実効1.0ビット/重みに保ったままBF16比平均2.5倍高速化と90%以上のメモリ削減を実現する。",
       "char_count": 107,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.08135-kbbq-a-predictive-noise-law-and-the-limits-of-spectrum-flattening-in-fp4.md",
+      "status": "PASS",
+      "summary": "浮動小数点4ビット量子化の雑音を参加係数κで説明し、理論上の完全平坦化をλで抑えて実際のモデル精度を改善する。",
+      "char_count": 55,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19397,10 +20076,46 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.16338-breaking-the-1-58-bit-barrier-for-ternary-llms.md",
+      "status": "PASS",
+      "summary": "三値重みのゼロ偏りを利用するBITCOSで格納量を最小1.485ビット/重みまで下げ、専用CPU・Xe2復号で一要求デコードを最大1.27倍高速化する。",
+      "char_count": 76,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md",
+      "status": "PASS",
+      "summary": "正答・誤答の思考過程を同一問題で対にし、文ごとの因果的寄与で較正活性値を再重み付けすることで、一発枝刈り後の推論精度と停止挙動を改善する。",
+      "char_count": 69,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2609.19441-prede-quantization-task-degradation-prediction.md",
       "status": "PASS",
       "summary": "固定観測ログ上の行動偏差を少数の閉ループ結果で方策別に較正し、未見量子化構成を受理・棄却・保留へ分けて実機試験の対象を絞る方式。",
       "char_count": 64,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md",
+      "status": "PASS",
+      "summary": "VLMのマルチモーダル外れ値に対し、要素別指数＋共有仮数へマイクロスケーリングを反転し、4bit級の端から端までの量子化と乗算器不要のシフト加算PEを同時に実現する。",
+      "char_count": 83,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.22106-prquant-permutation-residual-quantization-for-low-overhead-inference.md",
+      "status": "PASS",
+      "summary": "低精度化で誤差の大きい重み経路を連続した末尾へ集め、事前計算した重み残差を単一のMXFP4行列積で補償し、通常の量子化方式に近い生成速度で精度を改善する。",
+      "char_count": 77,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19415,10 +20130,46 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
+      "status": "PASS",
+      "summary": "視覚・言語別のフィッシャー計量と疎回転で低ビット量子化誤差を低感度方向へ寄せ、精度を改善するが、校正費用とオンライン活性回転が必要。",
+      "char_count": 66,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.25916-beyond-scalar-sensitivity-activation-aware-mixed-precision-llm-quantizat.md",
+      "status": "PASS",
+      "summary": "活性値共分散と出力感度を保持した量子化誤差で重み行列のビット数を割り当て、隣接層の誤差結合を用いた交換探索で低ビット時の精度を改善する。",
+      "char_count": 68,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.31009-g-ptq-improving-llm-post-training-quantization-with-generalized-gradient.md",
+      "status": "PASS",
+      "summary": "Transformerブロックごとに勾配・曲率を再推定し、信頼領域付き一次・二次誤差補償で低ビット学習後量子化の精度を改善する。",
+      "char_count": 64,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2609.33887-faster-block-diffusion-serving-with-distribution-free-risk-guarantees.md",
       "status": "PASS",
       "summary": "ブロック拡散推論の受理閾値などを、基準正答からの新規誤答率に対する有限標本検定で選別。LLaDA2数学で危険予算0.10時、確定トークン/前向き計算が37.5%増。",
       "char_count": 82,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.39223-qatfactory-a-versatile-deployment-aligned-framework-for-quantization-awa.md",
+      "status": "PASS",
+      "summary": "推論エンジンのNVFP4・MXFP4・Q4_K数値規則をBF16学習で模擬し、低精度のまま直接配備できるモデルを自己蒸留・強化学習で生成する公開基盤。",
+      "char_count": 75,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19529,6 +20280,15 @@
       "status": "PASS",
       "summary": "長文脈エージェント推論の帯域・容量の二重メモリ壁に対し、平坦化シストリック配列、非対称4ビット量子化、FlashAttention専用支援を共同設計し、シミュレーションでA100比最大2.23倍、TPU v6e比最大4.70倍のスループットを示す。",
       "char_count": 124,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/17-pim-near-data-acceleration/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md",
+      "status": "PASS",
+      "summary": "活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。",
+      "char_count": 72,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19849,6 +20609,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
+      "status": "PASS",
+      "summary": "学習と推論の電力ピークの違いを計測し、優先度別の二段階制御POLCAにより、既存電力予算で30%の追加サーバー収容をシミュレーション評価する。",
+      "char_count": 71,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2024-f40d5b5275ad-measuring-and-improving-the-energy-efficiency-of-large-language-models-i.md",
+      "status": "PASS",
+      "summary": "CPU/GPU/DRAM/SSD別の推論エネルギーをEnergyMeterで測定し、バッチ化・モデル構造・量子化実装が省電力に与える影響を実機で比較。バッチ増大で最大20倍のトークン当たり省エネルギーを観測。",
+      "char_count": 104,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2501.03895-llava-mini-efficient-image-and-video-large-multimodal-models-with-one-vi.md",
       "status": "PASS",
       "summary": "視覚情報をLLM投入前にテキストへ事前融合し、画像トークンを576個から1個へ圧縮。Vicuna-7Bの画像理解精度を概ね維持し、A100で推論遅延113.04msから38.64msへ削減。",
@@ -19961,6 +20739,24 @@
       ]
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md",
+      "status": "PASS",
+      "summary": "GPU推論32,500件超の計測から要求別電力量をモデル化。未学習Qwen2.5-14Bで平均絶対百分率誤差10.48%、出力長とバッチ・KV余裕が支配要因。",
+      "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md",
+      "status": "PASS",
+      "summary": "数学・コード・科学の200問を出力長のモデル間分散で選び、正答率と生成トークン費用をOckScoreで評価する。近い正答率でも約26倍の出力長差を示す。",
+      "char_count": 76,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2511.16595-timeviper-a-hybrid-mamba-transformer-vision-language-model-for-efficient.md",
       "status": "PASS",
       "summary": "Mamba-Transformer混合モデルの中間層で視覚情報を指示トークンへ移して圧縮し、4096フレーム時のメモリ54.8%減を報告。ただし長尺精度の検証は限定的。",
@@ -19988,6 +20784,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md",
+      "status": "PASS",
+      "summary": "GPT-4o応答14,301件の単語数をGEVとGPDで近似し、尾部適合R²=0.9993。LLM配信の応答長予測候補だが実機SLO検証は未実施。",
+      "char_count": 73,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md",
       "status": "PASS",
       "summary": "基盤モデルの効率化を構造・圧縮アルゴリズム・クラウド/エッジシステムに分解し、KV・MoE・量子化・推論スケジューリングを横断整理した39ページの査読サーベイ。",
@@ -20001,6 +20806,15 @@
       "status": "PASS",
       "summary": "35.4億件の本番推論要求を顧客別に分解し、到着率・バースト・長さ・会話を再合成して設備計画に使える現実的な負荷を生成する。",
       "char_count": 62,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md",
+      "status": "PASS",
+      "summary": "公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。",
+      "char_count": 66,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -20222,6 +21036,33 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md",
+      "status": "PASS",
+      "summary": "10種のエージェント記憶方式を構築・検索・生成の段階別に計測し、構築費用・GPU利用率・鮮度・遅延尾部・記憶増加率の設計上の制約を明らかにする。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2606.11690-beyond-per-token-pricing-a-concurrency-aware-methodology-for-llm-infrast.md",
+      "status": "PASS",
+      "summary": "H100/A100上の実測で、同じモデル・GPUでも要求率により出力トークン単価が7～36倍変動。最大スループット前提の費用試算を実負荷・遅延制約で補正する。",
+      "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2606.11916-characterizing-software-aging-in-gpu-based-llm-serving-systems.md",
+      "status": "PASS",
+      "summary": "6種類のGPU LLMサービング構成を計216時間連続運転し、全構成でホスト側のメモリ経年劣化を検出。リーク率はvLLM V1単体+1.8KB/時からTriton+V0の+157KB/時まで大差があり、配置・ランタイム選択が長期信頼性を左右することを示す。",
+      "char_count": 128,
+      "japanese_ratio": 0.9540229885057471,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2606.27791-nll-guided-full-attention-layer-selection-for-training-free-sliding-wind.md",
       "status": "PASS",
       "summary": "回答トークンの負対数尤度の悪化量から全注意が必要なTransformer層を選び、長文脈の局所注意適応で品質と計算予算の交換関係を改善する。",
@@ -20258,10 +21099,37 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md",
+      "status": "PASS",
+      "summary": "疎MoEの専門家加算順序だけで内部状態と生成文が分岐しうることを全順列・状態再構成で実証し、BF16項＋FP32累算を評価範囲の安定な互換契約として特定する。",
+      "char_count": 79,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.00077-beyond-accuracy-auditing-spatial-provenance-in-visual-token-pruning-for-.md",
+      "status": "PASS",
+      "summary": "視覚トークン削減後のOCR根拠領域の空間的出自を精度・誤陽性・実測高速化と併せて監査し、同じ精度・保持率でも根拠の残り方が異なることを示す。",
+      "char_count": 70,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.00423-bottleneck-preserving-witnessing.md",
       "status": "PASS",
       "summary": "スケジューリング・入力処理・生成・KVキャッシュの各ボトルネックを実機測定で独立確認し、四要素すべてに複数の証拠を残す小さなLLMサービング再生用トレースを選ぶ。",
       "char_count": 81,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.07968-thinking-hard-not-smart-reasoning-models-fail-to-ration-test-time-comput.md",
+      "status": "PASS",
+      "summary": "複数問題が共有する推論トークン予算の配分を評価。現行推論モデルは問題価値より提示順に従い、計画指示でも価値に応じた優先順位付けが弱い。",
+      "char_count": 67,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -20285,10 +21153,55 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.26389-lowrankarena-a-standardized-evaluation-platform-for-svd-based-llm-compre.md",
+      "status": "PASS",
+      "summary": "特異値分解型LLM圧縮5方式を統一条件で再評価し、モデル依存の順位逆転、困惑度の崩壊、入力処理高速化と生成全体の減速の乖離を検証。3TiB超の再現用成果を公開。",
+      "char_count": 80,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md",
+      "status": "PASS",
+      "summary": "MoEの融合カーネル・4/8ビット量子化・グラフコンパイルを単体とE2Eで測定し、局所高速化が起動律速や品質へどう波及するかを分解して、置換可能な最適化の限界を明らかにする研究。",
+      "char_count": 89,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2608.28444-sliding-window-beats-linear-attention.md",
+      "status": "PASS",
+      "summary": "注意シンク4個を保持する学習不要の窓型注意が、線形注意への追加学習後変換より強い比較基準となることを、一般知識・生成・長文検索・速度で検証した。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md",
       "status": "PASS",
       "summary": "拡散言語モデルの補完長を双方向隠れ状態から直接予測し、近傍の複数長を遮断注意で並列復号、内部整合性と後続文脈適合度で一括選択して長さ探索を省く。",
       "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.07282-stream-stability-long-term-recall-threeh.md",
+      "status": "PASS",
+      "summary": "長時間生成の安定性・過去情報への因果アクセス・タスク効用をThreeHの3到達距離へ分離し、注意シンクの安定生成を長期記憶と誤認しない評価契約を示す。",
+      "char_count": 75,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.07664-accuracy-is-not-enough-a-divergence-based-approach-to-evaluate-fidelity-.md",
+      "status": "PASS",
+      "summary": "量子化LLMの正答率だけでは見えない確率分布の変化を、BF16基準の全語彙TVD・JSDで測定し、Q4_KとQ4_0の差を明示する。",
+      "char_count": 66,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -20299,6 +21212,51 @@
       "summary": "20モデル×7デバイス×3量子化×8推論系を精度・遅延・電力・メモリで統一測定し、実測プロファイルから制約付き配備構成まで選ぶ基盤。",
       "char_count": 66,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md",
+      "status": "PASS",
+      "summary": "H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。",
+      "char_count": 92,
+      "japanese_ratio": 0.9285714285714286,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.14864-gguf-metadata-prediction-of-single-sequence-llama-cpp-throughput-across-.md",
+      "status": "PASS",
+      "summary": "GGUFメタデータからMoE有効重みと層別KV転送量を推定し、llama.cpp単一系列の復号速度を予測。未知モデルの誤差はM4 Max二機種で13.1/14.4%、RTX 5080で36.1%。",
+      "char_count": 98,
+      "japanese_ratio": 0.8545454545454545,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.17863-inference-engineering-pareto-atlas.md",
+      "status": "PASS",
+      "summary": "54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。",
+      "char_count": 59,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md",
+      "status": "PASS",
+      "summary": "自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。",
+      "char_count": 72,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md",
+      "status": "PASS",
+      "summary": "Apple Siliconの九推論基盤を速度・共有メモリ・忠実度・新モデル対応・複数機で横断監査し、vllm-metalの並行処理と遠隔直接メモリアクセスを使うテンソル並列の優位を示す。",
+      "char_count": 93,
+      "japanese_ratio": 0.8831168831168831,
       "failures": [],
       "warnings": []
     },
@@ -20336,6 +21294,15 @@
       "status": "PASS",
       "summary": "全QKスコアの探索を保ちつつ注意確率質量から後段計算を選択し、訓練・推論の注意演算を高速化する融合カーネル。",
       "char_count": 54,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md",
+      "status": "PASS",
+      "summary": "単一MoE層の選択可能プローブと二段階グループ検査で、特権監視なしにグレー障害GPU・通信経路をアプリ層から局所化し、診断プローブを約20倍削減する。",
+      "char_count": 75,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -20980,6 +21947,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/22-diffusion-decoding-efficiency/2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md",
+      "status": "PASS",
+      "summary": "拡散復号の信頼度と安定区間終端の履歴分散から探索・高速段階を切り替え、区間内を並列確定、区間外を再利用する。GPQA特定条件で15.63倍、キャッシュ併用34.22倍だが後者は精度低下。",
+      "char_count": 93,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/22-diffusion-decoding-efficiency/2025-2511.21103-from-bits-to-rounds-parallel-decoding-with-exploration-for-diffusion-lan.md",
       "status": "PASS",
       "summary": "拡散LLMの復号反復数に情報量の下界を導き、区間間並列化と高情報量トークン探索で順伝播回数を26〜61%削減。",
@@ -21439,24 +22415,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2021-439132b7c6e4-lightseq-a-high-performance-inference-library-for-transformers.md",
-      "status": "PASS",
-      "summary": "演算融合、階層型ビーム探索、GPUメモリ共有で可変長Transformer推論を高速化する2021年のCUDA実装。",
-      "char_count": 58,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2021-c7730f7e7292-memory-efficient-transformers-via-top-k-attention.md",
-      "status": "PASS",
-      "summary": "全鍵との内積から問い合わせごとに上位k位置だけを保持し、分割処理と逆伝播時の選択値再構成によって、既存注意・フィードフォワード層を再事前学習なしで省メモリ化する。",
-      "char_count": 81,
-      "japanese_ratio": 0.9871794871794872,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2022-0ed2662d9eee-iron-private-inference-on-transformers.md",
       "status": "PASS",
       "summary": "Transformerの秘匿推論を、準同型暗号行列積の密な多項式パッキングと非線形演算の専用二者計算で高速化。BERTのLAN評価でSIRNN比3.30～11.83倍の実行時間短縮。",
@@ -21507,15 +22465,6 @@
       "summary": "非対称符号器・復号器と共有KV注意で大量のコード候補生成を高速化し、公開例題による実行フィルタと出力挙動クラスタで10提出へ絞り、競技問題を解く。",
       "char_count": 73,
       "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2022-2205.14135-flashattention.md",
-      "status": "PASS",
-      "summary": "タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。",
-      "char_count": 57,
-      "japanese_ratio": 0.8703703703703703,
       "failures": [],
       "warnings": []
     },
@@ -21574,15 +22523,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
-      "status": "PASS",
-      "summary": "校正入力と共有逆ヘッセ情報を使う列同期補償で175B級GPTを再学習なしに50〜60%疎化し、量子化と半構造疎化にも対応する。",
-      "char_count": 63,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2023-2301.09262-attmemo-accelerating-self-attention-with-memoization-on-big-memory-syste.md",
       "status": "PASS",
       "summary": "自己注意行列をTB級メモリで再利用。CPUの小型Transformerで平均22%・最大68%高速化するが、DBは575～1250GB必要。LLaMA-65Bは可能性検証のみ。",
@@ -21623,6 +22563,15 @@
       "status": "PASS",
       "summary": "回答の正確さを小型判定器で推定し、費用制約下で複数LLM APIの呼出し順序と停止閾値を最適化する段階的推論方式。",
       "char_count": 57,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2023-2305.12458-infor-coef-information-bottleneck-based-dynamic-token-downsampling-for-c.md",
+      "status": "PASS",
+      "summary": "Infor-Coefは静的なBERT構造剪定と情報ボトルネックで学習した層別トークン選択を併用し、FLOPsを削減する。",
+      "char_count": 60,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -21695,15 +22644,6 @@
       "status": "PASS",
       "summary": "注意内積の大要素を量子探索で抽出し、疎成分と階数1の背景成分で注意を近似する理論方式。古典近似と条件付き下界も比較する。",
       "char_count": 60,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-2307.08691-flashattention-2.md",
-      "status": "PASS",
-      "summary": "初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。",
-      "char_count": 105,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -22251,15 +23191,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md",
-      "status": "PASS",
-      "summary": "出力不変の回転で活性化外れ値を分散し、重み・活性化・KVキャッシュを例外チャネルなしで4bit化する。",
-      "char_count": 51,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md",
       "status": "PASS",
       "summary": "各層で上位kトークンだけを注意・MLPへ通し、残りを残差経路へ迂回させることで、静的計算形状のままトークン別の処理深さを動的に配分する。",
@@ -22282,15 +23213,6 @@
       "status": "PASS",
       "summary": "100フレームを短時間区間別の類似度トークン統合と全体文脈で305視覚トークンへ圧縮し、長時間動画質問応答の精度とGPUメモリの交換条件を評価する。",
       "char_count": 74,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2404.03605-mitigating-the-impact-of-outlier-channels-for-language-model-quantizatio.md",
-      "status": "PASS",
-      "summary": "入力の学習可能クリップ値による量子化認識学習と出力尖度正則化を組み合わせ、1B言語モデルでW4A4の精度劣化と重み側への外れ値移動を抑制する。",
-      "char_count": 71,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -22422,15 +23344,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2405.17849-i-llm-efficient-integer-only-inference-for-fully-quantized-low-bit-large.md",
-      "status": "PASS",
-      "summary": "活性値のチャネル・トークン変動を平滑化と動的整数量子化で抑え、Softmax・SwiGLU・正規化も整数演算化するLLM用学習後量子化方式。",
-      "char_count": 70,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md",
       "status": "PASS",
       "summary": "VideoTreeは動画の視覚クラスタを質問関連度で階層展開して説明対象を絞る。EgoSchemaでは66.2%・20.1秒（LLoVi-bestは61.2%・24.8秒）を報告するが、最速設定の遅延は逆転する。",
@@ -22521,15 +23434,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md",
-      "status": "PASS",
-      "summary": "H100のTMA・WGMMA非同期実行とソフトマックス重畳を利用して注意演算を高速化し、FP8の外れ値誤差をブロック量子化と直交変換で低減する。",
-      "char_count": 72,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
       "status": "PASS",
       "summary": "推論時の探索と逐次修正を問題難易度別に配分することで、best-of-Nより少ない生成予算で数学問題の正答率を改善。大モデルの事前学習との計算量交換条件も検証。",
@@ -22570,15 +23474,6 @@
       "status": "PASS",
       "summary": "音声特徴をLlama-3.1-8Bへ直接入力し、言語モデルの隠れ状態からCTC型音声デコーダで並行合成。236ミリ秒の初期応答と音声品質の交換条件を実機評価する。",
       "char_count": 81,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md",
-      "status": "PASS",
-      "summary": "質問分布を反映したCPU上の鍵値索引とGPU静的鍵値を組み合わせ、128K文脈を24GB RTX 4090で0.188秒/トークンで生成。",
-      "char_count": 69,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -22908,15 +23803,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md",
-      "status": "PASS",
-      "summary": "学習と推論の電力ピークの違いを計測し、優先度別の二段階制御POLCAにより、既存電力予算で30%の追加サーバー収容をシミュレーション評価する。",
-      "char_count": 71,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md",
       "status": "PASS",
       "summary": "判別型Transformerの早期終了経路を独立した低階数適応器で学習し、隣接出口蒸留と一括演算で分類精度と推論時間の交換条件を改善する。",
@@ -22930,15 +23816,6 @@
       "status": "PASS",
       "summary": "FSSに基づくGPU秘匿推論で非線形演算と通信を最適化し、CrypTen比オンライン遅延12.2～19倍改善。Llama2-13Bは37.59秒だが事前鍵419GBを要する。",
       "char_count": 87,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-f40d5b5275ad-measuring-and-improving-the-energy-efficiency-of-large-language-models-i.md",
-      "status": "PASS",
-      "summary": "CPU/GPU/DRAM/SSD別の推論エネルギーをEnergyMeterで測定し、バッチ化・モデル構造・量子化実装が省電力に与える影響を実機で比較。バッチ増大で最大20倍のトークン当たり省エネルギーを観測。",
-      "char_count": 104,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -23090,15 +23967,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2502.12085-apb-accelerating-distributed-long-context-inference-by-passing-compresse.md",
-      "status": "PASS",
-      "summary": "長文をGPU間で分割し、局所重要KVを圧縮して過去ブロックへ渡すAPB。アンカーと改変FlashAttentionを併用し、最大9.2倍の推論速度改善と128K長文評価での品質維持を報告。",
-      "char_count": 94,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md",
       "status": "PASS",
       "summary": "ETSは報酬・KV共有費用・意味的多様性を整数線形計画で統合。探索幅256のLlemma-34BでREBASE比KV量1.8倍削減、実測スループット1.4倍。",
@@ -23140,15 +24008,6 @@
       "summary": "各推論段階を最小限のドラフトへ圧縮するpromptingにより、追加学習なしでChain-of-Thoughtの生成トークン・費用・応答遅延を減らす。",
       "char_count": 75,
       "japanese_ratio": 0.8421052631578947,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2502.18755-m-ant-efficient-low-bit-group-quantization-for-llms-via-mathematically-a.md",
-      "status": "PASS",
-      "summary": "グループごとに分布適応する低ビット数値型MANTを重みとKVキャッシュへ適用し、専用処理要素で復号・演算を融合する。ASIC評価で平均2.99倍高速化。",
-      "char_count": 76,
-      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -23704,15 +24563,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md",
-      "status": "PASS",
-      "summary": "拡散復号の信頼度と安定区間終端の履歴分散から探索・高速段階を切り替え、区間内を並列確定、区間外を再利用する。GPQA特定条件で15.63倍、キャッシュ併用34.22倍だが後者は精度低下。",
-      "char_count": 93,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2506.10967-beyond-attention-or-similarity-maximizing-conditional-diversity-for-toke.md",
       "status": "PASS",
       "summary": "CDPrunerは指示文関連度と視覚特徴の多様性を行列式点過程で統合し、LLaVAの視覚トークン576→32個でも平均相対性能94.3%を保持する。",
@@ -23830,6 +24680,24 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2507.16323-spellm-character-level-multi-head-decoding.md",
+      "status": "PASS",
+      "summary": "大語彙の出力投影を並列文字ヘッドへ置き換えるSpeLLM。4モデルで生成時間平均5.1%短縮、GSM8Kなどには品質損失。",
+      "char_count": 61,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2507.19353-smooth-reading-bridging-the-gap-of-recurrent-llm-to-self-attention-llm-o.md",
+      "status": "PASS",
+      "summary": "再帰型LLMが長文をチャンク単位で読み、隠れ状態を保持しながら目的・手掛かり・推論・継続判定を出力する学習済み推論プロトコル。",
+      "char_count": 63,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md",
       "status": "PASS",
       "summary": "Step-3はMFAと注意/FFN分離AFDを併用。4K文脈・TPOT 50msでHopper実測ピーク4039 token/GPU/s、平均3910。比較は別報告のDSv3値。",
@@ -23897,15 +24765,6 @@
       "status": "PASS",
       "summary": "GPT-OSS-20BのH100/BF16実測。2048/64条件でQwen3-32B比デコード+31.8%、VRAM-31.7%、エネルギー-25.8%だがTTFT悪化。",
       "char_count": 86,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2509.01920-dynamic-speculative-agent-planning.md",
-      "status": "PASS",
-      "summary": "エージェントの投機的計画深さをオンライン強化学習で調整し、対象エージェントの計画を保持しつつAPI費用と遅延の交換条件を改善する。",
-      "char_count": 65,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -23983,15 +24842,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2509.25140-reasoningbank-scaling-agent-self-evolving-with-reasoning-memory.md",
-      "status": "PASS",
-      "summary": "エージェントの成功・失敗履歴から再利用可能な推論戦略を抽出・検索し、並列試行の対比と逐次修正を通じて記憶とテスト時探索を相互改善する。",
-      "char_count": 67,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md",
       "status": "PASS",
       "summary": "自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。",
@@ -24001,28 +24851,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.01240-rsavq-riemannian-sensitivity-aware-vector-quantization-for-large-languag.md",
-      "status": "PASS",
-      "summary": "フィッシャー情報行列から量子化誤差方向とチャネル別ビット配分を制御し、2〜4ビットLLMの品質と容量効率を改善する。",
-      "char_count": 58,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2510.02676-to-compress-or-not-pushing-the-frontier-of-lossless-genai-model-weights-.md",
       "status": "PASS",
       "summary": "FP8重みの指数部を可変長符号で可逆圧縮し、GPU並列復号と層単位の一時展開によって固定メモリ下の同時処理数を増やすECF8を提案。",
       "char_count": 66,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.05497-patterns-behind-chaos-forecasting-data-movement-for-efficient-large-scale-moe-llm-inference.md",
-      "status": "PASS",
-      "summary": "200B〜1000B級MoE四モデル・2.4万超要求の専門家選択を時間・空間方向から測定して六つのデータ移動則を抽出し、ウェハ級GPUで平均6.6倍、既存GPUのMoE計算で最大1.25倍の高速化へ結び付ける。",
-      "char_count": 105,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -24055,6 +24887,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2510.14686-xllm-technical-report.md",
+      "status": "PASS",
+      "summary": "xLLMはサービスの弾力的な段階分離と実行エンジンのパイプライン化を統合し、Ascend上でSLOを保った推論処理率を改善する。",
+      "char_count": 64,
+      "japanese_ratio": 0.9245283018867925,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2510.16598-visionselector-end-to-end-learnable-visual-token-compression-for-efficie.md",
       "status": "PASS",
       "summary": "視覚トークンの全体重要度を学習し、個数制約付きの微分可能Top-Kと段階的なマスク整合学習で推論時に選別する。Qwen2.5-VL-7Bの動画評価でプリフィル1.86倍、GPUメモリ32.3%減。",
@@ -24082,13 +24923,15 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.20171-collective-communication-for-100k-gpus.md",
-      "status": "PASS",
-      "summary": "GPU常駐可変長AllToAll・零コピーRDMA・CPU制御最適化によりMoE分散推論と超大規模LLM学習の通信を改善するNCCLX。",
-      "char_count": 68,
-      "japanese_ratio": 1.0,
+      "path": "papers/inference/99-other-inference-systems/2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md",
+      "status": "WARN",
+      "summary": "LLMのSVD圧縮で、階段確率マスクとfull-rank guidanceによりモジュール別ランクを最適配分。80%残存時のLLaMA2-7BのPPLを8.38→6.42へ改善。",
+      "char_count": 89,
+      "japanese_ratio": 0.7037037037037037,
       "failures": [],
-      "warnings": []
+      "warnings": [
+        "日本語比率 70.4% < 警告基準 80.0%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md",
@@ -24096,24 +24939,6 @@
       "summary": "生成ループを細粒度APIへ分解し、Wasm inferletがKV・復号・入出力を直接制御しつつ適応一括処理でGPU効率を維持するプログラマブルLLMサービング基盤。",
       "char_count": 83,
       "japanese_ratio": 0.8769230769230769,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.25602-int-v-s-fp-a-comprehensive-study-of-fine-grained-low-bit-quantization-fo.md",
-      "status": "PASS",
-      "summary": "ブロック内の外れ値比κと量子化誤差を理論化し、MXINT8がMXFP8を12モデルで上回る一方、NVINT4の優劣はHadamard回転で反転することを示す。",
-      "char_count": 79,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.01633-graph-cot-multi-agent-efficient-serving.md",
-      "status": "PASS",
-      "summary": "Graph-CoTを分類・推論・行動・検索へ分業し、頂点単位KV再利用、優先度追い出し、検索と生成の重畳を組み合わせ、遅延最大90.3%減・スループット最大15.1倍を報告。",
-      "char_count": 87,
-      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -24127,46 +24952,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.04063-dartquant-efficient-rotational-distribution-calibration-for-llm-quantiza.md",
-      "status": "PASS",
-      "summary": "Whip損失とQR直交化で量子化向けの活性分布を高速校正。70Bの回転校正で約47倍のGPU時間削減と約10倍のピークメモリ削減を報告。",
-      "char_count": 68,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2511.04919-budgetmem-training-free-selective-memory-for-cost-efficient-long-context.md",
       "status": "PASS",
       "summary": "長文書をCPUで断片単位に採点・選別して検索索引の容量を削減する学習不要の選択記憶方式。合成文書では約71%削減で品質維持、実論文ではF1低下を確認。",
       "char_count": 75,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md",
-      "status": "PASS",
-      "summary": "GPU推論32,500件超の計測から要求別電力量をモデル化。未学習Qwen2.5-14Bで平均絶対百分率誤差10.48%、出力長とバッチ・KV余裕が支配要因。",
-      "char_count": 79,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md",
-      "status": "PASS",
-      "summary": "数学・コード・科学の200問を出力長のモデル間分散で選び、正答率と生成トークン費用をOckScoreで評価する。近い正答率でも約26倍の出力長差を示す。",
-      "char_count": 76,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md",
-      "status": "PASS",
-      "summary": "活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。",
-      "char_count": 72,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -24208,28 +24997,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.11663-specquant-spectral-decomposition-and-adaptive-truncation-for-ultra-low-b.md",
-      "status": "PASS",
-      "summary": "活性外れ値の尺度移送、チャネル別フーリエ低周波保持、高精度枝路と4ビット残差を組み合わせ、重み・活性の同時低ビット量子化時の精度を改善する。",
-      "char_count": 70,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md",
       "status": "PASS",
       "summary": "多数決推論の収束則から問題別の生成数を適応配分するBlend-ASCを導き、同等の最頻回答推定誤差に必要なサンプルを平均約4.8倍削減した。",
       "char_count": 70,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.13593-o-mem-omni-memory-system-for-personalized-long-horizon-self-evolving-age.md",
-      "status": "PASS",
-      "summary": "人物属性・出来事・話題・希少語索引を並列検索する長期エージェント記憶。LoCoMoのF1と対話遅延を改善するが、品質比較の再現性に制約がある。",
-      "char_count": 71,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -24266,15 +25037,6 @@
       "status": "PASS",
       "summary": "深いTransformerエンコーダで新着トークンだけを注意計算し、層別の鍵・値を保持してストリーム処理を高速化。音楽分類で基準比37.24倍だが双方向エンコーダとの出力同一性はない。",
       "char_count": 92,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.17809-adaptive-layer-wise-transformations-for-post-training-quantization-of-la.md",
-      "status": "PASS",
-      "summary": "注意層とFFN層で尖度と適切な変換の相関が逆になることを利用し、回転・アフィン変換を層別選択。極低ビット量子化の品質を改善し、変換選択時間を微分探索の約3分の1にする。",
-      "char_count": 84,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -24676,15 +25438,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-38c6f5463687-efficient-llm-deployment-in-consumer-electronics-applications-via-resour.md",
-      "status": "PASS",
-      "summary": "端末のメモリ・遅延制約を整数線形計画に取り込み、層別ビット幅を重み群の重要度で補正するRAS-MQ。Jetson上の低ビット推論で精度と容量を改善する一方、量子化自体はサーバー側で行う。",
-      "char_count": 93,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-5f0897915cbf-glance2gaze-efficient-vision-language-models-from-glance-fusion-to-gaze-.md",
       "status": "PASS",
       "summary": "テキスト指示に応じた多層ViT融合と、共有クエリによる深層視覚トークン圧縮を組み合わせ、精度と推論費用を両立する。",
@@ -24716,15 +25469,6 @@
       "status": "PASS",
       "summary": "頭別QK行列の低ランク因子化と共有KVで表現力を維持するMFA、鍵を値にも再利用するMFA-KR。1兆トークン学習のMoEでKV量をMHA比87.5%／93.75%削減し、平均評価49.9／48.0対49.0。",
       "char_count": 105,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md",
-      "status": "PASS",
-      "summary": "GPT-4o応答14,301件の単語数をGEVとGPDで近似し、尾部適合R²=0.9993。LLM配信の応答長予測候補だが実機SLO検証は未実施。",
-      "char_count": 73,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -24889,15 +25633,6 @@
       "status": "PASS",
       "summary": "24B教師から層・隠れ次元・MLPを段階剪定しロジット蒸留するCascade Distillationで14B/8B/3Bモデルを作り、事前学習の計算予算を抑制する。",
       "char_count": 83,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md",
-      "status": "PASS",
-      "summary": "公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。",
-      "char_count": 66,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -26118,15 +26853,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.07955-rethinking-residual-errors-in-compensation-based-llm-quantization.md",
-      "status": "PASS",
-      "summary": "GPTQ/GPTAQの逐次重み補償で、元の全精度層出力からのずれを補償認識誤差として明示的に補正する事後量子化改良。",
-      "char_count": 58,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2604.08564-attention-based-sampler-for-diffusion-language-models.md",
       "status": "PASS",
       "summary": "拡散LLMの確定順序を注意列和で選び、動的閾値で並列化してGSM8Kで107トークン/秒・82.6%を達成する学習不要の復号法。",
@@ -26212,15 +26938,6 @@
       "status": "PASS",
       "summary": "FlashAttentionの行最大値更新・再尺度化を初期最大値推定、先頭/近傍ブロック優先、最大値固定で削減し、ベクトル演算律速を緩和。疎ブロック除外と組み合わせたVSAも提案。",
       "char_count": 90,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.13806-robust-ultra-low-bit-post-training-quantization-via-stable-diagonal-curv.md",
-      "status": "PASS",
-      "summary": "雑音に弱いヘッセ非対角項を捨て、対角重要度と交互の重み付き回帰で2ビット量子化後の推論品質を改善するDASH-Q。",
-      "char_count": 57,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -26406,29 +27123,11 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.22442-hubrouter-a-pluggable-sub-quadratic-routing-primitive-for-hybrid-sequenc.md",
-      "status": "PASS",
-      "summary": "学習ハブでトークンの重要度を推定し、選抜位置だけに注意を適用する軽量ルーティング機構。小規模モデルの高速化と因果性・品質の代償を実験で検証。",
-      "char_count": 70,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md",
       "status": "PASS",
       "summary": "小型翻訳器の最終指示トークン表現から大型モデルへの切替改善幅を予測し、呼出し予算を高利益要求へ配分する。",
       "char_count": 52,
       "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.22575-spikingbrain2-0-brain-inspired-foundation-models-for-efficient-long-cont.md",
-      "status": "PASS",
-      "summary": "MoBA＋SSEのDSSAハイブリッド5BをTransformerから蒸留変換し、512k入力のvLLM TTFTを67.50→15.03秒に短縮。極長文では10M入力も処理可能だが応答時間は長い。",
-      "char_count": 99,
-      "japanese_ratio": 0.9166666666666666,
       "failures": [],
       "warnings": []
     },
@@ -26449,17 +27148,6 @@
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.23475-supernodes-and-halos-loss-critical-hubs-in-llm-feed-forward-layers.md",
-      "status": "WARN",
-      "summary": "FFNの活性×勾配に基づく損失重要チャネルsupernodeと次層のread haloを特定し、これらを保護するSCAR構造化枝刈りで高疎化時の性能崩壊を抑える研究。",
-      "char_count": 83,
-      "japanese_ratio": 0.7638888888888888,
-      "failures": [],
-      "warnings": [
-        "日本語比率 76.4% < 警告基準 80.0%"
-      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2604.23623-tandem-riding-together-with-large-and-small-language-models-for-efficien.md",
@@ -26563,28 +27251,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2605.04062-edgerazor-a-lightweight-framework-for-large-language-models-via-mixed-pr.md",
-      "status": "PASS",
-      "summary": "4ビットと1.58ビットの周期配置、入力適応型の教師層選択、教師エントロピーに基づく蒸留損失を組み合わせ、極低ビットLLMの精度と端末実行効率を両立する。",
-      "char_count": 77,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2605.04263-parallel-prefix-verification-for-speculative-generation.md",
       "status": "PASS",
       "summary": "小型モデルの完成回答を大型モデルで意味判定し、誤りがあれば複数接頭辞の判定を専用注意マスクで単一プリフィルへ集約して正しい前半を再利用する投機的生成方式。",
       "char_count": 77,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2605.04738-osaq-outlier-self-absorption-for-accurate-low-bit-llm-quantization.md",
-      "status": "PASS",
-      "summary": "近似ヘッセ零空間で外れ値を加法的に吸収する低ビット重み量子化前処理。2ビットGPTQのPPLを36.8→21.2、推論時追加演算なし。",
-      "char_count": 67,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -26977,15 +27647,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2605.25203-influence-inspired-spectral-rotations-for-extreme-low-bit-llm-quantizati.md",
-      "status": "PASS",
-      "summary": "固定Hadamard回転と活性化スペクトルエネルギーに基づく列スケールで2ビット丸め誤差を再配分。Qwen3正規化・RoPE互換拡張も検証するが、4ビットでは利得が消える。",
-      "char_count": 86,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2605.25344-a-general-tensor-structured-compression-scheme-for-efficient-large-langu.md",
       "status": "PASS",
       "summary": "線形層を局所テンソル演算子の和に置換し、後段からの構造圧縮の限界を測定。LLaMA2-7Bでパラメータ47.5%削減、圧縮境界を超えるとMMLUが急落。",
@@ -27022,15 +27683,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2605.25880-the-quantization-benefits-of-residual-free-transformers.md",
-      "status": "PASS",
-      "summary": "残差接続が活性値の尖度と外れ値を増やし低ビット量子化を難しくすることを検証。残差なし＋直交初期化＋KL ShampooでW8A6平均精度0.414、残差ありの0.348を上回る。",
-      "char_count": 89,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2605.25969-triplet-block-diffusion-rwkv.md",
       "status": "PASS",
       "summary": "因果的なRWKVを変更せず、同一ブロックのマスク複製2個と正解複製1個で擬似双方向の拡散学習を実現。7.2Bで復号処理量を平均1.6倍にするが、数学推論の精度低下が大きい。",
@@ -27044,15 +27696,6 @@
       "status": "PASS",
       "summary": "活性分布の値域縮小と量子化レベルの利用効率を両立する校正済み直交変換を学習し、W4A4KV4の品質を改善する事後量子化。実測速度は単一ブロックに限定される。",
       "char_count": 78,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2605.26339-qam-w-joint-2d-codebook-quantization-for-llm-weights-via-hadamard-rotati.md",
-      "status": "PASS",
-      "summary": "重みをHadamard回転後に2次元コードブックで圧縮。5.5ビット相当でBF16に近いPPLを保つが、4ビットではQTIPに劣り実測推論高速化は未確認。",
-      "char_count": 77,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -27166,15 +27809,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md",
-      "status": "PASS",
-      "summary": "NVFP4のブロック別にE2M1/E1M2を選び、FP8スケール符号ビットへ形式情報を格納。4ビット量子化精度を改善し、合成回路の面積増は3.1%。",
-      "char_count": 74,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.00024-art-attention-run-time-termination-for-efficient-large-language-model-de.md",
       "status": "PASS",
       "summary": "注意出力の変化量・方向をFlashAttention内部で監視し、十分安定したら残りのKV走査を省略。LongBenchの速度向上と、遠距離検索における早期打切りの危険を併記。",
@@ -27188,15 +27822,6 @@
       "status": "PASS",
       "summary": "要求特徴・実時間インスタンス状態・接頭辞再利用を入力する共有報酬予測器を配信中に継続学習し、約5分で変動負荷へ適応して、強い接頭辞・負荷認識比較方式より平均TTFTを1.41倍、P99 TTFTを1.47倍改善する。",
       "char_count": 108,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.01412-gptq-intrinsic-lora-a-near-optimal-algorithm-for-low-precision-quantizat.md",
-      "status": "PASS",
-      "summary": "GPTQ量子化時に低ランク補正を拡張Hessianへ組み込み、較正行列の低ランク残差に依存する誤差保証とBid-Up反復改善を与える学習不要の量子化方式。",
-      "char_count": 77,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -27283,15 +27908,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.04620-qublast-a-framework-for-quantizing-large-language-models-with-block-leve.md",
-      "status": "PASS",
-      "summary": "ブロック別の交差エントロピー感度から許容ビット幅を選別し、活性値外れ値の縮尺補正を加えて、品質制約内で最小容量となる混合精度LLM量子化構成を選ぶ。",
-      "char_count": 74,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.04719-query-based-cross-modal-projector-bolstering-mamba-multimodal-llm.md",
       "status": "PASS",
       "summary": "Mambaと交差注意を組み合わせて729視覚特徴を128～729問い合わせへ圧縮し、128問い合わせ時の推論反復をVL-Mambaの0.152秒から0.095秒へ短縮。",
@@ -27337,15 +27953,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md",
-      "status": "PASS",
-      "summary": "10種のエージェント記憶方式を構築・検索・生成の段階別に計測し、構築費用・GPU利用率・鮮度・遅延尾部・記憶増加率の設計上の制約を明らかにする。",
-      "char_count": 72,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.06574-skip-a-layer-or-loop-it-learning-program-of-layers-in-llms.md",
       "status": "PASS",
       "summary": "入力埋め込みから層区間ごとのスキップ・反復プログラムを事前予測し、基盤LLMの重みを固定したまま層実行数と推論品質を両立する。",
@@ -27386,42 +27993,6 @@
       "status": "PASS",
       "summary": "双方向に学習する拡散型ドラフトを左から順に検証する受理規則へ合わせる3損失を評価。Llama-3-8Bの平均受理長2.376→3.420、実測生成速度126.75→225.12トークン/秒。",
       "char_count": 95,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.11690-beyond-per-token-pricing-a-concurrency-aware-methodology-for-llm-infrast.md",
-      "status": "PASS",
-      "summary": "H100/A100上の実測で、同じモデル・GPUでも要求率により出力トークン単価が7～36倍変動。最大スループット前提の費用試算を実負荷・遅延制約で補正する。",
-      "char_count": 79,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.11916-characterizing-software-aging-in-gpu-based-llm-serving-systems.md",
-      "status": "PASS",
-      "summary": "6種類のGPU LLMサービング構成を計216時間連続運転し、全構成でホスト側のメモリ経年劣化を検出。リーク率はvLLM V1単体+1.8KB/時からTriton+V0の+157KB/時まで大差があり、配置・ランタイム選択が長期信頼性を左右することを示す。",
-      "char_count": 128,
-      "japanese_ratio": 0.9540229885057471,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.12876-multi-bitwidth-quantization-for-llms-using-additive-codebooks.md",
-      "status": "PASS",
-      "summary": "加算型コードブックの各接頭部分を同時に量子化学習し、単一モデルを3〜5ビット相当で運用。通常の単純切捨てによる精度崩壊を抑制するが実測速度は未検証。",
-      "char_count": 74,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.13054-twla-achieving-ternary-weights-and-low-bit-activations-for-llms-via-post.md",
-      "status": "PASS",
-      "summary": "三値符号帳に合わせる重みの直交変換、活性値外れ値の緩和、隣接層の量子化誤差を考慮した混合精度配分により、既存LLMのW1.58A4事後量子化を実現する。",
-      "char_count": 76,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -27544,15 +28115,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.26650-cat-q-cost-efficient-and-accurate-ternary-quantization-for-llms.md",
-      "status": "PASS",
-      "summary": "重みの平均・尺度・しきい値を変調し、滑らかな三値化から硬い三値化へ移行して、既存LLMを少量較正データで1.58ビット重みへ変換する。",
-      "char_count": 67,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.26762-protokv-streaming-video-understanding-under-delayed-query-with-summary-s.md",
       "status": "PASS",
       "summary": "ストリーミング映像の古いKVを固定容量の意味・空間プロトタイプと残差統計に集約し、疑似トークンで遅延問い合わせに応える。長時間後の精度を改善するが、映像取り込み時の更新費用が生じる。",
@@ -27643,28 +28205,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2607.07964-kronq-llm-quantization-via-kronecker-factored-hessian.md",
-      "status": "PASS",
-      "summary": "入力共分散に加えて出力勾配共分散を用い、双方向回転・スケーリングと感度別混合精度で超低ビット量子化を安定化。LLaMA-3-70BのW2でPPL 7.93、単一GPUの7B〜13Bで復号1.25〜2.51倍。",
-      "char_count": 104,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md",
       "status": "PASS",
       "summary": "HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。",
       "char_count": 114,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2607.15593-scalable-llm-agent-tool-access-in-the-cloud.md",
-      "status": "PASS",
-      "summary": "大量のMCP/OpenAPIツールをゲートウェイで統合し、意味・語彙の混合検索とセッション整合ルーティングにより、LLMエージェントのツール選択時間と文脈消費を削減する実運用基盤。",
-      "char_count": 90,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -27751,28 +28295,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md",
-      "status": "PASS",
-      "summary": "LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。",
-      "char_count": 79,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2607.27704-lightrot-a-light-weighted-rotation-scheme-and-architecture-for-accurate-.md",
       "status": "PASS",
       "summary": "LightRotは128チャネル局所Hadamard回転と最大外れ値の方向整列を二段階FHT回路に統合し、4ビットLLMの量子化品質と専用NPUの電力効率を両立。28nmチップで27.4 TOPS/Wを報告する。",
       "char_count": 106,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md",
-      "status": "PASS",
-      "summary": "疎MoEの専門家加算順序だけで内部状態と生成文が分岐しうることを全順列・状態再構成で実証し、BF16項＋FP32累算を評価範囲の安定な互換契約として特定する。",
-      "char_count": 79,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -27796,15 +28322,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.00077-beyond-accuracy-auditing-spatial-provenance-in-visual-token-pruning-for-.md",
-      "status": "PASS",
-      "summary": "視覚トークン削減後のOCR根拠領域の空間的出自を精度・誤陽性・実測高速化と併せて監査し、同じ精度・保持率でも根拠の残り方が異なることを示す。",
-      "char_count": 70,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.00434-adamtp-an-adaptive-training-paradigm-for-multi-token-prediction.md",
       "status": "PASS",
       "summary": "次トークンのエントロピー急増点でMTP学習の予測深さを調整し、共有表現の干渉を抑制。Llama-3.1-8BのGSM8Kで投機的復号を1.65倍から2.12倍へ改善。",
@@ -27819,15 +28336,6 @@
       "summary": "関数選択と引数スロットを小型モデルが要求到着時に非同期・並列予測し、ターゲットのToolSpec候補木へ到着後に合流させることで、ツール呼出しの逐次生成を高速化する。",
       "char_count": 83,
       "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.01078-attend-to-your-own-thoughts-breaking-the-barrier-for-post-training-quant.md",
-      "status": "PASS",
-      "summary": "元の推論モデル自身が生成した思考過程を校正に使うAYOTをCAT-Qへ組み込み、推論型LLMの三値学習後量子化での精度崩壊を抑え、llama.cppで実際のメモリ・復号速度改善も示す。",
-      "char_count": 92,
-      "japanese_ratio": 0.8947368421052632,
       "failures": [],
       "warnings": []
     },
@@ -27854,24 +28362,6 @@
       "status": "PASS",
       "summary": "学習時に連続ノイズで視覚トークンの情報を制限し、推論時に軽量Top-K選択へ切り替えることで、画像入力のプレフィルを削減する。",
       "char_count": 63,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.02703-archead-activation-metric-residual-correction-for-large-language-model-output-heads.md",
-      "status": "PASS",
-      "summary": "4ビット化後に高精度のまま残る出力ヘッドを、量子化核と活性値計量による低ランク残差補正で3.7〜3.9倍圧縮し、Qwen3-8Bで相対困惑度1.007を達成した。",
-      "char_count": 81,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.03867-heterogeneity-aware-microscaling-for-efficient-low-bit-llm-inference.md",
-      "status": "PASS",
-      "summary": "ブロックごとの精度回復方式と重み・活性値ごとの表現を適応選択するAdaMXと22nm試作アクセラレータを提案し、同等ビット幅のままMXFP4の常識推論精度損失を83%、MMLU損失を82%回復する。",
-      "char_count": 99,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -27949,15 +28439,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.07968-thinking-hard-not-smart-reasoning-models-fail-to-ration-test-time-comput.md",
-      "status": "PASS",
-      "summary": "複数問題が共有する推論トークン予算の配分を評価。現行推論モデルは問題価値より提示順に従い、計画指示でも価値に応じた優先順位付けが弱い。",
-      "char_count": 67,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.08081-rotaryquant-fitting-120b-moe-models-on-consumer-hardware-via-fused-compressed-space-attention.md",
       "status": "PASS",
       "summary": "重み・3ビット鍵値キャッシュ・専門家退避を統合し、圧縮表現のまま注意計算して120B MoEを17.2GB、14.85トークン毎秒で実行する。",
@@ -27989,15 +28470,6 @@
       "status": "PASS",
       "summary": "ループ型言語モデルを反復単位で再バッチ化し、早期退出で空いたスロットを補充して、トークンごとの可変深度を実効スループット・遅延改善へ変換する。",
       "char_count": 71,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.11045-reround-reconstructive-rounding-to-resolve-midpoint-ambiguity-in-calibra.md",
-      "status": "PASS",
-      "summary": "元のLLM重みから学習した拡散モデルで中点付近の量子化丸めを選び直し、主要特異値の保存で候補を選択して3・4ビットの精度を改善する。",
-      "char_count": 66,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28057,24 +28529,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.15531-flashquant-sparse-dense-fusion-for-memory-efficient-outlier-aware-llm-inference.md",
-      "status": "PASS",
-      "summary": "外れ値認識W4A16の密行列積と高精度疎補正を同一タイルで融合し、非融合方式比で最大1.53倍高速化する。バッチ1〜2のパディング悪化と品質・メモリの交換条件も評価する。",
-      "char_count": 85,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md",
-      "status": "PASS",
-      "summary": "線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。",
-      "char_count": 56,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md",
       "status": "PASS",
       "summary": "外部KV状態の全ヒットを先に把握しつつ、復元はWチャンク窓だけを順次ステージングして解放することで、長大な外部状態とローカル復元メモリを分離する方式。",
@@ -28084,37 +28538,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md",
-      "status": "PASS",
-      "summary": "任意のKVキャッシュ方策を学習中に再現し、二重チェックポイントとKV差分符号化で推論級メモリの長文脈疎注意微調整を実現する。",
-      "char_count": 62,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.21541-beyond-sparse-weights-when-is-attention-compressible.md",
       "status": "PASS",
       "summary": "疎な注意マップだけではKV圧縮を正当化できないことを理論化し、値分散配分と末尾要約を厳密な物理予算で実装するCertKVを提案。",
       "char_count": 64,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.21952-ssdi8-accurate-and-efficient-8-bit-quantization-for-state-space-duality.md",
-      "status": "PASS",
-      "summary": "Mamba-2のSSD内部で活性値をINT8のまま再利用し、要素積を等価変形して疎な入力を低精度行列積へつなぐ。A5000のMamba-2 2.7BではSSD処理がFP16比最大1.47倍となり、Orin NXでも遅延を減らす。",
-      "char_count": 114,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.22237-read-less-solve-more-token-efficient-sparse-reading-for-ai-agents.md",
-      "status": "PASS",
-      "summary": "外部資料の全文投入前に、読解意図と根拠状態を管理して必要部分だけ取得するエージェント読解層。適用判定器で全文読解へ切替え、入力トークンと作業時間を削減する。",
-      "char_count": 78,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28147,15 +28574,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.24945-fampwq-fisher-information-based-adaptive-mixed-precision-weight-quantization-for-effective-llm-inference.md",
-      "status": "PASS",
-      "summary": "実量子化ノイズでFisher情報の層別感度を測り、PPOで全体ビット予算を層へ配分して、3〜4bit域の品質劣化を一様量子化より抑える。",
-      "char_count": 68,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.25062-flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration.md",
       "status": "PASS",
       "summary": "高帯域フラッシュを巨大モデル重みの近接容量層として使い、動的読み出し結合・更新隔離・読み出し専用変換表で従来方式比六・二倍の復号処理量を実現する。",
@@ -28174,15 +28592,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.26070-prefix-sliding-for-efficient-test-time-scaling.md",
-      "status": "PASS",
-      "summary": "推論の指示・問題文を固定保持し、古い中間思考だけを滑動窓から追い出す疎注意方式。4096トークン窓のQwen3-1.7Bでは128K時に全注意比11.7倍の処理量とほぼ同等の推論正解率を報告。",
-      "char_count": 96,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.26140-affix-cache-for-diffusion-large-language-models.md",
       "status": "PASS",
       "summary": "ACacheは拡散型LLMの双方向注意で古くなる共有文脈のKVを、影響の大きいアンカーのみ再計算して要求間で再利用する。読み取りスロット表と位置補正を組み込み、A100で最大1.71倍の生成処理量を報告する。",
@@ -28192,28 +28601,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.26389-lowrankarena-a-standardized-evaluation-platform-for-svd-based-llm-compre.md",
-      "status": "PASS",
-      "summary": "特異値分解型LLM圧縮5方式を統一条件で再評価し、モデル依存の順位逆転、困惑度の崩壊、入力処理高速化と生成全体の減速の乖離を検証。3TiB超の再現用成果を公開。",
-      "char_count": 80,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2608.26523-vpp-virtual-pipeline-parallelism-for-efficient-chunked-prefill-in-long-c.md",
       "status": "PASS",
       "summary": "長文脈の分割済み入力処理をV字仮想段・非同期通信・要求間詰め込みで均衡化し、動的分割の細粒度費用を避ける。",
       "char_count": 53,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md",
-      "status": "PASS",
-      "summary": "MoEの融合カーネル・4/8ビット量子化・グラフコンパイルを単体とE2Eで測定し、局所高速化が起動律速や品質へどう波及するかを分解して、置換可能な最適化の限界を明らかにする研究。",
-      "char_count": 89,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28241,15 +28632,6 @@
       "status": "PASS",
       "summary": "NVFP4の16重み単位の局所尺度を、校正活性値から求めた対角二次感度で選び直し、推論時の追加演算なしに低ビット化の層出力誤差を減らす。",
       "char_count": 68,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.28444-sliding-window-beats-linear-attention.md",
-      "status": "PASS",
-      "summary": "注意シンク4個を保持する学習不要の窓型注意が、線形注意への追加学習後変換より強い比較基準となることを、一般知識・生成・長文検索・速度で検証した。",
-      "char_count": 72,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28309,46 +28691,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.07237-cedar-error-bounded-residual-routing-for-efficient-long-context-attention.md",
-      "status": "PASS",
-      "summary": "選外チャンクも要約経路で全域可視性を残し、鍵・値分散に基づく誤差上界で必要なチャンクだけ正確注意へ展開して、128Kで約3倍のカーネル高速化と品質回復を両立する疎注意方式。",
-      "char_count": 86,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.07282-stream-stability-long-term-recall-threeh.md",
-      "status": "PASS",
-      "summary": "長時間生成の安定性・過去情報への因果アクセス・タスク効用をThreeHの3到達距離へ分離し、注意シンクの安定生成を長期記憶と誤認しない評価契約を示す。",
-      "char_count": 75,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.07664-accuracy-is-not-enough-a-divergence-based-approach-to-evaluate-fidelity-.md",
-      "status": "PASS",
-      "summary": "量子化LLMの正答率だけでは見えない確率分布の変化を、BF16基準の全語彙TVD・JSDで測定し、Q4_KとQ4_0の差を明示する。",
-      "char_count": 66,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.07786-signed-rescue-routing-harm-aware-cascades-for-efficient-llm-inference.md",
       "status": "PASS",
       "summary": "小→大LLM切替の救済確率から悪化確率を差し引いて配分。Qwen3-4B→8BでAUACC 0.6811、50%切替時69.4%（全件8Bの68.9%超）。",
       "char_count": 78,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.08135-kbbq-a-predictive-noise-law-and-the-limits-of-spectrum-flattening-in-fp4.md",
-      "status": "PASS",
-      "summary": "浮動小数点4ビット量子化の雑音を参加係数κで説明し、理論上の完全平坦化をλで抑えて実際のモデル精度を改善する。",
-      "char_count": 55,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28359,15 +28705,6 @@
       "summary": "異種CUDA/NCCL–CANN/HCCL境界で消費者が必要とする観測結果を型付き契約へコンパイルし、不要な全logit転送をトークン投影へ縮約して結果通信を99.97%以上削減する通信計画器。",
       "char_count": 97,
       "japanese_ratio": 0.9285714285714286,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.08450-sample-guided-exact-topk-sparse-attention.md",
-      "status": "PASS",
-      "summary": "HPC-Ops Top-Kは、標本で上位候補境界を予測し、全行の一回走査で十分性を証明、足りない時だけ回復して正確なK個を選び、長文疎注意の再走査を減らす。",
-      "char_count": 78,
-      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },
@@ -28394,33 +28731,6 @@
       "status": "PASS",
       "summary": "固定常駐したW2・W3・W4量子化MoEインスタンス間で、入力時の脆弱性重み付きパープレキシティから要求別の量子化リスクを推定し、品質予算付き線形計画で高処理量側へ配分する要求ルーティング。",
       "char_count": 95,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md",
-      "status": "PASS",
-      "summary": "RoofLangはLLM推論を計算・ハードウェアグラフと意味保存変換で表し、実装非依存のシミュレーションを評価器としてAIに配置・並列化・通信構成を探索させる設計基盤である。",
-      "char_count": 87,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md",
-      "status": "PASS",
-      "summary": "H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。",
-      "char_count": 92,
-      "japanese_ratio": 0.9285714285714286,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md",
-      "status": "PASS",
-      "summary": "言語モデル損失を注意ソフトマックス内の連続ゲートへ直接流してコンテキスト順位を学習し、固定Top-K疎注意の精度と長文脈デコード効率を改善する。",
-      "char_count": 72,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28453,29 +28763,11 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.14773-pull-lazy-working-memory-materialization.md",
-      "status": "PASS",
-      "summary": "長期対話を決定論的な索引で管理し、質問ごとに必要な原文ターンだけを可逆的に実体化して入力トークンを削減するセッションルータ。",
-      "char_count": 62,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.14850-self-orchestrating-language-models-leveraging-semantic-dependence-for-ef.md",
       "status": "PASS",
       "summary": "意味的に独立する文章断片や推論段階をモデルに印付けさせ、ランタイムが別スレッドで生成、不要なKVページの解放、または拡散生成の並列順序に使う三方式をまとめたMIT博士論文。Gemma 7BのPASTAはAlpacaEvalで1.21倍速・勝率52.3%または1.93倍速・42.9%、Qwen3-4BのTIPはAIME24/25でDense比KVを54–59%減らして正解率を上げ、Dream-7B系のPlanned Diffusionは1.27–1.81倍速と勝率44.6–49.2%を得た。各方式の評価条件は異なる。",
       "char_count": 260,
       "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.14864-gguf-metadata-prediction-of-single-sequence-llama-cpp-throughput-across-.md",
-      "status": "PASS",
-      "summary": "GGUFメタデータからMoE有効重みと層別KV転送量を推定し、llama.cpp単一系列の復号速度を予測。未知モデルの誤差はM4 Max二機種で13.1/14.4%、RTX 5080で36.1%。",
-      "char_count": 98,
-      "japanese_ratio": 0.8545454545454545,
       "failures": [],
       "warnings": []
     },
@@ -28498,37 +28790,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md",
-      "status": "PASS",
-      "summary": "Hopper/Blackwellの非同期GPU機構とTriton AIカーネルを実行駆動で再現し、131構成でサイクル誤差5.24%、16スレッドで7.86倍高速化した現代GPUシミュレータ。",
-      "char_count": 96,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.15338-dynamic-semantic-compression-latent-space-inference.md",
       "status": "PASS",
       "summary": "文を長さに応じて1〜3区間へ分割し、重要トークンを重み付けした潜在表現を生成・復号するDSEI。固定文圧縮より品質を改善し、トークン単位推論より系列長とメモリ負荷を削減する。",
       "char_count": 87,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.15627-deepseek-v4-flash-on-amd-gfx90a-correctness-recovery-and-inference-performance-engineering.md",
-      "status": "PASS",
-      "summary": "MI250上のDeepSeek-V4-Flashで数値不具合を修復し、CDNA2向けカーネル・通信・事前充填最適化によりTP8復号をC64で1327.10トークン/秒まで実測した。",
-      "char_count": 90,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.16338-breaking-the-1-58-bit-barrier-for-ternary-llms.md",
-      "status": "PASS",
-      "summary": "三値重みのゼロ偏りを利用するBITCOSで格納量を最小1.485ビット/重みまで下げ、専用CPU・Xe2復号で一要求デコードを最大1.27倍高速化する。",
-      "char_count": 76,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28570,37 +28835,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.17863-inference-engineering-pareto-atlas.md",
-      "status": "PASS",
-      "summary": "54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。",
-      "char_count": 59,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.17890-obc-prune-outcome-based-calibration-for-large-reasoning-model-pruning.md",
-      "status": "PASS",
-      "summary": "正答・誤答の思考過程を同一問題で対にし、文ごとの因果的寄与で較正活性値を再重み付けすることで、一発枝刈り後の推論精度と停止挙動を改善する。",
-      "char_count": 69,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.17943-aspire-asynchronous-batched-self-speculative-decoding.md",
       "status": "PASS",
       "summary": "下書き・検証混在順伝播、要求別オンライン制御、下書き内の鍵値文脈更新により長文脈自己投機復号を最大4.58倍高速化する。",
       "char_count": 60,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md",
-      "status": "PASS",
-      "summary": "自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。",
-      "char_count": 72,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28615,37 +28853,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md",
-      "status": "PASS",
-      "summary": "Apple Siliconの九推論基盤を速度・共有メモリ・忠実度・新モデル対応・複数機で横断監査し、vllm-metalの並行処理と遠隔直接メモリアクセスを使うテンソル並列の優位を示す。",
-      "char_count": 93,
-      "japanese_ratio": 0.8831168831168831,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.19207-meshkv-a-network-on-chip-kv-cache-fabric-for-scalable-transformer-decoding-accelerators.md",
       "status": "PASS",
       "summary": "鍵値キャッシュをオンチップ網の分散流へ変換し、8×8 FPGA実装で通信量最大58%削減、鍵値帯域利用率2.1倍、生成処理量最大1.90倍を実測する。",
       "char_count": 75,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.19683-mix-micro-inverted-scaling-for-end-to-end-low-bit-vision-language-model-acceleration.md",
-      "status": "PASS",
-      "summary": "VLMのマルチモーダル外れ値に対し、要素別指数＋共有仮数へマイクロスケーリングを反転し、4bit級の端から端までの量子化と乗算器不要のシフト加算PEを同時に実現する。",
-      "char_count": 83,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md",
-      "status": "PASS",
-      "summary": "クエリ依存の学習可能な注意閾値とSiLU型の滑らかなロジット圧縮を組み合わせ、推論時にKVブロックを幾何・確率境界で選別して長文脈復号のHBM転送を削減する。",
-      "char_count": 79,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28660,15 +28871,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.22106-prquant-permutation-residual-quantization-for-low-overhead-inference.md",
-      "status": "PASS",
-      "summary": "低精度化で誤差の大きい重み経路を連続した末尾へ集め、事前計算した重み残差を単一のMXFP4行列積で補償し、通常の量子化方式に近い生成速度で精度を改善する。",
-      "char_count": 77,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.24433-foldquantvla-native-low-bit-quantization-of-vision-language-action-models-via-consistent-folding.md",
       "status": "PASS",
       "summary": "VLAの共有活性値変換を校正から重み丸め、TensorRT実行まで一貫させる学習後量子化を設計し、W4A4でOrin上の推論を浮動小数点TensorRT比1.20〜1.33倍に高速化した。",
@@ -28678,46 +28880,10 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.25492-rgsq-riemannian-geometry-sensitive-quantization-for-large-vision-language-models.md",
-      "status": "PASS",
-      "summary": "視覚・言語別のフィッシャー計量と疎回転で低ビット量子化誤差を低感度方向へ寄せ、精度を改善するが、校正費用とオンライン活性回転が必要。",
-      "char_count": 66,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.25916-beyond-scalar-sensitivity-activation-aware-mixed-precision-llm-quantizat.md",
-      "status": "PASS",
-      "summary": "活性値共分散と出力感度を保持した量子化誤差で重み行列のビット数を割り当て、隣接層の誤差結合を用いた交換探索で低ビット時の精度を改善する。",
-      "char_count": 68,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md",
-      "status": "PASS",
-      "summary": "平均補償後に残る注意誤差を注意質量とブロック内得点分散の積で推定し、厳密に読む鍵・値ブロックを選ぶことで、長文脈の疎な注意計算の精度と中央処理装置退避効率を改善する。",
-      "char_count": 83,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.26796-flash-dllm-io-aware-kv-caching-and-parallel-decoding-for-fast-memory-efficient-diffusion-llms.md",
       "status": "PASS",
       "summary": "拡散言語モデルの鍵・値キャッシュ更新を融合注意へ統合し、同じモデルによる下書き・検証型並列復号を重ねることで、メモリ入出力と反復回数を同時に削減する。",
       "char_count": 75,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md",
-      "status": "PASS",
-      "summary": "再帰型言語モデルで注意の参照先が表現より早く安定する性質を利用し、初期段で発見したブロック作業集合へ後半の注意だけを限定して、再学習なしで深い再帰実行を高速化する。",
-      "char_count": 82,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28754,15 +28920,6 @@
       "status": "PASS",
       "summary": "MoE専門家の機能的代替可能性を、残存重みの再正規化とルータ補充を含む単一削除損傷で測り、再学習なしで専門家プールを圧縮する。",
       "char_count": 63,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.31009-g-ptq-improving-llm-post-training-quantization-with-generalized-gradient.md",
-      "status": "PASS",
-      "summary": "Transformerブロックごとに勾配・曲率を再推定し、信頼領域付き一次・二次誤差補償で低ビット学習後量子化の精度を改善する。",
-      "char_count": 64,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -28807,15 +28964,6 @@
       "path": "papers/inference/99-other-inference-systems/2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md",
       "status": "PASS",
       "summary": "混合専門家モデルのバッチ逐次生成で、トークンごとの専門家出力を軽量予測して除去誤差の大きい専門家を優先読込し、固定転送予算下の品質と処理量を改善する。",
-      "char_count": 75,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.39223-qatfactory-a-versatile-deployment-aligned-framework-for-quantization-awa.md",
-      "status": "PASS",
-      "summary": "推論エンジンのNVFP4・MXFP4・Q4_K数値規則をBF16学習で模擬し、低精度のまま直接配備できるモデルを自己蒸留・強化学習で生成する公開基盤。",
       "char_count": 75,
       "japanese_ratio": 1.0,
       "failures": [],
@@ -28930,15 +29078,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-3190de0b4969-ifmoe-an-inference-framework-design-for-fine-grained-moe.md",
-      "status": "PASS",
-      "summary": "共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。",
-      "char_count": 74,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md",
       "status": "PASS",
       "summary": "分散メモリを帯域層、クラウドブロックストレージを容量層とし、対応シャードを同一VMへ共置してKVの階層移動をローカル化することで、クラウドのネットワーク帯域と費用の制約を抑えるKVキャッシュ基盤。",
@@ -29006,15 +29145,6 @@
       "status": "PASS",
       "summary": "KV容量連動のプリフィル/デコード混在スケジューリングと帯域感知型の境界層移行を統合し、異種Jetson上のVLM推論遅延を最大17.5%削減する。",
       "char_count": 74,
-      "japanese_ratio": 1.0,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md",
-      "status": "PASS",
-      "summary": "単一MoE層の選択可能プローブと二段階グループ検査で、特権監視なしにグレー障害GPU・通信経路をアプリ層から局所化し、診断プローブを約20倍削減する。",
-      "char_count": 75,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -29088,15 +29218,6 @@
       "summary": "GPUとNVMe SSDをGDSで直結し、pSLCと順次KVブロック配置でDRAMなしのKV交換を実現し、長文脈推論の性能を保ちながら容量費用を削減する。",
       "char_count": 77,
       "japanese_ratio": 0.9230769230769231,
-      "failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-fa80222132dc-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md",
-      "status": "PASS",
-      "summary": "LLMのSWA化する注意頭を、層感度・層別予算・共同黒箱探索で選び、固定順位方式より長文脈の検索・QA性能を保持する。",
-      "char_count": 59,
-      "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
     },

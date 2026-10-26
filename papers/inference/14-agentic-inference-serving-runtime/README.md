@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（72本）
+## 自動生成の論文一覧（79本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -131,6 +131,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   通常の最近最少使用方式（Least Recently Used、LRU）では、同じエージェントのキャッシュ木に属するノードの最近使用時刻がほぼ同時に更新され、削除対象が特定のエージェントに偏る。
 
+- **2026-09 · [Pull: Lazy Materialization of Working Memory for Stateful LLM Conversations](2026-2609.14773-pull-lazy-working-memory-materialization.md)**  
+  実装：[✓](https://github.com/wulun811/kongmen-pull) ・ リポジトリ内被引用：0  
+  長期対話を決定論的な索引で管理し、質問ごとに必要な原文ターンだけを可逆的に実体化して入力トークンを削減するセッションルータ。
+
 - **2026-09 · [PipeSwift: Revisiting Pipeline Parallelism for Large-Scale Completion-Oriented Agentic LLM Serving](2026-2609.16491-pipeswift-pipeline-parallel-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント推論のJCTをプリフィルとデコードの均衡問題として捉え直し、JCT指向スケジューリングとMTP統合パイプライン並列で64基H800上の360B級MoE処理を高速化する。
@@ -171,6 +175,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   TideRLは、言語モデルを外部環境と何度も対話させて強化学習する際、GPUを稼働させるだけでは学習の進捗が増えないという問題を扱う。さらに一つの課題が終了するまでのターン数は予測しにくい。
 
+- **2026-08 · [Read Less, Solve More: Token-Efficient Sparse Reading for AI Agents](2026-2608.22237-read-less-solve-more-token-efficient-sparse-reading-for-ai-agents.md)**  
+  実装：[✓](https://github.com/Zedong-Liu/SparseReadingOfficial) ・ リポジトリ内被引用：0  
+  これにより入力処理の計算費用と遅延が増えるだけでなく、重要な根拠が埋もれて道具選択や停止判断を誤る場合がある。全文を読むべき表計算や小さいファイルへ無理に適用すると、逆にトークン量が大きく増える例も確認しており、読解判定器はこの負の条件を避けるための主要機構である。
+
 - **2026-08 · [AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs](2026-2608.26004-asymspec-context-asymmetric-speculative-decoding-for-agentic-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   軽量ドラフターだけが完全文脈を読み、完全/圧縮文脈のロジット差δと文脈発散連動の受理ゲートで、圧縮文脈しか見ない大規模検証器の精度を回復する非対称推測復号。
@@ -178,6 +186,10 @@
 - **2026-08 · [AOSpec: Action and Observation Co-Speculation for Low-Latency Agent Serving](2026-2608.00881-aospec-action-and-observation-co-speculation-for-low-latency-agent-servi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単純な投機的生成はモデル内部のトークン列を先読みするが、エージェント全体の遅延ではモデル外の実行時間が残る。同じ記録済み軌跡を再生する評価で、通常の逐次実行に比べた平均総遅延削減率は11.8〜32.5%、10ms/トークン条件のp99遅延削減率は42.8%である。
+
+- **2026-07 · [Scalable LLM Agent Tool Access in the Cloud](2026-2607.15593-scalable-llm-agent-tool-access-in-the-cloud.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、LLMエージェントが数百から数千の外部操作を利用する際に、ツール定義を全件プロンプトへ詰め込む方式と、各ツールのMCPサーバへ個別接続する方式の両方が規模の壁に直面することを扱う。
 
 - **2026-07 · [Compute Globally, Materialize Locally: The Memory Contract of Sparse Event-KV](2026-2607.23693-compute-globally-materialize-locally-the-memory-contract-of-sparse-event-kv.md)**  
   実装：[✓](https://github.com/oklen/Compute-Globally-Materialize-Locally) ・ リポジトリ内被引用：0  
@@ -271,6 +283,14 @@
   実装：[✓](https://github.com/robinren03/agserve) ・ リポジトリ内被引用：0  
   従来の単純な接頭辞一致キャッシュや最近使用順の退避では、この特徴を活かしにくい。NeurIPS 2025の実機評価では、AWエージェントでGPT-4oと近い品質を16.5%の費用で達成し、同一費用の費用・品質曲線に対して1.8倍の品質を報告する。
 
+- **2025-11 · [Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving](2025-2511.01633-graph-cot-multi-agent-efficient-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Graph-CoTを分類・推論・行動・検索へ分業し、頂点単位KV再利用、優先度追い出し、検索と生成の重畳を組み合わせ、遅延最大90.3%減・スループット最大15.1倍を報告。
+
+- **2025-11 · [O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents](2025-2511.13593-o-mem-omni-memory-system-for-personalized-long-horizon-self-evolving-age.md)**  
+  実装：[✓](https://github.com/OPPO-PersonalAI/O-Mem) ・ リポジトリ内被引用：0  
+  過去の対話を意味的に近い断片へまとめ、質問に近い断片だけ検索する従来方式にも問題がある。主な結果は、長期対話ベンチマークLoCoMoのGPT-4.1条件でF1がLangMemの48.72から51.67へ、人物記憶のPERSONAMEMでA-Memの59.42から62.99へ改善したことである。
+
 - **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
   実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：0  
   機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
@@ -313,9 +333,17 @@
   実装：✓ ・ リポジトリ内被引用：7  
   LLMワークフローをDAG演算子へ分解し、完全一致の重複排除・実行互換バッチ化・異種GPU配置・無状態ワーカーを一体化して、金銭コスト1.8〜3.8倍、エネルギー1.3〜2.0倍の改善を示す。
 
+- **2025-09 · [ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](2025-2509.25140-reasoningbank-scaling-agent-self-evolving-with-reasoning-memory.md)**  
+  実装：[✓](https://github.com/google-research/reasoning-bank) ・ リポジトリ内被引用：5  
+  長期間にわたってウェブ操作やソフトウェア修正を行う大規模言語モデル（LLM）エージェントは、過去に成功した手順を別の課題で再発見したり、既に失敗した操作を繰り返したりする。過去の実行軌跡を丸ごと検索する方式では、現在の課題に関係ない画面遷移や局所的な操作が混ざる。
+
 - **2025-06 · [Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC](2025-2506.24045-agent-xpu-efficient-scheduling-of-agentic-llm-workloads-on-heterogeneous.md)**  
   実装：[✓](https://github.com/xinming-wei/LLM.xpu) ・ リポジトリ内被引用：5  
   Agent.xpuは、個人端末で複数の言語モデル利用エージェントを同時に動かす際、中央処理装置、統合画像処理装置、ニューラル処理装置を協調させる推論実行基盤である。
+
+- **2025-09 · [Dynamic Speculative Agent Planning](2025-2509.01920-dynamic-speculative-agent-planning.md)**  
+  実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：4  
+  動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
 
 - **2025-10 · [Staircase Streaming for Low-Latency Multi-Agent Inference](2025-2510.05059-staircase-streaming-for-low-latency-multi-agent-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

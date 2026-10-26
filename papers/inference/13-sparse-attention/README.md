@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（132本）
+## 自動生成の論文一覧（146本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -128,6 +128,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   RouteSparseは、長文脈LLMの事前充填（プリフィル）で必要な注意演算の組を減らす動的な疎注意（sparse 注意機構）手法である。
 
+- **2026-08 · [Prefix Sliding for efficient test-time scaling](2026-2608.26070-prefix-sliding-for-efficient-test-time-scaling.md)**  
+  実装：[✓](https://github.com/Muennighoff/prefix-sliding) ・ リポジトリ内被引用：1  
+  推論時間拡張（test-time scaling）では、言語モデルが問題を解くために生成する思考トークン数を増やし、難問の正答率を改善する。しかし、通常の全注意（full 注意機構）では、生成済みの全トークンに対する鍵・値キャッシュ（KV キャッシュ）を保持し、次のトークンを生成するたびに全履歴を読む。
+
 - **2026-06 · [SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference](2026-2606.04511-sparda.md)**  
   実装：[✓](https://github.com/NVlabs/SparDA) ・ リポジトリ内被引用：1  
   長文脈の大規模言語モデルでは、事前入力処理の注意計算、復号時のKVキャッシュ読出し帯域、KVキャッシュのGPU容量という三つの資源が制約になる。疎注意（Sparse 注意機構）は実際に参照するトークンやブロックを減らし、注意計算と読出し帯域を削減する。
@@ -166,9 +170,17 @@
   実装：[✓](https://github.com/CURRENTF/SparseEngine) ・ リポジトリ内被引用：0  
   SparseEngineの貢献は、新しい疎注意スコアそのものではなく、疎方式が持つ異なる物理KV表現と状態更新の規則を共通サービング基盤へ接続する抽象化である。
 
+- **2026-09 · [SAS: Simple Attention Sparsification via End-to-End Optimization of Context Ranking](2026-2609.13141-sas-simple-attention-sparsification-via-end-to-end-optimization-of-context-ranking.md)**  
+  実装：[✓](https://github.com/Tencent-Hunyuan/Simple-Attention-Sparsification) ・ リポジトリ内被引用：0  
+  言語モデル損失を注意ソフトマックス内の連続ゲートへ直接流してコンテキスト順位を学習し、固定Top-K疎注意の精度と長文脈デコード効率を改善する。
+
 - **2026-09 · [SANTA++: Sampling Attention through Representative Keys](2026-2609.35629-santa-sampling-attention-through-representative-keys.md)**  
   実装：[✓](https://github.com/OPUSLab/santapp-kernel-demo) ・ リポジトリ内被引用：0  
   代表キーを使う確率的な疎注意。長文脈の全キー走査を避けつつ、選ばれたチームの注意寄与を包含確率で補正する。
+
+- **2026-09 · [Sample-Guided Exact Top-K Selection for Long-Context Sparse Attention](2026-2609.08450-sample-guided-exact-topk-sparse-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HPC-Ops Top-Kは、標本で上位候補境界を予測し、全行の一回走査で十分性を証明、足りない時だけ回復して正確なK個を選び、長文疎注意の再走査を減らす。
 
 - **2026-09 · [RouteRelay: Event-Triggered Cross-Layer Route Reuse for Efficient Dynamic Sparse Attention](2026-2609.07306-routerelay-cross-layer-route-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -182,17 +194,37 @@
   実装：✓ ・ リポジトリ内被引用：0  
   生成中の多くの位置では直近文脈だけで次トークンを決められるにもかかわらず、数万から十数万トークンの履歴を毎回読むため、注意計算とHBM帯域の費用が増える。按需注意（On-Demand 注意機構; ODA）は、まず安価な局所注意を実行し、その結果と直前状態から「この段階で全注意を使う利益」を軽量な想起ヘッドで予測する。
 
+- **2026-09 · [Elastic Threshold Attention: Learned Contextual Sparsity for Long-Context Decoding](2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Elastic Threshold 注意機構（ETA）は、注意ヘッドごとに現在のクエリから動的な閾値を予測する機構をモデルに組み込み、訓練時から疎化しやすい注意分布を学習する。
+
+- **2026-09 · [CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference](2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  平均補償後に残る注意誤差を注意質量とブロック内得点分散の積で推定し、厳密に読む鍵・値ブロックを選ぶことで、長文脈の疎な注意計算の精度と中央処理装置退避効率を改善する。
+
 - **2026-09 · [CommunityKV: Efficient Long-Context Decoding via Graph Partitioning](2026-2610.00418-communitykv-efficient-long-context-decoding-via-graph-partitioning.md)**  
   実装：[✓](https://github.com/amazon-science/community-kv) ・ リポジトリ内被引用：0  
   CommunityKVは、長文脈の自己回帰生成で過去トークンの鍵・値キャッシュ（key-value キャッシュ; KV キャッシュ）を毎回すべて読み込む代わりに、入力文脈中で意味的にまとまったトークン群だけを検索して正確な注意計算を行う学習不要の疎注意方式である。
+
+- **2026-09 · [CEDAR: Error-Bounded Residual Routing for Efficient Long-Context Attention](2026-2609.07237-cedar-error-bounded-residual-routing-for-efficient-long-context-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  選外チャンクも要約経路で全域可視性を残し、鍵・値分散に基づく誤差上界で必要なチャンクだけ正確注意へ展開して、128Kで約3倍のカーネル高速化と品質回復を両立する疎注意方式。
 
 - **2026-09 · [Block Sparse Attention with Log-Linear Complexity](2026-2609.31093-block-sparse-attention-with-log-linear-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の注意計算を高速化する際、過去のすべての鍵・値に注意を計算する代わりに、重要と判断した鍵ブロックだけを参照するブロック疎注意（block-sparse 注意機構）が用いられる。Tritonによる選択処理単体の実験では、256KトークンでBSAの312.96ミリ秒に対しPISAの31.44ミリ秒で、約9.95倍高速だった。
 
+- **2026-09 · [Attention Routing Stabilizes Early: Working-Set Inference for Recurrent Language Models](2026-2609.27373-attention-routing-stabilizes-early-working-set-inference-for-recurrent-language-models.md)**  
+  実装：[✓](https://github.com/tbn5pj/WISE_code) ・ リポジトリ内被引用：0  
+  再帰型言語モデルは、同じネットワークブロックを何度も通して潜在表現を更新することで、固定パラメータ数のまま推論時計算量を増やせる。4K文脈では、後半20段の注意をネイティブFlashAttention比で1.758倍、探索段を含む32段の注意軌跡全体でも1.355倍高速化した。
+
 - **2026-08 · [Self-Indexing Attention for Compression-Compatible Sparse Long-Context LLM Inference](2026-2609.13205-self-indexing-attention-for-compression-compatible-sparse-long-context-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   要点：鍵の直交変換後の符号を、追加の検索器を保存せずに、事前入力処理（プリフィル）と逐次復号（デコード）の双方で利用する。検索の近似性、注意計算そのものの正確性、鍵・値の量子化誤差は別の問題として扱う。
+
+- **2026-08 · [Learning how to Forget: Fine-tuning for Long-Context Sparse Attention](2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md)**  
+  実装：[✓](https://github.com/awslabs/keys_values) ・ リポジトリ内被引用：0  
+  任意のKVキャッシュ方策を学習中に再現し、二重チェックポイントとKV差分符号化で推論級メモリの長文脈疎注意微調整を実現する。
 
 - **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -209,6 +241,10 @@
 - **2026-07 · [From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion](2026-a55ddcf36e91-from-logical-to-computational-sparsity-structure-aware-block-sparse-atte.md)**  
   実装：[✓](https://github.com/DeepSoftwareAnalytics/SabreCoder) ・ リポジトリ内被引用：0  
   長いコードを補完する言語モデルでは、入力コードを一度に処理する事前計算（プリフィル）の注意演算が入力長の二乗に応じて増える。コード特有の関数・識別子・import文を考慮しない疎注意は重要な依存を失って補完精度が落ちやすい。次に同一チャンク内、明示的依存、埋め込み類似、グローバル参照という四つの規則を合成して注意マスクを作る。
+
+- **2026-07 · [BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs](2026-fa80222132dc-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  BOSCH（Black-Box Binary Optimization for Short-Context 注意機構-Head Selection）は、すでに学習された大規模言語モデル（LLM）を、全域因果注意（global causal self-注意機構）とスライディングウィンドウ注意（Sliding Window 注意機構…
 
 - **2026-06 · [Memory-Efficient KV Cache Optimization for Large Language Model Inference at the Edge](2026-c5217a359f97-memory-efficient-kv-cache-optimization-for-large-language-model-inferenc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -246,9 +282,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ブロック疎注意（block sparse 注意機構）は、過去トークンを一定長のブロックへ区切り、各ブロックの代表ベクトルと現在の問い合わせの類似度から重要なブロックだけを読み込む。Llama-3.1-8B、Qwen3-8B、Qwen3-32BのRULERとLongBenchで、Quest・ArkValeを同じKV予算4%、平均ブロック長32の条件で比較した。
 
+- **2026-04 · [SpikingBrain2.0: Brain-Inspired Foundation Models for Efficient Long-Context and Cross-Platform Inference](2026-2604.22575-spikingbrain2-0-brain-inspired-foundation-models-for-efficient-long-cont.md)**  
+  実装：[✓](https://github.com/BICLab/SpikingBrain2.0) ・ リポジトリ内被引用：0  
+  長い文章を扱う大規模言語モデルでは、全注意（Full 注意機構; FA）を用いると、事前充填（プリフィル）時の注意計算が系列長に対して二次的に増える。
+
 - **2026-04 · [SAS: Sparse Attention Synthesizer for Efficient Language Model Inference](2026-35256164722e-sas-sparse-attention-synthesizer-for-efficient-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SAS（Sparse 注意機構 Synthesizer）は、大規模言語モデルの疎注意を、マスクの記述だけでなく鍵・値キャッシュ（Key-Value Cache; KVキャッシュ）の配置・寿命管理と低水準カーネルの生成まで一体化するシステムである。
+
+- **2026-04 · [HubRouter: A Pluggable Sub-Quadratic Routing Primitive for Hybrid Sequence Models](2026-2604.22442-hubrouter-a-pluggable-sub-quadratic-routing-primitive-for-hybrid-sequenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HubRouterは、全トークン同士を比較する通常の自己注意を、少数の学習可能なハブを介したルーティングと、重要トークンだけを対象とする小規模な注意計算に置き換える系列モデル用の機構である。
 
 - **2026-04 · [HieraSparse: Hierarchical Semi-Structured Sparse KV Attention](2026-2604.16864-hierasparse.md)**  
   実装：[✓](https://github.com/psl-ntu/HieraSparse) ・ リポジトリ内被引用：0  
@@ -396,6 +440,10 @@
   実装：[✓](https://github.com/ant-research/long-context-modeling) ・ リポジトリ内被引用：2  
   再帰型ニューラルネットワーク（Recurrent Neural Network; RNN）や状態空間モデル（State Space モデル; SSM）は、過去を固定次元の状態に圧縮するため、文脈が伸びても注意機構のような二乗計算や増大するKVキャッシュを必要としない。
 
+- **2025-02 · [APB: Accelerating Distributed Long-Context Inference by Passing Compressed Context Blocks across GPUs](2025-2502.12085-apb-accelerating-distributed-long-context-inference-by-passing-compresse.md)**  
+  実装：[✓](https://github.com/thunlp/APB) ・ リポジトリ内被引用：2  
+  系列並列化（sequence parallelism）は入力を複数GPUへ分けることで計算を並列に進めるが、完全な注意計算を維持する方式ではGPU間で大量の情報を交換し、計算総量も大きい。原著は最大速度改善をFlashAttention比9.2倍、RingAttention比4.2倍、StarAttention比1.6倍と報告する。
+
 - **2025-10 · [Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models](2025-2510.17196-understanding-and-improving-length-generalization-in-hierarchical-sparse.md)**  
   実装：[✓](https://github.com/jacky-leng/length-generalizable-sparse-attention) ・ リポジトリ内被引用：1  
   長いコンテキストを扱うTransformerは、過去トークンの全KVを参照できる一方、文脈長の増加とともに注意計算・メモリ参照の費用が大きくなる。Sliding Window 注意機構（SWA）は局所窓へ制限することで負荷を抑えるが、窓の外にある事実を直接検索できない。
@@ -453,6 +501,10 @@
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：66  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
+
+- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：66  
+  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
   実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：40  
@@ -525,6 +577,10 @@
 - **2021-12 · [LongT5: Efficient Text-To-Text Transformer for Long Sequences](2021-2112.07916-longt5-efficient-text-to-text-transformer-for-long-sequences.md)**  
   実装：[✓](https://github.com/google-research/longt5) ・ リポジトリ内被引用：13  
   T5のエンコーダを長文向けに置き換え、各層でブロック集約した大域トークンを一時的に作る注意機構を提案する。重要文生成による事前学習と組み合わせ、要約・質問応答で長い入力の情報を利用する。論文の主な評価はモデル品質と学習時の計算費用であり、デコード専用の推論サービング実験とは区別する。
+
+- **2021-11 · [Memory-efficient Transformers via Top-k Attention](2021-c7730f7e7292-memory-efficient-transformers-via-top-k-attention.md)**  
+  実装：[✓](https://github.com/ag1988/top_k_attention) ・ リポジトリ内被引用：5  
+  既存の効率的注意には、ハッシュや局所窓で計算する組合せを制限する方式と、注意関数自体を近似する線形注意がある。
 
 ### 6年前（2020-11〜2021-10）
 

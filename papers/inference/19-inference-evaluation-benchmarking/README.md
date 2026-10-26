@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（69本）
+## 自動生成の論文一覧（92本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -23,6 +23,10 @@
 - **2026-03 · [QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression](2026-2603.21232-qmop-query-guided-mixture-of-projector-for-efficient-visual-token-compre.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   QMoP（Query Guided Mixture-of-Projector）は、マルチモーダル大規模言語モデル（Multimodal Large Language モデル、MLLM）の画像トークン数を減らす際に、一つの固定圧縮法では画像と質問の組合せによって必要な情報を失うという問題を扱う。
+
+- **2025-11 · [Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications](2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。
 
 - **2026-09 · [Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models](2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md)**  
   実装：[✓](https://github.com/Hsu1023/PILL) ・ リポジトリ内被引用：1  
@@ -58,6 +62,18 @@
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
+- **2026-09 · [The Inference Engineering Pareto Atlas: Which Optimizations Dominate the Cost, Quality, and Latency Frontier?](2026-2609.17863-inference-engineering-pareto-atlas.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  54実測点と校正シミュレータで推論最適化の組合せを品質・遅延・費用の同一Pareto面へ置き、制約別の支配構成を示す。
+
+- **2026-09 · [SiliconBench: Speed, Memory, and Fidelity for LLM Serving on Unified-Memory Desktops](2026-2609.19169-siliconbench-speed-memory-and-fidelity-for-llm-serving-on-unified-memory-desktops.md)**  
+  実装：[✓](https://github.com/WindChimeRan/SiliconBench) ・ リポジトリ内被引用：0  
+  Apple Siliconの九推論基盤を速度・共有メモリ・忠実度・新モデル対応・複数機で横断監査し、vllm-metalの並行処理と遠隔直接メモリアクセスを使うテンソル並列の優位を示す。
+
+- **2026-09 · [Separating Stream Stability from Long-Term Recall in Language Models](2026-2609.07282-stream-stability-long-term-recall-threeh.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長時間生成の安定性・過去情報への因果アクセス・タスク効用をThreeHの3到達距離へ分離し、注意シンクの安定生成を長期記憶と誤認しない評価契約を示す。
+
 - **2026-09 · [PrefixBench-H100: Characterizing Prefix Reuse and Time-to-First-Token in H100 LLM Serving](2026-2609.19657-prefixbench-h100-prefix-reuse-ttft.md)**  
   実装：[✓](https://doi.org/10.5281/zenodo.21725505) ・ リポジトリ内被引用：0  
   単一H100 NVL上でvLLMとTensorRT-LLMへ同じ要求列を送り、接頭辞キャッシュそのものの効果、容量超過、要求スケジューリングの差を切り分ける実測ベンチマーク。
@@ -74,9 +90,45 @@
   実装：[✓](https://github.com/beesfleas/HoliBench) ・ リポジトリ内被引用：0  
   20モデル×7デバイス×3量子化×8推論系を精度・遅延・電力・メモリで統一測定し、実測プロファイルから制約付き配備構成まで選ぶ基盤。
 
+- **2026-09 · [GGUF-Metadata Prediction of Single-Sequence llama.cpp Throughput Across Three Systems](2026-2609.14864-gguf-metadata-prediction-of-single-sequence-llama-cpp-throughput-across-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ローカル大規模言語モデルを選ぶとき、GGUF形式の複数の量子化モデルを実際に読み込み、同じ入力長で速度を比較する作業は重い。
+
 - **2026-09 · [From Inference Engine to Inference Control Plane: Connecting vLLM, llm-d, and the Evolution of Efficient Distributed LLM Serving](2026-2609.23130-from-inference-engine-to-inference-control-plane-connecting-vllm-llm-d-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLM推論最適化の単位が単一推論エンジンのバッチ処理・KV管理から、分散したGPU群のルーティング、KV転送、プリフィル/デコード分離、入場制御、拡縮と耐障害性を束ねる制御面へ移行していることを整理したシステム統合レビュー。
+
+- **2026-09 · [FaultSense: Fault Localization in Large-Scale Mixture-of-Experts Model Serving Infrastructure](2026-a08c1f9c632d-faultsense-fault-localization-in-large-scale-mixture-of-experts-model-serving-infrastructure.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  単一MoE層の選択可能プローブと二段階グループ検査で、特権監視なしにグレー障害GPU・通信経路をアプリ層から局所化し、診断プローブを約20倍削減する。
+
+- **2026-09 · [Dissecting GPU Utilization for LLM Inference on Nvidia Hopper](2026-2609.12923-dissecting-gpu-utilization-llm-inference-hopper.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  H100上のLLM推論を8種類のNsight指標で分解し、デコードでは帯域待ちに加えGMMA m64固定断片の1.56～12.5%充填やwave損失が単一SM利用率に隠れることを示す。
+
+- **2026-09 · [AutoTuneBench: Trustworthy Measurement for Agent Auto-Tuning of LLM Serving Engines](2026-2609.18123-autotunebench-trustworthy-serving-engine-measurement.md)**  
+  実装：[✓](https://github.com/li-ch/autotunebench) ・ リポジトリ内被引用：0  
+  自動チューニングの測定規約を凍結コード・DB投入検証・不正隔離・事前登録比較・外部アンカーで強制し、エージェントが評価欠陥を最適化するのを防ぐ。
+
+- **2026-09 · [Accuracy is Not Enough: A Divergence-Based Approach to Evaluate Fidelity Loss in Quantized LLMs](2026-2609.07664-accuracy-is-not-enough-a-divergence-based-approach-to-evaluate-fidelity-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（LLM）を低ビット量子化して端末へ載せるとき、一般的には困惑度（perplexity）や選択式問題の正答率がどれだけ落ちるかを確認する。例えばLLaMA-3.1-8BのMMLUでは、Q4KとQ40の正答率はそれぞれ32.2%と32.1%でほぼ等しいのに、BF16に対するTVDは0.055と0.221で約4倍異なる。
+
+- **2026-08 · [Thinking Hard, Not Smart: Reasoning Models Fail to Ration Test-Time Compute Across Questions](2026-2608.07968-thinking-hard-not-smart-reasoning-models-fail-to-ration-test-time-comput.md)**  
+  実装：[✓](https://github.com/Fcr09/thinking-hard-not-smart) ・ リポジトリ内被引用：0  
+  長い思考を許す推論言語モデルは、一問ごとの数学・コード問題で精度を高められる。しかし現実の計算資源は有限であり、複数の依頼を同時に処理する場合には「どの問題へ何トークン使うか」「いつ諦めて別の問題へ進むか」という別の判断が必要になる。この論文は新しい高速化カーネルや推論サービング基盤を提案するものではない。
+
+- **2026-08 · [Sliding-window beats linear attention](2026-2608.28444-sliding-window-beats-linear-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  線形注意は固定サイズの再帰状態に集約することで、この増加を抑える。窓64・先頭シンク4の方式は、一般知識6課題平均で元モデルの99.0%を回復し、11の比較例のうち9例で元モデルを除く最高の平均値を得た。
+
+- **2026-08 · [LowRankArena: A Standardized Evaluation Platform for SVD-Based LLM Compression](2026-2608.26389-lowrankarena-a-standardized-evaluation-platform-for-svd-based-llm-compre.md)**  
+  実装：[✓](https://github.com/Zishan-Shao/lowrankarena) ・ リポジトリ内被引用：0  
+  特異値分解（Singular Value Decomposition; SVD）を使う低ランク圧縮は、重み行列を二つの小さな行列の積に分解し、保存するパラメータと演算量を減らす。
+
+- **2026-08 · [Launch-Bound and Substitutable: Why Three Inference Optimizations Fail to Pay Off in Mixture-of-Experts Models](2026-2608.26612-launch-bound-and-substitutable-moe-inference-optimizations.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MoEの融合カーネル・4/8ビット量子化・グラフコンパイルを単体とE2Eで測定し、局所高速化が起動律速や品質へどう波及するかを分解して、置換可能な最適化の限界を明らかにする研究。
 
 - **2026-08 · [Diagnose Before You Compress: Prediction-Independent Bottleneck Witness Refinement for LLM Serving Traces](2026-2608.00423-bottleneck-preserving-witnessing.md)**  
   実装：[✓](https://github.com/llmllmllm/BPW) ・ リポジトリ内被引用：0  
@@ -86,9 +138,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   対象はモデルの重みを更新する学習ではなく、既存モデルが出力した確率分布を、推論時にどのようなトークン列へ変換するかという復号（デコード）の設計である。表1の年代と分類は文献整理の結果であり、速度・品質の絶対値や改善倍率を示す統一ベンチマークではない。
 
+- **2026-08 · [Beyond Accuracy: Auditing Spatial Provenance in Visual Token Pruning for OCR-Critical MLLM Inference](2026-2608.00077-beyond-accuracy-auditing-spatial-provenance-in-visual-token-pruning-for-.md)**  
+  実装：[✓](https://github.com/SouthWinter/spatial-provenance-audit) ・ リポジトリ内被引用：0  
+  視覚トークンを間引けば言語モデル側の事前計算（プリフィル）とその作業用メモリを削減できるが、単に「保持率30%で正答率がほぼ同じ」という評価には穴がある。さらにトークンを統合する手法については、統合出力の出自集合と、代表位置で局所的に追跡できる範囲を区別する。
+
 - **2026-07 · [Rethinking the Generation Order of Block Diffusion Language Models](2026-2607.24306-rethinking-the-generation-order-of-block-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ブロック内の位置は任意順で確定できるように見えるが、既存の並列サンプリング方式をそのまま移植すると、先の位置だけを確定して前方の未確定位置を残し、コードや推論の構造を壊す場合がある。
+
+- **2026-07 · [From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference](2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  疎MoEの専門家加算順序だけで内部状態と生成文が分岐しうることを全順列・状態再構成で実証し、BF16項＋FP32累算を評価範囲の安定な互換契約として特定する。
 
 - **2026-07 · [CORVUS: Context Optimization and Reduction Via Underlying Synchronization for LLM Coding Agents](2026-2607.22711-corvus-context-optimization-and-reduction-via-underlying-synchronization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -98,13 +158,25 @@
   実装：✓ ・ リポジトリ内被引用：0  
   原著はサービス指標の比較研究であり、GPU内部の暗号化処理、PCIe転送、HBM帯域、スケジューラのどれが何%の原因かまで分解したマイクロアーキテクチャ解析ではない。
 
+- **2026-06 · [Characterizing Software Aging in GPU-Based LLM Serving Systems](2026-2606.11916-characterizing-software-aging-in-gpu-based-llm-serving-systems.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  6種類のGPU LLMサービング構成を計216時間連続運転し、全構成でホスト側のメモリ経年劣化を検出。リーク率はvLLM V1単体+1.8KB/時からTriton+V0の+157KB/時まで大差があり、配置・ランタイム選択が長期信頼性を左右することを示す。
+
 - **2026-06 · [Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems](2026-2606.05711-beyond-tokens-a-unified-framework-for-latent-communication-in-llm-based-.md)**  
   実装：[✓](https://github.com/enochliu98/Awesome-Latent-Communication) ・ リポジトリ内被引用：0  
   2026年7月15日を調査打切りとして、2024～2026年の代表的な18研究を選び、送る情報の種類（WHAT）、送受信間の表現・層の整合（WHICH）、受信モデルへの統合方法（HOW）という3軸で比較する。
 
+- **2026-06 · [Beyond Per-Token Pricing: A Concurrency-Aware Methodology for LLM Infrastructure Cost Estimation](2026-2606.11690-beyond-per-token-pricing-a-concurrency-aware-methodology-for-llm-infrast.md)**  
+  実装：[✓](https://github.com/pChitral/vllm-cost-meter) ・ リポジトリ内被引用：0  
+  本研究はこの差を、要求到着率を明示した費用測定問題として定式化する。ハードウェア、モデル構造、量子化精度、要求到着率、遅延目標を分け、同じGPUでも負荷によって費用がどの程度変わるかを実機で測る。H100 NVLの主実験では、3種類のモデルと2種類の精度の計6構成を7段階の要求率で測定し、同じ構成内で17.5～36.3倍の出力トークン単価差を観測した。
+
 - **2026-06 · [Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf](2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント実行を呼出し依存グラフとして記録・再生し、8種類の実アプリでサービング負荷とハードウェア指標を再現可能に測る評価基盤を提示する。
+
+- **2026-06 · [Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads](2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md)**  
+  実装：[✓](https://github.com/Tambe-Lab/agent-memory-profiling) ・ リポジトリ内被引用：0  
+  本研究は、長期にわたり複数のセッションをまたいで稼働する大規模言語モデル（LLM）エージェントの「記憶」を、回答品質を高める機能としてだけでなく、計算・メモリ・入出力・スケジューリングの対象となる実行時システムとして捉え直す。後者は前者の約26.5倍である。
 
 - **2026-05 · [PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding](2026-2605.30126-parcel-pool-anchored-resampling-with-conditioned-elastic-queries-for-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -174,9 +246,21 @@
   実装：[✓](https://github.com/xiaomi-research/timeviper) ・ リポジトリ内被引用：0  
   1時間の動画を毎秒1枚、1フレーム768トークンで表現すると約276万トークンになり、通常の全注意では処理費用とメモリが大きい。TimeViperは、状態空間モデル（State Space モデル; SSM）のMamba-2とTransformerの注意層を混ぜた基盤を使い、さらに言語モデルの途中で視覚トークンを圧縮する。
 
+- **2025-11 · [OckBench: Measuring the Efficiency of LLM Reasoning](2025-2511.05722-ockbench-measuring-the-efficiency-of-llm-reasoning.md)**  
+  実装：[✓](https://github.com/OckBench/OckBench) ・ リポジトリ内被引用：0  
+  従来の正答率だけではこの差が見えず、ハードウェアの処理量だけではモデル自身がどれほど冗長に推論するかを分離できない。
+
 - **2025-11 · [MemSearcher: Training LLMs to Reason, Search and Manage Memory via End-to-End Reinforcement Learning](2025-2511.02805-memsearcher-training-llms-to-reason-search-and-manage-memory-via-end-to-.md)**  
   実装：[✓](https://github.com/icip-cas/MemSearcher) ・ リポジトリ内被引用：0  
   検索エージェント（search agent）が外部検索を何度も行うと、思考、検索クエリ、検索結果を全て会話履歴に追記する従来のReAct方式では、ターンが増えるにつれて入力文脈が長くなる。検索エージェントの入力文脈はほぼ一定長で、論文の評価条件では4,000トークン未満を維持する。
+
+- **2025-11 · [From Prompts to Power: Measuring the Energy Footprint of LLM Inference](2025-2511.05597-from-prompts-to-power-measuring-the-energy-footprint-of-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本サーベイとの接点は、LLM推論サービング（serving）の省エネルギー化、モデル・GPUの配置選択、バッチ処理、KVキャッシュ容量、量子化・実行方式の設計判断である。
+
+- **2025-11 · [Analyzing and Modeling LLM Response Lengths with Extreme Value Theory: Anchoring Effects and Hybrid Distributions](2025-a08ef62fbe5d-analyzing-and-modeling-llm-response-lengths-with-extreme-value-theory-an.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  要求ごとの出力長がばらつくと、短い応答と非常に長い応答が混在し、GPUの連続バッチングやスケジューラの資源配分が難しくなる。
 
 ### 2年前（2024-11〜2025-10）
 
@@ -246,6 +330,10 @@
   実装：[✓](https://github.com/HPMLL/BurstGPT) ・ リポジトリ内被引用：63  
   Azure OpenAI GPTサービスの1031万件・213日分の実トレースと再生基盤BurstGPT-Perfを公開し、平均RPSだけを揃えた合成負荷では見えないバースト、会話間隔、応答長、失敗がサービング評価の結論を変えることを示す。
 
+- **2024-04 · [Characterizing Power Management Opportunities for LLMs in the Cloud](2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md)**  
+  実装：✓ ・ リポジトリ内被引用：26  
+  この観測を使い、優先度別の二段階電力制御を行うPOLCAを提案する。著者らは本番トレースから生成した合成負荷を用いた離散事象シミュレーションで、既存の電力予算のままサーバーを30%多く配置しても、設定した遅延SLOを満たし、通常条件で電力ブレーキを起こさない結果を示した。
+
 - **2024-03 · [The Unreasonable Ineffectiveness of the Deeper Layers](2024-2403.17887-the-unreasonable-ineffectiveness-of-the-deeper-layers.md)**  
   実装：✓ ・ リポジトリ内被引用：23  
   削除したい層数を決め、入力・出力間の角距離が最小の連続ブロックを選択し、実際に層を除去する。Llama-2系列の5-shot MMLUでは削除率45〜55%付近で急落するが、Qwen系列では約20%付近で急落する。
@@ -257,6 +345,10 @@
 - **2024-01 · [Escape Sky-high Cost: Early-stopping Self-Consistency for Multi-step Reasoning](2024-2401.10480-escape-sky-high-cost-early-stopping-self-consistency-for-multi-step-reas.md)**  
   実装：[✓](https://github.com/Yiwei98/ESC) ・ リポジトリ内被引用：10  
   多段階推論では、単一の思考連鎖（Chain-of-Thought、CoT）だけで回答すると、途中の偶然の誤りがそのまま最終回答に伝わる。自己整合性（自己整合性、SC）は同一問題から複数の思考連鎖を独立に標本化し、最終回答を多数決してこの変動を抑える。しかしSCは難しい問題にも簡単な問題にも、事前に決めた最大標本数を一律に使う。
+
+- **2024-06 · [Measuring and Improving the Energy Efficiency of Large Language Models Inference](2024-f40d5b5275ad-measuring-and-improving-the-energy-efficiency-of-large-language-models-i.md)**  
+  実装：[✓](https://github.com/maufadel/EnergyMeter) ・ リポジトリ内被引用：8  
+  著者らは推論をモデルパラメータ数だけで比較する慣習にも疑問を投げかけ、層の深さ、注意・フィードフォワードの並列化、バッチ数、量子化形式の実行実装を分けて検証した。
 
 - **2024-04 · [Toward Inference-optimal Mixture-of-Expert Large Language Models](2024-2404.02852-toward-inference-optimal-mixture-of-expert-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：7  

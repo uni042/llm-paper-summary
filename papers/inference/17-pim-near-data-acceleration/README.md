@@ -24,7 +24,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（30本）
+## 自動生成の論文一覧（31本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
@@ -44,6 +44,10 @@
 - **2025-12 · [KVNAND: Efficient On-Device Large Language Model Inference Using DRAM-Free In-Flash Computing](2025-2512.03608-kvnand-dram-free-in-flash-computing.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   重みとKVキャッシュを計算機能付き三次元NANDに置き、短文脈用の共置型と長文脈用の分離型を使い分けて、フラッシュ内注意計算とページ配置を最適化する。
+
+- **2025-11 · [LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs](2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md)**  
+  実装：[✓](https://github.com/LUT-FPGA/LUT-LLM) ・ リポジトリ内被引用：1  
+  活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 

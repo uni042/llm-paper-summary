@@ -29,7 +29,7 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 この系統は複数論文からなる明確な近傍クラスタとしてDiscoveryの昇格ゲートを通過した。単一論文だけを理由に細分化せず、上記の分類境界を維持する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（10本）
+## 自動生成の論文一覧（11本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/22-diffusion-decoding-efficiency/)
 
@@ -79,4 +79,10 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 - **2026-02 · [Prism: Efficient Test-Time Scaling via Hierarchical Search and Self-Verification for Discrete Diffusion Language Models](2026-2602.01842-prism-efficient-test-time-scaling-via-hierarchical-search-and-self-verif.md)**  
   実装：[✓](https://github.com/viiika/Prism) ・ リポジトリ内被引用：0  
   Prismは、階層的軌跡探索（Hierarchical Trajectory Search; HTS）、部分再マスクによる局所分岐（Local Branching via Partial Remasking）、自己検証フィードバック（Self-Verified Feedback; SVF）を統合する。
+
+### 2年前（2024-11〜2025-10）
+
+- **2025-06 · [Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles](2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md)**  
+  実装：[✓](https://github.com/LiangrunFlora/Slow-Fast-Sampling) ・ リポジトリ内被引用：15  
+  単独の信頼度閾値だけではなく、連続区間の終端が最近の複数反復で安定したかを検査し、探索段階（Slow）から高速段階（Fast）へ切り替える。原著図2のGPQA・8-shot・生成長1024という特定条件では、LLaDAの通常復号が1.60トークン/秒、SlowFast単独が25.00トークン/秒で15.63倍となる。
 <!-- survey:auto:end -->

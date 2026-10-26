@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（56本）
+## 自動生成の論文一覧（59本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -86,9 +86,17 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、総パラメータ数が1兆を超える混合専門家モデル（Mixture-of-Experts、MoE）を、多数の要求で負荷を平準化するクラスタではなく、同時要求数1〜8程度の単一装置で動かす場合のメモリ設計を検討する。
 
+- **2026-09 · [RoofLang: Enabling AI-Driven Architecting of LLM Inference Systems](2026-2609.12551-rooflang-ai-driven-llm-inference-architecting.md)**  
+  実装：[✓](https://github.com/yzygitzh/rooflang) ・ リポジトリ内被引用：0  
+  RoofLangはLLM推論を計算・ハードウェアグラフと意味保存変換で表し、実装非依存のシミュレーションを評価器としてAIに配置・並列化・通信構成を探索させる設計基盤である。
+
 - **2026-09 · [Hot–Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving](2026-2609.25782-hot-cold-tiering-of-hbm-and-high-bandwidth-flash-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   全セッションのKVを高帯域メモリ（High Bandwidth メモリ; HBM）に残せば容量が不足し、CPUメモリなどへ退避すると復帰時の転送待ちが増える。Qwen3-Coder-30B-A3Bを用いたエージェント作業のトレースで、HBM単独の165セッションに対してHBF追加構成は3900セッションを保持する（約23.6倍）。
+
+- **2026-09 · [FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads](2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md)**  
+  実装：[✓](https://github.com/FlashGPU-Sim/FlashGPU-Sim) ・ リポジトリ内被引用：0  
+  Hopper/Blackwellの非同期GPU機構とTriton AIカーネルを実行駆動で再現し、131構成でサイクル誤差5.24%、16スレッドで7.86倍高速化した現代GPUシミュレータ。
 
 - **2026-09 · [Decomposing Predictive Kubernetes Autoscaling for Large Language Model Serving Under Long Startup Delays](2026-2609.20874-decomposing-predictive-kubernetes-autoscaling-for-large-language-model-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -109,6 +117,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-08 · [BALANCE: Hybrid Autoregressive-Speculative LLM Inference at the Network Edge](2026-2608.05926-balance-hybrid-autoregressive-speculative-llm-inference-at-the-network-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（SD）は小規模言語モデル（SLM）が複数トークンを提案し、LLMがまとめて検証するため遅延を下げられる一方、LLMとSLM双方の重み、両方式のKVキャッシュ、複数トークンの検証に必要なメモリがGPUに載る。
+
+- **2026-07 · [LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving](2026-2607.26491-llmet-m3d-memory-energy-efficient-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMETは、LLMのタイル配置とメモリ階層転送を回路レベルのSRAM・M3D特性へ接続し、L2容量を増やす利益とアクセス費が釣り合う省エネ設計点を探索する。
 
 - **2026-07 · [ELiTeFormer: An Efficient Transformer for FPGAs](2026-2607.03652-eliteformer-an-efficient-transformer-for-fpgas.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
