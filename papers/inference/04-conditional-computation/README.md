@@ -224,13 +224,13 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：3  
   HiRE（High Recall Approximate Top-k Estimation）は、自己回帰型の大規模言語モデル（LLM）で次トークンを生成するとき、必要な重み行・列を入力に応じて少数だけ読み込む方式である。
 
+- **2024-06 · [DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models](2024-2311.08623-deed-dynamic-early-exit-on-decoder-for-accelerating-encoder-decoder-tran.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  浅い層の表現を深い層の状態としてそのままコピーする従来の停止・コピー方式は、層間の意味表現の違いを無視して精度を損なう。正式版のT5-large・SQuADでは、総遅延が221.9msから57.6ms（約74.0%短縮）、F1が92.1から91.6となった。
+
 - **2024-02 · [EE-Tuning: An Economical yet Scalable Solution for Tuning Early-Exit Large Language Models](2024-2402.00518-ee-tuning-an-economical-yet-scalable-solution-for-tuning-early-exit-larg.md)**  
   実装：[✓](https://github.com/pan-x-c/EE-LLM) ・ リポジトリ内被引用：2  
   EE-Tuningは、既存の大規模言語モデル（Large Language モデル; LLM）を、全パラメータの再学習なしに早期終了（early exit）できるモデルへ変換する手法である。論文本文では13Bの追加学習を4基のA800 GPUで約5時間、ピークGPUメモリ約20GB、70Bを約30時間、ピーク約78GBと報告する。
-
-- **2024-06 · [DEED: Dynamic Early Exit on Decoder for Accelerating Encoder-Decoder Transformer Models](2024-2311.08623-deed-dynamic-early-exit-on-decoder-for-accelerating-encoder-decoder-tran.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  浅い層の表現を深い層の状態としてそのままコピーする従来の停止・コピー方式は、層間の意味表現の違いを無視して精度を損なう。正式版のT5-large・SQuADでは、総遅延が221.9msから57.6ms（約74.0%短縮）、F1が92.1から91.6となった。
 
 - **2024-05 · [VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos](2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md)**  
   実装：[✓](https://github.com/Ziyang412/VideoTree) ・ リポジトリ内被引用：1  

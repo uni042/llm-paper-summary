@@ -1208,13 +1208,13 @@
   実装：[✓](https://github.com/vbdi/epdserve) ・ リポジトリ内被引用：18  
   本論文は大規模マルチモーダルモデル（Large Multimodal モデル、LMM）の推論を、マルチモーダル符号化（Encode、E）、事前入力処理（プリフィル、P）、逐次復号（デコード、D）の三段階に分離するEPD分離（EPD Disaggregation）を提案する。
 
+- **2024-11 · [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：18  
+  本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
+
 - **2025-02 · [HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment](2025-2502.07903-hexgen-2.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
   異種GPU上の事前充填・復号分離を、グラフ分割と最大流で段階別並列化・資源配置・KV転送まで共同最適化するLLMサービング方式。
-
-- **2024-11 · [BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching](2024-2411.16102-blendserve-optimizing-offline-inference-for-auto-regressive-large-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：17  
-  本論文は、応答を即時返す必要のないオフライン大規模言語モデル推論で、要求の並べ替えによってGPUの計算器とメモリ帯域を同時に使う方式を提案する。一次論文v1のA100・Llama 3.1 8B実機評価では、最良の比較対象NanoFlow-DFSに対して19.34〜22.65%の処理量改善、vLLMに対して最大1.44倍の改善を報告する。
 
 - **2025-05 · [AReaL: A Large-Scale Asynchronous Reinforcement Learning System for Language Reasoning](2025-2505.24298-areal-a-large-scale-asynchronous-reinforcement-learning-system-for-langu.md)**  
   実装：[✓](https://github.com/inclusionAI/AReaL) ・ リポジトリ内被引用：16  

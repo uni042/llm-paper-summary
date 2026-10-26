@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-26T10:10:11+00:00",
+  "checked_at": "2026-10-26T13:21:40+00:00",
   "summary": {
-    "total": 3308,
+    "total": 3315,
     "complete": 3299,
-    "incomplete": 9
+    "incomplete": 16
   },
   "families": {
     "inference": {
-      "total": 3269,
+      "total": 3276,
       "complete": 3260
     },
     "training": {
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2024-2408.04678-crest-effectively-compacting-a-datastore-for-retrieval-based-speculative.md",
+      "canonical_id": "arXiv:2408.04678",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
@@ -53,13 +58,43 @@
       "reason": "missing structured reference audit metadata"
     },
     {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2509.22832-efficient-fine-grained-gpu-performance-modeling-for-distributed-deep-lea.md",
+      "canonical_id": "arXiv:2509.22832",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md",
       "canonical_id": "DOI:10.1145/3706418",
       "reason": "missing structured reference audit metadata"
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2024-2407.15516-attention-is-all-you-need-but-you-don-t-need-all-of-it-for-inference-of-.md",
+      "canonical_id": "arXiv:2407.15516",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2224e69b745c-multi-branch-self-drafting-for-llm-inference-acceleration.md",
       "canonical_id": "DOI:10.1609/aaai.v39i22.34567",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md",
+      "canonical_id": "arXiv:2505.07289",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2507.18073-squeeze10-llm-squeezing-llms-weights-by-10-times-via-a-staged-mixed-prec.md",
+      "canonical_id": "arXiv:2507.18073",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2509.25606-effective-model-pruning-measuring-the-redundancy-of-model-components.md",
+      "canonical_id": "arXiv:2509.25606",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2510.05528-armor-high-performance-semi-structured-pruning-via-adaptive-matrix-facto.md",
+      "canonical_id": "arXiv:2510.05528",
       "reason": "missing structured reference audit metadata"
     },
     {

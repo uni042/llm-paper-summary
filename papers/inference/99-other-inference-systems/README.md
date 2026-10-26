@@ -2327,7 +2327,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：78  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
@@ -2386,20 +2386,20 @@
   実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：12  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
+- **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
+  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：12  
+  線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
+
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
   実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：11  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
-
-- **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
-  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：11  
-  線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2024-08 · [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming](2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md)**  
   実装：[✓](https://github.com/gpt-omni/mini-omni) ・ リポジトリ内被引用：9  
   Mini-Omniは、言語モデルの応答文を最後まで生成してから独立した音声合成器へ渡す従来の直列方式を避け、文字トークンと音声トークンを一つの自己回帰生成過程の中で並列に出力する音声対話モデルである。
 
 - **2024-04 · [LongVLM: Efficient Long Video Understanding via Large Language Models](2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md)**  
-  実装：[✓](https://github.com/ziplab/LongVLM) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/ziplab/LongVLM) ・ リポジトリ内被引用：9  
   LongVLMは、長時間動画を入力する視覚言語モデル（Vision-Language モデル; VLM）で、画像符号化器から出る大量の視覚トークンを短時間区間ごとに統合する。100フレームを224×224画素で符号化し、元のパッチ特徴が約25,600トークンになる設定で、10区間×30トークンと全体特徴5トークンの計305視覚トークンへまとめる。
 
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
@@ -2727,11 +2727,11 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：158  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：159  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
-  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：72  
   ST-MoEは専門家混合（Mixture-of-Experts、MoE）モデルを単に巨大化するのではなく、学習の発散を防ぎ、下流の多様な自然言語課題で密モデルを上回るための設計を検討する研究である。ただしこれはモデル全体をGPUメモリ12GBで動かせるという意味ではなく、専門家の重み配置と分散通信を含めた大規模学習システムの研究である。
 
 - **2021-12 · [Self-attention Does Not Need O(n^2) Memory](2021-2112.05682-self-attention-does-not-need-o-n-2-memory.md)**  
@@ -2861,7 +2861,7 @@
   翻訳文の長さを最初に予測し、最初の反復では全位置を同時に予測する。2019年の機械翻訳実験では、WMT14英語→ドイツ語において基礎CMLMの10反復が27.03 BLEU、同等規模の自己回帰Transformerが27.74 BLEUとなった。
 
 - **2019-07 · [Large Memory Layers with Product Keys](2019-1907.05242-large-memory-layers-with-product-keys.md)**  
-  実装：[✓](https://github.com/facebookresearch/XLM) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/facebookresearch/XLM) ・ リポジトリ内被引用：11  
   本論文の積キー記憶層（Product Key メモリ; PKM）は、二つの部分キー集合の直積で巨大なキー集合を暗黙的に作り、各部分集合の上位候補だけを調べて全積キー集合に対する正確な上位選択を行う。検索結果に対応する少数の値ベクトルだけを読み出して加重和を計算するため、総パラメータ容量と活性計算量を分離できる。
 
 - **2019-03 · [Supporting Very Large Models using Automatic Dataflow Graph Partitioning](2019-1807.08887-supporting-very-large-models-using-automatic-dataflow-graph-partitioning.md)**  
