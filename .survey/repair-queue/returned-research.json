@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T08:44:15+00:00",
+  "generated_at": "2026-10-26T12:50:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 46,
+  "count": 55,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -136,6 +136,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-03816f0da83d--libfile_2cbe61294c608191ac974d9b417097c4--2026-2605.31035-mixfp4-research-20261014-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-03816f0da83d--libfile_2cbe61294c608191ac974d9b417097c4--2026-2605.31035-mixfp4-research-20261014-0430-scheduled-chat-30-r01.json",
       "worker_run_key": "20261014-0430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2405.19209",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T12:28:32+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md と 20 段落 / 4230文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5503,
+        "body_paragraphs": 32,
+        "method_chars": 1167,
+        "method_paragraphs": 7,
+        "evaluation_chars": 1503,
+        "limitation_chars": 870,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-10d9da523956--libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-10d9da523956--libfile_70119075dfdc8191890846ebee7e4935--2024-2405.19209-videotree-query-adaptive-long-video-reasoning-research-20261014-1245-sche.json",
+      "worker_run_key": "20261014-1245-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2511.19676",
@@ -271,6 +296,33 @@
       "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
     },
     {
+      "canonical_id": "DOI:10.18653/v1/2021.naacl-main.463",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T14:07:12+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2021-00c8b8f9f90e-tr-bert-dynamic-token-reduction-for-accelerating-bert-inference.md と 21 段落 / 4539文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5656,
+        "body_paragraphs": 29,
+        "method_chars": 1949,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1250,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cad67c351106--libfile_4fc44f0519e88191b93bf46c11f84fc1--2021-tr-bert-dynamic-token-reduction-returned-repair-20261013-2200-scheduled-chat-00-r01-.json",
+      "worker_run_key": "20261013-2200-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2603.04716",
       "title": null,
       "source_url": null,
@@ -350,6 +402,35 @@
       "worker_run_key": "20261017-2255-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2511.19480",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-17T17:23:51+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.19480-exploiting-the-experts-unauthorized-compression-in-moe-llms.md と 14 段落 / 3100文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4464,
+        "body_paragraphs": 22,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1047,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d468221adfb3--library-final-audit--2511.19480--2025-2511.19480-exploiting-experts-moe-compression-security-research-20261015-0410-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-d468221adfb3--library-final-audit--2511.19480--2025-2511.19480-exploiting-experts-moe-compression-security-research-20261015-0410-scheduled-chat-.json",
+      "worker_run_key": "20261015-0410-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2503.10135",
       "title": null,
       "source_url": null,
@@ -372,6 +453,31 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6f22ec23bfe7--library-final-audit--2503.10135--gumiho.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6f22ec23bfe7--library-final-audit--2503.10135--gumiho.json",
+      "worker_run_key": "20261018-0230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2410.10141",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-17T18:13:40+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2410.10141-temperature-centric-investigation-of-speculative-decoding-with-knowledge-distillation.md と 9 段落 / 1887文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4590,
+        "body_paragraphs": 28,
+        "method_chars": 1427,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1179,
+        "limitation_chars": 544,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f12df1b502f--library-final-audit--2410.10141--temperature-centric.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8f12df1b502f--library-final-audit--2410.10141--temperature-centric.json",
       "worker_run_key": "20261018-0230-scheduled-chat-30/r01"
     },
     {
@@ -404,6 +510,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e1a065f8327d--libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e1a065f8327d--libfile_e98db928832481919ba3cbae9b119383--2026-2609.39223-qatfactory-deployment-aligned-quantization-research-20261018-1430-schedul.json",
       "worker_run_key": "20261018-1430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.19155",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-20T04:50:01+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2505.19155-sparse-to-dense-a-free-lunch-for-lossless-acceleration-of-video-understa.md と 18 段落 / 3850文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5018,
+        "body_paragraphs": 30,
+        "method_chars": 1738,
+        "method_paragraphs": 13,
+        "evaluation_chars": 875,
+        "limitation_chars": 601,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_78487f80cfd8819187814caacea1892a--exactbytes-1345--2025-2505.19155-sparse-to-dense-video-llm-returned-repair-20261020-1330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_78487f80cfd8819187814caacea1892a--exactbytes-1345--2025-2505.19155-sparse-to-dense-video-llm-returned-repair-20261020-1330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261020-1330-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2605.06850",
@@ -533,6 +664,58 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e464be7014348191b904a13c09dcb9a8--2023-2305.14706-prumux-research-20261020-2127-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e464be7014348191b904a13c09dcb9a8--2023-2305.14706-prumux-research-20261020-2127-scheduled-chat-30-r01.json",
       "worker_run_key": "20261020-2127-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.06954",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-22T02:08:03+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.06954-accelerating-inference-in-large-language-models-with-a-unified-layer-ski.md と 9 段落 / 1970文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4343,
+        "body_paragraphs": 29,
+        "method_chars": 1405,
+        "method_paragraphs": 8,
+        "evaluation_chars": 671,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6dc8ad596f63--libfile_66bab03e7d588191ab7dd943aa5d33c1--2024-2404.06954-unified-layer-skipping-inference-research-20261020-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6dc8ad596f63--libfile_66bab03e7d588191ab7dd943aa5d33c1--2024-2404.06954-unified-layer-skipping-inference-research-20261020-0530-scheduled-chat-30.json",
+      "worker_run_key": "20261020-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.15044",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-22T02:37:05+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-st.md と 19 段落 / 4129文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5126,
+        "body_paragraphs": 29,
+        "method_chars": 1487,
+        "method_paragraphs": 10,
+        "evaluation_chars": 599,
+        "limitation_chars": 546,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c5c2e8934d6d--libfile_9b916b7ee1c08191b406e8e150c3f87f--2025-2508.15044-reward-shifted-speculative-sampling-research-20261020-1056-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c5c2e8934d6d--libfile_9b916b7ee1c08191b406e8e150c3f87f--2025-2508.15044-reward-shifted-speculative-sampling-research-20261020-1056-scheduled-chat.json",
+      "worker_run_key": "20261020-1056-scheduled-chat-00/r02"
     },
     {
       "canonical_id": "arXiv:2411.10741",
@@ -671,6 +854,31 @@
       "worker_run_key": "20261024-0345-scheduled-chat-45/r01"
     },
     {
+      "canonical_id": "arXiv:2602.16054",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-24T19:16:21+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2602.16054-claa-cross-layer-attention-aggregation-for-accelerating-llm-prefill.md と 22 段落 / 4592文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5402,
+        "body_paragraphs": 29,
+        "method_chars": 1061,
+        "method_paragraphs": 6,
+        "evaluation_chars": 1461,
+        "limitation_chars": 552,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0cee5f198402--0-libfile_e8d0b9f00b10819181ab951ce0593b20--2026-2602.16054-claa-start-snapshot-20261024.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0cee5f198402--0-libfile_e8d0b9f00b10819181ab951ce0593b20--2026-2602.16054-claa-start-snapshot-20261024.json",
+      "worker_run_key": "20261024-1045-scheduled-chat-45/r01"
+    },
+    {
       "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.539",
       "title": null,
       "source_url": null,
@@ -749,6 +957,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-28df560400c1--0-retry-research-39451dc0520d--libfile_cfb22501021881918872db85e22e7057--2026-2602.08858-flattengpt-depth-compression-research-20261023-0730-scheduled-chat-30-r01-v2-section-normal.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-28df560400c1--0-retry-research-39451dc0520d--libfile_cfb22501021881918872db85e22e7057--2026-2602.08858-flattengpt-depth-compression-research-2026.json",
       "worker_run_key": "20261024-0345-scheduled-chat-45/r03"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2026.eacl-long.309",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-24T20:21:04+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-04cca81d3e08-cachenotes-task-aware-key-value-cache-compression-for-reasoning-intensiv.md と 21 段落 / 4611文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6235,
+        "body_paragraphs": 34,
+        "method_chars": 1277,
+        "method_paragraphs": 8,
+        "evaluation_chars": 672,
+        "limitation_chars": 680,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6cda81b0e602--0-retry-research-4d32ad8262d7--libfile_a57c9d328d7c8191b072c602e02b1cf3--2026-doi-10.18653-v1-2026.eacl-long.309-cachenotes-task-aware-kv-compression-research-20261022-2134-schedul.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6cda81b0e602--0-retry-research-4d32ad8262d7--libfile_a57c9d328d7c8191b072c602e02b1cf3--2026-doi-10.18653-v1-2026.eacl-long.309-cachenotes-task-aw.json",
+      "worker_run_key": "20261022-2134-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2609.21704",

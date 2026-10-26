@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（710本）
+## 自動生成の論文一覧（713本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2072,6 +2072,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   事前学習済みTransformerの通常のsoftmax注意を線形注意（LA）へ置き換えれば、過去のキーと値を全トークン分保持せず、一定サイズの再帰状態へ集約できる。しかし注意機構を変更しただけでは元モデルの精度が下がるため、注意転写と追加微調整を行う。
 
+- **2025-10 · [ARMOR: High-Performance Semi-Structured Pruning via Adaptive Matrix Factorization](2025-2510.05528-armor-high-performance-semi-structured-pruning-via-adaptive-matrix-facto.md)**  
+  実装：[✓](https://github.com/LawrenceRLiu/ARMOR) ・ リポジトリ内被引用：1  
+  一方、どの4要素からも2要素を消すという硬い制約は、同じ50%剪定率の非構造化剪定よりも言語モデルの品質を大きく悪化させやすい。ARMORは、この損失をマスク選択だけで解決するのではなく、疎行列の前後へ小さい学習可能な線形変換を配置して重み表現を変える方式である。
+
 - **2025-09 · [PipelineRL: Faster On-policy Reinforcement Learning for Long Sequence Generation](2025-2509.19128-pipelinerl-faster-on-policy-reinforcement-learning-for-long-sequence-gen.md)**  
   実装：[✓](https://github.com/ServiceNow/pipelinerl) ・ リポジトリ内被引用：1  
   PipelineRLは、大規模言語モデルの長文推論を強化学習で訓練するときに、系列生成器と訓練器の並行実行および生成途中の重み更新（in-flight 重み update）を組み合わせるシステムである。
@@ -2168,6 +2172,10 @@
   実装：[✓](https://github.com/WebPAI/EfficientUICoder) ・ リポジトリ内被引用：0  
   本研究は、ウェブ画面の画像を入力してHTMLとCSSを生成するUI-to-コードの推論費用を、画像側とコード側の両方から削減する方式である。
 
+- **2025-09 · [Effective Model Pruning: Measuring the Redundancy of Model Components](2025-2509.25606-effective-model-pruning-measuring-the-redundancy-of-model-components.md)**  
+  実装：[✓](https://github.com/noMushroomw/Effective-model-pruning) ・ リポジトリ内被引用：0  
+  ニューラルネットワークの枝刈りでは、重要度の低い重みや注意ヘッドを削除するためにMagnitude、Wanda、勾配感度などのスコアを用いる。例えばLLMで全層一律50%の非構造化枝刈りを指定すると、スコアの分布が集中している層と均一な層へ同じ予算を押し付ける。
+
 - **2025-09 · [CompLLM: Compression for Long Context Q&A](2025-2509.19228-compllm-compression-for-long-context-q-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CompLLMは、LLMへ入力する長い文書を、短いセグメントごとに独立して連続ベクトルへ圧縮する方式である。標準設定は最大20入力トークンを10個のCEへ変換する2倍圧縮である。
@@ -2207,6 +2215,10 @@
 - **2025-05 · [Understanding Differential Transformer Unchains Pretrained Self-Attentions](2025-2505.16333-understanding-differential-transformer-unchains-pretrained-self-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   差分注意を備えたDifferential Transformerは、通常の注意行列を二組計算し、片方からもう片方を係数付きで引くことで、重要でない位置に共通する注意を抑える設計である。Llama-3Bの11課題平均正答率は60.2%から64.2%、長文脈の針検索では66.9%から78.3%へ改善した。
+
+- **2025-05 · [Semantic Retention and Extreme Compression in LLMs: Can We Have Both?](2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
 
 - **2025-05 · [Semantic Caching of Contextual Summaries for Efficient Question-Answering with Language Models](2025-2505.11271-semantic-caching-of-contextual-summaries-for-efficient-question-answerin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

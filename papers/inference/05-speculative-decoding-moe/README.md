@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（267本）
+## 自動生成の論文一覧（268本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1039,6 +1039,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-10 · [Temperature-Centric Investigation of Speculative Decoding with Knowledge Distillation](2024-2410.10141-temperature-centric-investigation-of-speculative-decoding-with-knowledge-distillation.md)**  
   実装：[✓](https://github.com/ozyyshr/TempSpec) ・ リポジトリ内被引用：2  
   対象モデルの重みや注意機構を変えるのではなく、下書きモデルと対象モデルの出力分布の整合を、蒸留データの生成条件から改善する研究である。さらに、目的の復号温度に近い複数温度で生成した蒸留データを混合する方式を提案し、温度0.8のGSM8Kではオフライン蒸留の通常復号比4.93倍を5.62倍へ改善した。
+
+- **2024-08 · [CREST: Effectively Compacting a Datastore For Retrieval-Based Speculative Decoding](2024-2408.04678-crest-effectively-compacting-a-datastore-for-retrieval-based-speculative.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  CREST（Compact Retrieval-Based 投機的復号）は、RESTの全文保存方式を改め、短くて頻出するn-gramをキー、そこから生成した候補トークン木を値とする辞書を保持する。原著は、RESTと同等の受理長を10.6〜13.5倍小さな容量で達成し、同じ容量では受理長を16.5〜17.1%改善したと報告する。
 
 - **2024-08 · [Context-Aware Assistant Selection for Improved Inference Acceleration with Large Language Models](2024-2408.08470-context-aware-assistant-selection-for-improved-inference-acceleration-wi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
