@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **3323本**。
+収録論文: **3328本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**3323本**。
+推論論文：**3328本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -43,7 +43,7 @@
 | [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 120 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/) |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 18 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/) |
 | [04-conditional-computation](04-conditional-computation/README.md) | 74 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/04-conditional-computation/) |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 271 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 272 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 25 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/) |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 364 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 70 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
@@ -54,7 +54,7 @@
 | [13-sparse-attention](13-sparse-attention/README.md) | 148 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/) |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 79 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/) |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 61 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/) |
-| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 152 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 154 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 32 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/) |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/18-pipeline-native-cpu-inference/) |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 95 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
@@ -62,5 +62,5 @@
 | [21-static-structured-pruning](21-static-structured-pruning/README.md) | 25 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/21-static-structured-pruning/) |
 | [22-diffusion-decoding-efficiency](22-diffusion-decoding-efficiency/README.md) | 11 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/22-diffusion-decoding-efficiency/) |
 | [23-model-routing-cascades](23-model-routing-cascades/README.md) | 6 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/23-model-routing-cascades/) |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 741 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 743 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
 <!-- survey:auto:end -->

@@ -31,6 +31,8 @@ reference_main_sha: "59e01e73cfd59c20f0b8bb5a6a493d3696dd9d86"
 worklist_rank: 89
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # SPECVLM：検証モデルの注意を使ってドラフト側だけ動画トークンを削る投機的復号

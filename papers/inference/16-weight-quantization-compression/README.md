@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（152本）
+## 自動生成の論文一覧（154本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -389,6 +389,14 @@
 - **2024-12 · [RILQ: Rank-Insensitive LoRA-based Quantization Error Compensation for Boosting 2-bit Large Language Model Accuracy](2024-2412.01129-rilq-rank-insensitive-lora-based-quantization-error-compensation-for-boo.md)**  
   実装：[✓](https://github.com/aiha-lab/RILQ) ・ リポジトリ内被引用：1  
   重み量子化（重み 量子化）は、FP16などで保持していた行列を低ビット表現へ写像してモデルの重み記憶量を削減する。LLaMA-3-8BのQuIP#量子化では常識推論5課題平均が52.48%→60.61%、WikiText-2の困惑度（perplexity; PPL）が12.74→9.39となった。
+
+- **2025-06 · [ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models](2025-2506.13472-rosaq-rotation-based-saliency-aware-weight-quantization-for-efficiently-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ROSAQは、大規模言語モデルの重みを3〜4bitへ圧縮する際に、全チャネルを同じ精度へ落とすのではなく、校正データをPCAで回転した空間の重要次元をFP16で残す学習後量子化方式である。原著のLLaMA3-8B、グループ幅128、INT3設定では、ROSAQのゼロショットMMLU平均は52.41%で、AWQの50.21%、GPTQの43.48%より高い。
+
+- **2025-05 · [Optimal Formats for Weight Quantisation](2025-2505.12988-optimal-formats-for-weight-quantisation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ビット重み量子化では、整数、浮動小数点、非一様コードブック、ブロック単位のスケーリング、外れ値の高精度保持など、数値表現の選択肢が多数ある。
 
 ### 3年前（2023-11〜2024-10）
 
