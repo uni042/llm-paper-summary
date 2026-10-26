@@ -349,7 +349,7 @@
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：87  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -436,6 +436,10 @@
   実装：[✓](https://github.com/xiongsiheng/DHSA) ・ リポジトリ内被引用：2  
   動的 Hierarchical Sparse 注意機構（DHSA）は、長い入力に対する自己注意の計算を削減するため、注意行列のどこを残すかを入力内容に応じて予測する方式である。128K文脈で最大10.66倍という値はFlashAttention-2と比較した注意カーネル単体の速度である。
 
+- **2025-06 · [Kinetics: Rethinking Test-Time Scaling Laws](2025-2506.05333-kinetics-rethinking-test-time-scaling-laws.md)**  
+  実装：[✓](https://github.com/Infini-AI-Lab/Kinetics) ・ リポジトリ内被引用：2  
+  Sadhukhanらは、モデルパラメータ演算・注意演算・KVメモリアクセスをまとめた等価演算量（equivalent FLOPs、eFLOPs）を導入し、モデル規模、生成長、試行回数をどのように選ぶべきか再分析した。提案するKineticsでは、長い思考過程のKV読出しが増えるため、単純に小さなモデルで長く考える戦略が過大評価される。
+
 - **2025-04 · [RWKV-X: A Linear Complexity Hybrid Language Model](2025-2504.21463-rwkv-x-a-linear-complexity-hybrid-language-model.md)**  
   実装：[✓](https://github.com/howardhou/RWKV-X) ・ リポジトリ内被引用：2  
   RWKV-Xは、RWKV-7の線形再帰モデルに、長距離の証拠を選択して参照するTop-k Chunk Sparse 注意機構を周期的に挿入するハイブリッド言語モデルである。128K プリフィルではFlashAttention-3を使う密なTransformerとの比較で1.37倍の速度改善を報告する。
@@ -464,10 +468,6 @@
   実装：[✓](https://github.com/attention-survey/Efficient_Attention_Survey) ・ リポジトリ内被引用：1  
   原著は20ページで、注意計算の数式、GPUの演算性能とメモリ帯域、事前入力処理と復号の律速差を説明したうえで、ハードウェア効率化、コンパクト注意（Compact 注意機構）、疎注意（Sparse 注意機構）、線形注意（Linear 注意機構）の四系統を共通の記法で比較する。
 
-- **2025-06 · [Kinetics: Rethinking Test-Time Scaling Laws](2025-2506.05333-kinetics-rethinking-test-time-scaling-laws.md)**  
-  実装：[✓](https://github.com/Infini-AI-Lab/Kinetics) ・ リポジトリ内被引用：1  
-  Sadhukhanらは、モデルパラメータ演算・注意演算・KVメモリアクセスをまとめた等価演算量（equivalent FLOPs、eFLOPs）を導入し、モデル規模、生成長、試行回数をどのように選ぶべきか再分析した。提案するKineticsでは、長い思考過程のKV読出しが増えるため、単純に小さなモデルで長く考える戦略が過大評価される。
-
 - **2025-02 · [Top-Theta Attention: Sparsifying Transformers by Compensated Thresholding](2025-2502.08363-top-theta-attention.md)**  
   実装：[✓](https://github.com/huawei-csl/top-theta-attention) ・ リポジトリ内被引用：1  
   Top-Thetaは層・ヘッド・位置別の校正しきい値で注意重みを選び、行ごとの上位k選択（top-k）を避けて注意計算とV行読出しを減らす。LLaMA系評価では注意要素やV読出しを最大10分の1程度まで減らす条件を示す一方、強い疎化や実装条件によって品質・実速度の利得が変わる。
@@ -491,7 +491,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：245  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：246  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
@@ -507,7 +507,7 @@
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
-  実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：42  
   キーの低ランク性を使い、低次元スコアで候補KVを選んでから全次元注意を計算し、品質を保ちながら注意計算を最大約45%短縮する疎注意法。
 
 - **2024-08 · [Post-Training Sparse Attention with Double Sparsity](2024-2408.07092-post-training-sparse-attention-with-double-sparsity.md)**  
