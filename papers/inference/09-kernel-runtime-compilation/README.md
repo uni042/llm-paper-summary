@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（201本）
+## 自動生成の論文一覧（203本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -326,9 +326,17 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/uw-syfi/DynaFlow) ・ リポジトリ内被引用：0  
   複数の演算子を重畳する最適化自体は既知だが、実際のvLLMやSGLangへ組み込むにはモデル実行順序の大規模な変更が必要であり、入力長・バッチ量・GPU世代で最適な重畳方式も変わる。従来の配信・学習システム6種類へ代表的な装置内並列方式を導入し、元のシステム比で最大1.29倍の端から端までの処理量を実測した。
 
+- **2026-05 · [Bandwidth-Aware LLM Inference on Heterogeneous Many-Core Supercomputers](2026-2605.25655-bandwidth-aware-llm-inference-on-heterogeneous-many-core-supercomputers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低帯域・分散オンチップ記憶のMT-3000向けに演算子、融合注意、三段パイプライン、混合並列を共同設計し、大規模LLM推論を実現。
+
 - **2026-05 · [Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference](2026-2605.11581-ada-mk-adaptive-megakernel-compilation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Ada-MKはLLMデコードをPTX命令水準の依存グラフへ分解し、共有メモリ配置とワープ役割をオフライン探索して分岐のないメガカーネルを生成し、L20でTensorRT-LLM比最大23.6%高速化する。
+
+- **2026-04 · [VFA: Relieving Vector Operations in Flash Attention with Global Maximum Pre-computation](2026-2604.12798-vfa-relieving-vector-operations-in-flash-attention-with-global-maximum-p.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FlashAttentionは、巨大な注意行列をGPUの高帯域メモリへ書き出さず、クエリ・キー・値を小さなブロックに分割してオンチップメモリで処理する。VFA（Vector Relieved Flash 注意機構）はこの残った部分に焦点を当てる。要旨ではC16V32という計算器構成を基準にC8V32、C4V32、C4V16で約2倍の高速化を報告する。
 
 - **2026-04 · [SinkRouter: Sink-Aware Routing for Efficient Long-Context Decoding in Large Language and Multimodal Models](2026-2604.16883-sinkrouter-sink-aware-routing-for-efficient-long-context-decoding-in-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
