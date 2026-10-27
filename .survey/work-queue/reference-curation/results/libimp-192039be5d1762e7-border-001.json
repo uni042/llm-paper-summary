@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-192039be5d1762e7-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.19409",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.19409",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.19409",
+      "arXiv:2507.19409",
+      "title:modality agnostic efficient long range encoder"
+    ],
+    "reason": "MAELREは複数モダリティに共通する長系列エンコーダで、トークン統合と注意近似を段階的に切り替えて単一デバイスの計算・メモリを削減する。しかし原著の主評価はテキスト・時系列・音声・画像の分類であり、自己回帰LLM生成、KVキャッシュ、LLMサービングの実測はない。効率的Transformerアーキテクチャとして技術的な接点はあるが、現行推論システム系統への直接性は限定的。",
+    "first_checked_at": "2026-10-27T23:47:00+00:00",
+    "last_checked_at": "2026-10-27T23:47:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Modality Agnostic Efficient Long Range Encoder"
+  },
+  "processed_at": "2026-10-27T23:47:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-192039be5d17",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

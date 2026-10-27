@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ce9dd69c0de8f614-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.05066",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.05066",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.05066",
+      "arXiv:2605.05066",
+      "title:the impossibility triangle of long context modeling"
+    ],
+    "reason": "長文脈モデルの1ステップ計算量、状態サイズ、履歴再現能力の三者のトレードオフを扱い、注意・状態空間・再帰型推論の設計に関連する。しかしarXivの2026年8月6日撤回通知によると、主定理の証明でクエリ鍵を落とす重大な誤りと正値条件の不備があり、主定理が無効となった。現時点で有効なシステム技術の貢献としてacceptできず、撤回・再検証待ちの境界扱いとする。",
+    "first_checked_at": "2026-10-27T23:47:08+00:00",
+    "last_checked_at": "2026-10-27T23:47:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The Impossibility Triangle of Long-Context Modeling"
+  },
+  "processed_at": "2026-10-27T23:47:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ce9dd69c0de8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

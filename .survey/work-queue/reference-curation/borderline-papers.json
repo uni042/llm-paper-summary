@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-27T22:46:01+00:00",
-  "record_count": 5375,
+  "updated_at": "2026-10-27T23:47:09+00:00",
+  "record_count": 5379,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83310,10 +83310,69 @@
       ],
       "reason": "arXiv一次要旨では3bit未満の量子化推論で長い推論列が反復ループへ逸脱する問題に対し、量子化済み学生が実際に生成する接頭辞へフル精度教師のトークン指導と検証報酬を与えるon-policy蒸留を提案。1.88/2.79bitの配備品質回復に関係するが主な技術的貢献は訓練時の蒸留方針であり、推論時カーネル・スケジューリング・レイテンシの直接改善は要旨にないため境界扱い。",
       "first_checked_at": "2026-10-27T22:46:01+00:00",
-      "last_checked_at": "2026-10-27T22:46:01+00:00",
+      "last_checked_at": "2026-10-27T23:47:09+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning"
+    },
+    "arXiv:2507.19409": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.19409",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.19409",
+        "arXiv:2507.19409",
+        "title:modality agnostic efficient long range encoder"
+      ],
+      "reason": "MAELREは複数モダリティに共通する長系列エンコーダで、トークン統合と注意近似を段階的に切り替えて単一デバイスの計算・メモリを削減する。しかし原著の主評価はテキスト・時系列・音声・画像の分類であり、自己回帰LLM生成、KVキャッシュ、LLMサービングの実測はない。効率的Transformerアーキテクチャとして技術的な接点はあるが、現行推論システム系統への直接性は限定的。",
+      "first_checked_at": "2026-10-27T23:47:00+00:00",
+      "last_checked_at": "2026-10-27T23:47:00+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Modality Agnostic Efficient Long Range Encoder"
+    },
+    "arXiv:2512.23765": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.23765",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2512.23765",
+        "arXiv:2512.23765",
+        "title:entropy aware token rejection for improving speculative decoding"
+      ],
+      "reason": "投機的復号のドラフトとターゲットが共に高エントロピーで上位候補に強く合意する場合に、敢えて一致トークンを拒否してターゲットから再サンプルするEASDを提案する。主眼は推論高速化でなく推論正答率向上であり、出力分布も標準投機的復号とは異なる。推論実行機構への関連はあるがサーベイの効率最適化への直接寄与は限定的。",
+      "first_checked_at": "2026-10-27T23:47:02+00:00",
+      "last_checked_at": "2026-10-27T23:47:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Entropy-Aware Token Rejection for Improving Speculative Decoding"
+    },
+    "DOI:10.26615/978-954-452-098-4-093": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.26615/978-954-452-098-4-093",
+      "identity_tokens": [
+        "DOI:10.26615/978-954-452-098-4-093",
+        "title:a survey on small language models"
+      ],
+      "reason": "小規模言語モデルのアーキテクチャ、学習、枝刈り・量子化などの圧縮手法を、推論資源・学習時間・実行速度などの制約軸で整理するサーベイ。端末推論と圧縮の章は関連するが、主題はSLM全般の設計・学習・評価でありLLM推論サービング・カーネル・実行システム最適化への直接的貢献は限定的。",
+      "first_checked_at": "2026-10-27T23:47:02+00:00",
+      "last_checked_at": "2026-10-27T23:47:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Survey on Small Language Models"
+    },
+    "arXiv:2605.05066": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.05066",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2605.05066",
+        "arXiv:2605.05066",
+        "title:the impossibility triangle of long context modeling"
+      ],
+      "reason": "長文脈モデルの1ステップ計算量、状態サイズ、履歴再現能力の三者のトレードオフを扱い、注意・状態空間・再帰型推論の設計に関連する。しかしarXivの2026年8月6日撤回通知によると、主定理の証明でクエリ鍵を落とす重大な誤りと正値条件の不備があり、主定理が無効となった。現時点で有効なシステム技術の貢献としてacceptできず、撤回・再検証待ちの境界扱いとする。",
+      "first_checked_at": "2026-10-27T23:47:08+00:00",
+      "last_checked_at": "2026-10-27T23:47:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The Impossibility Triangle of Long-Context Modeling"
     }
   }
 }
