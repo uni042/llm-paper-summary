@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（116本）
+## 自動生成の論文一覧（118本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -210,6 +210,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：1  
   細粒度KVチャンクをS3互換ストレージへ保存したまま、複数物体の同一層範囲をサーバ側で集約して層順にRDMA転送し、GPU計算とI/Oを重ね、計算窓に応じて共有帯域も配分する大容量接頭辞キャッシュ方式。
 
+- **2026-05 · [Move the Query, Not the Cache: Characterizing Cross-Instance Latent Attention Redistribution Across GPU Fabrics](2026-2606.01502-move-the-query-not-the-cache-characterizing-cross-instance-latent-attention-redistribution-across-gpu-fabrics.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  約1KBの問い合わせを遠隔キャッシュへ送り注意計算する方式を実H100で測定し、約3msのキャッシュ再適応より数十µsの往復が有利となる条件を閉形式化する。
+
 - **2026-05 · [Enabling KV Caching of Shared Prefix for Diffusion Language Models](2026-2606.07571-enabling-kv-caching-of-shared-prefix-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/OSSS-KU/BiCache) ・ リポジトリ内被引用：1  
   自己回帰型言語モデルでは、先頭のシステムプロンプトが同じ要求を何度も処理するとき、その接頭辞のKVを一度だけ計算して別要求へ渡せる。LLaDA、NVIDIA B200、4ベンチマークの主評価では、無キャッシュに対し処理量が36.3〜82.8%向上し、正解率差は主に−0.8〜+0.6ポイントの範囲に収まる。
@@ -315,6 +319,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-08 · [Elastic KV Cache for LLM Serving: A Working Reclamation Mechanism, and Why Chunked Prefill Already Closes the Gap](2026-2608.23658-elastic-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Elastic KVキャッシュはCUDA仮想メモリでデコード中だけ活性値予約領域をKVへ貸し、プリフィル直前に返す。単純な小分割とTTFT・容量を比較し、機構の実用優位の範囲を測る分析。
+
+- **2026-08 · [Bounded-State Restoration: Decoupling Local Restore Capacity from External LLM State](2026-2608.17826-bounded-state-restoration-decoupling-local-restore-capacity-from-external-llm-state.md)**  
+  実装：[✓](https://github.com/StarkLeeSunny/Flexkv-doublenode) ・ リポジトリ内被引用：0  
+  外部KV状態の全ヒットを先に把握しつつ、復元はWチャンク窓だけを順次ステージングして解放することで、長大な外部状態とローカル復元メモリを分離する方式。
 
 - **2026-07 · [WitCert: Sound Runtime Risk Observability and Gating for KV-Cache Quantization](2026-2607.28699-witcert-runtime-kv-quantization-risk-gating.md)**  
   実装：[✓](https://github.com/metask-ai/witcert-kv-certificates) ・ リポジトリ内被引用：0  
