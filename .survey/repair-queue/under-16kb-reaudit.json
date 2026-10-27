@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-27T16:23:42.728951+00:00",
+  "generated_at": "2026-10-27T16:47:02.477512+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 12,
+  "count": 13,
   "worker_counts": {
-    "scheduled-chat-00": 4,
+    "scheduled-chat-00": 5,
     "scheduled-chat-30": 4,
     "scheduled-chat-45": 4
   },
@@ -122,12 +122,32 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.05438-residual-mass-accounting-for-partial-kv-decoding.md",
+      "canonical_id": "arXiv:2604.05438",
+      "title": "Residual-Mass Accounting for Partial-KV Decoding",
+      "file_bytes": 14110,
+      "source_sha256": "e038422e5e492a48b586d97ca20234b95b369ebeec9c0126048570f7a317cc04",
+      "source_git_blob_sha": "5a7e43b9cc2ca1f17bcc021a3bc16b1791927cdf",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.951122,
+      "quality_metrics": {
+        "body_chars": 3942,
+        "method_chars": 983,
+        "evaluation_chars": 1318,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/13-sparse-attention/2024-2407.17678-s2-attention-hardware-aware-context-sharding-among-attention-heads.md",
       "canonical_id": "arXiv:2407.17678",
       "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
-      "file_bytes": 13158,
-      "source_sha256": "dd1bda8e105acf1e79d8b4f4fd179d1afb1529b30e5fe8644e3d0423b410a113",
-      "source_git_blob_sha": "d5304f50ebba2145c3e986fca59e59c249ba27dc",
+      "file_bytes": 14616,
+      "source_sha256": "7d3c85052f5e4aa10c5d3f913f44e9a31830d079abc0f16c98ac6efaad1c49b1",
+      "source_git_blob_sha": "098f2a393b2dd7db1d3333fbcac6bf27adf98237",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -137,26 +157,6 @@
         "method_chars": 1332,
         "evaluation_chars": 554,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.13161-mirror-speculative-decoding-breaking-the-serial-barrier-in-llm-inference.md",
-      "canonical_id": "arXiv:2510.13161",
-      "title": "Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference",
-      "file_bytes": 14535,
-      "source_sha256": "01e9f1f99def3f9a8c41150fd399f96640bfff284fcf562144beea06916c3096",
-      "source_git_blob_sha": "b00bdc9c273cac0c4b53612b7ed5cdf24e37d799",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.924276,
-      "quality_metrics": {
-        "body_chars": 3893,
-        "method_chars": 1466,
-        "evaluation_chars": 936,
-        "limitation_chars": 353
       },
       "mechanical_failures": [],
       "warnings": []
@@ -261,6 +261,26 @@
         "method_chars": 1598,
         "evaluation_chars": 1157,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.13161-mirror-speculative-decoding-breaking-the-serial-barrier-in-llm-inference.md",
+      "canonical_id": "arXiv:2510.13161",
+      "title": "Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference",
+      "file_bytes": 18510,
+      "source_sha256": "6d62d42cc9890192ad7542d7a21fc028024573474d71be30bc0ecb33acb2d36d",
+      "source_git_blob_sha": "64781019c4ea1596ac2d166b2b652f7971441f8f",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.924276,
+      "quality_metrics": {
+        "body_chars": 3893,
+        "method_chars": 1466,
+        "evaluation_chars": 936,
+        "limitation_chars": 353
       },
       "mechanical_failures": [],
       "warnings": []
