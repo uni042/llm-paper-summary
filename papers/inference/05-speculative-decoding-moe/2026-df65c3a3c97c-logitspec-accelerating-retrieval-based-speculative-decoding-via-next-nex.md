@@ -4,7 +4,7 @@ arxiv_id: null
 arxiv_categories: null
 title: 'LogitSpec: Accelerating Retrieval-based Speculative Decoding via Next Next Token Speculation'
 summary: 検索ベースの投機的生成は追加draftモデルを不要にするが、prompt中のn-gramが一致しないと候補を得られない。LogitSpecはtarget LLMの直近logit上位kに次々トークンが含まれやすい経験的性質を使い、次トークンと次々トークンの両方を鍵にprompt・生成済み文脈から後続列を検索する。候補木を作りtargetモデルで並列検証する。Vicuna 7B・CNN/DMで平均受理長3.28、自己回帰比2.61倍、4課題平均2.26倍。A100上のbatch1・greedyを中心に評価し、検索対象が少ない短いpromptや実運用のcontinuous batchingで同じ利得を保証しない。
-list_summary: LogitSpecはtargetの直近logitから次々トークン候補を推定し、prompt内n-gram検索の照合範囲を広げる学習不要の投機的生成。Vicuna 7B/CNN-DMで2.61倍、平均受理3.28。
+list_summary: "LogitSpecは対象の直近logitから次々トークン候補を推定し、プロンプト内n-gram検索の照合範囲を広げる学習不要の投機的生成。Vicuna 7B/CNN-DMで2.61倍、平均受理3.28。"
 authors:
 - Tianyu Liu
 - Qitan Lv
