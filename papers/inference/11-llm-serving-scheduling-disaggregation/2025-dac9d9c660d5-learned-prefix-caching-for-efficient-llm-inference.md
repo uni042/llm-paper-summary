@@ -1,33 +1,45 @@
 ---
-canonical_id: "SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75"
-doi: "10.52202/085713-1526"
-title: "Learned Prefix Caching for Efficient LLM Inference"
+canonical_id: SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75
+doi: 10.52202/085713-1526
+title: Learned Prefix Caching for Efficient LLM Inference
 authors:
-  - Dongsheng Yang
-  - Austin Li
-  - Kai Li
-  - Wyatt Lloyd
-published: "2025-12"
-publication: "Advances in Neural Information Processing Systems 38 (NeurIPS 2025), pp. 51142-51164"
-publication_type: "conference"
-publication_status: "published"
-source: "https://papers.neurips.cc/paper_files/paper/2025/file/414f642a1ea9350006669774cba9bcd4-Paper-Conference.pdf"
+- Dongsheng Yang
+- Austin Li
+- Kai Li
+- Wyatt Lloyd
+published: 2025-12
+publication: Advances in Neural Information Processing Systems 38 (NeurIPS 2025), pp. 51142-51164
+publication_type: conference
+publication_status: published
+source: https://papers.neurips.cc/paper_files/paper/2025/file/414f642a1ea9350006669774cba9bcd4-Paper-Conference.pdf
 sources:
-  - "https://papers.neurips.cc/paper_files/paper/2025/file/414f642a1ea9350006669774cba9bcd4-Paper-Conference.pdf"
-  - "https://papers.neurips.cc/paper_files/paper/2025/hash/414f642a1ea9350006669774cba9bcd4-Abstract-Conference.html"
-implementation: "vLLMの2025-03-10時点のmainを基に、独立した継続確率予測器と前置KVキャッシュの退避制御を試作。H100 80GB、Qwen3-32B-FP8でヒット率を実測し、分離型プリフィルサーバーの処理量はマイクロベンチマークで模擬。"
-code: "https://github.com/yangdsh/LPC"
-summary: "LLMの複数ターン対話で再利用される前置KVキャッシュについて、直近使用時刻だけで退避するLRUに代え、利用者の直近5回分の質問から次の対話継続確率を予測するLPCを提案する。確率の時間減衰と共有KVブロックの最大確率保持を組み合わせ、H100上のQwen3-32B-FP8と三つの会話データで、同じヒット率に必要な容量を18〜47%削減。分離型プリフィルを模した測定では要求処理量が10.01から11.11 req/sへ増加した。ただし時刻は合成、比較は主にLRU、追加予測器がGPUメモリ1GBを使う。"
-list_summary: "対話の続きやすさを軽量言語埋め込みで予測し、経過時間と共有ブロックを考慮して前置KVキャッシュを退避する。LRUと同じヒット率に必要な容量を18〜47%減らし、模擬プリフィル処理量を11%改善。"
-last_checked: "2026-10-28"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261028-0503-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-28T05:05:52+09:00"
-reference_main_sha: "27011dd845e6660321958865f22d86799ddc79b8"
+- https://papers.neurips.cc/paper_files/paper/2025/file/414f642a1ea9350006669774cba9bcd4-Paper-Conference.pdf
+- https://papers.neurips.cc/paper_files/paper/2025/hash/414f642a1ea9350006669774cba9bcd4-Abstract-Conference.html
+implementation: vLLMの2025-03-10時点のmainを基に、独立した継続確率予測器と前置KVキャッシュの退避制御を試作。H100 80GB、Qwen3-32B-FP8でヒット率を実測し、分離型プリフィルサーバーの処理量はマイクロベンチマークで模擬。
+code: https://github.com/yangdsh/LPC
+summary: LLMの複数ターン対話で再利用される前置KVキャッシュについて、直近使用時刻だけで退避するLRUに代え、利用者の直近5回分の質問から次の対話継続確率を予測するLPCを提案する。確率の時間減衰と共有KVブロックの最大確率保持を組み合わせ、H100上のQwen3-32B-FP8と三つの会話データで、同じヒット率に必要な容量を18〜47%削減。分離型プリフィルを模した測定では要求処理量が10.01から11.11 req/sへ増加した。ただし時刻は合成、比較は主にLRU、追加予測器がGPUメモリ1GBを使う。
+list_summary: 対話の続きやすさを軽量言語埋め込みで予測し、経過時間と共有ブロックを考慮して前置KVキャッシュを退避する。LRUと同じヒット率に必要な容量を18〜47%減らし、模擬プリフィル処理量を11%改善。
+last_checked: '2026-10-28'
+worker_id: scheduled-chat-00
+worker_run_key: 20261028-0503-scheduled-chat-00/r01
+worker_completed_at: '2026-10-28T05:05:52+09:00'
+reference_main_sha: 27011dd845e6660321958865f22d86799ddc79b8
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2408.03314
+  arxiv_id: '2408.03314'
+- canonical_id: arXiv:2408.13510
+- canonical_id: arXiv:2305.13144
+- canonical_id: arXiv:2405.16444
+- canonical_id: arXiv:2406.17565
+- canonical_id: arXiv:2311.04934
+- canonical_id: arXiv:2412.18547
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 18
 ---
 
 # Learned Prefix Caching：対話継続予測によるLLM前置キャッシュの学習型退避
