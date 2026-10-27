@@ -303,7 +303,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   ルーターゲート値と活性ノルムを組み合わせ、生成性能への寄与が小さい専門家をone-shotで削除し、最大1T級MoEでも50%圧縮を高品質に実現する。
 
 - **2025-09 · [LongCat-Flash Technical Report](2025-2509.01322-longcat-flash-zero-computation-experts.md)**  
-  実装：[✓](https://github.com/meituan-longcat/LongCat-Flash-Chat) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/meituan-longcat/LongCat-Flash-Chat) ・ リポジトリ内被引用：20  
   ゼロ計算専門家でトークンごとの活性計算量を18.6B～31.3Bへ動的配分し、ScMoEで専門家通信を密計算へ重ね、560B MoEの学習・推論効率を高める。
 
 - **2025-06 · [Sub-MoE: Efficient Mixture-of-Expert LLMs Compression via Subspace Expert Merging](2025-2506.23266-sub-moe-subspace-expert-merging.md)**  
