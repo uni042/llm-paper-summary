@@ -1,35 +1,53 @@
 ---
-canonical_id: "SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2"
-title: "Characterizing self-speculative decoding approaches for accelerating LLMs"
-summary: "自己投機的復号の5方式を同じLayerSkip-Llama-2系列とH100上で比較し、採用率が高くてもドラフトの計算費と検証時の再計算で遅くなることを示す。層スキップ方式のHumanEvalでの高速化は1.04〜1.48倍に留まり、早期終了方式は平均1.49〜2.67倍で、モデル再学習の要否と速度の交換関係を明確にした。"
-list_summary: "自己投機的復号5方式をドラフト計算費・受理率・検証再利用に分解して比較し、採用率99%でも高速化しない理由と早期終了方式の利点を実測で明らかにした。"
+canonical_id: SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2
+title: Characterizing self-speculative decoding approaches for accelerating LLMs
+summary: 自己投機的復号の5方式を同じLayerSkip-Llama-2系列とH100上で比較し、採用率が高くてもドラフトの計算費と検証時の再計算で遅くなることを示す。層スキップ方式のHumanEvalでの高速化は1.04〜1.48倍に留まり、早期終了方式は平均1.49〜2.67倍で、モデル再学習の要否と速度の交換関係を明確にした。
+list_summary: 自己投機的復号5方式をドラフト計算費・受理率・検証再利用に分解して比較し、採用率99%でも高速化しない理由と早期終了方式の利点を実測で明らかにした。
 authors:
-  - Jungmin Ha
-  - Karthik Ganesan
-  - Anh Nguyen
-  - Tanvir Ahmed
-  - Andreas Moshovos
-published: "2026-07"
-publication: "Workshop on Resource-Adaptive Foundation Model Inference (AdaptFM), co-located with ICML 2026; 著者配布PDFはPMLR 306/ICML 2026と表記"
-publication_type: "workshop paper / comparative empirical study"
-publication_status: "published"
-source: "https://www.eecg.toronto.edu/~ganesa10/assets/pdfs/selfspecdecode-icml2026.pdf"
+- Jungmin Ha
+- Karthik Ganesan
+- Anh Nguyen
+- Tanvir Ahmed
+- Andreas Moshovos
+published: 2026-07
+publication: Workshop on Resource-Adaptive Foundation Model Inference (AdaptFM), co-located with ICML 2026; 著者配布PDFはPMLR 306/ICML 2026と表記
+publication_type: workshop paper / comparative empirical study
+publication_status: published
+source: https://www.eecg.toronto.edu/~ganesa10/assets/pdfs/selfspecdecode-icml2026.pdf
 sources:
-  - "https://www.eecg.toronto.edu/~ganesa10/assets/pdfs/selfspecdecode-icml2026.pdf"
-  - "https://www.eecg.toronto.edu/~ganesa10/"
-  - "https://openreview.net/forum?id=uXQyCxN7r9"
-implementation: "公開実装を持つSWIFT、Draft & Verify、LayerSkip、DEL、Kangarooを著者提供コードと推奨設定で再評価。単一の本比較研究専用公式コード公開先は一次資料から特定できない。H100 SXM 80GBとPyTorch 2.11.0を使用。"
+- https://www.eecg.toronto.edu/~ganesa10/assets/pdfs/selfspecdecode-icml2026.pdf
+- https://www.eecg.toronto.edu/~ganesa10/
+- https://openreview.net/forum?id=uXQyCxN7r9
+implementation: 公開実装を持つSWIFT、Draft & Verify、LayerSkip、DEL、Kangarooを著者提供コードと推奨設定で再評価。単一の本比較研究専用公式コード公開先は一次資料から特定できない。H100 SXM 80GBとPyTorch 2.11.0を使用。
 code: null
-last_checked: "2026-10-28"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261028-0327-scheduled-chat-30/r01"
-worker_completed_at: "2026-10-28T03:27:00+09:00"
-reference_main_sha: "4e66466dd4e823b88717c5a98eda0e67d39ea08d"
+last_checked: '2026-10-28'
+worker_id: scheduled-chat-30
+worker_run_key: 20261028-0327-scheduled-chat-30/r01
+worker_completed_at: '2026-10-28T03:27:00+09:00'
+reference_main_sha: 4e66466dd4e823b88717c5a98eda0e67d39ea08d
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 worklist_rank: 84
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2404.18911
+  arxiv_id: '2404.18911'
+- canonical_id: SemanticScholar:abb6ba1bc5470508150fe420ecb1cdd07caf0fa2
+- canonical_id: arXiv:2401.07851
+- canonical_id: DOI:10.18653/v1/2026.findings-eacl.31
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2504.05598
+- canonical_id: arXiv:2410.06916
+- canonical_id: ACL:2024.acl-long.681
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2310.17157
+- canonical_id: arXiv:2211.17192
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 7
 ---
 
 # Characterizing self-speculative decoding approaches for accelerating LLMs

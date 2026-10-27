@@ -1,38 +1,94 @@
 ---
-canonical_id: "SemanticScholar:dda0a9a2bae01178be42a57575e24d3ac1932a45"
-title: "OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving (Operational Systems)"
-summary: "OpenTelaはSlurm管理HPCやKubernetes上の異種GPUを、利用者権限だけでLLMサービングに統合する制御面のオーバーレイである。libp2pとCRDT複製レジストリで発見・故障検知・ルーティングを行い、上位の配置最適化ではGPU種類・モデル・入出力長を用いる。Swiss AIで22か月超、1,300万要求・150億トークンを運用し、GH200での要求制御面は約1.7msの追加TTFTを報告する。"
-list_summary: "SlurmとKubernetesの異種GPU群をユーザー権限のP2P・CRDT制御面で統合し、モデル配置と故障時ルーティングを提供する実運用LLMサービング基盤。"
+canonical_id: SemanticScholar:dda0a9a2bae01178be42a57575e24d3ac1932a45
+title: 'OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving (Operational Systems)'
+summary: OpenTelaはSlurm管理HPCやKubernetes上の異種GPUを、利用者権限だけでLLMサービングに統合する制御面のオーバーレイである。libp2pとCRDT複製レジストリで発見・故障検知・ルーティングを行い、上位の配置最適化ではGPU種類・モデル・入出力長を用いる。Swiss AIで22か月超、1,300万要求・150億トークンを運用し、GH200での要求制御面は約1.7msの追加TTFTを報告する。
+list_summary: SlurmとKubernetesの異種GPU群をユーザー権限のP2P・CRDT制御面で統合し、モデル配置と故障時ルーティングを提供する実運用LLMサービング基盤。
 authors:
-  - Xiaozhe Yao
-  - Youhe Jiang
-  - Ilia Badanin
-  - Qinghao Hu
-  - Robert Matthew Smith
-  - Binhang Yuan
-  - Imanol Schlag
-  - Eiko Yoneki
-  - Ana Klimovic
-published: "2026-07"
-publication: "20th USENIX Symposium on Operating Systems Design and Implementation (OSDI '26), pp. 1821-1838"
-publication_type: "peer-reviewed conference paper (operational systems)"
-publication_status: "published"
-source: "https://www.usenix.org/system/files/osdi26-yao.pdf"
+- Xiaozhe Yao
+- Youhe Jiang
+- Ilia Badanin
+- Qinghao Hu
+- Robert Matthew Smith
+- Binhang Yuan
+- Imanol Schlag
+- Eiko Yoneki
+- Ana Klimovic
+published: 2026-07
+publication: 20th USENIX Symposium on Operating Systems Design and Implementation (OSDI '26), pp. 1821-1838
+publication_type: peer-reviewed conference paper (operational systems)
+publication_status: published
+source: https://www.usenix.org/system/files/osdi26-yao.pdf
 sources:
-  - "https://www.usenix.org/system/files/osdi26-yao.pdf"
-  - "https://www.usenix.org/conference/osdi26/presentation/yao"
-implementation: "Go約7,000行のユーザー権限オーバーレイとFastAPIフロントエンド。libp2pとCRDTで既存vLLM/SGLangエンジンを統合。公式実装および匿名化トレースを公開。"
-code: "https://github.com/eth-easl/opentela"
-last_checked: "2026-10-28"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261028-0327-scheduled-chat-30/r01"
-worker_completed_at: "2026-10-28T03:30:00+09:00"
-reference_main_sha: "4e66466dd4e823b88717c5a98eda0e67d39ea08d"
+- https://www.usenix.org/system/files/osdi26-yao.pdf
+- https://www.usenix.org/conference/osdi26/presentation/yao
+implementation: Go約7,000行のユーザー権限オーバーレイとFastAPIフロントエンド。libp2pとCRDTで既存vLLM/SGLangエンジンを統合。公式実装および匿名化トレースを公開。
+code: https://github.com/eth-easl/opentela
+last_checked: '2026-10-28'
+worker_id: scheduled-chat-30
+worker_run_key: 20261028-0327-scheduled-chat-30/r01
+worker_completed_at: '2026-10-28T03:30:00+09:00'
+reference_main_sha: 4e66466dd4e823b88717c5a98eda0e67d39ea08d
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 worklist_rank: 85
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2209.01188
+- canonical_id: arXiv:2411.11217
+- canonical_id: arXiv:2310.18547
+- canonical_id: arXiv:2305.05176
+  arxiv_id: '2305.05176'
+- canonical_id: arXiv:2504.08784
+  arxiv_id: '2504.08784'
+- canonical_id: arXiv:2510.09665
+  arxiv_id: '2510.09665'
+- canonical_id: arXiv:2602.23036
+- canonical_id: arXiv:2503.11733
+  arxiv_id: '2503.11733'
+- canonical_id: arXiv:2505.06371
+  arxiv_id: '2505.06371'
+- canonical_id: arXiv:2505.07203
+- canonical_id: arXiv:2404.02015
+- canonical_id: arXiv:2404.14527
+  arxiv_id: '2404.14527'
+- canonical_id: arXiv:2509.14233
+  arxiv_id: '2509.14233'
+- canonical_id: arXiv:2502.00722
+- canonical_id: arXiv:2502.09334
+  arxiv_id: '2502.09334'
+- canonical_id: arXiv:2506.04203
+  arxiv_id: '2506.04203'
+- canonical_id: arXiv:2311.11514
+  arxiv_id: '2311.11514'
+- canonical_id: arXiv:2502.07903
+  arxiv_id: '2502.07903'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2509.12849
+  arxiv_id: '2509.12849'
+- canonical_id: arXiv:2504.07128
+  arxiv_id: '2504.07128'
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2505.05286
+  arxiv_id: '2505.05286'
+- canonical_id: arXiv:2502.00937
+- canonical_id: arXiv:1909.08053
+  arxiv_id: '1909.08053'
+- canonical_id: arXiv:2408.00741
+- canonical_id: arXiv:2509.26182
+  arxiv_id: '2509.26182'
+- canonical_id: arXiv:2401.17644
+- canonical_id: arXiv:2508.17196
+  arxiv_id: '2508.17196'
+- canonical_id: arXiv:2402.16363
+  arxiv_id: '2402.16363'
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 76
 ---
 
 # OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving
