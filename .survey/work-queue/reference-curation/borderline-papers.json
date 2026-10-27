@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-26T22:48:36+00:00",
-  "record_count": 5356,
+  "updated_at": "2026-10-27T01:44:07+00:00",
+  "record_count": 5361,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83039,6 +83039,76 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Scaling Attention to Very Long Sequences in Linear Time with Wavelet-Enhanced Random Spectral Attention (WERSA)"
+    },
+    "arXiv:2411.15927": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.15927",
+      "identity_tokens": [
+        "arXiv:2411.15927",
+        "title:generative context distillation"
+      ],
+      "reason": "現行arXiv題名はGenerative Prompt Internalization。長い固定プロンプトを学習で内部化して推論時の入力トークンを省くため推論費用との関連はあるが、主たる寄与は学習損失とデータ合成で、サービング基盤の直接改善ではない。",
+      "first_checked_at": "2026-10-27T01:43:58+00:00",
+      "last_checked_at": "2026-10-27T01:43:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Generative Context Distillation"
+    },
+    "DOI:10.2139/ssrn.3985429": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.2139/ssrn.3985429",
+      "identity_tokens": [
+        "DOI:10.2139/ssrn.3985429",
+        "title:greedy layer pruning: decreasing inference time of transformer models"
+      ],
+      "reason": "BERT型Transformerの層削減で推論速度を扱うため技術的関連性はあるが、評価の中心はGLUEとエンコーダ型NLPであり、生成型LLMのデコード・KVキャッシュ・サービングではない。対応するarXivは2105.14839。",
+      "first_checked_at": "2026-10-27T01:43:58+00:00",
+      "last_checked_at": "2026-10-27T01:43:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Greedy Layer Pruning: Decreasing Inference Time of Transformer Models"
+    },
+    "arXiv:2510.19670": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.19670",
+      "identity_tokens": [
+        "arXiv:2510.19670",
+        "title:cosense-llm: semantics at the edge with cost- and uncertainty-aware cloud-edge cooperation"
+      ],
+      "reason": "端末とクラウド間のLLM処理先選択、RAG、帯域・遅延制約は関連するが、主要目的はセンサー意味表現とアプリケーション固有のプライバシー付きエッジ処理であり、一般LLM推論基盤の性能検証とは区別する。",
+      "first_checked_at": "2026-10-27T01:43:59+00:00",
+      "last_checked_at": "2026-10-27T01:43:59+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CoSense-LLM: Semantics at the Edge with Cost- and Uncertainty-Aware Cloud-Edge Cooperation"
+    },
+    "arXiv:2407.17029": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.17029",
+      "identity_tokens": [
+        "arXiv:2407.17029",
+        "title:accurate and efficient fine-tuning of quantized large language models through optimal balance"
+      ],
+      "reason": "量子化LLMの微調整効率が主題であり、低ビットモデルの推論展開とは関係するが、学習アルゴリズム中心のため推論基盤研究としては境界的。",
+      "first_checked_at": "2026-10-27T01:43:59+00:00",
+      "last_checked_at": "2026-10-27T01:43:59+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance"
+    },
+    "arXiv:2505.24541": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.24541",
+      "identity_tokens": [
+        "arXiv:2505.24541",
+        "title:mixpert: mitigating multimodal learning conflicts with efficient mixture-of-vision-experts"
+      ],
+      "reason": "視覚エンコーダの深い層と投影器をタスク別の視覚エキスパートに分け、画像ごとに1エキスパートへ動的ルーティングするため推論時の疎な実行という関連性はある。ただし研究の主目的と主要評価は視覚タスク間の学習干渉の緩和と正答率であり、LLM推論基盤のスケジューリング・KVキャッシュ・実機生成レイテンシの改善を直接検証していない。推論システム研究としては境界的。",
+      "first_checked_at": "2026-10-27T01:44:07+00:00",
+      "last_checked_at": "2026-10-27T01:44:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mixpert: Mitigating Multimodal Learning Conflicts with Efficient Mixture-of-Vision-Experts"
     }
   }
 }

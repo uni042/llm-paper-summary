@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-030782ba13a8a26c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2411.15927",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2411.15927",
+    "identity_tokens": [
+      "arXiv:2411.15927",
+      "title:generative context distillation"
+    ],
+    "reason": "現行arXiv題名はGenerative Prompt Internalization。長い固定プロンプトを学習で内部化して推論時の入力トークンを省くため推論費用との関連はあるが、主たる寄与は学習損失とデータ合成で、サービング基盤の直接改善ではない。",
+    "first_checked_at": "2026-10-27T01:43:58+00:00",
+    "last_checked_at": "2026-10-27T01:43:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Generative Context Distillation"
+  },
+  "processed_at": "2026-10-27T01:43:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-030782ba13a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

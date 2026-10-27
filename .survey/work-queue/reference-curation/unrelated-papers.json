@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-26T19:48:41+00:00",
-  "record_count": 12496,
+  "updated_at": "2026-10-27T01:44:06+00:00",
+  "record_count": 12501,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180001,6 +180001,71 @@
       "last_checked_at": "2026-10-26T19:48:41+00:00",
       "linked_from": [],
       "title": "GDKVM: Echocardiography Video Segmentation via Spatiotemporal Key-Value Memory with Gated Delta Rule"
+    },
+    "DOI:10.1145/3673038.3673046": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3673038.3673046",
+      "identity_tokens": [
+        "DOI:10.1145/3673038.3673046",
+        "title:brickdl: graph-level optimizations for dnns with fine-grained data blocking on gpus"
+      ],
+      "reason": "CNNを含む一般DNNの演算融合・データブロッキングであり、LLM推論やTransformerの具体的な実装・評価を主対象にしていない。",
+      "first_checked_at": "2026-10-27T01:43:59+00:00",
+      "last_checked_at": "2026-10-27T01:43:59+00:00",
+      "linked_from": [],
+      "title": "BrickDL: Graph-Level Optimizations for DNNs with Fine-Grained Data Blocking on GPUs"
+    },
+    "arXiv:2507.10849": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.10849",
+      "identity_tokens": [
+        "arXiv:2507.10849",
+        "title:opengcram: an open-source gain cell compiler enabling design-space exploration for ai workloads"
+      ],
+      "reason": "ゲインセルメモリのハードウェアコンパイラであり、タイトル上の対象は一般AIワークロードで、LLM推論・学習の既定系統に直接該当しない。",
+      "first_checked_at": "2026-10-27T01:44:00+00:00",
+      "last_checked_at": "2026-10-27T01:44:00+00:00",
+      "linked_from": [],
+      "title": "OpenGCRAM: An Open-Source Gain Cell Compiler Enabling Design-Space Exploration for AI Workloads"
+    },
+    "arXiv:2410.12794": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.12794",
+      "identity_tokens": [
+        "arXiv:2410.12794",
+        "title:disaggregating embedding recommendation systems with flexemr"
+      ],
+      "reason": "推薦システムの埋め込みテーブルの分離実行を対象とし、LLM推論のKVキャッシュ・モデルオフロード等とは対象が異なる。",
+      "first_checked_at": "2026-10-27T01:44:00+00:00",
+      "last_checked_at": "2026-10-27T01:44:00+00:00",
+      "linked_from": [],
+      "title": "Disaggregating Embedding Recommendation Systems with FlexEMR"
+    },
+    "DOI:10.1109/tvlsi.2023.3300910": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tvlsi.2023.3300910",
+      "identity_tokens": [
+        "DOI:10.1109/tvlsi.2023.3300910",
+        "title:peakengine: a deterministic on-the-fly pruning neural network accelerator for hearing instruments"
+      ],
+      "reason": "補聴器向けニューラルネットワークの専用アクセラレータであり、LLM推論・学習系統から明確に外れる。",
+      "first_checked_at": "2026-10-27T01:44:00+00:00",
+      "last_checked_at": "2026-10-27T01:44:00+00:00",
+      "linked_from": [],
+      "title": "PeakEngine: A Deterministic On-the-Fly Pruning Neural Network Accelerator for Hearing Instruments"
+    },
+    "arXiv:2408.00386": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.00386",
+      "identity_tokens": [
+        "arXiv:2408.00386",
+        "title:what comes after transformers? -- a selective survey connecting ideas in deep learning"
+      ],
+      "reason": "深層学習全般のアーキテクチャ、学習目的、最適化法、Transformer代替案を横断的に整理する概念サーベイであり、特定のLLM推論実行系・サービング・量子化・オフロード等のシステム手法の比較評価を主目的としない。本文でもモデル圧縮や分散機械学習などの計算戦略は対象外と明記され、現行の推論基盤専門サーベイの収録範囲から外れる。",
+      "first_checked_at": "2026-10-27T01:44:06+00:00",
+      "last_checked_at": "2026-10-27T01:44:06+00:00",
+      "linked_from": [],
+      "title": "What comes after transformers? -- A selective survey connecting ideas in deep learning"
     }
   }
 }
