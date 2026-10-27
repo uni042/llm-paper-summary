@@ -28,6 +28,8 @@ reference_main_sha: "a91a0111b25ab0e16877ef4b7c7f6e764ffdf0c3"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_scope: "activation-quantization-systematic-review"
+last_audited: null
+audit_version: 0
 ---
 
 # Addressing Activation Outliers in LLMs: A Systematic Review of Post-Training Quantization Techniques

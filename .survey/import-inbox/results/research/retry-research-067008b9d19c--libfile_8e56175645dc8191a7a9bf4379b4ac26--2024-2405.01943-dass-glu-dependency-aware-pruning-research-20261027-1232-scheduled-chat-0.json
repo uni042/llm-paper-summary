@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "cc16dadaebd63f00ad2d6bbf576e52302694cd2e9938924d347ff1a190716fc0",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-067008b9d19c--libfile_8e56175645dc8191a7a9bf4379b4ac26--2024-2405.01943-dass-glu-dependency-aware-pruning-research-20261027-1232-scheduled-chat-00-r01-corrected.md",
+  "canonical_id": "arXiv:2405.01943",
+  "worker_completed_at": "2026-10-27T12:36:30+09:00",
+  "worker_run_key": "20261027-1232-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4978,
+    "body_paragraphs": 29,
+    "method_chars": 1358,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-27T05:20:08+00:00"
+}
