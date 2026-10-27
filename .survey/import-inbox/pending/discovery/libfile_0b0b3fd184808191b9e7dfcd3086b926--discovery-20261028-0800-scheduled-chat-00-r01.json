@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261028-0800-scheduled-chat-00/r01",
+  "reference_main_sha": "58c6583be472e671de30541c2ed81462d97d31e4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.19732",
+      "identity_tokens": [
+        "arXiv:2502.19732",
+        "SemanticScholar:0714adf1ed0529190998000c7965d8db1ffd6112",
+        "DOI:10.48550/arXiv.2502.19732",
+        "title:speculative decoding and beyond an in depth survey of techniques"
+      ],
+      "title": "Speculative Decoding and Beyond: An In-Depth Survey of Techniques",
+      "reason": "自己回帰生成の逐次依存を緩和する生成・精緻化方式を、n-gramから学習済みドラフト、単回検証から反復修正まで分類する。テキストだけでなく画像・音声生成への展開と計算環境別の実装を扱う、推論加速手法の横断的サーベイ。worklistのReview表記は同一arXivの旧題名であり別論文と数えない。",
+      "source_url": "https://arxiv.org/abs/2502.19732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3739598",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3739598",
+        "title:from draft then verify to systems co design a survey of speculative decoding for autoregressive large language models"
+      ],
+      "title": "From Draft-Then-Verify to Systems Co-Design: A Survey of Speculative Decoding for Autoregressive Large Language Models",
+      "reason": "ドラフトの生成元・候補形状・検証の忠実度・実行系を4軸19分類に分け、304研究のMethod Profileを構成する。KV状態の確定、投機量制御、サービング実行、速度比較条件まで対象に含めるため、投機的復号の実装・システム設計に直接関わるサーベイ。プレプリントは査読前でありIEEE Access DOIは同題の正式版識別子。",
+      "source_url": "https://www.preprints.org/manuscript/202608.0746",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 2
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.08032",
+      "identity_tokens": [
+        "arXiv:2607.08032",
+        "DOI:10.48550/arXiv.2607.08032",
+        "title:what to keep what to forget a rate distortion view of memory compaction in llms and agents"
+      ],
+      "title": "What to Keep, What to Forget: A Rate--Distortion View of Memory Compaction in LLMs and Agents",
+      "reason": "KVキャッシュの量子化・削除、プロンプト圧縮、再帰状態、エージェント長期記憶を、資源予算下のレート歪み最適化として統一する。7軸分類と層を跨ぐ下界を提案し、クエリ判明前の不可逆な情報削除という共通失敗条件を整理する。KV管理・推論メモリ圧縮の技術サーベイとして直接関連する。",
+      "source_url": "https://arxiv.org/abs/2607.08032",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 3
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25284",
+      "identity_tokens": [
+        "arXiv:2603.25284",
+        "DOI:10.48550/arXiv.2603.25284",
+        "title:sliderquant accurate post training quantization for llms"
+      ],
+      "title": "SliderQuant: Accurate Post-Training Quantization for LLMs",
+      "reason": "浅層・深層、とくに最初・最後のTransformer層で量子化誤差が増大する観測を基に、層間スライド窓と層内逐次窓を組み合わせるPTQ方式。Llama・Qwen・MoEの重み専用/重み活性量子化で既存回転型PTQとの品質比較を実施し、低ビット推論の精度保持に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2603.25284",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 4
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05774",
+      "identity_tokens": [
+        "arXiv:2610.05774",
+        "DOI:10.48550/arXiv.2610.05774",
+        "title:adaspark adaptive dspark with online learning for tree verification and n gram fill"
+      ],
+      "title": "AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill",
+      "reason": "DSparkの検証木幅と検証時間を事前プロファイルなしにオンライン学習し、ドラフト信頼度を実際のターゲット受理結果で補正する。要求内n-gram候補も同一best-first検証行へ統合し、会話データと密/MoEモデルでllama.cpp DSpark比1.5〜3.1倍のデコード速度を報告する。投機的復号の実行時制御そのものが主題。",
+      "source_url": "https://arxiv.org/abs/2610.05774",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 5
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.21226",
+      "identity_tokens": [
+        "arXiv:2605.21226",
+        "DOI:10.48550/arXiv.2605.21226",
+        "title:octopus optimized kv cache for transformers via octahedral parametrization under optimal squared error quantization"
+      ],
+      "title": "OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization",
+      "reason": "ランダム回転したKVの3座標組を八面体パラメータで2次元方向とノルムへ写像し、Lloyd-Max量子化とビット配分で再構成誤差を削減する。融合Tritonカーネルで非圧縮Keyを実体化せず復元し、デコード時の帯域・遅延追加を抑えるため、KVキャッシュ量子化と推論カーネルの直接的貢献。",
+      "source_url": "https://arxiv.org/abs/2605.21226",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 6
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34388",
+      "identity_tokens": [
+        "arXiv:2609.34388",
+        "DOI:10.48550/arXiv.2609.34388",
+        "title:reciprocal guidance orchestrating draft and verify budgets for advancing the diffusion ar self speculation frontier"
+      ],
+      "title": "Reciprocal Guidance: Orchestrating Draft and Verify Budgets for Advancing the Diffusion-AR Self-Speculation Frontier",
+      "reason": "拡散ドラフトと自己回帰検証を共有バックボーンで実行する自己投機的復号について、ドラフトlogitから検証不一致を予測し、検証履歴から次のブロック長を選ぶRecGuideを提案する。低同時実行ではドラフトと検証を重ね、高同時実行では要求別長さを配分して最大1.8倍のスループット改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2609.34388",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 7
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08755",
+      "identity_tokens": [
+        "arXiv:2605.08755",
+        "DOI:10.48550/arXiv.2605.08755",
+        "title:laquant a simple overhead free large reasoning model quantization by layer wise lookahead loss"
+      ],
+      "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
+      "reason": "長いCoT生成で既存QATが精度を失う要因をKV忠実度と校正データのHessian部分空間のずれに分解し、次層残差流を保つ1層先読み損失を使う重み専用量子化を提案する。Qwen3-4B W3G128のRTX A6000実測でFP16比3.42倍の復号高速化を報告し、推論量子化の対象に合致する。",
+      "source_url": "https://arxiv.org/abs/2605.08755",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 10
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.15982",
+      "identity_tokens": [
+        "arXiv:2411.15982",
+        "DOI:10.48550/arXiv.2411.15982",
+        "title:anda unlocking efficient llm inference with a variable length grouped activation data format"
+      ],
+      "title": "Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format",
+      "reason": "重み専用INT量子化で残るFP活性の転送・計算費を対象に、グループ共有指数と可変仮数長のAnda形式、モジュール別ビット幅探索、ビットプレーン格納とビット直列演算器を共同設計する。OPT/LLaMA系のFP-INT GeMMでGPU類似FP-FP基準比平均2.4倍高速化を報告する推論アクセラレータ研究。",
+      "source_url": "https://arxiv.org/abs/2411.15982",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.00907",
+      "identity_tokens": [
+        "arXiv:2603.00907",
+        "DOI:10.48550/arXiv.2603.00907",
+        "title:kvslimmer theoretical insights and practical optimizations for asymmetric kv merging"
+      ],
+      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
+      "reason": "Query/Key射影のスペクトル集中とValue射影の分散からKV統合の非対称性を理論化し、forward変数だけで正確なHessian情報を得る閉形式の勾配不要KV統合を設計する。Llama3.1-8B-InstructでLongBench平均+0.92、メモリ29%・遅延28%削減と報告し、長文脈KV圧縮へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2603.00907",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:02:32+09:00",
+      "last_checked_at": "2026-10-28T08:02:32+09:00",
+      "linked_from": [],
+      "worklist_rank": 13
+    }
+  ]
+}
