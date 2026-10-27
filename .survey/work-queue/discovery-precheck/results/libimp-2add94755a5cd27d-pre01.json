@@ -1,0 +1,868 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-2add94755a5cd27d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-2add94755a5c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2026.acl-long.1250",
+    "arXiv:2502.13251",
+    "arXiv:2504.07389",
+    "arXiv:2505.16162",
+    "arXiv:2507.17417",
+    "arXiv:2606.10820",
+    "arXiv:2608.01126",
+    "arXiv:2609.29913",
+    "arXiv:2609.36722",
+    "arXiv:2610.00623"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2f86d3fdb95b8da7d73a9295d78bcd2c07c68f15",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-27T23:51:11.851810+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.1250",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.13251",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.07389",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.16162",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:knnssd enabling dynamic selfspeculative decoding via nearest neighbor layer set optimization"
+    },
+    {
+      "requested_id": "arXiv:2507.17417",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.10820",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.01126",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.29913",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36722",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00623",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "K-Forcing: Joint Next-K-Token Decoding via Push-Forward Language Modeling",
+      "source_url": "https://arxiv.org/abs/2606.10820",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive (AR) language modeling is the dominant paradigm for text generation, yet its sequential token-by-token decoding makes inference memory-bound and inefficient. Existing acceleration approaches, such as speculative decoding and diffusion language models, can yield speedups under certain conditions but do not directly address high-load batch serving--the scenario most critical for industrial-scale deployment. We introduce K-Forcing, a push-forward language modeling paradigm for joint next-k-token decoding. K-Forcing distills an existing AR model into a conditional push-forward mapping--one that transforms independent uniform noise variables into a joint sample of multiple future tokens in a single forward pass. This design preserves fixed-length outputs, reuses the AR teacher backbone, and remains compatible with standard AR serving infrastructure. We train this mapping via progressive self-forcing distillation, which gradually expands the prediction window while enabling the student to closely match the sequence distribution of the AR teacher. We evaluate K-Forcing on LM1B and OpenWebText using a standard causal Transformer backbone. When aggressively configured to generate k = 4 tokens per forward pass, K-Forcing delivers approximately 2.4-3.5x speedup across different batch sizes, while incurring modest quality degradation relative to its AR teacher. As inference increasingly dominates the lifetime compute cost of modern LLMs, K-Forcing offers a promising route toward accelerating AR generation under real-world high-load deployment.",
+      "identifiers": [
+        "SemanticScholar:40dc6b78f0bf331dfec5a5f992a6c4f6429730b5"
+      ],
+      "semantic_scholar_id": "40dc6b78f0bf331dfec5a5f992a6c4f6429730b5",
+      "canonical_id": "arXiv:2606.10820",
+      "arxiv_id": "2606.10820",
+      "doi": "10.48550/arXiv.2606.10820",
+      "authors": [
+        "Zhi-Wei Tang",
+        "Yuan-Yu He",
+        "Yizheng Han",
+        "Wang-Bo Zhao",
+        "Jia-Sheng Tang",
+        "Fan Wang",
+        "Bo-Han Zhuang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework",
+      "source_url": "https://arxiv.org/abs/2608.01126",
+      "year": 2026,
+      "published": "2026-08-02",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefix caching reuses the key--value (KV) states of shared prompt prefixes and can substantially reduce the time to first token (TTFT) of large language model (LLM) inference. In a wireless edge network, however, prefix states are distributed across geographically separated GPU nodes. A nearby node offers a short radio path but may provide little reuse, whereas a more distant node may cache a longer matching prefix but incur additional communication and queueing delay. Moreover, persistent prefixes and active-request KV states compete for the same GPU memory, so aggressive caching can reduce inference concurrency and create queueing hotspots. This paper develops a stochastic-geometry and queueing framework for this spatial communication--caching--computation tradeoff. We represent the prompt workload by a prefix forest and define an ancestor-closed cache profile that may contain multiple reusable prefixes. Edge GPU nodes form a Poisson point process and are independently marked by cache profile, yielding analytically tractable spatial tiers. We derive the profile-association probability, conditional serving-distance distribution, token-level computation-offloading ratio, and TTFT coverage probability under a load-aware association policy. A fixed-point formulation captures the coupling between spatial association and multi-server GPU queues, while an outer optimization selects the cache-profile distribution subject to static-memory and stability constraints. Analytical and Monte Carlo results agree closely. The results show that the latency-optimal node need not be the nearest node, that TTFT can be non-monotonic in cached-prefix depth because of GPU-memory coupling.",
+      "identifiers": [
+        "SemanticScholar:701d83e51585e98d9c79f3f97f844789e0f231ff"
+      ],
+      "semantic_scholar_id": "701d83e51585e98d9c79f3f97f844789e0f231ff",
+      "canonical_id": "arXiv:2608.01126",
+      "arxiv_id": "2608.01126",
+      "authors": [
+        "Leo T. Yang",
+        "Zhou-Yong Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 86,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
+      "source_url": "https://arxiv.org/abs/2504.07389",
+      "year": 2025,
+      "published": "2025-04-10",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) reduces a model's memory footprint by mapping full precision weights into low bit weights without costly retraining, but can degrade its downstream performance especially in low 2- to 3-bit settings. We develop a new mixed-precision PTQ approach, Task-Circuit Quantization (TaCQ), that draws parallels to automated circuit discovery, directly conditioning the quantization process on specific weight circuits -- which we define as sets of weights associated with downstream task performance. These weights are kept as 16-bit weights, while others are quantized, maintaining performance while only adding a marginal memory cost. Specifically, TaCQ contrasts unquantized model weights with a uniformly-quantized model to estimate the expected change in weights due to quantization and uses gradient information to predict the resulting impact on task performance, allowing us to preserve task-specific weights. We compare TaCQ-based quantization to existing mixed-precision quantization methods when conditioning both on general-purpose and task-specific data. Across QA, math reasoning, and text-to-SQL tasks for both Llama-3 and Qwen2.5, we find that TaCQ outperforms baselines using the same calibration data and a lower weight budget, achieving major improvements in the 2 and 3-bit regime. With only 3.1 bits we are able to recover 96% of Llama-3-8B-Instruct's unquantized 16-bit MMLU performance, obtaining a 5.25% absolute improvement over SPQR. We also observe consistently large gains over existing methods in the 2-bit regime, with an average gain of 14.74% over the strongest baseline, SliM-LLM. Moreover, we observe a 7.20% gain without conditioning on specific tasks, showing TaCQ's ability to identify important weights is not limited to task-conditioned settings.",
+      "identifiers": [
+        "SemanticScholar:5728992c01b8589ec2339a5cf18dfdd3a7b9daed"
+      ],
+      "semantic_scholar_id": "5728992c01b8589ec2339a5cf18dfdd3a7b9daed",
+      "canonical_id": "arXiv:2504.07389",
+      "arxiv_id": "2504.07389",
+      "doi": "10.48550/arXiv.2504.07389",
+      "authors": [
+        "Hanqi Xiao",
+        "Yi-Lin Sung",
+        "Elias Stengel-Eskin",
+        "Mohit Bansal"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 565,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Question Tells You Where the Answer Is: Intention-aware Long-Context KV Cache Compression",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1250",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:94907917423a5b6da56bbd5e305f512919fe7c32"
+      ],
+      "semantic_scholar_id": "94907917423a5b6da56bbd5e305f512919fe7c32",
+      "doi": "10.18653/v1/2026.acl-long.1250",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1250",
+      "authors": [
+        "Liang Zhao",
+        "Xiao-Cheng Feng",
+        "Weihong Zhong",
+        "Lei Huang",
+        "Kun Zhu",
+        "Baoxin Wang",
+        "Da-Yong Wu",
+        "Guoping Hu",
+        "Ting Liu",
+        "Bing Qin"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Neural Attention Search",
+      "source_url": "https://arxiv.org/abs/2502.13251",
+      "year": 2025,
+      "published": "2025-02-18",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Neural Attention Search (NAtS), a framework that automatically evaluates the importance of each token within a sequence and determines if the corresponding token can be dropped after several steps. This approach can efficiently reduce the KV cache sizes required by transformer-based models during inference and thus reduce inference costs. In this paper, we design a search space that contains three token types: (i) Global Tokens will be preserved and queried by all the following tokens. (ii) Local Tokens survive until the next global token appears. (iii) Sliding Window Tokens have an impact on the inference of a fixed size of the next following tokens. Similar to the One-Shot Neural Architecture Search approach, this token-type information can be learned jointly with the architecture weights via a learnable attention mask. Experiments on both training a new transformer from scratch and fine-tuning existing large language models show that NAtS can efficiently reduce the KV cache size required for the models while maintaining the models'performance.",
+      "identifiers": [
+        "SemanticScholar:6c5146c1152c618d2c833cd7087f80acc5c9b247"
+      ],
+      "semantic_scholar_id": "6c5146c1152c618d2c833cd7087f80acc5c9b247",
+      "canonical_id": "arXiv:2502.13251",
+      "arxiv_id": "2502.13251",
+      "doi": "10.48550/arXiv.2502.13251",
+      "authors": [
+        "Difan Deng",
+        "Marius Lindauer"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 616,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+      "source_url": "https://arxiv.org/abs/2609.29913",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many-shot in-context learning (ICL) enables large language models (LLMs) to adapt to complex tasks by conditioning on thousands of demonstration examples, but this paradigm shifts the inference efficiency bottleneck to the key-value (KV) cache memory. Due to the linear scaling behavior of the KV cache, storing these intermediate tensors has become a paramount challenge for both online serving and on-device deployment. To address this issue, we propose a novel compression framework, termed MILO, that exploits the low-rank redundancy inherent in many-shot contexts. Specifically, MILO features a block-wise low-rank compression strategy that compresses the KV cache at the block granularity, where each block contains multiple many-shot examples. Furthermore, to handle the heterogeneous context density across different blocks, MILO dynamically allocates rank budgets based on the information entropy, preserving the fidelity of critical blocks while aggressively compressing redundant ones. Experimental results on Qwen2.5 models demonstrate that our method achieves up to 50% reduction in KV cache memory and 1.8x throughput improvement, with negligible performance degradation on classification and reasoning benchmarks, significantly outperforming prior baselines.",
+      "identifiers": [
+        "SemanticScholar:e841dbae23749051b146f3bcaefcfa814054adb9"
+      ],
+      "semantic_scholar_id": "e841dbae23749051b146f3bcaefcfa814054adb9",
+      "canonical_id": "arXiv:2609.29913",
+      "arxiv_id": "2609.29913",
+      "authors": [
+        "You-Peng Zhao",
+        "Tian Tan",
+        "Li-Qian Peng",
+        "Jun Wang",
+        "Alec Go"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ATTUNER: Recomputation-Free Agentic Context KV Reuse",
+      "source_url": "https://arxiv.org/abs/2609.36722",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents repeatedly load reusable content, such as skills, documents, and memory entries, into the current context. Re-encoding this content for every request wastes computation. Position-independent caching (PIC) alleviates this by encoding each artifact independently and reusing its key-value (KV) states at arbitrary positions, but it incurs a quality loss relative to full-context prefill. Existing methods repair this loss by restoring global position IDs or recomputing selected tokens. In this work, we isolate the source of the loss, finding that the positional mismatch has minor effect, and independently cached artifacts retain faithful representations: reading a provided artifact stays largely accurate, and performance degrades only when the model must select among multiple artifacts. Moreover, replacing PIC's attention scores with full-prefill scores recovers performance with the cached KV unchanged, localizing the failure to the attention rather than KV recomputation. Motivated by this, we propose \\textsc{Attuner}, a query-side adaptation method that learns to read a frozen artifact cache. \\textsc{Attuner} inserts low-rank adapters into the query projections and is trained by distilling full-prefill distribution into the student. It trains fewer than 0.05\\% of the model parameters and, at inference, requires neither cache recomputation nor a full-context reference. On Qwen3-4B and Qwen3-8B across seven benchmarks covering skills, documents, memory, and code, \\textsc{Attuner} substantially outperforms prior PIC baselines in both in-domain and out-of-domain settings, matches full-context prefill quality while providing up to $3.73\\times$ speedup.",
+      "identifiers": [
+        "SemanticScholar:c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02"
+      ],
+      "semantic_scholar_id": "c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02",
+      "canonical_id": "arXiv:2609.36722",
+      "arxiv_id": "2609.36722",
+      "authors": [
+        "Xing-Hao Chen",
+        "Jun-Nan Dong",
+        "Cai Ke",
+        "Chak Tou Leong",
+        "Hao-Cheng Sun",
+        "Ke-Yu Chen",
+        "Si-Yu An",
+        "Rui-Zhi Qiao",
+        "Xing Sun",
+        "Wen-Jie Li",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HAWK: Rethinking Multimodal Drafting for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.00623",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has achieved substantial lossless speedups for LLMs, but remains less effective for large vision-language models (LVLMs), where lightweight drafters struggle to use rich multimodal information. A second limitation is that standard distillation supervises the drafter only along the original training trajectory, without modeling how target predictions shift after the drafter's own proposals. As drafting moves away from this trajectory, the drafter can increasingly disagree with the target, reducing acceptance in later steps. We propose HAWK to address both limitations. HAWK uses representation similarity to select informative target layers and learns how to combine their hidden states. For visual information, it directly provides the drafter with compressed visual hidden states from the target model instead of raw visual tokens, making the visual information easier for a shallow drafter to use. HAWK also trains the drafter to capture how target predictions change after its own proposals, improving its agreement with the target during multi-step drafting. On SmolVLM-256M across ten multimodal benchmarks, HAWK raises average acceptance length from 3.32 to 4.08 and speedup from 2.19x to 2.60x over EAGLE-3 under greedy decoding, and from 2.89 to 3.41 and 1.92x to 2.19x under sampling.",
+      "identifiers": [
+        "SemanticScholar:287817cdfe11c49306db686c08bca665620ea2d7"
+      ],
+      "semantic_scholar_id": "287817cdfe11c49306db686c08bca665620ea2d7",
+      "canonical_id": "arXiv:2610.00623",
+      "arxiv_id": "2610.00623",
+      "authors": [
+        "Wen-Han Yang",
+        "Anirudh Rao",
+        "Ashwin Chandra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2507.17417",
+      "year": 2025,
+      "published": "2025-07-23",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For large language models (LLMs), post-training quantization (PTQ) significantly reduces memory and computational overhead. Despite rapid advancements, existing papers often lack experiments on the same ground. In addition, since quantization solutions typically contain multiple components, it is important to analyze the connections among numerous existing methods to gain an in-depth understanding of this field. To bridge these gaps, we conduct an up-to-date and extensive review of the state-of-the-art methods and perform comprehensive evaluations of low-bit quantization on representative text-only LLMs on the same ground to ensure fair comparisons. To our knowledge, this fair and extensive investigation remains critically important yet significantly underexplored in the research community. To better understand the connections, we first decouple published quantization into two steps: pre-quantization transformation to reduce outliers, and quantization error mitigation to offset performance loss. Second, we extensively evaluate the impact of quantization settings, including granularity and symmetry. Third, we analyze the performance of the latest MXFP4 and NVFP4 data formats. Our experimental results first demonstrate that optimizing rotation and scaling yields the best pre-quantization transformation, while combining low-rank compensation with GPTQ occasionally outperforms using GPTQ alone. Second, we verify that finer granularity improves performance at the cost of storage and asymmetric quantization benefits activations significantly more than weights. Third, we find that the format and precision of scaling factors have a significant impact on performance; notably, rotation-based transformation is effective for INT4 but demonstrates little improvement for MXFP4 and NVFP4, inspiring further investigation in this field.",
+      "identifiers": [
+        "SemanticScholar:d0ad71a1b4178e597b6b5c4a8a11924eb17467a5"
+      ],
+      "semantic_scholar_id": "d0ad71a1b4178e597b6b5c4a8a11924eb17467a5",
+      "canonical_id": "arXiv:2507.17417",
+      "arxiv_id": "2507.17417",
+      "doi": "10.48550/arXiv.2507.17417",
+      "authors": [
+        "Yutong Liu",
+        "Cairong Zhao",
+        "Guosheng Hu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 461,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.10820",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.10820",
+        "id:SemanticScholar:40dc6b78f0bf331dfec5a5f992a6c4f6429730b5",
+        "id:arXiv:2606.10820",
+        "title:kforcing joint nextktoken decoding via pushforward language modeling",
+        "url:https://arxiv.org/abs/2606.10820"
+      ],
+      "record": {
+        "title": "K-Forcing: Joint Next-K-Token Decoding via Push-Forward Language Modeling",
+        "source_url": "https://arxiv.org/abs/2606.10820",
+        "year": 2026,
+        "published": "2026-06-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive (AR) language modeling is the dominant paradigm for text generation, yet its sequential token-by-token decoding makes inference memory-bound and inefficient. Existing acceleration approaches, such as speculative decoding and diffusion language models, can yield speedups under certain conditions but do not directly address high-load batch serving--the scenario most critical for industrial-scale deployment. We introduce K-Forcing, a push-forward language modeling paradigm for joint next-k-token decoding. K-Forcing distills an existing AR model into a conditional push-forward mapping--one that transforms independent uniform noise variables into a joint sample of multiple future tokens in a single forward pass. This design preserves fixed-length outputs, reuses the AR teacher backbone, and remains compatible with standard AR serving infrastructure. We train this mapping via progressive self-forcing distillation, which gradually expands the prediction window while enabling the student to closely match the sequence distribution of the AR teacher. We evaluate K-Forcing on LM1B and OpenWebText using a standard causal Transformer backbone. When aggressively configured to generate k = 4 tokens per forward pass, K-Forcing delivers approximately 2.4-3.5x speedup across different batch sizes, while incurring modest quality degradation relative to its AR teacher. As inference increasingly dominates the lifetime compute cost of modern LLMs, K-Forcing offers a promising route toward accelerating AR generation under real-world high-load deployment.",
+        "identifiers": [
+          "SemanticScholar:40dc6b78f0bf331dfec5a5f992a6c4f6429730b5"
+        ],
+        "semantic_scholar_id": "40dc6b78f0bf331dfec5a5f992a6c4f6429730b5",
+        "canonical_id": "arXiv:2606.10820",
+        "arxiv_id": "2606.10820",
+        "doi": "10.48550/arXiv.2606.10820",
+        "authors": [
+          "Zhi-Wei Tang",
+          "Yuan-Yu He",
+          "Yizheng Han",
+          "Wang-Bo Zhao",
+          "Jia-Sheng Tang",
+          "Fan Wang",
+          "Bo-Han Zhuang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01126",
+      "identity_tokens": [
+        "id:SemanticScholar:701d83e51585e98d9c79f3f97f844789e0f231ff",
+        "id:arXiv:2608.01126",
+        "title:spatial prefix caching for wireless edge llm inference a stochasticgeometry and queueing framework",
+        "url:https://arxiv.org/abs/2608.01126"
+      ],
+      "record": {
+        "title": "Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework",
+        "source_url": "https://arxiv.org/abs/2608.01126",
+        "year": 2026,
+        "published": "2026-08-02",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefix caching reuses the key--value (KV) states of shared prompt prefixes and can substantially reduce the time to first token (TTFT) of large language model (LLM) inference. In a wireless edge network, however, prefix states are distributed across geographically separated GPU nodes. A nearby node offers a short radio path but may provide little reuse, whereas a more distant node may cache a longer matching prefix but incur additional communication and queueing delay. Moreover, persistent prefixes and active-request KV states compete for the same GPU memory, so aggressive caching can reduce inference concurrency and create queueing hotspots. This paper develops a stochastic-geometry and queueing framework for this spatial communication--caching--computation tradeoff. We represent the prompt workload by a prefix forest and define an ancestor-closed cache profile that may contain multiple reusable prefixes. Edge GPU nodes form a Poisson point process and are independently marked by cache profile, yielding analytically tractable spatial tiers. We derive the profile-association probability, conditional serving-distance distribution, token-level computation-offloading ratio, and TTFT coverage probability under a load-aware association policy. A fixed-point formulation captures the coupling between spatial association and multi-server GPU queues, while an outer optimization selects the cache-profile distribution subject to static-memory and stability constraints. Analytical and Monte Carlo results agree closely. The results show that the latency-optimal node need not be the nearest node, that TTFT can be non-monotonic in cached-prefix depth because of GPU-memory coupling.",
+        "identifiers": [
+          "SemanticScholar:701d83e51585e98d9c79f3f97f844789e0f231ff"
+        ],
+        "semantic_scholar_id": "701d83e51585e98d9c79f3f97f844789e0f231ff",
+        "canonical_id": "arXiv:2608.01126",
+        "arxiv_id": "2608.01126",
+        "authors": [
+          "Leo T. Yang",
+          "Zhou-Yong Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 86,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.07389",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.07389",
+        "id:SemanticScholar:5728992c01b8589ec2339a5cf18dfdd3a7b9daed",
+        "id:arXiv:2504.07389",
+        "title:taskcircuit quantization leveraging knowledge localization and interpretability for compression",
+        "url:https://arxiv.org/abs/2504.07389"
+      ],
+      "record": {
+        "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
+        "source_url": "https://arxiv.org/abs/2504.07389",
+        "year": 2025,
+        "published": "2025-04-10",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) reduces a model's memory footprint by mapping full precision weights into low bit weights without costly retraining, but can degrade its downstream performance especially in low 2- to 3-bit settings. We develop a new mixed-precision PTQ approach, Task-Circuit Quantization (TaCQ), that draws parallels to automated circuit discovery, directly conditioning the quantization process on specific weight circuits -- which we define as sets of weights associated with downstream task performance. These weights are kept as 16-bit weights, while others are quantized, maintaining performance while only adding a marginal memory cost. Specifically, TaCQ contrasts unquantized model weights with a uniformly-quantized model to estimate the expected change in weights due to quantization and uses gradient information to predict the resulting impact on task performance, allowing us to preserve task-specific weights. We compare TaCQ-based quantization to existing mixed-precision quantization methods when conditioning both on general-purpose and task-specific data. Across QA, math reasoning, and text-to-SQL tasks for both Llama-3 and Qwen2.5, we find that TaCQ outperforms baselines using the same calibration data and a lower weight budget, achieving major improvements in the 2 and 3-bit regime. With only 3.1 bits we are able to recover 96% of Llama-3-8B-Instruct's unquantized 16-bit MMLU performance, obtaining a 5.25% absolute improvement over SPQR. We also observe consistently large gains over existing methods in the 2-bit regime, with an average gain of 14.74% over the strongest baseline, SliM-LLM. Moreover, we observe a 7.20% gain without conditioning on specific tasks, showing TaCQ's ability to identify important weights is not limited to task-conditioned settings.",
+        "identifiers": [
+          "SemanticScholar:5728992c01b8589ec2339a5cf18dfdd3a7b9daed"
+        ],
+        "semantic_scholar_id": "5728992c01b8589ec2339a5cf18dfdd3a7b9daed",
+        "canonical_id": "arXiv:2504.07389",
+        "arxiv_id": "2504.07389",
+        "doi": "10.48550/arXiv.2504.07389",
+        "authors": [
+          "Hanqi Xiao",
+          "Yi-Lin Sung",
+          "Elias Stengel-Eskin",
+          "Mohit Bansal"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 565,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.1250",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.1250",
+        "id:SemanticScholar:94907917423a5b6da56bbd5e305f512919fe7c32",
+        "title:question tells you where the answer is intentionaware longcontext kv cache compression",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.1250"
+      ],
+      "record": {
+        "title": "Question Tells You Where the Answer Is: Intention-aware Long-Context KV Cache Compression",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1250",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:94907917423a5b6da56bbd5e305f512919fe7c32"
+        ],
+        "semantic_scholar_id": "94907917423a5b6da56bbd5e305f512919fe7c32",
+        "doi": "10.18653/v1/2026.acl-long.1250",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.1250",
+        "authors": [
+          "Liang Zhao",
+          "Xiao-Cheng Feng",
+          "Weihong Zhong",
+          "Lei Huang",
+          "Kun Zhu",
+          "Baoxin Wang",
+          "Da-Yong Wu",
+          "Guoping Hu",
+          "Ting Liu",
+          "Bing Qin"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 118,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.13251",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.13251",
+        "id:SemanticScholar:6c5146c1152c618d2c833cd7087f80acc5c9b247",
+        "id:arXiv:2502.13251",
+        "title:neural attention search",
+        "url:https://arxiv.org/abs/2502.13251"
+      ],
+      "record": {
+        "title": "Neural Attention Search",
+        "source_url": "https://arxiv.org/abs/2502.13251",
+        "year": 2025,
+        "published": "2025-02-18",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Neural Attention Search (NAtS), a framework that automatically evaluates the importance of each token within a sequence and determines if the corresponding token can be dropped after several steps. This approach can efficiently reduce the KV cache sizes required by transformer-based models during inference and thus reduce inference costs. In this paper, we design a search space that contains three token types: (i) Global Tokens will be preserved and queried by all the following tokens. (ii) Local Tokens survive until the next global token appears. (iii) Sliding Window Tokens have an impact on the inference of a fixed size of the next following tokens. Similar to the One-Shot Neural Architecture Search approach, this token-type information can be learned jointly with the architecture weights via a learnable attention mask. Experiments on both training a new transformer from scratch and fine-tuning existing large language models show that NAtS can efficiently reduce the KV cache size required for the models while maintaining the models'performance.",
+        "identifiers": [
+          "SemanticScholar:6c5146c1152c618d2c833cd7087f80acc5c9b247"
+        ],
+        "semantic_scholar_id": "6c5146c1152c618d2c833cd7087f80acc5c9b247",
+        "canonical_id": "arXiv:2502.13251",
+        "arxiv_id": "2502.13251",
+        "doi": "10.48550/arXiv.2502.13251",
+        "authors": [
+          "Difan Deng",
+          "Marius Lindauer"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 616,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.29913",
+      "identity_tokens": [
+        "id:SemanticScholar:e841dbae23749051b146f3bcaefcfa814054adb9",
+        "id:arXiv:2609.29913",
+        "title:milo efficient manyshot incontext learning with blockwise lowrank compression",
+        "url:https://arxiv.org/abs/2609.29913"
+      ],
+      "record": {
+        "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+        "source_url": "https://arxiv.org/abs/2609.29913",
+        "year": 2026,
+        "published": "2026-09-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Many-shot in-context learning (ICL) enables large language models (LLMs) to adapt to complex tasks by conditioning on thousands of demonstration examples, but this paradigm shifts the inference efficiency bottleneck to the key-value (KV) cache memory. Due to the linear scaling behavior of the KV cache, storing these intermediate tensors has become a paramount challenge for both online serving and on-device deployment. To address this issue, we propose a novel compression framework, termed MILO, that exploits the low-rank redundancy inherent in many-shot contexts. Specifically, MILO features a block-wise low-rank compression strategy that compresses the KV cache at the block granularity, where each block contains multiple many-shot examples. Furthermore, to handle the heterogeneous context density across different blocks, MILO dynamically allocates rank budgets based on the information entropy, preserving the fidelity of critical blocks while aggressively compressing redundant ones. Experimental results on Qwen2.5 models demonstrate that our method achieves up to 50% reduction in KV cache memory and 1.8x throughput improvement, with negligible performance degradation on classification and reasoning benchmarks, significantly outperforming prior baselines.",
+        "identifiers": [
+          "SemanticScholar:e841dbae23749051b146f3bcaefcfa814054adb9"
+        ],
+        "semantic_scholar_id": "e841dbae23749051b146f3bcaefcfa814054adb9",
+        "canonical_id": "arXiv:2609.29913",
+        "arxiv_id": "2609.29913",
+        "authors": [
+          "You-Peng Zhao",
+          "Tian Tan",
+          "Li-Qian Peng",
+          "Jun Wang",
+          "Alec Go"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 33,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36722",
+      "identity_tokens": [
+        "id:SemanticScholar:c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02",
+        "id:arXiv:2609.36722",
+        "title:attuner recomputationfree agentic context kv reuse",
+        "url:https://arxiv.org/abs/2609.36722"
+      ],
+      "record": {
+        "title": "ATTUNER: Recomputation-Free Agentic Context KV Reuse",
+        "source_url": "https://arxiv.org/abs/2609.36722",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) agents repeatedly load reusable content, such as skills, documents, and memory entries, into the current context. Re-encoding this content for every request wastes computation. Position-independent caching (PIC) alleviates this by encoding each artifact independently and reusing its key-value (KV) states at arbitrary positions, but it incurs a quality loss relative to full-context prefill. Existing methods repair this loss by restoring global position IDs or recomputing selected tokens. In this work, we isolate the source of the loss, finding that the positional mismatch has minor effect, and independently cached artifacts retain faithful representations: reading a provided artifact stays largely accurate, and performance degrades only when the model must select among multiple artifacts. Moreover, replacing PIC's attention scores with full-prefill scores recovers performance with the cached KV unchanged, localizing the failure to the attention rather than KV recomputation. Motivated by this, we propose \\textsc{Attuner}, a query-side adaptation method that learns to read a frozen artifact cache. \\textsc{Attuner} inserts low-rank adapters into the query projections and is trained by distilling full-prefill distribution into the student. It trains fewer than 0.05\\% of the model parameters and, at inference, requires neither cache recomputation nor a full-context reference. On Qwen3-4B and Qwen3-8B across seven benchmarks covering skills, documents, memory, and code, \\textsc{Attuner} substantially outperforms prior PIC baselines in both in-domain and out-of-domain settings, matches full-context prefill quality while providing up to $3.73\\times$ speedup.",
+        "identifiers": [
+          "SemanticScholar:c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02"
+        ],
+        "semantic_scholar_id": "c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02",
+        "canonical_id": "arXiv:2609.36722",
+        "arxiv_id": "2609.36722",
+        "authors": [
+          "Xing-Hao Chen",
+          "Jun-Nan Dong",
+          "Cai Ke",
+          "Chak Tou Leong",
+          "Hao-Cheng Sun",
+          "Ke-Yu Chen",
+          "Si-Yu An",
+          "Rui-Zhi Qiao",
+          "Xing Sun",
+          "Wen-Jie Li",
+          "Xiao-Yu Shen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00623",
+      "identity_tokens": [
+        "id:SemanticScholar:287817cdfe11c49306db686c08bca665620ea2d7",
+        "id:arXiv:2610.00623",
+        "title:hawk rethinking multimodal drafting for speculative decoding",
+        "url:https://arxiv.org/abs/2610.00623"
+      ],
+      "record": {
+        "title": "HAWK: Rethinking Multimodal Drafting for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.00623",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding has achieved substantial lossless speedups for LLMs, but remains less effective for large vision-language models (LVLMs), where lightweight drafters struggle to use rich multimodal information. A second limitation is that standard distillation supervises the drafter only along the original training trajectory, without modeling how target predictions shift after the drafter's own proposals. As drafting moves away from this trajectory, the drafter can increasingly disagree with the target, reducing acceptance in later steps. We propose HAWK to address both limitations. HAWK uses representation similarity to select informative target layers and learns how to combine their hidden states. For visual information, it directly provides the drafter with compressed visual hidden states from the target model instead of raw visual tokens, making the visual information easier for a shallow drafter to use. HAWK also trains the drafter to capture how target predictions change after its own proposals, improving its agreement with the target during multi-step drafting. On SmolVLM-256M across ten multimodal benchmarks, HAWK raises average acceptance length from 3.32 to 4.08 and speedup from 2.19x to 2.60x over EAGLE-3 under greedy decoding, and from 2.89 to 3.41 and 1.92x to 2.19x under sampling.",
+        "identifiers": [
+          "SemanticScholar:287817cdfe11c49306db686c08bca665620ea2d7"
+        ],
+        "semantic_scholar_id": "287817cdfe11c49306db686c08bca665620ea2d7",
+        "canonical_id": "arXiv:2610.00623",
+        "arxiv_id": "2610.00623",
+        "authors": [
+          "Wen-Han Yang",
+          "Anirudh Rao",
+          "Ashwin Chandra"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.17417",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.17417",
+        "id:SemanticScholar:d0ad71a1b4178e597b6b5c4a8a11924eb17467a5",
+        "id:arXiv:2507.17417",
+        "title:a comprehensive evaluation on quantization techniques for large language models",
+        "url:https://arxiv.org/abs/2507.17417"
+      ],
+      "record": {
+        "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2507.17417",
+        "year": 2025,
+        "published": "2025-07-23",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "For large language models (LLMs), post-training quantization (PTQ) significantly reduces memory and computational overhead. Despite rapid advancements, existing papers often lack experiments on the same ground. In addition, since quantization solutions typically contain multiple components, it is important to analyze the connections among numerous existing methods to gain an in-depth understanding of this field. To bridge these gaps, we conduct an up-to-date and extensive review of the state-of-the-art methods and perform comprehensive evaluations of low-bit quantization on representative text-only LLMs on the same ground to ensure fair comparisons. To our knowledge, this fair and extensive investigation remains critically important yet significantly underexplored in the research community. To better understand the connections, we first decouple published quantization into two steps: pre-quantization transformation to reduce outliers, and quantization error mitigation to offset performance loss. Second, we extensively evaluate the impact of quantization settings, including granularity and symmetry. Third, we analyze the performance of the latest MXFP4 and NVFP4 data formats. Our experimental results first demonstrate that optimizing rotation and scaling yields the best pre-quantization transformation, while combining low-rank compensation with GPTQ occasionally outperforms using GPTQ alone. Second, we verify that finer granularity improves performance at the cost of storage and asymmetric quantization benefits activations significantly more than weights. Third, we find that the format and precision of scaling factors have a significant impact on performance; notably, rotation-based transformation is effective for INT4 but demonstrates little improvement for MXFP4 and NVFP4, inspiring further investigation in this field.",
+        "identifiers": [
+          "SemanticScholar:d0ad71a1b4178e597b6b5c4a8a11924eb17467a5"
+        ],
+        "semantic_scholar_id": "d0ad71a1b4178e597b6b5c4a8a11924eb17467a5",
+        "canonical_id": "arXiv:2507.17417",
+        "arxiv_id": "2507.17417",
+        "doi": "10.48550/arXiv.2507.17417",
+        "authors": [
+          "Yutong Liu",
+          "Cairong Zhao",
+          "Guosheng Hu"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 461,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:7d7c139d5b7523990d5b8cfbe704d33ca899bdda74dcca32fc3606d7f16b42e5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

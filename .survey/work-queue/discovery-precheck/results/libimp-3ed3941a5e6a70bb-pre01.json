@@ -1,0 +1,782 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3ed3941a5e6a70bb-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3ed3941a5e6a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1145/3774934.3786428",
+    "DOI:10.18653/v1/2026.findings-acl.1521",
+    "arXiv:2502.17139",
+    "arXiv:2504.13989",
+    "arXiv:2510.15545",
+    "arXiv:2602.12962",
+    "arXiv:2603.08185",
+    "arXiv:2608.04405"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2f86d3fdb95b8da7d73a9295d78bcd2c07c68f15",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-27T23:51:11.835306+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1145/3774934.3786428",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.1521",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.17139",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.13989",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.15545",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.12962",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.08185",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.04405",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "JanusQuant: Accurate and Efficient 2-bit KV Cache Quantization for Long-Context Inference",
+      "source_url": "https://doi.org/10.1145/3774934.3786428",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language models (LLMs) have seen widespread adoption in recent years. However, during inference, the key-value (KV) cache—which stores intermediate activations—consumes significant memory, particularly as sequence lengths grow. Quantization offers a promising path to compress KV cache, but existing 2-bit approaches fall short of achieving optimal inference efficiency due to hardware-unfriendly algorithms and system implementations. We present JanusQuant, a 2-bit KV cache quantization system that achieves both high accuracy and end-to-end efficiency through algorithm–system co-design for long-context generation tasks. At its core is RtSmooth, a novel runtime smoothing quantization algorithm that mitigates outlier-induced accuracy loss via adaptive transformation. Building on RtSmooth, JanusQuant further enhances quantized inference with a series of optimizations: a fast absmax positioning technique for lightweight quantization, a memory-efficient data structure for managing recent tokens, and a custom mixed-precision attention kernel to accelerate computation. Across representative LLMs, JanusQuant preserves 99% of FP16 accuracy, reduces KV cache memory usage by up to 5.3×, and delivers up to 4.45× faster decoding throughput compared to state-of-the-art methods, while scaling efficiently to long-context inference.",
+      "identifiers": [
+        "SemanticScholar:8af181632410c1f4b4328f3d81d2f970b92654d6"
+      ],
+      "semantic_scholar_id": "8af181632410c1f4b4328f3d81d2f970b92654d6",
+      "doi": "10.1145/3774934.3786428",
+      "canonical_id": "DOI:10.1145/3774934.3786428",
+      "authors": [
+        "Chengyu Sun",
+        "Yaqi Xia",
+        "Hu-Lin Wang",
+        "Dong-Lin Yang",
+        "Xiao-Bo Zhou",
+        "Da-Zhao Cheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 272,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2603.08185",
+      "year": 2026,
+      "published": "2026-03-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has emerged as a prevailing technique for deploying large language models (LLMs) efficiently in terms of both memory and computation, across edge devices and server platforms. Existing PTQ methods primarily aim to reduce precision in weights and activations by mitigating quantization errors caused by channel-wise outlier activations (e.g., pre-quantization scaling, online transformations, or low-rank error reconstruction). Among these approaches, error reconstruction with low-rank adaptation (LoRA) has proven particularly effective, as it introduces a lightweight auxiliary computation path without requiring heavy optimization or additional online layers. However, prior studies reveal severe accuracy degradation under W4A4 settings, and conventional low-rank adaptations rely on two sequential factors, necessitating intermediate quantization during inference and thereby limiting low-precision efficiency. In this work, we propose SERQ, a saliency-aware error reconstruction method for low-bit LLM inference that employs a single low-rank compensation matrix. SERQ preserves efficient 4-bit matrix multiplication in linear layers by jointly mitigating quantization errors arising from both activation and weight saliency through three stages: (1) static activation flattening, (2) saliency-aware error reconstruction, and (3) offline weight permutation. The method incurs additional computation only for low-rank error reconstruction via a single decomposition, while all other operations are performed offline, thereby keeping latency overhead minimal. Empirically, SERQ outperforms prior error reconstruction methods under both W4A8 and W4A4 settings, and achieves higher accuracy than state-of-the-art rotation-based W4A4 approaches, while substantially reducing calibration complexity. Code is available at https://github.com/acalabys/SERQ",
+      "identifiers": [
+        "SemanticScholar:3328f85f80992ac3ea3283df5e6c2dc826602b2b"
+      ],
+      "semantic_scholar_id": "3328f85f80992ac3ea3283df5e6c2dc826602b2b",
+      "canonical_id": "arXiv:2603.08185",
+      "arxiv_id": "2603.08185",
+      "doi": "10.48550/arXiv.2603.08185",
+      "authors": [
+        "Yeo-Sun Park",
+        "Hyeonseong Kim",
+        "Seungkyu Choi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 232,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1521",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:e260dc7c46d8406fdad0632760122a533ce6dd77"
+      ],
+      "semantic_scholar_id": "e260dc7c46d8406fdad0632760122a533ce6dd77",
+      "doi": "10.18653/v1/2026.findings-acl.1521",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1521",
+      "authors": [
+        "Seohee Yoon",
+        "Yongsuk Choi"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "TokenTiming: A Dynamic Alignment Method for Universal Speculative Decoding Model Pairs",
+      "source_url": "https://arxiv.org/abs/2510.15545",
+      "year": 2025,
+      "published": "2025-10-17",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Accelerating the inference of large language models (LLMs) has been a critical challenge in generative AI. Speculative decoding (SD) substantially improves LLM inference efficiency. However, its utility is limited by a fundamental constraint: the draft and target models must share the same vocabulary, thus limiting the herd of available draft models and often necessitating the training of a new model from scratch. Inspired by Dynamic Time Warping (DTW), a classic algorithm for aligning time series, we propose the algorithm TokenTiming for universal speculative decoding. It operates by re-encoding the draft token sequence to get a new target token sequence, and then uses DTW to build a mapping to transfer the probability distributions for speculative sampling. Benefiting from this, our method accommodates mismatched vocabularies and works with any off-the-shelf models without retraining and modification. We conduct comprehensive experiments on various tasks, demonstrating 1.57x speedup. This work enables a universal approach for draft model selection, making SD a more versatile and practical tool for LLM acceleration.",
+      "identifiers": [
+        "SemanticScholar:3a92f120f0d154871e59e4166f86962ae9ffff5a"
+      ],
+      "semantic_scholar_id": "3a92f120f0d154871e59e4166f86962ae9ffff5a",
+      "canonical_id": "arXiv:2510.15545",
+      "arxiv_id": "2510.15545",
+      "doi": "10.48550/arXiv.2510.15545",
+      "authors": [
+        "Sibo Xiao",
+        "Jinyuan Fu",
+        "Zhong-Le Xie",
+        "Li-Dan Shou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 375,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design",
+      "source_url": "https://arxiv.org/abs/2602.12962",
+      "year": 2026,
+      "published": "2026-02-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent studies have extensively explored NPU architectures for accelerating AI inference in on-device environments, which are inherently resource-constrained. Meanwhile, transformer-based large language models (LLMs) have become dominant, with rapidly increasing model sizes but low degree of parameter reuse compared to conventional CNNs, making end-to-end execution on resource-limited devices extremely challenging. To address these challenges, we propose TriGen, a novel NPU architecture tailored for resource-constrained environments through software-hardware co-design. Firstly, TriGen adopts low-precision computation using microscaling (MX) to enable additional optimization opportunities while preserving accuracy, and resolves the issues that arise by employing such precision. Secondly, to jointly optimize both nonlinear and linear operations, TriGen eliminates the need for specialized hardware for essential nonlinear operations by using fast and accurate LUT, thereby maximizing performance gains and reducing hardware-cost in on-device environments, and finally, by taking practical hardware constraints into account, further employs scheduling techniques to maximize computational utilization even under limited on-chip memory capacity. We evaluate the performance of TriGen on various LLMs and show that TriGen achieves an average 2.73x performance speedup and 52% less memory transfer over the baseline NPU design with negligible accuracy loss.",
+      "identifiers": [
+        "SemanticScholar:b433e8252910a5923a463d7d7e69ba9e79ed3e4c"
+      ],
+      "semantic_scholar_id": "b433e8252910a5923a463d7d7e69ba9e79ed3e4c",
+      "canonical_id": "arXiv:2602.12962",
+      "arxiv_id": "2602.12962",
+      "doi": "10.48550/arXiv.2602.12962",
+      "authors": [
+        "Jonghun Lee",
+        "Junghoon Lee",
+        "Hyeonjin Kim",
+        "S. Jeon",
+        "Jisup Yoon",
+        "Hyun Park",
+        "Mee-Jung Park",
+        "Heonjae Ha"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 256,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Training-Free Hashing-Based Attention via Binary Principal Components",
+      "source_url": "https://arxiv.org/abs/2608.04405",
+      "year": 2026,
+      "published": "2026-08-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language models (LLMs) are increasingly deployed in real-world applications, yet self-attention remains a major efficiency bottleneck -- especially during decoding -- due to the necessity of repeatedly processing ever-growing key-value (KV) caches. Existing sparse attention reduce computation by attending to fewer KV pairs, but often suffer from substantial accuracy degradation, require additional training, or rely on expensive hashing. In this work, we present BinaryPC, a training-free, data-aware hashing-based sparse attention for long-context LLMs. BinaryPC constructs compact binary hash codes and corresponding hash function by computing binary principal components of data. Unlike Locality-Sensitive Hashing (LSH) with data-independent random projections or learned non-linear hashing methods, BinaryPC constructs binary codes that explicitly preserve the structural information of data without requiring gradient-based training. Comprehensive experiments across multiple model families and long-context benchmarks show that BinaryPC preserves accuracy relative to full attention while achieving superior performance among sparse and hashing-based baselines. On modern GPUs, BinaryPC improves end-to-end decoding throughput by 3.56$\\times$ over the FlashAttention kernel. Our code is available at https://github.com/yudaohai666/BPC.",
+      "identifiers": [
+        "SemanticScholar:7d4fdcbf4b7f0e251b49ac03b62d7f677558edfa"
+      ],
+      "semantic_scholar_id": "7d4fdcbf4b7f0e251b49ac03b62d7f677558edfa",
+      "canonical_id": "arXiv:2608.04405",
+      "arxiv_id": "2608.04405",
+      "authors": [
+        "Daohai Yu",
+        "Zhan-Peng Zeng",
+        "Ke-Yu Chen",
+        "Wenhao Li",
+        "Zhi-Feng Shen",
+        "Luxi Lin",
+        "Rui-Zhi Qiao",
+        "Xing Sun",
+        "Rong-Rong Ji"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastCoder: Accelerating Repository-level Code Generation via Efficient Retrieval and Verification",
+      "source_url": "https://arxiv.org/abs/2502.17139",
+      "year": 2025,
+      "published": "2025-02-24",
+      "venue": "International Conference on Automated Software Engineering",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Code generation is a latency-sensitive task that demands high timeliness. However, with the growing interest and inherent difficulty in repository-level code generation, most existing code generation studies focus on improving the correctness of generated code while overlooking the inference efficiency, which is substantially affected by the overhead during LLM generation. Although there has been work on accelerating LLM inference, these approaches are not tailored to the specific characteristics of code generation; instead, they treat code the same as natural language sequences and ignore its unique syntax and semantic characteristics, which are also crucial for improving efficiency. Consequently, these approaches exhibit limited effectiveness in code generation tasks, particularly for repository-level scenarios with considerable complexity and difficulty. To alleviate this issue, following draft-verification paradigm, we propose FastCoder, a simple yet highly efficient inference acceleration approach specifically designed for code generation, without compromising the quality of the output. FastCoder constructs a multi-source datastore, providing access to both general and project-specific knowledge, facilitating the retrieval of high-quality draft sequences. Moreover, FastCoder reduces the retrieval cost by controlling retrieval timing, and enhances efficiency through parallel retrieval and a context- and LLM preference-aware cache. Experimental results show that FastCoder can reach up to 2.53× and 2.54× speedup compared to autoregressive decoding in repository-level and standalone code generation tasks, respectively, outperforming state-of-the-art inference acceleration approaches by up to 88%. FastCoder can also be integrated with existing correctness-focused code generation approaches to accelerate the LLM generation process, and reach a speedup exceeding 2.6×.",
+      "identifiers": [
+        "SemanticScholar:a35c29dccb77740856487789e3037e271bced3f8"
+      ],
+      "semantic_scholar_id": "a35c29dccb77740856487789e3037e271bced3f8",
+      "canonical_id": "arXiv:2502.17139",
+      "arxiv_id": "2502.17139",
+      "doi": "10.1109/ASE63991.2025.00190",
+      "authors": [
+        "Qianhui Zhao",
+        "Li Zhang",
+        "Fang Liu",
+        "Xiao-Li Lian",
+        "Qiaoyuanhe Meng",
+        "Z. Jiao",
+        "Ze-Tong Zhou",
+        "J. Li",
+        "Lin Shi"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 610,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gradual Binary Search and Dimension Expansion : A general method for activation quantization in LLMs",
+      "source_url": "https://arxiv.org/abs/2504.13989",
+      "year": 2025,
+      "published": "2025-04-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have become pivotal in artificial intelligence, demonstrating strong capabilities in reasoning, understanding, and generating data. However, their deployment on edge devices is hindered by their substantial size, often reaching several billion parameters. Quantization is a widely used method to reduce memory usage and inference time, however LLMs present unique challenges due to the prevalence of outliers in their activations. In this work, we leverage the theoretical advantages of Hadamard matrices over random rotation matrices to push the boundaries of quantization in LLMs. We demonstrate that Hadamard matrices are more effective in reducing outliers, which are a significant obstacle in achieving low-bit quantization. Our method based on a gradual binary search enables 3-bit quantization for weights, activations, and key-value (KV) caches, resulting in a 40% increase in accuracy on common benchmarks compared to SoTA methods. We extend the use of rotation matrices to support non-power-of-2 embedding dimensions, similar to the Qwen architecture, by employing the Paley algorithm. We theoretically demonstrates the superiority of Hadamard matrices in reducing outliers.We achieved 3-bit quantization for weights, activations, and KV cache, significantly enhancing model performance. Our experimental results on multiple models family like Mistral, LLaMA, and Qwen demonstrate the effectiveness of our approach, outperforming existing methods and enabling practical 3-bit quantization.",
+      "identifiers": [
+        "SemanticScholar:2b718bc3b81347253c3a23e010d2e3c5e72df1cc"
+      ],
+      "semantic_scholar_id": "2b718bc3b81347253c3a23e010d2e3c5e72df1cc",
+      "canonical_id": "arXiv:2504.13989",
+      "arxiv_id": "2504.13989",
+      "doi": "10.48550/arXiv.2504.13989",
+      "authors": [
+        "Lucas Maisonnave",
+        "Cyril Moineau",
+        "Olivier Bichler",
+        "Fabrice Rastello"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 557,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1145/3774934.3786428",
+      "identity_tokens": [
+        "id:DOI:10.1145/3774934.3786428",
+        "id:SemanticScholar:8af181632410c1f4b4328f3d81d2f970b92654d6",
+        "title:janusquant accurate and efficient 2bit kv cache quantization for longcontext inference",
+        "url:https://doi.org/10.1145/3774934.3786428"
+      ],
+      "record": {
+        "title": "JanusQuant: Accurate and Efficient 2-bit KV Cache Quantization for Long-Context Inference",
+        "source_url": "https://doi.org/10.1145/3774934.3786428",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context large language models (LLMs) have seen widespread adoption in recent years. However, during inference, the key-value (KV) cache—which stores intermediate activations—consumes significant memory, particularly as sequence lengths grow. Quantization offers a promising path to compress KV cache, but existing 2-bit approaches fall short of achieving optimal inference efficiency due to hardware-unfriendly algorithms and system implementations. We present JanusQuant, a 2-bit KV cache quantization system that achieves both high accuracy and end-to-end efficiency through algorithm–system co-design for long-context generation tasks. At its core is RtSmooth, a novel runtime smoothing quantization algorithm that mitigates outlier-induced accuracy loss via adaptive transformation. Building on RtSmooth, JanusQuant further enhances quantized inference with a series of optimizations: a fast absmax positioning technique for lightweight quantization, a memory-efficient data structure for managing recent tokens, and a custom mixed-precision attention kernel to accelerate computation. Across representative LLMs, JanusQuant preserves 99% of FP16 accuracy, reduces KV cache memory usage by up to 5.3×, and delivers up to 4.45× faster decoding throughput compared to state-of-the-art methods, while scaling efficiently to long-context inference.",
+        "identifiers": [
+          "SemanticScholar:8af181632410c1f4b4328f3d81d2f970b92654d6"
+        ],
+        "semantic_scholar_id": "8af181632410c1f4b4328f3d81d2f970b92654d6",
+        "doi": "10.1145/3774934.3786428",
+        "canonical_id": "DOI:10.1145/3774934.3786428",
+        "authors": [
+          "Chengyu Sun",
+          "Yaqi Xia",
+          "Hu-Lin Wang",
+          "Dong-Lin Yang",
+          "Xiao-Bo Zhou",
+          "Da-Zhao Cheng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 272,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.08185",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.08185",
+        "id:SemanticScholar:3328f85f80992ac3ea3283df5e6c2dc826602b2b",
+        "id:arXiv:2603.08185",
+        "title:serq saliencyaware lowrank error reconstruction for llm quantization",
+        "url:https://arxiv.org/abs/2603.08185"
+      ],
+      "record": {
+        "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2603.08185",
+        "year": 2026,
+        "published": "2026-03-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) has emerged as a prevailing technique for deploying large language models (LLMs) efficiently in terms of both memory and computation, across edge devices and server platforms. Existing PTQ methods primarily aim to reduce precision in weights and activations by mitigating quantization errors caused by channel-wise outlier activations (e.g., pre-quantization scaling, online transformations, or low-rank error reconstruction). Among these approaches, error reconstruction with low-rank adaptation (LoRA) has proven particularly effective, as it introduces a lightweight auxiliary computation path without requiring heavy optimization or additional online layers. However, prior studies reveal severe accuracy degradation under W4A4 settings, and conventional low-rank adaptations rely on two sequential factors, necessitating intermediate quantization during inference and thereby limiting low-precision efficiency. In this work, we propose SERQ, a saliency-aware error reconstruction method for low-bit LLM inference that employs a single low-rank compensation matrix. SERQ preserves efficient 4-bit matrix multiplication in linear layers by jointly mitigating quantization errors arising from both activation and weight saliency through three stages: (1) static activation flattening, (2) saliency-aware error reconstruction, and (3) offline weight permutation. The method incurs additional computation only for low-rank error reconstruction via a single decomposition, while all other operations are performed offline, thereby keeping latency overhead minimal. Empirically, SERQ outperforms prior error reconstruction methods under both W4A8 and W4A4 settings, and achieves higher accuracy than state-of-the-art rotation-based W4A4 approaches, while substantially reducing calibration complexity. Code is available at https://github.com/acalabys/SERQ",
+        "identifiers": [
+          "SemanticScholar:3328f85f80992ac3ea3283df5e6c2dc826602b2b"
+        ],
+        "semantic_scholar_id": "3328f85f80992ac3ea3283df5e6c2dc826602b2b",
+        "canonical_id": "arXiv:2603.08185",
+        "arxiv_id": "2603.08185",
+        "doi": "10.48550/arXiv.2603.08185",
+        "authors": [
+          "Yeo-Sun Park",
+          "Hyeonseong Kim",
+          "Seungkyu Choi"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 232,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.1521",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.1521",
+        "id:SemanticScholar:e260dc7c46d8406fdad0632760122a533ce6dd77",
+        "title:compel compensated mixtureofexperts pruning with expertlayer distribution",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.1521"
+      ],
+      "record": {
+        "title": "COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1521",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:e260dc7c46d8406fdad0632760122a533ce6dd77"
+        ],
+        "semantic_scholar_id": "e260dc7c46d8406fdad0632760122a533ce6dd77",
+        "doi": "10.18653/v1/2026.findings-acl.1521",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1521",
+        "authors": [
+          "Seohee Yoon",
+          "Yongsuk Choi"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 118,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.15545",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.15545",
+        "id:SemanticScholar:3a92f120f0d154871e59e4166f86962ae9ffff5a",
+        "id:arXiv:2510.15545",
+        "title:tokentiming a dynamic alignment method for universal speculative decoding model pairs",
+        "url:https://arxiv.org/abs/2510.15545"
+      ],
+      "record": {
+        "title": "TokenTiming: A Dynamic Alignment Method for Universal Speculative Decoding Model Pairs",
+        "source_url": "https://arxiv.org/abs/2510.15545",
+        "year": 2025,
+        "published": "2025-10-17",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Accelerating the inference of large language models (LLMs) has been a critical challenge in generative AI. Speculative decoding (SD) substantially improves LLM inference efficiency. However, its utility is limited by a fundamental constraint: the draft and target models must share the same vocabulary, thus limiting the herd of available draft models and often necessitating the training of a new model from scratch. Inspired by Dynamic Time Warping (DTW), a classic algorithm for aligning time series, we propose the algorithm TokenTiming for universal speculative decoding. It operates by re-encoding the draft token sequence to get a new target token sequence, and then uses DTW to build a mapping to transfer the probability distributions for speculative sampling. Benefiting from this, our method accommodates mismatched vocabularies and works with any off-the-shelf models without retraining and modification. We conduct comprehensive experiments on various tasks, demonstrating 1.57x speedup. This work enables a universal approach for draft model selection, making SD a more versatile and practical tool for LLM acceleration.",
+        "identifiers": [
+          "SemanticScholar:3a92f120f0d154871e59e4166f86962ae9ffff5a"
+        ],
+        "semantic_scholar_id": "3a92f120f0d154871e59e4166f86962ae9ffff5a",
+        "canonical_id": "arXiv:2510.15545",
+        "arxiv_id": "2510.15545",
+        "doi": "10.48550/arXiv.2510.15545",
+        "authors": [
+          "Sibo Xiao",
+          "Jinyuan Fu",
+          "Zhong-Le Xie",
+          "Li-Dan Shou"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 375,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.12962",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.12962",
+        "id:SemanticScholar:b433e8252910a5923a463d7d7e69ba9e79ed3e4c",
+        "id:arXiv:2602.12962",
+        "title:trigen npu architecture for endtoend acceleration of large language models based on swhw codesign",
+        "url:https://arxiv.org/abs/2602.12962"
+      ],
+      "record": {
+        "title": "TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design",
+        "source_url": "https://arxiv.org/abs/2602.12962",
+        "year": 2026,
+        "published": "2026-02-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent studies have extensively explored NPU architectures for accelerating AI inference in on-device environments, which are inherently resource-constrained. Meanwhile, transformer-based large language models (LLMs) have become dominant, with rapidly increasing model sizes but low degree of parameter reuse compared to conventional CNNs, making end-to-end execution on resource-limited devices extremely challenging. To address these challenges, we propose TriGen, a novel NPU architecture tailored for resource-constrained environments through software-hardware co-design. Firstly, TriGen adopts low-precision computation using microscaling (MX) to enable additional optimization opportunities while preserving accuracy, and resolves the issues that arise by employing such precision. Secondly, to jointly optimize both nonlinear and linear operations, TriGen eliminates the need for specialized hardware for essential nonlinear operations by using fast and accurate LUT, thereby maximizing performance gains and reducing hardware-cost in on-device environments, and finally, by taking practical hardware constraints into account, further employs scheduling techniques to maximize computational utilization even under limited on-chip memory capacity. We evaluate the performance of TriGen on various LLMs and show that TriGen achieves an average 2.73x performance speedup and 52% less memory transfer over the baseline NPU design with negligible accuracy loss.",
+        "identifiers": [
+          "SemanticScholar:b433e8252910a5923a463d7d7e69ba9e79ed3e4c"
+        ],
+        "semantic_scholar_id": "b433e8252910a5923a463d7d7e69ba9e79ed3e4c",
+        "canonical_id": "arXiv:2602.12962",
+        "arxiv_id": "2602.12962",
+        "doi": "10.48550/arXiv.2602.12962",
+        "authors": [
+          "Jonghun Lee",
+          "Junghoon Lee",
+          "Hyeonjin Kim",
+          "S. Jeon",
+          "Jisup Yoon",
+          "Hyun Park",
+          "Mee-Jung Park",
+          "Heonjae Ha"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 256,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.04405",
+      "identity_tokens": [
+        "id:SemanticScholar:7d4fdcbf4b7f0e251b49ac03b62d7f677558edfa",
+        "id:arXiv:2608.04405",
+        "title:trainingfree hashingbased attention via binary principal components",
+        "url:https://arxiv.org/abs/2608.04405"
+      ],
+      "record": {
+        "title": "Training-Free Hashing-Based Attention via Binary Principal Components",
+        "source_url": "https://arxiv.org/abs/2608.04405",
+        "year": 2026,
+        "published": "2026-08-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context large language models (LLMs) are increasingly deployed in real-world applications, yet self-attention remains a major efficiency bottleneck -- especially during decoding -- due to the necessity of repeatedly processing ever-growing key-value (KV) caches. Existing sparse attention reduce computation by attending to fewer KV pairs, but often suffer from substantial accuracy degradation, require additional training, or rely on expensive hashing. In this work, we present BinaryPC, a training-free, data-aware hashing-based sparse attention for long-context LLMs. BinaryPC constructs compact binary hash codes and corresponding hash function by computing binary principal components of data. Unlike Locality-Sensitive Hashing (LSH) with data-independent random projections or learned non-linear hashing methods, BinaryPC constructs binary codes that explicitly preserve the structural information of data without requiring gradient-based training. Comprehensive experiments across multiple model families and long-context benchmarks show that BinaryPC preserves accuracy relative to full attention while achieving superior performance among sparse and hashing-based baselines. On modern GPUs, BinaryPC improves end-to-end decoding throughput by 3.56$\\times$ over the FlashAttention kernel. Our code is available at https://github.com/yudaohai666/BPC.",
+        "identifiers": [
+          "SemanticScholar:7d4fdcbf4b7f0e251b49ac03b62d7f677558edfa"
+        ],
+        "semantic_scholar_id": "7d4fdcbf4b7f0e251b49ac03b62d7f677558edfa",
+        "canonical_id": "arXiv:2608.04405",
+        "arxiv_id": "2608.04405",
+        "authors": [
+          "Daohai Yu",
+          "Zhan-Peng Zeng",
+          "Ke-Yu Chen",
+          "Wenhao Li",
+          "Zhi-Feng Shen",
+          "Luxi Lin",
+          "Rui-Zhi Qiao",
+          "Xing Sun",
+          "Rong-Rong Ji"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.17139",
+      "identity_tokens": [
+        "id:DOI:10.1109/ase63991.2025.00190",
+        "id:SemanticScholar:a35c29dccb77740856487789e3037e271bced3f8",
+        "id:arXiv:2502.17139",
+        "title:fastcoder accelerating repositorylevel code generation via efficient retrieval and verification",
+        "url:https://arxiv.org/abs/2502.17139"
+      ],
+      "record": {
+        "title": "FastCoder: Accelerating Repository-level Code Generation via Efficient Retrieval and Verification",
+        "source_url": "https://arxiv.org/abs/2502.17139",
+        "year": 2025,
+        "published": "2025-02-24",
+        "venue": "International Conference on Automated Software Engineering",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Code generation is a latency-sensitive task that demands high timeliness. However, with the growing interest and inherent difficulty in repository-level code generation, most existing code generation studies focus on improving the correctness of generated code while overlooking the inference efficiency, which is substantially affected by the overhead during LLM generation. Although there has been work on accelerating LLM inference, these approaches are not tailored to the specific characteristics of code generation; instead, they treat code the same as natural language sequences and ignore its unique syntax and semantic characteristics, which are also crucial for improving efficiency. Consequently, these approaches exhibit limited effectiveness in code generation tasks, particularly for repository-level scenarios with considerable complexity and difficulty. To alleviate this issue, following draft-verification paradigm, we propose FastCoder, a simple yet highly efficient inference acceleration approach specifically designed for code generation, without compromising the quality of the output. FastCoder constructs a multi-source datastore, providing access to both general and project-specific knowledge, facilitating the retrieval of high-quality draft sequences. Moreover, FastCoder reduces the retrieval cost by controlling retrieval timing, and enhances efficiency through parallel retrieval and a context- and LLM preference-aware cache. Experimental results show that FastCoder can reach up to 2.53× and 2.54× speedup compared to autoregressive decoding in repository-level and standalone code generation tasks, respectively, outperforming state-of-the-art inference acceleration approaches by up to 88%. FastCoder can also be integrated with existing correctness-focused code generation approaches to accelerate the LLM generation process, and reach a speedup exceeding 2.6×.",
+        "identifiers": [
+          "SemanticScholar:a35c29dccb77740856487789e3037e271bced3f8"
+        ],
+        "semantic_scholar_id": "a35c29dccb77740856487789e3037e271bced3f8",
+        "canonical_id": "arXiv:2502.17139",
+        "arxiv_id": "2502.17139",
+        "doi": "10.1109/ASE63991.2025.00190",
+        "authors": [
+          "Qianhui Zhao",
+          "Li Zhang",
+          "Fang Liu",
+          "Xiao-Li Lian",
+          "Qiaoyuanhe Meng",
+          "Z. Jiao",
+          "Ze-Tong Zhou",
+          "J. Li",
+          "Lin Shi"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 610,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.13989",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.13989",
+        "id:SemanticScholar:2b718bc3b81347253c3a23e010d2e3c5e72df1cc",
+        "id:arXiv:2504.13989",
+        "title:gradual binary search and dimension expansion a general method for activation quantization in llms",
+        "url:https://arxiv.org/abs/2504.13989"
+      ],
+      "record": {
+        "title": "Gradual Binary Search and Dimension Expansion : A general method for activation quantization in LLMs",
+        "source_url": "https://arxiv.org/abs/2504.13989",
+        "year": 2025,
+        "published": "2025-04-18",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have become pivotal in artificial intelligence, demonstrating strong capabilities in reasoning, understanding, and generating data. However, their deployment on edge devices is hindered by their substantial size, often reaching several billion parameters. Quantization is a widely used method to reduce memory usage and inference time, however LLMs present unique challenges due to the prevalence of outliers in their activations. In this work, we leverage the theoretical advantages of Hadamard matrices over random rotation matrices to push the boundaries of quantization in LLMs. We demonstrate that Hadamard matrices are more effective in reducing outliers, which are a significant obstacle in achieving low-bit quantization. Our method based on a gradual binary search enables 3-bit quantization for weights, activations, and key-value (KV) caches, resulting in a 40% increase in accuracy on common benchmarks compared to SoTA methods. We extend the use of rotation matrices to support non-power-of-2 embedding dimensions, similar to the Qwen architecture, by employing the Paley algorithm. We theoretically demonstrates the superiority of Hadamard matrices in reducing outliers.We achieved 3-bit quantization for weights, activations, and KV cache, significantly enhancing model performance. Our experimental results on multiple models family like Mistral, LLaMA, and Qwen demonstrate the effectiveness of our approach, outperforming existing methods and enabling practical 3-bit quantization.",
+        "identifiers": [
+          "SemanticScholar:2b718bc3b81347253c3a23e010d2e3c5e72df1cc"
+        ],
+        "semantic_scholar_id": "2b718bc3b81347253c3a23e010d2e3c5e72df1cc",
+        "canonical_id": "arXiv:2504.13989",
+        "arxiv_id": "2504.13989",
+        "doi": "10.48550/arXiv.2504.13989",
+        "authors": [
+          "Lucas Maisonnave",
+          "Cyril Moineau",
+          "Olivier Bichler",
+          "Fabrice Rastello"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 557,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3533c8acc343339d3a2f75d4c6a02f527096ce2977b641555697138ff50a8fb7",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

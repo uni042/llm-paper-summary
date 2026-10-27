@@ -1,0 +1,922 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ce9dd69c0de8f614-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ce9dd69c0de8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2602.01428",
+    "arXiv:2603.12038",
+    "arXiv:2603.16867",
+    "arXiv:2604.20913",
+    "arXiv:2607.06523",
+    "arXiv:2607.18957",
+    "arXiv:2608.20743",
+    "arXiv:2609.33652",
+    "arXiv:2609.38510"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2f86d3fdb95b8da7d73a9295d78bcd2c07c68f15",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-27T23:51:11.745687+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2602.01428",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.12038",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.16867",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.20913",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.06523",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.18957",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.20743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38510",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Improving the Trade-off Between Watermark Strength and Speculative Sampling Efficiency for Language Models",
+      "source_url": "https://arxiv.org/abs/2602.01428",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Watermarking is a principled approach for tracing the provenance of large language model (LLM) outputs, but its deployment in practice is hindered by inference inefficiency. Speculative sampling accelerates inference, with efficiency improving as the acceptance rate between draft and target models increases. Yet recent work reveals a fundamental trade-off: higher watermark strength reduces acceptance, preventing their simultaneous achievement. We revisit this trade-off and show it is not absolute. We introduce a quantitative measure of watermark strength that governs statistical detectability and is maximized when tokens are deterministic functions of pseudorandom numbers. Using this measure, we fully characterize the trade-off as a constrained optimization problem and derive explicit Pareto curves for two existing watermarking schemes. Finally, we introduce a principled mechanism that injects pseudorandomness into draft-token acceptance, ensuring maximal watermark strength while maintaining speculative sampling efficiency. Experiments further show that this approach improves detectability without sacrificing efficiency. Our findings uncover a principle that unites speculative sampling and watermarking, paving the way for their efficient and practical deployment.1",
+      "identifiers": [
+        "SemanticScholar:321521fec6d3eab9bcfe82862efcdac1e819145b"
+      ],
+      "semantic_scholar_id": "321521fec6d3eab9bcfe82862efcdac1e819145b",
+      "canonical_id": "arXiv:2602.01428",
+      "arxiv_id": "2602.01428",
+      "doi": "10.48550/arXiv.2602.01428",
+      "authors": [
+        "Weiqing He",
+        "Xiang Li",
+        "Li Shen",
+        "Wei-Jie J. Su",
+        "Qi Long"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 268,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      }
+    },
+    {
+      "title": "Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability",
+      "source_url": "https://arxiv.org/abs/2603.12038",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context autoregressive decoding remains expensive because each decoding step must repeatedly process a growing history. We observe a consistent pattern during decoding: within a sentence, and more generally within a short semantically coherent span, the dominant attention support often remains largely stable. Motivated by this observation, we propose Slow-Fast Inference (SFI), a training-free decoding framework that decouples generation into frequent low-cost fast steps and occasional dense-attention slow steps. Fast steps reuse a compact sparse memory for efficient decoding. Slow steps are triggered near semantic boundaries. At slow steps, the model revisits the broader context and uses the Selector to refresh the selected memory for subsequent fast steps. Across the evaluated context lengths, SFI delivers approximately $1.6\\times$--$14.4\\times$ higher decoding throughput while generally maintaining quality on par with the full-KV baseline across long-context and long-CoT settings. Because SFI is training-free and applies directly to existing checkpoints, it offers a practical path to reducing inference cost for contemporary autoregressive reasoning models in long-context, long-horizon, and agentic workloads.",
+      "identifiers": [
+        "SemanticScholar:8fbf63cdfdef5c806402ba755412aabe326f393d"
+      ],
+      "semantic_scholar_id": "8fbf63cdfdef5c806402ba755412aabe326f393d",
+      "canonical_id": "arXiv:2603.12038",
+      "arxiv_id": "2603.12038",
+      "doi": "10.48550/arXiv.2603.12038",
+      "authors": [
+        "Xing-Yu Xie",
+        "Zhao-Cheng Yu",
+        "Yue Liao",
+        "Tao Wang",
+        "Kim-Chuan Toh",
+        "Shui-Cheng Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 229,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2607.06523",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language model inference is increasingly limited by the memory bandwidth and capacity required to store key-value caches, yet existing compression methods often apply uniform budgets across layers or tokens and degrade retrieval when lexical cues and semantic states require different preservation. We introduce DepthWeave-KV, a token-adaptive cache compression method that factorizes key and value states across neighboring transformer layers using shared low-rank channel bases while retaining lightweight token-specific residuals where attention behavior is sensitive. DepthWeave-KV combines cross-depth residual factorization with a token-conditional depth router that allocates higher reconstruction rank to instruction-bearing and retrieval-critical tokens, and uses calibration-free online error tracking from attention-output probes to adapt compression during generation without retraining the base model. A fused CUDA implementation jointly performs basis lookup, residual dequantization, and attention projection to reduce decode-time memory traffic. Across LongBench, Needle-in-a-Haystack, L-Eval, and long-form QA and summarization benchmarks, DepthWeave-KV achieves near-full-cache task quality with substantially lower memory use, improving average score and retrieval accuracy over prior compressed caches while reaching 8.3x KV memory reduction and 72.8 tokens per second at 64K context.",
+      "identifiers": [
+        "SemanticScholar:5ddc496e9bdd732b7d6901dee5798c7bef4893cc"
+      ],
+      "semantic_scholar_id": "5ddc496e9bdd732b7d6901dee5798c7bef4893cc",
+      "canonical_id": "arXiv:2607.06523",
+      "arxiv_id": "2607.06523",
+      "doi": "10.48550/arXiv.2607.06523",
+      "authors": [
+        "Anna Córdoba",
+        "Adam Puente Tercero",
+        "Nerea Angulo Hijo",
+        "Mar Linares Tercero",
+        "J. Barrientos",
+        "Ainhoa Miranda",
+        "Jesús Olivera"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Reasoning on the Edge",
+      "source_url": "https://arxiv.org/abs/2603.16867",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with chain-of-thought reasoning achieve state-of-the-art performance across complex problem-solving tasks, but their verbose reasoning traces and large context requirements make them impractical for edge deployment. These challenges include high token generation costs, large KV-cache footprints, and inefficiencies when distilling reasoning capabilities into smaller models for mobile devices. Existing approaches often rely on distilling reasoning traces from larger models into smaller models, which are verbose and stylistically redundant, undesirable for on-device inference. In this work, we propose a lightweight approach to enable reasoning in small LLMs using LoRA adapters combined with supervised fine-tuning. We further introduce budget forcing via reinforcement learning on these adapters, significantly reducing response length with minimal accuracy loss. To address memory-bound decoding, we exploit parallel test-time scaling, improving accuracy at minor latency increase. Finally, we present a dynamic adapter-switching mechanism that activates reasoning only when needed and a KV-cache sharing strategy during prompt encoding, reducing time-to-first-token for on-device inference. Experiments on Qwen2.5-7B demonstrate that our method achieves efficient, accurate reasoning under strict resource constraints, making LLM reasoning practical for mobile scenarios. Videos demonstrating our solution running on mobile devices are available on our project page.",
+      "identifiers": [
+        "SemanticScholar:40bf53fef843f062de58631778bf06368cb5743d"
+      ],
+      "semantic_scholar_id": "40bf53fef843f062de58631778bf06368cb5743d",
+      "canonical_id": "arXiv:2603.16867",
+      "arxiv_id": "2603.16867",
+      "doi": "10.48550/arXiv.2603.16867",
+      "authors": [
+        "Yelysei Bondarenko",
+        "Thomas Hehn",
+        "Rob D. Hesselink",
+        "Romain Lepert",
+        "F. V. Massoli",
+        "E. Mironov",
+        "L. Mirvakhabova",
+        "Tribhuvanesh Orekondy",
+        "Spyridon Stasis",
+        "Andrey Kuzmin",
+        "Anna Kuzina",
+        "M.Yu. Nagel",
+        "Ankita Nayak",
+        "Corrado Rainone",
+        "O. de Rooij",
+        "Paul N. Whatmough",
+        "Arash Behboodi",
+        "B. Bejnordi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels",
+      "source_url": "https://arxiv.org/abs/2604.20913",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly deployed on CPU-only platforms where memory bandwidth is the primary bottleneck for autoregressive generation. Weight quantization to four bits or below reduces memory pressure, yet existing systems still dequantize weights and perform floating-point multiplications, limiting the achievable gains. Ternary weights in {-1, 0, +1} provide a more efficient alternative, replacing multiplications with conditional additions, subtractions, or no-ops. While Fairy2i shows that ternary LLMs can match FP16 quality, its runtime does not exploit this structure. We present FairyFuse, an inference system that enables multiplication-free execution on commodity CPUs by fusing the eight real-valued sub-GEMVs of each widely-linear layer into a single AVX-512 loop using masked additions and subtractions, with zero floating-point multiplications. Roofline analysis shows that 16x weight compression shifts memory-bound GEMV toward the compute regime on bandwidth-limited CPUs, yielding a 29.6x kernel speedup while offering little benefit on GPUs. End-to-end, FairyFuse achieves 32.4 tokens per second on a single Intel Xeon 8558P, outperforming llama.cpp Q4_K_M by 1.24x with near-lossless quality (WikiText-2 perplexity 5.52 vs. 5.47 FP16; downstream accuracy 66.0%).",
+      "identifiers": [
+        "SemanticScholar:5eb29c1b011cdad97112a7667c454615b3632ef9"
+      ],
+      "semantic_scholar_id": "5eb29c1b011cdad97112a7667c454615b3632ef9",
+      "canonical_id": "arXiv:2604.20913",
+      "arxiv_id": "2604.20913",
+      "doi": "10.48550/arXiv.2604.20913",
+      "authors": [
+        "Feilong Zuo",
+        "Xiao-Yan Xi",
+        "Quan Zeng",
+        "Feiyu Wang",
+        "H. Leung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata",
+      "source_url": "https://arxiv.org/abs/2607.18957",
+      "year": 2026,
+      "published": "2026-07-21",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Cold starts in large language model (LLM) inference services significantly affect user experience, yet they remain inefficient due to sequential initialization and a massive number of fine-grained I/O requests issued by complex software components. Although refactoring the program can yield advantages such as concurrent execution and I/O merging, this approach is error-prone and carries correctness risks when dealing with massive, heterogeneous components. We propose the Communicating Finite Automata (CFA) abstraction to systematically analyze cross-component optimization opportunities, and design a programming framework to enable CFA-based component program refactoring. This framework preserves the original sequential program structure while enabling safe concurrent component execution. We prove the correctness of the program refactoring. We apply the CFA abstraction and framework to refactor process tree creation, tensor loading, and model switching in vLLM, forming a new cold-start system named InstantInfer. Extensive experiments demonstrate that InstantInfer substantially accelerates LLM cold starts (achieving up to 7.2 times speedup) and exhibits robustness across diverse GPUs, workloads, and scales.",
+      "identifiers": [
+        "SemanticScholar:e22e3e5c0eb477d002f3c9b58a4f83b667233127"
+      ],
+      "semantic_scholar_id": "e22e3e5c0eb477d002f3c9b58a4f83b667233127",
+      "canonical_id": "arXiv:2607.18957",
+      "arxiv_id": "2607.18957",
+      "doi": "10.48550/arXiv.2607.18957",
+      "authors": [
+        "Yitao Yuan",
+        "Yong-Chao He",
+        "Shao-Ke Fang",
+        "Wen-Fei Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 98,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Is Multimodal Speculative Decoding Ready for Diffusion-Based Parallel Drafting? A Survey and Empirical Diagnosis",
+      "source_url": "https://arxiv.org/abs/2608.20743",
+      "year": 2026,
+      "published": "2026-08-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by allowing a lightweight drafter to propose future tokens while a target model verifies them in parallel. Its lossless guarantee has motivated a line of work that pushes the drafter itself toward parallel generation. The most recent paradigm is block-parallel generative drafting, including diffusion-based methods such as DFlash and DSpark, achieving up to 3.6x speedup on common daily chatting tasks. While this transition is well studied in text-only LLMs, its applicability to multimodal models remains an open question. Existing multimodal speculative decoding efforts focus on input compression, adapter alignment, candidate coverage, or modality-specific verification; however, block-parallel generative drafting remains largely unexplored. To bridge this gap, this paper combines a modality-centered survey with a cross-architecture empirical study to ask: Is multimodal speculative decoding ready for diffusion-based parallel drafting? In this survey, we systematically analyze a wide spectrum of multimodal models, spanning Vision-Language, Video-Language, Audio, and Vision-Language-Action (VLA) architectures, from the dual perspectives of drafting parallelism and cross-modal information interaction. We introduce a unified taxonomy that isolates drafter-side parallelism from orthogonal design choices such as tree construction and verification strategies. Furthermore, we provide a comprehensive empirical comparison of existing methods under varying degrees of parallelism across standardized multimodal benchmarks, including OCR, VQA, visual reasoning, and image captioning. Finally, we summarize the limitations of current approaches, discuss open challenges, and outline promising future directions for this rapidly evolving field.",
+      "identifiers": [
+        "SemanticScholar:637330835761fd4f83eaf926ad722e9106d71d3d"
+      ],
+      "semantic_scholar_id": "637330835761fd4f83eaf926ad722e9106d71d3d",
+      "canonical_id": "arXiv:2608.20743",
+      "arxiv_id": "2608.20743",
+      "authors": [
+        "Yantao Li",
+        "Huan-Lin Gao",
+        "Fang Zhao",
+        "Chao Tan",
+        "Q. Hui",
+        "Shu-Ting Liu",
+        "Fuyuan Shi",
+        "Ting Lu",
+        "Shao-An Zhao",
+        "Xueqiang Guo",
+        "Xinpei Su",
+        "Jianbing Zhang",
+        "Xin-Yu Dai",
+        "Kai Wang",
+        "Shi-Guo Lian"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tsubame: Tree Replay for Diffusion-Based Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.33652",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context-aware dynamic trees allocate the speculative decoding budget according to draft path probabilities, adapting their depth and branching to the current context. Under stochastic decoding, however, we find that this structural advantage does not always compensate for the acceptance gains of random sampling paired with advanced verification, and such dynamic trees can fall behind sampled chains in some settings. These trees grow their topology from the candidates themselves, so the tokens submitted for verification are typically the deterministic high-score tokens selected during construction. This coupling is not inherent: once the topology is fixed, its nodes can be repopulated by sampling, allowing dynamic trees to retain their structural advantage while also benefiting from random sampling and advanced verification. Diffusion-based drafters make this practical, as their parallel outputs or lightweight conditional corrections allow candidates to be regenerated cheaply after the complete topology is known. We introduce Tsubame, a two-pass tree speculative decoding framework for diffusion-based drafters. The first pass plans and freezes a context-aware topology using draft path scores; the second replays the fixed topology, sampling the tokens that populate its nodes to form the candidate tree for verification. We prove that Tsubame is lossless under compatible sampling and verification strategies. Experiments across three diffusion-based drafters, six datasets, and multiple candidate budgets show that Tsubame improves acceptance length and throughput over deterministic trees, including settings where it reverses their disadvantage against sampled chains.",
+      "identifiers": [
+        "SemanticScholar:2a91818d1307af3e361527c5ffebd87949246424"
+      ],
+      "semantic_scholar_id": "2a91818d1307af3e361527c5ffebd87949246424",
+      "canonical_id": "arXiv:2609.33652",
+      "arxiv_id": "2609.33652",
+      "authors": [
+        "Yepeng Weng",
+        "Qiao Hu",
+        "T. Yairi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DEdit: Iterative Draft Editing for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.38510",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive LLMs by having a lightweight drafter propose tokens that the target model verifies in parallel. Diffusion-based drafters further reduce drafting latency by proposing multiple tokens at once. However, these tokens are predicted independently, so a single early error causes prefix verification to discard the rest of the draft, even when it contains useful downstream predictions. We introduce DEdit, a diffusion-based drafter that can not only draft by conventional parallel unmasking but also iteratively edit its draft through token-to-token predictions. Through editing, later predictions can serve as bidirectional context for repairing earlier errors and extending the accepted prefix. To teach the model to repair errors while preserving correct predictions, we propose ProposalMix, a training scheme that mixes draft predictions with ground-truth tokens based on first-pass confidence during training. Across seven benchmarks on Qwen3-4B and Qwen3-8B, DEdit achieves the highest macro-average token acceptance and speedup among the evaluated drafters, reaching macro-average speedups of $5.72\\times$ and $5.97\\times$ over autoregressive generation under greedy decoding, respectively. Further analysis shows that acceptance improves with more editing passes and wider drafting windows, and that ProposalMix halves harmful edits that shorten the accepted prefix. Moreover, restricting the editor to causal attention lowers acceptance, especially on highly predictable outputs, indicating that future context is a key source of these gains.",
+      "identifiers": [
+        "SemanticScholar:a5bc5cb9188675d92d20215e1ce9dffe77429f5e"
+      ],
+      "semantic_scholar_id": "a5bc5cb9188675d92d20215e1ce9dffe77429f5e",
+      "canonical_id": "arXiv:2609.38510",
+      "arxiv_id": "2609.38510",
+      "authors": [
+        "Long-Xuan Yu",
+        "Bingsen Chen",
+        "Peng Shi",
+        "Dongkyu Lee",
+        "Yi Xiang",
+        "Hideo Kobayashi",
+        "Sheng Zhang",
+        "Shuai-Chen Chang",
+        "Xing Niu",
+        "Zhuoyan Xu",
+        "G. V. Steeg",
+        "Jia-Rong Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2602.01428",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.01428",
+        "id:SemanticScholar:321521fec6d3eab9bcfe82862efcdac1e819145b",
+        "id:arXiv:2602.01428",
+        "title:improving the tradeoff between watermark strength and speculative sampling efficiency for language models",
+        "url:https://arxiv.org/abs/2602.01428"
+      ],
+      "record": {
+        "title": "Improving the Trade-off Between Watermark Strength and Speculative Sampling Efficiency for Language Models",
+        "source_url": "https://arxiv.org/abs/2602.01428",
+        "year": 2026,
+        "published": "2026-02-01",
+        "venue": "International Conference on Learning Representations",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Watermarking is a principled approach for tracing the provenance of large language model (LLM) outputs, but its deployment in practice is hindered by inference inefficiency. Speculative sampling accelerates inference, with efficiency improving as the acceptance rate between draft and target models increases. Yet recent work reveals a fundamental trade-off: higher watermark strength reduces acceptance, preventing their simultaneous achievement. We revisit this trade-off and show it is not absolute. We introduce a quantitative measure of watermark strength that governs statistical detectability and is maximized when tokens are deterministic functions of pseudorandom numbers. Using this measure, we fully characterize the trade-off as a constrained optimization problem and derive explicit Pareto curves for two existing watermarking schemes. Finally, we introduce a principled mechanism that injects pseudorandomness into draft-token acceptance, ensuring maximal watermark strength while maintaining speculative sampling efficiency. Experiments further show that this approach improves detectability without sacrificing efficiency. Our findings uncover a principle that unites speculative sampling and watermarking, paving the way for their efficient and practical deployment.1",
+        "identifiers": [
+          "SemanticScholar:321521fec6d3eab9bcfe82862efcdac1e819145b"
+        ],
+        "semantic_scholar_id": "321521fec6d3eab9bcfe82862efcdac1e819145b",
+        "canonical_id": "arXiv:2602.01428",
+        "arxiv_id": "2602.01428",
+        "doi": "10.48550/arXiv.2602.01428",
+        "authors": [
+          "Weiqing He",
+          "Xiang Li",
+          "Li Shen",
+          "Wei-Jie J. Su",
+          "Qi Long"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 268,
+          "matched_prestigious_venue": "International Conference on Learning Representations"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.12038",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.12038",
+        "id:SemanticScholar:8fbf63cdfdef5c806402ba755412aabe326f393d",
+        "id:arXiv:2603.12038",
+        "title:slowfast inference trainingfree inference acceleration via withinsentence support stability",
+        "url:https://arxiv.org/abs/2603.12038"
+      ],
+      "record": {
+        "title": "Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability",
+        "source_url": "https://arxiv.org/abs/2603.12038",
+        "year": 2026,
+        "published": "2026-03-12",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context autoregressive decoding remains expensive because each decoding step must repeatedly process a growing history. We observe a consistent pattern during decoding: within a sentence, and more generally within a short semantically coherent span, the dominant attention support often remains largely stable. Motivated by this observation, we propose Slow-Fast Inference (SFI), a training-free decoding framework that decouples generation into frequent low-cost fast steps and occasional dense-attention slow steps. Fast steps reuse a compact sparse memory for efficient decoding. Slow steps are triggered near semantic boundaries. At slow steps, the model revisits the broader context and uses the Selector to refresh the selected memory for subsequent fast steps. Across the evaluated context lengths, SFI delivers approximately $1.6\\times$--$14.4\\times$ higher decoding throughput while generally maintaining quality on par with the full-KV baseline across long-context and long-CoT settings. Because SFI is training-free and applies directly to existing checkpoints, it offers a practical path to reducing inference cost for contemporary autoregressive reasoning models in long-context, long-horizon, and agentic workloads.",
+        "identifiers": [
+          "SemanticScholar:8fbf63cdfdef5c806402ba755412aabe326f393d"
+        ],
+        "semantic_scholar_id": "8fbf63cdfdef5c806402ba755412aabe326f393d",
+        "canonical_id": "arXiv:2603.12038",
+        "arxiv_id": "2603.12038",
+        "doi": "10.48550/arXiv.2603.12038",
+        "authors": [
+          "Xing-Yu Xie",
+          "Zhao-Cheng Yu",
+          "Yue Liao",
+          "Tao Wang",
+          "Kim-Chuan Toh",
+          "Shui-Cheng Yan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 229,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.06523",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.06523",
+        "id:SemanticScholar:5ddc496e9bdd732b7d6901dee5798c7bef4893cc",
+        "id:arXiv:2607.06523",
+        "title:depthweavekv tokenadaptive crosslayer residual factorization for longcontext kv cache compression",
+        "url:https://arxiv.org/abs/2607.06523"
+      ],
+      "record": {
+        "title": "DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression",
+        "source_url": "https://arxiv.org/abs/2607.06523",
+        "year": 2026,
+        "published": "2026-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context language model inference is increasingly limited by the memory bandwidth and capacity required to store key-value caches, yet existing compression methods often apply uniform budgets across layers or tokens and degrade retrieval when lexical cues and semantic states require different preservation. We introduce DepthWeave-KV, a token-adaptive cache compression method that factorizes key and value states across neighboring transformer layers using shared low-rank channel bases while retaining lightweight token-specific residuals where attention behavior is sensitive. DepthWeave-KV combines cross-depth residual factorization with a token-conditional depth router that allocates higher reconstruction rank to instruction-bearing and retrieval-critical tokens, and uses calibration-free online error tracking from attention-output probes to adapt compression during generation without retraining the base model. A fused CUDA implementation jointly performs basis lookup, residual dequantization, and attention projection to reduce decode-time memory traffic. Across LongBench, Needle-in-a-Haystack, L-Eval, and long-form QA and summarization benchmarks, DepthWeave-KV achieves near-full-cache task quality with substantially lower memory use, improving average score and retrieval accuracy over prior compressed caches while reaching 8.3x KV memory reduction and 72.8 tokens per second at 64K context.",
+        "identifiers": [
+          "SemanticScholar:5ddc496e9bdd732b7d6901dee5798c7bef4893cc"
+        ],
+        "semantic_scholar_id": "5ddc496e9bdd732b7d6901dee5798c7bef4893cc",
+        "canonical_id": "arXiv:2607.06523",
+        "arxiv_id": "2607.06523",
+        "doi": "10.48550/arXiv.2607.06523",
+        "authors": [
+          "Anna Córdoba",
+          "Adam Puente Tercero",
+          "Nerea Angulo Hijo",
+          "Mar Linares Tercero",
+          "J. Barrientos",
+          "Ainhoa Miranda",
+          "Jesús Olivera"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 112,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.16867",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.16867",
+        "id:SemanticScholar:40bf53fef843f062de58631778bf06368cb5743d",
+        "id:arXiv:2603.16867",
+        "title:efficient reasoning on the edge",
+        "url:https://arxiv.org/abs/2603.16867"
+      ],
+      "record": {
+        "title": "Efficient Reasoning on the Edge",
+        "source_url": "https://arxiv.org/abs/2603.16867",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) with chain-of-thought reasoning achieve state-of-the-art performance across complex problem-solving tasks, but their verbose reasoning traces and large context requirements make them impractical for edge deployment. These challenges include high token generation costs, large KV-cache footprints, and inefficiencies when distilling reasoning capabilities into smaller models for mobile devices. Existing approaches often rely on distilling reasoning traces from larger models into smaller models, which are verbose and stylistically redundant, undesirable for on-device inference. In this work, we propose a lightweight approach to enable reasoning in small LLMs using LoRA adapters combined with supervised fine-tuning. We further introduce budget forcing via reinforcement learning on these adapters, significantly reducing response length with minimal accuracy loss. To address memory-bound decoding, we exploit parallel test-time scaling, improving accuracy at minor latency increase. Finally, we present a dynamic adapter-switching mechanism that activates reasoning only when needed and a KV-cache sharing strategy during prompt encoding, reducing time-to-first-token for on-device inference. Experiments on Qwen2.5-7B demonstrate that our method achieves efficient, accurate reasoning under strict resource constraints, making LLM reasoning practical for mobile scenarios. Videos demonstrating our solution running on mobile devices are available on our project page.",
+        "identifiers": [
+          "SemanticScholar:40bf53fef843f062de58631778bf06368cb5743d"
+        ],
+        "semantic_scholar_id": "40bf53fef843f062de58631778bf06368cb5743d",
+        "canonical_id": "arXiv:2603.16867",
+        "arxiv_id": "2603.16867",
+        "doi": "10.48550/arXiv.2603.16867",
+        "authors": [
+          "Yelysei Bondarenko",
+          "Thomas Hehn",
+          "Rob D. Hesselink",
+          "Romain Lepert",
+          "F. V. Massoli",
+          "E. Mironov",
+          "L. Mirvakhabova",
+          "Tribhuvanesh Orekondy",
+          "Spyridon Stasis",
+          "Andrey Kuzmin",
+          "Anna Kuzina",
+          "M.Yu. Nagel",
+          "Ankita Nayak",
+          "Corrado Rainone",
+          "O. de Rooij",
+          "Paul N. Whatmough",
+          "Arash Behboodi",
+          "B. Bejnordi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 224,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.20913",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.20913",
+        "id:SemanticScholar:5eb29c1b011cdad97112a7667c454615b3632ef9",
+        "id:arXiv:2604.20913",
+        "title:fairyfuse multiplicationfree llm inference on cpus via fused ternary kernels",
+        "url:https://arxiv.org/abs/2604.20913"
+      ],
+      "record": {
+        "title": "FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels",
+        "source_url": "https://arxiv.org/abs/2604.20913",
+        "year": 2026,
+        "published": "2026-04-22",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are increasingly deployed on CPU-only platforms where memory bandwidth is the primary bottleneck for autoregressive generation. Weight quantization to four bits or below reduces memory pressure, yet existing systems still dequantize weights and perform floating-point multiplications, limiting the achievable gains. Ternary weights in {-1, 0, +1} provide a more efficient alternative, replacing multiplications with conditional additions, subtractions, or no-ops. While Fairy2i shows that ternary LLMs can match FP16 quality, its runtime does not exploit this structure. We present FairyFuse, an inference system that enables multiplication-free execution on commodity CPUs by fusing the eight real-valued sub-GEMVs of each widely-linear layer into a single AVX-512 loop using masked additions and subtractions, with zero floating-point multiplications. Roofline analysis shows that 16x weight compression shifts memory-bound GEMV toward the compute regime on bandwidth-limited CPUs, yielding a 29.6x kernel speedup while offering little benefit on GPUs. End-to-end, FairyFuse achieves 32.4 tokens per second on a single Intel Xeon 8558P, outperforming llama.cpp Q4_K_M by 1.24x with near-lossless quality (WikiText-2 perplexity 5.52 vs. 5.47 FP16; downstream accuracy 66.0%).",
+        "identifiers": [
+          "SemanticScholar:5eb29c1b011cdad97112a7667c454615b3632ef9"
+        ],
+        "semantic_scholar_id": "5eb29c1b011cdad97112a7667c454615b3632ef9",
+        "canonical_id": "arXiv:2604.20913",
+        "arxiv_id": "2604.20913",
+        "doi": "10.48550/arXiv.2604.20913",
+        "authors": [
+          "Feilong Zuo",
+          "Xiao-Yan Xi",
+          "Quan Zeng",
+          "Feiyu Wang",
+          "H. Leung"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 188,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.18957",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.18957",
+        "id:SemanticScholar:e22e3e5c0eb477d002f3c9b58a4f83b667233127",
+        "id:arXiv:2607.18957",
+        "title:instantinfer enabling fast llm cold start with communicating finite automata",
+        "url:https://arxiv.org/abs/2607.18957"
+      ],
+      "record": {
+        "title": "InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata",
+        "source_url": "https://arxiv.org/abs/2607.18957",
+        "year": 2026,
+        "published": "2026-07-21",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Cold starts in large language model (LLM) inference services significantly affect user experience, yet they remain inefficient due to sequential initialization and a massive number of fine-grained I/O requests issued by complex software components. Although refactoring the program can yield advantages such as concurrent execution and I/O merging, this approach is error-prone and carries correctness risks when dealing with massive, heterogeneous components. We propose the Communicating Finite Automata (CFA) abstraction to systematically analyze cross-component optimization opportunities, and design a programming framework to enable CFA-based component program refactoring. This framework preserves the original sequential program structure while enabling safe concurrent component execution. We prove the correctness of the program refactoring. We apply the CFA abstraction and framework to refactor process tree creation, tensor loading, and model switching in vLLM, forming a new cold-start system named InstantInfer. Extensive experiments demonstrate that InstantInfer substantially accelerates LLM cold starts (achieving up to 7.2 times speedup) and exhibits robustness across diverse GPUs, workloads, and scales.",
+        "identifiers": [
+          "SemanticScholar:e22e3e5c0eb477d002f3c9b58a4f83b667233127"
+        ],
+        "semantic_scholar_id": "e22e3e5c0eb477d002f3c9b58a4f83b667233127",
+        "canonical_id": "arXiv:2607.18957",
+        "arxiv_id": "2607.18957",
+        "doi": "10.48550/arXiv.2607.18957",
+        "authors": [
+          "Yitao Yuan",
+          "Yong-Chao He",
+          "Shao-Ke Fang",
+          "Wen-Fei Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 98,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.20743",
+      "identity_tokens": [
+        "id:SemanticScholar:637330835761fd4f83eaf926ad722e9106d71d3d",
+        "id:arXiv:2608.20743",
+        "title:is multimodal speculative decoding ready for diffusionbased parallel drafting a survey and empirical diagnosis",
+        "url:https://arxiv.org/abs/2608.20743"
+      ],
+      "record": {
+        "title": "Is Multimodal Speculative Decoding Ready for Diffusion-Based Parallel Drafting? A Survey and Empirical Diagnosis",
+        "source_url": "https://arxiv.org/abs/2608.20743",
+        "year": 2026,
+        "published": "2026-08-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive generation by allowing a lightweight drafter to propose future tokens while a target model verifies them in parallel. Its lossless guarantee has motivated a line of work that pushes the drafter itself toward parallel generation. The most recent paradigm is block-parallel generative drafting, including diffusion-based methods such as DFlash and DSpark, achieving up to 3.6x speedup on common daily chatting tasks. While this transition is well studied in text-only LLMs, its applicability to multimodal models remains an open question. Existing multimodal speculative decoding efforts focus on input compression, adapter alignment, candidate coverage, or modality-specific verification; however, block-parallel generative drafting remains largely unexplored. To bridge this gap, this paper combines a modality-centered survey with a cross-architecture empirical study to ask: Is multimodal speculative decoding ready for diffusion-based parallel drafting? In this survey, we systematically analyze a wide spectrum of multimodal models, spanning Vision-Language, Video-Language, Audio, and Vision-Language-Action (VLA) architectures, from the dual perspectives of drafting parallelism and cross-modal information interaction. We introduce a unified taxonomy that isolates drafter-side parallelism from orthogonal design choices such as tree construction and verification strategies. Furthermore, we provide a comprehensive empirical comparison of existing methods under varying degrees of parallelism across standardized multimodal benchmarks, including OCR, VQA, visual reasoning, and image captioning. Finally, we summarize the limitations of current approaches, discuss open challenges, and outline promising future directions for this rapidly evolving field.",
+        "identifiers": [
+          "SemanticScholar:637330835761fd4f83eaf926ad722e9106d71d3d"
+        ],
+        "semantic_scholar_id": "637330835761fd4f83eaf926ad722e9106d71d3d",
+        "canonical_id": "arXiv:2608.20743",
+        "arxiv_id": "2608.20743",
+        "authors": [
+          "Yantao Li",
+          "Huan-Lin Gao",
+          "Fang Zhao",
+          "Chao Tan",
+          "Q. Hui",
+          "Shu-Ting Liu",
+          "Fuyuan Shi",
+          "Ting Lu",
+          "Shao-An Zhao",
+          "Xueqiang Guo",
+          "Xinpei Su",
+          "Jianbing Zhang",
+          "Xin-Yu Dai",
+          "Kai Wang",
+          "Shi-Guo Lian"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 67,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33652",
+      "identity_tokens": [
+        "id:SemanticScholar:2a91818d1307af3e361527c5ffebd87949246424",
+        "id:arXiv:2609.33652",
+        "title:tsubame tree replay for diffusionbased speculative decoding",
+        "url:https://arxiv.org/abs/2609.33652"
+      ],
+      "record": {
+        "title": "Tsubame: Tree Replay for Diffusion-Based Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.33652",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Context-aware dynamic trees allocate the speculative decoding budget according to draft path probabilities, adapting their depth and branching to the current context. Under stochastic decoding, however, we find that this structural advantage does not always compensate for the acceptance gains of random sampling paired with advanced verification, and such dynamic trees can fall behind sampled chains in some settings. These trees grow their topology from the candidates themselves, so the tokens submitted for verification are typically the deterministic high-score tokens selected during construction. This coupling is not inherent: once the topology is fixed, its nodes can be repopulated by sampling, allowing dynamic trees to retain their structural advantage while also benefiting from random sampling and advanced verification. Diffusion-based drafters make this practical, as their parallel outputs or lightweight conditional corrections allow candidates to be regenerated cheaply after the complete topology is known. We introduce Tsubame, a two-pass tree speculative decoding framework for diffusion-based drafters. The first pass plans and freezes a context-aware topology using draft path scores; the second replays the fixed topology, sampling the tokens that populate its nodes to form the candidate tree for verification. We prove that Tsubame is lossless under compatible sampling and verification strategies. Experiments across three diffusion-based drafters, six datasets, and multiple candidate budgets show that Tsubame improves acceptance length and throughput over deterministic trees, including settings where it reverses their disadvantage against sampled chains.",
+        "identifiers": [
+          "SemanticScholar:2a91818d1307af3e361527c5ffebd87949246424"
+        ],
+        "semantic_scholar_id": "2a91818d1307af3e361527c5ffebd87949246424",
+        "canonical_id": "arXiv:2609.33652",
+        "arxiv_id": "2609.33652",
+        "authors": [
+          "Yepeng Weng",
+          "Qiao Hu",
+          "T. Yairi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38510",
+      "identity_tokens": [
+        "id:SemanticScholar:a5bc5cb9188675d92d20215e1ce9dffe77429f5e",
+        "id:arXiv:2609.38510",
+        "title:dedit iterative draft editing for speculative decoding",
+        "url:https://arxiv.org/abs/2609.38510"
+      ],
+      "record": {
+        "title": "DEdit: Iterative Draft Editing for Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2609.38510",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive LLMs by having a lightweight drafter propose tokens that the target model verifies in parallel. Diffusion-based drafters further reduce drafting latency by proposing multiple tokens at once. However, these tokens are predicted independently, so a single early error causes prefix verification to discard the rest of the draft, even when it contains useful downstream predictions. We introduce DEdit, a diffusion-based drafter that can not only draft by conventional parallel unmasking but also iteratively edit its draft through token-to-token predictions. Through editing, later predictions can serve as bidirectional context for repairing earlier errors and extending the accepted prefix. To teach the model to repair errors while preserving correct predictions, we propose ProposalMix, a training scheme that mixes draft predictions with ground-truth tokens based on first-pass confidence during training. Across seven benchmarks on Qwen3-4B and Qwen3-8B, DEdit achieves the highest macro-average token acceptance and speedup among the evaluated drafters, reaching macro-average speedups of $5.72\\times$ and $5.97\\times$ over autoregressive generation under greedy decoding, respectively. Further analysis shows that acceptance improves with more editing passes and wider drafting windows, and that ProposalMix halves harmful edits that shorten the accepted prefix. Moreover, restricting the editor to causal attention lowers acceptance, especially on highly predictable outputs, indicating that future context is a key source of these gains.",
+        "identifiers": [
+          "SemanticScholar:a5bc5cb9188675d92d20215e1ce9dffe77429f5e"
+        ],
+        "semantic_scholar_id": "a5bc5cb9188675d92d20215e1ce9dffe77429f5e",
+        "canonical_id": "arXiv:2609.38510",
+        "arxiv_id": "2609.38510",
+        "authors": [
+          "Long-Xuan Yu",
+          "Bingsen Chen",
+          "Peng Shi",
+          "Dongkyu Lee",
+          "Yi Xiang",
+          "Hideo Kobayashi",
+          "Sheng Zhang",
+          "Shuai-Chen Chang",
+          "Xing Niu",
+          "Zhuoyan Xu",
+          "G. V. Steeg",
+          "Jia-Rong Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0c65f38dcd0aa505a77ef78ac48f499c7a34df03c9467b4351a558983818f36c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

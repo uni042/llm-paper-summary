@@ -1,0 +1,888 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c570684fe43a1a04-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c570684fe43a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/access.2026.3739598",
+    "arXiv:2411.15982",
+    "arXiv:2502.19732",
+    "arXiv:2603.00907",
+    "arXiv:2603.25284",
+    "arXiv:2605.08755",
+    "arXiv:2605.21226",
+    "arXiv:2607.08032",
+    "arXiv:2609.34388",
+    "arXiv:2610.05774"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "2f86d3fdb95b8da7d73a9295d78bcd2c07c68f15",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-27T23:51:11.857665+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/access.2026.3739598",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2411.15982",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.19732",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2502.19732"
+    },
+    {
+      "requested_id": "arXiv:2603.00907",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.25284",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08755",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.21226",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.08032",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34388",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.05774",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SliderQuant: Accurate Post-Training Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2603.25284",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we address post-training quantization (PTQ) for large language models (LLMs) from an overlooked perspective: given a pre-trained high-precision LLM, the predominant sequential quantization framework treats different layers equally, but this may be not optimal in challenging bit-width settings. We empirically study the quantization impact of different layers on model accuracy, and observe that: (1) shallow/deep layers are usually more sensitive to quantization than intermediate layers; (2) among shallow/deep layers, the most sensitive one is the first/last layer, which exhibits significantly larger quantization error than others. These empirical observations imply that the quantization design for different layers of LLMs is required on multiple levels instead of a single level shared to all layers. Motivated by this, we propose a new PTQ framework termed Sliding-layer Quantization (SliderQuant) that relies on a simple adaptive sliding quantization concept facilitated by few learnable parameters. The base component of SliderQuant is called inter-layer sliding quantization, which incorporates three types of novel sliding window designs tailored for addressing the varying quantization sensitivity of shallow, intermediate and deep layers. The other component is called intra-layer sliding quantization that leverages an incremental strategy to quantize each window. As a result, SliderQuant has a strong ability to reduce quantization errors across layers. Extensive experiments on basic language generation, zero-shot commonsense reasoning and challenging math and code tasks with various LLMs, including Llama/Llama2/Llama3/Qwen2.5 model families, DeepSeek-R1 distilled models and large MoE models, show that our method outperforms existing PTQ methods (including the latest PTQ methods using rotation transformations) for both weight-only quantization and weight-activation quantization.",
+      "identifiers": [
+        "SemanticScholar:075220f69f6b24aa2754ffdd4873fa775a1939e4"
+      ],
+      "semantic_scholar_id": "075220f69f6b24aa2754ffdd4873fa775a1939e4",
+      "canonical_id": "arXiv:2603.25284",
+      "arxiv_id": "2603.25284",
+      "doi": "10.48550/arXiv.2603.25284",
+      "authors": [
+        "Shi-Geng Wang",
+        "Chao Li",
+        "Yangyuxuan Kang",
+        "Jia-Wei Fan",
+        "Zhong-Hong Ou",
+        "An-Bang Yao"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
+      "source_url": "https://arxiv.org/abs/2607.08032",
+      "year": 2026,
+      "published": "2026-07-09",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models, and the agents built on them, spend an ever-growing share of their compute and memory on remembering: caching attention keys and values, carrying long prompts, maintaining recurrent state, and storing what happened in previous turns and sessions. Because none of this memory is free, four largely separate research communities have each learned to compact it. They evict or quantize the KV cache, prune or distill prompts, bound architectural state, and consolidate agent memory. We argue that these are instances of one problem: a rate--distortion decision about what context-derived information to retain versus discard, at what fidelity, under a resource budget, so as to preserve downstream task utility. We make this lens precise with a single compaction objective and a layer-agnostic lower bound, use it to build a seven-axis taxonomy that classifies methods from across the stack uniformly, and use it to transfer mechanisms between layers that have never been connected, from serving-stack KV management to agent long-term memory. Two patterns hold across the survey. At every layer the signal that decides what to keep is attention magnitude or recency, and it fails in the same way everywhere, by discarding, before the query is known and with no way to undo it, information the query later needs. And while compression is measured carefully on single-turn long context, the repeated compaction that agents actually perform is almost never measured, and no benchmark holds one budget axis across all the layers at once. We turn both observations into a benchmark proposal, a small reference experiment, and a set of compaction-aware design principles, and we map the open problems.",
+      "identifiers": [
+        "SemanticScholar:1b9a3b4e330c2b25a33e52a43b015226453fe937"
+      ],
+      "semantic_scholar_id": "1b9a3b4e330c2b25a33e52a43b015226453fe937",
+      "canonical_id": "arXiv:2607.08032",
+      "arxiv_id": "2607.08032",
+      "doi": "10.48550/arXiv.2607.08032",
+      "authors": [
+        "A. Colaco",
+        "Nada Lahjouji"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization",
+      "source_url": "https://arxiv.org/abs/2605.21226",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache dominates memory bandwidth and footprint in long-context autoregressive inference. Recent rotation-preconditioned codecs (TurboQuant, PolarQuant) show that a structured random rotation followed by a per-coordinate scalar quantizer matched to an analytically tractable marginal is a near-optimal recipe for KV compression. OCTOPUS advances this paradigm through joint quantization of rotated coordinate triplets. Each triplet's direction is mapped to a square via an octahedral parameterization, and the two resulting coordinates and the triplet norm are Lloyd-Max quantized against implementation-matched marginals. Optimizing the per-triplet squared error gives a strictly non-uniform bit allocation depending only on the total dimensionality of the keys. We find the finite-dimensional quality optimum with sweeps to be constant on every real decoder we test. The codec is data-oblivious, online, and deterministic given a seed. Across text, video, and audio, OCTOPUS matches or beats every prior rotation codec at every reported bit width and metric, with a lead that grows as bits drop for extreme compression. Furthermore, a fused Triton implementation reconstructs keys on the fly without materializing the uncompressed key, so the codec adds no decode-time bandwidth or latency over the existing dequantization. Project Page: https://octopus-quant.github.io/",
+      "identifiers": [
+        "SemanticScholar:662c121d5bcfe071a38cebb95a498df125b314fa"
+      ],
+      "semantic_scholar_id": "662c121d5bcfe071a38cebb95a498df125b314fa",
+      "canonical_id": "arXiv:2605.21226",
+      "arxiv_id": "2605.21226",
+      "doi": "10.48550/arXiv.2605.21226",
+      "authors": [
+        "Mark Boss",
+        "Vikram S. Voleti",
+        "Simon Donné",
+        "Shimon Vainer"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
+      "source_url": "https://arxiv.org/abs/2605.08755",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) reach competition-level math and coding accuracy via long autoregressive decoding, making per-token decoding cost a primary deployment concern. Weight quantization is the standard tool for acceleration, but representative recipes -- including state-of-the-art end-to-end (E2E) QAT -- lose accuracy on long-decoding reasoning benchmarks despite preserving perplexity and short-decode accuracy. Through a systematic gradient-direction analysis, we identify two factors driving this gap: (i) KV-cache fidelity preservation under the QAT loss, which E2E supervision attenuates via the softmax Fisher metric; and (ii) Hessian-subspace alignment between calibration data and the deployment distribution. We propose LookAhead Quantization (LAQuant), a layer-wise weight-only QAT method that addresses both factors without online-transform overhead by combining reasoning-domain calibration with a one-layer lookahead loss whose implicit cross-layer co-adaptation preserves the next-layer residual stream. For Qwen3-4B under W3G128 quantization, LAQuant improves AIME25 Pass@1 over ParoQuant by 15.11pp (1.93pp over ParoQuant++ at matched calibration) while achieving a 3.42x decoding speedup over FP16 on RTX A6000, compared with ParoQuant's 3.01x.",
+      "identifiers": [
+        "SemanticScholar:263f08eb1c144b29f369915cc9d98be667124f31"
+      ],
+      "semantic_scholar_id": "263f08eb1c144b29f369915cc9d98be667124f31",
+      "canonical_id": "arXiv:2605.08755",
+      "arxiv_id": "2605.08755",
+      "doi": "10.48550/arXiv.2605.08755",
+      "authors": [
+        "Euntae Choi",
+        "Su-Min Song",
+        "Sungjoo Yoo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format",
+      "source_url": "https://arxiv.org/abs/2411.15982",
+      "year": 2024,
+      "published": "2024-11-24",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The widely-used, weight-only quantized large language models (LLMs), which leverage low-bit integer (INT) weights and retain floating-point (FP) activations, reduce storage requirements while maintaining accuracy. However, this shifts the energy and latency bottlenecks towards the FP activations that are associated with costly memory accesses and computations. Existing LLM accelerators focus primarily on computation optimizations, overlooking the potential of jointly optimizing FP computations and data movement, particularly for the dominant FP-INT GeMM operations in LLM inference. To address these challenges, we investigate the sensitivity of activation precision across various LLM modules and its impact on overall model accuracy. Based on our findings, we first propose the Anda data type: an adaptive data format with group-shared exponent bits and dynamic mantissa bit allocation. Secondly, we develop an iterative post-training adaptive precision search algorithm that optimizes the bit-width for different LLM modules to balance model accuracy, energy efficiency, and inference speed. Lastly, a suite of hardware optimization techniques is proposed to maximally exploit the benefits of the Anda format. These include a bit-plane-based data organization scheme, Anda-enhanced processing units with bit-serial computation, and a runtime bit-plane Anda compressor to simultaneously optimize storage, computation, and memory footprints. Our evaluations on FP-INT GeMM operations show that Anda achieves a $2.4 \\times$ speedup, $4.0 \\times$ area efficiency, and $3.1 \\times$ energy efficiency improvement on average for popular LLMs including OPT, LLaMA, and LLaMA-2 series over the GPU-like FP-FP baseline. Anda demonstrates strong adaptability across various application scenarios, accuracy requirements, and system performance, enabling efficient LLM inference across a wide range of deployment scenarios.",
+      "identifiers": [
+        "SemanticScholar:61dbbcf8f572f3473a1cff0cf282339d7c179fb3"
+      ],
+      "semantic_scholar_id": "61dbbcf8f572f3473a1cff0cf282339d7c179fb3",
+      "canonical_id": "arXiv:2411.15982",
+      "arxiv_id": "2411.15982",
+      "doi": "10.1109/HPCA61900.2025.00110",
+      "authors": [
+        "Chao Fang",
+        "Man Shi",
+        "Robin Geens",
+        "Arne Symons",
+        "Zhong-Feng Wang",
+        "Marian Verhelst"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 702,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    },
+    {
+      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
+      "source_url": "https://arxiv.org/abs/2603.00907",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing computational and memory demands of the Key-Value (KV) cache significantly limit the ability of Large Language Models (LLMs). While KV merging has emerged as a promising solution, existing methods that rely on empirical observations of KV asymmetry and gradient-based Hessian approximations lack a theoretical foundation and incur suboptimal compression and inference overhead. To bridge these gaps, we establish a theoretical framework that characterizes this asymmetry through the spectral energy distribution of projection weights, demonstrating that concentrated spectra in Query/Key weights induce feature homogeneity, whereas dispersed spectra in Value weights preserve heterogeneity. Then, we introduce KVSlimmer, an efficient algorithm that captures exact Hessian information through a mathematically exact formulation, and derives a closed-form solution utilizing only forward-pass variables, resulting in a gradient-free approach that is both memory- and time-efficient. Extensive experiments across various models and benchmarks demonstrate that KVSlimmer consistently outperforms SOTA methods. For instance, on Llama3.1-8B-Instruct, it improves the LongBench average score by 0.92 while reducing memory costs and latency by 29% and 28%, respectively.Code is available at https://github.com/lianjunl13-sudo/KVSlimmer.",
+      "identifiers": [
+        "SemanticScholar:8f4847158ddcc5d9efb5f082811300bed0873bc9"
+      ],
+      "semantic_scholar_id": "8f4847158ddcc5d9efb5f082811300bed0873bc9",
+      "canonical_id": "arXiv:2603.00907",
+      "arxiv_id": "2603.00907",
+      "doi": "10.48550/arXiv.2603.00907",
+      "authors": [
+        "Lian Liu",
+        "Hongli An",
+        "Wei-Qi Yan",
+        "Xingran Du",
+        "Sheng-Chuan Zhang",
+        "Hua-Zhong Liu",
+        "Yunshan Zhong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reciprocal Guidance: Orchestrating Draft and Verify Budgets for Advancing the Diffusion-AR Self-Speculation Frontier",
+      "source_url": "https://arxiv.org/abs/2609.34388",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion drafting with autoregressive (AR) verification has emerged as a promising paradigm for efficient speculative decoding. Recent self-speculation models, represented by Nemotron-Labs-Diffusion, further simplify the speculative pipeline by unifying drafting and verification within a shared backbone, while enabling longer acceptance lengths. However, the Pareto frontier between aggregate and per-request throughput remains underexplored. At low concurrency, sequential draft-verify execution requires two model forward passes per round, limiting the effective tokens per forward (TPF). By contrast, at high concurrency, longer drafts incur increasingly expensive computation, forcing individual requests to operate under constrained speculation budgets and preventing full exploitation of the full-backbone drafter. Our key observation indicates that drafting and verification exhibit reciprocal predictability. Draft logits can anticipate likely verification mismatches, while recent verification outcomes predict future drafting utility and suitable block sizes. Building on this observation, we introduce Reciprocal Guidance (RecGuide), a runtime draft-verify orchestration framework that adapts speculative decoding to varying serving loads. RecGuide exploits spare compute capacity through verification-overlapped drafting at low concurrency, while dynamically allocating request-specific draft block sizes as the workload becomes increasingly compute-intensive. Experiments across a wide range of concurrency levels demonstrate consistent throughput improvements over vanilla self-speculation, achieving up to $1.8\\times$ speedup.",
+      "identifiers": [
+        "SemanticScholar:e2ca7dcf2200e12ba2213d335982677a5326d36c"
+      ],
+      "semantic_scholar_id": "e2ca7dcf2200e12ba2213d335982677a5326d36c",
+      "canonical_id": "arXiv:2609.34388",
+      "arxiv_id": "2609.34388",
+      "authors": [
+        "Lin-Ye Wei",
+        "Shu-Tian Zheng",
+        "Hao-Yu Zeng",
+        "Meng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill",
+      "source_url": "https://arxiv.org/abs/2610.05774",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block drafters such as DSpark propose ranked candidates for several positions in one forward pass, and a tree verifier checks them in one pass of the target. The number of rows to verify trades the tokens a wider tree is expected to accept against the time a wider verify takes. Most schedulers that choose this number take the verify time from a table or model measured before serving, corrected online by at most one scale factor, and take acceptance from the drafter's confidence estimates or from a map fitted offline. AdaSpark learns both quantities while it serves, with no profile, calibration or sweep in advance. It learns which verify widths are worth offering and fits each one's verify time as a function of context. It fits each candidate's acceptance probability to the target's verify outcomes, with the drafter's confidence head as one input, and orders and sizes the tree by that fit instead of by the head. The same model prices n-gram continuations of the request's own text, so drafted and text-derived candidates compete for rows in one best-first order. The width is chosen by pricing time at the long-run decode rate. On single- and multi-turn conversations from six public datasets, on three dense targets and one mixture-of-experts target, AdaSpark decodes 1.5-3.1x faster than llama.cpp's DSpark with the same drafters. Our imparo engine with AdaSpark is 1.17-1.52x faster than imparo running with a three-token chain (the default llama.cpp setting); this gain comes from the scheduler alone. Without a width sweep, AdaSpark is never more than 0.3% slower than the best pinned tree width on any dense target or context band. On the mixture-of-experts target it ties the best pinned width, and the other pinned widths from 4 to 16 rows are 5-14% slower.",
+      "identifiers": [
+        "SemanticScholar:f445ae0a07556f6b0f837d8ea7823574caf36dfa"
+      ],
+      "semantic_scholar_id": "f445ae0a07556f6b0f837d8ea7823574caf36dfa",
+      "canonical_id": "arXiv:2610.05774",
+      "arxiv_id": "2610.05774",
+      "authors": [
+        "Li-Quan Liu",
+        "Yi-Fan Zhang",
+        "Bo-Wei Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "From Draft-Then-Verify to Systems Co-Design: A Survey of Speculative Decoding for Autoregressive Large Language Models",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3739598",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive large language model inference by producing low-cost draft work and committing accepted portions after parallel target-side verification. This draftthen- verify process defines the broad family, while recent methods differ in where draft work comes from, how candidate units are logically organized across drafting and verification, what fidelity claim licenses commitment, and how runtime systems realize committed state, control speculation, execute serving paths, and evaluate end-to-end performance. We therefore develop a systems co-design taxonomy with four interdependent aspects—Draft Source, Draft Geometry, Verification Fidelity, and Runtime Execution— and 19 categories. Applying it to 312 works yields Method Profiles that trace individual works through the design space and help researchers navigate the literature, compare methods consistently, and select category-matched baselines.We synthesize recurring combinations and interactions among the four aspects into Co-Design Gates—Representability, Verifiability, State Realizability, and Profitability—that organize open challenges and future directions. Together, the taxonomy, Method Profiles, and Gates frame speculative decoding as a systems co-design problem in which these choices must align to deliver the stated fidelity and end-to-end benefit.",
+      "identifiers": [
+        "SemanticScholar:0c34f9f3305e709a6c4bb7e5d266f120f030605e"
+      ],
+      "semantic_scholar_id": "0c34f9f3305e709a6c4bb7e5d266f120f030605e",
+      "doi": "10.1109/ACCESS.2026.3739598",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3739598",
+      "authors": [
+        "Kai-Kai Zhao",
+        "Zhao-Xiang Liu",
+        "Che Jiang",
+        "Ping Chen",
+        "Xin Wang",
+        "Kai Tian",
+        "Ning Wang",
+        "Yu-Ru Wang",
+        "Ying-Jie Shen",
+        "Jiang-Ze Yan",
+        "Min-Jie Hua",
+        "Wen-Jing Zhang",
+        "Xiang Wang",
+        "Kai Wang",
+        "Kaiyan Zhang",
+        "You-Bang Sun",
+        "Ning Ding",
+        "Shi-Guo Lian",
+        "Bo-Wen Zhou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.25284",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25284",
+        "id:SemanticScholar:075220f69f6b24aa2754ffdd4873fa775a1939e4",
+        "id:arXiv:2603.25284",
+        "title:sliderquant accurate posttraining quantization for llms",
+        "url:https://arxiv.org/abs/2603.25284"
+      ],
+      "record": {
+        "title": "SliderQuant: Accurate Post-Training Quantization for LLMs",
+        "source_url": "https://arxiv.org/abs/2603.25284",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we address post-training quantization (PTQ) for large language models (LLMs) from an overlooked perspective: given a pre-trained high-precision LLM, the predominant sequential quantization framework treats different layers equally, but this may be not optimal in challenging bit-width settings. We empirically study the quantization impact of different layers on model accuracy, and observe that: (1) shallow/deep layers are usually more sensitive to quantization than intermediate layers; (2) among shallow/deep layers, the most sensitive one is the first/last layer, which exhibits significantly larger quantization error than others. These empirical observations imply that the quantization design for different layers of LLMs is required on multiple levels instead of a single level shared to all layers. Motivated by this, we propose a new PTQ framework termed Sliding-layer Quantization (SliderQuant) that relies on a simple adaptive sliding quantization concept facilitated by few learnable parameters. The base component of SliderQuant is called inter-layer sliding quantization, which incorporates three types of novel sliding window designs tailored for addressing the varying quantization sensitivity of shallow, intermediate and deep layers. The other component is called intra-layer sliding quantization that leverages an incremental strategy to quantize each window. As a result, SliderQuant has a strong ability to reduce quantization errors across layers. Extensive experiments on basic language generation, zero-shot commonsense reasoning and challenging math and code tasks with various LLMs, including Llama/Llama2/Llama3/Qwen2.5 model families, DeepSeek-R1 distilled models and large MoE models, show that our method outperforms existing PTQ methods (including the latest PTQ methods using rotation transformations) for both weight-only quantization and weight-activation quantization.",
+        "identifiers": [
+          "SemanticScholar:075220f69f6b24aa2754ffdd4873fa775a1939e4"
+        ],
+        "semantic_scholar_id": "075220f69f6b24aa2754ffdd4873fa775a1939e4",
+        "canonical_id": "arXiv:2603.25284",
+        "arxiv_id": "2603.25284",
+        "doi": "10.48550/arXiv.2603.25284",
+        "authors": [
+          "Shi-Geng Wang",
+          "Chao Li",
+          "Yangyuxuan Kang",
+          "Jia-Wei Fan",
+          "Zhong-Hong Ou",
+          "An-Bang Yao"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 215,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.08032",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.08032",
+        "id:SemanticScholar:1b9a3b4e330c2b25a33e52a43b015226453fe937",
+        "id:arXiv:2607.08032",
+        "title:what to keep what to forget a ratedistortion view of memory compaction in llms and agents",
+        "url:https://arxiv.org/abs/2607.08032"
+      ],
+      "record": {
+        "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
+        "source_url": "https://arxiv.org/abs/2607.08032",
+        "year": 2026,
+        "published": "2026-07-09",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models, and the agents built on them, spend an ever-growing share of their compute and memory on remembering: caching attention keys and values, carrying long prompts, maintaining recurrent state, and storing what happened in previous turns and sessions. Because none of this memory is free, four largely separate research communities have each learned to compact it. They evict or quantize the KV cache, prune or distill prompts, bound architectural state, and consolidate agent memory. We argue that these are instances of one problem: a rate--distortion decision about what context-derived information to retain versus discard, at what fidelity, under a resource budget, so as to preserve downstream task utility. We make this lens precise with a single compaction objective and a layer-agnostic lower bound, use it to build a seven-axis taxonomy that classifies methods from across the stack uniformly, and use it to transfer mechanisms between layers that have never been connected, from serving-stack KV management to agent long-term memory. Two patterns hold across the survey. At every layer the signal that decides what to keep is attention magnitude or recency, and it fails in the same way everywhere, by discarding, before the query is known and with no way to undo it, information the query later needs. And while compression is measured carefully on single-turn long context, the repeated compaction that agents actually perform is almost never measured, and no benchmark holds one budget axis across all the layers at once. We turn both observations into a benchmark proposal, a small reference experiment, and a set of compaction-aware design principles, and we map the open problems.",
+        "identifiers": [
+          "SemanticScholar:1b9a3b4e330c2b25a33e52a43b015226453fe937"
+        ],
+        "semantic_scholar_id": "1b9a3b4e330c2b25a33e52a43b015226453fe937",
+        "canonical_id": "arXiv:2607.08032",
+        "arxiv_id": "2607.08032",
+        "doi": "10.48550/arXiv.2607.08032",
+        "authors": [
+          "A. Colaco",
+          "Nada Lahjouji"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 110,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.21226",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.21226",
+        "id:SemanticScholar:662c121d5bcfe071a38cebb95a498df125b314fa",
+        "id:arXiv:2605.21226",
+        "title:octopus optimized kv cache for transformers via octahedral parametrization under optimal squared error quantization",
+        "url:https://arxiv.org/abs/2605.21226"
+      ],
+      "record": {
+        "title": "OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization",
+        "source_url": "https://arxiv.org/abs/2605.21226",
+        "year": 2026,
+        "published": "2026-05-20",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The key-value (KV) cache dominates memory bandwidth and footprint in long-context autoregressive inference. Recent rotation-preconditioned codecs (TurboQuant, PolarQuant) show that a structured random rotation followed by a per-coordinate scalar quantizer matched to an analytically tractable marginal is a near-optimal recipe for KV compression. OCTOPUS advances this paradigm through joint quantization of rotated coordinate triplets. Each triplet's direction is mapped to a square via an octahedral parameterization, and the two resulting coordinates and the triplet norm are Lloyd-Max quantized against implementation-matched marginals. Optimizing the per-triplet squared error gives a strictly non-uniform bit allocation depending only on the total dimensionality of the keys. We find the finite-dimensional quality optimum with sweeps to be constant on every real decoder we test. The codec is data-oblivious, online, and deterministic given a seed. Across text, video, and audio, OCTOPUS matches or beats every prior rotation codec at every reported bit width and metric, with a lead that grows as bits drop for extreme compression. Furthermore, a fused Triton implementation reconstructs keys on the fly without materializing the uncompressed key, so the codec adds no decode-time bandwidth or latency over the existing dequantization. Project Page: https://octopus-quant.github.io/",
+        "identifiers": [
+          "SemanticScholar:662c121d5bcfe071a38cebb95a498df125b314fa"
+        ],
+        "semantic_scholar_id": "662c121d5bcfe071a38cebb95a498df125b314fa",
+        "canonical_id": "arXiv:2605.21226",
+        "arxiv_id": "2605.21226",
+        "doi": "10.48550/arXiv.2605.21226",
+        "authors": [
+          "Mark Boss",
+          "Vikram S. Voleti",
+          "Simon Donné",
+          "Shimon Vainer"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 160,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08755",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08755",
+        "id:SemanticScholar:263f08eb1c144b29f369915cc9d98be667124f31",
+        "id:arXiv:2605.08755",
+        "title:laquant a simple overheadfree large reasoning model quantization by layerwise lookahead loss",
+        "url:https://arxiv.org/abs/2605.08755"
+      ],
+      "record": {
+        "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
+        "source_url": "https://arxiv.org/abs/2605.08755",
+        "year": 2026,
+        "published": "2026-05-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) reach competition-level math and coding accuracy via long autoregressive decoding, making per-token decoding cost a primary deployment concern. Weight quantization is the standard tool for acceleration, but representative recipes -- including state-of-the-art end-to-end (E2E) QAT -- lose accuracy on long-decoding reasoning benchmarks despite preserving perplexity and short-decode accuracy. Through a systematic gradient-direction analysis, we identify two factors driving this gap: (i) KV-cache fidelity preservation under the QAT loss, which E2E supervision attenuates via the softmax Fisher metric; and (ii) Hessian-subspace alignment between calibration data and the deployment distribution. We propose LookAhead Quantization (LAQuant), a layer-wise weight-only QAT method that addresses both factors without online-transform overhead by combining reasoning-domain calibration with a one-layer lookahead loss whose implicit cross-layer co-adaptation preserves the next-layer residual stream. For Qwen3-4B under W3G128 quantization, LAQuant improves AIME25 Pass@1 over ParoQuant by 15.11pp (1.93pp over ParoQuant++ at matched calibration) while achieving a 3.42x decoding speedup over FP16 on RTX A6000, compared with ParoQuant's 3.01x.",
+        "identifiers": [
+          "SemanticScholar:263f08eb1c144b29f369915cc9d98be667124f31"
+        ],
+        "semantic_scholar_id": "263f08eb1c144b29f369915cc9d98be667124f31",
+        "canonical_id": "arXiv:2605.08755",
+        "arxiv_id": "2605.08755",
+        "doi": "10.48550/arXiv.2605.08755",
+        "authors": [
+          "Euntae Choi",
+          "Su-Min Song",
+          "Sungjoo Yoo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 171,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2411.15982",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca61900.2025.00110",
+        "id:SemanticScholar:61dbbcf8f572f3473a1cff0cf282339d7c179fb3",
+        "id:arXiv:2411.15982",
+        "title:anda unlocking efficient llm inference with a variablelength grouped activation data format",
+        "url:https://arxiv.org/abs/2411.15982"
+      ],
+      "record": {
+        "title": "Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format",
+        "source_url": "https://arxiv.org/abs/2411.15982",
+        "year": 2024,
+        "published": "2024-11-24",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 26,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The widely-used, weight-only quantized large language models (LLMs), which leverage low-bit integer (INT) weights and retain floating-point (FP) activations, reduce storage requirements while maintaining accuracy. However, this shifts the energy and latency bottlenecks towards the FP activations that are associated with costly memory accesses and computations. Existing LLM accelerators focus primarily on computation optimizations, overlooking the potential of jointly optimizing FP computations and data movement, particularly for the dominant FP-INT GeMM operations in LLM inference. To address these challenges, we investigate the sensitivity of activation precision across various LLM modules and its impact on overall model accuracy. Based on our findings, we first propose the Anda data type: an adaptive data format with group-shared exponent bits and dynamic mantissa bit allocation. Secondly, we develop an iterative post-training adaptive precision search algorithm that optimizes the bit-width for different LLM modules to balance model accuracy, energy efficiency, and inference speed. Lastly, a suite of hardware optimization techniques is proposed to maximally exploit the benefits of the Anda format. These include a bit-plane-based data organization scheme, Anda-enhanced processing units with bit-serial computation, and a runtime bit-plane Anda compressor to simultaneously optimize storage, computation, and memory footprints. Our evaluations on FP-INT GeMM operations show that Anda achieves a $2.4 \\times$ speedup, $4.0 \\times$ area efficiency, and $3.1 \\times$ energy efficiency improvement on average for popular LLMs including OPT, LLaMA, and LLaMA-2 series over the GPU-like FP-FP baseline. Anda demonstrates strong adaptability across various application scenarios, accuracy requirements, and system performance, enabling efficient LLM inference across a wide range of deployment scenarios.",
+        "identifiers": [
+          "SemanticScholar:61dbbcf8f572f3473a1cff0cf282339d7c179fb3"
+        ],
+        "semantic_scholar_id": "61dbbcf8f572f3473a1cff0cf282339d7c179fb3",
+        "canonical_id": "arXiv:2411.15982",
+        "arxiv_id": "2411.15982",
+        "doi": "10.1109/HPCA61900.2025.00110",
+        "authors": [
+          "Chao Fang",
+          "Man Shi",
+          "Robin Geens",
+          "Arne Symons",
+          "Zhong-Feng Wang",
+          "Marian Verhelst"
+        ],
+        "priority": 36,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 26,
+          "citation_count": 26,
+          "total": 36,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 702,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.00907",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.00907",
+        "id:SemanticScholar:8f4847158ddcc5d9efb5f082811300bed0873bc9",
+        "id:arXiv:2603.00907",
+        "title:kvslimmer theoretical insights and practical optimizations for asymmetric kv merging",
+        "url:https://arxiv.org/abs/2603.00907"
+      ],
+      "record": {
+        "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
+        "source_url": "https://arxiv.org/abs/2603.00907",
+        "year": 2026,
+        "published": "2026-03-01",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The growing computational and memory demands of the Key-Value (KV) cache significantly limit the ability of Large Language Models (LLMs). While KV merging has emerged as a promising solution, existing methods that rely on empirical observations of KV asymmetry and gradient-based Hessian approximations lack a theoretical foundation and incur suboptimal compression and inference overhead. To bridge these gaps, we establish a theoretical framework that characterizes this asymmetry through the spectral energy distribution of projection weights, demonstrating that concentrated spectra in Query/Key weights induce feature homogeneity, whereas dispersed spectra in Value weights preserve heterogeneity. Then, we introduce KVSlimmer, an efficient algorithm that captures exact Hessian information through a mathematically exact formulation, and derives a closed-form solution utilizing only forward-pass variables, resulting in a gradient-free approach that is both memory- and time-efficient. Extensive experiments across various models and benchmarks demonstrate that KVSlimmer consistently outperforms SOTA methods. For instance, on Llama3.1-8B-Instruct, it improves the LongBench average score by 0.92 while reducing memory costs and latency by 29% and 28%, respectively.Code is available at https://github.com/lianjunl13-sudo/KVSlimmer.",
+        "identifiers": [
+          "SemanticScholar:8f4847158ddcc5d9efb5f082811300bed0873bc9"
+        ],
+        "semantic_scholar_id": "8f4847158ddcc5d9efb5f082811300bed0873bc9",
+        "canonical_id": "arXiv:2603.00907",
+        "arxiv_id": "2603.00907",
+        "doi": "10.48550/arXiv.2603.00907",
+        "authors": [
+          "Lian Liu",
+          "Hongli An",
+          "Wei-Qi Yan",
+          "Xingran Du",
+          "Sheng-Chuan Zhang",
+          "Hua-Zhong Liu",
+          "Yunshan Zhong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 240,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34388",
+      "identity_tokens": [
+        "id:SemanticScholar:e2ca7dcf2200e12ba2213d335982677a5326d36c",
+        "id:arXiv:2609.34388",
+        "title:reciprocal guidance orchestrating draft and verify budgets for advancing the diffusionar selfspeculation frontier",
+        "url:https://arxiv.org/abs/2609.34388"
+      ],
+      "record": {
+        "title": "Reciprocal Guidance: Orchestrating Draft and Verify Budgets for Advancing the Diffusion-AR Self-Speculation Frontier",
+        "source_url": "https://arxiv.org/abs/2609.34388",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion drafting with autoregressive (AR) verification has emerged as a promising paradigm for efficient speculative decoding. Recent self-speculation models, represented by Nemotron-Labs-Diffusion, further simplify the speculative pipeline by unifying drafting and verification within a shared backbone, while enabling longer acceptance lengths. However, the Pareto frontier between aggregate and per-request throughput remains underexplored. At low concurrency, sequential draft-verify execution requires two model forward passes per round, limiting the effective tokens per forward (TPF). By contrast, at high concurrency, longer drafts incur increasingly expensive computation, forcing individual requests to operate under constrained speculation budgets and preventing full exploitation of the full-backbone drafter. Our key observation indicates that drafting and verification exhibit reciprocal predictability. Draft logits can anticipate likely verification mismatches, while recent verification outcomes predict future drafting utility and suitable block sizes. Building on this observation, we introduce Reciprocal Guidance (RecGuide), a runtime draft-verify orchestration framework that adapts speculative decoding to varying serving loads. RecGuide exploits spare compute capacity through verification-overlapped drafting at low concurrency, while dynamically allocating request-specific draft block sizes as the workload becomes increasingly compute-intensive. Experiments across a wide range of concurrency levels demonstrate consistent throughput improvements over vanilla self-speculation, achieving up to $1.8\\times$ speedup.",
+        "identifiers": [
+          "SemanticScholar:e2ca7dcf2200e12ba2213d335982677a5326d36c"
+        ],
+        "semantic_scholar_id": "e2ca7dcf2200e12ba2213d335982677a5326d36c",
+        "canonical_id": "arXiv:2609.34388",
+        "arxiv_id": "2609.34388",
+        "authors": [
+          "Lin-Ye Wei",
+          "Shu-Tian Zheng",
+          "Hao-Yu Zeng",
+          "Meng Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.05774",
+      "identity_tokens": [
+        "id:SemanticScholar:f445ae0a07556f6b0f837d8ea7823574caf36dfa",
+        "id:arXiv:2610.05774",
+        "title:adaspark adaptive dspark with online learning for tree verification and ngram fill",
+        "url:https://arxiv.org/abs/2610.05774"
+      ],
+      "record": {
+        "title": "AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill",
+        "source_url": "https://arxiv.org/abs/2610.05774",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block drafters such as DSpark propose ranked candidates for several positions in one forward pass, and a tree verifier checks them in one pass of the target. The number of rows to verify trades the tokens a wider tree is expected to accept against the time a wider verify takes. Most schedulers that choose this number take the verify time from a table or model measured before serving, corrected online by at most one scale factor, and take acceptance from the drafter's confidence estimates or from a map fitted offline. AdaSpark learns both quantities while it serves, with no profile, calibration or sweep in advance. It learns which verify widths are worth offering and fits each one's verify time as a function of context. It fits each candidate's acceptance probability to the target's verify outcomes, with the drafter's confidence head as one input, and orders and sizes the tree by that fit instead of by the head. The same model prices n-gram continuations of the request's own text, so drafted and text-derived candidates compete for rows in one best-first order. The width is chosen by pricing time at the long-run decode rate. On single- and multi-turn conversations from six public datasets, on three dense targets and one mixture-of-experts target, AdaSpark decodes 1.5-3.1x faster than llama.cpp's DSpark with the same drafters. Our imparo engine with AdaSpark is 1.17-1.52x faster than imparo running with a three-token chain (the default llama.cpp setting); this gain comes from the scheduler alone. Without a width sweep, AdaSpark is never more than 0.3% slower than the best pinned tree width on any dense target or context band. On the mixture-of-experts target it ties the best pinned width, and the other pinned widths from 4 to 16 rows are 5-14% slower.",
+        "identifiers": [
+          "SemanticScholar:f445ae0a07556f6b0f837d8ea7823574caf36dfa"
+        ],
+        "semantic_scholar_id": "f445ae0a07556f6b0f837d8ea7823574caf36dfa",
+        "canonical_id": "arXiv:2610.05774",
+        "arxiv_id": "2610.05774",
+        "authors": [
+          "Li-Quan Liu",
+          "Yi-Fan Zhang",
+          "Bo-Wei Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 22,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/access.2026.3739598",
+      "identity_tokens": [
+        "id:DOI:10.1109/access.2026.3739598",
+        "id:SemanticScholar:0c34f9f3305e709a6c4bb7e5d266f120f030605e",
+        "title:from draftthenverify to systems codesign a survey of speculative decoding for autoregressive large language models",
+        "url:https://doi.org/10.1109/ACCESS.2026.3739598"
+      ],
+      "record": {
+        "title": "From Draft-Then-Verify to Systems Co-Design: A Survey of Speculative Decoding for Autoregressive Large Language Models",
+        "source_url": "https://doi.org/10.1109/ACCESS.2026.3739598",
+        "year": 2026,
+        "published": null,
+        "venue": "IEEE Access",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive large language model inference by producing low-cost draft work and committing accepted portions after parallel target-side verification. This draftthen- verify process defines the broad family, while recent methods differ in where draft work comes from, how candidate units are logically organized across drafting and verification, what fidelity claim licenses commitment, and how runtime systems realize committed state, control speculation, execute serving paths, and evaluate end-to-end performance. We therefore develop a systems co-design taxonomy with four interdependent aspects—Draft Source, Draft Geometry, Verification Fidelity, and Runtime Execution— and 19 categories. Applying it to 312 works yields Method Profiles that trace individual works through the design space and help researchers navigate the literature, compare methods consistently, and select category-matched baselines.We synthesize recurring combinations and interactions among the four aspects into Co-Design Gates—Representability, Verifiability, State Realizability, and Profitability—that organize open challenges and future directions. Together, the taxonomy, Method Profiles, and Gates frame speculative decoding as a systems co-design problem in which these choices must align to deliver the stated fidelity and end-to-end benefit.",
+        "identifiers": [
+          "SemanticScholar:0c34f9f3305e709a6c4bb7e5d266f120f030605e"
+        ],
+        "semantic_scholar_id": "0c34f9f3305e709a6c4bb7e5d266f120f030605e",
+        "doi": "10.1109/ACCESS.2026.3739598",
+        "canonical_id": "DOI:10.1109/ACCESS.2026.3739598",
+        "authors": [
+          "Kai-Kai Zhao",
+          "Zhao-Xiang Liu",
+          "Che Jiang",
+          "Ping Chen",
+          "Xin Wang",
+          "Kai Tian",
+          "Ning Wang",
+          "Yu-Ru Wang",
+          "Ying-Jie Shen",
+          "Jiang-Ze Yan",
+          "Min-Jie Hua",
+          "Wen-Jing Zhang",
+          "Xiang Wang",
+          "Kai Wang",
+          "Kaiyan Zhang",
+          "You-Bang Sun",
+          "Ning Ding",
+          "Shi-Guo Lian",
+          "Bo-Wen Zhou"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 118,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:51cfd0c6e6a206530f05ff18feb4feb50dfaaa35c3aa17cd1df2cc54f1718d3b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
