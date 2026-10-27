@@ -26,6 +26,8 @@ worker_completed_at: "2026-10-28T05:05:52+09:00"
 reference_main_sha: "27011dd845e6660321958865f22d86799ddc79b8"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Learned Prefix Caching：対話継続予測によるLLM前置キャッシュの学習型退避

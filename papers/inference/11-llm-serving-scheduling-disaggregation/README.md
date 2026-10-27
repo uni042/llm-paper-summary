@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（505本）
+## 自動生成の論文一覧（507本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1134,6 +1134,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   状態空間モデル（state space モデル; SSM）は、過去の情報を有限次元の内部状態へ圧縮し、入力を逐次取り込むことで長い系列を効率よく処理する。ListOpsの階層演算予測ではMambaの38.02%に対してMS-SSM(S6)は63.04%、MS-SSM(S4)は62.83%を報告する。
 
+- **2025-12 · [Learned Prefix Caching for Efficient LLM Inference](2025-dac9d9c660d5-learned-prefix-caching-for-efficient-llm-inference.md)**  
+  実装：[✓](https://github.com/yangdsh/LPC) ・ リポジトリ内被引用：0  
+  特に複数ターンの会話では、それまでの会話履歴が次の質問にも含まれるため、同じ履歴を再計算しない価値が大きい。一方、GPUメモリは有限で、実行中の要求がKV領域を増やすと保存済みの接頭辞を退避しなければならない。原著のH100・Qwen3-32B-FP8評価では、LRUと同等のヒット率に必要なキャッシュ容量を18〜47%削減した。
+
 - **2025-12 · [Efficient Mixture-of-Agents Serving via Tree-Structured Routing, Adaptive Pruning, and Dependency-Aware Prefill-Decode Overlap](2025-2512.18126-efficient-mixture-of-agents-serving-via-tree-structured-routing-adaptive.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   FaSTeR-MoAは、複数の大規模言語モデル（large language モデル、LLM）が候補回答を生成し、別のモデルが統合するエージェント混合（mixture of agents、MoA）の推論処理を高速化する方式である。
@@ -2035,6 +2039,10 @@
 - **2021-09 · [Multi-model Machine Learning Inference Serving with GPU Spatial Partitioning](2021-2109.01611-multi-model-machine-learning-inference-serving-with-gpu-spatial-partitio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   複数モデルを時間順に切り替えるだけでは、この遊休部分を他モデルへ同時に渡せない。提案の干渉考慮版「gpulet+int」は、同一4 GPU実機で既存の時間共有方式SBPに対し、5種類の複数モデル推論シナリオにおける最大処理量を平均102.6%改善した。
+
+- **2021-10 · [DCT: Dynamic Compressive Transformer for Modeling Unbounded Sequence](2021-2110.04821-dct-dynamic-compressive-transformer-for-modeling-unbounded-sequence.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DCTは、系列が長くなっても古い情報を保持したい言語モデルに対し、記憶から押し出される過去の隠れ状態を必ず保存するのではなく、必要性を判定してから圧縮記憶へ追加する仕組みを提案した研究である。この改善は予測品質の比較であり、GPU推論スループット、TTFT、TPOT、メモリ消費量が実測で何倍改善したという結果ではない。
 
 ### 7年前（2019-11〜2020-10）
 

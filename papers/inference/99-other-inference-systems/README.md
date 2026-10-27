@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（718本）
+## 自動生成の論文一覧（721本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1066,6 +1066,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   多頭潜在注意（multi-head latent 注意機構、MLA）はトークンごとのKVを低次元潜在へ圧縮するが、文脈の全トークンを保持し、注意計算も全長に対して行う。
 
+- **2026-04 · [Integrated Electro-Optic Attention Nonlinearities for Transformers](2026-2604.09512-integrated-electro-optic-attention-nonlinearities-for-transformers.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この論文は、非線形関数をデジタル回路で近似する代わりに、光の干渉に伴う電圧と透過光強度の非線形関係を演算として利用する方式を提案する。
+
 - **2026-04 · [GSQ: Highly-Accurate Low-Precision Scalar Quantization for LLMs via Gumbel-Softmax Sampling](2026-2604.18556-gsq-highly-accurate-low-precision-scalar-quantization-for-llms-via-gumbe.md)**  
   実装：[✓](https://github.com/IST-DASLab/GSQ) ・ リポジトリ内被引用：0  
   大規模言語モデルを2～3ビット程度に圧縮すると、重みの転送量と常駐メモリを大幅に減らせる。Llama-3.1-8B/70Bの2ビット評価で従来スカラー量子化より高い精度を示し、Qwen3-8Bの既存GGUF K-Quantチェックポイントを同じ保存形式のまま改善する点が実用上重要である。
@@ -1948,6 +1952,10 @@
   実装：[✓](https://github.com/Nkniexin/ELUTQ) ・ リポジトリ内被引用：0  
   ELUTQは、LLMの重みを2〜3bitへ圧縮するときの量子化誤差と、量子化後の重みをCPU/GPUで実行するときの復号・乗算費用を一緒に扱うシステムである。
 
+- **2025-10 · [Don't Run with Scissors: Pruning Breaks VLA Models but They Can Be Recovered](2025-2510.08464-don-t-run-with-scissors-pruning-breaks-vla-models-but-they-can-be-recove.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、2:4構造化剪定をVLAへ適用すると、一般的な言語モデルよりはるかに深刻な性能崩壊が起こることを示し、剪定で失われた重み成分を低ランク補正で部分的に復元するGLUESTICKを提案する。
+
 - **2025-10 · [Direct Multi-Token Decoding](2025-2510.11958-direct-multi-token-decoding.md)**  
   実装：[✓](https://github.com/luoxuan-cs/Direct-Multitoken-Decoding) ・ リポジトリ内被引用：0  
   低バッチでは重みをGPUメモリから読み出す時間が支配的になりやすく、各層を毎トークン通ることが遅延の主要因になる。以下の数値はすべて原著の表を照合したものであり、未測定の大規模サービング性能や他の投機復号方式との優劣は主張しない。
@@ -2051,6 +2059,10 @@
 - **2025-07 · [High-Layer Attention Pruning with Rescaling](2025-2507.01900-high-layer-attention-pruning-with-rescaling.md)**  
   実装：[✓](https://github.com/SongtaoLiu0823/HARP) ・ リポジトリ内被引用：0  
   下位層と上位層で同じ割合の注意を削ると、表現形成の早い段階にある重要なトークン間依存まで失われ、特に生成・推論課題で品質が大幅に悪化する。HARP（High-層 注意機構 枝刈り with Rescaling）は、高い層ほどトークン表現が類似し、注意によるトークンの識別が弱くなるという仮説を設計の出発点にする。
+
+- **2025-07 · [CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs](2025-2507.06087-core-enhancing-metacognition-with-label-free-self-evaluation-in-lrms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論特化型言語モデルは、難しい問題を解くために多数の中間ステップを生成する。CoRE-Evalは、この「考えすぎ」を出力文章中の特定語句や正解ラベルに依存せずに検出する推論時の制御方式である。数学ベンチマークの一部では正答率と長さが同時に改善したが、すべてのモデル・課題で精度が上がったわけではない。
 
 - **2025-07 · [Characterizing State Space Model and Hybrid Language Model Performance with Long Context](2025-2507.12442-characterizing-state-space-model-and-hybrid-language-model-performance-w.md)**  
   実装：[✓](https://github.com/sapmitra/ssm-scope) ・ リポジトリ内被引用：0  
