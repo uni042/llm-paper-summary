@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T19:00:21.087703+00:00",
+  "generated_at": "2026-10-27T19:45:12.985201+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -146,50 +146,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md",
-      "canonical_id": "arXiv:2411.01818",
-      "title": "Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference",
-      "file_bytes": 15513,
-      "source_sha256": "a3893eabf5a15386b31a6ca0fe61eb70a7521287a69b99c154824e5730cbfa58",
-      "source_git_blob_sha": "8a4e3cdf541ad4138feb5047a8ec19404c5c4df4",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.787526,
-      "quality_metrics": {
-        "body_chars": 4462,
-        "method_chars": 1651,
-        "evaluation_chars": 781,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.8% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2509.01190-efficient-large-language-models-with-zero-shot-adjustable-acceleration.md",
-      "canonical_id": "arXiv:2509.01190",
-      "title": "Efficient Large Language Models with Zero-Shot Adjustable Acceleration",
-      "file_bytes": 15537,
-      "source_sha256": "8464361bfe37ad83f05361095ce620ef1b6a70d7970455923954056c05028603",
-      "source_git_blob_sha": "b91f9c8ef357c29262e785f09ad2b840542a2340",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.924555,
-      "quality_metrics": {
-        "body_chars": 4076,
-        "method_chars": 1342,
-        "evaluation_chars": 837,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
       "canonical_id": "arXiv:2307.03738",
       "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
@@ -264,6 +220,50 @@
         "body_chars": 4224,
         "method_chars": 1598,
         "evaluation_chars": 1157,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md",
+      "canonical_id": "arXiv:2411.01818",
+      "title": "Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference",
+      "file_bytes": 17305,
+      "source_sha256": "79c724619a6c8319f67b1eb827536bd083f3768e382cbf5cba1ccaf8d22613ee",
+      "source_git_blob_sha": "fb19aad06e70d0984dff20a5182abeac9d33593a",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.787526,
+      "quality_metrics": {
+        "body_chars": 4462,
+        "method_chars": 1651,
+        "evaluation_chars": 781,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 78.8% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 78.8% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2509.01190-efficient-large-language-models-with-zero-shot-adjustable-acceleration.md",
+      "canonical_id": "arXiv:2509.01190",
+      "title": "Efficient Large Language Models with Zero-Shot Adjustable Acceleration",
+      "file_bytes": 17622,
+      "source_sha256": "dfa080fb205654a1540b64979c8ef9e4309beb641ee27b301750132c9cce8e04",
+      "source_git_blob_sha": "a9c80e5443d47eb783ced4231341664054110123",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.924555,
+      "quality_metrics": {
+        "body_chars": 4076,
+        "method_chars": 1342,
+        "evaluation_chars": 837,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
