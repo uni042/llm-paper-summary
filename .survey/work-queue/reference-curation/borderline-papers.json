@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-27T09:50:11+00:00",
-  "record_count": 5362,
+  "updated_at": "2026-10-27T12:45:34+00:00",
+  "record_count": 5364,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83122,6 +83122,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers"
+    },
+    "arXiv:2510.03151": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.03151",
+      "identity_tokens": [
+        "arXiv:2510.03151"
+      ],
+      "reason": "原著は入力空間を多数の領域へ分割し、各領域に定数予測器を割り当てる回帰用ZC-1SMoEの近似誤差・推定誤差の理論である。expert当たりの計算を不要にする発想は疎MoEに間接的関連があるが、Transformer層のLLM実装、GPU推論速度、メモリ転送、サービング評価は中心課題ではない。",
+      "first_checked_at": "2026-10-27T12:45:33+00:00",
+      "last_checked_at": "2026-10-27T12:45:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mixture of Many Zero-Compute Experts: A High-Rate Quantization Theory Perspective"
+    },
+    "arXiv:2510.15425": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.15425",
+      "identity_tokens": [
+        "arXiv:2510.15425"
+      ],
+      "reason": "原著の中心はViT型の画像分類Transformerの分岐構造と逐次的学習であり、CIFAR-10/100、Fashion-MNISTの精度およびFairScaleとの多GPU比較が主な実証である。Transformer推論並列化との間接的関連はあるが、自己回帰LLMのデコード、KVキャッシュ、LLMサービングの直接評価がない。",
+      "first_checked_at": "2026-10-27T12:45:34+00:00",
+      "last_checked_at": "2026-10-27T12:45:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "TeamFormer: Shallow Parallel Transformers with Progressive Approximation"
     }
   }
 }
