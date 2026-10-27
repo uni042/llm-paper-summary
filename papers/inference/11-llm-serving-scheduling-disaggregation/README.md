@@ -1719,7 +1719,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：612  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：613  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1791,7 +1791,7 @@
   正確な生成長を当てる代わりに「どの要求が相対的に短いか」を学習し、その順位で連続バッチ処理を並べ替える。OPT-125M級の補助予測器、ListMLE、要求飢餓を防ぐ優先度昇格を組み合わせ、先着順より最短ジョブ優先に近い配信を実現する。
 
 - **2024-04 · [A Survey on Efficient Inference for Large Language Models](2024-2404.14294-a-survey-on-efficient-inference-for-large-language-models.md)**  
-  実装：✓ ・ リポジトリ内被引用：66  
+  実装：✓ ・ リポジトリ内被引用：67  
   根本原因を巨大なモデルサイズ、系列長に対して二乗に増える自己注意、逐次的な自己回帰復号へ分け、それぞれが計算量、メモリアクセス量、メモリ容量を通じて遅延、スループット、ストレージ、energyへ波及すると整理する。対策taxonomyはデータ層、モデル層、システム層の3階層である。
 
 - **2024-04 · [Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction](2024-2404.08509-ssjf.md)**  
@@ -1973,7 +1973,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1429  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1430  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
