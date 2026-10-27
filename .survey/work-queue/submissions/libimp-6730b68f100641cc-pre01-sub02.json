@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs",
+      "source_url": "https://arxiv.org/abs/2510.26843",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has become a widely adopted as an effective technique for lossless inference acceleration when deploying large language models (LLMs). While on-the-fly self-speculative methods offer seamless integration and broad utility, they often fall short of the speed gains achieved by methods relying on specialized training. Cascading a hierarchy of draft models promises further acceleration and flexibility, but the high cost of training multiple models has limited its practical application. In this paper, we propose a novel Cascade Adaptive Self-Speculative Decoding (CAS-Spec) method which constructs speculative draft models by leveraging dynamically switchable inference acceleration (DSIA) strategies, including layer sparsity and activation quantization. Furthermore, traditional vertical and horizontal cascade algorithms are inefficient when applied to self-speculative decoding methods. We introduce a Dynamic Tree Cascade (DyTC) algorithm that adaptively routes the multi-level draft models and assigns the draft lengths, based on the heuristics of acceptance rates and latency prediction. Our CAS-Spec method achieves state-of-the-art acceleration compared to existing on-the-fly speculative decoding methods, with an average speedup from $1.1\\times$ to $2.3\\times$ over autoregressive decoding across various LLMs and datasets. DyTC improves the average speedup by $47$\\% and $48$\\% over cascade-based baseline and tree-based baseline algorithms, respectively. CAS-Spec can be easily integrated into most existing LLMs and holds promising potential for further acceleration as self-speculative decoding techniques continue to evolve.",
+      "identifiers": [
+        "SemanticScholar:ffe88b42b31e08608d9ec50abfdfbf416a92f1d5"
+      ],
+      "semantic_scholar_id": "ffe88b42b31e08608d9ec50abfdfbf416a92f1d5",
+      "canonical_id": "arXiv:2510.26843",
+      "arxiv_id": "2510.26843",
+      "doi": "10.48550/arXiv.2510.26843",
+      "authors": [
+        "Zhiyuan Ning",
+        "Jia-Wei Shao",
+        "Ruge Xu",
+        "Xin-Fei Guo",
+        "Jun Zhang",
+        "Chi Zhang",
+        "Xue-Long Li"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 362,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "arXiv一次要旨では層の疎化と活性量子化で切替可能な複数段ドラフトを作り、受理率と遅延予測に応じてドラフト経路・長さを選ぶDynamic Tree Cascadeを提案。専用ドラフトの追加学習なしでLLM自己投機的復号を1.1〜2.3倍加速し、既存cascade/tree方式より平均47〜48%の改善を報告する推論高速化研究。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.716",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:104937b4a8920a3f4e17791184546410c18c7d14"
+      ],
+      "semantic_scholar_id": "104937b4a8920a3f4e17791184546410c18c7d14",
+      "doi": "10.18653/v1/2025.findings-emnlp.716",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.716",
+      "authors": [
+        "Yunhai Hu",
+        "Zining Liu",
+        "Zhenyuan Dong",
+        "Tianfan Peng",
+        "Bradley McDanel",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 483,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "ACL Anthologyの一次要旨では、自己回帰モデルの逐次依存を緩和する生成・修正枠組みを、n-gramからドラフトモデルまでの生成法と単一パス検証・反復修正に分類し、計算環境別の実装・配備も比較する。投機的復号と生成の実行システムを直接扱う体系的サーベイであり対象範囲。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.06519",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is increasingly limited by the memory and bandwidth cost of KV caches, yet aggressive compression can remove the layer-specific evidence needed for retrieval and multi-step reasoning. We introduce FreqDepthKV, an inference-time cache compression method that factorizes adjacent-layer KV states into shared low-frequency depth components and sparse high-frequency residuals. A lightweight online probe assigns attention heads to shared-depth, residual-depth, or exact cache modes according to their contribution to reconstruction-sensitive attention logits, allowing the compression policy to adapt to prompt structure without retraining. Across long-context question answering, needle retrieval, summarization, and code generation benchmarks, FreqDepthKV preserves task accuracy under substantially smaller cache budgets. With a 32k-token prefill window, FreqDepthKV reaches 58.3 Exact Match, 63.0 F1, 32.5 ROUGE-L, and 48.1 pass@1, closely matching full KV while outperforming prior compressed-cache methods. It also improves decoding throughput to 70.4 tokens/s, reduces TTFT to 2.06 seconds, and lowers peak KV memory to 6.2 GB, achieving a 3.9x effective compression ratio.",
+      "identifiers": [
+        "SemanticScholar:7753d8c9134c4ca8151e51f9aacedab9434b1f66"
+      ],
+      "semantic_scholar_id": "7753d8c9134c4ca8151e51f9aacedab9434b1f66",
+      "canonical_id": "arXiv:2607.06519",
+      "arxiv_id": "2607.06519",
+      "doi": "10.48550/arXiv.2607.06519",
+      "authors": [
+        "Anna Córdoba",
+        "Adam Puente Tercero",
+        "Nerea Angulo Hijo",
+        "Mar Linares Tercero",
+        "J. Barrientos",
+        "Ainhoa Miranda",
+        "Jesús Olivera"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨では隣接層のKV状態を深さ方向の低周波共有成分と高周波残差へ分解し、オンラインの軽量プローブで注意ヘッドごとに共有・残差・非圧縮を切替える。32K文脈でKVメモリ6.2GB、実効3.9倍圧縮、復号70.4 token/sを報告し、長文脈推論のメモリ帯域と容量を直接改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Context-Aware Autoscaling for Cost-Efficient Large Language Model Inference With Prefix Cache Integration",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3677249",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although granular resource management has been made possible by the architectural shift to Prefill-Decode (PD) disaggregation in Large Language Model (LLM) serving, it is still difficult to maintain strict Service Level Objectives (SLOs) under bursty traffic. Modern autoscaling frameworks, like TokenScale, balance resources using fine-grained “velocity” metrics, but they have a significant drawback: cache blindness. These systems over-provision during spikes in high-locality traffic because they model instance throughput as a static hardware constant, which ignores the enormous effective throughput gains offered by prefix caching (e.g., RadixAttention). Furthermore, they often overlook the cost-efficiency opportunities inherent in heterogeneous GPU clusters. We present AdaptiveScale, a context-aware autoscaling framework that connects resource elasticity and memory locality. Three new mechanisms are suggested by AdaptiveScale: 1) Effective Token Velocity ( $V_{eff}$ ), a dynamic metric that incorporates real-time Radix-tree telemetry to amplify scaling logic based on context reuse; 2) Heterogeneity-Aware Tiered Scheduling, which optimizes convertible decoder selection by pinning cost-effective nodes (like L40S) to decoding while routing prefill bursts to compute-dense GPUs (like H100); and 3) Elastic State Preservation, a mechanism that uses RDMA to zero-copy offload KV-cache states during role-switching, thereby removing the latency penalties associated with cache eviction. AdaptiveScale was implemented on vLLM, and it was assessed using production traces from OpenAI and Azure. Our results demonstrate that AdaptiveScale reduces GPU operational costs by 28% compared to state-of-the-art velocity-based scalers in high-locality workloads, while consistently maintaining 99% SLO attainment.",
+      "identifiers": [
+        "SemanticScholar:62b577ec192e84f2bb2143ea1e43c23dc81bf3e3"
+      ],
+      "semantic_scholar_id": "62b577ec192e84f2bb2143ea1e43c23dc81bf3e3",
+      "doi": "10.1109/ACCESS.2026.3677249",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3677249",
+      "authors": [
+        "Seyed Hossein Ahmadpanah",
+        "A. Sahafi",
+        "S. Erfani"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Xploreの一次要旨ではAdaptiveScaleをvLLM上に実装し、Radix木の接頭辞再利用状況を組み込むEffective Token Velocity、H100とL40Sの異種GPUへのprefill/decode配分、RDMAでのKV状態保持を統合。OpenAI/Azureトレースを用いた高再利用負荷でGPU運用費28%削減と99% SLO達成を報告し、推論サービングの直接的なスケジューリング貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6730b68f1006",
+    "round": "libimp-6730b68f100641cc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6730b68f100641cc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6730b68f100641cc-pre01.json",
+    "receipt": "sha256:194330dd5db9bbaba421c2d9e36abf3b59b4c3de4bf30a71f18a2b7f93bc99eb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6730b68f1006",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

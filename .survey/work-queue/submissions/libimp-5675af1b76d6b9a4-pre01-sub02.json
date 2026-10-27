@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Astro: Activation-guided Structured Regularization for Outlier-Robust LLM Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2602.07596",
+      "year": 2026,
+      "published": "2026-02-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only post-training quantization (PTQ) is crucial for efficient Large Language Model (LLM) deployment but suffers from accuracy degradation caused by weight and activation outliers. Existing mitigation strategies often face critical limitations: they either yield insufficient outlier suppression or incur significant deployment inefficiencies, such as inference latency, heavy preprocessing, or reliance on complex operator fusion. To resolve these limitations, we leverage a key insight: over-parameterized LLMs often converge to Flat Minima, implying a vast equivalent solution space where weights can be adjusted without compromising accuracy. Building on this, we propose Astro, an Activation-guided Structured Regularization framework designed to suppress the negative effects of outliers in a hardware-friendly and efficient manner. Leveraging the activation-guided regularization objective, Astro actively reconstructs intrinsically robust weights, aggressively suppressing weight outliers corresponding to high-magnitude activations without sacrificing model accuracy. Crucially, Astro introduces zero inference latency and is orthogonal to mainstream quantization methods like GPTQ. Extensive experiments show that Astro achieves highly competitive performance; notably, on LLaMA-2-7B, it achieves better performance than complex learning-based rotation methods with almost 1/3 of the quantization time.",
+      "identifiers": [
+        "SemanticScholar:fe6f397420edc51fbb4533be2713b3b420f4ea3e"
+      ],
+      "semantic_scholar_id": "fe6f397420edc51fbb4533be2713b3b420f4ea3e",
+      "canonical_id": "arXiv:2602.07596",
+      "arxiv_id": "2602.07596",
+      "doi": "10.48550/arXiv.2602.07596",
+      "authors": [
+        "Xi Chen",
+        "Ming Li",
+        "Junxi Li",
+        "Chang-Sheng Li",
+        "Peisong Wang",
+        "Lizhong Ding",
+        "Ye Yuan",
+        "Guo-Ren Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨では重み・活性外れ値が低ビット精度を損なう問題に対し、活性に導かれた構造化正則化で外れ値に頑健な等価重みを再構成するAstroを提案。追加推論レイテンシを発生させずGPTQ等と直交し、LLaMA-2-7Bでは学習型回転方式より短い量子化時間で品質を改善する。推論向け重み量子化の直接的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Salca: A Sparsity-Aware Hardware Accelerator for Efficient Long-Context Attention Decoding",
+      "source_url": "https://arxiv.org/abs/2604.24820",
+      "year": 2026,
+      "published": "2026-04-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long contexts improve capabilities of large language models but pose serious hardware challenges: compute and memory footprints grow linearly with sequence length. Particularly, the decoding phase continuously accesses massive KV cache, dramatically increasing bandwidth and computing pressure. Existing accelerators are primarily designed and evaluated for short contexts. They suffer from significant performance degradation when processing long contexts. To bridge this gap, we identify the major bottleneck and present a hardware accelerator for long context attention decoding via hardware-software co-design. On the software side, we propose dual-compression dynamic sparse attention. It combines ultra-low-precision quantization with feature sparsity to minimize prediction overhead. A hardware-friendly approximate Top-K selection further reduces filter complexity from $O(n \\log k)$ to $O(n)$. On the hardware side, we deeply optimize compute and memory access to tackle bottlenecks from intricate interplay between sparse attention and long contexts, and establish a performance model to derive the optimal co-design scheme. The resulting hardware adopts a fully pipelined parallel architecture and achieves $O(n)$ efficiency even for long sequences. Experiments show that our design delivers $3.82\\times$ speedup and $74.19\\times$ energy efficiency over A100. Compared to SOTA accelerators, this is the first ASIC accelerator that efficiently supports long context inference, with at least $3.5\\times$ higher throughput and $2.08\\times$ better energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:9a083b5765bf219aeb241c17d1ee25287cf7723a"
+      ],
+      "semantic_scholar_id": "9a083b5765bf219aeb241c17d1ee25287cf7723a",
+      "canonical_id": "arXiv:2604.24820",
+      "arxiv_id": "2604.24820",
+      "doi": "10.48550/arXiv.2604.24820",
+      "authors": [
+        "Wang Fan",
+        "Wei Cao",
+        "Xionghui Zha",
+        "Ke Ma",
+        "Mingqian Sun",
+        "Jialin Chen",
+        "Feng-Zhe Zhang",
+        "Fan Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨では長文脈decodeのKV帯域負担を削るため、超低精度量子化と特徴疎性による注意候補絞込み、O(n)近似Top-Kを組み合わせ、ASICの演算・メモリアクセスを共同設計するSalcaを提案。A100比3.82倍速度・74.19倍エネルギー効率、既存アクセラレータ比3.5倍以上のスループットを報告する推論ハードウェア研究。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Squeezing the Cache, Preserving the Truth: Monotonic Equipotential Allocation with Geodesia-KV",
+      "source_url": "https://arxiv.org/abs/2608.23599",
+      "year": 2026,
+      "published": "2026-08-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Current assessment of KV-cache compression performance confuses resident bits with read bandwidth and is affected by the artifacts of chunked teacher-forcing. We present Geodesia-KV, a family of training-free KV cache policies based on monotonic block-wise precision allocation, exact rate-distortion residuals, and query-sparse reading, enabling proper hardware-ready compression. With proper separation of resident and read bits and causal evaluation, we show that Geodesia-KV significantly outperforms other approaches. Specifically, on WikiText-2 with 16k context, the 5-bit operating point of Geodesia-KV results in lower perplexity at lower bitrate than KIVI-4 on Qwen. In addition, our compressed-Quest version delivers improved perplexity and reduces resident (9.83 vs 16.25 bits/value) and read rates (1.95 vs 2.32 bits/value) over baseline sparse methods on PG-19. As Geodesia-KV is implemented as native GeodesiaKVCacheManager plug-in of vLLM, Geodesia-KV fully removes the need for dense cache residency via monotonic bit demotion. With the full consumer hardware evaluation, Geodesia-KV leads to 1M-token context generation on a single 16 GiB GPU with up to 71.7% peak VRAM savings on all leading architectures (Qwen, Llama, DeepSeek).",
+      "identifiers": [
+        "SemanticScholar:c5d198ff2b28af0d1ae14151011463e80506b257"
+      ],
+      "semantic_scholar_id": "c5d198ff2b28af0d1ae14151011463e80506b257",
+      "canonical_id": "arXiv:2608.23599",
+      "arxiv_id": "2608.23599",
+      "authors": [
+        "V. Dentamaro",
+        "Pancrazio Auteri",
+        "Giuseppe Pirlo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 69,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではKV圧縮の常駐ビット数と実際に読み出すビット数を分離し、ブロックごとの単調な精度低下、厳密なrate-distortion残差、クエリ依存疎読みを組み合わせるGeodesia-KVを提案。vLLMのKV管理プラグインとして実装し、16GiB単一GPUで1Mトークン文脈生成と最大71.7%ピークVRAM節約を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2609.16617",
+      "year": 2026,
+      "published": "2026-09-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV-cache eviction perturbs the conditional token distributions governing autoregressive generation. We investigate how first-divergence timing and subsequent token mismatch determine cumulative disagreement. We derive an exact decomposition under a specified stepwise maximal coupling: the expected mismatch fraction equals a first-mismatch contribution plus post-divergence exposure multiplied by its mismatch rate. An explicit construction over unrestricted autoregressive kernel pairs realizes the sharp interval of risks compatible with a finite divergence-aligned observation window. Residual-branch conditional Monte Carlo provides unbiased joint estimates of occurrence, occupation, and window/tail contributions, with per-replicate variance dominance for total token loss. Complete trajectories from Meta-Llama-3.1-8B-Instruct and Qwen2.5-7B-Instruct show that SnapKV at 50% retention enters divergence later and less often than SnapKV-512 or recent-token retention with the same 50% prompt-cache budget, while post-divergence total variation (TV) remains high. In an exploratory analysis of 288 documents, post-divergence exposure accounts for 85-90% of four aggregate mismatch gaps. On 288 independent documents at 90% retention, prespecified comparisons show higher branch-aligned TV in the late than in the early window in both models.",
+      "identifiers": [
+        "SemanticScholar:4aa4147c5e56c5b8bd6add37b2a41dc22d40b3f4"
+      ],
+      "semantic_scholar_id": "4aa4147c5e56c5b8bd6add37b2a41dc22d40b3f4",
+      "canonical_id": "arXiv:2609.16617",
+      "arxiv_id": "2609.16617",
+      "authors": [
+        "Xin-Yue Luo",
+        "Fei Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではKVキャッシュ削除が生成列を元モデルから乖離させる時点と、その後の不一致の持続を分離する確率的分解・条件付きMonte Carlo推定を導入。Llama-3.1-8B/Qwen2.5-7BでSnapKVと最近トークン保持を比較し、乖離後の曝露が累積不一致の大部分を説明することを検証する。新規削除器ではないが推論KV最適化の品質測定技術に直接貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5675af1b76d6",
+    "round": "libimp-5675af1b76d6b9a4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5675af1b76d6b9a4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5675af1b76d6b9a4-pre01.json",
+    "receipt": "sha256:52698f4841bc0b84a5db82c39ebd72a600dceb66169e47f7fa128c8d61aca168"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5675af1b76d6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

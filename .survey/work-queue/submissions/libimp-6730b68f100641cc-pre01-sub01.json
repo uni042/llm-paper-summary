@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2603.04800",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) with computational invariance for Large Language Models~(LLMs) have demonstrated remarkable advances, however, their application to Multimodal Large Language Models~(MLLMs) presents substantial challenges. In this paper, we analyze SmoothQuant as a case study and identify two critical issues: Smoothing Misalignment and Cross-Modal Computational Invariance. To address these issues, we propose Modality-Aware Smoothing Quantization (MASQuant), a novel framework that introduces (1) Modality-Aware Smoothing (MAS), which learns separate, modality-specific smoothing factors to prevent Smoothing Misalignment, and (2) Cross-Modal Compensation (CMC), which addresses Cross-modal Computational Invariance by using SVD whitening to transform multi-modal activation differences into low-rank forms, enabling unified quantization across modalities. MASQuant demonstrates stable quantization performance across both dual-modal and tri-modal MLLMs. Experimental results show that MASQuant is competitive among the state-of-the-art PTQ algorithms. Source code: https://github.com/alibaba/EfficientAI.",
+      "identifiers": [
+        "SemanticScholar:68c0aeb491a6764e02da77b164e030b34a996a76"
+      ],
+      "semantic_scholar_id": "68c0aeb491a6764e02da77b164e030b34a996a76",
+      "canonical_id": "arXiv:2603.04800",
+      "arxiv_id": "2603.04800",
+      "doi": "10.48550/arXiv.2603.04800",
+      "authors": [
+        "Lu-Lu Hu",
+        "Wenhua Xiao",
+        "Xin Chen",
+        "Xinhua Xu",
+        "Bo-Wen Xu",
+        "Kunrao Li",
+        "Yong-Liang Tao"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 236,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではMLLMのSmoothQuantにおけるモダリティ間の平滑化不整合と計算不変性の破れを解析し、モダリティ別平滑化係数とSVD白色化による低ランクの交差モダリティ補償を導入。二・三モダリティのモデルで後学習量子化性能を改善するため、マルチモーダルLLM推論向け量子化技術として収録対象。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LATMiX: Learnable Affine Transformations for Microscaling Quantization of LLMs",
+      "source_url": "https://arxiv.org/abs/2602.17681",
+      "year": 2026,
+      "published": "2026-02-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is a widely used approach for reducing the memory and compute costs of large language models (LLMs). Recent studies have shown that applying invertible transformations to activations can significantly improve quantization robustness by reducing activation outliers; however, existing approaches are largely restricted to rotation or Hadamard-based transformations. Moreover, most studies focused primarily on traditional quantization schemes, whereas modern hardware increasingly supports the microscaling (MX) data format. Attempts to combine both showed severe performance degradation, leading prior work to introduce assumptions on the transformations. In this work, we take a complementary perspective. First, we provide a theoretical analysis of transformations under MX quantization by deriving a bound on the quantization error. Our analysis emphasizes the importance of accounting for both the activation distribution and the underlying quantization structure. Building on this analysis, we propose LATMiX, a method that generalizes outlier reduction to learnable invertible affine transformations optimized using standard deep learning tools. Experiments show consistent improvements in average accuracy for MX low-bit quantization over strong baselines on a wide range of zero-shot benchmarks, across multiple model sizes.",
+      "identifiers": [
+        "SemanticScholar:f984a250728333a327e02eec814d258a4aef5370"
+      ],
+      "semantic_scholar_id": "f984a250728333a327e02eec814d258a4aef5370",
+      "canonical_id": "arXiv:2602.17681",
+      "arxiv_id": "2602.17681",
+      "doi": "10.48550/arXiv.2602.17681",
+      "authors": [
+        "Ofir Gordon",
+        "Lior Dikstein",
+        "Arnon Netzer",
+        "Idan Achituve",
+        "H. Habi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 265,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨では、MX形式の低ビット量子化で活性値の外れ値と量子化構造を同時に考慮する誤差境界を導き、学習可能な可逆アフィン変換で外れ値を抑えるLATMiXを提案。複数規模のLLMでMX低ビットのゼロショット精度を改善し、推論向け数値形式の量子化を直接最適化する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2607.25291",
+      "year": 2026,
+      "published": "2026-07-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic cost of self-attention makes long-context inference prohibitively expensive, and proxy-based block-sparse attention has become a practical remedy. Existing methods typically rely on a proxy to predict a binary sparse mask and a kernel to consume this mask and perform sparse attention computation. Such an approach is effective under moderate budgets. However, as the budget tightens, the estimated proxy inevitably drops some salient blocks, while the kernel can only apply the sparse mask mechanically, leading to an evident drop in model accuracy. We propose CoSA, a two-stage training-free Sparse Attention under proxy-kernel CO-design, which couples a Kernel-Aware Proxy (KAP) with an Ordered-Skipping Kernel (OSK). In the first stage, the KAP selects blocks under a moderate budget and produces an ordered mask that prescribes the order in which KV pages are visited in the kernel inner loop. In the second stage, the OSK applies this mask and skips more blocks under a tightened budget given online-softmax statistics. Across mainstream LLM backbones and long-context benchmarks, CoSA attains higher accuracy at lower budgets. Impressively, CoSA achieves a 4.93$\\times$ attention speedup and reduces end-to-end Time-to-First-Token by 2.53$\\times$ under a context length of 128K with negligible performance degradation. Code is available at https://github.com/Tencent/AngelSlim.",
+      "identifiers": [
+        "SemanticScholar:341b697a1dbb74ef0be267b518ac81ccbc454bc1"
+      ],
+      "semantic_scholar_id": "341b697a1dbb74ef0be267b518ac81ccbc454bc1",
+      "canonical_id": "arXiv:2607.25291",
+      "arxiv_id": "2607.25291",
+      "doi": "10.48550/arXiv.2607.25291",
+      "authors": [
+        "Yufei Xue",
+        "Lin Niu",
+        "Hong Liu",
+        "Si-Ran Liu",
+        "Han-Yong Shao",
+        "Wei Liu",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Jun Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 91,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではKernel-Aware Proxyが重要なKVブロックを実行順序付きマスクにし、Ordered-Skipping Kernelがオンラインsoftmax統計に基づきさらにブロックを省く。128K文脈で注意演算4.93倍、エンドツーエンドTTFT2.53倍を報告し、長文脈LLM推論の疎注意カーネルを直接改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
+      "source_url": "https://arxiv.org/abs/2608.00528",
+      "year": 2026,
+      "published": "2026-08-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growth of context window lengths in Large Language Models (LLMs) significantly enhances their long-context capabilities but incurs prohibitive memory costs due to the Key-Value (KV) cache. Although low-rank compression of KV cache is a promising remedy, existing methods face a dilemma: offline approaches depend on external calibration data, whereas online approaches incur substantial compute for full-prompt decomposition and reconstruction. In this paper, we propose S$^4$R, which builds low-rank subspaces from selectively sampled tokens and computes attention over a sparsely reconstructed KV representation. S$^4$R uses prompt-aware initialization to build initial key/value bases from a representative prompt subset, trading off calibration-data dependence against prefilling cost. Because fully reconstructing the cache at every decoding step is prohibitively expensive and hurts throughput, we further adopt sparse reconstruction to retain only informative positions during decoding. Extensive experiments on LongBench and RULER with Llama and Qwen model families show that S$^4$R achieves up to 5$\\times$ KV compression with near full-cache accuracy, combining the efficiency of fixed compression with the adaptability of prompt-dependent methods.",
+      "identifiers": [
+        "SemanticScholar:d684f97649eaa7a789b97fcbd0e21fed8ec1f49d"
+      ],
+      "semantic_scholar_id": "d684f97649eaa7a789b97fcbd0e21fed8ec1f49d",
+      "canonical_id": "arXiv:2608.00528",
+      "arxiv_id": "2608.00528",
+      "authors": [
+        "Jialong Han",
+        "You Wu",
+        "Kewei Tu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨では、長文脈KVキャッシュの低ランク部分空間をプロンプトから選択したトークンで初期化し、復号時には重要位置のみを疎に再構成するS4Rを提案。校正データ依存と全プロンプト分解・全KV復元の負担を同時に抑え、LongBench/RULERで最大5倍圧縮と精度維持を報告するため、推論時メモリ管理の直接的技術貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+      "source_url": "https://arxiv.org/abs/2608.27339",
+      "year": 2026,
+      "published": "2026-08-27",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block drafters propose several tokens in one forward pass, before earlier target tokens are realised. Their rejection mixes two losses: missing within-block path information and imperfect modelling of observable information. Accepted length cannot distinguish them. We separate the two with an information floor, the minimum expected rejection at a specified conditioning order; rejection above this floor is the model gap. Measurements across four domains and four open-weight targets, plus floor estimates on a frontier API target, yield three findings. First, the all-parallel floor reaches $0.286$ at the final slot on Qwen3-4B, limiting even the best proposal to $71\\%$ per-slot acceptance. Second, one realised token removes $86$--$100\\%$ of this floor, a locality also recovered by an independent mutual-information analysis. Third, current drafters remain far above their floors: the final-slot model gap accounts for $43$--$64\\%$ of DFlash rejection and $85$--$92\\%$ of DSpark's oracle-conditioned rejection. Guided by this separation of short-range conditioning from proposal quality, we replace a context-independent predecessor correction with a prefix-attention head that reads committed context conditional on the predecessor. With supporting backbone components, the resulting Qwen3-4B drafter improves mean serving accepted length by $3.93\\%$ over the released DSpark checkpoint across nine tasks, without increasing the conditioning order. Code and data: https://github.com/tie-pilot-qxw/specfloor; drafter checkpoints: https://huggingface.co/TIE-Pilot/dspark-attnconv-block7-qwen3-4b.",
+      "identifiers": [
+        "SemanticScholar:3cf3cc0971b3753f5f8789e9091937a76fd9b9c1"
+      ],
+      "semantic_scholar_id": "3cf3cc0971b3753f5f8789e9091937a76fd9b9c1",
+      "canonical_id": "arXiv:2608.27339",
+      "arxiv_id": "2608.27339",
+      "authors": [
+        "Xin-Wei Qiang",
+        "Xiang Fang",
+        "Changli Chen",
+        "Zai-Feng Pan",
+        "Yue Guan",
+        "Yu-Fei Ding"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨では並列ブロックドラフトの拒否を、先行トークン未確定による情報的下限と、観測可能情報のモデル化不足に分解。Qwen3-4B最終スロットの全並列情報床0.286、1トークン条件付けでその86〜100%が除去されることを示し、前置トークンを読むprefix-attentionヘッドを設計。投機的復号のドラフト機構と受理率の改善を直接対象とする。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6730b68f1006",
+    "round": "libimp-6730b68f100641cc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6730b68f100641cc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6730b68f100641cc-pre01.json",
+    "receipt": "sha256:194330dd5db9bbaba421c2d9e36abf3b59b4c3de4bf30a71f18a2b7f93bc99eb"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6730b68f1006",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

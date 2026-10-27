@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression with Oja's Rule",
+      "source_url": "https://arxiv.org/abs/2509.21623",
+      "year": 2025,
+      "published": "2025-09-25",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The expanding long-context capabilities of large language models are constrained by a significant memory bottleneck: the key-value (KV) cache required for autoregressive generation. This bottleneck is substantial; for instance, a Llama-3.1-8B model processing a 32K-token prompt at a batch size of 4 requires approximately 16GB for its KV cache, a size exceeding the model's weights. While KV-cache compression via low-rank projection is a promising direction, existing methods rely on a static, offline-learned subspace that performs poorly under data distribution shifts. To overcome these limitations, we introduce OjaKV, a novel framework that integrates a strategic hybrid storage policy with online subspace adaptation. First, OjaKV recognizes that not all tokens are equally important for compression; it preserves the crucial first and most recent tokens in full-rank, maintaining high-fidelity anchors for attention. Second, for the vast majority of intermediate tokens, it applies low-rank compression by incrementally adapting the projection basis using Oja's algorithm for online principal component analysis. This adaptation involves a comprehensive update during prompt prefilling and lightweight periodic updates during decoding, ensuring the subspace remains aligned with the evolving context. Crucially, our framework is fully compatible with modern attention modules like FlashAttention. Experiments demonstrate that OjaKV maintains or even improves zero-shot accuracy at high compression ratios. In particular, OjaKV achieves its strongest gains on very long-context benchmarks that require complex reasoning, highlighting the importance of online subspace adaptation in dynamically tracking context shifts. These results establish our hybrid framework as a practical, plug-and-play solution for memory-efficient long-context inference without requiring model fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:fc0515a2865b9ffc11792c90cafa6a7fc068694b"
+      ],
+      "semantic_scholar_id": "fc0515a2865b9ffc11792c90cafa6a7fc068694b",
+      "canonical_id": "arXiv:2509.21623",
+      "arxiv_id": "2509.21623",
+      "doi": "10.48550/arXiv.2509.21623",
+      "authors": [
+        "Yuxuan Zhu",
+        "David Yang",
+        "Mohammad Mohammadi Amiri",
+        "K. Murugesan",
+        "Tejaswini Pedapati",
+        "Pin-Yu Chen"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 397,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨では先頭・直近の重要KVを高ランクで保持し、中間トークンをOja則によるオンライン主成分更新で低ランク圧縮するOjaKVを提案。prefillで部分空間を更新しdecodeでも軽量に適応、FlashAttentionとの互換性を意識し、長文脈検索・推論で精度とKV容量の交換関係を改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Revisiting Lossy Verification in Speculative Decoding: Mechanisms, Trade-offs, and Failure Modes",
+      "source_url": "https://arxiv.org/abs/2607.26627",
+      "year": 2026,
+      "published": "2026-07-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose tokens that are subsequently verified in parallel by a larger target model. Recent approaches introduce lossy verification schemes to further improve efficiency by relaxing strict distributional matching. Yet such relaxation silently rewrites the decoding distribution, and the resulting acceleration can come at the cost of unstable, sometimes severely degraded generation quality. In this work, we present a principled analysis of the distributions induced by lossy verification methods. We show that many seemingly distinct approaches differ only superficially and can be unified into two categories: truncation-based verification and collaborative verification. We further construct a diagnostic evaluation framework across curated benchmarks. For truncation-based methods, we identify a fundamental pitfall-performance can degrade significantly compared to the true truncation sampling baseline due to distributional distortion. For collaborative verification, we reveal that well-designed relaxation principles, namely overshoot suppression and supervision quality, matter far more than the linear interpolation between draft and target. Our code is available at https://github.com/ZhouYuxuanYX/Fast-HSD.",
+      "identifiers": [
+        "SemanticScholar:ca19bd8cacf1457276b077dd398d260e435ca375"
+      ],
+      "semantic_scholar_id": "ca19bd8cacf1457276b077dd398d260e435ca375",
+      "canonical_id": "arXiv:2607.26627",
+      "arxiv_id": "2607.26627",
+      "doi": "10.48550/arXiv.2607.26627",
+      "authors": [
+        "Tian-Yu Wang",
+        "Yuxuan Zhou",
+        "Heng Li",
+        "Wenbin Wang",
+        "Zi-Kai Xiao",
+        "Chun-Rui Zheng",
+        "Jun-Yuan Shang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 90,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではターゲット分布を厳密保存しない投機的復号の検証規則を、打切り型と協調型に分類し、生成分布の歪み・精度悪化を評価する。打切り型が真の打切りサンプリングより悪化する条件と、協調型でドラフト確率がターゲットを過剰に上回る危険を特定する。推論高速化に伴う品質劣化の測定・検証機構の技術研究。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Block-Sparse Attention with Semantic-Geometric Decoupled Routing",
+      "source_url": "https://arxiv.org/abs/2609.22884",
+      "year": 2026,
+      "published": "2026-09-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context inference has become a defining capability of large language models, but exact dense attention remains costly due to its quadratic scaling with sequence length. Block-sparse attention offers a hardware-friendly alternative by routing each query block to a small set of relevant key blocks, yet accurate training-free block routing remains difficult. Existing routers often pool post-RoPE token representations, which entangles semantic aggregation with RoPE-induced geometry and attenuates local positional cues through high-frequency phase cancellation. To resolve this mismatch, we propose \\textbf{Semantic-Geometric Decoupled Routing}, a training-free block routing framework that shifts semantic aggregation to the pre-RoPE space and reconstructs geometric bias with an offline structural prior and relative block distances. This decomposition yields an explicit closed-form block routing score without token-level search or post-hoc calibration. Experiments on long-context text and video tasks show that our method approaches full-attention accuracy across 4K--128K contexts, keeps routing overhead below 3.4 ms, and achieves a 5.03$\\times$ speedup over FlashAttn at a 128K context length.",
+      "identifiers": [
+        "SemanticScholar:5752396da8a2404465f6354a4e5a9e11dd728d4f"
+      ],
+      "semantic_scholar_id": "5752396da8a2404465f6354a4e5a9e11dd728d4f",
+      "canonical_id": "arXiv:2609.22884",
+      "arxiv_id": "2609.22884",
+      "authors": [
+        "Xin-Wei Long",
+        "Wei-Gao Sun",
+        "Weibo Gao",
+        "Peng-Kun Jiao",
+        "Bin Qi",
+        "Fei-Da Zhu",
+        "Yi-Ran Zhong",
+        "Steven Hoi",
+        "Bo-Wen Zhou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではRoPE適用後のブロック平均が意味特徴と位置幾何を混ぜてしまう問題に対し、RoPE前で意味を集約し、構造的事前分布と相対ブロック距離で位置バイアスを再構成する学習不要の疎注意ルーティングを提案。4K〜128Kのテキスト・動画で全注意に近い精度、128KでFlashAttention比5.03倍を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics",
+      "source_url": "https://arxiv.org/abs/2508.18736",
+      "year": 2025,
+      "published": "2025-08-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving Large Language Models (LLMs) at scale requires meeting strict Service Level Objectives (SLOs) under severe computational and memory constraints. Nevertheless, traditional caching strategies fall short: exact-matching and prefix caches neglect query semantics, while state-of-the-art semantic caches remain confined to traditional intuitions, offering little conceptual departure. Building on this, we present SISO, a semantic caching system that redefines efficiency for LLM serving. SISO introduces centroid-based caching to maximize coverage with minimal memory, locality-aware replacement to preserve high-value entries, and dynamic thresholding to balance accuracy and latency under varying workloads. Across diverse datasets, SISO delivers up to 1.71$\\times$ higher hit ratios and consistently stronger SLO attainment compared to state-of-the-art systems.",
+      "identifiers": [
+        "SemanticScholar:add0859701c539526a6b1f747861ac6e11cdb45f"
+      ],
+      "semantic_scholar_id": "add0859701c539526a6b1f747861ac6e11cdb45f",
+      "canonical_id": "arXiv:2508.18736",
+      "arxiv_id": "2508.18736",
+      "doi": "10.48550/arXiv.2508.18736",
+      "authors": [
+        "Jungwoo Kim",
+        "Minsang Kim",
+        "Jaeheon Lee",
+        "Chanwoo Moon",
+        "Heejin Kim",
+        "Taeho Hwang",
+        "Woosuk Chung",
+        "Yeseong Kim",
+        "Sung-Jin Lee"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 427,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GitHub Discovery precheckの一次書誌要旨ではLLMサービングの従来型exact/prefix/semantic cacheの限界に対し、代表点を使うcentroid-based caching、局所性を考慮した置換、動的閾値を組み合わせるSISOを提案。複数データセットでヒット率最大1.71倍とSLO達成改善を報告し、推論サービングのキャッシュ設計に直接貢献する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-75f1e54ea7c0",
+    "round": "libimp-75f1e54ea7c01a2c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-75f1e54ea7c01a2c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-75f1e54ea7c01a2c-pre01.json",
+    "receipt": "sha256:2fb779e106900ec0b6b5c7599d1e6d54fe5f32be819189e24caa6b011b44cbdf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-75f1e54ea7c0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DREAM-S: Speculative Decoding with Searchable Drafting and Target-Aware Refinement for Multimodal Generation",
+      "source_url": "https://arxiv.org/abs/2606.00535",
+      "year": 2026,
+      "published": "2026-05-30",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) has proven to be an effective technique for accelerating autoregressive generation in large language models (LLMs) however, its application to vision-language models (VLMs) remains relatively unexplored. We propose~\\textit{DREAM-S}, a novel SD framework designed specifically for fast and efficient decoding in VLMs. DREAM-S leverages a neural architecture search (NAS) framework with target-aware supernet training to automatically identify both the optimal interaction strategy between the draft and target models, and the most suitable draft model architecture for the underlying hardware implementation platform. DREAM-S additionally incorporates adaptive intermediate feature distillation, guided by attention entropy, to enable efficient draft training. Experiments on a range of well-established VLMs show that DREAM-S achieves up to a $3.85\\times$ speedup compared to standard decoding approaches and significantly outperforms existing SD baselines. The code is publicly available at: https://github.com/SAI-Lab-NYU/DREAM-S .",
+      "identifiers": [
+        "SemanticScholar:2f536b589f323eaf441f098093a9206221861504"
+      ],
+      "semantic_scholar_id": "2f536b589f323eaf441f098093a9206221861504",
+      "canonical_id": "arXiv:2606.00535",
+      "arxiv_id": "2606.00535",
+      "doi": "10.18653/v1/2026.acl-long.2177",
+      "authors": [
+        "Zining Liu",
+        "Yunhai Hu",
+        "Tian-Hua Xia",
+        "Bo Bao",
+        "E. Sather",
+        "Vithursan Thangarasa",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "著者の一次要旨ではVLM向け投機的復号のドラフト設計を、ターゲット認識supernet学習とハードウェア別ニューラル構造探索で最適化し、注意エントロピーに基づく中間特徴蒸留を導入するDREAM-Sを提案。複数VLMで通常復号比最大3.85倍の速度改善を報告し、マルチモーダル推論のドラフト/検証機構を直接最適化する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond Activation Alignment:The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2607.00908",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixed-precision quantization (MPQ) has become a key technique for deploying large language models under stringent memory and compute constraints. We first identify a phenomenon that we term the Perplexity Illusion: layers ranked as important by perplexity-based sensitivity show little rank correlation with those that are most influential for complex reasoning performance, with Kendall $\\tau \\approx 0$ in our analysis. We further reveal an Alignment-Diversity Tradeoff: using only target-task calibration data can degrade post-quantization performance, whereas incorporating general-domain data stabilizes sensitivity estimation and improves robustness across tasks. Based on these observations, we propose TASA (Task-Aware Sensitivity Analysis), a two-level framework that jointly optimizes calibration-data composition and mixed-precision bit allocation. Specifically, TASA searches for a calibration-data mixture using a training-free gradient-trace alignment criterion, and then aggregates perplexity and reasoning-oriented sensitivity signals to guide both inter-layer and intra-layer bit allocation. Experiments on LLaMA-3-8B and Qwen2.5-7B reveal a precision inversion: appropriately allocated 3.5-bit models can match or surpass less task-aware 4-bit baselines. At an average precision of 3.5 bits, TASA matches or outperforms several competitive 4-bit uniform baselines in aggregate accuracy, and improves over the strongest W3 baseline on GSM8K by more than 20 absolute points on LLaMA-3-8B. These results show that calibration-data composition substantially affects task-sensitive quantization, a factor underexplored in prior work.",
+      "identifiers": [
+        "SemanticScholar:aad58a7a972c0c008ae20dd9eadf4d64fde24977"
+      ],
+      "semantic_scholar_id": "aad58a7a972c0c008ae20dd9eadf4d64fde24977",
+      "canonical_id": "arXiv:2607.00908",
+      "arxiv_id": "2607.00908",
+      "doi": "10.48550/arXiv.2607.00908",
+      "authors": [
+        "Fei Wang",
+        "Chao Xue",
+        "Taoran Liu",
+        "Liping Shen",
+        "Ye Liu",
+        "Changxing Ding"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではPPLに基づく量子化感度順位と複雑な推論性能の順位が一致しない現象を解析し、汎用データと対象タスクデータの校正混合率、層間・層内ビット割当を共同最適化するTASAを提案。LLaMA-3-8B/Qwen2.5-7Bで平均3.5bitが一部4bit方式を上回る条件を報告し、推論向け混合精度圧縮を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.06694",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only quantization has become a standard approach for efficiently serving large language models (LLMs). However, existing methods fail to efficiently compress models to binary (1-bit) levels, as they either require large amounts of data and compute or incur additional storage. In this work, we propose NanoQuant, the first post-training quantization (PTQ) method to compress LLMs to both binary and sub-1-bit levels. NanoQuant formulates quantization as a low-rank binary factorization problem, and compresses full-precision weights to low-rank binary matrices and scales. Specifically, it utilizes an efficient alternating direction method of multipliers (ADMM) solver to precisely initialize latent binary matrices and scales, and then tunes the initialized parameters through a block and model reconstruction process. Consequently, NanoQuant establishes a new Pareto frontier in low-memory post-training quantization, and enables sub-1-bit compression. NanoQuant makes large-scale deployment feasible on consumer hardware. For example, it compresses Llama2-70B by 25.8$\\times$ in just 13 hours on a single H100, enabling a 70B model to operate on a consumer 8 GB GPU. Code is available at https://github.com/SamsungLabs/NanoQuant.",
+      "identifiers": [
+        "SemanticScholar:7d3c54b7732b0c5d20462985e33d8317bb00709b"
+      ],
+      "semantic_scholar_id": "7d3c54b7732b0c5d20462985e33d8317bb00709b",
+      "canonical_id": "arXiv:2602.06694",
+      "arxiv_id": "2602.06694",
+      "doi": "10.48550/arXiv.2602.06694",
+      "authors": [
+        "Hyochan Chong",
+        "DongKyu Kim",
+        "Changdong Kim",
+        "Minseop Choi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 263,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではLLM重みを低ランク二値因子とスケールへ分解し、ADMMで二値行列を初期化した後、ブロック・モデル再構成で精度を回復するNanoQuantを提案。学習後量子化で1bit以下の重み容量を目指し、Llama2-70Bを単一H100で13時間かけ25.8倍圧縮して8GB GPU上で動作可能とする、省VRAM推論への直接的圧縮貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
+      "source_url": "https://arxiv.org/abs/2609.12379",
+      "year": 2026,
+      "published": "2026-09-11",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Auto-regressive model decode is bandwidth-bound, since every weight and key/value-cache byte crosses high-bandwidth memory once per token. A megakernel is an ideal solution, but existing automatic megakernel generation approaches cannot achieve both generalization across models and correctness guarantees. We present ForgeMegakernel, which generates a per-model high-performance decode megakernel using coding agents. ForgeMegakernel pairs a universal knowledge base of ten progressive milestones with an independent mid-state test oracle. The milestones provide the megakernel's structural properties: a fine-grained instruction stream for each SM, dependency counters replacing the global synchronization, and a shared-memory buffer pool for workload balance across SMs and greater parallelism. The test oracle derives the mid-states of the megakernel and checks the performance, error and precision during the generation process, guaranteeing a correct and trustworthy forged megakernel. We evaluated ForgeMegakernel on 14 representative decoding operations across eight model families spanning 0.6B-13B parameters. The generated megakernels achieved 50.5-85.9% MBU and geometric mean speedups of 1.21x over SGLang 0.5.18 and 1.54x over a megakernel compiler under identical configurations. Inside SGLang, evaluated on GSM8K with ragged prompts, all 14 megakernels decoded faster than the SGLang engine at comparable answer accuracy.",
+      "identifiers": [
+        "SemanticScholar:a78fc774cbfbd35a989dccbc2d401e7467f6118f"
+      ],
+      "semantic_scholar_id": "a78fc774cbfbd35a989dccbc2d401e7467f6118f",
+      "canonical_id": "arXiv:2609.12379",
+      "arxiv_id": "2609.12379",
+      "authors": [
+        "Le-Shan Li",
+        "Zhui Zhu",
+        "Xiang-Long Deng",
+        "Yao-Jian Chen",
+        "Qing-Feng He",
+        "Yuxuan Li",
+        "Rong Zhao",
+        "Xu Han",
+        "Zhi-Yuan Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではLLM decode全体をGPUメガカーネルへ統合するコードエージェントの生成過程に、SMごとの命令列、依存カウンタ、共有メモリプールの10段階知識と中間状態の独立検証器を組み込む。8モデル系列・14条件でSGLang比幾何平均1.21倍、専用megakernelコンパイラ比1.54倍を報告する、推論ランタイム・GPUカーネルの直接的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ClusComp: A Simple Paradigm for Model Compression and Efficient Finetuning",
+      "source_url": "https://arxiv.org/abs/2503.13089",
+      "year": 2025,
+      "published": "2025-03-17",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) scale, model compression is crucial for edge deployment and accessibility. Weight-only quantization reduces model size but suffers from performance degradation at lower bit widths. Moreover, standard finetuning is incompatible with quantized models, and alternative methods often fall short of full finetuning. In this paper, we propose ClusComp, a simple yet effective compression paradigm that clusters weight matrices into codebooks and finetunes them block-by-block. ClusComp (1) achieves superior performance in 2-4 bit quantization, (2) pushes compression to 1-bit while outperforming ultra-low-bit methods with minimal finetuning, and (3) enables efficient finetuning, even surpassing existing quantization-based approaches and rivaling full FP16 finetuning. Notably, ClusComp supports compression and finetuning of 70B LLMs on a single A6000-48GB GPU.",
+      "identifiers": [
+        "SemanticScholar:310084396b54eeecbcc58557224a5b5b463c88a1"
+      ],
+      "semantic_scholar_id": "310084396b54eeecbcc58557224a5b5b463c88a1",
+      "canonical_id": "arXiv:2503.13089",
+      "arxiv_id": "2503.13089",
+      "doi": "10.48550/arXiv.2503.13089",
+      "authors": [
+        "Baohao Liao",
+        "Christian Herold",
+        "Seyyed Hadi Hashemi",
+        "S. Vasilev",
+        "Shahram Khadivi",
+        "C. Monz"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 589,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨では重み行列をコードブックへクラスタ化し、ブロック単位で微調整可能にするClusCompを提案。2〜4bit量子化に加え1bit圧縮の品質を改善し、単一A6000-48GBで70Bモデルの圧縮・微調整を可能とする。学習技法も含むが、最終的な低ビットモデル容量とエッジ配備を直接改善する圧縮技術が主題。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5675af1b76d6",
+    "round": "libimp-5675af1b76d6b9a4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5675af1b76d6b9a4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5675af1b76d6b9a4-pre01.json",
+    "receipt": "sha256:52698f4841bc0b84a5db82c39ebd72a600dceb66169e47f7fa128c8d61aca168"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5675af1b76d6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

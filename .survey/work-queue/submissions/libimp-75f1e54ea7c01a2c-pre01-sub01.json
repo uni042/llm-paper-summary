@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Block Sparse Flash Attention",
+      "source_url": "https://arxiv.org/abs/2512.07011",
+      "year": 2025,
+      "published": "2025-12-07",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern large language models increasingly require long contexts for reasoning and multi-document tasks, but attention's quadratic complexity creates a severe computational bottleneck. We present Block Sparse Flash Attention (BSFA), a drop-in replacement that accelerates long-context inference while preserving model quality. Unlike methods that predict importance before computing scores, BSFA computes exact query-key similarities to select the top-k most important value blocks for each query. By comparing per-block maximum scores against calibrated thresholds, we skip approximately 50% of the computation and memory transfers for pruned blocks. Our training-free approach requires only a one-time threshold calibration on a small dataset to learn the per-layer and per-head attention score distributions. We provide a CUDA kernel implementation that can be used as a drop-in replacement for FlashAttention. On Llama-3.1-8B, BSFA achieves up to 1.13x end-to-end speedup on LongBench with only a 1.1% accuracy drop, and up to 1.24x on Needle-in-a-Haystack retrieval at a 1% accuracy drop. The attention kernel itself accelerates by up to 1.38x. We compare BSFA against five recent sparse attention baselines (SpargeAttention, MInference, FlexPrefill, XAttention, and BLASST), and verify the method on Qwen2.5-7B and on A6000 and H100 GPUs. The implementation is available at https://github.com/Danielohayon/Block-Sparse-Flash-Attention.",
+      "identifiers": [
+        "SemanticScholar:131feeef2300f245a5997e0243fb89b4f038f44f"
+      ],
+      "semantic_scholar_id": "131feeef2300f245a5997e0243fb89b4f038f44f",
+      "canonical_id": "arXiv:2512.07011",
+      "arxiv_id": "2512.07011",
+      "doi": "10.48550/arXiv.2512.07011",
+      "authors": [
+        "Daniel Ohayon",
+        "Itay Lamprecht",
+        "Itay Hubara",
+        "Israel Cohen",
+        "Daniel Soudry",
+        "Noam Elata"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 324,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではQKの正確な類似度を計算してブロック別最大スコアと校正閾値を比較し、重要度の低いVブロックの計算・転送を省くBlock-Sparse FlashAttentionを提案。層・ヘッド別の閾値を少量データで一度校正し、CUDAカーネルとしてFlashAttention代替に実装。Llama-3.1-8Bで最大1.10〜1.24倍の実測推論速度改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "UniVer: A Unified Perspective for Multi-step and Multi-draft Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2605.04543",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates Large Language Models via draft-then-verify, where verification can be framed as an Optimal Transport (OT) problem. Existing approaches typically handle multi-draft and multi-step aspects in isolation, applying either flat OT to single-step drafts or per-token rejection sampling to tree-structured candidates. This separation leaves the joint regime (where multi-step dependencies meet multi-draft branching) poorly optimized, as local verification rules fail to exploit the coupling between horizontal and vertical dimensions of candidate trees. In this paper, we propose a unified perspective that casts tree-based verification as a conditional OT problem. Our key insight is that vertical dependencies can be abstracted through prefix acceptance probabilities, which act as dynamic scaling factors to actively guide horizontal draft selection. Based on this principle, we introduce UniVer, a verification algorithm that jointly optimizes across tree levels by composing local optimal transport plans under prefix constraints. We prove that UniVer remains lossless and achieves the optimal acceptance rate under the proposed conditional framework. Extensive experiments across different tasks and models demonstrate that UniVer improves acceptance length by 4.2% to 8.5% over standard recursive rejection sampling without replacement, while maintaining exact distributional alignment with the target model.",
+      "identifiers": [
+        "SemanticScholar:bb1764cda5afa823596a4675cb17e5528e7e178c"
+      ],
+      "semantic_scholar_id": "bb1764cda5afa823596a4675cb17e5528e7e178c",
+      "canonical_id": "arXiv:2605.04543",
+      "arxiv_id": "2605.04543",
+      "doi": "10.48550/arXiv.2605.04543",
+      "authors": [
+        "Yepeng Weng",
+        "Qiao Hu",
+        "T. Yairi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨では複数ドラフトと複数ステップの木状検証を条件付き最適輸送問題として定式化し、接頭辞の受理確率で各段の輸送計画を結合するUniVerを提案。ターゲット分布を厳密に保存しつつ、従来の再帰的拒否サンプリング比で受理長を4.2〜8.5%改善する投機的復号の検証アルゴリズム。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Trust the Mass: Forced Weights in KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2608.25230",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Every deployed sparse-attention or KV-cache-eviction rule keeps a subset of the keys, discards the rest, and renormalizes the attention weights over the kept set. Enumerating the exact best subset under that constraint on $168{,}192$ attention rows from five models shows that keeping the largest weights is already near-optimal, since the best subset closes only a median $2$ to $5\\%$ of the remaining gap to full attention. If selection closes this little, published margins between eviction methods must come from elsewhere, so we measure the bytes each method holds. In the shared evaluation pipeline, the strongest query-agnostic methods hold the full cache because their per-head selections are stored as masks, and only ragged per-head storage frees that memory. Enforcing a nominal budget on one fixed selection costs $14$ to $62$ benchmark points. We trace an $87.6$-point retrieval margin to rankings computed while the question is visible. ContourKV, a training-free allocator built from the dropped-mass statistic, wins $93$ of $160$ paired comparisons against that state of the art and loses $22$ at the byte count of the budget-enforcing baselines, and it ties the strongest of them.",
+      "identifiers": [
+        "SemanticScholar:6b23747eb31600d5bbb24377665e80ecc647c8c9"
+      ],
+      "semantic_scholar_id": "6b23747eb31600d5bbb24377665e80ecc647c8c9",
+      "canonical_id": "arXiv:2608.25230",
+      "arxiv_id": "2608.25230",
+      "authors": [
+        "J. Shi",
+        "Jerry Gu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではKV削除時の保持集合選択の最適性を168192注意行で検証し、上位重み保持がほぼ最適である一方、per-headマスク方式では実メモリが解放されない点を指摘。予算強制時の評価崩壊や質問可視状態でのランキングによるリークを示し、落とした注意質量に基づくContourKVを提案する。KV削除の実装・公平評価に直接貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SAB-LVLM: Significance-Aware Binarization for Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.01876",
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have achieved remarkable progress in multimodal understanding, yet their enormous parameter scale and cross-modal computation incur substantial memory and latency overhead, severely limiting real-world deployment on resource-constrained devices. Binarization offers an attractive solution by drastically reducing storage and computational costs. However, existing binarization methods neglect the varying importance of weights across different layers and modalities. This causes parameters irrelevant to downstream tasks to be unnecessarily retained, whereas modality-critical weights may not be adequately optimized, resulting in significant performance degradation. To address these challenges, we develop a novel \\underline{S}ignificance-\\underline{A}ware \\underline{B}inarization for \\underline{L}arge \\underline{V}ision-\\underline{L}anguage \\underline{M}odels (SAB-LVLM). Specifically, after constructing Hessian matrices for textual and visual inputs, we propose a spatial significance map to distinguish full-precision weights activated under a single modality from those activated across modalities. We then devise a modality-guided integration strategy to obtain the significance-aware binarization map, which measures weight significance across layers and modalities. Subsequently, this binarization map is incorporated into the binarization objective as an error reweighting term, and binarization fitting is performed through an alternating significance-weighted update scheme. Extensive experiments illustrate the superiority of our SAB-LVLM over existing binary PTQ methods under an approximately 1-bit compression constraint. Our code is accessible at https://github.com/LyuQi127/SAB_LVLM.",
+      "identifiers": [
+        "SemanticScholar:07ea75bc5c8ccc20a58d1a9d9b015168873e7fb2"
+      ],
+      "semantic_scholar_id": "07ea75bc5c8ccc20a58d1a9d9b015168873e7fb2",
+      "canonical_id": "arXiv:2607.01876",
+      "arxiv_id": "2607.01876",
+      "doi": "10.48550/arXiv.2607.01876",
+      "authors": [
+        "Qi Lyu",
+        "Jia-Hua Dong",
+        "Bai-Cheng Liu",
+        "Xu-Dong Wang",
+        "Ming-Fei Han",
+        "Yu-Lun Zhang",
+        "F. Khan",
+        "Salman H. Khan",
+        "Lian-Qing Liu",
+        "Zhi Han"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 117,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨ではテキストと画像のHessian感度から単一モダリティ・交差モダリティで重要な重みを区別し、モダリティ統合マップで量子化誤差を重み付けして交互更新するSAB-LVLMを提案。約1bitの二値化条件で従来のVLM量子化法より品質を改善し、マルチモーダル推論のメモリ容量を直接削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Constrained Decoding with Speculative Lookaheads",
+      "source_url": "https://arxiv.org/abs/2412.10418",
+      "year": 2024,
+      "published": "2024-12-09",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Constrained decoding with lookahead heuristics (CDLH) is a highly effective method for aligning LLM generations to human preferences. However, the extensive lookahead roll-out operations for each generated token makes CDLH prohibitively expensive, resulting in low adoption in practice. In contrast, common decoding strategies such as greedy decoding are extremely efficient, but achieve very low constraint satisfaction. We propose constrained decoding with speculative lookaheads (CDSL), a technique that significantly improves upon the inference efficiency of CDLH without experiencing the drastic performance reduction seen with greedy decoding. CDSL is motivated by the recently proposed idea of speculative decoding that uses a much smaller draft LLM for generation and a larger target LLM for verification. In CDSL, the draft model is used to generate lookaheads which is verified by a combination of target LLM and task-specific reward functions. This process accelerates decoding by reducing the computational burden while maintaining strong performance. We evaluate CDSL in two constraint decoding tasks with three LLM families and achieve 2.2x to 12.15x speedup over CDLH without significant performance reduction.",
+      "identifiers": [
+        "SemanticScholar:ab5f83452667357713469e27c265f62ccba99663"
+      ],
+      "semantic_scholar_id": "ab5f83452667357713469e27c265f62ccba99663",
+      "canonical_id": "arXiv:2412.10418",
+      "arxiv_id": "2412.10418",
+      "doi": "10.48550/arXiv.2412.10418",
+      "authors": [
+        "Nishanth Nakshatri",
+        "Shamik Roy",
+        "Rajarshi Das",
+        "Suthee Chaidaroon",
+        "Leonid Boytsov",
+        "Rashmi Gangadharaiah"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 687,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨では制約充足のため各トークンで高価な先読みを繰り返すCDLHを、軽量ドラフトによる先読みとターゲット・タスク報酬による検証に置き換えるCDSLを提案。3モデル系列・2制約復号タスクでCDLH比2.2〜12.15倍の推論高速化と制約性能維持を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-75f1e54ea7c0",
+    "round": "libimp-75f1e54ea7c01a2c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-75f1e54ea7c01a2c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-75f1e54ea7c01a2c-pre01.json",
+    "receipt": "sha256:2fb779e106900ec0b6b5c7599d1e6d54fe5f32be819189e24caa6b011b44cbdf"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-75f1e54ea7c0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
