@@ -39,28 +39,28 @@
 
 | 系統 | 本数 | 検索 |
 |---|---:|---|
-| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 134 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/) |
-| [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 120 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/) |
+| [01-offload-hierarchical-memory](01-offload-hierarchical-memory/README.md) | 135 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/) |
+| [02-adaptive-expert-computation-compression](02-adaptive-expert-computation-compression/README.md) | 124 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/) |
 | [03-expert-prefetch](03-expert-prefetch/README.md) | 18 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/03-expert-prefetch/) |
-| [04-conditional-computation](04-conditional-computation/README.md) | 74 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/04-conditional-computation/) |
-| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 272 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
-| [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 25 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/) |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 367 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
-| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 72 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
-| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 193 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
-| [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 114 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/) |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 487 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
-| [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 63 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/) |
+| [04-conditional-computation](04-conditional-computation/README.md) | 85 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/04-conditional-computation/) |
+| [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 298 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
+| [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 28 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/) |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 379 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
+| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 80 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
+| [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 198 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
+| [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 116 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/) |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 499 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
+| [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 64 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/) |
 | [13-sparse-attention](13-sparse-attention/README.md) | 149 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/) |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 79 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/) |
 | [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 62 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/) |
-| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 155 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
-| [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 32 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/) |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 166 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
+| [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 33 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/) |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/18-pipeline-native-cpu-inference/) |
-| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 96 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
+| [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 99 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |
 | [20-linear-recurrent-language-models](20-linear-recurrent-language-models/README.md) | 46 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/20-linear-recurrent-language-models/) |
 | [21-static-structured-pruning](21-static-structured-pruning/README.md) | 25 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/21-static-structured-pruning/) |
 | [22-diffusion-decoding-efficiency](22-diffusion-decoding-efficiency/README.md) | 11 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/22-diffusion-decoding-efficiency/) |
 | [23-model-routing-cascades](23-model-routing-cascades/README.md) | 6 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/23-model-routing-cascades/) |
-| [99-other-inference-systems](99-other-inference-systems/README.md) | 772 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
+| [99-other-inference-systems](99-other-inference-systems/README.md) | 672 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/) |
 <!-- survey:auto:end -->
