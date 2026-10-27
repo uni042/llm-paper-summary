@@ -27,6 +27,8 @@ worker_run_key: "20261027-1345-scheduled-chat-45/r01"
 reference_main_sha: "87a99497d06fa180409a1045cc69e070eb511412"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Attention as Conditioning — 線形注意の状態更新と連合学習理論の厳密な対応
