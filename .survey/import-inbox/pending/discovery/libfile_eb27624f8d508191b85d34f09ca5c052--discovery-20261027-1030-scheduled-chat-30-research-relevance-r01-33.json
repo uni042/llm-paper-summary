@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261027-1030-scheduled-chat-30/r01",
+  "reference_main_sha": "b63850c5c8d6de409d3aac9e54e47846deab2acf",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.24541",
+      "identity_tokens": [
+        "arxiv:2505.24541",
+        "title:mixpert: mitigating multimodal learning conflicts with efficient mixture-of-vision-experts"
+      ],
+      "title": "Mixpert: Mitigating Multimodal Learning Conflicts with Efficient Mixture-of-Vision-Experts",
+      "reason": "視覚エンコーダの深い層と投影器をタスク別の視覚エキスパートに分け、画像ごとに1エキスパートへ動的ルーティングするため推論時の疎な実行という関連性はある。ただし研究の主目的と主要評価は視覚タスク間の学習干渉の緩和と正答率であり、LLM推論基盤のスケジューリング・KVキャッシュ・実機生成レイテンシの改善を直接検証していない。推論システム研究としては境界的。",
+      "source_url": "https://arxiv.org/abs/2505.24541",
+      "body_check": "abstract_screen_only; body_not_read; source: primary arXiv abstract and bibliographic record",
+      "first_checked_at": "2026-10-27T10:29:18+09:00",
+      "last_checked_at": "2026-10-27T10:29:18+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 33
+    }
+  ]
+}
