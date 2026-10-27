@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（686本）
+## 自動生成の論文一覧（687本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1879,6 +1879,10 @@
 - **2025-10 · [PatternKV: Flattening KV Representation Expands Quantization Headroom](2025-2510.05176-patternkv-flattening-kv-representation-expands-quantization-headroom.md)**  
   実装：[✓](https://github.com/HCOOOH/PatternKV) ・ リポジトリ内被引用：0  
   KVキャッシュを保持することで過去トークンの注意計算を省ける一方、文脈長、同時リクエスト数、複数回答を生成する推論時スケーリングに比例してキャッシュが膨らむ。著者は複数モデル平均でFP16との差が0.08%と要約するが、これは個別モデルの全タスクで差がゼロという意味ではない。
+
+- **2025-10 · [MossNet: Mixture of State-Space Experts is a Multi-Head Attention](2025-2510.26182-mossnet-mixture-of-state-space-experts-is-a-multi-head-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数の状態空間専門家の混合が線形化したmulti-head 注意機構の形に展開できることを示し、従来の単一状態のSSMより表現力を高める。8x200M+モデルは2.8兆トークン学習後、top-2（活性477M）で7課題平均53.5%、Qwen2.5-0.5Bの47.7%を上回るが、学習トークン数・モデル構造が異なる。
 
 - **2025-10 · [MixReasoning: Switching Modes to Think](2025-2510.06052-mixreasoning-switching-modes-to-think.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
