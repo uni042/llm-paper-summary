@@ -36,6 +36,8 @@ quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 returned_research_repair: true
 returned_research_source: ".survey/import-inbox/blocked/research/retry-research-2f85c466b7a5--libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245-scheduled-chat-45-r01.md"
+last_audited: null
+audit_version: 0
 ---
 
 # ShortGPT：層の冗長性を測って削る構造的剪定と生成時の非対称実行

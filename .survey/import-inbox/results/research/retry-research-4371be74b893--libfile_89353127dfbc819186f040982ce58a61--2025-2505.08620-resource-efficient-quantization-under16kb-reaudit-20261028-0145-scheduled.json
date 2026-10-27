@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e3e0130a692b23805d639c792be49ebe803bf4bdc1ec7427a02b3632183d1d66",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4371be74b893--libfile_89353127dfbc819186f040982ce58a61--2025-2505.08620-resource-efficient-quantization-under16kb-reaudit-20261028-0145-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2505.08620",
+  "worker_completed_at": "2026-10-28T01:49:00+09:00",
+  "worker_run_key": "20261028-0145-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4200,
+    "body_paragraphs": 20,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 手法説明量 0 < 700",
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-27T18:15:22+00:00"
+}
