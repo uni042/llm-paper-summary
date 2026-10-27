@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（135本）
+## 自動生成の論文一覧（139本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -15,6 +15,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-11 · [Beluga: A CXL-Based Memory Architecture for Scalable and Efficient LLM KVCache Management](2025-2511.20172-beluga-cxl-memory-kvcache.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   CXL 2.0スイッチでGPU/CPUから共有KVメモリを直接ロード／ストア可能にし、細粒度KV転送・共有メモリRPC・局所性不要の配置をvLLMへ統合してRDMA型プールのコピーと同期を削減する。
+
+- **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
 - **2026-04 · [FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving](2026-2604.02715-fluxmoe-decoupling-expert-residency.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
@@ -158,6 +162,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：0  
   静的重み用のメモリ内計算、動的データ用のメモリ近傍計算、部分結果集約用のネットワーク内計算を統合し、細粒度データ配置とプリフィル・デコード分離で通信とメモリ帯域の偏りを抑えるLLM推論アクセラレータ。
 
+- **2026-09 · [LeanStream: A Speculate-and-Refine Streaming Framework for Efficient on-Device LLM Inference](2026-2609.03079-leanstream-speculate-refine-on-device.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LeanStreamは、層内の部分残差から次層の重み優先度を更新し、重み読出し・GPU計算・キャッシュを非同期に重ねて、端末LLMのSSD待ちと予測ミスを減らす。
+
 - **2026-09 · [HDA-MoE: Hybrid Parallelism and Dynamic, Adaptive Scheduling for Mixture-of-Experts with 3D Near-Memory Processing](2026-2609.08682-hda-moe-3d-near-memory-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HDA-MoEは3D近傍メモリ上でテンソル並列と専門家並列を混合し、活性統計に基づく専門家分割・局所配置と先読み・混雑対応スケジューリングで通信と負荷偏りを減らす。
@@ -209,6 +217,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-08 · [Memory-Sovereign Inference: Output-Exact Execution Beyond Full Residency](2026-2608.23805-memory-sovereign-inference.md)**  
   実装：[✓](https://github.com/gustavgauge/memory-sovereign-inference-artifact) ・ リポジトリ内被引用：0  
   ストレージ支援推論の「全重みを常駐させない実行」を、表現量・意味的要求量・資源上限・出力完全一致・再利用遷移に分解して証明する枠組み。Qwen3-Nextで43.59 GiBの意味的要求を34 GiB枠内で64出力完全一致させる。
+
+- **2026-08 · [FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration](2026-2608.25062-flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  高帯域フラッシュを巨大モデル重みの近接容量層として使い、動的読み出し結合・更新隔離・読み出し専用変換表で従来方式比六・二倍の復号処理量を実現する。
 
 - **2026-08 · [Every Expert Counts: ExactMoE for Memory-Efficient W4A16 Inference](2026-2608.15383-exactmoe-memory-efficient-w4a16-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -309,6 +321,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-04 · [NVLLM: A 3D NAND-Centric Architecture Enabling Edge on-Device LLM Inference](2026-2604.25699-nvllm-3d-nand-centric-edge-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   NVLLMは静的なFFN重みを3D NAND側に置いてその場で計算し、注意機構とKVをDRAM/NPU側で処理する。NAND面の並列読出しと誤り訂正を重ね、SSD経由のデータ移動を減らす。
+
+- **2026-04 · [MCAP: Deployment-Time Layer Profiling for Memory-Constrained LLM Inference](2026-2604.21026-mcap-deployment-time-layer-profiling-for-memory-constrained-llm-inferenc.md)**  
+  実装：[✓](https://github.com/genovationtech/nve) ・ リポジトリ内被引用：0  
+  MCAP（Monte Carlo Activation Profiling）は、モデルを読み込む段階で少数の入力を使って層ごとの重要度を計測し、推論時の演算精度と重みの常駐先を同時に決める方式である。論文の代表例ではプロファイルは338バイトのJSONであり、初回計測は約60秒、同一アーキテクチャの再利用時は追加計測を省ける。
 
 - **2026-04 · [Efficient, VRAM-Constrained xLM Inference on Clients](2026-2604.26334-efficient-vram-constrained-xlm-inference-on-clients.md)**  
   実装：[✓](https://github.com/deepshnv/pipeshard-mlsys26-ae) ・ リポジトリ内被引用：0  
