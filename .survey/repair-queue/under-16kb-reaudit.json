@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-27T19:45:12.985201+00:00",
+  "generated_at": "2026-10-27T20:11:35.508672+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 13,
+  "count": 12,
   "worker_counts": {
     "scheduled-chat-00": 4,
-    "scheduled-chat-30": 5,
+    "scheduled-chat-30": 4,
     "scheduled-chat-45": 4
   },
   "entries": [
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -120,30 +120,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md",
-      "canonical_id": "arXiv:2505.08620",
-      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
-      "file_bytes": 14740,
-      "source_sha256": "fbf8a062dda87924e7cd228483e24e8da74ea66e4ed00d895d471cdfea686c77",
-      "source_git_blob_sha": "d7c359e31c8fd961bbf6d5687cb20a7ebfaa28db",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.78167,
-      "quality_metrics": {
-        "body_chars": 3430,
-        "method_chars": 1214,
-        "evaluation_chars": 799,
-        "limitation_chars": 203
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.2% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.2% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
