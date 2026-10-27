@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（61本）
+## 自動生成の論文一覧（62本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -235,6 +235,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-06 · [Semantic Scheduling for LLM Inference](2025-2506.12204-semantic-scheduling-for-llm-inference.md)**  
   実装：[✓](https://github.com/Wenyueh/latency_optimization_with_priority_constraints) ・ リポジトリ内被引用：0  
   本論文は、LLMのオンライン推論に到着する要求を単なる先着順や予測実行時間順ではなく、要求文面から推定される緊急度を第一の優先基準として実行するスケジューラを提案する。実データ条件で最も緊急な要求の正規化待ち時間がFCFS比最大167.3倍短縮した条件がある。
+
+- **2025-05 · [Serve Programs, Not Prompts](2025-2510.25412-serve-programs-not-prompts.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、LLMサービングの基本単位を「プロンプトを受け取ってトークン列を返すリクエスト」から、LLM推論プログラム（LLM Inference Program, LIP）へ変えるというシステム設計を提案する。
 
 - **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（771本）
+## 自動生成の論文一覧（772本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2785,6 +2785,10 @@
 - **2024-06 · [MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations](2024-2406.07017-moreaupruner-robust-pruning-of-large-language-models-against-weight-pert.md)**  
   実装：[✓](https://github.com/ShiningSord/MoreauPruner) ・ リポジトリ内被引用：0  
   LLaMA-13Bでは回復微調整後の7課題平均が元64.97に対しMoreauPruner-GSで64.94まで近づく。一方、LLaMA3-8Bでは元70.33に対し同方式の20%剪定後が65.37で、性能損失が残る。
+
+- **2024-05 · [Task-agnostic Distillation of Encoder-Decoder Language Models](2024-2305.12330-task-agnostic-distillation-of-encoder-decoder-language-models.md)**  
+  実装：[✓](https://github.com/GeneZC/MiniEnD) ・ リポジトリ内被引用：0  
+  提案法MiniEnDは、教師と学生の最終層の関係分布を整合する蒸留に、エンコーダとデコーダの接続を反映する損失を追加する。
 
 - **2024-05 · [OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning](2024-2405.05957-openba-v2-reaching-77-3-high-compression-ratio-with-fast-multi-stage-pru.md)**  
   実装：[✓](https://github.com/OpenNLG/OpenBA-v2) ・ リポジトリ内被引用：0  
