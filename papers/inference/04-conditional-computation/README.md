@@ -5,7 +5,7 @@
 MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり、この系統では主にTransformer本体の実行深度や処理対象tokenを動的に変える。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（74本）
+## 自動生成の論文一覧（85本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/04-conditional-computation/)
 
@@ -14,15 +14,35 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
+- **2026-09 · [LayerRoute: Adaptive Layer-Skipping with LoRA-Preserved Quality for Efficient LLM Inference](2026-2609.13682-layerroute-adaptive-layer-skipping-with-lora-preserved-quality-for-effic.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  同時にランク-8 LoRAを注意機構 射影へ入れ、層を飛ばすことで失われる表現能力をパラメータ-efficientに補償する。壁時計速度は全試行で改善し1.02〜1.06倍、平均1.04倍。
+
+- **2026-08 · [RoRA: Role-Oriented Regional Allocation for Visual Token Pruning in MLLMs](2026-2608.07088-rora-role-oriented-regional-allocation-for-visual-token-pruning-in-mllms.md)**  
+  実装：[✓](https://github.com/LukieLuu/RoRA) ・ リポジトリ内被引用：1  
+  高解像度画像や複数画像では、画像に由来するトークンが入力系列の多くを占め、事前計算（プリフィル）の演算、注意機構のキー・バリュー（KV）キャッシュ、応答開始までの時間を増加させる。LLaVA-1.5-7Bの視覚576トークンを64個へ減らす条件（88.9%削減）では、九つの評価課題の正規化平均が非削減時の96.5%に相当した。
+
 - **2025-11 · [Conv-Basis: A New Paradigm for Efficient Attention Inference and Gradient Computation in Transformers](2025-a7d4659aa00f-conv-basis-a-new-paradigm-for-efficient-attention-inference-and-gradient.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   提案方式は、相対位置差に沿った対角線状の反復パターンを「畳み込み基底（conv basis）」として表し、各基底に対応する畳み込みとVの積を高速フーリエ変換（Fast Fourier Transform; FFT）で計算する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
+- **2026-09 · [FlexEE: Self-Speculative and KV-Compatible Early Exiting for Offloading-Aware LLM Inference](2026-2609.17008-flexee-self-speculative-and-kv-compatible-early-exiting-for-offloading-aware-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Top-K自己投機による軽量な早期退出と隠れ状態の持越しでKV整合性を保ち、重みオフロード時に後段層の計算と転送をまとめて省く。
+
 - **2026-09 · [Do Dynamic Routers Need Memory? HeRo: History-Aware Routing for Efficient LLM Inference](2026-2609.08189-hero-history-aware-routing-efficient-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   各層の局所状態だけでなく過去のゲート選択と残差変化を線形注意メモリへ蓄積し、Llama 3.1-8Bで26.87%のパラメータ計算を回避しつつ密モデル比100.24%の性能を保つ動的FFNルーティング。
+
+- **2026-08 · [DiffPrune: Differentiable Information Throttling for Token Pruning in Vision-Language Models](2026-2608.01985-diffprune-differentiable-information-throttling-for-token-pruning-in-vis.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚言語モデル（Vision-Language モデル; VLM）では、画像エンコーダが数百〜数千の視覚トークンを生成する。言語モデルへ渡す視覚トークンを減らせば事前処理（プリフィル）の計算量と遅延を削減できるが、「どのトークンを残すか」を学習する段階で問題が生じる。この演算子不一致が重要度学習を不安定にする。
+
+- **2026-08 · [Depth-adaptive Inference of Looped Language Models via Continuous Depth Batching](2026-2608.09444-depth-adaptive-inference-of-looped-language-models-via-continuous-depth-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  論文はCDBを端から端まで実装し、深度が不揃いになる鍵値キャッシュ（KV キャッシュ）、CPU側スケジューラとGPU側反復の同期、前段・後段をどの頻度で実行するかまで扱う。
 
 - **2026-05 · [VideoRouter: Query-Adaptive Dual Routing for Efficient Long-Video Understanding](2026-2605.05848-videorouter-query-adaptive-dual-routing-for-efficient-long-video-underst.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -31,6 +51,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2026-02 · [WiSparse: Boosting LLM Inference Efficiency with Weight-Aware Mixed Activation Sparsity](2026-2602.14452-wisparse-boosting-llm-inference-efficiency-with-weight-aware-mixed-activ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）の推論では、各層の線形射影が多数の乗算と重み読出を必要とする。WiSparseは、活性と重みの両方からチャネル重要度を推定し、モデル全体の疎性率をブロック・層の二段階で割り当てる学習不要の活性疎化（学習不要 活性値 sparsity）方式である。
+
+- **2026-02 · [ConsensusDrop: Fusing Visual and Cross-Modal Saliency for Efficient Vision Language Models](2026-2602.00946-consensusdrop-fusing-visual-and-cross-modal-saliency-for-efficient-visio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ConsensusDropは、言語モデルに入る前に質問依存の画像顕著性を近似して取得し、視覚エンコーダ由来の顕著性と統合する。原著Table 1では、LLaVA-1.5-7Bの視覚トークン576個を32個へ削減したとき、九つの画像ベンチマークの集計精度が基準モデルの90.5%となり、TTFTは106.4msから60.0ms（1.77倍）へ短縮された。
 
 - **2026-02 · [CLAA: Cross-Layer Attention Aggregation for Accelerating LLM Prefill](2026-2602.16054-claa-cross-layer-attention-aggregation-for-accelerating-llm-prefill.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -102,6 +126,14 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/luoxuan-cs/Flexidepth) ・ リポジトリ内被引用：4  
   FlexiDepthは、すでに学習された大規模言語モデルの重みを変更せず、出力トークンごとに必要な層の計算量を変える手法である。原著のLlama-3-8B-Instruct（32層）では、平均8層を省いても6つの評価課題における平均性能保持率が100.7%となり、固定層省略方式より高い品質を示す。
 
+- **2025-10 · [VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs](2025-2510.16598-visionselector-end-to-end-learnable-visual-token-compression-for-efficie.md)**  
+  実装：[✓](https://github.com/JulietChoo/VisionSelector) ・ リポジトリ内被引用：3  
+  言語モデル側はそれらを文章トークンとともに入力として処理するため、画像の情報量が増えるほど初期入力計算（プリフィル）の時間と中間状態のメモリが増える。視覚トークンを一部だけ残せば高速になるが、単純に注意スコアが大きい位置を選ぶと、内容上重要でない先頭トークンへ注意が集中する「注意の吸い込み（注意機構 sink）」や、文字・図表の細部が欠落する問題が起きる。
+
+- **2025-05 · [ToDRE: Effective Visual Token Pruning via Token Diversity and Task Relevance](2025-2505.18757-todre-effective-visual-token-pruning-via-token-diversity-and-task-releva.md)**  
+  実装：[✓](https://github.com/Yrdal3910/ToDRE) ・ リポジトリ内被引用：2  
+  既存の削減方式は、視覚トークン同士の類似度か、テキストと視覚の注意スコアのどちらか一方を重複の指標として使うことが多い。
+
 - **2025-03 · [AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding](2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md)**  
   実装：[✓](https://github.com/SCZwangxiao/video-FlexReduc) ・ リポジトリ内被引用：2  
   動画を長くするほど事前充填で扱う系列が増え、言語モデルの鍵・値キャッシュ（KVキャッシュ）がGPUメモリを圧迫する。すべてのフレームを同じ割合で圧縮すると、静止区間へ不要な容量を割り当てる一方、質問に必要な短い場面の情報を失う。これは処理可能な動画情報量と理解精度の結果であり、トークン生成速度が同倍率で向上するという主張ではない。
@@ -126,6 +158,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：1  
   重みの量子化や枝刈りとは別に、入力活性の多くをゼロにできれば、ゼロに対応する重み列を読み込まずに済む。論文の代表例では、LLaMA2-7Bのモデル全体の活性疎性40%で困惑度の悪化が5.47から5.64への0.17にとどまり、7種のゼロ例示タスクの平均得点は66.69から66.15への0.54ポイント低下である。
 
+- **2025-05 · [Scalable LLM Reasoning Acceleration with Low-rank Distillation](2025-2505.07861-scalable-llm-reasoning-acceleration-with-low-rank-distillation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Capreseは、大規模言語モデルのフィードフォワードネットワーク（FFN）を疎化したとき、長い数学的推論で顕著になる精度低下を、小さな低ランク補正で回復する手法である。
+
 - **2025-05 · [Beyond Hard and Soft: Hybrid Context Compression for Balancing Local and Global Information Retention](2025-2505.15774-beyond-hard-and-soft-hybrid-context-compression-for-balancing-local-and-.md)**  
   実装：[✓](https://github.com/Xnhyacinth/HyCo2) ・ リポジトリ内被引用：1  
   HyCo2（Hybrid Context Compression）は、長文脈の検索拡張生成（Retrieval-Augmented Generation; RAG）で、必要な情報を保持しながら入力トークン数を減らす圧縮方式である。デフォルトでは16個の潜在クエリと、原文トークンの上位10%を保持する設定である。
@@ -137,6 +173,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2024-11 · [ShowUI: One Vision-Language-Action Model for GUI Visual Agent](2024-2411.17465-showui-one-vision-language-action-model-for-gui-visual-agent.md)**  
   実装：[✓](https://github.com/showlab/ShowUI) ・ リポジトリ内被引用：1  
   一方、画像を粗く統合してしまうと、クリック対象の小さな部品の座標を失いやすい。Qwen2-VL-2Bを基盤に、25.6万件の指示データで学習したモデルは、ScreenSpotのゼロショット画面要素特定で75.1%を報告した。
+
+- **2025-09 · [EfficientUICoder: Efficient MLLM-based UI Code Generation via Input and Output Token Compression](2025-2509.12159-efficientuicoder-efficient-mllm-based-ui-code-generation-via-input-and-o.md)**  
+  実装：[✓](https://github.com/WebPAI/EfficientUICoder) ・ リポジトリ内被引用：0  
+  本研究は、ウェブ画面の画像を入力してHTMLとCSSを生成するUI-to-コードの推論費用を、画像側とコード側の両方から削減する方式である。
 
 - **2025-02 · [Infinite Retrieval: Attention Enhanced LLMs in Long-Context Processing](2025-2502.12962-infinite-retrieval-attention-enhanced-llms-in-long-context-processing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -231,6 +271,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2024-02 · [EE-Tuning: An Economical yet Scalable Solution for Tuning Early-Exit Large Language Models](2024-2402.00518-ee-tuning-an-economical-yet-scalable-solution-for-tuning-early-exit-larg.md)**  
   実装：[✓](https://github.com/pan-x-c/EE-LLM) ・ リポジトリ内被引用：2  
   EE-Tuningは、既存の大規模言語モデル（Large Language モデル; LLM）を、全パラメータの再学習なしに早期終了（early exit）できるモデルへ変換する手法である。論文本文では13Bの追加学習を4基のA800 GPUで約5時間、ピークGPUメモリ約20GB、70Bを約30時間、ピーク約78GBと報告する。
+
+- **2024-10 · [FiRST: Finetuning Router-Selective Transformers for Input-Adaptive Latency Reduction](2024-2410.12513-first-finetuning-router-selective-transformers-for-input-adaptive-latenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  FiRST（Finetuning Router-Selective Transformers）は、入力系列によって必要なTransformer層が異なるという観察に基づき、各層の前へ軽量ルータを挿入して推論時に通過層を選択する方式である。
 
 - **2024-05 · [VideoTree: Adaptive Tree-based Video Representation for LLM Reasoning on Long Videos](2024-2405.19209-videotree-adaptive-tree-based-video-representation-for-llm-reasoning-on-.md)**  
   実装：[✓](https://github.com/Ziyang412/VideoTree) ・ リポジトリ内被引用：1  
