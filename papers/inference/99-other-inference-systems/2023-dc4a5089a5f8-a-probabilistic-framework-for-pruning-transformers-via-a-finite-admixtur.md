@@ -1,41 +1,67 @@
 ---
-canonical_id: "DOI:10.1109/ICASSP49357.2023.10096107"
-title: "A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys"
-summary: "Transformerのqueryをkey中心のガウス混合で説明し、queryごとに異なる混合事前重みを学習するFinite Admixture of Keys（FiAK）を提案。学習した事前重みから注意スコアとkey/valueの重要度を推定して枝刈りする。DeiT-tinyのImageNetで注意スコア60%削減時にTop-1が72.23%から73.67%へ改善し、WikiText-103では注意スコア50%削減時のPPLが34.28で密な基準34.29とほぼ一致する。"
-list_summary: "queryごとに学習するkey混合事前重みを使い、注意スコアとkey/valueを枝刈りしてTransformerの演算・メモリ費用を抑える確率的注意モデル。"
+canonical_id: DOI:10.1109/ICASSP49357.2023.10096107
+title: A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys
+summary: Transformerのqueryをkey中心のガウス混合で説明し、queryごとに異なる混合事前重みを学習するFinite Admixture of Keys（FiAK）を提案。学習した事前重みから注意スコアとkey/valueの重要度を推定して枝刈りする。DeiT-tinyのImageNetで注意スコア60%削減時にTop-1が72.23%から73.67%へ改善し、WikiText-103では注意スコア50%削減時のPPLが34.28で密な基準34.29とほぼ一致する。
+list_summary: queryごとに学習するkey混合事前重みを使い、注意スコアとkey/valueを枝刈りしてTransformerの演算・メモリ費用を抑える確率的注意モデル。
 authors:
-  - Tan M. Nguyen
-  - Tam Nguyen
-  - Long Bui
-  - Hai Do
-  - Duy Khuong Nguyen
-  - Dung D. Le
-  - Hung Tran-The
-  - Nhat Ho
-  - Stan J. Osher
-  - Richard G. Baraniuk
-published: "2023-06"
-publication: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2023)"
-publication_type: "conference"
-publication_status: "published"
-doi: "10.1109/ICASSP49357.2023.10096107"
-source: "https://tanmnguyen89.github.io/FiAK.pdf"
+- Tan M. Nguyen
+- Tam Nguyen
+- Long Bui
+- Hai Do
+- Duy Khuong Nguyen
+- Dung D. Le
+- Hung Tran-The
+- Nhat Ho
+- Stan J. Osher
+- Richard G. Baraniuk
+published: 2023-06
+publication: IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2023)
+publication_type: conference
+publication_status: published
+doi: 10.1109/ICASSP49357.2023.10096107
+source: https://tanmnguyen89.github.io/FiAK.pdf
 sources:
-  - "https://tanmnguyen89.github.io/FiAK.pdf"
-  - "https://doi.org/10.1109/ICASSP49357.2023.10096107"
-code: "https://github.com/Fsoft-AIC/FiAKFormer"
-implementation: "queryとkeyの確率的混合事前係数を学習し、係数の絶対値またはkeyごとの合算スコアに基づいて注意エッジ・key/valueを枝刈りする。学習後は残存事前係数を1へ戻し、枝刈り済みモデルを追加微調整する。公式FiAKFormerコードが公開されている。"
-last_checked: "2026-10-27"
-worker_completed_at: "2026-10-27T12:30:00+09:00"
-worker_id: "scheduled-chat-30"
-scheduled_slot: "30"
-worker_run_key: "20261027-1230-scheduled-chat-30/r01"
-reference_main_sha: "67f7195e8c840aa0d0afbdf688af2c284d7a9926"
+- https://tanmnguyen89.github.io/FiAK.pdf
+- https://doi.org/10.1109/ICASSP49357.2023.10096107
+code: https://github.com/Fsoft-AIC/FiAKFormer
+implementation: queryとkeyの確率的混合事前係数を学習し、係数の絶対値またはkeyごとの合算スコアに基づいて注意エッジ・key/valueを枝刈りする。学習後は残存事前係数を1へ戻し、枝刈り済みモデルを追加微調整する。公式FiAKFormerコードが公開されている。
+last_checked: '2026-10-27'
+worker_completed_at: '2026-10-27T12:30:00+09:00'
+worker_id: scheduled-chat-30
+scheduled_slot: '30'
+worker_run_key: 20261027-1230-scheduled-chat-30/r01
+reference_main_sha: 67f7195e8c840aa0d0afbdf688af2c284d7a9926
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-research_scope: "attention-score-key-pruning-probabilistic-transformer"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+research_scope: attention-score-key-pruning-probabilistic-transformer
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:1901.02860
+  arxiv_id: '1901.02860'
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:2012.12877
+  arxiv_id: '2012.12877'
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:1907.11692
+  arxiv_id: '1907.11692'
+- canonical_id: arXiv:1905.10650
+- canonical_id: arXiv:1905.09418
+  arxiv_id: '1905.09418'
+- canonical_id: arXiv:2106.08823
+  arxiv_id: '2106.08823'
+- canonical_id: arXiv:2004.04010
+  arxiv_id: '2004.04010'
+- canonical_id: arXiv:2010.02695
+  arxiv_id: '2010.02695'
+- canonical_id: arXiv:2001.08950
+- canonical_id: arXiv:2107.00910
+  arxiv_id: '2107.00910'
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 25
 ---
 
 # A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys
