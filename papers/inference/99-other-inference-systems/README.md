@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（774本）
+## 自動生成の論文一覧（776本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2364,6 +2364,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
 
+- **2025-05 · [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](2025-2505.17639-premoe-proactive-inference-for-efficient-mixture-of-experts.md)**  
+  実装：[✓](https://github.com/JarvisPei/PreMoe) ・ リポジトリ内被引用：0  
+  Mixture-of-Experts（MoE）は1トークン当たり一部の専門家（専門家）だけを実行するが、通常のサービングでは全専門家の重みをGPU/NPUメモリに常駐させる必要がある。PreMoEは、利用する領域をあらかじめ決められるなら、その領域で重要な専門家だけを残した小型MoEを、元モデルのルータlogitから再学習なしで事前構築する方式である。
+
 - **2025-05 · [NeUQI: Near-Optimal Uniform Quantization Parameter Initialization for Low-Bit LLMs](2025-2505.17595-neuqi-near-optimal-uniform-quantization-parameter-initialization-for-low.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
@@ -2745,6 +2749,10 @@
 - **2024-01 · [With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation](2024-2401.11504-with-greater-text-comes-greater-necessity-inference-time-training-helps-.md)**  
   実装：[✓](https://github.com/TemporaryLoRA/Temp-LoRA) ・ リポジトリ内被引用：1  
   本論文が扱うのは、数十万トークン規模の小説生成や長編翻訳を、短い注意窓しか持たない言語モデルで継続するときに発生する「古い情報の消失」と「長い鍵・値キャッシュ（KVキャッシュ）の費用」の両立問題である。近い文脈は通常の注意機構で直接読み、古い情報は一時的に変化した重みを介して利用する。
+
+- **2024-10 · [Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs](2024-2410.14570-understanding-the-difficulty-of-low-precision-post-training-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの重みを2〜4bitへ圧縮すると、GPUメモリ使用量を減らせる可能性がある一方、言語モデルの予測品質が大きく落ちることがある。
 
 - **2024-10 · [Two are better than one: Context window extension with multi-grained self-injection](2024-2410.19318-two-are-better-than-one-context-window-extension-with-multi-grained-self.md)**  
   実装：[✓](https://github.com/Clement25/SharedLLM) ・ リポジトリ内被引用：0  

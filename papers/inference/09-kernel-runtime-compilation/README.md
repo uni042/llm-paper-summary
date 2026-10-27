@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（194本）
+## 自動生成の論文一覧（195本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -523,6 +523,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-10 · [lm-Meter: Unveiling Runtime Inference Latency for On-Device Language Models](2025-2510.06126-lm-meter-unveiling-runtime-inference-latency-for-on-device-language-mode.md)**  
   実装：[✓](https://github.com/amai-gsu/LM-Meter) ・ リポジトリ内被引用：2  
   さらにモバイルGPUではドライバが非公開で、カーネル単位の実行時間、キュー待機、ホスト側の発行遅延をアプリケーションから直接見ることが難しい。また量子化Gemma-2-2B-itの短い復号ではGPUの遊休時間が21%を超え、行列積カーネル群が実行時間の60%超を占める。
+
+- **2025-04 · [SD2: Self-Distilled Sparse Drafters](2025-2504.08838-sd2-self-distilled-sparse-drafters.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  投機的復号では、小さなドラフトモデルが数トークンを先に生成し、大きなターゲットモデルが候補をまとめて検証する。ドラフトが軽くてもターゲットと予測が合わなければ、受理されるトークン数が減り、高速化の利得が消える。逆に高精度なドラフトが重すぎれば、候補生成の逐次時間が支配的になる。受理長、理論MAC削減、実機の遅延改善は異なる評価軸として区別する。
 
 - **2025-04 · [Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures](2025-2504.11750-characterizing-and-optimizing-llm-inference-workloads-on-cpu-gpu-coupled.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

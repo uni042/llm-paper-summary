@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（487本）
+## 自動生成の論文一覧（488本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1643,6 +1643,10 @@
 - **2025-05 · [How Many Parameters Does Your Task Really Need? Task Specific Pruning with LLM-Sieve](2025-2505.18350-how-many-parameters-does-your-task-really-need-task-specific-pruning-wit.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一方、用途と関係の薄い行列を強く圧縮できれば、同じ品質許容差のもとで大幅な容量削減が期待できる。70Bの感情分類では品質差1%以内で55%、5%以内で75%のパラメータを削減できたと報告する。
+
+- **2025-01 · [Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models](2025-2501.18154-mixed-precision-graph-neural-quantization-for-low-bit-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、学習済み大規模言語モデルの重みを平均2ビット前後へ事後量子化する際、すべての重み列に同じビット幅を割り当てると重要な列の誤差が大きくなり、困惑度が急激に悪化する問題を扱う。原著の効率評価はRTX 4090上の量子化前処理時間であり、生成トークン/sやエンドツーエンド推論時間の改善は示していない。
 
 ### 3年前（2023-11〜2024-10）
 

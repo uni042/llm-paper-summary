@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（272本）
+## 自動生成の論文一覧（273本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1067,6 +1067,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-05 · [EMS-SD: Efficient Multi-sample Speculative Decoding for Accelerating Large Language Models](2024-2405.07542-ems-sd-efficient-multi-sample-speculative-decoding-for-accelerating-larg.md)**  
   実装：[✓](https://github.com/niyunsheng/EMS-SD) ・ リポジトリ内被引用：1  
   EMS-SDは、複数要求を一度に処理する投機的復号（投機的復号）で、要求ごとに草稿の受理数や予測長が違うために生じる無駄な埋め草トークン（padding）を除く実装方式である。非投機的な貪欲復号468.89との比較では、従来1.37倍、提案2.17倍である。
+
+- **2024-07 · [S2D: Sorted Speculative Decoding For More Efficient Deployment of Nested Large Language Models](2024-2407.01955-s2d-sorted-speculative-decoding-for-more-efficient-deployment-of-nested-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号は、小さなドラフトモデルが先の複数トークンを予測し、大きな対象モデルがそれらを一括検証することで、逐次デコードに必要な対象モデルの実行回数を減らす。Spec-BenchのMT-Bench評価では、3対象×greedy/非greedyの6条件における自己回帰生成比の単純平均高速化が1.55倍であった（Table 2）。
 
 ### 4年前（2022-11〜2023-10）
 
