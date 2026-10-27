@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "b1259ae724f4248cc464d9c67c495d2e7e7c294b78440ca78b8fb04c5cb28ba6",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2305.12330",
+  "worker_completed_at": "2026-10-27T09:44:00+09:00",
+  "worker_run_key": "20261027-0930-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6418,
+    "body_paragraphs": 33,
+    "method_chars": 1469,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-27T01:59:21+00:00"
+}

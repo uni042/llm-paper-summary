@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（766本）
+## 自動生成の論文一覧（769本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2220,6 +2220,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   HA-RAGは、検索拡張生成（RAG）で繰り返し参照される外部文書のKVキャッシュを、検索頻度に応じた数値形式とメモリ階層の組合せで管理する推論システムである。
 
+- **2025-10 · [ELUTQ: Optimizing Quantization Accuracy under LUT-Based Computation for Edge LLMs](2025-2510.19482-elutq-optimizing-quantization-accuracy-under-lut-based-computation-for-e.md)**  
+  実装：[✓](https://github.com/Nkniexin/ELUTQ) ・ リポジトリ内被引用：0  
+  ELUTQは、LLMの重みを2〜3bitへ圧縮するときの量子化誤差と、量子化後の重みをCPU/GPUで実行するときの復号・乗算費用を一緒に扱うシステムである。
+
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
   従って「注意計算全体をゼロにする」方式ではない。著者の実測はCPUで平均1.2倍のエンドツーエンド（E2E）高速化、自己注意部分で平均2倍、GPUでE2E平均1.6倍、注意部分で平均3倍を報告する。
@@ -2231,6 +2235,10 @@
 - **2025-10 · [ARA: Adaptive Rank Allocation for Efficient Large Language Model SVD Compression](2025-2510.19389-ara-adaptive-rank-allocation-for-efficient-large-language-model-svd-comp.md)**  
   実装：[✓](https://github.com/compressionOrg/ARA) ・ リポジトリ内被引用：0  
   ARA（適応的 Rank Allocation）は、圧縮予算を複数の線形モジュールに配る学習可能なランク選択器である。特に「80% 残存比率」はパラメータの80%を残すという意味で、80%を削る意味ではない。
+
+- **2025-10 · [APCE: Adaptive Progressive Context Expansion for Long Context Processing](2025-2510.12051-apce-adaptive-progressive-context-expansion-for-long-context-processing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  適応的 Progressive Context Expansion（APCE）は、長い入力を最初から全てTransformerへ通す代わりに、質問と意味的に近いchunkだけを選んでプリフィルし、生成が進むにつれて参照chunkを入れ替える方式である。
 
 - **2025-10 · [Adaptive Dual Reasoner: Large Reasoning Models Can Think Efficiently by Hybrid Reasoning](2025-2510.10207-adaptive-dual-reasoner-large-reasoning-models-can-think-efficiently-by-h.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2415,6 +2423,10 @@
 - **2025-03 · [Multi-Cue Adaptive Visual Token Pruning for Large Vision-Language Models](2025-2503.08019-multi-cue-adaptive-visual-token-pruning-for-large-vision-language-models.md)**  
   実装：[✓](https://github.com/bzluan/AdaptPrune) ・ リポジトリ内被引用：0  
   画像を扱う大規模視覚言語モデル（LVLM）では、視覚エンコーダが作る数百から数千の画像パッチ表現が言語モデルへトークンとして挿入される。画像が高解像度になると、視覚トークンは言語側の自己注意やFFNにも流れ、プリフィル計算量、後続のKVキャッシュ容量、生成時の注意計算に影響する。画像トークンの一部を早い層で取り除けば、後続層の計算と記憶を減らせる。
+
+- **2025-03 · [Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning](2025-2503.23959-local-information-matters-inference-acceleration-for-grounded-conversati.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  提案する適応的局所認識トークン剪定は、画像を複数の意味的にまとまった領域へ分け、領域ごとに保持するトークンを確保する。OMG-LLaVAでも同程度の削減条件で、検証集合のAPが24.1から26.2、領域の重なり率が58.0から61.0へ改善した。
 
 - **2025-03 · [EfficientLLaVA:Generalizable Auto-Pruning for Large Vision-language Models](2025-2503.15369-efficientllava-generalizable-auto-pruning-for-large-vision-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

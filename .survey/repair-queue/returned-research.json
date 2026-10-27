@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T01:49:47+00:00",
+  "generated_at": "2026-10-27T02:04:28+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1311,36 +1311,9 @@
       "worker_run_key": "20261027-0500-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2509.00031",
+      "canonical_id": "arXiv:2505.08620",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-27T01:15:39+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5868,
-        "body_paragraphs": 34,
-        "method_chars": 1667,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 511,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-62bb9dc80aa9--libfile_18614e6141fc819195457799be114d09--2025-2509.00031-zeroqat-on-device-qat-research-20261027-0903-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-62bb9dc80aa9--libfile_18614e6141fc819195457799be114d09--2025-2509.00031-zeroqat-on-device-qat-research-20261027-0903-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261027-0903-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.08620",
-      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
-      "source_url": "https://arxiv.org/pdf/2505.08620v1",
       "returned_at": "2026-10-27T01:46:10+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1367,8 +1340,8 @@
     },
     {
       "canonical_id": "arXiv:2510.25412",
-      "title": "Serve Programs, Not Prompts",
-      "source_url": "https://arxiv.org/pdf/2510.25412v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T01:46:57+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1391,6 +1364,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_56a86186a06481919dd00c217aef1186--2025-2510.25412-serve-programs-not-prompts-symphony-20261027-0955-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_56a86186a06481919dd00c217aef1186--2025-2510.25412-serve-programs-not-prompts-symphony-20261027-0955-scheduled-chat-00-r01.json",
       "worker_run_key": "20261027-0955-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2305.12330",
+      "title": "Task-agnostic Distillation of Encoder-Decoder Language Models",
+      "source_url": "https://aclanthology.org/2024.lrec-main.1359.pdf",
+      "returned_at": "2026-10-27T01:59:21+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6418,
+        "body_paragraphs": 33,
+        "method_chars": 1469,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261027-0930-scheduled-chat-30/r01"
     }
   ]
 }
