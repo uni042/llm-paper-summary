@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（120本）
+## 自動生成の論文一覧（124本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -188,6 +188,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/caichaoxiang/GeMoE) ・ リポジトリ内被引用：0  
   ゲート分布のエントロピーを不確実性指標として各トークンの専門家数を予測し、固定Top-kに近い品質を保ちながら専門家活性化と実測推論時間を削減する動的MoEルーティング。
 
+- **2026-09 · [EAT: Expert Account Tracker for Efficient MoE Inference](2026-2609.33614-eat-expert-account-tracker-for-efficient-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は混合専門家モデル（Mixture-of-Experts、MoE）の推論時に、各トークンで何個の専門家ネットワークを実行するかを決める問題を扱う。固定個数選択（Top-K）では容易なトークンにも同じ数の専門家を割り当てる。
+
 - **2026-09 · [Distribution-Consistent Inference for Dynamic Sparse Mixture-of-Experts](2026-2609.09241-distribution-consistent-dynamic-sparse-moe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   動的MoE推論で専門家数を減らすと出力分散と尺度が増える問題を特定し、層・次元ごとの平均と分散を学習時分布へ戻す軽量補正で、同じ専門家予算の精度を大幅に回復する。
@@ -195,6 +199,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-09 · [Beyond Retraining-Free MoE Compression: A Cost-Normalized Study of Post-Compression Adjustment](2026-2609.06076-post-compression-adjustment-cost-normalized.md)**  
   実装：[✓](https://github.com/AIDASLab/Post-Compression-Adjustment) ・ リポジトリ内被引用：0  
   圧縮済みMoEを小規模調整の初期値と再定義し、3000例・1エポックの全パラメータ微調整で平均37.3%の性能差を回復するコスト正規化研究。
+
+- **2026-09 · [BASE: Batch-Aware Selection of Experts Using Predicted Removal Error for Efficient MoE Decoding](2026-2609.36222-base-batch-aware-selection-of-experts-using-predicted-removal-error-for-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  逐次生成の律速が高帯域メモリから演算器近傍への重み転送にある場合、トークン単位の疎性はそのまま高速化へ結び付かない。Qwen3-30B-A3Bでは、厳しい専門家予算M=10のBASEが8課題平均76.38点・1463.5トークン/秒であり、速度が近い最良の既存方式Lynxの46.87点・1304.9トークン/秒を大きく上回る。
 
 - **2026-09 · [ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs](2026-2609.05228-ace.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -223,6 +231,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-08 · [Meta-Learning Where to Allocate Experts: Task-Conditioned Layer-Wise Compression for MoEs](2026-2608.26650-metanet-task-conditioned-layer-wise-expert-allocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   支援集合から層別エキスパート数と弱いルーティング補正を推定し、凍結DeepSeek-MoEで平均active エキスパートを最大62%削減するタスク条件付きMetaNet。
+
+- **2026-08 · [MAPLE: MoE Adaptive Plug-and-play Layer-wise Expert allocation](2026-2608.15299-maple-moe-adaptive-plug-and-play-layer-wise-expert-allocation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  層によって専門家数を減らしたときの精度劣化が異なるにもかかわらず、一律に削ると重要な層の計算能力まで失う。DeepSeek-MoE-16B、DeepSeek-V2-Lite、Moonlight-16B-A3B、OLMoE-1B-7Bの4モデルを、ルーティング対象専門家の総活性数を元の75%とする条件で評価した。
 
 - **2026-08 · [Beyond Global Routing Aggregation: Phase-Aware Expert Merging for MoE Vision-Language Models](2026-2608.04454-phase-aware-expert-merging.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -393,6 +405,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2025-09 · [Breaking the MoE LLM Trilemma: Dynamic Expert Clustering with Structured Compression](2025-2510.02345-dynamic-expert-clustering-structured-compression.md)**  
   実装：[✓](https://github.com/szdtzpj/Breaking_the_moe_trilemma) ・ リポジトリ内被引用：0  
   パラメータ＋活性類似度で専門家を動的再編し、共有基底＋低ランク残差、階層ルーティング、INT4残差、NVMeオフロードを共同設計するMoE構造圧縮。
+
+- **2025-07 · [Accelerating Dense LLMs via L0-regularized Mixture-of-Experts](2026-2609.21672-accelerating-dense-llms-via-l0-regularized-mixture-of-experts.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存の密な大規模言語モデル（LLM）を高速化するには、量子化・枝刈り・知識蒸留が使われるが、強い圧縮では能力低下が生じやすい。MMLU、GSM8K、HumanEval、BBHの4課題平均はほぼ維持され、推論速度は2.0〜2.5倍となる。
 
 ### 3年前（2023-11〜2024-10）
 
