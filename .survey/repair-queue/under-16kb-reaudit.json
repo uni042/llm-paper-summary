@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-27T21:25:17.965905+00:00",
+  "generated_at": "2026-10-27T22:55:09.322430+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 13,
+  "count": 10,
   "worker_counts": {
-    "scheduled-chat-00": 4,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 5
+    "scheduled-chat-00": 3,
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -102,26 +102,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md",
-      "canonical_id": "arXiv:2502.19335",
-      "title": "GATEKEEPER: Improving Model Cascades Through Confidence Tuning",
-      "file_bytes": 14733,
-      "source_sha256": "23a7d5bbcaee931040d8e768c01dc76abe3c47fcba4442a5197e0e0adcf42971",
-      "source_git_blob_sha": "788966f583afcea33c52cdc9a571da22c584fb49",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.865833,
-      "quality_metrics": {
-        "body_chars": 3426,
-        "method_chars": 859,
-        "evaluation_chars": 1025,
-        "limitation_chars": 281
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
       "canonical_id": "arXiv:2307.03738",
       "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
@@ -137,26 +117,6 @@
         "method_chars": 1287,
         "evaluation_chars": 1065,
         "limitation_chars": 453
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.05438-residual-mass-accounting-for-partial-kv-decoding.md",
-      "canonical_id": "arXiv:2604.05438",
-      "title": "Residual-Mass Accounting for Partial-KV Decoding",
-      "file_bytes": 16434,
-      "source_sha256": "a7211d3918cd1eefb3521479bd1bcf9379e0cad6c943ee6afb3e75bb64379295",
-      "source_git_blob_sha": "4c02383518f4b9aa538f1ab662325635e08f2949",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.951122,
-      "quality_metrics": {
-        "body_chars": 3942,
-        "method_chars": 983,
-        "evaluation_chars": 1318,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -224,26 +184,6 @@
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2509.01190-efficient-large-language-models-with-zero-shot-adjustable-acceleration.md",
-      "canonical_id": "arXiv:2509.01190",
-      "title": "Efficient Large Language Models with Zero-Shot Adjustable Acceleration",
-      "file_bytes": 17622,
-      "source_sha256": "dfa080fb205654a1540b64979c8ef9e4309beb641ee27b301750132c9cce8e04",
-      "source_git_blob_sha": "a9c80e5443d47eb783ced4231341664054110123",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.924555,
-      "quality_metrics": {
-        "body_chars": 4076,
-        "method_chars": 1342,
-        "evaluation_chars": 837,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2025-2507.06087-core-enhancing-metacognition-with-label-free-self-evaluation-in-lrms.md",
