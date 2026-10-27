@@ -527,7 +527,7 @@
   長文脈の自己回帰生成では、各新規トークンの問い合わせに対して過去の鍵・値キャッシュ（KVキャッシュ）を読み出すため、注意計算がGPUのメモリ帯域に律速されやすい。注意スコアへ大きく寄与する特徴チャネルを学習後の少量データで層別に校正し、そのチャネルだけを連続配置した小さなラベルキャッシュを作る。
 
 - **2024-06 · [SampleAttention: Near-Lossless Acceleration of Long Context LLM Inference with Adaptive Structured Sparse Attention](2024-2406.15486-sampleattention-near-lossless-acceleration-of-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   SampleAttentionは、長い入力文脈を持つ大規模言語モデル（Large Language モデル、LLM）の事前計算（プリフィル）を高速化するため、注意（注意機構）行列の重要な位置だけを実行時に選ぶ構造化疎注意方式である。
 
 - **2024-09 · [Block-Attention for Efficient Prefilling](2024-2409.15355-block-attention-for-efficient-prefilling.md)**  

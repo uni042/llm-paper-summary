@@ -326,6 +326,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/mandt-lab/ptp) ・ リポジトリ内被引用：1  
   投機的復号（投機的復号）は小さなモデルに先読みさせて大きなモデルでまとめて検証するが、草案モデル自身が1トークンずつ順次生成する費用は残る。Vicuna-7Bを教師として学習したPTPは、RTX A6000単体でSpecBenchの6種類の文章生成課題において、通常の自己回帰生成比で平均2.40倍の実時間高速化を報告した。
 
+- **2025-12 · [Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees](2025-2512.21857-fast-inference-of-visual-autoregressive-model-with-adjacency-adaptive-dy.md)**  
+  実装：[✓](https://github.com/Haodong-Lei-Ray/ADT-Tree) ・ リポジトリ内被引用：1  
+  画像自己回帰モデル（visual autoregressive モデル）は、画像を離散符号列に変換し、左から右へ順に画像トークンを生成する。言語モデルと同じ逐次生成の制約を持つが、画像では位置ごとに予測の難しさが大きく変わる。この局所差を無視して全画像へ同じ深さと幅の草稿木を使うと、検証されない枝の計算費用が膨らむ。この違いは重要である。
+
 - **2025-12 · [AdaSD: Adaptive Speculative Decoding for Efficient Language Model Inference](2025-2512.11280-adasd-adaptive-speculative-decoding-for-efficient-language-model-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   投機的復号の通常方式では、小型モデルが数トークンを先に生成し、大型モデルが一度の前向き計算で候補を並列検証する。
@@ -672,10 +676,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   GoodSpeedは、複数の小型言語モデル（Small Language Models; SLM）がエッジサーバで候補トークンを作り、中央の大型言語モデル（Large Language モデル; LLM）が一括検証する分散投機的復号（投機的復号; SD）のスケジューラである。
 
-- **2025-12 · [Fast Inference of Visual Autoregressive Model with Adjacency-Adaptive Dynamical Draft Trees](2025-2512.21857-fast-inference-of-visual-autoregressive-model-with-adjacency-adaptive-dy.md)**  
-  実装：[✓](https://github.com/Haodong-Lei-Ray/ADT-Tree) ・ リポジトリ内被引用：0  
-  画像自己回帰モデル（visual autoregressive モデル）は、画像を離散符号列に変換し、左から右へ順に画像トークンを生成する。言語モデルと同じ逐次生成の制約を持つが、画像では位置ごとに予測の難しさが大きく変わる。この局所差を無視して全画像へ同じ深さと幅の草稿木を使うと、検証されない枝の計算費用が膨らむ。この違いは重要である。
-
 - **2025-12 · [Accelerate Speculative Decoding with Sparse Computation in Verification](2025-2512.21911-accelerate-speculative-decoding-with-sparse-computation-in-verification.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小さな草稿モデルが複数の候補トークンを先読みし、大きな対象モデルがそれらをまとめて検証することで、対象モデルの呼出し回数を減らす手法である。品質と平均受理長の評価はあるが、元モデルの出力分布との数学的同値性や、GPUでのエンドツーエンド実測速度向上は示されていない。
@@ -997,7 +997,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-11〜2024-10）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：384  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：385  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
@@ -1005,7 +1005,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   EAGLEは、対象LLMの上位層特徴量と直前に標本化したトークンを小型デコーダへ与えて未来特徴量を予測し、元の言語モデル出力ヘッドと木構造検証で重み読出し回数を減らす。
 
 - **2024-06 · [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](2024-2406.16858-eagle-2.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：177  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：178  
   EAGLE-2は、既存のEAGLEで用いる小型の下書きモデルをそのまま使いながら、投機的復号（投機的復号）で検証する候補木の形を入力文脈に応じて変える手法である。代表的な温度0のVicuna 7B・MT-benchでは通常生成比3.62倍、既存EAGLEは2.90倍であり、平均受理長はそれぞれ4.98と3.94トークンである。
 
 - **2024-02 · [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](2024-2402.02057-lookahead-decoding.md)**  
@@ -1021,7 +1021,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号で得られる目標モデルの確率分布を教師信号として下書きモデルをオンライン更新し、問い合わせ分布の変化に追従して受理率と推論速度を高める方式。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：81  
+  実装：✓ ・ リポジトリ内被引用：82  
   一般的な自己回帰言語モデルは、各位置までの文脈から直後の一つのトークンを予測する。これに対して複数トークン予測（Multi-トークン Prediction; MTP）は、同じ位置の共有表現から、1個先だけでなく2個先、3個先、4個先など複数の未来トークンを別々の出力ヘッドで予測するよう学習する。この研究には二つの独立した成果がある。
 
 - **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  
@@ -1116,13 +1116,13 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/cteant/SPACE) ・ リポジトリ内被引用：18  
   SPACE（Smart Parallel Auto-Correct デコード）は、自己回帰（autoregressive）型の大規模言語モデルを、別の小型下書きモデルを使わずに高速化する投機的復号方式である。論文は6B～70B級の複数モデルを評価し、HumanEval-Xのコード生成では2.71～4.04倍の高速化を報告する。
 
+- **2024-10 · [ParallelSpec: Parallel Drafter for Efficient Speculative Decoding](2024-2410.05589-parallelspec-parallel-drafter-for-efficient-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  投機的復号（投機的復号）は、小さな下書きモデルが複数トークンの候補を作り、大きな対象モデルがまとめて検証することで、大きなモデルを毎トークン実行する費用を減らす。
+
 - **2024-10 · [AdaEDL: Early Draft Stopping for Speculative Decoding of Large Language Models via an Entropy-based Lower Bound on Token Acceptance Probability](2024-2410.18351-adaedl-early-draft-stopping-for-speculative-decoding-of-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
   追加の停止予測ネットワークを学習しない点が、学習型の適応長方式との主要な違いである。単一NVIDIA A100 80GB・FP32で、Llama2-7Bを対象、直接整合済みの115M下書きを用いたCNN-DM要約では、最大下書き長16の固定方式36.30 トークン/sに対し54.10 トークン/sを報告する。
-
-- **2024-10 · [ParallelSpec: Parallel Drafter for Efficient Speculative Decoding](2024-2410.05589-parallelspec-parallel-drafter-for-efficient-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  投機的復号（投機的復号）は、小さな下書きモデルが複数トークンの候補を作り、大きな対象モデルがまとめて検証することで、大きなモデルを毎トークン実行する費用を減らす。
 
 - **2024-02 · [Recursive Speculative Decoding: Accelerating LLM Inference via Sampling Without Replacement](2024-2402.14160-recursive-speculative-decoding-accelerating-llm-inference-via-sampling-w.md)**  
   実装：✓ ・ リポジトリ内被引用：16  
@@ -1199,11 +1199,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：559  
+  実装：✓ ・ リポジトリ内被引用：560  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：409  
+  実装：✓ ・ リポジトリ内被引用：410  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  
@@ -1223,7 +1223,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   本研究は投機的復号（投機的復号）の候補を一本の直線ではなく木構造へ広げ、さらに小型のドラフトモデルも別の極小モデルで投機実行する「段階投機的復号」を提案する。段階投機は通常比3.16倍、標準投機比1.36倍である。
 
 - **2023-02 · [Speculative Decoding with Big Little Decoder](2023-2302.07863-speculative-decoding-with-big-little-decoder.md)**  
-  実装：[✓](https://github.com/kssteven418/BigLittleDecoder) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/kssteven418/BigLittleDecoder) ・ リポジトリ内被引用：78  
   Big Little Decoder（BiLD）は、小型モデルに自己回帰生成を任せ、予測が難しいときだけ大型モデルへフォールバックする。大型モデルは小型モデルが直前まで作った区間をまとめて評価し、不一致が大きい位置までロールバックして修正する。mT5/T5の翻訳・要約でNVIDIA T4上最大2.12倍高速化する。
 
 - **2023-10 · [SpecTr: Fast Speculative Decoding via Optimal Transport](2023-2310.15141-spectr-fast-speculative-decoding-via-optimal-transport.md)**  

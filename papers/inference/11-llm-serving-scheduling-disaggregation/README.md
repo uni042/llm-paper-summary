@@ -1192,13 +1192,13 @@
   実装：[✓](https://github.com/OpenGVLab/InternVL) ・ リポジトリ内被引用：27  
   推論効率に直接関係する二つの提案は、視覚解像度ルータ（Visual Resolution Router; ViR）と視覚・言語分離配置（Decoupled Vision-Language Deployment; DvD）である。最後の値は通常配置の4.05倍である。
 
+- **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
+  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：27  
+  長文LLMでは、プリフィルでは系列長に対して二乗で増える注意計算、デコードでは過去KVを毎トークン読み直すメモリ帯域が別々の律速になる。LServeは両者をブロック疎注意（block-sparse 注意機構）という共通の実行形式へ落とし、オフラインで決めるストリーミングヘッドと、実行時に選ぶ重要KVページを同じカーネル群で処理する。
+
 - **2025-10 · [Aegaeon: Effective GPU Pooling for Concurrent LLM Serving on the Market](2025-3731569.3764815-aegaeon-gpu-pooling.md)**  
   実装：✓ ・ リポジトリ内被引用：26  
   トークン単位の先取り自動スケーリングと高速モデル切替で多数LLMをGPUプールへ集約し、実運用でGPU数を82%削減したマルチモデル推論基盤。
-
-- **2025-02 · [LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention](2025-2502.14866-lserve-efficient-long-sequence-llm-serving-with-unified-sparse-attention.md)**  
-  実装：[✓](https://github.com/mit-han-lab/omniserve) ・ リポジトリ内被引用：26  
-  長文LLMでは、プリフィルでは系列長に対して二乗で増える注意計算、デコードでは過去KVを毎トークン読み直すメモリ帯域が別々の律速になる。LServeは両者をブロック疎注意（block-sparse 注意機構）という共通の実行形式へ落とし、オフラインで決めるストリーミングヘッドと、実行時に選ぶ重要KVページを同じカーネル群で処理する。
 
 - **2024-11 · [BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching](2024-2412.03594-batchllm-optimizing-large-batched-llm-inference-with-global-prefix-shari.md)**  
   実装：[✓](https://github.com/microsoft/MixLLM/tree/batchllm_vllm_064) ・ リポジトリ内被引用：26  
@@ -1576,6 +1576,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   低ランク適応（Low-Rank Adaptation; LoRA）では大きな基盤モデルを共有し、サービスごとに小さなアダプタだけを切り替えられる。実トレース評価では、各LoRAサービスのSLO達成率を90%超に維持したまま、既存multi-LoRAサービング基盤に対して最大3.6倍高い要求到着率、または2.8倍大きいバースト性を処理できると報告する。
 
+- **2025-07 · [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling](2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md)**  
+  実装：[✓](https://streamvln.github.io/) ・ リポジトリ内被引用：2  
+  StreamVLNは、視覚・言語・行動を連続して扱うロボット誘導システムにおいて、動画言語モデルの文脈長と鍵・値キャッシュ（KVキャッシュ）が際限なく増える問題を解決しようとする。
+
 - **2025-07 · [LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems](2025-2507.21276-lemix-unified-training-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LeMixは継続学習と推論を同一GPU群へ共置し、事前予測した空き時間・応答遅延・メモリ量でタスク配置と実行順を調整する。固定分離比でスループット最大3.53倍、SLO達成率最大2.12倍を報告。
@@ -1607,10 +1611,6 @@
 - **2025-08 · [Semantic Caching for Low-Cost LLM Serving: From Offline Learning to Online Adaptation](2025-2508.07675-semantic-caching-for-low-cost-llm-serving-from-offline-learning-to-onlin.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LLMサービングでは、同じ質問への回答を保存する通常の応答キャッシュによって再計算を減らせる。原著の評価は合成データ上の費用・後悔・切替回数が中心であり、実際の生成品質やGPU推論速度の実測改善と混同してはならない。
-
-- **2025-07 · [StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling](2025-2507.05240-streamvln-streaming-vision-and-language-navigation-via-slowfast-context-.md)**  
-  実装：[✓](https://streamvln.github.io/) ・ リポジトリ内被引用：1  
-  StreamVLNは、視覚・言語・行動を連続して扱うロボット誘導システムにおいて、動画言語モデルの文脈長と鍵・値キャッシュ（KVキャッシュ）が際限なく増える問題を解決しようとする。
 
 - **2025-07 · [A Thermal-aware Workload Scheduler for High-performance LLM Inference in Cooling-regulated Datacenters](2025-a06f210bac8b-a-thermal-aware-workload-scheduler-for-high-performance-llm-inference-in.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1915,7 +1915,7 @@
   LoRA読込中にCPUでプリフィル計算を先行し、ランク依存のバッチ遅延を予測してSLO違反が少ないサーバへ配分することで、多数アダプタ提供のコールドスタートを隠す。
 
 - **2024-06 · [VideoLLM-online: Online Video Large Language Model for Streaming Video](2024-2406.11816-videollm-online-online-video-large-language-model-for-streaming-video.md)**  
-  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：7  
+  実装：[✓](https://github.com/showlab/videollm-online) ・ リポジトリ内被引用：8  
   VideoLLM-onlineは、動画が流れている最中に発話すべき瞬間だけ応答する仕組みを、動画ストリーム内学習（Learning-In-Video-strEam、LIVE）として設計した。
 
 - **2024-04 · [ALTO: An Efficient Network Orchestrator for Compound AI Systems](2024-01aa9dc12834-alto-an-efficient-network-orchestrator-for-compound-ai-systems.md)**  

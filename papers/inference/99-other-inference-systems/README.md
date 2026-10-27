@@ -136,6 +136,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   4ビット浮動小数点を使うとモデル容量とメモリ転送を削減できるが、4ビットの中で符号・指数・仮数をすべて表すと、精度と数値範囲の両立が難しい。そこで複数要素で尺度を共有するブロック浮動小数点（Block Floating-Point; BFP）を利用する。尺度が階層化されるため、外れ値が一部の要素だけにある場合も群全体の量子化刻みを粗くしすぎずに済む。
 
+- **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
+  実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：2  
+  LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
+
 - **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
   実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：2  
   端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
@@ -312,10 +316,6 @@
   実装：[✓](https://github.com/yks23/Information-Gain-Sampler) ・ リポジトリ内被引用：1  
   モデルの再学習を要しない復号時のアルゴリズムである。Dream-7B-Instructで数学・コード・計画の6課題を評価した原著表2では、復号率K=2の平均正解率が53.4%、K=1で62.0%となる。
 
-- **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
-  実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：1  
-  LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
-
 - **2026-02 · [FlexRank: Nested Low-Rank Knowledge Decomposition for Adaptive Model Deployment](2026-2602.02680-flexrank-nested-low-rank-knowledge-decomposition-for-adaptive-model-depl.md)**  
   実装：[✓](https://github.com/RickZack/FlexRank) ・ リポジトリ内被引用：1  
   FlexRankは、一つの事前学習済みモデルから、計算・メモリ予算に応じて大きさの異なる複数の部分モデルを切り出すための低ランク分解・学習方式である。
@@ -391,6 +391,10 @@
 - **2025-12 · [From Context to EDUs: Faithful and Structured Context Compression via Elementary Discourse Unit Decomposition](2025-2512.14244-from-context-to-edus-faithful-and-structured-context-compression-via-ele.md)**  
   実装：[✓](https://github.com/DeepLangAI/LingoEDU) ・ リポジトリ内被引用：1  
   LingoEDUは、長い文章を単純にトークン単位で間引くのではなく、まず原文の談話構造を木として抽出し、その木から質問に必要な範囲だけを選択して入力を短縮する、明示的な文脈圧縮方式である。著者は248文書を人手で構造注釈したStructBenchを公開し、木編集距離4.77、文書単位完全一致率49.60%を報告した。
+
+- **2025-12 · [Asynchronous Reasoning: Training-Free Interactive Thinking LLMs](2025-2512.10931-asynchronous-reasoning-training-free-interactive-thinking-llms.md)**  
+  実装：[✓](https://github.com/yandex-research/AsyncReasoning) ・ リポジトリ内被引用：1  
+  推論時計算を増やすほど対話の即応性が下がるという問題である。二つの流れがそれぞれ通常の「入力→思考→回答」という順序で文脈を見ているように、鍵・値キャッシュ（KV キャッシュ）の論理的な並びを切り替える。
 
 - **2025-11 · [Thinking with Drafts: Speculative Temporal Reasoning for Efficient Long Video Understanding](2025-2512.00805-thinking-with-drafts-speculative-temporal-reasoning-for-efficient-long-v.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1550,10 +1554,6 @@
   実装：[✓](https://github.com/Amirhosein-gh98/Gnosis) ・ リポジトリ内被引用：0  
   回答文中の自己申告の確信度も、誤った回答に対して高い確信を示す問題がある。提案方式は、生成モデル本体の重みを変更せず、生成中に現れる隠れ状態（Hidden States）と注意重み（注意機構 Maps）の時系列的な特徴を抽出する。これは判定器の時間比較であり、回答を生成する言語モデル全体が37倍または99倍速くなるという意味ではない。
 
-- **2025-12 · [Asynchronous Reasoning: Training-Free Interactive Thinking LLMs](2025-2512.10931-asynchronous-reasoning-training-free-interactive-thinking-llms.md)**  
-  実装：[✓](https://github.com/yandex-research/AsyncReasoning) ・ リポジトリ内被引用：0  
-  推論時計算を増やすほど対話の即応性が下がるという問題である。二つの流れがそれぞれ通常の「入力→思考→回答」という順序で文脈を見ているように、鍵・値キャッシュ（KV キャッシュ）の論理的な並びを切り替える。
-
 - **2025-11 · [T-SAR: A Full-Stack Co-design for CPU-Only Ternary LLM Inference via In-Place SIMD ALU Reorganization](2025-2511.13676-t-sar-a-full-stack-co-design-for-cpu-only-ternary-llm-inference-via-in-p.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   T-SARは、重みを−1、0、+1の三値に制約した大規模言語モデル（LLM）を、専用の大きな行列演算器なしにCPUで高速実行するための、アルゴリズム・命令セット・マイクロアーキテクチャ・ソフトウェアの協調設計である。
@@ -1585,7 +1585,7 @@
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：63  
+  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：64  
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
@@ -1616,6 +1616,10 @@
   実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：22  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
+- **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
+  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：22  
+  従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
+
 - **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
   C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
@@ -1623,10 +1627,6 @@
 - **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
   実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：21  
   離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
-
-- **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
-  実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：21  
-  従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：20  
@@ -1640,6 +1640,10 @@
   実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：18  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
+- **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
+
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
   大規模推論モデルは、最終回答の前に長い思考列（chain of thought、CoT）を生成することで数学、プログラミング、定理証明の精度を高めている。形式定理証明では長い思考より3.3～3.7倍少ないトークンで同程度のpass@kを得る。
@@ -1647,10 +1651,6 @@
 - **2025-10 · [dInfer: An Efficient Inference Framework for Diffusion Language Models](2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/inclusionAI/dInfer) ・ リポジトリ内被引用：16  
   拡散型LLM（dLLM）の反復的な雑音除去（denoising）・並列トークン確定・更新され続けるKVをモジュール化し、デコーダ/KV管理とGPU実行系を同時最適化するdInfer。
-
-- **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
 
 - **2025-02 · [CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation](2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md)**  
   実装：[✓](https://github.com/zhenyi4/codi) ・ リポジトリ内被引用：15  
@@ -2250,25 +2250,25 @@
   実装：✓ ・ リポジトリ内被引用：15  
   本論文が解こうとする問題は、異なる得意分野を持つ既製の大規模言語モデル（LLM）を組み合わせる際、問い合わせごとに候補すべてを実行すると生成計算量が膨らむことである。一方、回答をすべて生成して報酬モデル（reward モデル）で順位付けする方式は品質の良い候補を後から選べるが、候補数に比例する生成費用を必要とする。
 
+- **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
+  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：12  
+  Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
+
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
   実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：12  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
-- **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
-  実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：11  
-  Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
-
 - **2024-08 · [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming](2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md)**  
-  実装：[✓](https://github.com/gpt-omni/mini-omni) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/gpt-omni/mini-omni) ・ リポジトリ内被引用：10  
   Mini-Omniは、言語モデルの応答文を最後まで生成してから独立した音声合成器へ渡す従来の直列方式を避け、文字トークンと音声トークンを一つの自己回帰生成過程の中で並列に出力する音声対話モデルである。
+
+- **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
+  実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：10  
+  二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
 
 - **2024-04 · [LongVLM: Efficient Long Video Understanding via Large Language Models](2024-2404.03384-longvlm-efficient-long-video-understanding-via-large-language-models.md)**  
   実装：[✓](https://github.com/ziplab/LongVLM) ・ リポジトリ内被引用：9  
   LongVLMは、長時間動画を入力する視覚言語モデル（Vision-Language モデル; VLM）で、画像符号化器から出る大量の視覚トークンを短時間区間ごとに統合する。100フレームを224×224画素で符号化し、元のパッチ特徴が約25,600トークンになる設定で、10区間×30トークンと全体特徴5トークンの計305視覚トークンへまとめる。
-
-- **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
-  実装：[✓](https://github.com/HKUNLP/ChunkLlama) ・ リポジトリ内被引用：9  
-  二重チャンク注意（Dual Chunk 注意機構、以下DCA）は、回転位置埋め込み（Rotary Position Embedding、以下RoPE）を用いた大規模言語モデルが、事前学習時より長い系列で位置関係を見失う問題に対する推論時の注意計算の変更である。最後の比較は特定の閉形式4課題の平均であり、汎用能力の94%を意味しない。
 
 - **2024-06 · [Hybrid SLM and LLM for Edge-Cloud Collaborative Inference](2024-7a6bf47fa469-hybrid-slm-and-llm-for-edge-cloud-collaborative-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -2277,6 +2277,10 @@
 - **2024-01 · [A Comprehensive Survey of Compression Algorithms for Language Models](2024-2401.15347-a-comprehensive-survey-of-compression-algorithms-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   枝刈り、量子化、知識蒸留、低ランク近似、パラメータ共有、効率的構造設計の六系統を、圧縮後の性能だけでなく、圧縮を実行するための学習・較正費用から比較するサーベイ。
+
+- **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
+  実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：7  
+  従来のカスケード方式では、音声認識が入力を文字起こしし、その文字列を大規模言語モデルへ渡し、生成されたテキストを音声合成器へ送る。
 
 - **2024-04 · [MixLoRA: Enhancing Large Language Models Fine-Tuning with LoRA-based Mixture of Experts](2024-2404.15159-mixlora-enhancing-large-language-models-fine-tuning-with-lora-based-mixt.md)**  
   実装：[✓](https://github.com/TUDB-Labs/MixLoRA) ・ リポジトリ内被引用：7  
@@ -2293,10 +2297,6 @@
 - **2023-12 · [Understanding the Potential of FPGA-Based Spatial Acceleration for Large Language Model Inference](2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md)**  
   実装：[✓](https://github.com/cornell-zhang/allo/tree/main/examples) ・ リポジトリ内被引用：7  
   大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
-
-- **2024-09 · [LLaMA-Omni: Seamless Speech Interaction with Large Language Models](2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md)**  
-  実装：[✓](https://github.com/ictnlp/LLaMA-Omni) ・ リポジトリ内被引用：6  
-  従来のカスケード方式では、音声認識が入力を文字起こしし、その文字列を大規模言語モデルへ渡し、生成されたテキストを音声合成器へ送る。
 
 - **2024-06 · [DeciMamba: Exploring the Length Extrapolation Potential of Mamba](2024-2406.14528-decimamba-exploring-the-length-extrapolation-potential-of-mamba.md)**  
   実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：5  
@@ -2730,13 +2730,13 @@
   実装：[✓](https://github.com/laiguokun/Funnel-Transformer) ・ リポジトリ内被引用：6  
   Funnel-Transformerは、すべての変換器層で入力トークン数と同じ長さの隠れ状態を維持することが、系列全体を一つの表現へ要約する分類・ランキング課題では冗長であるという着想から生まれた。これにより、出力長は短くしながら圧縮前の情報全体を参照できる。
 
+- **2019-11 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
+  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：5  
+  翻訳文全体を毎回捨てる反復改良方式とは異なり、高信頼の語を固定して低信頼位置へ文脈を提供する点が中心的な設計である。
+
 - **2020-06 · [Multi-Head Attention: Collaborate Instead of Concatenate](2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md)**  
   実装：[✓](https://github.com/epfml/collaborative-attention) ・ リポジトリ内被引用：4  
   標準的な多頭注意（Multi-Head 注意機構、MHA）は、複数の注意ヘッドに独立したクエリ射影とキー射影を与え、それぞれが計算した値を連結して出力する。単層のV100測定では設定次第で推論時間が2.28ミリ秒から1.75ミリ秒へ短縮した。
-
-- **2019-11 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
-  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：4  
-  翻訳文全体を毎回捨てる反復改良方式とは異なり、高信頼の語を固定して低信頼位置へ文脈を提供する点が中心的な設計である。
 
 - **2020-06 · [$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers](2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -2781,7 +2781,7 @@
   Q8BERTは、事前学習済みBERTを特定の自然言語処理課題へ微調整する段階で量子化誤差を模擬し、推論時の8ビット整数演算へ適応させる研究である。著者はBERTの重みの99%以上を占める埋め込み層と全結合層を8ビット整数へ対応させ、残りの数値的に敏感な演算は32ビット浮動小数点に残す。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
-  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：15  
   翻訳文の長さを最初に予測し、最初の反復では全位置を同時に予測する。2019年の機械翻訳実験では、WMT14英語→ドイツ語において基礎CMLMの10反復が27.03 BLEU、同等規模の自己回帰Transformerが27.74 BLEUとなった。
 
 - **2019-07 · [Large Memory Layers with Product Keys](2019-1907.05242-large-memory-layers-with-product-keys.md)**  

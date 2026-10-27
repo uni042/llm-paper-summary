@@ -1,36 +1,86 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.findings-acl.498"
-doi: "10.18653/v1/2026.findings-acl.498"
-title: "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models"
+canonical_id: DOI:10.18653/v1/2026.findings-acl.498
+doi: 10.18653/v1/2026.findings-acl.498
+title: 'From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models'
 authors:
-  - "Junlong Tong"
-  - "Zilong Wang"
-  - "YuJie Ren"
-  - "Peiran Yin"
-  - "Hao Wu"
-  - "Wei Zhang"
-  - "Xiaoyu Shen"
-published: "2026-07"
-publication: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 10237–10263"
-publication_type: "国際会議論文（サーベイ）"
-publication_status: "ACL 2026 Findings公開版。実装の性能実験ではなく、ストリーミングLLMの定義と技術分類を提示する文献調査"
-source: "https://aclanthology.org/2026.findings-acl.498.pdf"
+- Junlong Tong
+- Zilong Wang
+- YuJie Ren
+- Peiran Yin
+- Hao Wu
+- Wei Zhang
+- Xiaoyu Shen
+published: 2026-07
+publication: 'Findings of the Association for Computational Linguistics: ACL 2026, pp. 10237–10263'
+publication_type: 国際会議論文（サーベイ）
+publication_status: ACL 2026 Findings公開版。実装の性能実験ではなく、ストリーミングLLMの定義と技術分類を提示する文献調査
+source: https://aclanthology.org/2026.findings-acl.498.pdf
 sources:
-  - "https://aclanthology.org/2026.findings-acl.498.pdf"
-  - "https://aclanthology.org/2026.findings-acl.498/"
-code: "https://github.com/EIT-NLP/Awesome-Streaming-LLMs"
-implementation: "新しいLLM推論エンジンやCUDAカーネルを実装した研究ではない。本文の図1〜5、表1〜3、§2〜7でストリーミングの定義、入力/出力の並行性、KV管理、読み書き制御を整理し、関連文献一覧を公開している。公式GitHubは論文リストであり、提案モデルの実装コードではない。"
-summary: "静的入力を全て読んでから逐次生成する通常LLMと、入力が逐次到着する環境を混同しないため、入力可視範囲を決める関数φ(t)を使って出力ストリーミング、逐次入力ストリーミング、同時入出力ストリーミングの三段階を定義する。さらに同時入出力に伴う注意依存関係の競合と位置ID衝突に対して、再符号化・結合・交互配置・グループ化の四方式、読み書きタイミングを決める規則/SFT/RLの三方式を比較する。KVの保持・削除・圧縮も分類するが、論文自身は統一ベンチマークや新規TPS測定を実施していない。"
-list_summary: "ストリーミングLLMを入力到着と出力生成の時間関係で三分類し、同時入出力の注意・位置ID競合を解く四つのアーキテクチャと三種の読み書き制御方針を体系化するサーベイ。"
-last_checked: "2026-10-27"
-worker_id: "scheduled-chat-45"
-worker_completed_at: "2026-10-27T19:51:00+09:00"
-worker_run_key: "20261027-1948-scheduled-chat-45/r01"
-reference_main_sha: "599cb4b6c4c9f057982cb668f279cb368ed3414a"
+- https://aclanthology.org/2026.findings-acl.498.pdf
+- https://aclanthology.org/2026.findings-acl.498/
+code: https://github.com/EIT-NLP/Awesome-Streaming-LLMs
+implementation: 新しいLLM推論エンジンやCUDAカーネルを実装した研究ではない。本文の図1〜5、表1〜3、§2〜7でストリーミングの定義、入力/出力の並行性、KV管理、読み書き制御を整理し、関連文献一覧を公開している。公式GitHubは論文リストであり、提案モデルの実装コードではない。
+summary: 静的入力を全て読んでから逐次生成する通常LLMと、入力が逐次到着する環境を混同しないため、入力可視範囲を決める関数φ(t)を使って出力ストリーミング、逐次入力ストリーミング、同時入出力ストリーミングの三段階を定義する。さらに同時入出力に伴う注意依存関係の競合と位置ID衝突に対して、再符号化・結合・交互配置・グループ化の四方式、読み書きタイミングを決める規則/SFT/RLの三方式を比較する。KVの保持・削除・圧縮も分類するが、論文自身は統一ベンチマークや新規TPS測定を実施していない。
+list_summary: ストリーミングLLMを入力到着と出力生成の時間関係で三分類し、同時入出力の注意・位置ID競合を解く四つのアーキテクチャと三種の読み書き制御方針を体系化するサーベイ。
+last_checked: '2026-10-27'
+worker_id: scheduled-chat-45
+worker_completed_at: '2026-10-27T19:51:00+09:00'
+worker_run_key: 20261027-1948-scheduled-chat-45/r01
+reference_main_sha: 599cb4b6c4c9f057982cb668f279cb368ed3414a
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2406.15486
+- canonical_id: arXiv:2412.00876
+- canonical_id: arXiv:2602.23699
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2410.19258
+- canonical_id: arXiv:2401.04658
+- canonical_id: arXiv:2307.02628
+- canonical_id: arXiv:2512.21857
+- canonical_id: arXiv:2407.11550
+- canonical_id: arXiv:2405.14256
+- canonical_id: arXiv:2410.10819
+- canonical_id: arXiv:2503.09573
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2507.05240
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2406.02069
+- canonical_id: arXiv:2405.12532
+- canonical_id: arXiv:2411.15024
+- canonical_id: arXiv:2412.19442
+- canonical_id: arXiv:2502.14866
+- canonical_id: arXiv:2407.15891
+- canonical_id: arXiv:2412.14838
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2312.06635
+- canonical_id: arXiv:2406.11816
+- canonical_id: DOI:10.18653/v1/d19-1633
+- canonical_id: arXiv:1904.09324
+- canonical_id: OpenReview:EQgEMAD4kv
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2410.05589
+- canonical_id: arXiv:2408.16725
+- canonical_id: arXiv:2409.06666
+- canonical_id: arXiv:2512.10931
+- canonical_id: arXiv:2404.19737
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2402.17463
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2410.00037
+- canonical_id: arXiv:2403.02181
+- canonical_id: arXiv:2306.07174
+- canonical_id: arXiv:2302.07863
+- canonical_id: arXiv:2503.20215
+- canonical_id: arXiv:2509.17765
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 4
 ---
 
 # 静的推論から動的な同時対話へ：ストリーミングLLMの定義・アーキテクチャ・制御の体系的整理
