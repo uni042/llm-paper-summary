@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-27T18:14:29+00:00`
+Generated: `2026-10-27T18:30:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -106,8 +106,8 @@ ready総数: **257** / 未claim総数: **257** / このworker向け: **86**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **125302** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **119212** / 監査再投入 **0** / 機械規則適用後 **121792** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **125303** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **119213** / 監査再投入 **0** / 機械規則適用後 **121793** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -322,7 +322,7 @@ ready総数: **257** / 未claim総数: **257** / このworker向け: **86**
 | 209 | 10 | 6 | 7 | DOI:10.1109/icassp55912.2026.11461425 | Breaking Codebook Redundancy for Faster Autoregressive Image Generation with Retrieval-Augmented Speculative Decoding | 2026-05-03 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 0 | 7 | Speculative Decoding, survey-speculative-decoding, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1109/icassp55912.2026.11461425) |
 | 210 | 116 | 6 | 7 | arXiv:2601.14277 | Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct | 2026-01-11 | arXiv.org | 16 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.14277) |
 | 211 | 114 | 6 | 7 | arXiv:2605.05023 | CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels | 2026-05-06 | Annual Meeting of the Association for Computational Linguistics | 4 | 7 | 02-hardware-accelerators, 03-attention-kernels, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.05023) |
-| 212 | 10 | 6 | 7 | DOI:10.1109/ICETIS70504.2026.11633493 | TokenFlow: Token-Level GPU Sharing and Adaptive Scheduling for Multi-Model Concurrent LLM Inference | 2026-06-01 | International Conference on Electronic Technology and Information Science (ICETIS) | 0 | 7 | LLM Serving / Scheduling / Disaggregation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/icetis70504.2026.11633493) |
+| 212 | 102 | 6 | 7 | arXiv:2606.24165 | Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models | 2026-06-23 | arXiv.org | 2 | 7 |  | [source](https://arxiv.org/abs/2606.24165) |
 | 213 | 0 | 6 | 7 | DOI:10.1109/HPCC67675.2025.00060 | VIFMM: Custom RISC-V Vector Instructions with INT-FP Mixed-Precision Computing for Accelerating LLM Inference | 2025-08-13 | IEEE International Conference on High Performance Computing and Communications | 0 | 7 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, survey-transformer-compression-inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/HPCC67675.2025.00060) |
 | 214 | 20 | 6 | 7 | arXiv:2604.16734 | Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines | 2026-04-17 | Annual Meeting of the Association for Computational Linguistics | 0 | 7 | KV Cache Compression / Long Context, KV cache memory management / streaming inference / attention sinks / length extrapolation, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2604.16734) |
 | 215 | 7 | 6 | 7 | arXiv:2507.11959 | PoTPTQ: A Two-step Power-of-Two Post-training for LLMs | 2025-07-16 | arXiv.org | 7 | 7 | Weight Quantization / Compression, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2507.11959) |

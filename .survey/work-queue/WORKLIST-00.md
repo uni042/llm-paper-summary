@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-27T18:14:29+00:00`
+Generated: `2026-10-27T18:30:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -106,8 +106,8 @@ ready総数: **257** / 未claim総数: **257** / このworker向け: **86**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **125302** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **119212** / 監査再投入 **0** / 機械規則適用後 **121792** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **125303** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **119213** / 監査再投入 **0** / 機械規則適用後 **121793** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -322,7 +322,7 @@ ready総数: **257** / 未claim総数: **257** / このworker向け: **86**
 | 209 | 103 | 6 | 7 | arXiv:2603.00188 | ST-Lite: Training-Free KV Cache Compression with Spatio-Trajectory Guidance for Long-Horizon GUI Agents | 2026-02-27 |  | 3 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化 | [source](https://arxiv.org/abs/2603.00188) |
 | 210 | 104 | 6 | 7 | arXiv:2602.04361 | SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration | 2026-02-04 | arXiv.org | 4 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.04361) |
 | 211 | 116 | 6 | 7 | arXiv:2511.13223 | TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs | 2025-11-17 | Neural Information Processing Systems | 6 | 7 |  | [source](https://arxiv.org/abs/2511.13223) |
-| 212 | 102 | 6 | 7 | arXiv:2606.24165 | Spectral Evolution-Guided Token Pruning in Multimodal Large Language Models | 2026-06-23 | arXiv.org | 2 | 7 |  | [source](https://arxiv.org/abs/2606.24165) |
+| 212 | 102 | 6 | 7 | arXiv:2606.07618 | ScaleSweep: Accurate NVFP4 Post-Training Quantization of LLMs via Block Scale Initialization | 2026-05-30 | arXiv.org | 2 | 7 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2606.07618) |
 | 213 | 6 | 6 | 7 | arXiv:2412.06858 | Taming Sensitive Weights : Noise Perturbation Fine-tuning for Robust LLM Quantization | 2024-12-08 | CPAL | 6 | 7 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2412.06858) |
 | 214 | 101 | 6 | 7 | arXiv:2601.20745 | HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs | 2026-01-28 | arXiv.org | 1 | 7 | Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2601.20745) |
 | 215 | 10 | 6 | 7 | arXiv:2609.30820 | Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness | 2026-09-25 |  | 0 | 7 | arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.30820) |
