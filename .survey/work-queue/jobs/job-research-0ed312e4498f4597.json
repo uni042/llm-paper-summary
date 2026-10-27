@@ -35,10 +35,15 @@
   "selection_reason": "It streams model layers between GPU and CPU memory during inference and explicitly includes LLMs, enabling execution under constrained GPU memory.",
   "semantic_scholar_id": "73c7949935c5126b35b559ac5ecad80dc7b16b22",
   "source_url": "https://arxiv.org/abs/2410.08791",
-  "status": "ready",
+  "status": "superseded",
   "title": "Superpipeline: A Universal Approach for Reducing GPU Memory Usage in Large Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-27T13:23:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2024-2410.08791-superpipeline-a-universal-approach-for-reducing-gpu-memory-usage-in-larg.md",
+  "represented_canonical_id": "arXiv:2410.08791",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

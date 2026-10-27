@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T10:29:52+00:00",
+  "generated_at": "2026-10-27T13:23:25+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 62,
+  "count": 64,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1630,6 +1630,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d7ad92acecfe--libfile_f9bad6adad74819189590e6f7b22d6c5--2025-2503.01066-alchemist-serving-activation-reuse-research-20261027-1345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d7ad92acecfe--libfile_f9bad6adad74819189590e6f7b22d6c5--2025-2503.01066-alchemist-serving-activation-reuse-research-20261027-1345-scheduled-chat-.json",
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.11602",
+      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
+      "source_url": "https://arxiv.org/html/2510.11602v1",
+      "returned_at": "2026-10-27T13:19:18+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6465,
+        "body_paragraphs": 36,
+        "method_chars": 1127,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 810,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.15294",
+      "title": "Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2502.15294",
+      "returned_at": "2026-10-27T13:20:27+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 104 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6497,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 104,
+        "limitation_chars": 830,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 104 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
     }
   ]
 }

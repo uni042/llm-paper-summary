@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（135本）
+## 自動生成の論文一覧（136本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -537,6 +537,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2024-03 · [OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization](2024-2403.12983-osscar-one-shot-structured-pruning-in-vision-and-language-models-with-co.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデル（LLM）の推論負荷を下げるために重みの一部をゼロにしても、非構造化疎行列を通常のGPU行列積で実行すると必ずしも高速にならない。事前学習済みの重みから一度だけ枝刈りし、元の学習目的で追加の勾配学習を行わない「一回限りの事後構造化枝刈り」である。
+
+- **2024-10 · [Superpipeline: A Universal Approach for Reducing GPU Memory Usage in Large Models](2024-2410.08791-superpipeline-a-universal-approach-for-reducing-gpu-memory-usage-in-larg.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルを単一GPUに全層常駐させると、モデル重みだけでメモリ容量を使い切ることがある。パラメータを量子化・枝刈りせず、モデルの演算そのものも変更しないという設計である。
 
 - **2024-06 · [Endor: Hardware-Friendly Sparse Format for Offloaded LLM Inference](2024-2406.11674-endor-hardware-friendly-sparse-offloaded-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
