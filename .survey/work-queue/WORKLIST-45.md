@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-27T21:40:20+00:00`
+Generated: `2026-10-27T21:59:33+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-27T21:40:20+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **230** / 未claim総数: **230** / このworker向け: **76**
+ready総数: **229** / 未claim総数: **229** / このworker向け: **76**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -89,10 +89,10 @@ ready総数: **230** / 未claim総数: **230** / このworker向け: **76**
 | 70 | 0 | research | DOI:10.1109/TPDS.2026.3729988 | FairCache: Demystifying Cache-Induced Unfairness in Multi-Tenant Large Language Model Serving | [primary](https://www.semanticscholar.org/paper/69e16a381bb1a483fb9a5e494bc895ad74bb412a) | `papers/inference/99-other-inference-systems/2026-e490b2439d3f-faircache-demystifying-cache-induced-unfairness-in-multi-tenant-large-language-model-serving.md` |
 | 71 | 0 | research | SemanticScholar:0de357a57605e64690ab98e7d1d046f31069d3b7 | Higher Acceptance Rates for Speculative Decoding with Randomised Drafting | [primary](https://www.semanticscholar.org/paper/0de357a57605e64690ab98e7d1d046f31069d3b7) | `papers/inference/99-other-inference-systems/0000-6f6205978b30-higher-acceptance-rates-for-speculative-decoding-with-randomised-drafting.md` |
 | 72 | 0 | research | SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34 | Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference | [primary](https://www.semanticscholar.org/paper/31b8a29357d61780d42adf2cb88d79c423262d34) | `papers/inference/99-other-inference-systems/0000-00cf0032c3b4-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardware-adapted-inference.md` |
-| 73 | 0 | research | SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117 | P REFIX AND O UTPUT L ENGTH -A WARE S CHEDULING FOR E FFICIENT O NLINE LLM I NFERENCE | [primary](https://www.semanticscholar.org/paper/409bb6f4f749b4cf9f46aea9729838a17c707117) | `papers/inference/99-other-inference-systems/0000-f7e8cd88e56e-p-refix-and-o-utput-l-ength-a-ware-s-cheduling-for-e-fficient-o-nline-llm-i-nference.md` |
-| 74 | 0 | research | SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc | Safety-Constrained Contextual Bandit for Dynamic Power Management | [primary](https://www.semanticscholar.org/paper/5319240e5148bdec7c4a9324204f6ac3c1639dfc) | `papers/inference/99-other-inference-systems/0000-db7dd81c8387-safety-constrained-contextual-bandit-for-dynamic-power-management.md` |
-| 75 | 0 | research | SemanticScholar:8c3db0d74fade89f6b4da5245992a9c9ac8c481a | I N - BATCH E NSEMBLE D RAFTING : T OWARD F AST AND R OBUST S PECULATIVE D ECODING FOR M ULTIMODAL L ANGUAGE M ODELS | [primary](https://www.semanticscholar.org/paper/8c3db0d74fade89f6b4da5245992a9c9ac8c481a) | `papers/inference/99-other-inference-systems/0000-7efffe9381bc-i-n-batch-e-nsemble-d-rafting-t-oward-f-ast-and-r-obust-s-peculative-d-ecoding-for-m-ultimodal-l-anguage-m-odels.md` |
-| 76 | 0 | research | SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b | Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers | [primary](https://www.semanticscholar.org/paper/e3397bfa8a64c83dc88c08dcfab676c8255d6a1b) | `papers/inference/99-other-inference-systems/0000-2144aa87ce08-reimagining-llm-inference-infrastructure-with-memory-centric-kv-cache-servers.md` |
+| 73 | 0 | research | SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45 | S YSTEMATIZING I NFERENCE P LACEMENT FOR D EEP L EARNING ACROSS E DGE AND C LOUD P LATFORMS : A M ULTI -O BJECTIVE O PTIMIZATION P ERSPECTIVE | [primary](https://www.semanticscholar.org/paper/48cb1122456a29d5f6de3436c1950c6ad752cc45) | `papers/inference/99-other-inference-systems/0000-dfd6770a114b-s-ystematizing-i-nference-p-lacement-for-d-eep-l-earning-across-e-dge-and-c-loud-p-latforms-a-m-ulti-o-bjective-o-ptimiz.md` |
+| 74 | 0 | research | SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625 | Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moe fication and LoRA | [primary](https://www.semanticscholar.org/paper/6c54aa7b3fca89d20de14aa8c1e4fc6760080625) | `papers/inference/99-other-inference-systems/0000-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moe-fication-and-lora.md` |
+| 75 | 0 | research | SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2 | D EMYSTIFYING THE M IXTURE OF E XPERTS S ERVING T AX | [primary](https://www.semanticscholar.org/paper/929a6dad9869799e02c60c0fc959d2fd41de8cb2) | `papers/inference/99-other-inference-systems/0000-b71f37ac28fc-d-emystifying-the-m-ixture-of-e-xperts-s-erving-t-ax.md` |
+| 76 | 0 | research | SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73 | E FFICIENT M ULTIMODAL S PATIAL R EASONING VIA D Y - NAMIC AND A SYMMETRIC R OUTING | [primary](https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73) | `papers/inference/99-other-inference-systems/0000-b255695a8914-e-fficient-m-ultimodal-s-patial-r-easoning-via-d-y-namic-and-a-symmetric-r-outing.md` |
 
 ## リスト入り判定待ち Discovery候補
 

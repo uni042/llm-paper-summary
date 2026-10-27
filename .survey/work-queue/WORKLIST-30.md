@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-27T21:40:20+00:00`
+Generated: `2026-10-27T21:59:33+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-27T21:40:20+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **230** / 未claim総数: **230** / このworker向け: **77**
+ready総数: **229** / 未claim総数: **229** / このworker向け: **76**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -89,11 +89,10 @@ ready総数: **230** / 未claim総数: **230** / このworker向け: **77**
 | 70 | 0 | research | DOI:10.1109/TPDS.2026.3729256 | Mix-or-Split: Latency-Aware Scheduling for Edge–Cloud LLM Inference | [primary](https://doi.org/10.1109/TPDS.2026.3729256) | `papers/inference/99-other-inference-systems/0000-fb46bb8522ef-mix-or-split-latency-aware-scheduling-for-edgecloud-llm-inference.md` |
 | 71 | 0 | research | OpenAlex:W7165293849 | Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale | [primary](https://hdl.handle.net/10919/143438) | `papers/inference/99-other-inference-systems/2026-2f1f58b49e98-disaggregated-llm-serving-with-cxl-shared-memory-kv-cache-at-rack-scale.md` |
 | 72 | 0 | research | SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818 | Inducing Elasticity in Foundation Models: Post-Training Techniques for Adaptable Inference | [primary](https://www.semanticscholar.org/paper/2dc80f53c6a384c2993982fcb8e9bbff261a3818) | `papers/inference/99-other-inference-systems/0000-b545168ff7ff-inducing-elasticity-in-foundation-models-post-training-techniques-for-adaptable-inference.md` |
-| 73 | 0 | research | SemanticScholar:3d92ed5d5ec908d880ebd2fff15cbae1559abc25 | Autoregressive Language Modeling using Compressed Sequence Mixing | [primary](https://www.semanticscholar.org/paper/3d92ed5d5ec908d880ebd2fff15cbae1559abc25) | `papers/inference/99-other-inference-systems/0000-0a50dc789f87-autoregressive-language-modeling-using-compressed-sequence-mixing.md` |
-| 74 | 0 | research | SemanticScholar:495b6f68a28cdb816f04cf3ea41a5cd2df664e2b | HAP-E: H ESSIAN -A WARE S TRUCTURED P RUNING OF LLM S FOR E FFICIENT I NFERENCE | [primary](https://www.semanticscholar.org/paper/495b6f68a28cdb816f04cf3ea41a5cd2df664e2b) | `papers/inference/99-other-inference-systems/0000-964564cf0e59-hap-e-h-essian-a-ware-s-tructured-p-runing-of-llm-s-for-e-fficient-i-nference.md` |
-| 75 | 0 | research | SemanticScholar:8b1a63cf48c6e1614cf2e0be48b458f0b1157089 | K AIROX : Adaptive GPU–CPU Hybrid LLM Inference via Online Neuron Balancing | [primary](https://www.semanticscholar.org/paper/8b1a63cf48c6e1614cf2e0be48b458f0b1157089) | `papers/inference/99-other-inference-systems/0000-5b8bf42f78f5-kairox-adaptive-gpucpu-hybrid-llm-inference-via-online-neuron-balancing.md` |
-| 76 | 0 | research | SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b | E QUILIBRIUM L ANGUAGE M ODELS | [primary](https://www.semanticscholar.org/paper/db3dec580b67703832f46c15aff9262bee8c557b) | `papers/inference/99-other-inference-systems/0000-08f17c554db9-e-quilibrium-l-anguage-m-odels.md` |
-| 77 | 0 | research | SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0 | Hardware Characterization of Di ! usion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks | [primary](https://www.semanticscholar.org/paper/ecee781ec40b65342c1da703529e953e715e66e0) | `papers/inference/99-other-inference-systems/0000-a20d7e3605dd-hardware-characterization-of-di-usion-vs-autoregressive-language-model-inference-compute-vs-memory-bottlenecks.md` |
+| 73 | 0 | research | SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117 | P REFIX AND O UTPUT L ENGTH -A WARE S CHEDULING FOR E FFICIENT O NLINE LLM I NFERENCE | [primary](https://www.semanticscholar.org/paper/409bb6f4f749b4cf9f46aea9729838a17c707117) | `papers/inference/99-other-inference-systems/0000-f7e8cd88e56e-p-refix-and-o-utput-l-ength-a-ware-s-cheduling-for-e-fficient-o-nline-llm-i-nference.md` |
+| 74 | 0 | research | SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc | Safety-Constrained Contextual Bandit for Dynamic Power Management | [primary](https://www.semanticscholar.org/paper/5319240e5148bdec7c4a9324204f6ac3c1639dfc) | `papers/inference/99-other-inference-systems/0000-db7dd81c8387-safety-constrained-contextual-bandit-for-dynamic-power-management.md` |
+| 75 | 0 | research | SemanticScholar:8c3db0d74fade89f6b4da5245992a9c9ac8c481a | I N - BATCH E NSEMBLE D RAFTING : T OWARD F AST AND R OBUST S PECULATIVE D ECODING FOR M ULTIMODAL L ANGUAGE M ODELS | [primary](https://www.semanticscholar.org/paper/8c3db0d74fade89f6b4da5245992a9c9ac8c481a) | `papers/inference/99-other-inference-systems/0000-7efffe9381bc-i-n-batch-e-nsemble-d-rafting-t-oward-f-ast-and-r-obust-s-peculative-d-ecoding-for-m-ultimodal-l-anguage-m-odels.md` |
+| 76 | 0 | research | SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b | Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers | [primary](https://www.semanticscholar.org/paper/e3397bfa8a64c83dc88c08dcfab676c8255d6a1b) | `papers/inference/99-other-inference-systems/0000-2144aa87ce08-reimagining-llm-inference-infrastructure-with-memory-centric-kv-cache-servers.md` |
 
 ## リスト入り判定待ち Discovery候補
 

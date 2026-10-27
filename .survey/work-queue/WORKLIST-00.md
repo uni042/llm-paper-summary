@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-27T21:40:20+00:00`
+Generated: `2026-10-27T21:59:33+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-27T21:40:20+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **230** / 未claim総数: **230** / このworker向け: **77**
+ready総数: **229** / 未claim総数: **229** / このworker向け: **77**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -89,11 +89,11 @@ ready総数: **230** / 未claim総数: **230** / このworker向け: **77**
 | 70 | 0 | research | DOI:10.1109/TON.2026.3704584 | Efficient Mixture-of-Experts Model Inference at the Edge via Adaptive Expert Merging | [primary](https://doi.org/10.1109/TON.2026.3704584) | `papers/inference/02-adaptive-expert-computation-compression/2026-adaptive-expert-merging-edge.md` |
 | 71 | 0 | research | doi:10.1145/3788106 | Towards Scalable Storage Architectures for GPU Clusters Running Large Language Models | [primary](https://doi.org/10.1145/3788106) | `papers/inference/99-other-inference-systems/2026-80288018997a-towards-scalable-storage-architectures-for-gpu-clusters-running-large-language-models.md` |
 | 72 | 0 | research | SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14 | F AA S CALE : U NLOCKING F AST LLM S CALING FOR S ERVERLESS I NFERENCE | [primary](https://www.semanticscholar.org/paper/183d712c62ae566cd9150f3b360c7de9ead96d14) | `papers/inference/99-other-inference-systems/0000-c8280071b7d9-f-aa-s-cale-u-nlocking-f-ast-llm-s-caling-for-s-erverless-i-nference.md` |
-| 73 | 0 | research | SemanticScholar:3a94121f1a42fb80c75f9d47e492c73dfa5b2e97 | Composite Attention: A Framework for Combining Sequence Mixing Primitives | [primary](https://www.semanticscholar.org/paper/3a94121f1a42fb80c75f9d47e492c73dfa5b2e97) | `papers/inference/99-other-inference-systems/0000-fded6af8f475-composite-attention-a-framework-for-combining-sequence-mixing-primitives.md` |
-| 74 | 0 | research | SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45 | S YSTEMATIZING I NFERENCE P LACEMENT FOR D EEP L EARNING ACROSS E DGE AND C LOUD P LATFORMS : A M ULTI -O BJECTIVE O PTIMIZATION P ERSPECTIVE | [primary](https://www.semanticscholar.org/paper/48cb1122456a29d5f6de3436c1950c6ad752cc45) | `papers/inference/99-other-inference-systems/0000-dfd6770a114b-s-ystematizing-i-nference-p-lacement-for-d-eep-l-earning-across-e-dge-and-c-loud-p-latforms-a-m-ulti-o-bjective-o-ptimiz.md` |
-| 75 | 0 | research | SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625 | Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moe fication and LoRA | [primary](https://www.semanticscholar.org/paper/6c54aa7b3fca89d20de14aa8c1e4fc6760080625) | `papers/inference/99-other-inference-systems/0000-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moe-fication-and-lora.md` |
-| 76 | 0 | research | SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2 | D EMYSTIFYING THE M IXTURE OF E XPERTS S ERVING T AX | [primary](https://www.semanticscholar.org/paper/929a6dad9869799e02c60c0fc959d2fd41de8cb2) | `papers/inference/99-other-inference-systems/0000-b71f37ac28fc-d-emystifying-the-m-ixture-of-e-xperts-s-erving-t-ax.md` |
-| 77 | 0 | research | SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73 | E FFICIENT M ULTIMODAL S PATIAL R EASONING VIA D Y - NAMIC AND A SYMMETRIC R OUTING | [primary](https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73) | `papers/inference/99-other-inference-systems/0000-b255695a8914-e-fficient-m-ultimodal-s-patial-r-easoning-via-d-y-namic-and-a-symmetric-r-outing.md` |
+| 73 | 0 | research | SemanticScholar:3d92ed5d5ec908d880ebd2fff15cbae1559abc25 | Autoregressive Language Modeling using Compressed Sequence Mixing | [primary](https://www.semanticscholar.org/paper/3d92ed5d5ec908d880ebd2fff15cbae1559abc25) | `papers/inference/99-other-inference-systems/0000-0a50dc789f87-autoregressive-language-modeling-using-compressed-sequence-mixing.md` |
+| 74 | 0 | research | SemanticScholar:495b6f68a28cdb816f04cf3ea41a5cd2df664e2b | HAP-E: H ESSIAN -A WARE S TRUCTURED P RUNING OF LLM S FOR E FFICIENT I NFERENCE | [primary](https://www.semanticscholar.org/paper/495b6f68a28cdb816f04cf3ea41a5cd2df664e2b) | `papers/inference/99-other-inference-systems/0000-964564cf0e59-hap-e-h-essian-a-ware-s-tructured-p-runing-of-llm-s-for-e-fficient-i-nference.md` |
+| 75 | 0 | research | SemanticScholar:8b1a63cf48c6e1614cf2e0be48b458f0b1157089 | K AIROX : Adaptive GPU–CPU Hybrid LLM Inference via Online Neuron Balancing | [primary](https://www.semanticscholar.org/paper/8b1a63cf48c6e1614cf2e0be48b458f0b1157089) | `papers/inference/99-other-inference-systems/0000-5b8bf42f78f5-kairox-adaptive-gpucpu-hybrid-llm-inference-via-online-neuron-balancing.md` |
+| 76 | 0 | research | SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b | E QUILIBRIUM L ANGUAGE M ODELS | [primary](https://www.semanticscholar.org/paper/db3dec580b67703832f46c15aff9262bee8c557b) | `papers/inference/99-other-inference-systems/0000-08f17c554db9-e-quilibrium-l-anguage-m-odels.md` |
+| 77 | 0 | research | SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0 | Hardware Characterization of Di ! usion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks | [primary](https://www.semanticscholar.org/paper/ecee781ec40b65342c1da703529e953e715e66e0) | `papers/inference/99-other-inference-systems/0000-a20d7e3605dd-hardware-characterization-of-di-usion-vs-autoregressive-language-model-inference-compute-vs-memory-bottlenecks.md` |
 
 ## リスト入り判定待ち Discovery候補
 
