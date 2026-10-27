@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（772本）
+## 自動生成の論文一覧（774本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2368,6 +2368,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
 
+- **2025-05 · [LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation](2025-2506.12038-lcd-advancing-extreme-low-bit-clustering-for-large-language-models-via-k.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LCDは密度に基づく重み代表値の初期化、ヘッセ対角近似による代表値更新、段階的・投機的な代表値数削減、層別活性平滑化を組み合わせる極低ビット量子化方式。A100上の報告速度改善はBERT-large最大6.2倍、LLaMA-2-7Bは4.7倍。
+
 - **2025-05 · [Exploring Federated Pruning for Large Language Models](2025-2505.13547-exploring-federated-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/Pengxin-Guo/FedPrLLM) ・ リポジトリ内被引用：0  
   LLMの重みを削ってメモリ使用量を減らす剪定（枝刈り）は、モデルの入力活性化を校正データで観測して「消しても影響の小さい重み」を選ぶことが多い。LLaMA 7Bの50%疎化では、WikiText2の困惑度（PPL）が密モデル5.67、全データを集める集中剪定7.25、FedPrLLM層one-shot 7.32、クライアント単独7.44となる。
@@ -2931,6 +2935,10 @@
 - **2023-06 · [Modular Transformers: Compressing Transformers into Modularized Layers for Flexible Efficient Inference](2023-2306.02379-modular-transformers-compressing-transformers-into-modularized-layers-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文の主題は、圧縮済みモデルを一種類だけ作るのではなく、一度の圧縮学習から異なる実行時予算に対応できる層構成を取り出すことである。
+
+- **2023-06 · [A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys](2023-dc4a5089a5f8-a-probabilistic-framework-for-pruning-transformers-via-a-finite-admixtur.md)**  
+  実装：[✓](https://github.com/Fsoft-AIC/FiAKFormer) ・ リポジトリ内被引用：0  
+  本研究は、Transformerの自己注意を確率的な混合モデルとして解釈し、学習可能なkeyの事前重みを使って冗長な注意スコアとkey/valueを枝刈りする方式「Finite Admixture of Keys（FiAK）」を提案する。
 
 - **2023-05 · [Infor-Coef: Information Bottleneck-based Dynamic Token Downsampling for Compact and Efficient language model](2023-2305.12458-infor-coef-information-bottleneck-based-dynamic-token-downsampling-for-c.md)**  
   実装：[✓](https://github.com/twwwwx/Infor-Coef) ・ リポジトリ内被引用：0  

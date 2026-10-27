@@ -34,6 +34,8 @@ reference_main_sha: "67f7195e8c840aa0d0afbdf688af2c284d7a9926"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_scope: "attention-score-key-pruning-probabilistic-transformer"
+last_audited: null
+audit_version: 0
 ---
 
 # A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（193本）
+## 自動生成の論文一覧（194本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -563,6 +563,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-10 · [Insum: Sparse GPU Kernels Simplified and Optimized with Indirect Einsums](2025-2510.17505-insum-sparse-gpu-kernels-simplified-and-optimized-with-indirect-einsums.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Insumは、疎演算を間接インデックス付きEinsum（indirect Einsum）へ変換することで、疎テンソルの値と座標情報を、通常のdense テンソル演算へ写像する。
+
+- **2025-10 · [Exact Causal Attention with 10% Fewer Operations](2025-2510.05175-exact-causal-attention-with-10-fewer-operations.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、自己回帰型Transformerの因果注意（causal 注意機構）を、近似やトークン削除を行わずに、計算に必要な加減算・乗算を減らす問題を扱う。構造を利用することで、通常の三角領域だけを計算する行列積に対して約9.4%の主要な乗算を削減し、再帰的な適用では理論上約11.1%の削減が可能とする。
 
 - **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
   実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：0  
