@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T17:02:35+00:00",
+  "generated_at": "2026-10-27T17:16:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1577,60 +1577,6 @@
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2509.17428",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T13:47:16+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 156 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5397,
-        "body_paragraphs": 36,
-        "method_chars": 1369,
-        "method_paragraphs": 10,
-        "evaluation_chars": 156,
-        "limitation_chars": 858,
-        "insufficiency_flags": [
-          "評価説明量 156 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2503.19950",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T13:57:36+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 152 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6923,
-        "body_paragraphs": 39,
-        "method_chars": 2019,
-        "method_paragraphs": 11,
-        "evaluation_chars": 152,
-        "limitation_chars": 771,
-        "insufficiency_flags": [
-          "評価説明量 152 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.11602",
       "title": null,
       "source_url": null,
@@ -1795,36 +1741,9 @@
       "worker_run_key": "20261027-1948-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2404.04759",
+      "canonical_id": "arXiv:2209.01188",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-27T15:01:15+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4904,
-        "body_paragraphs": 30,
-        "method_chars": 1339,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 557,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1365a3186e608191ac75f720360af845--2024-2404.04759-compression-small-data-afriberta-research-20261027-2245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1365a3186e608191ac75f720360af845--2024-2404.04759-compression-small-data-afriberta-research-20261027-2245-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-2245-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2209.01188",
-      "title": "PETALS: Collaborative Inference and Fine-tuning of Large Models",
-      "source_url": "https://arxiv.org/pdf/2209.01188",
       "returned_at": "2026-10-27T17:00:37+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1850,8 +1769,8 @@
     },
     {
       "canonical_id": "arXiv:2503.23274",
-      "title": "PromptDistill: Query-based Selective Token Retention in Intermediate Layers for Efficient Large Language Model Inference",
-      "source_url": "https://arxiv.org/pdf/2503.23274",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T17:00:39+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1877,8 +1796,8 @@
     },
     {
       "canonical_id": "arXiv:2604.05438",
-      "title": "Residual-Mass Accounting for Partial-KV Decoding",
-      "source_url": "https://arxiv.org/html/2604.05438v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T17:00:41+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1904,8 +1823,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
-      "title": "ShortGPT: Layers in Large Language Models are More Redundant Than You Expect",
-      "source_url": "https://aclanthology.org/2025.findings-acl.1035.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T17:00:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1928,6 +1847,87 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2f85c466b7a5--libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-2f85c466b7a5--libfile_3e2dc16b438481919049d918e0864c6f--2025-doi-10.18653-v1-2025.findings-acl.1035-shortgpt-layer-pruning-research-20261027-2245.json",
       "worker_run_key": "20261027-2245-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.04759",
+      "title": "What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models",
+      "source_url": "https://arxiv.org/pdf/2404.04759",
+      "returned_at": "2026-10-27T17:16:38+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4904,
+        "body_paragraphs": 30,
+        "method_chars": 1339,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 557,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-31f4a32b4152--libfile_1365a3186e608191ac75f720360af845--2024-2404.04759-compression-small-data-afriberta-research-20261027-2245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-31f4a32b4152--libfile_1365a3186e608191ac75f720360af845--2024-2404.04759-compression-small-data-afriberta-research-20261027-2245-scheduled-chat-45.json",
+      "worker_run_key": "20261027-2245-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2509.17428",
+      "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2509.17428v4",
+      "returned_at": "2026-10-27T17:16:39+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 156 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5397,
+        "body_paragraphs": 36,
+        "method_chars": 1369,
+        "method_paragraphs": 10,
+        "evaluation_chars": 156,
+        "limitation_chars": 858,
+        "insufficiency_flags": [
+          "評価説明量 156 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e9d36cf8b245--libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e9d36cf8b245--libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-.json",
+      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.19950",
+      "title": "LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation",
+      "source_url": "https://arxiv.org/pdf/2503.19950",
+      "returned_at": "2026-10-27T17:16:41+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 152 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6923,
+        "body_paragraphs": 39,
+        "method_chars": 2019,
+        "method_paragraphs": 11,
+        "evaluation_chars": 152,
+        "limitation_chars": 771,
+        "insufficiency_flags": [
+          "評価説明量 152 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f20c9daa8dfe--libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f20c9daa8dfe--libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
     }
   ]
 }
