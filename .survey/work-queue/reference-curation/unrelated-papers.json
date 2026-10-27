@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-27T09:50:16+00:00",
-  "record_count": 12502,
+  "updated_at": "2026-10-27T10:51:04+00:00",
+  "record_count": 12505,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180078,6 +180078,45 @@
       "last_checked_at": "2026-10-27T09:50:16+00:00",
       "linked_from": [],
       "title": "Embedding Compression for Efficient Re-Identification"
+    },
+    "DOI:10.3837/tiis.2021.03.006": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.3837/tiis.2021.03.006",
+      "identity_tokens": [
+        "DOI:10.3837/tiis.2021.03.006",
+        "title:empirical performance evaluation of communication libraries for multi-gpu based distributed deep learning in a container environment"
+      ],
+      "reason": "多GPU上の分散深層学習に用いる通信ライブラリの性能比較が主題であり、LLMの推論・サービング・KVキャッシュ・復号・推論カーネルを対象とする研究ではない。タイトルのみの先行除外。",
+      "first_checked_at": "2026-10-27T10:51:00+00:00",
+      "last_checked_at": "2026-10-27T10:51:00+00:00",
+      "linked_from": [],
+      "title": "Empirical Performance Evaluation of Communication Libraries for Multi-GPU based Distributed Deep Learning in a Container Environment"
+    },
+    "DOI:10.5220/0014452400004084": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.5220/0014452400004084",
+      "identity_tokens": [
+        "DOI:10.5220/0014452400004084",
+        "title:sharedab-detr: memory-efficient object detection through centralbank parameter sharing"
+      ],
+      "reason": "DETR型の物体検出モデルにおけるパラメータ共有によるメモリ削減が主題であり、LLMの推論システムや言語モデル圧縮を扱う研究ではない。タイトルのみの先行除外。",
+      "first_checked_at": "2026-10-27T10:51:02+00:00",
+      "last_checked_at": "2026-10-27T10:51:02+00:00",
+      "linked_from": [],
+      "title": "ShareDAB-DETR: Memory-Efficient Object Detection through CentralBank Parameter Sharing"
+    },
+    "DOI:10.1007/s41060-025-00865-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s41060-025-00865-1",
+      "identity_tokens": [
+        "DOI:10.1007/s41060-025-00865-1",
+        "title:fourier transform and permutation-based transformer for drug–target binding affinity prediction"
+      ],
+      "reason": "薬物と標的の結合親和性予測に特化したTransformer応用研究であり、LLM推論のメモリ・計算・サービングを改善するシステム研究ではない。タイトルのみの先行除外。",
+      "first_checked_at": "2026-10-27T10:51:04+00:00",
+      "last_checked_at": "2026-10-27T10:51:04+00:00",
+      "linked_from": [],
+      "title": "Fourier transform and permutation-based transformer for drug–target binding affinity prediction"
     }
   }
 }
