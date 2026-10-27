@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（167本）
+## 自動生成の論文一覧（168本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -417,6 +417,10 @@
 - **2025-10 · [Neural Weight Compression for Language Models](2025-2510.11234-neural-weight-compression-for-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Neural 重み Compression（NWC）は、LLMの重みを手作業で設計した一様量子化やHadamard回転だけで圧縮するのではなく、重み分布からencoderとdecoderを学習して圧縮する方式である。
+
+- **2025-09 · [Fair-GPTQ: Bias-Aware Quantization for Large Language Models](2025-2509.15206-fair-gptq-bias-aware-quantization-for-large-language-models.md)**  
+  実装：[✓](https://github.com/upunaprosk/fair-gptq) ・ リポジトリ内被引用：0  
+  LLMの重みを16bitから4bitへ量子化すると、パラメータ格納容量とデータ転送量を大幅に減らせる。著者らの主評価では、Mistral-v0.3-7B-InstructのUnQover（曖昧な属性質問での回答評価）が通常GPTQの33.30%からFair-GPTQの58.89%へ改善した。
 
 - **2025-06 · [ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models](2025-2506.13472-rosaq-rotation-based-saliency-aware-weight-quantization-for-efficiently-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

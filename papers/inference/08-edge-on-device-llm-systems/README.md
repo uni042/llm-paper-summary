@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（81本）
+## 自動生成の論文一覧（82本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -263,6 +263,10 @@
 - **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoBiLEは、総パラメータがGPUメモリに収まらないMixture-of-Experts（MoE）言語モデルを、消費者向けGPUとCPU DRAMの組合せで実行するときの転送ボトルネックを削減する推論方式である。
+
+- **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
+  実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：0  
+  大規模なクラウドVLMは難しい質問に強い反面、すべての質問をクラウドで処理すると、単純な画像説明にも大きなモデルの計算費用と応答待ち時間がかかる。そこで、問い合わせごとに処理先を決める「モデルルーティング」が推論サービングの重要な設計問題になる。
 
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
