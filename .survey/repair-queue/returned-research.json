@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T20:08:05+00:00",
+  "generated_at": "2026-10-27T20:29:09+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 72,
+  "count": 73,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1631,33 +1631,6 @@
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2508.06084",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T14:33:23+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 135 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7712,
-        "body_paragraphs": 44,
-        "method_chars": 1314,
-        "method_paragraphs": 9,
-        "evaluation_chars": 135,
-        "limitation_chars": 1053,
-        "insufficiency_flags": [
-          "評価説明量 135 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-48d2c4e5ad0a--libfile_6bc2d3d732608191987b87318452b8d0--2025-2508.06084-adaptinfer-dynamic-text-guided-vision-pruning-research-20261027-2145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-48d2c4e5ad0a--libfile_6bc2d3d732608191987b87318452b8d0--2025-2508.06084-adaptinfer-dynamic-text-guided-vision-pruning-research-20261027-2145-sche.json",
-      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.06095",
       "title": null,
       "source_url": null,
@@ -1848,8 +1821,8 @@
     },
     {
       "canonical_id": "arXiv:2410.04211",
-      "title": "Correlation-Aware Select and Merge Attention for Efficient Fine-Tuning and Context Length Extension",
-      "source_url": "https://arxiv.org/html/2410.04211v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T20:03:50+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1875,11 +1848,67 @@
       "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2507.09071",
+      "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2507.09071v3",
+      "returned_at": "2026-10-27T20:25:54+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 156 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7095,
+        "body_paragraphs": 37,
+        "method_chars": 2284,
+        "method_paragraphs": 12,
+        "evaluation_chars": 156,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 156 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.06084",
+      "title": "AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance",
+      "source_url": "https://arxiv.org/pdf/2508.06084v3",
+      "returned_at": "2026-10-27T20:25:56+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5036,
+        "body_paragraphs": 27,
+        "method_chars": 1271,
+        "method_paragraphs": 7,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_d9432e76dc408191ac9ed1af530fb63b--2025-2508.06084-adaptinfer-dynamic-text-vision-pruning-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_d9432e76dc408191ac9ed1af530fb63b--2025-2508.06084-adaptinfer-dynamic-text-vision-pruning-returned-repair-20261028-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261028-0400-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2503.19950",
       "title": "LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation",
       "source_url": "https://arxiv.org/pdf/2503.19950v1",
-      "returned_at": "2026-10-27T20:04:52+00:00",
-      "return_count": 3,
+      "returned_at": "2026-10-27T20:27:27+00:00",
+      "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -1898,8 +1927,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-134bb5eecffd--libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-134bb5eecffd--libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat.json",
       "worker_run_key": "20261028-0400-scheduled-chat-00/r01"
     }
   ]

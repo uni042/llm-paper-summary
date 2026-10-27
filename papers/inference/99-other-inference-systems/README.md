@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（717本）
+## 自動生成の論文一覧（718本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1205,6 +1205,10 @@
 - **2026-03 · [ETA-VLA: Efficient Token Adaptation via Temporal Fusion and Intra-LLM Sparsification for Vision-Language-Action Models](2026-2603.25766-eta-vla-efficient-token-adaptation-via-temporal-fusion-and-intra-llm-spa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   複数カメラの過去画像を視覚言語行動モデル（Vision-Language-Action モデル; VLA）へ入力すると、フレーム数とカメラ数に比例して視覚トークンが増える。主題は車両の制御アルゴリズムそのものよりも、VLAにおける視覚系列の効率的な処理である。
+
+- **2026-03 · [Efficient Training-Free Multi-Token Prediction via Embedding-Space Probing](2026-2603.17942-efficient-training-free-multi-token-prediction-via-embedding-space-probi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ESP（Embedding-Space Probing）は、通常は次トークンだけを学習した自己回帰LLMから、重みを変更せずに複数の将来トークン候補を取り出すための推論時手法である。
 
 - **2026-03 · [DASH: Dynamic Audio-Driven Semantic Chunking for Efficient Omnimodal Token Compression](2026-2603.15685-dash-dynamic-audio-driven-semantic-chunking-for-efficient-omnimodal-toke.md)**  
   実装：[✓](https://github.com/laychou666/DASH) ・ リポジトリ内被引用：0  
