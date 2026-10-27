@@ -33,6 +33,8 @@ worker_run_key: "20261027-1345-scheduled-chat-45/r01"
 reference_main_sha: "87a99497d06fa180409a1045cc69e070eb511412"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Alchemist — サービングの中間活性をオンライン継続学習へ再利用する仕組み

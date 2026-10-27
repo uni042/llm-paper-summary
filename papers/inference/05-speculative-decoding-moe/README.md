@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（301本）
+## 自動生成の論文一覧（302本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -917,6 +917,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-10 · [FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference](2025-2510.22641-fastvlm-self-speculative-decoding-for-fast-vision-language-model-inferen.md)**  
   実装：[✓](https://anonymous.4open.science/r/SSD-575E/README.md) ・ リポジトリ内被引用：0  
   自己回帰デコードでは1トークンごとに大きなデコーダを呼び出す。投機的復号では小さい候補生成器が数トークンを先に作り、大きい本体が一度に検証して、受理した連続トークンを確定する。しかし視覚言語タスクでは、デコーダの浅い層だけを通った特徴から正しいキャプションや回答を予測するのが難しい。
+
+- **2025-10 · [3-Model Speculative Decoding](2025-2510.12966-3-model-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  標準的な投機的デコードでは、小さなドラフトモデルが先のトークンを複数予測し、大きなターゲットモデルがまとめて検証する。ドラフトが速くてもターゲットと予測分布が大きく異なれば、検証時に多くの候補が棄却され、期待した高速化が得られない。
 
 - **2025-09 · [Speculate Deep and Accurate: Lossless and Training-Free Acceleration for Offloaded LLMs via Substitute Speculative Decoding](2025-2509.18344-speculate-deep-and-accurate-lossless-and-training-free-acceleration-for-.md)**  
   実装：[✓](https://github.com/NYCU-EDgeAi/subspec) ・ リポジトリ内被引用：0  

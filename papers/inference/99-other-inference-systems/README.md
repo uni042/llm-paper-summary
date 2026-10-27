@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（682本）
+## 自動生成の論文一覧（684本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2068,6 +2068,10 @@
   実装：[✓](https://github.com/TokuyuSou/ULB-SAPR) ・ リポジトリ内被引用：0  
   CaoとArefは、事前学習済み大規模言語モデルの重みを2ビットへ圧縮するとき、既存のApiQが残す精度劣化を、小規模な部分再学習だけで軽減する手法を提案した。LLaMA-2-7Bのゼロショット常識推論5課題平均は、全精度64.85%、ApiQ 55.91%に対して、提案法の最良設定で56.88%となる。
 
+- **2025-04 · [Empower Vision Applications with LoRA LMM](2025-2411.00915-empower-vision-applications-with-lora-lmm.md)**  
+  実装：[✓](https://github.com/mi150/VaLoRA) ・ リポジトリ内被引用：0  
+  オンラインでは入力形状に合うタイル構成を事前探索したATMMカーネルを使い、LoRAを基盤重みへ統合するモード、統合しないモード、両者を混ぜるdeLoRAモードを負荷に応じて選ぶ。
+
 - **2025-04 · [An Empirical Study on Prompt Compression for Large Language Models](2025-2505.00019-an-empirical-study-on-prompt-compression-for-large-language-models.md)**  
   実装：[✓](https://github.com/3DAgentWorld/Toolkit-for-Prompt-Compression) ・ リポジトリ内被引用：0  
   本論文は、長いプロンプトを事前に短縮してLLMへ渡すテキスト入力の圧縮について、6種類の方式を同一の評価枠組みで比較する実証研究である。また、単一A6000 GPU上の圧縮器処理時間はSCRLの67ms/入力からKiSの2410ms/入力まで大きく異なる。
@@ -2437,6 +2441,10 @@
 - **2024-04 · [LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory](2024-2404.11163-longvq-long-sequence-modeling-with-vector-quantization-on-structured-mem.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LongVQは、SSMの構造化長期記憶とベクトル量子化されたKeyによる固定長の注意を組み合わせ、系列長に対して線形時間で動作するハイブリッドモデルである。
+
+- **2024-03 · [QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning](2024-2403.06497-quanttune-optimizing-model-quantization-with-adaptive-outlier-driven-fin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  整数のビット幅を小さくすると、重みと活性を低精度で表現でき、メモリや演算資源を節約できる可能性がある。しかし通常の対称一様量子化では、一部の極端に大きい活性値に量子化の最大範囲を合わせると、同じビット数で表現する刻み幅が粗くなる。
 
 - **2024-03 · [Efficient Encoder-Decoder Transformer Decoding for Decomposable Tasks](2024-2403.13112-efficient-encoder-decoder-transformer-decoding-for-decomposable-tasks.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
