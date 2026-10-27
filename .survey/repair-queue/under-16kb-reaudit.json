@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-27T16:47:02.477512+00:00",
+  "generated_at": "2026-10-27T17:06:19.556676+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 13,
+  "count": 12,
   "worker_counts": {
-    "scheduled-chat-00": 5,
+    "scheduled-chat-00": 4,
     "scheduled-chat-30": 4,
     "scheduled-chat-45": 4
   },
@@ -77,26 +77,6 @@
         "method_chars": 763,
         "evaluation_chars": 894,
         "limitation_chars": 247
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2509.19592-frame-stacked-local-transformers-for-efficient-multi-codebook-speech-gen.md",
-      "canonical_id": "arXiv:2509.19592",
-      "title": "Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation",
-      "file_bytes": 12631,
-      "source_sha256": "57d222c5cce45bc00736da52dc77d2b6dd099a26aa45f9e40a5597da7b98e2ad",
-      "source_git_blob_sha": "a2e66d5668a8e8885056ee3a49293ca94b618821",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.876745,
-      "quality_metrics": {
-        "body_chars": 3444,
-        "method_chars": 982,
-        "evaluation_chars": 923,
-        "limitation_chars": 236
       },
       "mechanical_failures": [],
       "warnings": []
