@@ -8,24 +8,24 @@
 
 ## Inference / 推論 — 3410本
 
-- [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 135本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
-- [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 124本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
+- [Offload / Hierarchical Memory](inference/01-offload-hierarchical-memory/) — 139本 — model weightやMoE expertをCPU・peer GPU・SSD / Flash等へ置き、転送・計算を協調させてGPU memory不足を補う。
+- [Adaptive Expert Computation / Compression](inference/02-adaptive-expert-computation-compression/) — 126本 — tokenやlayerごとに実行expert数を変えたりexpertを統合・代替したりして、MoEの計算・転送・容量を減らす。
 - [Expert Prefetch](inference/03-expert-prefetch/) — 18本 — 将来使うexpertをrouting確定前に予測し、GPU cacheの保持や先読みを制御してweight転送待ち・転送量を減らす。
-- [Conditional Computation](inference/04-conditional-computation/) — 85本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。
-- [Speculative Decoding / MoE](inference/05-speculative-decoding-moe/) — 304本 — draft候補を並列生成・検証して1回のtarget実行で複数tokenを確定し、MoEではexpert読込・検証costも抑える。
-- [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 28本 — expert weightを低bit化・pruning・mixed precision等で小さくし、VRAM・bandwidth・計算量を削減する。
-- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 382本 — KV cacheを圧縮・選別・動的配分・GPU内prefetchして、容量とmemory bandwidthの負荷を減らす。
-- [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 81本 — smartphoneや個人PCなど、memory・bandwidth・電力制約の厳しい端末でLLMを実行するsystem研究。
-- [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 116本 — KVをCPU・peer GPU・SSD等へ置き、必要な転送・attention実行場所・再計算を最適化する。
-- [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 501本 — request順、batch、prefill / decode分離、KV再利用・移動、GPU配置を調整してserving効率とlatencyを改善する。
-- [Kernel / Runtime Compilation](inference/09-kernel-runtime-compilation/) — 201本 — GPUカーネル生成・融合・JIT・メガカーネル等で推論実装を最適化する。
+- [Conditional Computation](inference/04-conditional-computation/) — 108本 — layer skipping、early exit、token pruning等で入力に応じて不要なTransformer計算を実行しない。
+- [Speculative Decoding / MoE](inference/05-speculative-decoding-moe/) — 316本 — draft候補を並列生成・検証して1回のtarget実行で複数tokenを確定し、MoEではexpert読込・検証costも抑える。
+- [MoE Quantization / Compression](inference/06-moe-quantization-compression/) — 33本 — expert weightを低bit化・pruning・mixed precision等で小さくし、VRAM・bandwidth・計算量を削減する。
+- [KV Cache Optimization / Compression](inference/07-kv-cache-optimization-compression/) — 395本 — KV cacheを圧縮・選別・動的配分・GPU内prefetchして、容量とmemory bandwidthの負荷を減らす。
+- [Edge / On-device LLM Systems](inference/08-edge-on-device-llm-systems/) — 86本 — smartphoneや個人PCなど、memory・bandwidth・電力制約の厳しい端末でLLMを実行するsystem研究。
+- [KV Cache Offload / Recomputation](inference/10-kv-cache-offload-recomputation/) — 118本 — KVをCPU・peer GPU・SSD等へ置き、必要な転送・attention実行場所・再計算を最適化する。
+- [LLM Serving / Scheduling / Disaggregation](inference/11-llm-serving-scheduling-disaggregation/) — 510本 — request順、batch、prefill / decode分離、KV再利用・移動、GPU配置を調整してserving効率とlatencyを改善する。
+- [Kernel / Runtime Compilation](inference/09-kernel-runtime-compilation/) — 203本 — GPUカーネル生成・融合・JIT・メガカーネル等で推論実装を最適化する。
 - [MoE Parallelism / Communication](inference/12-moe-parallelism-communication/) — 64本 — expert parallelism、通信、分散配置、負荷分散を共同最適化する。
-- [Sparse Attention](inference/13-sparse-attention/) — 149本 — attention対象を疎に選択して長文脈推論の計算量と帯域を削減する。
-- [Agentic Inference / Serving Runtime](inference/14-agentic-inference-serving-runtime/) — 79本 — ツール呼出し、長寿命セッション、複数LLM・複数エージェントのワークフロー、長い待機時間と再入場を前提に、エージェント推論の資源・状態・GPU配置・KV再利用を最適化するシステム研究をまとめる。
+- [Sparse Attention](inference/13-sparse-attention/) — 153本 — attention対象を疎に選択して長文脈推論の計算量と帯域を削減する。
+- [Agentic Inference / Serving Runtime](inference/14-agentic-inference-serving-runtime/) — 85本 — ツール呼出し、長寿命セッション、複数LLM・複数エージェントのワークフロー、長い待機時間と再入場を前提に、エージェント推論の資源・状態・GPU配置・KV再利用を最適化するシステム研究をまとめる。
 - [Inference Simulation / Emulation](inference/15-inference-simulation-emulation/) — 62本 — LLM推論・サービング基盤を実GPU実行の代わりに離散事象、仮想時間、プロファイル標本化、カーネル性能モデルなどで再現し、構成探索や性能評価を高速化する研究をまとめる。
-- [Weight Quantization / Compression](inference/16-weight-quantization-compression/) — 167本 — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
+- [Weight Quantization / Compression](inference/16-weight-quantization-compression/) — 173本 — 一般LLMの重み表現を低ビット量子化、ベクトル量子化、疎量子化、無損失符号化などで小さくし、モデル品質を保ちながら重み容量・帯域・演算費用を削減する研究をまとめる。
 - [PIM / Near-Data Acceleration](inference/17-pim-near-data-acceleration/) — 33本 — メモリ内処理（PIM）、メモリ近傍処理、ストレージ内処理（in-storage）、計算機能を持つHBM/NAND/DIMMなどへLLM演算を寄せ、データ移動そのものを減らす推論アクセラレーション研究をまとめる。
-- [Other Inference Systems](inference/99-other-inference-systems/) — 692本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
+- [Other Inference Systems](inference/99-other-inference-systems/) — 592本 — 推論効率化が主目的だが、まだ独立lineageを作るほど同種研究が集まっていない手法を置く。
 
 → [Inference一覧](inference/)
 
