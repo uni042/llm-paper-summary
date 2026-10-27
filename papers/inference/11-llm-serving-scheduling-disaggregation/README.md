@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（485本）
+## 自動生成の論文一覧（486本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1607,6 +1607,10 @@
 - **2025-09 · [MACE: A Hybrid LLM Serving System with Colocated SLO-aware Continuous Retraining Alignment](2025-2510.03283-mace-a-hybrid-llm-serving-system-with-colocated-slo-aware-continuous-ret.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一定時間ごとに再学習する方式はモデル更新が遅れ、更新を最優先する方式は利用者への応答を待たせる。A6000 AdaではAdaInf比で10%再学習率の推論スループット最大1.46倍、入力事前計算遅延最大63%削減を報告する。
+
+- **2025-09 · [Intra-request branch orchestration for efficient LLM reasoning](2025-2509.24957-intra-request-branch-orchestration-for-efficient-llm-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、推論時に複数のChain-of-Thought（CoT）枝を生成して多数決を取る自己整合性（SC）のトークン費用とリクエスト完了遅延を同時に削減するDUCHESSを提案する。
 
 - **2025-07 · [Towards Resource-Efficient Serverless LLM Inference with SLINFER](2025-2507.00507-towards-resource-efficient-serverless-llm-inference-with-slinfer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

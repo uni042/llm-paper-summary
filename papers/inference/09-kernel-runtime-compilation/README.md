@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（191本）
+## 自動生成の論文一覧（193本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -552,6 +552,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   常識推論、知識、翻訳、文章生成などの一部だけが大きく損なわれる場合、汎用instructionデータを均等に使って回復学習しても、限られた学習予算を劣化していない能力へ使ったり、互いに矛盾する指示へ過適合したりする。PASERは、剪定済みLLMのどの能力がどれだけ変化したかを元モデルとの出力分布の差で推定し、その劣化に応じて回復学習データを選ぶ方式である。
 
+- **2025-10 · [Transformer Based Linear Attention with Optimized GPU Kernel Implementation](2025-2510.21956-transformer-based-linear-attention-with-optimized-gpu-kernel-implementat.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、線形注意機構（Linear 注意機構、LA）の漸近的な計算量が小さいのに、実際のGPUでは必ずしも高速でない問題を扱う。A6000上の単層注意機構実験では、Gated LAに対して最大3.3倍の速度と3.6分の1のメモリ使用量を報告する。
+
 - **2025-10 · [RACE Attention: A Strictly Linear-Time Attention Layer for Training on Outrageously Large Contexts](2025-2510.04008-race-attention-a-strictly-linear-time-attention-layer-for-training-on-ou.md)**  
   実装：[✓](https://github.com/sahiljoshi515/RACE_Attention) ・ リポジトリ内被引用：0  
   RACE 注意機構は、Transformerのsoftmax注意が系列長Nに対してO(N²d)のQuery-Key相互作用を要求する問題を、別の注意カーネルと確率的スケッチで解決する研究である。
@@ -611,6 +615,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-04 · [GPU Performance Portability needs Autotuning](2025-2505.03780-gpu-performance-portability-needs-autotuning.md)**  
   実装：[✓](https://github.com/foundation-model-stack/vllm-triton-backend) ・ リポジトリ内被引用：0  
   行列のタイル寸法、warp数、パイプライン段数、共有メモリ、レジスタ割当てをあるGPUへ手作業で合わせると、別のGPUでは速度が落ち、カーネルを移植するたびにCUDA/HIPの実装と検証を繰り返す必要がある。モデル全体の学習やサービングスケジューラを新しくする研究ではない。
+
+- **2025-01 · [Longer Attention Span: Increasing Transformer Context Length with Sparse Graph Processing Techniques](2025-2502.01659-longer-attention-span-increasing-transformer-context-length-with-sparse-.md)**  
+  実装：[✓](https://github.com/KLab-AI3/Graph-Processing-Attention-IPDPS-2025) ・ リポジトリ内被引用：0  
+  本論文の主張は、疎な注意機構 maskを使うだけではGPUの計算は必ずしも疎にならない、という実装上の問題を解決することである。
 
 - **2024-11 · [TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture](2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
