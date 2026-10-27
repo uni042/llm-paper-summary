@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T14:13:44+00:00",
+  "generated_at": "2026-10-27T14:34:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1605,62 +1605,6 @@
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2510.11602",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T13:19:18+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6465,
-        "body_paragraphs": 36,
-        "method_chars": 1127,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 810,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2502.15294",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T13:20:27+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 104 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6497,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 104,
-        "limitation_chars": 830,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 104 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.18653/v1/2022.findings-acl.189",
       "title": null,
       "source_url": null,
@@ -1715,33 +1659,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8619e75122c081918c358bb71bd164ac--2024-2407.17678-s2-attention-hhst-hardware-aware-sparse-research-20261027-2042-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8619e75122c081918c358bb71bd164ac--2024-2407.17678-s2-attention-hhst-hardware-aware-sparse-research-20261027-2042-scheduled-chat-45-r01.json",
       "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.06084",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T13:47:14+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 135 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7712,
-        "body_paragraphs": 44,
-        "method_chars": 1314,
-        "method_paragraphs": 9,
-        "evaluation_chars": 135,
-        "limitation_chars": 1053,
-        "insufficiency_flags": [
-          "評価説明量 135 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6bc2d3d732608191987b87318452b8d0--2025-2508.06084-adaptinfer-dynamic-text-guided-vision-pruning-research-20261027-2145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6bc2d3d732608191987b87318452b8d0--2025-2508.06084-adaptinfer-dynamic-text-guided-vision-pruning-research-20261027-2145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2509.17428",
@@ -1825,36 +1742,9 @@
       "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2210.17114",
+      "canonical_id": "arXiv:2509.21081",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-27T13:57:37+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 173 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6221,
-        "body_paragraphs": 38,
-        "method_chars": 1726,
-        "method_paragraphs": 11,
-        "evaluation_chars": 173,
-        "limitation_chars": 1103,
-        "insufficiency_flags": [
-          "評価説明量 173 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b35abb72488c8191a68ace2036a3590a--2022-2210.17114-quala-minilm-length-adaptive-int8-inference-research-20261027-2145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b35abb72488c8191a68ace2036a3590a--2022-2210.17114-quala-minilm-length-adaptive-int8-inference-research-20261027-2145-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2509.21081",
-      "title": "TyphoonMLA: A Mixed Naive-Absorb MLA Kernel For Shared Prefix",
-      "source_url": "https://arxiv.org/pdf/2509.21081v2",
       "returned_at": "2026-10-27T14:08:32+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -1876,6 +1766,116 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_e2b0c0e74ab08191868c708a3301de25--2025-2509.21081-typhoonmla-shared-prefix-hybrid-mla-research-20261027-2145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_e2b0c0e74ab08191868c708a3301de25--2025-2509.21081-typhoonmla-shared-prefix-hybrid-mla-research-20261027-2145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.11602",
+      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
+      "source_url": "https://arxiv.org/html/2510.11602v1",
+      "returned_at": "2026-10-27T14:33:20+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6465,
+        "body_paragraphs": 36,
+        "method_chars": 1127,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 810,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0b006fd0f65c--libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0b006fd0f65c--libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-schedul.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2210.17114",
+      "title": "QuaLA-MiniLM: a Quantized Length Adaptive MiniLM",
+      "source_url": "https://arxiv.org/pdf/2210.17114v3",
+      "returned_at": "2026-10-27T14:33:21+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 173 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6221,
+        "body_paragraphs": 38,
+        "method_chars": 1726,
+        "method_paragraphs": 11,
+        "evaluation_chars": 173,
+        "limitation_chars": 1103,
+        "insufficiency_flags": [
+          "評価説明量 173 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1c5d8bd6b181--libfile_b35abb72488c8191a68ace2036a3590a--2022-2210.17114-quala-minilm-length-adaptive-int8-inference-research-20261027-2145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1c5d8bd6b181--libfile_b35abb72488c8191a68ace2036a3590a--2022-2210.17114-quala-minilm-length-adaptive-int8-inference-research-20261027-2145-schedu.json",
+      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2502.15294",
+      "title": "Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2502.15294",
+      "returned_at": "2026-10-27T14:33:22+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 104 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6497,
+        "body_paragraphs": 39,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 104,
+        "limitation_chars": 830,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 104 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-361df303d96c--libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-361df303d96c--libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-schedule.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.06084",
+      "title": "AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance",
+      "source_url": "https://arxiv.org/pdf/2508.06084v3",
+      "returned_at": "2026-10-27T14:33:23+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 135 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7712,
+        "body_paragraphs": 44,
+        "method_chars": 1314,
+        "method_paragraphs": 9,
+        "evaluation_chars": 135,
+        "limitation_chars": 1053,
+        "insufficiency_flags": [
+          "評価説明量 135 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-48d2c4e5ad0a--libfile_6bc2d3d732608191987b87318452b8d0--2025-2508.06084-adaptinfer-dynamic-text-guided-vision-pruning-research-20261027-2145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-48d2c4e5ad0a--libfile_6bc2d3d732608191987b87318452b8d0--2025-2508.06084-adaptinfer-dynamic-text-guided-vision-pruning-research-20261027-2145-sche.json",
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     }
   ]

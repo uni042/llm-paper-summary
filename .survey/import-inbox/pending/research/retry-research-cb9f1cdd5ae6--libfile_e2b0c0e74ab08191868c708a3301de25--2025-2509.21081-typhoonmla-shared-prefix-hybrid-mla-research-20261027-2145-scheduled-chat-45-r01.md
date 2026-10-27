@@ -31,6 +31,8 @@ reference_main_sha: "27159e9e4fcd1b88e392adae30ad9781d8b98e7b"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 worklist_rank: 62
+last_audited: null
+audit_version: 0
 ---
 
 # TyphoonMLA：共有prefixだけをnaive展開し、非共有KVをabsorbで保持するMLA推論カーネル
