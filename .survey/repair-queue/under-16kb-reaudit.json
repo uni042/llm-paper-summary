@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-27T14:45:39.054742+00:00",
+  "generated_at": "2026-10-27T15:10:15.465369+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 8,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-00": 3,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -59,6 +59,50 @@
       ],
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md",
+      "canonical_id": "arXiv:2412.15803",
+      "title": "WebLLM: A High-Performance In-Browser LLM Inference Engine",
+      "file_bytes": 11036,
+      "source_sha256": "8f3aa7cffa1bbda794c0126cffa11918b153a68ec797b967b99985558a0695ab",
+      "source_git_blob_sha": "ddb7500e785dd4021f1b6c26fe31b6682d0d682e",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.817164,
+      "quality_metrics": {
+        "body_chars": 3673,
+        "method_chars": 1027,
+        "evaluation_chars": 889,
+        "limitation_chars": 296
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md",
+      "canonical_id": "arXiv:2510.05363",
+      "title": "Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation",
+      "file_bytes": 12443,
+      "source_sha256": "f026bf13fba68a298bb17e31164b4e9298a1f8a3866f2677cd3b8772501920bb",
+      "source_git_blob_sha": "55ff4efc01eebe54bea6dc496c2107f7c95aaff7",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.7657,
+      "quality_metrics": {
+        "body_chars": 4193,
+        "method_chars": 864,
+        "evaluation_chars": 1545,
+        "limitation_chars": 268
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 76.6% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 76.6% < 警告基準 80%"
       ]
     },
     {
