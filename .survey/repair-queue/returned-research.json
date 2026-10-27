@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T13:48:59+00:00",
+  "generated_at": "2026-10-27T13:59:14+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 69,
+  "count": 72,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1745,8 +1745,8 @@
     },
     {
       "canonical_id": "arXiv:2506.06095",
-      "title": "Accelerating Sparse Transformer Inference on GPU",
-      "source_url": "https://arxiv.org/pdf/2506.06095v5",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T13:46:13+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1772,8 +1772,8 @@
     },
     {
       "canonical_id": "arXiv:2508.06084",
-      "title": "AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance",
-      "source_url": "https://arxiv.org/pdf/2508.06084v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T13:47:14+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1799,8 +1799,8 @@
     },
     {
       "canonical_id": "arXiv:2509.17428",
-      "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2509.17428v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T13:47:16+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1822,6 +1822,87 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2111.15588",
+      "title": "SimpleTRON: Simple Transformer with O(N) Complexity",
+      "source_url": "https://arxiv.org/pdf/2111.15588",
+      "returned_at": "2026-10-27T13:57:35+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 146 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5078,
+        "body_paragraphs": 31,
+        "method_chars": 1334,
+        "method_paragraphs": 8,
+        "evaluation_chars": 146,
+        "limitation_chars": 761,
+        "insufficiency_flags": [
+          "評価説明量 146 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_97587d199410819195376db71d788dd1--2021-2111.15588-simpletron-linear-qkv-reordering-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_97587d199410819195376db71d788dd1--2021-2111.15588-simpletron-linear-qkv-reordering-research-20261027-2042-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.19950",
+      "title": "LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation",
+      "source_url": "https://arxiv.org/pdf/2503.19950",
+      "returned_at": "2026-10-27T13:57:36+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 152 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6923,
+        "body_paragraphs": 39,
+        "method_chars": 2019,
+        "method_paragraphs": 11,
+        "evaluation_chars": 152,
+        "limitation_chars": 771,
+        "insufficiency_flags": [
+          "評価説明量 152 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2210.17114",
+      "title": "QuaLA-MiniLM: a Quantized Length Adaptive MiniLM",
+      "source_url": "https://arxiv.org/pdf/2210.17114v3",
+      "returned_at": "2026-10-27T13:57:37+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 173 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6221,
+        "body_paragraphs": 38,
+        "method_chars": 1726,
+        "method_paragraphs": 11,
+        "evaluation_chars": 173,
+        "limitation_chars": 1103,
+        "insufficiency_flags": [
+          "評価説明量 173 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b35abb72488c8191a68ace2036a3590a--2022-2210.17114-quala-minilm-length-adaptive-int8-inference-research-20261027-2145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b35abb72488c8191a68ace2036a3590a--2022-2210.17114-quala-minilm-length-adaptive-int8-inference-research-20261027-2145-scheduled-chat-45-r01.json",
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     }
   ]
