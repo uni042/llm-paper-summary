@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（707本）
+## 自動生成の論文一覧（708本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1978,7 +1978,7 @@
 
 - **2025-09 · [Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation](2025-2509.19592-frame-stacked-local-transformers-for-efficient-multi-codebook-speech-gen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Koel-TTSとNanoCodecを用いたLibriTTS評価では、積層係数2で自己回帰型LTが従来の非積層並列方式より2.1倍、MaskGIT型LTが3.1倍高速になる。
+  Koel-TTSとNanoCodecを使ったLibriTTS評価では、積層係数2で自己回帰型が従来の非積層・全コード並列方式の2.1倍、MaskGIT型が3.1倍の推論処理量を示した。
 
 - **2025-09 · [Enhancing Linear Attention with Residual Learning](2025-2509.25223-enhancing-linear-attention-with-residual-learning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2207,6 +2207,10 @@
 - **2024-12 · [GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments](2024-2412.04788-guide-a-global-unified-inference-engine-for-deploying-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルを実運用に配置する際、同じモデルでもGPU、推論ランタイム、入力長、バッチ数、GPU分割方式が変わると、初トークン遅延（TTFT）、復号スループット、GPUメモリ使用量が大きく変化する。
+
+- **2024-12 · [Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners](2024-2412.04917-continuous-speech-tokens-makes-llms-robust-multi-modality-learners.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  音声対話を言語モデルへ統合する際、文字列と同様に音声も離散トークンIDへ変換し、次のIDを分類する方式が広く用いられる。Mini-Omniの10.84に対しFlow-Omniは8.81で、絶対2.03ポイント、相対約18.7%の低下となる。
 
 - **2024-11 · [LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters](2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
