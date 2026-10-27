@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T08:53:05+00:00",
+  "generated_at": "2026-10-27T10:15:05+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 64,
+  "count": 63,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1603,34 +1603,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c1c0492f5e37--libfile_171f776592188191af5605f3fe394a34--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261027-1204-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c1c0492f5e37--libfile_171f776592188191af5605f3fe394a34--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261027-1204-scheduled-.json",
       "worker_run_key": "20261027-1204-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2412.05693",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T07:40:28+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5051,
-        "body_paragraphs": 30,
-        "method_chars": 1711,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-485cc0e4f675--libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-485cc0e4f675--libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-cha.json",
-      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2508.08289",

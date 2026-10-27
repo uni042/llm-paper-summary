@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（380本）
+## 自動生成の論文一覧（381本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1280,6 +1280,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-01 · [MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference](2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md)**  
   実装：[✓](https://github.com/zwxandy/MPCache) ・ リポジトリ内被引用：0  
   大規模言語モデル（LLM）のKVキャッシュ圧縮は、通常のGPU推論では過去トークンの一部を削除・選択することで注意計算量とメモリを減らす。さらに粗いクラスタから細かいクラスタへ選択を絞り、近接Transformer層の選択インデックスを共有することで、MPC特有の比較と秘密インデックスgatherの費用を削減する。
+
+- **2024-12 · [Batch-Max: Higher LLM Throughput using Larger Batch Sizes and KV Cache Compression](2024-2412.05693-batch-max-higher-llm-throughput-using-larger-batch-sizes-and-kv-cache-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存のKVキャッシュ削除は、長い入力プロンプトをすべて処理した後、生成段階のKVメモリや帯域を減らすことに主眼がある。プリフィルの全KVを一度保持しなければならないため、生成段階では大幅に圧縮していても、最初のプリフィル時のピークメモリがバッチサイズを制限する。
 
 ### 3年前（2023-11〜2024-10）
 

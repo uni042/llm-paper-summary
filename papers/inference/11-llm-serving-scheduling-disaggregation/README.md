@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（500本）
+## 自動生成の論文一覧（501本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1651,6 +1651,10 @@
 - **2025-10 · [From Principles to Practice: A Systematic Study of LLM Serving on Multi-core NPUs](2025-2510.05632-systematic-study-multicore-npu-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   マルチコアNPU向け多層シミュレータで、テンソル分割・コア配置・SRAM/HBM管理・プリフィルとデコードの分離/融合をQwen3各サイズで比較し、入力長・通信競合・負荷構成ごとに有利な設計を明らかにする研究。
+
+- **2025-10 · [Best of mini-N in-loop Sampling: A Contextual Quality Reward Model for Reliable and Efficient Best-of-N Sampling](2025-2510.04087-best-of-mini-n-in-loop-sampling-a-contextual-quality-reward-model-for-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Best-of-N（BoN）は、同じプロンプトに対してN個の回答候補を生成し、報酬モデルで最も高いものを採用する。多数の候補を生成すれば高品質な回答に出会いやすくなるが、生成費用が増え、さらに候補がすべて不適切でも相対順位の1位を出力してしまう。安全性と速度を同時に無償で改善する手法ではなく、明確な閾値・品質交換関係を持つ。
 
 - **2025-10 · [A Survey on Collaborating Small and Large Language Models for Performance, Cost-effectiveness, Cloud-edge Privacy, and Trustworthiness](2025-2510.13890-a-survey-on-collaborating-small-and-large-language-models-for-performanc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

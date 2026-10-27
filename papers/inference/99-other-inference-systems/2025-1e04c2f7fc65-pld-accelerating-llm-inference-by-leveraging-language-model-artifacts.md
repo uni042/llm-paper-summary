@@ -27,6 +27,8 @@ worklist_rank: 75
 research_job_id: null
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # PLD+：言語モデルの中間表現を利用する入力複製型の投機的復号

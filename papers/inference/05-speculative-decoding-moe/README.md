@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（303本）
+## 自動生成の論文一覧（304本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1187,6 +1187,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-07 · [S2D: Sorted Speculative Decoding For More Efficient Deployment of Nested Large Language Models](2024-2407.01955-s2d-sorted-speculative-decoding-for-more-efficient-deployment-of-nested-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号は、小さなドラフトモデルが先の複数トークンを予測し、大きな対象モデルがそれらを一括検証することで、逐次デコードに必要な対象モデルの実行回数を減らす。Spec-BenchのMT-Bench評価では、3対象×greedy/非greedyの6条件における自己回帰生成比の単純平均高速化が1.55倍であった（Table 2）。
+
+- **2024-03 · [SDSAT: Accelerating LLM Inference through Speculative Decoding with Semantic Adaptive Tokens](2024-2403.18647-sdsat-accelerating-llm-inference-through-speculative-decoding-with-seman.md)**  
+  実装：[✓](https://github.com/ainergy-ml/SDSAT) ・ リポジトリ内被引用：0  
+  単一要求・小バッチではメモリ帯域に律速されやすく、GPUの演算能力が十分でもトークンを逐次確定する依存関係が残る。投機的復号は複数の候補トークンを先読みし、検証をまとめることで逐次処理の回数を減らす。
 
 ### 4年前（2022-11〜2023-10）
 
