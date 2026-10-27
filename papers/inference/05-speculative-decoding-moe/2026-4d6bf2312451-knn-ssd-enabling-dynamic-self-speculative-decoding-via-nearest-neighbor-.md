@@ -1,40 +1,69 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.findings-eacl.31"
-title: "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization"
+canonical_id: DOI:10.18653/v1/2026.findings-eacl.31
+title: 'KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization'
 authors:
-  - "Mingbo Song"
-  - "Heming Xia"
-  - "Jun Zhang"
-  - "Chak Tou Leong"
-  - "Qiancheng Xu"
-  - "Wenjie Li"
-  - "Sujian Li"
-published: "2026-03-24"
-publication: "Findings of the Association for Computational Linguistics: EACL 2026, pp. 641–655"
-publication_type: "査読付き国際会議論文"
-publication_status: "published"
-doi: "10.18653/v1/2026.findings-eacl.31"
-source: "https://aclanthology.org/2026.findings-eacl.31.pdf"
+- Mingbo Song
+- Heming Xia
+- Jun Zhang
+- Chak Tou Leong
+- Qiancheng Xu
+- Wenjie Li
+- Sujian Li
+published: '2026-03-24'
+publication: 'Findings of the Association for Computational Linguistics: EACL 2026, pp. 641–655'
+publication_type: 査読付き国際会議論文
+publication_status: published
+doi: 10.18653/v1/2026.findings-eacl.31
+source: https://aclanthology.org/2026.findings-eacl.31.pdf
 sources:
-  - "https://aclanthology.org/2026.findings-eacl.31.pdf"
-  - "https://aclanthology.org/2026.findings-eacl.31/"
-  - "https://github.com/mbsong/KNN-SSD"
-summary: "KNN-SSDは、同一LLMの一部層を飛ばすSelf-Speculative Decodingで、入力ドメインが変わると固定skip-layer集合の受理率・速度が悪化する問題を扱う。ドメイン別の最適skip集合をBayesian Optimizationで事前探索し、最後の隠れ状態をK-meansで代表化したアンカーへのKNN類似度から入力ごとに集合を選ぶ。LLaMA-2-13Bの混合タスク平均はvanilla 13.62 tokens/s、固定Self-SD 16.34、KNN-SSD 19.61（1.44倍）、Qwen2.5-14Bでは11.16→18.08 tokens/s（1.62倍）。ただしドメイン別1000回の事前探索、推論時の隠れ状態抽出とKNN探索、評価対象モデルが最大14Bという制約がある。"
-list_summary: "Self-SDのskip-layer集合をドメイン別に事前最適化し、入力の最終隠れ状態からKNNで動的選択。LLaMA-2-13Bで1.44倍、Qwen2.5-14Bで1.62倍だが事前探索と分類費用が必要。"
-implementation: "著者公式コード https://github.com/mbsong/KNN-SSD 。PyTorch/Transformers、CUDA 12.0、RTX 3090×8およびRTX A6000×4で検証。ドメインごと1000回のBayesian Optimizationと代表アンカー選択を実施。"
-implementation_status: "official-code-public; evaluated-on-multi-gpu-workstations"
-code: "https://github.com/mbsong/KNN-SSD"
-last_checked: "2026-10-27"
-worker_id: "scheduled-chat-45"
-scheduled_slot: "45"
-worker_run_key: "20261027-1645-scheduled-chat-45/r01"
-reference_main_sha: "f394e5556881587d1fbd29e587b1462f47a1cc13"
-worker_completed_at: "2026-10-27T16:51:00+09:00"
+- https://aclanthology.org/2026.findings-eacl.31.pdf
+- https://aclanthology.org/2026.findings-eacl.31/
+- https://github.com/mbsong/KNN-SSD
+summary: KNN-SSDは、同一LLMの一部層を飛ばすSelf-Speculative Decodingで、入力ドメインが変わると固定skip-layer集合の受理率・速度が悪化する問題を扱う。ドメイン別の最適skip集合をBayesian Optimizationで事前探索し、最後の隠れ状態をK-meansで代表化したアンカーへのKNN類似度から入力ごとに集合を選ぶ。LLaMA-2-13Bの混合タスク平均はvanilla 13.62 tokens/s、固定Self-SD 16.34、KNN-SSD 19.61（1.44倍）、Qwen2.5-14Bでは11.16→18.08 tokens/s（1.62倍）。ただしドメイン別1000回の事前探索、推論時の隠れ状態抽出とKNN探索、評価対象モデルが最大14Bという制約がある。
+list_summary: Self-SDのskip-layer集合をドメイン別に事前最適化し、入力の最終隠れ状態からKNNで動的選択。LLaMA-2-13Bで1.44倍、Qwen2.5-14Bで1.62倍だが事前探索と分類費用が必要。
+implementation: 著者公式コード https://github.com/mbsong/KNN-SSD 。PyTorch/Transformers、CUDA 12.0、RTX 3090×8およびRTX A6000×4で検証。ドメインごと1000回のBayesian Optimizationと代表アンカー選択を実施。
+implementation_status: official-code-public; evaluated-on-multi-gpu-workstations
+code: https://github.com/mbsong/KNN-SSD
+last_checked: '2026-10-27'
+worker_id: scheduled-chat-45
+scheduled_slot: '45'
+worker_run_key: 20261027-1645-scheduled-chat-45/r01
+reference_main_sha: f394e5556881587d1fbd29e587b1462f47a1cc13
+worker_completed_at: '2026-10-27T16:51:00+09:00'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-research_scope: "domain-adaptive-speculative-decoding-layer-skipping-routing"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+research_scope: domain-adaptive-speculative-decoding-layer-skipping-routing
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2402.05109
+  arxiv_id: '2402.05109'
+- canonical_id: arXiv:2206.09557
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2203.16487
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2404.06954
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2501.19309
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2410.01028
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2410.06916
+- canonical_id: ACL:2024.acl-long.681
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2305.17888
+- canonical_id: arXiv:2401.15024
+- canonical_id: arXiv:2402.11131
+- canonical_id: arXiv:2306.11695
+- canonical_id: arXiv:2408.15766
+- canonical_id: arXiv:2502.19732
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2302.07863
+- canonical_id: arXiv:2311.08252
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # KNN-SSD：入力ドメインに応じて層スキップ集合を切り替える自己投機的デコード
