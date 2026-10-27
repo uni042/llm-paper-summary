@@ -28,6 +28,8 @@ worker_run_key: "20261027-1932-scheduled-chat-30/r01"
 reference_main_sha: "597531a4d627cb2eca4eb9565fe236cd824dfdf7"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # NIKA：分離型LLM推論でKV転送と部分再計算を最適配分する

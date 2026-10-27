@@ -35,10 +35,15 @@
   "selection_reason": "The official SciTePress abstract proposes using decode-GPU residual capacity to trade KV-cache transfer for recomputation in disaggregated LLM inference; it reports up to 54% lower TTFT without throughput loss.",
   "semantic_scholar_id": "e59d8bf0fa6023b5d8a929c925efa65a9253b198",
   "source_url": "https://doi.org/10.5220/0014920900004039",
-  "status": "ready",
+  "status": "superseded",
   "title": "NIKA: Optimal KV Cache Transfer for Minimizing the Latency of Disaggregated LLM Inference",
   "type": "research",
   "venue": "International Conference on Cloud Computing and Services Science",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-27T11:01:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-96229b44d7f2-nika-optimal-kv-cache-transfer-for-minimizing-the-latency-of-disaggregat.md",
+  "represented_canonical_id": "DOI:10.5220/0014920900004039",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
