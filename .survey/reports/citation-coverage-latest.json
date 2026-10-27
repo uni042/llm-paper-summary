@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-27T10:46:13+00:00",
+  "checked_at": "2026-10-27T11:16:04+00:00",
   "summary": {
-    "total": 3445,
-    "complete": 3434,
-    "incomplete": 11
+    "total": 3449,
+    "complete": 3437,
+    "incomplete": 12
   },
   "families": {
     "inference": {
-      "total": 3406,
-      "complete": 3395
+      "total": 3410,
+      "complete": 3398
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-96229b44d7f2-nika-optimal-kv-cache-transfer-for-minimizing-the-latency-of-disaggregat.md",
+      "canonical_id": "DOI:10.5220/0014920900004039",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
