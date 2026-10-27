@@ -25,6 +25,8 @@ worker_completed_at: "2026-10-28T05:50:00+09:00"
 reference_main_sha: "3011709dc7d43d210aec58cba3787783580b5783"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # MetaSD：複数の投機的復号ドラフトをバンディットで切り替える

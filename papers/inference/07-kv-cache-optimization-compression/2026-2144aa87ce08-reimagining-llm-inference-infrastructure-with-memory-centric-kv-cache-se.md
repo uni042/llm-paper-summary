@@ -24,6 +24,8 @@ worker_run_key: "20261028-0632-scheduled-chat-30/r01"
 reference_main_sha: "cd31d037746f0f7adeedfc11f7a0261bc7c08a31"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers：KVを中心に組み替えるLLM推論基盤

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T20:53:34+00:00",
+  "generated_at": "2026-10-27T22:03:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 73,
+  "count": 71,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1818,62 +1818,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e9d36cf8b245--libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e9d36cf8b245--libfile_7e85892463908191acf6c2e66fa62c79--2025-2509.17428-qwha-quantization-aware-walsh-hadamard-adaptation-research-20261027-2145-.json",
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2503.19950",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T20:27:27+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4954,
-        "body_paragraphs": 25,
-        "method_chars": 1489,
-        "method_paragraphs": 7,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-134bb5eecffd--libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-134bb5eecffd--libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat.json",
-      "worker_run_key": "20261028-0400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.06084",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T20:41:33+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5036,
-        "body_paragraphs": 27,
-        "method_chars": 1271,
-        "method_paragraphs": 7,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-50602ef2918d--libfile_d9432e76dc408191ac9ed1af530fb63b--2025-2508.06084-adaptinfer-dynamic-text-vision-pruning-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-50602ef2918d--libfile_d9432e76dc408191ac9ed1af530fb63b--2025-2508.06084-adaptinfer-dynamic-text-vision-pruning-returned-repair-20261028-0400-sche.json",
-      "worker_run_key": "20261028-0400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2410.04211",
