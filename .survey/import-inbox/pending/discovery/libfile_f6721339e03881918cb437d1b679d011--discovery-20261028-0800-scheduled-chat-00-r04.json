@@ -1,0 +1,178 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261028-0800-scheduled-chat-00/r04",
+  "reference_main_sha": "58c6583be472e671de30541c2ed81462d97d31e4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.04405",
+      "identity_tokens": [
+        "arXiv:2608.04405",
+        "DOI:10.48550/arXiv.2608.04405",
+        "title:training free hashing based attention via binary principal components"
+      ],
+      "title": "Training-Free Hashing-Based Attention via Binary Principal Components",
+      "reason": "長文脈のKV候補検索にデータ依存の二値主成分を使い、勾配学習不要で鍵ベクトルの構造を保持するコンパクトなハッシュ符号を構築するBinaryPCを提案する。疎注意の対象選択を高速化し、複数LLMと長文脈ベンチマークで品質を維持しつつFlashAttentionカーネル比でデコードスループット3.56倍を報告する。",
+      "source_url": "https://arxiv.org/abs/2608.04405",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.12962",
+      "identity_tokens": [
+        "arXiv:2602.12962",
+        "DOI:10.48550/arXiv.2602.12962",
+        "title:trigen npu architecture for end to end acceleration of large language models based on sw hw co design"
+      ],
+      "title": "TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design",
+      "reason": "端末の限られたオンチップ容量とLLM重み再利用の少なさを対象に、MX低精度演算、非線形演算を専用回路なしで処理するLUT、オンチップメモリ制約に応じたスケジューリングを共同設計したNPUを提案する。LLM推論で既存NPU設計比平均2.73倍高速化と転送量52%削減を報告する。",
+      "source_url": "https://arxiv.org/abs/2602.12962",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.23765",
+      "identity_tokens": [
+        "arXiv:2512.23765",
+        "DOI:10.48550/arXiv.2512.23765",
+        "title:entropy aware token rejection for improving speculative decoding"
+      ],
+      "title": "Entropy-Aware Token Rejection for Improving Speculative Decoding",
+      "reason": "投機的復号のドラフトとターゲットが共に高エントロピーで上位候補に強く合意する場合に、敢えて一致トークンを拒否してターゲットから再サンプルするEASDを提案する。主眼は推論高速化でなく推論正答率向上であり、出力分布も標準投機的復号とは異なる。推論実行機構への関連はあるがサーベイの効率最適化への直接寄与は限定的。",
+      "source_url": "https://arxiv.org/abs/2512.23765",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.17139",
+      "identity_tokens": [
+        "arXiv:2502.17139",
+        "title:codeswift accelerating llm inference for efficient code generation",
+        "DOI:10.48550/arXiv.2502.17139",
+        "title:fastcoder accelerating repository level code generation via efficient retrieval and verification"
+      ],
+      "title": "FastCoder: Accelerating Repository-level Code Generation via Efficient Retrieval and Verification",
+      "reason": "リポジトリ規模のコード生成で一般的な投機的復号が構文・プロジェクト固有文脈を活用できない問題に対し、一般知識とプロジェクト知識の複数ソースからドラフト候補を検索し、検索タイミング制御・並列検索・文脈認識キャッシュを組み合わせるFastCoderを提案する。自己回帰生成比2.53〜2.54倍の高速化を報告する。worklistのCodeSwift旧題は同じarXiv IDへ正規化。",
+      "source_url": "https://arxiv.org/abs/2502.17139",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.15545",
+      "identity_tokens": [
+        "arXiv:2510.15545",
+        "DOI:10.48550/arXiv.2510.15545",
+        "title:tokentiming a dynamic alignment method for universal speculative decoding model pairs"
+      ],
+      "title": "TokenTiming: A Dynamic Alignment Method for Universal Speculative Decoding Model Pairs",
+      "reason": "ドラフトとターゲットで語彙・トークナイザが一致しなければ投機的復号しにくい制約を、ドラフト列の再符号化とDynamic Time Warpingによるトークン対応・確率分布移送で解決するTokenTimingを提案する。既存モデル対を追加学習せず利用し、複数タスクで1.57倍の高速化を報告する。",
+      "source_url": "https://arxiv.org/abs/2510.15545",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 45
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.13989",
+      "identity_tokens": [
+        "arXiv:2504.13989",
+        "DOI:10.48550/arXiv.2504.13989",
+        "title:gradual binary search and dimension expansion a general method for activation quantization in llms"
+      ],
+      "title": "Gradual Binary Search and Dimension Expansion : A general method for activation quantization in LLMs",
+      "reason": "LLM活性の外れ値に対してHadamard変換と段階的二分探索で低ビット量子化を設計し、Paley法で2の冪でない埋め込み次元にも回転を拡張する。Mistral/LLaMA/Qwenの重み・活性・KVを3bit化し、従来方式比でベンチマーク精度を改善する推論向け量子化研究。",
+      "source_url": "https://arxiv.org/abs/2504.13989",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 46
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.08185",
+      "identity_tokens": [
+        "arXiv:2603.08185",
+        "DOI:10.48550/arXiv.2603.08185",
+        "title:serq saliency aware low rank error reconstruction for llm quantization"
+      ],
+      "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
+      "reason": "W4A4等の低精度LLM推論で量子化誤差を補正するLoRA型の二段逐次計算と中間量子化が負担になる問題に対し、単一低ランク補償行列、静的活性平坦化、重要度認識誤差再構成、オフライン重み置換を用いるSERQを提案する。W4A8/W4A4で既存補正・回転型方式より精度を改善し、オンライン負荷を抑える。",
+      "source_url": "https://arxiv.org/abs/2603.08185",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 47
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.26615/978-954-452-098-4-093",
+      "identity_tokens": [
+        "DOI:10.26615/978-954-452-098-4-093",
+        "title:a survey on small language models"
+      ],
+      "title": "A Survey on Small Language Models",
+      "reason": "小規模言語モデルのアーキテクチャ、学習、枝刈り・量子化などの圧縮手法を、推論資源・学習時間・実行速度などの制約軸で整理するサーベイ。端末推論と圧縮の章は関連するが、主題はSLM全般の設計・学習・評価でありLLM推論サービング・カーネル・実行システム最適化への直接的貢献は限定的。",
+      "source_url": "https://aclanthology.org/2025.ranlp-1.93/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3774934.3786428",
+      "identity_tokens": [
+        "DOI:10.1145/3774934.3786428",
+        "title:janusquant accurate and efficient 2 bit kv cache quantization for long context inference"
+      ],
+      "title": "JanusQuant: Accurate and Efficient 2-bit KV Cache Quantization for Long-Context Inference",
+      "reason": "長文脈KVキャッシュの2bit量子化で外れ値による精度低下とハードウェア非効率を解決するRtSmooth実行時平滑化、absmax位置検出、直近トークン管理構造、混合精度注意カーネルを共同設計する。PPoPP 2026一次要旨はFP16精度の99%を保持しKV最大5.3倍圧縮、既存方式比最大4.45倍の復号スループットを報告する。",
+      "source_url": "https://ppopp26.sigplan.org/details/PPoPP-2026-papers/18/JanusQuant-Accurate-and-Efficient-2-bit-KV-Cache-Quantization-for-Long-Context-Infer",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1521",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.findings-acl.1521",
+        "title:compel compensated mixture of experts pruning with expert layer distribution"
+      ],
+      "title": "COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution",
+      "reason": "MoE推論で層ごとに異なるエキスパート重要度と冗長性を、Fisher情報と層別外れ値分布で推定して非一様にエキスパートを削減する。Fisher誘導の重み補償で品質低下を抑え、Qwen1.5-MoE-A2.7Bで25%削減時にほぼ無損失、50%削減でも性能低下4%以内を報告し、推論遅延とGPUメモリを削減する。",
+      "source_url": "https://aclanthology.org/2026.findings-acl.1521/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:05:13+09:00",
+      "last_checked_at": "2026-10-28T08:05:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 50
+    }
+  ]
+}
