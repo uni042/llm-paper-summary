@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261028-0632-scheduled-chat-30/r01",
+  "reference_main_sha": "cd31d037746f0f7adeedfc11f7a0261bc7c08a31",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:3a94121f1a42fb80c75f9d47e492c73dfa5b2e97",
+      "identity_tokens": ["SemanticScholar:3a94121f1a42fb80c75f9d47e492c73dfa5b2e97", "title:composite attention a framework for combining sequence mixing primitives"],
+      "title": "Composite Attention: A Framework for Combining Sequence Mixing Primitives",
+      "reason": "2024年NeurIPS ENLSPワークショップ論文。注意・ゲート・畳み込みを構造化線形写像として表し、入力依存行列の逐次合成と再帰合成を区別する理論枠組みを提案する。§4ではGAUのゲートhead数とenwik8の検証BPCを示すが、LLM推論サービング、実行時メモリ階層、KVキャッシュ、GPUカーネル、生成時レイテンシの新規実測最適化を主目的としない。効率的系列モデル設計への間接的関連性はあるためunrelatedでなくborderlineとする。",
+      "source_url": "https://neurips2024-enlsp.github.io/papers/paper_27.pdf",
+      "body_check": "research_fulltext_relevance_review: official workshop PDF pp.1-5, §§2-5, definitions 3.1/3.2, GAU gating-head enwik8 ablation Figure 3 and conclusion reviewed; no LLM inference system performance evaluation reported",
+      "first_checked_at": "2026-10-28T06:35:35+09:00",
+      "last_checked_at": "2026-10-28T06:35:35+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 76
+    }
+  ]
+}
