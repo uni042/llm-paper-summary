@@ -1032,7 +1032,7 @@
 
 - **2026-04 · [Residual-Mass Accounting for Partial-KV Decoding](2026-2604.05438-residual-mass-accounting-for-partial-kv-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  長文脈を持つ言語モデルの逐次生成では、過去の全トークンの鍵・値キャッシュを毎回読むとメモリ帯域が律速になる。重要なトークンだけを選んで読む部分KV方式は読取対象を減らせるが、選ばれなかったトークンの注意の分子と分母を捨てる。
+  入力文脈が長いほど読み出すKVが増え、メモリ帯域が律速になりやすい。そこで一部の過去トークンだけを取得して正確な注意を計算する部分KV方式がある。Llama-3.2-3B-InstructのRULER、64k文脈、全体の1%を正確参照する設定では、選択のみのTop-Kの0.688に対し提案法は0.711、全注意は0.721だった。
 
 - **2026-04 · [Reason Only When Needed: Efficient Generative Reward Modeling via Model-Internal Uncertainty](2026-2604.10072-reason-only-when-needed-efficient-generative-reward-modeling-via-model-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1902,7 +1902,7 @@
 
 - **2025-02 · [GATEKEEPER: Improving Model Cascades Through Confidence Tuning](2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  原著は画像分類、decoder-only言語モデル、encoder-decoder VLMを対象に、分布上の正誤分離、委譲曲線、モデル単独精度を比較する。
+  GATEKEEPERは、軽量な小型モデルと高精度だが高価な大型モデルを組み合わせる二段推論カスケードに対して、小型モデルの確信度そのものを委譲判断に適した形へ学習し直す方式である。評価は正答率と委譲率の曲線を主軸としており、実サービング基盤におけるGPU処理量や末尾遅延の改善を直接測ったものではない。
 
 - **2025-02 · [ETS: Efficient Tree Search for Inference-Time Scaling](2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md)**  
   実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：1  
@@ -2022,7 +2022,7 @@
 
 - **2025-09 · [Efficient Large Language Models with Zero-Shot Adjustable Acceleration](2025-2509.01190-efficient-large-language-models-with-zero-shot-adjustable-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  推論時に残すトークン数を減らす方法は、計算量とメモリ使用量を減らせるが、学習時と異なる削除率を適用すると品質が不安定になりやすい。KachueeとSharifkhaniは、注意計算で出力への寄与が小さい隠れ活性を層ごとに間引く動的 Resource 注意機構と、微調整中に活性保持率をランダムに変える学習方針を組み合わせる。
+  本研究の狙いは、推論時にTransformerの層間を通過する隠れ活性の数を削減しながら、どの程度の削減を行うかを微調整後に変更できるようにすることである。GPT-2のIMDB分類では最大11倍の加速設定で正解率が92.40%から86.48%へ低下する。
 
 - **2025-09 · [Effective Model Pruning: Measuring the Redundancy of Model Components](2025-2509.25606-effective-model-pruning-measuring-the-redundancy-of-model-components.md)**  
   実装：[✓](https://github.com/noMushroomw/Effective-model-pruning) ・ リポジトリ内被引用：0  
@@ -2617,7 +2617,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：247  
+  実装：✓ ・ リポジトリ内被引用：246  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -2641,7 +2641,7 @@
   本論文は、大規模言語モデル（LLM）の長い入力文脈を、同じモデルがそのまま利用できる短い連続表現へ学習圧縮する文脈内自己符号化器（In-context Autoencoder、ICAE）を提案する。
 
 - **2023-05 · [FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance](2023-2305.05176-frugalgpt-how-to-use-large-language-models-while-reducing-cost-and-impro.md)**  
-  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：62  
+  実装：[✓](https://github.com/stanford-futuredata/FrugalGPT) ・ リポジトリ内被引用：61  
   FrugalGPTは、価格・正確さ・誤答の種類が異なる複数の大規模言語モデル（LLM）を、予算を超えずに組み合わせる推論時のサービス選択方式である。
 
 - **2023-07 · [Hyena Hierarchy: Towards Larger Convolutional Language Models](2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md)**  
@@ -2783,7 +2783,7 @@
   UNはTransformerのオフライン 正規化を、活性値/勾配統計の平滑化と適応型 外れ値除去で安定化し、固定統計を線形層へ融合してSwin-Tで31.2% スループット向上を示す。
 
 - **2022-01 · [Latency Adjustable Transformer Encoder for Language Understanding](2022-2201.03327-latency-adjustable-transformer-encoder-for-language-understanding.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：0  
   Transformerの推論では、すべての入力トークンに対して各層の注意機構とFFNを実行する。
 
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  

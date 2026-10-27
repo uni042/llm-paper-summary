@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T22:03:27+00:00",
+  "generated_at": "2026-10-27T22:52:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 71,
+  "count": 70,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1709,33 +1709,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-087e1abb78b3--libfile_546c44579bc08191851804fcd92ceb7d--2025-2503.23274-promptdistill-intermediate-layer-token-retention-research-20261027-2245-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-087e1abb78b3--libfile_546c44579bc08191851804fcd92ceb7d--2025-2503.23274-promptdistill-intermediate-layer-token-retention-research-20261027-2245-s.json",
-      "worker_run_key": "20261027-2245-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.05438",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T17:00:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 144 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5372,
-        "body_paragraphs": 30,
-        "method_chars": 1403,
-        "method_paragraphs": 9,
-        "evaluation_chars": 144,
-        "limitation_chars": 587,
-        "insufficiency_flags": [
-          "評価説明量 144 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2e818ff941a1--libfile_393f1fcbed1c8191bcb92b044f31c422--2026-2604.05438-residual-mass-accounting-partial-kv-research-20261027-2245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2e818ff941a1--libfile_393f1fcbed1c8191bcb92b044f31c422--2026-2604.05438-residual-mass-accounting-partial-kv-research-20261027-2245-scheduled-chat.json",
       "worker_run_key": "20261027-2245-scheduled-chat-45/r01"
     },
     {
