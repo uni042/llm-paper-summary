@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-27T18:50:08+00:00",
-  "record_count": 12509,
+  "updated_at": "2026-10-27T19:51:39+00:00",
+  "record_count": 12513,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180166,6 +180166,54 @@
       "last_checked_at": "2026-10-27T18:50:08+00:00",
       "linked_from": [],
       "title": "Composing Distributed Computations Through Task and Kernel Fusion"
+    },
+    "arXiv:2502.20965": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.20965",
+      "identity_tokens": [
+        "arXiv:2502.20965"
+      ],
+      "reason": "題名上の主対象はスーパーコンピュータ・データセンター相互接続ネットワークのノード内通信性能であり、LLM推論・サービング・モデル圧縮を主題としない。通信基盤の一般研究として先行除外。",
+      "first_checked_at": "2026-10-27T19:51:32+00:00",
+      "last_checked_at": "2026-10-27T19:51:32+00:00",
+      "linked_from": [],
+      "title": "On the Impact of Intra-node Communication in the Performance of Supercomputer and Data Center Interconnection Networks"
+    },
+    "arXiv:2505.19472": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19472",
+      "identity_tokens": [
+        "arXiv:2505.19472"
+      ],
+      "reason": "題名は一般的な並列ハイブリッドニューラルネットワークの表現力と計算負荷の交換条件であり、LLMまたはVLM推論システムへの適用を示していない。モデル分野を明示しない一般NN研究として先行除外。",
+      "first_checked_at": "2026-10-27T19:51:33+00:00",
+      "last_checked_at": "2026-10-27T19:51:33+00:00",
+      "linked_from": [],
+      "title": "Balancing Computation Load and Representation Expressivity in Parallel Hybrid Neural Networks"
+    },
+    "arXiv:2305.14840": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.14840",
+      "identity_tokens": [
+        "arXiv:2305.14840"
+      ],
+      "reason": "題名は画像分類等の一般Vision Transformerのトークン影響予測であり、LLM/VLMの推論サービング・生成・KVキャッシュを対象としない。汎用ViT高速化のため先行除外。",
+      "first_checked_at": "2026-10-27T19:51:38+00:00",
+      "last_checked_at": "2026-10-27T19:51:38+00:00",
+      "linked_from": [],
+      "title": "Predicting Token Impact Towards Efficient Vision Transformer"
+    },
+    "arXiv:2408.13622": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.13622",
+      "identity_tokens": [
+        "arXiv:2408.13622"
+      ],
+      "reason": "題名上の最終対象は企業の時空間予測と低資源マルチモーダル時系列分析であり、LLM推論の実行時間、メモリ、サービング、圧縮・復号を最適化する研究ではない。言語モデルのinstruction tuningを応用するタスク研究として先行除外。",
+      "first_checked_at": "2026-10-27T19:51:39+00:00",
+      "last_checked_at": "2026-10-27T19:51:39+00:00",
+      "linked_from": [],
+      "title": "Advancing Enterprise Spatio-Temporal Forecasting Applications: Data Mining Meets Instruction Tuning of Language Models For Multi-modal Time Series Analysis in Low-Resource Settings"
     }
   }
 }

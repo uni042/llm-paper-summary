@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6d260abc2c2e1de5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2502.20965",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2502.20965",
+    "identity_tokens": [
+      "arXiv:2502.20965"
+    ],
+    "reason": "題名上の主対象はスーパーコンピュータ・データセンター相互接続ネットワークのノード内通信性能であり、LLM推論・サービング・モデル圧縮を主題としない。通信基盤の一般研究として先行除外。",
+    "first_checked_at": "2026-10-27T19:51:32+00:00",
+    "last_checked_at": "2026-10-27T19:51:32+00:00",
+    "linked_from": [],
+    "title": "On the Impact of Intra-node Communication in the Performance of Supercomputer and Data Center Interconnection Networks"
+  },
+  "processed_at": "2026-10-27T19:51:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6d260abc2c2e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ee041600e76bc7d7-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2408.13622",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2408.13622",
+    "identity_tokens": [
+      "arXiv:2408.13622"
+    ],
+    "reason": "題名上の最終対象は企業の時空間予測と低資源マルチモーダル時系列分析であり、LLM推論の実行時間、メモリ、サービング、圧縮・復号を最適化する研究ではない。言語モデルのinstruction tuningを応用するタスク研究として先行除外。",
+    "first_checked_at": "2026-10-27T19:51:39+00:00",
+    "last_checked_at": "2026-10-27T19:51:39+00:00",
+    "linked_from": [],
+    "title": "Advancing Enterprise Spatio-Temporal Forecasting Applications: Data Mining Meets Instruction Tuning of Language Models For Multi-modal Time Series Analysis in Low-Resource Settings"
+  },
+  "processed_at": "2026-10-27T19:51:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ee041600e76b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
