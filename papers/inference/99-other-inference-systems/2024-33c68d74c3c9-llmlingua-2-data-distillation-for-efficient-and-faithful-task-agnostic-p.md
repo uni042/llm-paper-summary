@@ -1,42 +1,53 @@
 ---
-canonical_id: "DOI:10.18653/v1/2024.findings-acl.57"
-doi: "10.18653/v1/2024.findings-acl.57"
-title: "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression"
+canonical_id: DOI:10.18653/v1/2024.findings-acl.57
+doi: 10.18653/v1/2024.findings-acl.57
+title: 'LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression'
 authors:
-  - "Zhuoshi Pan"
-  - "Qianhui Wu"
-  - "Huiqiang Jiang"
-  - "Menglin Xia"
-  - "Xufang Luo"
-  - "Jue Zhang"
-  - "Qingwei Lin"
-  - "Victor Rühle"
-  - "Yuqing Yang"
-  - "Chin-Yew Lin"
-  - "H. Vicky Zhao"
-  - "Lili Qiu"
-  - "Dongmei Zhang"
-published: "2024-08"
-publication: "Findings of the Association for Computational Linguistics: ACL 2024, pp. 963–981"
-publication_type: "国際会議論文"
-publication_status: "ACL 2024 Findings正式公開版。評価値は公式PDFの表1〜7に基づく"
-source: "https://aclanthology.org/2024.findings-acl.57.pdf"
+- Zhuoshi Pan
+- Qianhui Wu
+- Huiqiang Jiang
+- Menglin Xia
+- Xufang Luo
+- Jue Zhang
+- Qingwei Lin
+- Victor Rühle
+- Yuqing Yang
+- Chin-Yew Lin
+- H. Vicky Zhao
+- Lili Qiu
+- Dongmei Zhang
+published: 2024-08
+publication: 'Findings of the Association for Computational Linguistics: ACL 2024, pp. 963–981'
+publication_type: 国際会議論文
+publication_status: ACL 2024 Findings正式公開版。評価値は公式PDFの表1〜7に基づく
+source: https://aclanthology.org/2024.findings-acl.57.pdf
 sources:
-  - "https://aclanthology.org/2024.findings-acl.57.pdf"
-  - "https://aclanthology.org/2024.findings-acl.57/"
-code: "https://aka.ms/LLMLingua-2"
-implementation: "GPT-4でMeetingBankの会議文書を512トークン以下のチャンクに分割して抽出圧縮し、語順・語形変化に対応したfuzzy alignmentで保持/削除ラベルを作成。Variation RateとAlignment Gapで低品質例を除外し、XLM-RoBERTa-largeまたはmBERTの双方向encoderに二値分類器を付けて圧縮器を学習。V100-32GBで圧縮器遅延とLLMエンドツーエンド遅延を測定。公式コード・データ配布は著者指定のaka.ms URL。"
-summary: "LLMLingua-2はGPT-4による抽出型データ蒸留と、双方向Transformerによる単語保持/削除の二値分類を組み合わせ、質問に依存しないプロンプト圧縮を低遅延化する。MeetingBankでは原文3,003トークンに対し970トークン（3.1倍圧縮）でQA EM 87.75→86.92、V100-32GBのエンドツーエンド遅延は非圧縮14.9秒から5倍圧縮時5.2秒へ短縮する。ただしLongBenchの3,000トークン条件ではタスク依存のLongLLMLingua平均48.8に対し本手法42.4であり、情報選択に質問を使えない不利が残る。"
-list_summary: "GPT-4抽出圧縮の教師データから単語保持確率を学習し、双方向小型encoderで質問非依存のプロンプト圧縮を高速化する。"
-last_checked: "2026-10-27"
-worker_id: "scheduled-chat-45"
-worker_completed_at: "2026-10-27T19:53:00+09:00"
-worker_run_key: "20261027-1948-scheduled-chat-45/r01"
-reference_main_sha: "599cb4b6c4c9f057982cb668f279cb368ed3414a"
+- https://aclanthology.org/2024.findings-acl.57.pdf
+- https://aclanthology.org/2024.findings-acl.57/
+code: https://aka.ms/LLMLingua-2
+implementation: GPT-4でMeetingBankの会議文書を512トークン以下のチャンクに分割して抽出圧縮し、語順・語形変化に対応したfuzzy alignmentで保持/削除ラベルを作成。Variation RateとAlignment Gapで低品質例を除外し、XLM-RoBERTa-largeまたはmBERTの双方向encoderに二値分類器を付けて圧縮器を学習。V100-32GBで圧縮器遅延とLLMエンドツーエンド遅延を測定。公式コード・データ配布は著者指定のaka.ms URL。
+summary: LLMLingua-2はGPT-4による抽出型データ蒸留と、双方向Transformerによる単語保持/削除の二値分類を組み合わせ、質問に依存しないプロンプト圧縮を低遅延化する。MeetingBankでは原文3,003トークンに対し970トークン（3.1倍圧縮）でQA EM 87.75→86.92、V100-32GBのエンドツーエンド遅延は非圧縮14.9秒から5倍圧縮時5.2秒へ短縮する。ただしLongBenchの3,000トークン条件ではタスク依存のLongLLMLingua平均48.8に対し本手法42.4であり、情報選択に質問を使えない不利が残る。
+list_summary: GPT-4抽出圧縮の教師データから単語保持確率を学習し、双方向小型encoderで質問非依存のプロンプト圧縮を高速化する。
+last_checked: '2026-10-27'
+worker_id: scheduled-chat-45
+worker_completed_at: '2026-10-27T19:53:00+09:00'
+worker_run_key: 20261027-1948-scheduled-chat-45/r01
+reference_main_sha: 599cb4b6c4c9f057982cb668f279cb368ed3414a
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2310.06839
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2310.06201
+- canonical_id: arXiv:2307.06945
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2304.08467
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 5
 ---
 
 # LLMLingua-2：GPT-4抽出蒸留と双方向encoderでプロンプト圧縮を高速化する
