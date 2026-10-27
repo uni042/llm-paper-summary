@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（501本）
+## 自動生成の論文一覧（510本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -316,6 +316,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   キー別要求率から温存対象と安定配置を周期計画し、プレフィックス局所性と負荷均衡を両立して、60基H100の70B評価で3.5秒p99 SLO容量をPreble比2.3倍へ高めるが、親和性が効かない負荷では逆効果になる。
 
+- **2026-07 · [WISERouter: LLM Routing with Workload Budget Constraint](2026-2607.23765-wiserouter-llm-routing-with-workload-budget-constraint.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  常に最高性能のモデルを呼ぶと料金が膨らむ一方、全問い合わせに固定額を課すと、容易な問い合わせで節約した予算を難しい問い合わせへ振り向けられない。過去のモデル応答をすべて持つWR-Offlineと、限られた応答だけを逐次観測するWR-Onlineの二方式がある。
+
 - **2026-07 · [Towards Load-Aware Prefill Deflection for Disaggregated LLM Serving](2026-2607.02043-kairos-load-aware-prefill-deflection.md)**  
   実装：[✓](https://github.com/sudokara/Kairos) ・ リポジトリ内被引用：1  
   プリフィルGPUの混雑時にデコードGPUの余力へプリフィルを小分けで差し込み、トークン間時間のSLOを超えない範囲で要求を移して、プリフィル待ちとKV転送を減らす。
@@ -533,6 +537,10 @@
 - **2026-09 · [SlimWise: Decoupling Expert Pruning Across Prefill and Decode for Efficient MoE Serving](2026-2609.34117-slimwise-decoupling-expert-pruning-across-prefill-and-decode-for-efficie.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture of エキスパート、MoE）は、各トークンに対して全エキスパートのうち少数だけを実行することで、モデル全体のパラメータ規模に比べた演算量を抑える。
+
+- **2026-09 · [Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference](2026-2609.07786-signed-rescue-routing-harm-aware-cascades-for-efficient-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデル（Large Language モデル; LLM）の多段推論では、全問い合わせを高価な大型モデルへ送る代わりに、まず小型モデルで回答し、難しいと判断したものだけ大型モデルへ送る。大型モデルの呼出し回数に予算があるとき、純利得が大きい問い合わせから優先して切り替える。
 
 - **2026-09 · [Same Request, Different Answer: Quantization Amplifies Cache-Induced Divergence in LLM Serving](2026-2609.04748-cache-induced-divergence-quantization-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -818,6 +826,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Hybrid SWAの理論的KV削減を本番へ落とすため、Full/SWA二重KVプール、層単位先読み、分散GCache、KV親和ルーティング、プリフィル・デコード・マルチモーダル処理を一体最適化する。
 
+- **2026-07 · [FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications](2026-2607.18171-flashrt-agent-harness-for-guiding-agents-to-deploy-real-time-multimodal-.md)**  
+  実装：[✓](https://github.com/Infini-AI-Lab/FlashRT) ・ リポジトリ内被引用：0  
+  単体モデルのカーネルを高速化するだけでは、どの段階をどのGPUへ配置し、いつ出力を小分けで次段へ渡し、どの段階の永続状態を共有できるかというアプリケーション全体の最適化は解けない。
+
 - **2026-07 · [Efficient and Privacy Aware Edge Cloud Collaborative Inference for Large Language Models](2026-2607.13093-privacy-aware-edge-cloud-collaborative-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   原文を送らず、端末にKV認可・軽量投機・低次元出力層を残し、クラウドの重いデコーダと協調する分割推論。H20＋3種端末で素朴な分割推論比の遅延最大46.1%、下り通信最大67.4%削減を報告する。
@@ -853,6 +865,10 @@
 - **2026-06 · [PersistentKV: Page-Aware Decode Scheduling for Long-Context LLM Serving on Commodity GPUs](2026-2606.26666-persistentkv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ページ化KV表を作り直さず長い系列を区間へ分割し、必要な区間だけ作業キューへ詰めてGPUを埋め、長文デコードの遊休と不要なカーネル起動を減らす。
+
+- **2026-06 · [Omni-Flow: A Unified Workflow Orchestration and Distributed KV Cache Sharing Framework for Multimodal Inference](2026-2606.31093-omni-flow-a-unified-workflow-orchestration-and-distributed-kv-cache-sharing-framework-for-multimodal-inference.md)**  
+  実装：[✓](https://github.com/meituan-longcat/omni-flow) ・ リポジトリ内被引用：0  
+  マルチモーダル推論を制御・データ・計算の3層へ分離し、Python DSL、GPU/CPU/SSD分散KV、SGLang互換実行を統合する。LongCat-NextやHunyuanImage-3を同じ配信抽象へ載せる基盤。
 
 - **2026-06 · [NetKV: Network-Aware Decode Instance Selection for Disaggregated LLM Inference](2026-2606.03910-netkv-network-aware-decode-selection.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -897,6 +913,10 @@
 - **2026-06 · [Beyond Greedy Chunking: SLO-Aware Sliding-Window Scheduling for LLM Inference](2026-2606.05933-beyond-greedy-chunking-slo-aware-sliding-window-scheduling-for-llm-infer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、対話型大規模言語モデル（LLM）のオンライン配信で、利用者が要求する最初のトークンまでの時間（TTFT）と、以降のトークン間隔（TBT）の期限を守りつつ、単位時間に処理できる要求数を増やすスケジューリング方式「SlidingServe」を提案する。
+
+- **2026-06 · [BatchGen: An Architecture for Scalable and Efficient Batch Inference](2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md)**  
+  実装：[✓](https://github.com/batchgen-project/batchgen) ・ リポジトリ内被引用：0  
+  系列をイベント駆動コルーチン化して停止・結合・分割・移動を可能にし、MoEバッチ形成と長尾負荷分散を動的化して最大2.3倍の大規模高速化を示す。
 
 - **2026-06 · [AgentServeSim: Serving-System Simulation and Policy Search for LLM Agent Programs](2026-2606.09613-agentservesim-multiturn-agent-serving-simulator.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1010,6 +1030,14 @@
   実装：✓ ・ リポジトリ内被引用：0  
   提案の中心は、全層入次数中心性（Global In-Degree Centrality）、動的転換層検出（動的 Pivot Detection）、構造的伝播と保存予算の分離（Structural Propagation and Decoupling）の三機構である。
 
+- **2026-04 · [Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving](2026-2604.14993-serving-chain-structured-jobs-with-large-memory-footprints-with-application-to-large-foundation-model-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分散パイプライン型の大規模言語モデル推論を、モデルブロック配置、鍵値キャッシュ容量配分、オンライン負荷分散からなるサーバ鎖構成問題として定式化し、実サービング評価で平均応答時間を六十三から七十七パーセント削減する。
+
+- **2026-04 · [RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment](2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルを用いた翻訳では、高品質な大型モデルをすべての要求に適用すると推論費用と遅延が大きくなる。小型モデルで大半を処理し、必要な要求だけ大型モデルへ振り分ける混成配備（hybrid deployment）は、一定の品質を維持しながら大型モデルの利用率を抑えるための基本的な方式である。
+
 - **2026-04 · [Flow-Controlled Scheduling for LLM Inference with Provable Stability Guarantees](2026-2604.11001-flow-controlled-scheduling-stability.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   要求の実行開始率を流量制御し、出力長未知時は先入れ先出し受付と後入れ先出し追い出しを組み合わせ、KV容量超過確率を理論的に抑えながら処理量と尾部遅延を改善する。
@@ -1029,6 +1057,10 @@
 - **2026-04 · [AUTOPOIESIS: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics](2026-2604.07144-autopoiesis-a-self-evolving-system-paradigm-for-llm-serving-under-runtim.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   既存のシステムは負荷に応じて配置計画を更新できても、その計画を作るアルゴリズム自体は事前に人間が設計した固定方針であることが多い。実行完了時間はそれぞれ平均27%、30%、44%短縮し、全体では平均34%、最大53%の改善を報告する。
+
+- **2026-04 · [Adaptive Parallel Monte Carlo Tree Search for Efficient Test-time Compute Scaling](2026-2604.00510-adaptive-parallel-monte-carlo-tree-search-for-efficient-test-time-comput.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  成功候補を早期発見した場合に打ち切る「正の早期終了」は効果があるが、いくら探索しても十分な報酬に達しない要求には効かず、同時処理時の長い裾の遅延が残る。推論サーバーvLLMへ統合し、4基のNVIDIA H100でLlama-3.1-8B-InstructとQwen2.5-14B-Instructを評価した。
 
 - **2026-03 · [WWW.Serve: Interconnecting Global LLM Services through Decentralization](2026-2603.20661-www-serve-decentralized-global-llm-serving.md)**  
   実装：[✓](https://github.com/Infini-AI-Lab/WWW.Serve) ・ リポジトリ内被引用：0  
@@ -1077,6 +1109,10 @@
 - **2026-03 · [AgentServe: Algorithm-System Co-Design for Efficient Agentic AI Serving on a Consumer-Grade GPU](2026-2603.10342-agentserve-consumer-gpu-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント処理を初回・再開プリフィルと短いデコードへ分け、TPOTフィードバックとGPU内SM予約で民生GPU上の相互干渉を抑える。
+
+- **2026-02 · [StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving](2026-2604.09562-streamserve-adaptive-speculative-flows-for-low-latency-disaggregated-llm-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  分離型プリフィル・デコード上で、複数指標による要求ルーティングと実行時適応する投機深度を閉ループ連携し、4×A800評価でテンソル並列vLLM比の平均レイテンシ15.75倍短縮・平均スループット4.4倍を報告する。
 
 - **2026-02 · [QuRL: Efficient Reinforcement Learning with Quantized Rollout](2026-2602.13953-qurl-efficient-reinforcement-learning-with-quantized-rollout.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
