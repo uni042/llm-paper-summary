@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（304本）
+## 自動生成の論文一覧（316本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -242,6 +242,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/jycha98/SpecExtend) ・ リポジトリ内被引用：1  
   対象モデルの注意重みでドラフト側KVキャッシュの重要文脈を動的選択し、再学習なしで長文の投機的復号を高速化する拡張。
 
+- **2026-07 · [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](2026-2607.04884-hunyuanocr-1-5-making-lightweight-ocr-vlms-faster-and-better.md)**  
+  実装：[✓](https://github.com/Tencent-Hunyuan/HunyuanOCR) ・ リポジトリ内被引用：1  
+  原著の研究全体は、認識精度を改善するデータ構築・学習と、出力生成を高速化する推論機構の二本立てである。OmniDocBenchの単一要求評価で、同じHunyuanOCR-1.5の自己回帰復号と比較した平均ページ遅延は、Transformersで34.850秒から5.474秒、vLLMで3.032秒から1.408秒になった。
+
 - **2026-07 · [DraftExpert: Expansion-Aware Self-Speculative Decoding for End-Device MoE Inference](2026-2607.24434-draftexpert-expansion-aware-self-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   DraftExpertは、各MoE層に小型の常駐専門家を追加して候補を作り、専門家展開量を予測した枝打ちと非同期先読みを行い、端末の専門家搬送待ちを減らす。
@@ -265,6 +269,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-06 · [AdaPLD: Adaptive Retrieval and Reuse for Efficient Model-Free Speculative Decoding](2026-2606.05742-adapld-adaptive-retrieval-and-reuse-for-efficient-model-free-speculative.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   完全一致トークンによる検索が空のときだけ埋め込み類似度検索へ退避し、候補位置を隠れ状態で再順位付けする。Vicuna-v1.3 7B/13B/33BをH20×8・FP16で評価し、入力依存生成の平均速度比2.27/1.98/1.74倍、33Bのコード編集で最大の平均3.10倍を報告。
+
+- **2026-05 · [Test-Time Speculation](2026-2605.09329-test-time-speculation.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  投機的復号（投機的復号）は、小さく高速なドラフトモデルに複数トークンの候補を作らせ、大きな対象モデルがまとめて検証することで、対象モデルの呼び出し回数を減らす方式である。原著の実験ではDFlashを基準に受理長が平均41%、最大72%改善し、EAGLE-3を基準に平均34%、最大67%改善した。
 
 - **2026-05 · [PSD: Pushing the Pareto Frontier of Diffusion LLMs via Parallel Speculative Decoding](2026-2605.15609-psd-pushing-the-pareto-frontier-of-diffusion-llms-via-parallel-speculati.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -293,6 +301,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-04 · [FASER: Fine-Grained Phase Management for Speculative Decoding in Dynamic LLM Serving](2026-2604.20503-faser-fine-grained-phase-management.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   動的負荷下の投機的デコードを、リクエスト別投機長、検証途中の棄却枝刈り、ドラフトと検証のフロンティア単位重畳で細粒度化し、vLLM上で最大53%のスループット向上と最大1.92倍の遅延改善を示す。
+
+- **2026-04 · [Cactus: Accelerating Auto-Regressive Decoding with Constrained Acceptance Speculative Sampling](2026-2604.04987-cactus-accelerating-auto-regressive-decoding-with-constrained-acceptance.md)**  
+  実装：[✓](https://github.com/MANGA-UOFA/Cactus) ・ リポジトリ内被引用：1  
+  検証器が毎トークンの計算を繰り返す必要を減らす一方、草案器が提案したトークンを確率的に棄却するため、草案器と検証器の分布が異なると効率が落ちる。Qwen3-14Bを検証器、0.6Bを草案器としたSpec-Benchの6種類の課題では、自己回帰生成に対する総合速度倍率がSpSの1.81倍からCactusの1.88倍へ改善した。
 
 - **2026-02 · [When RL Meets Adaptive Speculative Training: A Unified Training-Serving System](2026-2602.06932-aurora-adaptive-speculator-training-serving.md)**  
   実装：[✓](https://github.com/togethercomputer/aurora) ・ リポジトリ内被引用：1  
@@ -371,6 +383,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [AgSpec: Pushing the Limits of Retrieval-Based Speculative Decoding in Coding Agent Pipelines](2026-2610.01108-agspec-pushing-the-limits-of-retrieval-based-speculative-decoding-in-cod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   AgSpecは、コード生成エージェント（Coding Agent）が繰り返し使う文章やコードを検索し、投機的復号（投機的復号; SD）の草稿として再利用する方式である。
+
+- **2026-09 · [Unlocking Lossless Speedups in LLMs via Discrete Diffusion](2026-2609.04010-unlocking-lossless-speedups-in-llms-via-discrete-diffusion.md)**  
+  実装：[✓](https://github.com/ifm-ai/uno) ・ リポジトリ内被引用：0  
+  元の自己回帰モデル分布を保ったまま追加した離散拡散重みで複数トークンを並列提案し、専用サンプラで正しく補正して、逐次デコードの重み読出し回数を減らす。
 
 - **2026-09 · [UBTree: Parallel Tree Drafting via Unigram and Bigram Models for Speculative Decoding](2026-2609.39972-ubtree-parallel-tree-drafting-via-unigram-and-bigram-models-for-speculat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -468,6 +484,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/PopSoda2002/TreeSpark) ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小さな提案モデルが複数トークンを予測し、大きな目標モデルがまとめて検証することで、目標モデルの逐次呼び出しを減らす。原著の固定ノード数実験では、Qwen3-4B/8B/14Bのいずれも同じ検証ノード数のDDTreeより目標モデル1回当たりの受理トークン数が9〜16%増えた。
 
+- **2026-08 · [ResiSpec：残差分布整形による複数候補投機サンプリング](2026-2608.24411-resispec-enhancing-multi-candidate-speculative-sampling-via-residual-distribution-shaping.md)**  
+  実装：[✓](https://github.com/Czzzk/Resispec) ・ リポジトリ内被引用：0  
+  複数候補方式は候補数を増やせば受理確率が上がるように見えるが、最初の候補が棄却されると対象分布からその候補確率を差し引いた残差分布へ移り、元のドラフト分布と急速にずれる。対象モデルの厳密な出力分布を変えず、既存の最先端複数候補方式に対して最大1.92倍の高速化を報告する。
+
 - **2026-08 · [OoO-Spec: Out-of-Order Semantic Speculation for Fast Tool Calling](2026-2608.00814-ooo-spec-out-of-order-semantic-speculation-for-fast-tool-calling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   OoO-Specは、この未解決の部分を文字列上の位置に到達する前に、意味的なスロットとして並列予測する方式である。
@@ -552,6 +572,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   GRAFTは、拡散言語モデル（diffusion language モデル; DLM）を草稿器に使う投機的復号（投機的復号）で、候補トークンをどの親につなぐかと各復号回で何個の候補節点を検証するかを同時に最適化する研究である。従来のDDTreeは、各位置のトークン確率の積で経路を評価するため、親が変わっても子の評価値が同じである。
 
+- **2026-06 · [Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding](2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  対象側の過去注意とドラフト側の先読み注意を融合し、少数の意味検索ヘッドだけで検証用KVを選ぶことで、長文投機的デコードのKV読込を削減する。
+
 - **2026-06 · [Diffusion Language Model Parallel Decoding via Product-of-Experts Bridge](2026-2606.08048-diffusion-language-model-parallel-decoding-via-product-of-experts-bridge.md)**  
   実装：[✓](https://github.com/juntongshi48/poe-bridge) ・ リポジトリ内被引用：0  
   PoE-Bridgeは、拡散言語モデル（Diffusion Language モデル、DLM）の複数トークン並列生成と、自己回帰モデル（Autoregressive モデル、AR）の高い文章品質を両立させるための復号方式である。
@@ -563,6 +587,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-05 · [TreeGraft: Adaptive Multi-Drafter Grafting for Tree-Based Speculative Decoding](2026-2608.26112-treegraft-adaptive-multi-drafter-grafting-for-tree-based-speculative-dec.md)**  
   実装：[✓](https://anonymous.4open.science/r/TreeGraft-E983) ・ リポジトリ内被引用：0  
   通常の投機的復号は、小さい草稿モデルが将来のトークンを提案し、大きい対象モデルが候補を一度に検証する。対象モデルの通常の自己回帰復号に対する平均高速化はTreeGraftが1.60倍、全段階を小草稿器にするAll Smallが1.32倍、全段階を中草稿器にするAll Midが1.39倍だった。
+
+- **2026-05 · [SpecSA: Bridging Speculative Decoding and Sparse Attention for Efficient LLM Inference](2026-2605.19893-specsa-sparse-speculative-verification.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的検証クエリが選ぶ重複KVブロックを一度だけ読み、厳密共有と近似共有、層間索引再利用、融合カーネルを比較して、長文脈の疎注意読出しを減らすシステム。
 
 - **2026-05 · [SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection](2026-2605.02888-speckv-adaptive-speculative-decoding-with-compression-aware-gamma-select.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -579,6 +607,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-05 · [Performance-Driven Policy Optimization for Speculative Decoding with Adaptive Windowing](2026-2605.14978-performance-driven-policy-optimization-for-speculative-decoding-with-ada.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PPOW（Performance-Driven Policy Optimization with 適応的 Windowing）は、投機的復号（投機的復号）で用いる軽量な草稿モデル（下書きモデル、drafter）を、推論時の受理効率に合わせて追加学習する方式である。
+
+- **2026-05 · [Parallel Prefix Verification for Speculative Generation](2026-2605.04263-parallel-prefix-verification-for-speculative-generation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし従来の意味的投機方式では、節ごとに正誤を順番に判定するため、検証回数が新たな直列処理の負担となる。対象モデル単独に対する生成処理量はGPQAで1.25倍、GSM8Kで4.29倍となり、EAGLE-3併用では最大4.46倍を示した。
 
 - **2026-05 · [Hybrid Verified Decoding: Learning to Allocate Verification in Speculative Decoding](2026-2606.01019-hybrid-verified-decoding-learning-to-allocate-verification-in-speculativ.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -604,6 +636,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   SpecTr-GBVは、小型の草稿モデルが作った複数の候補列を大きな対象モデルでまとめて検証し、対象モデルの出力分布を保ちながら一反復で確定できるトークン数を増やす方式である。提案法は複数草稿とブロック検証を同時に扱い、独立同分布で草稿を生成するという実現可能な制約の下で期待受理長の上限を達成することを理論的に示す。
 
+- **2026-04 · [SpecFed: Accelerating Federated LLM Inference with Speculative Decoding and Compressed Transmission](2026-2604.25777-specfed-accelerating-federated-llm-inference-with-speculative-decoding-and-compressed-transmission.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  連合LLM投機的復号で上位K確率だけを送信し、2種の確率再構成と誤差上界により通信量を削減する方式。
+
 - **2026-04 · [Position-Aware Drafting for Inference Acceleration in LLM-Based Generative List-Wise Recommendation](2026-2604.27747-position-aware-drafting-for-inference-acceleration-in-llm-based-generati.md)**  
   実装：[✓](https://github.com/Jiaju-Chen/PAD-Rec) ・ リポジトリ内被引用：0  
   各アイテムを単なる自然言語の名前として出力するのではなく、残差量子化変分オートエンコーダ（RQ-VAE）から得た4個の意味識別子と区切りトークンへ変換し、それらを順次生成する。
@@ -611,6 +647,18 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-04 · [NanoSpec: Accelerating Speculative Decoding using Minimalist In-Context Vocabularies](2026-2605.26444-microspec-lightweight-in-context-vocabularies.md)**  
   実装：[✓](https://github.com/csAugust/NanoSpec) ・ リポジトリ内被引用：0  
   文脈と直近候補から毎ステップ3000未満の動的ドラフト語彙を作り、必要なLMヘッド重みを非同期収集して射影計算を削減する投機的デコード最適化。EAGLE-2のドラフト時間を平均51.6%削減する。
+
+- **2026-04 · [MARS: Enabling Autoregressive Models Multi-Token Generation](2026-2604.07023-mars-enabling-autoregressive-models-multi-token-generation.md)**  
+  実装：[✓](https://github.com/Xalp/MARS) ・ リポジトリ内被引用：0  
+  MARS（Mask AutoRegreSsion）は、通常は1回の前向き計算で1トークンを生成する自己回帰（autoregressive; AR）言語モデルに、必要なときだけ複数トークンをまとめて出力する能力を追加する方式である。
+
+- **2026-04 · [Faster LLM Inference via Sequential Monte Carlo](2026-2604.15672-faster-llm-inference-via-sequential-monte-carlo.md)**  
+  実装：[✓](https://github.com/abdelfattah-lab/smcsd) ・ リポジトリ内被引用：0  
+  本論文は、従来の投機的復号（投機的復号; SD）で候補トークンが最初に棄却されると、その後の候補まで捨てなければならない問題に対し、逐次モンテカルロ法（sequential Monte Carlo; SMC）を用いた近似的な復号方式SMC-SDを提案する。
+
+- **2026-04 · [ELMoE-3D: Leveraging Intrinsic Elasticity of MoE for Hybrid-Bonding-Enabled Self-Speculative Decoding in On-Premises Serving](2026-2604.14626-elmoe-3d-hybrid-bonding-self-speculative-moe-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HBメモリ上の頻出エキスパート上位ビットをキャッシュ兼自己ドラフトとして使い、MoEの投機的デコードと重み転送を一体最適化する3D積層HW-SW協調方式。
 
 - **2026-04 · [Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference](2026-2604.13634-calibrated-speculative-decoding-frequency-guided-candidate-selection-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
