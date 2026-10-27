@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（81本）
+## 自動生成の論文一覧（86本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -98,6 +98,10 @@
   実装：[✓](https://anonymous.4open.science/r/power_aware_edge_inference_public-3B71/README.md) ・ リポジトリ内被引用：0  
   著者らは、対象演算の形状情報だけでなく、直前に選んだバックエンドも使い、演算が速くなる利得より切替費用が大きい場合は実行先を維持する選択方式を調べる。最良の静的バックエンドに比べた平均改善は遅延17.4%、エネルギー14.4%、エネルギー遅延積（EDP）28.5%だった。
 
+- **2026-07 · [SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs](2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。
+
 - **2026-07 · [NPUsper: Eliminating Redundant Computation for Real-Time Whisper on Mobile NPUs](2026-2607.01108-npusper-eliminating-redundant-computation-for-real-time-whisper-on-mobil.md)**  
   実装：[✓](https://github.com/npusper/NPUsper) ・ リポジトリ内被引用：0  
   第一は、短い音声片に対するWhisperの幻覚を抑えるため、従来方式が毎回30秒近い入力を作り、既に処理した音声や無音埋めを再計算すること。
@@ -122,6 +126,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   大きな言語モデル一つですべての入力を処理する設計は、簡単なサービス振り分けにも大きな推論費用と遅延を要する。著者はキプロスの文化財を題材にしたInterwovenXR仮想博物館で実装し、Jetson Orin NX 8GBを用いて複数の小型モデルを比較した。
 
+- **2026-06 · [Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md)**  
+  実装：[✓](https://github.com/flashrt-project/FlashRT) ・ リポジトリ内被引用：0  
+  KVだけでなく再帰・畳み込み・複数トークン予測状態を丸ごと保存復元し、単一ストリーム再入場の初回応答を最大26.94倍高速化する実行状態カプセル。
+
 - **2026-06 · [EnerInfer: Energy-Aware On-Device LLM Inference](2026-2606.23001-enerinfer-energy-aware-on-device-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   NPU・DDR周波数をモデル構造予測と熱制御で動的調整し、生成速度のQoEを守りながら端末内LLMの復号エネルギー効率を最大65%改善。
@@ -134,9 +142,17 @@
   実装：✓ ・ リポジトリ内被引用：0  
   E2LLMは異種端末を入力処理用・生成用の複製群に分け、各群の連続層を端末へ再配置し、層・帯域・負荷の最遅段を抑える分散サービング方式。
 
+- **2026-06 · [Above the Inner Loop: Exceeding Accelerate at LLM Prefill GEMM on the M1 AMX](2026-2606.25426-above-the-inner-loop-exceeding-accelerate-at-llm-prefill-gemm-on-the-m1-amx.md)**  
+  実装：[✓](https://github.com/dbhan08/inferc) ・ リポジトリ内被引用：0  
+  M1 AMXの内側ループがロード発行律速であることを切り分け、細粒度パネルで第2 AMXブロックを使い、重み事前パッキングを併用してllama.cppの128トークンfp32プリフィルを1.44倍高速化する。
+
 - **2026-05 · [Quant.npu: Enabling Efficient Mobile NPU Inference for on-device LLMs via Fully Static Quantization](2026-2605.20295-quant-npu-enabling-efficient-mobile-npu-inference-for-on-device-llms-via.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   QualcommのHexagon系NPUは、整数行列積の高速化と規則的な量子化に適した専用回路を持つ。SM8650実機ではW4A8構成がExecuTorchのW4A16構成より最大15.1%低遅延となり、Llama-3.2-3B-InstructのW4A8では従来の回転方式より精度が大きく改善した。
+
+- **2026-05 · [Llamas on the Web: Memory-Efficient, Performance-Portable, and Multi-Precision LLM Inference with WebGPU](2026-2605.20706-llamaweb.md)**  
+  実装：[✓](https://github.com/ggml-org/llama.cpp) ・ リポジトリ内被引用：0  
+  LlamaWebは静的メモリ計画、端末適応型WebGPUカーネル、量子化対応をllama.cppへ統合し、ブラウザ推論のメモリ消費とデコード性能を改善する。
 
 - **2026-05 · [Lever：スマートフォン向けフラッシュ常駐LLMの投機的推論](2026-2605.16786-lever-speculative-llm-inference-on-smartphones.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -185,6 +201,10 @@
 - **2026-03 · [Trust-Aware Routing for Distributed Generative AI Inference at the Edge](2026-2603.28622-trust-aware-routing-for-distributed-generative-ai-inference-at-the-edge.md)**  
   実装：[✓](https://github.com/anonymous-123qh/g-trac/tree/main/deployment) ・ リポジトリ内被引用：0  
   G-TRAC（Generative Trust-Aware Routing and 適応的 Chaining）は、単一ノードでは実行できない生成AIモデルを複数の異種エッジ端末へ分割配置する際、どの端末の列を通して推論を進めるかを決める協調制御方式である。
+
+- **2026-03 · [SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation](2026-2603.14785-skipopu-an-fpga-based-overlay-processor-for-large-language-models-with-d.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、非線形処理の待機を隠す融合データフロー、浮動小数点活性値と4ビット整数重みを扱うDSP演算器の高密度実装、層をまたいで変化しないKVを保持するオンチップ履歴バッファを一体設計した。AMD Alveo U280上のLlama2-7Bで140.8トークン/秒、帯域効率86.7%を報告する。
 
 - **2026-03 · [FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation](2026-2603.09046-flexserve-secure-mobile-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
