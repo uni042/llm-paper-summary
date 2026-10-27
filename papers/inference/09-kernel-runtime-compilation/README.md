@@ -576,6 +576,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   常識推論、知識、翻訳、文章生成などの一部だけが大きく損なわれる場合、汎用instructionデータを均等に使って回復学習しても、限られた学習予算を劣化していない能力へ使ったり、互いに矛盾する指示へ過適合したりする。PASERは、剪定済みLLMのどの能力がどれだけ変化したかを元モデルとの出力分布の差で推定し、その劣化に応じて回復学習データを選ぶ方式である。
 
+- **2024-11 · [Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM](2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md)**  
+  実装：[✓](https://github.com/VITA-MLLM/Freeze-Omni) ・ リポジトリ内被引用：1  
+  さらに、音声認識、文章生成、音声合成を独立したシステムとして直列に接続すると、応答開始までの待ち時間が積み重なる。主要結果として、音声入力によるWebQuestionsの正答率は44.73%で、同じ基盤LLMに文章を入力した45.13%と近い。
+
 - **2025-10 · [Transformer Based Linear Attention with Optimized GPU Kernel Implementation](2025-2510.21956-transformer-based-linear-attention-with-optimized-gpu-kernel-implementat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、線形注意機構（Linear 注意機構、LA）の漸近的な計算量が小さいのに、実際のGPUでは必ずしも高速でない問題を扱う。A6000上の単層注意機構実験では、Gated LAに対して最大3.3倍の速度と3.6分の1のメモリ使用量を報告する。
@@ -655,10 +659,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-11 · [TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture](2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   前者は8ビット整数（int8）へ量子化すると、整数積和演算器を高密度に並べたシストリック配列（systolic array）で効率よく実行できる。比較する既存FPGA研究に対してエンドツーエンド処理量最大1.45倍、DSP当たりの効率最大2.29倍、GPUとの比較ではRTX 4090に対し特定BERT条件で電力効率2.19倍を示す。
-
-- **2024-11 · [Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM](2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md)**  
-  実装：[✓](https://github.com/VITA-MLLM/Freeze-Omni) ・ リポジトリ内被引用：0  
-  さらに、音声認識、文章生成、音声合成を独立したシステムとして直列に接続すると、応答開始までの待ち時間が積み重なる。主要結果として、音声入力によるWebQuestionsの正答率は44.73%で、同じ基盤LLMに文章を入力した45.13%と近い。
 
 ### 3年前（2023-11〜2024-10）
 
@@ -807,7 +807,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：663  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：662  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
