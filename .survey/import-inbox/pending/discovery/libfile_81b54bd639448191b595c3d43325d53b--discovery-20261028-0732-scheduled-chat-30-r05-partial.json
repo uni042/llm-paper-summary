@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261028-0732-scheduled-chat-30/r05",
+  "reference_main_sha": "c9a06fb282757d10376463129174f311393a856e",
+  "record_count": 3,
+  "partial_round": true,
+  "target_record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33762",
+      "identity_tokens": [
+        "arXiv:2609.33762",
+        "DOI:10.48550/arXiv.2609.33762",
+        "title:efficientagent  what makes kv cache offloading work for concurrent agents"
+      ],
+      "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
+      "reason": "GitHub Discovery precheckに保存された一次書誌要旨では複数エージェントがツール待機中に他エージェントの文脈を処理するため、ホスト側KVが再利用される前に追い出される問題を分析。全エージェントの再利用ワーキングセットをstack-distanceモデルで推定し、ホスト階層の容量と書込方針を制御するEfficientAgentを提案。SWE-bench Verifiedのcoding-agent負荷で再計算トークン93%削減、完了時間39%短縮を報告する推論オフロード研究。",
+      "source_url": "https://arxiv.org/abs/2609.33762",
+      "body_check": "abstract_screen_only; body_not_read; GitHub discovery-precheck primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:39:46+09:00",
+      "last_checked_at": "2026-10-28T07:39:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 51
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32999",
+      "identity_tokens": [
+        "arXiv:2609.32999",
+        "DOI:10.48550/arXiv.2609.32999",
+        "title:tessera  demand driven kv cache management for retrieval augmented llm serving"
+      ],
+      "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
+      "reason": "GitHub Discovery precheckの一次書誌要旨ではRAGとエージェント記憶の検索結果が異なるプロンプト位置に再登場し、接頭辞キャッシュだけでは再利用できない問題を扱う。検索段階で必要なコンテキスト単位を公開し、ローカル・リモート・未計算KVの準備、ノード配分、保持を統合するTesseraを提案。SGLang/LMCache+EPIC比で平均TTFT最大3.6倍改善を報告するサービング研究。",
+      "source_url": "https://arxiv.org/abs/2609.32999",
+      "body_check": "abstract_screen_only; body_not_read; GitHub discovery-precheck primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:39:46+09:00",
+      "last_checked_at": "2026-10-28T07:39:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 54
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.27600",
+      "identity_tokens": [
+        "arXiv:2607.27600",
+        "DOI:10.48550/arXiv.2607.27600",
+        "title:back from the future  key value cache management by counter causal surprise"
+      ],
+      "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
+      "reason": "GitHub Discovery precheckの一次書誌要旨では最近のトークンから十分予測できる過去トークンのKVを冗長とみなし、逆因果マスクを用いて元の順序のトークンを再実行し、将来側からの予測可能性で削除優先度を求める。最終Transformer層だけの高速近似も提案し、追加学習なしで複数LLMのKV削除品質を改善する推論キャッシュ研究。",
+      "source_url": "https://arxiv.org/abs/2607.27600",
+      "body_check": "abstract_screen_only; body_not_read; GitHub discovery-precheck primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:39:46+09:00",
+      "last_checked_at": "2026-10-28T07:39:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 55
+    }
+  ]
+}
