@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T15:52:52.218173+00:00",
+  "generated_at": "2026-10-27T16:23:42.728951+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -62,77 +62,13 @@
       ]
     },
     {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md",
-      "canonical_id": "arXiv:2505.08620",
-      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
-      "file_bytes": 10831,
-      "source_sha256": "63fda56399979076a4129d338252b49e44c4a8ca13a52712c4b55c0a91bb9801",
-      "source_git_blob_sha": "9befbd548511fd5cbdac52de27d9033d60006360",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.78167,
-      "quality_metrics": {
-        "body_chars": 3430,
-        "method_chars": 1214,
-        "evaluation_chars": 799,
-        "limitation_chars": 203
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.2% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.2% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md",
-      "canonical_id": "arXiv:2502.19335",
-      "title": "GATEKEEPER: Improving Model Cascades Through Confidence Tuning",
-      "file_bytes": 11354,
-      "source_sha256": "0c0836c7828e6caf862452bef0ce873d94d31bafccd6e1d0ab5d25d1757fcd62",
-      "source_git_blob_sha": "3e538b199f381d41d4a62953d06dedc9effb82de",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.865833,
-      "quality_metrics": {
-        "body_chars": 3426,
-        "method_chars": 859,
-        "evaluation_chars": 1025,
-        "limitation_chars": 281
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md",
-      "canonical_id": "arXiv:2412.15803",
-      "title": "WebLLM: A High-Performance In-Browser LLM Inference Engine",
-      "file_bytes": 11542,
-      "source_sha256": "4753eeb14240f217d61916837e47ed8b46c1edd82064ab2948233302fc88ce6e",
-      "source_git_blob_sha": "b8f99ba55a1645e19213b46efd2a0f309e585dbe",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.817164,
-      "quality_metrics": {
-        "body_chars": 3673,
-        "method_chars": 1027,
-        "evaluation_chars": 889,
-        "limitation_chars": 296
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md",
       "canonical_id": "arXiv:2407.03637",
       "title": "QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering",
       "file_bytes": 11685,
       "source_sha256": "ccbb3199c709db6931cb1fa73cdd1690279aa10819aadfdbfd66fd8af446bd89",
       "source_git_blob_sha": "a6d24ab45b1beb43a5c44f646839284e1ff2fd71",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.85112,
@@ -186,27 +122,87 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md",
-      "canonical_id": "arXiv:2510.05363",
-      "title": "Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation",
-      "file_bytes": 13964,
-      "source_sha256": "10b875f2f0b15e5fff6c74a31de9570efde6d0583e5446c96fc5b0c2ef603b22",
-      "source_git_blob_sha": "e31b66576fcab12015f62f2e22996b1c0e91a6cb",
+      "path": "papers/inference/13-sparse-attention/2024-2407.17678-s2-attention-hardware-aware-context-sharding-among-attention-heads.md",
+      "canonical_id": "arXiv:2407.17678",
+      "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
+      "file_bytes": 13158,
+      "source_sha256": "dd1bda8e105acf1e79d8b4f4fd179d1afb1529b30e5fe8644e3d0423b410a113",
+      "source_git_blob_sha": "d5304f50ebba2145c3e986fca59e59c249ba27dc",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.897759,
+      "quality_metrics": {
+        "body_chars": 3411,
+        "method_chars": 1332,
+        "evaluation_chars": 554,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.13161-mirror-speculative-decoding-breaking-the-serial-barrier-in-llm-inference.md",
+      "canonical_id": "arXiv:2510.13161",
+      "title": "Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference",
+      "file_bytes": 14535,
+      "source_sha256": "01e9f1f99def3f9a8c41150fd399f96640bfff284fcf562144beea06916c3096",
+      "source_git_blob_sha": "b00bdc9c273cac0c4b53612b7ed5cdf24e37d799",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.7657,
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.924276,
       "quality_metrics": {
-        "body_chars": 4193,
-        "method_chars": 864,
-        "evaluation_chars": 1545,
-        "limitation_chars": 268
+        "body_chars": 3893,
+        "method_chars": 1466,
+        "evaluation_chars": 936,
+        "limitation_chars": 353
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md",
+      "canonical_id": "arXiv:2502.19335",
+      "title": "GATEKEEPER: Improving Model Cascades Through Confidence Tuning",
+      "file_bytes": 14733,
+      "source_sha256": "23a7d5bbcaee931040d8e768c01dc76abe3c47fcba4442a5197e0e0adcf42971",
+      "source_git_blob_sha": "788966f583afcea33c52cdc9a571da22c584fb49",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.865833,
+      "quality_metrics": {
+        "body_chars": 3426,
+        "method_chars": 859,
+        "evaluation_chars": 1025,
+        "limitation_chars": 281
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md",
+      "canonical_id": "arXiv:2505.08620",
+      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
+      "file_bytes": 14740,
+      "source_sha256": "fbf8a062dda87924e7cd228483e24e8da74ea66e4ed00d895d471cdfea686c77",
+      "source_git_blob_sha": "d7c359e31c8fd961bbf6d5687cb20a7ebfaa28db",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.78167,
+      "quality_metrics": {
+        "body_chars": 3430,
+        "method_chars": 1214,
+        "evaluation_chars": 799,
+        "limitation_chars": 203
       },
       "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.6% < 80%"
+        "16KB未満再監査: 日本語比率 78.2% < 80%"
       ],
       "warnings": [
-        "日本語比率 76.6% < 警告基準 80%"
+        "日本語比率 78.2% < 警告基準 80%"
       ]
     },
     {
