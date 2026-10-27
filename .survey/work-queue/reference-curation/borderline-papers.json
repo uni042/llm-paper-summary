@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-27T17:49:38+00:00",
-  "record_count": 5365,
+  "updated_at": "2026-10-27T18:50:03+00:00",
+  "record_count": 5367,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83163,6 +83163,34 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models"
+    },
+    "arXiv:2512.20136": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.20136",
+      "identity_tokens": [
+        "arXiv:2512.20136",
+        "arxiv.org/abs/2512.20136"
+      ],
+      "reason": "音声・映像を含む多段知識グラフをエージェントで構築し、GRASPで質問と回答に関係する三つ組を選別するマルチモーダルRAG。主要評価対象は音声・映像QAの正答性・groundingであり、GPUカーネル、LLM推論サービング、KVメモリ、転送、レイテンシ等のシステム最適化を主要貢献として検証していない。GRASPのcontext pruningは推論入力を絞るが、実行資源削減の直接的な定量実証が中心でないためborderline。",
+      "first_checked_at": "2026-10-27T18:50:03+00:00",
+      "last_checked_at": "2026-10-27T18:50:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "M3KG-RAG: Multi-hop Multimodal Knowledge Graph-enhanced Retrieval-Augmented Generation"
+    },
+    "arXiv:2507.00004": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.00004",
+      "identity_tokens": [
+        "arXiv:2507.00004",
+        "arxiv.org/abs/2507.00004"
+      ],
+      "reason": "推論時のCoT・ToT・best-of-N・majority votingを確率的なスキルグラフ探索として定式化し、成功確率と推論計算量の関係を解析する理論研究。推論時資源配分の理解には関連するが、具体的なGPU実行器、サービングスケジューラ、メモリ階層、デコードカーネルの設計と実機の性能改善を実証する論文ではないため、現行の推論システム最適化サーベイではborderline。",
+      "first_checked_at": "2026-10-27T18:50:03+00:00",
+      "last_checked_at": "2026-10-27T18:50:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Theory of Inference Compute Scaling: Reasoning through Directed Stochastic Skill Search"
     }
   }
 }

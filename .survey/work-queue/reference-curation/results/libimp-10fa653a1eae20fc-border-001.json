@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-10fa653a1eae20fc-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.20136",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.20136",
+    "identity_tokens": [
+      "arXiv:2512.20136",
+      "arxiv.org/abs/2512.20136"
+    ],
+    "reason": "音声・映像を含む多段知識グラフをエージェントで構築し、GRASPで質問と回答に関係する三つ組を選別するマルチモーダルRAG。主要評価対象は音声・映像QAの正答性・groundingであり、GPUカーネル、LLM推論サービング、KVメモリ、転送、レイテンシ等のシステム最適化を主要貢献として検証していない。GRASPのcontext pruningは推論入力を絞るが、実行資源削減の直接的な定量実証が中心でないためborderline。",
+    "first_checked_at": "2026-10-27T18:50:03+00:00",
+    "last_checked_at": "2026-10-27T18:50:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "M3KG-RAG: Multi-hop Multimodal Knowledge Graph-enhanced Retrieval-Augmented Generation"
+  },
+  "processed_at": "2026-10-27T18:50:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-10fa653a1eae",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

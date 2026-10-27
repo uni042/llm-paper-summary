@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-27T17:49:43+00:00",
-  "record_count": 12508,
+  "updated_at": "2026-10-27T18:50:08+00:00",
+  "record_count": 12509,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180153,6 +180153,19 @@
       "last_checked_at": "2026-10-27T17:49:43+00:00",
       "linked_from": [],
       "title": "(PASS) Visual Prompt Locates Good Structure Sparsity through a Recurrent HyperNetwork"
+    },
+    "arXiv:2406.18109": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.18109",
+      "identity_tokens": [
+        "DOI:10.1145/3669940.3707216",
+        "arXiv:2406.18109"
+      ],
+      "reason": "原著はLegionランタイム上のcuPyNumeric・Legate Sparse等の科学計算プログラムで、分散タスクとGPUカーネルを実行時に融合するDiffuseを提案する。評価対象は疎線形ソルバ・物理シミュレーション等で、128GPUの平均1.86倍は一般的な科学計算の高速化である。LLM推論・サービング・KVキャッシュ・MoE・LLM用カーネルへの最終適用や性能評価を示さないため、現行LLMシステムサーベイの収録対象外とする。",
+      "first_checked_at": "2026-10-27T18:50:08+00:00",
+      "last_checked_at": "2026-10-27T18:50:08+00:00",
+      "linked_from": [],
+      "title": "Composing Distributed Computations Through Task and Kernel Fusion"
     }
   }
 }

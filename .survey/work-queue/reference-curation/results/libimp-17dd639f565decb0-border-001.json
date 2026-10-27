@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-17dd639f565decb0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.00004",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.00004",
+    "identity_tokens": [
+      "arXiv:2507.00004",
+      "arxiv.org/abs/2507.00004"
+    ],
+    "reason": "推論時のCoT・ToT・best-of-N・majority votingを確率的なスキルグラフ探索として定式化し、成功確率と推論計算量の関係を解析する理論研究。推論時資源配分の理解には関連するが、具体的なGPU実行器、サービングスケジューラ、メモリ階層、デコードカーネルの設計と実機の性能改善を実証する論文ではないため、現行の推論システム最適化サーベイではborderline。",
+    "first_checked_at": "2026-10-27T18:50:03+00:00",
+    "last_checked_at": "2026-10-27T18:50:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "A Theory of Inference Compute Scaling: Reasoning through Directed Stochastic Skill Search"
+  },
+  "processed_at": "2026-10-27T18:50:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-17dd639f565d",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
