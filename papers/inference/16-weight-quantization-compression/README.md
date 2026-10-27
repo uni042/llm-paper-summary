@@ -433,7 +433,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [QuaRot: Outlier-Free 4-Bit Inference in Rotated LLMs](2024-2404.00456-quarot-outlier-free-4-bit-inference-in-rotated-llms.md)**  
-  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：185  
+  実装：[✓](https://github.com/spcl/QuaRot) ・ リポジトリ内被引用：186  
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
@@ -445,7 +445,7 @@
   QServeは、クラウド型の大規模言語モデル（LLM）サービングにおいて、重みを4ビットへ量子化してもGPU上の実行速度が期待ほど上がらない問題を、量子化アルゴリズムと推論カーネルの協調設計によって解く研究である。論文はこの量子化解除の費用が20〜90%に達する条件を示し、ビット数を減らすだけではサービング処理率を改善できないことを説明する。
 
 - **2024-01 · [Extreme Compression of Large Language Models via Additive Quantization](2024-2401.06118-extreme-compression-of-large-language-models-via-additive-quantization.md)**  
-  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/Vahe1994/AQLM) ・ リポジトリ内被引用：86  
   加算量子化による言語モデル圧縮（AQLM）は、重みの極低ビット量子化における「小さいモデルを高精度で保持した方が、巨大モデルを2ビットにするより良い」という従来の精度対容量の関係を改善する研究である。Llama 2 7B・13B・70B、Mixtral 8×7B、Mistral 7Bを評価する。
 
 - **2024-01 · [SliceGPT: Compress Large Language Models by Deleting Rows and Columns](2024-2401.15024-slicegpt-compress-large-language-models-by-deleting-rows-and-columns.md)**  
@@ -477,7 +477,7 @@
   ヘッセ感度で重要列を選び二値残差近似し、残りのベル形重み分布を最適分割して別々に二値化することで、再学習なしにLLM重みを約1.1ビットまで圧縮する。
 
 - **2024-02 · [GPTVQ: The Blessing of Dimensionality for LLM Quantization](2024-2402.15319-gptvq-the-blessing-of-dimensionality-for-llm-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：40  
+  実装：✓ ・ リポジトリ内被引用：41  
   複数の重みを1ベクトルとして量子化し、代理ヘッセ行列（proxy Hessian）で量子化誤差を後続列へ補償する。Llama 3 8Bの約3.125 bit/value構成では、Snapdragon X Elite上で独自INT4実装よりモデル占有量を約19%減らし、23.81から26.15 トークン/sへ高速化する。
 
 - **2024-02 · [OneBit: Towards Extremely Low-bit Large Language Models](2024-2402.11295-onebit-towards-extremely-low-bit-large-language-models.md)**  
@@ -587,7 +587,7 @@
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
-  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：242  
+  実装：[✓](https://github.com/IST-DASLab/sparsegpt) ・ リポジトリ内被引用：243  
   重みの絶対値が小さい順に削除する単純な枝刈りでは、巨大モデルであっても削除による層出力誤差が累積し、50%の疎化で性能が崩壊し得る。
 
 - **2022-11 · [LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale](2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md)**  
@@ -607,7 +607,7 @@
   高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。
 
 - **2023-06 · [SqueezeLLM: Dense-and-Sparse Quantization](2023-2306.07629-squeezellm-dense-and-sparse-quantization.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：140  
+  実装：[✓](https://github.com/SqueezeAILab/SqueezeLLM) ・ リポジトリ内被引用：141  
   二次感度に基づく非一様量子化と、外れ値・高感度重みだけをFP16疎行列へ逃がすDense-and-Sparse分解により、3-bit級でも品質を保ちながら重み転送量と生成遅延を削減する。
 
 - **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
@@ -673,7 +673,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：500  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：502  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  
