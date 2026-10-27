@@ -1,40 +1,51 @@
 ---
-canonical_id: "DOI:10.18653/v1/2022.findings-acl.189"
-doi: "10.18653/v1/2022.findings-acl.189"
-title: "A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation"
-summary: "HASHEEは、入力ごとに最適な途中終了層をニューラルネットで予測する方式の難しさを検証し、語彙トークンから固定終了層へのハッシュ対応表を学習時と推論時で共用する手法を提案する。ElasticBERTを用いたELUEの6課題ではBERTBASEに対する演算量比4.4〜6.2倍の削減相当の高速化率を報告し、単一RTX 3090上の最大処理率でもSNLIで2093→6779件/秒、IMDbで177→976件/秒と改善した。ただし前者の倍率はFLOPs比であり実測時間とは区別が必要で、BART/CPT要約では品質低下やデコーダ非高速化も生じる。"
-list_summary: "語彙トークンを固定終了層へハッシュで割り当て、学習・推論間の経路一貫性を保ちながら中間層以降の計算を省く。ELUEと要約で速度・品質の交換条件を実測した。"
+canonical_id: DOI:10.18653/v1/2022.findings-acl.189
+doi: 10.18653/v1/2022.findings-acl.189
+title: A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation
+summary: HASHEEは、入力ごとに最適な途中終了層をニューラルネットで予測する方式の難しさを検証し、語彙トークンから固定終了層へのハッシュ対応表を学習時と推論時で共用する手法を提案する。ElasticBERTを用いたELUEの6課題ではBERTBASEに対する演算量比4.4〜6.2倍の削減相当の高速化率を報告し、単一RTX 3090上の最大処理率でもSNLIで2093→6779件/秒、IMDbで177→976件/秒と改善した。ただし前者の倍率はFLOPs比であり実測時間とは区別が必要で、BART/CPT要約では品質低下やデコーダ非高速化も生じる。
+list_summary: 語彙トークンを固定終了層へハッシュで割り当て、学習・推論間の経路一貫性を保ちながら中間層以降の計算を省く。ELUEと要約で速度・品質の交換条件を実測した。
 authors:
-  - Tianxiang Sun
-  - Xiangyang Liu
-  - Wei Zhu
-  - Zhichao Geng
-  - Lingling Wu
-  - Yilong He
-  - Yuan Ni
-  - Guotong Xie
-  - Xuanjing Huang
-  - Xipeng Qiu
-published: "2022-05"
-publication: "Findings of the Association for Computational Linguistics: ACL 2022, pp. 2409–2421"
+- Tianxiang Sun
+- Xiangyang Liu
+- Wei Zhu
+- Zhichao Geng
+- Lingling Wu
+- Yilong He
+- Yuan Ni
+- Guotong Xie
+- Xuanjing Huang
+- Xipeng Qiu
+published: 2022-05
+publication: 'Findings of the Association for Computational Linguistics: ACL 2022, pp. 2409–2421'
 publication_type: conference
 publication_status: published
-source: "https://aclanthology.org/2022.findings-acl.189.pdf"
+source: https://aclanthology.org/2022.findings-acl.189.pdf
 sources:
-  - "https://aclanthology.org/2022.findings-acl.189.pdf"
-  - "https://aclanthology.org/2022.findings-acl.189/"
-implementation: "ElasticBERTBASEを用いた言語理解と、BARTBASE・CPTBASEを用いた要約の実験。語彙別終了層の対応表を用いる実装で、論文が公式コードを公開している。RTX 3090で実処理率も測定。"
-code: "https://github.com/txsun1997/HashEE"
-last_checked: "2026-10-28"
+- https://aclanthology.org/2022.findings-acl.189.pdf
+- https://aclanthology.org/2022.findings-acl.189/
+implementation: ElasticBERTBASEを用いた言語理解と、BARTBASE・CPTBASEを用いた要約の実験。語彙別終了層の対応表を用いる実装で、論文が公式コードを公開している。RTX 3090で実処理率も測定。
+code: https://github.com/txsun1997/HashEE
+last_checked: '2026-10-28'
 worker_id: scheduled-chat-00
-worker_run_key: "20261028-0400-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-28T04:01:21+09:00"
-reference_main_sha: "f531a819465d6c0cc86407f0c087f3bd7659d51a"
+worker_run_key: 20261028-0400-scheduled-chat-00/r01
+worker_completed_at: '2026-10-28T04:01:21+09:00'
+reference_main_sha: f531a819465d6c0cc86407f0c087f3bd7659d51a
 returned_research_repair: true
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2012.14682
+- canonical_id: arXiv:2002.08307
+- canonical_id: arXiv:2004.12993
+- canonical_id: arXiv:2004.02178
+- canonical_id: arXiv:2006.04152
+- canonical_id: arXiv:1909.05840
+- canonical_id: arXiv:1905.10650
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation（HASHEE）
