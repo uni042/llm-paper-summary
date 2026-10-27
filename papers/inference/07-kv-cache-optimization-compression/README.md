@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（384本）
+## 自動生成の論文一覧（385本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1284,6 +1284,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-03 · [Efficient Many-Shot In-Context Learning with Dynamic Block-Sparse Attention](2025-2503.08640-efficient-many-shot-in-context-learning-with-dynamic-block-sparse-attent.md)**  
   実装：[✓](https://github.com/millix19/dbsa) ・ リポジトリ内被引用：0  
   通常の多数例ICLは、同じモデルを複数の分類課題へ転用できる反面、数千件の入力・正解ラベル例を毎要求の文脈へ入れるため推論が高価になる。動的 Block-Sparse 注意機構（DBSA）はこの二者を分離する。第2段階では、BM25によって要求に関連するブロックを30%検索し、保存したKV断片を連結し直してから新しい要求を生成する。
+
+- **2025-02 · [BaKlaVa - Budgeted Allocation of KV cache for Long-context Inference](2025-2502.13176-baklava-budgeted-allocation-of-kv-cache-for-long-context-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  BaKlaVaは、長文脈のLLM推論でKVキャッシュを削減する際、全注意ヘッドへ同じ保持容量を与えるのではなく、重要度の高いヘッドへ多く、低いヘッドへ少なく配分する方式である。
 
 - **2025-01 · [MPCache: MPC-Friendly KV Cache Eviction for Efficient Private LLM Inference](2025-2501.06807-mpcache-mpc-friendly-kv-cache-eviction-for-efficient-private-llm-inferen.md)**  
   実装：[✓](https://github.com/zwxandy/MPCache) ・ リポジトリ内被引用：0  

@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（201本）
+## 自動生成の論文一覧（202本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -591,6 +591,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-10 · [Exact Causal Attention with 10% Fewer Operations](2025-2510.05175-exact-causal-attention-with-10-fewer-operations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、自己回帰型Transformerの因果注意（causal 注意機構）を、近似やトークン削除を行わずに、計算に必要な加減算・乗算を減らす問題を扱う。構造を利用することで、通常の三角領域だけを計算する行列積に対して約9.4%の主要な乗算を削減し、再帰的な適用では理論上約11.1%の削減が可能とする。
+
+- **2025-09 · [TyphoonMLA: A Mixed Naive-Absorb MLA Kernel For Shared Prefix](2025-2509.21081-typhoonmla-a-mixed-naive-absorb-mla-kernel-for-shared-prefix.md)**  
+  実装：[✓](https://github.com/huawei-csl/TyphoonMLA-community) ・ リポジトリ内被引用：0  
+  TyphoonMLAは、DeepSeek-v3やKimi K2に採用される多頭潜在注意（Multi-Head Latent 注意機構、MLA）で、複数要求が同じ入力prefixを共有する場合のデコードを高速化する。原著のカーネル実測は、Ascend NPUで最大3.0倍、GPUで最大3.24倍の注意処理量改善を報告する。
 
 - **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
   実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：0  

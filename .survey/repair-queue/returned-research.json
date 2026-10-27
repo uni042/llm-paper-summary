@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T14:42:56+00:00",
+  "generated_at": "2026-10-27T15:06:29+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1770,8 +1770,8 @@
     },
     {
       "canonical_id": "arXiv:2407.17678",
-      "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
-      "source_url": "https://arxiv.org/pdf/2407.17678v7",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T14:42:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1799,8 +1799,8 @@
     },
     {
       "canonical_id": "arXiv:2506.06095",
-      "title": "Accelerating Sparse Transformer Inference on GPU",
-      "source_url": "https://arxiv.org/pdf/2506.06095v5",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T14:42:51+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1825,36 +1825,9 @@
       "worker_run_key": "20261027-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2509.21081",
-      "title": "TyphoonMLA: A Mixed Naive-Absorb MLA Kernel For Shared Prefix",
-      "source_url": "https://arxiv.org/pdf/2509.21081v2",
-      "returned_at": "2026-10-27T14:42:52+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 190 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7023,
-        "body_paragraphs": 40,
-        "method_chars": 1643,
-        "method_paragraphs": 10,
-        "evaluation_chars": 190,
-        "limitation_chars": 964,
-        "insufficiency_flags": [
-          "評価説明量 190 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cb9f1cdd5ae6--libfile_e2b0c0e74ab08191868c708a3301de25--2025-2509.21081-typhoonmla-shared-prefix-hybrid-mla-research-20261027-2145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cb9f1cdd5ae6--libfile_e2b0c0e74ab08191868c708a3301de25--2025-2509.21081-typhoonmla-shared-prefix-hybrid-mla-research-20261027-2145-scheduled-chat.json",
-      "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2111.15588",
-      "title": "SimpleTRON: Simple Transformer with O(N) Complexity",
-      "source_url": "https://arxiv.org/pdf/2111.15588",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T14:42:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1880,8 +1853,8 @@
     },
     {
       "canonical_id": "DOI:10.18653/v1/2022.findings-acl.189",
-      "title": "A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation",
-      "source_url": "https://aclanthology.org/2022.findings-acl.189.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T14:42:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1904,6 +1877,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e4e5de9c0ae2--libfile_6b21c4d4c5a88191b8d5fa040a937eda--2022-doi-10.18653-v1-2022.findings-acl.189-hashee-hash-early-exit-research-20261027-1948-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e4e5de9c0ae2--libfile_6b21c4d4c5a88191b8d5fa040a937eda--2022-doi-10.18653-v1-2022.findings-acl.189-hashee-hash-early-exit-research-20261027-1948-.json",
       "worker_run_key": "20261027-1948-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.04759",
+      "title": "What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models",
+      "source_url": "https://arxiv.org/pdf/2404.04759",
+      "returned_at": "2026-10-27T15:01:15+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4904,
+        "body_paragraphs": 30,
+        "method_chars": 1339,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 557,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1365a3186e608191ac75f720360af845--2024-2404.04759-compression-small-data-afriberta-research-20261027-2245-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1365a3186e608191ac75f720360af845--2024-2404.04759-compression-small-data-afriberta-research-20261027-2245-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2245-scheduled-chat-45/r01"
     }
   ]
 }
