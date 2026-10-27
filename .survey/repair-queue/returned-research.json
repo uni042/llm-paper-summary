@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T02:20:19+00:00",
+  "generated_at": "2026-10-27T02:30:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1311,37 +1311,9 @@
       "worker_run_key": "20261027-0500-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2505.08620",
+      "canonical_id": "arXiv:2510.25412",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-27T01:46:10+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7557,
-        "body_paragraphs": 35,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 630,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0f02ce1cb784819189c73a39cce0e09e--2025-2505.08620-resource-efficient-language-models-ptq-survey-20261027-0955-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0f02ce1cb784819189c73a39cce0e09e--2025-2505.08620-resource-efficient-language-models-ptq-survey-20261027-0955-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261027-0955-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.25412",
-      "title": "Serve Programs, Not Prompts",
-      "source_url": "https://arxiv.org/pdf/2510.25412v1",
       "returned_at": "2026-10-27T02:18:25+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1367,8 +1339,8 @@
     },
     {
       "canonical_id": "arXiv:2305.12330",
-      "title": "Task-agnostic Distillation of Encoder-Decoder Language Models",
-      "source_url": "https://aclanthology.org/2024.lrec-main.1359.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T02:18:27+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1392,6 +1364,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6e74689b884a--libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6e74689b884a--libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930.json",
       "worker_run_key": "20261027-0930-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.08620",
+      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
+      "source_url": "https://arxiv.org/pdf/2505.08620v1",
+      "returned_at": "2026-10-27T02:30:26+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7557,
+        "body_paragraphs": 35,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 630,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f5e5daf267da--libfile_0f02ce1cb784819189c73a39cce0e09e--2025-2505.08620-resource-efficient-language-models-ptq-survey-20261027-0955-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f5e5daf267da--libfile_0f02ce1cb784819189c73a39cce0e09e--2025-2505.08620-resource-efficient-language-models-ptq-survey-20261027-0955-scheduled-cha.json",
+      "worker_run_key": "20261027-0955-scheduled-chat-00/r01"
     }
   ]
 }
