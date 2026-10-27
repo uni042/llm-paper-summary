@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T07:14:44+00:00",
+  "generated_at": "2026-10-27T07:30:04+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 63,
+  "count": 65,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1658,6 +1658,62 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.05693",
+      "title": "Batch-Max: Higher LLM Throughput using Larger Batch Sizes and KV Cache Compression",
+      "source_url": "https://arxiv.org/pdf/2412.05693",
+      "returned_at": "2026-10-27T07:25:56+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5051,
+        "body_paragraphs": 30,
+        "method_chars": 1711,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2407.09577",
+      "title": "FlashNorm: Fast Normalization for Transformers",
+      "source_url": "https://arxiv.org/pdf/2407.09577",
+      "returned_at": "2026-10-27T07:27:04+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5908,
+        "body_paragraphs": 37,
+        "method_chars": 2005,
+        "method_paragraphs": 12,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     }
   ]
