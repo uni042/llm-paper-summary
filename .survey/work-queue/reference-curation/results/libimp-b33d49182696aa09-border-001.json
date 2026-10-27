@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-b33d49182696aa09-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2410.21340",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2410.21340",
+    "identity_tokens": [
+      "arXiv:2410.21340"
+    ],
+    "reason": "Nesaの分散推論でデータ・モデル・ハードウェア埋め込みから加速手法を選ぶMetaInfを提案し、LLMサービングとの技術的関連性はある。しかし一次全文のSection 4はメタ予測器と選択アルゴリズムの概念設計・擬似コードが中心で、比較実験の数値表、実測レイテンシ、処理量、GPU条件別の結果が掲載されていない。Section 4.2.1に『experiments ... in §??』という未完成参照が残る。abstractと結論の性能優位主張を裏付ける実測条件を検証できないため、現行の実証重視サーベイではborderlineとしResearch完成稿を作らない。",
+    "first_checked_at": "2026-10-27T20:47:50+00:00",
+    "last_checked_at": "2026-10-27T20:47:50+00:00",
+    "linked_from": [
+      ".survey/work-queue/WORKLIST-00.md",
+      "scheduled-chat-00 Research relevance recheck"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Meta-Learning for Speeding Up Large Model Inference in Decentralized Environments"
+  },
+  "processed_at": "2026-10-27T20:47:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b33d49182696",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

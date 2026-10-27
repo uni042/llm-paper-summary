@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-27T18:50:03+00:00",
-  "record_count": 5367,
+  "updated_at": "2026-10-27T20:47:51+00:00",
+  "record_count": 5370,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83191,6 +83191,54 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "A Theory of Inference Compute Scaling: Reasoning through Directed Stochastic Skill Search"
+    },
+    "arXiv:2410.21340": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.21340",
+      "identity_tokens": [
+        "arXiv:2410.21340"
+      ],
+      "reason": "Nesaの分散推論でデータ・モデル・ハードウェア埋め込みから加速手法を選ぶMetaInfを提案し、LLMサービングとの技術的関連性はある。しかし一次全文のSection 4はメタ予測器と選択アルゴリズムの概念設計・擬似コードが中心で、比較実験の数値表、実測レイテンシ、処理量、GPU条件別の結果が掲載されていない。Section 4.2.1に『experiments ... in §??』という未完成参照が残る。abstractと結論の性能優位主張を裏付ける実測条件を検証できないため、現行の実証重視サーベイではborderlineとしResearch完成稿を作らない。",
+      "first_checked_at": "2026-10-27T20:47:50+00:00",
+      "last_checked_at": "2026-10-27T20:47:50+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-00.md",
+        "scheduled-chat-00 Research relevance recheck"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Meta-Learning for Speeding Up Large Model Inference in Decentralized Environments"
+    },
+    "arXiv:2410.10914": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.10914",
+      "identity_tokens": [
+        "arXiv:2410.10914"
+      ],
+      "reason": "arXiv一次要旨ではチャネル別の巡回シフトと並べ替えによるCSP演算子を提案し、注意機構のパラメータと計算量を減らす点は効率的な推論アーキテクチャに関連する。一方、要旨で示された実証は画像分類・長系列の識別タスクであり、生成型LLMのデコード、KVキャッシュ、サービングの実測速度は明記されていない。関連性はあるが現行の推論システム実証範囲への直接適用は未確認なのでborderline。",
+      "first_checked_at": "2026-10-27T20:47:51+00:00",
+      "last_checked_at": "2026-10-27T20:47:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-30.md",
+        "scheduled-chat-30 Research prescreen"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Towards Better Multi-head Attention via Channel-wise Sample Permutation"
+    },
+    "arXiv:2407.05467": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.05467",
+      "identity_tokens": [
+        "arXiv:2407.05467"
+      ],
+      "reason": "arXiv一次要旨が中心的に説明するのは、IBMの大規模生成AIモデル開発・学習向けVelaとBlue Velaのクラウド／オンプレミスGPUインフラである。LLM基盤の資源管理という周辺技術として関連するが、推論時のサービング、KVキャッシュ、生成スループットやSLO最適化を要旨から直接確認できない。学習インフラ単独の報告であるためResearch収録は保留しborderline。",
+      "first_checked_at": "2026-10-27T20:47:51+00:00",
+      "last_checked_at": "2026-10-27T20:47:51+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-30.md",
+        "scheduled-chat-30 Research prescreen"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "The infrastructure powering IBM's Gen AI model development"
     }
   }
 }
