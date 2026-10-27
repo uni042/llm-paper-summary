@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261028-0203-scheduled-chat-00/r01",
+  "reference_main_sha": "a8595c53d15aa97b32074433b3cdc47d51a72c0f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.17428",
+      "identity_tokens": [
+        "arxiv:2509.17428",
+        "url:https://arxiv.org/abs/2509.17428",
+        "url:https://arxiv.org/html/2509.17428v4"
+      ],
+      "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models",
+      "reason": "中心的な提案は量子化済みLLMの追加学習におけるWalsh–Hadamard変換アダプタ、チャネル別パラメータ割当AdaAlloc、量子化誤差の初期補正であり、主実験は微調整後の精度と学習時間である。推論との接点は付録D.7のアダプタ推論オーバーヘッド比較に限られ、2048入力・64生成・バッチ128でWHA 184.6 token/s、LoRA 188.1 token/s、ピークメモリ52.68対59.53GBと報告する。推論専用の量子化アルゴリズム、サービングスケジューラ、KV管理、デコードカーネルの改善を主題とする研究ではないが、推論資源の定量比較があるため無関係ではなく境界例と判定した。",
+      "source_url": "https://arxiv.org/html/2509.17428v4",
+      "body_check": "research_fulltext_relevance_review: arXiv v4の§3.1/§3.2でアダプタ構成と量子化誤差初期化、§4.1/§4.2で学習後精度と学習計算、付録D.7表19・20で推論スループットとメモリを照合。研究の主目的がquantization-aware PEFTであること、推論比較が付録に限定されることを確認。",
+      "first_checked_at": "2026-10-28T02:08:00+09:00",
+      "last_checked_at": "2026-10-28T02:09:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance"
+    }
+  ]
+}
