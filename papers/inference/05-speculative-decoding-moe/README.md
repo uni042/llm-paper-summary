@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（306本）
+## 自動生成の論文一覧（307本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -535,6 +535,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [DeLS-Spec: Decoupled Long-Short Contexts for Parallel Speculative Drafting](2026-2607.07409-dels-spec-decoupled-long-short-contexts-for-parallel-speculative-draftin.md)**  
   実装：[✓](https://github.com/dt-3t/DeLS-Spec) ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、軽量なドラフトモデルで複数の候補トークンを先に生成し、目標モデルの一度の前向き計算で並列検証することで自己回帰生成の逐次呼出しを減らす。Qwen3-4Bの温度0、8ベンチマーク平均では、DFlashの自己回帰比復号高速化4.63倍・平均受理長6.04から、DeLS-Specは4.82倍・6.35へ改善した。
+
+- **2026-07 · [Characterizing self-speculative decoding approaches for accelerating LLMs](2026-145a6256ce66-characterizing-self-speculative-decoding-approaches-for-accelerating-llm.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号では安価なドラフトが複数トークンを先に提案し、完全なモデルが一括検証する。論文はSWIFT、下書き & Verify、LayerSkip、DEL、Kangarooを比較し、層スキップ方式のHumanEvalにおける通常生成比高速化が1.04〜1.48倍に留まる一方、早期終了方式は平均1.49〜2.67倍を達成したと報告する。
 
 - **2026-07 · [Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding](2026-2607.27269-beyond-kv-reconstruction-functional-reconstruction-for-mla-draft-models-.md)**  
   実装：[✓](https://github.com/swyhahaha/FunctionalMLA) ・ リポジトリ内被引用：0  

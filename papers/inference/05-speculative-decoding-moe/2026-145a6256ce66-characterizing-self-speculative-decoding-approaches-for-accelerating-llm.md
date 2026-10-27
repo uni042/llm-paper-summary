@@ -28,6 +28,8 @@ reference_main_sha: "4e66466dd4e823b88717c5a98eda0e67d39ea08d"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 worklist_rank: 84
+last_audited: null
+audit_version: 0
 ---
 
 # Characterizing self-speculative decoding approaches for accelerating LLMs

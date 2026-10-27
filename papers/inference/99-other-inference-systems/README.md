@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（715本）
+## 自動生成の論文一覧（716本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1943,6 +1943,10 @@
 - **2025-10 · [ELUTQ: Optimizing Quantization Accuracy under LUT-Based Computation for Edge LLMs](2025-2510.19482-elutq-optimizing-quantization-accuracy-under-lut-based-computation-for-e.md)**  
   実装：[✓](https://github.com/Nkniexin/ELUTQ) ・ リポジトリ内被引用：0  
   ELUTQは、LLMの重みを2〜3bitへ圧縮するときの量子化誤差と、量子化後の重みをCPU/GPUで実行するときの復号・乗算費用を一緒に扱うシステムである。
+
+- **2025-10 · [Direct Multi-Token Decoding](2025-2510.11958-direct-multi-token-decoding.md)**  
+  実装：[✓](https://github.com/luoxuan-cs/Direct-Multitoken-Decoding) ・ リポジトリ内被引用：0  
+  低バッチでは重みをGPUメモリから読み出す時間が支配的になりやすく、各層を毎トークン通ることが遅延の主要因になる。以下の数値はすべて原著の表を照合したものであり、未測定の大規模サービング性能や他の投機復号方式との優劣は主張しない。
 
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
