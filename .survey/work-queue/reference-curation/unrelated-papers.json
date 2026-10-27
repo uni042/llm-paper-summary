@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-27T10:51:04+00:00",
-  "record_count": 12505,
+  "updated_at": "2026-10-27T17:49:43+00:00",
+  "record_count": 12508,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180117,6 +180117,42 @@
       "last_checked_at": "2026-10-27T10:51:04+00:00",
       "linked_from": [],
       "title": "Fourier transform and permutation-based transformer for drug–target binding affinity prediction"
+    },
+    "arXiv:2405.11244": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.11244",
+      "identity_tokens": [
+        "arXiv:2405.11244"
+      ],
+      "reason": "差分制約の行列表現を扱う形式手法・数理的研究が主題であり、LLMの推論処理、推論メモリ、GPU実行、推論サービングとは明白に異なる。",
+      "first_checked_at": "2026-10-27T17:49:38+00:00",
+      "last_checked_at": "2026-10-27T17:49:38+00:00",
+      "linked_from": [],
+      "title": "Strided Difference Bound Matrices"
+    },
+    "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b",
+      "identity_tokens": [
+        "SemanticScholar:960c518980cf8cf17132cc06a380c6c81ce24f6b"
+      ],
+      "reason": "視覚的グラウンディング課題における視覚特徴の寄与を問う研究であり、LLM推論基盤の計算効率やメモリ・サービング最適化を主題としない。",
+      "first_checked_at": "2026-10-27T17:49:42+00:00",
+      "last_checked_at": "2026-10-27T17:49:42+00:00",
+      "linked_from": [],
+      "title": "How Important are Visual Features for Visual Grounding? It Depends."
+    },
+    "arXiv:2407.17412": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.17412",
+      "identity_tokens": [
+        "arXiv:2407.17412"
+      ],
+      "reason": "画像の視覚プロンプトを利用した構造的疎化が主題であり、対象は視覚モデルの構造選択。LLMの生成推論、KVキャッシュ、推論サービングやMoE実行の最適化を示すタイトルではない。",
+      "first_checked_at": "2026-10-27T17:49:43+00:00",
+      "last_checked_at": "2026-10-27T17:49:43+00:00",
+      "linked_from": [],
+      "title": "(PASS) Visual Prompt Locates Good Structure Sparsity through a Recurrent HyperNetwork"
     }
   }
 }

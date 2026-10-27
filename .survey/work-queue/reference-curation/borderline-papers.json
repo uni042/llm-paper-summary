@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-27T12:45:34+00:00",
-  "record_count": 5364,
+  "updated_at": "2026-10-27T17:49:38+00:00",
+  "record_count": 5365,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83148,6 +83148,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "TeamFormer: Shallow Parallel Transformers with Progressive Approximation"
+    },
+    "arXiv:2509.17428": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.17428",
+      "identity_tokens": [
+        "arXiv:2509.17428",
+        "url:https://arxiv.org/abs/2509.17428",
+        "url:https://arxiv.org/html/2509.17428v4"
+      ],
+      "reason": "中心的な提案は量子化済みLLMの追加学習におけるWalsh–Hadamard変換アダプタ、チャネル別パラメータ割当AdaAlloc、量子化誤差の初期補正であり、主実験は微調整後の精度と学習時間である。推論との接点は付録D.7のアダプタ推論オーバーヘッド比較に限られ、2048入力・64生成・バッチ128でWHA 184.6 token/s、LoRA 188.1 token/s、ピークメモリ52.68対59.53GBと報告する。推論専用の量子化アルゴリズム、サービングスケジューラ、KV管理、デコードカーネルの改善を主題とする研究ではないが、推論資源の定量比較があるため無関係ではなく境界例と判定した。",
+      "first_checked_at": "2026-10-27T17:49:38+00:00",
+      "last_checked_at": "2026-10-27T17:49:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models"
     }
   }
 }
