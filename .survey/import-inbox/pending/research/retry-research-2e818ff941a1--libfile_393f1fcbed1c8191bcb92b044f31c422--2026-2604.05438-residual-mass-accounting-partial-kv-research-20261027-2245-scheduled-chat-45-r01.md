@@ -29,6 +29,8 @@ worker_run_key: "20261027-2245-scheduled-chat-45/r01"
 reference_main_sha: "5632ba23138364694eebf0544448f270e82f55ab"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Residual-Mass Accounting：部分KV参照で失うsoftmax質量を復元する

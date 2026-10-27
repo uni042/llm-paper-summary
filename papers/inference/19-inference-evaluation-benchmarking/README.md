@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（101本）
+## 自動生成の論文一覧（103本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -359,6 +359,14 @@
 - **2025-08 · [Meta-Metrics and Best Practices for System-Level Inference Performance Benchmarking](2025-2508.10251-meta-metrics-and-best-practices-for-system-level-inference-performance-b.md)**  
   実装：[✓](https://github.com/IBM/fmwork) ・ リポジトリ内被引用：0  
   入力トークン長、出力トークン長、同時実行数、重み精度、テンソル並列数、推論エンジン、スケジューラ設定を変えると、初回トークン遅延（TTFT）、トークン間遅延（ITL）、総スループット（THP）は異なる。
+
+- **2025-05 · [Resource-Efficient Language Models: Quantization for Fast and Accessible Inference](2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、一般の利用者がオープンウェイトLLMを手元の計算資源で実行するための後学習量子化（PTQ）を概説するレビューである。
+
+- **2025-02 · [KVCrush: Key value cache size-reduction using similarity in head-behaviour](2025-2503.00022-kvcrush-key-value-cache-size-reduction-using-similarity-in-head-behaviou.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVCrushは、長文脈のLLM推論でKVキャッシュを縮小する際に、重要度の高いトークンだけを残す既存方式の弱点を補う手法である。平均KV削減率約4倍の条件でも精度低下を小さく抑えられる一方、すべての個別課題でFullKVに勝つわけではない。
 
 ### 3年前（2023-11〜2024-10）
 

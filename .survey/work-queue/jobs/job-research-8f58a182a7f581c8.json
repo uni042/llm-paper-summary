@@ -32,10 +32,15 @@
   "schema_version": 1,
   "selection_reason": "テンソル並列（tensor parallelism）の推論通信を低ビット圧縮して帯域ボトルネックを直接削減する分散LLM推論方式なので対象。",
   "source_url": "https://arxiv.org/abs/2412.04964",
-  "status": "ready",
+  "status": "superseded",
   "title": "Flash Communication: Reducing Tensor Parallelization Bottleneck for Fast Large Language Model Inference",
   "type": "research",
   "venue": "arXiv (Cornell University)",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-27T15:50:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2412.04964-flash-communication-reducing-tensor-parallelization-bottleneck-for-fast-.md",
+  "represented_canonical_id": "arXiv:2412.04964",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
