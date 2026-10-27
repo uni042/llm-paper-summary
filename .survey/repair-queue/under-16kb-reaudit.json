@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-27T15:10:15.465369+00:00",
+  "generated_at": "2026-10-27T15:29:39.618783+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 10,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 4,
     "scheduled-chat-30": 3,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -62,12 +62,32 @@
       ]
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md",
+      "canonical_id": "arXiv:2407.03637",
+      "title": "QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering",
+      "file_bytes": 10773,
+      "source_sha256": "5569c90aa2cdf758a3b0c61f51ea46d137b31af500d688b24f3e5a5a77b8ef4b",
+      "source_git_blob_sha": "bf538306e221e4e805e4fe7475630b2f9dd03041",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.85112,
+      "quality_metrics": {
+        "body_chars": 3189,
+        "method_chars": 763,
+        "evaluation_chars": 894,
+        "limitation_chars": 247
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md",
       "canonical_id": "arXiv:2412.15803",
       "title": "WebLLM: A High-Performance In-Browser LLM Inference Engine",
-      "file_bytes": 11036,
-      "source_sha256": "8f3aa7cffa1bbda794c0126cffa11918b153a68ec797b967b99985558a0695ab",
-      "source_git_blob_sha": "ddb7500e785dd4021f1b6c26fe31b6682d0d682e",
+      "file_bytes": 11542,
+      "source_sha256": "4753eeb14240f217d61916837e47ed8b46c1edd82064ab2948233302fc88ce6e",
+      "source_git_blob_sha": "b8f99ba55a1645e19213b46efd2a0f309e585dbe",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -82,28 +102,24 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md",
-      "canonical_id": "arXiv:2510.05363",
-      "title": "Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation",
-      "file_bytes": 12443,
-      "source_sha256": "f026bf13fba68a298bb17e31164b4e9298a1f8a3866f2677cd3b8772501920bb",
-      "source_git_blob_sha": "55ff4efc01eebe54bea6dc496c2107f7c95aaff7",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/99-other-inference-systems/2025-2509.19592-frame-stacked-local-transformers-for-efficient-multi-codebook-speech-gen.md",
+      "canonical_id": "arXiv:2509.19592",
+      "title": "Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation",
+      "file_bytes": 12108,
+      "source_sha256": "fb8949c484495f8b5353e064a05874296d13c6bbfe512cf4777a380f88a10324",
+      "source_git_blob_sha": "ae0401fdc459bd2c1920890d677787bc8fb0548f",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.7657,
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.876745,
       "quality_metrics": {
-        "body_chars": 4193,
-        "method_chars": 864,
-        "evaluation_chars": 1545,
-        "limitation_chars": 268
+        "body_chars": 3444,
+        "method_chars": 982,
+        "evaluation_chars": 923,
+        "limitation_chars": 236
       },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 76.6% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 76.6% < 警告基準 80%"
-      ]
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
@@ -124,6 +140,30 @@
       },
       "mechanical_failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md",
+      "canonical_id": "arXiv:2510.05363",
+      "title": "Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation",
+      "file_bytes": 13964,
+      "source_sha256": "10b875f2f0b15e5fff6c74a31de9570efde6d0583e5446c96fc5b0c2ef603b22",
+      "source_git_blob_sha": "e31b66576fcab12015f62f2e22996b1c0e91a6cb",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.7657,
+      "quality_metrics": {
+        "body_chars": 4193,
+        "method_chars": 864,
+        "evaluation_chars": 1545,
+        "limitation_chars": 268
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 76.6% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 76.6% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
