@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-27T18:03:50.362339+00:00",
+  "generated_at": "2026-10-27T19:00:21.087703+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 12,
+  "count": 13,
   "worker_counts": {
     "scheduled-chat-00": 4,
-    "scheduled-chat-30": 4,
+    "scheduled-chat-30": 5,
     "scheduled-chat-45": 4
   },
   "entries": [
@@ -102,26 +102,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2024-2407.17678-s2-attention-hardware-aware-context-sharding-among-attention-heads.md",
-      "canonical_id": "arXiv:2407.17678",
-      "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
-      "file_bytes": 14616,
-      "source_sha256": "7d3c85052f5e4aa10c5d3f913f44e9a31830d079abc0f16c98ac6efaad1c49b1",
-      "source_git_blob_sha": "098f2a393b2dd7db1d3333fbcac6bf27adf98237",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.897759,
-      "quality_metrics": {
-        "body_chars": 3411,
-        "method_chars": 1332,
-        "evaluation_chars": 554,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md",
       "canonical_id": "arXiv:2502.19335",
       "title": "GATEKEEPER: Improving Model Cascades Through Confidence Tuning",
@@ -164,6 +144,50 @@
       "warnings": [
         "日本語比率 78.2% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md",
+      "canonical_id": "arXiv:2411.01818",
+      "title": "Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference",
+      "file_bytes": 15513,
+      "source_sha256": "a3893eabf5a15386b31a6ca0fe61eb70a7521287a69b99c154824e5730cbfa58",
+      "source_git_blob_sha": "8a4e3cdf541ad4138feb5047a8ec19404c5c4df4",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.787526,
+      "quality_metrics": {
+        "body_chars": 4462,
+        "method_chars": 1651,
+        "evaluation_chars": 781,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 78.8% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 78.8% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2509.01190-efficient-large-language-models-with-zero-shot-adjustable-acceleration.md",
+      "canonical_id": "arXiv:2509.01190",
+      "title": "Efficient Large Language Models with Zero-Shot Adjustable Acceleration",
+      "file_bytes": 15537,
+      "source_sha256": "8464361bfe37ad83f05361095ce620ef1b6a70d7970455923954056c05028603",
+      "source_git_blob_sha": "b91f9c8ef357c29262e785f09ad2b840542a2340",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.924555,
+      "quality_metrics": {
+        "body_chars": 4076,
+        "method_chars": 1342,
+        "evaluation_chars": 837,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
