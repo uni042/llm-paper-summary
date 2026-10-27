@@ -220,7 +220,7 @@
   FLASHは、注意計算を系列長に対して線形に近づける方式が、理論計算量を減らしても実機で速くならず、強いTransformerを比較対象にすると品質が落ちるという問題に取り組む。
 
 - **2022-02 · [cosFormer: Rethinking Softmax in Attention](2022-2202.08791-cosformer-rethinking-softmax-in-attention.md)**  
-  実装：[✓](https://github.com/OpenNLPLab/cosFormer) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/OpenNLPLab/cosFormer) ・ リポジトリ内被引用：30  
   cosFormerはソフトマックスの関数形をそのまま近似するのでなく、注意係数が非負であることと、関連性の高い位置へ重みを集中させることを抽出して設計する。
 
 - **2022-06 · [Long Range Language Modeling via Gated State Spaces](2022-2206.13947-long-range-language-modeling-via-gated-state-spaces.md)**  
@@ -234,6 +234,6 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：153  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：154  
   Performerは、通常の全ランクのソフトマックス注意を正の直交ランダム特徴で近似するFAVOR+を提案し、注意行列を明示的に保持しない線形時間・線形空間の実行を可能にする。
 <!-- survey:auto:end -->

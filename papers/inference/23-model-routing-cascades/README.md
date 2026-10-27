@@ -75,6 +75,6 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2020-12 · [CascadeBERT: Accelerating Inference of Pre-trained Language Models via Calibrated Complete Models Cascade](2020-2012.14682-cascadebert-accelerating-inference-of-pre-trained-language-models-via-ca.md)**  
-  実装：[✓](https://github.com/lancopku/CascadeBERT) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/lancopku/CascadeBERT) ・ リポジトリ内被引用：12  
   提案するCascadeBERTは、単一モデルの途中で終了する代わりに、小型でも事前学習を完了した独立モデルを最初に走らせる。6つのGLUE分類課題で、BERT-baseを基準に実行層数を約4分の1へ減らす条件では、論文の課題平均はCascadeBERTが78.3、動的早期終了DeeBERTが67.8であり、差は10.5点、相対的には約15.5%である。
 <!-- survey:auto:end -->
