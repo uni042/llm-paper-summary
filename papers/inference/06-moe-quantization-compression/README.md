@@ -5,7 +5,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 単にモデルを小さくするだけでなく、routing結果を崩さないこと、頻繁に使うexpertへ高い精度を残すこと、実際のGPU kernelで速くなるbit配置を選ぶことも重要な評価軸となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（28本）
+## 自動生成の論文一覧（33本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/)
 
@@ -13,6 +13,10 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+
+- **2026-06 · [Less is MoE: Trimming Experts in Domain-Specialist Language Models](2026-2606.05538-less-is-moe-trimming-experts-in-domain-specialist-language-models.md)**  
+  実装：[✓](https://github.com/HectorHHZ/Less-is-MoE) ・ リポジトリ内被引用：2  
+  Less is MoEは、混合専門家モデル（Mixture of エキスパート、MoE）を圧縮する際に専門家を丸ごと削ると、一般常識の選択式問題では性能が残っても数学推論やコード生成が崩壊する原因を分析し、専門家内部の順伝播ネットワーク（FFN）中間次元を削るFisher-MoEを提案する研究である。
 
 - **2025-11 · [Dynamic Expert Quantization for Scalable Mixture-of-Experts Inference](2025-2511.15015-dynamic-expert-quantization-for-scalable-mixture-of-experts-inference.md)**  
   実装：[✓](https://github.com/kexinchu/DynaQuant) ・ リポジトリ内被引用：2  
@@ -29,6 +33,14 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2026-05 · [ConMoE: Expert-Pool Consolidation via Prototype Reassignment for MoE Compression](2026-2605.29350-conmoe-expert-pool-consolidation-via-prototype-reassignment-for-moe-comp.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   ConMoEは、混合専門家モデル（Mixture-of-Experts; MoE）の推論に必要な専門家重みを、学習後の追加学習なしで縮小するための方式である。
+
+- **2026-04 · [Efficient Quantization of Mixture-of-Experts with Theoretical Generalization Guarantees](2026-2604.06515-efficient-quantization-of-mixture-of-experts-with-theoretical-generaliza.md)**  
+  実装：[✓](https://github.com/nowazrabbani/moe_quantization) ・ リポジトリ内被引用：1  
+  本研究は、混合専門家モデル（Mixture-of-Experts、MoE）の推論メモリを減らすため、全専門家を同じビット幅へ量子化する代わりに、専門家ごとに1〜3ビットなど異なる精度を割り当てる方式を提案する。Mixtral 8x7Bの8課題平均では、専門家平均2.5ビットの提案方式が68.38%、比較方式PMQが67.53%だった。
+
+- **2026-03 · [BATQuant: Outlier-resilient MXFP4 Quantization via Learnable Block-wise Optimization](2026-2603.16590-batquant-outlier-resilient-mxfp4-quantization-via-learnable-block-wise-o.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデル（LLM）や画像言語モデル（MLLM）の重み・活性化を4ビットへ量子化すれば、メモリ帯域と計算資源の負担を軽くできる可能性がある。マルチモーダル5課題の総合回復率はBF16比96.43%で、同条件のFlatQuant94.79%、GPTQ94.64%を上回る。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
@@ -47,6 +59,14 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
 - **2026-06 · [SharQ: Bridging Activation Sparsity and FP4 Quantization for LLM Inference](2026-2606.26587-sharq-bridging-activation-sparsity-and-fp4-quantization-for-llm-inferenc.md)**  
   実装：[✓](https://github.com/actypedef/SharQ) ・ リポジトリ内被引用：0  
   大規模言語モデルの線形層をFP4で実行すると演算密度を高められるが、入力によって変動する活性値には局所的な極大値が存在し、同じ量子化ブロックに属する通常値の分解能が犠牲になる。Llama-3.1-8Bの5課題平均正答率はNVFP4単独70.32%から71.55%に回復（FP16は72.50%）。
+
+- **2026-06 · [Attribution-Guided and Coverage-Maximized Pruning for Structural MoE Compression](2026-2606.18304-attribution-guided-and-coverage-maximized-pruning-for-structural-moe-com.md)**  
+  実装：[✓](https://github.com/yifu-ding/MoE-Slimming) ・ リポジトリ内被引用：0  
+  専門家を丸ごと削除する従来方式では、重要度が高いと判定された専門家の内部にも残る冗長チャネルを見逃し、逆に頻度の低い専門家を全削除すると一部の入力に必要な能力を失う。著者らはDeepSeekとQwenの複数の混合専門家モデルを対象に、構造的枝刈り（structural 枝刈り）50%単独と、25%枝刈りに4ビット量子化を重ねた構成を比較した。
+
+- **2026-06 · [AlphaQ: Calibration-Free Bit Allocation for Mixture-of-Experts Quantization](2026-2606.04980-alphaq-calibration-free-bit-allocation-for-mixture-of-experts-quantizati.md)**  
+  実装：[✓](https://github.com/Superone77/AlphaQ) ・ リポジトリ内被引用：0  
+  しかし、推論時に選択され得る専門家の重みをGPUまたは周辺メモリへ配置する必要があるため、活性化の疎性がそのまま重みの記憶容量削減につながるわけではない。専門家ごとに2、3、4ビットなど異なる量子化精度を与えれば容量を減らせるが、どの専門家を高精度で守るかが問題になる。
 
 - **2026-05 · [GEMQ: Global Expert-Level Mixed-Precision Quantization for MoE LLMs](2026-2605.23078-gemq-global-expert-level-mixed-precision-quantization-for-moe-llms.md)**  
   実装：[✓](https://github.com/jndeng/GEMQ) ・ リポジトリ内被引用：0  
