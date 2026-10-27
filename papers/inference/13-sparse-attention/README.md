@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（150本）
+## 自動生成の論文一覧（151本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -557,6 +557,10 @@
 - **2024-08 · [X-former Elucidator: Reviving Efficient Attention for Long Context Language Modeling](2024-16427914d16d-x-former-elucidator-reviving-efficient-attention-for-long-context-langua.md)**  
   実装：[✓](https://github.com/Hsword/X-former-Elucidator) ・ リポジトリ内被引用：1  
   大規模言語モデル（Large Language モデル; LLM）の長文脈処理では、標準の自己注意（self-注意機構）が系列長nに対して概ね二乗の計算を必要とし、特に学習や長い入力のプリフィル（プリフィル）でメモリ・演算の負担が増える。著者らはNVIDIA Titan RTX 24GB群で計21,114 GPU時間を費やしたと報告する。
+
+- **2024-07 · [S2-Attention: Hardware-Aware Context Sharding Among Attention Heads](2024-2407.17678-s2-attention-hardware-aware-context-sharding-among-attention-heads.md)**  
+  実装：[✓](https://github.com/linxihui/dkernel) ・ リポジトリ内被引用：0  
+  疎注意機構は各クエリが参照するキー・バリュー（KV）を減らすため、演算量だけを見れば密注意機構より速くなる。論文v7は1.3B/7Bの事前学習で、注意演算の実測高速化8.8/15.9倍、学習時間の短縮2.8/2.5倍を報告する。
 
 ### 4年前（2022-11〜2023-10）
 

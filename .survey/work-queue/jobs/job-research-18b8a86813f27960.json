@@ -35,10 +35,15 @@
   "selection_reason": "S2-Attentionはattention headごとにcontextを分割するhardware-aware sparse-attention Triton library。FlashAttention-2比のwall-clock speedupとvLLM inference speedupを要旨で報告。",
   "semantic_scholar_id": "077f0037392d0405e24f7c27bbed77ead9baec76",
   "source_url": "https://arxiv.org/abs/2407.17678",
-  "status": "ready",
+  "status": "superseded",
   "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-27T16:19:26+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2024-2407.17678-s2-attention-hardware-aware-context-sharding-among-attention-heads.md",
+  "represented_canonical_id": "arXiv:2407.17678",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

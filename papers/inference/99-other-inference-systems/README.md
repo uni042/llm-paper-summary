@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（702本）
+## 自動生成の論文一覧（704本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -16,13 +16,13 @@
   実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：11  
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
-- **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
-  著者らはこの方式を段階蒸留（Cascade Distillation）と呼ぶ。したがって「全評価項目で教師と同等」ではない。
-
 - **2025-12 · [Recursive Language Models](2025-2512.24601-recursive-language-models.md)**  
   実装：[✓](https://github.com/alexzhang13/rlm) ・ リポジトリ内被引用：8  
   再帰型言語モデル（Recursive Language モデル; RLM）は、長い入力を大規模言語モデルの注意窓へ丸ごと入れる代わりに、持続的なプログラム実行環境の変数として保存し、モデル自身がコードを生成して入力の必要箇所を調査・分割・変換する推論方式である。
+
+- **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  著者らはこの方式を段階蒸留（Cascade Distillation）と呼ぶ。したがって「全評価項目で教師と同等」ではない。
 
 - **2026-07 · [FlashAccel: Leveraging High-Bandwidth Flash (HBF) for High-Throughput LLM Inference](2026-2607.10186-flashaccel-high-bandwidth-flash-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -1558,6 +1558,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   T-SARは、重みを−1、0、+1の三値に制約した大規模言語モデル（LLM）を、専用の大きな行列演算器なしにCPUで高速実行するための、アルゴリズム・命令セット・マイクロアーキテクチャ・ソフトウェアの協調設計である。
 
+- **2025-11 · [Symbiosis: Multi-Adapter Inference and Fine-Tuning](2025-2507.03220-symbiosis-multi-adapter-inference-and-fine-tuning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Symbiosisは、基盤モデルの凍結層を共有サービスへ分離し、利用者固有の注意・アダプタ・状態を各clientに残す設計によって、推論と微調整を同じ仕組みで扱う。
+
 - **2025-11 · [Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism](2025-2511.07776-streaming-tensor-programs-a-streaming-abstraction-for-dynamic-parallelis.md)**  
   実装：[✓](https://github.com/stanford-ppl/step_artifact) ・ リポジトリ内被引用：0  
   SDAは演算器とメモリをチップ上へ分散配置し、演算間を先入先出のストリームで接続する。著者はMixtral-8x7B、Qwen3-30B-A3BのMoE層と全モデル、AzureLLMInferenceDataset由来のKV長分布を用い、サイクル近似シミュレータで評価する。
@@ -1738,7 +1742,7 @@
 
 - **2024-12 · [WebLLM: A High-Performance In-Browser LLM Inference Engine](2024-2412.15803-webllm-a-high-performance-in-browser-llm-inference-engine.md)**  
   実装：[✓](https://github.com/mlc-ai/web-llm) ・ リポジトリ内被引用：3  
-  論文の重要な貢献は新しい注意機構数式ではなく、ブラウザの実行制約下でもネイティブに近い推論処理率を出すシステム統合である。これはブラウザがネイティブより高速という主張ではなく、同じ端末上で71.2〜79.6%のデコード スループットを保持できたという結果である。
+  新しい注意機構や学習アルゴリズムではなく、ブラウザで効率的な言語モデル実行を成立させるシステム統合が主要な貢献である。ブラウザ版はネイティブ版より遅いが、復号処理率の約71.2～79.6%を保持した。
 
 - **2025-10 · [Not All Bits Are Equal: Scale-Dependent Memory Optimization Strategies for Reasoning Models](2025-2510.10964-not-all-bits-are-equal-scale-dependent-memory-optimization-strategies-fo.md)**  
   実装：[✓](https://github.com/krafton-ai/not-all-bits-are-equal) ・ リポジトリ内被引用：2  
@@ -1918,7 +1922,7 @@
 
 - **2025-10 · [Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation](2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  MHA-ESP（Multi-Head 注意機構-based Exemplar Soft Prompting）は、入力質問に関連するK個の例示を外部エンコーダでベクトル化し、複数の注意ヘッドから基盤LLMの埋め込み次元と一致する短いsoft プロンプトを構成する。
+  提案法MHA-ESPは、質問に関連する例示を検索し、質問と例示の埋め込みを多頭注意で集約して、基盤モデルの埋め込み次元に揃えた少数の仮想トークンを作る。原著がいう最大約10倍の計算量削減は入力例示のトークン処理に関する演算量比較であり、実際の生成速度が常に10倍になるという意味ではない。
 
 - **2025-10 · [ELUTQ: Optimizing Quantization Accuracy under LUT-Based Computation for Edge LLMs](2025-2510.19482-elutq-optimizing-quantization-accuracy-under-lut-based-computation-for-e.md)**  
   実装：[✓](https://github.com/Nkniexin/ELUTQ) ・ リポジトリ内被引用：0  
@@ -2275,7 +2279,7 @@
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
 
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
-  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：13  
+  実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：12  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-08 · [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming](2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md)**  
@@ -2585,7 +2589,7 @@
   困惑度（perplexity）がほぼ維持されても、圧縮モデルの事実知識や指示追従は失われ得る。知識をモデル内部から答える課題と、外部文脈を与える検索・要約を分けて評価することで、枝刈りと量子化の能力別の弱点を可視化する。
 
 - **2023-07 · [When Not to Trust Language Models: Investigating Effectiveness of Parametric and Non-Parametric Memories](2023-2212.10511-when-not-to-trust-language-models-investigating-effectiveness-of-paramet.md)**  
-  実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：15  
+  実装：[✓](https://github.com/AlexTMallen/adaptive-retrieval) ・ リポジトリ内被引用：14  
   著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
 
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
@@ -2705,6 +2709,10 @@
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Transformerの注意機構では、各入力位置が他の位置へどれだけ注意を向けるかを表す重みを計算し、その重みに基づいて値ベクトルを集約する。BERT、DistilBERT、Longformerに適用した実験では、GLUEの分類・類似度評価で精度をおおむね維持しつつ注意演算の計算量を大幅に減らせると報告する。
+
+- **2021-11 · [SimpleTRON: Simple Transformer with O(N) Complexity](2021-2111.15588-simpletron-simple-transformer-with-o-n-complexity.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Transformerの標準自己注意は、系列長L、各ヘッド次元dに対してQKᵀのL×L行列を作り、その各行をsoftmax正規化してVと掛ける。これにより過去の各位置との類似度を直接計算できるが、系列長に対して時間・中間注意行列のサイズが二乗で増える。各ヘッドについて、標準のsoftmax(QKᵀ/√d)Vを、Q(KᵀV)/√Lに置き換える。
 
 ### 6年前（2020-11〜2021-10）
 

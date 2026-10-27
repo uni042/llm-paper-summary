@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（305本）
+## 自動生成の論文一覧（306本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -893,6 +893,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-04 · [Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding](2025-2504.00030-token-driven-gammatune-adaptive-calibration-for-enhanced-speculative-dec.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号では小型ドラフトモデルが先の複数トークンを提案し、大型ターゲットモデルがまとめて検証する。〔原著§3–4〕 SpecBenchの4組のターゲット/ドラフトモデルをH100 80GBで評価した結果、固定長SpecDecodeを基準にした平均処理率はGammaTuneが1.15±0.05倍、GammaTune+が1.16±0.03倍である。
+
+- **2025-10 · [Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference](2025-2510.13161-mirror-speculative-decoding-breaking-the-serial-barrier-in-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Mirror 投機的復号（Mirror-SD）は、ターゲットの中間層が出した次トークン候補を使い、ターゲットの残り層が計算中に次のドラフトを並列生成することで、この待ち時間を重ね合わせる。論文v2のSpecBench Table 1では、Qwen3-32Bの数学推論、温度0で自己回帰復号比5.84倍、EAGLE3の3.77倍を上回った。
 
 - **2025-10 · [Correctness Forensics for Batch Speculative Decoding: Diagnosing the Ragged Tensor Problem](2025-2510.22876-correctness-forensics-for-batch-speculative-decoding-diagnosing-the-ragg.md)**  
   実装：[✓](https://github.com/eBay/spec_dec) ・ リポジトリ内被引用：1  

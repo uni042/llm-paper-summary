@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T15:50:04+00:00",
+  "generated_at": "2026-10-27T16:19:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 74,
+  "count": 72,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1741,35 +1741,6 @@
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2407.17678",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T14:42:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 176 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6775,
-        "body_paragraphs": 37,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 176,
-        "limitation_chars": 878,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 176 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5c504ded46a4--libfile_8619e75122c081918c358bb71bd164ac--2024-2407.17678-s2-attention-hhst-hardware-aware-sparse-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5c504ded46a4--libfile_8619e75122c081918c358bb71bd164ac--2024-2407.17678-s2-attention-hhst-hardware-aware-sparse-research-20261027-2042-scheduled-.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.06095",
       "title": null,
       "source_url": null,
@@ -1795,33 +1766,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-87d4065b34e9--libfile_3366faa69d0081918bdf871136cca901--2026-2506.06095-stof-sparse-transformer-fusion-research-20261027-2230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-87d4065b34e9--libfile_3366faa69d0081918bdf871136cca901--2026-2506.06095-stof-sparse-transformer-fusion-research-20261027-2230-scheduled-chat-30-r.json",
       "worker_run_key": "20261027-2230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2111.15588",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T14:42:54+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 146 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5078,
-        "body_paragraphs": 31,
-        "method_chars": 1334,
-        "method_paragraphs": 8,
-        "evaluation_chars": 146,
-        "limitation_chars": 761,
-        "insufficiency_flags": [
-          "評価説明量 146 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cebddb935a64--libfile_97587d199410819195376db71d788dd1--2021-2111.15588-simpletron-linear-qkv-reordering-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-cebddb935a64--libfile_97587d199410819195376db71d788dd1--2021-2111.15588-simpletron-linear-qkv-reordering-research-20261027-2042-scheduled-chat-45.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "DOI:10.18653/v1/2022.findings-acl.189",
@@ -1933,8 +1877,8 @@
     },
     {
       "canonical_id": "arXiv:2503.23274",
-      "title": "PromptDistill: Query-based Selective Token Retention in Intermediate Layers for Efficient Large Language Model Inference",
-      "source_url": "https://arxiv.org/pdf/2503.23274",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T15:45:39+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
