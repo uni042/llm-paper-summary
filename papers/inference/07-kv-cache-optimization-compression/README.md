@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（385本）
+## 自動生成の論文一覧（386本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1534,6 +1534,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-09 · [CSKV: Training-Efficient Channel Shrinking for KV Cache in Long-Context Scenarios](2024-2409.10593-cskv-training-efficient-channel-shrinking-for-kv-cache-in-long-context-s.md)**  
   実装：[✓](https://github.com/wln20/CSKV) ・ リポジトリ内被引用：0  
   過去トークンの表現を毎回計算し直さずに済む一方、保存容量は文脈長にほぼ比例して増え、長い文書の読解や検索でGPUメモリを圧迫する。量子化は保存ビット数を減らすが、高圧縮では誤差が増える。LongChat-7B-v1.5-32kでは80%のKV容量圧縮時、LongEvalの10K検索正答率が無圧縮0.98に対してCSKV0.90となる。
+
+- **2024-07 · [QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering](2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  QET（Quantum Entanglement Trees）は、LLM重みやKV キャッシュなどの行列を、同じ保存容量の制約下で元の数値に近く復元するための行列量子化手法である。原著v4の主張は、圧縮比4でLLaMA2の重み行列についてPQのMSEを5.05%まで、K キャッシュで13.33%、V キャッシュで11.89%まで減らせるというものである。
 
 - **2024-07 · [Let the Code LLM Edit Itself When You Edit the Code](2024-2407.03157-let-the-code-llm-edit-itself-when-you-edit-the-code.md)**  
   実装：[✓](https://github.com/zhenyuhe00/PIE) ・ リポジトリ内被引用：0  

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（698本）
+## 自動生成の論文一覧（700本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1956,6 +1956,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   HiPO（Hybrid Policy Optimization）は、各入力に対して詳細推論を行うThink-onと直接回答するThink-offを選ぶ能力をモデル自体に学習させる方式である。
 
+- **2025-09 · [Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation](2025-2509.19592-frame-stacked-local-transformers-for-efficient-multi-codebook-speech-gen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Koel-TTSとNanoCodecを用いたLibriTTS評価では、積層係数2で自己回帰型LTが従来の非積層並列方式より2.1倍、MaskGIT型LTが3.1倍高速になる。
+
 - **2025-09 · [Enhancing Linear Attention with Residual Learning](2025-2509.25223-enhancing-linear-attention-with-residual-learning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意機構は、履歴のkey/valueを固定サイズの状態行列に集約し、系列長に対して線形時間・一定の再帰状態メモリで生成できる。約1.5Bパラメータを100B トークンで学習した比較で、RDNはGated DeltaNet（GDN）のWikiText PPL 17.27から16.57へ、8課題平均正解率46.03%から47.20%へ改善した。
@@ -2461,6 +2465,10 @@
 - **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
   実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  
   RMSNormは多くのLLMで注意機構やFFNの直前に置かれ、活性ベクトルの二乗平均平方根で各要素を割り、学習済みスケールを掛ける。T4 GPUのnorm-then-project単体実験では、SmolLM2-135M相当の4096トークンで0.704msから0.468msへ、8192トークンで0.929msから0.599msへ短縮した。
+
+- **2024-07 · [Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners](2024-2407.15508-compensate-quantization-errors-quantized-models-are-inquisitive-learners.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Compensate Quantization Errors+（CQE+）は、学習済み大規模言語モデルの重みを2〜4ビットへ量子化する際、量子化の整数格子に適した重み分布へ調整する方法を提案する。
 
 - **2024-07 · [Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models](2024-2407.15516-attention-is-all-you-need-but-you-don-t-need-all-of-it-for-inference-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
