@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（124本）
+## 自動生成の論文一覧（126本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -141,6 +141,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-06 · [SHAPE: Coalition-Aware Expert Pruning for Sparse Mixture-of-Experts LLMs](2026-2606.09886-shape-coalition-aware-expert-pruning.md)**  
   実装：[✓](https://github.com/Alizen-1009/Shapley-Moe) ・ リポジトリ内被引用：1  
   Top-kで同時起動する専門家集合を協力ゲームとして評価し、Shapley風の貢献度と層別品質カバレッジで再学習なしの専門家枝刈りを行う。
+
+- **2026-05 · [Pruning and Distilling Mixture-of-Experts into Dense Language Models](2026-2605.28207-pruning-and-distilling-mixture-of-experts-into-dense-language-models.md)**  
+  実装：[✓](https://github.com/krafton-ai/moe-to-dense) ・ リポジトリ内被引用：1  
+  演算量は小さくても、すべての専門家をGPUメモリへ常駐させる場合の容量は大きい。CPUへ退避すれば容量制約を緩和できるが、専門家の転送が遅延や帯域を圧迫する。Qwen3-30B-A3Bから約3.3Bの密な生徒モデルを作った実験では、約4Bトークンの蒸留後に5課題の平均58.10%を達成した。
 
 - **2026-05 · [HodgeCover: Higher-Order Topological Coverage Drives Compression of Sparse Mixture-of-Experts](2026-2605.13997-hodgecover-topological-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -279,6 +283,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-05 · [BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE](2026-2605.14438-beam-binary-expert-activation-masking.md)**  
   実装：[✓](https://github.com/Time-Rune/BEAM) ・ リポジトリ内被引用：0  
   固定Top-K候補を学習二値マスクでトークンごとに削り、vLLM CUDA実装で実際の専門家計算を省略する動的MoEルーティング。
+
+- **2026-05 · [Adaptive Inverted-Index Routing for Granular Mixtures-of-Experts](2026-2605.04952-adaptive-inverted-index-routing-for-granular-mixtures-of-experts.md)**  
+  実装：[✓](https://anonymous.4open.science/r/adaptive_inverted_index_routing_code-D6FE/) ・ リポジトリ内被引用：0  
+  本研究が解くのは、非常に多数の小さな専門家を使う混合専門家モデル（Mixture-of-Experts、MoE）で、専門家を選ぶルータ自身が高価になるという問題である。具体的には、入力トークンを最も近い符号語へ割り当て、その符号語に結び付いた専門家番号の候補表を取得する。著者は最大約10%の相対困惑度改善をPEERとの比較で報告する。
 
 - **2026-02 · [VersatileFFN: Achieving Parameter Efficiency in LLMs via Adaptive Wide-and-Deep Reuse](2025-2512.14531-versatileffn-adaptive-wide-deep-reuse.md)**  
   実装：[✓](https://github.com/huawei-noah/noah-research/tree/master/VersatileFFN) ・ リポジトリ内被引用：0  
