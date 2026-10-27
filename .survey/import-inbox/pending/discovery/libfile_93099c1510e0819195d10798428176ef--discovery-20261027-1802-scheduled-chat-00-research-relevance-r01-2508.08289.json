@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261027-1802-scheduled-chat-00/r01/relevance-2508.08289",
+  "reference_main_sha": "3771400557c03cd759062d30e2f5be275f2c86fd",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.08289",
+      "identity_tokens": [
+        "arxiv:2508.08289",
+        "https://arxiv.org/abs/2508.08289"
+      ],
+      "title": "Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers",
+      "reason": "原著v3の§2–6では、線形Attention/DeltaNet/RetNetの状態更新を古典的条件づけ学習則に写像し、ブロッキング・消去・連想容量を理論と小型学習モデルの実験で検証する。状態容量が忠実再生では線形、識別ではほぼ二乗で伸びるという知見は長文脈効率的Attentionの設計に間接的に関係する。しかし提案PH-attentionは刺激別学習率を付与する機構で、主目的は連想学習現象の説明・予測であり、LLM推論スループット、KVキャッシュ、実機GPUカーネル、メモリ階層、サービング負荷の改善を実測していない。凍結中の学習・理論中心テーマに近いため通常Research収録は保留する。",
+      "source_url": "https://arxiv.org/pdf/2508.08289",
+      "body_check": "research_fulltext_relevance_review: arXiv v3 PDF pp.1–6のabstract、§2対応表、§3予測、§4容量定理、§5 PH-attention、§6実験プロトコルを確認。主結果はcue competition・容量則・連想学習特性であり、推論システム性能評価ではない。",
+      "first_checked_at": "2026-10-27T18:07:02+09:00",
+      "last_checked_at": "2026-10-27T18:07:02+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance"
+    }
+  ]
+}
