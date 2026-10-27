@@ -1,32 +1,90 @@
 ---
-canonical_id: "SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315"
+canonical_id: SemanticScholar:ec3e633777367826e9f8e4300c09dc5bb3dd5315
 arxiv_id: null
-title: "A Unified Framework for Speculative Decoding with Multiple Drafters as a Bandit"
-summary: "複数の専門ドラフトモデルから投機的復号の各検証ラウンドで一つを選ぶMetaSDを提案する。受理トークン数だけでなくターゲット分布とドラフト分布の全変動距離を用いるBlock Divergence報酬を導入し、UCBによる選択の停止ラウンド数に対する対数的リグレット上界を示す。Vicuna-7BをターゲットとしたA6000実測で黒箱方式MetaSpS-UCBはCode 2.300倍、Math 2.280倍の自己回帰比速度を報告するが、各課題の最良専門ドラフトには届かず、EAGLE白箱方式でもCode 3.724倍は専門EAGLEの3.934倍を下回る。複数ドラフトの常駐メモリ、切替時KVコスト、定常性仮定が制約。"
-list_summary: "複数の専門ドラフトをUCBバンディットで動的選択するMetaSD。Vicuna-7Bの実測でCode 2.30倍、Math 2.28倍。ただし各課題の最良専門ドラフトより遅い条件とKV切替負荷がある。"
+title: A Unified Framework for Speculative Decoding with Multiple Drafters as a Bandit
+summary: 複数の専門ドラフトモデルから投機的復号の各検証ラウンドで一つを選ぶMetaSDを提案する。受理トークン数だけでなくターゲット分布とドラフト分布の全変動距離を用いるBlock Divergence報酬を導入し、UCBによる選択の停止ラウンド数に対する対数的リグレット上界を示す。Vicuna-7BをターゲットとしたA6000実測で黒箱方式MetaSpS-UCBはCode 2.300倍、Math 2.280倍の自己回帰比速度を報告するが、各課題の最良専門ドラフトには届かず、EAGLE白箱方式でもCode 3.724倍は専門EAGLEの3.934倍を下回る。複数ドラフトの常駐メモリ、切替時KVコスト、定常性仮定が制約。
+list_summary: 複数の専門ドラフトをUCBバンディットで動的選択するMetaSD。Vicuna-7Bの実測でCode 2.30倍、Math 2.28倍。ただし各課題の最良専門ドラフトより遅い条件とKV切替負荷がある。
 authors:
-  - Taehyeon Kim
-  - Hojung Jung
-  - Se-Young Yun
-published: "2024-12"
-publication: "NeurIPS 2024 Workshop on Efficient Natural Language and Speech Processing (ENLSP-IV), author PDF"
+- Taehyeon Kim
+- Hojung Jung
+- Se-Young Yun
+published: 2024-12
+publication: NeurIPS 2024 Workshop on Efficient Natural Language and Speech Processing (ENLSP-IV), author PDF
 publication_type: workshop
 publication_status: published
-source: "https://neurips2024-enlsp.github.io/papers/paper_53.pdf"
+source: https://neurips2024-enlsp.github.io/papers/paper_53.pdf
 sources:
-  - "https://neurips2024-enlsp.github.io/papers/paper_53.pdf"
-  - "https://www.semanticscholar.org/paper/ec3e633777367826e9f8e4300c09dc5bb3dd5315"
-implementation: "Vicuna-7B v1.3をターゲットとし、黒箱はVicuna-68Mの専門ドラフト5個、白箱はEAGLE専門ドラフト5個を使用。greedy decoding、ドラフト長原則5、NVIDIA A5000/A6000/A100単一GPUで各タスクの実時間速度比を評価。各新規クエリでバンディットを初期化。"
+- https://neurips2024-enlsp.github.io/papers/paper_53.pdf
+- https://www.semanticscholar.org/paper/ec3e633777367826e9f8e4300c09dc5bb3dd5315
+implementation: Vicuna-7B v1.3をターゲットとし、黒箱はVicuna-68Mの専門ドラフト5個、白箱はEAGLE専門ドラフト5個を使用。greedy decoding、ドラフト長原則5、NVIDIA A5000/A6000/A100単一GPUで各タスクの実時間速度比を評価。各新規クエリでバンディットを初期化。
 code: null
-last_checked: "2026-10-28"
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261028-0545-scheduled-chat-45/r01"
-worker_completed_at: "2026-10-28T05:50:00+09:00"
-reference_main_sha: "3011709dc7d43d210aec58cba3787783580b5783"
+last_checked: '2026-10-28'
+worker_id: scheduled-chat-45
+worker_run_key: 20261028-0545-scheduled-chat-45/r01
+worker_completed_at: '2026-10-28T05:50:00+09:00'
+reference_main_sha: 3011709dc7d43d210aec58cba3787783580b5783
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2311.02268
+  arxiv_id: '2311.02268'
+- canonical_id: arXiv:2401.10774
+  arxiv_id: '2401.10774'
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: arXiv:2110.14168
+  arxiv_id: '2110.14168'
+- canonical_id: arXiv:2404.02649
+  arxiv_id: '2404.02649'
+- canonical_id: arXiv:2402.02057
+  arxiv_id: '2402.02057'
+- canonical_id: arXiv:2312.11805
+  arxiv_id: '2312.11805'
+- canonical_id: arXiv:2408.08470
+  arxiv_id: '2408.08470'
+- canonical_id: arXiv:1606.07947
+  arxiv_id: '1606.07947'
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2401.15077
+  arxiv_id: '2401.15077'
+- canonical_id: arXiv:2406.03853
+  arxiv_id: '2406.03853'
+- canonical_id: arXiv:2310.07177
+  arxiv_id: '2310.07177'
+- canonical_id: arXiv:2202.12607
+  arxiv_id: '2202.12607'
+- canonical_id: arXiv:2403.16843
+  arxiv_id: '2403.16843'
+- canonical_id: arXiv:2403.05530
+  arxiv_id: '2403.05530'
+- canonical_id: arXiv:1911.02150
+  arxiv_id: '1911.02150'
+- canonical_id: arXiv:2402.09723
+  arxiv_id: '2402.09723'
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2310.15141
+  arxiv_id: '2310.15141'
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: arXiv:2407.01887
+  arxiv_id: '2407.01887'
+- canonical_id: arXiv:2304.04487
+  arxiv_id: '2304.04487'
+- canonical_id: arXiv:2401.06706
+  arxiv_id: '2401.06706'
+- canonical_id: arXiv:2406.16758
+  arxiv_id: '2406.16758'
+- canonical_id: arXiv:2309.12284
+  arxiv_id: '2309.12284'
+- canonical_id: arXiv:2310.08461
+  arxiv_id: '2310.08461'
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 78
 ---
 
 # MetaSD：複数の投機的復号ドラフトをバンディットで切り替える

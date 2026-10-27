@@ -1,31 +1,60 @@
 ---
-canonical_id: "SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b"
-title: "Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers"
-summary: "KVキャッシュの容量・帯域が支配する長文脈LLM推論に対し、CXL接続メモリを独立したKVキャッシュサーバとして設計する構想を提示する。DDRx拡張、PNM、PIMを備える3段階の装置類型と、共有KV・GPUからの復号分離・メモリ装置内推論の3運用を提案する。DeepSeek-R1-671Bの32K生成を対象とした帯域律速の解析では、19基のH100と23基のPIM-DIMMの比較で理論スループット679対1607 token/sを試算する。ただし実機の端対端測定ではなく、GPU側CPU/スイッチ費用除外やPIM内部帯域とCXL外部帯域の違いに注意が必要である。"
-list_summary: "CXL接続のKVキャッシュ専用メモリ階層とPNM/PIMへの復号移管を提案。DeepSeek-R1の解析で2.4倍の理論スループットを示すが、実機検証ではない。"
+canonical_id: SemanticScholar:e3397bfa8a64c83dc88c08dcfab676c8255d6a1b
+title: Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers
+summary: KVキャッシュの容量・帯域が支配する長文脈LLM推論に対し、CXL接続メモリを独立したKVキャッシュサーバとして設計する構想を提示する。DDRx拡張、PNM、PIMを備える3段階の装置類型と、共有KV・GPUからの復号分離・メモリ装置内推論の3運用を提案する。DeepSeek-R1-671Bの32K生成を対象とした帯域律速の解析では、19基のH100と23基のPIM-DIMMの比較で理論スループット679対1607 token/sを試算する。ただし実機の端対端測定ではなく、GPU側CPU/スイッチ費用除外やPIM内部帯域とCXL外部帯域の違いに注意が必要である。
+list_summary: CXL接続のKVキャッシュ専用メモリ階層とPNM/PIMへの復号移管を提案。DeepSeek-R1の解析で2.4倍の理論スループットを示すが、実機検証ではない。
 authors:
-  - Khyati Kiyawat
-  - Kevin Skadron
-published: "2026-06-28"
-publication: "3rd Workshop on Hot Topics in System Infrastructure (HotInfra 2026), co-located with ISCA 2026"
-publication_type: "workshop_paper"
-publication_status: "published"
-source: "https://hotinfra.org/2026/papers/hotinfra26-final59.pdf"
+- Khyati Kiyawat
+- Kevin Skadron
+published: '2026-06-28'
+publication: 3rd Workshop on Hot Topics in System Infrastructure (HotInfra 2026), co-located with ISCA 2026
+publication_type: workshop_paper
+publication_status: published
+source: https://hotinfra.org/2026/papers/hotinfra26-final59.pdf
 sources:
-  - "https://hotinfra.org/2026/papers/hotinfra26-final59.pdf"
-  - "https://hotinfra.org/2026/index.html"
-implementation: "提案するKVキャッシュサーバ全体の実装・実機評価は示されず、DeepSeek-R1-671Bの帯域、コスト、電力を仮定した解析モデルと装置構想を提示。既存Sangam、CENTなどの先行PIM研究を根拠として参照するが、本論文固有の実装測定ではない。"
+- https://hotinfra.org/2026/papers/hotinfra26-final59.pdf
+- https://hotinfra.org/2026/index.html
+implementation: 提案するKVキャッシュサーバ全体の実装・実機評価は示されず、DeepSeek-R1-671Bの帯域、コスト、電力を仮定した解析モデルと装置構想を提示。既存Sangam、CENTなどの先行PIM研究を根拠として参照するが、本論文固有の実装測定ではない。
 code: null
-last_checked: "2026-10-28"
-worker_id: "scheduled-chat-30"
-scheduled_slot: "30"
-worker_completed_at: "2026-10-28T06:32:19+09:00"
-worker_run_key: "20261028-0632-scheduled-chat-30/r01"
-reference_main_sha: "cd31d037746f0f7adeedfc11f7a0261bc7c08a31"
+last_checked: '2026-10-28'
+worker_id: scheduled-chat-30
+scheduled_slot: '30'
+worker_completed_at: '2026-10-28T06:32:19+09:00'
+worker_run_key: 20261028-0632-scheduled-chat-30/r01
+reference_main_sha: cd31d037746f0f7adeedfc11f7a0261bc7c08a31
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2407.00079
+  arxiv_id: '2407.00079'
+- canonical_id: arXiv:2512.18194
+  arxiv_id: '2512.18194'
+- canonical_id: arXiv:2511.12286
+  arxiv_id: '2511.12286'
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2501.12948
+  arxiv_id: '2501.12948'
+- canonical_id: arXiv:2403.00579
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2510.09665
+  arxiv_id: '2510.09665'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: DOI:10.1145/3620665.3640422
+- canonical_id: arXiv:2412.15605
+- canonical_id: arXiv:2511.20172
+  arxiv_id: '2511.20172'
+- canonical_id: arXiv:2511.00321
+  arxiv_id: '2511.00321'
+- canonical_id: arXiv:2509.03377
+  arxiv_id: '2509.03377'
+- canonical_id: arXiv:2504.17584
+  arxiv_id: '2504.17584'
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 28
 ---
 
 # Reimagining LLM Inference Infrastructure with Memory-Centric KV Cache Servers：KVを中心に組み替えるLLM推論基盤

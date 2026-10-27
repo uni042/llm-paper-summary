@@ -45,6 +45,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   重みとKVキャッシュを計算機能付き三次元NANDに置き、短文脈用の共置型と長文脈用の分離型を使い分けて、フラッシュ内注意計算とページ配置を最適化する。
 
+- **2025-11 · [Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing](2025-2511.12286-sangam-chiplet-based-dram-pim-accelerator-with-cxl-integration-for-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMの復号段階では、一つの出力トークンを作るたびに大きな重み行列と過去のKVキャッシュを読み出す。バッチが小さいと行列積は実質的に行列とベクトルの積になり、GPUの大量の演算器を十分に使えないまま外部メモリの帯域が律速になる。GPUを使わずに推論する構成と、計算集約的な処理をGPUへ任せる協調構成の両方を設計対象とする。
+
 - **2025-11 · [LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs](2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md)**  
   実装：[✓](https://github.com/LUT-FPGA/LUT-LLM) ・ リポジトリ内被引用：1  
   活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。
@@ -103,10 +107,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
-- **2025-11 · [Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing](2025-2511.12286-sangam-chiplet-based-dram-pim-accelerator-with-cxl-integration-for-llm-i.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LLMの復号段階では、一つの出力トークンを作るたびに大きな重み行列と過去のKVキャッシュを読み出す。バッチが小さいと行列積は実質的に行列とベクトルの積になり、GPUの大量の演算器を十分に使えないまま外部メモリの帯域が律速になる。GPUを使わずに推論する構成と、計算集約的な処理をGPUへ任せる協調構成の両方を設計対象とする。
-
 ### 2年前（2024-11〜2025-10）
 
 - **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
@@ -126,7 +126,7 @@
   LLM重みの行列ベクトル積をNAND内部へ移し、電荷再利用読み出しとLSB優先符号化でSSD内部帯域を引き出して端末推論を高速化する。
 
 - **2025-04 · [CHIME: A Case for Efficient Long-Context Attention-FC Disaggregated Inference with DIMM-PIM](2025-2504.17584-chime-a-case-for-efficient-long-context-attention-fc-disaggregated-inference-with-dimm-pim.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
 
 - **2025-09 · [HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference](2025-2509.12993-hpim-heterogeneous-processing-in-memory-based-accelerator-for-large-lang.md)**  
@@ -144,11 +144,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：29  
   一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：28  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  
