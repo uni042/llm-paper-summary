@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（759本）
+## 自動生成の論文一覧（760本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2207,6 +2207,10 @@
 - **2025-10 · [Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space](2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md)**  
   実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：0  
   視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
+
+- **2025-10 · [MixReasoning: Switching Modes to Think](2025-2510.06052-mixreasoning-switching-modes-to-think.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MixReasoningは、問題全体を「考える／考えない」に二分するのではなく、一つの長い推論軌跡の中で難しい部分だけ詳細思考を行う方式である。Qwen3-8Bの4課題平均では、元モデルのpass@1 77.44、平均生成7027トークンに対し、MixReasoningはpass@1 78.29、5120トークン（約28%減）となる。
 
 - **2025-10 · [HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement](2025-2510.20878-ha-rag-hotness-aware-rag-acceleration-via-mixed-precision-and-data-place.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
