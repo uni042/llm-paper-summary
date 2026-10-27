@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T02:04:28+00:00",
+  "generated_at": "2026-10-27T02:20:19+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1340,10 +1340,10 @@
     },
     {
       "canonical_id": "arXiv:2510.25412",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T01:46:57+00:00",
-      "return_count": 1,
+      "title": "Serve Programs, Not Prompts",
+      "source_url": "https://arxiv.org/pdf/2510.25412v1",
+      "returned_at": "2026-10-27T02:18:25+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -1361,16 +1361,16 @@
           "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_56a86186a06481919dd00c217aef1186--2025-2510.25412-serve-programs-not-prompts-symphony-20261027-0955-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_56a86186a06481919dd00c217aef1186--2025-2510.25412-serve-programs-not-prompts-symphony-20261027-0955-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4bd934cccb18--libfile_56a86186a06481919dd00c217aef1186--2025-2510.25412-serve-programs-not-prompts-symphony-20261027-0955-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4bd934cccb18--libfile_56a86186a06481919dd00c217aef1186--2025-2510.25412-serve-programs-not-prompts-symphony-20261027-0955-scheduled-chat-00-r01.json",
       "worker_run_key": "20261027-0955-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2305.12330",
       "title": "Task-agnostic Distillation of Encoder-Decoder Language Models",
       "source_url": "https://aclanthology.org/2024.lrec-main.1359.pdf",
-      "returned_at": "2026-10-27T01:59:21+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-27T02:18:27+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -1389,8 +1389,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6e74689b884a--libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-6e74689b884a--libfile_9ab2fe4fc64c819188b9c699fedab352--2023-2305.12330-miniend-encoder-decoder-task-agnostic-distillation-research-20261027-0930.json",
       "worker_run_key": "20261027-0930-scheduled-chat-30/r01"
     }
   ]

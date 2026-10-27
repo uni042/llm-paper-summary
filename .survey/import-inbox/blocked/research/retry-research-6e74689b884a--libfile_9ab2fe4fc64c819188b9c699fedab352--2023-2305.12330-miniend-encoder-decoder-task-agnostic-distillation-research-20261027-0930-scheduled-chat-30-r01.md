@@ -31,6 +31,8 @@ worker_run_key: '20261027-0930-scheduled-chat-30/r01'
 reference_main_sha: '655128b1b05d4f6dc719abd16f7af8ae73f96c88'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # MiniEnD：エンコーダ・デコーダ相互作用を保存するタスク非依存蒸留
