@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（200本）
+## 自動生成の論文一覧（201本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -555,6 +555,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
+
+- **2025-05 · [Highly Efficient and Effective LLMs with Multi-Boolean Architectures](2025-2505.22811-highly-efficient-and-effective-llms-with-multi-boolean-architectures.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  MBOK（Multiple Boolean Kernels）の基本表現は、通常の実数重み行列を複数の符号行列とチャネル別スケールの和で近似するものである。各カーネルの重みは1-bitで、入力側・出力側の実数スケールを別途持つ。元のFP重みから順に近似成分を抽出し、残差へ同じ分解を繰り返すため、単一の符号行列より表現力が高い。
 
 - **2025-05 · [FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference](2025-2505.22758-flashformer-whole-model-kernels-for-efficient-low-batch-inference.md)**  
   実装：[✓](https://github.com/cheetah-lang) ・ リポジトリ内被引用：1  

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（302本）
+## 自動生成の論文一覧（303本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -141,6 +141,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-05 · [Draft-OPD: On-Policy Distillation for Speculative Draft Models](2026-2605.29343-draft-opd.md)**  
   実装：[✓](https://github.com/haodilei/Draft-OPD) ・ リポジトリ内被引用：3  
   投機的復号の検証で露出したドラフト誤り位置から提案を再生し、教師分布でオンポリシー蒸留することで受理長と無損失推論速度を高める。
+
+- **2026-03 · [KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization](2026-4d6bf2312451-knn-ssd-enabling-dynamic-self-speculative-decoding-via-nearest-neighbor-.md)**  
+  実装：[✓](https://github.com/mbsong/KNN-SSD) ・ リポジトリ内被引用：3  
+  KNN-SSDは、同一LLMの一部層を飛ばす自己投機的復号で、入力ドメインが変わると固定skip-層集合の受理率・速度が悪化する問題を扱う。ドメイン別の最適skip集合をBayesian Optimizationで事前探索し、最後の隠れ状態をK-meansで代表化したアンカーへのKNN類似度から入力ごとに集合を選ぶ。
 
 - **2025-11 · [SPECVLM: Enhancing Speculative Decoding of Video LLMs via Verifier-Guided Token Pruning](2025-6ac6253cc798-specvlm-enhancing-speculative-decoding-of-video-llms-via-verifier-guided.md)**  
   実装：[✓](https://github.com/zju-jiyicheng/SpecVLM) ・ リポジトリ内被引用：3  

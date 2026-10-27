@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（684本）
+## 自動生成の論文一覧（686本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -565,6 +565,10 @@
 - **2026-07 · [ST-Veto: Spatio-Temporal Token Veto for Diffusion MLLMs via Taylor Prediction and Visual Grounding](2026-2607.17884-st-veto-spatio-temporal-token-veto-for-diffusion-mllms-via-taylor-predic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者が提案する時空間トークン拒否（Spatio-Temporal Token Veto、ST-Veto）は、ある反復で確信度が高くても、その確信度の時間変化が不安定、あるいは画像への注意が弱い候補を一時的に拒否し、条件を満たす別の候補を先に確定させる。
+
+- **2026-07 · [Skip-It? Theoretical Conditions for Layer Skipping in Vision–Language Models](2026-2509.25584-skip-it-theoretical-conditions-for-layer-skipping-in-vision-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の層スキップ手法は、経験的な層番号や余弦類似度などを用いて処理を省略していたが、表現が似ていることと出力品質が保たれることは同義ではない。
 
 - **2026-07 · [SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs](2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2409,6 +2413,10 @@
 - **2024-09 · [Hyper-Compression: Model Compression via Hyperfunction](2024-2409.00592-hyper-compression-model-compression-via-hyperfunction.md)**  
   実装：[✓](https://github.com/Juntongkuki/Hyper-Compression) ・ リポジトリ内被引用：0  
   学習済み大規模言語モデルの重み容量を小さくする一般的な方法は、低ビット量子化、枝刈り、低ランク分解である。LLaMA2-7Bでは原著Table 5で保存容量12.50GB→4.80GB（2.60倍圧縮）、8課題の平均正答率65.88%→64.89%（0.99ポイント低下）を報告する。
+
+- **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
+  実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  
+  RMSNormは多くのLLMで注意機構やFFNの直前に置かれ、活性ベクトルの二乗平均平方根で各要素を割り、学習済みスケールを掛ける。T4 GPUのnorm-then-project単体実験では、SmolLM2-135M相当の4096トークンで0.704msから0.468msへ、8192トークンで0.929msから0.599msへ短縮した。
 
 - **2024-07 · [Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models](2024-2407.15516-attention-is-all-you-need-but-you-don-t-need-all-of-it-for-inference-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -33,6 +33,8 @@ worker_completed_at: "2026-10-27T16:51:00+09:00"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_scope: "domain-adaptive-speculative-decoding-layer-skipping-routing"
+last_audited: null
+audit_version: 0
 ---
 
 # KNN-SSD：入力ドメインに応じて層スキップ集合を切り替える自己投機的デコード

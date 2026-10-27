@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T08:34:09+00:00",
+  "generated_at": "2026-10-27T08:53:05+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 65,
+  "count": 64,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1603,34 +1603,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c1c0492f5e37--libfile_171f776592188191af5605f3fe394a34--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261027-1204-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c1c0492f5e37--libfile_171f776592188191af5605f3fe394a34--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261027-1204-scheduled-.json",
       "worker_run_key": "20261027-1204-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2407.09577",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T07:40:26+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5908,
-        "body_paragraphs": 37,
-        "method_chars": 2005,
-        "method_paragraphs": 12,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1311c94e9dbe--libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1311c94e9dbe--libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-.json",
-      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2412.05693",
