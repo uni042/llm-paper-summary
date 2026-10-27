@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261028-0732-scheduled-chat-30/r02",
+  "reference_main_sha": "c9a06fb282757d10376463129174f311393a856e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27390",
+      "identity_tokens": [
+        "arXiv:2605.27390",
+        "DOI:10.48550/arXiv.2605.27390",
+        "title:evospec  evolving speculative decoding via real time vocabulary and parameter adaptation"
+      ],
+      "title": "EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation",
+      "reason": "arXiv一次要旨では大語彙のドラフト出力投影が重い問題に対し、意味・統計インデックスから長尾トークンを非同期取得して語彙集合を更新し、検証フィードバックで軽量LoRAのオンライン整合を行う。EAGLE系の投機的復号で分野切替時の受理率と補助GPUメモリを改善する、推論時ドラフトの直接的最適化。",
+      "source_url": "https://arxiv.org/abs/2605.27390",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2603.15042",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2603.15042",
+        "arXiv:15042",
+        "title:guaranteeing semantic and performance determinism in flexible gpu sharing"
+      ],
+      "title": "Guaranteeing Semantic and Performance Determinism in Flexible GPU Sharing",
+      "reason": "arXiv一次要旨ではGPUコルーチンによって論理実行コンテキストを物理GPUから分離し、軽量コンテキスト移行でコード無変更の細粒度GPU共有を実現するDetShareを提案。学習スループットだけでなく、LLM推論のTPOT優先配置で平均遅延69.1%減、TPOT SLO違反21.2%減を評価しており推論サービングへの直接的貢献がある。",
+      "source_url": "https://arxiv.org/abs/2603.15042",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.07667",
+      "identity_tokens": [
+        "arXiv:2601.07667",
+        "DOI:10.48550/arXiv.2601.07667",
+        "title:adaptive layer selection for layer wise token pruning in llm inference"
+      ],
+      "title": "Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference",
+      "reason": "arXiv一次要旨ではKV削減で固定のトークン選択層を使うと検索難度によって精度が崩れる問題に対し、注意スコアに基づくトークン順位の分散から選択層を動的に決める学習不要のASLを提案。prefill中に選択して深い層へ伝播し、SnapKV等と併用してKV予算を守りながら長文脈検索精度を改善する。",
+      "source_url": "https://arxiv.org/abs/2601.07667",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 16
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.24793",
+      "identity_tokens": [
+        "arXiv:2605.24793",
+        "DOI:10.48550/arXiv.2605.24793",
+        "title:beyond the target  from imitation to collaboration in speculative decoding"
+      ],
+      "title": "Beyond the Target: From Imitation to Collaboration in Speculative Decoding",
+      "reason": "arXiv一次要旨ではドラフトとターゲットの不一致時に常にターゲットを採用する従来の投機的復号を拡張し、最終回答の効用に基づくRL仲裁ポリシーでドラフト側の有益なトークンも選ぶCoSpecを提案。ターゲットのみより高いタスク精度と推論高速化を両立する検証・採択方式の技術貢献。分布保存型とは異なることを明記して収録する。",
+      "source_url": "https://arxiv.org/abs/2605.24793",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05685",
+      "identity_tokens": [
+        "arXiv:2610.05685",
+        "DOI:10.48550/arXiv.2610.05685",
+        "title:spend bytes on breadth  precision count trade offs for decode time kv compression in long chain of thought reasoning"
+      ],
+      "title": "Spend Bytes on Breadth: Precision-Count Trade-offs for Decode-Time KV Compression in Long Chain-of-Thought Reasoning",
+      "reason": "arXiv一次要旨では長いCoTの復号中に増えるKVを固定バイト予算へ収めるため、トークンを捨てるだけでなく量子化ビット幅を下げて保持トークン数を増やすBreadthKVを提案。60問のエンドツーエンド校正でビット幅を選び、18条件中17条件で単純evictionを上回り、Qwen3-8BのAIME打切り率を91%から40%へ低下させる。",
+      "source_url": "https://arxiv.org/abs/2610.05685",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.07394",
+      "identity_tokens": [
+        "arXiv:2604.07394",
+        "DOI:10.48550/arXiv.2604.07394",
+        "title:flux attention  context aware hybrid attention for efficient llms inference"
+      ],
+      "title": "Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference",
+      "reason": "arXiv一次要旨では入力ごとの検索要求に固定の全注意/疎注意比率が合わず、ヘッド単位の動的疎性はGPU負荷不均衡を起こす問題に対し、軽量Layer Routerで各層を全注意または疎注意へ振り分けるFlux Attentionを提案。長文脈でprefill最大2.8倍、decode最大2.0倍の実測高速化を報告する推論実行最適化。",
+      "source_url": "https://arxiv.org/abs/2604.07394",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20776",
+      "identity_tokens": [
+        "arXiv:2505.20776",
+        "DOI:10.48550/arXiv.2505.20776",
+        "title:specextend  a drop in enhancement for speculative decoding of long sequences"
+      ],
+      "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+      "reason": "arXiv一次要旨では長い入力で投機的復号のドラフト精度と注意計算効率が悪化する問題に対し、FlashAttention/Hybrid Tree Attentionをドラフトとターゲットへ組み込み、ターゲットの注意スコアでドラフト側KVを更新するCross-model Retrievalを提案。追加学習なしに16K入力で既存tree型投機的復号を最大2.22倍高速化する。",
+      "source_url": "https://arxiv.org/abs/2505.20776",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.29223",
+      "identity_tokens": [
+        "arXiv:2606.29223",
+        "DOI:10.48550/arXiv.2606.29223",
+        "title:depth exploration for llm decoding"
+      ],
+      "title": "Depth Exploration for LLM Decoding",
+      "reason": "arXiv一次要旨では早期終了の単一深さ選択で、遅すぎる終了の計算浪費と早すぎる終了のドラフト破棄が生じるため、複数深さを並列探索するDEXを提案。最終層で候補を検証し、確定トークンをコミットして再利用可能な分岐状態だけを残すexpand-commit-collapse方式により、元の自己回帰出力と同一性を保ちながら復号費を削減する。",
+      "source_url": "https://arxiv.org/abs/2606.29223",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.26708",
+      "identity_tokens": [
+        "arXiv:2609.26708",
+        "DOI:10.48550/arXiv.2609.26708",
+        "title:train where the quantized model goes  on policy distillation for low bit reasoning"
+      ],
+      "title": "Train Where the Quantized Model Goes: On-Policy Distillation for Low-Bit Reasoning",
+      "reason": "arXiv一次要旨では3bit未満の量子化推論で長い推論列が反復ループへ逸脱する問題に対し、量子化済み学生が実際に生成する接頭辞へフル精度教師のトークン指導と検証報酬を与えるon-policy蒸留を提案。1.88/2.79bitの配備品質回復に関係するが主な技術的貢献は訓練時の蒸留方針であり、推論時カーネル・スケジューリング・レイテンシの直接改善は要旨にないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2609.26708",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00516",
+      "identity_tokens": [
+        "arXiv:2606.00516",
+        "DOI:10.48550/arXiv.2606.00516",
+        "title:threshold based exclusive batching for llm inference"
+      ],
+      "title": "Threshold-Based Exclusive Batching for LLM Inference",
+      "reason": "arXiv一次要旨ではprefillとdecodeを混ぜるmixed batchingがメモリ帯域の小さいGPUでは干渉で逆効果になることを示し、GPU帯域・モデル・decode比率からexclusive batchingとの損益分岐を計算するEB+を提案。H200とRTX PRO 6000で切替条件を評価し、変動負荷で混合バッチ比最大36.4%のスループット改善を報告する推論サービングスケジューラ。",
+      "source_url": "https://arxiv.org/abs/2606.00516",
+      "body_check": "abstract_screen_only; body_not_read; primary bibliographic abstract reviewed",
+      "first_checked_at": "2026-10-28T07:37:07+09:00",
+      "last_checked_at": "2026-10-28T07:37:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 24
+    }
+  ]
+}
