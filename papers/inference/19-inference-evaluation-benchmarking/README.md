@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（100本）
+## 自動生成の論文一覧（101本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -145,6 +145,10 @@
 - **2026-07 · [Rethinking the Generation Order of Block Diffusion Language Models](2026-2607.24306-rethinking-the-generation-order-of-block-diffusion-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ブロック内の位置は任意順で確定できるように見えるが、既存の並列サンプリング方式をそのまま移植すると、先の位置だけを確定して前方の未確定位置を残し、コードや推論の構造を壊す場合がある。
+
+- **2026-07 · [From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models](2026-73c7c240d868-from-static-inference-to-dynamic-interaction-a-survey-of-streaming-large.md)**  
+  実装：[✓](https://github.com/EIT-NLP/Awesome-Streaming-LLMs) ・ リポジトリ内被引用：0  
+  さらに同時入出力で生じる注意依存の競合、位置IDの衝突、読み書きタイミングの決定を、アーキテクチャと制御ポリシーの独立した設計軸として比較する。
 
 - **2026-07 · [From Expert Reduction to Behavioral Divergence: Tracing Numerical State through Sparse MoE Inference](2026-2607.28097-from-expert-reduction-to-behavioral-divergence-tracing-numerical-state-through-sparse-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

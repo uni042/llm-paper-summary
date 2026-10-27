@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（695本）
+## 自動生成の論文一覧（696本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2421,6 +2421,10 @@
 - **2024-10 · [Two are better than one: Context window extension with multi-grained self-injection](2024-2410.19318-two-are-better-than-one-context-window-extension-with-multi-grained-self.md)**  
   実装：[✓](https://github.com/Clement25/SharedLLM) ・ リポジトリ内被引用：0  
   一方、単純に過去文脈を一様圧縮すると、質問に必要な細かい事実まで失われやすい。論文要旨の速度改善（ストリーミング型比約2倍、エンコーダ・デコーダ型比約3倍）は対象実装・装置での比較であり、一般的なLLM推論のトークン/s改善倍率と同一視しない。
+
+- **2024-10 · [Optimized Spatial Architecture Mapping Flow for Transformer Accelerators](2024-2410.07407-optimized-spatial-architecture-mapping-flow-for-transformer-accelerators.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SAMT（Spatial 構成 Mapping for Transformers）は、Transformer推論の行列演算をTPU型・NVDLA型などの空間アクセラレータへ割り当てる際に、演算子融合の選択とPE（processing element）上のデータフローを同時に最適化する探索フローである。
 
 - **2024-10 · [LevAttention: Time, Space, and Streaming Efficient Algorithm for Heavy Attentions](2024-2410.05462-levattention-time-space-and-streaming-efficient-algorithm-for-heavy-atte.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

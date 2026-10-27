@@ -38,6 +38,8 @@ reference_main_sha: "29e66ac84e519f1833ad9b8a6b371749352daa23"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 lineage: "KV Cache Optimization / Compression"
+last_audited: null
+audit_version: 0
 ---
 
 # LogQuant：遠方の重要KVを底2間引きで保護する2bit量子化

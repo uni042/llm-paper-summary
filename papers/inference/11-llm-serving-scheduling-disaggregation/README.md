@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（502本）
+## 自動生成の論文一覧（503本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1667,6 +1667,10 @@
 - **2025-09 · [Intra-request branch orchestration for efficient LLM reasoning](2025-2509.24957-intra-request-branch-orchestration-for-efficient-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、推論時に複数のChain-of-Thought（CoT）枝を生成して多数決を取る自己整合性（SC）のトークン費用とリクエスト完了遅延を同時に削減するDUCHESSを提案する。
+
+- **2025-08 · [Pruning Long Chain-of-Thought of Large Reasoning Models via Small-Scale Preference Optimization](2025-2508.10164-pruning-long-chain-of-thought-of-large-reasoning-models-via-small-scale-.md)**  
+  実装：[✓](https://github.com/SleepyWithoutCoffee/Small_Scale) ・ リポジトリ内被引用：0  
+  大規模推論モデル（LRM）は、複雑な数学問題や知識問題に答えるために長いChain-of-Thought（CoT）を生成する。大規模なオンライン強化学習で長さ報酬を最適化する方式は、学習用の大量生成と複雑な実行基盤を要する。
 
 - **2025-07 · [Towards Resource-Efficient Serverless LLM Inference with SLINFER](2025-2507.00507-towards-resource-efficient-serverless-llm-inference-with-slinfer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

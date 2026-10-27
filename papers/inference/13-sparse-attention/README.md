@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（149本）
+## 自動生成の論文一覧（150本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -491,6 +491,10 @@
 - **2025-06 · [Lag-Relative Sparse Attention In Long Context Training](2025-2506.11498-lag-relative-sparse-attention-in-long-context-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文の対象は、長文脈の事後学習で使用する注意機構を、推論時のKVキャッシュ圧縮と整合させる方法である。
+
+- **2025-06 · [Accelerating Sparse Transformer Inference on GPU](2025-2506.06095-accelerating-sparse-transformer-inference-on-gpu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  STOFは、疎な注意マスクを持つTransformerのGPU推論を高速化するため、注意計算と後段の演算子融合を別の最適化問題として扱う。単に「演算をたくさん融合する」設計では、テンソル形状やGPU世代により逆効果となるため、疎注意の専用カーネル境界は保持し、下流の融合範囲を適応的に選ぶ。
 
 - **2025-02 · [InfiniteHiP: Extending Language Model Context Up to 3 Million Tokens on a Single GPU](2025-2502.08910-infinitehip-extending-language-model-context-up-to-3-million-tokens-on-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
