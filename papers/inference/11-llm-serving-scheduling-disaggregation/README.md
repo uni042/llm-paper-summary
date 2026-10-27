@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（488本）
+## 自動生成の論文一覧（500本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -506,6 +506,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   推論型言語モデル（Reasoning Language モデル; RLM）は、数学やプログラミング問題を解くために長い思考過程（Chain-of-Thought; CoT）を生成する。重みを構造的に枝刈り（Structured Pruning）すると、行列の幅や層数が減るため、特殊な疎行列カーネルがなくても演算量とメモリ量を削減できる。
 
+- **2026-10 · [Characterizing Parallelism Strategies in LLM Inference: Fundamental Compute-Communication Trade-offs](2026-2610.05305-characterizing-parallelism-strategies-in-llm-inference-fundamental-compu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  一方、同じ8基をPP8、PP4TP2、PP2TP4、TP8として割り当てると、長い入力を処理するプレフィルではPP寄りが速く、逐次生成ではTP寄りが速いという反対の傾向が現れる（図8〜9）。
+
 - **2026-09 · [Unlocking Software-defined GPU Fabric Scheduling in the LLM Era](2026-a43ed4b300bf-unlocking-software-defined-gpu-fabric-scheduling-in-the-llm-era.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPUファブリック競合を監視・通信注入制御し、vLLM+MooncakeでPD KV転送を19.4–34.4%短縮する。
@@ -545,6 +549,10 @@
 - **2026-09 · [QuantMLA: Function-Aligned Dual-Path Quantization for Low-Bit MLA KV Caching](2026-2609.36760-quantmla-function-aligned-dual-path-quantization-for-low-bit-mla-kv-cach.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   多頭潜在注意（Multi-Head Latent 注意機構、MLA）は、通常の注意機構のように各ヘッドの鍵と値をすべて保存せず、複数ヘッドで共有する低次元の内容潜在と、位置情報を表す回転位置埋め込み（Rotary Position Embedding、RoPE）の鍵を保持する。
+
+- **2026-09 · [Quality-Constrained Routing over a Fixed Pool of Quantized Mixture-of-Experts Instances](2026-2609.12550-quality-constrained-routing-over-a-fixed-pool-of-quantized-mixture-of-experts-instances.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  固定常駐したW2・W3・W4量子化MoEインスタンス間で、入力時の脆弱性重み付きパープレキシティから要求別の量子化リスクを推定し、品質予算付き線形計画で高処理量側へ配分する要求ルーティング。
 
 - **2026-09 · [Phase-Decoupled, Model-Calibrated Power Control for Disaggregated LLM Serving](2026-2609.11133-phase-decoupled-model-calibrated-power-control-for-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -702,6 +710,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部文書を検索してから大規模言語モデル（LLM）に回答させる。実運用では、検索文書数を一律に20件などへ固定すると、単純な質問に過剰な文書を渡して時間と費用を浪費する一方、複雑な質問では検索量が足りず正答率を落とす。
 
+- **2026-08 · [RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference](2026-2608.04991-rac-reference-aware-activation-compression-for-communication-efficient-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  端末からクラウドへ送る境界活性と、クラウドから端末へ返す境界活性を、そのまま低ビット量子化するのではなく、送受信側で共有可能な参照状態との差分として符号化する。原著が評価した3モデルと9種類のモデル・回線条件では、無圧縮との比較で平均初回トークン時間（TTFT）の比が1.24～2.72倍、平均出力トークン時間（TPOT）の比が1.01～2.79倍である。
+
 - **2026-08 · [Q-First: Most of Attention Needs Only the Query in Disaggregated LLM Decoding](2026-2608.15473-q-first-disaggregated-decoding.md)**  
   実装：[✓](https://github.com/fan-wenjie/qfirst) ・ リポジトリ内被引用：0  
   KV走査に必要なのはクエリだけだと利用し、クエリを半層早く送ってKV走査と全結合処理を重ねる。既存カーネルで厳密合成でき、Qwen3では学習時の攪乱が測定分解能以下だった。
@@ -753,6 +765,10 @@
 - **2026-08 · [Cascade: Exploiting SLO-Aware latency budget for fair and high goodput LLM inference serving](2026-2608.06557-cascade-slo-aware-latency-budget-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   要求の残りSLO遅延を実行順とKVのHBM・CPU DRAM・NVMe配置へ共通予算として配り、復元・先読み・保持・再計算を切り替えて、処理量と長文脈要求の公平性を両立するサービング。
+
+- **2026-08 · [AFD-Ledger: Deployment Provisioning for Attention--FFN Disaggregation](2026-2608.04502-afd-ledger-deployment-provisioning-for-attention-ffn-disaggregation.md)**  
+  実装：[✓](https://github.com/kvcache-ai/AFD-Ledger) ・ リポジトリ内被引用：0  
+  AFDと同居配置を同一予算・TPOT SLOで独立最適化し、少数のハードウェア組だけを完全評価して最適配置を探索する分析プロビジョニング系。
 
 - **2026-07 · [X-CoSD: Communication-Efficient Cross-Vocabulary Collaborative Speculative Decoding](2026-2609.09166-x-cosd-cross-vocabulary-collaborative-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -842,6 +858,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   分離推論のデコード先選択へネットワーク階層・帯域・混雑を加え、KV転送・キュー・初回デコード時間の合計が最小のGPUを要求ごとに選ぶ。
 
+- **2026-06 · [LiveServe: Interaction-Aware Serving for Real-Time Omni-Modal LLMs](2026-2606.22983-liveserve-interaction-aware-serving-for-real-time-omni-modal-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  音声対話の再生進捗・発話・割込みをスケジューリングとKV配置へ反映し、不要な先行生成を抑えながら次ターンのKVを発話中に先読みし、P90初回音声遅延と無駄計算を同時に減らす。
+
 - **2026-06 · [KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding](2026-2606.29207-kernelflume-elastic-core-attention-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   モデル重みを固定した重みノードとKV保持・注意計算だけの重みなしノードへデコードを分離し、長文要求のKV増加に合わせて注意側だけを増設することで、完全モデル複製なしに低遅延で容量を拡張するサービング方式。
@@ -917,6 +937,10 @@
 - **2026-05 · [Measurement-Driven Diagnosis and Mitigation of Host-CPU Co-location Interference in Single-GPU LLM Serving on a Multi-GPU Server](2026-2609.05425-cotail.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   CPU制御段階のP95/P99遅延からスケジューラ競合とNUMA・キャッシュ競合を診断し、リアルタイム優先度またはCPU配置分離を選んで同居ワークロードによるLLM遅延を減らす。
+
+- **2026-05 · [Lodestar：オンライン学習によるLLM推論リクエストルータ](2026-2606.00946-lodestar-an-online-learning-llm-inference-router.md)**  
+  実装：[✓](https://github.com/gangmuk/Lodestar) ・ リポジトリ内被引用：0  
+  公開クラウドの同種8基A30クラスタと、A30 8基＋V100 8基の異種クラスタで評価し、強い接頭辞・負荷認識ヒューリスティックに対して平均TTFTを平均1.41倍、P99 TTFTを1.47倍改善し、条件によって異種クラスタでは4倍超の改善を示す。
 
 - **2026-05 · [Libra: Flexible Request Partitioning and Scheduling for Serving Unbalanced and Dynamic LLM Workloads](2026-a0647c9f2100-libra-flexible-request-partitioning-and-scheduling-for-serving-unbalance.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1110,6 +1134,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   FaSTeR-MoAは、複数の大規模言語モデル（large language モデル、LLM）が候補回答を生成し、別のモデルが統合するエージェント混合（mixture of agents、MoA）の推論処理を高速化する方式である。
 
+- **2025-11 · [Seer Self-Consistency: Advance Budget Estimation for Adaptive Test-Time Scaling](2025-2511.09345-seer-self-consistency-advance-budget-estimation-for-adaptive-test-time-s.md)**  
+  実装：[✓](https://github.com/noforit/SeerSC) ・ リポジトリ内被引用：0  
+  複数の推論経路を生成して最頻回答を選ぶ自己整合（自己整合性; SC）は、数学問題などで単一路線の思考連鎖より正解率を上げられる。各問題へ一律に $N$ 経路を割り当てると、容易な問題へも大量のトークンを使う。
+
 - **2025-11 · [Safety-Preserving PTQ via Contrastive Alignment Loss](2025-2511.07842-safety-preserving-ptq-via-contrastive-alignment-loss.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、大規模言語モデル（Large Language モデル、LLM）の学習後量子化（Post-学習 量子化、PTQ）における目的関数の不足を扱う。LLaMA3.1-8B-Instructの重み4ビット・活性値4ビット（W4A4）条件で、安全性評価SafetyBenchは比較方式OSTQuantの57.5からCAQの60.1へ2.6ポイント改善した。
@@ -1122,6 +1150,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   系列並列化（sequence parallelism、SP）は一つの入力系列を複数GPUへ分けて注意計算を実行する技術だが、要求全体に固定のSP数を割り当てると、先に空いたGPUだけでは開始できず、同期相手を待つ時間が生じる。
 
+- **2025-11 · [Optimal Self-Consistency for Efficient Reasoning with Large Language Models](2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし、全問題へ同じ回数だけ生成を繰り返すと、少数の試行で答えが安定する簡単な問題にも計算を使い続け、回答が割れる難しい問題に十分な予算を残せない。固定回数の生成、回答の信頼度に応じて停止する方式、問題間で生成回数を再配分する方式の違いを整理し、予算が少ない段階で有効な方法と、予算が大きい段階で有効な方法を組み合わせるBlend-ASCを提案する。
+
 - **2025-11 · [MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference](2025-2511.06010-moska-mixture-of-shared-kv-attention-for-efficient-long-sequence-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoSKA（Mixture of Shared KV 注意機構）は、複数のLLM要求が共通の長大な文書・知識ベースを参照する状況で、KVキャッシュを共有して容量を節約するだけではメモリ帯域の負荷が解消しないという問題を扱う。
@@ -1129,6 +1161,10 @@
 - **2025-11 · [MaverIQ: Fingerprint-Guided Extrapolation and Fragmentation-Aware Layering for Intent-Based LLM Serving](2025-ef9c70168212-maveriq-fingerprint-guided-extrapolation-and-fragmentation-aware-layerin.md)**  
   実装：[✓](https://github.com/UT-SysML/MaverIQ) ・ リポジトリ内被引用：0  
   MaverIQは、大規模言語モデル（Large Language モデル; LLM）の推論サービスを配備する際、利用者が「遅延を最小化したい」「費用上限を守りたい」「精度を落とせない」といった目的を指定するだけで、モデル圧縮、テンソル並列（テンソル Parallelism; TP）、パイプライン並列（パイプライン Parallelism…
+
+- **2025-11 · [C3PO: Optimized Large Language Model Cascades with Probabilistic Cost Constraints for Reasoning](2025-2511.07396-c3po-optimized-large-language-model-cascades-with-probabilistic-cost-con.md)**  
+  実装：[✓](https://github.com/AntonValk/C3PO-LLM) ・ リポジトリ内被引用：0  
+  すべての質問を最も高価なモデルへ送るのではなく、小型モデルが容易な質問へ回答し、難しい質問だけを高性能モデルへ順に送る方式をカスケード推論（cascaded inference）という。
 
 - **2025-11 · [A Scalable NorthPole System with End-to-End Vertical Integration for Low-Latency and Energy-Efficient LLM Inference](2025-2511.15950-a-scalable-northpole-system-with-end-to-end-vertical-integration-for-low.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1260,6 +1296,10 @@
   実装：✓ ・ リポジトリ内被引用：14  
   分離型推論（disaggregated inference）は、長い入力列を処理する入力処理（プリフィル）と、一トークンずつ出力する復号（デコード）を別のGPUワーカーに担当させる。最大4台のH100サーバを使った実験では、vLLMの一体型推論に対してarXiv論文要約負荷で要求遅延55%減、ShareGPT対話負荷で24%減を報告した。
 
+- **2025-10 · [Pie: A Programmable Serving System for Emerging LLM Applications](2025-2510.24051-pie-a-programmable-serving-system-for-emerging-llm-applications.md)**  
+  実装：[✓](https://github.com/pie-project/pie) ・ リポジトリ内被引用：13  
+  生成ループを細粒度APIへ分解し、Wasm inferletがKV・復号・入出力を直接制御しつつ適応一括処理でGPU効率を維持するプログラマブルLLMサービング基盤。
+
 - **2025-07 · [PolyServe: Efficient Multi-SLO Serving at Scale](2025-2507.17769-polyserve-efficient-multi-slo-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   PolyServeは、LLM配信サービスに複数の遅延保証階層がある場合に、要求をどのサーバへ送るか、各階層へ何台のサーバを割り当てるかを共同で制御する方式である。SLO達成率90%の点で、既存方式に対する有効処理量（有効スループット）はプリフィル・デコード分離構成で平均1.23倍、同居構成で平均1.18倍である。
@@ -1363,6 +1403,10 @@
 - **2025-10 · [FlexPipe: Adapting Dynamic LLM Serving Through Inflight Pipeline Refactoring in Fragmented Serverless Clusters](2025-2510.11938-flexpipe-adapting-dynamic-llm-serving-through-inflight-pipeline-refactoring-in-fragmented-serverless-clusters.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   断片化したserverless GPU上でパイプライン 段を実行中に細分化・統合し、KV整合性を保ちながら負荷変動へ追随するFlexPipe。
+
+- **2025-10 · [FairBatching: Fairness-Aware Batch Formation for LLM Inference](2025-2510.14392-fairbatching-fairness-aware-batch-formation-for-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  FairBatching-vanilla単体の有効要求処理量（有効スループット）改善は、最良の比較方式に対する幾何平均で20.0%である。
 
 - **2025-09 · [Amoeba: Runtime Tensor Parallel Transformation for LLM Inference Services](2025-2509.19729-gyges-cross-instance-parallelism-transformation.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -1535,6 +1579,10 @@
 - **2025-07 · [LeMix: Unified Scheduling for LLM Training and Inference on Multi-GPU Systems](2025-2507.21276-lemix-unified-training-inference-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   LeMixは継続学習と推論を同一GPU群へ共置し、事前予測した空き時間・応答遅延・メモリ量でタスク配置と実行順を調整する。固定分離比でスループット最大3.53倍、SLO達成率最大2.12倍を報告。
+
+- **2025-06 · [PecSched: Preemptive and Efficient Cluster Scheduling for LLM Inference](2024-2409.15104-csps-a-communication-efficient-sequence-parallelism-based-serving-system-for-transformer-based-models-with-long-prompts.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  長入力事前計算を短入力事前計算で選択的に横取りし、事前計算・復号の分離同居と高速系列並列を組み合わせて、短入力の待ち時間と長入力の飢餓を両立して抑える。
 
 - **2025-05 · [Scorpio: Serving Right Requests at the Right Time for Heterogeneous SLOs in LLM Inference](2025-2505.23022-scorpio-heterogeneous-slo-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

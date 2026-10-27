@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（114本）
+## 自動生成の論文一覧（116本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -174,6 +174,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   LiteCacheはクエリ類似度で再利用価値の高いKVヘッドを選び、CPUの索引処理をGPU中心の一括取得へ置き換えて、細粒度管理・同期・カーネル起動のオーバーヘッドを減らす方式。
 
+- **2026-09 · [HBFlex: A Flexible Memory System for Bridging Fine-Grained LLM States and Coarse-Grained HBF Parallel Execution](2026-2609.18675-hbflex.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  全HBF構成でKV配置・書戻し・寿命認識GCを共同最適化し、FlashAccel比最大1.58倍、H3比最大3.30倍の平均スループット向上。
+
 - **2026-08 · [Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches](2026-2608.01657-prefixshield-admission-responsibility.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   共有KVキャッシュで新規ブロックを作った利用者に持続的な回収責任を持たせ、負債中の再利用昇格を抑えつつ、その利用者の低価値ブロックから追い出すことで、固定分割なしに他利用者の接頭辞再利用を守る方式。
@@ -275,6 +279,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [PolarKV: Tier Locally, Serve Globally–A KV Cache over Cloud Memory and Storage](2026-4820586f504d-polarkv-tier-locally-serve-globally-a-kv-cache-over-cloud-memory-and-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分散メモリを帯域層、クラウドブロックストレージを容量層とし、対応シャードを同一VMへ共置してKVの階層移動をローカル化することで、クラウドのネットワーク帯域と費用の制約を抑えるKVキャッシュ基盤。
+
+- **2026-09 · [Physically Partitioned KVCache Format for CPU–GPU Load Balancing in MoE Inference](2026-2609.14507-physically-partitioned-kvcache-format-for-cpu-gpu-load-balancing-in-moe-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVを書込時にCPU計算用・GPU転送用の物理領域へ固定配置し、ルーフラインで系列を動的分担することで、単一GPUの長文MoE推論を高速化する。
 
 - **2026-09 · [KVMem: Virtualizing Million-Token Agent Workspaces on a Consumer GPU](2026-2609.04852-kvmem-virtualizing-million-token-agent-workspaces.md)**  
   実装：[✓](https://github.com/kvmem/kvmem-qw3) ・ リポジトリ内被引用：0  
