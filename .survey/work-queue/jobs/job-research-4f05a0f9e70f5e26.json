@@ -31,10 +31,15 @@
   "schema_version": 1,
   "selection_reason": "PyramidInfer exploits layer-wise KV importance to reduce cache memory and improve inference throughput, directly extending KV-cache compression and memory-efficient serving lineages.",
   "source_url": "https://arxiv.org/abs/2405.12532",
-  "status": "ready",
+  "status": "superseded",
   "title": "PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference",
   "type": "research",
   "venue": "arXiv (Cornell University)",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-27T13:36:10+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md",
+  "represented_canonical_id": "arXiv:2405.12532",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

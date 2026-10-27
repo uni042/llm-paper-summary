@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（304本）
+## 自動生成の論文一覧（305本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1175,6 +1175,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-08 · [CREST: Effectively Compacting a Datastore For Retrieval-Based Speculative Decoding](2024-2408.04678-crest-effectively-compacting-a-datastore-for-retrieval-based-speculative.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   CREST（Compact Retrieval-Based 投機的復号）は、RESTの全文保存方式を改め、短くて頻出するn-gramをキー、そこから生成した候補トークン木を値とする辞書を保持する。原著は、RESTと同等の受理長を10.6〜13.5倍小さな容量で達成し、同じ容量では受理長を16.5〜17.1%改善したと報告する。
+
+- **2024-10 · [Cerberus: Efficient Inference with Adaptive Parallel Decoding and Sequential Knowledge Enhancement](2024-2410.13344-cerberus-efficient-inference-with-adaptive-parallel-decoding-and-sequent.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  また、受理候補が少ない難しいステップでも木構造の検証を行うと、予測ヘッド・木検証の追加費用だけが残る。Cerberusは、各予測ヘッドの残差ブロック同士を接続するCerberus Headsと、エントロピーに応じて並列復号と通常復号を切り替えるゲートを組み合わせる。木候補63では通常復号比2.12倍の高速化を報告する。
 
 - **2024-08 · [Context-Aware Assistant Selection for Improved Inference Acceleration with Large Language Models](2024-2408.08470-context-aware-assistant-selection-for-improved-inference-acceleration-wi.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

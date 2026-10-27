@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T13:23:25+00:00",
+  "generated_at": "2026-10-27T13:36:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 64,
+  "count": 66,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1633,8 +1633,8 @@
     },
     {
       "canonical_id": "arXiv:2510.11602",
-      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
-      "source_url": "https://arxiv.org/html/2510.11602v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T13:19:18+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1660,8 +1660,8 @@
     },
     {
       "canonical_id": "arXiv:2502.15294",
-      "title": "Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference",
-      "source_url": "https://arxiv.org/pdf/2502.15294",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T13:20:27+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1685,6 +1685,62 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2022.findings-acl.189",
+      "title": "A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation",
+      "source_url": "https://aclanthology.org/2022.findings-acl.189.pdf",
+      "returned_at": "2026-10-27T13:32:29+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 457 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5306,
+        "body_paragraphs": 32,
+        "method_chars": 1062,
+        "method_paragraphs": 8,
+        "evaluation_chars": 457,
+        "limitation_chars": 721,
+        "insufficiency_flags": [
+          "評価説明量 457 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6b21c4d4c5a88191b8d5fa040a937eda--2022-doi-10.18653-v1-2022.findings-acl.189-hashee-hash-early-exit-research-20261027-1948-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6b21c4d4c5a88191b8d5fa040a937eda--2022-doi-10.18653-v1-2022.findings-acl.189-hashee-hash-early-exit-research-20261027-1948-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-1948-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2407.17678",
+      "title": "S2-Attention: Hardware-Aware Context Sharding Among Attention Heads",
+      "source_url": "https://arxiv.org/pdf/2407.17678v7",
+      "returned_at": "2026-10-27T13:34:51+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 176 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6775,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 176,
+        "limitation_chars": 878,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 176 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8619e75122c081918c358bb71bd164ac--2024-2407.17678-s2-attention-hhst-hardware-aware-sparse-research-20261027-2042-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8619e75122c081918c358bb71bd164ac--2024-2407.17678-s2-attention-hhst-hardware-aware-sparse-research-20261027-2042-scheduled-chat-45-r01.json",
       "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
     }
   ]
