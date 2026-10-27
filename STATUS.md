@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-27 17:01:32 JST**
+> 自動生成: **2026-10-27 17:09:06 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **673** |
 | 未claim Research job | **673** |
-| 直近24hのResearch処理完了 | **140** |
+| 直近24hのResearch処理完了 | **141** |
 | 最終Research処理完了 | **10-27 16:25:00 JST** |
 | 最終Discovery探索完了 | **10-27 10:30:00 JST** |
 | 整合性異常 | **0** |
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-27 09:27:58 JST（7時間33分前）** |
+| 最終maintenance完了 | **10-27 09:27:58 JST（7時間41分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -144,7 +144,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 ### 最新Library-first run
 
-- Research: **10-27 16:25:00 JST** / worker — / run 20261027-1625-scheduled-chat-30/r01 / 成果 **1件**
+- Research: **10-27 16:25:00 JST** / worker — / run 20261027-1625-scheduled-chat-30/r01 / 成果 **2件**
   - evidence: .survey/import-inbox/results/research/libfile_9bf1e6aa334c8191b80b2daadcabe56d--2025-2502.15470-papi-dynamic-pim-decoding-research-20261027-1625-scheduled-chat-30-r01.json
 - Discovery: **10-27 10:30:00 JST** / worker scheduled-chat-30 / run 20261027-1030-scheduled-chat-30/r01
   - 本文確認・分類 **8件** / accept **0件** / unrelated+borderline **8件**
