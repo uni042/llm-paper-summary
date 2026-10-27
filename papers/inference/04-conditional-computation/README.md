@@ -114,6 +114,10 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：[✓](https://github.com/microsoft/wina) ・ リポジトリ内被引用：5  
   WINAは、既存の大規模言語モデル（LLM）を再学習せず、各層で計算に参加させる活性成分を選択する疎活性化方式である。代表例としてLlama-2-7Bの常識推論8課題平均では、65%の活性疎性でWINAが65.14、TEALが61.07、R-Sparseが59.37となった。
 
+- **2025-03 · [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)**  
+  実装：[✓](https://github.com/luoxuan-cs/Flexidepth) ・ リポジトリ内被引用：5  
+  FlexiDepthは、すでに学習された大規模言語モデルの重みを変更せず、出力トークンごとに必要な層の計算量を変える手法である。原著のLlama-3-8B-Instruct（32層）では、平均8層を省いても6つの評価課題における平均性能保持率が100.7%となり、固定層省略方式より高い品質を示す。
+
 - **2024-11 · [SparseInfer: Training-free Prediction of Activation Sparsity for Fast LLM Inference](2024-2411.12692-sparseinfer-training-free-prediction-of-activation-sparsity-for-fast-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   大規模言語モデルの逐次生成では、要求ごとの同時処理数が小さいと、フィードフォワード網の大きな重み行列をGPUメモリから読み出す費用が律速になる。入力によってゼロになる中間活性を事前に予測できれば、その活性に対応する行の重み読込みと行列ベクトル積を省略できる。しかし、一般的なLLaMAの滑らかな活性化関数であるSiLUでは、負の値も厳密にはゼロになりにくい。
@@ -121,10 +125,6 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 - **2025-07 · [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   大規模言語モデルは、次の単語を推測するたびに、難しい計算を要する単語にも文脈からほぼ写すだけの単語にも同じ数の変換層を適用する。DiffSkipは、トークンと層の組ごとに、後続のフィードフォワードネットワーク（FFN）を実行するか、軽量な補正器で代替するかを判断する手法である。
-
-- **2025-03 · [Adaptive Layer-skipping in Pre-trained LLMs](2025-2503.23798-adaptive-layer-skipping-in-pre-trained-llms.md)**  
-  実装：[✓](https://github.com/luoxuan-cs/Flexidepth) ・ リポジトリ内被引用：4  
-  FlexiDepthは、すでに学習された大規模言語モデルの重みを変更せず、出力トークンごとに必要な層の計算量を変える手法である。原著のLlama-3-8B-Instruct（32層）では、平均8層を省いても6つの評価課題における平均性能保持率が100.7%となり、固定層省略方式より高い品質を示す。
 
 - **2025-10 · [VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs](2025-2510.16598-visionselector-end-to-end-learnable-visual-token-compression-for-efficie.md)**  
   実装：[✓](https://github.com/JulietChoo/VisionSelector) ・ リポジトリ内被引用：3  
@@ -185,28 +185,28 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
-  実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：120  
+  実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：122  
   LLaVA-1.5では一枚の336×336画像が576トークンになり、高解像度化や動画の複数フレーム処理では数千トークンへ増える。初期層では画像情報が広く注意される一方、深い層では少数のシステム指示や文章トークンへ注意が集中し、画像トークン一個当たりの注意効率が非常に低くなる。代表設定は二層後に視覚トークンの50%を削除する方式である。
 
 - **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：118  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：119  
   LayerSkipは、大規模言語モデルの全ての層を毎トークン実行する代わりに、浅い層から次トークンを予測できるよう学習し、その予測を同じモデルの残りの層で検証する方式である。下書きモデルの生成結果を大きなモデルで一括検証することで生成時間を短縮できるが、二つのモデルの重みや鍵・値キャッシュを管理する必要がある。
 
 - **2024-03 · [LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md)**  
-  実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：87  
   LLaVA-PruMergeは、画像を大規模言語モデルへ渡す際の視覚トークン数を削減する方式である。LLaVA-1.5は336×336画素の画像から24×24個、すなわち576個の視覚トークンを生成する。
 
 - **2024-10 · [SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference](2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md)**  
   実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：77  
   SparseVLMは、視覚言語モデル（VLM）の入力画像から生じる大量の視覚トークンを、現在の質問に必要な情報をできるだけ残しながら削減する追加学習不要の方式である。
 
+- **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
+  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：59  
+  大規模視覚言語モデル（Large Vision-Language モデル; LVLM）は、画像を数百から数千の画像トークンへ変換して、文章の質問と一緒に言語モデルへ入力する。画像解像度が上がると画像トークンが増え、注意計算と全結合層の演算量が大きくなる。複数の視覚言語ベンチマークで品質は概ね維持されるが、個別の高解像度課題では小さな低下もある。
+
 - **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  
   実装：✓ ・ リポジトリ内被引用：59  
   そのため、簡単な予測位置も難しい予測位置も同じ計算を受ける。方式の要点は、処理するトークンの「個数」kを事前に固定し、「どのトークンか」だけを学習済みルータが動的に選ぶ点にある。論文の代表構成では系列長2048に対し、一つおきの層で上位256トークン、すなわち12.5%だけを自己注意とMLPへ通す。
-
-- **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
-  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：58  
-  大規模視覚言語モデル（Large Vision-Language モデル; LVLM）は、画像を数百から数千の画像トークンへ変換して、文章の質問と一緒に言語モデルへ入力する。画像解像度が上がると画像トークンが増え、注意計算と全結合層の演算量が大きくなる。複数の視覚言語ベンチマークで品質は概ね維持されるが、個別の高解像度課題では小さな低下もある。
 
 - **2024-06 · [D2O: Dynamic Discriminative Operations for Efficient Long-Context Inference of Large Language Models](2024-2406.13035-d2o-dynamic-discriminative-operations-for-efficient-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：36  
@@ -217,7 +217,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   LazyLLMは、長い入力文のすべてのトークンを全変換層で計算する慣行を改め、現在予測しようとしている次のトークンに重要な入力部分だけを深い層へ進める推論時の計算削減法である。
 
 - **2024-05 · [Boosting Multimodal Large Language Models with Visual Tokens Withdrawal for Rapid Inference](2024-2405.05803-boosting-multimodal-large-language-models-with-visual-tokens-withdrawal-.md)**  
-  実装：[✓](https://github.com/lzhxmu/VTW) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/lzhxmu/VTW) ・ リポジトリ内被引用：28  
   例えばLLaVAでは336×336画像を576個の視覚トークンに変換し、システム指示、ユーザー質問、生成済みのテキストトークンとともにデコーダへ流す。
 
 - **2024-10 · [LongVU: Spatiotemporal Adaptive Compression for Long Video-Language Understanding](2024-2410.17434-longvu-spatiotemporal-adaptive-compression-for-long-video-language-under.md)**  

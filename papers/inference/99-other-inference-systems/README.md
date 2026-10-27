@@ -1660,13 +1660,13 @@
   実装：[✓](https://github.com/deepseek-ai/DeepSeek-OCR) ・ リポジトリ内被引用：13  
   本研究は、長いテキストをそのまま多数の言語トークンとして処理する代わりに、文書を二次元の画像として扱い、少数の視覚トークンへ圧縮できるかを検証する。英語文書のFox評価では、画像化した元テキストの約10倍圧縮に相当する視覚トークン数でも文字復元精度がおおむね97%に達する。
 
+- **2024-12 · [NVILA: Efficient Frontier Visual Language Models](2024-2412.04468-nvila-efficient-frontier-visual-language-models.md)**  
+  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：11  
+  NVILAは解像度を先に上げて必要な情報を取り込み、その後に空間・時間方向の冗長性を圧縮する「拡大してから圧縮する（scale-then-compress）」設計を採用する。
+
 - **2024-12 · [ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction](2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md)**  
   実装：[✓](https://github.com/pku-liang/ArkVale) ・ リポジトリ内被引用：11  
   大規模言語モデル（Large Language モデル; LLM）が長い文章を扱うと、注意機構の鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）は入力文脈の長さと同時処理要求数に比例して増える。
-
-- **2024-12 · [NVILA: Efficient Frontier Visual Language Models](2024-2412.04468-nvila-efficient-frontier-visual-language-models.md)**  
-  実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：10  
-  NVILAは解像度を先に上げて必要な情報を取り込み、その後に空間・時間方向の冗長性を圧縮する「拡大してから圧縮する（scale-then-compress）」設計を採用する。
 
 - **2025-08 · [Huawei Cloud Model-as-a-Service on the CloudMatrix384 SuperPod](2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
@@ -2298,6 +2298,10 @@
   実装：[✓](https://github.com/LuLuLuyi/LongHeads) ・ リポジトリ内被引用：4  
   LongHeadsは、事前学習時よりはるかに長い文章を既存の大規模言語モデルへ与える際、各注意頭が全文へ注意する必要はないという観察を利用した、追加学習不要の長文推論方式である。LLaMA-2-7Bを単一NVIDIA A100で評価し、32Kのパスキー検索でほぼ100%、CPUへKVキャッシュを退避した128K条件でも2K注意窓で100%を報告する。
 
+- **2024-10 · [BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments](2024-2410.23918-bitstack-any-size-compression-of-large-language-models-in-variable-memor.md)**  
+  実装：[✓](https://github.com/xinghaow99/BitStack) ・ リポジトリ内被引用：3  
+  BitStackは、LLMの重みを固定の2bit、3bit、4bitなどへ一度だけ量子化する代わりに、複数の小さな残差ブロックへ分解して優先順位を付け、使えるメモリ量に応じて必要なブロックだけを読み込む学習不要の圧縮方式である。
+
 - **2024-04 · [Hierarchical Context Merging: Better Long Context Understanding for Pre-trained LLMs](2024-2404.10308-hierarchical-context-merging-better-long-context-understanding-for-pre-t.md)**  
   実装：[✓](https://github.com/alinlab/HOMER) ・ リポジトリ内被引用：3  
   HOMER（Hierarchical cOntext MERging）は、入力を小区間に分けて初期層を処理し、中間層へ進むにつれて隣接区間を統合する。ICLR 2024の原著では、Llama-2-13B-chatの32Kトークンにおけるパスキー検索正答率が80.4%、位置尺度変更方式との併用で86.0%だった。
@@ -2321,10 +2325,6 @@
 - **2024-10 · [Multi-Draft Speculative Sampling: Canonical Decomposition and Theoretical Limits](2024-2410.18234-multi-draft-speculative-sampling-canonical-decomposition-and-theoretical.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   ドラフトが提案したトークンを受理できれば大型モデルの逐次呼出し回数を減らせるが、分布の一致を保証するには棄却後の補正サンプリングが必要である。実験ではA100 80GB、ドラフトOPT-125M、ターゲットOPT-13Bを使い、XSUMとDollyなどで候補数・サンプリング温度・切り詰め量を変えて比較した。
-
-- **2024-10 · [BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments](2024-2410.23918-bitstack-any-size-compression-of-large-language-models-in-variable-memor.md)**  
-  実装：[✓](https://github.com/xinghaow99/BitStack) ・ リポジトリ内被引用：2  
-  BitStackは、LLMの重みを固定の2bit、3bit、4bitなどへ一度だけ量子化する代わりに、複数の小さな残差ブロックへ分解して優先順位を付け、使えるメモリ量に応じて必要なブロックだけを読み込む学習不要の圧縮方式である。
 
 - **2024-06 · [Divergent Token Metrics: Measuring degradation to prune away LLM components -- and optimize quantization](2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md)**  
   実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：2  
@@ -2353,6 +2353,10 @@
 - **2023-12 · [Mini-GPTs: Efficient Large Language Models through Contextual Pruning](2023-2312.12682-mini-gpts-efficient-large-language-models-through-contextual-pruning.md)**  
   実装：[✓](https://github.com/tval2/contextual-pruning) ・ リポジトリ内被引用：2  
   Mini-GPTsは、汎用言語モデルが保持する知識や計算経路の全てを個別業務で必要とするわけではないという仮説から、用途に応じて不要なニューロンを取り除く研究である。削除後には分野別データで微調整し、困惑度の回復を試みる。
+
+- **2024-10 · [Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs](2024-2410.14570-understanding-the-difficulty-of-low-precision-post-training-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMの重みを2〜4bitへ圧縮すると、GPUメモリ使用量を減らせる可能性がある一方、言語モデルの予測品質が大きく落ちることがある。
 
 - **2024-10 · [Taipan: Efficient and Expressive State Space Language Models with Selective Attention](2024-2410.18572-taipan-efficient-and-expressive-state-space-language-models-with-selecti.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -2385,10 +2389,6 @@
 - **2024-01 · [With Greater Text Comes Greater Necessity: Inference-Time Training Helps Long Text Generation](2024-2401.11504-with-greater-text-comes-greater-necessity-inference-time-training-helps-.md)**  
   実装：[✓](https://github.com/TemporaryLoRA/Temp-LoRA) ・ リポジトリ内被引用：1  
   本論文が扱うのは、数十万トークン規模の小説生成や長編翻訳を、短い注意窓しか持たない言語モデルで継続するときに発生する「古い情報の消失」と「長い鍵・値キャッシュ（KVキャッシュ）の費用」の両立問題である。近い文脈は通常の注意機構で直接読み、古い情報は一時的に変化した重みを介して利用する。
-
-- **2024-10 · [Understanding the Difficulty of Low-Precision Post-Training Quantization for LLMs](2024-2410.14570-understanding-the-difficulty-of-low-precision-post-training-quantization.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  LLMの重みを2〜4bitへ圧縮すると、GPUメモリ使用量を減らせる可能性がある一方、言語モデルの予測品質が大きく落ちることがある。
 
 - **2024-10 · [Two are better than one: Context window extension with multi-grained self-injection](2024-2410.19318-two-are-better-than-one-context-window-extension-with-multi-grained-self.md)**  
   実装：[✓](https://github.com/Clement25/SharedLLM) ・ リポジトリ内被引用：0  

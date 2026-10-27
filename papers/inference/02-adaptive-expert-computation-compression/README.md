@@ -424,13 +424,13 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/imagination-research/EEP) ・ リポジトリ内被引用：38  
   効率的専門家枝刈り（Efficient 専門家 枝刈り、EEP）は、疎な混合専門家（Sparse Mixture of エキスパート、SMoE）言語モデルを推論用途へ圧縮する研究である。
 
+- **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
+  実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：28  
+  混合専門家（mixture of エキスパート、MoE）は、複数の専門家を持ちながらトークンごとに少数だけ活性化することで、総パラメータ数と一度の計算に使うパラメータ数を切り離せる。
+
 - **2024-10 · [Retraining-Free Merging of Sparse MoE via Hierarchical Clustering](2024-2410.08589-hc-smoe-retraining-free-merging.md)**  
   実装：[✓](https://github.com/wazenmai/HC-SMoE) ・ リポジトリ内被引用：27  
   専門家の平均出力を用いる階層的クラスタリングと頻度重み付き統合により、再学習なしでQwen/Mixtralの専門家を最大50%削減しつつ比較手法より高い性能保持を示す。
-
-- **2024-01 · [MoE-LLaVA: Mixture of Experts for Large Vision-Language Models](2024-2401.15947-moe-llava-mixture-of-experts-for-large-vision-language-models.md)**  
-  実装：[✓](https://github.com/PKU-YuanGroup/MoE-LLaVA) ・ リポジトリ内被引用：26  
-  混合専門家（mixture of エキスパート、MoE）は、複数の専門家を持ちながらトークンごとに少数だけ活性化することで、総パラメータ数と一度の計算に使うパラメータ数を切り離せる。
 
 - **2024-10 · [ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling](2024-2410.17954-expertflow-efficient-mixture-of-experts-inference-via-predictive-expert-caching-.md)**  
   実装：✓ ・ リポジトリ内被引用：25  
@@ -441,7 +441,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   さらに前の層で選ばれた経路をルータ得点に反映する経路認識ルータと、FFNと軽量専門家へ異なる容量を割り当てる負荷均衡を導入する。例えば1B規模・100B学習トークン・τ=0.75では、通常MoEの専門家順伝播610.9ミリ秒に対しMoE++は500.3ミリ秒で、処理能力は22.1%向上した。
 
 - **2024-07 · [Diversifying the Expert Knowledge for Task-Agnostic Pruning in Sparse Mixture-of-Experts](2024-2407.09590-task-agnostic-expert-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   共有入力上の専門家知識類似度で冗長専門家をグループ化し、専門家とルータを同時統合することで、タスク非依存にMoEのメモリと推論時間を削減する。
 
 - **2024-09 · [STUN: Structured-Then-Unstructured Pruning for Scalable MoE Pruning](2024-2409.06211-stun-structured-then-unstructured-pruning-for-scalable-moe-pruning.md)**  

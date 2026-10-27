@@ -461,7 +461,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：154  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：155  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -707,7 +707,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   各演算ごとに大量のCUDA制御コードを書く代わりに、タイル演算と「ロード・計算・保存・終了」の4段階を指定し、共有メモリの配置や同期の多くを共通部品に任せる。さらに、行列積の段数を1から4へ増やすと260→760 TFLOPS、L2再利用を意識したブロック順序では805対392 TFLOPSという差があり、性能改善の機構を個別に検証している。
 
 - **2024-08 · [STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs](2024-2408.01803-stbllm-breaking-the-1-bit-barrier-with-structured-binary-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：12  
+  実装：✓ ・ リポジトリ内被引用：13  
   大規模言語モデルの推論では、特にバッチの小さい復号段階で重みを主記憶やGPUメモリから読み出す帯域が律速になりやすい。従来の二値化手法は、重要な重みを別扱いにしたり残差を追加したりして精度を回復するものの、重み当たり約1ビットの表現からさらに削る余地が残る。
 
 - **2024-03 · [AIOS: LLM Agent Operating System](2024-2403.16971-aios-llm-agent-operating-system.md)**  
@@ -742,13 +742,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/intel/xFasterTransformer) ・ リポジトリ内被引用：4  
   IntelのxFasterTransformerに、CPU向けSlimAttention、トークン・ヘッド単位のINT8 KVキャッシュ、oneCCLによる分散推論とゼロコピー通信を組み込む。Xeon 8563C環境でLlama2-70Bの次トークン遅延を2ソケット249.7msから8ソケット87.7msへ短縮した。
 
+- **2024-06 · [ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization](2024-2406.05981-shiftaddllm-accelerating-pretrained-llms-via-post-training-multiplicatio.md)**  
+  実装：[✓](https://github.com/GATECH-EIC/ShiftAddLLM) ・ リポジトリ内被引用：3  
+  大規模言語モデルの重みを低ビット化すればGPUメモリの占有を減らせる。しかし、通常の重み量子化では、低ビット整数を推論時に浮動小数点へ復元して乗算する場合があり、保存容量の削減がそのまま計算演算の削減を意味しない。OPT-66Bの重みメモリはFP16の122 GBから３ビット時23 GB、２ビット時16 GBへ減少した。
+
 - **2024-02 · [QUICK: Quantization-aware Interleaving and Conflict-free Kernel for efficient LLM inference](2024-2402.10076-quick-quantization-aware-interleaving-and-conflict-free-kernel-for-effic.md)**  
   実装：[✓](https://github.com/SqueezeBits/QUICK) ・ リポジトリ内被引用：3  
   4ビットに量子化した大規模言語モデルでは、重みの保存容量を減らせても、行列積の際には高精度の活性値と掛け合わせるために重みを半精度へ戻す処理が必要になる。原著の行列積単体の比較ではバッチ256でAutoAWQのカーネル比1.33〜1.91倍、モデル生成の比較では最大1.94倍の処理量を報告した。
-
-- **2024-06 · [ShiftAddLLM: Accelerating Pretrained LLMs via Post-Training Multiplication-Less Reparameterization](2024-2406.05981-shiftaddllm-accelerating-pretrained-llms-via-post-training-multiplicatio.md)**  
-  実装：[✓](https://github.com/GATECH-EIC/ShiftAddLLM) ・ リポジトリ内被引用：2  
-  大規模言語モデルの重みを低ビット化すればGPUメモリの占有を減らせる。しかし、通常の重み量子化では、低ビット整数を推論時に浮動小数点へ復元して乗算する場合があり、保存容量の削減がそのまま計算演算の削減を意味しない。OPT-66Bの重みメモリはFP16の122 GBから３ビット時23 GB、２ビット時16 GBへ減少した。
 
 - **2024-10 · [MatMamba: A Matryoshka State Space Model](2024-2410.06718-matmamba-a-matryoshka-state-space-model.md)**  
   実装：[✓](https://github.com/ScaledFoundations/MatMamba) ・ リポジトリ内被引用：1  
@@ -803,7 +803,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：653  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：654  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -841,7 +841,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：148  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：150  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
