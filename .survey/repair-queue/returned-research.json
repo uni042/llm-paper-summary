@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T07:30:04+00:00",
+  "generated_at": "2026-10-27T07:40:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 65,
+  "count": 66,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1518,34 +1518,6 @@
       "worker_run_key": "20261027-0955-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2408.11855",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T05:20:07+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 262 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5144,
-        "body_paragraphs": 31,
-        "method_chars": 1577,
-        "method_paragraphs": 10,
-        "evaluation_chars": 262,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 262 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f799f2a8ad108191a1cef652ce80a3d9--2024-2408.11855-factorllm-dense-ffn-moe-conversion-research-20261027-1232-scheduled-chat-00-r01-corrected.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f799f2a8ad108191a1cef652ce80a3d9--2024-2408.11855-factorllm-dense-ffn-moe-conversion-research-20261027-1232-scheduled-chat-00-r01-corrected.json",
-      "worker_run_key": "20261027-1232-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
       "title": null,
       "source_url": null,
@@ -1633,67 +1605,39 @@
       "worker_run_key": "20261027-1204-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2508.08289",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T06:58:38+00:00",
+      "canonical_id": "arXiv:2503.01066",
+      "title": "Alchemist: Towards the Design of Efficient Online Continual Learning System",
+      "source_url": "https://arxiv.org/pdf/2503.01066",
+      "returned_at": "2026-10-27T07:40:24+00:00",
       "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
+        "説明不足トリガー: 評価説明量 190 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6240,
-        "body_paragraphs": 36,
-        "method_chars": 2387,
+        "body_chars": 6574,
+        "body_paragraphs": 37,
+        "method_chars": 2648,
         "method_paragraphs": 13,
-        "evaluation_chars": 0,
+        "evaluation_chars": 190,
         "limitation_chars": 0,
         "insufficiency_flags": [
-          "評価説明量 0 < 500",
+          "評価説明量 190 < 500",
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2412.05693",
-      "title": "Batch-Max: Higher LLM Throughput using Larger Batch Sizes and KV Cache Compression",
-      "source_url": "https://arxiv.org/pdf/2412.05693",
-      "returned_at": "2026-10-27T07:25:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5051,
-        "body_paragraphs": 30,
-        "method_chars": 1711,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f9bad6adad74819189590e6f7b22d6c5--2025-2503.01066-alchemist-serving-activation-reuse-research-20261027-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f9bad6adad74819189590e6f7b22d6c5--2025-2503.01066-alchemist-serving-activation-reuse-research-20261027-1345-scheduled-chat-45-r01.json",
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2407.09577",
       "title": "FlashNorm: Fast Normalization for Transformers",
       "source_url": "https://arxiv.org/pdf/2407.09577",
-      "returned_at": "2026-10-27T07:27:04+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-27T07:40:26+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -1712,9 +1656,93 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1311c94e9dbe--libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1311c94e9dbe--libfile_eea7dd94434c8191b5ce84888ff50a59--2024-2407.09577-flashnorm-normalization-reordering-research-20261027-1345-scheduled-chat-.json",
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2412.05693",
+      "title": "Batch-Max: Higher LLM Throughput using Larger Batch Sizes and KV Cache Compression",
+      "source_url": "https://arxiv.org/pdf/2412.05693",
+      "returned_at": "2026-10-27T07:40:28+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5051,
+        "body_paragraphs": 30,
+        "method_chars": 1711,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-485cc0e4f675--libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-485cc0e4f675--libfile_b7caa4e15e98819194557ec255bdd134--2024-2412.05693-batch-max-prefill-decode-kv-eviction-research-20261027-1345-scheduled-cha.json",
+      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.08289",
+      "title": "Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers",
+      "source_url": "https://arxiv.org/pdf/2508.08289",
+      "returned_at": "2026-10-27T07:40:30+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6240,
+        "body_paragraphs": 36,
+        "method_chars": 2387,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4df6f5fed85a--libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4df6f5fed85a--libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-c.json",
+      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2408.11855",
+      "title": "FactorLLM: Factorizing Knowledge via Mixture of Experts for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2408.11855",
+      "returned_at": "2026-10-27T07:40:32+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 262 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5144,
+        "body_paragraphs": 31,
+        "method_chars": 1577,
+        "method_paragraphs": 10,
+        "evaluation_chars": 262,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 262 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-be9d7a4c7684--libfile_f799f2a8ad108191a1cef652ce80a3d9--2024-2408.11855-factorllm-dense-ffn-moe-conversion-research-20261027-1232-scheduled-chat-00-r01-corrected.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-be9d7a4c7684--libfile_f799f2a8ad108191a1cef652ce80a3d9--2024-2408.11855-factorllm-dense-ffn-moe-conversion-research-20261027-1232-scheduled-chat-.json",
+      "worker_run_key": "20261027-1232-scheduled-chat-00/r01"
     }
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "21186fdda0e09dbf2a06b17402192c4020bbe12a2d6684c87ba370a4b7740657",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4df6f5fed85a--libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2508.08289",
+  "worker_completed_at": "2026-10-27T13:50:00+09:00",
+  "worker_run_key": "20261027-1345-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6240,
+    "body_paragraphs": 36,
+    "method_chars": 2387,
+    "method_paragraphs": 13,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-27T07:40:30+00:00"
+}
