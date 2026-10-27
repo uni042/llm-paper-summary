@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T17:16:42+00:00",
+  "generated_at": "2026-10-27T18:00:08+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 73,
+  "count": 74,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1850,8 +1850,8 @@
     },
     {
       "canonical_id": "arXiv:2404.04759",
-      "title": "What Happens When Small Is Made Smaller? Exploring the Impact of Compression on Small Data Pretrained Language Models",
-      "source_url": "https://arxiv.org/pdf/2404.04759",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T17:16:38+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1877,8 +1877,8 @@
     },
     {
       "canonical_id": "arXiv:2509.17428",
-      "title": "QWHA: Quantization-Aware Walsh-Hadamard Adaptation for Parameter-Efficient Fine-Tuning on Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2509.17428v4",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T17:16:39+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1904,8 +1904,8 @@
     },
     {
       "canonical_id": "arXiv:2503.19950",
-      "title": "LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation",
-      "source_url": "https://arxiv.org/pdf/2503.19950",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T17:16:41+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1928,6 +1928,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f20c9daa8dfe--libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f20c9daa8dfe--libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45.json",
       "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2505.08620",
+      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
+      "source_url": "https://arxiv.org/pdf/2505.08620",
+      "returned_at": "2026-10-27T17:53:51+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 手法説明量 0 < 700",
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4200,
+        "body_paragraphs": 20,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_89353127dfbc819186f040982ce58a61--2025-2505.08620-resource-efficient-quantization-under16kb-reaudit-20261028-0145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_89353127dfbc819186f040982ce58a61--2025-2505.08620-resource-efficient-quantization-under16kb-reaudit-20261028-0145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261028-0145-scheduled-chat-45/r01"
     }
   ]
 }

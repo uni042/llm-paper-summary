@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（708本）
+## 自動生成の論文一覧（711本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -594,6 +594,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   LaCo（層-wise Compensation）は、枝刈りによって一部の重みや層内構造を削除したLLMの性能を、元モデルの各層の隠れ状態へ順次近づける局所回帰で回復する方法である。
 
+- **2026-07 · [Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing](2026-58b45f0ef5d5-kairox-adaptive-gpu-cpu-hybrid-llm-inference-via-online-neuron-balancing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  巨大な言語モデルでは重みをVRAMにすべて置けない場合、llama.cppの層単位オフロードではCPU側の層計算が直列経路の律速になりやすい。RTX 3080 Ti 12GBとRTX 4090 24GBを用いた実機で、活性化疎性を持つ複数の7B～66B級モデルを評価した。
+
 - **2026-07 · [I/o for LLM inference: a survey of storage and memory bottlenecks](2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md)**  
   実装：[✓](https://github.com/rch0wdhury/llm-io-profiler) ・ リポジトリ内被引用：0  
   LLMデコードのデータ移動を重み・KVキャッシュ・活性の三I/O流へ分解し、量子化からSSD/CXL/統合メモリまでをルーフライン上で統一して、最適化を積むと支配ボトルネックが移動することを定量化したサーベイ。
@@ -885,6 +889,10 @@
 - **2026-05 · [InfoQuant: Shaping Activation Distributions for Low-Bit LLM Quantization](2026-2605.26175-infoquant-shaping-activation-distributions-for-low-bit-llm-quantization.md)**  
   実装：[✓](https://github.com/LLIKKE/InfoQuant) ・ リポジトリ内被引用：0  
   InfoQuantは、LLMの低ビット事後量子化（post-学習 量子化; PTQ）における活性値の量子化誤差を、単純な外れ値除去ではなく、量子化器に入力する分布の形から最適化する方式である。
+
+- **2026-05 · [HybridServe: Stall-Free Distributed Disaggregated LLM Inference with Hybrid KVCache Buffering](2026-1e016ba4edaa-hybridserve-stall-free-distributed-disaggregated-llm-inference-with-hybr.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来のPush方式は、事前入力が終わるとキャッシュを復号側へすぐ送るため、後の復号時にノード間転送を待ちにくい。2台のV100を用いた実機では、前段停止が大きい条件で最初のトークンまでの時間が最大1.76倍高速化し、処理量は最大1.57倍改善した。
 
 - **2026-05 · [Hierarchical Mixture-of-Experts with Two-Stage Optimization](2026-2605.08292-hierarchical-mixture-of-experts-with-two-stage-optimization.md)**  
   実装：[✓](https://github.com/brain-lab-research/Hi-MoE) ・ リポジトリ内被引用：0  
@@ -1999,6 +2007,10 @@
 - **2025-09 · [ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference](2025-2510.02361-chunkllm-a-lightweight-pluggable-framework-for-accelerating-llms-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ChunkLLMは、既存Transformerのbackboneを固定したまま軽量なadapterを付加し、長文のどのchunkのKVを保持するかを学習する方式である。Qwen2.5-7BのLongBenchでは、通常モデルの平均44.13に対してChunkLLMは43.53、KV保持率は48.58%である。
+
+- **2025-08 · [Rethinking 1-bit Optimization Leveraging Pre-trained Large Language Models](2025-2508.06974-rethinking-1-bit-optimization-leveraging-pre-trained-large-language-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、事前学習済みの言語モデルをそのまま極端な低ビット形式へ変換すると知識が破壊される問題に対し、BinaryLLMという段階的な一ビット化方式を提案する。原著はSmolLM、LLaMA3、LLaMA2などで評価し、三十億パラメータ規模ではゼロショット七課題平均57.0%を得た。
 
 - **2025-08 · [GPT-OSS-20B: A Comprehensive Deployment-Centric Analysis of OpenAI's Open-Weight Mixture of Experts Model](2025-2508.16700-gpt-oss-20b-a-comprehensive-deployment-centric-analysis-of-openai-s-open.md)**  
   実装：[✓](https://github.com/deepdik/GPT-OSS-20B-analysis) ・ リポジトリ内被引用：0  

@@ -27,6 +27,8 @@ last_checked: '2026-10-28'
 reference_main_sha: 'ae765f79b8c091ddf2127e2849418aaa83793d1f'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 ## 書誌・位置づけ
