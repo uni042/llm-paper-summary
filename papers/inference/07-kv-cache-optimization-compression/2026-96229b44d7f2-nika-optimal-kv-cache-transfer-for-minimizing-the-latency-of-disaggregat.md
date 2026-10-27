@@ -1,35 +1,53 @@
 ---
-canonical_id: "DOI:10.5220/0014920900004039"
-doi: "10.5220/0014920900004039"
-title: "NIKA: Optimal KV Cache Transfer for Minimizing the Latency of Disaggregated LLM Inference"
-summary: "NIKAは事前入力処理と生成処理を別GPUに置く分離型LLM推論で、生成側へKVキャッシュを全量転送する時間が初回トークン遅延を押し上げる問題を扱う。事前入力GPUの全層計算と生成GPUの先頭層再計算を重ね、残る後段層のKVだけをNCCLで転送する。実測した全層事前入力時間F、全KV転送時間T、生成側の相対減速率Xから、転送比率を0または1−1/Xとする閉形式の規則を導出する。vLLM 0.8.4を拡張した評価ではV100二ノードとMI300X二基で、全KV転送方式比で初回トークン遅延を最大54%短縮した。異種GPU速度差は実際の異種GPU置換ではなく遅延挿入で模擬しており、改善はネットワーク帯域・入力長・生成長に依存する。"
-list_summary: "分離型LLM推論のKV転送と生成GPUでの部分再計算を層単位で組み合わせ、事前計測したGPU速度比と転送時間から最適比率を決めて初回トークン遅延を短縮する。"
+canonical_id: DOI:10.5220/0014920900004039
+doi: 10.5220/0014920900004039
+title: 'NIKA: Optimal KV Cache Transfer for Minimizing the Latency of Disaggregated LLM Inference'
+summary: NIKAは事前入力処理と生成処理を別GPUに置く分離型LLM推論で、生成側へKVキャッシュを全量転送する時間が初回トークン遅延を押し上げる問題を扱う。事前入力GPUの全層計算と生成GPUの先頭層再計算を重ね、残る後段層のKVだけをNCCLで転送する。実測した全層事前入力時間F、全KV転送時間T、生成側の相対減速率Xから、転送比率を0または1−1/Xとする閉形式の規則を導出する。vLLM 0.8.4を拡張した評価ではV100二ノードとMI300X二基で、全KV転送方式比で初回トークン遅延を最大54%短縮した。異種GPU速度差は実際の異種GPU置換ではなく遅延挿入で模擬しており、改善はネットワーク帯域・入力長・生成長に依存する。
+list_summary: 分離型LLM推論のKV転送と生成GPUでの部分再計算を層単位で組み合わせ、事前計測したGPU速度比と転送時間から最適比率を決めて初回トークン遅延を短縮する。
 authors:
-  - "Chih Tai Tsai"
-  - "Zhan-Wei Wu"
-  - "Yi-Syuan Ke"
-  - "Sao-Hsuan Lin"
-  - "Jerry Chou"
-published: "2026-05"
-publication: "Proceedings of the 16th International Conference on Cloud Computing and Services Science (CLOSER 2026), pp. 301–308"
-publication_type: "conference"
-publication_status: "published"
-source: "https://www.scitepress.org/Papers/2026/149209/149209.pdf"
+- Chih Tai Tsai
+- Zhan-Wei Wu
+- Yi-Syuan Ke
+- Sao-Hsuan Lin
+- Jerry Chou
+published: 2026-05
+publication: Proceedings of the 16th International Conference on Cloud Computing and Services Science (CLOSER 2026), pp. 301–308
+publication_type: conference
+publication_status: published
+source: https://www.scitepress.org/Papers/2026/149209/149209.pdf
 sources:
-  - "https://www.scitepress.org/Papers/2026/149209/149209.pdf"
-  - "https://www.scitepress.org/publishedPapers/2026/149209/pdf/index.html"
-  - "https://www.scitepress.org/PublishedPapers/2026/149209/"
-implementation: "vLLM v0.8.4の分離型推論経路を拡張。llama.pyの層範囲指定による部分forward、NCCL send/recvの層範囲指定、オフラインF/T/X計測と転送比率決定を実装。実GPUは二ノードV100および単一ノード二基MI300X。異種速度比Xは部分forward時間を測った後に較正したsleepを挿入して模擬。公開コードの公式URLは本文から確認できない。"
+- https://www.scitepress.org/Papers/2026/149209/149209.pdf
+- https://www.scitepress.org/publishedPapers/2026/149209/pdf/index.html
+- https://www.scitepress.org/PublishedPapers/2026/149209/
+implementation: vLLM v0.8.4の分離型推論経路を拡張。llama.pyの層範囲指定による部分forward、NCCL send/recvの層範囲指定、オフラインF/T/X計測と転送比率決定を実装。実GPUは二ノードV100および単一ノード二基MI300X。異種速度比Xは部分forward時間を測った後に較正したsleepを挿入して模擬。公開コードの公式URLは本文から確認できない。
 code: null
-last_checked: "2026-10-27"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-27T19:32:14+09:00"
-worker_run_key: "20261027-1932-scheduled-chat-30/r01"
-reference_main_sha: "597531a4d627cb2eca4eb9565fe236cd824dfdf7"
+last_checked: '2026-10-27'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-27T19:32:14+09:00'
+worker_run_key: 20261027-1932-scheduled-chat-30/r01
+reference_main_sha: 597531a4d627cb2eca4eb9565fe236cd824dfdf7
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2504.03775
+- canonical_id: arXiv:2406.19707
+- canonical_id: arXiv:2401.09670
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2502.07903
+- canonical_id: DOI:10.1145/3676641.3715996
+- canonical_id: arXiv:2411.17089
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2408.08147
+- canonical_id: DOI:10.1145/3689031.3696072
+references_checked_at: '2026-10-27'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # NIKA：分離型LLM推論でKV転送と部分再計算を最適配分する

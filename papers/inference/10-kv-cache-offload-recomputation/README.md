@@ -375,7 +375,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。
 
 - **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
-  実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：17  
   KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
 
 - **2025-03 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
@@ -485,7 +485,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   InstAttention（プレプリント名InstInfer）は、長文脈・大バッチの大規模言語モデル推論で、鍵・値キャッシュをSSDへ退避するとGPUへの読戻し転送が律速になる問題を扱う。OPT-13BをNVIDIA A6000と組み合わせた評価では、従来のSSD退避システムFlexGenと比べて最大11.1倍の処理量を報告する。
 
 - **2024-10 · [Fast State Restoration in LLM Serving with HCache](2024-2410.05004-hcache-fast-state-restoration-llm-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   GPUから追い出した会話状態を、巨大なKVキャッシュそのものでも元トークン列でもなく中間活性として保存し、I/Oと再計算を重ねて高速にKVへ復元する状態再利用方式。
 
 - **2024-10 · [Compute Or Load KV Cache? Why Not Both?](2024-2410.03065-cake-compute-or-load-kv-cache.md)**  
