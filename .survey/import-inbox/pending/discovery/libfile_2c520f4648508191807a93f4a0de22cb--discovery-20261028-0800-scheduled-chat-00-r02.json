@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261028-0800-scheduled-chat-00/r02",
+  "reference_main_sha": "58c6583be472e671de30541c2ed81462d97d31e4",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.17417",
+      "identity_tokens": [
+        "arXiv:2507.17417",
+        "DOI:10.48550/arXiv.2507.17417",
+        "title:a comprehensive evaluation on quantization techniques for large language models"
+      ],
+      "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
+      "reason": "複数の低ビットPTQを同一条件で比較し、事前の外れ値抑制変換と量子化誤差緩和を分離して分析する。回転・スケーリングの併用、粒度と対称性、MXFP4/NVFP4の尺度形式を実験比較し、INT4では回転が有効でもFP4系では利得が小さいという差を報告する。推論量子化手法の比較・設計に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2507.17417",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.13251",
+      "identity_tokens": [
+        "arXiv:2502.13251",
+        "DOI:10.48550/arXiv.2502.13251",
+        "title:neural attention search"
+      ],
+      "title": "Neural Attention Search",
+      "reason": "各トークンを全履歴に残すGlobal、次のGlobalまで残すLocal、一定窓だけ残すSliding Windowに分類し、学習可能な注意マスクを使って保持期間を探索するNAtSを提案する。学習済みLLMの微調整と新規Transformerの両条件で推論KVキャッシュ容量を削減するため、長文脈推論メモリ管理に直接関わる。",
+      "source_url": "https://arxiv.org/abs/2502.13251",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01126",
+      "identity_tokens": [
+        "arXiv:2608.01126",
+        "DOI:10.48550/arXiv.2608.01126",
+        "title:spatial prefix caching for wireless edge llm inference a stochastic geometry and queueing framework"
+      ],
+      "title": "Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework",
+      "reason": "無線エッジの複数GPUノードで接頭辞KVキャッシュの再利用と距離・通信遅延・待ち行列・静的キャッシュ容量を同時に扱う。接頭辞森林と祖先閉包キャッシュプロファイルを用いた確率幾何・固定点待ち行列モデルでノード選択と配置分布を最適化する。近隣ノードや長いキャッシュが必ずしもTTFT最適とは限らないことを解析・モンテカルロで示す。",
+      "source_url": "https://arxiv.org/abs/2608.01126",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.10820",
+      "identity_tokens": [
+        "arXiv:2606.10820",
+        "DOI:10.48550/arXiv.2606.10820",
+        "title:k forcing joint next k token decoding via push forward language modeling"
+      ],
+      "title": "K-Forcing: Joint Next-K-Token Decoding via Push-Forward Language Modeling",
+      "reason": "独立一様ノイズから次のkトークンの結合分布を一回のforwardで生成するpush-forward写像を、自己強制蒸留で段階的に学習する。投機的復号の可変受理長と異なり固定長出力でバッチ処理しやすく、LM1B/OpenWebTextの因果Transformerでk=4時に自己回帰比2.4〜3.5倍の高速化と一定の品質低下を報告する。",
+      "source_url": "https://arxiv.org/abs/2606.10820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.16162",
+      "identity_tokens": [
+        "arXiv:2505.16162",
+        "DOI:10.48550/arXiv.2505.16162",
+        "title:knn ssd enabling dynamic self speculative decoding via nearest neighbor layer set optimization"
+      ],
+      "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+      "reason": "自己投機的復号でドラフト時に省略するTransformer層の組が入力ドメインの変化に敏感な問題を、K近傍探索で入力に適したスキップ層集合を選び直して緩和する。追加のドラフトモデルを用いずに複数タスク・モデルで1.3〜1.6倍のLLM推論高速化を報告し、入力適応型投機的復号に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2505.16162",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00623",
+      "identity_tokens": [
+        "arXiv:2610.00623",
+        "DOI:10.48550/arXiv.2610.00623",
+        "title:hawk rethinking multimodal drafting for speculative decoding"
+      ],
+      "title": "HAWK: Rethinking Multimodal Drafting for Speculative Decoding",
+      "reason": "VLM投機的復号で浅いドラフトモデルが画像特徴を扱いにくく、自己提案後のターゲット予測の変化を学習できない問題に対し、ターゲット層表現の選択・圧縮視覚特徴の供給・提案軌跡を考慮した蒸留を組み合わせる。SmolVLM-256Mの10ベンチマークでEAGLE-3比の受理長と速度を改善し、マルチモーダル推論のデコード加速に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2610.00623",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.07389",
+      "identity_tokens": [
+        "arXiv:2504.07389",
+        "DOI:10.48550/arXiv.2504.07389",
+        "title:task circuit quantization leveraging knowledge localization and interpretability for compression"
+      ],
+      "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
+      "reason": "フル精度モデルと一様量子化モデルの重み差・勾配からタスク性能に敏感な重み回路を特定し、そこだけ16bitで保持する混合精度PTQを提案する。Llama-3/Qwen2.5のQA・数学・SQLで低ビット量子化の精度を改善し、Llama-3-8Bでは平均3.1bitでFP16 MMLU性能の96%を回復する。推論重み圧縮の直接的技術研究。",
+      "source_url": "https://arxiv.org/abs/2504.07389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36722",
+      "identity_tokens": [
+        "arXiv:2609.36722",
+        "DOI:10.48550/arXiv.2609.36722",
+        "title:attuner recomputation free kv cache reuse via query side adaptation"
+      ],
+      "title": "ATTUNER: Recomputation-Free KV Cache Reuse via Query-Side Adaptation",
+      "reason": "エージェントが技能・文書・記憶を個別符号化したKVキャッシュから選択する際の品質低下を、保存済みKVの再計算ではなくオンラインQuery射影の低ランク適応で修復する。フル文脈prefillの出力分布を蒸留し、Qwen3-4B/8Bで追加パラメータ0.05%未満、最大3.73倍の高速化を報告する。worklist旧題名と同じarXiv identity。",
+      "source_url": "https://arxiv.org/abs/2609.36722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29913",
+      "identity_tokens": [
+        "arXiv:2609.29913",
+        "DOI:10.48550/arXiv.2609.29913",
+        "title:milo efficient many shot in context learning with block wise low rank compression"
+      ],
+      "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+      "reason": "数千例を用いるmany-shot文脈のKVキャッシュを例のブロック単位で低ランク圧縮し、ブロックの情報エントロピーに応じて再構成ランク予算を配分する。Qwen2.5でKV容量最大50%削減とスループット1.8倍を報告し、オンラインサービングと端末推論のKVメモリ壁に直接取り組む。",
+      "source_url": "https://arxiv.org/abs/2609.29913",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 25
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1250",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1250",
+        "title:question tells you where the answer is intention aware long context kv cache compression"
+      ],
+      "title": "Question Tells You Where the Answer Is: Intention-aware Long-Context KV Cache Compression",
+      "reason": "質問の意図を表すトークンを注意分布の距離から識別し、その注意をブロック単位で累積して重要KVブロックだけを保持するIntentKVを提案する。ACL 2026一次要旨は128Kから2KへのKV削減、標準設定比6.3倍の復号高速化と7.8倍のメモリ効率改善を報告し、長文脈推論キャッシュ削減に直接関わる。",
+      "source_url": "https://aclanthology.org/2026.acl-long.1250/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T08:03:19+09:00",
+      "last_checked_at": "2026-10-28T08:03:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 27
+    }
+  ]
+}
