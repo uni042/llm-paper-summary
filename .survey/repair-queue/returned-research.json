@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T10:15:05+00:00",
+  "generated_at": "2026-10-27T10:29:52+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 63,
+  "count": 62,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1404,35 +1404,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e78028a21ccf--file_0000000076f881f5bf967cb23ae40857--2026-2608.14290-intern-s2-mobius-shared-memory-latent-reasoning-research-20261026-0230-scheduled-chat-30-r01-v2.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e78028a21ccf--file_0000000076f881f5bf967cb23ae40857--2026-2608.14290-intern-s2-mobius-shared-memory-latent-reasoning-research-20261026-0230-sched.json",
       "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2506.11044",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-26T07:08:46+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 307 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6165,
-        "body_paragraphs": 38,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 307,
-        "limitation_chars": 744,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 307 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c9f17108b2be--libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c9f17108b2be--libfile_298de3814b9c8191988f8db9967e206c--2025-2506.11044-q2n-nullspace-ptq-research-20261026-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261026-1530-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2508.18376",

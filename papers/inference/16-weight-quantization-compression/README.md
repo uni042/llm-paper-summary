@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（166本）
+## 自動生成の論文一覧（167本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -421,6 +421,10 @@
 - **2025-06 · [ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models](2025-2506.13472-rosaq-rotation-based-saliency-aware-weight-quantization-for-efficiently-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ROSAQ（Rotation-based Saliency-Aware 重み 量子化）は、言語モデルの重みを3〜4bitへ圧縮するときに、すべての重みを一律に低精度化するのではなく、校正活性の主成分方向に沿った重要チャネルだけをFP16で保持する事後量子化方式である。
+
+- **2025-06 · [Boost Post-Training Quantization via Null Space Optimization for Large Language Models](2025-2506.11044-boost-post-training-quantization-via-null-space-optimization-for-large-l.md)**  
+  実装：[✓](https://github.com/zjq0455/q2n) ・ リポジトリ内被引用：0  
+  重みだけを量子化すると、浮動小数点重みWと量子化後重みWqの間に数値差が生じる。しかしLLMの実際の出力誤差は、重みの差そのものではなく、入力活性Xに作用した (W−Wq)X によって決まる。
 
 - **2025-05 · [Optimal Formats for Weight Quantisation](2025-2505.12988-optimal-formats-for-weight-quantisation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
