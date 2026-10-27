@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-27T15:29:39.618783+00:00",
+  "generated_at": "2026-10-27T15:52:52.218173+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 10,
+  "count": 12,
   "worker_counts": {
     "scheduled-chat-00": 4,
-    "scheduled-chat-30": 3,
-    "scheduled-chat-45": 3
+    "scheduled-chat-30": 4,
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -62,21 +62,45 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md",
-      "canonical_id": "arXiv:2407.03637",
-      "title": "QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering",
-      "file_bytes": 10773,
-      "source_sha256": "5569c90aa2cdf758a3b0c61f51ea46d137b31af500d688b24f3e5a5a77b8ef4b",
-      "source_git_blob_sha": "bf538306e221e4e805e4fe7475630b2f9dd03041",
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md",
+      "canonical_id": "arXiv:2505.08620",
+      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
+      "file_bytes": 10831,
+      "source_sha256": "63fda56399979076a4129d338252b49e44c4a8ca13a52712c4b55c0a91bb9801",
+      "source_git_blob_sha": "9befbd548511fd5cbdac52de27d9033d60006360",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.85112,
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.78167,
       "quality_metrics": {
-        "body_chars": 3189,
-        "method_chars": 763,
-        "evaluation_chars": 894,
-        "limitation_chars": 247
+        "body_chars": 3430,
+        "method_chars": 1214,
+        "evaluation_chars": 799,
+        "limitation_chars": 203
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 78.2% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 78.2% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md",
+      "canonical_id": "arXiv:2502.19335",
+      "title": "GATEKEEPER: Improving Model Cascades Through Confidence Tuning",
+      "file_bytes": 11354,
+      "source_sha256": "0c0836c7828e6caf862452bef0ce873d94d31bafccd6e1d0ab5d25d1757fcd62",
+      "source_git_blob_sha": "3e538b199f381d41d4a62953d06dedc9effb82de",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.865833,
+      "quality_metrics": {
+        "body_chars": 3426,
+        "method_chars": 859,
+        "evaluation_chars": 1025,
+        "limitation_chars": 281
       },
       "mechanical_failures": [],
       "warnings": []
@@ -102,12 +126,32 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md",
+      "canonical_id": "arXiv:2407.03637",
+      "title": "QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering",
+      "file_bytes": 11685,
+      "source_sha256": "ccbb3199c709db6931cb1fa73cdd1690279aa10819aadfdbfd66fd8af446bd89",
+      "source_git_blob_sha": "a6d24ab45b1beb43a5c44f646839284e1ff2fd71",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.85112,
+      "quality_metrics": {
+        "body_chars": 3189,
+        "method_chars": 763,
+        "evaluation_chars": 894,
+        "limitation_chars": 247
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2509.19592-frame-stacked-local-transformers-for-efficient-multi-codebook-speech-gen.md",
       "canonical_id": "arXiv:2509.19592",
       "title": "Frame-Stacked Local Transformers For Efficient Multi-Codebook Speech Generation",
-      "file_bytes": 12108,
-      "source_sha256": "fb8949c484495f8b5353e064a05874296d13c6bbfe512cf4777a380f88a10324",
-      "source_git_blob_sha": "ae0401fdc459bd2c1920890d677787bc8fb0548f",
+      "file_bytes": 12631,
+      "source_sha256": "57d222c5cce45bc00736da52dc77d2b6dd099a26aa45f9e40a5597da7b98e2ad",
+      "source_git_blob_sha": "a2e66d5668a8e8885056ee3a49293ca94b618821",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
