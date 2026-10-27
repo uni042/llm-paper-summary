@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（764本）
+## 自動生成の論文一覧（766本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2264,6 +2264,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   CompLLMは、LLMへ入力する長い文書を、短いセグメントごとに独立して連続ベクトルへ圧縮する方式である。標準設定は最大20入力トークンを10個のCEへ変換する2倍圧縮である。
 
+- **2025-09 · [ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference](2025-2510.02361-chunkllm-a-lightweight-pluggable-framework-for-accelerating-llms-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ChunkLLMは、既存Transformerのbackboneを固定したまま軽量なadapterを付加し、長文のどのchunkのKVを保持するかを学習する方式である。Qwen2.5-7BのLongBenchでは、通常モデルの平均44.13に対してChunkLLMは43.53、KV保持率は48.58%である。
+
 - **2025-08 · [GPT-OSS-20B: A Comprehensive Deployment-Centric Analysis of OpenAI's Open-Weight Mixture of Experts Model](2025-2508.16700-gpt-oss-20b-a-comprehensive-deployment-centric-analysis-of-openai-s-open.md)**  
   実装：[✓](https://github.com/deepdik/GPT-OSS-20B-analysis) ・ リポジトリ内被引用：0  
   MoEは全重みの一部だけを各トークンで活性化するため、演算量はDenseの同規模モデルより小さくなり得る。しかし、未活性のエキスパート重みがメモリから消えるわけではなく、ルーティング、メモリアクセス、KV保持、プリフィルの費用も発生する。GPUのCUDA allocatorピークメモリはそれぞれ43,461MB、63,650MB、66,459MB。
@@ -2315,6 +2319,10 @@
 - **2025-06 · [MoTE: Mixture of Ternary Experts for Memory-efficient Large Multimodal Models](2025-2506.14435-mote-mixture-of-ternary-experts-for-memory-efficient-large-multimodal-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MoTE（Mixture of Ternary Experts）は、画像と言語を扱うマルチモーダル言語モデルを密な事前学習済みモデルからMoEへ拡張する際、既存のFFNを高精度の共有専門家として保持し、新たな経路選択専門家だけを三値の重みで学習する方式である。
+
+- **2025-06 · [Don't Pay Attention](2025-2506.11305-don-t-pay-attention.md)**  
+  実装：[✓](https://github.com/rimads/avey-dpa) ・ リポジトリ内被引用：0  
+  本論文は、Transformerの自己注意とRNN系の再帰状態の双方を用いず、長い系列から関連部分だけを選択してトークン間の相互作用を計算する言語モデルAveyを提案する。一方、一般NLPのゼロショット平均精度は1.52BではTransformer++の52.54%に対してAveyは51.53%で、全面的な品質優位ではない。
 
 - **2025-06 · [Attention2D: Communication Efficient Distributed Self-Attention Mechanism](2025-2503.15758-attention2d-communication-efficient-distributed-self-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

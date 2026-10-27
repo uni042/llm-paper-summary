@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（154本）
+## 自動生成の論文一覧（155本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -389,6 +389,10 @@
 - **2024-12 · [RILQ: Rank-Insensitive LoRA-based Quantization Error Compensation for Boosting 2-bit Large Language Model Accuracy](2024-2412.01129-rilq-rank-insensitive-lora-based-quantization-error-compensation-for-boo.md)**  
   実装：[✓](https://github.com/aiha-lab/RILQ) ・ リポジトリ内被引用：1  
   重み量子化（重み 量子化）は、FP16などで保持していた行列を低ビット表現へ写像してモデルの重み記憶量を削減する。LLaMA-3-8BのQuIP#量子化では常識推論5課題平均が52.48%→60.61%、WikiText-2の困惑度（perplexity; PPL）が12.74→9.39となった。
+
+- **2025-10 · [Neural Weight Compression for Language Models](2025-2510.11234-neural-weight-compression-for-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Neural 重み Compression（NWC）は、LLMの重みを手作業で設計した一様量子化やHadamard回転だけで圧縮するのではなく、重み分布からencoderとdecoderを学習して圧縮する方式である。
 
 - **2025-06 · [ROSAQ: Rotation-based Saliency-Aware Weight Quantization for Efficiently Compressing Large Language Models](2025-2506.13472-rosaq-rotation-based-saliency-aware-weight-quantization-for-efficiently-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
