@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（711本）
+## 自動生成の論文一覧（715本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1992,6 +1992,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意機構は、履歴のkey/valueを固定サイズの状態行列に集約し、系列長に対して線形時間・一定の再帰状態メモリで生成できる。約1.5Bパラメータを100B トークンで学習した比較で、RDNはGated DeltaNet（GDN）のWikiText PPL 17.27から16.57へ、8課題平均正解率46.03%から47.20%へ改善した。
 
+- **2025-09 · [Efficient Large Language Models with Zero-Shot Adjustable Acceleration](2025-2509.01190-efficient-large-language-models-with-zero-shot-adjustable-acceleration.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論時に残すトークン数を減らす方法は、計算量とメモリ使用量を減らせるが、学習時と異なる削除率を適用すると品質が不安定になりやすい。KachueeとSharifkhaniは、注意計算で出力への寄与が小さい隠れ活性を層ごとに間引く動的 Resource 注意機構と、微調整中に活性保持率をランダムに変える学習方針を組み合わせる。
+
 - **2025-09 · [Effective Model Pruning: Measuring the Redundancy of Model Components](2025-2509.25606-effective-model-pruning-measuring-the-redundancy-of-model-components.md)**  
   実装：[✓](https://github.com/noMushroomw/Effective-model-pruning) ・ リポジトリ内被引用：0  
   ニューラルネットワークの枝刈りでは、重要度の低い重みや注意ヘッドを削除するためにMagnitude、Wanda、勾配感度などのスコアを用いる。例えばLLMで全層一律50%の非構造化枝刈りを指定すると、スコアの分布が集中している層と均一な層へ同じ予算を押し付ける。
@@ -2180,6 +2184,10 @@
   実装：[✓](https://github.com/THUNLP/cost-optimal-gqa) ・ リポジトリ内被引用：0  
   Grouped-Query 注意機構（GQA）は複数のquery headでKey/Valueを共有し、通常のMulti-Head 注意機構（MHA）よりKVキャッシュ容量と読み出し量を抑える。
 
+- **2025-02 · [Round Attention: A Novel Round-Level Attention Mechanism to Accelerate LLM Inference](2025-2502.15294-round-attention-a-novel-round-level-attention-mechanism-to-accelerate-ll.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  対話型LLMを長期間利用すると、過去の質問・回答を含むKVキャッシュが増え、GPUメモリ容量とCPUからの転送帯域が推論の制約になる。通常のトークン単位KV圧縮や選択は、注意スコアを層ごとに評価したり、小さなKV片を何度も転送したりする費用を生む。
+
 - **2025-02 · [LIFT: A Novel Framework for Enhancing Long-Context Understanding of LLMs via Long Input Fine-Tuning](2025-2502.14644-lift-a-novel-framework-for-enhancing-long-context-understanding-of-llms-.md)**  
   実装：[✓](https://github.com/MuLabPKU/LIFT) ・ リポジトリ内被引用：0  
   LIFT（Long Input 微調整）は、長い文書をそのままLLMの入力コンテキストへ入れる代わりに、文書から生成した質問・回答（QA）で短文脈モデルをテスト時に微調整し、文書の情報をモデルのパラメータへ内在化させる方式である。
@@ -2223,6 +2231,10 @@
 - **2024-12 · [Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners](2024-2412.04917-continuous-speech-tokens-makes-llms-robust-multi-modality-learners.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声対話を言語モデルへ統合する際、文字列と同様に音声も離散トークンIDへ変換し、次のIDを分類する方式が広く用いられる。Mini-Omniの10.84に対しFlow-Omniは8.81で、絶対2.03ポイント、相対約18.7%の低下となる。
+
+- **2024-11 · [Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference](2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Nagらはこの部分を、重み付き積和演算ではなくルックアップテーブル（LUT）の参照と条件付き加算を使うDifferentiable Weightless Network（DWN）で置換し、Quasi-Weightless Transformer（QuWeiT）を提案する。
 
 - **2024-11 · [LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters](2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2307,7 +2319,7 @@
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
 
 - **2024-08 · [Mini-Omni: Language Models Can Hear, Talk While Thinking in Streaming](2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md)**  
-  実装：[✓](https://github.com/gpt-omni/mini-omni) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/gpt-omni/mini-omni) ・ リポジトリ内被引用：12  
   Mini-Omniは、言語モデルの応答文を最後まで生成してから独立した音声合成器へ渡す従来の直列方式を避け、文字トークンと音声トークンを一つの自己回帰生成過程の中で並列に出力する音声対話モデルである。
 
 - **2024-02 · [Training-Free Long-Context Scaling of Large Language Models](2024-2402.17463-training-free-long-context-scaling-of-large-language-models.md)**  
@@ -2493,6 +2505,10 @@
 - **2024-10 · [Approximately Aligned Decoding](2024-2410.01103-approximately-aligned-decoding.md)**  
   実装：[✓](https://github.com/amazon-science/Approximately-Aligned-Decoding) ・ リポジトリ内被引用：0  
   Approximately Aligned Decoding（AprAD）は、大規模言語モデルの生成途中で禁止文字、構文違反、存在しないAPIの呼び出しなどを検出したとき、生成済み接頭辞をどこまで残して再開するかを投機的サンプリング（投機的 sampling）の受理・棄却計算で決める方式である。
+
+- **2024-09 · [Internalizing ASR with Implicit Chain of Thought for Efficient Speech-to-Speech Conversational LLM](2024-2409.17353-internalizing-asr-with-implicit-chain-of-thought-for-efficient-speech-to.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  音声入力から音声出力を生成する大規模言語モデルでは、音声を文字へ転写し、文字で回答を考え、再び音声へ変換する方式が使われる。RTX 3090を使った測定では、初回出力音声トークンの遅延が1.09秒から0.87秒へ低下した。
 
 - **2024-09 · [Hyper-Compression: Model Compression via Hyperfunction](2024-2409.00592-hyper-compression-model-compression-via-hyperfunction.md)**  
   実装：[✓](https://github.com/Juntongkuki/Hyper-Compression) ・ リポジトリ内被引用：0  
@@ -2813,11 +2829,11 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：307  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：306  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：238  
+  実装：✓ ・ リポジトリ内被引用：237  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  

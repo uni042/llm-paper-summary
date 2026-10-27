@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T18:15:49+00:00",
+  "generated_at": "2026-10-27T18:57:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 74,
+  "count": 73,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1631,35 +1631,6 @@
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2502.15294",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T14:33:22+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 104 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6497,
-        "body_paragraphs": 39,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 104,
-        "limitation_chars": 830,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 104 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-361df303d96c--libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-361df303d96c--libfile_34744630c77c8191b32835920bf2c75d--2025-2502.15294-round-attention-dialogue-level-kv-offload-research-20261027-2042-schedule.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2508.06084",
       "title": null,
       "source_url": null,
@@ -1931,8 +1902,8 @@
     },
     {
       "canonical_id": "arXiv:2505.08620",
-      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
-      "source_url": "https://arxiv.org/pdf/2505.08620",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T18:15:22+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",

@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（504本）
+## 自動生成の論文一覧（505本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -789,6 +789,10 @@
 - **2026-07 · [PDD: Unleashing Economical and Flexible Heterogeneous LLM Inference via Cross-Datacenter Prefill-Decode Disaggregation](2026-2609.13161-pdd-cross-datacenter-prefill-decode-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   広域KV転送中だけ近傍の中継GPUでデコードを先行し、遠隔GPUへトークンIDで引き継ぐ三段PD分離により、データセンター間異種推論のTTFTと費用効率を改善する。
+
+- **2026-07 · [OpenTela: Unifying Decentralized Computing Resources for Heterogeneous LLM Serving (Operational Systems)](2026-a3ac377502ac-opentela-unifying-decentralized-computing-resources-for-heterogeneous-ll.md)**  
+  実装：[✓](https://github.com/eth-easl/opentela) ・ リポジトリ内被引用：0  
+  中央の特権的なクラスタ管理者を置かず、既存のHPCジョブ管理方式を変えずに導入できることが設計目標である。GH200でQwen3-1.7Bを提供した実験では、入口での認証・選択・転送等の制御面による追加TTFTが到着率1/4/16 RPSで約1.69/1.68/1.42msであり、制御面が存在する代償を実測している。
 
 - **2026-07 · [Online Linear Programming for Multi-Objective Routing in LLM Serving](2026-2607.03948-online-linear-programming-multi-objective-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1715,7 +1719,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：610  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：609  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -1969,7 +1973,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1427  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1426  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  
@@ -2007,7 +2011,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-07 · [Orca: A Distributed Serving System for Transformer-Based Generative Models](2022-osdi22-orca-iteration-level-scheduling-selective-batching.md)**  
-  実装：✓ ・ リポジトリ内被引用：588  
+  実装：✓ ・ リポジトリ内被引用：587  
   出力トークンを1個生成するたびにスケジューラへ制御を戻し、終わった要求を外して新着要求を追加する。さらに、長さの違う要求を同じバッチで処理できるよう、注意機構だけを要求ごとに分け、それ以外の演算はトークン単位でまとめて実行する分散LLMサービングシステム。
 
 - **2022-04 · [Accelerating Attention through Gradient-Based Learned Runtime Pruning](2022-2204.03227-accelerating-attention-through-gradient-based-learned-runtime-pruning.md)**  

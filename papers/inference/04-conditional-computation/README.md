@@ -333,7 +333,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   Transformerの順伝播層（feed-順伝播 network、FFN）は、自己注意層で得た表現を更新するが、どのような内部操作が次トークンの予測を形作るかは分かりにくい。本論文は、FFNが出力するベクトルを、個々の値ベクトルに入力依存の係数を掛けた小さな加算成分の和として分解し、各成分が語彙中のどのトークンを押し上げるかを調べる。
 
 - **2022-03 · [Pyramid-BERT: Reducing Complexity via Successive Core-set based Token Selection](2022-2203.14380-pyramid-bert-reducing-complexity-via-successive-core-set-based-token-sel.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：0  
   提案するPyramid-BERTは、各エンコーダ層の間で代表的なトークン表現の部分集合を選び、層が深くなるにつれて系列長を減らす。BERT-baseを用いたGLUEの開発集合では、推論時間を約3倍高速化する系列長構成で、原型の平均81.5に対して提案手法の最良設定が80.0を記録した。
 
 ### 6年前（2020-11〜2021-10）
