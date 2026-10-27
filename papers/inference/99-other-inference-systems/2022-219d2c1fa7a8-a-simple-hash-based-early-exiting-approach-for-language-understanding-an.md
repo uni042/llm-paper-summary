@@ -33,6 +33,8 @@ reference_main_sha: "f531a819465d6c0cc86407f0c087f3bd7659d51a"
 returned_research_repair: true
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # A Simple Hash-Based Early Exiting Approach For Language Understanding and Generation（HASHEE）

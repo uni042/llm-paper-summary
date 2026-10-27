@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "225c0095a6b213663fbf1691c713cd79668a06781458036c81688f709ac217c3",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_0b87e6b6cf88819184a09f1c5a9fcc47--2024-2410.04211-ms-attention-crd-ntk-context-extension-research-20261028-0430-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2410.04211",
+  "worker_completed_at": "2026-10-28T04:34:38+09:00",
+  "worker_run_key": "20261028-0430-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6827,
+    "body_paragraphs": 36,
+    "method_chars": 2247,
+    "method_paragraphs": 12,
+    "evaluation_chars": 162,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 162 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 162 < 500"
+  ],
+  "processed_at": "2026-10-27T20:03:50+00:00"
+}

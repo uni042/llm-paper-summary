@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T18:57:33+00:00",
+  "generated_at": "2026-10-27T20:08:05+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 73,
+  "count": 72,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1685,33 +1685,6 @@
       "worker_run_key": "20261027-2230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2022.findings-acl.189",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T14:42:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 457 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5306,
-        "body_paragraphs": 32,
-        "method_chars": 1062,
-        "method_paragraphs": 8,
-        "evaluation_chars": 457,
-        "limitation_chars": 721,
-        "insufficiency_flags": [
-          "評価説明量 457 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e4e5de9c0ae2--libfile_6b21c4d4c5a88191b8d5fa040a937eda--2022-doi-10.18653-v1-2022.findings-acl.189-hashee-hash-early-exit-research-20261027-1948-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e4e5de9c0ae2--libfile_6b21c4d4c5a88191b8d5fa040a937eda--2022-doi-10.18653-v1-2022.findings-acl.189-hashee-hash-early-exit-research-20261027-1948-.json",
-      "worker_run_key": "20261027-1948-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2209.01188",
       "title": null,
       "source_url": null,
@@ -1874,61 +1847,60 @@
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2503.19950",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T17:16:41+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 152 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6923,
-        "body_paragraphs": 39,
-        "method_chars": 2019,
-        "method_paragraphs": 11,
-        "evaluation_chars": 152,
-        "limitation_chars": 771,
-        "insufficiency_flags": [
-          "評価説明量 152 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f20c9daa8dfe--libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f20c9daa8dfe--libfile_afe60a156448819191f7c6137a8c6dc4--2025-2503.19950-logquant-log-distributed-2bit-kv-research-20261027-2042-scheduled-chat-45.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2505.08620",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T18:15:22+00:00",
-      "return_count": 4,
+      "canonical_id": "arXiv:2410.04211",
+      "title": "Correlation-Aware Select and Merge Attention for Efficient Fine-Tuning and Context Length Extension",
+      "source_url": "https://arxiv.org/html/2410.04211v1",
+      "returned_at": "2026-10-27T20:03:50+00:00",
+      "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700",
-        "16KB未満再監査: 評価説明量 0 < 500"
+        "説明不足トリガー: 評価説明量 162 < 500"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4200,
-        "body_paragraphs": 20,
-        "method_chars": 0,
-        "method_paragraphs": 0,
+        "body_chars": 6827,
+        "body_paragraphs": 36,
+        "method_chars": 2247,
+        "method_paragraphs": 12,
+        "evaluation_chars": 162,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 162 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0b87e6b6cf88819184a09f1c5a9fcc47--2024-2410.04211-ms-attention-crd-ntk-context-extension-research-20261028-0430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0b87e6b6cf88819184a09f1c5a9fcc47--2024-2410.04211-ms-attention-crd-ntk-context-extension-research-20261028-0430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.19950",
+      "title": "LogQuant: Log-Distributed 2-Bit Quantization of KV Cache with Superior Accuracy Preservation",
+      "source_url": "https://arxiv.org/pdf/2503.19950v1",
+      "returned_at": "2026-10-27T20:04:52+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4954,
+        "body_paragraphs": 25,
+        "method_chars": 1489,
+        "method_paragraphs": 7,
         "evaluation_chars": 0,
         "limitation_chars": 0,
         "insufficiency_flags": [
-          "手法説明量 0 < 700",
           "評価説明量 0 < 500",
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4371be74b893--libfile_89353127dfbc819186f040982ce58a61--2025-2505.08620-resource-efficient-quantization-under16kb-reaudit-20261028-0145-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4371be74b893--libfile_89353127dfbc819186f040982ce58a61--2025-2505.08620-resource-efficient-quantization-under16kb-reaudit-20261028-0145-scheduled.json",
-      "worker_run_key": "20261028-0145-scheduled-chat-45/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_364cef3f5ef88191889ce837a02421a6--2025-2503.19950-logquant-kv-logarithmic-2bit-returned-repair-20261028-0400-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261028-0400-scheduled-chat-00/r01"
     }
   ]
 }

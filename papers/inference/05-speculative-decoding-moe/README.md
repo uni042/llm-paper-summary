@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（307本）
+## 自動生成の論文一覧（308本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -925,6 +925,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-10 · [Polybasic Speculative Decoding Through a Theoretical Perspective](2025-2510.26527-polybasic-speculative-decoding-through-a-theoretical-perspective.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小さく速いモデルが将来のトークンを先に提案し、大きなモデルがまとめて検証することで、最終モデルを毎トークン逐次実行する回数を減らす技術である。一方、ドラフト器を大きくすると提案自体の費用が増え、検証回数削減の利得を失う。
+
+- **2025-10 · [OWL: Overcoming Window Length-Dependence in Speculative Decoding for Long-Context Inputs](2025-2510.07535-owl-overcoming-window-length-dependence-in-speculative-decoding-for-long.md)**  
+  実装：[✓](https://anonymous.4open.science/r/owl-BFB8) ・ リポジトリ内被引用：0  
+  OWLは、投機的復号（投機的復号）において、入力文脈がドラフトモデルの学習時の長さを超えると候補トークンの受理数が急減する問題を扱う。投機的復号は、小型のドラフトモデルが将来の複数トークンを予測し、大型の対象モデルがそれらをまとめて検証することで、対象モデルの逐次実行回数を減らす。
 
 - **2025-10 · [FastVLM: Self-Speculative Decoding for Fast Vision-Language Model Inference](2025-2510.22641-fastvlm-self-speculative-decoding-for-fast-vision-language-model-inferen.md)**  
   実装：[✓](https://anonymous.4open.science/r/SSD-575E/README.md) ・ リポジトリ内被引用：0  
