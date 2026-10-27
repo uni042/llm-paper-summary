@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（148本）
+## 自動生成の論文一覧（149本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -483,6 +483,10 @@
 - **2025-10 · [Adamas: Hadamard Sparse Attention for Efficient Long-Context Inference](2025-2510.18413-adamas-hadamard-sparse-attention-for-efficient-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Adamasは、長文脈LLMの復号時に、過去のすべてのKey/Value（KV）を読み込んで正確な注意を計算する代わりに、現在のQueryに関連する過去トークンだけを選択する疎注意方式である。
+
+- **2025-06 · [Lag-Relative Sparse Attention In Long Context Training](2025-2506.11498-lag-relative-sparse-attention-in-long-context-training.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文の対象は、長文脈の事後学習で使用する注意機構を、推論時のKVキャッシュ圧縮と整合させる方法である。
 
 - **2025-05 · [AnchorAttention: Difference-Aware Sparse Attention with Stripe Granularity](2025-2505.23520-anchorattention-difference-aware-sparse-attention-with-stripe-granularit.md)**  
   実装：[✓](https://github.com/yuzhouzhang9/Anchor-Attention) ・ リポジトリ内被引用：0  

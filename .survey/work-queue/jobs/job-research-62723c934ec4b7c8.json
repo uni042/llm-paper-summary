@@ -35,10 +35,15 @@
   "selection_reason": "LRSA/LagKVは遅延窓から重要KVを選んでchunkごとにprefillし、長文脈LLMでKV圧縮後の計算・メモリ負荷と性能劣化を抑える。",
   "semantic_scholar_id": "daa460783343e583d9b54342bc39665c6043ef2a",
   "source_url": "https://arxiv.org/abs/2506.11498",
-  "status": "ready",
+  "status": "superseded",
   "title": "Lag-Relative Sparse Attention In Long Context Training",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-27T01:02:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2025-2506.11498-lag-relative-sparse-attention-in-long-context-training.md",
+  "represented_canonical_id": "arXiv:2506.11498",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

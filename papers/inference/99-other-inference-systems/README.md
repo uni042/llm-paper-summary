@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（760本）
+## 自動生成の論文一覧（763本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2268,6 +2268,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   一方、GRIFFINなどの学習不要な方式は、プリフィル中に観測した活性から「生成中に使うニューロン」を決め、その固定マスクをデコードで再利用する。論文v2では、50% FFN疎化の長文生成でGRIFFINよりPPLを最大45.10%、Kullback–Leibler divergence（KLD）を最大25.73%減らした。
 
+- **2025-08 · [Attention Debiasing for Token Pruning in Vision–Language Models](2025-2508.17807-attention-debiasing-for-token-pruning-in-vision-language-models.md)**  
+  実装：[✓](https://github.com/intcomp/attention-bias) ・ リポジトリ内被引用：0  
+  多くの視覚トークンが冗長なので、言語モデルの初期層で重要度の低いトークンを捨てれば、以後の注意機構やKV保持の負荷を下げられる。
+
 - **2025-07 · [SpeLLM: Character-Level Multi-Head Decoding](2025-2507.16323-spellm-character-level-multi-head-decoding.md)**  
   実装：[✓](https://github.com/schwartz-lab-NLP/SpeLLM) ・ リポジトリ内被引用：0  
   SpeLLMは入力のBPE語彙を残したまま、出力の予測表現だけを文字単位に分離する。4つの公開モデルを変換した実験では、教師の上位5候補のいずれかと文字列が完全一致する割合が平均91.75%、AutoCorrectありでは94.93%となった。
@@ -2331,6 +2335,10 @@
 - **2025-05 · [Semantic Retention and Extreme Compression in LLMs: Can We Have Both?](2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、学習済み大規模言語モデル（LLM）に対する重み剪定と量子化の組合せを、同じ理論圧縮率で比較した研究である。主な結果は、25%剪定と4ビット量子化の組合せが、理論圧縮率TCr=81.25%の条件で、3ビット量子化のみより平均約20%高い意味保持率を示すというものだ。
+
+- **2025-05 · [NeUQI: Near-Optimal Uniform Quantization Parameter Initialization for Low-Bit LLMs](2025-2505.17595-neuqi-near-optimal-uniform-quantization-parameter-initialization-for-low.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ビットの言語モデルを作る際、重みを整数格子へ写す一様量子化は既存GPUの整数演算・メモリ削減と相性がよい。
 
 - **2025-05 · [Exploring Federated Pruning for Large Language Models](2025-2505.13547-exploring-federated-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/Pengxin-Guo/FedPrLLM) ・ リポジトリ内被引用：0  
@@ -2745,6 +2753,10 @@
 - **2024-06 · [MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations](2024-2406.07017-moreaupruner-robust-pruning-of-large-language-models-against-weight-pert.md)**  
   実装：[✓](https://github.com/ShiningSord/MoreauPruner) ・ リポジトリ内被引用：0  
   LLaMA-13Bでは回復微調整後の7課題平均が元64.97に対しMoreauPruner-GSで64.94まで近づく。一方、LLaMA3-8Bでは元70.33に対し同方式の20%剪定後が65.37で、性能損失が残る。
+
+- **2024-05 · [OpenBA-V2: Reaching 77.3% High Compression Ratio with Fast Multi-Stage Pruning](2024-2405.05957-openba-v2-reaching-77-3-high-compression-ratio-with-fast-multi-stage-pru.md)**  
+  実装：[✓](https://github.com/OpenNLG/OpenBA-v2) ・ リポジトリ内被引用：0  
+  OpenBA-V2は、中国語・英語を中心に学習したencoder-decoder型のOpenBA（15Bパラメータ）を、3.4Bへ縮小するための多段階圧縮・継続事前学習の研究である。元モデルから約77.3%のパラメータを削除しながら、層単位、行列の幅方向、語彙埋め込みという異なる削減対象を順番に処理する。
 
 - **2024-04 · [LongVQ: Long Sequence Modeling with Vector Quantization on Structured Memory](2024-2404.11163-longvq-long-sequence-modeling-with-vector-quantization-on-structured-mem.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

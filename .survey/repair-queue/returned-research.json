@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-26T23:23:55+00:00",
+  "generated_at": "2026-10-27T01:02:27+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 50,
+  "count": 51,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1309,6 +1309,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d6dc5bb13c0e--libfile_7a4265e1fa8c8191803cbea95beca98d--2026-doi-10.18653-v1-2026.findings-acl.498-streaming-llm-survey-research-20261027-0500-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d6dc5bb13c0e--libfile_7a4265e1fa8c8191803cbea95beca98d--2026-doi-10.18653-v1-2026.findings-acl.498-streaming-llm-survey-research-20261027-0500-sc.json",
       "worker_run_key": "20261027-0500-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2509.00031",
+      "title": "End-to-End On-Device Quantization-Aware Training for LLMs at Inference Cost",
+      "source_url": "https://arxiv.org/abs/2509.00031",
+      "returned_at": "2026-10-27T00:56:10+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5868,
+        "body_paragraphs": 34,
+        "method_chars": 1667,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 511,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_18614e6141fc819195457799be114d09--2025-2509.00031-zeroqat-on-device-qat-research-20261027-0903-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_18614e6141fc819195457799be114d09--2025-2509.00031-zeroqat-on-device-qat-research-20261027-0903-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261027-0903-scheduled-chat-00/r01"
     }
   ]
 }
