@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（193本）
+## 自動生成の論文一覧（198本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -492,6 +492,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/osayamenja/FlashMoE) ・ リポジトリ内被引用：11  
   分散MoE全体を単一の常駐GPUカーネルへ融合し、装置起点通信とタイル単位スケジューリングでCPU起動・同期待ちを除き、8基H100で最大6.4倍の遅延改善と5.7倍のスループットを示す。
 
+- **2025-05 · [TokenWeave: Efficient Compute-Communication Overlap for Distributed LLM Inference](2025-2505.11329-tokenweave-efficient-compute-communication-overlap-for-distributed-llm-inference.md)**  
+  実装：[✓](https://github.com/microsoft/tokenweave) ・ リポジトリ内被引用：10  
+  GPU実行波を考慮した2分割とAllReduce–RMSNorm融合により、小さなテンソル並列バッチでも通信と計算を重ね、遅延とスループットを改善する。
+
 - **2025-03 · [TileLink: Generating Efficient Compute-Communication Overlapping Kernels using Tile-Centric Primitives](2025-2503.20313-tilelink-generating-efficient-compute-communication-overlapping-kernels-using-tile-centric-primitives.md)**  
   実装：[✓](https://github.com/ByteDance-Seed/Triton-distributed) ・ リポジトリ内被引用：10  
   タイル中心プリミティブから計算・通信融合カーネルを生成し、8×H800で非重畳比1.17〜20.76倍、8モデルのエンドツーエンドでPyTorch比平均1.32倍を達成する。
@@ -499,6 +503,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-09 · [Towards Robust Agentic CUDA Kernel Benchmarking, Verification, and Optimization](2025-2509.14279-towards-robust-agentic-cuda-kernel-benchmarking-verification-and-optimization.md)**  
   実装：[✓](https://github.com/SakanaAI/robust-kbench) ・ リポジトリ内被引用：9  
   固定入力などを悪用した「高速だが一般化しないCUDA」を弾くrobust-kbenchと、翻訳・LLM検証・進化的最適化を統合したエージェントを提案し、KernelBenchの見かけの平均3.13倍高速化が堅牢化後1.49倍へ下がることを示す。
+
+- **2025-04 · [Efficient and Adaptable Overlapping for Computation and Communication via Signaling and Reordering](2025-2504.19519-efficient-and-adaptable-overlapping-for-computation-and-communication-vi.md)**  
+  実装：[✓](https://github.com/infinigence/FlashOverlap) ・ リポジトリ内被引用：7  
+  FlashOverlapは、複数GPUで大規模言語モデルを推論・学習するとき、行列積（general matrix multiplication、GEMM）と、それに依存するGPU間集団通信を重ねて実行する仕組みである。テンソル並列では、各GPUが計算した部分結果を全GPUで合計するAllReduceや、部分ごとに配布するReduceScatterを行う。
 
 - **2025-09 · [Astra: A Multi-Agent System for GPU Kernel Performance Optimization](2025-2509.07506-astra-a-multi-agent-system-for-gpu-kernel-performance-optimization.md)**  
   実装：[✓](https://github.com/Anjiang-Wei/Astra) ・ リポジトリ内被引用：6  
@@ -524,6 +532,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/amai-gsu/LM-Meter) ・ リポジトリ内被引用：2  
   さらにモバイルGPUではドライバが非公開で、カーネル単位の実行時間、キュー待機、ホスト側の発行遅延をアプリケーションから直接見ることが難しい。また量子化Gemma-2-2B-itの短い復号ではGPUの遊休時間が21%を超え、行列積カーネル群が実行時間の60%超を占める。
 
+- **2025-07 · [BlockBPE: Parallel BPE Tokenization](2025-2507.11941-blockbpe-parallel-bpe-tokenization.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  BlockBPEは正規表現による事前分割を廃止し、Rustで入力をバイト列と特殊トークンへ分けた後、各文字列を一つのGPUスレッドブロックへ割り当てる。高バッチではtiktokenに対して最大2倍、HuggingFace Tokenizersに対して最大2.5倍の字句分割処理量を報告した。
+
 - **2025-04 · [Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures](2025-2504.11750-characterizing-and-optimizing-llm-inference-workloads-on-cpu-gpu-coupled.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   著者らはシステム対応カーネル推論プロファイラ（システム-Aware Kernel Inference Profiler; SKIP）を作り、PyTorch演算子からCUDA起動呼出し、GPUカーネルへ至る依存関係を時刻と対応付ける。
@@ -535,6 +547,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-09 · [LiquidGEMM: Hardware-Efficient W4A8 GEMM Kernel for High-Performance LLM Serving](2025-2509.01229-liquidgemm-hardware-efficient-w4a8-gemm-kernel-for-high-performance-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LiquidGEMM は、重みを4ビット、活性を8ビットに量子化するW4A8構成の一般行列積（General Matrix Multiplication; GEMM）を高速化するGPUカーネルである。
+
+- **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
 
 - **2025-05 · [FlashFormer: Whole-Model Kernels for Efficient Low-Batch Inference](2025-2505.22758-flashformer-whole-model-kernels-for-efficient-low-batch-inference.md)**  
   実装：[✓](https://github.com/cheetah-lang) ・ リポジトリ内被引用：1  
@@ -701,6 +717,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
   実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：6  
   LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
+
+- **2024-03 · [Scattered Mixture-of-Experts Implementation](2024-2403.08245-scattered-mixture-of-experts-implementation.md)**  
+  実装：[✓](https://github.com/shawntan/scattermoe) ・ リポジトリ内被引用：6  
+  特にバッチが大きい学習や複数要求の推論では、中間のトークン表現を何度も高帯域メモリへ書き戻すことが問題になる。ScatterMoEは専門家へ割り当てたトークンを実体の配列として並べ替える代わりに、専門家順の索引を並べ替え、カーネルが入力の必要な位置を直接読み込む。
 
 - **2024-02 · [L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models](2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
