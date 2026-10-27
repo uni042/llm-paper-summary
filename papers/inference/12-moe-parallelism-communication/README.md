@@ -24,7 +24,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - [02-adaptive-expert-computation-compression](../02-adaptive-expert-computation-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（63本）
+## 自動生成の論文一覧（64本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
@@ -266,6 +266,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 - **2024-04 · [Shortcut-connected Expert Parallelism for Accelerating Mixture of Experts](2024-2404.05019-shortcut-connected-expert-parallelism-for-accelerating-mixture-of-expert.md)**  
   実装：✓ ・ リポジトリ内被引用：13  
   混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
+
+- **2024-01 · [Exploiting Inter-Layer Expert Affinity for Accelerating Mixture-of-Experts Model Inference](2024-2401.08383-exploiting-inter-layer-expert-affinity-for-accelerating-mixture-of-exper.md)**  
+  実装：[✓](https://github.com/YJHMITWEB/ExFlow) ・ リポジトリ内被引用：7  
+  混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルでは、各層のルータがトークンを少数の専門家へ割り当てる。論文のA100クラスタ評価では、8～64専門家を持つGPT型MoEモデルに対し全対全通信時間を最大67%削減し、推論処理量を最大2.2倍に改善した。
 
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
