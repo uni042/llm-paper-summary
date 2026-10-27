@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（486本）
+## 自動生成の論文一覧（487本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1579,6 +1579,10 @@
 - **2025-05 · [QoS-Efficient Serving of Multiple Mixture-of-Expert LLMs Using Partial Runtime Reconfiguration](2025-2505.06481-qos-efficient-serving-of-multiple-mixture-of-expert-llms-using-partial-r.md)**  
   実装：[✓](https://github.com/hamid-74/Multi-MoE) ・ リポジトリ内被引用：1  
   混合専門家モデル（Mixture-of-Experts; MoE）は、入力ごとに少数の専門家だけを選択して計算するため、全パラメータ数が大きくても演算量を抑えられる。
+
+- **2025-04 · [NoWag: A Unified Framework for Shape Preserving Compression of Large Language Models](2025-2504.14569-nowag-a-unified-framework-for-shape-preserving-compression-of-large-lang.md)**  
+  実装：[✓](https://github.com/LawrenceRLiu/NoWag) ・ リポジトリ内被引用：1  
+  NoWag（Normalized 重み and 活性値 Guided Compression）は、学習済みLLMの重み行列を入出力形状を保ったまま低ビット量子化または疎化するための共通枠組みである。NoWag-Pも50%非構造剪定ではWandaより低いperplexityを示す。
 
 - **2025-02 · [Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization](2025-2502.15763-hybrid-offline-online-scheduling-method-for-large-language-model-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
