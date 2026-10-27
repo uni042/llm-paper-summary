@@ -1,18 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-27T23:42:24+00:00",
+  "updated_at": "2026-10-27T23:46:50+00:00",
   "events": [
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_7b942dcd5680819193410c7767761e73--2026-2609.33614-eat-under16kb-reaudit-20261009-1345-scheduled-chat-45-r01.md",
-      "processed_at": "2026-10-27T16:11:19+00:00",
-      "canonical_id": "arXiv:2609.33614",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary"
-      ]
-    },
     {
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_836a91e4a1008191910171aa0dc74375--2025-2505.20334-lookahead-q-cache-under16kb-reaudit-20261017-1830-scheduled-chat-30-r01-exactbytes.md",
@@ -5428,6 +5418,14 @@
         "worker_completed_at",
         "worker_run_key"
       ]
+    },
+    {
+      "status": "requeued_legacy_blocked_discovery",
+      "source_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-ca808e944117--libfile_ef5eaae0f9c0819196ccd0fe5f7ed38a--discovery-20261028-0732-scheduled-chat-30-r02.json",
+      "processed_at": "2026-10-27T23:46:50+00:00",
+      "record_count": 10,
+      "run_key": "20261028-0732-scheduled-chat-30/r02",
+      "retry_path": ".survey/import-inbox/pending/discovery/retry-legacy-block-ca808e944117--libfile_ef5eaae0f9c0819196ccd0fe5f7ed38a--discovery-20261028-0732-scheduled-chat-30-r02.json"
     }
   ]
 }
