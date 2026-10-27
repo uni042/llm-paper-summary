@@ -28,8 +28,13 @@
   "schema_version": 1,
   "selection_reason": "KV形式を維持したままKV読込み量を削減する注意方式で、長文脈サービングのメモリ帯域削減に直接適合。",
   "source_url": "https://doi.org/10.48550/arXiv.2604.05438",
-  "status": "ready",
+  "status": "superseded",
   "title": "Top-K Retrieval with Fixed-Size Linear-Attention Completion: Backbone- and KV-Format-Preserving Attention for KV-Cache Read Reduction",
   "type": "research",
-  "workflow_version": 10
+  "workflow_version": 10,
+  "superseded_at": "2026-10-27T16:43:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.05438-residual-mass-accounting-for-partial-kv-decoding.md",
+  "represented_canonical_id": "arXiv:2604.05438",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

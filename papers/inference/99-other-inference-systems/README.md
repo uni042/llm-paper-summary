@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（704本）
+## 自動生成の論文一覧（707本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1017,6 +1017,10 @@
 - **2026-04 · [RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment](2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルを用いた翻訳では、高品質な大型モデルをすべての要求に適用すると推論費用と遅延が大きくなる。小型モデルで大半を処理し、必要な要求だけ大型モデルへ振り分ける混成配備（hybrid deployment）は、一定の品質を維持しながら大型モデルの利用率を抑えるための基本的な方式である。
+
+- **2026-04 · [Residual-Mass Accounting for Partial-KV Decoding](2026-2604.05438-residual-mass-accounting-for-partial-kv-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈を持つ言語モデルの逐次生成では、過去の全トークンの鍵・値キャッシュを毎回読むとメモリ帯域が律速になる。重要なトークンだけを選んで読む部分KV方式は読取対象を減らせるが、選ばれなかったトークンの注意の分子と分母を捨てる。
 
 - **2026-04 · [Reason Only When Needed: Efficient Generative Reward Modeling via Model-Internal Uncertainty](2026-2604.10072-reason-only-when-needed-efficient-generative-reward-modeling-via-model-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2180,6 +2184,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ActQKVは、長文脈の履歴KVキャッシュから生成に必要な情報を取り出すため、検索用の代表Queryの作り方と各層で何件のKVを取り出すかを改良する学習不要の推論手法である。
 
+- **2025-01 · [Rethinking Post-Training Quantization: Introducing a Statistical Pre-Calibration Approach](2025-2501.09107-rethinking-post-training-quantization-introducing-a-statistical-pre-cali.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は、LLMの学習後量子化（PTQ）において、校正用の入力文を使わずに重要な重みを識別し、低ビット量子化での品質低下を抑える事前校正（pre-calibration）を提案する。LLaMA-7B、4ビット系の実験では、量子化時間が57秒でAWQの838秒、SpQRの10,901秒より短い。
+
 - **2025-01 · [DReSS: Data-driven Regularized Structured Streamlining for Large Language Models](2025-2501.17905-dress-data-driven-regularized-structured-streamlining-for-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし従来の「重要度を測ってチャネルを直接削除し、その後に回復微調整する」方式では、削除予定チャネルに残っていた有用な情報まで失われる。
@@ -2485,6 +2493,10 @@
 - **2024-07 · [Attention Is All You Need But You Don't Need All Of It For Inference of Large Language Models](2024-2407.15516-attention-is-all-you-need-but-you-don-t-need-all-of-it-for-inference-of-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TransformerベースのLLMでは、各層に注意機構サブレイヤとMLPサブレイヤがあり、推論時にもすべての層を通すのが通常である。主要な結果として、Llama2-13Bで後段注意機構の約33%を省くと、OpenLLMのARC、HellaSwag、TruthfulQA、MMLUの平均スコアは58.5から56.8へ低下する。
+
+- **2024-07 · [Accelerating Large Language Model Inference with Self-Supervised Early Exits](2024-2407.21082-accelerating-large-language-model-inference-with-self-supervised-early-e.md)**  
+  実装：[✓](https://anonymous.4open.science/r/BranchyLLM-B870) ・ リポジトリ内被引用：0  
+  通常の自己回帰型言語モデルは、生成するトークンが簡単か難しいかにかかわらず、全層を通して次トークンの確率を計算する。提案は二段階である。Pythia-2.8Bの実験では、LayerSkipの最良固定設定のドラフト受理率53.6%に対して、DSSDは閾値0.9で88.8%を報告した。
 
 - **2024-06 · [VTrans: Accelerating Transformer Compression with Variational Information Bottleneck based Pruning](2024-2406.05276-vtrans-accelerating-transformer-compression-with-variational-information.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
