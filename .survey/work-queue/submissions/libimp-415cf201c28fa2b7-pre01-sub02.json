@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Near-Oracle KV Selection via Pre-hoc Sparsity for Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2602.08329",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A core bottleneck in large language model (LLM) inference is the cost of attending over the ever-growing key-value (KV) cache. Although near-oracle top-k KV selection can preserve the quality of dense attention while sharply reducing computation and bandwidth, existing sparse methods generally rely on posterior heuristics, i.e., selectors conditioned on observed attention or proxy scores. Such conditioning introduces posterior bias: it tends to distort true token importance and miss salient tokens, thereby impairing long-range reasoning. To tackle this problem, we propose Pre-hoc Sparsity (PrHS), which selects KV entries before attention scoring and provides explicit accuracy control. Let the attention mass of discarded entries be delta (the dropped mass). Through a marginal-to-mutual-information analysis, we derive an upper bound on the mutual-information loss that depends only on the dropped mass. This relation explains failure modes of posterior heuristics and enables verifiable guarantees by controlling the dropped mass in advance. Within PrHS, we instantiate three orthogonal pre-hoc selectors along the axes of time, depth, and layer. Extensive experiments on LLaMA and Mistral families validate PrHS. Across GSM8K and CoQA, PrHS reduces retrieval overhead by over 90%, achieving 3x higher retrieval sparsity than HShare at matched or better accuracy. It incurs under 1% average degradation on LongBench, lowers attention FLOPs by about 15% versus prior sparse baselines, and yields a 9.9x speedup in attention-operator latency and 2.8x higher throughput on NVIDIA A100-80GB GPUs than the dense baseline.",
+      "identifiers": [
+        "SemanticScholar:d2956d810baa90a2345b388d43e6d2f3f8fcebba"
+      ],
+      "semantic_scholar_id": "d2956d810baa90a2345b388d43e6d2f3f8fcebba",
+      "canonical_id": "arXiv:2602.08329",
+      "arxiv_id": "2602.08329",
+      "doi": "10.48550/arXiv.2602.08329",
+      "authors": [
+        "Yifei Gao",
+        "Lei Wang",
+        "Rong-Cheng Tu",
+        "Qi-Xin Zhang",
+        "Junguo Cheng",
+        "Da-Cheng Tao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 260,
+        "matched_prestigious_venue": null
+      },
+      "reason": "観測済み注意スコアへの後付け依存を避け、注意計算前にKV候補を選ぶPrHSを提案する。捨てた注意質量から相互情報量損失の上界を導き、時間・深さ・層方向の3選択器で疎注意を構成する。A100で密注意比2.8倍スループット、演算子遅延9.9倍改善を報告する長文脈推論カーネル研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LSVD: Loss-Aware Low-Rank Approximation for Efficient Low-Precision Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.00573",
+      "year": 2026,
+      "published": "2026-05-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) deliver strong multimodal reasoning capabilities, but their large computational cost and high parameter counts make deployment challenging on resource-constrained devices. Low-rank decomposition has emerged as a promising compression technique, yet existing methods often optimize local matrix reconstruction error, rely on uniform or heuristic rank allocation, and focus mainly on attention projections while leaving feed-forward networks underexplored. In this paper, we propose~\\textit{LASER} (\\textbf{L}oss-\\textbf{A}ware \\textbf{S}ingular-value d\\textbf{E}composition and \\textbf{R}ank allocation), a low-rank compression framework for efficient low-precision VLM inference. LASER derives a curvature-weighted SVD objective from a second-order approximation of the model loss and uses Kronecker-factored Fisher information to guide decomposition toward downstream performance rather than reconstruction alone. We further introduce a loss-aware cross-layer rank allocation strategy based on calibration gradients, enabling more effective parameter budgeting across layers. Finally, we extend low-rank compression to FFN layers through a hybrid scheme that combines SVD with quantization. The evaluation results show that LASER achieves more than $2.3\\times$ decoding speedup over previous work while preserving strong accuracy under low-precision inference.",
+      "identifiers": [
+        "SemanticScholar:82c65cf7130c6176e7f2420b91d0b11e00d22056"
+      ],
+      "semantic_scholar_id": "82c65cf7130c6176e7f2420b91d0b11e00d22056",
+      "canonical_id": "arXiv:2606.00573",
+      "arxiv_id": "2606.00573",
+      "authors": [
+        "Hai-Yu Wang",
+        "Yu-Tong Wang",
+        "Le-Shu Li",
+        "Yihui Ren",
+        "Sai-Qian Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VLMの低ランク分解で単純な行列再構成誤差ではなく損失曲率に基づくSVDと校正勾配による層間ランク配分を提案する。FFNにも量子化併用の低ランク圧縮を適用し、低精度VLM推論で既存法比2.3倍超のデコード高速化を報告する。旧題LSVDとの同一arXiv identityを保持する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Positionwise Confidence to Prefix Scheduling: Verifier Skipping in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2608.14787",
+      "year": 2026,
+      "published": "2026-08-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding is a leading technique to reduce the cost of autoregressive generation by using a small drafter to propose several tokens, which are then verified in parallel by a larger target model. Speculative diffusion decoding (SDD) further removes sequential drafting by generating every position in a draft block in parallel with a discrete diffusion model. However, SDD still invokes the target on every block, leaving verification as a potential bottleneck. This paper recognizes that this creates a new control handle: whether to invoke the verifier at all. Thus, we study verifier skipping, a lossy policy that commits a selected draft prefix directly, and ask which confidence signal should schedule it. Interestingly, our study finds that better token predictors need not yield better schedulers: skips require contiguous high-confidence prefixes, while short skips can induce additional drafting rounds. To study this mismatch, we compare raw confidence with learned marginal and conditional survival scores under the same policy, using Strict SDD, lenience, and top-$k$ acceptance as baselines. On HumanEval with DiffuCoder-7B-Instruct and Qwen3-32B, all three confidence signals save $9.6\\%$ to $13.5\\%$ of verifier calls at the same observed pass@1 as Strict SDD. Surprisingly, raw confidence saves the most; marginal survival has higher positionwise AUROC than raw confidence at most positions, yet neither learned signal dominates online. Our analysis shows that verifier skipping is a useful new lossy axis and, surprisingly, its key challenge is prefix scheduling rather than token prediction alone.",
+      "identifiers": [
+        "SemanticScholar:9b7414050db3929e8642932c5252860119f9be09"
+      ],
+      "semantic_scholar_id": "9b7414050db3929e8642932c5252860119f9be09",
+      "canonical_id": "arXiv:2608.14787",
+      "arxiv_id": "2608.14787",
+      "authors": [
+        "Haoxuan Luo",
+        "Jameson Sandler",
+        "Ferdinando Fioretto"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 74,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散型投機的復号でターゲット検証呼び出しを省略し、ドラフト接頭辞を直接確定する損失ありのスケジューリングを分析する。位置別予測精度が高くても連続した高信頼接頭辞が得られないと有利でない点を示し、HumanEvalで観測pass@1を維持したまま検証呼び出し9.6〜13.5%削減を報告する。分布保存ではないことを明示した推論実行制御研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+      "source_url": "https://arxiv.org/abs/2609.36938",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic sessions driven by Large language models (LLMs) often alternate between model inference and tool use, accumulating long histories across successive rounds. Serving these sessions efficiently requires reducing attention computation and retaining history key-value (KV) caches to avoid recomputation. Recently, frontier open-source LLMs adopt sparse attention to reduce computation by selecting only part of the history, while SSDs provide a cheaper alternative to CPU DRAM for storing KV caches. However, sparse KV selection depends on the ad hoc intermediate values during model inference, so it forces SSD reads to lie on the inference critical path. These reads are further slowed by fragmented accesses and read-write interference in SSDs. To address these challenges, we present Janus, an agentic serving framework for sparse attention LLMs with SSD-centric KV storage. Janus focuses on append prefill, which processes each round's newly added inputs and accounts for most history KV loading. To move SSD reads out of the critical path, Janus runs the model's own KV selection module on earlier intermediate values, predicting KV demand without additional training. The predicted reads overlap with model computation, and any prediction misses are fetched before attention executes to preserve model outputs. To improve SSD efficiency, Janus coalesces adjacent reads, packs scattered KV pages into sequential writes on the CPU, and limits background writes while reads are active. Across three models and three agentic traces, Janus outperforms existing works by up to 1.57-3.69 times (1.22-1.85 times on average) in terms of the time to first token latency, while maintaining decode efficiency.",
+      "identifiers": [
+        "SemanticScholar:685bd68182b1d34e3170680b7982c7c4ab0843c6"
+      ],
+      "semantic_scholar_id": "685bd68182b1d34e3170680b7982c7c4ab0843c6",
+      "canonical_id": "arXiv:2609.36938",
+      "arxiv_id": "2609.36938",
+      "authors": [
+        "Wen-Hao He",
+        "Ping Zhang",
+        "Xiao-He Hu",
+        "Chu-Tian Wang",
+        "Jin-Long Hou",
+        "Yuan Cheng",
+        "Peng Sun",
+        "Fang-Cheng Fu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェント会話の追加入力prefillでSSDに退避した疎KVの読出しが推論クリティカルパスを占める問題に対し、モデル自身のKV選択器を早期の中間表現へ適用して読出しを先読みするJanusを提案する。読出し結合・ページ書込集約・読書干渉抑制を併用し、3モデル3トレースでTTFT平均1.22〜1.85倍の改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Temporal-Aware GPU Resource Allocation for Distributed LLM Inference via Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2507.10259",
+      "year": 2025,
+      "published": "2025-07-14",
+      "venue": "IEEE Transactions on Cloud Computing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of large language model (LLM) services imposes increasing demands on distributed GPU inference infrastructure. Most existing scheduling systems follow a reactive paradigm, relying solely on the current system state to make decisions, without considering how task demand and resource availability evolve over time. This lack of temporal awareness in reactive approaches leads to inefficient GPU utilization, high task migration overhead, and poor system responsiveness under dynamic workloads. In this work, we identify the fundamental limitations of these instantaneous-state-only scheduling approaches and propose Temporal Optimal Resource scheduling via Two-layer Architecture (TORTA). TORTA introduces a spatiotemporal scheduling framework that captures both long-term workload patterns and short-term execution constraints. It adopts a two-layer design: a macro-level scheduler leverages reinforcement learning and optimal transport to coordinate inter-region task distribution, while a micro-level allocator refines task-to-server assignments within each region to reduce latency and switching costs. Experimental results across multiple network topologies show that TORTA reduces average inference response time by up to 15%, improves load balance by approximately 4-5%, and cuts total operational cost by 10-20% compared to state-of-the-art baseline methods.",
+      "identifiers": [
+        "SemanticScholar:00e2f75993147cfa3d12c8f3206980ef6c50d6c9"
+      ],
+      "semantic_scholar_id": "00e2f75993147cfa3d12c8f3206980ef6c50d6c9",
+      "canonical_id": "arXiv:2507.10259",
+      "arxiv_id": "2507.10259",
+      "doi": "10.1109/TCC.2026.3702578",
+      "authors": [
+        "Chengze Du",
+        "Zhi-Wei Yu",
+        "Heng Xu",
+        "Haojie Wang",
+        "Bo Liu",
+        "Jia-Long Li"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 470,
+        "matched_prestigious_venue": null
+      },
+      "reason": "現在状態だけに依存するLLM分散推論スケジューリングに対し、長期の負荷変動と短期実行制約を組み合わせるTORTAを提案する。強化学習・最適輸送による地域間マクロ配分とサーバー単位のミクロ割当を併用し、複数ネットワーク構成で応答時間最大15%、運用費10〜20%削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-415cf201c28f",
+    "round": "libimp-415cf201c28fa2b7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-415cf201c28fa2b7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-415cf201c28fa2b7-pre01.json",
+    "receipt": "sha256:8354ff5a638f918edf265244ffef213e1d150921cd5a313a4d7820e4ea61479b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-415cf201c28f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

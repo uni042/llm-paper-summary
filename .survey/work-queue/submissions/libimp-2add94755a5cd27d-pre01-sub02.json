@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
+      "source_url": "https://arxiv.org/abs/2609.29913",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Many-shot in-context learning (ICL) enables large language models (LLMs) to adapt to complex tasks by conditioning on thousands of demonstration examples, but this paradigm shifts the inference efficiency bottleneck to the key-value (KV) cache memory. Due to the linear scaling behavior of the KV cache, storing these intermediate tensors has become a paramount challenge for both online serving and on-device deployment. To address this issue, we propose a novel compression framework, termed MILO, that exploits the low-rank redundancy inherent in many-shot contexts. Specifically, MILO features a block-wise low-rank compression strategy that compresses the KV cache at the block granularity, where each block contains multiple many-shot examples. Furthermore, to handle the heterogeneous context density across different blocks, MILO dynamically allocates rank budgets based on the information entropy, preserving the fidelity of critical blocks while aggressively compressing redundant ones. Experimental results on Qwen2.5 models demonstrate that our method achieves up to 50% reduction in KV cache memory and 1.8x throughput improvement, with negligible performance degradation on classification and reasoning benchmarks, significantly outperforming prior baselines.",
+      "identifiers": [
+        "SemanticScholar:e841dbae23749051b146f3bcaefcfa814054adb9"
+      ],
+      "semantic_scholar_id": "e841dbae23749051b146f3bcaefcfa814054adb9",
+      "canonical_id": "arXiv:2609.29913",
+      "arxiv_id": "2609.29913",
+      "authors": [
+        "You-Peng Zhao",
+        "Tian Tan",
+        "Li-Qian Peng",
+        "Jun Wang",
+        "Alec Go"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "数千例を用いるmany-shot文脈のKVキャッシュを例のブロック単位で低ランク圧縮し、ブロックの情報エントロピーに応じて再構成ランク予算を配分する。Qwen2.5でKV容量最大50%削減とスループット1.8倍を報告し、オンラインサービングと端末推論のKVメモリ壁に直接取り組む。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ATTUNER: Recomputation-Free Agentic Context KV Reuse",
+      "source_url": "https://arxiv.org/abs/2609.36722",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) agents repeatedly load reusable content, such as skills, documents, and memory entries, into the current context. Re-encoding this content for every request wastes computation. Position-independent caching (PIC) alleviates this by encoding each artifact independently and reusing its key-value (KV) states at arbitrary positions, but it incurs a quality loss relative to full-context prefill. Existing methods repair this loss by restoring global position IDs or recomputing selected tokens. In this work, we isolate the source of the loss, finding that the positional mismatch has minor effect, and independently cached artifacts retain faithful representations: reading a provided artifact stays largely accurate, and performance degrades only when the model must select among multiple artifacts. Moreover, replacing PIC's attention scores with full-prefill scores recovers performance with the cached KV unchanged, localizing the failure to the attention rather than KV recomputation. Motivated by this, we propose \\textsc{Attuner}, a query-side adaptation method that learns to read a frozen artifact cache. \\textsc{Attuner} inserts low-rank adapters into the query projections and is trained by distilling full-prefill distribution into the student. It trains fewer than 0.05\\% of the model parameters and, at inference, requires neither cache recomputation nor a full-context reference. On Qwen3-4B and Qwen3-8B across seven benchmarks covering skills, documents, memory, and code, \\textsc{Attuner} substantially outperforms prior PIC baselines in both in-domain and out-of-domain settings, matches full-context prefill quality while providing up to $3.73\\times$ speedup.",
+      "identifiers": [
+        "SemanticScholar:c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02"
+      ],
+      "semantic_scholar_id": "c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02",
+      "canonical_id": "arXiv:2609.36722",
+      "arxiv_id": "2609.36722",
+      "authors": [
+        "Xing-Hao Chen",
+        "Jun-Nan Dong",
+        "Cai Ke",
+        "Chak Tou Leong",
+        "Hao-Cheng Sun",
+        "Ke-Yu Chen",
+        "Si-Yu An",
+        "Rui-Zhi Qiao",
+        "Xing Sun",
+        "Wen-Jie Li",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エージェントが技能・文書・記憶を個別符号化したKVキャッシュから選択する際の品質低下を、保存済みKVの再計算ではなくオンラインQuery射影の低ランク適応で修復する。フル文脈prefillの出力分布を蒸留し、Qwen3-4B/8Bで追加パラメータ0.05%未満、最大3.73倍の高速化を報告する。worklist旧題名と同じarXiv identity。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HAWK: Rethinking Multimodal Drafting for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.00623",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has achieved substantial lossless speedups for LLMs, but remains less effective for large vision-language models (LVLMs), where lightweight drafters struggle to use rich multimodal information. A second limitation is that standard distillation supervises the drafter only along the original training trajectory, without modeling how target predictions shift after the drafter's own proposals. As drafting moves away from this trajectory, the drafter can increasingly disagree with the target, reducing acceptance in later steps. We propose HAWK to address both limitations. HAWK uses representation similarity to select informative target layers and learns how to combine their hidden states. For visual information, it directly provides the drafter with compressed visual hidden states from the target model instead of raw visual tokens, making the visual information easier for a shallow drafter to use. HAWK also trains the drafter to capture how target predictions change after its own proposals, improving its agreement with the target during multi-step drafting. On SmolVLM-256M across ten multimodal benchmarks, HAWK raises average acceptance length from 3.32 to 4.08 and speedup from 2.19x to 2.60x over EAGLE-3 under greedy decoding, and from 2.89 to 3.41 and 1.92x to 2.19x under sampling.",
+      "identifiers": [
+        "SemanticScholar:287817cdfe11c49306db686c08bca665620ea2d7"
+      ],
+      "semantic_scholar_id": "287817cdfe11c49306db686c08bca665620ea2d7",
+      "canonical_id": "arXiv:2610.00623",
+      "arxiv_id": "2610.00623",
+      "authors": [
+        "Wen-Han Yang",
+        "Anirudh Rao",
+        "Ashwin Chandra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VLM投機的復号で浅いドラフトモデルが画像特徴を扱いにくく、自己提案後のターゲット予測の変化を学習できない問題に対し、ターゲット層表現の選択・圧縮視覚特徴の供給・提案軌跡を考慮した蒸留を組み合わせる。SmolVLM-256Mの10ベンチマークでEAGLE-3比の受理長と速度を改善し、マルチモーダル推論のデコード加速に直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2507.17417",
+      "year": 2025,
+      "published": "2025-07-23",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "For large language models (LLMs), post-training quantization (PTQ) significantly reduces memory and computational overhead. Despite rapid advancements, existing papers often lack experiments on the same ground. In addition, since quantization solutions typically contain multiple components, it is important to analyze the connections among numerous existing methods to gain an in-depth understanding of this field. To bridge these gaps, we conduct an up-to-date and extensive review of the state-of-the-art methods and perform comprehensive evaluations of low-bit quantization on representative text-only LLMs on the same ground to ensure fair comparisons. To our knowledge, this fair and extensive investigation remains critically important yet significantly underexplored in the research community. To better understand the connections, we first decouple published quantization into two steps: pre-quantization transformation to reduce outliers, and quantization error mitigation to offset performance loss. Second, we extensively evaluate the impact of quantization settings, including granularity and symmetry. Third, we analyze the performance of the latest MXFP4 and NVFP4 data formats. Our experimental results first demonstrate that optimizing rotation and scaling yields the best pre-quantization transformation, while combining low-rank compensation with GPTQ occasionally outperforms using GPTQ alone. Second, we verify that finer granularity improves performance at the cost of storage and asymmetric quantization benefits activations significantly more than weights. Third, we find that the format and precision of scaling factors have a significant impact on performance; notably, rotation-based transformation is effective for INT4 but demonstrates little improvement for MXFP4 and NVFP4, inspiring further investigation in this field.",
+      "identifiers": [
+        "SemanticScholar:d0ad71a1b4178e597b6b5c4a8a11924eb17467a5"
+      ],
+      "semantic_scholar_id": "d0ad71a1b4178e597b6b5c4a8a11924eb17467a5",
+      "canonical_id": "arXiv:2507.17417",
+      "arxiv_id": "2507.17417",
+      "doi": "10.48550/arXiv.2507.17417",
+      "authors": [
+        "Yutong Liu",
+        "Cairong Zhao",
+        "Guosheng Hu"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 461,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数の低ビットPTQを同一条件で比較し、事前の外れ値抑制変換と量子化誤差緩和を分離して分析する。回転・スケーリングの併用、粒度と対称性、MXFP4/NVFP4の尺度形式を実験比較し、INT4では回転が有効でもFP4系では利得が小さいという差を報告する。推論量子化手法の比較・設計に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2add94755a5c",
+    "round": "libimp-2add94755a5cd27d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2add94755a5cd27d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2add94755a5cd27d-pre01.json",
+    "receipt": "sha256:7d7c139d5b7523990d5b8cfbe704d33ca899bdda74dcca32fc3606d7f16b42e5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2add94755a5c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

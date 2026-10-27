@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SliderQuant: Accurate Post-Training Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2603.25284",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we address post-training quantization (PTQ) for large language models (LLMs) from an overlooked perspective: given a pre-trained high-precision LLM, the predominant sequential quantization framework treats different layers equally, but this may be not optimal in challenging bit-width settings. We empirically study the quantization impact of different layers on model accuracy, and observe that: (1) shallow/deep layers are usually more sensitive to quantization than intermediate layers; (2) among shallow/deep layers, the most sensitive one is the first/last layer, which exhibits significantly larger quantization error than others. These empirical observations imply that the quantization design for different layers of LLMs is required on multiple levels instead of a single level shared to all layers. Motivated by this, we propose a new PTQ framework termed Sliding-layer Quantization (SliderQuant) that relies on a simple adaptive sliding quantization concept facilitated by few learnable parameters. The base component of SliderQuant is called inter-layer sliding quantization, which incorporates three types of novel sliding window designs tailored for addressing the varying quantization sensitivity of shallow, intermediate and deep layers. The other component is called intra-layer sliding quantization that leverages an incremental strategy to quantize each window. As a result, SliderQuant has a strong ability to reduce quantization errors across layers. Extensive experiments on basic language generation, zero-shot commonsense reasoning and challenging math and code tasks with various LLMs, including Llama/Llama2/Llama3/Qwen2.5 model families, DeepSeek-R1 distilled models and large MoE models, show that our method outperforms existing PTQ methods (including the latest PTQ methods using rotation transformations) for both weight-only quantization and weight-activation quantization.",
+      "identifiers": [
+        "SemanticScholar:075220f69f6b24aa2754ffdd4873fa775a1939e4"
+      ],
+      "semantic_scholar_id": "075220f69f6b24aa2754ffdd4873fa775a1939e4",
+      "canonical_id": "arXiv:2603.25284",
+      "arxiv_id": "2603.25284",
+      "doi": "10.48550/arXiv.2603.25284",
+      "authors": [
+        "Shi-Geng Wang",
+        "Chao Li",
+        "Yangyuxuan Kang",
+        "Jia-Wei Fan",
+        "Zhong-Hong Ou",
+        "An-Bang Yao"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      },
+      "reason": "浅層・深層、とくに最初・最後のTransformer層で量子化誤差が増大する観測を基に、層間スライド窓と層内逐次窓を組み合わせるPTQ方式。Llama・Qwen・MoEの重み専用/重み活性量子化で既存回転型PTQとの品質比較を実施し、低ビット推論の精度保持に直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
+      "source_url": "https://arxiv.org/abs/2607.08032",
+      "year": 2026,
+      "published": "2026-07-09",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models, and the agents built on them, spend an ever-growing share of their compute and memory on remembering: caching attention keys and values, carrying long prompts, maintaining recurrent state, and storing what happened in previous turns and sessions. Because none of this memory is free, four largely separate research communities have each learned to compact it. They evict or quantize the KV cache, prune or distill prompts, bound architectural state, and consolidate agent memory. We argue that these are instances of one problem: a rate--distortion decision about what context-derived information to retain versus discard, at what fidelity, under a resource budget, so as to preserve downstream task utility. We make this lens precise with a single compaction objective and a layer-agnostic lower bound, use it to build a seven-axis taxonomy that classifies methods from across the stack uniformly, and use it to transfer mechanisms between layers that have never been connected, from serving-stack KV management to agent long-term memory. Two patterns hold across the survey. At every layer the signal that decides what to keep is attention magnitude or recency, and it fails in the same way everywhere, by discarding, before the query is known and with no way to undo it, information the query later needs. And while compression is measured carefully on single-turn long context, the repeated compaction that agents actually perform is almost never measured, and no benchmark holds one budget axis across all the layers at once. We turn both observations into a benchmark proposal, a small reference experiment, and a set of compaction-aware design principles, and we map the open problems.",
+      "identifiers": [
+        "SemanticScholar:1b9a3b4e330c2b25a33e52a43b015226453fe937"
+      ],
+      "semantic_scholar_id": "1b9a3b4e330c2b25a33e52a43b015226453fe937",
+      "canonical_id": "arXiv:2607.08032",
+      "arxiv_id": "2607.08032",
+      "doi": "10.48550/arXiv.2607.08032",
+      "authors": [
+        "A. Colaco",
+        "Nada Lahjouji"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KVキャッシュの量子化・削除、プロンプト圧縮、再帰状態、エージェント長期記憶を、資源予算下のレート歪み最適化として統一する。7軸分類と層を跨ぐ下界を提案し、クエリ判明前の不可逆な情報削除という共通失敗条件を整理する。KV管理・推論メモリ圧縮の技術サーベイとして直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization",
+      "source_url": "https://arxiv.org/abs/2605.21226",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache dominates memory bandwidth and footprint in long-context autoregressive inference. Recent rotation-preconditioned codecs (TurboQuant, PolarQuant) show that a structured random rotation followed by a per-coordinate scalar quantizer matched to an analytically tractable marginal is a near-optimal recipe for KV compression. OCTOPUS advances this paradigm through joint quantization of rotated coordinate triplets. Each triplet's direction is mapped to a square via an octahedral parameterization, and the two resulting coordinates and the triplet norm are Lloyd-Max quantized against implementation-matched marginals. Optimizing the per-triplet squared error gives a strictly non-uniform bit allocation depending only on the total dimensionality of the keys. We find the finite-dimensional quality optimum with sweeps to be constant on every real decoder we test. The codec is data-oblivious, online, and deterministic given a seed. Across text, video, and audio, OCTOPUS matches or beats every prior rotation codec at every reported bit width and metric, with a lead that grows as bits drop for extreme compression. Furthermore, a fused Triton implementation reconstructs keys on the fly without materializing the uncompressed key, so the codec adds no decode-time bandwidth or latency over the existing dequantization. Project Page: https://octopus-quant.github.io/",
+      "identifiers": [
+        "SemanticScholar:662c121d5bcfe071a38cebb95a498df125b314fa"
+      ],
+      "semantic_scholar_id": "662c121d5bcfe071a38cebb95a498df125b314fa",
+      "canonical_id": "arXiv:2605.21226",
+      "arxiv_id": "2605.21226",
+      "doi": "10.48550/arXiv.2605.21226",
+      "authors": [
+        "Mark Boss",
+        "Vikram S. Voleti",
+        "Simon Donné",
+        "Shimon Vainer"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 160,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ランダム回転したKVの3座標組を八面体パラメータで2次元方向とノルムへ写像し、Lloyd-Max量子化とビット配分で再構成誤差を削減する。融合Tritonカーネルで非圧縮Keyを実体化せず復元し、デコード時の帯域・遅延追加を抑えるため、KVキャッシュ量子化と推論カーネルの直接的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
+      "source_url": "https://arxiv.org/abs/2605.08755",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) reach competition-level math and coding accuracy via long autoregressive decoding, making per-token decoding cost a primary deployment concern. Weight quantization is the standard tool for acceleration, but representative recipes -- including state-of-the-art end-to-end (E2E) QAT -- lose accuracy on long-decoding reasoning benchmarks despite preserving perplexity and short-decode accuracy. Through a systematic gradient-direction analysis, we identify two factors driving this gap: (i) KV-cache fidelity preservation under the QAT loss, which E2E supervision attenuates via the softmax Fisher metric; and (ii) Hessian-subspace alignment between calibration data and the deployment distribution. We propose LookAhead Quantization (LAQuant), a layer-wise weight-only QAT method that addresses both factors without online-transform overhead by combining reasoning-domain calibration with a one-layer lookahead loss whose implicit cross-layer co-adaptation preserves the next-layer residual stream. For Qwen3-4B under W3G128 quantization, LAQuant improves AIME25 Pass@1 over ParoQuant by 15.11pp (1.93pp over ParoQuant++ at matched calibration) while achieving a 3.42x decoding speedup over FP16 on RTX A6000, compared with ParoQuant's 3.01x.",
+      "identifiers": [
+        "SemanticScholar:263f08eb1c144b29f369915cc9d98be667124f31"
+      ],
+      "semantic_scholar_id": "263f08eb1c144b29f369915cc9d98be667124f31",
+      "canonical_id": "arXiv:2605.08755",
+      "arxiv_id": "2605.08755",
+      "doi": "10.48550/arXiv.2605.08755",
+      "authors": [
+        "Euntae Choi",
+        "Su-Min Song",
+        "Sungjoo Yoo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長いCoT生成で既存QATが精度を失う要因をKV忠実度と校正データのHessian部分空間のずれに分解し、次層残差流を保つ1層先読み損失を使う重み専用量子化を提案する。Qwen3-4B W3G128のRTX A6000実測でFP16比3.42倍の復号高速化を報告し、推論量子化の対象に合致する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format",
+      "source_url": "https://arxiv.org/abs/2411.15982",
+      "year": 2024,
+      "published": "2024-11-24",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 26,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The widely-used, weight-only quantized large language models (LLMs), which leverage low-bit integer (INT) weights and retain floating-point (FP) activations, reduce storage requirements while maintaining accuracy. However, this shifts the energy and latency bottlenecks towards the FP activations that are associated with costly memory accesses and computations. Existing LLM accelerators focus primarily on computation optimizations, overlooking the potential of jointly optimizing FP computations and data movement, particularly for the dominant FP-INT GeMM operations in LLM inference. To address these challenges, we investigate the sensitivity of activation precision across various LLM modules and its impact on overall model accuracy. Based on our findings, we first propose the Anda data type: an adaptive data format with group-shared exponent bits and dynamic mantissa bit allocation. Secondly, we develop an iterative post-training adaptive precision search algorithm that optimizes the bit-width for different LLM modules to balance model accuracy, energy efficiency, and inference speed. Lastly, a suite of hardware optimization techniques is proposed to maximally exploit the benefits of the Anda format. These include a bit-plane-based data organization scheme, Anda-enhanced processing units with bit-serial computation, and a runtime bit-plane Anda compressor to simultaneously optimize storage, computation, and memory footprints. Our evaluations on FP-INT GeMM operations show that Anda achieves a $2.4 \\times$ speedup, $4.0 \\times$ area efficiency, and $3.1 \\times$ energy efficiency improvement on average for popular LLMs including OPT, LLaMA, and LLaMA-2 series over the GPU-like FP-FP baseline. Anda demonstrates strong adaptability across various application scenarios, accuracy requirements, and system performance, enabling efficient LLM inference across a wide range of deployment scenarios.",
+      "identifiers": [
+        "SemanticScholar:61dbbcf8f572f3473a1cff0cf282339d7c179fb3"
+      ],
+      "semantic_scholar_id": "61dbbcf8f572f3473a1cff0cf282339d7c179fb3",
+      "canonical_id": "arXiv:2411.15982",
+      "arxiv_id": "2411.15982",
+      "doi": "10.1109/HPCA61900.2025.00110",
+      "authors": [
+        "Chao Fang",
+        "Man Shi",
+        "Robin Geens",
+        "Arne Symons",
+        "Zhong-Feng Wang",
+        "Marian Verhelst"
+      ],
+      "priority": 36,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 26,
+        "citation_count": 26,
+        "total": 36,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 702,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "重み専用INT量子化で残るFP活性の転送・計算費を対象に、グループ共有指数と可変仮数長のAnda形式、モジュール別ビット幅探索、ビットプレーン格納とビット直列演算器を共同設計する。OPT/LLaMA系のFP-INT GeMMでGPU類似FP-FP基準比平均2.4倍高速化を報告する推論アクセラレータ研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c570684fe43a",
+    "round": "libimp-c570684fe43a1a04-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c570684fe43a1a04-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c570684fe43a1a04-pre01.json",
+    "receipt": "sha256:51cfd0c6e6a206530f05ff18feb4feb50dfaaa35c3aa17cd1df2cc54f1718d3b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c570684fe43a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

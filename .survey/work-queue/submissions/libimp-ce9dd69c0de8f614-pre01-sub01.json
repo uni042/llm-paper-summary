@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Improving the Trade-off Between Watermark Strength and Speculative Sampling Efficiency for Language Models",
+      "source_url": "https://arxiv.org/abs/2602.01428",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "International Conference on Learning Representations",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Watermarking is a principled approach for tracing the provenance of large language model (LLM) outputs, but its deployment in practice is hindered by inference inefficiency. Speculative sampling accelerates inference, with efficiency improving as the acceptance rate between draft and target models increases. Yet recent work reveals a fundamental trade-off: higher watermark strength reduces acceptance, preventing their simultaneous achievement. We revisit this trade-off and show it is not absolute. We introduce a quantitative measure of watermark strength that governs statistical detectability and is maximized when tokens are deterministic functions of pseudorandom numbers. Using this measure, we fully characterize the trade-off as a constrained optimization problem and derive explicit Pareto curves for two existing watermarking schemes. Finally, we introduce a principled mechanism that injects pseudorandomness into draft-token acceptance, ensuring maximal watermark strength while maintaining speculative sampling efficiency. Experiments further show that this approach improves detectability without sacrificing efficiency. Our findings uncover a principle that unites speculative sampling and watermarking, paving the way for their efficient and practical deployment.1",
+      "identifiers": [
+        "SemanticScholar:321521fec6d3eab9bcfe82862efcdac1e819145b"
+      ],
+      "semantic_scholar_id": "321521fec6d3eab9bcfe82862efcdac1e819145b",
+      "canonical_id": "arXiv:2602.01428",
+      "arxiv_id": "2602.01428",
+      "doi": "10.48550/arXiv.2602.01428",
+      "authors": [
+        "Weiqing He",
+        "Xiang Li",
+        "Li Shen",
+        "Wei-Jie J. Su",
+        "Qi Long"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 268,
+        "matched_prestigious_venue": "International Conference on Learning Representations"
+      },
+      "reason": "ウォーターマークの統計的検出強度と投機的サンプリングのドラフト受理率の競合を制約最適化として定式化し、擬似乱数をドラフト受理過程へ注入する方式を提案する。透かしの強さを維持しながら受理率・投機的生成効率を改善する、生成時アルゴリズムへの直接の技術的貢献である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability",
+      "source_url": "https://arxiv.org/abs/2603.12038",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context autoregressive decoding remains expensive because each decoding step must repeatedly process a growing history. We observe a consistent pattern during decoding: within a sentence, and more generally within a short semantically coherent span, the dominant attention support often remains largely stable. Motivated by this observation, we propose Slow-Fast Inference (SFI), a training-free decoding framework that decouples generation into frequent low-cost fast steps and occasional dense-attention slow steps. Fast steps reuse a compact sparse memory for efficient decoding. Slow steps are triggered near semantic boundaries. At slow steps, the model revisits the broader context and uses the Selector to refresh the selected memory for subsequent fast steps. Across the evaluated context lengths, SFI delivers approximately $1.6\\times$--$14.4\\times$ higher decoding throughput while generally maintaining quality on par with the full-KV baseline across long-context and long-CoT settings. Because SFI is training-free and applies directly to existing checkpoints, it offers a practical path to reducing inference cost for contemporary autoregressive reasoning models in long-context, long-horizon, and agentic workloads.",
+      "identifiers": [
+        "SemanticScholar:8fbf63cdfdef5c806402ba755412aabe326f393d"
+      ],
+      "semantic_scholar_id": "8fbf63cdfdef5c806402ba755412aabe326f393d",
+      "canonical_id": "arXiv:2603.12038",
+      "arxiv_id": "2603.12038",
+      "doi": "10.48550/arXiv.2603.12038",
+      "authors": [
+        "Xing-Yu Xie",
+        "Zhao-Cheng Yu",
+        "Yue Liao",
+        "Tao Wang",
+        "Kim-Chuan Toh",
+        "Shui-Cheng Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 229,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己回帰デコード中の文内では主要注意対象が比較的安定するという観察から、意味境界付近だけ密注意で記憶を更新するslow stepを実行し、それ以外を選択済み疎記憶によるfast stepで処理する。学習不要の長文脈デコード高速化・KV参照削減が直接の技術的貢献である。arXiv要旨はデコードスループット1.6〜14.4倍と品質比較を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2607.06523",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context language model inference is increasingly limited by the memory bandwidth and capacity required to store key-value caches, yet existing compression methods often apply uniform budgets across layers or tokens and degrade retrieval when lexical cues and semantic states require different preservation. We introduce DepthWeave-KV, a token-adaptive cache compression method that factorizes key and value states across neighboring transformer layers using shared low-rank channel bases while retaining lightweight token-specific residuals where attention behavior is sensitive. DepthWeave-KV combines cross-depth residual factorization with a token-conditional depth router that allocates higher reconstruction rank to instruction-bearing and retrieval-critical tokens, and uses calibration-free online error tracking from attention-output probes to adapt compression during generation without retraining the base model. A fused CUDA implementation jointly performs basis lookup, residual dequantization, and attention projection to reduce decode-time memory traffic. Across LongBench, Needle-in-a-Haystack, L-Eval, and long-form QA and summarization benchmarks, DepthWeave-KV achieves near-full-cache task quality with substantially lower memory use, improving average score and retrieval accuracy over prior compressed caches while reaching 8.3x KV memory reduction and 72.8 tokens per second at 64K context.",
+      "identifiers": [
+        "SemanticScholar:5ddc496e9bdd732b7d6901dee5798c7bef4893cc"
+      ],
+      "semantic_scholar_id": "5ddc496e9bdd732b7d6901dee5798c7bef4893cc",
+      "canonical_id": "arXiv:2607.06523",
+      "arxiv_id": "2607.06523",
+      "doi": "10.48550/arXiv.2607.06523",
+      "authors": [
+        "Anna Córdoba",
+        "Adam Puente Tercero",
+        "Nerea Angulo Hijo",
+        "Mar Linares Tercero",
+        "J. Barrientos",
+        "Ainhoa Miranda",
+        "Jesús Olivera"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 112,
+        "matched_prestigious_venue": null
+      },
+      "reason": "隣接Transformer層のKVを共有低ランク基底で表し、命令・検索に重要なトークンだけトークン固有残差と再構成ランクを増やす。注意出力の誤差プローブでオンライン適応し、CUDA融合処理でKV読出しを減らす。長文脈KV容量と帯域に直接関わり、要旨では64K文脈で最大8.3倍のKVメモリ削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Reasoning on the Edge",
+      "source_url": "https://arxiv.org/abs/2603.16867",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with chain-of-thought reasoning achieve state-of-the-art performance across complex problem-solving tasks, but their verbose reasoning traces and large context requirements make them impractical for edge deployment. These challenges include high token generation costs, large KV-cache footprints, and inefficiencies when distilling reasoning capabilities into smaller models for mobile devices. Existing approaches often rely on distilling reasoning traces from larger models into smaller models, which are verbose and stylistically redundant, undesirable for on-device inference. In this work, we propose a lightweight approach to enable reasoning in small LLMs using LoRA adapters combined with supervised fine-tuning. We further introduce budget forcing via reinforcement learning on these adapters, significantly reducing response length with minimal accuracy loss. To address memory-bound decoding, we exploit parallel test-time scaling, improving accuracy at minor latency increase. Finally, we present a dynamic adapter-switching mechanism that activates reasoning only when needed and a KV-cache sharing strategy during prompt encoding, reducing time-to-first-token for on-device inference. Experiments on Qwen2.5-7B demonstrate that our method achieves efficient, accurate reasoning under strict resource constraints, making LLM reasoning practical for mobile scenarios. Videos demonstrating our solution running on mobile devices are available on our project page.",
+      "identifiers": [
+        "SemanticScholar:40bf53fef843f062de58631778bf06368cb5743d"
+      ],
+      "semantic_scholar_id": "40bf53fef843f062de58631778bf06368cb5743d",
+      "canonical_id": "arXiv:2603.16867",
+      "arxiv_id": "2603.16867",
+      "doi": "10.48550/arXiv.2603.16867",
+      "authors": [
+        "Yelysei Bondarenko",
+        "Thomas Hehn",
+        "Rob D. Hesselink",
+        "Romain Lepert",
+        "F. V. Massoli",
+        "E. Mironov",
+        "L. Mirvakhabova",
+        "Tribhuvanesh Orekondy",
+        "Spyridon Stasis",
+        "Andrey Kuzmin",
+        "Anna Kuzina",
+        "M.Yu. Nagel",
+        "Ankita Nayak",
+        "Corrado Rainone",
+        "O. de Rooij",
+        "Paul N. Whatmough",
+        "Arash Behboodi",
+        "B. Bejnordi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 224,
+        "matched_prestigious_venue": null
+      },
+      "reason": "端末上のQwen2.5-7B推論で、LoRAによる推論能力調整と強化学習による出力長予算制御、必要時のみ推論アダプタを有効化する動的切替、プロンプト符号化時のKV共有を組み合わせる。学習だけでなく、端末のKV容量・初回トークン遅延・テスト時並列計算を直接最適化するため推論システムの対象に入る。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels",
+      "source_url": "https://arxiv.org/abs/2604.20913",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly deployed on CPU-only platforms where memory bandwidth is the primary bottleneck for autoregressive generation. Weight quantization to four bits or below reduces memory pressure, yet existing systems still dequantize weights and perform floating-point multiplications, limiting the achievable gains. Ternary weights in {-1, 0, +1} provide a more efficient alternative, replacing multiplications with conditional additions, subtractions, or no-ops. While Fairy2i shows that ternary LLMs can match FP16 quality, its runtime does not exploit this structure. We present FairyFuse, an inference system that enables multiplication-free execution on commodity CPUs by fusing the eight real-valued sub-GEMVs of each widely-linear layer into a single AVX-512 loop using masked additions and subtractions, with zero floating-point multiplications. Roofline analysis shows that 16x weight compression shifts memory-bound GEMV toward the compute regime on bandwidth-limited CPUs, yielding a 29.6x kernel speedup while offering little benefit on GPUs. End-to-end, FairyFuse achieves 32.4 tokens per second on a single Intel Xeon 8558P, outperforming llama.cpp Q4_K_M by 1.24x with near-lossless quality (WikiText-2 perplexity 5.52 vs. 5.47 FP16; downstream accuracy 66.0%).",
+      "identifiers": [
+        "SemanticScholar:5eb29c1b011cdad97112a7667c454615b3632ef9"
+      ],
+      "semantic_scholar_id": "5eb29c1b011cdad97112a7667c454615b3632ef9",
+      "canonical_id": "arXiv:2604.20913",
+      "arxiv_id": "2604.20913",
+      "doi": "10.48550/arXiv.2604.20913",
+      "authors": [
+        "Feilong Zuo",
+        "Xiao-Yan Xi",
+        "Quan Zeng",
+        "Feiyu Wang",
+        "H. Leung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 188,
+        "matched_prestigious_venue": null
+      },
+      "reason": "三値重みの積和を符号付き加減算へ置換し、widely-linear層の8個の実数sub-GEMVをAVX-512の単一ループへ融合するCPU推論カーネルを提案する。Xeon 8558P上で32.4 token/s、llama.cpp Q4_K_M比1.24倍と報告し、重み帯域とカーネル実行を直接改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ce9dd69c0de8",
+    "round": "libimp-ce9dd69c0de8f614-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ce9dd69c0de8f614-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ce9dd69c0de8f614-pre01.json",
+    "receipt": "sha256:0c65f38dcd0aa505a77ef78ac48f499c7a34df03c9467b4351a558983818f36c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ce9dd69c0de8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

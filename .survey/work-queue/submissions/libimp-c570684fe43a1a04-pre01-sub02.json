@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
+      "source_url": "https://arxiv.org/abs/2603.00907",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The growing computational and memory demands of the Key-Value (KV) cache significantly limit the ability of Large Language Models (LLMs). While KV merging has emerged as a promising solution, existing methods that rely on empirical observations of KV asymmetry and gradient-based Hessian approximations lack a theoretical foundation and incur suboptimal compression and inference overhead. To bridge these gaps, we establish a theoretical framework that characterizes this asymmetry through the spectral energy distribution of projection weights, demonstrating that concentrated spectra in Query/Key weights induce feature homogeneity, whereas dispersed spectra in Value weights preserve heterogeneity. Then, we introduce KVSlimmer, an efficient algorithm that captures exact Hessian information through a mathematically exact formulation, and derives a closed-form solution utilizing only forward-pass variables, resulting in a gradient-free approach that is both memory- and time-efficient. Extensive experiments across various models and benchmarks demonstrate that KVSlimmer consistently outperforms SOTA methods. For instance, on Llama3.1-8B-Instruct, it improves the LongBench average score by 0.92 while reducing memory costs and latency by 29% and 28%, respectively.Code is available at https://github.com/lianjunl13-sudo/KVSlimmer.",
+      "identifiers": [
+        "SemanticScholar:8f4847158ddcc5d9efb5f082811300bed0873bc9"
+      ],
+      "semantic_scholar_id": "8f4847158ddcc5d9efb5f082811300bed0873bc9",
+      "canonical_id": "arXiv:2603.00907",
+      "arxiv_id": "2603.00907",
+      "doi": "10.48550/arXiv.2603.00907",
+      "authors": [
+        "Lian Liu",
+        "Hongli An",
+        "Wei-Qi Yan",
+        "Xingran Du",
+        "Sheng-Chuan Zhang",
+        "Hua-Zhong Liu",
+        "Yunshan Zhong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Query/Key射影のスペクトル集中とValue射影の分散からKV統合の非対称性を理論化し、forward変数だけで正確なHessian情報を得る閉形式の勾配不要KV統合を設計する。Llama3.1-8B-InstructでLongBench平均+0.92、メモリ29%・遅延28%削減と報告し、長文脈KV圧縮へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reciprocal Guidance: Orchestrating Draft and Verify Budgets for Advancing the Diffusion-AR Self-Speculation Frontier",
+      "source_url": "https://arxiv.org/abs/2609.34388",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion drafting with autoregressive (AR) verification has emerged as a promising paradigm for efficient speculative decoding. Recent self-speculation models, represented by Nemotron-Labs-Diffusion, further simplify the speculative pipeline by unifying drafting and verification within a shared backbone, while enabling longer acceptance lengths. However, the Pareto frontier between aggregate and per-request throughput remains underexplored. At low concurrency, sequential draft-verify execution requires two model forward passes per round, limiting the effective tokens per forward (TPF). By contrast, at high concurrency, longer drafts incur increasingly expensive computation, forcing individual requests to operate under constrained speculation budgets and preventing full exploitation of the full-backbone drafter. Our key observation indicates that drafting and verification exhibit reciprocal predictability. Draft logits can anticipate likely verification mismatches, while recent verification outcomes predict future drafting utility and suitable block sizes. Building on this observation, we introduce Reciprocal Guidance (RecGuide), a runtime draft-verify orchestration framework that adapts speculative decoding to varying serving loads. RecGuide exploits spare compute capacity through verification-overlapped drafting at low concurrency, while dynamically allocating request-specific draft block sizes as the workload becomes increasingly compute-intensive. Experiments across a wide range of concurrency levels demonstrate consistent throughput improvements over vanilla self-speculation, achieving up to $1.8\\times$ speedup.",
+      "identifiers": [
+        "SemanticScholar:e2ca7dcf2200e12ba2213d335982677a5326d36c"
+      ],
+      "semantic_scholar_id": "e2ca7dcf2200e12ba2213d335982677a5326d36c",
+      "canonical_id": "arXiv:2609.34388",
+      "arxiv_id": "2609.34388",
+      "authors": [
+        "Lin-Ye Wei",
+        "Shu-Tian Zheng",
+        "Hao-Yu Zeng",
+        "Meng Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散ドラフトと自己回帰検証を共有バックボーンで実行する自己投機的復号について、ドラフトlogitから検証不一致を予測し、検証履歴から次のブロック長を選ぶRecGuideを提案する。低同時実行ではドラフトと検証を重ね、高同時実行では要求別長さを配分して最大1.8倍のスループット改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill",
+      "source_url": "https://arxiv.org/abs/2610.05774",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block drafters such as DSpark propose ranked candidates for several positions in one forward pass, and a tree verifier checks them in one pass of the target. The number of rows to verify trades the tokens a wider tree is expected to accept against the time a wider verify takes. Most schedulers that choose this number take the verify time from a table or model measured before serving, corrected online by at most one scale factor, and take acceptance from the drafter's confidence estimates or from a map fitted offline. AdaSpark learns both quantities while it serves, with no profile, calibration or sweep in advance. It learns which verify widths are worth offering and fits each one's verify time as a function of context. It fits each candidate's acceptance probability to the target's verify outcomes, with the drafter's confidence head as one input, and orders and sizes the tree by that fit instead of by the head. The same model prices n-gram continuations of the request's own text, so drafted and text-derived candidates compete for rows in one best-first order. The width is chosen by pricing time at the long-run decode rate. On single- and multi-turn conversations from six public datasets, on three dense targets and one mixture-of-experts target, AdaSpark decodes 1.5-3.1x faster than llama.cpp's DSpark with the same drafters. Our imparo engine with AdaSpark is 1.17-1.52x faster than imparo running with a three-token chain (the default llama.cpp setting); this gain comes from the scheduler alone. Without a width sweep, AdaSpark is never more than 0.3% slower than the best pinned tree width on any dense target or context band. On the mixture-of-experts target it ties the best pinned width, and the other pinned widths from 4 to 16 rows are 5-14% slower.",
+      "identifiers": [
+        "SemanticScholar:f445ae0a07556f6b0f837d8ea7823574caf36dfa"
+      ],
+      "semantic_scholar_id": "f445ae0a07556f6b0f837d8ea7823574caf36dfa",
+      "canonical_id": "arXiv:2610.05774",
+      "arxiv_id": "2610.05774",
+      "authors": [
+        "Li-Quan Liu",
+        "Yi-Fan Zhang",
+        "Bo-Wei Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DSparkの検証木幅と検証時間を事前プロファイルなしにオンライン学習し、ドラフト信頼度を実際のターゲット受理結果で補正する。要求内n-gram候補も同一best-first検証行へ統合し、会話データと密/MoEモデルでllama.cpp DSpark比1.5〜3.1倍のデコード速度を報告する。投機的復号の実行時制御そのものが主題。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Draft-Then-Verify to Systems Co-Design: A Survey of Speculative Decoding for Autoregressive Large Language Models",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3739598",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Access",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive large language model inference by producing low-cost draft work and committing accepted portions after parallel target-side verification. This draftthen- verify process defines the broad family, while recent methods differ in where draft work comes from, how candidate units are logically organized across drafting and verification, what fidelity claim licenses commitment, and how runtime systems realize committed state, control speculation, execute serving paths, and evaluate end-to-end performance. We therefore develop a systems co-design taxonomy with four interdependent aspects—Draft Source, Draft Geometry, Verification Fidelity, and Runtime Execution— and 19 categories. Applying it to 312 works yields Method Profiles that trace individual works through the design space and help researchers navigate the literature, compare methods consistently, and select category-matched baselines.We synthesize recurring combinations and interactions among the four aspects into Co-Design Gates—Representability, Verifiability, State Realizability, and Profitability—that organize open challenges and future directions. Together, the taxonomy, Method Profiles, and Gates frame speculative decoding as a systems co-design problem in which these choices must align to deliver the stated fidelity and end-to-end benefit.",
+      "identifiers": [
+        "SemanticScholar:0c34f9f3305e709a6c4bb7e5d266f120f030605e"
+      ],
+      "semantic_scholar_id": "0c34f9f3305e709a6c4bb7e5d266f120f030605e",
+      "doi": "10.1109/ACCESS.2026.3739598",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3739598",
+      "authors": [
+        "Kai-Kai Zhao",
+        "Zhao-Xiang Liu",
+        "Che Jiang",
+        "Ping Chen",
+        "Xin Wang",
+        "Kai Tian",
+        "Ning Wang",
+        "Yu-Ru Wang",
+        "Ying-Jie Shen",
+        "Jiang-Ze Yan",
+        "Min-Jie Hua",
+        "Wen-Jing Zhang",
+        "Xiang Wang",
+        "Kai Wang",
+        "Kaiyan Zhang",
+        "You-Bang Sun",
+        "Ning Ding",
+        "Shi-Guo Lian",
+        "Bo-Wen Zhou"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ドラフトの生成元・候補形状・検証の忠実度・実行系を4軸19分類に分け、304研究のMethod Profileを構成する。KV状態の確定、投機量制御、サービング実行、速度比較条件まで対象に含めるため、投機的復号の実装・システム設計に直接関わるサーベイ。プレプリントは査読前でありIEEE Access DOIは同題の正式版識別子。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c570684fe43a",
+    "round": "libimp-c570684fe43a1a04-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c570684fe43a1a04-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c570684fe43a1a04-pre01.json",
+    "receipt": "sha256:51cfd0c6e6a206530f05ff18feb4feb50dfaaa35c3aa17cd1df2cc54f1718d3b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c570684fe43a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
