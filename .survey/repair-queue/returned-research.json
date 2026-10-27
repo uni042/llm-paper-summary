@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T05:20:12+00:00",
+  "generated_at": "2026-10-27T07:02:14+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 56,
+  "count": 63,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -61,6 +61,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/local-batch-20261003-f3ff487c07dc5aca--arxiv-2601-19908.md",
       "import_result_path": ".survey/import-inbox/results/research/local-batch-20261003-f3ff487c07dc5aca--arxiv-2601-19908.json",
       "worker_run_key": "research-revalidation-arxiv-2601.19908-20261003t225905jst"
+    },
+    {
+      "canonical_id": "arXiv:2608.04991",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-12T11:52:13+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2026-2608.04991-rac-reference-aware-activation-compression-for-communication-efficient-s.md と 20 段落 / 4626文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4939,
+        "body_paragraphs": 23,
+        "method_chars": 1581,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1735,
+        "limitation_chars": 396,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_80ad364ed1888191a4a203aa4450ea49--2026-2608.04991-rac-returned-repair-20261012-2002-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_80ad364ed1888191a4a203aa4450ea49--2026-2608.04991-rac-returned-repair-20261012-2002-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261012-2002-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2302.13939",
@@ -113,6 +138,33 @@
       "worker_run_key": "20261014-1730-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2511.02647",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T11:36:01+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.02647-federated-attention-a-distributed-paradigm-for-collaborative-llm-inferen.md と 11 段落 / 2267文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5009,
+        "body_paragraphs": 29,
+        "method_chars": 1785,
+        "method_paragraphs": 10,
+        "evaluation_chars": 1421,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c34cb3f187308191bf72dfec3a54595d--2025-2511.02647-federated-attention-edge-llm-inference-research-20261014-1430-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261014-1430-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2605.31035",
       "title": null,
       "source_url": null,
@@ -163,6 +215,31 @@
       "worker_run_key": "20261014-1245-scheduled-chat-45/r01"
     },
     {
+      "canonical_id": "arXiv:2511.12309",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T12:39:15+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md と 18 段落 / 3649文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5173,
+        "body_paragraphs": 28,
+        "method_chars": 1355,
+        "method_paragraphs": 8,
+        "evaluation_chars": 1588,
+        "limitation_chars": 712,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c625c6b588c--libfile_fab9a30ca4208191a16194cad759f5c4--2025-2511.12309-optimal-self-consistency-research-20261014-1145-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4c625c6b588c--libfile_fab9a30ca4208191a16194cad759f5c4--2025-2511.12309-optimal-self-consistency-research-20261014-1145-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261014-1145-scheduled-chat-45/r01"
+    },
+    {
       "canonical_id": "arXiv:2511.19676",
       "title": null,
       "source_url": null,
@@ -188,6 +265,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-4c7d1830cd11--libfile_5dcd6e9eb4f88191b372182ed78ed81b--2025-2511.19676-interlace-vlm-layer-pruning-research-20261014-1800-scheduled-chat-00-r01.json",
       "worker_run_key": "20261014-1800-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.21323",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-14T12:45:05+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2512.21323-parallel-token-prediction-for-language-models.md と 17 段落 / 3415文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4914,
+        "body_paragraphs": 29,
+        "method_chars": 1888,
+        "method_paragraphs": 12,
+        "evaluation_chars": 1024,
+        "limitation_chars": 587,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d4b0e651bba--libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4d4b0e651bba--libfile_c5d42b3974c88191be2bcacf8e3a6395--2025-2512.21323-parallel-token-prediction-research-20261014-1845-scheduled-chat-45-repair.json",
+      "worker_run_key": "20261014-1830-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.18653/v1/2021.naacl-industry.15",
@@ -666,6 +768,33 @@
       "worker_run_key": "20261020-2127-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2509.18362",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-22T02:08:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md と 12 段落 / 2484文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4449,
+        "body_paragraphs": 26,
+        "method_chars": 1868,
+        "method_paragraphs": 12,
+        "evaluation_chars": 795,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-60d1ecb5d7f3--libfile_a06b3b7db0188191b65d18622431f694--2025-2509.18362-fastmtp-recursive-mtp-speculation-research-20261020-2030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-60d1ecb5d7f3--libfile_a06b3b7db0188191b65d18622431f694--2025-2509.18362-fastmtp-recursive-mtp-speculation-research-20261020-2030-scheduled-chat-3.json",
+      "worker_run_key": "20261020-2030-scheduled-chat-30/r01"
+    },
+    {
       "canonical_id": "arXiv:2404.06954",
       "title": null,
       "source_url": null,
@@ -690,6 +819,31 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6dc8ad596f63--libfile_66bab03e7d588191ab7dd943aa5d33c1--2024-2404.06954-unified-layer-skipping-inference-research-20261020-0530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6dc8ad596f63--libfile_66bab03e7d588191ab7dd943aa5d33c1--2024-2404.06954-unified-layer-skipping-inference-research-20261020-0530-scheduled-chat-30.json",
+      "worker_run_key": "20261020-0530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2404.02837",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-22T02:13:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2024-2404.02837-cherry-on-top-parameter-heterogeneity-and-quantization-in-large-language.md と 14 段落 / 3126文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4976,
+        "body_paragraphs": 31,
+        "method_chars": 1613,
+        "method_paragraphs": 9,
+        "evaluation_chars": 791,
+        "limitation_chars": 615,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8c641ead9c13--libfile_a62864b426588191bea37d951c96048e--2024-2404.02837-cherryq-parameter-heterogeneity-mixed-precision-quantization-research-20261020-0530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8c641ead9c13--libfile_a62864b426588191bea37d951c96048e--2024-2404.02837-cherryq-parameter-heterogeneity-mixed-precision-quantization-research-202.json",
       "worker_run_key": "20261020-0530-scheduled-chat-30/r01"
     },
     {
@@ -743,6 +897,31 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ca7d4c1f8efd--libfile_ce2da32ba1888191bdbe22bf3388cd78--2024-2411.10741-metala-linear-attention-optimal-approximation-research-20261021-0956-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-ca7d4c1f8efd--libfile_ce2da32ba1888191bdbe22bf3388cd78--2024-2411.10741-metala-linear-attention-optimal-approximation-research-20261021-0956-sche.json",
       "worker_run_key": "20261021-0956-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2503.15369",
+      "title": null,
+      "source_url": null,
+      "returned_at": "2026-10-23T18:12:05+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2503.15369-efficientllava-generalizable-auto-pruning-for-large-vision-language-mode.md と 25 段落 / 5283文字 (100.0%) が完全一致"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7871,
+        "body_paragraphs": 43,
+        "method_chars": 2364,
+        "method_paragraphs": 14,
+        "evaluation_chars": 2781,
+        "limitation_chars": 753,
+        "insufficiency_flags": []
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f0d9c7b1cb8c8191b606bb51547447d4--2025-2503.15369-efficientllava-section-normalized-returned-repair-20261024-0130-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_f0d9c7b1cb8c8191b606bb51547447d4--2025-2503.15369-efficientllava-section-normalized-returned-repair-20261024-0130-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261024-0130-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3725338",
@@ -1340,8 +1519,8 @@
     },
     {
       "canonical_id": "arXiv:2408.11855",
-      "title": "FactorLLM: Factorizing Knowledge via Mixture of Experts for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2408.11855",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T05:20:07+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1367,37 +1546,9 @@
       "worker_run_key": "20261027-1232-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2405.01943",
-      "title": "Dependency-Aware Semi-Structured Sparsity of GLU Variants in Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2405.01943",
-      "returned_at": "2026-10-27T05:20:08+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4978,
-        "body_paragraphs": 29,
-        "method_chars": 1358,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-067008b9d19c--libfile_8e56175645dc8191a7a9bf4379b4ac26--2024-2405.01943-dass-glu-dependency-aware-pruning-research-20261027-1232-scheduled-chat-00-r01-corrected.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-067008b9d19c--libfile_8e56175645dc8191a7a9bf4379b4ac26--2024-2405.01943-dass-glu-dependency-aware-pruning-research-20261027-1232-scheduled-chat-0.json",
-      "worker_run_key": "20261027-1232-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
-      "title": "Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey",
-      "source_url": "https://doi.org/10.1109/ACCESS.2026.3664226",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T05:20:09+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1424,8 +1575,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/ACCESS.2025.3568702",
-      "title": "Addressing Activation Outliers in LLMs: A Systematic Review of Post-Training Quantization Techniques",
-      "source_url": "https://doi.org/10.1109/ACCESS.2025.3568702",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T05:20:10+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1454,8 +1605,8 @@
     },
     {
       "canonical_id": "DOI:10.3390/fi17040185",
-      "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
-      "source_url": "https://doi.org/10.3390/fi17040185",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-27T05:20:11+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -1480,6 +1631,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c1c0492f5e37--libfile_171f776592188191af5605f3fe394a34--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261027-1204-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-c1c0492f5e37--libfile_171f776592188191af5605f3fe394a34--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261027-1204-scheduled-.json",
       "worker_run_key": "20261027-1204-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.08289",
+      "title": "Attention as Conditioning: What Classical Learning Theory Predicts About Linear Transformers",
+      "source_url": "https://arxiv.org/pdf/2508.08289",
+      "returned_at": "2026-10-27T06:58:38+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6240,
+        "body_paragraphs": 36,
+        "method_chars": 2387,
+        "method_paragraphs": 13,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_18adbd0ea0988191a08e68efc36ccfb2--2025-2508.08289-attention-as-conditioning-linear-state-research-20261027-1345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     }
   ]
 }

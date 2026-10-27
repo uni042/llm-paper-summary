@@ -35,10 +35,15 @@
   "selection_reason": "GPUの動画codecをLLM tensor codecとして使い、training/inference時のテンソル保存・転送量を圧縮してメモリ容量と帯域の制約を緩和する。",
   "semantic_scholar_id": "a3b6d5d9d984614754cc7aaea94c13d3502f784a",
   "source_url": "https://arxiv.org/abs/2407.00467",
-  "status": "ready",
+  "status": "superseded",
   "title": "VcLLM: Video Codecs are Secretly Tensor Codecs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-27T07:02:13+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2407.00467-vcllm-video-codecs-are-secretly-tensor-codecs.md",
+  "represented_canonical_id": "arXiv:2407.00467",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
