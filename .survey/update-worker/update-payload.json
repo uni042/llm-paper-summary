@@ -1,41 +1,50 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261029T230500-oct27",
+  "attempt_id": "library-import-maint-20261029T234000-oct28",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "llm-releases/gemma.md",
-      "expected_blob_sha": "b9d3e340d95530acc899a162a302d4d67030be99",
+      "path": "llm-releases/liquid-ai.md",
+      "content": "# Liquid AI LFM3 / d1\n\nLiquid AIが2026-10-27に公開した、用途別のopen-weight LFM3 familyをまとめる。公式発表は6つの派生モデルを示し、共通基盤のLFM3-1.7B-Baseを加えると少なくとも7系統のcheckpointがある。\n\n| 公開日 | モデル | 主な用途・仕様 | 提供形態・注意 |\n|---|---|---|---|\n| 2026-10-27 | LFM3-1.7B-Base | 共通基盤となるtext model | open-weight。各checkpointの配布形式を個別確認 |\n| 2026-10-27 | LFM3-1.7B | text・tool use・構造化出力。1.73B parameters、24 layers、128K語彙、事前学習22T tokens | LFM Open License v1.0。4bit版のweight footprintは約1GBとの公式説明 |\n| 2026-10-27 | LFM3-VL-2B | 画像・動画対応 | モダリティと実行対応をcheckpointごとに確認 |\n| 2026-10-27 | LFM3-Audio-2B | 音声用途 | checkpoint固有の音声入出力条件を確認 |\n| 2026-10-27 | LFM3-Omni-2B | 音声・画像・動画を統合 | 配布形式とruntime対応はvariantごとに確認 |\n| 2026-10-27 | d1-2B | 判断・agent用途 | Ollama v0.40.12はこのreleaseでApple hardware対応と案内 |\n| 2026-10-27 | d1-omni-2B | 音声付き判断・agent用途 | モダリティ別のruntime対応を確認 |\n\n## LFM3-1.7Bの構造\n\ntext版は13層のgated short convolution、5層のsliding-window attention（window 256 tokens）、6層のglobal attentionを組み合わせるtri-hybrid architecture。model全体のcontext lengthは256K tokensで、SWAの256-token windowとは別の値である。最大contextでの実行可能性や必要RAM/VRAMはKV cacheとruntime設定に依存する。\n\n公式のLFM Open License v1.0を適用する。Apache-2.0やMITと読み替えない。4bit text checkpointの約1GBはweight footprintであり、長contextを動かすための総メモリ量ではない。\n\n## 評価と実行互換性\n\nLiquid AIはWebArena-Verifiedで38.42を報告し、比較としてLFM2.5-2.6Bの3.02を示す。著者評価はbenchmark構成・agent harnessに依存し、独立再現や全タスクでの優位を意味しない。Q4_0 GGUFを用いた著者のedge比較はRyzen AI Max+ 395、Apple M5 Max、iPhone 17 Proで行われたもので、RTX 4070 SUPERの性能へ外挿できない。\n\n公式model cardはTransformers利用を案内する。GGUFはLFM3対応のllama.cpp buildが必要。FP8のSGLang対応は確認時点でPR審査中であり、現行stable release全般で使えるとは限らない。Ollama v0.40.12はLFM3およびd1 2BのApple hardware対応を告知し、Linux/Windows対応は今後としている。\n\n## 一次資料\n\n- [Liquid AI公式発表](https://www.liquid.ai/blog/lfm3)\n- [Liquid AI Hugging Face記事](https://huggingface.co/blog/LiquidAI/lfm3)\n- [LFM3-1.7B model card](https://huggingface.co/LiquidAI/LFM3-1.7B)\n- [LFM3-1.7B-Base model card](https://huggingface.co/LiquidAI/LFM3-1.7B-Base)\n- [LFM3 GGUF model card](https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF)\n- [LFM3 FP8 model card](https://huggingface.co/LiquidAI/LFM3-1.7B-FP8)\n"
+    },
+    {
+      "path": "llm-releases/README.md",
+      "expected_blob_sha": "03cc4f54b414ae93a576cee68dbe0241c7be3aa1",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 用語メモ",
-          "text": "## 2026-10-26 — Gemma 4 12B MTP assistantの生成設定修正\n\n既存checkpoint `google/gemma-4-12B-it-assistant` の `generation_config.json` が更新された。EOS tokenは `1` 単独から `[1, 106, 50]` へ変更され、`is_assistant: true`、`num_assistant_tokens: 6`、`num_assistant_tokens_schedule: \"constant\"` が設定された。MTP speculative decoding用assistantとしての設定変更であり、新checkpointの公開やGemma 4全体のリリース日変更ではない。\n\n一次資料: https://huggingface.co/google/gemma-4-12B-it-assistant/discussions/7/files ; https://huggingface.co/google/gemma-4-12B-it-assistant/commits/main\n\n"
+          "anchor": "| 2026-10-21 | Recursive Flint",
+          "text": "| 2026-10-27 | Liquid AI LFM3 / d1 | Liquid AI | 1.73B text tri-hybridを含む用途別6派生とbase。text modelは256K context、LFM Open License v1.0。Ollama v0.40.12のLFM3/d1 2B対応はApple hardware限定。 | [Liquid AI系](liquid-ai.md) |\n"
+        },
+        {
+          "op": "insert_before_once",
+          "anchor": "- [Recursive系](recursive.md)",
+          "text": "- [Liquid AI系](liquid-ai.md)\n"
         }
       ]
     },
     {
-      "path": "llm-releases/nvidia.md",
-      "expected_blob_sha": "3a80906ce0ab3db46d8896f9d0eeadbbb83b0a8a",
+      "path": "framework-updates/inference-engines/ollama/README.md",
+      "expected_blob_sha": "381c6c0261b2a240301eb48aac4f632b400e471c",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 性能値の読み方",
-          "text": "| 2026-10-16 | Nemotron Labs Dory1.0-4B | 4B latent-recurrent / looped normalized-GPT。Input 8層、共有Recurrent 20層、Output 8層で、1/2/4 loopにより同一重みの計算量を変更する。最大256K contextはKV容量とruntimeに依存。BF16、MXFP8、NVFP4、Q5_K_M GGUF（公式GGUFは約3.42 GiB）。OpenMDW-1.1。vLLM PR #60149は確認時点で審査中。GGUF実行例は特定のllama.cpp forkと設定を要し、一般の公式安定版やWindows配布での動作は未確認。NVIDIAのDGX Spark・batch 1評価はRTX 4070 SUPERへ外挿しない。 | https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16 ; https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-GGUF ; https://github.com/vllm-project/vllm/pull/60149 |\n"
+          "anchor": "## 主要更新",
+          "text": "### 2026-10-27 — Ollama v0.40.12（正式版）\n\nv0.40.11からの正式更新。LFM3 text/VL/audio/omniとd1:2b、d1-omniをOllama libraryに追加。**このreleaseでのLFM3とd1 2B対応はApple hardware向けで、公式案内ではLinux/Windows対応は今後**としている。各multimodal variantのOS対応も個別に確認する。\n\nApple SiliconのGemma 4、Flint、Laguna prompt processingを最適化し、MLXのDFlash2 draft speculative decodingをサポート。Apple向けの変更からWindows CUDAの性能を推定しない。公式releaseに一般的なE2E速度倍率は示されていない。\n\n[公式release](https://github.com/ollama/ollama/releases/tag/v0.40.12) · [v0.40.11からの差分](https://github.com/ollama/ollama/compare/v0.40.11...v0.40.12)\n\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "764d1cc8331b2662514fd19f5b6d763ca43f1506",
+      "expected_blob_sha": "4e569710b8c76f717e3902c9936b3e97025debbc",
       "edits": [
         {
           "op": "insert_before_once",
           "anchor": "## 主要更新",
-          "text": "## 2026-10-26〜27 — llama.cpp b11889〜b11912（開発ビルド）\n\nb11888からb11912までの差分を追加。すべてpre-release開発ビルドであり、正式安定版とは区別する。\n\n- b11901はSYCL reorder時の一時メモリを32 MiBに制限する。Intel/SYCL backend向けでCUDAへの直接追加ではない。\n- b11905はVulkan RMSNormのsubgroup reduction最適化とAMD vendor pathを追加。Vulkan固有。\n- b11909はQualcomm HexagonのMUL_MAT_ID row-skip zeroingをベクトル化。Hexagon固有。\n- b11910はOpenCLのKV-cache view書き込みを修正し、state restore失敗を解消。\n- b11912はLagunaのMoE amax rescalingとSM tensor supportを追加。特定architecture対応で一般モデルの速度向上を示さない。\n- b11912の公式Windows配布assetにCUDA 12.4および13.4系x64 buildがある。Windows 11 + RTX 4070 SUPERでの実測・互換性は未確認。\n\n一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912\n\n"
+          "text": "## 2026-10-27 — llama.cpp b11913〜b11936（開発ビルド）\n\nb11912からb11936までの増分を記録。GitHub上のpre-release開発ビルドであり、正式安定版とは区別する。b11936にはWindows x64 CUDA 12.4 / 13.4配布assetがあるが、Windows 11 + RTX 4070 SUPERでの実測性能は未確認。\n\n- **b11930**: llama-server routerに`--models-memory-max`を追加し、device別メモリ余裕に応じてモデルロード前の使用量推定とidle model unloadを調整。複数モデルを切替えるserver運用向けで、単一モデルの生成速度向上ではない。\n- **b11928**: MiniCPM-OCR-Jevの判定modelを追加。`POST /v1/systemone`で画像に対するOCR textをscoreする。通常の文章生成用LM headはない。\n- **b11926 / b11927 / b11936**: GLM5-Next / QSA / DSAのsparse selectionとdense `kq_mask`依存を整理し、Metal fused top-k maskやQwen4Exp / GLM5-Nextのk-pool選択を追加。一般的な生成速度倍率は未公表。\n- **b11923**: CPU / CUDA / Metalのnon-contiguous view向けSCALEを拡大し、CUDA stride-aware kernelとsoftcap fusionの正確性guardを追加。対象view patternに限る。\n- **b11918**: OpenCLへQ3_K matmulとmatvecを追加。Adreno向けを含み、CUDA backendへの追加ではない。\n- **b11933**: VulkanのMUL_MAT dim-3 broadcastでCPU fallbackになるケースを修正（Vulkan固有）。\n- b11913 Hexagon VTCM override、b11922 replay test、b11929 CLI model指定、b11935 RPC error handlingも含まれる。テストやbackend固有変更を一般的な速度改善と扱わない。\n\n一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11936 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11930 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11928 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11926 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11927 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11923 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11918 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11933\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-27 Library maintenance: correct Gemma 4 MTP assistant config; backfill Dory1.0-4B as 2026-10-16 release; append llama.cpp b11889-b11912 prerelease updates with backend limitations."
+  "summary": "2026-10-28 Library maintenance: add Liquid AI LFM3/d1 family page and index; append Ollama v0.40.12 and llama.cpp b11913-b11936 with platform/backend constraints."
 }
