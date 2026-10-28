@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
+      "source_url": "https://arxiv.org/abs/2608.06135",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) such as ChatGPT and Claude are widely used for information retrieval and problem-solving. Recent work has focused on improving scheduling algorithms to boost throughput while maintaining low latency. However, these approaches often assume Poisson request arrivals with constant rates - an assumption that fails to reflect the inherently bursty and dynamic nature of real-world traffic. We propose a lightweight extension to the state-of-the-art WAIT algorithm [1], which adapts to time-varying arrival rates without prior traffic knowledge. The proposed algorithm performs online estimation of request intensity based on observed interarrival times. Using Markov Modulated Poisson Process (MMPP)-based synthetic workloads with diverse request types, we conduct a simulation-based evaluation demonstrating that the proposed method achieves higher throughput than Sarathi-Serve [2], ORCA [3], and vLLM [4] in the evaluated low arrival-rate shift scenarios while maintaining comparable latency.",
+      "identifiers": [
+        "SemanticScholar:87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a"
+      ],
+      "semantic_scholar_id": "87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a",
+      "canonical_id": "arXiv:2608.06135",
+      "arxiv_id": "2608.06135",
+      "authors": [
+        "Anjali Gangadhar Katageria",
+        "S. Rani",
+        "R. Sengupta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      },
+      "reason": "変動する要求到着率を到着間隔からオンライン推定し、WAITのバッチング閾値をバーストに合わせて更新する。MMPP合成トラフィックのシミュレーションで低頻度の負荷状態変化時にSarathi-Serve・ORCA・vLLMより高い処理量と同程度の遅延を報告するLLM推論スケジューリング方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.34555",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+      "identifiers": [
+        "SemanticScholar:36623233e6049168c2b669b21b48ecb3e5dae84b"
+      ],
+      "semantic_scholar_id": "36623233e6049168c2b669b21b48ecb3e5dae84b",
+      "canonical_id": "arXiv:2609.34555",
+      "arxiv_id": "2609.34555",
+      "authors": [
+        "Qiu-Yang Zhang",
+        "Kai Zhou",
+        "Kai Lu",
+        "Hao-Cheng Lu",
+        "Jian Zhou",
+        "Yuan-Peng Su",
+        "Kun Bao",
+        "Ji-Guang Wan",
+        "Fei Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PulseInferはCPU側の疎KV再読込による細粒度PCIe I/Oと待機を、層単位の割込みスケジューリング、I/O適応オフロード許可、SoloHead選択とgather-scatter転送で隠蔽・集約する。SGLang比最大4.7倍の復号処理量を報告する長文脈サービング方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Denoising Surface: Modeling and Predicting Inference Cost for Diffusion LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.00499",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As diffusion large language models (dLLMs) become more capable, they are moving from research settings to real-world \\textit{serving}, where request management (such as scheduling and resource allocation) relies on accurate estimation of per-request inference cost. However, common cost proxies fall short for dLLMs: output length ignores that one forward pass can unmask multiple tokens, and denoising-step count ignores the \\textit{heterogeneous} per-step costs. We observe that the block-autoregressive generation mechanism induces a two-dimensional execution structure over output blocks and within-block denoising steps, whereas these proxies collapse it into a scalar, discarding information essential for characterizing the cost. Motivated by this insight, we propose the Denoising Workload Surface (DWS), which preserves this two-dimensional block-step structure as a probability surface to weight the heterogeneous per-step costs. We then design a coarse-to-fine training scheme that enables a lightweight prompt-only predictor to accurately predict the complex DWS. This predictor runs efficiently even on a single CPU core, avoiding GPU contention with the serving model. Since DWS decouples request-dependent execution behavior from deployment-specific cost factors, the predictor transfers across hardware configurations without retraining. In \\textit{real-world} serving experiments, DWS reduces cost-prediction error by up to $2.50\\times$ over scalar-based predictors, while the DWS-guided shortest-job-first scheduler reduces end-to-end latency by up to $1.92\\times$ for online chatbots.",
+      "identifiers": [
+        "SemanticScholar:465783e3faba20fc7a473102fb824d20934ad550"
+      ],
+      "semantic_scholar_id": "465783e3faba20fc7a473102fb824d20934ad550",
+      "canonical_id": "arXiv:2610.00499",
+      "arxiv_id": "2610.00499",
+      "authors": [
+        "Hao-Yu Zheng",
+        "Fang-Cheng Fu",
+        "Bin-Hang Yuan",
+        "Yong-Qiang Zhang",
+        "Liang Deng",
+        "Hao Wang",
+        "Yuan-Yuan Zhu",
+        "Xiao Yan",
+        "Jia-Wei Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DWSは拡散LLMの出力ブロック×復元ステップという二次元実行分布を予測し、要求ごとの不均一な計算量を推定する。CPUで動く軽量予測器を使うSJFスケジューラがオンライン対話のE2E遅延を最大1.92倍改善するという、拡散LLMサービングの直接的なコスト推定・スケジューリング研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Sparsity-Aware Scheduling for Efficient MoE-Based LLM Serving on Edge Servers",
+      "source_url": "https://doi.org/10.1145/3795866.3844460",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": "Proceedings of the 32nd Annual International Conference on Mobile Computing and Networking",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To support real-time and domain-customized edge intelligent applications, LLMs are increasingly deployed on edge computing servers. However, we observe that current MoE-based LLM serving systems, inherited from the cloud-based architectures, face a critical sparsity-vanishing problem when serving at the edge: tokens within an input batch often activate a large fraction of experts, which incurs significant I/O overhead from frequent expert swapping between CPU and GPU memory, ultimately degrading system throughput. In this work, we propose Saber, a sparsity-aware scheduling framework optimized for efficient MoE-based LLM serving on edge servers. The core idea of Saber is to introduce a group-level batching strategy that dynamically identifies requests with similar activated experts, and coalesces them to construct sparsity-preserving input batches. To ensure efficient online execution, activation patterns are precomputed and clustered offline, enabling fast request grouping through a lightweight classifier at runtime. Additionally, Saber incorporates a utility-driven priority scheduling mechanism to maximize inference throughput while maintaining low latency by intelligently adjusting group priorities. Experiments on representative MoE-based LLMs demonstrate that Saber significantly outperforms existing sparsity-agnostic schedulers, achieving up to 3.8× lower batch execution time and 3.27× higher throughput at comparable latency levels.",
+      "identifiers": [
+        "SemanticScholar:9fe82306d866c61c39e2c145f2e2403bc6859ef6"
+      ],
+      "semantic_scholar_id": "9fe82306d866c61c39e2c145f2e2403bc6859ef6",
+      "doi": "10.1145/3795866.3844460",
+      "canonical_id": "DOI:10.1145/3795866.3844460",
+      "authors": [
+        "Yan Zhuang",
+        "Chen Gong",
+        "Zhen-Zhe Zheng",
+        "Jia-Le Lei",
+        "Xiao-Yao Huang",
+        "Jie Wu",
+        "Fan Wu",
+        "Gui-Hai Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SaberはMoEの複数要求を無造作にバッチ化すると活性化専門家集合が膨らむ問題に対し、専門家経路の事前クラスタと軽量分類器で類似要求をまとめ、待機時間と群サイズの効用でスケジュールする。MobiCom 2026公式PDFでバッチ実行時間最大3.8倍短縮・処理量最大3.27倍を報告する。",
+      "library_body_check": "primary_pdf_abstract_and_introduction_review; fulltext_not_exhaustive",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cde3689bde59",
+    "round": "libimp-cde3689bde599b89-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cde3689bde599b89-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cde3689bde599b89-pre01.json",
+    "receipt": "sha256:ffba9d38e5959b5df8117be63fe00d4c0945a96a4b55bc484ffc8cdc5e218f56"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cde3689bde59",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

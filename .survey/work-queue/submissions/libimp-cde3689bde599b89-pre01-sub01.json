@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2512.24124",
+      "year": 2025,
+      "published": "2025-12-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The presence of outliers in Large Language Models (LLMs) weights and activations makes them difficult to quantize. Recent work has leveraged rotations to mitigate these outliers. In this work, we propose methods that learn fusible rotations by minimizing principled and cheap proxy objectives to the weight quantization error. We primarily focus on GPTQ as the quantization method. Our main method is OptRot, which reduces weight outliers simply by minimizing the element-wise fourth power of the rotated weights. We show that OptRot outperforms both Hadamard rotations and more expensive, data-dependent methods like SpinQuant and OSTQuant for weight quantization. It also improves activation quantization in the W4A8 setting. We also propose a data-dependent method, OptRot$^{+}$, that further improves performance by incorporating information on the activation covariance. In the W4A4 setting, we see that both OptRot and OptRot$^{+}$ perform worse, highlighting a trade-off between weight and activation quantization.",
+      "identifiers": [
+        "SemanticScholar:c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057"
+      ],
+      "semantic_scholar_id": "c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057",
+      "canonical_id": "arXiv:2512.24124",
+      "arxiv_id": "2512.24124",
+      "doi": "10.48550/arXiv.2512.24124",
+      "authors": [
+        "A. Gadhikar",
+        "Riccardo Grazzi",
+        "James Hensman"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 302,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OptRotは重みの4乗和を抑える学習可能な融合回転で外れ値を減らし、GPTQの低ビット重み量子化を改善する。W4A8では活性量子化にも寄与するがW4A4では悪化する負の結果も要旨にあり、LLM推論向けPTQの具体的手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
+      "source_url": "https://arxiv.org/abs/2608.08684",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is bottlenecked by KV cache memory, yet distributing a limited cache budget across layers remains challenging. Existing methods rely on proxies such as layer depth, attention statistics, or representation change. These proxies do not measure how perturbations at each layer propagate to the output and may therefore cause sensitive layers to be underallocated while tolerant layers are overallocated. To address this issue, we propose RippleKV, which allocates cache across layers by estimating how perturbations to each layer's value cache affect the final predictive distribution. RippleKV independently injects norm-adaptive perturbations into each layer's value cache and measures the induced KL divergence at the model output over a small calibration set. Averaging these responses yields a sensitivity profile specific to the model that need not vary monotonically with depth. RippleKV then converts the sensitivity profile into layer budget multipliers by normalizing the sensitivity scores and applying an exponential mapping. A ratio parameter controls the allocation disparity between sensitive and tolerant layers, while a final normalization preserves the KV cache budget. Experiments on LongBench demonstrate that RippleKV achieves the highest average performance among the evaluated KV cache compression methods under matched cache budgets.",
+      "identifiers": [
+        "SemanticScholar:7f670a19f2d9279572bcd87034db19c7a267a491"
+      ],
+      "semantic_scholar_id": "7f670a19f2d9279572bcd87034db19c7a267a491",
+      "canonical_id": "arXiv:2608.08684",
+      "arxiv_id": "2608.08684",
+      "authors": [
+        "Dong Xu",
+        "Kai-Qi Qian",
+        "Julius",
+        "Wei-Jie Shi",
+        "Yuxuan Sun",
+        "Minghua Tang",
+        "Feng-Lei Jin",
+        "Hanchi Dong",
+        "Jia-Jie Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RippleKVは各層の値キャッシュへ規模調整済み摂動を注入し、出力分布のKL変化から層ごとの敏感度を測定してKV保存予算を配分する。LongBenchで同一KV予算の既存圧縮法より平均性能が高いと報告し、長文脈LLMの推論メモリ配分に直接該当する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Resource Multiplexing in Tuning and Serving Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "year": 2025,
+      "published": null,
+      "venue": "USENIX Annual Technical Conference",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4"
+      ],
+      "semantic_scholar_id": "10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "canonical_id": "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "authors": [
+        "Yongjun He",
+        "Hao Yang",
+        "Yao Lu",
+        "A. Klimovic",
+        "Gustavo Alonso"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 484,
+        "matched_prestigious_venue": "USENIX Annual Technical Conference"
+      },
+      "reason": "LLMStationはLoRA調整と推論を同じGPU上で時間・空間多重化し、反復単位のプリエンプション可能なAutogradパイプラインと混合バッチングを導入する。USENIX ATC 2025公式要旨で推論SLOを守りながら既存方式比1.38～14.77倍の処理量を報告し、サービング実行基盤へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs",
+      "source_url": "https://arxiv.org/abs/2604.11627",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have recently demonstrated remarkable capabilities in cross-modal understanding and generation. However, the rapid growth of visual token sequences--especially in long-video and streaming scenarios--poses a major challenge to their scalability and real-world deployment. Thus, we introduce POINTS-Long, a native dual-mode MLLM featuring dynamic visual token scaling inspired by the human visual system. The model supports two complementary perception modes: focus mode and standby mode, enabling users to dynamically trade off efficiency and accuracy during inference. On fine-grained visual tasks, the focus mode retains the optimal performance, while on long-form general visual understanding, the standby mode retains 97.7-99.7% of the original accuracy using only 1/40-1/10th of the visual tokens. Moreover, POINTS-Long natively supports streaming visual understanding via a dynamically detachable KV-cache design, allowing efficient maintenance of ultra-long visual memory. Our work provides new insights into the design of future MLLMs and lays the foundation for adaptive and efficient long-form visual understanding.",
+      "identifiers": [
+        "SemanticScholar:67967a6f23543958fa6f1425abf56e718ef7e3ab"
+      ],
+      "semantic_scholar_id": "67967a6f23543958fa6f1425abf56e718ef7e3ab",
+      "canonical_id": "arXiv:2604.11627",
+      "arxiv_id": "2604.11627",
+      "doi": "10.48550/arXiv.2604.11627",
+      "authors": [
+        "Haicheng Wang",
+        "Yuan Liu",
+        "Yi-Kun Liu",
+        "Zhe-Meng Yu",
+        "Zhongyin Zhao",
+        "Yangxiu You",
+        "Zi-Lin Yu",
+        "Le Tian",
+        "Xiao Zhou",
+        "Jie Zhou",
+        "Wei-Di Xie",
+        "Yan-Feng Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 198,
+        "matched_prestigious_venue": null
+      },
+      "reason": "POINTS-Longは焦点モードと待機モードを切り替えて視覚トークン予算を動的に制御し、切離し可能なKVキャッシュでストリーミング動画履歴を維持する。長時間視覚理解で元精度の97.7～99.7%を1/40～1/10の視覚トークン数で保持し、MLLM推論メモリ削減に直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "ViDA: Lossless VideoQA Acceleration via Selective Sparse Self-Speculation With Parallel Computational Load Management",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3683867",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE Transactions on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models (VideoLLMs) have significantly advanced video question answering (VideoQA) applications, which demand both low latency and high accuracy. To meet the requirements, VideoLLMs are typically deployed on GPUs for parallel acceleration. However, the massive computational load from long video contexts often makes such acceleration insufficient. Existing techniques like token pruning and speculative decoding attempt to address this challenge by altering the computational load, but often fail to balance both speed and accuracy. Sparse self-speculation mitigates these limitations via selecting a subset of tokens on a specific token budget to draft the output and then verify it using all tokens. However, existing sparse self-speculation is designed for text-based scenarios and cannot be directly applied to VideoQA tasks, as it fails to account for discrepancies in critical multimodal tokens and the dynamic nature of optimal token budget in VideoQA, leading to suboptimal scale and inappropriate composition of parallel computational load. We argue that achieving both high accuracy and low latency in VideoQA tasks requires managing the computational load with awareness of these discrepancies and dynamics. To achieve this, we introduce ViDA, a selective sparse self-speculation inference system. It progressively searches token budgets by iteratively refining lower and upper bounds of search space derived from long contexts, aiming to find and allocate varying optimal budgets in real-time adaptively. Additionally, it leverages insights from discrepancies in critical multimodal tokens to perform a discrepancy-aware token selection approach for identifying critical tokens. Evaluations across various VideoQA workloads show that compared to state-of-the-art methods, ViDA preserves exact model outputs while reducing average time-per-output-token (TPOT) by 15% to 46% and average end-to-end latency by up to 28%, while decreasing the divergence from optimal token budget distribution by up to 93% and increasing the optimal critical token ratio by up to 380%.",
+      "identifiers": [
+        "SemanticScholar:1851d3cb7da364633a39ccd73225b117ba94eee2"
+      ],
+      "semantic_scholar_id": "1851d3cb7da364633a39ccd73225b117ba94eee2",
+      "doi": "10.1109/TPDS.2026.3683867",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3683867",
+      "authors": [
+        "Liang Zheng",
+        "Yi-Tao Hu",
+        "Chen Shen",
+        "Zhixin Zhao",
+        "Bowen Shi",
+        "Yu-Hao Zhang",
+        "Lai-Ping Zhao",
+        "Wen-Xin Li",
+        "Ke-Qiu Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ViDAはVideoQA向けVideoLLMで視覚トークンの重要度差と最適草案予算の変動を考慮し、選択的疎自己投機と逐次的な予算探索を組み合わせる。IEEE TPDS論文要旨では出力を維持しつつTPOTを15～46%、E2E遅延を最大28%削減する推論高速化を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cde3689bde59",
+    "round": "libimp-cde3689bde599b89-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cde3689bde599b89-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cde3689bde599b89-pre01.json",
+    "receipt": "sha256:ffba9d38e5959b5df8117be63fe00d4c0945a96a4b55bc484ffc8cdc5e218f56"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cde3689bde59",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
