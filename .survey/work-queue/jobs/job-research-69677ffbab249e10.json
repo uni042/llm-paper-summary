@@ -35,10 +35,15 @@
   "selection_reason": "DSparkの検証木幅と検証時間を事前プロファイルなしにオンライン学習し、ドラフト信頼度を実際のターゲット受理結果で補正する。要求内n-gram候補も同一best-first検証行へ統合し、会話データと密/MoEモデルでllama.cpp DSpark比1.5〜3.1倍のデコード速度を報告する。投機的復号の実行時制御そのものが主題。",
   "semantic_scholar_id": "f445ae0a07556f6b0f837d8ea7823574caf36dfa",
   "source_url": "https://arxiv.org/abs/2610.05774",
-  "status": "ready",
+  "status": "superseded",
   "title": "AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T06:37:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.05774-adaspark-adaptive-dspark-with-online-learning-for-tree-verification-and-.md",
+  "represented_canonical_id": "arXiv:2610.05774",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

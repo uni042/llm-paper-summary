@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨では先頭・直近の重要KVを高ランクで保持し、中間トークンをOja則によるオンライン主成分更新で低ランク圧縮するOjaKVを提案。prefillで部分空間を更新しdecodeでも軽量に適応、FlashAttentionとの互換性を意識し、長文脈検索・推論で精度とKV容量の交換関係を改善する。",
   "semantic_scholar_id": "fc0515a2865b9ffc11792c90cafa6a7fc068694b",
   "source_url": "https://arxiv.org/abs/2509.21623",
-  "status": "ready",
+  "status": "superseded",
   "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression with Oja's Rule",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-28T06:37:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2509.21623-ojakv-context-aware-online-low-rank-kv-cache-compression.md",
+  "represented_canonical_id": "arXiv:2509.21623",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

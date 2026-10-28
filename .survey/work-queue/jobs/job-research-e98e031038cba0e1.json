@@ -35,10 +35,15 @@
   "selection_reason": "フル精度モデルと一様量子化モデルの重み差・勾配からタスク性能に敏感な重み回路を特定し、そこだけ16bitで保持する混合精度PTQを提案する。Llama-3/Qwen2.5のQA・数学・SQLで低ビット量子化の精度を改善し、Llama-3-8Bでは平均3.1bitでFP16 MMLU性能の96%を回復する。推論重み圧縮の直接的技術研究。",
   "semantic_scholar_id": "5728992c01b8589ec2339a5cf18dfdd3a7b9daed",
   "source_url": "https://arxiv.org/abs/2504.07389",
-  "status": "ready",
+  "status": "superseded",
   "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-28T06:37:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md",
+  "represented_canonical_id": "arXiv:2504.07389",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

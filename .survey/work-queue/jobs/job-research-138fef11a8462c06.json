@@ -35,10 +35,15 @@
   "selection_reason": "各層に同じ割合の重要重みをFP16で残すPTQの非効率を、層間依存を考慮した二次最適化で層別の重要重み比率を決める方式に改める。重要重みは中程度のビット幅で保存し、それ以外を超低ビット化することで一定容量予算下の量子化品質を改善する。LLM推論向け重み圧縮の直接的貢献。",
   "semantic_scholar_id": "e315d709d7617a2f6999713592cd9ae621913fa3",
   "source_url": "https://arxiv.org/abs/2511.17801",
-  "status": "ready",
+  "status": "superseded",
   "title": "Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-28T06:37:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2511.17801-layer-wise-high-impact-parameter-ratio-optimization-in-post-training-qua.md",
+  "represented_canonical_id": "arXiv:2511.17801",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

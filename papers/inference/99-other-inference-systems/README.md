@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（743本）
+## 自動生成の論文一覧（745本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1662,6 +1662,10 @@
   実装：[✓](https://github.com/KennyCaty/NeuroPath) ・ リポジトリ内被引用：0  
   知識グラフ（Knowledge Graph; KG）上の隣接性だけを重視する既存方式は、質問に答えるための関係の向きや意味を無視して文書を集める場合がある。原著の多段質問応答3データセットでは、主要なグラフ検索方式に比べて平均Recall@2を16.3%、Recall@5を13.5%改善したと報告する。
 
+- **2025-11 · [Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models](2025-2511.17801-layer-wise-high-impact-parameter-ratio-optimization-in-post-training-qua.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この論文は、LLMを2〜3ビット程度に事後量子化する際に、少数の高感度重みの量子化誤差がモデル品質を大きく悪化させる問題を扱う。
+
 - **2025-11 · [DeepCoT: Deep Continual Transformers for Real-Time Inference on Data Streams](2025-2511.17693-deepcot-deep-continual-transformers-for-real-time-inference-on-data-stre.md)**  
   実装：[✓](https://github.com/Atamarado/deepcot) ・ リポジトリ内被引用：0  
   DeepCoT（Deep Continual Transformer）は、映像・音声・テキストのストリームを移動窓で逐次処理する際、深いTransformerエンコーダで繰り返される過去トークンの計算を減らす方式である。原著のオンライン行動検出では通常のTransformerに対して23.65倍の相対実行速度、音楽分類では37.24倍を報告する。
@@ -2227,6 +2231,10 @@
 - **2025-04 · [Thanos: A Block-wise Pruning Algorithm for Efficient Large Language Model Compression](2025-2504.05346-thanos-a-block-wise-pruning-algorithm-for-efficient-large-language-model.md)**  
   実装：[✓](https://github.com/vectozavr/thanos) ・ リポジトリ内被引用：0  
   Thanosは、大規模言語モデル（LLM）の学習済み重みを、少数の校正データだけで剪定するpost-学習 枝刈り手法である。原著Table 2では、LLaMA-3 8Bを30%構造化剪定したWikiText-2困惑度（PPL）がSparseGPTの82.19、Thanos（外れ値行保護α=0.1）の36.61となる。
+
+- **2025-04 · [Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression](2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md)**  
+  実装：[✓](https://github.com/The-Inscrutable-X/TACQ) ・ リポジトリ内被引用：0  
+  Task-Circuit Quantization（TACQ）は、2〜3bitの重み量子化でLLMの推論品質が大きく損なわれる問題に対し、タスク損失への寄与が大きく、しかも量子化で値が変わりやすい重みを選んで16bitのまま保持する混合精度の学習後量子化（PTQ）を提案する。
 
 - **2025-04 · [Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding](2025-2504.01281-scaling-test-time-inference-with-policy-optimized-dynamic-retrieval-augm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

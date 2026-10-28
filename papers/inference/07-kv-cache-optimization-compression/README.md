@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（391本）
+## 自動生成の論文一覧（393本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -570,6 +570,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Dynamic Flow, Static Graph: KV Cache Reuse for Efficient LLM Serving on Mobile NPUs](2026-2609.34727-dynamic-flow-static-graph-kv-cache-reuse-for-efficient-llm-serving-on-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、固定形状の計算グラフ内で必要なトークンだけ再計算する方式、複数グラフ呼出しを統合する動的計画法、NPU・CPUメモリ・フラッシュにまたがる階層KV保存、読み込み・位置補正・保存とNPU実行の非同期重畳を組み合わせる。
+
+- **2026-09 · [Divergence Timing and Cumulative Disagreement under KV-Cache Eviction](2026-2609.16617-divergence-timing-and-cumulative-disagreement-under-kv-cache-eviction.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文はKVキャッシュ削除の新しい実装を提案するのではなく、削除したときに生成結果がどのように参照モデルから離れていくかを測る理論と実験を提示する。Llama-3.1-8B-InstructとQwen2.5-7B-Instructで、SnapKVによる50%保持は同予算の直近トークン保持やSnapKV-512より遅く・少なく分岐した。
 
 - **2026-09 · [D-Quant: Driftable Entropy Coding for KV Cache Quantization](2026-2609.19880-d-quant-driftable-entropy-coding-for-kv-cache-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1288,6 +1292,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-10 · [GUI-KV: Efficient GUI Agents via KV Cache with Spatio-Temporal Awareness](2025-2510.00536-gui-kv-efficient-gui-agents-via-kv-cache-with-spatio-temporal-awareness.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/GUI-KV) ・ リポジトリ内被引用：0  
   論文はUI-TARS-1.5-7Bについて、5画面・最大50段階の条件でGPUメモリ消費が80GBを超え得ると説明し、単なる計算高速化ではなく、履歴を保持するためのメモリ節約を主課題とする。GUI-KVは、自然画像用の圧縮方式をそのまま転用せず、画面固有の二種類の冗長性を利用する。
+
+- **2025-09 · [OjaKV: Context-Aware Online Low-Rank KV Cache Compression](2025-2509.21623-ojakv-context-aware-online-low-rank-kv-cache-compression.md)**  
+  実装：[✓](https://github.com/zzbright1998/OjaKV) ・ リポジトリ内被引用：0  
+  OjaKVは、長文脈LLMのキー・バリュー（KV）キャッシュを低ランクに射影して保存する際、入力分布の変化で静的な射影基底が劣化する問題に取り組む。キーと値を一律に圧縮するのではなく、射影誤差が注意スコアへ大きく影響するトークンをフルランクで残し、残りを低ランク表現へ圧縮する。
 
 - **2025-08 · [Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models](2025-2508.01261-unifying-mixture-of-experts-and-multi-head-latent-attention-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

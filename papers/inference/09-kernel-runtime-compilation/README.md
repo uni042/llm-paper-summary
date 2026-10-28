@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（204本）
+## 自動生成の論文一覧（205本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -149,6 +149,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   HipKittens（HK）は、AMDのCDNA3およびCDNA4世代のGPU上で、行列積と注意計算を効率よく記述するためのC++組込み型の領域特化言語である。従来の高性能AMDカーネルは、AITERなどの手書きアセンブリに強く依存していた。HKはタイルという小行列単位の操作を開発者へ公開し、性能に効く低水準制御を再利用可能な部品へまとめる。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-10 · [AdaSpark: Adaptive DSpark with Online Learning for Tree Verification and N-gram Fill](2026-2610.05774-adaspark-adaptive-dspark-with-online-learning-for-tree-verification-and-.md)**  
+  実装：[✓](https://github.com/zeraix/imparo) ・ リポジトリ内被引用：0  
+  AdaSparkは、投機的復号の草案器が一度に提案した複数候補を、大きな教師モデルが何行まとめて検証するかを実行時に決めるスケジューラである。4モデル・6公開データセットの会話で、llama.cppのDSparkより復号速度が約1.5〜3.1倍となった。
 
 - **2026-09 · [WavePP: High-Throughput Pipeline Parallel LLM Prefill under Prefix Reuse](2026-2609.35263-wavepp-high-throughput-pipeline-parallel-llm-prefill-under-prefix-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

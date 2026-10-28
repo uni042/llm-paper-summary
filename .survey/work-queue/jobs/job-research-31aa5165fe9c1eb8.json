@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではKVキャッシュ削除が生成列を元モデルから乖離させる時点と、その後の不一致の持続を分離する確率的分解・条件付きMonte Carlo推定を導入。Llama-3.1-8B/Qwen2.5-7BでSnapKVと最近トークン保持を比較し、乖離後の曝露が累積不一致の大部分を説明することを検証する。新規削除器ではないが推論KV最適化の品質測定技術に直接貢献。",
   "semantic_scholar_id": "4aa4147c5e56c5b8bd6add37b2a41dc22d40b3f4",
   "source_url": "https://arxiv.org/abs/2609.16617",
-  "status": "ready",
+  "status": "superseded",
   "title": "Divergence Timing and Cumulative Disagreement under KV-Cache Eviction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T06:37:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.16617-divergence-timing-and-cumulative-disagreement-under-kv-cache-eviction.md",
+  "represented_canonical_id": "arXiv:2609.16617",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
