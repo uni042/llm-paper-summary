@@ -58,6 +58,10 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
   実装：[✓](https://github.com/apple/ml-rl-dllm) ・ リポジトリ内被引用：2  
   拡散言語モデル（diffusion language モデル）は、左から右へ一語ずつ出力する自己回帰型モデルと異なり、未確定位置をマスクした系列全体を繰り返し予測し、複数位置を同じ前向き計算で確定できる。
 
+- **2026-08 · [Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models](2026-2608.02625-speculative-correction-draft-then-refine-decoding-for-diffusion-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  投機的 Correctionは、拡散言語モデル（Diffusion Language モデル、DLM）が持つ双方向の修正能力を、実際の文章生成へ生かすための二段階復号方式である。flash–flashではGSM8Kの正答率を0.848から0.899へ改善し、同じ問題集合のモデル実行時間を18.77秒から15.96秒へ短縮した。
+
 - **2025-11 · [Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models](2025-2512.02044-beyond-confidence-adaptive-and-coherent-decoding-for-diffusion-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   本論文は、整合的文脈復号（coherent contextual デコード; CCD）を提案する。ステップ数の比は3.48倍で、得点差は3.91ポイントである。
@@ -67,10 +71,6 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 - **2026-09 · [Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling](2026-2609.16450-early-bird-decoding-accelerating-diffusion-llms-with-learnable-block-siz.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散型大規模言語モデル（diffusion LLM、dLLM）は、未確定位置をマスクした系列に対し、双方向Transformerで各位置の語彙分布を同時に予測し、確信できる位置を確定して再び推論する。
-
-- **2026-08 · [Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models](2026-2608.02625-speculative-correction-draft-then-refine-decoding-for-diffusion-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  投機的 Correctionは、拡散言語モデル（Diffusion Language モデル、DLM）が持つ双方向の修正能力を、実際の文章生成へ生かすための二段階復号方式である。flash–flashではGSM8Kの正答率を0.848から0.899へ改善し、同じ問題集合のモデル実行時間を18.77秒から15.96秒へ短縮した。
 
 - **2026-06 · [AsyncLane: Decoupling Refinement from Advancement in Diffusion Language Model Decoding](2026-2606.08411-asynclane-decoupling-refinement-from-advancement-in-diffusion-language-m.md)**  
   実装：[✓](https://github.com/renyingxuan/AsyncLane) ・ リポジトリ内被引用：0  
