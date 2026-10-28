@@ -1,20 +1,8 @@
 {
   "schema_version": 1,
   "artifact_type": "import_cleanup",
-  "updated_at": "2026-10-28T02:43:33+00:00",
+  "updated_at": "2026-10-28T02:50:26+00:00",
   "events": [
-    {
-      "status": "retained_blocked_reaudit_metadata",
-      "source_path": ".survey/import-inbox/blocked/research/libfile_71b39b841d2c8191bf6b8ed12302cb23--2025-2502.10517-kernelbench-under16kb-reaudit-20261010-1750-verified-source-sha.md",
-      "processed_at": "2026-10-27T18:51:54+00:00",
-      "canonical_id": "arXiv:2502.10517",
-      "failures": [
-        "arxiv_categories.cross_list",
-        "arxiv_categories.primary",
-        "implementation",
-        "last_checked"
-      ]
-    },
     {
       "status": "retained_blocked_reaudit_metadata",
       "source_path": ".survey/import-inbox/blocked/research/libfile_7b942dcd5680819193410c7767761e73--2026-2609.33614-eat-under16kb-reaudit-20261009-1345-scheduled-chat-45-r01.md",
@@ -5438,6 +5426,13 @@
       "source_path": ".survey/import-inbox/blocked/research/retry-research-ce888ab283d3--libfile_b17f2f9b2c9c81918dbf596d9e748e42--2026-2608.25230-trust-the-mass-forced-weights-kv-cache-eviction-research-20261028-0901-scheduled-chat-00-r01.md",
       "processed_at": "2026-10-28T02:43:33+00:00",
       "canonical_id": "arXiv:2608.25230"
+    },
+    {
+      "status": "discarded_discovery_after_retry",
+      "source_path": ".survey/import-inbox/blocked/discovery/retry-legacy-block-ca808e944117--libfile_ef5eaae0f9c0819196ccd0fe5f7ed38a--discovery-20261028-0732-scheduled-chat-30-r02.json",
+      "processed_at": "2026-10-28T02:50:26+00:00",
+      "record_count": 10,
+      "run_key": "20261028-0732-scheduled-chat-30/r02"
     }
   ]
 }
