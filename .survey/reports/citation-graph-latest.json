@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T19:25:27+00:00",
-  "paper_count": 3582,
-  "edge_count": 48302,
+  "generated_at": "2026-10-28T20:14:14+00:00",
+  "paper_count": 3583,
+  "edge_count": 48303,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 21,
     "papers/inference/01-offload-hierarchical-memory/2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md": 4,
@@ -717,7 +717,7 @@
     "papers/inference/06-moe-quantization-compression/2026-2609.04453-expert-pruning-over-dispersed-moe.md": 0,
     "papers/inference/06-moe-quantization-compression/2026-2609.30465-razor-pruning-replaceable-experts-in-llms.md": 0,
     "papers/inference/07-kv-cache-optimization-compression/2019-1911.02150-multi-query-attention.md": 256,
-    "papers/inference/07-kv-cache-optimization-compression/2023-2305.13245-gqa.md": 389,
+    "papers/inference/07-kv-cache-optimization-compression/2023-2305.13245-gqa.md": 388,
     "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md": 215,
     "papers/inference/07-kv-cache-optimization-compression/2023-2306.07174-augmenting-language-models-with-long-term-memory.md": 10,
     "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md": 605,
@@ -2870,7 +2870,7 @@
     "papers/inference/99-other-inference-systems/2023-2312.13211-dsformer-effective-compression-of-text-transformers-by-dense-sparse-weig.md": 3,
     "papers/inference/99-other-inference-systems/2023-2312.15159-understanding-the-potential-of-fpga-based-spatial-acceleration-for-large.md": 7,
     "papers/inference/99-other-inference-systems/2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md": 0,
-    "papers/inference/99-other-inference-systems/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md": 17,
+    "papers/inference/99-other-inference-systems/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md": 18,
     "papers/inference/99-other-inference-systems/2023-dc4a5089a5f8-a-probabilistic-framework-for-pruning-transformers-via-a-finite-admixtur.md": 0,
     "papers/inference/99-other-inference-systems/2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md": 11,
     "papers/inference/99-other-inference-systems/2024-2305.12330-task-agnostic-distillation-of-encoder-decoder-language-models.md": 0,
@@ -2998,6 +2998,7 @@
     "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md": 16,
     "papers/inference/99-other-inference-systems/2025-2503.01564-attention-condensation-via-sparsity-induced-regularized-training.md": 0,
     "papers/inference/99-other-inference-systems/2025-2503.01820-rsq-learning-from-important-tokens-leads-to-better-quantized-llms.md": 2,
+    "papers/inference/99-other-inference-systems/2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md": 1,
     "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md": 30,
     "papers/inference/99-other-inference-systems/2025-2503.04704-universality-of-layer-level-entropy-weighted-quantization-beyond-model-a.md": 0,
     "papers/inference/99-other-inference-systems/2025-2503.08019-multi-cue-adaptive-visual-token-pruning-for-large-vision-language-models.md": 1,
@@ -51050,6 +51051,7 @@
       "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
       "papers/inference/99-other-inference-systems/2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md"
     ],
+    "papers/inference/99-other-inference-systems/2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md": [],
     "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md": [
       "papers/inference/04-conditional-computation/2023-2305.11860-let-s-sample-step-by-step-adaptive-consistency-for-efficient-reasoning-a.md",
       "papers/inference/99-other-inference-systems/2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md",
@@ -56033,6 +56035,7 @@
       "papers/inference/99-other-inference-systems/2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md",
       "papers/inference/99-other-inference-systems/2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md",
       "papers/inference/99-other-inference-systems/2023-2301.13310-alternating-updates-for-efficient-transformers.md",
+      "papers/inference/99-other-inference-systems/2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md",
       "papers/inference/99-other-inference-systems/2026-2604.14419-equifinality-in-mixture-of-experts-routing-topology-does-not-determine-l.md",
       "papers/training/02-distributed-heterogeneous-moe-training/2020-2006.16668-gshard.md"
     ],
@@ -57447,7 +57450,6 @@
       "papers/inference/04-conditional-computation/2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md": [
-      "papers/inference/07-kv-cache-optimization-compression/2023-2305.13245-gqa.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2305.17118-scissorhands.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
       "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
@@ -57481,7 +57483,8 @@
       "papers/inference/13-sparse-attention/2024-2406.10774-quest.md",
       "papers/inference/13-sparse-attention/2025-2502.14051-rocketkv-accelerating-long-context-llm-inference-via-two-stage-kv-cache-.md",
       "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
-      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md"
+      "papers/inference/99-other-inference-systems/2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md",
+      "papers/inference/99-other-inference-systems/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md"
     ],
     "papers/inference/99-other-inference-systems/2026-2608.01672-learning-what-to-remember-test-time-training-via-context-distillation.md": [
       "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
