@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-28T20:13:47+00:00",
+  "generated_at": "2026-10-28T21:20:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 72,
+  "count": 70,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1271,33 +1271,6 @@
       "worker_run_key": "20261025-2300-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.1145/3731569.3764823",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-25T15:05:37+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 444 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5405,
-        "body_paragraphs": 32,
-        "method_chars": 1779,
-        "method_paragraphs": 11,
-        "evaluation_chars": 444,
-        "limitation_chars": 492,
-        "insufficiency_flags": [
-          "評価説明量 444 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a23486dcd1088191bc6b3e872663db97--2025-doi-10.1145-3731569.3764823-jenga-heterogeneous-llm-memory-research-20261025-2330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a23486dcd1088191bc6b3e872663db97--2025-doi-10.1145-3731569.3764823-jenga-heterogeneous-llm-memory-research-20261025-2330-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261025-2330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.17196",
       "title": null,
       "source_url": null,
@@ -1849,58 +1822,31 @@
       "worker_run_key": "20261029-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2306.01768",
-      "title": "A Quantitative Review on Language Model Efficiency Research",
-      "source_url": "https://arxiv.org/pdf/2306.01768v1",
-      "returned_at": "2026-10-28T20:11:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
+      "canonical_id": "arXiv:2509.21623",
+      "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
+      "source_url": "https://arxiv.org/pdf/2509.21623",
+      "returned_at": "2026-10-28T21:13:41+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
+        "16KB未満再監査: 手法説明量 0 < 700"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6993,
-        "body_paragraphs": 37,
+        "body_chars": 6205,
+        "body_paragraphs": 29,
         "method_chars": 0,
         "method_paragraphs": 0,
-        "evaluation_chars": 555,
-        "limitation_chars": 664,
+        "evaluation_chars": 1362,
+        "limitation_chars": 564,
         "insufficiency_flags": [
           "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-04cf909e23b7--libfile_24c004773f4481918fb68ac7c6d55e6f--2023-2306.01768-quantitative-review-metadata-repair-20261029-0345-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-04cf909e23b7--libfile_24c004773f4481918fb68ac7c6d55e6f--2023-2306.01768-quantitative-review-metadata-repair-20261029-0345-scheduled-chat-45-r02.json",
-      "worker_run_key": "20261029-0345-scheduled-chat-45/r02"
-    },
-    {
-      "canonical_id": "arXiv:2603.27960",
-      "title": "Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies",
-      "source_url": "https://arxiv.org/pdf/2603.27960",
-      "returned_at": "2026-10-28T20:11:49+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 353 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7053,
-        "body_paragraphs": 34,
-        "method_chars": 4169,
-        "method_paragraphs": 19,
-        "evaluation_chars": 353,
-        "limitation_chars": 740,
-        "insufficiency_flags": [
-          "評価説明量 353 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f234c4ab1eb2--libfile_7c037ff2a9188191bc5fa5c813c7257b--2026-2603.27960-efficient-lvlm-inference-survey-research-20261029-0400-scheduled-chat-00-r01-corrected-final.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f234c4ab1eb2--libfile_7c037ff2a9188191bc5fa5c813c7257b--2026-2603.27960-efficient-lvlm-inference-survey-research-20261029-0400-scheduled-chat-00-.json",
-      "worker_run_key": "20261029-0400-scheduled-chat-00/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b8d23d6f7a8c8191b2372e973852e16c--2025-2509.21623-ojakv-under16kb-semantic-reaudit-20261029-0445-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b8d23d6f7a8c8191b2372e973852e16c--2025-2509.21623-ojakv-under16kb-semantic-reaudit-20261029-0445-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261029-0445-scheduled-chat-45/r01"
     }
   ]
 }

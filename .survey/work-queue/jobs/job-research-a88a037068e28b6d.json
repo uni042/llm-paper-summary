@@ -35,10 +35,15 @@
   "selection_reason": "端末の限られたオンチップ容量とLLM重み再利用の少なさを対象に、MX低精度演算、非線形演算を専用回路なしで処理するLUT、オンチップメモリ制約に応じたスケジューリングを共同設計したNPUを提案する。LLM推論で既存NPU設計比平均2.73倍高速化と転送量52%削減を報告する。",
   "semantic_scholar_id": "b433e8252910a5923a463d7d7e69ba9e79ed3e4c",
   "source_url": "https://arxiv.org/abs/2602.12962",
-  "status": "ready",
+  "status": "superseded",
   "title": "TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T21:20:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2602.12962-trigen-npu-architecture-for-end-to-end-acceleration-of-large-language-mo.md",
+  "represented_canonical_id": "arXiv:2602.12962",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
