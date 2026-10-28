@@ -1311,7 +1311,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2025-09 · [OjaKV: Context-Aware Online Low-Rank KV Cache Compression](2025-2509.21623-ojakv-context-aware-online-low-rank-kv-cache-compression.md)**  
   実装：[✓](https://github.com/zzbright1998/OjaKV) ・ リポジトリ内被引用：0  
-  OjaKVは、長文脈LLMのキー・バリュー（KV）キャッシュを低ランクに射影して保存する際、入力分布の変化で静的な射影基底が劣化する問題に取り組む。キーと値を一律に圧縮するのではなく、射影誤差が注意スコアへ大きく影響するトークンをフルランクで残し、残りを低ランク表現へ圧縮する。
+  OjaKVは長文脈言語モデルのキー・バリュー（KV）キャッシュを低ランク射影で圧縮する際、校正データで決めた固定基底が実際の会話・コード・ニュースなどの分布変化に適合しなくなる問題を扱う。LongChat-7B-v1.5-32kの16K RULERでは、KV保存予算0.6倍の条件で静的PCAの平均正答率23.44%をOjaKVが39.99%へ改善した。
 
 - **2025-08 · [Unifying Mixture of Experts and Multi-Head Latent Attention for Efficient Language Models](2025-2508.01261-unifying-mixture-of-experts-and-multi-head-latent-attention-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
