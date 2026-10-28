@@ -1,32 +1,55 @@
 ---
-canonical_id: "SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2"
-title: "Demystifying the Mixture of Experts Serving Tax"
+canonical_id: SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2
+title: Demystifying the Mixture of Experts Serving Tax
 authors:
-  - "Pratyush Patel"
-  - "Dayeol Lee"
-  - "Shintaro Iwasaki"
-  - "Arvind Krishnamurthy"
-published: "2026-05"
-publication: "Proceedings of Machine Learning and Systems 8 (MLSys 2026)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://proceedings.mlsys.org/paper_files/paper/2026/file/42a452cbafa9dd64e9ba4aa95cc1ef21-Paper-Conference.pdf"
+- Pratyush Patel
+- Dayeol Lee
+- Shintaro Iwasaki
+- Arvind Krishnamurthy
+published: 2026-05
+publication: Proceedings of Machine Learning and Systems 8 (MLSys 2026)
+publication_type: conference
+publication_status: published
+source: https://proceedings.mlsys.org/paper_files/paper/2026/file/42a452cbafa9dd64e9ba4aa95cc1ef21-Paper-Conference.pdf
 sources:
-  - "https://proceedings.mlsys.org/paper_files/paper/2026/hash/42a452cbafa9dd64e9ba4aa95cc1ef21-Abstract-Conference.html"
-  - "https://proceedings.mlsys.org/paper_files/paper/2026/file/42a452cbafa9dd64e9ba4aa95cc1ef21-Paper-Conference.pdf"
+- https://proceedings.mlsys.org/paper_files/paper/2026/hash/42a452cbafa9dd64e9ba4aa95cc1ef21-Abstract-Conference.html
+- https://proceedings.mlsys.org/paper_files/paper/2026/file/42a452cbafa9dd64e9ba4aa95cc1ef21-Paper-Conference.pdf
 code: null
-implementation: "Mixtral-8x7B、Qwen2-MoE、DeepSeek-V3をvLLM、Triton FusedMoE、DeepGEMM、DeepEP等で実行し、A100/B200/H200 GPU上のエンドツーエンド反復レイテンシ、NsightによるGroupGEMM・通信マイクロベンチマーク、解析モデルとMonte Carloを組み合わせたシステム特性評価。新規サービングランタイムの実装・優位性を実証する論文ではなく、公式コード公開URLは一次資料から確認できない。"
-summary: "MoEは1トークン当たりの活性化FLOPsが同じdenseモデルよりサービングが2〜3倍遅くなり得る。著者らは同一活性化計算量のDenseFAと同一総パラメータ量のDensePAを区別し、MoE taxを反復レイテンシ比として定義。prefillでは専門家ごとの小バッチ化・padding・EPのstraggler、decodeでは活性化expert重みの広範なHBMロードが主因であることを、Mixtral/Qwen2-MoE/DeepSeek-V3、A100/B200/H200、vLLMの実測と解析で示す。decodeのtaxは中程度のbatchで最大化し、routing偏りがむしろ有利になる場合がある。解析モデルは大半の条件で実測から10〜30%以内だが、長文脈、multi-node end-to-end、精度比較、JITを対象外とする。"
-list_summary: "MoEの同一FLOPs dense比2〜3倍の推論負担をprefill/decode・TP/EP・routing分布別に分解。decodeは重み読出し、prefillは小バッチ・padding・stragglerが主因。"
-last_checked: "2026-10-29"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261029-0100-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-29T01:00:00+09:00"
-reference_main_sha: "64e4dde3d3f3931dcff3f587d1e0cd47e9d7b03e"
+implementation: Mixtral-8x7B、Qwen2-MoE、DeepSeek-V3をvLLM、Triton FusedMoE、DeepGEMM、DeepEP等で実行し、A100/B200/H200 GPU上のエンドツーエンド反復レイテンシ、NsightによるGroupGEMM・通信マイクロベンチマーク、解析モデルとMonte Carloを組み合わせたシステム特性評価。新規サービングランタイムの実装・優位性を実証する論文ではなく、公式コード公開URLは一次資料から確認できない。
+summary: MoEは1トークン当たりの活性化FLOPsが同じdenseモデルよりサービングが2〜3倍遅くなり得る。著者らは同一活性化計算量のDenseFAと同一総パラメータ量のDensePAを区別し、MoE taxを反復レイテンシ比として定義。prefillでは専門家ごとの小バッチ化・padding・EPのstraggler、decodeでは活性化expert重みの広範なHBMロードが主因であることを、Mixtral/Qwen2-MoE/DeepSeek-V3、A100/B200/H200、vLLMの実測と解析で示す。decodeのtaxは中程度のbatchで最大化し、routing偏りがむしろ有利になる場合がある。解析モデルは大半の条件で実測から10〜30%以内だが、長文脈、multi-node end-to-end、精度比較、JITを対象外とする。
+list_summary: MoEの同一FLOPs dense比2〜3倍の推論負担をprefill/decode・TP/EP・routing分布別に分解。decodeは重み読出し、prefillは小バッチ・padding・stragglerが主因。
+last_checked: '2026-10-29'
+worker_id: scheduled-chat-00
+worker_run_key: 20261029-0100-scheduled-chat-00/r01
+worker_completed_at: '2026-10-29T01:00:00+09:00'
+reference_main_sha: 64e4dde3d3f3931dcff3f587d1e0cd47e9d7b03e
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2107.03374
+  arxiv_id: '2107.03374'
+- canonical_id: arXiv:2407.00945
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2308.12066
+- canonical_id: arXiv:2504.02263
+- canonical_id: arXiv:2303.06182
+- canonical_id: arXiv:2512.09277
+- canonical_id: arXiv:2411.08982
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:1701.06538
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2410.12247
+- canonical_id: arXiv:2210.17223
+- canonical_id: arXiv:2202.08906
+- canonical_id: arXiv:2506.05508
+- canonical_id: SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2
+- canonical_id: arXiv:2206.03382
+references_checked_at: '2026-10-28'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Demystifying the Mixture of Experts Serving Tax — MoE推論の計算・通信・ルーティング由来の費用を分解する
