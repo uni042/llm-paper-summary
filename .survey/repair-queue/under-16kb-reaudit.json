@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-28T11:00:38.581450+00:00",
+  "generated_at": "2026-10-28T15:06:26.897369+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 21,
+  "count": 20,
   "worker_counts": {
     "scheduled-chat-00": 7,
-    "scheduled-chat-30": 7,
+    "scheduled-chat-30": 6,
     "scheduled-chat-45": 7
   },
   "entries": [
@@ -429,26 +429,6 @@
         "method_chars": 1466,
         "evaluation_chars": 936,
         "limitation_chars": 353
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md",
-      "canonical_id": "arXiv:2607.08032",
-      "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
-      "file_bytes": 24381,
-      "source_sha256": "b4a87da0ddfec342b60fd1d674016a28cf008b187329da438c459d807e171673",
-      "source_git_blob_sha": "7b90869fd44f9a686bb1750238445c1505268b65",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.980615,
-      "quality_metrics": {
-        "body_chars": 4262,
-        "method_chars": 1540,
-        "evaluation_chars": 803,
-        "limitation_chars": 384
       },
       "mechanical_failures": [],
       "warnings": []
