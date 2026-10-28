@@ -30,6 +30,17 @@ quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2212.08153
+  arxiv_id: '2212.08153'
+- canonical_id: arXiv:2210.17323
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:1911.02150
+references_checked_at: '2026-10-28'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # GQA：既存MHAモデルを少量の追加学習でKV共有へ変換する

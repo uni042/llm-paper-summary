@@ -1,39 +1,65 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.acl-long.1250"
-title: "Question Tells You Where the Answer Is: Intention-aware Long-Context KV Cache Compression"
+canonical_id: DOI:10.18653/v1/2026.acl-long.1250
+title: 'Question Tells You Where the Answer Is: Intention-aware Long-Context KV Cache Compression'
 authors:
-  - "Liang Zhao"
-  - "Xiaocheng Feng"
-  - "Weihong Zhong"
-  - "Lei Huang"
-  - "Kun Zhu"
-  - "Baoxin Wang"
-  - "Dayong Wu"
-  - "Guoping Hu"
-  - "Ting Liu"
-  - "Bing Qin"
-published: "2026-07"
-publication: "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 27153–27169"
-publication_type: "conference"
-publication_status: "published"
-source: "https://aclanthology.org/2026.acl-long.1250.pdf"
+- Liang Zhao
+- Xiaocheng Feng
+- Weihong Zhong
+- Lei Huang
+- Kun Zhu
+- Baoxin Wang
+- Dayong Wu
+- Guoping Hu
+- Ting Liu
+- Bing Qin
+published: 2026-07
+publication: 'Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 27153–27169'
+publication_type: conference
+publication_status: published
+source: https://aclanthology.org/2026.acl-long.1250.pdf
 sources:
-  - "https://aclanthology.org/2026.acl-long.1250.pdf"
-  - "https://aclanthology.org/2026.acl-long.1250/"
-implementation: "論文本文・付録C.1ではFlashAttention-2を用い、prefill後に末尾64 query分のattentionを再計算してブロック単位のKV削除を行う実装を説明。8基のA100 80GBを備えた環境で実験したが、著者は個別実験を単一A100で実施可能と記述。greedy decoding、bfloat16。公式コードURLは論文脚注に記載。"
-code: "https://github.com/linkezh/IntentKV"
-last_checked: "2026-10-28"
-worker_completed_at: "2026-10-28T15:06:10+09:00"
-worker_id: "scheduled-chat-00"
-scheduled_slot: "00"
-worker_run_key: "20261028-1500-scheduled-chat-00/r01"
-reference_main_sha: "809ca6c973131bb5c41829b82579eda88893726b"
+- https://aclanthology.org/2026.acl-long.1250.pdf
+- https://aclanthology.org/2026.acl-long.1250/
+implementation: 論文本文・付録C.1ではFlashAttention-2を用い、prefill後に末尾64 query分のattentionを再計算してブロック単位のKV削除を行う実装を説明。8基のA100 80GBを備えた環境で実験したが、著者は個別実験を単一A100で実施可能と記述。greedy decoding、bfloat16。公式コードURLは論文脚注に記載。
+code: https://github.com/linkezh/IntentKV
+last_checked: '2026-10-28'
+worker_completed_at: '2026-10-28T15:06:10+09:00'
+worker_id: scheduled-chat-00
+scheduled_slot: '00'
+worker_run_key: 20261028-1500-scheduled-chat-00/r01
+reference_main_sha: 809ca6c973131bb5c41829b82579eda88893726b
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-summary: "IntentKVは、長文入力の末尾に置かれた質問などの『意図』を、前段文脈との注意分布の差から特定し、その意図が強く参照する文脈ブロックだけをKVキャッシュに残す学習不要の削除方式である。ACL 2026の一次論文ではLlama-3.1-8Bなど4モデルでRULERとInfiniteBenchを評価し、Llama-3.1のRULER平均はFullKV 88.8、IntentKV 87.0、SnapKV 76.9と報告。128K入力で2048トークンのキャッシュを保持した際、FullKV比で復号遅延16%、KVキャッシュメモリ13%と報告する。ただし短い指示の要約、質問末尾配置の仮定、GQAの短文脈、不可逆な削除を伴う複数ターン対話には制約がある。"
-list_summary: "質問部分の注意分布をJensen–Shannon距離で見つけ、重要な文脈ブロックを残す学習不要のKV削除法。RULERのLlama-3.1平均87.0（FullKV 88.8）、128Kで復号遅延をFullKVの16%へ削減したが、要約と複数ターン対話に弱点がある。"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+summary: IntentKVは、長文入力の末尾に置かれた質問などの『意図』を、前段文脈との注意分布の差から特定し、その意図が強く参照する文脈ブロックだけをKVキャッシュに残す学習不要の削除方式である。ACL 2026の一次論文ではLlama-3.1-8Bなど4モデルでRULERとInfiniteBenchを評価し、Llama-3.1のRULER平均はFullKV 88.8、IntentKV 87.0、SnapKV 76.9と報告。128K入力で2048トークンのキャッシュを保持した際、FullKV比で復号遅延16%、KVキャッシュメモリ13%と報告する。ただし短い指示の要約、質問末尾配置の仮定、GQAの短文脈、不可逆な削除を伴う複数ターン対話には制約がある。
+list_summary: 質問部分の注意分布をJensen–Shannon距離で見つけ、重要な文脈ブロックを残す学習不要のKV削除法。RULERのLlama-3.1平均87.0（FullKV 88.8）、128Kで復号遅延をFullKVの16%へ削減したが、要約と複数ターン対話に弱点がある。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2404.14219
+  arxiv_id: '2404.14219'
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2407.11550
+- canonical_id: arXiv:2407.02490
+- canonical_id: arXiv:2402.04617
+- canonical_id: arXiv:2410.10819
+- canonical_id: arXiv:2305.13245
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.298
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2406.02069
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2405.12532
+- canonical_id: arXiv:2412.14838
+- canonical_id: arXiv:2310.01801
+- canonical_id: OpenReview:EQgEMAD4kv
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2410.16179
+- canonical_id: arXiv:2304.08467
+- canonical_id: arXiv:2007.14062
+references_checked_at: '2026-10-28'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Question Tells You Where the Answer Is — IntentKV
