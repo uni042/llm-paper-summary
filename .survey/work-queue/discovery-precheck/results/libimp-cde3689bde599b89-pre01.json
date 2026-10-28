@@ -1,0 +1,891 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cde3689bde599b89-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cde3689bde59",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/tpds.2026.3683867",
+    "DOI:10.1145/3795866.3844460",
+    "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+    "arXiv:2512.24124",
+    "arXiv:2604.11627",
+    "arXiv:2608.06135",
+    "arXiv:2608.08684",
+    "arXiv:2609.34555",
+    "arXiv:2610.00499"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "feb71318b7639f0149b8c57c4e7e63e03a39b2cd",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T22:57:21.529478+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/tpds.2026.3683867",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3795866.3844460",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.24124",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.11627",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06135",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.08684",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34555",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.00499",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2512.24124",
+      "year": 2025,
+      "published": "2025-12-30",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The presence of outliers in Large Language Models (LLMs) weights and activations makes them difficult to quantize. Recent work has leveraged rotations to mitigate these outliers. In this work, we propose methods that learn fusible rotations by minimizing principled and cheap proxy objectives to the weight quantization error. We primarily focus on GPTQ as the quantization method. Our main method is OptRot, which reduces weight outliers simply by minimizing the element-wise fourth power of the rotated weights. We show that OptRot outperforms both Hadamard rotations and more expensive, data-dependent methods like SpinQuant and OSTQuant for weight quantization. It also improves activation quantization in the W4A8 setting. We also propose a data-dependent method, OptRot$^{+}$, that further improves performance by incorporating information on the activation covariance. In the W4A4 setting, we see that both OptRot and OptRot$^{+}$ perform worse, highlighting a trade-off between weight and activation quantization.",
+      "identifiers": [
+        "SemanticScholar:c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057"
+      ],
+      "semantic_scholar_id": "c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057",
+      "canonical_id": "arXiv:2512.24124",
+      "arxiv_id": "2512.24124",
+      "doi": "10.48550/arXiv.2512.24124",
+      "authors": [
+        "A. Gadhikar",
+        "Riccardo Grazzi",
+        "James Hensman"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 302,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
+      "source_url": "https://arxiv.org/abs/2608.08684",
+      "year": 2026,
+      "published": "2026-08-09",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is bottlenecked by KV cache memory, yet distributing a limited cache budget across layers remains challenging. Existing methods rely on proxies such as layer depth, attention statistics, or representation change. These proxies do not measure how perturbations at each layer propagate to the output and may therefore cause sensitive layers to be underallocated while tolerant layers are overallocated. To address this issue, we propose RippleKV, which allocates cache across layers by estimating how perturbations to each layer's value cache affect the final predictive distribution. RippleKV independently injects norm-adaptive perturbations into each layer's value cache and measures the induced KL divergence at the model output over a small calibration set. Averaging these responses yields a sensitivity profile specific to the model that need not vary monotonically with depth. RippleKV then converts the sensitivity profile into layer budget multipliers by normalizing the sensitivity scores and applying an exponential mapping. A ratio parameter controls the allocation disparity between sensitive and tolerant layers, while a final normalization preserves the KV cache budget. Experiments on LongBench demonstrate that RippleKV achieves the highest average performance among the evaluated KV cache compression methods under matched cache budgets.",
+      "identifiers": [
+        "SemanticScholar:7f670a19f2d9279572bcd87034db19c7a267a491"
+      ],
+      "semantic_scholar_id": "7f670a19f2d9279572bcd87034db19c7a267a491",
+      "canonical_id": "arXiv:2608.08684",
+      "arxiv_id": "2608.08684",
+      "authors": [
+        "Dong Xu",
+        "Kai-Qi Qian",
+        "Julius",
+        "Wei-Jie Shi",
+        "Yuxuan Sun",
+        "Minghua Tang",
+        "Feng-Lei Jin",
+        "Hanchi Dong",
+        "Jia-Jie Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Resource Multiplexing in Tuning and Serving Large Language Models",
+      "source_url": "https://www.semanticscholar.org/paper/10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "year": 2025,
+      "published": null,
+      "venue": "USENIX Annual Technical Conference",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4"
+      ],
+      "semantic_scholar_id": "10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "canonical_id": "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "authors": [
+        "Yongjun He",
+        "Hao Yang",
+        "Yao Lu",
+        "A. Klimovic",
+        "Gustavo Alonso"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 484,
+        "matched_prestigious_venue": "USENIX Annual Technical Conference"
+      }
+    },
+    {
+      "title": "POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs",
+      "source_url": "https://arxiv.org/abs/2604.11627",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) have recently demonstrated remarkable capabilities in cross-modal understanding and generation. However, the rapid growth of visual token sequences--especially in long-video and streaming scenarios--poses a major challenge to their scalability and real-world deployment. Thus, we introduce POINTS-Long, a native dual-mode MLLM featuring dynamic visual token scaling inspired by the human visual system. The model supports two complementary perception modes: focus mode and standby mode, enabling users to dynamically trade off efficiency and accuracy during inference. On fine-grained visual tasks, the focus mode retains the optimal performance, while on long-form general visual understanding, the standby mode retains 97.7-99.7% of the original accuracy using only 1/40-1/10th of the visual tokens. Moreover, POINTS-Long natively supports streaming visual understanding via a dynamically detachable KV-cache design, allowing efficient maintenance of ultra-long visual memory. Our work provides new insights into the design of future MLLMs and lays the foundation for adaptive and efficient long-form visual understanding.",
+      "identifiers": [
+        "SemanticScholar:67967a6f23543958fa6f1425abf56e718ef7e3ab"
+      ],
+      "semantic_scholar_id": "67967a6f23543958fa6f1425abf56e718ef7e3ab",
+      "canonical_id": "arXiv:2604.11627",
+      "arxiv_id": "2604.11627",
+      "doi": "10.48550/arXiv.2604.11627",
+      "authors": [
+        "Haicheng Wang",
+        "Yuan Liu",
+        "Yi-Kun Liu",
+        "Zhe-Meng Yu",
+        "Zhongyin Zhao",
+        "Yangxiu You",
+        "Zi-Lin Yu",
+        "Le Tian",
+        "Xiao Zhou",
+        "Jie Zhou",
+        "Wei-Di Xie",
+        "Yan-Feng Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 198,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ViDA: Lossless VideoQA Acceleration via Selective Sparse Self-Speculation With Parallel Computational Load Management",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3683867",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE Transactions on Parallel and Distributed Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models (VideoLLMs) have significantly advanced video question answering (VideoQA) applications, which demand both low latency and high accuracy. To meet the requirements, VideoLLMs are typically deployed on GPUs for parallel acceleration. However, the massive computational load from long video contexts often makes such acceleration insufficient. Existing techniques like token pruning and speculative decoding attempt to address this challenge by altering the computational load, but often fail to balance both speed and accuracy. Sparse self-speculation mitigates these limitations via selecting a subset of tokens on a specific token budget to draft the output and then verify it using all tokens. However, existing sparse self-speculation is designed for text-based scenarios and cannot be directly applied to VideoQA tasks, as it fails to account for discrepancies in critical multimodal tokens and the dynamic nature of optimal token budget in VideoQA, leading to suboptimal scale and inappropriate composition of parallel computational load. We argue that achieving both high accuracy and low latency in VideoQA tasks requires managing the computational load with awareness of these discrepancies and dynamics. To achieve this, we introduce ViDA, a selective sparse self-speculation inference system. It progressively searches token budgets by iteratively refining lower and upper bounds of search space derived from long contexts, aiming to find and allocate varying optimal budgets in real-time adaptively. Additionally, it leverages insights from discrepancies in critical multimodal tokens to perform a discrepancy-aware token selection approach for identifying critical tokens. Evaluations across various VideoQA workloads show that compared to state-of-the-art methods, ViDA preserves exact model outputs while reducing average time-per-output-token (TPOT) by 15% to 46% and average end-to-end latency by up to 28%, while decreasing the divergence from optimal token budget distribution by up to 93% and increasing the optimal critical token ratio by up to 380%.",
+      "identifiers": [
+        "SemanticScholar:1851d3cb7da364633a39ccd73225b117ba94eee2"
+      ],
+      "semantic_scholar_id": "1851d3cb7da364633a39ccd73225b117ba94eee2",
+      "doi": "10.1109/TPDS.2026.3683867",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3683867",
+      "authors": [
+        "Liang Zheng",
+        "Yi-Tao Hu",
+        "Chen Shen",
+        "Zhixin Zhao",
+        "Bowen Shi",
+        "Yu-Hao Zhang",
+        "Lai-Ping Zhao",
+        "Wen-Xin Li",
+        "Ke-Qiu Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
+      "source_url": "https://arxiv.org/abs/2608.06135",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) such as ChatGPT and Claude are widely used for information retrieval and problem-solving. Recent work has focused on improving scheduling algorithms to boost throughput while maintaining low latency. However, these approaches often assume Poisson request arrivals with constant rates - an assumption that fails to reflect the inherently bursty and dynamic nature of real-world traffic. We propose a lightweight extension to the state-of-the-art WAIT algorithm [1], which adapts to time-varying arrival rates without prior traffic knowledge. The proposed algorithm performs online estimation of request intensity based on observed interarrival times. Using Markov Modulated Poisson Process (MMPP)-based synthetic workloads with diverse request types, we conduct a simulation-based evaluation demonstrating that the proposed method achieves higher throughput than Sarathi-Serve [2], ORCA [3], and vLLM [4] in the evaluated low arrival-rate shift scenarios while maintaining comparable latency.",
+      "identifiers": [
+        "SemanticScholar:87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a"
+      ],
+      "semantic_scholar_id": "87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a",
+      "canonical_id": "arXiv:2608.06135",
+      "arxiv_id": "2608.06135",
+      "authors": [
+        "Anjali Gangadhar Katageria",
+        "S. Rani",
+        "R. Sengupta"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 83,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.34555",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+      "identifiers": [
+        "SemanticScholar:36623233e6049168c2b669b21b48ecb3e5dae84b"
+      ],
+      "semantic_scholar_id": "36623233e6049168c2b669b21b48ecb3e5dae84b",
+      "canonical_id": "arXiv:2609.34555",
+      "arxiv_id": "2609.34555",
+      "authors": [
+        "Qiu-Yang Zhang",
+        "Kai Zhou",
+        "Kai Lu",
+        "Hao-Cheng Lu",
+        "Jian Zhou",
+        "Yuan-Peng Su",
+        "Kun Bao",
+        "Ji-Guang Wan",
+        "Fei Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Denoising Surface: Modeling and Predicting Inference Cost for Diffusion LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.00499",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As diffusion large language models (dLLMs) become more capable, they are moving from research settings to real-world \\textit{serving}, where request management (such as scheduling and resource allocation) relies on accurate estimation of per-request inference cost. However, common cost proxies fall short for dLLMs: output length ignores that one forward pass can unmask multiple tokens, and denoising-step count ignores the \\textit{heterogeneous} per-step costs. We observe that the block-autoregressive generation mechanism induces a two-dimensional execution structure over output blocks and within-block denoising steps, whereas these proxies collapse it into a scalar, discarding information essential for characterizing the cost. Motivated by this insight, we propose the Denoising Workload Surface (DWS), which preserves this two-dimensional block-step structure as a probability surface to weight the heterogeneous per-step costs. We then design a coarse-to-fine training scheme that enables a lightweight prompt-only predictor to accurately predict the complex DWS. This predictor runs efficiently even on a single CPU core, avoiding GPU contention with the serving model. Since DWS decouples request-dependent execution behavior from deployment-specific cost factors, the predictor transfers across hardware configurations without retraining. In \\textit{real-world} serving experiments, DWS reduces cost-prediction error by up to $2.50\\times$ over scalar-based predictors, while the DWS-guided shortest-job-first scheduler reduces end-to-end latency by up to $1.92\\times$ for online chatbots.",
+      "identifiers": [
+        "SemanticScholar:465783e3faba20fc7a473102fb824d20934ad550"
+      ],
+      "semantic_scholar_id": "465783e3faba20fc7a473102fb824d20934ad550",
+      "canonical_id": "arXiv:2610.00499",
+      "arxiv_id": "2610.00499",
+      "authors": [
+        "Hao-Yu Zheng",
+        "Fang-Cheng Fu",
+        "Bin-Hang Yuan",
+        "Yong-Qiang Zhang",
+        "Liang Deng",
+        "Hao Wang",
+        "Yuan-Yuan Zhu",
+        "Xiao Yan",
+        "Jia-Wei Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sparsity-Aware Scheduling for Efficient MoE-Based LLM Serving on Edge Servers",
+      "source_url": "https://doi.org/10.1145/3795866.3844460",
+      "year": 2026,
+      "published": "2026-10-26",
+      "venue": "Proceedings of the 32nd Annual International Conference on Mobile Computing and Networking",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To support real-time and domain-customized edge intelligent applications, LLMs are increasingly deployed on edge computing servers. However, we observe that current MoE-based LLM serving systems, inherited from the cloud-based architectures, face a critical sparsity-vanishing problem when serving at the edge: tokens within an input batch often activate a large fraction of experts, which incurs significant I/O overhead from frequent expert swapping between CPU and GPU memory, ultimately degrading system throughput. In this work, we propose Saber, a sparsity-aware scheduling framework optimized for efficient MoE-based LLM serving on edge servers. The core idea of Saber is to introduce a group-level batching strategy that dynamically identifies requests with similar activated experts, and coalesces them to construct sparsity-preserving input batches. To ensure efficient online execution, activation patterns are precomputed and clustered offline, enabling fast request grouping through a lightweight classifier at runtime. Additionally, Saber incorporates a utility-driven priority scheduling mechanism to maximize inference throughput while maintaining low latency by intelligently adjusting group priorities. Experiments on representative MoE-based LLMs demonstrate that Saber significantly outperforms existing sparsity-agnostic schedulers, achieving up to 3.8× lower batch execution time and 3.27× higher throughput at comparable latency levels.",
+      "identifiers": [
+        "SemanticScholar:9fe82306d866c61c39e2c145f2e2403bc6859ef6"
+      ],
+      "semantic_scholar_id": "9fe82306d866c61c39e2c145f2e2403bc6859ef6",
+      "doi": "10.1145/3795866.3844460",
+      "canonical_id": "DOI:10.1145/3795866.3844460",
+      "authors": [
+        "Yan Zhuang",
+        "Chen Gong",
+        "Zhen-Zhe Zheng",
+        "Jia-Le Lei",
+        "Xiao-Yao Huang",
+        "Jie Wu",
+        "Fan Wu",
+        "Gui-Hai Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 2,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.24124",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.24124",
+        "id:SemanticScholar:c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057",
+        "id:arXiv:2512.24124",
+        "title:optrot mitigating weight outliers via datafree rotations for posttraining quantization",
+        "url:https://arxiv.org/abs/2512.24124"
+      ],
+      "record": {
+        "title": "OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2512.24124",
+        "year": 2025,
+        "published": "2025-12-30",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The presence of outliers in Large Language Models (LLMs) weights and activations makes them difficult to quantize. Recent work has leveraged rotations to mitigate these outliers. In this work, we propose methods that learn fusible rotations by minimizing principled and cheap proxy objectives to the weight quantization error. We primarily focus on GPTQ as the quantization method. Our main method is OptRot, which reduces weight outliers simply by minimizing the element-wise fourth power of the rotated weights. We show that OptRot outperforms both Hadamard rotations and more expensive, data-dependent methods like SpinQuant and OSTQuant for weight quantization. It also improves activation quantization in the W4A8 setting. We also propose a data-dependent method, OptRot$^{+}$, that further improves performance by incorporating information on the activation covariance. In the W4A4 setting, we see that both OptRot and OptRot$^{+}$ perform worse, highlighting a trade-off between weight and activation quantization.",
+        "identifiers": [
+          "SemanticScholar:c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057"
+        ],
+        "semantic_scholar_id": "c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057",
+        "canonical_id": "arXiv:2512.24124",
+        "arxiv_id": "2512.24124",
+        "doi": "10.48550/arXiv.2512.24124",
+        "authors": [
+          "A. Gadhikar",
+          "Riccardo Grazzi",
+          "James Hensman"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 302,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.08684",
+      "identity_tokens": [
+        "id:SemanticScholar:7f670a19f2d9279572bcd87034db19c7a267a491",
+        "id:arXiv:2608.08684",
+        "title:ripplekv crosslayer kv cache allocation via perturbation propagation",
+        "url:https://arxiv.org/abs/2608.08684"
+      ],
+      "record": {
+        "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
+        "source_url": "https://arxiv.org/abs/2608.08684",
+        "year": 2026,
+        "published": "2026-08-09",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLM inference is bottlenecked by KV cache memory, yet distributing a limited cache budget across layers remains challenging. Existing methods rely on proxies such as layer depth, attention statistics, or representation change. These proxies do not measure how perturbations at each layer propagate to the output and may therefore cause sensitive layers to be underallocated while tolerant layers are overallocated. To address this issue, we propose RippleKV, which allocates cache across layers by estimating how perturbations to each layer's value cache affect the final predictive distribution. RippleKV independently injects norm-adaptive perturbations into each layer's value cache and measures the induced KL divergence at the model output over a small calibration set. Averaging these responses yields a sensitivity profile specific to the model that need not vary monotonically with depth. RippleKV then converts the sensitivity profile into layer budget multipliers by normalizing the sensitivity scores and applying an exponential mapping. A ratio parameter controls the allocation disparity between sensitive and tolerant layers, while a final normalization preserves the KV cache budget. Experiments on LongBench demonstrate that RippleKV achieves the highest average performance among the evaluated KV cache compression methods under matched cache budgets.",
+        "identifiers": [
+          "SemanticScholar:7f670a19f2d9279572bcd87034db19c7a267a491"
+        ],
+        "semantic_scholar_id": "7f670a19f2d9279572bcd87034db19c7a267a491",
+        "canonical_id": "arXiv:2608.08684",
+        "arxiv_id": "2608.08684",
+        "authors": [
+          "Dong Xu",
+          "Kai-Qi Qian",
+          "Julius",
+          "Wei-Jie Shi",
+          "Yuxuan Sun",
+          "Minghua Tang",
+          "Feng-Lei Jin",
+          "Hanchi Dong",
+          "Jia-Jie Xu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 80,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "identity_tokens": [
+        "id:SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+        "title:resource multiplexing in tuning and serving large language models",
+        "url:https://www.semanticscholar.org/paper/10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4"
+      ],
+      "record": {
+        "title": "Resource Multiplexing in Tuning and Serving Large Language Models",
+        "source_url": "https://www.semanticscholar.org/paper/10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+        "year": 2025,
+        "published": null,
+        "venue": "USENIX Annual Technical Conference",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4"
+        ],
+        "semantic_scholar_id": "10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+        "canonical_id": "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+        "authors": [
+          "Yongjun He",
+          "Hao Yang",
+          "Yao Lu",
+          "A. Klimovic",
+          "Gustavo Alonso"
+        ],
+        "priority": 19,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 19,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 484,
+          "matched_prestigious_venue": "USENIX Annual Technical Conference"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.11627",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.11627",
+        "id:SemanticScholar:67967a6f23543958fa6f1425abf56e718ef7e3ab",
+        "id:arXiv:2604.11627",
+        "title:pointslong adaptive dualmode visual reasoning in mllms",
+        "url:https://arxiv.org/abs/2604.11627"
+      ],
+      "record": {
+        "title": "POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs",
+        "source_url": "https://arxiv.org/abs/2604.11627",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) have recently demonstrated remarkable capabilities in cross-modal understanding and generation. However, the rapid growth of visual token sequences--especially in long-video and streaming scenarios--poses a major challenge to their scalability and real-world deployment. Thus, we introduce POINTS-Long, a native dual-mode MLLM featuring dynamic visual token scaling inspired by the human visual system. The model supports two complementary perception modes: focus mode and standby mode, enabling users to dynamically trade off efficiency and accuracy during inference. On fine-grained visual tasks, the focus mode retains the optimal performance, while on long-form general visual understanding, the standby mode retains 97.7-99.7% of the original accuracy using only 1/40-1/10th of the visual tokens. Moreover, POINTS-Long natively supports streaming visual understanding via a dynamically detachable KV-cache design, allowing efficient maintenance of ultra-long visual memory. Our work provides new insights into the design of future MLLMs and lays the foundation for adaptive and efficient long-form visual understanding.",
+        "identifiers": [
+          "SemanticScholar:67967a6f23543958fa6f1425abf56e718ef7e3ab"
+        ],
+        "semantic_scholar_id": "67967a6f23543958fa6f1425abf56e718ef7e3ab",
+        "canonical_id": "arXiv:2604.11627",
+        "arxiv_id": "2604.11627",
+        "doi": "10.48550/arXiv.2604.11627",
+        "authors": [
+          "Haicheng Wang",
+          "Yuan Liu",
+          "Yi-Kun Liu",
+          "Zhe-Meng Yu",
+          "Zhongyin Zhao",
+          "Yangxiu You",
+          "Zi-Lin Yu",
+          "Le Tian",
+          "Xiao Zhou",
+          "Jie Zhou",
+          "Wei-Di Xie",
+          "Yan-Feng Wang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 198,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/tpds.2026.3683867",
+      "identity_tokens": [
+        "id:DOI:10.1109/tpds.2026.3683867",
+        "id:SemanticScholar:1851d3cb7da364633a39ccd73225b117ba94eee2",
+        "title:vida lossless videoqa acceleration via selective sparse selfspeculation with parallel computational load management",
+        "url:https://doi.org/10.1109/TPDS.2026.3683867"
+      ],
+      "record": {
+        "title": "ViDA: Lossless VideoQA Acceleration via Selective Sparse Self-Speculation With Parallel Computational Load Management",
+        "source_url": "https://doi.org/10.1109/TPDS.2026.3683867",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "IEEE Transactions on Parallel and Distributed Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models (VideoLLMs) have significantly advanced video question answering (VideoQA) applications, which demand both low latency and high accuracy. To meet the requirements, VideoLLMs are typically deployed on GPUs for parallel acceleration. However, the massive computational load from long video contexts often makes such acceleration insufficient. Existing techniques like token pruning and speculative decoding attempt to address this challenge by altering the computational load, but often fail to balance both speed and accuracy. Sparse self-speculation mitigates these limitations via selecting a subset of tokens on a specific token budget to draft the output and then verify it using all tokens. However, existing sparse self-speculation is designed for text-based scenarios and cannot be directly applied to VideoQA tasks, as it fails to account for discrepancies in critical multimodal tokens and the dynamic nature of optimal token budget in VideoQA, leading to suboptimal scale and inappropriate composition of parallel computational load. We argue that achieving both high accuracy and low latency in VideoQA tasks requires managing the computational load with awareness of these discrepancies and dynamics. To achieve this, we introduce ViDA, a selective sparse self-speculation inference system. It progressively searches token budgets by iteratively refining lower and upper bounds of search space derived from long contexts, aiming to find and allocate varying optimal budgets in real-time adaptively. Additionally, it leverages insights from discrepancies in critical multimodal tokens to perform a discrepancy-aware token selection approach for identifying critical tokens. Evaluations across various VideoQA workloads show that compared to state-of-the-art methods, ViDA preserves exact model outputs while reducing average time-per-output-token (TPOT) by 15% to 46% and average end-to-end latency by up to 28%, while decreasing the divergence from optimal token budget distribution by up to 93% and increasing the optimal critical token ratio by up to 380%.",
+        "identifiers": [
+          "SemanticScholar:1851d3cb7da364633a39ccd73225b117ba94eee2"
+        ],
+        "semantic_scholar_id": "1851d3cb7da364633a39ccd73225b117ba94eee2",
+        "doi": "10.1109/TPDS.2026.3683867",
+        "canonical_id": "DOI:10.1109/TPDS.2026.3683867",
+        "authors": [
+          "Liang Zheng",
+          "Yi-Tao Hu",
+          "Chen Shen",
+          "Zhixin Zhao",
+          "Bowen Shi",
+          "Yu-Hao Zhang",
+          "Lai-Ping Zhao",
+          "Wen-Xin Li",
+          "Ke-Qiu Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06135",
+      "identity_tokens": [
+        "id:SemanticScholar:87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a",
+        "id:arXiv:2608.06135",
+        "title:llm inference under bursty workload distribution modifying the wait algorithm",
+        "url:https://arxiv.org/abs/2608.06135"
+      ],
+      "record": {
+        "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
+        "source_url": "https://arxiv.org/abs/2608.06135",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) such as ChatGPT and Claude are widely used for information retrieval and problem-solving. Recent work has focused on improving scheduling algorithms to boost throughput while maintaining low latency. However, these approaches often assume Poisson request arrivals with constant rates - an assumption that fails to reflect the inherently bursty and dynamic nature of real-world traffic. We propose a lightweight extension to the state-of-the-art WAIT algorithm [1], which adapts to time-varying arrival rates without prior traffic knowledge. The proposed algorithm performs online estimation of request intensity based on observed interarrival times. Using Markov Modulated Poisson Process (MMPP)-based synthetic workloads with diverse request types, we conduct a simulation-based evaluation demonstrating that the proposed method achieves higher throughput than Sarathi-Serve [2], ORCA [3], and vLLM [4] in the evaluated low arrival-rate shift scenarios while maintaining comparable latency.",
+        "identifiers": [
+          "SemanticScholar:87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a"
+        ],
+        "semantic_scholar_id": "87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a",
+        "canonical_id": "arXiv:2608.06135",
+        "arxiv_id": "2608.06135",
+        "authors": [
+          "Anjali Gangadhar Katageria",
+          "S. Rani",
+          "R. Sengupta"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 83,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34555",
+      "identity_tokens": [
+        "id:SemanticScholar:36623233e6049168c2b669b21b48ecb3e5dae84b",
+        "id:arXiv:2609.34555",
+        "title:pulseinfer iocentric sparse kv cache offloading for efficient longcontext llm decoding",
+        "url:https://arxiv.org/abs/2609.34555"
+      ],
+      "record": {
+        "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2609.34555",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context LLM serving is increasingly bottlenecked by decode, where large KV caches limit batch size and underutilize GPUs. Sparse KV cache offloading expands effective capacity by storing most historical KV blocks in CPU DRAM and recalling only selected blocks on demand. However, we find that existing offloading systems shift the bottleneck to CPU-GPU recall I/O: recall volume varies widely across layers, decode steps and requests, while headwise sparse selection fragments recalls into many small PCIe transfers. This paper presents PulseInfer, an I/O-centric sparse KV cache offloading system. PulseInfer hides variable recall latency with interruptible layer-wise scheduling, adapts offloading decisions with IO-Adaptive Offloading Admission, and coalesces fragmented transfers using SoloHead sparse selection and a gather-scatter I/O engine. Implemented on SGLang, PulseInfer improves decode throughput by up to 4.7x over SGLang and 2.6x over the best existing offloading baseline, while reducing TPOT by up to 76% and preserving near-lossless accuracy.",
+        "identifiers": [
+          "SemanticScholar:36623233e6049168c2b669b21b48ecb3e5dae84b"
+        ],
+        "semantic_scholar_id": "36623233e6049168c2b669b21b48ecb3e5dae84b",
+        "canonical_id": "arXiv:2609.34555",
+        "arxiv_id": "2609.34555",
+        "authors": [
+          "Qiu-Yang Zhang",
+          "Kai Zhou",
+          "Kai Lu",
+          "Hao-Cheng Lu",
+          "Jian Zhou",
+          "Yuan-Peng Su",
+          "Kun Bao",
+          "Ji-Guang Wan",
+          "Fei Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.00499",
+      "identity_tokens": [
+        "id:SemanticScholar:465783e3faba20fc7a473102fb824d20934ad550",
+        "id:arXiv:2610.00499",
+        "title:denoising surface modeling and predicting inference cost for diffusion llm serving",
+        "url:https://arxiv.org/abs/2610.00499"
+      ],
+      "record": {
+        "title": "Denoising Surface: Modeling and Predicting Inference Cost for Diffusion LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.00499",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As diffusion large language models (dLLMs) become more capable, they are moving from research settings to real-world \\textit{serving}, where request management (such as scheduling and resource allocation) relies on accurate estimation of per-request inference cost. However, common cost proxies fall short for dLLMs: output length ignores that one forward pass can unmask multiple tokens, and denoising-step count ignores the \\textit{heterogeneous} per-step costs. We observe that the block-autoregressive generation mechanism induces a two-dimensional execution structure over output blocks and within-block denoising steps, whereas these proxies collapse it into a scalar, discarding information essential for characterizing the cost. Motivated by this insight, we propose the Denoising Workload Surface (DWS), which preserves this two-dimensional block-step structure as a probability surface to weight the heterogeneous per-step costs. We then design a coarse-to-fine training scheme that enables a lightweight prompt-only predictor to accurately predict the complex DWS. This predictor runs efficiently even on a single CPU core, avoiding GPU contention with the serving model. Since DWS decouples request-dependent execution behavior from deployment-specific cost factors, the predictor transfers across hardware configurations without retraining. In \\textit{real-world} serving experiments, DWS reduces cost-prediction error by up to $2.50\\times$ over scalar-based predictors, while the DWS-guided shortest-job-first scheduler reduces end-to-end latency by up to $1.92\\times$ for online chatbots.",
+        "identifiers": [
+          "SemanticScholar:465783e3faba20fc7a473102fb824d20934ad550"
+        ],
+        "semantic_scholar_id": "465783e3faba20fc7a473102fb824d20934ad550",
+        "canonical_id": "arXiv:2610.00499",
+        "arxiv_id": "2610.00499",
+        "authors": [
+          "Hao-Yu Zheng",
+          "Fang-Cheng Fu",
+          "Bin-Hang Yuan",
+          "Yong-Qiang Zhang",
+          "Liang Deng",
+          "Hao Wang",
+          "Yuan-Yuan Zhu",
+          "Xiao Yan",
+          "Jia-Wei Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3795866.3844460",
+      "identity_tokens": [
+        "id:DOI:10.1145/3795866.3844460",
+        "id:SemanticScholar:9fe82306d866c61c39e2c145f2e2403bc6859ef6",
+        "title:sparsityaware scheduling for efficient moebased llm serving on edge servers",
+        "url:https://doi.org/10.1145/3795866.3844460"
+      ],
+      "record": {
+        "title": "Sparsity-Aware Scheduling for Efficient MoE-Based LLM Serving on Edge Servers",
+        "source_url": "https://doi.org/10.1145/3795866.3844460",
+        "year": 2026,
+        "published": "2026-10-26",
+        "venue": "Proceedings of the 32nd Annual International Conference on Mobile Computing and Networking",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "To support real-time and domain-customized edge intelligent applications, LLMs are increasingly deployed on edge computing servers. However, we observe that current MoE-based LLM serving systems, inherited from the cloud-based architectures, face a critical sparsity-vanishing problem when serving at the edge: tokens within an input batch often activate a large fraction of experts, which incurs significant I/O overhead from frequent expert swapping between CPU and GPU memory, ultimately degrading system throughput. In this work, we propose Saber, a sparsity-aware scheduling framework optimized for efficient MoE-based LLM serving on edge servers. The core idea of Saber is to introduce a group-level batching strategy that dynamically identifies requests with similar activated experts, and coalesces them to construct sparsity-preserving input batches. To ensure efficient online execution, activation patterns are precomputed and clustered offline, enabling fast request grouping through a lightweight classifier at runtime. Additionally, Saber incorporates a utility-driven priority scheduling mechanism to maximize inference throughput while maintaining low latency by intelligently adjusting group priorities. Experiments on representative MoE-based LLMs demonstrate that Saber significantly outperforms existing sparsity-agnostic schedulers, achieving up to 3.8× lower batch execution time and 3.27× higher throughput at comparable latency levels.",
+        "identifiers": [
+          "SemanticScholar:9fe82306d866c61c39e2c145f2e2403bc6859ef6"
+        ],
+        "semantic_scholar_id": "9fe82306d866c61c39e2c145f2e2403bc6859ef6",
+        "doi": "10.1145/3795866.3844460",
+        "canonical_id": "DOI:10.1145/3795866.3844460",
+        "authors": [
+          "Yan Zhuang",
+          "Chen Gong",
+          "Zhen-Zhe Zheng",
+          "Jia-Le Lei",
+          "Xiao-Yao Huang",
+          "Jie Wu",
+          "Fan Wu",
+          "Gui-Hai Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 2,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ffba9d38e5959b5df8117be63fe00d4c0945a96a4b55bc484ffc8cdc5e218f56",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

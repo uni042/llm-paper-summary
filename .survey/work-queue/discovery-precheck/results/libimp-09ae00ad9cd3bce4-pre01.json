@@ -1,0 +1,784 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-09ae00ad9cd3bce4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-09ae00ad9cd3",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2412.17560",
+    "arXiv:2509.22075",
+    "arXiv:2602.24059",
+    "arXiv:2604.07888",
+    "arXiv:2604.16368",
+    "arXiv:2606.02544",
+    "arXiv:2606.23406",
+    "arXiv:2607.17419",
+    "arXiv:2609.26100"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "feb71318b7639f0149b8c57c4e7e63e03a39b2cd",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T22:57:21.506995+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2412.17560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2509.22075",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.24059",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.07888",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.16368",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02544",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2606.02544"
+    },
+    {
+      "requested_id": "arXiv:2606.23406",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.17419",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.26100",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
+      "source_url": "https://arxiv.org/abs/2604.07888",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training LLMs at ultra-low precision remains a formidable challenge. Direct low-bit QAT often suffers from convergence instability and substantial training costs, exacerbated by quantization noise from heavy-tailed outlier channels and error accumulation across layers. To address these issues, we present Bit-by-Bit, a progressive QAT framework with outlier channel splitting. Our approach integrates three key components: (1) block-wise progressive training that reduces precision stage by stage, ensuring stable initialization for low-bit optimization; (2) nested structure of integer quantization grids to enable a\"train once, deploy any precision\"paradigm, allowing a single model to support multiple bit-widths without retraining; (3) rounding-aware outlier channel splitting, which mitigates quantization error while acting as an identity transform that preserves the quantized outputs. Furthermore, we follow microscaling groups with E4M3 scales, capturing dynamic activation ranges in alignment with OCP/NVIDIA standards. To address the lack of efficient 2-bit kernels, we developed custom operators for both W2A2 and W2A16 configurations, achieving up to 11$\\times$ speedup over BF16. Under W2A2 settings, Bit-by-Bit significantly outperforms baselines like BitDistiller and EfficientQAT on both Llama2/3, achieving a loss of only 2.25 WikiText2 PPL compared to full-precision models.",
+      "identifiers": [
+        "SemanticScholar:39688640ed9b1fa0e4ab5a04a960602e69daa4a6"
+      ],
+      "semantic_scholar_id": "39688640ed9b1fa0e4ab5a04a960602e69daa4a6",
+      "canonical_id": "arXiv:2604.07888",
+      "arxiv_id": "2604.07888",
+      "doi": "10.48550/arXiv.2604.07888",
+      "authors": [
+        "Bin Xu",
+        "Hao Gu",
+        "Lu-Jun Li",
+        "Hao Wang",
+        "Bei-Song Liu",
+        "Jia-Cheng Liu",
+        "Qi-Yuan Zhu",
+        "Xin-Tong Yang",
+        "Chao Li",
+        "Si-Rui Han",
+        "Yi-Ke Guo"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 202,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization",
+      "source_url": "https://arxiv.org/abs/2602.24059",
+      "year": 2026,
+      "published": "2026-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) has emerged as an effective technique for alleviating the substantial computational and memory overheads of Vision-Language Models (VLMs) by compressing both weights and activations without retraining the full model. Existing PTQ methods primarily rely on static identification and global compensation of sensitive or outlier channels, yet they often overlook the distributional differences of these important channels across inputs, leading to unsatisfactory quantization. In this work, we observe that the distributions and occurrence frequencies of important channels vary significantly both across modalities and among tokens, even within the same modality. Accordingly, we propose \\textbf{Quant Experts (QE)}, a token-aware adaptive error compensation with mixture-of-experts for VLMs quantization. QE divides the important channels into token-independent and token-dependent groups. For the former, a shared expert is designed for most tokens to compensate for global quantization error using a low-rank adapter. For the latter, routed experts including multiple routed low-rank adapters are elaborated to compensate for local quantization error related to specific tokens. Extensive experiments demonstrate that QE consistently enhances task accuracy across various quantization settings and model scales, ranging from 2B to 70B parameters, while maintaining performance comparable to full-precision models.",
+      "identifiers": [
+        "SemanticScholar:9160f05b53d2c0177fd99825fe5334d6880fa19b"
+      ],
+      "semantic_scholar_id": "9160f05b53d2c0177fd99825fe5334d6880fa19b",
+      "canonical_id": "arXiv:2602.24059",
+      "arxiv_id": "2602.24059",
+      "doi": "10.48550/arXiv.2602.24059",
+      "authors": [
+        "Chen Jia",
+        "Bao-Ting Li",
+        "Xu-Chong Zhang",
+        "Min Wei",
+        "Bo-Lin Lin",
+        "Hong-Bin Sun"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones",
+      "source_url": "https://arxiv.org/abs/2607.17419",
+      "year": 2026,
+      "published": "2026-07-19",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention promises constant-time recurrent inference but degrades sharply on associative recall. We formulate attention recall as a spherical-packing problem and introduce Kernelized Linear Attention Activations (KATA), a framework whose feature maps are derived from first principles by certifying nonnegative attention weights through a self-dual homogeneous cone. Building on this observation, we show that rank-one positive semi-definite (PSD) features offer a favorable capacity--interference tradeoff. KATA recovers a parameter-free convex output gate and characterizes associative capacity through the Welch interference floor. For tolerances above this floor, KATA enlarges the state without adding parameters and admits spherical codes with exponentially many keys in the projection dimension. We implement KATA as fused Triton kernels at two operating points: a flash-attention-style forward up to ${\\sim}1.6\\times$ FlashAttention-2 throughput, and an exact $O(T)$ chunked-state form that reaches ${\\sim}11\\times$ FlashAttention-2 forward throughput at $131$k tokens. An associative scan of the first-order feature lowers the inter-chunk recurrence depth to $O(\\log(T/C))$ for chunk size $C$ and averages ${\\sim}2.4\\times$ the throughput of a matched sequential linear-attention baseline. On long-range MQAR and repeated-key overwrite, several KATA variants outperform Gated DeltaNet, with parameter counts and state sizes reported alongside accuracy. Induction preserves near-perfect recall, while kernel benchmarks show that the maps can be implemented efficiently. KATA retains $0.985$ MQAR at a $16\\times$ out-of-distribution length, approaching the softmax with roughly one quarter of the KV-cache entries. Experiments on 340M-parameter LLMs reveal a feature-dependent fluency trade-off and clarify how positional embeddings, delta rules, and decay gates interact with feature geometry.",
+      "identifiers": [
+        "SemanticScholar:803eebac52c3cbf0cd2c6eccf1a4449041a7803b"
+      ],
+      "semantic_scholar_id": "803eebac52c3cbf0cd2c6eccf1a4449041a7803b",
+      "canonical_id": "arXiv:2607.17419",
+      "arxiv_id": "2607.17419",
+      "doi": "10.48550/arXiv.2607.17419",
+      "authors": [
+        "Ayoub Ghriss",
+        "Sourav Chakraborty"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 101,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models",
+      "source_url": "https://arxiv.org/abs/2606.23406",
+      "year": 2026,
+      "published": "2026-06-22",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HyperQuant (Hadamard, optimallY Packing, Entropy Rice-coding), a unified post-training quantization pipeline for the weights and the KV cache of large language and diffusion transformers. Across a suite of self-contained experiments (Table 1), HyperQuant outperforms the recent HIGGS scheme at every operating point from 3 to 5 bits per scalar (bps) on weights, and beats both TurboQuant and OCTOPUS on KV quantization down to 1.7 bps. Beyond the LLM setting, HyperQuant quantizes the 19B-parameter LTX-2 DiT video model with no observable per-frame artifacts. End-to-end on an H100 at 4 bps, HyperQuant compresses the linear weights ~3.9x and the KV cache ~3.79x at near-lossless quality. HyperQuant combines four known ideas into a single construction: (i) a per-tile Randomized Hadamard Transform that makes the per-coordinate distribution of weights and activations approximately Gaussian; (ii) quantization to a low-dimensional optimal lattice (E8, D4, A2, or Z); (iii) lossless bit-stripping and near-entropy-optimal variable-length Rice coding of the lattice indices; and (iv) bias-correction methods for the KV cache that keep the reconstruction unbiased under inner products, preserving attention semantics. We further integrate the pipeline with 8-bit and 4-bit Tensor-Core MMA paths (fp8-e4m3, int8, nvfp4, mxfp4), and find that int8 beats fp8 on the post-RHT lattice output. Project page: https://moonmath.ai/hyperquant/",
+      "identifiers": [
+        "SemanticScholar:c1d7626bd4dd7b630887cce8ec37a23552e5e881"
+      ],
+      "semantic_scholar_id": "c1d7626bd4dd7b630887cce8ec37a23552e5e881",
+      "canonical_id": "arXiv:2606.23406",
+      "arxiv_id": "2606.23406",
+      "doi": "10.48550/arXiv.2606.23406",
+      "authors": [
+        "Yuval Domb",
+        "Hadar Sackstein",
+        "Tomer Solberg"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 128,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cross-Family Speculative Decoding for Polish Language Models on Apple~Silicon: An Empirical Evaluation of Bielik~11B with UAG-Extended MLX-LM",
+      "source_url": "https://arxiv.org/abs/2604.16368",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM inference by using a small draft model to propose k candidate tokens for a target model to verify. While effective for same-tokenizer pairs on high-bandwidth GPUs, its applicability to cross-family pairs with mismatched tokenizers and consumer-grade unified memory remains underexplored. We extend the MLX-LM framework with Universal Assisted Generation (UAG) to enable cross-tokenizer speculative decoding on Apple Silicon. We evaluate Bielik 11B-Instruct (Mistral-based) as the target model, paired with three draft models: Bielik 1.5B (Qwen-based with custom tokenizer), Qwen2.5-1.5B, and Llama 3.2-1B. Experiments on three Polish-language datasets (Wikipedia, pl_alpaca, synthetic) use draft lengths k in {2, 4, 6} to compare naive and context-aware token translation. Results show: (1) context-aware translation consistently improves acceptance rates across all configurations; (2) the Polish-specialized Bielik 1.5B achieves lower acceptance than general-purpose Qwen2.5 and Llama 3.2 drafters; (3) throughput on Apple Silicon is content-dependent, reaching 1.7x speedup for structured text but failing for varied instructions; and (4) verification cost on unified memory does not amortize as theory predicts because both models are memory-bandwidth bound, making sequential drafting expensive relative to batched verification. We propose a hardware-aware speedup formula and characterize conditions for cross-family speculative decoding on Apple Silicon. This is the first systematic evaluation of cross-family speculative decoding for Polish LLMs and the first empirical study of UAG-based decoding on unified memory architectures.",
+      "identifiers": [
+        "SemanticScholar:df651000a2b3679edb3e7ca5d88b77e350d729e8"
+      ],
+      "semantic_scholar_id": "df651000a2b3679edb3e7ca5d88b77e350d729e8",
+      "canonical_id": "arXiv:2604.16368",
+      "arxiv_id": "2604.16368",
+      "doi": "10.48550/arXiv.2604.16368",
+      "authors": [
+        "Krzysztof Fonał"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 220,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TSS: Target-Side Sparsification for Speculative Decoding in Domain-Specific Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.26100",
+      "year": 2026,
+      "published": "2026-08-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference through collaboration between a lightweight draft model and a target verifier. Existing methods mainly improve the draft side, while the target model is typically kept dense and unchanged. We show that, under domain-specific inference, full-depth target verification is not always the optimal choice. Counter-intuitively, skipping selected target layers can reduce verification cost while simultaneously increasing draft acceptance and preserving, or even improving, downstream task performance. Based on this observation, we propose TSS, a target-side sparsification framework for speculative decoding. TSS employs an acceptance- and metric-aware breadth search to explore multi-layer skip configurations without imposing a fixed priority between the two objectives. The selected configurations are stored in a domain-to-configuration mapping and applied by a lightweight skip controller, allowing one complete target model to support multiple sparse verification paths without retraining or permanent parameter pruning. Experiments on Spec-Bench across multiple domains, model scales, and speculative decoding methods show consistent improvements in draft acceptance and downstream task performance. In Translation setting, TSS increases the average accept length from 2.70 to 4.53 (+67.8%), improves BLEU from 0.131 to 0.237 (+80.9%), and raises end-to-end throughput from 75.6 to 127.3 tokens/s, corresponding to a 1.68X speedup.",
+      "identifiers": [
+        "SemanticScholar:18d74b52a6c2dd78f855b6c4042cda9d8e0e48b1"
+      ],
+      "semantic_scholar_id": "18d74b52a6c2dd78f855b6c4042cda9d8e0e48b1",
+      "canonical_id": "arXiv:2609.26100",
+      "arxiv_id": "2609.26100",
+      "authors": [
+        "Hai-Bo Hu",
+        "Lian-Ming Huang",
+        "Qiao Li",
+        "Nan Guan",
+        "C. Xue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 74,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2412.17560",
+      "year": 2024,
+      "published": "2024-12-23",
+      "venue": "IJCNLP-AACL",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model compression has emerged as a mainstream solution to reduce memory usage and computational overhead. This paper presents Group Quantization and Sparse Acceleration (GQSA), a novel compression technique tailored for LLMs. Traditional methods typically focus exclusively on either quantization or sparsification, but relying on a single strategy often results in significant performance loss at high compression rates. In contrast, GQSA integrates quantization and sparsification in a tightly coupled manner, leveraging GPU-friendly structured group sparsity and quantization for efficient acceleration. Building upon system-algorithm co-design principles, we propose a two-stage sparse optimization strategy that ensures the performance superiority of the compressed model. On the engine side, we introduce a\"task-centric\"parallel strategy, which, to the best of our knowledge, is the first application in the domain of sparse computing. Compared to the traditional 2:4 sparse method, the GQSA offers a more flexible and adjustable sparsity rate, as well as a higher weight compression rate, and is efficiently compatible with weight-only quantization methods. Experimental results demonstrate that, under the GQSA W4S50% compression setting, the model's accuracy surpasses that of both 2:4 pruning and W2 quantization. Furthermore, at the inference level, GQSA outperforms W2 by 1.26$\\times$ and 2:4 pruning by 2.35$\\times$ in terms of speed.",
+      "identifiers": [
+        "SemanticScholar:acbea6bae6f0d3d0358ff2c1037946c80a1c208c"
+      ],
+      "semantic_scholar_id": "acbea6bae6f0d3d0358ff2c1037946c80a1c208c",
+      "canonical_id": "arXiv:2412.17560",
+      "arxiv_id": "2412.17560",
+      "doi": "10.48550/arXiv.2412.17560",
+      "authors": [
+        "Chao Zeng",
+        "Songwei Liu",
+        "Shu Yang",
+        "Fangmin Chen",
+        "Xing Mei",
+        "Lean Fu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 674,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "COSPADI: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning",
+      "source_url": "https://arxiv.org/abs/2509.22075",
+      "year": 2025,
+      "published": "2025-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training LLM compression often relies on low-rank approximations, which force all columns of a projection matrix to share a single low-dimensional subspace. We propose CoSpaDi, a training-free compression framework that replaces this single-subspace assumption with a union-of-subspaces model via sparse dictionary learning. CoSpaDi factorizes each weight matrix into a dense dictionary and column-sparse coefficients, allowing different columns to select different subsets of dictionary atoms at the same storage budget. To preserve model behavior, we use calibration activations to transform functional reconstruction into a standard dictionary learning problem. Across LLaMA and Qwen models, CoSpaDi improves accuracy-compression and perplexity-compression trade-offs over SVD-based and structured pruning baselines at 20-40\\% compression ratios, while naturally supporting sparse-dense computation and post-training quantization of sparse coefficients.",
+      "identifiers": [
+        "SemanticScholar:311a78b1ae1d4f7011e39ca569bcd27975049216"
+      ],
+      "semantic_scholar_id": "311a78b1ae1d4f7011e39ca569bcd27975049216",
+      "canonical_id": "arXiv:2509.22075",
+      "arxiv_id": "2509.22075",
+      "doi": "10.48550/arXiv.2509.22075",
+      "authors": [
+        "Dmitriy Shopkhoev",
+        "Denis Makhov",
+        "Magauiya Zhussip",
+        "Ammar Ali",
+        "Stamatios Lefkimmiatis"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 397,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.07888",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.07888",
+        "id:SemanticScholar:39688640ed9b1fa0e4ab5a04a960602e69daa4a6",
+        "id:arXiv:2604.07888",
+        "title:bitbybit progressive qat strategy with outlier channel splitting for stable lowbit llms",
+        "url:https://arxiv.org/abs/2604.07888"
+      ],
+      "record": {
+        "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
+        "source_url": "https://arxiv.org/abs/2604.07888",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Training LLMs at ultra-low precision remains a formidable challenge. Direct low-bit QAT often suffers from convergence instability and substantial training costs, exacerbated by quantization noise from heavy-tailed outlier channels and error accumulation across layers. To address these issues, we present Bit-by-Bit, a progressive QAT framework with outlier channel splitting. Our approach integrates three key components: (1) block-wise progressive training that reduces precision stage by stage, ensuring stable initialization for low-bit optimization; (2) nested structure of integer quantization grids to enable a\"train once, deploy any precision\"paradigm, allowing a single model to support multiple bit-widths without retraining; (3) rounding-aware outlier channel splitting, which mitigates quantization error while acting as an identity transform that preserves the quantized outputs. Furthermore, we follow microscaling groups with E4M3 scales, capturing dynamic activation ranges in alignment with OCP/NVIDIA standards. To address the lack of efficient 2-bit kernels, we developed custom operators for both W2A2 and W2A16 configurations, achieving up to 11$\\times$ speedup over BF16. Under W2A2 settings, Bit-by-Bit significantly outperforms baselines like BitDistiller and EfficientQAT on both Llama2/3, achieving a loss of only 2.25 WikiText2 PPL compared to full-precision models.",
+        "identifiers": [
+          "SemanticScholar:39688640ed9b1fa0e4ab5a04a960602e69daa4a6"
+        ],
+        "semantic_scholar_id": "39688640ed9b1fa0e4ab5a04a960602e69daa4a6",
+        "canonical_id": "arXiv:2604.07888",
+        "arxiv_id": "2604.07888",
+        "doi": "10.48550/arXiv.2604.07888",
+        "authors": [
+          "Bin Xu",
+          "Hao Gu",
+          "Lu-Jun Li",
+          "Hao Wang",
+          "Bei-Song Liu",
+          "Jia-Cheng Liu",
+          "Qi-Yuan Zhu",
+          "Xin-Tong Yang",
+          "Chao Li",
+          "Si-Rui Han",
+          "Yi-Ke Guo"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 202,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.24059",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.24059",
+        "id:SemanticScholar:9160f05b53d2c0177fd99825fe5334d6880fa19b",
+        "id:arXiv:2602.24059",
+        "title:quant experts tokenaware adaptive error reconstruction with mixture of experts for large visionlanguage models quantization",
+        "url:https://arxiv.org/abs/2602.24059"
+      ],
+      "record": {
+        "title": "Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization",
+        "source_url": "https://arxiv.org/abs/2602.24059",
+        "year": 2026,
+        "published": "2026-02-27",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-Training Quantization (PTQ) has emerged as an effective technique for alleviating the substantial computational and memory overheads of Vision-Language Models (VLMs) by compressing both weights and activations without retraining the full model. Existing PTQ methods primarily rely on static identification and global compensation of sensitive or outlier channels, yet they often overlook the distributional differences of these important channels across inputs, leading to unsatisfactory quantization. In this work, we observe that the distributions and occurrence frequencies of important channels vary significantly both across modalities and among tokens, even within the same modality. Accordingly, we propose \\textbf{Quant Experts (QE)}, a token-aware adaptive error compensation with mixture-of-experts for VLMs quantization. QE divides the important channels into token-independent and token-dependent groups. For the former, a shared expert is designed for most tokens to compensate for global quantization error using a low-rank adapter. For the latter, routed experts including multiple routed low-rank adapters are elaborated to compensate for local quantization error related to specific tokens. Extensive experiments demonstrate that QE consistently enhances task accuracy across various quantization settings and model scales, ranging from 2B to 70B parameters, while maintaining performance comparable to full-precision models.",
+        "identifiers": [
+          "SemanticScholar:9160f05b53d2c0177fd99825fe5334d6880fa19b"
+        ],
+        "semantic_scholar_id": "9160f05b53d2c0177fd99825fe5334d6880fa19b",
+        "canonical_id": "arXiv:2602.24059",
+        "arxiv_id": "2602.24059",
+        "doi": "10.48550/arXiv.2602.24059",
+        "authors": [
+          "Chen Jia",
+          "Bao-Ting Li",
+          "Xu-Chong Zhang",
+          "Min Wei",
+          "Bo-Lin Lin",
+          "Hong-Bin Sun"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 243,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.17419",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.17419",
+        "id:SemanticScholar:803eebac52c3cbf0cd2c6eccf1a4449041a7803b",
+        "id:arXiv:2607.17419",
+        "title:kernelized linear attention breaking the capacity wall with symmetric cones",
+        "url:https://arxiv.org/abs/2607.17419"
+      ],
+      "record": {
+        "title": "Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones",
+        "source_url": "https://arxiv.org/abs/2607.17419",
+        "year": 2026,
+        "published": "2026-07-19",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention promises constant-time recurrent inference but degrades sharply on associative recall. We formulate attention recall as a spherical-packing problem and introduce Kernelized Linear Attention Activations (KATA), a framework whose feature maps are derived from first principles by certifying nonnegative attention weights through a self-dual homogeneous cone. Building on this observation, we show that rank-one positive semi-definite (PSD) features offer a favorable capacity--interference tradeoff. KATA recovers a parameter-free convex output gate and characterizes associative capacity through the Welch interference floor. For tolerances above this floor, KATA enlarges the state without adding parameters and admits spherical codes with exponentially many keys in the projection dimension. We implement KATA as fused Triton kernels at two operating points: a flash-attention-style forward up to ${\\sim}1.6\\times$ FlashAttention-2 throughput, and an exact $O(T)$ chunked-state form that reaches ${\\sim}11\\times$ FlashAttention-2 forward throughput at $131$k tokens. An associative scan of the first-order feature lowers the inter-chunk recurrence depth to $O(\\log(T/C))$ for chunk size $C$ and averages ${\\sim}2.4\\times$ the throughput of a matched sequential linear-attention baseline. On long-range MQAR and repeated-key overwrite, several KATA variants outperform Gated DeltaNet, with parameter counts and state sizes reported alongside accuracy. Induction preserves near-perfect recall, while kernel benchmarks show that the maps can be implemented efficiently. KATA retains $0.985$ MQAR at a $16\\times$ out-of-distribution length, approaching the softmax with roughly one quarter of the KV-cache entries. Experiments on 340M-parameter LLMs reveal a feature-dependent fluency trade-off and clarify how positional embeddings, delta rules, and decay gates interact with feature geometry.",
+        "identifiers": [
+          "SemanticScholar:803eebac52c3cbf0cd2c6eccf1a4449041a7803b"
+        ],
+        "semantic_scholar_id": "803eebac52c3cbf0cd2c6eccf1a4449041a7803b",
+        "canonical_id": "arXiv:2607.17419",
+        "arxiv_id": "2607.17419",
+        "doi": "10.48550/arXiv.2607.17419",
+        "authors": [
+          "Ayoub Ghriss",
+          "Sourav Chakraborty"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 101,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.23406",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.23406",
+        "id:SemanticScholar:c1d7626bd4dd7b630887cce8ec37a23552e5e881",
+        "id:arXiv:2606.23406",
+        "title:hyperquant a ratedistortionoptimal quantization pipeline for large language and diffusion models",
+        "url:https://arxiv.org/abs/2606.23406"
+      ],
+      "record": {
+        "title": "HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models",
+        "source_url": "https://arxiv.org/abs/2606.23406",
+        "year": 2026,
+        "published": "2026-06-22",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present HyperQuant (Hadamard, optimallY Packing, Entropy Rice-coding), a unified post-training quantization pipeline for the weights and the KV cache of large language and diffusion transformers. Across a suite of self-contained experiments (Table 1), HyperQuant outperforms the recent HIGGS scheme at every operating point from 3 to 5 bits per scalar (bps) on weights, and beats both TurboQuant and OCTOPUS on KV quantization down to 1.7 bps. Beyond the LLM setting, HyperQuant quantizes the 19B-parameter LTX-2 DiT video model with no observable per-frame artifacts. End-to-end on an H100 at 4 bps, HyperQuant compresses the linear weights ~3.9x and the KV cache ~3.79x at near-lossless quality. HyperQuant combines four known ideas into a single construction: (i) a per-tile Randomized Hadamard Transform that makes the per-coordinate distribution of weights and activations approximately Gaussian; (ii) quantization to a low-dimensional optimal lattice (E8, D4, A2, or Z); (iii) lossless bit-stripping and near-entropy-optimal variable-length Rice coding of the lattice indices; and (iv) bias-correction methods for the KV cache that keep the reconstruction unbiased under inner products, preserving attention semantics. We further integrate the pipeline with 8-bit and 4-bit Tensor-Core MMA paths (fp8-e4m3, int8, nvfp4, mxfp4), and find that int8 beats fp8 on the post-RHT lattice output. Project page: https://moonmath.ai/hyperquant/",
+        "identifiers": [
+          "SemanticScholar:c1d7626bd4dd7b630887cce8ec37a23552e5e881"
+        ],
+        "semantic_scholar_id": "c1d7626bd4dd7b630887cce8ec37a23552e5e881",
+        "canonical_id": "arXiv:2606.23406",
+        "arxiv_id": "2606.23406",
+        "doi": "10.48550/arXiv.2606.23406",
+        "authors": [
+          "Yuval Domb",
+          "Hadar Sackstein",
+          "Tomer Solberg"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 128,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.16368",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.16368",
+        "id:SemanticScholar:df651000a2b3679edb3e7ca5d88b77e350d729e8",
+        "id:arXiv:2604.16368",
+        "title:crossfamily speculative decoding for polish language models on applesilicon an empirical evaluation of bielik11b with uagextended mlxlm",
+        "url:https://arxiv.org/abs/2604.16368"
+      ],
+      "record": {
+        "title": "Cross-Family Speculative Decoding for Polish Language Models on Apple~Silicon: An Empirical Evaluation of Bielik~11B with UAG-Extended MLX-LM",
+        "source_url": "https://arxiv.org/abs/2604.16368",
+        "year": 2026,
+        "published": "2026-03-22",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM inference by using a small draft model to propose k candidate tokens for a target model to verify. While effective for same-tokenizer pairs on high-bandwidth GPUs, its applicability to cross-family pairs with mismatched tokenizers and consumer-grade unified memory remains underexplored. We extend the MLX-LM framework with Universal Assisted Generation (UAG) to enable cross-tokenizer speculative decoding on Apple Silicon. We evaluate Bielik 11B-Instruct (Mistral-based) as the target model, paired with three draft models: Bielik 1.5B (Qwen-based with custom tokenizer), Qwen2.5-1.5B, and Llama 3.2-1B. Experiments on three Polish-language datasets (Wikipedia, pl_alpaca, synthetic) use draft lengths k in {2, 4, 6} to compare naive and context-aware token translation. Results show: (1) context-aware translation consistently improves acceptance rates across all configurations; (2) the Polish-specialized Bielik 1.5B achieves lower acceptance than general-purpose Qwen2.5 and Llama 3.2 drafters; (3) throughput on Apple Silicon is content-dependent, reaching 1.7x speedup for structured text but failing for varied instructions; and (4) verification cost on unified memory does not amortize as theory predicts because both models are memory-bandwidth bound, making sequential drafting expensive relative to batched verification. We propose a hardware-aware speedup formula and characterize conditions for cross-family speculative decoding on Apple Silicon. This is the first systematic evaluation of cross-family speculative decoding for Polish LLMs and the first empirical study of UAG-based decoding on unified memory architectures.",
+        "identifiers": [
+          "SemanticScholar:df651000a2b3679edb3e7ca5d88b77e350d729e8"
+        ],
+        "semantic_scholar_id": "df651000a2b3679edb3e7ca5d88b77e350d729e8",
+        "canonical_id": "arXiv:2604.16368",
+        "arxiv_id": "2604.16368",
+        "doi": "10.48550/arXiv.2604.16368",
+        "authors": [
+          "Krzysztof Fonał"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 220,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.26100",
+      "identity_tokens": [
+        "id:SemanticScholar:18d74b52a6c2dd78f855b6c4042cda9d8e0e48b1",
+        "id:arXiv:2609.26100",
+        "title:tss targetside sparsification for speculative decoding in domainspecific large language models",
+        "url:https://arxiv.org/abs/2609.26100"
+      ],
+      "record": {
+        "title": "TSS: Target-Side Sparsification for Speculative Decoding in Domain-Specific Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.26100",
+        "year": 2026,
+        "published": "2026-08-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference through collaboration between a lightweight draft model and a target verifier. Existing methods mainly improve the draft side, while the target model is typically kept dense and unchanged. We show that, under domain-specific inference, full-depth target verification is not always the optimal choice. Counter-intuitively, skipping selected target layers can reduce verification cost while simultaneously increasing draft acceptance and preserving, or even improving, downstream task performance. Based on this observation, we propose TSS, a target-side sparsification framework for speculative decoding. TSS employs an acceptance- and metric-aware breadth search to explore multi-layer skip configurations without imposing a fixed priority between the two objectives. The selected configurations are stored in a domain-to-configuration mapping and applied by a lightweight skip controller, allowing one complete target model to support multiple sparse verification paths without retraining or permanent parameter pruning. Experiments on Spec-Bench across multiple domains, model scales, and speculative decoding methods show consistent improvements in draft acceptance and downstream task performance. In Translation setting, TSS increases the average accept length from 2.70 to 4.53 (+67.8%), improves BLEU from 0.131 to 0.237 (+80.9%), and raises end-to-end throughput from 75.6 to 127.3 tokens/s, corresponding to a 1.68X speedup.",
+        "identifiers": [
+          "SemanticScholar:18d74b52a6c2dd78f855b6c4042cda9d8e0e48b1"
+        ],
+        "semantic_scholar_id": "18d74b52a6c2dd78f855b6c4042cda9d8e0e48b1",
+        "canonical_id": "arXiv:2609.26100",
+        "arxiv_id": "2609.26100",
+        "authors": [
+          "Hai-Bo Hu",
+          "Lian-Ming Huang",
+          "Qiao Li",
+          "Nan Guan",
+          "C. Xue"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 74,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.17560",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.17560",
+        "id:SemanticScholar:acbea6bae6f0d3d0358ff2c1037946c80a1c208c",
+        "id:arXiv:2412.17560",
+        "title:gqsa group quantization and sparsity for accelerating large language model inference",
+        "url:https://arxiv.org/abs/2412.17560"
+      ],
+      "record": {
+        "title": "GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2412.17560",
+        "year": 2024,
+        "published": "2024-12-23",
+        "venue": "IJCNLP-AACL",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Model compression has emerged as a mainstream solution to reduce memory usage and computational overhead. This paper presents Group Quantization and Sparse Acceleration (GQSA), a novel compression technique tailored for LLMs. Traditional methods typically focus exclusively on either quantization or sparsification, but relying on a single strategy often results in significant performance loss at high compression rates. In contrast, GQSA integrates quantization and sparsification in a tightly coupled manner, leveraging GPU-friendly structured group sparsity and quantization for efficient acceleration. Building upon system-algorithm co-design principles, we propose a two-stage sparse optimization strategy that ensures the performance superiority of the compressed model. On the engine side, we introduce a\"task-centric\"parallel strategy, which, to the best of our knowledge, is the first application in the domain of sparse computing. Compared to the traditional 2:4 sparse method, the GQSA offers a more flexible and adjustable sparsity rate, as well as a higher weight compression rate, and is efficiently compatible with weight-only quantization methods. Experimental results demonstrate that, under the GQSA W4S50% compression setting, the model's accuracy surpasses that of both 2:4 pruning and W2 quantization. Furthermore, at the inference level, GQSA outperforms W2 by 1.26$\\times$ and 2:4 pruning by 2.35$\\times$ in terms of speed.",
+        "identifiers": [
+          "SemanticScholar:acbea6bae6f0d3d0358ff2c1037946c80a1c208c"
+        ],
+        "semantic_scholar_id": "acbea6bae6f0d3d0358ff2c1037946c80a1c208c",
+        "canonical_id": "arXiv:2412.17560",
+        "arxiv_id": "2412.17560",
+        "doi": "10.48550/arXiv.2412.17560",
+        "authors": [
+          "Chao Zeng",
+          "Songwei Liu",
+          "Shu Yang",
+          "Fangmin Chen",
+          "Xing Mei",
+          "Lean Fu"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 674,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.22075",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.22075",
+        "id:SemanticScholar:311a78b1ae1d4f7011e39ca569bcd27975049216",
+        "id:arXiv:2509.22075",
+        "title:cospadi compressing llms via calibrationguided sparse dictionary learning",
+        "url:https://arxiv.org/abs/2509.22075"
+      ],
+      "record": {
+        "title": "COSPADI: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning",
+        "source_url": "https://arxiv.org/abs/2509.22075",
+        "year": 2025,
+        "published": "2025-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training LLM compression often relies on low-rank approximations, which force all columns of a projection matrix to share a single low-dimensional subspace. We propose CoSpaDi, a training-free compression framework that replaces this single-subspace assumption with a union-of-subspaces model via sparse dictionary learning. CoSpaDi factorizes each weight matrix into a dense dictionary and column-sparse coefficients, allowing different columns to select different subsets of dictionary atoms at the same storage budget. To preserve model behavior, we use calibration activations to transform functional reconstruction into a standard dictionary learning problem. Across LLaMA and Qwen models, CoSpaDi improves accuracy-compression and perplexity-compression trade-offs over SVD-based and structured pruning baselines at 20-40\\% compression ratios, while naturally supporting sparse-dense computation and post-training quantization of sparse coefficients.",
+        "identifiers": [
+          "SemanticScholar:311a78b1ae1d4f7011e39ca569bcd27975049216"
+        ],
+        "semantic_scholar_id": "311a78b1ae1d4f7011e39ca569bcd27975049216",
+        "canonical_id": "arXiv:2509.22075",
+        "arxiv_id": "2509.22075",
+        "doi": "10.48550/arXiv.2509.22075",
+        "authors": [
+          "Dmitriy Shopkhoev",
+          "Denis Makhov",
+          "Magauiya Zhussip",
+          "Ammar Ali",
+          "Stamatios Lefkimmiatis"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 397,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b5ec8dc279f58dedc65c089d6c2e895e1958533c03aaba4840de0cc42c497f41",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
