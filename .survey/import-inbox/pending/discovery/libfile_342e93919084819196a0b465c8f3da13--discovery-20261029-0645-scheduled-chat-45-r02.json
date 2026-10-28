@@ -1,0 +1,183 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261029-0645-scheduled-chat-45/r02",
+  "reference_main_sha": "712e3efe4c705ea6497b04711b05297906987288",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+      "identity_tokens": [
+        "id:SemanticScholar:10f7a0c7eacbca4e828d2390c8a23f3d6715a9b4",
+        "url:https://www.usenix.org/conference/atc25/presentation/he-yongjun"
+      ],
+      "title": "Resource Multiplexing in Tuning and Serving Large Language Models",
+      "reason": "LLMStationはLoRA調整と推論を同じGPU上で時間・空間多重化し、反復単位のプリエンプション可能なAutogradパイプラインと混合バッチングを導入する。USENIX ATC 2025公式要旨で推論SLOを守りながら既存方式比1.38～14.77倍の処理量を報告し、サービング実行基盤へ直接寄与する。",
+      "source_url": "https://www.usenix.org/conference/atc25/presentation/he-yongjun",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 36,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.11667",
+      "identity_tokens": [
+        "id:arXiv:2601.11667",
+        "url:https://arxiv.org/abs/2601.11667"
+      ],
+      "title": "Distill-then-Replace: Efficient Task-Specific Hybrid Attention Model Construction",
+      "reason": "DtRは事前学習済みフル注意をブロック単位で線形注意へ蒸留し、タスク検証に基づき層を順次置換する。二乗計算の軽減を狙うが一次要旨の主眼はタスク別モデル構築と再学習削減で、LLM推論の速度・メモリ実測は示されないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2601.11667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 37,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08684",
+      "identity_tokens": [
+        "id:arXiv:2608.08684",
+        "url:https://arxiv.org/abs/2608.08684"
+      ],
+      "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
+      "reason": "RippleKVは各層の値キャッシュへ規模調整済み摂動を注入し、出力分布のKL変化から層ごとの敏感度を測定してKV保存予算を配分する。LongBenchで同一KV予算の既存圧縮法より平均性能が高いと報告し、長文脈LLMの推論メモリ配分に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2608.08684",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 40,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.24124",
+      "identity_tokens": [
+        "id:arXiv:2512.24124",
+        "url:https://arxiv.org/abs/2512.24124"
+      ],
+      "title": "OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization",
+      "reason": "OptRotは重みの4乗和を抑える学習可能な融合回転で外れ値を減らし、GPTQの低ビット重み量子化を改善する。W4A8では活性量子化にも寄与するがW4A4では悪化する負の結果も要旨にあり、LLM推論向けPTQの具体的手法。",
+      "source_url": "https://arxiv.org/abs/2512.24124",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 41,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3795866.3844460",
+      "identity_tokens": [
+        "id:DOI:10.1145/3795866.3844460",
+        "url:https://zhengzhenzhe220.github.io/papers/MobiCom26.pdf",
+        "id:SemanticScholar:9fe82306d866c61c39e2c145f2e2403bc6859ef6",
+        "doi:10.1145/3795866.3844460"
+      ],
+      "title": "Sparsity-Aware Scheduling for Efficient MoE-Based LLM Serving on Edge Servers",
+      "reason": "SaberはMoEの複数要求を無造作にバッチ化すると活性化専門家集合が膨らむ問題に対し、専門家経路の事前クラスタと軽量分類器で類似要求をまとめ、待機時間と群サイズの効用でスケジュールする。MobiCom 2026公式PDFでバッチ実行時間最大3.8倍短縮・処理量最大3.27倍を報告する。",
+      "source_url": "https://zhengzhenzhe220.github.io/papers/MobiCom26.pdf",
+      "body_check": "primary_pdf_abstract_and_introduction_review; fulltext_not_exhaustive",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 42,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TPDS.2026.3683867",
+      "identity_tokens": [
+        "id:DOI:10.1109/TPDS.2026.3683867",
+        "url:https://doi.org/10.1109/TPDS.2026.3683867",
+        "doi:10.1109/TPDS.2026.3683867"
+      ],
+      "title": "ViDA: Lossless VideoQA Acceleration via Selective Sparse Self-Speculation With Parallel Computational Load Management",
+      "reason": "ViDAはVideoQA向けVideoLLMで視覚トークンの重要度差と最適草案予算の変動を考慮し、選択的疎自己投機と逐次的な予算探索を組み合わせる。IEEE TPDS論文要旨では出力を維持しつつTPOTを15～46%、E2E遅延を最大28%削減する推論高速化を報告する。",
+      "source_url": "https://doi.org/10.1109/TPDS.2026.3683867",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 43,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34555",
+      "identity_tokens": [
+        "id:arXiv:2609.34555",
+        "url:https://arxiv.org/abs/2609.34555"
+      ],
+      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+      "reason": "PulseInferはCPU側の疎KV再読込による細粒度PCIe I/Oと待機を、層単位の割込みスケジューリング、I/O適応オフロード許可、SoloHead選択とgather-scatter転送で隠蔽・集約する。SGLang比最大4.7倍の復号処理量を報告する長文脈サービング方式。",
+      "source_url": "https://arxiv.org/abs/2609.34555",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 44,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.11627",
+      "identity_tokens": [
+        "id:arXiv:2604.11627",
+        "url:https://arxiv.org/abs/2604.11627"
+      ],
+      "title": "POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs",
+      "reason": "POINTS-Longは焦点モードと待機モードを切り替えて視覚トークン予算を動的に制御し、切離し可能なKVキャッシュでストリーミング動画履歴を維持する。長時間視覚理解で元精度の97.7～99.7%を1/40～1/10の視覚トークン数で保持し、MLLM推論メモリ削減に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2604.11627",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 45,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.00499",
+      "identity_tokens": [
+        "id:arXiv:2610.00499",
+        "url:https://arxiv.org/abs/2610.00499"
+      ],
+      "title": "Denoising Surface: Modeling and Predicting Inference Cost for Diffusion LLM Serving",
+      "reason": "DWSは拡散LLMの出力ブロック×復元ステップという二次元実行分布を予測し、要求ごとの不均一な計算量を推定する。CPUで動く軽量予測器を使うSJFスケジューラがオンライン対話のE2E遅延を最大1.92倍改善するという、拡散LLMサービングの直接的なコスト推定・スケジューリング研究。",
+      "source_url": "https://arxiv.org/abs/2610.00499",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 49,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.06135",
+      "identity_tokens": [
+        "id:arXiv:2608.06135",
+        "url:https://arxiv.org/abs/2608.06135"
+      ],
+      "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
+      "reason": "変動する要求到着率を到着間隔からオンライン推定し、WAITのバッチング閾値をバーストに合わせて更新する。MMPP合成トラフィックのシミュレーションで低頻度の負荷状態変化時にSarathi-Serve・ORCA・vLLMより高い処理量と同程度の遅延を報告するLLM推論スケジューリング方式。",
+      "source_url": "https://arxiv.org/abs/2608.06135",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:52:46+09:00",
+      "last_checked_at": "2026-10-29T06:52:46+09:00",
+      "linked_from": [],
+      "worklist_rank": 53,
+      "origin": "discovery_abstract_review"
+    }
+  ]
+}
