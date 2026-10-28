@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261029-0545-scheduled-chat-45/r01",
+  "reference_main_sha": "ecd547cb509241b33e5faaa256a409456908b850",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.27694",
+      "identity_tokens": [
+        "id:arXiv:2607.27694",
+        "url:https://arxiv.org/abs/2607.27694"
+      ],
+      "title": "GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference",
+      "reason": "回転による外れ値緩和と細粒度グループ量子化のスケール局所性の衝突をCoRFiGとHAPで解消し、ゼロ点丸めによる整数復号を専用INT4演算器へ結合する。LLM重み量子化の精度と推論アクセラレータ速度・エネルギーを直接評価するため収録対象。",
+      "source_url": "https://arxiv.org/abs/2607.27694",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 1,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.00450",
+      "identity_tokens": [
+        "id:arXiv:2609.00450",
+        "url:https://arxiv.org/abs/2609.00450"
+      ],
+      "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+      "reason": "重みと活性化を大ブロックで量子化し、第二段の仮数スケーリングで精度損失を補償する。28nm ASIC上でW4A5構成、面積・エネルギー・推論速度の交換条件を検証するLLM推論向け量子化・ハードウェア共同設計である。",
+      "source_url": "https://arxiv.org/abs/2609.00450",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 2,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27390",
+      "identity_tokens": [
+        "id:arXiv:2605.27390",
+        "url:https://arxiv.org/abs/2605.27390"
+      ],
+      "title": "EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation",
+      "reason": "草案モデルの語彙射影費用とターゲットとの分布ずれを、検証結果に応じた語彙集合更新とオンラインLoRA適応で同時に緩和する。Qwen3-8B/EAGLE-2上で草案受理と復号高速化を測定し、ターゲットによる厳密検証を維持するため投機的復号系統に適合。",
+      "source_url": "https://arxiv.org/abs/2605.27390",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 3,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.05685",
+      "identity_tokens": [
+        "id:arXiv:2610.05685",
+        "url:https://arxiv.org/abs/2610.05685"
+      ],
+      "title": "Spend Bytes on Breadth: Precision-Count Trade-offs for Decode-Time KV Compression in Long Chain-of-Thought Reasoning",
+      "reason": "長い思考連鎖のデコード中KV予算をトークン保持数と量子化精度へどう配分するかをBreadthKVで評価する。数学・科学問題でeviction単独との正答率、長さ上限への到達、KVメモリ時間を比較し、推論時KV圧縮の品質と資源交換条件を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2610.05685",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 4,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04592",
+      "identity_tokens": [
+        "id:arXiv:2603.04592",
+        "url:https://arxiv.org/abs/2603.04592",
+        "id:SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c"
+      ],
+      "title": "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models",
+      "reason": "入力ストリームと出力ストリームの同期・対話方針を中心に、出力逐次・入力逐次・同時ストリーミングLLMを分類する広範なサーベイ。KV管理と遅延・投機的復号も含むが主眼は対話アーキテクチャと応用の体系化であり、推論速度・メモリ最適化の実測比較が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.04592",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 5,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.24793",
+      "identity_tokens": [
+        "id:arXiv:2605.24793",
+        "url:https://arxiv.org/abs/2605.24793"
+      ],
+      "title": "Beyond the Target: From Imitation to Collaboration in Speculative Decoding",
+      "reason": "草案とターゲットの不一致時にターゲットだけを正解とせず、強化学習した仲裁方針で草案側トークンを選ぶCoSpecを提案する。従来のターゲット分布保存型投機的復号とは異なる品質・速度の交換条件を持つが、草案生成と並列検証を使う推論高速化方式として適合する。",
+      "source_url": "https://arxiv.org/abs/2605.24793",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 6,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.17693",
+      "identity_tokens": [
+        "id:arXiv:2602.17693",
+        "url:https://arxiv.org/abs/2602.17693"
+      ],
+      "title": "A Case Study of Selected PTQ Baselines for Reasoning LLMs on Ascend NPU",
+      "reason": "Ascend NPU上のDeepSeek-R1-Distill-Qwen系とQwQ-32BでAWQ、GPTQ、SmoothQuant、FlatQuantを比較し、4bit重み活性化量子化の較正不安定性とINT8実装の動的量子化オーバーヘッドを検証する。推論デバイス依存のPTQ精度・実遅延を扱うため収録対象。",
+      "source_url": "https://arxiv.org/abs/2602.17693",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:d5530faf7a685f38549d51d82610999dedc3ae38",
+      "identity_tokens": [
+        "id:SemanticScholar:d5530faf7a685f38549d51d82610999dedc3ae38",
+        "url:https://www.usenix.org/conference/nsdi26/presentation/agarwal"
+      ],
+      "title": "SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems",
+      "reason": "対話履歴KVをGPU計算から分離し、アドバイザリ事前取得、優先度付きKV配置、サービングエンジンとの協調メモリ管理で通信をクリティカルパスから外す。NSDI 2026公式要旨はShareGPT/Burst-GPTでのエンドツーエンド遅延と同時要求数を報告しており、LLMサービングと階層メモリの中核対象。",
+      "source_url": "https://www.usenix.org/conference/nsdi26/presentation/agarwal",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.13205",
+      "identity_tokens": [
+        "id:arXiv:2607.13205",
+        "url:https://arxiv.org/abs/2607.13205"
+      ],
+      "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
+      "reason": "JSON等の構造化入力で注意量ベースKV保持が区切り記号やKEY役割を過剰保持しVALUEを落とす問題を分析する。構造役割に条件付けたSnapKVの予算配分で低保持率の正確性を改善する再学習不要のKV圧縮方式であり、推論メモリと品質の関係を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2607.13205",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 9,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18735",
+      "identity_tokens": [
+        "id:arXiv:2610.18735",
+        "url:https://arxiv.org/abs/2610.18735"
+      ],
+      "title": "SP$^2$ec: Adaptive Self-Speculative Decoding for Vision-Language Models",
+      "reason": "VLMの自己投機的復号で入力ごとに最適な草案構成が変わる問題を、単峰性を利用したバンディット選択で生成中に適応する。Qwen2.5-VLとLLaVA-NeXTで壁時計遅延・スループット改善を測定するためマルチモーダル投機的復号に適合。",
+      "source_url": "https://arxiv.org/abs/2610.18735",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:54:00+09:00",
+      "last_checked_at": "2026-10-29T05:54:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 10,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ]
+}
