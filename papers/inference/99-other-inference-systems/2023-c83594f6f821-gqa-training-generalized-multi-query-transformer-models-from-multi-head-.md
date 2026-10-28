@@ -28,6 +28,8 @@ worker_completed_at: '2026-10-28T14:53:44+09:00'
 reference_main_sha: 8015a9b98227c6258dc11bd5909527fcda841f95
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+last_audited: null
+audit_version: 0
 ---
 
 # GQA：既存MHAモデルを少量の追加学習でKV共有へ変換する

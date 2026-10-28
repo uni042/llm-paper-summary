@@ -35,10 +35,15 @@
   "selection_reason": "質問の意図を表すトークンを注意分布の距離から識別し、その注意をブロック単位で累積して重要KVブロックだけを保持するIntentKVを提案する。ACL 2026一次要旨は128Kから2KへのKV削減、標準設定比6.3倍の復号高速化と7.8倍のメモリ効率改善を報告し、長文脈推論キャッシュ削減に直接関わる。",
   "semantic_scholar_id": "94907917423a5b6da56bbd5e305f512919fe7c32",
   "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1250",
-  "status": "ready",
+  "status": "superseded",
   "title": "Question Tells You Where the Answer Is: Intention-aware Long-Context KV Cache Compression",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T07:04:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-3562943b0724-question-tells-you-where-the-answer-is-intention-aware-long-context-kv-c.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.acl-long.1250",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

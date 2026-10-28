@@ -32,6 +32,8 @@ quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 summary: "IntentKVは、長文入力の末尾に置かれた質問などの『意図』を、前段文脈との注意分布の差から特定し、その意図が強く参照する文脈ブロックだけをKVキャッシュに残す学習不要の削除方式である。ACL 2026の一次論文ではLlama-3.1-8Bなど4モデルでRULERとInfiniteBenchを評価し、Llama-3.1のRULER平均はFullKV 88.8、IntentKV 87.0、SnapKV 76.9と報告。128K入力で2048トークンのキャッシュを保持した際、FullKV比で復号遅延16%、KVキャッシュメモリ13%と報告する。ただし短い指示の要約、質問末尾配置の仮定、GQAの短文脈、不可逆な削除を伴う複数ターン対話には制約がある。"
 list_summary: "質問部分の注意分布をJensen–Shannon距離で見つけ、重要な文脈ブロックを残す学習不要のKV削除法。RULERのLlama-3.1平均87.0（FullKV 88.8）、128Kで復号遅延をFullKVの16%へ削減したが、要約と複数ターン対話に弱点がある。"
+last_audited: null
+audit_version: 0
 ---
 
 # Question Tells You Where the Answer Is — IntentKV

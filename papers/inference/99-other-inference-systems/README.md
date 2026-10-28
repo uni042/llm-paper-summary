@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（745本）
+## 自動生成の論文一覧（747本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2342,7 +2342,7 @@
 
 - **2024-12 · [Constrained Decoding with Speculative Lookaheads](2024-2412.10418-constrained-decoding-with-speculative-lookaheads.md)**  
   実装：[✓](https://github.com/amazon-science/CDSL-NAACL2025) ・ リポジトリ内被引用：0  
-  Constrained Decoding with 投機的 Lookaheads（CDSL）は、制約を満たす文章を生成するために未来の候補を何段も探索する復号法を、小型ドラフトモデルと大型ターゲットモデルの投機的検証で高速化する。CDSLは先読みを安価なドラフトへ委ね、ターゲットによる検証と報酬関数の判定を組み合わせる。
+  本論文の対象は、指定語をすべて含む文章や有害な要求に対する無害な応答など、通常の次トークン尤度だけでは満たしにくい制約付き生成である。この方法は制約達成率が高い一方、次の1トークンを確定するために大量のモデル呼び出しを要する。評価器、タスク、ドラフトとターゲットの組合せを分離して読む必要がある。
 
 - **2024-11 · [Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference](2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2413,6 +2413,10 @@
 - **2024-04 · [JetMoE: Reaching Llama2 Performance with 0.1M Dollars](2024-2404.07413-jetmoe-reaching-llama2-performance-with-0-1m-dollars.md)**  
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：16  
   JetMoE-8Bは、混合専門家モデル（Mixture of エキスパート、MoE）の条件付き計算を順伝播ネットワーク（FFN）だけでなく自己注意機構へも拡張した、総パラメータ約80億の言語モデルである。論文はLlama2-7Bとの比較で推論演算量を約70%削減できると述べるが、これは実測の生成遅延が70%減るという意味ではない。
+
+- **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
+  実装：✓ ・ リポジトリ内被引用：16  
+  Grouped-Query 注意機構（GQA）は、Transformerの注意ヘッドごとに別々のKey/Value（K/V）を保存するMulti-Head 注意機構（MHA）と、全Queryヘッドが単一K/Vヘッドを共有するMulti-Query 注意機構（MQA）の中間に位置する方式である。
 
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
   実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：15  
@@ -2803,6 +2807,10 @@
 - **2023-07 · [Scaling In-Context Demonstrations with Structured Attention](2023-2307.02690-scaling-in-context-demonstrations-with-structured-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   例示数を増やせば精度が改善する可能性があるが、全ての例示を連結して密な自己注意を実行すると、系列長の二乗に比例する演算量とメモリが必要になる。SAICL（Structured 注意機構 for In-Context Learning）は、例示どうしの直接注意を取り除き、テスト入力を情報集約のハブにする。
+
+- **2023-07 · [Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models](2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md)**  
+  実装：[✓](https://github.com/AlaFalaki/compressedBART) ・ リポジトリ内被引用：0  
+  本研究はTransformerの各層を単純に削るのではなく、encoderが生成する隠れ表現をautoencoderで低次元へ写像し、その小さい次元に合わせてdecoderを再設計する。
 
 - **2023-07 · [DPBERT: Efficient Inference for BERT based on Dynamic Planning](2023-2308.00108-dpbert-efficient-inference-for-bert-based-on-dynamic-planning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
