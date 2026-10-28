@@ -35,10 +35,15 @@
   "selection_reason": "各トークンを全履歴に残すGlobal、次のGlobalまで残すLocal、一定窓だけ残すSliding Windowに分類し、学習可能な注意マスクを使って保持期間を探索するNAtSを提案する。学習済みLLMの微調整と新規Transformerの両条件で推論KVキャッシュ容量を削減するため、長文脈推論メモリ管理に直接関わる。",
   "semantic_scholar_id": "6c5146c1152c618d2c833cd7087f80acc5c9b247",
   "source_url": "https://arxiv.org/abs/2502.13251",
-  "status": "ready",
+  "status": "superseded",
   "title": "Neural Attention Search",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-28T03:58:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2025-2502.13251-neural-attention-search.md",
+  "represented_canonical_id": "arXiv:2502.13251",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

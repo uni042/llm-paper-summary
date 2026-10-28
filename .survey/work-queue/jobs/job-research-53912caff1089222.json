@@ -35,10 +35,15 @@
   "selection_reason": "会話履歴・入力文脈に存在する反復文字列から続きのトークン列を推測して検証し、追加GPUメモリなしで重複した生成を高速化する。7モデル5データセットでCNN/DM最大2.35倍、冗長な対話2ターン目の一部で3.08倍、既存投機的復号への追加で平均49%の速度改善を報告する。",
   "semantic_scholar_id": "e3f850581974c257df8bd208c2cc7946c2e1eb48",
   "source_url": "https://arxiv.org/abs/2502.08923",
-  "status": "ready",
+  "status": "superseded",
   "title": "CopySpec: Accelerating LLMs with Speculative Copy-and-Paste Without Compromising Quality",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-28T03:58:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2502.08923-copyspec-accelerating-llms-with-speculative-copy-and-paste.md",
+  "represented_canonical_id": "arXiv:2502.08923",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

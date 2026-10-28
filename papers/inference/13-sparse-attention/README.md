@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（152本）
+## 自動生成の論文一覧（154本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -213,6 +213,10 @@
 - **2026-09 · [Elastic Threshold Attention: Learned Contextual Sparsity for Long-Context Decoding](2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Elastic Threshold 注意機構（ETA）は、注意ヘッドごとに現在のクエリから動的な閾値を予測する機構をモデルに組み込み、訓練時から疎化しやすい注意分布を学習する。
+
+- **2026-09 · [Efficient Agentic LLM Serving over SSD-based Sparse KV Storage](2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Janusは、ツール呼出しを繰り返すエージェントの長い会話履歴をSSDに保持し、疎注意機構で必要なKVだけをGPUへ戻すときのI/O待ちを減らすシステムである。
 
 - **2026-09 · [CompKV: Compensation-Aware KV Selection for Long-Context LLM Inference](2026-2609.26300-compkv-compensation-aware-kv-selection-for-long-context-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -499,6 +503,10 @@
 - **2025-06 · [Accelerating Sparse Transformer Inference on GPU](2025-2506.06095-accelerating-sparse-transformer-inference-on-gpu.md)**  
   実装：[✓](https://github.com/HeyDavid633/PPoPP26-pap161-AE) ・ リポジトリ内被引用：0  
   STOF（Sparse Transformer with Operator Fusion）は、Transformerの疎な注意マスクをGPU上で実際の計算削減へ結び付けることと、注意演算の後に続く行列積・正規化・加算などの融合境界を入力形状に応じて選ぶことを、ひとつの推論実行基盤として扱う。主張は二層に分けて読む必要がある。
+
+- **2025-02 · [Neural Attention Search](2025-2502.13251-neural-attention-search.md)**  
+  実装：[✓](https://github.com/automl/NeuralAttentionSearch) ・ リポジトリ内被引用：0  
+  Neural 注意機構 Search（NAtS）は、各トークンが今後どの範囲のトークンから参照されるべきかを学習し、注意計算とKVキャッシュの保持寿命を同時に減らす手法である。Llama-3.1-8BのRULERでは128K文脈、実KV保持率約16%で74.77のスコアを報告し、Full 注意機構の73.83に近い。
 
 - **2025-02 · [InfiniteHiP: Extending Language Model Context Up to 3 Million Tokens on a Single GPU](2025-2502.08910-infinitehip-extending-language-model-context-up-to-3-million-tokens-on-a.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "エージェント会話の追加入力prefillでSSDに退避した疎KVの読出しが推論クリティカルパスを占める問題に対し、モデル自身のKV選択器を早期の中間表現へ適用して読出しを先読みするJanusを提案する。読出し結合・ページ書込集約・読書干渉抑制を併用し、3モデル3トレースでTTFT平均1.22〜1.85倍の改善を報告する。",
   "semantic_scholar_id": "685bd68182b1d34e3170680b7982c7c4ab0843c6",
   "source_url": "https://arxiv.org/abs/2609.36938",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:58:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md",
+  "represented_canonical_id": "arXiv:2609.36938",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
