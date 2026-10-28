@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "5e3d0107c0c92729d490099187895c9cd605d149e893cdc88c23a26a5a48f664",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b49281bb2858--libfile_6dc7834f4dbc81918f89b87a2572a1fd--2026-2607.25291-cosa-proxy-kernel-sparse-attention-research-20261028-0901-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2607.25291",
+  "worker_completed_at": "2026-10-28T09:07:00+09:00",
+  "worker_run_key": "20261028-0901-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4612,
+    "body_paragraphs": 27,
+    "method_chars": 1582,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-28T01:06:56+00:00"
+}

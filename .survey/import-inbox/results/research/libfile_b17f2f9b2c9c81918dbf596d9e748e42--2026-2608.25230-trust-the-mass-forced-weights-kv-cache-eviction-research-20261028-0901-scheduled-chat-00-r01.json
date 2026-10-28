@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7f5f3b163d1f289c4389d8049ac3140b5c9274b66d70a4677079c4614e8e9721",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b17f2f9b2c9c81918dbf596d9e748e42--2026-2608.25230-trust-the-mass-forced-weights-kv-cache-eviction-research-20261028-0901-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2608.25230",
+  "worker_completed_at": "2026-10-28T09:03:50+09:00",
+  "worker_run_key": "20261028-0901-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5282,
+    "body_paragraphs": 30,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 693,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-28T01:06:50+00:00"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-28T00:54:12+00:00",
+  "generated_at": "2026-10-28T01:08:51+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 73,
+  "count": 74,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1849,11 +1849,40 @@
       "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
     },
     {
+      "canonical_id": "arXiv:2608.25230",
+      "title": "Trust the Mass: Forced Weights in KV-Cache Eviction",
+      "source_url": "https://arxiv.org/html/2608.25230v2",
+      "returned_at": "2026-10-28T01:06:50+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5282,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 693,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b17f2f9b2c9c81918dbf596d9e748e42--2026-2608.25230-trust-the-mass-forced-weights-kv-cache-eviction-research-20261028-0901-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b17f2f9b2c9c81918dbf596d9e748e42--2026-2608.25230-trust-the-mass-forced-weights-kv-cache-eviction-research-20261028-0901-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2602.06694",
       "title": "NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models",
       "source_url": "https://arxiv.org/html/2602.06694v3",
-      "returned_at": "2026-10-28T00:51:13+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-28T01:06:52+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -1871,16 +1900,16 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-00de865dba39--libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-00de865dba39--libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.json",
       "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2608.27339",
       "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
       "source_url": "https://arxiv.org/html/2608.27339v4",
-      "returned_at": "2026-10-28T00:51:14+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-28T01:06:54+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -1898,16 +1927,16 @@
           "評価説明量 0 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54ac76542f2e--libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-54ac76542f2e--libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled.json",
       "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2607.25291",
       "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
       "source_url": "https://arxiv.org/html/2607.25291v2",
-      "returned_at": "2026-10-28T00:52:04+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-28T01:06:56+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -1926,8 +1955,8 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6dc7834f4dbc81918f89b87a2572a1fd--2026-2607.25291-cosa-proxy-kernel-sparse-attention-research-20261028-0901-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6dc7834f4dbc81918f89b87a2572a1fd--2026-2607.25291-cosa-proxy-kernel-sparse-attention-research-20261028-0901-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-b49281bb2858--libfile_6dc7834f4dbc81918f89b87a2572a1fd--2026-2607.25291-cosa-proxy-kernel-sparse-attention-research-20261028-0901-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-b49281bb2858--libfile_6dc7834f4dbc81918f89b87a2572a1fd--2026-2607.25291-cosa-proxy-kernel-sparse-attention-research-20261028-0901-scheduled-chat-.json",
       "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
     }
   ]
