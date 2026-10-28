@@ -1,10 +1,16 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261029T072000-oct24",
+  "attempt_id": "library-import-maint-20261029T221000-oct26",
   "kind": "framework_llm_update",
-  "updated_paths": [],
+  "updated_paths": [
+    "framework-updates/inference-engines/exllama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md"
+  ],
   "created_paths": [],
-  "updated_existing_paths": [],
-  "summary": "2026-10-24 maintenance: verified no-op. Nemotron 3.5 Bolt E4B, Ollama v0.40.9/v0.40.10, and llama.cpp b11828-b11840 are already represented on main."
+  "updated_existing_paths": [
+    "framework-updates/inference-engines/exllama/README.md",
+    "framework-updates/inference-engines/llama-cpp/README.md"
+  ],
+  "summary": "2026-10-26 Library maintenance: add ExLlamaV3 v1.6.5 and llama.cpp b11870-b11888. Preserve prerelease distinction; no generalized E2E speed claims."
 }
