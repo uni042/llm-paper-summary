@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T15:06:26.897369+00:00",
+  "generated_at": "2026-10-28T16:05:52.750492+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -141,6 +141,26 @@
         "method_chars": 1505,
         "evaluation_chars": 1023,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md",
+      "canonical_id": "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
+      "title": "Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA",
+      "file_bytes": 15491,
+      "source_sha256": "0a8047b6963172cb37681546049f32e68e4d2681b4c7c3a94707f9aa474123ed",
+      "source_git_blob_sha": "eae5ab8edc2b054250bd53f331d8eed40c467776",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.913136,
+      "quality_metrics": {
+        "body_chars": 4477,
+        "method_chars": 1046,
+        "evaluation_chars": 841,
+        "limitation_chars": 487
       },
       "mechanical_failures": [],
       "warnings": []
@@ -324,30 +344,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md",
-      "canonical_id": "arXiv:2411.01818",
-      "title": "Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference",
-      "file_bytes": 17305,
-      "source_sha256": "79c724619a6c8319f67b1eb827536bd083f3768e382cbf5cba1ccaf8d22613ee",
-      "source_git_blob_sha": "fb19aad06e70d0984dff20a5182abeac9d33593a",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.787526,
-      "quality_metrics": {
-        "body_chars": 4462,
-        "method_chars": 1651,
-        "evaluation_chars": 781,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.8% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.18957-instantinfer-enabling-fast-llm-cold-start-with-communicating-finite-auto.md",
