@@ -22,6 +22,8 @@ worker_completed_at: "2026-10-28T20:01:00+09:00"
 worker_id: "scheduled-chat-00"
 worker_run_key: "20261028-2001-scheduled-chat-00/r01"
 reference_main_sha: "bc593786efc25ce547fc8ee619bd444e259e2459"
+last_audited: null
+audit_version: 0
 ---
 
 ## 書誌と研究の位置付け

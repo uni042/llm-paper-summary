@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（753本）
+## 自動生成の論文一覧（756本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -530,6 +530,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   GPU間高速ファブリックを中継路として他GPUの空きPCIeリンクを借用し、モデル読込の初回トークン待ち時間を最大40%削減、鍵値退避推論を最大1.6倍高速化する。
 
+- **2026-08 · [Training-Free Hashing-Based Attention via Binary Principal Components](2026-2608.04405-training-free-hashing-based-attention-via-binary-principal-components.md)**  
+  実装：[✓](https://github.com/yudaohai666/BPC) ・ リポジトリ内被引用：0  
+  入力が数万〜数十万トークンに伸びると、GPUの演算器よりもメモリ帯域が律速になりやすい。射影後の問い合わせを符号と7ビットの絶対値へ量子化し、XOR、AND、ビット個数計数とシフトで大量の鍵候補を走査する。長文脈・バッチ2の生成スループットはFlashAttention-2比で最大3.56倍、128K・バッチ16では5.04倍を報告する。
+
 - **2026-08 · [TailSieve: Partial-Rollout-Guided Tail Routing for LLM Rollouts](2026-2608.22788-tailsieve-partial-rollout-guided-tail-routing-for-llm-rollouts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TailSieveは、以前の部分生成で時間切れとなったプロンプト群を、追加の長さ予測モデルなしで長尾候補として選び、長尾専用プールと通常プールへ割り当てる。
@@ -781,6 +785,10 @@
 - **2026-06 · [CLP: Collocation-Length Prediction for Zero-Loss Adaptive Multi-Token Inference](2026-2606.10935-clp-collocation-length-prediction-for-zero-loss-adaptive-multi-token-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   残りの課題は、追加ヘッドが正しく予測できそうな連続トークン数を決めることである。追加ヘッドの学習は必要だが、独立した小型草稿モデルを毎回起動する方式ではない。Qwen2.5-1.5B-Instructの原著表IVでは、k=3のCLPが67.47トークン/秒、通常の貪欲復号比1.294倍、反復3-gram比率0.018となった。
+
+- **2026-06 · [Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures](2026-a46fa3dc951e-cloud-based-large-language-model-deployment-a-comparative-analysis-of-se.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの運用者は、モデルを自らコンテナ化してGPUインスタンス上で動かす方式（Bring Your Own Container、以下BYOC）と、事業者が推論エンドポイントを管理するサーバーレスAPI方式を選ぶ必要がある。調査対象32モデルのうち管理型サーバーレスで利用できたのは11モデル（34.4%）、両クラウドに共通するのは2モデル（6.2%）。
 
 - **2026-06 · [CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield](2026-2606.31796-cherry-compressed-hierarchical-experts-with-recurrent-representational-y.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2355,6 +2363,10 @@
 - **2024-12 · [Sparse Checkpointing for Fast and Reliable MoE Training](2024-2412.15411-sparse-checkpointing-for-fast-and-reliable-moe-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   これらの最大値は比較方式・モデル・障害条件が異なるため、同一条件で「4×31×8倍」を掛け合わせられるわけではない。
+
+- **2024-12 · [Mixture of Hidden-Dimensions Transformer](2024-2412.05644-mixture-of-hidden-dimensions-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  注意機構のQ/K/V/O投影とFFNのup/gate/down投影を同じ隠れ次元の選択に合わせて部分実行し、総パラメータ数を増やしても1トークン当たりに活性化するパラメータ数を抑える。LLaMA2型355Mの10指標平均は全活性42.7、MoHDの50%活性42.3、75%活性43.2だった。
 
 - **2024-12 · [GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments](2024-2412.04788-guide-a-global-unified-inference-engine-for-deploying-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
