@@ -310,7 +310,7 @@
   従来の記憶システムでは、いつ保存し、どの形式で整理し、どの条件で取り出すかを開発者が固定する場合が多い。NeurIPS 2025正式掲載論文では、長期会話の質問応答データで六つの基盤モデルを評価し、特に時間推論や複数会話をまたぐ質問で改善を示した。
 
 - **2025-04 · [Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory](2025-2504.19413-mem0-building-production-ready-ai-agents-with-scalable-long-term-memory.md)**  
-  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：30  
+  実装：[✓](https://mem0.ai/research) ・ リポジトリ内被引用：31  
   Mem0は、長期にわたり対話を続ける大規模言語モデル（LLM）エージェントに対し、毎回の質問で過去の全会話を読み直す代わりに、今後も必要になる事実だけを抽出・統合・検索する外部記憶基盤を提案する。
 
 - **2025-01 · [Zep: A Temporal Knowledge Graph Architecture for Agent Memory](2025-2501.13956-zep-a-temporal-knowledge-graph-architecture-for-agent-memory.md)**  
