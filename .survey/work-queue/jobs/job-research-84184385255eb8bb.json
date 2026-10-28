@@ -35,10 +35,15 @@
   "selection_reason": "軽量な同系統モデルにKV重要度推定を非同期委譲し、大型ターゲットのprefillを妨げずにKV削除を行う。時系列特徴とhead間対応を分離するHybridAxialMapperを学習し、Llama/QwenのLongBench等でKVZip平均精度の約98.7%を保ちながらLlama-3.1-8Bで最大3.21倍のprefill高速化を報告する。",
   "semantic_scholar_id": "6bcd1930fc7575b392f12aa5f24c317f8f3a5c68",
   "source_url": "https://arxiv.org/abs/2605.16360",
-  "status": "ready",
+  "status": "superseded",
   "title": "ProxyKV: Cross-Model Proxy Pruning for Efficient Long-Context LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:30:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.16360-proxykv-cross-model-proxy-pruning-for-efficient-long-context-llm-inferen.md",
+  "represented_canonical_id": "arXiv:2605.16360",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

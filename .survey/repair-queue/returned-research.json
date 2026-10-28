@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-28T03:00:33+00:00",
+  "generated_at": "2026-10-28T03:30:26+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 70,
+  "count": 69,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1820,35 +1820,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-be250894dfdf--libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-be250894dfdf--libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-schedul.json",
       "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.25230",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-28T02:06:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5282,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 693,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ce888ab283d3--libfile_b17f2f9b2c9c81918dbf596d9e748e42--2026-2608.25230-trust-the-mass-forced-weights-kv-cache-eviction-research-20261028-0901-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-ce888ab283d3--libfile_b17f2f9b2c9c81918dbf596d9e748e42--2026-2608.25230-trust-the-mass-forced-weights-kv-cache-eviction-research-20261028-0901-sc.json",
-      "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
     }
   ]
 }

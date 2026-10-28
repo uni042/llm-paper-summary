@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではKV削除時の保持集合選択の最適性を168192注意行で検証し、上位重み保持がほぼ最適である一方、per-headマスク方式では実メモリが解放されない点を指摘。予算強制時の評価崩壊や質問可視状態でのランキングによるリークを示し、落とした注意質量に基づくContourKVを提案する。KV削除の実装・公平評価に直接貢献。",
   "semantic_scholar_id": "6b23747eb31600d5bbb24377665e80ecc647c8c9",
   "source_url": "https://arxiv.org/abs/2608.25230",
-  "status": "ready",
+  "status": "superseded",
   "title": "Trust the Mass: Forced Weights in KV-Cache Eviction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:30:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.25230-trust-the-mass-forced-weights-in-kv-cache-eviction.md",
+  "represented_canonical_id": "arXiv:2608.25230",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

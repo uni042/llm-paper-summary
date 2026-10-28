@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（734本）
+## 自動生成の論文一覧（737本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -842,6 +842,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   ScaleSearchは、ブロック浮動小数点（Block Floating Point、BFP）形式で低ビット量子化するとき、各ブロックに共通する尺度（Scale）を最適化する方法である。これらは異なる評価対象の数値であり、尺度探索だけで全ての改善が生じたと見なしてはならない。
 
+- **2026-05 · [ProxyKV: Cross-Model Proxy Pruning for Efficient Long-Context LLM Inference](2026-2605.16360-proxykv-cross-model-proxy-pruning-for-efficient-long-context-llm-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ProxyKVは、長文脈LLMのKVキャッシュを圧縮するとき、どのトークンを残すかを高精度に決める計算を大型モデル自身にさせず、同じモデル系列の小型モデルへ委譲する方式である。Llama-3.1-8Bではdual-GPU構成で最大3.21倍のプレフィル高速化、同一GPU上でCUDA ストリームを共有する構成では約1.5倍を報告する。
+
 - **2026-05 · [Probabilistic Tiny Recursive Model](2026-2605.19943-probabilistic-tiny-recursive-model.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   数独や格子型の制約充足問題で高い精度を示す一方、決定的な更新では誤った解の近傍へ収束し、再帰を増やしても抜け出せないことがある。推論時の追加計算を、再帰を長くする「深さ」だけでなく、並列に試す「幅」へ割り当てる方式である。
@@ -1174,6 +1178,10 @@
   実装：[✓](https://github.com/Moe-Zbeeb/TAPS) ・ リポジトリ内被引用：0  
   さらに、複数の専門草稿をどう使い分けるべきかを、重み平均、確信度に基づく経路選択、草稿木の統合検証の三方式で検討する。
 
+- **2026-03 · [Slow-Fast Inference: Training-Free Inference Acceleration via Within-Sentence Support Stability](2026-2603.12038-slow-fast-inference-training-free-inference-acceleration-via-within-sent.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  選択器は密注意のlogitから得た証拠と、KVに保存されたキーnorm・位置情報から得たpriorを統合する。Qwen3-4B、Qwen3-30B-A3B、Qwen3-235B-A22Bの長文脈デコードで、密注意と比較した実測スループットは文脈長に応じて約1.6〜14.4倍に増える。
+
 - **2026-03 · [SliderQuant: Accurate Post-Training Quantization for LLMs](2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md)**  
   実装：[✓](https://github.com/deep-optimization/SliderQuant) ・ リポジトリ内被引用：0  
   SliderQuantは、事前学習済みLLMを追加の大規模学習なしで低ビット化する事後量子化（PTQ）方式である。Llama2-7BのW4A4でWikiText2困惑度（PPL）はCBQの12.73に対し8.34、Qwen3-30B-A3BのW4A4ではOmniQuantのゼロショット平均50.11%に対し66.86%だった。
@@ -1361,6 +1369,10 @@
 - **2026-02 · [Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory](2026-2602.06025-learning-query-aware-budget-tier-routing-for-runtime-agent-memory.md)**  
   実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：0  
   従来の記憶方式は履歴全体を事前に要約・索引化することが多いが、将来どの質問が来るかを知らずに情報を圧縮するため、不要な部分へ計算を費やしたり、後で必要になる詳細を失ったりする。
+
+- **2026-02 · [Improving the Trade-off Between Watermark Strength and Speculative Sampling Efficiency for Language Models](2026-2602.01428-improving-the-trade-off-between-watermark-strength-and-speculative-sampl.md)**  
+  実装：[✓](https://github.com/hwq0726/watermark-tradeoff) ・ リポジトリ内被引用：0  
+  一方、投機的サンプリングは小型のドラフトモデルが先読みした複数トークンを大型ターゲットモデルがまとめて検証し、受理できたトークンの分だけ逐次的な大型モデル呼び出しを減らす。ELI5とC4、LlamaおよびGemmaの二組のモデルで、1検証ステップ当たりの受理トークン数が通常投機的サンプリングとほぼ同じで、検出性能も改善することを確認した。
 
 - **2026-02 · [HyLRA: Hybrid Layer Reuse Attention for Efficient Long-Context Inference](2026-2602.00777-hylra-hybrid-layer-reuse-attention-for-efficient-long-context-inference.md)**  
   実装：[✓](https://anonymous.4open.science/r/unified-cache-management-CF80/) ・ リポジトリ内被引用：0  

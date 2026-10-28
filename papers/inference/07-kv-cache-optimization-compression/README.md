@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（388本）
+## 自動生成の論文一覧（389本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -598,6 +598,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference](2026-2608.24063-viscache-visual-kv-cache-pruning-for-efficient-vision-large-language-mod.md)**  
   実装：[✓](https://github.com/Wlklk/VisCache) ・ リポジトリ内被引用：0  
   前段で質問に関係する多様なフレームを残し、後段で層ごとの重要度と鍵・値の役割の違いを利用して圧縮する。論文の試作では、Qwen2.5-VLの3Bと32Bを使い、視覚KVの保持率28%で複数の動画理解課題の平均精度を比較方式より高く保ち、保持率19%でも大きく破綻しない結果を示す。
+
+- **2026-08 · [Trust the Mass: Forced Weights in KV-Cache Eviction](2026-2608.25230-trust-the-mass-forced-weights-in-kv-cache-eviction.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  5系列・計168,192注意行の検査で、候補プール内の最良集合へ切り替えて埋められる差は、残存誤差の中央値で約2〜5%であった。
 
 - **2026-08 · [TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning](2026-2608.03276-taskpress-query-agnostic-kv-cache-compression-via-task-guided-pruning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
