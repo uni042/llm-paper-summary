@@ -35,10 +35,15 @@
   "selection_reason": "ランダム回転したKVの3座標組を八面体パラメータで2次元方向とノルムへ写像し、Lloyd-Max量子化とビット配分で再構成誤差を削減する。融合Tritonカーネルで非圧縮Keyを実体化せず復元し、デコード時の帯域・遅延追加を抑えるため、KVキャッシュ量子化と推論カーネルの直接的貢献。",
   "semantic_scholar_id": "662c121d5bcfe071a38cebb95a498df125b314fa",
   "source_url": "https://arxiv.org/abs/2605.21226",
-  "status": "ready",
+  "status": "superseded",
   "title": "OCTOPUS: Optimized KV Cache for Transformers via Octahedral Parametrization Under optimal Squared error quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T04:53:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.21226-octopus-optimized-kv-cache-for-transformers-via-octahedral-parametrizati.md",
+  "represented_canonical_id": "arXiv:2605.21226",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

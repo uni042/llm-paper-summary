@@ -35,10 +35,15 @@
   "selection_reason": "W4A4等の低精度LLM推論で量子化誤差を補正するLoRA型の二段逐次計算と中間量子化が負担になる問題に対し、単一低ランク補償行列、静的活性平坦化、重要度認識誤差再構成、オフライン重み置換を用いるSERQを提案する。W4A8/W4A4で既存補正・回転型方式より精度を改善し、オンライン負荷を抑える。",
   "semantic_scholar_id": "3328f85f80992ac3ea3283df5e6c2dc826602b2b",
   "source_url": "https://arxiv.org/abs/2603.08185",
-  "status": "ready",
+  "status": "superseded",
   "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T04:53:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.08185-serq-saliency-aware-low-rank-error-reconstruction-for-llm-quantization.md",
+  "represented_canonical_id": "arXiv:2603.08185",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "隣接Transformer層のKVを共有低ランク基底で表し、命令・検索に重要なトークンだけトークン固有残差と再構成ランクを増やす。注意出力の誤差プローブでオンライン適応し、CUDA融合処理でKV読出しを減らす。長文脈KV容量と帯域に直接関わり、要旨では64K文脈で最大8.3倍のKVメモリ削減を報告する。",
   "semantic_scholar_id": "5ddc496e9bdd732b7d6901dee5798c7bef4893cc",
   "source_url": "https://arxiv.org/abs/2607.06523",
-  "status": "ready",
+  "status": "superseded",
   "title": "DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T04:53:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.06523-depthweave-kv-token-adaptive-cross-layer-residual-factorization-for-long.md",
+  "represented_canonical_id": "arXiv:2607.06523",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

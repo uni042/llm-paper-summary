@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（741本）
+## 自動生成の論文一覧（742本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1193,6 +1193,10 @@
 - **2026-03 · [SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation](2026-2603.14785-skipopu-an-fpga-based-overlay-processor-for-large-language-models-with-d.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、非線形処理の待機を隠す融合データフロー、浮動小数点活性値と4ビット整数重みを扱うDSP演算器の高密度実装、層をまたいで変化しないKVを保持するオンチップ履歴バッファを一体設計した。AMD Alveo U280上のLlama2-7Bで140.8トークン/秒、帯域効率86.7%を報告する。
+
+- **2026-03 · [SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization](2026-2603.08185-serq-saliency-aware-low-rank-error-reconstruction-for-llm-quantization.md)**  
+  実装：[✓](https://github.com/acalabys/SERQ) ・ リポジトリ内被引用：0  
+  SERQ（Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization）は、LLMの線形層で重みと活性値をともに低ビット化した際の誤差を、小さな追加行列で補う後学習量子化（PTQ）手法である。
 
 - **2026-03 · [Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification](2026-2603.01399-quasar-quantized-self-speculative-acceleration-for-rapid-inference-via-m.md)**  
   実装：[✓](https://github.com/Tom-HG/Quasar) ・ リポジトリ内被引用：0  
