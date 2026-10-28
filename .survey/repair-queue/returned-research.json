@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-28T19:20:26+00:00",
+  "generated_at": "2026-10-28T19:56:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 72,
+  "count": 73,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1795,34 +1795,6 @@
       "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.716",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-28T09:23:34+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3517,
-        "body_paragraphs": 15,
-        "method_chars": 1712,
-        "method_paragraphs": 7,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2d29d1acb149--libfile_551d7731d25c8191a42291dacb740572--2025-doi-10.18653-v1-2025.findings-emnlp.716-generation-refinement-survey-research-20261028-1445-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2d29d1acb149--libfile_551d7731d25c8191a42291dacb740572--2025-doi-10.18653-v1-2025.findings-emnlp.716-generation-refinement-survey-research-202610.json",
-      "worker_run_key": "20261028-1445-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.37532",
       "title": null,
       "source_url": null,
@@ -1878,32 +1850,85 @@
       "worker_run_key": "20261028-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2603.27960",
-      "title": "Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies",
-      "source_url": "https://arxiv.org/pdf/2603.27960",
-      "returned_at": "2026-10-28T19:20:25+00:00",
-      "return_count": 4,
+      "canonical_id": "arXiv:2306.01768",
+      "title": "A Quantitative Review on Language Model Efficiency Research",
+      "source_url": "https://arxiv.org/pdf/2306.01768v1",
+      "returned_at": "2026-10-28T19:55:20+00:00",
+      "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
-        "説明不足トリガー: 評価説明量 305 < 500"
+        "説明不足トリガー: 手法説明量 0 < 700"
       ],
       "quality_metrics": {
         "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4714,
-        "body_paragraphs": 28,
-        "method_chars": 2326,
-        "method_paragraphs": 12,
-        "evaluation_chars": 305,
-        "limitation_chars": 0,
+        "body_chars": 6993,
+        "body_paragraphs": 37,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 555,
+        "limitation_chars": 664,
         "insufficiency_flags": [
-          "評価説明量 305 < 500",
-          "限界説明量 0 < 推奨 120"
+          "手法説明量 0 < 700"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bf52f72ece2d--libfile_57b30b122ad48191a27de3dee67061cf--2026-2603.27960-efficient-lvlm-inference-survey-research-20261029-0245-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-bf52f72ece2d--libfile_57b30b122ad48191a27de3dee67061cf--2026-2603.27960-efficient-lvlm-inference-survey-research-20261029-0245-scheduled-chat-45-.json",
-      "worker_run_key": "20261029-0245-scheduled-chat-45/r01"
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_24c004773f4481918fb68ac7c6d55e6f--2023-2306.01768-quantitative-review-metadata-repair-20261029-0345-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_24c004773f4481918fb68ac7c6d55e6f--2023-2306.01768-quantitative-review-metadata-repair-20261029-0345-scheduled-chat-45-r02.json",
+      "worker_run_key": "20261029-0345-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3676641.3716009",
+      "title": "PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System",
+      "source_url": "https://arxiv.org/pdf/2502.15470",
+      "returned_at": "2026-10-28T19:55:21+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 441 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4536,
+        "body_paragraphs": 22,
+        "method_chars": 1539,
+        "method_paragraphs": 7,
+        "evaluation_chars": 441,
+        "limitation_chars": 773,
+        "insufficiency_flags": [
+          "評価説明量 441 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_67c520645c288191b5fbf23be6102a1d--2025-2502.15470-papi-dynamic-pim-scheduling-metadata-repair-20261029-0345-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_67c520645c288191b5fbf23be6102a1d--2025-2502.15470-papi-dynamic-pim-scheduling-metadata-repair-20261029-0345-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261029-0345-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.27960",
+      "title": "Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies",
+      "source_url": "https://arxiv.org/pdf/2603.27960",
+      "returned_at": "2026-10-28T19:55:58+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 353 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7053,
+        "body_paragraphs": 34,
+        "method_chars": 4169,
+        "method_paragraphs": 19,
+        "evaluation_chars": 353,
+        "limitation_chars": 740,
+        "insufficiency_flags": [
+          "評価説明量 353 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7c037ff2a9188191bc5fa5c813c7257b--2026-2603.27960-efficient-lvlm-inference-survey-research-20261029-0400-scheduled-chat-00-r01-corrected-final.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7c037ff2a9188191bc5fa5c813c7257b--2026-2603.27960-efficient-lvlm-inference-survey-research-20261029-0400-scheduled-chat-00-r01-corrected-final.json",
+      "worker_run_key": "20261029-0400-scheduled-chat-00/r01"
     }
   ]
 }

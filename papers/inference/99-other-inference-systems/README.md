@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（762本）
+## 自動生成の論文一覧（763本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -434,7 +434,7 @@
 
 - **2025-11 · [Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models](2025-d5b03c1b33e0-mitigating-sequential-dependencies-a-survey-of-algorithms-and-systems-fo.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  本論文は、自己回帰生成で前のトークンを確定しなければ次を出力できないという逐次依存を、候補生成と検証・修正に分離して緩和する研究群のサーベイである。本文は既存研究の方式と引用元の結果を整理するが、付録A1には単一NVIDIA A100 80GB上で既存11方式を比較した表1があり、付録A2には5種類の視覚言語モデルで複数の投機的復号方式を比較した表2がある。
+  対象は、草案トークンを安く先読みし、より高品質なターゲットモデルで検証する投機的復号だけでなく、複数位置を仮置きして反復修正するJacobi型方式や、検索・n-gramによる草案再利用まで含む。付録A1では公開実装を用い、単一NVIDIA A100 80GB、バッチ1、貪欲復号という条件で11方式を六課題比較した。
 
 - **2025-11 · [DeCoRL: Decoupling Reasoning Chains via Parallel Sub-Step Generation and Cascaded Reinforcement for Interpretable and Scalable RLHF](2025-2511.19097-decorl-decoupling-reasoning-chains-via-parallel-sub-step-generation-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -556,7 +556,7 @@
 
 - **2026-08 · [S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching](2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  S4R（Selective Sampling, Subspaces, and Sparse Reconstruction）は、長文脈のKVキャッシュを低ランク係数として保持しながら、実際の注意計算に必要な位置だけを復元する圧縮方式である。LongBenchとRULERでは最大5倍のKV圧縮下で非圧縮に近い品質を示す一方、再構成の計算費はゼロではない。
+  S4R（Selective Sampling, Subspaces, and Sparse Reconstruction）は、長文脈言語モデルのキー・値（KV）キャッシュを低ランク係数として保持し、復号時には注意計算に重要な位置だけを元の次元へ戻す方式である。RULERで2.5倍圧縮時の平均は93.61、非圧縮93.97、xKV 93.47である。
 
 - **2026-08 · [Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models](2026-2608.07890-router-sensitivity-under-lightweight-fine-tuning-identifies-prunable-exp.md)**  
   実装：[✓](https://github.com/ianKa1/MoE_pruning) ・ リポジトリ内被引用：0  
@@ -1900,10 +1900,6 @@
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：2  
   しかし複数のLoRAを一つの長い会話やエージェント処理で切り替える場合、過去の文脈の鍵・値（Key-Value; KV）キャッシュは、アダプタが異なれば一般に同じにならない。vLLMを改造した7モデルの評価器呼び出し実験では、長い接頭辞に対して評価器単体の最大35倍高速化を報告する。
 
-- **2025-03 · [RSQ: Learning from Important Tokens Leads to Better Quantized LLMs](2025-2503.01820-rsq-learning-from-important-tokens-leads-to-better-quantized-llms.md)**  
-  実装：[✓](https://github.com/ylsung/rsq) ・ リポジトリ内被引用：2  
-  GPTQなどの事後量子化（Post-学習 量子化; PTQ）は、元の重みを低ビットへ丸めるとき、少数の校正データで量子化前後の層出力を比較して誤差を補償する。2bit条件ではQuaRotの平均35.3%に対しRSQは40.6%となる。
-
 - **2025-03 · [Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques](2025-2503.11816-key-value-compress-a-systematic-exploration-of-kv-cache-compression-tech.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈の大規模言語モデルで問題になるキー・バリュー（KV）キャッシュの容量を減らす方式を、どの軸の冗長性を削るかという視点で整理する。したがって表4の2.87倍と1.86倍を並べて前者が後者より優れた方式と結論付けることはできない。
@@ -1995,6 +1991,14 @@
 - **2025-04 · [AccLLM: Accelerating Long-Context LLM Inference Via Algorithm-Hardware Co-Design](2025-2505.03745-accllm-accelerating-long-context-llm-inference-via-algorithm-hardware-co.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   大規模言語モデル（LLM）を資源制約の強い端末向けFPGAに載せるため、圧縮アルゴリズムと演算器・データフローを同時に設計する。主要な評価ではLlama-2-7Bを12.1GBのFP16モデルから1.53GBへ縮小し、Xilinx Alveo U280 FPGA上で164 トークン/s、33W、4.96 トークン/Jを報告した。
+
+- **2025-03 · [Union of Experts: Adapting Hierarchical Routing to Equivalently Decomposed Transformer](2025-2503.02495-union-of-experts-adapting-hierarchical-routing-to-equivalently-decompose.md)**  
+  実装：[✓](https://github.com/YujiaoYang-work/UoE) ・ リポジトリ内被引用：1  
+  本論文は、Mixture-of-Experts（MoE）の疎活性化をMLPブロックだけに限定せず、注意ブロックとMLPブロックをともに、機能的に等価な部分計算から構成される専門家集合へ分解するUnion-of-Experts（UoE）を提案する。
+
+- **2025-03 · [RSQ: Learning from Important Tokens Leads to Better Quantized LLMs](2025-2503.01820-rsq-learning-from-important-tokens-leads-to-better-quantized-llms.md)**  
+  実装：[✓](https://github.com/ylsung/rsq) ・ リポジトリ内被引用：1  
+  GPTQなどの事後量子化（Post-学習 量子化; PTQ）は、元の重みを低ビットへ丸めるとき、少数の校正データで量子化前後の層出力を比較して誤差を補償する。2bit条件ではQuaRotの平均35.3%に対しRSQは40.6%となる。
 
 - **2025-03 · [Multi-Cue Adaptive Visual Token Pruning for Large Vision-Language Models](2025-2503.08019-multi-cue-adaptive-visual-token-pruning-for-large-vision-language-models.md)**  
   実装：[✓](https://github.com/bzluan/AdaptPrune) ・ リポジトリ内被引用：1  
@@ -2266,7 +2270,7 @@
 
 - **2025-04 · [Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression](2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md)**  
   実装：[✓](https://github.com/The-Inscrutable-X/TACQ) ・ リポジトリ内被引用：0  
-  Task-Circuit Quantization（TACQ）は、2〜3bitの重み量子化でLLMの推論品質が大きく損なわれる問題に対し、タスク損失への寄与が大きく、しかも量子化で値が変わりやすい重みを選んで16bitのまま保持する混合精度の学習後量子化（PTQ）を提案する。
+  Task-Circuit Quantization（TACQ）は、学習済みLLMを2〜3ビットへ圧縮した際の性能崩壊を抑えるため、全ての重みを同じ精度で丸めるのではなく、タスクにとって重要で、かつ実際の量子化で大きな損失を引き起こしそうな重みだけを16ビットのまま残す学習後量子化方式である。
 
 - **2025-04 · [Scaling Test-Time Inference with Policy-Optimized, Dynamic Retrieval-Augmented Generation via KV Caching and Decoding](2025-2504.01281-scaling-test-time-inference-with-policy-optimized-dynamic-retrieval-augm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2866,7 +2870,7 @@
 
 - **2023-07 · [Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models](2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md)**  
   実装：[✓](https://github.com/AlaFalaki/compressedBART) ・ リポジトリ内被引用：0  
-  本研究はTransformerの各層を単純に削るのではなく、encoderが生成する隠れ表現をautoencoderで低次元へ写像し、その小さい次元に合わせてdecoderを再設計する。
+  本論文は、既存のTransformer 符号化器が出力する各トークンの隠れ表現を、別途学習した自己符号化器（AE）で低次元に写像し、その低次元表現を入力として処理できる小型復号器を構築する手法を検討する。これは約2.2倍の速度、時間比で約54%の短縮に相当する。
 
 - **2023-07 · [DPBERT: Efficient Inference for BERT based on Dynamic Planning](2023-2308.00108-dpbert-efficient-inference-for-bert-based-on-dynamic-planning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
