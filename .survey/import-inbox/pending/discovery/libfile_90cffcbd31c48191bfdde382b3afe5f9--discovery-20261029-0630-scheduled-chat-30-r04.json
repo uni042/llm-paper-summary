@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-0630-scheduled-chat-30/r04",
+  "reference_main_sha": "abad1c5b49f5f0d2043c155fec01109a0b130947",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.16730",
+      "identity_tokens": [
+        "arXiv:2408.16730"
+      ],
+      "title": "VideoLLM-MoD: Efficient Video-Language Streaming with Mixture-of-Depths Vision Computation",
+      "reason": "VideoLLM-MoDは長時間動画VLMで視覚トークンを捨てず、層ごとに大半の視覚トークンの計算をスキップする深さ方向の適応計算を導入する。主な定量値は学習時間約42%・メモリ約30%削減で、推論サービングの実測が要旨にないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2408.16730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 93,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.09389",
+      "identity_tokens": [
+        "arXiv:2510.09389"
+      ],
+      "title": "Design Principles for Sequence Models via Coefficient Dynamics",
+      "reason": "Transformer・SSM・ゲート付き線形RNNの過去値ベクトルへの係数を線形力学系として統一し、表現力、実装効率、数値安定性の設計原理を導く。推論実装への示唆はあるが新規カーネルや推論時性能の実測はなく、理論的な関連に留まる境界候補。",
+      "source_url": "https://arxiv.org/abs/2510.09389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 94,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.16343",
+      "identity_tokens": [
+        "arXiv:2605.16343"
+      ],
+      "title": "LoopQ: Quantization for Looped Language Models",
+      "reason": "LoopQは重み共有Transformerを反復適用するLoopLMで、反復間の分布変化・状態再利用・量子化誤差累積に対応するため、反復対応の活性化スケーリング、状態整合、軌跡校正を組み合わせる。W4A4推論向け量子化品質の改善を評価する。",
+      "source_url": "https://arxiv.org/abs/2605.16343",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 97,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17672",
+      "identity_tokens": [
+        "arXiv:2605.17672"
+      ],
+      "title": "Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models",
+      "reason": "PUMAは推論の途中で既出結論を繰り返す意味的冗長性を軽量検出器で検出し、回答準備の検証と組み合わせて早期終了を決める。5種類の推論モデルと5ベンチマークで平均生成トークン26.2%削減を報告する推論時トークン予算最適化。",
+      "source_url": "https://arxiv.org/abs/2605.17672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 99,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.00757",
+      "identity_tokens": [
+        "arXiv:2604.00757"
+      ],
+      "title": "IWP: Token Pruning as Implicit Weight Pruning in Large Vision Language Models",
+      "reason": "IWPは注意演算をトークンごとのキー・値外積の和で表す双対形式から、視覚トークン剪定を暗黙の重み行列の近似問題として定式化する。情報量と重複を測る指標で段階的にトークンを選び、VLMの推論計算を削減する。",
+      "source_url": "https://arxiv.org/abs/2604.00757",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 101,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.15758",
+      "identity_tokens": [
+        "arXiv:2507.15758"
+      ],
+      "title": "LAPO: Internalizing Reasoning Efficiency via Length-Adaptive Policy Optimization",
+      "reason": "LAPOは成功した推論長の分布を学び、二段階の強化学習で問題難易度に応じた思考長制御をモデル内部へ獲得させる。推論時トークンを最大40.9%削減するが、中心貢献は学習アルゴリズムでサービング/実行系の最適化ではないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2507.15758",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 106,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.26092",
+      "identity_tokens": [
+        "arXiv:2605.26092"
+      ],
+      "title": "GoQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization",
+      "reason": "GoQuantは2の冪量子化の粗い角度分解能を直交残差基底で補い、低ビット重みをシフト加算型内積で処理する幾何学的な量子化方式。LLaMA-2-7Bのデータ不要校正と活性化補正を比較する端末LLM推論向けアルゴリズム・ハードウェア協調設計。",
+      "source_url": "https://arxiv.org/abs/2605.26092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 108,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.24008",
+      "identity_tokens": [
+        "arXiv:2604.24008"
+      ],
+      "title": "Coverage-Based Calibration for Post-Training Quantization via Weighted Set Cover over Outlier Channels",
+      "reason": "COVERCALは校正標本が重要な活性化外れ値チャネルを見落とすことで低ビット重みの再構成誤差が増える問題に対し、重み付き集合被覆として校正標本を選ぶ。AWQ/GPTQのINT4品質を少数校正標本で改善する推論圧縮の前処理。",
+      "source_url": "https://arxiv.org/abs/2604.24008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 112,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.20030",
+      "identity_tokens": [
+        "arXiv:2507.20030"
+      ],
+      "title": "FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression",
+      "reason": "FAEDKVはKVを無限窓離散フーリエ変換で周波数領域へ写し、古い履歴や直近トークンに偏らない情報保持を狙う学習不要のKV圧縮方式。LongBenchとNeedle-In-A-Haystackで長文検索品質を比較する。",
+      "source_url": "https://arxiv.org/abs/2507.20030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 115,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.18172",
+      "identity_tokens": [
+        "arXiv:2509.18172"
+      ],
+      "title": "SBVR: Summation of BitVector Representation for Efficient LLM Quantization",
+      "reason": "SBVRはLLM重みの非一様分布に沿う表現点をビットベクトルの和で構成し、コードブック方式のGPU L1不規則アクセスを避ける。SBVR形式のままGEMVを行う専用CUDAカーネルで4bitのトークン生成速度をFP16比2.21～3.04倍にする。",
+      "source_url": "https://arxiv.org/abs/2509.18172",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:33:13+09:00",
+      "last_checked_at": "2026-10-29T06:33:13+09:00",
+      "linked_from": [],
+      "worklist_rank": 116,
+      "origin": "discovery_abstract_review"
+    }
+  ]
+}
