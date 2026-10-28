@@ -87,6 +87,19 @@ b11869からb11888までの確定済み開発ビルド差分を追加。これ�
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11870 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11879 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11883 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11884 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11888
 
+## 2026-10-26〜27 — llama.cpp b11889〜b11912（開発ビルド）
+
+b11888からb11912までの差分を追加。すべてpre-release開発ビルドであり、正式安定版とは区別する。
+
+- b11901はSYCL reorder時の一時メモリを32 MiBに制限する。Intel/SYCL backend向けでCUDAへの直接追加ではない。
+- b11905はVulkan RMSNormのsubgroup reduction最適化とAMD vendor pathを追加。Vulkan固有。
+- b11909はQualcomm HexagonのMUL_MAT_ID row-skip zeroingをベクトル化。Hexagon固有。
+- b11910はOpenCLのKV-cache view書き込みを修正し、state restore失敗を解消。
+- b11912はLagunaのMoE amax rescalingとSM tensor supportを追加。特定architecture対応で一般モデルの速度向上を示さない。
+- b11912の公式Windows配布assetにCUDA 12.4および13.4系x64 buildがある。Windows 11 + RTX 4070 SUPERでの実測・互換性は未確認。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
+
 ## 主要更新
 
 ### 2026-10-24 — llama.cpp b11846〜b11869（開発ビルド）\n- **b11850**: Soprano-80M / Soprano-1.1-80Mの音声生成に対応。Qwen3系backboneとVocosを使い、音声は生成後に1 chunkで返す。逐次streamingではない。\n- **b11854**: Vulkan行列演算の精度・overflow処理を調整。backend・shapeごとの検証が必要。\n- **b11861**: MiniMax M3系NVFP4/MXFP8 scaleを計算graphへ渡さない不具合を修正。対象構成では数値異常を避ける正確性修正で、一般CUDA高速化ではない。\n- **b11868**: Qualcomm Hexagonの複数core Flash Attentionを調整。Snapdragon向けでRTX CUDAの改善ではない。\n- **b11869**: Jinja templateの`select` / `selectattr`引数処理を修正し、model template互換性を改善。\n- b11869は開発build（pre-release）。Windows x64 CUDA 12系 / CUDA 13系assetの配布は確認済みだが、Windows 11 + RTX 4070 SUPERの実測性能は未確認。\n- 出典: [b11850](https://github.com/ggml-org/llama.cpp/releases/tag/b11850) / [b11854](https://github.com/ggml-org/llama.cpp/releases/tag/b11854) / [b11861](https://github.com/ggml-org/llama.cpp/releases/tag/b11861) / [b11868](https://github.com/ggml-org/llama.cpp/releases/tag/b11868) / [b11869](https://github.com/ggml-org/llama.cpp/releases/tag/b11869)\n\n### 2026-10-23 — llama.cpp b11828〜b11840（開発ビルド）\n- **b11829**: reranking用templateの置換を修正。**b11835**: SYCL/oneDNNのdevice引渡しを修正。**b11838**: `ggml_time_us`の時間overflowを修正。**b11840**: Qualcomm Hexagon NPUにCEIL演算（f32/f16）を追加。\n- いずれも開発ビルドの更新で、一般的な速度倍率は示されていない。b11840のHexagon機能をNVIDIA CUDAの改善と読み替えない。[b11829](https://github.com/ggml-org/llama.cpp/releases/tag/b11829) / [b11835](https://github.com/ggml-org/llama.cpp/releases/tag/b11835) / [b11838](https://github.com/ggml-org/llama.cpp/releases/tag/b11838) / [b11840](https://github.com/ggml-org/llama.cpp/releases/tag/b11840)\n\n### 2026-10-22 — llama.cpp b11813〜b11827（開発ビルド）

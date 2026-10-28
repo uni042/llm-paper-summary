@@ -1,16 +1,18 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261029T221000-oct26",
+  "attempt_id": "library-import-maint-20261029T230500-oct27",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "framework-updates/inference-engines/exllama/README.md",
+    "llm-releases/gemma.md",
+    "llm-releases/nvidia.md",
     "framework-updates/inference-engines/llama-cpp/README.md"
   ],
   "created_paths": [],
   "updated_existing_paths": [
-    "framework-updates/inference-engines/exllama/README.md",
+    "llm-releases/gemma.md",
+    "llm-releases/nvidia.md",
     "framework-updates/inference-engines/llama-cpp/README.md"
   ],
-  "summary": "2026-10-26 Library maintenance: add ExLlamaV3 v1.6.5 and llama.cpp b11870-b11888. Preserve prerelease distinction; no generalized E2E speed claims."
+  "summary": "2026-10-27 Library maintenance: correct Gemma 4 MTP assistant config; backfill Dory1.0-4B as 2026-10-16 release; append llama.cpp b11889-b11912 prerelease updates with backend limitations."
 }

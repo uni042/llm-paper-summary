@@ -17,6 +17,12 @@ Gemmaは重み公開（open-weight）モデル群なので、API専用modelと�
 - **26B-A4B**: 総parameterは約26Bだが、MoE routingによって1 tokenあたり約4B相当をactiveにする構成を示す表記。
 - **E2B / E4B**: Gemma family内のexpert構成・規模を表す名称。具体的なtotal / active parameterは各model cardの記載を優先する。
 
+## 2026-10-26 — Gemma 4 12B MTP assistantの生成設定修正
+
+既存checkpoint `google/gemma-4-12B-it-assistant` の `generation_config.json` が更新された。EOS tokenは `1` 単独から `[1, 106, 50]` へ変更され、`is_assistant: true`、`num_assistant_tokens: 6`、`num_assistant_tokens_schedule: "constant"` が設定された。MTP speculative decoding用assistantとしての設定変更であり、新checkpointの公開やGemma 4全体のリリース日変更ではない。
+
+一次資料: https://huggingface.co/google/gemma-4-12B-it-assistant/discussions/7/files ; https://huggingface.co/google/gemma-4-12B-it-assistant/commits/main
+
 ## 用語メモ
 
 - **MTP（Multi-Token Prediction; 複数token予測）**: 1回のforwardで次tokenだけでなく、その先の複数位置の候補も予測する仕組み。対応runtimeではdraft生成へ利用してdecodeを高速化できる。
