@@ -428,6 +428,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：4  
   Select-NはSLO・系列長・バッチサイズに応じてGPUに残す層とCPUへ退避する層の間隔を動的に調整し、オフロード量とスループットを両立する。
 
+- **2025-05 · [Speeding up Model Loading with fastsafetensors](2025-2505.23072-speeding-up-model-loading-with-fastsafetensors.md)**  
+  実装：[✓](https://github.com/foundation-model-stack/fastsafetensors) ・ リポジトリ内被引用：3  
+  fastsafetensorsは、safetensors形式の大規模モデルをストレージからGPUへロードする際、各テンソルをいったんホストメモリ上のPython/PyTorchオブジェクトとして逐次生成してからGPUへコピーする従来経路を改め、ファイル上の複数テンソルをまとめてGPUへ搬送し、GPU上でテンソル実体化・分割などの前処理を行うローダである。
+
 - **2025-04 · [Shared Disk KV Cache Management for Efficient Multi-Instance Inference in RAG-Powered LLMs](2025-2504.11765-shared-disk-kv-cache-rag.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   RAG文書のKVキャッシュをNVMe SSDへ永続化して複数LLMインスタンスで共有し、待ち行列時間にCPU等で先行生成することで重複プリフィルを削減する。
@@ -435,10 +439,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-09 · [Accelerating Mixture-of-Expert Inference with Adaptive Expert Split Mechanism](2025-2509.08342-moepic-adaptive-expert-split.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   専門家を上部・下部へ分割し、頻出専門家の上部だけをGPUへ広く常駐させ、下部を次層予測で先読みするMoEオフロード方式。層別VRAM・分割比も適応設定し、TPOTを37.51〜65.73%削減する。
-
-- **2025-05 · [Speeding up Model Loading with fastsafetensors](2025-2505.23072-speeding-up-model-loading-with-fastsafetensors.md)**  
-  実装：[✓](https://github.com/foundation-model-stack/fastsafetensors) ・ リポジトリ内被引用：2  
-  fastsafetensorsは、safetensors形式の大規模モデルをストレージからGPUへロードする際、各テンソルをいったんホストメモリ上のPython/PyTorchオブジェクトとして逐次生成してからGPUへコピーする従来経路を改め、ファイル上の複数テンソルをまとめてGPUへ搬送し、GPU上でテンソル実体化・分割などの前処理を行うローダである。
 
 - **2025-08 · [Architecting Long-Context LLM Acceleration with Packing-Prefetch Scheduler and Ultra-Large Capacity On-Chip Memories](2025-2508.08457-packing-prefetch-onchip-memory-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -549,7 +549,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：465  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：466  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
