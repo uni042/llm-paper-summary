@@ -35,10 +35,15 @@
   "selection_reason": "長いCoT生成で既存QATが精度を失う要因をKV忠実度と校正データのHessian部分空間のずれに分解し、次層残差流を保つ1層先読み損失を使う重み専用量子化を提案する。Qwen3-4B W3G128のRTX A6000実測でFP16比3.42倍の復号高速化を報告し、推論量子化の対象に合致する。",
   "semantic_scholar_id": "263f08eb1c144b29f369915cc9d98be667124f31",
   "source_url": "https://arxiv.org/abs/2605.08755",
-  "status": "ready",
+  "status": "superseded",
   "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:14:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2605.08755-laquant-a-simple-overhead-free-large-reasoning-model-quantization-by-lay.md",
+  "represented_canonical_id": "arXiv:2605.08755",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

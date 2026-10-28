@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨では、長文脈KVキャッシュの低ランク部分空間をプロンプトから選択したトークンで初期化し、復号時には重要位置のみを疎に再構成するS4Rを提案。校正データ依存と全プロンプト分解・全KV復元の負担を同時に抑え、LongBench/RULERで最大5倍圧縮と精度維持を報告するため、推論時メモリ管理の直接的技術貢献。",
   "semantic_scholar_id": "d684f97649eaa7a789b97fcbd0e21fed8ec1f49d",
   "source_url": "https://arxiv.org/abs/2608.00528",
-  "status": "ready",
+  "status": "superseded",
   "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:14:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md",
+  "represented_canonical_id": "arXiv:2608.00528",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

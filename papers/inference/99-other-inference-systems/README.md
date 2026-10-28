@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（731本）
+## 自動生成の論文一覧（734本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -514,6 +514,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   通常の事後量子化では中間の線形層を2〜4ビットにしても、この最終出力層だけを16ビットで残すことが多い。例えばLlama-3.2-1Bの出力層は約2.63億パラメータ、モデル全体の21.3%であり、本体を低ビット化すると出力層の相対的な容量負担がさらに増える。
 
+- **2026-08 · [S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching](2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  S4R（Selective Sampling, Subspaces, and Sparse Reconstruction）は、長文脈のKVキャッシュを低ランク係数として保持しながら、実際の注意計算に必要な位置だけを復元する圧縮方式である。LongBenchとRULERでは最大5倍のKV圧縮下で非圧縮に近い品質を示す一方、再構成の計算費はゼロではない。
+
 - **2026-08 · [Router Sensitivity Under Lightweight Fine-Tuning Identifies Prunable Experts in Mixture-of-Experts Models](2026-2608.07890-router-sensitivity-under-lightweight-fine-tuning-identifies-prunable-exp.md)**  
   実装：[✓](https://github.com/ianKa1/MoE_pruning) ・ リポジトリ内被引用：0  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで一部の専門家しか動かさないため演算量を抑えられるが、選択される可能性のある専門家の重み全体をメモリに保持する必要がある。専門家を丸ごと削除すればGPUメモリを減らせるものの、使用頻度や重みの大きさだけでは重要な専門家を誤って削除し、推論品質が急落することがある。
@@ -585,6 +589,10 @@
 - **2026-07 · [SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs](2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。
+
+- **2026-07 · [SAB-LVLM: Significance-Aware Binarization for Large Vision-Language Models](2026-2607.01876-sab-lvlm-significance-aware-binarization-for-large-vision-language-model.md)**  
+  実装：[✓](https://github.com/LyuQi127/SAB_LVLM) ・ リポジトリ内被引用：0  
+  SAB-LVLMは、画像と文章を扱う大規模視覚言語モデル（LVLM）を、重み約1bitの二値化へ圧縮する事後量子化（PTQ）方式である。Qwen2.5-VL-32B-InstructのMMStarは約1bitのARB-LLM48.48点からSAB-LVLM54.77点へ改善し、モデルメモリは10.28GBと報告される。
 
 - **2026-07 · [Resting Neurons, Active Insights: Robustifying Activation Sparsity in LLMs via Spontaneity](2025-2512.12744-resting-neurons-active-insights-improving-input-sparsification-for-large.md)**  
   実装：[✓](https://github.com/hxu105/SPON) ・ リポジトリ内被引用：0  
@@ -1253,6 +1261,10 @@
 - **2026-03 · [Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models](2026-dbb1f579343b-consensus-expert-dynamicmoe-arima-based-capacity-prediction-with-adaptiv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   主要実験では、Switch Transformer-base-8の9種類のGLUE評価指標を単純平均した値が、従来構成の80.5、共有専門家だけを導入した構成の81.0に対して、提案構成で81.6となる（原著表4。
+
+- **2026-03 · [ConFu: Contemplate the Future for Better Speculative Sampling](2026-2603.08899-confu-contemplate-the-future-for-better-speculative-sampling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ConFu（Contemplate the Future）は、投機的復号で候補を提案する軽量ドラフトモデルに、ターゲットモデルが推測する将来の生成方向を補助情報として渡す方式である。
 
 - **2026-03 · [Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning](2026-2603.03752-confidence-calibrated-small-large-language-model-collaboration-for-cost-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

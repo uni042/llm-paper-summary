@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（168本）
+## 自動生成の論文一覧（169本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -251,6 +251,10 @@
 - **2026-05 · [MixFP4: Enhancing NVFP4 with Adaptive FP4/INT4 Block Representations](2026-2605.31035-mixfp4-enhancing-nvfp4-with-adaptive-fp4-int4-block-representations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MixFP4は、4ビット浮動小数点（FP4）量子化で生じる精度低下を、同じ4ビットの中で表現方式を切り替えて緩和する研究である。テンソル Core相当の合成回路では面積3.1%、電力1.5%増に収まる。
+
+- **2026-05 · [LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss](2026-2605.08755-laquant-a-simple-overhead-free-large-reasoning-model-quantization-by-lay.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LAQuant（LookAhead Quantization）は、長い思考トークンを生成する大規模推論モデル（LRM）を3ビット・4ビットへ重み量子化するための層別量子化対応学習（QAT）である。Qwen3-4BのW3G128ではAIME2025 Pass@1がParoQuantの39.58%から54.69%へ15.11ポイント改善した。
 
 - **2026-05 · [Influence-Inspired Spectral Rotations for Extreme Low-Bit LLM Quantization](2026-2605.25203-influence-inspired-spectral-rotations-for-extreme-low-bit-llm-quantizati.md)**  
   実装：[✓](https://github.com/gogipav14/spectral-llm) ・ リポジトリ内被引用：0  

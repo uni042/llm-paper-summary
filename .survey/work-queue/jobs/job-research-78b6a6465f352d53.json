@@ -35,10 +35,15 @@
   "selection_reason": "重み専用INT量子化で残るFP活性の転送・計算費を対象に、グループ共有指数と可変仮数長のAnda形式、モジュール別ビット幅探索、ビットプレーン格納とビット直列演算器を共同設計する。OPT/LLaMA系のFP-INT GeMMでGPU類似FP-FP基準比平均2.4倍高速化を報告する推論アクセラレータ研究。",
   "semantic_scholar_id": "61dbbcf8f572f3473a1cff0cf282339d7c179fb3",
   "source_url": "https://arxiv.org/abs/2411.15982",
-  "status": "ready",
+  "status": "superseded",
   "title": "Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format",
   "type": "research",
   "venue": "International Symposium on High-Performance Computer Architecture",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-28T03:14:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2024-2411.15982-anda-unlocking-efficient-llm-inference-with-a-variable-length-grouped-ac.md",
+  "represented_canonical_id": "arXiv:2411.15982",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
