@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T09:15:12.796354+00:00",
+  "generated_at": "2026-10-28T09:56:55.896679+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -164,30 +164,6 @@
       },
       "mechanical_failures": [],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.18957-instantinfer-enabling-fast-llm-cold-start-with-communicating-finite-auto.md",
-      "canonical_id": "arXiv:2607.18957",
-      "title": "InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata",
-      "file_bytes": 15218,
-      "source_sha256": "319a74bc50314f5ace478ce0641f43ae4b1d564a388b1487a023d8c2aa4e5ef1",
-      "source_git_blob_sha": "7eaad599c3c20ddfe84f636e4106191b17bfb4c6",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.798067,
-      "quality_metrics": {
-        "body_chars": 4836,
-        "method_chars": 1666,
-        "evaluation_chars": 1080,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 79.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.8% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2603.08899-confu-contemplate-the-future-for-better-speculative-sampling.md",
@@ -431,6 +407,30 @@
       ],
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.18957-instantinfer-enabling-fast-llm-cold-start-with-communicating-finite-auto.md",
+      "canonical_id": "arXiv:2607.18957",
+      "title": "InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata",
+      "file_bytes": 17349,
+      "source_sha256": "f589a5672b7d2f5da4c5b55bbb8cab5f25f8b5181cbdaeaaee506cfe82b989a6",
+      "source_git_blob_sha": "35106e6a0fba0a3921940deb657f66efd515609f",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.798067,
+      "quality_metrics": {
+        "body_chars": 4836,
+        "method_chars": 1666,
+        "evaluation_chars": 1080,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 79.8% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 79.8% < 警告基準 80%"
       ]
     },
     {
