@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-0530-scheduled-chat-30/r06",
+  "reference_main_sha": "f254312a04c596dbafd68293217f5bf15ed82353",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.05628",
+      "identity_tokens": [
+        "id:arXiv:2402.05628",
+        "url:https://arxiv.org/abs/2402.05628"
+      ],
+      "title": "RepQuant: Towards Accurate Post-Training Quantization of Large Transformer Models via Scale Reparameterization",
+      "reason": "RepQuantはLayerNorm・Softmax活性に複雑な量子化器を適用して校正し、そのスケールを数学的に等価な形で再パラメータ化して推論時にはハードウェアに適した簡単な量子化器へ移す。Transformerの事後量子化精度と実行効率を両立する技術なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2402.05628",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 75,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.25380",
+      "identity_tokens": [
+        "id:arXiv:2607.25380",
+        "url:https://arxiv.org/abs/2607.25380"
+      ],
+      "title": "Memory for Large Language Models",
+      "reason": "このサーベイはLLM記憶を表現形式、更新時点、永続性で分類し、注意KV・再帰状態・パラメータ更新・外部検索の記憶書込みと経路制御を横断整理する。システム効率上の論点は含むが対象が長期知識記憶やモデル能力にも広く及び、推論サービングの特定最適化を直接提案しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2607.25380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 77,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.09659",
+      "identity_tokens": [
+        "id:arXiv:2606.09659",
+        "url:https://arxiv.org/abs/2606.09659"
+      ],
+      "title": "End-to-End Context Compression at Scale",
+      "reason": "LCLMは長文脈を短い潜在埋込み列へ変換するエンコーダ・デコーダ圧縮器を大規模事前学習し、KV圧縮法と品質・圧縮時間・ピークメモリのPareto効率を比較する。推論入力の長さと記憶負荷を直接削減する方式なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2606.09659",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 79,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.10666",
+      "identity_tokens": [
+        "id:arXiv:2411.10666",
+        "url:https://arxiv.org/abs/2411.10666"
+      ],
+      "title": "SAM Decoding: Speculative Decoding via Suffix Automaton",
+      "reason": "SAM-Decodingは外部コーパスと生成済み文字列のsuffix automatonから最長の接尾辞一致を効率的に取得してドラフトを作る、モデル不要の投機的復号方式。生成時の索引更新・候補取得を平均O(1)へ抑え、EAGLE-2との併用も評価しているためaccept。",
+      "source_url": "https://arxiv.org/abs/2411.10666",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 80,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.21077",
+      "identity_tokens": [
+        "id:arXiv:2505.21077",
+        "url:https://arxiv.org/abs/2505.21077"
+      ],
+      "title": "Efficient Large Language Model Inference with Neural Block Linearization",
+      "reason": "NBLは事前学習済みLLMの自己注意層をLMMSEによる線形近似へ置換し、CCAに基づく誤差上界で置換対象層を選ぶ。微調整なしでDeepSeek-R1蒸留モデルの推論速度を上げる直接的な層近似手法なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2505.21077",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 81,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07160",
+      "identity_tokens": [
+        "id:arXiv:2602.07160",
+        "url:https://arxiv.org/abs/2602.07160"
+      ],
+      "title": "Free Energy Mixer",
+      "reason": "FEMは注意のq-kスコアを事前分布とみなし、value駆動のチャネル別log-linear傾斜で読み出しを変える新しいトークン混合演算を提案する。線形化可能な場合O(T)計算を保てるが、一次要旨の中心は表現力とNLP・画像・時系列精度であり既存LLM推論サービングの高速化実測がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2602.07160",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 85,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.03414",
+      "identity_tokens": [
+        "id:arXiv:2604.03414",
+        "url:https://arxiv.org/abs/2604.03414"
+      ],
+      "title": "KiToke: Distribution-Aware Token Compression for Video Large Language Models",
+      "reason": "KiTokeは動画VLMの視覚埋込み密度から冗長性を見積もり、逆密度サンプリングで稀な映像パターンを残し、時間区間内の未選択トークンを代表トークンへ集約する。追加学習なしで視覚prefillを高速化し実測速度を報告するためaccept。",
+      "source_url": "https://arxiv.org/abs/2604.03414",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 88,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37304",
+      "identity_tokens": [
+        "id:arXiv:2609.37304",
+        "url:https://arxiv.org/abs/2609.37304"
+      ],
+      "title": "MetaCtrl: Your Large Language Models Can Reason Better and More Concisely with a Metacognitive Controller",
+      "reason": "MetaCtrlは凍結した推論モデルの生成軌跡を監視し、続行・簡略化・省略・終了を強化学習済みの軽量制御器で選ぶ。生成トークン数を減らす推論費用の関連性はあるが主たる評価は数学・科学・コード正答率と推論長で、システムサービングやメモリ・カーネル効率の寄与は限定的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.37304",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 89,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.08630",
+      "identity_tokens": [
+        "id:arXiv:2610.08630",
+        "url:https://arxiv.org/abs/2610.08630"
+      ],
+      "title": "Towards In-Parameter Memory Augmentation for Large Language Models",
+      "reason": "このサーベイは推論時に前向き計算へ組み込む埋込み・注意・FFN等のパラメータ状記憶を配置場所と取得時点で分類し、ICLと比べた文脈消費や再符号化の課題を論じる。推論時の記憶基盤に関連するが、主題は知識保持・適応であり具体的なサービング高速化の新規機構ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.08630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 91,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.22575",
+      "identity_tokens": [
+        "id:arXiv:2602.22575",
+        "url:https://arxiv.org/abs/2602.22575"
+      ],
+      "title": "S2O: Early Stopping for Sparse Attention via Online Permutation",
+      "reason": "S2OはFlashAttentionの非連続KVロードをオンライン索引置換で可能にし、重要度順にブロックを読みながらスコア閾値で早期終了する。128K文脈で注意演算とLLM全体の実測高速化を示す長文脈疎注意カーネル最適化なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2602.22575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:49:00+09:00",
+      "last_checked_at": "2026-10-29T05:49:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 92,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ]
+}
