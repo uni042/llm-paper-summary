@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-0530-scheduled-chat-30/r05",
+  "reference_main_sha": "f254312a04c596dbafd68293217f5bf15ed82353",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.27743",
+      "identity_tokens": [
+        "id:arXiv:2606.27743",
+        "url:https://arxiv.org/abs/2606.27743"
+      ],
+      "title": "End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference",
+      "reason": "L2Aは入力の難しさだけでなく稼働中の資源予算をゲートへ与え、LLMの層スキップ、注意頭枝刈り、推論トークン削減を動的に組み合わせる。クラウドの変動資源とQoS条件に応じた推論計算量の適応が直接目的なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2606.27743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 59,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.14211",
+      "identity_tokens": [
+        "id:arXiv:2510.14211",
+        "url:https://arxiv.org/abs/2510.14211"
+      ],
+      "title": "LiteStage: Latency-aware Layer Skipping for Multi-stage Reasoning",
+      "reason": "LiteStageは多段階推論の段階ごとに異なる層スキップ感度を考慮し、オフライン探索で段階別の層予算を配分し、オンラインの確信度に応じて不要な生成を早期終了する。小型LLMの推論遅延削減が直接目的なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2510.14211",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 60,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02235",
+      "identity_tokens": [
+        "id:arXiv:2610.02235",
+        "url:https://arxiv.org/abs/2610.02235"
+      ],
+      "title": "One Distribution, Two Channels: Coverage-Calibrated KV Retention and Compensation",
+      "reason": "COREはKV削除誤差を削除された注意質量と出力方向差へ分解し、query効用と集合のlog-det coverageを使うオフライン校正から軽量索引を作る。同じ分布で保持KV選択と削除質量の潜在メモリ補償を行う長文脈復号向けKV圧縮方式なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.02235",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 62,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35800",
+      "identity_tokens": [
+        "id:arXiv:2609.35800",
+        "url:https://arxiv.org/abs/2609.35800"
+      ],
+      "title": "HeadGuard: Selective Head Protection for Low-Bit VLM KV-Cache Quantization",
+      "reason": "HeadGuardはVLM画像KVの感度を物理注意頭ごとに校正し、重要な一部の頭の画像keyと必要ならvalueをBF16のまま残して、その他を既存の低ビット量子化器に任せる。VLMのKVメモリ圧縮と精度維持の直接的な補助方式なのでaccept。実験はシミュレートした量子化。",
+      "source_url": "https://arxiv.org/abs/2609.35800",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 64,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.30852",
+      "identity_tokens": [
+        "id:arXiv:2605.30852",
+        "url:https://arxiv.org/abs/2605.30852"
+      ],
+      "title": "Speculative Pipeline Decoding: Higher-Accuracy Drafting with Hidden Latency via Pipeline Parallelism",
+      "reason": "SPDはターゲットLLMを複数パイプライン段に分割し、深さの異なるターゲット特徴を集めるPDMで次トークンを予測する。ドラフト生成を段処理と重ねて露出遅延を隠し、単一系列の投機的復号受理率とwall-clock速度を改善するためaccept。",
+      "source_url": "https://arxiv.org/abs/2605.30852",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 65,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.19167",
+      "identity_tokens": [
+        "id:arXiv:2604.19167",
+        "url:https://arxiv.org/abs/2604.19167"
+      ],
+      "title": "LBLLM: Lightweight Binarization of Large Language Models via Three-Stage Distillation",
+      "reason": "LBLLMはPTQ初期化、二値重み・ビットマップ・量子化パラメータの層別蒸留、活性の4ビット量子化因子学習を分離し、W(1+1)A4の低ビットLLMを構築する。蒸留工程は必要だが資源制約下の推論重み・活性圧縮を直接目指すためaccept。",
+      "source_url": "https://arxiv.org/abs/2604.19167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 66,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.00198",
+      "identity_tokens": [
+        "id:arXiv:2603.00198",
+        "url:https://arxiv.org/abs/2603.00198"
+      ],
+      "title": "Stateful Token Reduction for Long-Video Hybrid VLMs",
+      "reason": "MambaとTransformerを組み合わせた長動画VLMでは、削除トークンの情報がMamba再帰状態に残ることを分析し、層を進むほど削除率を上げるスケジュールと問い合わせ条件付き重要度で視覚トークンを減らす。prefill高速化を実測する推論最適化なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2603.00198",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 67,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.06827",
+      "identity_tokens": [
+        "id:arXiv:2607.06827",
+        "url:https://arxiv.org/abs/2607.06827"
+      ],
+      "title": "Compress the Cache, Not the Speech Embedding: KV Compression for Efficient Speech LLMs",
+      "reason": "SpeechKVは音声入力をLLM投入前に間引くと失われる細部を避け、LLM内部で音声トークンのKVキャッシュを学習型poolingにより圧縮する。音声・テキスト融合を保ちつつ自動回帰復号を高速化するSpeech LLM推論向けKV最適化なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2607.06827",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 69,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04313",
+      "identity_tokens": [
+        "id:arXiv:2610.04313",
+        "url:https://arxiv.org/abs/2610.04313"
+      ],
+      "title": "MOIRA: Mass-Oriented Indexing with Ragged Attention for Long-Context Decoding",
+      "reason": "MOIRAは注意質量のcoverage条件に従って各KV頭・層・時刻の読出しページ数を変え、長さの異なるページ列をCUDA graph内で処理するself-planning注意カーネルを導入する。vLLMで長文脈のTPOTと高負荷スループットを改善するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.04313",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 71,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.23046",
+      "identity_tokens": [
+        "id:arXiv:2607.23046",
+        "url:https://arxiv.org/abs/2607.23046"
+      ],
+      "title": "Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs",
+      "reason": "SFPrunerは高解像度MLLMで逐次的な視覚トークン集合探索が遅い問題に対し、指示依存のridge leverageスコアと順位方向マスクで冗長性を並列評価する。選択処理を単一forwardへ変えて実測推論遅延を削減するためaccept。",
+      "source_url": "https://arxiv.org/abs/2607.23046",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T05:46:00+09:00",
+      "last_checked_at": "2026-10-29T05:46:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 72,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ]
+}
