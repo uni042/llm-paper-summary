@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-28T17:55:08+00:00",
-  "record_count": 12519,
+  "updated_at": "2026-10-28T18:50:08+00:00",
+  "record_count": 12520,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180295,6 +180295,20 @@
         ".survey/work-queue/jobs/job-research-9428b8d1d77f0372.json"
       ],
       "title": "Enhancing Quantised End-to-End ASR Models via Personalisation"
+    },
+    "arXiv:2402.15096": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15096",
+      "identity_tokens": [
+        "arXiv:2402.15096"
+      ],
+      "reason": "原著のLoCoMTは音声・動画・テキストの分類用Transformerであり、AudiosetとMedVidCLの分類精度（mAP/precision/recall）と注意行列積のGFLOPsを評価する。自己回帰型LLMの生成、KVキャッシュ、トークン復号、LLMサービング、言語生成速度は実験対象でない。計算量削減の理論保証はマルチモーダル分類器の注意パターン配分に関するもので、LLM推論システムの速度改善として収録しない。",
+      "first_checked_at": "2026-10-28T18:50:08+00:00",
+      "last_checked_at": "2026-10-28T18:50:08+00:00",
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ],
+      "title": "Multimodal Transformer With a Low-Computational-Cost Guarantee"
     }
   }
 }
