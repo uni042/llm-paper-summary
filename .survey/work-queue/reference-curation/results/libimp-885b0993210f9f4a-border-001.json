@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-885b0993210f9f4a-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.22592",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.22592",
+    "identity_tokens": [
+      "arXiv:2602.22592"
+    ],
+    "reason": "pQuantは1bit主体の線形分岐と少数の高精度パラメータ分岐を分離し、重要パラメータの表現力を守る量子化対応学習方式。エッジ推論向け低ビットモデルを作るが、一次要旨の主要貢献はゼロからの学習方法と精度であり、推論時の速度・メモリの実測条件が不明なため境界候補。",
+    "first_checked_at": "2026-10-28T21:47:46+00:00",
+    "last_checked_at": "2026-10-28T21:47:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "pQuant: Towards Effective Low-Bit Language Models via Decoupled Linear Quantization-Aware Training"
+  },
+  "processed_at": "2026-10-28T21:47:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-885b0993210f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

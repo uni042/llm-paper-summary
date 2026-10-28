@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f6081ccccbbd3212-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.18170",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.18170",
+    "identity_tokens": [
+      "arXiv:2604.18170"
+    ],
+    "reason": "入力からの複写範囲を文法制約で表し、既存トークンの逐次生成を並列prefillへ置換するLLM編集向けデコード機構であり、技術的には推論最適化と関係する。ただしarXiv v2は著者・貢献合意に関する内部審査を理由に撤回済みで、本文も公開されず、数値は上限解析と試験的学習に留まるため収録保留。",
+    "first_checked_at": "2026-10-28T21:47:58+00:00",
+    "last_checked_at": "2026-10-28T21:47:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Copy-as-Decode: Grammar-Constrained Parallel Prefill for LLM Editing"
+  },
+  "processed_at": "2026-10-28T21:47:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f6081ccccbbd",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

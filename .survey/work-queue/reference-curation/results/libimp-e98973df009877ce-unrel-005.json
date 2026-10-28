@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e98973df009877ce-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/ipdps64566.2025.00039",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/ipdps64566.2025.00039",
+    "identity_tokens": [
+      "DOI:10.1109/ipdps64566.2025.00039"
+    ],
+    "reason": "タイトルが明示する目的はRLHF学習の配置・並列化であり、凍結中の学習専用最適化に該当する。推論サービングの改善を直接扱うとは読めない。",
+    "first_checked_at": "2026-10-28T21:47:55+00:00",
+    "last_checked_at": "2026-10-28T21:47:55+00:00",
+    "linked_from": [],
+    "title": "FlexRLHF: A Flexible Placement and Parallelism Framework for Efficient RLHF Training"
+  },
+  "processed_at": "2026-10-28T21:47:55+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e98973df0098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

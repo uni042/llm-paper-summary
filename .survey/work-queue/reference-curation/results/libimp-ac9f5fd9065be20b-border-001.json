@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ac9f5fd9065be20b-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.06677",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.06677",
+    "identity_tokens": [
+      "arXiv:2407.06677"
+    ],
+    "reason": "Mixture-of-Modulesは注意・FFNモジュールを二つのルータで反復選択し、深さ固定のTransformerとは異なる動的計算グラフを構築する。TFLOPsとメモリの減少を報告するが、主評価は事前学習とGLUE/XSUM品質であり推論時の実測レイテンシやサービング性能が要旨から確認できないため境界候補。",
+    "first_checked_at": "2026-10-28T21:47:48+00:00",
+    "last_checked_at": "2026-10-28T21:47:48+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Mixture-of-Modules: Reinventing Transformers as Dynamic Assemblies of Modules"
+  },
+  "processed_at": "2026-10-28T21:47:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ac9f5fd9065b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

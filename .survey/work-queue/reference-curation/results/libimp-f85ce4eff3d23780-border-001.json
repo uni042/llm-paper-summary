@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f85ce4eff3d23780-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.04592",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.04592",
+    "identity_tokens": [
+      "arXiv:2603.04592",
+      "id:SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+      "id:arXiv:2603.04592",
+      "url:https://arxiv.org/abs/2603.04592"
+    ],
+    "reason": "入力ストリームと出力ストリームの同期・対話方針を中心に、出力逐次・入力逐次・同時ストリーミングLLMを分類する広範なサーベイ。KV管理と遅延・投機的復号も含むが主眼は対話アーキテクチャと応用の体系化であり、推論速度・メモリ最適化の実測比較が中心ではないためborderline。",
+    "first_checked_at": "2026-10-28T21:47:59+00:00",
+    "last_checked_at": "2026-10-28T21:47:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models"
+  },
+  "processed_at": "2026-10-28T21:47:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f85ce4eff3d2",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

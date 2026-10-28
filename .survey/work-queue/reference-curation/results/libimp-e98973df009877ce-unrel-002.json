@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e98973df009877ce-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.09450",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.09450",
+    "identity_tokens": [
+      "arXiv:2604.09450"
+    ],
+    "reason": "タイトルで明示される最終対象は胸部X線画像からの診療報告文生成であり、医療画像アプリケーション固有の一段拡散生成である。LLM推論基盤の高速化を主題とする記載はない。",
+    "first_checked_at": "2026-10-28T21:47:53+00:00",
+    "last_checked_at": "2026-10-28T21:47:53+00:00",
+    "linked_from": [],
+    "title": "ECHO: Efficient Chest X-ray Report Generation with One-step Block Diffusion"
+  },
+  "processed_at": "2026-10-28T21:47:53+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e98973df0098",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

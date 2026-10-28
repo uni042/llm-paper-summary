@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e9bbad96046c17de-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2605.28507",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2605.28507",
+    "identity_tokens": [
+      "arXiv:2605.28507"
+    ],
+    "reason": "タイトルが明示する研究対象はニューラル制御微分方程式による時系列生成で、LLMの推論効率・サービング・キャッシュ最適化ではない。要旨・本文未確認。",
+    "first_checked_at": "2026-10-28T21:47:57+00:00",
+    "last_checked_at": "2026-10-28T21:47:57+00:00",
+    "linked_from": [],
+    "title": "Universal Time Series Generation with Neural Controlled Differential Equations"
+  },
+  "processed_at": "2026-10-28T21:47:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e9bbad96046c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

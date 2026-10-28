@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-28T18:50:08+00:00",
-  "record_count": 12520,
+  "updated_at": "2026-10-28T21:47:57+00:00",
+  "record_count": 12533,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180309,6 +180309,163 @@
         ".survey/work-queue/WORKLIST-45.md"
       ],
       "title": "Multimodal Transformer With a Low-Computational-Cost Guarantee"
+    },
+    "arXiv:2403.10696": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.10696",
+      "identity_tokens": [
+        "arXiv:2403.10696"
+      ],
+      "reason": "一次要旨ではVision MambaとViTの少数例転移学習を線形プローブ・視覚プロンプトで比較する研究で、LLM推論、サービング、量子化、KVキャッシュの効率化は扱っていない。研究対象が明確に異なるため対象外。",
+      "first_checked_at": "2026-10-28T21:47:44+00:00",
+      "last_checked_at": "2026-10-28T21:47:44+00:00",
+      "linked_from": [],
+      "title": "On the low-shot transferability of [V]-Mamba"
+    },
+    "SemanticScholar:1374e199501d104d3931e08437b5c49a787abef9": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:1374e199501d104d3931e08437b5c49a787abef9",
+      "identity_tokens": [
+        "SemanticScholar:1374e199501d104d3931e08437b5c49a787abef9"
+      ],
+      "reason": "タイトルはコンピュータサイエンス一般の学習教材・紹介を示し、LLM推論の技術論文としての具体的研究課題がない。要旨・本文未確認のタイトル先行除外。",
+      "first_checked_at": "2026-10-28T21:47:49+00:00",
+      "last_checked_at": "2026-10-28T21:47:49+00:00",
+      "linked_from": [],
+      "title": "Master Computer Science"
+    },
+    "DOI:10.1111/nyas.70261": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1111/nyas.70261",
+      "identity_tokens": [
+        "DOI:10.1111/nyas.70261"
+      ],
+      "reason": "タイトルが示す対象は高精細地図作成の軽量モデルで、注意頭部剪定を応用しているがLLM推論・サービング最適化を直接扱うものではない。要旨・本文未確認のタイトル先行除外。",
+      "first_checked_at": "2026-10-28T21:47:50+00:00",
+      "last_checked_at": "2026-10-28T21:47:50+00:00",
+      "linked_from": [],
+      "title": "LiteMapNet: Lightweight Online High-Definition Mapping With Attention Head Pruning"
+    },
+    "DOI:10.1101/2025.08.09.669511": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1101/2025.08.09.669511",
+      "identity_tokens": [
+        "DOI:10.1101/2025.08.09.669511"
+      ],
+      "reason": "タイトルで明示される対象は分子表現学習の階層MoEであり、LLM推論・KVキャッシュ・推論サービングの効率化ではない。MoEという構造語の一致だけでは収録対象にならない。",
+      "first_checked_at": "2026-10-28T21:47:52+00:00",
+      "last_checked_at": "2026-10-28T21:47:52+00:00",
+      "linked_from": [],
+      "title": "Scaling Molecular Representation Learning with Hierarchical Mixture-of-Experts"
+    },
+    "arXiv:2604.09450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.09450",
+      "identity_tokens": [
+        "arXiv:2604.09450"
+      ],
+      "reason": "タイトルで明示される最終対象は胸部X線画像からの診療報告文生成であり、医療画像アプリケーション固有の一段拡散生成である。LLM推論基盤の高速化を主題とする記載はない。",
+      "first_checked_at": "2026-10-28T21:47:53+00:00",
+      "last_checked_at": "2026-10-28T21:47:53+00:00",
+      "linked_from": [],
+      "title": "ECHO: Efficient Chest X-ray Report Generation with One-step Block Diffusion"
+    },
+    "arXiv:2509.26538": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.26538",
+      "identity_tokens": [
+        "arXiv:2509.26538"
+      ],
+      "reason": "タイトルが示す最終適用先は画像生成用拡散モデルのHilbert Attentionであり、言語モデルのデコード・KVメモリ・サービングを対象とした研究ではない。",
+      "first_checked_at": "2026-10-28T21:47:53+00:00",
+      "last_checked_at": "2026-10-28T21:47:53+00:00",
+      "linked_from": [],
+      "title": "HilbertA: Hilbert Attention for Image Generation with Diffusion Models"
+    },
+    "arXiv:2509.23106": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23106",
+      "identity_tokens": [
+        "arXiv:2509.23106"
+      ],
+      "reason": "量子化の対象は学習時のMuonオプティマイザ状態であり、LLMの推論重み・KVキャッシュ・デコードカーネルではない。学習専用最適化は現在の対象外。",
+      "first_checked_at": "2026-10-28T21:47:54+00:00",
+      "last_checked_at": "2026-10-28T21:47:54+00:00",
+      "linked_from": [],
+      "title": "Effective Quantization of Muon Optimizer States"
+    },
+    "DOI:10.1109/ipdps64566.2025.00039": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ipdps64566.2025.00039",
+      "identity_tokens": [
+        "DOI:10.1109/ipdps64566.2025.00039"
+      ],
+      "reason": "タイトルが明示する目的はRLHF学習の配置・並列化であり、凍結中の学習専用最適化に該当する。推論サービングの改善を直接扱うとは読めない。",
+      "first_checked_at": "2026-10-28T21:47:55+00:00",
+      "last_checked_at": "2026-10-28T21:47:55+00:00",
+      "linked_from": [],
+      "title": "FlexRLHF: A Flexible Placement and Parallelism Framework for Efficient RLHF Training"
+    },
+    "DOI:10.48550/arxiv.2405.17890": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2405.17890",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2405.17890",
+        "arXiv:2405.17890"
+      ],
+      "reason": "タイトルが明示する研究対象は逐次推薦システムに小規模言語モデルを適用することであり、LLM推論のカーネル、メモリ、サービングを改善する研究ではない。タイトルのみの除外であり、要旨・本文は未確認。",
+      "first_checked_at": "2026-10-28T21:47:55+00:00",
+      "last_checked_at": "2026-10-28T21:47:55+00:00",
+      "linked_from": [],
+      "title": "SLMRec: Empowering Small Language Models for Sequential Recommendation"
+    },
+    "arXiv:2405.09596": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.09596",
+      "identity_tokens": [
+        "arXiv:2405.09596"
+      ],
+      "reason": "タイトルに明示された最終目的は船舶航跡の予測で、H3地理空間索引と因果言語モデリングを予測へ適用するもの。LLM推論・サービングの資源最適化が主題ではない。要旨・本文未確認。",
+      "first_checked_at": "2026-10-28T21:47:56+00:00",
+      "last_checked_at": "2026-10-28T21:47:56+00:00",
+      "linked_from": [],
+      "title": "Enhancing Maritime Trajectory Forecasting via H3 Index and Causal Language Modelling (CLM)"
+    },
+    "arXiv:2505.18728": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18728",
+      "identity_tokens": [
+        "arXiv:2505.18728"
+      ],
+      "reason": "タイトル上の対象はグラフ学習をメッセージ伝播と状態空間モデルで改善することであり、LLM推論・サービングの高速化・メモリ管理を扱うものではない。要旨・本文未確認。",
+      "first_checked_at": "2026-10-28T21:47:56+00:00",
+      "last_checked_at": "2026-10-28T21:47:56+00:00",
+      "linked_from": [],
+      "title": "Message-Passing State-Space Models: Improving Graph Learning with Modern Sequence Modeling"
+    },
+    "DOI:10.1145/3774904.3792593": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774904.3792593",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792593"
+      ],
+      "reason": "タイトルで明示された適用先は複数タスクの推薦精度・モデル設計であり、LLM推論のMoE専門家オフロードや実行時配置の研究とは確認できない。要旨・本文未確認。",
+      "first_checked_at": "2026-10-28T21:47:57+00:00",
+      "last_checked_at": "2026-10-28T21:47:57+00:00",
+      "linked_from": [],
+      "title": "Dynamic Experts Synergy for Multi-Task Recommendation"
+    },
+    "arXiv:2605.28507": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.28507",
+      "identity_tokens": [
+        "arXiv:2605.28507"
+      ],
+      "reason": "タイトルが明示する研究対象はニューラル制御微分方程式による時系列生成で、LLMの推論効率・サービング・キャッシュ最適化ではない。要旨・本文未確認。",
+      "first_checked_at": "2026-10-28T21:47:57+00:00",
+      "last_checked_at": "2026-10-28T21:47:57+00:00",
+      "linked_from": [],
+      "title": "Universal Time Series Generation with Neural Controlled Differential Equations"
     }
   }
 }

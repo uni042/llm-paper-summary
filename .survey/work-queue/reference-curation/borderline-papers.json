@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-28T20:55:30+00:00",
-  "record_count": 5393,
+  "updated_at": "2026-10-28T21:47:59+00:00",
+  "record_count": 5408,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83578,6 +83578,204 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "OThink-R1: Intrinsic Fast/Slow Thinking Mode Switching for Over-Reasoning Mitigation"
+    },
+    "arXiv:2606.30562": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.30562",
+      "identity_tokens": [
+        "arXiv:2606.30562"
+      ],
+      "reason": "FlashMorphはTransformerを全注意層と線形注意層の混合へ変換する際、合成長文脈検索データで層ゲートを最適化し、蒸留・追加学習で品質を保つ。推論効率化を目指す設計だが、要旨の中心は層選択コストと学習・品質であり、実測サービング遅延・メモリの定量寄与が不明なため境界扱い。",
+      "first_checked_at": "2026-10-28T21:47:38+00:00",
+      "last_checked_at": "2026-10-28T21:47:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Morphing into Hybrid Attention Models"
+    },
+    "arXiv:2505.23727": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.23727",
+      "identity_tokens": [
+        "arXiv:2505.23727"
+      ],
+      "reason": "PixelThinkは画像分割のマルチモーダル推論で外部の難易度推定と内部不確実性を使い、強化学習で推論長を場面難易度に合わせる。余分な推論トークン削減に関係するが、主対象が領域分割のタスク品質で一般のLLM推論システムではないため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:38+00:00",
+      "last_checked_at": "2026-10-28T21:47:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PixelThink: Towards Efficient Chain-of-Pixel Reasoning"
+    },
+    "arXiv:2601.01204": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01204",
+      "identity_tokens": [
+        "arXiv:2601.01204"
+      ],
+      "reason": "XStreamVGGTは3D視覚幾何モデルのストリーミング因果注意で増大するKVを、複数視点の冗長トークン剪定とKV量子化で固定容量へ圧縮する。言語モデルではなく視覚幾何推論へのKV手法の応用なので境界候補。",
+      "first_checked_at": "2026-10-28T21:47:39+00:00",
+      "last_checked_at": "2026-10-28T21:47:39+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "XStreamVGGT: Extremely Memory-Efficient Streaming Vision Geometry Grounded Transformer with KV Cache Compression"
+    },
+    "arXiv:2408.16730": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.16730",
+      "identity_tokens": [
+        "arXiv:2408.16730"
+      ],
+      "reason": "VideoLLM-MoDは長時間動画VLMで視覚トークンを捨てず、層ごとに大半の視覚トークンの計算をスキップする深さ方向の適応計算を導入する。主な定量値は学習時間約42%・メモリ約30%削減で、推論サービングの実測が要旨にないため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:41+00:00",
+      "last_checked_at": "2026-10-28T21:47:41+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VideoLLM-MoD: Efficient Video-Language Streaming with Mixture-of-Depths Vision Computation"
+    },
+    "arXiv:2510.09389": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.09389",
+      "identity_tokens": [
+        "arXiv:2510.09389"
+      ],
+      "reason": "Transformer・SSM・ゲート付き線形RNNの過去値ベクトルへの係数を線形力学系として統一し、表現力、実装効率、数値安定性の設計原理を導く。推論実装への示唆はあるが新規カーネルや推論時性能の実測はなく、理論的な関連に留まる境界候補。",
+      "first_checked_at": "2026-10-28T21:47:42+00:00",
+      "last_checked_at": "2026-10-28T21:47:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Design Principles for Sequence Models via Coefficient Dynamics"
+    },
+    "arXiv:2507.15758": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.15758",
+      "identity_tokens": [
+        "arXiv:2507.15758"
+      ],
+      "reason": "LAPOは成功した推論長の分布を学び、二段階の強化学習で問題難易度に応じた思考長制御をモデル内部へ獲得させる。推論時トークンを最大40.9%削減するが、中心貢献は学習アルゴリズムでサービング/実行系の最適化ではないため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:42+00:00",
+      "last_checked_at": "2026-10-28T21:47:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "LAPO: Internalizing Reasoning Efficiency via Length-Adaptive Policy Optimization"
+    },
+    "arXiv:2602.11243": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.11243",
+      "identity_tokens": [
+        "arXiv:2602.11243"
+      ],
+      "reason": "StructMemEvalは取引台帳、TODO、木構造などの記憶構造をエージェントが形成できるかを評価する。長期記憶フレームワークの機能には関係するが、KV圧縮・メモリ階層配置・サービング遅延の最適化が主題ではないため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:43+00:00",
+      "last_checked_at": "2026-10-28T21:47:43+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Evaluating Memory Structure in LLM Agents"
+    },
+    "arXiv:2601.21824": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21824",
+      "identity_tokens": [
+        "arXiv:2601.21824"
+      ],
+      "reason": "DASHはFlashAttentionの決定的逆伝播における勾配集約の逐次化をDAGスケジューリングで改善し、問い合わせタイルの逆順処理とShift Schedulingを提案する。GPUカーネル効率に関係するが主対象は学習の逆伝播で推論ではないため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:44+00:00",
+      "last_checked_at": "2026-10-28T21:47:44+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DASH: Deterministic Attention Scheduling for High-throughput Reproducible LLM Training"
+    },
+    "arXiv:2601.12906": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.12906",
+      "identity_tokens": [
+        "arXiv:2601.12906"
+      ],
+      "reason": "Gdwmは長文脈のテスト時適応で全区間を一様に勾配更新せず、Contextual Utilityで情報価値を見積もる書込み制御器が作業メモリへ反映する区間と勾配ステップ数を選ぶ。推論時追加学習の計算予算削減に関連するが、一般のKVサービング機構とは異なるため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:45+00:00",
+      "last_checked_at": "2026-10-28T21:47:45+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Gated Differentiable Working Memory for Long-Context Language Modeling"
+    },
+    "arXiv:2602.22592": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22592",
+      "identity_tokens": [
+        "arXiv:2602.22592"
+      ],
+      "reason": "pQuantは1bit主体の線形分岐と少数の高精度パラメータ分岐を分離し、重要パラメータの表現力を守る量子化対応学習方式。エッジ推論向け低ビットモデルを作るが、一次要旨の主要貢献はゼロからの学習方法と精度であり、推論時の速度・メモリの実測条件が不明なため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:46+00:00",
+      "last_checked_at": "2026-10-28T21:47:46+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "pQuant: Towards Effective Low-Bit Language Models via Decoupled Linear Quantization-Aware Training"
+    },
+    "arXiv:2407.06677": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.06677",
+      "identity_tokens": [
+        "arXiv:2407.06677"
+      ],
+      "reason": "Mixture-of-Modulesは注意・FFNモジュールを二つのルータで反復選択し、深さ固定のTransformerとは異なる動的計算グラフを構築する。TFLOPsとメモリの減少を報告するが、主評価は事前学習とGLUE/XSUM品質であり推論時の実測レイテンシやサービング性能が要旨から確認できないため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:48+00:00",
+      "last_checked_at": "2026-10-28T21:47:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mixture-of-Modules: Reinventing Transformers as Dynamic Assemblies of Modules"
+    },
+    "arXiv:2506.12044": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.12044",
+      "identity_tokens": [
+        "arXiv:2506.12044"
+      ],
+      "reason": "3～4bit重み量子化の入力ごとの誤差を7B～70Bで比較し、残差ストリームの大きさや後段MLPゲートが量子化後PPLの悪化に関与することを解析する。新しい推論高速化方式は提示しないが、低ビット推論の失敗条件と感度部位の把握に有用な境界候補。",
+      "first_checked_at": "2026-10-28T21:47:48+00:00",
+      "last_checked_at": "2026-10-28T21:47:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Why Do Some Inputs Break Low-Bit LLM Quantization?"
+    },
+    "arXiv:2601.11667": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.11667",
+      "identity_tokens": [
+        "arXiv:2601.11667"
+      ],
+      "reason": "DtRは事前学習済み全注意モデルの各層を局所蒸留して線形注意へ変換し、下流タスクの検証品質を監視しながら貪欲に層を置換する。長系列推論の計算量削減を目指すが、一次要旨は変換・蒸留コストと品質を中心に述べ、実際の推論遅延・KV容量の実測が確認できないため境界候補。",
+      "first_checked_at": "2026-10-28T21:47:58+00:00",
+      "last_checked_at": "2026-10-28T21:47:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Distill-then-Replace: Efficient Task-Specific Hybrid Attention Model Construction"
+    },
+    "arXiv:2604.18170": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.18170",
+      "identity_tokens": [
+        "arXiv:2604.18170"
+      ],
+      "reason": "入力からの複写範囲を文法制約で表し、既存トークンの逐次生成を並列prefillへ置換するLLM編集向けデコード機構であり、技術的には推論最適化と関係する。ただしarXiv v2は著者・貢献合意に関する内部審査を理由に撤回済みで、本文も公開されず、数値は上限解析と試験的学習に留まるため収録保留。",
+      "first_checked_at": "2026-10-28T21:47:58+00:00",
+      "last_checked_at": "2026-10-28T21:47:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Copy-as-Decode: Grammar-Constrained Parallel Prefill for LLM Editing"
+    },
+    "arXiv:2603.04592": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.04592",
+      "identity_tokens": [
+        "arXiv:2603.04592",
+        "id:SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+        "id:arXiv:2603.04592",
+        "url:https://arxiv.org/abs/2603.04592"
+      ],
+      "reason": "入力ストリームと出力ストリームの同期・対話方針を中心に、出力逐次・入力逐次・同時ストリーミングLLMを分類する広範なサーベイ。KV管理と遅延・投機的復号も含むが主眼は対話アーキテクチャと応用の体系化であり、推論速度・メモリ最適化の実測比較が中心ではないためborderline。",
+      "first_checked_at": "2026-10-28T21:47:59+00:00",
+      "last_checked_at": "2026-10-28T21:47:59+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models"
     }
   }
 }

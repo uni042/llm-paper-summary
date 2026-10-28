@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-65d30144e1d422e1-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.09389",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.09389",
+    "identity_tokens": [
+      "arXiv:2510.09389"
+    ],
+    "reason": "Transformer・SSM・ゲート付き線形RNNの過去値ベクトルへの係数を線形力学系として統一し、表現力、実装効率、数値安定性の設計原理を導く。推論実装への示唆はあるが新規カーネルや推論時性能の実測はなく、理論的な関連に留まる境界候補。",
+    "first_checked_at": "2026-10-28T21:47:42+00:00",
+    "last_checked_at": "2026-10-28T21:47:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Design Principles for Sequence Models via Coefficient Dynamics"
+  },
+  "processed_at": "2026-10-28T21:47:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-65d30144e1d4",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
