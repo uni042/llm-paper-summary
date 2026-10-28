@@ -1864,6 +1864,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   本研究の対象は、同じ大規模言語モデルを複数のGPUインスタンスで提供するとき、各要求をどのインスタンスへ送るかという負荷分散である。1インスタンス内のバッチ形成を改善する研究と異なり、要求がいったん不適切なインスタンスへ送られると、その内部のスケジューラだけでは混在負荷による干渉を解消しにくい。
 
+- **2025-03 · [Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques](2025-2503.11816-key-value-compress-a-systematic-exploration-of-kv-cache-compression-tech.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  長文脈の大規模言語モデルで問題になるキー・バリュー（KV）キャッシュの容量を減らす方式を、どの軸の冗長性を削るかという視点で整理する。したがって表4の2.87倍と1.86倍を並べて前者が後者より優れた方式と結論付けることはできない。
+
 - **2025-02 · [BumbleBee: Secure Two-party Inference Framework for Large Transformers](2025-93b16acfd7b9-bumblebee-secure-two-party-inference-framework-for-large-transformers.md)**  
   実装：[✓](https://github.com/AntCPLab/OpenBumbleBee) ・ リポジトリ内被引用：3  
   入力とモデル重みをそれぞれ秘匿したままBERT、GPT-2、LLaMA-7B、ViTを実行し、従来方式に比べて実測の転送量と実行時間を改善する。
@@ -1903,10 +1907,6 @@
 - **2025-03 · [RSQ: Learning from Important Tokens Leads to Better Quantized LLMs](2025-2503.01820-rsq-learning-from-important-tokens-leads-to-better-quantized-llms.md)**  
   実装：[✓](https://github.com/ylsung/rsq) ・ リポジトリ内被引用：2  
   GPTQなどの事後量子化（Post-学習 量子化; PTQ）は、元の重みを低ビットへ丸めるとき、少数の校正データで量子化前後の層出力を比較して誤差を補償する。2bit条件ではQuaRotの平均35.3%に対しRSQは40.6%となる。
-
-- **2025-03 · [Key, Value, Compress: A Systematic Exploration of KV Cache Compression Techniques](2025-2503.11816-key-value-compress-a-systematic-exploration-of-kv-cache-compression-tech.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  長文脈の大規模言語モデルで問題になるキー・バリュー（KV）キャッシュの容量を減らす方式を、どの軸の冗長性を削るかという視点で整理する。したがって表4の2.87倍と1.86倍を並べて前者が後者より優れた方式と結論付けることはできない。
 
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：2  
