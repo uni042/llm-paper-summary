@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T21:58:43.706009+00:00",
+  "generated_at": "2026-10-28T22:55:59.060811+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 3,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 3,
-    "scheduled-chat-45": 2
+    "scheduled-chat-00": 1,
+    "scheduled-chat-30": 1,
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -77,86 +77,6 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
-      "canonical_id": "arXiv:2307.03738",
-      "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
-      "file_bytes": 16421,
-      "source_sha256": "e34d45ec415f854659dc3c618a19e795ce75825b20a04fd876f8c2b827d03ae4",
-      "source_git_blob_sha": "f3f0d1fec05c91aa4ea271bec21442c92774b7e9",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.94702,
-      "quality_metrics": {
-        "body_chars": 4513,
-        "method_chars": 1287,
-        "evaluation_chars": 1065,
-        "limitation_chars": 453
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md",
-      "canonical_id": "arXiv:2609.36938",
-      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
-      "file_bytes": 16538,
-      "source_sha256": "9f355d4ffdee7298ec621d18d69ac5805dcf2db21c3ad8c522c030b8b554b29b",
-      "source_git_blob_sha": "54e16cb700ee38724c973d10ad94ff1b0b5f5254",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.86037,
-      "quality_metrics": {
-        "body_chars": 4225,
-        "method_chars": 1237,
-        "evaluation_chars": 955,
-        "limitation_chars": 415
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md",
-      "canonical_id": "arXiv:2607.25291",
-      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
-      "file_bytes": 18058,
-      "source_sha256": "36759b1f7b3b5185d79665b6134031f404435a3bb9bd7c4be734ed1de11389b9",
-      "source_git_blob_sha": "3bffbb7de7ce30090652b571a4a0793f71a1c96a",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.902956,
-      "quality_metrics": {
-        "body_chars": 4117,
-        "method_chars": 1223,
-        "evaluation_chars": 588,
-        "limitation_chars": 493
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.13161-mirror-speculative-decoding-breaking-the-serial-barrier-in-llm-inference.md",
-      "canonical_id": "arXiv:2510.13161",
-      "title": "Mirror Speculative Decoding: Breaking the Serial Barrier in LLM Inference",
-      "file_bytes": 18510,
-      "source_sha256": "6d62d42cc9890192ad7542d7a21fc028024573474d71be30bc0ecb33acb2d36d",
-      "source_git_blob_sha": "64781019c4ea1596ac2d166b2b652f7971441f8f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.924276,
-      "quality_metrics": {
-        "body_chars": 3893,
-        "method_chars": 1466,
-        "evaluation_chars": 936,
-        "limitation_chars": 353
       },
       "mechanical_failures": [],
       "warnings": []
