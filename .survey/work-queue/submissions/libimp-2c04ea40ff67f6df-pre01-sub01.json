@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2601.07667",
+      "year": 2026,
+      "published": "2026-01-12",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Due to the prevalence of large language models (LLMs), key-value (KV) cache reduction for LLM inference has received remarkable attention. Among numerous works that have been proposed in recent years, layer-wise token pruning approaches, which select a subset of tokens at particular layers to retain in KV cache and prune others, are one of the most popular schemes. They primarily adopt a set of pre-defined layers, at which tokens are selected. Such design is inflexible in the sense that the accuracy significantly varies across tasks and deteriorates in harder tasks such as KV retrieval. In this paper, we propose ASL, a training-free method that adaptively chooses the selection layer for KV cache reduction, exploiting the variance of token ranks ordered by attention score. The proposed method balances the performance across different tasks while meeting the user-specified KV budget requirement. ASL operates during the prefilling stage and can be jointly used with existing KV cache reduction methods such as SnapKV to optimize the decoding stage. By evaluations on the InfiniteBench, RULER, and NIAH benchmarks, we show that ASL, equipped with one-shot token selection, adaptively trades inference speed for accuracy, outperforming state-of-the-art layer-wise token pruning methods in difficult tasks.",
+      "identifiers": [
+        "SemanticScholar:d09956fbf42d4cfcd57152dd164a77c3c18348ec"
+      ],
+      "semantic_scholar_id": "d09956fbf42d4cfcd57152dd164a77c3c18348ec",
+      "canonical_id": "arXiv:2601.07667",
+      "arxiv_id": "2601.07667",
+      "doi": "10.48550/arXiv.2601.07667",
+      "authors": [
+        "Rei Taniguchi",
+        "Yu-Yang Dong",
+        "Makoto Onizuka",
+        "Chuan Xiao"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 289,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ASLは事前固定されたKV削減層では難しい検索タスクの精度が悪化する問題に対し、注意スコア順位の分散から選択層を適応決定する。学習不要のprefill時KV選択で、SnapKVなどのdecode時削減と併用でき、InfiniteBench・RULER・NIAHで推論の速度・精度・KV予算を評価しているため直接対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Monte Carlo Estimation for KV Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2610.07643",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most KV-cache eviction methods ask, in effect, which memory appeared important while reading the prompt? We instead ask which memory will matter while answering? Since decoding queries are unavailable at eviction time, prior future-aware methods rely on pseudo-responses or synthetic future-query estimates. We cast fixed-budget future-aware eviction as distributional estimation over plausible model-conditional query trajectories and introduce LORE-KV (Lookahead Output-perturbation with Reliability-weighted Ensembles for Key-Value caches), a training-free method that samples short autoregressive continuations from the frozen target model and uses their response-side query states to estimate prompt-token utility. Tokens are scored by projected leave-one-out attention-output deletion cost and aggregated across sampled futures with optional trajectory weighting. The temporary continuations are discarded before final decoding, requiring no auxiliary model or training. Ablations isolate the mechanism: at B=128, a single response-side continuation recovers about 89% of the gain over the prompt-window control, while additional futures provide smaller improvements. At B=128, LORE-KV raises the LongBench average on Qwen2.5-14B from 45.49 to 48.24 (+2.75) and the 16K RULER average on Mistral-7B from 45.20 to 51.05 (+5.85); on Llama-3.1-8B, the RULER margin over AnDPro widens to +8.13 and +11.65 points at 64K and 128K contexts. Gains diminish at larger cache budgets and coexist with task-level regressions. LORE-KV incurs 1.46-2.77x AnDPro's per-sample wall-clock time as a one-time compression overhead across six dense and hybrid-attention backbones. Project webpage: https://ahsanbilal7.github.io/train_free_kv/",
+      "identifiers": [
+        "SemanticScholar:e6c9942bd30650019b26d57bb45d8f1ad1fb989c"
+      ],
+      "semantic_scholar_id": "e6c9942bd30650019b26d57bb45d8f1ad1fb989c",
+      "canonical_id": "arXiv:2610.07643",
+      "arxiv_id": "2610.07643",
+      "authors": [
+        "Ahsan Bilal",
+        "Muhammad Ahmed Mohsin",
+        "Muhammad Umer",
+        "W. Raza",
+        "Atta Ul Asad",
+        "Young D. Kwon",
+        "M. Valko",
+        "Dean F. Hougen"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LORE-KVは凍結した教師LLMから短い仮継続を複数サンプルし、将来の応答側クエリを推定してKV削除の重要度を評価する。LongBench・RULERの精度と1.46～2.77倍の一回限りの圧縮オーバーヘッドを扱う、推論時KVメモリ管理の直接的研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Toppings: CPU-Assisted, Rank-Aware Adapter Serving for LLM Inference",
+      "source_url": "https://www.semanticscholar.org/paper/69d631b3875149050ab3088501cfc9d5cbea9e99",
+      "year": 2025,
+      "published": null,
+      "venue": "USENIX Annual Technical Conference",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:69d631b3875149050ab3088501cfc9d5cbea9e99"
+      ],
+      "semantic_scholar_id": "69d631b3875149050ab3088501cfc9d5cbea9e99",
+      "canonical_id": "SemanticScholar:69d631b3875149050ab3088501cfc9d5cbea9e99",
+      "authors": [
+        "Su-Yi Li",
+        "Han-Feng Lu",
+        "Tian-Yuan Wu",
+        "Minchen Yu",
+        "Qizhen Weng",
+        "Xu-Sheng Chen",
+        "Yizhou Shan",
+        "Binhang Yuan",
+        "Wei Wang"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 484,
+        "matched_prestigious_venue": "USENIX Annual Technical Conference"
+      },
+      "reason": "USENIX ATC 2025のToppingsは基盤LLMをGPUへ常駐させ、LoRAアダプタ転送中のprefill補正をCPUで並行処理し、転送後GPUへ移す。ランク認識SLOスケジューリングにより遅延最大1.7倍改善・SLO達成率最大99%を報告するmulti-LoRAサービング研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "GraphKV: Breaking the Static Selection Paradigm with Graph-Based KV Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2509.00388",
+      "year": 2025,
+      "published": "2025-08-30",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient Key-Value (KV) cache management is essential for processing long text sequences in large language models (LLMs), where memory constraints often limit performance. Conventional KV eviction strategies, such as top-k selection based on attention scores, depend on static heuristics that fail to capture the evolving implicit dependencies among tokens during inference. To overcome this, we propose GraphKV, a graph-based framework that redefines token selection for KV cache compression. In GraphKV, tokens are modeled as nodes with importance scores, and edges represent their similarity relationships. Through a decay-signal-propagation mechanism, token importance is dynamically updated by propagating information across the graph, enabling adaptive retention of the most contextually significant tokens. GraphKV can be seamlessly utilized in existing KV cache eviction methods such as SnapKV and PyramidKV in a plug-and-play manner. Codes will be released on Github.",
+      "identifiers": [
+        "SemanticScholar:78b7bcf6a08a663cacd26b92b9568a777743f53f"
+      ],
+      "semantic_scholar_id": "78b7bcf6a08a663cacd26b92b9568a777743f53f",
+      "canonical_id": "arXiv:2509.00388",
+      "arxiv_id": "2509.00388",
+      "doi": "10.48550/arXiv.2509.00388",
+      "authors": [
+        "Xuelin Li",
+        "Xiangqi Jin",
+        "Linfeng Zhang"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 424,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "GraphKVはKVトークンを頂点、類似性を辺とするグラフ上で減衰信号を伝播し、推論中に重要度を更新する。SnapKV・PyramidKVへ組み込めるKV削除方式であり、長文脈推論のキャッシュ保持選択への直接的な技術貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference",
+      "source_url": "https://arxiv.org/abs/2604.07394",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The quadratic computational complexity of standard attention mechanisms presents a severe scalability bottleneck for LLMs in long-context scenarios. While hybrid attention mechanisms combining Full Attention (FA) and Sparse Attention (SA) offer a potential solution, existing methods typically rely on static allocation ratios that fail to accommodate the variable retrieval demands of different tasks. Furthermore, head-level dynamic sparsity often introduces severe computational load imbalance and synchronization long-tails, which hinder hardware acceleration during autoregressive decoding. To bridge this gap, we introduce Flux Attention, a context-aware framework that dynamically optimizes attention computation at the layer level. By integrating a lightweight Layer Router into frozen pretrained LLMs, the proposed method adaptively routes each layer to FA or SA based on the input context. This layer-wise routing preserves high-fidelity information retrieval while ensuring contiguous memory access, translating theoretical computational reductions into practical wall-clock speedups. As a parameter-efficient approach, our framework requires only 12 hours of training on 8$\\times$A800 GPUs. Extensive experiments across multiple long-context and mathematical reasoning benchmarks demonstrate that Flux Attention achieves a superior trade-off between performance and inference speed compared with baseline models, with speed improvements of up to $2.8\\times$ and $2.0\\times$ in the prefill and decode stages.",
+      "identifiers": [
+        "SemanticScholar:4a6b991ff5a1cf670925d16b89690c2b22db2f3e"
+      ],
+      "semantic_scholar_id": "4a6b991ff5a1cf670925d16b89690c2b22db2f3e",
+      "canonical_id": "arXiv:2604.07394",
+      "arxiv_id": "2604.07394",
+      "doi": "10.48550/arXiv.2604.07394",
+      "authors": [
+        "Quantong Qiu",
+        "Zhiyi Hong",
+        "Yi Yang",
+        "Maggie Haitian Wang",
+        "Ke-Bin Liu",
+        "Qing-Qing Dang",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 203,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Flux Attentionは凍結LLMへ軽量Layer Routerを導入し、入力文脈に応じて各層をFull AttentionかSparse Attentionへ割り振る。ヘッド単位の負荷偏りを避ける層単位の連続アクセスとprefill最大2.8倍・decode最大2.0倍の速度評価があり、長文脈推論の直接最適化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2c04ea40ff67",
+    "round": "libimp-2c04ea40ff67f6df-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2c04ea40ff67f6df-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2c04ea40ff67f6df-pre01.json",
+    "receipt": "sha256:d37d18329bafa320651836bed1dff92e50114a321ce47939a0dbd4d98120904b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2c04ea40ff67",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

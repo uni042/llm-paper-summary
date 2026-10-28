@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Sustainability Is Not Linear: Quantifying Performance, Energy, and Privacy Trade-offs in On-Device Intelligence",
+      "source_url": "https://arxiv.org/abs/2603.26603",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The migration of Large Language Models (LLMs) from cloud clusters to edge devices promises enhanced privacy and offline accessibility, but this transition encounters a harsh reality: the physical constraints of mobile batteries, thermal limits, and, most importantly, memory constraints. To navigate this landscape, we constructed a replicable and reproducible experimental pipeline to profile the complex interplay between energy consumption, latency, and quality of LLMs on mobile devices. We harness this pipeline to conduct an empirical case study on a flagship Android device, capturing granular metrics across eight LLMs ranging from 0.5B to 9B parameters without requiring root access, ensuring our findings reflect realistic user conditions. The findings highlight the trade-offs between generation quality, performance, power and resource consumption, revealing which LLMs offer the best balance across metrics and under different conditions. Besides, we uncovered a counter-intuitive quantization energy paradox: while modern importance-aware quantization successfully reduces memory footprints to fit larger models into RAM, we found it yields negligible energy savings compared to standard mixed-precision methods. This proves that for battery life, the architecture of the model, not its quantization scheme, is the decisive factor. We further identified that Mixture-of-Experts (MoE) architectures defy the standard size-energy trend, offering the storage capacity of a 7B model while maintaining the lower energy profile of a 1B to 2B model. Finally, an analysis of these multi-objective trade-offs reveals a pragmatic sweet spot of mid-sized models, such as Qwen2.5-3B, that effectively balance response quality with sustainable energy consumption.",
+      "identifiers": [
+        "SemanticScholar:dab02d898dcb2b46353e80d22b0c7746bee9587d"
+      ],
+      "semantic_scholar_id": "dab02d898dcb2b46353e80d22b0c7746bee9587d",
+      "canonical_id": "arXiv:2603.26603",
+      "arxiv_id": "2603.26603",
+      "doi": "10.48550/arXiv.2603.26603",
+      "authors": [
+        "Eziyo Ehsani",
+        "L. Giamattei",
+        "I. Malavolta",
+        "R. Pietrantuono"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Android実機上で0.5B～9Bの8言語モデルを動かし、生成品質・遅延・電力・メモリの交換を測る。重要度付き量子化の容量削減が必ずしも電池消費削減にならず、MoEのエネルギー特性も異なることを示す端末LLM推論評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "CLASP: Class-Adaptive Layer Fusion and Dual-Stage Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.12767",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) suffer from substantial computational overhead due to the high redundancy in visual token sequences. Existing approaches typically address this issue using single-layer Vision Transformer (ViT) features and static pruning strategies. However, such fixed configurations are often brittle under diverse instructions. To overcome these limitations, we propose CLASP, a plug-and-play token reduction framework based on class-adaptive layer fusion and dual-stage pruning. Specifically, CLASP first constructs category-specific visual representations through multi-layer vision feature fusion. It then performs dual-stage pruning, allocating the token budget between attention-salient pivot tokens for relevance and redundancy-aware completion tokens for coverage. Through class-adaptive pruning, CLASP enables prompt-conditioned feature fusion and budget allocation, allowing aggressive yet robust visual token reduction. Extensive experiments demonstrate that CLASP consistently outperforms existing methods across a wide range of benchmarks, pruning ratios, and MLLM architectures. Code will be available at https://github.com/Yunkaidang/CLASP.",
+      "identifiers": [
+        "SemanticScholar:28ab5cefde5a1e3342917a99a3d75289247d62e7"
+      ],
+      "semantic_scholar_id": "28ab5cefde5a1e3342917a99a3d75289247d62e7",
+      "canonical_id": "arXiv:2604.12767",
+      "arxiv_id": "2604.12767",
+      "doi": "10.48550/arXiv.2604.12767",
+      "authors": [
+        "Yun-Kai Dang",
+        "Yi-Zhuo Jiang",
+        "Yi-Fan Jiang",
+        "Qi-Yuan Fan",
+        "Ying-Huan Shi",
+        "Wen-Bin Li",
+        "Yang Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CLASPは画像の対象カテゴリと指示に応じて複数の視覚層の特徴を融合し、注意で重要な基点トークンと重複を補う補完トークンへ予算を二段階配分する。MLLM推論時の視覚トークン数と計算を削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "SEPTQ: A Simple and Effective Post-Training Quantization Paradigm for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.10091",
+      "year": 2025,
+      "published": "2025-07-20",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown remarkable performance in various domains, but they are constrained by massive computational and storage costs. Quantization, an effective technique for compressing models to fit resource-limited devices while preserving generative quality, encompasses two primary methods: quantization aware training (QAT) and post-training quantization (PTQ). QAT involves additional retraining or fine-tuning, thus inevitably resulting in high training cost and making it unsuitable for LLMs. Consequently, PTQ has become the research hotspot in recent quantization methods. However, existing PTQ methods usually rely on various complex computation procedures and suffer from considerable performance degradation under low-bit quantization settings. To alleviate the above issues, we propose a simple and effective post-training quantization paradigm for LLMs, named SEPTQ. Specifically, SEPTQ first calculates the importance score for each element in the weight matrix and determines the quantization locations in a static global manner. Then it utilizes the mask matrix which represents the important locations to quantize and update the associated weights column-by-column until the appropriate quantized weight matrix is obtained. Compared with previous methods, SEPTQ simplifies the post-training quantization procedure into only two steps, and considers the effectiveness and efficiency simultaneously. Experimental results on various datasets across a suite of models ranging from millions to billions in different quantization bit-levels demonstrate that SEPTQ significantly outperforms other strong baselines, especially in low-bit quantization scenarios.",
+      "identifiers": [
+        "SemanticScholar:a315642f742c15d5ab19fba393f142ff3e9fa704"
+      ],
+      "semantic_scholar_id": "a315642f742c15d5ab19fba393f142ff3e9fa704",
+      "canonical_id": "arXiv:2604.10091",
+      "arxiv_id": "2604.10091",
+      "doi": "10.1145/3690624.3709287",
+      "authors": [
+        "Han Liu",
+        "Haotian Gao",
+        "Xiaotong Zhang",
+        "Changya Li",
+        "Feng Zhang",
+        "Wei Wang",
+        "Fenglong Ma",
+        "Hong Yu"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SEPTQは重み行列要素の重要度を算出して量子化対象位置を静的に決め、重要度マスクを使って列ごとに量子化と重み更新を行う二段階の事後量子化方式。低ビットLLMを省メモリ推論へ配置するための圧縮手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Entropy Meets Importance: A Unified Head Importance-Entropy Score for Stable and Efficient Transformer Pruning",
+      "source_url": "https://arxiv.org/abs/2510.13832",
+      "year": 2025,
+      "published": "2025-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have achieved remarkable performance in NLP tasks. However, their structural characteristics-multiple layers and attention heads-introduce efficiency challenges in inference and deployment. To address these challenges, various pruning methods have recently been proposed. Notably, gradient-based methods using Head Importance Scores (HIS) have gained traction for interpretability, efficiency, and ability to identify redundant heads. However, HIS alone has limitations as it captures only the gradient-driven contribution, overlooking the diversity of attention patterns. To overcome these limitations, we introduce a novel pruning criterion, HIES (Head Importance-Entropy Score), which integrates head importance scores with attention entropy, providing complementary evidence on per-head contribution. Empirically, HIES-based pruning yields up to 15.2% improvement in model quality and 2.04x improvement in stability over HIS-only methods, enabling substantial model compression without sacrificing either accuracy or stability. Code will be released upon publication.",
+      "identifiers": [
+        "SemanticScholar:bf7171b89dfae23c357db155343292b525f28cb1"
+      ],
+      "semantic_scholar_id": "bf7171b89dfae23c357db155343292b525f28cb1",
+      "canonical_id": "arXiv:2510.13832",
+      "arxiv_id": "2510.13832",
+      "doi": "10.48550/arXiv.2510.13832",
+      "authors": [
+        "Minsik Choi",
+        "Hyegang Son",
+        "Changhoon Kim",
+        "Young Geun Kim"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": null
+      },
+      "reason": "HIESは注意頭部の勾配に基づく重要度と注意分布のエントロピーを組み合わせ、冗長な頭部を安定的に剪定する。推論配置時のTransformer構造圧縮を目的とし、HIS単独剪定との品質・安定性を比較する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-78ebe8df6bbc",
+    "round": "libimp-78ebe8df6bbc86e4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-78ebe8df6bbc86e4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-78ebe8df6bbc86e4-pre01.json",
+    "receipt": "sha256:229c78ce216dd789358b45c758a37387df1d75055a99280f0b7c3774f296ef4b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-78ebe8df6bbc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

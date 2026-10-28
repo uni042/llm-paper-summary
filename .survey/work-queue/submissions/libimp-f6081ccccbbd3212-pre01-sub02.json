@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Transactional Attention: Semantic Sponsorship for KV-Cache Retention",
+      "source_url": "https://arxiv.org/abs/2604.11288",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "At K=16 tokens (0.4% of a 4K context), every existing KV-cache compression method achieves 0% on credential retrieval. The failure mode is dormant tokens: credentials, API keys, and configuration values that receive near-zero attention but become essential at generation time. Because these tokens lack the statistical signals that eviction policies rely on, no method based on attention scores, reconstruction loss, or learned retention gates retains them. We introduce Transactional Attention (TA), a sponsorship mechanism in which structural anchor patterns (e.g.,\"key:\",\"password:\") protect adjacent value-bearing tokens from eviction. TA achieves 100% credential retrieval at K=16 where six baselines (H2O, TOVA, SnapKV, StreamingLLM, PyramidKV, DynamicKV) achieve 0%, and sustains 100% accuracy across 200 function-calling trials. TA-Fast, an attention-free variant, reduces memory overhead by 52% and is compatible with SDPA and FlashAttention. TA is orthogonal to existing compression methods and adds less than 1% latency overhead.",
+      "identifiers": [
+        "SemanticScholar:6ffa0ad7d2deab80f10c93cbc8c8f5adac37eaee"
+      ],
+      "semantic_scholar_id": "6ffa0ad7d2deab80f10c93cbc8c8f5adac37eaee",
+      "canonical_id": "arXiv:2604.11288",
+      "arxiv_id": "2604.11288",
+      "doi": "10.48550/arXiv.2604.11288",
+      "authors": [
+        "Abhinaba Basu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 198,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transactional Attentionは注意重みが低くても後続の認証情報取得に不可欠な値トークンを、key:などの構造アンカーから保護する。4K文脈の16トークンKV予算で六方式が失敗する条件を検証し、TA-Fastで52%メモリ削減と1%未満の遅延費用を報告するKV保持方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference",
+      "source_url": "https://arxiv.org/abs/2610.01950",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse expert activation reduces MoE models'computation, yet expert weights can exceed limited device memory. Offloading makes inference feasible on a compact AI appliance but exposes host-to-device transfers to the inference path. We present MoE-CORE, a system that coordinates expert offloading and residency for memory-constrained MoE inference. It stages complete expert layers in alternating buffers during prefill. During decode, it combines nonuniform layer-wise cache capacity, domain-informed initialization, routing-history-aware replacement, and cross-layer prefetching. The main configuration executes router-selected experts exactly; an optional score-based substitution path handles eligible low-score misses. The main comparison uses 1K- and 128-token output caps for MoE-CORE and vLLM Prefetch, respectively. Across five workloads per model, MoE-CORE records a mean time per output token (TPOT) of 38.0-44.8 ms versus 1268.9-1269.1 ms for the evaluated vLLM Prefetch configuration on DeepSeek-V4-Flash-W4A8; the corresponding values on GLM-5.2-W4A8C8 are 206.6-220.5 and 5941.5-5941.8 ms. Under an 84-GB NPU-memory cap, the best measured DeepSeek GSM8K configuration achieves a TPOT of 21.5 ms with approximate expert substitution and multi-token prediction (MTP) at depth 2. These results support coordinated expert residency and transfer scheduling under a device-memory constraint. The code is here.",
+      "identifiers": [
+        "SemanticScholar:68dc26e33b33f7f7bc7049df561c37662a52824e"
+      ],
+      "semantic_scholar_id": "68dc26e33b33f7f7bc7049df561c37662a52824e",
+      "canonical_id": "arXiv:2610.01950",
+      "arxiv_id": "2610.01950",
+      "authors": [
+        "Ke Yang",
+        "Yong-Ji Gao",
+        "Xu-Shi Li",
+        "Kui Luo",
+        "Si-Cheng Zhang",
+        "Tian-Ming Zhou",
+        "Ke-Yi Liu",
+        "S. Lu",
+        "Ao-Xuan Chen",
+        "Jie Meng",
+        "Jing Gao",
+        "Dan Li",
+        "Xin-Kai You",
+        "Zhi-Xiang Xia",
+        "Yan Shi",
+        "Yang Liu",
+        "Yan-Jia Zeng",
+        "Liang-Jun Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE-COREはNPUメモリ制約下でprefill時に専門家層を交互バッファへ転送し、decode時に層別キャッシュ容量・ルーティング履歴による置換・層間プリフェッチを協調する。DeepSeek-V4-Flash/GLM-5.2のTPOT実測があり、MoE推論時の専門家退避・常駐最適化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "PermLLM: Learnable Channel Permutation for N:M Sparse Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.10136",
+      "year": 2025,
+      "published": "2025-10-11",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Channel permutation is a powerful technique for enhancing the accuracy of N:M sparse models by reordering the channels of weight matrices to prioritize the retention of important weights. However, traditional channel permutation methods rely on handcrafted quality metrics, which often fail to accurately capture the true impact of pruning on model performance. To address this limitation, we propose PermLLM, a novel post-training pruning framework that introduces learnable channel permutation (LCP) for N:M sparsity. LCP leverages Sinkhorn normalization to transform discrete permutation matrices into differentiable soft permutation matrices, enabling end-to-end optimization. Additionally, PermLLM incorporates an efficient block-wise channel permutation strategy, which significantly reduces the number of learnable parameters and computational complexity. PermLLM seamlessly integrates with existing one-shot pruning methods to adaptively optimize channel permutations, effectively mitigating pruning-induced errors. Extensive experiments on the LLaMA series, Qwen, and OPT models demonstrate that PermLLM achieves superior performance in optimizing N:M sparse models. The code is available at https://github.com/lanchengzou/PermLLM.",
+      "identifiers": [
+        "SemanticScholar:594755fc68c7e4eb355cc518ea28334c3a7b7094"
+      ],
+      "semantic_scholar_id": "594755fc68c7e4eb355cc518ea28334c3a7b7094",
+      "canonical_id": "arXiv:2510.10136",
+      "arxiv_id": "2510.10136",
+      "doi": "10.48550/arXiv.2510.10136",
+      "authors": [
+        "Lan-Cheng Zou",
+        "Shuo Yin",
+        "Ze-Hua Pei",
+        "Tsung-Yi Ho",
+        "F. Farnia",
+        "Bei Yu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "PermLLMはN:M構造化疎化で重要重みを残すため、Sinkhorn正規化でチャネル置換を連続緩和し、ブロック単位で最適化する。LLaMA・Qwen・OPTの事後剪定品質を改善し、ハードウェア対応疎行列を使う推論モデル圧縮の直接的寄与がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2604.08118",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Additive quantization enables extreme LLM compression with O(1) lookup-table dequantization, making it attractive for edge deployment. Yet at 2-bit precision, it often fails catastrophically, even with extensive search and finetuning. We show that the dominant bottleneck is codebook initialisation. Greedy sequential initialisation frequently places the model in poor optimisation regions that subsequent beam search and PV-tuning struggle to overcome. We analyse this behaviour through the representational ratio \\r{ho} = N/KM, which characterises the relationship between weight groups and codebook capacity, and propose OA-EM, an output-aware EM initialisation method using Hessian-weighted Mahalanobis distance. Across compression rates, search budgets, and three architectures (Llama 3.2 3B, Llama 3.1 8B, Qwen 2.5 3B), OA-EM consistently produces better solutions after PV-tuning and dominates the quality-compute frontier. The severity of the bottleneck scales with \\r{ho}: moderate at 3 bpp but extreme at 2 bpp, where poor initialisation can degrade perplexity by orders of magnitude. More broadly, our results highlight the importance of optimisation geometry in compressed model spaces, where initialisation can dominate subsequent search and fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:9a6349913b19ab5bb0cb39bc63a754c3b7d79bad"
+      ],
+      "semantic_scholar_id": "9a6349913b19ab5bb0cb39bc63a754c3b7d79bad",
+      "canonical_id": "arXiv:2604.08118",
+      "arxiv_id": "2604.08118",
+      "doi": "10.48550/arXiv.2604.08118",
+      "authors": [
+        "Ian W. Kennedy",
+        "N. Moosavi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 202,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OA-EMは加算量子化の2bit域でコードブック初期化が悪い最適化盆地へ陥る問題に対し、出力誤差を重視するEM初期化とHessian重み付き距離を使う。Llama 3.2 3B・3.1 8B・Qwen2.5 3Bの超低ビット圧縮品質を改善する推論配置向け重み量子化技術。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f6081ccccbbd",
+    "round": "libimp-f6081ccccbbd3212-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f6081ccccbbd3212-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f6081ccccbbd3212-pre01.json",
+    "receipt": "sha256:589b0add4bcfa7eb55b87cc9bc051a32f67a7bfeb27b03623eac737b857d8c38"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f6081ccccbbd",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

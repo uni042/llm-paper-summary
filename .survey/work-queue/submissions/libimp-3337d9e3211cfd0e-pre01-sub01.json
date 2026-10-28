@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling",
+      "source_url": "https://arxiv.org/abs/2604.18103",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefilling computational costs pose a significant bottleneck for Large Language Models (LLMs) and Large Multimodal Models (LMMs) in long-context settings. While token pruning reduces sequence length, prior methods rely on heuristics that break compatibility with hardware-efficient kernels like FlashAttention. In this work, we observe that tokens evolve toward \\textit{semantic fixing points}, making further processing redundant. To this end, we introduce Delta Attention Selective Halting (DASH), a training-free policy that monitors the layer-wise update dynamics of the self-attention mechanism to selectively halt stabilized tokens. Extensive evaluation confirms that DASH generalizes across language and vision benchmarks, delivering significant prefill speedups while preserving model accuracy and hardware efficiency. Code will be released at https://github.com/verach3n/DASH.git.",
+      "identifiers": [
+        "SemanticScholar:6feff5927221d575a23c338526a84c0ce41e45af"
+      ],
+      "semantic_scholar_id": "6feff5927221d575a23c338526a84c0ce41e45af",
+      "canonical_id": "arXiv:2604.18103",
+      "arxiv_id": "2604.18103",
+      "doi": "10.48550/arXiv.2604.18103",
+      "authors": [
+        "Yu-Jie Chen",
+        "Tai-You Chen",
+        "Yifeng Gao",
+        "Zoe Wanying He",
+        "Yijue Xu",
+        "Shao-Bo Wang",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 191,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "Delta Attention Selective Haltingは層を通るトークンの注意出力更新が安定した時点で後続処理を停止する学習不要のプリフィル最適化。トークン剪定によるFlashAttention非互換を避けつつ長文脈の計算を削る。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Test-Time Temporal Sampling for Efficient MLLM Video Understanding",
+      "source_url": "https://arxiv.org/abs/2511.17945",
+      "year": 2025,
+      "published": "2025-11-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long videos with multimodal large language models (MLLMs) poses a significant computational challenge, as the model's self-attention mechanism scales quadratically with the number of video tokens, resulting in high computational demand and slow inference speed. Current solutions, such as rule-based sub-sampling, learned frame selector, or memory-based summarization, often introduce their own trade-offs: they compromise accuracy, necessitate additional training, or decrease inference speed. In this paper, we propose Test-Time Temporal Sampling (T3S), a training-free, plug-and-play inference wrapper that enables MLLMs to process long videos both efficiently and effectively. T3S exploits spatiotemporal redundancy by generating multiple short and diverse subsequences of video tokens at inference time, packing them within a single forward pass, and aggregating their predictions. This multi-subsequence formulation broadens visual coverage while reducing the computational cost of self-attention from $O(L^2)$ to $O(\\sum_{i=1}^m \\alpha_i^2L^2)$, where $\\sum_{i=1}^m \\alpha_i^2<1$. Extensive experiments on long video understanding benchmarks demonstrate that T3S improves accuracy by up to 3.1% and reduces first token delay by $2.04\\times$, all with minimal integration effort. Our approach operates entirely at inference time, requires no model modifications or fine-tuning, and is compatible with a wide range of pretrained MLLMs. T3S turns video redundancy into a computational advantage, offering a scalable solution for long-video understanding. The code is available at https://github.com/kaibinwang3/T3S.",
+      "identifiers": [
+        "SemanticScholar:12a29a1c02dda627fd9349b84476b2313bf59aff"
+      ],
+      "semantic_scholar_id": "12a29a1c02dda627fd9349b84476b2313bf59aff",
+      "canonical_id": "arXiv:2511.17945",
+      "arxiv_id": "2511.17945",
+      "doi": "10.48550/arXiv.2511.17945",
+      "authors": [
+        "Kaibin Wang",
+        "Mingbao Lin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": null
+      },
+      "reason": "T3Sは長動画を複数の短く多様な時間部分列に分け、一回の前進計算に詰めて出力を集約する学習不要の推論ラッパー。長動画の自己注意を全系列の二乗から部分系列長二乗の和へ削減するVLM推論効率化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "AVIS: Adaptive Test-Time Scaling for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.11576",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Vision-Language Models (VLMs) benefit from chain-of-thought prompting and test-time scaling, but these gains often come with prohibitive inference cost due to large visual contexts and long decoding chains. We view this cost through two coupled axes: Visual Context Scaling (VCS), which controls how much visual evidence is passed to the language model, and Visual Reasoning Scaling (VRS), which controls how much inference-time reasoning search is performed. Existing methods typically optimize one axis at a time, leaving the joint allocation of compute across these axes underexplored. We introduce Adaptive Visual Inference Scaling (AVIS), a lightweight policy that adapts both VCS and VRS per query. AVIS realizes VCS through Key Diversity Visual (KDV) pruning, a training-free $O(N)$ key-based rule for removing redundant visual tokens before prefilling, and realizes VRS through adaptive self-consistency, using a learned difficulty predictor to select the number of reasoning rollouts. AVIS is deployment-friendly and compatible with shared-prefill inference, where all rollouts reuse a single prefilling pass and KV cache. Across diverse image and video reasoning benchmarks, AVIS improves the accuracy--compute trade-off relative to VCS-only and VRS-only baselines, and remains effective on top of RL post-trained VLMs while keeping compute and latency low.",
+      "identifiers": [
+        "SemanticScholar:9374d4a495716da0ae3b55e94ae081a109445afb"
+      ],
+      "semantic_scholar_id": "9374d4a495716da0ae3b55e94ae081a109445afb",
+      "canonical_id": "arXiv:2606.11576",
+      "arxiv_id": "2606.11576",
+      "doi": "10.48550/arXiv.2606.11576",
+      "authors": [
+        "Ahmadreza Jeddi",
+        "Minh-Tan Le",
+        "A. Kazerouni",
+        "H. Karaimer",
+        "Hue Nguyen",
+        "I. Mohomed",
+        "Michael Brudno",
+        "Alex Levinshtein",
+        "K. Derpanis",
+        "Babak Taati",
+        "R. Grzeszczuk"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AVISは視覚トークンの多様性に基づく剪定でプリフィル負荷を減らし、質問難易度の予測から推論ロールアウト数を適応的に決める。複数ロールアウトでプリフィルとKVを共有するVLM推論計算の共同予算配分方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching",
+      "source_url": "https://arxiv.org/abs/2602.22871",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning with large language models often benefits from generating multiple chains-of-thought, but existing aggregation strategies are typically trajectory-level (e.g., selecting the best trace or voting on the final answer), discarding useful intermediate work from partial or\"nearly correct\"attempts. We propose Stitching Noisy Diffusion Thoughts, a self-consistency framework that turns cheap diffusion-sampled reasoning into a reusable pool of step-level candidates. Given a problem, we (i) sample many diverse, low-cost reasoning trajectories using a masked diffusion language model, (ii) score every intermediate step with an off-the-shelf process reward model (PRM), and (iii) stitch these highest-quality steps across trajectories into a composite rationale. This rationale is then used to recompute only the final answer. This modular pipeline separates exploration (diffusion) from evaluation and solution synthesis, avoiding monolithic unified hybrids while preserving broad search. Across math reasoning benchmarks, we find that step-level recombination is most beneficial on harder problems, and ablations highlight the importance of the final solver in converting stitched but imperfect rationales into accurate answers. Using low-confidence diffusion sampling with parallel, independent rollouts, our training-free framework improves average accuracy by up to 23.8% across six math and coding tasks. At the same time, it achieves up to a 1.8x latency reduction relative to both traditional diffusion models (e.g., Dream, LLaDA) and unified architectures (e.g., TiDAR). The code is available https://github.com/roymiles/diffusion-stitching",
+      "identifiers": [
+        "SemanticScholar:b3bd962bbe6f2152740fe588516766224b9e3efa"
+      ],
+      "semantic_scholar_id": "b3bd962bbe6f2152740fe588516766224b9e3efa",
+      "canonical_id": "arXiv:2602.22871",
+      "arxiv_id": "2602.22871",
+      "doi": "10.48550/arXiv.2602.22871",
+      "authors": [
+        "R. Miles",
+        "Aysim Toker",
+        "Andreea-Maria Oncescu",
+        "Song Xu",
+        "Jian-Kang Deng",
+        "Ismail Elezi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルで安価な推論軌跡を並列に生成し、過程報酬モデルで各中間ステップを評価して良い部分をつなぎ直し、最終回答だけ再計算する。推論時探索の精度とレイテンシを比較し、既存拡散方式比最大1.8倍の遅延削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Locally Coherent Parallel Decoding in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2603.20216",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) models, offering sub-linear generation latency and bidirectional capabilities that are particularly appealing for code generation and editing. Achieving sub-linear latency in discrete DLMs requires predicting multiple tokens in parallel. However, standard DLMs sample tokens independently from conditional marginal distributions, failing to capture the joint dependencies among concurrently generated tokens. As a result, they often lead to syntactic inconsistencies and break multi-token structures. In this work, we introduce CoDiLA (Coherent Diffusion with Local Autoregression), a method that reconciles parallel sampling with local dependency modeling. Rather than forcing the DLM to resolve fine-grained syntax, CoDiLA delegates local decoding to a small, auxiliary AR model operating on the diffusion latents. This design allows for parallel generation while ensuring sequential validity within a block and maintaining core DLM capabilities, including bidirectional modeling across blocks. We demonstrate that using a highly compact auxiliary AR model (e.g., 0.6B parameters) effectively eliminates coherence artifacts, establishing a new Pareto frontier for accuracy and speed in code generation benchmarks.",
+      "identifiers": [
+        "SemanticScholar:09951e1713ea0dfa9eac98184b95624cbdf75b64"
+      ],
+      "semantic_scholar_id": "09951e1713ea0dfa9eac98184b95624cbdf75b64",
+      "canonical_id": "arXiv:2603.20216",
+      "arxiv_id": "2603.20216",
+      "doi": "10.48550/arXiv.2603.20216",
+      "authors": [
+        "M. Hersche",
+        "Nicolas Menet",
+        "Ronan Tanios",
+        "Abbas Rahimi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CoDiLAは拡散言語モデルが複数トークンを独立並列復元するとコード構文が崩れる問題に対し、小型自己回帰モデルでブロック内の局所依存を処理する。並列生成の速度と正確性を両立する拡散型LLM復号方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3337d9e3211c",
+    "round": "libimp-3337d9e3211cfd0e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3337d9e3211cfd0e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3337d9e3211cfd0e-pre01.json",
+    "receipt": "sha256:e1bf82d6bd123d5366c74744fa11770724ea2d17dd780e28c742695fcd1291a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3337d9e3211c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

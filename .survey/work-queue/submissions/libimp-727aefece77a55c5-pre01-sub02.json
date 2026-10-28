@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FLoC: Facility Location-Based Efficient Visual Token Compression for Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2511.00141",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent studies in long video understanding have harnessed the advanced visual-language reasoning capabilities of Large Multimodal Models (LMMs), driving the evolution of video-LMMs specialized for processing extended video sequences. However, the scalability of these models is severely limited by the overwhelming volume of visual tokens generated from extended video sequences. To address this challenge, we propose FLoC, an efficient visual token compression framework based on the facility location function, a principled approach that swiftly selects a compact yet highly representative and diverse subset of visual tokens within a predefined budget on the number of visual tokens. By integrating the lazy greedy algorithm, our method achieves remarkable efficiency gains by swiftly selecting a compact subset of tokens, drastically reducing the number of visual tokens while guaranteeing near-optimal performance. Notably, our approach is training-free, model-agnostic, and query-agnostic, providing a versatile solution that seamlessly integrates with diverse video-LLMs and existing workflows. Extensive evaluations on large-scale benchmarks, such as Video-MME, MLVU, LongVideoBench, and EgoSchema, show that our framework consistently surpasses recent compression techniques, highlighting its effectiveness and robustness in addressing the challenges of long video understanding as well as its processing efficiency.",
+      "identifiers": [
+        "SemanticScholar:6e5ae5e4295ae39711a5da693eecf318cd0ce73e"
+      ],
+      "semantic_scholar_id": "6e5ae5e4295ae39711a5da693eecf318cd0ce73e",
+      "canonical_id": "arXiv:2511.00141",
+      "arxiv_id": "2511.00141",
+      "doi": "10.48550/arXiv.2511.00141",
+      "authors": [
+        "Janghoon Cho",
+        "Jungsoo Lee",
+        "Munawar Hayat",
+        "Kyuwoong Hwang",
+        "F. Porikli",
+        "Sungha Choi"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 362,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FLoCは施設配置目的関数で長動画の視覚トークンから代表性と多様性を両立する少数集合を選び、所定予算内で動画VLMへ入力する。長文動画理解の視覚トークン容量と注意計算を削る推論前処理。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "STaMP: Sequence Transformation and Mixed Precision for Low-Precision Activation Quantization",
+      "source_url": "https://arxiv.org/abs/2510.26771",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is the key method for reducing inference latency, power and memory footprint of generative AI models. However, accuracy often degrades sharply when activations are quantized below eight bits. Recent work suggests that invertible linear transformations (e.g. rotations) can aid quantization, by reparameterizing feature channels and weights. In this paper, we propose \\textit{Sequence Transformation and Mixed Precision} (STaMP) quantization, a novel strategy that applies linear transformations along the \\textit{sequence} dimension to exploit the strong local correlation in language and visual data. By keeping a small number of tokens in each intermediate activation at higher precision, we can maintain model accuracy at lower (average) activations bit-widths. We evaluate STaMP on recent LVM and LLM architectures, demonstrating that it significantly improves low bit width activation quantization and complements established activation and weight quantization methods including recent feature transformations.",
+      "identifiers": [
+        "SemanticScholar:8783d6ca048f00438e124681ba00009f2922caaf"
+      ],
+      "semantic_scholar_id": "8783d6ca048f00438e124681ba00009f2922caaf",
+      "canonical_id": "arXiv:2510.26771",
+      "arxiv_id": "2510.26771",
+      "doi": "10.48550/arXiv.2510.26771",
+      "authors": [
+        "Marco Federici",
+        "Riccardo Del Chiaro",
+        "B. V. Breugel",
+        "Paul N. Whatmough",
+        "Markus Nagel"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 363,
+        "matched_prestigious_venue": null
+      },
+      "reason": "STaMPは系列方向の局所相関を利用する可逆線形変換と一部トークンの高精度保持を組み合わせ、生成モデルの活性化を8bit未満へ量子化する。推論時の遅延・電力・メモリ削減を目的とする混合精度圧縮。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-727aefece77a",
+    "round": "libimp-727aefece77a55c5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-727aefece77a55c5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-727aefece77a55c5-pre01.json",
+    "receipt": "sha256:76942abec2c175ca5c458e1298cb4f3a0f7263aaca59d5cb7d93f6d6e0ab38dd"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-727aefece77a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

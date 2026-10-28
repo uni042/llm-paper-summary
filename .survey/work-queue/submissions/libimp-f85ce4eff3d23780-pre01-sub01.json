@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "GyRot: Leveraging Hidden Synergy Between Rotation and Fine-Grained Group Quantization for Low-Bit LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.27694",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit quantization is essential for efficient LLM inference, and both rotation and fine-grained group quantization have shown individual promise. However, their combination often leads to accuracy degradation or hardware overhead due to a mismatch between the global nature of rotation and the localized behavior of group scaling. We propose GyRot, a quantization framework and hardware accelerator that bridges this gap through algorithm-hardware co-design. GyRot introduces Coarse Rotation, Fine Grouping (CoRFiG) and Harmonic-Aligned Permutation (HAP) to enable cooperative integration of rotation and group quantization, enhancing quantizability while relaxing scaling factor precision. To further reduce hardware cost, we reformulate asymmetric quantization and introduce a zero-point rounding strategy that enables fully integer dequantization. Implemented on an INT4-based tensor PE architecture, GyRot achieves state-of-the-art 4-bit accuracy across LLaMA-family models, while delivering up to 3.4× speedup and 3.6× energy efficiency over baseline LLM accelerators. These results validate GyRot's practical effectiveness for scalable and energy-efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:6e8c9dec6c50948373f2830fd34388b466d7a5d4"
+      ],
+      "semantic_scholar_id": "6e8c9dec6c50948373f2830fd34388b466d7a5d4",
+      "canonical_id": "arXiv:2607.27694",
+      "arxiv_id": "2607.27694",
+      "doi": "10.1109/HPCA68181.2026.11408453",
+      "authors": [
+        "Sangjin Kim",
+        "Yuseon Chou",
+        "Byeongcheol Kim",
+        "Jungjun Oh",
+        "Hoi-Jun Yoo"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "回転による外れ値緩和と細粒度グループ量子化のスケール局所性の衝突をCoRFiGとHAPで解消し、ゼロ点丸めによる整数復号を専用INT4演算器へ結合する。LLM重み量子化の精度と推論アクセラレータ速度・エネルギーを直接評価するため収録対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "A Case Study of Selected PTQ Baselines for Reasoning LLMs on Ascend NPU",
+      "source_url": "https://arxiv.org/abs/2602.17693",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-Training Quantization (PTQ) is crucial for efficient model deployment, yet its effectiveness on Ascend NPU remains under-explored compared to GPU architectures. This paper presents a case study of representative PTQ baselines applied to reasoning-oriented models such as DeepSeek-R1-Distill-Qwen series (1.5B/7B/14B) and QwQ-32B. We evaluate four distinct algorithms, including AWQ, GPTQ, SmoothQuant, and FlatQuant, to cover the spectrum from weight-only compression to advanced rotation-based methods. Our empirical results reveal significant platform sensitivity. While 4-bit weight-only quantization proves viable for larger models, aggressive 4-bit weight-activation schemes suffer from layer-wise calibration instability on the NPU, leading to logic collapse in long-context reasoning tasks. Conversely, standard 8-bit quantization remains numerically stable. Furthermore, a real-world INT8 deployment demonstrates that although optimized kernels reduce latency, dynamic quantization overheads currently limit end-to-end acceleration. These findings offer a practical reference for the feasibility and limitations of deploying quantized reasoning models on Ascend NPU.",
+      "identifiers": [
+        "SemanticScholar:5220f5c30d0eb3ef21b31b344369856246009365"
+      ],
+      "semantic_scholar_id": "5220f5c30d0eb3ef21b31b344369856246009365",
+      "canonical_id": "arXiv:2602.17693",
+      "arxiv_id": "2602.17693",
+      "doi": "10.48550/arXiv.2602.17693",
+      "authors": [
+        "Yucheng Luo",
+        "Fangyu Zhu",
+        "Rui Zhou",
+        "Ming-Zhang Huang",
+        "Jian Zhu",
+        "Fan Fan",
+        "Wei Shao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Ascend NPU上のDeepSeek-R1-Distill-Qwen系とQwQ-32BでAWQ、GPTQ、SmoothQuant、FlatQuantを比較し、4bit重み活性化量子化の較正不安定性とINT8実装の動的量子化オーバーヘッドを検証する。推論デバイス依存のPTQ精度・実遅延を扱うため収録対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "Beyond the Target: From Imitation to Collaboration in Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2605.24793",
+      "year": 2026,
+      "published": "2026-05-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SPD) accelerates large language model (LLM) inference by letting a smaller draft model propose multiple future tokens that are verified in parallel by a larger target model. The dominant SPD paradigm treats the target model as the sole reliable teacher, accepting a draft token only when it exactly matches the target prediction. This design implicitly assumes that the target is always the better choice at every position. In practice, this assumption does not hold. Although the draft is the weaker model overall, it is not uniformly inferior at the token level. In a meaningful fraction of cases where draft and target disagree, the draft's choice is the one that leads to the correct final answer. Inspired by this, we introduce \\textbf{Collaborative Speculative Decoding (CoSpec)}, a generalization of SPD that no longer treats the target model as the sole token-level authority. CoSpec trains an arbitration policy via reinforcement learning to decide whether to accept tokens from the draft or target model, selectively accepting draft tokens at mismatches when doing so is likely to yield a correct final answer. Experimental results show that CoSpec maintains substantial speedups while surpassing target-only performance. By shifting the emphasis from imitation to collaboration, CoSpec suggests a new perspective on speculative decoding.",
+      "identifiers": [
+        "SemanticScholar:577f61505193b19d9b3c2b747cd64f2d8d6af30a"
+      ],
+      "semantic_scholar_id": "577f61505193b19d9b3c2b747cd64f2d8d6af30a",
+      "canonical_id": "arXiv:2605.24793",
+      "arxiv_id": "2605.24793",
+      "doi": "10.48550/arXiv.2605.24793",
+      "authors": [
+        "Jin-Ze Li",
+        "Yi-Xing Xu",
+        "Guan-Chen Li",
+        "Jin-Feng Xu",
+        "Shuo Yang",
+        "Yang Zhang",
+        "Xuan-Wu Yin",
+        "Dong Li",
+        "Edith C. H. Ngai",
+        "E. Barsoum"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      },
+      "reason": "草案とターゲットの不一致時にターゲットだけを正解とせず、強化学習した仲裁方針で草案側トークンを選ぶCoSpecを提案する。従来のターゲット分布保存型投機的復号とは異なる品質・速度の交換条件を持つが、草案生成と並列検証を使う推論高速化方式として適合する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.13205",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention-based KV cache eviction (H2O and its descendants) compresses the memory-constrained state of a long-context model by ranking tokens on accumulated attention mass, treated here as signal energy, and keeping the heaviest. On schema-dense input streams such as nested JSON, this score acts as a non-stationary filter that disproportionately retains noise: a non-content sink role (delimiters or whitespace) carries an order of magnitude more energy than any content role, and structural KEY tokens are over-retained at roughly 1.8x the rate of the answer-carrying VALUE tokens, collapsing exact-match accuracy from 88% to 0% at a 5% budget as the signal-to-noise ratio of the retained state degrades. A counterfactual experiment establishes that suppressing KEY tokens is the best deployable filter. Our retraining-free, role-conditional allocation over SnapKV's windowed score, governed by a single tuned hyperparameter, closes 63-98% of the H2O gap at sub-20% budgets and, at higher budgets, modestly matches or exceeds full-cache accuracy -- a small, seed-sensitive denoising effect (borderline significant at B=0.50; not distinguishable from zero at B=0.30 over four seeds). A 15 MB linear role probe supplies these labels at negligible inference cost, though matching parser-level downstream accuracy remains open.",
+      "identifiers": [
+        "SemanticScholar:497804cff1bbaec1736d53cc9314a6dc40cc30fb"
+      ],
+      "semantic_scholar_id": "497804cff1bbaec1736d53cc9314a6dc40cc30fb",
+      "canonical_id": "arXiv:2607.13205",
+      "arxiv_id": "2607.13205",
+      "doi": "10.48550/arXiv.2607.13205",
+      "authors": [
+        "Soumil Mandal"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      },
+      "reason": "JSON等の構造化入力で注意量ベースKV保持が区切り記号やKEY役割を過剰保持しVALUEを落とす問題を分析する。構造役割に条件付けたSnapKVの予算配分で低保持率の正確性を改善する再学習不要のKV圧縮方式であり、推論メモリと品質の関係を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation",
+      "source_url": "https://arxiv.org/abs/2605.27390",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates Large Language Model inference through draft-then-verify generation, yet lightweight draft models face coupled efficiency and quality limitations: large-vocabulary output projection is costly, while limited draft capacity and static parameters reduce acceptance under specialized or shifting inputs. Vocabulary pruning lowers projection cost, but static variants miss locally important long-tail tokens, while dynamic variants remain sensitive to preset selection policies and budgets. Moreover, limited draft capacity can leave the draft distribution misaligned even when the target token is covered. Online alignment improves draft quality, but full-parameter updates introduce substantial memory and latency overhead. We introduce EvoSpec, which jointly adapts the active vocabulary and lightweight draft parameters from verification feedback. EvoSpec asynchronously retrieves semantic and statistical token neighbors and performs curriculum-weighted online LoRA alignment while preserving exact target-model verification. On Qwen3-8B/EAGLE-2, EvoSpec reaches a $2.18\\times$ speedup over vanilla decoding and a $1.20\\times$ gain over EAGLE-2, while improving specialized-domain coverage and using $27\\%$ less auxiliary GPU adaptation memory than full-parameter online adaptation.",
+      "identifiers": [
+        "SemanticScholar:9d228b5829af7486ec695b9ca229b9b30254eaa8"
+      ],
+      "semantic_scholar_id": "9d228b5829af7486ec695b9ca229b9b30254eaa8",
+      "canonical_id": "arXiv:2605.27390",
+      "arxiv_id": "2605.27390",
+      "doi": "10.48550/arXiv.2605.27390",
+      "authors": [
+        "Shuyu Zhang",
+        "Lingfeng Pan",
+        "Qi-Cheng Wang",
+        "Yaqi Shi",
+        "Yue Tan",
+        "Ruyu Yan",
+        "Jiaqi Chen",
+        "L. Du",
+        "Lu Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 194,
+        "matched_prestigious_venue": null
+      },
+      "reason": "草案モデルの語彙射影費用とターゲットとの分布ずれを、検証結果に応じた語彙集合更新とオンラインLoRA適応で同時に緩和する。Qwen3-8B/EAGLE-2上で草案受理と復号高速化を測定し、ターゲットによる厳密検証を維持するため投機的復号系統に適合。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f85ce4eff3d2",
+    "round": "libimp-f85ce4eff3d23780-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f85ce4eff3d23780-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f85ce4eff3d23780-pre01.json",
+    "receipt": "sha256:d4f4f9c1bf6de1e5420507aa0b06b3384c28f4bdf019e0ff0a032a2b021fe6c8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f85ce4eff3d2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

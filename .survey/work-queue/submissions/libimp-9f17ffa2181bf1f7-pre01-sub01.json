@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FACE: Fully Overlapped PD Scheduling and Multi-Level Architecture Co-Exploration on Wafer",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408518",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid expansion of large language models (LLMs) parameter scales imposes unprecedented demands on compute, memory, and communication resources for inference deployment. Wafer-scale chips, leveraging advanced packaging technologies, deliver high-density integration of compute and memory with high die-to-die (D2D) communication bandwidth, providing a compelling architectural approach to satisfy these resource requirements. However, its unprecedented chip area introduces significant architectural design complexities. Waferscale chips feature a multi-level architecture spanning the wafer, die, and core levels, involving numerous critical design parameters and trade-offs, which still lack systematic understanding and exploration. Moreover, this poses major challenges for LLM serving scheduling. Existing methods, largely adapted from GPUbased systems, fail to fully leverage the advantages of waferscale chips and mitigate their limitations, making it difficult to efficiently translate massive hardware resources into actual performance gains. To address these challenges, we introduce FACE, a coexploration framework for jointly optimizing multi-level architecture and serving scheduling. We first establish a flexible and extensible wafer-scale hardware template to systematically explore the optimal architecture and micro-architecture parameters. Leveraging the fine-grained control and high interconnect bandwidth of wafer-scale chips, FACE implements an LLM scheduling strategy that achieves fully overlapped prefill-decode execution and efficient KV cache management, maximizing hardware resource utilization to improve LLM service quality. Our evaluation demonstrates that FACE can achieve an average overall performance improvement of 3.68 × across various LLM models and datasets compared to the state-of-the-art (SOTA) LLM serving system on wafer-scale chips.",
+      "identifiers": [
+        "SemanticScholar:7ec3d4037e96aee7fa65e77ecf097cfb34fd3609"
+      ],
+      "semantic_scholar_id": "7ec3d4037e96aee7fa65e77ecf097cfb34fd3609",
+      "doi": "10.1109/HPCA68181.2026.11408518",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408518",
+      "authors": [
+        "Zheng Xu",
+        "De-Hao Kong",
+        "Jia-Xin Liu",
+        "Ding-Cheng Jiang",
+        "Xu Dai",
+        "Jin-Yi Deng",
+        "Yang Hu",
+        "Shou-Yi Yin"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "ウェハースケール計算機でプリフィルとデコードを重ねるスケジューラと、ウェハ・ダイ・コアの多層アーキテクチャを共同探索する。KV管理と処理量・干渉を評価するLLMサービング向けハードウェア・スケジューリング研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "KVReviver: Reversible KV Cache Compression with Sketch-Based Token Reconstruction",
+      "source_url": "https://arxiv.org/abs/2512.17917",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the context length of current large language models (LLMs) rapidly increases, the memory demand for the Key-Value (KV) cache is becoming a bottleneck for LLM deployment and batch processing. Traditional KV cache compression methods typically involve permanently evicting or irreversibly merging\"less important\"tokens with low attention scores. This approach results in the unrecoverable loss of token information, which we call Contextual Amnesia, significantly degrading the model's information retrieval capability. To address this issue, we propose KVReviver, a reversible KV cache compression method based on the sketch algorithm. This method allows reconstructing compressed tokens from an additional data structure, thus enabling full-scale computation within limited memory. Experiments showed that in 2k-length contexts, it requires only 10% of KV Cache budget while maintaining identical end-to-end inference accuracy. For 32k-length contexts, it achieves equivalent or comparable accuracy ~2% accuracy loss) using merely 25% of KV Cache budget.",
+      "identifiers": [
+        "SemanticScholar:7e2c072f35fd080da91fd8581225fecaffc575b9"
+      ],
+      "semantic_scholar_id": "7e2c072f35fd080da91fd8581225fecaffc575b9",
+      "canonical_id": "arXiv:2512.17917",
+      "arxiv_id": "2512.17917",
+      "doi": "10.48550/arXiv.2512.17917",
+      "authors": [
+        "Aomufei Yuan",
+        "Zhi-Ming Wang",
+        "Ruijie Miao",
+        "Dayu Wang",
+        "Yuxuan Tian",
+        "Zi-Han Wang",
+        "Ye-Bo Peng",
+        "Yuhan Wu",
+        "Bai-Ren Yi",
+        "Xin Liu",
+        "Tong Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 331,
+        "matched_prestigious_venue": null
+      },
+      "reason": "従来のKV削除で不可逆に失うトークン情報を、sketchにより圧縮トークンを再構成できる形で保存する。2K/32K文脈でKV予算と生成精度の交換条件を直接評価するため長文脈KV圧縮に適合。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "ReFreeKV: Towards Threshold-Free KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2502.16886",
+      "year": 2025,
+      "published": "2025-02-24",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To reduce memory consumption during LLM inference, a handful of methods have been proposed for KV cache pruning. While these techniques can accomplish lossless memory reduction on many datasets, they often hinge on an under-emphasized condition: an input/domain-specific threshold for KV cache budget needs to be pre-determined to achieve the optimal performance. However, such input-sensitive design may be considerably limited in real-world scenarios, as open-domain inputs span diverse domains, lengths and difficulty levels, without clear boundaries for threshold selection. As a result, the dependence of such input-sensitive threshold can be a fundamental limitation that causes large degradation on arbitrary inputs. In this work, we propose a new objective that lifts the threshold constraints for robust KV compression, advocating for\"threshold-free\"methods that adaptively adjust budget allocation while preserving full-cache performance. We then propose a novel method, ReFreeKV, serving as the first instantiation of this objective. Extensive experiments across 13 datasets with diverse context lengths, task types, and model sizes demonstrate its efficacy and efficiency. Our code is publicly released at https://github.com/Patrick-Ni/ReFreeKV.",
+      "identifiers": [
+        "SemanticScholar:e7e0df8b6629cada059c52838b7a701178838038"
+      ],
+      "semantic_scholar_id": "e7e0df8b6629cada059c52838b7a701178838038",
+      "canonical_id": "arXiv:2502.16886",
+      "arxiv_id": "2502.16886",
+      "doi": "10.18653/v1/2026.findings-acl.1541",
+      "authors": [
+        "Xuan-Fan Ni",
+        "Liyan Xu",
+        "Chenyang Lyu",
+        "Longyue Wang",
+        "Mo Yu",
+        "Lemao Liu",
+        "Fan-Dong Meng",
+        "Jie Zhou",
+        "Pi-Ji Li"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 611,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "データセットごとにKV保持予算を手動調整する前提を外し、入力の難度と長さに応じた閾値不要の保持量選択を提案する。13データセットでのKV使用量と生成品質を評価するためKVキャッシュ圧縮に適合。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "SPIDE: Serial and Parallel Intertwined Speculative Decoding",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1040",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:2255e2861303593e884c57c41fa5f8ce38725ee6"
+      ],
+      "semantic_scholar_id": "2255e2861303593e884c57c41fa5f8ce38725ee6",
+      "doi": "10.18653/v1/2026.findings-acl.1040",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1040",
+      "authors": [
+        "Wen-Ru Xu",
+        "Pei-Xuan Xu",
+        "Ziqi Yang",
+        "Ming Hu",
+        "Zi-Hui Wang",
+        "Jianzhong Qi",
+        "Rong-Shan Yu",
+        "Xiaoliang Fan",
+        "Cheng Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "逐次草案生成と並列ターゲット検証の長さを信頼度と受理率の対応表に基づいて動的に制御する学習不要の投機的復号方式。ACL 2026正式論文で速度倍率とLLM使用費用を評価するため適合。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "Valve: Production Online-Offline Inference Colocation with Jointly-Bounded Preemption Latency and Rate",
+      "source_url": "https://arxiv.org/abs/2604.07874",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference powers latency-critical production services nowadays. The bursty nature of inference traffic results in over-provisioning, which in turn leads to resource underutilization. While online-offline colocation promises to utilize idle capacity, broad production deployment must overcome two major challenges: (i) large online interference due to slow or frequent preemptions, and (ii) extensive frameworks and drivers modifications, to colocate different models and support preemptions. We present Valve, a production-friendly colocation system that jointly bounds preemption latency and preemption rate. Specifically, Valve enables sub-millisecond compute preemption at most once per online request, and rate-limited sub-layer memory reclamation. These guaranties are provided by a GPU runtime that combines channel-controlled compute isolation, page-fault-free memory reclamation, and dynamic memory reservation. Critically, Valve is practical to deploy, requiring one line of driver modification and 20 lines of framework patch. Deployed on 8,054 GPUs in production, Valve improves cluster utilization by 34.6%, which translates to a 2,170 GPU save. This efficiency gains is achieved with minimal online interference, incurring<5% TTFT increase and<2% TPOT increase across workloads.",
+      "identifiers": [
+        "SemanticScholar:3c5eef6f29eacfb56bf708e86f4db220fc51a592"
+      ],
+      "semantic_scholar_id": "3c5eef6f29eacfb56bf708e86f4db220fc51a592",
+      "canonical_id": "arXiv:2604.07874",
+      "arxiv_id": "2604.07874",
+      "doi": "10.48550/arXiv.2604.07874",
+      "authors": [
+        "Fang Liu",
+        "Hua-Qiu Liu",
+        "Xinyuan Lyu",
+        "Shuo Ai",
+        "Hao Liang",
+        "L. Chen",
+        "Ziqian Hu",
+        "Chong Zha",
+        "Xin Jin",
+        "Hanmei Luo",
+        "Peng Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 202,
+        "matched_prestigious_venue": null
+      },
+      "reason": "オンラインLLM推論とオフラインGPU処理の同居で、サブミリ秒プリエンプションとページフォルトなしのメモリ回収を両立するランタイムを提案する。8,054 GPUへの本番配備とTTFT/TPOT干渉、GPU利用率を報告するためサービング・スケジューリング系統に適合。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9f17ffa2181b",
+    "round": "libimp-9f17ffa2181bf1f7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9f17ffa2181bf1f7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9f17ffa2181bf1f7-pre01.json",
+    "receipt": "sha256:ad43585d6f5b826ece456dffad5dba28584d1427be47b946fb25c83554a2fd90"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9f17ffa2181b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Hopscotch: Discovering and Skipping Redundancies in Language Models",
+      "source_url": "https://arxiv.org/abs/2506.03303",
+      "year": 2025,
+      "published": "2025-06-03",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern causal language models stack many attention blocks to improve performance, but not all blocks are necessary for every task. We propose Hopscotch, a simple yet effective method that identifies and skips attention blocks with least contributions to a task and adapts to preserve output quality. Hopscotch jointly optimizes which blocks to skip and how to scale the outputs of the remaining layers. By introducing lightweight, trainable scaling parameters to attention and MLP blocks, it mitigates distribution shifts in hidden states caused by removing attention blocks. Hopscotch does not modify model weights or require access to pretraining or instruction-tuning data, and is compatible with existing model compression techniques. When applied to $\\texttt{Llama-3.1-8B}$ and $\\texttt{Qwen2.5-7B}$, Hopscotch achieves less than a 2% drop in performance even after skipping four attention blocks.",
+      "identifiers": [
+        "SemanticScholar:ec271d488c11e9594026a323707fabe719ca60bd"
+      ],
+      "semantic_scholar_id": "ec271d488c11e9594026a323707fabe719ca60bd",
+      "canonical_id": "arXiv:2506.03303",
+      "arxiv_id": "2506.03303",
+      "doi": "10.48550/arXiv.2506.03303",
+      "authors": [
+        "Mustafa Eyceoz",
+        "N. Nayak",
+        "Hao Wang",
+        "Ligong Han",
+        "Akash Srivastava"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 512,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "Hopscotchは課題に寄与の小さい注意ブロックを選んでスキップし、残存層の出力スケールを軽量学習して分布変化を補う。Llama-3.1-8BやQwen2.5-7Bで複数注意層を省いて品質低下を抑えるモデル推論の層削減方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Compiler-Assisted Speculative Sampling for Accelerated LLM Inference on Heterogeneous Edge Devices",
+      "source_url": "https://arxiv.org/abs/2602.08060",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM deployment on resource-constrained edge devices faces severe latency constraints, particularly in real-time applications where delayed responses can compromise safety or usability. Among many approaches to mitigate the inefficiencies of sequential token-by-token generation, Speculative Decoding (SD) has emerged as a promising technique. However, SD at the edge is hindered by two major challenges: (1) integrating SD into a compiler-based workflow without sacrificing performance or programmability, and (2) exploiting the heterogeneous compute resources of modern SoCs through carefully designed partitioning strategies. This work addresses these challenges by using an analytical cost model that explores heterogeneous hardware configurations and guides coarse-grained partitioning of LLM subgraphs, particularly with edge-typical short input sequence lengths. The cost model predicts when speculative sampling and heterogeneous execution are jointly beneficial and is validated on an edge device featuring a hexacore Cortex-A CPU and a Mali GPU, revealing up to 1.68$\\times$ speedup for translation tasks, closely matching analytic expectations.",
+      "identifiers": [
+        "SemanticScholar:aa387b3911b2cd192bb0d4c0b3cb710c51700bed"
+      ],
+      "semantic_scholar_id": "aa387b3911b2cd192bb0d4c0b3cb710c51700bed",
+      "canonical_id": "arXiv:2602.08060",
+      "arxiv_id": "2602.08060",
+      "doi": "10.48550/arXiv.2602.08060",
+      "authors": [
+        "Alejandro Mesa",
+        "Guilherme Korol",
+        "Moritz Riesterer",
+        "J. P. C. de Lima",
+        "J. Castrillón"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      },
+      "reason": "端末SoC上の投機的サンプリングをコンパイラ基盤へ統合し、草案・検証モデルのサブグラフを異種計算器へ粗粒度配置するため解析的費用モデルを使う。短い入力を含むエッジLLM推論の遅延削減を対象とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Multi-Token Residual Prediction",
+      "source_url": "https://arxiv.org/abs/2605.18817",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) generate text by iteratively denoising masked token sequences, offering a tradeoff between parallelism and quality compared to autoregressive models. In current practice, the number of tokens decoded per step is controlled by a confidence threshold, and quality degrades monotonically as more tokens are denoised per step. We introduce Multi-token Residual Prediction (MRP), a lightweight module that enables dependency-aware multi-token denoising within a single backbone forward pass. MRP exploits a key property of the denoising process: the logit distributions at adjacent denoising steps are remarkably similar. Rather than running the backbone a second time to obtain the next-step logits, MRP predicts the residual between steps from the backbone's hidden states, effectively denoising more tokens per backbone forward at a fraction of the cost. We apply MRP across the two operating regimes of DLM decoding. In the high-quality-low-throughput static denoising regime, MRP serves as a drafter for speculative decoding: its proposals are verified against the backbone, yielding lossless acceleration of up to 1.4x in SGLang. In the low-quality-high-throughput dynamic denoising regime, MRP instead drives a remasking scheme that revokes over-eager reveals, recovering most of the accuracy lost to aggressive low-threshold decoding and improving accuracy by up to 22.6 points on code generation task HumanEval and 17.7 points on reasoning task GSM8K.",
+      "identifiers": [
+        "SemanticScholar:c12c453159e30fc5b8c184e5157a378c60b90fa0"
+      ],
+      "semantic_scholar_id": "c12c453159e30fc5b8c184e5157a378c60b90fa0",
+      "canonical_id": "arXiv:2605.18817",
+      "arxiv_id": "2605.18817",
+      "doi": "10.48550/arXiv.2605.18817",
+      "authors": [
+        "Yufeng Xu",
+        "Zishuo Bao",
+        "Qian Wang",
+        "Ze-Shen Zhang",
+        "Haoqi Zhang",
+        "Bo Peng",
+        "Ang Li",
+        "Rahul Chalamala",
+        "Yu-Cheng Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MRPは拡散LLMの連続ノイズ除去ステップのロジット差分を隠れ状態から予測し、同じ主モデル前進計算で複数トークンを復元する。静的復元では投機的草案として教師検証しSGLangで最大1.4倍の損失なし高速化を示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3337d9e3211c",
+    "round": "libimp-3337d9e3211cfd0e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3337d9e3211cfd0e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3337d9e3211cfd0e-pre01.json",
+    "receipt": "sha256:e1bf82d6bd123d5366c74744fa11770724ea2d17dd780e28c742695fcd1291a6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3337d9e3211c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

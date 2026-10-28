@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Towards Joint Quantization and Token Pruning of Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.17320",
+      "year": 2026,
+      "published": "2026-04-19",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Vision-Language Models (VLMs) under aggressive low-bit inference remains challenging because inference cost is dominated by the long visual-token prefix during prefill and the growing KV cache during autoregressive decoding. Token pruning and low-bit quantization are complementary for reducing these costs, yet naive stage-wise combinations are often brittle due to a mismatch between quantization calibration and pruning execution. We present a collaborative quantization-and-pruning framework that unifies low-bit inference and deterministic visual-token pruning in a single deployable pipeline. The framework introduces the \\textbf{Q}uantization \\textbf{U}nified \\textbf{O}ffline \\textbf{T}oken \\textbf{A}llocator (\\textbf{QUOTA}), which converts low-bit calibration signals into a layer-wise token allocation schedule and materializes it as a pruning recipe. Token importance is evaluated under deployed W4A4 operators with a quantized KV cache by combining activation magnitude, attention cues, and an explicit low-bit risk signal, enabling consistent budgeted top-$k$ selection. Experiments on standard VLM benchmarks show improved robustness over stage-wise baselines under the same low-bit regime, achieving 95.65\\% average retention while retaining only 30\\% of visual tokens, compared with about 94.3\\% retention for representative stage-wise combinations. The code will be released.",
+      "identifiers": [
+        "SemanticScholar:25bba4656f33dcdd6ebd6cc3e98413f1a3d7c226"
+      ],
+      "semantic_scholar_id": "25bba4656f33dcdd6ebd6cc3e98413f1a3d7c226",
+      "canonical_id": "arXiv:2604.17320",
+      "arxiv_id": "2604.17320",
+      "doi": "10.48550/arXiv.2604.17320",
+      "authors": [
+        "Xin-Qing Li",
+        "Xin He",
+        "Xindong Zhang",
+        "Ming-Ming Cheng",
+        "Lei Zhang",
+        "Yun Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 192,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QUOTAはW4A4と量子化KVで実際に使う活性化・注意・低ビット危険度の信号を使って層別の視覚トークン保持予算を決める。量子化校正と実行時剪定の不一致を避け、VLMのプリフィルとKV容量を同時に削る。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "CoWindow Attention: Full Causal Coverage Is a Collective Property",
+      "source_url": "https://arxiv.org/abs/2609.32704",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "FullAttn repeatedly exposes the complete causal history to every attention head, creating substantial redundant computation and memory traffic even with IO-efficient dense kernels. We introduce CoWA, a structured attention architecture that distributes access to the causal history across KV heads. All heads share near-diagonal and prefix-sink windows, while complementary long-range windows partition the remaining history. Their union provides full causal coverage although each head attends sparsely to distant tokens. This position-defined attention pattern requires no learned router or indexer, is used consistently during training and inference, and aligns with KV-head tensor parallelism. A window-matched ablation at 8K isolates the effect of complementary long-range allocation: CoWA with 100% collective coverage reaches 89.73% accuracy, compared with 89.97% for FullAttn, while duplicated long-range windows perform substantially worse. Across a broader controlled associative-recall comparison with matched token budgets, CoWA closely tracks FullAttn as the context grows, whereas other sparse patterns lose a substantial fraction of the associations. In an attention-operator benchmark at 128K tokens with tensor parallelism, CoWA reduces forward and backward latency during training by 7.4x and 8.6x and decoding latency during inference by 3.0x over FullAttn. Its per-rank peak operator memory matches FullAttn during training and is 7.6x lower during decoding. Across scaling-law training from 0.6B to 14B parameters, CoWA closely tracks FullAttn in perplexity while reducing total training FLOPs. The resulting 14B models and 32B models from separate continued training achieve comparable knowledge, reasoning, and long-context retrieval scores to FullAttn. These results show that full causal coverage can be a collective property of the head ensemble rather than a duplicated property of every head.",
+      "identifiers": [
+        "SemanticScholar:842391b56fec2e4b0af97544090e5214f421fd3b"
+      ],
+      "semantic_scholar_id": "842391b56fec2e4b0af97544090e5214f421fd3b",
+      "canonical_id": "arXiv:2609.32704",
+      "arxiv_id": "2609.32704",
+      "authors": [
+        "Jing-Ze Shi",
+        "Zhang-Yang Peng",
+        "Xian-Duo Li",
+        "Yan-Lin Qi",
+        "Xiao-Tian Lin",
+        "Hao-Xian Chen",
+        "Liang-Dong Wang",
+        "Guang Liu",
+        "Yu-Yu Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CoWindow Attentionは各KVヘッドが近傍窓と先頭窓を共有し、遠距離窓はヘッド間で分担することで全ヘッドの和集合が因果履歴を覆う疎注意構造を作る。128Kの推論時注意演算で復号遅延3倍改善と演算子メモリ7.6倍削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "title": "Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study",
+      "source_url": "https://arxiv.org/abs/2507.20749",
+      "year": 2025,
+      "published": "2025-07-28",
+      "venue": "DAGM GCPR",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Multimodal Large Language Models (MLLMs) demonstrate impressive capabilities, their substantial computational and memory requirements pose significant barriers to practical deployment. Current parameter reduction techniques primarily involve training MLLMs from Small Language Models (SLMs), but these methods offer limited flexibility and remain computationally intensive. To address this gap, we propose to directly compress existing MLLMs through structural pruning combined with efficient recovery training. Specifically, we investigate two structural pruning paradigms--layerwise and widthwise pruning--applied to the language model backbone of MLLMs, alongside supervised finetuning and knowledge distillation. Additionally, we assess the feasibility of conducting recovery training with only a small fraction of the available data. Our results show that widthwise pruning generally maintains better performance in low-resource scenarios with limited computational resources or insufficient finetuning data. As for the recovery training, finetuning only the multimodal projector is sufficient at small compression levels (<20%). Furthermore, a combination of supervised finetuning and hidden-state distillation yields optimal recovery across various pruning levels. Notably, effective recovery can be achieved with as little as 5% of the original training data, while retaining over 95% of the original performance. Through empirical study on two representative MLLMs, i.e., LLaVA-v1.5-7B and Bunny-v1.0-3B, this study offers actionable insights for practitioners aiming to compress MLLMs effectively without extensive computation resources or sufficient data.",
+      "identifiers": [
+        "SemanticScholar:e36cb608d4e986a6b9796e3459ffcf32d99d99f7"
+      ],
+      "semantic_scholar_id": "e36cb608d4e986a6b9796e3459ffcf32d99d99f7",
+      "canonical_id": "arXiv:2507.20749",
+      "arxiv_id": "2507.20749",
+      "doi": "10.48550/arXiv.2507.20749",
+      "authors": [
+        "Yi-Ran Huang",
+        "Lukas Thede",
+        "Massimiliano Mancini",
+        "Wenjia Xu",
+        "Zeynep Akata"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 457,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLaVA-1.5-7BとBunny-3Bの言語バックボーンに層方向・幅方向の構造剪定を適用し、少量データの教師あり微調整と隠れ状態蒸留で性能回復を比較する。既存MLLMを再学習し直さず省メモリ化するためのモデル圧縮研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_review"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ac9f5fd9065b",
+    "round": "libimp-ac9f5fd9065be20b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ac9f5fd9065be20b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ac9f5fd9065be20b-pre01.json",
+    "receipt": "sha256:a5da3d934fc1a13c45c5d9a5b059cffa21372377e50fcc4773853837eb1e24a7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ac9f5fd9065b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

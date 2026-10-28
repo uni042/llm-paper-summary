@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.00450",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block Quantization (BQ) enables efficient LLM inference by quantizing both weights and activations, but its design space remains underexplored. Through hardware-accuracy design space exploration, we identify block size as a key trade-off: larger blocks improve hardware efficiency by amortizing dequantization and accumulation costs, but degrade accuracy. Motivated by this insight, we propose Hierarchical Block Quantization (HBQ), which combines large blocks with low-overhead significand (SIG) scaling for second-level quantization. SIG scaling effectively compensates for large-block quantization errors while accounting for distinct weight and activation distributions. HBQ-A achieves W4A16-level accuracy with W4A5 and lower area than NVFP4, while HBQ-E further reduces hardware cost by 17% while outperforming existing BQ methods in accuracy. We implement HBQ for weights, activations, and KV cache in a 28nm ASIC accelerator and introduce partial-sum BQ to reduce EMA energy. At comparable accuracy, HBQ achieves 2.3x/4.6x higher area/energy efficiency than state-of-the-art weight-only quantization and 1.6-3.3x lower system energy with 1.5-3x speedup over prior BQ methods. Our implementation is publicly available at: https://github.com/SeoLabCornell/HBQ.git.",
+      "identifiers": [
+        "SemanticScholar:3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282"
+      ],
+      "semantic_scholar_id": "3cc19cdbd364ea9a2c7d7e85e3a1d3f3128c5282",
+      "canonical_id": "arXiv:2609.00450",
+      "arxiv_id": "2609.00450",
+      "authors": [
+        "Chun-Ting Chen",
+        "Dongguang Han",
+        "Han-Gyeol Mun",
+        "Jake Hyun",
+        "Arnab Raha",
+        "A. Agarwal",
+        "M. Anders",
+        "Mohamed S. Abdelfattah",
+        "Jae-sun Seo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 58,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重みと活性化を大ブロックで量子化し、第二段の仮数スケーリングで精度損失を補償する。28nm ASIC上でW4A5構成、面積・エネルギー・推論速度の交換条件を検証するLLM推論向け量子化・ハードウェア共同設計である。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "Spend Bytes on Breadth: Precision-Count Trade-offs for Decode-Time KV Compression in Long Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2610.05685",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models write most of their KV cache while decoding long chains of thought (CoT), so the cache has to be compressed online under a fixed memory budget. Decode-time methods mostly decide which tokens to evict. We ask how a fixed byte budget should be split between the number of cached tokens and their precision. BreadthKV spends the bytes on more tokens at low precision, combining quantization with eviction, and picks the bit-width for each model and budget with a 60-problem end-to-end calibration, since offline attention error does not predict it reliably. On three reasoning models and four math and science benchmarks, it scores above eviction alone in 17 of 18 settings and produces shorter outputs. Much of what eviction loses comes from derailed runs, which keep reasoning until the length cap without reaching an answer. On Qwen3-8B at our tightest budget, eviction sends 91% of AIME samples to the cap and BreadthKV 40%. Under the same protocol, BreadthKV is statistically indistinguishable from a joint rate-distortion allocator (RDKV) that uses 27% more KV memory-time, and it outperforms our re-implementation of ThinKV.",
+      "identifiers": [
+        "SemanticScholar:ce847fddfdb6e6fda7a28e943657bea15daef770"
+      ],
+      "semantic_scholar_id": "ce847fddfdb6e6fda7a28e943657bea15daef770",
+      "canonical_id": "arXiv:2610.05685",
+      "arxiv_id": "2610.05685",
+      "authors": [
+        "Run-Guo Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長い思考連鎖のデコード中KV予算をトークン保持数と量子化精度へどう配分するかをBreadthKVで評価する。数学・科学問題でeviction単独との正答率、長さ上限への到達、KVメモリ時間を比較し、推論時KV圧縮の品質と資源交換条件を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "SP$^2$ec: Adaptive Self-Speculative Decoding for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.18735",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) has demonstrated its efficacy in accelerating large language model inference, but for Vision-Language Models (VLMs), the diverse input modalities make it difficult for a small trained drafter to achieve consistently high throughput. Self-speculative decoding reuses parts of the target model as a drafter which retains the multi-modal capability of the VLMs, yet its efficiency depends on choosing a suitable draft configuration for each prompt. We propose Single-Peak SPeculative decoding (SP$^2$ec), a training-free bandit algorithm that adapts the draft configuration during generation. SP$^2$ec exploits the single-peak throughput pattern observed in existing self-speculative methods, including SWIFT, KnapSpec, SpecVLM, and our simple cosSim. Our algorithmic design explicitly minimizes a novel notion of wall-time regret for each given query, corresponding to the empirical wall-time latency. Theoretical guarantees on the wall-time regret show that SP$^2$ec can exploit the optimal draft configuration, with negligible exploration cost. Extensive experiments on Qwen2.5-VL-7B-Instruct and LLaVA-NeXT-Mistral-7B across visual and textual tasks show consistent improvements of up to 11% over the original self-speculative methods, demonstrating the wide applicability of the proposed SP$^2$ec algorithm.",
+      "identifiers": [
+        "SemanticScholar:2740a10f4a0ee3ddf07285be6ab15b11b30b88d4"
+      ],
+      "semantic_scholar_id": "2740a10f4a0ee3ddf07285be6ab15b11b30b88d4",
+      "canonical_id": "arXiv:2610.18735",
+      "arxiv_id": "2610.18735",
+      "authors": [
+        "Yu-Qi Huang",
+        "Xing-Yao Li",
+        "Yun-Long Hou",
+        "Feng-Zhuo Zhang",
+        "Jia-Chun Pan",
+        "Vincent Y. F. Tan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VLMの自己投機的復号で入力ごとに最適な草案構成が変わる問題を、単峰性を利用したバンディット選択で生成中に適応する。Qwen2.5-VLとLLaVA-NeXTで壁時計遅延・スループット改善を測定するためマルチモーダル投機的復号に適合。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f85ce4eff3d2",
+    "round": "libimp-f85ce4eff3d23780-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f85ce4eff3d23780-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f85ce4eff3d23780-pre01.json",
+    "receipt": "sha256:d4f4f9c1bf6de1e5420507aa0b06b3384c28f4bdf019e0ff0a032a2b021fe6c8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f85ce4eff3d2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

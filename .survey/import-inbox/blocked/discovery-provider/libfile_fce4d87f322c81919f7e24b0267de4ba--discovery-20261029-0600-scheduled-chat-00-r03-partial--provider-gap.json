@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-00",
-  "run_key": "20261029-0600-scheduled-chat-00/r03",
+  "run_key": "20261029-0600-scheduled-chat-00/r03::provider-gap",
   "reference_main_sha": "16c24a198d58fb6f580504195d14f088b50b7d52",
-  "record_count": 3,
+  "record_count": 2,
   "records": [
     {
       "classification": "accept",
@@ -23,22 +23,6 @@
       "origin": "discovery_abstract_review"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2601.11667",
-      "identity_tokens": [
-        "arXiv:2601.11667"
-      ],
-      "title": "Distill-then-Replace: Efficient Task-Specific Hybrid Attention Model Construction",
-      "reason": "DtRは事前学習済み全注意モデルの各層を局所蒸留して線形注意へ変換し、下流タスクの検証品質を監視しながら貪欲に層を置換する。長系列推論の計算量削減を目指すが、一次要旨は変換・蒸留コストと品質を中心に述べ、実際の推論遅延・KV容量の実測が確認できないため境界候補。",
-      "source_url": "https://arxiv.org/abs/2601.11667",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-29T06:08:06+09:00",
-      "last_checked_at": "2026-10-29T06:08:06+09:00",
-      "linked_from": [],
-      "worklist_rank": 39,
-      "origin": "discovery_abstract_review"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2409.02026",
       "identity_tokens": [
@@ -54,5 +38,11 @@
       "worklist_rank": 40,
       "origin": "discovery_abstract_review"
     }
+  ],
+  "parent_run_key": "20261029-0600-scheduled-chat-00/r03",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_fce4d87f322c81919f7e24b0267de4ba--discovery-20261029-0600-scheduled-chat-00-r03-partial.json",
+  "provider_gap_ids": [
+    "arXiv:2409.02026",
+    "arXiv:2608.03447"
   ]
 }
