@@ -416,6 +416,10 @@
   実装：[✓](https://github.com/DeepLangAI/LingoEDU) ・ リポジトリ内被引用：1  
   LingoEDUは、長い文章を単純にトークン単位で間引くのではなく、まず原文の談話構造を木として抽出し、その木から質問に必要な範囲だけを選択して入力を短縮する、明示的な文脈圧縮方式である。著者は248文書を人手で構造注釈したStructBenchを公開し、木編集距離4.77、文書単位完全一致率49.60%を報告した。
 
+- **2025-12 · [Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}](2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md)**  
+  実装：[✓](https://github.com/PKULab1806/Fairy2i-W2) ・ リポジトリ内被引用：1  
+  Fairy2iは、通常の実数値で学習済みのTransformerを、量子化前の出力を変えずに複素数の広義線形（widely-linear）表現へ変換する。実効2ビットのFairy2i-W2はC4検証集合の困惑度（Perplexity; PPL）7.85、ARC-Easyなど五つのゼロショット課題平均62.00%を示した。
+
 - **2025-12 · [Asynchronous Reasoning: Training-Free Interactive Thinking LLMs](2025-2512.10931-asynchronous-reasoning-training-free-interactive-thinking-llms.md)**  
   実装：[✓](https://github.com/yandex-research/AsyncReasoning) ・ リポジトリ内被引用：1  
   推論時計算を増やすほど対話の即応性が下がるという問題である。二つの流れがそれぞれ通常の「入力→思考→回答」という順序で文脈を見ているように、鍵・値キャッシュ（KV キャッシュ）の論理的な並びを切り替える。
@@ -1622,10 +1626,6 @@
   実装：✓ ・ リポジトリ内被引用：0  
   高解像度画像や動画では視覚トークン数が大きくなり、言語モデルの注意計算、鍵・値キャッシュ（KV キャッシュ）、初回トークン生成までの遅延が増加する。Glance2Gazeは、最初に画像全体を眺めて必要な細部へ視線を絞るという着想を二つの計算機構へ具体化する。
 
-- **2025-12 · [Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}](2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md)**  
-  実装：[✓](https://github.com/PKULab1806/Fairy2i-W2) ・ リポジトリ内被引用：0  
-  Fairy2iは、通常の実数値で学習済みのTransformerを、量子化前の出力を変えずに複素数の広義線形（widely-linear）表現へ変換する。実効2ビットのFairy2i-W2はC4検証集合の困惑度（Perplexity; PPL）7.85、ARC-Easyなど五つのゼロショット課題平均62.00%を示した。
-
 - **2025-12 · [ELANA: A Simple Energy and Latency Analyzer for LLMs](2025-2512.09946-elana-a-simple-energy-and-latency-analyzer-for-llms.md)**  
   実装：[✓](https://github.com/enyac-group/Elana) ・ リポジトリ内被引用：0  
   本論文は新しい推論アルゴリズムの高速化倍率を主張するものではなく、計測方法と計測例を提示する研究である。
@@ -1689,7 +1689,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：79  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：80  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
@@ -2407,7 +2407,7 @@
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
-  実装：[✓](https://github.com/hao-ai-lab/Consistency_LLM) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/hao-ai-lab/Consistency_LLM) ・ リポジトリ内被引用：31  
   整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
@@ -2717,7 +2717,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：248  
+  実装：✓ ・ リポジトリ内被引用：249  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -2855,7 +2855,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-06 · [DeepSpeed Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale](2022-2207.00032-deepspeed-inference-enabling-efficient-inference-of-transformer-models-at-unprecedented-scale.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：169  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：170  
   単一の量子化方式や一種類の並列化を万能解とせず、GPU内実行向けのDeepSpeed Transformerと、CPU主記憶・NVMeを使うZeRO-Inferenceという二つの経路を組み合わせる。
 
 - **2022-02 · [ST-MoE: Designing Stable and Transferable Sparse Expert Models](2022-2202.08906-st-moe-designing-stable-and-transferable-sparse-expert-models.md)**  
