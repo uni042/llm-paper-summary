@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（760本）
+## 自動生成の論文一覧（762本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1394,6 +1394,10 @@
   実装：[✓](https://github.com/automl/NeuralAttentionSearchLinear) ・ リポジトリ内被引用：0  
   NAtS-L（Neural 注意機構 Search Linear）は、従来の「ある層はソフトマックス注意、別の層は線形注意」という固定的な混成構成を、同じ層の中で入力トークン塊ごとに注意演算を選択する構成へ拡張した研究である。
 
+- **2026-02 · [Near-Oracle KV Selection via Pre-hoc Sparsity for Long-Context Inference](2026-2602.08329-near-oracle-kv-selection-via-pre-hoc-sparsity-for-long-context-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈LLMの自己回帰復号では、生成トークンが増えるほど各層・各ヘッドが参照する過去のKey/Value（KV）キャッシュが増え、注意演算の読み出しと集約が高コストになる。従来の近似方式は過去の注意分布や代理スコアから重要KVを予測するため、変化したクエリに必要なトークンを落とす危険がある。
+
 - **2026-02 · [MoBiQuant: Mixture-of-Bits Quantization for Token-Adaptive Any-Precision LLM](2026-2602.20191-mobiquant-mixture-of-bits-quantization-for-token-adaptive-any-precision-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデル（Large Language モデル; LLM）の推論における重み量子化は、GPUメモリ容量と重み読み出し帯域を節約する一方、ビット幅を下げるほど丸め誤差を増やす。
@@ -1756,13 +1760,13 @@
   実装：✓ ・ リポジトリ内被引用：21  
   CoT-Valveは、推論モデルが簡単な問題にも長い思考連鎖（Chain of Thought、CoT）を生成してしまう無駄を減らし、同じ重みを基盤とするモデルで思考列の長さを柔軟に変える手法である。
 
-- **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
-  本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
-
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
   実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：19  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
+
+- **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
+  実装：✓ ・ リポジトリ内被引用：19  
+  本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
 
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
   実装：✓ ・ リポジトリ内被引用：18  
@@ -1777,7 +1781,7 @@
   拡散型LLM（dLLM）の反復的な雑音除去（denoising）・並列トークン確定・更新され続けるKVをモジュール化し、デコーダ/KV管理とGPU実行系を同時最適化するdInfer。
 
 - **2025-02 · [CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation](2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md)**  
-  実装：[✓](https://github.com/zhenyi4/codi) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/zhenyi4/codi) ・ リポジトリ内被引用：15  
   CODI（Continuous Chain-of-Thought via Self-Distillation）は、推論過程を自然言語の単語列として毎回生成する費用を減らすため、明示的な思考連鎖（Chain-of-Thought; CoT）を少数の連続潜在状態へ移す学習方式である。
 
 - **2025-10 · [DeepSeek-OCR: Contexts Optical Compression](2025-2510.18234-deepseek-ocr-contexts-optical-compression.md)**  
@@ -2226,7 +2230,7 @@
 
 - **2025-05 · [Understanding Differential Transformer Unchains Pretrained Self-Attentions](2025-2505.16333-understanding-differential-transformer-unchains-pretrained-self-attentio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  差分注意を備えたDifferential Transformerは、通常の注意行列を二組計算し、片方からもう片方を係数付きで引くことで、重要でない位置に共通する注意を抑える設計である。Llama-3Bの11課題平均正答率は60.2%から64.2%、長文脈の針検索では66.9%から78.3%へ改善した。
+  著者らは、この方式の利点を単純な注意の疎化として説明できるかを検証し、負の寄与による表現力、注意頭部の冗長性低下、学習時の安定性という三つの要因を分析した。Llama-3.2-3Bの11課題平均は60.2から64.2へ4.0ポイント改善し、針検索の平均正答率は66.9%から78.3%へ11.4ポイント改善した。
 
 - **2025-05 · [STAR: Stage-Wise Attention-Guided Token Reduction for Efficient Large Vision-Language Models Inference](2025-2505.12359-star-stage-wise-attention-guided-token-reduction-for-efficient-large-vis.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2319,6 +2323,10 @@
 - **2025-03 · [Cost-Optimal Grouped-Query Attention for Long-Context Modeling](2025-2503.09579-cost-optimal-grouped-query-attention-for-long-context-modeling.md)**  
   実装：[✓](https://github.com/THUNLP/cost-optimal-gqa) ・ リポジトリ内被引用：0  
   Grouped-Query 注意機構（GQA）は複数のquery headでKey/Valueを共有し、通常のMulti-Head 注意機構（MHA）よりKVキャッシュ容量と読み出し量を抑える。
+
+- **2025-03 · [ClusComp: A Simple Paradigm for Model Compression and Efficient Finetuning](2025-2503.13089-cluscomp-a-simple-paradigm-for-model-compression-and-efficient-finetunin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ClusCompは、言語モデルの重みを一様な低ビット数値へ丸める代わりに、似た値の短いベクトルをまとめて代表ベクトルへ置き換える圧縮法である。
 
 - **2025-03 · [Attention Condensation via Sparsity Induced Regularized Training](2025-2503.01564-attention-condensation-via-sparsity-induced-regularized-training.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

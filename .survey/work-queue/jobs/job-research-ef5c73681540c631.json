@@ -35,10 +35,15 @@
   "selection_reason": "観測済み注意スコアへの後付け依存を避け、注意計算前にKV候補を選ぶPrHSを提案する。捨てた注意質量から相互情報量損失の上界を導き、時間・深さ・層方向の3選択器で疎注意を構成する。A100で密注意比2.8倍スループット、演算子遅延9.9倍改善を報告する長文脈推論カーネル研究。",
   "semantic_scholar_id": "d2956d810baa90a2345b388d43e6d2f3f8fcebba",
   "source_url": "https://arxiv.org/abs/2602.08329",
-  "status": "ready",
+  "status": "superseded",
   "title": "Near-Oracle KV Selection via Pre-hoc Sparsity for Long-Context Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T19:00:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.08329-near-oracle-kv-selection-via-pre-hoc-sparsity-for-long-context-inference.md",
+  "represented_canonical_id": "arXiv:2602.08329",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
