@@ -74,6 +74,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：[✓](https://github.com/microsoft/sutradhara) ・ リポジトリ内被引用：5  
   Sutradharaは、ツール利用型エージェントの性能問題を「LLM推論エンジン単体の高速化」ではなく、エージェントを制御するオーケストレータと推論エンジンの協調設計として扱う。著者らが6,000件の生産相当エージェント要求を分析すると、ツール実行はFTRの中央値で約32%、90パーセンタイルで61%、99パーセンタイルで85%を占める。
 
+- **2025-11 · [SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs](2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  蒸留言語モデルの注意分布を「本体LLMがどの過去トークンを見るか」の安価な予測器として使い、重要KVを推論前に選択する。これによりKV検索とCPU-GPU転送を本体計算から切り離し、非同期先読み・差分更新・適応オフロードまで一体化する。
+
 - **2025-11 · [Efficient Multi-Adapter LLM Serving via Cross-Model KV-Cache Reuse with Activated LoRA](2025-2512.17910-activated-lora-cross-model-kv-reuse.md)**  
   実装：[✓](https://github.com/tdoublep/vllm/tree/alora) ・ リポジトリ内被引用：5  
   aLoRAの起動前KVを基盤モデル・別aLoRA間で共有できるようvLLMのブロックハッシュと実行時マスクを改修し、長文の多アダプタ処理で再プリフィルを避け、65K文脈で標準LoRA比E2E最大58倍・TTFT 100倍超を報告する。
@@ -86,9 +90,9 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：4  
   KEEPは更新頻度で具身記憶を群分けし、文脈依存の重要度伝播で必要KVだけを再計算し、層をまたぐ先読みでCPU→GPU読込み待ちを減らす方式。
 
-- **2025-11 · [SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs](2025-2512.00722-specontext-enabling-efficient-long-context-reasoning-with-speculative-context-sparsity-in-llms.md)**  
+- **2025-11 · [DynaKV: Enabling Accurate and Efficient Long-Sequence LLM Decoding on Smartphones](2025-2511.07427-dynakv-enabling-accurate-and-efficient-long-sequence-llm-decoding-on-sma.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
-  蒸留言語モデルの注意分布を「本体LLMがどの過去トークンを見るか」の安価な予測器として使い、重要KVを推論前に選択する。これによりKV検索とCPU-GPU転送を本体計算から切り離し、非同期先読み・差分更新・適応オフロードまで一体化する。
+  キャッシュをフラッシュへ退避して必要な部分だけ読み出す方式では、鍵の類似度でまとめたクラスタの代表ベクトルをDRAMに置き、クエリに近いクラスタだけを検索する。論文の主要な結果は、比較したPQCacheに対して端から端までの遅延が平均1.47倍高速、ClusterKVに対して平均1.31倍高速である。
 
 - **2026-08 · [HiSparse: Scaling Sparse-Attention Decoding with Hierarchical KV Cache Management](2026-2608.07009-hisparse-hierarchical-kv-sparse-attention.md)**  
   実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：3  
@@ -145,10 +149,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2025-12 · [HiFC: High-efficiency Flash-based KV Cache Swapping for Scaling LLM Inference](2026-f52f99f3360a-hifc-high-efficiency-flash-based-kv-cache-swapping-for-scaling-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   GPUとNVMe SSDをGDSで直結し、pSLCと順次KVブロック配置でDRAMなしのKV交換を実現し、長文脈推論の性能を保ちながら容量費用を削減する。
-
-- **2025-11 · [DynaKV: Enabling Accurate and Efficient Long-Sequence LLM Decoding on Smartphones](2025-2511.07427-dynakv-enabling-accurate-and-efficient-long-sequence-llm-decoding-on-sma.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  キャッシュをフラッシュへ退避して必要な部分だけ読み出す方式では、鍵の類似度でまとめたクラスタの代表ベクトルをDRAMに置き、クエリに近いクラスタだけを検索する。論文の主要な結果は、比較したPQCacheに対して端から端までの遅延が平均1.47倍高速、ClusterKVに対して平均1.31倍高速である。
 
 - **2026-09 · [CacheBridge: Efficient Cross-Model KV Cache Transfer](2026-2609.00891-cachebridge.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -387,7 +387,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   Pieが扱う問題は、言語モデル推論で鍵・値キャッシュ（KVキャッシュ）をGPUの高帯域メモリからCPUメモリへ退避すると、同時処理可能な要求は増えるものの、必要時の読み戻しが逐次生成を停止させることである。物理GPU KV領域が同じvLLMとの比較では、ShareGPTで最大1.9倍、Alpacaで最大1.5倍の処理能力を示す。
 
 - **2025-03 · [SpeCache: Speculative Key-Value Caching for Efficient Generation of LLMs](2025-2503.16163-specache-speculative-kv-caching.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
+  実装：✓ ・ リポジトリ内被引用：12  
   SpeCacheは16-bit KV正本をCPUに残し、GPUには重要位置の低ビット索引と少数の正確KVだけを置く。次トークンの参照先を予測して一段先読みし、容量と転送待ちを減らす方式。
 
 - **2025-02 · [HeadInfer: Memory-Efficient LLM Inference by Head-wise Offloading](2025-2502.12574-headinfer-head-wise-kv-offloading.md)**  
@@ -469,7 +469,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：92  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：94  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  

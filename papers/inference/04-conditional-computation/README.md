@@ -325,7 +325,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-08 · [Learned Token Pruning for Transformers](2022-2107.00910-learned-token-pruning-for-transformers.md)**  
-  実装：[✓](https://github.com/kssteven418/LTP) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/kssteven418/LTP) ・ リポジトリ内被引用：20  
   この論文の対象は、入力文の全トークンを全Transformer層で処理するために生じる推論計算量である。一次資料としてKDD 2022の原論文に加え、筆頭著者が2023年に公表した同方式の31ページの学位論文（UC Berkeley EECS-2023-119）の方法・評価・議論を参照した。
 
 - **2022-03 · [Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space](2022-2203.14680-transformer-feed-forward-layers-build-predictions-by-promoting-concepts-.md)**  
