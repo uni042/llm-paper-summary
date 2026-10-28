@@ -1,30 +1,41 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261029T221000-oct26",
+  "attempt_id": "library-import-maint-20261029T230500-oct27",
   "kind": "framework_llm_update",
   "artifacts": [
     {
-      "path": "framework-updates/inference-engines/exllama/README.md",
-      "expected_blob_sha": "7b987035559c403b96d2fb2f71c20dfa399949ca",
+      "path": "llm-releases/gemma.md",
+      "expected_blob_sha": "b9d3e340d95530acc899a162a302d4d67030be99",
       "edits": [
         {
           "op": "insert_before_once",
-          "anchor": "## 主要更新",
-          "text": "## 2026-10-25 — ExLlamaV3 v1.6.5（正式版）\n\n2026-10-25に正式公開されたv1.6.5を追加。v1.6.4から、VRAM上のprefill cache削減、hot/sparse vocabularyを用いたdraft latency削減、Gemma 4 MTP（Gemma4AssistantForCausalLM）対応、AVX2/AVX512 MoE CPU offload、Nemotron Super VL対応、tokenizer prompt cache修正が含まれる。Windows向けCUDA 12.8/13.2 wheelも公開された。個別機能の説明から全モデル共通のE2E生成速度倍率は推定できず、実測倍率は記載しない。\n\n一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.5 ; https://github.com/turboderp-org/exllamav3/compare/v1.6.4...v1.6.5\n\n"
+          "anchor": "## 用語メモ",
+          "text": "## 2026-10-26 — Gemma 4 12B MTP assistantの生成設定修正\n\n既存checkpoint `google/gemma-4-12B-it-assistant` の `generation_config.json` が更新された。EOS tokenは `1` 単独から `[1, 106, 50]` へ変更され、`is_assistant: true`、`num_assistant_tokens: 6`、`num_assistant_tokens_schedule: \"constant\"` が設定された。MTP speculative decoding用assistantとしての設定変更であり、新checkpointの公開やGemma 4全体のリリース日変更ではない。\n\n一次資料: https://huggingface.co/google/gemma-4-12B-it-assistant/discussions/7/files ; https://huggingface.co/google/gemma-4-12B-it-assistant/commits/main\n\n"
+        }
+      ]
+    },
+    {
+      "path": "llm-releases/nvidia.md",
+      "expected_blob_sha": "3a80906ce0ab3db46d8896f9d0eeadbbb83b0a8a",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 性能値の読み方",
+          "text": "| 2026-10-16 | Nemotron Labs Dory1.0-4B | 4B latent-recurrent / looped normalized-GPT。Input 8層、共有Recurrent 20層、Output 8層で、1/2/4 loopにより同一重みの計算量を変更する。最大256K contextはKV容量とruntimeに依存。BF16、MXFP8、NVFP4、Q5_K_M GGUF（公式GGUFは約3.42 GiB）。OpenMDW-1.1。vLLM PR #60149は確認時点で審査中。GGUF実行例は特定のllama.cpp forkと設定を要し、一般の公式安定版やWindows配布での動作は未確認。NVIDIAのDGX Spark・batch 1評価はRTX 4070 SUPERへ外挿しない。 | https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16 ; https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-GGUF ; https://github.com/vllm-project/vllm/pull/60149 |\n"
         }
       ]
     },
     {
       "path": "framework-updates/inference-engines/llama-cpp/README.md",
-      "expected_blob_sha": "10ccc3d9836aec212e9f5818170e50535b7cb969",
+      "expected_blob_sha": "764d1cc8331b2662514fd19f5b6d763ca43f1506",
       "edits": [
         {
           "op": "insert_before_once",
           "anchor": "## 主要更新",
-          "text": "## 2026-10-25〜26 — llama.cpp b11870〜b11888（開発ビルド）\n\nb11869からb11888までの確定済み開発ビルド差分を追加。これらはpre-releaseであり、正式安定版と区別する。\n\n- b11870でDeepSeek-V4.1-Flashのmodel実装を追加。圧縮KV cache計算、Engram行のgraph内gather、sparse top-k行の並べ替えなどを含む。\n- b11879、b11883、b11884ではCUDA dense FFN fusion、4D quantization accuracy修正、DRY sampling関連修正などを収録。\n- b11888でgrammarの再帰深度制限と候補棄却処理を修正し、長い空白token列の誤棄却を解消。公式説明にあるsampling改善はgrammar関連の評価であり、一般のE2E生成速度倍率ではない。\n- b11888の配布assetにWindows CUDA 12.4およびCUDA 13.4系x64 buildがある。Windows 11 + RTX 4070 SUPERでの実測値は未確認。\n\n一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11870 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11879 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11883 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11884 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11888\n\n"
+          "text": "## 2026-10-26〜27 — llama.cpp b11889〜b11912（開発ビルド）\n\nb11888からb11912までの差分を追加。すべてpre-release開発ビルドであり、正式安定版とは区別する。\n\n- b11901はSYCL reorder時の一時メモリを32 MiBに制限する。Intel/SYCL backend向けでCUDAへの直接追加ではない。\n- b11905はVulkan RMSNormのsubgroup reduction最適化とAMD vendor pathを追加。Vulkan固有。\n- b11909はQualcomm HexagonのMUL_MAT_ID row-skip zeroingをベクトル化。Hexagon固有。\n- b11910はOpenCLのKV-cache view書き込みを修正し、state restore失敗を解消。\n- b11912はLagunaのMoE amax rescalingとSM tensor supportを追加。特定architecture対応で一般モデルの速度向上を示さない。\n- b11912の公式Windows配布assetにCUDA 12.4および13.4系x64 buildがある。Windows 11 + RTX 4070 SUPERでの実測・互換性は未確認。\n\n一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912\n\n"
         }
       ]
     }
   ],
-  "summary": "2026-10-26 Library maintenance: add ExLlamaV3 v1.6.5 and llama.cpp b11870-b11888. Preserve prerelease distinction; no generalized E2E speed claims."
+  "summary": "2026-10-27 Library maintenance: correct Gemma 4 MTP assistant config; backfill Dory1.0-4B as 2026-10-16 release; append llama.cpp b11889-b11912 prerelease updates with backend limitations."
 }
