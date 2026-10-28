@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T06:06:55.064739+00:00",
+  "generated_at": "2026-10-28T06:41:33.226760+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 22,
+  "count": 25,
   "worker_counts": {
-    "scheduled-chat-00": 8,
-    "scheduled-chat-30": 7,
-    "scheduled-chat-45": 7
+    "scheduled-chat-00": 9,
+    "scheduled-chat-30": 8,
+    "scheduled-chat-45": 8
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -62,20 +62,20 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.00907-kvslimmer-theoretical-insights-and-practical-optimizations-for-asymmetri.md",
-      "canonical_id": "arXiv:2603.00907",
-      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
-      "file_bytes": 11995,
-      "source_sha256": "07a3cc8dd96a3d9f5b4d87191743ffd387923cf810b94f1e7885945cdde92517",
-      "source_git_blob_sha": "89a1ad62eac4e2da23e881ea91daf615b86dbe70",
+      "path": "papers/inference/99-other-inference-systems/2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md",
+      "canonical_id": "arXiv:2504.07389",
+      "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
+      "file_bytes": 12930,
+      "source_sha256": "586fec71fa26d58675f7c4cc0e01d086d8e977e08032e2b3fbba405749bdb382",
+      "source_git_blob_sha": "c1a851d29d8e4b776453dce2ed9d5f0bd7d34eee",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.919557,
+      "japanese_ratio": 0.934557,
       "quality_metrics": {
-        "body_chars": 3746,
-        "method_chars": 1239,
-        "evaluation_chars": 1192,
+        "body_chars": 3843,
+        "method_chars": 1033,
+        "evaluation_chars": 1459,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -102,12 +102,72 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2509.21623-ojakv-context-aware-online-low-rank-kv-cache-compression.md",
+      "canonical_id": "arXiv:2509.21623",
+      "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
+      "file_bytes": 13205,
+      "source_sha256": "65d59c850637a4df9c8bcccf6c04b79cb1d26fb64fe8a084565067a94f614162",
+      "source_git_blob_sha": "6b5242c1894697124c595786bcde5812364c5904",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.928836,
+      "quality_metrics": {
+        "body_chars": 3707,
+        "method_chars": 1268,
+        "evaluation_chars": 913,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.00907-kvslimmer-theoretical-insights-and-practical-optimizations-for-asymmetri.md",
+      "canonical_id": "arXiv:2603.00907",
+      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
+      "file_bytes": 13584,
+      "source_sha256": "915306ae55d78a75011fba579fbaaed1a448abfe250a70a98105a047f122e31a",
+      "source_git_blob_sha": "995a848539cf9f1664bb8eb5580b8a87055cada1",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.919557,
+      "quality_metrics": {
+        "body_chars": 3746,
+        "method_chars": 1239,
+        "evaluation_chars": 1192,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2511.17801-layer-wise-high-impact-parameter-ratio-optimization-in-post-training-qua.md",
+      "canonical_id": "arXiv:2511.17801",
+      "title": "Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models",
+      "file_bytes": 14512,
+      "source_sha256": "b126970fe821cf23798680c98c35425b70970f202634ad54034edb844658c73d",
+      "source_git_blob_sha": "37579c3acc1aa514da68e2ab51fbe1c8216b733b",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.953312,
+      "quality_metrics": {
+        "body_chars": 4464,
+        "method_chars": 1051,
+        "evaluation_chars": 1687,
+        "limitation_chars": 546
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md",
       "canonical_id": "arXiv:2609.38510",
       "title": "DEdit: Iterative Draft Editing for Speculative Decoding",
-      "file_bytes": 13100,
-      "source_sha256": "47e3d23c454733693fc223b6e0065afc95519e2642aa5f0e44dced3bdbf13295",
-      "source_git_blob_sha": "e1244e6d5a090c10ffb299bca0b972b3b173360d",
+      "file_bytes": 15016,
+      "source_sha256": "7916020df8c4b6127e149b2e88c61075728d595ea5fac6380e2c9cc356e016ca",
+      "source_git_blob_sha": "6a6cf8a59ce981593df1800a007b31b3257db0a7",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -116,46 +176,6 @@
         "body_chars": 3720,
         "method_chars": 1136,
         "evaluation_chars": 1324,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md",
-      "canonical_id": "arXiv:2609.33762",
-      "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
-      "file_bytes": 14565,
-      "source_sha256": "9c4bbe38db5bb76c9c9f476af144e78ce3be97ce91dae4b6e0dad1054d0ea0d4",
-      "source_git_blob_sha": "78865b2d440415312634d4f41ee3d553ea6f64ba",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.927939,
-      "quality_metrics": {
-        "body_chars": 4101,
-        "method_chars": 1648,
-        "evaluation_chars": 895,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.37532-dscale-scaling-block-diffusion-speculative-decoding-with-adaptive-verifi.md",
-      "canonical_id": "arXiv:2609.37532",
-      "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
-      "file_bytes": 15150,
-      "source_sha256": "b194fffb7c1099d3aa3f94eb76de9459b521daff7c27858b91f05b744864cf93",
-      "source_git_blob_sha": "0874e6c1d5a8197f3f09d4d5bb2bcfe4375ef49d",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.930581,
-      "quality_metrics": {
-        "body_chars": 4568,
-        "method_chars": 1287,
-        "evaluation_chars": 1106,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -237,6 +257,26 @@
         "method_chars": 932,
         "evaluation_chars": 1270,
         "limitation_chars": 405
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md",
+      "canonical_id": "arXiv:2609.33762",
+      "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
+      "file_bytes": 16237,
+      "source_sha256": "26cf9e928d9c073d5f3b44ea2e0f766ad65a89ca21eefdf8c81c22be669eb246",
+      "source_git_blob_sha": "735288e85fadd9dd5223231e41d0d434a98942d8",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.927939,
+      "quality_metrics": {
+        "body_chars": 4101,
+        "method_chars": 1648,
+        "evaluation_chars": 895,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -356,6 +396,26 @@
         "body_chars": 3777,
         "method_chars": 1088,
         "evaluation_chars": 929,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.37532-dscale-scaling-block-diffusion-speculative-decoding-with-adaptive-verifi.md",
+      "canonical_id": "arXiv:2609.37532",
+      "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
+      "file_bytes": 17073,
+      "source_sha256": "ae9f4efbd5fd60e869cd81a51aeb3624f29c183f6be5f48b8f7a4dbbadaa3d7a",
+      "source_git_blob_sha": "eea25830950d04e99089cccbc1900d0aca6c45df",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.930581,
+      "quality_metrics": {
+        "body_chars": 4568,
+        "method_chars": 1287,
+        "evaluation_chars": 1106,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
