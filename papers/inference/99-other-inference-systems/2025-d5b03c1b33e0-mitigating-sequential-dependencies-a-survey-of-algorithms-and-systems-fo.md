@@ -30,6 +30,8 @@ quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 returned_research_repair: true
 returned_research_original_blocked_blob_sha: "0b6f80f2324f80214aa38c5b8461bf671c1dd75d"
+last_audited: null
+audit_version: 0
 ---
 
 # 生成・修正方式の分類と実機比較：自己回帰モデルの逐次依存を緩和する設計

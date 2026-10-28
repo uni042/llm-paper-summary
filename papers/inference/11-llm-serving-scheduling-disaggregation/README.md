@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（507本）
+## 自動生成の論文一覧（509本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -821,6 +821,10 @@
 - **2026-07 · [Kalypso: Relational LLM Serving](2026-2607.23815-kalypso-relational-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らは、段階ごとのメモリ予算、待機列の飢餓・飽和の検知、出力トークン数の予測、明示的または仮想的なKV保持を組み合わせる。利得はLLMの重みや注意機構を変更したためではなく、意味演算子の処理順とKV寿命を連動させたためである。
+
+- **2026-07 · [InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata](2026-2607.18957-instantinfer-enabling-fast-llm-cold-start-with-communicating-finite-auto.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  複数モデルをオンデマンドで起動するサーバーレス環境では、通常の推論速度が速くても、起動だけで数十秒から数分かかると初トークン遅延（TTFT）を支配する。InstantInferは、モデルの演算を近似したり量子化したりするのではなく、起動プログラムの実行依存関係とI/O粒度を改善する。
 
 - **2026-07 · [General Non-Clairvoyant KV-Cache Scheduling via Regime-Aware Routing](2026-2607.09248-regime-aware-non-clairvoyant-kv-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1675,6 +1679,10 @@
 - **2025-09 · [Intra-request branch orchestration for efficient LLM reasoning](2025-2509.24957-intra-request-branch-orchestration-for-efficient-llm-reasoning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、推論時に複数のChain-of-Thought（CoT）枝を生成して多数決を取る自己整合性（SC）のトークン費用とリクエスト完了遅延を同時に削減するDUCHESSを提案する。
+
+- **2025-08 · [Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics](2025-2508.18736-rethinking-caching-for-llm-serving-systems-beyond-traditional-heuristics.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  さらに高負荷でも同じ類似度しきい値を維持すると、モデル本体へ送られる要求が多すぎて遅延目標を守れない場合がある。SISO（Similar Input? Similar Output!）は、意味クラスタの重心をキャッシュする方式、意味的な局所性に基づく置換、要求負荷に応じた検索しきい値の動的制御を組み合わせる。
 
 - **2025-08 · [Pruning Long Chain-of-Thought of Large Reasoning Models via Small-Scale Preference Optimization](2025-2508.10164-pruning-long-chain-of-thought-of-large-reasoning-models-via-small-scale-.md)**  
   実装：[✓](https://github.com/SleepyWithoutCoffee/Small_Scale) ・ リポジトリ内被引用：0  

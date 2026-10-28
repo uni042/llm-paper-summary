@@ -35,10 +35,15 @@
   "selection_reason": "エージェントが技能・文書・記憶を個別符号化したKVキャッシュから選択する際の品質低下を、保存済みKVの再計算ではなくオンラインQuery射影の低ランク適応で修復する。フル文脈prefillの出力分布を蒸留し、Qwen3-4B/8Bで追加パラメータ0.05%未満、最大3.73倍の高速化を報告する。worklist旧題名と同じarXiv identity。",
   "semantic_scholar_id": "c6e21b69a05a8ce8fdbff85ea6d7ec8c68538c02",
   "source_url": "https://arxiv.org/abs/2609.36722",
-  "status": "ready",
+  "status": "superseded",
   "title": "ATTUNER: Recomputation-Free Agentic Context KV Reuse",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T09:12:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2609.36722-attuner-recomputation-free-agentic-context-kv-reuse.md",
+  "represented_canonical_id": "arXiv:2609.36722",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

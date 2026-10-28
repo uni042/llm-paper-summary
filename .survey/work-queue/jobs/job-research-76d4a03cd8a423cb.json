@@ -35,10 +35,15 @@
   "selection_reason": "GitHub Discovery precheckの一次書誌要旨ではLLMサービングの従来型exact/prefix/semantic cacheの限界に対し、代表点を使うcentroid-based caching、局所性を考慮した置換、動的閾値を組み合わせるSISOを提案。複数データセットでヒット率最大1.71倍とSLO達成改善を報告し、推論サービングのキャッシュ設計に直接貢献する。",
   "semantic_scholar_id": "add0859701c539526a6b1f747861ac6e11cdb45f",
   "source_url": "https://arxiv.org/abs/2508.18736",
-  "status": "ready",
+  "status": "superseded",
   "title": "Rethinking Caching for LLM Serving Systems: Beyond Traditional Heuristics",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-28T09:12:12+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2025-2508.18736-rethinking-caching-for-llm-serving-systems-beyond-traditional-heuristics.md",
+  "represented_canonical_id": "arXiv:2508.18736",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

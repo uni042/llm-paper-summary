@@ -24,7 +24,7 @@
 - [10-kv-cache-offload-recomputation](../10-kv-cache-offload-recomputation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（79本）
+## 自動生成の論文一覧（80本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
@@ -170,6 +170,10 @@
 - **2026-09 · [BIO-MEMART: Biometric-Aware KV Cache Memory for Multi-User LLM Agents](2026-2609.08566-bio-memart-biometric-aware-kv-cache-memory-for-multi-user-llm-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   共有KVキャッシュ記憶を意味類似度だけで検索せず、生体認証で所有者候補を先に絞ってからMemArtの検索・KV再利用を行う物理ユーザー認可層。
+
+- **2026-09 · [Attuner: Recomputation-Free Agentic Context KV Reuse](2026-2609.36722-attuner-recomputation-free-agentic-context-kv-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  エージェントがスキルの説明、検索した文書、過去の記憶をリクエストごとに組み立てると、同じ資料を何度もプリフィルすることになる。再計算を減らす代わりに、複数資料から正しい証拠を選ぶ能力が落ちる問題がある。学習済みQuery更新を投影重みに統合するため、推論時にFull teacherや保存済み資料KVの再計算は不要である。
 
 - **2026-08 · [TideRL: Boosting Agentic RL Goodput with Readiness-Aware Scheduling](2026-2608.10402-tiderl-boosting-agentic-rl-goodput-with-readiness-aware-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
