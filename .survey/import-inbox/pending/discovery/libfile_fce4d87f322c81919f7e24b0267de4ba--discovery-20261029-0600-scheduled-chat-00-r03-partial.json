@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261029-0600-scheduled-chat-00/r03",
+  "reference_main_sha": "16c24a198d58fb6f580504195d14f088b50b7d52",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.03447",
+      "identity_tokens": [
+        "arXiv:2608.03447"
+      ],
+      "title": "Approximate Speculative Decoding",
+      "reason": "ASDは通常の投機的復号が最初の不一致で残りの教師評価済み候補を捨てる問題に対し、教師ロジット後悔値の閾値・ブロック内例外数・要求全体の累積予算を使って一部の不一致を許容する。教師分布の厳密保存ではなく近似との交換であり、Qwen3-14B+DSparkで平均7.78%のスループット改善を報告するデコード実行最適化。",
+      "source_url": "https://arxiv.org/abs/2608.03447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:08:06+09:00",
+      "last_checked_at": "2026-10-29T06:08:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 37,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.11667",
+      "identity_tokens": [
+        "arXiv:2601.11667"
+      ],
+      "title": "Distill-then-Replace: Efficient Task-Specific Hybrid Attention Model Construction",
+      "reason": "DtRは事前学習済み全注意モデルの各層を局所蒸留して線形注意へ変換し、下流タスクの検証品質を監視しながら貪欲に層を置換する。長系列推論の計算量削減を目指すが、一次要旨は変換・蒸留コストと品質を中心に述べ、実際の推論遅延・KV容量の実測が確認できないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2601.11667",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:08:06+09:00",
+      "last_checked_at": "2026-10-29T06:08:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 39,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.02026",
+      "identity_tokens": [
+        "arXiv:2409.02026"
+      ],
+      "title": "Foundations of Large Language Model Compression -- Part 1: Weight Quantization",
+      "reason": "CVXQは凸最適化に基づく事後重み量子化で、指定したモデル容量へ任意の圧縮率でLLMを縮小する。数千億パラメータ級までの適用と参照実装を示し、端末配置・重みメモリ・推論計算の削減に向けた圧縮基盤技術なので収録対象。",
+      "source_url": "https://arxiv.org/abs/2409.02026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:08:06+09:00",
+      "last_checked_at": "2026-10-29T06:08:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 40,
+      "origin": "discovery_abstract_review"
+    }
+  ]
+}
