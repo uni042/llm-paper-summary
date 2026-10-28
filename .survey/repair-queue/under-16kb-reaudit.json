@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-28T04:21:11.192567+00:00",
+  "generated_at": "2026-10-28T04:56:32.640809+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 19,
+  "count": 18,
   "worker_counts": {
     "scheduled-chat-00": 6,
-    "scheduled-chat-30": 7,
+    "scheduled-chat-30": 6,
     "scheduled-chat-45": 6
   },
   "entries": [
@@ -62,26 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2024-2407.03637-qet-enhancing-quantized-llm-parameters-and-kv-cache-compression-through-.md",
-      "canonical_id": "arXiv:2407.03637",
-      "title": "QET: Enhancing Quantized LLM Parameters and KV Cache Compression through Element Substitution and Residual Clustering",
-      "file_bytes": 11685,
-      "source_sha256": "ccbb3199c709db6931cb1fa73cdd1690279aa10819aadfdbfd66fd8af446bd89",
-      "source_git_blob_sha": "a6d24ab45b1beb43a5c44f646839284e1ff2fd71",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.85112,
-      "quality_metrics": {
-        "body_chars": 3189,
-        "method_chars": 763,
-        "evaluation_chars": 894,
-        "limitation_chars": 247
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -102,13 +82,33 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.08185-serq-saliency-aware-low-rank-error-reconstruction-for-llm-quantization.md",
+      "canonical_id": "arXiv:2603.08185",
+      "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
+      "file_bytes": 13611,
+      "source_sha256": "5d6ef64eee16099b80294523071b80766bc630665114fb69c2651c0126cfc76b",
+      "source_git_blob_sha": "7f5ccdbe3622c0538ee27679ce6584f66a9a07bc",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.924535,
+      "quality_metrics": {
+        "body_chars": 4224,
+        "method_chars": 932,
+        "evaluation_chars": 1270,
+        "limitation_chars": 405
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-2412.10418-constrained-decoding-with-speculative-lookaheads.md",
       "canonical_id": "arXiv:2412.10418",
       "title": "Constrained Decoding with Speculative Lookaheads",
-      "file_bytes": 13299,
-      "source_sha256": "5154ef33c725b724cea2dfce58ea3a6ad1d369b71ad6673d44c5a24de564ec3a",
-      "source_git_blob_sha": "c403b97803618dde93ef923bf4acb6b0f4ee5ce7",
-      "assigned_worker": "scheduled-chat-30",
+      "file_bytes": 15223,
+      "source_sha256": "e9a7932b0b392d66f13cd8e47471ba4ad66e09a73e7b5aaa062d434bd38b447b",
+      "source_git_blob_sha": "723d4e6f5b057b0e3ea8bc0d2661e3932de5fb68",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.936045,
@@ -156,26 +156,6 @@
         "body_chars": 4083,
         "method_chars": 1505,
         "evaluation_chars": 1023,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2605.08755-laquant-a-simple-overhead-free-large-reasoning-model-quantization-by-lay.md",
-      "canonical_id": "arXiv:2605.08755",
-      "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
-      "file_bytes": 15584,
-      "source_sha256": "67c541a6c3bf9f23c162bc0c35c3d01753cb25930b0b3d9fc72510c7ee7a3085",
-      "source_git_blob_sha": "0bb949aa5f5f6e054dd092736b35e42e93b0d75f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.948504,
-      "quality_metrics": {
-        "body_chars": 4639,
-        "method_chars": 1329,
-        "evaluation_chars": 1522,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
