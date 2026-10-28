@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（728本）
+## 自動生成の論文一覧（729本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -645,6 +645,10 @@
 - **2026-07 · [Beyond Activation Alignment: The Alignment-Diversity Tradeoff in Task-Aware LLM Quantization](2026-2607.00908-beyond-activation-alignment-the-alignment-diversity-tradeoff-in-task-awa.md)**  
   実装：[✓](https://github.com/WangFei-2019/TASA) ・ リポジトリ内被引用：0  
   TASA（Task-Aware Sensitivity Analysis）は、LLMの重みを低ビットへ圧縮するとき、どの層へ何ビット割り当てるかを単一の言語モデル損失だけで決めない方式である。LLaMA-3-8Bでは平均3.5ビットで7タスク平均68.9%、HQQ W4の68.1%とRTN W4の67.9%を上回るが、AWQ W4の69.4%は下回る。
+
+- **2026-07 · [Back from the Future: Key-Value Cache Management by Counter-Causal Surprise](2026-2607.27600-back-from-the-future-key-value-cache-management-by-counter-causal-surpri.md)**  
+  実装：[✓](https://github.com/metacognitionai/counter_causal) ・ リポジトリ内被引用：0  
+  従来のスライディングウィンドウは古いトークンを機械的に捨て、H2Oなどのheavy-hitter方式は過去に多く注意されたトークンを残す。Qwen2.5-7B、RTX4090のキャッシュ更新1回では、KV長512で54msから7.9ms、4096で496msから52.6msとなり、更新処理単体で7～9倍速くなる。
 
 - **2026-07 · [A Hippocampus for Linear Attention: An Exact Memory for What the Recurrent State Forgets](2026-2607.02303-a-hippocampus-for-linear-attention-an-exact-memory-for-what-the-recurren.md)**  
   実装：[✓](https://github.com/scale-lab-ai/HOLA) ・ リポジトリ内被引用：0  

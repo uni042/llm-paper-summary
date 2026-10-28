@@ -35,10 +35,15 @@
   "selection_reason": "GitHub Discovery precheckの一次書誌要旨では最近のトークンから十分予測できる過去トークンのKVを冗長とみなし、逆因果マスクを用いて元の順序のトークンを再実行し、将来側からの予測可能性で削除優先度を求める。最終Transformer層だけの高速近似も提案し、追加学習なしで複数LLMのKV削除品質を改善する推論キャッシュ研究。",
   "semantic_scholar_id": "ed2e612417ea52d4054e7f69bdedcab7eabee566",
   "source_url": "https://arxiv.org/abs/2607.27600",
-  "status": "ready",
+  "status": "superseded",
   "title": "Back from the Future: Key-Value Cache Management by Counter-Causal Surprise",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T02:08:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.27600-back-from-the-future-key-value-cache-management-by-counter-causal-surpri.md",
+  "represented_canonical_id": "arXiv:2607.27600",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
