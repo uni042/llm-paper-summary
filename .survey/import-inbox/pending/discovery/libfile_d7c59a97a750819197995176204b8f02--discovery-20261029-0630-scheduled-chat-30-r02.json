@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-0630-scheduled-chat-30/r02",
+  "reference_main_sha": "abad1c5b49f5f0d2043c155fec01109a0b130947",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.15456",
+      "identity_tokens": [
+        "arXiv:2607.15456"
+      ],
+      "title": "Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers",
+      "reason": "Looped Latent Attentionは重み共有Transformerの反復回数ごとに別々に保存するKVが低ランク軌跡を成すことを利用し、反復ごとのK/Vを潜在表現から読出時に再構成する。Ouro-1.4BのH200でKV容量圧縮とバッチ収容数を実測した推論キャッシュ方式。",
+      "source_url": "https://arxiv.org/abs/2607.15456",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 36,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.16385",
+      "identity_tokens": [
+        "arXiv:2501.16385"
+      ],
+      "title": "FBQuant: FeedBack Quantization for Large Language Models",
+      "reason": "FBQuantは低ビット重み量子化に負帰還型の補正分岐を加えて再構成誤差を抑え、分岐が増やす推論遅延に対して専用CUDAカーネルを設計する。端末LLMの重み帯域律速、量子化品質、追加推論時間を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2501.16385",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 41,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2409.20361",
+      "identity_tokens": [
+        "arXiv:2409.20361"
+      ],
+      "title": "Rotated Runtime Smooth: Training-Free Activation Smoother for accurate INT4 inference",
+      "reason": "Rotated Runtime SmoothはLLM活性化のチャネル外れ値を実行時のチャネル最大値で平滑化し、突発外れ値は回転変換で分散させる。INT4重み・活性化推論で外れ値が量子化精度を壊す問題を対象とし、LLaMA/QwenでPPLを評価する。",
+      "source_url": "https://arxiv.org/abs/2409.20361",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 42,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04750",
+      "identity_tokens": [
+        "arXiv:2604.04750"
+      ],
+      "title": "DeepStack: Facilitating Co-Design Exploration of 3D DRAM-Stacked Accelerators for Distributed LLM Inference",
+      "reason": "DeepStackは3D積層DRAMのバンク活性化・帯域・温度制約と、分散LLM推論の並列化・タイル計算通信重畳を結合した性能モデルを構築する。NS-3と8台B200のvLLM実測でモデル誤差を検証したアクセラレータ/サービング協調設計研究。",
+      "source_url": "https://arxiv.org/abs/2604.04750",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 43,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.10875",
+      "identity_tokens": [
+        "arXiv:2605.10875"
+      ],
+      "title": "Compute Where it Counts: Self Optimizing Language Models",
+      "reason": "Self-Optimizing Language Modelsは凍結LLMの隠れ状態を軽量方策へ入力し、生成トークンごとに注意疎化・MLP活性化剪定・活性化ビット幅を選ぶ。品質と要求計算予算の交換を学習し、推論時の計算量配分を動的化する方式。",
+      "source_url": "https://arxiv.org/abs/2605.10875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 45,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.09883",
+      "identity_tokens": [
+        "arXiv:2510.09883"
+      ],
+      "title": "DELTA: Dynamic Layer-Aware Token Attention for Efficient Long-Context Reasoning",
+      "reason": "DELTAは一部の層だけ全注意で重要トークンを検出し、後続層ではその集合を再利用して注意計算を疎化する。KV全体はGPUに保持して品質を守りつつ、長い推論連鎖で注意対象を最大4.25倍削減しE2E速度1.54倍を報告する。",
+      "source_url": "https://arxiv.org/abs/2510.09883",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 47,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.08026",
+      "identity_tokens": [
+        "arXiv:2603.08026"
+      ],
+      "title": "DyLLM: Efficient Diffusion LLM Inference via Saliency-based Token Selection and Partial Attention",
+      "reason": "DyLLMは拡散型言語モデルの反復ノイズ除去で前ステップから注意文脈が大きく変化したトークンだけを再計算し、残りの活性化を再利用する。LLaDA/Dreamの生成推論で計算を削減し、最大9.6倍のスループットを報告する。",
+      "source_url": "https://arxiv.org/abs/2603.08026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 48,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.26368",
+      "identity_tokens": [
+        "arXiv:2609.26368"
+      ],
+      "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+      "reason": "HySparse2は自己デコーダと交差デコーダの間で全注意層のKVを橋渡しし、内部ではトークン単位の疎注意と直近窓の強制保持を使う。後段デコーダのプリフィルを省き、80B-A3B MoEの長文検索・エージェント処理のKV保存量と計算を削るアーキテクチャ。",
+      "source_url": "https://arxiv.org/abs/2609.26368",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 50,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.13229",
+      "identity_tokens": [
+        "arXiv:2410.13229"
+      ],
+      "title": "Quamba: A Post-Training Quantization Recipe for Selective State Space Models",
+      "reason": "QuambaはMambaの選択的走査内部の高感度活性化を入力側で抑制し、出力側はHadamard変換で外れ値を分散させて8bit重み・活性化量子化する。Orin Nano 8GBでMamba 2.8Bの生成遅延1.72倍改善を実測するSSM言語モデル推論最適化。",
+      "source_url": "https://arxiv.org/abs/2410.13229",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 52,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.15724",
+      "identity_tokens": [
+        "arXiv:2506.15724"
+      ],
+      "title": "MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference",
+      "reason": "MadaKVはマルチモーダルLLMの注意ヘッドが画像・テキストなどに示す選好を検出し、重要トークンの保持と階層的圧縮補償を適応的に行う。MileBenchでKV容量と生成遅延を減らし、単一モダリティ向けevictionの弱点を補う。",
+      "source_url": "https://arxiv.org/abs/2506.15724",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:31:47+09:00",
+      "last_checked_at": "2026-10-29T06:31:47+09:00",
+      "linked_from": [],
+      "worklist_rank": 55,
+      "origin": "discovery_abstract_review"
+    }
+  ]
+}
