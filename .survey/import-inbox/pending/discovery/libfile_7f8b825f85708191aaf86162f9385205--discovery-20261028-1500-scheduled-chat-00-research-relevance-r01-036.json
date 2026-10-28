@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261028-1500-scheduled-chat-00/r01",
+  "reference_main_sha": "809ca6c973131bb5c41829b82579eda88893726b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.12988",
+      "identity_tokens": [
+        "arxiv:2507.12988",
+        "2507.12988"
+      ],
+      "title": "Variance-Based Pruning for Accelerating and Compressing Trained Networks",
+      "reason": "一次arXiv要旨では、活性分散を用いた構造化one-shot pruningをDeiT-Base等の画像認識ネットワークに適用し、ImageNet-1kでMACとモデルサイズを削減する研究。主要実験はVision Transformerの画像分類であり、LLM生成推論・サービング・KVキャッシュ・MoE実行への実装や実測を示さない。一般的な枝刈りという技術的類似性はあるが、このサーベイのLLMシステムへの直接的寄与を確認できない。",
+      "source_url": "https://arxiv.org/abs/2507.12988",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-28T15:03:01+09:00",
+      "last_checked_at": "2026-10-28T15:03:01+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 36
+    }
+  ]
+}
