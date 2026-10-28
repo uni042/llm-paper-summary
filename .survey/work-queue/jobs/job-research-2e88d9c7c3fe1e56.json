@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨では重み・活性外れ値が低ビット精度を損なう問題に対し、活性に導かれた構造化正則化で外れ値に頑健な等価重みを再構成するAstroを提案。追加推論レイテンシを発生させずGPTQ等と直交し、LLaMA-2-7Bでは学習型回転方式より短い量子化時間で品質を改善する。推論向け重み量子化の直接的貢献。",
   "semantic_scholar_id": "fe6f397420edc51fbb4533be2713b3b420f4ea3e",
   "source_url": "https://arxiv.org/abs/2602.07596",
-  "status": "ready",
+  "status": "superseded",
   "title": "Astro: Activation-guided Structured Regularization for Outlier-Robust LLM Post-Training Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T10:58:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.07596-astro-activation-guided-structured-regularization-for-outlier-robust-llm.md",
+  "represented_canonical_id": "arXiv:2602.07596",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

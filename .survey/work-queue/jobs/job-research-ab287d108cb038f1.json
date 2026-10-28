@@ -35,10 +35,15 @@
   "selection_reason": "三値重みの積和を符号付き加減算へ置換し、widely-linear層の8個の実数sub-GEMVをAVX-512の単一ループへ融合するCPU推論カーネルを提案する。Xeon 8558P上で32.4 token/s、llama.cpp Q4_K_M比1.24倍と報告し、重み帯域とカーネル実行を直接改善する。",
   "semantic_scholar_id": "5eb29c1b011cdad97112a7667c454615b3632ef9",
   "source_url": "https://arxiv.org/abs/2604.20913",
-  "status": "ready",
+  "status": "superseded",
   "title": "FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T10:58:00+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.20913-fairyfuse-multiplication-free-llm-inference-on-cpus-via-fused-ternary-ke.md",
+  "represented_canonical_id": "arXiv:2604.20913",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

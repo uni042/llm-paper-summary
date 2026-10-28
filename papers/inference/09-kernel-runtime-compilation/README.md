@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（205本）
+## 自動生成の論文一覧（206本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -369,6 +369,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Fast Cross-Operator Optimization of Attention Dataflow](2026-2604.03446-fast-cross-operator-optimization-of-attention-dataflow.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   中間の注意得点行列を外部DRAMへ書き戻すと大量のメモリ転送が生じるため、複数演算を融合し、オンチップの小さなバッファで部分結果を保持することが重要になる。MMEE（Matrix Multiplication Encoded Enumeration、行列積符号化列挙）は、この探索空間を解析式と行列演算で高速に評価する手法である。
+
+- **2026-04 · [FairyFuse: Multiplication-Free LLM Inference on CPUs via Fused Ternary Kernels](2026-2604.20913-fairyfuse-multiplication-free-llm-inference-on-cpus-via-fused-ternary-ke.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存の量子化ランタイムでは、低ビット重みを格納しても実行時に浮動小数点へ復元して積和演算を行う場合がある。原著のIntel Xeon 8558P・48スレッド・単一NUMAソケットでの7B級復号では32.43 トークン/sを報告し、同じCPUのllama.cpp Q4KMの26.15 トークン/sより1.24倍高速だった。
 
 - **2026-04 · [Evaluating CUDA Tile for AI Workloads on Hopper and Blackwell GPUs](2026-2604.23466-evaluating-cuda-tile-for-ai-workloads-on-hopper-and-blackwell-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -797,7 +801,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   Flash-LLMは、非構造枝刈りを施した大規模生成モデルの重みをGPUへ効率的に読み込むため、疎行列として転送し、GPU内部で密行列に戻してから行列演算器で計算する推論カーネルである。
 
 - **2023-10 · [QUIK: Towards End-to-end 4-Bit Inference on Generative Large Language Models](2023-2310.09259-quik-towards-end-to-end-4-bit-inference-on-generative-large-language-mod.md)**  
-  実装：[✓](https://github.com/IST-DASLab/QUIK) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/IST-DASLab/QUIK) ・ リポジトリ内被引用：23  
   QUIKは、生成大規模言語モデルの線形層を重み・活性値の双方が4ビット整数であるW4A4へ移すための量子化方式である。CUTLASSによる低ビット行列積と量子化・逆量子化の融合カーネルを実装し、RTX3090の2048トークン入力一括処理でFP16比最大3.4倍の処理量改善を報告する。
 
 - **2022-11 · [Who Says Elephants Can't Run: Bringing Large Scale MoE Models into Cloud Scale Production](2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md)**  

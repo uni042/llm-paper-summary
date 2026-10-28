@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-28T09:53:10+00:00",
+  "generated_at": "2026-10-28T10:58:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 70,
+  "count": 71,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1848,6 +1848,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2d29d1acb149--libfile_551d7731d25c8191a42291dacb740572--2025-doi-10.18653-v1-2025.findings-emnlp.716-generation-refinement-survey-research-20261028-1445-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-2d29d1acb149--libfile_551d7731d25c8191a42291dacb740572--2025-doi-10.18653-v1-2025.findings-emnlp.716-generation-refinement-survey-research-202610.json",
       "worker_run_key": "20261028-1445-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.37532",
+      "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
+      "source_url": "https://arxiv.org/pdf/2609.37532v1",
+      "returned_at": "2026-10-28T10:52:07+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 146 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6073,
+        "body_paragraphs": 32,
+        "method_chars": 1475,
+        "method_paragraphs": 7,
+        "evaluation_chars": 146,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 146 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4c5c15f4c0bc8191820cc61329a7f89f--2026-2609.37532-dscale-under16kb-semantic-reaudit-20261028-1900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4c5c15f4c0bc8191820cc61329a7f89f--2026-2609.37532-dscale-under16kb-semantic-reaudit-20261028-1900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261028-1900-scheduled-chat-00/r01"
     }
   ]
 }
