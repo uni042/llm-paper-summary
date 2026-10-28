@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-0630-scheduled-chat-30/r07",
+  "reference_main_sha": "abad1c5b49f5f0d2043c155fec01109a0b130947",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.11243",
+      "identity_tokens": [
+        "arXiv:2602.11243"
+      ],
+      "title": "Evaluating Memory Structure in LLM Agents",
+      "reason": "StructMemEvalは取引台帳、TODO、木構造などの記憶構造をエージェントが形成できるかを評価する。長期記憶フレームワークの機能には関係するが、KV圧縮・メモリ階層配置・サービング遅延の最適化が主題ではないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2602.11243",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 148,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21824",
+      "identity_tokens": [
+        "arXiv:2601.21824"
+      ],
+      "title": "DASH: Deterministic Attention Scheduling for High-throughput Reproducible LLM Training",
+      "reason": "DASHはFlashAttentionの決定的逆伝播における勾配集約の逐次化をDAGスケジューリングで改善し、問い合わせタイルの逆順処理とShift Schedulingを提案する。GPUカーネル効率に関係するが主対象は学習の逆伝播で推論ではないため境界候補。",
+      "source_url": "https://arxiv.org/abs/2601.21824",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 162,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.26771",
+      "identity_tokens": [
+        "arXiv:2510.26771"
+      ],
+      "title": "STaMP: Sequence Transformation and Mixed Precision for Low-Precision Activation Quantization",
+      "reason": "STaMPは系列方向の局所相関を利用する可逆線形変換と一部トークンの高精度保持を組み合わせ、生成モデルの活性化を8bit未満へ量子化する。推論時の遅延・電力・メモリ削減を目的とする混合精度圧縮。",
+      "source_url": "https://arxiv.org/abs/2510.26771",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 168,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.00141",
+      "identity_tokens": [
+        "arXiv:2511.00141"
+      ],
+      "title": "FLoC: Facility Location-Based Efficient Visual Token Compression for Long Video Understanding",
+      "reason": "FLoCは施設配置目的関数で長動画の視覚トークンから代表性と多様性を両立する少数集合を選び、所定予算内で動画VLMへ入力する。長文動画理解の視覚トークン容量と注意計算を削る推論前処理。",
+      "source_url": "https://arxiv.org/abs/2511.00141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 171,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.10696",
+      "identity_tokens": [
+        "arXiv:2403.10696"
+      ],
+      "title": "On the low-shot transferability of [V]-Mamba",
+      "reason": "一次要旨ではVision MambaとViTの少数例転移学習を線形プローブ・視覚プロンプトで比較する研究で、LLM推論、サービング、量子化、KVキャッシュの効率化は扱っていない。研究対象が明確に異なるため対象外。",
+      "source_url": "https://arxiv.org/abs/2403.10696",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 175,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.16439",
+      "identity_tokens": [
+        "arXiv:2605.16439"
+      ],
+      "title": "KVCapsule: Efficient Sequential KV Cache Compression for Vision-Language Models with Asymmetric Redundancy",
+      "reason": "KVCapsuleはVLMで画像トークンが長く密なKVを生む一方、テキストと異なる空間的冗長性を持つ点を利用し、逐次生成中のKVを非対称な冗長性に応じて圧縮する。VLMのキャッシュ容量と復号時負荷を対象とする。",
+      "source_url": "https://arxiv.org/abs/2605.16439",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 176,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.06858",
+      "identity_tokens": [
+        "arXiv:2412.06858"
+      ],
+      "title": "Taming Sensitive Weights : Noise Perturbation Fine-tuning for Robust LLM Quantization",
+      "reason": "NPFTは量子化ノイズに敏感な外れ値重みを高精度のまま残す代わりに、外れ値への摂動を加えたパラメータ効率微調整で損失Hessianの感度を下げる。混合精度ハードウェア実装の複雑化を避けるLLM量子化の準備方式。",
+      "source_url": "https://arxiv.org/abs/2412.06858",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 180,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.20745",
+      "identity_tokens": [
+        "arXiv:2601.20745"
+      ],
+      "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+      "reason": "HESTIAは量子化対応学習で初期から硬い丸めを適用せず、温度制御のsoftmax緩和を段階的に硬化させ、Hessianトレースでテンソル別の温度調整を行う。極低ビットLLMの量子化品質を改善して省メモリ推論へ適用する。",
+      "source_url": "https://arxiv.org/abs/2601.20745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 181,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.15454",
+      "identity_tokens": [
+        "arXiv:2608.15454"
+      ],
+      "title": "Dynamic Multi-Byte Prediction With Hierarchical Language Models",
+      "reason": "バイト単位階層言語モデルの逐次生成が遅い問題に対し、潜在セグメント境界に合わせて予測窓長を動的に決め、因果性を保つ注意マスクで複数バイトを並列予測する。追加パラメータを増やさない推論高速化方式。",
+      "source_url": "https://arxiv.org/abs/2608.15454",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 183,
+      "origin": "discovery_abstract_review"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.15779",
+      "identity_tokens": [
+        "arXiv:2502.15779"
+      ],
+      "title": "Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer",
+      "reason": "RCPは回転変換、外れ値クリップ、学習可能な非一様量子化区間を組み合わせ、LLMを重み2bit・活性化4bit・KV4bitへ圧縮する。非一様W2A4を直接処理するGPU GEMVカーネルも提案する推論向け量子化。",
+      "source_url": "https://arxiv.org/abs/2502.15779",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T06:35:07+09:00",
+      "last_checked_at": "2026-10-29T06:35:07+09:00",
+      "linked_from": [],
+      "worklist_rank": 184,
+      "origin": "discovery_abstract_review"
+    }
+  ]
+}
