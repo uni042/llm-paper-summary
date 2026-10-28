@@ -100,6 +100,20 @@ b11888からb11912までの差分を追加。すべてpre-release開発ビルド
 
 一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11901 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11905 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11909 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11910 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11912
 
+## 2026-10-27 — llama.cpp b11913〜b11936（開発ビルド）
+
+b11912からb11936までの増分を記録。GitHub上のpre-release開発ビルドであり、正式安定版とは区別する。b11936にはWindows x64 CUDA 12.4 / 13.4配布assetがあるが、Windows 11 + RTX 4070 SUPERでの実測性能は未確認。
+
+- **b11930**: llama-server routerに`--models-memory-max`を追加し、device別メモリ余裕に応じてモデルロード前の使用量推定とidle model unloadを調整。複数モデルを切替えるserver運用向けで、単一モデルの生成速度向上ではない。
+- **b11928**: MiniCPM-OCR-Jevの判定modelを追加。`POST /v1/systemone`で画像に対するOCR textをscoreする。通常の文章生成用LM headはない。
+- **b11926 / b11927 / b11936**: GLM5-Next / QSA / DSAのsparse selectionとdense `kq_mask`依存を整理し、Metal fused top-k maskやQwen4Exp / GLM5-Nextのk-pool選択を追加。一般的な生成速度倍率は未公表。
+- **b11923**: CPU / CUDA / Metalのnon-contiguous view向けSCALEを拡大し、CUDA stride-aware kernelとsoftcap fusionの正確性guardを追加。対象view patternに限る。
+- **b11918**: OpenCLへQ3_K matmulとmatvecを追加。Adreno向けを含み、CUDA backendへの追加ではない。
+- **b11933**: VulkanのMUL_MAT dim-3 broadcastでCPU fallbackになるケースを修正（Vulkan固有）。
+- b11913 Hexagon VTCM override、b11922 replay test、b11929 CLI model指定、b11935 RPC error handlingも含まれる。テストやbackend固有変更を一般的な速度改善と扱わない。
+
+一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11936 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11930 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11928 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11926 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11927 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11923 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11918 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11933
+
 ## 主要更新
 
 ### 2026-10-24 — llama.cpp b11846〜b11869（開発ビルド）\n- **b11850**: Soprano-80M / Soprano-1.1-80Mの音声生成に対応。Qwen3系backboneとVocosを使い、音声は生成後に1 chunkで返す。逐次streamingではない。\n- **b11854**: Vulkan行列演算の精度・overflow処理を調整。backend・shapeごとの検証が必要。\n- **b11861**: MiniMax M3系NVFP4/MXFP8 scaleを計算graphへ渡さない不具合を修正。対象構成では数値異常を避ける正確性修正で、一般CUDA高速化ではない。\n- **b11868**: Qualcomm Hexagonの複数core Flash Attentionを調整。Snapdragon向けでRTX CUDAの改善ではない。\n- **b11869**: Jinja templateの`select` / `selectattr`引数処理を修正し、model template互換性を改善。\n- b11869は開発build（pre-release）。Windows x64 CUDA 12系 / CUDA 13系assetの配布は確認済みだが、Windows 11 + RTX 4070 SUPERの実測性能は未確認。\n- 出典: [b11850](https://github.com/ggml-org/llama.cpp/releases/tag/b11850) / [b11854](https://github.com/ggml-org/llama.cpp/releases/tag/b11854) / [b11861](https://github.com/ggml-org/llama.cpp/releases/tag/b11861) / [b11868](https://github.com/ggml-org/llama.cpp/releases/tag/b11868) / [b11869](https://github.com/ggml-org/llama.cpp/releases/tag/b11869)\n\n### 2026-10-23 — llama.cpp b11828〜b11840（開発ビルド）\n- **b11829**: reranking用templateの置換を修正。**b11835**: SYCL/oneDNNのdevice引渡しを修正。**b11838**: `ggml_time_us`の時間overflowを修正。**b11840**: Qualcomm Hexagon NPUにCEIL演算（f32/f16）を追加。\n- いずれも開発ビルドの更新で、一般的な速度倍率は示されていない。b11840のHexagon機能をNVIDIA CUDAの改善と読み替えない。[b11829](https://github.com/ggml-org/llama.cpp/releases/tag/b11829) / [b11835](https://github.com/ggml-org/llama.cpp/releases/tag/b11835) / [b11838](https://github.com/ggml-org/llama.cpp/releases/tag/b11838) / [b11840](https://github.com/ggml-org/llama.cpp/releases/tag/b11840)\n\n### 2026-10-22 — llama.cpp b11813〜b11827（開発ビルド）

@@ -25,6 +25,14 @@ Ollamaの主要な機能・性能更新を継続的に記録する集約ペー�
 
 2026-06-03〜2026-09-03
 
+### 2026-10-27 — Ollama v0.40.12（正式版）
+
+v0.40.11からの正式更新。LFM3 text/VL/audio/omniとd1:2b、d1-omniをOllama libraryに追加。**このreleaseでのLFM3とd1 2B対応はApple hardware向けで、公式案内ではLinux/Windows対応は今後**としている。各multimodal variantのOS対応も個別に確認する。
+
+Apple SiliconのGemma 4、Flint、Laguna prompt processingを最適化し、MLXのDFlash2 draft speculative decodingをサポート。Apple向けの変更からWindows CUDAの性能を推定しない。公式releaseに一般的なE2E速度倍率は示されていない。
+
+[公式release](https://github.com/ollama/ollama/releases/tag/v0.40.12) · [v0.40.11からの差分](https://github.com/ollama/ollama/compare/v0.40.11...v0.40.12)
+
 ## 主要更新
 
 ### 2026-10-24 — Ollama v0.40.11（正式版）\n- macOSでPhonon音声生成を`ollama run phonon`およびOpenAI互換`/v1/audio/speech`から利用可能にし、d3判定model（2B/4B/9B/27B）を追加。d3はtext・構造化状態・画像の分類や選択肢スコアを返す。音声機能はmacOS向けであり、Windows CUDA対応や一般的な生成速度倍率を示さない。\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.11)\n\n### 2026-10-23 — Ollama v0.40.10（正式版）\n- Nemotron 3.5 Bolt E4Bの配布とDFlash草稿による投機的復号を追加。Ollama release本文は128K context・vision-languageとする一方、NVIDIA Q4_K_M model cardは64K・text/text。variant差が解決するまで仕様を混同しない。\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.10)\n\n### 2026-10-22 — Ollama v0.40.9（正式版）\n- Flintの実行対象をLinux・Windowsへ拡張し、streaming生成失敗を部分出力後に黙って終えず報告する修正を含む。Phonon音声生成とd3判定modelの正式告知はv0.40.11へ帰属させる。\n- [公式リリース](https://github.com/ollama/ollama/releases/tag/v0.40.9)\n\n### 2026-10-22 — Ollama v0.40.9-rc2（公開候補版）

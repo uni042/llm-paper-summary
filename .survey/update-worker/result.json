@@ -1,18 +1,21 @@
 {
   "schema_version": 1,
   "ok": true,
-  "attempt_id": "library-import-maint-20261029T230500-oct27",
+  "attempt_id": "library-import-maint-20261029T234000-oct28",
   "kind": "framework_llm_update",
   "updated_paths": [
-    "llm-releases/gemma.md",
-    "llm-releases/nvidia.md",
+    "llm-releases/liquid-ai.md",
+    "llm-releases/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md"
   ],
-  "created_paths": [],
+  "created_paths": [
+    "llm-releases/liquid-ai.md"
+  ],
   "updated_existing_paths": [
-    "llm-releases/gemma.md",
-    "llm-releases/nvidia.md",
+    "llm-releases/README.md",
+    "framework-updates/inference-engines/ollama/README.md",
     "framework-updates/inference-engines/llama-cpp/README.md"
   ],
-  "summary": "2026-10-27 Library maintenance: correct Gemma 4 MTP assistant config; backfill Dory1.0-4B as 2026-10-16 release; append llama.cpp b11889-b11912 prerelease updates with backend limitations."
+  "summary": "2026-10-28 Library maintenance: add Liquid AI LFM3/d1 family page and index; append Ollama v0.40.12 and llama.cpp b11913-b11936 with platform/backend constraints."
 }

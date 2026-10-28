@@ -28,6 +28,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 
 | リリース日 | モデル | 系統 | 概要 | 詳細 |
 |---|---|---|---|---|
+| 2026-10-27 | Liquid AI LFM3 / d1 | Liquid AI | 1.73B text tri-hybridを含む用途別6派生とbase。text modelは256K context、LFM Open License v1.0。Ollama v0.40.12のLFM3/d1 2B対応はApple hardware限定。 | [Liquid AI系](liquid-ai.md) |
 | 2026-10-21 | Recursive Flint 40B-A2.5B | Recursive | 総39.8B / 有効約2.5BのApache-2.0 MoE。公式BF16 checkpointは約80GB、設定上の最大262K context。Ollama対応はmacOS限定。 | [Recursive系](recursive.md) |
 | 2026-10-15 | Nemotron 3.5 Super VL | NVIDIA Nemotron | 総120B / 有効12Bのopen-weight視覚言語MoE。Mamba-2 / TransformerとC-RADIOを組み合わせ、最大1M context。 | [NVIDIA Nemotron系](nvidia.md) |
 | 2026-10-15 | Nemotron 3.5 Bolt 74B-A9B 24GB | NVIDIA Nemotron | 総74B / 有効9Bの視覚言語MoE。24GB GPU向け設計値と約25GBの配布ファイル表示を区別する。 | [NVIDIA Nemotron系](nvidia.md) |
@@ -49,6 +50,7 @@ modelを比較するときは「flagship」「frontier」のような宣伝上�
 
 ## 系統別ページ
 
+- [Liquid AI系](liquid-ai.md)
 - [Recursive系](recursive.md)
 - [Qwen系](qwen.md)
 - [Llama系](llama.md)
