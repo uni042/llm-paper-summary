@@ -1,34 +1,51 @@
 ---
-canonical_id: 'DOI:10.1007/978-3-030-92185-9_30'
-doi: '10.1007/978-3-030-92185-9_30'
+canonical_id: DOI:10.1007/978-3-030-92185-9_30
+doi: 10.1007/978-3-030-92185-9_30
 title: 'DAP-BERT: Differentiable Architecture Pruning of BERT'
 authors:
-  - Chung-Yiu Yau
-  - Haoli Bai
-  - Irwin King
-  - Michael R. Lyu
-published: '2021-12'
-publication: 'ICONIP 2021, Lecture Notes in Computer Science 13108, pp. 367–378'
+- Chung-Yiu Yau
+- Haoli Bai
+- Irwin King
+- Michael R. Lyu
+published: 2021-12
+publication: ICONIP 2021, Lecture Notes in Computer Science 13108, pp. 367–378
 publication_type: conference-paper
 publication_status: peer-reviewed-published
-source: 'https://oscaryau525.github.io/uploads/DAP_BERT.pdf'
+source: https://oscaryau525.github.io/uploads/DAP_BERT.pdf
 sources:
-  - 'https://oscaryau525.github.io/uploads/DAP_BERT.pdf'
-  - 'https://doi.org/10.1007/978-3-030-92185-9_30'
-implementation: '既存BERT-base/TinyBERTをsuper-graphとし、注意headとFFN中間次元の微分可能ゲートを探索、FLOPs制約を漸進的に適用し、剪定後に二段階蒸留でfine-tuning。Intel Xeon E5-2620 2.00GHz・4コアでbatch32/最大系列128のCPU推論時間を測定。公式コード公開。'
-code: 'https://github.com/OscarYau525/DAP-BERT'
-summary: '既存BERTの注意headとFFN中間次元に連続ゲートを付け、FLOPs目標を徐々に縮めながら蒸留損失とともに最適化する構造化枝刈り。勾配消失と振動を抑える上位10%勾配の符号更新、元重み復元後の二段階蒸留が特徴。BERT-baseのGLUE平均78.6を保つFLOPs 22.3B→11.4BでCPU実測7.28→3.72秒、より小さい3.0Bでは1.36秒・平均76.4。TinyBERT4追加剪定の27.6倍は元のBERT-base比でありTinyBERT4単体比では約2.38倍。'
-list_summary: 'BERTの注意head/FFN幅を微分可能探索で剪定し、CPUのbatch32推論をBERT-base 7.28→1.36秒へ短縮。27.6倍の比較基準は元BERT-base。'
+- https://oscaryau525.github.io/uploads/DAP_BERT.pdf
+- https://doi.org/10.1007/978-3-030-92185-9_30
+implementation: 既存BERT-base/TinyBERTをsuper-graphとし、注意headとFFN中間次元の微分可能ゲートを探索、FLOPs制約を漸進的に適用し、剪定後に二段階蒸留でfine-tuning。Intel Xeon E5-2620 2.00GHz・4コアでbatch32/最大系列128のCPU推論時間を測定。公式コード公開。
+code: https://github.com/OscarYau525/DAP-BERT
+summary: 既存BERTの注意headとFFN中間次元に連続ゲートを付け、FLOPs目標を徐々に縮めながら蒸留損失とともに最適化する構造化枝刈り。勾配消失と振動を抑える上位10%勾配の符号更新、元重み復元後の二段階蒸留が特徴。BERT-baseのGLUE平均78.6を保つFLOPs 22.3B→11.4BでCPU実測7.28→3.72秒、より小さい3.0Bでは1.36秒・平均76.4。TinyBERT4追加剪定の27.6倍は元のBERT-base比でありTinyBERT4単体比では約2.38倍。
+list_summary: BERTの注意head/FFN幅を微分可能探索で剪定し、CPUのbatch32推論をBERT-base 7.28→1.36秒へ短縮。27.6倍の比較基準は元BERT-base。
 last_checked: '2026-10-28'
 worker_id: scheduled-chat-00
 scheduled_slot: '00'
-worker_run_key: '20261028-2202-scheduled-chat-00/r01'
+worker_run_key: 20261028-2202-scheduled-chat-00/r01
 worker_completed_at: '2026-10-28T22:07:38+09:00'
-reference_main_sha: '3579a9852e533caf20392a0585a93a01fb033067'
+reference_main_sha: 3579a9852e533caf20392a0585a93a01fb033067
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2109.15082
+  arxiv_id: '2109.15082'
+- canonical_id: arXiv:2003.07577
+  arxiv_id: '2003.07577'
+- canonical_id: arXiv:1907.11692
+  arxiv_id: '1907.11692'
+- canonical_id: arXiv:1910.06360
+  arxiv_id: '1910.06360'
+- canonical_id: arXiv:1905.10650
+- canonical_id: arXiv:1909.05840
+- canonical_id: arXiv:1908.08962
+  arxiv_id: '1908.08962'
+- canonical_id: arXiv:2009.12812
+references_checked_at: '2026-10-28'
+references_source: primary-pdf-reference-section
+references_total: 35
 ---
 
 # BERTの注意ヘッドとFFN幅を段階的に削るDAP-BERT：CPU実測と蒸留費用を含む検討
