@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T16:55:25.528561+00:00",
+  "generated_at": "2026-10-28T18:15:13.033175+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 19,
+  "count": 15,
   "worker_counts": {
-    "scheduled-chat-00": 7,
-    "scheduled-chat-30": 6,
-    "scheduled-chat-45": 6
+    "scheduled-chat-00": 5,
+    "scheduled-chat-30": 5,
+    "scheduled-chat-45": 5
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -112,7 +112,7 @@
       "file_bytes": 14655,
       "source_sha256": "73ec6a927b40d80ea7f05c88b58b65a32512ed8e3810f4c7e0fe8b71383adfff",
       "source_git_blob_sha": "95e37d19006e681730aaafe7d214ac72c1e4eda1",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.928836,
@@ -141,26 +141,6 @@
         "method_chars": 1505,
         "evaluation_chars": 1023,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md",
-      "canonical_id": "SemanticScholar:6c54aa7b3fca89d20de14aa8c1e4fc6760080625",
-      "title": "Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA",
-      "file_bytes": 15491,
-      "source_sha256": "0a8047b6963172cb37681546049f32e68e4d2681b4c7c3a94707f9aa474123ed",
-      "source_git_blob_sha": "eae5ab8edc2b054250bd53f331d8eed40c467776",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.913136,
-      "quality_metrics": {
-        "body_chars": 4477,
-        "method_chars": 1046,
-        "evaluation_chars": 841,
-        "limitation_chars": 487
       },
       "mechanical_failures": [],
       "warnings": []
@@ -200,26 +180,6 @@
         "body_chars": 3843,
         "method_chars": 1033,
         "evaluation_chars": 1459,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md",
-      "canonical_id": "arXiv:2609.33762",
-      "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
-      "file_bytes": 16237,
-      "source_sha256": "26cf9e928d9c073d5f3b44ea2e0f766ad65a89ca21eefdf8c81c22be669eb246",
-      "source_git_blob_sha": "735288e85fadd9dd5223231e41d0d434a98942d8",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.927939,
-      "quality_metrics": {
-        "body_chars": 4101,
-        "method_chars": 1648,
-        "evaluation_chars": 895,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -320,50 +280,6 @@
         "body_chars": 4568,
         "method_chars": 1287,
         "evaluation_chars": 1106,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.18957-instantinfer-enabling-fast-llm-cold-start-with-communicating-finite-auto.md",
-      "canonical_id": "arXiv:2607.18957",
-      "title": "InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata",
-      "file_bytes": 17349,
-      "source_sha256": "f589a5672b7d2f5da4c5b55bbb8cab5f25f8b5181cbdaeaaee506cfe82b989a6",
-      "source_git_blob_sha": "35106e6a0fba0a3921940deb657f66efd515609f",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.798067,
-      "quality_metrics": {
-        "body_chars": 4836,
-        "method_chars": 1666,
-        "evaluation_chars": 1080,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 79.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 79.8% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2507.06087-core-enhancing-metacognition-with-label-free-self-evaluation-in-lrms.md",
-      "canonical_id": "arXiv:2507.06087",
-      "title": "CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs",
-      "file_bytes": 17849,
-      "source_sha256": "f66a89bc040ea0c6e793a75b466cd0352086d26b2c756d377dd09d87226b1c63",
-      "source_git_blob_sha": "dba092574ddd46151dfeca70ee74450a6d46ef35",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.964111,
-      "quality_metrics": {
-        "body_chars": 4823,
-        "method_chars": 1405,
-        "evaluation_chars": 1557,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
