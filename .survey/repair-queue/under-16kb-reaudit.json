@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-28T01:56:59.664075+00:00",
+  "generated_at": "2026-10-28T03:03:34.444630+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 10,
+  "count": 11,
   "worker_counts": {
     "scheduled-chat-00": 4,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-30": 4,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -97,6 +97,26 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md",
+      "canonical_id": "arXiv:2607.25291",
+      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
+      "file_bytes": 15840,
+      "source_sha256": "d26ce4f3bfa786e72bcb09464b23071b557a05cfa48209252d2e9a31d86491e6",
+      "source_git_blob_sha": "853cbe8dc95e77251e3e2ce2411cf51ecdf91c39",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.902956,
+      "quality_metrics": {
+        "body_chars": 4117,
+        "method_chars": 1223,
+        "evaluation_chars": 588,
+        "limitation_chars": 493
       },
       "mechanical_failures": [],
       "warnings": []
