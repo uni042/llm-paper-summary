@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（206本）
+## 自動生成の論文一覧（207本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -345,6 +345,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-05 · [DynaFlow: Transparent and Flexible Intra-Device Parallelism via Programmable Operator Scheduling](2026-2605.21603-dynaflow-transparent-and-flexible-intra-device-parallelism-via-programma.md)**  
   実装：[✓](https://github.com/uw-syfi/DynaFlow) ・ リポジトリ内被引用：0  
   複数の演算子を重畳する最適化自体は既知だが、実際のvLLMやSGLangへ組み込むにはモデル実行順序の大規模な変更が必要であり、入力長・バッチ量・GPU世代で最適な重畳方式も変わる。従来の配信・学習システム6種類へ代表的な装置内並列方式を導入し、元のシステム比で最大1.29倍の端から端までの処理量を実測した。
+
+- **2026-05 · [Demystifying the Mixture of Experts Serving Tax](2026-b71f37ac28fc-demystifying-the-mixture-of-experts-serving-tax.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、Mixture-of-Experts（MoE）が「1トークン当たりに実行する演算量を減らせる」という設計上の利点と、実際のGPUサービングで低遅延・高スループットを得られることの間にある差を調べるシステム特性分析研究である。
 
 - **2026-04 · [SinkRouter: Sink-Aware Routing for Efficient Long-Context Decoding in Large Language and Multimodal Models](2026-2604.16883-sinkrouter-sink-aware-routing-for-efficient-long-context-decoding-in-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

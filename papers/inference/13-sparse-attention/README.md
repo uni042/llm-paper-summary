@@ -518,7 +518,7 @@
 
 - **2025-02 · [Neural Attention Search](2025-2502.13251-neural-attention-search.md)**  
   実装：[✓](https://github.com/automl/NeuralAttentionSearch) ・ リポジトリ内被引用：0  
-  Neural 注意機構 Search（NAtS）は、各トークンが今後どの範囲のトークンから参照されるべきかを学習し、注意計算とKVキャッシュの保持寿命を同時に減らす手法である。Llama-3.1-8BのRULERでは128K文脈、実KV保持率約16%で74.77のスコアを報告し、Full 注意機構の73.83に近い。
+  Neural 注意機構 Search（NAtS）は、長い系列を扱うTransformerで、各トークンの鍵・値キャッシュをいつまで残すべきかを学習する疎注意方式である。
 
 ### 3年前（2023-11〜2024-10）
 

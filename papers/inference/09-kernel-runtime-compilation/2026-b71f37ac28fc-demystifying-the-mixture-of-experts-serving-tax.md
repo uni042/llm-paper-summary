@@ -25,6 +25,8 @@ worker_completed_at: "2026-10-29T01:00:00+09:00"
 reference_main_sha: "64e4dde3d3f3931dcff3f587d1e0cd47e9d7b03e"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Demystifying the Mixture of Experts Serving Tax — MoE推論の計算・通信・ルーティング由来の費用を分解する

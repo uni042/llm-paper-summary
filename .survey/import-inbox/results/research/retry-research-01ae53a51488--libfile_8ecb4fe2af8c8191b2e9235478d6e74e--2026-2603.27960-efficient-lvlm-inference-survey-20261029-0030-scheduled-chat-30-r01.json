@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "944019c90304276d8db1dc1f016ea01ae9938ccb1fd9b53601ddff515275132e",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-01ae53a51488--libfile_8ecb4fe2af8c8191b2e9235478d6e74e--2026-2603.27960-efficient-lvlm-inference-survey-20261029-0030-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2603.27960",
+  "worker_completed_at": "2026-10-29T00:30:00+09:00",
+  "worker_run_key": "20261029-0030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3854,
+    "body_paragraphs": 18,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-28T16:52:03+00:00"
+}
