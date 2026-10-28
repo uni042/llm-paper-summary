@@ -531,7 +531,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   一般keyを最近傍探索可能な空間へ写像し、重要な注意先だけをPrioritized DCIで選んで、再学習なしにCPU長文注意を高速化する方式。
 
 - **2024-10 · [Optimizing Mixture-of-Experts Inference Time Combining Model Deployment and Communication Scheduling](2024-2410.17043-aurora-moe-deployment-communication-scheduling.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
+  実装：✓ ・ リポジトリ内被引用：5  
   MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
 
 - **2024-05 · [MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)**  
