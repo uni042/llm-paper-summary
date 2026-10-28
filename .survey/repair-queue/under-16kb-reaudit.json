@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T16:05:52.750492+00:00",
+  "generated_at": "2026-10-28T16:55:25.528561+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 20,
+  "count": 19,
   "worker_counts": {
     "scheduled-chat-00": 7,
     "scheduled-chat-30": 6,
-    "scheduled-chat-45": 7
+    "scheduled-chat-45": 6
   },
   "entries": [
     {
@@ -261,26 +261,6 @@
         "method_chars": 1287,
         "evaluation_chars": 1065,
         "limitation_chars": 453
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2025-2502.13251-neural-attention-search.md",
-      "canonical_id": "arXiv:2502.13251",
-      "title": "Neural Attention Search",
-      "file_bytes": 16502,
-      "source_sha256": "d3a14af386efe478cc8c7936f59f540c086318bbeef4c493ef439e49fa663a1a",
-      "source_git_blob_sha": "c9a2cc6896fa69d2799f1f2e5ed23c436cb1fe14",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.847398,
-      "quality_metrics": {
-        "body_chars": 4079,
-        "method_chars": 1410,
-        "evaluation_chars": 1071,
-        "limitation_chars": 337
       },
       "mechanical_failures": [],
       "warnings": []
