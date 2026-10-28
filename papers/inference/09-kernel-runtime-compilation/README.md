@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（202本）
+## 自動生成の論文一覧（204本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -165,6 +165,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   例えばQwen2.5-14Bの非圧縮キャッシュは1トークン当たり192 KiBを占め、8,000トークンの系列32本を同時に保持すると約48 GiBに達する。Qwen2.5-14Bの16K文脈では、提案法による4倍圧縮とSnapKVによる8分の1トークン保持を組み合わせ、復号時KV容量を32分の1にして質問応答精度0.531を得た。
+
+- **2026-09 · [ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels](2026-2609.12379-forgemegakernel-a-general-framework-for-efficient-auto-regressive-model-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの自己回帰デコードは、次の1トークンを計算するたびにモデルの重みとKVキャッシュを読み込む。対話的な小バッチでは、GPUの演算器が飽和する前にHBMからの転送が律速になりやすい。通常の推論エンジンは線形層、正規化、RoPE、注意、KV書込み、語彙射影を別々のGPUカーネルで実行する。
 
 - **2026-09 · [Exploring the Efficiency of 3D-Stacked AI Chip Architecture for LLM Inference with VOXEL](2026-2604.26821-exploring-the-efficiency-of-3d-stacked-ai-chip-architecture-for-llm-infe.md)**  
   実装：[✓](https://github.com/yiqiliu2/voxelsim) ・ リポジトリ内被引用：0  
@@ -406,6 +410,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/camail-official/LinearAttentionPruning) ・ リポジトリ内被引用：0  
   線形注意（linear 注意機構）は、通常のソフトマックス注意と異なり、過去のトークンを固定サイズの行列型状態へ逐次圧縮できる。Gated DeltaNet 1.3Bでは、状態次元を50%削減し回復用微調整を行った場合、WikiText-2困惑度は元モデル16.8に対しDRRQRで16.3、ゼロショット平均精度は59.4から58.0となった。
 
+- **2026-02 · [NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models](2026-2602.06694-nanoquant-efficient-sub-1-bit-quantization-of-large-language-models.md)**  
+  実装：[✓](https://github.com/SamsungLabs/NanoQuant) ・ リポジトリ内被引用：0  
+  NanoQuantは、事前学習済みLLMを追加の大規模訓練なしで1bitおよび実効1bit未満に圧縮する重み専用の事後量子化（PTQ）方式である。著者らは単一H100 80GBでLlama-2-70Bを約13時間かけて137.95GBから5.75GBへ圧縮し、RTX3050 8GB上で実行できると報告する。
+
 - **2026-01 · [Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap](2026-2601.20595-syncopate-efficient-multi-gpu-ai-kernels-via-automatic-chunk-centric-com.md)**  
   実装：[✓](https://github.com/tie-pilot-qxw/syncopate) ・ リポジトリ内被引用：0  
   通信と計算を異なるCUDAストリームで同時実行する従来方式は、しばしばカーネル全体を単位として重ねるため、入力データの一部が先に到着しても、その部分を処理する計算を開始できない。全体平均1.3倍、最大4.7倍の高速化を報告し、特定の高度に最適化された手書き行列積と比較した性能は4GPU時で平均99.8%、8GPU時で104%だった。
@@ -469,7 +477,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   プリフィルとデコードの注意を同一SMで並行実行するSM認識型GPUカーネルにより、注意計算を平均28%、サービング処理量を最大22%改善する。
 
 - **2024-12 · [Flex Attention: A Programming Model for Generating Optimized Attention Kernels](2024-2412.05496-flexattention-a-programming-model-for-generating-optimized-attention-kernels.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：37  
   高速な融合注意カーネルを「注意変種ごとに手書きする」方式から、利用者が意味だけを書きコンパイラが高速カーネルへ落とす方式へ変える。
 
 - **2025-03 · [Medusa: Accelerating Serverless LLM Inference with Materialization](2025-8c4404f09758-medusa-accelerating-serverless-llm-inference-with-materialization.md)**  
@@ -663,16 +671,16 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-07 · [FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](2024-2407.08608-flashattention-3-fast-and-accurate-attention-with-asynchrony-and-low-pre.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：144  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：143  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
-
-- **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：48  
-  Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
   実装：✓ ・ リポジトリ内被引用：48  
   FlashDecoding++は、自己回帰型の大規模言語モデルで一語ずつ出力する復号段階を、GPUの演算資源とメモリ階層に合わせて高速化する推論エンジンである。論文が分離した三つの障害は、長い注意系列を分割したときの部分ソフトマックス結合同期、少数トークンを入力する細長い行列積のゼロ埋め、行列形状とGPUの種類を無視する固定実行方式である。
+
+- **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：47  
+  Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
   実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：40  
@@ -773,11 +781,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：474  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：473  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：99  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：98  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
@@ -807,7 +815,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：668  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：667  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -815,13 +823,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   重みを3～4ビットへ圧縮すればGPUメモリへの転送量を減らせるが、既存の重みのみ量子化の多くは、積和を行う直前に重みを半精度へ展開する逆量子化処理を必要とする。
 
 - **2022-10 · [ByteTransformer: A High-Performance Transformer Boosted for Variable-Length Inputs](2022-2210.03052-bytetransformer-a-high-performance-transformer-boosted-for-variable-leng.md)**  
-  実装：[✓](https://github.com/bytedance/ByteTransformer) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/bytedance/ByteTransformer) ・ リポジトリ内被引用：4  
   ByteTransformerは、バッチに混在する長さの異なる文章をBERT系のTransformerへ入力する際、最長文章に合わせたゼロ埋め（padding）で発生する計算とGPUメモリ転送の無駄を削減する推論実装である。論文の重要性は、入力の有効トークンだけを扱う表現と、注意計算の実行形態を一体で設計した点にある。
 
 ### 6年前（2020-11〜2021-10）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：32  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
@@ -845,7 +853,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：152  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：151  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

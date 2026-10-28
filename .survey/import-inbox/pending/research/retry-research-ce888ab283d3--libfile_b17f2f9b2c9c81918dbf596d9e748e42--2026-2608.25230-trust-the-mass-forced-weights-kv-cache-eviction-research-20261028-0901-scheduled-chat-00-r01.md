@@ -40,6 +40,8 @@ references:
 references_checked_at: "2026-10-28"
 references_source: "arXiv HTML v2, §3 references"
 references_total: 41
+last_audited: null
+audit_version: 0
 ---
 
 # Trust the Mass: Forced Weights in KV-Cache Eviction

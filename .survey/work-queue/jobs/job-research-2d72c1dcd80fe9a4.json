@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではLLM decode全体をGPUメガカーネルへ統合するコードエージェントの生成過程に、SMごとの命令列、依存カウンタ、共有メモリプールの10段階知識と中間状態の独立検証器を組み込む。8モデル系列・14条件でSGLang比幾何平均1.21倍、専用megakernelコンパイラ比1.54倍を報告する、推論ランタイム・GPUカーネルの直接的貢献。",
   "semantic_scholar_id": "a78fc774cbfbd35a989dccbc2d401e7467f6118f",
   "source_url": "https://arxiv.org/abs/2609.12379",
-  "status": "ready",
+  "status": "superseded",
   "title": "ForgeMegakernel: A General Framework for Efficient Auto-Regressive Model Decode Megakernels",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T01:54:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.12379-forgemegakernel-a-general-framework-for-efficient-auto-regressive-model-.md",
+  "represented_canonical_id": "arXiv:2609.12379",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

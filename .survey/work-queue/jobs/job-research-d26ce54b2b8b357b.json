@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではLLM重みを低ランク二値因子とスケールへ分解し、ADMMで二値行列を初期化した後、ブロック・モデル再構成で精度を回復するNanoQuantを提案。学習後量子化で1bit以下の重み容量を目指し、Llama2-70Bを単一H100で13時間かけ25.8倍圧縮して8GB GPU上で動作可能とする、省VRAM推論への直接的圧縮貢献。",
   "semantic_scholar_id": "7d3c54b7732b0c5d20462985e33d8317bb00709b",
   "source_url": "https://arxiv.org/abs/2602.06694",
-  "status": "ready",
+  "status": "superseded",
   "title": "NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T01:54:17+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2602.06694-nanoquant-efficient-sub-1-bit-quantization-of-large-language-models.md",
+  "represented_canonical_id": "arXiv:2602.06694",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

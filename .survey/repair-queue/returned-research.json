@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-28T01:08:51+00:00",
+  "generated_at": "2026-10-28T01:54:18+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 74,
+  "count": 71,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1631,33 +1631,6 @@
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2506.06095",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T14:42:51+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6282,
-        "body_paragraphs": 33,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1244,
-        "limitation_chars": 726,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-87d4065b34e9--libfile_3366faa69d0081918bdf871136cca901--2026-2506.06095-stof-sparse-transformer-fusion-research-20261027-2230-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-87d4065b34e9--libfile_3366faa69d0081918bdf871136cca901--2026-2506.06095-stof-sparse-transformer-fusion-research-20261027-2230-scheduled-chat-30-r.json",
-      "worker_run_key": "20261027-2230-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2209.01188",
       "title": null,
       "source_url": null,
@@ -1850,8 +1823,8 @@
     },
     {
       "canonical_id": "arXiv:2608.25230",
-      "title": "Trust the Mass: Forced Weights in KV-Cache Eviction",
-      "source_url": "https://arxiv.org/html/2608.25230v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-28T01:06:50+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1878,63 +1851,9 @@
       "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2602.06694",
-      "title": "NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models",
-      "source_url": "https://arxiv.org/html/2602.06694v3",
-      "returned_at": "2026-10-28T01:06:52+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4427,
-        "body_paragraphs": 26,
-        "method_chars": 1183,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 643,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-00de865dba39--libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-00de865dba39--libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.27339",
-      "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
-      "source_url": "https://arxiv.org/html/2608.27339v4",
-      "returned_at": "2026-10-28T01:06:54+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5334,
-        "body_paragraphs": 31,
-        "method_chars": 2003,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 729,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54ac76542f2e--libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-54ac76542f2e--libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled.json",
-      "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.25291",
-      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
-      "source_url": "https://arxiv.org/html/2607.25291v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-28T01:06:56+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
