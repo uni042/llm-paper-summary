@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨では隣接層のKV状態を深さ方向の低周波共有成分と高周波残差へ分解し、オンラインの軽量プローブで注意ヘッドごとに共有・残差・非圧縮を切替える。32K文脈でKVメモリ6.2GB、実効3.9倍圧縮、復号70.4 token/sを報告し、長文脈推論のメモリ帯域と容量を直接改善する。",
   "semantic_scholar_id": "7753d8c9134c4ca8151e51f9aacedab9434b1f66",
   "source_url": "https://arxiv.org/abs/2607.06519",
-  "status": "ready",
+  "status": "superseded",
   "title": "FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T21:33:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.06519-freqdepthkv-frequency-guided-depth-sharing-for-robust-kv-cache-compressi.md",
+  "represented_canonical_id": "arXiv:2607.06519",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
