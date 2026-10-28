@@ -39,6 +39,8 @@ references:
     arxiv_id: '2404.00456'
 references_checked_at: '2026-10-29'
 references_source: 'v1原著の参考文献からPaluとQuaRotを抽出。二次的な引用の網羅性は主張しない。'
+last_audited: null
+audit_version: 0
 ---
 
 # LASER：損失曲率に合わせた低ランク分解とランク配分で視覚言語モデルを圧縮する
