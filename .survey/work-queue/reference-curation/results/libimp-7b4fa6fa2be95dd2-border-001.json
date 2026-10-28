@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7b4fa6fa2be95dd2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2509.04534",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2509.04534",
+    "identity_tokens": [
+      "arXiv:2509.04534"
+    ],
+    "reason": "一次arXiv要旨では、12種類の既存LLMを4種の生物医学NLPタスク・8データセットで8bit/4bit量子化し、GPUメモリ削減とタスク精度維持を評価する。LLMのローカル推論メモリ要件（最大75%削減、70B級の40GB級GPUでの利用可能性）に接点はあるが、新しい量子化アルゴリズム、推論カーネル、スケジューラやシステム最適化機構の提案は要旨で確認できない。医療応用への実証・推奨が主眼のため、技術的新規性の観点から収録保留。",
+    "first_checked_at": "2026-10-28T06:43:59+00:00",
+    "last_checked_at": "2026-10-28T06:43:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Quantized Large Language Models in Biomedical Natural Language Processing: Evaluation and Recommendation"
+  },
+  "processed_at": "2026-10-28T06:43:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7b4fa6fa2be9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

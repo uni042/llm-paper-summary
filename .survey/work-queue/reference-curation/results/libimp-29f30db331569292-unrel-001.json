@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-29f30db331569292-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2507.12988",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2507.12988",
+    "identity_tokens": [
+      "arXiv:2507.12988"
+    ],
+    "reason": "一次arXiv要旨では、活性分散を用いた構造化one-shot pruningをDeiT-Base等の画像認識ネットワークに適用し、ImageNet-1kでMACとモデルサイズを削減する研究。主要実験はVision Transformerの画像分類であり、LLM生成推論・サービング・KVキャッシュ・MoE実行への実装や実測を示さない。一般的な枝刈りという技術的類似性はあるが、このサーベイのLLMシステムへの直接的寄与を確認できない。",
+    "first_checked_at": "2026-10-28T06:43:56+00:00",
+    "last_checked_at": "2026-10-28T06:43:56+00:00",
+    "linked_from": [],
+    "title": "Variance-Based Pruning for Accelerating and Compressing Trained Networks"
+  },
+  "processed_at": "2026-10-28T06:43:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-29f30db33156",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
