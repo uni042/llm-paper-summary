@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（759本）
+## 自動生成の論文一覧（760本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -40,10 +40,6 @@
   実装：✓ ・ リポジトリ内被引用：5  
   視覚・言語・行動モデル（vision-language-action モデル; VLA）は、画像と自然言語の指示を統合し、ロボットの連続した操作を生成する。
 
-- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
-  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：5  
-  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
-
 - **2026-05 · [SYMPHONY: Enabling Compute-Memory Disaggregation in LLM Serving Systems](2026-0fd53670e945-symphony-enabling-compute-memory-disaggregation-in-llm-serving-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   将来要求の助言信号でKVキャッシュを事前移動し、層優先度と協調HBM管理で不確実性を吸収して計算・メモリ分離を低遅延化する。
@@ -55,6 +51,10 @@
 - **2026-02 · [Is Retraining-Free Enough? The Necessity of Router Calibration for Efficient MoE Compression](2026-2603.02217-is-retraining-free-enough-the-necessity-of-router-calibration-for-effici.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   しかし推論時に呼ばれない専門家も含めて大量の重みを保持する必要があり、GPUメモリの制約が厳しい。専門家を削除、低ランク編集、統合する方式はこの常駐重みを減らせるが、圧縮後の性能が元モデルより大きく落ちることがある。
+
+- **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
+  実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：4  
+  コード編集エージェントは、問題を理解して修正するまでに何度もファイルを読み、検索し、テストを実行する。cat や grep が返した大量のコードや周辺行を、そのまま大規模言語モデル（LLM）へ渡すと、文脈窓を圧迫し、API料金と推論時間を増やす。しかも一度読み込んだ不要なコードは対話履歴に残り、次の推論でも繰り返し処理される。
 
 - **2026-06 · [Models Take Notes at Prefill: KV Cache Can Be Editable and Composable](2026-2606.17107-models-take-notes-at-prefill-kv-cache-can-be-editable-and-composable.md)**  
   実装：[✓](https://github.com/19PINE-AI/programmable-kv) ・ リポジトリ内被引用：3  
@@ -942,6 +942,10 @@
   実装：[✓](https://github.com/Conzel/super-outlier-dlm) ・ リポジトリ内被引用：0  
   本論文は、離散拡散型言語モデル（Diffusion Language モデル、DLM）と自己回帰型言語モデル（Autoregressive Language モデル、ARモデル）で、隠れ状態の層間類似性と圧縮耐性がどのように異なるかを調べた実証研究である。
 
+- **2026-05 · [LASER: Loss-Aware Singular-value Decomposition and Rank Allocation for Efficient Low-Precision Vision-Language Models](2026-2606.00573-laser-loss-aware-singular-value-decomposition-and-rank-allocation-for-ef.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LASERは、視覚言語モデル（VLM）の自己注意のQ/K/V射影を低ランク化し、同時に低精度化を行う圧縮・推論実装である。
+
 - **2026-05 · [Language Modeling with Hyperspherical Flows](2026-2605.11125-language-modeling-with-hyperspherical-flows.md)**  
   実装：[✓](https://github.com/jdeschena/s-flm) ・ リポジトリ内被引用：0  
   S-FLMは代わりに次元 d の単位超球面 S^{d-1} 上へトークンを配置し、雑音ベクトルから正しい単語埋め込みへ回転する経路を学習する。
@@ -1717,11 +1721,11 @@
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：29  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
-  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：27  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
@@ -1736,10 +1740,6 @@
   実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：23  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
 
-- **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
-  C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
-
 - **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
   実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：22  
   離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
@@ -1748,8 +1748,12 @@
   実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：22  
   単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
+- **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
+  実装：✓ ・ リポジトリ内被引用：22  
+  C3oT（Conditioned Compressed Chain-of-Thought）は、言語モデルが回答の前に生成する長い思考連鎖（Chain of Thought、CoT）を短くしながら、長い思考で獲得した推論能力を保持するための条件付き学習方式である。
+
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：20  
   CoT-Valveは、推論モデルが簡単な問題にも長い思考連鎖（Chain of Thought、CoT）を生成してしまう無駄を減らし、同じ重みを基盤とするモデルで思考列の長さを柔軟に変える手法である。
 
 - **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
@@ -1757,16 +1761,16 @@
   本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：19  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：18  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
-
-- **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
-  大規模推論モデルは、最終回答の前に長い思考列（chain of thought、CoT）を生成することで数学、プログラミング、定理証明の精度を高めている。形式定理証明では長い思考より3.3～3.7倍少ないトークンで同程度のpass@kを得る。
 
 - **2025-09 · [Qwen3-Omni Technical Report](2025-2509.17765-qwen3-omni-technical-report.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
   Qwen3-Omniは、テキスト、画像、音声、動画の入力を統合し、テキスト応答と音声応答を生成する大規模多モーダルモデルである。原著の理論的な初回パケット遅延は、同時要求1件で音声入力234ms、動画を含む入力547msである。
+
+- **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  大規模推論モデルは、最終回答の前に長い思考列（chain of thought、CoT）を生成することで数学、プログラミング、定理証明の精度を高めている。形式定理証明では長い思考より3.3～3.7倍少ないトークンで同程度のpass@kを得る。
 
 - **2025-10 · [dInfer: An Efficient Inference Framework for Diffusion Language Models](2025-2510.08666-dinfer-an-efficient-inference-framework-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/inclusionAI/dInfer) ・ リポジトリ内被引用：16  
@@ -2174,7 +2178,7 @@
 
 - **2025-07 · [CoRE: Enhancing Metacognition with Label-free Self-evaluation in LRMs](2025-2507.06087-core-enhancing-metacognition-with-label-free-self-evaluation-in-lrms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  推論特化型言語モデルは、難しい問題を解くために多数の中間ステップを生成する。CoRE-Evalは、この「考えすぎ」を出力文章中の特定語句や正解ラベルに依存せずに検出する推論時の制御方式である。数学ベンチマークの一部では正答率と長さが同時に改善したが、すべてのモデル・課題で精度が上がったわけではない。
+  長い推論を生成する言語モデルは、複雑な数学問題で有用な中間計算を積み重ねる一方、同じ検算や方針の見直しを繰り返し、答えが得られないまま出力を延ばす場合がある。正誤ラベルを集めて判定器を追加学習する方式ではなく、モデルが生成中に持つ隠れ状態を利用する。
 
 - **2025-07 · [Characterizing State Space Model and Hybrid Language Model Performance with Long Context](2025-2507.12442-characterizing-state-space-model-and-hybrid-language-model-performance-w.md)**  
   実装：[✓](https://github.com/sapmitra/ssm-scope) ・ リポジトリ内被引用：0  
@@ -2720,7 +2724,7 @@
 
 - **2024-03 · [Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA](2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md)**  
   実装：[✓](https://github.com/chiyotsai/MoEfication-with-LoRA) ・ リポジトリ内被引用：0  
-  本報告は、既に学習済みの密なTransformerを再学習なしに部分活性化型の専門家モデルへ改造し、その際に失われたタスク精度を低ランク適応で回復する二段階の実験を扱う。第一段階はFFNの隠れニューロンを複数の小さな専門家へまとめ、入力ごとに一部の専門家だけを選択するMoEficationである。重要なのは「MoE化すれば常に速い」という結果ではないことだ。
+  重要な結果は、モデル規模によって高速化の符号が逆転することである。著者の表4では、単一の画像処理用計算機ではなく、エヌビディアのRTX 3090で測った相対推論時間が、小型のT5-smallでは元の135.1%、T5-baseでは101.4%、T5-largeでは88.9%、T5-3Bでは71.1%となった。
 
 - **2024-03 · [Efficient Encoder-Decoder Transformer Decoding for Decomposable Tasks](2024-2403.13112-efficient-encoder-decoder-transformer-decoding-for-decomposable-tasks.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（319本）
+## 自動生成の論文一覧（320本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -528,6 +528,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   従来の動的投機長制御は「何トークン受理されそうか」を予測して長さを決めることが多い。LibraSpecはこの費用構造の違いに着目し、期待受理長だけでなく検証時間を分母に含む期待高速化率を最大化する。
 
+- **2026-08 · [Is Multimodal Speculative Decoding Ready for Diffusion-Based Parallel Drafting? A Survey and Empirical Diagnosis](2026-2608.20743-is-multimodal-speculative-decoding-ready-for-diffusion-based-parallel-dr.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  既存方式の整理と、視覚言語モデル（VLM）における実測を組み合わせたサーベイ兼実証的診断であり、新しい単一の復号アルゴリズムを提案する論文ではない。
+
 - **2026-08 · [FOVEA: Focused On-Demand Visual Evidence Adaptation for Cache-Friendly Multimodal Speculative Decoding](2026-2608.22883-fovea-focused-on-demand-visual-evidence-adaptation-for-cache-friendly-mu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ただし、本文の「検索件数を動的に決める」という説明と付録の「16件固定」という記述は矛盾しており、可変件数機構の実験的寄与は原著だけでは完全に確証できない。
@@ -771,7 +775,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号（投機的復号）は、小さいドラフトモデルが次の候補トークンを先に作り、大きな対象モデルがまとめて検証することで、最終的な出力分布を変えずに生成を高速化する。
 
 - **2025-01 · [Reward-Guided Speculative Decoding for Efficient LLM Reasoning](2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md)**  
-  実装：[✓](https://github.com/BaohaoLiao/RSD) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/BaohaoLiao/RSD) ・ リポジトリ内被引用：16  
   複雑な数学問題に大規模言語モデルを使うと、最終回答に至るまで何十もの途中式や判断を順番に生成する。高性能な大型モデルだけに全段階を担当させると、簡単な計算の確認にも高価なモデルの演算を費やす。一方、小型モデルだけでは途中の誤りが連鎖して最終回答を損なう。報酬が閾値以上なら草稿を採用し、低ければ草稿を棄却して目標モデルに同じ文脈から次段階を生成させる。
 
 - **2025-05 · [MoESD: Unveil Speculative Decoding's Potential for Accelerating Sparse MoE](2025-2505.19645-moesd-unveiling-speculative-decodings-potential-for-accelerating-moe-inference.md)**  
