@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-28T07:08:21.768927+00:00",
+  "generated_at": "2026-10-28T09:15:12.796354+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 26,
+  "count": 24,
   "worker_counts": {
-    "scheduled-chat-00": 9,
-    "scheduled-chat-30": 9,
+    "scheduled-chat-00": 8,
+    "scheduled-chat-30": 8,
     "scheduled-chat-45": 8
   },
   "entries": [
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -65,9 +65,9 @@
       "path": "papers/inference/99-other-inference-systems/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md",
       "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.298",
       "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
-      "file_bytes": 11533,
-      "source_sha256": "3699526ddce2d0ac292106e7c641b32be3d0fa6fa4da75b45266cac2762c384f",
-      "source_git_blob_sha": "7dc2be11a5e87c6576dfc928c8b83ac760edffa0",
+      "file_bytes": 11886,
+      "source_sha256": "3bc12603609630f7c01f608767663ff37949580849a22e65c0f83082eab06d1c",
+      "source_git_blob_sha": "0db501a0dddfce5d9297c64eaf294b23f585e0b6",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -106,26 +106,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md",
-      "canonical_id": "arXiv:2504.07389",
-      "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
-      "file_bytes": 12930,
-      "source_sha256": "586fec71fa26d58675f7c4cc0e01d086d8e977e08032e2b3fbba405749bdb382",
-      "source_git_blob_sha": "c1a851d29d8e4b776453dce2ed9d5f0bd7d34eee",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.934557,
-      "quality_metrics": {
-        "body_chars": 3843,
-        "method_chars": 1033,
-        "evaluation_chars": 1459,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -149,9 +129,9 @@
       "path": "papers/inference/07-kv-cache-optimization-compression/2025-2509.21623-ojakv-context-aware-online-low-rank-kv-cache-compression.md",
       "canonical_id": "arXiv:2509.21623",
       "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
-      "file_bytes": 13205,
-      "source_sha256": "65d59c850637a4df9c8bcccf6c04b79cb1d26fb64fe8a084565067a94f614162",
-      "source_git_blob_sha": "6b5242c1894697124c595786bcde5812364c5904",
+      "file_bytes": 14655,
+      "source_sha256": "73ec6a927b40d80ea7f05c88b58b65a32512ed8e3810f4c7e0fe8b71383adfff",
+      "source_git_blob_sha": "95e37d19006e681730aaafe7d214ac72c1e4eda1",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -166,32 +146,12 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.00907-kvslimmer-theoretical-insights-and-practical-optimizations-for-asymmetri.md",
-      "canonical_id": "arXiv:2603.00907",
-      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
-      "file_bytes": 13584,
-      "source_sha256": "915306ae55d78a75011fba579fbaaed1a448abfe250a70a98105a047f122e31a",
-      "source_git_blob_sha": "995a848539cf9f1664bb8eb5580b8a87055cada1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.919557,
-      "quality_metrics": {
-        "body_chars": 3746,
-        "method_chars": 1239,
-        "evaluation_chars": 1192,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2511.17801-layer-wise-high-impact-parameter-ratio-optimization-in-post-training-qua.md",
       "canonical_id": "arXiv:2511.17801",
       "title": "Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models",
-      "file_bytes": 14512,
-      "source_sha256": "b126970fe821cf23798680c98c35425b70970f202634ad54034edb844658c73d",
-      "source_git_blob_sha": "37579c3acc1aa514da68e2ab51fbe1c8216b733b",
+      "file_bytes": 15167,
+      "source_sha256": "82cbcecc9c2fb5481007eed0cd53947509b51bfa236f6cbe3f146193def0039c",
+      "source_git_blob_sha": "f3df5ff500065c915aca856088baee70dcee2dd3",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -206,44 +166,28 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md",
-      "canonical_id": "arXiv:2609.38510",
-      "title": "DEdit: Iterative Draft Editing for Speculative Decoding",
-      "file_bytes": 15016,
-      "source_sha256": "7916020df8c4b6127e149b2e88c61075728d595ea5fac6380e2c9cc356e016ca",
-      "source_git_blob_sha": "6a6cf8a59ce981593df1800a007b31b3257db0a7",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2607.18957-instantinfer-enabling-fast-llm-cold-start-with-communicating-finite-auto.md",
+      "canonical_id": "arXiv:2607.18957",
+      "title": "InstantInfer: Enabling Fast LLM Cold Start with Communicating Finite Automata",
+      "file_bytes": 15218,
+      "source_sha256": "319a74bc50314f5ace478ce0641f43ae4b1d564a388b1487a023d8c2aa4e5ef1",
+      "source_git_blob_sha": "7eaad599c3c20ddfe84f636e4106191b17bfb4c6",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.948805,
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.798067,
       "quality_metrics": {
-        "body_chars": 3720,
-        "method_chars": 1136,
-        "evaluation_chars": 1324,
+        "body_chars": 4836,
+        "method_chars": 1666,
+        "evaluation_chars": 1080,
         "limitation_chars": 0
       },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md",
-      "canonical_id": "arXiv:2510.26843",
-      "title": "CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs",
-      "file_bytes": 15356,
-      "source_sha256": "9a44b4843a345442aac75481141066a11177a98644189487419fbd63c2a614b3",
-      "source_git_blob_sha": "4ccd48f991d0f36602842be293a810560ec94aeb",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.901532,
-      "quality_metrics": {
-        "body_chars": 3625,
-        "method_chars": 1251,
-        "evaluation_chars": 900,
-        "limitation_chars": 397
-      },
-      "mechanical_failures": [],
-      "warnings": []
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 79.8% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 79.8% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2603.08899-confu-contemplate-the-future-for-better-speculative-sampling.md",
@@ -260,6 +204,46 @@
         "body_chars": 4083,
         "method_chars": 1505,
         "evaluation_chars": 1023,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-d5b03c1b33e0-mitigating-sequential-dependencies-a-survey-of-algorithms-and-systems-fo.md",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.716",
+      "title": "Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models",
+      "file_bytes": 15795,
+      "source_sha256": "3dc72c16c3002e0bc3565b643172d688b9c7c6c63d9057de93526e38efd0f778",
+      "source_git_blob_sha": "198bd6ef3ca10375adda1b4f26ec1ecb796611b0",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.909328,
+      "quality_metrics": {
+        "body_chars": 4676,
+        "method_chars": 1500,
+        "evaluation_chars": 1128,
+        "limitation_chars": 584
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md",
+      "canonical_id": "arXiv:2504.07389",
+      "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
+      "file_bytes": 15837,
+      "source_sha256": "e0921ee84d68308deac75a72a4f2ae91014dbe2cb5abe5d201fa155422947193",
+      "source_git_blob_sha": "6cac5d735a302ffac77ce994beda6c26f52669f4",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.934557,
+      "quality_metrics": {
+        "body_chars": 3843,
+        "method_chars": 1033,
+        "evaluation_chars": 1459,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -320,26 +304,6 @@
         "body_chars": 3654,
         "method_chars": 1196,
         "evaluation_chars": 1114,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md",
-      "canonical_id": "arXiv:2603.04800",
-      "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
-      "file_bytes": 16392,
-      "source_sha256": "e8dd7e20aded599b5041bc72514ae057ad2b0bc15973e0daa191ae37e3b48881",
-      "source_git_blob_sha": "9eddfd72bed0acbf7d72349007ceeca6863ad1d1",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.936808,
-      "quality_metrics": {
-        "body_chars": 4523,
-        "method_chars": 1223,
-        "evaluation_chars": 1538,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
