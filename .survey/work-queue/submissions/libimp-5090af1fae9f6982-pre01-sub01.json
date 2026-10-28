@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.33889",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "At each step, decoding one sequence with a large language model rereads the projection weights, whose traffic is fixed, and the key-value (KV) cache, whose traffic grows with context. Activation sparsity trims the first term and KV-cache sparsity the second, yet their reported speedups are hard to compare because each depends on context length and on the dense attention kernel it is measured against. We derive a byte crossover, the context length at which the two savings are equal, together with ideal speedup bounds for each branch and for their composition, from model dimensions and keep ratios alone. We then time both branches and their composition from 2K to 128K tokens on two GPUs after a dense prefill of real text, with dense and sparse modes reading the cache through the same split-K attention kernel. The projection branch leads at short context and the KV branch at long context, with speedups that follow their byte bounds up to fixed kernel costs. Adding these costs, measured in separate sweeps, lets the byte account predict the measured crossings of three keep-ratio pairs, a second model, and a second GPU to within 4.1K tokens. Timing the dense baseline with masked instead of split-K attention inflates the apparent speedup of the same KV policy about fivefold. An attention-scored KV selection answers the same passkey and multi-key placements as dense decoding up to 127K tokens, whereas a KV window misses most of them. Under matched perplexity budgets, activation sparsity composed with this selection decodes 14 to 26% faster than the best single branch on both GPUs. Code is available at https://github.com/js-lee-AI/ByteCross.",
+      "identifiers": [
+        "SemanticScholar:771134c93b797889cac96cf314ed2d7c74de84d7"
+      ],
+      "semantic_scholar_id": "771134c93b797889cac96cf314ed2d7c74de84d7",
+      "canonical_id": "arXiv:2609.33889",
+      "arxiv_id": "2609.33889",
+      "authors": [
+        "Jungseob Lee",
+        "Seungyoon Lee",
+        "Seongtae Hong",
+        "Sugyeong Eo",
+        "Heuiseok Lim"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMの復号時に射影重み読み出しを減らす活性疎性と、文脈長に比例するKV読み出しを減らすキャッシュ疎性の交差点をバイトモデルで予測する。2K〜128K文脈と二種GPUで同一split-K注意カーネルを用いて組合せの速度と精度を測る、推論性能分析・最適化の研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2607.27735",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding alleviates the memory-bandwidth bottleneck in large language model inference, but its acceleration is jointly constrained by drafting overhead, token acceptance, and speculation length. We present a unified efficiency analysis showing that extending the speculation horizon can reduce rather than improve speedup when the marginal acceptance probability falls below the relative drafting cost. Guided by this analysis, we introduce SparseSpec-L, a training-free self-speculative decoding framework for long-context inference. SparseSpec-L generates lightweight drafts directly from the target model using a dynamically sparsified and recallable KV cache. It recycles per-head attention statistics produced during full-context verification as a no-extra-forward importance signal, allowing critical historical tokens to be recalled without permanently discarding the dense KV cache. An online entropy-based controller further selects the speculation length according to expected step-wise efficiency. Experiments across multiple long-context tasks and model scales show consistent end-to-end acceleration, with up to speedup over autoregressive decoding while preserving the target model's output distribution.",
+      "identifiers": [
+        "SemanticScholar:fe149c33cfdfcd36f2afe5fd1b8884a0d038583a"
+      ],
+      "semantic_scholar_id": "fe149c33cfdfcd36f2afe5fd1b8884a0d038583a",
+      "canonical_id": "arXiv:2607.27735",
+      "arxiv_id": "2607.27735",
+      "doi": "10.48550/arXiv.2607.27735",
+      "authors": [
+        "Yue Liu",
+        "Yuan Zeng",
+        "Min Lyu",
+        "Ruilin Liu",
+        "Yu Guo",
+        "Yin-Long Xu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 90,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SparseSpec-Lは対象LLM自身をドラフトとして使い、検証時の注意統計から重要KVを選んで一時的に疎化・必要時に復元する。受理率とドラフト費用の均衡に応じて投機長をエントロピー制御し、長文脈復号を追加学習なしで加速する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "Unified Lookup-Table Inference with Signed-Digit K/V Caches for Ternary LLMs",
+      "source_url": "https://arxiv.org/abs/2608.03229",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ternary LLMs make their weight-dominated projections compact and efficient, but attention remains a mismatch: its K/V cache is created online and is typically processed by a separate higher-precision engine. Compressing this cache alone does not resolve the mismatch. To execute attention with the same lookup-table machinery as ternary projections, values accumulated in one reduction must retain a compatible representation and scale. This requirement also differs for keys and values during causal decoding, because newly generated values may belong to an unfinished cache block. This work develops a unified lookup-table inference approach for ternary LLMs. It stores runtime K/V states as scaled multi-plane signed digits organized around the reduction structure of attention. The resulting digit planes are consumed directly by activation-derived tables, avoiding dense K/V materialization between cache storage and attention computation. The design combines online K/V formation, bounded handling of incomplete value blocks, and a shared multi-stream datapath for Linear projections and attention. A constraint-guided search selects the representation and execution policy for a target quality--efficiency trade-off. Experiments on native and post-training ternary models validate the approach across cache capacity, model quality, and hardware efficiency.",
+      "identifiers": [
+        "SemanticScholar:424ec2a83a098cbd90c465ae67199a35e39976dd"
+      ],
+      "semantic_scholar_id": "424ec2a83a098cbd90c465ae67199a35e39976dd",
+      "canonical_id": "arXiv:2608.03229",
+      "arxiv_id": "2608.03229",
+      "authors": [
+        "Ziang Duan",
+        "Jia-Jun Wu",
+        "Ze-Tian Chen",
+        "Hao Song",
+        "Yan-Wen Deng",
+        "Zi-Xuan Shen",
+        "Nuobei Xie",
+        "Simon Wu",
+        "Bo-Lun Wang",
+        "Peng-Peng Zhou",
+        "Chao Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      },
+      "reason": "三値重みの線形層と高精度KV注意で計算経路が分断される問題に対し、オンラインKVをスケール付き多平面の符号付き数字で格納し、活性由来のルックアップ表から直接注意を計算する。未完成valueブロックの扱いと共通データパスまで設計したLLM推論ハードウェア・キャッシュ最適化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "StepPrune: Adaptive Sequential Visual Token Selection across Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.13804",
+      "year": 2026,
+      "published": "2026-09-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual prefixes account for a major portion of the per-layer computation in multimodal large language models (MLLMs), making visual-token pruning a direct approach to accelerating inference. Existing top-K methods typically evaluate tokens independently and apply a uniform budget to all inputs, overlooking both selection-dependent interactions and variations in visual complexity across samples. In contrast, we propose StepPrune, which formulates visual-token pruning as an adaptive sequential decision process. Conditioned on previously selected tokens and textual context, StepPrune progressively constructs the retained subset and automatically determines its size through a learned STOP action. During training, a variance-preserving noise gate provides a differentiable surrogate for the discrete selection process, whereas during inference, unselected tokens are physically removed before language-model prefill. A grouped selection mechanism further extends StepPrune to high-resolution inputs. Experiments across LLaVA-1.5, LLaVA-NeXT, Qwen2.5-VL, and InternVL3 show that StepPrune achieves the best average normalized performance retention across all evaluated pruning rates on LLaVA-1.5, Qwen2.5-VL, and InternVL3, while remaining competitive on the substantially longer AnyRes prefixes of LLaVA-NeXT. On LLaVA-1.5, StepPrune retains 94.6% of the full-prefix normalized performance while pruning 88.9% of the visual tokens. At a mean retained count of 64, StepPrune reduces prefill latency from 59.95 ms to 40.05 ms, corresponding to a 1.50x prefill speed-up.",
+      "identifiers": [
+        "SemanticScholar:5bfb8fe103a572b7c99bc439edac4068a9e987b6"
+      ],
+      "semantic_scholar_id": "5bfb8fe103a572b7c99bc439edac4068a9e987b6",
+      "canonical_id": "arXiv:2609.13804",
+      "arxiv_id": "2609.13804",
+      "authors": [
+        "Hang Zhang",
+        "Lan He",
+        "Min Yao",
+        "Lijian Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 46,
+        "matched_prestigious_venue": null
+      },
+      "reason": "StepPruneは画像トークンを固定top-Kで選ぶ代わりに、質問文と既選択トークンを条件とする逐次選択とSTOP動作で入力ごとの残存数を決める。学習時はノイズゲートで離散選択を近似し、推論時は不要トークンを言語モデルprefill前に物理削除するためMLLM推論遅延を直接削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2609.26638",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive OCR vision-language models accurately convert document images into text and structured markup, but require one sequential decoding step per output token, limiting inference speed. Unlike open-ended text generation, OCR outputs are strongly grounded in the input image, making diffusion-based parallel generation promising. However, when several tokens are predicted in one diffusion step, each is predicted before the others are known. Committing them directly can therefore introduce errors. We therefore introduce GravityOCR, a parameter-shared AR-block-diffusion model jointly trained for parallel drafting and causal AR verification. Verifying drafts before commitment lets the model commit multiple output tokens per round without a separate drafting network. The causal AR path also enables GRPO with sequence- and structure-level OCR rewards, avoiding diffusion-trajectory likelihood estimation while updating the shared drafter parameters. On OmniDocBench v1.6, AR-path GRPO improves the Overall score from 94.92 to 95.16 without reducing diffusion drafting efficiency, while the final model remains close to the original GLM-OCR score of 95.48. In an SGLang serving deployment, GravityOCR commits an average of 9.7 output tokens per forward pass and achieves a $3.94\\times$ decode-only speedup on region crops and a $1.32\\times$ end-to-end page-processing speedup over AR decoding.",
+      "identifiers": [
+        "SemanticScholar:42cb858ef1c96a4950f14bcb89c8e127fc7c3194"
+      ],
+      "semantic_scholar_id": "42cb858ef1c96a4950f14bcb89c8e127fc7c3194",
+      "canonical_id": "arXiv:2609.26638",
+      "arxiv_id": "2609.26638",
+      "authors": [
+        "Dohyun Kim",
+        "Sung-Jun Han",
+        "Hyun-geun Kim",
+        "Yusik Kim",
+        "Jamin Shin",
+        "Paul Hongsuck Seo",
+        "Hongjoon Ahn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GravityOCRは文書画像の文字・マークアップ生成に特化した自己投機的復号で、共有パラメータのブロック拡散ドラフトを自己回帰経路が因果的に検証して複数トークンを確定する。SGLangで復号単体とページ全体の速度を別々に評価する、VLM推論サービングの実測最適化。用途はOCRに限定される。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5090af1fae9f",
+    "round": "libimp-5090af1fae9f6982-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5090af1fae9f6982-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5090af1fae9f6982-pre01.json",
+    "receipt": "sha256:27759e1f9451b91ea853c7731279514b80c5119ddb28fb3fd2c54c1df66927bc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5090af1fae9f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

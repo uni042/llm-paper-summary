@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PRISM: Breaking the O(n) Memory Wall in Long-Context LLM Inference via O(1) Photonic Block Selection",
+      "source_url": "https://arxiv.org/abs/2603.21576",
+      "year": 2026,
+      "published": "2026-03-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context LLM inference is bottlenecked not by compute but by the O(n) memory bandwidth cost of scanning the KV cache at every decode step -- a wall that no amount of arithmetic scaling can break. Recent photonic accelerators have demonstrated impressive throughput for dense attention computation; however, these approaches inherit the same O(n) memory scaling as electronic attention when applied to long contexts. We observe that the real leverage point is the coarse block-selection step: a memory-bound similarity search that determines which KV blocks to fetch. We identify, for the first time, that this task is structurally matched to the photonic broadcast-and-weight paradigm -- the query fans out to all candidates via passive splitting, signatures are quasi-static (matching electro-optic MRR programming), and only rank order matters (relaxing precision to 4-6 bits). Crucially, the photonic advantage grows with context length: as N increases, the electronic scan cost rises linearly while the photonic evaluation remains O(1). We instantiate this insight in PRISM (Photonic Ranking via Inner-product Similarity with Microring weights), a thin-film lithium niobate (TFLN) similarity engine. Hardware-impaired needle-in-a-haystack evaluation on Qwen2.5-7B confirms 100% accuracy from 4K through 64K tokens at k=32, with 16x traffic reduction at 64K context. PRISM achieves a four-order-of-magnitude energy advantage over GPU baselines at practical context lengths (n>= 4K).",
+      "identifiers": [
+        "SemanticScholar:ce09d2136f7c414e2bc013a907f42b8f67098275"
+      ],
+      "semantic_scholar_id": "ce09d2136f7c414e2bc013a907f42b8f67098275",
+      "canonical_id": "arXiv:2603.21576",
+      "arxiv_id": "2603.21576",
+      "doi": "10.48550/arXiv.2603.21576",
+      "authors": [
+        "Hyoseok Park",
+        "Yeonsang Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PRISMは長文脈LLMで重要KVブロックを選ぶ類似度検索を、薄膜ニオブ酸リチウムの光学ブロードキャスト・重み付け素子で行う。KV全件の電子的走査を減らす推論アクセラレータ案で、Qwen2.5-7Bのneedle検索と転送量を評価するためaccept。光学O(1)主張は理想化された選択演算に限定して解釈する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "DeepStack: Facilitating Co-Design Exploration of 3D DRAM-Stacked Accelerators for Distributed LLM Inference",
+      "source_url": "https://arxiv.org/abs/2604.04750",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Advances in hybrid bonding and packaging have driven growing interest in 3D DRAM-stacked AI accelerators. As large language models (LLMs) scale to hundreds of billions or trillions of parameters, distributed inference across multiple 3D chips has become essential for AI serving. This trend makes cross-stack co-design critical because system-level parallelization and scheduling choices are tightly coupled with hardware characteristics such as memory organization, interconnects, and thermal constraints. We present DeepStack, an accurate performance model and efficient design space exploration (DSE) framework for distributed 3D-stacked LLM inference. At the hardware level, DeepStack captures transaction-aware memory bandwidth, bank activation constraints, buffering limitations, and thermal and power behavior. At the system level, it incorporates comprehensive parallelization strategies and execution scheduling. Through a dual-stage network abstraction and tile-level compute-communication overlap modeling, DeepStack achieves up to 100,000x faster evaluation than state-of-the-art simulators at comparable accuracy. We cross-validate DeepStack against our in-house 3D designs, an NS-3 backend with 2.12% error, and vLLM serving on eight B200 GPUs with 12.92% error. Combined with hierarchical search, DeepStack efficiently explores about 2.5 x 10^14 design points spanning the number of stacked DRAM layers, DRAM vertical connectivity, interconnects, compute-memory allocation, and distributed scheduling under thermal and area constraints. A search-space ablation shows that restricted DSE baselines can miss up to 9.5x modeled throughput. Beyond modeling and DSE, DeepStack derives design implications for distributed 3D AI systems and guides performance optimization across the stack. Source code and artifacts are available at https://github.com/tile-ai/DeepStack/tree/ae.",
+      "identifiers": [
+        "SemanticScholar:a7568e2acda50209faef694ad88d9224946f06a7"
+      ],
+      "semantic_scholar_id": "a7568e2acda50209faef694ad88d9224946f06a7",
+      "canonical_id": "arXiv:2604.04750",
+      "arxiv_id": "2604.04750",
+      "authors": [
+        "Zhiwen Mo",
+        "Guo-Yu Li",
+        "H. Chen",
+        "Yu Cheng",
+        "Zheng-Ju Tang",
+        "Qianzhou Wang",
+        "Lei Wang",
+        "Shuang Liang",
+        "Ling-Xiao Ma",
+        "Xianqi Zhou",
+        "Yu-Xiao Guo",
+        "W. Luk",
+        "Ji-Long Xue",
+        "Hong-Xiang Fan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DeepStackは3D DRAM積層アクセラレータのメモリバンク・帯域・熱特性と、複数チップの分散LLM推論における並列化・スケジューリング・通信重畳を同時モデル化する設計探索基盤。vLLM/B200との照合もあり推論ハードウェア設計へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "Compute Where it Counts: Self Optimizing Language Models",
+      "source_url": "https://arxiv.org/abs/2605.10875",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient LLM inference research has largely focused on reducing the cost of each decoding step (e.g., using quantization, pruning, or sparse attention), typically applying a uniform computation budget to every generated token. In practice, token difficulty varies widely, so static compression can over-compute on easy steps and under-compute on hard ones. We study dynamic budget allocation for autoregressive decoding: learning how much computation to spend per token from within a single model. Self-Optimizing Language Models (SOL) pair a frozen LLM with a lightweight policy network that reads the LLM hidden state and selects a discrete efficiency action at each decode step. Actions can jointly control (i) token-level attention sparsity, (ii) structured activation pruning in the MLP, and (iii) activation quantization bit-width, while leaving the base model weights unchanged. We train the policy with group-relative policy optimization on teacher-forced episodes: the token sequence is fixed, while we sample multiple compute schedules (i.e.,\"counterfactual\"schedules that vary only the efficiency actions for the same token path) and compare their likelihoods under the same supervision. Our reward trades off language-model quality against soft penalties that encourage episode-average budget usage to match a requested target. Across model variants and compute regimes, SOL improves quality at matched budget over static allocation and strong random schedule search, offering a complementary axis for inference-efficiency optimization. SOL discovers a better quality-efficiency pareto-front across all our experiments and improves MMLU accuracy by up to 7.3% over uniform budget allocation strategies.",
+      "identifiers": [
+        "SemanticScholar:c2c232b4847677e7d0482a4f775e0b7dd1c28e01"
+      ],
+      "semantic_scholar_id": "c2c232b4847677e7d0482a4f775e0b7dd1c28e01",
+      "canonical_id": "arXiv:2605.10875",
+      "arxiv_id": "2605.10875",
+      "doi": "10.48550/arXiv.2605.10875",
+      "authors": [
+        "Yash Akhauri",
+        "Mohamed S. Abdelfattah"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SOLは凍結したLLMの隠れ状態から軽量ポリシーが各生成トークンの注意疎性、MLP活性枝刈り、活性量子化ビット幅を選ぶ。要求計算予算と品質を報酬で釣り合わせるためのポリシー学習を行うが、推論時の動的計算割当を直接扱うためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    },
+    {
+      "title": "GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache",
+      "source_url": "https://arxiv.org/abs/2607.01065",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Large Language Models (LLMs) with extended context windows is increasingly constrained by the linear growth of Key-Value (KV) cache memory. Vector Quantization (VQ), particularly Residual Quantization (RQ), is a promising approach for pushing KV cache storage toward the sub-1-bit regime by progressively encoding residuals with small codebooks. However, most VQ methods still rely on standard $\\ell_2$ $K$-means as the core codebook-learning primitive. We identify a subtle high-dimensional issue of this primitive: Euclidean centroid averaging can induce centroid shrinkage, which weakens the angular alignment term in the $\\ell_2$ distortion and makes directional preservation harder. To address this issue, we propose Gain-Shape $K$-means (GSKM), a drop-in replacement for $K$-means that improves directional fidelity while matching, and in some regimes improving, $\\ell_2$ distortion. We then build Gain-Shape Residual Quantization (GSRQ) by incorporating a weighted extension of GSKM into an RQ pipeline. On LLaMA-3-8B, GSRQ substantially improves over strong KV cache quantization baselines across bit rates. At 1-bit, it improves the average accuracy across LongBench tasks from 11.34 to 33.54, a gain of 22.20 percentage points over VQLLM.",
+      "identifiers": [
+        "SemanticScholar:b7e30216c0636ed47ff55d69c47b28b7a764662c"
+      ],
+      "semantic_scholar_id": "b7e30216c0636ed47ff55d69c47b28b7a764662c",
+      "canonical_id": "arXiv:2607.01065",
+      "arxiv_id": "2607.01065",
+      "doi": "10.48550/arXiv.2607.01065",
+      "authors": [
+        "Soosung Kim",
+        "Minjae Park",
+        "Eui-Young Chung",
+        "Jaeyong Chung"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GSRQは残差ベクトル量子化のk-means重心縮小が方向の再現を損なう問題に対し、ゲインと形状を分けて学習するGSKMを残差量子化へ組み込む。LLMのサブ1ビットKVキャッシュ保存とLongBench品質を改善する推論メモリ圧縮方式であるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-adc8043db34f",
+    "round": "libimp-adc8043db34f8293-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-adc8043db34f8293-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-adc8043db34f8293-pre01.json",
+    "receipt": "sha256:e5705205c6455fe0526124cbb61c50924e9f44feb1bc3a7593ea5cfea10c44b1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-adc8043db34f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
