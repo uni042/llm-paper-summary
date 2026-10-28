@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T19:04:13.928920+00:00",
+  "generated_at": "2026-10-28T19:59:10.470748+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 13,
+  "count": 9,
   "worker_counts": {
-    "scheduled-chat-00": 5,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 4
+    "scheduled-chat-00": 3,
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -62,30 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md",
-      "canonical_id": "DOI:10.3390/make5030045",
-      "title": "Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models",
-      "file_bytes": 12025,
-      "source_sha256": "9acc85ee971de6988a9edf4e288f72479149541f5b10ff0819e07ab5956f07e7",
-      "source_git_blob_sha": "2e86739723600f6408e2fbad9cca96ee90e06f69",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.745476,
-      "quality_metrics": {
-        "body_chars": 3903,
-        "method_chars": 1236,
-        "evaluation_chars": 980,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 74.5% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 74.5% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -120,66 +96,6 @@
         "body_chars": 3707,
         "method_chars": 1268,
         "evaluation_chars": 913,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-d5b03c1b33e0-mitigating-sequential-dependencies-a-survey-of-algorithms-and-systems-fo.md",
-      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.716",
-      "title": "Mitigating Sequential Dependencies: A Survey of Algorithms and Systems for Generation-Refinement Frameworks in Autoregressive Models",
-      "file_bytes": 15795,
-      "source_sha256": "3dc72c16c3002e0bc3565b643172d688b9c7c6c63d9057de93526e38efd0f778",
-      "source_git_blob_sha": "198bd6ef3ca10375adda1b4f26ec1ecb796611b0",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.909328,
-      "quality_metrics": {
-        "body_chars": 4676,
-        "method_chars": 1500,
-        "evaluation_chars": 1128,
-        "limitation_chars": 584
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2504.07389-task-circuit-quantization-leveraging-knowledge-localization-and-interpre.md",
-      "canonical_id": "arXiv:2504.07389",
-      "title": "Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression",
-      "file_bytes": 15837,
-      "source_sha256": "e0921ee84d68308deac75a72a4f2ae91014dbe2cb5abe5d201fa155422947193",
-      "source_git_blob_sha": "6cac5d735a302ffac77ce994beda6c26f52669f4",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.934557,
-      "quality_metrics": {
-        "body_chars": 3843,
-        "method_chars": 1033,
-        "evaluation_chars": 1459,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md",
-      "canonical_id": "arXiv:2608.00528",
-      "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
-      "file_bytes": 16260,
-      "source_sha256": "73795058cdfe8d7b9bbfb552371c383207055269359f2617819f7442b5aa3cd5",
-      "source_git_blob_sha": "fd36f8c7fe072e2f17766023ea2803f31113feee",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.926614,
-      "quality_metrics": {
-        "body_chars": 3654,
-        "method_chars": 1196,
-        "evaluation_chars": 1114,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
