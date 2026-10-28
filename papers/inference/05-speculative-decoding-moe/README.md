@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（313本）
+## 自動生成の論文一覧（315本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -448,9 +448,17 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/whucs21Mzy/ECHO) ・ リポジトリ内被引用：0  
   対象モデルの前半層を高頻度の候補木探索、後半層を低頻度の厳密検証へ分け、中間状態再利用と補助ロジットで候補を更新し、追加ドラフトモデルなしで2.4〜2.9倍級の生成高速化を報告する。
 
+- **2026-09 · [DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification](2026-2609.37532-dscale-scaling-block-diffusion-speculative-decoding-with-adaptive-verifi.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DScaleは、ブロック拡散モデルによる投機的復号で、草案生成よりも教師モデルの候補検証がGPU時間を消費する問題に対する配信時の最適化である。検証だけを、①プリフィルと検証のタイル分離、②受理可能性に応じた要求別の検証長割当、③可変長の候補を固定アドレスのCUDA Graphで実行する配置へ改める。
+
 - **2026-09 · [Draft in Parallel, Condition Through Depth: Adjacent Causal Injection for Speculative Decoding](2026-2609.36173-draft-in-parallel-condition-through-depth-adjacent-causal-injection-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、軽量な下書き器が候補トークン列を提案し、対象LLMが一括検証する。Qwen3-8Bの7課題、温度0での平均受理長は、DFlashの3.77トークン/回からDSpineの4.82トークン/回へ増加し、相対改善率は27.8%となる。
+
+- **2026-09 · [DEdit: Iterative Draft Editing for Speculative Decoding](2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DEditは、拡散型の並列ドラフトが一度に複数トークンを提案できても、序盤に一つ誤りがあると対象モデルの接頭辞検証で後続の候補が全て破棄される問題を扱う。Qwen3-4BとQwen3-8Bの7ベンチマーク平均で、greedy生成の自己回帰基準に対する速度倍率は5.72倍と5.97倍、1ラウンド当たり前進トークン数は7.58と7.75である。
 
 - **2026-09 · [CAST: Cost-Aware Speculative Trees from One-Pass Block Drafters](2026-2610.00321-cast-cost-aware-speculative-trees-from-one-pass-block-drafters.md)**  
   実装：[✓](https://github.com/js-lee-AI/CAST) ・ リポジトリ内被引用：0  

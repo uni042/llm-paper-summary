@@ -35,10 +35,15 @@
   "selection_reason": "GitHub Discovery precheckに保存された一次書誌要旨では複数エージェントがツール待機中に他エージェントの文脈を処理するため、ホスト側KVが再利用される前に追い出される問題を分析。全エージェントの再利用ワーキングセットをstack-distanceモデルで推定し、ホスト階層の容量と書込方針を制御するEfficientAgentを提案。SWE-bench Verifiedのcoding-agent負荷で再計算トークン93%削減、完了時間39%短縮を報告する推論オフロード研究。",
   "semantic_scholar_id": "691f782e84f45fca4986095bfab3d7aaf2e53c59",
   "source_url": "https://arxiv.org/abs/2609.33762",
-  "status": "ready",
+  "status": "superseded",
   "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T06:03:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md",
+  "represented_canonical_id": "arXiv:2609.33762",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

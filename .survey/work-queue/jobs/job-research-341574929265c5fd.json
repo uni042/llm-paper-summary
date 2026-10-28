@@ -35,10 +35,15 @@
   "selection_reason": "Query/Key射影のスペクトル集中とValue射影の分散からKV統合の非対称性を理論化し、forward変数だけで正確なHessian情報を得る閉形式の勾配不要KV統合を設計する。Llama3.1-8B-InstructでLongBench平均+0.92、メモリ29%・遅延28%削減と報告し、長文脈KV圧縮へ直接寄与する。",
   "semantic_scholar_id": "8f4847158ddcc5d9efb5f082811300bed0873bc9",
   "source_url": "https://arxiv.org/abs/2603.00907",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T06:03:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.00907-kvslimmer-theoretical-insights-and-practical-optimizations-for-asymmetri.md",
+  "represented_canonical_id": "arXiv:2603.00907",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（116本）
+## 自動生成の論文一覧（117本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -295,6 +295,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Enabling High-Bandwidth Flash for Generative Recommendation Serving with Write-Aware KV Cache Policy](2026-2609.07175-high-bandwidth-flash-write-aware-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   生成推薦の利用者KVキャッシュをHBFへ置く際、LRU-Kで低再利用利用者のキャッシュ書込みを抑え、HBMのみより3.8〜4.7倍のスループットを得つつフラッシュ寿命を約1年から6年以上へ延ばす方式を分析した。
+
+- **2026-09 · [EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?](2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md)**  
+  実装：[✓](https://github.com/KunmingSHAO/efficientagent_release) ・ リポジトリ内被引用：0  
+  EfficientAgentは、LLMエージェントが毎ターンほぼ同じ会話履歴を再送するにもかかわらず、CPUメモリへのKVオフロードが環境によって高速化にも低速化にもなる理由を解明し、容量見積りと書込み制御を提案する。
 
 - **2026-09 · [Composable CXL Memory as a Kubernetes-Native Shared Memory for LLM Serving](2026-2609.10790-composable-cxl-memory-kubernetes-native-shared-memory-llm-serving.md)**  
   実装：[✓](https://github.com/Seagate) ・ リポジトリ内被引用：0  

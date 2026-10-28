@@ -35,10 +35,15 @@
   "selection_reason": "拡散型ドラフトが並列に提案したトークンの前方誤りによって後続候補まで棄却される問題に対し、後方候補を双方向文脈として使う反復編集とProposalMix学習を提案する。Qwen3-4B/8Bの7ベンチマークで自己回帰生成比5.72倍/5.97倍のマクロ平均速度改善を報告し、投機的復号のドラフト受理率と実行速度に直接寄与する。",
   "semantic_scholar_id": "a5bc5cb9188675d92d20215e1ce9dffe77429f5e",
   "source_url": "https://arxiv.org/abs/2609.38510",
-  "status": "ready",
+  "status": "superseded",
   "title": "DEdit: Iterative Draft Editing for Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T06:03:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2609.38510",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

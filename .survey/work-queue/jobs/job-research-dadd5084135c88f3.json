@@ -35,10 +35,15 @@
   "selection_reason": "同時要求数8〜32のブロック拡散型投機的復号で、検証用注意タイルのパディング、可変受理接頭辞、CUDA Graphの固定形状制約を、経路別タイル、112Kパラメータの受理予測器による動的検証長割当、固定アドレスのパッキングで処理する。A100上でQwen3-8B/4BのDFlash比幾何平均スループット43.9%/48.8%増と報告し、推論検証段階の実行効率へ直接寄与する。",
   "semantic_scholar_id": "19f5bd8d95496976f49013f07b13729e0d1eb643",
   "source_url": "https://arxiv.org/abs/2609.37532",
-  "status": "ready",
+  "status": "superseded",
   "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T06:03:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.37532-dscale-scaling-block-diffusion-speculative-decoding-with-adaptive-verifi.md",
+  "represented_canonical_id": "arXiv:2609.37532",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
