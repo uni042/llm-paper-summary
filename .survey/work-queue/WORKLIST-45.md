@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-28T16:32:02+00:00`
+Generated: `2026-10-28T17:06:17+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-28T16:32:02+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **224** / 未claim総数: **224** / このworker向け: **74**
+ready総数: **223** / 未claim総数: **223** / このworker向け: **74**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -90,7 +90,7 @@ ready総数: **224** / 未claim総数: **224** / このworker向け: **74**
 | 71 | 0 | research | SemanticScholar:31b8a29357d61780d42adf2cb88d79c423262d34 | Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference | [primary](https://www.semanticscholar.org/paper/31b8a29357d61780d42adf2cb88d79c423262d34) | `papers/inference/99-other-inference-systems/0000-00cf0032c3b4-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardware-adapted-inference.md` |
 | 72 | 0 | research | SemanticScholar:48cb1122456a29d5f6de3436c1950c6ad752cc45 | S YSTEMATIZING I NFERENCE P LACEMENT FOR D EEP L EARNING ACROSS E DGE AND C LOUD P LATFORMS : A M ULTI -O BJECTIVE O PTIMIZATION P ERSPECTIVE | [primary](https://www.semanticscholar.org/paper/48cb1122456a29d5f6de3436c1950c6ad752cc45) | `papers/inference/99-other-inference-systems/0000-dfd6770a114b-s-ystematizing-i-nference-p-lacement-for-d-eep-l-earning-across-e-dge-and-c-loud-p-latforms-a-m-ulti-o-bjective-o-ptimiz.md` |
 | 73 | 0 | research | SemanticScholar:8b1a63cf48c6e1614cf2e0be48b458f0b1157089 | K AIROX : Adaptive GPU–CPU Hybrid LLM Inference via Online Neuron Balancing | [primary](https://www.semanticscholar.org/paper/8b1a63cf48c6e1614cf2e0be48b458f0b1157089) | `papers/inference/99-other-inference-systems/0000-5b8bf42f78f5-kairox-adaptive-gpucpu-hybrid-llm-inference-via-online-neuron-balancing.md` |
-| 74 | 0 | research | SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b | E QUILIBRIUM L ANGUAGE M ODELS | [primary](https://www.semanticscholar.org/paper/db3dec580b67703832f46c15aff9262bee8c557b) | `papers/inference/99-other-inference-systems/0000-08f17c554db9-e-quilibrium-l-anguage-m-odels.md` |
+| 74 | 0 | research | SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73 | E FFICIENT M ULTIMODAL S PATIAL R EASONING VIA D Y - NAMIC AND A SYMMETRIC R OUTING | [primary](https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73) | `papers/inference/99-other-inference-systems/0000-b255695a8914-e-fficient-m-ultimodal-s-patial-r-easoning-via-d-y-namic-and-a-symmetric-r-outing.md` |
 
 ## リスト入り判定待ち Discovery候補
 

@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-10-28T16:32:02+00:00`
+Generated: `2026-10-28T17:06:17+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-28T16:32:02+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **224** / 未claim総数: **224** / このworker向け: **75**
+ready総数: **223** / 未claim総数: **223** / このworker向け: **75**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -91,7 +91,7 @@ ready総数: **224** / 未claim総数: **224** / このworker向け: **75**
 | 72 | 0 | research | SemanticScholar:3d92ed5d5ec908d880ebd2fff15cbae1559abc25 | Autoregressive Language Modeling using Compressed Sequence Mixing | [primary](https://www.semanticscholar.org/paper/3d92ed5d5ec908d880ebd2fff15cbae1559abc25) | `papers/inference/99-other-inference-systems/0000-0a50dc789f87-autoregressive-language-modeling-using-compressed-sequence-mixing.md` |
 | 73 | 0 | research | SemanticScholar:495b6f68a28cdb816f04cf3ea41a5cd2df664e2b | HAP-E: H ESSIAN -A WARE S TRUCTURED P RUNING OF LLM S FOR E FFICIENT I NFERENCE | [primary](https://www.semanticscholar.org/paper/495b6f68a28cdb816f04cf3ea41a5cd2df664e2b) | `papers/inference/99-other-inference-systems/0000-964564cf0e59-hap-e-h-essian-a-ware-s-tructured-p-runing-of-llm-s-for-e-fficient-i-nference.md` |
 | 74 | 0 | research | SemanticScholar:8c3db0d74fade89f6b4da5245992a9c9ac8c481a | I N - BATCH E NSEMBLE D RAFTING : T OWARD F AST AND R OBUST S PECULATIVE D ECODING FOR M ULTIMODAL L ANGUAGE M ODELS | [primary](https://www.semanticscholar.org/paper/8c3db0d74fade89f6b4da5245992a9c9ac8c481a) | `papers/inference/99-other-inference-systems/0000-7efffe9381bc-i-n-batch-e-nsemble-d-rafting-t-oward-f-ast-and-r-obust-s-peculative-d-ecoding-for-m-ultimodal-l-anguage-m-odels.md` |
-| 75 | 0 | research | SemanticScholar:ea9209764ac8824da3c193560c3915b080579c73 | E FFICIENT M ULTIMODAL S PATIAL R EASONING VIA D Y - NAMIC AND A SYMMETRIC R OUTING | [primary](https://www.semanticscholar.org/paper/ea9209764ac8824da3c193560c3915b080579c73) | `papers/inference/99-other-inference-systems/0000-b255695a8914-e-fficient-m-ultimodal-s-patial-r-easoning-via-d-y-namic-and-a-symmetric-r-outing.md` |
+| 75 | 0 | research | SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0 | Hardware Characterization of Di ! usion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks | [primary](https://www.semanticscholar.org/paper/ecee781ec40b65342c1da703529e953e715e66e0) | `papers/inference/99-other-inference-systems/0000-a20d7e3605dd-hardware-characterization-of-di-usion-vs-autoregressive-language-model-inference-compute-vs-memory-bottlenecks.md` |
 
 ## リスト入り判定待ち Discovery候補
 

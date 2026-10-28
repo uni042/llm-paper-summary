@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-28T16:32:02+00:00`
+Generated: `2026-10-28T17:06:17+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -13,7 +13,7 @@ Generated: `2026-10-28T16:32:02+00:00`
 
 ## 未処理 Research / Audit
 
-ready総数: **224** / 未claim総数: **224** / このworker向け: **75**
+ready総数: **223** / 未claim総数: **223** / このworker向け: **74**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
@@ -90,8 +90,7 @@ ready総数: **224** / 未claim総数: **224** / このworker向け: **75**
 | 71 | 0 | research | SemanticScholar:2dc80f53c6a384c2993982fcb8e9bbff261a3818 | Inducing Elasticity in Foundation Models: Post-Training Techniques for Adaptable Inference | [primary](https://www.semanticscholar.org/paper/2dc80f53c6a384c2993982fcb8e9bbff261a3818) | `papers/inference/99-other-inference-systems/0000-b545168ff7ff-inducing-elasticity-in-foundation-models-post-training-techniques-for-adaptable-inference.md` |
 | 72 | 0 | research | SemanticScholar:409bb6f4f749b4cf9f46aea9729838a17c707117 | P REFIX AND O UTPUT L ENGTH -A WARE S CHEDULING FOR E FFICIENT O NLINE LLM I NFERENCE | [primary](https://www.semanticscholar.org/paper/409bb6f4f749b4cf9f46aea9729838a17c707117) | `papers/inference/99-other-inference-systems/0000-f7e8cd88e56e-p-refix-and-o-utput-l-ength-a-ware-s-cheduling-for-e-fficient-o-nline-llm-i-nference.md` |
 | 73 | 0 | research | SemanticScholar:5319240e5148bdec7c4a9324204f6ac3c1639dfc | Safety-Constrained Contextual Bandit for Dynamic Power Management | [primary](https://www.semanticscholar.org/paper/5319240e5148bdec7c4a9324204f6ac3c1639dfc) | `papers/inference/99-other-inference-systems/0000-db7dd81c8387-safety-constrained-contextual-bandit-for-dynamic-power-management.md` |
-| 74 | 0 | research | SemanticScholar:929a6dad9869799e02c60c0fc959d2fd41de8cb2 | D EMYSTIFYING THE M IXTURE OF E XPERTS S ERVING T AX | [primary](https://www.semanticscholar.org/paper/929a6dad9869799e02c60c0fc959d2fd41de8cb2) | `papers/inference/99-other-inference-systems/0000-b71f37ac28fc-d-emystifying-the-m-ixture-of-e-xperts-s-erving-t-ax.md` |
-| 75 | 0 | research | SemanticScholar:ecee781ec40b65342c1da703529e953e715e66e0 | Hardware Characterization of Di ! usion vs. Autoregressive Language Model Inference: Compute vs. Memory Bottlenecks | [primary](https://www.semanticscholar.org/paper/ecee781ec40b65342c1da703529e953e715e66e0) | `papers/inference/99-other-inference-systems/0000-a20d7e3605dd-hardware-characterization-of-di-usion-vs-autoregressive-language-model-inference-compute-vs-memory-bottlenecks.md` |
+| 74 | 0 | research | SemanticScholar:db3dec580b67703832f46c15aff9262bee8c557b | E QUILIBRIUM L ANGUAGE M ODELS | [primary](https://www.semanticscholar.org/paper/db3dec580b67703832f46c15aff9262bee8c557b) | `papers/inference/99-other-inference-systems/0000-08f17c554db9-e-quilibrium-l-anguage-m-odels.md` |
 
 ## リスト入り判定待ち Discovery候補
 
