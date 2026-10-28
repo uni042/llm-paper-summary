@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（509本）
+## 自動生成の論文一覧（510本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -709,6 +709,10 @@
 - **2026-08 · [TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure](2026-2608.06007-tensorcast-tensor-as-a-service.md)**  
   実装：[✓](https://github.com/tensorcast-ai/tensorcast) ・ リポジトリ内被引用：0  
   モデル重み・KV・チェックポイントをArtifact/Operation/Planとして統一管理し、配置・移動・変換・実体化を実行エンジンから分離することで、個別専用基盤に近い性能と横断的な状態管理方針の合成を両立する分散テンソル基盤。
+
+- **2026-08 · [Squeezing the Cache, Preserving the Truth: Monotonic Equipotential Allocation with Geodesia-KV](2026-2608.23599-squeezing-the-cache-preserving-the-truth-monotonic-equipotential-allocat.md)**  
+  実装：[✓](https://github.com/geodesia-ai/geodesia-kv) ・ リポジトリ内被引用：0  
+  Geodesia-KVは、長文脈LLM推論のKVキャッシュを単に一律4ビット化するのでなく、64トークン単位のブロックごとに異なる精度を割り当て、不要になった高精度表現を保持せず低精度側へ単調に移す方式である。しかしこの差は0.39%程度で、別コーパスPG-19の11冊では同一の優位は統計的に確立されない。
 
 - **2026-08 · [SplitScaling: Adaptive Scaling for Disaggregated LLM Serving Against Traffic Bursts via DRL](2026-92b65c48d388-splitscaling-adaptive-scaling-for-disaggregated-llm-serving-against-traffic-bursts-via-drl.md)**  
   実装：[✓](https://github.com/Onlytonight/SplitScaling) ・ リポジトリ内被引用：0  

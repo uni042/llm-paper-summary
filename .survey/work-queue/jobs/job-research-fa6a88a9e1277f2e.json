@@ -35,10 +35,15 @@
   "selection_reason": "MoE推論で層ごとに異なるエキスパート重要度と冗長性を、Fisher情報と層別外れ値分布で推定して非一様にエキスパートを削減する。Fisher誘導の重み補償で品質低下を抑え、Qwen1.5-MoE-A2.7Bで25%削減時にほぼ無損失、50%削減でも性能低下4%以内を報告し、推論遅延とGPUメモリを削減する。",
   "semantic_scholar_id": "e260dc7c46d8406fdad0632760122a533ce6dd77",
   "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1521",
-  "status": "ready",
+  "status": "superseded",
   "title": "COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T13:15:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-092a8a151f95-compel-compensated-mixture-of-experts-pruning-with-expert-layer-distribu.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2026.findings-acl.1521",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

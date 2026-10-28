@@ -34,6 +34,8 @@ references:
     title: "Mixtral of Experts"
 references_checked_at: "2026-10-28"
 references_source: "ACL Anthology PDF §2 References"
+last_audited: null
+audit_version: 0
 ---
 
 # COMPEL：MoEの層別重要度とFisher補償によるエキスパート剪定

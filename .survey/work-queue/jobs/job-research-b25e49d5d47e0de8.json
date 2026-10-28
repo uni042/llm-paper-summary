@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではKV圧縮の常駐ビット数と実際に読み出すビット数を分離し、ブロックごとの単調な精度低下、厳密なrate-distortion残差、クエリ依存疎読みを組み合わせるGeodesia-KVを提案。vLLMのKV管理プラグインとして実装し、16GiB単一GPUで1Mトークン文脈生成と最大71.7%ピークVRAM節約を報告する。",
   "semantic_scholar_id": "c5d198ff2b28af0d1ae14151011463e80506b257",
   "source_url": "https://arxiv.org/abs/2608.23599",
-  "status": "ready",
+  "status": "superseded",
   "title": "Squeezing the Cache, Preserving the Truth: Monotonic Equipotential Allocation with Geodesia-KV",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T13:15:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2608.23599-squeezing-the-cache-preserving-the-truth-monotonic-equipotential-allocat.md",
+  "represented_canonical_id": "arXiv:2608.23599",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

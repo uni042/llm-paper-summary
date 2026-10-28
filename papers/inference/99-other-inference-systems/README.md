@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（750本）
+## 自動生成の論文一覧（753本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -665,6 +665,10 @@
 - **2026-07 · [Constrained Decoding for Diffusion Language Models via Efficient Inference over Finite Automata](2026-2607.07026-constrained-decoding-for-diffusion-language-models-via-efficient-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DangとErmonは、生成時に課す制約を有限オートマトン（finite automaton）へ変換し、拡散モデルの各位置に対する予測分布とオートマトンの受理経路を結合する。制約を満たすかどうかを生成後に判定して捨てる拒否標本化とは異なり、無効な系列へ確率を割り当てない点が中心的な貢献である。
+
+- **2026-07 · [COMPEL: Compensated Mixture-of-Experts Pruning with Expert-Layer distribution](2026-092a8a151f95-compel-compensated-mixture-of-experts-pruning-with-expert-layer-distribu.md)**  
+  実装：[✓](https://github.com/seohee0925/COMPEL) ・ リポジトリ内被引用：0  
+  COMPEL（Compensated Mixture-of-Experts Pruning with 専門家-層 distribution）は、混合専門家モデル（MoE）の全エキスパートを推論時に保持するメモリ負担を、モデルの各層で異なる冗長性を考慮して削減する剪定方式である。
 
 - **2026-07 · [CoMem: Reusing Transformer Depth across Queries with Persistent Intermediate Residuals](2026-2607.28263-comem-reusing-transformer-depth-across-queries-with-persistent-intermedi.md)**  
   実装：[✓](https://github.com/liuhanzuo/Mixture-of-Memory) ・ リポジトリ内被引用：0  
@@ -2292,6 +2296,10 @@
   実装：[✓](https://github.com/hyx1999/Quad) ・ リポジトリ内被引用：0  
   重みと活性をともに4bitへ量子化する方式は、GPUの低精度行列積を利用できる可能性がある。
 
+- **2025-03 · [PromptDistill: Query-based Selective Token Retention in Intermediate Layers for Efficient Large Language Model Inference](2025-2503.23274-promptdistill-query-based-selective-token-retention-in-intermediate-laye.md)**  
+  実装：[✓](https://github.com/declare-lab/PromptDistill) ・ リポジトリ内被引用：0  
+  長文の入力を持つ大規模言語モデルでは、プロンプトの全位置を全Transformer層で処理すると、入力長に伴って注意計算と中間状態の保存量が増える。PromptDistillは、最初の数層だけ全位置を処理した後、入力の最後の位置のqueryと各位置のkeyから選んだ重要位置に計算を集中する。< の本文§2–3とTable 1–5を照合した。
+
 - **2025-03 · [Local Information Matters: Inference Acceleration For Grounded Conversation Generation Models Through Adaptive Local-Aware Token Pruning](2025-2503.23959-local-information-matters-inference-acceleration-for-grounded-conversati.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案する適応的局所認識トークン剪定は、画像を複数の意味的にまとまった領域へ分け、領域ごとに保持するトークンを確保する。OMG-LLaVAでも同程度の削減条件で、検証集合のAPが24.1から26.2、領域の重なり率が58.0から61.0へ改善した。
@@ -2323,6 +2331,10 @@
 - **2025-02 · [Activation-aware Probe-Query: Effective Key-Value Retrieval for Long-Context LLMs Inference](2025-2502.13542-activation-aware-probe-query-effective-key-value-retrieval-for-long-cont.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ActQKVは、長文脈の履歴KVキャッシュから生成に必要な情報を取り出すため、検索用の代表Queryの作り方と各層で何件のKVを取り出すかを改良する学習不要の推論手法である。
+
+- **2025-01 · [Softplus Attention with Re-weighting Boosts Length Extrapolation in Large Language Models](2025-2501.13428-softplus-attention-with-re-weighting-boosts-length-extrapolation-in-larg.md)**  
+  実装：[✓](https://github.com/iminfine/freeattn) ・ リポジトリ内被引用：0  
+  提案するLSSAR（Length Scaled Softplus 注意機構 with Re-weighting）は、第一段でquery/keyの長さ依存正規化とSoftplusを用いて数値的に安定した重みを作り、第二段で重みを中心化して小さい値を抑え、残る大きな値をべき乗で強調する。
 
 - **2025-01 · [Rethinking Post-Training Quantization: Introducing a Statistical Pre-Calibration Approach](2025-2501.09107-rethinking-post-training-quantization-introducing-a-statistical-pre-cali.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

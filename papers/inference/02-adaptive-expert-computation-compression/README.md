@@ -315,7 +315,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   MoEエキスパート重要度を4視点・16指標で比較し、反復再評価＋軽量微調整なら50%以上削減でも性能を保ちやすく、指示追従能力の回復が鍵と示す。
 
 - **2025-09 · [DiEP: Adaptive Mixture-of-Experts Compression through Differentiable Expert Pruning](2025-2509.16105-diep-differentiable-expert-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   層ごとに異なるエキスパート冗長性を微分可能な探索で学習し、重要度に応じた非一様プルーニングでMoEの推論コストを削減する。
 
 - **2025-04 · [Domain-Specific Pruning of Large Mixture-of-Experts Models with Few-shot Demonstrations](2025-2504.06792-domain-specific-pruning-of-large-mixture-of-experts-models-with-few-shot-calibration.md)**  

@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではRoPE適用後のブロック平均が意味特徴と位置幾何を混ぜてしまう問題に対し、RoPE前で意味を集約し、構造的事前分布と相対ブロック距離で位置バイアスを再構成する学習不要の疎注意ルーティングを提案。4K〜128Kのテキスト・動画で全注意に近い精度、128KでFlashAttention比5.03倍を報告する。",
   "semantic_scholar_id": "5752396da8a2404465f6354a4e5a9e11dd728d4f",
   "source_url": "https://arxiv.org/abs/2609.22884",
-  "status": "ready",
+  "status": "superseded",
   "title": "Block-Sparse Attention with Semantic-Geometric Decoupled Routing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T13:15:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2609.22884-block-sparse-attention-with-semantic-geometric-decoupled-routing.md",
+  "represented_canonical_id": "arXiv:2609.22884",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

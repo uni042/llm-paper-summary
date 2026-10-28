@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（154本）
+## 自動生成の論文一覧（155本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -230,6 +230,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   選外チャンクも要約経路で全域可視性を残し、鍵・値分散に基づく誤差上界で必要なチャンクだけ正確注意へ展開して、128Kで約3倍のカーネル高速化と品質回復を両立する疎注意方式。
 
+- **2026-09 · [Block-Sparse Attention with Semantic-Geometric Decoupled Routing](2026-2609.22884-block-sparse-attention-with-semantic-geometric-decoupled-routing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文脈の自己注意は、入力系列の全トークン対を比較する密注意の計算量とメモリアクセスが大きい。そこで、問い合わせと鍵をブロック単位に平均して近似スコアを出す方式が用いられる。単一NVIDIA H100 80GBでの128Kトークン注意処理では、FlashAttentionの451.03 msに対してSGDRは89.59 ms（5.03倍）であった。
+
 - **2026-09 · [Block Sparse Attention with Log-Linear Complexity](2026-2609.31093-block-sparse-attention-with-log-linear-complexity.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈の注意計算を高速化する際、過去のすべての鍵・値に注意を計算する代わりに、重要と判断した鍵ブロックだけを参照するブロック疎注意（block-sparse 注意機構）が用いられる。Tritonによる選択処理単体の実験では、256KトークンでBSAの312.96ミリ秒に対しPISAの31.44ミリ秒で、約9.95倍高速だった。
@@ -361,7 +365,7 @@
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
-  実装：[✓](https://github.com/bytedance/FlexPrefill) ・ リポジトリ内被引用：60  
+  実装：[✓](https://github.com/bytedance/FlexPrefill) ・ リポジトリ内被引用：61  
   要点: FlexPrefillは、長文プリフィルの注意計算を一律の疎パターンへ置き換えるのではなく、入力と注意ヘッドごとに「クエリごとに見る場所が違う多様型」か「多くのクエリが似た場所を見る構造型」かを判定し、その型に合う索引だけを累積注意量の閾値まで選ぶ。これにより、必要なヘッドには多く、簡単なヘッドには少ない計算予算を割り当てる。
 
 - **2025-03 · [XAttention: Block Sparse Attention with Antidiagonal Scoring](2025-2503.16428-xattention-block-sparse-attention-with-antidiagonal-scoring.md)**  
@@ -523,7 +527,7 @@
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
-  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：72  
+  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：73  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
