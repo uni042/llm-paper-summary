@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-29 05:58:04 JST**
+> 自動生成: **2026-10-29 06:13:00 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **598** |
 | 未claim Research job | **598** |
-| 直近24hのResearch処理完了 | **118** |
+| 直近24hのResearch処理完了 | **116** |
 | 最終Research処理完了 | **10-29 04:30:00 JST** |
 | 最終Discovery探索完了 | **10-29 05:30:00 JST** |
 | 整合性異常 | **0** |
@@ -64,10 +64,10 @@
 | 判定段階 | 件数 |
 |---|---:|
 | 未処理候補（フィルタ前） | **125650** |
-| 機械規則による暫定隔離 | **2145** |
+| 機械規則による暫定隔離 | **2146** |
 | 拡張機械規則による追加隔離 | **1371** |
-| 機械規則通過後 | **122134** |
-| 系統内前方引用スコアによる選抜保留 | **116027** |
+| 機械規則通過後 | **122133** |
+| 系統内前方引用スコアによる選抜保留 | **116026** |
 | 暫定隔離合計 | **119543** |
 | **読解可能候補（隔離後）** | **6107** |
 | 前方引用が同一系統で2本以上の候補 | **11927** |
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-28 15:11:52 JST（14時間46分前）** |
+| 最終maintenance完了 | **10-28 15:11:52 JST（15時間1分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **24** |
+| 直近6hのResearch完了 | **23** |
 | 直近6hのDiscovery run | **10** |
 | 直近6hのDiscovery本文確認・分類 | **64** |
 | 最終Research完了 | **10-29 04:30:00 JST** |
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **239** |
+| 成功result未照合のimmutable submission | **252** |
 | └ Research | **76** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **18** |
+| └ Other/Unknown | **31** |
 
 ### 厳格検証が未成立のcompleted job
 
