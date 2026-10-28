@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T09:56:55.896679+00:00",
+  "generated_at": "2026-10-28T11:00:38.581450+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 24,
+  "count": 21,
   "worker_counts": {
-    "scheduled-chat-00": 8,
-    "scheduled-chat-30": 8,
-    "scheduled-chat-45": 8
+    "scheduled-chat-00": 7,
+    "scheduled-chat-30": 7,
+    "scheduled-chat-45": 7
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -60,26 +60,6 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md",
-      "canonical_id": "DOI:10.18653/v1/2023.emnlp-main.298",
-      "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
-      "file_bytes": 11886,
-      "source_sha256": "3bc12603609630f7c01f608767663ff37949580849a22e65c0f83082eab06d1c",
-      "source_git_blob_sha": "0db501a0dddfce5d9297c64eaf294b23f585e0b6",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.896986,
-      "quality_metrics": {
-        "body_chars": 3082,
-        "method_chars": 1009,
-        "evaluation_chars": 610,
-        "limitation_chars": 438
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md",
@@ -146,26 +126,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2511.17801-layer-wise-high-impact-parameter-ratio-optimization-in-post-training-qua.md",
-      "canonical_id": "arXiv:2511.17801",
-      "title": "Layer-Wise High-Impact Parameter Ratio Optimization in Post-Training Quantization for Large Language Models",
-      "file_bytes": 15167,
-      "source_sha256": "82cbcecc9c2fb5481007eed0cd53947509b51bfa236f6cbe3f146193def0039c",
-      "source_git_blob_sha": "f3df5ff500065c915aca856088baee70dcee2dd3",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.953312,
-      "quality_metrics": {
-        "body_chars": 4464,
-        "method_chars": 1051,
-        "evaluation_chars": 1687,
-        "limitation_chars": 546
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2603.08899-confu-contemplate-the-future-for-better-speculative-sampling.md",
       "canonical_id": "arXiv:2603.08899",
       "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
@@ -221,26 +181,6 @@
         "method_chars": 1033,
         "evaluation_chars": 1459,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.08185-serq-saliency-aware-low-rank-error-reconstruction-for-llm-quantization.md",
-      "canonical_id": "arXiv:2603.08185",
-      "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
-      "file_bytes": 15876,
-      "source_sha256": "c5c545facdaa99b87148f63719f137407cf058653d5b6f2d2b2f421370801b3a",
-      "source_git_blob_sha": "19fa5c2b9417a988d85d1dc660ed4c5c411711fc",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.924535,
-      "quality_metrics": {
-        "body_chars": 4224,
-        "method_chars": 932,
-        "evaluation_chars": 1270,
-        "limitation_chars": 405
       },
       "mechanical_failures": [],
       "warnings": []
