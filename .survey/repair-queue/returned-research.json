@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-28T15:02:42+00:00",
+  "generated_at": "2026-10-28T16:03:37+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 71,
+  "count": 72,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1876,6 +1876,36 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-6eef09c3dfa5--libfile_8c56b6e2a3808191ac819e52dd0c2da7--2026-doi-10.32604-cmc.2025.074034-lesft-edge-split-finetuning-research-20261028-2145-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-6eef09c3dfa5--libfile_8c56b6e2a3808191ac819e52dd0c2da7--2026-doi-10.32604-cmc.2025.074034-lesft-edge-split-finetuning-research-20261028-2145-sche.json",
       "worker_run_key": "20261028-2145-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.27960",
+      "title": "Towards Efficient Large Vision-Language Models: A Comprehensive Survey on Inference Strategies",
+      "source_url": "https://arxiv.org/pdf/2603.27960v2",
+      "returned_at": "2026-10-28T16:01:59+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3854,
+        "body_paragraphs": 18,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8ecb4fe2af8c8191b2e9235478d6e74e--2026-2603.27960-efficient-lvlm-inference-survey-20261029-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8ecb4fe2af8c8191b2e9235478d6e74e--2026-2603.27960-efficient-lvlm-inference-survey-20261029-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261029-0030-scheduled-chat-30/r01"
     }
   ]
 }

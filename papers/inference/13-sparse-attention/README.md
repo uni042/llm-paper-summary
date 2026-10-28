@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（155本）
+## 自動生成の論文一覧（156本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -317,6 +317,10 @@
 - **2026-04 · [SAS: Sparse Attention Synthesizer for Efficient Language Model Inference](2026-35256164722e-sas-sparse-attention-synthesizer-for-efficient-language-model-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SAS（Sparse 注意機構 Synthesizer）は、大規模言語モデルの疎注意を、マスクの記述だけでなく鍵・値キャッシュ（Key-Value Cache; KVキャッシュ）の配置・寿命管理と低水準カーネルの生成まで一体化するシステムである。
+
+- **2026-04 · [Salca: A Sparsity-Aware Hardware Accelerator for Efficient Long-Context Attention Decoding](2026-2604.24820-salca-a-sparsity-aware-hardware-accelerator-for-efficient-long-context-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Salcaは、数万トークンの長い文脈を保持したまま一語ずつ生成する際の注意計算に特化した、疎注意アルゴリズムとASIC構成の共同設計である。著者らのChatGLM3の解析では、注意確率の95%を保持する条件で平均94.6%の疎性を観測した。
 
 - **2026-04 · [HubRouter: A Pluggable Sub-Quadratic Routing Primitive for Hybrid Sequence Models](2026-2604.22442-hubrouter-a-pluggable-sub-quadratic-routing-primitive-for-hybrid-sequenc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

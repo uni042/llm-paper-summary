@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨では長文脈decodeのKV帯域負担を削るため、超低精度量子化と特徴疎性による注意候補絞込み、O(n)近似Top-Kを組み合わせ、ASICの演算・メモリアクセスを共同設計するSalcaを提案。A100比3.82倍速度・74.19倍エネルギー効率、既存アクセラレータ比3.5倍以上のスループットを報告する推論ハードウェア研究。",
   "semantic_scholar_id": "9a083b5765bf219aeb241c17d1ee25287cf7723a",
   "source_url": "https://arxiv.org/abs/2604.24820",
-  "status": "ready",
+  "status": "superseded",
   "title": "Salca: A Sparsity-Aware Hardware Accelerator for Efficient Long-Context Attention Decoding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T16:03:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2604.24820-salca-a-sparsity-aware-hardware-accelerator-for-efficient-long-context-a.md",
+  "represented_canonical_id": "arXiv:2604.24820",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

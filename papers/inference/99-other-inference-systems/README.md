@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（758本）
+## 自動生成の論文一覧（759本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2382,7 +2382,7 @@
 
 - **2024-11 · [Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference](2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  Nagらはこの部分を、重み付き積和演算ではなくルックアップテーブル（LUT）の参照と条件付き加算を使うDifferentiable Weightless Network（DWN）で置換し、Quasi-Weightless Transformer（QuWeiT）を提案する。
+  トランスフォーマーの多層パーセプトロン（多層パーセプトロン）は、注意機構とは別に各トークンの表現を変換する二つの大きな行列積を持つ。この研究の主要成果は、比較的小規模な視覚トランスフォーマーと文字生成モデルで予測品質を概ね維持しながら、専用再構成可能回路と専用集積回路の合成評価で推論エネルギーを減らした点にある。
 
 - **2024-11 · [LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters](2024-af0fed60b919-loraexit-empowering-dynamic-modulation-of-llms-in-resource-limited-setti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2717,6 +2717,10 @@
 - **2024-03 · [QuantTune: Optimizing Model Quantization with Adaptive Outlier-Driven Fine Tuning](2024-2403.06497-quanttune-optimizing-model-quantization-with-adaptive-outlier-driven-fin.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   整数のビット幅を小さくすると、重みと活性を低精度で表現でき、メモリや演算資源を節約できる可能性がある。しかし通常の対称一様量子化では、一部の極端に大きい活性値に量子化の最大範囲を合わせると、同じビット数で表現する刻み幅が粗くなる。
+
+- **2024-03 · [Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA](2024-cdf8e588e197-outrageously-fast-llms-faster-inference-and-fine-tuning-with-moefication.md)**  
+  実装：[✓](https://github.com/chiyotsai/MoEfication-with-LoRA) ・ リポジトリ内被引用：0  
+  本報告は、既に学習済みの密なTransformerを再学習なしに部分活性化型の専門家モデルへ改造し、その際に失われたタスク精度を低ランク適応で回復する二段階の実験を扱う。第一段階はFFNの隠れニューロンを複数の小さな専門家へまとめ、入力ごとに一部の専門家だけを選択するMoEficationである。重要なのは「MoE化すれば常に速い」という結果ではないことだ。
 
 - **2024-03 · [Efficient Encoder-Decoder Transformer Decoding for Decomposable Tasks](2024-2403.13112-efficient-encoder-decoder-transformer-decoding-for-decomposable-tasks.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

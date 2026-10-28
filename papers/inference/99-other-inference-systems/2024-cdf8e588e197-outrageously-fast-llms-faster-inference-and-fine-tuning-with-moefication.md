@@ -23,6 +23,8 @@ worker_run_key: "20261029-0000-scheduled-chat-00/r01"
 reference_main_sha: "e72e792c251ca0665fead9d6f7cf0f9b3a8dc6d7"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Outrageously Fast LLMs: Faster Inference and Fine-Tuning with Moefication and LoRA
