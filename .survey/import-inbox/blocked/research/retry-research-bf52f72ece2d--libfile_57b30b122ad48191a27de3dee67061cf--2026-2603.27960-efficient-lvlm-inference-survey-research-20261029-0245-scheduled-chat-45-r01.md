@@ -75,6 +75,8 @@ worker_run_key: 20261029-0245-scheduled-chat-45/r01
 reference_main_sha: 30a7c92966898934dc32894f86f62af8dbdf6285
 last_checked: '2026-10-29'
 worker_completed_at: '2026-10-29T02:58:00+09:00'
+last_audited: null
+audit_version: 0
 ---
 
 # 視覚言語モデル推論最適化の四つの技術領域と未解決課題
