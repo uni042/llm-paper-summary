@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（729本）
+## 自動生成の論文一覧（731本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -710,6 +710,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   従来の文脈内スキル方式（In-context Skill）は、作業手順や道具の使用方法を自然言語でプロンプトへ挿入する。Qwen3-8Bを基盤としたALFWorldでは、文脈内スキル方式に対し既知課題の平均成功率が52.9%から74.3%、未知課題が56.0%から69.4%へ改善し、事前充填トークン数を約64%削減した。
 
+- **2026-06 · [K-Forcing: Joint Next-K-Token Decoding via Push-Forward Language Modeling](2026-2606.10820-k-forcing-joint-next-k-token-decoding-via-push-forward-language-modeling.md)**  
+  実装：[✓](https://github.com/alibaba-damo-academy/K-Forcing) ・ リポジトリ内被引用：0  
+  推論エンジンのカーネルを高速化する研究ではなく、生成分布の表現とサンプリング方式を変える研究である。LM1BとOpenWebText（OWT）の約1億パラメータTransformerで、k=4の推論はAR比2.38〜3.47倍のスループットを報告した。
+
 - **2026-06 · [Improving Visual Token Reduction via Rectifying Distortions for Efficient Multimodal LLM Inference](2026-2606.01711-improving-visual-token-reduction-via-rectifying-distortions-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークン削減（Visual Token Reduction; VTR）は不要なパッチを削除したり、似た特徴を統合したりして系列を短くする。LLaVA-1.5-7Bの8種類の画像理解課題で、視覚トークンを576個から64個へ減らすHoloVの平均保持率は92.2%だが、RESTOREを加えると96.5%になる。
@@ -1161,6 +1165,10 @@
 - **2026-03 · [TAPS: Task Aware Proposal Distributions for Speculative Sampling](2026-2603.27027-taps-task-aware-proposal-distributions-for-speculative-sampling.md)**  
   実装：[✓](https://github.com/Moe-Zbeeb/TAPS) ・ リポジトリ内被引用：0  
   さらに、複数の専門草稿をどう使い分けるべきかを、重み平均、確信度に基づく経路選択、草稿木の統合検証の三方式で検討する。
+
+- **2026-03 · [SliderQuant: Accurate Post-Training Quantization for LLMs](2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md)**  
+  実装：[✓](https://github.com/deep-optimization/SliderQuant) ・ リポジトリ内被引用：0  
+  SliderQuantは、事前学習済みLLMを追加の大規模学習なしで低ビット化する事後量子化（PTQ）方式である。Llama2-7BのW4A4でWikiText2困惑度（PPL）はCBQの12.73に対し8.34、Qwen3-30B-A3BのW4A4ではOmniQuantのゼロショット平均50.11%に対し66.86%だった。
 
 - **2026-03 · [SkipOPU: An FPGA-based Overlay Processor for Large Language Models with Dynamically Allocated Computation](2026-2603.14785-skipopu-an-fpga-based-overlay-processor-for-large-language-models-with-d.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（151本）
+## 自動生成の論文一覧（152本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -245,6 +245,10 @@
 - **2026-07 · [From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion](2026-a55ddcf36e91-from-logical-to-computational-sparsity-structure-aware-block-sparse-atte.md)**  
   実装：[✓](https://github.com/DeepSoftwareAnalytics/SabreCoder) ・ リポジトリ内被引用：0  
   長いコードを補完する言語モデルでは、入力コードを一度に処理する事前計算（プリフィル）の注意演算が入力長の二乗に応じて増える。コード特有の関数・識別子・import文を考慮しない疎注意は重要な依存を失って補完精度が落ちやすい。次に同一チャンク内、明示的依存、埋め込み類似、グローバル参照という四つの規則を合成して注意マスクを作る。
+
+- **2026-07 · [CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention](2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md)**  
+  実装：[✓](https://github.com/Tencent/AngelSlim) ・ リポジトリ内被引用：0  
+  一方、カーネル内部で実際のlogitを見て省略する方式は精度を保ちやすいが、判定の前にQK内積を計算する必要があり、主要な演算を十分には削減できない。NVIDIA H20上の128K文脈では、密注意比で注意演算4.93倍、最初のトークンまでの時間（TTFT）2.53倍の高速化を報告する。
 
 - **2026-07 · [BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs](2026-fa80222132dc-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

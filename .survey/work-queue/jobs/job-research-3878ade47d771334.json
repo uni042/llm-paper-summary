@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではKernel-Aware Proxyが重要なKVブロックを実行順序付きマスクにし、Ordered-Skipping Kernelがオンラインsoftmax統計に基づきさらにブロックを省く。128K文脈で注意演算4.93倍、エンドツーエンドTTFT2.53倍を報告し、長文脈LLM推論の疎注意カーネルを直接改善する。",
   "semantic_scholar_id": "341b697a1dbb74ef0be267b518ac81ccbc454bc1",
   "source_url": "https://arxiv.org/abs/2607.25291",
-  "status": "ready",
+  "status": "superseded",
   "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:00:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md",
+  "represented_canonical_id": "arXiv:2607.25291",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

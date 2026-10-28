@@ -35,10 +35,15 @@
   "selection_reason": "浅層・深層、とくに最初・最後のTransformer層で量子化誤差が増大する観測を基に、層間スライド窓と層内逐次窓を組み合わせるPTQ方式。Llama・Qwen・MoEの重み専用/重み活性量子化で既存回転型PTQとの品質比較を実施し、低ビット推論の精度保持に直接寄与する。",
   "semantic_scholar_id": "075220f69f6b24aa2754ffdd4873fa775a1939e4",
   "source_url": "https://arxiv.org/abs/2603.25284",
-  "status": "ready",
+  "status": "superseded",
   "title": "SliderQuant: Accurate Post-Training Quantization for LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:00:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.25284-sliderquant-accurate-post-training-quantization-for-llms.md",
+  "represented_canonical_id": "arXiv:2603.25284",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

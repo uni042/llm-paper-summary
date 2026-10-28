@@ -35,10 +35,15 @@
   "selection_reason": "独立一様ノイズから次のkトークンの結合分布を一回のforwardで生成するpush-forward写像を、自己強制蒸留で段階的に学習する。投機的復号の可変受理長と異なり固定長出力でバッチ処理しやすく、LM1B/OpenWebTextの因果Transformerでk=4時に自己回帰比2.4〜3.5倍の高速化と一定の品質低下を報告する。",
   "semantic_scholar_id": "40dc6b78f0bf331dfec5a5f992a6c4f6429730b5",
   "source_url": "https://arxiv.org/abs/2606.10820",
-  "status": "ready",
+  "status": "superseded",
   "title": "K-Forcing: Joint Next-K-Token Decoding via Push-Forward Language Modeling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T03:00:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.10820-k-forcing-joint-next-k-token-decoding-via-push-forward-language-modeling.md",
+  "represented_canonical_id": "arXiv:2606.10820",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
