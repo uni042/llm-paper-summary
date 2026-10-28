@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T19:59:10.470748+00:00",
+  "generated_at": "2026-10-28T21:58:43.706009+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 9,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 3,
-    "scheduled-chat-45": 3
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -82,26 +82,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2509.21623-ojakv-context-aware-online-low-rank-kv-cache-compression.md",
-      "canonical_id": "arXiv:2509.21623",
-      "title": "OjaKV: Context-Aware Online Low-Rank KV Cache Compression",
-      "file_bytes": 14655,
-      "source_sha256": "73ec6a927b40d80ea7f05c88b58b65a32512ed8e3810f4c7e0fe8b71383adfff",
-      "source_git_blob_sha": "95e37d19006e681730aaafe7d214ac72c1e4eda1",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.928836,
-      "quality_metrics": {
-        "body_chars": 3707,
-        "method_chars": 1268,
-        "evaluation_chars": 913,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/09-kernel-runtime-compilation/2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md",
       "canonical_id": "arXiv:2307.03738",
       "title": "QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models",
@@ -137,26 +117,6 @@
         "method_chars": 1237,
         "evaluation_chars": 955,
         "limitation_chars": 415
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.37532-dscale-scaling-block-diffusion-speculative-decoding-with-adaptive-verifi.md",
-      "canonical_id": "arXiv:2609.37532",
-      "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
-      "file_bytes": 17073,
-      "source_sha256": "ae9f4efbd5fd60e869cd81a51aeb3624f29c183f6be5f48b8f7a4dbbadaa3d7a",
-      "source_git_blob_sha": "eea25830950d04e99089cccbc1900d0aca6c45df",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.930581,
-      "quality_metrics": {
-        "body_chars": 4568,
-        "method_chars": 1287,
-        "evaluation_chars": 1106,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
