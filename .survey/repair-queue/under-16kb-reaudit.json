@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-28T04:01:44.113371+00:00",
+  "generated_at": "2026-10-28T04:21:11.192567+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 18,
+  "count": 19,
   "worker_counts": {
     "scheduled-chat-00": 6,
-    "scheduled-chat-30": 6,
+    "scheduled-chat-30": 7,
     "scheduled-chat-45": 6
   },
   "entries": [
@@ -102,21 +102,21 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2025-2502.13251-neural-attention-search.md",
-      "canonical_id": "arXiv:2502.13251",
-      "title": "Neural Attention Search",
-      "file_bytes": 13109,
-      "source_sha256": "9688c7b626c9f8d6ad95c98a7a0530987bbfc7e544c242456f7f35f1b1eaee04",
-      "source_git_blob_sha": "6fc8804241493a2455418c8622baf129273bbd3d",
-      "assigned_worker": "scheduled-chat-45",
+      "path": "papers/inference/99-other-inference-systems/2024-2412.10418-constrained-decoding-with-speculative-lookaheads.md",
+      "canonical_id": "arXiv:2412.10418",
+      "title": "Constrained Decoding with Speculative Lookaheads",
+      "file_bytes": 13299,
+      "source_sha256": "5154ef33c725b724cea2dfce58ea3a6ad1d369b71ad6673d44c5a24de564ec3a",
+      "source_git_blob_sha": "c403b97803618dde93ef923bf4acb6b0f4ee5ce7",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.847398,
+      "japanese_ratio": 0.936045,
       "quality_metrics": {
-        "body_chars": 4079,
-        "method_chars": 1410,
-        "evaluation_chars": 1071,
-        "limitation_chars": 337
+        "body_chars": 3659,
+        "method_chars": 1032,
+        "evaluation_chars": 980,
+        "limitation_chars": 369
       },
       "mechanical_failures": [],
       "warnings": []
@@ -125,9 +125,9 @@
       "path": "papers/inference/05-speculative-decoding-moe/2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md",
       "canonical_id": "arXiv:2510.26843",
       "title": "CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs",
-      "file_bytes": 13231,
-      "source_sha256": "4ab1cd792c6c758e231c1ee93032c61ff5d195432c3005b89467d3c3e9a51c34",
-      "source_git_blob_sha": "6bee18f72d72f23357a5bf9f47a1cad40f833542",
+      "file_bytes": 15356,
+      "source_sha256": "9a44b4843a345442aac75481141066a11177a98644189487419fbd63c2a614b3",
+      "source_git_blob_sha": "4ccd48f991d0f36602842be293a810560ec94aeb",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -137,26 +137,6 @@
         "method_chars": 1251,
         "evaluation_chars": 900,
         "limitation_chars": 397
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/13-sparse-attention/2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md",
-      "canonical_id": "arXiv:2609.36938",
-      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
-      "file_bytes": 14541,
-      "source_sha256": "f86300ea39f7273af31f5976465744c117c6b42ee1fcd4c26a5087048be40823",
-      "source_git_blob_sha": "bf88d52ceeaae4a3f2b1544cd8ab77a6633f1ba8",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.86037,
-      "quality_metrics": {
-        "body_chars": 4225,
-        "method_chars": 1237,
-        "evaluation_chars": 955,
-        "limitation_chars": 415
       },
       "mechanical_failures": [],
       "warnings": []
@@ -197,26 +177,6 @@
         "method_chars": 1329,
         "evaluation_chars": 1522,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md",
-      "canonical_id": "arXiv:2607.08032",
-      "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
-      "file_bytes": 15842,
-      "source_sha256": "3a833fafa69c8dd6103f3ee6753fc65a6e097e47470b77215c4491a3c0ad965f",
-      "source_git_blob_sha": "9067eee1577214f84d241f3655f1ae39d7533f85",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.980615,
-      "quality_metrics": {
-        "body_chars": 4262,
-        "method_chars": 1540,
-        "evaluation_chars": 803,
-        "limitation_chars": 384
       },
       "mechanical_failures": [],
       "warnings": []
@@ -277,6 +237,46 @@
         "method_chars": 1287,
         "evaluation_chars": 1065,
         "limitation_chars": 453
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2025-2502.13251-neural-attention-search.md",
+      "canonical_id": "arXiv:2502.13251",
+      "title": "Neural Attention Search",
+      "file_bytes": 16502,
+      "source_sha256": "d3a14af386efe478cc8c7936f59f540c086318bbeef4c493ef439e49fa663a1a",
+      "source_git_blob_sha": "c9a2cc6896fa69d2799f1f2e5ed23c436cb1fe14",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.847398,
+      "quality_metrics": {
+        "body_chars": 4079,
+        "method_chars": 1410,
+        "evaluation_chars": 1071,
+        "limitation_chars": 337
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md",
+      "canonical_id": "arXiv:2609.36938",
+      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+      "file_bytes": 16538,
+      "source_sha256": "9f355d4ffdee7298ec621d18d69ac5805dcf2db21c3ad8c522c030b8b554b29b",
+      "source_git_blob_sha": "54e16cb700ee38724c973d10ad94ff1b0b5f5254",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.86037,
+      "quality_metrics": {
+        "body_chars": 4225,
+        "method_chars": 1237,
+        "evaluation_chars": 955,
+        "limitation_chars": 415
       },
       "mechanical_failures": [],
       "warnings": []
@@ -381,6 +381,26 @@
         "method_chars": 1466,
         "evaluation_chars": 936,
         "limitation_chars": 353
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md",
+      "canonical_id": "arXiv:2607.08032",
+      "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
+      "file_bytes": 24381,
+      "source_sha256": "b4a87da0ddfec342b60fd1d674016a28cf008b187329da438c459d807e171673",
+      "source_git_blob_sha": "7b90869fd44f9a686bb1750238445c1505268b65",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.980615,
+      "quality_metrics": {
+        "body_chars": 4262,
+        "method_chars": 1540,
+        "evaluation_chars": 803,
+        "limitation_chars": 384
       },
       "mechanical_failures": [],
       "warnings": []
