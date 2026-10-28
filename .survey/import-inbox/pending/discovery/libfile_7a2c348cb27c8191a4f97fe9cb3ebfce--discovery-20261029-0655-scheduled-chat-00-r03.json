@@ -1,0 +1,204 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261029-0655-scheduled-chat-00/r03",
+  "reference_main_sha": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21744",
+      "identity_tokens": [
+        "arXiv:2601.21744",
+        "https://arxiv.org/abs/2601.21744",
+        "DOI:10.48550/arxiv.2601.21744"
+      ],
+      "title": "Temporal Guidance for Large Language Models",
+      "reason": "TeGuはMTPから弱いamateur予測を構成し、cMTPPを使って時間方向の自己対比で生成品質を高める。補助モデル負荷を抑える工夫はあるが、主目的は生成品質改善であり、トークン毎の推論速度やサービング性能への直接的改善は要旨では十分に示されない。",
+      "source_url": "https://arxiv.org/abs/2601.21744",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 70,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02484",
+      "identity_tokens": [
+        "arXiv:2607.02484",
+        "https://arxiv.org/abs/2607.02484",
+        "DOI:10.48550/arxiv.2607.02484"
+      ],
+      "title": "Combating Textual Noise and Redundancy: Entropy-Aware Dense Visual Token Pruning",
+      "reason": "EADPは密な画像質問に含まれるテキストノイズをエントロピーで除き、空間事前分布を伴う劣モジュラ最適化で重複しない視覚トークンを選ぶ。限られたトークン予算で視覚情報を保持するVLM推論時の構造的剪定技術であり、演算量・メモリ削減の対象に該当する。",
+      "source_url": "https://arxiv.org/abs/2607.02484",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 71,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.12330",
+      "identity_tokens": [
+        "arXiv:2609.12330",
+        "https://arxiv.org/abs/2609.12330",
+        "DOI:10.48550/arxiv.2609.12330"
+      ],
+      "title": "Unleashing the Power of Equality Saturation for Tensor Program Superoptimization",
+      "reason": "EqiForgeは高水準テンソル式とタイル演算を同一IRに置くequality saturationで融合カーネルを探索し、早期compactionと部分グラフ合成で探索空間を制御する。FlashAttention系decodeカーネルで最大1.87倍、MLA/mHC層でも改善を示し、LLM推論カーネル生成に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2609.12330",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 72,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.32604/cmc.2026.078985",
+      "identity_tokens": [
+        "DOI:10.32604/cmc.2026.078985"
+      ],
+      "title": "Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors",
+      "reason": "RTX4070/4080 Laptop GPUでGPT-2、LLaMA-2-7B-Chat、Qwen1.5-1.8B-ChatのFP16とINT8を比較し、生成速度・メモリ・BLEU/ROUGE・意味評価を同時測定する。CPUオフロード条件を除き平均3.4倍の高速化と品質低下を報告する、実配備の量子化トレードオフ測定である。",
+      "source_url": "https://www.techscience.com/cmc/v87n3/66994",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 73,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36120",
+      "identity_tokens": [
+        "arXiv:2609.36120",
+        "https://arxiv.org/abs/2609.36120",
+        "DOI:10.48550/arxiv.2609.36120"
+      ],
+      "title": "ThinQuant: Scalable Rotation Learning for Weight and Activation Quantization of LLMs",
+      "reason": "ThinQuantは活性の凸包に基づく校正点選択で学習回転の最適化次元をd×dからd×rへ削減し、Stiefel多様体上のADMMで回転を校正する。Llama-3-70BのW4A4KV4校正を12分未満で完了し、405Bにも適用するため、大規模推論向け低ビット量子化の構築コストに直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.36120",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 74,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2404.04748",
+      "identity_tokens": [
+        "arXiv:2404.04748",
+        "https://arxiv.org/abs/2404.04748",
+        "DOI:10.48550/arxiv.2404.04748"
+      ],
+      "title": "Multilingual Brain Surgeon: Large Language Models Can Be Compressed Leaving No Language behind",
+      "reason": "MBSは英語偏重の校正データが多言語LLM圧縮で低資源言語を劣化させる問題に対し、事前学習時の言語分布に比例した校正サンプリングを行う。BLOOMの事後圧縮品質を言語別に検証し、多言語推論モデルの圧縮品質維持へ直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2404.04748",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 75,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3771563",
+      "identity_tokens": [
+        "DOI:10.1145/3771563"
+      ],
+      "title": "Benchmarking and Characterization of Large Language Model Inference on Apple Silicon",
+      "reason": "M2 Ultra/M2 Max/M4 ProとRTX A6000系の5構成、8B～405Bモデル、14量子化方式でオンデバイスLLM推論を比較し、ALU利用率・メモリ帯域・dequantization負荷をプロファイルする。統合メモリの容量優位と低ビット化が必ずしも高速化しない条件を検証するシステム測定研究である。",
+      "source_url": "https://doi.org/10.1145/3771563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 81,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.12953",
+      "identity_tokens": [
+        "arXiv:2608.12953",
+        "https://arxiv.org/abs/2608.12953",
+        "DOI:10.48550/arxiv.2608.12953"
+      ],
+      "title": "Unifying Depth and Width Pruning for LLMs via Binary Knapsack Optimization",
+      "reason": "SNIPERは層深さ・幅の構造剪定を重要度推定値に対するknapsack最適化として一体化し、後段の細粒度剪定で指定圧縮率に合わせる。既存方式の圧縮率逸脱最大33%に対しCRAFT 0.98を報告し、推論モデルのサイズと能力保持を制御する圧縮手法である。",
+      "source_url": "https://arxiv.org/abs/2608.12953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 82,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00051",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00051"
+      ],
+      "title": "ShadowLLM: Resource-Efficient Hot Standby for Heterogeneous Edge LLM Serving",
+      "reason": "ShadowLLMは故障時に巨大KVを移動・再計算せずに復旧するため、危険度に応じたshadow起動、異種端末のペアリング、層windowing/weight-centric batchingによる追従実行を組み合わせる。Jetson/スマートフォン実機で復旧遅延6～14倍削減を報告し、エッジLLMサービングの可用性に直接貢献する。",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 83,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02870",
+      "identity_tokens": [
+        "arXiv:2608.02870",
+        "https://arxiv.org/abs/2608.02870",
+        "DOI:10.48550/arxiv.2608.02870"
+      ],
+      "title": "Maglev: Sliding Recurrent Memory",
+      "reason": "Maglevは全履歴を使うprefiller Qで作る記憶目標へ、sliding-window attentionとrecurrent KV注入のみを使うdecoder Pの状態を一致させる。推論ではP単体で固定サイズ記憶を維持し、長文脈生成の状態サイズとアクセス量を制限する新しい系列アーキテクチャとして関連する。",
+      "source_url": "https://arxiv.org/abs/2608.02870",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-29T07:01:41+09:00",
+      "last_checked_at": "2026-10-29T07:01:41+09:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "worklist_rank": 84,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
