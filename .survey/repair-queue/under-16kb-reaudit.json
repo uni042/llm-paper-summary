@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T01:12:40.832545+00:00",
+  "generated_at": "2026-10-28T01:56:59.664075+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 12,
+  "count": 10,
   "worker_counts": {
     "scheduled-chat-00": 4,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 4
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -105,9 +105,9 @@
       "path": "papers/inference/99-other-inference-systems/2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md",
       "canonical_id": "arXiv:2603.04800",
       "title": "MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models",
-      "file_bytes": 15186,
-      "source_sha256": "4fa4936b5e4756a7a510f046ea515d0cf2c40f66b45afabddc246321d6c98d81",
-      "source_git_blob_sha": "40927ebcdee8a369f0c09bffe97eb1f7893f6dc2",
+      "file_bytes": 16392,
+      "source_sha256": "e8dd7e20aded599b5041bc72514ae057ad2b0bc15973e0daa191ae37e3b48881",
+      "source_git_blob_sha": "9eddfd72bed0acbf7d72349007ceeca6863ad1d1",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -128,7 +128,7 @@
       "file_bytes": 16421,
       "source_sha256": "e34d45ec415f854659dc3c618a19e795ce75825b20a04fd876f8c2b827d03ae4",
       "source_git_blob_sha": "f3f0d1fec05c91aa4ea271bec21442c92774b7e9",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.94702,
@@ -162,26 +162,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2025-2506.06095-accelerating-sparse-transformer-inference-on-gpu.md",
-      "canonical_id": "arXiv:2506.06095",
-      "title": "Accelerating Sparse Transformer Inference on GPU",
-      "file_bytes": 17176,
-      "source_sha256": "e1d8304f367a5fd13378ed4215ac8cf725da59871ea16ec5438da97bd6dc4abe",
-      "source_git_blob_sha": "444767f371728c67e78ee1634e4ddfa293278ccb",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.925956,
-      "quality_metrics": {
-        "body_chars": 4224,
-        "method_chars": 1598,
-        "evaluation_chars": 1157,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md",
       "canonical_id": "arXiv:2411.01818",
       "title": "Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference",
@@ -204,26 +184,6 @@
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/05-speculative-decoding-moe/2026-2606.00535-dream-s-speculative-decoding-with-searchable-drafting-and-target-aware-r.md",
-      "canonical_id": "arXiv:2606.00535",
-      "title": "DREAM-S: Speculative Decoding with Searchable Drafting and Target-Aware Refinement for Multimodal Generation",
-      "file_bytes": 17501,
-      "source_sha256": "8bd29016aab4967531da83076c255775a7cfa918b40b86db9f090e398f6a4626",
-      "source_git_blob_sha": "a275ad05b525a624f316a175135fd42ccbd5b7b7",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.979561,
-      "quality_metrics": {
-        "body_chars": 4492,
-        "method_chars": 1587,
-        "evaluation_chars": 1097,
-        "limitation_chars": 722
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2025-2507.06087-core-enhancing-metacognition-with-label-free-self-evaluation-in-lrms.md",
