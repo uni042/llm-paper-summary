@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T03:03:34.444630+00:00",
+  "generated_at": "2026-10-28T03:16:02.679846+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 11,
+  "count": 14,
   "worker_counts": {
-    "scheduled-chat-00": 4,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 3
+    "scheduled-chat-00": 5,
+    "scheduled-chat-30": 5,
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -68,7 +68,7 @@
       "file_bytes": 11685,
       "source_sha256": "ccbb3199c709db6931cb1fa73cdd1690279aa10819aadfdbfd66fd8af446bd89",
       "source_git_blob_sha": "a6d24ab45b1beb43a5c44f646839284e1ff2fd71",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.85112,
@@ -96,6 +96,66 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md",
+      "canonical_id": "arXiv:2608.00528",
+      "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
+      "file_bytes": 13075,
+      "source_sha256": "2d3f410f16cef6a8fd3b2ff67a2185dd3a1bf8158fb71688294d12c0a5ffac95",
+      "source_git_blob_sha": "a0d6936b961fcf5f47024271ff540d46fa0045c2",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.926614,
+      "quality_metrics": {
+        "body_chars": 3654,
+        "method_chars": 1196,
+        "evaluation_chars": 1114,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.08899-confu-contemplate-the-future-for-better-speculative-sampling.md",
+      "canonical_id": "arXiv:2603.08899",
+      "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
+      "file_bytes": 14064,
+      "source_sha256": "c575771073d5c4cb5a090637e0000d7416b83213fe3e2cb2fa784e1dabc006e0",
+      "source_git_blob_sha": "3451e0f79744bde1c9022354fc160e5224da64e1",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.898821,
+      "quality_metrics": {
+        "body_chars": 4083,
+        "method_chars": 1505,
+        "evaluation_chars": 1023,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2605.08755-laquant-a-simple-overhead-free-large-reasoning-model-quantization-by-lay.md",
+      "canonical_id": "arXiv:2605.08755",
+      "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
+      "file_bytes": 14191,
+      "source_sha256": "308980f0ccba349cd8b44e8fce1a88973666d726f60bd22ba66b1ec54d22973c",
+      "source_git_blob_sha": "b9ee32f81d9201e3e42c9ba63f6aec6424dcd2f7",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.948504,
+      "quality_metrics": {
+        "body_chars": 4639,
+        "method_chars": 1329,
+        "evaluation_chars": 1522,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
