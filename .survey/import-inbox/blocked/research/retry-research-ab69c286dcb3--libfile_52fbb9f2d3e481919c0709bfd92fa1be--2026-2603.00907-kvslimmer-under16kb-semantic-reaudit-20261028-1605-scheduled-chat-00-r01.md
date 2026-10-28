@@ -38,6 +38,8 @@ under16kb_reaudit_version: "2026-10-07-v1"
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # KVSlimmer：交差Hessianを扱う勾配不要の非対称KVマージ

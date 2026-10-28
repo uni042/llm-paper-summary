@@ -35,10 +35,15 @@
   "selection_reason": "確率に基づく動的ドラフト木は高得点トークンを決定論的に置きがちで、確率的サンプリング連鎖に受理率で負ける場合がある。Tsubameは第1パスで木形状を確定し、第2パスで拡散ドラフトから各節点を再サンプリングして検証する。条件付き無損失性と受理長・スループットを検証する投機的復号の直接的改良である。",
   "semantic_scholar_id": "2a91818d1307af3e361527c5ffebd87949246424",
   "source_url": "https://arxiv.org/abs/2609.33652",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tsubame: Tree Replay for Diffusion-Based Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T09:24:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.33652-tsubame-tree-replay-for-diffusion-based-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2609.33652",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

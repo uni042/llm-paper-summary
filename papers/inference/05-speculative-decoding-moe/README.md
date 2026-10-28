@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（316本）
+## 自動生成の論文一覧（318本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -412,6 +412,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は軽いドラフトモデルが将来の候補トークンを提案し、大きなターゲットモデルが一度に検証することで自己回帰生成を高速化する。
 
+- **2026-09 · [Tsubame: Tree Replay for Diffusion-Based Speculative Decoding](2026-2609.33652-tsubame-tree-replay-for-diffusion-based-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Tsubameは、投機的復号で複数の候補系列を木として提示する際、木の形を選ぶことと実際に検証する候補トークンを選ぶことを分離する方式である。
+
 - **2026-09 · [SpecQuant: Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference](2026-2609.21704-specquant-speculative-decoding-with-multi-parent-quantization-for-adapti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単独の高精度モデルで全要求を生成すると、短い事実質問も長い推論問題も同じ重み精度・同じ自己回帰生成経路を使う。一方、低ビット量子化だけでは出力品質が変化し、通常の投機的復号では別途草稿モデルを用意する必要がある。
@@ -547,6 +551,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [Training-Free Adaptive Speculative Decoding via Linguistic Priors](2026-2ad70212cfe6-training-free-adaptive-speculative-decoding-via-linguistic-priors.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LinguaSpecは、投機的復号（投機的復号）の二つの支出先――小さい草稿モデルが次の候補をどこまで生成するか、大きい対象モデルがその候補をどこまで受理するか――を、トークンの言語的役割に応じて変える方式である。自己回帰復号に対する平均実測高速化は順に4.26倍、4.67倍、4.08倍で、同じ表のEAGLE-3は3.97倍、4.36倍、3.88倍だった。
+
+- **2026-07 · [Revisiting Lossy Verification in Speculative Decoding: Mechanisms, Trade-offs, and Failure Modes](2026-2607.26627-revisiting-lossy-verification-in-speculative-decoding-mechanisms-trade-o.md)**  
+  実装：[✓](https://github.com/ZhouYuxuanYX/Fast-HSD) ・ リポジトリ内被引用：0  
+  投機的復号は軽量なドラフトモデルqが候補を提案し、ターゲットモデルpがまとめて検証することで、逐次生成のターゲット順伝播 pass回数を減らす。EAGLE-3を用いたLlama-3.1-8Bの比較では、η-samplingをターゲットへ正しく適用したMATH正答率76.12%に対し、typical acceptanceは69.84%だった。
 
 - **2026-07 · [Margins, Not Windows: Training-Free Per-Step Lossy Speculative Decoding](2026-2609.02897-margins-not-windows-training-free-per-step-lossy-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
