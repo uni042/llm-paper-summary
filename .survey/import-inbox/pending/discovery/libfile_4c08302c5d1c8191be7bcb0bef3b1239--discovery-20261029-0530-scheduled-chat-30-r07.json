@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-0530-scheduled-chat-30/r07",
+  "reference_main_sha": "f254312a04c596dbafd68293217f5bf15ed82353",
+  "record_count": 1,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.26581",
+      "identity_tokens": [
+        "id:arXiv:2608.26581",
+        "url:https://arxiv.org/abs/2608.26581"
+      ],
+      "title": "Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs",
+      "reason": "RFQはマルチモーダルLLMでMXFP4・HiF4などの4ビット活性量子化が主な精度劣化要因となることを分析し、主量子化経路へ補助の量子化残差経路を加えて活性を再構成する。Wan2.2とQwen3-VLの生成・推論評価で低精度品質を回復し、推論用量子化の効率と精度を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2608.26581",
+      "body_check": "abstract_screen_only; body_not_read; abstract retrieved from GitHub discovery-precheck source record",
+      "first_checked_at": "2026-10-29T05:51:00+09:00",
+      "last_checked_at": "2026-10-29T05:51:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 95,
+      "origin": "scheduled_discovery_worklist"
+    }
+  ]
+}
