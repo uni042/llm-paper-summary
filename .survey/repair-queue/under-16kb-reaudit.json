@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T04:56:32.640809+00:00",
+  "generated_at": "2026-10-28T06:06:55.064739+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 18,
+  "count": 22,
   "worker_counts": {
-    "scheduled-chat-00": 6,
-    "scheduled-chat-30": 6,
-    "scheduled-chat-45": 6
+    "scheduled-chat-00": 8,
+    "scheduled-chat-30": 7,
+    "scheduled-chat-45": 7
   },
   "entries": [
     {
@@ -62,6 +62,26 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.00907-kvslimmer-theoretical-insights-and-practical-optimizations-for-asymmetri.md",
+      "canonical_id": "arXiv:2603.00907",
+      "title": "KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging",
+      "file_bytes": 11995,
+      "source_sha256": "07a3cc8dd96a3d9f5b4d87191743ffd387923cf810b94f1e7885945cdde92517",
+      "source_git_blob_sha": "89a1ad62eac4e2da23e881ea91daf615b86dbe70",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.919557,
+      "quality_metrics": {
+        "body_chars": 3746,
+        "method_chars": 1239,
+        "evaluation_chars": 1192,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -82,21 +102,61 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2603.08185-serq-saliency-aware-low-rank-error-reconstruction-for-llm-quantization.md",
-      "canonical_id": "arXiv:2603.08185",
-      "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
-      "file_bytes": 13611,
-      "source_sha256": "5d6ef64eee16099b80294523071b80766bc630665114fb69c2651c0126cfc76b",
-      "source_git_blob_sha": "7f5ccdbe3622c0538ee27679ce6584f66a9a07bc",
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md",
+      "canonical_id": "arXiv:2609.38510",
+      "title": "DEdit: Iterative Draft Editing for Speculative Decoding",
+      "file_bytes": 13100,
+      "source_sha256": "47e3d23c454733693fc223b6e0065afc95519e2642aa5f0e44dced3bdbf13295",
+      "source_git_blob_sha": "e1244e6d5a090c10ffb299bca0b972b3b173360d",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.948805,
+      "quality_metrics": {
+        "body_chars": 3720,
+        "method_chars": 1136,
+        "evaluation_chars": 1324,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.33762-efficientagent-what-makes-kv-cache-offloading-work-for-concurrent-agents.md",
+      "canonical_id": "arXiv:2609.33762",
+      "title": "EfficientAgent: What Makes KV Cache Offloading Work for Concurrent Agents?",
+      "file_bytes": 14565,
+      "source_sha256": "9c4bbe38db5bb76c9c9f476af144e78ce3be97ce91dae4b6e0dad1054d0ea0d4",
+      "source_git_blob_sha": "78865b2d440415312634d4f41ee3d553ea6f64ba",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.927939,
+      "quality_metrics": {
+        "body_chars": 4101,
+        "method_chars": 1648,
+        "evaluation_chars": 895,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.37532-dscale-scaling-block-diffusion-speculative-decoding-with-adaptive-verifi.md",
+      "canonical_id": "arXiv:2609.37532",
+      "title": "DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification",
+      "file_bytes": 15150,
+      "source_sha256": "b194fffb7c1099d3aa3f94eb76de9459b521daff7c27858b91f05b744864cf93",
+      "source_git_blob_sha": "0874e6c1d5a8197f3f09d4d5bb2bcfe4375ef49d",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.924535,
+      "japanese_ratio": 0.930581,
       "quality_metrics": {
-        "body_chars": 4224,
-        "method_chars": 932,
-        "evaluation_chars": 1270,
-        "limitation_chars": 405
+        "body_chars": 4568,
+        "method_chars": 1287,
+        "evaluation_chars": 1106,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -157,6 +217,26 @@
         "method_chars": 1505,
         "evaluation_chars": 1023,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.08185-serq-saliency-aware-low-rank-error-reconstruction-for-llm-quantization.md",
+      "canonical_id": "arXiv:2603.08185",
+      "title": "SERQ: Saliency-Aware Low-Rank Error Reconstruction for LLM Quantization",
+      "file_bytes": 15876,
+      "source_sha256": "c5c545facdaa99b87148f63719f137407cf058653d5b6f2d2b2f421370801b3a",
+      "source_git_blob_sha": "19fa5c2b9417a988d85d1dc660ed4c5c411711fc",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.924535,
+      "quality_metrics": {
+        "body_chars": 4224,
+        "method_chars": 932,
+        "evaluation_chars": 1270,
+        "limitation_chars": 405
       },
       "mechanical_failures": [],
       "warnings": []
