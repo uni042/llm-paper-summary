@@ -1,0 +1,953 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4bf61f63dbc1bd10-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4bf61f63dbc1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.14211",
+    "arXiv:2603.00198",
+    "arXiv:2604.19167",
+    "arXiv:2605.30852",
+    "arXiv:2606.27743",
+    "arXiv:2607.06827",
+    "arXiv:2607.23046",
+    "arXiv:2609.35800",
+    "arXiv:2610.02235",
+    "arXiv:2610.04313"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "adc562db0d0ac2a642b6288851c26b6468446794",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:05:21.286985+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.14211",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.00198",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.19167",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30852",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.27743",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.06827",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.23046",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35800",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.02235",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.04313",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "LBLLM: Lightweight Binarization of Large Language Models via Three-Stage Distillation",
+      "source_url": "https://arxiv.org/abs/2604.19167",
+      "year": 2026,
+      "published": "2026-04-21",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying large language models (LLMs) in resource-constrained environments is hindered by heavy computational and memory requirements. We present LBLLM, a lightweight binarization framework that achieves effective W(1+1)A4 quantization through a novel three-stage quantization strategy. The framework proceeds as follows: (1) initialize a high-quality quantized model via PTQ; (2) quantize binarized weights, group-wise bitmaps, and quantization parameters through layer-wise distillation while keeping activations in full precision; and (3) training learnable activation quantization factors to dynamically quantize activations to 4 bits. This decoupled design mitigates interference between weight and activation quantization, yielding greater training stability and better inference accuracy. LBLLM, trained only using 0.016B tokens with a single GPU, surpasses existing state-of-the-art binarization methods on W2A4 quantization settings across tasks of language modeling, commonsense QA, and language understanding. These results demonstrate that extreme low-bit quantization of LLMs can be both practical and highly effective without introducing any extra high-precision channels or rotational matrices commonly used in recent PTQ-based works, offering a promising path toward efficient LLM deployment in resource-limited situations.",
+      "identifiers": [
+        "SemanticScholar:7ca21fc871f51511a2bb3516d8e711f24b66695b"
+      ],
+      "semantic_scholar_id": "7ca21fc871f51511a2bb3516d8e711f24b66695b",
+      "canonical_id": "arXiv:2604.19167",
+      "arxiv_id": "2604.19167",
+      "doi": "10.48550/arXiv.2604.19167",
+      "authors": [
+        "Si-Qing Song",
+        "Chuang Wang",
+        "Yong Lang",
+        "Yi Yang",
+        "Xu-Yao Zhang"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 190,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Stateful Token Reduction for Long-Video Hybrid VLMs",
+      "source_url": "https://arxiv.org/abs/2603.00198",
+      "year": 2026,
+      "published": "2026-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token reduction accelerates long-video vision--language models (VLMs), but existing methods target Transformers, where reduction is treated as token pruning. We study token reduction in hybrid Mamba--Transformer VLMs and find that it is \\emph{stateful}: Mamba layers maintain a recurrent state that accumulates information from earlier tokens, allowing discarded tokens to persist, so reduction behaves more like compression than dropping.We support this view with a representation-based probing method measuring how much information from discarded tokens is retained, and analyze layer-wise sparsity and cross-layer importance stability. Our findings show importance is sparse within layers but unstable across layers, making aggressive early pruning unreliable while hybrids remain robust to later reduction.Motivated by this, we propose a hybrid-aware token reduction framework with a low-to-high progressive schedule and a unified query-conditioned importance score for attention and Mamba layers. For Mamba, excluding the position-dependent decay from the recurrence produces a stronger selection signal. Across long-video benchmarks, our method achieves $3.8{\\times}$--$4.2{\\times}$ prefilling speedups at a 25% token budget while maintaining near-baseline accuracy and improving with light finetuning. Hybrid models benefit from aggressive reduction, improving both efficiency and accuracy, whereas Transformers exhibit the standard trade-off. Our method also outperforms prior baselines on the same hybrid backbone and combines effectively with visual redundancy reduction methods.",
+      "identifiers": [
+        "SemanticScholar:de664df8980c8c8dc44bb48af275dda81292e082"
+      ],
+      "semantic_scholar_id": "de664df8980c8c8dc44bb48af275dda81292e082",
+      "canonical_id": "arXiv:2603.00198",
+      "arxiv_id": "2603.00198",
+      "doi": "10.48550/arXiv.2603.00198",
+      "authors": [
+        "Jin-Dong Jiang",
+        "Amala Sanjay Deshmukh",
+        "K. Chumachenko",
+        "Karan Sapra",
+        "Zhiding Yu",
+        "Guilin Liu",
+        "A. Tao",
+        "Pavlo Molchanov",
+        "Jan Kautz",
+        "Wonmin Byeon"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 243,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Speculative Pipeline Decoding: Higher-Accuracy Drafting with Hidden Latency via Pipeline Parallelism",
+      "source_url": "https://arxiv.org/abs/2605.30852",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative Decoding (SD) accelerates low-concurrency LLM inference with a draft-then-verify paradigm. Mainstream methods, however, rely on multi-token prediction, which incurs compounding prediction difficulty and exposed draft latency. We propose Speculative Pipeline Decoding (SPD), which partitions the target LLM into $n$ pipeline stages so that $n$ tokens of a single sequence advance in parallel. To keep the pipeline saturated, a Pipeline Draft Module (PDM) aggregates multi-depth target features to predict the next token and runs concurrently with each pipeline step, yielding bounded prediction difficulty, higher acceptance, and hidden draft latency. Experiments show that SPD achieves higher theoretical and wall-clock speedup than EAGLE-3 at moderate pipeline width, while more aggressive widths still leave room for further gains. Our code is available at https://github.com/yuyijiong/speculative_pipeline_decoding",
+      "identifiers": [
+        "SemanticScholar:c33d57e1227d17c044508065b9bd56ae53049f52"
+      ],
+      "semantic_scholar_id": "c33d57e1227d17c044508065b9bd56ae53049f52",
+      "canonical_id": "arXiv:2605.30852",
+      "arxiv_id": "2605.30852",
+      "authors": [
+        "Yijiong Yu",
+        "Hua-Zheng Wang",
+        "Shuai Yuan",
+        "Ruilong Ren",
+        "Jinting Pei"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Compress the Cache, Not the Speech Embedding: KV Compression for Efficient Speech LLMs",
+      "source_url": "https://arxiv.org/abs/2607.06827",
+      "year": 2026,
+      "published": "2026-07-07",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speech large language models (Speech LLMs) typically encode speech into sequences far longer than text, creating a major efficiency bottleneck during autoregressive decoding. A common remedy is to compress the speech sequence at the adapter level to remove temporal redundancy before it enters the LLM; however, such early downsampling risks discarding fine-grained information that cannot be recovered. We propose SpeechKV, which applies a learned pooling to the KV cache of speech tokens inside the LLM. This design allows the LLM to fuse speech and text internally while directly accelerating decoding. Trained on 71K hours of speech data, SpeechKV compresses the speech to approximately text-level granularity yet maintains performance on par with or even slightly better than the uncompressed baseline, with relative gains of 6.6% on out-of-domain entity recognition and 2.3% on OpenASR, while delivering at least 1.49 times decoding speedup that scales with audio length.",
+      "identifiers": [
+        "SemanticScholar:7ea7acb33dec93f59390fa7334d6f8d8e433ebac"
+      ],
+      "semantic_scholar_id": "7ea7acb33dec93f59390fa7334d6f8d8e433ebac",
+      "canonical_id": "arXiv:2607.06827",
+      "arxiv_id": "2607.06827",
+      "doi": "10.48550/arXiv.2607.06827",
+      "authors": [
+        "Ke-Han Lu",
+        "Ke-Qi Deng",
+        "Ru-Chao Fan",
+        "Rui Zhao",
+        "Jin-Yu Li"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 113,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference",
+      "source_url": "https://arxiv.org/abs/2606.27743",
+      "year": 2026,
+      "published": "2026-06-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) inference is typically deployed under a static resource assumption, where models execute a fixed computational graph regardless of the runtime environment. However, real-world cloud infrastructure is inherently dynamic, characterized by fluctuating availability (e.g., spot instance preemption) and tiered Quality-of-Service requirements. In such volatile settings, static models are inflexible: they either crash under resource constraints or waste compute on redundant operations. To bridge this gap, we propose Learning to Allocate (L2A), an end-to-end framework for resource-adaptive inference. Unlike prior methods that condition only on input difficulty, we formulate inference as a constrained allocation problem conditioned on both the input and the runtime resource budget itself. We introduce lightweight, budget-conditioned and input-aware gating networks integrated into the LLM. These gates are trained via a unified objective that jointly optimizes task performance, logical consistency, and resource costs along three axes matching how real-world dynamics manifest: layer skipping for memory and depth pressure, head pruning for throughput contention, and reasoning-token reduction for latency tightening. This lets the model learn a budget-aware policy beyond input difficulty alone: it adaptively configures its computational footprint with respect to real-time resource dynamics, maximizing reasoning depth when resources permit while enforcing strict frugality when budgets tighten. A single L2A model traces the entire compute-accuracy Pareto frontier on Llama-3-8B and Qwen-3-4B: at up to 34% realized layer sparsity, it stays within 0.6% of the dense baseline on GSM8K, with the same gap holding zero-shot on out-of-distribution tasks, while every static or heuristic baseline requires a separately tuned model and still drops by 5-10% at comparable inference time.",
+      "identifiers": [
+        "SemanticScholar:8d568ea295293041a60b817f8394e34f1b73724c"
+      ],
+      "semantic_scholar_id": "8d568ea295293041a60b817f8394e34f1b73724c",
+      "canonical_id": "arXiv:2606.27743",
+      "arxiv_id": "2606.27743",
+      "doi": "10.48550/arXiv.2606.27743",
+      "authors": [
+        "Yuhang Chen",
+        "Jinhao Duan",
+        "Rui-Chen Zhang",
+        "Ming-Fu Liang",
+        "Xiaohan Wei",
+        "Yun-Chen Pu",
+        "Fei Tian",
+        "Chongling Sun",
+        "Parish Aggarwal",
+        "Frank Shyu",
+        "Luke Simon",
+        "Sandeep Pandey",
+        "Tian-Long Chen",
+        "Xi Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 124,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs",
+      "source_url": "https://arxiv.org/abs/2607.23046",
+      "year": 2026,
+      "published": "2026-07-25",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent high-resolution Multimodal Large Language Models (MLLMs) generate thousands of visual tokens per input, leading to a visual token explosion that introduces severe latency bottlenecks. While token pruning mitigates this issue, state-of-the-art subset-optimization methods typically rely on iterative subset construction to jointly capture visual diversity and instruction relevance. As visual token counts scale, this sequential dependency introduces significant selection overhead, severely limiting the translation of theoretical FLOPs reductions into actual wall-clock speedups. To address this limitation, we propose Single-Forward Pruner (SFPruner), a structural reformulation of visual token pruning that embeds redundancy control directly into the scoring space, bypassing the need for iterative combinatorial optimization. Our non-iterative framework achieves redundancy-aware importance selection in a single forward pass through two complementary mechanisms. First, to attenuate redundancy at the covariance level, we introduce a semantics-guided ridge leverage scheme. By integrating instruction relevance and visual saliency, this mechanism suppresses dominant covariance directions and mitigates representation bias. Second, ranking-based directional masking resolves residual overlap through asymmetric similarity competition, where higher-scoring tokens explicitly suppress redundant lower-scoring alternatives via parallel tensor operations. Extensive evaluations demonstrate that our approach maintains stable selection costs, reducing the token selection process by up to 110 ms, from 112.4 ms to just 2.5 ms at 512 tokens in Qwen2.5-VL. This structural efficiency successfully translates theoretical token reductions into tangible inference speedups while preserving highly competitive performance against state-of-the-art techniques under aggressive compression.",
+      "identifiers": [
+        "SemanticScholar:4c66e2cb9ecdbd7dc452dbb0f319242fe476e2ea"
+      ],
+      "semantic_scholar_id": "4c66e2cb9ecdbd7dc452dbb0f319242fe476e2ea",
+      "canonical_id": "arXiv:2607.23046",
+      "arxiv_id": "2607.23046",
+      "doi": "10.48550/arXiv.2607.23046",
+      "authors": [
+        "J. Song",
+        "Woohyeong Kim",
+        "Kyeongbo Kong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 95,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HeadGuard: Selective Head Protection for Low-Bit VLM KV-Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2609.35800",
+      "year": 2026,
+      "published": "2026-09-18",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit key-value (KV) cache quantization saves storage but can sharply degrade vision-language model (VLM) accuracy. We introduce HeadGuard, a composable head-protection method that augments a base KV-cache quantizer with a fixed high-precision mask. Image-sensitivity and output-sensitivity scores select physical KV heads offline, with approximately 1/8 protected in the main experiments; their image keys and optionally values remain in bfloat16 (BF16), while the base quantizes unprotected image entries. Across eight VLMs, three base quantizers, and eight benchmarks (six discriminative and two generative), HeadGuard recovers a substantial fraction of lost accuracy on weaker quantizers, with the strongest gains for Qwen and InternVL. At 2 bits, the six-task discriminative mean over eight models rises from 0.436 to 0.580 on the weakest base; protection can also improve generated answers and caption fidelity to BF16 outputs. Mean accuracy gains persist across all three quantizers with both tested calibration datasets. Keys-only protection retains substantial recovery at lower modeled storage cost. Evaluated through simulated quantization, HeadGuard offers a composable way to improve low-bit VLM accuracy without replacing the underlying quantizer.",
+      "identifiers": [
+        "SemanticScholar:ab1b0192086566b305f5649e406ea251033a30c5"
+      ],
+      "semantic_scholar_id": "ab1b0192086566b305f5649e406ea251033a30c5",
+      "canonical_id": "arXiv:2609.35800",
+      "arxiv_id": "2609.35800",
+      "authors": [
+        "Nenad Banfic"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "One Distribution, Two Channels: Coverage-Calibrated KV Retention and Compensation",
+      "source_url": "https://arxiv.org/abs/2610.02235",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding is increasingly constrained by key--value (KV) cache memory and bandwidth. Existing fixed-budget compression methods typically separate retention from compensation, while a retention ranking specifies neither discarded attention mass nor the direction of induced output error. We start from an exact factorization: eviction error equals evicted attention mass times the directional gap between the evicted centroid and retained output, highlighting the importance of set-level coverage in retention and mass-preserving memory writing. We introduce CORE COverage Calibration and Evicted-Mass REdistribution for KV Cache, which distills an offline allocation combining query utility and log-determinant coverage into a lightweight cache-aware indexer. At inference, one calibrated distribution drives both channels: its Top-$B$ ordering retains complementary KV states, while its excluded allocation mass and conditional weights parameterize latent-memory writes without a separate write-weight predictor or online log-determinant evaluation. Our analysis provides a four-term pre-compensation error certificate, characterizes non-additive coverage interactions, and establishes mass-independent write stability with hierarchical bounds through recurrent and query-adaptive normalization. Across three backbones, CORE exceeds the strongest RULER baseline by up to 3.78 points at 90% compression; LongBench and repeated-eviction evaluations further demonstrate strong effectiveness and decoding efficiency.",
+      "identifiers": [
+        "SemanticScholar:6a124a07d67735c9ed7c933b3b268bb059056876"
+      ],
+      "semantic_scholar_id": "6a124a07d67735c9ed7c933b3b268bb059056876",
+      "canonical_id": "arXiv:2610.02235",
+      "arxiv_id": "2610.02235",
+      "authors": [
+        "Shu-Xin Liu",
+        "Qing Liu",
+        "Yi Du",
+        "Ou Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MOIRA: Mass-Oriented Indexing with Ragged Attention for Long-Context Decoding",
+      "source_url": "https://arxiv.org/abs/2610.04313",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding is limited by memory bandwidth, because every output token reads the KV cache of every layer. Sparse decoding reduces this cost by reading only part of the KV cache. We observe that the number of pages a query needs varies widely across KV heads, layers and steps. Fixed budgets are simple, but they are sized for demanding cases and tuned per workload; adaptive budgets follow this variation more flexibly, but existing designs pay for it with extra selection cost or training. At the kernel level, FlashAttention-3 (FA3) and FlashInfer are designed for rows of similar length: with page lists whose length differs per KV head, they either pad the lists (forfeiting much of the sparse saving), leave thread blocks unbalanced, or rely on a host-side plan that runs outside the CUDA graph. We propose MOIRA, a training-free sparse decode path in vLLM whose budget adapts per KV head and per layer. For every request, layer, KV head and step, a coverage rule keeps the smallest set of pages whose estimated attention mass reaches a fraction $\\gamma$. A new kernel, self-planning attention, lets each thread block derive its own share of the work from the list lengths, so the whole decode step stays inside the CUDA graph. On an H200, at RULER's 128k context, MOIRA with $\\gamma=0.99$ matches dense accuracy while reading about 30% of the pages and reduces the time per output token (TPOT) by 2.2-2.5$\\times$ relative to dense FA3; with $\\gamma=0.98$ it reduces TPOT by 2.7$\\times$ and stays within the noise of dense. Under high serving load it raises throughput by up to 51%. These results suggest that a budget adapted per head and layer, paired with a kernel that keeps such budgets inside the CUDA graph, makes sparse decoding both flexible and fast.",
+      "identifiers": [
+        "SemanticScholar:efda0c0f7d23afbcd5524834783b1f13c622c1ab"
+      ],
+      "semantic_scholar_id": "efda0c0f7d23afbcd5524834783b1f13c622c1ab",
+      "canonical_id": "arXiv:2610.04313",
+      "arxiv_id": "2610.04313",
+      "authors": [
+        "Dich Nhat Minh Nguyen",
+        "T. Nguyen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LiteStage: Latency-aware Layer Skipping for Multi-stage Reasoning",
+      "source_url": "https://arxiv.org/abs/2510.14211",
+      "year": 2025,
+      "published": "2025-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-stage reasoning has emerged as an effective strategy for enhancing the reasoning capability of small language models by decomposing complex problems into sequential sub-stages. However, this comes at the cost of increased latency. We observe that existing adaptive acceleration techniques, such as layer skipping, struggle to balance efficiency and accuracy in this setting due to two key challenges: (1) stage-wise variation in skip sensitivity, and (2) the generation of redundant output tokens. To address these, we propose LiteStage, a latency-aware layer skipping framework for multi-stage reasoning. LiteStage combines a stage-wise offline search that allocates optimal layer budgets with an online confidence-based generation early exit to suppress unnecessary decoding. Experiments on three benchmarks, e.g., OBQA, CSQA, and StrategyQA, show that LiteStage outperforms prior training-free layer skipping methods.",
+      "identifiers": [
+        "SemanticScholar:17e1a2a999ab24708e58d3fbd286910121be91a5"
+      ],
+      "semantic_scholar_id": "17e1a2a999ab24708e58d3fbd286910121be91a5",
+      "canonical_id": "arXiv:2510.14211",
+      "arxiv_id": "2510.14211",
+      "doi": "10.48550/arXiv.2510.14211",
+      "authors": [
+        "Beomseok Kang",
+        "Jiwon Song",
+        "Jae-Joon Kim"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 377,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.19167",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.19167",
+        "id:SemanticScholar:7ca21fc871f51511a2bb3516d8e711f24b66695b",
+        "id:arXiv:2604.19167",
+        "title:lbllm lightweight binarization of large language models via threestage distillation",
+        "url:https://arxiv.org/abs/2604.19167"
+      ],
+      "record": {
+        "title": "LBLLM: Lightweight Binarization of Large Language Models via Three-Stage Distillation",
+        "source_url": "https://arxiv.org/abs/2604.19167",
+        "year": 2026,
+        "published": "2026-04-21",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying large language models (LLMs) in resource-constrained environments is hindered by heavy computational and memory requirements. We present LBLLM, a lightweight binarization framework that achieves effective W(1+1)A4 quantization through a novel three-stage quantization strategy. The framework proceeds as follows: (1) initialize a high-quality quantized model via PTQ; (2) quantize binarized weights, group-wise bitmaps, and quantization parameters through layer-wise distillation while keeping activations in full precision; and (3) training learnable activation quantization factors to dynamically quantize activations to 4 bits. This decoupled design mitigates interference between weight and activation quantization, yielding greater training stability and better inference accuracy. LBLLM, trained only using 0.016B tokens with a single GPU, surpasses existing state-of-the-art binarization methods on W2A4 quantization settings across tasks of language modeling, commonsense QA, and language understanding. These results demonstrate that extreme low-bit quantization of LLMs can be both practical and highly effective without introducing any extra high-precision channels or rotational matrices commonly used in recent PTQ-based works, offering a promising path toward efficient LLM deployment in resource-limited situations.",
+        "identifiers": [
+          "SemanticScholar:7ca21fc871f51511a2bb3516d8e711f24b66695b"
+        ],
+        "semantic_scholar_id": "7ca21fc871f51511a2bb3516d8e711f24b66695b",
+        "canonical_id": "arXiv:2604.19167",
+        "arxiv_id": "2604.19167",
+        "doi": "10.48550/arXiv.2604.19167",
+        "authors": [
+          "Si-Qing Song",
+          "Chuang Wang",
+          "Yong Lang",
+          "Yi Yang",
+          "Xu-Yao Zhang"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 190,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.00198",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.00198",
+        "id:SemanticScholar:de664df8980c8c8dc44bb48af275dda81292e082",
+        "id:arXiv:2603.00198",
+        "title:stateful token reduction for longvideo hybrid vlms",
+        "url:https://arxiv.org/abs/2603.00198"
+      ],
+      "record": {
+        "title": "Stateful Token Reduction for Long-Video Hybrid VLMs",
+        "source_url": "https://arxiv.org/abs/2603.00198",
+        "year": 2026,
+        "published": "2026-02-27",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Token reduction accelerates long-video vision--language models (VLMs), but existing methods target Transformers, where reduction is treated as token pruning. We study token reduction in hybrid Mamba--Transformer VLMs and find that it is \\emph{stateful}: Mamba layers maintain a recurrent state that accumulates information from earlier tokens, allowing discarded tokens to persist, so reduction behaves more like compression than dropping.We support this view with a representation-based probing method measuring how much information from discarded tokens is retained, and analyze layer-wise sparsity and cross-layer importance stability. Our findings show importance is sparse within layers but unstable across layers, making aggressive early pruning unreliable while hybrids remain robust to later reduction.Motivated by this, we propose a hybrid-aware token reduction framework with a low-to-high progressive schedule and a unified query-conditioned importance score for attention and Mamba layers. For Mamba, excluding the position-dependent decay from the recurrence produces a stronger selection signal. Across long-video benchmarks, our method achieves $3.8{\\times}$--$4.2{\\times}$ prefilling speedups at a 25% token budget while maintaining near-baseline accuracy and improving with light finetuning. Hybrid models benefit from aggressive reduction, improving both efficiency and accuracy, whereas Transformers exhibit the standard trade-off. Our method also outperforms prior baselines on the same hybrid backbone and combines effectively with visual redundancy reduction methods.",
+        "identifiers": [
+          "SemanticScholar:de664df8980c8c8dc44bb48af275dda81292e082"
+        ],
+        "semantic_scholar_id": "de664df8980c8c8dc44bb48af275dda81292e082",
+        "canonical_id": "arXiv:2603.00198",
+        "arxiv_id": "2603.00198",
+        "doi": "10.48550/arXiv.2603.00198",
+        "authors": [
+          "Jin-Dong Jiang",
+          "Amala Sanjay Deshmukh",
+          "K. Chumachenko",
+          "Karan Sapra",
+          "Zhiding Yu",
+          "Guilin Liu",
+          "A. Tao",
+          "Pavlo Molchanov",
+          "Jan Kautz",
+          "Wonmin Byeon"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 243,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.30852",
+      "identity_tokens": [
+        "id:SemanticScholar:c33d57e1227d17c044508065b9bd56ae53049f52",
+        "id:arXiv:2605.30852",
+        "title:speculative pipeline decoding higheraccuracy drafting with hidden latency via pipeline parallelism",
+        "url:https://arxiv.org/abs/2605.30852"
+      ],
+      "record": {
+        "title": "Speculative Pipeline Decoding: Higher-Accuracy Drafting with Hidden Latency via Pipeline Parallelism",
+        "source_url": "https://arxiv.org/abs/2605.30852",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative Decoding (SD) accelerates low-concurrency LLM inference with a draft-then-verify paradigm. Mainstream methods, however, rely on multi-token prediction, which incurs compounding prediction difficulty and exposed draft latency. We propose Speculative Pipeline Decoding (SPD), which partitions the target LLM into $n$ pipeline stages so that $n$ tokens of a single sequence advance in parallel. To keep the pipeline saturated, a Pipeline Draft Module (PDM) aggregates multi-depth target features to predict the next token and runs concurrently with each pipeline step, yielding bounded prediction difficulty, higher acceptance, and hidden draft latency. Experiments show that SPD achieves higher theoretical and wall-clock speedup than EAGLE-3 at moderate pipeline width, while more aggressive widths still leave room for further gains. Our code is available at https://github.com/yuyijiong/speculative_pipeline_decoding",
+        "identifiers": [
+          "SemanticScholar:c33d57e1227d17c044508065b9bd56ae53049f52"
+        ],
+        "semantic_scholar_id": "c33d57e1227d17c044508065b9bd56ae53049f52",
+        "canonical_id": "arXiv:2605.30852",
+        "arxiv_id": "2605.30852",
+        "authors": [
+          "Yijiong Yu",
+          "Hua-Zheng Wang",
+          "Shuai Yuan",
+          "Ruilong Ren",
+          "Jinting Pei"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 152,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.06827",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.06827",
+        "id:SemanticScholar:7ea7acb33dec93f59390fa7334d6f8d8e433ebac",
+        "id:arXiv:2607.06827",
+        "title:compress the cache not the speech embedding kv compression for efficient speech llms",
+        "url:https://arxiv.org/abs/2607.06827"
+      ],
+      "record": {
+        "title": "Compress the Cache, Not the Speech Embedding: KV Compression for Efficient Speech LLMs",
+        "source_url": "https://arxiv.org/abs/2607.06827",
+        "year": 2026,
+        "published": "2026-07-07",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speech large language models (Speech LLMs) typically encode speech into sequences far longer than text, creating a major efficiency bottleneck during autoregressive decoding. A common remedy is to compress the speech sequence at the adapter level to remove temporal redundancy before it enters the LLM; however, such early downsampling risks discarding fine-grained information that cannot be recovered. We propose SpeechKV, which applies a learned pooling to the KV cache of speech tokens inside the LLM. This design allows the LLM to fuse speech and text internally while directly accelerating decoding. Trained on 71K hours of speech data, SpeechKV compresses the speech to approximately text-level granularity yet maintains performance on par with or even slightly better than the uncompressed baseline, with relative gains of 6.6% on out-of-domain entity recognition and 2.3% on OpenASR, while delivering at least 1.49 times decoding speedup that scales with audio length.",
+        "identifiers": [
+          "SemanticScholar:7ea7acb33dec93f59390fa7334d6f8d8e433ebac"
+        ],
+        "semantic_scholar_id": "7ea7acb33dec93f59390fa7334d6f8d8e433ebac",
+        "canonical_id": "arXiv:2607.06827",
+        "arxiv_id": "2607.06827",
+        "doi": "10.48550/arXiv.2607.06827",
+        "authors": [
+          "Ke-Han Lu",
+          "Ke-Qi Deng",
+          "Ru-Chao Fan",
+          "Rui Zhao",
+          "Jin-Yu Li"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 113,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.27743",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.27743",
+        "id:SemanticScholar:8d568ea295293041a60b817f8394e34f1b73724c",
+        "id:arXiv:2606.27743",
+        "title:endtoend dynamic sparsity for resourceadaptive llm inference",
+        "url:https://arxiv.org/abs/2606.27743"
+      ],
+      "record": {
+        "title": "End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference",
+        "source_url": "https://arxiv.org/abs/2606.27743",
+        "year": 2026,
+        "published": "2026-06-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) inference is typically deployed under a static resource assumption, where models execute a fixed computational graph regardless of the runtime environment. However, real-world cloud infrastructure is inherently dynamic, characterized by fluctuating availability (e.g., spot instance preemption) and tiered Quality-of-Service requirements. In such volatile settings, static models are inflexible: they either crash under resource constraints or waste compute on redundant operations. To bridge this gap, we propose Learning to Allocate (L2A), an end-to-end framework for resource-adaptive inference. Unlike prior methods that condition only on input difficulty, we formulate inference as a constrained allocation problem conditioned on both the input and the runtime resource budget itself. We introduce lightweight, budget-conditioned and input-aware gating networks integrated into the LLM. These gates are trained via a unified objective that jointly optimizes task performance, logical consistency, and resource costs along three axes matching how real-world dynamics manifest: layer skipping for memory and depth pressure, head pruning for throughput contention, and reasoning-token reduction for latency tightening. This lets the model learn a budget-aware policy beyond input difficulty alone: it adaptively configures its computational footprint with respect to real-time resource dynamics, maximizing reasoning depth when resources permit while enforcing strict frugality when budgets tighten. A single L2A model traces the entire compute-accuracy Pareto frontier on Llama-3-8B and Qwen-3-4B: at up to 34% realized layer sparsity, it stays within 0.6% of the dense baseline on GSM8K, with the same gap holding zero-shot on out-of-distribution tasks, while every static or heuristic baseline requires a separately tuned model and still drops by 5-10% at comparable inference time.",
+        "identifiers": [
+          "SemanticScholar:8d568ea295293041a60b817f8394e34f1b73724c"
+        ],
+        "semantic_scholar_id": "8d568ea295293041a60b817f8394e34f1b73724c",
+        "canonical_id": "arXiv:2606.27743",
+        "arxiv_id": "2606.27743",
+        "doi": "10.48550/arXiv.2606.27743",
+        "authors": [
+          "Yuhang Chen",
+          "Jinhao Duan",
+          "Rui-Chen Zhang",
+          "Ming-Fu Liang",
+          "Xiaohan Wei",
+          "Yun-Chen Pu",
+          "Fei Tian",
+          "Chongling Sun",
+          "Parish Aggarwal",
+          "Frank Shyu",
+          "Luke Simon",
+          "Sandeep Pandey",
+          "Tian-Long Chen",
+          "Xi Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 124,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.23046",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.23046",
+        "id:SemanticScholar:4c66e2cb9ecdbd7dc452dbb0f319242fe476e2ea",
+        "id:arXiv:2607.23046",
+        "title:structured redundancy modeling for efficient visual token pruning in highresolution mllms",
+        "url:https://arxiv.org/abs/2607.23046"
+      ],
+      "record": {
+        "title": "Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs",
+        "source_url": "https://arxiv.org/abs/2607.23046",
+        "year": 2026,
+        "published": "2026-07-25",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent high-resolution Multimodal Large Language Models (MLLMs) generate thousands of visual tokens per input, leading to a visual token explosion that introduces severe latency bottlenecks. While token pruning mitigates this issue, state-of-the-art subset-optimization methods typically rely on iterative subset construction to jointly capture visual diversity and instruction relevance. As visual token counts scale, this sequential dependency introduces significant selection overhead, severely limiting the translation of theoretical FLOPs reductions into actual wall-clock speedups. To address this limitation, we propose Single-Forward Pruner (SFPruner), a structural reformulation of visual token pruning that embeds redundancy control directly into the scoring space, bypassing the need for iterative combinatorial optimization. Our non-iterative framework achieves redundancy-aware importance selection in a single forward pass through two complementary mechanisms. First, to attenuate redundancy at the covariance level, we introduce a semantics-guided ridge leverage scheme. By integrating instruction relevance and visual saliency, this mechanism suppresses dominant covariance directions and mitigates representation bias. Second, ranking-based directional masking resolves residual overlap through asymmetric similarity competition, where higher-scoring tokens explicitly suppress redundant lower-scoring alternatives via parallel tensor operations. Extensive evaluations demonstrate that our approach maintains stable selection costs, reducing the token selection process by up to 110 ms, from 112.4 ms to just 2.5 ms at 512 tokens in Qwen2.5-VL. This structural efficiency successfully translates theoretical token reductions into tangible inference speedups while preserving highly competitive performance against state-of-the-art techniques under aggressive compression.",
+        "identifiers": [
+          "SemanticScholar:4c66e2cb9ecdbd7dc452dbb0f319242fe476e2ea"
+        ],
+        "semantic_scholar_id": "4c66e2cb9ecdbd7dc452dbb0f319242fe476e2ea",
+        "canonical_id": "arXiv:2607.23046",
+        "arxiv_id": "2607.23046",
+        "doi": "10.48550/arXiv.2607.23046",
+        "authors": [
+          "J. Song",
+          "Woohyeong Kim",
+          "Kyeongbo Kong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 95,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35800",
+      "identity_tokens": [
+        "id:SemanticScholar:ab1b0192086566b305f5649e406ea251033a30c5",
+        "id:arXiv:2609.35800",
+        "title:headguard selective head protection for lowbit vlm kvcache quantization",
+        "url:https://arxiv.org/abs/2609.35800"
+      ],
+      "record": {
+        "title": "HeadGuard: Selective Head Protection for Low-Bit VLM KV-Cache Quantization",
+        "source_url": "https://arxiv.org/abs/2609.35800",
+        "year": 2026,
+        "published": "2026-09-18",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit key-value (KV) cache quantization saves storage but can sharply degrade vision-language model (VLM) accuracy. We introduce HeadGuard, a composable head-protection method that augments a base KV-cache quantizer with a fixed high-precision mask. Image-sensitivity and output-sensitivity scores select physical KV heads offline, with approximately 1/8 protected in the main experiments; their image keys and optionally values remain in bfloat16 (BF16), while the base quantizes unprotected image entries. Across eight VLMs, three base quantizers, and eight benchmarks (six discriminative and two generative), HeadGuard recovers a substantial fraction of lost accuracy on weaker quantizers, with the strongest gains for Qwen and InternVL. At 2 bits, the six-task discriminative mean over eight models rises from 0.436 to 0.580 on the weakest base; protection can also improve generated answers and caption fidelity to BF16 outputs. Mean accuracy gains persist across all three quantizers with both tested calibration datasets. Keys-only protection retains substantial recovery at lower modeled storage cost. Evaluated through simulated quantization, HeadGuard offers a composable way to improve low-bit VLM accuracy without replacing the underlying quantizer.",
+        "identifiers": [
+          "SemanticScholar:ab1b0192086566b305f5649e406ea251033a30c5"
+        ],
+        "semantic_scholar_id": "ab1b0192086566b305f5649e406ea251033a30c5",
+        "canonical_id": "arXiv:2609.35800",
+        "arxiv_id": "2609.35800",
+        "authors": [
+          "Nenad Banfic"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.02235",
+      "identity_tokens": [
+        "id:SemanticScholar:6a124a07d67735c9ed7c933b3b268bb059056876",
+        "id:arXiv:2610.02235",
+        "title:one distribution two channels coveragecalibrated kv retention and compensation",
+        "url:https://arxiv.org/abs/2610.02235"
+      ],
+      "record": {
+        "title": "One Distribution, Two Channels: Coverage-Calibrated KV Retention and Compensation",
+        "source_url": "https://arxiv.org/abs/2610.02235",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context decoding is increasingly constrained by key--value (KV) cache memory and bandwidth. Existing fixed-budget compression methods typically separate retention from compensation, while a retention ranking specifies neither discarded attention mass nor the direction of induced output error. We start from an exact factorization: eviction error equals evicted attention mass times the directional gap between the evicted centroid and retained output, highlighting the importance of set-level coverage in retention and mass-preserving memory writing. We introduce CORE COverage Calibration and Evicted-Mass REdistribution for KV Cache, which distills an offline allocation combining query utility and log-determinant coverage into a lightweight cache-aware indexer. At inference, one calibrated distribution drives both channels: its Top-$B$ ordering retains complementary KV states, while its excluded allocation mass and conditional weights parameterize latent-memory writes without a separate write-weight predictor or online log-determinant evaluation. Our analysis provides a four-term pre-compensation error certificate, characterizes non-additive coverage interactions, and establishes mass-independent write stability with hierarchical bounds through recurrent and query-adaptive normalization. Across three backbones, CORE exceeds the strongest RULER baseline by up to 3.78 points at 90% compression; LongBench and repeated-eviction evaluations further demonstrate strong effectiveness and decoding efficiency.",
+        "identifiers": [
+          "SemanticScholar:6a124a07d67735c9ed7c933b3b268bb059056876"
+        ],
+        "semantic_scholar_id": "6a124a07d67735c9ed7c933b3b268bb059056876",
+        "canonical_id": "arXiv:2610.02235",
+        "arxiv_id": "2610.02235",
+        "authors": [
+          "Shu-Xin Liu",
+          "Qing Liu",
+          "Yi Du",
+          "Ou Wu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04313",
+      "identity_tokens": [
+        "id:SemanticScholar:efda0c0f7d23afbcd5524834783b1f13c622c1ab",
+        "id:arXiv:2610.04313",
+        "title:moira massoriented indexing with ragged attention for longcontext decoding",
+        "url:https://arxiv.org/abs/2610.04313"
+      ],
+      "record": {
+        "title": "MOIRA: Mass-Oriented Indexing with Ragged Attention for Long-Context Decoding",
+        "source_url": "https://arxiv.org/abs/2610.04313",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context decoding is limited by memory bandwidth, because every output token reads the KV cache of every layer. Sparse decoding reduces this cost by reading only part of the KV cache. We observe that the number of pages a query needs varies widely across KV heads, layers and steps. Fixed budgets are simple, but they are sized for demanding cases and tuned per workload; adaptive budgets follow this variation more flexibly, but existing designs pay for it with extra selection cost or training. At the kernel level, FlashAttention-3 (FA3) and FlashInfer are designed for rows of similar length: with page lists whose length differs per KV head, they either pad the lists (forfeiting much of the sparse saving), leave thread blocks unbalanced, or rely on a host-side plan that runs outside the CUDA graph. We propose MOIRA, a training-free sparse decode path in vLLM whose budget adapts per KV head and per layer. For every request, layer, KV head and step, a coverage rule keeps the smallest set of pages whose estimated attention mass reaches a fraction $\\gamma$. A new kernel, self-planning attention, lets each thread block derive its own share of the work from the list lengths, so the whole decode step stays inside the CUDA graph. On an H200, at RULER's 128k context, MOIRA with $\\gamma=0.99$ matches dense accuracy while reading about 30% of the pages and reduces the time per output token (TPOT) by 2.2-2.5$\\times$ relative to dense FA3; with $\\gamma=0.98$ it reduces TPOT by 2.7$\\times$ and stays within the noise of dense. Under high serving load it raises throughput by up to 51%. These results suggest that a budget adapted per head and layer, paired with a kernel that keeps such budgets inside the CUDA graph, makes sparse decoding both flexible and fast.",
+        "identifiers": [
+          "SemanticScholar:efda0c0f7d23afbcd5524834783b1f13c622c1ab"
+        ],
+        "semantic_scholar_id": "efda0c0f7d23afbcd5524834783b1f13c622c1ab",
+        "canonical_id": "arXiv:2610.04313",
+        "arxiv_id": "2610.04313",
+        "authors": [
+          "Dich Nhat Minh Nguyen",
+          "T. Nguyen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 25,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.14211",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.14211",
+        "id:SemanticScholar:17e1a2a999ab24708e58d3fbd286910121be91a5",
+        "id:arXiv:2510.14211",
+        "title:litestage latencyaware layer skipping for multistage reasoning",
+        "url:https://arxiv.org/abs/2510.14211"
+      ],
+      "record": {
+        "title": "LiteStage: Latency-aware Layer Skipping for Multi-stage Reasoning",
+        "source_url": "https://arxiv.org/abs/2510.14211",
+        "year": 2025,
+        "published": "2025-10-16",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-stage reasoning has emerged as an effective strategy for enhancing the reasoning capability of small language models by decomposing complex problems into sequential sub-stages. However, this comes at the cost of increased latency. We observe that existing adaptive acceleration techniques, such as layer skipping, struggle to balance efficiency and accuracy in this setting due to two key challenges: (1) stage-wise variation in skip sensitivity, and (2) the generation of redundant output tokens. To address these, we propose LiteStage, a latency-aware layer skipping framework for multi-stage reasoning. LiteStage combines a stage-wise offline search that allocates optimal layer budgets with an online confidence-based generation early exit to suppress unnecessary decoding. Experiments on three benchmarks, e.g., OBQA, CSQA, and StrategyQA, show that LiteStage outperforms prior training-free layer skipping methods.",
+        "identifiers": [
+          "SemanticScholar:17e1a2a999ab24708e58d3fbd286910121be91a5"
+        ],
+        "semantic_scholar_id": "17e1a2a999ab24708e58d3fbd286910121be91a5",
+        "canonical_id": "arXiv:2510.14211",
+        "arxiv_id": "2510.14211",
+        "doi": "10.48550/arXiv.2510.14211",
+        "authors": [
+          "Beomseok Kang",
+          "Jiwon Song",
+          "Jae-Joon Kim"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 377,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:23d9ac5c1069ea594276cbacaad840b46d0eafa973b0bb32823a7a15aed4ad2c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
