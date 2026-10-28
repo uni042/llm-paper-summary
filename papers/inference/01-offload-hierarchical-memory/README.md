@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（137本）
+## 自動生成の論文一覧（138本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -153,6 +153,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-09 · [Mira: Memory-Efficient MoE Inference Using Adaptive Caching and Predictive Expert Staging](2026-2609.38090-mira-memory-efficient-moe-inference-using-adaptive-caching-and-predictiv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   専門家の将来利用を予測してCPUから先に搬入し、頻出専門家と短期予測専門家を別々のGPUキャッシュで管理する単一GPU向け推論システム。
+
+- **2026-09 · [MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression](2026-2609.29913-milo-efficient-many-shot-in-context-learning-with-block-wise-low-rank-co.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MILO（Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression）は、数百〜数千のデモンストレーションを入力するmany-shot in-context learning（ICL）のKVキャッシュを、例示のブロック単位で低ランク圧縮する手法である。
 
 - **2026-09 · [LLM Inference on IMC-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism](2026-2609.00857-imc-noc-balanced-dataflow-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

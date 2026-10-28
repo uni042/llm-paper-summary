@@ -35,10 +35,15 @@
   "selection_reason": "数千例を用いるmany-shot文脈のKVキャッシュを例のブロック単位で低ランク圧縮し、ブロックの情報エントロピーに応じて再構成ランク予算を配分する。Qwen2.5でKV容量最大50%削減とスループット1.8倍を報告し、オンラインサービングと端末推論のKVメモリ壁に直接取り組む。",
   "semantic_scholar_id": "e841dbae23749051b146f3bcaefcfa814054adb9",
   "source_url": "https://arxiv.org/abs/2609.29913",
-  "status": "ready",
+  "status": "superseded",
   "title": "MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T20:13:45+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2609.29913-milo-efficient-many-shot-in-context-learning-with-block-wise-low-rank-co.md",
+  "represented_canonical_id": "arXiv:2609.29913",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -32,6 +32,8 @@ returned_research_repair: true
 returned_research_original_blocked_path: ".survey/import-inbox/blocked/research/retry-research-01ae53a51488--libfile_8ecb4fe2af8c8191b2e9235478d6e74e--2026-2603.27960-efficient-lvlm-inference-survey-20261029-0030-scheduled-chat-30-r01.md"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # 大規模視覚言語モデルの推論効率化：四つの最適化層と残る課題
