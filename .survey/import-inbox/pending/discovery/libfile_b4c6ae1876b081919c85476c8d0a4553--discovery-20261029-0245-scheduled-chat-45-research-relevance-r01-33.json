@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261029-0245-scheduled-chat-45/r01/research-relevance-rank33",
+  "reference_main_sha": "30a7c92966898934dc32894f86f62af8dbdf6285",
+  "record_count": 1,
+  "records": [
+    {
+      "origin": "research_prescreen_relevance",
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.15096",
+      "identity_tokens": [
+        "arXiv:2402.15096"
+      ],
+      "title": "Multimodal Transformer With a Low-Computational-Cost Guarantee",
+      "reason": "原著のLoCoMTは音声・動画・テキストの分類用Transformerであり、AudiosetとMedVidCLの分類精度（mAP/precision/recall）と注意行列積のGFLOPsを評価する。自己回帰型LLMの生成、KVキャッシュ、トークン復号、LLMサービング、言語生成速度は実験対象でない。計算量削減の理論保証はマルチモーダル分類器の注意パターン配分に関するもので、LLM推論システムの速度改善として収録しない。",
+      "source_url": "https://arxiv.org/pdf/2402.15096",
+      "body_check": "primary_pdf_read_full_5_pages; equation_1_to_8_and_table_1_verified",
+      "first_checked_at": "2026-10-29T02:59:00+09:00",
+      "last_checked_at": "2026-10-29T02:59:00+09:00",
+      "worklist_rank": 33,
+      "linked_from": [
+        ".survey/work-queue/WORKLIST-45.md"
+      ]
+    }
+  ]
+}
