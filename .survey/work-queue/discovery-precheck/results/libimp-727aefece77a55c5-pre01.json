@@ -1,0 +1,680 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-727aefece77a55c5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-727aefece77a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2412.06858",
+    "arXiv:2502.15779",
+    "arXiv:2510.26771",
+    "arXiv:2511.00141",
+    "arXiv:2601.20745",
+    "arXiv:2605.16439",
+    "arXiv:2608.15454"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:58:21.147683+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2412.06858",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.15779",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.26771",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.00141",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20745",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.16439",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.15454",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+      "source_url": "https://arxiv.org/abs/2601.20745",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) continue to scale, deployment is increasingly bottlenecked by the memory wall, motivating a shift toward extremely low-bit quantization. However, most quantization-aware training (QAT) methods apply hard rounding and the straight-through estimator (STE) from the beginning of the training, which prematurely discretizes the optimization landscape and induces persistent gradient mismatch between latent weights and quantized weights, hindering effective optimization of quantized models. To address this, we propose Hestia, a Hessian-guided differentiable QAT framework for extremely low-bit LLMs, which replaces the rigid step function with a temperature-controlled softmax relaxation to maintain gradient flow early in training while progressively hardening quantization. Furthermore, Hestia leverages a tensor-wise Hessian trace metric as a lightweight curvature signal to drive fine-grained temperature annealing, enabling sensitivity-aware discretization across the model. Evaluations on Llama-3.2 show that Hestia consistently outperforms existing ternary QAT baselines, yielding average zero-shot improvements of 5.39% and 4.34% for the 1B and 3B models. These results indicate that Hessian-guided relaxation effectively recovers representational capacity, establishing a more robust training path for 1.58-bit LLMs. The code is available at https://github.com/hestia2026/Hestia.",
+      "identifiers": [
+        "SemanticScholar:85ce7a282b23032d01e4cae88a7985f5b3743077"
+      ],
+      "semantic_scholar_id": "85ce7a282b23032d01e4cae88a7985f5b3743077",
+      "canonical_id": "arXiv:2601.20745",
+      "arxiv_id": "2601.20745",
+      "doi": "10.48550/arXiv.2601.20745",
+      "authors": [
+        "Guo-An Wang",
+        "Feiyu Wang",
+        "Zong-Wei Lv",
+        "Yikun Zong",
+        "Tong Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Dynamic Multi-Byte Prediction With Hierarchical Language Models",
+      "source_url": "https://arxiv.org/abs/2608.15454",
+      "year": 2026,
+      "published": "2026-08-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Byte-level hierarchical language models (LMs) have recently emerged as a robust alternative to their popular counterparts that use subword tokenization. However, generating one byte at a time remains a bottleneck for inference speed. To address this, we introduce multi-byte prediction (MBP), which generates multiple bytes in parallel, speeding up inference with minimal performance impact and no additional parameters. MBP builds on the popular multi-token prediction (MTP) paradigm with two crucial innovations. First, we introduce a variable-length prediction window that aligns with the latent tokens, or segments, of a hierarchical LM. Second, we implement a novel attention-masking scheme that enables parallel byte prediction without violating causality. We show that multi-byte prediction strikes a Pareto-optimal trade-off across multiple generative tasks, instruction following, question answering, summarization, and machine translation, achieving the best trade-off between performance and inference throughput.",
+      "identifiers": [
+        "SemanticScholar:95462c2e9d2b2e6ee6ccc4a90965683e3fe92ee8"
+      ],
+      "semantic_scholar_id": "95462c2e9d2b2e6ee6ccc4a90965683e3fe92ee8",
+      "canonical_id": "arXiv:2608.15454",
+      "arxiv_id": "2608.15454",
+      "authors": [
+        "Abraham Toluwase Owodunni",
+        "C. Okocha",
+        "Christan Grant",
+        "Tomasz Limisiewicz",
+        "Sachin Kumar"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 73,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer",
+      "source_url": "https://arxiv.org/abs/2502.15779",
+      "year": 2025,
+      "published": "2025-02-17",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Rotate, Clip, and Partition (RCP), a quantization-aware training (QAT) approach that first realizes extreme compression of LLMs with W2A4KV4(2-bit weight, 4-bit activation, and 4-bit KV cache) configuration. RCP integrates recent rotation techniques with a novel non-uniform weight quantizer design, by quantitatively analyzing the impact of random rotation on 2-bit weight quantization. Our weight quantizer features Learnable Direct Partitioning (LDP), which introduces learnable parameters to directly learn non-uniform intervals jointly with LLM weights. We also present a specialized GPU kernel that supports GEMV on non-uniform W2A4. Experiments show that RCP can compress LLaMA-2-7B to W2A4KV4 with a loss of only 2.84 WikiText2 ppl and 5.29 times reduced memory footprint. Furthermore, RCP can quantize challenging mobile-targeted LLaMA-3.2 models and domain-specific WizardCoder-7B and MetaMath-7B with no critical problems such as convergence failure and repetition. Code is available at https://github.com/ songsm921/RCP.",
+      "identifiers": [
+        "SemanticScholar:5396582ebe88654242403f82f9d10a517225905a"
+      ],
+      "semantic_scholar_id": "5396582ebe88654242403f82f9d10a517225905a",
+      "canonical_id": "arXiv:2502.15779",
+      "arxiv_id": "2502.15779",
+      "doi": "10.48550/arXiv.2502.15779",
+      "authors": [
+        "Euntae Choi",
+        "Su-Min Song",
+        "Woo-Sang Lim",
+        "Sungjoo Yoo"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 618,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "KVCapsule: Efficient Sequential KV Cache Compression for Vision-Language Models with Asymmetric Redundancy",
+      "source_url": "https://arxiv.org/abs/2605.16439",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have emerged as a critical and fast-growing extension of Large Language Models (LLMs) that enable multimodal reasoning through both text and image inputs. Although VLMs enrich the capabilities of language models, they also inherit and amplify key computational bottlenecks: the memory overhead caused by the large key-value (KV) cache during autoregressive decoding. This challenge is particularly severe in VLMs, where images produce longer token sequences and denser feature representations compared to text. Moreover, the spatial and information-rich nature of vision tokens introduces structured attention patterns that make many LLM-oriented KV cache compression techniques ineffective when applied directly to VLMs. In this work, we conduct a detailed empirical analysis of the behavior of vision tokens, highlighting the critical differences from purely text-based models. Based on these insights, we propose KVCapsule, a novel KV cache compression framework for vision tokens. KVCapsule keeps the pretrained VLM backbone frozen, requires no modification to the attention computation modules, and can be integrated into existing VLMs through lightweight compression and reconstruction components. We evaluate KVCapsule on multiple VLMs and benchmark tasks, demonstrating up to 2x improvement in TPS and 2.4x reduction in KV cache memory at a 60% compression ratio, with negligible degradation in accuracy or response quality. Our findings offer practical pathways to scale VLM inference under constrained memory budgets and inspire further research into structure-aware cache compression for multimodal models.",
+      "identifiers": [
+        "SemanticScholar:11713650a4865474fc54d309268bb02c5c736023"
+      ],
+      "semantic_scholar_id": "11713650a4865474fc54d309268bb02c5c736023",
+      "canonical_id": "arXiv:2605.16439",
+      "arxiv_id": "2605.16439",
+      "doi": "10.48550/arXiv.2605.16439",
+      "authors": [
+        "Ying Huang",
+        "Tharun Adithya Srikrishnan",
+        "Steven K. Reinhardt",
+        "De-Ming Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 167,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Taming Sensitive Weights : Noise Perturbation Fine-tuning for Robust LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2412.06858",
+      "year": 2024,
+      "published": "2024-12-08",
+      "venue": "CPAL",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is a critical step to enable efficient LLM serving under limited resource. However, previous research observes that certain weights in the LLM, known as outliers, are significantly sensitive to quantization noises. Existing quantization methods leave these outliers as floating points or higher precisions to retain performance, posting challenges on the efficient hardware deployment of the mixed-precision model. This work investigates an alternative way to tame the sensitive weights' impact on the quantization error, by reducing the loss Hessian trace with respect to outliers through an efficient fine-tuning process. We propose Noise Perturbation Fine-tuning (NPFT), which identifies outlier weights and add random weight perturbations on the outliers as the model going through a PEFT optimization. NPFT tames the sensitivity of outlier weights so that the quantized model performance can be improved without special treatment to the outliers. When applied to OPT and LLaMA models, our NPFT method achieves stable performance improvements for both uniform and non-uniform quantizers, while also offering better inference efficiency. Notably, the simplest RTN can achieve performance on par with GPTQ using our NPFT on LLaMA2-7B-4bits benchmark.",
+      "identifiers": [
+        "SemanticScholar:f342d143540377d6b167200bc3f22586e9f91f47"
+      ],
+      "semantic_scholar_id": "f342d143540377d6b167200bc3f22586e9f91f47",
+      "canonical_id": "arXiv:2412.06858",
+      "arxiv_id": "2412.06858",
+      "doi": "10.48550/arXiv.2412.06858",
+      "authors": [
+        "Dong-Wei Wang",
+        "Huan-Rui Yang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 689,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FLoC: Facility Location-Based Efficient Visual Token Compression for Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2511.00141",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent studies in long video understanding have harnessed the advanced visual-language reasoning capabilities of Large Multimodal Models (LMMs), driving the evolution of video-LMMs specialized for processing extended video sequences. However, the scalability of these models is severely limited by the overwhelming volume of visual tokens generated from extended video sequences. To address this challenge, we propose FLoC, an efficient visual token compression framework based on the facility location function, a principled approach that swiftly selects a compact yet highly representative and diverse subset of visual tokens within a predefined budget on the number of visual tokens. By integrating the lazy greedy algorithm, our method achieves remarkable efficiency gains by swiftly selecting a compact subset of tokens, drastically reducing the number of visual tokens while guaranteeing near-optimal performance. Notably, our approach is training-free, model-agnostic, and query-agnostic, providing a versatile solution that seamlessly integrates with diverse video-LLMs and existing workflows. Extensive evaluations on large-scale benchmarks, such as Video-MME, MLVU, LongVideoBench, and EgoSchema, show that our framework consistently surpasses recent compression techniques, highlighting its effectiveness and robustness in addressing the challenges of long video understanding as well as its processing efficiency.",
+      "identifiers": [
+        "SemanticScholar:6e5ae5e4295ae39711a5da693eecf318cd0ce73e"
+      ],
+      "semantic_scholar_id": "6e5ae5e4295ae39711a5da693eecf318cd0ce73e",
+      "canonical_id": "arXiv:2511.00141",
+      "arxiv_id": "2511.00141",
+      "doi": "10.48550/arXiv.2511.00141",
+      "authors": [
+        "Janghoon Cho",
+        "Jungsoo Lee",
+        "Munawar Hayat",
+        "Kyuwoong Hwang",
+        "F. Porikli",
+        "Sungha Choi"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 362,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STaMP: Sequence Transformation and Mixed Precision for Low-Precision Activation Quantization",
+      "source_url": "https://arxiv.org/abs/2510.26771",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is the key method for reducing inference latency, power and memory footprint of generative AI models. However, accuracy often degrades sharply when activations are quantized below eight bits. Recent work suggests that invertible linear transformations (e.g. rotations) can aid quantization, by reparameterizing feature channels and weights. In this paper, we propose \\textit{Sequence Transformation and Mixed Precision} (STaMP) quantization, a novel strategy that applies linear transformations along the \\textit{sequence} dimension to exploit the strong local correlation in language and visual data. By keeping a small number of tokens in each intermediate activation at higher precision, we can maintain model accuracy at lower (average) activations bit-widths. We evaluate STaMP on recent LVM and LLM architectures, demonstrating that it significantly improves low bit width activation quantization and complements established activation and weight quantization methods including recent feature transformations.",
+      "identifiers": [
+        "SemanticScholar:8783d6ca048f00438e124681ba00009f2922caaf"
+      ],
+      "semantic_scholar_id": "8783d6ca048f00438e124681ba00009f2922caaf",
+      "canonical_id": "arXiv:2510.26771",
+      "arxiv_id": "2510.26771",
+      "doi": "10.48550/arXiv.2510.26771",
+      "authors": [
+        "Marco Federici",
+        "Riccardo Del Chiaro",
+        "B. V. Breugel",
+        "Paul N. Whatmough",
+        "Markus Nagel"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 363,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.20745",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.20745",
+        "id:SemanticScholar:85ce7a282b23032d01e4cae88a7985f5b3743077",
+        "id:arXiv:2601.20745",
+        "title:hestia a hessianguided differentiable quantizationaware training framework for extremely lowbit llms",
+        "url:https://arxiv.org/abs/2601.20745"
+      ],
+      "record": {
+        "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+        "source_url": "https://arxiv.org/abs/2601.20745",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As large language models (LLMs) continue to scale, deployment is increasingly bottlenecked by the memory wall, motivating a shift toward extremely low-bit quantization. However, most quantization-aware training (QAT) methods apply hard rounding and the straight-through estimator (STE) from the beginning of the training, which prematurely discretizes the optimization landscape and induces persistent gradient mismatch between latent weights and quantized weights, hindering effective optimization of quantized models. To address this, we propose Hestia, a Hessian-guided differentiable QAT framework for extremely low-bit LLMs, which replaces the rigid step function with a temperature-controlled softmax relaxation to maintain gradient flow early in training while progressively hardening quantization. Furthermore, Hestia leverages a tensor-wise Hessian trace metric as a lightweight curvature signal to drive fine-grained temperature annealing, enabling sensitivity-aware discretization across the model. Evaluations on Llama-3.2 show that Hestia consistently outperforms existing ternary QAT baselines, yielding average zero-shot improvements of 5.39% and 4.34% for the 1B and 3B models. These results indicate that Hessian-guided relaxation effectively recovers representational capacity, establishing a more robust training path for 1.58-bit LLMs. The code is available at https://github.com/hestia2026/Hestia.",
+        "identifiers": [
+          "SemanticScholar:85ce7a282b23032d01e4cae88a7985f5b3743077"
+        ],
+        "semantic_scholar_id": "85ce7a282b23032d01e4cae88a7985f5b3743077",
+        "canonical_id": "arXiv:2601.20745",
+        "arxiv_id": "2601.20745",
+        "doi": "10.48550/arXiv.2601.20745",
+        "authors": [
+          "Guo-An Wang",
+          "Feiyu Wang",
+          "Zong-Wei Lv",
+          "Yikun Zong",
+          "Tong Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 273,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15454",
+      "identity_tokens": [
+        "id:SemanticScholar:95462c2e9d2b2e6ee6ccc4a90965683e3fe92ee8",
+        "id:arXiv:2608.15454",
+        "title:dynamic multibyte prediction with hierarchical language models",
+        "url:https://arxiv.org/abs/2608.15454"
+      ],
+      "record": {
+        "title": "Dynamic Multi-Byte Prediction With Hierarchical Language Models",
+        "source_url": "https://arxiv.org/abs/2608.15454",
+        "year": 2026,
+        "published": "2026-08-16",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Byte-level hierarchical language models (LMs) have recently emerged as a robust alternative to their popular counterparts that use subword tokenization. However, generating one byte at a time remains a bottleneck for inference speed. To address this, we introduce multi-byte prediction (MBP), which generates multiple bytes in parallel, speeding up inference with minimal performance impact and no additional parameters. MBP builds on the popular multi-token prediction (MTP) paradigm with two crucial innovations. First, we introduce a variable-length prediction window that aligns with the latent tokens, or segments, of a hierarchical LM. Second, we implement a novel attention-masking scheme that enables parallel byte prediction without violating causality. We show that multi-byte prediction strikes a Pareto-optimal trade-off across multiple generative tasks, instruction following, question answering, summarization, and machine translation, achieving the best trade-off between performance and inference throughput.",
+        "identifiers": [
+          "SemanticScholar:95462c2e9d2b2e6ee6ccc4a90965683e3fe92ee8"
+        ],
+        "semantic_scholar_id": "95462c2e9d2b2e6ee6ccc4a90965683e3fe92ee8",
+        "canonical_id": "arXiv:2608.15454",
+        "arxiv_id": "2608.15454",
+        "authors": [
+          "Abraham Toluwase Owodunni",
+          "C. Okocha",
+          "Christan Grant",
+          "Tomasz Limisiewicz",
+          "Sachin Kumar"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 73,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.15779",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.15779",
+        "id:SemanticScholar:5396582ebe88654242403f82f9d10a517225905a",
+        "id:arXiv:2502.15779",
+        "title:rotate clip and partition towards w2a4kv4 quantization by integrating rotation and learnable nonuniform quantizer",
+        "url:https://arxiv.org/abs/2502.15779"
+      ],
+      "record": {
+        "title": "Rotate, Clip, and Partition: Towards W2A4KV4 Quantization by Integrating Rotation and Learnable Non-uniform Quantizer",
+        "source_url": "https://arxiv.org/abs/2502.15779",
+        "year": 2025,
+        "published": "2025-02-17",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose Rotate, Clip, and Partition (RCP), a quantization-aware training (QAT) approach that first realizes extreme compression of LLMs with W2A4KV4(2-bit weight, 4-bit activation, and 4-bit KV cache) configuration. RCP integrates recent rotation techniques with a novel non-uniform weight quantizer design, by quantitatively analyzing the impact of random rotation on 2-bit weight quantization. Our weight quantizer features Learnable Direct Partitioning (LDP), which introduces learnable parameters to directly learn non-uniform intervals jointly with LLM weights. We also present a specialized GPU kernel that supports GEMV on non-uniform W2A4. Experiments show that RCP can compress LLaMA-2-7B to W2A4KV4 with a loss of only 2.84 WikiText2 ppl and 5.29 times reduced memory footprint. Furthermore, RCP can quantize challenging mobile-targeted LLaMA-3.2 models and domain-specific WizardCoder-7B and MetaMath-7B with no critical problems such as convergence failure and repetition. Code is available at https://github.com/ songsm921/RCP.",
+        "identifiers": [
+          "SemanticScholar:5396582ebe88654242403f82f9d10a517225905a"
+        ],
+        "semantic_scholar_id": "5396582ebe88654242403f82f9d10a517225905a",
+        "canonical_id": "arXiv:2502.15779",
+        "arxiv_id": "2502.15779",
+        "doi": "10.48550/arXiv.2502.15779",
+        "authors": [
+          "Euntae Choi",
+          "Su-Min Song",
+          "Woo-Sang Lim",
+          "Sungjoo Yoo"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 618,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.16439",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.16439",
+        "id:SemanticScholar:11713650a4865474fc54d309268bb02c5c736023",
+        "id:arXiv:2605.16439",
+        "title:kvcapsule efficient sequential kv cache compression for visionlanguage models with asymmetric redundancy",
+        "url:https://arxiv.org/abs/2605.16439"
+      ],
+      "record": {
+        "title": "KVCapsule: Efficient Sequential KV Cache Compression for Vision-Language Models with Asymmetric Redundancy",
+        "source_url": "https://arxiv.org/abs/2605.16439",
+        "year": 2026,
+        "published": "2026-05-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have emerged as a critical and fast-growing extension of Large Language Models (LLMs) that enable multimodal reasoning through both text and image inputs. Although VLMs enrich the capabilities of language models, they also inherit and amplify key computational bottlenecks: the memory overhead caused by the large key-value (KV) cache during autoregressive decoding. This challenge is particularly severe in VLMs, where images produce longer token sequences and denser feature representations compared to text. Moreover, the spatial and information-rich nature of vision tokens introduces structured attention patterns that make many LLM-oriented KV cache compression techniques ineffective when applied directly to VLMs. In this work, we conduct a detailed empirical analysis of the behavior of vision tokens, highlighting the critical differences from purely text-based models. Based on these insights, we propose KVCapsule, a novel KV cache compression framework for vision tokens. KVCapsule keeps the pretrained VLM backbone frozen, requires no modification to the attention computation modules, and can be integrated into existing VLMs through lightweight compression and reconstruction components. We evaluate KVCapsule on multiple VLMs and benchmark tasks, demonstrating up to 2x improvement in TPS and 2.4x reduction in KV cache memory at a 60% compression ratio, with negligible degradation in accuracy or response quality. Our findings offer practical pathways to scale VLM inference under constrained memory budgets and inspire further research into structure-aware cache compression for multimodal models.",
+        "identifiers": [
+          "SemanticScholar:11713650a4865474fc54d309268bb02c5c736023"
+        ],
+        "semantic_scholar_id": "11713650a4865474fc54d309268bb02c5c736023",
+        "canonical_id": "arXiv:2605.16439",
+        "arxiv_id": "2605.16439",
+        "doi": "10.48550/arXiv.2605.16439",
+        "authors": [
+          "Ying Huang",
+          "Tharun Adithya Srikrishnan",
+          "Steven K. Reinhardt",
+          "De-Ming Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 167,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.06858",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.06858",
+        "id:SemanticScholar:f342d143540377d6b167200bc3f22586e9f91f47",
+        "id:arXiv:2412.06858",
+        "title:taming sensitive weights noise perturbation finetuning for robust llm quantization",
+        "url:https://arxiv.org/abs/2412.06858"
+      ],
+      "record": {
+        "title": "Taming Sensitive Weights : Noise Perturbation Fine-tuning for Robust LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2412.06858",
+        "year": 2024,
+        "published": "2024-12-08",
+        "venue": "CPAL",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is a critical step to enable efficient LLM serving under limited resource. However, previous research observes that certain weights in the LLM, known as outliers, are significantly sensitive to quantization noises. Existing quantization methods leave these outliers as floating points or higher precisions to retain performance, posting challenges on the efficient hardware deployment of the mixed-precision model. This work investigates an alternative way to tame the sensitive weights' impact on the quantization error, by reducing the loss Hessian trace with respect to outliers through an efficient fine-tuning process. We propose Noise Perturbation Fine-tuning (NPFT), which identifies outlier weights and add random weight perturbations on the outliers as the model going through a PEFT optimization. NPFT tames the sensitivity of outlier weights so that the quantized model performance can be improved without special treatment to the outliers. When applied to OPT and LLaMA models, our NPFT method achieves stable performance improvements for both uniform and non-uniform quantizers, while also offering better inference efficiency. Notably, the simplest RTN can achieve performance on par with GPTQ using our NPFT on LLaMA2-7B-4bits benchmark.",
+        "identifiers": [
+          "SemanticScholar:f342d143540377d6b167200bc3f22586e9f91f47"
+        ],
+        "semantic_scholar_id": "f342d143540377d6b167200bc3f22586e9f91f47",
+        "canonical_id": "arXiv:2412.06858",
+        "arxiv_id": "2412.06858",
+        "doi": "10.48550/arXiv.2412.06858",
+        "authors": [
+          "Dong-Wei Wang",
+          "Huan-Rui Yang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 689,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.00141",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.00141",
+        "id:SemanticScholar:6e5ae5e4295ae39711a5da693eecf318cd0ce73e",
+        "id:arXiv:2511.00141",
+        "title:floc facility locationbased efficient visual token compression for long video understanding",
+        "url:https://arxiv.org/abs/2511.00141"
+      ],
+      "record": {
+        "title": "FLoC: Facility Location-Based Efficient Visual Token Compression for Long Video Understanding",
+        "source_url": "https://arxiv.org/abs/2511.00141",
+        "year": 2025,
+        "published": "2025-10-31",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent studies in long video understanding have harnessed the advanced visual-language reasoning capabilities of Large Multimodal Models (LMMs), driving the evolution of video-LMMs specialized for processing extended video sequences. However, the scalability of these models is severely limited by the overwhelming volume of visual tokens generated from extended video sequences. To address this challenge, we propose FLoC, an efficient visual token compression framework based on the facility location function, a principled approach that swiftly selects a compact yet highly representative and diverse subset of visual tokens within a predefined budget on the number of visual tokens. By integrating the lazy greedy algorithm, our method achieves remarkable efficiency gains by swiftly selecting a compact subset of tokens, drastically reducing the number of visual tokens while guaranteeing near-optimal performance. Notably, our approach is training-free, model-agnostic, and query-agnostic, providing a versatile solution that seamlessly integrates with diverse video-LLMs and existing workflows. Extensive evaluations on large-scale benchmarks, such as Video-MME, MLVU, LongVideoBench, and EgoSchema, show that our framework consistently surpasses recent compression techniques, highlighting its effectiveness and robustness in addressing the challenges of long video understanding as well as its processing efficiency.",
+        "identifiers": [
+          "SemanticScholar:6e5ae5e4295ae39711a5da693eecf318cd0ce73e"
+        ],
+        "semantic_scholar_id": "6e5ae5e4295ae39711a5da693eecf318cd0ce73e",
+        "canonical_id": "arXiv:2511.00141",
+        "arxiv_id": "2511.00141",
+        "doi": "10.48550/arXiv.2511.00141",
+        "authors": [
+          "Janghoon Cho",
+          "Jungsoo Lee",
+          "Munawar Hayat",
+          "Kyuwoong Hwang",
+          "F. Porikli",
+          "Sungha Choi"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 362,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.26771",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.26771",
+        "id:SemanticScholar:8783d6ca048f00438e124681ba00009f2922caaf",
+        "id:arXiv:2510.26771",
+        "title:stamp sequence transformation and mixed precision for lowprecision activation quantization",
+        "url:https://arxiv.org/abs/2510.26771"
+      ],
+      "record": {
+        "title": "STaMP: Sequence Transformation and Mixed Precision for Low-Precision Activation Quantization",
+        "source_url": "https://arxiv.org/abs/2510.26771",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is the key method for reducing inference latency, power and memory footprint of generative AI models. However, accuracy often degrades sharply when activations are quantized below eight bits. Recent work suggests that invertible linear transformations (e.g. rotations) can aid quantization, by reparameterizing feature channels and weights. In this paper, we propose \\textit{Sequence Transformation and Mixed Precision} (STaMP) quantization, a novel strategy that applies linear transformations along the \\textit{sequence} dimension to exploit the strong local correlation in language and visual data. By keeping a small number of tokens in each intermediate activation at higher precision, we can maintain model accuracy at lower (average) activations bit-widths. We evaluate STaMP on recent LVM and LLM architectures, demonstrating that it significantly improves low bit width activation quantization and complements established activation and weight quantization methods including recent feature transformations.",
+        "identifiers": [
+          "SemanticScholar:8783d6ca048f00438e124681ba00009f2922caaf"
+        ],
+        "semantic_scholar_id": "8783d6ca048f00438e124681ba00009f2922caaf",
+        "canonical_id": "arXiv:2510.26771",
+        "arxiv_id": "2510.26771",
+        "doi": "10.48550/arXiv.2510.26771",
+        "authors": [
+          "Marco Federici",
+          "Riccardo Del Chiaro",
+          "B. V. Breugel",
+          "Paul N. Whatmough",
+          "Markus Nagel"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 363,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:76942abec2c175ca5c458e1298cb4f3a0f7263aaca59d5cb7d93f6d6e0ab38dd",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

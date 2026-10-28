@@ -1,0 +1,876 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f6081ccccbbd3212-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f6081ccccbbd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2510.10136",
+    "arXiv:2604.08118",
+    "arXiv:2604.11288",
+    "arXiv:2604.15244",
+    "arXiv:2606.02544",
+    "arXiv:2607.21535",
+    "arXiv:2608.07915",
+    "arXiv:2609.36062",
+    "arXiv:2610.01950"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:57:57.572407+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2510.10136",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08118",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.11288",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.15244",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.02544",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.21535",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.07915",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36062",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.01950",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "From Tokens to Steps: Verification-Aware Speculative Decoding for Efficient Multi-Step Reasoning",
+      "source_url": "https://arxiv.org/abs/2604.15244",
+      "year": 2026,
+      "published": "2026-04-16",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose outputs that a stronger target model verifies. However, its token-centric nature allows erroneous steps to propagate. Prior approaches mitigate this using external reward models, but incur additional latency, computational overhead, and limit generalizability. We propose SpecGuard, a verification-aware speculative decoding framework that performs step-level verification using only model-internal signals. At each step, SpecGuard samples multiple draft candidates and selects the most consistent step, which is then validated using an ensemble of two lightweight model-internal signals: (i) an attention-based grounding score that measures attribution to the input and previously accepted steps, and (ii) a log-probability-based score that captures token-level confidence. These signals jointly determine whether a step is accepted or recomputed using the target, allocating compute selectively. Experiments across a range of reasoning benchmarks show that SpecGuard improves accuracy by 3.6% while reducing latency by ~11%, outperforming both SD and reward-guided SD.",
+      "identifiers": [
+        "SemanticScholar:93ee8977d9a7412df81f6e48a1008443b76722d8"
+      ],
+      "semantic_scholar_id": "93ee8977d9a7412df81f6e48a1008443b76722d8",
+      "canonical_id": "arXiv:2604.15244",
+      "arxiv_id": "2604.15244",
+      "doi": "10.48550/arXiv.2604.15244",
+      "authors": [
+        "Kiran Purohit",
+        "Ramasuri Narayanam",
+        "Soumyabrata Pal"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 195,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+      "source_url": "https://arxiv.org/abs/2607.21535",
+      "year": 2026,
+      "published": "2026-07-23",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation by having a cheap draft propose tokens that a target verifies in parallel. Frontier models increasingly ship a built-in Multi-Token-Prediction (MTP/NEXTN) draft head under the assumption that the draft is negligibly cheap. At million-token context this breaks: an MTP draft head typically runs full attention over the entire KV cache at every draft step, so its read grows linearly with context and comes to dominate the draft cost -- precisely where speculation is most valuable. The effect compounds with draft length (a deep native draft can turn net-negative, slower than no speculation) and sharpens under hybrid/linear-attention targets, where cheaper verification leaves the draft's full-attention read exposed. We apply a StreamingLLM-style sliding window plus attention sink to the draft's attention only (Windowed-MTP), leaving full-attention verification intact. It is training-free, drop-in, and lossless by construction: the full-attention target still decides every accepted token, so windowing changes only which tokens are proposed, never which are accepted. It bounds the draft's KV working set to a constant, dropping ~99% of KV entries at 1M. Across three architecture families (Qwen GDN-MoE 35B/122B and a Mamba2-hybrid NoPE 120B) at 1M context on a single GPU in SGLang, windowing cuts the per-decode-step cost over the shipping native MTP draft by +28% to +44%, an input-invariant margin that widens with context. Since per-token latency is this cost divided by acceptance length, at matched acceptance end-to-end decode latency improves by the same amount, and more where windowing also lifts acceptance, while preserving the target's verified output distribution. Finally, the unread draft KV -- 7.7-11% of total KV at 1M -- is reclaimed via a compact ring buffer at no acceptance or quality cost.",
+      "identifiers": [
+        "SemanticScholar:262b00283babc6a80270c46b5d3ef3061d301855"
+      ],
+      "semantic_scholar_id": "262b00283babc6a80270c46b5d3ef3061d301855",
+      "canonical_id": "arXiv:2607.21535",
+      "arxiv_id": "2607.21535",
+      "doi": "10.48550/arXiv.2607.21535",
+      "authors": [
+        "Alagappan Valliappan"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 97,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SMat-Attention: Structured Long-Context Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2609.36062",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context sequence models face a fundamental tradeoff: softmax attention uses flexible token-level interactions at quadratic cost, whereas linear attention obtains linear-time training and constant-time decoding by compressing history into a fixed-size state. In this work, we ask whether we can connect these regimes through a tunable notion of structure. To this end, we introduce Structured Matrix Attention (SMat-Attention) via a family of causal masks with structured long-range routing whose row supports have VC-dimension $d$. In our construction, $d=1$ recovers the standard causal mask, and increasing $d$ permits richer subset-routing patterns. We give chunkwise forward and backward algorithms to enable hardware-efficiency. For sequences of length $T$, the hard-routing construction takes $O(T^{2-3/d}+T)$ work, despite the mask being dense, for our prescribed family. In fixed-horizon streaming, decoding after the distant prefix takes constant time per token using $O(T^{1-1/d})$ cached states. SMat-Attention therefore makes VC-dimension an explicit knob governing access-pattern complexity, prefill cost, and decoding memory. Empirically, subset-routing and rule-assisted multi-key retrieval experiments illustrate the masks'routing expressiveness. Extensions to Mamba-2 and Gated DeltaNet using learned routing with top-$k$ query reads retain subquadratic prefill, improve recall accuracy over the backbones in several settings, and achieve comparable small-scale language-modeling performance.",
+      "identifiers": [
+        "SemanticScholar:e8646950246ec233217f894924f2148016030f2e"
+      ],
+      "semantic_scholar_id": "e8646950246ec233217f894924f2148016030f2e",
+      "canonical_id": "arXiv:2609.36062",
+      "arxiv_id": "2609.36062",
+      "authors": [
+        "E. Anand",
+        "Abdullah Ateyeh",
+        "Archer Wang",
+        "Marin Soljačić"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SimSD: Simple Speculative Decoding in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2606.02544",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive (AR) LLMs, offering faster inference through parallel or blockwise decoding. However, their masked language modeling formulation remains incompatible with standard token-level speculative decoding, one of the most effective acceleration techniques for AR models. In AR decoding, the causal mask preserves temporally valid token-level contexts, enabling a target model to verify multiple drafted tokens in a single forward pass. In contrast, dLLMs rely on mask tokens and bidirectional attention, causing the effective context to change across denoising steps and preventing direct token-level speculative verification. To bridge this gap, we propose a simple but effective speculative decoding algorithm for diffusion language models, named SimSD, which mainly adopts a plug-and-play masking strategy that equips dLLMs with temporally valid token-level contexts for speculative decoding. Our method explicitly introduces reference tokens from draft-model predictions and designs an attention mask that regulates their interaction with current-step tokens, allowing dLLMs to compute valid logits for drafted tokens in a single forward pass. This restores the key verification ability provided by causal masking in AR models while preserving the parallel decoding advantages of dLLMs. The proposed method is training-free and can be flexibly integrated with other acceleration techniques such as KV cache and blockwise decoding. Experiments on SDAR-family dLLMs across four benchmarks show that our method achieves up to 7.46x higher decoding throughput while maintaining and even improving average generation quality.",
+      "identifiers": [
+        "SemanticScholar:9fe5c1b482a870217396d1d1e65da6d3e8650510"
+      ],
+      "semantic_scholar_id": "9fe5c1b482a870217396d1d1e65da6d3e8650510",
+      "canonical_id": "arXiv:2606.02544",
+      "arxiv_id": "2606.02544",
+      "doi": "10.48550/arXiv.2606.02544",
+      "authors": [
+        "Junxia Cui",
+        "Haotian Ye",
+        "Run-Chu Tian",
+        "Hong-Can Guo",
+        "Jin Jiang",
+        "Hao-Ru Li",
+        "Chaojie Ren",
+        "Yiming Huang",
+        "Kai-Jie Zhu",
+        "Zhong-Kai Yu",
+        "Kun Zhou",
+        "Jingbo Shang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 149,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding",
+      "source_url": "https://arxiv.org/abs/2608.07915",
+      "year": 2026,
+      "published": "2026-08-08",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) increasingly read long inputs in the agentic era, from whole documents and codebases to conversations across many turns. Their inference memory is then dominated by the key-value (KV) cache, the stored attention keys and values of every token the model has read and generated. Because the cache grows with context length and is re-read in full at every generated token, a longer context means more GPU memory. To reduce this cost, most existing methods compress the KV cache by lowering every stored value to the same low precision, a technique known as quantization. They can push this to nearly two bits per value, but rarely further, because quality drops sharply at this 2-bit cliff: four levels are too few for the cache's outlier-heavy values, where a few large entries consume the levels and collapse the rest into noise. A natural remedy is to spend more bits on the channels (feature dimensions) that matter and fewer on the rest, but the raw cache offers no handle: its channels are strongly correlated, so none stands out as more important. Our analysis shows that this handle appears once the cache is rotated into a coordinate system computed from its own statistics, removing these correlations. There, a small fraction of channels carries almost all the information, and spending the budget on those few is far more accurate than spreading it evenly. Guided by this analysis, we develop SPECTRA, a training-free, drop-in codec that re-encodes the cache into this coordinate system and concentrates the bit budget on the channels that carry the signal. On Llama-3.1-8B and Qwen2.5-7B over long-context benchmarks, SPECTRA is near-lossless at 4x compression, competitive at 8x where uniform quantization has collapsed, and reaches up to 12x, pushing usable compression past the 2-bit cliff so the same GPU holds longer contexts and larger batches.",
+      "identifiers": [
+        "SemanticScholar:9cb1c1e4f8e4961bc2368addc2761a2deff55192"
+      ],
+      "semantic_scholar_id": "9cb1c1e4f8e4961bc2368addc2761a2deff55192",
+      "canonical_id": "arXiv:2608.07915",
+      "arxiv_id": "2608.07915",
+      "authors": [
+        "Jia-Mu Zhang",
+        "Liang Wu",
+        "Kelly Wan",
+        "Hanjie Chen",
+        "Liang-Jie Hong"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 81,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Transactional Attention: Semantic Sponsorship for KV-Cache Retention",
+      "source_url": "https://arxiv.org/abs/2604.11288",
+      "year": 2026,
+      "published": "2026-04-13",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "At K=16 tokens (0.4% of a 4K context), every existing KV-cache compression method achieves 0% on credential retrieval. The failure mode is dormant tokens: credentials, API keys, and configuration values that receive near-zero attention but become essential at generation time. Because these tokens lack the statistical signals that eviction policies rely on, no method based on attention scores, reconstruction loss, or learned retention gates retains them. We introduce Transactional Attention (TA), a sponsorship mechanism in which structural anchor patterns (e.g.,\"key:\",\"password:\") protect adjacent value-bearing tokens from eviction. TA achieves 100% credential retrieval at K=16 where six baselines (H2O, TOVA, SnapKV, StreamingLLM, PyramidKV, DynamicKV) achieve 0%, and sustains 100% accuracy across 200 function-calling trials. TA-Fast, an attention-free variant, reduces memory overhead by 52% and is compatible with SDPA and FlashAttention. TA is orthogonal to existing compression methods and adds less than 1% latency overhead.",
+      "identifiers": [
+        "SemanticScholar:6ffa0ad7d2deab80f10c93cbc8c8f5adac37eaee"
+      ],
+      "semantic_scholar_id": "6ffa0ad7d2deab80f10c93cbc8c8f5adac37eaee",
+      "canonical_id": "arXiv:2604.11288",
+      "arxiv_id": "2604.11288",
+      "doi": "10.48550/arXiv.2604.11288",
+      "authors": [
+        "Abhinaba Basu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 198,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference",
+      "source_url": "https://arxiv.org/abs/2610.01950",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse expert activation reduces MoE models'computation, yet expert weights can exceed limited device memory. Offloading makes inference feasible on a compact AI appliance but exposes host-to-device transfers to the inference path. We present MoE-CORE, a system that coordinates expert offloading and residency for memory-constrained MoE inference. It stages complete expert layers in alternating buffers during prefill. During decode, it combines nonuniform layer-wise cache capacity, domain-informed initialization, routing-history-aware replacement, and cross-layer prefetching. The main configuration executes router-selected experts exactly; an optional score-based substitution path handles eligible low-score misses. The main comparison uses 1K- and 128-token output caps for MoE-CORE and vLLM Prefetch, respectively. Across five workloads per model, MoE-CORE records a mean time per output token (TPOT) of 38.0-44.8 ms versus 1268.9-1269.1 ms for the evaluated vLLM Prefetch configuration on DeepSeek-V4-Flash-W4A8; the corresponding values on GLM-5.2-W4A8C8 are 206.6-220.5 and 5941.5-5941.8 ms. Under an 84-GB NPU-memory cap, the best measured DeepSeek GSM8K configuration achieves a TPOT of 21.5 ms with approximate expert substitution and multi-token prediction (MTP) at depth 2. These results support coordinated expert residency and transfer scheduling under a device-memory constraint. The code is here.",
+      "identifiers": [
+        "SemanticScholar:68dc26e33b33f7f7bc7049df561c37662a52824e"
+      ],
+      "semantic_scholar_id": "68dc26e33b33f7f7bc7049df561c37662a52824e",
+      "canonical_id": "arXiv:2610.01950",
+      "arxiv_id": "2610.01950",
+      "authors": [
+        "Ke Yang",
+        "Yong-Ji Gao",
+        "Xu-Shi Li",
+        "Kui Luo",
+        "Si-Cheng Zhang",
+        "Tian-Ming Zhou",
+        "Ke-Yi Liu",
+        "S. Lu",
+        "Ao-Xuan Chen",
+        "Jie Meng",
+        "Jing Gao",
+        "Dan Li",
+        "Xin-Kai You",
+        "Zhi-Xiang Xia",
+        "Yan Shi",
+        "Yang Liu",
+        "Yan-Jia Zeng",
+        "Liang-Jun Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PermLLM: Learnable Channel Permutation for N:M Sparse Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.10136",
+      "year": 2025,
+      "published": "2025-10-11",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Channel permutation is a powerful technique for enhancing the accuracy of N:M sparse models by reordering the channels of weight matrices to prioritize the retention of important weights. However, traditional channel permutation methods rely on handcrafted quality metrics, which often fail to accurately capture the true impact of pruning on model performance. To address this limitation, we propose PermLLM, a novel post-training pruning framework that introduces learnable channel permutation (LCP) for N:M sparsity. LCP leverages Sinkhorn normalization to transform discrete permutation matrices into differentiable soft permutation matrices, enabling end-to-end optimization. Additionally, PermLLM incorporates an efficient block-wise channel permutation strategy, which significantly reduces the number of learnable parameters and computational complexity. PermLLM seamlessly integrates with existing one-shot pruning methods to adaptively optimize channel permutations, effectively mitigating pruning-induced errors. Extensive experiments on the LLaMA series, Qwen, and OPT models demonstrate that PermLLM achieves superior performance in optimizing N:M sparse models. The code is available at https://github.com/lanchengzou/PermLLM.",
+      "identifiers": [
+        "SemanticScholar:594755fc68c7e4eb355cc518ea28334c3a7b7094"
+      ],
+      "semantic_scholar_id": "594755fc68c7e4eb355cc518ea28334c3a7b7094",
+      "canonical_id": "arXiv:2510.10136",
+      "arxiv_id": "2510.10136",
+      "doi": "10.48550/arXiv.2510.10136",
+      "authors": [
+        "Lan-Cheng Zou",
+        "Shuo Yin",
+        "Ze-Hua Pei",
+        "Tsung-Yi Ho",
+        "F. Farnia",
+        "Bei Yu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2604.08118",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Additive quantization enables extreme LLM compression with O(1) lookup-table dequantization, making it attractive for edge deployment. Yet at 2-bit precision, it often fails catastrophically, even with extensive search and finetuning. We show that the dominant bottleneck is codebook initialisation. Greedy sequential initialisation frequently places the model in poor optimisation regions that subsequent beam search and PV-tuning struggle to overcome. We analyse this behaviour through the representational ratio \\r{ho} = N/KM, which characterises the relationship between weight groups and codebook capacity, and propose OA-EM, an output-aware EM initialisation method using Hessian-weighted Mahalanobis distance. Across compression rates, search budgets, and three architectures (Llama 3.2 3B, Llama 3.1 8B, Qwen 2.5 3B), OA-EM consistently produces better solutions after PV-tuning and dominates the quality-compute frontier. The severity of the bottleneck scales with \\r{ho}: moderate at 3 bpp but extreme at 2 bpp, where poor initialisation can degrade perplexity by orders of magnitude. More broadly, our results highlight the importance of optimisation geometry in compressed model spaces, where initialisation can dominate subsequent search and fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:9a6349913b19ab5bb0cb39bc63a754c3b7d79bad"
+      ],
+      "semantic_scholar_id": "9a6349913b19ab5bb0cb39bc63a754c3b7d79bad",
+      "canonical_id": "arXiv:2604.08118",
+      "arxiv_id": "2604.08118",
+      "doi": "10.48550/arXiv.2604.08118",
+      "authors": [
+        "Ian W. Kennedy",
+        "N. Moosavi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 202,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.15244",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.15244",
+        "id:SemanticScholar:93ee8977d9a7412df81f6e48a1008443b76722d8",
+        "id:arXiv:2604.15244",
+        "title:from tokens to steps verificationaware speculative decoding for efficient multistep reasoning",
+        "url:https://arxiv.org/abs/2604.15244"
+      ],
+      "record": {
+        "title": "From Tokens to Steps: Verification-Aware Speculative Decoding for Efficient Multi-Step Reasoning",
+        "source_url": "https://arxiv.org/abs/2604.15244",
+        "year": 2026,
+        "published": "2026-04-16",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose outputs that a stronger target model verifies. However, its token-centric nature allows erroneous steps to propagate. Prior approaches mitigate this using external reward models, but incur additional latency, computational overhead, and limit generalizability. We propose SpecGuard, a verification-aware speculative decoding framework that performs step-level verification using only model-internal signals. At each step, SpecGuard samples multiple draft candidates and selects the most consistent step, which is then validated using an ensemble of two lightweight model-internal signals: (i) an attention-based grounding score that measures attribution to the input and previously accepted steps, and (ii) a log-probability-based score that captures token-level confidence. These signals jointly determine whether a step is accepted or recomputed using the target, allocating compute selectively. Experiments across a range of reasoning benchmarks show that SpecGuard improves accuracy by 3.6% while reducing latency by ~11%, outperforming both SD and reward-guided SD.",
+        "identifiers": [
+          "SemanticScholar:93ee8977d9a7412df81f6e48a1008443b76722d8"
+        ],
+        "semantic_scholar_id": "93ee8977d9a7412df81f6e48a1008443b76722d8",
+        "canonical_id": "arXiv:2604.15244",
+        "arxiv_id": "2604.15244",
+        "doi": "10.48550/arXiv.2604.15244",
+        "authors": [
+          "Kiran Purohit",
+          "Ramasuri Narayanam",
+          "Soumyabrata Pal"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 195,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.21535",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.21535",
+        "id:SemanticScholar:262b00283babc6a80270c46b5d3ef3061d301855",
+        "id:arXiv:2607.21535",
+        "title:windowedmtp removing the fullcontext draftkv tax at milliontoken context",
+        "url:https://arxiv.org/abs/2607.21535"
+      ],
+      "record": {
+        "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+        "source_url": "https://arxiv.org/abs/2607.21535",
+        "year": 2026,
+        "published": "2026-07-23",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive generation by having a cheap draft propose tokens that a target verifies in parallel. Frontier models increasingly ship a built-in Multi-Token-Prediction (MTP/NEXTN) draft head under the assumption that the draft is negligibly cheap. At million-token context this breaks: an MTP draft head typically runs full attention over the entire KV cache at every draft step, so its read grows linearly with context and comes to dominate the draft cost -- precisely where speculation is most valuable. The effect compounds with draft length (a deep native draft can turn net-negative, slower than no speculation) and sharpens under hybrid/linear-attention targets, where cheaper verification leaves the draft's full-attention read exposed. We apply a StreamingLLM-style sliding window plus attention sink to the draft's attention only (Windowed-MTP), leaving full-attention verification intact. It is training-free, drop-in, and lossless by construction: the full-attention target still decides every accepted token, so windowing changes only which tokens are proposed, never which are accepted. It bounds the draft's KV working set to a constant, dropping ~99% of KV entries at 1M. Across three architecture families (Qwen GDN-MoE 35B/122B and a Mamba2-hybrid NoPE 120B) at 1M context on a single GPU in SGLang, windowing cuts the per-decode-step cost over the shipping native MTP draft by +28% to +44%, an input-invariant margin that widens with context. Since per-token latency is this cost divided by acceptance length, at matched acceptance end-to-end decode latency improves by the same amount, and more where windowing also lifts acceptance, while preserving the target's verified output distribution. Finally, the unread draft KV -- 7.7-11% of total KV at 1M -- is reclaimed via a compact ring buffer at no acceptance or quality cost.",
+        "identifiers": [
+          "SemanticScholar:262b00283babc6a80270c46b5d3ef3061d301855"
+        ],
+        "semantic_scholar_id": "262b00283babc6a80270c46b5d3ef3061d301855",
+        "canonical_id": "arXiv:2607.21535",
+        "arxiv_id": "2607.21535",
+        "doi": "10.48550/arXiv.2607.21535",
+        "authors": [
+          "Alagappan Valliappan"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 97,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36062",
+      "identity_tokens": [
+        "id:SemanticScholar:e8646950246ec233217f894924f2148016030f2e",
+        "id:arXiv:2609.36062",
+        "title:smatattention structured longcontext sequence modeling",
+        "url:https://arxiv.org/abs/2609.36062"
+      ],
+      "record": {
+        "title": "SMat-Attention: Structured Long-Context Sequence Modeling",
+        "source_url": "https://arxiv.org/abs/2609.36062",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context sequence models face a fundamental tradeoff: softmax attention uses flexible token-level interactions at quadratic cost, whereas linear attention obtains linear-time training and constant-time decoding by compressing history into a fixed-size state. In this work, we ask whether we can connect these regimes through a tunable notion of structure. To this end, we introduce Structured Matrix Attention (SMat-Attention) via a family of causal masks with structured long-range routing whose row supports have VC-dimension $d$. In our construction, $d=1$ recovers the standard causal mask, and increasing $d$ permits richer subset-routing patterns. We give chunkwise forward and backward algorithms to enable hardware-efficiency. For sequences of length $T$, the hard-routing construction takes $O(T^{2-3/d}+T)$ work, despite the mask being dense, for our prescribed family. In fixed-horizon streaming, decoding after the distant prefix takes constant time per token using $O(T^{1-1/d})$ cached states. SMat-Attention therefore makes VC-dimension an explicit knob governing access-pattern complexity, prefill cost, and decoding memory. Empirically, subset-routing and rule-assisted multi-key retrieval experiments illustrate the masks'routing expressiveness. Extensions to Mamba-2 and Gated DeltaNet using learned routing with top-$k$ query reads retain subquadratic prefill, improve recall accuracy over the backbones in several settings, and achieve comparable small-scale language-modeling performance.",
+        "identifiers": [
+          "SemanticScholar:e8646950246ec233217f894924f2148016030f2e"
+        ],
+        "semantic_scholar_id": "e8646950246ec233217f894924f2148016030f2e",
+        "canonical_id": "arXiv:2609.36062",
+        "arxiv_id": "2609.36062",
+        "authors": [
+          "E. Anand",
+          "Abdullah Ateyeh",
+          "Archer Wang",
+          "Marin Soljačić"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.02544",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.02544",
+        "id:SemanticScholar:9fe5c1b482a870217396d1d1e65da6d3e8650510",
+        "id:arXiv:2606.02544",
+        "title:simsd simple speculative decoding in diffusion language models",
+        "url:https://arxiv.org/abs/2606.02544"
+      ],
+      "record": {
+        "title": "SimSD: Simple Speculative Decoding in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2606.02544",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive (AR) LLMs, offering faster inference through parallel or blockwise decoding. However, their masked language modeling formulation remains incompatible with standard token-level speculative decoding, one of the most effective acceleration techniques for AR models. In AR decoding, the causal mask preserves temporally valid token-level contexts, enabling a target model to verify multiple drafted tokens in a single forward pass. In contrast, dLLMs rely on mask tokens and bidirectional attention, causing the effective context to change across denoising steps and preventing direct token-level speculative verification. To bridge this gap, we propose a simple but effective speculative decoding algorithm for diffusion language models, named SimSD, which mainly adopts a plug-and-play masking strategy that equips dLLMs with temporally valid token-level contexts for speculative decoding. Our method explicitly introduces reference tokens from draft-model predictions and designs an attention mask that regulates their interaction with current-step tokens, allowing dLLMs to compute valid logits for drafted tokens in a single forward pass. This restores the key verification ability provided by causal masking in AR models while preserving the parallel decoding advantages of dLLMs. The proposed method is training-free and can be flexibly integrated with other acceleration techniques such as KV cache and blockwise decoding. Experiments on SDAR-family dLLMs across four benchmarks show that our method achieves up to 7.46x higher decoding throughput while maintaining and even improving average generation quality.",
+        "identifiers": [
+          "SemanticScholar:9fe5c1b482a870217396d1d1e65da6d3e8650510"
+        ],
+        "semantic_scholar_id": "9fe5c1b482a870217396d1d1e65da6d3e8650510",
+        "canonical_id": "arXiv:2606.02544",
+        "arxiv_id": "2606.02544",
+        "doi": "10.48550/arXiv.2606.02544",
+        "authors": [
+          "Junxia Cui",
+          "Haotian Ye",
+          "Run-Chu Tian",
+          "Hong-Can Guo",
+          "Jin Jiang",
+          "Hao-Ru Li",
+          "Chaojie Ren",
+          "Yiming Huang",
+          "Kai-Jie Zhu",
+          "Zhong-Kai Yu",
+          "Kun Zhou",
+          "Jingbo Shang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 149,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.07915",
+      "identity_tokens": [
+        "id:SemanticScholar:9cb1c1e4f8e4961bc2368addc2761a2deff55192",
+        "id:arXiv:2608.07915",
+        "title:spectra pushing the kv cache beyond the 2bit cliff via spectral transform coding",
+        "url:https://arxiv.org/abs/2608.07915"
+      ],
+      "record": {
+        "title": "SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding",
+        "source_url": "https://arxiv.org/abs/2608.07915",
+        "year": 2026,
+        "published": "2026-08-08",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) increasingly read long inputs in the agentic era, from whole documents and codebases to conversations across many turns. Their inference memory is then dominated by the key-value (KV) cache, the stored attention keys and values of every token the model has read and generated. Because the cache grows with context length and is re-read in full at every generated token, a longer context means more GPU memory. To reduce this cost, most existing methods compress the KV cache by lowering every stored value to the same low precision, a technique known as quantization. They can push this to nearly two bits per value, but rarely further, because quality drops sharply at this 2-bit cliff: four levels are too few for the cache's outlier-heavy values, where a few large entries consume the levels and collapse the rest into noise. A natural remedy is to spend more bits on the channels (feature dimensions) that matter and fewer on the rest, but the raw cache offers no handle: its channels are strongly correlated, so none stands out as more important. Our analysis shows that this handle appears once the cache is rotated into a coordinate system computed from its own statistics, removing these correlations. There, a small fraction of channels carries almost all the information, and spending the budget on those few is far more accurate than spreading it evenly. Guided by this analysis, we develop SPECTRA, a training-free, drop-in codec that re-encodes the cache into this coordinate system and concentrates the bit budget on the channels that carry the signal. On Llama-3.1-8B and Qwen2.5-7B over long-context benchmarks, SPECTRA is near-lossless at 4x compression, competitive at 8x where uniform quantization has collapsed, and reaches up to 12x, pushing usable compression past the 2-bit cliff so the same GPU holds longer contexts and larger batches.",
+        "identifiers": [
+          "SemanticScholar:9cb1c1e4f8e4961bc2368addc2761a2deff55192"
+        ],
+        "semantic_scholar_id": "9cb1c1e4f8e4961bc2368addc2761a2deff55192",
+        "canonical_id": "arXiv:2608.07915",
+        "arxiv_id": "2608.07915",
+        "authors": [
+          "Jia-Mu Zhang",
+          "Liang Wu",
+          "Kelly Wan",
+          "Hanjie Chen",
+          "Liang-Jie Hong"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 81,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.11288",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.11288",
+        "id:SemanticScholar:6ffa0ad7d2deab80f10c93cbc8c8f5adac37eaee",
+        "id:arXiv:2604.11288",
+        "title:transactional attention semantic sponsorship for kvcache retention",
+        "url:https://arxiv.org/abs/2604.11288"
+      ],
+      "record": {
+        "title": "Transactional Attention: Semantic Sponsorship for KV-Cache Retention",
+        "source_url": "https://arxiv.org/abs/2604.11288",
+        "year": 2026,
+        "published": "2026-04-13",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "At K=16 tokens (0.4% of a 4K context), every existing KV-cache compression method achieves 0% on credential retrieval. The failure mode is dormant tokens: credentials, API keys, and configuration values that receive near-zero attention but become essential at generation time. Because these tokens lack the statistical signals that eviction policies rely on, no method based on attention scores, reconstruction loss, or learned retention gates retains them. We introduce Transactional Attention (TA), a sponsorship mechanism in which structural anchor patterns (e.g.,\"key:\",\"password:\") protect adjacent value-bearing tokens from eviction. TA achieves 100% credential retrieval at K=16 where six baselines (H2O, TOVA, SnapKV, StreamingLLM, PyramidKV, DynamicKV) achieve 0%, and sustains 100% accuracy across 200 function-calling trials. TA-Fast, an attention-free variant, reduces memory overhead by 52% and is compatible with SDPA and FlashAttention. TA is orthogonal to existing compression methods and adds less than 1% latency overhead.",
+        "identifiers": [
+          "SemanticScholar:6ffa0ad7d2deab80f10c93cbc8c8f5adac37eaee"
+        ],
+        "semantic_scholar_id": "6ffa0ad7d2deab80f10c93cbc8c8f5adac37eaee",
+        "canonical_id": "arXiv:2604.11288",
+        "arxiv_id": "2604.11288",
+        "doi": "10.48550/arXiv.2604.11288",
+        "authors": [
+          "Abhinaba Basu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 198,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01950",
+      "identity_tokens": [
+        "id:SemanticScholar:68dc26e33b33f7f7bc7049df561c37662a52824e",
+        "id:arXiv:2610.01950",
+        "title:moecore coordinated expert offloading and residency for memoryconstrained moe inference",
+        "url:https://arxiv.org/abs/2610.01950"
+      ],
+      "record": {
+        "title": "MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference",
+        "source_url": "https://arxiv.org/abs/2610.01950",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse expert activation reduces MoE models'computation, yet expert weights can exceed limited device memory. Offloading makes inference feasible on a compact AI appliance but exposes host-to-device transfers to the inference path. We present MoE-CORE, a system that coordinates expert offloading and residency for memory-constrained MoE inference. It stages complete expert layers in alternating buffers during prefill. During decode, it combines nonuniform layer-wise cache capacity, domain-informed initialization, routing-history-aware replacement, and cross-layer prefetching. The main configuration executes router-selected experts exactly; an optional score-based substitution path handles eligible low-score misses. The main comparison uses 1K- and 128-token output caps for MoE-CORE and vLLM Prefetch, respectively. Across five workloads per model, MoE-CORE records a mean time per output token (TPOT) of 38.0-44.8 ms versus 1268.9-1269.1 ms for the evaluated vLLM Prefetch configuration on DeepSeek-V4-Flash-W4A8; the corresponding values on GLM-5.2-W4A8C8 are 206.6-220.5 and 5941.5-5941.8 ms. Under an 84-GB NPU-memory cap, the best measured DeepSeek GSM8K configuration achieves a TPOT of 21.5 ms with approximate expert substitution and multi-token prediction (MTP) at depth 2. These results support coordinated expert residency and transfer scheduling under a device-memory constraint. The code is here.",
+        "identifiers": [
+          "SemanticScholar:68dc26e33b33f7f7bc7049df561c37662a52824e"
+        ],
+        "semantic_scholar_id": "68dc26e33b33f7f7bc7049df561c37662a52824e",
+        "canonical_id": "arXiv:2610.01950",
+        "arxiv_id": "2610.01950",
+        "authors": [
+          "Ke Yang",
+          "Yong-Ji Gao",
+          "Xu-Shi Li",
+          "Kui Luo",
+          "Si-Cheng Zhang",
+          "Tian-Ming Zhou",
+          "Ke-Yi Liu",
+          "S. Lu",
+          "Ao-Xuan Chen",
+          "Jie Meng",
+          "Jing Gao",
+          "Dan Li",
+          "Xin-Kai You",
+          "Zhi-Xiang Xia",
+          "Yan Shi",
+          "Yang Liu",
+          "Yan-Jia Zeng",
+          "Liang-Jun Feng"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.10136",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.10136",
+        "id:SemanticScholar:594755fc68c7e4eb355cc518ea28334c3a7b7094",
+        "id:arXiv:2510.10136",
+        "title:permllm learnable channel permutation for nm sparse large language models",
+        "url:https://arxiv.org/abs/2510.10136"
+      ],
+      "record": {
+        "title": "PermLLM: Learnable Channel Permutation for N:M Sparse Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.10136",
+        "year": 2025,
+        "published": "2025-10-11",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Channel permutation is a powerful technique for enhancing the accuracy of N:M sparse models by reordering the channels of weight matrices to prioritize the retention of important weights. However, traditional channel permutation methods rely on handcrafted quality metrics, which often fail to accurately capture the true impact of pruning on model performance. To address this limitation, we propose PermLLM, a novel post-training pruning framework that introduces learnable channel permutation (LCP) for N:M sparsity. LCP leverages Sinkhorn normalization to transform discrete permutation matrices into differentiable soft permutation matrices, enabling end-to-end optimization. Additionally, PermLLM incorporates an efficient block-wise channel permutation strategy, which significantly reduces the number of learnable parameters and computational complexity. PermLLM seamlessly integrates with existing one-shot pruning methods to adaptively optimize channel permutations, effectively mitigating pruning-induced errors. Extensive experiments on the LLaMA series, Qwen, and OPT models demonstrate that PermLLM achieves superior performance in optimizing N:M sparse models. The code is available at https://github.com/lanchengzou/PermLLM.",
+        "identifiers": [
+          "SemanticScholar:594755fc68c7e4eb355cc518ea28334c3a7b7094"
+        ],
+        "semantic_scholar_id": "594755fc68c7e4eb355cc518ea28334c3a7b7094",
+        "canonical_id": "arXiv:2510.10136",
+        "arxiv_id": "2510.10136",
+        "doi": "10.48550/arXiv.2510.10136",
+        "authors": [
+          "Lan-Cheng Zou",
+          "Shuo Yin",
+          "Ze-Hua Pei",
+          "Tsung-Yi Ho",
+          "F. Farnia",
+          "Bei Yu"
+        ],
+        "priority": 13,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 13,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 382,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08118",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08118",
+        "id:SemanticScholar:9a6349913b19ab5bb0cb39bc63a754c3b7d79bad",
+        "id:arXiv:2604.08118",
+        "title:initialisation determines the basin efficient codebook optimisation for extreme llm quantization",
+        "url:https://arxiv.org/abs/2604.08118"
+      ],
+      "record": {
+        "title": "Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization",
+        "source_url": "https://arxiv.org/abs/2604.08118",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Additive quantization enables extreme LLM compression with O(1) lookup-table dequantization, making it attractive for edge deployment. Yet at 2-bit precision, it often fails catastrophically, even with extensive search and finetuning. We show that the dominant bottleneck is codebook initialisation. Greedy sequential initialisation frequently places the model in poor optimisation regions that subsequent beam search and PV-tuning struggle to overcome. We analyse this behaviour through the representational ratio \\r{ho} = N/KM, which characterises the relationship between weight groups and codebook capacity, and propose OA-EM, an output-aware EM initialisation method using Hessian-weighted Mahalanobis distance. Across compression rates, search budgets, and three architectures (Llama 3.2 3B, Llama 3.1 8B, Qwen 2.5 3B), OA-EM consistently produces better solutions after PV-tuning and dominates the quality-compute frontier. The severity of the bottleneck scales with \\r{ho}: moderate at 3 bpp but extreme at 2 bpp, where poor initialisation can degrade perplexity by orders of magnitude. More broadly, our results highlight the importance of optimisation geometry in compressed model spaces, where initialisation can dominate subsequent search and fine-tuning.",
+        "identifiers": [
+          "SemanticScholar:9a6349913b19ab5bb0cb39bc63a754c3b7d79bad"
+        ],
+        "semantic_scholar_id": "9a6349913b19ab5bb0cb39bc63a754c3b7d79bad",
+        "canonical_id": "arXiv:2604.08118",
+        "arxiv_id": "2604.08118",
+        "doi": "10.48550/arXiv.2604.08118",
+        "authors": [
+          "Ian W. Kennedy",
+          "N. Moosavi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 202,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:589b0add4bcfa7eb55b87cc9bc051a32f67a7bfeb27b03623eac737b857d8c38",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

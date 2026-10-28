@@ -1,0 +1,877 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-78ebe8df6bbc86e4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-78ebe8df6bbc",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2203.12644",
+    "arXiv:2410.05437",
+    "arXiv:2510.13832",
+    "arXiv:2603.05692",
+    "arXiv:2603.26603",
+    "arXiv:2604.03260",
+    "arXiv:2604.10091",
+    "arXiv:2604.12767",
+    "arXiv:2609.13585"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:58:05.383666+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2203.12644",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.05437",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.13832",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.05692",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.26603",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.03260",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.10091",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.12767",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.13585",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Parallelization Strategies for Dense LLM Deployment: Navigating Through Application-Specific Tradeoffs and Bottlenecks",
+      "source_url": "https://arxiv.org/abs/2603.05692",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Breakthroughs in the generative AI domain have fueled an explosion of large language model (LLM)-powered applications, whose workloads fundamentally consist of sequences of inferences through transformer architectures. Within this rapidly expanding ecosystem, dense LLMs--those that activate all model parameters for each token generation--form the foundation for advanced expert-based variants. Dense models continue to dominate because of their strong generalization ability, scalability, ease of fine-tuning, and versatility across diverse tasks. In LLM inference systems, performance is mainly characterized by latency, response time, and throughput (i.e., tokens generated per unit of time). Latency and throughput are inherently coupled: optimizing for one often comes at the expense of the other. Moreover, batching strategies and parallelism configurations, which are essential when dense model parameters exceed device memory capacity, can significantly affect both latency and overall system throughput. This paper (i) investigates the workloads of two representative dense LLMs--Llama-3.1-70B and Llama-3.1-405B, focusing in particular on intra-node parallelization schemes, (ii) analyzes how input characteristics, batching, and parallelism strategies influence latency flexibility and the latency-throughput tradeoff, and (iii) identifies key performance bottlenecks that inform design choices for meeting service-level agreements (SLAs) and sustaining inference quality. Our empirical evaluations reveal that Tensor Parallelism (TP) improves the latency objectives while Pipeline Parallelism (PP) is better-suited for throughput-oriented applications. We highlight that their hybrid usage by controlling the TP and PP degrees provides control over the latency-throughput interplay.",
+      "identifiers": [
+        "SemanticScholar:1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c"
+      ],
+      "semantic_scholar_id": "1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c",
+      "canonical_id": "arXiv:2603.05692",
+      "arxiv_id": "2603.05692",
+      "doi": "10.48550/arXiv.2603.05692",
+      "authors": [
+        "Burak Topçu",
+        "Musa Cim",
+        "Poovaiah M. Palangappa",
+        "Meena Arunachalam",
+        "M. T. Kandemir"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 237,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Why Attend to Everything? Focus is the Key",
+      "source_url": "https://arxiv.org/abs/2604.03260",
+      "year": 2026,
+      "published": "2026-03-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Standard attention scales quadratically with sequence length. Efficient attention methods reduce this O(n^2) cost, but when retrofitted into pretrained models, they often degrade perplexity, downstream accuracy, or both. We introduce Focus, a method that learns which token pairs matter. Focus adds a small set of learnable centroids--as few as 148K parameters per layer--that act as gates: only token pairs belonging to the same centroid group attend to each other over long ranges. Focus is composable: it can be added to any pretrained model by training only the centroids while keeping all original weights frozen. Experiments show that composing Focus onto pretrained models yields zero degradation on downstream benchmarks across model sizes from 124M to 70B parameters and five attention architectures. Surprisingly, sparse Focus attention outperforms full attention at 124M scale (30.3 vs. 31.4 perplexity) and matches full attention when trained from scratch at 7B scale (13.82 vs. 13.89). Focus is also fast: top-k group membership gives a 2x speedup with better quality than the original pretrained model. Using our FlashAttention decomposition, Focus achieves an 8.6x speedup at 1M tokens without custom kernels.",
+      "identifiers": [
+        "SemanticScholar:a7338afef819f96339a6dd62aac81775f395f69d"
+      ],
+      "semantic_scholar_id": "a7338afef819f96339a6dd62aac81775f395f69d",
+      "canonical_id": "arXiv:2604.03260",
+      "arxiv_id": "2604.03260",
+      "authors": [
+        "Heng-Shuai Yao",
+        "Xing Chen",
+        "Ahmed Murtadha",
+        "Jin Li",
+        "Yasin Abbasi Yadkori",
+        "Shuai Shao",
+        "Chang-Le Liu",
+        "Guan Wang",
+        "Mingli Yuan",
+        "William Chen",
+        "Sen Song"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 230,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+      "source_url": "https://arxiv.org/abs/2609.13585",
+      "year": 2026,
+      "published": "2026-09-11",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Communication has become a bottleneck in distributed training and inference of large models. Overlapping communication with computation at the granularity of kernels, on separate streams, reduces only part of this communication cost. Fused kernels often have better performance by transmitting each output tile as soon as it is produced, but existing fused kernels are largely confined to a single NVLink domain. We present mKernel, a library of multi-GPU, multi-node fused kernels that overlap computation, intra-node NVLink communication, and inter-node RDMA at tile granularity. mKernel partitions the streaming multiprocessors (SMs) of a persistent kernel into compute and communication roles, and an on-GPU controller tunes the SM partition adaptively at run time, since the best SM partition varies with the kernel and the input shape. It structures data movement hierarchically so that data traversing the inter-node network is minimized. Finally, it drives the network from the GPU through a lightweight command queue and host proxy implemented directly on RDMA verbs, which allows the same kernels to run on any network backend (e.g. InfiniBand and on AWS EFA); we observe, surprisingly, that GPUDirect Async (IBGDA) yields little additional benefit over host-assisted GPU-initiated communication. We implement five kernels spanning tensor, sequence, and expert parallelism. On two 16-GPU H200 clusters, mKernel achieves speedups of up to 1.72x on GEMM+AllReduce and $1.88\\times$ on Ring Attention.",
+      "identifiers": [
+        "SemanticScholar:36a2122b15200ca57584beee0f04f565663718b8"
+      ],
+      "semantic_scholar_id": "36a2122b15200ca57584beee0f04f565663718b8",
+      "canonical_id": "arXiv:2609.13585",
+      "arxiv_id": "2609.13585",
+      "authors": [
+        "Zi-Ming Mao",
+        "Yi-Han Zhang",
+        "S. W. Chew",
+        "Shuang Ma",
+        "C. Raiciu",
+        "Yang Zhou",
+        "S. Shenker",
+        "Ion Stoica"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ESPACE: Dimensionality Reduction of Activations for Model Compression",
+      "source_url": "https://arxiv.org/abs/2410.05437",
+      "year": 2024,
+      "published": "2024-10-07",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 22,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose ESPACE, an LLM compression technique based on dimensionality reduction of activations. Unlike prior works on weight-centric tensor decomposition, ESPACE projects activations onto a pre-calibrated set of principal components. The activation-centrality of the approach enables retraining LLMs with no loss of expressivity; while at inference, weight decomposition is obtained as a byproduct of matrix multiplication associativity. Theoretical results on the construction of projection matrices with optimal computational accuracy are provided. Experimentally, we find ESPACE enables 50% compression of GPT3, Llama2, and Nemotron4 models with small accuracy degradation, as low as a 0.18 perplexity increase on GPT3-22B. At lower compression rates of 20% to 40%, ESPACE drives GPT3 models to outperforming their baseline, by up to a 0.38 decrease in perplexity for GPT3-8B. ESPACE also reduces GEMM execution time and prefill inference latency on existing hardware. Comparison with related works on compressing Llama2-7B via matrix factorization shows that ESPACE is a first step in advancing the state-of-the-art in tensor decomposition compression of LLMs.",
+      "identifiers": [
+        "SemanticScholar:611075d9f612687a285fafeca10816f3e5a38bb6"
+      ],
+      "semantic_scholar_id": "611075d9f612687a285fafeca10816f3e5a38bb6",
+      "canonical_id": "arXiv:2410.05437",
+      "arxiv_id": "2410.05437",
+      "doi": "10.48550/arXiv.2410.05437",
+      "authors": [
+        "Charbel Sakr",
+        "Brucek Khailany"
+      ],
+      "priority": 32,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 22,
+        "citation_count": 22,
+        "total": 32,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 751,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Linearizing Transformer with Key-Value Memory",
+      "source_url": "https://arxiv.org/abs/2203.12644",
+      "year": 2022,
+      "published": "2022-03-23",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient transformer variants with linear time complexity have been developed to mitigate the quadratic computational overhead of the vanilla transformer. Among them are low-rank projection methods such as Linformer and kernel-based Transformers. Despite their unique merits, they usually suffer from a performance drop comparing with the vanilla transformer on many sequence generation tasks, and often fail to obtain computation gain when the generation is short. We propose Memsizer, an approach towards closing the performance gap while improving the efficiency even with short generation. It projects the source sequences into lower dimension representations like Linformer, while enjoying efficient recurrent-style incremental computation similar to kernel-based transformers. This yields linear computation time and constant memory complexity at inference time. Memsizer also employs a lightweight multi-head mechanism which renders the computation as light as a single-head model. We demonstrate that Memsizer provides an improved balance between efficiency and accuracy over the vanilla transformer and other efficient transformer variants in three typical sequence generation tasks, including machine translation, abstractive text summarization, and language modeling.",
+      "identifiers": [
+        "SemanticScholar:e2ee883fca5f8f32a1dfa2dc06c742d57f2c38b9"
+      ],
+      "semantic_scholar_id": "e2ee883fca5f8f32a1dfa2dc06c742d57f2c38b9",
+      "canonical_id": "arXiv:2203.12644",
+      "arxiv_id": "2203.12644",
+      "doi": "10.18653/v1/2022.emnlp-main.24",
+      "authors": [
+        "Yi-Zhe Zhang",
+        "Deng Cai"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1680,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Sustainability Is Not Linear: Quantifying Performance, Energy, and Privacy Trade-offs in On-Device Intelligence",
+      "source_url": "https://arxiv.org/abs/2603.26603",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The migration of Large Language Models (LLMs) from cloud clusters to edge devices promises enhanced privacy and offline accessibility, but this transition encounters a harsh reality: the physical constraints of mobile batteries, thermal limits, and, most importantly, memory constraints. To navigate this landscape, we constructed a replicable and reproducible experimental pipeline to profile the complex interplay between energy consumption, latency, and quality of LLMs on mobile devices. We harness this pipeline to conduct an empirical case study on a flagship Android device, capturing granular metrics across eight LLMs ranging from 0.5B to 9B parameters without requiring root access, ensuring our findings reflect realistic user conditions. The findings highlight the trade-offs between generation quality, performance, power and resource consumption, revealing which LLMs offer the best balance across metrics and under different conditions. Besides, we uncovered a counter-intuitive quantization energy paradox: while modern importance-aware quantization successfully reduces memory footprints to fit larger models into RAM, we found it yields negligible energy savings compared to standard mixed-precision methods. This proves that for battery life, the architecture of the model, not its quantization scheme, is the decisive factor. We further identified that Mixture-of-Experts (MoE) architectures defy the standard size-energy trend, offering the storage capacity of a 7B model while maintaining the lower energy profile of a 1B to 2B model. Finally, an analysis of these multi-objective trade-offs reveals a pragmatic sweet spot of mid-sized models, such as Qwen2.5-3B, that effectively balance response quality with sustainable energy consumption.",
+      "identifiers": [
+        "SemanticScholar:dab02d898dcb2b46353e80d22b0c7746bee9587d"
+      ],
+      "semantic_scholar_id": "dab02d898dcb2b46353e80d22b0c7746bee9587d",
+      "canonical_id": "arXiv:2603.26603",
+      "arxiv_id": "2603.26603",
+      "doi": "10.48550/arXiv.2603.26603",
+      "authors": [
+        "Eziyo Ehsani",
+        "L. Giamattei",
+        "I. Malavolta",
+        "R. Pietrantuono"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 215,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CLASP: Class-Adaptive Layer Fusion and Dual-Stage Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.12767",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) suffer from substantial computational overhead due to the high redundancy in visual token sequences. Existing approaches typically address this issue using single-layer Vision Transformer (ViT) features and static pruning strategies. However, such fixed configurations are often brittle under diverse instructions. To overcome these limitations, we propose CLASP, a plug-and-play token reduction framework based on class-adaptive layer fusion and dual-stage pruning. Specifically, CLASP first constructs category-specific visual representations through multi-layer vision feature fusion. It then performs dual-stage pruning, allocating the token budget between attention-salient pivot tokens for relevance and redundancy-aware completion tokens for coverage. Through class-adaptive pruning, CLASP enables prompt-conditioned feature fusion and budget allocation, allowing aggressive yet robust visual token reduction. Extensive experiments demonstrate that CLASP consistently outperforms existing methods across a wide range of benchmarks, pruning ratios, and MLLM architectures. Code will be available at https://github.com/Yunkaidang/CLASP.",
+      "identifiers": [
+        "SemanticScholar:28ab5cefde5a1e3342917a99a3d75289247d62e7"
+      ],
+      "semantic_scholar_id": "28ab5cefde5a1e3342917a99a3d75289247d62e7",
+      "canonical_id": "arXiv:2604.12767",
+      "arxiv_id": "2604.12767",
+      "doi": "10.48550/arXiv.2604.12767",
+      "authors": [
+        "Yun-Kai Dang",
+        "Yi-Zhuo Jiang",
+        "Yi-Fan Jiang",
+        "Qi-Yuan Fan",
+        "Ying-Huan Shi",
+        "Wen-Bin Li",
+        "Yang Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SEPTQ: A Simple and Effective Post-Training Quantization Paradigm for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2604.10091",
+      "year": 2025,
+      "published": "2025-07-20",
+      "venue": "Knowledge Discovery and Data Mining",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have shown remarkable performance in various domains, but they are constrained by massive computational and storage costs. Quantization, an effective technique for compressing models to fit resource-limited devices while preserving generative quality, encompasses two primary methods: quantization aware training (QAT) and post-training quantization (PTQ). QAT involves additional retraining or fine-tuning, thus inevitably resulting in high training cost and making it unsuitable for LLMs. Consequently, PTQ has become the research hotspot in recent quantization methods. However, existing PTQ methods usually rely on various complex computation procedures and suffer from considerable performance degradation under low-bit quantization settings. To alleviate the above issues, we propose a simple and effective post-training quantization paradigm for LLMs, named SEPTQ. Specifically, SEPTQ first calculates the importance score for each element in the weight matrix and determines the quantization locations in a static global manner. Then it utilizes the mask matrix which represents the important locations to quantize and update the associated weights column-by-column until the appropriate quantized weight matrix is obtained. Compared with previous methods, SEPTQ simplifies the post-training quantization procedure into only two steps, and considers the effectiveness and efficiency simultaneously. Experimental results on various datasets across a suite of models ranging from millions to billions in different quantization bit-levels demonstrate that SEPTQ significantly outperforms other strong baselines, especially in low-bit quantization scenarios.",
+      "identifiers": [
+        "SemanticScholar:a315642f742c15d5ab19fba393f142ff3e9fa704"
+      ],
+      "semantic_scholar_id": "a315642f742c15d5ab19fba393f142ff3e9fa704",
+      "canonical_id": "arXiv:2604.10091",
+      "arxiv_id": "2604.10091",
+      "doi": "10.1145/3690624.3709287",
+      "authors": [
+        "Han Liu",
+        "Haotian Gao",
+        "Xiaotong Zhang",
+        "Changya Li",
+        "Feng Zhang",
+        "Wei Wang",
+        "Fenglong Ma",
+        "Hong Yu"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 465,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Entropy Meets Importance: A Unified Head Importance-Entropy Score for Stable and Efficient Transformer Pruning",
+      "source_url": "https://arxiv.org/abs/2510.13832",
+      "year": 2025,
+      "published": "2025-10-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have achieved remarkable performance in NLP tasks. However, their structural characteristics-multiple layers and attention heads-introduce efficiency challenges in inference and deployment. To address these challenges, various pruning methods have recently been proposed. Notably, gradient-based methods using Head Importance Scores (HIS) have gained traction for interpretability, efficiency, and ability to identify redundant heads. However, HIS alone has limitations as it captures only the gradient-driven contribution, overlooking the diversity of attention patterns. To overcome these limitations, we introduce a novel pruning criterion, HIES (Head Importance-Entropy Score), which integrates head importance scores with attention entropy, providing complementary evidence on per-head contribution. Empirically, HIES-based pruning yields up to 15.2% improvement in model quality and 2.04x improvement in stability over HIS-only methods, enabling substantial model compression without sacrificing either accuracy or stability. Code will be released upon publication.",
+      "identifiers": [
+        "SemanticScholar:bf7171b89dfae23c357db155343292b525f28cb1"
+      ],
+      "semantic_scholar_id": "bf7171b89dfae23c357db155343292b525f28cb1",
+      "canonical_id": "arXiv:2510.13832",
+      "arxiv_id": "2510.13832",
+      "doi": "10.48550/arXiv.2510.13832",
+      "authors": [
+        "Minsik Choi",
+        "Hyegang Son",
+        "Changhoon Kim",
+        "Young Geun Kim"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 383,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.05692",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.05692",
+        "id:SemanticScholar:1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c",
+        "id:arXiv:2603.05692",
+        "title:parallelization strategies for dense llm deployment navigating through applicationspecific tradeoffs and bottlenecks",
+        "url:https://arxiv.org/abs/2603.05692"
+      ],
+      "record": {
+        "title": "Parallelization Strategies for Dense LLM Deployment: Navigating Through Application-Specific Tradeoffs and Bottlenecks",
+        "source_url": "https://arxiv.org/abs/2603.05692",
+        "year": 2026,
+        "published": "2026-03-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Breakthroughs in the generative AI domain have fueled an explosion of large language model (LLM)-powered applications, whose workloads fundamentally consist of sequences of inferences through transformer architectures. Within this rapidly expanding ecosystem, dense LLMs--those that activate all model parameters for each token generation--form the foundation for advanced expert-based variants. Dense models continue to dominate because of their strong generalization ability, scalability, ease of fine-tuning, and versatility across diverse tasks. In LLM inference systems, performance is mainly characterized by latency, response time, and throughput (i.e., tokens generated per unit of time). Latency and throughput are inherently coupled: optimizing for one often comes at the expense of the other. Moreover, batching strategies and parallelism configurations, which are essential when dense model parameters exceed device memory capacity, can significantly affect both latency and overall system throughput. This paper (i) investigates the workloads of two representative dense LLMs--Llama-3.1-70B and Llama-3.1-405B, focusing in particular on intra-node parallelization schemes, (ii) analyzes how input characteristics, batching, and parallelism strategies influence latency flexibility and the latency-throughput tradeoff, and (iii) identifies key performance bottlenecks that inform design choices for meeting service-level agreements (SLAs) and sustaining inference quality. Our empirical evaluations reveal that Tensor Parallelism (TP) improves the latency objectives while Pipeline Parallelism (PP) is better-suited for throughput-oriented applications. We highlight that their hybrid usage by controlling the TP and PP degrees provides control over the latency-throughput interplay.",
+        "identifiers": [
+          "SemanticScholar:1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c"
+        ],
+        "semantic_scholar_id": "1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c",
+        "canonical_id": "arXiv:2603.05692",
+        "arxiv_id": "2603.05692",
+        "doi": "10.48550/arXiv.2603.05692",
+        "authors": [
+          "Burak Topçu",
+          "Musa Cim",
+          "Poovaiah M. Palangappa",
+          "Meena Arunachalam",
+          "M. T. Kandemir"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 237,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.03260",
+      "identity_tokens": [
+        "id:SemanticScholar:a7338afef819f96339a6dd62aac81775f395f69d",
+        "id:arXiv:2604.03260",
+        "title:why attend to everything focus is the key",
+        "url:https://arxiv.org/abs/2604.03260"
+      ],
+      "record": {
+        "title": "Why Attend to Everything? Focus is the Key",
+        "source_url": "https://arxiv.org/abs/2604.03260",
+        "year": 2026,
+        "published": "2026-03-12",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Standard attention scales quadratically with sequence length. Efficient attention methods reduce this O(n^2) cost, but when retrofitted into pretrained models, they often degrade perplexity, downstream accuracy, or both. We introduce Focus, a method that learns which token pairs matter. Focus adds a small set of learnable centroids--as few as 148K parameters per layer--that act as gates: only token pairs belonging to the same centroid group attend to each other over long ranges. Focus is composable: it can be added to any pretrained model by training only the centroids while keeping all original weights frozen. Experiments show that composing Focus onto pretrained models yields zero degradation on downstream benchmarks across model sizes from 124M to 70B parameters and five attention architectures. Surprisingly, sparse Focus attention outperforms full attention at 124M scale (30.3 vs. 31.4 perplexity) and matches full attention when trained from scratch at 7B scale (13.82 vs. 13.89). Focus is also fast: top-k group membership gives a 2x speedup with better quality than the original pretrained model. Using our FlashAttention decomposition, Focus achieves an 8.6x speedup at 1M tokens without custom kernels.",
+        "identifiers": [
+          "SemanticScholar:a7338afef819f96339a6dd62aac81775f395f69d"
+        ],
+        "semantic_scholar_id": "a7338afef819f96339a6dd62aac81775f395f69d",
+        "canonical_id": "arXiv:2604.03260",
+        "arxiv_id": "2604.03260",
+        "authors": [
+          "Heng-Shuai Yao",
+          "Xing Chen",
+          "Ahmed Murtadha",
+          "Jin Li",
+          "Yasin Abbasi Yadkori",
+          "Shuai Shao",
+          "Chang-Le Liu",
+          "Guan Wang",
+          "Mingli Yuan",
+          "William Chen",
+          "Sen Song"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 230,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.13585",
+      "identity_tokens": [
+        "id:SemanticScholar:36a2122b15200ca57584beee0f04f565663718b8",
+        "id:arXiv:2609.13585",
+        "title:mkernel fast multigpu multinode fused kernels",
+        "url:https://arxiv.org/abs/2609.13585"
+      ],
+      "record": {
+        "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
+        "source_url": "https://arxiv.org/abs/2609.13585",
+        "year": 2026,
+        "published": "2026-09-11",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Communication has become a bottleneck in distributed training and inference of large models. Overlapping communication with computation at the granularity of kernels, on separate streams, reduces only part of this communication cost. Fused kernels often have better performance by transmitting each output tile as soon as it is produced, but existing fused kernels are largely confined to a single NVLink domain. We present mKernel, a library of multi-GPU, multi-node fused kernels that overlap computation, intra-node NVLink communication, and inter-node RDMA at tile granularity. mKernel partitions the streaming multiprocessors (SMs) of a persistent kernel into compute and communication roles, and an on-GPU controller tunes the SM partition adaptively at run time, since the best SM partition varies with the kernel and the input shape. It structures data movement hierarchically so that data traversing the inter-node network is minimized. Finally, it drives the network from the GPU through a lightweight command queue and host proxy implemented directly on RDMA verbs, which allows the same kernels to run on any network backend (e.g. InfiniBand and on AWS EFA); we observe, surprisingly, that GPUDirect Async (IBGDA) yields little additional benefit over host-assisted GPU-initiated communication. We implement five kernels spanning tensor, sequence, and expert parallelism. On two 16-GPU H200 clusters, mKernel achieves speedups of up to 1.72x on GEMM+AllReduce and $1.88\\times$ on Ring Attention.",
+        "identifiers": [
+          "SemanticScholar:36a2122b15200ca57584beee0f04f565663718b8"
+        ],
+        "semantic_scholar_id": "36a2122b15200ca57584beee0f04f565663718b8",
+        "canonical_id": "arXiv:2609.13585",
+        "arxiv_id": "2609.13585",
+        "authors": [
+          "Zi-Ming Mao",
+          "Yi-Han Zhang",
+          "S. W. Chew",
+          "Shuang Ma",
+          "C. Raiciu",
+          "Yang Zhou",
+          "S. Shenker",
+          "Ion Stoica"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.05437",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.05437",
+        "id:SemanticScholar:611075d9f612687a285fafeca10816f3e5a38bb6",
+        "id:arXiv:2410.05437",
+        "title:espace dimensionality reduction of activations for model compression",
+        "url:https://arxiv.org/abs/2410.05437"
+      ],
+      "record": {
+        "title": "ESPACE: Dimensionality Reduction of Activations for Model Compression",
+        "source_url": "https://arxiv.org/abs/2410.05437",
+        "year": 2024,
+        "published": "2024-10-07",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 22,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose ESPACE, an LLM compression technique based on dimensionality reduction of activations. Unlike prior works on weight-centric tensor decomposition, ESPACE projects activations onto a pre-calibrated set of principal components. The activation-centrality of the approach enables retraining LLMs with no loss of expressivity; while at inference, weight decomposition is obtained as a byproduct of matrix multiplication associativity. Theoretical results on the construction of projection matrices with optimal computational accuracy are provided. Experimentally, we find ESPACE enables 50% compression of GPT3, Llama2, and Nemotron4 models with small accuracy degradation, as low as a 0.18 perplexity increase on GPT3-22B. At lower compression rates of 20% to 40%, ESPACE drives GPT3 models to outperforming their baseline, by up to a 0.38 decrease in perplexity for GPT3-8B. ESPACE also reduces GEMM execution time and prefill inference latency on existing hardware. Comparison with related works on compressing Llama2-7B via matrix factorization shows that ESPACE is a first step in advancing the state-of-the-art in tensor decomposition compression of LLMs.",
+        "identifiers": [
+          "SemanticScholar:611075d9f612687a285fafeca10816f3e5a38bb6"
+        ],
+        "semantic_scholar_id": "611075d9f612687a285fafeca10816f3e5a38bb6",
+        "canonical_id": "arXiv:2410.05437",
+        "arxiv_id": "2410.05437",
+        "doi": "10.48550/arXiv.2410.05437",
+        "authors": [
+          "Charbel Sakr",
+          "Brucek Khailany"
+        ],
+        "priority": 32,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 22,
+          "citation_count": 22,
+          "total": 32,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 751,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2203.12644",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2022.emnlp-main.24",
+        "id:SemanticScholar:e2ee883fca5f8f32a1dfa2dc06c742d57f2c38b9",
+        "id:arXiv:2203.12644",
+        "title:linearizing transformer with keyvalue memory",
+        "url:https://arxiv.org/abs/2203.12644"
+      ],
+      "record": {
+        "title": "Linearizing Transformer with Key-Value Memory",
+        "source_url": "https://arxiv.org/abs/2203.12644",
+        "year": 2022,
+        "published": "2022-03-23",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient transformer variants with linear time complexity have been developed to mitigate the quadratic computational overhead of the vanilla transformer. Among them are low-rank projection methods such as Linformer and kernel-based Transformers. Despite their unique merits, they usually suffer from a performance drop comparing with the vanilla transformer on many sequence generation tasks, and often fail to obtain computation gain when the generation is short. We propose Memsizer, an approach towards closing the performance gap while improving the efficiency even with short generation. It projects the source sequences into lower dimension representations like Linformer, while enjoying efficient recurrent-style incremental computation similar to kernel-based transformers. This yields linear computation time and constant memory complexity at inference time. Memsizer also employs a lightweight multi-head mechanism which renders the computation as light as a single-head model. We demonstrate that Memsizer provides an improved balance between efficiency and accuracy over the vanilla transformer and other efficient transformer variants in three typical sequence generation tasks, including machine translation, abstractive text summarization, and language modeling.",
+        "identifiers": [
+          "SemanticScholar:e2ee883fca5f8f32a1dfa2dc06c742d57f2c38b9"
+        ],
+        "semantic_scholar_id": "e2ee883fca5f8f32a1dfa2dc06c742d57f2c38b9",
+        "canonical_id": "arXiv:2203.12644",
+        "arxiv_id": "2203.12644",
+        "doi": "10.18653/v1/2022.emnlp-main.24",
+        "authors": [
+          "Yi-Zhe Zhang",
+          "Deng Cai"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1680,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.26603",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.26603",
+        "id:SemanticScholar:dab02d898dcb2b46353e80d22b0c7746bee9587d",
+        "id:arXiv:2603.26603",
+        "title:sustainability is not linear quantifying performance energy and privacy tradeoffs in ondevice intelligence",
+        "url:https://arxiv.org/abs/2603.26603"
+      ],
+      "record": {
+        "title": "Sustainability Is Not Linear: Quantifying Performance, Energy, and Privacy Trade-offs in On-Device Intelligence",
+        "source_url": "https://arxiv.org/abs/2603.26603",
+        "year": 2026,
+        "published": "2026-03-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The migration of Large Language Models (LLMs) from cloud clusters to edge devices promises enhanced privacy and offline accessibility, but this transition encounters a harsh reality: the physical constraints of mobile batteries, thermal limits, and, most importantly, memory constraints. To navigate this landscape, we constructed a replicable and reproducible experimental pipeline to profile the complex interplay between energy consumption, latency, and quality of LLMs on mobile devices. We harness this pipeline to conduct an empirical case study on a flagship Android device, capturing granular metrics across eight LLMs ranging from 0.5B to 9B parameters without requiring root access, ensuring our findings reflect realistic user conditions. The findings highlight the trade-offs between generation quality, performance, power and resource consumption, revealing which LLMs offer the best balance across metrics and under different conditions. Besides, we uncovered a counter-intuitive quantization energy paradox: while modern importance-aware quantization successfully reduces memory footprints to fit larger models into RAM, we found it yields negligible energy savings compared to standard mixed-precision methods. This proves that for battery life, the architecture of the model, not its quantization scheme, is the decisive factor. We further identified that Mixture-of-Experts (MoE) architectures defy the standard size-energy trend, offering the storage capacity of a 7B model while maintaining the lower energy profile of a 1B to 2B model. Finally, an analysis of these multi-objective trade-offs reveals a pragmatic sweet spot of mid-sized models, such as Qwen2.5-3B, that effectively balance response quality with sustainable energy consumption.",
+        "identifiers": [
+          "SemanticScholar:dab02d898dcb2b46353e80d22b0c7746bee9587d"
+        ],
+        "semantic_scholar_id": "dab02d898dcb2b46353e80d22b0c7746bee9587d",
+        "canonical_id": "arXiv:2603.26603",
+        "arxiv_id": "2603.26603",
+        "doi": "10.48550/arXiv.2603.26603",
+        "authors": [
+          "Eziyo Ehsani",
+          "L. Giamattei",
+          "I. Malavolta",
+          "R. Pietrantuono"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 215,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.12767",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.12767",
+        "id:SemanticScholar:28ab5cefde5a1e3342917a99a3d75289247d62e7",
+        "id:arXiv:2604.12767",
+        "title:clasp classadaptive layer fusion and dualstage pruning for multimodal large language models",
+        "url:https://arxiv.org/abs/2604.12767"
+      ],
+      "record": {
+        "title": "CLASP: Class-Adaptive Layer Fusion and Dual-Stage Pruning for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2604.12767",
+        "year": 2026,
+        "published": "2026-04-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal Large Language Models (MLLMs) suffer from substantial computational overhead due to the high redundancy in visual token sequences. Existing approaches typically address this issue using single-layer Vision Transformer (ViT) features and static pruning strategies. However, such fixed configurations are often brittle under diverse instructions. To overcome these limitations, we propose CLASP, a plug-and-play token reduction framework based on class-adaptive layer fusion and dual-stage pruning. Specifically, CLASP first constructs category-specific visual representations through multi-layer vision feature fusion. It then performs dual-stage pruning, allocating the token budget between attention-salient pivot tokens for relevance and redundancy-aware completion tokens for coverage. Through class-adaptive pruning, CLASP enables prompt-conditioned feature fusion and budget allocation, allowing aggressive yet robust visual token reduction. Extensive experiments demonstrate that CLASP consistently outperforms existing methods across a wide range of benchmarks, pruning ratios, and MLLM architectures. Code will be available at https://github.com/Yunkaidang/CLASP.",
+        "identifiers": [
+          "SemanticScholar:28ab5cefde5a1e3342917a99a3d75289247d62e7"
+        ],
+        "semantic_scholar_id": "28ab5cefde5a1e3342917a99a3d75289247d62e7",
+        "canonical_id": "arXiv:2604.12767",
+        "arxiv_id": "2604.12767",
+        "doi": "10.48550/arXiv.2604.12767",
+        "authors": [
+          "Yun-Kai Dang",
+          "Yi-Zhuo Jiang",
+          "Yi-Fan Jiang",
+          "Qi-Yuan Fan",
+          "Ying-Huan Shi",
+          "Wen-Bin Li",
+          "Yang Gao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 197,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.10091",
+      "identity_tokens": [
+        "id:DOI:10.1145/3690624.3709287",
+        "id:SemanticScholar:a315642f742c15d5ab19fba393f142ff3e9fa704",
+        "id:arXiv:2604.10091",
+        "title:septq a simple and effective posttraining quantization paradigm for large language models",
+        "url:https://arxiv.org/abs/2604.10091"
+      ],
+      "record": {
+        "title": "SEPTQ: A Simple and Effective Post-Training Quantization Paradigm for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2604.10091",
+        "year": 2025,
+        "published": "2025-07-20",
+        "venue": "Knowledge Discovery and Data Mining",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have shown remarkable performance in various domains, but they are constrained by massive computational and storage costs. Quantization, an effective technique for compressing models to fit resource-limited devices while preserving generative quality, encompasses two primary methods: quantization aware training (QAT) and post-training quantization (PTQ). QAT involves additional retraining or fine-tuning, thus inevitably resulting in high training cost and making it unsuitable for LLMs. Consequently, PTQ has become the research hotspot in recent quantization methods. However, existing PTQ methods usually rely on various complex computation procedures and suffer from considerable performance degradation under low-bit quantization settings. To alleviate the above issues, we propose a simple and effective post-training quantization paradigm for LLMs, named SEPTQ. Specifically, SEPTQ first calculates the importance score for each element in the weight matrix and determines the quantization locations in a static global manner. Then it utilizes the mask matrix which represents the important locations to quantize and update the associated weights column-by-column until the appropriate quantized weight matrix is obtained. Compared with previous methods, SEPTQ simplifies the post-training quantization procedure into only two steps, and considers the effectiveness and efficiency simultaneously. Experimental results on various datasets across a suite of models ranging from millions to billions in different quantization bit-levels demonstrate that SEPTQ significantly outperforms other strong baselines, especially in low-bit quantization scenarios.",
+        "identifiers": [
+          "SemanticScholar:a315642f742c15d5ab19fba393f142ff3e9fa704"
+        ],
+        "semantic_scholar_id": "a315642f742c15d5ab19fba393f142ff3e9fa704",
+        "canonical_id": "arXiv:2604.10091",
+        "arxiv_id": "2604.10091",
+        "doi": "10.1145/3690624.3709287",
+        "authors": [
+          "Han Liu",
+          "Haotian Gao",
+          "Xiaotong Zhang",
+          "Changya Li",
+          "Feng Zhang",
+          "Wei Wang",
+          "Fenglong Ma",
+          "Hong Yu"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 465,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.13832",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.13832",
+        "id:SemanticScholar:bf7171b89dfae23c357db155343292b525f28cb1",
+        "id:arXiv:2510.13832",
+        "title:entropy meets importance a unified head importanceentropy score for stable and efficient transformer pruning",
+        "url:https://arxiv.org/abs/2510.13832"
+      ],
+      "record": {
+        "title": "Entropy Meets Importance: A Unified Head Importance-Entropy Score for Stable and Efficient Transformer Pruning",
+        "source_url": "https://arxiv.org/abs/2510.13832",
+        "year": 2025,
+        "published": "2025-10-10",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have achieved remarkable performance in NLP tasks. However, their structural characteristics-multiple layers and attention heads-introduce efficiency challenges in inference and deployment. To address these challenges, various pruning methods have recently been proposed. Notably, gradient-based methods using Head Importance Scores (HIS) have gained traction for interpretability, efficiency, and ability to identify redundant heads. However, HIS alone has limitations as it captures only the gradient-driven contribution, overlooking the diversity of attention patterns. To overcome these limitations, we introduce a novel pruning criterion, HIES (Head Importance-Entropy Score), which integrates head importance scores with attention entropy, providing complementary evidence on per-head contribution. Empirically, HIES-based pruning yields up to 15.2% improvement in model quality and 2.04x improvement in stability over HIS-only methods, enabling substantial model compression without sacrificing either accuracy or stability. Code will be released upon publication.",
+        "identifiers": [
+          "SemanticScholar:bf7171b89dfae23c357db155343292b525f28cb1"
+        ],
+        "semantic_scholar_id": "bf7171b89dfae23c357db155343292b525f28cb1",
+        "canonical_id": "arXiv:2510.13832",
+        "arxiv_id": "2510.13832",
+        "doi": "10.48550/arXiv.2510.13832",
+        "authors": [
+          "Minsik Choi",
+          "Hyegang Son",
+          "Changhoon Kim",
+          "Young Geun Kim"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 383,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:229c78ce216dd789358b45c758a37387df1d75055a99280f0b7c3774f296ef4b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

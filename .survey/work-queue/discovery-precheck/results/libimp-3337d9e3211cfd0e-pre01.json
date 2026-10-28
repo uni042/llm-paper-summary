@@ -1,0 +1,799 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-3337d9e3211cfd0e-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-3337d9e3211c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2506.03303",
+    "arXiv:2511.17945",
+    "arXiv:2602.08060",
+    "arXiv:2602.22871",
+    "arXiv:2603.20216",
+    "arXiv:2604.18103",
+    "arXiv:2605.18817",
+    "arXiv:2606.11576"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "ef8aa6822e25563fbf7e22ae15a4c32dc319367c",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-28T21:57:57.350333+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2506.03303",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.17945",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08060",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.22871",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.20216",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.18103",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.18817",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.11576",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling",
+      "source_url": "https://arxiv.org/abs/2604.18103",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Prefilling computational costs pose a significant bottleneck for Large Language Models (LLMs) and Large Multimodal Models (LMMs) in long-context settings. While token pruning reduces sequence length, prior methods rely on heuristics that break compatibility with hardware-efficient kernels like FlashAttention. In this work, we observe that tokens evolve toward \\textit{semantic fixing points}, making further processing redundant. To this end, we introduce Delta Attention Selective Halting (DASH), a training-free policy that monitors the layer-wise update dynamics of the self-attention mechanism to selectively halt stabilized tokens. Extensive evaluation confirms that DASH generalizes across language and vision benchmarks, delivering significant prefill speedups while preserving model accuracy and hardware efficiency. Code will be released at https://github.com/verach3n/DASH.git.",
+      "identifiers": [
+        "SemanticScholar:6feff5927221d575a23c338526a84c0ce41e45af"
+      ],
+      "semantic_scholar_id": "6feff5927221d575a23c338526a84c0ce41e45af",
+      "canonical_id": "arXiv:2604.18103",
+      "arxiv_id": "2604.18103",
+      "doi": "10.48550/arXiv.2604.18103",
+      "authors": [
+        "Yu-Jie Chen",
+        "Tai-You Chen",
+        "Yifeng Gao",
+        "Zoe Wanying He",
+        "Yijue Xu",
+        "Shao-Bo Wang",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 191,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Test-Time Temporal Sampling for Efficient MLLM Video Understanding",
+      "source_url": "https://arxiv.org/abs/2511.17945",
+      "year": 2025,
+      "published": "2025-11-22",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long videos with multimodal large language models (MLLMs) poses a significant computational challenge, as the model's self-attention mechanism scales quadratically with the number of video tokens, resulting in high computational demand and slow inference speed. Current solutions, such as rule-based sub-sampling, learned frame selector, or memory-based summarization, often introduce their own trade-offs: they compromise accuracy, necessitate additional training, or decrease inference speed. In this paper, we propose Test-Time Temporal Sampling (T3S), a training-free, plug-and-play inference wrapper that enables MLLMs to process long videos both efficiently and effectively. T3S exploits spatiotemporal redundancy by generating multiple short and diverse subsequences of video tokens at inference time, packing them within a single forward pass, and aggregating their predictions. This multi-subsequence formulation broadens visual coverage while reducing the computational cost of self-attention from $O(L^2)$ to $O(\\sum_{i=1}^m \\alpha_i^2L^2)$, where $\\sum_{i=1}^m \\alpha_i^2<1$. Extensive experiments on long video understanding benchmarks demonstrate that T3S improves accuracy by up to 3.1% and reduces first token delay by $2.04\\times$, all with minimal integration effort. Our approach operates entirely at inference time, requires no model modifications or fine-tuning, and is compatible with a wide range of pretrained MLLMs. T3S turns video redundancy into a computational advantage, offering a scalable solution for long-video understanding. The code is available at https://github.com/kaibinwang3/T3S.",
+      "identifiers": [
+        "SemanticScholar:12a29a1c02dda627fd9349b84476b2313bf59aff"
+      ],
+      "semantic_scholar_id": "12a29a1c02dda627fd9349b84476b2313bf59aff",
+      "canonical_id": "arXiv:2511.17945",
+      "arxiv_id": "2511.17945",
+      "doi": "10.48550/arXiv.2511.17945",
+      "authors": [
+        "Kaibin Wang",
+        "Mingbao Lin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AVIS: Adaptive Test-Time Scaling for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.11576",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Vision-Language Models (VLMs) benefit from chain-of-thought prompting and test-time scaling, but these gains often come with prohibitive inference cost due to large visual contexts and long decoding chains. We view this cost through two coupled axes: Visual Context Scaling (VCS), which controls how much visual evidence is passed to the language model, and Visual Reasoning Scaling (VRS), which controls how much inference-time reasoning search is performed. Existing methods typically optimize one axis at a time, leaving the joint allocation of compute across these axes underexplored. We introduce Adaptive Visual Inference Scaling (AVIS), a lightweight policy that adapts both VCS and VRS per query. AVIS realizes VCS through Key Diversity Visual (KDV) pruning, a training-free $O(N)$ key-based rule for removing redundant visual tokens before prefilling, and realizes VRS through adaptive self-consistency, using a learned difficulty predictor to select the number of reasoning rollouts. AVIS is deployment-friendly and compatible with shared-prefill inference, where all rollouts reuse a single prefilling pass and KV cache. Across diverse image and video reasoning benchmarks, AVIS improves the accuracy--compute trade-off relative to VCS-only and VRS-only baselines, and remains effective on top of RL post-trained VLMs while keeping compute and latency low.",
+      "identifiers": [
+        "SemanticScholar:9374d4a495716da0ae3b55e94ae081a109445afb"
+      ],
+      "semantic_scholar_id": "9374d4a495716da0ae3b55e94ae081a109445afb",
+      "canonical_id": "arXiv:2606.11576",
+      "arxiv_id": "2606.11576",
+      "doi": "10.48550/arXiv.2606.11576",
+      "authors": [
+        "Ahmadreza Jeddi",
+        "Minh-Tan Le",
+        "A. Kazerouni",
+        "H. Karaimer",
+        "Hue Nguyen",
+        "I. Mohomed",
+        "Michael Brudno",
+        "Alex Levinshtein",
+        "K. Derpanis",
+        "Babak Taati",
+        "R. Grzeszczuk"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching",
+      "source_url": "https://arxiv.org/abs/2602.22871",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning with large language models often benefits from generating multiple chains-of-thought, but existing aggregation strategies are typically trajectory-level (e.g., selecting the best trace or voting on the final answer), discarding useful intermediate work from partial or\"nearly correct\"attempts. We propose Stitching Noisy Diffusion Thoughts, a self-consistency framework that turns cheap diffusion-sampled reasoning into a reusable pool of step-level candidates. Given a problem, we (i) sample many diverse, low-cost reasoning trajectories using a masked diffusion language model, (ii) score every intermediate step with an off-the-shelf process reward model (PRM), and (iii) stitch these highest-quality steps across trajectories into a composite rationale. This rationale is then used to recompute only the final answer. This modular pipeline separates exploration (diffusion) from evaluation and solution synthesis, avoiding monolithic unified hybrids while preserving broad search. Across math reasoning benchmarks, we find that step-level recombination is most beneficial on harder problems, and ablations highlight the importance of the final solver in converting stitched but imperfect rationales into accurate answers. Using low-confidence diffusion sampling with parallel, independent rollouts, our training-free framework improves average accuracy by up to 23.8% across six math and coding tasks. At the same time, it achieves up to a 1.8x latency reduction relative to both traditional diffusion models (e.g., Dream, LLaDA) and unified architectures (e.g., TiDAR). The code is available https://github.com/roymiles/diffusion-stitching",
+      "identifiers": [
+        "SemanticScholar:b3bd962bbe6f2152740fe588516766224b9e3efa"
+      ],
+      "semantic_scholar_id": "b3bd962bbe6f2152740fe588516766224b9e3efa",
+      "canonical_id": "arXiv:2602.22871",
+      "arxiv_id": "2602.22871",
+      "doi": "10.48550/arXiv.2602.22871",
+      "authors": [
+        "R. Miles",
+        "Aysim Toker",
+        "Andreea-Maria Oncescu",
+        "Song Xu",
+        "Jian-Kang Deng",
+        "Ismail Elezi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Locally Coherent Parallel Decoding in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2603.20216",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) models, offering sub-linear generation latency and bidirectional capabilities that are particularly appealing for code generation and editing. Achieving sub-linear latency in discrete DLMs requires predicting multiple tokens in parallel. However, standard DLMs sample tokens independently from conditional marginal distributions, failing to capture the joint dependencies among concurrently generated tokens. As a result, they often lead to syntactic inconsistencies and break multi-token structures. In this work, we introduce CoDiLA (Coherent Diffusion with Local Autoregression), a method that reconciles parallel sampling with local dependency modeling. Rather than forcing the DLM to resolve fine-grained syntax, CoDiLA delegates local decoding to a small, auxiliary AR model operating on the diffusion latents. This design allows for parallel generation while ensuring sequential validity within a block and maintaining core DLM capabilities, including bidirectional modeling across blocks. We demonstrate that using a highly compact auxiliary AR model (e.g., 0.6B parameters) effectively eliminates coherence artifacts, establishing a new Pareto frontier for accuracy and speed in code generation benchmarks.",
+      "identifiers": [
+        "SemanticScholar:09951e1713ea0dfa9eac98184b95624cbdf75b64"
+      ],
+      "semantic_scholar_id": "09951e1713ea0dfa9eac98184b95624cbdf75b64",
+      "canonical_id": "arXiv:2603.20216",
+      "arxiv_id": "2603.20216",
+      "doi": "10.48550/arXiv.2603.20216",
+      "authors": [
+        "M. Hersche",
+        "Nicolas Menet",
+        "Ronan Tanios",
+        "Abbas Rahimi"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hopscotch: Discovering and Skipping Redundancies in Language Models",
+      "source_url": "https://arxiv.org/abs/2506.03303",
+      "year": 2025,
+      "published": "2025-06-03",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern causal language models stack many attention blocks to improve performance, but not all blocks are necessary for every task. We propose Hopscotch, a simple yet effective method that identifies and skips attention blocks with least contributions to a task and adapts to preserve output quality. Hopscotch jointly optimizes which blocks to skip and how to scale the outputs of the remaining layers. By introducing lightweight, trainable scaling parameters to attention and MLP blocks, it mitigates distribution shifts in hidden states caused by removing attention blocks. Hopscotch does not modify model weights or require access to pretraining or instruction-tuning data, and is compatible with existing model compression techniques. When applied to $\\texttt{Llama-3.1-8B}$ and $\\texttt{Qwen2.5-7B}$, Hopscotch achieves less than a 2% drop in performance even after skipping four attention blocks.",
+      "identifiers": [
+        "SemanticScholar:ec271d488c11e9594026a323707fabe719ca60bd"
+      ],
+      "semantic_scholar_id": "ec271d488c11e9594026a323707fabe719ca60bd",
+      "canonical_id": "arXiv:2506.03303",
+      "arxiv_id": "2506.03303",
+      "doi": "10.48550/arXiv.2506.03303",
+      "authors": [
+        "Mustafa Eyceoz",
+        "N. Nayak",
+        "Hao Wang",
+        "Ligong Han",
+        "Akash Srivastava"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 512,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Compiler-Assisted Speculative Sampling for Accelerated LLM Inference on Heterogeneous Edge Devices",
+      "source_url": "https://arxiv.org/abs/2602.08060",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM deployment on resource-constrained edge devices faces severe latency constraints, particularly in real-time applications where delayed responses can compromise safety or usability. Among many approaches to mitigate the inefficiencies of sequential token-by-token generation, Speculative Decoding (SD) has emerged as a promising technique. However, SD at the edge is hindered by two major challenges: (1) integrating SD into a compiler-based workflow without sacrificing performance or programmability, and (2) exploiting the heterogeneous compute resources of modern SoCs through carefully designed partitioning strategies. This work addresses these challenges by using an analytical cost model that explores heterogeneous hardware configurations and guides coarse-grained partitioning of LLM subgraphs, particularly with edge-typical short input sequence lengths. The cost model predicts when speculative sampling and heterogeneous execution are jointly beneficial and is validated on an edge device featuring a hexacore Cortex-A CPU and a Mali GPU, revealing up to 1.68$\\times$ speedup for translation tasks, closely matching analytic expectations.",
+      "identifiers": [
+        "SemanticScholar:aa387b3911b2cd192bb0d4c0b3cb710c51700bed"
+      ],
+      "semantic_scholar_id": "aa387b3911b2cd192bb0d4c0b3cb710c51700bed",
+      "canonical_id": "arXiv:2602.08060",
+      "arxiv_id": "2602.08060",
+      "doi": "10.48550/arXiv.2602.08060",
+      "authors": [
+        "Alejandro Mesa",
+        "Guilherme Korol",
+        "Moritz Riesterer",
+        "J. P. C. de Lima",
+        "J. Castrillón"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Multi-Token Residual Prediction",
+      "source_url": "https://arxiv.org/abs/2605.18817",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) generate text by iteratively denoising masked token sequences, offering a tradeoff between parallelism and quality compared to autoregressive models. In current practice, the number of tokens decoded per step is controlled by a confidence threshold, and quality degrades monotonically as more tokens are denoised per step. We introduce Multi-token Residual Prediction (MRP), a lightweight module that enables dependency-aware multi-token denoising within a single backbone forward pass. MRP exploits a key property of the denoising process: the logit distributions at adjacent denoising steps are remarkably similar. Rather than running the backbone a second time to obtain the next-step logits, MRP predicts the residual between steps from the backbone's hidden states, effectively denoising more tokens per backbone forward at a fraction of the cost. We apply MRP across the two operating regimes of DLM decoding. In the high-quality-low-throughput static denoising regime, MRP serves as a drafter for speculative decoding: its proposals are verified against the backbone, yielding lossless acceleration of up to 1.4x in SGLang. In the low-quality-high-throughput dynamic denoising regime, MRP instead drives a remasking scheme that revokes over-eager reveals, recovering most of the accuracy lost to aggressive low-threshold decoding and improving accuracy by up to 22.6 points on code generation task HumanEval and 17.7 points on reasoning task GSM8K.",
+      "identifiers": [
+        "SemanticScholar:c12c453159e30fc5b8c184e5157a378c60b90fa0"
+      ],
+      "semantic_scholar_id": "c12c453159e30fc5b8c184e5157a378c60b90fa0",
+      "canonical_id": "arXiv:2605.18817",
+      "arxiv_id": "2605.18817",
+      "doi": "10.48550/arXiv.2605.18817",
+      "authors": [
+        "Yufeng Xu",
+        "Zishuo Bao",
+        "Qian Wang",
+        "Ze-Shen Zhang",
+        "Haoqi Zhang",
+        "Bo Peng",
+        "Ang Li",
+        "Rahul Chalamala",
+        "Yu-Cheng Lu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.18103",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.18103",
+        "id:SemanticScholar:6feff5927221d575a23c338526a84c0ce41e45af",
+        "id:arXiv:2604.18103",
+        "title:stability implies redundancy delta attention selective halting for efficient longcontext prefilling",
+        "url:https://arxiv.org/abs/2604.18103"
+      ],
+      "record": {
+        "title": "Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling",
+        "source_url": "https://arxiv.org/abs/2604.18103",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Prefilling computational costs pose a significant bottleneck for Large Language Models (LLMs) and Large Multimodal Models (LMMs) in long-context settings. While token pruning reduces sequence length, prior methods rely on heuristics that break compatibility with hardware-efficient kernels like FlashAttention. In this work, we observe that tokens evolve toward \\textit{semantic fixing points}, making further processing redundant. To this end, we introduce Delta Attention Selective Halting (DASH), a training-free policy that monitors the layer-wise update dynamics of the self-attention mechanism to selectively halt stabilized tokens. Extensive evaluation confirms that DASH generalizes across language and vision benchmarks, delivering significant prefill speedups while preserving model accuracy and hardware efficiency. Code will be released at https://github.com/verach3n/DASH.git.",
+        "identifiers": [
+          "SemanticScholar:6feff5927221d575a23c338526a84c0ce41e45af"
+        ],
+        "semantic_scholar_id": "6feff5927221d575a23c338526a84c0ce41e45af",
+        "canonical_id": "arXiv:2604.18103",
+        "arxiv_id": "2604.18103",
+        "doi": "10.48550/arXiv.2604.18103",
+        "authors": [
+          "Yu-Jie Chen",
+          "Tai-You Chen",
+          "Yifeng Gao",
+          "Zoe Wanying He",
+          "Yijue Xu",
+          "Shao-Bo Wang",
+          "Lin-Feng Zhang"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 191,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.17945",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.17945",
+        "id:SemanticScholar:12a29a1c02dda627fd9349b84476b2313bf59aff",
+        "id:arXiv:2511.17945",
+        "title:testtime temporal sampling for efficient mllm video understanding",
+        "url:https://arxiv.org/abs/2511.17945"
+      ],
+      "record": {
+        "title": "Test-Time Temporal Sampling for Efficient MLLM Video Understanding",
+        "source_url": "https://arxiv.org/abs/2511.17945",
+        "year": 2025,
+        "published": "2025-11-22",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Processing long videos with multimodal large language models (MLLMs) poses a significant computational challenge, as the model's self-attention mechanism scales quadratically with the number of video tokens, resulting in high computational demand and slow inference speed. Current solutions, such as rule-based sub-sampling, learned frame selector, or memory-based summarization, often introduce their own trade-offs: they compromise accuracy, necessitate additional training, or decrease inference speed. In this paper, we propose Test-Time Temporal Sampling (T3S), a training-free, plug-and-play inference wrapper that enables MLLMs to process long videos both efficiently and effectively. T3S exploits spatiotemporal redundancy by generating multiple short and diverse subsequences of video tokens at inference time, packing them within a single forward pass, and aggregating their predictions. This multi-subsequence formulation broadens visual coverage while reducing the computational cost of self-attention from $O(L^2)$ to $O(\\sum_{i=1}^m \\alpha_i^2L^2)$, where $\\sum_{i=1}^m \\alpha_i^2<1$. Extensive experiments on long video understanding benchmarks demonstrate that T3S improves accuracy by up to 3.1% and reduces first token delay by $2.04\\times$, all with minimal integration effort. Our approach operates entirely at inference time, requires no model modifications or fine-tuning, and is compatible with a wide range of pretrained MLLMs. T3S turns video redundancy into a computational advantage, offering a scalable solution for long-video understanding. The code is available at https://github.com/kaibinwang3/T3S.",
+        "identifiers": [
+          "SemanticScholar:12a29a1c02dda627fd9349b84476b2313bf59aff"
+        ],
+        "semantic_scholar_id": "12a29a1c02dda627fd9349b84476b2313bf59aff",
+        "canonical_id": "arXiv:2511.17945",
+        "arxiv_id": "2511.17945",
+        "doi": "10.48550/arXiv.2511.17945",
+        "authors": [
+          "Kaibin Wang",
+          "Mingbao Lin"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 340,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.11576",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.11576",
+        "id:SemanticScholar:9374d4a495716da0ae3b55e94ae081a109445afb",
+        "id:arXiv:2606.11576",
+        "title:avis adaptive testtime scaling for visionlanguage models",
+        "url:https://arxiv.org/abs/2606.11576"
+      ],
+      "record": {
+        "title": "AVIS: Adaptive Test-Time Scaling for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2606.11576",
+        "year": 2026,
+        "published": "2026-06-10",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern Vision-Language Models (VLMs) benefit from chain-of-thought prompting and test-time scaling, but these gains often come with prohibitive inference cost due to large visual contexts and long decoding chains. We view this cost through two coupled axes: Visual Context Scaling (VCS), which controls how much visual evidence is passed to the language model, and Visual Reasoning Scaling (VRS), which controls how much inference-time reasoning search is performed. Existing methods typically optimize one axis at a time, leaving the joint allocation of compute across these axes underexplored. We introduce Adaptive Visual Inference Scaling (AVIS), a lightweight policy that adapts both VCS and VRS per query. AVIS realizes VCS through Key Diversity Visual (KDV) pruning, a training-free $O(N)$ key-based rule for removing redundant visual tokens before prefilling, and realizes VRS through adaptive self-consistency, using a learned difficulty predictor to select the number of reasoning rollouts. AVIS is deployment-friendly and compatible with shared-prefill inference, where all rollouts reuse a single prefilling pass and KV cache. Across diverse image and video reasoning benchmarks, AVIS improves the accuracy--compute trade-off relative to VCS-only and VRS-only baselines, and remains effective on top of RL post-trained VLMs while keeping compute and latency low.",
+        "identifiers": [
+          "SemanticScholar:9374d4a495716da0ae3b55e94ae081a109445afb"
+        ],
+        "semantic_scholar_id": "9374d4a495716da0ae3b55e94ae081a109445afb",
+        "canonical_id": "arXiv:2606.11576",
+        "arxiv_id": "2606.11576",
+        "doi": "10.48550/arXiv.2606.11576",
+        "authors": [
+          "Ahmadreza Jeddi",
+          "Minh-Tan Le",
+          "A. Kazerouni",
+          "H. Karaimer",
+          "Hue Nguyen",
+          "I. Mohomed",
+          "Michael Brudno",
+          "Alex Levinshtein",
+          "K. Derpanis",
+          "Babak Taati",
+          "R. Grzeszczuk"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 140,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.22871",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.22871",
+        "id:SemanticScholar:b3bd962bbe6f2152740fe588516766224b9e3efa",
+        "id:arXiv:2602.22871",
+        "title:testtime scaling with diffusion language models via rewardguided stitching",
+        "url:https://arxiv.org/abs/2602.22871"
+      ],
+      "record": {
+        "title": "Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching",
+        "source_url": "https://arxiv.org/abs/2602.22871",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning with large language models often benefits from generating multiple chains-of-thought, but existing aggregation strategies are typically trajectory-level (e.g., selecting the best trace or voting on the final answer), discarding useful intermediate work from partial or\"nearly correct\"attempts. We propose Stitching Noisy Diffusion Thoughts, a self-consistency framework that turns cheap diffusion-sampled reasoning into a reusable pool of step-level candidates. Given a problem, we (i) sample many diverse, low-cost reasoning trajectories using a masked diffusion language model, (ii) score every intermediate step with an off-the-shelf process reward model (PRM), and (iii) stitch these highest-quality steps across trajectories into a composite rationale. This rationale is then used to recompute only the final answer. This modular pipeline separates exploration (diffusion) from evaluation and solution synthesis, avoiding monolithic unified hybrids while preserving broad search. Across math reasoning benchmarks, we find that step-level recombination is most beneficial on harder problems, and ablations highlight the importance of the final solver in converting stitched but imperfect rationales into accurate answers. Using low-confidence diffusion sampling with parallel, independent rollouts, our training-free framework improves average accuracy by up to 23.8% across six math and coding tasks. At the same time, it achieves up to a 1.8x latency reduction relative to both traditional diffusion models (e.g., Dream, LLaDA) and unified architectures (e.g., TiDAR). The code is available https://github.com/roymiles/diffusion-stitching",
+        "identifiers": [
+          "SemanticScholar:b3bd962bbe6f2152740fe588516766224b9e3efa"
+        ],
+        "semantic_scholar_id": "b3bd962bbe6f2152740fe588516766224b9e3efa",
+        "canonical_id": "arXiv:2602.22871",
+        "arxiv_id": "2602.22871",
+        "doi": "10.48550/arXiv.2602.22871",
+        "authors": [
+          "R. Miles",
+          "Aysim Toker",
+          "Andreea-Maria Oncescu",
+          "Song Xu",
+          "Jian-Kang Deng",
+          "Ismail Elezi"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 244,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.20216",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.20216",
+        "id:SemanticScholar:09951e1713ea0dfa9eac98184b95624cbdf75b64",
+        "id:arXiv:2603.20216",
+        "title:locally coherent parallel decoding in diffusion language models",
+        "url:https://arxiv.org/abs/2603.20216"
+      ],
+      "record": {
+        "title": "Locally Coherent Parallel Decoding in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2603.20216",
+        "year": 2026,
+        "published": "2026-03-03",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) have emerged as a promising alternative to autoregressive (AR) models, offering sub-linear generation latency and bidirectional capabilities that are particularly appealing for code generation and editing. Achieving sub-linear latency in discrete DLMs requires predicting multiple tokens in parallel. However, standard DLMs sample tokens independently from conditional marginal distributions, failing to capture the joint dependencies among concurrently generated tokens. As a result, they often lead to syntactic inconsistencies and break multi-token structures. In this work, we introduce CoDiLA (Coherent Diffusion with Local Autoregression), a method that reconciles parallel sampling with local dependency modeling. Rather than forcing the DLM to resolve fine-grained syntax, CoDiLA delegates local decoding to a small, auxiliary AR model operating on the diffusion latents. This design allows for parallel generation while ensuring sequential validity within a block and maintaining core DLM capabilities, including bidirectional modeling across blocks. We demonstrate that using a highly compact auxiliary AR model (e.g., 0.6B parameters) effectively eliminates coherence artifacts, establishing a new Pareto frontier for accuracy and speed in code generation benchmarks.",
+        "identifiers": [
+          "SemanticScholar:09951e1713ea0dfa9eac98184b95624cbdf75b64"
+        ],
+        "semantic_scholar_id": "09951e1713ea0dfa9eac98184b95624cbdf75b64",
+        "canonical_id": "arXiv:2603.20216",
+        "arxiv_id": "2603.20216",
+        "doi": "10.48550/arXiv.2603.20216",
+        "authors": [
+          "M. Hersche",
+          "Nicolas Menet",
+          "Ronan Tanios",
+          "Abbas Rahimi"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 239,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.03303",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.03303",
+        "id:SemanticScholar:ec271d488c11e9594026a323707fabe719ca60bd",
+        "id:arXiv:2506.03303",
+        "title:hopscotch discovering and skipping redundancies in language models",
+        "url:https://arxiv.org/abs/2506.03303"
+      ],
+      "record": {
+        "title": "Hopscotch: Discovering and Skipping Redundancies in Language Models",
+        "source_url": "https://arxiv.org/abs/2506.03303",
+        "year": 2025,
+        "published": "2025-06-03",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern causal language models stack many attention blocks to improve performance, but not all blocks are necessary for every task. We propose Hopscotch, a simple yet effective method that identifies and skips attention blocks with least contributions to a task and adapts to preserve output quality. Hopscotch jointly optimizes which blocks to skip and how to scale the outputs of the remaining layers. By introducing lightweight, trainable scaling parameters to attention and MLP blocks, it mitigates distribution shifts in hidden states caused by removing attention blocks. Hopscotch does not modify model weights or require access to pretraining or instruction-tuning data, and is compatible with existing model compression techniques. When applied to $\\texttt{Llama-3.1-8B}$ and $\\texttt{Qwen2.5-7B}$, Hopscotch achieves less than a 2% drop in performance even after skipping four attention blocks.",
+        "identifiers": [
+          "SemanticScholar:ec271d488c11e9594026a323707fabe719ca60bd"
+        ],
+        "semantic_scholar_id": "ec271d488c11e9594026a323707fabe719ca60bd",
+        "canonical_id": "arXiv:2506.03303",
+        "arxiv_id": "2506.03303",
+        "doi": "10.48550/arXiv.2506.03303",
+        "authors": [
+          "Mustafa Eyceoz",
+          "N. Nayak",
+          "Hao Wang",
+          "Ligong Han",
+          "Akash Srivastava"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 512,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08060",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08060",
+        "id:SemanticScholar:aa387b3911b2cd192bb0d4c0b3cb710c51700bed",
+        "id:arXiv:2602.08060",
+        "title:compilerassisted speculative sampling for accelerated llm inference on heterogeneous edge devices",
+        "url:https://arxiv.org/abs/2602.08060"
+      ],
+      "record": {
+        "title": "Compiler-Assisted Speculative Sampling for Accelerated LLM Inference on Heterogeneous Edge Devices",
+        "source_url": "https://arxiv.org/abs/2602.08060",
+        "year": 2026,
+        "published": "2026-02-08",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM deployment on resource-constrained edge devices faces severe latency constraints, particularly in real-time applications where delayed responses can compromise safety or usability. Among many approaches to mitigate the inefficiencies of sequential token-by-token generation, Speculative Decoding (SD) has emerged as a promising technique. However, SD at the edge is hindered by two major challenges: (1) integrating SD into a compiler-based workflow without sacrificing performance or programmability, and (2) exploiting the heterogeneous compute resources of modern SoCs through carefully designed partitioning strategies. This work addresses these challenges by using an analytical cost model that explores heterogeneous hardware configurations and guides coarse-grained partitioning of LLM subgraphs, particularly with edge-typical short input sequence lengths. The cost model predicts when speculative sampling and heterogeneous execution are jointly beneficial and is validated on an edge device featuring a hexacore Cortex-A CPU and a Mali GPU, revealing up to 1.68$\\times$ speedup for translation tasks, closely matching analytic expectations.",
+        "identifiers": [
+          "SemanticScholar:aa387b3911b2cd192bb0d4c0b3cb710c51700bed"
+        ],
+        "semantic_scholar_id": "aa387b3911b2cd192bb0d4c0b3cb710c51700bed",
+        "canonical_id": "arXiv:2602.08060",
+        "arxiv_id": "2602.08060",
+        "doi": "10.48550/arXiv.2602.08060",
+        "authors": [
+          "Alejandro Mesa",
+          "Guilherme Korol",
+          "Moritz Riesterer",
+          "J. P. C. de Lima",
+          "J. Castrillón"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 262,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.18817",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.18817",
+        "id:SemanticScholar:c12c453159e30fc5b8c184e5157a378c60b90fa0",
+        "id:arXiv:2605.18817",
+        "title:multitoken residual prediction",
+        "url:https://arxiv.org/abs/2605.18817"
+      ],
+      "record": {
+        "title": "Multi-Token Residual Prediction",
+        "source_url": "https://arxiv.org/abs/2605.18817",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) generate text by iteratively denoising masked token sequences, offering a tradeoff between parallelism and quality compared to autoregressive models. In current practice, the number of tokens decoded per step is controlled by a confidence threshold, and quality degrades monotonically as more tokens are denoised per step. We introduce Multi-token Residual Prediction (MRP), a lightweight module that enables dependency-aware multi-token denoising within a single backbone forward pass. MRP exploits a key property of the denoising process: the logit distributions at adjacent denoising steps are remarkably similar. Rather than running the backbone a second time to obtain the next-step logits, MRP predicts the residual between steps from the backbone's hidden states, effectively denoising more tokens per backbone forward at a fraction of the cost. We apply MRP across the two operating regimes of DLM decoding. In the high-quality-low-throughput static denoising regime, MRP serves as a drafter for speculative decoding: its proposals are verified against the backbone, yielding lossless acceleration of up to 1.4x in SGLang. In the low-quality-high-throughput dynamic denoising regime, MRP instead drives a remasking scheme that revokes over-eager reveals, recovering most of the accuracy lost to aggressive low-threshold decoding and improving accuracy by up to 22.6 points on code generation task HumanEval and 17.7 points on reasoning task GSM8K.",
+        "identifiers": [
+          "SemanticScholar:c12c453159e30fc5b8c184e5157a378c60b90fa0"
+        ],
+        "semantic_scholar_id": "c12c453159e30fc5b8c184e5157a378c60b90fa0",
+        "canonical_id": "arXiv:2605.18817",
+        "arxiv_id": "2605.18817",
+        "doi": "10.48550/arXiv.2605.18817",
+        "authors": [
+          "Yufeng Xu",
+          "Zishuo Bao",
+          "Qian Wang",
+          "Ze-Shen Zhang",
+          "Haoqi Zhang",
+          "Bo Peng",
+          "Ang Li",
+          "Rahul Chalamala",
+          "Yu-Cheng Lu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 169,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e1bf82d6bd123d5366c74744fa11770724ea2d17dd780e28c742695fcd1291a6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
