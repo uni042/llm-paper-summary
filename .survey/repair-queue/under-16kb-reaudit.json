@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T03:16:02.679846+00:00",
+  "generated_at": "2026-10-28T04:01:44.113371+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 14,
+  "count": 18,
   "worker_counts": {
-    "scheduled-chat-00": 5,
-    "scheduled-chat-30": 5,
-    "scheduled-chat-45": 4
+    "scheduled-chat-00": 6,
+    "scheduled-chat-30": 6,
+    "scheduled-chat-45": 6
   },
   "entries": [
     {
@@ -102,21 +102,61 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md",
-      "canonical_id": "arXiv:2608.00528",
-      "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
-      "file_bytes": 13075,
-      "source_sha256": "2d3f410f16cef6a8fd3b2ff67a2185dd3a1bf8158fb71688294d12c0a5ffac95",
-      "source_git_blob_sha": "a0d6936b961fcf5f47024271ff540d46fa0045c2",
-      "assigned_worker": "scheduled-chat-30",
+      "path": "papers/inference/13-sparse-attention/2025-2502.13251-neural-attention-search.md",
+      "canonical_id": "arXiv:2502.13251",
+      "title": "Neural Attention Search",
+      "file_bytes": 13109,
+      "source_sha256": "9688c7b626c9f8d6ad95c98a7a0530987bbfc7e544c242456f7f35f1b1eaee04",
+      "source_git_blob_sha": "6fc8804241493a2455418c8622baf129273bbd3d",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.926614,
+      "japanese_ratio": 0.847398,
       "quality_metrics": {
-        "body_chars": 3654,
-        "method_chars": 1196,
-        "evaluation_chars": 1114,
-        "limitation_chars": 0
+        "body_chars": 4079,
+        "method_chars": 1410,
+        "evaluation_chars": 1071,
+        "limitation_chars": 337
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md",
+      "canonical_id": "arXiv:2510.26843",
+      "title": "CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs",
+      "file_bytes": 13231,
+      "source_sha256": "4ab1cd792c6c758e231c1ee93032c61ff5d195432c3005b89467d3c3e9a51c34",
+      "source_git_blob_sha": "6bee18f72d72f23357a5bf9f47a1cad40f833542",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.901532,
+      "quality_metrics": {
+        "body_chars": 3625,
+        "method_chars": 1251,
+        "evaluation_chars": 900,
+        "limitation_chars": 397
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md",
+      "canonical_id": "arXiv:2609.36938",
+      "title": "Efficient Agentic LLM Serving over SSD-based Sparse KV Storage",
+      "file_bytes": 14541,
+      "source_sha256": "f86300ea39f7273af31f5976465744c117c6b42ee1fcd4c26a5087048be40823",
+      "source_git_blob_sha": "bf88d52ceeaae4a3f2b1544cd8ab77a6633f1ba8",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.86037,
+      "quality_metrics": {
+        "body_chars": 4225,
+        "method_chars": 1237,
+        "evaluation_chars": 955,
+        "limitation_chars": 415
       },
       "mechanical_failures": [],
       "warnings": []
@@ -125,9 +165,9 @@
       "path": "papers/inference/99-other-inference-systems/2026-2603.08899-confu-contemplate-the-future-for-better-speculative-sampling.md",
       "canonical_id": "arXiv:2603.08899",
       "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
-      "file_bytes": 14064,
-      "source_sha256": "c575771073d5c4cb5a090637e0000d7416b83213fe3e2cb2fa784e1dabc006e0",
-      "source_git_blob_sha": "3451e0f79744bde1c9022354fc160e5224da64e1",
+      "file_bytes": 15457,
+      "source_sha256": "99d6ec001f7a0a3a1c1cd5e6900b6cec633fce743ee96a89b5ac201486e5282f",
+      "source_git_blob_sha": "eedaaf11c523a1932c0f11f17a02ca83464ecedd",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -145,9 +185,9 @@
       "path": "papers/inference/16-weight-quantization-compression/2026-2605.08755-laquant-a-simple-overhead-free-large-reasoning-model-quantization-by-lay.md",
       "canonical_id": "arXiv:2605.08755",
       "title": "LAQuant: A Simple Overhead-free Large Reasoning Model Quantization by Layer-wise Lookahead Loss",
-      "file_bytes": 14191,
-      "source_sha256": "308980f0ccba349cd8b44e8fce1a88973666d726f60bd22ba66b1ec54d22973c",
-      "source_git_blob_sha": "b9ee32f81d9201e3e42c9ba63f6aec6424dcd2f7",
+      "file_bytes": 15584,
+      "source_sha256": "67c541a6c3bf9f23c162bc0c35c3d01753cb25930b0b3d9fc72510c7ee7a3085",
+      "source_git_blob_sha": "0bb949aa5f5f6e054dd092736b35e42e93b0d75f",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -162,21 +202,41 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/13-sparse-attention/2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md",
-      "canonical_id": "arXiv:2607.25291",
-      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
-      "file_bytes": 15840,
-      "source_sha256": "d26ce4f3bfa786e72bcb09464b23071b557a05cfa48209252d2e9a31d86491e6",
-      "source_git_blob_sha": "853cbe8dc95e77251e3e2ce2411cf51ecdf91c39",
+      "path": "papers/inference/99-other-inference-systems/2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md",
+      "canonical_id": "arXiv:2607.08032",
+      "title": "What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents",
+      "file_bytes": 15842,
+      "source_sha256": "3a833fafa69c8dd6103f3ee6753fc65a6e097e47470b77215c4491a3c0ad965f",
+      "source_git_blob_sha": "9067eee1577214f84d241f3655f1ae39d7533f85",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.902956,
+      "japanese_ratio": 0.980615,
       "quality_metrics": {
-        "body_chars": 4117,
-        "method_chars": 1223,
-        "evaluation_chars": 588,
-        "limitation_chars": 493
+        "body_chars": 4262,
+        "method_chars": 1540,
+        "evaluation_chars": 803,
+        "limitation_chars": 384
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.00528-s-4-r-selective-sampling-subspaces-and-sparse-reconstruction-for-compres.md",
+      "canonical_id": "arXiv:2608.00528",
+      "title": "S$^4$R: Selective Sampling, Subspaces, and Sparse Reconstruction for Compressed Long-Context KV Caching",
+      "file_bytes": 16260,
+      "source_sha256": "73795058cdfe8d7b9bbfb552371c383207055269359f2617819f7442b5aa3cd5",
+      "source_git_blob_sha": "fd36f8c7fe072e2f17766023ea2803f31113feee",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.926614,
+      "quality_metrics": {
+        "body_chars": 3654,
+        "method_chars": 1196,
+        "evaluation_chars": 1114,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -281,6 +341,26 @@
         "method_chars": 1405,
         "evaluation_chars": 1557,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/13-sparse-attention/2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md",
+      "canonical_id": "arXiv:2607.25291",
+      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
+      "file_bytes": 18058,
+      "source_sha256": "36759b1f7b3b5185d79665b6134031f404435a3bb9bd7c4be734ed1de11389b9",
+      "source_git_blob_sha": "3bffbb7de7ce30090652b571a4a0793f71a1c96a",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.902956,
+      "quality_metrics": {
+        "body_chars": 4117,
+        "method_chars": 1223,
+        "evaluation_chars": 588,
+        "limitation_chars": 493
       },
       "mechanical_failures": [],
       "warnings": []
