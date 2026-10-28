@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-28T06:43:59+00:00",
-  "record_count": 5380,
+  "updated_at": "2026-10-28T13:46:42+00:00",
+  "record_count": 5382,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83386,6 +83386,33 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Quantized Large Language Models in Biomedical Natural Language Processing: Evaluation and Recommendation"
+    },
+    "DOI:10.3390/app15052418": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3390/app15052418",
+      "identity_tokens": [
+        "DOI:10.3390/app15052418"
+      ],
+      "reason": "論文の主要機構はGCNとgraph transformerでノード構造を符号化してSmolLMのグラフ分類・リンク予測を改善するタスク固有の表現学習であり、LLMの汎用推論サービング、KVキャッシュ、量子化、オフロード、投機的復号、推論ランタイム最適化ではない。RTX 4090上の分類正解率のみを評価し、端末推論遅延・電力・メモリ節約を実測しないため、LLM推論・学習システムサーベイへの直接適合性は微妙。エッジSLMの利用動機があり完全無関係とは断定しない。",
+      "first_checked_at": "2026-10-28T13:46:40+00:00",
+      "last_checked_at": "2026-10-28T13:46:40+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Small Language Models for Graph Tasks Through Graph Encoder Integration"
+    },
+    "arXiv:2408.05391": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.05391",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2408.05391",
+        "arXiv:2408.05391"
+      ],
+      "reason": "SAMSAは差分可能な非復元抽出（without-replacement sampling）で注意対象トークンを選ぶ線形複雑度の一般Transformer注意機構であり、推論効率のシステム的要素を持つ。ただし原著Section 5の実験はLong Range Arenaの分類・検索、Peptidesグラフ、ModelNet40/ShapeNet点群で、自己回帰言語モデルのトークン生成、KVキャッシュ、LLMサービングでの実装・遅延・品質を測っていない。汎用注意機構として隣接するが、現行サーベイのLLM推論直接貢献を満たす根拠が不足するためborderlineとする。",
+      "first_checked_at": "2026-10-28T13:46:42+00:00",
+      "last_checked_at": "2026-10-28T13:46:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SAMSA: Efficient Transformer for Many Data Modalities"
     }
   }
 }
