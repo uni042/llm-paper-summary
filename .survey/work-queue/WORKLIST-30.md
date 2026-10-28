@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-10-28T17:06:17+00:00`
+Generated: `2026-10-28T17:28:33+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -94,8 +94,8 @@ ready総数: **223** / 未claim総数: **223** / このworker向け: **74**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **125898** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **119778** / 監査再投入 **0** / 機械規則適用後 **122382** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **125899** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **119779** / 監査再投入 **0** / 機械規則適用後 **122383** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -227,7 +227,7 @@ ready総数: **223** / 未claim総数: **223** / このworker向け: **74**
 | 126 | 10 | 7 | 7 | arXiv:2607.12422 | Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting | 2026-07-14 | arXiv.org | 0 | 7 | Speculative Decoding, inference-systems, speculative decoding / parallel drafting / diffusion-inspired language modeling, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2607.12422) |
 | 127 | 29 | 6 | 25 | arXiv:2410.03960 | SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation | 2024-10-04 | Conference on Empirical Methods in Natural Language Processing | 19 | 25 | 07-kv-cache-optimization-compression, Conditional Computation, KV Cache Optimization / Compression, KV cache compression / cross-layer state merging, KV cache quantization / long-context inference / activation compression, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, Speculative Decoding, inference-systems, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, long-context inference / dynamic sparse attention / prefill acceleration, survey-speculative-decoding, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2410.03960) |
 | 128 | 102 | 6 | 21 | arXiv:2607.28418 | WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning | 2026-07-30 | arXiv.org | 2 | 21 | 02-hardware-accelerators, Conditional Computation, LLM Serving / Scheduling / Disaggregation, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2607.28418) |
-| 129 | 10 | 6 | 19 | arXiv:2609.27298 | StateComp: Learning When to Compress History in Long Horizon Agents | 2026-09-23 |  | 0 | 19 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, LLM Serving / Scheduling / Disaggregation, agentic inference / persistent memory, inference-systems, long-context inference / dynamic sparse attention / prefill acceleration, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2609.27298) |
+| 129 | 101 | 6 | 19 | arXiv:2609.27298 | StateComp: Learning When to Compress History in Long Horizon Agents | 2026-09-23 |  | 1 | 19 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, LLM Serving / Scheduling / Disaggregation, agentic inference / persistent memory, inference-systems, long-context inference / dynamic sparse attention / prefill acceleration, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2609.27298) |
 | 130 | 102 | 6 | 18 | arXiv:2609.11998 | Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale | 2026-09-09 |  | 2 | 19 | 14-long-context-inference, Diffusion LLM Inference, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2609.11998) |
 | 131 | 106 | 6 | 17 | arXiv:2603.17946 | CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention | 2026-03-18 | arXiv.org | 6 | 17 | 07-kv-cache-optimization-compression, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2603.17946) |
 | 132 | 10 | 6 | 16 | arXiv:2609.34380 | DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory | 2026-09-28 |  | 0 | 16 | 16-weight-quantization-compression, KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation, LLM serving / multi-SLO scheduling / admission control / speculative decoding / multi-replica routing, MoE inference systems / expert parallelism / model compression / knowledge distillation, Offload / Hierarchical Memory, offload-hierarchical-memory, オフロード／階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.34380) |
@@ -598,7 +598,7 @@ ready総数: **223** / 未claim総数: **223** / このworker向け: **74**
 | 497 | 0 | 4 | 7 | SemanticScholar:1d51b9b46e651f3415d8a68d6ac38fa75d1b2133 | Flashback: Memory Mechanism for Enhancing Memory Efficiency and Speed in Deep Sequential Models | 2025 | International Conference on Computational Linguistics | 0 | 7 | sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/1d51b9b46e651f3415d8a68d6ac38fa75d1b2133) |
 | 498 | 104 | 4 | 7 | arXiv:2609.14005 | StepAudio 3 Realtime Technical Report | 2026-09-12 |  | 4 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.14005) |
 | 499 | 101 | 4 | 7 | arXiv:2604.22577 | QuantClaw: Precision Where It Matters for OpenClaw | 2026-04-24 | arXiv.org | 1 | 7 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2604.22577) |
-| 500 | 24 | 4 | 7 | arXiv:2412.08646 | StreamChat: Chatting with Streaming Video | 2024-12-11 | arXiv.org | 24 | 7 | 11-llm-serving-scheduling-disaggregation, Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2412.08646) |
+| 500 | 101 | 4 | 7 | arXiv:2609.32353 | Fewer Tokens, More Self-Teaching: On-Policy Self-Distillation for Extreme Visual Token Reduction | 2026-09-26 |  | 1 | 7 |  | [source](https://arxiv.org/abs/2609.32353) |
 
 ## Machine-readable
 

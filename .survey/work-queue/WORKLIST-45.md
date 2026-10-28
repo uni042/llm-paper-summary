@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-10-28T17:06:17+00:00`
+Generated: `2026-10-28T17:28:33+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -94,8 +94,8 @@ ready総数: **223** / 未claim総数: **223** / このworker向け: **74**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **125898** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **119778** / 監査再投入 **0** / 機械規則適用後 **122382** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **125899** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **119779** / 監査再投入 **0** / 機械規則適用後 **122383** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -598,7 +598,7 @@ ready総数: **223** / 未claim総数: **223** / このworker向け: **74**
 | 497 | 114 | 4 | 7 | arXiv:2602.07854 | Geometry-Aware Rotary Position Embedding for Consistent Video World Model | 2026-02-08 | arXiv.org | 14 | 7 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2602.07854) |
 | 498 | 102 | 4 | 7 | arXiv:2602.22543 | Ruyi2 Technical Report | 2026-02-26 | arXiv.org | 2 | 7 | Conditional Computation, 投機的デコード / 分布保存型デコード高速化 | [source](https://arxiv.org/abs/2602.22543) |
 | 499 | 101 | 4 | 7 | arXiv:2605.30832 | SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning | 2026-05-29 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2605.30832) |
-| 500 | 23 | 4 | 7 | arXiv:2305.11916 | F-PABEE: Flexible-Patience-Based Early Exiting For Single-Label and Multi-Label Text Classification Tasks | 2023-05-21 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 23 | 7 |  | [source](https://arxiv.org/abs/2305.11916) |
+| 500 | 24 | 4 | 7 | arXiv:2412.08646 | StreamChat: Chatting with Streaming Video | 2024-12-11 | arXiv.org | 24 | 7 | 11-llm-serving-scheduling-disaggregation, Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2412.08646) |
 
 ## Machine-readable
 
