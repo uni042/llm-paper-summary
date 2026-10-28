@@ -30,6 +30,8 @@ worker_completed_at: "2026-10-28T21:47:00+09:00"
 reference_main_sha: "3579a9852e533caf20392a0585a93a01fb033067"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # LESFT：エッジ分割LoRA学習と二経路のトークン別損失重み付け
