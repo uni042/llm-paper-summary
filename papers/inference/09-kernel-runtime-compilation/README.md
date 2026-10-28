@@ -822,7 +822,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 
 - **2023-07 · [QIGen: Generating Efficient Kernels for Quantized Inference on Large Language Models](2023-2307.03738-qigen-generating-efficient-kernels-for-quantized-inference-on-large-lang.md)**  
   実装：[✓](https://github.com/IST-DASLab/QIGen) ・ リポジトリ内被引用：0  
-  QIGenは、量子化済み大規模言語モデルの逐次生成に使う行列ベクトル積を、CPUの実行資源に合わせて自動生成する研究である。AMD EPYC 7742上のLLaMA-7B/13B/30Bを使った2023年の評価では、4ビット列全体量子化の13Bで7.04トークン/秒、当時のllama.cppのq40では2.63トークン/秒だった。
+  QIGenは、量子化済みの大規模言語モデルをCPUで逐次生成するときの行列ベクトル積（GEMV）カーネルを自動生成する研究である。比率は約2.68倍だが、原著は最大約2.6倍と表現する。
 
 ### 5年前（2021-11〜2022-10）
 
