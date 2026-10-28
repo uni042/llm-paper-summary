@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-29 07:53:21 JST**
+> 自動生成: **2026-10-29 08:01:11 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -24,14 +24,14 @@
 
 | 指標 | 件数 |
 |---|---:|
-| **再監査残件数** | **7** |
+| **再監査残件数** | **3** |
 | 機械検査未達（FAIL） | **2** |
-| 機械検査適合・警告のみ（PASS/WARN） | **5** |
-| :00ワーカー担当残 | **2** |
-| :30ワーカー担当残 | **3** |
-| :45ワーカー担当残 | **2** |
+| 機械検査適合・警告のみ（PASS/WARN） | **1** |
+| :00ワーカー担当残 | **1** |
+| :30ワーカー担当残 | **1** |
+| :45ワーカー担当残 | **1** |
 
-- キュー最終生成: **2026-10-29 06:58:43 JST** / 再監査版: `2026-10-07-v1`。
+- キュー最終生成: **2026-10-29 07:55:59 JST** / 再監査版: `2026-10-07-v1`。
 - 機械検査PASS/WARNでも意味内容の再監査に合格したとは限りません。合格した論文はキュー再生成時に除外されます。
 - 残件数と担当別・機械検査別件数は `entries` から再計算し、`count`・`worker_counts` の保存値は使いません。累計完了件数・完了率は現在の待機リスト単独では算出できません。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-28 15:11:52 JST（16時間41分前）** |
+| 最終maintenance完了 | **10-28 15:11:52 JST（16時間49分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,7 +136,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **30** |
+| 直近6hのResearch完了 | **26** |
 | 直近6hのDiscovery run | **33** |
 | 直近6hのDiscovery本文確認・分類 | **245** |
 | 最終Research完了 | **10-29 07:34:00 JST** |
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **272** |
+| 成功result未照合のimmutable submission | **285** |
 | └ Research | **76** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **51** |
+| └ Other/Unknown | **64** |
 
 ### 厳格検証が未成立のcompleted job
 
