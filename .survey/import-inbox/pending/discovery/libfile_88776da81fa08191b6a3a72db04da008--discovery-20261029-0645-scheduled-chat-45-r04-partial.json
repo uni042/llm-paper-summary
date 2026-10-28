@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261029-0645-scheduled-chat-45/r04",
+  "reference_main_sha": "712e3efe4c705ea6497b04711b05297906987288",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.31557",
+      "identity_tokens": [
+        "id:arXiv:2605.31557",
+        "url:https://arxiv.org/abs/2605.31557"
+      ],
+      "title": "EGOSTREAM: A Diagnostic Benchmark for Streaming Episodic Memory in Egocentric Vision",
+      "reason": "タイトルが明示する研究対象は一人称視覚映像のストリーミング・エピソード記憶を診断するベンチマークであり、LLM推論エンジンの高速化・サービング・KVキャッシュ最適化・計算資源削減ではない。タイトル段階の対象外判定でありabstractと本文は未読。",
+      "source_url": "https://arxiv.org/abs/2605.31557",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-29T06:54:41+09:00",
+      "last_checked_at": "2026-10-29T06:54:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 183,
+      "origin": "discovery_title_screen"
+    }
+  ]
+}
