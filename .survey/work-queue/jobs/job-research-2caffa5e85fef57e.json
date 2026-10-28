@@ -35,10 +35,15 @@
   "selection_reason": "VLM投機的復号で浅いドラフトモデルが画像特徴を扱いにくく、自己提案後のターゲット予測の変化を学習できない問題に対し、ターゲット層表現の選択・圧縮視覚特徴の供給・提案軌跡を考慮した蒸留を組み合わせる。SmolVLM-256Mの10ベンチマークでEAGLE-3比の受理長と速度を改善し、マルチモーダル推論のデコード加速に直接寄与する。",
   "semantic_scholar_id": "287817cdfe11c49306db686c08bca665620ea2d7",
   "source_url": "https://arxiv.org/abs/2610.00623",
-  "status": "ready",
+  "status": "superseded",
   "title": "HAWK: Rethinking Multimodal Drafting for Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T04:17:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.00623-hawk-rethinking-multimodal-drafting-for-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2610.00623",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

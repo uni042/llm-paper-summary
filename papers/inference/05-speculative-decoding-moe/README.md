@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（312本）
+## 自動生成の論文一覧（313本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -427,6 +427,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [How Lossless Is Lossless Speculative Decoding? The Role of Numerical Precision in Orthrus](2026-2609.15504-orthrus-numerical-precision-losslessness.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Orthrusの無損失投機的復号を独立再現し、BF16では生成軌跡の完全一致が43〜45%に留まる一方、FP32では1,190件すべて一致することを示した再現・評価研究。
+
+- **2026-09 · [HAWK: Rethinking Multimodal Drafting for Speculative Decoding](2026-2610.00623-hawk-rethinking-multimodal-drafting-for-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  HAWKは、画像と文章を処理する大規模視覚言語モデル（LVLM）の投機的復号において、軽量な草案モデル（ドラフタ）が教師モデルの視覚情報を十分に活用できず、複数トークンを連続して提案すると受理率が落ちる問題を扱う。
 
 - **2026-09 · [GrowMTP: Can RL Grow Its Own Draft Head?](2026-2609.16648-growmtp-efficient-multi-token-prediction-via-progressive-growth.md)**  
   実装：[✓](https://growmtp.github.io/) ・ リポジトリ内被引用：0  

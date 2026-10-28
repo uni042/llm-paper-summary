@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（739本）
+## 自動生成の論文一覧（741本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1374,6 +1374,10 @@
   実装：[✓](https://github.com/ViktorAxelsen/BudgetMem) ・ リポジトリ内被引用：0  
   従来の記憶方式は履歴全体を事前に要約・索引化することが多いが、将来どの質問が来るかを知らずに情報を圧縮するため、不要な部分へ計算を費やしたり、後で必要になる詳細を失ったりする。
 
+- **2026-02 · [LATMiX: Learnable Affine Transformations for Microscaling Quantization of LLMs](2026-2602.17681-latmix-learnable-affine-transformations-for-microscaling-quantization-of.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LATMiXは、低ビット量子化で問題になる活性値の外れ値を、量子化する前の可逆な座標変換によって緩和する事後量子化手法である。Qwen3-4BのMXFP4では単純GPTQの7課題平均62.11%に対しLATMiX-LUは64.74%、MXINT4では55.09%に対し63.63%である。
+
 - **2026-02 · [Improving the Trade-off Between Watermark Strength and Speculative Sampling Efficiency for Language Models](2026-2602.01428-improving-the-trade-off-between-watermark-strength-and-speculative-sampl.md)**  
   実装：[✓](https://github.com/hwq0726/watermark-tradeoff) ・ リポジトリ内被引用：0  
   一方、投機的サンプリングは小型のドラフトモデルが先読みした複数トークンを大型ターゲットモデルがまとめて検証し、受理できたトークンの分だけ逐次的な大型モデル呼び出しを減らす。ELI5とC4、LlamaおよびGemmaの二組のモデルで、1検証ステップ当たりの受理トークン数が通常投機的サンプリングとほぼ同じで、検出性能も改善することを確認した。
@@ -2319,6 +2323,10 @@
 - **2024-12 · [Continuous Speech Tokens Makes LLMs Robust Multi-Modality Learners](2024-2412.04917-continuous-speech-tokens-makes-llms-robust-multi-modality-learners.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   音声対話を言語モデルへ統合する際、文字列と同様に音声も離散トークンIDへ変換し、次のIDを分類する方式が広く用いられる。Mini-Omniの10.84に対しFlow-Omniは8.81で、絶対2.03ポイント、相対約18.7%の低下となる。
+
+- **2024-12 · [Constrained Decoding with Speculative Lookaheads](2024-2412.10418-constrained-decoding-with-speculative-lookaheads.md)**  
+  実装：[✓](https://github.com/amazon-science/CDSL-NAACL2025) ・ リポジトリ内被引用：0  
+  Constrained Decoding with 投機的 Lookaheads（CDSL）は、制約を満たす文章を生成するために未来の候補を何段も探索する復号法を、小型ドラフトモデルと大型ターゲットモデルの投機的検証で高速化する。CDSLは先読みを安価なドラフトへ委ね、ターゲットによる検証と報酬関数の判定を組み合わせる。
 
 - **2024-11 · [Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference](2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

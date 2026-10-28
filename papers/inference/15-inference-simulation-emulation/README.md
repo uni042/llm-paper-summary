@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（63本）
+## 自動生成の論文一覧（64本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -105,6 +105,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
+
+- **2026-08 · [Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework](2026-2608.01126-spatial-prefix-caching-for-wireless-edge-llm-inference-a-stochastic-geom.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  提案はこの四つの費用を一つの最初のトークンまでの時間（TTFT）へ統合する。正規化した数値実験では、空間要求強度4件/(km²・秒)、TTFT閾値0.8秒における達成率が、提案法約0.63、接頭辞一致だけを優先してキューを無視する方式約0.23、最近傍ノード選択約0.52だった。
 
 - **2026-08 · [Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems](2026-2608.24650-simthesizer-an-agent-driven-simulation-framework-for-llm-serving-systems.md)**  
   実装：[✓](https://github.com/casys-kaist/Simthesizer) ・ リポジトリ内被引用：0  
