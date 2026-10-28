@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（394本）
+## 自動生成の論文一覧（395本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -458,6 +458,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [The KV Cache Is the New Memory Wall](2026-2609.30854-the-kv-cache-is-the-new-memory-wall.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   新しいKV圧縮器やGPUカーネルの実装ではなく、既存研究が異なる条件で報告してきた改善率を解釈するための分析枠組みを作る。例えばLlama-3-70BをBF16で扱う場合、重みは約140GB、1系列128kトークンのKVは約42GBである。
+
+- **2026-09 · [Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving](2026-2609.32999-tessera-demand-driven-kv-cache-management-for-retrieval-augmented-llm-se.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  検索結果を単なるLLMへの入力ではなく、キャッシュの将来需要を示す制御信号として扱い、検索履歴、KV配置、生成ノード負荷を一体で用いてキャッシュ採否・退避・要求ルーティングを計画する。
 
 - **2026-09 · [TempoKV: Timely Staging of LLM KV Caches for Memory-Semantic Flash](2026-2609.35065-tempokv-timely-staging-of-llm-kv-caches-for-memory-semantic-flash.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

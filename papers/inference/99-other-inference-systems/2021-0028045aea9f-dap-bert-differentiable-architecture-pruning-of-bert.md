@@ -27,6 +27,8 @@ worker_completed_at: '2026-10-28T22:07:38+09:00'
 reference_main_sha: '3579a9852e533caf20392a0585a93a01fb033067'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # BERTの注意ヘッドとFFN幅を段階的に削るDAP-BERT：CPU実測と蒸留費用を含む検討

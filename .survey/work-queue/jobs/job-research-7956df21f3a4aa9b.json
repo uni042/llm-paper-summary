@@ -35,10 +35,15 @@
   "selection_reason": "GitHub Discovery precheckの一次書誌要旨ではRAGとエージェント記憶の検索結果が異なるプロンプト位置に再登場し、接頭辞キャッシュだけでは再利用できない問題を扱う。検索段階で必要なコンテキスト単位を公開し、ローカル・リモート・未計算KVの準備、ノード配分、保持を統合するTesseraを提案。SGLang/LMCache+EPIC比で平均TTFT最大3.6倍改善を報告するサービング研究。",
   "semantic_scholar_id": "ba49dbd7e0c2e6f2e864eed4e4011bc87c099b35",
   "source_url": "https://arxiv.org/abs/2609.32999",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tessera: Demand-Driven KV Cache Management for Retrieval-Augmented LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-28T13:55:21+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.32999-tessera-demand-driven-kv-cache-management-for-retrieval-augmented-llm-se.md",
+  "represented_canonical_id": "arXiv:2609.32999",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
