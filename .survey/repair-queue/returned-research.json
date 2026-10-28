@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-27T22:52:27+00:00",
+  "generated_at": "2026-10-28T00:54:12+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 70,
+  "count": 73,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1847,6 +1847,88 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-be250894dfdf--libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-be250894dfdf--libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-schedul.json",
       "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2602.06694",
+      "title": "NanoQuant: Efficient Sub-1-Bit Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/html/2602.06694v3",
+      "returned_at": "2026-10-28T00:51:13+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4427,
+        "body_paragraphs": 26,
+        "method_chars": 1183,
+        "method_paragraphs": 6,
+        "evaluation_chars": 0,
+        "limitation_chars": 643,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2459d2945cfc81919075e51fb405ac92--2026-2602.06694-nanoquant-sub-one-bit-ptq-research-20261028-0901-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.27339",
+      "title": "Beyond Parallel Blindness: Information Floors and Model Gaps in Block Drafting",
+      "source_url": "https://arxiv.org/html/2608.27339v4",
+      "returned_at": "2026-10-28T00:51:14+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5334,
+        "body_paragraphs": 31,
+        "method_chars": 2003,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 729,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_29dea13a82b881919b977a6fd775e18e--2026-2608.27339-beyond-parallel-blindness-block-drafting-research-20261028-0901-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.25291",
+      "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
+      "source_url": "https://arxiv.org/html/2607.25291v2",
+      "returned_at": "2026-10-28T00:52:04+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4612,
+        "body_paragraphs": 27,
+        "method_chars": 1582,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6dc7834f4dbc81918f89b87a2572a1fd--2026-2607.25291-cosa-proxy-kernel-sparse-attention-research-20261028-0901-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6dc7834f4dbc81918f89b87a2572a1fd--2026-2607.25291-cosa-proxy-kernel-sparse-attention-research-20261028-0901-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261028-0901-scheduled-chat-00/r01"
     }
   ]
 }

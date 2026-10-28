@@ -35,10 +35,15 @@
   "selection_reason": "arXiv一次要旨ではQKの正確な類似度を計算してブロック別最大スコアと校正閾値を比較し、重要度の低いVブロックの計算・転送を省くBlock-Sparse FlashAttentionを提案。層・ヘッド別の閾値を少量データで一度校正し、CUDAカーネルとしてFlashAttention代替に実装。Llama-3.1-8Bで最大1.10〜1.24倍の実測推論速度改善を報告する。",
   "semantic_scholar_id": "131feeef2300f245a5997e0243fb89b4f038f44f",
   "source_url": "https://arxiv.org/abs/2512.07011",
-  "status": "ready",
+  "status": "superseded",
   "title": "Block Sparse Flash Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-28T00:54:11+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.07011-block-sparse-flash-attention.md",
+  "represented_canonical_id": "arXiv:2512.07011",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
