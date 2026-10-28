@@ -5225,6 +5225,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2605.04543-univer-a-unified-perspective-for-multi-step-and-multi-draft-speculative-.md",
+      "status": "PASS",
+      "summary": "木状投機的復号の兄弟候補選択と接頭辞受理を条件付き最適輸送で統合。特定の混合草案規則で分布不変性を証明し、温度1ではRRSw比受理長+4.2～8.5%。温度0では追加利得なし。",
+      "char_count": 88,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/05-speculative-decoding-moe/2026-2605.07243-specblock-block-iterative-speculative-decoding-with-dynamic-tree-draftin.md",
       "status": "PASS",
       "summary": "4位置を依存付きで同時生成する草稿ブロックを反復し、順位予測による動的分岐と検証結果に基づく費用選択更新で、投機的復号の草稿時間を抑えつつ受理長を維持する。",
@@ -5373,6 +5382,15 @@
       "status": "PASS",
       "summary": "検索型投機的復号を目標モデルの隠れ状態で意味検索し、緩い採択条件で高速化。速度改善と引き換えに出力分布は厳密には保持されない。",
       "char_count": 63,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2606.00535-dream-s-speculative-decoding-with-searchable-drafting-and-target-aware-r.md",
+      "status": "PASS",
+      "summary": "DREAM-SはVLMの投機的復号向けに草稿のヘッド・画像トークン・特徴注入層をハードウェアに合わせて探索し、受理長と草稿計算時間のトレードオフを改善する。",
+      "char_count": 78,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -11700,6 +11718,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2602.06694-nanoquant-efficient-sub-1-bit-quantization-of-large-language-models.md",
+      "status": "PASS",
+      "summary": "低ランク二値因子分解とLB-ADMM初期化で1bit未満のLLM事後量子化を実現。Llama-2-70Bを単一H100・13時間で5.75GBに圧縮し、8GB GPUで実行。品質低下と専用kernel依存を明記。",
+      "char_count": 106,
+      "japanese_ratio": 0.896551724137931,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/09-kernel-runtime-compilation/2026-2602.10056-wildcat-near-linear-attention-in-theory-and-practice.md",
       "status": "PASS",
       "summary": "少数の代表鍵をランダムピボット付きコレスキー分解で選び、Nyström重みで注意を近似。KVを75%圧縮したLongBench-Eで平均47.25点を維持。",
@@ -12280,6 +12307,15 @@
       "status": "PASS",
       "summary": "GPU縮約順序を記述子化し、非公開行列積のビット挙動復元、コンパイラでの平衡木強制、命令列の静的同値判定を接続して再現性と自動調整を両立する。",
       "char_count": 71,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/09-kernel-runtime-compilation/2026-2609.12379-forgemegakernel-a-general-framework-for-efficient-auto-regressive-model-.md",
+      "status": "PASS",
+      "summary": "GPUデコードを単一カーネルへ融合するエージェントに10段階の実装要件と独立したKV中間状態検証器を与える。H100でMBU50.5～85.9%、SGLang比カーネル1.21倍・サービング1.11倍、生成費用と固定形状制約も報告。",
+      "char_count": 116,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -19100,8 +19136,8 @@
     {
       "path": "papers/inference/13-sparse-attention/2025-2506.06095-accelerating-sparse-transformer-inference-on-gpu.md",
       "status": "PASS",
-      "summary": "STOFは二層疎マスク格納と注意カーネル選択、演算子融合の二段階探索を組み合わせ、RTX 4090/A100上の疎Transformer推論をPyTorch Compile比平均1.3〜1.4倍高速化する。",
-      "char_count": 103,
+      "summary": "STOFは疎注意を二段階ビットマップで表現する専用GPUカーネルと下流演算の探索型融合を組み合わせ、マスク形状・入力長に応じて推論を高速化する。",
+      "char_count": 72,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
@@ -27898,6 +27934,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2025-2512.07011-block-sparse-flash-attention.md",
+      "status": "PASS",
+      "summary": "正確なQKスコアを計算した後、校正済みブロック最大値閾値でV読込とPV演算だけを省くFlashAttention-2拡張。A100/LongBenchで1.10倍・99.1%品質保持。",
+      "char_count": 92,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2025-2512.08240-hybrid-token-compression-for-vision-language-models.md",
       "status": "PASS",
       "summary": "576個の画像パッチと4個の離散意味アンカーを1トークンに統合し、A100実測でLLaVA比約7.8倍の画像推論低遅延化と正規化性能保持率87.2%を両立する。",
@@ -29082,6 +29127,15 @@
       "summary": "小型モデルの自己申告確信度を強化学習で較正して大型モデルへ選択委譲し、領域外推論の推定費用を16.8～21.5%削減。",
       "char_count": 59,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md",
+      "status": "PASS",
+      "summary": "視覚・文章・音声で活性値のスケールが異なる問題をモダリティ別平滑化とSVD低ランク補償で解決。Omni-3B W4A8のLibriSpeech WERはSmoothQuant 77.4から3.6に改善。RTX4090でprefill 2.67倍だがMBQよりやや遅い。",
+      "char_count": 134,
+      "japanese_ratio": 0.8955223880597015,
       "failures": [],
       "warnings": []
     },
@@ -30708,6 +30762,15 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2607.00908-beyond-activation-alignment-the-alignment-diversity-tradeoff-in-task-awa.md",
+      "status": "PASS",
+      "summary": "TASAは数学推論とPPLの量子化感度の乖離を踏まえ、校正データ混合比・層別ビット数・層内グループ精度を共同最適化する学習不要の混合精度PTQ方式。",
+      "char_count": 74,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2607.01617-3dls-disaggregated-serving-interconnect.md",
       "status": "PASS",
       "summary": "プリフィル→デコードのKV転送とデコード側テンソル並列AllReduceを同じ横方向リンクで競合させず、KVだけを3D縦リンクへ物理分離するチップレット構成。等帯域条件でも最大1.49倍のスループットと60.2%の遅延削減を示す。",
@@ -30821,6 +30884,15 @@
       "summary": "問い合わせの意味クラスタ別にモデルの品質と費用を推定し、残りの問い合わせ数と予算から適応的線形計画を解き直して、複数LLMへの割当をワークロード全体の予算内で制御する。",
       "char_count": 84,
       "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2607.27600-back-from-the-future-key-value-cache-management-by-counter-causal-surpri.md",
+      "status": "PASS",
+      "summary": "後続文脈から予測できない過去トークンをKVに残す学習不要の削除法。未来向き注意マスクで再評価し、最終層のみの近似でrefreshを7～9倍高速化。AIMEではFull50.0%に対し36.7%、MATH500の一部ではH2Oが勝つ。",
+      "char_count": 116,
+      "japanese_ratio": 0.9102564102564102,
       "failures": [],
       "warnings": []
     },
@@ -31009,6 +31081,15 @@
       "status": "PASS",
       "summary": "RLM後学習を仕事量・深さ・メモリで形式化し、モデル内6種の並列化と配置・段階融合・非同期化を統一分類して、長い自己回帰生成が支配する分散RLの設計原理を整理する。",
       "char_count": 82,
+      "japanese_ratio": 1.0,
+      "failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2608.27339-beyond-parallel-blindness-information-floors-and-model-gaps-in-block-dra.md",
+      "status": "PASS",
+      "summary": "投機的ブロック草案の棄却を情報制約とモデル不足に分離し、直前トークン条件付き文脈注意によって受理長と実測速度を改善する研究。",
+      "char_count": 62,
       "japanese_ratio": 1.0,
       "failures": [],
       "warnings": []
