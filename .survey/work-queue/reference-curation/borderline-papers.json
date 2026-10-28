@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-28T21:47:59+00:00",
-  "record_count": 5408,
+  "updated_at": "2026-10-28T22:45:57+00:00",
+  "record_count": 5411,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83739,11 +83739,13 @@
       "classification": "borderline",
       "canonical_id": "arXiv:2601.11667",
       "identity_tokens": [
-        "arXiv:2601.11667"
+        "arXiv:2601.11667",
+        "id:arXiv:2601.11667",
+        "url:https://arxiv.org/abs/2601.11667"
       ],
-      "reason": "DtRは事前学習済み全注意モデルの各層を局所蒸留して線形注意へ変換し、下流タスクの検証品質を監視しながら貪欲に層を置換する。長系列推論の計算量削減を目指すが、一次要旨は変換・蒸留コストと品質を中心に述べ、実際の推論遅延・KV容量の実測が確認できないため境界候補。",
+      "reason": "DtRは事前学習済みフル注意をブロック単位で線形注意へ蒸留し、タスク検証に基づき層を順次置換する。二乗計算の軽減を狙うが一次要旨の主眼はタスク別モデル構築と再学習削減で、LLM推論の速度・メモリ実測は示されないため境界候補。",
       "first_checked_at": "2026-10-28T21:47:58+00:00",
-      "last_checked_at": "2026-10-28T21:47:58+00:00",
+      "last_checked_at": "2026-10-28T22:45:57+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Distill-then-Replace: Efficient Task-Specific Hybrid Attention Model Construction"
@@ -83776,6 +83778,52 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models"
+    },
+    "DOI:10.52202/085713-0231": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-0231",
+      "identity_tokens": [
+        "DOI:10.52202/085713-0231"
+      ],
+      "reason": "長動画を短い区間へ分割しMap段階で並列に密な知覚を行い、Reduce段階で動画全体の質問応答へ統合する。推論時並列化という接点はあるが、主な寄与・評価は人物名の一貫性や質問意図解析によるLVBench正答率改善であり、GPU資源・サービング効率の定量最適化が中心ではないため境界扱いとする。",
+      "first_checked_at": "2026-10-28T22:45:52+00:00",
+      "last_checked_at": "2026-10-28T22:45:52+00:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "MR. Video: MapReduce as an Effective Principle for Long Video Understanding"
+    },
+    "arXiv:2505.11225": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.11225",
+      "identity_tokens": [
+        "arXiv:2505.11225",
+        "id:arXiv:2505.11225",
+        "url:https://arxiv.org/abs/2505.11225"
+      ],
+      "reason": "HAPOは過去の正解長を記憶する報酬で推論モデルを強化学習し、生成トークンを33～59%減らすが、主貢献は学習目的関数と数学推論の簡潔化である。推論サービングの実測速度・メモリ削減を示さないため境界候補とする。",
+      "first_checked_at": "2026-10-28T22:45:56+00:00",
+      "last_checked_at": "2026-10-28T22:45:56+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "HAPO: Training Language Models to Reason Concisely via History-Aware Policy Optimization"
+    },
+    "arXiv:2601.21744": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21744",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.21744",
+        "arXiv:2601.21744"
+      ],
+      "reason": "TeGuはMTPから弱いamateur予測を構成し、cMTPPを使って時間方向の自己対比で生成品質を高める。補助モデル負荷を抑える工夫はあるが、主目的は生成品質改善であり、トークン毎の推論速度やサービング性能への直接的改善は要旨では十分に示されない。",
+      "first_checked_at": "2026-10-28T22:45:56+00:00",
+      "last_checked_at": "2026-10-28T22:45:56+00:00",
+      "linked_from": [
+        "inference-systems"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Temporal Guidance for Large Language Models"
     }
   }
 }
