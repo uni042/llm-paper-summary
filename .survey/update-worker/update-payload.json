@@ -1,7 +1,30 @@
 {
   "schema_version": 1,
-  "attempt_id": "library-import-maint-20261029T072000-oct24",
+  "attempt_id": "library-import-maint-20261029T221000-oct26",
   "kind": "framework_llm_update",
-  "artifacts": [],
-  "summary": "2026-10-24 maintenance: verified no-op. Nemotron 3.5 Bolt E4B, Ollama v0.40.9/v0.40.10, and llama.cpp b11828-b11840 are already represented on main."
+  "artifacts": [
+    {
+      "path": "framework-updates/inference-engines/exllama/README.md",
+      "expected_blob_sha": "7b987035559c403b96d2fb2f71c20dfa399949ca",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 主要更新",
+          "text": "## 2026-10-25 — ExLlamaV3 v1.6.5（正式版）\n\n2026-10-25に正式公開されたv1.6.5を追加。v1.6.4から、VRAM上のprefill cache削減、hot/sparse vocabularyを用いたdraft latency削減、Gemma 4 MTP（Gemma4AssistantForCausalLM）対応、AVX2/AVX512 MoE CPU offload、Nemotron Super VL対応、tokenizer prompt cache修正が含まれる。Windows向けCUDA 12.8/13.2 wheelも公開された。個別機能の説明から全モデル共通のE2E生成速度倍率は推定できず、実測倍率は記載しない。\n\n一次資料: https://github.com/turboderp-org/exllamav3/releases/tag/v1.6.5 ; https://github.com/turboderp-org/exllamav3/compare/v1.6.4...v1.6.5\n\n"
+        }
+      ]
+    },
+    {
+      "path": "framework-updates/inference-engines/llama-cpp/README.md",
+      "expected_blob_sha": "10ccc3d9836aec212e9f5818170e50535b7cb969",
+      "edits": [
+        {
+          "op": "insert_before_once",
+          "anchor": "## 主要更新",
+          "text": "## 2026-10-25〜26 — llama.cpp b11870〜b11888（開発ビルド）\n\nb11869からb11888までの確定済み開発ビルド差分を追加。これらはpre-releaseであり、正式安定版と区別する。\n\n- b11870でDeepSeek-V4.1-Flashのmodel実装を追加。圧縮KV cache計算、Engram行のgraph内gather、sparse top-k行の並べ替えなどを含む。\n- b11879、b11883、b11884ではCUDA dense FFN fusion、4D quantization accuracy修正、DRY sampling関連修正などを収録。\n- b11888でgrammarの再帰深度制限と候補棄却処理を修正し、長い空白token列の誤棄却を解消。公式説明にあるsampling改善はgrammar関連の評価であり、一般のE2E生成速度倍率ではない。\n- b11888の配布assetにWindows CUDA 12.4およびCUDA 13.4系x64 buildがある。Windows 11 + RTX 4070 SUPERでの実測値は未確認。\n\n一次資料: https://github.com/ggml-org/llama.cpp/releases/tag/b11870 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11879 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11883 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11884 ; https://github.com/ggml-org/llama.cpp/releases/tag/b11888\n\n"
+        }
+      ]
+    }
+  ],
+  "summary": "2026-10-26 Library maintenance: add ExLlamaV3 v1.6.5 and llama.cpp b11870-b11888. Preserve prerelease distinction; no generalized E2E speed claims."
 }
