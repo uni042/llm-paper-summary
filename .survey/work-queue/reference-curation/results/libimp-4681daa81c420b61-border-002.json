@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4681daa81c420b61-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.07160",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.07160",
+    "identity_tokens": [
+      "arXiv:2602.07160",
+      "id:arXiv:2602.07160",
+      "url:https://arxiv.org/abs/2602.07160"
+    ],
+    "reason": "FEMは注意のq-kスコアを事前分布とみなし、value駆動のチャネル別log-linear傾斜で読み出しを変える新しいトークン混合演算を提案する。線形化可能な場合O(T)計算を保てるが、一次要旨の中心は表現力とNLP・画像・時系列精度であり既存LLM推論サービングの高速化実測がないためborderline。",
+    "first_checked_at": "2026-10-28T20:55:25+00:00",
+    "last_checked_at": "2026-10-28T20:55:25+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Free Energy Mixer"
+  },
+  "processed_at": "2026-10-28T20:55:25+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4681daa81c42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

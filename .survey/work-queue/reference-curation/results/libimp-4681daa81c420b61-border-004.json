@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4681daa81c420b61-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.08630",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.08630",
+    "identity_tokens": [
+      "arXiv:2610.08630",
+      "id:arXiv:2610.08630",
+      "url:https://arxiv.org/abs/2610.08630"
+    ],
+    "reason": "このサーベイは推論時に前向き計算へ組み込む埋込み・注意・FFN等のパラメータ状記憶を配置場所と取得時点で分類し、ICLと比べた文脈消費や再符号化の課題を論じる。推論時の記憶基盤に関連するが、主題は知識保持・適応であり具体的なサービング高速化の新規機構ではないためborderline。",
+    "first_checked_at": "2026-10-28T20:55:26+00:00",
+    "last_checked_at": "2026-10-28T20:55:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Towards In-Parameter Memory Augmentation for Large Language Models"
+  },
+  "processed_at": "2026-10-28T20:55:26+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4681daa81c42",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

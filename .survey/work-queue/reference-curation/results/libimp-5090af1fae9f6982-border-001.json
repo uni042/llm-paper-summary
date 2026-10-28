@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5090af1fae9f6982-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.17887",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.17887",
+    "identity_tokens": [
+      "arXiv:2605.17887",
+      "id:arXiv:2605.17887",
+      "url:https://arxiv.org/abs/2605.17887"
+    ],
+    "reason": "OASISはAttnResidualのトークン方向・深さ方向の二重正規化に生じるattention sinkと活性外れ値を、Softmax1のnull経路とトークンから深さへのnull結合で抑える。W8A8・W4A4量子化後の品質を改善するが、主たる寄与はモデル内部の注意・残差アーキテクチャと品質安定化であり、既存LLM推論ランタイムの実行時間・メモリ削減を直接示すかは要確認のためborderline。",
+    "first_checked_at": "2026-10-28T20:55:26+00:00",
+    "last_checked_at": "2026-10-28T20:55:26+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Attention Sinks and Outliers in Attention Residuals"
+  },
+  "processed_at": "2026-10-28T20:55:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5090af1fae9f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

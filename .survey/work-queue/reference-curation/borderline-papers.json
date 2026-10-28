@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-28T18:50:02+00:00",
-  "record_count": 5383,
+  "updated_at": "2026-10-28T20:55:30+00:00",
+  "record_count": 5393,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83428,6 +83428,156 @@
       ],
       "borderline_recheck_count": 0,
       "title": "FuxiMT: Sparsifying Large Language Models for Chinese-Centric Multilingual Machine Translation"
+    },
+    "arXiv:2607.25380": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.25380",
+      "identity_tokens": [
+        "arXiv:2607.25380",
+        "id:arXiv:2607.25380",
+        "url:https://arxiv.org/abs/2607.25380"
+      ],
+      "reason": "このサーベイはLLM記憶を表現形式、更新時点、永続性で分類し、注意KV・再帰状態・パラメータ更新・外部検索の記憶書込みと経路制御を横断整理する。システム効率上の論点は含むが対象が長期知識記憶やモデル能力にも広く及び、推論サービングの特定最適化を直接提案しないためborderline。",
+      "first_checked_at": "2026-10-28T20:55:25+00:00",
+      "last_checked_at": "2026-10-28T20:55:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Memory for Large Language Models"
+    },
+    "arXiv:2602.07160": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07160",
+      "identity_tokens": [
+        "arXiv:2602.07160",
+        "id:arXiv:2602.07160",
+        "url:https://arxiv.org/abs/2602.07160"
+      ],
+      "reason": "FEMは注意のq-kスコアを事前分布とみなし、value駆動のチャネル別log-linear傾斜で読み出しを変える新しいトークン混合演算を提案する。線形化可能な場合O(T)計算を保てるが、一次要旨の中心は表現力とNLP・画像・時系列精度であり既存LLM推論サービングの高速化実測がないためborderline。",
+      "first_checked_at": "2026-10-28T20:55:25+00:00",
+      "last_checked_at": "2026-10-28T20:55:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Free Energy Mixer"
+    },
+    "arXiv:2609.37304": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37304",
+      "identity_tokens": [
+        "arXiv:2609.37304",
+        "id:arXiv:2609.37304",
+        "url:https://arxiv.org/abs/2609.37304"
+      ],
+      "reason": "MetaCtrlは凍結した推論モデルの生成軌跡を監視し、続行・簡略化・省略・終了を強化学習済みの軽量制御器で選ぶ。生成トークン数を減らす推論費用の関連性はあるが主たる評価は数学・科学・コード正答率と推論長で、システムサービングやメモリ・カーネル効率の寄与は限定的なためborderline。",
+      "first_checked_at": "2026-10-28T20:55:25+00:00",
+      "last_checked_at": "2026-10-28T20:55:25+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MetaCtrl: Your Large Language Models Can Reason Better and More Concisely with a Metacognitive Controller"
+    },
+    "arXiv:2610.08630": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.08630",
+      "identity_tokens": [
+        "arXiv:2610.08630",
+        "id:arXiv:2610.08630",
+        "url:https://arxiv.org/abs/2610.08630"
+      ],
+      "reason": "このサーベイは推論時に前向き計算へ組み込む埋込み・注意・FFN等のパラメータ状記憶を配置場所と取得時点で分類し、ICLと比べた文脈消費や再符号化の課題を論じる。推論時の記憶基盤に関連するが、主題は知識保持・適応であり具体的なサービング高速化の新規機構ではないためborderline。",
+      "first_checked_at": "2026-10-28T20:55:26+00:00",
+      "last_checked_at": "2026-10-28T20:55:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Towards In-Parameter Memory Augmentation for Large Language Models"
+    },
+    "arXiv:2605.17887": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.17887",
+      "identity_tokens": [
+        "arXiv:2605.17887",
+        "id:arXiv:2605.17887",
+        "url:https://arxiv.org/abs/2605.17887"
+      ],
+      "reason": "OASISはAttnResidualのトークン方向・深さ方向の二重正規化に生じるattention sinkと活性外れ値を、Softmax1のnull経路とトークンから深さへのnull結合で抑える。W8A8・W4A4量子化後の品質を改善するが、主たる寄与はモデル内部の注意・残差アーキテクチャと品質安定化であり、既存LLM推論ランタイムの実行時間・メモリ削減を直接示すかは要確認のためborderline。",
+      "first_checked_at": "2026-10-28T20:55:26+00:00",
+      "last_checked_at": "2026-10-28T20:55:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Attention Sinks and Outliers in Attention Residuals"
+    },
+    "arXiv:2605.13473": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13473",
+      "identity_tokens": [
+        "arXiv:2605.13473",
+        "id:arXiv:2605.13473",
+        "url:https://arxiv.org/abs/2605.13473"
+      ],
+      "reason": "OSDNはDeltaNetの書込み側keyを特徴ごとにスケーリングするオンライン対角前処理を導入し、chunkwise並列実行を維持しつつ文脈内連想記憶の再現率を改善する。定数状態の線形注意に関係するが、一次要旨の主要結果は340M〜1.3Bモデルの想起精度であり推論サービングの速度・メモリ実測は示さないためborderline。",
+      "first_checked_at": "2026-10-28T20:55:27+00:00",
+      "last_checked_at": "2026-10-28T20:55:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "OSDN: Improving Delta Rule with Provable Online Preconditioning in Linear Attention"
+    },
+    "arXiv:2602.05230": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05230",
+      "identity_tokens": [
+        "arXiv:2602.05230",
+        "id:arXiv:2602.05230",
+        "url:https://arxiv.org/abs/2602.05230"
+      ],
+      "reason": "ZeroSは線形注意の正の凸結合制約と長文脈の一様重みバイアスを解消するため、ゼロ次の1/t項を除き正負を許すゼロ和softmax残差へ再重み付けする。理論上O(N)計算のまま表現力を改善するが、一次要旨は系列モデリング精度を中心としLLMサービング実装や実測高速化を明示しないためborderline。",
+      "first_checked_at": "2026-10-28T20:55:27+00:00",
+      "last_checked_at": "2026-10-28T20:55:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ZeroS: Zero-Sum Linear Attention for Efficient Transformers"
+    },
+    "arXiv:2609.30059": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30059",
+      "identity_tokens": [
+        "arXiv:2609.30059",
+        "id:arXiv:2609.30059",
+        "url:https://arxiv.org/abs/2609.30059"
+      ],
+      "reason": "KernelOPTはPyTorch Inductorが生成するTriton部分カーネルだけを5種のLLMエージェントで探索し、静的検査・複数seed・モデル全体の正確性・性能ゲートを通したものを置換する。GPU推論カーネル一般に応用できるが、一次要旨の評価対象はKernelBench 250問題でありLLMサービング固有の実測がないためborderline。",
+      "first_checked_at": "2026-10-28T20:55:30+00:00",
+      "last_checked_at": "2026-10-28T20:55:30+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "KernelOPT: Dispatch-Aware Agentic Search for GPU Kernel Optimization"
+    },
+    "arXiv:2506.19697": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.19697",
+      "identity_tokens": [
+        "arXiv:2506.19697",
+        "id:arXiv:2506.19697",
+        "url:https://arxiv.org/abs/2506.19697"
+      ],
+      "reason": "OSPはMuon最適化、単一スケールRMSNorm、学習可能な埋込み射影により学習中の活性外れ値発生を抑え、完成モデルの4ビット量子化後品質を改善する。推論向け低ビット化に関連するが主要技術は事前学習レシピであり、既存モデルの推論ランタイム・事後圧縮への直接適用がないためborderline。",
+      "first_checked_at": "2026-10-28T20:55:30+00:00",
+      "last_checked_at": "2026-10-28T20:55:30+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Outlier-Safe Pre-Training for Robust 4-Bit Quantization of Large Language Models"
+    },
+    "arXiv:2506.02397": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.02397",
+      "identity_tokens": [
+        "arXiv:2506.02397",
+        "id:arXiv:2506.02397",
+        "url:https://arxiv.org/abs/2506.02397"
+      ],
+      "reason": "OThink-R1は補助判定LLMで冗長な推論軌跡を選別し、短いfast思考と完全なslow思考の混合データで推論モデルを微調整して問題別に自動切替させる。出力トークン削減は推論費用に関係するが主貢献は推論方略の学習・応答品質でありサービング機構や実行時資源管理の直接改善は薄いためborderline。",
+      "first_checked_at": "2026-10-28T20:55:30+00:00",
+      "last_checked_at": "2026-10-28T20:55:30+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "OThink-R1: Intrinsic Fast/Slow Thinking Mode Switching for Over-Reasoning Mitigation"
     }
   }
 }

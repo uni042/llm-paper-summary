@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5090af1fae9f6982-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.05230",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.05230",
+    "identity_tokens": [
+      "arXiv:2602.05230",
+      "id:arXiv:2602.05230",
+      "url:https://arxiv.org/abs/2602.05230"
+    ],
+    "reason": "ZeroSは線形注意の正の凸結合制約と長文脈の一様重みバイアスを解消するため、ゼロ次の1/t項を除き正負を許すゼロ和softmax残差へ再重み付けする。理論上O(N)計算のまま表現力を改善するが、一次要旨は系列モデリング精度を中心としLLMサービング実装や実測高速化を明示しないためborderline。",
+    "first_checked_at": "2026-10-28T20:55:27+00:00",
+    "last_checked_at": "2026-10-28T20:55:27+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "ZeroS: Zero-Sum Linear Attention for Efficient Transformers"
+  },
+  "processed_at": "2026-10-28T20:55:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5090af1fae9f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

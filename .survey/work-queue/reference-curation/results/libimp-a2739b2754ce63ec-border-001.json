@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a2739b2754ce63ec-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.30059",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.30059",
+    "identity_tokens": [
+      "arXiv:2609.30059",
+      "id:arXiv:2609.30059",
+      "url:https://arxiv.org/abs/2609.30059"
+    ],
+    "reason": "KernelOPTはPyTorch Inductorが生成するTriton部分カーネルだけを5種のLLMエージェントで探索し、静的検査・複数seed・モデル全体の正確性・性能ゲートを通したものを置換する。GPU推論カーネル一般に応用できるが、一次要旨の評価対象はKernelBench 250問題でありLLMサービング固有の実測がないためborderline。",
+    "first_checked_at": "2026-10-28T20:55:30+00:00",
+    "last_checked_at": "2026-10-28T20:55:30+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "KernelOPT: Dispatch-Aware Agentic Search for GPU Kernel Optimization"
+  },
+  "processed_at": "2026-10-28T20:55:30+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a2739b2754ce",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

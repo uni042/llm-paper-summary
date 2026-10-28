@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5090af1fae9f6982-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.13473",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.13473",
+    "identity_tokens": [
+      "arXiv:2605.13473",
+      "id:arXiv:2605.13473",
+      "url:https://arxiv.org/abs/2605.13473"
+    ],
+    "reason": "OSDNはDeltaNetの書込み側keyを特徴ごとにスケーリングするオンライン対角前処理を導入し、chunkwise並列実行を維持しつつ文脈内連想記憶の再現率を改善する。定数状態の線形注意に関係するが、一次要旨の主要結果は340M〜1.3Bモデルの想起精度であり推論サービングの速度・メモリ実測は示さないためborderline。",
+    "first_checked_at": "2026-10-28T20:55:27+00:00",
+    "last_checked_at": "2026-10-28T20:55:27+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "OSDN: Improving Delta Rule with Provable Online Preconditioning in Linear Attention"
+  },
+  "processed_at": "2026-10-28T20:55:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5090af1fae9f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
