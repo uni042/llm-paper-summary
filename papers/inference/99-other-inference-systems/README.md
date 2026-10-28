@@ -608,7 +608,7 @@
 
 - **2026-07 · [What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents](2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  論文は率歪み最適化の目的関数、情報理論的な下界、七つの分類軸、層間で転用可能な設計原理を提示し、比較可能な評価基盤としてCOMPACT-Benchを提案する。著者の参照実験はNVIDIA RTX 4060 8GBとQwen2.5-1.5B-Instructを用いる。
+  KVキャッシュ、入力プロンプト、固定長内部状態、エージェント記憶の圧縮を率歪み最適化で統一し、7軸分類とCOMPACT-Benchを提案するサーベイ。RTX 4060・Qwen2.5-1.5Bの参照実験では、KV保持予算約25%未満でneedle検索がほぼ失敗し、反復要約の事実再現率0.33〜0.56に対して検索可能な原文アーカイブは約0.95だった。
 
 - **2026-07 · [ST-Veto: Spatio-Temporal Token Veto for Diffusion MLLMs via Taylor Prediction and Visual Grounding](2026-2607.17884-st-veto-spatio-temporal-token-veto-for-diffusion-mllms-via-taylor-predic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
