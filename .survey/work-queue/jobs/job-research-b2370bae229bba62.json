@@ -35,10 +35,15 @@
   "selection_reason": "SAGE-PTQは重みの重要部分を高精度、非重要部分を二値化し、グラフによる層別グループ数推定でスケール保存の隠れたビット費用を抑える。1.03重みビット＋0.004スケールビット、LLaMA-2-70BでL40上のdecode 1.5倍を報告する推論向けPTQ。",
   "semantic_scholar_id": "2c90751ec98c78f5fcbdcb7c83ee0a4b570d1f90",
   "source_url": "https://arxiv.org/abs/2606.05429",
-  "status": "ready",
+  "status": "superseded",
   "title": "Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T18:09:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2606.05429-minimizing-the-hidden-cost-of-scales-graph-guided-ultra-low-bit-quantiza.md",
+  "represented_canonical_id": "arXiv:2606.05429",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

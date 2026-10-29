@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **3638本**。
+収録論文: **3642本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**3638本**。
+推論論文：**3642本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -45,16 +45,16 @@
 | [04-conditional-computation](04-conditional-computation/README.md) | 85 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/04-conditional-computation/) |
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 329 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 28 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/) |
-| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 411 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
+| [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 412 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
 | [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 82 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 212 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 121 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/) |
-| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 513 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
+| [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 514 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |
 | [12-moe-parallelism-communication](12-moe-parallelism-communication/README.md) | 64 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/) |
 | [13-sparse-attention](13-sparse-attention/README.md) | 159 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/) |
 | [14-agentic-inference-serving-runtime](14-agentic-inference-serving-runtime/README.md) | 80 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/) |
-| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 67 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/) |
-| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 175 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
+| [15-inference-simulation-emulation](15-inference-simulation-emulation/README.md) | 68 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/) |
+| [16-weight-quantization-compression](16-weight-quantization-compression/README.md) | 176 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/) |
 | [17-pim-near-data-acceleration](17-pim-near-data-acceleration/README.md) | 33 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/) |
 | [18-pipeline-native-cpu-inference](18-pipeline-native-cpu-inference/README.md) | 1 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/18-pipeline-native-cpu-inference/) |
 | [19-inference-evaluation-benchmarking](19-inference-evaluation-benchmarking/README.md) | 110 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/) |

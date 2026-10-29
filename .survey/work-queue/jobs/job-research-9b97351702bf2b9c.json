@@ -35,10 +35,15 @@
   "selection_reason": "GSRQは残差ベクトル量子化のk-means重心縮小が方向の再現を損なう問題に対し、ゲインと形状を分けて学習するGSKMを残差量子化へ組み込む。LLMのサブ1ビットKVキャッシュ保存とLongBench品質を改善する推論メモリ圧縮方式であるためaccept。",
   "semantic_scholar_id": "b7e30216c0636ed47ff55d69c47b28b7a764662c",
   "source_url": "https://arxiv.org/abs/2607.01065",
-  "status": "ready",
+  "status": "superseded",
   "title": "GSRQ: Gain-Shape Residual Quantization for Sub-1-bit KV Cache",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T18:09:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.01065-gsrq-gain-shape-residual-quantization-for-sub-1-bit-kv-cache.md",
+  "represented_canonical_id": "arXiv:2607.01065",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

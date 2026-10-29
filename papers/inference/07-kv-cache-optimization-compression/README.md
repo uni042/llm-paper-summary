@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（411本）
+## 自動生成の論文一覧（412本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -786,6 +786,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [InferScale: GPU-Native KV Injection for Personalized LLM Serving](2026-2607.27090-inferscale-gpu-native-kv-injection.md)**  
   実装：[✓](https://github.com/saltsystemslab/InferScale) ・ リポジトリ内被引用：0  
   検索メモリのRoPE適用前KVをGPU上で再利用・位置再配置してvLLMへ直接注入し、k=50でTTFTを72〜79%削減する。
+
+- **2026-07 · [GSRQ: Gain–Shape Residual Quantization for Sub-1-bit KV Cache](2026-2607.01065-gsrq-gain-shape-residual-quantization-for-sub-1-bit-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  通常の残差ベクトル量子化（Residual Quantization; RQ）は、小さなコードブックで近似した誤差を次段のコードブックで繰り返し近似する。別途、独自PyTorch/Triton実装の単一A100 80GBにおけるデコード測定では、8K文脈で1.59倍、64Kで3.40倍のトークン当たり遅延短縮を報告する。
 
 - **2026-07 · [FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference](2026-2607.06519-freqdepthkv-frequency-guided-depth-sharing-for-robust-kv-cache-compressi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

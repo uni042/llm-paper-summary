@@ -27,6 +27,8 @@ reference_main_sha: "2796fce9eb89505f4aaa1cc81769656cba98f54b"
 worker_completed_at: "2026-10-30T02:03:00+09:00"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # WindServe：P/D分離推論を双方向に負荷移送するCUDAストリーム型スケジューラ

@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（175本）
+## 自動生成の論文一覧（176本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -243,6 +243,10 @@
 - **2026-06 · [Multi-Bitwidth Quantization for LLMs Using Additive Codebooks](2026-2606.12876-multi-bitwidth-quantization-for-llms-using-additive-codebooks.md)**  
   実装：[✓](https://anonymous.4open.science/r/DropbyDrop2026/) ・ リポジトリ内被引用：0  
   大規模言語モデルを異なる記憶容量の機器へ展開するとき、通常の学習後量子化（post-学習 量子化、PTQ）は3ビット、4ビット、5ビットといった精度ごとに別の圧縮モデルを作る必要がある。
+
+- **2026-06 · [Minimizing the Hidden Cost of Scales: Graph-Guided Ultra-Low-Bit Quantization for Large Language Models](2026-2606.05429-minimizing-the-hidden-cost-of-scales-graph-guided-ultra-low-bit-quantiza.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SAGE-PTQ（Saliency-Aware Graph-guided Efficient Post-学習 量子化）は、LLM重みを1bit前後まで圧縮する際に見落とされがちな量子化スケールと重みグループの位置情報の費用を抑える方式である。
 
 - **2026-06 · [GRINQH: Graded Input-based Quantization Hierarchy for Efficient LLM Generation](2026-2606.23419-grinqh-graded-input-based-quantization-hierarchy-for-efficient-llm-gener.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
