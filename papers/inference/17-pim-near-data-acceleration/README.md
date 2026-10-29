@@ -34,7 +34,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-03 · [PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System](2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
+  実装：✓ ・ リポジトリ内被引用：6  
   長文脈のLLMがトークンを一つずつ生成するとき、注意機構はこれまでの各トークンに対応する鍵・値キャッシュ（KV キャッシュ）を読み返す。動的PIMアクセス（動的 PIM Access; DPA）は生成中のトークン数に応じたループとアドレス変換を使い、KVキャッシュを実行時に1MB単位で追加する。
 
 - **2026-03 · [Hardware-Software Co-design for 3D-DRAM-based LLM Serving Accelerator](2026-2603.04797-hardware-software-co-design-for-3d-dram-based-llm-serving-accelerator.md)**  
@@ -172,6 +172,6 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
-  実装：✓ ・ リポジトリ内被引用：18  
+  実装：✓ ・ リポジトリ内被引用：19  
   高帯域メモリ（High Bandwidth メモリ、HBM）の近くへ演算を移すメモリ内処理（Processing-in-メモリ、PIM）やメモリ近傍計算（Near-メモリ Computing、NMC）は有力だが、従来の方式をそのままTransformerへ適用しても層間のデータ再配置や注意機構の削減演算が律速になる。
 <!-- survey:auto:end -->
