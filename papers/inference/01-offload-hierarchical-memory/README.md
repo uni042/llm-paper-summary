@@ -557,7 +557,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 4年前（2022-11〜2023-10）
 
 - **2023-03 · [FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU](2023-2303.06865-flexgen-high-throughput-generative-inference-of-large-language-models-with-a-single-gpu.md)**  
-  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：470  
+  実装：[✓](https://github.com/FMInference/FlexGen) ・ リポジトリ内被引用：471  
   FlexGenは巨大LLMの重み・中間活性・KVキャッシュをGPU・CPU・SSDへ分け、計算順序とバッチでI/Oを使い回して単一GPUの生成スループットを高める。
 
 ### 5年前（2021-11〜2022-10）
@@ -573,7 +573,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [ZeRO-Offload: Democratizing Billion-Scale Model Training](2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：21  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：22  
   ZeRO-Offloadは、巨大モデルの学習時に必要な状態をCPUとGPUへ分担させ、GPUメモリの制約を緩和しながら、低速なホスト–デバイス転送を抑える方式である。著者らはNVIDIA V100 32GB単体で130億パラメータのGPT型モデルを学習可能にし、標準PyTorchの14億に比べ9倍超の規模へ拡大した。
 
 - **2021-10 · [M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining](2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md)**  
