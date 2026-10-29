@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（159本）
+## 自動生成の論文一覧（160本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -333,6 +333,10 @@
 - **2026-04 · [HieraSparse: Hierarchical Semi-Structured Sparse KV Attention](2026-2604.16864-hierasparse.md)**  
   実装：[✓](https://github.com/psl-ntu/HieraSparse) ・ リポジトリ内被引用：0  
   HieraSparseは、長文脈推論で自己注意計算とKVキャッシュ容量が増大する問題に対し、KVを密ブロックとN:M半構造化疎ブロックへ分け、GPUの疎テンソルコアで直接処理する方式である。NVIDIA L40S実機では、同じ疎性のMUSTAFARに対して最大1.2倍高いKV圧縮率と4.57倍の注意カーネル高速化を示す。
+
+- **2026-04 · [Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference](2026-2604.07394-flux-attention-context-aware-hybrid-attention-for-efficient-llms-inferen.md)**  
+  実装：[✓](https://github.com/qqtang-code/FluxAttention) ・ リポジトリ内被引用：0  
+  Flux 注意機構は、長文LLMの各Transformer層で完全注意（Full 注意機構; FA）を維持するか、疎注意（Sparse 注意機構; SA）へ切り替えるかを、入力プロンプトの文脈に応じて学習した軽量ルータで決める方式である。
 
 - **2026-02 · [Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection](2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md)**  
   実装：[✓](https://github.com/dongwonjo/Token-Sparse-Attention) ・ リポジトリ内被引用：0  

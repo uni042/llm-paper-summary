@@ -35,10 +35,15 @@
   "selection_reason": "Flux Attentionは凍結LLMへ軽量Layer Routerを導入し、入力文脈に応じて各層をFull AttentionかSparse Attentionへ割り振る。ヘッド単位の負荷偏りを避ける層単位の連続アクセスとprefill最大2.8倍・decode最大2.0倍の速度評価があり、長文脈推論の直接最適化。",
   "semantic_scholar_id": "4a6b991ff5a1cf670925d16b89690c2b22db2f3e",
   "source_url": "https://arxiv.org/abs/2604.07394",
-  "status": "ready",
+  "status": "superseded",
   "title": "Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T18:31:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2604.07394-flux-attention-context-aware-hybrid-attention-for-efficient-llms-inferen.md",
+  "represented_canonical_id": "arXiv:2604.07394",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

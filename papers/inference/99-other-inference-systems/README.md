@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（799本）
+## 自動生成の論文一覧（801本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2072,6 +2072,10 @@
   実装：[✓](https://github.com/ServiceNow/pipelinerl) ・ リポジトリ内被引用：1  
   PipelineRLは、大規模言語モデルの長文推論を強化学習で訓練するときに、系列生成器と訓練器の並行実行および生成途中の重み更新（in-flight 重み update）を組み合わせるシステムである。
 
+- **2025-09 · [LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models](2025-2509.23729-luq-layerwise-ultra-low-bit-quantization-for-multimodal-large-language-m.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LUQ（Layerwise Ultra-Low Bit Quantization）は、視覚言語モデル（VLM/MLLM）の各Transformer層が低ビット量子化に耐える度合いは一様でないことに着目し、層の出力活性entropyが低い順に1bit系量子化へ切り替える方式である。
+
 - **2025-09 · [HERO: Rethinking Visual Token Early Dropping in High-Resolution Large Vision-Language Models](2025-2509.13067-hero-rethinking-visual-token-early-dropping-in-high-resolution-large-vis.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   HEROは、高解像度画像を複数の局所タイルと全体サムネイルへ分割して処理するVision-Language モデル（VLM）向けに、LLMへ渡す前の視覚トークンを選別する追加学習不要の圧縮手法である。
@@ -2275,6 +2279,10 @@
 - **2025-09 · [ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference](2025-2510.02361-chunkllm-a-lightweight-pluggable-framework-for-accelerating-llms-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ChunkLLMは、既存Transformerのbackboneを固定したまま軽量なadapterを付加し、長文のどのchunkのKVを保持するかを学習する方式である。Qwen2.5-7BのLongBenchでは、通常モデルの平均44.13に対してChunkLLMは43.53、KV保持率は48.58%である。
+
+- **2025-08 · [SEPTQ: A Simple and Effective Post-Training Quantization Paradigm for Large Language Models](2025-2604.10091-septq-a-simple-and-effective-post-training-quantization-paradigm-for-lar.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SEPTQは、LLMの重み-only事後量子化（Post-学習 量子化; PTQ）を、(1) 重要重みの保存位置を静的・行列globalに決める、(2) 残りの重みを列ごとに量子化してHessian情報で誤差補償する、という2段階に整理した方式である。
 
 - **2025-08 · [Rethinking 1-bit Optimization Leveraging Pre-trained Large Language Models](2025-2508.06974-rethinking-1-bit-optimization-leveraging-pre-trained-large-language-mode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

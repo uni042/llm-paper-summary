@@ -35,10 +35,15 @@
   "selection_reason": "SEPTQは重み行列要素の重要度を算出して量子化対象位置を静的に決め、重要度マスクを使って列ごとに量子化と重み更新を行う二段階の事後量子化方式。低ビットLLMを省メモリ推論へ配置するための圧縮手法。",
   "semantic_scholar_id": "a315642f742c15d5ab19fba393f142ff3e9fa704",
   "source_url": "https://arxiv.org/abs/2604.10091",
-  "status": "ready",
+  "status": "superseded",
   "title": "SEPTQ: A Simple and Effective Post-Training Quantization Paradigm for Large Language Models",
   "type": "research",
   "venue": "Knowledge Discovery and Data Mining",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T18:31:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2604.10091-septq-a-simple-and-effective-post-training-quantization-paradigm-for-lar.md",
+  "represented_canonical_id": "DOI:10.1145/3690624.3709287",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

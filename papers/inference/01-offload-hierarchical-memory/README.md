@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（139本）
+## 自動生成の論文一覧（140本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -91,6 +91,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-12 · [Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation](2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   本研究は、専門家混合（MoE）モデルの重みをGPU外のメモリから必要に応じて読み込むオフロード推論で、低ビット化による帯域節約と推論品質を両立する手法を扱う。
+
+- **2025-11 · [Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching](2025-12706ecb1e88-diff-moe-efficient-batched-moe-inference-with-priority-driven-differenti.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  単純なオンデマンドオフロードでは、ゲートが専門家を選んでからCPUからGPUへ重みを転送するため、転送完了まで計算が待つ。Switch-BaseのXSum評価ではDeepSpeed-Offload比1.99〜3.46倍、平均2.74倍、Pre-gated MoE比平均2.22倍、MoE-Infinity比平均1.55倍のトークン処理量を報告する。
 
 - **2026-08 · [The Ingestion Tax: Adopting File-Backed Weights in Tensor Frameworks](2026-2608.12114-the-ingestion-tax-adopting-file-backed-weights-in-tensor-frameworks.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

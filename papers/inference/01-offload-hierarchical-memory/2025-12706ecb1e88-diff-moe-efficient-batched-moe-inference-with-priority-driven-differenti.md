@@ -29,6 +29,8 @@ worker_run_key: "20261030-0145-scheduled-chat-45/r01"
 reference_main_sha: f58938feee07830ed68765a638cb207d03adecd1
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Diff-MoE：大規模バッチでも専門家の局所性を保つ三段階GPUキャッシュと先読み

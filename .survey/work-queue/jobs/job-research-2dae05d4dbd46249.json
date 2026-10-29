@@ -35,10 +35,15 @@
   "selection_reason": "LUQは画像・テキストを処理するMLLMの中間活性エントロピーが層ごとに異なることを利用し、低エントロピー層を優先して4ビット未満へ量子化する。マルチモーダル校正を併用してLLaVAとQwen-VLのVQA品質を検証し、モデルメモリ削減による推論配備を直接扱う。",
   "semantic_scholar_id": "78a843a7bc1b13a3c83e27160bd8ecda0d5e8c3a",
   "source_url": "https://arxiv.org/abs/2509.23729",
-  "status": "ready",
+  "status": "superseded",
   "title": "LUQ: Layerwise Ultra-Low Bit Quantization for Multimodal Large Language Models",
   "type": "research",
   "venue": "Trans. Mach. Learn. Res.",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T18:31:44+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2509.23729-luq-layerwise-ultra-low-bit-quantization-for-multimodal-large-language-m.md",
+  "represented_canonical_id": "arXiv:2509.23729",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
