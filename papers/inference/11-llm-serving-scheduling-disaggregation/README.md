@@ -172,6 +172,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   AlignedServeは、長いKV系列を分離するため要求をCPU KVプールへ置き、接頭辞長が近い要求を四分木から密度優先で集め、次バッチのKVをGPU間へ先読みして反復内の待ちと転送待ちを減らす。
 
+- **2026-04 · [StructKV: Preserving the Structural Skeleton for Scalable Long-Context Inference](2026-2604.06746-structkv-preserving-the-structural-skeleton-for-scalable-long-context-in.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  提案の中心は、全層入次数中心性（Global In-Degree Centrality）、動的転換層検出（動的 Pivot Detection）、構造的伝播と保存予算の分離（Structural Propagation and Decoupling）の三機構である。
+
 - **2026-04 · [Foundry: Template-Based CUDA Graph Context Materialization for Fast LLM Serving Cold Start](2026-2604.06664-foundry-cuda-graph-context-materialization.md)**  
   実装：[✓](https://github.com/foundry-org/foundry) ・ リポジトリ内被引用：3  
   CUDAグラフの仮想アドレス配置とカーネルバイナリまで保存し、少数の構造テンプレートから再構築することで、LLMサービングの起動時グラフ捕捉を数分から数秒へ短縮する方式。
@@ -271,10 +275,6 @@
 - **2026-05 · [A Policy-Driven Runtime Layer for Agentic LLM Serving](2026-2605.27744-policy-driven-runtime-agentic-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   エージェント識別子を共通座標に観測・採点・予測・作用を推論基盤へ挿入し、オンライン遷移学習を鍵値追い出しと先読みに使ってヒット率と遅延を改善する。
-
-- **2026-04 · [StructKV: Preserving the Structural Skeleton for Scalable Long-Context Inference](2026-2604.06746-structkv-preserving-the-structural-skeleton-for-scalable-long-context-in.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  提案の中心は、全層入次数中心性（Global In-Degree Centrality）、動的転換層検出（動的 Pivot Detection）、構造的伝播と保存予算の分離（Structural Propagation and Decoupling）の三機構である。
 
 - **2026-04 · [Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions](2026-2604.00499-scheduling-llm-inference-with-uncertainty-aware-output-length-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -1759,7 +1759,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [SGLang: Efficient Execution of Structured Language Model Programs](2023-2312.07104-sglang-efficient-execution-structured-language-model-programs.md)**  
-  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：644  
+  実装：[✓](https://github.com/sgl-project/sglang) ・ リポジトリ内被引用：645  
   複数のLLM呼び出しや条件分岐をランタイムが1つのプログラムとして理解し、共有接頭辞のKV再利用・並列実行・構造化出力生成をまとめて効率化する推論システム。
 
 - **2024-07 · [DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving](2024-2401.09670-distserve-disaggregating-prefill-decoding-goodput.md)**  
@@ -2017,7 +2017,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Memory Management for Large Language Model Serving with PagedAttention](2023-2309.06180-vllm-pagedattention-efficient-memory-management.md)**  
-  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1481  
+  実装：[✓](https://github.com/vllm-project/vllm) ・ リポジトリ内被引用：1482  
   vLLMは、要求ごとに大きな連続領域を予約していたKVキャッシュを固定長ブロックへ分解し、論理的な並びとGPU上の物理配置を分離する。必要なブロックだけ動的に割り当て、同じ接頭辞のKVを共有することで、限られたGPUメモリへより多くの要求を同時に載せる。
 
 - **2023-08 · [SARATHI: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills](2023-2308.16369-sarathi.md)**  

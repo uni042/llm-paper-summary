@@ -13,7 +13,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-02 · [Fast KV Compaction via Attention Matching](2026-2602.16284-fast-kv-compaction-via-attention-matching.md)**  
-  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/adamzweiger/compaction) ・ リポジトリ内被引用：13  
   長文脈のKVキャッシュを、将来の問い合わせで元の注意挙動を再現する短い鍵・値・バイアスへ置き換える。参照問い合わせの生成、鍵選択、非負最小二乗による注意質量合わせ、値の最小二乗推定を組み合わせる。
 
 - **2026-01 · [Ministral 3](2026-2601.08584-ministral-3.md)**  
@@ -76,6 +76,10 @@
   実装：✓ ・ リポジトリ内被引用：3  
   DORAは、大規模言語モデル（Large Language モデル; LLM）の強化学習（Reinforcement Learning; RL）による後学習を、生成する応答の長さが大きく偏る状況でも効率よく進めるシステムである。
 
+- **2026-03 · [AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models](2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md)**  
+  実装：[✓](https://github.com/cvsp-lab/AgilePruner) ・ リポジトリ内被引用：3  
+  従来の注意重視方式は画像符号化器のクラス・トークンが強く注目する領域を残す。LLaVA-1.5-7B、TextVQA、RTX 4090の単一GPU評価で、64個を残す設定は576個を残す基準に対して推論計算量3.14→0.48兆FLOPs、1画像遅延172→115 ms、GPUメモリ13.60→13.30 GBとなった。
+
 - **2026-02 · [SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference](2026-2602.05695-sweetspot-an-analytical-model-for-predicting-energy-efficiency-of-llm-in.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   SweetSpotは、大規模言語モデル（LLM）の推論で、入力トークン数と生成トークン数が変化したときの出力1トークン当たり電力量を予測する解析モデルである。単に出力が短ければ省エネルギーとは限らない。一方、出力を長くし続けると逐次復号（デコード）で参照するキー・値キャッシュ（KV キャッシュ）が増え、各ステップの計算とメモリアクセスが増える。
@@ -95,6 +99,10 @@
 - **2026-01 · [Latent Space Communication via K-V Cache Alignment](2026-2601.06123-latent-space-communication-via-k-v-cache-alignment.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   モデル固有のKVキャッシュを、共有潜在空間への入出力変換器を介して交換する。単に同じ数値へ復元するのではなく、受信側が後続トークンを正しく予測できる状態を学ぶことで、異なる言語モデル間の内部状態共有を可能にする。
+
+- **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
+  実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：3  
+  端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
 
 - **2025-12 · [Trellis: Learning to Compress Key-Value Memory in Attention Models](2025-2512.23852-trellis-learning-to-compress-key-value-memory-in-attention-models.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -132,10 +140,6 @@
   実装：✓ ・ リポジトリ内被引用：2  
   多くの既存削減方式は、視覚符号化器が全トークンを処理した後に削減を行うため、後段の言語モデルの事前入力処理は軽くできても、視覚符号化器がすでに使った演算量は取り戻せない。
 
-- **2026-03 · [AgilePruner: An Empirical Study of Attention and Diversity for Adaptive Visual Token Pruning in Large Vision-Language Models](2026-2603.01236-agilepruner-an-empirical-study-of-attention-and-diversity-for-adaptive-v.md)**  
-  実装：[✓](https://github.com/cvsp-lab/AgilePruner) ・ リポジトリ内被引用：2  
-  従来の注意重視方式は画像符号化器のクラス・トークンが強く注目する領域を残す。LLaVA-1.5-7B、TextVQA、RTX 4090の単一GPU評価で、64個を残す設定は576個を残す基準に対して推論計算量3.14→0.48兆FLOPs、1画像遅延172→115 ms、GPUメモリ13.60→13.30 GBとなった。
-
 - **2026-02 · [Swordsman: Entropy-Driven Adaptive Block Partition for Efficient Diffusion Language Models](2026-2602.04399-swordsman-entropy-driven-adaptive-block-partition-for-efficient-diffusio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   Swordsmanは、拡散言語モデル（Diffusion Language モデル、DLM）の生成速度と品質を改善するため、出力列を固定長で区切るブロック復号を、モデルの予測エントロピーに応じて動的に区切る方式へ変更する。
@@ -155,10 +159,6 @@
 - **2026-02 · [HiDrop: Hierarchical Vision Token Reduction in MLLMs via Late Injection, Concave Pyramid Pruning, and Early Exit](2026-2602.23699-hidrop-hierarchical-vision-token-reduction-in-mllms-via-late-injection-c.md)**  
   実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：2  
   LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
-
-- **2025-12 · [UniQL: Unified Quantization and Low-rank Compression for Adaptive Edge LLMs](2025-2512.03383-uniql-unified-quantization-and-low-rank-compression-for-adaptive-edge-ll.md)**  
-  実装：[✓](https://github.com/enyac-group/UniQL) ・ リポジトリ内被引用：2  
-  端末上で大規模言語モデル（LLM）を実行する際には、モデルの重みだけでなく、実行時の一時領域やほかのアプリケーションが共有するメモリも考慮する必要がある。4ビット量子化だけで端末に収まるモデルを作れても、別のアプリケーションが起動して空きメモリが減れば、固定サイズの量子化モデルは実行不能になる。
 
 - **2025-12 · [Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}](2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md)**  
   実装：[✓](https://github.com/PKULab1806/Fairy2i-W2) ・ リポジトリ内被引用：2  
@@ -2630,13 +2630,13 @@
   実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：30  
   全パラメータ数を大きくしても活性化する部分を限定できるが、実機では選択された専門家へのトークン転送、専門家ごとの負荷の偏り、GPU間の全対全通信、巨大な専門家重みの配置・退避が新たな律速になる。
 
+- **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
+  実装：✓ ・ リポジトリ内被引用：24  
+  本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
+
 - **2024-06 · [Your Absorbing Discrete Diffusion Secretly Models the Conditional Distributions of Clean Data](2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md)**  
   実装：[✓](https://github.com/ML-GSAI/RADD) ・ リポジトリ内被引用：23  
   RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
-
-- **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
-  本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
   実装：[✓](https://aka.ms/LLMLingua-2) ・ リポジトリ内被引用：20  
@@ -2961,7 +2961,7 @@
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  
-  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：96  
+  実装：[✓](https://github.com/lhao499/llm_large_context) ・ リポジトリ内被引用：97  
   キー・値ブロックをリング転送しながらブロック注意計算を重畳し、系列長に依存しない活性化メモリで最大文脈長をデバイス数に比例して拡張する分散注意方式。
 
 - **2023-04 · [Learning to Compress Prompts with Gist Tokens](2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md)**  
@@ -2997,7 +2997,7 @@
   著者らは、質問の対象実体のウィキペディア閲覧数を人気度の代理指標として、質問の関係種別ごとに閾値を学習し、閾値未満の質問だけ外部文書を検索する適応的検索（適応的 Retrieval）を提案した。PopQAで最良の組合せは正答率46.5%となり、どの常時検索・検索なしの構成よりも5.3ポイント高いと報告する。
 
 - **2023-07 · [Efficient Guided Generation for Large Language Models](2023-2307.09702-efficient-guided-generation-for-large-language-models.md)**  
-  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/dottxt-ai/outlines) ・ リポジトリ内被引用：15  
   従来方式は、各生成ステップで語彙中のN個のトークン文字列を照合し、現在の部分出力に続けてよいかを調べるため、制約判定が少なくとも語彙数に比例する。
 
 - **2023-05 · [Tabi: An Efficient Multi-Level Inference System for Large Language Models](2023-1685e89adb79-tabi-an-efficient-multi-level-inference-system-for-large-language-models.md)**  

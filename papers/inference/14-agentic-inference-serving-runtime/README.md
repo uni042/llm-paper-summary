@@ -73,6 +73,10 @@
   実装：✓ ・ リポジトリ内被引用：4  
   複数の言語モデルエージェントが計画、検索、コード生成、試験などを繰り返す処理では、一つの利用者要求が多段階の作業へ分かれ、途中結果によって分岐や再試行が発生する。個々の言語モデルの生成速度だけを改善しても、外部ツールの待機、複数エージェントの依存関係、GPUメモリに残る鍵・値キャッシュ、資源の偏りによって、要求全体の終了時間が長くなる。
 
+- **2026-05 · [Leyline: KV Cache Directives for Agentic Inference](2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  従来のKVキャッシュ管理は、プロンプト到着後は末尾へトークンが追加され続けるチャット型負荷を暗黙に前提とする。そのため完全一致する接頭辞を再利用する接頭辞キャッシュや、古いKVを前から追い出す方式が成立する。
+
 - **2026-05 · [Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving](2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Irminsulは、複数ターンのエージェント型LLMサービングで、トークン内容は同じなのにプロンプト内の位置が変わるためKVキャッシュを再利用できない問題を扱う。システム変数、検索文書、ツール出力、会話の圧縮結果が途中に挿入されると、残りの大部分が以前と同じ内容でも、最初の不一致以降は再計算になる。
@@ -80,10 +84,6 @@
 - **2025-11 · [Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows](2025-2511.20975-aragog-just-in-time-model-routing-for-scalable-serving-of-agentic-workfl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   エージェント型ワークフローは、生成、批評、修正、ツール呼び出し、結果統合などを有向非巡回グラフ（Directed Acyclic Graph; DAG）で結んだ実行系列である。
-
-- **2026-05 · [Leyline: KV Cache Directives for Agentic Inference](2026-2606.01065-leyline-kv-cache-directives-for-agentic-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  従来のKVキャッシュ管理は、プロンプト到着後は末尾へトークンが追加され続けるチャット型負荷を暗黙に前提とする。そのため完全一致する接頭辞を再利用する接頭辞キャッシュや、古いKVを前から追い出す方式が成立する。
 
 - **2026-03 · [AVO: Agentic Variation Operators for Autonomous Evolutionary Search](2026-2603.24517-avo-agentic-variation-operators-for-autonomous-evolutionary-search.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

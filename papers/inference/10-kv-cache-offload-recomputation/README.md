@@ -222,6 +222,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：1  
   CacheTuneは文書断片KVを周波数成分で選別し、重要部分だけ全体文脈で再計算、残りをストレージから再利用して、品質と再計算・転送時間を両立する方式。
 
+- **2026-04 · [Transactional Attention: Semantic Sponsorship for KV-Cache Retention](2026-2604.11288-transactional-attention-semantic-sponsorship-for-kv-cache-retention.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  こうしたトークンは普段の注意重みが低いため、重要度スコアによる削除方式では優先順位が下がりやすい。4Kトークン文脈のLlama-3.2-1Bで、16トークンだけKVを残す人工的な認証文字列検索では、TAは50試行で100%正確に回収し、H2O、TOVA、SnapKV、StreamingLLM、PyramidKV、DynamicKVは0%だった。
+
 - **2026-04 · [Predictive Multi-Tier Memory Management for KV Cache in Large-Scale GPU Inference](2026-2604.26968-predictive-multi-tier-memory-management-for-kv-cache-in-large-scale-gpu-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   注意機構ごとの鍵・値キャッシュ（KV キャッシュ）容量を正しく見積もり、GPUから遠隔ストレージまでの6階層へ再利用予測で配置する。重要なのは、部品検証の実測と64 GPUクラスタの解析的な性能投影を明確に分けることである。
@@ -351,10 +355,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-05 · [LLM-PILOT: SLO-Aware and Cost-Efficient LLM Serving on Public Cloud VM Clusters via Offloading](2026-25a73d593e80-llm-pilot-slo-aware-and-cost-efficient-llm-serving-on-public-cloud-vm-cl.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KV退避・注意計算退避・VM構成をSLO制約下で同時探索し、I/Oと待ち行列まで校正した性能モデルでAWSの費用効率を既存方式比最大2.31倍へ改善するLLM-PILOTを提案。
-
-- **2026-04 · [Transactional Attention: Semantic Sponsorship for KV-Cache Retention](2026-2604.11288-transactional-attention-semantic-sponsorship-for-kv-cache-retention.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  こうしたトークンは普段の注意重みが低いため、重要度スコアによる削除方式では優先順位が下がりやすい。4Kトークン文脈のLlama-3.2-1Bで、16トークンだけKVを残す人工的な認証文字列検索では、TAは50試行で100%正確に回収し、H2O、TOVA、SnapKV、StreamingLLM、PyramidKV、DynamicKVは0%だった。
 
 - **2026-02 · [Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service](2026-2603.08739-kareto-adaptive-tiered-storage-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

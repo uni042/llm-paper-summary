@@ -1252,6 +1252,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/BradMcDanel/AMUSD) ・ リポジトリ内被引用：9  
   二つのモデルを別々のGPUへ配置しても、この実行順序を変えなければGPUを同時に使い切れない。平均トークン時間は、自己回帰生成に対してHumanEvalで1.57倍、MT-Benchで1.31倍、RefactorChatで1.96倍の高速化となった。
 
+- **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
+  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：8  
+  制約付き復号（constrained デコード）は、各生成段階で許される次トークンを文法で絞り、出力の構文的な妥当性を保証する。これが単なる書式上の違いにとどまらず、推論問題の正解率を損なうことを本論文は実験で示した。提案するDOMINOは、文法を解釈する字句解析器（scanner）と構文解析器（parser）を分ける。
+
 - **2024-10 · [QSpec: Speculative Decoding with Complementary Quantization Schemes](2024-2410.11305-qspec-speculative-decoding-with-complementary-quantization-schemes.md)**  
   実装：[✓](https://github.com/hku-netexplo-lab/QSpec) ・ リポジトリ内被引用：7  
   QSPECが解決するのは、4ビット重みの言語モデルを動かす際に、活性化も4ビットへ落とすと演算は軽くなるものの、複数段階の推論やコード生成の正確さが損なわれるという問題である。著者は活性化まで4ビットにした実行経路を候補トークンの提案に限定し、同じ重みを活性化16ビットで計算する経路に採否の最終決定を任せる。
@@ -1259,10 +1263,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2024-05 · [Clover: Regressive Lightweight Speculative Decoding with Sequential Knowledge](2024-2405.00263-clover-regressive-lightweight-speculative-decoding-with-sequential-knowl.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   特に要求数が少ないと計算器よりメモリ転送が支配的になり、GPUの演算能力を十分に使えない。投機的復号（投機的復号）は、軽量な予測器が複数トークンを先に推測し、元の大規模モデルでまとめて検証することで、重み読出し当たりの確定トークン数を増やす。
-
-- **2024-02 · [Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation](2024-2403.06988-guiding-llms-the-right-way-fast-non-invasive-constrained-generation.md)**  
-  実装：[✓](https://github.com/eth-sri/domino) ・ リポジトリ内被引用：7  
-  制約付き復号（constrained デコード）は、各生成段階で許される次トークンを文法で絞り、出力の構文的な妥当性を保証する。これが単なる書式上の違いにとどまらず、推論問題の正解率を損なうことを本論文は実験で示した。提案するDOMINOは、文法を解釈する字句解析器（scanner）と構文解析器（parser）を分ける。
 
 - **2024-05 · [Nearest Neighbor Speculative Decoding for LLM Generation and Attribution](2024-2405.19325-nearest-neighbor-speculative-decoding-for-llm-generation-and-attribution.md)**  
   実装：[✓](https://github.com/facebookresearch/NEST) ・ リポジトリ内被引用：6  
