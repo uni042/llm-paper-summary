@@ -2,7 +2,7 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-29T14:45:29+00:00",
+  "updated_at": "2026-10-29T15:48:49+00:00",
   "record_count": 5414,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
@@ -82753,9 +82753,9 @@
         "DOI:10.18653/v1/2024.findings-emnlp.539",
         "acl:2024.findings-emnlp.539"
       ],
-      "reason": "査読済み全文の§3.1はBERT等の識別型Transformerによる多クラス分類を対象と明記し、§4.1–4.2の実験はGLUEの7分類課題、BERT/ALBERT/DeBERTaを使用する。複数の早期終了分岐に独立LoRAを付け、優位な後段分岐から蒸留し、GPU上で主幹GEMMとLoRA用SGMVをバッチ実行するため、推論時の遅延・メモリ効率への直接寄与はある。一方、自己回帰の生成、KVキャッシュ、LLMサービング負荷での有効性は未評価で、原著§7も生成型LLMへの拡張を将来課題と明記。現行の生成型LLM推論基盤サーベイへの採録は境界的としてborderline。",
+      "reason": "一次論文§3・§4・§7と付録Aを全文確認。各早期出口に独立したLoRAを付け、隣接する深い出口を教師とする蒸留とSGMVによる一括推論で分類器の早期終了を高速化するシステム寄与は明確。一方、実験はBERT/ALBERT/DeBERTaのGLUE分類7課題に限り、著者が§7で生成LLM・テキスト生成への拡張を将来課題と明記する。現行サーベイの生成LLM推論サービングへ直接適用・実測した成果ではないため、無関係とはせず境界候補とする。",
       "first_checked_at": "2026-10-23T18:49:51+00:00",
-      "last_checked_at": "2026-10-23T18:49:51+00:00",
+      "last_checked_at": "2026-10-29T15:48:49+00:00",
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters"
