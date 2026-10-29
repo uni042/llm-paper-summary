@@ -35,10 +35,15 @@
   "selection_reason": "FoldAttentionはsoftmaxの基準シフトをKV走査前に固定し、鍵・値の条件付き読み出しと分割KV部分和の再スケール不要な合成を可能にする。H100でのdecodeカーネル高速化とQwen3-8Bでのステップ短縮を評価し、長文脈推論カーネルに直接貢献する。",
   "semantic_scholar_id": "384a5464b7828e242d98c9b55a6bf48b0921d0c8",
   "source_url": "https://arxiv.org/abs/2609.33410",
-  "status": "ready",
+  "status": "superseded",
   "title": "FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T23:17:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.33410-foldattention-declared-reference-softmax-for-fast-decode-and-determinist.md",
+  "represented_canonical_id": "arXiv:2609.33410",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

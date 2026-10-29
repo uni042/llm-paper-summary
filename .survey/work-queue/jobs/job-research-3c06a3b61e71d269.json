@@ -35,10 +35,15 @@
   "selection_reason": "Vitamin-EはGPUカーネルの論理的起動構造を固定したまま物理的な配置幅を遅延束縛し、複数ワークロードでGPUを空間共有しても決定的な出力を維持する。LLM推論のp99遅延やTPOTのSLO違反を評価し、GPU資源共有の推論サービング機構を直接改善するためaccept。worklistの説明的旧題名よりarXiv v4の正式題名を採用。",
   "semantic_scholar_id": "c88154c3e382fb4af92c0df5f7e2066942a9396b",
   "source_url": "https://arxiv.org/abs/2603.15042",
-  "status": "ready",
+  "status": "superseded",
   "title": "Determinism-Preserving GPU Spatial Sharing with Vitamin-E",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T23:17:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2603.15042-determinism-preserving-gpu-spatial-sharing-with-vitamin-e.md",
+  "represented_canonical_id": "arXiv:2603.15042",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

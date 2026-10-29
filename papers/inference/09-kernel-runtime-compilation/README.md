@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（214本）
+## 自動生成の論文一覧（216本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -254,6 +254,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/InternLM/Intern-S2-Mobius) ・ リポジトリ内被引用：0  
   通常のTransformerは各層でSelf-注意機構とFFNが対になり、前の層の隠れ状態を次の層へ送る。スクラッチ学習では7B-A1BのMobiusがTransformerと同程度のMMLUを達成するのに0.626倍の訓練トークンしか必要としない。
 
+- **2026-08 · [Determinism-Preserving GPU Spatial Sharing with Vitamin-E](2026-2603.15042-determinism-preserving-gpu-spatial-sharing-with-vitamin-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Vitamin-Eは、カーネル起動時のバイナリ・グリッド・ブロック・依存順序を固定したまま、各起動を利用可能な物理SM集合へ遅延結合する。2026年8月5日のarXiv v4で題名・方式が更新された同一論文である。v4はH20/H200で実機評価し、固定構造で決定的な処理のビット単位一致を確認した。
+
 - **2026-08 · [DeltaLog: Deferred Materialization of Recurrent States for Linear Attention Decoding](2026-2608.15533-deltalog-deferred-materialization-of-recurrent-states-for-linear-attention-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   線形注意の密な再帰状態を基底状態と有界な差分ログへ分解し、毎トークンの全状態書き戻しを周期的なマージへ遅延する。
@@ -385,6 +389,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Hybrid JIT-CUDA Graph Optimization for Low-Latency Large Language Model Inference](2026-2604.23467-hybrid-jit-cuda-graph-low-latency-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   静的Transformer演算をCUDA Graph再生、動的制御を実行時コンパイルへ分け、短系列・バッチ1推論の起動オーバーヘッドと尾部遅延を削減する。
+
+- **2026-04 · [FluidGPU: Fine-Grained Kernel Disaggregation for Large Model Inference on Heterogeneous GPUs](2026-2604.10180-fluidgpu-fine-grained-kernel-disaggregation-for-large-model-inference-on.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、性能と価格の異なるGPUが混在するクラスタで、モデルのフェーズやTransformerブロックより細かいCUDAカーネル単位に処理を配置する推論実行基盤を提案する。
 
 - **2026-04 · [Fast Cross-Operator Optimization of Attention Dataflow](2026-2604.03446-fast-cross-operator-optimization-of-attention-dataflow.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

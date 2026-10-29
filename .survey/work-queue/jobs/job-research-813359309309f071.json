@@ -35,10 +35,15 @@
   "selection_reason": "Qwen3-4Bの事後三値化でKOTMS回転・E2M-ATQ・誤差補償を組み合わせ、実効1.641 bits/weight、モデルサイズ8.29→3.96 GiBを報告する。精度低下とGEMVがFP16より遅い負の結果も測定し、圧縮と実推論高速化を区別した実証として関連する。",
   "semantic_scholar_id": "d01da12fc90b7bbc9875f1e04a072456d1d77e7d",
   "source_url": "https://arxiv.org/abs/2609.01962",
-  "status": "ready",
+  "status": "superseded",
   "title": "Post-Training Ternarization of Qwen3-4B Capability, Effective Bit Budget, Storage Compression, and Deployment",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T23:17:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.01962-post-training-ternarization-of-qwen3-4b-capability-effective-bit-budget-.md",
+  "represented_canonical_id": "arXiv:2609.01962",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

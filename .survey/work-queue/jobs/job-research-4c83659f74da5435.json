@@ -35,10 +35,15 @@
   "selection_reason": "Tesseraは大規模モデルの推論をモデル層単位でなくGPUカーネル単位で異種GPUへ分配する。PTXから依存関係を抽出し、カーネル間通信と計算のパイプライン重畳、オンライン負荷適応でサービングスループットと費用効率を改善するためaccept。",
   "semantic_scholar_id": "545fa063da4619c758ecdde8d907483483a6fe49",
   "source_url": "https://arxiv.org/abs/2604.10180",
-  "status": "ready",
+  "status": "superseded",
   "title": "Tessera: Unlocking Heterogeneous GPUs through Kernel-Granularity Disaggregation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T23:17:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.10180-fluidgpu-fine-grained-kernel-disaggregation-for-large-model-inference-on.md",
+  "represented_canonical_id": "arXiv:2604.10180",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
