@@ -252,13 +252,13 @@
   実装：✓ ・ リポジトリ内被引用：3  
   提案方式の中核は、品質制約の下で消費エネルギーが小さい専門家集合を探す動的専門家選択（動的 専門家 Selection; DES）と、無線資源割当まで結合した共同専門家・副搬送波割当（Joint 専門家 and Subcarrier Allocation; JESA）である。
 
+- **2025-08 · [End-to-End On-Device Quantization-Aware Training for LLMs at Inference Cost](2025-2509.00031-end-to-end-on-device-quantization-aware-training-for-llms-at-inference-c.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  ZeroQATは、推論時に使う低ビット重み・活性値を、学習時にも実際に量子化した状態で評価し、その結果に基づいて量子化認識学習を行う方法である。
+
 - **2025-04 · [D²MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving](2025-2504.15299-d2moe-dual-routing-and-dynamic-scheduling-for-efficient-on-device-moe-based-llm-.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   D²MoEは、端末上でMoEを動かすときの専門家の重みをどの精度で読み込むかと、SSDなどからの重み読込とGPU計算をどう重ねるかを同時に設計する。二重ルーティングは専門家IDとビット幅の二つの選択を意味し、トークンを二回生成する方式ではない。
-
-- **2025-08 · [End-to-End On-Device Quantization-Aware Training for LLMs at Inference Cost](2025-2509.00031-end-to-end-on-device-quantization-aware-training-for-llms-at-inference-c.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  ZeroQATは、推論時に使う低ビット重み・活性値を、学習時にも実際に量子化した状態で評価し、その結果に基づいて量子化認識学習を行う方法である。
 
 - **2025-10 · [MoBiLE: Efficient Mixture-of-Experts Inference on Consumer GPU with Mixture of Big Little Experts](2025-2510.12357-mobile-efficient-mixture-of-experts-inference-on-consumer-gpu-with-mixtu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

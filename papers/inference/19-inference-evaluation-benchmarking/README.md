@@ -20,6 +20,10 @@
   実装：[✓](https://github.com/yu-lin-li/DyToK) ・ リポジトリ内被引用：5  
   映像が長くなると入力トークン数が増え、自己注意と全結合層の計算費用、入力事前充填の遅延、メモリ消費が増える。既存の視覚トークン圧縮は、各フレームに同じ保持率を適用する場合が多い。
 
+- **2026-09 · [Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models](2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md)**  
+  実装：[✓](https://github.com/Hsu1023/PILL) ・ リポジトリ内被引用：2  
+  PILLは、拡散言語モデル（diffusion language モデル）が文章やプログラムの既知の前半と後半の間を補完する課題（infilling）において、欠落部分の長さをあらかじめ固定しなければならない制約を扱う。既存の可変長方式は長さを反復探索したり生成途中に伸縮操作を挿入したりするため、推論回数が増える。
+
 - **2026-03 · [QMoP: Query Guided Mixture-of-Projector for Efficient Visual Token Compression](2026-2603.21232-qmop-query-guided-mixture-of-projector-for-efficient-visual-token-compre.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   QMoP（Query Guided Mixture-of-Projector）は、マルチモーダル大規模言語モデル（Multimodal Large Language モデル、MLLM）の画像トークン数を減らす際に、一つの固定圧縮法では画像と質問の組合せによって必要な情報を失うという問題を扱う。
@@ -27,10 +31,6 @@
 - **2025-11 · [Revisiting Disaggregated Large Language Model Serving for Performance and Energy Implications](2026-2601.08833-revisiting-disaggregated-large-language-model-serving-for-performance-and-energy-implications.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   公平な2-GPU基準と複数KV転送階層・DVFSでプリフィル/デコード分離を再評価し、性能・省電力の優位が条件依存であることを示す。
-
-- **2026-09 · [Predict, Don't Iterate: Efficient Adaptive-Length Infilling for Diffusion Language Models](2026-2609.02108-predict-don-t-iterate-efficient-adaptive-length-infilling-for-diffusion-.md)**  
-  実装：[✓](https://github.com/Hsu1023/PILL) ・ リポジトリ内被引用：1  
-  PILLは、拡散言語モデル（diffusion language モデル）が文章やプログラムの既知の前半と後半の間を補完する課題（infilling）において、欠落部分の長さをあらかじめ固定しなければならない制約を扱う。既存の可変長方式は長さを反復探索したり生成途中に伸縮操作を挿入したりするため、推論回数が増える。
 
 - **2026-06 · [NLL-Guided Full-Attention Layer Selection for Training-Free Sliding-Window Adaptation](2026-2606.27791-nll-guided-full-attention-layer-selection-for-training-free-sliding-wind.md)**  
   実装：[✓](https://gitlab.com/fars-a/nll-guided-swaa-layer-selection) ・ リポジトリ内被引用：1  
@@ -293,7 +293,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-05 · [ServeGen: Workload Characterization and Generation of Large Language Model Serving in Production](2026-2505.09999-servegen-workload-characterization-and-generation-of-large-language-mode.md)**  
-  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：26  
+  実装：[✓](https://github.com/alibaba/ServeGen) ・ リポジトリ内被引用：27  
   4か月・12モデル・35.4億要求の本番記録から、到着率、バースト、入力・出力長、画像・音声・動画、推論過程の分布を分析する。顧客ごとの比較的安定した特性と時間変動する到着率を合成し、現実的な推論ベンチマークを作る。
 
 - **2025-03 · [Stop Overthinking: A Survey on Efficient Reasoning for Large Language Models](2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md)**  

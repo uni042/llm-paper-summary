@@ -96,6 +96,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   Ada-MKはLLMデコードをPTX命令水準の依存グラフへ分解し、共有メモリ配置とワープ役割をオフライン探索して分岐のないメガカーネルを生成し、L20でTensorRT-LLM比最大23.6%高速化する。
 
+- **2026-04 · [Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels](2026-2604.14825-nautilus-an-auto-scheduling-tensor-compiler-for-efficient-tiled-gpu-kern.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  大規模言語モデル（Large Language モデル; LLM）の注意計算を高速化するには、数学的に同じ式でも、演算の融合、行列の分割幅、共有メモリの配置、並列実行単位、GPU世代ごとの命令特性を考慮しなければならない。FlashAttention系のカーネルはこれらを手作業で高度に調整してきた。
+
 - **2026-04 · [FoE: Forest of Errors Makes the First Solution the Best in Large Reasoning Models](2026-2604.02967-foe-forest-of-errors-makes-the-first-solution-the-best-in-large-reasonin.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   提案手法RED（Refine First and Discard Subs）は、最初の解法を生成している途中で不確実性が高い箇所へ介入し、別解を無制限に増やす代わりに、複数の中間回答が十分に一致した時点で停止する。6種類の推論モデル、数学・科学の5課題で、通常復号と比較して正答率を改善しつつ生成トークンを37.7～70.4%削減した。
@@ -107,6 +111,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-03 · [WaterSIC: Information-Theoretically (Near) Optimal Linear Layer Quantization](2026-2603.04956-watersic-information-theoretically-near-optimal-linear-layer-quantizatio.md)**  
   実装：[✓](https://github.com/egorlifar/watersic) ・ リポジトリ内被引用：1  
   WaterSICは、大規模言語モデルの線形層を学習後量子化（post-学習 量子化）するとき、入力チャネルごとに異なる格子幅を与えることで、同じ圧縮容量でも出力のずれを小さくする手法である。ただし論文が評価する主軸は品質対圧縮率であり、llama.cppなどの推論器に載せたトークン/秒、展開カーネルの速度、メモリ帯域削減の実測ではない。
+
+- **2026-03 · [Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation](2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md)**  
+  実装：[✓](https://github.com/kaist-ina/Trinity-AE) ・ リポジトリ内被引用：1  
+  Transformerの推論カーネル最適化では、計算グラフ上の演算融合・代数変形と、GPU上のタイル分割・共有メモリ配置・並列化を別々のコンパイラ段階で決めることが多い。この分離によって、FlashAttentionのように代数変形とデータ移動・実行順序を同時に変える最適化を一般的なコンパイラが自動発見しにくい。
 
 - **2026-03 · [Mixture-of-Depths Attention](2026-2603.15619-mixture-of-depths-attention.md)**  
   実装：[✓](https://github.com/hustvl/MoDA) ・ リポジトリ内被引用：1  
@@ -366,10 +374,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、通常のソフトマックス注意（softmax 注意機構）が各問い合わせについて全鍵の重みを合計1に正規化するため、「どの鍵も十分に関連しない」という状態を直接表現しにくい点に着目する。パラメータ規模に関する近似的な学習曲線からは、同等の検証損失に必要なパラメータが約30%少ないと推定する。
 
-- **2026-04 · [Nautilus: An Auto-Scheduling Tensor Compiler for Efficient Tiled GPU Kernels](2026-2604.14825-nautilus-an-auto-scheduling-tensor-compiler-for-efficient-tiled-gpu-kern.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  大規模言語モデル（Large Language モデル; LLM）の注意計算を高速化するには、数学的に同じ式でも、演算の融合、行列の分割幅、共有メモリの配置、並列実行単位、GPU世代ごとの命令特性を考慮しなければならない。FlashAttention系のカーネルはこれらを手作業で高度に調整してきた。
-
 - **2026-04 · [LP-GEMM: Integrating Layout Propagation into GEMM Operations](2026-2604.04599-lp-gemm-integrating-layout-propagation-into-gemm-operations.md)**  
   実装：[✓](https://github.com/czariv/simple_attention) ・ リポジトリ内被引用：0  
   連続する行列積が毎回入出力を詰め替える無駄を除くため、GEMMを初期・中間・終端の3種類に分割し、内部の詰め込み配置を次の行列積へ伝播するLP-GEMMを提案。
@@ -401,10 +405,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores](2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案方式AILFM（Active Imitation Learning for LFMs）は、コアごとの命令実行率、最終段キャッシュのミス率、平均キャッシュ距離、電力予算、温度を観測し、どのカーネルをどのコアに割り当てると温度上限を守りながら実行時間を短縮できるかを判断する。
-
-- **2026-03 · [Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation](2026-f777f1110d4d-trinity-three-dimensional-tensor-program-optimization-via-tile-level-equ.md)**  
-  実装：[✓](https://github.com/kaist-ina/Trinity-AE) ・ リポジトリ内被引用：0  
-  Transformerの推論カーネル最適化では、計算グラフ上の演算融合・代数変形と、GPU上のタイル分割・共有メモリ配置・並列化を別々のコンパイラ段階で決めることが多い。この分離によって、FlashAttentionのように代数変形とデータ移動・実行順序を同時に変える最適化を一般的なコンパイラが自動発見しにくい。
 
 - **2026-03 · [Scaling Attention via Feature Sparsity](2026-2603.22300-scaling-attention-via-feature-sparsity.md)**  
   実装：[✓](https://github.com/YannX1e/Sparse-Feature-Attention) ・ リポジトリ内被引用：0  
@@ -493,7 +493,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-01 · [FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving](2025-2501.01005-flashinfer-attention-engine-serving.md)**  
-  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：165  
+  実装：[✓](https://github.com/flashinfer-ai/flashinfer) ・ リポジトリ内被引用：166  
   多様なKV配置と注意派生形をブロック疎形式と実行時コンパイルで統一し、可変系列長を固定CTAへ動的に負荷均衡しながらCUDAグラフ互換性も保つ、LLMサービング向け高性能注意エンジン。
 
 - **2025-03 · [POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference](2025-pod-attention.md)**  
@@ -699,7 +699,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：49  
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
@@ -714,6 +714,14 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：22  
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
 
+- **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
+  実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：20  
+  Mirageは「既知のアルゴリズムに対して良いGPUスケジュールを探す」だけでも、「数式を書き換えて既存カーネルを組み合わせる」だけでもない。テンソル計算をGPUのカーネル・スレッドブロック・スレッド階層をまたぐμGraphで表し、数式の形、融合境界、並列化方法を同じ探索の中で変えることで、人手では実装量が大きい複合最適化を自動発見する。
+
+- **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
+  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：20  
+  Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
+
 - **2024-06 · [T-MAC: CPU Renaissance via Table Lookup for Low-Bit LLM Deployment on Edge](2024-2407.00088-t-mac-cpu-renaissance-via-table-lookup-for-low-bit-llm-deployment-on-edg.md)**  
   実装：[✓](https://github.com/microsoft/T-MAC) ・ リポジトリ内被引用：19  
   重みのみを低ビット量子化した大規模言語モデルでは、重みは1〜4ビットでも活性値は8〜16ビット以上の精度を保つことが多い。論文はカーネルの最大6.6倍、平均3.6倍の改善、モデル全体で条件により2〜4倍の生成速度改善を報告する。
@@ -722,21 +730,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：19  
   テンソル並列では、行列の列や行をGPUごとに分割して計算する。各GPUが自分の部分を処理しても、次の行列積が必要とする入力を集める全収集（AllGather）、あるいは計算結果を加算して分散する縮約散布（ReduceScatter）が必要になる。通信の完了を待ってから次の行列積を始めると、GPUが計算できない待機時間が生じる。
 
-- **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
-  実装：[✓](https://github.com/mirage-project/mirage) ・ リポジトリ内被引用：19  
-  Mirageは「既知のアルゴリズムに対して良いGPUスケジュールを探す」だけでも、「数式を書き換えて既存カーネルを組み合わせる」だけでもない。テンソル計算をGPUのカーネル・スレッドブロック・スレッド階層をまたぐμGraphで表し、数式の形、融合境界、並列化方法を同じ探索の中で変えることで、人手では実装量が大きい複合最適化を自動発見する。
-
-- **2024-02 · [Any-Precision LLM: Low-Cost Deployment of Multiple, Different-Sized LLMs](2024-2402.10517-any-precision-llm-low-cost-deployment-of-multiple-different-sized-llms.md)**  
-  実装：[✓](https://github.com/SNU-ARC/any-precision-llm) ・ リポジトリ内被引用：19  
-  Any-Precision LLMは、同じ大規模言語モデルを複数の量子化精度で運用する場合のメモリと作成費用を削減する研究である。Llama-2-7Bの3～8ビット6種類を個別配置する場合29.9GBに対し、共通配置では8.4GBとなり、3.56倍の容量節約を報告する。
+- **2024-08 · [STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs](2024-2408.01803-stbllm-breaking-the-1-bit-barrier-with-structured-binary-llms.md)**  
+  実装：✓ ・ リポジトリ内被引用：17  
+  大規模言語モデルの推論では、特にバッチの小さい復号段階で重みを主記憶やGPUメモリから読み出す帯域が律速になりやすい。従来の二値化手法は、重要な重みを別扱いにしたり残差を追加したりして精度を回復するものの、重み当たり約1ビットの表現からさらに削る余地が残る。
 
 - **2024-10 · [SageAttention: Accurate 8-Bit Attention for Plug-and-play Inference Acceleration](2024-2410.02367-sageattention-accurate-8-bit-attention-for-plug-and-play-inference-accel.md)**  
   実装：[✓](https://github.com/thu-ml/SageAttention) ・ リポジトリ内被引用：16  
   一般的なモデル量子化は全結合層の重み・活性へ集中するが、長い文脈では注意行列を計算するQKᵀと、注意重みを値へ適用するPVの行列積が大きな費用を占める。RTX 4090での注意カーネルの演算性能は、FlashAttention-2比で概ね2.1倍、xformers比で概ね2.7倍と報告される。
-
-- **2024-08 · [STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs](2024-2408.01803-stbllm-breaking-the-1-bit-barrier-with-structured-binary-llms.md)**  
-  実装：✓ ・ リポジトリ内被引用：16  
-  大規模言語モデルの推論では、特にバッチの小さい復号段階で重みを主記憶やGPUメモリから読み出す帯域が律速になりやすい。従来の二値化手法は、重要な重みを別扱いにしたり残差を追加したりして精度を回復するものの、重み当たり約1ビットの表現からさらに削る余地が残る。
 
 - **2024-10 · [ThunderKittens: Simple, Fast, and Adorable AI Kernels](2024-2410.20399-thunderkittens-simple-fast-and-adorable-ai-kernels.md)**  
   実装：[✓](https://github.com/HazyResearch/ThunderKittens) ・ リポジトリ内被引用：14  
@@ -805,7 +805,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：490  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：492  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
@@ -839,7 +839,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：694  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：695  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -877,7 +877,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：158  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：159  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
@@ -887,6 +887,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 9年前（2017-11〜2018-10）
 
 - **2018-05 · [Online normalizer calculation for softmax](2018-1805.02867-online-normalizer-calculation-for-softmax.md)**  
-  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：54  
+  実装：[✓](https://github.com/NVIDIA/online-softmax) ・ リポジトリ内被引用：56  
   本論文は、数値的に安全なソフトマックスの出力を変えずに、入力配列を読み直す回数を減らす「オンライン正規化子（online normalizer）」を提案する。著者らのTesla V100での単精度実装では、ソフトマックス単体で最大約1.3倍の高速化が報告される。
 <!-- survey:auto:end -->

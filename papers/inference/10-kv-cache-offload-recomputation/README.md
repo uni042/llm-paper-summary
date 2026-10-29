@@ -367,7 +367,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2024-11 · [NEO: Saving GPU Memory Crisis with CPU Offloading for Online LLM Inference](2024-2411.01142-neo-saving-gpu-memory-crisis-with-cpu-offloading-for-online-llm-inference.md)**  
-  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/NEO-MLSys25/NEO) ・ リポジトリ内被引用：51  
   オンラインの大規模言語モデル推論では、要求をまとめて実行することでGPUの行列積を効率化できる。MLSys 2025正式論文は、同一ホストのCPUを使う条件で、GPUのみの実行と比べてT4で最大7.5倍、A10Gで最大26%、H100で最大14%の処理率改善を報告する。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  
@@ -386,13 +386,13 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：19  
   要求間KV再利用を可変長断片・DHD再計算・ヒット率別バッチングで安全に広げ、TTFT最大9.39倍短縮と平均1.2倍のスループット向上を示す。
 
+- **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
+  実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：18  
+  KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
+
 - **2025-10 · [TokenCake: A KV-Cache-centric Serving Framework for LLM-based Multi-Agent Applications](2025-2510.18586-tokencake-agent-kv-cache-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：17  
   関数待機中のKVを予測退避・先読みし、重要エージェント向けGPU KV領域を動的予約することで、複数エージェント処理の再計算とメモリ競合を抑える。
-
-- **2024-11 · [KVPR: Efficient LLM Inference with I/O-Aware KV Cache Partial Recomputation](2024-2411.17089-kvpr-efficient-llm-inference-with-io-aware-kv-cache-partial-recomputation.md)**  
-  実装：[✓](https://github.com/chaoyij/KVPR) ・ リポジトリ内被引用：17  
-  KVPRはCPU上のKVの一部を小さい中間活性値からGPUで再計算し、残りのKV転送と並行してPCIe待ちを減らす無損失方式。
 
 - **2025-03 · [Accelerating LLM Serving for Multi-turn Dialogues with Efficient Resource Management](2025-flashgen-accelerating-llm-serving-for-multi-turn-dialogues-with-efficient-resource-management.md)**  
   実装：✓ ・ リポジトリ内被引用：16  

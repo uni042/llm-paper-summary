@@ -28,6 +28,10 @@
   実装：✓ ・ リポジトリ内被引用：6  
   HBM級帯域・大容量の高帯域フラッシュをGPUへ統合し、SRAM先読み、重み/KV専用配置、KVの選択的HBM複製、追記型永続管理を協調させて、モデル重みとKVキャッシュをフラッシュ上で直接高並列アクセスする推論アクセラレータ。
 
+- **2026-02 · [QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models](2026-2602.20309-quantvla-scale-calibrated-post-training-quantization-for-vision-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  視覚・言語・行動モデル（vision-language-action モデル; VLA）は、画像と自然言語の指示を統合し、ロボットの連続した操作を生成する。
+
 - **2026-07 · [Read As Human: Compressing Context via Parallelizable Close Reading and Skimming](2026-2602.01840-read-as-human-compressing-context-via-parallelizable-close-reading-and-s.md)**  
   実装：[✓](https://github.com/Twilightaaa/RAM) ・ リポジトリ内被引用：5  
   入力文脈圧縮には、不要な語を削る方式と、文章を連続ベクトルへ変換する方式がある。Qwen3-4Bでの4倍圧縮時、NaturalQAの完全一致率は66.59、2WikiMQAは50.39であり、8倍圧縮時にはそれぞれ61.09、40.24となる。
@@ -35,10 +39,6 @@
 - **2026-02 · [RelayCaching：協調LLMの生成KVキャッシュ再利用](2026-2603.13289-relaycaching-accelerating-llm-collaboration-via-decoding-kv-cache-reuse.md)**  
   実装：✓ ・ リポジトリ内被引用：5  
   前段エージェントのデコードKVを後段プリフィルへ渡し、位置補正と中間層・重要トークンだけの疎な再計算で80%以上を再利用し、TTFTを最大4.7倍短縮する。
-
-- **2026-02 · [QuantVLA: Scale-Calibrated Post-Training Quantization for Vision-Language-Action Models](2026-2602.20309-quantvla-scale-calibrated-post-training-quantization-for-vision-language.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  視覚・言語・行動モデル（vision-language-action モデル; VLA）は、画像と自然言語の指示を統合し、ロボットの連続した操作を生成する。
 
 - **2026-01 · [SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](2026-2601.16746-swe-pruner-self-adaptive-context-pruning-for-coding-agents.md)**  
   実装：[✓](https://github.com/Ayanami1314/swe-pruner) ・ リポジトリ内被引用：5  
@@ -1881,7 +1881,7 @@
   NVILAは解像度を先に上げて必要な情報を取り込み、その後に空間・時間方向の冗長性を圧縮する「拡大してから圧縮する（scale-then-compress）」設計を採用する。
 
 - **2024-12 · [ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction](2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md)**  
-  実装：[✓](https://github.com/pku-liang/ArkVale) ・ リポジトリ内被引用：11  
+  実装：[✓](https://github.com/pku-liang/ArkVale) ・ リポジトリ内被引用：12  
   大規模言語モデル（Large Language モデル; LLM）が長い文章を扱うと、注意機構の鍵・値キャッシュ（Key-Value キャッシュ; KVキャッシュ）は入力文脈の長さと同時処理要求数に比例して増える。
 
 - **2025-08 · [Huawei Cloud Model-as-a-Service on the CloudMatrix384 SuperPod](2025-2508.02520-huawei-cloud-model-as-a-service-on-the-cloudmatrix384-superpod.md)**  
@@ -2522,13 +2522,13 @@
   実装：✓ ・ リポジトリ内被引用：68  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
+- **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：47  
+  著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
+
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
   実装：[✓](https://github.com/dvlab-research/LLaMA-VID) ・ リポジトリ内被引用：47  
   LLaMA-VIDは、各フレームの情報を質問に応じて抽出する文脈トークンと画像内容を要約する内容トークンに分離する。ECCV 2024正式論文では、動画質問応答のMSVD-QAでVicuna-7B構成が正解率69.7%、MSRVTT-QAで57.7%、ActivityNet-QAで47.4%を記録した。
-
-- **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：46  
-  著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2024-07 · [Learning to (Learn at Test Time): RNNs with Expressive Hidden States](2024-2407.04620-learning-to-learn-at-test-time-rnns-with-expressive-hidden-states.md)**  
   実装：[✓](https://github.com/test-time-training/ttt-lm-pytorch) ・ リポジトリ内被引用：37  
@@ -2551,7 +2551,7 @@
   RADDは吸収型離散拡散の逆過程で必要な条件付き確率を時刻から切り離し、マスク配置が変わらないステップの推論を省略する。理論的な損失の等価性と、実際の生成時間・困惑度の双方を検証した研究。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
-  実装：✓ ・ リポジトリ内被引用：21  
+  実装：✓ ・ リポジトリ内被引用：22  
   本論文は、既に学習済みの多頭注意（MHA）モデルを破棄せず、復号時に読み出すKey/Value（KV）ヘッド数を減らすためのチェックポイント変換と追加学習を提案する。著者らはMHAのKV投影重みをグループ内で平均して初期化し、元の事前学習手順の5%相当を追加実行する。
 
 - **2024-08 · [LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression](2024-33c68d74c3c9-llmlingua-2-data-distillation-for-efficient-and-faithful-task-agnostic-p.md)**  
@@ -3173,7 +3173,7 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：298  
+  実装：✓ ・ リポジトリ内被引用：299  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-11〜2016-10）
