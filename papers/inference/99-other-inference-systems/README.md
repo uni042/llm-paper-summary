@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（775本）
+## 自動生成の論文一覧（776本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -665,6 +665,10 @@
 - **2026-07 · [I/o for LLM inference: a survey of storage and memory bottlenecks](2026-5e022a2789e7-i-o-for-llm-inference-a-survey-of-storage-and-memory-bottlenecks.md)**  
   実装：[✓](https://github.com/rch0wdhury/llm-io-profiler) ・ リポジトリ内被引用：0  
   LLMデコードのデータ移動を重み・KVキャッシュ・活性の三I/O流へ分解し、量子化からSSD/CXL/統合メモリまでをルーフライン上で統一して、最適化を積むと支配ボトルネックが移動することを定量化したサーベイ。
+
+- **2026-07 · [GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference](2026-2607.27694-gyrot-leveraging-hidden-synergy-between-rotation-and-fine-grained-group-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GyRotは、重み・活性化を4ビットに圧縮したLLMを精度よく、しかも整数演算中心の専用回路で実行するためのアルゴリズムとハードウェアの共同設計である。回路性能は28nm・1GHz条件の合成・推定に基づき、Tender比の幾何平均で速度3.40倍、エネルギー効率3.64倍と報告する。
 
 - **2026-07 · [FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications](2026-2607.18171-flashrt-agent-harness-for-guiding-agents-to-deploy-real-time-multimodal-.md)**  
   実装：[✓](https://github.com/Infini-AI-Lab/FlashRT) ・ リポジトリ内被引用：0  

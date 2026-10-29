@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（396本）
+## 自動生成の論文一覧（399本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -938,6 +938,18 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-01 · [GPU-Accelerated INT8 Quantization for KV Cache Compression in Large Language Models](2026-2601.04719-gpu-accelerated-int8-quantization-for-kv-cache-compression-in-large-lang.md)**  
   実装：[✓](https://github.com/MaanasTaneja/cuda-kv-cache-compression) ・ リポジトリ内被引用：0  
   再計算を避けるため、各層・各注意ヘッドの過去の鍵と値を保持するKVキャッシュ（KV キャッシュ）が必要になる。そこで本論文は、FP32の鍵・値行列をINT8へ変換する列別量子化と、その変換処理を高速化するCUDAカーネルを実装・比較する。
+
+- **2026-01 · [Don't be so Stief! Learning KV Cache low-rank approximation over the Stiefel manifold](2026-2601.21686-don-t-be-so-stief-learning-kv-cache-low-rank-approximation-over-the-stie.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  StiefAttentionは、学習済みの大規模言語モデルを再事前学習せずに、推論時の鍵・値（KV）キャッシュを低ランク化する手法である。
+
+- **2025-12 · [V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval](2025-2512.12284-v-rex-real-time-streaming-video-llm-acceleration-via-dynamic-kv-cache-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  過去の映像を後から質問される可能性があるため、不要に見えるKVを永久削除する方式は会話の整合性を損なう。論文のエッジ向けV-Rex8構成は、KV長1K〜40KのCOIN動画でフレーム当たり121〜254 ms、すなわち3.9〜8.3 FPSを報告する。
+
+- **2025-12 · [Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers](2025-2512.03870-reconstructing-kv-caches-with-cross-layer-fusion-for-enhanced-transforme.md)**  
+  実装：[✓](https://github.com/LivingFutureLab/FusedKV) ・ リポジトリ内被引用：0  
+  長い系列と同時要求の増加に伴い、層数に比例するKVキャッシュ容量と読み出しがサービングの制約となる。著者は、上位層のキーと値が異なる深さの情報を必要とすることが原因の一つと考え、上位層のキー・値を下位層から非対称に再構成するFusedKVを設計した。
 
 - **2025-12 · [CTkvr: KV Cache Retrieval for Long-Context LLMs via Centroid then Token Indexing](2025-2512.15550-ctkvr-kv-cache-retrieval-for-long-context-llms-via-centroid-then-token-i.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

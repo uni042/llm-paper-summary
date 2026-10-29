@@ -35,10 +35,15 @@
   "selection_reason": "回転による外れ値緩和と細粒度グループ量子化のスケール局所性の衝突をCoRFiGとHAPで解消し、ゼロ点丸めによる整数復号を専用INT4演算器へ結合する。LLM重み量子化の精度と推論アクセラレータ速度・エネルギーを直接評価するため収録対象。",
   "semantic_scholar_id": "6e8c9dec6c50948373f2830fd34388b466d7a5d4",
   "source_url": "https://arxiv.org/abs/2607.27694",
-  "status": "ready",
+  "status": "superseded",
   "title": "GyRot: Leveraging Hidden Synergy Between Rotation and Fine-Grained Group Quantization for Low-Bit LLM Inference",
   "type": "research",
   "venue": "International Symposium on High-Performance Computer Architecture",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T02:33:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.27694-gyrot-leveraging-hidden-synergy-between-rotation-and-fine-grained-group-.md",
+  "represented_canonical_id": "arXiv:2607.27694",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

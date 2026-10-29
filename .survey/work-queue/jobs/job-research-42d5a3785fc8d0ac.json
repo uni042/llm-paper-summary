@@ -35,10 +35,15 @@
   "selection_reason": "FusedKVは上位層のvalueが下位層、keyが下位・中間層の情報を多く含むという観測から、上位層KVを下位・中間層のpost-RoPE key/valueの学習可能な融合で再構成する。FusedKV-Liteでは下位valueと中間keyから直接導出してI/Oを削減する。モデル構造に手を加えるがKV容量を半減する推論メモリ設計なのでaccept。",
   "semantic_scholar_id": "73d41f0f4db4506225fb0c7c3fe879e4fe6ff295",
   "source_url": "https://arxiv.org/abs/2512.03870",
-  "status": "ready",
+  "status": "superseded",
   "title": "Reconstructing KV Caches with Cross-layer Fusion For Enhanced Transformers",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T02:33:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2512.03870-reconstructing-kv-caches-with-cross-layer-fusion-for-enhanced-transforme.md",
+  "represented_canonical_id": "arXiv:2512.03870",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

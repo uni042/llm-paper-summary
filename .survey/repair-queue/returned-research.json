@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T02:18:36+00:00",
+  "generated_at": "2026-10-29T02:33:55+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 76,
+  "count": 74,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1794,33 +1794,6 @@
       "worker_run_key": "20261029-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2607.27694",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T01:17:14+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5674,
-        "body_paragraphs": 30,
-        "method_chars": 1682,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 560,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7a68d704ad4a--libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7a68d704ad4a--libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-0.json",
-      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2604.07888",
       "title": null,
       "source_url": null,
@@ -1902,33 +1875,6 @@
       "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2512.12284",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T01:24:20+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 185 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6175,
-        "body_paragraphs": 33,
-        "method_chars": 1465,
-        "method_paragraphs": 7,
-        "evaluation_chars": 185,
-        "limitation_chars": 859,
-        "insufficiency_flags": [
-          "評価説明量 185 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fb02127e743b--libfile_42ecbd6a2154819183a666e7591470d3--2025-2512.12284-vrex-streaming-video-kv-retrieval-research-20261029-0845-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-fb02127e743b--libfile_42ecbd6a2154819183a666e7591470d3--2025-2512.12284-vrex-streaming-video-kv-retrieval-research-20261029-0845-scheduled-chat-4.json",
-      "worker_run_key": "20261029-0845-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.22575",
       "title": null,
       "source_url": null,
@@ -1986,8 +1932,8 @@
       "canonical_id": "arXiv:2609.33889",
       "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
       "source_url": "https://arxiv.org/abs/2609.33889",
-      "returned_at": "2026-10-29T02:17:13+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-29T02:32:33+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2005,8 +1951,8 @@
           "評価説明量 468 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8887074bb0048191b110afd300f09a94--2026-2609.33889-bytecross-projection-kv-sparsity-research-20261029-0950-scheduled-chat-45-r01-metadata-repair.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8887074bb0048191b110afd300f09a94--2026-2609.33889-bytecross-projection-kv-sparsity-research-20261029-0950-scheduled-chat-45-r01-metadata-repair.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-08d6cd6741c1--libfile_8887074bb0048191b110afd300f09a94--2026-2609.33889-bytecross-projection-kv-sparsity-research-20261029-0950-scheduled-chat-45-r01-metadata-repair.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-08d6cd6741c1--libfile_8887074bb0048191b110afd300f09a94--2026-2609.33889-bytecross-projection-kv-sparsity-research-20261029-0950-scheduled-chat-45.json",
       "worker_run_key": "20261029-0950-scheduled-chat-45/r01"
     }
   ]

@@ -35,10 +35,15 @@
   "selection_reason": "V-Rexは連続動画の反復prefillで肥大化するKVを、時空間類似性に基づくReSVトークンクラスタリングで選択的に再取得し、bit-level/early-exit回路を持つDREに実装する。AGX Orin比1.9～19.7倍の速度向上を報告し、エッジ上のマルチモーダルLLM推論メモリ最適化に直接関係する。",
   "semantic_scholar_id": "a31c4351d6bf8f3344ac63130d5d3d82b708466d",
   "source_url": "https://arxiv.org/abs/2512.12284",
-  "status": "ready",
+  "status": "superseded",
   "title": "V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval",
   "type": "research",
   "venue": "International Symposium on High-Performance Computer Architecture",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T02:33:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2512.12284-v-rex-real-time-streaming-video-llm-acceleration-via-dynamic-kv-cache-re.md",
+  "represented_canonical_id": "arXiv:2512.12284",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

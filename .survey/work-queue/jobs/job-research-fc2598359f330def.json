@@ -35,10 +35,15 @@
   "selection_reason": "StiefAttentionはKVを低ランク射影してHBMへ格納する際、SVD型の重み近似ではなくデコーダ層出力の再構成誤差を直接最小化する直交基底を学習し、層別の誤差対ランク曲線から予算内のランクを割り当てる。LLM復号のKV容量・帯域を減らす方式であるためaccept。",
   "semantic_scholar_id": "f121226b72d14030c339e0112d66e80dc7afeccb",
   "source_url": "https://arxiv.org/abs/2601.21686",
-  "status": "ready",
+  "status": "superseded",
   "title": "Don't be so Stief! Learning KV Cache low-rank approximation over the Stiefel manifold",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T02:33:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.21686-don-t-be-so-stief-learning-kv-cache-low-rank-approximation-over-the-stie.md",
+  "represented_canonical_id": "arXiv:2601.21686",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
