@@ -1,40 +1,63 @@
 ---
-canonical_id: "DOI:10.18653/v1/2026.findings-acl.1040"
-title: "SPIDE: Serial and Parallel Intertwined Speculative Decoding"
+canonical_id: DOI:10.18653/v1/2026.findings-acl.1040
+title: 'SPIDE: Serial and Parallel Intertwined Speculative Decoding'
 authors:
-  - Wenru Xu
-  - Peixuan Xu
-  - Ziqi Yang
-  - Ming Hu
-  - Zihui Wang
-  - Jianzhong Qi
-  - Rongshan Yu
-  - Xiaoliang Fan
-  - Cheng Wang
-published: "2026-07"
-publication: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 20762–20779"
-publication_type: "査読付き国際会議論文（Findings）"
-publication_status: "Published"
-doi: "10.18653/v1/2026.findings-acl.1040"
-source: "https://aclanthology.org/2026.findings-acl.1040.pdf"
+- Wenru Xu
+- Peixuan Xu
+- Ziqi Yang
+- Ming Hu
+- Zihui Wang
+- Jianzhong Qi
+- Rongshan Yu
+- Xiaoliang Fan
+- Cheng Wang
+published: 2026-07
+publication: 'Findings of the Association for Computational Linguistics: ACL 2026, pp. 20762–20779'
+publication_type: 査読付き国際会議論文（Findings）
+publication_status: Published
+doi: 10.18653/v1/2026.findings-acl.1040
+source: https://aclanthology.org/2026.findings-acl.1040.pdf
 sources:
-  - "https://aclanthology.org/2026.findings-acl.1040.pdf"
-  - "https://aclanthology.org/2026.findings-acl.1040/"
-summary: "SPIDEは、草稿トークンの確信度と実際の受理率の対応表をオンライン更新し、草稿列の累積受理見込みに応じて逐次草稿生成と並列検証を切り替える学習不要の投機的復号方式である。4枚のRTX 3090・バッチ1のテキスト生成評価で、通常の自己回帰生成比平均3.25倍、最大4.56倍の壁時計時間短縮を報告し、標準投機的復号比ではターゲット呼出回数の平均増加を8.2%に抑えながら平均67.7%の追加高速化を報告する。"
-list_summary: "草稿の確信度からオンライン推定した受理率で逐次生成と並列検証を切り替え、不要な検証呼出と過剰な草稿破棄を抑える学習不要の投機的復号方式。"
-implementation: "著者らが6種類の草稿／ターゲットモデル組、4枚のRTX 3090、BF16、バッチ1で再実装比較。一次論文本文中に公式コード公開先の明記を確認できないため、公開実装は未確認。"
+- https://aclanthology.org/2026.findings-acl.1040.pdf
+- https://aclanthology.org/2026.findings-acl.1040/
+summary: SPIDEは、草稿トークンの確信度と実際の受理率の対応表をオンライン更新し、草稿列の累積受理見込みに応じて逐次草稿生成と並列検証を切り替える学習不要の投機的復号方式である。4枚のRTX 3090・バッチ1のテキスト生成評価で、通常の自己回帰生成比平均3.25倍、最大4.56倍の壁時計時間短縮を報告し、標準投機的復号比ではターゲット呼出回数の平均増加を8.2%に抑えながら平均67.7%の追加高速化を報告する。
+list_summary: 草稿の確信度からオンライン推定した受理率で逐次生成と並列検証を切り替え、不要な検証呼出と過剰な草稿破棄を抑える学習不要の投機的復号方式。
+implementation: 著者らが6種類の草稿／ターゲットモデル組、4枚のRTX 3090、BF16、バッチ1で再実装比較。一次論文本文中に公式コード公開先の明記を確認できないため、公開実装は未確認。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261030-0030-scheduled-chat-30/r01"
-worker_completed_at: "2026-10-30T00:36:30+09:00"
-reference_main_sha: "230f189494eaf34282dc6f3fa0ab26109fcd7181"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-30
+worker_run_key: 20261030-0030-scheduled-chat-30/r01
+worker_completed_at: '2026-10-30T00:36:30+09:00'
+reference_main_sha: 230f189494eaf34282dc6f3fa0ab26109fcd7181
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-repair_origin: "returned_research_queue"
-repair_note: "GitHubのblocked原稿を同一HEADで取得できなかったため、ACL Anthology一次論文の本文・表・付録から独立再構築。既存原稿の逐語的な再提出ではない。"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+repair_origin: returned_research_queue
+repair_note: GitHubのblocked原稿を同一HEADで取得できなかったため、ACL Anthology一次論文の本文・表・付録から独立再構築。既存原稿の逐語的な再提出ではない。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2401.10774
+  arxiv_id: '2401.10774'
+- canonical_id: arXiv:2312.12728
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2505.01658
+- canonical_id: arXiv:2405.04304
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:1701.06538
+- canonical_id: ACL:2024.acl-long.681
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2405.19715
+- canonical_id: arXiv:2402.02082
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2410.11305
+- canonical_id: arXiv:2408.11850
+- canonical_id: arXiv:2308.04623
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2312.11462
+- canonical_id: arXiv:2401.06706
+references_checked_at: '2026-10-29'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 ## 書誌と位置づけ
