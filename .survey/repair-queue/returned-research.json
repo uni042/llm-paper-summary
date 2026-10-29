@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T11:57:47+00:00",
+  "generated_at": "2026-10-29T12:26:01+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2041,38 +2041,11 @@
       "worker_run_key": "20261029-1647-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2608.12913",
-      "title": "Decoupled Contrastive Decoding via Expert-Aligned Drafting",
-      "source_url": "https://aclanthology.org/2026.emnlp-main.195.pdf",
-      "returned_at": "2026-10-29T11:57:43+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_passed が true ではない"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5741,
-        "body_paragraphs": 25,
-        "method_chars": 2006,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1749,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_57abf60c1770819199eb18ccc6d27a7a--2026-2608.12913-dcd-expert-aligned-speculative-contrastive-decoding-research-20261029-2003-scheduled-chat-00-r01-rev1.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_57abf60c1770819199eb18ccc6d27a7a--2026-2608.12913-dcd-expert-aligned-speculative-contrastive-decoding-research-20261029-2003-scheduled-chat-00-r01-rev1.json",
-      "worker_run_key": "20261029-2003-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2610.04313",
       "title": "MOIRA: Mass-Oriented Indexing with Ragged Attention for Long-Context Decoding",
       "source_url": "https://arxiv.org/abs/2610.04313",
-      "returned_at": "2026-10-29T11:57:44+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-29T12:25:55+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2090,16 +2063,16 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_e5223b1361b481918aae5289b64ec8b5--2026-2610.04313-moira-mass-oriented-ragged-attention-research-20261029-2003-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_e5223b1361b481918aae5289b64ec8b5--2026-2610.04313-moira-mass-oriented-ragged-attention-research-20261029-2003-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3b8cd6675056--libfile_e5223b1361b481918aae5289b64ec8b5--2026-2610.04313-moira-mass-oriented-ragged-attention-research-20261029-2003-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3b8cd6675056--libfile_e5223b1361b481918aae5289b64ec8b5--2026-2610.04313-moira-mass-oriented-ragged-attention-research-20261029-2003-scheduled-cha.json",
       "worker_run_key": "20261029-2003-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2608.06135",
       "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
       "source_url": "https://arxiv.org/abs/2608.06135",
-      "returned_at": "2026-10-29T11:57:46+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-29T12:25:57+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2117,8 +2090,35 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_fc595f91f84081918d3d1ba4020ef6ad--2026-2608.06135-modified-wait-bursty-llm-scheduling-research-20261029-2003-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_fc595f91f84081918d3d1ba4020ef6ad--2026-2608.06135-modified-wait-bursty-llm-scheduling-research-20261029-2003-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f8b2dc4bc31--libfile_fc595f91f84081918d3d1ba4020ef6ad--2026-2608.06135-modified-wait-bursty-llm-scheduling-research-20261029-2003-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8f8b2dc4bc31--libfile_fc595f91f84081918d3d1ba4020ef6ad--2026-2608.06135-modified-wait-bursty-llm-scheduling-research-20261029-2003-scheduled-chat.json",
+      "worker_run_key": "20261029-2003-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.12913",
+      "title": "Decoupled Contrastive Decoding via Expert-Aligned Drafting",
+      "source_url": "https://aclanthology.org/2026.emnlp-main.195.pdf",
+      "returned_at": "2026-10-29T12:25:59+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "quality_self_review_passed が true ではない"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5741,
+        "body_paragraphs": 25,
+        "method_chars": 2006,
+        "method_paragraphs": 9,
+        "evaluation_chars": 1749,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9c1940dcb2b8--libfile_57abf60c1770819199eb18ccc6d27a7a--2026-2608.12913-dcd-expert-aligned-speculative-contrastive-decoding-research-20261029-2003-scheduled-chat-00-r01-rev1.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-9c1940dcb2b8--libfile_57abf60c1770819199eb18ccc6d27a7a--2026-2608.12913-dcd-expert-aligned-speculative-contrastive-decoding-research-20261029-200.json",
       "worker_run_key": "20261029-2003-scheduled-chat-00/r01"
     }
   ]

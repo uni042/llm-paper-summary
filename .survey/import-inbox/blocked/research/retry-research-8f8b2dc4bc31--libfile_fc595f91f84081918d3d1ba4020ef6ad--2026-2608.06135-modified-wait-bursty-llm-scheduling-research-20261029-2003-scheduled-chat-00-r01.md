@@ -24,6 +24,8 @@ last_checked: '2026-10-29'
 worker_completed_at: '2026-10-29T20:10:31+09:00'
 worker_run_key: '20261029-2003-scheduled-chat-00/r01'
 quality_self_review_version: '2026-10-07-library-guide-v1'
+last_audited: null
+audit_version: 0
 ---
 
 # LLM Inference Under Bursty Workload Distribution — 到着率推定でWAITのバッチ閾値を動的更新する

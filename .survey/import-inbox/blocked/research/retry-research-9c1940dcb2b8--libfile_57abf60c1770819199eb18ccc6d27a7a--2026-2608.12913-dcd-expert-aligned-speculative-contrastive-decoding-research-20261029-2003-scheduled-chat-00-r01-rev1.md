@@ -27,6 +27,8 @@ last_checked: '2026-10-29'
 worker_completed_at: '2026-10-29T20:07:54+09:00'
 worker_run_key: '20261029-2003-scheduled-chat-00/r01'
 quality_self_review_version: '2026-10-07-library-guide-v1'
+last_audited: null
+audit_version: 0
 ---
 
 # Decoupled Contrastive Decoding via Expert-Aligned Drafting — 対比復号を直列amateur推論から解放する
