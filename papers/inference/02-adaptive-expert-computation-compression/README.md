@@ -154,6 +154,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
   実装：[✓](https://github.com/fscdc/dMoE) ・ リポジトリ内被引用：1  
   ブロック内のトークン別ルータ得点を集約して適応的な専門家候補集合を作り、MoE拡散LLMの固有専門家数と重み読出しを大幅に減らす。
 
+- **2026-05 · [BitsMoE: Efficient Spectral Energy-Guided Bit Allocation for MoE LLM Quantization](2026-2606.00079-bitsmoe-spectral-bit-allocation.md)**  
+  実装：[✓](https://github.com/zjiayu064/BitsMoE) ・ リポジトリ内被引用：1  
+  共有スペクトル基底をFP16保持し、専門家固有成分へ活性・スペクトルエネルギー依存でビットを整数最適配分する超低ビットMoE量子化。
+
 - **2026-03 · [LightMoE: Reducing Mixture-of-Experts Redundancy through Expert Replacing](2026-2603.12645-lightmoe-expert-replacing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   枝刈りは知識を不可逆に捨て、統合は異なる専門性を平均化しやすい。OLMoE-1B-7B-SFTを5種類の下流課題で評価した結果、30%圧縮では非圧縮モデルへのLoRA微調整とほぼ同等の平均性能を維持し、50%圧縮では同じ学習予算の既存圧縮法を平均5.6%、単純置換を3.8%上回った。
@@ -271,10 +275,6 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-05 · [DECO: Sparse Mixture-of-Experts with Dense-Comparable Performance on End-Side Devices](2026-2605.10933-deco-end-side-sparse-moe.md)**  
   実装：[✓](https://github.com/thunlp/DECO) ・ リポジトリ内被引用：0  
   総パラメータ数と学習量を密モデルと揃えたまま、ReLUルーティングとNormSiLUで専門家活性を約20%に抑え、Jetson AGX Orinで密推論比2.93倍のデコード速度を示す端末向けMoE設計。
-
-- **2026-05 · [BitsMoE: Efficient Spectral Energy-Guided Bit Allocation for MoE LLM Quantization](2026-2606.00079-bitsmoe-spectral-bit-allocation.md)**  
-  実装：[✓](https://github.com/zjiayu064/BitsMoE) ・ リポジトリ内被引用：0  
-  共有スペクトル基底をFP16保持し、専門家固有成分へ活性・スペクトルエネルギー依存でビットを整数最適配分する超低ビットMoE量子化。
 
 - **2026-05 · [BEAM: Binary Expert Activation Masking for Dynamic Routing in MoE](2026-2605.14438-beam-binary-expert-activation-masking.md)**  
   実装：[✓](https://github.com/Time-Rune/BEAM) ・ リポジトリ内被引用：0  

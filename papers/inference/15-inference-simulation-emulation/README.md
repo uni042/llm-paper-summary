@@ -240,6 +240,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：2  
   大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
 
+- **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
+  実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：1  
+  大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
+
 - **2024-11 · [Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format](2024-2411.15982-anda-unlocking-efficient-llm-inference-with-a-variable-length-grouped-ac.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AndaはこのFP-INT行列積を対象に、活性値の格納形式、各演算モジュールへ割り当てる精度、専用回路の三つを共同最適化する研究である。
@@ -264,10 +268,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、LLMサービングの基本単位を「プロンプトを受け取ってトークン列を返すリクエスト」から、LLM推論プログラム（LLM Inference Program, LIP）へ変えるというシステム設計を提案する。
 
-- **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
-  実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：0  
-  大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
-
 - **2024-11 · [MAS-Attention: Memory-Aware Stream Processing for Attention Acceleration on Resource-Constrained Edge Devices](2024-2411.17720-mas-attention-memory-aware-stream-processing-for-attention-acceleration-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MAS-注意機構は、演算資源とオンチップ記憶容量が限られる端末向けニューラル演算器において、正確な注意機構を高速化する計算配置方式である。著者らは、改変TileFlow・Timeloop・Accelergyによる端末向け演算器のシミュレーションで、FLATに対する注意演算サイクルの最大2.75倍の高速化、最大54.03%の推定消費エネルギー削減を報告した。
@@ -275,7 +275,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：56  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：57  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
