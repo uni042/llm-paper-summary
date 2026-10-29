@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-29T19:13:17.565495+00:00",
+  "generated_at": "2026-10-29T20:31:13.622549+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 3,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-00": 1,
+    "scheduled-chat-30": 1,
     "scheduled-chat-45": 1
   },
   "entries": [
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -62,30 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2602.08060-compiler-assisted-speculative-sampling-for-accelerated-llm-inference-on-.md",
-      "canonical_id": "arXiv:2602.08060",
-      "title": "Compiler-Assisted Speculative Sampling for Accelerated LLM Inference on Heterogeneous Edge Devices",
-      "file_bytes": 16719,
-      "source_sha256": "00803c3969ac5a2516d58dd59f83ebd84b63eca67aa92d3d8ef783ef5b5ea3db",
-      "source_git_blob_sha": "684566bb09d7bbc3b77380cb0243ba7e7a535bbe",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.777374,
-      "quality_metrics": {
-        "body_chars": 4796,
-        "method_chars": 1359,
-        "evaluation_chars": 1118,
-        "limitation_chars": 510
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 77.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 77.7% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md",
       "canonical_id": "DOI:10.32604/cmc.2026.078985",
       "title": "Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors",
@@ -101,26 +77,6 @@
         "method_chars": 1121,
         "evaluation_chars": 1251,
         "limitation_chars": 585
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md",
-      "canonical_id": "arXiv:2507.20749",
-      "title": "Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study",
-      "file_bytes": 16881,
-      "source_sha256": "aaafad453fd505d7d57fbd80463e1938d4371185dd9e889b2545e30886fc8624",
-      "source_git_blob_sha": "98822b1ae52009d4e2597a157202fdd60245104f",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.927679,
-      "quality_metrics": {
-        "body_chars": 4730,
-        "method_chars": 894,
-        "evaluation_chars": 2148,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
