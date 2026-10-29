@@ -30,6 +30,67 @@ returned_research_reason: 'blocked_quality: method/evaluation sections were not 
 returned_research_blocked_git_blob_sha: aae9e62a1470dfab0d9f15548d1fa932a87a39a2
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.18653/v1/2021.acl-long.334
+  doi: 10.18653/v1/2021.acl-long.334
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2310.16836
+- canonical_id: DOI:10.18653/v1/2023
+  doi: 10.18653/v1/2023
+- canonical_id: DOI:10.3390/ai4040047
+  doi: 10.3390/ai4040047
+- canonical_id: DOI:10.53469/jtpes.2024.04(02).08
+  doi: 10.53469/jtpes.2024.04(02).08
+- canonical_id: DOI:10.1145/3486618
+  doi: 10.1145/3486618
+- canonical_id: DOI:10.13374/j.issn2095-9389.2022.12.27.004
+  doi: 10.13374/j.issn2095-9389.2022.12.27.004
+- canonical_id: DOI:10.1145/3487045
+  doi: 10.1145/3487045
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.102
+  doi: 10.18653/v1/2023.emnlp-main.102
+- canonical_id: arXiv:2211.10438
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.910
+  doi: 10.18653/v1/2023.emnlp-main.910
+- canonical_id: DOI:10.1109/tcsi.2024.3350661
+  doi: 10.1109/tcsi.2024.3350661
+- canonical_id: DOI:10.18653/v1/2022.findings-emnlp.240
+  doi: 10.18653/v1/2022.findings-emnlp.240
+- canonical_id: DOI:10.21437/interspeech.2022-413
+  doi: 10.21437/interspeech.2022-413
+- canonical_id: DOI:10.18653/v1/2022
+  doi: 10.18653/v1/2022
+- canonical_id: DOI:10.1371/journal.pone.0265621
+  doi: 10.1371/journal.pone.0265621
+- canonical_id: DOI:10.1007/s00530-023-01065-2
+  doi: 10.1007/s00530-023-01065-2
+- canonical_id: arXiv:2206.01861
+- canonical_id: DOI:10.1016/j.neunet.2023.12.001
+  doi: 10.1016/j.neunet.2023.12.001
+- canonical_id: arXiv:2212.09720
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.161
+  doi: 10.18653/v1/2023.emnlp-main.161
+- canonical_id: DOI:10.18653/v1/2023.findings-acl.511
+  doi: 10.18653/v1/2023.findings-acl.511
+- canonical_id: DOI:10.24818/18423264/59.3.25.06
+  doi: 10.24818/18423264/59.3.25.06
+- canonical_id: DOI:10.1016/j.neucom.2020.12.035
+  doi: 10.1016/j.neucom.2020.12.035
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.565
+  doi: 10.18653/v1/2023.emnlp-main.565
+- canonical_id: DOI:10.1109/lca.2024
+  doi: 10.1109/lca.2024
+- canonical_id: arXiv:2101.01321
+- canonical_id: DOI:10.18653/v1/2023.sustainlp-1.3
+  doi: 10.18653/v1/2023.sustainlp-1.3
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.617
+  doi: 10.18653/v1/2023.emnlp-main.617
+- canonical_id: DOI:10.1109/cvpr52729.2023.02170
+  doi: 10.1109/cvpr52729.2023.02170
+- canonical_id: DOI:10.1145/3579371.3589038
+references_checked_at: '2026-10-29'
+references_source: primary-pdf-reference-section
+references_total: 33
 ---
 
 # ノートPC向けRTX 4070/4080でのFP16・INT8推論比較：速度と品質の分母をそろえる

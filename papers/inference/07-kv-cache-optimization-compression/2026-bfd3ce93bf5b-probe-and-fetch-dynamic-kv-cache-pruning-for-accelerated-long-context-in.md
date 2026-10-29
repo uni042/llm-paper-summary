@@ -1,47 +1,95 @@
 ---
-canonical_id: "DOI:10.1145/3774904.3792794"
-doi: "10.1145/3774904.3792794"
-title: "Probe-and-Fetch: Dynamic KV Cache Pruning for Accelerated Long-Context Inference in Web-Scale AI Search"
-summary: "Probe-and-Fetch（P&F）は、投機的復号の小型ドラフトに次トークン生成と注意分布予測を兼ねさせ、候補生成中に重要なKVをCPUからGPUへ非同期取得する。全KVをCPUへ退避しGPUには選択KVと新規KVだけを保持し、ターゲットは疎な文脈で近似検証する。8×A100でLlama3.1-8B、BaiduのLightning-129B、GPT-OSS-120Bを評価し、128KでLlama3.1-8Bの52.0tokens/s（Eagle-3は18.0）を達成。Baidu Searchの1万超クエリのオンラインA/Bでは長文入力の平均遅延34.02%削減を報告するが、近似検証は厳密な出力分布保持を保証しない。"
-list_summary: "P&Fは投機ドラフトで次トークンと重要KVを同時予測し、CPUからの非同期取得を候補生成と重ねて長文脈の疎検証を高速化する。"
+canonical_id: DOI:10.1145/3774904.3792794
+doi: 10.1145/3774904.3792794
+title: 'Probe-and-Fetch: Dynamic KV Cache Pruning for Accelerated Long-Context Inference in Web-Scale AI Search'
+summary: Probe-and-Fetch（P&F）は、投機的復号の小型ドラフトに次トークン生成と注意分布予測を兼ねさせ、候補生成中に重要なKVをCPUからGPUへ非同期取得する。全KVをCPUへ退避しGPUには選択KVと新規KVだけを保持し、ターゲットは疎な文脈で近似検証する。8×A100でLlama3.1-8B、BaiduのLightning-129B、GPT-OSS-120Bを評価し、128KでLlama3.1-8Bの52.0tokens/s（Eagle-3は18.0）を達成。Baidu Searchの1万超クエリのオンラインA/Bでは長文入力の平均遅延34.02%削減を報告するが、近似検証は厳密な出力分布保持を保証しない。
+list_summary: P&Fは投機ドラフトで次トークンと重要KVを同時予測し、CPUからの非同期取得を候補生成と重ねて長文脈の疎検証を高速化する。
 authors:
-  - Yuchen Li
-  - Rui Kong
-  - Xinran Chen
-  - Chengzhe Zhang
-  - Jiamin Chen
-  - Cheng Deng
-  - Xinyu Ma
-  - Haojie Zhang
-  - Tianhao Peng
-  - Hengyi Cai
-  - Shuaiqiang Wang
-  - Jiashu Zhao
-  - Yongqi Zhang
-  - Haoyi Xiong
-  - Jimmy Xiangji Huang
-  - Lei Chen
-  - Jun Wang
-  - Dawei Yin
-published: "2026-04"
-publication: "The ACM Web Conference 2026 (WWW '26), Dubai"
-publication_type: "peer-reviewed conference paper"
+- Yuchen Li
+- Rui Kong
+- Xinran Chen
+- Chengzhe Zhang
+- Jiamin Chen
+- Cheng Deng
+- Xinyu Ma
+- Haojie Zhang
+- Tianhao Peng
+- Hengyi Cai
+- Shuaiqiang Wang
+- Jiashu Zhao
+- Yongqi Zhang
+- Haoyi Xiong
+- Jimmy Xiangji Huang
+- Lei Chen
+- Jun Wang
+- Dawei Yin
+published: 2026-04
+publication: The ACM Web Conference 2026 (WWW '26), Dubai
+publication_type: peer-reviewed conference paper
 publication_status: published
-source: "https://doi.org/10.1145/3774904.3792794"
+source: https://doi.org/10.1145/3774904.3792794
 sources:
-  - "https://dl.acm.org/doi/pdf/10.1145/3774904.3792794"
-  - "https://dl.acm.org/doi/10.1145/3774904.3792794"
-implementation: "Baidu Searchの長文脈RAG推論でドラフト兼注意予測器、CPU側全KV、GPU側選択KV、CUDA非同期転送と疎検証を統合。論文で実サービスA/Bを報告するが、一般公開コードの恒久URLは未確認。"
+- https://dl.acm.org/doi/pdf/10.1145/3774904.3792794
+- https://dl.acm.org/doi/10.1145/3774904.3792794
+implementation: Baidu Searchの長文脈RAG推論でドラフト兼注意予測器、CPU側全KV、GPU側選択KV、CUDA非同期転送と疎検証を統合。論文で実サービスA/Bを報告するが、一般公開コードの恒久URLは未確認。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-30T01:10:00+09:00"
-worker_run_key: "20261030-0056-scheduled-chat-00/r02"
-reference_main_sha: "7d4cb306e202d477ba1dbc9117dcf82edd4c61e6"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-30T01:10:00+09:00'
+worker_run_key: 20261030-0056-scheduled-chat-00/r02
+reference_main_sha: 7d4cb306e202d477ba1dbc9117dcf82edd4c61e6
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2508.10925
+  arxiv_id: '2508.10925'
+- canonical_id: arXiv:2401.10774
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+  arxiv_id: '2302.01318'
+- canonical_id: DOI:10.1145/3711896.3737249
+  doi: 10.1145/3711896.3737249
+- canonical_id: arXiv:2402.12374
+- canonical_id: arXiv:2312.11462
+- canonical_id: ACL:2024.acl-long.681
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2406.19707
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2506.17188
+  arxiv_id: '2506.17188'
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2601.00644
+  arxiv_id: '2601.00644'
+- canonical_id: DOI:10.18653/v1/2024.emnlp-main.422
+  doi: 10.18653/v1/2024.emnlp-main.422
+- canonical_id: arXiv:2503.01840
+- canonical_id: DOI:10.1109/tsc.2023.3325302
+  doi: 10.1109/tsc.2023.3325302
+- canonical_id: DOI:10.1109/tkde.2023.3270750
+  doi: 10.1109/tkde.2023.3270750
+- canonical_id: DOI:10.1145/3711896.3737443
+  doi: 10.1145/3711896.3737443
+- canonical_id: DOI:10.1145/3711896.3737258
+  doi: 10.1145/3711896.3737258
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2403.09636
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2404.11912
+- canonical_id: arXiv:2310.15141
+- canonical_id: arXiv:2406.10774
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2407.14482
+  arxiv_id: '2407.14482'
+- canonical_id: DOI:10.18653/v1/2024.acl-long.607
+  doi: 10.18653/v1/2024.acl-long.607
+- canonical_id: arXiv:2306.14048
+references_checked_at: '2026-10-29'
+references_source: crossref-deposited-reference-metadata
+references_total: 38
 ---
 
 # Probe-and-Fetch：投機ドラフトの注意予測と非同期KV取得を結合する長文脈RAG推論
