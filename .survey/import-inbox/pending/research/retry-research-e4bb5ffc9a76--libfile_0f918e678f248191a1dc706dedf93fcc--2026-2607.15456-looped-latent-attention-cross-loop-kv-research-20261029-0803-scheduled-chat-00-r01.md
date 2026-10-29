@@ -40,6 +40,8 @@ bottlenecks:
 - 反復回数に比例するKVキャッシュ
 - KV再構成による復号計算費用
 - 長い推論系列での自己生成prefix分布ずれ
+last_audited: null
+audit_version: 0
 ---
 
 # Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers

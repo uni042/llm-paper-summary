@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T00:37:16+00:00",
+  "generated_at": "2026-10-29T00:52:57+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 69,
+  "count": 72,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1795,8 +1795,8 @@
     },
     {
       "canonical_id": "arXiv:2607.15456",
-      "title": "Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers",
-      "source_url": "https://arxiv.org/html/2607.15456v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T00:33:08+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -1819,6 +1819,88 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-chat-00-r01.json",
       "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.27694",
+      "title": "GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2607.27694",
+      "returned_at": "2026-10-29T00:52:52+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5674,
+        "body_paragraphs": 30,
+        "method_chars": 1682,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 560,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.18103",
+      "title": "Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling",
+      "source_url": "https://arxiv.org/pdf/2604.18103",
+      "returned_at": "2026-10-29T00:52:54+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5770,
+        "body_paragraphs": 31,
+        "method_chars": 1355,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2512.12284",
+      "title": "V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval",
+      "source_url": "https://arxiv.org/pdf/2512.12284",
+      "returned_at": "2026-10-29T00:52:56+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 185 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6175,
+        "body_paragraphs": 33,
+        "method_chars": 1465,
+        "method_paragraphs": 7,
+        "evaluation_chars": 185,
+        "limitation_chars": 859,
+        "insufficiency_flags": [
+          "評価説明量 185 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_42ecbd6a2154819183a666e7591470d3--2025-2512.12284-vrex-streaming-video-kv-retrieval-research-20261029-0845-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_42ecbd6a2154819183a666e7591470d3--2025-2512.12284-vrex-streaming-video-kv-retrieval-research-20261029-0845-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261029-0845-scheduled-chat-45/r01"
     }
   ]
 }
