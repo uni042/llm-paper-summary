@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-29T15:48:49+00:00",
-  "record_count": 5414,
+  "updated_at": "2026-10-29T17:45:53+00:00",
+  "record_count": 5415,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83865,6 +83865,20 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs"
+    },
+    "arXiv:2505.08981": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.08981",
+      "identity_tokens": [
+        "arXiv:2505.08981",
+        "title:itera-llm-a-low-cost-and-iterative-decomposition-for-large-language-models-inference"
+      ],
+      "reason": "一次本文§III–Vを読解した結果、主な技術的貢献はTransformer重みをSVD/反復低ランク分解してINT4/INT8でFPGAのDPU/GEMMへ写像することにあり、推論計算・メモリ効率化との関連性はある。一方、実機評価対象はOPUS-MTのen-fr、en-es、en-de、en-it、en-ru等の比較的小規模なニューラル機械翻訳モデルであり、数十億パラメータの生成LLM、KVキャッシュ、長文コンテキスト、LLMサービングのTPOT/SLOは実測していない。推論ハードウェアの参考例にはなるが、LLM推論システム本体への直接適用が未実証なのでborderlineとする。",
+      "first_checked_at": "2026-10-29T17:45:53+00:00",
+      "last_checked_at": "2026-10-29T17:45:53+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ITERA-LLM: A Low-Cost and Iterative Decomposition for Large Language Models Inference"
     }
   }
 }
