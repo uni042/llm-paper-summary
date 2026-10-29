@@ -35,10 +35,15 @@
   "selection_reason": "RW-TTTは生成中にrequest固有のfast weight等を更新するTTT推論を、owner/version/READ-WRITE effectで区別して互換ステップだけbatch化し、更新を元要求にのみcommitする。単一GPUの8ストリームで逐次実行比9.31倍を報告し、状態を持つLLM推論サービングの正当性と性能を両立する。",
   "semantic_scholar_id": "36c7e9944d8b5761b217ab5f7ef3d723fbe8ca4a",
   "source_url": "https://arxiv.org/abs/2605.28053",
-  "status": "ready",
+  "status": "superseded",
   "title": "RW-TTT: Batched Serving for Request-Owned Test-Time Training State",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T22:12:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2605.28053-rw-ttt-batched-serving-for-request-owned-test-time-training-state.md",
+  "represented_canonical_id": "arXiv:2605.28053",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

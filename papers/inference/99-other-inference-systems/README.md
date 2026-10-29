@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（819本）
+## 自動生成の論文一覧（820本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -861,6 +861,10 @@
 - **2026-06 · [MS-Resampler: Multi-Scope Visual Resampling for Efficient Multimodal LLMs](2026-2606.31383-ms-resampler-multi-scope-visual-resampling-for-efficient-multimodal-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MS-Resamplerは、異なる空間窓を優先する複数の再標本化分枝を並列に配置し、局所・中域・大域の特徴を固定長のトークンへ融合する。LLaVA-1.5-7Bの576視覚トークンを144へ減らす条件では、原著Table 1の相対平均は未圧縮比101.15%である。
+
+- **2026-06 · [MorphoQuant: Modality-Aware Quantization for Omni-modal Large Language Models](2026-2606.04349-morphoquant-modality-aware-quantization-for-omni-modal-large-language-mo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  言語だけを扱うモデル向けに設計された一律の4ビット事後量子化を適用すると、まれに現れる大きな活性値を切り詰める誤差と、多数の小さな活性値を粗い格子に丸める誤差の両方が生じる。ScienceQAは76.63%、MMMUは45.11%、Video-MMEは54.33%、AIR-Benchは65.09であり、比較したW4A4方式を上回る。
 
 - **2026-06 · [Mitigating Bias in Locally Constrained Decoding via Tractable Proposals](2026-2606.01926-mitigating-bias-in-locally-constrained-decoding-via-tractable-proposals.md)**  
   実装：[✓](https://github.com/MhDang/gelatwo) ・ リポジトリ内被引用：0  

@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（416本）
+## 自動生成の論文一覧（417本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -950,6 +950,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-04 · [Graph-Guided Adaptive Channel Elimination for KV Cache Compression](2026-2604.16983-graph-guided-adaptive-channel-elimination-for-kv-cache-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文脈のLLM推論では、各層・各注意ヘッドのKeyとValueを過去トークン分保持するKVキャッシュがメモリを圧迫する。トークン単位で古いKVを捨てる方法や、低ビット化する方法とは別に、Keyベクトルのチャネル方向の冗長性を利用する圧縮がある。
+
+- **2026-03 · [PRISM: Photonic Similarity Engine for KV Cache Block Selection in Long-Context LLM Inference](2026-2603.21576-prism-photonic-similarity-engine-for-kv-cache-block-selection-in-long-co.md)**  
+  実装：[✓](https://github.com/hyoseokp/PRISM) ・ リポジトリ内被引用：0  
+  PRISMは、長文脈LLMのデコード時にKVキャッシュのどのブロックを読むべきか決める候補選択段階を、薄膜ニオブ酸リチウム（TFLN）の光回路へ移す構想である。通常のブロック疎注意では、GPUが全ブロックの短い署名を読み、現在のqueryと比較して上位k個を選び、そのブロックの実際のKVを取得する。今回の読解はPDFの最新版を基準とする。
 
 - **2026-03 · [OxyGen: Unified KV Cache Management for VLA Inference under Multi-Task Parallelism](2026-2603.14371-oxygen-unified-kv-cache-management-for-vla-inference-under-multi-task-pa.md)**  
   実装：[✓](https://github.com/air-embodied-brain/OxyGen) ・ リポジトリ内被引用：0  
