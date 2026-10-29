@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（516本）
+## 自動生成の論文一覧（517本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1751,6 +1751,10 @@
 - **2025-01 · [Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models](2025-2501.18154-mixed-precision-graph-neural-quantization-for-low-bit-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、学習済み大規模言語モデルの重みを平均2ビット前後へ事後量子化する際、すべての重み列に同じビット幅を割り当てると重要な列の誤差が大きくなり、困惑度が急激に悪化する問題を扱う。原著の効率評価はRTX 4090上の量子化前処理時間であり、生成トークン/sやエンドツーエンド推論時間の改善は示していない。
+
+- **2024-11 · [EconoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving](2024-2411.06364-econoserve-maximizing-multi-resource-utilization-with-slo-guarantees-in-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  EconoServeはLLMサービングでGPUの演算能力とKVキャッシュ（KVC）容量を同時に活用するための、プリフィルとgenerationの責任分離・時間同期バッチ・KVCの時間的再利用を組み合わせたスケジューラである。
 
 ### 3年前（2023-11〜2024-10）
 

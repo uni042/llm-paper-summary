@@ -35,10 +35,15 @@
   "selection_reason": "量子化誤差のFrobeniusノルムをガウス乱数プローブで推定し、RAMが層間伝播を含む感度を較正データなしで求め、ナップサック問題としてLLM各テンソルのビット幅をバイト予算へ配分する。MoEと密モデルの低ビット重み推論を対象とした混合精度量子化手法なのでaccept。",
   "semantic_scholar_id": "8b56fb453ac818c1d56b719984a8d6d04e33b240",
   "source_url": "https://arxiv.org/abs/2609.33923",
-  "status": "ready",
+  "status": "superseded",
   "title": "Quantization Error Is Spectrally Flat: A Single Random Probe Is a Calibrated, Data-Free Sensitivity Estimator, with Application to Budget-Targeted Mixed-Precision Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T19:50:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.33923-quantization-error-is-spectrally-flat-a-single-random-probe-is-a-calibra.md",
+  "represented_canonical_id": "arXiv:2609.33923",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

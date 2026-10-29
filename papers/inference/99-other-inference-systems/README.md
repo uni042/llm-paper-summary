@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（807本）
+## 自動生成の論文一覧（810本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -545,6 +545,10 @@
 - **2026-09 · [QuLoC: Photonic Quantum-Assisted Low-Rank LLM Compression](2026-2609.40146-quloc-photonic-quantum-assisted-low-rank-llm-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   大規模言語モデルの線形射影行列を特異値分解（singular value decomposition; SVD）して小さな二つの行列へ置き換える低ランク圧縮は、重み数と行列演算量を削減できる。Qwen3.5-4Bの言語モデル部分のパラメータを20.05%減らした条件で、六つの下流課題の平均精度はSwift-SVDの49.24%から54.03%へ上昇した。
+
+- **2026-09 · [Quantization Error Is Spectrally Flat: A Single Random Probe Is a Calibrated, Data-Free Sensitivity Estimator, with Application to Budget-Targeted Mixed-Precision Quantization at 400B Scale](2026-2609.33923-quantization-error-is-spectrally-flat-a-single-random-probe-is-a-calibra.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模LLMを低ビット量子化する際、すべての重みを同じビット幅にするより、精度劣化に敏感なテンソルを高ビット、耐性のあるテンソルを低ビットにした方が、同じ容量予算で品質を維持できる可能性がある。
 
 - **2026-09 · [PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention](2026-2609.33746-pq-hsa-reusing-product-quantized-scores-for-hybrid-sparse-approximate-at.md)**  
   実装：[✓](https://github.com/KunmingSHAO/pqhsa_release) ・ リポジトリ内被引用：0  
@@ -1114,6 +1118,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   一般的な同期方式では、モデルがツール呼出しを出力すると、その処理が完了するまで次の生成を止める。GPT-4oを用いたBFCL v4の検索ツール評価では、逐次同期呼出しと比べてタスク完了時間を1.26倍高速化した。
 
+- **2026-05 · [Compute Where it Counts: Self Optimizing Language Models](2026-2605.10875-compute-where-it-counts-self-optimizing-language-models.md)**  
+  実装：[✓](https://github.com/akhauriyash/SOL) ・ リポジトリ内被引用：0  
+  Self-Optimizing Language Models（SOL）は、LLM推論の各トークンに同じ圧縮率・計算予算を与えるのではなく、トークンごとに計算の必要度が異なるという性質を利用して、どこで計算を節約し、どこで品質を守るかを小型制御器に学習させる方式である。
+
 - **2026-05 · [Code Generation by Differential Test Time Scaling](2026-2605.20473-code-generation-by-differential-test-time-scaling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   コード生成の推論時計算量拡張（Test-Time Scaling、TTS）では、一つの問題に対して複数のコードを生成し、その中から正しい候補を選ぶ。従来の選択方式には、公開テストを実行するもの、別のLLMにテスト入力を生成させるもの、LLM評価器に候補を比較させるものがある。
@@ -1281,6 +1289,10 @@
 - **2026-04 · [ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents](2026-2604.10352-clawvm-harness-managed-virtual-memory-for-stateful-tool-using-llm-agents.md)**  
   実装：[✓](https://github.com/mpi-dsg/clawvm) ・ リポジトリ内被引用：0  
   ClawVMは、長時間稼働し外部ツールを使うLLMエージェントで、プロンプト文脈を高速・小容量の作業メモリ、永続ファイルを低速・大容量の退避先とみなし、状態の常駐・縮退・書戻しをエージェント実行基盤（agent harness）に強制する仕組みである。
+
+- **2026-04 · [CLASP: Class-Adaptive Layer Fusion and Dual-Stage Pruning for Multimodal Large Language Models](2026-2604.12767-clasp-class-adaptive-layer-fusion-and-dual-stage-pruning-for-multimodal-.md)**  
+  実装：[✓](https://github.com/Yunkaidang/CLASP) ・ リポジトリ内被引用：0  
+  CLASP（Class-適応的 層 融合 and Dual-Stage Pruning）は、画像・動画を入力するマルチモーダルLLM（MLLM）の視覚トークンを、ユーザーの質問の種類に応じて削減する方式である。
 
 - **2026-04 · [Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment](2026-2604.24447-characterizing-vision-language-action-models-across-xpus-constraints-and.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

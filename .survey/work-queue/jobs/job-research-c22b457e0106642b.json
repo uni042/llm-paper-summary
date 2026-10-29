@@ -35,10 +35,15 @@
   "selection_reason": "EconoServeはprompt/generation別queue、応答長別batching、KVC先行確保と未使用領域のpipeline共有でGPU/KV cache双方の利用率とSLOを改善するserving scheduler。",
   "semantic_scholar_id": "4592516b93af5bb6b28323986dd719a2cadfeca6",
   "source_url": "https://arxiv.org/abs/2411.06364",
-  "status": "ready",
+  "status": "superseded",
   "title": "EconoServe: Maximizing Multi-Resource Utilization with SLO Guarantees in LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-29T19:50:29+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2411.06364-econoserve-maximizing-multi-resource-utilization-with-slo-guarantees-in-.md",
+  "represented_canonical_id": "arXiv:2411.06364",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
