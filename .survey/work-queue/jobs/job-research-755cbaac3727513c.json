@@ -35,10 +35,15 @@
   "selection_reason": "SparseSpec-Lは対象LLM自身をドラフトとして使い、検証時の注意統計から重要KVを選んで一時的に疎化・必要時に復元する。受理率とドラフト費用の均衡に応じて投機長をエントロピー制御し、長文脈復号を追加学習なしで加速する。",
   "semantic_scholar_id": "fe149c33cfdfcd36f2afe5fd1b8884a0d038583a",
   "source_url": "https://arxiv.org/abs/2607.27735",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T18:48:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2607.27735-a-sparse-glimpse-of-the-whole-train-free-self-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2607.27735",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

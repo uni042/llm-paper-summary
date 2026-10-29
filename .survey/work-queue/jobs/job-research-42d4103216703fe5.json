@@ -35,10 +35,15 @@
   "selection_reason": "LSAQは各層入出力のtop-k予測トークン集合のJaccard類似度で層重要度を見積もり、端末の利用可能メモリに応じてFP16/INT8/INT4を層別に割り当てる。エッジLLMの推論メモリ予算に合わせて量子化構成を調整する技術的貢献がある。",
   "semantic_scholar_id": "e31d67959bfa8acacb0fa7591c248c6c62a44a30",
   "source_url": "https://arxiv.org/abs/2412.18135",
-  "status": "ready",
+  "status": "superseded",
   "title": "LSAQ: Layer-Specific Adaptive Quantization for Large Language Model Deployment",
   "type": "research",
   "venue": "IEEE International Joint Conference on Neural Network",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-29T18:48:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2412.18135-lsaq-layer-specific-adaptive-quantization-for-large-language-model-deplo.md",
+  "represented_canonical_id": "arXiv:2412.18135",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

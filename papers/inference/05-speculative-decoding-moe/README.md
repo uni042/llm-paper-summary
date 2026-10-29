@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（329本）
+## 自動生成の論文一覧（330本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -603,6 +603,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models in Speculative Decoding](2026-2607.27269-beyond-kv-reconstruction-functional-reconstruction-for-mla-draft-models-.md)**  
   実装：[✓](https://github.com/swyhahaha/FunctionalMLA) ・ リポジトリ内被引用：0  
   本論文は、多頭注意（Multi-Head 注意機構; MHA）またはグループ化クエリ注意（Grouped-Query 注意機構; GQA）で事前学習した小型言語モデルを、多頭潜在注意（Multi-head Latent 注意機構; MLA）へ変換して投機的復号（投機的復号）のドラフトモデルとして使う際の受理率低下を扱う。
+
+- **2026-07 · [A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding](2026-2607.27735-a-sparse-glimpse-of-the-whole-train-free-self-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  完全KVでの検証と正しい受理・補正を行うため、近似drafterの出力をそのまま採用する方式とは異なり、元の対象モデルの出力分布を維持する設計である。
 
 - **2026-06 · [WhiFlash: Accelerating Speculative Decoding with Token-Level Cross-Paradigm Routing](2026-2606.07710-whiflash-accelerating-speculative-decoding-with-token-level-cross-paradi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

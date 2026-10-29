@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（801本）
+## 自動生成の論文一覧（804本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1266,6 +1266,10 @@
   実装：[✓](https://github.com/qianfantianyuzhouzhou/TRACE) ・ リポジトリ内被引用：0  
   推論時の計算量を増やすと難問の正答率を改善できる場合があるが、すべての問題で長い思考を最後まで生成することが効率的とは限らない。答えが既に定まった後も思考を続ける「過剰思考」は、トークン数と応答待ち時間を増やす。一方、途中の回答の確信度が高くなった瞬間に止めると、まだ検討が十分でない誤答を確定する危険がある。正答率も完全には維持していない。
 
+- **2026-04 · [Coverage-Based Calibration for Post-Training Quantization via Weighted Set Cover over Outlier Channels](2026-2604.24008-coverage-based-calibration-for-post-training-quantization-via-weighted-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  CoverCal（Coverage-Based Calibration）は、LLMをAWQやGPTQでINT4事後量子化（PTQ）する際、どのサンプルを較正データとして選ぶかを改善する方式である。LLaMA-3-8BのAWQ INT4・128較正サンプルでは、MMLU 5-shot正答率がrandom 63.1%からCoverCal 64.6%へ改善した。
+
 - **2026-04 · [ClawVM: Harness-Managed Virtual Memory for Stateful Tool-Using LLM Agents](2026-2604.10352-clawvm-harness-managed-virtual-memory-for-stateful-tool-using-llm-agents.md)**  
   実装：[✓](https://github.com/mpi-dsg/clawvm) ・ リポジトリ内被引用：0  
   ClawVMは、長時間稼働し外部ツールを使うLLMエージェントで、プロンプト文脈を高速・小容量の作業メモリ、永続ファイルを低速・大容量の退避先とみなし、状態の常駐・縮退・書戻しをエージェント実行基盤（agent harness）に強制する仕組みである。
@@ -2312,6 +2316,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   MGAA（Multi-Granular 適応的 Allocation）は、LLMの重み行列を低ランク分解するときに、各行列へ同じ削減率を割り当てるのではなく、Transformerサブレイヤ間の重要度と同じサブレイヤ内の各行列が保持する情報量を別々に見積もる手法である。
 
+- **2025-07 · [Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study](2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論時のメモリと演算量を削減するため、小型言語モデルを使ってMLLMを最初から作り直す方法もあるが、既存のMLLMの一部を削除して回復学習する方が柔軟に容量を調整できる。15%の削減・回復なしでは幅削除したLLaVAが元モデルの相対性能92.79%、Bunnyが95.48%を保持する。一方、60%削減ではどちらの方式も回復なしの性能が大きく崩壊する。
+
 - **2025-07 · [High-Layer Attention Pruning with Rescaling](2025-2507.01900-high-layer-attention-pruning-with-rescaling.md)**  
   実装：[✓](https://github.com/SongtaoLiu0823/HARP) ・ リポジトリ内被引用：0  
   下位層と上位層で同じ割合の注意を削ると、表現形成の早い段階にある重要なトークン間依存まで失われ、特に生成・推論課題で品質が大幅に悪化する。HARP（High-層 注意機構 枝刈り with Rescaling）は、高い層ほどトークン表現が類似し、注意によるトークンの識別が弱くなるという仮説を設計の出発点にする。
@@ -2519,6 +2527,10 @@
 - **2024-12 · [Mixture of Hidden-Dimensions Transformer](2024-2412.05644-mixture-of-hidden-dimensions-transformer.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意機構のQ/K/V/O投影とFFNのup/gate/down投影を同じ隠れ次元の選択に合わせて部分実行し、総パラメータ数を増やしても1トークン当たりに活性化するパラメータ数を抑える。LLaMA2型355Mの10指標平均は全活性42.7、MoHDの50%活性42.3、75%活性43.2だった。
+
+- **2024-12 · [LSAQ: Layer-Specific Adaptive Quantization for Large Language Model Deployment](2024-2412.18135-lsaq-layer-specific-adaptive-quantization-for-large-language-model-deplo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LSAQ（層-Specific 適応的 量子化）は、GPUの利用可能メモリが異なるエッジ端末へLLMを配備するため、層ごとに重みの量子化ビット幅を変える方式である。Llama-3-8Bの平均5bit条件では、既存の層別量子化LWQに対して6課題zero-shot平均67.59→69.10%、WikiText-2のPPL7.386→7.331と小幅に改善した。
 
 - **2024-12 · [GUIDE: A Global Unified Inference Engine for Deploying Large Language Models in Heterogeneous Environments](2024-2412.04788-guide-a-global-unified-inference-engine-for-deploying-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
