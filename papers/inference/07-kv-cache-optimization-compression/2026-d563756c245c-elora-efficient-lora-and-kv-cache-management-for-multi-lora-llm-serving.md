@@ -34,6 +34,8 @@ doi: "10.1109/HPCA68181.2026.11408492"
 repair_kind: "returned_research"
 repair_reason: "blocked_quality: 評価説明量424文字<500。標準の評価節に一次資料に基づく実験条件・比較・感度・機構の因果説明を追加"
 repair_source_blocked_path: ".survey/import-inbox/blocked/research/libfile_0b219ba181608191899f0c059249557b--2026-doi-10.1109-hpca68181.2026.11408492-elora-returned-heading-repair-20261030-0600-scheduled-chat-00-r01.md"
+last_audited: null
+audit_version: 0
 ---
 
 # ELORA：複数LoRAの依存関係を保ったGPUキャッシュ管理

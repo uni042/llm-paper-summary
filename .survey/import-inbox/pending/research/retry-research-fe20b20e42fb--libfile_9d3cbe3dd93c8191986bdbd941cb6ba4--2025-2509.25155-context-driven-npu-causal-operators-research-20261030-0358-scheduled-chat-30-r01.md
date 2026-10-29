@@ -30,6 +30,8 @@ worker_completed_at: "2026-10-30T04:07:00+09:00"
 reference_main_sha: "21e288cf423b8916b5ceb4ef47fb74500323dbc1"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # エッジNPUにおける因果推論演算の性能分解：注意・SSM・畳み込みの律速を比較する
