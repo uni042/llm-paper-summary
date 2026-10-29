@@ -3,7 +3,7 @@
 GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE expert**をCPU memory、peer GPU HBM、SSD / Flashなどへ置き、必要な部分だけGPUへ移す、CPU/GPUで分担して計算する、storage側で計算する研究をまとめる。KV cache固有のoffloadは [KV Cache Offload / Recomputation](../10-kv-cache-offload-recomputation/) に分離する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（138本）
+## 自動生成の論文一覧（139本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/01-offload-hierarchical-memory/)
 
@@ -129,6 +129,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoEエキスパートを上位・下位ビットのスライス単位でキャッシュし、重要度に応じて精度を動的再構成することで、フラッシュ転送を抑えながら高精度を保つ端末向け推論方式。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
+
+- **2026-10 · [MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference](2026-2610.01950-moe-core-coordinated-expert-offloading-and-residency-for-memory-constrai.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  総パラメータが数百B以上になると、単一NPUのメモリに全専門家を置けず、ホストメモリから必要な重みを転送する。MoE-COREは、プリフィルとデコードで必要な専門家の集合と遅延許容度が異なる点に着目し、異なる常駐・転送方式を一つのランタイムで管理する。
 
 - **2026-09 · [The Other Half of the Memory Wall: Serving 35B MoEs from SSD with Trained Routing Prediction](2026-2609.18063-edge0-ssd-moe-trained-routing-prediction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

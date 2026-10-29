@@ -35,10 +35,15 @@
   "selection_reason": "ReCoは推論途中のprocess rewardを用い、信頼度が高い推論ステップではKVを強く圧縮し、反省トークンへの罰則と確信度による早期終了を組み合わせる。KV縮小が追加生成を誘発する逆効果も考慮し、生成トークン数とエンドツーエンド遅延を直接削減するためaccept。",
   "semantic_scholar_id": "a9023cec0566ec56962857115767aa131891f1db",
   "source_url": "https://arxiv.org/abs/2608.04771",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fewer Tokens, Smaller Cache: Reward-Coordinated Efficient Reasoning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T05:48:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.04771-fewer-tokens-smaller-cache-reward-coordinated-efficient-reasoning.md",
+  "represented_canonical_id": "arXiv:2608.04771",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

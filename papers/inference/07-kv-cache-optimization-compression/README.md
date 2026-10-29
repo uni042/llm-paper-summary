@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（400本）
+## 自動生成の論文一覧（402本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -687,6 +687,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：0  
   元の入力文字列だけを送れば転送量は小さいが、移動先で全履歴を再度事前処理しなければならない。一方、KVキャッシュを丸ごと転送すると再計算は避けられるが、複数利用者の移動が重なるとノード間回線が詰まる。転送が途中で切れても、届いた上位要素を使って推論を再開できる「途中再開可能性」が中心的な設計である。
 
+- **2026-08 · [Fewer Tokens, Smaller Cache: Reward-Coordinated Efficient Reasoning](2026-2608.04771-fewer-tokens-smaller-cache-reward-coordinated-efficient-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ReCo（Reward-Coordinated Compression）は、長い思考連鎖を生成する推論モデルの実行費用を、KVキャッシュの削減と、これから生成する思考トークンの削減を同時に制御する方式である。
+
 - **2026-08 · [Entropy-Constrained Adaptive Stochastic Quantization](2026-2608.18147-entropy-constrained-adaptive-stochastic-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   listsummary と同じ一覧専用解説。ECASQは値ごとに適応する不偏確率量子化で、誤差と後段のエントロピー符号化後の平均ビット量を共同最適化する。実モデルのKVテンソルでも比較し、近似法は厳密法に近い誤差を保ちながら解法処理を高速化する。
@@ -770,6 +774,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [Codec-Gauge: Learning Compression-Friendly Gauges for Transformer KV Caches](2026-2607.20538-codec-gauge-learning-compression-friendly-gauges-for-transformer-kv-cach.md)**  
   実装：[✓](https://huggingface.co/cccat6/Codec-Gauge) ・ リポジトリ内被引用：0  
   要求数、文脈長、層数、KVヘッド数に比例してキャッシュが増えるため、低ビット量子化や数値圧縮を行ってGPUメモリの使用量と転送量を抑える。
+
+- **2026-07 · [Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference](2026-2607.13205-adaptive-filtering-of-the-kv-cache-diagnosing-and-correcting-structural-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  H2OのようなKVキャッシュ削除法は、過去に大きな注意量を集めたトークンを重要とみなし、限られた保持枠へ残す。本研究は、構造化入力における「注意機構 mass」と「回答への寄与」の不一致を実験的に診断する。
 
 - **2026-06 · [Unified KV Pooling to Accelerate Long-Context LLM Serving](2026-2606.14779-unified-kv-pooling-to-accelerate-long-context-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

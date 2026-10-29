@@ -35,10 +35,15 @@
   "selection_reason": "拡散言語モデルで安価な推論軌跡を並列に生成し、過程報酬モデルで各中間ステップを評価して良い部分をつなぎ直し、最終回答だけ再計算する。推論時探索の精度とレイテンシを比較し、既存拡散方式比最大1.8倍の遅延削減を報告する。",
   "semantic_scholar_id": "b3bd962bbe6f2152740fe588516766224b9e3efa",
   "source_url": "https://arxiv.org/abs/2602.22871",
-  "status": "ready",
+  "status": "superseded",
   "title": "Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T05:48:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2602.22871-test-time-scaling-with-diffusion-language-models-via-reward-guided-stitc.md",
+  "represented_canonical_id": "arXiv:2602.22871",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

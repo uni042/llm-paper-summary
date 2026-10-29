@@ -35,10 +35,15 @@
   "selection_reason": "JSON等の構造化入力で注意量ベースKV保持が区切り記号やKEY役割を過剰保持しVALUEを落とす問題を分析する。構造役割に条件付けたSnapKVの予算配分で低保持率の正確性を改善する再学習不要のKV圧縮方式であり、推論メモリと品質の関係を直接扱う。",
   "semantic_scholar_id": "497804cff1bbaec1736d53cc9314a6dc40cc30fb",
   "source_url": "https://arxiv.org/abs/2607.13205",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T05:48:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.13205-adaptive-filtering-of-the-kv-cache-diagnosing-and-correcting-structural-.md",
+  "represented_canonical_id": "arXiv:2607.13205",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

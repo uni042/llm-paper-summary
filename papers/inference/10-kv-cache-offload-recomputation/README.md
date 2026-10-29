@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（117本）
+## 自動生成の論文一覧（118本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -307,6 +307,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-09 · [Bridging LLM Serving and CXL-SSDs with Chunk-Aware KV Cache Management](2026-2609.26828-lm-cxd.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LM-CXDは、CXL接続のNAND基盤記憶装置へKVチャンクの識別子と要求進捗を共有し、装置内DRAMをGPUから直接読める一時領域として使う。計算非同期先読みと層単位先読みを使い分け、標準CXL-SSDに対する初回トークン時間を最大4.03倍改善する。
+
+- **2026-08 · [SPECTRA: Pushing the KV Cache Beyond the 2-Bit Cliff via Spectral Transform Coding](2026-2608.07915-spectra-pushing-the-kv-cache-beyond-the-2-bit-cliff-via-spectral-transfo.md)**  
+  実装：[✓](https://github.com/nokia-applied-research/SPECTRA) ・ リポジトリ内被引用：0  
+  単純に全値を2ビットまで量子化すると、外れ値が量子化範囲を占有し、小さな値が同じ離散レベルへ潰れて品質が急激に悪化する場合がある。Llama-3.1-8B-InstructのLongBench英語8課題平均はFP16で53.24、SPECTRAの7.66倍KV圧縮で54.00、8.84倍で51.89、11.12倍で48.81である。
 
 - **2026-08 · [OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching](2026-2608.08097-oasiskv-lookahead-sparse-prefetching.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

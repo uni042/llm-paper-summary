@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（778本）
+## 自動生成の論文一覧（779本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1385,6 +1385,10 @@
 - **2026-02 · [TraceNAS: Zero-shot LLM Pruning via Gradient Trace Correlation](2026-2602.02891-tracenas-zero-shot-llm-pruning-via-gradient-trace-correlation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TraceNASは、事前学習済み大規模言語モデル（Large Language モデル、LLM）から層と内部チャネルを削除する構造的枝刈り（structured 枝刈り）において、候補構造を逐一学習させずに選ぶための探索方式である。
+
+- **2026-02 · [Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching](2026-2602.22871-test-time-scaling-with-diffusion-language-models-via-reward-guided-stitc.md)**  
+  実装：[✓](https://github.com/roymiles/diffusion-stitching) ・ リポジトリ内被引用：0  
+  難しい数理問題やコード生成では、一つの長い推論経路が途中で誤ると、後段の計算がすべて無駄になることがある。高い得点を得たステップを経路をまたいで選択し、最後に自己回帰モデルへ証拠として渡して答えを再計算する。原著の6課題平均では、提案方式の72.38%に対し、LLaDAの高信頼サンプリング版は48.51%だった。
 
 - **2026-02 · [StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving](2026-2604.09562-streamserve-adaptive-speculative-flows-for-low-latency-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

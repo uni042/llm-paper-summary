@@ -35,10 +35,15 @@
   "selection_reason": "MoE-COREはNPUメモリ制約下でprefill時に専門家層を交互バッファへ転送し、decode時に層別キャッシュ容量・ルーティング履歴による置換・層間プリフェッチを協調する。DeepSeek-V4-Flash/GLM-5.2のTPOT実測があり、MoE推論時の専門家退避・常駐最適化。",
   "semantic_scholar_id": "68dc26e33b33f7f7bc7049df561c37662a52824e",
   "source_url": "https://arxiv.org/abs/2610.01950",
-  "status": "ready",
+  "status": "superseded",
   "title": "MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T05:48:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/01-offload-hierarchical-memory/2026-2610.01950-moe-core-coordinated-expert-offloading-and-residency-for-memory-constrai.md",
+  "represented_canonical_id": "arXiv:2610.01950",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
