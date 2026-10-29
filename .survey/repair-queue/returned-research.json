@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T13:33:35+00:00",
+  "generated_at": "2026-10-29T14:01:57+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 77,
+  "count": 75,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1985,60 +1985,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d88501a8cb7--libfile_7c754ed8ea00819188219d9b3f526999--2025-2509.00388-graphkv-similarity-decay-eviction-research-20261029-1647-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-4d88501a8cb7--libfile_7c754ed8ea00819188219d9b3f526999--2025-2509.00388-graphkv-similarity-decay-eviction-research-20261029-1647-scheduled-chat-4.json",
       "worker_run_key": "20261029-1647-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2610.04313",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T12:25:55+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_passed が true ではない"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6000,
-        "body_paragraphs": 25,
-        "method_chars": 1832,
-        "method_paragraphs": 8,
-        "evaluation_chars": 2025,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3b8cd6675056--libfile_e5223b1361b481918aae5289b64ec8b5--2026-2610.04313-moira-mass-oriented-ragged-attention-research-20261029-2003-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3b8cd6675056--libfile_e5223b1361b481918aae5289b64ec8b5--2026-2610.04313-moira-mass-oriented-ragged-attention-research-20261029-2003-scheduled-cha.json",
-      "worker_run_key": "20261029-2003-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2608.12913",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T12:25:59+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "quality_self_review_passed が true ではない"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5741,
-        "body_paragraphs": 25,
-        "method_chars": 2006,
-        "method_paragraphs": 9,
-        "evaluation_chars": 1749,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9c1940dcb2b8--libfile_57abf60c1770819199eb18ccc6d27a7a--2026-2608.12913-dcd-expert-aligned-speculative-contrastive-decoding-research-20261029-2003-scheduled-chat-00-r01-rev1.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-9c1940dcb2b8--libfile_57abf60c1770819199eb18ccc6d27a7a--2026-2608.12913-dcd-expert-aligned-speculative-contrastive-decoding-research-20261029-200.json",
-      "worker_run_key": "20261029-2003-scheduled-chat-00/r01"
     }
   ]
 }

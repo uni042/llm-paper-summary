@@ -35,10 +35,15 @@
   "selection_reason": "DCDはcontrastive decodingのamateur補正をdraft側へ混ぜず、expertに整合した軽量draftと通常のcontrastive verificationを分離する。出力分布を保つ投機的検証で8B設定のgreedy decodeを平均1.65～1.95倍高速化し、投機的復号のproposal設計に直接貢献する。",
   "semantic_scholar_id": "3792cd03f7e81a3b78f5e28964f126b222f70fbc",
   "source_url": "https://arxiv.org/abs/2608.12913",
-  "status": "ready",
+  "status": "superseded",
   "title": "Decoupled Contrastive Decoding via Expert-Aligned Drafting",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T14:01:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.12913-decoupled-contrastive-decoding-via-expert-aligned-drafting.md",
+  "represented_canonical_id": "arXiv:2608.12913",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
