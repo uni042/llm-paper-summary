@@ -1,34 +1,89 @@
 ---
-canonical_id: "DOI:10.1145/3695053.3730999"
-title: "WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling"
+canonical_id: DOI:10.1145/3695053.3730999
+title: 'WindServe: Efficient Phase-Disaggregated LLM Serving with Stream-based Dynamic Scheduling'
 authors:
-  - Jingqi Feng
-  - Yukai Huang
-  - Rui Zhang
-  - Sicheng Liang
-  - Ming Yan
-  - Jie Wu
-published: "2025-06-21"
-publication: "Proceedings of the 52nd Annual International Symposium on Computer Architecture (ISCA 2025), pp. 1283–1295"
-publication_type: "conference"
-publication_status: "published"
-source: "https://dl.acm.org/doi/pdf/10.1145/3695053.3730999"
+- Jingqi Feng
+- Yukai Huang
+- Rui Zhang
+- Sicheng Liang
+- Ming Yan
+- Jie Wu
+published: '2025-06-21'
+publication: Proceedings of the 52nd Annual International Symposium on Computer Architecture (ISCA 2025), pp. 1283–1295
+publication_type: conference
+publication_status: published
+source: https://dl.acm.org/doi/pdf/10.1145/3695053.3730999
 sources:
-  - "https://dl.acm.org/doi/pdf/10.1145/3695053.3730999"
-  - "https://doi.org/10.1145/3695053.3730999"
+- https://dl.acm.org/doi/pdf/10.1145/3695053.3730999
+- https://doi.org/10.1145/3695053.3730999
 code: null
-implementation: "DistServeの公開実装を基盤とし、約1400行のPythonでGlobal Scheduler・非同期移送を実装。SwiftTransformer側へ約2000行のC++/CUDA変更を加え、CUDAストリームと個別NCCL communicatorでprefill/decodeを併行。8基のNVIDIA A800 80GBを持つ単一ノードで実測。WindServe独自の公式公開コードは原著で確認できない。"
-summary: "WindServeはprefillとdecodeを分離したLLMサービングで、固定的な役割分担により片側GPUが過負荷・他方が遊休となる問題を、予測器と全体制御器による双方向の仕事移送で解く。prefill過負荷時はdecode GPUへprefillを振り分け、decodeのKV容量逼迫時は長文脈要求をprefill GPUへ段階移送する。移送中もdecodeを継続し、decode GPU内では別CUDAストリームでprefillを併行させる。ISCA 2025の単一8×A800実機評価ではDistServe比でTTFT中央値を最大4.28倍改善し、TPOT P99を最大1.5倍改善。複数ノード・異種GPUの評価はない。"
-list_summary: "P/D分離推論の固定役割による負荷偏りを、prefillの逆送、長文脈decodeの非停止移送、CUDAストリーム併行実行で解消するサービング基盤。"
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261030-0155-scheduled-chat-00/r01"
-reference_main_sha: "2796fce9eb89505f4aaa1cc81769656cba98f54b"
-worker_completed_at: "2026-10-30T02:03:00+09:00"
+implementation: DistServeの公開実装を基盤とし、約1400行のPythonでGlobal Scheduler・非同期移送を実装。SwiftTransformer側へ約2000行のC++/CUDA変更を加え、CUDAストリームと個別NCCL communicatorでprefill/decodeを併行。8基のNVIDIA A800 80GBを持つ単一ノードで実測。WindServe独自の公式公開コードは原著で確認できない。
+summary: WindServeはprefillとdecodeを分離したLLMサービングで、固定的な役割分担により片側GPUが過負荷・他方が遊休となる問題を、予測器と全体制御器による双方向の仕事移送で解く。prefill過負荷時はdecode GPUへprefillを振り分け、decodeのKV容量逼迫時は長文脈要求をprefill GPUへ段階移送する。移送中もdecodeを継続し、decode GPU内では別CUDAストリームでprefillを併行させる。ISCA 2025の単一8×A800実機評価ではDistServe比でTTFT中央値を最大4.28倍改善し、TPOT P99を最大1.5倍改善。複数ノード・異種GPUの評価はない。
+list_summary: P/D分離推論の固定役割による負荷偏りを、prefillの逆送、長文脈decodeの非停止移送、CUDAストリーム併行実行で解消するサービング基盤。
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_run_key: 20261030-0155-scheduled-chat-00/r01
+reference_main_sha: 2796fce9eb89505f4aaa1cc81769656cba98f54b
+worker_completed_at: '2026-10-30T02:03:00+09:00'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: DOI:10.18653/v1/2024.acl-long.172
+  doi: 10.18653/v1/2024.acl-long.172
+- canonical_id: arXiv:2004.05150
+  arxiv_id: '2004.05150'
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2205.14135
+- canonical_id: DOI:10.18653/v1/2022.acl-long.26
+  doi: 10.18653/v1/2022.acl-long.26
+- canonical_id: arXiv:2310.05869
+  arxiv_id: '2310.05869'
+- canonical_id: arXiv:2401.11181
+  arxiv_id: '2401.11181'
+- canonical_id: DOI:10.1145/3458817.3476223
+  doi: 10.1145/3458817.3476223
+- canonical_id: DOI:10.1145/3676641.3715996
+  arxiv_id: '2410.18038'
+- canonical_id: arXiv:2001.04451
+  openreview_id: rkgNKkHtvB.
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2406.09827
+  arxiv_id: '2406.09827'
+- canonical_id: DOI:10.1145/3542929.3563510
+  doi: 10.1145/3542929.3563510
+- canonical_id: arXiv:2404.14469
+  arxiv_id: '2404.14469'
+- canonical_id: arXiv:2410.08971
+  arxiv_id: '2410.08971'
+- canonical_id: arXiv:2305.09781
+  doi: 10.1145/3620666.3651335
+- canonical_id: arXiv:1712.05889
+- canonical_id: DOI:10.1145/3620665.3640383
+  doi: 10.1145/3620665.3640383
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2406.03243
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.5555/3295222.3295349
+  doi: 10.5555/3295222.3295349
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2403.17312
+  doi: 10.1109/isca59077.2024.00077
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-29'
+references_source: crossref-deposited-reference-metadata
+references_total: 45
 ---
 
 # WindServe：P/D分離推論を双方向に負荷移送するCUDAストリーム型スケジューラ

@@ -1,39 +1,130 @@
 ---
-canonical_id: "DOI:10.1145/3805621.3807623"
-title: "A Case for a Simulation-Driven Exploration of Distributed GenAI Platforms"
+canonical_id: DOI:10.1145/3805621.3807623
+title: A Case for a Simulation-Driven Exploration of Distributed GenAI Platforms
 authors:
-  - Animesh Trivedi
-  - Radu Stoica
-  - Jeremy Cohn
-  - Danny Harnik
-  - Yue Zhu
-  - Jonathan Terner
-  - Guy Margalit
-  - Frank Schmuck
-  - Vasily Tarasov
-  - Swaminathan Sundararaman
-published: "2026-04-27"
-publication: "Proceedings of the Sixth European Workshop on Machine Learning and Systems (EuroMLSys 2026), pp. 286–295"
-publication_type: "workshop"
-publication_status: "published"
-source: "https://dl.acm.org/doi/pdf/10.1145/3805621.3807623"
+- Animesh Trivedi
+- Radu Stoica
+- Jeremy Cohn
+- Danny Harnik
+- Yue Zhu
+- Jonathan Terner
+- Guy Margalit
+- Frank Schmuck
+- Vasily Tarasov
+- Swaminathan Sundararaman
+published: '2026-04-27'
+publication: Proceedings of the Sixth European Workshop on Machine Learning and Systems (EuroMLSys 2026), pp. 286–295
+publication_type: workshop
+publication_status: published
+source: https://dl.acm.org/doi/pdf/10.1145/3805621.3807623
 sources:
-  - "https://dl.acm.org/doi/pdf/10.1145/3805621.3807623"
-  - "https://doi.org/10.1145/3805621.3807623"
-  - "https://d3ccyth396mz21.cloudfront.net/publications/a-case-for-a-simulation-driven-exploration-of-distributed-genai-platforms"
-code: "https://github.com/IBM/opal-sim"
-implementation: "SimPyによる純Python離散事象シミュレータ。論文時点では原著の公開先がanimeshtrivedi/opal-simと記載される一方、IBM公式opal-sim公開リポジトリも存在する。実機推論エンジンではなくGPU/ネットワーク/ストレージを抽象モデル化し、ルーティング、スケジューリング、KVCache管理、オートスケールを模擬する。"
-summary: "Opalは、分散LLMサービングのGPU、ルータ、オートスケーラ、KVキャッシュ階層、ネットワーク、ストレージの相互依存をSimPyで離散事象シミュレーションする研究用基盤。MoonshotAIの1時間の実トレース3種類を用いた予備評価では、10,000ワーカーのシミュレーションが38～144秒、最大1,075倍の実時間比高速化を報告する。ただし速度はシミュレーション実行速度でありLLM生成性能ではない。実機との誤差検証は単一ワーカーのprefill/decode Rooflineモデル±5%までで、分散KV転送・ルーティング・障害の実機再現性は未検証。"
-list_summary: "SimPyでLLM推論のGPU・ルーティング・オートスケール・階層KV・ネットワークをまとめて模擬し、最大1万ワーカーのトレースを数分で再生する基盤。分散系の精度検証は未完。"
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261030-0155-scheduled-chat-00/r01"
-reference_main_sha: "2796fce9eb89505f4aaa1cc81769656cba98f54b"
-worker_completed_at: "2026-10-30T02:01:00+09:00"
+- https://dl.acm.org/doi/pdf/10.1145/3805621.3807623
+- https://doi.org/10.1145/3805621.3807623
+- https://d3ccyth396mz21.cloudfront.net/publications/a-case-for-a-simulation-driven-exploration-of-distributed-genai-platforms
+code: https://github.com/IBM/opal-sim
+implementation: SimPyによる純Python離散事象シミュレータ。論文時点では原著の公開先がanimeshtrivedi/opal-simと記載される一方、IBM公式opal-sim公開リポジトリも存在する。実機推論エンジンではなくGPU/ネットワーク/ストレージを抽象モデル化し、ルーティング、スケジューリング、KVCache管理、オートスケールを模擬する。
+summary: Opalは、分散LLMサービングのGPU、ルータ、オートスケーラ、KVキャッシュ階層、ネットワーク、ストレージの相互依存をSimPyで離散事象シミュレーションする研究用基盤。MoonshotAIの1時間の実トレース3種類を用いた予備評価では、10,000ワーカーのシミュレーションが38～144秒、最大1,075倍の実時間比高速化を報告する。ただし速度はシミュレーション実行速度でありLLM生成性能ではない。実機との誤差検証は単一ワーカーのprefill/decode Rooflineモデル±5%までで、分散KV転送・ルーティング・障害の実機再現性は未検証。
+list_summary: SimPyでLLM推論のGPU・ルーティング・オートスケール・階層KV・ネットワークをまとめて模擬し、最大1万ワーカーのトレースを数分で再生する基盤。分散系の精度検証は未完。
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_run_key: 20261030-0155-scheduled-chat-00/r01
+reference_main_sha: 2796fce9eb89505f4aaa1cc81769656cba98f54b
+worker_completed_at: '2026-10-30T02:01:00+09:00'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2405.05465
+- canonical_id: DOI:10.14778/3773749.3773758
+  doi: 10.14778/3773749.3773758
+- canonical_id: DOI:10.1145/3704262
+  doi: 10.1145/3704262
+- canonical_id: arXiv:2512.14806
+  arxiv_id: '2512.14806'
+- canonical_id: arXiv:2510.06189
+  arxiv_id: '2510.06189'
+- canonical_id: DOI:10.1109/lca.2025.3628325
+  doi: 10.1109/lca.2025.3628325
+- canonical_id: DOI:10.1109/iiswc63097.2024.00012
+  doi: 10.1109/iiswc63097.2024.00012
+- canonical_id: DOI:10.1145/3731569.3764834
+  doi: 10.1145/3731569.3764834
+- canonical_id: arXiv:2401.14351
+- canonical_id: arXiv:2403.19708
+- canonical_id: arXiv:2504.07494
+  doi: 10.1145/3725394
+- canonical_id: arXiv:2405.14256
+- canonical_id: arXiv:2410.15332
+  openreview_id: qjd3ZUiHRT.
+- canonical_id: arXiv:2501.14417
+- canonical_id: DOI:10.52202/085713-1587
+  openreview_id: onhjdWCxZY
+- canonical_id: arXiv:2410.03065
+  openreview_id: WOyOtaO6lQ.
+- canonical_id: arXiv:2412.20331
+  arxiv_id: '2412.20331'
+- canonical_id: DOI:10.1109/mm.2025.3596539
+  doi: 10.1109/mm.2025.3596539
+- canonical_id: arXiv:2412.19442
+  openreview_id: z3JZzu9EA3.
+- canonical_id: arXiv:2511.02230
+  arxiv_id: '2511.02230'
+- canonical_id: arXiv:2508.19559
+  arxiv_id: '2508.19559'
+- canonical_id: DOI:10.1145/3749168
+  doi: 10.1145/3749168
+- canonical_id: arXiv:2411.17651
+  arxiv_id: '2411.17651'
+- canonical_id: arXiv:2509.00997
+  arxiv_id: '2509.00997'
+- canonical_id: arXiv:2510.09665
+  arxiv_id: '2510.09665'
+- canonical_id: arXiv:2411.02820
+  arxiv_id: '2411.02820'
+- canonical_id: DOI:10.1145/3754448
+  doi: 10.1145/3754448
+- canonical_id: OpenReview:8sSqNntaMr.
+  openreview_id: 8sSqNntaMr.
+- canonical_id: arXiv:2512.04123
+  arxiv_id: '2512.04123'
+- canonical_id: arXiv:2311.18677
+  doi: 10.1109/isca59077.2024.00019
+- canonical_id: DOI:10.1145/3719330.3721230
+  doi: 10.1145/3719330.3721230
+- canonical_id: DOI:10.1109/hpec.2019.8916327
+  doi: 10.1109/hpec.2019.8916327
+- canonical_id: arXiv:2504.03648
+  arxiv_id: '2504.03648'
+- canonical_id: arXiv:2505.08936
+  arxiv_id: '2505.08936'
+- canonical_id: DOI:10.1145/3655038.3665954
+  doi: 10.1145/3655038.3665954
+- canonical_id: DOI:10.1145/3616855.3635825
+  doi: 10.1145/3616855.3635825
+- canonical_id: arXiv:2506.02634
+- canonical_id: arXiv:2505.09999
+  arxiv_id: '2505.09999'
+- canonical_id: arXiv:2602.11812
+  openreview_id: 3loQDtveWI.
+- canonical_id: arXiv:2508.18572
+  doi: 10.48550/arxiv.2508.18572
+- canonical_id: SemanticScholar:e4fa860569597ca90c415e43c3ee4be3c401eb75
+  openreview_id: Vj48eXaQDM.
+- canonical_id: arXiv:2511.20172
+  arxiv_id: '2511.20172'
+- canonical_id: arXiv:2402.16363
+  arxiv_id: '2402.16363'
+- canonical_id: arXiv:2310.03094
+  arxiv_id: '2310.03094'
+- canonical_id: arXiv:2412.17246
+- canonical_id: arXiv:2511.03944
+  arxiv_id: '2511.03944'
+- canonical_id: arXiv:2406.08598
+  arxiv_id: '2406.08598'
+references_checked_at: '2026-10-29'
+references_source: crossref-deposited-reference-metadata
+references_total: 78
 ---
 
 # Opal：分散GenAIサービング基盤の全体設計を高速に探索する離散事象シミュレータ
