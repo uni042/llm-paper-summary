@@ -52,6 +52,10 @@
   実装：[✓](https://github.com/ASISys/DualMap) ・ リポジトリ内被引用：9  
   DualMapは、分散LLM推論でプロンプト接頭辞のKVキャッシュを再利用したいという要求と、各推論インスタンスへ負荷を均等に分けたいという要求の衝突を解く配車方式である。ICLR 2026の論文は、vLLMを用いた分散推論クラスタで実際の会話・ツール利用負荷を評価し、同じTTFT目標を満たす有効要求容量を既存方式比で最大2.25倍に改善したと報告する。
 
+- **2026-04 · [Introspective Diffusion Language Models](2026-2604.11035-introspective-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/Introspective-Diffusion/I-DLM) ・ リポジトリ内被引用：8  
+  本論文は、拡散言語モデル（diffusion language モデル; DLM）が複数トークンを同時に提案できるにもかかわらず、同規模の自己回帰言語モデル（autoregressive language モデル; ARモデル）より推論品質が低く、複数要求を処理する実運用で期待ほど高速化しない原因を、生成アルゴリズムと推論エンジンの双方から調べる。
+
 - **2026-03 · [Parallelizing Tool Execution and LLM Generation for Low-Latency Agent Serving](2026-2603.18897-paste-pattern-aware-speculative-tool-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   反復する道具系列と引数依存から次の具体的な道具呼出しを先行実行し、言語モデル側の混雑も共同制御して平均タスク完了時間を最大43.5%削減する。
@@ -59,10 +63,6 @@
 - **2026-02 · [vLLM-Omni: Fully Disaggregated Serving for Any-to-Any Multimodal Models](2026-2602.02204-vllm-omni-fully-disaggregated-multimodal-serving.md)**  
   実装：[✓](https://github.com/vllm-project/vllm-omni) ・ リポジトリ内被引用：8  
   複数LLM・拡散モデル・音声/画像生成器を段階グラフへ分解し、各段階を独立バッチ・独立GPU配置・共通コネクタで実行することで、any-to-any型マルチモーダル推論を単一モデル用サービング基盤から拡張する方式。
-
-- **2026-04 · [Introspective Diffusion Language Models](2026-2604.11035-introspective-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/Introspective-Diffusion/I-DLM) ・ リポジトリ内被引用：7  
-  本論文は、拡散言語モデル（diffusion language モデル; DLM）が複数トークンを同時に提案できるにもかかわらず、同規模の自己回帰言語モデル（autoregressive language モデル; ARモデル）より推論品質が低く、複数要求を処理する実運用で期待ほど高速化しない原因を、生成アルゴリズムと推論エンジンの双方から調べる。
 
 - **2026-02 · [Efficient Multi-round LLM Inference over Disaggregated Serving](2026-2602.14516-ampd-multi-round-disaggregated-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
