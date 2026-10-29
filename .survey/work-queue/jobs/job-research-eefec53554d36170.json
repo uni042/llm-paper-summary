@@ -35,10 +35,15 @@
   "selection_reason": "三値重みの線形層と高精度KV注意で計算経路が分断される問題に対し、オンラインKVをスケール付き多平面の符号付き数字で格納し、活性由来のルックアップ表から直接注意を計算する。未完成valueブロックの扱いと共通データパスまで設計したLLM推論ハードウェア・キャッシュ最適化。",
   "semantic_scholar_id": "424ec2a83a098cbd90c465ae67199a35e39976dd",
   "source_url": "https://arxiv.org/abs/2608.03229",
-  "status": "ready",
+  "status": "superseded",
   "title": "Unified Lookup-Table Inference with Signed-Digit K/V Caches for Ternary LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T21:40:40+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2608.03229-unified-lookup-table-inference-with-signed-digit-k-v-caches-for-ternary-.md",
+  "represented_canonical_id": "arXiv:2608.03229",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（68本）
+## 自動生成の論文一覧（69本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -105,6 +105,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-09 · [Characterizing High Bandwidth Flash for LLM Serving](2026-2609.39131-characterizing-high-bandwidth-flash-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   著者らはHBM、HBF、ホストDRAM、SSDの四階層にまたがる配置方針と、キャッシュ再利用を優先しながら新規要求の受入れを制限するスケジューラを設計する。B200相当の計算モデルとHBFの仮定仕様を用いた結果、評価した負荷条件で処理完了時間を36.1〜87.7%短縮する構成があり、モデル化したエネルギー削減率は最大59.1%に達する。
+
+- **2026-08 · [Unified Lookup-Table Inference with Signed-Digit K/V Caches for Ternary LLMs](2026-2608.03229-unified-lookup-table-inference-with-signed-digit-k-v-caches-for-ternary-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SALUTは三値重みの線形演算を高速化する参照表（LUT）演算器と、動的に生成される高精度KVキャッシュを処理する注意演算器が分離してしまう問題を解く。
 
 - **2026-08 · [Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework](2026-2608.01126-spatial-prefix-caching-for-wireless-edge-llm-inference-a-stochastic-geom.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
