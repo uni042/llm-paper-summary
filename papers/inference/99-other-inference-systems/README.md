@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（814本）
+## 自動生成の論文一覧（817本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -734,6 +734,10 @@
   実装：[✓](https://github.com/MAC-AutoML/OmniScope) ・ リポジトリ内被引用：0  
   入力を処理する事前充填（プリフィル）では、そのトークン数が注意演算、GPUメモリ、遅延を増やす。既存の音声・映像圧縮には、音声で重要と判断した時間帯を映像側でも重視する方式がある。映像にはアンカー・差分時空間圧縮（Anchor-Delta Spatio-Temporal Compression、AD-STC）、音声には1秒区間内の類似トークン統合を用いる。
 
+- **2026-07 · [Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers](2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ループ型Transformerは、同じTransformerブロックを何度も適用することで、モデルの深さに相当する反復計算を少ない重みで実現する。Ouro-1.4Bを用いた同一キャッシュ容量比較では、4倍圧縮のLLAはGSM8K厳密正解率0.800を記録し、教師の0.794とほぼ同等だった。
+
 - **2026-07 · [LaCo: Layer-wise Compensation for Pruned Large Language Models](2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LaCo（層-wise Compensation）は、枝刈りによって一部の重みや層内構造を削除したLLMの性能を、元モデルの各層の隠れ状態へ順次近づける局所回帰で回復する方法である。
@@ -849,6 +853,10 @@
 - **2026-06 · [OffQ: Taming Structured Outliers in LLM Quantization by Offsetting](2026-2606.07116-offq-taming-structured-outliers-in-llm-quantization-by-offsetting.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低ビット量子化は、大規模言語モデル（LLM）の重み転送量と行列積の費用を削減する。一次論文の表1では、Llama 3-8BのWikiText困惑度が16ビットの6.1、比較方式ResQの7.1に対してOffQは6.98、8課題平均ゼロショット正解率はResQの63.91%に対して65.49%だった。
+
+- **2026-06 · [Multi-Token Residual Prediction](2026-2605.18817-multi-token-residual-prediction.md)**  
+  実装：[✓](https://github.com/heavyball-research/multi-token-residual-prediction) ・ リポジトリ内被引用：0  
+  拡散言語モデルは、マスクされたトークン列を何度も予測し直して文章を生成する。品質を維持する静的ノイズ除去では、MRPが複数トークンを先行提案し、大型モデルが検証することで1.17〜1.40倍のスループット改善を得る。
 
 - **2026-06 · [Mitigating Bias in Locally Constrained Decoding via Tractable Proposals](2026-2606.01926-mitigating-bias-in-locally-constrained-decoding-via-tractable-proposals.md)**  
   実装：[✓](https://github.com/MhDang/gelatwo) ・ リポジトリ内被引用：0  
@@ -2319,6 +2327,10 @@
 - **2025-09 · [ChunkLLM: A Lightweight Pluggable Framework for Accelerating LLMs Inference](2025-2510.02361-chunkllm-a-lightweight-pluggable-framework-for-accelerating-llms-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ChunkLLMは、既存Transformerのbackboneを固定したまま軽量なadapterを付加し、長文のどのchunkのKVを保持するかを学習する方式である。Qwen2.5-7BのLongBenchでは、通常モデルの平均44.13に対してChunkLLMは43.53、KV保持率は48.58%である。
+
+- **2025-09 · [Amdahl's Law for LLMs: A Throughput-Centric Analysis of Extreme LLM Quantization](2025-d58c83365862-amdahl-s-law-for-llms-a-throughput-centric-analysis-of-extreme-llm-quant.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  著者はTransformerの演算を、極端な量子化で行列乗算を置換できる射影部分と、置換しにくい注意ヘッド内部に分ける。さらにAmdahl則で「改善できる部分が元の実行時間の何割か」を明示し、13種類のGPT・OPT・LLaMA構成を、クラウド向け256×256およびエッジ向け32×32のシストリック配列でサイクル精度解析した。
 
 - **2025-08 · [SEPTQ: A Simple and Effective Post-Training Quantization Paradigm for Large Language Models](2025-2604.10091-septq-a-simple-and-effective-post-training-quantization-paradigm-for-lar.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

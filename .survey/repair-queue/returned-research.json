@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T20:59:57+00:00",
+  "generated_at": "2026-10-29T21:15:20+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 83,
+  "count": 82,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1792,33 +1792,6 @@
       "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2607.15456",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T01:24:19+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4765,
-        "body_paragraphs": 25,
-        "method_chars": 1335,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 487,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e4bb5ffc9a76--libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-e4bb5ffc9a76--libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-ch.json",
-      "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2610.01950",
       "title": null,
       "source_url": null,
@@ -2185,8 +2158,8 @@
     },
     {
       "canonical_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
-      "title": "FaaScale: Unlocking Fast LLM Scaling for Serverless Inference",
-      "source_url": "https://www.ruichuan.org/papers/faascale-mlsys26.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T20:57:42+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",

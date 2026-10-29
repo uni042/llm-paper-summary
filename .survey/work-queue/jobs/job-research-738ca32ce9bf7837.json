@@ -35,10 +35,15 @@
   "selection_reason": "Looped Latent Attentionは重み共有Transformerの反復回数ごとに別々に保存するKVが低ランク軌跡を成すことを利用し、反復ごとのK/Vを潜在表現から読出時に再構成する。Ouro-1.4BのH200でKV容量圧縮とバッチ収容数を実測した推論キャッシュ方式。",
   "semantic_scholar_id": "0b07dc2cc215712df4c4a6f743ceb754b4aafbec",
   "source_url": "https://arxiv.org/abs/2607.15456",
-  "status": "ready",
+  "status": "superseded",
   "title": "Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T21:15:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.15456-looped-latent-attention-cross-loop-kv-compression-for-looped-transformer.md",
+  "represented_canonical_id": "arXiv:2607.15456",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

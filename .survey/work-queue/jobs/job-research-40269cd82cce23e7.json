@@ -35,10 +35,15 @@
   "selection_reason": "MRPは拡散LLMの連続ノイズ除去ステップのロジット差分を隠れ状態から予測し、同じ主モデル前進計算で複数トークンを復元する。静的復元では投機的草案として教師検証しSGLangで最大1.4倍の損失なし高速化を示す。",
   "semantic_scholar_id": "c12c453159e30fc5b8c184e5157a378c60b90fa0",
   "source_url": "https://arxiv.org/abs/2605.18817",
-  "status": "ready",
+  "status": "superseded",
   "title": "Multi-Token Residual Prediction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T21:15:18+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.18817-multi-token-residual-prediction.md",
+  "represented_canonical_id": "arXiv:2605.18817",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
