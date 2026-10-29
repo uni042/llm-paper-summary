@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-66b1ff8caca95530-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.539",
+  "reason": "一次論文§3・§4・§7と付録Aを全文確認。各早期出口に独立したLoRAを付け、隣接する深い出口を教師とする蒸留とSGMVによる一括推論で分類器の早期終了を高速化するシステム寄与は明確。一方、実験はBERT/ALBERT/DeBERTaのGLUE分類7課題に限り、著者が§7で生成LLM・テキスト生成への拡張を将来課題と明記する。現行サーベイの生成LLM推論サービングへ直接適用・実測した成果ではないため、無関係とはせず境界候補とする。",
+  "title": "LoRAExit: Empowering Dynamic Modulation of LLMs in Resource-limited Settings using Low-rank Adapters",
+  "identity_tokens": [
+    "DOI:10.18653/v1/2024.findings-emnlp.539"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-66b1ff8caca9",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
