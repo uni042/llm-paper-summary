@@ -43,6 +43,8 @@ bottlenecks:
 - 深層の冗長トークン計算
 - 長文prefillのTTFT
 - 注意行列を必要とする選択方式のカーネル非互換
+last_audited: null
+audit_version: 0
 ---
 
 # DASH：注意更新の安定性から冗長トークンを停止する長文prefill高速化

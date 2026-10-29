@@ -35,10 +35,15 @@
   "selection_reason": "ASLは事前固定されたKV削減層では難しい検索タスクの精度が悪化する問題に対し、注意スコア順位の分散から選択層を適応決定する。学習不要のprefill時KV選択で、SnapKVなどのdecode時削減と併用でき、InfiniteBench・RULER・NIAHで推論の速度・精度・KV予算を評価しているため直接対象。",
   "semantic_scholar_id": "d09956fbf42d4cfcd57152dd164a77c3c18348ec",
   "source_url": "https://arxiv.org/abs/2601.07667",
-  "status": "ready",
+  "status": "superseded",
   "title": "Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T01:08:37+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2601.07667-adaptive-layer-selection-for-layer-wise-token-pruning-in-llm-inference.md",
+  "represented_canonical_id": "arXiv:2601.07667",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

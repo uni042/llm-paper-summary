@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（766本）
+## 自動生成の論文一覧（769本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -778,6 +778,10 @@
   実装：[✓](https://github.com/flashrt-project/FlashRT) ・ リポジトリ内被引用：0  
   KVだけでなく再帰・畳み込み・複数トークン予測状態を丸ごと保存復元し、単一ストリーム再入場の初回応答を最大26.94倍高速化する実行状態カプセル。
 
+- **2026-06 · [End-to-End Context Compression at Scale](2026-2606.09659-end-to-end-context-compression-at-scale.md)**  
+  実装：[✓](https://github.com/LeonLixyz/LCLM) ・ リポジトリ内被引用：0  
+  LCLM（Latent Context Language モデル）は、長いテキストを先に小型encoderで短い連続ベクトル列へ変換し、その列を大きいdecoderへ渡すコンテキスト圧縮方式である。
+
 - **2026-06 · [Dustin: Draft-Augmented Sparse Verification for Efficient Long-Context Generation with Speculative Decoding](2026-2606.24957-dustin-draft-augmented-sparse-verification-for-efficient-long-context-generation-with-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   対象側の過去注意とドラフト側の先読み注意を融合し、少数の意味検索ヘッドだけで検証用KVを選ぶことで、長文投機的デコードのKV読込を削減する。
@@ -1378,6 +1382,10 @@
   実装：[✓](https://github.com/HaoMAFRLu/salaad) ・ リポジトリ内被引用：0  
   SALAADは、言語モデルの重みを疎成分と低ランク成分の和として表現できるように事前学習中から構造を誘導し、配置時には必要なメモリ予算に応じて同じ学習済みチェックポイントを縮小できる方式である。
 
+- **2026-02 · [Quant Experts: Token-aware Adaptive Error Reconstruction with Mixture of Experts for Large Vision-Language Models Quantization](2026-2602.24059-quant-experts-token-aware-adaptive-error-reconstruction-with-mixture-of-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  画像・テキストを統合処理するVision-Language モデル（VLM）を低ビットで推論する際、量子化された重み行列と活性値の積には誤差が生じる。
+
 - **2026-02 · [QTALE: Quantization-Robust Token-Adaptive Layer Execution for LLMs](2026-2602.10431-qtale-quantization-robust-token-adaptive-layer-execution-for-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LLMの推論負荷を下げるには、重みを少ないビットで保持する量子化（量子化）と、トークンごとに不要なTransformer層を省く動的層実行（トークン-適応的 層 execution）が補完的である。
@@ -1597,6 +1605,10 @@
 - **2026-01 · [APB-V: Accelerating Long-Video Understanding via Sequence-Parallelism-aware Approximate Attention](2026-2601.21444-apb-v-accelerating-long-video-understanding-via-sequence-parallelism-awa.md)**  
   実装：[✓](https://github.com/thunlp/APB) ・ リポジトリ内被引用：0  
   入力を間引く方式では一瞬しか映らない文字・物体・順序の手掛かりを失いやすい。原著のQwen2.5VL-3B・64フレーム・1440p動画の条件では、APB-VはFlashAttention比12.72倍、ZigZagRing比1.70倍、先行APB比1.18倍の処理量を報告する。
+
+- **2026-01 · [Adaptive Layer Selection for Layer-Wise Token Pruning in LLM Inference](2026-2601.07667-adaptive-layer-selection-for-layer-wise-token-pruning-in-llm-inference.md)**  
+  実装：[✓](https://github.com/TANIGUCHIREI/ASL) ・ リポジトリ内被引用：0  
+  ASL（適応的選別層）は、長い入力を処理するTransformerのどの層でトークンを間引くべきかを、実行時の注意分布から判断する方式である。
 
 - **2025-12 · [Zero-Overhead Introspection for Adaptive Test-Time Compute](2025-2512.01457-zero-overhead-introspection-for-adaptive-test-time-compute.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
