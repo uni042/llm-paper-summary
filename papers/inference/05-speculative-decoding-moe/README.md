@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（324本）
+## 自動生成の論文一覧（325本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -399,6 +399,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [Match the Distribution, Not the Compute: Post-Training Multi-Token Prediction Heads](2026-2610.00888-match-the-distribution-not-the-compute-post-training-multi-token-predict.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   凍結したQwen3-8Bが生成する推論文を教師にMTPヘッドだけを後学習し、厳密検証で事前学習済みMiMo-7B-RLに近い平均受理長を実現する。分布ずれを制御する近似検証と、実測処理量に応じてヘッド数を変える適応制御器も評価する。
+
+- **2026-10 · [JetSpec++: Foresight Parallel Drafting with Self Refinements](2026-2610.19792-jetspec-foresight-parallel-drafting-with-self-refinements.md)**  
+  実装：[✓](https://github.com/hao-ai-lab/JetSpec) ・ リポジトリ内被引用：0  
+  投機的復号は、小型のドラフトモデルが複数トークンを提案し、大型のターゲットモデルが一括検証することで、自己回帰生成の直列回数を減らす。原著のGB200上の単一要求サービング実験では、Qwen3-8Bを対象にGSM8KでDSparkの744.3 トークン/sから1148.8 トークン/s、MATH-500で902.1から1361.1 トークン/sへ改善した。
 
 - **2026-10 · [From Positionwise Confidence to Prefix Scheduling: Verifier Skipping in Speculative Decoding](2026-2608.14787-from-positionwise-confidence-to-prefix-scheduling-verifier-skipping-in-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

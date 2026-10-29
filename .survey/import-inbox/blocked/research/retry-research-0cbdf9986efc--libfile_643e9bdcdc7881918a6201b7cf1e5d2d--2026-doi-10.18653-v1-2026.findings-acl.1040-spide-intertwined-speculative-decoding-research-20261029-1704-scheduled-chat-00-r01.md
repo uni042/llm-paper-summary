@@ -31,6 +31,8 @@ worker_run_key: '20261029-1704-scheduled-chat-00/r01'
 reference_main_sha: 'be9299f5217a7df0e34371660dfb5c4989ef9bb5'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # SPIDE：直列動的ドラフトと並列検証を交互に使う投機的復号
