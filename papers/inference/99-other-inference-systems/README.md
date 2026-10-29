@@ -196,6 +196,10 @@
   実装：✓ ・ リポジトリ内被引用：1  
   常に最高性能のモデルを呼ぶと料金が膨らむ一方、全問い合わせに固定額を課すと、容易な問い合わせで節約した予算を難しい問い合わせへ振り向けられない。過去のモデル応答をすべて持つWR-Offlineと、限られた応答だけを逐次観測するWR-Onlineの二方式がある。
 
+- **2026-07 · [LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference](2026-2607.27704-lightrot-a-light-weighted-rotation-scheme-and-architecture-for-accurate-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  低ビットLLM推論では重みだけでなく、推論時に生成される入力活性（IA）とKVキャッシュを4ビットへ量子化したい。
+
 - **2026-07 · [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](2026-2607.04884-hunyuanocr-1-5-making-lightweight-ocr-vlms-faster-and-better.md)**  
   実装：[✓](https://github.com/Tencent-Hunyuan/HunyuanOCR) ・ リポジトリ内被引用：1  
   原著の研究全体は、認識精度を改善するデータ構築・学習と、出力生成を高速化する推論機構の二本立てである。OmniDocBenchの単一要求評価で、同じHunyuanOCR-1.5の自己回帰復号と比較した平均ページ遅延は、Transformersで34.850秒から5.474秒、vLLMで3.032秒から1.408秒になった。
@@ -649,10 +653,6 @@
 - **2026-07 · [OmniScope: Modality-Decoupled Token Compression for Omnimodal Large Language Models](2026-2607.23193-omniscope-modality-decoupled-token-compression-for-omnimodal-large-langu.md)**  
   実装：[✓](https://github.com/MAC-AutoML/OmniScope) ・ リポジトリ内被引用：0  
   入力を処理する事前充填（プリフィル）では、そのトークン数が注意演算、GPUメモリ、遅延を増やす。既存の音声・映像圧縮には、音声で重要と判断した時間帯を映像側でも重視する方式がある。映像にはアンカー・差分時空間圧縮（Anchor-Delta Spatio-Temporal Compression、AD-STC）、音声には1秒区間内の類似トークン統合を用いる。
-
-- **2026-07 · [LightRot: A Light-Weighted Rotation Scheme and Architecture for Accurate Low-Bit Large Language Model Inference](2026-2607.27704-lightrot-a-light-weighted-rotation-scheme-and-architecture-for-accurate-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  低ビットLLM推論では重みだけでなく、推論時に生成される入力活性（IA）とKVキャッシュを4ビットへ量子化したい。
 
 - **2026-07 · [LaCo: Layer-wise Compensation for Pruned Large Language Models](2026-00140e8efcf4-laco-layer-wise-compensation-for-pruned-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1796,13 +1796,13 @@
   実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：23  
   離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
 
+- **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
+  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：23  
+  単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
+
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
   実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：23  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
-
-- **2025-07 · [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](2025-2507.19427-step-3-is-large-yet-affordable-model-system-co-design-for-cost-effective.md)**  
-  実装：[✓](https://github.com/stepfun-ai/StepMesh) ・ リポジトリ内被引用：22  
-  単純に総パラメータや活性パラメータを減らすのではなく、モデルの注意機構とサービング時のGPU配置を一緒に設計し、長い思考系列の復号費用を下げる。
 
 - **2025-02 · [CoT-Valve: Length-Compressible Chain-of-Thought Tuning](2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：22  
@@ -2813,11 +2813,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：251  
+  実装：✓ ・ リポジトリ内被引用：252  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：229  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：230  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3129,7 +3129,7 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：294  
+  実装：✓ ・ リポジトリ内被引用：295  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-11〜2016-10）
