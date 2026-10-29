@@ -35,10 +35,15 @@
   "selection_reason": "Focusは少数の学習可能な重心でトークン対をグループ化し、遠距離では同じ重心群に属する組だけ注意を計算する。事前学習済み重みを凍結して重心だけ学習し、100万トークンでFlashAttention分解の演算を高速化する疎注意方式。",
   "semantic_scholar_id": "fc932d0feac03c3febb1273159cb2d593fc0967c",
   "source_url": "https://arxiv.org/abs/2604.03260",
-  "status": "ready",
+  "status": "superseded",
   "title": "Why Attend to Everything? Focus is the Key",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T20:11:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2604.03260-composing-sparse-attention-via-learned-grouping.md",
+  "represented_canonical_id": "arXiv:2604.03260",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

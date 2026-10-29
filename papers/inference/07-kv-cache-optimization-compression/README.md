@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（415本）
+## 自動生成の論文一覧（416本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -698,6 +698,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [PatchKV: Efficient KV Cache Recovery for Dynamically Edited LLM Contexts](2026-2609.26219-patchkv-efficient-kv-cache-recovery-for-dynamically-edited-llm-contexts.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単純な接頭辞キャッシュでは最初の不一致以降を全再計算し、無条件再利用では古い因果状態を持ち込むという二者択一になる。編集位置からの距離に基づく局所的な修復範囲、過去に収集した注意重みから見つける遠方の重要ブロック、保存時に決めたブロック別の量子化精度を組み合わせる。
+
+- **2026-08 · [Parser Transitions Already Reveal Structural Responsibility: KV Persistence for Structured Generation](2026-2608.28276-parser-transitions-already-reveal-structural-responsibility-kv-persisten.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMエージェントが関数呼出し、JSON、SQLなどの構造化出力を生成する時、制約付きデコーダはパーサ状態を管理し、文法的に合法な次トークンだけを許可する。KVキャッシュを圧縮すると、注意スコア上は重要に見えないが構造上の役割を持つトークンの履歴が失われ、合法だが誤った出力になる可能性がある。
 
 - **2026-08 · [PAGE: Partition-Aware Gated KV-Cache Eviction](2026-2609.22157-page-partition-aware-gated-kv-cache-eviction.md)**  
   実装：[✓](https://github.com/pankajkumar6002/PAGE) ・ リポジトリ内被引用：0  

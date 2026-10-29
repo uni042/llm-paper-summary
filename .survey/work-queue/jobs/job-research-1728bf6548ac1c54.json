@@ -35,10 +35,15 @@
   "selection_reason": "SFPrunerは高解像度MLLMで逐次的な視覚トークン集合探索が遅い問題に対し、指示依存のridge leverageスコアと順位方向マスクで冗長性を並列評価する。選択処理を単一forwardへ変えて実測推論遅延を削減するためaccept。",
   "semantic_scholar_id": "4c66e2cb9ecdbd7dc452dbb0f319242fe476e2ea",
   "source_url": "https://arxiv.org/abs/2607.23046",
-  "status": "ready",
+  "status": "superseded",
   "title": "Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T20:11:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.23046-structured-redundancy-modeling-for-efficient-visual-token-pruning-in-hig.md",
+  "represented_canonical_id": "arXiv:2607.23046",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

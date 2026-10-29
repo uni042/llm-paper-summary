@@ -35,10 +35,15 @@
   "selection_reason": "PASKはJSON・SQL・関数呼出しを制約付き復号するパーサ遷移から、必須フィールドや引数に関わるトークンの構造的責任を抽出する。オフラインでタスク誤り感度による保護下限と注意出力の歪みに基づく残余KV予算配分を学習し、オンラインでは構造別の保持表を参照する。KV圧縮による推論メモリ削減と構造化生成の正確性を直接扱うためaccept。worklistの旧タイトルとarXiv現行タイトルが異なるがarXiv IDで同定。",
   "semantic_scholar_id": "f4ef9bd7ff37ded45f261afcdc5705e2687b8238",
   "source_url": "https://arxiv.org/abs/2608.28276",
-  "status": "ready",
+  "status": "superseded",
   "title": "Parser Transitions Already Reveal Structural Responsibility: KV Persistence for Structured Generation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T20:11:03+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.28276-parser-transitions-already-reveal-structural-responsibility-kv-persisten.md",
+  "represented_canonical_id": "arXiv:2608.28276",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

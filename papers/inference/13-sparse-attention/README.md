@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（160本）
+## 自動生成の論文一覧（161本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -341,6 +341,10 @@
 - **2026-04 · [Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference](2026-2604.07394-flux-attention-context-aware-hybrid-attention-for-efficient-llms-inferen.md)**  
   実装：[✓](https://github.com/qqtang-code/FluxAttention) ・ リポジトリ内被引用：0  
   Flux 注意機構は、長文LLMの各Transformer層で完全注意（Full 注意機構; FA）を維持するか、疎注意（Sparse 注意機構; SA）へ切り替えるかを、入力プロンプトの文脈に応じて学習した軽量ルータで決める方式である。
+
+- **2026-04 · [Composing Sparse Attention via Learned Grouping](2026-2604.03260-composing-sparse-attention-via-learned-grouping.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Transformerのsoftmax注意は、長さnの系列に対してトークン対をほぼ全て評価するため、長文では演算量とメモリアクセスが二次的に増える。GPT-2 124MのPG-19では、全注意を微調整した場合のPPL31.4に対しFocusは30.3で改善する。
 
 - **2026-02 · [Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection](2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md)**  
   実装：[✓](https://github.com/dongwonjo/Token-Sparse-Attention) ・ リポジトリ内被引用：0  
