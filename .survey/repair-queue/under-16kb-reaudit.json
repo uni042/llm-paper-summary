@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-29T20:31:13.622549+00:00",
+  "generated_at": "2026-10-29T22:16:01.263319+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 3,
+  "count": 4,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 1,
     "scheduled-chat-45": 1
   },
@@ -60,6 +60,26 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2606.04349-morphoquant-modality-aware-quantization-for-omni-modal-large-language-mo.md",
+      "canonical_id": "arXiv:2606.04349",
+      "title": "MorphoQuant: Modality-Aware Quantization for Omni-modal Large Language Models",
+      "file_bytes": 15720,
+      "source_sha256": "05d5ae7073185d207389dc83d23783949a2346b0f22009ef45682e2fa705d874",
+      "source_git_blob_sha": "54bd08485d3e56a89e3bc731ea745068d892aa58",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.968706,
+      "quality_metrics": {
+        "body_chars": 4266,
+        "method_chars": 1130,
+        "evaluation_chars": 1163,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md",
