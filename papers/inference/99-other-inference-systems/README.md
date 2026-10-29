@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（811本）
+## 自動生成の論文一覧（812本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -521,6 +521,10 @@
 - **2026-09 · [Toward Sustainable Distributed LLM Inference: A Systems Synthesis and Research Agenda for an Energy-, Carbon-, and Cache-Aware llm-d Control Plane](2026-2609.05565-toward-sustainable-distributed-llm-inference-a-systems-synthesis-and-res.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、LLM推論の省エネルギー化を単一のGPUカーネルや量子化手法に閉じず、分散サービングの制御面（control plane）が担う複合意思決定として再定義するシステムサーベイ兼研究課題提案である。原著の表にある2〜4倍の処理量等はPagedAttentionなど引用元の既存研究の数値であり、SICPを動かした結果ではない。
+
+- **2026-09 · [ThinQuant: Scalable Rotation Learning for Weight and Activation Quantization of LLMs](2026-2609.36120-thinquant-scalable-rotation-learning-for-weight-and-activation-quantizat.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低ビット量子化では、重みと活性の外れ値が量子化範囲を広げ、通常の小さい値に割り当てられる表現精度を低下させる。Llama-3-70BのW4A4KV4ではDartQuantのWikiText-2困惑度7.55に対して5.63へ改善し、校正時間は111分から11分57秒へ、保存データは960GiBから0.51GiBへ削減する。
 
 - **2026-09 · [STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization](2026-2609.38169-stepquant-when-and-where-errors-matter-in-delta-rule-recurrent-state-qua.md)**  
   実装：[✓](https://github.com/Dreamer-Toby/STEPQuant) ・ リポジトリ内被引用：0  
@@ -2342,7 +2346,7 @@
 
 - **2025-07 · [Investigating Structural Pruning and Recovery Techniques for Compressing Multimodal Large Language Models: An Empirical Study](2025-2507.20749-investigating-structural-pruning-and-recovery-techniques-for-compressing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  推論時のメモリと演算量を削減するため、小型言語モデルを使ってMLLMを最初から作り直す方法もあるが、既存のMLLMの一部を削除して回復学習する方が柔軟に容量を調整できる。15%の削減・回復なしでは幅削除したLLaVAが元モデルの相対性能92.79%、Bunnyが95.48%を保持する。一方、60%削減ではどちらの方式も回復なしの性能が大きく崩壊する。
+  言語バックボーンの重みと演算が大きな割合を占めるため、モデルの一部を実際に削除できれば、量子化とは別の経路でメモリ・計算負担を下げられる。15%削減・回復なしのLLaVAでは幅方向の平均指標57.79、層方向46.09であり、元モデル62.28からの低下は幅方向の方が小さい。
 
 - **2025-07 · [High-Layer Attention Pruning with Rescaling](2025-2507.01900-high-layer-attention-pruning-with-rescaling.md)**  
   実装：[✓](https://github.com/SongtaoLiu0823/HARP) ・ リポジトリ内被引用：0  

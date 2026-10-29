@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（330本）
+## 自動生成の論文一覧（332本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -688,6 +688,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   SpecGuardは、通常の推測復号がトークン単位の確率分布を基準に下書き候補を受理するのに対し、意味のまとまりを持つ推論ステップ単位で候補を選び、モデル内部の二種類の信号から妥当性を検証する。小型下書きモデルで複数の推論ステップを生成し、その中で他候補との意味的一致が最も高いものを代表として選ぶ。
 
+- **2026-04 · [EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation](2026-2605.27390-evospec-evolving-speculative-decoding-via-real-time-vocabulary-and-param.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号は、小さな草稿モデルが先行して候補トークンを生成し、大きなターゲットモデルがまとめて検証することで自己回帰生成を高速化する。
+
 - **2026-04 · [Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference](2026-2604.13634-calibrated-speculative-decoding-frequency-guided-candidate-selection-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   途中のトークンが棄却されると、それ以降に先読みしたトークンも使えなくなる。Llama-3-70Bと1Bの組では、4課題の平均生成速度がターゲット単独比2.02倍となり、標準投機的復号の1.75倍を上回る。
@@ -699,6 +703,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-03 · [EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs](2026-2603.08088-eagle-pangu-accelerator-safe-tree-speculative-decoding-on-ascend-npus.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は小さな草稿モデルで複数候補を先に生成し、教師モデルがまとめて検証することで教師モデルの呼び出し回数を減らす。240ターンの単一要求評価で、教師単独の平均17.65トークン/秒から22.42トークン/秒へ改善し、平均速度比1.27倍を報告する（原著表1）。
+
+- **2026-03 · [Cross-Family Speculative Decoding for Polish Language Models on Apple Silicon: An Empirical Evaluation of Bielik 11B with UAG-Extended MLX-LM](2026-2604.16368-cross-family-speculative-decoding-for-polish-language-models-on-apple-si.md)**  
+  実装：[✓](https://github.com/krzysiekfonal/mlx-lm/tree/feature/slem-with-context-aware) ・ リポジトリ内被引用：0  
+  投機的復号は、小さな草稿モデルが複数の候補トークンを先行生成し、大きなターゲットモデルがまとめて検証することで生成速度を上げる。一般的な速度モデルでは、ターゲットがk個の候補をまとめて検証する費用は1トークンの自己回帰生成に近く、草稿が十分に安くて受理率が高ければ高速化できる。
 
 - **2026-03 · [Accelerating PayPal's Commerce Agent with Speculative Decoding: An Empirical Study on EAGLE3 with Fine-Tuned Nemotron Models](2026-2604.19767-accelerating-paypal-s-commerce-agent-with-speculative-decoding-an-empiri.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

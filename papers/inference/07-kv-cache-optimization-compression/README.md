@@ -973,7 +973,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-02 · [Compiler-Assisted Speculative Sampling for Accelerated LLM Inference on Heterogeneous Edge Devices](2026-2602.08060-compiler-assisted-speculative-sampling-for-accelerated-llm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  投機的復号は、小型drafterが候補トークンを逐次生成し、大型targetが候補をまとめて検証することで、targetの順伝播回数を減らす。
+  LLMの逐次生成では、次のトークンを決めるたびに大型モデルを実行するため、計算資源が限られるエッジ機器では応答遅延が大きくなる。投機的サンプリングは小型草稿モデルが複数の候補トークンを先に生成し、大型検証モデルがまとめて検証することで、大型モデルの呼び出し回数を減らす。
 
 - **2026-01 · [TableCache: Primary Foreign Key Guided KV Cache Precomputation for Low Latency Text-to-SQL](2026-2601.08743-tablecache-primary-foreign-key-guided-kv-cache-precomputation-for-low-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

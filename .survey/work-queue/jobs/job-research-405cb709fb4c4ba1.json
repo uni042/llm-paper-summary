@@ -35,10 +35,15 @@
   "selection_reason": "ThinQuantは活性の凸包に基づく校正点選択で学習回転の最適化次元をd×dからd×rへ削減し、Stiefel多様体上のADMMで回転を校正する。Llama-3-70BのW4A4KV4校正を12分未満で完了し、405Bにも適用するため、大規模推論向け低ビット量子化の構築コストに直接関係する。",
   "semantic_scholar_id": "a8ffc83c9e22ec7f4952375a8a5e216a632ef7a3",
   "source_url": "https://arxiv.org/abs/2609.36120",
-  "status": "ready",
+  "status": "superseded",
   "title": "ThinQuant: Scalable Rotation Learning for Weight and Activation Quantization of LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T20:27:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.36120-thinquant-scalable-rotation-learning-for-weight-and-activation-quantizat.md",
+  "represented_canonical_id": "arXiv:2609.36120",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

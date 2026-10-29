@@ -35,10 +35,15 @@
   "selection_reason": "草案モデルの語彙射影費用とターゲットとの分布ずれを、検証結果に応じた語彙集合更新とオンラインLoRA適応で同時に緩和する。Qwen3-8B/EAGLE-2上で草案受理と復号高速化を測定し、ターゲットによる厳密検証を維持するため投機的復号系統に適合。",
   "semantic_scholar_id": "9d228b5829af7486ec695b9ca229b9b30254eaa8",
   "source_url": "https://arxiv.org/abs/2605.27390",
-  "status": "ready",
+  "status": "superseded",
   "title": "EvoSpec: Evolving Speculative Decoding via Real-Time Vocabulary and Parameter Adaptation",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T20:27:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2605.27390-evospec-evolving-speculative-decoding-via-real-time-vocabulary-and-param.md",
+  "represented_canonical_id": "arXiv:2605.27390",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
