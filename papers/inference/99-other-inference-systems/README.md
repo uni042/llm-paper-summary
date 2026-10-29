@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（787本）
+## 自動生成の論文一覧（789本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -718,6 +718,10 @@
   実装：[✓](https://github.com/liuhanzuo/Mixture-of-Memory) ・ リポジトリ内被引用：0  
   CoMemはTransformerのどこまでを文書単独で先払い計算するかを新たな制御変数とし、文書の中間残差（residual state）を永続保存して、問い合わせ時は上位層のみ再実行する方式である。
 
+- **2026-07 · [Combating Textual Noise and Redundancy: Entropy-Aware Dense Visual Token Pruning](2026-2607.02484-combating-textual-noise-and-redundancy-entropy-aware-dense-visual-token-.md)**  
+  実装：[✓](https://github.com/SJTU-DeepVisionLab/EADP) ・ リポジトリ内被引用：0  
+  画像を含むVision-Language モデル（VLM）では、画像エンコーダが作る多数のパッチトークンがLLMの入力を長くし、事前充填の注意演算とメモリ転送を増やす。EADP（Entropy-Aware Dense Pruning）はこの二段階の失敗を分離する。
+
 - **2026-07 · [CLIP Tricks You: Training-free Token Pruning for Efficient Pixel Grounding in Large Vision-Language Models](2026-2605.13178-clip-tricks-you-training-free-token-pruning-for-efficient-pixel-groundin.md)**  
   実装：[✓](https://github.com/sejong-rcv/LiteLVLM) ・ リポジトリ内被引用：0  
   一般的な画像理解向け視覚トークン枝刈りは、画像の全体表現への寄与や画像・テキストの高い類似度を手掛かりにトークンを残す。GLaMMの元の576視覚トークンを192に削減したとき、8評価分割平均の領域分割指標は75.5から68.1となり、元性能の90.3%を維持した。
@@ -813,6 +817,10 @@
 - **2026-06 · [Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md)**  
   実装：[✓](https://github.com/flashrt-project/FlashRT) ・ リポジトリ内被引用：0  
   KVだけでなく再帰・畳み込み・複数トークン予測状態を丸ごと保存復元し、単一ストリーム再入場の初回応答を最大26.94倍高速化する実行状態カプセル。
+
+- **2026-06 · [End-to-End Dynamic Sparsity for Resource-Adaptive LLM Inference](2026-2606.27743-end-to-end-dynamic-sparsity-for-resource-adaptive-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  通常のLLM推論は、入力が簡単か難しいか、サーバーのメモリや締切が変動するかにかかわらず、同じTransformer層と注意ヘッドを実行する。従来の動的スキップも入力のエントロピーなどから難易度を推測する方式が多く、現在のサービス側の予算を直接条件にしていない。
 
 - **2026-06 · [End-to-End Context Compression at Scale](2026-2606.09659-end-to-end-context-compression-at-scale.md)**  
   実装：[✓](https://github.com/LeonLixyz/LCLM) ・ リポジトリ内被引用：0  

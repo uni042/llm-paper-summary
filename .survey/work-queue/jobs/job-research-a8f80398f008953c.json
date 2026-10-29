@@ -35,10 +35,15 @@
   "selection_reason": "Ascend NPU上のDeepSeek-R1-Distill-Qwen系とQwQ-32BでAWQ、GPTQ、SmoothQuant、FlatQuantを比較し、4bit重み活性化量子化の較正不安定性とINT8実装の動的量子化オーバーヘッドを検証する。推論デバイス依存のPTQ精度・実遅延を扱うため収録対象。",
   "semantic_scholar_id": "5220f5c30d0eb3ef21b31b344369856246009365",
   "source_url": "https://arxiv.org/abs/2602.17693",
-  "status": "ready",
+  "status": "superseded",
   "title": "A Case Study of Selected PTQ Baselines for Reasoning LLMs on Ascend NPU",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T11:36:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2602.17693-a-case-study-of-selected-ptq-baselines-for-reasoning-llms-on-ascend-npu.md",
+  "represented_canonical_id": "arXiv:2602.17693",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

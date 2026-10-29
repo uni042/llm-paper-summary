@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（172本）
+## 自動生成の論文一覧（173本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -295,6 +295,10 @@
 - **2026-02 · [LittleBit-2: Maximizing the Spectral Energy Gain in Sub-1-Bit LLMs via Latent Geometry Alignment](2026-2603.00042-littlebit-2-maximizing-the-spectral-energy-gain-in-sub-1-bit-llms-via-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LittleBit-2は、学習済み大規模言語モデル（LLM）の重み行列を低ランクの二値因子に分解するLittleBit方式を改良し、二値化の直前に潜在空間を回転して量子化誤差を小さくする研究である。
+
+- **2026-02 · [A Case Study of Selected PTQ Baselines for Reasoning LLMs on Ascend NPU](2026-2602.17693-a-case-study-of-selected-ptq-baselines-for-reasoning-llms-on-ascend-npu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本研究は新規量子化法の提案ではなく、既存の事後量子化（PTQ）をHuawei Ascend 910Bへ移した場合の再現性と実装費用を測定する事例研究である。
 
 - **2026-01 · [StableQAT: Stable Quantization-Aware Training at Ultra-Low Bitwidths](2026-2601.19320-stableqat-stable-quantization-aware-training-at-ultra-low-bitwidths.md)**  
   実装：[✓](https://github.com/microsoft/StableQAT) ・ リポジトリ内被引用：0  

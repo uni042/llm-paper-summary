@@ -35,10 +35,15 @@
   "selection_reason": "Windowed-MTPはMTP草案ヘッドが100万トークンの全KVを毎ステップ読み直す費用を、草案側だけの窓＋attention sinkで定数作業集合へ制限する。教師の全注意検証は変えず、SGLang上で草案KV読出しとdecodeステップ時間を改善する投機的復号実装。",
   "semantic_scholar_id": "262b00283babc6a80270c46b5d3ef3061d301855",
   "source_url": "https://arxiv.org/abs/2607.21535",
-  "status": "ready",
+  "status": "superseded",
   "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T11:36:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2607.21535-windowed-mtp-removing-the-full-context-draft-kv-tax-at-million-token-con.md",
+  "represented_canonical_id": "arXiv:2607.21535",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

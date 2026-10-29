@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（325本）
+## 自動生成の論文一覧（327本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -560,6 +560,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：0  
   どの層を省くかをオンラインで探索する方式は、探索自体の推論呼び出し・評価・探索状態更新が余分な計算となる。この費用を測定から除くか含めるかで、どちらの方式が速いかが逆転する。
 
+- **2026-07 · [Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context](2026-2607.21535-windowed-mtp-removing-the-full-context-draft-kv-tax-at-million-token-con.md)**  
+  実装：[✓](https://github.com/avalliappan-nvidia/windowed-mtp-b200) ・ リポジトリ内被引用：0  
+  投機的復号は、小さなドラフトが先のトークンを提案し、大きなターゲットモデルがまとめて検証することで、生成トークン当たりの遅延を短縮する。
+
 - **2026-07 · [Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting](2026-2607.10661-unlocking-parallelism-in-autoregressive-language-models-via-speculative-.md)**  
   実装：[✓](https://github.com/MINE-USTC/PTD) ・ リポジトリ内被引用：0  
   投機的復号は複数候補を一度に検証して、正しい連続部分をまとめて確定させるが、別の小型ドラフトモデルを使う方式ではモデルのロード・通信・同期・追加学習の費用が生じる。
@@ -647,6 +651,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-05 · [Cassandra: Enabling Reasoning LLMs at Edge via Self-Speculative Decoding](2026-2605.26558-cassandra-enabling-reasoning-llms-at-edge-via-self-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   非構造化の重要値選別、仮数部切詰め、指数部の圧縮を併用し、ビット表現の復号を支援する専用回路とメモリ管理まで設計している。
+
+- **2026-05 · [Beyond the Target: From Imitation to Collaboration in Speculative Decoding](2026-2605.24793-beyond-the-target-from-imitation-to-collaboration-in-speculative-decodin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推測復号（投機的復号）は、小さな草稿モデルが複数トークンを先読みし、ターゲットが一度の並列計算で検証することで、ターゲットの呼び出し回数を減らす。
 
 - **2026-05 · [An Interpretable Latency Model for Speculative Decoding in LLM Serving](2026-2605.15051-interpretable-latency-model-speculative-decoding-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

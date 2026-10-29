@@ -35,10 +35,15 @@
   "selection_reason": "EADPは密な画像質問に含まれるテキストノイズをエントロピーで除き、空間事前分布を伴う劣モジュラ最適化で重複しない視覚トークンを選ぶ。限られたトークン予算で視覚情報を保持するVLM推論時の構造的剪定技術であり、演算量・メモリ削減の対象に該当する。",
   "semantic_scholar_id": "4a4619b33b494797314c8cc5d4c0c7e0a0574d18",
   "source_url": "https://arxiv.org/abs/2607.02484",
-  "status": "ready",
+  "status": "superseded",
   "title": "Combating Textual Noise and Redundancy: Entropy-Aware Dense Visual Token Pruning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T11:36:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.02484-combating-textual-noise-and-redundancy-entropy-aware-dense-visual-token-.md",
+  "represented_canonical_id": "arXiv:2607.02484",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
