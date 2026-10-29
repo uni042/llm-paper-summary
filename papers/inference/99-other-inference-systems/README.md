@@ -3033,7 +3033,7 @@
   本論文は、自己注意（self-注意機構）の各クエリがすべてのキーを参照するため、系列長Nに対して注意行列がN×Nになり、計算量と中間メモリが二乗で増える問題を扱う。NeurIPS 2020の正式版では、GTX 1080 Ti 11GB上の音声認識2データセットと、学習済みRoBERTaのGLUE・SQuADへの適用を評価した。
 
 - **2021-10 · [8-bit Optimizers via Block-wise Quantization](2021-2110.02861-8-bit-optimizers-via-block-wise-quantization.md)**  
-  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/bitsandbytes-foundation/bitsandbytes) ・ リポジトリ内被引用：17  
   Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
