@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261029-1900-scheduled-chat-00/r01/prescreen-rank46",
+  "reference_main_sha": "0d4b70dc9dd7e7a6a74cc3c795b4fd4d09d25e6f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.12920",
+      "identity_tokens": [
+        "arxiv:2606.12920"
+      ],
+      "title": "An Oskolkov–Zhizhiashvili Criterion for Rectangular Fourier Sums",
+      "reason": "多変数Fourier級数の長方形部分和がほとんど至る所収束するための関数解析上の条件を証明する数学研究。LLMシステム・サービングとは無関係。",
+      "source_url": "https://arxiv.org/pdf/2606.12920",
+      "body_check": "abstract_and_introduction_prescreen; fulltext_not_read; no system-level inference contribution",
+      "first_checked_at": "2026-10-29T19:03:04+09:00",
+      "last_checked_at": "2026-10-29T19:03:04+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 46
+    }
+  ]
+}
