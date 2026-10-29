@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-29T19:56:28+00:00",
-  "record_count": 12544,
+  "updated_at": "2026-10-29T20:46:33+00:00",
+  "record_count": 12558,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180604,6 +180604,174 @@
       "last_checked_at": "2026-10-29T19:56:28+00:00",
       "linked_from": [],
       "title": "Hybrid-Parallel: Achieving High Performance and Energy Efficient Distributed Inference on Robots"
+    },
+    "arXiv:2603.26231": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.26231",
+      "identity_tokens": [
+        "arXiv:2603.26231"
+      ],
+      "reason": "非同期連合学習の確率ネットワーク最適化が対象。LLMの生成推論、KV、GPUサービングへ直接適用する技術はタイトルから確認できない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:18+00:00",
+      "last_checked_at": "2026-10-29T20:46:18+00:00",
+      "linked_from": [],
+      "title": "Optimization Trade-offs in Asynchronous Federated Learning: A Stochastic Networks Approach"
+    },
+    "arXiv:2605.08654": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08654",
+      "identity_tokens": [
+        "arXiv:2605.08654"
+      ],
+      "reason": "Singer四角形の乗数に関する組合せ数学の研究で、LLMの実行・推論・メモリ管理ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:20+00:00",
+      "last_checked_at": "2026-10-29T20:46:20+00:00",
+      "linked_from": [],
+      "title": "On the multipliers of a Singer quadrangle"
+    },
+    "arXiv:2605.08730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08730",
+      "identity_tokens": [
+        "arXiv:2605.08730"
+      ],
+      "reason": "一次要旨の対象は分類モデルのクラス単位機械アンラーニングであり、最終分類ヘッドのバイアス操作による忘却指標の抜け道と、TS-BGRM/LB-HRおよびバイアス評価指標を提案する。CIFAR-10/100、Tiny-ImageNetの分類評価が中心で、生成LLM推論・サービング効率化への直接的貢献はない。worklist記載の「Compute-Aware MoE Distillation for Efficient Inference」と一次書誌が一致しないため、誤identityのResearchを回避する。",
+      "first_checked_at": "2026-10-29T20:46:21+00:00",
+      "last_checked_at": "2026-10-29T20:46:21+00:00",
+      "linked_from": [],
+      "title": "Classification-Head Bias in Class-Level Machine Unlearning: Diagnosis, Mitigation, and Evaluation"
+    },
+    "arXiv:2604.01098": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.01098",
+      "identity_tokens": [
+        "arXiv:2604.01098"
+      ],
+      "reason": "確率的多目的最適化のパレート前線をハッシュ化と乱択で近似する汎用アルゴリズムで、LLM推論への直接適用はタイトルにない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:22+00:00",
+      "last_checked_at": "2026-10-29T20:46:22+00:00",
+      "linked_from": [],
+      "title": "Approximating Pareto Frontiers in Stochastic Multi-Objective Optimization via Hashing and Randomization"
+    },
+    "arXiv:2605.09952": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09952",
+      "identity_tokens": [
+        "arXiv:2605.09952"
+      ],
+      "reason": "3次元Helmholtzグリーン関数の方位フーリエモードを数値計算する数学・計算物理研究で、LLM推論技術ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:23+00:00",
+      "last_checked_at": "2026-10-29T20:46:23+00:00",
+      "linked_from": [],
+      "title": "Fast Evaluation of the Azimuthal Fourier Modes of the 3D Helmholtz Green's Function and Their Derivatives"
+    },
+    "arXiv:2606.19814": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.19814",
+      "identity_tokens": [
+        "arXiv:2606.19814"
+      ],
+      "reason": "VS Code上で類似例を検索してコミットメッセージを生成する開発支援アプリケーションが対象。生成LLMの実行効率化ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:25+00:00",
+      "last_checked_at": "2026-10-29T20:46:25+00:00",
+      "linked_from": [],
+      "title": "CoRaCommit: A VS Code Extension for Commit Message Generation with Exemplar Retrieval"
+    },
+    "arXiv:2604.24311": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24311",
+      "identity_tokens": [
+        "arXiv:2604.24311"
+      ],
+      "reason": "3Dスキャンから建築情報モデルを構築するコンピュータビジョンの処理パイプラインで、LLMサービングではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:26+00:00",
+      "last_checked_at": "2026-10-29T20:46:26+00:00",
+      "linked_from": [],
+      "title": "BIMStruct3D: A Fully Automated Hybrid Learning Scan-to-BIM Pipeline with Integrated Topology Refinement"
+    },
+    "arXiv:2604.17533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17533",
+      "identity_tokens": [
+        "arXiv:2604.17533"
+      ],
+      "reason": "高高度プラットフォーム向け大規模MIMOの3次元アンテナ構造と無線空間資源配分が対象。生成LLMの実行基盤・推論高速化ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:26+00:00",
+      "last_checked_at": "2026-10-29T20:46:26+00:00",
+      "linked_from": [],
+      "title": "A Novel 3D Antenna Architecture with Spatial Resource Allocation for Massive MIMO HAPS"
+    },
+    "arXiv:2605.04118": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.04118",
+      "identity_tokens": [
+        "arXiv:2605.04118"
+      ],
+      "reason": "タンパク質結合体の設計と評価を統一するベンチマークであり、LLM推論のメモリ・計算・サービング効率化を対象にしない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:27+00:00",
+      "last_checked_at": "2026-10-29T20:46:27+00:00",
+      "linked_from": [],
+      "title": "ProtDBench: A Unified Benchmark of Protein Binder Design and Evaluation"
+    },
+    "arXiv:2507.23158": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.23158",
+      "identity_tokens": [
+        "arXiv:2507.23158"
+      ],
+      "reason": "原著の研究対象は人間とLLMの対話に現れる暗黙の利用者フィードバックの検出と、それを用いた回答改善・教師あり微調整の評価である。GPT-4o-miniによるフィードバック分類、Mistral/VicunaのMT-Bench/WildBench品質評価が中心で、推論サービング、KV管理、GPU計算効率、量子化・復号の高速化に対する技術的貢献はない。worklist記載の「Fast and Memory-Efficient Context Compression with Lightweight Token Scoring」とarXiv一次書誌が一致しないため、誤った題名でResearchを作らず一次identityの実題名で対象外判定する。",
+      "first_checked_at": "2026-10-29T20:46:28+00:00",
+      "last_checked_at": "2026-10-29T20:46:28+00:00",
+      "linked_from": [],
+      "title": "User Feedback in Human-LLM Dialogues: A Lens to Understand Users But Noisy as a Learning Signal"
+    },
+    "arXiv:2605.27221": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.27221",
+      "identity_tokens": [
+        "arXiv:2605.27221"
+      ],
+      "reason": "宇宙論の暗黒エネルギー制約を複数観測から推定する天文学研究で、LLM推論・サービングとは無関係。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:29+00:00",
+      "last_checked_at": "2026-10-29T20:46:29+00:00",
+      "linked_from": [],
+      "title": "Constraints on Dynamical Dark Energy from Multiple Probes in the Full Dark Energy Survey"
+    },
+    "arXiv:2603.28764": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.28764",
+      "identity_tokens": [
+        "arXiv:2603.28764"
+      ],
+      "reason": "リーマン幾何・統計多様体上のニューラル表現類似度の測定法が対象で、LLM推論システムの実行最適化ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:31+00:00",
+      "last_checked_at": "2026-10-29T20:46:31+00:00",
+      "linked_from": [],
+      "title": "Geometry-aware similarity metrics for neural representations on Riemannian and statistical manifolds"
+    },
+    "arXiv:2605.07811": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.07811",
+      "identity_tokens": [
+        "arXiv:2605.07811"
+      ],
+      "reason": "IMDb映画レビューの感情分類における機械学習方式比較で、生成LLM推論システム効率化の技術的寄与はない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:32+00:00",
+      "last_checked_at": "2026-10-29T20:46:32+00:00",
+      "linked_from": [],
+      "title": "A Comparative Analysis of Classical Machine Learning and Deep Learning Approaches for Sentiment Classification on IMDb Movie Reviews"
+    },
+    "arXiv:2602.17749": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17749",
+      "identity_tokens": [
+        "arXiv:2602.17749"
+      ],
+      "reason": "鯨類の反響定位クリック音を画像物体検出で識別する生物音響分類の研究で、LLM推論基盤と無関係。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "first_checked_at": "2026-10-29T20:46:33+00:00",
+      "last_checked_at": "2026-10-29T20:46:33+00:00",
+      "linked_from": [],
+      "title": "Detection and Classification of Cetacean Echolocation Clicks using Image-based Object Detection Methods applied to Advanced Wavelet-based Transformations"
     }
   }
 }
