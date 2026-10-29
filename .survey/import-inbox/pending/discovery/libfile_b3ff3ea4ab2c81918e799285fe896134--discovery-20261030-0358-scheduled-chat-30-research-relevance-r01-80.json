@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-0358-scheduled-chat-30/r01-relevance-80",
+  "reference_main_sha": "21e288cf423b8916b5ceb4ef47fb74500323dbc1",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19257",
+      "identity_tokens": [
+        "arXiv:2405.19257"
+      ],
+      "title": "Hybrid-Parallel: Achieving High Performance and Energy Efficient Distributed Inference on Robots",
+      "reason": "ロボットIoTの無線ネットワークでCNN等のDNN推論を分散実行する方式。Local Operator ParallelismとLocal Operator Scheduling Strategyで畳み込み等の局所演算と通信を重複させ、ロボットの物体認識・点群処理を評価する。一次本文の評価対象はロボット・VGG等であり、生成LLM、Transformerサービング、KVキャッシュ、MoE推論の固有技術は扱わない。汎用分散推論の近接研究ではあるが現行LLMシステム効率化の対象外。",
+      "source_url": "https://arxiv.org/pdf/2405.19257",
+      "body_check": "research_fulltext_relevance_review: original arXiv PDF abstract, §§1-4, experimental overview §6 inspected; robot IoT DNN operator-level execution and Wi-Fi bottleneck verified",
+      "first_checked_at": "2026-10-30T04:02:50+09:00",
+      "last_checked_at": "2026-10-30T04:02:50+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 80
+    }
+  ]
+}
