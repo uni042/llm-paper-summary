@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T09:01:06.611658+00:00",
+  "generated_at": "2026-10-29T10:04:45.845492+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 4,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 1,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -77,26 +77,6 @@
         "method_chars": 1072,
         "evaluation_chars": 505,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.13205-adaptive-filtering-of-the-kv-cache-diagnosing-and-correcting-structural-.md",
-      "canonical_id": "arXiv:2607.13205",
-      "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
-      "file_bytes": 13594,
-      "source_sha256": "3583f201c429913e4b0d54271ef45e0c3137c4906434f8163e13fd3b0d1e0a88",
-      "source_git_blob_sha": "1cb94310b37d247d7867172936f9c3b0a82c3c78",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.857715,
-      "quality_metrics": {
-        "body_chars": 4086,
-        "method_chars": 1152,
-        "evaluation_chars": 1469,
-        "limitation_chars": 322
       },
       "mechanical_failures": [],
       "warnings": []
