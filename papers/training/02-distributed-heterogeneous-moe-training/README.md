@@ -33,7 +33,7 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 2年前（2024-11〜2025-10）
 
 - **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：6  
   一方、大規模な分散学習では、専門家の重みを保持するためのGPUメモリ、トークンを担当専門家へ運ぶ全対全通信、注意機構のテンソル・文脈並列化が競合する。
 
 - **2025-04 · [HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs](2025-2504.03871-hetermoe-efficient-training-of-mixture-of-experts-models-on-heterogeneous-gpus.md)**  
@@ -63,12 +63,12 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 ### 6年前（2020-11〜2021-10）
 
 - **2021-09 · [Scalable and Efficient MoE Training for Multitask Multilingual Models](2021-2109.10465-scalable-efficient-moe-training.md)**  
-  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：30  
   専門家並列とZeRO/CPUオフロード等の多次元並列を統合してMoEを3.5兆パラメータ超へ拡張し、ランダムトークン選択や専門家枝刈りで学習・推論効率も改善するDeepSpeed MoE。
 
 ### 7年前（2019-11〜2020-10）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
-  実装：✓ ・ リポジトリ内被引用：291  
+  実装：✓ ・ リポジトリ内被引用：292  
   疎な混合専門家モデルと自動SPMD分割を組み合わせ、少数の分割注釈だけで6000億パラメータ級Transformerを2048 TPUへ拡張し、4日で学習可能にした基礎システム。
 <!-- survey:auto:end -->

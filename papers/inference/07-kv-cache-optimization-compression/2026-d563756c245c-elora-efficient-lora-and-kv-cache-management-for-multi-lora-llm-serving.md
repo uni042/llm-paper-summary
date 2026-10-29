@@ -1,41 +1,105 @@
 ---
-canonical_id: "DOI:10.1109/HPCA68181.2026.11408492"
-title: "ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving"
-summary: "複数LoRAを同時提供する際、LoRAと履歴KVを別々に退避すると利用不能なKVがGPUを占める。ELORAは依存木・統一メモリプール・将来の遅延削減に基づく入替え制御を組み合わせ、H800実機でvLLM比平均TTFT45.7%、TPOT37.8%短縮、平均TTFT500ms未満での許容到着率78.9%増を報告する。"
-list_summary: "LoRAとその履歴KVを依存木と共通GPUブロックで一体管理し、要求分布に基づく入替えで無効キャッシュと再prefillを減らす複数LoRA推論サービング方式。"
+canonical_id: DOI:10.1109/HPCA68181.2026.11408492
+title: 'ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving'
+summary: 複数LoRAを同時提供する際、LoRAと履歴KVを別々に退避すると利用不能なKVがGPUを占める。ELORAは依存木・統一メモリプール・将来の遅延削減に基づく入替え制御を組み合わせ、H800実機でvLLM比平均TTFT45.7%、TPOT37.8%短縮、平均TTFT500ms未満での許容到着率78.9%増を報告する。
+list_summary: LoRAとその履歴KVを依存木と共通GPUブロックで一体管理し、要求分布に基づく入替えで無効キャッシュと再prefillを減らす複数LoRA推論サービング方式。
 authors:
-  - "Jiuchen Shi"
-  - "Hang Zhang"
-  - "Yixiao Wang"
-  - "Quan Chen"
-  - "Yizhou Shan"
-  - "Kaihua Fu"
-  - "Wei Wang"
-  - "Minyi Guo"
-published: "2026-03-04"
-publication: "IEEE HPCA 2026"
-publication_type: "査読付き会議論文"
-publication_status: "published"
-source: "https://www.cse.ust.hk/~weiwa/papers/elora-hpca26.pdf"
+- Jiuchen Shi
+- Hang Zhang
+- Yixiao Wang
+- Quan Chen
+- Yizhou Shan
+- Kaihua Fu
+- Wei Wang
+- Minyi Guo
+published: '2026-03-04'
+publication: IEEE HPCA 2026
+publication_type: 査読付き会議論文
+publication_status: published
+source: https://www.cse.ust.hk/~weiwa/papers/elora-hpca26.pdf
 sources:
-  - "https://www.cse.ust.hk/~weiwa/papers/elora-hpca26.pdf"
-  - "https://doi.org/10.1109/HPCA68181.2026.11408492"
-  - "https://arxiv.org/abs/2505.03756"
-implementation: "vLLM BlockManagerを改造し、CPU側依存木とGPU側統一ブロックプールを実装。H800実機で評価。公式コード公開先は一次論文から特定できない。"
+- https://www.cse.ust.hk/~weiwa/papers/elora-hpca26.pdf
+- https://doi.org/10.1109/HPCA68181.2026.11408492
+- https://arxiv.org/abs/2505.03756
+implementation: vLLM BlockManagerを改造し、CPU側依存木とGPU側統一ブロックプールを実装。H800実機で評価。公式コード公開先は一次論文から特定できない。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261030-0655-scheduled-chat-00/r01"
-worker_completed_at: "2026-10-30T06:55:08+09:00"
-reference_main_sha: "2fb5ba07d03cf630cb3b2985adf997dad70e83e9"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_run_key: 20261030-0655-scheduled-chat-00/r01
+worker_completed_at: '2026-10-30T06:55:08+09:00'
+reference_main_sha: 2fb5ba07d03cf630cb3b2985adf997dad70e83e9
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-doi: "10.1109/HPCA68181.2026.11408492"
-repair_kind: "returned_research"
-repair_reason: "blocked_quality: 評価説明量424文字<500。標準の評価節に一次資料に基づく実験条件・比較・感度・機構の因果説明を追加"
-repair_source_blocked_path: ".survey/import-inbox/blocked/research/libfile_0b219ba181608191899f0c059249557b--2026-doi-10.1109-hpca68181.2026.11408492-elora-returned-heading-repair-20261030-0600-scheduled-chat-00-r01.md"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+doi: 10.1109/HPCA68181.2026.11408492
+repair_kind: returned_research
+repair_reason: 'blocked_quality: 評価説明量424文字<500。標準の評価節に一次資料に基づく実験条件・比較・感度・機構の因果説明を追加'
+repair_source_blocked_path: .survey/import-inbox/blocked/research/libfile_0b219ba181608191899f0c059249557b--2026-doi-10.1109-hpca68181.2026.11408492-elora-returned-heading-repair-20261030-0600-scheduled-chat-00-r01.md
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: arXiv:2312.11514
+  arxiv_id: '2312.11514'
+- canonical_id: arXiv:2308.08061
+  arxiv_id: '2308.08061'
+- canonical_id: arXiv:2310.18547
+- canonical_id: arXiv:2403.04132
+  arxiv_id: '2403.04132'
+- canonical_id: arXiv:2403.19708
+  arxiv_id: '2403.19708'
+- canonical_id: arXiv:2311.04934
+- canonical_id: arXiv:2106.09685
+  arxiv_id: '2106.09685'
+- canonical_id: arXiv:2307.13269
+  arxiv_id: '2307.13269'
+- canonical_id: arXiv:2411.17741
+  arxiv_id: '2411.17741'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2104.08691
+  arxiv_id: '2104.08691'
+- canonical_id: arXiv:2401.11240
+  arxiv_id: '2401.11240'
+- canonical_id: arXiv:2101.00190
+  arxiv_id: '2101.00190'
+- canonical_id: arXiv:2401.05459
+  arxiv_id: '2401.05459'
+- canonical_id: arXiv:2402.09353
+  arxiv_id: '2402.09353'
+- canonical_id: arXiv:2407.10627
+  arxiv_id: '2407.10627'
+- canonical_id: arXiv:2005.14165
+  arxiv_id: '2005.14165'
+- canonical_id: arXiv:2408.01050
+  arxiv_id: '2408.01050'
+- canonical_id: arXiv:1911.02150
+  arxiv_id: '1911.02150'
+- canonical_id: arXiv:1909.09586
+  arxiv_id: '1909.09586'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2407.18242
+  arxiv_id: '2407.18242'
+- canonical_id: arXiv:2405.16444
+  arxiv_id: '2405.16444'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2312.05516
+  arxiv_id: '2312.05516'
+- canonical_id: arXiv:2004.11867
+  arxiv_id: '2004.11867'
+- canonical_id: arXiv:1609.08144
+  arxiv_id: '1609.08144'
+- canonical_id: arXiv:2303.10512
+  arxiv_id: '2303.10512'
+- canonical_id: arXiv:2405.00732
+  arxiv_id: '2405.00732'
+- canonical_id: arXiv:2401.09670
+  arxiv_id: '2401.09670'
+- canonical_id: arXiv:2304.04675
+  arxiv_id: '2304.04675'
+references_checked_at: '2026-10-29'
+references_source: arxiv-html-reference-section
+references_total: 55
 ---
 
 # ELORA：複数LoRAの依存関係を保ったGPUキャッシュ管理

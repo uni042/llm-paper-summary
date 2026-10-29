@@ -2651,7 +2651,7 @@
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
-  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：80  
+  実装：[✓](https://github.com/allenai/OLMoE) ・ リポジトリ内被引用：81  
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
@@ -2679,7 +2679,7 @@
   整合性大規模言語モデル（Consistency Large Language Models; CLLMs）は、Jacobi型の並列復号で使う仮の複数トークン列から、自己回帰復号の最終固定点へ速く近づくよう既存LLMを追加学習する。固定点に対する大域整合性損失と通常の自己回帰損失を併用し、追加の小型草案モデルなしで生成を高速化する。
 
 - **2024-06 · [A Survey on Mixture of Experts in Large Language Models](2024-2407.06204-a-survey-on-mixture-of-experts-in-large-language-models.md)**  
-  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/withinmiaov/A-Survey-on-Mixture-of-Experts-in-LLMs) ・ リポジトリ内被引用：31  
   全パラメータ数を大きくしても活性化する部分を限定できるが、実機では選択された専門家へのトークン転送、専門家ごとの負荷の偏り、GPU間の全対全通信、巨大な専門家重みの配置・退避が新たな律速になる。
 
 - **2023-12 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-c83594f6f821-gqa-training-generalized-multi-query-transformer-models-from-multi-head-.md)**  
@@ -3005,7 +3005,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：237  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：238  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3201,7 +3201,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：78  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：79  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -3269,7 +3269,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：319  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：320  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -3281,7 +3281,7 @@
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
-  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：82  
+  実装：[✓](https://github.com/tensorflow/lingvo/blob/master/lingvo/core/gpipe.py) ・ リポジトリ内被引用：83  
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
@@ -3311,7 +3311,7 @@
 ### 9年前（2017-11〜2018-10）
 
 - **2018-06 · [PipeDream: Generalized Pipeline Parallelism for DNN Training](2018-1806.03377-pipedream-generalized-pipeline-parallelism-for-dnn-training.md)**  
-  実装：✓ ・ リポジトリ内被引用：82  
+  実装：✓ ・ リポジトリ内被引用：83  
   DNNの連続層を複数GPUへ割り当て、異なるミニバッチの順伝播と逆伝播を交互に重ねる。層の計算・通信費用を測って段を自動分割し、順伝播時の重み版を逆伝播まで保持することで非同期実行の整合性を保つ。
 
 - **2018-02 · [Horovod: fast and easy distributed deep learning in TensorFlow](2018-1802.05799-horovod-fast-and-easy-distributed-deep-learning-in-tensorflow.md)**  
@@ -3325,7 +3325,7 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：304  
+  実装：✓ ・ リポジトリ内被引用：305  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-11〜2016-10）

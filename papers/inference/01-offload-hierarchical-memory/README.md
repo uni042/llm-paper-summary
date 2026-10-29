@@ -487,11 +487,11 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 3年前（2023-11〜2024-10）
 
 - **2023-12 · [PowerInfer: Fast Large Language Model Serving with a Consumer-grade GPU](2023-2312.12456-powerinfer.md)**  
-  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：149  
+  実装：[✓](https://github.com/SJTU-IPADS/PowerInfer) ・ リポジトリ内被引用：150  
   活性化頻度の高いニューロンをGPUへ常駐させ、低頻度ニューロンをCPUで疎計算するニューロン粒度のCPU-GPU協調推論基盤。
 
 - **2023-12 · [LLM in a flash: Efficient Large Language Model Inference with Limited Memory](2023-2312.11514-llm-in-a-flash-efficient-large-language-model-inference-with-limited-memory.md)**  
-  実装：✓ ・ リポジトリ内被引用：110  
+  実装：✓ ・ リポジトリ内被引用：111  
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
@@ -577,7 +577,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [ZeRO-Offload: Democratizing Billion-Scale Model Training](2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md)**  
-  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：23  
   ZeRO-Offloadは、巨大モデルの学習時に必要な状態をCPUとGPUへ分担させ、GPUメモリの制約を緩和しながら、低速なホスト–デバイス転送を抑える方式である。著者らはNVIDIA V100 32GB単体で130億パラメータのGPT型モデルを学習可能にし、標準PyTorchの14億に比べ9倍超の規模へ拡大した。
 
 - **2021-10 · [M6-10T: A Sharing-Delinking Paradigm for Efficient Multi-Trillion Parameter Pretraining](2021-2110.03888-m6-10t-a-sharing-delinking-paradigm-for-efficient-multi-trillion-paramet.md)**  
