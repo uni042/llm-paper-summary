@@ -81,7 +81,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-10 · [ProMoE: Fast MoE-based LLM Serving using Proactive Caching](2024-2410.22134-promoe-fast-moe-based-llm-serving-using-proactive-caching.md)**  
-  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：38  
+  実装：[✓](https://github.com/promoe-opensource/promoe) ・ リポジトリ内被引用：39  
   ProMoEは数層先のルーティングから必要な専門家を予測し、CPUからGPUへ分割転送する。誤予測を止め、到着済みから実行して、重み転送待ちを計算の裏に隠す。
 
 ### 4年前（2022-11〜2023-10）

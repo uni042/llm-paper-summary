@@ -1,36 +1,120 @@
 ---
-canonical_id: "DOI:10.1145/3712285.3759903"
-doi: "10.1145/3712285.3759903"
-title: "Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching"
-summary: "Diff-MoEはCPUに退避したMoE専門家をGPUへ読み込む際、層ごとの常駐高優先キャッシュ、短期再利用用の中優先キャッシュ、共有の一時低優先キャッシュを分ける。オフラインで大域的に頻出する専門家を固定し、オンラインの活性頻度から短期的に頻出する専門家を優先保存し、6層GRUで次のMoE層の専門家を予測して転送を重ねる。単一H200のSwitch-Base/Largeで、DeepSpeed-Offload比平均2.74倍、Pre-gated MoE比2.22倍、MoE-Infinity比1.55倍の処理量改善を報告。メモリ消費は他のオフロード方式より多い。"
-list_summary: "Diff-MoEは層別の固定・動的・一時キャッシュと専門家予測を組み合わせ、バッチ推論の専門家転送を減らしてDeepSpeed比平均2.74倍の処理量改善を報告する。"
+canonical_id: DOI:10.1145/3712285.3759903
+doi: 10.1145/3712285.3759903
+title: 'Diff-MoE: Efficient Batched MoE Inference with Priority-Driven Differential Expert Caching'
+summary: Diff-MoEはCPUに退避したMoE専門家をGPUへ読み込む際、層ごとの常駐高優先キャッシュ、短期再利用用の中優先キャッシュ、共有の一時低優先キャッシュを分ける。オフラインで大域的に頻出する専門家を固定し、オンラインの活性頻度から短期的に頻出する専門家を優先保存し、6層GRUで次のMoE層の専門家を予測して転送を重ねる。単一H200のSwitch-Base/Largeで、DeepSpeed-Offload比平均2.74倍、Pre-gated MoE比2.22倍、MoE-Infinity比1.55倍の処理量改善を報告。メモリ消費は他のオフロード方式より多い。
+list_summary: Diff-MoEは層別の固定・動的・一時キャッシュと専門家予測を組み合わせ、バッチ推論の専門家転送を減らしてDeepSpeed比平均2.74倍の処理量改善を報告する。
 authors:
-  - Kexin Li
-  - Wenkan Huang
-  - Qinggang Wang
-  - Long Zheng
-  - Xiaofei Liao
-  - Hai Jin
-  - Jingling Xue
-published: "2025-11"
-publication: "Proceedings of SC 2025, pp. 1951–1965 (November 2025)"
-publication_type: "peer-reviewed conference paper"
+- Kexin Li
+- Wenkan Huang
+- Qinggang Wang
+- Long Zheng
+- Xiaofei Liao
+- Hai Jin
+- Jingling Xue
+published: 2025-11
+publication: Proceedings of SC 2025, pp. 1951–1965 (November 2025)
+publication_type: peer-reviewed conference paper
 publication_status: published
-source: "https://doi.org/10.1145/3712285.3759903"
+source: https://doi.org/10.1145/3712285.3759903
 sources:
-  - "https://dl.acm.org/doi/pdf/10.1145/3712285.3759903"
-  - "https://dl.acm.org/doi/10.1145/3712285.3759903"
-implementation: "NVIDIA FasterTransformerを基盤とし、層別の専門家キャッシュとPyTorch 6層GRU予測器を実装。論文のArtifact Descriptionに再現用資産を記載するが、公式の恒久公開URLは本稿確認時点で未検証。"
+- https://dl.acm.org/doi/pdf/10.1145/3712285.3759903
+- https://dl.acm.org/doi/10.1145/3712285.3759903
+implementation: NVIDIA FasterTransformerを基盤とし、層別の専門家キャッシュとPyTorch 6層GRU予測器を実装。論文のArtifact Descriptionに再現用資産を記載するが、公式の恒久公開URLは本稿確認時点で未検証。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-30T01:48:00+09:00"
-worker_run_key: "20261030-0145-scheduled-chat-45/r01"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-30T01:48:00+09:00'
+worker_run_key: 20261030-0145-scheduled-chat-45/r01
 reference_main_sha: f58938feee07830ed68765a638cb207d03adecd1
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1109/sc41405.2020.00073
+  doi: 10.1109/sc41405.2020.00073
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.48550/arxiv.2210.11416
+  doi: 10.48550/arxiv.2210.11416
+- canonical_id: arXiv:1412.3555
+  arxiv_id: '1412.3555'
+- canonical_id: DOI:10.18653/v1/2024.acl-long.70
+  doi: 10.18653/v1/2024.acl-long.70
+- canonical_id: DOI:10.18653/v1/n19-1423
+  doi: 10.18653/v1/n19-1423
+- canonical_id: arXiv:2312.17238
+  doi: 10.48550/arxiv.2312.17238
+- canonical_id: arXiv:2502.06888
+  doi: 10.48550/arxiv.2502.06888
+- canonical_id: arXiv:2101.03961
+- canonical_id: arXiv:2502.17298
+  doi: 10.48550/arxiv.2502.17298
+- canonical_id: arXiv:2206.03382
+- canonical_id: DOI:10.1109/isca59077.2024.00078
+  doi: 10.1109/isca59077.2024.00078
+- canonical_id: DOI:10.48550/arxiv.2401.04088
+  doi: 10.48550/arxiv.2401.04088
+- canonical_id: arXiv:2402.07033
+  openreview_id: N5fVv6PZGz.
+- canonical_id: arXiv:1909.05858
+  arxiv_id: '1909.05858'
+- canonical_id: arXiv:2310.02410
+  doi: 10.48550/arxiv.2310.02410
+- canonical_id: arXiv:2006.16668
+  openreview_id: qrwe7XHTmYb.
+- canonical_id: DOI:10.18653/v1/2020.acl-main.703
+  doi: 10.18653/v1/2020.acl-main.703
+- canonical_id: DOI:10.1145/3649329.3656507
+  doi: 10.1145/3649329.3656507
+- canonical_id: arXiv:2402.14800
+  doi: 10.18653/v1/2024.acl-long.334
+- canonical_id: DOI:10.18653/v1/d18-1206
+  doi: 10.18653/v1/d18-1206
+- canonical_id: DOI:10.48550/arxiv.2303.08774
+  doi: 10.48550/arxiv.2303.08774
+- canonical_id: DOI:10.3390/info14040242
+  doi: 10.3390/info14040242
+- canonical_id: DOI:10.18653/v1/d16-1264
+  doi: 10.18653/v1/d16-1264
+- canonical_id: DOI:10.1162/tacl_a_00266
+  doi: 10.1162/tacl_a_00266
+- canonical_id: arXiv:1910.01108
+  arxiv_id: '1910.01108'
+- canonical_id: arXiv:1701.06538
+  openreview_id: B1ckMDqlg.
+- canonical_id: arXiv:2410.22134
+  doi: 10.48550/arxiv.2410.22134
+- canonical_id: DOI:10.1145/3649329.3655945
+  doi: 10.1145/3649329.3655945
+- canonical_id: DOI:10.1109/micro61859.2024.00040
+  doi: 10.1109/micro61859.2024.00040
+- canonical_id: DOI:10.1109/micro56248.2022.00088
+  doi: 10.1109/micro56248.2022.00088
+- canonical_id: DOI:10.1145/3431920.3439288
+  doi: 10.1145/3431920.3439288
+- canonical_id: DOI:10.1109/hpca53966.2022.00022
+  doi: 10.1109/hpca53966.2022.00022
+- canonical_id: DOI:10.1145/3390523
+  doi: 10.1145/3390523
+- canonical_id: DOI:10.1109/iccv48922.2021.00009
+  doi: 10.1109/iccv48922.2021.00009
+- canonical_id: DOI:10.1109/tpami.2023.3275156
+  doi: 10.1109/tpami.2023.3275156
+- canonical_id: arXiv:2401.14361
+  arxiv_id: '2401.14361'
+- canonical_id: arXiv:2411.01016
+  doi: 10.18653/v1/2024.findings-emnlp.612
+- canonical_id: arXiv:2205.10034
+  doi: 10.1109/tsc.2024.3399654
+- canonical_id: DOI:10.1109/micro61859.2024.00105
+  doi: 10.1109/micro61859.2024.00105
+- canonical_id: DOI:10.48550/arxiv.2402.14891
+  doi: 10.48550/arxiv.2402.14891
+references_checked_at: '2026-10-29'
+references_source: crossref-deposited-reference-metadata
+references_total: 57
 ---
 
 # Diff-MoE：大規模バッチでも専門家の局所性を保つ三段階GPUキャッシュと先読み
