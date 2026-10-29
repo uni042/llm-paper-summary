@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（780本）
+## 自動生成の論文一覧（783本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -598,6 +598,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   Maia 200はTSMC 3nmで製造した1400億超のトランジスタを持つSoCで、750Wの熱設計電力（TDP）の下、FP4で10,145 TFLOP/s、FP8で5,072 TFLOP/s、HBM3e帯域7 TiB/sを公称する。
 
+- **2026-08 · [Maglev: Sliding Recurrent Memory](2026-2608.02870-maglev-sliding-recurrent-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  435M規模、学習43.52Bトークン、最大系列長2048という制御された比較で、最良のQ/P分離パラメータ、整合損失重みλ=1は、通常の局所窓Transformerに対してFineWeb-Edu検証のビット/バイト（BPB）を0.7413から0.7251へ低下させ、下流精度平均を54.1から56.4へ改善した。
+
 - **2026-08 · [Learning What to Remember: Test-Time Training via Context Distillation](2026-2608.01672-learning-what-to-remember-test-time-training-via-context-distillation.md)**  
   実装：[✓](https://github.com/dangxingyu/ttcd) ・ リポジトリ内被引用：0  
   通常の全注意（full 注意機構）は長い履歴の情報を参照できる一方、長さに応じて注意計算と鍵・値（KV）キャッシュの費用が増える。760Mパラメータをゼロから学習したモデルのRULER針検索（6課題平均）では、32KトークンでIP-TTTの9.29%に対しIP-TTCDは21.96%。
@@ -785,6 +789,10 @@
 - **2026-06 · [Improving Visual Token Reduction via Rectifying Distortions for Efficient Multimodal LLM Inference](2026-2606.01711-improving-visual-token-reduction-via-rectifying-distortions-for-efficien.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚トークン削減（Visual Token Reduction; VTR）は不要なパッチを削除したり、似た特徴を統合したりして系列を短くする。LLaVA-1.5-7Bの8種類の画像理解課題で、視覚トークンを576個から64個へ減らすHoloVの平均保持率は92.2%だが、RESTOREを加えると96.5%になる。
+
+- **2026-06 · [HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models](2026-2606.23406-hyperquant-a-rate-distortion-optimal-quantization-pipeline-for-large-lan.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  重みの低ビット化とKVの低ビット化は別々の手法が発展してきたが、ビット幅を固定した符号化では、量子化後の符号分布が偏っていても同じ長さの符号を全要素へ割り当てるため、統計的な冗長性が残る。
 
 - **2026-06 · [Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving](2026-2606.20537-execution-state-capsules-graph-bound-execution-state-checkpoint-and-restore-for-low-latency-small-batch-on-device-physic.md)**  
   実装：[✓](https://github.com/flashrt-project/FlashRT) ・ リポジトリ内被引用：0  
@@ -1093,6 +1101,10 @@
 - **2026-04 · [TRIMS: Trajectory-Ranked Instruction Masked Supervision for Diffusion Language Models](2026-2604.00666-trims-trajectory-ranked-instruction-masked-supervision-for-diffusion-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   TRIMS（Trajectory-Ranked Instruction Masked Supervision）は、マスク拡散言語モデル（Masked Diffusion Language モデル; MDLM）の反復生成で、どのトークンを先に確定するかを学習中から誘導する方式である。
+
+- **2026-04 · [Towards Joint Quantization and Token Pruning of Vision-Language Models](2026-2604.17320-towards-joint-quantization-and-token-pruning-of-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は視覚言語モデル（VLM）の推論で、低ビット量子化と視覚トークン枝刈りを別々に設計すると品質が不安定になる問題を扱う。LLaVA-1.5-7B-hfで視覚トークンを最終30%まで削減した場合、6ベンチマークの完全精度モデルに対する平均性能保持率は95.65%だった。
 
 - **2026-04 · [Towards Faster Language Model Inference Using Mixture-of-Experts Flow Matching](2026-2604.15009-towards-faster-language-model-inference-using-mixture-of-experts-flow-ma.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

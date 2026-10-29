@@ -35,10 +35,15 @@
   "selection_reason": "KiTokeは動画VLMの視覚埋込み密度から冗長性を見積もり、逆密度サンプリングで稀な映像パターンを残し、時間区間内の未選択トークンを代表トークンへ集約する。追加学習なしで視覚prefillを高速化し実測速度を報告するためaccept。",
   "semantic_scholar_id": "45dc4b808d40b8c981365f246cebb955a2935001",
   "source_url": "https://arxiv.org/abs/2604.03414",
-  "status": "ready",
+  "status": "superseded",
   "title": "KiToke: Distribution-Aware Token Compression for Video Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T07:55:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2604.03414-kitoke-distribution-aware-token-compression-for-video-large-language-mod.md",
+  "represented_canonical_id": "arXiv:2604.03414",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

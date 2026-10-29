@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（108本）
+## 自動生成の論文一覧（109本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -213,6 +213,10 @@
 - **2026-04 · [On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks](2026-2604.20079-on-the-quantization-robustness-of-diffusion-language-models-in-coding-be.md)**  
   実装：[✓](https://github.com/zinichakraborty/Diffusion-LLM-Quantization-Robustness) ・ リポジトリ内被引用：0  
   推論用重みを低ビットで表す学習後量子化（post-学習 量子化; PTQ）はこの費用を減らす有力な方法だが、自己回帰型で得られた量子化の知見を拡散型へそのまま適用できるとは限らない。重要な留保として、混合精度実験は量子化を模擬しても重みを浮動小数点形式で保存する方式であり、低ビットの実物理容量削減を実測した結果ではない。
+
+- **2026-04 · [KiToke: Distribution-Aware Token Compression for Video Large Language Models](2026-2604.03414-kitoke-distribution-aware-token-compression-for-video-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  特に保持率1%など極端な条件では、複雑な既存手法が一様ランダム抽出より低い精度になることもある。
 
 - **2026-04 · [ID-Selection: Importance-Diversity Based Visual Token Selection for Efficient LVLM Inference](2026-2604.05601-id-selection-importance-diversity-based-visual-token-selection-for-effic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

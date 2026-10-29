@@ -35,10 +35,15 @@
   "selection_reason": "Maglevは全履歴を使うprefiller Qで作る記憶目標へ、sliding-window attentionとrecurrent KV注入のみを使うdecoder Pの状態を一致させる。推論ではP単体で固定サイズ記憶を維持し、長文脈生成の状態サイズとアクセス量を制限する新しい系列アーキテクチャとして関連する。",
   "semantic_scholar_id": "0668899c8671ad8b4cf50eba5d70da665efe18dd",
   "source_url": "https://arxiv.org/abs/2608.02870",
-  "status": "ready",
+  "status": "superseded",
   "title": "Maglev: Sliding Recurrent Memory",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T07:55:49+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.02870-maglev-sliding-recurrent-memory.md",
+  "represented_canonical_id": "arXiv:2608.02870",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
