@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（399本）
+## 自動生成の論文一覧（400本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -642,6 +642,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [SemKV: Semantic Mixed-Precision KV Cache Quantization Guided by the Quality Cliff for Long-Context LLM Inference](2026-2608.28911-semkv-semantic-mixed-precision-kv-cache-quantization-guided-by-the-quali.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   重要度の低いトークンを消す方式も、長文脈の回答に必要な証拠を失う恐れがある。SemKVは境界より安全側の2.322ビットと2.585ビットをトークンごとに混ぜ、平均2.39コードビット、充填とメタデータを含む実効2.65ビットで、FP16比6.0倍のKV保存量削減を実測した。
+
+- **2026-08 · [RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation](2026-2608.08684-ripplekv-cross-layer-kv-cache-allocation-via-perturbation-propagation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVキャッシュを圧縮する際には「各層でどのトークンを残すか」と「各層に何個残すか」という異なる問題がある。
 
 - **2026-08 · [PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression](2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

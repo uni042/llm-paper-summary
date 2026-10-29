@@ -35,10 +35,15 @@
   "selection_reason": "RippleKVは各層の値キャッシュへ規模調整済み摂動を注入し、出力分布のKL変化から層ごとの敏感度を測定してKV保存予算を配分する。LongBenchで同一KV予算の既存圧縮法より平均性能が高いと報告し、長文脈LLMの推論メモリ配分に直接該当する。",
   "semantic_scholar_id": "7f670a19f2d9279572bcd87034db19c7a267a491",
   "source_url": "https://arxiv.org/abs/2608.08684",
-  "status": "ready",
+  "status": "superseded",
   "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T02:59:42+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.08684-ripplekv-cross-layer-kv-cache-allocation-via-perturbation-propagation.md",
+  "represented_canonical_id": "arXiv:2608.08684",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
