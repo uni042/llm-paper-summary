@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T06:18:21.491085+00:00",
+  "generated_at": "2026-10-29T06:46:39.496805+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 7,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
-    "scheduled-chat-45": 1
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -117,6 +117,46 @@
         "method_chars": 1211,
         "evaluation_chars": 1643,
         "limitation_chars": 368
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md",
+      "canonical_id": "arXiv:2601.20745",
+      "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
+      "file_bytes": 14755,
+      "source_sha256": "634eb5452d97a358c989790a7294a98621721150f09c8284df7863e2b9f3ec01",
+      "source_git_blob_sha": "48c4663061b522d2368528b5523a00ec9c254b48",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.843098,
+      "quality_metrics": {
+        "body_chars": 4193,
+        "method_chars": 1238,
+        "evaluation_chars": 1214,
+        "limitation_chars": 385
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md",
+      "canonical_id": "arXiv:2610.07643",
+      "title": "Monte Carlo Estimation for KV Cache Eviction",
+      "file_bytes": 15536,
+      "source_sha256": "420a490ed8e9e4d1abe7e456f1eef7ff8e100c88a317ef2480c6c057bdc47ed4",
+      "source_git_blob_sha": "c955b01eb0c7197bdfac5164ffca6e9bda41409f",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.872832,
+      "quality_metrics": {
+        "body_chars": 5095,
+        "method_chars": 1137,
+        "evaluation_chars": 2004,
+        "limitation_chars": 340
       },
       "mechanical_failures": [],
       "warnings": []
