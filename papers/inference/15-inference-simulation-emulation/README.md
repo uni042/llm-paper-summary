@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（69本）
+## 自動生成の論文一覧（70本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -161,6 +161,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-04 · [RouteNLP: Closed-Loop LLM Routing with Conformal Cascading and Distillation Co-Optimization](2026-2604.23577-routenlp-closed-loop-llm-routing-with-conformal-cascading-and-distillati.md)**  
   実装：[✓](https://github.com/bettyguo/RouteNLP) ・ リポジトリ内被引用：0  
   提案方式は、タスク条件付きの難易度予測器、共形リスク制御で初期化した品質確認付きの段階的移行、失敗した問い合わせを分類して小型モデルを再蒸留する閉ループという三つの機構を連結する。8週間・1日約5,000件の顧客サービス試験運用では、費用58%削減、専門家による応答受理率91%を報告した。
+
+- **2026-04 · [DeepStack: Facilitating Co-Design Exploration of 3D DRAM-Stacked Accelerators for Distributed LLM Inference](2026-2604.04750-deepstack-facilitating-co-design-exploration-of-3d-dram-stacked-accelera.md)**  
+  実装：[✓](https://github.com/tile-ai/DeepStack/tree/ae) ・ リポジトリ内被引用：0  
+  本論文は、3D積層DRAMを計算ダイの近傍に接続したAIアクセラレータを複数台組み合わせる際、チップ設計とLLMの分散実行計画を別々に最適化すると誤った設計を選ぶという問題に取り組む。重要なのは「高速な新GPUを実際に製造して推論が9.5倍になった」研究ではない点である。
 
 - **2026-04 · [CodeQuant: Unified Clustering and Quantization for Enhanced Outlier Smoothing in Low-Precision Mixture-of-Experts](2026-2604.10496-codequant-unified-clustering-and-quantization-for-enhanced-outlier-smoot.md)**  
   実装：[✓](https://github.com/SAI-Lab-NYU/CodeQuant) ・ リポジトリ内被引用：0  

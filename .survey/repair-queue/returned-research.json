@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T22:12:07+00:00",
+  "generated_at": "2026-10-29T22:36:11+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1935,34 +1935,6 @@
       "worker_run_key": "20261029-2340-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2509.25155",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T19:29:53+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5858,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1159,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9aa2da5192448191b7d2e37062cb3709--2025-2509.25155-npu-causal-operator-bottleneck-research-20261030-0200-scheduled-chat-30-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_9aa2da5192448191b7d2e37062cb3709--2025-2509.25155-npu-causal-operator-bottleneck-research-20261030-0200-scheduled-chat-30-r02.json",
-      "worker_run_key": "20261030-0200-scheduled-chat-30/r02"
-    },
-    {
       "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
       "title": null,
       "source_url": null,
@@ -2043,34 +2015,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_35885cf33c0081919d4fea4d64f6323c--2026-2605.10875-sol-tokenwise-compute-budget-policy-quality-repair-20261030-0350-scheduled-chat-45-r04.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_35885cf33c0081919d4fea4d64f6323c--2026-2605.10875-sol-tokenwise-compute-budget-policy-quality-repair-20261030-0350-scheduled-chat-45-r04.json",
-      "worker_run_key": "20261030-0350-scheduled-chat-45/r04"
-    },
-    {
-      "canonical_id": "arXiv:2606.29223",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T20:25:45+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 112 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5899,
-        "body_paragraphs": 33,
-        "method_chars": 1988,
-        "method_paragraphs": 10,
-        "evaluation_chars": 112,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 112 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4b54ef2d54d4819183d07657db99b3ea--2026-2606.29223-dex-depth-exploration-decoding-quality-repair-20261030-0350-scheduled-chat-45-r04.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4b54ef2d54d4819183d07657db99b3ea--2026-2606.29223-dex-depth-exploration-decoding-quality-repair-20261030-0350-scheduled-chat-45-r04.json",
       "worker_run_key": "20261030-0350-scheduled-chat-45/r04"
     },
     {
@@ -2211,8 +2155,8 @@
     },
     {
       "canonical_id": "arXiv:2604.07874",
-      "title": "Valve: Production Online-Offline Inference Colocation with Jointly-Bounded Preemption Latency and Rate",
-      "source_url": "https://arxiv.org/html/2604.07874",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T22:08:57+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2235,6 +2179,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_92db80f5e04881919cffd2ba2000883d--2026-2604.07874-valve-online-offline-gpu-colocation-provenance-repair-20261030-0350-scheduled-chat-45-r03.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_92db80f5e04881919cffd2ba2000883d--2026-2604.07874-valve-online-offline-gpu-colocation-provenance-repair-20261030-0350-scheduled-chat-45-r03.json",
       "worker_run_key": "20261030-0350-scheduled-chat-45/r03"
+    },
+    {
+      "canonical_id": "arXiv:2509.25155",
+      "title": "Context-Driven Performance Modeling for Causal Inference Operators on Neural Processing Units",
+      "source_url": "https://arxiv.org/pdf/2509.25155",
+      "returned_at": "2026-10-29T22:32:50+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5555,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9d3cbe3dd93c8191986bdbd941cb6ba4--2025-2509.25155-context-driven-npu-causal-operators-research-20261030-0358-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9d3cbe3dd93c8191986bdbd941cb6ba4--2025-2509.25155-context-driven-npu-causal-operators-research-20261030-0358-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.14277",
+      "title": "Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct",
+      "source_url": "https://arxiv.org/html/2601.14277v1",
+      "returned_at": "2026-10-29T22:32:52+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5949,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1661,
+        "limitation_chars": 820,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.json",
+      "worker_run_key": "20261030-0630-scheduled-chat-30/r02"
     }
   ]
 }

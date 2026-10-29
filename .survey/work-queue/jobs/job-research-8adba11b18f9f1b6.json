@@ -35,10 +35,15 @@
   "selection_reason": "DEXは一つの早期終了層だけを選ぶ方式に代え、複数深さの候補を並列探索し、最終層のトークンで検証して探索格子を縮退する。標準自己回帰出力と等価なトークンを確定しつつ層計算を再利用するため、LLMデコード実行時間の直接最適化。",
   "semantic_scholar_id": "00ff10c39d22a06ab5fc92e34231e242046e0021",
   "source_url": "https://arxiv.org/abs/2606.29223",
-  "status": "ready",
+  "status": "superseded",
   "title": "Depth Exploration for LLM Decoding",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T22:36:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.29223-depth-exploration-for-llm-decoding.md",
+  "represented_canonical_id": "arXiv:2606.29223",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

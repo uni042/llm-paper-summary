@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（820本）
+## 自動生成の論文一覧（822本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -909,6 +909,10 @@
 - **2026-06 · [Do Value Vectors in Deep Layers Need Context from the Residual Stream?](2026-2606.02780-do-value-vectors-in-deep-layers-need-context-from-the-residual-stream.md)**  
   実装：[✓](https://github.com/RiddleHe/nanochat) ・ リポジトリ内被引用：0  
   通常の自己注意（self-注意機構）は、各層の残差ストリームから問い合わせベクトル（Query）、鍵ベクトル（Key）、値ベクトル（Value）を計算する。結果として、深い層では元のトークン自体の情報から作った値だけを用いる方が、標準の文脈依存値より良い検証損失を示した。
+
+- **2026-06 · [Depth Exploration for LLM Decoding](2026-2606.29223-depth-exploration-for-llm-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この一択の難しさを著者らは「選択ボトルネック」と捉える。各深度区間を別のGPUへ割り当て、候補トークンとその先の計算を分岐させておき、最終深度の予測を基準に正しいトークンを確定する。提案は中間出口の予測精度を無条件に信じるのではなく、最終モデルの確定結果だけを外部へ出すため、通常の自己回帰生成との同一性を維持する設計である。
 
 - **2026-06 · [Communication-Efficient Verifiable Attention for LLM Inference](2026-2606.16352-communication-efficient-verifiable-attention-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3103,6 +3107,10 @@
 - **2023-07 · [DPBERT: Efficient Inference for BERT based on Dynamic Planning](2023-2308.00108-dpbert-efficient-inference-for-bert-based-on-dynamic-planning.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DPBERTは、BERT-baseの12個のTransformer層をすべて通すのではなく、入力ごとに実行すべき層の部分列を決めることで推論遅延を削減する。従来のearly exitでは、途中の層で最終分類を確定すると、それより上の層をまとめて省略する。そのため下位・中間層を残したまま上位だけを削る選択に限定される。
+
+- **2023-07 · [CA-LoRA: Adapting Existing LoRA for Compressed LLMs to Enable Efficient Multi-Tasking on Personal Devices](2023-2307.07705-ca-lora-adapting-existing-lora-for-compressed-llms-to-enable-efficient-m.md)**  
+  実装：[✓](https://github.com/thunlp/CA-LoRA) ・ リポジトリ内被引用：0  
+  CA-LoRAは非圧縮LLM上で学習済みのLoRAを圧縮モデルへ移植する際、元LoRAを初期値として継承し、非線形低ランクの回復モジュールを加え、非圧縮モデル＋LoRAを教師として蒸留する。T5-3Bを量子化・枝刈り・MoEficationで5.61GBから0.94GBへ圧縮した実験では、RTEが通常LoRAの82.9%からCA-LoRAの84.3%へ改善。
 
 - **2023-06 · [A Probabilistic Framework for Pruning Transformers Via a Finite Admixture of Keys](2023-dc4a5089a5f8-a-probabilistic-framework-for-pruning-transformers-via-a-finite-admixtur.md)**  
   実装：[✓](https://github.com/Fsoft-AIC/FiAKFormer) ・ リポジトリ内被引用：0  
