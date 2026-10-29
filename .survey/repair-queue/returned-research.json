@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T01:08:38+00:00",
+  "generated_at": "2026-10-29T01:18:16+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 74,
+  "count": 75,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1821,61 +1821,6 @@
       "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2607.27694",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T00:52:52+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5674,
-        "body_paragraphs": 30,
-        "method_chars": 1682,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 560,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.18103",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T00:52:54+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5770,
-        "body_paragraphs": 31,
-        "method_chars": 1355,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2512.12284",
       "title": null,
       "source_url": null,
@@ -1903,36 +1848,9 @@
       "worker_run_key": "20261029-0845-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2604.07888",
-      "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
-      "source_url": "https://arxiv.org/pdf/2604.07888",
-      "returned_at": "2026-10-29T01:04:25+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5718,
-        "body_paragraphs": 32,
-        "method_chars": 1837,
-        "method_paragraphs": 11,
-        "evaluation_chars": 0,
-        "limitation_chars": 545,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_af897ab774ec81918b90216f11d964c4--2026-2604.07888-bit-by-bit-progressive-qat-research-20261029-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_af897ab774ec81918b90216f11d964c4--2026-2604.07888-bit-by-bit-progressive-qat-research-20261029-0900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2602.22575",
-      "title": "S2O: Early Stopping for Sparse Attention via Online Permutation",
-      "source_url": "https://arxiv.org/pdf/2602.22575",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T01:06:44+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -1955,6 +1873,115 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c926285d0f7881919f6c771622efb2b3--2026-2602.22575-s2o-online-permutation-sparse-attention-research-20261029-0803-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c926285d0f7881919f6c771622efb2b3--2026-2602.22575-s2o-online-permutation-sparse-attention-research-20261029-0803-scheduled-chat-00-r01.json",
       "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.16514",
+      "title": "FleetOpt: Analytical Fleet Provisioning for LLM Inference with Compress-and-Route as Implementation Mechanism",
+      "source_url": "https://arxiv.org/abs/2603.16514",
+      "returned_at": "2026-10-29T01:17:12+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5624,
+        "body_paragraphs": 31,
+        "method_chars": 1556,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 676,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ed45552ae3408191bfdbb2d4961290f0--2026-2603.16514-fleetopt-gpu-fleet-provisioning-research-20261029-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_ed45552ae3408191bfdbb2d4961290f0--2026-2603.16514-fleetopt-gpu-fleet-provisioning-research-20261029-0900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.18103",
+      "title": "Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling",
+      "source_url": "https://arxiv.org/pdf/2604.18103",
+      "returned_at": "2026-10-29T01:17:13+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5770,
+        "body_paragraphs": 31,
+        "method_chars": 1355,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0d7fb6d3bf36--libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-0d7fb6d3bf36--libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-c.json",
+      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.27694",
+      "title": "GyRot: Leveraging Hidden Synergy between Rotation and Fine-grained Group Quantization for Low-bit LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2607.27694",
+      "returned_at": "2026-10-29T01:17:14+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5674,
+        "body_paragraphs": 30,
+        "method_chars": 1682,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 560,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7a68d704ad4a--libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7a68d704ad4a--libfile_0843c896a3b48191b58ee47b02b3a705--2026-2607.27694-gyrot-rotation-group-quantization-research-20261029-0900-scheduled-chat-0.json",
+      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.07888",
+      "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
+      "source_url": "https://arxiv.org/pdf/2604.07888",
+      "returned_at": "2026-10-29T01:17:15+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5718,
+        "body_paragraphs": 32,
+        "method_chars": 1837,
+        "method_paragraphs": 11,
+        "evaluation_chars": 0,
+        "limitation_chars": 545,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f17d1294613--libfile_af897ab774ec81918b90216f11d964c4--2026-2604.07888-bit-by-bit-progressive-qat-research-20261029-0900-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8f17d1294613--libfile_af897ab774ec81918b90216f11d964c4--2026-2604.07888-bit-by-bit-progressive-qat-research-20261029-0900-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
     }
   ]
 }

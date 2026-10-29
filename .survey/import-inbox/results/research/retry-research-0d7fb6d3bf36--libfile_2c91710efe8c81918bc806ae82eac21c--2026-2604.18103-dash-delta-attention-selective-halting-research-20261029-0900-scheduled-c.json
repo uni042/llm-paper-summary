@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "f53bab0e51bec7deb1b0f96299e97ee6bb8ee32645dbea8752190e08ce166b7a",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0d7fb6d3bf36--libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2604.18103",
+  "worker_completed_at": "2026-10-29T09:05:10+09:00",
+  "worker_run_key": "20261029-0900-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5770,
+    "body_paragraphs": 31,
+    "method_chars": 1355,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-29T01:17:13+00:00"
+}

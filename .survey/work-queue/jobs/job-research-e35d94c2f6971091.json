@@ -35,10 +35,15 @@
   "selection_reason": "DyLLMは拡散LLMの反復ノイズ除去で前回から変化しないトークンが多い点に着目し、隣接ステップの注意文脈のコサイン類似度で重要トークンを選び、その他の活性を再利用する。FFN・注意の部分再計算で拡散推論スループットを高めるためaccept。",
   "semantic_scholar_id": "34670f5b536811c2ce1afd3a340c3f6d82a70e03",
   "source_url": "https://arxiv.org/abs/2603.08026",
-  "status": "ready",
+  "status": "superseded",
   "title": "DyLLM: Efficient Diffusion LLM Inference via Saliency-based Token Selection and Partial Attention",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T01:18:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-2603.08026-dyllm-efficient-diffusion-llm-inference-via-saliency-based-token-selecti.md",
+  "represented_canonical_id": "arXiv:2603.08026",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
