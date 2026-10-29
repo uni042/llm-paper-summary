@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T15:54:14+00:00",
+  "generated_at": "2026-10-29T16:02:51+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2046,65 +2046,11 @@
       "worker_run_key": "20261029-2258-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.33746",
-      "title": "PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention",
-      "source_url": "https://arxiv.org/abs/2609.33746",
-      "returned_at": "2026-10-29T15:51:57+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 156 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6087,
-        "body_paragraphs": 30,
-        "method_chars": 1470,
-        "method_paragraphs": 7,
-        "evaluation_chars": 156,
-        "limitation_chars": 822,
-        "insufficiency_flags": [
-          "評価説明量 156 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_038e729ae960819181372d59f32ead07--2026-2609.33746-pqhsa-hybrid-sparse-approximate-attention-research-20261029-2340-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_038e729ae960819181372d59f32ead07--2026-2609.33746-pqhsa-hybrid-sparse-approximate-attention-research-20261029-2340-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261029-2340-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1613/jair.1.13896",
-      "title": "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer",
-      "source_url": "https://www.jair.org/index.php/jair/article/view/13896",
-      "returned_at": "2026-10-29T15:52:48+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 601 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5110,
-        "body_paragraphs": 28,
-        "method_chars": 601,
-        "method_paragraphs": 4,
-        "evaluation_chars": 2207,
-        "limitation_chars": 541,
-        "insufficiency_flags": [
-          "手法説明量 601 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ac1cd60e6c6081918d6ec2170a965370--2022-doi-10.1613-jair.1.13896-aanplus-returned-heading-repair-20261029-2356-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ac1cd60e6c6081918d6ec2170a965370--2022-doi-10.1613-jair.1.13896-aanplus-returned-heading-repair-20261029-2356-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261029-2356-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.33135",
       "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
       "source_url": "https://arxiv.org/abs/2609.33135",
-      "returned_at": "2026-10-29T15:52:50+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-29T16:02:47+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2122,9 +2068,63 @@
           "評価説明量 232 < 500"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_afd2096e97648191930c7b4fb3b41da9--2026-2609.33135-mpfa-qk4pv8-blackwell-attention-research-20261029-2340-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_afd2096e97648191930c7b4fb3b41da9--2026-2609.33135-mpfa-qk4pv8-blackwell-attention-research-20261029-2340-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f603dc2f16a--libfile_afd2096e97648191930c7b4fb3b41da9--2026-2609.33135-mpfa-qk4pv8-blackwell-attention-research-20261029-2340-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f603dc2f16a--libfile_afd2096e97648191930c7b4fb3b41da9--2026-2609.33135-mpfa-qk4pv8-blackwell-attention-research-20261029-2340-scheduled-chat-45-.json",
       "worker_run_key": "20261029-2340-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.33746",
+      "title": "PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention",
+      "source_url": "https://arxiv.org/abs/2609.33746",
+      "returned_at": "2026-10-29T16:02:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 156 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6087,
+        "body_paragraphs": 30,
+        "method_chars": 1470,
+        "method_paragraphs": 7,
+        "evaluation_chars": 156,
+        "limitation_chars": 822,
+        "insufficiency_flags": [
+          "評価説明量 156 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-87748553b4f2--libfile_038e729ae960819181372d59f32ead07--2026-2609.33746-pqhsa-hybrid-sparse-approximate-attention-research-20261029-2340-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-87748553b4f2--libfile_038e729ae960819181372d59f32ead07--2026-2609.33746-pqhsa-hybrid-sparse-approximate-attention-research-20261029-2340-schedule.json",
+      "worker_run_key": "20261029-2340-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1613/jair.1.13896",
+      "title": "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer",
+      "source_url": "https://www.jair.org/index.php/jair/article/view/13896",
+      "returned_at": "2026-10-29T16:02:50+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 601 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5110,
+        "body_paragraphs": 28,
+        "method_chars": 601,
+        "method_paragraphs": 4,
+        "evaluation_chars": 2207,
+        "limitation_chars": 541,
+        "insufficiency_flags": [
+          "手法説明量 601 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-929213273b20--libfile_ac1cd60e6c6081918d6ec2170a965370--2022-doi-10.1613-jair.1.13896-aanplus-returned-heading-repair-20261029-2356-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-929213273b20--libfile_ac1cd60e6c6081918d6ec2170a965370--2022-doi-10.1613-jair.1.13896-aanplus-returned-heading-repair-20261029-2356-scheduled-cha.json",
+      "worker_run_key": "20261029-2356-scheduled-chat-00/r01"
     }
   ]
 }
