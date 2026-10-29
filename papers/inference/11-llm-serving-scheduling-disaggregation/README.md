@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（515本）
+## 自動生成の論文一覧（516本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1149,6 +1149,10 @@
 - **2025-12 · [xGR: Efficient Generative Recommendation Serving at Scale](2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の対話型LLMとは異なり、入力は数百〜数千トークンと長い一方、出力は商品を表す数個のトークンに限られる。著者は注意演算子xAttention、探索アルゴリズムxBeam、実行管理xScheduleの三つをxLLM上に統合する。
+
+- **2025-12 · [SpaceServe: Spatial Multiplexing of Complementary Encoders and Decoders for Multimodal LLMs](2025-b801ff7cdf66-spaceserve-spatial-multiplexing-of-complementary-encoders-and-decoders-f.md)**  
+  実装：[✓](https://github.com/gofreelee/SpaceServe) ・ リポジトリ内被引用：0  
+  画像エンコーダは大きな行列演算を行う計算律速、デコーダの1トークン生成は重み・KVキャッシュの読み込みが支配的なメモリ律速になりやすい。SMを何基ずつ割り当てるかはオフラインの演算子プロファイルから作る資源効用曲線に基づき、要求の画像解像度・入力長・負荷に応じてオンラインで変える。
 
 - **2025-12 · [ProServe: Unified Multi-Priority Request Scheduling for LLM Serving](2025-2512.12928-proserve-unified-multi-priority-request-scheduling-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

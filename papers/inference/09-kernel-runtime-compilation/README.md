@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（212本）
+## 自動生成の論文一覧（213本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -639,6 +639,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-09 · [Optimal Brain Restoration for Joint Quantization and Sparsification of LLMs](2025-2509.11177-optimal-brain-restoration-for-joint-quantization-and-sparsification-of-l.md)**  
   実装：[✓](https://github.com/cshguo/OBR) ・ リポジトリ内被引用：0  
   本論文は2025年9月公開のarXivプレプリントで、低ビット量子化と枝刈りを同時に適用する大規模言語モデルの圧縮を扱う。対象はLlama2、Llama3、Qwen2.5系列であり、重み4ビット・活性4ビット・KVキャッシュ4ビット（W4A4KV4）と50%の疎性を組み合わせることを主な目標とする。
+
+- **2025-09 · [CoSpaDi: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning](2025-2509.22075-cospadi-compressing-llms-via-calibration-guided-sparse-dictionary-learni.md)**  
+  実装：[✓](https://github.com/mts-ai/CoSpaDi) ・ リポジトリ内被引用：0  
+  異なる出力チャネルが異なる特徴を必要とする場合、この共通部分空間の制約が圧縮品質を損なう。LLaMA-3.2-1Bの20%圧縮率では、SVD-LLMの平均ゼロショット精度37.6%に対してCoSpaDiは42.7%で、WikiText PPLは約170から64へ低下した。
 
 - **2025-08 · [FlexQ: Efficient Post-training INT6 Quantization for LLM Serving via Algorithm-System Co-Design](2025-2508.04405-flexq-efficient-post-training-int6-quantization-for-llm-serving-via-algo.md)**  
   実装：[✓](https://github.com/FlyFoxPlayer/FlexQ) ・ リポジトリ内被引用：0  

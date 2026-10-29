@@ -35,10 +35,15 @@
   "selection_reason": "NPFTは量子化ノイズに敏感な外れ値重みを高精度のまま残す代わりに、外れ値への摂動を加えたパラメータ効率微調整で損失Hessianの感度を下げる。混合精度ハードウェア実装の複雑化を避けるLLM量子化の準備方式。",
   "semantic_scholar_id": "f342d143540377d6b167200bc3f22586e9f91f47",
   "source_url": "https://arxiv.org/abs/2412.06858",
-  "status": "ready",
+  "status": "superseded",
   "title": "Taming Sensitive Weights : Noise Perturbation Fine-tuning for Robust LLM Quantization",
   "type": "research",
   "venue": "CPAL",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-29T19:09:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2412.06858-taming-sensitive-weights-noise-perturbation-fine-tuning-for-robust-llm-q.md",
+  "represented_canonical_id": "arXiv:2412.06858",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

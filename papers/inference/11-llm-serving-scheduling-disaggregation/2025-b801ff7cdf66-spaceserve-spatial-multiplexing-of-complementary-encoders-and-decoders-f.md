@@ -37,6 +37,8 @@ quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 identity_warning: "Worklist DOI:10.1145/3695053.3730987 resolves to unrelated ISCA paper AIM. This summary uses NeurIPS official PDF and normalized title identity; GitHub import inbox should resolve canonical identity."
 worker_completed_at: "2026-10-30T02:52:00+09:00"
 metadata_repair_source: "https://proceedings.neurips.cc/paper_files/paper/2025/hash/720e7ebc49c84252abc0754dddf80976-Abstract-Conference.html"
+last_audited: null
+audit_version: 0
 ---
 
 # SpaceServe：視覚エンコーダとLLMデコーダをGPU内で空間多重化するサービング方式

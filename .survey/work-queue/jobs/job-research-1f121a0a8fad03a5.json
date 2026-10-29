@@ -35,10 +35,15 @@
   "selection_reason": "CoSpaDiはLLM重み行列を辞書と列疎係数へ分解し、校正活性から機能誤差を考慮した疎辞書学習を行う。LLaMA・Qwenの20～40%圧縮率で低ランク分解や構造化剪定より精度・PPLのトレードオフを改善し、LLM重み圧縮に直接寄与する。",
   "semantic_scholar_id": "311a78b1ae1d4f7011e39ca569bcd27975049216",
   "source_url": "https://arxiv.org/abs/2509.22075",
-  "status": "ready",
+  "status": "superseded",
   "title": "COSPADI: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T19:09:25+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2509.22075-cospadi-compressing-llms-via-calibration-guided-sparse-dictionary-learni.md",
+  "represented_canonical_id": "arXiv:2509.22075",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
