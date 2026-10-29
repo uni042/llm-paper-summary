@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-0530-scheduled-chat-30/r01/prescreen-45",
+  "reference_main_sha": "ce75ddc9981c8fe59326b873d726226520d90ed3",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.08654",
+      "identity_tokens": [
+        "arxiv:2605.08654",
+        "2605.08654"
+      ],
+      "title": "On the multipliers of a Singer quadrangle",
+      "reason": "Singer四角形の乗数に関する組合せ数学の研究で、LLMの実行・推論・メモリ管理ではない。 worklistのタイトルと一次arXiv書誌が不一致のため、実際の一次書誌を採用して誤ったResearch作成を回避。",
+      "source_url": "https://arxiv.org/abs/2605.08654",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-30T05:38:00+09:00",
+      "last_checked_at": "2026-10-30T05:38:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 45
+    }
+  ]
+}
