@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-29T05:55:49.198590+00:00",
-  "status": "passed",
+  "checked_at": "2026-10-29T06:17:15.771367+00:00",
+  "status": "issues_found",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 65808,
-  "checked_file_count": 65808,
+  "inventory_file_count": 65824,
+  "checked_file_count": 65824,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -26,6 +26,12 @@
     "Scheduler startup guarantees",
     "Runtime execution of arbitrary repository code"
   ],
-  "external_url_count": 4275,
-  "findings": []
+  "external_url_count": 4281,
+  "findings": [
+    {
+      "code": "broken_local_link",
+      "path": ".survey/import-inbox/pending/research/libfile_9cd5ca4547588191b1d0a2aaef52f089--2026-2602.11958-ramnet-sparse-addressed-recurrent-state-research-20261029-1430-scheduled-chat-30-r01.md",
+      "detail": "v_t−s_(t−1"
+    }
+  ]
 }
