@@ -170,6 +170,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   実装：✓ ・ リポジトリ内被引用：2  
   RAGの共有接頭辞KVをDRAM・SSDへ階層保存し、待機列を使う先読みLRU、層単位の転送・計算重畳、SSD→DRAMプリフェッチで再利用待ちを隠し、平均TTFTを最大2.47倍高速化する。
 
+- **2026-02 · [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)**  
+  実装：[✓](https://github.com/amy-77/ParisKV) ・ リポジトリ内被引用：2  
+  長文脈の大規模言語モデル（LLM）では、生成が進むほど過去の鍵・値（KV）キャッシュが長くなり、全ての過去KVを毎ステップ読み込む注意計算が帯域と容量を圧迫する。過去KVの大部分をCPU主記憶へ退避し、現在の問い合わせに重要な上位k件だけを読み込めば、GPUの高帯域メモリを節約できる。
+
 - **2025-12 · [Sim-LLM: Optimizing LLM Inference at the Edge through Inter-Task KV Reuse](2025-5e060858489e-sim-llm-optimizing-llm-inference-at-the-edge-through-inter-task-kv-reuse.md)**  
   実装：[✓](https://github.com/CGCL-codes/SimLLM) ・ リポジトリ内被引用：2  
   キー・値キャッシュ（KV キャッシュ）は、一つの生成要求の過去トークンを再計算しないための標準的な手段だが、通常は要求をまたいでキャッシュを共有しない。従来のH2OやStreamingLLMは同一要求内の重要トークンを選び、ZipCacheは保存数値を圧縮するが、異なる要求の意味的な重複を直接利用しない。
@@ -241,10 +245,6 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-03 · [InfoFlow KV: Information-Flow-Aware KV Recomputation for Long Context](2026-2603.05353-infoflow-kv-information-flow-aware-kv-recomputation-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   InfoFlow KVは、文書単位で事前計算したキー・バリュー（Key-Value; KV）キャッシュを再利用する長文脈の検索拡張生成（Retrieval-Augmented Generation; RAG）で、問い合わせから文脈への注意質量を使って再計算すべきトークンを選ぶ。
-
-- **2026-02 · [ParisKV: Fast and Drift-Robust KV-Cache Retrieval for Long-Context LLMs](2026-2602.07721-pariskv-fast-drift-robust-kv-cache-retrieval.md)**  
-  実装：[✓](https://github.com/amy-77/ParisKV) ・ リポジトリ内被引用：1  
-  長文脈の大規模言語モデル（LLM）では、生成が進むほど過去の鍵・値（KV）キャッシュが長くなり、全ての過去KVを毎ステップ読み込む注意計算が帯域と容量を圧迫する。過去KVの大部分をCPU主記憶へ退避し、現在の問い合わせに重要な上位k件だけを読み込めば、GPUの高帯域メモリを節約できる。
 
 - **2026-02 · [PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System](2026-2602.11521-pam-processing-across-memory.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -379,7 +379,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   文書ごとの事前計算済み鍵・値キャッシュを位置再符号化と学習可能リンクトークンで安全に連結し、再計算を避けながら精度低下を抑える長文脈推論方式。
 
 - **2025-05 · [RetroInfer: A Vector Storage Engine for Scalable Long-Context LLM Inference](2026-vldb-retroinfer-vector-storage-engine-scalable-long-context-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：23  
+  実装：✓ ・ リポジトリ内被引用：24  
   RetroInferはCPU上のKVをベクトル索引で検索し、注意に重要なトークンだけGPUへ取り出して、全KV走査の容量・帯域を減らしつつ検索近似誤差を抑える方式。
 
 - **2025-04 · [OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs](2025-6264cfc484ad-omnikv-dynamic-context-selection-for-efficient-long-context-llms.md)**  
@@ -489,7 +489,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
   複数要求で再利用されるプロンプト断片のKV状態をモジュール単位で事前計算し、位置整合を保って合成することで初回トークン遅延を削減する。
 
 - **2024-10 · [ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference](2024-2410.21465-shadowkv-low-rank-key-value-offload.md)**  
-  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：102  
+  実装：[✓](https://github.com/ByteDance-Seed/ShadowKV) ・ リポジトリ内被引用：103  
   ShadowKVはキーを低ランク要約と代表値としてGPUに残し、値だけCPUへ置いて重要チャンクの値を選択転送し、長文KVの容量とPCIe転送量を減らす方式。
 
 - **2024-03 · [FastDecode: High-Throughput GPU-Efficient LLM Serving using Heterogeneous Pipelines](2024-2403.11421-fastdecode-high-throughput-gpu-efficient-llm-serving-using-heterogeneous-pipelines.md)**  

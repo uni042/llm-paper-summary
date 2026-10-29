@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-29T16:52:30+00:00",
+  "checked_at": "2026-10-29T17:23:04+00:00",
   "summary": {
-    "total": 3672,
-    "complete": 3652,
-    "incomplete": 20
+    "total": 3677,
+    "complete": 3653,
+    "incomplete": 24
   },
   "families": {
     "inference": {
-      "total": 3633,
-      "complete": 3613
+      "total": 3638,
+      "complete": 3614
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-bfd3ce93bf5b-probe-and-fetch-dynamic-kv-cache-pruning-for-accelerated-long-context-in.md",
+      "canonical_id": "DOI:10.1145/3774904.3792794",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
@@ -53,8 +58,23 @@
       "reason": "missing structured reference audit metadata"
     },
     {
+      "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
+      "canonical_id": "DOI:10.1145/3816440.3818602",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-f103beecee83-resource-efficient-algorithms-and-systems-of-foundation-models-a-survey.md",
       "canonical_id": "DOI:10.1145/3706418",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md",
+      "canonical_id": "DOI:10.32604/cmc.2026.078985",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2022-ffa88b154f4f-aan-generalized-average-attention-network-for-accelerating-neural-transf.md",
+      "canonical_id": "DOI:10.1613/jair.1.13896",
       "reason": "missing structured reference audit metadata"
     },
     {
