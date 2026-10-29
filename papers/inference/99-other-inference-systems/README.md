@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（772本）
+## 自動生成の論文一覧（775本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -950,6 +950,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   MARR（Module-適応的 Residual Reconstruction）は、学習済みモデルを追加学習せず低ビットへ変換する学習後量子化（post-学習 量子化; PTQ）で、層をまたぐ量子化誤差の補正を強めすぎないための方法である。
 
+- **2026-05 · [LoopQ: Quantization for Looped Language Models](2026-2605.16343-loopq-quantization-for-looped-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の事後量子化（PTQ）は同一重みに同じ変換行列と尺度を適用し続けるため、周回ごとに活性化の大きさ・方向が変わると丸め誤差やクリッピングが生じる。W4A4条件で4バックボーンの5課題平均正答率は静的PTQ最良比較方式に対して相対平均67.8%改善し、8つのバックボーン×データセット条件のPPL相対減少は下限代入による保守的平均75.2%と報告した。
+
 - **2026-05 · [LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding](2026-2605.27365-locateanything-fast-and-high-quality-vision-language-grounding-with-para.md)**  
   実装：[✓](https://github.com/NVlabs/Eagle/tree/main/Embodied) ・ リポジトリ内被引用：0  
   各矩形を、四つの量子化座標と構造トークンからなる長さ6のブロックで表し、ブロック内部は同時に予測する。
@@ -1285,6 +1289,10 @@
 - **2026-03 · [LooComp: Leverage Leave-One-Out Strategy to Encoder-only Transformer for Efficient Query-aware Context Compression](2026-2603.09222-loocomp-leverage-leave-one-out-strategy-to-encoder-only-transformer-for-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   しかし検索件数を増やすと、無関係な文章も入力され、事前充填の計算量、入力トークン費用、モデルの注意の分散が問題になる。生成型の圧縮器は文書を短い文章へ書き換えられるが、圧縮器自体がトークンを逐次生成するため遅延が大きくなる。
+
+- **2026-03 · [Locally Coherent Parallel Decoding in Diffusion Language Models](2026-2603.20216-locally-coherent-parallel-decoding-in-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/IBM/coherent-diffusion-local-autoregression) ・ リポジトリ内被引用：0  
+  マスク拡散型の言語モデル（DLM）は、未確定トークンを一度に複数予測して反復的に確定できる。Dream-Coder-Instruct-7BとQwen3-0.6Bの組合せでは、HumanEvalのコード抽出失敗率が、1反復に8トークン確定する条件で基準DLMの70%からCoDiLAの16%へ低下した。
 
 - **2026-03 · [KVSlimmer: Theoretical Insights and Practical Optimizations for Asymmetric KV Merging](2026-2603.00907-kvslimmer-theoretical-insights-and-practical-optimizations-for-asymmetri.md)**  
   実装：[✓](https://github.com/lianjunl13-sudo/KVSlimmer) ・ リポジトリ内被引用：0  
@@ -1657,6 +1665,10 @@
 - **2025-12 · [Parallel Decoder Transformer: Planner-Conditioned Latent Coordination for Model-Intrinsic Parallel Generation](2025-2512.10054-parallel-decoder-transformer-planner-conditioned-latent-coordination-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Parallel Decoder Transformer（PDT）は、モデル自身に三つの持続的な自己回帰生成前線を持たせる構造を提案する。重要な品質境界：本稿が確認した2026年7月18日改訂v3は、設計、実装、学習計画、評価プロトコルを記した研究であり、学習済みモデルの品質改善や実機速度向上を報告していない。
+
+- **2025-12 · [OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization](2025-2512.24124-optrot-mitigating-weight-outliers-via-data-free-rotations-for-post-train.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GPTQによる低ビット重み量子化では、極端に大きい重みが量子化スケールを押し広げ、通常の重みの再現精度を損なう。
 
 - **2025-12 · [Multiscale Aggregated Hierarchical Attention (MAHA): A Game-Theoretic and Optimization-Driven Approach to Efficient Contextual Modeling in Large Language Models](2025-2512.14925-multiscale-aggregated-hierarchical-attention-maha-a-game-theoretic-and-o.md)**  
   実装：[✓](https://github.com/canererden/MAHA-Project) ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "OptRotは重みの4乗和を抑える学習可能な融合回転で外れ値を減らし、GPTQの低ビット重み量子化を改善する。W4A8では活性量子化にも寄与するがW4A4では悪化する負の結果も要旨にあり、LLM推論向けPTQの具体的手法。",
   "semantic_scholar_id": "c2b30c4a2378ed3c6d33e142dcf567eaf8bfe057",
   "source_url": "https://arxiv.org/abs/2512.24124",
-  "status": "ready",
+  "status": "superseded",
   "title": "OptRot: Mitigating Weight Outliers via Data-Free Rotations for Post-Training Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T02:18:35+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2512.24124-optrot-mitigating-weight-outliers-via-data-free-rotations-for-post-train.md",
+  "represented_canonical_id": "arXiv:2512.24124",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

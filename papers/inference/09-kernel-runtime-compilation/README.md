@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（207本）
+## 自動生成の論文一覧（208本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -253,6 +253,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-08 · [A Thread-Register Decoupled GPU Execution Model for Efficient Tensor Computation](2026-2608.19628-fiber-thread-register-decoupled-gpu-execution.md)**  
   実装：[✓](https://github.com/SJTU-ReArch-Group/GTSim/) ・ リポジトリ内被引用：0  
   FIBERはGPUの実行単位から私有レジスタ所有を切り離し、SM内共有レジスタ、動的な並列度変更、レジスタ単位の依存追跡を組み合わせる。LLMのGEMMと非GEMMが交互に現れる処理を対象に、シミュレータ上でAmpere 2.25倍、Hopper 1.8倍、Blackwell 2.09倍のエンドツーエンド高速化を報告する。
+
+- **2026-07 · [Kernelized Linear Attention: Breaking the Capacity Wall with Symmetric Cones](2026-2607.17419-kernelized-linear-attention-breaking-the-capacity-wall-with-symmetric-co.md)**  
+  実装：[✓](https://github.com/ayghri/KATA) ・ リポジトリ内被引用：0  
+  論文はこの「容量の壁」を単なる実装問題ではなく、特徴空間内で互いに区別可能なキー方向を何個置けるかという球面充填問題として扱う。KATA（Kernelized Linear 注意機構 活性値）は、注意重みの非負性を保証する対称錐の特徴写像を設計軸に置く。
 
 - **2026-07 · [Harness Engineering for LLM-Driven GPU Kernel Generation](2026-2607.17979-harness-engineering-llm-gpu-kernels.md)**  
   実装：[✓](https://github.com/syhya/mlsys26-flashinfer-contest) ・ リポジトリ内被引用：0  
