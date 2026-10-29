@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-29T23:21:36.445756+00:00",
+  "generated_at": "2026-10-29T23:43:45.227232+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 7,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -62,12 +62,32 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.15750-depcap-adaptive-block-wise-parallel-decoding-for-efficient-diffusion-lm-.md",
+      "canonical_id": "arXiv:2604.15750",
+      "title": "DepCap: Adaptive Block-Wise Parallel Decoding for Efficient Diffusion LM Inference",
+      "file_bytes": 15255,
+      "source_sha256": "ac173283141f0ab68df05c9bda5c225913a575840f8f47aba215cc346a852414",
+      "source_git_blob_sha": "9e0b272002ec48e32224cd5a88fcfe52712a050d",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.952087,
+      "quality_metrics": {
+        "body_chars": 4161,
+        "method_chars": 1116,
+        "evaluation_chars": 1214,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.01962-post-training-ternarization-of-qwen3-4b-capability-effective-bit-budget-.md",
       "canonical_id": "arXiv:2609.01962",
       "title": "Post-Training Ternarization of Qwen3-4B: Capability, Effective Bit Budget, Storage Compression, and Deployment",
-      "file_bytes": 15229,
-      "source_sha256": "dbf30e02e0b7c6e435b4d094ac7fca33d509fb0e8e6efd5f6ee7bc4c4cb1b3b2",
-      "source_git_blob_sha": "d79d5505a0de92442f0c51023fb3aac5b83a1315",
+      "file_bytes": 16297,
+      "source_sha256": "81c43810e6efee6bdb608ac4b446e68cb52d2f212cff9923a534813c3088fb4d",
+      "source_git_blob_sha": "96394121fdc580fb5e8b4384b38de84afe4dc511",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
