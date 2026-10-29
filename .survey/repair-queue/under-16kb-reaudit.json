@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-28T22:55:59.060811+00:00",
+  "generated_at": "2026-10-29T03:03:38.519765+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 3,
+  "count": 4,
   "worker_counts": {
     "scheduled-chat-00": 1,
     "scheduled-chat-30": 1,
-    "scheduled-chat-45": 1
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -76,6 +76,26 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.08684-ripplekv-cross-layer-kv-cache-allocation-via-perturbation-propagation.md",
+      "canonical_id": "arXiv:2608.08684",
+      "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
+      "file_bytes": 15910,
+      "source_sha256": "fd8e15e5f39355a3da99f5156b3c43b280b358c4c51575ac88b6d0aa07ecbe76",
+      "source_git_blob_sha": "ce9ab0ecfb521c3b8fd195b7ce2016e21609b1be",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.820727,
+      "quality_metrics": {
+        "body_chars": 4546,
+        "method_chars": 1467,
+        "evaluation_chars": 599,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
