@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-29T13:52:02+00:00",
-  "record_count": 5413,
+  "updated_at": "2026-10-29T14:45:29+00:00",
+  "record_count": 5414,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83851,6 +83851,20 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Drop-in efficient self-attention approximation method"
+    },
+    "arXiv:2608.26581": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26581",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2608.26581",
+        "arXiv:2608.26581"
+      ],
+      "reason": "原著の主目的はWan2.2-5BとQwen3-VL-30BのMXFP4/HiF4を用いた量子化認識学習（QAT）の安定化で、activationの外れ値をFP4残差経路で再量子化して前向きGEMMへ加算するRFQを提案する。低ビット推論への最終配備を念頭に置くため量子化・実行カーネルと技術的接点はあるが、主評価はQAT後の訓練損失・生成/推論品質であり、サービングのTPOT・スループット・ピークメモリの独立実測を中心としない。現行推論システム中心の収録範囲では即Research採用の根拠が弱いためborderline。",
+      "first_checked_at": "2026-10-29T14:45:29+00:00",
+      "last_checked_at": "2026-10-29T14:45:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs"
     }
   }
 }
