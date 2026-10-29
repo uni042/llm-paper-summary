@@ -35,10 +35,15 @@
   "selection_reason": "SPDはターゲットLLMを複数パイプライン段に分割し、深さの異なるターゲット特徴を集めるPDMで次トークンを予測する。ドラフト生成を段処理と重ねて露出遅延を隠し、単一系列の投機的復号受理率とwall-clock速度を改善するためaccept。",
   "semantic_scholar_id": "c33d57e1227d17c044508065b9bd56ae53049f52",
   "source_url": "https://arxiv.org/abs/2605.30852",
-  "status": "ready",
+  "status": "superseded",
   "title": "Speculative Pipeline Decoding: Higher-Accuracy Drafting with Hidden Latency via Pipeline Parallelism",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T02:02:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2605.30852-speculative-pipeline-decoding-higher-accuracy-drafting-with-hidden-laten.md",
+  "represented_canonical_id": "arXiv:2605.30852",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

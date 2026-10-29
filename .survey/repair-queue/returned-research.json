@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T01:24:22+00:00",
+  "generated_at": "2026-10-29T02:02:42+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1794,34 +1794,6 @@
       "worker_run_key": "20261029-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2604.18103",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T01:17:13+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5770,
-        "body_paragraphs": 31,
-        "method_chars": 1355,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0d7fb6d3bf36--libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0d7fb6d3bf36--libfile_2c91710efe8c81918bc806ae82eac21c--2026-2604.18103-dash-delta-attention-selective-halting-research-20261029-0900-scheduled-c.json",
-      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2607.27694",
       "title": null,
       "source_url": null,
@@ -1877,8 +1849,8 @@
     },
     {
       "canonical_id": "arXiv:2603.16514",
-      "title": "FleetOpt: Analytical Fleet Provisioning for LLM Inference with Compress-and-Route as Implementation Mechanism",
-      "source_url": "https://arxiv.org/abs/2603.16514",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T01:24:18+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1904,8 +1876,8 @@
     },
     {
       "canonical_id": "arXiv:2607.15456",
-      "title": "Looped Latent Attention: Cross-Loop KV Compression for Looped Transformers",
-      "source_url": "https://arxiv.org/html/2607.15456v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T01:24:19+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -1931,8 +1903,8 @@
     },
     {
       "canonical_id": "arXiv:2512.12284",
-      "title": "V-Rex: Real-Time Streaming Video LLM Acceleration via Dynamic KV Cache Retrieval",
-      "source_url": "https://arxiv.org/pdf/2512.12284",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T01:24:20+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1958,8 +1930,8 @@
     },
     {
       "canonical_id": "arXiv:2602.22575",
-      "title": "S2O: Early Stopping for Sparse Attention via Online Permutation",
-      "source_url": "https://arxiv.org/pdf/2602.22575",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T01:24:21+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -1982,6 +1954,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fb4769ecb68b--libfile_c926285d0f7881919f6c771622efb2b3--2026-2602.22575-s2o-online-permutation-sparse-attention-research-20261029-0803-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-fb4769ecb68b--libfile_c926285d0f7881919f6c771622efb2b3--2026-2602.22575-s2o-online-permutation-sparse-attention-research-20261029-0803-scheduled-.json",
       "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.26368",
+      "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
+      "source_url": "https://arxiv.org/pdf/2609.26368",
+      "returned_at": "2026-10-29T02:00:47+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 163 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5302,
+        "body_paragraphs": 29,
+        "method_chars": 1800,
+        "method_paragraphs": 9,
+        "evaluation_chars": 163,
+        "limitation_chars": 486,
+        "insufficiency_flags": [
+          "評価説明量 163 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4b5ed874d4ac81919b5ec7e3ecd02469--2026-2609.26368-hysparse2-two-level-kv-sharing-research-quality-repair-20261029-0950-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4b5ed874d4ac81919b5ec7e3ecd02469--2026-2609.26368-hysparse2-two-level-kv-sharing-research-quality-repair-20261029-0950-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261029-0950-scheduled-chat-45/r01"
     }
   ]
 }

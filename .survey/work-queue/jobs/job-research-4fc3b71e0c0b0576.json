@@ -35,10 +35,15 @@
   "selection_reason": "SimSDは双方向マスクを使う拡散型LLMでは通常の投機的トークン検証が成立しない問題に対し、草案参照トークンと時間整合な注意マスクを導入する。学習不要でSDAR系のdecode throughput最大7.46倍を報告し、dLLM推論高速化に直接貢献する。",
   "semantic_scholar_id": "9fe5c1b482a870217396d1d1e65da6d3e8650510",
   "source_url": "https://arxiv.org/abs/2606.02544",
-  "status": "ready",
+  "status": "superseded",
   "title": "SimSD: Simple Speculative Decoding in Diffusion Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T02:02:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2606.02544-simsd-simple-speculative-decoding-in-diffusion-language-models.md",
+  "represented_canonical_id": "arXiv:2606.02544",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

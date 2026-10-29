@@ -35,10 +35,15 @@
   "selection_reason": "Delta Attention Selective Haltingは層を通るトークンの注意出力更新が安定した時点で後続処理を停止する学習不要のプリフィル最適化。トークン剪定によるFlashAttention非互換を避けつつ長文脈の計算を削る。",
   "semantic_scholar_id": "6feff5927221d575a23c338526a84c0ce41e45af",
   "source_url": "https://arxiv.org/abs/2604.18103",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stability Implies Redundancy: Delta Attention Selective Halting for Efficient Long-Context Prefilling",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T02:02:41+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.18103-stability-implies-redundancy-delta-attention-selective-halting-for-effic.md",
+  "represented_canonical_id": "arXiv:2604.18103",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
