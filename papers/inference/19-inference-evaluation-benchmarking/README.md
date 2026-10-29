@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（110本）
+## 自動生成の論文一覧（111本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -367,6 +367,10 @@
 - **2025-10 · [Higher-order Linear Attention](2025-2510.27258-higher-order-linear-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Higher-order Linear 注意機構（HLA）は、より高次の相互作用を、低次のモーメントと補正統計の組合せへ因数分解する。
+
+- **2025-09 · [PLaMo 2 Technical Report](2025-2509.04897-plamo-2-technical-report.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  PLaMo 2 Technical Reportは、Preferred Networksが開発した日本語向け大規模言語モデル系列のアーキテクチャ、学習・蒸留、長文脈対応、推論実装と量子化をまとめた技術報告である。推論側では、31BモデルのBF16重みが約63GB、KVキャッシュが約110KB/トークンであり、32K文脈だけで約3.6GBのKVを使う。
 
 - **2025-09 · [Motivating Next-Gen Accelerators with Flexible N:M Activation Sparsity via Benchmarking Lightweight Post-Training Sparsification Approaches](2025-2509.22166-motivating-next-gen-accelerators-with-flexible-n-m-activation-sparsity-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

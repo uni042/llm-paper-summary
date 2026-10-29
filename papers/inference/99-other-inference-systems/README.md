@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（818本）
+## 自動生成の論文一覧（819本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2435,6 +2435,10 @@
 - **2025-05 · [STAR: Stage-Wise Attention-Guided Token Reduction for Efficient Large Vision-Language Models Inference](2025-2505.12359-star-stage-wise-attention-guided-token-reduction-for-efficient-large-vis.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   STAR（Stage-Wise 注意機構-Guided Token Reduction）は、画像とテキストを扱う大規模Vision-Language モデル（LVLM）の推論で、視覚トークンを視覚エンコーダ直後とLLMデコーダ中間層の二段階で削る学習不要の手法である。
+
+- **2025-05 · [Sparsified State-Space Models are Efficient Highway Networks](2025-2505.20698-sparsified-state-space-models-are-efficient-highway-networks.md)**  
+  実装：[✓](https://github.com/woominsong/Simba) ・ リポジトリ内被引用：0  
+  Simbaは、Mambaなどの状態空間モデル（SSM）で、入力系列のトークンを層が深くなるほど段階的に間引く推論時の疎化手法である。付録の8枚のRTX2080 Ti上のPyTorch実装では、Mamba-2.8Bの入力長3Kの推論時間5.819秒に対しSimbaは3.217秒で、約1.81倍の高速化である。
 
 - **2025-05 · [Semantic Retention and Extreme Compression in LLMs: Can We Have Both?](2025-2505.07289-semantic-retention-and-extreme-compression-in-llms-can-we-have-both.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

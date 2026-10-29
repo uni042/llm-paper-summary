@@ -31,6 +31,8 @@ worker_completed_at: "2026-10-30T04:04:00+09:00"
 reference_main_sha: "21e288cf423b8916b5ceb4ef47fb74500323dbc1"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # SharedContextBench：共有KVキャッシュの再利用に耐える長文推論手法を測る
