@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-29T02:37:20+00:00",
+  "checked_at": "2026-10-29T02:51:02+00:00",
   "summary": {
-    "total": 3606,
+    "total": 3610,
     "complete": 3587,
-    "incomplete": 19
+    "incomplete": 23
   },
   "families": {
     "inference": {
-      "total": 3567,
+      "total": 3571,
       "complete": 3548
     },
     "training": {
@@ -22,6 +22,21 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2512.03870-reconstructing-kv-caches-with-cross-layer-fusion-for-enhanced-transforme.md",
+      "canonical_id": "arXiv:2512.03870",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-2512.12284-v-rex-real-time-streaming-video-llm-acceleration-via-dynamic-kv-cache-re.md",
+      "canonical_id": "arXiv:2512.12284",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2601.21686-don-t-be-so-stief-learning-kv-cache-low-rank-approximation-over-the-stie.md",
+      "canonical_id": "arXiv:2601.21686",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
@@ -100,6 +115,11 @@
     {
       "path": "papers/inference/99-other-inference-systems/2026-1e016ba4edaa-hybridserve-stall-free-distributed-disaggregated-llm-inference-with-hybr.md",
       "canonical_id": "DOI:10.5220/0014919900004039",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2607.27694-gyrot-leveraging-hidden-synergy-between-rotation-and-fine-grained-group-.md",
+      "canonical_id": "arXiv:2607.27694",
       "reason": "missing structured reference audit metadata"
     },
     {
