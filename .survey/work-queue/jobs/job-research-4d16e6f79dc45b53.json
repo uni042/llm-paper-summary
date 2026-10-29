@@ -35,10 +35,15 @@
   "selection_reason": "端末上のQwen2.5-7B推論で、LoRAによる推論能力調整と強化学習による出力長予算制御、必要時のみ推論アダプタを有効化する動的切替、プロンプト符号化時のKV共有を組み合わせる。学習だけでなく、端末のKV容量・初回トークン遅延・テスト時並列計算を直接最適化するため推論システムの対象に入る。",
   "semantic_scholar_id": "40bf53fef843f062de58631778bf06368cb5743d",
   "source_url": "https://arxiv.org/abs/2603.16867",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Reasoning on the Edge",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T19:33:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2603.16867-efficient-reasoning-on-the-edge.md",
+  "represented_canonical_id": "arXiv:2603.16867",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

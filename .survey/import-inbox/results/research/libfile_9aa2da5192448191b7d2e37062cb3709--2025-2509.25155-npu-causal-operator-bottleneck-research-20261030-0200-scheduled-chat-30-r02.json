@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "d65fdc51bba91a7d491e665f0acf3a78f7a1c993718d460cf4adff7f447271c6",
+  "normalized_source_sha256": "f3e9449b516cb52c2739f1b2433b7e45926439811d41a52c31f853bcab272bac",
+  "japanese_normalized": true,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_9aa2da5192448191b7d2e37062cb3709--2025-2509.25155-npu-causal-operator-bottleneck-research-20261030-0200-scheduled-chat-30-r02.md",
+  "canonical_id": "arXiv:2509.25155",
+  "worker_completed_at": "2026-10-30T02:23:40+09:00",
+  "worker_run_key": "20261030-0200-scheduled-chat-30/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5858,
+    "body_paragraphs": 31,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 1159,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-29T19:29:53+00:00"
+}

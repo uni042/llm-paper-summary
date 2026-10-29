@@ -35,10 +35,15 @@
   "selection_reason": "LLMの復号時に射影重み読み出しを減らす活性疎性と、文脈長に比例するKV読み出しを減らすキャッシュ疎性の交差点をバイトモデルで予測する。2K〜128K文脈と二種GPUで同一split-K注意カーネルを用いて組合せの速度と精度を測る、推論性能分析・最適化の研究。",
   "semantic_scholar_id": "771134c93b797889cac96cf314ed2d7c74de84d7",
   "source_url": "https://arxiv.org/abs/2609.33889",
-  "status": "ready",
+  "status": "superseded",
   "title": "Where Activation Sparsity and KV-Cache Sparsity Cross in LLM Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T19:33:20+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.33889-where-activation-sparsity-and-kv-cache-sparsity-cross-in-llm-decoding.md",
+  "represented_canonical_id": "arXiv:2609.33889",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
