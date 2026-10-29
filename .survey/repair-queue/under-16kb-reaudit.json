@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-29T06:46:39.496805+00:00",
+  "generated_at": "2026-10-29T07:14:13.834367+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 6,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -102,32 +102,12 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2602.22871-test-time-scaling-with-diffusion-language-models-via-reward-guided-stitc.md",
-      "canonical_id": "arXiv:2602.22871",
-      "title": "Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching",
-      "file_bytes": 14571,
-      "source_sha256": "94f393e26e2e8f33985cedde43d1b3e33a77d7c3e174f77bc4c80af6fdfb223f",
-      "source_git_blob_sha": "bed7cc715d92ae085d325e56a23d58bed5c864c4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.958385,
-      "quality_metrics": {
-        "body_chars": 4243,
-        "method_chars": 1211,
-        "evaluation_chars": 1643,
-        "limitation_chars": 368
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/16-weight-quantization-compression/2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md",
       "canonical_id": "arXiv:2601.20745",
       "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
-      "file_bytes": 14755,
-      "source_sha256": "634eb5452d97a358c989790a7294a98621721150f09c8284df7863e2b9f3ec01",
-      "source_git_blob_sha": "48c4663061b522d2368528b5523a00ec9c254b48",
+      "file_bytes": 16336,
+      "source_sha256": "bcd75ce8e66edcc3a87b2f53cad9da296bdb066dd217da097ba6e92dde7614ee",
+      "source_git_blob_sha": "f201bddc3994bc683f215dee16928af2bfaa86a0",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -145,9 +125,9 @@
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md",
       "canonical_id": "arXiv:2610.07643",
       "title": "Monte Carlo Estimation for KV Cache Eviction",
-      "file_bytes": 15536,
-      "source_sha256": "420a490ed8e9e4d1abe7e456f1eef7ff8e100c88a317ef2480c6c057bdc47ed4",
-      "source_git_blob_sha": "c955b01eb0c7197bdfac5164ffca6e9bda41409f",
+      "file_bytes": 19303,
+      "source_sha256": "30f1065dce5cdba40f88c814ae769147851d6fa6efe4739d95416b63e9b2cdff",
+      "source_git_blob_sha": "8373b6d95c944d55e8ab9537a903cadcc0b11e17",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
