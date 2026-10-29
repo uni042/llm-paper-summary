@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "dfc5a7e633e7645a79d6a1f8834b1d0e0a12a8f99aee3d8b155316fb9b39d8fc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7df5e281dbea--libfile_e13f0c48c03c8191bbd7287bbd4e90a7--2026-2609.10355-video-inference-efficiency-survey-research-20261029-2330-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2609.10355",
+  "worker_completed_at": "2026-10-29T23:30:00+09:00",
+  "worker_run_key": "20261029-2330-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5645,
+    "body_paragraphs": 27,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-29T15:27:02+00:00"
+}

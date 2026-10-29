@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7d32ad3ea3f4cc52a213877358d272b773eb8dc331dd41241b9f9a7a08ef2cd1",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-ed6a665922af--libfile_81d3cdebdeb081918089f236a03229e7--2026-doi-10.32604-cmc.2026.078985-quantized-transformers-laptop-gpu-benchmark-research-20261029-2258-scheduled-chat-00-r01.md",
+  "canonical_id": "DOI:10.32604/cmc.2026.078985",
+  "worker_completed_at": "2026-10-29T23:03:00+09:00",
+  "worker_run_key": "20261029-2258-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4176,
+    "body_paragraphs": 24,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 680,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-29T15:27:04+00:00"
+}

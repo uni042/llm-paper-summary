@@ -25,6 +25,8 @@ worker_run_key: "20261029-2258-scheduled-chat-00/r01"
 reference_main_sha: "2c2386b6444617b4a900d2c79d000d532f845551"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # 2種類のノートPC GPUで測ったLLMのFP16対INT8：速度・オフロード・文章品質

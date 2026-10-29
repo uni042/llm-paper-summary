@@ -29,6 +29,8 @@ worker_run_key: "20261029-2330-scheduled-chat-30/r01"
 reference_main_sha: "842788ee45e5e8bc9129eddeb423a5e6870ec606"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # 動画・音声付きLLMの推論効率化：パイプライン全体を扱うサーベイ
