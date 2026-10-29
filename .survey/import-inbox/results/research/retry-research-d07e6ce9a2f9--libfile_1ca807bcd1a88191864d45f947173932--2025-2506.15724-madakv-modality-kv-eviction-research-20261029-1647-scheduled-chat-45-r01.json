@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0e5811c22d8183dbfe0f2f2e72a4b0965161f9b736ed9e6de6cc8c16dcab35bc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d07e6ce9a2f9--libfile_1ca807bcd1a88191864d45f947173932--2025-2506.15724-madakv-modality-kv-eviction-research-20261029-1647-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2506.15724",
+  "worker_completed_at": "2026-10-29T16:58:00+09:00",
+  "worker_run_key": "20261029-1647-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5262,
+    "body_paragraphs": 26,
+    "method_chars": 1220,
+    "method_paragraphs": 7,
+    "evaluation_chars": 474,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 474 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 474 < 500"
+  ],
+  "processed_at": "2026-10-29T09:23:18+00:00"
+}

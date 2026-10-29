@@ -31,6 +31,8 @@ worker_run_key: '20261029-1647-scheduled-chat-45/r01'
 reference_main_sha: 'f9db7200d3145ec75c6d7fd93618da4dd857a944'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # NSNQuant：分布を揃えて較正不要にするKVキャッシュの超低ビット量子化
