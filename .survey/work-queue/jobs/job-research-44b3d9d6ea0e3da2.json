@@ -35,10 +35,15 @@
   "selection_reason": "prefillのTTFTとdecodeのITLを分離し、TP/PP/混合並列のPareto実行領域とSLO制約下のgoodputをモデル化する。入力・出力長と文脈長に応じてTP優勢からPP優勢へ最適構成が変化するという、分散LLM推論の構成選択に直接貢献する。",
   "semantic_scholar_id": "8ba034b63ad60fab3788fd44115025e65702dbf6",
   "source_url": "https://arxiv.org/abs/2610.19405",
-  "status": "ready",
+  "status": "superseded",
   "title": "Scaling LLM Inference via Parallelism: Throughput-Latency Trade-off",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T08:45:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2610.19405-scaling-llm-inference-via-parallelism-throughput-latency-trade-off.md",
+  "represented_canonical_id": "arXiv:2610.19405",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

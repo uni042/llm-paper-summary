@@ -35,10 +35,15 @@
   "selection_reason": "SHMQはHessian由来の層間・層内感度を併用して静的混合精度を割り当て、チャネル置換で外れ値の影響を緩和する。Qwen2.5-7B-InstructのW4.8A8でゼロショット75.58%、平均実測2.86倍高速化を報告し、推論向け量子化に直接関係する。",
   "semantic_scholar_id": "73d026da1faff43234ce7997769fe57b10e9f3bf",
   "source_url": "https://doi.org/10.18653/v1/2025.emnlp-industry.175",
-  "status": "ready",
+  "status": "superseded",
   "title": "Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T08:45:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-84553b047243-beyond-dynamic-quantization-an-efficient-static-hierarchical-mix-precisi.md",
+  "represented_canonical_id": "DOI:10.18653/v1/2025.emnlp-industry.175",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
