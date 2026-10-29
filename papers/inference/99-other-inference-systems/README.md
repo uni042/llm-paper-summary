@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（784本）
+## 自動生成の論文一覧（785本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2343,6 +2343,10 @@
 - **2025-05 · [Exploring Federated Pruning for Large Language Models](2025-2505.13547-exploring-federated-pruning-for-large-language-models.md)**  
   実装：[✓](https://github.com/Pengxin-Guo/FedPrLLM) ・ リポジトリ内被引用：0  
   LLMの重みを削ってメモリ使用量を減らす剪定（枝刈り）は、モデルの入力活性化を校正データで観測して「消しても影響の小さい重み」を選ぶことが多い。LLaMA 7Bの50%疎化では、WikiText2の困惑度（PPL）が密モデル5.67、全データを集める集中剪定7.25、FedPrLLM層one-shot 7.32、クライアント単独7.44となる。
+
+- **2025-05 · [Efficient Large Language Model Inference with Neural Block Linearization](2025-2505.21077-efficient-large-language-model-inference-with-neural-block-linearization.md)**  
+  実装：[✓](https://github.com/LIONS-EPFL/NBL) ・ リポジトリ内被引用：0  
+  Neural Block Linearization（NBL）は、特定の注意層について「その入力から出力を線形写像でどの程度予測できるか」を測り、予測しやすい層だけを統計的に推定した線形層で代替する。
 
 - **2025-05 · [EdgeMM: Multi-Core CPU with Heterogeneous AI-Extension and Activation-aware Weight Pruning for Multimodal LLMs at Edge](2025-2505.10782-edgemm-multi-core-cpu-with-heterogeneous-ai-extension-and-activation-awa.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

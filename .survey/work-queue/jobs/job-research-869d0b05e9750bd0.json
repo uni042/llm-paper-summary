@@ -35,10 +35,15 @@
   "selection_reason": "NBLは事前学習済みLLMの自己注意層をLMMSEによる線形近似へ置換し、CCAに基づく誤差上界で置換対象層を選ぶ。微調整なしでDeepSeek-R1蒸留モデルの推論速度を上げる直接的な層近似手法なのでaccept。",
   "semantic_scholar_id": "04b381f6969fe378e08b40fff096aaf22762f74c",
   "source_url": "https://arxiv.org/abs/2505.21077",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Large Language Model Inference with Neural Block Linearization",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T08:58:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2505.21077-efficient-large-language-model-inference-with-neural-block-linearization.md",
+  "represented_canonical_id": "arXiv:2505.21077",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
