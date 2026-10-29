@@ -79,7 +79,7 @@ MoEの大部分を占めるexpert重みを**低bit化、pruning、precision切�
   しかし、推論環境には多数の専門家の重みを保持する必要があり、GPUメモリ・ホストメモリ・ストレージ容量が大きくなる。専門家を丸ごと削除すると特化した能力を失い、複数専門家を単純に統合すると固有の知識が平均化される。
 
 - **2025-07 · [MoNE: Replacing Redundant Experts with Lightweight Novices for Structured Pruning of MoE](2025-2507.00390-mone-replacing-redundant-experts-with-lightweight-novices-for-structured.md)**  
-  実装：[✓](https://github.com/zxgx/mode-pd) ・ リポジトリ内被引用：9  
+  実装：[✓](https://github.com/zxgx/mode-pd) ・ リポジトリ内被引用：10  
   MoNE（Mixture of Novices and エキスパート）は、混合専門家モデル（Mixture-of-Experts、MoE）における専門家の枝刈りを、単純な削除ではなく軽量な初心者表現（novice）への置換として実装する圧縮方式である。
 
 - **2025-06 · [EAQuant: Enhancing Post-Training Quantization for MoE Models via Expert-Aware Optimization](2025-2506.13329-eaquant-enhancing-post-training-quantization-for-moe-models.md)**  

@@ -52,6 +52,10 @@
   実装：✓ ・ リポジトリ内被引用：7  
   HySparseは、長文脈言語モデルの注意計算と鍵・値キャッシュ（KVキャッシュ）を同時に削減するため、少数の全体注意層を後続の疎注意層の情報供給源として再利用する混合注意アーキテクチャである。従来の動的疎注意は、重要なトークンを予測する補助選択器が必要になり、選択誤差と計算費用が生じる。HySparseでは一つの全体注意層の後ろに複数の疎注意層を配置する。
 
+- **2026-07 · [Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling](2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md)**  
+  実装：[✓](https://github.com/Tencent-Hunyuan/HiLS-Attention) ・ リポジトリ内被引用：6  
+  本論文の階層ランドマーク疎注意（Hierarchical Landmark Sparse 注意機構、HiLS-注意機構）は、全注意であるチャンクが受ける指数化注意重みの合計を近似するため、各チャンク末尾のランドマークトークンから「圧縮鍵」と「エントロピーバイアス」を作る。
+
 - **2025-12 · [Kascade: A Practical Sparse Attention Method for Long-Context LLM Inference](2025-2512.16391-kascade-a-practical-sparse-attention-method-for-long-context-inference.md)**  
   実装：[✓](https://github.com/microsoft/kascade) ・ リポジトリ内被引用：6  
   長文脈の注意を10%だけ計算すれば理論上は大きく速くなるが、「どの10%を残すか」を毎層正確に探す処理が高い。Kascadeは、高い注意重みを持つキー集合が近接層でかなり似るという性質を利用し、少数のアンカー層だけでTop-k探索をやり直す。残りの層ではそのインデックスを再利用するため、疎化の選択費用を層間で償却できる。
@@ -59,10 +63,6 @@
 - **2026-08 · [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](2026-2608.30320-on-the-design-of-qwen3-8-next-architecture-evaluation-efficiency-and-tra.md)**  
   実装：[✓](https://github.com/QwenLM/FlashQLA) ・ リポジトリ内被引用：5  
   Qwen3.8-Flash-Nextは履歴を再帰状態へ要約し、圧縮した疎注意機構で長文脈を検索する。論文は1M文脈で注意機構の計算時間を短縮し、検索品質も比較する。
-
-- **2026-07 · [Hierarchical Sparse Attention Done Right: Toward Infinite Context Modeling](2026-2607.0298-hierarchical-sparse-attention-done-right-toward-infinite-context-modelin.md)**  
-  実装：[✓](https://github.com/Tencent-Hunyuan/HiLS-Attention) ・ リポジトリ内被引用：5  
-  本論文の階層ランドマーク疎注意（Hierarchical Landmark Sparse 注意機構、HiLS-注意機構）は、全注意であるチャンクが受ける指数化注意重みの合計を近似するため、各チャンク末尾のランドマークトークンから「圧縮鍵」と「エントロピーバイアス」を作る。
 
 - **2026-06 · [MiniMax Sparse Attention](2026-2606.13392-minimax-sparse-attention.md)**  
   実装：[✓](https://github.com/MiniMax-AI/MSA) ・ リポジトリ内被引用：5  

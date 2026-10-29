@@ -193,6 +193,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/LiuTaowen-Tony/agentkv) ・ リポジトリ内被引用：2  
   思考・行動・ツール応答など段階別の問い合わせ履歴でKV重要度を評価し、エージェントの段階遷移で必要になる古い状態を残しつつ、物理ページ圧縮で最大1.80倍の出力スループットを得る。
 
+- **2026-08 · [Fewer Tokens, Smaller Cache: Reward-Coordinated Efficient Reasoning](2026-2608.04771-fewer-tokens-smaller-cache-reward-coordinated-efficient-reasoning.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  ReCo（Reward-Coordinated Compression）は、長い思考連鎖を生成する推論モデルの実行費用を、KVキャッシュの削減と、これから生成する思考トークンの削減を同時に制御する方式である。
+
 - **2026-08 · [Does Accuracy Equal Evidence? Reasoning Faithfulness under KV Cache Compression](2026-2608.01631-does-accuracy-equal-evidence-reasoning-faithfulness-under-kv-cache-compr.md)**  
   実装：[✓](https://github.com/famous-blue-raincoat/Safe_KV_Compress) ・ リポジトリ内被引用：2  
   保持トークンを選別して捨てる方式はメモリを節約できるが、一般的な評価は最終回答の正答率を重視する。非圧縮の正答率67.4%、正答中の不完全推論率4.3%に対し、SnapKVは正答率50.0%を維持しても不完全推論率が65.5%に増えた。
@@ -336,10 +340,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-08 · [GraniKV: Asymmetric Granularity KV-Cache Paging for Multi-Agent Systems with Long Shared Prefix](2026-2608.15584-granikv-asymmetric-granularity-kv-cache-paging-for-multi-agent-systems-w.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   複数エージェント型の大規模言語モデル推論では、システム指示、道具定義、共有メモリなどからなる長い接頭辞を複数要求が共有し、その後ろに各要求固有の生成履歴が接尾辞として伸びる。
-
-- **2026-08 · [Fewer Tokens, Smaller Cache: Reward-Coordinated Efficient Reasoning](2026-2608.04771-fewer-tokens-smaller-cache-reward-coordinated-efficient-reasoning.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  ReCo（Reward-Coordinated Compression）は、長い思考連鎖を生成する推論モデルの実行費用を、KVキャッシュの削減と、これから生成する思考トークンの削減を同時に制御する方式である。
 
 - **2026-08 · [CommitKV: Lifecycle-Aware KV Cache Compression via Commit Transitions for Multi-Turn Agents](2026-2608.07855-commitkv-lifecycle-aware-kv-cache-compression-via-commit-transitions-for.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1022,7 +1022,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 2年前（2024-11〜2025-10）
 
 - **2025-05 · [Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding](2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：90  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM) ・ リポジトリ内被引用：91  
   ブロック単位の近似鍵・値キャッシュと確信度に基づく並列復号を組み合わせ、拡散型LLMを再学習なしで最大27.6倍高速化する。
 
 - **2025-03 · [vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention](2024-2405.04437-vattention-virtual-memory-kv-management.md)**  
@@ -1424,7 +1424,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：337  
+  実装：[✓](https://github.com/SqueezeAILab/KVQuant) ・ リポジトリ内被引用：338  
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
@@ -1432,7 +1432,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：330  
+  実装：✓ ・ リポジトリ内被引用：332  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
@@ -1456,7 +1456,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   GEARは、自己回帰生成で増え続けるKVキャッシュを高い圧縮率で保持しつつ、単純な低ビット量子化で生じる生成品質の崩壊を抑えるための圧縮法である。
 
 - **2024-05 · [MiniCache: KV Cache Compression in Depth Dimension for Large Language Models](2024-2405.14366-minicache-kv-cache-compression-in-depth-dimension-for-large-language-mod.md)**  
-  実装：[✓](https://github.com/AkideLiu/MiniCache) ・ リポジトリ内被引用：95  
+  実装：[✓](https://github.com/AkideLiu/MiniCache) ・ リポジトリ内被引用：96  
   MiniCacheは層内のトークン選別や低ビット化だけでなく、隣り合う層のあいだにも冗長性があると観察し、中層以降で同じ位置のKV状態を共有表現へ統合する。
 
 - **2024-03 · [Jamba: A Hybrid Transformer-Mamba Language Model](2024-2403.19887-jamba-a-hybrid-transformer-mamba-language-model.md)**  
@@ -1479,6 +1479,14 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/HugoZHL/PQCache) ・ リポジトリ内被引用：60  
   文脈が長くなるほどKVキャッシュは大きくなり、GPUメモリへ収まらない場合にはCPUメモリへの退避と転送が必要になる。Llama-3.1-8Bの128K文脈を用いたInfiniteBenchでは、過去トークンの1/10だけを選択する条件で平均スコア46.80を報告し、比較方式に対する改善は+4.60%である。
 
+- **2024-05 · [You Only Cache Once: Decoder-Decoder Architectures for Language Models](2024-2405.05254-yoco.md)**  
+  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：59  
+  自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。
+
+- **2024-05 · [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](2024-2405.12981-cross-layer-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：59  
+  MQA/GQAのKV共有を層方向へ拡張し、隣接層でKV活性を再利用してKVキャッシュを追加で約2倍削減する注意アーキテクチャ。
+
 - **2024-05 · [PyramidInfer: Pyramid KV Cache Compression for High-throughput LLM Inference](2024-2405.12532-pyramidinfer-pyramid-kv-cache-compression-for-high-throughput-llm-infere.md)**  
   実装：[✓](https://github.com/mutonix/pyramidinfer) ・ リポジトリ内被引用：59  
   PyramidInferは、大規模言語モデルの生成時にGPUメモリを占有するKVキャッシュを、層の深さに応じて段階的に減らす方式である。A100 80GBでのLLaMA 2-13B評価では、固定バッチ・固定長条件でKVメモリ24.2GBから11.0GB、スループット621から1389 トークン/sという結果を報告する。
@@ -1486,14 +1494,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2024-03 · [Dynamic Memory Compression: Retrofitting LLMs for Accelerated Inference](2024-2403.09636-dynamic-memory-compression-retrofitting-llms-for-accelerated-inference.md)**  
   実装：[✓](https://github.com/NVIDIA/Megatron-LM/tree/DMC) ・ リポジトリ内被引用：59  
   動的メモリ圧縮（動的 メモリ Compression; DMC）は、過去トークンを「残す／捨てる」の二択にせず、各注意ヘッドが新しいキー・値（Key-Value; KV）を新規スロットへ追加するか、直前のスロットへ重み付きで結合するかを学習する。これにより、内容・層・ヘッドごとに必要な時間解像度を変えながらKVキャッシュをオンライン圧縮する。
-
-- **2024-05 · [You Only Cache Once: Decoder-Decoder Architectures for Language Models](2024-2405.05254-yoco.md)**  
-  実装：[✓](https://aka.ms/YOCO) ・ リポジトリ内被引用：58  
-  自己デコーダが一度だけ生成した大域鍵値を後半の交差デコーダ全層で共有し、長文脈の鍵値メモリと事前充填時間を桁違いに削減する。
-
-- **2024-05 · [Reducing Transformer Key-Value Cache Size with Cross-Layer Attention](2024-2405.12981-cross-layer-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：58  
-  MQA/GQAのKV共有を層方向へ拡張し、隣接層でKV活性を再利用してKVキャッシュを追加で約2倍削減する注意アーキテクチャ。
 
 - **2024-05 · [ZipCache: Accurate and Efficient KV Cache Quantization with Salient Token Identification](2024-2405.14256-zipcache.md)**  
   実装：[✓](https://github.com/ThisisBillhe/ZipCache) ・ リポジトリ内被引用：57  
@@ -1670,11 +1670,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：671  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：672  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：640  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：641  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1696,6 +1696,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 7年前（2019-11〜2020-10）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：262  
+  実装：✓ ・ リポジトリ内被引用：263  
   複数問い合わせ注意（Multi-Query 注意機構; MQA）は、問い合わせ側の8ヘッドを維持したまま、鍵と値だけを全ヘッドで1組へ共有する。長い履歴を毎生成ステップで読む増分復号のメモリ転送を減らし、TPUv2でのWMT英独翻訳のデコーダ測定を46から3.8マイクロ秒／出力トークンへ短縮した。
 <!-- survey:auto:end -->

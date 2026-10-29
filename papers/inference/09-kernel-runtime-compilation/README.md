@@ -108,6 +108,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   Fleetは複数ダイGPUにチップレット単位の作業階層を追加し、永続カーネル内で同一L2を共有するCUを協調スケジュールしてLLMデコードの重み再利用と同期局所性を高める。
 
+- **2026-04 · [Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs](2026-2604.07888-bit-by-bit-progressive-qat-strategy-with-outlier-channel-splitting-for-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  Bit-by-Bitは、事前学習済みLLMを重み2ビット、活性化2ビットまで量子化したときの精度低下と学習不安定性を抑える量子化対応学習（QAT）の方式である。RTX 4090の行列ベクトル積単体では形状によって11倍を超える高速化がある一方、小さい形状ではBF16より遅い。
+
 - **2026-03 · [WaterSIC: Information-Theoretically (Near) Optimal Linear Layer Quantization](2026-2603.04956-watersic-information-theoretically-near-optimal-linear-layer-quantizatio.md)**  
   実装：[✓](https://github.com/egorlifar/watersic) ・ リポジトリ内被引用：1  
   WaterSICは、大規模言語モデルの線形層を学習後量子化（post-学習 量子化）するとき、入力チャネルごとに異なる格子幅を与えることで、同じ圧縮容量でも出力のずれを小さくする手法である。ただし論文が評価する主軸は品質対圧縮率であり、llama.cppなどの推論器に載せたトークン/秒、展開カーネルの速度、メモリ帯域削減の実測ではない。
@@ -397,10 +401,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-04 · [Continuous Semantic Caching for Low-Cost LLM Serving](2026-2604.20021-continuous-semantic-caching-for-low-cost-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   キャッシュの容量は有限であり、どの応答を保存すれば推論費用と不一致費用の合計を小さくできるかが問題になる。提案の中心は、近い問い合わせを代表点へまとめるε-netによる離散化と、観測された一部の推論費用から周辺の費用を推定するカーネルリッジ回帰（カーネル ridge regression; KRR）である。
-
-- **2026-04 · [Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs](2026-2604.07888-bit-by-bit-progressive-qat-strategy-with-outlier-channel-splitting-for-s.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Bit-by-Bitは、事前学習済みLLMを重み2ビット、活性化2ビットまで量子化したときの精度低下と学習不安定性を抑える量子化対応学習（QAT）の方式である。RTX 4090の行列ベクトル積単体では形状によって11倍を超える高速化がある一方、小さい形状ではBF16より遅い。
 
 - **2026-04 · [Active Imitation Learning for Thermal- and Kernel-Aware LFM Inference on 3D S-NUCA Many-Cores](2026-2604.11948-active-imitation-learning-for-thermal-and-kernel-aware-lfm-inference-on-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -770,13 +770,13 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/agiresearch/AIOS) ・ リポジトリ内被引用：11  
   従来のエージェント枠組みでは、各エージェントがLLMやツールを直接呼び出し、GPUメモリの不足、競合するAPI呼び出し、長時間要求の独占を個別に処理しがちだった。AIOSはエージェントアプリケーションと資源管理を分離し、専用のAIOSカーネルを通じてサービスを提供する。
 
+- **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
+  実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：8  
+  LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
+
 - **2024-02 · [L4Q: Parameter Efficient Quantization-Aware Fine-Tuning on Large Language Models](2024-2402.04902-l4q-parameter-efficient-quantization-aware-fine-tuning-on-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   巨大言語モデル（LLM）の低ビット量子化は推論時の重み容量とメモリ帯域を減らすが、精度低下を起こす。LLaMA-1 7Bの学習ピークメモリはLoRAの25.1GBに対してL4Qが25.4GB、通常QATは79.5GBである。
-
-- **2024-07 · [LeanQuant: Accurate and Scalable Large Language Model Quantization with Loss-error-aware Grid](2024-2407.10032-leanquant-accurate-and-scalable-large-language-model-quantization-with-l.md)**  
-  実装：[✓](https://github.com/LeanModels/LeanQuant) ・ リポジトリ内被引用：7  
-  LeanQuantは、大規模言語モデルの学習後量子化（Post-学習 量子化; PTQ）で、各重みをどの離散値へ丸めるかを決める量子化格子の位置を最適化する手法である。Llama-3.1-405Bの量子化を48GB GPU二枚と大容量CPUメモリで約20.7時間で完了した。
 
 - **2024-09 · [CHESS: Optimizing LLM Inference via Channel-Wise Thresholding and Selective Sparsification](2024-2409.01366-chess-optimizing-llm-inference-via-channel-wise-thresholding-and-selecti.md)**  
   実装：[✓](https://github.com/ZeonfaiHo/CHESS) ・ リポジトリ内被引用：6  

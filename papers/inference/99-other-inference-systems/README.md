@@ -164,6 +164,10 @@
   実装：[✓](https://github.com/EIT-NLP/HiDrop) ・ リポジトリ内被引用：2  
   LLaVA型の画像言語モデルは、画像符号化器が出力した多数の視覚特徴を言語モデルの入力列へ結合する。この前提では、視覚情報の統合が実際に行われる層と計算資源を費やす層が一致しない。
 
+- **2026-01 · [Residual Context Diffusion Language Models](2026-2601.22954-residual-context-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/yuezhouhu/residual-context-diffusion) ・ リポジトリ内被引用：2  
+  マスク型拡散大規模言語モデル（dLLM）は、複数のトークン位置を同時に予測し、確信度が高い位置だけを確定しながら残りを反復更新する。SDAR-8Bでブロック長64のMATH500正答率は通常の逐次ノイズ除去（Sequential Denoising、SeqD）の64.20%から74.40%へ、AIME24は7.08%から18.75%へ改善する。
+
 - **2025-12 · [Fairy2i: Training Complex LLMs from Real LLMs with All Parameters in {±1, ±i}](2025-2512.02901-fairy2i-training-complex-llms-from-real-llms-with-all-parameters-in-1-i.md)**  
   実装：[✓](https://github.com/PKULab1806/Fairy2i-W2) ・ リポジトリ内被引用：2  
   Fairy2iは、通常の実数値で学習済みのTransformerを、量子化前の出力を変えずに複素数の広義線形（widely-linear）表現へ変換する。実効2ビットのFairy2i-W2はC4検証集合の困惑度（Perplexity; PPL）7.85、ARC-Easyなど五つのゼロショット課題平均62.00%を示した。
@@ -403,10 +407,6 @@
 - **2026-01 · [SimpleMem: Efficient Lifelong Memory for LLM Agents](2026-2601.02553-simplemem-efficient-lifelong-memory-for-llm-agents.md)**  
   実装：[✓](https://github.com/aiming-lab/SimpleMem) ・ リポジトリ内被引用：1  
   SimpleMemは、書き込み時に記憶を整理して、質問時に必要な情報だけを引き出すことで、この二種類の費用を同時に抑えようとする方式である。原著のLoCoMo評価では、GPT-4.1-miniを基盤としたSimpleMemの平均F1が43.24、Mem0が34.20で、相対26.4%の改善となる。
-
-- **2026-01 · [Residual Context Diffusion Language Models](2026-2601.22954-residual-context-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/yuezhouhu/residual-context-diffusion) ・ リポジトリ内被引用：1  
-  マスク型拡散大規模言語モデル（dLLM）は、複数のトークン位置を同時に予測し、確信度が高い位置だけを確定しながら残りを反復更新する。SDAR-8Bでブロック長64のMATH500正答率は通常の逐次ノイズ除去（Sequential Denoising、SeqD）の64.20%から74.40%へ、AIME24は7.08%から18.75%へ改善する。
 
 - **2026-01 · [LOOKAT: Lookup-Optimized Key-Attention for Memory-Efficient Transformers](2026-2601.10155-lookat-lookup-optimized-key-attention-for-memory-efficient-transformers.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1881,15 +1881,15 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-08 · [Dream 7B: Diffusion Large Language Models](2025-2508.15487-dream-7b-diffusion-large-language-models.md)**  
-  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：86  
+  実装：[✓](https://github.com/DreamLM/Dream) ・ リポジトリ内被引用：87  
   自己回帰モデルから初期化した70億拡散言語モデルで、系列全体の反復復元により計画課題と任意順生成を強化し、推論反復数で品質と速度を調整する。
 
 - **2025-03 · [Block Diffusion: Interpolating Between Autoregressive and Diffusion Language Models](2025-2503.09573-block-diffusion-interpolating-between-autoregressive-and-diffusion-langu.md)**  
-  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：72  
+  実装：[✓](https://github.com/kuleshov-group/bd3lms) ・ リポジトリ内被引用：73  
   マスク率をデータに応じて区間制限する学習方式と、清浄系列・雑音系列を特殊注意で同時処理する実装を導入した。
 
 - **2025-09 · [Fast-dLLM v2: Efficient Block-Diffusion LLM](2025-2509.26328-fast-dllm-v2-block-diffusion-hierarchical-cache.md)**  
-  実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：43  
+  実装：[✓](https://github.com/NVlabs/Fast-dLLM/tree/main/v2) ・ リポジトリ内被引用：44  
   自己回帰モデルをブロック拡散へ少量追加学習し、ブロック間KVキャッシュとブロック内DualCache、信頼度並列復号を階層化して品質を保ちながら生成を高速化する。
 
 - **2025-01 · [Titans: Learning to Memorize at Test Time](2025-2501.00663-titans-learning-to-memorize-at-test-time.md)**  
@@ -1908,6 +1908,10 @@
   実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：29  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
+- **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
+  実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：25  
+  離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
+
 - **2025-03 · [Qwen2.5-Omni Technical Report](2025-2503.20215-qwen2-5-omni-technical-report.md)**  
   実装：[✓](https://github.com/QwenLM/Qwen2.5-Omni) ・ リポジトリ内被引用：25  
   従来の視覚言語モデルや音声言語モデルを単に接続すると、動画フレームと音声の時間対応が失われやすく、音声出力のために全文の生成完了を待つ設計では初回音声までの遅延が大きい。原著の7B級モデルは、音声・映像を混合するOmniBenchで平均56.13%を示し、比較表のGemini 1.5 Proの42.91%を上回った。
@@ -1915,10 +1919,6 @@
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
   実装：[✓](https://github.com/Zanette-Labs/efficient-reasoning) ・ リポジトリ内被引用：25  
   長い思考過程を生成する推論モデルは、難しい問題で高い正答率を得られる一方、簡単な問題でも冗長な検討を続けることがある。本論文は、正答を優先したまま正解応答の長さに罰則を与えるオンライン強化学習を提案する。7Bの5タスク平均では、長さ罰則 $\alpha=0.2$ の場合、基準モデルに対して生成トークン数が51.58%、正答率が95.94%となった。
-
-- **2025-08 · [Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing](2025-2508.09192-diffusion-llms-can-do-faster-than-ar-inference-via-discrete-diffusion-fo.md)**  
-  実装：[✓](https://github.com/zhijie-group/Discrete-Diffusion-Forcing) ・ リポジトリ内被引用：24  
-  離散拡散型の大規模言語モデル（diffusion LLM、dLLM）は、マスクされた複数トークンを一度の推論で同時に予測できる。しかし従来の双方向注意を使う拡散モデルでは、マスクの状態が反復ごとに変わるため、過去の鍵・値（KV）を自己回帰型モデルのように正確にキャッシュしにくい。確定済みのブロックのKVは変更されないため正確に再利用できる。
 
 - **2024-12 · [C3oT: Generating Shorter Chain-of-Thought without Compromising Effectiveness](2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md)**  
   実装：✓ ・ リポジトリ内被引用：24  
@@ -1984,13 +1984,13 @@
   実装：[✓](https://github.com/MiniMax-AI/MiniMax-M1) ・ リポジトリ内被引用：7  
   MiniMax-M1は、推論時に長い思考過程を生成する大規模言語モデルで、生成トークンが増えるほど従来のSoftmax注意の計算・記憶費用が膨らむ問題に対処する。モデル全体は4560億パラメータ、トークンごとの活性化は459億パラメータの混合専門家モデル（Mixture of エキスパート、MoE）である。
 
+- **2025-09 · [Learning to Parallel: Accelerating Diffusion Large Language Models via Learnable Parallel Decoding](2025-2509.25188-learning-to-parallel-accelerating-diffusion-large-language-models-via-le.md)**  
+  実装：✓ ・ リポジトリ内被引用：6  
+  これに対してマスク型拡散言語モデルは、あるブロック内の複数トークンを一度に予測し、まだ不確かな位置だけを再びマスクして次の反復で更新する。
+
 - **2025-04 · [PLD+: Accelerating LLM Inference by Leveraging Language Model Artifacts](2025-1e04c2f7fc65-pld-accelerating-llm-inference-by-leveraging-language-model-artifacts.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
   PLD+（プロンプト Lookup Decoding+）は、入力文脈の一部がそのまま出力にも現れる場合に、過去の入力トークン列を将来の出力候補として再利用する投機的復号法である。例えばコード編集で改行やインデント、識別子が何度も現れると、従来のPLDが最長の局所的な文字列一致だけで候補を選ぶと、同じ記号が出る別の場所を誤選択し、検証に失敗する。
-
-- **2025-09 · [Learning to Parallel: Accelerating Diffusion Large Language Models via Learnable Parallel Decoding](2025-2509.25188-learning-to-parallel-accelerating-diffusion-large-language-models-via-le.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  これに対してマスク型拡散言語モデルは、あるブロック内の複数トークンを一度に予測し、まだ不確かな位置だけを再びマスクして次の反復で更新する。
 
 - **2025-08 · [Towards Efficient and Practical GPU Multitasking in the Era of LLM](2025-2508.08448-towards-efficient-and-practical-gpu-multitasking-in-the-era-of-llm.md)**  
   実装：[✓](https://github.com/ovg-project) ・ リポジトリ内被引用：5  
@@ -2674,6 +2674,10 @@
   実装：[✓](https://github.com/myshell-ai/JetMoE) ・ リポジトリ内被引用：16  
   JetMoE-8Bは、混合専門家モデル（Mixture of エキスパート、MoE）の条件付き計算を順伝播ネットワーク（FFN）だけでなく自己注意機構へも拡張した、総パラメータ約80億の言語モデルである。論文はLlama2-7Bとの比較で推論演算量を約70%削減できると述べるが、これは実測の生成遅延が70%減るという意味ではない。
 
+- **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
+  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：16  
+  線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
+
 - **2024-09 · [Moshi: a speech-text foundation model for real-time dialogue](2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md)**  
   実装：[✓](https://github.com/kyutai-labs/moshi) ・ リポジトリ内被引用：15  
   Moshiは、音声認識、テキストLLM、音声合成を順番に実行する音声対話システムを、入力音声を聞きながら出力音声を生成する全二重の音声言語モデルへ置き換える研究である。音声質問応答の零例評価では、MoshiがWeb Questions 26.6%、LLaMA Questions 62.3%、音声版TriviaQA 22.8%の正答率を示した。
@@ -2681,10 +2685,6 @@
 - **2024-05 · [xRAG: Extreme Context Compression for Retrieval-augmented Generation with One Token](2024-2405.13792-xrag-extreme-context-compression-for-retrieval-augmented-generation-with.md)**  
   実装：[✓](https://github.com/Hannibal046/xRAG) ・ リポジトリ内被引用：15  
   検索拡張生成（Retrieval-Augmented Generation、RAG）は、外部の文書から関連情報を検索し、その本文を言語モデルへ入力することで、学習時点に含まれない知識を利用する。
-
-- **2023-12 · [Honeybee: Locality-enhanced Projector for Multimodal LLM](2023-2312.06742-honeybee-locality-enhanced-projector-for-multimodal-llm.md)**  
-  実装：[✓](https://github.com/kakaobrain/honeybee) ・ リポジトリ内被引用：15  
-  線形投射器は画像の各位置をほぼ一対一でトークン化するため空間情報を保持しやすいが、解像度が上がると視覚トークン数が増え、言語モデルの計算とメモリを圧迫する。Honeybeeは、出力視覚トークン数を任意に選べることと、局所的な画像構造を保持することを同時に満たす投射器を設計した。
 
 - **2023-11 · [Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models](2023-2311.08692-routing-to-the-expert-efficient-reward-guided-ensemble-of-large-language.md)**  
   実装：✓ ・ リポジトリ内被引用：15  
@@ -2794,6 +2794,10 @@
   実装：✓ ・ リポジトリ内被引用：2  
   Donisch、Schacht、Lanquillonの論文は、LLMの推論資源を削減する研究を、量子化、剪定、知識蒸留、アーキテクチャ最適化という四群に分けた文献レビューである。§III-Dで紹介する投機的復号の2〜3倍の遅延改善は参照論文に帰属する値であり、このレビューの独立した再現結果ではない。
 
+- **2024-06 · [MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations](2024-2406.07017-moreaupruner-robust-pruning-of-large-language-models-against-weight-pert.md)**  
+  実装：[✓](https://github.com/ShiningSord/MoreauPruner) ・ リポジトリ内被引用：2  
+  LLaMA-13Bでは回復微調整後の7課題平均が元64.97に対しMoreauPruner-GSで64.94まで近づく。一方、LLaMA3-8Bでは元70.33に対し同方式の20%剪定後が65.37で、性能損失が残る。
+
 - **2024-06 · [Divergent Token Metrics: Measuring degradation to prune away LLM components -- and optimize quantization](2024-2311.01544-divergent-token-metrics-measuring-degradation-to-prune-away-llm-componen.md)**  
   実装：[✓](https://github.com/Aleph-Alpha/Divergent_Tokens) ・ リポジトリ内被引用：2  
   大規模言語モデルの圧縮では、重みを0にする枝刈りや、浮動小数点数を整数へ変換する量子化が、生成文をどの時点から変えてしまうかを把握する必要がある。この指標を使って行列ごとの枝刈り率を配分すると、Llama-2-13Bを全体75%疎化したとき、同じ平均疎化率の一様な大きさ基準の枝刈りより、WikiText2のPPLを13.512から8.101へ抑えられる。
@@ -2841,10 +2845,6 @@
 - **2024-06 · [Recurrent Context Compression: Efficiently Expanding the Context Window of LLM](2024-2406.06110-recurrent-context-compression-efficiently-expanding-the-context-window-o.md)**  
   実装：[✓](https://github.com/WUHU-G/RCC_Transformer) ・ リポジトリ内被引用：1  
   通常のTransformerは、学習時の文脈窓を超えると品質が落ちやすいという別の問題もある。Recurrent Context Compression（RCC）は、長文を短い区間へ分割し、各区間の情報を少数の隠れベクトルへ圧縮して復号器に渡す方式である。主張する32倍圧縮時のBLEU-4約0.95は、特定の短文再構成タスクでの値である。
-
-- **2024-06 · [MoreauPruner: Robust Pruning of Large Language Models against Weight Perturbations](2024-2406.07017-moreaupruner-robust-pruning-of-large-language-models-against-weight-pert.md)**  
-  実装：[✓](https://github.com/ShiningSord/MoreauPruner) ・ リポジトリ内被引用：1  
-  LLaMA-13Bでは回復微調整後の7課題平均が元64.97に対しMoreauPruner-GSで64.94まで近づく。一方、LLaMA3-8Bでは元70.33に対し同方式の20%剪定後が65.37で、性能損失が残る。
 
 - **2024-05 · [Dependency-Aware Semi-Structured Sparsity of GLU Variants in Large Language Models](2024-2405.01943-dependency-aware-semi-structured-sparsity-of-glu-variants-in-large-langu.md)**  
   実装：[✓](https://github.com/guozhiyu/glu_dass) ・ リポジトリ内被引用：1  
@@ -2977,11 +2977,11 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：259  
+  実装：✓ ・ リポジトリ内被引用：260  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：235  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：237  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3297,7 +3297,7 @@
 ### 10年前（2016-11〜2017-10）
 
 - **2017-01 · [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](2017-1701.06538-outrageously-large-neural-networks-the-sparsely-gated-mixture-of-experts.md)**  
-  実装：✓ ・ リポジトリ内被引用：303  
+  実装：✓ ・ リポジトリ内被引用：304  
   本論文は、ニューラルネットワークの総パラメータ数を増やすと各入力での計算量も増えるという密なモデルの制約を、入力ごとに一部の専門家だけを実行する条件付き計算によって緩和した基礎研究である。モデルの総容量を大きくしても、活性化する専門家数を固定すれば入力一件あたりの専門家演算量はほぼ一定にできる。ただし専門家を増やすだけでは高速にならない。
 
 ### 11年前（2015-11〜2016-10）

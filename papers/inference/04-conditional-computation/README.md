@@ -71,11 +71,11 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-03 · [DivPrune: Diversity-based Visual Token Pruning for Large Multimodal Models](2025-2503.02175-divprune-diversity-based-visual-token-pruning-for-large-multimodal-model.md)**  
-  実装：[✓](https://github.com/vbdi/divprune) ・ リポジトリ内被引用：51  
+  実装：[✓](https://github.com/vbdi/divprune) ・ リポジトリ内被引用：52  
   提案方式は、情報量が高そうな個々のトークンを選ぶのではなく、選んだトークン同士が似過ぎないようにすることで、短い視覚列に異なる意味的領域を残そうとする。提案された距離選択を、言語モデルの最初の層より前、または途中層の視覚対応隠れ状態へ挿入できるが、主要な実験で最も良好だったのは最初の層の前に削減する構成である。
 
 - **2025-02 · [Stop Looking for Important Tokens in Multimodal Language Models: Duplication Matters More](2025-2502.11494-stop-looking-for-important-tokens-in-multimodal-language-models-duplicat.md)**  
-  実装：[✓](https://github.com/ZichenWen1/DART) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/ZichenWen1/DART) ・ リポジトリ内被引用：38  
   従来は注意重みを使って重要そうなトークンを残す方式が多かった。LLaVA-Next-7Bの画像トークンを2880から320へ削減した条件では、総推論時間が36分16秒から18分13秒、事前充填時間が22分51秒から7分38秒へ短縮し、鍵値キャッシュは1512.1MBから168.0MBへ減少した。
 
 - **2024-11 · [DyCoke: Dynamic Compression of Tokens for Fast Video Large Language Models](2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md)**  
@@ -115,7 +115,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   FlexiDepthは、すでに学習された大規模言語モデルの重みを変更せず、出力トークンごとに必要な層の計算量を変える手法である。原著のLlama-3-8B-Instruct（32層）では、平均8層を省いても6つの評価課題における平均性能保持率が100.7%となり、固定層省略方式より高い品質を示す。
 
 - **2025-10 · [VisionSelector: End-to-End Learnable Visual Token Compression for Efficient Multimodal LLMs](2025-2510.16598-visionselector-end-to-end-learnable-visual-token-compression-for-efficie.md)**  
-  実装：[✓](https://github.com/JulietChoo/VisionSelector) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/JulietChoo/VisionSelector) ・ リポジトリ内被引用：6  
   言語モデル側はそれらを文章トークンとともに入力として処理するため、画像の情報量が増えるほど初期入力計算（プリフィル）の時間と中間状態のメモリが増える。視覚トークンを一部だけ残せば高速になるが、単純に注意スコアが大きい位置を選ぶと、内容上重要でない先頭トークンへ注意が集中する「注意の吸い込み（注意機構 sink）」や、文字・図表の細部が欠落する問題が起きる。
 
 - **2025-07 · [DiffSkip: Differential Layer Skipping in Large Language Models](2025-diffskip-differential-layer-skipping-in-large-language-models.md)**  
@@ -130,13 +130,13 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   実装：✓ ・ リポジトリ内被引用：5  
   大規模言語モデルの逐次生成では、要求ごとの同時処理数が小さいと、フィードフォワード網の大きな重み行列をGPUメモリから読み出す費用が律速になる。入力によってゼロになる中間活性を事前に予測できれば、その活性に対応する行の重み読込みと行列ベクトル積を省略できる。しかし、一般的なLLaMAの滑らかな活性化関数であるSiLUでは、負の値も厳密にはゼロになりにくい。
 
+- **2024-11 · [Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction](2024-2412.00556-accelerating-multimodal-large-language-models-by-searching-optimal-visio.md)**  
+  実装：✓ ・ リポジトリ内被引用：4  
+  この観察に「深い層で必要になる重要トークンは浅い層でも必要である」という仮定を加え、層別の保持率を浅い側から決める貪欲探索（Greedy Search、G-Search）を提案する。
+
 - **2025-03 · [AdaReTaKe: Adaptive Redundancy Reduction to Perceive Longer for Video-language Understanding](2025-2503.12559-adaretake-adaptive-redundancy-reduction-to-perceive-longer-for-video-lan.md)**  
   実装：[✓](https://github.com/SCZwangxiao/video-FlexReduc) ・ リポジトリ内被引用：3  
   動画を長くするほど事前充填で扱う系列が増え、言語モデルの鍵・値キャッシュ（KVキャッシュ）がGPUメモリを圧迫する。すべてのフレームを同じ割合で圧縮すると、静止区間へ不要な容量を割り当てる一方、質問に必要な短い場面の情報を失う。これは処理可能な動画情報量と理解精度の結果であり、トークン生成速度が同倍率で向上するという主張ではない。
-
-- **2024-11 · [Accelerating Multimodal Large Language Models by Searching Optimal Vision Token Reduction](2024-2412.00556-accelerating-multimodal-large-language-models-by-searching-optimal-visio.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  この観察に「深い層で必要になる重要トークンは浅い層でも必要である」という仮定を加え、層別の保持率を浅い側から決める貪欲探索（Greedy Search、G-Search）を提案する。
 
 - **2025-05 · [ToDRE: Effective Visual Token Pruning via Token Diversity and Task Relevance](2025-2505.18757-todre-effective-visual-token-pruning-via-token-diversity-and-task-releva.md)**  
   実装：[✓](https://github.com/Yrdal3910/ToDRE) ・ リポジトリ内被引用：2  
@@ -185,23 +185,23 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：136  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：137  
   LayerSkipは、大規模言語モデルの全ての層を毎トークン実行する代わりに、浅い層から次トークンを予測できるよう学習し、その予測を同じモデルの残りの層で検証する方式である。下書きモデルの生成結果を大きなモデルで一括検証することで生成時間を短縮できるが、二つのモデルの重みや鍵・値キャッシュを管理する必要がある。
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
-  実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：136  
+  実装：[✓](https://github.com/pkunlp-icler/FastV) ・ リポジトリ内被引用：137  
   LLaVA-1.5では一枚の336×336画像が576トークンになり、高解像度化や動画の複数フレーム処理では数千トークンへ増える。初期層では画像情報が広く注意される一方、深い層では少数のシステム指示や文章トークンへ注意が集中し、画像トークン一個当たりの注意効率が非常に低くなる。代表設定は二層後に視覚トークンの50%を削除する方式である。
 
 - **2024-03 · [LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models](2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md)**  
-  実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：98  
+  実装：[✓](https://github.com/42Shawn/LLaVA-PruMerge) ・ リポジトリ内被引用：99  
   LLaVA-PruMergeは、画像を大規模言語モデルへ渡す際の視覚トークン数を削減する方式である。LLaVA-1.5は336×336画素の画像から24×24個、すなわち576個の視覚トークンを生成する。
 
 - **2024-10 · [SparseVLM: Visual Token Sparsification for Efficient Vision-Language Model Inference](2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md)**  
-  実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：87  
+  実装：[✓](https://github.com/Gumpest/SparseVLMs) ・ リポジトリ内被引用：88  
   SparseVLMは、視覚言語モデル（VLM）の入力画像から生じる大量の視覚トークンを、現在の質問に必要な情報をできるだけ残しながら削減する追加学習不要の方式である。
 
 - **2024-10 · [PyramidDrop: Accelerating Your Large Vision-Language Models via Pyramid Visual Redundancy Reduction](2024-2410.17247-pyramiddrop-accelerating-your-large-vision-language-models-via-pyramid-v.md)**  
-  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：68  
+  実装：[✓](https://github.com/Cooperx521/PyramidDrop) ・ リポジトリ内被引用：69  
   大規模視覚言語モデル（Large Vision-Language モデル; LVLM）は、画像を数百から数千の画像トークンへ変換して、文章の質問と一緒に言語モデルへ入力する。画像解像度が上がると画像トークンが増え、注意計算と全結合層の演算量が大きくなる。複数の視覚言語ベンチマークで品質は概ね維持されるが、個別の高解像度課題では小さな低下もある。
 
 - **2024-04 · [Mixture-of-Depths: Dynamically allocating compute in transformer-based language models](2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md)**  
@@ -353,15 +353,15 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 7年前（2019-11〜2020-10）
 
 - **2020-04 · [DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference](2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md)**  
-  実装：[✓](https://github.com/castorini/DeeBERT) ・ リポジトリ内被引用：53  
+  実装：[✓](https://github.com/castorini/DeeBERT) ・ リポジトリ内被引用：54  
   DeeBERTは、BERT系の分類モデルで入力ごとに必要なTransformer層数が異なることを利用し、浅い層ですでに十分確信度の高い予測が得られた例を途中で返す動的早期終了（動的 early exiting）方式である。
 
 - **2020-06 · [BERT Loses Patience: Fast and Robust Inference with Early Exit](2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md)**  
-  実装：✓ ・ リポジトリ内被引用：41  
+  実装：✓ ・ リポジトリ内被引用：42  
   浅い層で正しい分類がほぼ確定している入力にも後段層の計算を続けるため、不要な遅延が生じる。従来の早期終了方式は中間分類器の最大確率やエントロピーなど、一つの層での自信の強さを停止信号にすることが多かった。
 
 - **2020-04 · [FastBERT: a Self-distilling BERT with Adaptive Inference Time](2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md)**  
-  実装：[✓](https://github.com/autoliuweijie/FastBERT) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/autoliuweijie/FastBERT) ・ リポジトリ内被引用：42  
   この設計は文章生成の各トークンを省略する方式ではなく、主に文章分類と文対照合に適用される。例えば中国語THUCNewsでは閾値0.1で分類精度96.71%を維持しつつ計算量が約6.05分の1、英語DBpediaでは同閾値で99.31%から99.28%への微小な低下と引き換えに約10.57分の1となる。
 
 - **2020-01 · [PoWER-BERT: Accelerating BERT Inference via Progressive Word-vector Elimination](2020-2001.08950-power-bert-accelerating-bert-inference-via-progressive-word-vector-elimi.md)**  
