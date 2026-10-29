@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T08:17:59.436482+00:00",
+  "generated_at": "2026-10-29T09:01:06.611658+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 5,
   "worker_counts": {
     "scheduled-chat-00": 2,
-    "scheduled-chat-30": 2,
-    "scheduled-chat-45": 3
+    "scheduled-chat-30": 1,
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -102,26 +102,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/16-weight-quantization-compression/2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md",
-      "canonical_id": "arXiv:2601.20745",
-      "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
-      "file_bytes": 16336,
-      "source_sha256": "bcd75ce8e66edcc3a87b2f53cad9da296bdb066dd217da097ba6e92dde7614ee",
-      "source_git_blob_sha": "f201bddc3994bc683f215dee16928af2bfaa86a0",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.843098,
-      "quality_metrics": {
-        "body_chars": 4193,
-        "method_chars": 1238,
-        "evaluation_chars": 1214,
-        "limitation_chars": 385
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2606.23406-hyperquant-a-rate-distortion-optimal-quantization-pipeline-for-large-lan.md",
       "canonical_id": "arXiv:2606.23406",
       "title": "HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models",
@@ -137,26 +117,6 @@
         "method_chars": 1428,
         "evaluation_chars": 1617,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md",
-      "canonical_id": "arXiv:2610.07643",
-      "title": "Monte Carlo Estimation for KV Cache Eviction",
-      "file_bytes": 19303,
-      "source_sha256": "30f1065dce5cdba40f88c814ae769147851d6fa6efe4739d95416b63e9b2cdff",
-      "source_git_blob_sha": "8373b6d95c944d55e8ab9537a903cadcc0b11e17",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.872832,
-      "quality_metrics": {
-        "body_chars": 5095,
-        "method_chars": 1137,
-        "evaluation_chars": 2004,
-        "limitation_chars": 340
       },
       "mechanical_failures": [],
       "warnings": []
