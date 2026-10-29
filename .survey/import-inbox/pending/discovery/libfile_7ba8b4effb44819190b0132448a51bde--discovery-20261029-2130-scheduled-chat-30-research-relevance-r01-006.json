@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-2130-scheduled-chat-30/r01/prescreen-rank06",
+  "reference_main_sha": "79763b92cf86308a011146d4439e474acfa3120f",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17188",
+      "identity_tokens": [
+        "arxiv:2607.17188",
+        "doi:10.48550/arxiv.2607.17188"
+      ],
+      "title": "UPAIR: Diagnosing Reasoning States via Uncertainty-Progress Alignment for Selective Intervention",
+      "reason": "一次arXiv v2要旨では、推論中の回答不確実性と潜在状態の進展を監視し、停滞時の戦略切替・検証付き停止を選択する学習不要の推論制御を提案する。生成トークン最大29.64%減、オンライン診断の時間費用1%未満と推論計算削減には接続する。一方、主な寄与・評価は数学等の推論正答率と状態診断であり、LLMサービング、GPU実行、KVメモリ、通信・スケジューラの具体的なシステム改善を示すものではない。推論効率との接点はあるためunrelatedではなくborderlineとする。",
+      "source_url": "https://arxiv.org/abs/2607.17188",
+      "body_check": "abstract_screen_only; body_not_read; arxiv_v2_abstract",
+      "first_checked_at": "2026-10-29T21:30:27+09:00",
+      "last_checked_at": "2026-10-29T21:30:27+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 6
+    }
+  ]
+}
