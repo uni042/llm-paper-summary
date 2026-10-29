@@ -32,6 +32,8 @@ worker_completed_at: "2026-10-30T04:57:34+09:00"
 reference_main_sha: "4e5e490c0f5a20ce31c0c20bab67ce74b05dd096"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # ELORA：LoRAとKVキャッシュの依存関係を統一管理するMulti-LoRAサービング

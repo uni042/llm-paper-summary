@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（517本）
+## 自動生成の論文一覧（518本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -885,6 +885,10 @@
 - **2026-06 · [The Serialized Bridge: Understanding and Recovering LLM Serving Performance under Blackwell GPU Confidential Computing](2026-2606.23969-serialized-bridge-blackwell-gpu-confidential-computing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GPU機密計算でLLM推論が遅くなる主因をGPU演算ではなく機密VM–GPU間の直列化された転送路と特定し、スケジューリング・モデルロード・KV退避を転送特性に合わせて変えることで大半の性能差を回復する。
+
+- **2026-06 · [Scaling LLM Inference Beyond Amdahl's Limits via Eliminating Non-Scalable Overheads](2026-2606.01927-scaling-llm-inference-beyond-amdahl-s-limits-via-eliminating-non-scalabl.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Albireoは、推論エンジンの各イテレーションに含まれるスケジューリング、入力準備、出力処理、samplingを、順伝播と並行して実行できるようにするシステムである。
 
 - **2026-06 · [Recency/Frequency Adaptive KV Caching for Large Language Model Serving](2026-2606.21238-recency-frequency-adaptive-kv-caching-for-large-language-model-serving.md)**  
   実装：[✓](https://github.com/Y-aang/vllm-ARC) ・ リポジトリ内被引用：0  

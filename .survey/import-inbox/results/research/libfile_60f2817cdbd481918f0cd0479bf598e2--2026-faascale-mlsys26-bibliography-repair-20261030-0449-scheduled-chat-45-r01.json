@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "e575dc1e32b090a57d73249a18fcbf9a50c5245b37e8207938371ed539eb8fed",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_60f2817cdbd481918f0cd0479bf598e2--2026-faascale-mlsys26-bibliography-repair-20261030-0449-scheduled-chat-45-r01.md",
+  "canonical_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+  "worker_completed_at": "2026-10-30T04:57:34+09:00",
+  "worker_run_key": "20261030-0449-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6220,
+    "body_paragraphs": 36,
+    "method_chars": 1411,
+    "method_paragraphs": 9,
+    "evaluation_chars": 219,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 219 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 219 < 500"
+  ],
+  "processed_at": "2026-10-29T20:57:42+00:00"
+}

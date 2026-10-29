@@ -35,10 +35,15 @@
   "selection_reason": "Albireoはテンソル並列度の増加で顕在化するCPUスケジューリング・I/O・サンプリングの非スケーラブル部分を、計算とのオーバーラップとsequence-parallel samplingで削減する。vLLM比最大1.9倍スループット、48%遅延削減を報告し、分散推論ランタイムに直接貢献する。",
   "semantic_scholar_id": "aa6111e3becf7ecb51ba4319be0254918a085018",
   "source_url": "https://arxiv.org/abs/2606.01927",
-  "status": "ready",
+  "status": "superseded",
   "title": "Scaling LLM Inference Beyond Amdahl's Limits via Eliminating Non-Scalable Overheads",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T20:59:56+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.01927-scaling-llm-inference-beyond-amdahl-s-limits-via-eliminating-non-scalabl.md",
+  "represented_canonical_id": "arXiv:2606.01927",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
