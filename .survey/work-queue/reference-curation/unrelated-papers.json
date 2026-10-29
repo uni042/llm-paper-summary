@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-29T10:48:23+00:00",
-  "record_count": 12542,
+  "updated_at": "2026-10-29T12:47:33+00:00",
+  "record_count": 12543,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180580,6 +180580,18 @@
       "last_checked_at": "2026-10-29T10:48:23+00:00",
       "linked_from": [],
       "title": "An Oskolkov–Zhizhiashvili Criterion for Rectangular Fourier Sums"
+    },
+    "DOI:10.1016/j.neucom.2026.134297": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134297",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134297"
+      ],
+      "reason": "タイトルが明示する研究対象は複雑な推論課題の正答率を高めるための知識蒸留と動的ソフトプロンプト調整である。LLM推論サービングの実行系、KVキャッシュ、量子化、GPUカーネル、並列実行、通信・メモリ階層などのシステム高速化ではなく、現在凍結中の学習・能力改善領域に該当するため、タイトル段階の対象外と判定。本文や一次abstractを読んだ判定ではない。",
+      "first_checked_at": "2026-10-29T12:47:33+00:00",
+      "last_checked_at": "2026-10-29T12:47:33+00:00",
+      "linked_from": [],
+      "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning"
     }
   }
 }

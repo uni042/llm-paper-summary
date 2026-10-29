@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-28T22:45:57+00:00",
-  "record_count": 5411,
+  "updated_at": "2026-10-29T12:47:31+00:00",
+  "record_count": 5412,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83824,6 +83824,20 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Temporal Guidance for Large Language Models"
+    },
+    "arXiv:2607.17188": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.17188",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2607.17188",
+        "arXiv:2607.17188"
+      ],
+      "reason": "一次arXiv v2要旨では、推論中の回答不確実性と潜在状態の進展を監視し、停滞時の戦略切替・検証付き停止を選択する学習不要の推論制御を提案する。生成トークン最大29.64%減、オンライン診断の時間費用1%未満と推論計算削減には接続する。一方、主な寄与・評価は数学等の推論正答率と状態診断であり、LLMサービング、GPU実行、KVメモリ、通信・スケジューラの具体的なシステム改善を示すものではない。推論効率との接点はあるためunrelatedではなくborderlineとする。",
+      "first_checked_at": "2026-10-29T12:47:31+00:00",
+      "last_checked_at": "2026-10-29T12:47:31+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "UPAIR: Diagnosing Reasoning States via Uncertainty-Progress Alignment for Selective Intervention"
     }
   }
 }
