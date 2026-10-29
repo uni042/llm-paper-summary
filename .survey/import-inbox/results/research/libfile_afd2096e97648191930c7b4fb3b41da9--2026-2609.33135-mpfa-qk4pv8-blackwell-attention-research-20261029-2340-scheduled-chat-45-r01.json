@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "df40833e758c9675b5d3202da37484edcac5ec662f7834848edd372a1fb7380f",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_afd2096e97648191930c7b4fb3b41da9--2026-2609.33135-mpfa-qk4pv8-blackwell-attention-research-20261029-2340-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2609.33135",
+  "worker_completed_at": "2026-10-29T23:49:00+09:00",
+  "worker_run_key": "20261029-2340-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6052,
+    "body_paragraphs": 28,
+    "method_chars": 1673,
+    "method_paragraphs": 8,
+    "evaluation_chars": 232,
+    "limitation_chars": 846,
+    "insufficiency_flags": [
+      "評価説明量 232 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 232 < 500"
+  ],
+  "processed_at": "2026-10-29T15:52:50+00:00"
+}

@@ -33,6 +33,8 @@ quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 repair_origin: "returned_research_queue"
 repair_note: "GitHubのblocked原稿を同一HEADで取得できなかったため、ACL Anthology一次論文の本文・表・付録から独立再構築。既存原稿の逐語的な再提出ではない。"
+last_audited: null
+audit_version: 0
 ---
 
 ## 書誌と位置づけ

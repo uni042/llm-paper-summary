@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（328本）
+## 自動生成の論文一覧（329本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -575,6 +575,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-07 · [Training-Free Adaptive Speculative Decoding via Linguistic Priors](2026-2ad70212cfe6-training-free-adaptive-speculative-decoding-via-linguistic-priors.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   LinguaSpecは、投機的復号（投機的復号）の二つの支出先――小さい草稿モデルが次の候補をどこまで生成するか、大きい対象モデルがその候補をどこまで受理するか――を、トークンの言語的役割に応じて変える方式である。自己回帰復号に対する平均実測高速化は順に4.26倍、4.67倍、4.08倍で、同じ表のEAGLE-3は3.97倍、4.36倍、3.88倍だった。
+
+- **2026-07 · [SPIDE: Serial and Parallel Intertwined Speculative Decoding](2026-6403c69c2ddc-spide-serial-and-parallel-intertwined-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  通常の自己回帰復号では、ターゲットLLMを生成トークンごとに実行するため、大規模モデルの重み読み出しと逐次依存が生成遅延を支配する。標準SDは小さな草稿モデルが複数トークンを先行生成し、大きなターゲットが一度の順伝播で検証することで、この逐次依存を減らす。自己回帰生成に対する壁時計時間の高速化は平均3.25倍、最大4.56倍。
 
 - **2026-07 · [Revisiting Lossy Verification in Speculative Decoding: Mechanisms, Trade-offs, and Failure Modes](2026-2607.26627-revisiting-lossy-verification-in-speculative-decoding-mechanisms-trade-o.md)**  
   実装：[✓](https://github.com/ZhouYuxuanYX/Fast-HSD) ・ リポジトリ内被引用：0  
