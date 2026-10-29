@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "95262944502b984d20dea94e1f69638aef245ed43b8e8f90988a39840b7343d8",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e4bb5ffc9a76--libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2607.15456",
+  "worker_completed_at": "2026-10-29T08:08:00+09:00",
+  "worker_run_key": "20261029-0803-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4765,
+    "body_paragraphs": 25,
+    "method_chars": 1335,
+    "method_paragraphs": 8,
+    "evaluation_chars": 0,
+    "limitation_chars": 487,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-29T01:24:19+00:00"
+}
