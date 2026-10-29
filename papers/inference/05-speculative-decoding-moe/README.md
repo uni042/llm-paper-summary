@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（327本）
+## 自動生成の論文一覧（328本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -507,6 +507,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [BV Loss: Block Verification-Aware Loss for Block Diffusion Speculative Decoding](2026-2609.34832-bv-loss-block-verification-aware-loss-for-block-diffusion-speculative-de.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号では小さな下書き器が複数の候補トークンを提案し、対象モデル（対象モデル）が一括検証する。Qwen3-4B/8Bを対象モデルにした5層DFlash・DSparkで、7課題平均の検証1回当たり保持トークン数は、CE学習と比較して13.0～21.0%改善した。
+
+- **2026-09 · [Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference](2026-2609.24698-adapting-tree-structured-speculative-decoding-to-deepseek-v4-for-efficie.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  DeepSeek-V4ではCSA/HCAと呼ぶオンライン圧縮注意を用い、候補枝が異なると圧縮された注意状態も異なる。GSM8K、MBPP、ShareGPTを8GPU環境で評価し、D=5〜8の同じ検証トークン予算で木構造の受理長が線形より長く、デコード処理量は最大約18.5%改善した。
 
 - **2026-09 · [Acceptance-Aware Draft Model Training for Speculative Decoding](2026-2609.24150-acceptance-aware-draft-model-training-for-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

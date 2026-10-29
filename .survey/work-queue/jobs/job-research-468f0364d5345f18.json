@@ -35,10 +35,15 @@
   "selection_reason": "変動する要求到着率を到着間隔からオンライン推定し、WAITのバッチング閾値をバーストに合わせて更新する。MMPP合成トラフィックのシミュレーションで低頻度の負荷状態変化時にSarathi-Serve・ORCA・vLLMより高い処理量と同程度の遅延を報告するLLM推論スケジューリング方式。",
   "semantic_scholar_id": "87ad9aa1e2aa1476f54ace56acd777f2cd0cd93a",
   "source_url": "https://arxiv.org/abs/2608.06135",
-  "status": "ready",
+  "status": "superseded",
   "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T13:33:33+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2608.06135-llm-inference-under-bursty-workload-distribution-modifying-the-wait-algo.md",
+  "represented_canonical_id": "arXiv:2608.06135",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

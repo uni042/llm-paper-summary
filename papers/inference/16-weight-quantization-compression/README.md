@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（174本）
+## 自動生成の論文一覧（175本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -203,6 +203,10 @@
 - **2026-08 · [PRQuant: Permutation Residual Quantization for Low-Overhead Inference](2026-2609.22106-prquant-permutation-residual-quantization-for-low-overhead-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   PRQuantは、言語モデルの線形層を重み・活性値とも4ビット相当で実行する際、少数の外れ値経路が精度を左右する問題を扱う。特に微小尺度浮動小数点4ビット形式（MXFP4）では小ブロックが共通尺度を持ち、ブロック内の一部の大きな値に尺度を合わせると、それ以外の値の量子化刻みが粗くなる。
+
+- **2026-08 · [HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference](2026-2609.00450-hbq-hierarchical-scaling-block-quantization-with-hardware-efficiency-awa.md)**  
+  実装：[✓](https://github.com/SeoLabCornell/HBQ) ・ リポジトリ内被引用：0  
+  重みだけを4ビット化するWoQは活性値をFP16などで処理するため精度を維持しやすいが、演算器やメモリ転送に高精度活性値のコストが残る。第1階層はFP8スケールを使い、第2階層では重み・活性値の異なる分布に合わせて量子化レベルを調整する。
 
 - **2026-08 · [FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy](2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md)**  
   実装：[✓](https://github.com/nicyyyy/FluxBin) ・ リポジトリ内被引用：0  
