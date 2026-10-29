@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（409本）
+## 自動生成の論文一覧（410本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -578,6 +578,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [HeadWiseKV: Budgeted Per-Head Cache Residency for Hybrid Long-Context Language Models](2026-2609.02029-headwisekv-budgeted-per-head-cache-residency.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HeadWiseKVは、全体注意層のKV履歴を物理KVヘッドごとに較正し、必要な窓だけGPUへ確保して、長文脈の過剰メモリと一律圧縮による品質低下を抑える。
+
+- **2026-09 · [HeadGuard: Selective Head Protection for Low-Bit VLM KV-Cache Quantization](2026-2609.35800-headguard-selective-head-protection-for-low-bit-vlm-kv-cache-quantizatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  キャッシュを一様に2～3ビットへ量子化すると容量は小さくなるが、視覚情報に強く依存するヘッドの表現まで丸められ、画像質問応答や選択問題の正答率が急落する場合がある。
 
 - **2026-09 · [H-Spec: Parallel Speculative Decoding Without a Drafter-Side KV Cache](2026-2609.24197-h-spec-parallel-speculative-decoding-without-a-drafter-side-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

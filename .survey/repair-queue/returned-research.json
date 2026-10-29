@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T14:01:57+00:00",
+  "generated_at": "2026-10-29T14:55:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 75,
+  "count": 77,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1985,6 +1985,64 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d88501a8cb7--libfile_7c754ed8ea00819188219d9b3f526999--2025-2509.00388-graphkv-similarity-decay-eviction-research-20261029-1647-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-4d88501a8cb7--libfile_7c754ed8ea00819188219d9b3f526999--2025-2509.00388-graphkv-similarity-decay-eviction-research-20261029-1647-scheduled-chat-4.json",
       "worker_run_key": "20261029-1647-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1613/jair.1.13896",
+      "title": "AAN+: Generalized Average Attention Network for Accelerating Neural Transformer",
+      "source_url": "https://www.jair.org/index.php/jair/article/view/13896",
+      "returned_at": "2026-10-29T14:49:40+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 146 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5110,
+        "body_paragraphs": 28,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 146,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 146 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_3b192c315c608191950865b2c392563d--2022-doi-10.1613-jair.1.13896-aanplus-generalized-average-attention-research-20261029-2258-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_3b192c315c608191950865b2c392563d--2022-doi-10.1613-jair.1.13896-aanplus-generalized-average-attention-research-20261029-2258-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-2258-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.26100",
+      "title": "TSS: Target-Side Sparsification for Speculative Decoding in Domain-Specific Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.26100",
+      "returned_at": "2026-10-29T14:53:12+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 438 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4826,
+        "body_paragraphs": 25,
+        "method_chars": 1335,
+        "method_paragraphs": 7,
+        "evaluation_chars": 438,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 438 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_81c09a310e408191b3e305b7c7d714df--2026-2609.26100-tss-target-side-sparsification-research-20261029-2330-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_81c09a310e408191b3e305b7c7d714df--2026-2609.26100-tss-target-side-sparsification-research-20261029-2330-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261029-2330-scheduled-chat-30/r01"
     }
   ]
 }

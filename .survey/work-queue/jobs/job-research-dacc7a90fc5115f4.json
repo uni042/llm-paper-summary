@@ -35,10 +35,15 @@
   "selection_reason": "RRSはLLM活性の外れ値をチャネル型とスパイク型に分け、推論時のチャネル最大値を用いるRuntime Smoothと回転操作でINT4重み・活性量子化時の誤差を減らす。LLaMAとQwenの低精度推論を対象とする直接的な量子化方式。",
   "semantic_scholar_id": "79f31828ab43f42333e770b65e5eea63987bbc54",
   "source_url": "https://arxiv.org/abs/2409.20361",
-  "status": "ready",
+  "status": "superseded",
   "title": "Rotated Runtime Smooth: Training-Free Activation Smoother for accurate INT4 inference",
   "type": "research",
   "venue": "International Conference on Learning Representations",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-29T14:55:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2409.20361-rotated-runtime-smooth-training-free-activation-smoother-for-accurate-in.md",
+  "represented_canonical_id": "arXiv:2409.20361",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

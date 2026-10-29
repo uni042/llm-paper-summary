@@ -35,10 +35,15 @@
   "selection_reason": "HeadGuardはVLM画像KVの感度を物理注意頭ごとに校正し、重要な一部の頭の画像keyと必要ならvalueをBF16のまま残して、その他を既存の低ビット量子化器に任せる。VLMのKVメモリ圧縮と精度維持の直接的な補助方式なのでaccept。実験はシミュレートした量子化。",
   "semantic_scholar_id": "ab1b0192086566b305f5649e406ea251033a30c5",
   "source_url": "https://arxiv.org/abs/2609.35800",
-  "status": "ready",
+  "status": "superseded",
   "title": "HeadGuard: Selective Head Protection for Low-Bit VLM KV-Cache Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T14:55:09+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.35800-headguard-selective-head-protection-for-low-bit-vlm-kv-cache-quantizatio.md",
+  "represented_canonical_id": "arXiv:2609.35800",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
