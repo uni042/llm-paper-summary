@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-29T12:47:33+00:00",
-  "record_count": 12543,
+  "updated_at": "2026-10-29T19:56:28+00:00",
+  "record_count": 12544,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180592,6 +180592,18 @@
       "last_checked_at": "2026-10-29T12:47:33+00:00",
       "linked_from": [],
       "title": "DDPT: Enhancing complex reasoning in large language models via distillation and dynamic prompt tuning"
+    },
+    "arXiv:2405.19257": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.19257",
+      "identity_tokens": [
+        "arXiv:2405.19257"
+      ],
+      "reason": "ロボットIoTの無線ネットワークでCNN等のDNN推論を分散実行する方式。Local Operator ParallelismとLocal Operator Scheduling Strategyで畳み込み等の局所演算と通信を重複させ、ロボットの物体認識・点群処理を評価する。一次本文の評価対象はロボット・VGG等であり、生成LLM、Transformerサービング、KVキャッシュ、MoE推論の固有技術は扱わない。汎用分散推論の近接研究ではあるが現行LLMシステム効率化の対象外。",
+      "first_checked_at": "2026-10-29T19:56:28+00:00",
+      "last_checked_at": "2026-10-29T19:56:28+00:00",
+      "linked_from": [],
+      "title": "Hybrid-Parallel: Achieving High Performance and Energy Efficient Distributed Inference on Robots"
     }
   }
 }

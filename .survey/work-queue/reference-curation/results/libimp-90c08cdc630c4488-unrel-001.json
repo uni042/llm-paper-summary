@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-90c08cdc630c4488-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2405.19257",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2405.19257",
+    "identity_tokens": [
+      "arXiv:2405.19257"
+    ],
+    "reason": "ロボットIoTの無線ネットワークでCNN等のDNN推論を分散実行する方式。Local Operator ParallelismとLocal Operator Scheduling Strategyで畳み込み等の局所演算と通信を重複させ、ロボットの物体認識・点群処理を評価する。一次本文の評価対象はロボット・VGG等であり、生成LLM、Transformerサービング、KVキャッシュ、MoE推論の固有技術は扱わない。汎用分散推論の近接研究ではあるが現行LLMシステム効率化の対象外。",
+    "first_checked_at": "2026-10-29T19:56:28+00:00",
+    "last_checked_at": "2026-10-29T19:56:28+00:00",
+    "linked_from": [],
+    "title": "Hybrid-Parallel: Achieving High Performance and Energy Efficient Distributed Inference on Robots"
+  },
+  "processed_at": "2026-10-29T19:56:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-90c08cdc630c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
