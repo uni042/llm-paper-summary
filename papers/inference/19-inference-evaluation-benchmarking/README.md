@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（107本）
+## 自動生成の論文一覧（108本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -177,6 +177,10 @@
 - **2026-06 · [Benchmarking LLM Serving Systems for Agentic AI Workloads with XPerf](2026-2608.20370-xperf-benchmarking-llm-serving-agentic-ai-workloads.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント実行を呼出し依存グラフとして記録・再生し、8種類の実アプリでサービング負荷とハードウェア指標を再現可能に測る評価基盤を提示する。
+
+- **2026-06 · [AVIS: Adaptive Test-Time Scaling for Vision-Language Models](2026-2606.11576-avis-adaptive-test-time-scaling-for-vision-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  視覚トークンを減らして浮いた計算を、難しい問いの追加推論へ回せれば、計算を減らしつつ精度を維持・改善できる可能性がある。推論探索量を制御するVisual Reasoning Scaling（VRS）では、視覚埋め込みから問題の解答可能性を予測し、自己整合性多数決の試行数Kを1、3、5、7から選ぶ。
 
 - **2026-06 · [Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads](2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md)**  
   実装：[✓](https://github.com/Tambe-Lab/agent-memory-profiling) ・ リポジトリ内被引用：0  
