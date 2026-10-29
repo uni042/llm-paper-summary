@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（82本）
+## 自動生成の論文一覧（83本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -49,6 +49,10 @@
 - **2026-09 · [Partition-Aware Scheduling for Mobile Heterogeneous Inference Co-Execution](2026-2609.14213-partition-aware-scheduling-for-mobile-heterogeneous-inference-co-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   演算子のCPU-GPU分割とDAG上の実行順を共同最適化し、段階化・臨界度標本化・遅延予測による配備時反復探索でオフライン最適化に近いモバイル推論遅延を得る。
+
+- **2026-09 · [OmniTide: Co-Designing Algorithms and Systems for Efficient On-Device Omni-LLM Streaming](2026-2609.34653-omnitide-co-designing-algorithms-and-systems-for-efficient-on-device-omn.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  各時刻の視覚・音声表現がLLMへ投入されるとKVキャッシュが累積し、後続の質問が過去の場面を参照できる一方、端末のメモリ容量と注意機構の計算量を圧迫する。主な検証では、Qwen2.5-Omni-3B/7Bの完全履歴との比較でストリームセッション時間が2.29〜2.40倍短くなり、StreamingBench正答率はほぼ同水準である。
 
 - **2026-09 · [mzCache: On-Device LLM Memory Management under Multitasking](2026-2609.01338-mzcache-on-device-llm-memory-management-under-multitasking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
