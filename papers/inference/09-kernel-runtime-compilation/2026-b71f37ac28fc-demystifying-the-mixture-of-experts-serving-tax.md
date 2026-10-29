@@ -17,7 +17,7 @@ sources:
 code: null
 implementation: Mixtral-8x7B、Qwen2-MoE、DeepSeek-V3をvLLM、Triton FusedMoE、DeepGEMM、DeepEP等で実行し、A100/B200/H200 GPU上のエンドツーエンド反復レイテンシ、NsightによるGroupGEMM・通信マイクロベンチマーク、解析モデルとMonte Carloを組み合わせたシステム特性評価。新規サービングランタイムの実装・優位性を実証する論文ではなく、公式コード公開URLは一次資料から確認できない。
 summary: MoEは1トークン当たりの活性化FLOPsが同じdenseモデルよりサービングが2〜3倍遅くなり得る。著者らは同一活性化計算量のDenseFAと同一総パラメータ量のDensePAを区別し、MoE taxを反復レイテンシ比として定義。prefillでは専門家ごとの小バッチ化・padding・EPのstraggler、decodeでは活性化expert重みの広範なHBMロードが主因であることを、Mixtral/Qwen2-MoE/DeepSeek-V3、A100/B200/H200、vLLMの実測と解析で示す。decodeのtaxは中程度のbatchで最大化し、routing偏りがむしろ有利になる場合がある。解析モデルは大半の条件で実測から10〜30%以内だが、長文脈、multi-node end-to-end、精度比較、JITを対象外とする。
-list_summary: MoEの同一FLOPs dense比2〜3倍の推論負担をprefill/decode・TP/EP・routing分布別に分解。decodeは重み読出し、prefillは小バッチ・padding・stragglerが主因。
+list_summary: "MoEの同一FLOPs 密比2〜3倍の推論負担をプリフィル/デコード・TP/EP・ルーティング分布別に分解。デコードは重み読出し、プリフィルは小バッチ・padding・stragglerが主因。"
 last_checked: '2026-10-29'
 worker_id: scheduled-chat-00
 worker_run_key: 20261029-0100-scheduled-chat-00/r01
