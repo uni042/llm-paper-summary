@@ -42,6 +42,10 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
   実装：✓ ・ リポジトリ内被引用：5  
   通常の自己回帰モデルとは異なり、左から一語ずつ確定する必要がないため、並列復号によって生成の反復回数を減らせる可能性がある。実験ではGSM8K、MATH、HumanEval、MMLU-Proを対象に、同程度の正答率で必要なモデル順伝播回数を26〜61%削減する代表結果を示す。
 
+- **2025-12 · [Learning Unmasking Policies for Diffusion Language Models](2025-2512.09106-learning-unmasking-policies-for-diffusion-language-models.md)**  
+  実装：[✓](https://github.com/apple/ml-rl-dllm) ・ リポジトリ内被引用：3  
+  拡散言語モデル（diffusion language モデル）は、左から右へ一語ずつ出力する自己回帰型モデルと異なり、未確定位置をマスクした系列全体を繰り返し予測し、複数位置を同じ前向き計算で確定できる。
+
 - **2026-04 · [Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models](2026-2604.02560-dependency-guided-parallel-decoding-in-discrete-diffusion-language-model.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   依存推定は拡散モデルの1回の前向き計算で得た状態を利用し、正確な依存行列を作るためにマスク位置ごとに追加推論する方式を避ける。
@@ -53,10 +57,6 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 - **2025-12 · [LoPA: Scaling dLLM Inference via Lookahead Parallel Decoding](2025-2512.16229-lopa-scaling-dllm-inference-via-lookahead-parallel-decoding.md)**  
   実装：[✓](https://github.com/SJTU-DENG-Lab/LoPA) ・ リポジトリ内被引用：2  
   しかし実際には、確信度が閾値を超える位置だけを確定する方式では、難しい位置が残ってしまい、1回当たり1〜3トークン程度しか進まない場合が多い。
-
-- **2025-12 · [Learning Unmasking Policies for Diffusion Language Models](2025-2512.09106-learning-unmasking-policies-for-diffusion-language-models.md)**  
-  実装：[✓](https://github.com/apple/ml-rl-dllm) ・ リポジトリ内被引用：2  
-  拡散言語モデル（diffusion language モデル）は、左から右へ一語ずつ出力する自己回帰型モデルと異なり、未確定位置をマスクした系列全体を繰り返し予測し、複数位置を同じ前向き計算で確定できる。
 
 - **2026-08 · [Speculative Correction: Draft-then-Refine Decoding for Diffusion Language Models](2026-2608.02625-speculative-correction-draft-then-refine-decoding-for-diffusion-language.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

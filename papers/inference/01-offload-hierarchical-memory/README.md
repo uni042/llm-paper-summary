@@ -515,7 +515,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   注意演算とその他をH20/H100へ分離し、CPU非介在通信と自動分割・パイプラインで層間通信を隠して、同費用vLLM比16.1〜90.1%高いデコードスループットを得る。
 
 - **2024-01 · [FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs](2024-2401.03868-flightllm-efficient-large-language-model-inference-with-a-complete-mappi.md)**  
-  実装：[✓](https://zenodo.org/doi/10.5281/zenodo.10422477) ・ リポジトリ内被引用：18  
+  実装：[✓](https://zenodo.org/doi/10.5281/zenodo.10422477) ・ リポジトリ内被引用：19  
   復号時は演算量に比べて大量の重みを毎回読み出すため、メモリ帯域と小粒度I/Oが律速しやすい。圧縮により理論上の演算量・容量を減らしても、実ハードウェアが不規則な疎パターンや異なるビット幅を効率的に扱えなければ処理時間は縮まらない。
 
 - **2024-09 · [TwinPilots: A New Computing Paradigm for GPU-CPU Parallel LLM Inference](2024-3688351.3689164-twinpilots-a-new-computing-paradigm-for-gpu-cpu-parallel-llm-inference.md)**  
