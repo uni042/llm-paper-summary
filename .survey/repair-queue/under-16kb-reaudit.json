@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T05:52:25.139801+00:00",
+  "generated_at": "2026-10-29T06:18:21.491085+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 5,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -62,26 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.13205-adaptive-filtering-of-the-kv-cache-diagnosing-and-correcting-structural-.md",
-      "canonical_id": "arXiv:2607.13205",
-      "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
-      "file_bytes": 12605,
-      "source_sha256": "4b717d96429f6fc9dec674fd97ba91a082b74e9625851fc0a3c102064df50cb2",
-      "source_git_blob_sha": "c5e999aa99972f33712a0077b2dde170abd7b10b",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.857715,
-      "quality_metrics": {
-        "body_chars": 4086,
-        "method_chars": 1152,
-        "evaluation_chars": 1469,
-        "limitation_chars": 322
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/17-pim-near-data-acceleration/2026-h3-attn.md",
       "canonical_id": "DOI:10.1145/3816440.3818602",
       "title": "H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU",
@@ -102,12 +82,32 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.13205-adaptive-filtering-of-the-kv-cache-diagnosing-and-correcting-structural-.md",
+      "canonical_id": "arXiv:2607.13205",
+      "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
+      "file_bytes": 13594,
+      "source_sha256": "3583f201c429913e4b0d54271ef45e0c3137c4906434f8163e13fd3b0d1e0a88",
+      "source_git_blob_sha": "1cb94310b37d247d7867172936f9c3b0a82c3c78",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.857715,
+      "quality_metrics": {
+        "body_chars": 4086,
+        "method_chars": 1152,
+        "evaluation_chars": 1469,
+        "limitation_chars": 322
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2026-2602.22871-test-time-scaling-with-diffusion-language-models-via-reward-guided-stitc.md",
       "canonical_id": "arXiv:2602.22871",
       "title": "Test-Time Scaling with Diffusion Language Models via Reward-Guided Stitching",
-      "file_bytes": 14040,
-      "source_sha256": "67e59545d95a8151dc225430dc3bc4dd8d851fc10ce0b219768dd5398ce80e96",
-      "source_git_blob_sha": "7a42336d2a7844d94baaaa2627de8a262e2d4c4a",
+      "file_bytes": 14571,
+      "source_sha256": "94f393e26e2e8f33985cedde43d1b3e33a77d7c3e174f77bc4c80af6fdfb223f",
+      "source_git_blob_sha": "bed7cc715d92ae085d325e56a23d58bed5c864c4",
       "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
@@ -117,26 +117,6 @@
         "method_chars": 1211,
         "evaluation_chars": 1643,
         "limitation_chars": 368
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.08684-ripplekv-cross-layer-kv-cache-allocation-via-perturbation-propagation.md",
-      "canonical_id": "arXiv:2608.08684",
-      "title": "RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation",
-      "file_bytes": 16957,
-      "source_sha256": "25dcc3b57fde777a64782ac773a4d5e332b2dbe256db02a0447355e9b1f660a8",
-      "source_git_blob_sha": "c44b426ef049a325a39de1c8dc52fde6d687ef8c",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.820727,
-      "quality_metrics": {
-        "body_chars": 4546,
-        "method_chars": 1467,
-        "evaluation_chars": 599,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
