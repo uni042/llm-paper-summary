@@ -35,10 +35,15 @@
   "selection_reason": "MoE専門家の出力を辞書原子と見なし直交マッチング追跡で専門家を選択し、層間予算をwater-fillingで配分する。Qwen・DeepSeek・Mixtralで25〜50%剪定時の品質と推論速度を評価するためMoE圧縮に適合。",
   "semantic_scholar_id": "eca9647bf0adcffe59fb7a225d26651fafa7749b",
   "source_url": "https://arxiv.org/abs/2609.31631",
-  "status": "ready",
+  "status": "superseded",
   "title": "OMP-MoE: Efficient Expert Pruning for Mixture-of-Experts LLMs via Orthogonal Matching Pursuit",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T21:29:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/02-adaptive-expert-computation-compression/2026-2609.31631-omp-moe-efficient-expert-pruning-for-mixture-of-experts-llms-via-orthogo.md",
+  "represented_canonical_id": "arXiv:2609.31631",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

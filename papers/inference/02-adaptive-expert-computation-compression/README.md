@@ -5,7 +5,7 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 `Expert Prefetch` が「この先必要になるexpertを予測して早めにGPUへ用意する」ことを主眼とするのに対し、この系統は**そもそもどのexpertを何個実行するか、あるいはexpert構成そのものをどう小さくするか**が中心となる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（124本）
+## 自動生成の論文一覧（125本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/02-adaptive-expert-computation-compression/)
 
@@ -187,6 +187,10 @@ MoEで毎回同じ数のexpertを実行するのではなく、**token・layer�
 - **2026-09 · [PCoMoE: Shifting MoE Inference from Monolithic Expert Selection to Fine-Grained Path Composition](2026-2609.01024-pcomoe-fine-grained-path-composition.md)**  
   実装：[✓](https://github.com/gzyyy0/PCoMoE) ・ リポジトリ内被引用：0  
   MoE専門家を展開側と射影側へ分け、異なる専門家の内部部品を適合度に基づき組み合わせ、共通の展開計算を複数経路で再利用することで、専門家単位の削減より細粒度に計算を減らす方式。
+
+- **2026-09 · [OMP-MoE: Efficient Expert Pruning for Mixture-of-Experts LLMs via Orthogonal Matching Pursuit](2026-2609.31631-omp-moe-efficient-expert-pruning-for-mixture-of-experts-llms-via-orthogo.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MoEは各トークンに少数の専門家だけを起動するため演算量を抑えられる一方、全専門家の重みを保持する必要があり、GPUメモリ容量とロード・配置が問題になる。単純に利用頻度が低い専門家を削除すると、他専門家が代替できるか、あるいは特定専門家の組合せで初めて再構成できるかという相互依存を見落とす。組合せを総当たりすると専門家数に対して探索空間が指数的に増える。
 
 - **2026-09 · [MoEP: Compact and efficient sparsity with modular expert paths](2026-moep-modular-expert-paths.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

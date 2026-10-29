@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（213本）
+## 自動生成の論文一覧（214本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -611,6 +611,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-02 · [PASER: Post-Training Data Selection for Efficient Pruned Large Language Model Recovery](2025-2502.12594-paser-post-training-data-selection-for-efficient-pruned-large-language-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   常識推論、知識、翻訳、文章生成などの一部だけが大きく損なわれる場合、汎用instructionデータを均等に使って回復学習しても、限られた学習予算を劣化していない能力へ使ったり、互いに矛盾する指示へ過適合したりする。PASERは、剪定済みLLMのどの能力がどれだけ変化したかを元モデルとの出力分布の差で推定し、その劣化に応じて回復学習データを選ぶ方式である。
+
+- **2024-12 · [GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference](2024-2412.17560-gqsa-group-quantization-and-sparsity-for-accelerating-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMの推論を軽くする方法として、重みを低ビット化する量子化と、重要度の低い重みを削除する疎化がある。特に2:4の半構造化疎化はハードウェアに合う一方、疎化率が50%に固定され、低ビット量子化と自由に組み合わせにくい。
 
 - **2024-11 · [Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM](2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md)**  
   実装：[✓](https://github.com/VITA-MLLM/Freeze-Omni) ・ リポジトリ内被引用：1  

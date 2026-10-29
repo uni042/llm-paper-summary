@@ -35,10 +35,15 @@
   "selection_reason": "TSSはドメイン別に教師モデルの一部層を検証時にスキップする設定を受理率と下流指標から探索し、単一教師モデルを再学習せず複数の疎検証経路へ切り替える。翻訳条件で平均受理長2.70から4.53、出力75.6から127.3 token/sへ改善する投機的復号の最適化。",
   "semantic_scholar_id": "18d74b52a6c2dd78f855b6c4042cda9d8e0e48b1",
   "source_url": "https://arxiv.org/abs/2609.26100",
-  "status": "ready",
+  "status": "superseded",
   "title": "TSS: Target-Side Sparsification for Speculative Decoding in Domain-Specific Large Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T21:29:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2609.26100-tss-target-side-sparsification-for-speculative-decoding-in-domain-specif.md",
+  "represented_canonical_id": "arXiv:2609.26100",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

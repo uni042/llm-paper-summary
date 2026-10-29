@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（332本）
+## 自動生成の論文一覧（333本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -439,6 +439,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [Tsubame: Tree Replay for Diffusion-Based Speculative Decoding](2026-2609.33652-tsubame-tree-replay-for-diffusion-based-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Tsubameは、投機的復号で複数の候補系列を木として提示する際、木の形を選ぶことと実際に検証する候補トークンを選ぶことを分離する方式である。
+
+- **2026-09 · [TSS: Target-Side Sparsification for Speculative Decoding in Domain-Specific Large Language Models](2026-2609.26100-tss-target-side-sparsification-for-speculative-decoding-in-domain-specif.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号では軽量ドラフトモデルが候補を生成し、大型ターゲットモデルが候補を並列検証する。多くの高速化研究はドラフト側の候補品質・候補木・生成速度を改善するが、ターゲット側は元の全層を実行することを前提とする。TSSは、翻訳・要約・QA・RAG・MMLUなどのドメインごとにターゲットのスキップ層集合をオフラインで探索する。
 
 - **2026-09 · [SpecQuant: Speculative Decoding with Multi-Parent Quantization for Adaptive LLM Inference](2026-2609.21704-specquant-speculative-decoding-with-multi-parent-quantization-for-adapti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

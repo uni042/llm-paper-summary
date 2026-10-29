@@ -35,10 +35,15 @@
   "selection_reason": "GQSAはGPU向け構造化グループ疎性と重み量子化を統合し、二段階疎最適化とタスク中心並列化を導入する。W4S50%でW2量子化比1.26倍、2:4剪定比2.35倍の推論速度を報告するLLM実行高速化。",
   "semantic_scholar_id": "acbea6bae6f0d3d0358ff2c1037946c80a1c208c",
   "source_url": "https://arxiv.org/abs/2412.17560",
-  "status": "ready",
+  "status": "superseded",
   "title": "GQSA: Group Quantization and Sparsity for Accelerating Large Language Model Inference",
   "type": "research",
   "venue": "IJCNLP-AACL",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-29T21:29:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2024-2412.17560-gqsa-group-quantization-and-sparsity-for-accelerating-large-language-mod.md",
+  "represented_canonical_id": "arXiv:2412.17560",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
