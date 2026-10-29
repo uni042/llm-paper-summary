@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T23:17:36+00:00",
+  "generated_at": "2026-10-29T23:55:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1379,34 +1379,6 @@
       "worker_run_key": "20261026-0230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T05:20:09+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 403 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5568,
-        "body_paragraphs": 32,
-        "method_chars": 2057,
-        "method_paragraphs": 11,
-        "evaluation_chars": 403,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 403 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3aa26f6d175c--libfile_95e6942e845481918a140813d735165d--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261027-1204-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3aa26f6d175c--libfile_95e6942e845481918a140813d735165d--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261027-1204-schedule.json",
-      "worker_run_key": "20261027-1204-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/ACCESS.2025.3568702",
       "title": null,
       "source_url": null,
@@ -2152,6 +2124,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.json",
       "worker_run_key": "20261030-0630-scheduled-chat-30/r02"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
+      "title": "Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3664226",
+      "returned_at": "2026-10-29T23:51:55+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6003,
+        "body_paragraphs": 31,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 718,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_04065b385d3481919bf9469c91bdc6ff--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261030-0747-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_04065b385d3481919bf9469c91bdc6ff--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261030-0747-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-0747-scheduled-chat-45/r01"
     }
   ]
 }
