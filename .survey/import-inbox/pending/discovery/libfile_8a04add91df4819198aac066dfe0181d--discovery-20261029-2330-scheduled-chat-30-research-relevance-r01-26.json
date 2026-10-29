@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261029-2330-scheduled-chat-30/research-relevance-r01-rank26",
+  "reference_main_sha": "842788ee45e5e8bc9129eddeb423a5e6870ec606",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.26581",
+      "identity_tokens": [
+        "arxiv:2608.26581",
+        "doi:10.48550/arxiv.2608.26581"
+      ],
+      "title": "Activation Outliers Matter: Robust Recovery for Quantized Multimodal LLMs",
+      "reason": "原著の主目的はWan2.2-5BとQwen3-VL-30BのMXFP4/HiF4を用いた量子化認識学習（QAT）の安定化で、activationの外れ値をFP4残差経路で再量子化して前向きGEMMへ加算するRFQを提案する。低ビット推論への最終配備を念頭に置くため量子化・実行カーネルと技術的接点はあるが、主評価はQAT後の訓練損失・生成/推論品質であり、サービングのTPOT・スループット・ピークメモリの独立実測を中心としない。現行推論システム中心の収録範囲では即Research採用の根拠が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.26581",
+      "body_check": "research_fulltext_relevance_review: arXiv v1 HTMLのIntroduction, 4.1-4.3 QAT/RFQ, Algorithm 1, Table 1, 実験の主対象を確認; 本文の訓練中心の目的と推論への適用可能性を区別",
+      "first_checked_at": "2026-10-29T23:30:00+09:00",
+      "last_checked_at": "2026-10-29T23:30:00+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 26
+    }
+  ]
+}
