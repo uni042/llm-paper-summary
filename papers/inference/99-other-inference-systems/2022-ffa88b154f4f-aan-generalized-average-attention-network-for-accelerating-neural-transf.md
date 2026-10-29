@@ -32,6 +32,8 @@ quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 returned_research_repair: true
 returned_research_reason: "前回見出し修復稿が再差し戻しされ手法説明量601文字と判定されたため、JAIR一次論文の式(4)～(17)、Table 1、Figure 6に基づき学習・生成経路、状態更新、交差注意の境界を補強"
 returned_research_blocked_source_git_blob_sha: "69ae3150baf93e79887bc156eb8e77db13644d36"
+last_audited: null
+audit_version: 0
 ---
 
 # AAN+：累積加重平均を使う定数状態デコーダ注意と、その速度・品質の交換条件

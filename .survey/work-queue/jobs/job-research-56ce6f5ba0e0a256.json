@@ -35,10 +35,15 @@
   "selection_reason": "PQ-HSAはIVF-PQ索引の近似注意スコアを使って選択KVを厳密計算し、非選択トークンも近似logitとクラスタ平均valueで同じsoftmaxへ寄与させる。長文脈の疎注意で背景情報の欠落を抑えつつ、vLLM内の復号注意カーネルを高速化する。",
   "semantic_scholar_id": "d6e7105ad5fd4f47bf4ba0c6e65452733ff82fa2",
   "source_url": "https://arxiv.org/abs/2609.33746",
-  "status": "ready",
+  "status": "superseded",
   "title": "PQ-HSA: Reusing Product-Quantized Scores for Hybrid Sparse-Approximate Attention",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T17:02:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.33746-pq-hsa-reusing-product-quantized-scores-for-hybrid-sparse-approximate-at.md",
+  "represented_canonical_id": "arXiv:2609.33746",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

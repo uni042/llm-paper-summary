@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（512本）
+## 自動生成の論文一覧（513本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -913,6 +913,10 @@
 - **2026-06 · [FlexNPU: Transparent NPU Virtualization for Dynamic LLM Prefill-Decode Co-location](2026-2606.04415-flexnpu-transparent-virtualization-dynamic-pd-colocation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   AscendCL操作を仮想ハンドル経由で物理NPUへ転送し、プリフィルとデコードの待機・実行時間・帯域圧力を測って実行比率を動的に変え、静的PD配置の資源偏りとTTFT待ちを減らす。
+
+- **2026-06 · [Energy-Efficient Multimodal Inference Serving with Tri-serve](2026-2606.29629-energy-efficient-multimodal-inference-serving-with-tri-serve.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Qwen2.5-Omni-7Bを代表例として、Thinker（理解・推論）、Talker（音声生成の中間表現）、Vocoder/Code2Wav（波形生成）をvLLM-Omniの別プロセス・別GPUへ割り当てると、後段は前段の出力待ちで停止する。
 
 - **2026-06 · [Energy-Aware Scheduling for Serverless LLM Serving on Shared GPUs](2026-2606.30391-energy-aware-scheduling-for-serverless-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

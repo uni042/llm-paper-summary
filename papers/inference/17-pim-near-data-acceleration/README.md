@@ -73,7 +73,7 @@
 
 - **2026-08 · [H3-Attn: Attention-Efficient 3D DRAM PNM Processor with Hybrid Head Parallelism and Hierarchical SFU](2026-h3-attn.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  H3-Attnは混成ヘッド並列と階層特殊関数ユニットを導入し、各種LLMで注意デコードを基準処理比1.54〜3.84倍高速化し、特殊関数ユニットの計算密度を従来設計比3.20倍へ高めた。
+  積層DRAMには多数のバンクと高い内部帯域があっても、使われないバンクの帯域は活用できない。KVキャッシュをロジックブロック群へインターリーブ配置し、局所または全体のGather/All-Gather/Reduce-Scatterで部分注意結果を合成する。
 
 - **2026-08 · [Bridging Efficiency and Scalability in LLM System via 3D Hybrid PIM with 2D In-Transit Computation](2026-2509.13710-bridging-efficiency-and-scalability-in-llm-system-via-3d-hybrid-pim-with.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -144,11 +144,11 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
-  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：29  
   一方、各要求が別々の過去トークン列を持つ多頭注意では、問い合わせベクトルと鍵キャッシュ、注意重みと値キャッシュの積が、メモリ帯域に制約されやすい行列とベクトルの積（GEMV）になる。NeuPIMsは、この非対称性をNPUとPIMの役割分担で解決するだけでなく、従来のNPU+PIM結合方式では双方を同時に動かせないという問題まで対象にする。
 
 - **2024-04 · [AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference](2024-attacc-unleashing-the-power-of-pim-for-batched-transformer-based-generative-model-inference.md)**  
-  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/scale-snu/attacc_simulator) ・ リポジトリ内被引用：27  
   GPUではバッチ化しても帯域律速の注意だけが残る点を狙い、FCをxPU、KV注意をHBM-PIMへ分担するAttAcc。bank-level PIM、head-level パイプライン、FFN co-processingを組み合わせ、175Bで同容量GPU系比最大2.81倍の性能・2.67倍のエネルギー効率を報告する。
 
 - **2024-04 · [IANUS: Integrated Accelerator based on NPU-PIM Unified Memory System](2024-2410.15008-ianus-integrated-accelerator-based-on-npu-pim-unified-memory-system.md)**  

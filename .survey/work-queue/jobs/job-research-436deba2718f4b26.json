@@ -35,10 +35,15 @@
   "selection_reason": "Tri-serveはマルチモーダル推論のGPU自動周波数制御が、ステージ間の待機、算術強度とboostの逆相関、熱スロットリングで無駄を生むと分析し、ソフトウェアDVFSで3要因を同時制御する。遅延とスループットを維持しながらサービング電力効率を改善するためaccept。",
   "semantic_scholar_id": "3dc77b3e6ab6decb9cefe3e2d1dcf9577a309bd7",
   "source_url": "https://arxiv.org/abs/2606.29629",
-  "status": "ready",
+  "status": "superseded",
   "title": "Energy-Efficient Multimodal Inference Serving with Tri-serve",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T17:02:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2606.29629-energy-efficient-multimodal-inference-serving-with-tri-serve.md",
+  "represented_canonical_id": "arXiv:2606.29629",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "RTX4070/4080 Laptop GPUでGPT-2、LLaMA-2-7B-Chat、Qwen1.5-1.8B-ChatのFP16とINT8を比較し、生成速度・メモリ・BLEU/ROUGE・意味評価を同時測定する。CPUオフロード条件を除き平均3.4倍の高速化と品質低下を報告する、実配備の量子化トレードオフ測定である。",
   "semantic_scholar_id": "f81abd16e8f173dc18bcdeb0303b4cbc435a638d",
   "source_url": "https://doi.org/10.32604/cmc.2026.078985",
-  "status": "ready",
+  "status": "superseded",
   "title": "Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors",
   "type": "research",
   "venue": "Computers, Materials &amp; Continua",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T17:02:02+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md",
+  "represented_canonical_id": "DOI:10.32604/cmc.2026.078985",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -206,7 +206,7 @@
 
 - **2026-08 · [HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference](2026-2609.00450-hbq-hierarchical-scaling-block-quantization-with-hardware-efficiency-awa.md)**  
   実装：[✓](https://github.com/SeoLabCornell/HBQ) ・ リポジトリ内被引用：0  
-  重みだけを4ビット化するWoQは活性値をFP16などで処理するため精度を維持しやすいが、演算器やメモリ転送に高精度活性値のコストが残る。第1階層はFP8スケールを使い、第2階層では重み・活性値の異なる分布に合わせて量子化レベルを調整する。
+  LLMの重みだけを4ビット化する重み-only 量子化（WoQ）は、モデル重みのメモリ帯域を節約できるが、活性値と注意計算のKVキャッシュには高精度のデータパスが残る。
 
 - **2026-08 · [FluxBin: Flexible LUT-based Ultra-low-bit LLM Inference by Algorithm-Kernel Synergy](2026-2608.15602-fluxbin-lut-ultra-low-bit-inference.md)**  
   実装：[✓](https://github.com/nicyyyy/FluxBin) ・ リポジトリ内被引用：0  
@@ -709,7 +709,7 @@
 ### 5年前（2021-11〜2022-10）
 
 - **2022-10 · [GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers](2022-2210.17323-gptq.md)**  
-  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：548  
+  実装：[✓](https://github.com/IST-DASLab/gptq) ・ リポジトリ内被引用：547  
   二次情報に基づく誤差補償をGPU向けに再設計し、175B級LLMを数時間で3〜4bit化して単一A100実行と約3.24倍の生成高速化を実現した基礎的GPTQ研究。
 
 - **2022-06 · [ZeroQuant: Efficient and Affordable Post-Training Quantization for Large-Scale Transformers](2022-2206.01861-zeroquant-efficient-and-affordable-post-training-quantization-for-large-.md)**  

@@ -28,6 +28,8 @@ quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 returned_research_repair: true
 returned_research_reason: 'blocked_quality: method/evaluation sections were not recognized because headings did not match; independent rewrite and primary-PDF recheck'
 returned_research_blocked_git_blob_sha: aae9e62a1470dfab0d9f15548d1fa932a87a39a2
+last_audited: null
+audit_version: 0
 ---
 
 # ノートPC向けRTX 4070/4080でのFP16・INT8推論比較：速度と品質の分母をそろえる

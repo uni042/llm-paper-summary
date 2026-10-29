@@ -40,6 +40,8 @@ worker_run_key: "20261030-0056-scheduled-chat-00/r02"
 reference_main_sha: "7d4cb306e202d477ba1dbc9117dcf82edd4c61e6"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Probe-and-Fetch：投機ドラフトの注意予測と非同期KV取得を結合する長文脈RAG推論

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（109本）
+## 自動生成の論文一覧（110本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -217,6 +217,10 @@
 - **2026-04 · [SMoES: Soft Modality-Guided Expert Specialization in MoE-VLMs](2026-2604.23996-smoes-soft-modality-guided-expert-specialization-in-moe-vlms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SMoES（Soft Modality-guided 専門家 Specialization）は、視覚・言語モデル（Vision-Language モデル, VLM）の専門家混合（Mixture of エキスパート, MoE）層で、画像由来トークンと文章由来トークンが各層でどの程度混合しているかを推定し、専門家の配置と学習を調整する方式である。
+
+- **2026-04 · [Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors](2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この論文は新しい量子化器や専用カーネルの提案ではない。著者はCPUオフロードの影響を受けた構成を除いた平均高速化を3.4倍と総括する。
 
 - **2026-04 · [On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks](2026-2604.20079-on-the-quantization-robustness-of-diffusion-language-models-in-coding-be.md)**  
   実装：[✓](https://github.com/zinichakraborty/Diffusion-LLM-Quantization-Robustness) ・ リポジトリ内被引用：0  
