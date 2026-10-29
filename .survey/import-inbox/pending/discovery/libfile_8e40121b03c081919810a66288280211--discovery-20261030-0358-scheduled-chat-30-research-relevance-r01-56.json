@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-0358-scheduled-chat-30/r01-relevance-56",
+  "reference_main_sha": "21e288cf423b8916b5ceb4ef47fb74500323dbc1",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.16883",
+      "identity_tokens": [
+        "arXiv:2405.16883"
+      ],
+      "title": "Scorch: A Library for Sparse Deep Learning",
+      "reason": "PyTorch互換の疎テンソル演算コード生成・融合による汎用疎深層学習基盤。本文§5.3はBigBirdをIMDB/AG News/Yahoo Answersの分類で評価し、対PyTorchで平均1.24/1.14/1.05倍の推論高速化を示す。しかし主要評価はGCN・疎オートエンコーダ・SuiteSparse行列であり、自己回帰生成LLMのKV管理・decodeサービングは測定していない。汎用カーネルのシステム貢献はあるが現行サーベイのLLM推論への直接性は境界的。",
+      "source_url": "https://arxiv.org/html/2405.16883",
+      "body_check": "research_fulltext_relevance_review: primary arXiv HTML §§5.1-5.4, appendix E and §6 limitations inspected; GCN and BigBird text classification benchmark and CPU-only compiler noted",
+      "first_checked_at": "2026-10-30T04:02:50+09:00",
+      "last_checked_at": "2026-10-30T04:02:50+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 56
+    }
+  ]
+}
