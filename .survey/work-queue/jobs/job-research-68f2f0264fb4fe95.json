@@ -35,10 +35,15 @@
   "selection_reason": "NSNQuantはKV値のトークン方向正規化、チャネル方向中心化、再度のトークン正規化とHadamard変換により、校正データの分布変動に弱い既存VQを単一共有コードブックで運用できるようにする。LLM復号KVの1・2ビット圧縮と推論スループットを扱うためaccept。",
   "semantic_scholar_id": "73a24e44b5d96c7b4f569773dff267f146bb54b7",
   "source_url": "https://arxiv.org/abs/2505.18231",
-  "status": "ready",
+  "status": "superseded",
   "title": "NSNQuant: A Double Normalization Approach for Calibration-Free Low-Bit Vector Quantization of KV Cache",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T11:23:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2505.18231-nsnquant-a-double-normalization-approach-for-calibration-free-low-bit-ve.md",
+  "represented_canonical_id": "arXiv:2505.18231",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

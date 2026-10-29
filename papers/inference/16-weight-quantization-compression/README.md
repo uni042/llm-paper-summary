@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（171本）
+## 自動生成の論文一覧（172本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -279,6 +279,10 @@
 - **2026-04 · [Robust Ultra Low-Bit Post-Training Quantization via Stable Diagonal Curvature Estimate](2026-2604.13806-robust-ultra-low-bit-post-training-quantization-via-stable-diagonal-curv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DASH-Qは、学習済み大規模言語モデル（LLM）の重みを2〜4ビットへ圧縮する際、少量の較正入力から推定した相関情報を過信すると量子化後の回答品質が壊れるという問題を扱う。
+
+- **2026-04 · [Initialisation Determines the Basin: Efficient Codebook Optimisation for Extreme LLM Quantization](2026-2604.08118-initialisation-determines-the-basin-efficient-codebook-optimisation-for-.md)**  
+  実装：[✓](https://github.com/kenno94-IK/aqlm-oaem) ・ リポジトリ内被引用：0  
+  LLMを2ビット/重み（2 bpp）程度へ圧縮する際、各重みを独立に少数の整数へ丸めるスカラー量子化では品質低下が大きくなる。
 
 - **2026-03 · [HALO: Hardware-Aware Quantization with Low Critical-Path-Delay Weights for LLM Acceleration](2026-2502.19662-halo-hardware-aware-quantization-with-low-critical-path-delay-weights-fo.md)**  
   実装：[✓](https://github.com/ecolab-nus/HALO) ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "従来のKV削除で不可逆に失うトークン情報を、sketchにより圧縮トークンを再構成できる形で保存する。2K/32K文脈でKV予算と生成精度の交換条件を直接評価するため長文脈KV圧縮に適合。",
   "semantic_scholar_id": "7e2c072f35fd080da91fd8581225fecaffc575b9",
   "source_url": "https://arxiv.org/abs/2512.17917",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVReviver: Reversible KV Cache Compression with Sketch-Based Token Reconstruction",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T11:23:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2025-2512.17917-kvreviver-reversible-kv-cache-compression-with-sketch-based-token-recons.md",
+  "represented_canonical_id": "arXiv:2512.17917",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

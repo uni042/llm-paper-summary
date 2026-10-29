@@ -21,7 +21,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 実行場所やmemory tierは異なるが、共通して**KVをlocal GPU HBMだけへ固定すると容量や転送帯域が限界になる問題を避ける、またはその限界を定量化する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（120本）
+## 自動生成の論文一覧（121本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/)
 
@@ -359,6 +359,10 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 - **2026-02 · [Adaptive Multi-Objective Tiered Storage Configuration for KV Cache in LLM Service](2026-2603.08739-kareto-adaptive-tiered-storage-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   実負荷を再生するシミュレータでDRAM・SSD容量と保持時間のパレート前線を探索し、固定1TB DRAM比で処理量最大9.3%向上・平均初回トークン時間最大58.3%短縮・費用最大20.2%削減する階層KV構成最適化。
+
+- **2025-12 · [KVReviver: Reversible KV Cache Compression with Sketch-Based Token Reconstruction](2025-2512.17917-kvreviver-reversible-kv-cache-compression-with-sketch-based-token-recons.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長文LLMの推論では、Transformerの各層が過去トークンのKey/Value（KV）を保持するため、系列長と同時要求数に比例してGPUメモリを消費する。H2OやSnapKVなどのトークン選択方式は、過去の注意重みから重要と推定したKVだけを残し、それ以外を捨てる。
 
 ### 2年前（2024-11〜2025-10）
 
