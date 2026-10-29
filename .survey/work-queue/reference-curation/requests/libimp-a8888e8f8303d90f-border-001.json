@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-a8888e8f8303d90f-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2505.08981",
+  "reason": "一次本文§III–Vを読解した結果、主な技術的貢献はTransformer重みをSVD/反復低ランク分解してINT4/INT8でFPGAのDPU/GEMMへ写像することにあり、推論計算・メモリ効率化との関連性はある。一方、実機評価対象はOPUS-MTのen-fr、en-es、en-de、en-it、en-ru等の比較的小規模なニューラル機械翻訳モデルであり、数十億パラメータの生成LLM、KVキャッシュ、長文コンテキスト、LLMサービングのTPOT/SLOは実測していない。推論ハードウェアの参考例にはなるが、LLM推論システム本体への直接適用が未実証なのでborderlineとする。",
+  "title": "ITERA-LLM: A Low-Cost and Iterative Decomposition for Large Language Models Inference",
+  "identity_tokens": [
+    "arxiv:2505.08981",
+    "title:itera-llm-a-low-cost-and-iterative-decomposition-for-large-language-models-inference"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a8888e8f8303",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
