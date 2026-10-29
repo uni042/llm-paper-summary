@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T23:43:45.227232+00:00",
+  "generated_at": "2026-10-29T23:57:53.122479+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -60,6 +60,26 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2506.14158-s4c-speculative-sampling-with-syntactic-and-semantic-coherence-for-effic.md",
+      "canonical_id": "arXiv:2506.14158",
+      "title": "S4C: Speculative Sampling with Syntactic and Semantic Coherence for Efficient Inference of Large Language Models",
+      "file_bytes": 13681,
+      "source_sha256": "c509ac698db4661bd02f2267fdc8b353b41a2bb988ce5a0205878ab6e06748f3",
+      "source_git_blob_sha": "049e5c25dbb36879e9d9066b69fb254680d834f5",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.939605,
+      "quality_metrics": {
+        "body_chars": 3552,
+        "method_chars": 1350,
+        "evaluation_chars": 716,
+        "limitation_chars": 340
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2026-2604.15750-depcap-adaptive-block-wise-parallel-decoding-for-efficient-diffusion-lm-.md",
@@ -104,26 +124,6 @@
       "warnings": [
         "日本語比率 72.7% < 警告基準 80%"
       ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2606.04349-morphoquant-modality-aware-quantization-for-omni-modal-large-language-mo.md",
-      "canonical_id": "arXiv:2606.04349",
-      "title": "MorphoQuant: Modality-Aware Quantization for Omni-modal Large Language Models",
-      "file_bytes": 16843,
-      "source_sha256": "6ffdf18b67a386d8ec9bc81d8035c1b6710646104634382ca9fff51f9462e9d1",
-      "source_git_blob_sha": "c3a24403590c1834ab8f44f82dfdc5277a015b2e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.968706,
-      "quality_metrics": {
-        "body_chars": 4266,
-        "method_chars": 1130,
-        "evaluation_chars": 1163,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
     },
     {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md",
