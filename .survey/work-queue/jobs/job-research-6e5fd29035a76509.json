@@ -35,10 +35,15 @@
   "selection_reason": "DepCapは拡散言語モデルの前ブロックの累積影響から次のブロック境界を適応的に決め、衝突しないトークン集合だけを並列復号する。追加学習なしで既存KVキャッシュ方式と共存し、複数DLMの推論で最大5.63倍の高速化を報告するため、生成推論の実行効率に直接貢献する。",
   "semantic_scholar_id": "4695f89759d3d030cb5aaa5bcd4d0210e13da375",
   "source_url": "https://arxiv.org/abs/2604.15750",
-  "status": "ready",
+  "status": "superseded",
   "title": "DepCap: Adaptive Block-Wise Parallel Decoding for Efficient Diffusion LM Inference",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T23:41:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.15750-depcap-adaptive-block-wise-parallel-decoding-for-efficient-diffusion-lm-.md",
+  "represented_canonical_id": "arXiv:2604.15750",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

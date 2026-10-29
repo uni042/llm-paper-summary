@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（418本）
+## 自動生成の論文一覧（419本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -658,6 +658,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Cartridges++: KV Cache Compression without Off-Context Derailment](2026-2609.35621-cartridges-kv-cache-compression-without-off-context-derailment.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文書を一度だけ処理し、少数の仮想KV位置へ圧縮した記憶を複数の質問で再利用できれば、デコード時に参照するKV長を減らせる。主要なQwen3長文3課題で、後者の関連性ルータは文書内質問の90%超を受理し、文書外質問の90%超を拒否した。
+
+- **2026-09 · [CacheRepair: Learning to Repair Cross-Chunk Context in RAG for KV Cache Fusion](2026-2609.35139-cacherepair-learning-to-repair-cross-chunk-context-in-rag-for-kv-cache-f.md)**  
+  実装：[✓](https://github.com/genglinWang/CacheRepair-code) ・ リポジトリ内被引用：0  
+  CacheRepairは、複数の検索文書を使うRetrieval-Augmented Generation（RAG）で、文書ごとに独立に計算したKVキャッシュを再利用するときの品質劣化を、軽量な修復ネットワークで補う方式である。
 
 - **2026-09 · [Beyond Mean Attention: Diversity-Aware, Layer-Wise Scoring for KV Cache Eviction](2026-2609.30738-beyond-mean-attention-diversity-aware-layer-wise-scoring-for-kv-cache-ev.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
