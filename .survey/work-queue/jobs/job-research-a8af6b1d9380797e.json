@@ -35,10 +35,15 @@
   "selection_reason": "Llama-3.1-70B/405Bの推論で入力長、バッチ、ノード内テンソル並列TPとパイプライン並列PPの度合いを変え、遅延とスループットの交換を実測する。TPは遅延志向、PPはスループット志向の配置で優位とするサービング性能分析。",
   "semantic_scholar_id": "1fd634f0e3552ac51a0ac56e5c63bceebf6eae8c",
   "source_url": "https://arxiv.org/abs/2603.05692",
-  "status": "ready",
+  "status": "superseded",
   "title": "Parallelization Strategies for Dense LLM Deployment: Navigating Through Application-Specific Tradeoffs and Bottlenecks",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T06:14:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2603.05692-parallelization-strategies-for-dense-llm-deployment-navigating-through-a.md",
+  "represented_canonical_id": "arXiv:2603.05692",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

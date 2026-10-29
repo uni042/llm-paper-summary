@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（402本）
+## 自動生成の論文一覧（404本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -645,7 +645,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-08 · [RippleKV: Cross-Layer KV Cache Allocation via Perturbation Propagation](2026-2608.08684-ripplekv-cross-layer-kv-cache-allocation-via-perturbation-propagation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  KVキャッシュを圧縮する際には「各層でどのトークンを残すか」と「各層に何個残すか」という異なる問題がある。
+  文脈長が長くなるほどKVキャッシュは大きくなり、GPUメモリを占有するだけでなく、生成時に参照するメモリ量も増える。一方で同じ数を全層に配れば、生成結果を強く左右する層が過度に圧縮され、圧縮に強い層にメモリが余る可能性がある。
 
 - **2026-08 · [PuzzleKV: Page-Wise Low-Rank Decomposition for KV Cache Compression](2026-2608.23843-puzzlekv-page-wise-low-rank-kv-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -770,6 +770,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression](2026-2607.06523-depthweave-kv-token-adaptive-cross-layer-residual-factorization-for-long.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DepthWeave-KVは、長文脈TransformerのKVキャッシュを、隣接する層間の冗長性とトークンごとの重要度の違いを同時に利用して圧縮する手法である。
+
+- **2026-07 · [Compress the Cache, Not the Speech Embedding: KV Compression for Efficient Speech LLMs](2026-2607.06827-compress-the-cache-not-the-speech-embedding-kv-compression-for-efficient.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の音声アダプタによる早期間引きはこの問題を解消するが、LLMが音声とテキストを統合する前に細かな音響情報を失うおそれがある。実験では、社内固有表現認識の誤り率が14.41から13.46、OpenASRの平均単語誤り率が6.12から5.98へ改善し、A100 80GBとvLLMの復号速度は30秒音声で1.49倍、10分音声で2.02倍となった。
 
 - **2026-07 · [Codec-Gauge: Learning Compression-Friendly Gauges for Transformer KV Caches](2026-2607.20538-codec-gauge-learning-compression-friendly-gauges-for-transformer-kv-cach.md)**  
   実装：[✓](https://huggingface.co/cccat6/Codec-Gauge) ・ リポジトリ内被引用：0  
@@ -1308,6 +1312,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-07 · [Forecasting LLM Inference Performance via Hardware-Agnostic Analytical Modeling](2025-2508.00904-forecasting-llm-inference-performance-via-hardware-agnostic-analytical-m.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   入力長、出力長、注意機構、量子化、演算融合、カーネルの効率が時間とともに変わるためである。Llama2-7Bを対象に、プレフィル（プリフィル）で入力長256から65,536へ増やすと、行列積（GEMM）の計算量構成比が99.0%から27.5%へ下がり、バッチ行列積（BMM）が1.0%から71.6%へ増えると推計した（表4）。
+
+- **2025-07 · [FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression](2025-2507.20030-faedkv-infinite-window-fourier-transform-for-unbiased-kv-cache-compressi.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  H2OやSnapKVのようなトークン削除はメモリを節約する一方、直近の注意や頻出トークンを重視し、後から必要になる古い情報を消す場合がある。学習済み圧縮器は別途学習費用を要し、過去の圧縮表現を繰り返し更新すると古い情報が劣化する可能性もある。
 
 - **2025-06 · [TaDA: Training-free recipe for Decoding with Adaptive KV Cache Compression and Mean-centering](2025-2506.04642-tada-training-free-recipe-for-decoding-with-adaptive-kv-cache-compressio.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

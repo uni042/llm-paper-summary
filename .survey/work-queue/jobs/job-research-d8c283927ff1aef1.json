@@ -35,10 +35,15 @@
   "selection_reason": "FAEDKVはKVを無限窓離散フーリエ変換で周波数領域へ写し、古い履歴や直近トークンに偏らない情報保持を狙う学習不要のKV圧縮方式。LongBenchとNeedle-In-A-Haystackで長文検索品質を比較する。",
   "semantic_scholar_id": "95291694922286c2f28d35ae63d1b2cb2932eaa2",
   "source_url": "https://arxiv.org/abs/2507.20030",
-  "status": "ready",
+  "status": "superseded",
   "title": "FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T06:14:23+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2507.20030-faedkv-infinite-window-fourier-transform-for-unbiased-kv-cache-compressi.md",
+  "represented_canonical_id": "arXiv:2507.20030",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

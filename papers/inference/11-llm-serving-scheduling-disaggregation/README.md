@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（510本）
+## 自動生成の論文一覧（511本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1073,6 +1073,10 @@
 - **2026-03 · [S-HPLB: Efficient LLM Attention Serving via Sparsity-Aware Head Parallelism Load Balance](2026-2603.10353-s-hplb-efficient-llm-attention-serving-via-sparsity-aware-head-paralleli.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   注意行列の全要素を計算せず重要なトークンだけを残す疎注意（sparse 注意機構）は有効だが、各注意ヘッドに同じトークン数を割り当てると、少数のトークンで十分なヘッドには過剰計算を与え、多くのトークンを必要とするヘッドでは重要な情報を捨てる。
+
+- **2026-03 · [Parallelization Strategies for Dense LLM Deployment: Navigating Through Application-Specific Tradeoffs and Bottlenecks](2026-2603.05692-parallelization-strategies-for-dense-llm-deployment-navigating-through-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  どのように分割するかは、単にメモリに載るかだけでなく、最初のトークンが出るまでの時間（TTFT）、出力トークン間隔（TPOT）、システム全体の出力トークン毎秒（TPS）の関係を決める。MI325x実機との相関を検証しているが、405BのTP8ではプリフィル平均誤差17.25%が報告され、デコードの予測精度はさらに低い。
 
 - **2026-03 · [Parallel In-context Learning for Large Vision Language Models](2026-2603.16092-parallel-in-context-learning-for-large-vision-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
