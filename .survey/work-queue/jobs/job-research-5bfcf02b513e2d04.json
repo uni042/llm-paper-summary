@@ -35,10 +35,15 @@
   "selection_reason": "LBLLMはPTQ初期化、二値重み・ビットマップ・量子化パラメータの層別蒸留、活性の4ビット量子化因子学習を分離し、W(1+1)A4の低ビットLLMを構築する。蒸留工程は必要だが資源制約下の推論重み・活性圧縮を直接目指すためaccept。",
   "semantic_scholar_id": "7ca21fc871f51511a2bb3516d8e711f24b66695b",
   "source_url": "https://arxiv.org/abs/2604.19167",
-  "status": "ready",
+  "status": "superseded",
   "title": "LBLLM: Lightweight Binarization of Large Language Models via Three-Stage Distillation",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T00:37:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2604.19167-lbllm-lightweight-binarization-of-large-language-models-via-three-stage-.md",
+  "represented_canonical_id": "arXiv:2604.19167",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

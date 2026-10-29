@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（764本）
+## 自動生成の論文一覧（766本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1134,6 +1134,10 @@
   実装：[✓](https://github.com/inclusionAI/LLaDA2.0-Uni) ・ リポジトリ内被引用：0  
   画像理解と画像生成を一つの基盤モデルで扱うには、画像を言語モデルへどう渡すかが大きな設計課題になる。SPRINTの最大1.6倍とデコーダの段数削減は異なる処理段階の話であり、単純に掛け算してエンドツーエンドの高速化率とみなしてはならない。
 
+- **2026-04 · [LBLLM: Lightweight Binarization of Large Language Models via Three-Stage Distillation](2026-2604.19167-lbllm-lightweight-binarization-of-large-language-models-via-three-stage-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LBLLMは、既存の大規模言語モデルを極端な低ビット表現へ変換する際、重みと活性化を一度に量子化して学習すると誤差が増幅し、蒸留が不安定になる問題を扱う。LLaMA-2-7Bの同等ビット幅で、LBLLMのWikiText-2困惑度は9.18、C4困惑度は10.91、六つの常識推論課題の平均正答率は54.91%となった。
+
 - **2026-04 · [Latent-Condensed Transformer for Efficient Long Context Modeling](2026-2604.12452-latent-condensed-transformer-for-efficient-long-context-modeling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   多頭潜在注意（multi-head latent 注意機構、MLA）はトークンごとのKVを低次元潜在へ圧縮するが、文脈の全トークンを保持し、注意計算も全長に対して行う。
@@ -1353,6 +1357,10 @@
 - **2026-02 · [StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving](2026-2604.09562-streamserve-adaptive-speculative-flows-for-low-latency-disaggregated-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分離型プリフィル・デコード上で、複数指標による要求ルーティングと実行時適応する投機深度を閉ループ連携し、4×A800評価でテンソル並列vLLM比の平均レイテンシ15.75倍短縮・平均スループット4.4倍を報告する。
+
+- **2026-02 · [Stateful Token Reduction for Long-Video Hybrid VLMs](2026-2603.00198-stateful-token-reduction-for-long-video-hybrid-vlms.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  長い動画を扱う視覚言語モデルでは、各フレームを多数の視覚トークンへ変換して言語モデルへ入力するため、動画が長くなると事前充填（プリフィル）の計算量とメモリが増大する。著者はこの現象を「状態付き圧縮」と捉え、浅い層では多くのトークンを保持し、深い層へ進むほど段階的に削減する方式を設計した。
 
 - **2026-02 · [SR-TTT Does Not Learn Retrieval: A Correction and Mechanistic Post-Mortem of Surprisal-Aware Residual Test-Time Training](2026-2603.06642-sr-ttt-does-not-learn-retrieval-a-correction-and-mechanistic-post-mortem.md)**  
   実装：[✓](https://github.com/swamynathanvp/Surprisal-Aware-Residual-Test-Time-Training) ・ リポジトリ内被引用：0  

@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（105本）
+## 自動生成の論文一覧（106本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -181,6 +181,10 @@
 - **2026-06 · [Agent Memory: Characterization and System Implications of Stateful Long-Horizon Workloads](2026-2606.06448-agent-memory-characterization-and-system-implications-of-stateful-long-h.md)**  
   実装：[✓](https://github.com/Tambe-Lab/agent-memory-profiling) ・ リポジトリ内被引用：0  
   本研究は、長期にわたり複数のセッションをまたいで稼働する大規模言語モデル（LLM）エージェントの「記憶」を、回答品質を高める機能としてだけでなく、計算・メモリ・入出力・スケジューリングの対象となる実行時システムとして捉え直す。後者は前者の約26.5倍である。
+
+- **2026-05 · [Stop When Reasoning Converges: Semantic-Preserving Early Exit for Reasoning Models](2026-2605.17672-stop-when-reasoning-converges-semantic-preserving-early-exit-for-reasoni.md)**  
+  実装：[✓](https://github.com/giovanni-vaccarino/PUMA) ・ リポジトリ内被引用：0  
+  PUMAは、推論モデルが問題を解き終えた後も思考を繰り返す「過剰思考」を減らすための推論時早期終了方式である。
 
 - **2026-05 · [PARCEL: Pool-Anchored Resampling with Conditioned Elastic Queries for Efficient Vision-Language Understanding](2026-2605.30126-parcel-pool-anchored-resampling-with-conditioned-elastic-queries-for-eff.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

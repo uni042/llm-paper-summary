@@ -35,10 +35,15 @@
   "selection_reason": "MambaとTransformerを組み合わせた長動画VLMでは、削除トークンの情報がMamba再帰状態に残ることを分析し、層を進むほど削除率を上げるスケジュールと問い合わせ条件付き重要度で視覚トークンを減らす。prefill高速化を実測する推論最適化なのでaccept。",
   "semantic_scholar_id": "de664df8980c8c8dc44bb48af275dda81292e082",
   "source_url": "https://arxiv.org/abs/2603.00198",
-  "status": "ready",
+  "status": "superseded",
   "title": "Stateful Token Reduction for Long-Video Hybrid VLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T00:37:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2603.00198-stateful-token-reduction-for-long-video-hybrid-vlms.md",
+  "represented_canonical_id": "arXiv:2603.00198",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

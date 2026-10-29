@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（320本）
+## 自動生成の論文一覧（321本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -655,6 +655,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-04 · [NanoSpec: Accelerating Speculative Decoding using Minimalist In-Context Vocabularies](2026-2605.26444-microspec-lightweight-in-context-vocabularies.md)**  
   実装：[✓](https://github.com/csAugust/NanoSpec) ・ リポジトリ内被引用：0  
   文脈と直近候補から毎ステップ3000未満の動的ドラフト語彙を作り、必要なLMヘッド重みを非同期収集して射影計算を削減する投機的デコード最適化。EAGLE-2のドラフト時間を平均51.6%削減する。
+
+- **2026-04 · [From Tokens to Steps: Verification-Aware Speculative Decoding for Efficient Multi-Step Reasoning](2026-2604.15244-from-tokens-to-steps-verification-aware-speculative-decoding-for-efficie.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SpecGuardは、通常の推測復号がトークン単位の確率分布を基準に下書き候補を受理するのに対し、意味のまとまりを持つ推論ステップ単位で候補を選び、モデル内部の二種類の信号から妥当性を検証する。小型下書きモデルで複数の推論ステップを生成し、その中で他候補との意味的一致が最も高いものを代表として選ぶ。
 
 - **2026-04 · [Calibrated Speculative Decoding: Frequency-Guided Candidate Selection for Efficient Inference](2026-2604.13634-calibrated-speculative-decoding-frequency-guided-candidate-selection-for.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
