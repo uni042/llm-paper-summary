@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-29 09:37:37 JST**
+> 自動生成: **2026-10-29 09:53:04 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **767** |
 | 未claim Research job | **767** |
-| 直近24hのResearch処理完了 | **127** |
+| 直近24hのResearch処理完了 | **123** |
 | 最終Research処理完了 | **10-29 08:09:00 JST** |
 | 最終Discovery探索完了 | **10-29 06:55:00 JST** |
 | 整合性異常 | **0** |
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **147169** |
+| 探索候補総数 | **147188** |
 | 処理済み | **21560** |
-| 未処理Discovery候補 | **125609** |
+| 未処理Discovery候補 | **125628** |
 | 収録済み | **3588** |
 | Research / Audit候補へ昇格済み | **373** |
 | 無関係として除外 | **12399** |
@@ -63,18 +63,18 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **125609** |
+| 未処理候補（フィルタ前） | **125628** |
 | 機械規則による暫定隔離 | **2148** |
 | 拡張機械規則による追加隔離 | **1372** |
-| 機械規則通過後 | **122089** |
-| 系統内前方引用スコアによる選抜保留 | **115984** |
-| 暫定隔離合計 | **119504** |
-| **読解可能候補（隔離後）** | **6105** |
+| 機械規則通過後 | **122108** |
+| 系統内前方引用スコアによる選抜保留 | **116002** |
+| 暫定隔離合計 | **119522** |
+| **読解可能候補（隔離後）** | **6106** |
 | 前方引用が同一系統で2本以上の候補 | **11747** |
 | 前方引用が同一系統で3本以上の候補 | **4341** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
-- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6105件**（監査復活枠なし）。
+- 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6106件**（監査復活枠なし）。
 
 ### 拡張規則の判定と適用状況
 
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.6%**
-- 現在の生在庫: 後方references **58049件** / 前方引用 **69075件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **126416件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **58072件** / 前方引用 **69075件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **126435件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,17 +116,17 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-28 15:11:52 JST（18時間25分前）** |
+| 最終maintenance完了 | **10-29 09:46:26 JST（6分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
-| health errors / warnings | **1 / 0** |
+| health errors / warnings | **2 / 0** |
 | metadata | **passed** |
 | metadata incomplete | **0** |
-| GC削除件数 | **3** |
+| GC削除件数 | **152** |
 | queue snapshot repaired | **true** |
 | index repairs | **0** |
-| quality regressions | **0** |
+| quality regressions | **1** |
 
 maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のjob/result件数から推定しません。
 
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **285** |
+| 成功result未照合のimmutable submission | **267** |
 | └ Research | **76** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **64** |
+| └ Other/Unknown | **46** |
 
 ### 厳格検証が未成立のcompleted job
 
