@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-46c7fa01556b2735-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.17539",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.17539",
+    "identity_tokens": [
+      "arXiv:2606.17539"
+    ],
+    "reason": "空間VLMの言語推論と3D物体検出を組み合わせ、GRPOで幾何推論の正答率を高める能力向上研究。推論時の計算・メモリ・レイテンシ最適化への直接の技術的寄与がない。",
+    "first_checked_at": "2026-10-29T10:48:14+00:00",
+    "last_checked_at": "2026-10-29T10:48:14+00:00",
+    "linked_from": [],
+    "title": "Reinforcing Dual-Path Reasoning in Spatial Vision Language Models"
+  },
+  "processed_at": "2026-10-29T10:48:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-46c7fa01556b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
