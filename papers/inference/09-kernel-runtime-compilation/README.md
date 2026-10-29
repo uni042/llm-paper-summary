@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（210本）
+## 自動生成の論文一覧（211本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -623,6 +623,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-10 · [RACE Attention: A Strictly Linear-Time Attention Layer for Training on Outrageously Large Contexts](2025-2510.04008-race-attention-a-strictly-linear-time-attention-layer-for-training-on-ou.md)**  
   実装：[✓](https://github.com/sahiljoshi515/RACE_Attention) ・ リポジトリ内被引用：0  
   RACE 注意機構は、Transformerのsoftmax注意が系列長Nに対してO(N²d)のQuery-Key相互作用を要求する問題を、別の注意カーネルと確率的スケッチで解決する研究である。
+
+- **2025-10 · [PermLLM: Learnable Channel Permutation for N:M Sparse Large Language Models](2025-2510.10136-permllm-learnable-channel-permutation-for-n-m-sparse-large-language-mode.md)**  
+  実装：[✓](https://github.com/lanchengzou/PermLLM) ・ リポジトリ内被引用：0  
+  チャネル順序を入れ替えてからマスクを決めれば保持する重みの組合せを変えられるが、従来の手法は残存重みの重要度スコアを最大化するヒューリスティックに依存していた。
 
 - **2025-10 · [Exact Causal Attention with 10% Fewer Operations](2025-2510.05175-exact-causal-attention-with-10-fewer-operations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -35,10 +35,15 @@
   "selection_reason": "HySparse2はYOCO型self/crossデコーダで全注意層のKVを跨いで共有し、内側ではトークン単位の疎注意と強制的な直近窓保持を組み合わせる。prefillをselfデコーダで打ち切りcrossデコーダ層の計算を省き、長文脈エージェントのKV容量とprefill費用を減らす。",
   "semantic_scholar_id": "4bf5d757d16d7dc5ce19032a4c401909bd1764e2",
   "source_url": "https://arxiv.org/abs/2609.26368",
-  "status": "ready",
+  "status": "superseded",
   "title": "HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T13:00:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2609.26368-hysparse2-hybrid-sparse-attention-with-two-level-kv-sharing.md",
+  "represented_canonical_id": "arXiv:2609.26368",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

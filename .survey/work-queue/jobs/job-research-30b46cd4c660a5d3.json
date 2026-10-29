@@ -35,10 +35,15 @@
   "selection_reason": "QuambaはMamba型選択的状態空間モデルの再帰scan入力の大振幅を抑え、出力活性をHadamard変換して外れ値の少ない空間で8ビット量子化する。Orin Nano上の生成遅延を実測しており、Transformer代替の言語モデル推論圧縮に直接寄与する。",
   "semantic_scholar_id": "8b5b37d3703fa0784b7a716e021a0618dd53832c",
   "source_url": "https://arxiv.org/abs/2410.13229",
-  "status": "ready",
+  "status": "superseded",
   "title": "Quamba: A Post-Training Quantization Recipe for Selective State Space Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-29T13:00:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2024-2410.13229-quamba-a-post-training-quantization-recipe-for-selective-state-space-mod.md",
+  "represented_canonical_id": "arXiv:2410.13229",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

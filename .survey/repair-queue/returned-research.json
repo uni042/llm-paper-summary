@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T12:26:01+00:00",
+  "generated_at": "2026-10-29T13:00:33+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 80,
+  "count": 79,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1875,33 +1875,6 @@
       "worker_run_key": "20261029-0950-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2609.26368",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T02:45:07+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 163 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5302,
-        "body_paragraphs": 29,
-        "method_chars": 1800,
-        "method_paragraphs": 9,
-        "evaluation_chars": 163,
-        "limitation_chars": 486,
-        "insufficiency_flags": [
-          "評価説明量 163 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-50081473d982--libfile_4b5ed874d4ac81919b5ec7e3ecd02469--2026-2609.26368-hysparse2-two-level-kv-sharing-research-quality-repair-20261029-0950-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-50081473d982--libfile_4b5ed874d4ac81919b5ec7e3ecd02469--2026-2609.26368-hysparse2-two-level-kv-sharing-research-quality-repair-20261029-0950-sche.json",
-      "worker_run_key": "20261029-0950-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2610.01950",
       "title": null,
       "source_url": null,
@@ -2042,8 +2015,8 @@
     },
     {
       "canonical_id": "arXiv:2610.04313",
-      "title": "MOIRA: Mass-Oriented Indexing with Ragged Attention for Long-Context Decoding",
-      "source_url": "https://arxiv.org/abs/2610.04313",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T12:25:55+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2069,8 +2042,8 @@
     },
     {
       "canonical_id": "arXiv:2608.06135",
-      "title": "LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm",
-      "source_url": "https://arxiv.org/abs/2608.06135",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T12:25:57+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2096,8 +2069,8 @@
     },
     {
       "canonical_id": "arXiv:2608.12913",
-      "title": "Decoupled Contrastive Decoding via Expert-Aligned Drafting",
-      "source_url": "https://aclanthology.org/2026.emnlp-main.195.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T12:25:59+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",

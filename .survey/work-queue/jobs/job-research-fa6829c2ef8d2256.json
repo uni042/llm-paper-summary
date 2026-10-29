@@ -35,10 +35,15 @@
   "selection_reason": "PermLLMはN:M構造化疎化で重要重みを残すため、Sinkhorn正規化でチャネル置換を連続緩和し、ブロック単位で最適化する。LLaMA・Qwen・OPTの事後剪定品質を改善し、ハードウェア対応疎行列を使う推論モデル圧縮の直接的寄与がある。",
   "semantic_scholar_id": "594755fc68c7e4eb355cc518ea28334c3a7b7094",
   "source_url": "https://arxiv.org/abs/2510.10136",
-  "status": "ready",
+  "status": "superseded",
   "title": "PermLLM: Learnable Channel Permutation for N:M Sparse Large Language Models",
   "type": "research",
   "venue": "Neural Information Processing Systems",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T13:00:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2025-2510.10136-permllm-learnable-channel-permutation-for-n-m-sparse-large-language-mode.md",
+  "represented_canonical_id": "arXiv:2510.10136",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

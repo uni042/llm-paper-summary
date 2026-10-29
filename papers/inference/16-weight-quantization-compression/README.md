@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（173本）
+## 自動生成の論文一覧（174本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -127,6 +127,10 @@
 - **2026-09 · [Structured Transforms for Low-Overhead Quantization of Language Models](2026-2609.11687-structured-transforms-for-low-overhead-quantization-of-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、Kashin分解を利用した大規模言語モデルの学習後量子化（post-学習 量子化）について、量子化前処理が遅いこと、因子分布が不安定なこと、数値的に収束しない層があることを同時に解決しようとする。
+
+- **2026-09 · [Security-Enhanced Seed-Based Weight Quantization for Large Language Models](2026-2609.38477-security-enhanced-seed-based-weight-quantization-for-large-language-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの自己回帰デコードは重み転送に律速される場合があり、低ビット重みの保持だけでなく、圧縮した記号から演算時に重みを生成する方法が検討されている。
 
 - **2026-09 · [Scaling Post-Training Ternarisation to Qwen3-8B Capability Retention, Reproduction, Lossless Packing, and Packed Execution](2026-2609.09240-scaling-post-training-ternarisation-to-qwen3-8b-capability-retention-reproduction-lossless-packing-and-packed-execution.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

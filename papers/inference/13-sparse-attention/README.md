@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（158本）
+## 自動生成の論文一覧（159本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -213,6 +213,10 @@
 - **2026-09 · [On-Demand Attention: Language Models Know When to Recall](2026-2609.20734-on-demand-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   生成中の多くの位置では直近文脈だけで次トークンを決められるにもかかわらず、数万から十数万トークンの履歴を毎回読むため、注意計算とHBM帯域の費用が増える。按需注意（On-Demand 注意機構; ODA）は、まず安価な局所注意を実行し、その結果と直前状態から「この段階で全注意を使う利益」を軽量な想起ヘッドで予測する。
+
+- **2026-09 · [HySparse2: Hybrid Sparse Attention with Two-Level KV Sharing](2026-2609.26368-hysparse2-hybrid-sparse-attention-with-two-level-kv-sharing.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この負荷は、長い入力を一度だけ読んで長い回答を生成する通常のチャットとは異なる。HySparse2は、先行HySparseの「全注意層が後続の疎注意層へKVと選択索引を供給する」設計を拡張し、YOCO型のself-decoderとcross-decoderの間にもKVを橋渡しする。
 
 - **2026-09 · [Elastic Threshold Attention: Learned Contextual Sparsity for Long-Context Decoding](2026-2609.20888-elastic-threshold-attention-learned-contextual-sparsity-for-long-context.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

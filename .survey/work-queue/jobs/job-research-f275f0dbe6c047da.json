@@ -35,10 +35,15 @@
   "selection_reason": "Seed-QはLFSRを使うシード重み再構成に感度別の非一様ビット配分を加え、追加サイド情報なしに割当スケジュールを決定的に再現する。SeedLM比のPPL/ゼロショット品質とASIC復号器の実装負荷を検討するため、推論時の重み圧縮とハードウェア実行に直接関連する。",
   "semantic_scholar_id": "698c86041f0cdfeb5f28003967840bff05749c9d",
   "source_url": "https://arxiv.org/abs/2609.38477",
-  "status": "ready",
+  "status": "superseded",
   "title": "Security-Enhanced Seed-Based Weight Quantization for Large Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T13:00:32+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2609.38477-security-enhanced-seed-based-weight-quantization-for-large-language-mode.md",
+  "represented_canonical_id": "arXiv:2609.38477",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
