@@ -1,0 +1,278 @@
+---
+canonical_id: arXiv:2610.07643
+arxiv_id: '2610.07643'
+title: Monte Carlo Estimation for KV Cache Eviction
+authors:
+- Ahsan Bilal
+- Muhammad Ahmed Mohsin
+- Muhammad Umer
+- Wajih Hassan Raza
+- Atta Ul Asad
+- Young D. Kwon
+- Michal Valko
+- Dean F. Hougen
+published: '2026-10-06'
+publication: arXiv:2610.07643v2
+publication_type: preprint
+publication_status: preprint
+source: https://arxiv.org/html/2610.07643v2
+sources:
+- https://arxiv.org/html/2610.07643v2
+- https://arxiv.org/abs/2610.07643
+- https://arxiv.org/pdf/2610.07643v2
+summary: LORE-KVは、プロンプト中の注意量ではなく、生成され得る回答のqueryがKV削除によって受ける出力摂動を評価して、保持トークンを選ぶ学習不要の方式。凍結モデルから短い継続を複数サンプリングし、信頼度で重み付けして固定KV予算へ圧縮する。Mistral-7BのLongBench、B=128ではAnDPro
+  38.96に対して40.28だが、圧縮を含む実行時間は7.8799秒から17.5342秒へ増える。
+list_summary: 短い試行回答から将来のqueryを集め、削除時の注意出力摂動を推定してKVを選別する。厳しい容量制約で精度を改善する一方、追加デコード時間を要する。
+implementation: 既存モデルを凍結して利用する学習不要の方式。標準設定では4経路×8トークンの試行生成を行う。一次論文のAlgorithm 1、式(1)〜(8)、Table 1〜4、Appendix E/Fを照合。公式公開コードの永続的なリポジトリURLは未確認。
+code: null
+last_checked: '2026-10-29'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-29T17:34:00+09:00'
+worker_run_key: 20261029-1730-scheduled-chat-30/r01
+reference_main_sha: e392833b9c0064b74d2a59030335f5c2c5e05d22
+quality_self_review_passed: true
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+repair_type: returned_research_quality
+repair_source_blocked_path: .survey/import-inbox/blocked/research/retry-research-318a546f13e9--libfile_a116593c54308191a916fa3e370ea289--2026-2610.07643-lorekv-future-query-eviction-research-20261029-1047-scheduled-chat-45-r01.md
+repair_source_git_blob_sha: 33cd44f5b8e64a96a5221453173ff33e9ffdc41c
+repair_reason: 評価説明量359文字で品質差し戻し。一次論文の実験設定、対照、定量結果、構成要素除去、実行時間と限界を独立に再記述。
+under16kb_reaudit_target_path: papers/inference/07-kv-cache-optimization-compression/2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md
+under16kb_reaudit_source_git_blob_sha: 8373b6d95c944d55e8ab9537a903cadcc0b11e17
+under16kb_reaudit_source_sha256: 30f1065dce5cdba40f88c814ae769147851d6fa6efe4739d95416b63e9b2cdff
+under16kb_reaudit_version: 2026-10-07-v1
+under16kb_reaudit_passed: true
+last_audited: '2026-10-29'
+audit_version: 1
+references:
+- canonical_id: arXiv:2603.10899
+  arxiv_id: '2603.10899'
+- canonical_id: arXiv:2502.14051
+  arxiv_id: '2502.14051'
+- canonical_id: arXiv:2605.09649
+  arxiv_id: '2605.09649'
+- canonical_id: arXiv:2505.24133
+  arxiv_id: '2505.24133'
+- canonical_id: arXiv:2406.02069
+  arxiv_id: '2406.02069'
+- canonical_id: arXiv:2503.18893
+  arxiv_id: '2503.18893'
+- canonical_id: arXiv:2510.00636
+  arxiv_id: '2510.00636'
+- canonical_id: arXiv:2403.04643
+  arxiv_id: '2403.04643'
+- canonical_id: arXiv:2510.13334
+  arxiv_id: '2510.13334'
+- canonical_id: arXiv:2407.11550
+  arxiv_id: '2407.11550'
+- canonical_id: arXiv:2502.03805
+  arxiv_id: '2502.03805'
+- canonical_id: arXiv:2410.19258
+  arxiv_id: '2410.19258'
+- canonical_id: arXiv:2605.18053
+  arxiv_id: '2605.18053'
+- canonical_id: arXiv:2310.01801
+  arxiv_id: '2310.01801'
+- canonical_id: arXiv:2504.14051
+  arxiv_id: '2504.14051'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2510.07651
+  arxiv_id: '2510.07651'
+- canonical_id: arXiv:2406.12335
+  arxiv_id: '2406.12335'
+- canonical_id: arXiv:2401.18079
+  arxiv_id: '2401.18079'
+- canonical_id: arXiv:2404.06654
+  arxiv_id: '2404.06654'
+- canonical_id: arXiv:2310.06825
+  arxiv_id: '2310.06825'
+- canonical_id: arXiv:2403.05527
+  arxiv_id: '2403.05527'
+- canonical_id: arXiv:2505.23416
+  arxiv_id: '2505.23416'
+- canonical_id: arXiv:2601.17668
+  arxiv_id: '2601.17668'
+- canonical_id: arXiv:2502.04420
+  arxiv_id: '2502.04420'
+- canonical_id: arXiv:2509.00388
+  arxiv_id: '2509.00388'
+- canonical_id: arXiv:2605.24786
+  arxiv_id: '2605.24786'
+- canonical_id: arXiv:2404.14469
+  arxiv_id: '2404.14469'
+- canonical_id: arXiv:2405.14366
+  arxiv_id: '2405.14366'
+- canonical_id: arXiv:2601.08584
+  arxiv_id: '2601.08584'
+- canonical_id: arXiv:2505.18610
+  arxiv_id: '2505.18610'
+- canonical_id: arXiv:2605.13734
+  arxiv_id: '2605.13734'
+- canonical_id: arXiv:2305.17118
+  arxiv_id: '2305.17118'
+- canonical_id: arXiv:2402.02750
+  arxiv_id: '2402.02750'
+- canonical_id: arXiv:2605.07234
+  arxiv_id: '2605.07234'
+- canonical_id: arXiv:2602.10238
+  arxiv_id: '2602.10238'
+- canonical_id: arXiv:2504.15364
+  arxiv_id: '2504.15364'
+- canonical_id: arXiv:2510.01290
+  arxiv_id: '2510.01290'
+- canonical_id: arXiv:2411.18077
+  arxiv_id: '2411.18077'
+- canonical_id: arXiv:2509.09754
+  arxiv_id: '2509.09754'
+- canonical_id: arXiv:2511.01815
+  arxiv_id: '2511.01815'
+- canonical_id: arXiv:2603.11504
+  arxiv_id: '2603.11504'
+- canonical_id: arXiv:2501.16383
+  arxiv_id: '2501.16383'
+- canonical_id: arXiv:2509.03136
+  arxiv_id: '2509.03136'
+- canonical_id: arXiv:2602.08585
+  arxiv_id: '2602.08585'
+- canonical_id: arXiv:2603.11564
+  arxiv_id: '2603.11564'
+- canonical_id: arXiv:2503.08879
+  arxiv_id: '2503.08879'
+- canonical_id: arXiv:2505.20334
+  arxiv_id: '2505.20334'
+- canonical_id: arXiv:2407.08454
+  arxiv_id: '2407.08454'
+- canonical_id: arXiv:2309.17453
+  arxiv_id: '2309.17453'
+- canonical_id: arXiv:2412.15115
+  arxiv_id: '2412.15115'
+- canonical_id: arXiv:2402.18096
+  arxiv_id: '2402.18096'
+- canonical_id: arXiv:2605.25475
+  arxiv_id: '2605.25475'
+- canonical_id: arXiv:2412.03131
+  arxiv_id: '2412.03131'
+- canonical_id: arXiv:2306.14048
+  arxiv_id: '2306.14048'
+- canonical_id: arXiv:2412.14838
+  arxiv_id: '2412.14838'
+- canonical_id: DOI:10.18653/v1/2024.acl-long.172
+  doi: 10.18653/v1/2024.acl-long.172
+- canonical_id: DOI:10.18653/v1/2026.acl-long.1926
+  doi: 10.18653/v1/2026.acl-long.1926
+- canonical_id: DOI:10.18653/v1/2026.acl-long.417
+  doi: 10.18653/v1/2026.acl-long.417
+- canonical_id: DOI:10.52202/085713-0350
+  doi: 10.52202/085713-0350
+- canonical_id: DOI:10.1109/icassp55912.2026.11464826
+  doi: 10.1109/icassp55912.2026.11464826
+- canonical_id: DOI:10.18653/v1/2026.acl-long.1683
+  doi: 10.18653/v1/2026.acl-long.1683
+- canonical_id: OpenReview:8ZiElzQxf1
+  openreview_id: 8ZiElzQxf1
+- canonical_id: OpenReview:EQgEMAD4kv
+  openreview_id: EQgEMAD4kv
+references_checked_at: '2026-10-29'
+references_source: arxiv-html-reference-section
+references_total: 68
+arxiv_categories:
+  primary: cs.CL
+  cross_list:
+  - cs.AI
+---
+
+## 概要
+
+長いプロンプトを読むTransformerでは、後続のトークン生成に必要な過去のkey/valueをKVキャッシュへ蓄える。履歴が長くなるほどメモリ容量と転送帯域を圧迫するため、限られた保持枠に重要なトークンだけを残す削除方式が研究されている。しかし、プロンプトを読んでいる時点で目立つトークンと、実際に回答を書く段階で参照するトークンは必ずしも一致しない。質問への回答に必要な証拠を削除してしまえば、メモリを節約しても長文理解の品質が落ちる。
+
+LORE-KVは、未来のqueryがまだ存在しないという問題を、同じ凍結モデルから短い仮の回答を複数生成することで近似する。仮回答から得たqueryを使い、各候補KVを一つ取り除いた場合に注意機構の出力がどれだけ変わるかを評価する。評価後、仮回答は捨て、残したKVだけを用いて通常の回答生成を始める。新たな予測モデルの学習は不要であるが、圧縮時に追加生成を行うため、時間と品質の交換条件が明確に存在する。
+
+代表例として、Mistral-7B-Instruct-v0.2のLongBenchで保持予算B=128のとき、AnDProの平均38.96に対してLORE-KV /Eは40.28を報告した。一方、同じ条件のサンプル当たり実行時間はAnDProの7.8799秒に対し17.5342秒であり、速度向上ではない。最も強い主張は、厳しいKV予算下で将来queryを参照すると品質を守りやすいという点にある。
+
+## 問題設定
+
+対象はprefillを終えた直後にKVを固定予算へ縮小する場面である。層l、KV head hごとにプロンプト長nのキャッシュを持ち、残せるトークン数Bが指定される。既存のStreamingLLMはattention sinkと最近の位置を守り、H2OやSnapKVは過去の注意統計やプロンプト末尾のqueryを重視する。これらは圧縮時点で利用可能な情報を使う一方、回答生成中に現れるqueryが異なる証拠へ向かう可能性を十分には捉えられない。
+
+削除の損失を注意重みだけで測るのも不十分である。あるトークンへ大きな注意が向いていても、そのvalueが既存の注意出力に近ければ、削除後の出力変化は小さい。逆に注意重みがそれほど大きくなくても、valueが出力を大きく動かす場合がある。LORE-KVは「どのqueryを評価に使うか」と「削除時の出力変化をどう測るか」の二つを組み合わせ、保持枠の使い方を決める。
+
+## 手法
+
+### 保護集合と削除候補
+
+prefillで各層・headのkey/valueとqueryを得る。プロンプト先頭のattention sink、末尾w=32トークンの観測窓、および任意の構造保護トークンを集合Pとして扱い、それ以外を選択候補Cとする。これにより、長文中の重要な証拠を探す採点と、位置・構造の維持に必要な保護を分ける。保護対象を含む最終予算の扱いは論文の実装条件に依存するため、全トークンを無条件に一つのランキングへ入れる方式とは異なる。
+
+### 短い試行継続から未来queryを採取
+
+入力Xに条件付けた凍結モデルから、独立した短い自己回帰継続をM本サンプリングする。標準設定はM=4、各継続の長さT=8で、各生成ステップの層別・head別queryを記録する。採点に使うquery集合は、プロンプト末尾の観測窓と、この試行継続から得たqueryの組合せである。単一のgreedy回答を未来の確定結果として扱わず、複数のあり得る回答方向を標本化することが設計上の特徴である。
+
+試行生成は本番回答の一部ではない。得られたqueryでKVを評価した後、試行の生成結果を破棄し、圧縮後のキャッシュから本番デコードを開始する。このため最終デコードでの保持KV予算は比較方式と揃えられるが、圧縮の前処理にはM×Tに応じた生成計算が追加される。試行が真の回答のquery分布を十分に代表しない場合、重要なトークンを見落とす危険は残る。
+
+### 経路の信頼度と削除コスト
+
+試行経路ごとの生成確率は、その文脈における予測分布の不確実性と混同しやすい。そこで著者らは、生成トークンの対数確率をエントロピーで中心化した量を用い、経路の信頼度を推定する。/Eは主にエントロピー関連の情報を、/Dは他経路とのquery方向の不一致も用いる。softmaxで重みを正規化し、信頼度の低い経路の寄与を弱めるが、経路を完全に切り捨てるわけではない。
+
+候補トークンiを一つ削除したとき、query qに対する注意出力の変化は、元の注意重みa_i、value v_i、注意出力oから、おおむねa_i/(1−a_i+ε)×(v_i−o)と表される。これを出力射影行列W^Oに通した二乗ノルムが、残差ストリームへの影響を表す削除コストになる。つまり注意重みの大きさだけでなく、削除が実際の出力方向をどれだけ変えるかを考慮する。
+
+各候補について、プロンプト末尾queryに基づく平均コストと、未来経路queryに基づく加重平均コストを足し合わせる。未来項の係数λ_Lは標準で1.0である。各headの予算内でスコア上位の候補を選び、保護集合と合わせてKVをgatherする。head間の適応配分や多様性を考慮する選択は追加実験の対象で、基本方式は独立head採点を用いる。したがってhead間・層間の代替関係は明示的には最適化されない。
+
+## 評価
+
+### 実験設計と比較の公平性
+
+著者らはLongBenchの16タスク、RULERの13タスク、Needle-in-a-Haystack（NIAH）を用い、キャッシュ予算Bを128、256、512、1024トークンに変えて品質を比較した。対象にはMistral-7B-Instruct-v0.2、Llama-3.1-8B-Instruct、Qwen2.5-14B-Instruct、Ministral-3-8B-Instruct-2512が含まれる。さらにQwen3.5-9BとGemma-4-12B-itのhybrid-attention構成でも評価し、後者ではKVが増大する層だけに削除を適用している。これらの結果を一つのモデルの測定値として混ぜてはならない。
+
+比較対象はAnDPro、CriticalKV、H2O、SnapKV、PyramidKV、Ada-KV、StreamingLLMなどである。主な表は同一モデルと同一保持予算を揃えているが、LAQ++等の外部公表値には完全な同条件比較ではないものがある。LORE-KVは未来queryを得るため追加デコードを行うので、同じBでの品質比較は「同じ推論計算量」を意味しない。論文はlookaheadトークン数を揃えた対照実験も行い、この交絡を別途検証している。
+
+### 圧縮予算とモデル別の結果
+
+Mistral-7BのLongBench平均はB=128でAnDPro 38.96、LORE-KV /E 40.28、B=256で40.84対41.38、B=512で41.62対41.86だった。改善幅は+1.32点、+0.54点、+0.24点と縮小し、強い圧縮条件で相対的な価値が大きい。B=128でのLORE-KVの3 seed平均は40.28、95%信頼区間は39.97〜40.59である。ただしfull-cacheの42.51には届かず、削除による品質損失を完全に解消したわけではない。
+
+Qwen2.5-14BのLongBench、B=128ではAnDPro 45.49に対しLORE-KV 48.24で+2.75点だったが、Ministral-3では46.74から47.30への+0.56点にとどまった。hybrid-attentionのQwen3.5-9BではB=128で46.89対48.49、Gemma-4-12B-itでは20.21対20.85である。いずれもモデルと保持予算を固定した品質差であり、同じ割合のメモリ削減や速度改善を直接示すものではない。
+
+### 長文検索・長い文脈での挙動
+
+Mistral-7BのRULER 16K、B=128ではAnDPro 45.20に対しLORE-KV /E 51.05で+5.85点だった。Llama-3.1-8BのRULERでは同じB=128のまま64K文脈で57.75、128K文脈で51.05となり、AnDProに対する改善幅はそれぞれ+8.13点、+11.65点へ拡大した。文脈長が伸びると絶対精度は低下し得るが、固定KV予算下で比較方式より証拠を保持できる場合があることを示している。
+
+NIAHではLlama-3.1-8B、B=1024のexact matchがLORE-KV /Eと/Dで0.977、CriticalKVで0.955、AnDProで0.932だった。原著は特に16Kの文脈先頭・末尾近傍に置いたneedleの回収改善を示す。これをあらゆる検索タスクや配置で同じだけ改善すると一般化してはいけない。LongBenchでは一部タスクの後退もあり、平均値だけでは失敗条件を隠す。
+
+### 構成要素除去と機構の検証
+
+MistralのLongBench、B=128において、プロンプト窓だけで採点するM=0の平均は35.87、試行継続1本では39.81、標準の4本では40.28、8本では40.69だった。最初の1本でM=0からM=4までの改善の約89%を得られるため、複数経路の追加は限界利益が小さい。削除スコアの形式を替えた実験では変化が小さく、改善の主因は複雑なスコアより回答側queryの導入だと解釈される。ただしquery空間のcoverage代理指標と実タスク精度は必ずしも単調に対応せず、因果機構の説明には留保が必要である。
+
+### 実行時間とメモリの交換条件
+
+原著Table 3のサンプル当たり時間は、MistralのLongBench、B=128でAnDPro 7.8799秒、LORE-KV /E 17.5342秒、RULERでは6.2360秒対13.6877秒だった。論文全体ではAnDPro比1.46〜2.77倍の実行時間が報告される。これは保持KVが同じなら定常デコードのメモリと1トークン当たり処理費用が同等でも、圧縮前の試行生成と採点が重いことを示す。Bが大きくなるほど品質差が小さくなる一方、lookaheadの追加計算は残るので、実運用では要求の長さ、同時実行数、圧縮頻度を含めて判断すべきである。論文のサンプル時間からP99やQPSを推定することはできない。
+
+## 既存研究との差
+
+H2O、SnapKV、PyramidKVなどはプロンプト側の注意統計や位置を主な情報源とする。AnDProは出力摂動を考慮するが、通常の参照queryはプロンプト側である。LAQは疑似回答のqueryを使い、LORE-KVは複数のモデル条件付き継続をサンプリングして将来queryの分布を近似し、出力射影後の削除コストを集約する。別の学習済み予測器を導入しないことが実装上の特徴だが、試行生成を繰り返す費用は残る。
+
+この研究はKVを低ビットへ量子化するものでも、層間で共有するものでもない。固定予算でどの位置を残すかを決める方法なので、量子化やオフロードとは異なる軸で評価すべきである。同じ品質を得るのに必要な保持量を削減できても、その割合を生成速度の倍率に置き換えることはできない。
+
+## 限界
+
+最も大きな制約は、圧縮するたびに試行生成と採点を行う点である。短い回答、少数の同時要求、圧縮予算が十分大きい場合には追加費用を回収しにくい。試行経路が実際の回答で必要なqueryを代表しなければ、重要な証拠を削除する可能性があり、いったん削除したKVを本番生成中に回復する仕組みはない。
+
+また、head別の削除コストを独立に計算するため、head間・層間で情報を補完する相互作用は直接扱わない。実験は指定されたモデル・ベンチマーク・保持予算の範囲での品質とサンプル時間を示すもので、商用サービングでの高並列QPS、GPU占有率、P99遅延、電力、ホストメモリ使用量まで保証しない。LongBenchの一部タスクではAnDProを下回り、すべてのモデル・予算で一律の改善とはいえない。
+
+## 一次資料と検証箇所
+
+- 著者原稿v2（2026年10月14日）: https://arxiv.org/html/2610.07643v2
+- 書誌・改訂履歴: https://arxiv.org/abs/2610.07643
+- 手法: 第3節、式(1)〜(8)、Algorithm 1、Appendix C/D
+- 評価: 第4節、Table 1〜3、Appendix EのTable 7〜17
+- 機構検証: 第4.5節、Appendix F
+
+品質差し戻しの原因は評価説明節の不足だった。今回の改訂ではモデル、予算、ベンチマーク、比較対象、品質と時間の負の結果を明示し、元原稿に存在した重要な定量値を保ちながら、評価節を独立して詳細化した。一次論文にないGPU構成や実サービング性能は推測で補っていない。
+
+## 2026-10-29 意味品質再監査：arXiv v2照合補遺
+
+一次全文の§3〜4、表1〜4、付録C〜Fを再読解した。LORE-KVの処理は、プロンプト末尾32位置のqueryと、凍結モデルが生成するM本×Tトークンの一時的な試行回答のqueryを収集し、各KV候補を除去したときの注意出力の変化を計算する。削除影響は注意重みだけでなくvalueと元の出力の差、さらに出力射影行列を通した二乗ノルムで評価する。各軌跡の対数確率を局所エントロピーで中心化し、平均エントロピーと軌跡間不一致を組み合わせた信頼度からsoftmax重みを作る。これらを統合したスコアで各headの固定予算内の上位トークンを選び、試行回答は破棄して通常生成を始める。
+
+この手法の主要な寄与は複数の試行回答を増やすことそのものより、重要度を測るqueryの参照をプロンプト側から回答側へ移す点にある。原著表15ではB=128のMistral-7Bでprompt-only 35.87からM=1の39.81へ上昇し、M=4の40.28までの改善4.41点のうち3.94点（約89%）を最初の回答側軌跡が占める。一方、付録Fのquery coverage指標はprompt-only 0.785とM=1の0.786がほぼ同じで、M=8でも0.811にとどまる。幾何学的coverageと最終的な削除損失・精度は同一指標ではないため、coverageの上昇をそのまま精度改善の因果説明とみなさない。
+
+原著のLongBenchではQwen2.5-14B、B=128でAnDPro 45.49に対してLORE-KV 48.24（+2.75点）、RULER 16KではMistral-7Bの45.20→51.05（+5.85点）と改善する。RULER 64K／128KのLlama-3.1-8BでもAnDPro比+8.13／+11.65点だが、これは同じB=128の限定条件であり、広いKV予算へ一律に外挿しない。ハイブリッド注意のQwen3.5-9BとGemma-4-12BではKVが伸びる層にだけ削除を適用する。Qwen3.5-9BのB=128ではAnDPro 46.89、LORE-KV/E 48.49であり、モデル構造が異なっても同じ処理を全層へ適用したという意味ではない。
+
+追加コストはリクエスト開始時の試行生成と採点に集中する。原著§4.4および付録C.4の比較ではAnDPro比で1.46〜2.77倍のper-sample wall-clock時間を要する。Bが同じなら圧縮後の定常的なKV量は比較方式と同等であり、品質改善を生成スループット改善と読み替えてはならない。削除後に失ったKVを復元できないこと、head間・layer間の相互作用を直接最適化していないこと、B増大時には改善幅が縮小すること、タスク別の負の結果があることを限界として保持した。
+
+**監査結論**：将来queryの構築、射影後の削除コスト、予算選択、対照実験、追加時間と品質低下条件を一次全文と照合し意味品質PASS。GitHub側の最終受入は別判定。一次全文：https://arxiv.org/html/2610.07643v2
