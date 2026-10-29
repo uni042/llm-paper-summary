@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T07:14:13.834367+00:00",
+  "generated_at": "2026-10-29T07:59:44.680200+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 7,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 3
   },
   "entries": [
     {
@@ -97,6 +97,26 @@
         "method_chars": 1152,
         "evaluation_chars": 1469,
         "limitation_chars": 322
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2606.23406-hyperquant-a-rate-distortion-optimal-quantization-pipeline-for-large-lan.md",
+      "canonical_id": "arXiv:2606.23406",
+      "title": "HyperQuant: A Rate-Distortion-Optimal Quantization Pipeline for Large Language and Diffusion Models",
+      "file_bytes": 15138,
+      "source_sha256": "30f1abde047cdc9a762c9fe91b771968a77647440551ecade7856d2752a99b81",
+      "source_git_blob_sha": "97a65c520e7c1e33f4fd3cdd817ac1f6f2c7c984",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.904167,
+      "quality_metrics": {
+        "body_chars": 5015,
+        "method_chars": 1428,
+        "evaluation_chars": 1617,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
