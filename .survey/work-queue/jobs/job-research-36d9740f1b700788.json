@@ -35,10 +35,15 @@
   "selection_reason": "HESTIAは量子化対応学習で初期から硬い丸めを適用せず、温度制御のsoftmax緩和を段階的に硬化させ、Hessianトレースでテンソル別の温度調整を行う。極低ビットLLMの量子化品質を改善して省メモリ推論へ適用する。",
   "semantic_scholar_id": "85ce7a282b23032d01e4cae88a7985f5b3743077",
   "source_url": "https://arxiv.org/abs/2601.20745",
-  "status": "ready",
+  "status": "superseded",
   "title": "HESTIA: A Hessian-Guided Differentiable Quantization-Aware Training Framework for Extremely Low-Bit LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T06:42:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2026-2601.20745-hestia-a-hessian-guided-differentiable-quantization-aware-training-frame.md",
+  "represented_canonical_id": "arXiv:2601.20745",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

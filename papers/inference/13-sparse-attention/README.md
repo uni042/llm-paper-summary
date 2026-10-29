@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（156本）
+## 自動生成の論文一覧（157本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -329,6 +329,10 @@
 - **2026-04 · [HieraSparse: Hierarchical Semi-Structured Sparse KV Attention](2026-2604.16864-hierasparse.md)**  
   実装：[✓](https://github.com/psl-ntu/HieraSparse) ・ リポジトリ内被引用：0  
   HieraSparseは、長文脈推論で自己注意計算とKVキャッシュ容量が増大する問題に対し、KVを密ブロックとN:M半構造化疎ブロックへ分け、GPUの疎テンソルコアで直接処理する方式である。NVIDIA L40S実機では、同じ疎性のMUSTAFARに対して最大1.2倍高いKV圧縮率と4.57倍の注意カーネル高速化を示す。
+
+- **2026-02 · [Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection](2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md)**  
+  実装：[✓](https://github.com/dongwonjo/Token-Sparse-Attention) ・ リポジトリ内被引用：0  
+  トークン Sparse 注意機構は、長文脈のプリフィルで注意計算の対象トークンを減らすが、元の系列からトークンを永久に捨てない方式である。LLaMA-3.1-8B-InstructのRULERでは、FlashAttentionの128K注意処理を基準とする速度が1.00倍から1.36倍となり、平均正答率は87.01%から87.02%とほぼ不変だった。
 
 - **2026-02 · [Scout Before You Attend: Sketch-and-Walk Sparse Attention for Efficient LLM Inference](2026-2602.07397-scout-before-you-attend-sketch-and-walk-sparse-attention-for-efficient-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

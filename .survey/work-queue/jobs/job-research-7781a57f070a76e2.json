@@ -35,10 +35,15 @@
   "selection_reason": "ヘッドごとにQ/K/Vのトークンを一時選択して注意を計算し、出力を元の系列長へ戻すことで後段層でトークンを再考できる。128K長文脈での注意カーネル速度と精度を直接評価するため疎注意・プリフィル高速化に適合。",
   "semantic_scholar_id": "cb079f4091239347665ad1305f02bd4ae33e987e",
   "source_url": "https://arxiv.org/abs/2602.03216",
-  "status": "ready",
+  "status": "superseded",
   "title": "Token Sparse Attention: Efficient Long-Context Inference with Interleaved Token Selection",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T06:42:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2602.03216-token-sparse-attention-efficient-long-context-inference-with-interleaved.md",
+  "represented_canonical_id": "arXiv:2602.03216",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

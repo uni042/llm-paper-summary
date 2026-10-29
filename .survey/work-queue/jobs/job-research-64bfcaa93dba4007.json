@@ -35,10 +35,15 @@
   "selection_reason": "LORE-KVは凍結した教師LLMから短い仮継続を複数サンプルし、将来の応答側クエリを推定してKV削除の重要度を評価する。LongBench・RULERの精度と1.46～2.77倍の一回限りの圧縮オーバーヘッドを扱う、推論時KVメモリ管理の直接的研究。",
   "semantic_scholar_id": "e6c9942bd30650019b26d57bb45d8f1ad1fb989c",
   "source_url": "https://arxiv.org/abs/2610.07643",
-  "status": "ready",
+  "status": "superseded",
   "title": "Monte Carlo Estimation for KV Cache Eviction",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T06:42:47+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2610.07643-monte-carlo-estimation-for-kv-cache-eviction.md",
+  "represented_canonical_id": "arXiv:2610.07643",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
