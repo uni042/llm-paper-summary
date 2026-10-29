@@ -33,7 +33,7 @@
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-04 · [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](2026-2606.19348-deepseek-v4-towards-highly-efficient-million-token-context-intelligence.md)**  
-  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：48  
+  実装：[✓](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference) ・ リポジトリ内被引用：49  
   長いコンテキストのデコードでは、各生成トークンが過去の大量のKey/Valueを参照するため、KVのメモリ占有量と注意演算が制約になる。DeepSeek-V4は一様な密注意を用いず、圧縮疎注意（Compressed Sparse 注意機構、CSA）と高圧縮注意（Heavily Compressed 注意機構、HCA）を交互に配置する。
 
 - **2026-02 · [GLM-5: from Vibe Coding to Agentic Engineering](2026-2602.15763-glm-5-from-vibe-coding-to-agentic-engineering.md)**  
@@ -151,6 +151,10 @@
 - **2026-08 · [Prefix Sliding for efficient test-time scaling](2026-2608.26070-prefix-sliding-for-efficient-test-time-scaling.md)**  
   実装：[✓](https://github.com/Muennighoff/prefix-sliding) ・ リポジトリ内被引用：1  
   推論時間拡張（test-time scaling）では、言語モデルが問題を解くために生成する思考トークン数を増やし、難問の正答率を改善する。しかし、通常の全注意（full 注意機構）では、生成済みの全トークンに対する鍵・値キャッシュ（KV キャッシュ）を保持し、次のトークンを生成するたびに全履歴を読む。
+
+- **2026-07 · [CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention](2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md)**  
+  実装：[✓](https://github.com/Tencent/AngelSlim) ・ リポジトリ内被引用：1  
+  長文脈のプレフィルで密な自己注意を実行すると、クエリとキーの全組合せを計算する負荷が入力長の二乗で増える。逆にカーネル内で実際の注意logitを見て省略する方式は、判定前のQK内積を減らせず、訪問順が悪いと省略が保守的になる。NVIDIA H20の128K文脈では密注意比で注意演算4.93倍、最初のトークンまでの時間（TTFT）2.53倍を報告した。
 
 - **2026-06 · [SparDA: Sparse Decoupled Attention for Efficient Long-Context LLM Inference](2026-2606.04511-sparda.md)**  
   実装：[✓](https://github.com/NVlabs/SparDA) ・ リポジトリ内被引用：1  
@@ -277,10 +281,6 @@
 - **2026-07 · [From Logical to Computational Sparsity: Structure-Aware Block-Sparse Attention for Long Code Completion](2026-a55ddcf36e91-from-logical-to-computational-sparsity-structure-aware-block-sparse-atte.md)**  
   実装：[✓](https://github.com/DeepSoftwareAnalytics/SabreCoder) ・ リポジトリ内被引用：0  
   長いコードを補完する言語モデルでは、入力コードを一度に処理する事前計算（プリフィル）の注意演算が入力長の二乗に応じて増える。コード特有の関数・識別子・import文を考慮しない疎注意は重要な依存を失って補完精度が落ちやすい。次に同一チャンク内、明示的依存、埋め込み類似、グローバル参照という四つの規則を合成して注意マスクを作る。
-
-- **2026-07 · [CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention](2026-2607.25291-cosa-accelerating-long-context-inference-via-proxy-kernel-co-designed-sp.md)**  
-  実装：[✓](https://github.com/Tencent/AngelSlim) ・ リポジトリ内被引用：0  
-  長文脈のプレフィルで密な自己注意を実行すると、クエリとキーの全組合せを計算する負荷が入力長の二乗で増える。逆にカーネル内で実際の注意logitを見て省略する方式は、判定前のQK内積を減らせず、訪問順が悪いと省略が保守的になる。NVIDIA H20の128K文脈では密注意比で注意演算4.93倍、最初のトークンまでの時間（TTFT）2.53倍を報告した。
 
 - **2026-07 · [BOSCH: Black-Box Binary Optimization for Short-Context Attention-Head Selection in LLMs](2026-fa80222132dc-bosch-black-box-binary-optimization-for-short-context-attention-head-sel.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -543,7 +543,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：290  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：291  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
