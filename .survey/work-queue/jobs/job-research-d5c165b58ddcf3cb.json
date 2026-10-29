@@ -35,10 +35,15 @@
   "selection_reason": "P-MTPはVLM文書解析の多トークン先読みを段階的損失で学習し、推論時には信頼度に応じて草案長を変える。文書画像から構造化文字列への生成で精度をほぼ保ちながら最大約5倍の高速化を報告し、VLM復号高速化に直接該当する。",
   "semantic_scholar_id": "2f1f137e00c08b4b9ffc488de53a1060a255fb8d",
   "source_url": "https://arxiv.org/abs/2606.24447",
-  "status": "ready",
+  "status": "superseded",
   "title": "P-MTP: Efficient Document Parsing via Multi-Token Prediction with Progressive Depth Scaling",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T07:37:31+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.24447-p-mtp-efficient-document-parsing-via-multi-token-prediction-with-progres.md",
+  "represented_canonical_id": "arXiv:2606.24447",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
