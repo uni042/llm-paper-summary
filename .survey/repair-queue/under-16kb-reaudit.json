@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-29T13:04:24.148672+00:00",
+  "generated_at": "2026-10-29T13:36:29.712031+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 3,
+  "count": 5,
   "worker_counts": {
-    "scheduled-chat-00": 1,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 1,
-    "scheduled-chat-45": 1
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -76,6 +76,46 @@
         "body_chars": 2413,
         "method_chars": 1072,
         "evaluation_chars": 505,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-2609.24698-adapting-tree-structured-speculative-decoding-to-deepseek-v4-for-efficie.md",
+      "canonical_id": "arXiv:2609.24698",
+      "title": "Adapting Tree-Structured Speculative Decoding to DeepSeek-V4 for Efficient Inference",
+      "file_bytes": 13512,
+      "source_sha256": "7bb07189c5027e20a4689c2bbeda8e0aac2e9d80bf9597913ff1c56342d164e1",
+      "source_git_blob_sha": "a86a2d7c2646c3b8e62f7a7a9e0911a8ad430649",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.949857,
+      "quality_metrics": {
+        "body_chars": 3676,
+        "method_chars": 891,
+        "evaluation_chars": 1026,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/16-weight-quantization-compression/2026-2609.00450-hbq-hierarchical-scaling-block-quantization-with-hardware-efficiency-awa.md",
+      "canonical_id": "arXiv:2609.00450",
+      "title": "HBQ: Hierarchical Scaling Block Quantization with Hardware-Efficiency-Aware Design for Accurate LLM Inference",
+      "file_bytes": 14790,
+      "source_sha256": "aeb722d3bb43a013298afddd317de142455d33261b00b3a676f1ed75cefbfd65",
+      "source_git_blob_sha": "cc0be02b13eb20d42879f5337775cfc1604d1fd2",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.943408,
+      "quality_metrics": {
+        "body_chars": 4480,
+        "method_chars": 968,
+        "evaluation_chars": 1257,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
