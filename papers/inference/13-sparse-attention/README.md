@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（157本）
+## 自動生成の論文一覧（158本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -337,6 +337,10 @@
 - **2026-02 · [Scout Before You Attend: Sketch-and-Walk Sparse Attention for Efficient LLM Inference](2026-2602.07397-scout-before-you-attend-sketch-and-walk-sparse-attention-for-efficient-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Sketch&Walkは、長文脈LLM推論の自己注意を疎にする際、その層で直接似ている鍵だけを残すと、複数層を経由して重要になる情報経路を切断してしまう問題を扱う。提案方式はトークンをブロックにまとめて平均し、Hadamard変換で特徴次元を縮めてブロック間の注意を推定する。
+
+- **2026-02 · [S2O: Early Stopping for Sparse Attention via Online Permutation](2026-2602.22575-s2o-early-stopping-for-sparse-attention-via-online-permutation.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  これは単にTop-Kブロックを固定数選ぶ方式ではなく、実行中の寄与を見て処理を止める方式である。Llama-3.1-8Bの128K入力では、著者は注意演算約7.5倍、事前充填のエンドツーエンド3.81倍の高速化を報告する。
 
 - **2026-02 · [Light Forcing: Accelerating Autoregressive Video Diffusion via Sparse Attention](2026-2602.04789-light-forcing-accelerating-autoregressive-video-diffusion-via-sparse-att.md)**  
   実装：[✓](https://github.com/chengtao-lv/LightForcing) ・ リポジトリ内被引用：0  

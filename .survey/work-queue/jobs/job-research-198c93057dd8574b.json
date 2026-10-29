@@ -35,10 +35,15 @@
   "selection_reason": "PulseInferはCPU側の疎KV再読込による細粒度PCIe I/Oと待機を、層単位の割込みスケジューリング、I/O適応オフロード許可、SoloHead選択とgather-scatter転送で隠蔽・集約する。SGLang比最大4.7倍の復号処理量を報告する長文脈サービング方式。",
   "semantic_scholar_id": "36623233e6049168c2b669b21b48ecb3e5dae84b",
   "source_url": "https://arxiv.org/abs/2609.34555",
-  "status": "ready",
+  "status": "superseded",
   "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T10:01:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/10-kv-cache-offload-recomputation/2026-2609.34555-pulseinfer-i-o-centric-sparse-kv-cache-offloading-for-efficient-long-con.md",
+  "represented_canonical_id": "arXiv:2609.34555",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

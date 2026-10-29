@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T09:23:20+00:00",
+  "generated_at": "2026-10-29T10:01:53+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 86,
+  "count": 80,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1794,33 +1794,6 @@
       "worker_run_key": "20261029-0345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2604.07888",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T01:17:15+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5718,
-        "body_paragraphs": 32,
-        "method_chars": 1837,
-        "method_paragraphs": 11,
-        "evaluation_chars": 0,
-        "limitation_chars": 545,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8f17d1294613--libfile_af897ab774ec81918b90216f11d964c4--2026-2604.07888-bit-by-bit-progressive-qat-research-20261029-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8f17d1294613--libfile_af897ab774ec81918b90216f11d964c4--2026-2604.07888-bit-by-bit-progressive-qat-research-20261029-0900-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2603.16514",
       "title": null,
       "source_url": null,
@@ -1872,33 +1845,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e4bb5ffc9a76--libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-e4bb5ffc9a76--libfile_0f918e678f248191a1dc706dedf93fcc--2026-2607.15456-looped-latent-attention-cross-loop-kv-research-20261029-0803-scheduled-ch.json",
-      "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2602.22575",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T01:24:21+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4843,
-        "body_paragraphs": 28,
-        "method_chars": 1605,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 476,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fb4769ecb68b--libfile_c926285d0f7881919f6c771622efb2b3--2026-2602.22575-s2o-online-permutation-sparse-attention-research-20261029-0803-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-fb4769ecb68b--libfile_c926285d0f7881919f6c771622efb2b3--2026-2602.22575-s2o-online-permutation-sparse-attention-research-20261029-0803-scheduled-.json",
       "worker_run_key": "20261029-0803-scheduled-chat-00/r01"
     },
     {
@@ -1981,64 +1927,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_83edae65276881918e066a6728d9d20f--2026-2610.01950-moe-core-coordinated-expert-residency-research-20261029-1530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_83edae65276881918e066a6728d9d20f--2026-2610.01950-moe-core-coordinated-expert-residency-research-20261029-1530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261029-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2607.13205",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T08:41:24+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5494,
-        "body_paragraphs": 28,
-        "method_chars": 1662,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-753e4b145d09--libfile_7a2da20da1608191979a211125c87ce0--2026-2607.13205-structural-role-kv-under16kb-reaudit-20261029-1545-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-753e4b145d09--libfile_7a2da20da1608191979a211125c87ce0--2026-2607.13205-structural-role-kv-under16kb-reaudit-20261029-1545-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261029-1545-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.12330",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T08:43:26+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 160 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7727,
-        "body_paragraphs": 44,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 160,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 160 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-2bbb87c48ca6--libfile_c9363320a8a48191a05518edfeca1dd3--2026-2609.12330-eqiforge-equality-saturation-tensor-superoptimization-research-20261029-1558-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-2bbb87c48ca6--libfile_c9363320a8a48191a05518edfeca1dd3--2026-2609.12330-eqiforge-equality-saturation-tensor-superoptimization-research-20261029-1.json",
-      "worker_run_key": "20261029-1558-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2610.05685",
@@ -2154,8 +2042,8 @@
     },
     {
       "canonical_id": "arXiv:2602.17693",
-      "title": "A Case Study of Selected PTQ Baselines for Reasoning LLMs on Ascend NPU",
-      "source_url": "https://arxiv.org/html/2602.17693v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T09:23:15+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2183,8 +2071,8 @@
     },
     {
       "canonical_id": "arXiv:2505.18231",
-      "title": "NSNQuant: A Double Normalization Approach for Calibration-Free Low-Bit Vector Quantization of KV Cache",
-      "source_url": "https://arxiv.org/html/2505.18231v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T09:23:16+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2209,39 +2097,9 @@
       "worker_run_key": "20261029-1647-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2609.34555",
-      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
-      "source_url": "https://arxiv.org/abs/2609.34555",
-      "returned_at": "2026-10-29T09:23:17+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 147 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 8176,
-        "body_paragraphs": 40,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 147,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 147 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c8efef7e6c96--libfile_9e62036610b481919aadb0f7eff45654--2026-2609.34555-pulseinfer-io-centric-kv-offload-research-20261029-1503-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c8efef7e6c96--libfile_9e62036610b481919aadb0f7eff45654--2026-2609.34555-pulseinfer-io-centric-kv-offload-research-20261029-1503-scheduled-chat-00.json",
-      "worker_run_key": "20261029-1503-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2506.15724",
-      "title": "MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference",
-      "source_url": "https://arxiv.org/html/2506.15724v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-29T09:23:18+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2265,33 +2123,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d07e6ce9a2f9--libfile_1ca807bcd1a88191864d45f947173932--2025-2506.15724-madakv-modality-kv-eviction-research-20261029-1647-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-d07e6ce9a2f9--libfile_1ca807bcd1a88191864d45f947173932--2025-2506.15724-madakv-modality-kv-eviction-research-20261029-1647-scheduled-chat-45-r01.json",
       "worker_run_key": "20261029-1647-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2609.38169",
-      "title": "STEPQuant: When and Where Errors Matter in Delta-Rule Recurrent State Quantization",
-      "source_url": "https://arxiv.org/pdf/2609.38169v1",
-      "returned_at": "2026-10-29T09:23:19+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 142 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5854,
-        "body_paragraphs": 32,
-        "method_chars": 1636,
-        "method_paragraphs": 9,
-        "evaluation_chars": 142,
-        "limitation_chars": 540,
-        "insufficiency_flags": [
-          "評価説明量 142 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f398758e2348--libfile_ad14096c44488191b5d10dd4886d87a5--2026-2609.38169-stepquant-recurrent-state-quantization-research-20261029-1730-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f398758e2348--libfile_ad14096c44488191b5d10dd4886d87a5--2026-2609.38169-stepquant-recurrent-state-quantization-research-20261029-1730-scheduled-c.json",
-      "worker_run_key": "20261029-1730-scheduled-chat-30/r01"
     }
   ]
 }

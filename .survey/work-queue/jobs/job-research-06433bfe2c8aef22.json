@@ -35,10 +35,15 @@
   "selection_reason": "Bit-by-Bitは低ビット量子化学習を段階的に進め、整数格子の入れ子構造と外れ値チャネル分割でW2A2等の精度を保つ。OCP互換スケールと独自2bit演算器を実装しBF16比最大11倍の演算高速化を報告するため、学習法だけでなく推論低ビット実行に直接関係する。",
   "semantic_scholar_id": "39688640ed9b1fa0e4ab5a04a960602e69daa4a6",
   "source_url": "https://arxiv.org/abs/2604.07888",
-  "status": "ready",
+  "status": "superseded",
   "title": "Bit-by-Bit: Progressive QAT Strategy with Outlier Channel Splitting for Stable Low-Bit LLMs",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T10:01:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2604.07888-bit-by-bit-progressive-qat-strategy-with-outlier-channel-splitting-for-s.md",
+  "represented_canonical_id": "arXiv:2604.07888",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

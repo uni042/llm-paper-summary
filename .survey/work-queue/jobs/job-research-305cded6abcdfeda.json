@@ -35,10 +35,15 @@
   "selection_reason": "S2OはFlashAttentionの非連続KVロードをオンライン索引置換で可能にし、重要度順にブロックを読みながらスコア閾値で早期終了する。128K文脈で注意演算とLLM全体の実測高速化を示す長文脈疎注意カーネル最適化なのでaccept。",
   "semantic_scholar_id": "ac6240042423bd8fabf1f5e3ff58c391501cd4f1",
   "source_url": "https://arxiv.org/abs/2602.22575",
-  "status": "ready",
+  "status": "superseded",
   "title": "S2O: Early Stopping for Sparse Attention via Online Permutation",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T10:01:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/13-sparse-attention/2026-2602.22575-s2o-early-stopping-for-sparse-attention-via-online-permutation.md",
+  "represented_canonical_id": "arXiv:2602.22575",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

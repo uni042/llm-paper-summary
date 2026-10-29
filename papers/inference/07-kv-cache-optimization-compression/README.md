@@ -801,7 +801,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-07 · [Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference](2026-2607.13205-adaptive-filtering-of-the-kv-cache-diagnosing-and-correcting-structural-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  H2OのようなKVキャッシュ削除法は、過去に大きな注意量を集めたトークンを重要とみなし、限られた保持枠へ残す。本研究は、構造化入力における「注意機構 mass」と「回答への寄与」の不一致を実験的に診断する。
+  長文推論のKVキャッシュを圧縮するとき、H2Oに代表される方式は過去のqueryから多くの注意を受けたトークンを重要とみなし、保持予算の上位へ残す。Llama-3.1-8B-Instructの合成JSONでは、区切り記号のトークン当たり平均注意量13.64に対し、回答を持つ値は0.336であり、約40倍の開きがある。
 
 - **2026-06 · [Unified KV Pooling to Accelerate Long-Context LLM Serving](2026-2606.14779-unified-kv-pooling-to-accelerate-long-context-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
