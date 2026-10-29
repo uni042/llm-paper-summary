@@ -706,20 +706,20 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：154  
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
+- **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
+  実装：✓ ・ リポジトリ内被引用：50  
+  FlashDecoding++は、自己回帰型の大規模言語モデルで一語ずつ出力する復号段階を、GPUの演算資源とメモリ階層に合わせて高速化する推論エンジンである。論文が分離した三つの障害は、長い注意系列を分割したときの部分ソフトマックス結合同期、少数トークンを入力する細長い行列積のゼロ埋め、行列形状とGPUの種類を無視する固定実行方式である。
+
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
   実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：49  
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
-
-- **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：49  
-  FlashDecoding++は、自己回帰型の大規模言語モデルで一語ずつ出力する復号段階を、GPUの演算資源とメモリ階層に合わせて高速化する推論エンジンである。論文が分離した三つの障害は、長い注意系列を分割したときの部分ソフトマックス結合同期、少数トークンを入力する細長い行列積のゼロ埋め、行列形状とGPUの種類を無視する固定実行方式である。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
   実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：41  
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
-  実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/ScalingIntelligence/CATS) ・ リポジトリ内被引用：23  
   大規模言語モデルの多層パーセプトロン（MLP）では、活性値の小さい中間ニューロンも密行列積の対象となる。特にバッチが小さい自己回帰復号では、重みをGPUメモリから読む帯域が処理時間を制限しやすい。混合専門家（MoE）モデルは一部の専門家だけを選ぶが、通常のLlama2やMistralの密なGated-MLPにはそのような明示的な専門家選択器がない。
 
 - **2024-05 · [Mirage: A Multi-Level Superoptimizer for Tensor Programs](2024-2405.05751-mirage-a-multi-level-superoptimizer-for-tensor-programs.md)**  
@@ -821,7 +821,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：103  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：104  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
@@ -851,7 +851,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：700  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：703  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -865,7 +865,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：34  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  
@@ -889,7 +889,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 8年前（2018-11〜2019-10）
 
 - **2019-06 · [Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations](2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md)**  
-  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：160  
+  実装：[✓](https://github.com/triton-lang/triton) ・ リポジトリ内被引用：161  
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  

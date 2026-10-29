@@ -1857,15 +1857,15 @@
   長い系列を処理する言語モデルでは、直近の情報を精密に参照する短期記憶と、遠い過去から重要な情報を残す長期記憶の両立が難しい。一方、線形再帰型モデルは過去を小さな状態へ圧縮できるが、重要な出来事をどのように選択して長く保持するかに制約がある。
 
 - **2025-03 · [L1: Controlling How Long A Reasoning Model Thinks With Reinforcement Learning](2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md)**  
-  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/cmu-l3/l1) ・ リポジトリ内被引用：33  
   長い思考は難問での正答率を上げ得るが、単純な問題に数千トークンを費やすと不要な逐次生成が増える。著者が提案する長さ制御方策最適化（Length Controlled Policy Optimization、LCPO）には二種類ある。指定長との平均偏差は数学課題で約3%である。
 
 - **2024-12 · [Token-Budget-Aware LLM Reasoning](2024-2412.18547-token-budget-aware-llm-reasoning.md)**  
-  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：29  
+  実装：[✓](https://github.com/GeniusHTX/TALE) ・ リポジトリ内被引用：30  
   そこで問題ごとに適切な予算を推定する推論時方式TALE-EPと、適切な予算下の短い正答を学習させる事後学習方式TALE-PTを提案する。
 
 - **2025-02 · [TokenSkip: Controllable Chain-of-Thought Compression in LLMs](2025-2502.12067-tokenskip-controllable-chain-of-thought-compression-in-llms.md)**  
-  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：28  
+  実装：[✓](https://github.com/hemingkx/TokenSkip) ・ リポジトリ内被引用：29  
   思考連鎖（Chain-of-Thought、CoT）は、複雑な数学や論理の問題を段階的に解くことで大規模言語モデルの正答率を改善する。保持率を条件として複数の圧縮版を学習させ、推論時に指定した保持率に応じて短い思考列をモデル自身が直接生成するようにする。
 
 - **2025-02 · [Training Language Models to Reason Efficiently](2025-2502.04463-training-language-models-to-reason-efficiently.md)**  
@@ -1893,11 +1893,11 @@
   CoT-Valveは、推論モデルが簡単な問題にも長い思考連鎖（Chain of Thought、CoT）を生成してしまう無駄を減らし、同じ重みを基盤とするモデルで思考列の長さを柔軟に変える手法である。
 
 - **2025-02 · [Chain of Draft: Thinking Faster by Writing Less](2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md)**  
-  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：20  
+  実装：[✓](https://github.com/sileix/chain-of-draft) ・ リポジトリ内被引用：21  
   Chain of 下書き（CoD）は、推論連鎖（Chain-of-Thought; CoT）の冗長な自然言語を減らし、必要な中間計算だけを短いドラフトとして生成させるprompting方式である。
 
 - **2024-12 · [Compressed Chain of Thought: Efficient Reasoning Through Dense Representations](2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md)**  
-  実装：✓ ・ リポジトリ内被引用：20  
+  実装：✓ ・ リポジトリ内被引用：21  
   本研究は、言語モデルの推論精度を高めるために長い自然言語の思考連鎖（Chain of Thought; CoT）を生成すると、回答前の自己回帰復号に多くの時間がかかる問題を扱う。自然言語の思考文を一度すべて生成してから圧縮する方式ではない。
 
 - **2025-04 · [Reasoning Models Can Be Effective Without Thinking](2025-2504.09858-reasoning-models-can-be-effective-without-thinking.md)**  
@@ -1913,7 +1913,7 @@
   拡散型LLM（dLLM）の反復的な雑音除去（denoising）・並列トークン確定・更新され続けるKVをモジュール化し、デコーダ/KV管理とGPU実行系を同時最適化するdInfer。
 
 - **2025-02 · [CODI: Compressing Chain-of-Thought into Continuous Space via Self-Distillation](2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md)**  
-  実装：[✓](https://github.com/zhenyi4/codi) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/zhenyi4/codi) ・ リポジトリ内被引用：17  
   CODI（Continuous Chain-of-Thought via Self-Distillation）は、推論過程を自然言語の単語列として毎回生成する費用を減らすため、明示的な思考連鎖（Chain-of-Thought; CoT）を少数の連続潜在状態へ移す学習方式である。
 
 - **2024-12 · [ArkVale: Efficient Generative LLM Inference with Recallable Key-Value Eviction](2024-001c0516e00c-arkvale-efficient-generative-llm-inference-with-recallable-key-value-evi.md)**  
@@ -2048,6 +2048,10 @@
   実装：[✓](https://github.com/ryansynk/topk-decoding) ・ リポジトリ内被引用：2  
   長文脈の推論では、モデル重みだけでなく過去のkey/valueを保持するKVキャッシュがGPUメモリを圧迫する。すべてのKVをCPUへオフロードしても、生成トークンごとに全量をGPUへ戻せばPCIe転送がボトルネックになる。特に重要なのは、100万トークン文脈のプリフィルを16GB級GPUだけで実行した研究ではないという点である。
 
+- **2025-02 · [ETS: Efficient Tree Search for Inference-Time Scaling](2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md)**  
+  実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：2  
+  ETS（Efficient Tree Search）は、LLMの推論時演算量拡大（inference-time scaling）で用いる木探索の費用を、単なるモデル呼出回数ではなく分岐間の鍵・値キャッシュ（KV キャッシュ）共有量に基づいて最適化する方式である。
+
 - **2024-11 · [kNN Attention Demystified: A Theoretical Exploration for Scalable Transformers](2024-2411.04013-knn-attention-demystified-a-theoretical-exploration-for-scalable-transfo.md)**  
   実装：[✓](https://github.com/sansui-123/knn_attention) ・ リポジトリ内被引用：2  
   近傍探索によって各クエリに重要そうなk個のキーだけを選ぶ方式は経験的に用いられてきたが、何をどの精度で近似できるか、逆伝播で同様の効率化が可能かは自明ではない。
@@ -2159,10 +2163,6 @@
 - **2025-02 · [GATEKEEPER: Improving Model Cascades Through Confidence Tuning](2025-2502.19335-gatekeeper-improving-model-cascades-through-confidence-tuning.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   GATEKEEPERは、軽量な小型モデルと高精度だが高価な大型モデルを組み合わせる二段推論カスケードに対して、小型モデルの確信度そのものを委譲判断に適した形へ学習し直す方式である。評価は正答率と委譲率の曲線を主軸としており、実サービング基盤におけるGPU処理量や末尾遅延の改善を直接測ったものではない。
-
-- **2025-02 · [ETS: Efficient Tree Search for Inference-Time Scaling](2025-2502.13575-ets-efficient-tree-search-for-inference-time-scaling.md)**  
-  実装：[✓](https://github.com/SqueezeAILab/ETS) ・ リポジトリ内被引用：1  
-  ETS（Efficient Tree Search）は、LLMの推論時演算量拡大（inference-time scaling）で用いる木探索の費用を、単なるモデル呼出回数ではなく分岐間の鍵・値キャッシュ（KV キャッシュ）共有量に基づいて最適化する方式である。
 
 - **2025-01 · [TreeKV: Smooth Key-Value Cache Compression with Tree Structures](2025-2501.04987-treekv-smooth-key-value-cache-compression-with-tree-structures.md)**  
   実装：[✓](https://github.com/ZiweiHe/TreeKV) ・ リポジトリ内被引用：1  
@@ -2579,7 +2579,7 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-02 · [InfLLM: Training-Free Long-Context Extrapolation for LLMs with an Efficient Context Memory](2024-2402.04617-infllm-training-free-long-context-extrapolation-for-llms-with-an-efficie.md)**  
-  実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：81  
+  実装：[✓](https://github.com/thunlp/InfLLM) ・ リポジトリ内被引用：82  
   InfLLMは、短い文脈長で事前学習された大規模言語モデル（LLM）を、重みの追加学習なしに非常に長い入力へ適用する方式である。
 
 - **2024-09 · [OLMoE: Open Mixture-of-Experts Language Models](2024-2409.02060-olmoe-open-mixture-of-experts-language-models.md)**  
@@ -2587,11 +2587,11 @@
   混合専門家（Mixture-of-Experts; MoE）は総パラメータを増やしながら、各トークンで一部専門家だけを実行することで、密 モデルより計算量を抑えられる。
 
 - **2024-08 · [Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters](2024-2408.03314-scaling-llm-test-time-compute-optimally-can-be-more-effective-than-scaling-model-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：68  
+  実装：✓ ・ リポジトリ内被引用：69  
   本論文は、大規模言語モデル（LLM）の推論時に追加の計算予算を与える場合、その予算を何回の独立サンプリング、何段の探索、何回の逐次自己修正へ割り当てるべきかを分析する。さらに、小型モデルの推論時追加計算と、約14倍大きいモデルの事前学習を浮動小数点演算回数（FLOPs）で揃えて比較する。
 
 - **2024-02 · [Massive Activations in Large Language Models](2024-2402.17762-massive-activations-in-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：48  
+  実装：[✓](https://github.com/locuslab/massive-activations) ・ リポジトリ内被引用：49  
   著者らは入力を変えたときの値の変動と、推論中に値を直接置換する介入実験から、巨大活性値が単なる数値的不安定さではなく、自己注意（self-注意機構）へ一定の加算成分を供給する暗黙のバイアス（implicit bias）として働くと結論付ける。
 
 - **2023-11 · [LLaMA-VID: An Image is Worth 2 Tokens in Large Language Models](2023-2311.17043-llama-vid-an-image-is-worth-2-tokens-in-large-language-models.md)**  
@@ -2933,7 +2933,7 @@
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Efficiently Scaling Transformer Inference](2022-2211.05102-efficiently-scaling-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：258  
+  実装：✓ ・ リポジトリ内被引用：259  
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
@@ -2969,7 +2969,7 @@
   MiniLLMは、大規模な教師言語モデルから小規模な学生言語モデルへ生成能力を移す知識蒸留（Knowledge Distillation; KD）の学習方式である。
 
 - **2023-07 · [Skeleton-of-Thought: Prompting LLMs for Efficient Parallel Generation](2023-2307.15337-skeleton-of-thought-prompting-llms-for-efficient-parallel-generation.md)**  
-  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：22  
+  実装：[✓](https://github.com/imagination-research/sot) ・ リポジトリ内被引用：23  
   Skeleton-of-Thought（SoT）はモデル内部の注意カーネルを変えず、回答を「骨格作成」と「各項目の独立展開」に分解して、後半を並列実行する。高速化の源泉は総トークン数を必ず減らすことではなく、長い1本の逐次デコードを複数の短いデコードへ分け、クリティカルパスを短くする点にある。
 
 - **2023-10 · [Compressing LLMs: The Truth is Rarely Pure and Never Simple](2023-2310.01382-compressing-llms-the-truth-is-rarely-pure-and-never-simple.md)**  
@@ -3129,7 +3129,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-04 · [Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM](2021-2104.04473-efficient-large-scale-language-model-training-on-gpu-clusters-using-mega.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：75  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：76  
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
@@ -3197,7 +3197,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：312  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：314  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  

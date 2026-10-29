@@ -275,7 +275,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
-  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：55  
+  実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：56  
   Vidurは、大規模言語モデル（LLM）をどのGPUに何台配置し、どの並列化方式・バッチ化方式で処理するかを、候補ごとに実機で運転せず比較するためのシミュレータである。LLaMA2-7B/70B、InternLM-20B、Qwen-72Bを使った実機比較では、オンライン負荷での正規化要求遅延の誤差は最大でも9%未満と報告される。
 
 - **2023-12 · [LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference](2023-2312.03134-llmcompass-enabling-efficient-hardware-design-for-large-language-model-i.md)**  
@@ -283,7 +283,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   入力はモデルの計算グラフと装置構成であり、出力は演算子別・推論段階別の遅延、チップ面積、製造費用の推定値である。性能推定と面積・費用推定を同一の設計空間で組み合わせるため、最速のチップだけでなく、価格に見合った推論性能を評価できる。
 
 - **2024-08 · [LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale](2024-2408.05499-llmservingsim-a-hw-sw-co-simulation-infrastructure-for-llm-inference-ser.md)**  
-  実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：13  
   大規模言語モデルの推論基盤では、GPUや専用演算器の設計だけでなく、到着する要求の分布、バッチ化、KVキャッシュ管理、複数装置へのモデル分割が性能を左右する。論文は実GPU上の推論基盤に対する性能傾向の誤差を平均14.7%程度に抑え、既存の演算器シミュレータに対して34.7〜491倍の高速化を報告する。
 
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  

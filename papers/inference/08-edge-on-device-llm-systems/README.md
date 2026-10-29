@@ -217,7 +217,7 @@
   提案するキャッシュ優先ルーティング（Cache-Prior ルーティング）は、既存ルータのスコアに「DRAM内に既にある専門家」への加算項を導入し、上位K個の専門家の選択を変更する。
 
 - **2025-09 · [Scaling LLM Test-Time Compute with Mobile NPU on Smartphones](2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md)**  
-  実装：[✓](https://github.com/haozixu/llama.cpp-npu) ・ リポジトリ内被引用：8  
+  実装：[✓](https://github.com/haozixu/llama.cpp-npu) ・ リポジトリ内被引用：9  
   Hexagon NPUの復号時に遊休しやすい行列演算器を、並列テスト時計算へ転用する。4ビット細粒度タイル量子化とルックアップテーブル（Lookup Table; LUT）演算により、混合精度GEMM最大19.0倍、Softmax最大2.2倍を報告する。
 
 - **2025-07 · [DSSD: Efficient Edge-Device LLM Deployment and Collaborative Inference via Distributed Split Speculative Decoding](2025-2507.12000-dssd-efficient-edge-device-llm-deployment-and-collaborative-inference.md)**  
@@ -339,7 +339,7 @@
   本論文は、事前学習・タスク別微調整を終えた言語モデルの大きな線形層を、低ランクの二つの行列に置き換える圧縮方法を扱う。著者らは、特異値が小さい成分を除去しても必ずしもタスクへの影響が小さくないことをBERTの実験で示した。
 
 - **2022-03 · [Overcoming Oscillations in Quantization-Aware Training](2022-2203.11086-overcoming-oscillations-in-quantization-aware-training.md)**  
-  実装：[✓](https://github.com/qualcomm-ai-research/oscillations-qat) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/qualcomm-ai-research/oscillations-qat) ・ リポジトリ内被引用：7  
   量子化対応学習（Quantization-Aware 学習; QAT）は、訓練中に低ビットの重みと活性を模擬し、推論時に使う整数化済みネットワークの精度を回復する手法である。ImageNetのMobileNetV3-Smallでは重み・活性3/3ビットのLSQ基準52.0%に対し、減衰59.0%、凍結58.9%を報告する。
 
 ### 6年前（2020-11〜2021-10）

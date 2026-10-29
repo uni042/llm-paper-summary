@@ -1058,7 +1058,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   鍵値キャッシュ（KVキャッシュ）を全量GPUに置くと、文脈長に比例して必要メモリが増え、各復号ステップで読み出すデータ量も増加する。これを抑える方法には、不要なトークンのKVを永久に破棄する方法と、CPUなど低速階層に退避したKVを必要に応じて呼び戻す方法がある。GPUでの復号遅延は最大2倍、処理率は最大2.5倍改善したと報告する。
 
 - **2025-05 · [R-KV: Redundancy-aware KV Cache Compression for Reasoning Models](2025-2505.24133-r-kv-redundancy-aware-kv-cache-compression-for-reasoning-models.md)**  
-  実装：[✓](https://github.com/Zefan-Cai/R-KV) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/Zefan-Cai/R-KV) ・ リポジトリ内被引用：32  
   R-KVは、推論モデルが数学問題を解く際に生成する長い思考過程に含まれる重複を利用し、自己回帰復号中の鍵値キャッシュ（Key-Value キャッシュ、以下KVキャッシュ）を固定予算に抑える手法である。論文の例では8Bモデルが約32Kトークンを生成する場合、重み15.5GBに加えてKVキャッシュ約4.1GBを要する。
 
 - **2025-01 · [RotateKV: Accurate and Robust 2-Bit KV Cache Quantization for LLMs via Outlier-Aware Adaptive Rotations](2025-2501.16383-rotatekv-accurate-and-robust-2-bit-kv-cache-quantization.md)**  
@@ -1073,13 +1073,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：[✓](https://github.com/vllm-project/vllm/pull/22236) ・ リポジトリ内被引用：26  
   合成トレースではなく本番サービスのトレースに基づく設計材料が不足しているという問題に対し、本研究はAliyun Tongyiの大規模serving クラスタから得た顧客向け(to-C)と企業向け(to-B)のトレースを特徴付け、観測した分布を使う追い出し 方策を提案する。
 
+- **2025-04 · [KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments](2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md)**  
+  実装：✓ ・ リポジトリ内被引用：26  
+  注意重みではなくキーの幾何学的多様性を重要度代理として使う学習不要KV削除法で、ブロック長文処理でも厳密な容量上限を守りつつ、8K予算で約23%削減・LongBench差0.04%以下、既存削除法比で遅延最大30%短縮を示す。
+
 - **2025-05 · [FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion](2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md)**  
   実装：[✓](https://github.com/ZhanqiuHu/flash-dlm-experimental) ・ リポジトリ内被引用：25  
   FlashDLMは拡散言語モデル（Diffusion Language モデル; DLM）の遅さを、1回のノイズ除去で再計算し過ぎる問題と、何回ノイズ除去を繰り返すかという問題に分ける。FreeCacheは前者を、Guided Diffusionは後者を削り、二つを組み合わせて大きな端末間高速化を得る。
-
-- **2025-04 · [KeyDiff: Key Similarity-Based KV Cache Eviction for Long-Context LLM Inference in Resource-Constrained Environments](2025-2504.15364-keydiff-key-similarity-based-kv-cache-eviction-for-long-context-llm-inference-in-resource-constrained-environments.md)**  
-  実装：✓ ・ リポジトリ内被引用：25  
-  注意重みではなくキーの幾何学的多様性を重要度代理として使う学習不要KV削除法で、ブロック長文処理でも厳密な容量上限を守りつつ、8K予算で約23%削減・LongBench差0.04%以下、既存削除法比で遅延最大30%短縮を示す。
 
 - **2025-03 · [xKV: Cross-Layer KV-Cache Compression via Aligned Singular Vector Extraction](2025-2503.18893-xkv-cross-layer-kv-cache-compression-via-aligned-singular-value-decomposition.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/xKV) ・ リポジトリ内被引用：23  
@@ -1416,7 +1416,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [SnapKV: LLM Knows What You are Looking for Before Generation](2024-2404.14469-snapkv.md)**  
-  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：441  
+  実装：[✓](https://github.com/FasterDecoding/SnapKV) ・ リポジトリ内被引用：443  
   プロンプト末尾の観測窓から各注意ヘッドが将来参照する位置を推定し、重要KVだけをクラスタ単位で残して長文復号を軽量化する手法。
 
 - **2024-01 · [KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization](2024-2401.18079-kvquant.md)**  
@@ -1424,7 +1424,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Key分布に合わせたチャネル別・RoPE前・非一様・外れ値分離量子化で、3ビットKVを約4.8倍圧縮しつつパープレキシティ悪化0.1未満を実現する。
 
 - **2024-02 · [KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache](2024-2402.02750-kivi.md)**  
-  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：330  
+  実装：[✓](https://github.com/jy-yuan/KIVI) ・ リポジトリ内被引用：331  
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
@@ -1432,7 +1432,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
-  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：251  
+  実装：[✓](https://github.com/Zefan-Cai/PyramidKV) ・ リポジトリ内被引用：252  
   注意の層間集約パターンに合わせてKV予算を下層から上層へ逓減させ、同じ総メモリで固定予算型より長文脈性能を保つKVキャッシュ圧縮法。
 
 - **2024-06 · [InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management](2024-2406.19707-infinigen-dynamic-kv-cache-management.md)**  
@@ -1440,7 +1440,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   CPU側の全KVキャッシュから次レイヤーで重要なトークンだけを予測してGPUへ先読みし、長文オフロード推論のPCIe転送を削減して最大3.00倍高速化する。
 
 - **2024-10 · [DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads](2024-2410.10819-duoattention-efficient-long-context-llm-inference-with-retrieval-and-str.md)**  
-  実装：[✓](https://github.com/mit-han-lab/duo-attention) ・ リポジトリ内被引用：138  
+  実装：[✓](https://github.com/mit-han-lab/duo-attention) ・ リポジトリ内被引用：139  
   デコード時には過去のKVを読み出すため遅延も長くなり、プリフィルでは注意計算が系列長の二乗に増える。DuoAttentionは、全ての注意ヘッドが遠距離の情報を必要とするわけではないという観測に基づき、ヘッドごとに全履歴を残すか、固定長の履歴だけ残すかを切り替える方式である。
 
 - **2024-07 · [Ada-KV: Optimizing KV Cache Eviction by Adaptive Budget Allocation for Efficient LLM Inference](2024-2407.11550-ada-kv.md)**  
@@ -1628,7 +1628,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   推論を高速化する新しいアルゴリズムを提案する論文ではない。同程度のパラメータ数でもQwen2-0.5Bの初回トークン時間はQwen1.5-0.5Bの1.46倍であり、Qwen1.5-0.5Bはパラメータが25.4%多いにもかかわらずJetson上では31.9%速い。
 
 - **2024-09 · [Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU](2024-2409.09086-inf-mllm-efficient-streaming-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：8  
+  実装：✓ ・ リポジトリ内被引用：9  
   著者らは注意得点の時間的な構造を観察し、直近トークンだけでなく、離れた過去にある重要トークンを固定容量キャッシュへ残す方法を提案する。
 
 - **2024-06 · [Optimised Grouped-Query Attention Mechanism for Transformers](2024-2406.14963-optimised-grouped-query-attention-mechanism-for-transformers.md)**  
@@ -1666,23 +1666,23 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-11〜2023-10）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：666  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：667  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：633  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：634  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
-  実装：✓ ・ リポジトリ内被引用：394  
+  実装：✓ ・ リポジトリ内被引用：395  
   標準の多頭注意（Multi-Head 注意機構; MHA）は各クエリ頭に独立した鍵頭と値頭を持つため、復号時には全KV頭のキャッシュを読み出す必要がある。
 
 - **2023-10 · [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](2023-2310.01801-fastgen.md)**  
-  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：256  
+  実装：[✓](https://github.com/machilusZ/FastGen) ・ リポジトリ内被引用：257  
   FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。
 
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  
-  実装：✓ ・ リポジトリ内被引用：227  
+  実装：✓ ・ リポジトリ内被引用：228  
   Scissorhandsは、過去の注意重みが大きかったトークンは将来の生成でも高い注意を受けやすいという「重要性の持続性仮説（Persistence of Importance Hypothesis）」を提案する。
 
 - **2023-06 · [Augmenting Language Models with Long-Term Memory](2023-2306.07174-augmenting-language-models-with-long-term-memory.md)**  
@@ -1692,6 +1692,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 7年前（2019-11〜2020-10）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：261  
+  実装：✓ ・ リポジトリ内被引用：262  
   複数問い合わせ注意（Multi-Query 注意機構; MQA）は、問い合わせ側の8ヘッドを維持したまま、鍵と値だけを全ヘッドで1組へ共有する。長い履歴を毎生成ステップで読む増分復号のメモリ転送を減らし、TPUv2でのWMT英独翻訳のデコーダ測定を46から3.8マイクロ秒／出力トークンへ短縮した。
 <!-- survey:auto:end -->

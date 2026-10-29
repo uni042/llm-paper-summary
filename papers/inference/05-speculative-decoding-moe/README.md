@@ -174,6 +174,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/comeusr/diversed) ・ リポジトリ内被引用：3  
   投機的復号（投機的復号）は、小型のドラフトモデルが複数トークンを先読みし、大型の対象モデルがそれらをまとめて検証することで、逐次生成の待ち時間を短縮する。
 
+- **2026-02 · [Vegas: Self-Speculative Decoding with Verification-Guided Sparse Attention](2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md)**  
+  実装：[✓](https://github.com/platformxlab/vegas) ・ リポジトリ内被引用：3  
+  検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
+
 - **2026-01 · [Overcoming Joint Intractability with Lossless Hierarchical Speculative Decoding](2026-2601.05724-overcoming-joint-intractability-with-lossless-hierarchical-speculative-d.md)**  
   実装：[✓](https://github.com/ZhouYuxuanYX/Hierarchical-Speculative-Decoding) ・ リポジトリ内被引用：3  
   HSDは利用可能な草案の枝だけから局所的な確率質量を計算し、階層をまたいで過不足を補正することで、この問題を回避する。主要実験はQwen2.5-0.5Bを草案とし、14B・32B・72Bを目標に使った比較で、トークン単位検証に対する復号速度の平均改善は約6.7%、一部条件では11%前後に達した。
@@ -241,10 +245,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-03 · [A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference](2026-2603.19133-picospec-edge-cloud-pipelined-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   端末の候補生成とクラウド検証を非同期に重ね、棄却用確率分布を疎圧縮してネットワーク往復を隠すことで、端末・クラウド協調推論を最大2.9倍高速化する。
-
-- **2026-02 · [Vegas: Self-Speculative Decoding with Verification-Guided Sparse Attention](2026-2602.07223-specattn-sparse-attention-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/platformxlab/vegas) ・ リポジトリ内被引用：2  
-  検証で得た注意ロジットを次の疎な候補生成へ再利用し、鍵値選択の追加走査を抑えながら損失なし自己投機復号を高速化する。
 
 - **2026-01 · [WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching](2026-2601.11652-wisp-distributed-speculative-serving-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -950,6 +950,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/eBay/spec_dec) ・ リポジトリ内被引用：2  
   著者らは、既存のBSPとDSDに重大な同期不良があることを具体的な出力で示し、正当性の検査指標を設計する。論文のA100実験ではEXSpecはバッチサイズ8で最大約3倍の処理量を示す。
 
+- **2025-10 · [CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs](2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  投機的復号は、安価な草案器が未来のトークンを先に提案し、ターゲットLLMが複数位置を一度に検証することで逐次実行回数を減らす。原著のH100 80GB、Vicuna-7B/13B/33B、Spec-Benchでは、訓練不要のCAS-Specが自己回帰復号比でそれぞれ平均1.578/1.524/1.481倍となる。
+
 - **2025-10 · [Accelerating Mobile Language Model via Speculative Decoding and NPU-Coordinated Execution](2025-2510.15312-accelerating-mobile-language-model-via-speculative-decoding-and-npu-coor.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   sd.npuは、スマートフォン上で検索拡張生成（retrieval-augmented generation; RAG）を動かすとき、モバイル神経処理装置（neural processing unit; NPU）の演算器を使い切れない問題を、実行時制御と推測復号（投機的復号）の両側から解決するシステムである。
@@ -981,10 +985,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-04 · [Token-Driven GammaTune: Adaptive Calibration for Enhanced Speculative Decoding](2025-2504.00030-token-driven-gammatune-adaptive-calibration-for-enhanced-speculative-dec.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   投機的復号では小型ドラフトモデルが先の複数トークンを提案し、大型ターゲットモデルがまとめて検証する。〔原著§3–4〕 SpecBenchの4組のターゲット/ドラフトモデルをH100 80GBで評価した結果、固定長SpecDecodeを基準にした平均処理率はGammaTuneが1.15±0.05倍、GammaTune+が1.16±0.03倍である。
-
-- **2025-10 · [CAS-Spec: Cascade Adaptive Self-Speculative Decoding for On-the-Fly Lossless Inference Acceleration of LLMs](2025-2510.26843-cas-spec-cascade-adaptive-self-speculative-decoding-for-on-the-fly-lossl.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  投機的復号は、安価な草案器が未来のトークンを先に提案し、ターゲットLLMが複数位置を一度に検証することで逐次実行回数を減らす。原著のH100 80GB、Vicuna-7B/13B/33B、Spec-Benchでは、訓練不要のCAS-Specが自己回帰復号比でそれぞれ平均1.578/1.524/1.481倍となる。
 
 - **2025-09 · [Pipeline Parallelism is All You Need for Optimized Early-Exit Based Self-Speculative Decoding](2025-2509.19368-pipeline-parallelism-is-all-you-need-for-optimized-early-exit-based-self.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -1097,11 +1097,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-11〜2024-10）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：423  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：424  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：353  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：354  
   EAGLEは、対象LLMの上位層特徴量と直前に標本化したトークンを小型デコーダへ与えて未来特徴量を予測し、元の言語モデル出力ヘッドと木構造検証で重み読出し回数を減らす。
 
 - **2024-06 · [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](2024-2406.16858-eagle-2.md)**  
@@ -1299,7 +1299,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：609  
+  実装：✓ ・ リポジトリ内被引用：610  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
@@ -1311,7 +1311,7 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   SpecInferは、小型モデル群が先に作る複数候補を共通接頭辞の木へまとめ、対象LLMを1回で木構造検証することで、逐次デコードの対象重み読出しとGPU間通信を減らし、複数トークンを確定する。
 
 - **2023-09 · [Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding](2023-2309.08168-draft-verify.md)**  
-  実装：[✓](https://openreview.net/attachment?id=ACC2nQYzPYS&name=software) ・ リポジトリ内被引用：152  
+  実装：[✓](https://openreview.net/attachment?id=ACC2nQYzPYS&name=software) ・ リポジトリ内被引用：153  
   元モデルの中間層を一時的に飛ばして下書きを生成し、完全モデルで一括検証することで、追加下書きモデルなしに最大約2倍の損失なしデコード高速化を実現する。
 
 - **2023-10 · [DistillSpec: Improving Speculative Decoding via Knowledge Distillation](2023-2310.08461-distillspec-improving-speculative-decoding-via-knowledge-distillation.md)**  

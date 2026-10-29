@@ -377,11 +377,11 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：142  
+  実装：✓ ・ リポジトリ内被引用：143  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：98  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：99  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -539,20 +539,20 @@
 ### 3年前（2023-11〜2024-10）
 
 - **2024-06 · [Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference](2024-2406.10774-quest.md)**  
-  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：286  
+  実装：[✓](https://github.com/mit-han-lab/Quest) ・ リポジトリ内被引用：287  
   KVページのキー最小・最大値と現在クエリから重要度上界を推定し、上位ページだけを読むことで全KVを保持したまま長文脈注意の帯域を削減し最大7.03倍高速化。
 
 - **2024-07 · [MInference 1.0: Accelerating Pre-filling for Long-Context LLMs via Dynamic Sparse Attention](2024-2407.02490-minference.md)**  
-  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：193  
+  実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：194  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
+
+- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：78  
+  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
   実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：77  
   Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
-
-- **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
-  実装：✓ ・ リポジトリ内被引用：77  
-  RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
   実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：50  
@@ -609,7 +609,7 @@
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
-  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：40  
+  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：41  
   目印注意（Landmark 注意機構）は、長い文章を一定長のブロックに分け、それぞれの末尾へ特別な目印トークンを挿入し、注意機構そのものに「どの過去ブロックを読み戻すべきか」を学習させる方式である。また、LLaMA-7Bを長さ512の文脈で15,000ステップ微調整した実験では、32Kを超える入力から埋め込んだ合言葉を検索できることを示した。
 
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  

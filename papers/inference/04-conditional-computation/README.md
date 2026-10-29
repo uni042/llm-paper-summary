@@ -185,7 +185,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
 ### 3年前（2023-11〜2024-10）
 
 - **2024-08 · [LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding](2024-layerskip-enabling-early-exit-inference-and-self-speculative-decoding.md)**  
-  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：134  
+  実装：[✓](https://github.com/facebookresearch/LayerSkip) ・ リポジトリ内被引用：135  
   LayerSkipは、大規模言語モデルの全ての層を毎トークン実行する代わりに、浅い層から次トークンを予測できるよう学習し、その予測を同じモデルの残りの層で検証する方式である。下書きモデルの生成結果を大きなモデルで一括検証することで生成時間を短縮できるが、二つのモデルの重みや鍵・値キャッシュを管理する必要がある。
 
 - **2024-03 · [An Image is Worth 1/2 Tokens After Layer 2: Plug-and-Play Inference Acceleration for Large Vision-Language Models](2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md)**  
@@ -225,7 +225,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   LongVUは、長時間動画を多模態大規模言語モデルへ入力するとき、視覚トークン数が文脈長を超える問題に対して、時間方向の冗長なフレーム削除、質問に応じた空間解像度の配分、フレーム間で重複する空間トークンの削除を段階的に組み合わせる方式である。
 
 - **2024-08 · [Training-Free Activation Sparsity in Large Language Models](2024-2408.14690-training-free-activation-sparsity-in-large-language-models.md)**  
-  実装：[✓](https://github.com/FasterDecoding/TEAL) ・ リポジトリ内被引用：24  
+  実装：[✓](https://github.com/FasterDecoding/TEAL) ・ リポジトリ内被引用：25  
   隠れ状態の小振幅成分を層別にゼロ化し、対応重みチャネルを読まない専用カーネルで、追加学習なしに40〜50%のモデル全体活性疎性と最大1.8倍のデコード高速化を実現する。
 
 - **2024-03 · [Not All Layers of LLMs Are Necessary During Inference](2024-2403.02181-not-all-layers-of-llms-are-necessary-during-inference.md)**  
@@ -237,7 +237,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   GemFilterは、長い入力文脈を持つ大規模言語モデル（LLM）の推論を高速化するため、回答に関係する入力トークンをモデルの比較的早い層で選び、その短い部分列だけを全層で再処理する手法である。
 
 - **2024-06 · [Turbo Sparse: Achieving LLM SOTA Performance with Minimal Activated Parameters](2024-2406.05955-turbo-sparse-achieving-llm-sota-performance-with-minimal-activated-parameters.md)**  
-  実装：✓ ・ リポジトリ内被引用：14  
+  実装：✓ ・ リポジトリ内被引用：15  
   SwiGLUのゲート側だけでなくup射影側にもReLUを掛ける二重ReLU（dReLU）へ置換し、継続事前学習で性能を回復する。Mistral-7BはFFNの約90%、Mixtral-47Bは専門家ルーティング込みで約97%を非活性化し、PowerInfer系の疎実行で2〜5倍のデコード高速化を報告する。
 
 - **2023-11 · [Learning to Skip for Language Modeling](2023-2311.15436-learning-to-skip-for-language-modeling.md)**  
@@ -303,7 +303,7 @@ MoEのexpert数を変えるAdaptive Expert Computationとは対象が異なり�
   トークンごとに途中で処理を終了する早期終了（early exit）は計算を減らせるが、従来の方式をそのまま実際の配信へ持ち込むと、二つの問題が生じる。原著は2023年のプレプリントで、OPT-1.3BとOPT-6.7Bを使い、構造化情報からの文章生成、短文要約、ニュース要約で目標2～5倍の高速化設定を比較した。
 
 - **2023-10 · [ReLU Strikes Back: Exploiting Activation Sparsity in Large Language Models](2024-2310.04564-relu-strikes-back-exploiting-activation-sparsity-in-large-language-model.md)**  
-  実装：✓ ・ リポジトリ内被引用：30  
+  実装：✓ ・ リポジトリ内被引用：31  
   大規模言語モデルは推論時に膨大な重みを読み出す。特に小さなバッチでの一トークンずつの生成では、演算器のピーク性能より高帯域メモリからの重み移動が制約になることが多い。滑らかな活性化関数であるSiLUやGELUは、負の入力でも通常は厳密なゼロを出さないため、出力が小さくても対応する重みの読み出しを機械的に省略しにくい。
 
 - **2023-07 · [MovieChat: From Dense Token to Sparse Memory for Long Video Understanding](2023-2307.16449-moviechat-from-dense-token-to-sparse-memory-for-long-video-understanding.md)**  

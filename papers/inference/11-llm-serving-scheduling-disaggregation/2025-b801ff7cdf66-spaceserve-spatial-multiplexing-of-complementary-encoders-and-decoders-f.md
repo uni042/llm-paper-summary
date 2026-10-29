@@ -1,44 +1,71 @@
 ---
-canonical_id: "title:spaceserve-spatial-multiplexing-of-complementary-encoders-and-decoders-for-multimodal-llms"
-openreview_id: "w4qJ056WhI"
-doi: "10.52202/085713-2652"
-title: "SpaceServe: Spatial Multiplexing of Complementary Encoders and Decoders for Multimodal LLMs"
+canonical_id: title:spaceserve-spatial-multiplexing-of-complementary-encoders-and-decoders-for-multimodal-llms
+openreview_id: w4qJ056WhI
+doi: 10.52202/085713-2652
+title: 'SpaceServe: Spatial Multiplexing of Complementary Encoders and Decoders for Multimodal LLMs'
 authors:
-  - Zhicheng Li
-  - Shuoming Zhang
-  - Jiacheng Zhao
-  - Siqi Li
-  - Xiyu Shi
-  - Yangyu Zhang
-  - Shuaijiang Li
-  - Donglin Yu
-  - Zheming Yang
-  - Yuan Wen
-  - Huimin Cui
-published: "2025-12"
-publication: "Advances in Neural Information Processing Systems 38 (NeurIPS 2025)"
-publication_type: "conference"
-publication_status: "published"
-source: "https://proceedings.neurips.cc/paper_files/paper/2025/file/720e7ebc49c84252abc0754dddf80976-Paper-Conference.pdf"
+- Zhicheng Li
+- Shuoming Zhang
+- Jiacheng Zhao
+- Siqi Li
+- Xiyu Shi
+- Yangyu Zhang
+- Shuaijiang Li
+- Donglin Yu
+- Zheming Yang
+- Yuan Wen
+- Huimin Cui
+published: 2025-12
+publication: Advances in Neural Information Processing Systems 38 (NeurIPS 2025)
+publication_type: conference
+publication_status: published
+source: https://proceedings.neurips.cc/paper_files/paper/2025/file/720e7ebc49c84252abc0754dddf80976-Paper-Conference.pdf
 sources:
-  - "https://proceedings.neurips.cc/paper_files/paper/2025/file/720e7ebc49c84252abc0754dddf80976-Paper-Conference.pdf"
-  - "https://openreview.net/forum?id=w4qJ056WhI"
-code: "https://github.com/gofreelee/SpaceServe"
-implementation: "NVIDIA A100 SXMを8基搭載した単一サーバーで、libsmctrl等のSM割当機構により視覚エンコーダとLLMデコーダをSM単位で空間分離。オフラインの演算子別プロファイルから資源効用曲線を構築し、オンラインSISとエンコーダ用TWSRTFを組み合わせる。vLLM v1を比較対象としてQwen2-VL系列とMoE系VLMを評価。"
-summary: "SpaceServeはマルチモーダルLLMの計算律速な視覚エンコーダとメモリ律速なテキストデコーダを、GPUの異なるSM群へ同時配置する空間多重化サービング基盤。演算子別資源効用曲線からSM割当を決めるSISと、視覚要求を時間窓内で短い順にバッチ化するTWSRTFを用いる。NeurIPS 2025の8×A100実測では、Qwen2-VL-2Bの10 req/sでvLLM v1比TPOT最大28.9倍改善する一方、TTFTは改善せず一部条件で悪化する。原worklistに付いたDOI:10.1145/3695053.3730987は別論文AIMを指すため使用しない。"
-list_summary: "視覚エンコーダとLLMデコーダをSM単位で空間分離し、動的な資源配分と視覚要求バッチ化でMLLMのTPOTを削減。10 RPSで最大28.9倍、TTFTは改善せず。"
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261030-0245-scheduled-chat-45/r01"
-previous_worker_run_key: "20261030-0155-scheduled-chat-00/r01"
-reference_main_sha: "2796fce9eb89505f4aaa1cc81769656cba98f54b"
+- https://proceedings.neurips.cc/paper_files/paper/2025/file/720e7ebc49c84252abc0754dddf80976-Paper-Conference.pdf
+- https://openreview.net/forum?id=w4qJ056WhI
+code: https://github.com/gofreelee/SpaceServe
+implementation: NVIDIA A100 SXMを8基搭載した単一サーバーで、libsmctrl等のSM割当機構により視覚エンコーダとLLMデコーダをSM単位で空間分離。オフラインの演算子別プロファイルから資源効用曲線を構築し、オンラインSISとエンコーダ用TWSRTFを組み合わせる。vLLM v1を比較対象としてQwen2-VL系列とMoE系VLMを評価。
+summary: SpaceServeはマルチモーダルLLMの計算律速な視覚エンコーダとメモリ律速なテキストデコーダを、GPUの異なるSM群へ同時配置する空間多重化サービング基盤。演算子別資源効用曲線からSM割当を決めるSISと、視覚要求を時間窓内で短い順にバッチ化するTWSRTFを用いる。NeurIPS 2025の8×A100実測では、Qwen2-VL-2Bの10 req/sでvLLM v1比TPOT最大28.9倍改善する一方、TTFTは改善せず一部条件で悪化する。原worklistに付いたDOI:10.1145/3695053.3730987は別論文AIMを指すため使用しない。
+list_summary: 視覚エンコーダとLLMデコーダをSM単位で空間分離し、動的な資源配分と視覚要求バッチ化でMLLMのTPOTを削減。10 RPSで最大28.9倍、TTFTは改善せず。
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-45
+worker_run_key: 20261030-0245-scheduled-chat-45/r01
+previous_worker_run_key: 20261030-0155-scheduled-chat-00/r01
+reference_main_sha: 2796fce9eb89505f4aaa1cc81769656cba98f54b
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-identity_warning: "Worklist DOI:10.1145/3695053.3730987 resolves to unrelated ISCA paper AIM. This summary uses NeurIPS official PDF and normalized title identity; GitHub import inbox should resolve canonical identity."
-worker_completed_at: "2026-10-30T02:52:00+09:00"
-metadata_repair_source: "https://proceedings.neurips.cc/paper_files/paper/2025/hash/720e7ebc49c84252abc0754dddf80976-Abstract-Conference.html"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+identity_warning: Worklist DOI:10.1145/3695053.3730987 resolves to unrelated ISCA paper AIM. This summary uses NeurIPS official PDF and normalized title identity; GitHub import inbox should resolve canonical identity.
+worker_completed_at: '2026-10-30T02:52:00+09:00'
+metadata_repair_source: https://proceedings.neurips.cc/paper_files/paper/2025/hash/720e7ebc49c84252abc0754dddf80976-Abstract-Conference.html
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2010.05680
+- canonical_id: arXiv:2405.21075
+  arxiv_id: '2405.21075'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2408.08147
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2409.09086
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:1909.08053
+- canonical_id: arXiv:2501.05460
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2312.05516
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2401.09670
+references_checked_at: '2026-10-29'
+references_source: primary-pdf-reference-section
+references_total: 42
 ---
 
 # SpaceServe：視覚エンコーダとLLMデコーダをGPU内で空間多重化するサービング方式
