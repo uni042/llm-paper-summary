@@ -35,10 +35,15 @@
   "selection_reason": "SAM-Decodingは外部コーパスと生成済み文字列のsuffix automatonから最長の接尾辞一致を効率的に取得してドラフトを作る、モデル不要の投機的復号方式。生成時の索引更新・候補取得を平均O(1)へ抑え、EAGLE-2との併用も評価しているためaccept。",
   "semantic_scholar_id": "5899b6d60bfa3f35d7306a194f6879b8438fdd14",
   "source_url": "https://arxiv.org/abs/2411.10666",
-  "status": "ready",
+  "status": "superseded",
   "title": "SAM Decoding: Speculative Decoding via Suffix Automaton",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-29T08:14:04+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2024-2411.10666-sam-decoding-speculative-decoding-via-suffix-automaton.md",
+  "represented_canonical_id": "arXiv:2411.10666",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T07:37:33+00:00",
+  "generated_at": "2026-10-29T08:14:06+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 76,
+  "count": 80,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2011,6 +2011,120 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_9e62036610b481919aadb0f7eff45654--2026-2609.34555-pulseinfer-io-centric-kv-offload-research-20261029-1503-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_9e62036610b481919aadb0f7eff45654--2026-2609.34555-pulseinfer-io-centric-kv-offload-research-20261029-1503-scheduled-chat-00-r01.json",
       "worker_run_key": "20261029-1503-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2607.13205",
+      "title": "Adaptive Filtering of the KV Cache: Diagnosing and Correcting Structural-Role Bias in LLM Inference",
+      "source_url": "https://arxiv.org/pdf/2607.13205",
+      "returned_at": "2026-10-29T08:10:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5494,
+        "body_paragraphs": 28,
+        "method_chars": 1662,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7a2da20da1608191979a211125c87ce0--2026-2607.13205-structural-role-kv-under16kb-reaudit-20261029-1545-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7a2da20da1608191979a211125c87ce0--2026-2607.13205-structural-role-kv-under16kb-reaudit-20261029-1545-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261029-1545-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.33410",
+      "title": "FoldAttention: Declared-Reference Softmax for Fast Decode and Deterministic Backward",
+      "source_url": "https://arxiv.org/abs/2609.33410",
+      "returned_at": "2026-10-29T08:10:18+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 176 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8269,
+        "body_paragraphs": 45,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 176,
+        "limitation_chars": 850,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 176 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_2dd7b1824b6c8191b9d295e9eeef1295--2026-2609.33410-foldattention-declared-reference-research-20261029-1558-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_2dd7b1824b6c8191b9d295e9eeef1295--2026-2609.33410-foldattention-declared-reference-research-20261029-1558-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-1558-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2610.05685",
+      "title": "Spend Bytes on Breadth: Precision-Count Trade-offs for Decode-Time KV Compression in Long Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/html/2610.05685v2",
+      "returned_at": "2026-10-29T08:11:30+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 417 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8270,
+        "body_paragraphs": 46,
+        "method_chars": 1922,
+        "method_paragraphs": 11,
+        "evaluation_chars": 417,
+        "limitation_chars": 785,
+        "insufficiency_flags": [
+          "評価説明量 417 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a60fd9dd748881918d52942696fbc9d7--2026-2610.05685-breadthkv-decode-time-precision-count-research-20261029-1558-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_a60fd9dd748881918d52942696fbc9d7--2026-2610.05685-breadthkv-decode-time-precision-count-research-20261029-1558-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-1558-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.12330",
+      "title": "Unleashing the Power of Equality Saturation for Tensor Program Superoptimization",
+      "source_url": "https://arxiv.org/abs/2609.12330",
+      "returned_at": "2026-10-29T08:11:32+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 160 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7727,
+        "body_paragraphs": 44,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 160,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 160 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c9363320a8a48191a05518edfeca1dd3--2026-2609.12330-eqiforge-equality-saturation-tensor-superoptimization-research-20261029-1558-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c9363320a8a48191a05518edfeca1dd3--2026-2609.12330-eqiforge-equality-saturation-tensor-superoptimization-research-20261029-1558-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-1558-scheduled-chat-00/r01"
     }
   ]
 }
