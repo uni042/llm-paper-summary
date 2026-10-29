@@ -35,10 +35,15 @@
   "selection_reason": "RAM-Netは線形注意の共有再帰状態で生じるトークン干渉を抑えるため、Address Decoderで少数の独立スロットへ疎に読み書きする。固定サイズ状態と少数スロットアクセスを保ち、長距離検索とPPLを評価する代替系列演算として、推論状態・メモリアクセス効率の対象に該当する。",
   "semantic_scholar_id": "1544bfe5dc5100699640b1090d56f473388fbb5e",
   "source_url": "https://arxiv.org/abs/2602.11958",
-  "status": "ready",
+  "status": "superseded",
   "title": "RAM-Net: Linear-Time Sequence Modeling with Sparsely Addressable State",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T07:10:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11958-ram-net-linear-time-sequence-modeling-with-sparsely-addressable-state.md",
+  "represented_canonical_id": "arXiv:2602.11958",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

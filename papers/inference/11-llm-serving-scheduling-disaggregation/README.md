@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（511本）
+## 自動生成の論文一覧（512本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -499,10 +499,6 @@
 - **2025-11 · [Serving Heterogeneous LoRA Adapters in Distributed LLM Inference Systems](2025-2511.22880-loraserve-heterogeneous-adapter-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   LoRAのランクと需要を同時に見て動的配置・確率ルーティングし、不在アダプタはGPUDirect RDMAで遠隔取得して分散アダプタプールを構成する。
-
-- **2025-11 · [Optimal Self-Consistency for Efficient Reasoning with Large Language Models](2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  しかし、全問題へ同じ回数だけ生成を繰り返すと、少数の試行で答えが安定する簡単な問題にも計算を使い続け、回答が割れる難しい問題に十分な予算を残せない。固定回数の生成、回答の信頼度に応じて停止する方式、問題間で生成回数を再配分する方式の違いを整理し、予算が少ない段階で有効な方法と、予算が大きい段階で有効な方法を組み合わせるBlend-ASCを提案する。
 
 - **2025-11 · [FREESH: Fair, Resource- and Energy-Efficient Scheduling for LLM Serving on Heterogeneous GPUs](2025-2511.00807-freesh-fair-resource-energy-efficient-scheduling.md)**  
   実装：[✓](https://github.com/AndrewFangZequan/LLM_Serving_FREESH) ・ リポジトリ内被引用：1  
@@ -1106,6 +1102,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   エージェント処理を初回・再開プリフィルと短いデコードへ分け、TPOTフィードバックとGPU内SM予約で民生GPU上の相互干渉を抑える。
 
+- **2026-02 · [RAM-Net: Linear-Time Sequence Modeling with Sparsely Addressable State](2026-2602.11958-ram-net-linear-time-sequence-modeling-with-sparsely-addressable-state.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  全注意型Transformerは、過去トークンを独立したkey/valueとして保存し、現在のqueryに適合する位置へ集中してアクセスできる。一方でKVキャッシュは系列長に比例して増え、長文推論のメモリ容量と帯域を圧迫する。アドレスが重ならないトークン同士は同じ状態を汚さない。1.3Bでも実文書検索の全注意との差は残る。< の表1～3を参照した。
+
 - **2026-02 · [QuRL: Efficient Reinforcement Learning with Quantized Rollout](2026-2602.13953-qurl-efficient-reinforcement-learning-with-quantized-rollout.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長い思考系列では前者が学習時間の最大約70%を占める。生成用モデルだけを8ビットに量子化すれば行列積を高速化できるが、生成したトークンの確率分布が学習更新に使う高精度モデルと一致しなくなり、単純な置換は学習を不安定にする。INT8とFP8で検証し、量子化推論の要求処理量はモデル・GPUに応じて改善する。
@@ -1173,6 +1173,10 @@
 - **2025-11 · [Optimizing Long-context LLM Serving via Fine-grained Sequence Parallelism](2025-2511.06247-optimizing-long-context-llm-serving-via-fine-grained-sequence-parallelis.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   系列並列化（sequence parallelism、SP）は一つの入力系列を複数GPUへ分けて注意計算を実行する技術だが、要求全体に固定のSP数を割り当てると、先に空いたGPUだけでは開始できず、同期相手を待つ時間が生じる。
+
+- **2025-11 · [Optimal Self-Consistency for Efficient Reasoning with Large Language Models](2025-2511.12309-optimal-self-consistency-for-efficient-reasoning-with-large-language-mod.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし、全問題へ同じ回数だけ生成を繰り返すと、少数の試行で答えが安定する簡単な問題にも計算を使い続け、回答が割れる難しい問題に十分な予算を残せない。固定回数の生成、回答の信頼度に応じて停止する方式、問題間で生成回数を再配分する方式の違いを整理し、予算が少ない段階で有効な方法と、予算が大きい段階で有効な方法を組み合わせるBlend-ASCを提案する。
 
 - **2025-11 · [MoSKA: Mixture of Shared KV Attention for Efficient Long-Sequence LLM Inference](2025-2511.06010-moska-mixture-of-shared-kv-attention-for-efficient-long-sequence-llm-inf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

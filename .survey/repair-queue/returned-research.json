@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-29T06:42:49+00:00",
+  "generated_at": "2026-10-29T07:10:24+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 74,
+  "count": 76,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1954,6 +1954,63 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-50081473d982--libfile_4b5ed874d4ac81919b5ec7e3ecd02469--2026-2609.26368-hysparse2-two-level-kv-sharing-research-quality-repair-20261029-0950-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-50081473d982--libfile_4b5ed874d4ac81919b5ec7e3ecd02469--2026-2609.26368-hysparse2-two-level-kv-sharing-research-quality-repair-20261029-0950-sche.json",
       "worker_run_key": "20261029-0950-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2610.01950",
+      "title": "MoE-CORE: Coordinated Expert Offloading and Residency for Memory-Constrained MoE Inference",
+      "source_url": "https://arxiv.org/pdf/2610.01950v1",
+      "returned_at": "2026-10-29T07:06:05+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 461 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6174,
+        "body_paragraphs": 30,
+        "method_chars": 2193,
+        "method_paragraphs": 12,
+        "evaluation_chars": 461,
+        "limitation_chars": 573,
+        "insufficiency_flags": [
+          "評価説明量 461 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_83edae65276881918e066a6728d9d20f--2026-2610.01950-moe-core-coordinated-expert-residency-research-20261029-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_83edae65276881918e066a6728d9d20f--2026-2610.01950-moe-core-coordinated-expert-residency-research-20261029-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261029-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.34555",
+      "title": "PulseInfer: I/O-Centric Sparse KV Cache Offloading for Efficient Long-Context LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2609.34555",
+      "returned_at": "2026-10-29T07:08:26+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 147 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 8176,
+        "body_paragraphs": 40,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 147,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 147 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_9e62036610b481919aadb0f7eff45654--2026-2609.34555-pulseinfer-io-centric-kv-offload-research-20261029-1503-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_9e62036610b481919aadb0f7eff45654--2026-2609.34555-pulseinfer-io-centric-kv-offload-research-20261029-1503-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261029-1503-scheduled-chat-00/r01"
     }
   ]
 }

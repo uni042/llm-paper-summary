@@ -35,10 +35,15 @@
   "selection_reason": "MoE-nDは層ごとにKVのトークン削除率とK/Vの量子化ビット数を異なる組合せで選び、オフライン校正した品質損失推定と貪欲ソルバで全体メモリ予算を満たす。推論時は単一の注意パッチに層別設定を適用するため、長文脈LLMのKV圧縮と品質維持に直接寄与しaccept。",
   "semantic_scholar_id": "8cd89d9c2ae618bcc889810e503fe52d4fd99d24",
   "source_url": "https://arxiv.org/abs/2604.17695",
-  "status": "ready",
+  "status": "superseded",
   "title": "MoE-nD: Per-Layer Mixture-of-Experts Routing for Multi-Axis KV Cache Compression",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-29T07:10:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2604.17695-moe-nd-per-layer-mixture-of-experts-routing-for-multi-axis-kv-cache-comp.md",
+  "represented_canonical_id": "arXiv:2604.17695",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
