@@ -35,10 +35,15 @@
   "selection_reason": "MadaKVはマルチモーダルLLMの注意頭ごとに画像・テキスト等のモダリティ選好が異なることを利用し、モダリティ適応と階層圧縮補償でKV保持位置を決める。MileBenchなどで長文脈品質と復号遅延を検証するためaccept。",
   "semantic_scholar_id": "9397ae3adf9970af9ff0bdcacb9f86aad417c264",
   "source_url": "https://arxiv.org/abs/2506.15724",
-  "status": "ready",
+  "status": "superseded",
   "title": "MadaKV: Adaptive Modality-Perception KV Cache Eviction for Efficient Multimodal Long-Context Inference",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-29T11:48:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2506.15724-madakv-adaptive-modality-perception-kv-cache-eviction-for-efficient-mult.md",
+  "represented_canonical_id": "arXiv:2506.15724",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
