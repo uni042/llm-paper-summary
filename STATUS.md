@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-29 20:48:25 JST**
+> 自動生成: **2026-10-29 20:57:53 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **706** |
 | 未claim Research job | **706** |
-| 直近24hのResearch処理完了 | **128** |
-| 最終Research処理完了 | **10-29 19:33:00 JST** |
+| 直近24hのResearch処理完了 | **129** |
+| 最終Research処理完了 | **10-29 20:30:00 JST** |
 | 最終Discovery探索完了 | **10-29 19:00:00 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-29 11:57:29 JST（8時間50分前）** |
+| 最終maintenance完了 | **10-29 11:57:29 JST（9時間0分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -139,13 +139,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 直近6hのResearch完了 | **27** |
 | 直近6hのDiscovery run | **4** |
 | 直近6hのDiscovery本文確認・分類 | **4** |
-| 最終Research完了 | **10-29 19:33:00 JST** |
+| 最終Research完了 | **10-29 20:30:00 JST** |
 | 最終Discovery完了 | **10-29 19:00:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-29 19:33:00 JST** / worker — / run 20261029-1930-scheduled-chat-30/r01 / 成果 **2件**
-  - evidence: .survey/import-inbox/results/research/libfile_77f080e52efc8191b8101464088d5834--2025-2512.17917-kvreviver-reversible-sketch-kv-research-20261029-1930-scheduled-chat-30-r01.json
+- Research: **10-29 20:30:00 JST** / worker — / run 20261029-2030-scheduled-chat-30/r01 / 成果 **2件**
+  - evidence: .survey/import-inbox/results/research/libfile_09a7c2e35ca48191acf003b50880bd48--2025-2503.18292-jenga-heterogeneous-kv-memory-research-20261029-2030-scheduled-chat-30-r01.json
 - Discovery: **10-29 19:00:00 JST** / worker scheduled-chat-00 / run 20261029-1900-scheduled-chat-00/r01/prescreen-rank45
   - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/results/discovery/libfile_10d3bcfbacf48191836dab2d48b393bd--discovery-20261029-1900-scheduled-chat-00-research-relevance-r01-045.json
