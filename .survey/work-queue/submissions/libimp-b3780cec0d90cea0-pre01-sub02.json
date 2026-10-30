@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HyCo: Hybrid Drafting for Cost-Efficient Mobile-Cloud Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.21436",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Device-cloud speculative decoding reduces server computation, but growing a deep draft tree with a small language model (SLM) requires repeated passes on a mobile neural processing unit (NPU). We present HyCo, which runs the server model's native multi-token prediction (MTP) head on the device to build a deep chain and uses one SLM pass to add alternative branches. The server returns the hidden state, input embedding, and key-value entries needed by the head instead of executing its sequential steps. Quantization, a restricted vocabulary, and a 1K-token window fit both drafters to the NPU. An {\\epsilon}-threshold rule additionally relaxes exact preservation of the verifier's sampling distribution. In single-client runs with a Galaxy S26 Ultra over LTE/5G, HyCo reduces server GPU time per output token relative to server-side MTP self-speculation by 38.6% on Spec-Bench and 29.2% on 32K-token summarization. With the same acceptance rule, three runs of each system on Spec-Bench show 9.0 percentage points more saving and 1.9x delivery speed than an SLM-only drafter. HyCo differs from Cloud+MTP by +0.2 judge-score points (paired 95% CI: -0.9 to +1.3); exploratory translation favors SpecEdge-{\\epsilon}. Without relaxation, HyCo exact saves 27.7% and 11.9% on the two datasets.",
+      "identifiers": [
+        "SemanticScholar:9cc5ee0f30120c59e78e780e8dccc020cd0c2044"
+      ],
+      "semantic_scholar_id": "9cc5ee0f30120c59e78e780e8dccc020cd0c2044",
+      "canonical_id": "arXiv:2610.21436",
+      "arxiv_id": "2610.21436",
+      "authors": [
+        "Hanbin Bae",
+        "Heejin Choi",
+        "Joohyung Lee",
+        "Byoung Jin Choi",
+        "Sangjun Park",
+        "Hoon-Young Cho"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 15,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Galaxy S26 UltraのNPUでサーバー側MTP headと小規模言語モデルを組み合わせてドラフト木を作るモバイル・クラウド投機的復号。Spec-BenchでサーバーGPU時間/出力tokenを38.6%削減、32K要約で29.2%削減。ε閾値による近似受理は厳密なtarget分布保存ではなく、厳密版の節約率27.7%/11.9%と区別する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Quantitative Analysis of Performance Drop in DeepSeek Model Quantization",
+      "source_url": "https://arxiv.org/abs/2505.02390",
+      "year": 2025,
+      "published": "2025-05-05",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, there is a high demand for deploying DeepSeek-R1 and V3 locally, possibly because the official service often suffers from being busy and some organizations have data privacy concerns. While single-machine deployment offers infrastructure simplicity, the models' 671B FP8 parameter configuration exceeds the practical memory limits of a standard 8-GPU machine. Quantization is a widely used technique that helps reduce model memory consumption. However, it is unclear what the performance of DeepSeek-R1 and V3 will be after being quantized. This technical report presents the first quantitative evaluation of multi-bitwidth quantization across the complete DeepSeek model spectrum. Key findings reveal that 4-bit quantization maintains little performance degradation versus FP8 while enabling single-machine deployment on standard NVIDIA GPU devices. We further propose DQ3_K_M, a dynamic 3-bit quantization method that significantly outperforms traditional Q3_K_M variant on various benchmarks, which is also comparable with 4-bit quantization (Q4_K_M) approach in most tasks. Moreover, DQ3_K_M supports single-machine deployment configurations for both NVIDIA H100/A100 and Huawei 910B. Our implementation of DQ3\\_K\\_M is released at https://github.com/UnicomAI/DeepSeek-Eval, containing optimized 3-bit quantized variants of both DeepSeek-R1 and DeepSeek-V3.",
+      "identifiers": [
+        "SemanticScholar:60b2f37a51dd6ff9dd63e56772215939fbc24a69"
+      ],
+      "semantic_scholar_id": "60b2f37a51dd6ff9dd63e56772215939fbc24a69",
+      "canonical_id": "arXiv:2505.02390",
+      "arxiv_id": "2505.02390",
+      "doi": "10.48550/arXiv.2505.02390",
+      "authors": [
+        "Enbo Zhao",
+        "Yi Shen",
+        "Shu-Ming Shi",
+        "Jie-Fu Huang",
+        "Zhi-Hao Chen",
+        "Ning Wang",
+        "Siqi Xiao",
+        "Jian Zhang",
+        "Kai Wang",
+        "Shi-Guo Lian"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 543,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DeepSeek-R1/V3の複数bit幅で量子化後の能力低下を測定し、FP8に対して4bitの劣化が小さい条件を報告。さらに動的3bitのDQ3KMを提案し、従来Q3KMより高品質で多くの課題ではQ4KMに近いとする。H100/A100/昇騰910B上の単一マシン配置可能性を検討する推論向け圧縮評価。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "PrivMLLM: Efficient Three-Party Multimodal Large Language Model Secure Inference Supported Prompt Privacy",
+      "source_url": "https://doi.org/10.1109/ICNP65844.2025.11192338",
+      "year": 2025,
+      "published": "2025-09-22",
+      "venue": "IEEE International Conference on Network Protocols",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) represent the next frontier in artificial intelligence (AI), capable of processing and integrating diverse data types (text, images, audio and video) for richer understanding and generation. However, their potential is limited by privacy constraints: sensitive data resides with different owners who must keep it local, while MLLM parameters themselves require protection. We address this challenge by pioneering complete end-to-end privacy protection that simultaneously secures prompts, multimedia data, and MLLM parameters.In this work, we present PrivMLLM, the first general-purpose secure three-party (3PC) inference framework for MLLMs that serves two data owners while protecting both model parameters and inputs. Our approach is based on three key insights: (1) domain knowledge-aware optimization of fixed-point arithmetic for global performance gains, (2) hybrid secret-sharing protocols that reduce communication and rounds for linear/non-linear operations, and (3) constant-round function secret sharing (FSS)-based protocols for private embedding and maximum.We formally prove PrivMLLM’s security under the rigorous Universal Composability (UC) framework and demonstrate the first end-to-end secure inference system for MLLMs. Experimental results show that our solution enables secure inference for Llama3.2-11B-vision in under 0:5-minute per token, achieving 16 and 8 speedups compared to our implementations built with the SOTA 2PC (CrypTen+) and 3PC (ABY3+) privacypreserving machine learning (PPML) frameworks respectively. Moreover, we benchmark the submodules ViT and LLM against the SOTA schemes, SHAFT (NDSS 2025) and SIGMA (PETS 2024), achieving 1:3~3× performance gains.",
+      "identifiers": [
+        "SemanticScholar:6c198c62efb2c2eed2bafac1dc4d428722f461de"
+      ],
+      "semantic_scholar_id": "6c198c62efb2c2eed2bafac1dc4d428722f461de",
+      "doi": "10.1109/ICNP65844.2025.11192338",
+      "canonical_id": "DOI:10.1109/ICNP65844.2025.11192338",
+      "authors": [
+        "Yu-Jie Xue",
+        "Lin Liu",
+        "Yu-Chuan Luo",
+        "Bing Sun",
+        "Shao-Jing Fu"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 403,
+        "matched_prestigious_venue": null
+      },
+      "reason": "入力を持つ二者とモデル提供者を含む三者秘密計算により、プロンプト・画像等の入力とモデル重みを同時に保護するMLLM推論方式。固定小数点演算最適化、線形/非線形の混合秘密共有、定数ラウンドのFSS埋め込み処理を導入し、Llama3.2-11B-visionで既存2PC/3PC実装に対する約16倍/8倍の高速化を報告。秘匿推論の通信・実行コスト削減が主貢献。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "LSH Tells You What To Discard: An Adaptive Locality-Sensitive Strategy for KV Cache Compression",
+      "source_url": "https://www.semanticscholar.org/paper/13f2881902141fbd5b5a1babeeaa831c53c79a1e",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:13f2881902141fbd5b5a1babeeaa831c53c79a1e"
+      ],
+      "semantic_scholar_id": "13f2881902141fbd5b5a1babeeaa831c53c79a1e",
+      "canonical_id": "SemanticScholar:13f2881902141fbd5b5a1babeeaa831c53c79a1e",
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LSH-Eはqueryと保存keyのガウス射影を二値化してHamming距離を比較し、attentionを計算する前に低類似度のKVを特定して置換する。軽量なGPU上の二値構造で復号ごとに更新し、論文は推論タスクの性能を維持しつつKVキャッシュ30〜70%圧縮を報告。LLM推論メモリ削減への直接的な貢献。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b3780cec0d90",
+    "round": "libimp-b3780cec0d90cea0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b3780cec0d90cea0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b3780cec0d90cea0-pre01.json",
+    "receipt": "sha256:04a7e4827788cc3a986f5d6dedbdf56edd0c65fbab96aa64a9633dd79cda9312"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b3780cec0d90",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making",
+      "source_url": "https://arxiv.org/abs/2607.14277",
+      "year": 2026,
+      "published": "2026-07-15",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly deployed as agents, but reliable agentic behavior requires more than next-token prediction. At inference time, it is preferred that an agent can decide whether to proceed with its current reasoning, defer to a stronger model, request additional information, invoke external tools, or abstain under the given setup. Existing approaches address these decisions through prompt-level routing, external orchestration, or task-specific fine-tuning, which primarily rely on input-side signals, and are often costly and difficult to maintain as model backbones evolve. We ask whether such control decisions can be inferred directly from a model's latent generation process. We introduce Multi-Head Latent Control, a lightweight layer that reads hidden-state trajectories from a frozen LLM or VLM to produce deployment-time control signals. A Capability Head predicts whether the current model can solve the instance or should defer to a stronger collaborator, while a Resolution Head predicts appropriate resolution decision Clarification, Tool Use, Abstention, or Direct Answering. Both heads are trained only on latent traces from the same frozen LLM backbone, enabling post hoc adaptation without modifying the model. Across language and vision-language settings, Multi-Head Latent Control consistently improves the quality-cost tradeoff of multi-model systems, enabling early handoff from partial generations and more accurate intervention decisions. In routed execution (small + large model), it reduces large-model usage by up to 90.7 percent on AndroidWorld and 27-53 percent on average across benchmarks, while retaining most of large-model performance. Additionally, the learned control signals improve tool-use decision quality, yielding up to +158 percent relative score gain and 65.5 percent fewer missed-required tool calls.",
+      "identifiers": [
+        "SemanticScholar:f645611738bf01eafbd5a4820d74af206985eaf2"
+      ],
+      "semantic_scholar_id": "f645611738bf01eafbd5a4820d74af206985eaf2",
+      "canonical_id": "arXiv:2607.14277",
+      "arxiv_id": "2607.14277",
+      "doi": "10.48550/arXiv.2607.14277",
+      "authors": [
+        "Amirhosein Ghasemabadi",
+        "Rui-Chen Chen",
+        "Bahador Rashidi",
+        "Di Niu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 107,
+        "matched_prestigious_venue": null
+      },
+      "reason": "凍結LLM/VLMの生成途中のhidden-state軌跡を軽量なCapability/Resolution headへ入力し、強いモデルへの委譲、ツール利用、回答・棄権等を早期決定する。小型/大型モデルのルーティングでAndroidWorldの大型モデル使用を最大90.7%削減し、他課題でも27〜53%削減を報告。推論時のモデル選択と実行費用を直接最適化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Continuous Discovery of Vulnerabilities in LLM Serving Systems with Fuzzing",
+      "source_url": "https://arxiv.org/abs/2605.11202",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference and serving systems have become security-critical infrastructure; however, many of their most concerning failures arise from the serving layer rather than from model behavior alone. Modern inference engines combine KV cache, batching, prefix sharing, speculative decoding, adapters, and multi-tenant scheduling, creating shared-state behavior that only emerges under realistic concurrent workloads and is missed by standard model, safety, and API tests. We present GRIEF, a greybox fuzzer for LLM inference engines that treats timed multi-request traces as first-class inputs, uses lightweight oracles to detect crashes, hangs, performance pathologies, and silent output corruption, and applies controlled replay with log-probability checks to confirm reproducible serving-layer failures. Across early campaigns on vLLM and SGLang, GRIEF discovers 15 vulnerabilities, 10 confirmed by engine developers, including 2 CVEs, spanning KV-cache isolation failures, cross-request performance interference, and crash or liveness bugs. These results show that concurrency, caching, and state reuse can induce silent cross-request contamination, noisy-neighbor denial of service, and delayed crashes without malformed inputs or explicit server errors, making concurrent serving behavior a first-class security and reliability boundary for LLM infrastructure.",
+      "identifiers": [
+        "SemanticScholar:bcec5028c8c88deddb7f44fef7a8ba7949740cec"
+      ],
+      "semantic_scholar_id": "bcec5028c8c88deddb7f44fef7a8ba7949740cec",
+      "canonical_id": "arXiv:2605.11202",
+      "arxiv_id": "2605.11202",
+      "doi": "10.48550/arXiv.2605.11202",
+      "authors": [
+        "Yun-Ze Zhao",
+        "Yi-Bo Zhao",
+        "Yuchen Zhang",
+        "Zaoxing Liu",
+        "Michelle L. Mazurek"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GRIEFはKV共有・バッチ・投機的復号・adapterを含むLLM推論エンジンへ時系列の並行リクエストを投入するgreybox fuzzer。crash・hang・性能異常・silent output corruptionを検出し、vLLM/SGLangで15件の脆弱性、うち10件開発者確認・2件CVEを報告。推論サービングの状態共有・隔離・信頼性の直接的システム研究。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "An Efficient Private GPT Never Autoregressively Decodes",
+      "source_url": "https://arxiv.org/abs/2505.15252",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The wide deployment of the generative pre-trained transformer (GPT) has raised privacy concerns for both clients and servers. While cryptographic primitives can be employed for secure GPT inference to protect the privacy of both parties, they introduce considerable performance overhead.To accelerate secure inference, this study proposes a public decoding and secure verification approach that utilizes public GPT models, motivated by the observation that securely decoding one and multiple tokens takes a similar latency. The client uses the public model to generate a set of tokens, which are then securely verified by the private model for acceptance. The efficiency of our approach depends on the acceptance ratio of tokens proposed by the public model, which we improve from two aspects: (1) a private sampling protocol optimized for cryptographic primitives and (2) model alignment using knowledge distillation. Our approach improves the efficiency of secure decoding while maintaining the same level of privacy and generation quality as standard secure decoding. Experiments demonstrate a $2.1\\times \\sim 6.0\\times$ speedup compared to standard decoding across three pairs of public-private models and different network conditions.",
+      "identifiers": [
+        "SemanticScholar:7b08bc3b8616aca3d50521785c893ffbcea629df"
+      ],
+      "semantic_scholar_id": "7b08bc3b8616aca3d50521785c893ffbcea629df",
+      "canonical_id": "arXiv:2505.15252",
+      "arxiv_id": "2505.15252",
+      "doi": "10.48550/arXiv.2505.15252",
+      "authors": [
+        "Zhengyi Li",
+        "Yue Guan",
+        "Kang Yang",
+        "Yu Feng",
+        "Ning Liu",
+        "Yu Yu",
+        "Jingwen Leng",
+        "Min-Yi Guo"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 527,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "秘匿GPTの逐次復号コストを避けるため公開GPTで候補token列を生成し、暗号プロトコル上の秘密モデルでまとめて受理検証する方式。暗号向け私的サンプリングと蒸留による公開/秘密モデル整合を使い、3組のモデルとネットワーク条件で通常の安全復号比2.1〜6.0倍高速化を報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Rethinking LLMOps for Fraud and AML: Building a Compliance-Grade LLM Serving Stack",
+      "source_url": "https://arxiv.org/abs/2605.11232",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fraud detection and anti-money-laundering (AML) compliance are high-value domains for large language models (LLMs), but their serving requirements differ sharply from generic chat workloads. Compliance prompts are often prefix-heavy, schema-constrained, and evidence-rich, combining reusable policy instructions, risk taxonomies, transaction or document context, and short structured outputs such as JSON labels or risk factors. These properties make prefix reuse, KV-cache efficiency, runtime tuning, model orchestration, and output validation first-order systems concerns. This paper introduces a workload-aware LLMOps stack for fraud and AML workloads using self-hosted open-weight models such as Meta Llama and Alibaba Qwen. The stack combines vLLM-style runtime tuning, PagedAttention, Automatic Prefix Caching, multi-adapter serving, adapter and prompt-length-aware batching, sleep/wake lifecycle management, speculative decoding, and optional prefill/decode disaggregation. To avoid exposing institution-specific data, the reproducibility track converts public synthetic AML datasets, including IBM AML and SAML-D, into prefix-heavy compliance prompts with reusable policy text, transaction evidence, typology definitions, and schema-constrained outputs. We also incorporate an LLM-as-judge quality gate using deterministic compliance checks, reference metrics, expert-adjudicated calibration data where available, and multi-judge rubric scoring. Across public-synthetic AML workloads and controlled serving benchmarks, workload-aware tuning improved throughput from 612-650 to 3,600 requests/hour, reduced P99 latency from 31-38 seconds to 6.4-8.7 seconds, and increased GPU utilization from 12% to 78%. These results show that regulated LLM performance is a workload-design, serving-optimization, and quality-gating problem, not only a model-selection problem.",
+      "identifiers": [
+        "SemanticScholar:6081c5e64f149a948114ade749783744866acbf7"
+      ],
+      "semantic_scholar_id": "6081c5e64f149a948114ade749783744866acbf7",
+      "canonical_id": "arXiv:2605.11232",
+      "arxiv_id": "2605.11232",
+      "doi": "10.48550/arXiv.2605.11232",
+      "authors": [
+        "P. Naik",
+        "N. Dintakurthi",
+        "Yue Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AML業務の共通prefixと短いJSON出力を活用し、PagedAttention、prefix cache、adapter/prompt長に応じたbatching、speculative decoding、prefill/decode分離等を組み合わせる業務特化サービングスタック。公開合成AML負荷では処理量612〜650から3600 req/h、P99遅延31〜38秒から6.4〜8.7秒を報告。汎用新アルゴリズムというより既存機構の統合・負荷適応だが推論サービングの実測最適化に該当。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Enabling Efﬁcient GPU Communication over Multiple NICs with FuseLink",
+      "source_url": "https://www.semanticscholar.org/paper/b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033"
+      ],
+      "semantic_scholar_id": "b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "canonical_id": "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "authors": [
+        "Zheng-Hang Ren",
+        "Yuxuan Li",
+        "Zi-Long Wang",
+        "Xinyang Huang",
+        "Wen-Xue Li",
+        "Kai-Qiang Xu",
+        "Xu-Dong Liao",
+        "Yijun Sun",
+        "Bowen Liu",
+        "Han Tian",
+        "Junxue Zhang",
+        "Mingfei Wang",
+        "Zhi-Zhen Zhong",
+        "Gu-Yue Liu",
+        "Ying Zhang",
+        "Kai Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FuseLinkはGPUとNICの静的結合によるホットスポットを、サーバー内高速リンク経由でGPUが別NICへトラフィックを中継する仕組みで回避し、NCCLへ透過統合する。USENIX OSDI 2025の一次要旨はGPU間最大212GB/s、LLMサービングの初回token遅延1.04〜2.73倍改善を報告。分散LLM推論の通信効率に直接該当。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3a82d37f4d53",
+    "round": "libimp-3a82d37f4d532d7f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 5,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3a82d37f4d532d7f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3a82d37f4d532d7f-pre01.json",
+    "receipt": "sha256:9b4b93310935f192b883155b9eb42eb3854d9a38d5094be74b1a8642ab12113d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3a82d37f4d53",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+      "source_url": "https://arxiv.org/abs/2604.04930",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to overthinking. A key challenge is determining when the model should stop reasoning and produce the final answer. In this work, we study the confidence of intermediate answers during reasoning and observe two characteristic behaviors: correct reasoning trajectories often reach high-confidence answers early, while incorrect rollouts tend to produce long, unproductive reasoning traces and exhibit less reliable confidence dynamics. Motivated by these observations, we propose CoDE-Stop (Confidence Dynamics Early Stop), an early stopping method that leverages the dynamics of intermediate answer confidence to decide when to terminate reasoning, requiring no additional training and easily integrating into existing models. We evaluate CoDE-Stop on diverse reasoning and science benchmarks across multiple models. Compared to prior early stopping methods, it achieves a more favorable accuracy-compute tradeoff and reduces total token usage by 25-50% compared to standard full-length reasoning. In addition, we provide analyses of confidence dynamics during reasoning, offering insights into how confidence changes in both correct and incorrect trajectories.",
+      "identifiers": [
+        "SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed"
+      ],
+      "semantic_scholar_id": "7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+      "canonical_id": "arXiv:2604.04930",
+      "arxiv_id": "2604.04930",
+      "doi": "10.48550/arXiv.2604.04930",
+      "authors": [
+        "Parsa Hosseini",
+        "Sumit Nawathe",
+        "Mahdi Salmani",
+        "Meisam Razaviyayn",
+        "S. Feizi"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は推論途中の暫定回答の確信度推移を観測し、正答に達したと判断した時点で長いCoT生成を打ち切る訓練不要のCoDE-Stopを提案。複数推論モデル・科学ベンチマークで従来早期停止法より良い精度計算量の交換条件とトークン25〜50%削減を報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Looped Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.26106",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion models (MDMs) have emerged as a promising alternative to autoregressive models for language modeling, yet the effective design of transformer architectures for MDMs remains underexplored. In this paper, we show that selectively looping the early-middle transformer layers significantly improves both training efficiency and model performance in MDMs. We call this approach LoopMDM(Looped Masked Diffusion Model), which brings two key benefits: looping layers at training-time yields a depth-scaling effect without adding parameters, while varying the number of loops at inference-time enables flexible compute scaling. Despite the simplicity, the results are striking: across multiple pre-training corpora, LoopMDM matches the performance of same-size MDMs with up to 3.3 fewer training FLOPs, while its final performance outperforms them on various reasoning benchmarks, including up to 8.5 points on GSM8K. It even surpasses deeper non-looped MDMs trained with comparable per-step compute, indicating that selective looping is more effective than naive depth scaling. Furthermore, LoopMDM can scale inference-time compute by increasing the number of loops. Adaptively adjusting the number of loops throughout the sampling process further yields additional gains in compute efficiency while maintaining performance. Lastly, with attention analysis, we provide evidence that looping is effective in MDMs by promoting interactions among masked positions. Our code and weights will be publicly released.",
+      "identifiers": [
+        "SemanticScholar:75d437ccd0a48a607a2c311fa1c97f235a6ca352"
+      ],
+      "semantic_scholar_id": "75d437ccd0a48a607a2c311fa1c97f235a6ca352",
+      "canonical_id": "arXiv:2605.26106",
+      "arxiv_id": "2605.26106",
+      "doi": "10.48550/arXiv.2605.26106",
+      "authors": [
+        "Sang-Hun Lee",
+        "Chunsan Hong",
+        "Seungryong Kim",
+        "Jonghyun Lee",
+        "Jongho Park",
+        "Dongmin Park"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は拡散言語モデルのTransformer前半〜中盤層を選択的に反復するLoopMDMを提案し、学習時はパラメータ追加なしに有効深度を増やし、推論時は反復回数を変更して計算量を可変にする。拡散復号ステップ中の適応ループ回数による推論費用制御を直接扱う。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Message Passing Enables Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.01077",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While inference-time scaling has improved the reasoning abilities of large language models (LLMs), the need to generate long chains-of-thought (CoTs) is a computational bottleneck. Thus, in contrast to sequential scaling methods like CoT, recent parallel scaling techniques instead use fork and join (FJ) primitives to divide work across multiple LLM threads. However, in the fork-join paradigm, threads are typically transient and do not communicate pointwise with one another which limits scalability. To tackle this, we introduce Message Passing Language Models (MPLMs), a framework for LLM reasoning in which threads communicate directly via lightweight send and receive primitives. MPLMs enable efficient scaling through two key mechanisms: (1) reduced communication costs, achieved by avoiding redundant context sharing, and (2) preemption, which allows threads to terminate early based on partial information from their peers. We demonstrate the promise of MPLMs on 3 classes of tasks. First, on Sudoku puzzles, we show that MPLMs require an asymptotically smaller context than both serial CoT and parallel FJ. We then fine-tune a single model to solve 25 x 25 puzzles that remain challenging for standard CoT and FJ approaches, as well as frontier reasoning models without tools. Second, on 3-SAT puzzles, the capability of preemption allows termination of unpromising branches, which results in improved efficiency. Finally, we show that appropriately prompted large pre-trained models follow the MPLM protocol, achieving competitive results on long-context question answering relative to popular fork-join approaches.",
+      "identifiers": [
+        "SemanticScholar:4ce266b37605f6aceb523d707504964e6a6e53f6"
+      ],
+      "semantic_scholar_id": "4ce266b37605f6aceb523d707504964e6a6e53f6",
+      "canonical_id": "arXiv:2607.01077",
+      "arxiv_id": "2607.01077",
+      "doi": "10.48550/arXiv.2607.01077",
+      "authors": [
+        "Xue-Chen Liu",
+        "Daman Arora",
+        "Gokul Swamy",
+        "Andrea Zanette"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は並列LLM推論スレッドを単発fork/joinで終わらせず、軽量send/receiveによる逐次メッセージ交換と早期中断を可能にするMessage Passing Language Modelsを提案。重複文脈転送を抑え、数独・3-SAT等で並列探索の計算効率を改善する推論実行モデル。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "LatentPress: Context Compression Beyond Text and Vision",
+      "source_url": "https://arxiv.org/abs/2609.01507",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compressed context is usually carried as human-readable text or as rendered images that must be decoded, even when its consumer is a language model. We introduce LatentPress, which writes conversational histories and long documents into a third representation: continuous memory tokens that a frozen decoder reads directly through its input-embedding interface, with no text reconstruction at inference. A small reader-matched writer compresses $4$-$16\\times$ while training only an adapter (4.2M-26.2M parameters, $\\sim\\!0.1\\%$ of the decoder). On LongMemEval, LatentPress reaches $0.504$ accuracy at $7.70\\times$ compression versus $0.490$ for uncompressed evidence, outperforming text summaries (0.184) and OCR-based compression (0.426 to 0.312). On LongBench-QA, in-domain writers match or exceed raw-context reading at $4$-$8\\times$ compression, while $16\\times$ trails raw. Writing takes 43ms per conversation, roughly an order of magnitude faster than text summarization or OCR reconstruction, and reading is $5$-$9\\times$ faster than raw context or cached OCR. We validate the interface under two transfer settings, zero-shot from UltraChat to LongMemEval memory QA and from LongMemEval-derived QA to unseen LongBench document domains, establishing direct soft tokens as a practical machine-facing context interface beyond text and vision. The implementation of the experiments could be found at: https://github.com/HJSang/LatentPress.",
+      "identifiers": [
+        "SemanticScholar:2bff9052065151aeb660a90093636183c62b5d75"
+      ],
+      "semantic_scholar_id": "2bff9052065151aeb660a90093636183c62b5d75",
+      "canonical_id": "arXiv:2609.01507",
+      "arxiv_id": "2609.01507",
+      "authors": [
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "He-Jian Sang",
+        "Xin-Chen Du",
+        "Bai-Yang Dai",
+        "Sen Na"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は会話履歴を文字列や画像へ復元せず、凍結デコーダの入力埋込みへ渡す連続メモリトークンへ圧縮するLatentPressを提案。4〜16倍の文脈圧縮、書込み43ms、読出しが生文脈・OCRキャッシュ比5〜9倍高速と報告し、LLM文脈処理の直接的なメモリ・遅延削減。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Prolonged Reasoning Is Not All You Need: Certainty-Based Adaptive Routing for Efficient LLM/MLLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2505.15154",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 43,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in reasoning have significantly enhanced the capabilities of Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) across diverse tasks. However, excessive reliance on chain-of-thought (CoT) reasoning can impair model performance and brings unnecessarily lengthened outputs, reducing efficiency. Our work reveals that prolonged reasoning does not universally improve accuracy and even degrade performance on simpler tasks. To address this, we propose Certainty-based Adaptive Reasoning (CAR), a novel framework that dynamically switches between short answers and long-form reasoning based on the model perplexity. CAR first generates a short answer and evaluates its perplexity, triggering reasoning only when the model exhibits low confidence (i.e., high perplexity). Experiments across diverse multimodal VQA/KIE benchmarks and text reasoning datasets show that CAR outperforms both short-answer and long-form reasoning approaches, striking an optimal balance between accuracy and efficiency.",
+      "identifiers": [
+        "SemanticScholar:2b8fababedb34cded34f47722b13cf193cdcc92f"
+      ],
+      "semantic_scholar_id": "2b8fababedb34cded34f47722b13cf193cdcc92f",
+      "canonical_id": "arXiv:2505.15154",
+      "arxiv_id": "2505.15154",
+      "doi": "10.48550/arXiv.2505.15154",
+      "authors": [
+        "Jinghui Lu",
+        "Hai-Yang Yu",
+        "Siliang Xu",
+        "Shiwei Ran",
+        "Guo-Zhi Tang",
+        "Siqi Wang",
+        "Bin Shan",
+        "Teng Fu",
+        "Hao Feng",
+        "Jing-Qun Tang",
+        "Han Wang",
+        "Can Huang"
+      ],
+      "priority": 43,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 43,
+        "citation_count": 43,
+        "total": 43,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 527,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLLM/MLLMにまず短い回答を生成させ、そのperplexityが高い場合だけ長いCoTへ切替えるCertainty-based Adaptive Reasoningを提案。マルチモーダルVQA/KIEとテキスト推論で精度と推論長の交換条件を改善する、生成時の段階的計算ルーティング。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c54cb1cfec6f",
+    "round": "libimp-c54cb1cfec6fe19c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c54cb1cfec6fe19c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c54cb1cfec6fe19c-pre01.json",
+    "receipt": "sha256:dfd9f40a5357f92017beadca746e4aa25f888c81a60c3bc6d9788b5020084675"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c54cb1cfec6f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
