@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T09:17:07+00:00",
+  "generated_at": "2026-10-30T09:39:39+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2100,34 +2100,6 @@
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2609.32759",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T06:02:12+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6918,
-        "body_paragraphs": 49,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1878,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled-chat-30-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled-chat-30-r02.json",
-      "worker_run_key": "20261030-1332-scheduled-chat-30/r02"
-    },
-    {
       "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
       "title": null,
       "source_url": null,
@@ -2213,34 +2185,6 @@
       "worker_run_key": "20261030-1431-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.33135",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T07:13:22+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9994,
-        "body_paragraphs": 55,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 689,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1007/s11432-024-4487-8",
       "title": null,
       "source_url": null,
@@ -2295,64 +2239,6 @@
       },
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.json",
-      "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
-    },
-    {
-      "canonical_id": "arXiv:2609.10355",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T08:12:59+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5542,
-        "body_paragraphs": 24,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 665,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-1616-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2510.11602",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T08:23:49+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5999,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 578,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.json",
       "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
     },
     {
@@ -2495,8 +2381,8 @@
     },
     {
       "canonical_id": "DOI:10.1145/3771563",
-      "title": "Benchmarking and Characterization of Large Language Model Inference on Apple Silicon",
-      "source_url": "https://arxiv.org/pdf/2508.08531",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T09:13:11+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -2522,8 +2408,8 @@
     },
     {
       "canonical_id": "arXiv:2309.05210",
-      "title": "Understanding the Impact of Post-Training Quantization on Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2309.05210",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T09:15:03+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2550,8 +2436,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/IISWC66894.2025.00019",
-      "title": "Keeping up with Large Language Models: A Holistic Methodology of Compute, Memory, Communication, and Cost Modeling",
-      "source_url": "https://doi.org/10.1109/IISWC66894.2025.00019",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T09:15:05+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2575,6 +2461,120 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-325ec4444437--libfile_01d445b64fbc8191a43d0eac798baba4--2025-doi-10.1109-iiswc66894.2025.00019-llm-performance-cost-model-research-20261030-1427-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-325ec4444437--libfile_01d445b64fbc8191a43d0eac798baba4--2025-doi-10.1109-iiswc66894.2025.00019-llm-performance-cost-model-research-20261030-1427-.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.33135",
+      "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
+      "source_url": "https://arxiv.org/html/2609.33135",
+      "returned_at": "2026-10-30T09:39:29+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9994,
+        "body_paragraphs": 55,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 689,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d9d78486874--libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4d9d78486874--libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.10355",
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/html/2609.10355v1",
+      "returned_at": "2026-10-30T09:39:31+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5542,
+        "body_paragraphs": 24,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 665,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-609daeaac6e4--libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-609daeaac6e4--libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-1616-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.11602",
+      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
+      "source_url": "https://arxiv.org/pdf/2510.11602",
+      "returned_at": "2026-10-30T09:39:34+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5999,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 578,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8de59e164a3d--libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8de59e164a3d--libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.json",
+      "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "arXiv:2609.32759",
+      "title": "The Extender: A Log-Structured Transformer",
+      "source_url": "https://arxiv.org/html/2609.32759",
+      "returned_at": "2026-10-30T09:39:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6918,
+        "body_paragraphs": 49,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1878,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-915b6d34a01d--libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled-chat-30-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-915b6d34a01d--libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled.json",
+      "worker_run_key": "20261030-1332-scheduled-chat-30/r02"
     }
   ]
 }
