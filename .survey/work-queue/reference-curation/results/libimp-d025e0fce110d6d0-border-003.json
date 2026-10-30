@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d025e0fce110d6d0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.09503",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.09503",
+    "identity_tokens": [
+      "arXiv:2605.09503"
+    ],
+    "reason": "一次arXiv書誌・要旨ではチャネルを重み・活性の二次モーメントで並べ替え、低bitグループ量子化誤差を抑えるPermuQuantを提案。FLUX.1-dev/RTX5090のW4A4 NVFP4で1ステップ最大1.7倍高速、DiTメモリ3.5倍削減と報告。量子化手法はLLMにも応用可能だが評価は画像拡散モデルに限定される。",
+    "first_checked_at": "2026-10-30T21:08:02+00:00",
+    "last_checked_at": "2026-10-30T21:08:02+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "PermuQuant: Lowering Per-Group Quantization Error by Reordering Channels for Diffusion Models"
+  },
+  "processed_at": "2026-10-30T21:08:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d025e0fce110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

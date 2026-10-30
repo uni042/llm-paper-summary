@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T20:07:34+00:00",
-  "record_count": 12654,
+  "updated_at": "2026-10-30T21:07:57+00:00",
+  "record_count": 12656,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181969,6 +181969,30 @@
       "last_checked_at": "2026-10-30T20:07:34+00:00",
       "linked_from": [],
       "title": "ViM-Q: Scalable Algorithm-Hardware Co-Design for Vision Mamba Model Inference on FPGA"
+    },
+    "arXiv:2602.07106": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.07106",
+      "identity_tokens": [
+        "arXiv:2602.07106"
+      ],
+      "reason": "タイトルが明示する研究目的は音声に同期した3D顔アニメーションの生成であり、LLM推論カーネル、KVキャッシュ、サービング、計算資源最適化を対象とする論文ではない。",
+      "first_checked_at": "2026-10-30T21:07:57+00:00",
+      "last_checked_at": "2026-10-30T21:07:57+00:00",
+      "linked_from": [],
+      "title": "Ex-Omni: Enabling 3D Facial Animation Generation for Omni-modal Large Language Models"
+    },
+    "arXiv:2301.08986": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2301.08986",
+      "identity_tokens": [
+        "arXiv:2301.08986"
+      ],
+      "reason": "タイトルが明示する研究目的は言語モデルの領域適応と既有知識の保持であり、推論システムの効率化やメモリ・実行スケジューリングの研究ではない。",
+      "first_checked_at": "2026-10-30T21:07:57+00:00",
+      "last_checked_at": "2026-10-30T21:07:57+00:00",
+      "linked_from": [],
+      "title": "Adapting a Language Model While Preserving its General Knowledge"
     }
   }
 }

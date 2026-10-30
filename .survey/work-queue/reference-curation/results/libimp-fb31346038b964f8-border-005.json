@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb31346038b964f8-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.05573",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.05573",
+    "identity_tokens": [
+      "arXiv:2603.05573"
+    ],
+    "reason": "Transformer変種と状態空間モデルのsequence-level parallelismに伴う表現力の制約をLie代数の拡大階層で解析し、深さの増加に伴う近似誤差の指数的減少を理論化。symbolic word問題と連続値状態追跡で検証する。効率的な系列モデル設計の理論的基盤として有用だが、LLM推論システムのGPU速度、メモリ、serving実装を直接評価した研究ではない。",
+    "first_checked_at": "2026-10-30T21:08:08+00:00",
+    "last_checked_at": "2026-10-30T21:08:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Why Depth Matters in Parallelizable Sequence Models: A Lie Algebraic View"
+  },
+  "processed_at": "2026-10-30T21:08:09+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb31346038b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

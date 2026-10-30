@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d025e0fce110d6d0-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2202.10870",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2202.10870",
+    "identity_tokens": [
+      "arXiv:2202.10870"
+    ],
+    "reason": "一次arXiv書誌・要旨では文書ランキング向けTransformerの遠距離結合を社会ネットワーク風の疎注意グラフで構成し、部分グラフ分割で計算を効率化するSocialformerを提案。疎注意の計算設計は関連するが、実験は文書ランキングであり生成LLMの長文脈推論・KVキャッシュでの検証はない。",
+    "first_checked_at": "2026-10-30T21:08:04+00:00",
+    "last_checked_at": "2026-10-30T21:08:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking"
+  },
+  "processed_at": "2026-10-30T21:08:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d025e0fce110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

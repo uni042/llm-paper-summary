@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T20:07:32+00:00",
-  "record_count": 5550,
+  "updated_at": "2026-10-30T21:08:08+00:00",
+  "record_count": 5562,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85744,6 +85744,162 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Efficient Reasoning via Thought-Training and Thought-Free Inference"
+    },
+    "arXiv:2510.02312": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.02312",
+      "identity_tokens": [
+        "arXiv:2510.02312"
+      ],
+      "reason": "一次arXiv書誌・要旨では教師の圧縮KVキャッシュ表現を連続潜在トークンへ自己蒸留するKaVaを提案し、自然言語CoTの冗長性を抑えつつ潜在推論の精度を改善する。KVを学習信号として使うが、主貢献は学習時の推論蒸留であり実運用KVキャッシュ管理やデコード高速化の測定は要旨で確認できない。",
+      "first_checked_at": "2026-10-30T21:08:01+00:00",
+      "last_checked_at": "2026-10-30T21:08:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "KaVa: Latent Reasoning via Compressed KV-Cache Distillation"
+    },
+    "arXiv:2405.18428": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.18428",
+      "identity_tokens": [
+        "arXiv:2405.18428"
+      ],
+      "reason": "一次arXiv書誌・要旨では画像生成Diffusion Transformerにサブ二次のGated Linear Attentionを導入するDiGを提案。1792解像度のDiG-S/2はDiT-S/2より2.5倍高速、GPUメモリ75.7%削減と報告する。注意演算の高速化手法は関連するが、対象は画像拡散モデルでLLMデコード・サービングでの検証はない。",
+      "first_checked_at": "2026-10-30T21:08:02+00:00",
+      "last_checked_at": "2026-10-30T21:08:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DiG: Scalable and Efficient Diffusion Models with Gated Linear Attention"
+    },
+    "arXiv:2605.09503": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09503",
+      "identity_tokens": [
+        "arXiv:2605.09503"
+      ],
+      "reason": "一次arXiv書誌・要旨ではチャネルを重み・活性の二次モーメントで並べ替え、低bitグループ量子化誤差を抑えるPermuQuantを提案。FLUX.1-dev/RTX5090のW4A4 NVFP4で1ステップ最大1.7倍高速、DiTメモリ3.5倍削減と報告。量子化手法はLLMにも応用可能だが評価は画像拡散モデルに限定される。",
+      "first_checked_at": "2026-10-30T21:08:02+00:00",
+      "last_checked_at": "2026-10-30T21:08:02+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PermuQuant: Lowering Per-Group Quantization Error by Reordering Channels for Diffusion Models"
+    },
+    "arXiv:2601.21069": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21069",
+      "identity_tokens": [
+        "arXiv:2601.21069"
+      ],
+      "reason": "一次arXiv書誌・要旨では超解像TransformerにおけるHadamard等の回転量子化が効く理由を、直交変換後のレンジ縮小と分布の正規化で検証する。45構成で回転後のPSNR改善を報告するが、実験は画像超解像に限定され、LLMの重み量子化や推論性能への適用は未確認。",
+      "first_checked_at": "2026-10-30T21:08:03+00:00",
+      "last_checked_at": "2026-10-30T21:08:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Any Orthogonal Transform Will Do: Range Reduction Explains Rotation-Based Quantization for Super-Resolution"
+    },
+    "arXiv:2606.06078": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06078",
+      "identity_tokens": [
+        "arXiv:2606.06078"
+      ],
+      "reason": "一次arXiv書誌・要旨では画像自己回帰生成の知識蒸留で長い生成系列と視覚トークン曖昧性が教師信号を劣化させる問題を分析し、学生生成サンプル上で選択的に教師を適用するVarKDを提案。モデル圧縮は隣接分野だが主対象は画像生成モデルの蒸留学習で、LLM推論システムの直接最適化ではない。",
+      "first_checked_at": "2026-10-30T21:08:03+00:00",
+      "last_checked_at": "2026-10-30T21:08:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Knowledge Distillation for Visual Autoregressive Models"
+    },
+    "arXiv:2202.10870": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.10870",
+      "identity_tokens": [
+        "arXiv:2202.10870"
+      ],
+      "reason": "一次arXiv書誌・要旨では文書ランキング向けTransformerの遠距離結合を社会ネットワーク風の疎注意グラフで構成し、部分グラフ分割で計算を効率化するSocialformerを提案。疎注意の計算設計は関連するが、実験は文書ランキングであり生成LLMの長文脈推論・KVキャッシュでの検証はない。",
+      "first_checked_at": "2026-10-30T21:08:04+00:00",
+      "last_checked_at": "2026-10-30T21:08:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking"
+    },
+    "arXiv:2403.17445": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.17445",
+      "identity_tokens": [
+        "arXiv:2403.17445"
+      ],
+      "reason": "一次arXiv書誌・要旨では指数平滑化の状態空間モデルを要素単位MLPへ組み込み、パラメータ増分1%未満でLong Range Arena上S4に近い性能を報告する。系列モデルの簡素化という技術的接点はあるが、生成LLMの推論メモリ・デコード・サービング効率の実証は要旨から確認できない。",
+      "first_checked_at": "2026-10-30T21:08:04+00:00",
+      "last_checked_at": "2026-10-30T21:08:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Incorporating Exponential Smoothing into MLP: A Simple but Effective Sequence Model"
+    },
+    "arXiv:2604.14561": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.14561",
+      "identity_tokens": [
+        "arXiv:2604.14561"
+      ],
+      "reason": "Ulysses sequence parallelismのall-to-allをTAPA、V-First、V-Major selective communicationで削減する分散推論システム。AuroraのDiT画像生成4モデルで平均3.6倍、最大8.4倍の高速化を報告。ただし評価対象は画像・科学計算向けDiffusion Transformerであり、LLMのautoregressive servingやKV cacheの評価ではない。通信最適化は転用可能性があるためborderline。",
+      "first_checked_at": "2026-10-30T21:08:06+00:00",
+      "last_checked_at": "2026-10-30T21:08:06+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "CoCoDiff: Optimizing Collective Communications for Distributed Diffusion Transformer Inference Under Ulysses Sequence Parallelism"
+    },
+    "arXiv:2607.22562": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.22562",
+      "identity_tokens": [
+        "arXiv:2607.22562"
+      ],
+      "reason": "LLMエージェントの長期記憶を、意味的重要性・エンティティ情報・利用履歴・重複・時間経過による生存スコアで保持・削除する方式。LoCoMoとLongMemEval-sで比較し、Qwen2.5-7Bのmulti-hopで最良baseline比+9.65 F1を報告。メモリ保持量や検索効率には関係するが、主眼はエージェントの回答品質・記憶管理で、GPU/KVメモリや推論ランタイムの直接最適化ではない。",
+      "first_checked_at": "2026-10-30T21:08:07+00:00",
+      "last_checked_at": "2026-10-30T21:08:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SF-AMS: Strategic Forgetting for Structured Memory in LLM Agent"
+    },
+    "arXiv:2603.16382": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.16382",
+      "identity_tokens": [
+        "arXiv:2603.16382"
+      ],
+      "reason": "量子化LLMの重みbit-flip障害を、Householder直交回転でactivation outlierと脆弱ビットの対応を崩して緩和する訓練不要の信頼性対策。Qwen2.5-7Bのランダム故障崩壊率を3.15%から0%へ、Llama-2-7Bでは推論遅延+9.1%、保存量+0.31%と報告。量子化実装の耐障害性には関連するが、主要目的は推論性能・圧縮率の改善でなくセキュリティと信頼性。",
+      "first_checked_at": "2026-10-30T21:08:07+00:00",
+      "last_checked_at": "2026-10-30T21:08:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Rotated Robustness: A Training-Free Defense against Bit-Flip Attacks on Large Language Models"
+    },
+    "arXiv:2607.19932": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.19932",
+      "identity_tokens": [
+        "arXiv:2607.19932"
+      ],
+      "reason": "音声言語モデルの数学的推論で、中間テキストの冗長な推論列を段階的圧縮学習により短縮するECoM Reasoningを提案。通常のCoM全推論列と比べてテキストトークン40%を使用しつつ精度+3%を報告。生成トークン削減による推論効率は関連するが、音声生成・音声QA固有のアーキテクチャとタスクに依存し、一般的なLLM servingの実測は示していない。",
+      "first_checked_at": "2026-10-30T21:08:08+00:00",
+      "last_checked_at": "2026-10-30T21:08:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Chain-of-Modality Reasoning via Progressive Compression for Spoken Language Models"
+    },
+    "arXiv:2603.05573": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.05573",
+      "identity_tokens": [
+        "arXiv:2603.05573"
+      ],
+      "reason": "Transformer変種と状態空間モデルのsequence-level parallelismに伴う表現力の制約をLie代数の拡大階層で解析し、深さの増加に伴う近似誤差の指数的減少を理論化。symbolic word問題と連続値状態追跡で検証する。効率的な系列モデル設計の理論的基盤として有用だが、LLM推論システムのGPU速度、メモリ、serving実装を直接評価した研究ではない。",
+      "first_checked_at": "2026-10-30T21:08:08+00:00",
+      "last_checked_at": "2026-10-30T21:08:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Why Depth Matters in Parallelizable Sequence Models: A Lie Algebraic View"
     }
   }
 }

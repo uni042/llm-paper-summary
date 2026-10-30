@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d025e0fce110d6d0-border-007",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2403.17445",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2403.17445",
+    "identity_tokens": [
+      "arXiv:2403.17445"
+    ],
+    "reason": "一次arXiv書誌・要旨では指数平滑化の状態空間モデルを要素単位MLPへ組み込み、パラメータ増分1%未満でLong Range Arena上S4に近い性能を報告する。系列モデルの簡素化という技術的接点はあるが、生成LLMの推論メモリ・デコード・サービング効率の実証は要旨から確認できない。",
+    "first_checked_at": "2026-10-30T21:08:04+00:00",
+    "last_checked_at": "2026-10-30T21:08:04+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Incorporating Exponential Smoothing into MLP: A Simple but Effective Sequence Model"
+  },
+  "processed_at": "2026-10-30T21:08:04+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d025e0fce110",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

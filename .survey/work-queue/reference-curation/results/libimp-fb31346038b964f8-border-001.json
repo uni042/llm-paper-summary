@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fb31346038b964f8-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2604.14561",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2604.14561",
+    "identity_tokens": [
+      "arXiv:2604.14561"
+    ],
+    "reason": "Ulysses sequence parallelismのall-to-allをTAPA、V-First、V-Major selective communicationで削減する分散推論システム。AuroraのDiT画像生成4モデルで平均3.6倍、最大8.4倍の高速化を報告。ただし評価対象は画像・科学計算向けDiffusion Transformerであり、LLMのautoregressive servingやKV cacheの評価ではない。通信最適化は転用可能性があるためborderline。",
+    "first_checked_at": "2026-10-30T21:08:06+00:00",
+    "last_checked_at": "2026-10-30T21:08:06+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CoCoDiff: Optimizing Collective Communications for Distributed Diffusion Transformer Inference Under Ulysses Sequence Parallelism"
+  },
+  "processed_at": "2026-10-30T21:08:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fb31346038b9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
