@@ -26,6 +26,8 @@ worker_run_key: "20261030-1400-scheduled-chat-00/r01"
 reference_main_sha: "7a729bc330fcc071e9c221aa6cf016ba1d8bfb1b"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 # Mico：出力トークン長予測とバッチ補充によるマルチクラウドLLM推論スケジューリング
 

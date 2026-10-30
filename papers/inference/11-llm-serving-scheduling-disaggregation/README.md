@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（522本）
+## 自動生成の論文一覧（523本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1157,6 +1157,10 @@
 - **2026-01 · [RAPID-Serve: Resource-efficient and Accelerated P/D Intra-GPU Disaggregation](2026-2601.11822-rapid-serve-intra-gpu-pd-disaggregation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   同一GPU内でプリフィル/デコードを非lockstep並行実行し、共有KVとCU maskingでSLOと利用率を両立、MI300X実機で有効スループット平均4.9倍を報告。
+
+- **2026-01 · [Mico: efficient query scheduling for multi-cloud deployed LLM inference service](2026-e363df893fb4-mico-efficient-query-scheduling-for-multi-cloud-deployed-llm-inference-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  要求数だけを均等に複数クラウドへ振り分けても、長い応答が特定クラウドへ集中すると他のクラウドが先に空き、システム全体の完了時刻とスループットが悪化する。GPT-2/GPT-Neoを使ったA6000の評価では、3クラウド・200要求・バッチ3の条件で累積KVキャッシュ長が44.89%減少し、要求処理スループットが1.79倍になった。
 
 - **2025-12 · [xGR: Efficient Generative Recommendation Serving at Scale](2025-2512.11529-xgr-efficient-generative-recommendation-serving-at-scale.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
