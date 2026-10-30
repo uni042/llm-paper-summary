@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty",
+      "source_url": "https://arxiv.org/abs/2506.10446",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated significant advancements in reasoning capabilities, performing well on various challenging benchmarks. Techniques like Chain-of-Thought prompting have been introduced to further improve reasoning. However, these approaches frequently generate longer outputs, which in turn increase computational latency. Although some methods use reinforcement learning to shorten reasoning, they often apply uniform penalties without considering the problem's complexity, leading to suboptimal outcomes. In this study, we seek to enhance the efficiency of LLM reasoning by promoting conciseness for simpler problems while preserving sufficient reasoning for more complex ones for accuracy, thus improving the model's overall performance. Specifically, we manage the model's reasoning efficiency by dividing the reward function and including a novel penalty for output length. Our approach has yielded impressive outcomes in benchmark evaluations across three datasets: GSM8K, MATH500, and AIME2024. For the comparatively simpler datasets GSM8K and MATH500, our method has effectively shortened output lengths while preserving or enhancing accuracy. On the more demanding AIME2024 dataset, our approach has resulted in improved accuracy.",
+      "identifiers": [
+        "SemanticScholar:010c508b6e23d253bb47934ea3433251d3aebc33"
+      ],
+      "semantic_scholar_id": "010c508b6e23d253bb47934ea3433251d3aebc33",
+      "canonical_id": "arXiv:2506.10446",
+      "arxiv_id": "2506.10446",
+      "doi": "10.48550/arXiv.2506.10446",
+      "authors": [
+        "Ze-Hui Ling",
+        "De-Shu Chen",
+        "Hong-Wei Zhang",
+        "Yi-Feng Jiao",
+        "Xin Guo",
+        "Yuan Cheng"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      },
+      "reason": "問題の難易度にかかわらず一律に思考長を罰するRL報酬を改め、容易な問題では短く難問では必要な推論を残すpowered length penaltyを提案。一次要旨はGSM8K・MATH500で回答長を短縮しつつ精度維持または改善、AIME2024でも精度向上を報告。学習によって生成時の不要な思考トークンを減らす直接的な推論費用改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+      "source_url": "https://arxiv.org/abs/2605.13165",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought (Long CoT) reasoning improves performance on multi-step problems, but it also induces overthinking. This inefficiency is especially problematic in low-data fine-tuning regimes, where real applications adapt reasoning models with limited supervision and cannot rely on large-scale teacher distillation or heavy test-time control. To address this, we propose STOP (Structured On-policy Pruning), an on-policy algorithm for analyzing and pruning long-form reasoning traces. STOP constructs self-distilled traces from the model. Then it maps each trace into a structured reasoning interface through node segmentation, taxonomy annotation, and reasoning-tree construction. On top of this interface, we introduce ECN (Earliest Correct Node), which retains the shortest prefix ending at the earliest node. Experiments on DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-LLaMA-3-8B across GSM8K, Math 500, and AIME 2024 show that STOP reduces generated tokens by 19.4% to 42.4% while largely preserving accuracy in low-data fine-tuning. Beyond efficiency, our analyses show that STOP induces much smaller distributional shift than teacher-guided pruning, improves the structural efficiency of generated reasoning, and reallocates reasoning effort away from redundant verification and backtracking toward more productive exploration.",
+      "identifiers": [
+        "SemanticScholar:d81cae5e71303f0d510480e3721e2fc417935d04"
+      ],
+      "semantic_scholar_id": "d81cae5e71303f0d510480e3721e2fc417935d04",
+      "canonical_id": "arXiv:2605.13165",
+      "arxiv_id": "2605.13165",
+      "doi": "10.48550/arXiv.2605.13165",
+      "authors": [
+        "Chenjun Xu",
+        "Zhen-Nan Zhou",
+        "Zhan Su",
+        "Bill Howe",
+        "Lucy Lu Wang",
+        "Bing-Bing Wen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      },
+      "reason": "STOPは生成済みCoTを節点へ分割して推論木を構成し、最初の正解節点までの最短prefixを残すECNで冗長な検証・後戻りを除く。一次要旨ではDeepSeek-R1蒸留7B/8BのGSM8K・Math500・AIME2024で生成トークン19.4～42.4%削減と概ね同等の精度を報告。推論トークン費用削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "PathCal: State-Aware Reflection-Marker Calibration for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.23074",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Language Models (LRMs) tackle complex tasks through test-time scaling, generating long-form Chain-of-Thought (CoT) trajectories during inference. These trajectories contain reflection markers such as wait, but, and alternatively, accompanying hesitation, revision, and alternative explorations. Recent test-time control methods use these markers to steer reasoning, but treating them as one coarse-grained category can obscure their distinct intervention effects. We study how marker identity and reasoning context shape these effects. Type-wise suppression produces different accuracy--length tradeoffs, while fixed-prefix interventions show that the relative benefit of continuation and revision varies across prefixes and tasks. Motivated by these findings, we introduce PathCal, a training-free controller that adjusts the strength of a fixed continuation bias using instantaneous competition among continuation, revision, and alternative-opening markers. It applies finite logit adjustments without additional model forward passes. An exact log-odds identity and frozen-prefix probes establish its local directional effect. Experiments show that PathCal improves the accuracy--length tradeoff in many mathematical reasoning settings and also reduces generation length in coding and multilingual mathematics.",
+      "identifiers": [
+        "SemanticScholar:867f7dbb3e894af1925e42cbebb405555edbd95a"
+      ],
+      "semantic_scholar_id": "867f7dbb3e894af1925e42cbebb405555edbd95a",
+      "canonical_id": "arXiv:2605.23074",
+      "arxiv_id": "2605.23074",
+      "authors": [
+        "Ling-Yu Jiang",
+        "Zirui Li",
+        "Ling-Yu Xu",
+        "Shuo Xing",
+        "Pei-Ran Li",
+        "Tsubasa Takahashi",
+        "Deng-Zhe Hou",
+        "Zheng-Zhong Tu",
+        "Kazunori D. Yamada",
+        "Fang-Zhou Lin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PathCalはwait/but/alternatively等の反省マーカーを種類別に区別し、局所的な思考分岐の競合が過大な時だけlogitを穏やかに調整する訓練不要の復号コントローラ。一次要旨では6推論ベンチマークで外部検証器や追加サンプリングなしに回答長を削減し精度を維持または改善。推論時トークン長の直接制御に該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fb659cf6f7f5",
+    "round": "libimp-fb659cf6f7f565c4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fb659cf6f7f565c4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fb659cf6f7f565c4-pre01.json",
+    "receipt": "sha256:5d150bb54e45d9fe6e13ab772455f24ef02c7b765473a1bc1ceae4318f462175"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fb659cf6f7f5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs",
+      "source_url": "https://arxiv.org/abs/2410.12187",
+      "year": 2024,
+      "published": "2024-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel in various tasks but face deployment challenges due to hardware constraints. We propose density-aware post-training weight-only quantization (DAQ), which has two stages: 1) density-centric alignment, which identifies the center of high-density weights and centers the dynamic range on this point to align high-density weight regions with floating-point high-precision regions; 2) learnable dynamic range adjustment, which adjusts the dynamic range by optimizing quantization parameters (i.e., scale and zero-point) based on the impact of weights on the model output. Experiments on LLaMA and LLaMA-2 show that DAQ consistently outperforms the best baseline method, reducing perplexity loss by an average of 22.8% on LLaMA and 19.6% on LLaMA-2. Our code is available at https://github.com/LuoYingSong/DAQ.",
+      "identifiers": [
+        "SemanticScholar:0304d11f052375a237f8a2401e73298e618e3198"
+      ],
+      "semantic_scholar_id": "0304d11f052375a237f8a2401e73298e618e3198",
+      "canonical_id": "arXiv:2410.12187",
+      "arxiv_id": "2410.12187",
+      "doi": "10.48550/arXiv.2410.12187",
+      "authors": [
+        "YING‐JIA Luo",
+        "Lingwei Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 744,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLaMA/LLaMA-2の重みのみの学習後量子化を対象に、重みの高密度領域へ量子化表現を整列させるdensity-centric alignmentと、出力影響に応じてscale/zero-pointを学習調整する方式を提案。一次要旨はLLaMAで平均22.8%、LLaMA-2で19.6%の困惑度損失低減を報告し、LLM推論向け圧縮への直接的貢献がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d2d610b9637c",
+    "round": "libimp-d2d610b9637c4bc6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d2d610b9637c4bc6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d2d610b9637c4bc6-pre01.json",
+    "receipt": "sha256:6eca85ed54efd141c18097ed09d8e8bd87a44707937bfd47d4b0105e5ef7f689"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d2d610b9637c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

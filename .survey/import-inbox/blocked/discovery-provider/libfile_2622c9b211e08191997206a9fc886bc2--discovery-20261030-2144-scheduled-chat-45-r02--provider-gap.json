@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261030-2144-scheduled-chat-45/r02::provider-gap",
+  "reference_main_sha": "6a937fa4a3e237e9b16a314de8ed285798f86a23",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02963",
+      "identity_tokens": [
+        "arXiv:2607.02963"
+      ],
+      "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+      "reason": "密な動画イベント記述の生成を、イベント間の弱い依存は並列、イベント内の強い依存は逐次として分解する並列自己回帰復号方式。一次本文と付録のT2V/T2A評価では時間区間に忠実なキャプション生成と生成効率を比較し、イベント単位の潜在計画と並列デコードを検証。マルチモーダルLLMのデコード高速化に直接該当する。",
+      "source_url": "https://arxiv.org/html/2607.02963",
+      "body_check": "primary_arxiv_fulltext_passages_read; methods_and_evaluation_verified",
+      "first_checked_at": "2026-10-30T21:55:00+09:00",
+      "last_checked_at": "2026-10-30T21:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 177,
+      "origin": "discovery_worklist_primary_body_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.29618",
+      "identity_tokens": [
+        "arXiv:2608.29618"
+      ],
+      "title": "Multi-Access Speculative Inference: Uplink or Downlink?",
+      "reason": "端末SLMがドラフトを作りエッジLLMが検証するMulti-SPINで、拒否時の訂正分布をuplinkで送るかdownlinkで返すかを適応的に切り替える。一次本文V-B節では拒否パターンの期待通信時間を計算し、通信モード・ドラフト長・送信電力を同時最適化。分散投機復号の通信費用とgoodputに直接該当する。",
+      "source_url": "https://arxiv.org/html/2608.29618",
+      "body_check": "primary_arxiv_fulltext_passages_read; methods_and_evaluation_verified",
+      "first_checked_at": "2026-10-30T21:55:00+09:00",
+      "last_checked_at": "2026-10-30T21:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 182,
+      "origin": "discovery_worklist_primary_body_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32046",
+      "identity_tokens": [
+        "arXiv:2609.32046"
+      ],
+      "title": "Receiver-Conditioned Latent Communication gives 94% CacheBack",
+      "reason": "複数エージェントがKV状態を送る際、受信側の情報需要を送信側へ伝え、attention重みで必要なKVだけを選ぶCacheBack。一次本文4章と付録F/GではFanOutQAなどでQwen/Nemotronを評価し、Qwen3で受信状態75%削減、正答率14.7ポイント改善、テキスト通信比の中央値遅延3.2倍改善を報告。エージェント間KV圧縮と通信最適化に直接該当する。",
+      "source_url": "https://arxiv.org/html/2609.32046",
+      "body_check": "primary_arxiv_fulltext_passages_read; methods_and_evaluation_verified",
+      "first_checked_at": "2026-10-30T21:55:00+09:00",
+      "last_checked_at": "2026-10-30T21:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 188,
+      "origin": "discovery_worklist_primary_body_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34972",
+      "identity_tokens": [
+        "arXiv:2609.34972"
+      ],
+      "title": "Just MLPs: Efficient Visual State Reconstruction for Multimodal Language Models",
+      "reason": "δ-Visionは視覚トークンを削除せず、層間の視覚状態を低ランクMLPで再構成してTransformer内の反復計算を軽量化する。一次本文のQwen3-VL-4B比較表では10〜15%の視覚トークン保持率を持つFastV、VisionZip等とMMStar、GQA、VQA等で比較し、情報を残したまま演算を削減する。VLMの視覚トークン計算最適化に直接該当する。",
+      "source_url": "https://arxiv.org/html/2609.34972",
+      "body_check": "primary_arxiv_fulltext_passages_read; methods_and_evaluation_verified",
+      "first_checked_at": "2026-10-30T21:55:00+09:00",
+      "last_checked_at": "2026-10-30T21:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 201,
+      "origin": "discovery_worklist_primary_body_screen"
+    }
+  ],
+  "parent_run_key": "20261030-2144-scheduled-chat-45/r02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_2622c9b211e08191997206a9fc886bc2--discovery-20261030-2144-scheduled-chat-45-r02.json",
+  "provider_gap_ids": [
+    "arXiv:2607.02963",
+    "arXiv:2608.29618",
+    "arXiv:2609.32046",
+    "arXiv:2609.34972"
+  ]
+}
