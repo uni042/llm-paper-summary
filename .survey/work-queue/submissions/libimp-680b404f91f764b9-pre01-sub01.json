@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "BOLD-Q: Blockwise Outlier-aware Logarithmic Dual-Bias Quantization for Hardware-Efficient LLM Inference",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539596",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) deliver strong natural language processing performance, but ever-growing parameter counts strain memory and power budgets for on-device deployments. Quantization alleviates these costs; however, the outlier-heavy statistics of LLM activations and weights force calibration-based static schemes to retain high-precision fallbacks for dynamically varying values, yielding heterogeneous execution paths and overheads. Microscaling (MX) applies blockwise dynamic quantization with a per-block shared exponent, achieving a homogeneous execution path. Nevertheless, at 4-bit precision, prior work faces three limitations: (i) fixed bins fail to capture block-specific distributions and outliers; (ii) quantization error due to the limited resolution of shared-exponent scaling; and (iii) a lack of co-design approaches that balance model quality and hardware efficiency. We propose BOLD-Q, an HW/SW co-design quantization framework that combines the logarithmic number system (LNS) with MX. BOLD-Q introduces blockwise Dual-Bias—selected statically for weights via candidate search and dynamically computed for activations—to shift and refine per-block quantization bins, while LNS-based scaling improves distributional fit. On LLaMA-2 7B, BOLD-Q limits perplexity increase to +0.32 (W4/A8) and +0.60 (W4/A4), outperforming same-precision baselines. We further design an LNS-MAC systolic array with a lightweight preprocessing row that derives and broadcasts Dual-Bias, eliminating per-PE bias units; within the array, multiplies become log-domain additions, and rescaling is adder-based. Compared with a baseline, BOLD-Q reduces area by up to 34.0% and energy by 21.4%, enabling a homogeneous, on-device-friendly, low-precision execution path for LLMs. The code is available at https://github.com/IDSL-SeoulTech/BOLD-Q.",
+      "identifiers": [
+        "SemanticScholar:fe9c3a0518871072a18127796d0289ec705d96a0"
+      ],
+      "semantic_scholar_id": "fe9c3a0518871072a18127796d0289ec705d96a0",
+      "doi": "10.23919/DATE69613.2026.11539596",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539596",
+      "authors": [
+        "Sungsoo Han",
+        "Da-Hun Choi",
+        "Hyun Kim"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DATE 2026の著者原稿を確認。MXのブロック単位量子化と対数数値表現、重み・活性のDual-Bias、LNS-MACシストリックアレイを協調設計。LLaMA-2 7BでW4/A8のPPL増加+0.32、W4/A4で+0.60を報告し、比較対象のハードウェア設計に対して面積最大34.0%、エネルギー21.4%削減。量子化と推論アクセラレータの直接研究。",
+      "library_body_check": "primary_conference_pdf_abstract_and_intro_checked; full_experimental_tables_not_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Octopus: Gated Selective Attention for Memory-Bounded Long-Context Inference in Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1631",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer inference becomes increasingly memory-bound as the Key–Value (KV) cache grows linearly with sequence length. While subquadratic architectures offer constant-memory inference, they rely on aggressive state compression that degrades performance on complex reasoning tasks. We propose O CTOPUS , a framework that confers fixed-memory inference onto pretrained Transform-ers without the information loss of linearization. O CTOPUS retrofits attention layers with Gated Selective Attention , a learnable module that enforces an adaptive sparsity policy over the context history. By dynamically scoring and retaining only high-utility KV states, this mechanism transforms the unbounded cache into a compact, evolving memory budget that filters out uninformative noise. Empirically, on the GSM8K benchmark, it outperforms state-of-the-art linearized baselines by over 36 points under identical memory constraints. Re-markably, O CTOPUS also surpasses its own full-cache teacher, demonstrating that learned sparse retention serves as an effective regular-izer for long-horizon reasoning.",
+      "identifiers": [
+        "SemanticScholar:261a9067b4a8506899e05b64a87b4598a8ee6750"
+      ],
+      "semantic_scholar_id": "261a9067b4a8506899e05b64a87b4598a8ee6750",
+      "doi": "10.18653/v1/2026.acl-long.1631",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1631",
+      "authors": [
+        "Chien Van Nguyen",
+        "Ryan A. Rossi",
+        "L. Van",
+        "Franck Dernoncourt",
+        "Thien Huu Nguyen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "著者所属Adobe Researchの正式論文要旨を確認。学習可能なGated Selective Attentionで有用なKV状態を動的選択し、事前学習Transformerを固定KVメモリ予算の推論に適応。GSM8Kで同一メモリ制約の線形化ベースライン比36ポイント超の改善を報告。追加学習を要するが、KVキャッシュ容量を直接制御する手法。",
+      "library_body_check": "primary_author_institution_publication_abstract_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Fast and Energy-Efficient Support for Low-Precision LLMs on PIM",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539190",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing-in-Memory (PIM) has gained momentum as a promising approach for mitigating memory bottlenecks, and it is particularly well suited to autoregressive decoding in large language models (LLMs), where memory-bound General Matrix-Vector Multiplication (GEMV) operations account for a large portion of the workload. Due to the large size of LLMs, it is challenging to support them in PIM environments with limited memory capacity. Applying group-wise weight-only quantization (GWQ), widely used in LLMs, can effectively reduce model size while minimizing accuracy degradation. However, the weights in GWQ-applied LLMs are typically dequantized using scales and zero-points before GEMV is performed, which can introduce non-trivial latency overhead. In this paper, we propose a method for DRAM-PIM to efficiently support GEMV operations in symmetric and asymmetric GWQ-based LLMs with INT2 and INT4 precision. Based on the Newton scheme, the proposed method incurs an area overhead of 20.6% compared to the PIM units used in a 16-bank, single-channel system. When asymmetric GWQ with a group size of 128 is applied, it achieves approximately a 4 reduction in storage at INT4, along with a 1.16× speedup and 1.41× energy efficiency compared to FP16 GEMV. At INT2, it achieves an 8× reduction in storage, along with a 1.27× speedup and 1.57× energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:7fbccb1644e1b91ee34b06c9d717a56db117270a"
+      ],
+      "semantic_scholar_id": "7fbccb1644e1b91ee34b06c9d717a56db117270a",
+      "doi": "10.23919/DATE69613.2026.11539190",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539190",
+      "authors": [
+        "Byeori Kim",
+        "Sangjun Lee",
+        "Eunhyeok Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DATE 2026の正式論文を確認。DRAM-PIM上で2/4-bitの対称・非対称group-wise weight-only量子化のGEMVを、復元処理の遅延を抑えつつ支援する。group size 128の非対称量子化でFP16 GEMV比、INT4は容量約4倍圧縮・速度1.16倍・エネルギー効率1.41倍、INT2は容量約8倍圧縮・速度1.27倍・エネルギー効率1.57倍と報告。PIM推論カーネルの直接研究。",
+      "library_body_check": "primary_conference_pdf_abstract_checked; full_experimental_tables_not_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Boosting the Performance of Tree-Based Speculative Decoding of LLMs on FPGAs",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539704",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As an efficient alternative to autoregressive decoding, tree-based speculative decoding (SD) has been widely adopted to accelerate LLM inference on GPUs. However, due to the notable disparity in compute power and memory bandwidth, we observe that a specific target-draft model pair with a proper decoding configuration, despite demonstrating significant performance gains on GPUs, often fails to maintain its efficacy on FPGAs, and may even underperform the standard autoregressive decoding approachIn this paper, we propose an analytical framework to revive the performance of tree-based speculative decoding on FPGAs. We introduce effective performance, a roofline-based metric designed to: 1) assess whether a specific target-draft model pair can benefit from SD for the given FPGA platform, and 2) determine the optimal decoding configuration to achieve peak performance when SD is applicable. We also propose a prior-score-based search strategy to identify the optimal tree structure for a preset number of nodes, further enhancing the performance. We evaluate our method on AMD FPGA platforms using two state-of-the-art SD algorithms: LongSpec and EAGLE-3. Our approach demonstrates a speedup of 2.54-3.89× over autoregressive decoding.",
+      "identifiers": [
+        "SemanticScholar:eeb8504cf1fff9e1aa65dd5ec0632d82548d0eeb"
+      ],
+      "semantic_scholar_id": "eeb8504cf1fff9e1aa65dd5ec0632d82548d0eeb",
+      "doi": "10.23919/DATE69613.2026.11539704",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539704",
+      "authors": [
+        "Tie-Long Liu",
+        "Gang Li",
+        "Zi-Tao Mo",
+        "Ze-Yu Zhu",
+        "Min-Nan Pei",
+        "Jian Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DATE 2026の著者原稿を確認。GPUで有効な木型投機復号がFPGAでは検証長増大により計算律速となり逆効果になり得る問題に対し、rooflineと平均受理トークン長を組み合わせて検証長・木構造を最適化。AMD FPGAとLongSpec/EAGLE-3で通常の自己回帰復号比2.54〜3.89倍の高速化を報告。LLMの復号実行効率を直接改善する。",
+      "library_body_check": "primary_conference_pdf_abstract_and_intro_checked; full_experimental_tables_not_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Stream-CQSA: Exact Out-of-Memory Recovery for Attention",
+      "source_url": "https://arxiv.org/abs/2604.20819",
+      "year": 2026,
+      "published": "2026-04-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language models are limited not only by attention cost but also by out-of-memory (OOM) failures. A selected attention call may not fit in available device memory even when the kernel is optimized. Exact and approximate attention methods reduce memory use, but every fixed implementation still has a device-specific capacity boundary. We introduce Stream-CQSA, an attention-level OOM recovery framework based on CQS decomposition, derived from the theory of cyclic quorum sets (CQS). Stream-CQSA recursively partitions an infeasible attention call into independent subsequence tasks, executes each with a compatible inner kernel, and recomposes the local statistics to recover the full attention output. This recovery is exact relative to the wrapped attention kernel, whether that kernel is exact or approximate. Compared with FlashAttention-2, the major baseline, our native Stream-CQSA kernel improves 16-bit forward-output error relative to a dense float64 reference and matches 16-bit backward-gradient error where FlashAttention-2 fits in the GPU memory. At the longest feasible baseline length, it costs $1.5$--$1.9\\times$ the forward runtime and $2.1$--$2.4\\times$ the forward--backward runtime. Beyond that sequence length boundary, our method continues to return an output while FlashAttention-2 OOMs. Stream-CQSA is therefore not a faster attention method. Instead, it converts memory-capacity failure into a recoverable execution path by trading extra compute, host-device transfer, and recomposition for completion.",
+      "identifiers": [
+        "SemanticScholar:37a12370f1013fda19e2b0fbba20441e6a15a713"
+      ],
+      "semantic_scholar_id": "37a12370f1013fda19e2b0fbba20441e6a15a713",
+      "canonical_id": "arXiv:2604.20819",
+      "arxiv_id": "2604.20819",
+      "authors": [
+        "Yiming Bian",
+        "J. Akey"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 191,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨を確認。Cyclic Quorum Sets由来のCQS Divideで厳密attentionを独立した部分計算へ分解・再合成し、GPUメモリ予算に応じてstreaming実行する。数学的に元のattentionと等価で近似誤差を導入せず、単一GPUで10億token系列のexact attention実行可能性を報告。ただしLLM全体のend-to-end遅延・実サービス性能は要旨から未確認。",
+      "library_body_check": "primary_arxiv_abstract_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-680b404f91f7",
+    "round": "libimp-680b404f91f764b9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-680b404f91f764b9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-680b404f91f764b9-pre01.json",
+    "receipt": "sha256:a032a172525403c6401cbe1bba4d5c57f2db33da0ddfad31d61f90a21fae4504"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-680b404f91f7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
