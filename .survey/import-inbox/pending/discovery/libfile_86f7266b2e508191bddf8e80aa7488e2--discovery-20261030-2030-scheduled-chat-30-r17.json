@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r17",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.15780",
+      "identity_tokens": [
+        "arXiv:2007.15780",
+        "DOI:10.48550/arXiv.2007.15780"
+      ],
+      "title": "Neural Language Generation: Formulation, Methods, and Evaluation",
+      "reason": "2020年の自然言語生成一般の課題・評価方法を整理するサーベイ。LLM推論高速化・圧縮・サービングの手法や性能を直接扱わないため対象外。",
+      "source_url": "https://arxiv.org/abs/2007.15780",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 439,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2207.01844",
+      "identity_tokens": [
+        "arXiv:2207.01844",
+        "DOI:10.48550/arXiv.2207.01844"
+      ],
+      "title": "Efficient Representation Learning via Adaptive Context Pooling",
+      "reason": "ContextPoolはトークンごとに近傍を適応poolingし、少ない層数で表現学習の性能を改善する。言語・画像のTransformer効率には関連するが、評価の中心は表現学習であり生成LLMのdecode/KV実測はない。",
+      "source_url": "https://arxiv.org/abs/2207.01844",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 441,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2108.09190",
+      "identity_tokens": [
+        "arXiv:2108.09190",
+        "DOI:10.48550/arXiv.2108.09190"
+      ],
+      "title": "Supervised Contrastive Learning for Interpretable Long-Form Document Matching",
+      "reason": "長文書ペアの類似度をchunkwise attentionと対照学習で求めるCoLDEを提案。対象は文書照合・検索品質であり、LLM生成推論の効率化ではない。",
+      "source_url": "https://arxiv.org/abs/2108.09190",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 442,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.12063",
+      "identity_tokens": [
+        "arXiv:2510.12063",
+        "DOI:10.48550/arXiv.2510.12063"
+      ],
+      "title": "ThinkPilot: Steering Reasoning Models via Automated Think-prefixes Optimization",
+      "reason": "進化的探索でthink-prefixを自動生成し、推論モデルの思考行動を訓練不要で誘導するThinkPilotを提案。推論長と正答率の交換関係を改善し、タスク別の思考予算を制御する推論時オーケストレーション。",
+      "source_url": "https://arxiv.org/abs/2510.12063",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 443,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16255",
+      "identity_tokens": [
+        "arXiv:2605.16255",
+        "DOI:10.48550/arXiv.2605.16255"
+      ],
+      "title": "Designing Datacenter Power Delivery Hierarchies for the AI Era",
+      "reason": "GPUクラスタの電力供給階層とラック密度・配置を長期費用とdeployable capacityで評価する。AI推論基盤の電力・容量計画には関連するが、LLMサービング固有のスケジューラ・KV・カーネルの改善を直接評価していない。",
+      "source_url": "https://arxiv.org/abs/2605.16255",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 446,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.03728",
+      "identity_tokens": [
+        "arXiv:2511.03728",
+        "DOI:10.48550/arXiv.2511.03728"
+      ],
+      "title": "Efficient On-Device Agents via Adaptive Context Management",
+      "reason": "オンデバイス3Bモデルで過去の対話をappend-only Context State Objectへ圧縮し、必要時だけtool schemaを渡す。スマートフォン実測で初期ツール文脈を6倍超削減、対話文脈増加を10～25倍抑える直接的なエージェント推論メモリ最適化。",
+      "source_url": "https://arxiv.org/abs/2511.03728",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 449,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.02209",
+      "identity_tokens": [
+        "arXiv:2502.02209",
+        "DOI:10.48550/arXiv.2502.02209"
+      ],
+      "title": "On the Expressivity of Selective State-Space Layers: A Multivariate Polynomial Approach",
+      "reason": "選択的SSM層の多変量多項式表現を解析し、線形Transformerより高い表現力を理論的に示す。効率的な系列モデルの背景研究として重要だが、生成LLMの実測速度・メモリ削減手法は主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2502.02209",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 450,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.14877",
+      "identity_tokens": [
+        "arXiv:2605.14877",
+        "DOI:10.48550/arXiv.2605.14877"
+      ],
+      "title": "HeatKV: Head-tuned KV-cache Compression for Visual Autoregressive Modeling",
+      "reason": "Infinity-2Bの画像生成VARモデルでヘッド別にスケール過去のKVを圧縮する。KVを既存法比2倍圧縮するが、対象は画像生成でありテキストLLMのKVサービング評価はない。",
+      "source_url": "https://arxiv.org/abs/2605.14877",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 452,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.20488",
+      "identity_tokens": [
+        "arXiv:2410.20488",
+        "DOI:10.48550/arXiv.2410.20488"
+      ],
+      "title": "FIRP: Faster LLM inference via future intermediate representation prediction",
+      "reason": "将来トークンの中間隠れ状態を線形変換で予測し、後段層で並列に検証・生成する投機的復号FIRPを提案。複数モデル・データセットで1.9～3.0倍の推論速度改善を報告する。",
+      "source_url": "https://arxiv.org/abs/2410.20488",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 457,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.12033",
+      "identity_tokens": [
+        "arXiv:2601.12033",
+        "DOI:10.48550/arXiv.2601.12033"
+      ],
+      "title": "Preserving Fairness and Safety in Quantized LLMs Through Critical Weight Protection",
+      "reason": "LLM量子化が多言語公平性と安全性を悪化させる問題を分析し、重要な重みだけを高精度で保護するCritical Weight Protectionを提案。追加学習なしで量子化効率を保ちながら品質劣化を緩和する推論圧縮の品質維持手法。",
+      "source_url": "https://arxiv.org/abs/2601.12033",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:43:09+09:00",
+      "last_checked_at": "2026-10-30T20:43:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 459,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
