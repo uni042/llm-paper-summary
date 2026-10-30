@@ -35,10 +35,15 @@
   "selection_reason": "バイト単位階層言語モデルの逐次生成が遅い問題に対し、潜在セグメント境界に合わせて予測窓長を動的に決め、因果性を保つ注意マスクで複数バイトを並列予測する。追加パラメータを増やさない推論高速化方式。",
   "semantic_scholar_id": "95462c2e9d2b2e6ee6ccc4a90965683e3fe92ee8",
   "source_url": "https://arxiv.org/abs/2608.15454",
-  "status": "ready",
+  "status": "superseded",
   "title": "Dynamic Multi-Byte Prediction With Hierarchical Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T06:46:19+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.15454-dynamic-multi-byte-prediction-with-hierarchical-language-models.md",
+  "represented_canonical_id": "arXiv:2608.15454",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（844本）
+## 自動生成の論文一覧（847本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -722,6 +722,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   高帯域フラッシュを巨大モデル重みの近接容量層として使い、動的読み出し結合・更新隔離・読み出し専用変換表で従来方式比六・二倍の復号処理量を実現する。
 
+- **2026-08 · [Dynamic Multi-Byte Prediction With Hierarchical Language Models](2026-2608.15454-dynamic-multi-byte-prediction-with-hierarchical-language-models.md)**  
+  実装：[✓](https://github.com/skai-research/lca-multibyte) ・ リポジトリ内被引用：0  
+  モデル内部の圧縮と、外部へ文字列を生成する速度の間にギャップが残る。外部FlexiTokensモデルで検証すると、検証器の出力を保ちながら2.1〜2.3倍の生成スループットが報告される。
+
 - **2026-08 · [CubicQuant: Parametric Non-Uniform Codebooks for High-Throughput LLM Inference with 1-8-Bit Weights](2026-2608.06763-cubicquant-parametric-non-uniform-codebooks-for-high-throughput-llm-infe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究が扱うのは、大規模言語モデル（LLM）の重みをGPUメモリに置き、自己回帰復号の各段階で行列演算に供給する際の表現形式である。提案形式は、1〜8ビットの重み符号を連続したビット列へ保存し、重み群ごとに尺度 s と二つの形状係数 a,b を付加する。
@@ -977,6 +981,10 @@
 - **2026-06 · [CHERRY: Compressed Hierarchical Experts with Recurrent Representational Yield](2026-2606.31796-cherry-compressed-hierarchical-experts-with-recurrent-representational-y.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   学習済みモデルの隣接層を平均してパラメータを圧縮し、同じ層を複数回使う再帰的深さ変換（Recurrent Depth Transformation; RDT）で有効深さを回復する。1B級の韓国語モデルで、重要トークン比率は平均15.3%。
+
+- **2026-06 · [BitNet Text Embeddings](2026-2606.25674-bitnet-text-embeddings.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  従来の量子化研究はモデル本体の低ビット化に偏りがちで、ベクトルの保存精度を下げると検索の類似度構造が崩れることもある。
 
 - **2026-06 · [BatchGen: An Architecture for Scalable and Efficient Batch Inference](2026-2606.21712-batchgen-an-architecture-for-scalable-and-efficient-batch-inference.md)**  
   実装：[✓](https://github.com/batchgen-project/batchgen) ・ リポジトリ内被引用：0  
@@ -3021,6 +3029,10 @@
 - **2024-06 · [On Efficient Language and Vision Assistants for Visually-Situated Natural Language Understanding: What Matters in Reading and Reasoning](2024-2406.11823-on-efficient-language-and-vision-assistants-for-visually-situated-natura.md)**  
   実装：[✓](https://github.com/naver-ai/elva) ・ リポジトリ内被引用：0  
   本論文は、視覚と言語を組み合わせた助手（Vision-Language Assistant; VLA）が文書画像を理解する際の推論資源を削減しながら、画像中の文字を読み取る精度を維持するためのモデル設計を調べる。
+
+- **2024-06 · [Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other](2024-2406.16299-compensate-quantization-errors-make-weights-hierarchical-to-compensate-e.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの事後量子化（PTQ）は、学習済みの重みを低ビット整数へ丸めることでモデルのメモリ・帯域を減らす。
 
 - **2024-05 · [Task-agnostic Distillation of Encoder-Decoder Language Models](2024-2305.12330-task-agnostic-distillation-of-encoder-decoder-language-models.md)**  
   実装：[✓](https://github.com/GeneZC/MiniEnD) ・ リポジトリ内被引用：0  
