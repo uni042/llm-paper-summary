@@ -70,10 +70,7 @@ def _needs_paper_path_normalization(root: Path) -> bool:
         value = _read(path, {})
         if not isinstance(value, dict) or value.get("type") != "research":
             continue
-        if value.get("paper_path") is None and any(
-            isinstance(value.get(key), str) and str(value.get(key)).strip()
-            for key in ("canonical_id", "source_url", "title")
-        ):
+        if normalize_research_paper_paths.needs_normalization(value):
             return True
     return False
 
