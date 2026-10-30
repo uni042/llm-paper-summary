@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T12:54:40+00:00",
-  "record_count": 12600,
+  "updated_at": "2026-10-30T13:55:19+00:00",
+  "record_count": 12604,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181314,6 +181314,60 @@
       "last_checked_at": "2026-10-30T12:54:40+00:00",
       "linked_from": [],
       "title": "LLMs on a Budget: System-Level Approaches to Power-Efficient and Scalable Fine-Tuning"
+    },
+    "arXiv:2601.11164": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.11164",
+      "identity_tokens": [
+        "arXiv:2601.11164"
+      ],
+      "reason": "SoLA-VisionはImageNet-1Kと密な画像予測タスクを主対象とする純粋な視覚バックボーンで、線形注意とsoftmax注意の層別混合を研究する。一次要旨に生成LLM推論、KVキャッシュ、LLMサービングへの適用はなく、本サーベイのLLM推論システムの直接対象外。",
+      "first_checked_at": "2026-10-30T13:55:13+00:00",
+      "last_checked_at": "2026-10-30T13:55:13+00:00",
+      "linked_from": [],
+      "title": "SoLA-Vision: Fine-grained Layer-wise Linear Softmax Hybrid Attention"
+    },
+    "arXiv:2604.04901": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.04901",
+      "identity_tokens": [
+        "arXiv:2604.04901"
+      ],
+      "reason": "FileGramEngineの行動トレース合成、FileGramBenchの個人化記憶評価、FileGramOSの手続き・意味・エピソード記憶構築を中心とするエージェント個人化研究。一次要旨はファイルシステム行動に基づく記憶品質・評価が主題で、LLM推論速度・メモリ階層・サービングの最適化を示していない。",
+      "first_checked_at": "2026-10-30T13:55:13+00:00",
+      "last_checked_at": "2026-10-30T13:55:13+00:00",
+      "linked_from": [],
+      "title": "FileGram: Grounding Agent Personalization in File-System Behavioral Traces"
+    },
+    "arXiv:2505.15727": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.15727",
+      "identity_tokens": [
+        "arXiv:2505.15727"
+      ],
+      "reason": "VocalBenchは英語・中国語の音声対話約24,000例で意味、音響、会話行動、頑健性を27モデルに評価するベンチマーク。一次要旨の貢献は対話能力と環境音への頑健性の比較であり、LLM推論速度・メモリ・カーネル・サービング資源を改善する技術ではないためunrelated。",
+      "first_checked_at": "2026-10-30T13:55:16+00:00",
+      "last_checked_at": "2026-10-30T13:55:16+00:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "title": "VocalBench: Benchmarking the Vocal Conversational Abilities for Speech Interaction Models"
+    },
+    "arXiv:2508.04953": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2508.04953",
+      "identity_tokens": [
+        "arXiv:2508.04953"
+      ],
+      "reason": "グラフマッチングにより深層学習ジョブのGPU配置・移動費用を最適化するクラスタスケジューラ。一次本文の実機・シミュレーションは学習ジョブのJCT最大1.62倍、makespan最大1.15倍の改善を報告。対象は主としてDLトレーニングのジョブ配置で、LLM生成推論、KVキャッシュ、量子化、推論SLOを直接扱わないためunrelated。",
+      "first_checked_at": "2026-10-30T13:55:19+00:00",
+      "last_checked_at": "2026-10-30T13:55:19+00:00",
+      "linked_from": [],
+      "title": "Tesserae: Scalable Placement Policies for Deep Learning Workloads"
     }
   }
 }

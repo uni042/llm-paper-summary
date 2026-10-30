@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ff95657d0622bf8b-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2508.04953",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2508.04953",
+    "identity_tokens": [
+      "arXiv:2508.04953"
+    ],
+    "reason": "グラフマッチングにより深層学習ジョブのGPU配置・移動費用を最適化するクラスタスケジューラ。一次本文の実機・シミュレーションは学習ジョブのJCT最大1.62倍、makespan最大1.15倍の改善を報告。対象は主としてDLトレーニングのジョブ配置で、LLM生成推論、KVキャッシュ、量子化、推論SLOを直接扱わないためunrelated。",
+    "first_checked_at": "2026-10-30T13:55:19+00:00",
+    "last_checked_at": "2026-10-30T13:55:19+00:00",
+    "linked_from": [],
+    "title": "Tesserae: Scalable Placement Policies for Deep Learning Workloads"
+  },
+  "processed_at": "2026-10-30T13:55:19+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ff95657d0622",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
