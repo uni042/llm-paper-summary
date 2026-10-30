@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r05",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.914",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.914",
+        "arXiv:2507.20030"
+      ],
+      "title": "FAEDKV: Infinite-Window Fourier Transform for Unbiased KV Cache Compression",
+      "reason": "arXiv一次要旨はKVを周波数領域へ写像するInfinite-Window Fourier Transformで古いトークンと新しいトークンの寄与を均等に保つ、追加学習不要のKV圧縮FAEDKVを提案。長文脈推論時のKVメモリ削減と品質保持が直接の対象。",
+      "source_url": "https://arxiv.org/abs/2507.20030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 59
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14630",
+      "identity_tokens": [
+        "arXiv:2607.14630"
+      ],
+      "title": "Cross-Layer Error Compensation and Finite-Sample Feature-Statistics Matching for Extreme Low-Bit Quantization of Large Language Models",
+      "reason": "arXiv著者要旨は層ごとのPTQ誤差が深さ方向に累積する問題に対し、層間誤差伝播の補償と有限標本の特徴統計の整合を同時最適化する低ビットLLM量子化を提案。LLM配備時の重みメモリ削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2607.14630",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 60
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.40070",
+      "identity_tokens": [
+        "arXiv:2609.40070"
+      ],
+      "title": "Inference Auctions",
+      "reason": "arXiv一次要旨はLLM APIの推論計算が逼迫した際に、利用者の待ち時間許容度と予算に応じて優先度を競売で配分する仕組みを提案。推論サービスのキュー順序・価格・遅延に関連するが、GPUカーネルやモデル計算の削減より経済メカニズム設計が主目的のためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.40070",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 63
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34330",
+      "identity_tokens": [
+        "arXiv:2609.34330"
+      ],
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "reason": "arXiv著者要旨は視覚トークンの冗長性に対し、意味消去モデルから導いた相互情報量被覆目的で、LLM投入前の候補選択とタスク依存選択を行う学習不要の2段階視覚トークン枝刈りMiCoを提案。MLLM推論計算量の削減が直接の対象。",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "Multimodal LLM Inference",
+        "Token Pruning"
+      ],
+      "worklist_rank": 64
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.12422",
+      "identity_tokens": [
+        "arXiv:2607.12422"
+      ],
+      "title": "Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting",
+      "reason": "arXiv一次要旨は同一バックボーンのLoRA型ブロック拡散ドラフトPEFT-BDを検証し、トークナイザ一致・追加モデル不要という利点にもかかわらず投機的復号の受理率と速度に負の結果が生じることを報告。効率的ドラフト設計の失敗条件を明らかにする直接的なLLM推論研究。",
+      "source_url": "https://arxiv.org/abs/2607.12422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Diffusion LLM Inference"
+      ],
+      "worklist_rank": 65
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.28418",
+      "identity_tokens": [
+        "arXiv:2607.28418"
+      ],
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "reason": "arXiv一次要旨はトークンごとにGQAのquery-head群とFFNチャネル群を動的に選ぶ幅枝刈りと、GPUタイルに整合したカーネルを共同設計するWIDEを提案。prefillとdecode双方の推論計算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.28418",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "Structured Pruning",
+        "Hardware Accelerators"
+      ],
+      "worklist_rank": 66
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37538",
+      "identity_tokens": [
+        "arXiv:2609.37538"
+      ],
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "reason": "arXiv一次要旨は疎注意でも全KVのCPU→GPU転送がボトルネックになる問題に対し、HBM常駐KVとの照合、非均等H2D転送の分散、頻繁に使うKVの保持を統合するAVSG演算子を提案。長文脈サービングのKVオフロードとGPUメモリ階層最適化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Sparse Attention"
+      ],
+      "worklist_rank": 67
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02032",
+      "identity_tokens": [
+        "arXiv:2608.02032"
+      ],
+      "title": "DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling",
+      "reason": "arXiv一次要旨はMamba-2のSSM状態を圧縮された連想KVキャッシュと解釈し、再帰状態からtoken条件付きキーと値を復元して注意型の検索を可能にするDARTを提案。長文脈でのコンパクトな状態と注意検索の両立を狙う効率的言語モデルアーキテクチャ研究。",
+      "source_url": "https://arxiv.org/abs/2608.02032",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "Long-context Inference",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 68
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34380",
+      "identity_tokens": [
+        "arXiv:2609.34380"
+      ],
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "reason": "arXiv一次要旨は要求急増でKVが増える際、通常時の高精度重みを低精度の入れ子表現へ切替え、空いた重み領域をKVキャッシュへ転用するDPSを提案。重みメモリとKVメモリの動的配分を同時に扱うLLMサービング機構。",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 70
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37261",
+      "identity_tokens": [
+        "arXiv:2609.37261"
+      ],
+      "title": "Efficiently Approximating Attention Is Hard",
+      "reason": "arXiv一次要旨は任意入力に一様な近似誤差保証を与える注意計算について、標準的計算量仮定の下で真に劣二次時間の近似アルゴリズムが存在しないことを示す理論研究。効率的注意設計の限界に関連するが、実機LLM推論速度の改善を報告するシステム論文ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.37261",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:38:27+09:00",
+      "last_checked_at": "2026-10-30T15:38:27+09:00",
+      "linked_from": [
+        "Sparse Attention",
+        "Long-context Inference"
+      ],
+      "worklist_rank": 71
+    }
+  ]
+}
