@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T14:18:16+00:00",
+  "generated_at": "2026-10-30T16:56:41+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 86,
+  "count": 85,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2014,34 +2014,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-703540ccc498--libfile_6a9ecbb3c28881918df1799eef39f5eb--2026-doi-10.1109-csnt69054.2026.11502509-int8-speculative-commodity-gpu-research-20261030-1230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-703540ccc498--libfile_6a9ecbb3c28881918df1799eef39f5eb--2026-doi-10.1109-csnt69054.2026.11502509-int8-speculative-commodity-gpu-research-20261030.json",
       "worker_run_key": "20261030-1230-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1007/s11432-024-4487-8",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T07:27:04+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6518,
-        "body_paragraphs": 29,
-        "method_chars": 1833,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8aed8f040ce8--libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8aed8f040ce8--libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30.json",
-      "worker_run_key": "20261030-1530-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3771563",

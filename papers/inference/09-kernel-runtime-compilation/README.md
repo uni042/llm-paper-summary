@@ -883,7 +883,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-11〜2022-10）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：721  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：720  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -897,7 +897,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 6年前（2020-11〜2021-10）
 
 - **2021-02 · [TurboTransformers: An Efficient GPU Serving System For Transformer Models](2021-2010.05680-turbotransformers-an-efficient-gpu-serving-system-for-transformer-models.md)**  
-  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：35  
+  実装：[✓](https://github.com/Tencent/TurboTransformers) ・ リポジトリ内被引用：34  
   提案システムは、GEMM（行列積）間の演算融合とSoftmax・LayerNormの並列縮約、系列長を受け取ってから行う中間領域の再利用、実測コストを使う動的計画法による要求バッチ分割を組み合わせる。
 
 - **2021-03 · [Random Feature Attention](2021-2103.02143-random-feature-attention.md)**  

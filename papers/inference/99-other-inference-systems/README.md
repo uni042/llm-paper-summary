@@ -3269,7 +3269,7 @@
   AltUp（Alternating Updates）は、表現の幅と層内部の演算幅を分離し、幅Kdの状態を保持しながら各層で実際にTransformerを通すのはd次元の部分ブロック一つに限る方式である。NeurIPS 2023採択論文のT5実験では、同じ予測精度を持つ密なTransformerに対して最大87%の相対速度向上を報告する。
 
 - **2023-07 · [A Survey of Techniques for Optimizing Transformer Inference](2023-2307.07982-a-survey-of-techniques-for-optimizing-transformer-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：2  
   本論文は、Transformer推論を軽量化・高速化する手法を、モデルを作り直す方法から演算器の設計まで横断的に整理した43ページの文献調査である。例えばCoFiは引用元研究で約95%の疎性と約10倍の高速化を報告し、HMC-TranはV100のテンソルコアを利用するBERT-baseの92%疎性で3.68倍を報告する。
 
 - **2022-12 · [Linearizing Transformer with Key-Value Memory](2022-2203.12644-linearizing-transformer-with-key-value-memory.md)**  
@@ -3430,13 +3430,13 @@
   実装：✓ ・ リポジトリ内被引用：7  
   IntelliCode Composeは、統合開発環境（IDE）で入力途中のプログラムから一行規模の補完候補を提示するクラウド型のコード生成システムである。ただし編集類似度は84.1%から78.0%へ下がる。
 
-- **2019-11 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
-  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：7  
-  翻訳文全体を毎回捨てる反復改良方式とは異なり、高信頼の語を固定して低信頼位置へ文脈を提供する点が中心的な設計である。
-
 - **2020-06 · [Multi-Head Attention: Collaborate Instead of Concatenate](2020-2006.16362-multi-head-attention-collaborate-instead-of-concatenate.md)**  
   実装：[✓](https://github.com/epfml/collaborative-attention) ・ リポジトリ内被引用：6  
   標準的な多頭注意（Multi-Head 注意機構、MHA）は、複数の注意ヘッドに独立したクエリ射影とキー射影を与え、それぞれが計算した値を連結して出力する。単層のV100測定では設定次第で推論時間が2.28ミリ秒から1.75ミリ秒へ短縮した。
+
+- **2019-11 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-0bc18ef37a7d-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
+  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：6  
+  翻訳文全体を毎回捨てる反復改良方式とは異なり、高信頼の語を固定して低信頼位置へ文脈を提供する点が中心的な設計である。
 
 - **2020-06 · [$O(n)$ Connections are Expressive Enough: Universal Approximability of Sparse Transformers](2020-2006.04862-o-n-connections-are-expressive-enough-universal-approximability-of-spars.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -3453,7 +3453,7 @@
 ### 8年前（2018-11〜2019-10）
 
 - **2019-09 · [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](2019-1909.08053-megatron-lm-training-multi-billion-parameter-language-models-using-model.md)**  
-  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：325  
+  実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：324  
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
@@ -3481,7 +3481,7 @@
   Q8BERTは、事前学習済みBERTを特定の自然言語処理課題へ微調整する段階で量子化誤差を模擬し、推論時の8ビット整数演算へ適応させる研究である。著者はBERTの重みの99%以上を占める埋め込み層と全結合層を8ビット整数へ対応させ、残りの数値的に敏感な演算は32ビット浮動小数点に残す。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
-  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：16  
+  実装：[✓](https://github.com/facebookresearch/Mask-Predict) ・ リポジトリ内被引用：15  
   翻訳文の長さを最初に予測し、最初の反復では全位置を同時に予測する。2019年の機械翻訳実験では、WMT14英語→ドイツ語において基礎CMLMの10反復が27.03 BLEU、同等規模の自己回帰Transformerが27.74 BLEUとなった。
 
 - **2019-07 · [Large Memory Layers with Product Keys](2019-1907.05242-large-memory-layers-with-product-keys.md)**  
