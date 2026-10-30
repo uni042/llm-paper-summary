@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r10",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.31580",
+      "identity_tokens": [
+        "arXiv:2606.31580"
+      ],
+      "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge",
+      "reason": "エッジの複数要求下で推論途中終了の固定閾値が品質とSLOの両立を妨げる問題に対し、負荷依存の早期終了閾値と難度・負荷依存の思考予算配分を統合するLASERを提案。二つの推論モデルと4ベンチマークで平均遅延17〜38%減、SLO達成率3〜6%改善を報告。",
+      "source_url": "https://arxiv.org/abs/2606.31580",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 125,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.17336",
+      "identity_tokens": [
+        "arXiv:2608.17336"
+      ],
+      "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+      "reason": "長文脈prefillの注意行列をGPUタイル単位でFP16/INT8へ振り分け、共通のonline-softmax状態へ統合するTileMixを提案。ビットマスクで精度ルーティングを保持し、密なトークン接続とGQA・可変長バッチ・INT8 KVに対応。推論注意カーネルの精度・速度交換条件を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2608.17336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 128,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.03113",
+      "identity_tokens": [
+        "arXiv:2606.03113"
+      ],
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "reason": "自己投機的復号で出口層と草案長を固定すると文脈に応じた最適構成を選べない問題に対し、offline RLで各生成ステップの出口層・草案長を動的選択するLEDEを提案。Llama-2/3で通常decode比2.0〜2.7倍、静的投機的方式比さらに17%の高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 130,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2108.04962",
+      "identity_tokens": [
+        "arXiv:2108.04962"
+      ],
+      "title": "Adaptive Multi-Resolution Attention with Linear Complexity",
+      "reason": "クエリに応じて粗密の注意解像度を選び、カーネル注意で時間・メモリ計算量を線形にするAdaMRAを提案。長系列の効率的Transformerアーキテクチャとして関連するが、一次要旨では現代の生成LLMサービング・decodeカーネル・GPU実測の直接検証が不明であるため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2108.04962",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 131,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.04302",
+      "identity_tokens": [
+        "arXiv:2607.04302"
+      ],
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "reason": "Ascend NPU上でFlashAttentionのQK積とPV積をHIF4 4bit Cube GEMMへ落とし、softmax状態はFP16で維持するHiFA4。RoPE後のQ/K静的スケーリングとPV量子化に整合した正規化を組み合わせ、Qwen3-8B等で低精度による正解率低下を抑える。LLM推論注意カーネルの直接的な最適化。",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 132,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32395",
+      "identity_tokens": [
+        "arXiv:2609.32395"
+      ],
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "reason": "Transformerのprefix依存KVでは文脈の途中を再利用・削除すると後続再計算が必要な問題に対し、ブロック独立エンコーダとcross-attention readerからなるSMemを提案。ブロック単位で厳密な文脈結合・削除を可能にし、帯域律速時のdecode 1.4〜1.7倍高速化と削除の大幅短縮を報告。",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 135,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.08077",
+      "identity_tokens": [
+        "arXiv:2604.08077"
+      ],
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "reason": "VideoLLMで長時間動画の空間時間cubeを入力とし、クエリごとに参照cubeを選ぶAdaS-Attnと、重要トークンだけ処理するAdaS-FFNを組み合わせるAdaSpark。複雑さに応じたtop-p選択で最大57%のFLOPs削減を報告し、動画MLLM推論の演算量最適化に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 136,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.06834",
+      "identity_tokens": [
+        "arXiv:2510.06834"
+      ],
+      "title": "Vectorized FlashAttention with Low-cost Exponential Computation in RISC-V Vector Processors",
+      "reason": "RISC-VベクトルISAでFlashAttentionをベクトル化し、softmax指数関数の近似とタイル化で注意演算を高速化する。LLM推論カーネルへ応用可能なハードウェア実装研究だが、要旨では生成LLM全体のtoken/sやサービングSLOの評価が不明なため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2510.06834",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 138,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.03812",
+      "identity_tokens": [
+        "arXiv:2608.03812"
+      ],
+      "title": "OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models",
+      "reason": "音声・映像の冗長トークンをLLM投入前に構造的に圧縮し、LLM内部では質問条件付き意味選択でさらに整理するOmniPack。Qwen2.5-Omni-7Bで元性能98.0%を保ちながらFLOPsを16.7%に削減したと報告。omni-modal LLM推論の入力・内部トークン圧縮方式。",
+      "source_url": "https://arxiv.org/abs/2608.03812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 139,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.26177",
+      "identity_tokens": [
+        "arXiv:2609.26177"
+      ],
+      "title": "Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression",
+      "reason": "校正データや勾配計算を使わず、注意headの重み行ノルムの外れ値統計から重要headを判定するMagnitude ProfileとGQA対応MP-Gを提案。OPT・RoBERTa等でPPLと疎率を比較し、50%のhead削減で注意FLOPsを50%削減する。推論向け構造化head剪定に直接関係するが実測速度は要追加確認。",
+      "source_url": "https://arxiv.org/abs/2609.26177",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:12+09:00",
+      "last_checked_at": "2026-10-30T19:41:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 140,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}
