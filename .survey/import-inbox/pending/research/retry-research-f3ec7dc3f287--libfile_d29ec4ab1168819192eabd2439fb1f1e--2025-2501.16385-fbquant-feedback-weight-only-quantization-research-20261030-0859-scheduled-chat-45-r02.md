@@ -33,6 +33,8 @@ worker_run_key: '20261030-0847-scheduled-chat-45/r02'
 reference_main_sha: '722f9341f21f8624e004f33d7e327fc95a1f803d'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # FBQuant：負帰還付き低ランク補償とCUDA融合による重み専用量子化

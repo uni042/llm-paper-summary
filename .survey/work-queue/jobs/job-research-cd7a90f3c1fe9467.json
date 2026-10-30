@@ -35,10 +35,15 @@
   "selection_reason": "MemSizerは入力系列を低次元のKVメモリへ射影し、再帰的な逐次更新と軽量な多頭機構を組み合わせて生成時の計算量を系列長線形、推論メモリを定数にする。翻訳・要約・言語モデルで効率と精度を比較する。",
   "semantic_scholar_id": "1566d3de5321a27483f8dd26a2294634d43492e5",
   "source_url": "https://arxiv.org/abs/2203.12644",
-  "status": "ready",
+  "status": "superseded",
   "title": "Linearizing Transformer with Key-Value Memory",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2022
+  "year": 2022,
+  "superseded_at": "2026-10-30T01:44:55+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2022-2203.12644-linearizing-transformer-with-key-value-memory.md",
+  "represented_canonical_id": "arXiv:2203.12644",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

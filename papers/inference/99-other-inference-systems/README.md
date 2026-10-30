@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（835本）
+## 自動生成の論文一覧（836本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -3225,6 +3225,10 @@
 - **2022-01 · [Latency Adjustable Transformer Encoder for Language Understanding](2022-2201.03327-latency-adjustable-transformer-encoder-for-language-understanding.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Transformerの推論では、すべての入力トークンに対して各層の注意機構とFFNを実行する。
+
+- **2022-03 · [Linearizing Transformer with Key-Value Memory](2022-2203.12644-linearizing-transformer-with-key-value-memory.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MemSizerは、標準Transformerの自己注意を、入力系列長に依存しない少数のキー・値メモリへ置き換える軽量な系列生成モデルである。通常の自己注意では、クエリが過去の全キーを参照するため、系列が長いほど注意の計算とKV保存量が増える。MemSizerはキーを入力非依存の学習パラメータとし、値を入力系列から固定数のスロットへ集約する。
 
 - **2022-01 · [Fast Monte-Carlo Approximation of the Attention Mechanism](2022-2201.12854-fast-monte-carlo-approximation-of-the-attention-mechanism.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
