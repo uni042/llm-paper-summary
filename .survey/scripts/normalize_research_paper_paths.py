@@ -79,11 +79,14 @@ def normalize(repo_root: Path, *, apply: bool = False) -> dict[str, Any]:
         if job is None or job.get("type") != "research":
             continue
         scanned += 1
-        if not needs_normalization(job):
-            continue
         relative = path.relative_to(repo_root).as_posix()
-        if not _has_identity(job):
+        # Preserve the pre-existing contract: a Research job that is missing
+        # paper_path and also lacks any usable identity is unresolved, not a
+        # harmless no-op. Legacy-path detection applies only after this check.
+        if job.get("paper_path") is None and not _has_identity(job):
             unresolved_paths.append(relative)
+            continue
+        if not needs_normalization(job):
             continue
         try:
             # The resolver preserves explicit paths by design.  Clear only the
