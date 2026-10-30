@@ -1,0 +1,359 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8a1c1b2281162105-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8a1c1b228116",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2509.09560",
+    "arXiv:2604.04972",
+    "arXiv:2605.19506"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "657f0f7700bbf4878f9106381fd21c0e5c718cd3",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T19:12:28.869074+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2509.09560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.04972",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.19506",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RCP: Representation Consistency Pruner for Mitigating Distribution Shift in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.04972",
+      "year": 2026,
+      "published": "2026-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) suffer from prohibitive inference costs due to the massive number of visual tokens processed by the language decoder. Existing pruning methods often lead to significant performance degradation because the irreversible removal of visual tokens causes a distribution shift in the hidden states that deviates from the pre-trained full-token regime. To address this, we propose Representation Consistency Pruner, which we refer to as RCP, as a novel framework that integrates cumulative visual token pruning with a delayed repair mechanism. Specifically, we introduce a cross-attention pruner that leverages the intrinsic attention of the LLM as a baseline to predict cumulative masks, ensuring consistent and monotonic token reduction across layers. To compensate for the resulting information loss, we design a delayed repair adapter denoted as DRA, which caches the essence of pruned tokens and applies FiLM-based modulation specifically to the answer generation tokens. We employ a repair loss to match the first and second-order statistics of the pruned representations with a full-token teacher. RCP is highly efficient because it trains only lightweight plug-in modules while allowing for physical token discarding at inference. Extensive experiments on LVLM benchmarks demonstrate that RCP removes up to 88.9\\% of visual tokens and reduces FLOPs by up to 85.7\\% with only a marginal average accuracy drop, and outperforms prior methods that avoid fine-tuning the original model on several widely used benchmarks.",
+      "identifiers": [
+        "SemanticScholar:08bef870440ad5323a79e178df04255d9ef56912"
+      ],
+      "semantic_scholar_id": "08bef870440ad5323a79e178df04255d9ef56912",
+      "canonical_id": "arXiv:2604.04972",
+      "arxiv_id": "2604.04972",
+      "doi": "10.48550/arXiv.2604.04972",
+      "authors": [
+        "Jian-Wei Zhang",
+        "Chao-Ning Zhang",
+        "Si-Han Cao",
+        "Wangkun Liu",
+        "Peng-Cheng Zheng",
+        "Jia-Xin Huang",
+        "Cai-Yan Qin",
+        "Ya-Qiong Ye",
+        "Wei Dong",
+        "Yang Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.19506",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "First-person dynamic spatial reasoning requires models to track continuous motion and precise geometric structure, but the quadratic attention cost of Transformer-based Video-LLMs makes dense visual tokens computationally expensive. Existing token pruning paradigms predominantly rely on discrete static snapshots, failing to preserve the motion and geometric cues essential for reasoning. We propose Event Cascade Pruning (ECP), to our knowledge the first training-free framework that leverages the high-frequency motion cues from event cameras as a continuous event-guided motion prior to guide token selection. ECP combines three stages: Event-Triggered Causal Sampling to anchor motion-informative keyframes, Event-guided Motion Saliency Filtering to suppress event-inactive visual tokens, and Event-Attention Ranking Fusion to calibrate spatial attention with motion-salient dynamics. With 80% visual token reduction, ECP outperforms the full-token baseline (37.62% vs. 36.31%) while achieving 1.89x inference speedup and 52% GFLOPs reduction. We further introduce ESR-Real, the first real-world RGB-event benchmark for first-person spatial reasoning, where ECP improves accuracy by 2.68 percentage points over full-token baselines.",
+      "identifiers": [
+        "SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4"
+      ],
+      "semantic_scholar_id": "cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+      "canonical_id": "arXiv:2605.19506",
+      "arxiv_id": "2605.19506",
+      "doi": "10.48550/arXiv.2605.19506",
+      "authors": [
+        "Peng-Tao Ma",
+        "Ziliang Zhou",
+        "Ci-Yu Ruan",
+        "Hao-Yang Wang",
+        "Kaiyuan Li",
+        "Zihang Gong",
+        "Wen-Hua Ding",
+        "Chen Gao",
+        "Jin-Gao Xu",
+        "Xinlei Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Boosting Embodied AI Agents through Perception-Generation Disaggregation and Asynchronous Pipeline Execution",
+      "source_url": "https://arxiv.org/abs/2509.09560",
+      "year": 2025,
+      "published": "2025-09-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Embodied AI systems operate in dynamic environments, requiring seamless integration of perception and generation modules to process high-frequency input and output demands. Traditional sequential computation patterns, while effective in ensuring accuracy, face significant limitations in achieving the necessary\"thinking\"frequency for real-world applications. In this work, we present Auras, an algorithm-system co-designed inference framework to optimize the inference frequency of embodied AI agents. Auras disaggregates the perception and generation and provides controlled pipeline parallelism for them to achieve high and stable throughput. Faced with the data staleness problem that appears when the parallelism is increased, Auras establishes a public context for perception and generation to share, thereby promising the accuracy of embodied agents. Experimental results show that Auras improves throughput by 2.54x on average while achieving 102.7% of the original accuracy, demonstrating its efficacy in overcoming the constraints of sequential computation and providing high throughput.",
+      "identifiers": [
+        "SemanticScholar:615f1a22cd632792cdbbb410897a77dddf6f52a6"
+      ],
+      "semantic_scholar_id": "615f1a22cd632792cdbbb410897a77dddf6f52a6",
+      "canonical_id": "arXiv:2509.09560",
+      "arxiv_id": "2509.09560",
+      "doi": "10.48550/arXiv.2509.09560",
+      "authors": [
+        "Shulai Zhang",
+        "Ao Xu",
+        "Quan Chen",
+        "Han Zhao",
+        "Wei-Hao Cui",
+        "Ningxin Zheng",
+        "Hai-Bin Lin",
+        "Xin Liu",
+        "Min-Yi Guo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 414,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.04972",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.04972",
+        "id:SemanticScholar:08bef870440ad5323a79e178df04255d9ef56912",
+        "id:arXiv:2604.04972",
+        "title:rcp representation consistency pruner for mitigating distribution shift in large visionlanguage models",
+        "url:https://arxiv.org/abs/2604.04972"
+      ],
+      "record": {
+        "title": "RCP: Representation Consistency Pruner for Mitigating Distribution Shift in Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2604.04972",
+        "year": 2026,
+        "published": "2026-04-04",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) suffer from prohibitive inference costs due to the massive number of visual tokens processed by the language decoder. Existing pruning methods often lead to significant performance degradation because the irreversible removal of visual tokens causes a distribution shift in the hidden states that deviates from the pre-trained full-token regime. To address this, we propose Representation Consistency Pruner, which we refer to as RCP, as a novel framework that integrates cumulative visual token pruning with a delayed repair mechanism. Specifically, we introduce a cross-attention pruner that leverages the intrinsic attention of the LLM as a baseline to predict cumulative masks, ensuring consistent and monotonic token reduction across layers. To compensate for the resulting information loss, we design a delayed repair adapter denoted as DRA, which caches the essence of pruned tokens and applies FiLM-based modulation specifically to the answer generation tokens. We employ a repair loss to match the first and second-order statistics of the pruned representations with a full-token teacher. RCP is highly efficient because it trains only lightweight plug-in modules while allowing for physical token discarding at inference. Extensive experiments on LVLM benchmarks demonstrate that RCP removes up to 88.9\\% of visual tokens and reduces FLOPs by up to 85.7\\% with only a marginal average accuracy drop, and outperforms prior methods that avoid fine-tuning the original model on several widely used benchmarks.",
+        "identifiers": [
+          "SemanticScholar:08bef870440ad5323a79e178df04255d9ef56912"
+        ],
+        "semantic_scholar_id": "08bef870440ad5323a79e178df04255d9ef56912",
+        "canonical_id": "arXiv:2604.04972",
+        "arxiv_id": "2604.04972",
+        "doi": "10.48550/arXiv.2604.04972",
+        "authors": [
+          "Jian-Wei Zhang",
+          "Chao-Ning Zhang",
+          "Si-Han Cao",
+          "Wangkun Liu",
+          "Peng-Cheng Zheng",
+          "Jia-Xin Huang",
+          "Cai-Yan Qin",
+          "Ya-Qiong Ye",
+          "Wei Dong",
+          "Yang Yang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 209,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.19506",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.19506",
+        "id:SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+        "id:arXiv:2605.19506",
+        "title:eventprune cascaded eventassisted token pruning for efficient firstperson dynamic spatial reasoning",
+        "url:https://arxiv.org/abs/2605.19506"
+      ],
+      "record": {
+        "title": "EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.19506",
+        "year": 2026,
+        "published": "2026-05-19",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "First-person dynamic spatial reasoning requires models to track continuous motion and precise geometric structure, but the quadratic attention cost of Transformer-based Video-LLMs makes dense visual tokens computationally expensive. Existing token pruning paradigms predominantly rely on discrete static snapshots, failing to preserve the motion and geometric cues essential for reasoning. We propose Event Cascade Pruning (ECP), to our knowledge the first training-free framework that leverages the high-frequency motion cues from event cameras as a continuous event-guided motion prior to guide token selection. ECP combines three stages: Event-Triggered Causal Sampling to anchor motion-informative keyframes, Event-guided Motion Saliency Filtering to suppress event-inactive visual tokens, and Event-Attention Ranking Fusion to calibrate spatial attention with motion-salient dynamics. With 80% visual token reduction, ECP outperforms the full-token baseline (37.62% vs. 36.31%) while achieving 1.89x inference speedup and 52% GFLOPs reduction. We further introduce ESR-Real, the first real-world RGB-event benchmark for first-person spatial reasoning, where ECP improves accuracy by 2.68 percentage points over full-token baselines.",
+        "identifiers": [
+          "SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4"
+        ],
+        "semantic_scholar_id": "cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+        "canonical_id": "arXiv:2605.19506",
+        "arxiv_id": "2605.19506",
+        "doi": "10.48550/arXiv.2605.19506",
+        "authors": [
+          "Peng-Tao Ma",
+          "Ziliang Zhou",
+          "Ci-Yu Ruan",
+          "Hao-Yang Wang",
+          "Kaiyuan Li",
+          "Zihang Gong",
+          "Wen-Hua Ding",
+          "Chen Gao",
+          "Jin-Gao Xu",
+          "Xinlei Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 164,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.09560",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.09560",
+        "id:SemanticScholar:615f1a22cd632792cdbbb410897a77dddf6f52a6",
+        "id:arXiv:2509.09560",
+        "title:boosting embodied ai agents through perceptiongeneration disaggregation and asynchronous pipeline execution",
+        "url:https://arxiv.org/abs/2509.09560"
+      ],
+      "record": {
+        "title": "Boosting Embodied AI Agents through Perception-Generation Disaggregation and Asynchronous Pipeline Execution",
+        "source_url": "https://arxiv.org/abs/2509.09560",
+        "year": 2025,
+        "published": "2025-09-11",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Embodied AI systems operate in dynamic environments, requiring seamless integration of perception and generation modules to process high-frequency input and output demands. Traditional sequential computation patterns, while effective in ensuring accuracy, face significant limitations in achieving the necessary\"thinking\"frequency for real-world applications. In this work, we present Auras, an algorithm-system co-designed inference framework to optimize the inference frequency of embodied AI agents. Auras disaggregates the perception and generation and provides controlled pipeline parallelism for them to achieve high and stable throughput. Faced with the data staleness problem that appears when the parallelism is increased, Auras establishes a public context for perception and generation to share, thereby promising the accuracy of embodied agents. Experimental results show that Auras improves throughput by 2.54x on average while achieving 102.7% of the original accuracy, demonstrating its efficacy in overcoming the constraints of sequential computation and providing high throughput.",
+        "identifiers": [
+          "SemanticScholar:615f1a22cd632792cdbbb410897a77dddf6f52a6"
+        ],
+        "semantic_scholar_id": "615f1a22cd632792cdbbb410897a77dddf6f52a6",
+        "canonical_id": "arXiv:2509.09560",
+        "arxiv_id": "2509.09560",
+        "doi": "10.48550/arXiv.2509.09560",
+        "authors": [
+          "Shulai Zhang",
+          "Ao Xu",
+          "Quan Chen",
+          "Han Zhao",
+          "Wei-Hao Cui",
+          "Ningxin Zheng",
+          "Hai-Bin Lin",
+          "Xin Liu",
+          "Min-Yi Guo"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 414,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bc76b7d96ecfc83925b8a83fe768b60e98e3c1d29873f5ac267bdde70f6da32d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

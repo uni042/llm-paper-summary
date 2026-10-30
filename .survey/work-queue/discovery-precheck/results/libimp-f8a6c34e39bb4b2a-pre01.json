@@ -1,0 +1,756 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f8a6c34e39bb4b2a-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f8a6c34e39bb",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/cisce69494.2026.11504731",
+    "DOI:10.1109/colcom71387.2026.11703501",
+    "DOI:10.1109/iccd63220.2024.00103",
+    "DOI:10.1109/iceic61013.2024.10457111",
+    "DOI:10.1145/3689031.3696087",
+    "arXiv:2306.01841",
+    "arXiv:2505.10413",
+    "arXiv:2603.04162"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "657f0f7700bbf4878f9106381fd21c0e5c718cd3",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T19:12:22.655204+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/cisce69494.2026.11504731",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/colcom71387.2026.11703501",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iccd63220.2024.00103",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/iceic61013.2024.10457111",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3689031.3696087",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2306.01841",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.10413",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.04162",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Multi-Objective Scheduling for Large Language Model Inference with Prompt-Level Cost Prediction and SLO Awareness",
+      "source_url": "https://doi.org/10.1109/CISCE69494.2026.11504731",
+      "year": 2026,
+      "published": "2026-03-27",
+      "venue": "2026 IEEE 8th International Conference on Communications, Information System and Computer Engineering (CISCE)",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference in multitenant clouds is becoming an increasingly important contributor to data-center carbon emissions, yet existing carbon-aware scheduling techniques target long-running training jobs and are illsuited for the short, bursty, SLO-sensitive nature of online serving. We propose CAPS (Carbon-Aware Prompt Scheduling), an online bi-objective scheduler that jointly optimizes goodput and perrequest carbon cost for multi-tenant LLM inference. CAPS first employs a lightweight prompt complexity predictor to estimate token generation cost and latency risk for each incoming request. It then combines real-time grid carbon intensity, GPU energy profiles, and per-tenant SLO tiers to route each request to one of three execution pools: a low-latency pool, a low-carbon pool, or a delay-tolerant batch pool. A composite reward function balances goodput, carbon emissions, and SLO violation rate. In trace-driven simulations using public conversation traces and regional carbon intensity data, CAPS reduces average carbon emissions per $\\mathbf{1 K}$ generated tokens by 26.8 % compared to round-robin scheduling while achieving an SLO attainment rate that matches or exceeds a dedicated SLO-aware baseline.",
+      "identifiers": [
+        "SemanticScholar:58e9ca37d0677b43f4558d5c3fbc62e0d89c73f8"
+      ],
+      "semantic_scholar_id": "58e9ca37d0677b43f4558d5c3fbc62e0d89c73f8",
+      "doi": "10.1109/CISCE69494.2026.11504731",
+      "canonical_id": "DOI:10.1109/CISCE69494.2026.11504731",
+      "authors": [
+        "Jiajing Liao",
+        "Feng Chang",
+        "Yihan Xue",
+        "Tian Xia",
+        "Zeyu Huang",
+        "Yuxiao Wang"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 217,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model",
+      "source_url": "https://arxiv.org/abs/2603.04162",
+      "year": 2026,
+      "published": "2026-03-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Bielik-Q2-Sharp, the first systematic academic evaluation of extreme 2-bit quantization applied to a Polish large language model. Using Bielik-11B-v2.3-Instruct (11B parameters, Mistral architecture) as our base model, we compare six state-of-the-art post-training quantization methods -- QuIP#, SpinQuant+GPTQ, ButterflyQuant, QTIP, VPTQ, and AQLM -- all calibrated on a Polish-language corpus (CulturaX-PL) with shared Hessian matrices. Our best variant (QuIP# E8P12) achieves 71.92% across 22 Polish benchmarks versus 72.07% for the IQ2_XXS baseline -- within statistical noise, at a modest size premium (3.26 GB vs. ~2.6 GB). On eq_bench, our method scores 47.14 versus 43.53 (+3.6pp), suggesting superior preservation of higher-order reasoning. QTIP achieves the best per-bit efficiency (79.4% MC acc_norm at ~2.4 bpw, 3.27 GB), matching VPTQ's quality at 35% smaller size. We additionally document a MC-generation dissociation phenomenon where rotation-based methods preserve log-likelihood quality but fail catastrophically at autoregressive generation. The entire project was conducted by a single independent researcher on cloud GPUs (vast.ai) within a $285 budget. All models, Hessians, and evaluation logs are publicly available.",
+      "identifiers": [
+        "SemanticScholar:e346cc4f590fde9366629370de9f772ea11c1239"
+      ],
+      "semantic_scholar_id": "e346cc4f590fde9366629370de9f772ea11c1239",
+      "canonical_id": "arXiv:2603.04162",
+      "arxiv_id": "2603.04162",
+      "doi": "10.48550/arXiv.2603.04162",
+      "authors": [
+        "Jakub Prejzner"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 240,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Hierarchical Document Refinement for Long-context Retrieval-augmented Generation",
+      "source_url": "https://arxiv.org/abs/2505.10413",
+      "year": 2025,
+      "published": "2025-05-15",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 33,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Real-world RAG applications often encounter long-context input scenarios, where redundant information and noise results in higher inference costs and reduced performance. To address these challenges, we propose LongRefiner, an efficient plug-and-play refiner that leverages the inherent structural characteristics of long documents. LongRefiner employs dual-level query analysis, hierarchical document structuring, and adaptive refinement through multi-task learning on a single foundation model. Experiments on seven QA datasets demonstrate that LongRefiner achieves competitive performance in various scenarios while using 10x fewer computational costs and latency compared to the best baseline. Further analysis validates that LongRefiner is scalable, efficient, and effective, providing practical insights for real-world long-text RAG applications. Our code is available at https://github.com/ignorejjj/LongRefiner.",
+      "identifiers": [
+        "SemanticScholar:a71c99d3836007721e8e6194f9c52f17ca77187d"
+      ],
+      "semantic_scholar_id": "a71c99d3836007721e8e6194f9c52f17ca77187d",
+      "canonical_id": "arXiv:2505.10413",
+      "arxiv_id": "2505.10413",
+      "doi": "10.48550/arXiv.2505.10413",
+      "authors": [
+        "Jiajie Jin",
+        "Xiaoxi Li",
+        "Guan-Ting Dong",
+        "Yu-Yao Zhang",
+        "Yutao Zhu",
+        "Yongkang Wu",
+        "Zhonghua Li",
+        "Qi Ye",
+        "Zhi-Cheng Dou"
+      ],
+      "priority": 43,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 33,
+        "citation_count": 33,
+        "total": 43,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 533,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Binary and Ternary Natural Language Generation",
+      "source_url": "https://arxiv.org/abs/2306.01841",
+      "year": 2023,
+      "published": "2023-06-02",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Ternary and binary neural networks enable multiplication-free computation and promise multiple orders of magnitude efficiency gains over full-precision networks if implemented on specialized hardware. However, since both the parameter and the output space are highly discretized, such networks have proven very difficult to optimize. The difficulties are compounded for the class of transformer text generation models due to the sensitivity of the attention operation to quantization and the noise-compounding effects of autoregressive decoding in the high-cardinality output space. We approach the problem with a mix of statistics-based quantization for the weights and elastic quantization of the activations and demonstrate the first ternary and binary transformer models on the downstream tasks of summarization and machine translation. Our ternary BART base achieves an R1 score of 41 on the CNN/DailyMail benchmark, which is merely 3.9 points behind the full model while being 16x more efficient. Our binary model, while less accurate, achieves a highly non-trivial score of 35.6. For machine translation, we achieved BLEU scores of 21.7 and 17.6 on the WMT16 En-Ro benchmark, compared with a full precision mBART model score of 26.8. We also compare our approach in the 8-bit activation setting, where our ternary and even binary weight models can match or outperform the best existing 8-bit weight models in the literature. Our code and models are available at: https://github.com/facebookresearch/Ternary_Binary_Transformer.",
+      "identifiers": [
+        "SemanticScholar:1cea4b269fb2d6a79c5a28af3ecf11a839663aa6"
+      ],
+      "semantic_scholar_id": "1cea4b269fb2d6a79c5a28af3ecf11a839663aa6",
+      "canonical_id": "arXiv:2306.01841",
+      "arxiv_id": "2306.01841",
+      "doi": "10.48550/arXiv.2306.01841",
+      "authors": [
+        "Ze-Chun Liu",
+        "Barlas Oğuz",
+        "Aasish Pappu",
+        "Yangyang Shi",
+        "Raghuraman Krishnamoorthi"
+      ],
+      "priority": 22,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 22,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1246,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Empirical Analysis of Small Language Model Quantization for CPU-Only Cloud Infrastructure",
+      "source_url": "https://doi.org/10.1109/COLCOM71387.2026.11703501",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "2026 IEEE Colombian Conference on Communications and Computing (COLCOM)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As Large Language Models (LLMs) grow in complexity, the hardware required to serve them often exceeds the capabilities of standard cloud instances and edge devices. This article investigates the efficacy of Small Language Models (SLMs) specifically Llama 3.2 (1B) and Qwen 2.5 (1.5B) as cost-effective alternatives when paired with modern quantization techniques. By conducting empirical benchmarks on Google Colab’s CPU-only infrastructure, we evaluate the trade-offs between 4-bit (Q4_K_M) and 8-bit (Q8_0) integer quantization against a high-precision baseline. Our results demonstrate that 4-bit quantization on a standard CPU provides up to a 120% increase in inference throughput for 1.5B parameter models compared to 8-bit variants, while maintaining a negligible system RAM footprint (under 1GB). This study identifies the “sweet spot” for local and restricted-resource AI deployment, proving that aggressive quantization of SLMs enables real-time, scalable AI performance on general-purpose hardware without the necessity for dedicated GPU acceleration.",
+      "identifiers": [
+        "SemanticScholar:636902bae0f83a4963f73167ce23d8543e07d525"
+      ],
+      "semantic_scholar_id": "636902bae0f83a4963f73167ce23d8543e07d525",
+      "doi": "10.1109/COLCOM71387.2026.11703501",
+      "canonical_id": "DOI:10.1109/COLCOM71387.2026.11703501",
+      "authors": [
+        "J. Sciammarelli"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SpaceFusion: Advanced Deep Learning Operator Fusion via Space-Mapping Graph",
+      "source_url": "https://doi.org/10.1145/3689031.3696087",
+      "year": 2025,
+      "published": "2025-03-30",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This work proposes SpaceFusion, an advanced scheduler for efficient deep learning operator fusion. First, we develop a novel abstraction, the Space-Mapping Graph (SMG), to holistically model the spatial information of both inter- and intra-operator dependencies. Subsequently, we introduce the spatial and temporal slicers to decompose the fused spaces defined in SMGs, generating fusion schedules by analyzing and transforming dependencies. Finally, we present auto-scheduling methods that use the slicers to automatically create high-performance fusion schedules tailored to specific hardware resource configurations. End-to-end performance evaluations reveal that SpaceFusion achieves up to 8.79x speedup (3.54x on average) over baseline implementations from Huggingface for Transformer models, and a maximum of 2.21x speedup compared to the state-of-the-art manually-tuned implementations powered by FlashAttention.",
+      "identifiers": [
+        "SemanticScholar:e75f7f0135aa3586bfb5be5f599837ad85ef08ff"
+      ],
+      "semantic_scholar_id": "e75f7f0135aa3586bfb5be5f599837ad85ef08ff",
+      "doi": "10.1145/3689031.3696087",
+      "canonical_id": "DOI:10.1145/3689031.3696087",
+      "authors": [
+        "Liang Zhu",
+        "Jian-Guo Yao",
+        "Hai-Bing Guan"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 579,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models",
+      "source_url": "https://doi.org/10.1109/ICCD63220.2024.00103",
+      "year": 2024,
+      "published": "2024-11-18",
+      "venue": "ICCD",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have evolved into Large Language Models (LLMs) by increasing model sizes to achieve higher accuracy, but they incur significant computational and memory costs. As quantization is a promising method to mitigate the huge cost of LLMs, the presence of outliers can lead to accuracy drops during quantization. Previous work pointed out LLMs have outliers only in specific input channels of activations. This suggests that per-input channel quantization would be beneficial, but it poses excessive computational overhead without optimization. To address these challenges, we propose a hardware and software co-design that mitigates the overhead of per-input channel quantization. We first propose AirGun, a quantization method that adaptively quantizes LLM modules. We observe that LLMs have high quantization sensitivity only in specific modules. Based on our observation, AirGun applies hardware-efficient per-tensor quantization for non-sensitive modules and per-input channel quantization for sensitive modules. For per-input channel quantization, we introduce early reconstruction and adaptive dyadic numbering, dismissing the overhead while exploiting its advantages. Additionally, we propose the AirGun accelerator that fully utilizes the advantages of AirGun. As a result, the AirGun accelerator achieves a 4.19 × speedup and 63.16 % lower energy consumption compared to the previous LM accelerator while achieving higher accuracy.",
+      "identifiers": [
+        "SemanticScholar:d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb"
+      ],
+      "semantic_scholar_id": "d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb",
+      "doi": "10.1109/ICCD63220.2024.00103",
+      "canonical_id": "DOI:10.1109/ICCD63220.2024.00103",
+      "authors": [
+        "Sungbin Kim",
+        "Hyunwuk Lee",
+        "Sungwoo Kim",
+        "Cheolhwan Kim",
+        "Won Woo Ro"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 711,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Searching Optimal Floating-Point Format for Sub-8-Bit Large Language Model Inference",
+      "source_url": "https://doi.org/10.1109/ICEIC61013.2024.10457111",
+      "year": 2024,
+      "published": "2024-01-28",
+      "venue": "International Conference on Electronics, Information and Communications",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have shown remarkable success in various natural language processing tasks. However, their extensive parameter count leads to significant memory and computational demands. To tackle these challenges, there is growing interest in employing post-training quantization (PTQ) with reduced-precision floating-point (FP) operations. Yet, the optimal FP configuration remains a topic of debate. Existing studies often overlook a thorough analysis of the diverse data distributions found in LLMs and the crucial design choice, denormal. In this paper, we conduct a comprehensive examination of the various data distributions within LLMs and the significance of denormal representation, presenting a mixed-format floating-point framework. Our proposed framework allows for sub-8-bit inference with minimal performance degradation in language modeling and reasoning tasks across a broad spectrum of LLMs.",
+      "identifiers": [
+        "SemanticScholar:308140c2f4fc532bb9c5baa17e512f0f94b7d175"
+      ],
+      "semantic_scholar_id": "308140c2f4fc532bb9c5baa17e512f0f94b7d175",
+      "doi": "10.1109/ICEIC61013.2024.10457111",
+      "canonical_id": "DOI:10.1109/ICEIC61013.2024.10457111",
+      "authors": [
+        "Youngdeok Hwang",
+        "Janghwan Lee",
+        "Jiwoong Park",
+        "Jieun Lim",
+        "Jungwook Choi"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1006,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/cisce69494.2026.11504731",
+      "identity_tokens": [
+        "id:DOI:10.1109/cisce69494.2026.11504731",
+        "id:SemanticScholar:58e9ca37d0677b43f4558d5c3fbc62e0d89c73f8",
+        "title:multiobjective scheduling for large language model inference with promptlevel cost prediction and slo awareness",
+        "url:https://doi.org/10.1109/CISCE69494.2026.11504731"
+      ],
+      "record": {
+        "title": "Multi-Objective Scheduling for Large Language Model Inference with Prompt-Level Cost Prediction and SLO Awareness",
+        "source_url": "https://doi.org/10.1109/CISCE69494.2026.11504731",
+        "year": 2026,
+        "published": "2026-03-27",
+        "venue": "2026 IEEE 8th International Conference on Communications, Information System and Computer Engineering (CISCE)",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) inference in multitenant clouds is becoming an increasingly important contributor to data-center carbon emissions, yet existing carbon-aware scheduling techniques target long-running training jobs and are illsuited for the short, bursty, SLO-sensitive nature of online serving. We propose CAPS (Carbon-Aware Prompt Scheduling), an online bi-objective scheduler that jointly optimizes goodput and perrequest carbon cost for multi-tenant LLM inference. CAPS first employs a lightweight prompt complexity predictor to estimate token generation cost and latency risk for each incoming request. It then combines real-time grid carbon intensity, GPU energy profiles, and per-tenant SLO tiers to route each request to one of three execution pools: a low-latency pool, a low-carbon pool, or a delay-tolerant batch pool. A composite reward function balances goodput, carbon emissions, and SLO violation rate. In trace-driven simulations using public conversation traces and regional carbon intensity data, CAPS reduces average carbon emissions per $\\mathbf{1 K}$ generated tokens by 26.8 % compared to round-robin scheduling while achieving an SLO attainment rate that matches or exceeds a dedicated SLO-aware baseline.",
+        "identifiers": [
+          "SemanticScholar:58e9ca37d0677b43f4558d5c3fbc62e0d89c73f8"
+        ],
+        "semantic_scholar_id": "58e9ca37d0677b43f4558d5c3fbc62e0d89c73f8",
+        "doi": "10.1109/CISCE69494.2026.11504731",
+        "canonical_id": "DOI:10.1109/CISCE69494.2026.11504731",
+        "authors": [
+          "Jiajing Liao",
+          "Feng Chang",
+          "Yihan Xue",
+          "Tian Xia",
+          "Zeyu Huang",
+          "Yuxiao Wang"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 217,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.04162",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.04162",
+        "id:SemanticScholar:e346cc4f590fde9366629370de9f772ea11c1239",
+        "id:arXiv:2603.04162",
+        "title:bielikq2sharp a comparative study of extreme 2bit quantization methods for a polish 11b language model",
+        "url:https://arxiv.org/abs/2603.04162"
+      ],
+      "record": {
+        "title": "Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model",
+        "source_url": "https://arxiv.org/abs/2603.04162",
+        "year": 2026,
+        "published": "2026-03-04",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present Bielik-Q2-Sharp, the first systematic academic evaluation of extreme 2-bit quantization applied to a Polish large language model. Using Bielik-11B-v2.3-Instruct (11B parameters, Mistral architecture) as our base model, we compare six state-of-the-art post-training quantization methods -- QuIP#, SpinQuant+GPTQ, ButterflyQuant, QTIP, VPTQ, and AQLM -- all calibrated on a Polish-language corpus (CulturaX-PL) with shared Hessian matrices. Our best variant (QuIP# E8P12) achieves 71.92% across 22 Polish benchmarks versus 72.07% for the IQ2_XXS baseline -- within statistical noise, at a modest size premium (3.26 GB vs. ~2.6 GB). On eq_bench, our method scores 47.14 versus 43.53 (+3.6pp), suggesting superior preservation of higher-order reasoning. QTIP achieves the best per-bit efficiency (79.4% MC acc_norm at ~2.4 bpw, 3.27 GB), matching VPTQ's quality at 35% smaller size. We additionally document a MC-generation dissociation phenomenon where rotation-based methods preserve log-likelihood quality but fail catastrophically at autoregressive generation. The entire project was conducted by a single independent researcher on cloud GPUs (vast.ai) within a $285 budget. All models, Hessians, and evaluation logs are publicly available.",
+        "identifiers": [
+          "SemanticScholar:e346cc4f590fde9366629370de9f772ea11c1239"
+        ],
+        "semantic_scholar_id": "e346cc4f590fde9366629370de9f772ea11c1239",
+        "canonical_id": "arXiv:2603.04162",
+        "arxiv_id": "2603.04162",
+        "doi": "10.48550/arXiv.2603.04162",
+        "authors": [
+          "Jakub Prejzner"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 240,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.10413",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.10413",
+        "id:SemanticScholar:a71c99d3836007721e8e6194f9c52f17ca77187d",
+        "id:arXiv:2505.10413",
+        "title:hierarchical document refinement for longcontext retrievalaugmented generation",
+        "url:https://arxiv.org/abs/2505.10413"
+      ],
+      "record": {
+        "title": "Hierarchical Document Refinement for Long-context Retrieval-augmented Generation",
+        "source_url": "https://arxiv.org/abs/2505.10413",
+        "year": 2025,
+        "published": "2025-05-15",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 33,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Real-world RAG applications often encounter long-context input scenarios, where redundant information and noise results in higher inference costs and reduced performance. To address these challenges, we propose LongRefiner, an efficient plug-and-play refiner that leverages the inherent structural characteristics of long documents. LongRefiner employs dual-level query analysis, hierarchical document structuring, and adaptive refinement through multi-task learning on a single foundation model. Experiments on seven QA datasets demonstrate that LongRefiner achieves competitive performance in various scenarios while using 10x fewer computational costs and latency compared to the best baseline. Further analysis validates that LongRefiner is scalable, efficient, and effective, providing practical insights for real-world long-text RAG applications. Our code is available at https://github.com/ignorejjj/LongRefiner.",
+        "identifiers": [
+          "SemanticScholar:a71c99d3836007721e8e6194f9c52f17ca77187d"
+        ],
+        "semantic_scholar_id": "a71c99d3836007721e8e6194f9c52f17ca77187d",
+        "canonical_id": "arXiv:2505.10413",
+        "arxiv_id": "2505.10413",
+        "doi": "10.48550/arXiv.2505.10413",
+        "authors": [
+          "Jiajie Jin",
+          "Xiaoxi Li",
+          "Guan-Ting Dong",
+          "Yu-Yao Zhang",
+          "Yutao Zhu",
+          "Yongkang Wu",
+          "Zhonghua Li",
+          "Qi Ye",
+          "Zhi-Cheng Dou"
+        ],
+        "priority": 43,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 33,
+          "citation_count": 33,
+          "total": 43,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 533,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2306.01841",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2306.01841",
+        "id:SemanticScholar:1cea4b269fb2d6a79c5a28af3ecf11a839663aa6",
+        "id:arXiv:2306.01841",
+        "title:binary and ternary natural language generation",
+        "url:https://arxiv.org/abs/2306.01841"
+      ],
+      "record": {
+        "title": "Binary and Ternary Natural Language Generation",
+        "source_url": "https://arxiv.org/abs/2306.01841",
+        "year": 2023,
+        "published": "2023-06-02",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Ternary and binary neural networks enable multiplication-free computation and promise multiple orders of magnitude efficiency gains over full-precision networks if implemented on specialized hardware. However, since both the parameter and the output space are highly discretized, such networks have proven very difficult to optimize. The difficulties are compounded for the class of transformer text generation models due to the sensitivity of the attention operation to quantization and the noise-compounding effects of autoregressive decoding in the high-cardinality output space. We approach the problem with a mix of statistics-based quantization for the weights and elastic quantization of the activations and demonstrate the first ternary and binary transformer models on the downstream tasks of summarization and machine translation. Our ternary BART base achieves an R1 score of 41 on the CNN/DailyMail benchmark, which is merely 3.9 points behind the full model while being 16x more efficient. Our binary model, while less accurate, achieves a highly non-trivial score of 35.6. For machine translation, we achieved BLEU scores of 21.7 and 17.6 on the WMT16 En-Ro benchmark, compared with a full precision mBART model score of 26.8. We also compare our approach in the 8-bit activation setting, where our ternary and even binary weight models can match or outperform the best existing 8-bit weight models in the literature. Our code and models are available at: https://github.com/facebookresearch/Ternary_Binary_Transformer.",
+        "identifiers": [
+          "SemanticScholar:1cea4b269fb2d6a79c5a28af3ecf11a839663aa6"
+        ],
+        "semantic_scholar_id": "1cea4b269fb2d6a79c5a28af3ecf11a839663aa6",
+        "canonical_id": "arXiv:2306.01841",
+        "arxiv_id": "2306.01841",
+        "doi": "10.48550/arXiv.2306.01841",
+        "authors": [
+          "Ze-Chun Liu",
+          "Barlas Oğuz",
+          "Aasish Pappu",
+          "Yangyang Shi",
+          "Raghuraman Krishnamoorthi"
+        ],
+        "priority": 22,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 22,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1246,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/colcom71387.2026.11703501",
+      "identity_tokens": [
+        "id:DOI:10.1109/colcom71387.2026.11703501",
+        "id:SemanticScholar:636902bae0f83a4963f73167ce23d8543e07d525",
+        "title:empirical analysis of small language model quantization for cpuonly cloud infrastructure",
+        "url:https://doi.org/10.1109/COLCOM71387.2026.11703501"
+      ],
+      "record": {
+        "title": "Empirical Analysis of Small Language Model Quantization for CPU-Only Cloud Infrastructure",
+        "source_url": "https://doi.org/10.1109/COLCOM71387.2026.11703501",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "2026 IEEE Colombian Conference on Communications and Computing (COLCOM)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As Large Language Models (LLMs) grow in complexity, the hardware required to serve them often exceeds the capabilities of standard cloud instances and edge devices. This article investigates the efficacy of Small Language Models (SLMs) specifically Llama 3.2 (1B) and Qwen 2.5 (1.5B) as cost-effective alternatives when paired with modern quantization techniques. By conducting empirical benchmarks on Google Colab’s CPU-only infrastructure, we evaluate the trade-offs between 4-bit (Q4_K_M) and 8-bit (Q8_0) integer quantization against a high-precision baseline. Our results demonstrate that 4-bit quantization on a standard CPU provides up to a 120% increase in inference throughput for 1.5B parameter models compared to 8-bit variants, while maintaining a negligible system RAM footprint (under 1GB). This study identifies the “sweet spot” for local and restricted-resource AI deployment, proving that aggressive quantization of SLMs enables real-time, scalable AI performance on general-purpose hardware without the necessity for dedicated GPU acceleration.",
+        "identifiers": [
+          "SemanticScholar:636902bae0f83a4963f73167ce23d8543e07d525"
+        ],
+        "semantic_scholar_id": "636902bae0f83a4963f73167ce23d8543e07d525",
+        "doi": "10.1109/COLCOM71387.2026.11703501",
+        "canonical_id": "DOI:10.1109/COLCOM71387.2026.11703501",
+        "authors": [
+          "J. Sciammarelli"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 59,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3689031.3696087",
+      "identity_tokens": [
+        "id:DOI:10.1145/3689031.3696087",
+        "id:SemanticScholar:e75f7f0135aa3586bfb5be5f599837ad85ef08ff",
+        "title:spacefusion advanced deep learning operator fusion via spacemapping graph",
+        "url:https://doi.org/10.1145/3689031.3696087"
+      ],
+      "record": {
+        "title": "SpaceFusion: Advanced Deep Learning Operator Fusion via Space-Mapping Graph",
+        "source_url": "https://doi.org/10.1145/3689031.3696087",
+        "year": 2025,
+        "published": "2025-03-30",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This work proposes SpaceFusion, an advanced scheduler for efficient deep learning operator fusion. First, we develop a novel abstraction, the Space-Mapping Graph (SMG), to holistically model the spatial information of both inter- and intra-operator dependencies. Subsequently, we introduce the spatial and temporal slicers to decompose the fused spaces defined in SMGs, generating fusion schedules by analyzing and transforming dependencies. Finally, we present auto-scheduling methods that use the slicers to automatically create high-performance fusion schedules tailored to specific hardware resource configurations. End-to-end performance evaluations reveal that SpaceFusion achieves up to 8.79x speedup (3.54x on average) over baseline implementations from Huggingface for Transformer models, and a maximum of 2.21x speedup compared to the state-of-the-art manually-tuned implementations powered by FlashAttention.",
+        "identifiers": [
+          "SemanticScholar:e75f7f0135aa3586bfb5be5f599837ad85ef08ff"
+        ],
+        "semantic_scholar_id": "e75f7f0135aa3586bfb5be5f599837ad85ef08ff",
+        "doi": "10.1145/3689031.3696087",
+        "canonical_id": "DOI:10.1145/3689031.3696087",
+        "authors": [
+          "Liang Zhu",
+          "Jian-Guo Yao",
+          "Hai-Bing Guan"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 579,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccd63220.2024.00103",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccd63220.2024.00103",
+        "id:SemanticScholar:d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb",
+        "title:airgun adaptive granularity quantization for accelerating large language models",
+        "url:https://doi.org/10.1109/ICCD63220.2024.00103"
+      ],
+      "record": {
+        "title": "AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models",
+        "source_url": "https://doi.org/10.1109/ICCD63220.2024.00103",
+        "year": 2024,
+        "published": "2024-11-18",
+        "venue": "ICCD",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have evolved into Large Language Models (LLMs) by increasing model sizes to achieve higher accuracy, but they incur significant computational and memory costs. As quantization is a promising method to mitigate the huge cost of LLMs, the presence of outliers can lead to accuracy drops during quantization. Previous work pointed out LLMs have outliers only in specific input channels of activations. This suggests that per-input channel quantization would be beneficial, but it poses excessive computational overhead without optimization. To address these challenges, we propose a hardware and software co-design that mitigates the overhead of per-input channel quantization. We first propose AirGun, a quantization method that adaptively quantizes LLM modules. We observe that LLMs have high quantization sensitivity only in specific modules. Based on our observation, AirGun applies hardware-efficient per-tensor quantization for non-sensitive modules and per-input channel quantization for sensitive modules. For per-input channel quantization, we introduce early reconstruction and adaptive dyadic numbering, dismissing the overhead while exploiting its advantages. Additionally, we propose the AirGun accelerator that fully utilizes the advantages of AirGun. As a result, the AirGun accelerator achieves a 4.19 × speedup and 63.16 % lower energy consumption compared to the previous LM accelerator while achieving higher accuracy.",
+        "identifiers": [
+          "SemanticScholar:d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb"
+        ],
+        "semantic_scholar_id": "d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb",
+        "doi": "10.1109/ICCD63220.2024.00103",
+        "canonical_id": "DOI:10.1109/ICCD63220.2024.00103",
+        "authors": [
+          "Sungbin Kim",
+          "Hyunwuk Lee",
+          "Sungwoo Kim",
+          "Cheolhwan Kim",
+          "Won Woo Ro"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 711,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iceic61013.2024.10457111",
+      "identity_tokens": [
+        "id:DOI:10.1109/iceic61013.2024.10457111",
+        "id:SemanticScholar:308140c2f4fc532bb9c5baa17e512f0f94b7d175",
+        "title:searching optimal floatingpoint format for sub8bit large language model inference",
+        "url:https://doi.org/10.1109/ICEIC61013.2024.10457111"
+      ],
+      "record": {
+        "title": "Searching Optimal Floating-Point Format for Sub-8-Bit Large Language Model Inference",
+        "source_url": "https://doi.org/10.1109/ICEIC61013.2024.10457111",
+        "year": 2024,
+        "published": "2024-01-28",
+        "venue": "International Conference on Electronics, Information and Communications",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have shown remarkable success in various natural language processing tasks. However, their extensive parameter count leads to significant memory and computational demands. To tackle these challenges, there is growing interest in employing post-training quantization (PTQ) with reduced-precision floating-point (FP) operations. Yet, the optimal FP configuration remains a topic of debate. Existing studies often overlook a thorough analysis of the diverse data distributions found in LLMs and the crucial design choice, denormal. In this paper, we conduct a comprehensive examination of the various data distributions within LLMs and the significance of denormal representation, presenting a mixed-format floating-point framework. Our proposed framework allows for sub-8-bit inference with minimal performance degradation in language modeling and reasoning tasks across a broad spectrum of LLMs.",
+        "identifiers": [
+          "SemanticScholar:308140c2f4fc532bb9c5baa17e512f0f94b7d175"
+        ],
+        "semantic_scholar_id": "308140c2f4fc532bb9c5baa17e512f0f94b7d175",
+        "doi": "10.1109/ICEIC61013.2024.10457111",
+        "canonical_id": "DOI:10.1109/ICEIC61013.2024.10457111",
+        "authors": [
+          "Youngdeok Hwang",
+          "Janghwan Lee",
+          "Jiwoong Park",
+          "Jieun Lim",
+          "Jungwook Choi"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1006,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:03dfcdee591889c75ed94dcea55e087570a41320622a751684eb41d897a2cc7b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

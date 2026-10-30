@@ -1,0 +1,494 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fef53cbe96637ac9-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fef53cbe9663",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/iccd63220.2024.00103",
+    "DOI:10.23919/date69613.2026.11592809",
+    "arXiv:2510.12721",
+    "arXiv:2603.17891",
+    "arXiv:2610.19605"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 5,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "657f0f7700bbf4878f9106381fd21c0e5c718cd3",
+  "raw_search_result_count": 5,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 5,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T19:12:37.594880+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/iccd63220.2024.00103",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.23919/date69613.2026.11592809",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.12721",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.17891",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19605",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.17891",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post training quantization is essential for deploying large language models (LLMs) on resource constrained hardware, yet state of the art methods enforce uniform bit widths across layers, yielding suboptimal accuracy efficiency trade offs. We present RAMP (Reinforcement Adaptive Mixed Precision), an off policy Soft Actor Critic framework that learns per layer bit width assignments to minimize perplexity under a global bit budget. The policy conditions on an 11 dimensional embedding of activation statistics, weight properties, and structural descriptors, enabling zero shot transfer across model families and scales. To enable stable sub 4 bit quantization, we introduce Scale Folding, a preconditioning technique that migrates activation outliers into weights via per channel scaling and normalization layer compensation. A quality prioritized reward with asymmetric penalties and budget cliffs drives rapid convergence. On Llama 2 7B, RAMP achieves 5.54 perplexity at 3.68GB (3.65 effective bits), outperforming uniform 4 bit AWQ (5.60 at 3.90 GB) and GPTQ by 6% in size and 1% to3% in quality. Critically, a policy trained only on Llama 2 7B generalizes zero shot to Llama 2 13B and Mistral 7B, often surpassing target specific training, supporting the hypothesis that quantization sensitivity is primarily architectural. The HALO pipeline exports allocations to GGUF format for kernel free inference on CPUs, GPUs, and edge devices, retaining 99.5% of FP16 commonsense reasoning performance.",
+      "identifiers": [
+        "SemanticScholar:d447a3bc0e20eb3a4b3f1478792d4d8e7ec6c2c7"
+      ],
+      "semantic_scholar_id": "d447a3bc0e20eb3a4b3f1478792d4d8e7ec6c2c7",
+      "canonical_id": "arXiv:2603.17891",
+      "arxiv_id": "2603.17891",
+      "doi": "10.48550/arXiv.2603.17891",
+      "authors": [
+        "Arpit Singh Gautam",
+        "Saurabh Jha"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression",
+      "source_url": "https://arxiv.org/abs/2510.12721",
+      "year": 2025,
+      "published": "2025-10-14",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) typically rely on a large number of parameters for token embedding, leading to substantial storage requirements and memory footprints. In particular, LLMs deployed on edge devices are memory-bound, and reducing the memory footprint by compressing the embedding layer not only frees up the memory bandwidth but also speeds up inference. To address this, we introduce CARVQ, a post-training novel Corrective Adaptor combined with group Residual Vector Quantization. CARVQ relies on the composition of both linear and non-linear maps and mimics the original model embedding to compress to approximately 1.6 bits without requiring specialized hardware to support lower-bit storage. We test our method on pre-trained LLMs such as LLaMA-3.2-1B, LLaMA-3.2-3B, LLaMA-3.2-3B-Instruct, LLaMA-3.1-8B, Qwen2.5-7B, Qwen2.5-Math-7B and Phi-4, evaluating on common generative, discriminative, math and reasoning tasks. We show that in most cases, CARVQ can achieve lower average bitwidth-per-parameter while maintaining reasonable perplexity and accuracy compared to scalar quantization. Our contributions include a novel compression technique that is compatible with state-of-the-art transformer quantization methods and can be seamlessly integrated into any hardware supporting 4-bit memory to reduce the model's memory footprint in memory-constrained devices. This work demonstrates a crucial step toward the efficient deployment of LLMs on edge devices.",
+      "identifiers": [
+        "SemanticScholar:5f933d8135454e1b753de200ec75d9c26135439c"
+      ],
+      "semantic_scholar_id": "5f933d8135454e1b753de200ec75d9c26135439c",
+      "canonical_id": "arXiv:2510.12721",
+      "arxiv_id": "2510.12721",
+      "doi": "10.18653/v1/2025.findings-emnlp.1009",
+      "authors": [
+        "Dayin Gou",
+        "Sanghyun Byun",
+        "Nilesh Malpeddi",
+        "G. de Micheli",
+        "Prathamesh Vaste",
+        "Jacob Song",
+        "Woo Seong Chung"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 381,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Late Breaking Results: DAIQUIRI: Dynamic Quantization with Layer-wise Sensitivity Ranking for Hardware-Efficient LLMs",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11592809",
+      "year": 2026,
+      "published": "2026-04-20",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) are widely used, but their high memory and compute demands make them difficult to deploy on low-power devices. Low-bit quantization reduces model size by converting full-precision weights into compact 2- or 3-bit formats, yet uniform low-bit quantization often forces a trade-off between efficiency and accuracy. In this work, we introduce DAIQUIRI, a dynamic low-bit quantization scheme that assigns bit-widths based on per-layer sensitivity. By using 2-bit precision for most layers and selectively applying 3-bit precision to more sensitive layers, DAIQUIRI maintains accuracy much higher than uniform 2-bit quantization while reducing energy, power, and latency compared to uniform 3-bit models. Experiments across multiple datasets and GPUs show that DAIQUIRI achieves accuracy close to the 3-bit baseline while using significantly fewer hardware resources, making it a practical and efficient solution for on-device LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:c560d0c06cfb0ffb534383455c30ecb241be1be2"
+      ],
+      "semantic_scholar_id": "c560d0c06cfb0ffb534383455c30ecb241be1be2",
+      "doi": "10.23919/DATE69613.2026.11592809",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11592809",
+      "authors": [
+        "Tanha Tasfia",
+        "Abu Kaisar Mohammad Masum",
+        "M. Moghadam",
+        "M. Najafi",
+        "Sercan Aygün"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 193,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PN-Mix: Pair-Norm Guided Mixed-Precision Key Cache Quantization for Efficient Long-Output LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.19605",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-output inference in large language models suffers from severe KV cache memory and bandwidth bottlenecks. While KV cache quantization alleviates this issue, low-bit quantization (e.g., 2-bit) severely degrades model accuracy. Recent mixed-precision key-cache quantization methods mitigate this degradation by allocating higher precision to important key channels, but estimate channel saliency using only key statistics. Through attention logit perturbation analysis at the RoPE channel-pair level, we show that quantization errors in channel pairs with large query--key pair-norm products contribute significantly to logit variation. Based on this insight, we propose PN-Mix, a mixed-precision key-cache quantization method for RoPE-based decoder-only LLMs, which allocates higher precision to salient channel pairs identified once during the prefill stage and reused throughout decoding. Across standard reasoning, code-generation, and AIME benchmarks, PN-Mix with 2.26-bit average precision achieves comparable or better average accuracy than prior mixed-precision methods using 2.32--2.39 bits. Furthermore, in our Pareto sweep, PN-Mix degrades gracefully down to 1.5 bits, whereas the compared baselines exhibit sharper performance drops below 2.25 bits.",
+      "identifiers": [
+        "SemanticScholar:398c42d4cc572ba693210f1d0f62ce2784981512"
+      ],
+      "semantic_scholar_id": "398c42d4cc572ba693210f1d0f62ce2784981512",
+      "canonical_id": "arXiv:2610.19605",
+      "arxiv_id": "2610.19605",
+      "authors": [
+        "Gi-joong Song",
+        "Sungjoo Yoo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models",
+      "source_url": "https://doi.org/10.1109/ICCD63220.2024.00103",
+      "year": 2024,
+      "published": "2024-11-18",
+      "venue": "ICCD",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based models have evolved into Large Language Models (LLMs) by increasing model sizes to achieve higher accuracy, but they incur significant computational and memory costs. As quantization is a promising method to mitigate the huge cost of LLMs, the presence of outliers can lead to accuracy drops during quantization. Previous work pointed out LLMs have outliers only in specific input channels of activations. This suggests that per-input channel quantization would be beneficial, but it poses excessive computational overhead without optimization. To address these challenges, we propose a hardware and software co-design that mitigates the overhead of per-input channel quantization. We first propose AirGun, a quantization method that adaptively quantizes LLM modules. We observe that LLMs have high quantization sensitivity only in specific modules. Based on our observation, AirGun applies hardware-efficient per-tensor quantization for non-sensitive modules and per-input channel quantization for sensitive modules. For per-input channel quantization, we introduce early reconstruction and adaptive dyadic numbering, dismissing the overhead while exploiting its advantages. Additionally, we propose the AirGun accelerator that fully utilizes the advantages of AirGun. As a result, the AirGun accelerator achieves a 4.19 × speedup and 63.16 % lower energy consumption compared to the previous LM accelerator while achieving higher accuracy.",
+      "identifiers": [
+        "SemanticScholar:d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb"
+      ],
+      "semantic_scholar_id": "d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb",
+      "doi": "10.1109/ICCD63220.2024.00103",
+      "canonical_id": "DOI:10.1109/ICCD63220.2024.00103",
+      "authors": [
+        "Sungbin Kim",
+        "Hyunwuk Lee",
+        "Sungwoo Kim",
+        "Cheolhwan Kim",
+        "Won Woo Ro"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 711,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.17891",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.17891",
+        "id:SemanticScholar:d447a3bc0e20eb3a4b3f1478792d4d8e7ec6c2c7",
+        "id:arXiv:2603.17891",
+        "title:ramp reinforcement adaptive mixed precision quantization for efficient on device llm inference",
+        "url:https://arxiv.org/abs/2603.17891"
+      ],
+      "record": {
+        "title": "RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference",
+        "source_url": "https://arxiv.org/abs/2603.17891",
+        "year": 2026,
+        "published": "2026-03-18",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post training quantization is essential for deploying large language models (LLMs) on resource constrained hardware, yet state of the art methods enforce uniform bit widths across layers, yielding suboptimal accuracy efficiency trade offs. We present RAMP (Reinforcement Adaptive Mixed Precision), an off policy Soft Actor Critic framework that learns per layer bit width assignments to minimize perplexity under a global bit budget. The policy conditions on an 11 dimensional embedding of activation statistics, weight properties, and structural descriptors, enabling zero shot transfer across model families and scales. To enable stable sub 4 bit quantization, we introduce Scale Folding, a preconditioning technique that migrates activation outliers into weights via per channel scaling and normalization layer compensation. A quality prioritized reward with asymmetric penalties and budget cliffs drives rapid convergence. On Llama 2 7B, RAMP achieves 5.54 perplexity at 3.68GB (3.65 effective bits), outperforming uniform 4 bit AWQ (5.60 at 3.90 GB) and GPTQ by 6% in size and 1% to3% in quality. Critically, a policy trained only on Llama 2 7B generalizes zero shot to Llama 2 13B and Mistral 7B, often surpassing target specific training, supporting the hypothesis that quantization sensitivity is primarily architectural. The HALO pipeline exports allocations to GGUF format for kernel free inference on CPUs, GPUs, and edge devices, retaining 99.5% of FP16 commonsense reasoning performance.",
+        "identifiers": [
+          "SemanticScholar:d447a3bc0e20eb3a4b3f1478792d4d8e7ec6c2c7"
+        ],
+        "semantic_scholar_id": "d447a3bc0e20eb3a4b3f1478792d4d8e7ec6c2c7",
+        "canonical_id": "arXiv:2603.17891",
+        "arxiv_id": "2603.17891",
+        "doi": "10.48550/arXiv.2603.17891",
+        "authors": [
+          "Arpit Singh Gautam",
+          "Saurabh Jha"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 226,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.12721",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.1009",
+        "id:SemanticScholar:5f933d8135454e1b753de200ec75d9c26135439c",
+        "id:arXiv:2510.12721",
+        "title:carvq corrective adaptor with group residual vector quantization for llm embedding compression",
+        "url:https://arxiv.org/abs/2510.12721"
+      ],
+      "record": {
+        "title": "CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression",
+        "source_url": "https://arxiv.org/abs/2510.12721",
+        "year": 2025,
+        "published": "2025-10-14",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) typically rely on a large number of parameters for token embedding, leading to substantial storage requirements and memory footprints. In particular, LLMs deployed on edge devices are memory-bound, and reducing the memory footprint by compressing the embedding layer not only frees up the memory bandwidth but also speeds up inference. To address this, we introduce CARVQ, a post-training novel Corrective Adaptor combined with group Residual Vector Quantization. CARVQ relies on the composition of both linear and non-linear maps and mimics the original model embedding to compress to approximately 1.6 bits without requiring specialized hardware to support lower-bit storage. We test our method on pre-trained LLMs such as LLaMA-3.2-1B, LLaMA-3.2-3B, LLaMA-3.2-3B-Instruct, LLaMA-3.1-8B, Qwen2.5-7B, Qwen2.5-Math-7B and Phi-4, evaluating on common generative, discriminative, math and reasoning tasks. We show that in most cases, CARVQ can achieve lower average bitwidth-per-parameter while maintaining reasonable perplexity and accuracy compared to scalar quantization. Our contributions include a novel compression technique that is compatible with state-of-the-art transformer quantization methods and can be seamlessly integrated into any hardware supporting 4-bit memory to reduce the model's memory footprint in memory-constrained devices. This work demonstrates a crucial step toward the efficient deployment of LLMs on edge devices.",
+        "identifiers": [
+          "SemanticScholar:5f933d8135454e1b753de200ec75d9c26135439c"
+        ],
+        "semantic_scholar_id": "5f933d8135454e1b753de200ec75d9c26135439c",
+        "canonical_id": "arXiv:2510.12721",
+        "arxiv_id": "2510.12721",
+        "doi": "10.18653/v1/2025.findings-emnlp.1009",
+        "authors": [
+          "Dayin Gou",
+          "Sanghyun Byun",
+          "Nilesh Malpeddi",
+          "G. de Micheli",
+          "Prathamesh Vaste",
+          "Jacob Song",
+          "Woo Seong Chung"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 381,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.23919/date69613.2026.11592809",
+      "identity_tokens": [
+        "id:DOI:10.23919/date69613.2026.11592809",
+        "id:SemanticScholar:c560d0c06cfb0ffb534383455c30ecb241be1be2",
+        "title:late breaking results daiquiri dynamic quantization with layerwise sensitivity ranking for hardwareefficient llms",
+        "url:https://doi.org/10.23919/DATE69613.2026.11592809"
+      ],
+      "record": {
+        "title": "Late Breaking Results: DAIQUIRI: Dynamic Quantization with Layer-wise Sensitivity Ranking for Hardware-Efficient LLMs",
+        "source_url": "https://doi.org/10.23919/DATE69613.2026.11592809",
+        "year": 2026,
+        "published": "2026-04-20",
+        "venue": "Design, Automation and Test in Europe",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) are widely used, but their high memory and compute demands make them difficult to deploy on low-power devices. Low-bit quantization reduces model size by converting full-precision weights into compact 2- or 3-bit formats, yet uniform low-bit quantization often forces a trade-off between efficiency and accuracy. In this work, we introduce DAIQUIRI, a dynamic low-bit quantization scheme that assigns bit-widths based on per-layer sensitivity. By using 2-bit precision for most layers and selectively applying 3-bit precision to more sensitive layers, DAIQUIRI maintains accuracy much higher than uniform 2-bit quantization while reducing energy, power, and latency compared to uniform 3-bit models. Experiments across multiple datasets and GPUs show that DAIQUIRI achieves accuracy close to the 3-bit baseline while using significantly fewer hardware resources, making it a practical and efficient solution for on-device LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:c560d0c06cfb0ffb534383455c30ecb241be1be2"
+        ],
+        "semantic_scholar_id": "c560d0c06cfb0ffb534383455c30ecb241be1be2",
+        "doi": "10.23919/DATE69613.2026.11592809",
+        "canonical_id": "DOI:10.23919/DATE69613.2026.11592809",
+        "authors": [
+          "Tanha Tasfia",
+          "Abu Kaisar Mohammad Masum",
+          "M. Moghadam",
+          "M. Najafi",
+          "Sercan Aygün"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 193,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19605",
+      "identity_tokens": [
+        "id:SemanticScholar:398c42d4cc572ba693210f1d0f62ce2784981512",
+        "id:arXiv:2610.19605",
+        "title:pnmix pairnorm guided mixedprecision key cache quantization for efficient longoutput llm inference",
+        "url:https://arxiv.org/abs/2610.19605"
+      ],
+      "record": {
+        "title": "PN-Mix: Pair-Norm Guided Mixed-Precision Key Cache Quantization for Efficient Long-Output LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.19605",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-output inference in large language models suffers from severe KV cache memory and bandwidth bottlenecks. While KV cache quantization alleviates this issue, low-bit quantization (e.g., 2-bit) severely degrades model accuracy. Recent mixed-precision key-cache quantization methods mitigate this degradation by allocating higher precision to important key channels, but estimate channel saliency using only key statistics. Through attention logit perturbation analysis at the RoPE channel-pair level, we show that quantization errors in channel pairs with large query--key pair-norm products contribute significantly to logit variation. Based on this insight, we propose PN-Mix, a mixed-precision key-cache quantization method for RoPE-based decoder-only LLMs, which allocates higher precision to salient channel pairs identified once during the prefill stage and reused throughout decoding. Across standard reasoning, code-generation, and AIME benchmarks, PN-Mix with 2.26-bit average precision achieves comparable or better average accuracy than prior mixed-precision methods using 2.32--2.39 bits. Furthermore, in our Pareto sweep, PN-Mix degrades gracefully down to 1.5 bits, whereas the compared baselines exhibit sharper performance drops below 2.25 bits.",
+        "identifiers": [
+          "SemanticScholar:398c42d4cc572ba693210f1d0f62ce2784981512"
+        ],
+        "semantic_scholar_id": "398c42d4cc572ba693210f1d0f62ce2784981512",
+        "canonical_id": "arXiv:2610.19605",
+        "arxiv_id": "2610.19605",
+        "authors": [
+          "Gi-joong Song",
+          "Sungjoo Yoo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 16,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/iccd63220.2024.00103",
+      "identity_tokens": [
+        "id:DOI:10.1109/iccd63220.2024.00103",
+        "id:SemanticScholar:d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb",
+        "title:airgun adaptive granularity quantization for accelerating large language models",
+        "url:https://doi.org/10.1109/ICCD63220.2024.00103"
+      ],
+      "record": {
+        "title": "AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models",
+        "source_url": "https://doi.org/10.1109/ICCD63220.2024.00103",
+        "year": 2024,
+        "published": "2024-11-18",
+        "venue": "ICCD",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based models have evolved into Large Language Models (LLMs) by increasing model sizes to achieve higher accuracy, but they incur significant computational and memory costs. As quantization is a promising method to mitigate the huge cost of LLMs, the presence of outliers can lead to accuracy drops during quantization. Previous work pointed out LLMs have outliers only in specific input channels of activations. This suggests that per-input channel quantization would be beneficial, but it poses excessive computational overhead without optimization. To address these challenges, we propose a hardware and software co-design that mitigates the overhead of per-input channel quantization. We first propose AirGun, a quantization method that adaptively quantizes LLM modules. We observe that LLMs have high quantization sensitivity only in specific modules. Based on our observation, AirGun applies hardware-efficient per-tensor quantization for non-sensitive modules and per-input channel quantization for sensitive modules. For per-input channel quantization, we introduce early reconstruction and adaptive dyadic numbering, dismissing the overhead while exploiting its advantages. Additionally, we propose the AirGun accelerator that fully utilizes the advantages of AirGun. As a result, the AirGun accelerator achieves a 4.19 × speedup and 63.16 % lower energy consumption compared to the previous LM accelerator while achieving higher accuracy.",
+        "identifiers": [
+          "SemanticScholar:d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb"
+        ],
+        "semantic_scholar_id": "d3f3ca736e3e61317ce7c81c0ac9198f5a21e8fb",
+        "doi": "10.1109/ICCD63220.2024.00103",
+        "canonical_id": "DOI:10.1109/ICCD63220.2024.00103",
+        "authors": [
+          "Sungbin Kim",
+          "Hyunwuk Lee",
+          "Sungwoo Kim",
+          "Cheolhwan Kim",
+          "Won Woo Ro"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 711,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2a52ad76462fa5f18986e64b56e549c9313d1b65dccfdf636755a6bd6f308fd4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
