@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261030-2345-scheduled-chat-45/r03",
+  "reference_main_sha": "b6fa9e40e03f6a5bfbc4f24d664ace090e66681b",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.05352",
+      "identity_tokens": [
+        "arXiv:2504.05352"
+      ],
+      "title": "Achieving binary weight and activation for LLMs using Post-Training Quantization",
+      "reason": "arXiv一次要旨。Hessian-awareな細粒度重みグループ化とEM量子化、INT4活性を4×INT1へ等価分解する手法でW(1+1)A(1*4)構成を提案。W2A4の既存LLM量子化を複数課題で上回ると報告し、低ビット重み・活性量子化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2504.05352",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:53:33+09:00",
+      "last_checked_at": "2026-10-30T23:53:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 38,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22967",
+      "identity_tokens": [
+        "arXiv:2605.22967"
+      ],
+      "title": "Learned Relay Representations for Forward-Thinking Discrete Diffusion Models",
+      "reason": "arXiv一次要旨。拡散言語モデルのdenoisingステップ間で中間表現を捨てず、学習可能なtoken単位のrelay channelをtruncated BPTTで学習。Fast-dLLM v2でコード課題の品質を改善し推論遅延最大32%削減と報告。拡散型LLMの復号計算再利用に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.22967",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T23:53:33+09:00",
+      "last_checked_at": "2026-10-30T23:53:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 39,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
