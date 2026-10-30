@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r09",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09084",
+      "identity_tokens": [
+        "arXiv:2607.09084"
+      ],
+      "title": "A Survey on the Green Development of Large Models: From Resource-Efficient Architectures to Hardware-Software Co-Design",
+      "reason": "大規模モデルの省資源アーキテクチャ、低精度化、GPU/メモリ、ハードウェア・ソフトウェア協調設計、データセンター持続可能性まで広く扱うサーベイ。LLM推論システムに関係する章を含むが、学習・応用・社会的持続可能性の比重も大きく、独自の推論機構や計測研究ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2607.09084",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 113,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.03117",
+      "identity_tokens": [
+        "arXiv:2507.03117"
+      ],
+      "title": "BLaST: High Performance Inference and Pretraining using BLock Sparse Transformers",
+      "reason": "LLM重みをGPU SpMMに適したブロック疎パターンへ反復的に剪定するBLaST。高い疎率でも精度劣化を抑え、Llama 3.2を16GPUで実行した条件で推論2.2倍高速化、推論メモリ最大4.45倍削減を報告。学習も扱うがGPU推論の実性能とメモリ削減が直接的な成果。",
+      "source_url": "https://arxiv.org/abs/2507.03117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 114,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34054",
+      "identity_tokens": [
+        "arXiv:2609.34054"
+      ],
+      "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+      "reason": "同一基盤モデルを共有する複数LoRAエージェントが共有履歴を各々prefillし直す冗長性を、基盤KVとエージェント固有低ランクKVの分離・事前計算で解消するPReCache。前エージェントのアダプタ由来の状態を中立な隠れ状態から再構築する方式も提案し、逐次・並行サービングでのKV再利用を扱う。",
+      "source_url": "https://arxiv.org/abs/2609.34054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 115,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.19938",
+      "identity_tokens": [
+        "arXiv:2602.19938"
+      ],
+      "title": "A Replicate-and-Quantize Strategy for Plug-and-Play Load Balancing of Sparse Mixture-of-Experts LLMs",
+      "reason": "MoEの推論時に人気expertへトークンが偏る問題に対し、頻繁に使われるexpertを複製し、低重要度expertと複製を量子化して元のメモリ予算内へ収めるReplicate-and-Quantizeを提案。ルータ再学習なしで負荷不均衡を最大1.4倍改善し、精度変化±0.6%以内と報告。MoE expert配置・推論スケジューリングに直接関連。",
+      "source_url": "https://arxiv.org/abs/2602.19938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 116,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.29575",
+      "identity_tokens": [
+        "arXiv:2607.29575"
+      ],
+      "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
+      "reason": "LLMのbatch増大でdecode注意がDRAM帯域飽和し、スループットの伸びが止まる原因をハードウェアプロファイルで特定する。解析的メモリ交通モデルSLIMとBatching Configuration Advisorで遅延制約内の最大処理量構成を選択し、OPTモデルの評価条件で最大55GBの不要なGPUメモリ割当を回避可能と報告。",
+      "source_url": "https://arxiv.org/abs/2607.29575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 117,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.40093",
+      "identity_tokens": [
+        "arXiv:2609.40093"
+      ],
+      "title": "Efficient Expert-Parallel Communication on PCIe-Connected Consumer GPUs",
+      "reason": "PCIe接続のコンシューマGPUでMoE expert並列通信がCPU経由の余分な転送と同期費用に律速される問題に対し、リングの中継を減らしDMAを使うThunderEPを提案。vLLMへ統合しRTX 4090/5090の複数GPUでNCCL比dispatch平均2.00倍・combine 1.53倍、end-to-end最大1.66倍の高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2609.40093",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 118,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.11211",
+      "identity_tokens": [
+        "arXiv:2607.11211"
+      ],
+      "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators",
+      "reason": "LLM decodeのtoken phaseでKV連結・RoPE注意・MLPを別々に処理するメモリ往復を、再読込不要のKV結合とタイル最適化RoPE、融合MLPで削減するFastTPS。AMD Ryzen AI 300 NPU上のPhi3-miniで非融合版比6倍の速度改善と93%のピーク帯域利用率を報告。エッジ推論アクセラレータの直接的な実装研究。",
+      "source_url": "https://arxiv.org/abs/2607.11211",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 121,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.31947",
+      "identity_tokens": [
+        "arXiv:2609.31947"
+      ],
+      "title": "On-Policy Attention Linearization",
+      "reason": "softmax注意を線形注意へ置き換えたstudentが長文脈で状態誤差を累積する問題に対し、student自身の長い軌道を教師の密な出力で監督するOPALを提案。Qwen3-4B等で長文脈検索・推論品質を回復しつつ線形注意の固定状態メモリ効率を活かす。学習時蒸留が手段だが推論時の低メモリ注意アーキテクチャの実用性に直結。",
+      "source_url": "https://arxiv.org/abs/2609.31947",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 122,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.18851",
+      "identity_tokens": [
+        "arXiv:2606.18851"
+      ],
+      "title": "From Tokens to Energy Flexibility: Quantization-Enabled Demand Response for Data Centers with LLM Inference Workloads",
+      "reason": "LLM推論の量子化精度・モデルインスタンス切替・要求ルーティングを電力網の需要応答に組み込み、電力価格・炭素指標と同時に最適化する。token提供量を減らさずデータセンター運営費を34.3%削減したケーススタディを報告。GPUカーネルではないが推論サービング運用・電力最適化の直接的な研究。",
+      "source_url": "https://arxiv.org/abs/2606.18851",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 123,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.12018",
+      "identity_tokens": [
+        "arXiv:2406.12018"
+      ],
+      "title": "CItruS: Chunked Instruction-aware State Eviction for Long Sequence Modeling",
+      "reason": "KV削減がPPLを保っても下流タスクに必要な情報を失う問題を、命令に関連する注意選好を使った状態追い出しCItruSで緩和する。チャンク単位の長文脈処理を併用し、同一メモリ予算下の理解・検索課題でベースラインを上回ると報告。長文脈LLMのKV選択と品質維持に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2406.12018",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:40:30+09:00",
+      "last_checked_at": "2026-10-30T19:40:30+09:00",
+      "linked_from": [],
+      "worklist_rank": 124,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}
