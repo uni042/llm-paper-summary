@@ -212,13 +212,13 @@
   実装：✓ ・ リポジトリ内被引用：15  
   既存の端末単独実行では重みが端末メモリに収まらず、端末とクラウドを二分割する方式では低帯域回線が遅延を支配する。著者らの実機試験では、Llama2-7Bに対し端末単独の140.34ミリ秒/トークン、24.36トークン/秒から、75.88ミリ秒/トークン、52.45トークン/秒へ改善した。
 
+- **2025-06 · [Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference](2025-2412.00099-mixture-of-cache-conditional-experts-for-efficient-mobile-device-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：12  
+  提案するキャッシュ優先ルーティング（Cache-Prior ルーティング）は、既存ルータのスコアに「DRAM内に既にある専門家」への加算項を導入し、上位K個の専門家の選択を変更する。
+
 - **2025-10 · [Characterizing Mobile SoC for Accelerating Heterogeneous LLM Inference](2025-d56c08fb1c58-characterizing-mobile-soc-for-accelerating-heterogeneous-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：11  
   HeteroInferは、携帯端末のシステムオンチップ（システム-on-Chip; SoC）に同居するGPUとニューラル処理装置（Neural Processing Unit; NPU）を同時利用し、大規模言語モデル（LLM）の前処理と自己回帰復号を高速化する推論基盤である。
-
-- **2025-06 · [Mixture of Cache-Conditional Experts for Efficient Mobile Device Inference](2025-2412.00099-mixture-of-cache-conditional-experts-for-efficient-mobile-device-inferen.md)**  
-  実装：✓ ・ リポジトリ内被引用：11  
-  提案するキャッシュ優先ルーティング（Cache-Prior ルーティング）は、既存ルータのスコアに「DRAM内に既にある専門家」への加算項を導入し、上位K個の専門家の選択を変更する。
 
 - **2025-09 · [Scaling LLM Test-Time Compute with Mobile NPU on Smartphones](2025-2509.23324-scaling-llm-test-time-compute-with-mobile-npu-on-smartphones.md)**  
   実装：[✓](https://github.com/haozixu/llama.cpp-npu) ・ リポジトリ内被引用：9  
@@ -303,7 +303,7 @@
   PowerInfer-2は、利用頻度を測った重みだけをスマホの高速メモリへ置き、残りをUFSから読みつつCPU・NPU計算と重ねて、容量不足と読出し待ちを減らす方式。
 
 - **2024-08 · [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](2023-2308.15030-swapmoe-serving-off-the-shelf-moe-based-large-language-models-with-tunable-memor.md)**  
-  実装：✓ ・ リポジトリ内被引用：32  
+  実装：✓ ・ リポジトリ内被引用：33  
   SwapMoEは、全専門家をメモリに置けない問題に対し、層ごとの仮想枠へ入力で選ばれた専門家重みを入れ替え、メモリ容量と重み転送を抑える方式。
 
 - **2024-07 · [Mobile Edge Intelligence for Large Language Models: A Contemporary Survey](2024-2407.18921-mobile-edge-intelligence-for-large-language-models-a-contemporary-survey.md)**  

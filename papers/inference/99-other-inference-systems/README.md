@@ -2858,6 +2858,10 @@
   実装：[✓](https://github.com/LuLuLuyi/LongHeads) ・ リポジトリ内被引用：4  
   LongHeadsは、事前学習時よりはるかに長い文章を既存の大規模言語モデルへ与える際、各注意頭が全文へ注意する必要はないという観察を利用した、追加学習不要の長文推論方式である。LLaMA-2-7Bを単一NVIDIA A100で評価し、32Kのパスキー検索でほぼ100%、CPUへKVキャッシュを退避した128K条件でも2K注意窓で100%を報告する。
 
+- **2024-02 · [Generative Representational Instruction Tuning](2024-2402.09906-generative-representational-instruction-tuning.md)**  
+  実装：[✓](https://github.com/ContextualAI/gritlm) ・ リポジトリ内被引用：4  
+  GRIT（Generative Representational Instruction Tuning）は、文章生成と文章埋込みを一つの大規模言語モデルで処理するための指示調整方式である。7BモデルのGritLM-7Bは、56データ集合からなるMTEBの平均66.8を示し、同じ基盤モデルから表現専用で訓練した比較版の66.8と同等だった。
+
 - **2024-10 · [Scaling Laws for Mixed Quantization](2024-2410.06722-scaling-laws-for-mixed-quantization.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   低bitのLLM推論では、すべての重みや活性を同じ低精度へ変換するより、精度低下に敏感な部分を高精度で残す混合量子化が有効になる場合がある。
@@ -2869,10 +2873,6 @@
 - **2024-10 · [BitStack: Any-Size Compression of Large Language Models in Variable Memory Environments](2024-2410.23918-bitstack-any-size-compression-of-large-language-models-in-variable-memor.md)**  
   実装：[✓](https://github.com/xinghaow99/BitStack) ・ リポジトリ内被引用：3  
   BitStackは、LLMの重みを固定の2bit、3bit、4bitなどへ一度だけ量子化する代わりに、複数の小さな残差ブロックへ分解して優先順位を付け、使えるメモリ量に応じて必要なブロックだけを読み込む学習不要の圧縮方式である。
-
-- **2024-02 · [Generative Representational Instruction Tuning](2024-2402.09906-generative-representational-instruction-tuning.md)**  
-  実装：[✓](https://github.com/ContextualAI/gritlm) ・ リポジトリ内被引用：3  
-  GRIT（Generative Representational Instruction Tuning）は、文章生成と文章埋込みを一つの大規模言語モデルで処理するための指示調整方式である。7BモデルのGritLM-7Bは、56データ集合からなるMTEBの平均66.8を示し、同じ基盤モデルから表現専用で訓練した比較版の66.8と同等だった。
 
 - **2023-12 · [DSFormer: Effective Compression of Text-Transformers by Dense-Sparse Weight Factorization](2023-2312.13211-dsformer-effective-compression-of-text-transformers-by-dense-sparse-weig.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -3089,7 +3089,7 @@
   TPU v4上の大規模Transformer推論を通信・メモリ・計算モデルから設計し、2D重み固定/重み収集の切替とバッチ分割MQAで540B級の低遅延・高MFU・長文脈を両立する。
 
 - **2023-06 · [A Simple and Effective Pruning Approach for Large Language Models](2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md)**  
-  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：242  
+  実装：[✓](https://github.com/locuslab/wanda) ・ リポジトリ内被引用：243  
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
@@ -3305,7 +3305,7 @@
   Dettmersらは、この状態を8ビットへ縮めても32ビット版に近い学習品質を維持する方式を提案した。原著表1では1.5Bパラメータ言語モデルで32ビットAdamと8ビットAdamの困惑度がともに9.0で、後者は8.5GBのGPUメモリを節約した。
 
 - **2020-12 · [MiniLMv2: Multi-Head Self-Attention Relation Distillation for Compressing Pretrained Transformers](2020-2012.15828-minilmv2-multi-head-self-attention-relation-distillation-for-compressing.md)**  
-  実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：14  
+  実装：[✓](https://github.com/microsoft/unilm/tree/master/minilm) ・ リポジトリ内被引用：15  
   教師と生徒の注意頭数を揃える制約を外し、Query・Key・Valueのトークン間関係を共通の「関係頭」で比較する。推論速度の改善は蒸留後の小型モデルによるもので、実行時に教師を参照する方式ではない。
 
 - **2021-03 · [Softermax: Hardware/Software Co-Design of an Efficient Softmax for Transformers](2021-2103.09301-softermax-hardware-software-co-design-of-an-efficient-softmax-for-transf.md)**  
@@ -3365,7 +3365,7 @@
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
-  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：125  
+  実装：[✓](https://github.com/tensorflow/tensor2tensor) ・ リポジトリ内被引用：126  
   計算器に並列能力があっても、この依存関係が生成遅延を制限する。最大 $k$ 個の候補を同時に提案し、基準モデルで候補列を並列採点して、基準モデルの貪欲選択と一致する先頭からの連続部分だけを採用する。後年の投機的復号（投機的復号）と同じく、安い予測の正しさを基準モデルで検証するという基本構造を明示した初期研究である。
 
 - **2018-11 · [GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism](2018-1811.06965-gpipe-efficient-training-of-giant-neural-networks-using-pipeline-paralle.md)**  
@@ -3373,7 +3373,7 @@
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：68  
+  実装：✓ ・ リポジトリ内被引用：69  
   Q-BERTは、BERTの各層へ同じビット数を割り当てる均一量子化ではなく、損失関数の二階微分から層ごとの誤差感度を推定し、敏感な層へ高い精度を残す混合精度量子化手法である。論文はSST-2、MNLI、CoNLL-03、SQuADの四課題で、重みの最大13倍圧縮、埋め込みと活性値の最大4倍圧縮を報告し、強圧縮でも性能低下を最大2.3%以内に抑えたと説明する。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  

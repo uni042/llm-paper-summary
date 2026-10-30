@@ -580,6 +580,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/amai-gsu/LM-Meter) ・ リポジトリ内被引用：2  
   さらにモバイルGPUではドライバが非公開で、カーネル単位の実行時間、キュー待機、ホスト側の発行遅延をアプリケーションから直接見ることが難しい。また量子化Gemma-2-2B-itの短い復号ではGPUの遊休時間が21%を超え、行列積カーネル群が実行時間の60%超を占める。
 
+- **2025-09 · [LiquidGEMM: Hardware-Efficient W4A8 GEMM Kernel for High-Performance LLM Serving](2025-2509.01229-liquidgemm-hardware-efficient-w4a8-gemm-kernel-for-high-performance-llm-.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  LiquidGEMM は、重みを4ビット、活性を8ビットに量子化するW4A8構成の一般行列積（General Matrix Multiplication; GEMM）を高速化するGPUカーネルである。
+
 - **2025-07 · [BlockBPE: Parallel BPE Tokenization](2025-2507.11941-blockbpe-parallel-bpe-tokenization.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   BlockBPEは正規表現による事前分割を廃止し、Rustで入力をバイト列と特殊トークンへ分けた後、各文字列を一つのGPUスレッドブロックへ割り当てる。高バッチではtiktokenに対して最大2倍、HuggingFace Tokenizersに対して最大2.5倍の字句分割処理量を報告した。
@@ -603,10 +607,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-10 · [Compressed Convolutional Attention: Efficient Attention in a Compressed Latent Space](2025-2510.04476-compressed-convolutional-attention-efficient-attention-in-a-compressed-l.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   CCGQAはさらにGQA型の鍵・値ヘッド共有を潜在空間で行い、クエリの圧縮率 $C1$ とKVの圧縮率 $C2$ を分離する。H100上の融合カーネル評価では、隠れ次元2048、BF16、系列長16Kの事前処理で、CCAの4倍圧縮設定がMHA比約1.6〜1.7倍低遅延、逆伝播で約1.2〜1.3倍高速となる。
-
-- **2025-09 · [LiquidGEMM: Hardware-Efficient W4A8 GEMM Kernel for High-Performance LLM Serving](2025-2509.01229-liquidgemm-hardware-efficient-w4a8-gemm-kernel-for-high-performance-llm-.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  LiquidGEMM は、重みを4ビット、活性を8ビットに量子化するW4A8構成の一般行列積（General Matrix Multiplication; GEMM）を高速化するGPUカーネルである。
 
 - **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
@@ -853,7 +853,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：107  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：108  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
@@ -887,7 +887,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
-  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：71  
+  実装：[✓](https://github.com/naver-aics/lut-gemm) ・ リポジトリ内被引用：72  
   重みを3～4ビットへ圧縮すればGPUメモリへの転送量を減らせるが、既存の重みのみ量子化の多くは、積和を行う直前に重みを半精度へ展開する逆量子化処理を必要とする。
 
 - **2022-10 · [ByteTransformer: A High-Performance Transformer Boosted for Variable-Length Inputs](2022-2210.03052-bytetransformer-a-high-performance-transformer-boosted-for-variable-leng.md)**  

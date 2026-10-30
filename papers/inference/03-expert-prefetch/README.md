@@ -15,7 +15,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2026-09 · [Cache-Aware Joint Router Adaptation for Memory-Efficient MoE Inference](2026-2609.04895-cache-aware-joint-router-adaptation.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
+  実装：✓ ・ リポジトリ内被引用：2  
   本研究はMoEルータを追加学習し、GPU内キャッシュの再利用を促す時間・時空間ルータを作る。必要時だけ限定的に先読みし、専門家重みの転送量と待ち時間を減らす。
 
 - **2026-06 · [SpecPrefetch: Parameter-Efficient Expert Prefetching for Sparse MoE Foundation Models](2026-2607.24787-specprefetch-parameter-efficient-expert-prefetching-for-sparse-moe-foundation-mo.md)**  
@@ -59,7 +59,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 2年前（2024-11〜2025-10）
 
 - **2024-12 · [DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference](2024-2501.10375-daop-data-aware-offloading-and-predictive-pre-calculation-for-efficient-moe-infe.md)**  
-  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：18  
+  実装：[✓](https://github.com/ecolab-nus/DAOP) ・ リポジトリ内被引用：19  
   しかし、GPUメモリが限られると専門家の重みをすべて常駐させられない。従来のCPU専門家実行方式Fiddlerに対し、DAOPは二つの最適化を加える。RTX A6000 48GBと18コアCPUの実機評価では、Fiddler比で専門家キャッシュ比率を変えた場合の平均生成速度改善が35.4%、一部条件では40.4%である。
 
 - **2025-02 · [Fate: Fast Edge Inference of Mixture-of-Experts Models via Cross-Layer Gate](2025-2502.12224-fate-fast-edge-inference-of-mixture-of-experts-models-via-cross-layer-gate.md)**  
@@ -87,7 +87,7 @@ MoEで次に使われるexpertを**routing結果が確定する前に予測し�
 ### 4年前（2022-11〜2023-10）
 
 - **2023-08 · [Pre-gated MoE: An Algorithm-System Co-Design for Fast and Scalable Mixture-of-Expert Inference](2023-2308.12066-pre-gated-moe-an-algorithm-system-co-design-for-fast-and-scalable-mixture-of-exp.md)**  
-  実装：✓ ・ リポジトリ内被引用：96  
+  実装：✓ ・ リポジトリ内被引用：97  
   Pre-gated MoEは、混合専門家モデル（Mixture-of-Experts、MoE）をGPUメモリより大きな規模で動かす際、CPU主記憶から専門家重みを読み込む時間を削減するための、モデル側のルーティング変更と実行系の協調設計である。著者らは単一のA100 80GBと大容量CPU主記憶を使い、SwitchTransformerの複数規模を評価した。
 
 - **2023-10 · [SiDA-MoE: Sparsity-Inspired Data-Aware Serving for Efficient and Scalable Large Mixture-of-Experts Models](2023-2310.18859-sida-moe-sparsity-inspired-data-aware-serving-for-efficient-and-scalable-large-m.md)**  

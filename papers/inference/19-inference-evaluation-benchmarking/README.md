@@ -431,7 +431,7 @@
   多段階推論では、単一の思考連鎖（Chain-of-Thought、CoT）だけで回答すると、途中の偶然の誤りがそのまま最終回答に伝わる。自己整合性（自己整合性、SC）は同一問題から複数の思考連鎖を独立に標本化し、最終回答を多数決してこの変動を抑える。しかしSCは難しい問題にも簡単な問題にも、事前に決めた最大標本数を一律に使う。
 
 - **2024-02 · [Benchmarking and Dissecting the Nvidia Hopper GPU Architecture](2024-2402.13499-benchmarking-and-dissecting-the-nvidia-hopper-gpu-architecture.md)**  
-  実装：✓ ・ リポジトリ内被引用：9  
+  実装：✓ ・ リポジトリ内被引用：10  
   Hopper世代のGPUは第4世代テンソル Core、8ビット浮動小数点（FP8）、ワープグループ行列積（wgmma）、動的計画法命令（DPX）、テンソルメモリアクセラレータ（TMA）、分散共有メモリ（DSM）を備える。しかし仕様表のピーク演算量や帯域だけでは、行列形状、オペランド配置、電力、精度変換、カーネル起動の費用を含む実性能は分からない。
 
 - **2024-06 · [Measuring and Improving the Energy Efficiency of Large Language Models Inference](2024-f40d5b5275ad-measuring-and-improving-the-energy-efficiency-of-large-language-models-i.md)**  

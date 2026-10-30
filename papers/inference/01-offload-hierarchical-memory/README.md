@@ -36,6 +36,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
 
+- **2025-12 · [Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems](2025-2512.04476-context-aware-moe-cxl-ndp.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  Context-Aware MoEは低頻度専門家をCXL接続NDP側で計算し、重要度に応じたGPU配置と1〜4ビット量子化で重み転送を減らす。
+
 - **2025-11 · [In-depth Analysis on Caching and Pre-fetching in Mixture of Experts Offloading](2025-2511.05814-in-depth-analysis-on-caching-and-pre-fetching-in-mixture-of-experts-offl.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   本論文は、GPUメモリに全専門家重みを置けない混合専門家モデル（MoE）の推論について、CPUメモリからの重み転送を削減するキャッシュと、次層で必要になる専門家を早めに予測する先読みを分析する。実測では、A6000上の固定プロンプトにおける生成速度がLRUの2.34トークン毎秒からLFUの4.32トークン毎秒へ改善し、約84.6%の速度向上を報告する。
@@ -87,10 +91,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-01 · [FlashMoE: Reducing SSD I/O Bottlenecks via ML-Based Cache Replacement for Mixture-of-Experts Inference on Edge Devices](2026-2601.17063-flashmoe-ssd-io-cache-replacement.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   FlashMoEはMoEの専門家重みをNVMe SSDへ置き、VRAMには必要なものだけを読み込む。最近度と利用頻度から次回利用の遠さを予測してキャッシュを置換し、SSD読み出し待ちを減らす。
-
-- **2025-12 · [Context-Aware Mixture-of-Experts Inference on CXL-Enabled GPU-NDP Systems](2025-2512.04476-context-aware-moe-cxl-ndp.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  Context-Aware MoEは低頻度専門家をCXL接続NDP側で計算し、重要度に応じたGPU配置と1〜4ビット量子化で重み転送を減らす。
 
 - **2025-12 · [Bandwidth-Efficient Adaptive Mixture-of-Experts via Low-Rank Compensation](2025-2512.17073-bandwidth-efficient-adaptive-mixture-of-experts-via-low-rank-compensatio.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -361,7 +361,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   可変長入力の固定長分割、量子化外れ値のCPU/GPU分離、ブロック単位の異種プロセッサ配置を組み合わせ、スマートフォンNPUでLLMプリフィルを高速化する。
 
 - **2025-02 · [Taming Latency-Memory Trade-Off in MoE-Based LLM Serving via Fine-Grained Expert Offloading](2025-2502.05370-taming-latency-memory-trade-off-in-moe-based-llm-serving-via-fine-grained-expert.md)**  
-  実装：[✓](https://github.com/IntelliSys-Lab/FineMoE-EuroSys26) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/IntelliSys-Lab/FineMoE-EuroSys26) ・ リポジトリ内被引用：28  
   しかし専門家全体の重みは大きく、GPUメモリへすべてを常駐させるのは難しい。CPUメモリへ専門家を退避するとGPU容量の不足は補えるが、必要な専門家をその都度PCIeで転送するため、推論の遅延が増える。EuroSys 2026掲載版の要旨は、六GPU実機で推論遅延を最大47%削減し、専門家ヒット率を39%改善したと報告する。
 
 - **2025-02 · [Klotski: Efficient Mixture-of-Expert Inference via Expert-Aware Multi-Batch Pipeline](2025-2502.06888-klotski-efficient-mixture-of-expert-inference-via-expert-aware-multi-batch-pipel.md)**  
@@ -388,6 +388,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：10  
   DuoServe-MoEは、密なプリフィルでは二重ストリーム転送、疎なデコードでは次層専門家をMLP予測して先読みするようフェーズ別に切替え、CPU→GPU転送待ちを隠す。
 
+- **2025-05 · [Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models](2025-2505.16056-local-routing-consistency-expert-offloading.md)**  
+  実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：8  
+  20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
+
 - **2025-03 · [eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference](2025-2503.06823-emoe.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   過去のエキスパート選択から必要エキスパートを予測・周期再利用し、タスク感度とSLOを考慮した読み込み・スケジューリングでGPUメモリを削減する。
@@ -395,10 +399,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2025-08 · [SMoE: An Algorithm-System Co-Design for Pushing MoE to the Edge via Expert Substitution](2025-2508.18983-smoe-expert-substitution-edge.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   低得点の活性専門家をGPU常駐の類似得点専門家へ置換し、重要専門家だけを先読みしてPCIe転送を減らす端末向けMoE推論方式。
-
-- **2025-05 · [Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models](2025-2505.16056-local-routing-consistency-expert-offloading.md)**  
-  実装：[✓](https://github.com/ljcleo/moe-lrc) ・ リポジトリ内被引用：7  
-  20種MoEをSRP/SCHで比較し、エキスパートオフロード適性を左右する局所ルーティング一貫性とキャッシュ比率約2の設計指針を示す。
 
 - **2025-03 · [FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference](2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
@@ -495,15 +495,15 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   LLM in a flashは、モデル重み全体を端末の主記憶（DRAM）へ保持できない場合に、フラッシュストレージを重みの大容量置き場として利用し、トークン生成ごとに必要な重みだけを読み込む推論方式である。
 
 - **2024-01 · [MoE-Infinity: Efficient MoE Inference on Personal Machines with Sparsity-Aware Expert Cache](2024-2401.14361-moe-infinity-efficient-moe-inference-on-personal-machines-with-sparsity-aware-ex.md)**  
-  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：95  
+  実装：[✓](https://github.com/EfficientMoE/MoE-Infinity) ・ リポジトリ内被引用：96  
   MoE-Infinityは、混合専門家モデル（Mixture of エキスパート、MoE）の重みが単一GPUのメモリに収まらない場合に、ホスト主記憶から専門家重みを転送する時間を削減する推論システムである。
 
 - **2024-02 · [Fiddler: CPU-GPU Orchestration for Fast Inference of Mixture-of-Experts Models](2024-2402.07033-fiddler-cpu-gpu-orchestration-for-fast-inference-of-mixture-of-experts-models.md)**  
-  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：78  
+  実装：[✓](https://github.com/efeslab/fiddler) ・ リポジトリ内被引用：79  
   混合専門家モデル（Mixture-of-Experts; MoE）は、各トークンで選ばれる専門家が少ないため計算量は疎だが、モデル全体の専門家重みをGPUメモリに収めるのは難しい。Fiddlerは、この二つの実行経路の長所を入力トークン数に応じて使い分ける推論システムである。
 
 - **2023-12 · [Fast Inference of Mixture-of-Experts Language Models with Offloading](2023-2312.17238-fast-inference-of-mixture-of-experts-language-models-with-offloading.md)**  
-  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：77  
+  実装：[✓](https://github.com/dvmazur/mixtral-offloading) ・ リポジトリ内被引用：78  
   Mixtralの専門家重みをCPUに置き、LRUキャッシュと投機的先読みで必要な専門家だけGPUへ移して、12〜16GB級VRAMでの転送待ちを減らす。
 
 - **2024-08 · [AdapMoE: Adaptive Sensitivity-based Expert Gating and Management for Efficient MoE Inference](2024-2408.10284-adapmoe.md)**  
@@ -543,7 +543,7 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   MoEのエキスパート配置・異種GPU割当・全対全通信順序を共同最適化し、4クラスタ条件を理論化して異種同居では二部マッチング近似を用い、最大3.54倍高速化する。
 
 - **2024-05 · [MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models](2024-2405.18832-monde-mixture-of-experts-neural-network-inference-with-near-data-processing.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
+  実装：✓ ・ リポジトリ内被引用：3  
   GPUメモリに収まらない場合、ホストメモリから選択された専門家の重みを転送して計算する。本論文の重要な前提は、演算機能付き拡張メモリを新たに設計する研究であり、既存の通常DRAMやSSDにそのまま適用できるCPUオフロード手法ではないことである。
 
 - **2024-03 · [OSSCAR: One-Shot Structured Pruning in Vision and Language Models with Combinatorial Optimization](2024-2403.12983-osscar-one-shot-structured-pruning-in-vision-and-language-models-with-co.md)**  

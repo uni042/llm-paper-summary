@@ -270,6 +270,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：✓ ・ リポジトリ内被引用：2  
   Global Resolutionは、複数の草案トークンを同じ次トークン位置に提示する投機的サンプリングに対し、目標モデルの出力分布からの逸脱を制御しながら、草案のいずれかを受理できる確率を最大化する検証規則を計算する研究である。語彙数をVとすると候補n組の数はVのn乗であり、n=2でも通常の大語彙では汎用ソルバーで解けない。
 
+- **2025-11 · [Fast and Expressive Multi-Byte Prediction with Probabilistic Circuits](2025-2511.11346-fast-and-expressive-multi-byte-prediction-with-probabilistic-circuits.md)**  
+  実装：[✓](https://github.com/april-tools/mtpc) ・ リポジトリ内被引用：2  
+  本論文は、バイト単位の大規模言語モデルで複数の将来バイトを同時に予測する際、予測位置間の依存関係と候補生成の遅延を同時に制御する確率回路方式MtPCを提案する。
+
 - **2026-09 · [RheoSampling: Resolving the One-Hot Dilemma in Stochastic Dynamic-Tree Speculative Decoding](2026-2609.21827-rheosampling-resolving-the-one-hot-dilemma-in-stochastic-dynamic-tree-sp.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   木型投機的復号（tree-based 投機的復号）は、小型ドラフトモデルが複数の候補トークン列を木として用意し、大型ターゲットモデルがその木をまとめて検証することで、自己回帰復号の一段ずつの待機を減らす。
@@ -421,10 +425,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-11 · [NEZHA: A Zero-sacrifice and Hyperspeed Decoding Architecture for Generative Recommendations](2025-2511.18793-nezha-a-zero-sacrifice-and-hyperspeed-decoding-architecture-for-generati.md)**  
   実装：[✓](https://github.com/Applied-Machine-Learning-Lab/WWW2026_NEZHA) ・ リポジトリ内被引用：1  
   候補を広く集めるために多数のビームを保持して逐次復号すると、出力は3トークン程度でも主モデルを何度も呼び出すため遅延が大きい。外部ドラフトモデルを必要とせず、識別子の位置を表すプレースホルダーと、選択した前トークンを反映する状態遷移によって、意味識別子の順序依存性を維持する。
-
-- **2025-11 · [Fast and Expressive Multi-Byte Prediction with Probabilistic Circuits](2025-2511.11346-fast-and-expressive-multi-byte-prediction-with-probabilistic-circuits.md)**  
-  実装：[✓](https://github.com/april-tools/mtpc) ・ リポジトリ内被引用：1  
-  本論文は、バイト単位の大規模言語モデルで複数の将来バイトを同時に予測する際、予測位置間の依存関係と候補生成の遅延を同時に制御する確率回路方式MtPCを提案する。
 
 ### 直近12か月・未被引用（2025-11〜2026-10）
 
@@ -894,6 +894,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   実装：[✓](https://github.com/SAI-Lab-NYU/DREAM) ・ リポジトリ内被引用：10  
   投機的復号（投機的復号）は小さな下書きモデルが複数の候補トークンを生成し、大きな検証モデルがまとめて受理判定することで逐次生成の反復回数を減らす。NeurIPS 2025版の評価ではLLaVA-v1.6-Vicuna、Pixtral、SmolVLM、Gemma3を対象とし、A100で通常の自己回帰復号比1.5～3.6倍程度の高速化を報告する。
 
+- **2025-09 · [FastMTP: Accelerating LLM Inference with Enhanced Multi-Token Prediction](2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md)**  
+  実装：[✓](https://github.com/Tencent-BAC/FastMTP) ・ リポジトリ内被引用：9  
+  FastMTPは、複数トークン予測（multi-トークン prediction、MTP）モジュールを推論時の投機的復号に再利用するための学習・実行方式である。
+
 - **2025-02 · [Fuzzy Speculative Decoding for a Tunable Accuracy-Runtime Tradeoff](2025-2502.20704-fuzzy-speculative-decoding-for-a-tunable-accuracy-runtime-tradeoff.md)**  
   実装：[✓](https://github.com/maxholsman/fsd) ・ リポジトリ内被引用：9  
   標準的な投機的復号（投機的復号; SD）は、小さいドラフトモデルが複数トークンを先に生成し、大きいターゲットモデルがそれらを一括検証することで、ターゲットモデルの逐次実行回数を減らす。たとえばQwen 2.5 7B/32BのGSM8Kでは、標準SDの95.1%・17.4トークン/秒に対し、低閾値FSDは94.7%・21.4トークン/秒となる。
@@ -901,10 +905,6 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-10 · [Self Speculative Decoding for Diffusion Large Language Models](2025-2510.04147-self-speculative-decoding-for-diffusion-large-language-models.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
   別のモデル重みを載せず、複数位置の候補を一度に予測し、その候補を階層的な検証木としてまとめて実行する。原著はLLaDA系列3モデル、Dream系列2モデルを単一NVIDIA A100 80GBで評価した。
-
-- **2025-09 · [FastMTP: Accelerating LLM Inference with Enhanced Multi-Token Prediction](2025-2509.18362-fastmtp-accelerating-llm-inference-with-enhanced-multi-token-prediction.md)**  
-  実装：[✓](https://github.com/Tencent-BAC/FastMTP) ・ リポジトリ内被引用：8  
-  FastMTPは、複数トークン予測（multi-トークン prediction、MTP）モジュールを推論時の投機的復号に再利用するための学習・実行方式である。
 
 - **2025-06 · [SwiftSpec: Ultra-Low Latency LLM Decoding by Scaling Asynchronous Speculative Decoding](2025-2506.11309-swiftspec-asynchronous-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：8  
@@ -1129,11 +1129,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 3年前（2023-11〜2024-10）
 
 - **2024-01 · [Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads](2024-2401.10774-medusa-multiple-decoding-heads.md)**  
-  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：432  
+  実装：[✓](https://github.com/FasterDecoding/Medusa) ・ リポジトリ内被引用：433  
   Medusaは、対象LLMの隠れ状態に未来位置ごとの小型予測ヘッドを追加し、上位候補を木構造へまとめて一括検証することで、別ドラフトモデルを置かず対象モデルの逐次呼出しを減らす。
 
 - **2024-01 · [EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty](2024-2401.15077-eagle-feature-speculative-sampling.md)**  
-  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：363  
+  実装：[✓](https://github.com/SafeAILab/EAGLE) ・ リポジトリ内被引用：364  
   EAGLEは、対象LLMの上位層特徴量と直前に標本化したトークンを小型デコーダへ与えて未来特徴量を予測し、元の言語モデル出力ヘッドと木構造検証で重み読出し回数を減らす。
 
 - **2024-06 · [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](2024-2406.16858-eagle-2.md)**  
@@ -1153,11 +1153,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
   投機的復号で得られる目標モデルの確率分布を教師信号として下書きモデルをオンライン更新し、問い合わせ分布の変化に追従して受理率と推論速度を高める方式。
 
 - **2024-04 · [Better & Faster Large Language Models via Multi-token Prediction](2024-2404.19737-better-faster-large-language-models-via-multi-token-prediction.md)**  
-  実装：✓ ・ リポジトリ内被引用：92  
+  実装：✓ ・ リポジトリ内被引用：93  
   一般的な自己回帰言語モデルは、各位置までの文脈から直後の一つのトークンを予測する。これに対して複数トークン予測（Multi-トークン Prediction; MTP）は、同じ位置の共有表現から、1個先だけでなく2個先、3個先、4個先など複数の未来トークンを別々の出力ヘッドで予測するよう学習する。この研究には二つの独立した成果がある。
 
 - **2024-02 · [Hydra: Sequentially-Dependent Draft Heads for Medusa Decoding](2024-2402.05109-hydra-sequentially-dependent-draft-heads-for-medusa-decoding.md)**  
-  実装：[✓](https://github.com/zankner/Hydra) ・ リポジトリ内被引用：91  
+  実装：[✓](https://github.com/zankner/Hydra) ・ リポジトリ内被引用：92  
   投機的復号（投機的復号）は、安価な下書きモデルが複数の将来トークンを予測し、元の大きな言語モデルが候補をまとめて検証することで、1回の高価な順伝播で複数トークンを確定させる。単一要求のVicuna 7B/13B/33Bで通常の自己回帰生成に対しそれぞれ2.70/2.50/2.53倍、Medusaに対し1.27/1.27/1.31倍の処理率を報告する。
 
 - **2024-02 · [Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding](2024-2402.12374-sequoia-scalable-robust-and-hardware-aware-speculative-decoding.md)**  
@@ -1331,11 +1331,11 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 ### 4年前（2022-11〜2023-10）
 
 - **2022-11 · [Fast Inference from Transformers via Speculative Decoding](2022-2211.17192-speculative-decoding.md)**  
-  実装：✓ ・ リポジトリ内被引用：621  
+  実装：✓ ・ リポジトリ内被引用：622  
   軽量モデルの複数トークン提案を対象モデルで並列検証し、出力分布を変えずに直列復号回数を削減する投機的復号の基礎研究。
 
 - **2023-02 · [Accelerating Large Language Model Decoding with Speculative Sampling](2023-2302.01318-speculative-sampling.md)**  
-  実装：✓ ・ リポジトリ内被引用：455  
+  実装：✓ ・ リポジトリ内被引用：456  
   小型モデルの複数候補を大型モデルで並列検証し、出力分布を変えず700億パラメータモデルのデコードを最大約2.5倍高速化。
 
 - **2023-05 · [SpecInfer: Accelerating Generative Large Language Model Serving with Tree-based Speculative Inference and Verification](2023-2305.09781-specinfer-tree-speculative-inference.md)**  

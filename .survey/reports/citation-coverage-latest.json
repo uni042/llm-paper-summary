@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "reference_audit_version": 1,
-  "checked_at": "2026-10-30T06:46:28+00:00",
+  "checked_at": "2026-10-30T07:21:55+00:00",
   "summary": {
-    "total": 3780,
-    "complete": 3755,
-    "incomplete": 25
+    "total": 3787,
+    "complete": 3760,
+    "incomplete": 27
   },
   "families": {
     "inference": {
-      "total": 3741,
-      "complete": 3716
+      "total": 3748,
+      "complete": 3721
     },
     "training": {
       "total": 25,
@@ -22,6 +22,11 @@
     }
   },
   "incomplete": [
+    {
+      "path": "papers/inference/05-speculative-decoding-moe/2026-186df873bd7f-from-draft-then-verify-to-systems-co-design-a-survey-of-speculative-deco.md",
+      "canonical_id": "DOI:10.1109/access.2026.3739598",
+      "reason": "missing structured reference audit metadata"
+    },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-e905fcb3ff0a-multi-tier-dynamic-storage-of-kv-cache-for-llm-inference-under-resource-.md",
       "canonical_id": "DOI:10.1007/s40747-025-02200-4",
@@ -45,6 +50,11 @@
     {
       "path": "papers/inference/15-inference-simulation-emulation/2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md",
       "canonical_id": "DOI:10.1145/3725843.3756078",
+      "reason": "missing structured reference audit metadata"
+    },
+    {
+      "path": "papers/inference/15-inference-simulation-emulation/2026-2609.27926-the-joule-point-an-energy-optimal-operating-point-for-ai-inference.md",
+      "canonical_id": "arXiv:2609.27926",
       "reason": "missing structured reference audit metadata"
     },
     {
