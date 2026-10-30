@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r08",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.06060",
+      "identity_tokens": [
+        "arXiv:2606.06060"
+      ],
+      "title": "ReCache: Learning Budget-Aware Caching Schedules for Diffusion Models via REINFORCE",
+      "reason": "ReCacheはFLUXやWanなど画像・動画拡散モデルの反復denoisingにおける特徴再計算スケジュールを予算制約下で学習する。LLMのKVキャッシュ・テキスト推論やサービングではなく、画像動画生成の特徴キャッシュであり、用語が似ていても対象外。",
+      "source_url": "https://arxiv.org/abs/2606.06060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 95,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.19191",
+      "identity_tokens": [
+        "arXiv:2509.19191"
+      ],
+      "title": "Reading Images Like Texts: Sequential Image Understanding in Vision-Language Models",
+      "reason": "VLMが画像を逐次トークンとして処理する際の物体認識・空間位置表現を分析し、プラグアンドプレイの視覚トークン圧縮とRoPEスケーリングを導入する。decode効率化という関連要素はあるが、主要な貢献は視覚表現の解釈・認識能力の分析で、サービング指標の実証は要旨から不明なため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2509.19191",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 96,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.26365",
+      "identity_tokens": [
+        "arXiv:2603.26365"
+      ],
+      "title": "Dynamic Token Compression for Efficient Video Understanding through Reinforcement Learning",
+      "reason": "動画MLLMでフレーム間差分と驚き度を用いてトークン圧縮方針を強化学習するSCORE。軽量ポリシーネットワークで動画トークンを動的選択し、10%保持時に元の性能99.5%を維持しつつprefill最大16倍高速化と報告。動画入力の推論計算削減に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2603.26365",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 97,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.04342",
+      "identity_tokens": [
+        "arXiv:2406.04342"
+      ],
+      "title": "Learning 1D Causal Visual Representation with De-focus Attention Networks",
+      "reason": "画像を1D因果モデルで表現する際の過度な注意集中を緩和するため、学習可能な帯域通過フィルタと訓練時drop pathを用いるDe-focus Attention Networksを提案。評価の中心は視覚表現・密予測・マルチモーダル理解であり、LLMの推論メモリ・速度・サービングを最適化する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2406.04342",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 98,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.21134",
+      "identity_tokens": [
+        "arXiv:2608.21134"
+      ],
+      "title": "Llama-Mobile: Efficient 2.7-Bit Quantization of VLMs",
+      "reason": "Arm CPU上でVLMを効率実行するため、自己生成校正データと2.7bit/parameter形式を組み合わせるLlama-Mobile。Llama 3.2 11B Vision Instructを3.7GBへ圧縮し8bit活性化でVQA品質を保つと報告。エッジ端末のLLM/MLLM推論量子化とメモリ削減に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2608.21134",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 99,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11750",
+      "identity_tokens": [
+        "arXiv:2610.11750"
+      ],
+      "title": "Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding",
+      "reason": "木型投機的復号で草案とターゲットの分布差が受理長を制限する点を、exit lawとtarget coverageで理論化する。Tree Exit Verificationで検証を並列化し、ExitTrainで草案木を改善する。DDTree比で受理出力ブロック長13%増、検証遅延15%減、end-to-end 14%高速化を報告する推論デコード研究。",
+      "source_url": "https://arxiv.org/abs/2610.11750",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 103,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.03673",
+      "identity_tokens": [
+        "arXiv:2512.03673"
+      ],
+      "title": "ConvRot: Rotation-Based Plug-and-Play 4-bit Quantization for Diffusion Transformers",
+      "reason": "ConvRotは画像生成用Diffusion TransformerのW4A4量子化で、FLUX.1-devの画像忠実度・生成速度・メモリを評価する。LLM由来のHadamard回転技術を用いるが、実験は画像拡散生成であり、言語LLM推論・MLLM対話サービングの効率化は示さないため対象外。",
+      "source_url": "https://arxiv.org/abs/2512.03673",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 104,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.13358",
+      "identity_tokens": [
+        "arXiv:2405.13358"
+      ],
+      "title": "AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs",
+      "reason": "校正データ不要のLLM PTQを目指し、Adaptive LASSOに基づくsoft-thresholdで重要重みと活性外れ値を扱うAdpQを提案。3bit等の低精度で既存量子化方式と比較し、校正データなしでモデル容量を削減する。推論用重み圧縮の直接的な研究だが、要旨の速度記述はResearchで実測条件を確認する必要がある。",
+      "source_url": "https://arxiv.org/abs/2405.13358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 105,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.24680",
+      "identity_tokens": [
+        "arXiv:2603.24680"
+      ],
+      "title": "ReDiPrune: Relevance-Diversity Pre-Projection Token Pruning for Efficient Multimodal LLMs",
+      "reason": "視覚言語projectorの前でテキスト条件付き関連性と最大最小多様性を組み合わせて視覚トークンを選択するReDiPrune。再学習不要でLLaVA-NeXT-Video-7BのEgoSchemaにおいて15%保持で精度+2.0ポイント、TFLOPs 6倍超削減と報告。MLLMのprefill前トークン削減に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2603.24680",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 106,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.12638",
+      "identity_tokens": [
+        "arXiv:2511.12638"
+      ],
+      "title": "Equivalence Checking of ML GPU Kernels",
+      "reason": "手書き・コンパイラ生成・LLM生成のGPUカーネルについて形式的な等価性を検証するVoltaを提案し、行列積や注意演算を対象とする。LLM推論カーネル最適化の正当性検証に有用だが、主たる研究成果は形式検証手法であり推論速度・メモリの改善自体ではないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2511.12638",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:39:53+09:00",
+      "last_checked_at": "2026-10-30T19:39:53+09:00",
+      "linked_from": [],
+      "worklist_rank": 109,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}
