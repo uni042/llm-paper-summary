@@ -159,6 +159,71 @@ class WorkerWorklistIdentityTests(unittest.TestCase):
             self.assertEqual(by_id["arXiv:2001.00002"]["priority"], 1000 - 100000000)
             self.assertEqual(by_id["arXiv:2001.00002"]["priority_breakdown"]["borderline_recheck_count"], 1)
 
+    def test_research_worklist_keeps_job_bibliography_when_priority_cache_alias_is_wrong(self):
+        module = _load()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            config = root / ".survey/config/candidate-priority.json"
+            config.parent.mkdir(parents=True)
+            config.write_text(
+                json.dumps({
+                    "schema_version": 1,
+                    "policy_name": "test",
+                    "freshness": {"enabled": False},
+                    "prestigious_venue": {"enabled": False},
+                    "citations": {"enabled": True, "score_per_citation": 1, "max_score": None},
+                    "fallback_priority": 0,
+                }),
+                encoding="utf-8",
+            )
+            cache = root / ".survey/work-queue/candidate-priority-cache.json"
+            cache.parent.mkdir(parents=True)
+            cache.write_text(
+                json.dumps({
+                    "schema_version": 1,
+                    "records": {
+                        "arXiv:2405.21060": {
+                            "title": "Sovereign Byte Firewall: wrong provider alias",
+                            "source_url": "https://example.invalid/wrong",
+                            "published": "2026-01-01",
+                            "citation_count": 78,
+                            "citation_count_source": "openalex",
+                        }
+                    },
+                    "aliases": {},
+                    "lookup_failures": {},
+                }),
+                encoding="utf-8",
+            )
+            job_dir = root / ".survey/work-queue/jobs"
+            job_dir.mkdir(parents=True)
+            (job_dir / "job-research-mamba2.json").write_text(
+                json.dumps({
+                    "job_id": "job-research-mamba2",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "arXiv:2405.21060",
+                    "arxiv_id": "2405.21060",
+                    "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+                    "source_url": "https://arxiv.org/abs/2405.21060",
+                    "published": "2024-05-31",
+                    "citation_count": 70,
+                    "paper_path": "papers/inference/20-linear-recurrent-language-models/2024-2405.21060-transformers-are-ssms-generalized-models-and-efficient-algorithms-through-structured-state-space-duality.md",
+                }),
+                encoding="utf-8",
+            )
+
+            rows, ready_total, _reserved = module._research_candidates(root)
+            self.assertEqual(ready_total, 1)
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(
+                rows[0]["title"],
+                "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+            )
+            self.assertEqual(rows[0]["source_url"], "https://arxiv.org/abs/2405.21060")
+            self.assertEqual(rows[0]["published"], "2024-05-31")
+            self.assertEqual(rows[0]["citation_count"], 78)
+
     def test_split_uses_three_disjoint_workers(self):
         module = _load()
         rows = [
