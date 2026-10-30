@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-0930-scheduled-chat-30/research-relevance-r01-65",
+  "reference_main_sha": "82f328b9d1a92bb53c8e05830b098c76dc361286",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.19529",
+      "identity_tokens": [
+        "arXiv:2505.19529",
+        "DOI:10.48550/arXiv.2505.19529",
+        "SemanticScholar:ac529f215dbb892fea27077626fce93a0a1e5572"
+      ],
+      "title": "Small Language Models: Architectures, Techniques, Evaluation, Problems and Future Adaptation",
+      "reason": "一次論文v2の9ページ全文を確認。§2でMobileBERT、TinyLLaMA、MobileLLM、Mamba、RWKVなどの軽量構造、§3で小型モデルの学習・蒸留、§4でSparseGPT/Wandaの枝刈り、GPTQ/AWQ/SmoothQuantやKVキャッシュ量子化、§5で評価指標を広く紹介する。推論時のモデル容量・演算量・端末配備と直接接点があり、完全な無関係ではない。しかし中心は小型言語モデル一般の概説・能力評価・学習戦略であり、新しい推論機構やサービング実装、同一環境での体系的な推論性能ベンチマークを提供しない。個別研究からの数値を横断的に並べているため、実機での統一比較結果として扱えない。推論システム研究サーベイへの収録は境界的と判断した。",
+      "source_url": "https://arxiv.org/pdf/2505.19529",
+      "body_check": "research_fulltext_relevance_review: arXiv v2 9ページ、§2アーキテクチャ、§3学習、§4圧縮、§5評価、Table 1-4、結論まで読解。独自の推論システム評価は確認できず。",
+      "first_checked_at": "2026-10-30T09:30:33+09:00",
+      "last_checked_at": "2026-10-30T09:30:33+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 65,
+      "research_job_id": "job-research-b6b257035230a5ae"
+    }
+  ]
+}
