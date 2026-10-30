@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0345-scheduled-chat-45/r02",
+  "reference_main_sha": "cc8c6320c2f95ba28c8ab17a17c878cfbad98b27",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240856",
+      "identity_tokens": [
+        "DOI:10.1109/ICCAD66269.2025.11240856"
+      ],
+      "title": "Discriminate Weight Approximation for Efficient DSP Packing in LLM Accelerators",
+      "reason": "DWAはFPGA上のLLM向けDSPパッキングで、重みを一律に近似する従来法の精度低下とLUT消費を抑えるため、DSP内部とDSP間で選択的な重み近似を行う。著者公開のICCAD一次PDFでは、近似なしに比べチップ面積約1/1.5、従来IWA比LUT消費2.6〜4.6分の1を報告。LLM推論アクセラレータの実装効率に直接関係する。",
+      "source_url": "https://cs.nju.edu.cn/lwj/paper/ICCAD2025_DWA.pdf",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 79,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "round_status": "partial",
+  "target_count": 10
+}
