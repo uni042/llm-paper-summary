@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0a3fac002e5909d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.09306",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.09306",
+    "identity_tokens": [
+      "arXiv:2601.09306"
+    ],
+    "reason": "arXiv一次要旨は端末内の逐次推薦へLLMを配備するため、タスク適応型のモデル圧縮OD-LLMを提案。メモリ・計算制約下の端末LLM推論に関連する一方、評価は推薦タスクに特化しており、汎用LLMサービング効率への外挿は限定的なためborderline。",
+    "first_checked_at": "2026-10-30T07:20:42+00:00",
+    "last_checked_at": "2026-10-30T07:20:42+00:00",
+    "linked_from": [
+      "Edge LLM Inference",
+      "Weight Quantization / Compression"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On-Device Large Language Models for Sequential Recommendation"
+  },
+  "processed_at": "2026-10-30T07:20:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0a3fac002e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

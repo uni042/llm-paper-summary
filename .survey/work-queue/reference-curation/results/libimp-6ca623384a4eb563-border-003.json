@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-6ca623384a4eb563-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.16592",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.16592",
+    "identity_tokens": [
+      "arXiv:2610.16592"
+    ],
+    "reason": "arXiv一次要旨はエージェントRLのrolloutでprefillとdecodeが交互に混在する特性を利用し、PD分離と段階別並列化でrollout処理を高速化するProrsaを提案。推論処理自体の効率化を扱うが、用途はオンラインLLMサービスよりRL学習中のデータ生成であるためborderline。",
+    "first_checked_at": "2026-10-30T07:20:26+00:00",
+    "last_checked_at": "2026-10-30T07:20:26+00:00",
+    "linked_from": [
+      "Agentic Reinforcement Learning",
+      "LLM Serving / Scheduling / Disaggregation"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Prorsa: Unleashing the Potential of Prefill-Decode Disaggregation in Agentic Reinforcement Learning"
+  },
+  "processed_at": "2026-10-30T07:20:27+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-6ca623384a4e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

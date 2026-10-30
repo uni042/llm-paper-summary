@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-726aaffcb56c5d23-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.23587",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.23587",
+    "identity_tokens": [
+      "arXiv:2609.23587"
+    ],
+    "reason": "arXiv一次要旨は推論モデルの量子化・枝刈りがjailbreak耐性と推論能力に与える影響を調査し、安全性が上がったように見える結果の一部が推論能力劣化に由来することを分析。効率化手法の副作用を扱うが、新しい推論高速化方式の提案ではないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:28+00:00",
+    "last_checked_at": "2026-10-30T07:20:28+00:00",
+    "linked_from": [
+      "Reasoning LLM Inference",
+      "Weight Quantization / Compression"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models"
+  },
+  "processed_at": "2026-10-30T07:20:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-726aaffcb56c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

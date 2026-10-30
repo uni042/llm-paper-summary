@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8ac2e2bb822ad13-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.24322",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.24322",
+    "identity_tokens": [
+      "arXiv:2609.24322"
+    ],
+    "reason": "arXiv一次要旨は分類精度を維持する量子化でも検索のtop-1結果が14〜46%変化し得ることを示し、上位スコア差に応じて高精度化を配分する方法を提案。検索器の量子化品質には直接関連するが、LLM生成推論やサービングのモデル実測は要旨にないため境界的。",
+    "first_checked_at": "2026-10-30T07:20:39+00:00",
+    "last_checked_at": "2026-10-30T07:20:39+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It"
+  },
+  "processed_at": "2026-10-30T07:20:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8ac2e2bb822",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f0a3fac002e5909d-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2601.23161",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2601.23161",
+    "identity_tokens": [
+      "arXiv:2601.23161"
+    ],
+    "reason": "arXiv一次要旨は自己回帰型音声言語モデルの逐次復号制約を背景に、拡散型バックボーンへ置換した実用音声理解モデルDIFFA-2を提案。並列復号の可能性に関連するが、主な貢献は音声理解能力・学習方式であり、一般的LLM推論サービングの高速化を主眼とする論文ではないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:42+00:00",
+    "last_checked_at": "2026-10-30T07:20:42+00:00",
+    "linked_from": [
+      "Diffusion LLM Inference",
+      "Multimodal LLM Inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "DIFFA-2: A Practical Diffusion Large Language Model for General Audio Understanding"
+  },
+  "processed_at": "2026-10-30T07:20:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f0a3fac002e5",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

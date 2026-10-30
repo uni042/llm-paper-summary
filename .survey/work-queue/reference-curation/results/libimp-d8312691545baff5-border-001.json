@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d8312691545baff5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.16844",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.16844",
+    "identity_tokens": [
+      "arXiv:2608.16844"
+    ],
+    "reason": "arXiv一次要旨は、長文脈のメモリ状態を固定容量で始めるのではなく、入力の進行に合わせ段階的に有効容量を拡張するProteusを提案。注意の二次コスト回避と長距離記憶の効率化に関連するが、主な実証は新規系列モデルの学習・長文脈品質で、LLMサービング実機の性能が中心とは限らないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:38+00:00",
+    "last_checked_at": "2026-10-30T07:20:38+00:00",
+    "linked_from": [
+      "Alternative Language Model Architectures",
+      "Long-context Inference"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling"
+  },
+  "processed_at": "2026-10-30T07:20:38+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d8312691545b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

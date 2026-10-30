@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-eefd7cd458107e8d-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.01892",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.01892",
+    "identity_tokens": [
+      "arXiv:2404.01892"
+    ],
+    "reason": "arXiv一次要旨は一般のDNNの量子化出力誤差をバイアス補償で凸最適化する方法で、学習不要の低精度化を扱う。生成LLM、LLMサービング、KV管理、言語モデル推論高速化の直接評価が一次要旨から確認できず、今回の対象外。",
+    "first_checked_at": "2026-10-30T07:20:41+00:00",
+    "last_checked_at": "2026-10-30T07:20:41+00:00",
+    "linked_from": [
+      "Weight Quantization / Compression"
+    ],
+    "title": "Minimize Quantization Output Error with Bias Compensation"
+  },
+  "processed_at": "2026-10-30T07:20:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-eefd7cd45810",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

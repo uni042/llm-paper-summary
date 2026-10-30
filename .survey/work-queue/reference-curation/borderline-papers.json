@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T07:16:21+00:00",
-  "record_count": 5433,
+  "updated_at": "2026-10-30T07:20:44+00:00",
+  "record_count": 5456,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -84123,6 +84123,366 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Watch, Remember, Reason: Human-View Video Understanding with MLLMs"
+    },
+    "arXiv:2512.18122": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.18122",
+      "identity_tokens": [
+        "arXiv:2512.18122"
+      ],
+      "reason": "arXiv一次要旨はPDFからMarkdownへ直接変換するデコーダモデルで、PDFと生成文のn-gram重複を利用するCopy Lookup Decodingによりドラフトを作り、逐次トークン生成を削減する。推論高速化に関係するが、用途はPDF変換専用で汎用LLMサービングの性能評価ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:20+00:00",
+      "last_checked_at": "2026-10-30T07:20:20+00:00",
+      "linked_from": [
+        "Document Processing",
+        "Speculative Decoding"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Accelerating End-to-End PDF to Markdown Conversion Through Assisted Generation"
+    },
+    "arXiv:2409.04833": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.04833",
+      "identity_tokens": [
+        "arXiv:2409.04833"
+      ],
+      "reason": "arXiv一次要旨はLLMの微調整、学習時間削減、計算・メモリコスト低減を横断的に扱うシステマティックレビュー。LLM効率の背景資料にはなるが、生成推論の高速化・KV管理・サービングの独立した方法論が中心ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:20+00:00",
+      "last_checked_at": "2026-10-30T07:20:20+00:00",
+      "linked_from": [
+        "Training Efficiency",
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Achieving Peak Performance for Large Language Models: A Systematic Review"
+    },
+    "arXiv:2511.22483": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.22483",
+      "identity_tokens": [
+        "arXiv:2511.22483"
+      ],
+      "reason": "arXiv一次要旨はLLM重み・活性・KVの混合精度量子化が公平性、敵対的頑健性、倫理、分布外頑健性に与える影響を検証。推論量子化の品質リスクに関連するが、主眼は信頼性評価であり新しい高速化カーネルやサービング機構の提案ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:22+00:00",
+      "last_checked_at": "2026-10-30T07:20:22+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Enhancing Trustworthiness with Mixed Precision: Benchmarks, Opportunities, and Challenges"
+    },
+    "arXiv:2608.21308": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.21308",
+      "identity_tokens": [
+        "arXiv:2608.21308"
+      ],
+      "reason": "arXiv一次要旨は、長文脈向けTest-Time Trainingでトークン単位のfast-weight更新をチャンク並列化し、1.3Bまでのモデル学習と8倍長さ外挿で90%超のパスキー精度を報告。長文脈推論に関連するが、主要な速度評価は学習スループットであり、LLMサービングの実機decode速度が中心ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:24+00:00",
+      "last_checked_at": "2026-10-30T07:20:24+00:00",
+      "linked_from": [
+        "Alternative Language Model Architectures",
+        "Long-context Inference"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Rethinking Expressivity and Efficiency in Test-Time Training"
+    },
+    "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+      "identity_tokens": [
+        "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+        "arXiv:2605.03562"
+      ],
+      "reason": "arXiv 2605.03562の現行公式ページは、KVの保存誤差でなく注意ロジットの誤差を最小化するHeadQを記述し、2ビットKV量子化のPPL改善を報告。ただし2026-05-19のv3で著者が倫理的懸念を理由に論文をwithdrawnと明記しており、本文PDFは現行版で利用不能。技術範囲は関連するが撤回済みであることを明示し、通常Research候補としての扱いは慎重に保留する。",
+      "first_checked_at": "2026-10-30T07:20:24+00:00",
+      "last_checked_at": "2026-10-30T07:20:24+00:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HeadQ: Model-Visible Distortion and a Prototype KV Quantizer-Corrector Codec"
+    },
+    "arXiv:2605.29734": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29734",
+      "identity_tokens": [
+        "arXiv:2605.29734"
+      ],
+      "reason": "arXiv一次要旨はLLMを用いてGPU演算子のコードを自動生成・最適化する際、過去の最適化経験を粗粒度から細粒度へ階層的に記憶・検索するHTAMを提案。GPUカーネル改善と関連するが、主たる貢献はLLM支援コード探索であり、生成LLMの推論サービング性能を直接改善する方法ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:26+00:00",
+      "last_checked_at": "2026-10-30T07:20:26+00:00",
+      "linked_from": [
+        "Hardware Accelerators",
+        "Kernel Optimization"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "HTAM: Hierarchical Transition-Attended Memory for Operator Optimization"
+    },
+    "arXiv:2610.16592": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.16592",
+      "identity_tokens": [
+        "arXiv:2610.16592"
+      ],
+      "reason": "arXiv一次要旨はエージェントRLのrolloutでprefillとdecodeが交互に混在する特性を利用し、PD分離と段階別並列化でrollout処理を高速化するProrsaを提案。推論処理自体の効率化を扱うが、用途はオンラインLLMサービスよりRL学習中のデータ生成であるためborderline。",
+      "first_checked_at": "2026-10-30T07:20:26+00:00",
+      "last_checked_at": "2026-10-30T07:20:26+00:00",
+      "linked_from": [
+        "Agentic Reinforcement Learning",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Prorsa: Unleashing the Potential of Prefill-Decode Disaggregation in Agentic Reinforcement Learning"
+    },
+    "arXiv:2609.23125": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23125",
+      "identity_tokens": [
+        "arXiv:2609.23125"
+      ],
+      "reason": "arXiv一次要旨は活性量子化の品質をPPLだけで評価すると、誘導・検索などの能力劣化を見落とすことを12モデル・780比較で分析。低ビットLLM配備の品質監査に関連するが、新しい高速化方式やメモリ削減カーネルの提案ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:27+00:00",
+      "last_checked_at": "2026-10-30T07:20:27+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Perplexity Cost Understates What Activation Quantisation Breaks"
+    },
+    "arXiv:2609.23587": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23587",
+      "identity_tokens": [
+        "arXiv:2609.23587"
+      ],
+      "reason": "arXiv一次要旨は推論モデルの量子化・枝刈りがjailbreak耐性と推論能力に与える影響を調査し、安全性が上がったように見える結果の一部が推論能力劣化に由来することを分析。効率化手法の副作用を扱うが、新しい推論高速化方式の提案ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:28+00:00",
+      "last_checked_at": "2026-10-30T07:20:28+00:00",
+      "linked_from": [
+        "Reasoning LLM Inference",
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models"
+    },
+    "DOI:10.48550/arxiv.2602.22175": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2602.22175",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2602.22175",
+        "arXiv:2602.22175"
+      ],
+      "reason": "arXiv一次要旨は検索に強い注意ヘッドから関連トークンを特定し、デコード中に注意重みを増幅して長文脈の回答品質を改善するDYSCOを提案。生成推論アルゴリズムに関連するが、主眼は長文脈推論精度であり、推論計算・メモリ・速度削減の主張が中心ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:32+00:00",
+      "last_checked_at": "2026-10-30T07:20:32+00:00",
+      "linked_from": [
+        "Long-context Inference"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DySCO: Dynamic Attention-Scaling Decoding for Long-Context LMs"
+    },
+    "arXiv:2609.34650": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34650",
+      "identity_tokens": [
+        "arXiv:2609.34650"
+      ],
+      "reason": "arXiv一次要旨は学習中の注意パターン分散が小さいヘッドを固定パターンへ置換するSelective Attention Freezingを提案。注意計算の一部を省く融合カーネルを設計するが、主要な定量比較は学習トークン予算と訓練速度であり、生成LLMサービングのdecode高速化が中心ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:33+00:00",
+      "last_checked_at": "2026-10-30T07:20:33+00:00",
+      "linked_from": [
+        "Hardware Accelerators",
+        "Sparse Attention"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "When Can Attention Heads Be Statically Defined?"
+    },
+    "arXiv:2609.40070": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.40070",
+      "identity_tokens": [
+        "arXiv:2609.40070"
+      ],
+      "reason": "arXiv一次要旨はLLM APIの推論計算が逼迫した際に、利用者の待ち時間許容度と予算に応じて優先度を競売で配分する仕組みを提案。推論サービスのキュー順序・価格・遅延に関連するが、GPUカーネルやモデル計算の削減より経済メカニズム設計が主目的のためborderline。",
+      "first_checked_at": "2026-10-30T07:20:34+00:00",
+      "last_checked_at": "2026-10-30T07:20:34+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Inference Auctions"
+    },
+    "arXiv:2609.37261": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.37261",
+      "identity_tokens": [
+        "arXiv:2609.37261"
+      ],
+      "reason": "arXiv一次要旨は任意入力に一様な近似誤差保証を与える注意計算について、標準的計算量仮定の下で真に劣二次時間の近似アルゴリズムが存在しないことを示す理論研究。効率的注意設計の限界に関連するが、実機LLM推論速度の改善を報告するシステム論文ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:34+00:00",
+      "last_checked_at": "2026-10-30T07:20:34+00:00",
+      "linked_from": [
+        "Long-context Inference",
+        "Sparse Attention"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Efficiently Approximating Attention Is Hard"
+    },
+    "arXiv:2609.36032": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.36032",
+      "identity_tokens": [
+        "arXiv:2609.36032"
+      ],
+      "reason": "arXiv著者要旨はランダム回転の前後で高精度保持すべき外れ値座標を同一ビット予算の下で最適化し、量子化再構成誤差を減らす。KVキャッシュと活性の圧縮実験を含み推論効率と関連する一方、主対象は汎用ベクトル量子化と最近傍検索で、LLMサービング実機のスループット改善が主たる実証ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:36+00:00",
+      "last_checked_at": "2026-10-30T07:20:36+00:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "TORQUE: Optimizing What (not) to Quantize Before and After Rotation"
+    },
+    "arXiv:2608.16844": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16844",
+      "identity_tokens": [
+        "arXiv:2608.16844"
+      ],
+      "reason": "arXiv一次要旨は、長文脈のメモリ状態を固定容量で始めるのではなく、入力の進行に合わせ段階的に有効容量を拡張するProteusを提案。注意の二次コスト回避と長距離記憶の効率化に関連するが、主な実証は新規系列モデルの学習・長文脈品質で、LLMサービング実機の性能が中心とは限らないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:38+00:00",
+      "last_checked_at": "2026-10-30T07:20:38+00:00",
+      "linked_from": [
+        "Alternative Language Model Architectures",
+        "Long-context Inference"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling"
+    },
+    "arXiv:2605.07698": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.07698",
+      "identity_tokens": [
+        "arXiv:2605.07698"
+      ],
+      "reason": "arXiv一次要旨は文法制約付き投機的復号で局所マスクだけでは目標の文法条件付き分布を再現できないことを示し、将来の妥当な補完確率ΦによるDoob変換と推定誤差境界を導出。投機的復号の正しさに直接関連するが、主眼は厳密サンプリングの理論保証であり、GPU推論高速化の定量実証が中心ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:38+00:00",
+      "last_checked_at": "2026-10-30T07:20:38+00:00",
+      "linked_from": [
+        "Constrained Decoding",
+        "Speculative Decoding"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Future Validity is the Missing Statistic: From Impossibility to Φ-Estimation for Grammar-Faithful Speculative Decoding"
+    },
+    "arXiv:2609.24322": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24322",
+      "identity_tokens": [
+        "arXiv:2609.24322"
+      ],
+      "reason": "arXiv一次要旨は分類精度を維持する量子化でも検索のtop-1結果が14〜46%変化し得ることを示し、上位スコア差に応じて高精度化を配分する方法を提案。検索器の量子化品質には直接関連するが、LLM生成推論やサービングのモデル実測は要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:20:39+00:00",
+      "last_checked_at": "2026-10-30T07:20:39+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The Undetected Damage of Quantization on Retrieval and How to Fix It"
+    },
+    "arXiv:2508.16785": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.16785",
+      "identity_tokens": [
+        "arXiv:2508.16785"
+      ],
+      "reason": "arXiv著者要旨は4/8ビット量子化がLLM内部表現、校正、ニューロンの活性・寄与に与える影響を解釈可能性手法で分析。量子化モデルの信頼性に関連するが、新しい圧縮アルゴリズムや推論速度・VRAMの改善が主要な貢献ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:40+00:00",
+      "last_checked_at": "2026-10-30T07:20:40+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Interpreting the Effects of Quantization on LLMs"
+    },
+    "arXiv:2609.34185": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.34185",
+      "identity_tokens": [
+        "arXiv:2609.34185"
+      ],
+      "reason": "arXiv著者要旨はE8格子量子化と条件付き確率モデルを用い、任意ビット率で重みをエントロピー符号化し、タイル単位で復号可能なEntroPackを提案。推論時の重み格納量と復号費用に関係するが、要旨の主対象は一般の大規模ニューラルネットで、LLMサービング固有の実機効果が中心とは確認できないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:40+00:00",
+      "last_checked_at": "2026-10-30T07:20:40+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "EntroPack: Fast and Accurate Entropy-Coded Weight Compression at Arbitrary Bitrates"
+    },
+    "arXiv:2601.23161": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23161",
+      "identity_tokens": [
+        "arXiv:2601.23161"
+      ],
+      "reason": "arXiv一次要旨は自己回帰型音声言語モデルの逐次復号制約を背景に、拡散型バックボーンへ置換した実用音声理解モデルDIFFA-2を提案。並列復号の可能性に関連するが、主な貢献は音声理解能力・学習方式であり、一般的LLM推論サービングの高速化を主眼とする論文ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:42+00:00",
+      "last_checked_at": "2026-10-30T07:20:42+00:00",
+      "linked_from": [
+        "Diffusion LLM Inference",
+        "Multimodal LLM Inference"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "DIFFA-2: A Practical Diffusion Large Language Model for General Audio Understanding"
+    },
+    "arXiv:2601.09306": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.09306",
+      "identity_tokens": [
+        "arXiv:2601.09306"
+      ],
+      "reason": "arXiv一次要旨は端末内の逐次推薦へLLMを配備するため、タスク適応型のモデル圧縮OD-LLMを提案。メモリ・計算制約下の端末LLM推論に関連する一方、評価は推薦タスクに特化しており、汎用LLMサービング効率への外挿は限定的なためborderline。",
+      "first_checked_at": "2026-10-30T07:20:42+00:00",
+      "last_checked_at": "2026-10-30T07:20:42+00:00",
+      "linked_from": [
+        "Edge LLM Inference",
+        "Weight Quantization / Compression"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "On-Device Large Language Models for Sequential Recommendation"
+    },
+    "arXiv:2311.14495": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.14495",
+      "identity_tokens": [
+        "arXiv:2311.14495"
+      ],
+      "reason": "arXiv一次要旨はSSMが安定に近似できる長期記憶の理論的制約を示し、再パラメータ化によって記憶能力を改善するStableSSMを提案。長文脈モデルの設計には関係するが、推論カーネル・サービング速度・KV削減の実測が主題ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:43+00:00",
+      "last_checked_at": "2026-10-30T07:20:43+00:00",
+      "linked_from": [
+        "Alternative Language Model Architectures"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "StableSSM: Alleviating the Curse of Memory in State-space Models through Stable Reparameterization"
+    },
+    "arXiv:2512.10430": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.10430",
+      "identity_tokens": [
+        "arXiv:2512.10430"
+      ],
+      "reason": "arXiv一次要旨はロシア語向けhybrid reasoning LLMとEAGLE型投機的復号パイプラインを公開し、デモで推論速度改善を示す。推論効率に関連する一方、主貢献はモデル・データセット・ベンチマークのリリースであり、一般化可能な新しいサービング方式の評価が中心ではないためborderline。",
+      "first_checked_at": "2026-10-30T07:20:44+00:00",
+      "last_checked_at": "2026-10-30T07:20:44+00:00",
+      "linked_from": [
+        "Model Release",
+        "Speculative Decoding"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "T-pro 2.0: An Efficient Russian Hybrid-Reasoning Model and Playground"
     }
   }
 }

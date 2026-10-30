@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-9b62b8af02f9fa3d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.37261",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.37261",
+    "identity_tokens": [
+      "arXiv:2609.37261"
+    ],
+    "reason": "arXiv一次要旨は任意入力に一様な近似誤差保証を与える注意計算について、標準的計算量仮定の下で真に劣二次時間の近似アルゴリズムが存在しないことを示す理論研究。効率的注意設計の限界に関連するが、実機LLM推論速度の改善を報告するシステム論文ではないためborderline。",
+    "first_checked_at": "2026-10-30T07:20:34+00:00",
+    "last_checked_at": "2026-10-30T07:20:34+00:00",
+    "linked_from": [
+      "Long-context Inference",
+      "Sparse Attention"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Efficiently Approximating Attention Is Hard"
+  },
+  "processed_at": "2026-10-30T07:20:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-9b62b8af02f9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

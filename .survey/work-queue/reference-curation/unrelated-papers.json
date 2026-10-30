@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T03:53:35+00:00",
-  "record_count": 12560,
+  "updated_at": "2026-10-30T07:20:44+00:00",
+  "record_count": 12570,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180799,6 +180799,148 @@
       "last_checked_at": "2026-10-30T03:53:35+00:00",
       "linked_from": [],
       "title": "Exploiting Student Parallelism for Low-latency GPU Inference of BERT-like Models in Online Services"
+    },
+    "arXiv:2502.13533": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13533",
+      "identity_tokens": [
+        "arXiv:2502.13533"
+      ],
+      "reason": "arXiv一次要旨は大きなLLMを枝刈りした小型モデルでLoRA微調整し、アダプタを元の大きなモデルへ復元するLoRAMを提案。主目的は微調整時のGPUメモリ削減であり、生成推論の速度・KV・サービング最適化ではないため対象外。",
+      "first_checked_at": "2026-10-30T07:20:27+00:00",
+      "last_checked_at": "2026-10-30T07:20:27+00:00",
+      "linked_from": [
+        "Fine-tuning / Training Efficiency"
+      ],
+      "title": "Train Small, Infer Large: Memory-Efficient LoRA Training for Large Language Models"
+    },
+    "DOI:10.48550/arxiv.2510.01565": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.48550/arxiv.2510.01565",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.01565",
+        "arXiv:2510.01565"
+      ],
+      "reason": "タイトルが対象をDiTによる異種画像生成サービングと明示。LLMのテキスト推論・KV管理への直接貢献はタイトルから読み取れず、画像生成専用の処理を対象とする。",
+      "first_checked_at": "2026-10-30T07:20:29+00:00",
+      "last_checked_at": "2026-10-30T07:20:29+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Speculative Decoding"
+      ],
+      "title": "TetriServe: Efficient DiT Serving for Heterogeneous Image Generation"
+    },
+    "SemanticScholar:075fbaee3d28b21d786f19528815a898d617bfb2": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:075fbaee3d28b21d786f19528815a898d617bfb2",
+      "identity_tokens": [
+        "SemanticScholar:075fbaee3d28b21d786f19528815a898d617bfb2"
+      ],
+      "reason": "タイトルはストリーミング映像解析向けのコーデック最適化を対象とする。LLMの言語生成推論やKVキャッシュの高速化が対象とは示されていない。",
+      "first_checked_at": "2026-10-30T07:20:29+00:00",
+      "last_checked_at": "2026-10-30T07:20:29+00:00",
+      "linked_from": [
+        "KV Cache Offload / Recomputation"
+      ],
+      "title": "CodecFlow: Codec-Guided End-to-End Optimization for Streaming Video Analytics"
+    },
+    "DOI:10.1109/icassp55912.2026.11461425": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11461425",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11461425"
+      ],
+      "reason": "タイトルは画像コードブック冗長性と自己回帰画像生成の投機的復号を対象とする。出力が画像であり、LLMテキスト推論サービングの直接研究ではない。",
+      "first_checked_at": "2026-10-30T07:20:30+00:00",
+      "last_checked_at": "2026-10-30T07:20:30+00:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "title": "Breaking Codebook Redundancy for Faster Autoregressive Image Generation with Retrieval-Augmented Speculative Decoding"
+    },
+    "arXiv:2601.09212": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.09212",
+      "identity_tokens": [
+        "arXiv:2601.09212"
+      ],
+      "reason": "タイトルが高速化対象を自己回帰画像生成と明記している。LLMテキスト生成に対する推論システムの貢献ではなく、画像生成タスク固有の投機的デコードを対象とする。",
+      "first_checked_at": "2026-10-30T07:20:30+00:00",
+      "last_checked_at": "2026-10-30T07:20:30+00:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "title": "Annealed Relaxation of Speculative Decoding for Faster Autoregressive Image Generation"
+    },
+    "arXiv:2603.13450": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.13450",
+      "identity_tokens": [
+        "arXiv:2603.13450"
+      ],
+      "reason": "タイトルは拡散型言語モデルを用いたtext-to-image画像生成を対象と明記。一般のLLMテキスト推論やサービングの高速化への直接的な適用は確認できない。",
+      "first_checked_at": "2026-10-30T07:20:31+00:00",
+      "last_checked_at": "2026-10-30T07:20:31+00:00",
+      "linked_from": [
+        "Diffusion LLM Inference"
+      ],
+      "title": "LADR: Locality-Aware Dynamic Rescue for Efficient Text-to-Image Generation with Diffusion Large Language Models"
+    },
+    "arXiv:2606.31599": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.31599",
+      "identity_tokens": [
+        "arXiv:2606.31599"
+      ],
+      "reason": "タイトルは医療マルチモーダル推論能力の強化学習を主題とし、LLM推論実行時の計算・メモリ・サービングの効率化を目的としていない。",
+      "first_checked_at": "2026-10-30T07:20:31+00:00",
+      "last_checked_at": "2026-10-30T07:20:31+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "title": "Token-Sparse Medical Multimodal Reasoning via Dual-Stream Reinforcement Learning"
+    },
+    "arXiv:2603.01599": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.01599",
+      "identity_tokens": [
+        "arXiv:2603.01599"
+      ],
+      "reason": "arXiv一次要旨は一般のDNNとエッジデバイス向け量子化対応事前学習(QAPT)で、情報理論上の符号効率と整数演算の両立を提案。LLMの生成推論、KV、サービング、デコード高速化を対象とする根拠が一次要旨から確認できず、今回の推論効率サーベイでは対象外。",
+      "first_checked_at": "2026-10-30T07:20:41+00:00",
+      "last_checked_at": "2026-10-30T07:20:41+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "title": "Boosting Entropy with Bell Box Quantization"
+    },
+    "arXiv:2404.01892": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.01892",
+      "identity_tokens": [
+        "arXiv:2404.01892"
+      ],
+      "reason": "arXiv一次要旨は一般のDNNの量子化出力誤差をバイアス補償で凸最適化する方法で、学習不要の低精度化を扱う。生成LLM、LLMサービング、KV管理、言語モデル推論高速化の直接評価が一次要旨から確認できず、今回の対象外。",
+      "first_checked_at": "2026-10-30T07:20:41+00:00",
+      "last_checked_at": "2026-10-30T07:20:41+00:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "title": "Minimize Quantization Output Error with Bias Compensation"
+    },
+    "arXiv:2610.12514": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.12514",
+      "identity_tokens": [
+        "arXiv:2610.12514"
+      ],
+      "reason": "arXiv一次要旨は自己回帰動画拡散モデルのKVを層間予測・残差符号化で圧縮するCORAL-KVを提案。対象は動画生成モデルであり、LLM言語生成のKVキャッシュや推論サービングではないため今回の範囲外。",
+      "first_checked_at": "2026-10-30T07:20:44+00:00",
+      "last_checked_at": "2026-10-30T07:20:44+00:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression"
+      ],
+      "title": "CORAL-KV: Compact Cross-Layer Prediction and Residual Coding for Autoregressive Video KV Caches"
     }
   }
 }
