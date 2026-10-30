@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0432-scheduled-chat-30/r03",
+  "reference_main_sha": "e95b472665d0aa27c176a9c0c12874e540a53cf6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.23371",
+      "identity_tokens": [
+        "arXiv:2609.23371"
+      ],
+      "title": "Machine-Interpretable Information: Compiling Documents into Searchable and Readable Protocol States",
+      "reason": "MIIはRAGで索引検索後に長文原文を再投入する費用を避け、文書を56tokenの移植可能な固定帯域状態へ変換するWriterと、凍結Readerの埋め込み空間に変換するTranslatorを組み合わせる。Residual-MIIでは圧縮全体記憶と局所証拠を階層化し、HotpotQA 7,405件でfull-contextのExact Matchを上回りつつattention FLOPs約7%を報告。入力圧縮・RAG推論効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.23371",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 54,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.24973",
+      "identity_tokens": [
+        "arXiv:2608.24973"
+      ],
+      "title": "Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation",
+      "reason": "REP-LIEはLoRAの低rank行列の勾配から重み重要度を推定し、全パラメータ勾配を計算せず安定性スコアで反復枝刈りする。LLaMA-7BとMistral-7Bを含む評価で軽量fine-tuningと圧縮後の品質を確認する。実行時高速化の定量値は要旨にないが、生成LLMのパラメータ削減と推論資源圧縮を直接目的とするためaccept。",
+      "source_url": "https://arxiv.org/abs/2608.24973",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 62,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.27981",
+      "identity_tokens": [
+        "arXiv:2609.27981"
+      ],
+      "title": "Risk-Controlled KV-Cache Eviction: From Memory Budgets to Risk Targets",
+      "reason": "KV evictionによる品質劣化の平均値ではなく、個別要求の許容誤差超過率を有限標本の保証付きで管理する事後認証方式。Llama/MistralとLongBench/RULER-32Kで認証可能な保持率を評価し、LlamaのLongBenchではSnapKV 75%保持を認証する一方、RULER-32Kでは圧縮を認証できずfull-KVへ戻す。推論KVメモリと信頼性SLOの設計に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2609.27981",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 75,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36954",
+      "identity_tokens": [
+        "arXiv:2609.36954"
+      ],
+      "title": "Purlin: Separating Orchestration from the Datapath of Collectives",
+      "reason": "PurlinはGPU collective通信をレイアウト仕様・SNAC調整プロトコル・ハードウェア固有Atomデータパスに分離する。A100/H200/B200で通信latency最大5.14倍、bandwidth最大4.50倍の改善を報告。SGLangへ組み込んだLLMサービングではoffline throughput/interactivity平均1.13倍、online interactivity平均1.26倍（最大2.85倍）を報告しており、分散推論通信基盤へ直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.36954",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 138,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.27276",
+      "identity_tokens": [
+        "arXiv:2609.27276"
+      ],
+      "title": "DRSR: Learning Set-Level Deletion Risk for Efficient Long-Horizon Agents",
+      "reason": "DRSRは長期LLMエージェントの履歴を独立token重要度ではなく、削除集合の反実仮想損失で評価する。オフラインで次出力のteacher-forced likelihood変化を教師信号とし、軽量scorerで削除候補を選び、危険な場合は削除を棄権する。WorkBuddyBench Full260で報酬0.699から0.802へ改善し総model tokenを20.820%削減と報告。エージェントの入力圧縮と推論token費用に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.27276",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 151,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22718",
+      "identity_tokens": [
+        "arXiv:2602.22718"
+      ],
+      "title": "RLHFless: Serverless Computing for Efficient RLHF",
+      "reason": "RLHFlessはRLHF学習のrollout推論と訓練処理が交互に要求する資源をserverless基盤で調整し、prefix事前計算、応答長を考慮したactor拡縮、idle時間削減を組み合わせる。実機・シミュレーションで学習パイプライン最大1.35倍、費用44.8%削減を報告するが、主対象はRLHF post-training全体であり、独立したLLMサービング推論の高速化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2602.22718",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 353,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.17416",
+      "identity_tokens": [
+        "arXiv:2609.17416"
+      ],
+      "title": "Never Stop Thinking: Continuous-Time Language Agents",
+      "reason": "音声LLMエージェントのlisten-think-speak直列化を、既存テキストモデルに変更を加えないinterrupt-and-resume orchestratorで重ね合わせ、聴取中・発話中にも推論を進める。著者はlive音声pipeline全体のlatency19%削減、対象条件では約半減を報告。ReactiveBenchで主観LLM judgeの偏りも検証しており、リアルタイム推論オーケストレーションの直接的システム寄与がある。",
+      "source_url": "https://arxiv.org/abs/2609.17416",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 354,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07108",
+      "identity_tokens": [
+        "arXiv:2606.07108"
+      ],
+      "title": "DyCon: Dynamic Reasoning Control via Evolving Difficulty Modeling",
+      "reason": "DyConは推論ステップごとに変化する難度が隠れ表現に符号化されることを利用し、学習不要で思考深度を動的に制御して冗長な推論を減らす。4B〜32Bの4モデルと12ベンチマークで精度を保ったステップ削減を報告するが、要旨には実測token/secやサービング実装がなく、主眼は推論方策制御のためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.07108",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 357,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02341",
+      "identity_tokens": [
+        "arXiv:2608.02341"
+      ],
+      "title": "Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference",
+      "reason": "エッジ端末間のMoE分散推論で主ノードからexpert workerへembeddingを配信する一対多通信を、逐次unicastからUDP broadcastへ変更する。timeout再送と順不同結果回収を備え、有線8ノードでNCCL/TCP比1.4倍の速度向上を実測。無線ではIEEE 802.11のbroadcast 54Mbps上限が律速であることをNS-3で分析し、LLM分散推論の通信系に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2608.02341",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 370,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.14778/3819518.3819522",
+      "identity_tokens": [
+        "doi:10.14778/3819518.3819522"
+      ],
+      "title": "Mil: Cost-guided Minimum Makespan Scheduling for Applications of Multiple LLMs",
+      "reason": "Milは複数LLMを呼ぶofflineアプリケーションの総完了時間を最小化するため、GPU割当・並列度選択・実行順序を共同最適化する。出力長sampling、生成iteration latency予測、理論保証付きgreedy scheduling、GPU idleを抑えるruntime調整を組み合わせる。VLDB 2026公式会議プログラム掲載の原著要旨ではensemble/routing/chain summary等で最大3.4倍のend-to-end高速化を報告する。",
+      "source_url": "https://vldb.org/2026/program.html",
+      "body_check": "primary_conference_official_program_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:47:00+09:00",
+      "last_checked_at": "2026-10-31T04:47:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
