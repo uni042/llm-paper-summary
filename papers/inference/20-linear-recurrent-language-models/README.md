@@ -234,6 +234,6 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-09 · [Rethinking Attention with Performers](2020-2009.14794-rethinking-attention-with-performers.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：165  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/performer) ・ リポジトリ内被引用：166  
   Performerは、通常の全ランクのソフトマックス注意を正の直交ランダム特徴で近似するFAVOR+を提案し、注意行列を明示的に保持しない線形時間・線形空間の実行を可能にする。
 <!-- survey:auto:end -->

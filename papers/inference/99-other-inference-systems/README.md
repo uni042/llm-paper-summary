@@ -3257,7 +3257,7 @@
   本論文は、巨大言語モデルの学習を数千基のGPUへ拡張するとき、メモリ容量、層内の集合通信、パイプラインの空泡、ノード間転送の重複が性能を制限する問題を扱う。パイプラインでは前向きと後向きを交互に処理する1F1Bを使い、さらに一つのGPUに複数の離れたモデル片を割り当てて空泡を短くする。
 
 - **2021-02 · [Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention](2021-2102.03902-nystr-mformer-a-nystr-m-based-algorithm-for-approximating-self-attention.md)**  
-  実装：[✓](https://github.com/mlpen/Nystromformer) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/mlpen/Nystromformer) ・ リポジトリ内被引用：38  
   標準的な自己注意（self-注意機構）は、系列長nのすべてのトークン対の類似度を計算するため、n×nの注意行列を作る。系列が2倍になると注意行列の要素数は4倍となり、長い文書を扱うTransformerでは計算量とメモリ容量が問題になる。
 
 - **2020-12 · [Fast Transformers with Clustered Attention](2020-2007.04825-fast-transformers-with-clustered-attention.md)**  
@@ -3325,7 +3325,7 @@
   この論文の対象は、巨大な言語モデルの学習時に、モデル重み・勾配・最適化器状態が単一GPUのメモリに収まらない問題である。従来のモデル全体を別の言語や専用コンパイラで書き直す方法とは異なり、PyTorchの既存Transformer実装へ少数の集約通信を挿入する設計である。
 
 - **2019-04 · [Generating Long Sequences with Sparse Transformers](2019-1904.10509-generating-long-sequences-with-sparse-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：252  
+  実装：✓ ・ リポジトリ内被引用：253  
   全結合の自己注意を局所窓と周期・固定要約位置へ因数分解して O(n√n) 化し、再計算と疎GPUカーネルを併用して数万〜100万要素の生成を可能にしたSparse Transformer。
 
 - **2018-11 · [Blockwise Parallel Decoding for Deep Autoregressive Models](2018-1811.03115-blockwise-parallel-decoding-for-deep-autoregressive-models.md)**  
@@ -3337,15 +3337,15 @@
   GPipeは、単一のGPUやTPUに収まらないニューラルネットワークを、層の連続区間ごとに複数の装置へ分割して学習する方式である。実際に学習した557百万パラメータのAmoebaNetはImageNet-2012の上位1件正解率84.4%、60億パラメータ・128層の多言語Transformerは102言語対で個別の二言語モデルを上回った。
 
 - **2019-09 · [Q-BERT: Hessian Based Ultra Low Precision Quantization of BERT](2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md)**  
-  実装：✓ ・ リポジトリ内被引用：67  
+  実装：✓ ・ リポジトリ内被引用：68  
   Q-BERTは、BERTの各層へ同じビット数を割り当てる均一量子化ではなく、損失関数の二階微分から層ごとの誤差感度を推定し、敏感な層へ高い精度を残す混合精度量子化手法である。論文はSST-2、MNLI、CoNLL-03、SQuADの四課題で、重みの最大13倍圧縮、埋め込みと活性値の最大4倍圧縮を報告し、強圧縮でも性能低下を最大2.3%以内に抑えたと説明する。
 
 - **2019-05 · [Adaptive Attention Span in Transformers](2019-1905.07799-adaptive-attention-span-in-transformers.md)**  
-  実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：32  
+  実装：[✓](https://github.com/facebookresearch/adaptive-span) ・ リポジトリ内被引用：33  
   自己回帰型Transformerの注意機構は、過去の一定幅のトークンを参照して次のトークンを予測する。
 
 - **2019-10 · [Q8BERT: Quantized 8Bit BERT](2019-1910.06188-q8bert-quantized-8bit-bert.md)**  
-  実装：[✓](https://github.com/NervanaSystems/nlp-architect) ・ リポジトリ内被引用：17  
+  実装：[✓](https://github.com/NervanaSystems/nlp-architect) ・ リポジトリ内被引用：18  
   Q8BERTは、事前学習済みBERTを特定の自然言語処理課題へ微調整する段階で量子化誤差を模擬し、推論時の8ビット整数演算へ適応させる研究である。著者はBERTの重みの99%以上を占める埋め込み層と全結合層を8ビット整数へ対応させ、残りの数値的に敏感な演算は32ビット浮動小数点に残す。
 
 - **2019-04 · [Mask-Predict: Parallel Decoding of Conditional Masked Language Models](2019-1904.09324-mask-predict-parallel-decoding-of-conditional-masked-language-models.md)**  
@@ -3353,7 +3353,7 @@
   翻訳文の長さを最初に予測し、最初の反復では全位置を同時に予測する。2019年の機械翻訳実験では、WMT14英語→ドイツ語において基礎CMLMの10反復が27.03 BLEU、同等規模の自己回帰Transformerが27.74 BLEUとなった。
 
 - **2019-07 · [Large Memory Layers with Product Keys](2019-1907.05242-large-memory-layers-with-product-keys.md)**  
-  実装：[✓](https://github.com/facebookresearch/XLM) ・ リポジトリ内被引用：12  
+  実装：[✓](https://github.com/facebookresearch/XLM) ・ リポジトリ内被引用：13  
   本論文の積キー記憶層（Product Key メモリ; PKM）は、二つの部分キー集合の直積で巨大なキー集合を暗黙的に作り、各部分集合の上位候補だけを調べて全積キー集合に対する正確な上位選択を行う。検索結果に対応する少数の値ベクトルだけを読み出して加重和を計算するため、総パラメータ容量と活性計算量を分離できる。
 
 - **2019-03 · [Supporting Very Large Models using Automatic Dataflow Graph Partitioning](2019-1807.08887-supporting-very-large-models-using-automatic-dataflow-graph-partitioning.md)**  

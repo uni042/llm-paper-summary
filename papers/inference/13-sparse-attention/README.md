@@ -405,7 +405,7 @@
   自己類似度を使って重要ブロックを予測し、残ったブロックにもGPUワープ単位のsoftmax判定を適用する学習不要の疎注意演算子。近似誤差の許容範囲を層ごとに調整し、言語・画像・動画で実測性能と品質を比較する。
 
 - **2024-12 · [SCBench: A KV Cache-Centric Analysis of Long-Context Methods](2024-2412.10319-scbench-a-kv-cache-centric-analysis-of-long-context-methods.md)**  
-  実装：✓ ・ リポジトリ内被引用：34  
+  実装：✓ ・ リポジトリ内被引用：35  
   共有長文脈を複数ターンで再利用する12タスクを用い、KV生成・圧縮・検索・読み込みの各方式が初回だけでなく後続要求でどう崩れるかを比較する。
 
 - **2024-11 · [Squeezed Attention: Accelerating Long Context Length LLM Inference](2024-2411.09688-squeezed-attention-accelerating-long-context-length-llm-inference.md)**  
@@ -436,13 +436,13 @@
   実装：[✓](https://github.com/carriex/refreshkv) ・ リポジトリ内被引用：10  
   従来のKVキャッシュ削除方式は、プリフィル直後や過去の注意得点から残すトークンを選び、それ以外の鍵値を捨てる。
 
+- **2025-07 · [Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores](2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md)**  
+  実装：[✓](https://github.com/vnchari/compactor-vllm) ・ リポジトリ内被引用：10  
+  近似レバレッジスコアで質問非依存にKVを選別し、文脈別の圧縮耐性を校正してLongBenchで完全KV相当の性能を保ちながら平均68%のKVメモリを削減する。
+
 - **2025-07 · [Efficient Attention Mechanisms for Large Language Models: A Survey](2025-2507.19595-efficient-attention-mechanisms-for-large-language-models-a-survey.md)**  
   実装：✓ ・ リポジトリ内被引用：9  
   独自の統一実験ではなく既存研究の概念・設計制約を統合し、理論計算量と実測速度、疎演算とKV容量削減の違いを強調する。
-
-- **2025-07 · [Compactor: Calibrated Query-Agnostic KV Cache Compression with Approximate Leverage Scores](2025-2507.08143-compactor-calibrated-query-agnostic-kv-cache-compression-with-approximat.md)**  
-  実装：[✓](https://github.com/vnchari/compactor-vllm) ・ リポジトリ内被引用：9  
-  近似レバレッジスコアで質問非依存にKVを選別し、文脈別の圧縮耐性を校正してLongBenchで完全KV相当の性能を保ちながら平均68%のKVメモリを削減する。
 
 - **2025-04 · [MMInference: Accelerating Pre-filling for Long-Context VLMs via Modality-Aware Permutation Sparse Attention](2025-2504.16083-mminference-accelerating-pre-filling-for-long-context-vlms-via-modality-.md)**  
   実装：[✓](https://aka.ms/MMInference) ・ リポジトリ内被引用：8  
@@ -679,18 +679,18 @@
 ### 7年前（2019-11〜2020-10）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：224  
+  実装：✓ ・ リポジトリ内被引用：225  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：175  
+  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：176  
   第一の制約は、全トークン対の内積を求める標準自己注意が系列長の二乗に比例する計算を要することである。
 
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  
-  実装：[✓](https://github.com/google-research/google-research/tree/master/routing_transformer) ・ リポジトリ内被引用：85  
+  実装：[✓](https://github.com/google-research/google-research/tree/master/routing_transformer) ・ リポジトリ内被引用：86  
   固定した近傍窓ではなく「内容が近いトークン」をクラスタリングして注意先を決める。局所注意だけでは拾いにくい遠距離依存を残しつつ、各トークンが全系列を見る密な自己注意の二乗コストを削る、初期の内容依存疎注意方式。
 
 - **2019-11 · [Blockwise Self-Attention for Long Document Understanding](2019-1911.02972-blockwise-self-attention-for-long-document-understanding.md)**  
-  実装：[✓](https://github.com/xptree/BlockBERT) ・ リポジトリ内被引用：33  
+  実装：[✓](https://github.com/xptree/BlockBERT) ・ リポジトリ内被引用：34  
   BlockBERTは、長文の読解に使う双方向エンコーダBERTで、自己注意の計算と活性値保存が系列長の二乗に増える問題を、注意を計算するブロックの組合せを注意頭ごとに限定することで軽減する方式である。系列長1024の事前学習ではRoBERTa-1seq比で最大36.1%のGPUメモリ削減、25.1%の学習時間短縮を示す。
 <!-- survey:auto:end -->
