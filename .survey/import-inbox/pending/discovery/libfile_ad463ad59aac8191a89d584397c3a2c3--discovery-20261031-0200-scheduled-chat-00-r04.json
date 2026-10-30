@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0200-scheduled-chat-00/r04",
+  "reference_main_sha": "bfbf4444d3e126ebc965c380558cb94e575463ae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34683",
+      "identity_tokens": [
+        "arXiv:2609.34683"
+      ],
+      "title": "AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs",
+      "reason": "arXiv一次要旨はSWE-BenchやTerminalBenchの実際のエージェント軌跡から入出力長・ターン数・文脈増大を再現し、vLLM/SGLang等のサービング性能を測るベンチマークを提案。GPU飽和を考慮しない従来の単発チャット負荷の誤差を示し、推論ハードウェアの帯域・容量ボトルネックを計測する直接的なシステム評価基盤。",
+      "source_url": "https://arxiv.org/abs/2609.34683",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 333,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.23025",
+      "identity_tokens": [
+        "arXiv:2506.23025"
+      ],
+      "title": "Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models",
+      "reason": "arXiv一次要旨は三値言語モデルの学習スケーリングを調べるとともに、三値重みの2ビット・1.6ビット格納方式とGPU向けTriRunカーネルを提案。CPU実行の低ビット化と浮動小数点基準比最大5倍のGPUエンドツーエンド推論高速化を報告し、推論カーネルと重み圧縮へ直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2506.23025",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 334,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.26574",
+      "identity_tokens": [
+        "arXiv:2608.26574"
+      ],
+      "title": "Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference",
+      "reason": "arXiv一次要旨は拡散LLMの確定済み候補を再検証する際、不確実なトークンが検証文脈を汚染する問題に対し、mask/candidate/unmaskedの3状態と信頼性で選別した文脈を用いるDARDを提案。12ベンチマーク・3モデルで速度品質の両立を改善し、Flickr30Kでは比較方式Saber比2.71倍高速化とCIDEr 4.35点改善を報告。",
+      "source_url": "https://arxiv.org/abs/2608.26574",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 336,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.14961",
+      "identity_tokens": [
+        "arXiv:2510.14961"
+      ],
+      "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+      "reason": "arXiv一次要旨は同じ層を反復するrecurrent-depth言語モデルに拡散型のforcing samplerを適用し、新トークン生成と既存潜在状態の反復改良を並列化する。既存3.5Bモデルに追加調整なしで適用し最大5倍高速化と報告する、逐次生成の推論パスを短縮する方式。",
+      "source_url": "https://arxiv.org/abs/2510.14961",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 339,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.15346",
+      "identity_tokens": [
+        "arXiv:2405.15346"
+      ],
+      "title": "BiSup: Bidirectional Quantization Error Suppression for Large Language Models",
+      "reason": "arXiv一次要旨は低ビット重み・活性量子化で層を縦断する誤差と注意によってトークン間へ伝播する誤差を分け、軽量な量子化対応微調整とシステムプロンプトKVの高精度保持で双方を抑制するBiSupを提案。Llama/QwenのW3A3-g128設定でPPLを既存法より改善する推論向け圧縮研究。",
+      "source_url": "https://arxiv.org/abs/2405.15346",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 340,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.25068",
+      "identity_tokens": [
+        "arXiv:2608.25068"
+      ],
+      "title": "SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs",
+      "reason": "arXiv一次要旨はTransformer層剪定後の隠れ状態分布ずれに対し、削除箇所へ線形残差アダプタを挿入し、少数の較正例による最小二乗解で元層の残差更新を近似する。勾配計算なしで層削除による計算削減を維持しつつ、Llama-3.1-8B-Instructで精度最大15.7点を回復と報告。",
+      "source_url": "https://arxiv.org/abs/2608.25068",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 343,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.23648",
+      "identity_tokens": [
+        "arXiv:2505.23648"
+      ],
+      "title": "Continuous Chain of Thought Enables Parallel Exploration and Reasoning",
+      "reason": "arXiv一次要旨は連続値の思考トークンCoT2により複数の離散推論経路を同時表現し、1復号段階でK個の離散トークンを合成するサンプリングを理論・小規模実験で検証。推論並列性の理論的接点はあるが、LLMサービングの実測遅延や既存実行基盤の直接最適化は要旨で確認できないため境界的。",
+      "source_url": "https://arxiv.org/abs/2505.23648",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 345,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.30005",
+      "identity_tokens": [
+        "arXiv:2606.30005"
+      ],
+      "title": "LLM Agents Are Latent Context Managers: Eliciting Self-Managed Context via State Proprioception",
+      "reason": "arXiv一次要旨ではVISTAがエージェントの作業記憶をアドレス可能なブロックに分け、トークン消費・残予算・経過時間・アーカイブ状態を可視化し、必要に応じて完全復元可能な退避を行う。長期エージェントの文脈管理を訓練なしで改善する推論時メモリ制御方式。worklist題名の末尾は現行arXiv版と異なるが同一IDで確認した。",
+      "source_url": "https://arxiv.org/abs/2606.30005",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 349,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.06330",
+      "identity_tokens": [
+        "arXiv:2604.06330"
+      ],
+      "title": "STDec: Spatio-Temporal Stability Guided Decoding for dLLMs",
+      "reason": "arXiv一次要旨は拡散LLMで隣接位置の確定状態を集約して位置別信頼度閾値を調整し、複数反復で予測IDが安定した位置は閾値を緩和するSTDecを提案。学習不要でキャッシュ高速化と併用可能とし、LLaDA/MBPPで同程度の品質を保ちながら最大14.17倍高速化と報告。",
+      "source_url": "https://arxiv.org/abs/2604.06330",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 355,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.07724",
+      "identity_tokens": [
+        "arXiv:2607.07724"
+      ],
+      "title": "Uncertainty-gated selection for block-sparse attention",
+      "reason": "arXiv一次要旨はblock-sparse attentionのtop-k境界でk位とk+1位が接近した不確実なクエリにだけ追加ブロックを割当てるvalue-of-informationルータを提案。Quest等のブロックスコア方式に重ねられ、LongBench-v2で回答再現率0.47から0.75へ改善し、128Kでの速度・精度交換条件を示す長文脈推論注意最適化。",
+      "source_url": "https://arxiv.org/abs/2607.07724",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:04:44+09:00",
+      "last_checked_at": "2026-10-31T02:04:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 357,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
