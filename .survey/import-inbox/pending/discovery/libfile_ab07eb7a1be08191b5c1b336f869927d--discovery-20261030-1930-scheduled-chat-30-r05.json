@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r05",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21221",
+      "identity_tokens": [
+        "arXiv:2604.21221"
+      ],
+      "title": "Sparse Forcing: Native Trainable Sparse Attention for Real-time Autoregressive Diffusion Video Generation",
+      "reason": "Sparse Forcingは自己回帰の動画拡散生成で視覚ブロックの疎注意を学習し、動画品質VBenchと動画生成decode遅延を評価する。KVキャッシュ・GPUカーネルの技術的共通点はあるが、実験はテキストからの動画生成であり、LLM/MLLMの言語推論・対話サービングではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2604.21221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 56,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.18002",
+      "identity_tokens": [
+        "arXiv:2604.18002"
+      ],
+      "title": "Neural Garbage Collection: Learning to Forget while Learning to Reason",
+      "reason": "長い思考過程でKVキャッシュが膨張する問題に対し、推論中にモデル自身がどのKVエントリを削除するかを決め、正解報酬のみで推論と削除行動を同時学習するNGCを提案。Countdown・AMC・AIMEでフルキャッシュに近い正解率を保ちつつピークKVを2〜3倍圧縮したと報告。学習方式を含むが推論時KV削減が直接の貢献。",
+      "source_url": "https://arxiv.org/abs/2604.18002",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 57,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.08730",
+      "identity_tokens": [
+        "arXiv:2608.08730"
+      ],
+      "title": "Dispatch Overhead, Not Kernel Quality: The Performance Bottleneck in Single-Stream WebGPU LLM Inference",
+      "reason": "ブラウザ等のWebGPUでbatch1のLLM推論が遅い原因を、個別カーネルの計算性能でなくdispatch回数とその固定費として実測する。同期を含む単発計測がdispatch費用を過大評価することを指摘し、逐次dispatchの測定と融合実験で律速要因を分離する。WebGPU推論エンジンのカーネル融合・起動回数削減に直接有用な性能解析。",
+      "source_url": "https://arxiv.org/abs/2608.08730",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 58,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.15160",
+      "identity_tokens": [
+        "arXiv:2609.15160"
+      ],
+      "title": "T-LoopFormer: Token-Level Elastic-Depth Looped Transformers with Dynamic Routing",
+      "reason": "共有パラメータを反復使用するlooped Transformerで全トークンへ固定反復深度を課す非効率を、トークンごとの動的ルーティングで改善するT-LoopFormerを提案。反復深度別のKVキャッシュを持ち、対応する反復状態だけを参照することで自己回帰decodeを効率化する。モデルアーキテクチャと推論時状態管理の両面に関連する。",
+      "source_url": "https://arxiv.org/abs/2609.15160",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 59,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.19499",
+      "identity_tokens": [
+        "arXiv:2609.19499"
+      ],
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "reason": "test-time scalingで候補数Nが同じでも一括バッチ生成と逐次生成ではGPU電力量・P95遅延が大きく異なることを測定。A100でN=8を8回逐次生成すると1回バッチに比べ電力量4.64〜4.86倍、P95遅延5.77〜6.12倍となる。推論候補のスケジューリング・エネルギー評価の直接的なシステム知見。",
+      "source_url": "https://arxiv.org/abs/2609.19499",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 60,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22269",
+      "identity_tokens": [
+        "arXiv:2605.22269"
+      ],
+      "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+      "reason": "長時間動画QAでフレームを一律にKVへ保存すると冗長性と細粒度情報損失が生じる問題に対し、patch・frame・segmentの複数粒度でオフラインKVを圧縮し、オンライン質問時に階層的に検索するMuKVを提案。動画MLLMのKV容量・検索費用と正解率の交換条件を扱う直接的な推論効率化研究。",
+      "source_url": "https://arxiv.org/abs/2605.22269",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 61,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.08030",
+      "identity_tokens": [
+        "arXiv:2602.08030"
+      ],
+      "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+      "reason": "推論の途中で不要な思考文脈を削除するFree-ModuleをLoRAアダプタとして導入し、推論と整理モードを交互に使うFree()LMを提案。長い思考での精度改善を中心に報告するが、要旨では実際のKVメモリ削減量・token/s・レイテンシの定量検証が不明なため、推論システムとしての直接性は境界扱い。",
+      "source_url": "https://arxiv.org/abs/2602.08030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 62,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01718",
+      "identity_tokens": [
+        "arXiv:2608.01718"
+      ],
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "reason": "意味的に近い問い合わせへ既存応答を再利用するsemantic cacheが、攻撃者のキャッシュ汚染で誤応答を返す問題を扱う。問い合わせ埋め込みだけでなく投機的に生成した最初のkトークンの整合を検査するLaCacheを提案し、攻撃成功率をほぼゼロへ抑えながら良性キャッシュ有用性90%以上を維持したと報告。LLMサービングのキャッシュ機構と堅牢性に直接関連。",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 64,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.18701",
+      "identity_tokens": [
+        "arXiv:2410.18701"
+      ],
+      "title": "BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching",
+      "reason": "処理中のLLMバッチへ新しい要求を追加するとprefillの空回り計算が増える問題に対し、入力ベクトル整形と注意マスク生成、prefill/decode分離を用いたKV結合で動的re-batchingを実現するBATONを提案。Orca比で要求処理量最大1.75倍と報告するサービングスケジューリング研究。",
+      "source_url": "https://arxiv.org/abs/2410.18701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 67,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.10898",
+      "identity_tokens": [
+        "arXiv:2604.10898"
+      ],
+      "title": "ZoomR: Memory Efficient Reasoning through Multi-Granularity Key Value Retrieval",
+      "reason": "長いCoT生成で出力側KVが増え続ける問題に対し、思考を要約して粗い索引とし、decode時に重要な詳細だけをquery依存で取得するZoomRを提案。入力側KV圧縮に偏った従来法と異なり長い出力のキャッシュを対象とし、推論メモリを4倍以上削減しながら競合する推論精度を維持したと報告。",
+      "source_url": "https://arxiv.org/abs/2604.10898",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:37:35+09:00",
+      "last_checked_at": "2026-10-30T19:37:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 68,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}
