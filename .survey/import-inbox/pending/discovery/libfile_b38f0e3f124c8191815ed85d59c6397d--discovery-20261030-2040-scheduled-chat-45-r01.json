@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261030-2040-scheduled-chat-45/r01",
+  "reference_main_sha": "9b276821f9f216e04e4868397bb7a9d21edae29e",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.703",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.703"
+      ],
+      "title": "ClusterAttn: KV Cache Compression under Intrinsic Attention Clustering",
+      "reason": "ACL 2025本文§3〜5、表2と長文脈検索実験を確認。プロンプト末尾の観測窓からヘッド別注意クラスタを推定して履歴KVを圧縮し、1,024トークン保持でLongBench平均約92%のキャッシュ削減、A100単体で128Kの検索試験を実施。KV容量とデコード性能の実測を伴う推論最適化研究。",
+      "source_url": "https://aclanthology.org/2025.acl-long.703.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 46,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1971",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.1971"
+      ],
+      "title": "ACBQ: Adaptive Cross-Block Quantization of Large Language Models",
+      "reason": "ACL 2026本文の方式と表1・表5を確認。注意機構とFFNを別の量子化単位として扱い、ブロック間の誤差伝播を抑制する適応的事後量子化。LLaMA系列のW4A4とW2の精度を評価し、従来CBQとの処理時間・メモリ比較も提示。重み・活性化圧縮の実装上の寄与が明確。",
+      "source_url": "https://aclanthology.org/2026.acl-long.1971.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 102,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.2213",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.2213"
+      ],
+      "title": "SharVeT: Similarity-aware Parameter Sharing with Vector-based Tuning for Efficient LLM Compression",
+      "reason": "ACL 2026本文§3〜4と表2・3を確認。層間類似度で共有群を作り、群ごとにパラメータ割当を変え、蒸留と軽量ベクトル補正で共有誤差を低減。LLaMA3-8B・TinyLlama・Mistralで圧縮率別の困惑度・少数例精度を測定。重み共有による推論メモリ削減に直結する。",
+      "source_url": "https://aclanthology.org/2026.acl-long.2213.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 158,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.530",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.530"
+      ],
+      "title": "Evolving Sparsity: Leveraging Token Importance Dynamics for Efficient LLM Decoding with Sparse Attention",
+      "reason": "ACL 2026本文のCross-Step AccumulationとCross-Layer Propagation、表1および§5.3を確認。重要トークンを時系列蓄積し検索ヘッドを使って層間伝播、KV参照を選択する。96K文脈・RTX 5090で注意計算最大5.36倍、デコード全体最大2.33倍の高速化を報告。推論時間を直接測定。",
+      "source_url": "https://aclanthology.org/2026.acl-long.530.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 319,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1356",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-acl.1356"
+      ],
+      "title": "Search-in-Context: Efficient Multi-Hop QA over Long Contexts via Monte Carlo Tree Search with Dynamic KV Retrieval",
+      "reason": "ACL Findings 2025本文§4〜5・表2を確認。モンテカルロ木探索と過程報酬モデルを組み合わせ、各探索段階で4Kトークン相当の関連KVを検索する。32K全文注意との比較で推論文脈を縮小しながら多段QAのF1を改善。ただし木探索の追加試行費用を含めた総遅延優位は別途検証が必要。",
+      "source_url": "https://aclanthology.org/2025.findings-acl.1356.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 335,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.25",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.25"
+      ],
+      "title": "Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning",
+      "reason": "ACL 2026本文§3〜4・表1と遅延分析を確認。モデル自身の尤度で冗長な推論段落を特定し、選好学習により思考トークンを削減する。AIME・GPQA・MATH・GSM8Kで正答率を維持しつつ推論長を概ね15〜50%短縮、実測遅延も報告。推論効率に明確に関係するが学習を要する。",
+      "source_url": "https://aclanthology.org/2026.acl-long.25.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 491,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-4115",
+      "identity_tokens": [
+        "DOI:10.52202/085713-4115"
+      ],
+      "title": "Lua-LLM: Learning Unstructured-Sparsity Allocation for Large Language Models",
+      "reason": "NeurIPS 2025本文§4〜5と表1を確認。行ごとの剪定閾値を微分可能な近似Top-Kで学習し、層間・層内の疎性配分を全体損失に沿って最適化。LLaMA/OPTの50〜80%剪定で困惑度を比較し、SpInfer連携時のA100推論速度1.18〜1.73倍も評価。",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2025/file/b2c39fe6ce838440faf03a0f780e7a63-Paper-Conference.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 56,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-1596",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1596"
+      ],
+      "title": "Computation and Memory-Efficient Model Compression with Gradient Reweighting",
+      "reason": "NeurIPS 2025本文の再重み付け勾配推定・分散抑制と§5の表1を確認。剪定途中の疎部分モデルを毎回再生成せず勾配を再利用するため、剪定時メモリと演算費を削減。Llama2-7Bを50%剪定し約6.3GBで処理、疎モデルの前向き計算1.58倍を測定。圧縮手法と推論高速化の両方に関連。",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2025/file/447f3027e8d2df93553c0eb05d3b65d1-Paper-Conference.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 128,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/085713-0749",
+      "identity_tokens": [
+        "DOI:10.52202/085713-0749"
+      ],
+      "title": "Enhanced Expert Merging for Mixture-of-Experts in Graph Foundation Models",
+      "reason": "NeurIPS 2025本文§1〜4と表1を確認。AnyGraph等のグラフ基盤モデルでリンク予測・ノード分類を改善するため、複数グラフ専門家の蒸留融合・パラメータ近接化を研究。言語モデルの生成推論、KVキャッシュ、LLMサービングの計算削減を直接評価していないため本リポジトリの推論効率範囲外。",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2025/file/201e1777dfabe595d766d5222f20f2dd-Paper-Conference.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 171,
+      "origin": "discovery_worklist_primary_body"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.07172",
+      "identity_tokens": [
+        "arXiv:2410.07172",
+        "DOI:10.18653/v1/2025.emnlp-main.319"
+      ],
+      "title": "Glider: Global and Local Instruction-Driven Expert Router",
+      "reason": "EMNLP 2025正式版本文§3〜5・表1を確認。LLM生成のタスク説明とトークン単位ルータを組み合わせ、T5系LoRA専門家の既知・未知タスクでの品質を改善する。推論時に専門家選択は行うが、主評価はタスク精度・一般化であり、実行時間・メモリ・専門家演算削減の直接的検証が乏しいため境界領域。",
+      "source_url": "https://aclanthology.org/2025.emnlp-main.319.pdf",
+      "body_check": "primary_full_paper_method_evaluation_read; official_proceedings_pdf",
+      "first_checked_at": "2026-10-30T20:53:45+09:00",
+      "last_checked_at": "2026-10-30T20:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 304,
+      "origin": "discovery_worklist_primary_body"
+    }
+  ]
+}
