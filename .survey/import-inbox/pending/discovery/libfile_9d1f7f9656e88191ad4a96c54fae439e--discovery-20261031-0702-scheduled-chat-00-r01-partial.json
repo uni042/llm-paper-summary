@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0702-scheduled-chat-00/r01",
+  "reference_main_sha": "582c554255320ac5b721016ceb1d3957b9c3af5f",
+  "round_status": "partial",
+  "target_count": 10,
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.20893",
+      "identity_tokens": [
+        "arXiv:2508.20893"
+      ],
+      "title": "The Uneven Impact of Post-Training Quantization in Machine Translation",
+      "reason": "原著要旨では5モデル（1.7B～70B）と55言語を対象に、AWQ、BitsAndBytes、GGUF、AutoRoundの翻訳品質を比較。4ビットでは高資源言語の品質を概ね保つ一方、2ビットでは低資源言語で劣化し、GGUFの頑健性と校正言語の影響を報告する。低ビットLLM配備の精度・校正選択に関係するが、推論カーネル、メモリ管理、サービング速度の新方式を提案していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2508.20893",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:06:57+09:00",
+      "last_checked_at": "2026-10-31T07:06:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.02112",
+      "identity_tokens": [
+        "arXiv:2602.02112"
+      ],
+      "title": "Unifying Masked Diffusion Models with Various Generation Orders and Beyond",
+      "reason": "原著要旨はmasked diffusion、自己回帰、block diffusionの生成順序を統一するOeMDMと、順序と拡散モデルを同時学習するLoMDMを提案。評価は言語モデルの生成品質比較が中心で、並列復号の具体的な実行時間、メモリ、サービング改善は要旨で示されない。生成順序の機構は推論設計に関連するが、システム高速化への直接的寄与は未確定のためborderline。",
+      "source_url": "https://arxiv.org/abs/2602.02112",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:06:57+09:00",
+      "last_checked_at": "2026-10-31T07:06:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.23701",
+      "identity_tokens": [
+        "arXiv:2505.23701"
+      ],
+      "title": "Can LLMs Reason Abstractly Over Math Word Problems Without CoT? Disentangling Abstract Formulation From Arithmetic Computation",
+      "reason": "原著要旨はGSM8K・SVAMPで数式の抽象化と算術計算を分離して推論能力を評価し、CoTは主に計算段階を助けると分析する。因果パッチングで表現順序を調べる認知・能力解析であり、デコード高速化、推論メモリ、GPU実行、サービングのシステム最適化を扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2505.23701",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:06:57+09:00",
+      "last_checked_at": "2026-10-31T07:06:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.20202",
+      "identity_tokens": [
+        "arXiv:2405.20202"
+      ],
+      "title": "One QuantLLM for ALL: Fine-tuning Quantized LLMs Once for Efficient Deployments",
+      "reason": "原著要旨は量子化構成ごとの再学習を減らすため、共有重みの干渉を分離しLoRAと非パラメトリックな構成サンプリング調整を組み合わせるonce-for-all量子化LLMを提案。LLaMA2で複数配備条件に向けたモデル生成の準備時間削減を示すが、主要機構は学習時のsupernet最適化で、デコード速度や推論実行メモリの直接改善を確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2405.20202",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:06:57+09:00",
+      "last_checked_at": "2026-10-31T07:06:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 419,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03333",
+      "identity_tokens": [
+        "arXiv:2508.03333"
+      ],
+      "title": "CTTS: Collective Test-Time Scaling",
+      "reason": "原著要旨は単一LLMと単一報酬モデルによるBest-of-N等の限界に対し、複数エージェントと複数報酬モデルを協調させるCTTS-MMを提案。ACSでLLMの組合せを探索し、PRESを使うMoRで報酬モデルを選択する。7ベンチマークでBest-of-N比+4.82%の性能改善を報告するが、トークン数・GPU時間・サービングコスト削減は要旨で示されず、推論品質向上が主目的のためborderline。",
+      "source_url": "https://arxiv.org/abs/2508.03333",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T07:06:57+09:00",
+      "last_checked_at": "2026-10-31T07:06:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 409,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
