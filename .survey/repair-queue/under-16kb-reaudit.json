@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-30T06:11:57.350827+00:00",
+  "generated_at": "2026-10-30T06:50:13.487084+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 2,
+    "scheduled-chat-00": 3,
     "scheduled-chat-30": 2,
     "scheduled-chat-45": 2
   },
@@ -60,6 +60,26 @@
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2024-2406.16299-compensate-quantization-errors-make-weights-hierarchical-to-compensate-e.md",
+      "canonical_id": "arXiv:2406.16299",
+      "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
+      "file_bytes": 13990,
+      "source_sha256": "e48be3f650335d769bc9e4b48db0bbab9d05b34db22661ceee3399934ebbc4ed",
+      "source_git_blob_sha": "b40473db42d080fd63c94c33c926e32020ae547f",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.931246,
+      "quality_metrics": {
+        "body_chars": 3777,
+        "method_chars": 968,
+        "evaluation_chars": 1102,
+        "limitation_chars": 708
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-41074c82c154-semantickv-a-semantics-driven-kv-cache-eviction-framework-for-efficient-.md",
