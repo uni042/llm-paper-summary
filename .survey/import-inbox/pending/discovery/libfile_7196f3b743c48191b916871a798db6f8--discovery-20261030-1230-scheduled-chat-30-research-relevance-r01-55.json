@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1230-scheduled-chat-30/r01",
+  "reference_main_sha": "f026d1705d9550781b4b4603c3abe365564c4bec",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12526",
+      "identity_tokens": [
+        "id:arXiv:2408.12526",
+        "url:https://arxiv.org/abs/2408.12526"
+      ],
+      "title": "Exploiting Student Parallelism for Low-latency GPU Inference of BERT-like Models in Online Services",
+      "reason": "一次要旨で扱うのはBERT系の識別モデルを浅い複数studentへ蒸留するオンライン検索・テキストマイニング向けGPU推論。生成LLMの自己回帰decode、KV管理、推論サービングのボトルネックを扱わず、対象サーベイの中心である生成LLM推論高速化の直接研究ではない。worklistのEfficient GPU InferenceとarXiv書誌のLow-latency GPU Inferenceの表題差を記録。",
+      "source_url": "https://arxiv.org/abs/2408.12526",
+      "body_check": "abstract_screen_only; body_not_read; arXiv abstract explicitly says discriminative text mining and web searching, BERT-like models, student parallelism via stacking distillation and boosting ensemble; no generative LLM inference demonstrated.",
+      "first_checked_at": "2026-10-30T12:45:00+09:00",
+      "last_checked_at": "2026-10-30T12:45:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 55
+    }
+  ]
+}
