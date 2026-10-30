@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0612-scheduled-chat-00/r02",
+  "reference_main_sha": "8621b24535e18ee7fcc6d3de3a2475c518c5d300",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1002/sys.70061",
+      "identity_tokens": [
+        "DOI:10.1002/sys.70061"
+      ],
+      "title": "Balancing Accuracy and Cost: Trade-Offs in Large Language Model Quantization for the Systems Engineering Domain",
+      "reason": "出版社Wileyの一次要旨・正式本文を確認。SysEngBenchを使い4/8/16ビット量子化の正答率、モデルサイズ、推論費用のトレードオフをシステム工学の課題で測定する。配備条件選定に有用だが、新規量子化アルゴリズムやLLMサービング機構の改善ではなく特定応用領域の経験的比較が主貢献のためborderline。",
+      "source_url": "https://incose.onlinelibrary.wiley.com/doi/full/10.1002/sys.70061",
+      "body_check": "primary_publisher_abstract_and_html_screen_only; fulltext_not_systematically_reviewed",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 363,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
