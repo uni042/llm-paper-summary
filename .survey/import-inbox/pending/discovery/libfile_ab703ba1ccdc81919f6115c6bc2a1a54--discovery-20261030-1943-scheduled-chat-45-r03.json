@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261030-1943-scheduled-chat-45/r03",
+  "reference_main_sha": "7129fd60a2a16899cd3a0dab1f4af179c46a7d28",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.23052",
+      "identity_tokens": [
+        "arXiv:2510.23052"
+      ],
+      "title": "Knocking-Heads Attention",
+      "reason": "MHA/GQA等のhead間相互作用をshared projectionで追加し、対角初期化と線形吸収によって推論時の追加計算を抑えるKHA。6.1B総量・1.01B活性MoEを1T token学習し、GQAのKVキャッシュ量を保ちながらlossを改善。ただしAGIEvalやMMLU-Pro等では負の結果があり、すべての下流タスクが改善するわけではない。",
+      "source_url": "https://arxiv.org/html/2510.23052v1",
+      "body_check": "primary_fulltext_verified: arXiv HTML v1 sections 3-4, Tables 1-4, GQA/KV-cache and negative task results",
+      "first_checked_at": "2026-10-30T19:53:55+09:00",
+      "last_checked_at": "2026-10-30T19:53:55+09:00",
+      "linked_from": [],
+      "worklist_rank": 169,
+      "origin": "discovery_primary_fulltext"
+    }
+  ]
+}
