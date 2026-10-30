@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（335本）
+## 自動生成の論文一覧（336本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -1069,6 +1069,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2025-09 · [Speculate Deep and Accurate: Lossless and Training-Free Acceleration for Offloaded LLMs via Substitute Speculative Decoding](2025-2509.18344-speculate-deep-and-accurate-lossless-and-training-free-acceleration-for-.md)**  
   実装：[✓](https://github.com/NYCU-EDgeAi/subspec) ・ リポジトリ内被引用：0  
   この研究は、GPUメモリにモデル全体が収まらず、一部の層の重みをCPUメモリへ退避するパラメータオフロード（パラメータ オフロード）環境で、生成を高速化する。RTX 4090でGPUメモリを8GBへ制限したQwen2.5-7Bの貪欲生成では、5課題平均で2.68トークン/秒から27.09トークン/秒（10.10倍）へ改善した。
+
+- **2025-09 · [FastEagle: Cascaded Drafting for Accelerating Speculative Decoding](2025-2509.20416-fasteagle-cascaded-drafting-for-accelerating-speculative-decoding.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  時間方向の逐次生成をモデル内部の層方向のカスケードへ移す設計である。原著Table 1のgreedy生成では、LLaMA3.1-8BのEAGLE-3平均高速化3.94倍に対してFastEagle4.74倍、Vicuna-13Bでは5.01倍から5.67倍となる。
 
 - **2025-08 · [Reward-Shifted Speculative Sampling Is An Efficient Test-Time Weak-to-Strong Aligner](2025-2508.15044-reward-shifted-speculative-sampling-is-an-efficient-test-time-weak-to-st.md)**  
   実装：[✓](https://github.com/lblaoke/CARDS) ・ リポジトリ内被引用：0  

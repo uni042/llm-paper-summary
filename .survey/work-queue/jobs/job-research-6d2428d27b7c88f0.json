@@ -35,10 +35,15 @@
   "selection_reason": "FastEagleは従来のEAGLE草案器に必要な逐次N回の前向き処理を軽量な層カスケードによる単回前向き草案へ置換し、制約付き木で損失なし検証を行う。複数LLM・タスクでEAGLE-3より高速と報告する投機的復号の実行最適化。",
   "semantic_scholar_id": "64a81692b89dee2fb69d5c1b55471885deec4f7b",
   "source_url": "https://arxiv.org/abs/2509.20416",
-  "status": "ready",
+  "status": "superseded",
   "title": "FastEagle: Cascaded Drafting for Accelerating Speculative Decoding",
   "type": "research",
   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T03:13:14+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2025-2509.20416-fasteagle-cascaded-drafting-for-accelerating-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2509.20416",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

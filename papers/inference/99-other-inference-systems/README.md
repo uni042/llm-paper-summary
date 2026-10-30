@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（837本）
+## 自動生成の論文一覧（838本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1213,6 +1213,10 @@
 - **2026-05 · [A general tensor-structured compression scheme for efficient large language models](2026-2605.25344-a-general-tensor-structured-compression-scheme-for-efficient-large-langu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   MixT（Mixture of Tensors）は、Transformer内の密な線形変換を、局所的なテンソル演算子を複数重ねた構造に置き換える方式である。
+
+- **2026-04 · [Valve: Production Online-Offline Inference Colocation with Jointly-Bounded Preemption Latency and Rate](2026-2604.07874-valve-production-online-offline-inference-colocation-with-jointly-bounde.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Valveは、オンラインLLM推論のためにピーク需要へ合わせてGPUを確保すると、通常時に空き計算能力が大量に生じる問題を扱う。従来の同居方式では、オンライン要求が来たときにオフライン処理を止めるまで時間がかかるか、短い空き時間ごとに停止と再開を繰り返して干渉が増える。
 
 - **2026-04 · [Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM](2026-2604.18655-ondevice-multilora-runtime.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

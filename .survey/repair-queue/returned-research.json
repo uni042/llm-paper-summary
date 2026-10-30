@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T03:00:10+00:00",
+  "generated_at": "2026-10-30T03:13:15+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 89,
+  "count": 88,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1795,34 +1795,6 @@
       "worker_run_key": "20261029-2340-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T20:06:35+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 150 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5945,
-        "body_paragraphs": 34,
-        "method_chars": 1471,
-        "method_paragraphs": 9,
-        "evaluation_chars": 150,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 150 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_022c278381448191ad2ce4cd0fd7e58a--2025-minstrel-application-aware-slm-edge-inference-research-20261030-0358-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_022c278381448191ad2ce4cd0fd7e58a--2025-minstrel-application-aware-slm-edge-inference-research-20261030-0358-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.10875",
       "title": null,
       "source_url": null,
@@ -1875,33 +1847,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_874b5239b39c8191b678915c3e2832c7--2026-2608.15454-dynamic-multibyte-hierarchical-lm-research-20261030-0449-scheduled-chat-45-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_874b5239b39c8191b678915c3e2832c7--2026-2608.15454-dynamic-multibyte-hierarchical-lm-research-20261030-0449-scheduled-chat-45-r02.json",
       "worker_run_key": "20261030-0449-scheduled-chat-45/r02"
-    },
-    {
-      "canonical_id": "arXiv:2604.07874",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T22:08:57+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 331 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5574,
-        "body_paragraphs": 33,
-        "method_chars": 2345,
-        "method_paragraphs": 14,
-        "evaluation_chars": 331,
-        "limitation_chars": 880,
-        "insufficiency_flags": [
-          "評価説明量 331 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_92db80f5e04881919cffd2ba2000883d--2026-2604.07874-valve-online-offline-gpu-colocation-provenance-repair-20261030-0350-scheduled-chat-45-r03.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_92db80f5e04881919cffd2ba2000883d--2026-2604.07874-valve-online-offline-gpu-colocation-provenance-repair-20261030-0350-scheduled-chat-45-r03.json",
-      "worker_run_key": "20261030-0350-scheduled-chat-45/r03"
     },
     {
       "canonical_id": "arXiv:2601.14277",
@@ -2329,8 +2274,8 @@
       "canonical_id": "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
       "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
       "source_url": "https://raw.githubusercontent.com/oshindutta/TVAprune/main/Es_fomo__ICML__camera_ready.pdf",
-      "returned_at": "2026-10-30T02:52:47+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-30T03:10:06+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
       "reason": "blocked_quality",
       "failures": [
@@ -2349,16 +2294,16 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-023555952976--libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-023555952976--libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.json",
       "worker_run_key": "20261030-1055-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
       "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
       "source_url": "https://shujiehan.github.io/_pages/files/cscwd26.pdf",
-      "returned_at": "2026-10-30T02:52:49+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-30T03:10:08+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2377,9 +2322,37 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-scheduled-chat-30-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fefd82468bed--libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-fefd82468bed--libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-sche.json",
       "worker_run_key": "20261030-1132-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "title": "Minstrel: Application-Aware SLM Inference Optimization on Edge Devices",
+      "source_url": "https://openreview.net/pdf?id=hU2qsEQGYT",
+      "returned_at": "2026-10-30T03:11:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 150 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5945,
+        "body_paragraphs": 34,
+        "method_chars": 1471,
+        "method_paragraphs": 9,
+        "evaluation_chars": 150,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 150 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-675ba57c6bf5--libfile_022c278381448191ad2ce4cd0fd7e58a--2025-minstrel-application-aware-slm-edge-inference-research-20261030-0358-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-675ba57c6bf5--libfile_022c278381448191ad2ce4cd0fd7e58a--2025-minstrel-application-aware-slm-edge-inference-research-20261030-0358-scheduled-chat-.json",
+      "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
     }
   ]
 }
