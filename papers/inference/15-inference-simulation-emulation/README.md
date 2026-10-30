@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（74本）
+## 自動生成の論文一覧（75本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -93,6 +93,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-09 · [Hot–Cold Tiering of HBM and High Bandwidth Flash for Agentic LLM Serving](2026-2609.25782-hot-cold-tiering-of-hbm-and-high-bandwidth-flash-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   全セッションのKVを高帯域メモリ（High Bandwidth メモリ; HBM）に残せば容量が不足し、CPUメモリなどへ退避すると復帰時の転送待ちが増える。Qwen3-Coder-30B-A3Bを用いたエージェント作業のトレースで、HBM単独の165セッションに対してHBF追加構成は3900セッションを保持する（約23.6倍）。
+
+- **2026-09 · [HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning](2026-2609.28717-heteroreason-heterogeneous-fpga-gpu-acceleration-for-disaggregated-specu.md)**  
+  実装：[✓](https://github.com/zehuanzhang/HeteroReason) ・ リポジトリ内被引用：0  
+  HeteroReasonはアルゴリズムとハードウェアを同時設計し、(1)不良な思考ステップへ後戻りするBRSD、(2)軽量ドラフトをFPGA、PRMとターゲットを別GPUへ分ける構成、(3)ターゲットの修正中にFPGAのKVを更新するshadow synchronization…
 
 - **2026-09 · [FlashGPU-sim: Enabling GPU Modeling for Modern Architectures and AI Workloads](2026-2609.15311-flashgpu-sim-enabling-gpu-modeling-for-modern-architectures-and-ai-workloads.md)**  
   実装：[✓](https://github.com/FlashGPU-Sim/FlashGPU-Sim) ・ リポジトリ内被引用：0  

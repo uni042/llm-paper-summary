@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（428本）
+## 自動生成の論文一覧（430本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -694,6 +694,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [ActKV: Efficient LLM Agents through Action-Guided KV Cache Management](2026-2609.31395-actkv-efficient-llm-agents-through-action-guided-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   行動生成時の注意履歴で将来の操作に必要なキー・値状態を選び、生成確信度に応じて保存枠を拡張し、ページ化された実キャッシュを追加作業領域なしで圧縮する。ReAct型の長期タスクでは、無圧縮方式に対する平均タスク精度98.53%を、ピークKV容量25.98%で維持する。
+
+- **2026-09 · [A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)](2026-f8b8eb9da2fe-a-survey-of-inference-processing-units-for-large-language-model-inferenc.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  21ページのサーベイは、(1)チップ層、(2)サービングシステム層、(3)アルゴリズム層、(4)推論パラダイム層の四つを区別し、2024～2026年の主要研究・製品・ベンチマークを配置する。
 
 - **2026-08 · [WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs](2026-2608.22704-wnw-waxing-and-waning-kv-cache-for-long-form-speech-llms.md)**  
   実装：[✓](https://github.com/XMUDeepLIT/WnW) ・ リポジトリ内被引用：0  
@@ -1444,6 +1448,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-05 · [NSNQuant: A Double Normalization Approach for Calibration-Free Low-Bit Vector Quantization of KV Cache](2025-2505.18231-nsnquant-a-double-normalization-approach-for-calibration-free-low-bit-ve.md)**  
   実装：[✓](https://github.com/DHdroid/NSNQuant) ・ リポジトリ内被引用：0  
   重みを低ビット化しても、生成が長くなると過去トークンの鍵・値（KV）がGPUメモリを占有し、同時に処理できる要求数が減る。NSNQuantは、このKVを1ビットまたは2ビット相当のベクトル量子化で保存する方式である。
+
+- **2025-04 · [SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices](2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  10億パラメータ未満の小型LLMは重み容量が小さいため端末側で動かしやすいが、長文脈ではKVキャッシュが重み以上のメモリを使うことがある。SubKVは小型LLMのKV分布を観察し、キーはチャネル別、値はトークン別に量子化する非対称な構成に、直近のFP16残差ウィンドウと先頭の注意機構 sink保護を追加する。
 
 - **2025-03 · [Time and Memory Trade-off of KV-Cache Compression in Tensor Transformer Decoding](2025-2503.11108-time-and-memory-trade-off-of-kv-cache-compression-in-tensor-transformer-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

@@ -34,6 +34,8 @@ worker_completed_at: 2026-10-30T19:50:10+09:00
 metadata_repair_worker_id: scheduled-chat-45
 metadata_repair_run_key: 20261030-1943-scheduled-chat-45/r01
 metadata_repair_checked_at: 2026-10-30T19:50:10+09:00
+last_audited: null
+audit_version: 0
 ---
 
 # LLM圧縮の相転移：品質崩壊の臨界点を避ける複合圧縮

@@ -35,10 +35,15 @@
   "selection_reason": "arXiv要旨はLRMの投機的推論において、ドラフトをFPGAへ、PRM検証とtargetをGPUへ配置し、バックトラックとshadow同期・先読みパイプラインで推論資源の非対称性を利用。GPU同種構成比で遅延1.01〜1.42倍、エネルギー効率1.25〜1.57倍と報告。異種アクセラレータによる推論システム設計に直接該当。",
   "semantic_scholar_id": "a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48",
   "source_url": "https://arxiv.org/abs/2609.28717",
-  "status": "ready",
+  "status": "superseded",
   "title": "HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T12:01:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2609.28717-heteroreason-heterogeneous-fpga-gpu-acceleration-for-disaggregated-specu.md",
+  "represented_canonical_id": "arXiv:2609.28717",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

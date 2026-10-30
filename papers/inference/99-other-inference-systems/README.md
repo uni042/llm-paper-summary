@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（869本）
+## 自動生成の論文一覧（871本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1642,6 +1642,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   投機的復号（投機的復号）は、小型の草稿モデルに将来のトークンを提案させ、対象の大規模言語モデルがまとめて検証することで、対象モデルの逐次呼出し回数を減らす。
 
+- **2026-02 · [Phase transitions in large language model compression](2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md)**  
+  実装：[✓](https://github.com/whucs21Mzy/Model-Phase-Transitions) ・ リポジトリ内被引用：0  
+  LLMの量子化、枝刈り、低ランク分解は、重みの保存容量や推論時の演算量を減らす代表的な方法である。LLaMA-2-7Bを3ビットのGGUF量子化、35%の非構造的枝刈り、5%の低ランク分解で組み合わせた例では、1.89GBまで圧縮し、WikiText2困惑度約6.91を報告する。
+
 - **2026-02 · [OTPrune: Distribution-Aligned Visual Token Pruning via Optimal Transport](2026-2602.20205-otprune-distribution-aligned-visual-token-pruning-via-optimal-transport.md)**  
   実装：[✓](https://github.com/xiwenc1/OTPrune) ・ リポジトリ内被引用：0  
   OTPruneは、画像と言語を組み合わせて推論する多モーダル大規模言語モデルにおいて、画像から得られる多数の視覚トークンを追加学習なしで削減する手法である。原著が証明する約63%の最悪時近似保証は代理目的の最大化に対するものであり、元のワッサースタイン距離や言語モデルの回答品質が63%保証されるという意味ではない。
@@ -2412,6 +2416,10 @@
   実装：[✓](https://github.com/luoxuan-cs/Direct-Multitoken-Decoding) ・ リポジトリ内被引用：0  
   低バッチでは重みをGPUメモリから読み出す時間が支配的になりやすく、各層を毎トークン通ることが遅延の主要因になる。以下の数値はすべて原著の表を照合したものであり、未測定の大規模サービング性能や他の投機復号方式との優劣は主張しない。
 
+- **2025-10 · [Deconstructing Attention: Investigating Design Principles for Effective Language Modeling](2025-2510.11602-deconstructing-attention-investigating-design-principles-for-effective-l.md)**  
+  実装：[✓](https://github.com/HUIYINXUE/DeconAttn) ・ リポジトリ内被引用：0  
+  標準Transformerの注意機構は、現在のトークンが過去のトークンから情報を集めるために、現在層のhidden stateからQ・K・Vを生成し、QK内積をsoftmaxで正規化してVを混合する。
+
 - **2025-10 · [AttnCache: Accelerating Self-Attention Inference for LLM Prefill via Attention Cache](2025-2510.25979-attncache-accelerating-self-attention-inference-for-llm-prefill-via-atte.md)**  
   実装：[✓](https://github.com/PASAUCMerced/AttnCache) ・ リポジトリ内被引用：0  
   従って「注意計算全体をゼロにする」方式ではない。著者の実測はCPUで平均1.2倍のエンドツーエンド（E2E）高速化、自己注意部分で平均2倍、GPUでE2E平均1.6倍、注意部分で平均3倍を報告する。
@@ -2582,7 +2590,7 @@
 
 - **2025-06 · [Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models](2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  推論特化言語モデルは数学問題などに対して長い思考過程を生成する。その中には、既に正しい計算を終えたにもかかわらず「ちょっと待って、もう一度確認しよう」と先行内容を繰り返し肯定する部分がある。著者らはこの振る舞いを自己確認型反省（Self-Affirmation Reflection）として、誤りを発見して修正する反省と区別した。
+  推論特化言語モデルが長い思考過程を生成する際、誤りを見つけて解き直す有用な反省と、既に正しい途中計算を繰り返し肯定するだけの冗長な反省が混在する。本研究は後者を自己確認型反省と呼び、反省文を開始する語の生成確率に偏りがあることを利用して、必要な推論をなるべく残しながら冗長な出力を減らす。ただし平均正解率は64.9%から64.2%へ0.7ポイント下がった。
 
 - **2025-06 · [Don't Pay Attention](2025-2506.11305-don-t-pay-attention.md)**  
   実装：[✓](https://github.com/rimads/avey-dpa) ・ リポジトリ内被引用：0  
@@ -3088,7 +3096,7 @@
 
 - **2024-07 · [Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference](2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md)**  
   実装：[✓](https://github.com/oshindutta/TVAprune) ・ リポジトリ内被引用：0  
-  TVA-Prune（トークン Dependency-aware Variational Adapted 枝刈り）は、LLMの注意ヘッド、FFNの中間次元、トークンの隠れ次元をまとめて削減する構造的枝刈り方式である。
+  TVA-Pruneは、大規模言語モデルの注意ヘッド、フィードフォワード層の中間次元、トークン表現の隠れ次元を構造的に削除する圧縮方式である。A100 40GBでLLaMA-2-7Bを枝刈りした条件では、無圧縮のWikiText2困惑度5.11に対し、TVA-Pruneの困惑度は14.15へ悪化するが、推論速度は1.8倍となる。
 
 - **2024-07 · [Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners](2024-2407.15508-compensate-quantization-errors-quantized-models-are-inquisitive-learners.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

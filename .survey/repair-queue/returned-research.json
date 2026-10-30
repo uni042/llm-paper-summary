@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T11:28:52+00:00",
+  "generated_at": "2026-10-30T12:01:31+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 92,
+  "count": 90,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1792,34 +1792,6 @@
       "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T03:10:06+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5271,
-        "body_paragraphs": 28,
-        "method_chars": 1677,
-        "method_paragraphs": 10,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-023555952976--libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-023555952976--libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261030-1055-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
       "title": null,
       "source_url": null,
@@ -2238,35 +2210,6 @@
       "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2510.11602",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T09:39:34+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5999,
-        "body_paragraphs": 30,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 578,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8de59e164a3d--libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8de59e164a3d--libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.json",
-      "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
-    },
-    {
       "canonical_id": "arXiv:2609.32759",
       "title": null,
       "source_url": null,
@@ -2410,36 +2353,9 @@
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "DOI:10.5281/zenodo.22339206",
-      "title": "A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)",
-      "source_url": "https://zenodo.org/records/22339206",
-      "returned_at": "2026-10-30T11:26:49+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 229 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4791,
-        "body_paragraphs": 25,
-        "method_chars": 1857,
-        "method_paragraphs": 8,
-        "evaluation_chars": 229,
-        "limitation_chars": 587,
-        "insufficiency_flags": [
-          "評価説明量 229 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-69cb85c88944--libfile_b46a7778785c819181dc1a96182ff9cd--2026-doi-10.5281-zenodo.22339206-ipu-survey-research-20261030-1904-scheduled-chat-00-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-69cb85c88944--libfile_b46a7778785c819181dc1a96182ff9cd--2026-doi-10.5281-zenodo.22339206-ipu-survey-research-20261030-1904-scheduled-chat-00-r02.json",
-      "worker_run_key": "20261030-1904-scheduled-chat-00/r02"
-    },
-    {
       "canonical_id": "arXiv:2610.07659",
-      "title": "DLoop: Looped Speculative Decoding",
-      "source_url": "https://arxiv.org/html/2610.07659v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T11:26:51+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2462,6 +2378,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-9e1b0a7480e0--libfile_f5ea383b18dc81918af5d7702960e759--2026-2610.07659-dloop-looped-speculative-decoding-research-20261030-1747-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-9e1b0a7480e0--libfile_f5ea383b18dc81918af5d7702960e759--2026-2610.07659-dloop-looped-speculative-decoding-research-20261030-1747-scheduled-chat-4.json",
       "worker_run_key": "20261030-1747-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.16299",
+      "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
+      "source_url": "https://arxiv.org/html/2406.16299v1",
+      "returned_at": "2026-10-30T11:56:56+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 481 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3751,
+        "body_paragraphs": 21,
+        "method_chars": 1079,
+        "method_paragraphs": 6,
+        "evaluation_chars": 481,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 481 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair-20261030-1943-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair-20261030-1943-scheduled-chat.json",
+      "worker_run_key": "20261030-1803-scheduled-chat-00/r01"
     }
   ]
 }

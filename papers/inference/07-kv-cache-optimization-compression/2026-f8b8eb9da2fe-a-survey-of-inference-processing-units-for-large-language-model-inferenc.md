@@ -24,6 +24,9 @@ reference_main_sha: "6b0942fd32351ae5dfc03bf3acb6727c8e398cbd"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_worklist_rank: 19
+quality_repair_worker_id: scheduled-chat-45
+quality_repair_run_key: 20261030-1943-scheduled-chat-45/r03
+quality_repair_checked_at: 2026-10-30T19:56:10+09:00
 last_audited: null
 audit_version: 0
 ---
@@ -70,6 +73,13 @@ test-time computeは推論時の探索・再評価を増やすことで品質を
 ## 評価条件・比較表
 
 本稿は独自のモデル実験を持たない。Table 1/2にある代表値は、原資料の条件と証拠水準が異なる。
+
+評価の読み方を明確にすると、まず性能指標の単位をそろえる必要がある。AMD MI355Xの100,282 tokens/sはLlama-2-70BのMLPerf server提出値であり、単一利用者の逐次生成速度ではない。対してCerebras WSE-3/CS-4の1,000 tokens/s超やGroq LPUの約300 tokens/sはベンダーが示した代表的な生成速度で、対象モデル、入力長、同時実行数、精度、許容遅延が一致しない。数値の大小だけで装置の優劣を結論できない。
+
+次にピーク演算性能と実アプリケーション性能を分離する。TPU v7 Ironwoodの4,614 FP8 TFLOPSは演算仕様であり、LLMのend-to-end token/sではない。MI350Xの288GB HBM3eと8TB/sは容量と帯域の仕様で、長文脈KV保持能力を考える手掛かりにはなるが、実際のprefill TTFTやdecode TPOTを直接測定したものではない。Maia 200の216GB HBM3eも同様で、独立したMLPerf比較値がない段階で性能順位を推定するべきではない。
+
+最後にサーベイの証拠水準を確認する。本稿のTable 1/2は既存の公開仕様・ベンチマーク・製品発表を横断的に集めたもので、同一実験環境における再測定ではない。例えばTrainium 3のTrainium2比4.4倍という比較は同系列内の公称値であり、他社GPUとの公平な比較にはならない。したがって本稿から得られる実務的な結論は、FP8/FP4演算、HBM容量、帯域、KV管理、推論スケジューリングを評価軸として整理することであり、装置別の一意な性能ランキングではない。
+
 
 | サーベイに記載された例 | 数値・仕様 | 証拠水準と注意点 |
 |---|---|---|

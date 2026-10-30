@@ -33,6 +33,8 @@ research_worklist_rank: 39
 metadata_repair_worker_id: scheduled-chat-45
 metadata_repair_run_key: 20261030-1943-scheduled-chat-45/r01
 metadata_repair_checked_at: 2026-10-30T19:50:10+09:00
+last_audited: null
+audit_version: 0
 ---
 # SubKV：小型LLMの長文脈KVを2ビットへ圧縮する
 

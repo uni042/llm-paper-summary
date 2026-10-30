@@ -35,10 +35,15 @@
   "selection_reason": "SubKV uses key/channel and value/token quantization plus dynamic-window handling to reduce KV-cache size for long-context inference on edge devices.",
   "semantic_scholar_id": "570e1642ffa3e552b0c100ec10b92bccf3da80e3",
   "source_url": "https://doi.org/10.1002/spe.3422",
-  "status": "ready",
+  "status": "superseded",
   "title": "Subkv: Quantizing Long Context KV Cache for Sub‐Billion Parameter Language Models on Edge Devices",
   "type": "research",
   "venue": "Software, Practice & Experience",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T12:01:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md",
+  "represented_canonical_id": "DOI:10.1002/spe.3422",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
