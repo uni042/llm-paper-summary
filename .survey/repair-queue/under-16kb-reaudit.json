@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T04:57:19.449706+00:00",
+  "generated_at": "2026-10-30T05:50:19.175468+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 5,
+  "count": 6,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 1
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -77,6 +77,26 @@
         "method_chars": 1280,
         "evaluation_chars": 886,
         "limitation_chars": 385
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-e363df893fb4-mico-efficient-query-scheduling-for-multi-cloud-deployed-llm-inference-s.md",
+      "canonical_id": "DOI:10.1007/s11432-024-4487-8",
+      "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
+      "file_bytes": 15520,
+      "source_sha256": "4a55ac792b9fbdf9249b439e3dc91166215ffbd1a04010a2813ca8b794e01f4e",
+      "source_git_blob_sha": "086f978a90d455fd60e6a90dd16c23b8432745a3",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.929322,
+      "quality_metrics": {
+        "body_chars": 4103,
+        "method_chars": 1407,
+        "evaluation_chars": 1094,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
