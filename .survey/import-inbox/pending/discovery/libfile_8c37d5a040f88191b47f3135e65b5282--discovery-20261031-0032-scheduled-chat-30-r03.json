@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0032-scheduled-chat-30/r03",
+  "reference_main_sha": "41316ab7d0faa07b664b1d03afd404f7b8a996a8",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.24904",
+      "identity_tokens": [
+        "arXiv:2607.24904"
+      ],
+      "title": "Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model",
+      "reason": "arXiv一次要旨。video codecのmotion vectorと残差energyを利用して高情報量のpatchを選ぶMage-ViTを用い、視覚tokenを75%以上削減。4Bマルチモーダル言語モデルのリアルタイム動画理解で最大3.5倍の壁時計推論高速化を報告する。ストリーミングVLMの入力token削減と生成時遅延に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2607.24904",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 351,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.13274",
+      "identity_tokens": [
+        "arXiv:2511.13274"
+      ],
+      "title": "KForge: Program Synthesis for Diverse AI Hardware Accelerators",
+      "reason": "arXiv一次要旨。LLM agentによるGPUカーネル生成とプロファイリングに基づく修正を、NVIDIA CUDAとApple Metalで実証する。GPU実行性能を改善するカーネル合成の技術として接点はあるが、LLM推論固有のattention、MoE、decode等のカーネルやエンドツーエンドサービングの効果は要旨で確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2511.13274",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 357,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03088",
+      "identity_tokens": [
+        "arXiv:2610.03088"
+      ],
+      "title": "Coda: Exploiting Admission Flexibility for Coding-Agent Serving",
+      "reason": "arXiv一次要旨。長寿命のcoding agent sessionが持つKV cacheの階層的滞在位置と再開コスト、文脈長の異なるrequestの混合復号を考慮し、Tiered-AgingとCompatibility-Aware admission、worker routingを統合する。単一/複数workerでoutput-token throughput平均20.3%、SLO適合throughput平均70.5%改善を報告するLLMサービング研究。",
+      "source_url": "https://arxiv.org/abs/2610.03088",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 360,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.22577",
+      "identity_tokens": [
+        "arXiv:2604.22577"
+      ],
+      "title": "QuantClaw: Precision Where It Matters for OpenClaw",
+      "reason": "arXiv一次要旨。OpenClawの長文脈・多ターンagentタスクで量子化精度感度がタスク依存であることを測定し、軽量タスクは低精度、難しいタスクは高精度へ動的に振り分けるprecision routing pluginを提案。GLM-5のFP8基準で最大21.4%コスト削減、15.7%レイテンシ短縮を報告し、agent推論時の精度・費用・速度配分を直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2604.22577",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 366,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32353",
+      "identity_tokens": [
+        "arXiv:2609.32353"
+      ],
+      "title": "Fewer Tokens, More Self-Teaching: On-Policy Self-Distillation for Extreme Visual Token Reduction",
+      "reason": "arXiv一次要旨。極小視覚token予算で生成したMLLMのon-policy軌跡をfull-token teacherが蒸留し、token保持率5%でQwen3.5-4Bの性能保持率を68.6%から82.3%へ改善するLT-OPDを提案。推論時追加overheadなしにKV cache使用量85.2%、prefill FLOPs85.4%削減を報告し、学習適応を伴うMLLM推論圧縮に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.32353",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 367,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.29210",
+      "identity_tokens": [
+        "arXiv:2610.29210"
+      ],
+      "title": "Understanding Target Probability Reuse in Speculative Decoding",
+      "reason": "arXiv一次要旨。tree型投機的復号で前回のtarget分布を正確に再利用できる条件を解析し、受理token損失との関係を示す。6つのtargetで、独立に計算した現文脈のtarget分布による初手枝再順位付けや初手先行サンプルが、同じ平均treeサイズでも受理期待値を改善し、target passとdraftのoverlap条件では復号時間も短縮する。",
+      "source_url": "https://arxiv.org/abs/2610.29210",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 375,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.01858",
+      "identity_tokens": [
+        "arXiv:2605.01858"
+      ],
+      "title": "Decouple and Cache: KV Cache Construction for Streaming Video Understanding",
+      "reason": "arXiv一次要旨。streaming VideoVLLMで累積past KVと直近instant KVを分離構築するDSCacheと、位置外挿を支えるposition-agnostic encodingを提案。無制限の動画入力におけるKV cache構築・再利用の実行時設計を直接扱い、Streaming Video QAで既存法より平均2.5%精度改善を報告。推論時間短縮の定量値は要旨にないため未確認とする。",
+      "source_url": "https://arxiv.org/abs/2605.01858",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 377,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.09010",
+      "identity_tokens": [
+        "arXiv:2507.09010"
+      ],
+      "title": "Hybrid Systolic Array Accelerator with Optimized Dataflow for Edge Large Language Model Inference",
+      "reason": "arXiv一次要旨。edge LLMのprefill計算律速とdecodeメモリ律速を両立させるhybrid systolic array、MXINT4重み量子化、RMSNorm・RoPE専用unitを設計。1.3B LLMのlong-input/long-outputでtoken/s/mm2を評価し、比較構成比で2.45倍超/13.5倍の効率改善を報告する、推論専用ハードウェア研究。",
+      "source_url": "https://arxiv.org/abs/2507.09010",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 385,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.17697",
+      "identity_tokens": [
+        "arXiv:2602.17697"
+      ],
+      "title": "Pimp My LLM: Leveraging Variability Modeling to Tune Inference Hyperparameters",
+      "reason": "arXiv一次要旨。Hugging Face Transformersの生成hyperparameterをfeature-based variability modelとして制約付き構成空間に表現し、代表構成をサンプリングしてenergy、latency、accuracyを測定・予測する。LLM推論時設定の多目的トレードオフを体系的に分析するもので、実行時の効率最適化を支える評価・構成選択研究。",
+      "source_url": "https://arxiv.org/abs/2602.17697",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 387,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.05525",
+      "identity_tokens": [
+        "arXiv:2405.05525"
+      ],
+      "title": "Ditto: Quantization-aware Secure Inference of Transformers upon MPC",
+      "reason": "arXiv一次要旨。TransformerのMPC秘匿推論に量子化を導入し、量子化を考慮した蒸留と型変換用MPC primitiveを設計して通信・計算量を削減する。BERT/GPT2の実験でMPCFormer比3.14〜4.40倍、PUMA比1.44〜2.35倍の高速化を報告し、プライバシー保護された生成モデル推論効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2405.05525",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 389,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
