@@ -580,7 +580,7 @@
 
 - **2026-09 · [Post-Training Ternarization of Qwen3-4B: Capability, Effective Bit Budget, Storage Compression, and Deployment](2026-2609.01962-post-training-ternarization-of-qwen3-4b-capability-effective-bit-budget-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  本論文は「1.58-bit LLM」と呼ばれる極低ビット表現を、既に学習済みのQwen3-4Bへpost-学習で適用した技術報告である。BitNet b1.58のように初期から低ビットを前提に訓練したモデルではなく、FP16/BF16のdenseモデルを後からternaryへ変換する。低bit表現、実際のファイル圧縮、GPU推論高速化は別の成果である。
+  Qwen3-4Bの線形重み81.62%を既存の回転・残差三値化・誤差補償で事後変換し、対象重みの実効1.641ビット、保存容量8.29→3.96GiBを実証。圧縮、能力保持、実行速度を分離して検証する。
 
 - **2026-09 · [One Distribution, Two Channels: Coverage-Calibrated KV Retention and Compensation](2026-2610.02235-one-distribution-two-channels-coverage-calibrated-kv-retention-and-compe.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2346,7 +2346,7 @@
 
 - **2025-09 · [SBVR: Summation of BitVector Representation for Efficient LLM Quantization](2025-2509.18172-sbvr-summation-of-bitvector-representation-for-efficient-llm-quantizatio.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  SBVR（Summation of BitVector Representation）は、LLM重みのガウス分布に近い値の偏りを非一様な量子化表現点で捉えながら、GPUで不規則なコードブック参照を必要としない量子化方式である。
+  LLMの重みを4ビット程度へ圧縮する事後量子化では、表現可能な値を減らすことで重みの転送量を節約できる。ただしRTX 3090・バッチ1のTPOTはSBVR 10.24msに対しAWQ 8.61msで、速度の絶対首位ではない。
 
 - **2025-09 · [Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance](2025-2509.15704-pyramid-token-pruning-for-high-resolution-large-vision-language-models-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
