@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7c097fbb3da8a758-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/hpca68181.2026.11408556",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/hpca68181.2026.11408556",
+    "identity_tokens": [
+      "DOI:10.1109/hpca68181.2026.11408556"
+    ],
+    "reason": "IEEE HPCA 2026の一次abstractではKubernetes統合、GPUインスタンスの動的サイズ調整、NVLink/NCCL通信、10,000 GPU超の共有基盤を評価するが、対象は汎用MLの学習と推論の混在であり、LLM推論固有のKV管理・トークン生成・サービング性能を主題としていない。汎用GPU資源管理は関連するが、現在のLLM推論システムサーベイの直接的な技術寄与としては境界的。",
+    "first_checked_at": "2026-10-30T05:19:10+00:00",
+    "last_checked_at": "2026-10-30T05:19:10+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "eGPU: Production-Scale Elastic Sharing Over 10,000 GPUs"
+  },
+  "processed_at": "2026-10-30T05:19:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7c097fbb3da8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
