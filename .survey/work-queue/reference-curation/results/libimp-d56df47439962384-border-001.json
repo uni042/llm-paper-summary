@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d56df47439962384-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2302.13475",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2302.13475",
+    "identity_tokens": [
+      "arXiv:2302.13475"
+    ],
+    "reason": "UTF-8バイトをelementwise埋込みに変換して語彙埋込みパラメータを減らす表現方式。本文§5の主評価はBERT/ALBERT/CANINEの特許文書マルチラベル分類で、BERTのembeddingパラメータを大幅削減する一方、生成LLMのデコード・KVキャッシュ・推論サービング速度は評価しない。モデル圧縮との概念的関連はあるが、本調査の直接的な推論システム寄与は弱い。",
+    "first_checked_at": "2026-10-30T10:54:10+00:00",
+    "last_checked_at": "2026-10-30T10:54:10+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Elementwise Language Representation"
+  },
+  "processed_at": "2026-10-30T10:54:10+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d56df4743996",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

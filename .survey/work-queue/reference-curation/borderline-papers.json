@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T07:57:13+00:00",
-  "record_count": 5465,
+  "updated_at": "2026-10-30T10:54:11+00:00",
+  "record_count": 5480,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83735,22 +83735,6 @@
       "borderline_recheck_count": 0,
       "title": "Copy-as-Decode: Grammar-Constrained Parallel Prefill for LLM Editing"
     },
-    "arXiv:2603.04592": {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2603.04592",
-      "identity_tokens": [
-        "arXiv:2603.04592",
-        "id:SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
-        "id:arXiv:2603.04592",
-        "url:https://arxiv.org/abs/2603.04592"
-      ],
-      "reason": "入力ストリームと出力ストリームの同期・対話方針を中心に、出力逐次・入力逐次・同時ストリーミングLLMを分類する広範なサーベイ。KV管理と遅延・投機的復号も含むが主眼は対話アーキテクチャと応用の体系化であり、推論速度・メモリ最適化の実測比較が中心ではないためborderline。",
-      "first_checked_at": "2026-10-28T21:47:59+00:00",
-      "last_checked_at": "2026-10-28T21:47:59+00:00",
-      "linked_from": [],
-      "borderline_recheck_count": 0,
-      "title": "From Static Inference to Dynamic Interaction: A Survey of Streaming Large Language Models"
-    },
     "DOI:10.52202/085713-0231": {
       "classification": "borderline",
       "canonical_id": "DOI:10.52202/085713-0231",
@@ -84600,6 +84584,222 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "GPU Kernel Optimization Beyond Full Builds: An LLM Framework with Minimal Executable Programs"
+    },
+    "arXiv:2108.04962": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2108.04962",
+      "identity_tokens": [
+        "arXiv:2108.04962"
+      ],
+      "reason": "クエリに応じて粗密の注意解像度を選び、カーネル注意で時間・メモリ計算量を線形にするAdaMRAを提案。長系列の効率的Transformerアーキテクチャとして関連するが、一次要旨では現代の生成LLMサービング・decodeカーネル・GPU実測の直接検証が不明であるため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:01+00:00",
+      "last_checked_at": "2026-10-30T10:54:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Multi-Resolution Attention with Linear Complexity"
+    },
+    "arXiv:2510.06834": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.06834",
+      "identity_tokens": [
+        "arXiv:2510.06834"
+      ],
+      "reason": "RISC-VベクトルISAでFlashAttentionをベクトル化し、softmax指数関数の近似とタイル化で注意演算を高速化する。LLM推論カーネルへ応用可能なハードウェア実装研究だが、要旨では生成LLM全体のtoken/sやサービングSLOの評価が不明なため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:01+00:00",
+      "last_checked_at": "2026-10-30T10:54:01+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Vectorized FlashAttention with Low-cost Exponential Computation in RISC-V Vector Processors"
+    },
+    "arXiv:2602.13407": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.13407",
+      "identity_tokens": [
+        "arXiv:2602.13407"
+      ],
+      "reason": "推論時の思考トークン長を短縮する目的で、自己生成した正解かつ簡潔な解答によるon-policy SFTへ多報酬RLを単純化する。推論コスト削減には関係するが、中心は学習目的関数・訓練効率であり、サービング・推論ランタイムや計算カーネルの新規実装ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:03+00:00",
+      "last_checked_at": "2026-10-30T10:54:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "On-Policy Supervised Fine-Tuning for Efficient Reasoning"
+    },
+    "SemanticScholar:474cb1610484cdc00a7d55e23b6e0157b47588a2": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:474cb1610484cdc00a7d55e23b6e0157b47588a2",
+      "identity_tokens": [
+        "SemanticScholar:474cb1610484cdc00a7d55e23b6e0157b47588a2",
+        "arXiv:2404.03828"
+      ],
+      "reason": "現代Hopfield連想記憶の検索から外れ値に強い注意層Softmax₁を導出し、BERT・OPT・ViTなどで量子化後の外れ値統計と性能を比較する。低ビット推論の基礎に関連するが、要旨の中心はモデル構造・連想記憶理論と学習時外れ値対策であり、生成LLMの推論速度・サービング効果は明示されないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:03+00:00",
+      "last_checked_at": "2026-10-30T10:54:03+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Outlier-Efficient Hopfield Layers for Large Transformer-Based Models"
+    },
+    "arXiv:2308.14149": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2308.14149",
+      "identity_tokens": [
+        "arXiv:2308.14149"
+      ],
+      "reason": "オープンで扱いやすいGPT系モデルの種類、能力、展開容易性、科学・マルチモーダル応用を広く整理するサーベイ。軽量化と展開の話題は含むが、特定のLLM推論システム最適化、KV管理、GPUカーネル、サービング実測を中心とする文献ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:04+00:00",
+      "last_checked_at": "2026-10-30T10:54:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Examining User-Friendly and Open-Sourced Large GPT Models: A Survey on Language, Multimodal, and Scientific GPT Models"
+    },
+    "arXiv:2606.24477": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.24477",
+      "identity_tokens": [
+        "arXiv:2606.24477"
+      ],
+      "reason": "動画LLMで低解像度・低フレーム率の粗い初回視聴から必要区間だけ高精細に再視聴するR3を提案。再質問と再回答を強化学習で獲得し、動画QAの品質と計算費用を改善する。視覚入力の推論費用削減に関係するが、主要な貢献は動画QAの再視聴方策・能力学習であり汎用サービング機構ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:04+00:00",
+      "last_checked_at": "2026-10-30T10:54:04+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "video-SALMONN-R³: Learning to ReWatch, ReAsk, and ReAnswer for Efficient Video Understanding"
+    },
+    "arXiv:2609.27298": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27298",
+      "identity_tokens": [
+        "arXiv:2609.27298"
+      ],
+      "reason": "長時間エージェントの履歴をいつ安全に要約できるかをKEEP/READY教師信号で学習し、文脈トークンと表現抽出費用を削減するStateComp。WorkBuddyBenchでagentと要約の総トークンを52.27%削減したと報告する。推論コンテキスト費用には関係するが、主題はエージェント状態・履歴管理であり汎用LLMサービング基盤の機構ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:05+00:00",
+      "last_checked_at": "2026-10-30T10:54:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "StateComp: Learning When to Compress History in Long Horizon Agents"
+    },
+    "arXiv:2603.06938": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06938",
+      "identity_tokens": [
+        "arXiv:2603.06938"
+      ],
+      "reason": "SSMのトークンミキサへMoEを適用すると専門家ごとに再帰状態が増える問題に対し、専門家をパラメータ空間で混合し一つの状態軌道だけ更新するSwimbaを提案。推論計算の構造には関連するが、要旨ではベースラインより実時間遅延・処理量がわずかに悪化するため、明確な推論高速化成果としては扱わず境界分類。",
+      "first_checked_at": "2026-10-30T10:54:05+00:00",
+      "last_checked_at": "2026-10-30T10:54:05+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Swimba: Switch Mamba Model Scales State Space Models"
+    },
+    "arXiv:2603.12414": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.12414",
+      "identity_tokens": [
+        "arXiv:2603.12414"
+      ],
+      "reason": "Mamba等のSSMが攻撃的入力により遷移演算子のスペクトル半径を小さくされ長期記憶を失う問題を、層別スペクトル安定性の実時間監視SpectralGuardで検出する。SSM推論状態の安全性には関連するが、主たる成果は攻撃検知であり推論速度・メモリ削減ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:07+00:00",
+      "last_checked_at": "2026-10-30T10:54:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SpectralGuard: Detecting Memory Collapse Attacks in State Space Models"
+    },
+    "DOI:10.48550/arxiv.2510.10528": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.48550/arxiv.2510.10528",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2510.10528",
+        "arXiv:2510.10528"
+      ],
+      "reason": "黒箱の推論LLMへ短い思考を促す説得的プロンプトを反復生成し、Qwen3や閉鎖APIで出力トークンを減らす。生成費用には関係するが、主な手法はプロンプト制御でありGPUカーネル・KV管理・推論サービング基盤を改善するものではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:07+00:00",
+      "last_checked_at": "2026-10-30T10:54:07+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Merlin’s Whisper: Enabling Efficient Reasoning in Large Language Models via Black-box Persuasive Prompting"
+    },
+    "arXiv:2603.10535": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.10535",
+      "identity_tokens": [
+        "arXiv:2603.10535"
+      ],
+      "reason": "RL学習で長い思考が報酬最適化上有利になり生成長が膨らむ問題を、乗法的報酬再スケーリングGR³で抑制する。推論トークン費用削減には関係するが、主題はRL目的関数・学習ダイナミクスであり、推論エンジン・サービング最適化の実装ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:08+00:00",
+      "last_checked_at": "2026-10-30T10:54:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning"
+    },
+    "arXiv:2603.17449": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.17449",
+      "identity_tokens": [
+        "arXiv:2603.17449"
+      ],
+      "reason": "正答を保つ最小思考長MSLを理論的に定義し、GRPO学習時にその推定値を利用してCoTを短縮するTRiMS。80%超の思考トークン削減を報告するが、手法の中心はRL訓練と出力長制御で、GPU推論基盤の直接改善ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:08+00:00",
+      "last_checked_at": "2026-10-30T10:54:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "TRiMS: Real-Time Tracking of Minimal Sufficient Length for Efficient Reasoning via RL"
+    },
+    "arXiv:2209.10052": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2209.10052",
+      "identity_tokens": [
+        "arXiv:2209.10052"
+      ],
+      "reason": "既存の短文脈text-to-textモデルを長文脈へ適応させるため、pooling付きブロック注意とspanマスク事前学習、データ構成を検討する。長系列注意の計算構造に関係するが、主な評価は長文書QA・要約品質と学習レシピであり生成LLMサービング速度の直接検証ではないため境界扱い。",
+      "first_checked_at": "2026-10-30T10:54:08+00:00",
+      "last_checked_at": "2026-10-30T10:54:08+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Adapting Pretrained Text-to-Text Models for Long Text Sequences"
+    },
+    "arXiv:2302.13475": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.13475",
+      "identity_tokens": [
+        "arXiv:2302.13475"
+      ],
+      "reason": "UTF-8バイトをelementwise埋込みに変換して語彙埋込みパラメータを減らす表現方式。本文§5の主評価はBERT/ALBERT/CANINEの特許文書マルチラベル分類で、BERTのembeddingパラメータを大幅削減する一方、生成LLMのデコード・KVキャッシュ・推論サービング速度は評価しない。モデル圧縮との概念的関連はあるが、本調査の直接的な推論システム寄与は弱い。",
+      "first_checked_at": "2026-10-30T10:54:10+00:00",
+      "last_checked_at": "2026-10-30T10:54:10+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Elementwise Language Representation"
+    },
+    "SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+      "identity_tokens": [
+        "SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+        "arXiv:2603.04592",
+        "id:SemanticScholar:312bc34c049603c1ffe4548c62e8a8a583671c2c",
+        "id:arXiv:2603.04592",
+        "url:https://arxiv.org/abs/2603.04592"
+      ],
+      "reason": "ストリーミングLLMを入力の継続到着・生成・双方向対話のデータフローから再定義し、関連手法と応用を体系化するサーベイ。実時間の推論処理と関係するが、要旨で確認できる主要貢献は定義・分類と研究課題の整理であり、特定のサービング機構やメモリ最適化の新規実装・性能実証ではないため境界扱い。",
+      "first_checked_at": "2026-10-28T21:47:59+00:00",
+      "last_checked_at": "2026-10-30T10:54:10+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "From Static Inference to Dynamic Interaction: Navigating the Landscape of Streaming Large Language Models"
+    },
+    "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.bigpicture-main.6",
+        "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415",
+        "arXiv:2510.05364"
+      ],
+      "reason": "二乗計算量の自己注意を代替する準線形注意、再帰型モデル、状態空間モデル、混合アーキテクチャを計算量・メモリ量・ベンチマーク・限界で比較するレビュー。推論効率を扱う重要な背景資料だが、要旨の中心は既存アーキテクチャの比較整理で、新規の推論サービング・カーネル・オフロード機構を提案しないためborderline。",
+      "first_checked_at": "2026-10-30T10:54:11+00:00",
+      "last_checked_at": "2026-10-30T10:54:11+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Challenging Quadratic Attention - A Holistic View On the Rise of Alternative Language Model Architectures"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T09:54:55+00:00",
-  "record_count": 12581,
+  "updated_at": "2026-10-30T10:54:05+00:00",
+  "record_count": 12582,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -105388,20 +105388,6 @@
       ],
       "title": "Neural Natural Language Generation: A Survey on Multilinguality, Multimodality, Controllability and Learning"
     },
-    "arXiv:2404.03828": {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2404.03828",
-      "identity_tokens": [
-        "arXiv:2404.03828"
-      ],
-      "reason": "No direct inference optimization substantiated; unrelated to linked quantization line after body review.",
-      "first_checked_at": "2026-10-06T07:46:52+00:00",
-      "last_checked_at": "2026-10-06T07:46:52+00:00",
-      "linked_from": [
-        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md"
-      ],
-      "title": "Outlier-Efficient Hopfield Layers for Large Transformer-Based Models"
-    },
     "arXiv:2304.11431": {
       "classification": "unrelated",
       "canonical_id": "arXiv:2304.11431",
@@ -181073,6 +181059,30 @@
       "last_checked_at": "2026-10-30T09:54:55+00:00",
       "linked_from": [],
       "title": "Efficient Adaptive Transformer: An Empirical Study and Reproducible Framework"
+    },
+    "arXiv:2505.13002": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.13002",
+      "identity_tokens": [
+        "arXiv:2505.13002"
+      ],
+      "reason": "汎用PIMデバイスでの動的メモリ割当器を設計し、PIM実機のmalloc処理を高速化する研究。一次要旨の評価は一般的なPIMワークロードとメモリ割当性能であり、LLM推論・KVキャッシュ・MoEやLLMサービングへの具体的適用は示されないため対象外。",
+      "first_checked_at": "2026-10-30T10:54:04+00:00",
+      "last_checked_at": "2026-10-30T10:54:04+00:00",
+      "linked_from": [],
+      "title": "PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memory (PIM) Architectures"
+    },
+    "arXiv:2604.17286": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.17286",
+      "identity_tokens": [
+        "arXiv:2604.17286"
+      ],
+      "reason": "DepthVARは高解像度画像を生成する視覚自己回帰モデルに対し、トークン別に計算深度を割り当てる。要旨の実験対象は画像生成のVARであり、テキストLLM・VLMによる言語推論、KVキャッシュ、LLMサービングの実証はない。Transformer計算削減という共通性だけでは対象系統へ採用できない。",
+      "first_checked_at": "2026-10-30T10:54:05+00:00",
+      "last_checked_at": "2026-10-30T10:54:05+00:00",
+      "linked_from": [],
+      "title": "Depth Adaptive Efficient Visual Autoregressive Modeling"
     }
   }
 }

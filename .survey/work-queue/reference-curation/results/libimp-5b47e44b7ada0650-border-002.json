@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5b47e44b7ada0650-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "SemanticScholar:474cb1610484cdc00a7d55e23b6e0157b47588a2",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "SemanticScholar:474cb1610484cdc00a7d55e23b6e0157b47588a2",
+    "identity_tokens": [
+      "SemanticScholar:474cb1610484cdc00a7d55e23b6e0157b47588a2",
+      "arXiv:2404.03828"
+    ],
+    "reason": "現代Hopfield連想記憶の検索から外れ値に強い注意層Softmax₁を導出し、BERT・OPT・ViTなどで量子化後の外れ値統計と性能を比較する。低ビット推論の基礎に関連するが、要旨の中心はモデル構造・連想記憶理論と学習時外れ値対策であり、生成LLMの推論速度・サービング効果は明示されないため境界扱い。",
+    "first_checked_at": "2026-10-30T10:54:03+00:00",
+    "last_checked_at": "2026-10-30T10:54:03+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Outlier-Efficient Hopfield Layers for Large Transformer-Based Models"
+  },
+  "processed_at": "2026-10-30T10:54:03+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5b47e44b7ada",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

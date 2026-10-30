@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a20968ca1301527d-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.10535",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.10535",
+    "identity_tokens": [
+      "arXiv:2603.10535"
+    ],
+    "reason": "RL学習で長い思考が報酬最適化上有利になり生成長が膨らむ問題を、乗法的報酬再スケーリングGR³で抑制する。推論トークン費用削減には関係するが、主題はRL目的関数・学習ダイナミクスであり、推論エンジン・サービング最適化の実装ではないため境界扱い。",
+    "first_checked_at": "2026-10-30T10:54:08+00:00",
+    "last_checked_at": "2026-10-30T10:54:08+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning"
+  },
+  "processed_at": "2026-10-30T10:54:08+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a20968ca1301",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
