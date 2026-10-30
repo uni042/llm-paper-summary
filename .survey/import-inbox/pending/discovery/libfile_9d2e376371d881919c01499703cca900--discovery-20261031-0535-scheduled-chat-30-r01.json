@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0535-scheduled-chat-30/r01",
+  "reference_main_sha": "a09b7eb00e0652944645ddcaa5b5708a5e3e17f0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.14256",
+      "identity_tokens": [
+        "arXiv:2512.14256"
+      ],
+      "title": "TEMP: A Memory Efficient Physical-aware Tensor Partition-Mapping Framework on Wafer-scale Chips",
+      "reason": "一次arXiv要旨。wafer-scale chipの2Dメッシュを対象にtensor stream partition、トポロジー対応配置、二段階探索を統合し、LLM学習スループット平均1.7倍を報告。主評価はLLMの学習時並列化であり、推論サービングやdecodeの改善は実証していないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2512.14256",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 136,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3805621.3807633",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807633"
+      ],
+      "title": "Sampling Where It Matters: Predicting LLM Serving Performance",
+      "reason": "著者所属IBM Researchの一次公開要旨。Predictive Kernel Herdingにより3,000超のLLMサービング構成の性能測定点を選択し、4実トレースで出力throughputを10%以内のMAPE、平均TTFTを20%以内のMAPEで予測。比較法と同等誤差に達するプロファイル時間を最大1.6倍削減。実際のLLMサービング性能推定・プロファイリング予算最適化を直接扱う。",
+      "source_url": "https://d3ccyth396mz21.cloudfront.net/publications/sampling-where-it-matters-predicting-llm-serving-performance",
+      "body_check": "primary_author_institution_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 317,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.18601",
+      "identity_tokens": [
+        "arXiv:2407.18601"
+      ],
+      "title": "Reorganizing attention-space geometry with expressive attention",
+      "reason": "一次arXiv要旨。通常のQK内積を二乗したexpressive attentionを検討し、追加計算・メモリ不要と主張するが、評価は自己回帰予測タスクの精度・表現能力で、LLMサービングの実測遅延やthroughput改善は示していない。注意演算の計算費との関連はあるが主目的は表現性能。",
+      "source_url": "https://arxiv.org/abs/2407.18601",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 349,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.22718",
+      "identity_tokens": [
+        "arXiv:2602.22718"
+      ],
+      "title": "RLHFless: Serverless Computing for Efficient RLHF",
+      "reason": "一次arXiv要旨。サーバレス資源割当、共有prefix事前計算、cost-aware actor scalingにより同期RLHF学習パイプラインの待機・遊休時間を減らし、最大1.35倍の高速化と44.8%のコスト削減を報告。LLM推論はRLHFの内部構成要素だが、研究対象はポストトレーニング基盤でありオンライン推論サービングではない。",
+      "source_url": "https://arxiv.org/abs/2602.22718",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 351,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.17416",
+      "identity_tokens": [
+        "arXiv:2609.17416"
+      ],
+      "title": "Never Stop Thinking: Continuous-Time Language Agents",
+      "reason": "一次arXiv要旨。既存テキストLLMのinterrupt-and-resumeオーケストレーションで音声入力中・発話中に推論を進め、ライブパイプラインの応答遅延を全体で19%、対象条件では約半減。ReactiveBenchでLLM判定器の偏りを検証し、正解可能な報酬によるRLでstreaming task完了率48%から73±5%へ改善。対話エージェント推論時の実時間制御と遅延を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2609.17416",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 352,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.23914",
+      "identity_tokens": [
+        "arXiv:2605.23914"
+      ],
+      "title": "VineLM: Trie-Based Fine-Grained Control for Agentic Workflows",
+      "reason": "一次arXiv要旨。LLMとツールの多段ワークフローに対し、実行済みprefixを注釈付きtrieに保持し各ステージ呼出しごとに残り予算でモデル選択を再計画。NL2SQLと数学推論で同一リクエスト予算下の精度最大18%改善、全列挙比のオフラインprofiling費用98〜99.8%削減を報告。推論時のモデルルーティング・費用/遅延配分を直接最適化。",
+      "source_url": "https://arxiv.org/abs/2605.23914",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 404,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TCAD.2024.3443692",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2024.3443692"
+      ],
+      "title": "EQ-ViT: Algorithm-Hardware Co-Design for End-to-End Acceleration of Real-Time Vision Transformer Inference on Versal ACAP Architecture",
+      "reason": "著者の一次原稿（PMC）要旨。AMD Versal ACAP上で画像認識向けViTのINT8演算、FPGA/AIE協調と演算融合を最適化する。LLMや生成型VLMの推論・KVキャッシュ・サービングは評価対象ではなく、画像ViT専用アクセラレータであるため対象外。",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12327521/",
+      "body_check": "primary_author_manuscript_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 479,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3609798",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3609798"
+      ],
+      "title": "QuantEdge: A Hybrid Quantization Approach for Optimized AI Deployment Across Edge Devices",
+      "reason": "IEEE出版社一次要旨。PTQ/QATを併用した汎用エッジAI量子化でJetson、Raspberry Piなどを評価し推論遅延最大31.8%減と報告。対象は自動運転、医療画像、監視、IoT等の汎用AIであり、LLM/VLM生成推論の直接的な検証がないため対象外。",
+      "source_url": "https://ieeexplore.ieee.org/document/11164270/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 490,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.21473",
+      "identity_tokens": [
+        "arXiv:2503.21473"
+      ],
+      "title": "DeepRV: Accelerating Spatiotemporal Inference with Pre-trained Neural Priors",
+      "reason": "一次arXiv要旨。Gaussian Processの事前分布サンプリングをニューラル近似で置換し、時空間統計推論の計算量をO(N^3)からO(N^2)に低減。教育貧困の地理統計などを評価し、言語モデルのtoken生成やサービングとは無関係。",
+      "source_url": "https://arxiv.org/abs/2503.21473",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 491,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.07374",
+      "identity_tokens": [
+        "arXiv:2602.07374"
+      ],
+      "title": "TernaryLM: Memory-Efficient Language Modeling via Native 1.5-Bit Quantization with Adaptive Layer-wise Scaling",
+      "reason": "一次arXiv最新版v2要旨。132M Transformerを三値重みで初めから学習し、同一構造FP32比メモリ498MB対1197MB（2.4倍削減）、遅延同等と報告。主貢献はnative QATと小規模言語モデル学習で、推論高速化や大規模LLM実証はない。worklistの「1-Bit」は現行一次題名「1.5-Bit」と不一致のため一次題名を採用。",
+      "source_url": "https://arxiv.org/abs/2602.07374",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:41:43+09:00",
+      "last_checked_at": "2026-10-31T05:41:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
