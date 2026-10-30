@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261030-2144-scheduled-chat-45/r03",
+  "reference_main_sha": "6a937fa4a3e237e9b16a314de8ed285798f86a23",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.06787",
+      "identity_tokens": [
+        "arXiv:2604.06787"
+      ],
+      "title": "When Is Thinking Enough? Early Exit via Sufficiency Assessment for Efficient Reasoning",
+      "reason": "DTSRは推論途中のreflection signalを検出し、一定トークン間隔を満たすとモデル自身に現在のCoTが回答に十分かを評価させて早期終了する。一次本文Algorithm 1ではチェック間隔k、閾値τ、最大長を制御し、Qwen3で推論長28.9〜34.9%削減と小さな品質損失を報告。推論時の思考トークン削減に直接該当する。",
+      "source_url": "https://arxiv.org/html/2604.06787",
+      "body_check": "primary_arxiv_fulltext_passages_read; methods_and_evaluation_verified",
+      "first_checked_at": "2026-10-30T21:57:00+09:00",
+      "last_checked_at": "2026-10-30T21:57:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 211,
+      "origin": "discovery_worklist_primary_body_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.18599",
+      "identity_tokens": [
+        "arXiv:2603.18599"
+      ],
+      "title": "SJD-PAC: Accelerating Speculative Jacobi Decoding via Proactive Drafting and Adaptive Continuation",
+      "reason": "SJD-PACはJacobi型投機復号で最初の候補棄却後も検証を継続し、棄却位置から新しい候補を生成することで採択長を伸ばす。一次本文の評価はLumina-mGPT 7BとEmu3 8Bによるテキスト画像生成で、対象分布を保ち最大3.8倍の生成速度向上を報告。投機復号アルゴリズムには関連するが、評価対象が画像生成で通常のテキストLLMサービングではないためborderline。",
+      "source_url": "https://arxiv.org/html/2603.18599",
+      "body_check": "primary_arxiv_fulltext_passages_read; methods_and_evaluation_verified",
+      "first_checked_at": "2026-10-30T21:57:00+09:00",
+      "last_checked_at": "2026-10-30T21:57:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 227,
+      "origin": "discovery_worklist_primary_body_screen"
+    }
+  ]
+}
