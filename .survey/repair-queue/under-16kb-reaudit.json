@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T04:06:41.533933+00:00",
+  "generated_at": "2026-10-30T04:57:19.449706+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 6,
+  "count": 5,
   "worker_counts": {
     "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 2
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -97,26 +97,6 @@
         "method_chars": 1182,
         "evaluation_chars": 804,
         "limitation_chars": 947
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2022-2203.12644-linearizing-transformer-with-key-value-memory.md",
-      "canonical_id": "arXiv:2203.12644",
-      "title": "Linearizing Transformer with Key-Value Memory",
-      "file_bytes": 16887,
-      "source_sha256": "3f309d9288e49d606dac8e1691743b3d3bb0577cededbe227aed71c2ee95196d",
-      "source_git_blob_sha": "582498440a53298f78ce3361b6fdcc1d3da8baaf",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.918911,
-      "quality_metrics": {
-        "body_chars": 3896,
-        "method_chars": 1270,
-        "evaluation_chars": 811,
-        "limitation_chars": 359
       },
       "mechanical_failures": [],
       "warnings": []
