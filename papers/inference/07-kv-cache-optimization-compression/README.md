@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（424本）
+## 自動生成の論文一覧（425本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -682,6 +682,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [ActKV: Efficient LLM Agents through Action-Guided KV Cache Management](2026-2609.31395-actkv-efficient-llm-agents-through-action-guided-kv-cache-management.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   行動生成時の注意履歴で将来の操作に必要なキー・値状態を選び、生成確信度に応じて保存枠を拡張し、ページ化された実キャッシュを追加作業領域なしで圧縮する。ReAct型の長期タスクでは、無圧縮方式に対する平均タスク精度98.53%を、ピークKV容量25.98%で維持する。
+
+- **2026-08 · [WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs](2026-2608.22704-wnw-waxing-and-waning-kv-cache-for-long-form-speech-llms.md)**  
+  実装：[✓](https://github.com/XMUDeepLIT/WnW) ・ リポジトリ内被引用：0  
+  従来のKV圧縮は、プリフィル時の注意スコアで重要な音声位置を選び、残りを削除したままデコードを続ける。Voxtral-mini-3bのLibriSpeech-LongでGPU上の音声KV保持率が約22%のとき、WnWのWERはtest-clean 6.23、test-other 8.87で、無圧縮の6.79、8.86に近い。
 
 - **2026-08 · [VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference](2026-2608.24063-viscache-visual-kv-cache-pruning-for-efficient-vision-large-language-mod.md)**  
   実装：[✓](https://github.com/Wlklk/VisCache) ・ リポジトリ内被引用：0  

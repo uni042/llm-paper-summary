@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（219本）
+## 自動生成の論文一覧（220本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -647,6 +647,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-10 · [Exact Causal Attention with 10% Fewer Operations](2025-2510.05175-exact-causal-attention-with-10-fewer-operations.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、自己回帰型Transformerの因果注意（causal 注意機構）を、近似やトークン削除を行わずに、計算に必要な加減算・乗算を減らす問題を扱う。構造を利用することで、通常の三角領域だけを計算する行列積に対して約9.4%の主要な乗算を削減し、再帰的な適用では理論上約11.1%の削減が可能とする。
+
+- **2025-10 · [Accelerating Attention with Basis Decomposition](2025-2510.01718-accelerating-attention-with-basis-decomposition.md)**  
+  実装：[✓](https://github.com/abcbdf/basis-decomposition-official) ・ リポジトリ内被引用：0  
+  TransformerのMulti-Head 注意機構では、入力からQuery、Key、Valueを線形投影し、QK内積とSoftmax、Valueの重み付き和、出力投影を計算する。FP16のWikiText2 PPLは6.307075から6.308252へごくわずかに悪化する一方、投影演算のGPU速度は平均1.34倍、対象重みは25%減る。
 
 - **2025-09 · [TyphoonMLA: A Mixed Naive-Absorb MLA Kernel For Shared Prefix](2025-2509.21081-typhoonmla-a-mixed-naive-absorb-mla-kernel-for-shared-prefix.md)**  
   実装：[✓](https://github.com/huawei-csl/TyphoonMLA-community) ・ リポジトリ内被引用：0  

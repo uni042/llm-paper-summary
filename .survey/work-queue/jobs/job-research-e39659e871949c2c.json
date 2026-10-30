@@ -35,10 +35,15 @@
   "selection_reason": "WnWは長音声でprefillとdecodeの注意重要度が一致しない問題に対し、anchor headの観測を使ってCPU上のtidal head KVをchunk単位で呼び戻し、fixed headは静的保持する。音声トークンのGPU常駐20%で近似Full-Cache精度を維持し、KVオフロード・回収に直接貢献する。",
   "semantic_scholar_id": "7cf0b6aface7c2bc90852a71fd2f18b92c7d30fa",
   "source_url": "https://arxiv.org/abs/2608.22704",
-  "status": "ready",
+  "status": "superseded",
   "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T06:28:36+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2608.22704-wnw-waxing-and-waning-kv-cache-for-long-form-speech-llms.md",
+  "represented_canonical_id": "arXiv:2608.22704",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

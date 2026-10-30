@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T06:07:59+00:00",
+  "generated_at": "2026-10-30T06:28:37+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 95,
+  "count": 96,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2322,33 +2322,6 @@
       "worker_run_key": "20261030-1230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2608.22704",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T04:49:41+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 175 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5552,
-        "body_paragraphs": 31,
-        "method_chars": 1305,
-        "method_paragraphs": 8,
-        "evaluation_chars": 175,
-        "limitation_chars": 526,
-        "insufficiency_flags": [
-          "評価説明量 175 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6cb0c0fe6ee48191a7edb032bac69669--2026-2608.22704-wnw-waxing-waning-speech-kv-cache-research-20261030-1303-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_6cb0c0fe6ee48191a7edb032bac69669--2026-2608.22704-wnw-waxing-waning-speech-kv-cache-research-20261030-1303-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.10355",
       "title": null,
       "source_url": null,
@@ -2492,8 +2465,8 @@
     },
     {
       "canonical_id": "arXiv:2609.32759",
-      "title": "The Extender: A Log-Structured Transformer",
-      "source_url": "https://arxiv.org/html/2609.32759",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T06:02:12+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2520,8 +2493,8 @@
     },
     {
       "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
-      "title": "Component-aware self-speculative decoding for hybrid language models: An architectural viability study",
-      "source_url": "https://arxiv.org/pdf/2605.01106",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T06:02:16+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2546,6 +2519,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.07173",
+      "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+      "source_url": "https://arxiv.org/html/2604.07173",
+      "returned_at": "2026-10-30T06:24:05+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9811,
+        "body_paragraphs": 58,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 651,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3731569.3764834",
+      "title": "PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications",
+      "source_url": "https://arxiv.org/pdf/2505.07203",
+      "returned_at": "2026-10-30T06:25:20+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9681,
+        "body_paragraphs": 47,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2204,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_7949ce35eb088191b9aed1f55fc6c6a4--2025-doi-10.1145-3731569.3764834-prefillonly-research-20261030-1431-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_7949ce35eb088191b9aed1f55fc6c6a4--2025-doi-10.1145-3731569.3764834-prefillonly-research-20261030-1431-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261030-1431-scheduled-chat-30/r01"
     }
   ]
 }

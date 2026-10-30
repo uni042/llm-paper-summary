@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（523本）
+## 自動生成の論文一覧（524本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1081,6 +1081,10 @@
 - **2026-03 · [Understand and Accelerate Memory Processing Pipeline for Large Language Model Inference](2026-2603.29002-memory-processing-pipeline-gpu-fpga.md)**  
   実装：[✓](https://github.com/OswaldHe/HeteroLLM) ・ リポジトリ内被引用：0  
   疎注意・RAG・圧縮メモリを4段階の共通メモリ処理へ分解し、不規則・メモリ律速部分をFPGA、密計算をGPUへ割り当てて長文推論の遅延と消費エネルギーを削減する異種実行方式。
+
+- **2026-03 · [StreamWise: Serving Multi-Modal Generation in Real-Time at Scale](2026-2603.05800-streamwise-serving-multi-modal-generation-in-real-time-at-scale.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLM単体の推論高速化が進んでも、音声・画像・動画を含む生成アプリケーションのエンドツーエンド遅延が同じ割合で短縮するわけではない。ポッドキャスト動画のように、ユーザーが再生を開始した直後から映像を継続供給するには、全動画の生成完了を待つバッチ方式では不十分である。
 
 - **2026-03 · [Serving Hybrid LLM Loads with SLO Guarantees Using CPU-GPU Attention Piggybacking](2026-2603.12831-serving-hybrid-llm-loads-with-slo-guarantees-using-cpu-gpu-attention-piggybacking.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
