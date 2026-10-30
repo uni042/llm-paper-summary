@@ -1,0 +1,904 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-c54cb1cfec6fe19c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-c54cb1cfec6f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.15154",
+    "arXiv:2505.19187",
+    "arXiv:2508.02178",
+    "arXiv:2508.18773",
+    "arXiv:2510.01394",
+    "arXiv:2604.04930",
+    "arXiv:2605.26106",
+    "arXiv:2607.01077",
+    "arXiv:2609.01507"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d1e5a0640905b94e45b6ea15861b06bc7e3387a9",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T18:07:39.944968+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.15154",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19187",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.02178",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2508.18773",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.01394",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.04930",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.26106",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.01077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.01507",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+      "source_url": "https://arxiv.org/abs/2604.04930",
+      "year": 2026,
+      "published": "2026-04-06",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to overthinking. A key challenge is determining when the model should stop reasoning and produce the final answer. In this work, we study the confidence of intermediate answers during reasoning and observe two characteristic behaviors: correct reasoning trajectories often reach high-confidence answers early, while incorrect rollouts tend to produce long, unproductive reasoning traces and exhibit less reliable confidence dynamics. Motivated by these observations, we propose CoDE-Stop (Confidence Dynamics Early Stop), an early stopping method that leverages the dynamics of intermediate answer confidence to decide when to terminate reasoning, requiring no additional training and easily integrating into existing models. We evaluate CoDE-Stop on diverse reasoning and science benchmarks across multiple models. Compared to prior early stopping methods, it achieves a more favorable accuracy-compute tradeoff and reduces total token usage by 25-50% compared to standard full-length reasoning. In addition, we provide analyses of confidence dynamics during reasoning, offering insights into how confidence changes in both correct and incorrect trajectories.",
+      "identifiers": [
+        "SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed"
+      ],
+      "semantic_scholar_id": "7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+      "canonical_id": "arXiv:2604.04930",
+      "arxiv_id": "2604.04930",
+      "doi": "10.48550/arXiv.2604.04930",
+      "authors": [
+        "Parsa Hosseini",
+        "Sumit Nawathe",
+        "Mahdi Salmani",
+        "Meisam Razaviyayn",
+        "S. Feizi"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 207,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Looped Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2605.26106",
+      "year": 2026,
+      "published": "2026-05-25",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Masked diffusion models (MDMs) have emerged as a promising alternative to autoregressive models for language modeling, yet the effective design of transformer architectures for MDMs remains underexplored. In this paper, we show that selectively looping the early-middle transformer layers significantly improves both training efficiency and model performance in MDMs. We call this approach LoopMDM(Looped Masked Diffusion Model), which brings two key benefits: looping layers at training-time yields a depth-scaling effect without adding parameters, while varying the number of loops at inference-time enables flexible compute scaling. Despite the simplicity, the results are striking: across multiple pre-training corpora, LoopMDM matches the performance of same-size MDMs with up to 3.3 fewer training FLOPs, while its final performance outperforms them on various reasoning benchmarks, including up to 8.5 points on GSM8K. It even surpasses deeper non-looped MDMs trained with comparable per-step compute, indicating that selective looping is more effective than naive depth scaling. Furthermore, LoopMDM can scale inference-time compute by increasing the number of loops. Adaptively adjusting the number of loops throughout the sampling process further yields additional gains in compute efficiency while maintaining performance. Lastly, with attention analysis, we provide evidence that looping is effective in MDMs by promoting interactions among masked positions. Our code and weights will be publicly released.",
+      "identifiers": [
+        "SemanticScholar:75d437ccd0a48a607a2c311fa1c97f235a6ca352"
+      ],
+      "semantic_scholar_id": "75d437ccd0a48a607a2c311fa1c97f235a6ca352",
+      "canonical_id": "arXiv:2605.26106",
+      "arxiv_id": "2605.26106",
+      "doi": "10.48550/arXiv.2605.26106",
+      "authors": [
+        "Sang-Hun Lee",
+        "Chunsan Hong",
+        "Seungryong Kim",
+        "Jonghyun Lee",
+        "Jongho Park",
+        "Dongmin Park"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 158,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Message Passing Enables Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2607.01077",
+      "year": 2026,
+      "published": "2026-07-01",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While inference-time scaling has improved the reasoning abilities of large language models (LLMs), the need to generate long chains-of-thought (CoTs) is a computational bottleneck. Thus, in contrast to sequential scaling methods like CoT, recent parallel scaling techniques instead use fork and join (FJ) primitives to divide work across multiple LLM threads. However, in the fork-join paradigm, threads are typically transient and do not communicate pointwise with one another which limits scalability. To tackle this, we introduce Message Passing Language Models (MPLMs), a framework for LLM reasoning in which threads communicate directly via lightweight send and receive primitives. MPLMs enable efficient scaling through two key mechanisms: (1) reduced communication costs, achieved by avoiding redundant context sharing, and (2) preemption, which allows threads to terminate early based on partial information from their peers. We demonstrate the promise of MPLMs on 3 classes of tasks. First, on Sudoku puzzles, we show that MPLMs require an asymptotically smaller context than both serial CoT and parallel FJ. We then fine-tune a single model to solve 25 x 25 puzzles that remain challenging for standard CoT and FJ approaches, as well as frontier reasoning models without tools. Second, on 3-SAT puzzles, the capability of preemption allows termination of unpromising branches, which results in improved efficiency. Finally, we show that appropriately prompted large pre-trained models follow the MPLM protocol, achieving competitive results on long-context question answering relative to popular fork-join approaches.",
+      "identifiers": [
+        "SemanticScholar:4ce266b37605f6aceb523d707504964e6a6e53f6"
+      ],
+      "semantic_scholar_id": "4ce266b37605f6aceb523d707504964e6a6e53f6",
+      "canonical_id": "arXiv:2607.01077",
+      "arxiv_id": "2607.01077",
+      "doi": "10.48550/arXiv.2607.01077",
+      "authors": [
+        "Xue-Chen Liu",
+        "Daman Arora",
+        "Gokul Swamy",
+        "Andrea Zanette"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatentPress: Context Compression Beyond Text and Vision",
+      "source_url": "https://arxiv.org/abs/2609.01507",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compressed context is usually carried as human-readable text or as rendered images that must be decoded, even when its consumer is a language model. We introduce LatentPress, which writes conversational histories and long documents into a third representation: continuous memory tokens that a frozen decoder reads directly through its input-embedding interface, with no text reconstruction at inference. A small reader-matched writer compresses $4$-$16\\times$ while training only an adapter (4.2M-26.2M parameters, $\\sim\\!0.1\\%$ of the decoder). On LongMemEval, LatentPress reaches $0.504$ accuracy at $7.70\\times$ compression versus $0.490$ for uncompressed evidence, outperforming text summaries (0.184) and OCR-based compression (0.426 to 0.312). On LongBench-QA, in-domain writers match or exceed raw-context reading at $4$-$8\\times$ compression, while $16\\times$ trails raw. Writing takes 43ms per conversation, roughly an order of magnitude faster than text summarization or OCR reconstruction, and reading is $5$-$9\\times$ faster than raw context or cached OCR. We validate the interface under two transfer settings, zero-shot from UltraChat to LongMemEval memory QA and from LongMemEval-derived QA to unseen LongBench document domains, establishing direct soft tokens as a practical machine-facing context interface beyond text and vision. The implementation of the experiments could be found at: https://github.com/HJSang/LatentPress.",
+      "identifiers": [
+        "SemanticScholar:2bff9052065151aeb660a90093636183c62b5d75"
+      ],
+      "semantic_scholar_id": "2bff9052065151aeb660a90093636183c62b5d75",
+      "canonical_id": "arXiv:2609.01507",
+      "arxiv_id": "2609.01507",
+      "authors": [
+        "Yuanda Xu",
+        "Zheng-Ze Zhou",
+        "He-Jian Sang",
+        "Xin-Chen Du",
+        "Bai-Yang Dai",
+        "Sen Na"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prolonged Reasoning Is Not All You Need: Certainty-Based Adaptive Routing for Efficient LLM/MLLM Reasoning",
+      "source_url": "https://arxiv.org/abs/2505.15154",
+      "year": 2025,
+      "published": "2025-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 43,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in reasoning have significantly enhanced the capabilities of Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) across diverse tasks. However, excessive reliance on chain-of-thought (CoT) reasoning can impair model performance and brings unnecessarily lengthened outputs, reducing efficiency. Our work reveals that prolonged reasoning does not universally improve accuracy and even degrade performance on simpler tasks. To address this, we propose Certainty-based Adaptive Reasoning (CAR), a novel framework that dynamically switches between short answers and long-form reasoning based on the model perplexity. CAR first generates a short answer and evaluates its perplexity, triggering reasoning only when the model exhibits low confidence (i.e., high perplexity). Experiments across diverse multimodal VQA/KIE benchmarks and text reasoning datasets show that CAR outperforms both short-answer and long-form reasoning approaches, striking an optimal balance between accuracy and efficiency.",
+      "identifiers": [
+        "SemanticScholar:2b8fababedb34cded34f47722b13cf193cdcc92f"
+      ],
+      "semantic_scholar_id": "2b8fababedb34cded34f47722b13cf193cdcc92f",
+      "canonical_id": "arXiv:2505.15154",
+      "arxiv_id": "2505.15154",
+      "doi": "10.48550/arXiv.2505.15154",
+      "authors": [
+        "Jinghui Lu",
+        "Hai-Yang Yu",
+        "Siliang Xu",
+        "Shiwei Ran",
+        "Guo-Zhi Tang",
+        "Siqi Wang",
+        "Bin Shan",
+        "Teng Fu",
+        "Hao Feng",
+        "Jing-Qun Tang",
+        "Han Wang",
+        "Can Huang"
+      ],
+      "priority": 43,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 43,
+        "citation_count": 43,
+        "total": 43,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 527,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LIMOPro: Reasoning Refinement for Efficient and Effective Test-time Scaling",
+      "source_url": "https://arxiv.org/abs/2505.19187",
+      "year": 2025,
+      "published": "2025-05-25",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable reasoning capabilities through test-time scaling approaches, particularly when fine-tuned with chain-of-thought (CoT) data distilled from more powerful large reasoning models (LRMs). However, these reasoning chains often contain verbose elements that mirror human problem-solving, categorized as progressive reasoning (the essential solution development path) and functional elements (verification processes, alternative solution approaches, and error corrections). While progressive reasoning is crucial, the functional elements significantly increase computational demands during test-time inference. We introduce PIR (Perplexity-based Importance Refinement), a principled framework that quantitatively evaluates the importance of each reasoning step based on its impact on answer prediction confidence. PIR systematically identifies and selectively prunes only low-importance functional steps while preserving progressive reasoning components, creating optimized training data that maintains the integrity of the core solution path while reducing verbosity. Models fine-tuned on PIR-optimized data exhibit superior test-time scaling properties, generating more concise reasoning chains while achieving improved accuracy (+0.9\\% to +6.6\\%) with significantly reduced token usage (-3\\% to -41\\%) across challenging reasoning benchmarks (AIME, AMC, and GPQA Diamond). Our approach demonstrates strong generalizability across different model sizes, data sources, and token budgets, offering a practical solution for deploying reasoning-capable LLMs in scenarios where efficient test-time scaling, response time, and computational efficiency are valuable constraints.",
+      "identifiers": [
+        "SemanticScholar:533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d"
+      ],
+      "semantic_scholar_id": "533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d",
+      "canonical_id": "arXiv:2505.19187",
+      "arxiv_id": "2505.19187",
+      "doi": "10.48550/arXiv.2505.19187",
+      "authors": [
+        "Yang Xiao",
+        "Jiashuo Wang",
+        "Rui-Feng Yuan",
+        "Chun-Pu Xu",
+        "Kaishuai Xu",
+        "Wen-Jie Li",
+        "Peng-Fei Liu"
+      ],
+      "priority": 24,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 24,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 523,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Reconsidering Overthinking: Penalizing Internal and External Redundancy in CoT Reasoning",
+      "source_url": "https://arxiv.org/abs/2508.02178",
+      "year": 2025,
+      "published": "2025-08-04",
+      "venue": "arXiv.org",
+      "citation_count": 14,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) often exhibit overthinking, producing verbose Chain-of-Thought (CoT) traces that increase inference cost and obscure the underlying reasoning process. Existing CoT compression methods mainly rely on global length rewards, which conflate necessary intermediate reasoning with redundant text and may therefore compromise reasoning fidelity. This paper revisits overthinking from a semantic-efficiency perspective and decomposes CoT redundancy into two distinct forms: internal redundancy, defined as informational stagnation before the first correct answer, and external redundancy, defined as superfluous continuation after the first correct answer. Based on this decomposition, we propose a dual-penalty reinforcement learning framework that separately optimizes reasoning progress and termination behavior. Specifically, a sliding-window semantic similarity metric penalizes low-progress reasoning segments, while a normalized external-redundancy metric discourages post-answer continuation. Experiments on GSM8K, MATH500, and AIME24 across different model scales show that our method reduces average reasoning length by 41.3% on the 1.5B model and 40.1% on the 7B model, while preserving competitive accuracy and achieving the best overall accuracy-efficiency score among evaluated baselines. The learned compression behavior further transfers to out-of-domain reasoning tasks, including GPQA and LiveCodeBench. More importantly, our analysis reveals a clear asymmetry between the two redundancy types: external redundancy can be largely removed with little performance loss, whereas internal redundancy compression follows a sensitive accuracy-efficiency trade-off. These results suggest that effective CoT compression should optimize semantic efficiency rather than sequence length alone, offering a principled route toward more concise, efficient, and interpretable LRMs.",
+      "identifiers": [
+        "SemanticScholar:867c73a93cbbe8ce373586b2d5c4c67baafb98c3"
+      ],
+      "semantic_scholar_id": "867c73a93cbbe8ce373586b2d5c4c67baafb98c3",
+      "canonical_id": "arXiv:2508.02178",
+      "arxiv_id": "2508.02178",
+      "doi": "10.48550/arXiv.2508.02178",
+      "authors": [
+        "Tai-Hang Zhen",
+        "Jialiang Hong",
+        "Kai Chen",
+        "Guang Yang",
+        "Jun-Lan Feng",
+        "Wen-Peng Zhu",
+        "Jing Huo",
+        "Yang Gao",
+        "De-Peng Wang",
+        "Haitao Wan",
+        "Xi Yang",
+        "Fan-Yu Meng",
+        "Yu-Yao Zhang",
+        "Ji Qi",
+        "Xiang-Yu Zhou"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 14,
+        "citation_count": 14,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 452,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ThinkDial: An Open Recipe for Controlling Reasoning Effort in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2508.18773",
+      "year": 2025,
+      "published": "2025-08-26",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) with chain-of-thought reasoning have demonstrated remarkable problem-solving capabilities, but controlling their computational effort remains a significant challenge for practical deployment. Recent proprietary systems like OpenAI's gpt-oss series have introduced discrete operational modes for intuitive reasoning control, but the open-source community has largely failed to achieve such capabilities. In this paper, we introduce ThinkDial, the first open-recipe end-to-end framework that successfully implements gpt-oss-style controllable reasoning through discrete operational modes. Our system enables seamless switching between three distinct reasoning regimes: High mode (full reasoning capability), Medium mode (50 percent token reduction with<10 percent performance degradation), and Low mode (75 percent token reduction with<15 percent performance degradation). We achieve this through an end-to-end training paradigm that integrates budget-mode control throughout the entire pipeline: budget-mode supervised fine-tuning that embeds controllable reasoning capabilities directly into the learning process, and two-phase budget-aware reinforcement learning with adaptive reward shaping. Extensive experiments demonstrate that ThinkDial achieves target compression-performance trade-offs with clear response length reductions while maintaining performance thresholds. The framework also exhibits strong generalization capabilities on out-of-distribution tasks.",
+      "identifiers": [
+        "SemanticScholar:76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8"
+      ],
+      "semantic_scholar_id": "76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8",
+      "canonical_id": "arXiv:2508.18773",
+      "arxiv_id": "2508.18773",
+      "doi": "10.48550/arXiv.2508.18773",
+      "authors": [
+        "Qianyu He",
+        "Siyu Yuan",
+        "Xuefeng Li",
+        "Ming-Xuan Wang",
+        "Jiang-Jie Chen"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 430,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimal Stopping vs Best-of-N for Inference Time Optimization",
+      "source_url": "https://arxiv.org/abs/2510.01394",
+      "year": 2025,
+      "published": "2025-10-01",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) generation often requires balancing output quality against inference cost, especially when using multiple generations. We introduce a new framework for inference-time optimization based on the classical Pandora's Box problem. Viewing each generation as opening a costly\"box\"with random reward, we develop algorithms that decide when to stop generating without knowing the underlying reward distribution. Our first contribution is a UCB-style Pandora's Box algorithm, which achieves performance that is provably close to Weitzman's algorithm, the optimal strategy when the distribution is known. We further adapt this method to practical LLM settings by addressing reward scaling across prompts via a Bradley-Terry inspired transformation. This leads to an adaptive inference-time optimization method that normalizes rewards and learns stopping thresholds on the fly. Experiments on the AlpacaFarm and HH-RLHF datasets, using multiple LLM-reward model pairs, show that our adaptive strategy can obtain the same performance as non-adaptive Best-of-N sampling while requiring 15-35 percent fewer generations on average. Our results establish a principled bridge between optimal stopping theory and inference-time scaling, providing both theoretical performance bounds and practical efficiency gains for LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:f424beba20f4aecf24dc3225806cb8712bccf380"
+      ],
+      "semantic_scholar_id": "f424beba20f4aecf24dc3225806cb8712bccf380",
+      "canonical_id": "arXiv:2510.01394",
+      "arxiv_id": "2510.01394",
+      "doi": "10.48550/arXiv.2510.01394",
+      "authors": [
+        "Y. Kalayci",
+        "Vinod Raman",
+        "S. Dughmi"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 394,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.04930",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.04930",
+        "id:SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+        "id:arXiv:2604.04930",
+        "title:early stopping for large reasoning models via confidence dynamics",
+        "url:https://arxiv.org/abs/2604.04930"
+      ],
+      "record": {
+        "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+        "source_url": "https://arxiv.org/abs/2604.04930",
+        "year": 2026,
+        "published": "2026-04-06",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to overthinking. A key challenge is determining when the model should stop reasoning and produce the final answer. In this work, we study the confidence of intermediate answers during reasoning and observe two characteristic behaviors: correct reasoning trajectories often reach high-confidence answers early, while incorrect rollouts tend to produce long, unproductive reasoning traces and exhibit less reliable confidence dynamics. Motivated by these observations, we propose CoDE-Stop (Confidence Dynamics Early Stop), an early stopping method that leverages the dynamics of intermediate answer confidence to decide when to terminate reasoning, requiring no additional training and easily integrating into existing models. We evaluate CoDE-Stop on diverse reasoning and science benchmarks across multiple models. Compared to prior early stopping methods, it achieves a more favorable accuracy-compute tradeoff and reduces total token usage by 25-50% compared to standard full-length reasoning. In addition, we provide analyses of confidence dynamics during reasoning, offering insights into how confidence changes in both correct and incorrect trajectories.",
+        "identifiers": [
+          "SemanticScholar:7a3bbdb1bcc7d6062aac816329750ee20c016aed"
+        ],
+        "semantic_scholar_id": "7a3bbdb1bcc7d6062aac816329750ee20c016aed",
+        "canonical_id": "arXiv:2604.04930",
+        "arxiv_id": "2604.04930",
+        "doi": "10.48550/arXiv.2604.04930",
+        "authors": [
+          "Parsa Hosseini",
+          "Sumit Nawathe",
+          "Mahdi Salmani",
+          "Meisam Razaviyayn",
+          "S. Feizi"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 207,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.26106",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.26106",
+        "id:SemanticScholar:75d437ccd0a48a607a2c311fa1c97f235a6ca352",
+        "id:arXiv:2605.26106",
+        "title:looped diffusion language models",
+        "url:https://arxiv.org/abs/2605.26106"
+      ],
+      "record": {
+        "title": "Looped Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2605.26106",
+        "year": 2026,
+        "published": "2026-05-25",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Masked diffusion models (MDMs) have emerged as a promising alternative to autoregressive models for language modeling, yet the effective design of transformer architectures for MDMs remains underexplored. In this paper, we show that selectively looping the early-middle transformer layers significantly improves both training efficiency and model performance in MDMs. We call this approach LoopMDM(Looped Masked Diffusion Model), which brings two key benefits: looping layers at training-time yields a depth-scaling effect without adding parameters, while varying the number of loops at inference-time enables flexible compute scaling. Despite the simplicity, the results are striking: across multiple pre-training corpora, LoopMDM matches the performance of same-size MDMs with up to 3.3 fewer training FLOPs, while its final performance outperforms them on various reasoning benchmarks, including up to 8.5 points on GSM8K. It even surpasses deeper non-looped MDMs trained with comparable per-step compute, indicating that selective looping is more effective than naive depth scaling. Furthermore, LoopMDM can scale inference-time compute by increasing the number of loops. Adaptively adjusting the number of loops throughout the sampling process further yields additional gains in compute efficiency while maintaining performance. Lastly, with attention analysis, we provide evidence that looping is effective in MDMs by promoting interactions among masked positions. Our code and weights will be publicly released.",
+        "identifiers": [
+          "SemanticScholar:75d437ccd0a48a607a2c311fa1c97f235a6ca352"
+        ],
+        "semantic_scholar_id": "75d437ccd0a48a607a2c311fa1c97f235a6ca352",
+        "canonical_id": "arXiv:2605.26106",
+        "arxiv_id": "2605.26106",
+        "doi": "10.48550/arXiv.2605.26106",
+        "authors": [
+          "Sang-Hun Lee",
+          "Chunsan Hong",
+          "Seungryong Kim",
+          "Jonghyun Lee",
+          "Jongho Park",
+          "Dongmin Park"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 158,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.01077",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.01077",
+        "id:SemanticScholar:4ce266b37605f6aceb523d707504964e6a6e53f6",
+        "id:arXiv:2607.01077",
+        "title:message passing enables efficient reasoning",
+        "url:https://arxiv.org/abs/2607.01077"
+      ],
+      "record": {
+        "title": "Message Passing Enables Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2607.01077",
+        "year": 2026,
+        "published": "2026-07-01",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While inference-time scaling has improved the reasoning abilities of large language models (LLMs), the need to generate long chains-of-thought (CoTs) is a computational bottleneck. Thus, in contrast to sequential scaling methods like CoT, recent parallel scaling techniques instead use fork and join (FJ) primitives to divide work across multiple LLM threads. However, in the fork-join paradigm, threads are typically transient and do not communicate pointwise with one another which limits scalability. To tackle this, we introduce Message Passing Language Models (MPLMs), a framework for LLM reasoning in which threads communicate directly via lightweight send and receive primitives. MPLMs enable efficient scaling through two key mechanisms: (1) reduced communication costs, achieved by avoiding redundant context sharing, and (2) preemption, which allows threads to terminate early based on partial information from their peers. We demonstrate the promise of MPLMs on 3 classes of tasks. First, on Sudoku puzzles, we show that MPLMs require an asymptotically smaller context than both serial CoT and parallel FJ. We then fine-tune a single model to solve 25 x 25 puzzles that remain challenging for standard CoT and FJ approaches, as well as frontier reasoning models without tools. Second, on 3-SAT puzzles, the capability of preemption allows termination of unpromising branches, which results in improved efficiency. Finally, we show that appropriately prompted large pre-trained models follow the MPLM protocol, achieving competitive results on long-context question answering relative to popular fork-join approaches.",
+        "identifiers": [
+          "SemanticScholar:4ce266b37605f6aceb523d707504964e6a6e53f6"
+        ],
+        "semantic_scholar_id": "4ce266b37605f6aceb523d707504964e6a6e53f6",
+        "canonical_id": "arXiv:2607.01077",
+        "arxiv_id": "2607.01077",
+        "doi": "10.48550/arXiv.2607.01077",
+        "authors": [
+          "Xue-Chen Liu",
+          "Daman Arora",
+          "Gokul Swamy",
+          "Andrea Zanette"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01507",
+      "identity_tokens": [
+        "id:SemanticScholar:2bff9052065151aeb660a90093636183c62b5d75",
+        "id:arXiv:2609.01507",
+        "title:latentpress context compression beyond text and vision",
+        "url:https://arxiv.org/abs/2609.01507"
+      ],
+      "record": {
+        "title": "LatentPress: Context Compression Beyond Text and Vision",
+        "source_url": "https://arxiv.org/abs/2609.01507",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Compressed context is usually carried as human-readable text or as rendered images that must be decoded, even when its consumer is a language model. We introduce LatentPress, which writes conversational histories and long documents into a third representation: continuous memory tokens that a frozen decoder reads directly through its input-embedding interface, with no text reconstruction at inference. A small reader-matched writer compresses $4$-$16\\times$ while training only an adapter (4.2M-26.2M parameters, $\\sim\\!0.1\\%$ of the decoder). On LongMemEval, LatentPress reaches $0.504$ accuracy at $7.70\\times$ compression versus $0.490$ for uncompressed evidence, outperforming text summaries (0.184) and OCR-based compression (0.426 to 0.312). On LongBench-QA, in-domain writers match or exceed raw-context reading at $4$-$8\\times$ compression, while $16\\times$ trails raw. Writing takes 43ms per conversation, roughly an order of magnitude faster than text summarization or OCR reconstruction, and reading is $5$-$9\\times$ faster than raw context or cached OCR. We validate the interface under two transfer settings, zero-shot from UltraChat to LongMemEval memory QA and from LongMemEval-derived QA to unseen LongBench document domains, establishing direct soft tokens as a practical machine-facing context interface beyond text and vision. The implementation of the experiments could be found at: https://github.com/HJSang/LatentPress.",
+        "identifiers": [
+          "SemanticScholar:2bff9052065151aeb660a90093636183c62b5d75"
+        ],
+        "semantic_scholar_id": "2bff9052065151aeb660a90093636183c62b5d75",
+        "canonical_id": "arXiv:2609.01507",
+        "arxiv_id": "2609.01507",
+        "authors": [
+          "Yuanda Xu",
+          "Zheng-Ze Zhou",
+          "He-Jian Sang",
+          "Xin-Chen Du",
+          "Bai-Yang Dai",
+          "Sen Na"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 59,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.15154",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.15154",
+        "id:SemanticScholar:2b8fababedb34cded34f47722b13cf193cdcc92f",
+        "id:arXiv:2505.15154",
+        "title:prolonged reasoning is not all you need certaintybased adaptive routing for efficient llmmllm reasoning",
+        "url:https://arxiv.org/abs/2505.15154"
+      ],
+      "record": {
+        "title": "Prolonged Reasoning Is Not All You Need: Certainty-Based Adaptive Routing for Efficient LLM/MLLM Reasoning",
+        "source_url": "https://arxiv.org/abs/2505.15154",
+        "year": 2025,
+        "published": "2025-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 43,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advancements in reasoning have significantly enhanced the capabilities of Large Language Models (LLMs) and Multimodal Large Language Models (MLLMs) across diverse tasks. However, excessive reliance on chain-of-thought (CoT) reasoning can impair model performance and brings unnecessarily lengthened outputs, reducing efficiency. Our work reveals that prolonged reasoning does not universally improve accuracy and even degrade performance on simpler tasks. To address this, we propose Certainty-based Adaptive Reasoning (CAR), a novel framework that dynamically switches between short answers and long-form reasoning based on the model perplexity. CAR first generates a short answer and evaluates its perplexity, triggering reasoning only when the model exhibits low confidence (i.e., high perplexity). Experiments across diverse multimodal VQA/KIE benchmarks and text reasoning datasets show that CAR outperforms both short-answer and long-form reasoning approaches, striking an optimal balance between accuracy and efficiency.",
+        "identifiers": [
+          "SemanticScholar:2b8fababedb34cded34f47722b13cf193cdcc92f"
+        ],
+        "semantic_scholar_id": "2b8fababedb34cded34f47722b13cf193cdcc92f",
+        "canonical_id": "arXiv:2505.15154",
+        "arxiv_id": "2505.15154",
+        "doi": "10.48550/arXiv.2505.15154",
+        "authors": [
+          "Jinghui Lu",
+          "Hai-Yang Yu",
+          "Siliang Xu",
+          "Shiwei Ran",
+          "Guo-Zhi Tang",
+          "Siqi Wang",
+          "Bin Shan",
+          "Teng Fu",
+          "Hao Feng",
+          "Jing-Qun Tang",
+          "Han Wang",
+          "Can Huang"
+        ],
+        "priority": 43,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 43,
+          "citation_count": 43,
+          "total": 43,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 527,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19187",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19187",
+        "id:SemanticScholar:533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d",
+        "id:arXiv:2505.19187",
+        "title:limopro reasoning refinement for efficient and effective testtime scaling",
+        "url:https://arxiv.org/abs/2505.19187"
+      ],
+      "record": {
+        "title": "LIMOPro: Reasoning Refinement for Efficient and Effective Test-time Scaling",
+        "source_url": "https://arxiv.org/abs/2505.19187",
+        "year": 2025,
+        "published": "2025-05-25",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated remarkable reasoning capabilities through test-time scaling approaches, particularly when fine-tuned with chain-of-thought (CoT) data distilled from more powerful large reasoning models (LRMs). However, these reasoning chains often contain verbose elements that mirror human problem-solving, categorized as progressive reasoning (the essential solution development path) and functional elements (verification processes, alternative solution approaches, and error corrections). While progressive reasoning is crucial, the functional elements significantly increase computational demands during test-time inference. We introduce PIR (Perplexity-based Importance Refinement), a principled framework that quantitatively evaluates the importance of each reasoning step based on its impact on answer prediction confidence. PIR systematically identifies and selectively prunes only low-importance functional steps while preserving progressive reasoning components, creating optimized training data that maintains the integrity of the core solution path while reducing verbosity. Models fine-tuned on PIR-optimized data exhibit superior test-time scaling properties, generating more concise reasoning chains while achieving improved accuracy (+0.9\\% to +6.6\\%) with significantly reduced token usage (-3\\% to -41\\%) across challenging reasoning benchmarks (AIME, AMC, and GPQA Diamond). Our approach demonstrates strong generalizability across different model sizes, data sources, and token budgets, offering a practical solution for deploying reasoning-capable LLMs in scenarios where efficient test-time scaling, response time, and computational efficiency are valuable constraints.",
+        "identifiers": [
+          "SemanticScholar:533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d"
+        ],
+        "semantic_scholar_id": "533b7ae1e2313c0d98a1265a59ec7b1a14b8c03d",
+        "canonical_id": "arXiv:2505.19187",
+        "arxiv_id": "2505.19187",
+        "doi": "10.48550/arXiv.2505.19187",
+        "authors": [
+          "Yang Xiao",
+          "Jiashuo Wang",
+          "Rui-Feng Yuan",
+          "Chun-Pu Xu",
+          "Kaishuai Xu",
+          "Wen-Jie Li",
+          "Peng-Fei Liu"
+        ],
+        "priority": 24,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 24,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 523,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.02178",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.02178",
+        "id:SemanticScholar:867c73a93cbbe8ce373586b2d5c4c67baafb98c3",
+        "id:arXiv:2508.02178",
+        "title:reconsidering overthinking penalizing internal and external redundancy in cot reasoning",
+        "url:https://arxiv.org/abs/2508.02178"
+      ],
+      "record": {
+        "title": "Reconsidering Overthinking: Penalizing Internal and External Redundancy in CoT Reasoning",
+        "source_url": "https://arxiv.org/abs/2508.02178",
+        "year": 2025,
+        "published": "2025-08-04",
+        "venue": "arXiv.org",
+        "citation_count": 14,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large reasoning models (LRMs) often exhibit overthinking, producing verbose Chain-of-Thought (CoT) traces that increase inference cost and obscure the underlying reasoning process. Existing CoT compression methods mainly rely on global length rewards, which conflate necessary intermediate reasoning with redundant text and may therefore compromise reasoning fidelity. This paper revisits overthinking from a semantic-efficiency perspective and decomposes CoT redundancy into two distinct forms: internal redundancy, defined as informational stagnation before the first correct answer, and external redundancy, defined as superfluous continuation after the first correct answer. Based on this decomposition, we propose a dual-penalty reinforcement learning framework that separately optimizes reasoning progress and termination behavior. Specifically, a sliding-window semantic similarity metric penalizes low-progress reasoning segments, while a normalized external-redundancy metric discourages post-answer continuation. Experiments on GSM8K, MATH500, and AIME24 across different model scales show that our method reduces average reasoning length by 41.3% on the 1.5B model and 40.1% on the 7B model, while preserving competitive accuracy and achieving the best overall accuracy-efficiency score among evaluated baselines. The learned compression behavior further transfers to out-of-domain reasoning tasks, including GPQA and LiveCodeBench. More importantly, our analysis reveals a clear asymmetry between the two redundancy types: external redundancy can be largely removed with little performance loss, whereas internal redundancy compression follows a sensitive accuracy-efficiency trade-off. These results suggest that effective CoT compression should optimize semantic efficiency rather than sequence length alone, offering a principled route toward more concise, efficient, and interpretable LRMs.",
+        "identifiers": [
+          "SemanticScholar:867c73a93cbbe8ce373586b2d5c4c67baafb98c3"
+        ],
+        "semantic_scholar_id": "867c73a93cbbe8ce373586b2d5c4c67baafb98c3",
+        "canonical_id": "arXiv:2508.02178",
+        "arxiv_id": "2508.02178",
+        "doi": "10.48550/arXiv.2508.02178",
+        "authors": [
+          "Tai-Hang Zhen",
+          "Jialiang Hong",
+          "Kai Chen",
+          "Guang Yang",
+          "Jun-Lan Feng",
+          "Wen-Peng Zhu",
+          "Jing Huo",
+          "Yang Gao",
+          "De-Peng Wang",
+          "Haitao Wan",
+          "Xi Yang",
+          "Fan-Yu Meng",
+          "Yu-Yao Zhang",
+          "Ji Qi",
+          "Xiang-Yu Zhou"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 14,
+          "citation_count": 14,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 452,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.18773",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.18773",
+        "id:SemanticScholar:76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8",
+        "id:arXiv:2508.18773",
+        "title:thinkdial an open recipe for controlling reasoning effort in large language models",
+        "url:https://arxiv.org/abs/2508.18773"
+      ],
+      "record": {
+        "title": "ThinkDial: An Open Recipe for Controlling Reasoning Effort in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2508.18773",
+        "year": 2025,
+        "published": "2025-08-26",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) with chain-of-thought reasoning have demonstrated remarkable problem-solving capabilities, but controlling their computational effort remains a significant challenge for practical deployment. Recent proprietary systems like OpenAI's gpt-oss series have introduced discrete operational modes for intuitive reasoning control, but the open-source community has largely failed to achieve such capabilities. In this paper, we introduce ThinkDial, the first open-recipe end-to-end framework that successfully implements gpt-oss-style controllable reasoning through discrete operational modes. Our system enables seamless switching between three distinct reasoning regimes: High mode (full reasoning capability), Medium mode (50 percent token reduction with<10 percent performance degradation), and Low mode (75 percent token reduction with<15 percent performance degradation). We achieve this through an end-to-end training paradigm that integrates budget-mode control throughout the entire pipeline: budget-mode supervised fine-tuning that embeds controllable reasoning capabilities directly into the learning process, and two-phase budget-aware reinforcement learning with adaptive reward shaping. Extensive experiments demonstrate that ThinkDial achieves target compression-performance trade-offs with clear response length reductions while maintaining performance thresholds. The framework also exhibits strong generalization capabilities on out-of-distribution tasks.",
+        "identifiers": [
+          "SemanticScholar:76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8"
+        ],
+        "semantic_scholar_id": "76e3ee7f4e95c4247eccd2ecf7ec124081d58bc8",
+        "canonical_id": "arXiv:2508.18773",
+        "arxiv_id": "2508.18773",
+        "doi": "10.48550/arXiv.2508.18773",
+        "authors": [
+          "Qianyu He",
+          "Siyu Yuan",
+          "Xuefeng Li",
+          "Ming-Xuan Wang",
+          "Jiang-Jie Chen"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 430,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.01394",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.01394",
+        "id:SemanticScholar:f424beba20f4aecf24dc3225806cb8712bccf380",
+        "id:arXiv:2510.01394",
+        "title:optimal stopping vs bestofn for inference time optimization",
+        "url:https://arxiv.org/abs/2510.01394"
+      ],
+      "record": {
+        "title": "Optimal Stopping vs Best-of-N for Inference Time Optimization",
+        "source_url": "https://arxiv.org/abs/2510.01394",
+        "year": 2025,
+        "published": "2025-10-01",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) generation often requires balancing output quality against inference cost, especially when using multiple generations. We introduce a new framework for inference-time optimization based on the classical Pandora's Box problem. Viewing each generation as opening a costly\"box\"with random reward, we develop algorithms that decide when to stop generating without knowing the underlying reward distribution. Our first contribution is a UCB-style Pandora's Box algorithm, which achieves performance that is provably close to Weitzman's algorithm, the optimal strategy when the distribution is known. We further adapt this method to practical LLM settings by addressing reward scaling across prompts via a Bradley-Terry inspired transformation. This leads to an adaptive inference-time optimization method that normalizes rewards and learns stopping thresholds on the fly. Experiments on the AlpacaFarm and HH-RLHF datasets, using multiple LLM-reward model pairs, show that our adaptive strategy can obtain the same performance as non-adaptive Best-of-N sampling while requiring 15-35 percent fewer generations on average. Our results establish a principled bridge between optimal stopping theory and inference-time scaling, providing both theoretical performance bounds and practical efficiency gains for LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:f424beba20f4aecf24dc3225806cb8712bccf380"
+        ],
+        "semantic_scholar_id": "f424beba20f4aecf24dc3225806cb8712bccf380",
+        "canonical_id": "arXiv:2510.01394",
+        "arxiv_id": "2510.01394",
+        "doi": "10.48550/arXiv.2510.01394",
+        "authors": [
+          "Y. Kalayci",
+          "Vinod Raman",
+          "S. Dughmi"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 394,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:dfd9f40a5357f92017beadca746e4aa25f888c81a60c3bc6d9788b5020084675",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
