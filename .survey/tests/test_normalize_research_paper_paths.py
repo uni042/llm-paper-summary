@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import tempfile
@@ -78,6 +79,39 @@ class NormalizeResearchPaperPathsTests(unittest.TestCase):
             second = normalizer.normalize(root, apply=True)
             self.assertEqual(second["updated"], 0)
             self.assertEqual(second["unresolved"], 0)
+
+    def test_apply_repairs_legacy_doi_suffix_misparsed_as_arxiv(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            job = root / ".survey/work-queue/jobs/job-r1.json"
+            canonical = "DOI:10.1109/ISCA66397.2026.00037"
+            write_json(
+                job,
+                {
+                    "job_id": "job-r1",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": canonical,
+                    "arxiv_id": None,
+                    "published": "2026-06-01",
+                    "title": "Omni-LUT: Energy-Efficient LUT-Based Accelerator with Hardware-Aware KV Cache Quantization",
+                    "paper_path": (
+                        "papers/inference/99-other-inference-systems/"
+                        "2020-2026.00037-omni-lut-energy-efficient-lut-based-accelerator-with-hardware-aware-kv-cache-quantization.md"
+                    ),
+                },
+            )
+
+            result = normalizer.normalize(root, apply=True)
+            self.assertEqual(result["updated"], 1)
+            digest = hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:12]
+            repaired = json.loads(job.read_text(encoding="utf-8"))["paper_path"]
+            self.assertTrue(
+                repaired.startswith(
+                    f"papers/inference/99-other-inference-systems/2026-{digest}-"
+                )
+            )
+            self.assertNotIn("2020-2026.00037", repaired)
 
     def test_missing_identity_is_reported_without_fabricating_path(self) -> None:
         with tempfile.TemporaryDirectory() as td:
