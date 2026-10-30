@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r09",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.13164",
+      "identity_tokens": [
+        "arXiv:2505.13164"
+      ],
+      "title": "High-Rate Nested-Lattice Quantized Matrix Multiplication with Small Lookup Tables",
+      "reason": "arXiv一次要旨は高レート格子量子化の内積を多層階層化し、小さなLUTで復号する理論と歪み上界を示す。低ビット行列積には関連するが、LLM推論モデル・GPU/NPU実測やサービング評価は要旨にないため境界的。",
+      "source_url": "https://arxiv.org/abs/2505.13164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 134
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.09853",
+      "identity_tokens": [
+        "arXiv:2506.09853"
+      ],
+      "title": "Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning",
+      "reason": "arXiv v3一次要旨はCoTの各推論ステップについて因果的な十分性・必要性を評価し、必要なステップを追加、冗長なステップを削除する枠組みを提案。数学・常識推論で精度を維持しつつトークン使用量と推論コストを削減と報告。生成トークン効率化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2506.09853",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 135
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24295",
+      "identity_tokens": [
+        "arXiv:2608.24295"
+      ],
+      "title": "RecGPT-Mobile-V2 Technical Report",
+      "reason": "arXiv一次要旨は推薦クエリ予測に特化した端末LLMを蒸留・低ビット化し、CoT長を62から14トークンへ削減するなど推論コストを制御。オンデバイス効率化に関係するが、主評価は推薦タスク品質で一般的LLM推論システムへの寄与が限定的なため境界的。",
+      "source_url": "https://arxiv.org/abs/2608.24295",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 136
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.28048",
+      "identity_tokens": [
+        "arXiv:2608.28048"
+      ],
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "reason": "arXiv一次要旨はGPU・ASIC・FPGA・PIM・光学・ニューロモーフィックをLLMのprefill/decodeとrooflineで比較し、デコードのメモリ帯域律速とKV肥大化を整理するハードウェアサーベイ。LLM推論アクセラレータとメモリ階層に直接該当するが、個別の新規実装論文ではない。",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 137
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.03117",
+      "identity_tokens": [
+        "arXiv:2507.03117"
+      ],
+      "title": "BLaST: High Performance Inference and Pretraining using BLock Sparse Transformers",
+      "reason": "arXiv v2一次要旨はブロック疎行列積向けに重みを反復的に構造化枝刈りするBLaSTを提案。Llama3.2の16GPU推論で2.2倍高速化、推論メモリ最大4.45倍削減、GPU運用コスト2.9倍削減を報告。推論向け構造的疎性に直接該当。",
+      "source_url": "https://arxiv.org/abs/2507.03117",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 138
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34054",
+      "identity_tokens": [
+        "arXiv:2609.34054"
+      ],
+      "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+      "reason": "arXiv v2一次要旨はマルチLoRAエージェントで共通履歴のprefillを毎回繰り返す問題に対し、ベースKVと各エージェントの低ランク差分KVを事前計算・再構成して共有するPReCacheを提案。エージェント固有の挙動を保ちながらKV再利用を促進し、推論メモリ・計算の重複削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.34054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 139
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.19938",
+      "identity_tokens": [
+        "arXiv:2602.19938"
+      ],
+      "title": "A Replicate-and-Quantize Strategy for Plug-and-Play Load Balancing of Sparse Mixture-of-Experts LLMs",
+      "reason": "arXiv v2一次要旨はMoE推論で偏る人気専門家を複製し、低重要度専門家や複製を量子化して元メモリ予算内に収めるR&Qを提案。追加学習・ルータ変更なしで負荷不均衡を最大1.4倍改善し、精度変動±0.6%以内と報告。MoE推論負荷分散に直接該当。",
+      "source_url": "https://arxiv.org/abs/2602.19938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 140
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.29575",
+      "identity_tokens": [
+        "arXiv:2607.29575"
+      ],
+      "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
+      "reason": "arXiv一次要旨はdecode注意のDRAM帯域飽和をGPUプロファイルで実証し、レイテンシー制約を守る最大スループットのバッチ設定を推定するSLIMとBCAを提案。評価OPTモデルで最大55GBの不要メモリ割当を回避可能と報告。LLMサービング性能予測とメモリ最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.29575",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 141
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.40093",
+      "identity_tokens": [
+        "arXiv:2609.40093"
+      ],
+      "title": "Efficient Expert-Parallel Communication on PCIe-Connected Consumer GPUs",
+      "reason": "arXiv一次要旨はPCIe接続の一般向けGPUでMoE専門家並列の通信をCPU経由で行う際の冗長転送を減らし、DMA転送と同期を最適化するThunderEPを提案。RTX4090/5090のvLLMでNCCL比dispatch/combine平均2.00倍・1.53倍、E2E最大1.66倍高速化。ローカルMoE推論の通信最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.40093",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 142
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.11211",
+      "identity_tokens": [
+        "arXiv:2607.11211"
+      ],
+      "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators",
+      "reason": "arXiv一次要旨はdecode時のKV連結を再ロード不要化し、RoPE注意とMLPをタイル化・融合してAIアクセラレータのメモリ律速を緩和するFastTPSを提案。AMD Ryzen AI 300 NPUでPhi3-miniのBF16トークン処理を非融合比6倍高速化、ピークメモリ帯域の93%利用を報告。LLM推論カーネルに直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.11211",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:14:34+09:00",
+      "last_checked_at": "2026-10-30T15:14:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 145
+    }
+  ]
+}
