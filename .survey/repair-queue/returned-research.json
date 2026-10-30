@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T14:00:36+00:00",
+  "generated_at": "2026-10-30T14:18:16+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 87,
+  "count": 86,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2296,34 +2296,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-2026.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2406.16299",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T13:15:23+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 481 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3751,
-        "body_paragraphs": 21,
-        "method_chars": 1079,
-        "method_paragraphs": 6,
-        "evaluation_chars": 481,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 481 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f79330e84fff--libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair-20261030-1943-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-f79330e84fff--libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair.json",
-      "worker_run_key": "20261030-1803-scheduled-chat-00/r01"
     }
   ]
 }

@@ -272,10 +272,6 @@
   実装：✓ ・ リポジトリ内被引用：1  
   通常の投機的復号では、小型ドラフトモデルが将来の複数トークンを先に作り、ターゲットLLMが一度に検証する。多数GPUを消費して単一系列の遅延を短縮する設計であり、1GPU当たりの演算効率や総クラスタ費用の改善とは区別する。
 
-- **2026-05 · [ScaleSweep: Accurate NVFP4 Post-Training Quantization of LLMs via Block Scale Initialization](2026-2606.07618-scalesweep-accurate-nvfp4-post-training-quantization-of-llms-via-block-s.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  ScaleSweepは、NVIDIA Blackwell世代でハードウェア対応するNVFP4の重み・活性値・KVキャッシュ・query状態の量子化について、16要素ブロックのFP8スケールの選び方を改善する後学習量子化（PTQ）手法である。これはBF16比約93.9%の平均性能回復である。
-
 - **2026-05 · [Pruning and Distilling Mixture-of-Experts into Dense Language Models](2026-2605.28207-pruning-and-distilling-mixture-of-experts-into-dense-language-models.md)**  
   実装：[✓](https://github.com/krafton-ai/moe-to-dense) ・ リポジトリ内被引用：1  
   演算量は小さくても、すべての専門家をGPUメモリへ常駐させる場合の容量は大きい。CPUへ退避すれば容量制約を緩和できるが、専門家の転送が遅延や帯域を圧迫する。Qwen3-30B-A3Bから約3.3Bの密な生徒モデルを作った実験では、約4Bトークンの蒸留後に5課題の平均58.10%を達成した。
@@ -588,7 +584,7 @@
 
 - **2026-09 · [Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference](2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  NVFP4は、16個の重みを4ビットのE2M1形式で表し、各16個のまとまりにE4M3形式の共有スケールを割り当てる低精度表現である。Qwen3.5-397B-A17Bでは7評価課題を問題数で重み付けした正答回復率がBF16比99.35%、Llama-3.3-70B-Instructでは100.84%となる。
+  共有スケールを適切に選べばメモリ転送と保存容量を削減できるが、外れ値と通常値を同じスケールで表すため量子化誤差が生じる。Qwen3.5-397B-A17BのW4A4量子化では、七つの評価課題15,461問の正答数を集計し、BF16比99.35%の正答回復率を得た。
 
 - **2026-09 · [Reciprocal Guidance: Orchestrating Draft and Verify Budgets for Advancing the Diffusion-AR Self-Speculation Frontier](2026-2609.34388-reciprocal-guidance-orchestrating-draft-and-verify-budgets-for-advancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1093,6 +1089,10 @@
 - **2026-05 · [Search Your Block Floating Point Scales!](2026-2605.12464-search-your-block-floating-point-scales.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   ScaleSearchは、ブロック浮動小数点（Block Floating Point、BFP）形式で低ビット量子化するとき、各ブロックに共通する尺度（Scale）を最適化する方法である。これらは異なる評価対象の数値であり、尺度探索だけで全ての改善が生じたと見なしてはならない。
+
+- **2026-05 · [ScaleSweep: Accurate NVFP4 Post-Training Quantization of LLMs via Block Scale Initialization](2026-2606.07618-scalesweep-accurate-nvfp4-post-training-quantization-of-llms-via-block-s.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ScaleSweepは、NVIDIA Blackwell世代でハードウェア対応するNVFP4の重み・活性値・KVキャッシュ・query状態の量子化について、16要素ブロックのFP8スケールの選び方を改善する後学習量子化（PTQ）手法である。これはBF16比約93.9%の平均性能回復である。
 
 - **2026-05 · [ProxyKV: Cross-Model Proxy Pruning for Efficient Long-Context LLM Inference](2026-2605.16360-proxykv-cross-model-proxy-pruning-for-efficient-long-context-llm-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -3124,7 +3124,7 @@
 
 - **2024-06 · [Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other](2024-2406.16299-compensate-quantization-errors-make-weights-hierarchical-to-compensate-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  LLMの事後量子化（PTQ）は、学習済みの重みを低ビット整数へ丸めることでモデルのメモリ・帯域を減らす。
+  事後量子化は、既存の言語モデルの重みや活性を低ビット整数で近似し、メモリ占有量とデータ転送量を削減する。著者は実際のGPUサービング速度を新たに測定していないため、精度改善と高速化を混同しない。
 
 - **2024-05 · [Task-agnostic Distillation of Encoder-Decoder Language Models](2024-2305.12330-task-agnostic-distillation-of-encoder-decoder-language-models.md)**  
   実装：[✓](https://github.com/GeneZC/MiniEnD) ・ リポジトリ内被引用：0  

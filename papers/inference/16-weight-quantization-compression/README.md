@@ -347,7 +347,7 @@
 ### 2年前（2024-11〜2025-10）
 
 - **2025-04 · [SpinQuant: LLM quantization with learned rotations](2025-2405.16406-spinquant-llm-quantization-with-learned-rotations.md)**  
-  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：185  
+  実装：[✓](https://github.com/facebookresearch/SpinQuant) ・ リポジトリ内被引用：184  
   外れ値が低ビット量子化の誤差を大きくする問題に対して、全精度の機能を保つ旋回行列を学習し、重み・活性値・KVキャッシュの量子化に合わせる。
 
 - **2025-04 · [HIGGS: Pushing the Limits of Large Language Model Quantization via the Linearity Theorem](2025-2411.17525-higgs-pushing-the-limits-of-large-language-model-quantization-via-the-li.md)**  
@@ -481,7 +481,7 @@
   QuaRotは、大規模言語モデル（LLM）の4ビット推論を難しくする活性値の外れ値を、高精度の例外チャネルへ逃がすのではなく、モデルの関数を変えない直交回転（orthogonal rotation）で多数の次元へ分散する量子化手法である。
 
 - **2024-02 · [QuIP#: Even Better LLM Quantization with Hadamard Incoherence and Lattice Codebooks](2024-2402.04396-quip-even-better-llm-quantization-with-hadamard-incoherence-and-lattice-.md)**  
-  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：173  
+  実装：[✓](https://github.com/Cornell-RelaxML/quip-sharp) ・ リポジトリ内被引用：172  
   QuIP#は、学習済みの大規模言語モデルを再学習せずに2〜4ビット/重みへ圧縮する事後学習量子化（Post-学習 量子化、PTQ）である。試作推論実装はRTX 4090上で70Bの2ビット重みを32.74トークン/秒で生成し、実効メモリ帯域利用率56.84%を記録した（表5）。
 
 - **2024-05 · [QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving](2024-2405.04532-qserve.md)**  
@@ -627,7 +627,7 @@
   活性値全体を単純に8ビットへ写すと、その少数の外れ値が量子化範囲を広げ、通常値へ割り当てられる段階数が減って精度が崩れる。OPT、BLOOM、GLM、MT-NLGなどで8ビット重み・8ビット活性値（W8A8）を実現し、精度低下をほぼ抑えながら最大1.56倍の推論高速化と2倍のメモリ削減を報告し、530Bモデルを単一ノードで提供可能にした。
 
 - **2023-06 · [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](2023-2306.00978-awq.md)**  
-  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：279  
+  実装：[✓](https://github.com/mit-han-lab/llm-awq) ・ リポジトリ内被引用：278  
   活性の大きい入力チャネルに対応する重みを等価スケーリングで保護し、全重みを均一な低ビット形式のまま高精度化する重み専用量子化とTinyChat実装。
 
 - **2023-01 · [SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot](2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md)**  
@@ -639,11 +639,11 @@
   特徴次元の外れ値を16-bitへ分離し、残る99.9%以上をベクトル単位INT8で計算する。175B級モデルの品質とほぼ半減の重み容量を両立する一方、小さい行列では量子化費用が速度改善を打ち消す。
 
 - **2023-08 · [OmniQuant: Omnidirectionally Calibrated Quantization for Large Language Models](2023-2308.13137-omniquant-omnidirectionally-calibrated-quantization-for-large-language-m.md)**  
-  実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：229  
+  実装：[✓](https://github.com/OpenGVLab/OmniQuant) ・ リポジトリ内被引用：228  
   大規模言語モデルの重みを16ビットから4ビット、3ビット、2ビットへ縮めると、保存容量と重み転送量を大きく削減できる。一方、極低ビットでは重みや活性値の少数の外れ値が量子化範囲を広げ、重要な値の量子化刻みが粗くなって出力品質が崩れる。LLaMA-2 7B～70Bは128個の校正系列とA100 40GB 1基で1～16時間の処理が可能と報告される。
 
 - **2023-07 · [QuIP: 2-Bit Quantization of Large Language Models With Guarantees](2023-2307.13304-quip-2-bit-quantization-of-large-language-models-with-guarantees.md)**  
-  実装：✓ ・ リポジトリ内被引用：197  
+  実装：✓ ・ リポジトリ内被引用：196  
   重みと代理ヘッセ行列（proxy Hessian）の座標依存の偏りをランダム直交変換で崩してから、LDL分解に基づく適応丸めを行う。Llama 2 70Bでは2ビット重みでもWikiText2パープレキシティ6.326を保ち、同条件のOPTQの123.908から大幅に改善する。
 
 - **2023-06 · [SqueezeLLM: Dense-and-Sparse Quantization](2023-2306.07629-squeezellm-dense-and-sparse-quantization.md)**  
@@ -655,7 +655,7 @@
   高感度な少数重みだけを十六ビット疎表現に逃がし、残りと量子化尺度を三〜四ビット化してほぼ無損失圧縮する混合重み表現。
 
 - **2023-05 · [LLM-QAT: Data-Free Quantization Aware Training for Large Language Models](2023-2305.17888-llm-qat-data-free-quantization-aware-training-for-large-language-models.md)**  
-  実装：[✓](https://github.com/facebookresearch/LLM-QAT) ・ リポジトリ内被引用：164  
+  実装：[✓](https://github.com/facebookresearch/LLM-QAT) ・ リポジトリ内被引用：163  
   LLM-QATは、学習後量子化（Post-学習 量子化: PTQ）では精度が大きく低下する低ビット領域に対し、量子化誤差を学習中に経験させる量子化対応学習（Quantization-Aware 学習: QAT）を大規模言語モデルへ適用する研究である。
 
 - **2023-10 · [Atom: Low-bit Quantization for Efficient and Accurate LLM Serving](2023-2310.19102-atom-low-bit-quantization-for-efficient-and-accurate-llm-serving.md)**  
@@ -727,7 +727,7 @@
 ### 6年前（2020-11〜2021-10）
 
 - **2021-01 · [I-BERT: Integer-only BERT Quantization](2021-2101.01321-i-bert-integer-only-bert-quantization.md)**  
-  実装：[✓](https://github.com/kssteven418/i-bert) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/kssteven418/i-bert) ・ リポジトリ内被引用：41  
   Transformerの重みと行列積を8ビット整数へ量子化しても、推論全体が整数だけで実行できるとは限らない。Tesla T4上の予備的な整数カーネル実装では、FP32比で2.4～4.0倍の推論高速化を報告する。
 
 - **2021-09 · [Block Pruning For Faster Transformers](2021-2109.04838-block-pruning-for-faster-transformers.md)**  
