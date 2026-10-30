@@ -31,6 +31,8 @@ worker_completed_at: "2026-10-30T12:40:00+09:00"
 reference_main_sha: "f026d1705d9550781b4b4603c3abe365564c4bec"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # SpikeQuant：活性外れ値の時刻符号化と発火閾値によるLLM混合精度推論

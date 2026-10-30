@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "7eb06b713c10672690a3c79f145422f581fa1fa10d9d5254475520260ca5f47c",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f180e992b15--libfile_67d0d0b5fb1c819192aa41dcc639ffda--2025-2510.19498-spikequant-snn-ttfs-mixed-precision-research-20261030-1230-scheduled-chat-30-r01.md",
+  "canonical_id": "arXiv:2510.19498",
+  "worker_completed_at": "2026-10-30T12:40:00+09:00",
+  "worker_run_key": "20261030-1230-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 8403,
+    "body_paragraphs": 46,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 2553,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-30T04:14:43+00:00"
+}

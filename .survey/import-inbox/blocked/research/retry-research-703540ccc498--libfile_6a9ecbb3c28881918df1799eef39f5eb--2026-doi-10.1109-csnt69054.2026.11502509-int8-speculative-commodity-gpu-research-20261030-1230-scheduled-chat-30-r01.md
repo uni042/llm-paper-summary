@@ -23,6 +23,8 @@ worker_completed_at: "2026-10-30T12:48:00+09:00"
 reference_main_sha: "f026d1705d9550781b4b4603c3abe365564c4bec"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # 16GB GPU向けINT8/FP16混合投機的復号：実測結果と一次論文内の不整合
