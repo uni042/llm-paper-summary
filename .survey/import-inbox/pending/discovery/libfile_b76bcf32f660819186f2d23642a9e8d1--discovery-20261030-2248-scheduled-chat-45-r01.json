@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261030-2248-scheduled-chat-45/r01",
+  "reference_main_sha": "1419282257a2da634cebfc307d43e5c476a69d00",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2025.3563196",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2025.3563196"
+      ],
+      "title": "FPGA Acceleration With Hessian-Based Comprehensive Intra-Layer Mixed-Precision Quantization for Transformer Models",
+      "reason": "Hessian感度に基づく行単位の混合精度重み量子化とQuery-Key対の活性量子化を、200MHzのZCU102 FPGA上のBERT-base/GPT-2 Medium推論へ結合する。一次論文の要旨と公開本文で15.08Wの推論時電力、非2のべき乗の混合精度積和への対応を確認。量子化と推論ハードウェアの共同設計として直接関連する。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2025.3563196",
+      "body_check": "primary_paper_fulltext_reproduced_by_authors; abstract_and_implementation_read",
+      "first_checked_at": "2026-10-30T22:56:00+09:00",
+      "last_checked_at": "2026-10-30T22:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 8,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3774904.3792337",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792337"
+      ],
+      "title": "Energy-Efficient and Dequantization-Free Quantization of LLMs: A Spiking Neural Network Approach to Salient Value Mitigation",
+      "reason": "SpikeQuantは顕著な活性値へ混合精度を割り当て、二値スパイク数へ再符号化し、Integrate-and-Fire閾値へ量子化スケールを埋め込むことで明示的な逆量子化を省く。ACM出版社要旨ではW4A4でFP16に近い困惑度を保ちつつ既存法比で最大4.6倍のエネルギー削減を報告。LLMの低ビット推論効率に直接関連。",
+      "source_url": "https://doi.org/10.1145/3774904.3792337",
+      "body_check": "primary_publisher_abstract_read",
+      "first_checked_at": "2026-10-30T22:56:00+09:00",
+      "last_checked_at": "2026-10-30T22:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 17,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.05352",
+      "identity_tokens": [
+        "arXiv:2504.05352"
+      ],
+      "title": "Achieving binary weight and activation for LLMs using Post-Training Quantization",
+      "reason": "重みを1ビットと細粒度グループ補助1ビット、活性をINT4から4つのINT1成分へ等価分解するW(1+1)A(1*4)事後量子化。Hessian感度を使うグループ化、EM量子化、スケール平滑化を組み合わせ、arXiv要旨では複数課題でW2A4の従来法を上回ると報告。LLMの極低ビット重み・活性量子化として直接関連。",
+      "source_url": "https://arxiv.org/abs/2504.05352",
+      "body_check": "primary_arxiv_abstract_read",
+      "first_checked_at": "2026-10-30T22:56:00+09:00",
+      "last_checked_at": "2026-10-30T22:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 38,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ITC-CSCC66376.2025.11137596",
+      "identity_tokens": [
+        "DOI:10.1109/ITC-CSCC66376.2025.11137596"
+      ],
+      "title": "CPP: Clustered NPU-PIM Heterogeneous Computing Topology for LLM Inference",
+      "reason": "NPUのGEMMとPIMのGEMVを交互に実行するLLM推論で、DGX型クロスバ接続に起因する部分結果集約・遠隔メモリアクセスの競合をクラスタ化トポロジーで分離する。著者所属機関が公開する一次要旨・論文PDFではScale-Sim/gem5シミュレーションで通信遅延35.5%削減、通信スループット54.9%向上を報告。実機計測ではない。",
+      "source_url": "https://dtl.yonsei.ac.kr/docs/International_Conference/%5B2025%5D%5BITC-CSCC%5DCPP%20Clustered%20NPU-PIM%20Heterogeneous%20Computing%20Topology%20for%20LLM%20Inference.pdf",
+      "body_check": "primary_author_institution_fulltext_read",
+      "first_checked_at": "2026-10-30T22:56:00+09:00",
+      "last_checked_at": "2026-10-30T22:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 65,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.957",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.957"
+      ],
+      "title": "Distributed LLM Serving on Consumer-Grade GPUs by Reconciling Computation and Communication",
+      "reason": "MoLinkは民生GPUを用いた分散LLMサービングでprefill通信を小さなchunkへ分割し、prefillとdecodeの転送優先順位を公平に決め、直前の状況から転送量を調整する。ACL Anthology正式要旨では既存分散サービング方式と比較してTTFT・TPOT・遅延を最大46%削減。GPU間通信と推論計算の協調が中心。",
+      "source_url": "https://aclanthology.org/2025.findings-emnlp.957/",
+      "body_check": "primary_acl_anthology_abstract_read",
+      "first_checked_at": "2026-10-30T22:56:00+09:00",
+      "last_checked_at": "2026-10-30T22:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 69,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.3389/fcomp.2026.1873627",
+      "identity_tokens": [
+        "DOI:10.3389/fcomp.2026.1873627"
+      ],
+      "title": "Formal schedulability analysis for LLM inference: TTFT and TBT deadline guarantees via response-time theory",
+      "reason": "Chronosはprefillを期限付きジョブ、decodeを反復タスクと捉え、TTFTの最悪応答時間上界とTBT容量制約に基づく受入制御を導く。出版社公開全文ではAzure由来5万要求をA100/7Bの離散事象シミュレータで再生し、10倍負荷時に53.9%の要求を受け入れつつ受入分の期限違反0件を報告。実GPU上の保証実測とは区別する。",
+      "source_url": "https://www.frontiersin.org/journals/computer-science/articles/10.3389/fcomp.2026.1873627/full",
+      "body_check": "primary_publisher_fulltext_read",
+      "first_checked_at": "2026-10-30T22:56:00+09:00",
+      "last_checked_at": "2026-10-30T22:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 103,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28760",
+      "identity_tokens": [
+        "arXiv:2605.28760"
+      ],
+      "title": "LLM Zeroth-Order Fine-Tuning is an Inference Workload",
+      "reason": "ゼロ次最適化の反復スコアリングを学習ループでなくvLLM推論ランタイムへ載せ替える。arXiv一次要旨ではOPT-13BのLoZO 2万stepを公式実装4.15時間に対し推計0.51時間（8.13倍）と報告。ただし主目的は推論サービスの最適化ではなくLoRAのゼロ次微調整なので、推論ランタイム応用として境界関連とする。worklist旧題名と公式現行題名が異なるためarXiv IDを正本に採用。",
+      "source_url": "https://arxiv.org/abs/2605.28760",
+      "body_check": "primary_arxiv_abstract_read; official_title_reconciled",
+      "first_checked_at": "2026-10-30T22:56:00+09:00",
+      "last_checked_at": "2026-10-30T22:56:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 156,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.27660",
+      "identity_tokens": [
+        "arXiv:2606.27660"
+      ],
+      "title": "MVPruner: Dynamic Token Pruning for Accelerating Multi-view Vision-Language Models in Autonomous Driving",
+      "reason": "複数カメラ視点の情報多様性と指示テキストに応じ、視点別・段階別の視覚トークン予算を動的に調整する二段階枝刈り。arXiv一次要旨ではDriveMMでFLOPsを87.3%削減し、prefillを4.97倍高速化しつつDriveLM精度の98.5%を保持。多視点VLM推論の直接的な効率化研究。",
+      "source_url": "https://arxiv.org/abs/2606.27660",
+      "body_check": "primary_arxiv_abstract_read",
+      "first_checked_at": "2026-10-30T23:01:00+09:00",
+      "last_checked_at": "2026-10-30T23:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 222,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.39346",
+      "identity_tokens": [
+        "arXiv:2609.39346"
+      ],
+      "title": "Offline Guidance, Online Reasoning: Reusing LLM Feedback for Small Language Models",
+      "reason": "Reusable Latent CorrectionはオフラインのLLM指導を小型モデルの隠れ状態補正として外部bankへ保存し、オンライン推論ではLLM呼出しやパラメータ更新なしに再利用する。arXiv一次要旨では複数の推論課題でSLM品質改善を報告。ただし主眼は推論品質の改善であり速度・メモリ最適化は直接評価の中心でないため境界関連。",
+      "source_url": "https://arxiv.org/abs/2609.39346",
+      "body_check": "primary_arxiv_abstract_read",
+      "first_checked_at": "2026-10-30T23:01:00+09:00",
+      "last_checked_at": "2026-10-30T23:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 230,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.22013",
+      "identity_tokens": [
+        "arXiv:2606.22013"
+      ],
+      "title": "Load Testing for Machine Learning Model Serving Systems at Scale",
+      "reason": "MLモデルサービングの最大持続可能スループットをSLO制約下で適応的に探索する産業向け負荷試験基盤。arXiv一次要旨では14事例を分析し、録画トラフィックでの較正により容量推定誤差を約30%から2〜6%へ改善。ただし対象は推薦・ランキング・画像・NLPを含む汎用MLで、LLM特化の推論機構ではないため境界関連。",
+      "source_url": "https://arxiv.org/abs/2606.22013",
+      "body_check": "primary_arxiv_abstract_read",
+      "first_checked_at": "2026-10-30T23:01:00+09:00",
+      "last_checked_at": "2026-10-30T23:01:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 233,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
