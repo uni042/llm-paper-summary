@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import tempfile
@@ -41,6 +42,22 @@ def missing_path_job(job_id: str = "job-r1") -> dict:
 class MissingPaperPathRecoveryTests(unittest.TestCase):
     def test_resolver_builds_deterministic_fallback(self) -> None:
         self.assertEqual(resolve_paper_path(missing_path_job()), EXPECTED)
+
+    def test_doi_suffix_that_looks_like_arxiv_id_is_not_misparsed(self) -> None:
+        canonical = "DOI:10.1109/ISCA66397.2026.00037"
+        record = {
+            "canonical_id": canonical,
+            "published": "2026-06-01",
+            "title": "Omni-LUT: Energy-Efficient LUT-Based Accelerator with Hardware-Aware KV Cache Quantization",
+        }
+        digest = hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:12]
+        path = resolve_paper_path(record)
+        self.assertTrue(
+            path.startswith(
+                f"papers/inference/99-other-inference-systems/2026-{digest}-"
+            )
+        )
+        self.assertNotIn("2020-2026.00037", path)
 
     def test_immutable_descriptor_recovers_path_from_canonical_job(self) -> None:
         with tempfile.TemporaryDirectory() as td:
