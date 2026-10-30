@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.03812",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs substantial computational overhead, demanding aggressive token compression for efficient deployment. Existing methods often degrade at low token budgets: pre-LLM compression may discard structurally important and globally distributed evidence, whereas inner-LLM compression often underexploits query-conditioned audio-visual collaboration. To address these limitations, we propose OmniPack, a training-free framework that coordinates structural compression before the LLM with task-relevant semantic refinement within the LLM. Before the LLM, OmniPack removes structural redundancy through modality-specific importance, global coverage, and similarity-aware merging. After sufficient multimodal interaction, it further consolidates diverse, task-relevant representations through textual guidance and audio-visual collaboration. Extensive experiments on five benchmarks with three Omni-LLM backbones demonstrate that OmniPack consistently achieves the best performance-efficiency trade-off across diverse retention ratios, outperforming all existing methods. Notably, on Qwen2.5-Omni-7B, OmniPack preserves 98.0% of the original performance while reducing FLOPs to 16.7%, and still retains 92.9% of the original performance with only 6.8% of the original FLOPs.",
+      "identifiers": [
+        "SemanticScholar:45b56098933fe0c82b7a6489559ec073d3fb9ebe"
+      ],
+      "semantic_scholar_id": "45b56098933fe0c82b7a6489559ec073d3fb9ebe",
+      "canonical_id": "arXiv:2608.03812",
+      "arxiv_id": "2608.03812",
+      "authors": [
+        "Wan-Shun Su",
+        "Yang Shi",
+        "Fei Liu",
+        "Ziwen Yu",
+        "Yan Min",
+        "Zhuo-Ran Zhang",
+        "Qi-Xun Wang",
+        "Hao-Tian Wang",
+        "Shi-Xuan Liu",
+        "Yuan-Xing Zhang",
+        "Peng Wu",
+        "Cheng-Fu Huo",
+        "Liang Ding"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      },
+      "reason": "音声・映像の冗長トークンをLLM投入前に構造的に圧縮し、LLM内部では質問条件付き意味選択でさらに整理するOmniPack。Qwen2.5-Omni-7Bで元性能98.0%を保ちながらFLOPsを16.7%に削減したと報告。omni-modal LLM推論の入力・内部トークン圧縮方式。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HiFA4, a post-training operator-level design that executes both QK^T and PV in FlashAttention as 4-bit HIF4 Cube GEMMs for LLM inference on Ascend NPUs, while maintaining the online softmax state in FP16. To our knowledge, HiFA4 is the first Ascend-HIF4-targeted design of this kind evaluated on standard NLP benchmarks. HiFA4 combines two mechanisms. Smooth-QK applies a calibration-static per-channel equivalent rescaling to Q and K after RoPE, transferring quantization difficulty from K to Q without per-tile online reduction at inference. P-Reordering accumulates the softmax normalizer from the same quantized attention weights P_hat used in the PV GEMM, rather than from a higher-precision reconstruction. We show that this inconsistent formulation introduces a coherent output-scaling error, and validate the effect on a Qwen3-8B Layer-0 MMLU trace, where all 3.6M measured attention tiles exhibit net probability-mass loss with median epsilon_bar = -0.064. P-Reordering also allows the normalizer to be fused into the PV Cube GEMM. Across five LLMs, HiFA4 reduces quantization-induced decision drift. On Qwen3-8B, it recovers 37.5% of the accuracy gap introduced by direct HIF4 quantization, narrows the sample-weighted accuracy loss from 1.12 pp to 0.70 pp, reduces BF16-inconsistent MMLU predictions from 16.3% to 8.2%, and cuts MMLU accuracy regressions by 57% (1071 to 465). On Gemma2-9B, mild smoothing keeps HiFA4 within 0.7 pp of BF16 while reducing MMLU regressions by 27%. On LLaMA3.1-8B, Mistral-7B, and Phi-4B, where Smooth-QK is disabled, P-Reordering with the adopted Q-Mean auxiliary still reduces full-set MMLU regressions by 41-52%. A preliminary instruction-scheduling analysis projects a 35.4% critical-path latency reduction relative to BF16 by fusing the softmax normalizer into the PV Cube GEMM; on-hardware validation is left to future work.",
+      "identifiers": [
+        "SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6"
+      ],
+      "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
+      "canonical_id": "arXiv:2607.04302",
+      "arxiv_id": "2607.04302",
+      "doi": "10.48550/arXiv.2607.04302",
+      "authors": [
+        "Huilin Dong",
+        "Yanzhao Li",
+        "Jie Gao",
+        "Chunlu Li",
+        "Zhiyuan Zhang",
+        "Yupeng Sun",
+        "Zhenyuan Chen",
+        "Zhiqiang Zou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 117,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Ascend NPU上でFlashAttentionのQK積とPV積をHIF4 4bit Cube GEMMへ落とし、softmax状態はFP16で維持するHiFA4。RoPE後のQ/K静的スケーリングとPV量子化に整合した正規化を組み合わせ、Qwen3-8B等で低精度による正解率低下を抑える。LLM推論注意カーネルの直接的な最適化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.17336",
+      "year": 2026,
+      "published": "2026-08-18",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context prefill in large language models (LLMs) incurs substantial computation and memory traffic because dense self-attention computes quadratic query-key scores. Existing methods either use a uniform low-precision path or select token interactions, leaving spatial precision routing over hardware-aligned score tiles outside fused dense attention. We introduce TileMix, a tile-centric precision-routing kernel that makes numerical precision an executable spatial decision over score-tile groups within fused dense attention. TileMix partitions the attention matrix into hardware-aligned score tiles, packs routing decisions into compact bitmasks, and dispatches each tile group through FP16 or INT8 score computation while both paths update a shared online-softmax state. Scalable precision grouping lets each routing bit govern multiple adjacent key tiles, preserving hardware-aligned compute tiles and compact metadata at long contexts. By routing all legal tile groups, TileMix preserves dense token connectivity, requires no training, and supports grouped-query attention, variable-length batches, and INT8 key/value caches. Across LongEval, LV-Eval, and A100 prefill benchmarks on LLaMA, Qwen, and Vicuna, TileMix recovers long-context quality lost under uniform INT8 and improves prefill throughput over FP16, yielding a controllable accuracy-efficiency frontier across model families. The implementation is available at https://github.com/HanzhiZhang-Ulrica/TileMix.",
+      "identifiers": [
+        "SemanticScholar:07f1586b25da74042beb7add74047468240c1065"
+      ],
+      "semantic_scholar_id": "07f1586b25da74042beb7add74047468240c1065",
+      "canonical_id": "arXiv:2608.17336",
+      "arxiv_id": "2608.17336",
+      "authors": [
+        "Han-Zhi Zhang",
+        "Qiao Zhang",
+        "Qing-Lei Cao",
+        "Heng Fan",
+        "Yan Huang",
+        "Ke-Wei Sha",
+        "Yun-He Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 73,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈prefillの注意行列をGPUタイル単位でFP16/INT8へ振り分け、共通のonline-softmax状態へ統合するTileMixを提案。ビットマスクで精度ルーティングを保持し、密なトークン接続とGQA・可変長バッチ・INT8 KVに対応。推論注意カーネルの精度・速度交換条件を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+      "identifiers": [
+        "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+      ],
+      "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+      "canonical_id": "arXiv:2604.08077",
+      "arxiv_id": "2604.08077",
+      "doi": "10.48550/arXiv.2604.08077",
+      "authors": [
+        "Handong Li",
+        "Zi-Kang Liu",
+        "Long-Teng Guo",
+        "Tong-Tian Yue",
+        "Yepeng Tang",
+        "Xin-Xin Zhu",
+        "Chuanyang Zheng",
+        "Zi-Ming Wang",
+        "Zhi-Bin Wang",
+        "Jun Song",
+        "Chenglin Yu",
+        "Bo Zheng",
+        "Jing Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VideoLLMで長時間動画の空間時間cubeを入力とし、クエリごとに参照cubeを選ぶAdaS-Attnと、重要トークンだけ処理するAdaS-FFNを組み合わせるAdaSpark。複雑さに応じたtop-p選択で最大57%のFLOPs削減を報告し、動画MLLM推論の演算量最適化に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "Experience-Driven Dynamic Exits for LLMs with Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2606.03113",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models suffer from slow autoregressive inference. While self-speculative decoding accelerates this process, its efficiency is hampered by static configurations like fixed exit layers and speculation lengths. We reframe this optimization as a \\textbf{Markov Decision Process} and propose \\textbf{LEDE}, a framework that uses offline reinforcement learning. LEDE learns a policy to dynamically select the optimal exit layer and speculation length based on the local context of the generated sequence at each step, balancing computational cost and draft quality. Comprehensive evaluations on Llama-2 and Llama-3 models show LEDE achieves up to a $2.0\\times$$\\sim$$2.7\\times$ speedup over autoregressive decoding and and provides an additional 17\\% speedup over the static speculative baselines.",
+      "identifiers": [
+        "SemanticScholar:27c4b7d1a323813cb516502c8a812e9ade7de9bd"
+      ],
+      "semantic_scholar_id": "27c4b7d1a323813cb516502c8a812e9ade7de9bd",
+      "canonical_id": "arXiv:2606.03113",
+      "arxiv_id": "2606.03113",
+      "doi": "10.1109/icassp55912.2026.11464968",
+      "authors": [
+        "Yan-Yu Zhu",
+        "Hoilam Pao",
+        "Niu Hu",
+        "Wei Guo",
+        "Shaoxiong Zhan",
+        "Bo-Yu Lai",
+        "Zi-Tai Wang",
+        "Yong-Qin Zeng",
+        "Hai-Tao Zheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己投機的復号で出口層と草案長を固定すると文脈に応じた最適構成を選べない問題に対し、offline RLで各生成ステップの出口層・草案長を動的選択するLEDEを提案。Llama-2/3で通常decode比2.0〜2.7倍、静的投機的方式比さらに17%の高速化を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2e197bda12c3",
+    "round": "libimp-2e197bda12c38a89-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2e197bda12c38a89-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2e197bda12c38a89-pre01.json",
+    "receipt": "sha256:246527da7d9df6ea7d5ad0b8b3de2e7febf5d29fda4094606723ac4d38fd53c7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2e197bda12c3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

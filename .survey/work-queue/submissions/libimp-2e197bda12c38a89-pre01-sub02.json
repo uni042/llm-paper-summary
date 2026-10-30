@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LASER: Load-Aware Serving with Early-Exit for Reasoning LLMs at the Edge",
+      "source_url": "https://arxiv.org/abs/2606.31580",
+      "year": 2026,
+      "published": "2026-06-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) such as DeepSeek-R1 have achieved strong performance through extended chain-of-thought (CoT) generation. However, deploying them on edge devices raises a conflict between long CoT sequences and constrained resources. Recent confidence-based early exit methods reduce CoT length for individual requests, yet they apply fixed thresholds from a single-request perspective, ignoring multi-request concurrency and load fluctuation in edge serving. To bridge this gap, we propose \\underline{L}oad-\\underline{A}ware \\underline{S}erving with \\underline{E}arly-exit for \\underline{R}easoning (LASER). LASER couples two complementary designs: (1) a load-aware adaptive exit threshold that adjusts the confidence bar based on real-time system load within an empirically validated robust range, and (2) a difficulty- and load-aware reasoning budget pre-allocation that assigns compute resources by request difficulty and system capacity. We formulate the problem as a joint optimization of reasoning quality and service latency. Experiments on two reasoning models, four benchmarks, and diverse load conditions show that LASER reduces average latency by 17--38\\% and improves service-level objective (SLO) satisfaction by 3--6\\% over fixed-threshold baselines, at an average accuracy cost of only 1\\%.",
+      "identifiers": [
+        "SemanticScholar:2f8dc745bb77102d2a26e39371f304a1f4d55ae9"
+      ],
+      "semantic_scholar_id": "2f8dc745bb77102d2a26e39371f304a1f4d55ae9",
+      "canonical_id": "arXiv:2606.31580",
+      "arxiv_id": "2606.31580",
+      "doi": "10.48550/arXiv.2606.31580",
+      "authors": [
+        "Zhi-Qing Tang",
+        "Size Li",
+        "Han-Shuai Cui",
+        "Zi-Lang Huang",
+        "Jian-Xiong Guo",
+        "Tian Wang",
+        "Yuan Wu",
+        "Wei-Jia Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エッジの複数要求下で推論途中終了の固定閾値が品質とSLOの両立を妨げる問題に対し、負荷依存の早期終了閾値と難度・負荷依存の思考予算配分を統合するLASERを提案。二つの推論モデルと4ベンチマークで平均遅延17〜38%減、SLO達成率3〜6%改善を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression",
+      "source_url": "https://arxiv.org/abs/2609.26177",
+      "year": 2026,
+      "published": "2026-08-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning of attention heads provides a hardware-friendly way to compress Transformer language models. However, existing methods for measuring head-level importance require calibration data, gradient computation, or Hessian estimation. These requirements add extra overhead and make the methods depend on the data. Our work presents Magnitude Profile (MP) scoring, a training-free criterion for head importance that identifies dispensable heads through statistical outlier detection on weight row norms. Heads whose projection weights fall within the population bulk are pruned, while heads exhibiting outlier norms, which carry disproportionate representational capacity, are preserved. Our work further gives MP-G, a variant that handles Grouped Query Attention (GQA) by distributing shared key-value group scores across associated query heads. Across five models evaluated on WikiText-2 perplexity at 12.5%-50% head sparsity, MP-G achieves the best perplexity on OPT-6.7B at all sparsity levels (18.46 at 12.5%, 27.87 at 25%, 152.0 at 50%). MP-G also gives the best results on RoBERTa-large at 12.5% and 25% sparsity, with perplexity values of 7.27 and 10.28, outperforming calibration-dependent baselines including Wanda-Head, SparseGPT-Head, and Gradient-Head. It requires zero forward passes, calibration samples, or gradient computation. At 50% sparsity, head pruning yields up to 16% parameter reduction with 50% attention FLOP savings. Our results show that weight-only statistical scoring can match or outperform data-dependent methods for structured head pruning, providing a practical, zero-cost criterion for Transformer compression.",
+      "identifiers": [
+        "SemanticScholar:5104e3f36db8e8d252033df614fe01275fbbcfc1"
+      ],
+      "semantic_scholar_id": "5104e3f36db8e8d252033df614fe01275fbbcfc1",
+      "canonical_id": "arXiv:2609.26177",
+      "arxiv_id": "2609.26177",
+      "authors": [
+        "Kasun Dewage",
+        "Marianna Pensky",
+        "Heranga K. Rathnasekara",
+        "Suranadi De Silva"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      },
+      "reason": "校正データや勾配計算を使わず、注意headの重み行ノルムの外れ値統計から重要headを判定するMagnitude ProfileとGQA対応MP-Gを提案。OPT・RoBERTa等でPPLと疎率を比較し、50%のhead削減で注意FLOPsを50%削減する。推論向け構造化head剪定に直接関係するが実測速度は要追加確認。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+      "identifiers": [
+        "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+      ],
+      "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+      "canonical_id": "arXiv:2609.32395",
+      "arxiv_id": "2609.32395",
+      "authors": [
+        "Sheng-Yao Wang",
+        "Jiang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformerのprefix依存KVでは文脈の途中を再利用・削除すると後続再計算が必要な問題に対し、ブロック独立エンコーダとcross-attention readerからなるSMemを提案。ブロック単位で厳密な文脈結合・削除を可能にし、帯域律速時のdecode 1.4〜1.7倍高速化と削除の大幅短縮を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2e197bda12c3",
+    "round": "libimp-2e197bda12c38a89-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2e197bda12c38a89-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2e197bda12c38a89-pre01.json",
+    "receipt": "sha256:246527da7d9df6ea7d5ad0b8b3de2e7febf5d29fda4094606723ac4d38fd53c7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2e197bda12c3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
