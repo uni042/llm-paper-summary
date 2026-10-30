@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0403-scheduled-chat-00/r03",
+  "reference_main_sha": "0f43d27232cc19ba1bd6d72acd30f9e8981c5d0b",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/africon66545.2025.11533795",
+      "identity_tokens": [
+        "DOI:10.1109/africon66545.2025.11533795"
+      ],
+      "title": "Pipeline for Efficient Quantization of Large Language Models for Resource-Constrained Deployment",
+      "reason": "量子化ツールキット（bitsandbytes、AutoGPTQ）とAbsMax、Zero-Point、GPTQ、NF4を組み合わせるモジュール式LLM圧縮パイプライン。出版社要旨の索引転載は4/8bitモデルを汎用GPU/CPUで許容できる品質損失の範囲で実行可能と述べるが、推論カーネル・速度・独自手法の明確な改善は示さず、実装比較・実証の深さが限定的なためborderline。",
+      "source_url": "https://doi.org/10.1109/AFRICON66545.2025.11533795",
+      "body_check": "publisher_abstract_reproduced_in_bibliographic_index; primary_fulltext_not_read",
+      "first_checked_at": "2026-10-31T04:30:00+09:00",
+      "last_checked_at": "2026-10-31T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 190,
+      "origin": "discovery_worklist_primary_or_indexed_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.14722/ndss.2025.242287",
+      "identity_tokens": [
+        "DOI:10.14722/ndss.2025.242287"
+      ],
+      "title": "SHAFT: Secure, Handy, Accurate and Fast Transformer Inference",
+      "reason": "SHAFTは秘密分散に基づくプライバシー保護Transformer推論を対象に、入力クリッピングと常微分方程式を組み合わせる定数ラウンドsoftmaxと、フーリエ級数に基づく高精度GELUプロトコルを導入。NDSS公式一次論文ではSIGMA比通信量25〜41%削減、BumbleBee比LANで4.6〜5.3倍、WANで2.9〜4.4倍高速化を報告。暗号化推論システムとして関連。",
+      "source_url": "https://www.ndss-symposium.org/ndss-paper/shaft-secure-handy-accurate-and-fast-transformer-inference/",
+      "body_check": "primary_conference_abstract_and_pdf_screened",
+      "first_checked_at": "2026-10-31T04:30:00+09:00",
+      "last_checked_at": "2026-10-31T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 193,
+      "origin": "discovery_worklist_primary_or_indexed_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/access.2026.3709846",
+      "identity_tokens": [
+        "DOI:10.1109/access.2026.3709846"
+      ],
+      "title": "AWa: An Activation-Weight Distribution-Aware Binarization Method for Large Language Models",
+      "reason": "AWaはactivation分布とHessian感度の結合重要度で顕著な重み列を選別し、残りの列・行スケーリングを組み合わせる1bit重み量子化法。著者公開原稿はLLaMA-3 70BでBiLLM比ゼロショット平均精度最大27.3ポイント改善を報告。一方1B/3Bでは元の56.63/64.95%が38.00/42.30%まで低下する負の結果を明記し、適用規模に制約がある。",
+      "source_url": "https://www.researchgate.net/publication/408446070_AWa_An_Activation-Weight_Distribution-aware_Binarization_Method_for_Large_Language_Models",
+      "body_check": "author_manuscript_primary_text_screened; accepted_version_not_verified",
+      "first_checked_at": "2026-10-31T04:30:00+09:00",
+      "last_checked_at": "2026-10-31T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 202,
+      "origin": "discovery_worklist_primary_or_indexed_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11463309",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11463309"
+      ],
+      "title": "Attention Output Projection Importance Score for Key-Value Eviction",
+      "reason": "AOPSはattention重みだけでなくvalueベクトルを平均attention出力方向に射影し、出力への寄与に基づいてKV cache残留トークンを選ぶ重要度指標。著者公開IEEE論文はH2O/SnapKV/FastKVに統合してLongBenchとNIAHで評価し、Mistral-7BのLongBench平均0.59ポイント、Llama-3.1-8B平均0.41ポイント改善、NIAHで小キャッシュほど改善が大きいと報告。",
+      "source_url": "https://jhc.sjtu.edu.cn/~bjiang/papers/Yuan_ICASSP2026_AOPS.pdf",
+      "body_check": "primary_author_hosted_conference_pdf_screened",
+      "first_checked_at": "2026-10-31T04:30:00+09:00",
+      "last_checked_at": "2026-10-31T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 206,
+      "origin": "discovery_worklist_primary_or_indexed_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ccwc67433.2026.11393753",
+      "identity_tokens": [
+        "DOI:10.1109/ccwc67433.2026.11393753"
+      ],
+      "title": "When Smaller Models Run Slower: Hardware Efficiency Bottlenecks in VLM Inference on Unified Memory",
+      "reason": "Apple Silicon統合メモリ上のSmolVLM2 256M/2.2BをMLXで比較し、小型draftが8.6倍少ないパラメータにもかかわらず22.4%遅い性能逆転を検証。出版社要旨の索引転載は小型GPU利用率0.94%、大型2.59%とし、計算資源利用率が差の60〜80%を説明すると報告。Apple Silicon/MLX固有の実測であり一般化は限定。",
+      "source_url": "https://doi.org/10.1109/CCWC67433.2026.11393753",
+      "body_check": "publisher_abstract_reproduced_in_bibliographic_index; primary_fulltext_not_read",
+      "first_checked_at": "2026-10-31T04:30:00+09:00",
+      "last_checked_at": "2026-10-31T04:30:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 267,
+      "origin": "discovery_worklist_primary_or_indexed_abstract_screen"
+    }
+  ],
+  "round_status": "partial",
+  "target_count": 10,
+  "remaining_count": 5,
+  "partial_reason": "Firecrawl credit exhaustion; remaining candidates require publisher abstract and cross-worker canonical identity verification"
+}
