@@ -1,0 +1,690 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-30c8c52407f1d167-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-30c8c52407f1",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2506.05871",
+    "arXiv:2604.26940",
+    "arXiv:2605.06185",
+    "arXiv:2607.07724",
+    "arXiv:2609.18916",
+    "arXiv:2609.24847",
+    "arXiv:2609.37241"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "4ab69d31ec52ba87ecb070b0331d5df2d669c86d",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T08:03:12.497828+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2506.05871",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.26940",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.06185",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.07724",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.18916",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.24847",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37241",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Select to Think: Unlocking SLM Potential with Local Sufficiency",
+      "source_url": "https://arxiv.org/abs/2604.26940",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models (SLMs) offer efficient deployment, yet they often lag behind their larger counterparts (LLMs) in reasoning. Existing remedies either invoke an LLM at points of reasoning divergence, incurring substantial latency and cost, or rely on standard distillation, which is limited by the SLM's capacity to accurately mimic the LLM's complex generative distribution. We address this dilemma by identifying local sufficiency: at divergence points, the LLM's preferred token often resides within the SLM's top-K next-token predictions, even when failing to emerge as the SLM top-1 choice. We therefore propose Select to Think (S2T), which reframes the LLM's role from open-ended generation to selection among the SLM's proposals, simplifying the supervision signal to discrete candidate rankings. Leveraging this, we introduce S2T-Local, which distills the selection logic into the SLM, empowering it to perform autonomous re-ranking without inference-time LLM dependency. Empirically, a 1.5B SLM's top-8 candidates contain the 32B LLM's choice with a 95% hit rate, and S2T-Local improves the 1.5B SLM's Math Avg. over greedy decoding by 24.1% relative gain, matching the efficacy of 8-path self-consistency with single-trajectory efficiency.",
+      "identifiers": [
+        "SemanticScholar:260f8c06823fffd6ae52cd9a93966e245ff54736"
+      ],
+      "semantic_scholar_id": "260f8c06823fffd6ae52cd9a93966e245ff54736",
+      "canonical_id": "arXiv:2604.26940",
+      "arxiv_id": "2604.26940",
+      "doi": "10.48550/arXiv.2604.26940",
+      "authors": [
+        "Wenxuan Ye",
+        "Yang-Yang Zhang",
+        "Xue-Li An",
+        "Georg Carle",
+        "Yun-Pu Ma"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "source_url": "https://arxiv.org/abs/2609.24847",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+      "identifiers": [
+        "SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326"
+      ],
+      "semantic_scholar_id": "a74c8a785b8ee75df581f0b6d99da779be35a326",
+      "canonical_id": "arXiv:2609.24847",
+      "arxiv_id": "2609.24847",
+      "authors": [
+        "G. Tombesi",
+        "William Baisi",
+        "Je Yang",
+        "Elisavet Lydia Alvanaki",
+        "Kevin J. Lee",
+        "Michael S. Lippe",
+        "Biruk B. Seyoum",
+        "Luca P. Carloni"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models suffer from large parameter counts, which create a significant memory bottleneck. Expert pruning is the most direct approach for reducing this parameter count, yet existing methods make pruning decisions for each expert independently, and assume experts'contributions are purely additive. In reality, expert usage in MoEs is inherently cooperative. We derive HOPE (Higher-Order Pruning of Experts), a second-order pruning objective which provably minimizes an upper bound on the error resulting from pruning. We show that REAP (a state-of-the-art first-order pruning method) is a special case of HOPE where interaction terms are ignored. Across three frontier MoE models (up to 122B parameters), two distinct calibration sets, and multiple benchmarks (including math, instruction following, coding, and an agentic suite), we demonstrate that HOPE produces better pruning decisions than existing methods, and its advantage is most pronounced at high pruning rates and on challenging agentic workloads. At 50% pruning, HOPE outperforms all baselines and achieves an average rank of 1.58 out of 5 methods (versus 2.42 for the next-best method, REAP), with gains of up to +6.1% on agentic coding. Over all conditions, HOPE again achieves the best average rank and surpasses every other method in the majority of head-to-head comparisons. By preserving cooperative expert structure that first-order methods ignore, HOPE enables aggressive compression with minimal degradation, particularly on complex tasks where diverse expert combinations are invoked over long sequences.",
+      "identifiers": [
+        "SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+      ],
+      "semantic_scholar_id": "d4a3433a065ad5e51888ac53242f33739c5e5660",
+      "canonical_id": "arXiv:2609.18916",
+      "arxiv_id": "2609.18916",
+      "authors": [
+        "Alex M. Tseng",
+        "Prannay Kaul",
+        "L. Zancato",
+        "Wei Xia",
+        "Stefan 0 Soatto"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios",
+      "source_url": "https://arxiv.org/abs/2605.06185",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models perform well on short- and medium-length video understanding but still struggle to maintain coherent event memory and recover long-range relationships in ultra-long videos. End-to-end methods are limited by visual-token growth and context length, while fixed-segment retrieval often fragments complete events and weakens state-transition modeling.We propose Event-Causal RAG (EC-RAG), a lightweight retrieval-augmented framework for ultra-long and streaming video reasoning. A dual visual-audio sentinel mechanism segments video streams into semantically complete events, represented as State-Event-State (SES) structures that organize observable pre-event states, central events, and post-event states as event-local causal transitions. These transitions are stored in dual vector-graph memory and temporally connected through entity-consistent trajectories. During question answering, bidirectional graph retrieval recovers relevant predecessor and successor events, and answers are generated using both structured memory and the corresponding video evidence.We further introduce ECV-1H, an hour-scale long-video QA benchmark dedicated to directed event-causal reasoning, with all source videos exceeding one hour. It covers over 150 hours of untrimmed video and contains 1,251 fully human-annotated QA pairs. EC-RAG improves overall accuracy by 4.96\\%--11.67\\% across three open-source video foundation models and achieves consistent gains across public datasets. On a single RTX 5090 GPU with 32 GB of memory, EC-RAG can continuously process videos while maintaining controlled streaming memory usage.",
+      "identifiers": [
+        "SemanticScholar:89d420e90d6e36a09aac6fb412eef2340deb7b9d"
+      ],
+      "semantic_scholar_id": "89d420e90d6e36a09aac6fb412eef2340deb7b9d",
+      "canonical_id": "arXiv:2605.06185",
+      "arxiv_id": "2605.06185",
+      "doi": "10.48550/arXiv.2605.06185",
+      "authors": [
+        "P. Yan",
+        "Yu Zhao",
+        "Liang Xie",
+        "Juntong Qi",
+        "Mingming Wang",
+        "Er-Wei Yin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Uncertainty-gated selection for block-sparse attention",
+      "source_url": "https://arxiv.org/abs/2607.07724",
+      "year": 2026,
+      "published": "2026-07-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-sparse attention scales long-context language models by replacing the O(N^2) softmax with a per-query top-k selection over key blocks. This cutoff is myopic: when the k-th and (k+1)-th blocks are nearly tied in score, the selector commits without spending extra budget, and a dropped block carrying answer evidence is unrecoverable downstream. We propose a value-of-information router that measures, for each query, how decisively the top-k cut was made, and doubles the kept set for the queries where that gap is smallest; the rule is backbone-agnostic and stacks with existing block-scoring methods such as Quest. On LongBench-v2 medium at n=215 (the entire dataset subset), router-on-Quest reaches paired recall 0.75 vs. top-k 0.47 -- +28 pp over the SSA-style baseline (McNemar p<0.01) -- and lands within 2 pp of dense on RULER NIAH multikey at the same context. The lift reproduces on four models from three architectures (Qwen2.5, Mistral-Nemo, Qwen3.6). At 128K, the router preserves 0.81 and 0.89 of dense accuracy on Qwen2.5-7B-1M and Qwen3.6 (vs. SSA-style top-k at 0.09 on the former) while the fused selection-plus-kernel pipeline runs at 0.62x and 0.80x dense wall time.",
+      "identifiers": [
+        "SemanticScholar:e160d63ad098ca82680e4af816c822cba8e70a0a"
+      ],
+      "semantic_scholar_id": "e160d63ad098ca82680e4af816c822cba8e70a0a",
+      "canonical_id": "arXiv:2607.07724",
+      "arxiv_id": "2607.07724",
+      "doi": "10.48550/arXiv.2607.07724",
+      "authors": [
+        "Thomas Rossi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Trident: Unifying Guarded Dispatch and Host Execution for PyTorch Triton Workloads",
+      "source_url": "https://arxiv.org/abs/2609.37241",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "User-written Triton kernels enable high-performance GPU computation within PyTorch, but their end-to-end latency can remain dominated by host-side orchestration, especially when device execution is short. Although torch.compile can generate native host wrappers for captured graphs, each invocation still passes through runtime-managed specialization lookup, guard evaluation, and preparation before reaching the wrapper. We present Trident, a compiler backend that removes this recurring overhead from the specialization cache-hit path. Trident introduces the Specialization Cache Module (SCM), which compiles guarded specialization selection, argument and execution-environment preparation, and host execution for multiple specializations into a single executable module. An invocation enters the SCM once, remains in compiled code when a specialization matches, and returns to Python only when a new specialization must be compiled. Built on Torch-MLIR, Trident lowers guards and host-side orchestration to native code while retaining calls to optimized runtime implementations of supported ATen operators. Our evalu- ation on two LLMs shows that Trident achieves up to a 1.47x speedup in model-level end-to-end latency over eager execution and up to 1.68x over torch.compile.",
+      "identifiers": [
+        "SemanticScholar:a0a7b24c92fa336a7eb35ef1ae4a3251dc23240e"
+      ],
+      "semantic_scholar_id": "a0a7b24c92fa336a7eb35ef1ae4a3251dc23240e",
+      "canonical_id": "arXiv:2609.37241",
+      "arxiv_id": "2609.37241",
+      "authors": [
+        "Jin-Jie Liu",
+        "Xiao-Yan Liu",
+        "Shu-Han Zhang",
+        "Wen-Jian Sun",
+        "Rui-Lin Yang",
+        "Chun-Lei Men",
+        "Yong-Hua Lin",
+        "Shao-Hua Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BestServe: Serving Strategies with Optimal Goodput in Collocation and Disaggregation Architectures",
+      "source_url": "https://arxiv.org/abs/2506.05871",
+      "year": 2025,
+      "published": "2025-06-06",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models (LLMs) to millions of users requires efficient resource allocation and parallelism strategies. It is a labor intensive trial-and-error process to find such a strategy. We present BestServe, a novel framework for ranking serving strategies by estimating goodput under various operating scenarios. Supporting both collocated and disaggregated architectures, BestServe leverages an inference simulator built on an adapted roofline model and CPU-GPU dispatch dynamics. Our framework determines the optimal strategy in minutes on a single standard CPU, eliminating the need for costly benchmarking, while achieving predictions within a $20\\%$ error margin. It appeals to be practical for rapid deployment planning because of its lightweight design and strong extensibility.",
+      "identifiers": [
+        "SemanticScholar:e5c9446479bf411d3b03fe73ffab1e46f124d2a6"
+      ],
+      "semantic_scholar_id": "e5c9446479bf411d3b03fe73ffab1e46f124d2a6",
+      "canonical_id": "arXiv:2506.05871",
+      "arxiv_id": "2506.05871",
+      "doi": "10.48550/arXiv.2506.05871",
+      "authors": [
+        "Xiannan Hu",
+        "Tianyou Zeng",
+        "Xiao-Ming Yuan",
+        "Liwei Song",
+        "Guang-Yuan Zhang",
+        "Bangzheng He"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2604.26940",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.26940",
+        "id:SemanticScholar:260f8c06823fffd6ae52cd9a93966e245ff54736",
+        "id:arXiv:2604.26940",
+        "title:select to think unlocking slm potential with local sufficiency",
+        "url:https://arxiv.org/abs/2604.26940"
+      ],
+      "record": {
+        "title": "Select to Think: Unlocking SLM Potential with Local Sufficiency",
+        "source_url": "https://arxiv.org/abs/2604.26940",
+        "year": 2026,
+        "published": "2026-04-29",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Small language models (SLMs) offer efficient deployment, yet they often lag behind their larger counterparts (LLMs) in reasoning. Existing remedies either invoke an LLM at points of reasoning divergence, incurring substantial latency and cost, or rely on standard distillation, which is limited by the SLM's capacity to accurately mimic the LLM's complex generative distribution. We address this dilemma by identifying local sufficiency: at divergence points, the LLM's preferred token often resides within the SLM's top-K next-token predictions, even when failing to emerge as the SLM top-1 choice. We therefore propose Select to Think (S2T), which reframes the LLM's role from open-ended generation to selection among the SLM's proposals, simplifying the supervision signal to discrete candidate rankings. Leveraging this, we introduce S2T-Local, which distills the selection logic into the SLM, empowering it to perform autonomous re-ranking without inference-time LLM dependency. Empirically, a 1.5B SLM's top-8 candidates contain the 32B LLM's choice with a 95% hit rate, and S2T-Local improves the 1.5B SLM's Math Avg. over greedy decoding by 24.1% relative gain, matching the efficacy of 8-path self-consistency with single-trajectory efficiency.",
+        "identifiers": [
+          "SemanticScholar:260f8c06823fffd6ae52cd9a93966e245ff54736"
+        ],
+        "semantic_scholar_id": "260f8c06823fffd6ae52cd9a93966e245ff54736",
+        "canonical_id": "arXiv:2604.26940",
+        "arxiv_id": "2604.26940",
+        "doi": "10.48550/arXiv.2604.26940",
+        "authors": [
+          "Wenxuan Ye",
+          "Yang-Yang Zhang",
+          "Xue-Li An",
+          "Georg Carle",
+          "Yun-Pu Ma"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 184,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24847",
+      "identity_tokens": [
+        "id:SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326",
+        "id:arXiv:2609.24847",
+        "title:spectra adaptive execution of speculative decoding on a runtimereconfigurable tiled architecture",
+        "url:https://arxiv.org/abs/2609.24847"
+      ],
+      "record": {
+        "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+        "source_url": "https://arxiv.org/abs/2609.24847",
+        "year": 2026,
+        "published": "2026-09-21",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+        "identifiers": [
+          "SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326"
+        ],
+        "semantic_scholar_id": "a74c8a785b8ee75df581f0b6d99da779be35a326",
+        "canonical_id": "arXiv:2609.24847",
+        "arxiv_id": "2609.24847",
+        "authors": [
+          "G. Tombesi",
+          "William Baisi",
+          "Je Yang",
+          "Elisavet Lydia Alvanaki",
+          "Kevin J. Lee",
+          "Michael S. Lippe",
+          "Biruk B. Seyoum",
+          "Luca P. Carloni"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18916",
+      "identity_tokens": [
+        "id:SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660",
+        "id:arXiv:2609.18916",
+        "title:higherorder pruning of experts in mixtureofexperts language models",
+        "url:https://arxiv.org/abs/2609.18916"
+      ],
+      "record": {
+        "title": "Higher-order pruning of experts in mixture-of-experts language models",
+        "source_url": "https://arxiv.org/abs/2609.18916",
+        "year": 2026,
+        "published": "2026-09-16",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) language models suffer from large parameter counts, which create a significant memory bottleneck. Expert pruning is the most direct approach for reducing this parameter count, yet existing methods make pruning decisions for each expert independently, and assume experts'contributions are purely additive. In reality, expert usage in MoEs is inherently cooperative. We derive HOPE (Higher-Order Pruning of Experts), a second-order pruning objective which provably minimizes an upper bound on the error resulting from pruning. We show that REAP (a state-of-the-art first-order pruning method) is a special case of HOPE where interaction terms are ignored. Across three frontier MoE models (up to 122B parameters), two distinct calibration sets, and multiple benchmarks (including math, instruction following, coding, and an agentic suite), we demonstrate that HOPE produces better pruning decisions than existing methods, and its advantage is most pronounced at high pruning rates and on challenging agentic workloads. At 50% pruning, HOPE outperforms all baselines and achieves an average rank of 1.58 out of 5 methods (versus 2.42 for the next-best method, REAP), with gains of up to +6.1% on agentic coding. Over all conditions, HOPE again achieves the best average rank and surpasses every other method in the majority of head-to-head comparisons. By preserving cooperative expert structure that first-order methods ignore, HOPE enables aggressive compression with minimal degradation, particularly on complex tasks where diverse expert combinations are invoked over long sequences.",
+        "identifiers": [
+          "SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+        ],
+        "semantic_scholar_id": "d4a3433a065ad5e51888ac53242f33739c5e5660",
+        "canonical_id": "arXiv:2609.18916",
+        "arxiv_id": "2609.18916",
+        "authors": [
+          "Alex M. Tseng",
+          "Prannay Kaul",
+          "L. Zancato",
+          "Wei Xia",
+          "Stefan 0 Soatto"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.06185",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.06185",
+        "id:SemanticScholar:89d420e90d6e36a09aac6fb412eef2340deb7b9d",
+        "id:arXiv:2605.06185",
+        "title:eventcausal rag a retrievalaugmented generation framework for long video reasoning in complex scenarios",
+        "url:https://arxiv.org/abs/2605.06185"
+      ],
+      "record": {
+        "title": "Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios",
+        "source_url": "https://arxiv.org/abs/2605.06185",
+        "year": 2026,
+        "published": "2026-05-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vision-language models perform well on short- and medium-length video understanding but still struggle to maintain coherent event memory and recover long-range relationships in ultra-long videos. End-to-end methods are limited by visual-token growth and context length, while fixed-segment retrieval often fragments complete events and weakens state-transition modeling.We propose Event-Causal RAG (EC-RAG), a lightweight retrieval-augmented framework for ultra-long and streaming video reasoning. A dual visual-audio sentinel mechanism segments video streams into semantically complete events, represented as State-Event-State (SES) structures that organize observable pre-event states, central events, and post-event states as event-local causal transitions. These transitions are stored in dual vector-graph memory and temporally connected through entity-consistent trajectories. During question answering, bidirectional graph retrieval recovers relevant predecessor and successor events, and answers are generated using both structured memory and the corresponding video evidence.We further introduce ECV-1H, an hour-scale long-video QA benchmark dedicated to directed event-causal reasoning, with all source videos exceeding one hour. It covers over 150 hours of untrimmed video and contains 1,251 fully human-annotated QA pairs. EC-RAG improves overall accuracy by 4.96\\%--11.67\\% across three open-source video foundation models and achieves consistent gains across public datasets. On a single RTX 5090 GPU with 32 GB of memory, EC-RAG can continuously process videos while maintaining controlled streaming memory usage.",
+        "identifiers": [
+          "SemanticScholar:89d420e90d6e36a09aac6fb412eef2340deb7b9d"
+        ],
+        "semantic_scholar_id": "89d420e90d6e36a09aac6fb412eef2340deb7b9d",
+        "canonical_id": "arXiv:2605.06185",
+        "arxiv_id": "2605.06185",
+        "doi": "10.48550/arXiv.2605.06185",
+        "authors": [
+          "P. Yan",
+          "Yu Zhao",
+          "Liang Xie",
+          "Juntong Qi",
+          "Mingming Wang",
+          "Er-Wei Yin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 176,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.07724",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.07724",
+        "id:SemanticScholar:e160d63ad098ca82680e4af816c822cba8e70a0a",
+        "id:arXiv:2607.07724",
+        "title:uncertaintygated selection for blocksparse attention",
+        "url:https://arxiv.org/abs/2607.07724"
+      ],
+      "record": {
+        "title": "Uncertainty-gated selection for block-sparse attention",
+        "source_url": "https://arxiv.org/abs/2607.07724",
+        "year": 2026,
+        "published": "2026-07-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block-sparse attention scales long-context language models by replacing the O(N^2) softmax with a per-query top-k selection over key blocks. This cutoff is myopic: when the k-th and (k+1)-th blocks are nearly tied in score, the selector commits without spending extra budget, and a dropped block carrying answer evidence is unrecoverable downstream. We propose a value-of-information router that measures, for each query, how decisively the top-k cut was made, and doubles the kept set for the queries where that gap is smallest; the rule is backbone-agnostic and stacks with existing block-scoring methods such as Quest. On LongBench-v2 medium at n=215 (the entire dataset subset), router-on-Quest reaches paired recall 0.75 vs. top-k 0.47 -- +28 pp over the SSA-style baseline (McNemar p<0.01) -- and lands within 2 pp of dense on RULER NIAH multikey at the same context. The lift reproduces on four models from three architectures (Qwen2.5, Mistral-Nemo, Qwen3.6). At 128K, the router preserves 0.81 and 0.89 of dense accuracy on Qwen2.5-7B-1M and Qwen3.6 (vs. SSA-style top-k at 0.09 on the former) while the fused selection-plus-kernel pipeline runs at 0.62x and 0.80x dense wall time.",
+        "identifiers": [
+          "SemanticScholar:e160d63ad098ca82680e4af816c822cba8e70a0a"
+        ],
+        "semantic_scholar_id": "e160d63ad098ca82680e4af816c822cba8e70a0a",
+        "canonical_id": "arXiv:2607.07724",
+        "arxiv_id": "2607.07724",
+        "doi": "10.48550/arXiv.2607.07724",
+        "authors": [
+          "Thomas Rossi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 118,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37241",
+      "identity_tokens": [
+        "id:SemanticScholar:a0a7b24c92fa336a7eb35ef1ae4a3251dc23240e",
+        "id:arXiv:2609.37241",
+        "title:trident unifying guarded dispatch and host execution for pytorch triton workloads",
+        "url:https://arxiv.org/abs/2609.37241"
+      ],
+      "record": {
+        "title": "Trident: Unifying Guarded Dispatch and Host Execution for PyTorch Triton Workloads",
+        "source_url": "https://arxiv.org/abs/2609.37241",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "User-written Triton kernels enable high-performance GPU computation within PyTorch, but their end-to-end latency can remain dominated by host-side orchestration, especially when device execution is short. Although torch.compile can generate native host wrappers for captured graphs, each invocation still passes through runtime-managed specialization lookup, guard evaluation, and preparation before reaching the wrapper. We present Trident, a compiler backend that removes this recurring overhead from the specialization cache-hit path. Trident introduces the Specialization Cache Module (SCM), which compiles guarded specialization selection, argument and execution-environment preparation, and host execution for multiple specializations into a single executable module. An invocation enters the SCM once, remains in compiled code when a specialization matches, and returns to Python only when a new specialization must be compiled. Built on Torch-MLIR, Trident lowers guards and host-side orchestration to native code while retaining calls to optimized runtime implementations of supported ATen operators. Our evalu- ation on two LLMs shows that Trident achieves up to a 1.47x speedup in model-level end-to-end latency over eager execution and up to 1.68x over torch.compile.",
+        "identifiers": [
+          "SemanticScholar:a0a7b24c92fa336a7eb35ef1ae4a3251dc23240e"
+        ],
+        "semantic_scholar_id": "a0a7b24c92fa336a7eb35ef1ae4a3251dc23240e",
+        "canonical_id": "arXiv:2609.37241",
+        "arxiv_id": "2609.37241",
+        "authors": [
+          "Jin-Jie Liu",
+          "Xiao-Yan Liu",
+          "Shu-Han Zhang",
+          "Wen-Jian Sun",
+          "Rui-Lin Yang",
+          "Chun-Lei Men",
+          "Yong-Hua Lin",
+          "Shao-Hua Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.05871",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.05871",
+        "id:SemanticScholar:e5c9446479bf411d3b03fe73ffab1e46f124d2a6",
+        "id:arXiv:2506.05871",
+        "title:bestserve serving strategies with optimal goodput in collocation and disaggregation architectures",
+        "url:https://arxiv.org/abs/2506.05871"
+      ],
+      "record": {
+        "title": "BestServe: Serving Strategies with Optimal Goodput in Collocation and Disaggregation Architectures",
+        "source_url": "https://arxiv.org/abs/2506.05871",
+        "year": 2025,
+        "published": "2025-06-06",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving large language models (LLMs) to millions of users requires efficient resource allocation and parallelism strategies. It is a labor intensive trial-and-error process to find such a strategy. We present BestServe, a novel framework for ranking serving strategies by estimating goodput under various operating scenarios. Supporting both collocated and disaggregated architectures, BestServe leverages an inference simulator built on an adapted roofline model and CPU-GPU dispatch dynamics. Our framework determines the optimal strategy in minutes on a single standard CPU, eliminating the need for costly benchmarking, while achieving predictions within a $20\\%$ error margin. It appeals to be practical for rapid deployment planning because of its lightweight design and strong extensibility.",
+        "identifiers": [
+          "SemanticScholar:e5c9446479bf411d3b03fe73ffab1e46f124d2a6"
+        ],
+        "semantic_scholar_id": "e5c9446479bf411d3b03fe73ffab1e46f124d2a6",
+        "canonical_id": "arXiv:2506.05871",
+        "arxiv_id": "2506.05871",
+        "doi": "10.48550/arXiv.2506.05871",
+        "authors": [
+          "Xiannan Hu",
+          "Tianyou Zeng",
+          "Xiao-Ming Yuan",
+          "Liwei Song",
+          "Guang-Yuan Zhang",
+          "Bangzheng He"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 511,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:008bac6a9cc18cdfce1478278685bc05e3dce0ac80da116820199940f0ad9c90",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
