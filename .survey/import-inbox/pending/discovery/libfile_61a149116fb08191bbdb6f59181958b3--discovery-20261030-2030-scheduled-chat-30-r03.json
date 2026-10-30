@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r03",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08776",
+      "identity_tokens": [
+        "arXiv:2605.08776",
+        "DOI:10.48550/arXiv.2605.08776"
+      ],
+      "title": "Reasoning Compression with Mixed-Policy Distillation",
+      "reason": "大規模教師が小型モデルの長い推論軌跡を簡潔に書き直し、その短縮軌跡へ学生をKL整合させるMixed-Policy Distillationを提案する。Qwen3-1.7Bの推論トークン数を最大27.1%削減しつつ複数推論ベンチマークで品質を改善。学習段階の蒸留だが、運用時の生成トークン予算を直接削減する。",
+      "source_url": "https://arxiv.org/abs/2605.08776",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 209,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23873",
+      "identity_tokens": [
+        "arXiv:2509.23873",
+        "DOI:10.48550/arXiv.2509.23873"
+      ],
+      "title": "Winning the Pruning Gamble: A Unified Approach to Joint Sample and Token Pruning for Efficient Supervised Fine-Tuning",
+      "reason": "EU PlaneとQ-Tuningで教師あり微調整データのサンプルとトークンを削り、SmolLM2-1.7Bで元データ12.5%でもSFT品質を改善する研究。削減対象は訓練データであり、推論時KVキャッシュ・生成トークン・サービング処理の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2509.23873",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 210,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/LCN65610.2025.11146293",
+      "identity_tokens": [
+        "DOI:10.1109/LCN65610.2025.11146293"
+      ],
+      "title": "Two-Sided Matching for Batch-Aware LLM Request Scheduling in Edge Networks",
+      "reason": "著者所属大学の一次要旨によると、エッジLLMの複数サーバにおけるバッチ構成の相互依存を二面マッチングとして定式化し、Gale-Shapley安定割当と有益な交換でバッチ同質性を改善する。要求数と資源制約を変えたシミュレーションでQoS改善を示す推論要求スケジューリング研究。",
+      "source_url": "https://scholars.hsu.edu.hk/en/publications/two-sided-matching-for-batch-aware-llm-request-scheduling-in-edge/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 211,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.10118",
+      "identity_tokens": [
+        "arXiv:2505.10118",
+        "DOI:10.48550/arXiv.2505.10118"
+      ],
+      "title": "Why 1 + 1 < 1 in Visual Token Pruning: Beyond Naive Integration via Multi-Objective Balanced Covering",
+      "reason": "視覚トークン削減でプロンプト整合性と視覚情報保存を同時に最適化するMoBを提案し、Hausdorff距離の誤差上界とgreedy radius tradingで予算配分する。LLaVA-1.5-7Bでは11.1%の視覚トークンで96.4%の品質を保ち、LLaVA-NeXT-7Bで1.3～1.5倍の高速化を報告する。",
+      "source_url": "https://arxiv.org/abs/2505.10118",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 212,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.15300",
+      "identity_tokens": [
+        "arXiv:2511.15300",
+        "DOI:10.48550/arXiv.2511.15300"
+      ],
+      "title": "Quant-Trim in Practice: Improved Cross-Platform Low-Bit Deployment on Edge NPUs",
+      "reason": "progressive fake quantizationとreverse pruningで、INT4/INT8・複数ベンダーNPU間の量子化誤差やコンパイラ依存を抑える学習段階の手法。遅延・電力・スループットを測るが、一次要旨では生成LLMでの評価が特定されず、一般的なエッジDNN展開研究との境界に位置する。",
+      "source_url": "https://arxiv.org/abs/2511.15300",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 214,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34247",
+      "identity_tokens": [
+        "arXiv:2609.34247",
+        "DOI:10.48550/arXiv.2609.34247"
+      ],
+      "title": "SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents",
+      "reason": "低遅延の常時稼働音声LLMと、非同期で重い推論・ツール処理を担うLLMを分離し、知識境界を使って委譲の要否を学習する。リアルタイム対話を止めずにバックエンド計算を重ね、cost-aware RLで委譲率と成功率を調整する。LLM推論の非同期分離と動的計算割当が直接の設計対象。",
+      "source_url": "https://arxiv.org/abs/2609.34247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 215,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.23666",
+      "identity_tokens": [
+        "arXiv:2509.23666",
+        "DOI:10.48550/arXiv.2509.23666"
+      ],
+      "title": "Beyond Greedy Exits: Improved Early Exit Decisions for Risk Control and Reliability",
+      "reason": "Early-Exit DNNの出口閾値を多腕バンディットでオンライン調整し、分類・視覚言語理解・テキスト生成で1.70～2.10倍の速度改善と2%未満の性能低下を報告する。計算削減には関連するが、中心は一般的な多層分類器の信頼性制御で、生成LLMのトークン逐次復号・KV管理に特化していない。",
+      "source_url": "https://arxiv.org/abs/2509.23666",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 216,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.11713",
+      "identity_tokens": [
+        "arXiv:2510.11713",
+        "DOI:10.48550/arXiv.2510.11713"
+      ],
+      "title": "Are Large Reasoning Models Interruptible?",
+      "reason": "長い推論途中で打ち切りや文脈変更を与え、推論予算制約と更新への頑健性を調べる。遅い段階での変更では精度が最大60%低下し、思考漏出・パニック・自己疑念などの失敗を分析する。推論予算設計への示唆はあるが、高速化機構の提案・実測サービング改善は主貢献ではない。",
+      "source_url": "https://arxiv.org/abs/2510.11713",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 218,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24993",
+      "identity_tokens": [
+        "arXiv:2610.24993",
+        "DOI:10.48550/arXiv.2610.24993"
+      ],
+      "title": "When Does Better Acceptance Pay? A Controlled Study of Speculative Decoding",
+      "reason": "投機的復号で受理長が伸びてもドラフト生成費用を上回らなければスループットが改善しない点を、6種類のドラフタ・10ベンチマーク・2ターゲットモデルで共通条件比較する。公開チェックポイントと同一データ再学習を区別し、DCoreなど低オーバーヘッド設計と同時要求数に応じた最適予算を評価する。",
+      "source_url": "https://arxiv.org/abs/2610.24993",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 220,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.11262",
+      "identity_tokens": [
+        "arXiv:2607.11262",
+        "DOI:10.48550/arXiv.2607.11262"
+      ],
+      "title": "GPU-Tile-Sim: A Tile-Centric GPU Simulation Framework for LLM Hardware-Software Co-Design",
+      "reason": "LLM向けGPUカーネルをwarp単位のtile依存グラフとして表現し、命令単位シミュレーションより低費用で計算とメモリの重なりをモデル化する。A100/H100のGEMM・attention・LLM推論でMAPE 1.22～8.71%と報告し、推論カーネル・ハードウェア共同設計の性能評価に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2607.11262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:32:44+09:00",
+      "last_checked_at": "2026-10-30T20:32:44+09:00",
+      "linked_from": [],
+      "worklist_rank": 223,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
