@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0500-scheduled-chat-00/r04",
+  "reference_main_sha": "9b549d8a9d6426cca023726866319ed0466aab04",
+  "record_count": 9,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.13438",
+      "identity_tokens": [
+        "arXiv:2603.13438"
+      ],
+      "title": "Draft-and-Target Sampling for Video Generation Policy",
+      "reason": "一次arXiv書誌・要旨ではロボット方策用の動画拡散モデルで高速ドラフト軌道と低速検証軌道を組み合わせ、トークンチャンクと段階的受理で冗長な計算を削減する。3ベンチマークで最大2.1倍の推論高速化を報告。投機的検証の構造はLLMと類似するが、直接の対象は動画生成ロボット方策。",
+      "source_url": "https://arxiv.org/abs/2603.13438",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:08:54+09:00",
+      "last_checked_at": "2026-10-31T05:08:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 98,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.18087",
+      "identity_tokens": [
+        "arXiv:2510.18087"
+      ],
+      "title": "Planned Diffusion",
+      "reason": "一次arXiv書誌・要旨では離散拡散言語モデルが自己回帰で意味的に独立したチャンク計画を作り、チャンク群を並列ノイズ除去するPlanned Diffusionを提案。AlpacaEvalで自己回帰生成比1.27～1.81倍高速、勝率低下0.87～5.4%と報告し、実行時の品質・遅延トレードオフ調整も提供する。LLMの並列復号高速化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2510.18087",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:08:54+09:00",
+      "last_checked_at": "2026-10-31T05:08:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 133,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.16899",
+      "identity_tokens": [
+        "arXiv:2403.16899"
+      ],
+      "title": "State Space Models as Foundation Models: A Control Theoretic Overview",
+      "reason": "一次arXiv書誌・要旨ではMamba等の状態空間モデルを制御理論の観点から整理し、長系列学習効率を標準化ベンチマークで比較するサーベイ。SSMの推論状態や計算量の理解に有用だが、主貢献は理論的概説とモデル比較でありLLM推論ランタイム最適化の新規手法ではない。",
+      "source_url": "https://arxiv.org/abs/2403.16899",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:08:54+09:00",
+      "last_checked_at": "2026-10-31T05:08:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 162,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.06483",
+      "identity_tokens": [
+        "arXiv:2407.06483"
+      ],
+      "title": "Composable Interventions for Language Models",
+      "reason": "一次arXiv書誌・要旨では知識編集・モデル圧縮・機械的忘却を同一モデルに組み合わせる枠組みを作り、310通りの介入で順序依存と圧縮が編集・忘却を阻害することを分析。圧縮品質の相互作用は推論用モデル管理に関連するが、実行時速度・メモリ・サービング効率の直接的な改善を目的としていない。",
+      "source_url": "https://arxiv.org/abs/2407.06483",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:08:54+09:00",
+      "last_checked_at": "2026-10-31T05:08:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 175,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.02118",
+      "identity_tokens": [
+        "arXiv:2504.02118"
+      ],
+      "title": "LLMPi: Optimizing LLMs for High-Throughput on Raspberry Pi",
+      "reason": "一次arXiv書誌・要旨ではRaspberry PiでLLMを低消費電力・高スループットで実行するためk-quantizationの2/4/6/8bit PTQとBitNet向け三値QATを比較・適用する。低メモリ端末のLLM推論に直接関連するが、要旨に具体的な速度倍率・測定条件がないため定量改善を捏造しない。",
+      "source_url": "https://arxiv.org/abs/2504.02118",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:41+09:00",
+      "last_checked_at": "2026-10-31T05:06:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 188,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.07375",
+      "identity_tokens": [
+        "arXiv:2602.07375"
+      ],
+      "title": "Efficient Post-Training Pruning of Large Language Models with Statistical Correction",
+      "reason": "一次arXiv書誌・要旨では重みと活性のチャネル統計で重要度を補正し、剪定後の分布歪みを解析的エネルギー補償で修正するLLMの軽量事後剪定法を提案。再学習・勾配・二次情報なしにヒューリスティック法並みの処理費用で剪定品質を改善する。推論モデルのサイズ・実行コスト削減に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2602.07375",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:41+09:00",
+      "last_checked_at": "2026-10-31T05:06:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 189,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.20630",
+      "identity_tokens": [
+        "arXiv:2507.20630"
+      ],
+      "title": "TransPrune: Token Transition Pruning for Efficient Large Vision-Language Model",
+      "reason": "一次arXiv書誌・要旨では視覚トークンの表現変化量と命令依存注意を組み合わせて重要度を判定する訓練不要のTransPruneを提案。LLaVA-v1.5とLLaVA-Next等8ベンチマークで性能を概ね維持しつつ推論TFLOPsを半分以下に削減したと報告。VLMの推論トークン削減を直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2507.20630",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:41+09:00",
+      "last_checked_at": "2026-10-31T05:06:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 190,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08467",
+      "identity_tokens": [
+        "arXiv:2605.08467"
+      ],
+      "title": "CUDAHercules: Benchmarking Hardware-Aware Expert-level CUDA Optimization for LLMs",
+      "reason": "一次arXiv書誌・要旨ではAmpere・Hopper・Blackwell上の単一カーネルからアプリケーションまでを専門家実装と比較するCUDAHerculesを提案。生成CUDAが動作・正解しても専門家のアーキテクチャ依存最適化に届かない点を示し、GPUカーネル最適化能力を評価する。直接の高速化方式ではないが、LLM推論カーネル開発・計測の基盤として対象範囲に入る。",
+      "source_url": "https://arxiv.org/abs/2605.08467",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:41+09:00",
+      "last_checked_at": "2026-10-31T05:06:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 191,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2512.22307",
+      "identity_tokens": [
+        "arXiv:2512.22307"
+      ],
+      "title": "LLA: Enhancing Security and Privacy for Generative Models with Logic-Locked Accelerators",
+      "reason": "一次arXiv書誌・要旨ではモデル盗難・改変・情報漏洩への対策としてニューラル重みに鍵を埋め込み、アクセラレータの論理ロックで利用を制限するLLAを提案。鍵7168bitで計算オーバーヘッド0.1%未満と報告するが、主目的は知的財産保護・セキュリティであり推論高速化やメモリ管理への直接貢献はない。",
+      "source_url": "https://arxiv.org/abs/2512.22307",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:08:54+09:00",
+      "last_checked_at": "2026-10-31T05:08:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 203,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
