@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T11:32:47.289729+00:00",
+  "generated_at": "2026-10-30T12:03:44.984219+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -97,6 +97,26 @@
         "method_chars": 1280,
         "evaluation_chars": 886,
         "limitation_chars": 385
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md",
+      "canonical_id": "DOI:10.1038/s44387-026-00072-8",
+      "title": "Phase transitions in large language model compression",
+      "file_bytes": 14429,
+      "source_sha256": "b7b82bb0a000bf876e989198ea9f655d863a50f11e9d695b9f8bb5f3ec58163f",
+      "source_git_blob_sha": "c16aeb153b86310a57dba6201f0de67d90abc15b",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.974742,
+      "quality_metrics": {
+        "body_chars": 3789,
+        "method_chars": 985,
+        "evaluation_chars": 786,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -166,21 +186,21 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md",
-      "canonical_id": "arXiv:2506.12353",
-      "title": "Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models",
-      "file_bytes": 15307,
-      "source_sha256": "f344d847c47fee35c386bf9447c3fc2446dafac83adb01e60c4e17feb773ca10",
-      "source_git_blob_sha": "d2bf3280f0f24c7a27eed402249903086a2a61d4",
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md",
+      "canonical_id": "DOI:10.1002/spe.3422",
+      "title": "SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices",
+      "file_bytes": 15379,
+      "source_sha256": "78823dc899f8777a8f0e84a3c4160f730d4c6d6bd11a2a5e72af03284b2b87c9",
+      "source_git_blob_sha": "e1d551f2d856853a760f23a46513a782621578df",
       "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.952897,
+      "japanese_ratio": 0.890432,
       "quality_metrics": {
-        "body_chars": 4114,
-        "method_chars": 1044,
-        "evaluation_chars": 1190,
-        "limitation_chars": 582
+        "body_chars": 4095,
+        "method_chars": 1360,
+        "evaluation_chars": 1149,
+        "limitation_chars": 540
       },
       "mechanical_failures": [],
       "warnings": []
@@ -221,26 +241,6 @@
         "method_chars": 1172,
         "evaluation_chars": 554,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md",
-      "canonical_id": "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
-      "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
-      "file_bytes": 15859,
-      "source_sha256": "46c5d1e13cf56e49024efd99078bc69dfbe9c9be4c8303a269fe039692f1049c",
-      "source_git_blob_sha": "6ecb1314bea0bd1ad51cf06808c0882bfc0b10ff",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.936668,
-      "quality_metrics": {
-        "body_chars": 4103,
-        "method_chars": 1182,
-        "evaluation_chars": 804,
-        "limitation_chars": 947
       },
       "mechanical_failures": [],
       "warnings": []
