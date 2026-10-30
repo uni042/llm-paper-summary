@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2100-scheduled-chat-00/r05",
+  "reference_main_sha": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16825",
+      "identity_tokens": [
+        "arXiv:2606.16825"
+      ],
+      "title": "Tying the Loop -- Tied Expert Layers in Mixture-of-Experts Language Models",
+      "reason": "MoE-LLMで隣接Transformer層のexpertパラメータを共有しながら、層ごとのrouterとattentionは独立に保つExpert Tyingを提案する。OLMoE・Qwen3・DeepSeek型の構成で事前学習を比較し、一次要旨はexpert重みの共有でメモリをほぼ半減し、困惑度・下流精度をほぼ維持すると述べる。学習時だけでなく推論時のexpert重み常駐メモリ削減にも直接関連。",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 269,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.02790",
+      "identity_tokens": [
+        "arXiv:2502.02790"
+      ],
+      "title": "Leveraging the true depth of LLMs",
+      "reason": "LLMの隣接層を対にして並列評価するよう計算グラフを組み替え、層削除ではなく層間依存を緩めて推論を高速化する。一次要旨では追加学習なしのLlama 2 7Bでスループット1.19倍、ベンチマーク平均精度1.5%低下を報告し、軽量fine-tuningで一部回復可能とする。実際の推論速度と精度交換条件を明示した層並列化手法。",
+      "source_url": "https://arxiv.org/abs/2502.02790",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 275,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14557",
+      "identity_tokens": [
+        "arXiv:2607.14557"
+      ],
+      "title": "Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation",
+      "reason": "拡散型MLLMは出力長が未知のため最大長へpaddingし、EOS以降のdenoising計算を浪費する。Seerは最初のdenoising stepのMLP活性疎性の変化から有効な意味境界をSNRで検出し、後続stepで末尾を一括truncationする。batch serving向けの可変長混合実行も備え、一次要旨は最大約31倍のthroughput改善とDocVQA 63.52→63.66を報告。",
+      "source_url": "https://arxiv.org/abs/2607.14557",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 276,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29875",
+      "identity_tokens": [
+        "arXiv:2609.29875"
+      ],
+      "title": "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+      "reason": "長時間エージェントで過去の推論履歴を消すと行動軌跡自体が変わり得る問題を扱う。ICLRは凍結proxyのentropyで推論ブロックを順位付けし、action・tool call・観測結果を保持しながら古いreasoningをオンライン圧縮する。260件のWorkBuddyBenchで報酬0.699→0.718、入力25.5%、出力14.4%、cache-read 33.3%のtoken削減を一次要旨で報告。エージェント推論時の文脈・KV費用削減に関連。",
+      "source_url": "https://arxiv.org/abs/2609.29875",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 277,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.03766",
+      "identity_tokens": [
+        "arXiv:2410.03766"
+      ],
+      "title": "FutureFill: Fast Generation from Convolutional Sequence Models",
+      "reason": "畳み込み演算に基づく系列予測モデルで自己回帰生成を高速化するFutureFillを提案。系列長に対する生成計算を二乗から準線形へ下げ、promptのprefill cacheサイズも生成予定token数に依存する構造へ変更する。合成課題と深い畳み込み系列モデルで検証しており、Transformer専用ではないが、非attention型の言語生成推論・メモリ効率の基礎技術として関連。",
+      "source_url": "https://arxiv.org/abs/2410.03766",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 282,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.22175",
+      "identity_tokens": [
+        "arXiv:2506.22175"
+      ],
+      "title": "MPipeMoE: Memory Efficient MoE for Pre-trained Models with Adaptive Pipeline Parallelism",
+      "reason": "一次要旨はMoEの学習を複数substageへ分割するadaptive pipeline parallelismと、学習中のactivation・一時buffer再利用を中心に説明する。対象はMoE trainingのメモリ・通信効率であり、LLMの推論サービング、decode、推論時expert配置の具体的貢献は要旨から確認できない。現行サーベイの学習専用高速化凍結範囲に該当。",
+      "source_url": "https://arxiv.org/abs/2506.22175",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 284,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.22175",
+      "identity_tokens": [
+        "arXiv:2606.22175"
+      ],
+      "title": "StickyInvoc: Rethinking Task Models for High-throughput Workflows in the LLM Era",
+      "reason": "HPC上の大量のLLM推論タスクが起動ごとに巨大なモデル重みをstorage→disk→CPU→GPUへ読み込むcreate-destroy overheadを問題化する。StickyInvocは永続的なsticky taskにモデル状態を作らせ、後続のinvocation taskがその状態を引き継いで実際の推論を実行する二段階タスクモデルを提案する。多数の短命LLMタスクのcold start・重みロードを削減するサービング基盤技術。",
+      "source_url": "https://arxiv.org/abs/2606.22175",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 286,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.00030",
+      "identity_tokens": [
+        "arXiv:2406.00030"
+      ],
+      "title": "Large Language Model Pruning",
+      "reason": "LLMのニューロン間の冗長性を相互情報量推定で評価し、説明可能な基準で枝刈りする方式。一次要旨は大規模モデルと小規模モデルで適切なpruning基準が異なることを分析する。LLMのパラメータ削減と小型化に関連するが、要旨にはGPU実測スループット改善は明記されないため、圧縮品質と推論高速化を同一視しない。",
+      "source_url": "https://arxiv.org/abs/2406.00030",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 290,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.00305",
+      "identity_tokens": [
+        "arXiv:2508.00305"
+      ],
+      "title": "Systematic Evaluation of Optimization Techniques for Long-Context Language Models",
+      "reason": "長文脈LLMのpruning・quantization・token droppingを単独および組合せで評価し、GPUメモリ・遅延・throughputと生成品質の両面を測定するベンチマーク。70Bモデルへの拡張では近似誤差が重なり、単純な最適化の足し合わせが品質を悪化させ得ると一次要旨で指摘する。F1だけではprecision/recallの変化を隠す点も分析し、推論システム評価に直接関連。",
+      "source_url": "https://arxiv.org/abs/2508.00305",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 293,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09595",
+      "identity_tokens": [
+        "arXiv:2604.09595"
+      ],
+      "title": "Why Smaller Is Slower? Dimensional Misalignment in Compressed LLMs",
+      "reason": "圧縮後のLLMで行列次元がGPUの演算器に合わず、パラメータ削減が実速度へ結び付かない現象をframework・library・hardwareの三層で分析する。Llama-3-8BのASVDでは15%パラメータ削減でも95%の次元が不整合で高速化しない。GACは多選択knapsack最適化で同一圧縮予算内のGPU適合次元を選び直し、一次要旨では最大1.5倍の推論高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2604.09595",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 297,
+      "origin": "discovery_worklist_abstract"
+    }
+  ]
+}
