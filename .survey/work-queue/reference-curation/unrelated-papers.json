@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T07:57:13+00:00",
-  "record_count": 12579,
+  "updated_at": "2026-10-30T09:54:55+00:00",
+  "record_count": 12581,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181049,6 +181049,30 @@
       "last_checked_at": "2026-10-30T07:57:13+00:00",
       "linked_from": [],
       "title": "Evaluation of ML Resource Utilization Requires Model Life Cycle Assessment"
+    },
+    "arXiv:2406.08904": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08904",
+      "identity_tokens": [
+        "arXiv:2406.08904"
+      ],
+      "reason": "一次要旨での対象は話者依存の音声認識用Whisper・Distil-Whisperであり、attention重みの積に依存する行列対を低ランク圧縮する。最大45%圧縮・単語誤り率増加2%未満は音声認識の評価で、生成LLMのデコード・サービング・KVキャッシュ最適化の直接評価はない。",
+      "first_checked_at": "2026-10-30T09:54:54+00:00",
+      "last_checked_at": "2026-10-30T09:54:54+00:00",
+      "linked_from": [],
+      "title": "AdaPTwin: Low-Cost Adaptive Compression of Product Twins in Transformers"
+    },
+    "arXiv:2510.12856": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.12856",
+      "identity_tokens": [
+        "arXiv:2510.12856"
+      ],
+      "reason": "一次要旨では進行的トークン枝刈り、疎注意、早期終了を統合するが、評価モデルは6層DistilBERT、評価課題はGLUEのSST-2・QQP・MNLIである。実験では三機構の併用が浅いモデルの遅延を増加させた。LLM生成推論・KVキャッシュ・LLMサービングへの実証的適用は示されず、本サーベイの直接対象外と判定。",
+      "first_checked_at": "2026-10-30T09:54:55+00:00",
+      "last_checked_at": "2026-10-30T09:54:55+00:00",
+      "linked_from": [],
+      "title": "Efficient Adaptive Transformer: An Empirical Study and Reproducible Framework"
     }
   }
 }

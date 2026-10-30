@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e0c5e4d6794046a5-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2406.08904",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2406.08904",
+    "identity_tokens": [
+      "arXiv:2406.08904"
+    ],
+    "reason": "一次要旨での対象は話者依存の音声認識用Whisper・Distil-Whisperであり、attention重みの積に依存する行列対を低ランク圧縮する。最大45%圧縮・単語誤り率増加2%未満は音声認識の評価で、生成LLMのデコード・サービング・KVキャッシュ最適化の直接評価はない。",
+    "first_checked_at": "2026-10-30T09:54:54+00:00",
+    "last_checked_at": "2026-10-30T09:54:54+00:00",
+    "linked_from": [],
+    "title": "AdaPTwin: Low-Cost Adaptive Compression of Product Twins in Transformers"
+  },
+  "processed_at": "2026-10-30T09:54:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e0c5e4d67940",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
