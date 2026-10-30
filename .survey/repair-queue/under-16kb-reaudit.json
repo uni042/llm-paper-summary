@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-30T07:37:19.939496+00:00",
+  "generated_at": "2026-10-30T08:43:31.640295+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 8,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 3,
     "scheduled-chat-45": 2
   },
   "entries": [
@@ -41,7 +41,7 @@
       "file_bytes": 10421,
       "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
       "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-00",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.789025,
@@ -59,6 +59,30 @@
       ],
       "warnings": [
         "日本語比率 78.9% < 警告基準 80%"
+      ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md",
+      "canonical_id": "arXiv:2508.08435",
+      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
+      "file_bytes": 12875,
+      "source_sha256": "4abd8c32d5c0e64dd00eaf73165024a323fc78b66ecd0a3d674b4c03578f7118",
+      "source_git_blob_sha": "82fce7e6706477250ac7c47cdc28d1bf3edb1341",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.787576,
+      "quality_metrics": {
+        "body_chars": 3955,
+        "method_chars": 1773,
+        "evaluation_chars": 707,
+        "limitation_chars": 416
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 78.8% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 78.8% < 警告基準 80%"
       ]
     },
     {
