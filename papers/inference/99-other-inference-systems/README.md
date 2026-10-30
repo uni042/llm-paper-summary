@@ -1500,7 +1500,7 @@
 
 - **2026-03 · [Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method](2026-d621875e47b5-mitigating-the-impact-of-activation-smoothing-on-weights-a-channel-permu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  この結果、活性の分布は改善しても、重みの一部のチャネルが大きくなり、group-wise量子化の誤差が増えることがある。
+  4ビット重み・8ビット活性（W4A8）の推論では、活性の少数の極端な値が量子化範囲を支配する。結果として小さな重みの丸め誤差が増え、活性側の改善を重み側の劣化が相殺する。
 
 - **2026-03 · [MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models](2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md)**  
   実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：0  
@@ -2835,7 +2835,7 @@
   本論文は、再帰型ニューラルネットワーク（Recurrent Neural Network、RNN）の隠れ状態を単なる固定長ベクトルではなく、小さな機械学習モデルの重みとして表現するテスト時訓練（Test-Time 学習、TTT）層を提案する。
 
 - **2023-12 · [Zoology: Measuring and Improving Recall in Efficient Language Models](2023-2312.04927-zoology-measuring-and-improving-recall-in-efficient-language-models.md)**  
-  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/HazyResearch/zoology) ・ リポジトリ内被引用：36  
   Zoologyは注意、H3、Hyena、RWKVなどの系列混合器を共通条件で比較し、注意なしの方式がどのようなトークンで失敗するかを細かく測定した研究である。Pileの検証データで、以前の文脈に現れた二語連接の続きを再び予測する位置を「連想想起ヒット」として抽出すると、該当位置は全トークンの6.4%にすぎない。
 
 - **2024-02 · [CLLMs: Consistency Large Language Models](2024-2403.00835-cllms-consistency-large-language-models.md)**  
@@ -2923,7 +2923,7 @@
   大規模言語モデルの推論を再構成可能な論理回路（FPGA）へ載せる従来方式の多くは、同じ演算器を複数の演算子・層へ順番に割り当てる時間多重型である。AMD Alveo U280上のGPT-2では、同じFPGAのDFXに対してプリフィル2.16倍、復号1.10倍の高速化を報告する。
 
 - **2024-06 · [DeciMamba: Exploring the Length Extrapolation Potential of Mamba](2024-2406.14528-decimamba-exploring-the-length-extrapolation-potential-of-mamba.md)**  
-  実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/assafbk/DeciMamba) ・ リポジトリ内被引用：5  
   Mambaは選択的状態空間モデル（Selective State Space モデル; SSM）の一種で、注意機構のように系列長の二乗へ比例する全組合せを直接計算せず、再帰的な隠れ状態へ過去の情報を集約する。
 
 - **2024-03 · [Decoding Compressed Trust: Scrutinizing the Trustworthiness of Efficient LLMs Under Compression](2024-2403.15447-decoding-compressed-trust-scrutinizing-the-trustworthiness-of-efficient-.md)**  
@@ -3189,7 +3189,7 @@
   Wanda（重みと活性による枝刈り、枝刈り by 重み and 活性値）は、大規模言語モデルの線形層を追加学習も残存重みの更新も行わず疎化する方法である。LLaMA-7Bを50%非構造疎化したとき、WikiTextの困惑度は単純大きさ枝刈り17.29、Wanda 7.26、SparseGPT 7.22であり、軽い処理でも品質を大幅に保てる。
 
 - **2023-08 · [YaRN: Efficient Context Window Extension of Large Language Models](2023-2309.00071-yarn-efficient-context-window-extension-of-large-language-models.md)**  
-  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：114  
+  実装：[✓](https://github.com/jquesnelle/yarn) ・ リポジトリ内被引用：113  
   大規模言語モデルの回転位置埋め込み（Rotary Position Embedding、RoPE）は、クエリとキーを位置に応じた角度だけ回転し、両者の内積が相対位置を反映するように設計される。128Kまでのパスキー検索では7B・13Bとも平均正答率99.4%を報告する。
 
 - **2023-10 · [Ring Attention with Blockwise Transformers for Near-Infinite Context](2023-2310.01889-ring-attention-blockwise-transformers.md)**  

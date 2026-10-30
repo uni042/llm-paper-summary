@@ -35,10 +35,15 @@
   "selection_reason": "arXiv v2要旨はドラフトが高信頼な場合に検証前に複数ドラフト段階をループさせ、対象モデルの不要な検証forwardを削減。未検証トークンの隠れ状態を扱うloop-aware学習を導入し、EAGLE-3等に対してwall-clock速度を5〜41%改善し分布保存型復号を維持。推論デコードの直接的高速化。",
   "semantic_scholar_id": "91706080538c3ae04b58a961c97a8aa48e1752d9",
   "source_url": "https://arxiv.org/abs/2610.07659",
-  "status": "ready",
+  "status": "superseded",
   "title": "DLoop: Looped Speculative Decoding",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T12:57:52+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/05-speculative-decoding-moe/2026-2610.07659-dloop-looped-speculative-decoding.md",
+  "represented_canonical_id": "arXiv:2610.07659",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
