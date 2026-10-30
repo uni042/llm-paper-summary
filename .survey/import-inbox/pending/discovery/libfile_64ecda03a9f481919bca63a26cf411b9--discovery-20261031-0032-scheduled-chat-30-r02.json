@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0032-scheduled-chat-30/r02",
+  "reference_main_sha": "41316ab7d0faa07b664b1d03afd404f7b8a996a8",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.04686",
+      "identity_tokens": [
+        "arXiv:2511.04686"
+      ],
+      "title": "Stateful KV Cache Management for LLMs: Balancing Space, Time, Accuracy, and Positional Fidelity",
+      "reason": "arXiv一次要旨。Llama-3-8B-Instructの多ターン状態保持で、8,192 tokenの学習時context境界に近づくと生成品質が急落し、AttentionTop等の高保持率KV削除でもRoPE位置整合を壊すと出力が劣化することを測定。連続した文脈ブロック保持が有利な条件を示し、KV evictionの品質・メモリ・位置整合トレードオフを直接扱う。",
+      "source_url": "https://arxiv.org/abs/2511.04686",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 298,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.13628",
+      "identity_tokens": [
+        "arXiv:2602.13628"
+      ],
+      "title": "Compact LLM Deployment and World Model Assisted Offloading in Mobile Edge Computing",
+      "reason": "arXiv一次要旨。Llama-3.1-8B、Qwen3-8B、Mistral-12Bの構造化枝刈り・低ビット量子化・蒸留によるエッジ配置と、通信変動下のworld-model PPO推論オフロード制御を統合。Llama-3.1-8Bを15.3GBから3.3GBへ縮小し、推論遅延12〜30%削減を報告。端末とエッジ間の実行時配置・遅延制御に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2602.13628",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 299,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.21330",
+      "identity_tokens": [
+        "arXiv:2604.21330"
+      ],
+      "title": "Teacher-Guided Routing for Sparse Vision Mixture-of-Experts",
+      "reason": "arXiv一次要旨。密なteacher表現から疑似ルーティング教師信号を作り、Sparse Vision MoEのrouter学習を安定化する手法。ImageNet-1KとCIFAR-100の画像分類精度と学習時routing consistencyを評価しており、生成LLMの推論サービングやMoE推論通信・実行性能を対象としない。",
+      "source_url": "https://arxiv.org/abs/2604.21330",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 300,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.14517",
+      "identity_tokens": [
+        "arXiv:2603.14517"
+      ],
+      "title": "Learning to Forget: Sleep-Inspired Memory Consolidation for Resolving Proactive Interference in Large Language Models",
+      "reason": "arXiv一次要旨。KV cache内の古い関連を検出するtemporal tagger、forgetting gate、定期的なmemory consolidationを推論時に動作させるSleepGateを提案。ただし実験は4層・79.3万パラメータの小規模Transformerによる連想検索が中心で、実用的生成LLMのメモリ・速度改善は未検証。KV管理の直接的な着想はあるが適用検証が不足するためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.14517",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 301,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2410.14578",
+      "identity_tokens": [
+        "arXiv:2410.14578"
+      ],
+      "title": "Large Language Models Are Overparameterized Text Encoders",
+      "reason": "arXiv一次要旨。LLMを埋め込み用テキストエンコーダへ変換する際、末尾層を削除し短い教師あり対照学習を行うL3 Pruneで、embeddingタスクの推論時間・メモリを削減する。主評価はテキスト埋め込み専用で、生成LLMのtoken復号やサービング性能ではないため、推論向け圧縮との接点はあるが本サーベイの中心対象としては境界的。",
+      "source_url": "https://arxiv.org/abs/2410.14578",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 316,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.03373",
+      "identity_tokens": [
+        "arXiv:2505.03373"
+      ],
+      "title": "SPAP: Structured Pruning via Alternating Optimization and Penalty Methods",
+      "reason": "arXiv一次要旨。LLM構造化枝刈りを混合整数最適化とpenalty method、交互最小化で定式化し、精度回復を行う。OPT、LLaMA-3系列、Qwen2.5で圧縮後の推論高速化を測定し、30% sparsity時に1.29倍の推論速度と比例したメモリ削減を報告。生成モデルの実行時コスト削減に直接貢献する。",
+      "source_url": "https://arxiv.org/abs/2505.03373",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 320,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.14961",
+      "identity_tokens": [
+        "arXiv:2510.14961"
+      ],
+      "title": "Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models",
+      "reason": "arXiv一次要旨。反復深さを持つrecurrent-depth Transformerで、新規tokenを毎forwardで生成しながら潜在状態を並列再帰更新するdiffusion forcing samplerを提案。既存3.5B recurrent-depthモデルに追加調整なしで適用し、生成最大5倍高速化を報告。推論時の並列サンプリング機構が主たる貢献。",
+      "source_url": "https://arxiv.org/abs/2510.14961",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 341,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.15346",
+      "identity_tokens": [
+        "arXiv:2405.15346"
+      ],
+      "title": "BiSup: Bidirectional Quantization Error Suppression for Large Language Models",
+      "reason": "arXiv一次要旨。LLMのW3A3量子化で、層方向に蓄積する誤差とattention経由でtoken間に伝播する誤差を区別。少量データのパラメータ効率的調整と、system promptのKV cacheのみ高精度を保持するmixed-precisionを組み合わせる。Llama/QwenでAtom・QuaRot比のPPL改善を報告し、推論用低ビット量子化とKV精度管理に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2405.15346",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 342,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08382",
+      "identity_tokens": [
+        "arXiv:2602.08382"
+      ],
+      "title": "Dynamic Long Context Reasoning over Compressed Memory via End-to-End Reinforcement Learning",
+      "reason": "arXiv一次要旨。長文脈をchunkごとに圧縮し、gatingで必要なmemory blockを選択して反復的にreasoningする構成。compressorとreasonerはRLで学習するが、最終適用は生成時の文脈処理コスト削減。7K学習文脈から175万tokenへの外挿、MemAgent比でGPUピークメモリ最大2分の1、推論速度最大6倍を報告する。",
+      "source_url": "https://arxiv.org/abs/2602.08382",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 346,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14327",
+      "identity_tokens": [
+        "arXiv:2607.14327"
+      ],
+      "title": "PReM: Learning What to Preserve and When to Refresh for Context Compression",
+      "reason": "arXiv一次要旨。長文脈のlayer-wise KV memoryに対し専用memory layerが保持対象を選び、生成中の特殊memory tokenで必要に応じてrefreshするPreserve and Refresh Memoryを提案。学習にはPhase-Separated Refresh Trainingを用いるが、最終的には32K文脈・16倍/32倍圧縮下の推論時KV利用と品質を評価し、動的KV圧縮に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2607.14327",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:37:38+09:00",
+      "last_checked_at": "2026-10-31T00:37:38+09:00",
+      "linked_from": [],
+      "worklist_rank": 349,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
