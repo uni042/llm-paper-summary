@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0541-scheduled-chat-45/r01",
+  "reference_main_sha": "17ca70749ca670ef661aa513abc1552e05acdf13",
+  "round_status": "complete",
+  "target_count": 10,
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.31062",
+      "identity_tokens": [
+        "arXiv:2605.31062"
+      ],
+      "title": "AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering",
+      "reason": "Graph-R1上で中間推論ステップごとに思考トークン予算を調整するRL学習法。品質制約付き効率報酬によりHotpotQAの思考トークンを大幅削減するが、主貢献は推論ポリシーの学習であり、サービング実行系やKV・GPUカーネルの新規最適化は提示しない。",
+      "source_url": "https://arxiv.org/abs/2605.31062",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 83,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.16952",
+      "identity_tokens": [
+        "arXiv:2603.16952"
+      ],
+      "title": "Embodied Foundation Models at the Edge: A Survey of Deployment Constraints and Mitigation Strategies",
+      "reason": "身体性AIをエッジへ配備する際の電力・重量・メモリ帯域・制御遅延を8障壁で整理し、VLAの帯域律速と拡散制御器の計算律速を区別するサーベイ。メモリ階層とスケジューリングの論点は有用だが、主対象はロボット制御でLLM推論サービング固有の実装・評価ではない。",
+      "source_url": "https://arxiv.org/abs/2603.16952",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 116,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.30709",
+      "identity_tokens": [
+        "arXiv:2606.30709"
+      ],
+      "title": "Hierarchical Global Attention (HGA)",
+      "reason": "事前学習済みQ/K/V/Oを変えず、RoPE対応のチャンク要約→グループ選択という二段階ルーティングで必要な過去KVだけをRAM/NVMeからGPUへ移送する。Qwen3-30B-A3B FP8の64K文脈を32GB GPUで扱い、選択トークンへの厳密attentionを実行する長文脈推論メモリ最適化であり直接対象。",
+      "source_url": "https://arxiv.org/abs/2606.30709",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 277,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.28166",
+      "identity_tokens": [
+        "arXiv:2607.28166",
+        "DOI:10.48550/arXiv.2607.28166"
+      ],
+      "title": "Where and When to Commit: Candidate-Aware Decoding for Diffusion Language Models",
+      "reason": "拡散LLMの生成時に、候補答えの確信度とargmax安定性を検証するCVCで全体停止を制御し、BWECで非最終ブロックの確定を早めるLATCHを提案。LLaDA/Dreamの11タスクで短答9.3–17.8倍、長推論2.0–3.3倍のend-to-end TPS改善を報告する直接的な復号高速化。",
+      "source_url": "https://arxiv.org/abs/2607.28166",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 298,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.06431",
+      "identity_tokens": [
+        "arXiv:2410.06431"
+      ],
+      "title": "Functional-level Uncertainty Quantification for Calibrated Fine-tuning on LLMs",
+      "reason": "UQ4CTはLoRA expert混合による機能空間の信頼度較正損失をfine-tuning時に学習し、QAのECEと予測信頼性を改善する。中心課題は学習時の確率較正であり、推論時の演算量・KVメモリ・デコード速度・サービング資源を削減するシステム機構は扱わない。",
+      "source_url": "https://arxiv.org/abs/2410.06431",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 299,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02620",
+      "identity_tokens": [
+        "arXiv:2511.02620"
+      ],
+      "title": "Verifying LLM Inference to Detect Model Weight Exfiltration",
+      "reason": "推論サーバーが通常応答へモデル重みを隠すステガノグラフィー流出を検知する検証枠組みを形式化し、非決定性の推定器で推論結果の異常を監視する。3B〜30Bモデルで検出性能を評価するが、主目的は機密保護・検証であり推論スループットやメモリ効率の改善ではない。",
+      "source_url": "https://arxiv.org/abs/2511.02620",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 421,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/ISPASS69572.2026.00073",
+      "identity_tokens": [
+        "DOI:10.1109/ISPASS69572.2026.00073"
+      ],
+      "title": "Power Ranger: A Comprehensive Framework for GPU Power Characterization",
+      "reason": "実GPUの電力トレースとカーネルLUTから、元コードを使わず電力挙動を再現するベンチマークを生成。著者公開ISPASS論文ではA100上のDeepSeek/Gemma vLLM推論も評価しMAPE 5%未満を報告。GPU電力測定の周辺基盤だが、LLM固有の推論スケジューラや演算効率化は提案しない。",
+      "source_url": "https://lca.ece.utexas.edu/pubs/seigler_ispass26_posterabs.pdf",
+      "body_check": "primary_pdf_abstract_and_evaluation_checked; full_body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 451,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.24267",
+      "identity_tokens": [
+        "arXiv:2609.24267"
+      ],
+      "title": "StreamTN: A Low-Latency Streaming Chinese Text Normalization Model for Streaming TTS in Dialogue Systems",
+      "reason": "音声対話システムでLLM出力をTTS向けに正規化するQwen3-0.6Bベースの専用モデルを提案。入力と出力を二系統でストリーミングしてTNの遅延を下げるが、対象は中国語TTS前処理の応用パイプラインで、一般的なLLMデコード・KV・GPU実行系の最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2609.24267",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 489,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.14614",
+      "identity_tokens": [
+        "arXiv:2608.14614"
+      ],
+      "title": "DumpsterCluster: From Dumpster Diving to Serving LLaMA-70B on $60 GPUs",
+      "reason": "中古V100を128基組んだ実クラスタでLLaMA-70Bを配信し、パイプライン並列化により旧世代GPUの通信・容量制約を緩和する。約1年間の実運用と電力・費用評価を伴うLLMサービングシステム研究。安価な初期費用と高い電力消費・炭素排出の条件依存性を区別する。",
+      "source_url": "https://arxiv.org/abs/2608.14614",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.22425",
+      "identity_tokens": [
+        "arXiv:2505.22425"
+      ],
+      "title": "Scaling Reasoning without Attention",
+      "reason": "Mamba-2のSSD層に基づく自己注意なしの推論モデルで、通常のKVキャッシュを不要にし固定メモリ・定数時間の逐次推論を狙う。二段階の推論課題カリキュラム学習も含むが、注意演算とKV保持を除く推論アーキテクチャ自体がサーベイの線形・再帰型LLM実行系に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2505.22425",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T05:50:08+09:00",
+      "last_checked_at": "2026-10-31T05:50:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
