@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（217本）
+## 自動生成の論文一覧（218本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -707,6 +707,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-04 · [GPU Performance Portability needs Autotuning](2025-2505.03780-gpu-performance-portability-needs-autotuning.md)**  
   実装：[✓](https://github.com/foundation-model-stack/vllm-triton-backend) ・ リポジトリ内被引用：0  
   行列のタイル寸法、warp数、パイプライン段数、共有メモリ、レジスタ割当てをあるGPUへ手作業で合わせると、別のGPUでは速度が落ち、カーネルを移植するたびにCUDA/HIPの実装と検証を繰り返す必要がある。モデル全体の学習やサービングスケジューラを新しくする研究ではない。
+
+- **2025-02 · [AdaSplash: Adaptive Sparse Flash Attention](2025-2502.12082-adasplash-adaptive-sparse-flash-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  通常のsoftmax注意では、注意スコアが有限であれば全トークンへ正の確率が割り当てられる。合成8192要素の閾値計算ではTorch二分法36.67msに対しHalley-bisection2.38ms、約15倍の改善を報告する。
 
 - **2025-01 · [Longer Attention Span: Increasing Transformer Context Length with Sparse Graph Processing Techniques](2025-2502.01659-longer-attention-span-increasing-transformer-context-length-with-sparse-.md)**  
   実装：[✓](https://github.com/KLab-AI3/Graph-Processing-Attention-IPDPS-2025) ・ リポジトリ内被引用：0  

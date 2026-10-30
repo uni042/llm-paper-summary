@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（838本）
+## 自動生成の論文一覧（839本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -733,6 +733,10 @@
 - **2026-07 · [What to Keep, What to Forget: A Rate-Distortion View of Memory Compaction in LLMs and Agents](2026-2607.08032-what-to-keep-what-to-forget-a-rate-distortion-view-of-memory-compaction-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   KVキャッシュ、入力プロンプト、固定長内部状態、エージェント記憶の圧縮を率歪み最適化で統一し、7軸分類とCOMPACT-Benchを提案するサーベイ。RTX 4060・Qwen2.5-1.5Bの参照実験では、KV保持予算約25%未満でneedle検索がほぼ失敗し、反復要約の事実再現率0.33〜0.56に対して検索可能な原文アーカイブは約0.95だった。
+
+- **2026-07 · [Variable Bit-width Quantization: Learning Per-Group Precision for 'Bigger-but-Smaller' Language Models](2026-2607.02893-variable-bit-width-quantization-learning-per-group-precision-for-bigger-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  量子化は重みの容量を減らすが、通常の方法では全重みに同じ4bitや2bitを割り当てる。Gumbel-Softmaxの連続緩和と交互最適化で精度選択を学習すると、グループの69%が1bitへ落ちる一方、最初のMLPブロックや頻出語彙の出力行は高い精度を要求する。
 
 - **2026-07 · [Structured Redundancy Modeling for Efficient Visual Token Pruning in High-Resolution MLLMs](2026-2607.23046-structured-redundancy-modeling-for-efficient-visual-token-pruning-in-hig.md)**  
   実装：[✓](https://github.com/cvsp-lab/SFPruner) ・ リポジトリ内被引用：0  

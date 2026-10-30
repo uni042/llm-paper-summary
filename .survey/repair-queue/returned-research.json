@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T05:09:03+00:00",
+  "generated_at": "2026-10-30T05:21:17+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1822,36 +1822,6 @@
       "worker_run_key": "20261030-0350-scheduled-chat-45/r04"
     },
     {
-      "canonical_id": "arXiv:2309.05210",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T02:29:56+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4164,
-        "body_paragraphs": 23,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1983a8427cfe--libfile_4479d83a6ff08191b8c69133a9e7cc11--2023-2309.05210-ptq-temperature-speed-tradeoffs-research-20261030-0902-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1983a8427cfe--libfile_4479d83a6ff08191b8c69133a9e7cc11--2023-2309.05210-ptq-temperature-speed-tradeoffs-research-20261030-0902-scheduled-chat-45-.json",
-      "worker_run_key": "20261030-0847-scheduled-chat-45/r02"
-    },
-    {
       "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
       "title": null,
       "source_url": null,
@@ -2409,8 +2379,8 @@
     },
     {
       "canonical_id": "arXiv:2609.10355",
-      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
-      "source_url": "https://arxiv.org/html/2609.10355",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T05:08:18+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -2439,8 +2409,8 @@
     },
     {
       "canonical_id": "arXiv:2507.09071",
-      "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
-      "source_url": "https://arxiv.org/html/2507.09071v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T05:08:57+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -2466,8 +2436,8 @@
     },
     {
       "canonical_id": "arXiv:2504.13989",
-      "title": "Gradual Binary Search and Dimension Expansion: A general method for activation quantization in LLMs",
-      "source_url": "https://arxiv.org/html/2504.13989v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T05:08:59+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2496,8 +2466,8 @@
     },
     {
       "canonical_id": "arXiv:2507.17417",
-      "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2507.17417",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T05:09:02+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2523,6 +2493,34 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a490d69e96fd--libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-a490d69e96fd--libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-schedule.json",
       "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2309.05210",
+      "title": "Understanding the Impact of Post-Training Quantization on Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2309.05210",
+      "returned_at": "2026-10-30T05:17:42+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 7326,
+        "body_paragraphs": 48,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 976,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0e914cd2e81481918da0bd9ae3dcc75d--2023-2309.05210-ptq-temperature-speed-study-research-20261030-1332-scheduled-chat-30-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0e914cd2e81481918da0bd9ae3dcc75d--2023-2309.05210-ptq-temperature-speed-study-research-20261030-1332-scheduled-chat-30-r02.json",
+      "worker_run_key": "20261030-1332-scheduled-chat-30/r02"
     }
   ]
 }

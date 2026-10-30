@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（162本）
+## 自動生成の論文一覧（163本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -269,6 +269,10 @@
 - **2026-08 · [Learning how to Forget: Fine-tuning for Long-Context Sparse Attention](2026-2608.19920-learning-how-to-forget-fine-tuning-for-long-context-sparse-attention.md)**  
   実装：[✓](https://github.com/awslabs/keys_values) ・ リポジトリ内被引用：0  
   任意のKVキャッシュ方策を学習中に再現し、二重チェックポイントとKV差分符号化で推論級メモリの長文脈疎注意微調整を実現する。
+
+- **2026-08 · [Autonomy-of-Heads: Data-Free Sparse Attention from Frozen Query-Key Geometry](2026-2608.06849-autonomy-of-heads-data-free-sparse-attention-from-frozen-query-key-geome.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  後者のheadに対して過去全トークンのKVを保持すると、メモリ容量と注意計算が無駄になる。特異値が少数の方向へ集中した低ER headは、内容に応じた遠距離の照合に重要であり、full 注意機構を維持する。
 
 - **2026-07 · [Scaling Attention Beyond GPUs for LLM Inference](2026-c3c79f91845d-scaling-attention-beyond-gpus-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
