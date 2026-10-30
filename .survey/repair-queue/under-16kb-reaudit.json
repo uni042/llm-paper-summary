@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T13:01:53.692871+00:00",
+  "generated_at": "2026-10-30T14:03:41.906982+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 12,
+  "count": 7,
   "worker_counts": {
-    "scheduled-chat-00": 4,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 4
+    "scheduled-chat-00": 2,
+    "scheduled-chat-30": 3,
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -102,90 +102,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md",
-      "canonical_id": "DOI:10.1038/s44387-026-00072-8",
-      "title": "Phase transitions in large language model compression",
-      "file_bytes": 14429,
-      "source_sha256": "b7b82bb0a000bf876e989198ea9f655d863a50f11e9d695b9f8bb5f3ec58163f",
-      "source_git_blob_sha": "c16aeb153b86310a57dba6201f0de67d90abc15b",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.974742,
-      "quality_metrics": {
-        "body_chars": 3789,
-        "method_chars": 985,
-        "evaluation_chars": 786,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md",
-      "canonical_id": "arXiv:2508.08435",
-      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
-      "file_bytes": 14593,
-      "source_sha256": "ef420f6886da20c0f9bf66d61175db2524abaa929e2f9f2eb94270b3a82434c3",
-      "source_git_blob_sha": "f18b158308a062bb78c6b5cdc6f13091118e44be",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.787576,
-      "quality_metrics": {
-        "body_chars": 3955,
-        "method_chars": 1773,
-        "evaluation_chars": 707,
-        "limitation_chars": 416
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.8% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.21401-swarmx-agentic-scheduling-for-low-latency-agentic-systems.md",
-      "canonical_id": "arXiv:2606.21401",
-      "title": "SwarmX: Agentic Scheduling for Low-Latency Agentic Systems",
-      "file_bytes": 15432,
-      "source_sha256": "d065bd48d9edde4db46ed0b28cedb11f5179fcf975df537fb8a280861fc61199",
-      "source_git_blob_sha": "aa0197e83a75190b313835e576cad6514cf079d4",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.938162,
-      "quality_metrics": {
-        "body_chars": 3700,
-        "method_chars": 1172,
-        "evaluation_chars": 554,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md",
-      "canonical_id": "DOI:10.1002/spe.3422",
-      "title": "SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices",
-      "file_bytes": 15986,
-      "source_sha256": "2a9015c5c50d38afcaa3aab3e0f78746cffa156510554e1f98c459119c50c2f5",
-      "source_git_blob_sha": "e4e8e056075434b30e580ab1fe155d0b3e8d398e",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.890432,
-      "quality_metrics": {
-        "body_chars": 4095,
-        "method_chars": 1360,
-        "evaluation_chars": 1149,
-        "limitation_chars": 540
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md",
       "canonical_id": "arXiv:2609.36654",
       "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
@@ -241,26 +157,6 @@
         "method_chars": 968,
         "evaluation_chars": 1102,
         "limitation_chars": 708
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2026-d563756c245c-elora-efficient-lora-and-kv-cache-management-for-multi-lora-llm-serving.md",
-      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408492",
-      "title": "ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving",
-      "file_bytes": 17788,
-      "source_sha256": "2a51ddfd21fcc3466a7d89cc76edc9ad0e15ec7d4a916ff6dbd7c11e7fa0260c",
-      "source_git_blob_sha": "9c0459525f3e769d35c95b5cb373784e959435fc",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.929889,
-      "quality_metrics": {
-        "body_chars": 4455,
-        "method_chars": 1228,
-        "evaluation_chars": 1450,
-        "limitation_chars": 412
       },
       "mechanical_failures": [],
       "warnings": []
