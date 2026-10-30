@@ -405,8 +405,8 @@
   本論文は、大規模言語モデルを一般利用者の限られた計算資源で動かすための後学習量子化を解説する文献レビューである。
 
 - **2025-05 · [ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads](2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  投機的復号は、小さなドラフトモデルが複数の候補トークンを先に生成し、大きな対象モデルがまとめて検証することで、出力分布の整合性を保ちながら複数トークンを進める方式である。ドラフト候補の精度が低いと検証時に棄却が増え、速度改善が小さくなる。
+  実装：[✓](https://github.com/ZeroNLP/ResDecode) ・ リポジトリ内被引用：0  
+  投機的復号では軽いドラフト側が複数の未来トークンを先読みし、対象の大きな言語モデルが候補をまとめて検証する。対象モデルの検証を通った候補だけを採用するため、単にドラフトを高速化するだけでなく、候補の採択長と検証費用の均衡が重要になる。
 
 - **2025-02 · [KVCrush: Key value cache size-reduction using similarity in head-behaviour](2025-2503.00022-kvcrush-key-value-cache-size-reduction-using-similarity-in-head-behaviou.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
