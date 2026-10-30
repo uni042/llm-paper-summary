@@ -35,10 +35,15 @@
   "selection_reason": "SBVRはLLM重みの非一様分布に沿う表現点をビットベクトルの和で構成し、コードブック方式のGPU L1不規則アクセスを避ける。SBVR形式のままGEMVを行う専用CUDAカーネルで4bitのトークン生成速度をFP16比2.21～3.04倍にする。",
   "semantic_scholar_id": "95322868d0cf535fb21b42a4c9c8b1d825cd1ebf",
   "source_url": "https://arxiv.org/abs/2509.18172",
-  "status": "ready",
+  "status": "superseded",
   "title": "SBVR: Summation of BitVector Representation for Efficient LLM Quantization",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T00:19:30+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2509.18172-sbvr-summation-of-bitvector-representation-for-efficient-llm-quantizatio.md",
+  "represented_canonical_id": "arXiv:2509.18172",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -25,6 +25,8 @@ worker_run_key: "20261030-0747-scheduled-chat-45/r01"
 reference_main_sha: "e9f2512b2429069b8fa220b6962ebd4316d3c0f8"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # LLMエージェントの応答遅延を4層で分解するサーベイ

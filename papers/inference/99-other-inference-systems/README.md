@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（827本）
+## 自動生成の論文一覧（830本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2256,6 +2256,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   FP8形式は、行列積を低精度で直接計算できるため、LLM推論時の重みメモリと演算費用を抑えられる。ECF8（Exponent-Concentrated FP8）は、この偏りを利用してFP8重みの値そのものは一切変えずに、保存時のビット数を減らす方式である。報告されたメモリ削減率は9.8〜26.9%、固定メモリ予算での処理率改善は11.3〜177.1%である。
 
+- **2025-10 · [STaMP: Sequence Transformation and Mixed Precision for Low-Precision Activation Quantization](2025-2510.26771-stamp-sequence-transformation-and-mixed-precision-for-low-precision-acti.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  STaMP（Sequence Transformation and Mixed Precision）は、低ビット量子化の前に活性行列を系列方向へ直交変換し、情報が集中した少数の変換後トークンだけを8ビット、残りを4ビットで表現する方式である。
+
 - **2025-10 · [Reasoning in the Dark: Interleaved Vision-Text Reasoning in Latent Space](2025-2510.12603-reasoning-in-the-dark-interleaved-vision-text-reasoning-in-latent-space.md)**  
   実装：[✓](https://github.com/ModalityDance/IVT-LR) ・ リポジトリ内被引用：0  
   視覚言語モデル（vision-language モデル; VLM）が図表や画像に基づいて多段階の推論をするとき、従来の思考の連鎖（chain of thought; CoT）方式は中間推論を自然言語トークンとして逐次生成する。
@@ -2319,6 +2323,10 @@
 - **2025-09 · [Self-Aligned Reward: Towards Effective and Efficient Reasoners](2025-2509.05489-self-aligned-reward-towards-effective-and-efficient-reasoners.md)**  
   実装：[✓](https://github.com/amazon-science/Self-Aligned-Reward-Towards_Effective_and_Efficient_Reasoners) ・ リポジトリ内被引用：0  
   提案する自己整合報酬（Self-Aligned Reward; SAR）は、同じ回答 $a$ の困惑度を、質問 $q$ を与えた場合と与えない場合で計算する。例えばQwen3-1.7Bでは、GRPOの平均正答率53.37%、回答長762.8トークンに対して、SAR付きGRPOは54.13%、602.0トークンだった。
+
+- **2025-09 · [SBVR: Summation of BitVector Representation for Efficient LLM Quantization](2025-2509.18172-sbvr-summation-of-bitvector-representation-for-efficient-llm-quantizatio.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SBVR（Summation of BitVector Representation）は、LLM重みのガウス分布に近い値の偏りを非一様な量子化表現点で捉えながら、GPUで不規則なコードブック参照を必要としない量子化方式である。
 
 - **2025-09 · [Pyramid Token Pruning for High-Resolution Large Vision-Language Models via Region, Token, and Instruction-Guided Importance](2025-2509.15704-pyramid-token-pruning-for-high-resolution-large-vision-language-models-v.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2937,6 +2945,10 @@
 - **2024-07 · [FlashNorm: Fast Normalization for Transformers](2024-2407.09577-flashnorm-fast-normalization-for-transformers.md)**  
   実装：[✓](https://github.com/OpenMachine-ai/transformer-tricks) ・ リポジトリ内被引用：0  
   RMSNormは多くのLLMで注意機構やFFNの直前に置かれ、活性ベクトルの二乗平均平方根で各要素を割り、学習済みスケールを掛ける。T4 GPUのnorm-then-project単体実験では、SmolLM2-135M相当の4096トークンで0.704msから0.468msへ、8192トークンで0.929msから0.599msへ短縮した。
+
+- **2024-07 · [Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference](2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md)**  
+  実装：[✓](https://github.com/oshindutta/TVAprune) ・ リポジトリ内被引用：0  
+  TVA-Prune（トークン Dependency-aware Variational Adapted 枝刈り）は、LLMの注意ヘッド、FFNの中間次元、トークンの隠れ次元をまとめて削減する構造的枝刈り方式である。
 
 - **2024-07 · [Compensate Quantization Errors+: Quantized Models Are Inquisitive Learners](2024-2407.15508-compensate-quantization-errors-quantized-models-are-inquisitive-learners.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

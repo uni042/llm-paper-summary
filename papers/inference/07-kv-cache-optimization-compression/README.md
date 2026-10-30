@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（419本）
+## 自動生成の論文一覧（420本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -870,6 +870,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Understanding Inference Scaling for LLMs: Bottlenecks, Trade-offs, and Performance Principles](2026-2605.19775-understanding-inference-scaling-for-llms-bottlenecks-trade-offs-and-perf.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は新しい推論アルゴリズムを提案するものではなく、8Bから671Bパラメータまでの密なモデルと混合専門家モデルを、8基のNVIDIA H200を持つ実機で比較した性能特性研究である。
+
+- **2026-05 · [SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference](2026-41074c82c154-semantickv-a-semantics-driven-kv-cache-eviction-framework-for-efficient-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SemanticKVは、長い入力プロンプトを処理するプリフィル段階で、後続の生成に必要なKVキャッシュだけを残す方式である。著者らは、元のKVキャッシュの20%だけを残す条件で、Llama3.1-8B-InstructのInfiniteBench長文脈タスクを評価した。
 
 - **2026-05 · [Scratchpad Patching: Decoupling Compute from Patch Size in Byte-Level Language Models](2026-2605.09630-scratchpad-patching-decoupling-compute-from-patch-size-in-byte-level-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
