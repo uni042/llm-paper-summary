@@ -1,34 +1,80 @@
 ---
-canonical_id: "DOI:10.5281/zenodo.22339206"
-title: "A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)"
-summary: "2024～2026年のLLM推論をチップ、サービングシステム、アルゴリズム、推論パラダイムの4層に整理する21ページの単著プレプリント。Groq/Cerebras/TPU/Trainiumなどの推論基盤、vLLM/SGLang/TensorRT-LLMのKV管理とprefill-decode分離、KV圧縮・量子化・投機的復号、長い推論・マルチエージェントの資源需要を横断する。『定型処理はハードウェア化』『予測が安くなると投機が増える』『仕事を最適な実行基盤へ振り分ける』の3傾向を提示。独自実験ではなく、Table 1/2にはベンダー公称値とMLPerf結果が混在するため、プラットフォーム間の速度比較は慎重に扱う必要がある。"
-list_summary: "LLM推論をチップ・システム・アルゴリズム・パラダイムの4層で整理するサーベイ。ハードウェア化、安価な予測の増加、負荷に応じた異種基盤への割当という3傾向を抽出。"
+canonical_id: DOI:10.5281/zenodo.22339206
+title: 'A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)'
+summary: 2024～2026年のLLM推論をチップ、サービングシステム、アルゴリズム、推論パラダイムの4層に整理する21ページの単著プレプリント。Groq/Cerebras/TPU/Trainiumなどの推論基盤、vLLM/SGLang/TensorRT-LLMのKV管理とprefill-decode分離、KV圧縮・量子化・投機的復号、長い推論・マルチエージェントの資源需要を横断する。『定型処理はハードウェア化』『予測が安くなると投機が増える』『仕事を最適な実行基盤へ振り分ける』の3傾向を提示。独自実験ではなく、Table 1/2にはベンダー公称値とMLPerf結果が混在するため、プラットフォーム間の速度比較は慎重に扱う必要がある。
+list_summary: LLM推論をチップ・システム・アルゴリズム・パラダイムの4層で整理するサーベイ。ハードウェア化、安価な予測の増加、負荷に応じた異種基盤への割当という3傾向を抽出。
 authors:
-  - "Zheping Wang"
-published: "2026-09-05"
-publication: "Zenodo preprint v1.0 (2026-09-05), DOI:10.5281/zenodo.22339206"
-publication_type: "サーベイ・プレプリント"
-publication_status: "preprint"
-source: "https://zenodo.org/records/22339206"
+- Zheping Wang
+published: '2026-09-05'
+publication: Zenodo preprint v1.0 (2026-09-05), DOI:10.5281/zenodo.22339206
+publication_type: サーベイ・プレプリント
+publication_status: preprint
+source: https://zenodo.org/records/22339206
 sources:
-  - "https://zenodo.org/records/22339206"
-  - "https://zenodo.org/records/22339207/files/ipu_survey_preprint_v1.pdf?download=1"
-  - "https://doi.org/10.5281/zenodo.22339206"
-implementation: "21ページの文献サーベイ。4層の文献比較と2025～2026年のMLPerf/ベンダー資料を統合した分類表を含むが、独自のGPU/ASIC実験、再現コード、同条件での測定ベンチマークはない。"
+- https://zenodo.org/records/22339206
+- https://zenodo.org/records/22339207/files/ipu_survey_preprint_v1.pdf?download=1
+- https://doi.org/10.5281/zenodo.22339206
+implementation: 21ページの文献サーベイ。4層の文献比較と2025～2026年のMLPerf/ベンダー資料を統合した分類表を含むが、独自のGPU/ASIC実験、再現コード、同条件での測定ベンチマークはない。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-30T19:04:52+09:00"
-worker_run_key: "20261030-1904-scheduled-chat-00/r02"
-reference_main_sha: "6b0942fd32351ae5dfc03bf3acb6727c8e398cbd"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-30T19:04:52+09:00'
+worker_run_key: 20261030-1904-scheduled-chat-00/r02
+reference_main_sha: 6b0942fd32351ae5dfc03bf3acb6727c8e398cbd
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 research_worklist_rank: 19
 quality_repair_worker_id: scheduled-chat-45
 quality_repair_run_key: 20261030-1943-scheduled-chat-45/r03
-quality_repair_checked_at: 2026-10-30T19:56:10+09:00
+quality_repair_checked_at: 2026-10-30 19:56:10+09:00
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2404.14294
+  arxiv_id: '1706.03762'
+- canonical_id: arXiv:2407.05719
+  arxiv_id: '2407.05719'
+- canonical_id: DOI:10.1145/3600006.3613165
+  arxiv_id: '2309.06180'
+- canonical_id: arXiv:2309.17453
+  arxiv_id: '2309.17453'
+- canonical_id: arXiv:2401.04088
+  arxiv_id: '2401.04088'
+- canonical_id: arXiv:2408.03314
+  arxiv_id: '2201.11903'
+- canonical_id: DOI:10.1038/s41586-025-08854-x
+  doi: 10.1038/s41586-025-08854-x
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: arXiv:2101.03961
+- canonical_id: arXiv:2608.20530
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2307.08691
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+- canonical_id: arXiv:2306.00978
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2502.10424
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2503.16163
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2312.12456
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2312.00752
+- canonical_id: arXiv:2508.06297
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2404.14469
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 8
 ---
 # LLM推論の4層構造：チップからエージェント推論まで
 

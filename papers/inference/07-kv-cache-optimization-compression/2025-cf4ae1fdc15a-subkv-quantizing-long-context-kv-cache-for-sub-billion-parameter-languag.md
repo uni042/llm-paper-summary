@@ -1,40 +1,60 @@
 ---
-canonical_id: "DOI:10.1002/spe.3422"
-title: "SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices"
-summary: "SubKVは10億パラメータ前後の小型LLMを対象に、キーをチャネル別、値をトークン別に低ビット量子化し、動的なFP16残差ウィンドウと先頭attention sinkの高精度保持を組み合わせる。H2O-Danube3-500Mでは2ビットKVのWikiText2困惑度12.27（FP16 11.68）で、KIVIの13.42やKVQuantの17.58より良い。4/2ビットでKV容量を最大3.31/5倍削減し、A800上のShareGPT型負荷では最大バッチ1.6倍、スループット1.39～2.17倍。先頭トークンを量子化すると2ビット・4k入力で困惑度が12.54に悪化するが、保持すれば11.22へ回復する。"
-list_summary: "小型LLM向けKVのキーper-channel・値per-token量子化に、注意スコアに応じた動的FP16ウィンドウとattention sink保持を追加。2ビットでも品質を維持し、バッチ容量とスループットを改善。"
+canonical_id: DOI:10.1002/spe.3422
+title: 'SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices'
+summary: SubKVは10億パラメータ前後の小型LLMを対象に、キーをチャネル別、値をトークン別に低ビット量子化し、動的なFP16残差ウィンドウと先頭attention sinkの高精度保持を組み合わせる。H2O-Danube3-500Mでは2ビットKVのWikiText2困惑度12.27（FP16 11.68）で、KIVIの13.42やKVQuantの17.58より良い。4/2ビットでKV容量を最大3.31/5倍削減し、A800上のShareGPT型負荷では最大バッチ1.6倍、スループット1.39～2.17倍。先頭トークンを量子化すると2ビット・4k入力で困惑度が12.54に悪化するが、保持すれば11.22へ回復する。
+list_summary: 小型LLM向けKVのキーper-channel・値per-token量子化に、注意スコアに応じた動的FP16ウィンドウとattention sink保持を追加。2ビットでも品質を維持し、バッチ容量とスループットを改善。
 authors:
-  - "Ziqian Zeng"
-  - "Tao Zhang"
-  - "Zhengdong Lu"
-  - "Wenjun Li"
-  - "Huiping Zhuang"
-  - "Hongen Shao"
-  - "Sin G. Teo"
-  - "Xiaofeng Zou"
+- Ziqian Zeng
+- Tao Zhang
+- Zhengdong Lu
+- Wenjun Li
+- Huiping Zhuang
+- Hongen Shao
+- Sin G. Teo
+- Xiaofeng Zou
 published: '2025-04-01'
-publication: "Software: Practice and Experience, DOI:10.1002/spe.3422"
-publication_type: "査読付きジャーナル論文"
-publication_status: "published"
-source: "https://oar.a-star.edu.sg/storage/y/y32pddmzjq/software-practice-and-experience-1.pdf"
+publication: 'Software: Practice and Experience, DOI:10.1002/spe.3422'
+publication_type: 査読付きジャーナル論文
+publication_status: published
+source: https://oar.a-star.edu.sg/storage/y/y32pddmzjq/software-practice-and-experience-1.pdf
 sources:
-  - "https://oar.a-star.edu.sg/storage/y/y32pddmzjq/software-practice-and-experience-1.pdf"
-  - "https://doi.org/10.1002/spe.3422"
-implementation: "H2O-Danube3-500M、MobileLLM-600M/1B、TinyLlama-1.1B-chat。KV group size 32、FP16残差window 32、KIVI residual length 32で比較。LongBench、WikiText2、C4。NVIDIA A800 80GBのShareGPT由来負荷で最大バッチ・スループットを測定。"
+- https://oar.a-star.edu.sg/storage/y/y32pddmzjq/software-practice-and-experience-1.pdf
+- https://doi.org/10.1002/spe.3422
+implementation: H2O-Danube3-500M、MobileLLM-600M/1B、TinyLlama-1.1B-chat。KV group size 32、FP16残差window 32、KIVI residual length 32で比較。LongBench、WikiText2、C4。NVIDIA A800 80GBのShareGPT由来負荷で最大バッチ・スループットを測定。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-30T19:04:52+09:00"
-worker_run_key: "20261030-1904-scheduled-chat-00/r02"
-reference_main_sha: "6b0942fd32351ae5dfc03bf3acb6727c8e398cbd"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-30T19:04:52+09:00'
+worker_run_key: 20261030-1904-scheduled-chat-00/r02
+reference_main_sha: 6b0942fd32351ae5dfc03bf3acb6727c8e398cbd
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 research_worklist_rank: 39
 metadata_repair_worker_id: scheduled-chat-45
 metadata_repair_run_key: 20261030-1943-scheduled-chat-45/r01
-metadata_repair_checked_at: 2026-10-30T19:50:10+09:00
+metadata_repair_checked_at: 2026-10-30 19:50:10+09:00
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2401.18079
+- canonical_id: arXiv:2402.12065
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2310.01801
+- canonical_id: arXiv:2405.06219
+- canonical_id: arXiv:2306.03078
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2306.07629
+- canonical_id: arXiv:2308.13137
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2403.01241
+- canonical_id: DOI:10.1002/spe.3422
+- canonical_id: arXiv:2305.13245
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.298
+- canonical_id: arXiv:2402.02750
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 62
 ---
 # SubKV：小型LLMの長文脈KVを2ビットへ圧縮する
 
