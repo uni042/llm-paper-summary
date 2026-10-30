@@ -147,6 +147,18 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn(metadata_command, workflow)
         self.assertLess(workflow.index(metadata_command), workflow.index("python .survey/scripts/maintenance_health.py"))
 
+    def test_status_dashboard_rebases_generated_snapshot_before_regeneration(self):
+        workflow = (ROOT / ".github/workflows/status-dashboard.yml").read_text(encoding="utf-8")
+        first_push = workflow.index("if git push origin HEAD:main; then")
+        rebase = workflow.index("git rebase origin/main", first_push)
+        second_push = workflow.index("if git push origin HEAD:main; then", first_push + 1)
+        regenerate = workflow.index("regenerating from latest main", second_push)
+        self.assertLess(first_push, rebase)
+        self.assertLess(rebase, second_push)
+        self.assertLess(second_push, regenerate)
+        self.assertIn("git rebase --abort || true", workflow)
+        self.assertIn("Published rebased dashboard snapshot", workflow)
+
     def test_repository_regression_runs_live_structural_checks(self):
         workflow = (ROOT / ".github/workflows/repository-tests.yml").read_text(encoding="utf-8")
         metadata_command = (

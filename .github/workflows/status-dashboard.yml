@@ -136,7 +136,17 @@ jobs:
             if git push origin HEAD:main; then
               exit 0
             fi
-            echo "Push conflict on attempt ${attempt}; regenerating from latest main."
+            echo "Push conflict on attempt ${attempt}; rebasing generated snapshot onto latest main."
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                echo "Published rebased dashboard snapshot without discarding the completed regeneration."
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+            fi
+            echo "Rebase publish did not win the race; regenerating from latest main."
             sleep $((attempt * 2))
           done
           echo 'Failed to publish STATUS.md after retries.' >&2
