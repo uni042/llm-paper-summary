@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r13",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.10932",
+      "identity_tokens": [
+        "arXiv:2606.10932"
+      ],
+      "title": "Density Field State Space Models: 1-Bit Distillation, Efficient Inference, and Knowledge Organization in Mamba-2",
+      "reason": "arXiv一次要旨はMamba-2 1.3Bを1bit骨格とINT8低ランク補正に蒸留し、モデルを9.7倍小型化。cuBLAS INT8とCUDA SSM・畳み込みカーネル、AVX512を組み合わせ、mamba-ssm基準実装比バッチ1で21.4倍高速化と報告。再帰型LLMの低ビット推論に直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.10932",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 197
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.10535",
+      "identity_tokens": [
+        "arXiv:2603.10535"
+      ],
+      "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning",
+      "reason": "arXiv一次要旨はRLHF/RLVRで報酬最適化によりCoTが冗長化する問題に対し、乗法的報酬再スケーリングGR3と優位度較正で長さを制御。品質を維持しつつ生成長膨張を抑えるため、推論時のトークン消費量削減に直接関連。",
+      "source_url": "https://arxiv.org/abs/2603.10535",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 198
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17449",
+      "identity_tokens": [
+        "arXiv:2603.17449"
+      ],
+      "title": "TRiMS: Real-Time Tracking of Minimal Sufficient Length for Efficient Reasoning via RL",
+      "reason": "arXiv一次要旨は正答を保つ最小十分CoT長MSLを定式化し、GRPOで動的に推論長を制御するTRiMSを提案。複数ベンチマークでCoTトークン80%超削減し精度を小幅改善と報告。生成計算の削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2603.17449",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 199
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01790",
+      "identity_tokens": [
+        "arXiv:2606.01790"
+      ],
+      "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+      "reason": "arXiv一次要旨はGUIエージェントのスクリーンショット蓄積でKVが急増する問題に対し、注意部分空間別重要度・時間的冗長性・スコア分布エントロピーでKVを再重み付けするSTaR-KVを提案。KV予算20%でピークGPUメモリを約40%削減しGUI品質を維持。エージェント推論のKV圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.01790",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 202
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.15943",
+      "identity_tokens": [
+        "arXiv:2608.15943"
+      ],
+      "title": "KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs",
+      "reason": "arXiv v2一次要旨はクロスレイヤKV共有を末尾ステージから順に導入し、パイプライン段階のFLOPs不均衡を解消するKV-Pipeを提案。主評価は学習MFU最大9.2%改善・iteration時間9.8%削減だが、長文脈推論でもKV増加と重複投影を削減しdecodeスループットを改善と報告。推論・学習の双方に関連。",
+      "source_url": "https://arxiv.org/abs/2608.15943",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 203
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.02963",
+      "identity_tokens": [
+        "arXiv:2606.02963"
+      ],
+      "title": "KForge: LLM-Driven Cross-Platform Kernel Generation for AI Accelerators",
+      "reason": "arXiv一次要旨は異種AIアクセラレータ向けカーネル生成と性能解析を2つのLLMエージェントで反復するKForgeを提案。コンパイル・正確性フィードバックと実機プロファイルを組み合わせ、B200を含む複数バックエンドで評価。推論カーネル生成・移植の直接的なシステム貢献。",
+      "source_url": "https://arxiv.org/abs/2606.02963",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 204
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.1294",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.1294"
+      ],
+      "title": "Scaling Laws and Efficient Inference for Ternary Language Models",
+      "reason": "ACL公式掲載の論文は三値言語モデルのスケーリング則と効率的な実行方式を扱う。1bit級の低ビット表現によるメモリ・演算削減がLLM推論に直接関係するため収録対象と判断。詳細な速度値は要旨だけから推定しない。",
+      "source_url": "https://aclanthology.org/2025.acl-long.1294/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 207
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.27963",
+      "identity_tokens": [
+        "arXiv:2608.27963"
+      ],
+      "title": "SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing",
+      "reason": "arXiv一次要旨は中間CoT状態の意味的摂動から複数分岐を軽量に予測し、答えが安定している場合だけ早期終了するSABERを提案。追加学習なしに推論トークンを平均30.2〜39.8%削減し品質を維持。推論時の早期終了と計算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.27963",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 209
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.28769",
+      "identity_tokens": [
+        "arXiv:2609.28769"
+      ],
+      "title": "Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing",
+      "reason": "arXiv一次要旨はGPUコンパイル済みバイナリへ直接計測命令を挿入して最適化結果を維持するXtraceを提案。LLM本番カーネルで命令の94〜98%を維持しつつ計測オーバーヘッド0.9〜2.8%と報告。推論カーネルの性能計測・最適化基盤に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.28769",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 210
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.22281",
+      "identity_tokens": [
+        "arXiv:2604.22281"
+      ],
+      "title": "DocPrune:Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning",
+      "reason": "arXiv一次要旨は文書画像の背景・質問無関係トークンを除外し、モデル理解度に応じ枝刈り開始層を選ぶDocPruneを提案。M3DocRAGでencoder/decoderスループットを3.0倍・3.3倍に改善しF1を1.0ポイント向上。文書VLM推論の視覚トークン削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2604.22281",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:19:23+09:00",
+      "last_checked_at": "2026-10-30T15:19:23+09:00",
+      "linked_from": [],
+      "worklist_rank": 213
+    }
+  ]
+}
