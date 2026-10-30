@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0345-scheduled-chat-45/r01",
+  "reference_main_sha": "cc8c6320c2f95ba28c8ab17a17c878cfbad98b27",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11464312",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11464312"
+      ],
+      "title": "Low Rank Quantization Adaptation for Large Language Model",
+      "reason": "LoQAは量子化後の低ランク適応においてスケールとゼロ点を同時に最適化するHQ-LoRAと、量子化ビット幅に応じてLoRA係数を調整するQBASを提案。量子化重みの精度回復を目的とし、複数の事後量子化方式に適用可能とする。量子化モデルの展開品質に直接関係するが、一次要旨では実機推論速度の改善は示していない。",
+      "source_url": "https://ieeexplore.ieee.org/document/11464312",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 21,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.52202/085713-4538",
+      "identity_tokens": [
+        "DOI:10.52202/085713-4538"
+      ],
+      "title": "Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective",
+      "reason": "Shapley-MoEは協力ゲームのShapley値でMoE expertの寄与を評価し、早期打切りとルータ確率に基づく重要度サンプリングで推定費用を抑えてexpertを剪定する。NeurIPS一次要旨ではQwen2-57B-A14Bのexpertを25%削減し、PPL増分0.92、平均ゼロショット精度96.4%以上維持を報告。MoEメモリ削減に直接関係する。",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/c66a9db149261435664284a20b6f1d42-Abstract-Conference.html",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 23,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06916",
+      "identity_tokens": [
+        "arXiv:2604.06916"
+      ],
+      "title": "FP4 Explore, BF16 Train: Diffusion Reinforcement Learning via Efficient Rollout Scaling",
+      "reason": "Sol-RLはFLUX.1、SANA、SD3.5など画像生成拡散モデルの強化学習で、FP4で大量候補を探索しBF16で選別候補を再生成して学習する方式。一次要旨の最大4.64倍は画像拡散モデルの学習収束高速化であり、生成LLMの推論エンジン・KV・デコード最適化ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2604.06916",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 40,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22324",
+      "identity_tokens": [
+        "arXiv:2603.22324"
+      ],
+      "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
+      "reason": "DAQは事後学習済み重みと基底重みの差分ΔWに着目し、通常の再構成誤差では失われやすい後天的能力を保持する量子化方式。差分の符号保持率と余弦類似度を最適化指標とし、追加校正データ不要でFP8試験におけるスタイル特化能力の回復を報告。LLM重み圧縮と量子化品質の直接技術。",
+      "source_url": "https://arxiv.org/abs/2603.22324",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 44,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.09387",
+      "identity_tokens": [
+        "arXiv:2503.09387"
+      ],
+      "title": "VideoScan: Enabling Efficient Streaming Video Understanding via Frame-level Semantic Carriers",
+      "reason": "VideoScanは動画の各フレームを1個の意味キャリアトークンに集約し、prefillで視覚トークンを一度処理した後はデコード時に破棄する。過去フレームの意味をKVに保持し、LLaVA-Video比最大約5倍、従来の効率的ストリーミング方式比1.29倍の速度、動画長に依存しない約18GBのGPUメモリを一次要旨で報告。VLM推論の直接高速化。",
+      "source_url": "https://arxiv.org/abs/2503.09387",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 63,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24286",
+      "identity_tokens": [
+        "arXiv:2606.24286"
+      ],
+      "title": "AVOC: Enhancing Hour-Level Audio-Video Understanding in Omni-Modal LLMs via Retrieval-Inspired Token Compression",
+      "reason": "AVOCは音声・動画エンコーダとLLMの間に学習可能なトークン圧縮器を置き、関連性・重要性・多様性を用いたtop-K検索として固定文脈予算内のマルチモーダルトークンを選別する。一次要旨で長時間動画の精度改善と最大1時間のneedle評価を報告。推論文脈の容量・トークン削減に直接関連するが、実機速度の定量改善は要旨では未確認。",
+      "source_url": "https://arxiv.org/abs/2606.24286",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 64,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/COINS65080.2025.11125768",
+      "identity_tokens": [
+        "DOI:10.1109/COINS65080.2025.11125768"
+      ],
+      "title": "LiM Pruner: Efficient Pruning for Large Language-in-Memory Models",
+      "reason": "LiM Prunerは計算内蔵メモリ（CiM）上でLLMを展開する際の巨大な重みと配置制約に対し、事前学習済みLLMへ疎性を導入する圧縮群と、剪定後の配置ずれに対応するデータパス構成を検討する。著者所属機関の一次要旨でLLaMA-2に対する従来剪定法との比較を確認。メモリ内LLM推論アクセラレータの直接研究。",
+      "source_url": "https://asu.elsevierpure.com/en/publications/lim-pruner-efficient-pruning-for-large-language-in-memory-models/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 66,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.31430",
+      "identity_tokens": [
+        "arXiv:2609.31430"
+      ],
+      "title": "Compress What You See, Not What You Say: Anchored Context Distillation for Latent-Observation Software Engineering Agents",
+      "reason": "LOHA/ACDはソフトウェア開発エージェントの古いツール観測を潜在トークンへ圧縮し、最近の観測と行動履歴はテキストで維持する。SWE-benchでは文脈43〜57%削減と成功率低下が併存し、特定の単一GPU同時実行条件では1.9倍の処理量を報告。LLMの一般的なKV管理や推論カーネルではなくエージェント文脈・行動品質の設計が主眼のため境界的。",
+      "source_url": "https://arxiv.org/abs/2609.31430",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 74,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.12119",
+      "identity_tokens": [
+        "arXiv:2410.12119"
+      ],
+      "title": "Scaling Laws for Post Training Quantized Large Language Models",
+      "reason": "複数LLM系列と低精度型・量子化手法を横断して事後量子化後の性能を分析し、局所損失地形の性質から圧縮後品質を予測する統計的スケーリング因子を特定する。量子化のbit幅・モデル規模と品質の関係を系統的に扱い、推論用重み圧縮方式の選択に直接有用な評価研究。新規推論カーネルの速度測定を主張するものではない。",
+      "source_url": "https://arxiv.org/abs/2410.12119",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 77,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.05385",
+      "identity_tokens": [
+        "arXiv:2512.05385"
+      ],
+      "title": "ShaRP: SHAllow-LayeR Pruning for Efficient Video Large Language Models",
+      "reason": "ShaRPはVideo-LLMの浅いデコーダ層で注意重みが位置バイアスや冗長性により重要度を誤る問題を分析し、局所情報集約・位置バイアス補正・冗長性抑制を組み合わせて視覚トークンを剪定する。一次要旨では元性能約97.2%を保ちながらTFLOPsを86%削減、prefillを5.1倍高速化。推論計算量削減の直接技術。",
+      "source_url": "https://arxiv.org/abs/2512.05385",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:48:41+09:00",
+      "last_checked_at": "2026-10-31T03:48:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 78,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "round_status": "complete",
+  "target_count": 10
+}
