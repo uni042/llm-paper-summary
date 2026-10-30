@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T05:19:10+00:00",
-  "record_count": 5420,
+  "updated_at": "2026-10-30T06:57:21+00:00",
+  "record_count": 5424,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83952,6 +83952,60 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "eGPU: Production-Scale Elastic Sharing Over 10,000 GPUs"
+    },
+    "arXiv:2503.06362": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.06362",
+      "identity_tokens": [
+        "arXiv:2503.06362"
+      ],
+      "reason": "arXiv要旨はAVSRの音声・映像表現をMatryoshka型の複数粒度に符号化し、計算予算に応じて入力トークン数を柔軟に選ぶLlama-MTSKを提案。入力圧縮と推論コストに関連するが、主評価は音声認識精度であり一般的なLLMサービング・KV管理・カーネル性能を直接検証していないため境界的。",
+      "first_checked_at": "2026-10-30T06:57:14+00:00",
+      "last_checked_at": "2026-10-30T06:57:14+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Adaptive Audio-Visual Speech Recognition via Matryoshka-Based Multimodal LLMs"
+    },
+    "arXiv:2512.23424": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.23424",
+      "identity_tokens": [
+        "arXiv:2512.23424"
+      ],
+      "reason": "arXiv要旨はTriton・TileLang・CUDA-C等のDSL間でAIカーネルを自動生成・移植・調整するマルチエージェントを提案。LLM計算を含むが評価は一般KernelBenchでPyTorch Eager比平均1.46倍であり、LLM固有の推論スケジューラやモデル実測の寄与が不明なため境界的。",
+      "first_checked_at": "2026-10-30T06:57:17+00:00",
+      "last_checked_at": "2026-10-30T06:57:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AKG kernel Agent: A Multi-Agent Framework for Cross-Platform Kernel Synthesis"
+    },
+    "arXiv:2604.24273": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.24273",
+      "identity_tokens": [
+        "arXiv:2604.24273"
+      ],
+      "reason": "arXiv要旨はBitNet b1.58三値重みの1ビット言語モデルを用いて端末RLエージェントの学習・推論を行い、FP比較でメモリ10〜16倍削減とエネルギー効率3〜5倍改善を報告。オンデバイス推論効率に関係する一方、主目的はRLエージェント学習とタスク性能であり一般的なLLMサービング・推論カーネル比較は限定的。",
+      "first_checked_at": "2026-10-30T06:57:17+00:00",
+      "last_checked_at": "2026-10-30T06:57:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BitRL: Reinforcement Learning with 1-bit Quantized Language Models for Resource-Constrained Edge Deployment"
+    },
+    "arXiv:2406.16722": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.16722",
+      "identity_tokens": [
+        "arXiv:2406.16722"
+      ],
+      "reason": "arXiv原著要旨はMambaのSSM機構、Transformerとの混合構造、カーネル関数から見た理論的関係を広く整理するサーベイ。状態空間モデルの推論効率に関係するが、要旨は推論カーネル・オフロード・サービングの独立した実装最適化を主張していないため、推論システム中心の収録では境界的。",
+      "first_checked_at": "2026-10-30T06:57:21+00:00",
+      "last_checked_at": "2026-10-30T06:57:21+00:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Venturing into Uncharted Waters: The Navigation Compass from Transformer to Mamba"
     }
   }
 }

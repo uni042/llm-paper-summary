@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-0e4c60946f8b3c9f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2503.06362",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2503.06362",
+    "identity_tokens": [
+      "arXiv:2503.06362"
+    ],
+    "reason": "arXiv要旨はAVSRの音声・映像表現をMatryoshka型の複数粒度に符号化し、計算予算に応じて入力トークン数を柔軟に選ぶLlama-MTSKを提案。入力圧縮と推論コストに関連するが、主評価は音声認識精度であり一般的なLLMサービング・KV管理・カーネル性能を直接検証していないため境界的。",
+    "first_checked_at": "2026-10-30T06:57:14+00:00",
+    "last_checked_at": "2026-10-30T06:57:14+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Adaptive Audio-Visual Speech Recognition via Matryoshka-Based Multimodal LLMs"
+  },
+  "processed_at": "2026-10-30T06:57:15+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-0e4c60946f8b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
