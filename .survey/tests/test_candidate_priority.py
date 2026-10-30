@@ -220,6 +220,63 @@ class CandidatePriorityTest(unittest.TestCase):
             self.assertTrue(candidate_priority_state.write(target, state))
             self.assertEqual(candidate_priority.load_cache(root), state)
 
+    def test_cache_cannot_overwrite_authoritative_bibliographic_metadata(self):
+        record = {
+            "canonical_id": "arXiv:2405.21060",
+            "published": "2024-05-31",
+            "year": 2024,
+            "venue": "ICML 2024",
+            "semantic_scholar_id": "correct-paper-id",
+            "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality",
+            "source_url": "https://arxiv.org/abs/2405.21060",
+            "citation_count": 70,
+        }
+        cache = {
+            "records": {
+                "arXiv:2405.21060": {
+                    "published": "2026-01-01",
+                    "year": 2026,
+                    "venue": "Wrong Venue",
+                    "semantic_scholar_id": "wrong-paper-id",
+                    "title": "Wrong aliased title",
+                    "source_url": "https://example.invalid/wrong",
+                    "citation_count": 78,
+                    "citation_count_source": "openalex",
+                    "citation_count_checked_at": "2026-10-30T00:00:00+00:00",
+                }
+            },
+            "aliases": {},
+        }
+        got = candidate_priority.merge_cached_metadata(record, cache)
+        for field in (
+            "published", "year", "venue", "semantic_scholar_id", "title", "source_url",
+        ):
+            self.assertEqual(got[field], record[field])
+        self.assertEqual(got["citation_count"], 78)
+        self.assertEqual(got["citation_count_source"], "openalex")
+        self.assertEqual(
+            got["citation_count_checked_at"], "2026-10-30T00:00:00+00:00"
+        )
+
+    def test_cache_can_fill_missing_bibliographic_metadata(self):
+        got = candidate_priority.merge_cached_metadata(
+            {"canonical_id": "arXiv:2601.00001"},
+            {
+                "records": {
+                    "arXiv:2601.00001": {
+                        "title": "Filled title",
+                        "source_url": "https://arxiv.org/abs/2601.00001",
+                        "published": "2026-01-01",
+                        "venue": "arXiv",
+                    }
+                },
+                "aliases": {},
+            },
+        )
+        self.assertEqual(got["title"], "Filled title")
+        self.assertEqual(got["published"], "2026-01-01")
+        self.assertEqual(got["venue"], "arXiv")
+
     def test_weights_are_configuration_driven(self):
         policy = self.policy()
         policy["freshness"]["score"] = 7
