@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1830-scheduled-chat-30/r01",
+  "reference_main_sha": "e8a6dbaa15b3be308997d65d3e64ad3347a54b52",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.08904",
+      "identity_tokens": [
+        "arxiv:2406.08904",
+        "https://arxiv.org/abs/2406.08904"
+      ],
+      "title": "AdaPTwin: Low-Cost Adaptive Compression of Product Twins in Transformers",
+      "reason": "一次要旨での対象は話者依存の音声認識用Whisper・Distil-Whisperであり、attention重みの積に依存する行列対を低ランク圧縮する。最大45%圧縮・単語誤り率増加2%未満は音声認識の評価で、生成LLMのデコード・サービング・KVキャッシュ最適化の直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2406.08904",
+      "body_check": "abstract_screen_only; body_not_read; arXiv一次書誌・著者abstractを照合。",
+      "first_checked_at": "2026-10-30T18:30:00+09:00",
+      "last_checked_at": "2026-10-30T18:30:00+09:00",
+      "linked_from": [],
+      "origin": "research_prescreen_relevance",
+      "worklist_rank": 56
+    }
+  ]
+}
