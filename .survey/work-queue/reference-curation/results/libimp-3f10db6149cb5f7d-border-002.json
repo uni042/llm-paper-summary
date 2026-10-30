@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f10db6149cb5f7d-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.06473",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.06473",
+    "identity_tokens": [
+      "arXiv:2609.06473"
+    ],
+    "reason": "7〜9Bの4モデルで重み専用INT8/NF4量子化とactivation steeringの相互作用を測定し、同じ行動変化量に対するGSM8K能力損失を比較する。NF4の基礎能力低下や推論長短縮の不連続な失敗を報告するが、主要貢献は挙動制御の頑健性・評価方法であり、推論遅延・メモリ・カーネル改善を提案するものではない。量子化の副作用分析として境界的に関連。",
+    "first_checked_at": "2026-10-30T12:54:34+00:00",
+    "last_checked_at": "2026-10-30T12:54:34+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Steering Under Compression: Dose-Response, Capability Cost, and Failure Asymmetry in Quantized LLMs"
+  },
+  "processed_at": "2026-10-30T12:54:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f10db6149cb",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

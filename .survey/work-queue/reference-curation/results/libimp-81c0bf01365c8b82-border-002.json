@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81c0bf01365c8b82-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/lca.2022.3233832",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/lca.2022.3233832",
+    "identity_tokens": [
+      "DOI:10.1109/lca.2022.3233832"
+    ],
+    "reason": "著者所属KAISTの一次要旨によると、注意スコアの平均再配分と線形化でself-attentionをハードウェア近似し、従来アクセラレータ比1.2～1.6倍の性能、1.2～1.5倍のエネルギー効率を報告する。汎用Transformer注意演算の研究で、生成LLM逐次decodeでの実測は要確認。",
+    "first_checked_at": "2026-10-30T12:54:39+00:00",
+    "last_checked_at": "2026-10-30T12:54:39+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "HAMMER: Hardware-Friendly Approximate Computing for Self-Attention With Mean-Redistribution And Linearization"
+  },
+  "processed_at": "2026-10-30T12:54:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81c0bf01365c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

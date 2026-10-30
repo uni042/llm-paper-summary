@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T11:54:57+00:00",
-  "record_count": 12596,
+  "updated_at": "2026-10-30T12:54:40+00:00",
+  "record_count": 12600,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181265,6 +181265,55 @@
       "last_checked_at": "2026-10-30T11:54:57+00:00",
       "linked_from": [],
       "title": "Let SSMs be ConvNets: State-space Modeling with Optimal Tensor Contractions"
+    },
+    "arXiv:2007.10434": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2007.10434",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2007.10434",
+        "arXiv:2007.10434"
+      ],
+      "reason": "Conformer-kernelは長文書検索のrankerで、クエリ単語の独立性と畳み込み特徴を組み合わせる。生成LLMの逐次decode・KV・推論サービングを対象とせず、検索ランキング特化の研究。",
+      "first_checked_at": "2026-10-30T12:54:36+00:00",
+      "last_checked_at": "2026-10-30T12:54:36+00:00",
+      "linked_from": [],
+      "title": "Conformer-Kernel with Query Term Independence for Document Retrieval"
+    },
+    "DOI:10.1109/cvpr52734.2025.01172": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cvpr52734.2025.01172",
+      "identity_tokens": [
+        "DOI:10.1109/cvpr52734.2025.01172"
+      ],
+      "reason": "CVPR公式一次要旨によると、イベントカメラと通常動画をMambaブロックで融合し、動画超解像を改善するMamEVSR。生成LLMの推論システム・KV管理・テキスト復号は対象外。",
+      "first_checked_at": "2026-10-30T12:54:37+00:00",
+      "last_checked_at": "2026-10-30T12:54:37+00:00",
+      "linked_from": [],
+      "title": "Event-based Video Super-Resolution via State Space Models"
+    },
+    "DOI:10.1109/bigdata66926.2025.11402115": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/bigdata66926.2025.11402115",
+      "identity_tokens": [
+        "DOI:10.1109/bigdata66926.2025.11402115"
+      ],
+      "reason": "IEEE出版社一次要旨によると、グラフの入次数に応じたGNNバッチ構成・サブグラフ分割・CPU-GPU通信最適化で遅延89%減・スループット71%増を報告する。対象はグラフニューラルネットのオンライン推論で、生成LLMのKVやデコードではない。",
+      "first_checked_at": "2026-10-30T12:54:39+00:00",
+      "last_checked_at": "2026-10-30T12:54:39+00:00",
+      "linked_from": [],
+      "title": "Degree-Based Scheduling and Memory Management for Large-Scale Exact Online GNN Inference"
+    },
+    "DOI:10.1109/ojcs.2025.3580498": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ojcs.2025.3580498",
+      "identity_tokens": [
+        "DOI:10.1109/ojcs.2025.3580498"
+      ],
+      "reason": "著者公開のIEEE論文ではRTX4090でLoRA、checkpoint、operator fusion、power capを組み合わせ、微調整メモリ40%以上削減・電力33%減を報告する。対象はfine-tuning実行であり、生成LLM推論時の速度・メモリ削減ではない。",
+      "first_checked_at": "2026-10-30T12:54:40+00:00",
+      "last_checked_at": "2026-10-30T12:54:40+00:00",
+      "linked_from": [],
+      "title": "LLMs on a Budget: System-Level Approaches to Power-Efficient and Scalable Fine-Tuning"
     }
   }
 }

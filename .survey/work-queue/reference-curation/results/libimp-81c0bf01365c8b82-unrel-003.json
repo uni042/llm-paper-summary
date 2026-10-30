@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-81c0bf01365c8b82-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/ojcs.2025.3580498",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/ojcs.2025.3580498",
+    "identity_tokens": [
+      "DOI:10.1109/ojcs.2025.3580498"
+    ],
+    "reason": "著者公開のIEEE論文ではRTX4090でLoRA、checkpoint、operator fusion、power capを組み合わせ、微調整メモリ40%以上削減・電力33%減を報告する。対象はfine-tuning実行であり、生成LLM推論時の速度・メモリ削減ではない。",
+    "first_checked_at": "2026-10-30T12:54:40+00:00",
+    "last_checked_at": "2026-10-30T12:54:40+00:00",
+    "linked_from": [],
+    "title": "LLMs on a Budget: System-Level Approaches to Power-Efficient and Scalable Fine-Tuning"
+  },
+  "processed_at": "2026-10-30T12:54:40+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-81c0bf01365c",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
