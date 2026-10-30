@@ -35,10 +35,15 @@
   "selection_reason": "LLM活性の外れ値に対してHadamard変換と段階的二分探索で低ビット量子化を設計し、Paley法で2の冪でない埋め込み次元にも回転を拡張する。Mistral/LLaMA/Qwenの重み・活性・KVを3bit化し、従来方式比でベンチマーク精度を改善する推論向け量子化研究。",
   "semantic_scholar_id": "2b718bc3b81347253c3a23e010d2e3c5e72df1cc",
   "source_url": "https://arxiv.org/abs/2504.13989",
-  "status": "ready",
+  "status": "superseded",
   "title": "Gradual Binary Search and Dimension Expansion : A general method for activation quantization in LLMs",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T05:35:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2504.13989-gradual-binary-search-and-dimension-expansion-a-general-method-for-activ.md",
+  "represented_canonical_id": "arXiv:2504.13989",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

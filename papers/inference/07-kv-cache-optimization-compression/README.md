@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（423本）
+## 自動生成の論文一覧（424本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -794,6 +794,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-07 · [SelKV: Selective KV Cache Merging with Per-Token Merge-or-Drop and Attention Compensation](2026-2607.16213-selkv-selective-kv-cache-merging-with-per-token-merge-or-drop-and-attent.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   単純なKV削除は必要な情報を失う一方、削除対象を保持KVへ一律に統合する方式では、似ていない値ベクトルまで混ざり、重要な表現を壊す場合がある。
+
+- **2026-07 · [ReFreeKV: Towards Threshold-Free KV Cache Compression](2026-2502.16886-refreekv-towards-threshold-free-kv-cache-compression.md)**  
+  実装：[✓](https://github.com/Patrick-Ni/ReFreeKV) ・ リポジトリ内被引用：0  
+  長い入力を処理したLLMは、デコード中に過去のトークンへ注意するため、各層のKeyとValueをKVキャッシュとして保持する。H2O、SnapKV、StreamingLLMなどは重要とみなした位置だけを残すが、通常は「入力の何%を保持するか」または「何トークン残すか」を先に決める。ReFreeKVは、保持率ではなく注意行列のノルム変化を停止条件にする。
 
 - **2026-07 · [Question Tells You Where the Answer Is: Intention-aware Long-Context KV Cache Compression](2026-3562943b0724-question-tells-you-where-the-answer-is-intention-aware-long-context-kv-c.md)**  
   実装：[✓](https://github.com/linkezh/IntentKV) ・ リポジトリ内被引用：0  

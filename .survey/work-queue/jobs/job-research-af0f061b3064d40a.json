@@ -35,10 +35,15 @@
   "selection_reason": "データセットごとにKV保持予算を手動調整する前提を外し、入力の難度と長さに応じた閾値不要の保持量選択を提案する。13データセットでのKV使用量と生成品質を評価するためKVキャッシュ圧縮に適合。",
   "semantic_scholar_id": "e7e0df8b6629cada059c52838b7a701178838038",
   "source_url": "https://arxiv.org/abs/2502.16886",
-  "status": "ready",
+  "status": "superseded",
   "title": "ReFreeKV: Towards Threshold-Free KV Cache Compression",
   "type": "research",
   "venue": "Annual Meeting of the Association for Computational Linguistics",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T05:35:46+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2502.16886-refreekv-towards-threshold-free-kv-cache-compression.md",
+  "represented_canonical_id": "arXiv:2502.16886",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

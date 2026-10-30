@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（839本）
+## 自動生成の論文一覧（843本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -633,6 +633,10 @@
 - **2026-09 · [DimPO: Dimensionality Reduction for Attention using Preference Optimization](2026-2609.32579-dimpo-dimensionality-reduction-for-attention-using-preference-optimizati.md)**  
   実装：[✓](https://github.com/lanzv/dimpo) ・ リポジトリ内被引用：0  
   DimPOは、大規模言語モデル（LLM）の注意計算におけるクエリとキーのベクトル次元を縮める際、元の注意重みを数値的に完全再現することと、モデルの下流課題性能を保つことは別の目的だと実証する研究である。提案は、事前学習済みモデルを追加学習し直す方式ではなく、各層に一つの小さな線形写像をオフラインで学習する方式である。
+
+- **2026-09 · [Compression Beyond the Uncompressed: A Two-Stage Training Recipe for Soft Context Compression in RAG](2026-2609.05152-compression-beyond-the-uncompressed-a-two-stage-training-recipe-for-soft.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  soft context compressionは文書を短い連続embeddingへ置き換え、デコーダがそのembeddingから回答する方式である。教師の失敗を模倣せず、結果報酬から改善を探索する点が重要である。
 
 - **2026-08 · [VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction](2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2448,6 +2452,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   CALDERAなどの方式はWを量子化行列Qと低ランク行列積LRの和、すなわちW ≈ Q + LRで近似し、Qの量子化とLRの更新を交互に行う。一方、同じ条件のARC-Easy正答率は66.35%から65.49%へ下がり、すべての下流タスクを改善するわけではない。
 
+- **2025-07 · [A Comprehensive Evaluation on Quantization Techniques for Large Language Models](2025-2507.17417-a-comprehensive-evaluation-on-quantization-techniques-for-large-language.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの量子化方式は、重み・活性値の精度だけでなく、外れ値をならす前処理、量子化後の誤差補償、対称・非対称、チャネル・グループ粒度、スケールの表現形式などを組み合わせている。さらにRTX 4090のINT4はプリフィルを約2倍高速化するが、バッチ1のデコードはBF16より遅い。
+
 - **2025-06 · [Task-Related Token Compression in Multimodal Large Language Models from an Explainability Perspective](2025-2506.01097-task-related-token-compression-in-multimodal-large-language-models-from-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   この研究は、画像や動画を扱うマルチモーダル大規模言語モデル（MLLM）で、ユーザーの指示に関係しない視覚トークンをLLM入力段階で取り除くための方式を提案する。
@@ -2555,6 +2563,10 @@
 - **2025-04 · [Multi-Branch Self-Drafting for LLM Inference Acceleration](2025-2224e69b745c-multi-branch-self-drafting-for-llm-inference-acceleration.md)**  
   実装：[✓](https://github.com/ZipECHO/Self-Draft) ・ リポジトリ内被引用：0  
   重みをメモリから読み出す費用が大きい状況では、1回の順伝播で得られるトークン数を増やすことが有効である。コーパスから固定的なn-gram候補を検索する方式も、実際の対話・コード生成との分布ずれに弱い。
+
+- **2025-04 · [Gradual Binary Search and Dimension Expansion: A general method for activation quantization in LLMs](2025-2504.13989-gradual-binary-search-and-dimension-expansion-a-general-method-for-activ.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルの低ビット事後量子化では、活性値の外れ値が量子化範囲を占有し、3〜4ビットの小さい整数レンジに通常の値を十分に割り当てられない。Mistral 7B v0.1を重み・活性・KVとも3ビット化した実験では、QuaRot単独の6課題平均18.43%がGBS併用58.31%へ改善した。
 
 - **2025-04 · [Entropy-Based Block Pruning for Efficient Large Language Models](2025-2504.03794-entropy-based-block-pruning-for-efficient-large-language-models.md)**  
   実装：[✓](https://github.com/SalesforceAIResearch/EntroDrop) ・ リポジトリ内被引用：0  
@@ -3041,6 +3053,10 @@
 - **2024-02 · [Unifying Linear-Time Attention via Latent Probabilistic Modelling](2024-2402.17512-unifying-linear-time-attention-via-latent-probabilistic-modelling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   標準Transformerの自己注意は、系列内の各トークンが過去の各トークンを参照するため、長い入力のプリフィルではトークン数の二乗に比例する注意計算を必要とする。生成時には過去のKey/ValueをKVキャッシュへ保持するため、文脈長とともにメモリ容量も増える。本論文は、線形注意を潜在変数を介した確率分布として解釈する。
+
+- **2024-02 · [RepQuant: Towards Accurate Post-Training Quantization of Large Transformer Models via Scale Reparameterization](2024-2402.05628-repquant-towards-accurate-post-training-quantization-of-large-transforme.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  これらへ単一の量子化尺度や単純な2進対数量子化を直接適用すると、4ビット付近では重要な情報が失われやすい。
 
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T05:21:17+00:00",
+  "generated_at": "2026-10-30T05:35:47+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 94,
+  "count": 92,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2435,69 +2435,9 @@
       "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2504.13989",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T05:08:59+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 117 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4492,
-        "body_paragraphs": 25,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 117,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 117 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4576cec6c809--libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4576cec6c809--libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-schedule.json",
-      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2507.17417",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T05:09:02+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 125 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5041,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 125,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 125 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a490d69e96fd--libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-a490d69e96fd--libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-schedule.json",
-      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2309.05210",
-      "title": "Understanding the Impact of Post-Training Quantization on Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2309.05210",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T05:17:42+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
