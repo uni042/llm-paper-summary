@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（867本）
+## 自動生成の論文一覧（869本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2712,6 +2712,10 @@
   実装：[✓](https://github.com/MuLabPKU/LIFT) ・ リポジトリ内被引用：0  
   LIFT（Long Input 微調整）は、長い文書をそのままLLMの入力コンテキストへ入れる代わりに、文書から生成した質問・回答（QA）で短文脈モデルをテスト時に微調整し、文書の情報をモデルのパラメータへ内在化させる方式である。
 
+- **2025-02 · [FastCoder: Accelerating Repository-level Code Generation via Efficient Retrieval and Verification](2025-2502.17139-fastcoder-accelerating-repository-level-code-generation-via-efficient-re.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし既存方式RESTは汎用コードの固定データストアを用いるため、リポジトリ固有の命名規則を拾いにくく、検索が成功しない位置でも毎回CPU検索を行う。DeepSeek-Coder-1.3BのRepoEvalで19.91ms/トークンを7.88ms/トークンへ短縮し、2.53倍の速度を得た。
+
 - **2025-02 · [DeltaLLM: Compress LLMs with Low-Rank Deltas between Shared Weights](2025-2501.18596-deltallm-compress-llms-with-low-rank-deltas-between-shared-weights.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案は単なる重みの複製ではない。Phi-3.5由来のDeltaPhi 3.35Bは3.8Bから約12%のパラメータ削減で、原著Table 1の5課題平均が0.66から0.59となる。
@@ -2771,6 +2775,10 @@
 - **2024-12 · [Constrained Decoding with Speculative Lookaheads](2024-2412.10418-constrained-decoding-with-speculative-lookaheads.md)**  
   実装：[✓](https://github.com/amazon-science/CDSL-NAACL2025) ・ リポジトリ内被引用：0  
   本論文の対象は、指定語をすべて含む文章や有害な要求に対する無害な応答など、通常の次トークン尤度だけでは満たしにくい制約付き生成である。この方法は制約達成率が高い一方、次の1トークンを確定するために大量のモデル呼び出しを要する。評価器、タスク、ドラフトとターゲットの組合せを分離して読む必要がある。
+
+- **2024-11 · [The Evolution of RWKV: Advancements in Efficient Language Modeling](2024-2411.02795-the-evolution-of-rwkv-advancements-in-efficient-language-modeling.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、RWKV（Receptance Weighted Key Value）系列の設計原理と、2024年までの派生研究を整理した単著のレビューである。
 
 - **2024-11 · [Shrinking the Giant: Quasi-Weightless Transformers for Low Energy Inference](2024-2411.01818-shrinking-the-giant-quasi-weightless-transformers-for-low-energy-inferen.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
