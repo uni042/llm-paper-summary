@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T08:15:00+00:00",
+  "generated_at": "2026-10-30T08:25:40+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1437,33 +1437,6 @@
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2510.11602",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T14:33:20+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6465,
-        "body_paragraphs": 36,
-        "method_chars": 1127,
-        "method_paragraphs": 6,
-        "evaluation_chars": 0,
-        "limitation_chars": 810,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-0b006fd0f65c--libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-0b006fd0f65c--libfile_2bfd324a8f7481918c8a70ef70062b57--2025-2510.11602-deconstructing-attention-design-principles-research-20261027-2042-schedul.json",
-      "worker_run_key": "20261027-2042-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2210.17114",
       "title": null,
       "source_url": null,
@@ -2520,8 +2493,8 @@
     },
     {
       "canonical_id": "arXiv:2609.10355",
-      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
-      "source_url": "https://arxiv.org/html/2609.10355v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T08:12:59+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2546,6 +2519,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.json",
       "worker_run_key": "20261030-1616-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.11602",
+      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
+      "source_url": "https://arxiv.org/pdf/2510.11602",
+      "returned_at": "2026-10-30T08:23:49+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5999,
+        "body_paragraphs": 30,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 578,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.json",
+      "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
     }
   ]
 }

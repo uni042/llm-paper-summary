@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "0b4a2e00ed2a99aa702fb6f3f1700df64361f2ef1a2610411b22272593f895a7",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.md",
+  "canonical_id": "arXiv:2510.11602",
+  "worker_completed_at": "2026-10-30T16:32:25+09:00",
+  "worker_run_key": "20261030-1616-scheduled-chat-45/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5999,
+    "body_paragraphs": 30,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 0,
+    "limitation_chars": 578,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 0 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-30T08:23:49+00:00"
+}
