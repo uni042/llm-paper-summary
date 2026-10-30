@@ -897,7 +897,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-05 · [SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference](2026-41074c82c154-semantickv-a-semantics-driven-kv-cache-eviction-framework-for-efficient-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  SemanticKVは、長い入力プロンプトを処理するプリフィル段階で、後続の生成に必要なKVキャッシュだけを残す方式である。著者らは、元のKVキャッシュの20%だけを残す条件で、Llama3.1-8B-InstructのInfiniteBench長文脈タスクを評価した。
+  入力が数万から十万トークン規模になると、KV保存量だけでなく、各生成トークンで過去文脈へ注意を計算する時間が問題になる。単純な直近窓だけを残す方式では、文書の中盤にある重要な条件や事実が失われる。
 
 - **2026-05 · [Scratchpad Patching: Decoupling Compute from Patch Size in Byte-Level Language Models](2026-2605.09630-scratchpad-patching-decoupling-compute-from-patch-size-in-byte-level-lan.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

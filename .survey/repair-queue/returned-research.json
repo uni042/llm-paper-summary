@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T16:56:41+00:00",
+  "generated_at": "2026-10-30T18:51:00+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 85,
+  "count": 84,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1790,34 +1790,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54b9b9c6e310--libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-54b9b9c6e310--libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r.json",
       "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T03:10:08+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 416 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6686,
-        "body_paragraphs": 35,
-        "method_chars": 1881,
-        "method_paragraphs": 10,
-        "evaluation_chars": 416,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 416 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-fefd82468bed--libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-fefd82468bed--libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-sche.json",
-      "worker_run_key": "20261030-1132-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
