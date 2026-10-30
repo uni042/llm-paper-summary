@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-feca65a0b064b686-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.16047",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.16047",
+    "identity_tokens": [
+      "arXiv:2511.16047"
+    ],
+    "reason": "arXiv一次要旨。next-scale predictionを行う画像生成VAR Transformerのスケール別KV cache圧縮を提案し、画像生成でKV 84.83%削減とattention latency60.48%減を報告する。対象は画像生成専用モデルであり、言語LLM・VLMのテキスト生成推論やサービングではないため対象外。",
+    "first_checked_at": "2026-10-30T15:55:59+00:00",
+    "last_checked_at": "2026-10-30T15:55:59+00:00",
+    "linked_from": [],
+    "title": "AMS-KV: Adaptive KV Caching in Multi-Scale Visual Autoregressive Transformers"
+  },
+  "processed_at": "2026-10-30T15:55:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-feca65a0b064",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

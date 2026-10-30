@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-feca65a0b064b686-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.01343",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.01343",
+    "identity_tokens": [
+      "arXiv:2512.01343"
+    ],
+    "reason": "arXiv一次要旨。校正データなしでSVD主成分に沿った重要重みをFP32で保護し、残差を低ビット化するmixed-precision PTQを提案。ただし実験はDistilBERTによるGLUE分類が中心で、生成LLMのdecode性能やメモリ帯域削減の実証はない。量子化の着想は関連するが対象検証が不足するためborderline。",
+    "first_checked_at": "2026-10-30T15:55:58+00:00",
+    "last_checked_at": "2026-10-30T15:55:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Intrinsic Structure as a Proxy for Saliency: SVD-Based Weight Preservation for Mixed-Precision Quantization in Large Language Models"
+  },
+  "processed_at": "2026-10-30T15:55:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-feca65a0b064",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

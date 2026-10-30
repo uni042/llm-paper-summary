@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T14:55:33+00:00",
-  "record_count": 5520,
+  "updated_at": "2026-10-30T15:55:58+00:00",
+  "record_count": 5523,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85353,6 +85353,45 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Meta-Attention: Bayesian Per-Token Routing for Efficient Transformer Inference"
+    },
+    "arXiv:2605.08966": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.08966",
+      "identity_tokens": [
+        "arXiv:2605.08966"
+      ],
+      "reason": "arXiv一次要旨。各トークンに学習可能な分数階のべき乗保持カーネルを割り当て、Gauss–Laguerre求積による指数和近似でMarkov型再帰へ変換する。定数状態の系列演算・効率的検索という推論アーキテクチャ上の接点はあるが、評価はZipf検索とentity label-copyの合成課題で、生成LLMの実機復号・サービング性能は要旨で未確認のためborderline。",
+      "first_checked_at": "2026-10-30T15:55:56+00:00",
+      "last_checked_at": "2026-10-30T15:55:56+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "VORT: Adaptive Power-Law Memory for NLP Transformers"
+    },
+    "arXiv:2507.09428": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09428",
+      "identity_tokens": [
+        "arXiv:2507.09428"
+      ],
+      "reason": "arXiv一次要旨。情報幾何学と低ランク作用素分解の観点から、事前学習モデル圧縮におけるdivergence、fine-tuning時のtrainability、反復特異値閾値法の収束を理論化する。モデル圧縮の一般理論として参考になるが、生成LLMの具体的な推論メモリ・latency・throughput評価は要旨で確認できないためborderline。",
+      "first_checked_at": "2026-10-30T15:55:58+00:00",
+      "last_checked_at": "2026-10-30T15:55:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "On Information Geometry and Iterative Optimization in Model Compression: Operator Factorization"
+    },
+    "arXiv:2512.01343": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.01343",
+      "identity_tokens": [
+        "arXiv:2512.01343"
+      ],
+      "reason": "arXiv一次要旨。校正データなしでSVD主成分に沿った重要重みをFP32で保護し、残差を低ビット化するmixed-precision PTQを提案。ただし実験はDistilBERTによるGLUE分類が中心で、生成LLMのdecode性能やメモリ帯域削減の実証はない。量子化の着想は関連するが対象検証が不足するためborderline。",
+      "first_checked_at": "2026-10-30T15:55:58+00:00",
+      "last_checked_at": "2026-10-30T15:55:58+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Intrinsic Structure as a Proxy for Saliency: SVD-Based Weight Preservation for Mixed-Precision Quantization in Large Language Models"
     }
   }
 }

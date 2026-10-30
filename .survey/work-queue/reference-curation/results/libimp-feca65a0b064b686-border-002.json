@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-feca65a0b064b686-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.09428",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.09428",
+    "identity_tokens": [
+      "arXiv:2507.09428"
+    ],
+    "reason": "arXiv一次要旨。情報幾何学と低ランク作用素分解の観点から、事前学習モデル圧縮におけるdivergence、fine-tuning時のtrainability、反復特異値閾値法の収束を理論化する。モデル圧縮の一般理論として参考になるが、生成LLMの具体的な推論メモリ・latency・throughput評価は要旨で確認できないためborderline。",
+    "first_checked_at": "2026-10-30T15:55:58+00:00",
+    "last_checked_at": "2026-10-30T15:55:58+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "On Information Geometry and Iterative Optimization in Model Compression: Operator Factorization"
+  },
+  "processed_at": "2026-10-30T15:55:58+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-feca65a0b064",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

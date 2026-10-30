@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T13:55:19+00:00",
-  "record_count": 12604,
+  "updated_at": "2026-10-30T15:55:59+00:00",
+  "record_count": 12616,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181368,6 +181368,150 @@
       "last_checked_at": "2026-10-30T13:55:19+00:00",
       "linked_from": [],
       "title": "Tesserae: Scalable Placement Policies for Deep Learning Workloads"
+    },
+    "DOI:10.1109/tcsvt.2025.3586550": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tcsvt.2025.3586550",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3586550"
+      ],
+      "reason": "タイトルが明示する研究対象はVision TransformerのSparse-to-Dense学習方式であり、LLM推論サービング、生成時のメモリ・カーネル最適化を示していない。",
+      "first_checked_at": "2026-10-30T15:55:51+00:00",
+      "last_checked_at": "2026-10-30T15:55:51+00:00",
+      "linked_from": [],
+      "title": "Sparse-to-Dense Training: A Novel Training Scheme to Enhance Vision Transformers"
+    },
+    "arXiv:2606.05703": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.05703",
+      "identity_tokens": [
+        "arXiv:2606.05703"
+      ],
+      "reason": "タイトルが明示する高速化対象は自己回帰画像生成であり、言語モデルの生成・LLM推論サービングではない。LLM推論への転用はタイトルから確認できないため、対象外の画像生成論文として先行除外する。",
+      "first_checked_at": "2026-10-30T15:55:51+00:00",
+      "last_checked_at": "2026-10-30T15:55:51+00:00",
+      "linked_from": [],
+      "title": "Parallel Jacobi Decoding for Fast Autoregressive Image Generation"
+    },
+    "DOI:10.1016/j.neucom.2026.133975": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.133975",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.133975"
+      ],
+      "reason": "worklistタイトルが示す対象は拡散Transformerの活性動態同期と量子化であり、自己回帰LLM推論、KVキャッシュ、LLMサービング、LLM重み圧縮の直接対象ではない。一次要旨は未読のタイトル段階での可逆的除外。",
+      "first_checked_at": "2026-10-30T15:55:52+00:00",
+      "last_checked_at": "2026-10-30T15:55:52+00:00",
+      "linked_from": [],
+      "title": "SyncQ-DiT: Synchronizing activation dynamics for quantizing diffusion transformers"
+    },
+    "DOI:10.1109/tnnls.2022.3185295": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/tnnls.2022.3185295",
+      "identity_tokens": [
+        "DOI:10.1109/tnnls.2022.3185295"
+      ],
+      "reason": "タイトルの対象は文書分類向けGraph Convolutional Networkであり、生成LLMの推論・サービング最適化ではない。",
+      "first_checked_at": "2026-10-30T15:55:52+00:00",
+      "last_checked_at": "2026-10-30T15:55:52+00:00",
+      "linked_from": [],
+      "title": "Hierarchical Graph Convolutional Networks for Structured Long Document Classification"
+    },
+    "DOI:10.11591/ijeecs.v41.i2.pp753-763": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.11591/ijeecs.v41.i2.pp753-763",
+      "identity_tokens": [
+        "DOI:10.11591/ijeecs.v41.i2.pp753-763"
+      ],
+      "reason": "タイトルの対象はCNN層のconvolutionであり、生成LLM推論に直接関係する内容が示されないため対象外。",
+      "first_checked_at": "2026-10-30T15:55:53+00:00",
+      "last_checked_at": "2026-10-30T15:55:53+00:00",
+      "linked_from": [],
+      "title": "RAC: a reusable adaptive convolution for CNN layer"
+    },
+    "arXiv:2505.16335": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16335",
+      "identity_tokens": [
+        "arXiv:2505.16335"
+      ],
+      "reason": "タイトルの対象は画像の自己回帰生成モデルとFPGA設計であり、言語生成LLMやMLLMの推論システムではない。",
+      "first_checked_at": "2026-10-30T15:55:53+00:00",
+      "last_checked_at": "2026-10-30T15:55:53+00:00",
+      "linked_from": [],
+      "title": "FPQVAR: Floating Point Quantization for Visual Autoregressive Model with FPGA Hardware Co-design"
+    },
+    "arXiv:2501.01951": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.01951",
+      "identity_tokens": [
+        "arXiv:2501.01951"
+      ],
+      "reason": "タイトルが明示する対象はGraph Convolutional Networkの分散学習であり、生成LLM推論・サービングではない。",
+      "first_checked_at": "2026-10-30T15:55:54+00:00",
+      "last_checked_at": "2026-10-30T15:55:54+00:00",
+      "linked_from": [],
+      "title": "MixGCN: Scalable GCN Training by Mixture of Parallelism and Mixture of Accelerators"
+    },
+    "arXiv:2303.02331": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.02331",
+      "identity_tokens": [
+        "arXiv:2303.02331"
+      ],
+      "reason": "タイトルが明示する対象はVision Transformerの視覚特徴処理で、LLM・MLLMの生成時推論ではない。単体ViTの加速研究として先行除外する。",
+      "first_checked_at": "2026-10-30T15:55:54+00:00",
+      "last_checked_at": "2026-10-30T15:55:54+00:00",
+      "linked_from": [],
+      "title": "Training-Free Acceleration of ViTs with Delayed Spatial Merging"
+    },
+    "DOI:10.1145/3774934.3786445": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774934.3786445",
+      "identity_tokens": [
+        "DOI:10.1145/3774934.3786445"
+      ],
+      "reason": "タイトルが明示する対象は分散学習のpartitioningとcheckpointingであり、LLMの生成推論効率化・サービングではない。",
+      "first_checked_at": "2026-10-30T15:55:54+00:00",
+      "last_checked_at": "2026-10-30T15:55:54+00:00",
+      "linked_from": [],
+      "title": "Elastor: Elastic and Efficient Model Partitioning and Checkpointing for Fault-Tolerant Distributed Training"
+    },
+    "DOI:10.1155/int/9939880": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1155/int/9939880",
+      "identity_tokens": [
+        "DOI:10.1155/int/9939880"
+      ],
+      "reason": "タイトルの対象は偽造品識別のアプリケーションであり、LLM生成推論の計算・メモリ効率化ではない。",
+      "first_checked_at": "2026-10-30T15:55:55+00:00",
+      "last_checked_at": "2026-10-30T15:55:55+00:00",
+      "linked_from": [],
+      "title": "CGMamba: Intelligent Identification of Counterfeit Goods Based on State Space Models"
+    },
+    "arXiv:2504.14371": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.14371",
+      "identity_tokens": [
+        "arXiv:2504.14371"
+      ],
+      "reason": "タイトルの対象はpoint cloud解析用のspiking modelであり、生成LLM推論やサービングではない。",
+      "first_checked_at": "2026-10-30T15:55:55+00:00",
+      "last_checked_at": "2026-10-30T15:55:55+00:00",
+      "linked_from": [],
+      "title": "Efficient Spiking Point Mamba for Point Cloud Analysis"
+    },
+    "arXiv:2511.16047": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.16047",
+      "identity_tokens": [
+        "arXiv:2511.16047"
+      ],
+      "reason": "arXiv一次要旨。next-scale predictionを行う画像生成VAR Transformerのスケール別KV cache圧縮を提案し、画像生成でKV 84.83%削減とattention latency60.48%減を報告する。対象は画像生成専用モデルであり、言語LLM・VLMのテキスト生成推論やサービングではないため対象外。",
+      "first_checked_at": "2026-10-30T15:55:59+00:00",
+      "last_checked_at": "2026-10-30T15:55:59+00:00",
+      "linked_from": [],
+      "title": "AMS-KV: Adaptive KV Caching in Multi-Scale Visual Autoregressive Transformers"
     }
   }
 }
