@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2100-scheduled-chat-00/r04",
+  "reference_main_sha": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.11415",
+      "identity_tokens": [
+        "arXiv:2505.11415"
+      ],
+      "title": "MoE-CAP: Benchmarking Cost, Accuracy and Performance of Sparse Mixture-of-Experts Systems",
+      "reason": "MoE推論システムのCost・Accuracy・Performanceの三者間トレードオフを、従来のFLOPs中心指標では把握できないと分析するベンチマーク。Sparse Memory Bandwidth Utilization（S-MBU）とSparse Model FLOPS Utilization（S-MFU）を導入し、ハードウェアや展開条件によるMoEの効率を測定する。疎な専門家モデルの実装評価に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2505.11415",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 242,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.02847",
+      "identity_tokens": [
+        "arXiv:2506.02847"
+      ],
+      "title": "CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge",
+      "reason": "CLONEはエッジLLMで遅延・消費電力・精度を同時に考慮し、モデル側とシステム側の協調最適化を28nmのスケーラブルな専用アクセラレータへ実装する。市販エッジ端末2種での評価を行い、一次要旨では推論最大11.92倍高速化・消費エネルギー最大7.36倍削減を報告。エッジLLM推論の実機最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2506.02847",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 245,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.01296",
+      "identity_tokens": [
+        "arXiv:2610.01296"
+      ],
+      "title": "ITC-MoE: Importance-guided Token-aware Compression for MoE Diffusion Language Models",
+      "reason": "MoE型拡散言語モデルのexpert重みを、入力・出力・expertモード間の冗長性と感度に応じてTucker分解し、重要度に基づきrankを配分するIATCを提案。さらにTCRがhot tokenに低ランク補償を与え、cold tokenのexpert候補を制限する。重み容量削減とtoken別ルーティング計算削減を組み合わせたMoE-DLM推論効率化である。",
+      "source_url": "https://arxiv.org/abs/2610.01296",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 246,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.02406",
+      "identity_tokens": [
+        "arXiv:2502.02406"
+      ],
+      "title": "LV-XAttn: Distributed Cross-Attention for Long Visual Inputs in Multimodal Large Language Models",
+      "reason": "大量の視覚KVに対しqueryが小さいというMLLM cross-attentionの非対称性を利用するLV-XAttn。GPU間で巨大なKVを交換せず各GPUに保持し、比較的小さなqueryブロックを交換する厳密な分散cross-attentionを設計する。activation再計算で長い視覚文脈を支援し、Llama 3-V・mPLUG-Owl3・OpenFlamingoの評価で一次要旨は最大10.62倍のend-to-end高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2502.02406",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 247,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.10050",
+      "identity_tokens": [
+        "arXiv:2605.10050"
+      ],
+      "title": "EchoPrune: Interpreting Redundancy as Temporal Echoes for Efficient VideoLLMs",
+      "reason": "EchoPruneは隣接フレームの視覚トークンを対応付け、前フレームから再構成可能なトークンを時間的echoとみなす。queryとの関連性と対応・echo matchingに基づく時間再構成誤差で新規イベントを優先し、同じ視覚トークン予算でより多くのフレームを処理する。LLaVA-OV・Qwen2.5VL・Qwen3VLの動画理解で評価されるtraining-freeなVideoLLM推論圧縮。",
+      "source_url": "https://arxiv.org/abs/2605.10050",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 251,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.19645",
+      "identity_tokens": [
+        "arXiv:2509.19645"
+      ],
+      "title": "Are We Scaling the Right Thing? A System Perspective on Test-Time Scaling",
+      "reason": "LLM推論時のtest-time scalingを、単なる計算量最適のPareto前線ではなく、実際の遅延・token当たり費用・tensor parallelism・speculative decodingの影響から比較するシステム視点の分析。一次要旨は予備的評価と問題提起の性格を明示しており、新しい高速化アルゴリズムではないが、推論基盤の性能評価・資源配分に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2509.19645",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 252,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.30310",
+      "identity_tokens": [
+        "arXiv:2608.30310"
+      ],
+      "title": "Tail-Replay: Escaping the Curse of Linear Attention in Prefix Caching for Hybrid LLMs",
+      "reason": "full-attentionとlinear-attentionを混在させるLLMでは、前者のKVはトークン境界で再利用できる一方、後者の再帰状態は任意境界へ戻せずcheckpointが必要となる。Tail-Replayは線形注意の古い入力の寄与が減衰する性質を利用し、prefix hit時に最近の短いsuffixだけを再実行して再帰状態を近似復元する。checkpointを省いてtoken単位のprefix再利用を可能にする推論キャッシュ方式。",
+      "source_url": "https://arxiv.org/abs/2608.30310",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 254,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38832",
+      "identity_tokens": [
+        "arXiv:2609.38832"
+      ],
+      "title": "Scaling Parameter and Context in Attention: Native Sparse Attention from Mixture-of-Head",
+      "reason": "NAMOHはH個のattention headのうち各tokenでK個だけを起動し、各headには割り当てられたtokenのKV履歴だけを保持する。head選択が有効パラメータとアクセス可能な文脈を同時に決め、K固定でHを増やすとhead当たり履歴とKVアクセスを短縮する。head相対RoPEも導入し、GQA等と共存する長文脈LLMの疎注意推論方式。",
+      "source_url": "https://arxiv.org/abs/2609.38832",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 257,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.07740",
+      "identity_tokens": [
+        "arXiv:2607.07740"
+      ],
+      "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
+      "reason": "Jet-Longは短距離の元RoPEを維持する窓と、現在系列長に応じ解析的にrescaleする長距離窓を組み合わせ、inclusion-exclusionでattentionを統合する。on-the-fly RoPE補正とfused CuTeカーネルでH100の64K〜128K prefill時にFlashAttention-3の83〜88%のスループットを維持し、Qwen3-8B decodeでは1.04〜1.08倍と一次要旨にある。長文脈品質と実装効率を両立する。",
+      "source_url": "https://arxiv.org/abs/2607.07740",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 259,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.23049",
+      "identity_tokens": [
+        "arXiv:2512.23049"
+      ],
+      "title": "Accelerating Language Model Workflows with Prompt Choreography",
+      "reason": "Prompt Choreographyは複数LLM呼出しを跨ぐglobal KV cacheを維持し、各呼出しが既符号化messageの任意の並べ替えsubsetへattentionできるようにする。並列呼出しも許す一方、元の再符号化と結果が変わり得るため、cacheを前提としたfine-tuningで品質を回復する。一次要旨ではmessage当たりTTFTが2.0〜6.2倍、冗長計算が支配的なworkflowでend-to-end 2.2倍超の高速化。",
+      "source_url": "https://arxiv.org/abs/2512.23049",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 260,
+      "origin": "discovery_worklist_abstract"
+    }
+  ]
+}
