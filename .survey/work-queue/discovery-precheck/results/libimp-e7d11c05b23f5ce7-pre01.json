@@ -1,0 +1,962 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e7d11c05b23f5ce7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e7d11c05b23f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1609/aaai.v40i27.39425",
+    "arXiv:2510.26446",
+    "arXiv:2511.18920",
+    "arXiv:2601.14277",
+    "arXiv:2603.16219",
+    "arXiv:2604.16734",
+    "arXiv:2605.05023",
+    "arXiv:2606.30217",
+    "arXiv:2609.14706",
+    "arXiv:2609.34680"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:53.449300+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1609/aaai.v40i27.39425",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.26446",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.18920",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.14277",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.16219",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.16734",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.05023",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.30217",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.14706",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34680",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct",
+      "source_url": "https://arxiv.org/abs/2601.14277",
+      "year": 2026,
+      "published": "2026-01-11",
+      "venue": "arXiv.org",
+      "citation_count": 18,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is a practical technique for making large language models easier to deploy by reducing the precision used to store and operate on model weights. This can lower memory use and improve runtime feasibility on constrained hardware, which is especially relevant for users running models locally. Quantization in llama.cpp enables large language models to run on commodity hardware, but available formats are often evaluated inconsistently, making it hard to choose among schemes. We present a unified empirical study of the llama.cpp quantization on a single modern model, Llama-3.1-8B-Instruct (FP16, GGUF), covering 3-8 bit K-quant and legacy formats. We evaluate downstream task performance across standard reasoning, knowledge, instruction-following, and truthfulness benchmarks, and also measure perplexity and CPU throughput (prefill/decoding) alongside model size, compression, and quantization time. Ultimately, this work is a practical guide for choosing a llama.cpp quantization scheme, helping readers make informed, context-aware decisions for their intended use and resource budget.",
+      "identifiers": [
+        "SemanticScholar:62fd0a40a4bbff14c554a9804c6d39f28c4cd1bb"
+      ],
+      "semantic_scholar_id": "62fd0a40a4bbff14c554a9804c6d39f28c4cd1bb",
+      "canonical_id": "arXiv:2601.14277",
+      "arxiv_id": "2601.14277",
+      "doi": "10.48550/arXiv.2601.14277",
+      "authors": [
+        "Uygar Kurt"
+      ],
+      "priority": 118,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 18,
+        "citation_count": 18,
+        "total": 118,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 292,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+      "source_url": "https://arxiv.org/abs/2605.05023",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Efficient CUDA implementations of attention mechanisms are critical to modern deep learning systems, yet supporting diverse and evolving attention variants remains challenging. Existing frameworks and compilers trade performance for flexibility, while expert-written kernels achieve high efficiency but are difficult to adapt. Recent work explores large language models (LLMs) for GPU kernel generation, but prior studies report unstable correctness and significant performance gaps for complex operators such as attention. We present CuBridge, an LLM-based framework that adapts expert-written attention kernels through a structured lift-transfer-lower workflow. CuBridge starts from expert-written CUDA attention kernels and lifts them into an executable intermediate representation that makes execution orchestration explicit while abstracting low-level CUDA syntax. Given a user-provided PyTorch specification, CuBridge generates and verifies a target IR program, then reconstructs optimized CUDA code via reference-guided lowering. Across diverse attention variants and GPU platforms, CuBridge consistently produces correct kernels and substantially outperforms general frameworks, compiler-based approaches, and prior LLM-based methods.",
+      "identifiers": [
+        "SemanticScholar:89c891ca4dfded59bb90cc1f15bb06d36e767543"
+      ],
+      "semantic_scholar_id": "89c891ca4dfded59bb90cc1f15bb06d36e767543",
+      "canonical_id": "arXiv:2605.05023",
+      "arxiv_id": "2605.05023",
+      "doi": "10.18653/v1/2026.acl-long.500",
+      "authors": [
+        "Xing-Chen Ma",
+        "Yang-Jie Zhou",
+        "Wu Sun",
+        "Zi-Han Liu",
+        "Jingwen Leng",
+        "Yun Lin",
+        "Shixuan Sun",
+        "Min-Yi Guo",
+        "Jingyao Dong"
+      ],
+      "priority": 114,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 114,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+      "source_url": "https://arxiv.org/abs/2603.16219",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+      "identifiers": [
+        "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+      ],
+      "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+      "canonical_id": "arXiv:2603.16219",
+      "arxiv_id": "2603.16219",
+      "doi": "10.48550/arXiv.2603.16219",
+      "authors": [
+        "Hang Lv",
+        "Sheng Liang",
+        "Hao Wang",
+        "Yong-Yue Zhang",
+        "Hongchao Gu",
+        "Wei Guo",
+        "De-Fu Lian",
+        "Yong Liu",
+        "En-Hong Chen"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 227,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+      "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern foundation models such as large language models (LLMs) require a massive amount of computational and memory resources. We propose a new framework to convert such LLMs into a reduced-dimension latent structure. Our method extends a local activation-aware tensor decomposition to a global attention-aware joint tensor decomposition. Our framework can significantly improve the model accuracy over the existing model compression methods when reducing the latent dimension to realize computationally/memory-efficient LLMs. We show the benefit on several benchmark including multi-modal reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677"
+      ],
+      "semantic_scholar_id": "4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+      "doi": "10.1609/aaai.v40i27.39425",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+      "authors": [
+        "T. Koike-Akino",
+        "Xiangyu Chen",
+        "Jing Liu",
+        "Ye Wang",
+        "Pu Wang",
+        "Matthew Brand"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 230,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EventSTU: Event-Guided Efficient Spatio-Temporal Understanding for Video Large Language Models",
+      "source_url": "https://arxiv.org/abs/2511.18920",
+      "year": 2025,
+      "published": "2025-11-24",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Video large language models have demonstrated strong video understanding capabilities but suffer from high inference costs due to the massive number of tokens in long videos. Inspired by event-based vision, we propose an event-guided, training-free framework for efficient spatio-temporal understanding, named EventSTU. In the temporal domain, we design a coarse-to-fine keyframe sampling algorithm that exploits the change-triggered property of event cameras to eliminate redundant frames. In the spatial domain, we design an adaptive token pruning algorithm that leverages the visual saliency of events as a zero-cost prior to guide spatial reduction. From a holistic spatio-temporal perspective, we further integrate question relevance from keyframe sampling to adaptively allocate token pruning budgets. To facilitate evaluation, we construct EventBench, the first event-inclusive, human-annotated multimodal benchmark that covers diverse real-world scenarios. Beyond physical event cameras, EventSTU also supports general video understanding using simulated events. Comprehensive experiments show that EventSTU achieves 3.01x FLOPs reduction and 3.10x prefilling speedup over the strongest baseline while still improving performance.",
+      "identifiers": [
+        "SemanticScholar:4395804472e3fa9db05fc9d6ce992e1d512fd838"
+      ],
+      "semantic_scholar_id": "4395804472e3fa9db05fc9d6ce992e1d512fd838",
+      "canonical_id": "arXiv:2511.18920",
+      "arxiv_id": "2511.18920",
+      "doi": "10.48550/arXiv.2511.18920",
+      "authors": [
+        "Wenhao Xu",
+        "Xin Dong",
+        "Yue Li",
+        "Hao-Yuan Shi",
+        "Zhi-Wei Xiong"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 340,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WaterKron and FlipFlop Hessian: Information-Theoretically Grounded Quantization with Kronecker-factored Hessians",
+      "source_url": "https://arxiv.org/abs/2609.14706",
+      "year": 2026,
+      "published": "2026-09-13",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How should a Kronecker-factored Hessian approximation be chosen for post-training quantization? We address this question through WaterKron, which combines two-sided GPTQ with row- and column-dependent waterfilling scales and entropy coding. We derive its high-rate distortion with respect to the full Hessian using an explicit Kronecker-Hessian mismatch factor $\\Phi$. This factor quantifies the asymptotic distortion penalty due to the Kronecker Hessian approximation and provides a criterion for selecting the factors optimally. Minimizing $\\Phi$ leads to a Gaussian covariance-fitting problem with classical ``flip-flop''updates. We thus give a rate-distortion justification for using the resulting FlipFlop Hessian in quantization. We evaluate it empirically, finding that the FlipFlop Hessian consistently improves KL divergence and perplexity over input-only, marginal, and Frobenius-based Hessian choices.",
+      "identifiers": [
+        "SemanticScholar:52b086b9c9b99d5753c0024e9e2b792148a28be2"
+      ],
+      "semantic_scholar_id": "52b086b9c9b99d5753c0024e9e2b792148a28be2",
+      "canonical_id": "arXiv:2609.14706",
+      "arxiv_id": "2609.14706",
+      "authors": [
+        "Johann Birnick",
+        "R. Saab"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines",
+      "source_url": "https://arxiv.org/abs/2604.16734",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have recently demonstrated strong capabilities in understanding and generating responses from diverse visual inputs, including high-resolution images and long video sequences. As these models scale to richer visual representations, inference increasingly relies on storing large numbers of vision tokens in the key-value (KV) cache, making memory consumption a central bottleneck. Existing methods address this issue by identifying redundancy in vision tokens and compressing the cache, but such compression is typically applied only after all inputs are processed, resulting in high peak memory usage during the prefill stage. In this work, we show that MLLMs exhibit inherent structural regularities and representational redundancy that can be exploited to control memory growth throughout inference. Based on this insight, we propose a sequential input-compression mechanism that enforces a fixed memory budget by performing structure-aware key-value cache compression during the prefill process. This approach substantially reduces peak memory usage while maintaining generative performance with only minimal degradation, enabling more practical and memory-efficient multimodal inference.",
+      "identifiers": [
+        "SemanticScholar:8b6e0c1553449c9d5191ab4c3cf1252a77cd4653"
+      ],
+      "semantic_scholar_id": "8b6e0c1553449c9d5191ab4c3cf1252a77cd4653",
+      "canonical_id": "arXiv:2604.16734",
+      "arxiv_id": "2604.16734",
+      "doi": "10.48550/arXiv.2604.16734",
+      "authors": [
+        "Junwan Kim",
+        "Hyunkyung Bae"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 196,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.26446",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in language comprehension and generation; however, their widespread adoption is constrained by substantial bandwidth and computational demands. While pruning and low-rank approximation have each demonstrated promising performance individually, their synergy for LLMs remains underexplored. We introduce \\underline{S}ynergistic \\underline{S}parse and \\underline{L}ow-Rank \\underline{C}ompression (SSLC) methods for LLMs, which leverages the strengths of both techniques: low-rank approximation compresses the model by retaining its essential structure with minimal information loss, whereas sparse optimization eliminates non-essential weights, preserving those crucial for generalization. Based on theoretical analysis, we first formulate the low-rank approximation and sparse optimization as a unified problem and solve it by iterative optimization algorithm. Experiments on LLaMA and Qwen2.5 models (7B-70B) show that SSLC, without any additional training steps, consistently surpasses standalone methods, achieving state-of-the-arts results. Notably, SSLC compresses Qwen2.5 by 50\\% with no performance drop and achieves at least 1.63$\\times$ speedup, offering a practical solution for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6"
+      ],
+      "semantic_scholar_id": "c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6",
+      "canonical_id": "arXiv:2510.26446",
+      "arxiv_id": "2510.26446",
+      "doi": "10.18653/v1/2025.findings-emnlp.765",
+      "authors": [
+        "Zeliang Zong",
+        "Kai Zhang",
+        "Zhe-Yang Li",
+        "Wen-Ming Tan",
+        "Ye Ren",
+        "Yiyan Zhai",
+        "Ji-Lin Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 365,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Before Thinking, Learn to Decide: Proactive Routing for Efficient Visual Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.30217",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large multimodal models have achieved strong reasoning on complex visual tasks, but their inference efficiency is often restricted by long chains of thought. A promising solution is to pair a small draft model with a large target model, enabling cooperative inference employing a routing signal that adaptively routes queries to either the draft or target model based on their difficulties for optimal efficiency and accuracy. Yet, the remaining bottleneck is to establish a reliable query difficulty signal under multimodal settings. Existing approaches designed for language models either rely on post-hoc token probabilities, which fall short in multimodal scenarios, or depend on supervised fine-tuning, which is a data-sensitive strategy. Both paradigms perform routing only after a complete output, and ignore whether the target model can actually solve the routed instances. To address this, we propose PRP, a Proactive Routing Paradigm that enables early decision-making by jointly evaluating the competence of both the draft and target models. Our Draft Rating Learning (DRL) equips the draft model with an internal confidence estimator, while Joint Rating Learning (JRL) predicts how well the target model can handle a given query, thereby prioritizing the allocation of samples it excels at rather than the hardest ones. These ratings enable fine-grained, instance-level \\textbf{Proactive Routing} and substantially accelerate inference without compromising overall performance. Extensive experiments across multiple multimodal reasoning benchmarks validate our effectiveness and efficiency.",
+      "identifiers": [
+        "SemanticScholar:8ed5f7eeea7248c4213f93fd4e3e84b314e39075"
+      ],
+      "semantic_scholar_id": "8ed5f7eeea7248c4213f93fd4e3e84b314e39075",
+      "canonical_id": "arXiv:2606.30217",
+      "arxiv_id": "2606.30217",
+      "doi": "10.48550/arXiv.2606.30217",
+      "authors": [
+        "Yinan Zhou",
+        "Haokun Lin",
+        "Yi-Chen Wu",
+        "Caifeng Shan",
+        "Zhe-Nan Sun",
+        "Yu-Xin Chen",
+        "Teng Wang",
+        "Chen Ma",
+        "Li Zhu",
+        "Shan Ying"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2609.34680",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Four-bit post-training quantization can reduce the memory demands of large language models, but preserving accuracy under strict MXFP4 W4A4 requires coordinating several design choices. Coordinate transforms change block-encoding errors, which in turn affect the residuals propagated through the network. The useful algorithmic decomposition is therefore not fully known before search. LLM-driven program evolution offers a way to explore these choices, but performance scores alone do not explain which design should change next. We introduce QuantForge, a PTQ discovery system that records competing explanations, selects controls that distinguish them, and checks that successor code implements the resulting conclusions. This residual compilation guides program revisions while retaining useful programs even when their original explanations are rejected. Remeasuring the revised program reveals the next error to address. This process discovers HiRes, a fixed MXFP4 quantizer that shapes coordinates, refines legal code assignments, and recovers errors along attention and MLP paths. Each stage acts on residuals measured after the preceding stage has executed. Across seven tasks, HiRes achieves the lowest seven-model Robust Fit (0.09300) and the lowest quantized Fit-7 at 32B. In matched-budget comparisons of LLM-driven program evolution, each with 240 evaluator calls, QuantForge reaches a held-out transfer target in six of eight runs, compared with three each for textual memory and reflection memory, and one for score-only evolution, despite evaluating fewer new programs. These results show that QuantForge improves the discovery of transferable PTQ algorithms by turning controlled evidence into subsequent program changes. We have open-sourced the QuantForge search framework.",
+      "identifiers": [
+        "SemanticScholar:9c70fbb08270465844b6991ea6e05b7e40e16cd1"
+      ],
+      "semantic_scholar_id": "9c70fbb08270465844b6991ea6e05b7e40e16cd1",
+      "canonical_id": "arXiv:2609.34680",
+      "arxiv_id": "2609.34680",
+      "authors": [
+        "Qiu-Lin Shang",
+        "Zhou-Tong Wu",
+        "Jie Hu",
+        "Kun Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.14277",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.14277",
+        "id:SemanticScholar:62fd0a40a4bbff14c554a9804c6d39f28c4cd1bb",
+        "id:arXiv:2601.14277",
+        "title:which quantization should i use a unified evaluation of llamacpp quantization on llama318binstruct",
+        "url:https://arxiv.org/abs/2601.14277"
+      ],
+      "record": {
+        "title": "Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct",
+        "source_url": "https://arxiv.org/abs/2601.14277",
+        "year": 2026,
+        "published": "2026-01-11",
+        "venue": "arXiv.org",
+        "citation_count": 18,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is a practical technique for making large language models easier to deploy by reducing the precision used to store and operate on model weights. This can lower memory use and improve runtime feasibility on constrained hardware, which is especially relevant for users running models locally. Quantization in llama.cpp enables large language models to run on commodity hardware, but available formats are often evaluated inconsistently, making it hard to choose among schemes. We present a unified empirical study of the llama.cpp quantization on a single modern model, Llama-3.1-8B-Instruct (FP16, GGUF), covering 3-8 bit K-quant and legacy formats. We evaluate downstream task performance across standard reasoning, knowledge, instruction-following, and truthfulness benchmarks, and also measure perplexity and CPU throughput (prefill/decoding) alongside model size, compression, and quantization time. Ultimately, this work is a practical guide for choosing a llama.cpp quantization scheme, helping readers make informed, context-aware decisions for their intended use and resource budget.",
+        "identifiers": [
+          "SemanticScholar:62fd0a40a4bbff14c554a9804c6d39f28c4cd1bb"
+        ],
+        "semantic_scholar_id": "62fd0a40a4bbff14c554a9804c6d39f28c4cd1bb",
+        "canonical_id": "arXiv:2601.14277",
+        "arxiv_id": "2601.14277",
+        "doi": "10.48550/arXiv.2601.14277",
+        "authors": [
+          "Uygar Kurt"
+        ],
+        "priority": 118,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 18,
+          "citation_count": 18,
+          "total": 118,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 292,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.05023",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.500",
+        "id:SemanticScholar:89c891ca4dfded59bb90cc1f15bb06d36e767543",
+        "id:arXiv:2605.05023",
+        "title:cubridge an llmbased framework for understanding and reconstructing highperformance attention kernels",
+        "url:https://arxiv.org/abs/2605.05023"
+      ],
+      "record": {
+        "title": "CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels",
+        "source_url": "https://arxiv.org/abs/2605.05023",
+        "year": 2026,
+        "published": "2026-05-06",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Efficient CUDA implementations of attention mechanisms are critical to modern deep learning systems, yet supporting diverse and evolving attention variants remains challenging. Existing frameworks and compilers trade performance for flexibility, while expert-written kernels achieve high efficiency but are difficult to adapt. Recent work explores large language models (LLMs) for GPU kernel generation, but prior studies report unstable correctness and significant performance gaps for complex operators such as attention. We present CuBridge, an LLM-based framework that adapts expert-written attention kernels through a structured lift-transfer-lower workflow. CuBridge starts from expert-written CUDA attention kernels and lifts them into an executable intermediate representation that makes execution orchestration explicit while abstracting low-level CUDA syntax. Given a user-provided PyTorch specification, CuBridge generates and verifies a target IR program, then reconstructs optimized CUDA code via reference-guided lowering. Across diverse attention variants and GPU platforms, CuBridge consistently produces correct kernels and substantially outperforms general frameworks, compiler-based approaches, and prior LLM-based methods.",
+        "identifiers": [
+          "SemanticScholar:89c891ca4dfded59bb90cc1f15bb06d36e767543"
+        ],
+        "semantic_scholar_id": "89c891ca4dfded59bb90cc1f15bb06d36e767543",
+        "canonical_id": "arXiv:2605.05023",
+        "arxiv_id": "2605.05023",
+        "doi": "10.18653/v1/2026.acl-long.500",
+        "authors": [
+          "Xing-Chen Ma",
+          "Yang-Jie Zhou",
+          "Wu Sun",
+          "Zi-Han Liu",
+          "Jingwen Leng",
+          "Yun Lin",
+          "Shixuan Sun",
+          "Min-Yi Guo",
+          "Jingyao Dong"
+        ],
+        "priority": 114,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 114,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 177,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.16219",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.16219",
+        "id:SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+        "id:arXiv:2603.16219",
+        "title:specsteer synergizing local context and global reasoning for efficient personalized generation",
+        "url:https://arxiv.org/abs/2603.16219"
+      ],
+      "record": {
+        "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
+        "source_url": "https://arxiv.org/abs/2603.16219",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Realizing personalized intelligence faces a core dilemma: sending user history to centralized large language models raises privacy concerns, while on-device small language models lack the reasoning capacity required for high-quality generation. Our pilot study shows that purely local enhancements remain insufficient to reliably bridge this gap. We therefore propose SpecSteer, an asymmetric collaborative inference framework that synergizes private on-device context with cloud-scale reasoning. SpecSteer casts collaboration as Bayesian knowledge fusion and repurposes speculative decoding as a distributed alignment protocol, yielding a Draft--Verify--Recover pipeline: the on-device model drafts personalized sequences; the cloud validates via a ratio-based mechanism that decouples reasoning verification from private context, filtering logical flaws without accessing raw user context; upon rejection, a steering recovery injects local intent during correction. Experiments demonstrate that SpecSteer successfully closes the reasoning gap and achieves superior personalized generation performance, while delivering a 2.36x speedup over standard baselines.",
+        "identifiers": [
+          "SemanticScholar:a28c38cf9bce60e38d30b8044212d1cc9cbe396d"
+        ],
+        "semantic_scholar_id": "a28c38cf9bce60e38d30b8044212d1cc9cbe396d",
+        "canonical_id": "arXiv:2603.16219",
+        "arxiv_id": "2603.16219",
+        "doi": "10.48550/arXiv.2603.16219",
+        "authors": [
+          "Hang Lv",
+          "Sheng Liang",
+          "Hao Wang",
+          "Yong-Yue Zhang",
+          "Hongchao Gu",
+          "Wei Guo",
+          "De-Fu Lian",
+          "Yong Liu",
+          "En-Hong Chen"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 227,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1609/aaai.v40i27.39425",
+      "identity_tokens": [
+        "id:DOI:10.1609/aaai.v40i27.39425",
+        "id:SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+        "title:latentllm activationaware transform to multihead latent attention",
+        "url:https://doi.org/10.1609/aaai.v40i27.39425"
+      ],
+      "record": {
+        "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+        "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+        "year": 2026,
+        "published": "2026-03-14",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern foundation models such as large language models (LLMs) require a massive amount of computational and memory resources. We propose a new framework to convert such LLMs into a reduced-dimension latent structure. Our method extends a local activation-aware tensor decomposition to a global attention-aware joint tensor decomposition. Our framework can significantly improve the model accuracy over the existing model compression methods when reducing the latent dimension to realize computationally/memory-efficient LLMs. We show the benefit on several benchmark including multi-modal reasoning tasks.",
+        "identifiers": [
+          "SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677"
+        ],
+        "semantic_scholar_id": "4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+        "doi": "10.1609/aaai.v40i27.39425",
+        "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+        "authors": [
+          "T. Koike-Akino",
+          "Xiangyu Chen",
+          "Jing Liu",
+          "Ye Wang",
+          "Pu Wang",
+          "Matthew Brand"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 230,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.18920",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.18920",
+        "id:SemanticScholar:4395804472e3fa9db05fc9d6ce992e1d512fd838",
+        "id:arXiv:2511.18920",
+        "title:eventstu eventguided efficient spatiotemporal understanding for video large language models",
+        "url:https://arxiv.org/abs/2511.18920"
+      ],
+      "record": {
+        "title": "EventSTU: Event-Guided Efficient Spatio-Temporal Understanding for Video Large Language Models",
+        "source_url": "https://arxiv.org/abs/2511.18920",
+        "year": 2025,
+        "published": "2025-11-24",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Video large language models have demonstrated strong video understanding capabilities but suffer from high inference costs due to the massive number of tokens in long videos. Inspired by event-based vision, we propose an event-guided, training-free framework for efficient spatio-temporal understanding, named EventSTU. In the temporal domain, we design a coarse-to-fine keyframe sampling algorithm that exploits the change-triggered property of event cameras to eliminate redundant frames. In the spatial domain, we design an adaptive token pruning algorithm that leverages the visual saliency of events as a zero-cost prior to guide spatial reduction. From a holistic spatio-temporal perspective, we further integrate question relevance from keyframe sampling to adaptively allocate token pruning budgets. To facilitate evaluation, we construct EventBench, the first event-inclusive, human-annotated multimodal benchmark that covers diverse real-world scenarios. Beyond physical event cameras, EventSTU also supports general video understanding using simulated events. Comprehensive experiments show that EventSTU achieves 3.01x FLOPs reduction and 3.10x prefilling speedup over the strongest baseline while still improving performance.",
+        "identifiers": [
+          "SemanticScholar:4395804472e3fa9db05fc9d6ce992e1d512fd838"
+        ],
+        "semantic_scholar_id": "4395804472e3fa9db05fc9d6ce992e1d512fd838",
+        "canonical_id": "arXiv:2511.18920",
+        "arxiv_id": "2511.18920",
+        "doi": "10.48550/arXiv.2511.18920",
+        "authors": [
+          "Wenhao Xu",
+          "Xin Dong",
+          "Yue Li",
+          "Hao-Yuan Shi",
+          "Zhi-Wei Xiong"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 340,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.14706",
+      "identity_tokens": [
+        "id:SemanticScholar:52b086b9c9b99d5753c0024e9e2b792148a28be2",
+        "id:arXiv:2609.14706",
+        "title:waterkron and flipflop hessian informationtheoretically grounded quantization with kroneckerfactored hessians",
+        "url:https://arxiv.org/abs/2609.14706"
+      ],
+      "record": {
+        "title": "WaterKron and FlipFlop Hessian: Information-Theoretically Grounded Quantization with Kronecker-factored Hessians",
+        "source_url": "https://arxiv.org/abs/2609.14706",
+        "year": 2026,
+        "published": "2026-09-13",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "How should a Kronecker-factored Hessian approximation be chosen for post-training quantization? We address this question through WaterKron, which combines two-sided GPTQ with row- and column-dependent waterfilling scales and entropy coding. We derive its high-rate distortion with respect to the full Hessian using an explicit Kronecker-Hessian mismatch factor $\\Phi$. This factor quantifies the asymptotic distortion penalty due to the Kronecker Hessian approximation and provides a criterion for selecting the factors optimally. Minimizing $\\Phi$ leads to a Gaussian covariance-fitting problem with classical ``flip-flop''updates. We thus give a rate-distortion justification for using the resulting FlipFlop Hessian in quantization. We evaluate it empirically, finding that the FlipFlop Hessian consistently improves KL divergence and perplexity over input-only, marginal, and Frobenius-based Hessian choices.",
+        "identifiers": [
+          "SemanticScholar:52b086b9c9b99d5753c0024e9e2b792148a28be2"
+        ],
+        "semantic_scholar_id": "52b086b9c9b99d5753c0024e9e2b792148a28be2",
+        "canonical_id": "arXiv:2609.14706",
+        "arxiv_id": "2609.14706",
+        "authors": [
+          "Johann Birnick",
+          "R. Saab"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.16734",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.16734",
+        "id:SemanticScholar:8b6e0c1553449c9d5191ab4c3cf1252a77cd4653",
+        "id:arXiv:2604.16734",
+        "title:reducing peak memory usage for modern multimodal large language model pipelines",
+        "url:https://arxiv.org/abs/2604.16734"
+      ],
+      "record": {
+        "title": "Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines",
+        "source_url": "https://arxiv.org/abs/2604.16734",
+        "year": 2026,
+        "published": "2026-04-17",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) have recently demonstrated strong capabilities in understanding and generating responses from diverse visual inputs, including high-resolution images and long video sequences. As these models scale to richer visual representations, inference increasingly relies on storing large numbers of vision tokens in the key-value (KV) cache, making memory consumption a central bottleneck. Existing methods address this issue by identifying redundancy in vision tokens and compressing the cache, but such compression is typically applied only after all inputs are processed, resulting in high peak memory usage during the prefill stage. In this work, we show that MLLMs exhibit inherent structural regularities and representational redundancy that can be exploited to control memory growth throughout inference. Based on this insight, we propose a sequential input-compression mechanism that enforces a fixed memory budget by performing structure-aware key-value cache compression during the prefill process. This approach substantially reduces peak memory usage while maintaining generative performance with only minimal degradation, enabling more practical and memory-efficient multimodal inference.",
+        "identifiers": [
+          "SemanticScholar:8b6e0c1553449c9d5191ab4c3cf1252a77cd4653"
+        ],
+        "semantic_scholar_id": "8b6e0c1553449c9d5191ab4c3cf1252a77cd4653",
+        "canonical_id": "arXiv:2604.16734",
+        "arxiv_id": "2604.16734",
+        "doi": "10.48550/arXiv.2604.16734",
+        "authors": [
+          "Junwan Kim",
+          "Hyunkyung Bae"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 196,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.26446",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.765",
+        "id:SemanticScholar:c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6",
+        "id:arXiv:2510.26446",
+        "title:112 a synergistic sparse and lowrank compression method for large language models",
+        "url:https://arxiv.org/abs/2510.26446"
+      ],
+      "record": {
+        "title": "1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.26446",
+        "year": 2025,
+        "published": "2025-10-30",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in language comprehension and generation; however, their widespread adoption is constrained by substantial bandwidth and computational demands. While pruning and low-rank approximation have each demonstrated promising performance individually, their synergy for LLMs remains underexplored. We introduce \\underline{S}ynergistic \\underline{S}parse and \\underline{L}ow-Rank \\underline{C}ompression (SSLC) methods for LLMs, which leverages the strengths of both techniques: low-rank approximation compresses the model by retaining its essential structure with minimal information loss, whereas sparse optimization eliminates non-essential weights, preserving those crucial for generalization. Based on theoretical analysis, we first formulate the low-rank approximation and sparse optimization as a unified problem and solve it by iterative optimization algorithm. Experiments on LLaMA and Qwen2.5 models (7B-70B) show that SSLC, without any additional training steps, consistently surpasses standalone methods, achieving state-of-the-arts results. Notably, SSLC compresses Qwen2.5 by 50\\% with no performance drop and achieves at least 1.63$\\times$ speedup, offering a practical solution for efficient LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6"
+        ],
+        "semantic_scholar_id": "c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6",
+        "canonical_id": "arXiv:2510.26446",
+        "arxiv_id": "2510.26446",
+        "doi": "10.18653/v1/2025.findings-emnlp.765",
+        "authors": [
+          "Zeliang Zong",
+          "Kai Zhang",
+          "Zhe-Yang Li",
+          "Wen-Ming Tan",
+          "Ye Ren",
+          "Yiyan Zhai",
+          "Ji-Lin Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 365,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.30217",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.30217",
+        "id:SemanticScholar:8ed5f7eeea7248c4213f93fd4e3e84b314e39075",
+        "id:arXiv:2606.30217",
+        "title:before thinking learn to decide proactive routing for efficient visual reasoning",
+        "url:https://arxiv.org/abs/2606.30217"
+      ],
+      "record": {
+        "title": "Before Thinking, Learn to Decide: Proactive Routing for Efficient Visual Reasoning",
+        "source_url": "https://arxiv.org/abs/2606.30217",
+        "year": 2026,
+        "published": "2026-06-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large multimodal models have achieved strong reasoning on complex visual tasks, but their inference efficiency is often restricted by long chains of thought. A promising solution is to pair a small draft model with a large target model, enabling cooperative inference employing a routing signal that adaptively routes queries to either the draft or target model based on their difficulties for optimal efficiency and accuracy. Yet, the remaining bottleneck is to establish a reliable query difficulty signal under multimodal settings. Existing approaches designed for language models either rely on post-hoc token probabilities, which fall short in multimodal scenarios, or depend on supervised fine-tuning, which is a data-sensitive strategy. Both paradigms perform routing only after a complete output, and ignore whether the target model can actually solve the routed instances. To address this, we propose PRP, a Proactive Routing Paradigm that enables early decision-making by jointly evaluating the competence of both the draft and target models. Our Draft Rating Learning (DRL) equips the draft model with an internal confidence estimator, while Joint Rating Learning (JRL) predicts how well the target model can handle a given query, thereby prioritizing the allocation of samples it excels at rather than the hardest ones. These ratings enable fine-grained, instance-level \\textbf{Proactive Routing} and substantially accelerate inference without compromising overall performance. Extensive experiments across multiple multimodal reasoning benchmarks validate our effectiveness and efficiency.",
+        "identifiers": [
+          "SemanticScholar:8ed5f7eeea7248c4213f93fd4e3e84b314e39075"
+        ],
+        "semantic_scholar_id": "8ed5f7eeea7248c4213f93fd4e3e84b314e39075",
+        "canonical_id": "arXiv:2606.30217",
+        "arxiv_id": "2606.30217",
+        "doi": "10.48550/arXiv.2606.30217",
+        "authors": [
+          "Yinan Zhou",
+          "Haokun Lin",
+          "Yi-Chen Wu",
+          "Caifeng Shan",
+          "Zhe-Nan Sun",
+          "Yu-Xin Chen",
+          "Teng Wang",
+          "Chen Ma",
+          "Li Zhu",
+          "Shan Ying"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 123,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34680",
+      "identity_tokens": [
+        "id:SemanticScholar:9c70fbb08270465844b6991ea6e05b7e40e16cd1",
+        "id:arXiv:2609.34680",
+        "title:quantforge discovering residual decompositions for mxfp4 posttraining quantization",
+        "url:https://arxiv.org/abs/2609.34680"
+      ],
+      "record": {
+        "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+        "source_url": "https://arxiv.org/abs/2609.34680",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Four-bit post-training quantization can reduce the memory demands of large language models, but preserving accuracy under strict MXFP4 W4A4 requires coordinating several design choices. Coordinate transforms change block-encoding errors, which in turn affect the residuals propagated through the network. The useful algorithmic decomposition is therefore not fully known before search. LLM-driven program evolution offers a way to explore these choices, but performance scores alone do not explain which design should change next. We introduce QuantForge, a PTQ discovery system that records competing explanations, selects controls that distinguish them, and checks that successor code implements the resulting conclusions. This residual compilation guides program revisions while retaining useful programs even when their original explanations are rejected. Remeasuring the revised program reveals the next error to address. This process discovers HiRes, a fixed MXFP4 quantizer that shapes coordinates, refines legal code assignments, and recovers errors along attention and MLP paths. Each stage acts on residuals measured after the preceding stage has executed. Across seven tasks, HiRes achieves the lowest seven-model Robust Fit (0.09300) and the lowest quantized Fit-7 at 32B. In matched-budget comparisons of LLM-driven program evolution, each with 240 evaluator calls, QuantForge reaches a held-out transfer target in six of eight runs, compared with three each for textual memory and reflection memory, and one for score-only evolution, despite evaluating fewer new programs. These results show that QuantForge improves the discovery of transferable PTQ algorithms by turning controlled evidence into subsequent program changes. We have open-sourced the QuantForge search framework.",
+        "identifiers": [
+          "SemanticScholar:9c70fbb08270465844b6991ea6e05b7e40e16cd1"
+        ],
+        "semantic_scholar_id": "9c70fbb08270465844b6991ea6e05b7e40e16cd1",
+        "canonical_id": "arXiv:2609.34680",
+        "arxiv_id": "2609.34680",
+        "authors": [
+          "Qiu-Lin Shang",
+          "Zhou-Tong Wu",
+          "Jie Hu",
+          "Kun Yuan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c00fed0726d86d9e295842ee4460c4d52bef74542c06e5b2a5e0a29cbcf4fa70",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

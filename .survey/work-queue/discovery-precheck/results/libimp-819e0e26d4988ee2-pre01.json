@@ -1,0 +1,886 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-819e0e26d4988ee2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-819e0e26d498",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2502.00258",
+    "arXiv:2505.07239",
+    "arXiv:2510.23652",
+    "arXiv:2510.23766",
+    "arXiv:2511.06190",
+    "arXiv:2602.03060",
+    "arXiv:2604.03950",
+    "arXiv:2605.08044",
+    "arXiv:2608.02560"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:38.471696+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2502.00258",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.07239",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.23652",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.23766",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.06190",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.03060",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.03950",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.02560",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2511.06190",
+      "year": 2025,
+      "published": "2025-11-09",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Language Models (LLMs) - particularly model scaling and test-time techniques - have greatly enhanced the reasoning capabilities of language models at the expense of higher inference costs. To lower inference costs, prior works train router models or deferral mechanisms that allocate easy queries to a small, efficient model, while forwarding harder queries to larger, more expensive models. However, these trained router models often lack robustness under domain shifts and require expensive data synthesis techniques such as Monte Carlo rollouts to obtain sufficient ground-truth routing labels for training. \nIn this work, we propose Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning (STEER), a domain-agnostic, framework that performs fine-grained, step-level routing between smaller and larger LLMs without utilizing external models. STEER leverages confidence scores from the smaller model’s logits prior to generating a reasoning step, so that the large model is invoked only when necessary. \nExtensive evaluations using different LLMs on a diverse set of challenging benchmarks across multiple domains such as Mathematical Reasoning, Multi-Hop QA, and Planning tasks indicate that STEER achieves competitive or enhanced accuracy while reducing inference costs (up to +20% accuracy with 48% less FLOPs compared to solely using the larger model on AIME), outperforming baselines that rely on trained external modules.\nOur results establish model-internal confidence as a robust, domain-agnostic signal for model routing, offering a scalable pathway for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77"
+      ],
+      "semantic_scholar_id": "a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77",
+      "canonical_id": "arXiv:2511.06190",
+      "arxiv_id": "2511.06190",
+      "doi": "10.48550/arXiv.2511.06190",
+      "authors": [
+        "Sangmook Lee",
+        "Dohyung Kim",
+        "Hyukhun Koh",
+        "Nakyeong Yang",
+        "Kyomin Jung"
+      ],
+      "priority": 116,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 116,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 355,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
+      "source_url": "https://arxiv.org/abs/2602.03060",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 12,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) achieve impressive performance across multiple tasks. A significant challenge, however, is their prohibitive inference cost when processing high-resolution visual inputs. While visual token pruning has emerged as a promising solution, existing methods that primarily focus on semantic relevance often discard tokens that are crucial for spatial reasoning. We address this gap through a novel insight into \\emph{how LVLMs process spatial reasoning}. Specifically, we reveal that LVLMs implicitly establish visual coordinate systems through Rotary Position Embeddings (RoPE), where specific token positions serve as \\textbf{implicit visual coordinates} (IVC tokens) that are essential for spatial reasoning. Based on this insight, we propose \\textbf{IVC-Prune}, a training-free, prompt-aware pruning strategy that retains both IVC tokens and semantically relevant foreground tokens. IVC tokens are identified by theoretically analyzing the mathematical properties of RoPE, targeting positions at which its rotation matrices approximate identity matrix or the $90^\\circ$ rotation matrix. Foreground tokens are identified through a robust two-stage process: semantic seed discovery followed by contextual refinement via value-vector similarity. Extensive evaluations across four representative LVLMs and twenty diverse benchmarks show that IVC-Prune reduces visual tokens by approximately 50\\% while maintaining $\\geq$ 99\\% of the original performance and even achieving improvements on several benchmarks. Source codes are available at https://github.com/FireRedTeam/IVC-Prune.",
+      "identifiers": [
+        "SemanticScholar:96fa519ec0cde7cbe1c4a4548698402db36c70b7"
+      ],
+      "semantic_scholar_id": "96fa519ec0cde7cbe1c4a4548698402db36c70b7",
+      "canonical_id": "arXiv:2602.03060",
+      "arxiv_id": "2602.03060",
+      "doi": "10.48550/arXiv.2602.03060",
+      "authors": [
+        "Zhichao Sun",
+        "Yi-Dong Ma",
+        "Gang Liu",
+        "Yi-Bo Chen",
+        "Xu Tang",
+        "Yao Hu",
+        "Yongchao Xu"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 12,
+        "citation_count": 12,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast Byte Latent Transformer",
+      "source_url": "https://arxiv.org/abs/2605.08044",
+      "year": 2026,
+      "published": "2026-05-08",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent byte-level language models (LMs) match the performance of token-level models without relying on subword vocabularies, yet their utility is limited by slow, byte-by-byte autoregressive generation. We address this bottleneck in the Byte Latent Transformer (BLT) through new training and generation techniques. First, we introduce BLT Diffusion (BLT-D), a new model and our fastest BLT variant, trained with an auxiliary block-wise diffusion objective alongside the standard next-byte prediction loss. This enables an inference procedure that generates multiple bytes in parallel per decoding step, substantially reducing the number of forward passes required to generate a sequence. Second, we propose two extensions inspired by speculative decoding that trade some of this speed for higher generation quality: BLT Self-speculation (BLT-S), in which BLT's local decoder continues generating past its normal patch boundaries to draft bytes, which are then verified with a single full-model forward pass; and BLT Diffusion+Verification (BLT-DV), which augments BLT-D with an autoregressive verification step after diffusion-based generation. All methods may achieve an estimated memory-bandwidth cost over 50% lower than BLT on generation tasks. Each approach offers its own unique advantages, together removing key barriers to the practical use of byte-level LMs.",
+      "identifiers": [
+        "SemanticScholar:a662b8d7e294424e97f1732d254bd971221621f3"
+      ],
+      "semantic_scholar_id": "a662b8d7e294424e97f1732d254bd971221621f3",
+      "canonical_id": "arXiv:2605.08044",
+      "arxiv_id": "2605.08044",
+      "doi": "10.48550/arXiv.2605.08044",
+      "authors": [
+        "Julie Kallini",
+        "Artidoro Pagnoni",
+        "Tomasz Limisiewicz",
+        "Gargi Ghosh",
+        "L. Zettlemoyer",
+        "Christopher Potts",
+        "Xiao-Chuang Han",
+        "Srinivasan Iyer"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 175,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+      "source_url": "https://arxiv.org/abs/2604.03950",
+      "year": 2026,
+      "published": "2026-04-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have demonstrated remarkable performance across a wide range of real-world tasks, but their inference cost remains prohibitively high due to the quadratic complexity of attention and the memory bandwidth limitations of high-precision operations. In this work, we present a low-bit mixed-precision attention kernel using the microscaling floating-point (MXFP) data format, utilizing the computing capability on next-generation GPU architectures. Our Diagonal-Tiled Mixed-Precision Attention (DMA) incorporates two kinds of low-bit computation at the tiling-level, and is a delicate fused kernel implemented using Triton, exploiting hardware-level parallelism and memory efficiency to enable fast and efficient inference without compromising model performance. Extensive empirical evaluations on NVIDIA B200 GPUs show that our kernel maintains generation quality with negligible degradation, and meanwhile achieves significant speedup by kernel fusion. We release our code at https://github.com/yifu-ding/MP-Sparse-Attn.",
+      "identifiers": [
+        "SemanticScholar:5fea8f9556464892a551abe25cc0b96a12c3482b"
+      ],
+      "semantic_scholar_id": "5fea8f9556464892a551abe25cc0b96a12c3482b",
+      "canonical_id": "arXiv:2604.03950",
+      "arxiv_id": "2604.03950",
+      "doi": "10.48550/arXiv.2604.03950",
+      "authors": [
+        "Yifu Ding",
+        "XinHao Zhang",
+        "Jin-Yang Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+      "source_url": "https://arxiv.org/abs/2608.02560",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from $O(L_{context})$ to $O(1)$ per query. We introduce PRECOG (Pre-Computed Context Injection), a retrieval mechanism that exploits a property unique to SSMs: the fixed-size, position-agnostic recurrent hidden state is a complete summary of everything the model has read. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, bypassing in-context re-ingestion entirely. The same state-injection mechanism enables SMC (Structured Memory Consolidation): a hierarchical persistent memory with cognitive-domain clustering, an adjustable fidelity-vs-storage dial, and $O(1)$ session initialization, which consolidates short-term episodic states into long-term semantic memory and fuses both with retrieved corpus states at query time. We demonstrate the system on TENNs-LLM, a 1.2B-parameter gated-SSM language model with a 192 KB hidden state. PRECOG matches in-context RAG answer quality, reducing prefill latency from $\\sim$27 s to $<$6 ms on edge hardware -- a $\\sim$4500$\\times$ speedup that crosses the threshold from unusable to interactive. The mechanism is architecturally impossible for Transformer KV-caches, which are position-entangled and grow linearly with context length.",
+      "identifiers": [
+        "SemanticScholar:bade37db80da222397e32494ba983509eb2179d5"
+      ],
+      "semantic_scholar_id": "bade37db80da222397e32494ba983509eb2179d5",
+      "canonical_id": "arXiv:2608.02560",
+      "arxiv_id": "2608.02560",
+      "authors": [
+        "Anusha Madan Gopal",
+        "Aras Pirbadian",
+        "Kristofor D. Carlson",
+        "M. A. Lewis",
+        "Jon Tapson"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs",
+      "source_url": "https://arxiv.org/abs/2502.00258",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance in natural language processing tasks, yet their massive size makes serving them inefficient and costly. Semi-structured pruning has emerged as an effective method for model acceleration, but existing approaches are suboptimal because they focus on local, layer-wise optimizations using heuristic rules, failing to leverage global feedback. We present ProxSparse, a learning-based framework for mask selection enabled by regularized optimization. ProxSparse transforms the rigid, non-differentiable mask selection process into a smoother optimization procedure, allowing gradual mask exploration with flexibility. ProxSparse does not involve additional weight updates once the mask is determined. Our extensive evaluations on 7 widely used models show that ProxSparse consistently outperforms previously proposed semi-structured mask selection methods with significant improvement, demonstrating the effectiveness of our learned approach towards semi-structured pruning.",
+      "identifiers": [
+        "SemanticScholar:a964d6d1e2e8c93d04a2b7e6da3d906537d537bc"
+      ],
+      "semantic_scholar_id": "a964d6d1e2e8c93d04a2b7e6da3d906537d537bc",
+      "canonical_id": "arXiv:2502.00258",
+      "arxiv_id": "2502.00258",
+      "doi": "10.48550/arXiv.2502.00258",
+      "authors": [
+        "Hongyi Liu",
+        "R. Saha",
+        "Zhen Jia",
+        "Youngsuk Park",
+        "Jiaji Huang",
+        "Shoham Sabach",
+        "Yu-Xiang Wang",
+        "George Karypis"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 637,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity",
+      "source_url": "https://arxiv.org/abs/2505.07239",
+      "year": 2025,
+      "published": "2025-05-12",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the growing use of large language models (LLMs) hosted on cloud platforms to offer inference services, privacy concerns about the potential leakage of sensitive information are escalating. Secure Multi-Party Computation (MPC) is a promising solution to protect the privacy in LLM inference. However, MPC requires frequent inter-server communication, causing high performance overhead. Inspired by the prevalent activation sparsity of LLMs, where most neuron are not activated after non-linear activation functions, we propose an efficient private inference system, Comet. This system employs an accurate and fast predictor to predict the sparsity distribution of activation function output. Additionally, we introduce a new private inference protocol. It efficiently and securely avoids computations involving zero values by exploiting the spatial locality of the predicted sparsity distribution. While this computation-avoidance approach impacts the spatiotemporal continuity of KV cache entries, we address this challenge with a low-communication overhead cache refilling strategy that merges miss requests and incorporates a prefetching mechanism. Finally, we evaluate Comet on four common LLMs and compare it with six state-of-the-art private inference systems. Comet achieves a $1.87\\times-2.63\\times$ speedup and a $1.94\\times-2.64\\times$ communication reduction.",
+      "identifiers": [
+        "SemanticScholar:bd7f594215a228135936300690be7af689cd74c7"
+      ],
+      "semantic_scholar_id": "bd7f594215a228135936300690be7af689cd74c7",
+      "canonical_id": "arXiv:2505.07239",
+      "arxiv_id": "2505.07239",
+      "doi": "10.1109/SP61157.2025.00182",
+      "authors": [
+        "Guang Yan",
+        "Yuhui Zhang",
+        "Zimu Guo",
+        "Lu-Tan Zhao",
+        "Xiao-Jun Chen",
+        "Chen Wang",
+        "Wenhao Wang",
+        "Dan Meng",
+        "Rui Hou"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 536,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Structural Scalpel: Automated Contiguous Layer Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.23652",
+      "year": 2025,
+      "published": "2025-10-25",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Although large language models (LLMs) have achieved revolutionary breakthroughs in many fields, their large model size and high computational cost pose significant challenges for practical deployment on resource-constrained edge devices. To this end, layer pruning has been proposed to reduce the computational overhead by directly removing redundant layers. However, existing layer pruning methods typically rely on hand-crafted metrics to evaluate and remove individual layers, while ignoring the dependencies between layers. This can disrupt the model's information flow and severely degrade performance. To address these issues, we propose CLP, a novel continuous layer pruning framework that introduces two key innovations: a differentiable concave gate algorithm that automatically identifies the best continuous layer segments for pruning via gradient-based optimization; and a cutoff endpoint tuning strategy that effectively restores model performance by fine-tuning only the layers adjacent to the pruned segments. Extensive experiments across multiple model architectures (including LLaMA2, LLaMA3 and Qwen) and sizes (from $7$B to $70$B parameters) show that CLP significantly outperforms existing state-of-the-art baselines. For example, at a pruning rate of $20\\%$, CLP achieves an average performance retention of $95.34\\%$ on LLaMA3-70B, outperforming baselines by $4.29\\%$-$30.52\\%$. Furthermore, CLP can be seamlessly combined with quantization to further compress the model with only a slight performance loss.",
+      "identifiers": [
+        "SemanticScholar:03417dd09981bcdc80b3de6cb3777493e3e49ed9"
+      ],
+      "semantic_scholar_id": "03417dd09981bcdc80b3de6cb3777493e3e49ed9",
+      "canonical_id": "arXiv:2510.23652",
+      "arxiv_id": "2510.23652",
+      "doi": "10.48550/arXiv.2510.23652",
+      "authors": [
+        "Yao Lu",
+        "Yu-Qi Li",
+        "Wen-Bin Xie",
+        "Shan-Qing Yu",
+        "Qi Xuan",
+        "Zhao-Wei Zhu",
+        "Shi-Ping Wen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BitSkip: An Empirical Analysis of Quantization and Early Exit Composition",
+      "source_url": "https://arxiv.org/abs/2510.23766",
+      "year": 2025,
+      "published": "2025-10-27",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The pursuit of efficient Large Language Models (LLMs) has led to increasingly complex techniques like extreme quantization and dynamic routing. While individual benefits of these methods are well-documented, their compositional effects remain poorly understood. This paper introduces BitSkip, a hybrid architectural framework for systematically exploring these interactions. Counter-intuitively, our findings reveal that a simple 8-bit quantized model without Hadamard transform (BitSkip-V1) not only outperforms its more complex 4-bit and Hadamard-enhanced counterparts but also competes the full-precision baseline in quality (perplexity of 1.13 vs 1.19) . The introduction of Hadamard transforms, even at 8-bit precision, catastrophically degraded performance by over 37,000%, tracing fundamental training instability. Our BitSkip-V1 recipe demonstrates superior early-exit characteristics, with layer 18 providing optimal 32.5% speed gain for minimal 4% quality loss.",
+      "identifiers": [
+        "SemanticScholar:775fa5251e39dcad3d43437d582419eed55b7071"
+      ],
+      "semantic_scholar_id": "775fa5251e39dcad3d43437d582419eed55b7071",
+      "canonical_id": "arXiv:2510.23766",
+      "arxiv_id": "2510.23766",
+      "doi": "10.48550/arXiv.2510.23766",
+      "authors": [
+        "R. Bhuvaneswaran",
+        "Han-Dan Liu"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 368,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2511.06190",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.06190",
+        "id:SemanticScholar:a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77",
+        "id:arXiv:2511.06190",
+        "title:confidenceguided stepwise model routing for costefficient reasoning",
+        "url:https://arxiv.org/abs/2511.06190"
+      ],
+      "record": {
+        "title": "Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2511.06190",
+        "year": 2025,
+        "published": "2025-11-09",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 16,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in Large Language Models (LLMs) - particularly model scaling and test-time techniques - have greatly enhanced the reasoning capabilities of language models at the expense of higher inference costs. To lower inference costs, prior works train router models or deferral mechanisms that allocate easy queries to a small, efficient model, while forwarding harder queries to larger, more expensive models. However, these trained router models often lack robustness under domain shifts and require expensive data synthesis techniques such as Monte Carlo rollouts to obtain sufficient ground-truth routing labels for training. \nIn this work, we propose Confidence-Guided Stepwise Model Routing for Cost-Efficient Reasoning (STEER), a domain-agnostic, framework that performs fine-grained, step-level routing between smaller and larger LLMs without utilizing external models. STEER leverages confidence scores from the smaller model’s logits prior to generating a reasoning step, so that the large model is invoked only when necessary. \nExtensive evaluations using different LLMs on a diverse set of challenging benchmarks across multiple domains such as Mathematical Reasoning, Multi-Hop QA, and Planning tasks indicate that STEER achieves competitive or enhanced accuracy while reducing inference costs (up to +20% accuracy with 48% less FLOPs compared to solely using the larger model on AIME), outperforming baselines that rely on trained external modules.\nOur results establish model-internal confidence as a robust, domain-agnostic signal for model routing, offering a scalable pathway for efficient LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77"
+        ],
+        "semantic_scholar_id": "a9fa2105799d18c8bf6f7e3ff49d431c0a7e8b77",
+        "canonical_id": "arXiv:2511.06190",
+        "arxiv_id": "2511.06190",
+        "doi": "10.48550/arXiv.2511.06190",
+        "authors": [
+          "Sangmook Lee",
+          "Dohyung Kim",
+          "Hyukhun Koh",
+          "Nakyeong Yang",
+          "Kyomin Jung"
+        ],
+        "priority": 116,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 16,
+          "citation_count": 16,
+          "total": 116,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 355,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.03060",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.03060",
+        "id:SemanticScholar:96fa519ec0cde7cbe1c4a4548698402db36c70b7",
+        "id:arXiv:2602.03060",
+        "title:ivcprune revealing the implicit visual coordinates in lvlms for vision token pruning",
+        "url:https://arxiv.org/abs/2602.03060"
+      ],
+      "record": {
+        "title": "IVC-Prune: Revealing the Implicit Visual Coordinates in LVLMs for Vision Token Pruning",
+        "source_url": "https://arxiv.org/abs/2602.03060",
+        "year": 2026,
+        "published": "2026-02-03",
+        "venue": "arXiv.org",
+        "citation_count": 12,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) achieve impressive performance across multiple tasks. A significant challenge, however, is their prohibitive inference cost when processing high-resolution visual inputs. While visual token pruning has emerged as a promising solution, existing methods that primarily focus on semantic relevance often discard tokens that are crucial for spatial reasoning. We address this gap through a novel insight into \\emph{how LVLMs process spatial reasoning}. Specifically, we reveal that LVLMs implicitly establish visual coordinate systems through Rotary Position Embeddings (RoPE), where specific token positions serve as \\textbf{implicit visual coordinates} (IVC tokens) that are essential for spatial reasoning. Based on this insight, we propose \\textbf{IVC-Prune}, a training-free, prompt-aware pruning strategy that retains both IVC tokens and semantically relevant foreground tokens. IVC tokens are identified by theoretically analyzing the mathematical properties of RoPE, targeting positions at which its rotation matrices approximate identity matrix or the $90^\\circ$ rotation matrix. Foreground tokens are identified through a robust two-stage process: semantic seed discovery followed by contextual refinement via value-vector similarity. Extensive evaluations across four representative LVLMs and twenty diverse benchmarks show that IVC-Prune reduces visual tokens by approximately 50\\% while maintaining $\\geq$ 99\\% of the original performance and even achieving improvements on several benchmarks. Source codes are available at https://github.com/FireRedTeam/IVC-Prune.",
+        "identifiers": [
+          "SemanticScholar:96fa519ec0cde7cbe1c4a4548698402db36c70b7"
+        ],
+        "semantic_scholar_id": "96fa519ec0cde7cbe1c4a4548698402db36c70b7",
+        "canonical_id": "arXiv:2602.03060",
+        "arxiv_id": "2602.03060",
+        "doi": "10.48550/arXiv.2602.03060",
+        "authors": [
+          "Zhichao Sun",
+          "Yi-Dong Ma",
+          "Gang Liu",
+          "Yi-Bo Chen",
+          "Xu Tang",
+          "Yao Hu",
+          "Yongchao Xu"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 12,
+          "citation_count": 12,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 269,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08044",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08044",
+        "id:SemanticScholar:a662b8d7e294424e97f1732d254bd971221621f3",
+        "id:arXiv:2605.08044",
+        "title:fast byte latent transformer",
+        "url:https://arxiv.org/abs/2605.08044"
+      ],
+      "record": {
+        "title": "Fast Byte Latent Transformer",
+        "source_url": "https://arxiv.org/abs/2605.08044",
+        "year": 2026,
+        "published": "2026-05-08",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent byte-level language models (LMs) match the performance of token-level models without relying on subword vocabularies, yet their utility is limited by slow, byte-by-byte autoregressive generation. We address this bottleneck in the Byte Latent Transformer (BLT) through new training and generation techniques. First, we introduce BLT Diffusion (BLT-D), a new model and our fastest BLT variant, trained with an auxiliary block-wise diffusion objective alongside the standard next-byte prediction loss. This enables an inference procedure that generates multiple bytes in parallel per decoding step, substantially reducing the number of forward passes required to generate a sequence. Second, we propose two extensions inspired by speculative decoding that trade some of this speed for higher generation quality: BLT Self-speculation (BLT-S), in which BLT's local decoder continues generating past its normal patch boundaries to draft bytes, which are then verified with a single full-model forward pass; and BLT Diffusion+Verification (BLT-DV), which augments BLT-D with an autoregressive verification step after diffusion-based generation. All methods may achieve an estimated memory-bandwidth cost over 50% lower than BLT on generation tasks. Each approach offers its own unique advantages, together removing key barriers to the practical use of byte-level LMs.",
+        "identifiers": [
+          "SemanticScholar:a662b8d7e294424e97f1732d254bd971221621f3"
+        ],
+        "semantic_scholar_id": "a662b8d7e294424e97f1732d254bd971221621f3",
+        "canonical_id": "arXiv:2605.08044",
+        "arxiv_id": "2605.08044",
+        "doi": "10.48550/arXiv.2605.08044",
+        "authors": [
+          "Julie Kallini",
+          "Artidoro Pagnoni",
+          "Tomasz Limisiewicz",
+          "Gargi Ghosh",
+          "L. Zettlemoyer",
+          "Christopher Potts",
+          "Xiao-Chuang Han",
+          "Srinivasan Iyer"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 175,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.03950",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.03950",
+        "id:SemanticScholar:5fea8f9556464892a551abe25cc0b96a12c3482b",
+        "id:arXiv:2604.03950",
+        "title:diagonaltiled mixedprecision attention for efficient lowbit mxfp inference",
+        "url:https://arxiv.org/abs/2604.03950"
+      ],
+      "record": {
+        "title": "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+        "source_url": "https://arxiv.org/abs/2604.03950",
+        "year": 2026,
+        "published": "2026-04-05",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) have demonstrated remarkable performance across a wide range of real-world tasks, but their inference cost remains prohibitively high due to the quadratic complexity of attention and the memory bandwidth limitations of high-precision operations. In this work, we present a low-bit mixed-precision attention kernel using the microscaling floating-point (MXFP) data format, utilizing the computing capability on next-generation GPU architectures. Our Diagonal-Tiled Mixed-Precision Attention (DMA) incorporates two kinds of low-bit computation at the tiling-level, and is a delicate fused kernel implemented using Triton, exploiting hardware-level parallelism and memory efficiency to enable fast and efficient inference without compromising model performance. Extensive empirical evaluations on NVIDIA B200 GPUs show that our kernel maintains generation quality with negligible degradation, and meanwhile achieves significant speedup by kernel fusion. We release our code at https://github.com/yifu-ding/MP-Sparse-Attn.",
+        "identifiers": [
+          "SemanticScholar:5fea8f9556464892a551abe25cc0b96a12c3482b"
+        ],
+        "semantic_scholar_id": "5fea8f9556464892a551abe25cc0b96a12c3482b",
+        "canonical_id": "arXiv:2604.03950",
+        "arxiv_id": "2604.03950",
+        "doi": "10.48550/arXiv.2604.03950",
+        "authors": [
+          "Yifu Ding",
+          "XinHao Zhang",
+          "Jin-Yang Guo"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 208,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02560",
+      "identity_tokens": [
+        "id:SemanticScholar:bade37db80da222397e32494ba983509eb2179d5",
+        "id:arXiv:2608.02560",
+        "title:structured memory for edge language models persistent context and corpus retrieval via o1 ssm state injection",
+        "url:https://arxiv.org/abs/2608.02560"
+      ],
+      "record": {
+        "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+        "source_url": "https://arxiv.org/abs/2608.02560",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, collapsing prefill from $O(L_{context})$ to $O(1)$ per query. We introduce PRECOG (Pre-Computed Context Injection), a retrieval mechanism that exploits a property unique to SSMs: the fixed-size, position-agnostic recurrent hidden state is a complete summary of everything the model has read. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, bypassing in-context re-ingestion entirely. The same state-injection mechanism enables SMC (Structured Memory Consolidation): a hierarchical persistent memory with cognitive-domain clustering, an adjustable fidelity-vs-storage dial, and $O(1)$ session initialization, which consolidates short-term episodic states into long-term semantic memory and fuses both with retrieved corpus states at query time. We demonstrate the system on TENNs-LLM, a 1.2B-parameter gated-SSM language model with a 192 KB hidden state. PRECOG matches in-context RAG answer quality, reducing prefill latency from $\\sim$27 s to $<$6 ms on edge hardware -- a $\\sim$4500$\\times$ speedup that crosses the threshold from unusable to interactive. The mechanism is architecturally impossible for Transformer KV-caches, which are position-entangled and grow linearly with context length.",
+        "identifiers": [
+          "SemanticScholar:bade37db80da222397e32494ba983509eb2179d5"
+        ],
+        "semantic_scholar_id": "bade37db80da222397e32494ba983509eb2179d5",
+        "canonical_id": "arXiv:2608.02560",
+        "arxiv_id": "2608.02560",
+        "authors": [
+          "Anusha Madan Gopal",
+          "Aras Pirbadian",
+          "Kristofor D. Carlson",
+          "M. A. Lewis",
+          "Jon Tapson"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 88,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.00258",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.00258",
+        "id:SemanticScholar:a964d6d1e2e8c93d04a2b7e6da3d906537d537bc",
+        "id:arXiv:2502.00258",
+        "title:proxsparse regularized learning of semistructured sparsity masks for pretrained llms",
+        "url:https://arxiv.org/abs/2502.00258"
+      ],
+      "record": {
+        "title": "ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs",
+        "source_url": "https://arxiv.org/abs/2502.00258",
+        "year": 2025,
+        "published": "2025-01-31",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance in natural language processing tasks, yet their massive size makes serving them inefficient and costly. Semi-structured pruning has emerged as an effective method for model acceleration, but existing approaches are suboptimal because they focus on local, layer-wise optimizations using heuristic rules, failing to leverage global feedback. We present ProxSparse, a learning-based framework for mask selection enabled by regularized optimization. ProxSparse transforms the rigid, non-differentiable mask selection process into a smoother optimization procedure, allowing gradual mask exploration with flexibility. ProxSparse does not involve additional weight updates once the mask is determined. Our extensive evaluations on 7 widely used models show that ProxSparse consistently outperforms previously proposed semi-structured mask selection methods with significant improvement, demonstrating the effectiveness of our learned approach towards semi-structured pruning.",
+        "identifiers": [
+          "SemanticScholar:a964d6d1e2e8c93d04a2b7e6da3d906537d537bc"
+        ],
+        "semantic_scholar_id": "a964d6d1e2e8c93d04a2b7e6da3d906537d537bc",
+        "canonical_id": "arXiv:2502.00258",
+        "arxiv_id": "2502.00258",
+        "doi": "10.48550/arXiv.2502.00258",
+        "authors": [
+          "Hongyi Liu",
+          "R. Saha",
+          "Zhen Jia",
+          "Youngsuk Park",
+          "Jiaji Huang",
+          "Shoham Sabach",
+          "Yu-Xiang Wang",
+          "George Karypis"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 637,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.07239",
+      "identity_tokens": [
+        "id:DOI:10.1109/sp61157.2025.00182",
+        "id:SemanticScholar:bd7f594215a228135936300690be7af689cd74c7",
+        "id:arXiv:2505.07239",
+        "title:comet accelerating private inference for large language model by predicting activation sparsity",
+        "url:https://arxiv.org/abs/2505.07239"
+      ],
+      "record": {
+        "title": "Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity",
+        "source_url": "https://arxiv.org/abs/2505.07239",
+        "year": 2025,
+        "published": "2025-05-12",
+        "venue": "IEEE Symposium on Security and Privacy",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "With the growing use of large language models (LLMs) hosted on cloud platforms to offer inference services, privacy concerns about the potential leakage of sensitive information are escalating. Secure Multi-Party Computation (MPC) is a promising solution to protect the privacy in LLM inference. However, MPC requires frequent inter-server communication, causing high performance overhead. Inspired by the prevalent activation sparsity of LLMs, where most neuron are not activated after non-linear activation functions, we propose an efficient private inference system, Comet. This system employs an accurate and fast predictor to predict the sparsity distribution of activation function output. Additionally, we introduce a new private inference protocol. It efficiently and securely avoids computations involving zero values by exploiting the spatial locality of the predicted sparsity distribution. While this computation-avoidance approach impacts the spatiotemporal continuity of KV cache entries, we address this challenge with a low-communication overhead cache refilling strategy that merges miss requests and incorporates a prefetching mechanism. Finally, we evaluate Comet on four common LLMs and compare it with six state-of-the-art private inference systems. Comet achieves a $1.87\\times-2.63\\times$ speedup and a $1.94\\times-2.64\\times$ communication reduction.",
+        "identifiers": [
+          "SemanticScholar:bd7f594215a228135936300690be7af689cd74c7"
+        ],
+        "semantic_scholar_id": "bd7f594215a228135936300690be7af689cd74c7",
+        "canonical_id": "arXiv:2505.07239",
+        "arxiv_id": "2505.07239",
+        "doi": "10.1109/SP61157.2025.00182",
+        "authors": [
+          "Guang Yan",
+          "Yuhui Zhang",
+          "Zimu Guo",
+          "Lu-Tan Zhao",
+          "Xiao-Jun Chen",
+          "Chen Wang",
+          "Wenhao Wang",
+          "Dan Meng",
+          "Rui Hou"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 536,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.23652",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.23652",
+        "id:SemanticScholar:03417dd09981bcdc80b3de6cb3777493e3e49ed9",
+        "id:arXiv:2510.23652",
+        "title:the structural scalpel automated contiguous layer pruning for large language models",
+        "url:https://arxiv.org/abs/2510.23652"
+      ],
+      "record": {
+        "title": "The Structural Scalpel: Automated Contiguous Layer Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2510.23652",
+        "year": 2025,
+        "published": "2025-10-25",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Although large language models (LLMs) have achieved revolutionary breakthroughs in many fields, their large model size and high computational cost pose significant challenges for practical deployment on resource-constrained edge devices. To this end, layer pruning has been proposed to reduce the computational overhead by directly removing redundant layers. However, existing layer pruning methods typically rely on hand-crafted metrics to evaluate and remove individual layers, while ignoring the dependencies between layers. This can disrupt the model's information flow and severely degrade performance. To address these issues, we propose CLP, a novel continuous layer pruning framework that introduces two key innovations: a differentiable concave gate algorithm that automatically identifies the best continuous layer segments for pruning via gradient-based optimization; and a cutoff endpoint tuning strategy that effectively restores model performance by fine-tuning only the layers adjacent to the pruned segments. Extensive experiments across multiple model architectures (including LLaMA2, LLaMA3 and Qwen) and sizes (from $7$B to $70$B parameters) show that CLP significantly outperforms existing state-of-the-art baselines. For example, at a pruning rate of $20\\%$, CLP achieves an average performance retention of $95.34\\%$ on LLaMA3-70B, outperforming baselines by $4.29\\%$-$30.52\\%$. Furthermore, CLP can be seamlessly combined with quantization to further compress the model with only a slight performance loss.",
+        "identifiers": [
+          "SemanticScholar:03417dd09981bcdc80b3de6cb3777493e3e49ed9"
+        ],
+        "semantic_scholar_id": "03417dd09981bcdc80b3de6cb3777493e3e49ed9",
+        "canonical_id": "arXiv:2510.23652",
+        "arxiv_id": "2510.23652",
+        "doi": "10.48550/arXiv.2510.23652",
+        "authors": [
+          "Yao Lu",
+          "Yu-Qi Li",
+          "Wen-Bin Xie",
+          "Shan-Qing Yu",
+          "Qi Xuan",
+          "Zhao-Wei Zhu",
+          "Shi-Ping Wen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 370,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.23766",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.23766",
+        "id:SemanticScholar:775fa5251e39dcad3d43437d582419eed55b7071",
+        "id:arXiv:2510.23766",
+        "title:bitskip an empirical analysis of quantization and early exit composition",
+        "url:https://arxiv.org/abs/2510.23766"
+      ],
+      "record": {
+        "title": "BitSkip: An Empirical Analysis of Quantization and Early Exit Composition",
+        "source_url": "https://arxiv.org/abs/2510.23766",
+        "year": 2025,
+        "published": "2025-10-27",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The pursuit of efficient Large Language Models (LLMs) has led to increasingly complex techniques like extreme quantization and dynamic routing. While individual benefits of these methods are well-documented, their compositional effects remain poorly understood. This paper introduces BitSkip, a hybrid architectural framework for systematically exploring these interactions. Counter-intuitively, our findings reveal that a simple 8-bit quantized model without Hadamard transform (BitSkip-V1) not only outperforms its more complex 4-bit and Hadamard-enhanced counterparts but also competes the full-precision baseline in quality (perplexity of 1.13 vs 1.19) . The introduction of Hadamard transforms, even at 8-bit precision, catastrophically degraded performance by over 37,000%, tracing fundamental training instability. Our BitSkip-V1 recipe demonstrates superior early-exit characteristics, with layer 18 providing optimal 32.5% speed gain for minimal 4% quality loss.",
+        "identifiers": [
+          "SemanticScholar:775fa5251e39dcad3d43437d582419eed55b7071"
+        ],
+        "semantic_scholar_id": "775fa5251e39dcad3d43437d582419eed55b7071",
+        "canonical_id": "arXiv:2510.23766",
+        "arxiv_id": "2510.23766",
+        "doi": "10.48550/arXiv.2510.23766",
+        "authors": [
+          "R. Bhuvaneswaran",
+          "Han-Dan Liu"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 368,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2e49355b83d93823ab42888c7fa9d37ed432b167cedb5975eac8477f4c904a8e",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

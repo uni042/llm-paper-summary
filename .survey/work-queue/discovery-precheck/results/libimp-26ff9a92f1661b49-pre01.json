@@ -1,0 +1,822 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-26ff9a92f1661b49-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-26ff9a92f166",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2506.09853",
+    "arXiv:2507.03117",
+    "arXiv:2602.19938",
+    "arXiv:2607.11211",
+    "arXiv:2607.29575",
+    "arXiv:2608.28048",
+    "arXiv:2609.34054",
+    "arXiv:2609.40093"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:23.410380+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2506.09853",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.03117",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.19938",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.11211",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.29575",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.28048",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34054",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.40093",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2607.29575",
+      "year": 2026,
+      "published": "2026-07-31",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving commonly increases batch size to improve throughput, but performance eventually reaches a deployment-dependent plateau beyond which larger batches provide marginal gains while increasing latency and GPU memory consumption. Previous studies have attributed this behavior to HBM/DRAM bandwidth limitations, but the underlying causes have primarily been supported by conceptual arguments or high-level performance observations. As our first contribution, we present a detailed GPU characterization using hardware profiling techniques, demonstrating that throughput saturation originates in the attention kernels during the decode phase. Specifically, we show that their nearly constant arithmetic intensity as active-context lengths increases -not merely larger batch sizes- drives DRAM-bandwidth saturation, while the achieved compute throughput remains far below the hardware limit. Building on this analysis, we present the Batching Configuration Advisor (BCA), which selects the highest-throughput batching configuration satisfying a target latency constraint and identifies up to 55 GB of GPU memory allocation that can be avoided for the evaluated OPT models with minimal throughput loss. To enable these recommendations, we introduce SLIM (Saturation-Aware Lightweight Performance Model), a semi-analytical model that predicts LLM inference throughput and latency from analytical formulations of Transformer computation and memory traffic. Across the evaluated scenarios, SLIM outperforms representative performance-modeling baselines while successfully generalizing to previously unseen operating conditions.",
+      "identifiers": [
+        "SemanticScholar:8f1a03fc8beeacb89815615b2e1ec1513c61ec76"
+      ],
+      "semantic_scholar_id": "8f1a03fc8beeacb89815615b2e1ec1513c61ec76",
+      "canonical_id": "arXiv:2607.29575",
+      "arxiv_id": "2607.29575",
+      "doi": "10.48550/arXiv.2607.29575",
+      "authors": [
+        "Pol G. Recasens",
+        "F. Agulló",
+        "Yue Zhu",
+        "Chen Wang",
+        "Jordi Torres",
+        "Josep Ll. Berral"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 91,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+      "source_url": "https://arxiv.org/abs/2608.28048",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) place unprecedented and still-growing demands on the hardware that trains and serves them. This review surveys the full landscape of AI hardware accelerators for LLMs, including general-purpose GPUs, custom ASICs such as TPUs, Trainium, Groq, and Cerebras, reconfigurable FPGAs, processing-in-memory and near-memory architectures, and emerging neuromorphic and photonic approaches across cloud and edge deployment. Using the transformer's computational structure and roofline analysis as a common framework, we show that the decisive constraint on LLM acceleration is not arithmetic but memory: the autoregressive decode phase is bandwidth-bound, the key-value cache can rival the model weights in size, and data movement dominates energy. Comparing platforms on compute, memory, energy, programmability, and scalability, we find that no single architecture is optimal across workloads: GPUs remain the flexible default and the workhorse of training; domain-specific ASICs win at scale for stable, high-volume workloads; processing-in-memory is the most promising near-term response to the memory wall, entering systems as a heterogeneous complement; and neuromorphic and photonic computing, while promising, are not yet production-ready at frontier scale. Future progress depends on hardware-algorithm co-design and heterogeneous, memory-centric systems: for large language models, the memory system has become the computer.",
+      "identifiers": [
+        "SemanticScholar:43333e143a812704882fe15f812f58556e5c482b"
+      ],
+      "semantic_scholar_id": "43333e143a812704882fe15f812f58556e5c482b",
+      "canonical_id": "arXiv:2608.28048",
+      "arxiv_id": "2608.28048",
+      "authors": [
+        "Siddharth Patel",
+        "Rohit Singh"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning",
+      "source_url": "https://arxiv.org/abs/2506.09853",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-Thought (CoT) prompting plays an indispensable role in endowing large language models (LLMs) with complex reasoning capabilities. However, CoT currently faces two fundamental challenges: (1) Sufficiency, which ensures that the generated intermediate inference steps comprehensively cover and substantiate the final conclusion; and (2) Necessity, which identifies the inference steps that are truly indispensable for the soundness of the resulting answer. We propose a causal framework that characterizes CoT reasoning through the dual lenses of sufficiency and necessity. Incorporating causal Probability of Sufficiency and Necessity allows us not only to determine which steps are logically sufficient or necessary to the prediction outcome, but also to quantify their actual influence on the final reasoning outcome under different intervention scenarios, thereby enabling the automated addition of missing steps and the pruning of redundant ones. Extensive experimental results on various mathematical and commonsense reasoning benchmarks confirm substantial improvements in reasoning efficiency and reduced token usage without sacrificing accuracy. Our work provides a promising direction for improving LLM reasoning performance and cost-effectiveness.",
+      "identifiers": [
+        "SemanticScholar:f280a1ce51d5aefcc85d91a098cac127722c6d5f"
+      ],
+      "semantic_scholar_id": "f280a1ce51d5aefcc85d91a098cac127722c6d5f",
+      "canonical_id": "arXiv:2506.09853",
+      "arxiv_id": "2506.09853",
+      "doi": "10.48550/arXiv.2506.09853",
+      "authors": [
+        "Xiangning Yu",
+        "Zhuo-Han Wang",
+        "Lin-Yi Yang",
+        "Haoxuan Li",
+        "An-Jie Liu",
+        "Xiao Xue",
+        "Jun Wang",
+        "Mengyue Yang"
+      ],
+      "priority": 30,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 30,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "A Replicate-and-Quantize Strategy for Plug-and-Play Load Balancing of Sparse Mixture-of-Experts LLMs",
+      "source_url": "https://arxiv.org/abs/2602.19938",
+      "year": 2026,
+      "published": "2026-02-23",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse Mixture-of-Experts (SMoE) architectures are increasingly used to scale large language models efficiently, delivering strong accuracy under fixed compute budgets. However, SMoE models often suffer from severe load imbalance across experts, where a small subset of experts receives most tokens while others are underutilized. Prior work has focused mainly on training-time solutions such as routing regularization or auxiliary losses, leaving inference-time behavior, which is critical for deployment, less explored. We present a systematic analysis of expert routing during inference and identify three findings: (i) load imbalance persists and worsens with larger batch sizes, (ii) selection frequency does not reliably reflect expert importance, and (iii) overall expert workload and importance can be estimated using a small calibration set. These insights motivate inference-time mechanisms that rebalance workloads without retraining or router modification. We propose Replicate-and-Quantize (R&Q), a training-free and near-lossless framework for dynamic workload rebalancing. In each layer, heavy-hitter experts are replicated to increase parallel capacity, while less critical experts and replicas are quantized to remain within the original memory budget. We also introduce a Load-Imbalance Score (LIS) to measure routing skew by comparing heavy-hitter load to an equal allocation baseline. Experiments across representative SMoE models and benchmarks show up to 1.4x reduction in imbalance with accuracy maintained within +/-0.6%, enabling more predictable and efficient inference.",
+      "identifiers": [
+        "SemanticScholar:a7d82a2840d76c9f886ec58801665dc2181ab474"
+      ],
+      "semantic_scholar_id": "a7d82a2840d76c9f886ec58801665dc2181ab474",
+      "canonical_id": "arXiv:2602.19938",
+      "arxiv_id": "2602.19938",
+      "doi": "10.48550/arXiv.2602.19938",
+      "authors": [
+        "Zi-Jie Liu",
+        "Jie Peng",
+        "Jinhao Duan",
+        "Zi-Rui Liu",
+        "Kaixiong Zhou",
+        "Ming-Fu Liang",
+        "Luke Simon",
+        "Xi Liu",
+        "Zhao-Zhuo Xu",
+        "Tian-Long Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 249,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators",
+      "source_url": "https://arxiv.org/abs/2607.11211",
+      "year": 2026,
+      "published": "2026-07-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The popularity of large language models (LLMs) escalates an ongoing demand for effective inference. However, due to the sequential processing of tokens during the token phase in decoder-only LLMs inference, the inherent low parallelism leads to reduced throughput and suboptimal utilization of the computing units on artificial intelligence (AI) accelerators, particularly when handling long-sequence inputs that impose significant memory overhead. Recently, many reported methods have been developed as potential solutions, since they emerge with numeric deviation. This paper presents FastTPS, a high performance and low-precision loss method for accelerating the token-phase in LLM inference on general AI accelerators which includes three key components: (1) AI accelerator-enabled reloading-free KV Cache concatenation which decreases memory access overhead as well as enables full fusion of Attention, (2) high-efficiency and high-accuracy'RoPE'attention based on the tiling optimized FLAT, and (3) highly-fused MLP with fine-grain pipeline scheduling. Our results confirm that FastTPS significantly alleviates memory bottlenecks in the token phase, delivering a 6x speed improvement (compared to none-fusion) on an AMD Ryzen AI 300 series NPU with BF16 precision while sustaining 93% peak memory bandwidth utilization during Phi3-mini-4k-instruct inference.",
+      "identifiers": [
+        "SemanticScholar:32569012047d06293b95eab261876f53577cfd57"
+      ],
+      "semantic_scholar_id": "32569012047d06293b95eab261876f53577cfd57",
+      "canonical_id": "arXiv:2607.11211",
+      "arxiv_id": "2607.11211",
+      "doi": "10.48550/arXiv.2607.11211",
+      "authors": [
+        "Wenzong Yang",
+        "Danyang Zhang",
+        "Kunteng Cao",
+        "Tejus Siddagangaiah",
+        "Rajeev Patwari",
+        "Zhanxing Pu",
+        "Siyin Kong",
+        "Zijiang Yang",
+        "Hao Zhu",
+        "Varun Sharma",
+        "Yuechen Gao",
+        "Tian-Ping Li",
+        "Fan Yang",
+        "Jicheng Chen",
+        "Yushan Chen",
+        "Fennian Zhao",
+        "A. Ng",
+        "Elliott Delaye",
+        "Ashish Sirasao",
+        "Sudip Nag"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 109,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+      "source_url": "https://arxiv.org/abs/2609.34054",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-LoRA agent systems enable efficient role specialization by sharing a common backbone model. However, each agent repeatedly processes the growing shared trajectory and constructs its own KV cache, introducing substantial memory and computation redundancy in long-horizon tasks. Existing KV cache sharing methods reduce this repeated prefill, but they either require additional training or architectural constraints or retain substantial model computation. Moreover, direct cache reuse causes the current agent to rely on cache states generated by the previous agent's adapter, weakening the role-specific behavior encoded by its own LoRA. We present PReCache, a training-free KV cache sharing framework with two designs, namely PreLRShared and ReBaseShared, that share the base cache computed using the pretrained weights and precompute a compact agent-specific low-rank (LR) cache. To remove repeated prefill, PreLRShared precomputes each agent's LR cache when the shared context is first processed, allowing the current agent to use its own LR cache without reprocessing context processed by previous agents. To improve sharing accuracy, ReBaseShared reconstructs the shared base cache from adapter-free hidden states, reducing the remaining error caused by the previous agent's adapted representation. To minimize its reconstruction cost, we propose two inference schemes tailored to single-stream inference and concurrent serving, performing the same reconstruction after each agent's turn or alongside its execution, respectively. Across multiple models and agent benchmarks, PreLRShared achieves up to a 3.1x TTFT speedup and a 2.3x improvement in per-request throughput over inference without KV cache sharing. ReBaseShared best preserves accuracy overall among the evaluated cache-sharing methods, with an average drop of only 1.1 points relative to inference without cache sharing.",
+      "identifiers": [
+        "SemanticScholar:debe4032a54022021bd82bb73f7dbd673da5e4a8"
+      ],
+      "semantic_scholar_id": "debe4032a54022021bd82bb73f7dbd673da5e4a8",
+      "canonical_id": "arXiv:2609.34054",
+      "arxiv_id": "2609.34054",
+      "authors": [
+        "Hyesung Jeon",
+        "Hyeongju Ha",
+        "Jae-Joon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Expert-Parallel Communication on PCIe-Connected Consumer GPUs",
+      "source_url": "https://arxiv.org/abs/2609.40093",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Expert parallelism (EP) enables inference of large Mixture-of-Experts (MoE) models by placing their experts across multiple GPUs, but requires substantial communication between GPUs at every MoE layer. As contemporary MoE models activate more experts per token, this communication accounts for a growing fraction of inference time. The cost becomes particularly pronounced on PCIe-based consumer GPU systems, where all inter-GPU transfers traverse CPU memory. However, existing MoE-specialized EP communication libraries assume that direct GPU-to-GPU access is available, largely overlooking consumer GPUs. Therefore, most LLM frameworks instead rely on NCCL, whose CPU-staged communication incurs redundant PCIe transfers and competes with expert computation for GPU resources, limiting their overlap. We present ThunderEP, a novel communication design for such systems that removes the relay hops of traditional ring algorithm, moves data through DMA engines to avoid compute resource contention, and minimizes synchronization latency by reducing the polling overhead of completion flags in CPU memory. We integrate the proposed design into vLLM and evaluate it on three widely used MoE models. Experiments on two PCIe systems equipped with RTX 4090 and RTX 5090 GPUs show that ThunderEP achieves average speedups of 2.00$\\times$ and 1.53$\\times$ over NCCL for dispatch and combine, respectively, and up to 1.66$\\times$ end-to-end speedup over state-of-the-art MoE inference frameworks.",
+      "identifiers": [
+        "SemanticScholar:f86fb8eeecad5954dcc75950b25e8b580f3e15ef"
+      ],
+      "semantic_scholar_id": "f86fb8eeecad5954dcc75950b25e8b580f3e15ef",
+      "canonical_id": "arXiv:2609.40093",
+      "arxiv_id": "2609.40093",
+      "authors": [
+        "Jaehwan Lee",
+        "Sang-Min Lee",
+        "Chaewon Kim",
+        "Jun-Hee Shin",
+        "Jaejin Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BLaST: High Performance Inference and Pretraining using BLock Sparse Transformers",
+      "source_url": "https://arxiv.org/abs/2507.03117",
+      "year": 2025,
+      "published": "2025-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The energy consumption of large-scale ML models is dominated by data movement, shuffling billions of parameters across memory hierarchies and data centers. Sparsification offers a principled way to mitigate these costs by pruning redundant weights and activations, thereby reducing data movement. Effective sparsification to prune redundant parameters is still challenging: existing methods incur significant accuracy degradation, performance overhead, or both. We introduce (Bl)ock (a)nd (S)parse (T)ransformers (BLaST), a general, robust, and reliable method for sparsification, applicable to linear layers in all settings. Our method iteratively sparsifies weight matrices into a block sparsity pattern suitable for efficient sparse matrix-matrix (SpMM) multiplication. BLaST achieves up to 95% sparsity in MLP weights with negligible accuracy loss (majority<2.25%). We show a 2.2x inference speedup for Llama 3.2 with 16 GPUs, and up to 4.45x reduction in inference memory footprint resulting in a 2.9x reduction in GPU setup and operating costs.",
+      "identifiers": [
+        "SemanticScholar:14a3d174d4c5ecccdeef218764bf07bafe08dc2a"
+      ],
+      "semantic_scholar_id": "14a3d174d4c5ecccdeef218764bf07bafe08dc2a",
+      "canonical_id": "arXiv:2507.03117",
+      "arxiv_id": "2507.03117",
+      "doi": "10.48550/arXiv.2507.03117",
+      "authors": [
+        "Patrik Okanovic",
+        "Sameer Deshmukh",
+        "Grzegorz Kwasniewski",
+        "Yi Zhu",
+        "Haruto Fujii",
+        "Sakina Fatima",
+        "Maciej Besta",
+        "Kentaro Katayama",
+        "Takumi Honda",
+        "Yusuke Nagasaka",
+        "T. Hoefler"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 484,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.29575",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.29575",
+        "id:SemanticScholar:8f1a03fc8beeacb89815615b2e1ec1513c61ec76",
+        "id:arXiv:2607.29575",
+        "title:slim saturationaware lightweight performance modeling for llm serving",
+        "url:https://arxiv.org/abs/2607.29575"
+      ],
+      "record": {
+        "title": "SLIM: Saturation-Aware Lightweight Performance Modeling for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2607.29575",
+        "year": 2026,
+        "published": "2026-07-31",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving commonly increases batch size to improve throughput, but performance eventually reaches a deployment-dependent plateau beyond which larger batches provide marginal gains while increasing latency and GPU memory consumption. Previous studies have attributed this behavior to HBM/DRAM bandwidth limitations, but the underlying causes have primarily been supported by conceptual arguments or high-level performance observations. As our first contribution, we present a detailed GPU characterization using hardware profiling techniques, demonstrating that throughput saturation originates in the attention kernels during the decode phase. Specifically, we show that their nearly constant arithmetic intensity as active-context lengths increases -not merely larger batch sizes- drives DRAM-bandwidth saturation, while the achieved compute throughput remains far below the hardware limit. Building on this analysis, we present the Batching Configuration Advisor (BCA), which selects the highest-throughput batching configuration satisfying a target latency constraint and identifies up to 55 GB of GPU memory allocation that can be avoided for the evaluated OPT models with minimal throughput loss. To enable these recommendations, we introduce SLIM (Saturation-Aware Lightweight Performance Model), a semi-analytical model that predicts LLM inference throughput and latency from analytical formulations of Transformer computation and memory traffic. Across the evaluated scenarios, SLIM outperforms representative performance-modeling baselines while successfully generalizing to previously unseen operating conditions.",
+        "identifiers": [
+          "SemanticScholar:8f1a03fc8beeacb89815615b2e1ec1513c61ec76"
+        ],
+        "semantic_scholar_id": "8f1a03fc8beeacb89815615b2e1ec1513c61ec76",
+        "canonical_id": "arXiv:2607.29575",
+        "arxiv_id": "2607.29575",
+        "doi": "10.48550/arXiv.2607.29575",
+        "authors": [
+          "Pol G. Recasens",
+          "F. Agulló",
+          "Yue Zhu",
+          "Chen Wang",
+          "Jordi Torres",
+          "Josep Ll. Berral"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 91,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.28048",
+      "identity_tokens": [
+        "id:SemanticScholar:43333e143a812704882fe15f812f58556e5c482b",
+        "id:arXiv:2608.28048",
+        "title:ai hardware accelerators for large language models architectures and the memory wall",
+        "url:https://arxiv.org/abs/2608.28048"
+      ],
+      "record": {
+        "title": "AI Hardware Accelerators for Large Language Models: Architectures and the Memory Wall",
+        "source_url": "https://arxiv.org/abs/2608.28048",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) place unprecedented and still-growing demands on the hardware that trains and serves them. This review surveys the full landscape of AI hardware accelerators for LLMs, including general-purpose GPUs, custom ASICs such as TPUs, Trainium, Groq, and Cerebras, reconfigurable FPGAs, processing-in-memory and near-memory architectures, and emerging neuromorphic and photonic approaches across cloud and edge deployment. Using the transformer's computational structure and roofline analysis as a common framework, we show that the decisive constraint on LLM acceleration is not arithmetic but memory: the autoregressive decode phase is bandwidth-bound, the key-value cache can rival the model weights in size, and data movement dominates energy. Comparing platforms on compute, memory, energy, programmability, and scalability, we find that no single architecture is optimal across workloads: GPUs remain the flexible default and the workhorse of training; domain-specific ASICs win at scale for stable, high-volume workloads; processing-in-memory is the most promising near-term response to the memory wall, entering systems as a heterogeneous complement; and neuromorphic and photonic computing, while promising, are not yet production-ready at frontier scale. Future progress depends on hardware-algorithm co-design and heterogeneous, memory-centric systems: for large language models, the memory system has become the computer.",
+        "identifiers": [
+          "SemanticScholar:43333e143a812704882fe15f812f58556e5c482b"
+        ],
+        "semantic_scholar_id": "43333e143a812704882fe15f812f58556e5c482b",
+        "canonical_id": "arXiv:2608.28048",
+        "arxiv_id": "2608.28048",
+        "authors": [
+          "Siddharth Patel",
+          "Rohit Singh"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 63,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.09853",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.09853",
+        "id:SemanticScholar:f280a1ce51d5aefcc85d91a098cac127722c6d5f",
+        "id:arXiv:2506.09853",
+        "title:causal sufficiency and necessity improves chainofthought reasoning",
+        "url:https://arxiv.org/abs/2506.09853"
+      ],
+      "record": {
+        "title": "Causal Sufficiency and Necessity Improves Chain-of-Thought Reasoning",
+        "source_url": "https://arxiv.org/abs/2506.09853",
+        "year": 2025,
+        "published": "2025-06-11",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-Thought (CoT) prompting plays an indispensable role in endowing large language models (LLMs) with complex reasoning capabilities. However, CoT currently faces two fundamental challenges: (1) Sufficiency, which ensures that the generated intermediate inference steps comprehensively cover and substantiate the final conclusion; and (2) Necessity, which identifies the inference steps that are truly indispensable for the soundness of the resulting answer. We propose a causal framework that characterizes CoT reasoning through the dual lenses of sufficiency and necessity. Incorporating causal Probability of Sufficiency and Necessity allows us not only to determine which steps are logically sufficient or necessary to the prediction outcome, but also to quantify their actual influence on the final reasoning outcome under different intervention scenarios, thereby enabling the automated addition of missing steps and the pruning of redundant ones. Extensive experimental results on various mathematical and commonsense reasoning benchmarks confirm substantial improvements in reasoning efficiency and reduced token usage without sacrificing accuracy. Our work provides a promising direction for improving LLM reasoning performance and cost-effectiveness.",
+        "identifiers": [
+          "SemanticScholar:f280a1ce51d5aefcc85d91a098cac127722c6d5f"
+        ],
+        "semantic_scholar_id": "f280a1ce51d5aefcc85d91a098cac127722c6d5f",
+        "canonical_id": "arXiv:2506.09853",
+        "arxiv_id": "2506.09853",
+        "doi": "10.48550/arXiv.2506.09853",
+        "authors": [
+          "Xiangning Yu",
+          "Zhuo-Han Wang",
+          "Lin-Yi Yang",
+          "Haoxuan Li",
+          "An-Jie Liu",
+          "Xiao Xue",
+          "Jun Wang",
+          "Mengyue Yang"
+        ],
+        "priority": 30,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 30,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.19938",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.19938",
+        "id:SemanticScholar:a7d82a2840d76c9f886ec58801665dc2181ab474",
+        "id:arXiv:2602.19938",
+        "title:a replicateandquantize strategy for plugandplay load balancing of sparse mixtureofexperts llms",
+        "url:https://arxiv.org/abs/2602.19938"
+      ],
+      "record": {
+        "title": "A Replicate-and-Quantize Strategy for Plug-and-Play Load Balancing of Sparse Mixture-of-Experts LLMs",
+        "source_url": "https://arxiv.org/abs/2602.19938",
+        "year": 2026,
+        "published": "2026-02-23",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse Mixture-of-Experts (SMoE) architectures are increasingly used to scale large language models efficiently, delivering strong accuracy under fixed compute budgets. However, SMoE models often suffer from severe load imbalance across experts, where a small subset of experts receives most tokens while others are underutilized. Prior work has focused mainly on training-time solutions such as routing regularization or auxiliary losses, leaving inference-time behavior, which is critical for deployment, less explored. We present a systematic analysis of expert routing during inference and identify three findings: (i) load imbalance persists and worsens with larger batch sizes, (ii) selection frequency does not reliably reflect expert importance, and (iii) overall expert workload and importance can be estimated using a small calibration set. These insights motivate inference-time mechanisms that rebalance workloads without retraining or router modification. We propose Replicate-and-Quantize (R&Q), a training-free and near-lossless framework for dynamic workload rebalancing. In each layer, heavy-hitter experts are replicated to increase parallel capacity, while less critical experts and replicas are quantized to remain within the original memory budget. We also introduce a Load-Imbalance Score (LIS) to measure routing skew by comparing heavy-hitter load to an equal allocation baseline. Experiments across representative SMoE models and benchmarks show up to 1.4x reduction in imbalance with accuracy maintained within +/-0.6%, enabling more predictable and efficient inference.",
+        "identifiers": [
+          "SemanticScholar:a7d82a2840d76c9f886ec58801665dc2181ab474"
+        ],
+        "semantic_scholar_id": "a7d82a2840d76c9f886ec58801665dc2181ab474",
+        "canonical_id": "arXiv:2602.19938",
+        "arxiv_id": "2602.19938",
+        "doi": "10.48550/arXiv.2602.19938",
+        "authors": [
+          "Zi-Jie Liu",
+          "Jie Peng",
+          "Jinhao Duan",
+          "Zi-Rui Liu",
+          "Kaixiong Zhou",
+          "Ming-Fu Liang",
+          "Luke Simon",
+          "Xi Liu",
+          "Zhao-Zhuo Xu",
+          "Tian-Long Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 249,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.11211",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.11211",
+        "id:SemanticScholar:32569012047d06293b95eab261876f53577cfd57",
+        "id:arXiv:2607.11211",
+        "title:fasttps an optimized method for llm token phase for ai accelerators",
+        "url:https://arxiv.org/abs/2607.11211"
+      ],
+      "record": {
+        "title": "FastTPS: An Optimized Method for LLM Token Phase for AI accelerators",
+        "source_url": "https://arxiv.org/abs/2607.11211",
+        "year": 2026,
+        "published": "2026-07-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The popularity of large language models (LLMs) escalates an ongoing demand for effective inference. However, due to the sequential processing of tokens during the token phase in decoder-only LLMs inference, the inherent low parallelism leads to reduced throughput and suboptimal utilization of the computing units on artificial intelligence (AI) accelerators, particularly when handling long-sequence inputs that impose significant memory overhead. Recently, many reported methods have been developed as potential solutions, since they emerge with numeric deviation. This paper presents FastTPS, a high performance and low-precision loss method for accelerating the token-phase in LLM inference on general AI accelerators which includes three key components: (1) AI accelerator-enabled reloading-free KV Cache concatenation which decreases memory access overhead as well as enables full fusion of Attention, (2) high-efficiency and high-accuracy'RoPE'attention based on the tiling optimized FLAT, and (3) highly-fused MLP with fine-grain pipeline scheduling. Our results confirm that FastTPS significantly alleviates memory bottlenecks in the token phase, delivering a 6x speed improvement (compared to none-fusion) on an AMD Ryzen AI 300 series NPU with BF16 precision while sustaining 93% peak memory bandwidth utilization during Phi3-mini-4k-instruct inference.",
+        "identifiers": [
+          "SemanticScholar:32569012047d06293b95eab261876f53577cfd57"
+        ],
+        "semantic_scholar_id": "32569012047d06293b95eab261876f53577cfd57",
+        "canonical_id": "arXiv:2607.11211",
+        "arxiv_id": "2607.11211",
+        "doi": "10.48550/arXiv.2607.11211",
+        "authors": [
+          "Wenzong Yang",
+          "Danyang Zhang",
+          "Kunteng Cao",
+          "Tejus Siddagangaiah",
+          "Rajeev Patwari",
+          "Zhanxing Pu",
+          "Siyin Kong",
+          "Zijiang Yang",
+          "Hao Zhu",
+          "Varun Sharma",
+          "Yuechen Gao",
+          "Tian-Ping Li",
+          "Fan Yang",
+          "Jicheng Chen",
+          "Yushan Chen",
+          "Fennian Zhao",
+          "A. Ng",
+          "Elliott Delaye",
+          "Ashish Sirasao",
+          "Sudip Nag"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 109,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34054",
+      "identity_tokens": [
+        "id:SemanticScholar:debe4032a54022021bd82bb73f7dbd673da5e4a8",
+        "id:arXiv:2609.34054",
+        "title:precache efficient kv cache sharing for multilora agents via lowrank precomputation and neutral reconstruction",
+        "url:https://arxiv.org/abs/2609.34054"
+      ],
+      "record": {
+        "title": "PReCache: Efficient KV Cache Sharing for Multi-LoRA Agents via Low-Rank Precomputation and Neutral Reconstruction",
+        "source_url": "https://arxiv.org/abs/2609.34054",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-LoRA agent systems enable efficient role specialization by sharing a common backbone model. However, each agent repeatedly processes the growing shared trajectory and constructs its own KV cache, introducing substantial memory and computation redundancy in long-horizon tasks. Existing KV cache sharing methods reduce this repeated prefill, but they either require additional training or architectural constraints or retain substantial model computation. Moreover, direct cache reuse causes the current agent to rely on cache states generated by the previous agent's adapter, weakening the role-specific behavior encoded by its own LoRA. We present PReCache, a training-free KV cache sharing framework with two designs, namely PreLRShared and ReBaseShared, that share the base cache computed using the pretrained weights and precompute a compact agent-specific low-rank (LR) cache. To remove repeated prefill, PreLRShared precomputes each agent's LR cache when the shared context is first processed, allowing the current agent to use its own LR cache without reprocessing context processed by previous agents. To improve sharing accuracy, ReBaseShared reconstructs the shared base cache from adapter-free hidden states, reducing the remaining error caused by the previous agent's adapted representation. To minimize its reconstruction cost, we propose two inference schemes tailored to single-stream inference and concurrent serving, performing the same reconstruction after each agent's turn or alongside its execution, respectively. Across multiple models and agent benchmarks, PreLRShared achieves up to a 3.1x TTFT speedup and a 2.3x improvement in per-request throughput over inference without KV cache sharing. ReBaseShared best preserves accuracy overall among the evaluated cache-sharing methods, with an average drop of only 1.1 points relative to inference without cache sharing.",
+        "identifiers": [
+          "SemanticScholar:debe4032a54022021bd82bb73f7dbd673da5e4a8"
+        ],
+        "semantic_scholar_id": "debe4032a54022021bd82bb73f7dbd673da5e4a8",
+        "canonical_id": "arXiv:2609.34054",
+        "arxiv_id": "2609.34054",
+        "authors": [
+          "Hyesung Jeon",
+          "Hyeongju Ha",
+          "Jae-Joon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.40093",
+      "identity_tokens": [
+        "id:SemanticScholar:f86fb8eeecad5954dcc75950b25e8b580f3e15ef",
+        "id:arXiv:2609.40093",
+        "title:efficient expertparallel communication on pcieconnected consumer gpus",
+        "url:https://arxiv.org/abs/2609.40093"
+      ],
+      "record": {
+        "title": "Efficient Expert-Parallel Communication on PCIe-Connected Consumer GPUs",
+        "source_url": "https://arxiv.org/abs/2609.40093",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Expert parallelism (EP) enables inference of large Mixture-of-Experts (MoE) models by placing their experts across multiple GPUs, but requires substantial communication between GPUs at every MoE layer. As contemporary MoE models activate more experts per token, this communication accounts for a growing fraction of inference time. The cost becomes particularly pronounced on PCIe-based consumer GPU systems, where all inter-GPU transfers traverse CPU memory. However, existing MoE-specialized EP communication libraries assume that direct GPU-to-GPU access is available, largely overlooking consumer GPUs. Therefore, most LLM frameworks instead rely on NCCL, whose CPU-staged communication incurs redundant PCIe transfers and competes with expert computation for GPU resources, limiting their overlap. We present ThunderEP, a novel communication design for such systems that removes the relay hops of traditional ring algorithm, moves data through DMA engines to avoid compute resource contention, and minimizes synchronization latency by reducing the polling overhead of completion flags in CPU memory. We integrate the proposed design into vLLM and evaluate it on three widely used MoE models. Experiments on two PCIe systems equipped with RTX 4090 and RTX 5090 GPUs show that ThunderEP achieves average speedups of 2.00$\\times$ and 1.53$\\times$ over NCCL for dispatch and combine, respectively, and up to 1.66$\\times$ end-to-end speedup over state-of-the-art MoE inference frameworks.",
+        "identifiers": [
+          "SemanticScholar:f86fb8eeecad5954dcc75950b25e8b580f3e15ef"
+        ],
+        "semantic_scholar_id": "f86fb8eeecad5954dcc75950b25e8b580f3e15ef",
+        "canonical_id": "arXiv:2609.40093",
+        "arxiv_id": "2609.40093",
+        "authors": [
+          "Jaehwan Lee",
+          "Sang-Min Lee",
+          "Chaewon Kim",
+          "Jun-Hee Shin",
+          "Jaejin Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.03117",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.03117",
+        "id:SemanticScholar:14a3d174d4c5ecccdeef218764bf07bafe08dc2a",
+        "id:arXiv:2507.03117",
+        "title:blast high performance inference and pretraining using block sparse transformers",
+        "url:https://arxiv.org/abs/2507.03117"
+      ],
+      "record": {
+        "title": "BLaST: High Performance Inference and Pretraining using BLock Sparse Transformers",
+        "source_url": "https://arxiv.org/abs/2507.03117",
+        "year": 2025,
+        "published": "2025-07-03",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The energy consumption of large-scale ML models is dominated by data movement, shuffling billions of parameters across memory hierarchies and data centers. Sparsification offers a principled way to mitigate these costs by pruning redundant weights and activations, thereby reducing data movement. Effective sparsification to prune redundant parameters is still challenging: existing methods incur significant accuracy degradation, performance overhead, or both. We introduce (Bl)ock (a)nd (S)parse (T)ransformers (BLaST), a general, robust, and reliable method for sparsification, applicable to linear layers in all settings. Our method iteratively sparsifies weight matrices into a block sparsity pattern suitable for efficient sparse matrix-matrix (SpMM) multiplication. BLaST achieves up to 95% sparsity in MLP weights with negligible accuracy loss (majority<2.25%). We show a 2.2x inference speedup for Llama 3.2 with 16 GPUs, and up to 4.45x reduction in inference memory footprint resulting in a 2.9x reduction in GPU setup and operating costs.",
+        "identifiers": [
+          "SemanticScholar:14a3d174d4c5ecccdeef218764bf07bafe08dc2a"
+        ],
+        "semantic_scholar_id": "14a3d174d4c5ecccdeef218764bf07bafe08dc2a",
+        "canonical_id": "arXiv:2507.03117",
+        "arxiv_id": "2507.03117",
+        "doi": "10.48550/arXiv.2507.03117",
+        "authors": [
+          "Patrik Okanovic",
+          "Sameer Deshmukh",
+          "Grzegorz Kwasniewski",
+          "Yi Zhu",
+          "Haruto Fujii",
+          "Sakina Fatima",
+          "Maciej Besta",
+          "Kentaro Katayama",
+          "Takumi Honda",
+          "Yusuke Nagasaka",
+          "T. Hoefler"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 484,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:72862f35ec07a2623ecbf61db9f3bbfd1b6face659d1d9e158a6bf275842b3a1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

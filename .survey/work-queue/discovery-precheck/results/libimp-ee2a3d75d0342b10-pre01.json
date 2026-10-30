@@ -1,0 +1,870 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ee2a3d75d0342b10-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ee2a3d75d034",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2601.12247",
+    "arXiv:2605.27494",
+    "arXiv:2606.08804",
+    "arXiv:2606.22840",
+    "arXiv:2607.03050",
+    "arXiv:2607.22587",
+    "arXiv:2608.06146",
+    "arXiv:2608.15810",
+    "arXiv:2608.30509"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:55.526318+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2601.12247",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.27494",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.08804",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.22840",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.03050",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.22587",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.06146",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.15810",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.30509",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Plan, Verify and Fill: A Structured Parallel Decoding Approach for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2601.12247",
+      "year": 2026,
+      "published": "2026-01-18",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) present a promising non-sequential paradigm for text generation, distinct from standard autoregressive (AR) approaches. However, current decoding strategies often adopt a reactive stance, underutilizing the global bidirectional context to dictate global trajectories. To address this, we propose Plan-Verify-Fill (PVF), a training-free paradigm that grounds planning via quantitative validation. PVF actively constructs a hierarchical skeleton by prioritizing high-leverage semantic anchors and employs a verification protocol to operationalize pragmatic structural stopping where further deliberation yields diminishing returns. Extensive evaluations on LLaDA-8B-Instruct and Dream-7B-Instruct demonstrate that PVF reduces the Number of Function Evaluations (NFE) by up to 65% compared to confidence-based parallel decoding across benchmark datasets, unlocking superior efficiency without compromising accuracy.",
+      "identifiers": [
+        "SemanticScholar:b8c0f3c3f9110a6510cf000361940b9cae01bc96"
+      ],
+      "semantic_scholar_id": "b8c0f3c3f9110a6510cf000361940b9cae01bc96",
+      "canonical_id": "arXiv:2601.12247",
+      "arxiv_id": "2601.12247",
+      "doi": "10.48550/arXiv.2601.12247",
+      "authors": [
+        "Miao Li",
+        "Han-Yang Jiang",
+        "Sikai Cheng",
+        "Heng-Yu Fu",
+        "Yu-Hang Cai",
+        "Bai-He Huang",
+        "Ting-Han Ye",
+        "Xuanzhou Chen",
+        "P. Van Hentenryck"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 285,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "OmniFocus: Query-Guided Modality-Balanced Token Compression for Omni-Modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.03050",
+      "year": 2026,
+      "published": "2026-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni modal large language models (OmniLLMs) have attracted wide attention for their ability to jointly process audio and video, but they generate large token sequences under audio-visual inputs, leading to substantial inference cost. Existing audio-visual token compression methods often rely on unimodal guidance, overlooking the temporal locality of query-relevant evidence in audio-visual inputs and implicitly assuming that the two modalities share a temporally aligned information density distribution. We propose \\textbf{OmniFocus}, a training-free query-guided token compression method for OmniLLMs that performs independent importance estimation for video and audio, enabling a modality-symmetric compression design that preserves modality-specific salient evidence while maintaining audio-visual alignment, thereby mitigating the modality bias issue that can arise from unimodal-guided compression. Experiments on the Qwen2.5-Omni model family across four audio-visual benchmarks show that OmniFocus maintains strong compressed performance at low token retention ratios and outperforms existing baselines on several major benchmark scores at 25\\% token retention. On DailyOmni with Qwen2.5-Omni-7B at 25\\% token retention, OmniFocus maintains 59.40 accuracy while delivering up to 1.38$\\times$ prefill speedup relative to the full-token baseline, highlighting a favorable practical accuracy-efficiency trade-off.",
+      "identifiers": [
+        "SemanticScholar:67f7e36c119d082eeb17ac3ca4003ab644ddc9ab"
+      ],
+      "semantic_scholar_id": "67f7e36c119d082eeb17ac3ca4003ab644ddc9ab",
+      "canonical_id": "arXiv:2607.03050",
+      "arxiv_id": "2607.03050",
+      "doi": "10.48550/arXiv.2607.03050",
+      "authors": [
+        "Shi-Jie Cao",
+        "Qingyu Zhang",
+        "Bo-Xi Yu",
+        "Yu-Zhong Zhang",
+        "Boxi Cao",
+        "Yaojie Lu",
+        "Hong-Yu Lin",
+        "Xian-Pei Han",
+        "Le Sun"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+      "source_url": "https://arxiv.org/abs/2605.27494",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+      "identifiers": [
+        "SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91"
+      ],
+      "semantic_scholar_id": "919628398eba1f2a91772d69253fa4db73342c91",
+      "canonical_id": "arXiv:2605.27494",
+      "arxiv_id": "2605.27494",
+      "doi": "10.48550/arXiv.2605.27494",
+      "authors": [
+        "Syed Huma Shah"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PaDoc: Layout-Grounded Parallel Decoding for Document Parsing",
+      "source_url": "https://arxiv.org/abs/2608.06146",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "End-to-end document parsers provide a unified interface, but serialize page layouts and regional contents into one autoregressive sequence. This formulation forces independent regions onto a decoding path whose length grows with the total content, whereas crop-based two-stage parsers expose region-level parallelism at the cost of repeated visual prefills and fragmented page context. To retain full-page context while removing dependencies, we propose PaDoc, a layout-grounded parser that treats the predicted layout as a branching structure over a shared page representation. Under a region-sufficiency assumption, we derive a prefix-conditioned factorization in which the layout stream and regional content branches advance concurrently, reducing the decoding depth to the longest layout-content path. We realize this factorization within a single MLLM: packed variable-length ancestor attention preserves the visibility under standard next-token training, while masked parallel decoding creates branches that the evaluated vLLM backend serves as concurrent requests with cache-resident shared-prefix reuse. On OmniDocBench Full, PaDoc attains an Overall layout F1 of 91.1 and, among end-to-end parsers, a top-tier Overall score of 94.24 together with the best Text Edit (0.038) and Formula CDM (95.59). On a 384-page subset and one A800 GPU, it is the fastest end-to-end parser at five concurrency levels, improving valid-page throughput by 67.4-118% and reducing P95 latency by 39.2-54.9% relative to a same-backbone Sequential SFT baseline. Code is available at https://github.com/Longin-Yu/Padoc",
+      "identifiers": [
+        "SemanticScholar:385ad89b1980dfdc85ab494120bca1635d4131cb"
+      ],
+      "semantic_scholar_id": "385ad89b1980dfdc85ab494120bca1635d4131cb",
+      "canonical_id": "arXiv:2608.06146",
+      "arxiv_id": "2608.06146",
+      "authors": [
+        "Hao Yu",
+        "Jia-Bo Zhan",
+        "Kang Liu",
+        "Lin-Nan Zhao",
+        "Dongxu Yue",
+        "Rui Chen",
+        "Jinglin Wang",
+        "Chong Sun",
+        "Chen Li",
+        "Jing Lyu",
+        "Chun Yuan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Q-Delta: Beyond Key-Value Associative State Evolution",
+      "source_url": "https://arxiv.org/abs/2606.08804",
+      "year": 2026,
+      "published": "2026-06-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention reformulates sequence modeling as recurrent state evolution, enabling efficient linear-time inference. Under the key-value associative paradigm, existing approaches restrict the role of the query to the readout operation, decoupling it from state evolution. We show that query-conditioned state readout induces a structured value prediction over accumulated memory that complements key-based retrieval. Based on this insight, we propose Q-Delta, a query-aware delta rule that integrates mixed key-query prediction errors into state evolution, enabling jointly corrective dynamics while preserving delta-rule efficiency. We establish stability guarantees for the resulting dynamics and derive a hardware-efficient chunkwise-parallel formulation with a custom Triton implementation. Empirical results demonstrate stable optimization, competitive throughput, and consistent improvements over strong baselines on language modeling and long-context retrieval tasks.",
+      "identifiers": [
+        "SemanticScholar:87cf40b41429ad4e2982e8a36042971ad77eae54"
+      ],
+      "semantic_scholar_id": "87cf40b41429ad4e2982e8a36042971ad77eae54",
+      "canonical_id": "arXiv:2606.08804",
+      "arxiv_id": "2606.08804",
+      "doi": "10.48550/arXiv.2606.08804",
+      "authors": [
+        "Sumin Park",
+        "Seojin Kim",
+        "Noseong Park"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 145,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "TriSP: Tri-Signal Structured Pruning for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.22587",
+      "year": 2026,
+      "published": "2026-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve strong performance across diverse tasks but their deployment is constrained by the memory and compute cost of their parameters. Structured pruning addresses this by removing entire structures such as attention heads and Multi-Layer Perceptron (MLP) neurons to produce smaller dense models that run efficiently on standard hardware. However, existing methods rely on either gradient-based importance estimation, which is memory-prohibitive, or activation-based statistical proxies, which do not directly measure the effect of removal on the loss. Furthermore, the interaction between the importance criterion and the post-pruning recovery strategy has not been systematically studied. We propose TriSP (Tri-Signal Structured Pruning), an importance metric that combines weight magnitude scaled by activation norm with first-order gradient sensitivity via a geometric mean, producing a channel-level score that captures both structural and loss-sensitivity signals. Combined with adaptive per-layer budget allocation and low-rank adaptation (LoRA) recovery, TriSP achieves the lowest perplexity and highest zero-shot accuracy across all tested configurations, reaching 6.80 WikiText-2 perplexity at 20% pruning on LLaMA-7B. Inference throughput improves by 82% at 50% pruning, while still maintaining competitive performance.",
+      "identifiers": [
+        "SemanticScholar:15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c"
+      ],
+      "semantic_scholar_id": "15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c",
+      "canonical_id": "arXiv:2607.22587",
+      "arxiv_id": "2607.22587",
+      "doi": "10.48550/arXiv.2607.22587",
+      "authors": [
+        "Manel Kara Laouar",
+        "Soumia Bouyahiaoui",
+        "Aicha Boutorh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving",
+      "source_url": "https://arxiv.org/abs/2606.22840",
+      "year": 2026,
+      "published": "2026-06-22",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present RLM-Cascade, a proxy-layer system that applies speculative decoding at the response level to reduce LLM API costs without requiring model architecture access or a shared vocabulary. A fast, inexpensive draft model generates a candidate response; a capable verify model accepts, enhances, or is bypassed entirely depending on a lightweight complexity router. On a real-world agentic coding workload (Claude Code), RLM-Cascade achieves a draft-use rate of 88.8% across 125 production requests, reducing API cost by 45.8% relative to a direct Opus baseline. Counter-intuitively, the proxy also reduces end-to-end latency: median response time is 2,026 ms versus 3,698 ms for Native Opus -- a 1.83X speedup at p50 -- because the SKIPPED path (DeepSeek only, no Opus call) dominates the workload distribution. Quality matches or exceeds the Opus baseline: 100% pass rate on a 20-task Code/Math/Instruct benchmark versus 95% for Native Opus. We further describe a rule-based complexity router that selects the SKIPPED path for simple agentic turns and a hybrid tool-call strategy that bypasses the speculative pipeline for schema-critical tool-selection turns. RLM-Cascade is deployed in production as an enterprise AI infrastructure component and published as open source with a live metrics dashboard and Prometheus endpoint.",
+      "identifiers": [
+        "SemanticScholar:b4debda8ca6146bc995b4101b68b37a4ff7ae387"
+      ],
+      "semantic_scholar_id": "b4debda8ca6146bc995b4101b68b37a4ff7ae387",
+      "canonical_id": "arXiv:2606.22840",
+      "arxiv_id": "2606.22840",
+      "doi": "10.48550/arXiv.2606.22840",
+      "authors": [
+        "Hai-Feng Wu",
+        "Srinivasan Manoharan",
+        "Fang Tu",
+        "Jun Zhao",
+        "Jianwei Wan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 130,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State",
+      "source_url": "https://arxiv.org/abs/2608.15810",
+      "year": 2026,
+      "published": "2026-08-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Runtime compression of serving state trades quality for capacity with no priced guarantee: systems adapt precision on load signals with no soundness statement, and certified approaches budget request-level risk by a union bound over a pre-declared event count. We show the union budget exhausts on every long request in a production serving stack (100% of requests), and replace it with an anytime-valid, physically accounted ledger whose bound holds at every one of 352,333 admission calls on live traffic and which, in a pre-registered held-out confirmatory round, halves the exact-fallback rate at matched risk (0.30 ->0.14) -- coverage is bought at a price the account states. We then price the remaining distance from the certified witness to what a user experiences: a machine-checked design law (TV<= tanh(a_q w_thr)) turns the served-TV target into a threshold knob, and a three-layer audit of its instantiation -- an operator-norm query envelope measured 1.5x from tight, a measured-ellipsoid replacement for the Cauchy-Schwarz ball that buys nothing (0.89x, held-out sound), and the gate's operating point (~700x) -- localizes the entire 1064x gap to the operating point, a price the law now states rather than an unknown. A priced bound is worth nothing on a request one has not seen, so the third link is the quantifier: exchangeable extrapolation across 80 serving histories replaces binary conformal prediction's vacuous certificates with order-statistic bounds that discriminate (0.41 against 0.51 calibration risk). All probabilistic kernels are Lean 4-checked (228 exported theorems, no sorry); which object deserves this machinery at all is settled empirically in a companion paper that adjudicates -- and rejects -- the natural alternative of certifying routing. What ships is an account: risk you can spend, a gap you can read off a law, and a bound that survives the request you have not seen.",
+      "identifiers": [
+        "SemanticScholar:210c7668deacf519aefb7e6afa88371c2b28a7d9"
+      ],
+      "semantic_scholar_id": "210c7668deacf519aefb7e6afa88371c2b28a7d9",
+      "canonical_id": "arXiv:2608.15810",
+      "arxiv_id": "2608.15810",
+      "authors": [
+        "Fan-Zhe Wei",
+        "Li Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 75,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CHIPSMORE: Compute-in-Interconnect and -Memory Chiplets for Multi-Mode Multi-Request LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.30509",
+      "year": 2026,
+      "published": "2026-08-31",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference exhibits substantial variability across adaptation modes, context lengths, and request concurrency, creating challenges for maintaining high utilization, memory efficiency, and scalable performance on compute-in-memory (CIM) accelerators. This paper presents CHIPSMORE, a multi-mode and multi-request LLM inference accelerator that integrates compute-in-interconnect and CIM to support both base-mode and low-rank adaptation (LoRA) inference under diverse workloads. CHIPSMORE employs heterogeneous processing elements consisting of resistive RAM analog compute-in-memory (RRAM-ACIM) and static RAM digital compute-in-memory (SRAM-DCIM) interconnected through a programmable Inter-PE computational network (IPCN). A composable hierarchical key-value (KV) memory scheme dynamically allocates router scratchpad, SRAM-DCIM, and embedded DRAM (eDRAM) resources according to workload requirements, enabling scalable support for long-context and batched inference. Furthermore, a non-replicated multi-request execution pipeline exploits request-level parallelism without duplicating pretrained weights, while a state-aware resource reconfiguration mechanism selectively retains runtime states and power-gates inactive resources to improve energy efficiency. Evaluation using cycle-accurate hardware-software co-simulation demonstrates that CHIPSMORE effectively sustains high throughput across varying model sizes, context lengths, and batch sizes while maintaining favorable power scaling. Compared with Nvidia H100, CHIPSMORE achieves up to $2.38\\times$ higher throughput and $27\\times$ higher energy efficiency on Mistral-7B inference while eliminating weight replication for multi-request serving.",
+      "identifiers": [
+        "SemanticScholar:6dde5d5d83a425a67cdfab710a23b9b988554ccd"
+      ],
+      "semantic_scholar_id": "6dde5d5d83a425a67cdfab710a23b9b988554ccd",
+      "canonical_id": "arXiv:2608.30509",
+      "arxiv_id": "2608.30509",
+      "authors": [
+        "Yue Jiet Chong",
+        "Yimin Wang",
+        "Zhen Wu",
+        "Zi-Xuan Wang",
+        "Wei Zhang",
+        "Xuan-Yao Fong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 60,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.12247",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.12247",
+        "id:SemanticScholar:b8c0f3c3f9110a6510cf000361940b9cae01bc96",
+        "id:arXiv:2601.12247",
+        "title:plan verify and fill a structured parallel decoding approach for diffusion language models",
+        "url:https://arxiv.org/abs/2601.12247"
+      ],
+      "record": {
+        "title": "Plan, Verify and Fill: A Structured Parallel Decoding Approach for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2601.12247",
+        "year": 2026,
+        "published": "2026-01-18",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) present a promising non-sequential paradigm for text generation, distinct from standard autoregressive (AR) approaches. However, current decoding strategies often adopt a reactive stance, underutilizing the global bidirectional context to dictate global trajectories. To address this, we propose Plan-Verify-Fill (PVF), a training-free paradigm that grounds planning via quantitative validation. PVF actively constructs a hierarchical skeleton by prioritizing high-leverage semantic anchors and employs a verification protocol to operationalize pragmatic structural stopping where further deliberation yields diminishing returns. Extensive evaluations on LLaDA-8B-Instruct and Dream-7B-Instruct demonstrate that PVF reduces the Number of Function Evaluations (NFE) by up to 65% compared to confidence-based parallel decoding across benchmark datasets, unlocking superior efficiency without compromising accuracy.",
+        "identifiers": [
+          "SemanticScholar:b8c0f3c3f9110a6510cf000361940b9cae01bc96"
+        ],
+        "semantic_scholar_id": "b8c0f3c3f9110a6510cf000361940b9cae01bc96",
+        "canonical_id": "arXiv:2601.12247",
+        "arxiv_id": "2601.12247",
+        "doi": "10.48550/arXiv.2601.12247",
+        "authors": [
+          "Miao Li",
+          "Han-Yang Jiang",
+          "Sikai Cheng",
+          "Heng-Yu Fu",
+          "Yu-Hang Cai",
+          "Bai-He Huang",
+          "Ting-Han Ye",
+          "Xuanzhou Chen",
+          "P. Van Hentenryck"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 285,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.03050",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.03050",
+        "id:SemanticScholar:67f7e36c119d082eeb17ac3ca4003ab644ddc9ab",
+        "id:arXiv:2607.03050",
+        "title:omnifocus queryguided modalitybalanced token compression for omnimodal large language models",
+        "url:https://arxiv.org/abs/2607.03050"
+      ],
+      "record": {
+        "title": "OmniFocus: Query-Guided Modality-Balanced Token Compression for Omni-Modal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.03050",
+        "year": 2026,
+        "published": "2026-07-03",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Omni modal large language models (OmniLLMs) have attracted wide attention for their ability to jointly process audio and video, but they generate large token sequences under audio-visual inputs, leading to substantial inference cost. Existing audio-visual token compression methods often rely on unimodal guidance, overlooking the temporal locality of query-relevant evidence in audio-visual inputs and implicitly assuming that the two modalities share a temporally aligned information density distribution. We propose \\textbf{OmniFocus}, a training-free query-guided token compression method for OmniLLMs that performs independent importance estimation for video and audio, enabling a modality-symmetric compression design that preserves modality-specific salient evidence while maintaining audio-visual alignment, thereby mitigating the modality bias issue that can arise from unimodal-guided compression. Experiments on the Qwen2.5-Omni model family across four audio-visual benchmarks show that OmniFocus maintains strong compressed performance at low token retention ratios and outperforms existing baselines on several major benchmark scores at 25\\% token retention. On DailyOmni with Qwen2.5-Omni-7B at 25\\% token retention, OmniFocus maintains 59.40 accuracy while delivering up to 1.38$\\times$ prefill speedup relative to the full-token baseline, highlighting a favorable practical accuracy-efficiency trade-off.",
+        "identifiers": [
+          "SemanticScholar:67f7e36c119d082eeb17ac3ca4003ab644ddc9ab"
+        ],
+        "semantic_scholar_id": "67f7e36c119d082eeb17ac3ca4003ab644ddc9ab",
+        "canonical_id": "arXiv:2607.03050",
+        "arxiv_id": "2607.03050",
+        "doi": "10.48550/arXiv.2607.03050",
+        "authors": [
+          "Shi-Jie Cao",
+          "Qingyu Zhang",
+          "Bo-Xi Yu",
+          "Yu-Zhong Zhang",
+          "Boxi Cao",
+          "Yaojie Lu",
+          "Hong-Yu Lin",
+          "Xian-Pei Han",
+          "Le Sun"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 119,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.27494",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.27494",
+        "id:SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91",
+        "id:arXiv:2605.27494",
+        "title:grounded cache routing for retrievalaugmented generation when is it safe to reuse an answer",
+        "url:https://arxiv.org/abs/2605.27494"
+      ],
+      "record": {
+        "title": "Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer?",
+        "source_url": "https://arxiv.org/abs/2605.27494",
+        "year": 2026,
+        "published": "2026-05-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern retrieval-augmented generation(RAG) deployments increasingly rely on caching to reduce token cost and time-to-first-token(TTFT). Prefix-level KV reuse is now standard in serving stacks such as vLLM, and chunk-level and position-independent reuse have been pushed further by recent systems(RAGCache, TurboRAG, CacheBlend, EPIC, ContextPilot, PCR, LMCache). Output-level semantic answer caches, by contrast, remain fragile: similar prompts can map to different correct answers, retrieved evidence drifts as the corpus is updated, and adversarial collision attacks have been shown to hijack cached responses. We argue that the right framing for cached answer reuse is not how to reuse faster but when reuse is safe. We propose GroundedCache, an evidence-validated cache router that admits a cached answer only when 4 cheap gates simultaneously hold: query similarity, retrieved-evidence overlap, source-version validity, and lexical (or judge-based) support of the cached answer by the freshly retrieved evidence. We build a six-regime workload that stress-tests cache safety rather than only hit rate, and introduce an operator-facing metric, the unsafe-served rate (USR), fraction of all queries that received a wrong cached answer. Across 2 datasets and 12,000 real-LLM generations(Qwen2.5-7B-Instruct on vLLM with Automatic Prefix Caching), GroundedCache drives USR to 0.0% on every HotpotQA regime(vs. 15-35% under naive caching) and to 1.5% on mtRAG document drift(vs. 51.5%), a 34x reduction on the design-point adversarial regime and 3-10x reductions across the other mtRAG regimes, while end-to-end p50 latency stays within 1.04-1.07x of a no-cache RAG baseline. A per-gate ablation isolates the lexical support gate as the load-bearing safety mechanism on both datasets, with the remaining gates providing defense-in-depth at near-zero cost. We release the implementation, workload, and evaluation harness.",
+        "identifiers": [
+          "SemanticScholar:919628398eba1f2a91772d69253fa4db73342c91"
+        ],
+        "semantic_scholar_id": "919628398eba1f2a91772d69253fa4db73342c91",
+        "canonical_id": "arXiv:2605.27494",
+        "arxiv_id": "2605.27494",
+        "doi": "10.48550/arXiv.2605.27494",
+        "authors": [
+          "Syed Huma Shah"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 157,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.06146",
+      "identity_tokens": [
+        "id:SemanticScholar:385ad89b1980dfdc85ab494120bca1635d4131cb",
+        "id:arXiv:2608.06146",
+        "title:padoc layoutgrounded parallel decoding for document parsing",
+        "url:https://arxiv.org/abs/2608.06146"
+      ],
+      "record": {
+        "title": "PaDoc: Layout-Grounded Parallel Decoding for Document Parsing",
+        "source_url": "https://arxiv.org/abs/2608.06146",
+        "year": 2026,
+        "published": "2026-08-06",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "End-to-end document parsers provide a unified interface, but serialize page layouts and regional contents into one autoregressive sequence. This formulation forces independent regions onto a decoding path whose length grows with the total content, whereas crop-based two-stage parsers expose region-level parallelism at the cost of repeated visual prefills and fragmented page context. To retain full-page context while removing dependencies, we propose PaDoc, a layout-grounded parser that treats the predicted layout as a branching structure over a shared page representation. Under a region-sufficiency assumption, we derive a prefix-conditioned factorization in which the layout stream and regional content branches advance concurrently, reducing the decoding depth to the longest layout-content path. We realize this factorization within a single MLLM: packed variable-length ancestor attention preserves the visibility under standard next-token training, while masked parallel decoding creates branches that the evaluated vLLM backend serves as concurrent requests with cache-resident shared-prefix reuse. On OmniDocBench Full, PaDoc attains an Overall layout F1 of 91.1 and, among end-to-end parsers, a top-tier Overall score of 94.24 together with the best Text Edit (0.038) and Formula CDM (95.59). On a 384-page subset and one A800 GPU, it is the fastest end-to-end parser at five concurrency levels, improving valid-page throughput by 67.4-118% and reducing P95 latency by 39.2-54.9% relative to a same-backbone Sequential SFT baseline. Code is available at https://github.com/Longin-Yu/Padoc",
+        "identifiers": [
+          "SemanticScholar:385ad89b1980dfdc85ab494120bca1635d4131cb"
+        ],
+        "semantic_scholar_id": "385ad89b1980dfdc85ab494120bca1635d4131cb",
+        "canonical_id": "arXiv:2608.06146",
+        "arxiv_id": "2608.06146",
+        "authors": [
+          "Hao Yu",
+          "Jia-Bo Zhan",
+          "Kang Liu",
+          "Lin-Nan Zhao",
+          "Dongxu Yue",
+          "Rui Chen",
+          "Jinglin Wang",
+          "Chong Sun",
+          "Chen Li",
+          "Jing Lyu",
+          "Chun Yuan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 85,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.08804",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.08804",
+        "id:SemanticScholar:87cf40b41429ad4e2982e8a36042971ad77eae54",
+        "id:arXiv:2606.08804",
+        "title:qdelta beyond keyvalue associative state evolution",
+        "url:https://arxiv.org/abs/2606.08804"
+      ],
+      "record": {
+        "title": "Q-Delta: Beyond Key-Value Associative State Evolution",
+        "source_url": "https://arxiv.org/abs/2606.08804",
+        "year": 2026,
+        "published": "2026-06-07",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention reformulates sequence modeling as recurrent state evolution, enabling efficient linear-time inference. Under the key-value associative paradigm, existing approaches restrict the role of the query to the readout operation, decoupling it from state evolution. We show that query-conditioned state readout induces a structured value prediction over accumulated memory that complements key-based retrieval. Based on this insight, we propose Q-Delta, a query-aware delta rule that integrates mixed key-query prediction errors into state evolution, enabling jointly corrective dynamics while preserving delta-rule efficiency. We establish stability guarantees for the resulting dynamics and derive a hardware-efficient chunkwise-parallel formulation with a custom Triton implementation. Empirical results demonstrate stable optimization, competitive throughput, and consistent improvements over strong baselines on language modeling and long-context retrieval tasks.",
+        "identifiers": [
+          "SemanticScholar:87cf40b41429ad4e2982e8a36042971ad77eae54"
+        ],
+        "semantic_scholar_id": "87cf40b41429ad4e2982e8a36042971ad77eae54",
+        "canonical_id": "arXiv:2606.08804",
+        "arxiv_id": "2606.08804",
+        "doi": "10.48550/arXiv.2606.08804",
+        "authors": [
+          "Sumin Park",
+          "Seojin Kim",
+          "Noseong Park"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 145,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22587",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.22587",
+        "id:SemanticScholar:15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c",
+        "id:arXiv:2607.22587",
+        "title:trisp trisignal structured pruning for large language models",
+        "url:https://arxiv.org/abs/2607.22587"
+      ],
+      "record": {
+        "title": "TriSP: Tri-Signal Structured Pruning for Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.22587",
+        "year": 2026,
+        "published": "2026-06-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve strong performance across diverse tasks but their deployment is constrained by the memory and compute cost of their parameters. Structured pruning addresses this by removing entire structures such as attention heads and Multi-Layer Perceptron (MLP) neurons to produce smaller dense models that run efficiently on standard hardware. However, existing methods rely on either gradient-based importance estimation, which is memory-prohibitive, or activation-based statistical proxies, which do not directly measure the effect of removal on the loss. Furthermore, the interaction between the importance criterion and the post-pruning recovery strategy has not been systematically studied. We propose TriSP (Tri-Signal Structured Pruning), an importance metric that combines weight magnitude scaled by activation norm with first-order gradient sensitivity via a geometric mean, producing a channel-level score that captures both structural and loss-sensitivity signals. Combined with adaptive per-layer budget allocation and low-rank adaptation (LoRA) recovery, TriSP achieves the lowest perplexity and highest zero-shot accuracy across all tested configurations, reaching 6.80 WikiText-2 perplexity at 20% pruning on LLaMA-7B. Inference throughput improves by 82% at 50% pruning, while still maintaining competitive performance.",
+        "identifiers": [
+          "SemanticScholar:15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c"
+        ],
+        "semantic_scholar_id": "15f386e5a96c34ee7ef5337a5f3fd16e3ce0e07c",
+        "canonical_id": "arXiv:2607.22587",
+        "arxiv_id": "2607.22587",
+        "doi": "10.48550/arXiv.2607.22587",
+        "authors": [
+          "Manel Kara Laouar",
+          "Soumia Bouyahiaoui",
+          "Aicha Boutorh"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.22840",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.22840",
+        "id:SemanticScholar:b4debda8ca6146bc995b4101b68b37a4ff7ae387",
+        "id:arXiv:2606.22840",
+        "title:rlmcascade responselevel speculative decoding for costefficient llm api serving",
+        "url:https://arxiv.org/abs/2606.22840"
+      ],
+      "record": {
+        "title": "RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving",
+        "source_url": "https://arxiv.org/abs/2606.22840",
+        "year": 2026,
+        "published": "2026-06-22",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We present RLM-Cascade, a proxy-layer system that applies speculative decoding at the response level to reduce LLM API costs without requiring model architecture access or a shared vocabulary. A fast, inexpensive draft model generates a candidate response; a capable verify model accepts, enhances, or is bypassed entirely depending on a lightweight complexity router. On a real-world agentic coding workload (Claude Code), RLM-Cascade achieves a draft-use rate of 88.8% across 125 production requests, reducing API cost by 45.8% relative to a direct Opus baseline. Counter-intuitively, the proxy also reduces end-to-end latency: median response time is 2,026 ms versus 3,698 ms for Native Opus -- a 1.83X speedup at p50 -- because the SKIPPED path (DeepSeek only, no Opus call) dominates the workload distribution. Quality matches or exceeds the Opus baseline: 100% pass rate on a 20-task Code/Math/Instruct benchmark versus 95% for Native Opus. We further describe a rule-based complexity router that selects the SKIPPED path for simple agentic turns and a hybrid tool-call strategy that bypasses the speculative pipeline for schema-critical tool-selection turns. RLM-Cascade is deployed in production as an enterprise AI infrastructure component and published as open source with a live metrics dashboard and Prometheus endpoint.",
+        "identifiers": [
+          "SemanticScholar:b4debda8ca6146bc995b4101b68b37a4ff7ae387"
+        ],
+        "semantic_scholar_id": "b4debda8ca6146bc995b4101b68b37a4ff7ae387",
+        "canonical_id": "arXiv:2606.22840",
+        "arxiv_id": "2606.22840",
+        "doi": "10.48550/arXiv.2606.22840",
+        "authors": [
+          "Hai-Feng Wu",
+          "Srinivasan Manoharan",
+          "Fang Tu",
+          "Jun Zhao",
+          "Jianwei Wan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 130,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.15810",
+      "identity_tokens": [
+        "id:SemanticScholar:210c7668deacf519aefb7e6afa88371c2b28a7d9",
+        "id:arXiv:2608.15810",
+        "title:pricing the risk of runtime compression anytimevalid admission and a servedoutput law for compressed serving state",
+        "url:https://arxiv.org/abs/2608.15810"
+      ],
+      "record": {
+        "title": "Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State",
+        "source_url": "https://arxiv.org/abs/2608.15810",
+        "year": 2026,
+        "published": "2026-08-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Runtime compression of serving state trades quality for capacity with no priced guarantee: systems adapt precision on load signals with no soundness statement, and certified approaches budget request-level risk by a union bound over a pre-declared event count. We show the union budget exhausts on every long request in a production serving stack (100% of requests), and replace it with an anytime-valid, physically accounted ledger whose bound holds at every one of 352,333 admission calls on live traffic and which, in a pre-registered held-out confirmatory round, halves the exact-fallback rate at matched risk (0.30 ->0.14) -- coverage is bought at a price the account states. We then price the remaining distance from the certified witness to what a user experiences: a machine-checked design law (TV<= tanh(a_q w_thr)) turns the served-TV target into a threshold knob, and a three-layer audit of its instantiation -- an operator-norm query envelope measured 1.5x from tight, a measured-ellipsoid replacement for the Cauchy-Schwarz ball that buys nothing (0.89x, held-out sound), and the gate's operating point (~700x) -- localizes the entire 1064x gap to the operating point, a price the law now states rather than an unknown. A priced bound is worth nothing on a request one has not seen, so the third link is the quantifier: exchangeable extrapolation across 80 serving histories replaces binary conformal prediction's vacuous certificates with order-statistic bounds that discriminate (0.41 against 0.51 calibration risk). All probabilistic kernels are Lean 4-checked (228 exported theorems, no sorry); which object deserves this machinery at all is settled empirically in a companion paper that adjudicates -- and rejects -- the natural alternative of certifying routing. What ships is an account: risk you can spend, a gap you can read off a law, and a bound that survives the request you have not seen.",
+        "identifiers": [
+          "SemanticScholar:210c7668deacf519aefb7e6afa88371c2b28a7d9"
+        ],
+        "semantic_scholar_id": "210c7668deacf519aefb7e6afa88371c2b28a7d9",
+        "canonical_id": "arXiv:2608.15810",
+        "arxiv_id": "2608.15810",
+        "authors": [
+          "Fan-Zhe Wei",
+          "Li Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 75,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.30509",
+      "identity_tokens": [
+        "id:SemanticScholar:6dde5d5d83a425a67cdfab710a23b9b988554ccd",
+        "id:arXiv:2608.30509",
+        "title:chipsmore computeininterconnect and memory chiplets for multimode multirequest llm inference acceleration",
+        "url:https://arxiv.org/abs/2608.30509"
+      ],
+      "record": {
+        "title": "CHIPSMORE: Compute-in-Interconnect and -Memory Chiplets for Multi-Mode Multi-Request LLM Inference Acceleration",
+        "source_url": "https://arxiv.org/abs/2608.30509",
+        "year": 2026,
+        "published": "2026-08-31",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) inference exhibits substantial variability across adaptation modes, context lengths, and request concurrency, creating challenges for maintaining high utilization, memory efficiency, and scalable performance on compute-in-memory (CIM) accelerators. This paper presents CHIPSMORE, a multi-mode and multi-request LLM inference accelerator that integrates compute-in-interconnect and CIM to support both base-mode and low-rank adaptation (LoRA) inference under diverse workloads. CHIPSMORE employs heterogeneous processing elements consisting of resistive RAM analog compute-in-memory (RRAM-ACIM) and static RAM digital compute-in-memory (SRAM-DCIM) interconnected through a programmable Inter-PE computational network (IPCN). A composable hierarchical key-value (KV) memory scheme dynamically allocates router scratchpad, SRAM-DCIM, and embedded DRAM (eDRAM) resources according to workload requirements, enabling scalable support for long-context and batched inference. Furthermore, a non-replicated multi-request execution pipeline exploits request-level parallelism without duplicating pretrained weights, while a state-aware resource reconfiguration mechanism selectively retains runtime states and power-gates inactive resources to improve energy efficiency. Evaluation using cycle-accurate hardware-software co-simulation demonstrates that CHIPSMORE effectively sustains high throughput across varying model sizes, context lengths, and batch sizes while maintaining favorable power scaling. Compared with Nvidia H100, CHIPSMORE achieves up to $2.38\\times$ higher throughput and $27\\times$ higher energy efficiency on Mistral-7B inference while eliminating weight replication for multi-request serving.",
+        "identifiers": [
+          "SemanticScholar:6dde5d5d83a425a67cdfab710a23b9b988554ccd"
+        ],
+        "semantic_scholar_id": "6dde5d5d83a425a67cdfab710a23b9b988554ccd",
+        "canonical_id": "arXiv:2608.30509",
+        "arxiv_id": "2608.30509",
+        "authors": [
+          "Yue Jiet Chong",
+          "Yimin Wang",
+          "Zhen Wu",
+          "Zi-Xuan Wang",
+          "Wei Zhang",
+          "Xuan-Yao Fong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 60,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cd284a6472f41ac9942a4b1f7bd5c49f7ede118e9710743aa31358e60bf38f5b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

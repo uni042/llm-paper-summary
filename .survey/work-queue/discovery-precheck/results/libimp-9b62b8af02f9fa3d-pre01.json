@@ -1,0 +1,701 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-9b62b8af02f9fa3d-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-9b62b8af02f9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2507.20030",
+    "arXiv:2607.12422",
+    "arXiv:2607.14630",
+    "arXiv:2607.28418",
+    "arXiv:2608.02032",
+    "arXiv:2609.34330",
+    "arXiv:2609.34380",
+    "arXiv:2609.37538"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 1,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 1,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:38.449228+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2507.20030",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:DOI:10.48550/arxiv.2507.20030"
+    },
+    {
+      "requested_id": "arXiv:2607.12422",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.14630",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.28418",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.02032",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34330",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34380",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.37538",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "source_url": "https://arxiv.org/abs/2607.28418",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is a promising approach for improving the efficiency of large language models (LLMs). Static structured pruning is hardware-friendly, but its input-agnostic computation allocation often degrades model quality at high sparsity. Dynamic pruning adapts computation to individual tokens, but coarse-grained layer-level routing limits allocation flexibility, and finer-grained decisions introduce irregular execution that can offset computational savings. To address these challenges, we present WIDE, the first end-to-end differentiable framework that combines token-wise structured dynamic width pruning with GPU kernel co-design for both prefill and decoding. WIDE uses differentiable routers to select GQA-aligned query-head groups and GPU-tile-aligned FFN-channel groups for each token. To execute these decisions efficiently, it reorders routing masks to cluster active tokens within each group, enabling hardware-agnostic block-level skipping and architecture-aware skipping of inactive loads and tensor-core operations. Experiments on the Llama3 and Qwen3 families demonstrate improved quality retention over representative static and dynamic pruning methods. At 50\\% target routing sparsity, WIDE improves Llama3.1-8B average zero-shot accuracy by up to 20.26 points over the strongest dynamic-depth baseline under calibration-only settings, while retaining 97.6\\%/88.2\\% of dense Qwen3-14B likelihood/generation performance after LoRA tuning. Separate latency benchmarks demonstrate end-to-end speedups of up to $1.68\\times$ for prefill and $1.55\\times$ for decoding over the dense baseline. These results demonstrate that pruning--kernel co-design pushes the frontier of token-wise dynamic structured pruning, combining improved quality retention with practical acceleration across both prefill and decoding. Our code is avaliable at \\url{https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE}.",
+      "identifiers": [
+        "SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7"
+      ],
+      "semantic_scholar_id": "4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+      "canonical_id": "arXiv:2607.28418",
+      "arxiv_id": "2607.28418",
+      "doi": "10.48550/arXiv.2607.28418",
+      "authors": [
+        "Hao-Zhe Hu",
+        "Hao Wu",
+        "Pei-Ran Yin",
+        "Chao Han",
+        "Yun-Pu Ma",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 92,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2608.02032",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern language models are built primarily from Transformers, recurrent models, and their hybrid architectures. Transformers rely on token-level attention memories, while recurrent models such as state space models (SSMs) and linear attention maintain compact recurrent states. These architectures are typically instantiated separately or interleaved at the layer level, leaving open whether a shared memory representation can support both recurrent compression and attention-style retrieval. We study this question through the state space duality (SSD) view of Mamba-2, where the SSM state can be interpreted as a compressed associative key--value (KV) cache. We observe that Mamba-2 decodes token-conditioned values from this state but does not decode token-conditioned keys. Based on this observation, we propose DART (Decoded Attention over Recurrent sTates), which retains the chunk state contributions produced by the Mamba-2 chunked scan as chunk state memories, decodes token-conditioned keys and values from these memories, and performs state-memory attention (SMA) over the resulting KV pairs. The retrieved output is then combined with the native Mamba-2 output through a gated residual connection. DART supports practical training by reusing the Mamba-2 chunked scan and implementing SMA as a FlashAttention-style computation. Our analysis and experiments show that DART substantially reduces the length-dependent inference cache compared with a matched attention baseline (e.g., $75\\%$ savings when the chunk size is $S=256$ and the state size is $N=128$). Compared with Mamba-2, DART substantially improves associative recall and retrieval while preserving general language-modeling quality.",
+      "identifiers": [
+        "SemanticScholar:e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28"
+      ],
+      "semantic_scholar_id": "e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28",
+      "canonical_id": "arXiv:2608.02032",
+      "arxiv_id": "2608.02032",
+      "authors": [
+        "Yixiao Qian",
+        "Song Chen",
+        "Peng-Kai Wang",
+        "Jia-Xu Liu",
+        "Sheng-Ze Cai",
+        "Chao Xu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cross-Layer Error Compensation and Finite-Sample Feature-Statistics Matching for Extreme Low-Bit Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.14630",
+      "year": 2026,
+      "published": "2026-07-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Layer-wise post-training quantization of large language models minimizes each layer's reconstruction error in isolation, allowing quantization errors to accumulate across depth and causing severe degradation in extreme low-bit regimes. We formulate quantization as a joint optimization over the discrete codes and scales of all layers, driven by two mechanisms: (i) cross-layer error compensation, which maintains the network-level accumulated error through the recursion e_{l+1} = A_l e_l + q_l, with a propagation operator A_l derived from the layer's input differential and a local quantization residual q_l evaluated at teacher features; and (ii) finite-sample feature-statistics matching, which aligns means, projected covariances, and centered empirical kernels between the full-precision and quantized networks under relative normalization. We prove that instantiating the propagation operator as a finite difference of the quantized network makes the recursion exact for arbitrary nonlinear layers, enabling an efficient forward-difference implementation. Binary weights are optimized via a mirror-descent parameterization u = tanh(beta*z) with annealed inverse temperature and group-wise log-scales. On Qwen2.5-1.5B with 1.125-bit group-binary weights, error compensation alone reaches a perplexity ratio of 9.56 +/- 0.15 over the FP16 teacher, outperforming logit distillation (14.09 +/- 0.53; 32 percent relative, more than 8 sigma over 3 seeds) and layer-local reconstruction by two orders of magnitude. The same objective transfers unchanged to 4-bit quantization (1.060 vs. 1.088 for layer-local). Out-of-domain evaluations (C4, CNN/DailyMail) show the advantage of error compensation grows off-domain, while statistics matching keeps feature-statistics discrepancy low off-domain (0.42-0.88 vs. 1.41-2.99 without it), revealing a complementary division of labor between the two mechanisms.",
+      "identifiers": [
+        "SemanticScholar:ecb2f24b57fa50bfbd381ba72d6489587c5bb3af"
+      ],
+      "semantic_scholar_id": "ecb2f24b57fa50bfbd381ba72d6489587c5bb3af",
+      "canonical_id": "arXiv:2607.14630",
+      "arxiv_id": "2607.14630",
+      "doi": "10.48550/arXiv.2607.14630",
+      "authors": [
+        "Ryona Noda"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting",
+      "source_url": "https://arxiv.org/abs/2607.12422",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive language model inference by using a cheap drafter to propose multiple future tokens and a target model to verify them. A common design goal is therefore to improve draft quality while reducing auxiliary parameters and systems overhead. We study a negative result for this direction through PEFT-BD, a same-backbone speculative decoding method in which a LoRA-like adapter acts as a block-diffusion drafter for an autoregressive verifier. PEFT-BD is motivated by several attractive properties: it avoids tokenizer mismatch, avoids loading a separate draft model, adds only a small number of trainable parameters, and uses a BD3LM-style denoising objective to propose a block of tokens in parallel. Despite these advantages, PEFT-BD does not yield a practical speedup in our Qwen3-0.6B experiments. Although the method obtains nontrivial accepted prefixes, profiling shows that each speculative step requires an adapter-enabled full-backbone draft pass followed by an adapter-disabled full-backbone verification pass. Thus, the drafter is parameter-efficient but not compute-efficient. Our results isolate a simple but important condition for successful speculative decoding: the drafter must be substantially cheaper to execute than the verifier. Longer accepted prefixes alone cannot compensate when draft computation remains verifier-scale.",
+      "identifiers": [
+        "SemanticScholar:38ca8558f610cea88b42a1d8e943eef9dcb75157"
+      ],
+      "semantic_scholar_id": "38ca8558f610cea88b42a1d8e943eef9dcb75157",
+      "canonical_id": "arXiv:2607.12422",
+      "arxiv_id": "2607.12422",
+      "doi": "10.48550/arXiv.2607.12422",
+      "authors": [
+        "Abdurrahman Javat",
+        "A. Kazakov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 108,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning. Our code is available at https://github.com/MAX-7237/MiCo.",
+      "identifiers": [
+        "SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf"
+      ],
+      "semantic_scholar_id": "1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+      "canonical_id": "arXiv:2609.34330",
+      "arxiv_id": "2609.34330",
+      "authors": [
+        "Ting-Hao Wang",
+        "Yi-Chen Guo",
+        "Qi-Zhe Zhang",
+        "Yuan Zhang",
+        "Wei-Min Ouyang",
+        "Rui Huang",
+        "Jia-Jun Cao",
+        "Si-Xiang Chen",
+        "Hao-Kai Jiang",
+        "Ji-Xin Wu",
+        "Zheng Lu",
+        "Bo-Fan Zhu",
+        "Ren-Yuan Li",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+      "source_url": "https://arxiv.org/abs/2609.34380",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+      "identifiers": [
+        "SemanticScholar:0469b1d19d084c64cf860f19adf5523e166dff34"
+      ],
+      "semantic_scholar_id": "0469b1d19d084c64cf860f19adf5523e166dff34",
+      "canonical_id": "arXiv:2609.34380",
+      "arxiv_id": "2609.34380",
+      "authors": [
+        "Xuan Truong Nguyen",
+        "Tien-Son Pham",
+        "Tuan-Duc Chu",
+        "Wookeun Jung",
+        "Thanh Tuan Dao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse, demonstrating the benefit of efficient matching, balanced transfer, and effective HBM residency in production-scale serving.",
+      "identifiers": [
+        "SemanticScholar:8e552f5c548e5e246ee0aa0774cf62f4f7d9919e"
+      ],
+      "semantic_scholar_id": "8e552f5c548e5e246ee0aa0774cf62f4f7d9919e",
+      "canonical_id": "arXiv:2609.37538",
+      "arxiv_id": "2609.37538",
+      "authors": [
+        "Wen-Wei Kuang",
+        "Xiang-Yu Wang",
+        "Chong Wu",
+        "Jun Wang",
+        "Wei-Jie Zhang",
+        "Brian K. Chen",
+        "Long Lan",
+        "Ke-Pan Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2607.28418",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.28418",
+        "id:SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+        "id:arXiv:2607.28418",
+        "title:wide boosting adaptive llm inference via tokenlevel dynamic width pruning",
+        "url:https://arxiv.org/abs/2607.28418"
+      ],
+      "record": {
+        "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+        "source_url": "https://arxiv.org/abs/2607.28418",
+        "year": 2026,
+        "published": "2026-07-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pruning is a promising approach for improving the efficiency of large language models (LLMs). Static structured pruning is hardware-friendly, but its input-agnostic computation allocation often degrades model quality at high sparsity. Dynamic pruning adapts computation to individual tokens, but coarse-grained layer-level routing limits allocation flexibility, and finer-grained decisions introduce irregular execution that can offset computational savings. To address these challenges, we present WIDE, the first end-to-end differentiable framework that combines token-wise structured dynamic width pruning with GPU kernel co-design for both prefill and decoding. WIDE uses differentiable routers to select GQA-aligned query-head groups and GPU-tile-aligned FFN-channel groups for each token. To execute these decisions efficiently, it reorders routing masks to cluster active tokens within each group, enabling hardware-agnostic block-level skipping and architecture-aware skipping of inactive loads and tensor-core operations. Experiments on the Llama3 and Qwen3 families demonstrate improved quality retention over representative static and dynamic pruning methods. At 50\\% target routing sparsity, WIDE improves Llama3.1-8B average zero-shot accuracy by up to 20.26 points over the strongest dynamic-depth baseline under calibration-only settings, while retaining 97.6\\%/88.2\\% of dense Qwen3-14B likelihood/generation performance after LoRA tuning. Separate latency benchmarks demonstrate end-to-end speedups of up to $1.68\\times$ for prefill and $1.55\\times$ for decoding over the dense baseline. These results demonstrate that pruning--kernel co-design pushes the frontier of token-wise dynamic structured pruning, combining improved quality retention with practical acceleration across both prefill and decoding. Our code is avaliable at \\url{https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE}.",
+        "identifiers": [
+          "SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7"
+        ],
+        "semantic_scholar_id": "4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+        "canonical_id": "arXiv:2607.28418",
+        "arxiv_id": "2607.28418",
+        "doi": "10.48550/arXiv.2607.28418",
+        "authors": [
+          "Hao-Zhe Hu",
+          "Hao Wu",
+          "Pei-Ran Yin",
+          "Chao Han",
+          "Yun-Pu Ma",
+          "Xiao-Yu Shen"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 92,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.02032",
+      "identity_tokens": [
+        "id:SemanticScholar:e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28",
+        "id:arXiv:2608.02032",
+        "title:dart decoded attention over recurrent states for efficient longcontext sequence modeling",
+        "url:https://arxiv.org/abs/2608.02032"
+      ],
+      "record": {
+        "title": "DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling",
+        "source_url": "https://arxiv.org/abs/2608.02032",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern language models are built primarily from Transformers, recurrent models, and their hybrid architectures. Transformers rely on token-level attention memories, while recurrent models such as state space models (SSMs) and linear attention maintain compact recurrent states. These architectures are typically instantiated separately or interleaved at the layer level, leaving open whether a shared memory representation can support both recurrent compression and attention-style retrieval. We study this question through the state space duality (SSD) view of Mamba-2, where the SSM state can be interpreted as a compressed associative key--value (KV) cache. We observe that Mamba-2 decodes token-conditioned values from this state but does not decode token-conditioned keys. Based on this observation, we propose DART (Decoded Attention over Recurrent sTates), which retains the chunk state contributions produced by the Mamba-2 chunked scan as chunk state memories, decodes token-conditioned keys and values from these memories, and performs state-memory attention (SMA) over the resulting KV pairs. The retrieved output is then combined with the native Mamba-2 output through a gated residual connection. DART supports practical training by reusing the Mamba-2 chunked scan and implementing SMA as a FlashAttention-style computation. Our analysis and experiments show that DART substantially reduces the length-dependent inference cache compared with a matched attention baseline (e.g., $75\\%$ savings when the chunk size is $S=256$ and the state size is $N=128$). Compared with Mamba-2, DART substantially improves associative recall and retrieval while preserving general language-modeling quality.",
+        "identifiers": [
+          "SemanticScholar:e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28"
+        ],
+        "semantic_scholar_id": "e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28",
+        "canonical_id": "arXiv:2608.02032",
+        "arxiv_id": "2608.02032",
+        "authors": [
+          "Yixiao Qian",
+          "Song Chen",
+          "Peng-Kai Wang",
+          "Jia-Xu Liu",
+          "Sheng-Ze Cai",
+          "Chao Xu"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 88,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.14630",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.14630",
+        "id:SemanticScholar:ecb2f24b57fa50bfbd381ba72d6489587c5bb3af",
+        "id:arXiv:2607.14630",
+        "title:crosslayer error compensation and finitesample featurestatistics matching for extreme lowbit quantization of large language models",
+        "url:https://arxiv.org/abs/2607.14630"
+      ],
+      "record": {
+        "title": "Cross-Layer Error Compensation and Finite-Sample Feature-Statistics Matching for Extreme Low-Bit Quantization of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2607.14630",
+        "year": 2026,
+        "published": "2026-07-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Layer-wise post-training quantization of large language models minimizes each layer's reconstruction error in isolation, allowing quantization errors to accumulate across depth and causing severe degradation in extreme low-bit regimes. We formulate quantization as a joint optimization over the discrete codes and scales of all layers, driven by two mechanisms: (i) cross-layer error compensation, which maintains the network-level accumulated error through the recursion e_{l+1} = A_l e_l + q_l, with a propagation operator A_l derived from the layer's input differential and a local quantization residual q_l evaluated at teacher features; and (ii) finite-sample feature-statistics matching, which aligns means, projected covariances, and centered empirical kernels between the full-precision and quantized networks under relative normalization. We prove that instantiating the propagation operator as a finite difference of the quantized network makes the recursion exact for arbitrary nonlinear layers, enabling an efficient forward-difference implementation. Binary weights are optimized via a mirror-descent parameterization u = tanh(beta*z) with annealed inverse temperature and group-wise log-scales. On Qwen2.5-1.5B with 1.125-bit group-binary weights, error compensation alone reaches a perplexity ratio of 9.56 +/- 0.15 over the FP16 teacher, outperforming logit distillation (14.09 +/- 0.53; 32 percent relative, more than 8 sigma over 3 seeds) and layer-local reconstruction by two orders of magnitude. The same objective transfers unchanged to 4-bit quantization (1.060 vs. 1.088 for layer-local). Out-of-domain evaluations (C4, CNN/DailyMail) show the advantage of error compensation grows off-domain, while statistics matching keeps feature-statistics discrepancy low off-domain (0.42-0.88 vs. 1.41-2.99 without it), revealing a complementary division of labor between the two mechanisms.",
+        "identifiers": [
+          "SemanticScholar:ecb2f24b57fa50bfbd381ba72d6489587c5bb3af"
+        ],
+        "semantic_scholar_id": "ecb2f24b57fa50bfbd381ba72d6489587c5bb3af",
+        "canonical_id": "arXiv:2607.14630",
+        "arxiv_id": "2607.14630",
+        "doi": "10.48550/arXiv.2607.14630",
+        "authors": [
+          "Ryona Noda"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 106,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.12422",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.12422",
+        "id:SemanticScholar:38ca8558f610cea88b42a1d8e943eef9dcb75157",
+        "id:arXiv:2607.12422",
+        "title:accepted prefixes are not all you need a negative result on peftbased blockdiffusion drafting",
+        "url:https://arxiv.org/abs/2607.12422"
+      ],
+      "record": {
+        "title": "Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting",
+        "source_url": "https://arxiv.org/abs/2607.12422",
+        "year": 2026,
+        "published": "2026-07-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates autoregressive language model inference by using a cheap drafter to propose multiple future tokens and a target model to verify them. A common design goal is therefore to improve draft quality while reducing auxiliary parameters and systems overhead. We study a negative result for this direction through PEFT-BD, a same-backbone speculative decoding method in which a LoRA-like adapter acts as a block-diffusion drafter for an autoregressive verifier. PEFT-BD is motivated by several attractive properties: it avoids tokenizer mismatch, avoids loading a separate draft model, adds only a small number of trainable parameters, and uses a BD3LM-style denoising objective to propose a block of tokens in parallel. Despite these advantages, PEFT-BD does not yield a practical speedup in our Qwen3-0.6B experiments. Although the method obtains nontrivial accepted prefixes, profiling shows that each speculative step requires an adapter-enabled full-backbone draft pass followed by an adapter-disabled full-backbone verification pass. Thus, the drafter is parameter-efficient but not compute-efficient. Our results isolate a simple but important condition for successful speculative decoding: the drafter must be substantially cheaper to execute than the verifier. Longer accepted prefixes alone cannot compensate when draft computation remains verifier-scale.",
+        "identifiers": [
+          "SemanticScholar:38ca8558f610cea88b42a1d8e943eef9dcb75157"
+        ],
+        "semantic_scholar_id": "38ca8558f610cea88b42a1d8e943eef9dcb75157",
+        "canonical_id": "arXiv:2607.12422",
+        "arxiv_id": "2607.12422",
+        "doi": "10.48550/arXiv.2607.12422",
+        "authors": [
+          "Abdurrahman Javat",
+          "A. Kazakov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 108,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34330",
+      "identity_tokens": [
+        "id:SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+        "id:arXiv:2609.34330",
+        "title:mico mutual information coverage optimization through semantic erasure modeling for efficient mllm inference",
+        "url:https://arxiv.org/abs/2609.34330"
+      ],
+      "record": {
+        "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.34330",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning. Our code is available at https://github.com/MAX-7237/MiCo.",
+        "identifiers": [
+          "SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf"
+        ],
+        "semantic_scholar_id": "1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+        "canonical_id": "arXiv:2609.34330",
+        "arxiv_id": "2609.34330",
+        "authors": [
+          "Ting-Hao Wang",
+          "Yi-Chen Guo",
+          "Qi-Zhe Zhang",
+          "Yuan Zhang",
+          "Wei-Min Ouyang",
+          "Rui Huang",
+          "Jia-Jun Cao",
+          "Si-Xiang Chen",
+          "Hao-Kai Jiang",
+          "Ji-Xin Wu",
+          "Zheng Lu",
+          "Bo-Fan Zhu",
+          "Ren-Yuan Li",
+          "Shang-Hang Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34380",
+      "identity_tokens": [
+        "id:SemanticScholar:0469b1d19d084c64cf860f19adf5523e166dff34",
+        "id:arXiv:2609.34380",
+        "title:dps dualmode precision llm serving with semiunified memory",
+        "url:https://arxiv.org/abs/2609.34380"
+      ],
+      "record": {
+        "title": "DPS: Dual-Mode Precision LLM Serving with Semi-Unified Memory",
+        "source_url": "https://arxiv.org/abs/2609.34380",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing LLM serving systems virtualize and optimize KV-cache memory, but treat model-weight memory as fixed throughout execution. Recent work on multi-precision model representations challenges this design by allowing a single stored model to support both full-accuracy and lower-precision execution, making the effective weight footprint runtime-dependent. This creates an opportunity under bursty workloads, where temporary spikes in KV-cache demand often determine throughput and SLO compliance. We present DPS, a dual-precision LLM serving system that turns weight memory into an elastic resource: under normal load, DPS serves the full-accuracy model; under KV pressure, it switches to a nested, lower-precision variant and repurposes unused weight memory for KV cache blocks. DPS is built on Semi-Unified Memory (SUM), which partitions the weight region into a persistent lower-precision sub-region and a shared region that alternates between residual weight tensors and KV-cache blocks, preserving compatibility with paged KV-cache management. We implement DPS on top of vLLM and evaluate it across both dense and MoE models and various production workload traces. Our results show that \\sysname improves sustained throughput by $2.1$--$3.3\\times$ and effective pass@1 by up to $+41$\\,pp over Static FP16, while preserving FP16-class accuracy.",
+        "identifiers": [
+          "SemanticScholar:0469b1d19d084c64cf860f19adf5523e166dff34"
+        ],
+        "semantic_scholar_id": "0469b1d19d084c64cf860f19adf5523e166dff34",
+        "canonical_id": "arXiv:2609.34380",
+        "arxiv_id": "2609.34380",
+        "authors": [
+          "Xuan Truong Nguyen",
+          "Tien-Son Pham",
+          "Tuan-Duc Chu",
+          "Wookeun Jung",
+          "Thanh Tuan Dao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.37538",
+      "identity_tokens": [
+        "id:SemanticScholar:8e552f5c548e5e246ee0aa0774cf62f4f7d9919e",
+        "id:arXiv:2609.37538",
+        "title:avsg accelerated vectorized sparse gather for efficient kv cache offload in sparseattention llm serving",
+        "url:https://arxiv.org/abs/2609.37538"
+      ],
+      "record": {
+        "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.37538",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Dynamic sparse attention reduces long-context attention computation by selecting only a subset of tokens, but still requires access to the full KV cache, leaving serving memory-bound. Offloading the KV cache to host memory reduces device memory pressure but places H2D transfers on the decoding critical path. In DSA, substantial overlap in selected KV entries across decoding steps creates an opportunity for device-resident reuse. Exploiting this reuse efficiently, however, presents three critical challenges: costly matching of selected tokens against entries retained in the HBM buffer, uneven distribution of the remaining H2D transfers across accelerator cores, and retaining frequently accessed KV entries within limited HBM capacity. We present AVSG, an operator that addresses these challenges for DSA while preserving its exact token selections. AVSG uses vectorized hash matching to identify reusable HBM-buffer slots and reserve slots for entries requiring transfer, then evenly partitions these H2D transfers across accelerator cores. Lifetime-based buffer management retains frequently accessed KV entries in the device buffer across decoding steps, and shared slot reservations extend reuse across tokens within a multi-token prediction iteration. On a single NPU, vectorized hash matching is 2.80x faster than scalar dual-pointer matching, miss-only transfer raises effective H2D bandwidth by up to 34.44x over request-level assignment, and an 8K-entry buffer reaches a 94.83% hit rate on real requests. These gains translate into end-to-end improvement: on a serving stack processing a real-world production dataset, AVSG reduces time per output token by 39% and increases output throughput by 1.27x relative to the same KV offload layout without HBM-buffer reuse, demonstrating the benefit of efficient matching, balanced transfer, and effective HBM residency in production-scale serving.",
+        "identifiers": [
+          "SemanticScholar:8e552f5c548e5e246ee0aa0774cf62f4f7d9919e"
+        ],
+        "semantic_scholar_id": "8e552f5c548e5e246ee0aa0774cf62f4f7d9919e",
+        "canonical_id": "arXiv:2609.37538",
+        "arxiv_id": "2609.37538",
+        "authors": [
+          "Wen-Wei Kuang",
+          "Xiang-Yu Wang",
+          "Chong Wu",
+          "Jun Wang",
+          "Wei-Jie Zhang",
+          "Brian K. Chen",
+          "Long Lan",
+          "Ke-Pan Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1c53069bc8b17a768ace55b43a4647577cf31f36f336fd40986edd5956749221",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

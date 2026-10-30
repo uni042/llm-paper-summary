@@ -1,0 +1,961 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b4cb840910c917f0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b4cb840910c9",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2406.06571",
+    "arXiv:2408.07802",
+    "arXiv:2505.21661",
+    "arXiv:2511.01197",
+    "arXiv:2512.13586",
+    "arXiv:2603.02737",
+    "arXiv:2603.10030",
+    "arXiv:2604.15188",
+    "arXiv:2609.36800",
+    "arXiv:2609.39334"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:38.623493+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2406.06571",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.07802",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.21661",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.01197",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.13586",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.02737",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.10030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.15188",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.36800",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39334",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
+      "source_url": "https://arxiv.org/abs/2512.13586",
+      "year": 2025,
+      "published": "2025-12-15",
+      "venue": "arXiv.org",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive models (ARMs) are hindered by slow sequential inference. While masked diffusion models (MDMs) offer a parallel alternative, they suffer from critical drawbacks: high computational overhead from precluding Key-Value (KV) caching, and incoherent generation arising from learning dependencies over an intractable space of token combinations. To address these limitations, we introduce \\textsc{ReFusion}, a novel masked diffusion model that integrates sequence reorganization into the causal attention framework. By elevating parallel decoding from the token level to a higher slot level, \\textsc{ReFusion} interleaves inter-slot diffusion-based selection with intra-slot autoregressive infilling, while reordering newly generated slots ahead of the remaining masks after each iteration. Consequently, this design simultaneously unlocks full KV cache reuse and reduces learning complexity from an intractable token combination space to a manageable slot-level permutation space. Extensive experiments on seven diverse benchmarks show that \\textsc{ReFusion} not only overwhelmingly surpasses prior MDMs with a 34\\% performance gain and an over 18$\\times$ speedup on average, but also bridges the performance gap to strong ARMs while maintaining a 2.33$\\times$ average speedup.",
+      "identifiers": [
+        "SemanticScholar:bf3e93d83229d7acd95596d0cf92371d0f28c7b5"
+      ],
+      "semantic_scholar_id": "bf3e93d83229d7acd95596d0cf92371d0f28c7b5",
+      "canonical_id": "arXiv:2512.13586",
+      "arxiv_id": "2512.13586",
+      "doi": "10.48550/arXiv.2512.13586",
+      "authors": [
+        "Jia-Nan Li",
+        "Jian Guan",
+        "Wei Wu",
+        "Chong Li"
+      ],
+      "priority": 121,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 121,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 319,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CryptoMoE: Privacy-Preserving and Scalable Mixture of Experts Inference via Balanced Expert Routing",
+      "source_url": "https://arxiv.org/abs/2511.01197",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Private large language model (LLM) inference based on cryptographic primitives offers a promising path towards privacy-preserving deep learning. However, existing frameworks only support dense LLMs like LLaMA-1 and struggle to scale to mixture-of-experts (MoE) architectures. The key challenge comes from securely evaluating the dynamic routing mechanism in MoE layers, which may reveal sensitive input information if not fully protected. In this paper, we propose CryptoMoE, the first framework that enables private, efficient, and accurate inference for MoE-based models. CryptoMoE balances expert loads to protect expert routing information and proposes novel protocols for secure expert dispatch and combine. CryptoMoE also develops a confidence-aware token selection strategy and a batch matrix multiplication protocol to improve accuracy and efficiency further. Extensive experiments on DeepSeekMoE-16.4B, OLMoE-6.9B, and QWenMoE-14.3B show that CryptoMoE achieves $2.8\\sim3.5\\times$ end-to-end latency reduction and $2.9\\sim4.3\\times$ communication reduction over a dense baseline with minimum accuracy loss. We also adapt CipherPrune (ICLR'25) for MoE inference and demonstrate CryptoMoE can reduce the communication by up to $4.3 \\times$. Code is available at: https://github.com/PKU-SEC-Lab/CryptoMoE.",
+      "identifiers": [
+        "SemanticScholar:11ae21e0096558c8752984fe28f2d0b1ec9f4779"
+      ],
+      "semantic_scholar_id": "11ae21e0096558c8752984fe28f2d0b1ec9f4779",
+      "canonical_id": "arXiv:2511.01197",
+      "arxiv_id": "2511.01197",
+      "doi": "10.48550/arXiv.2511.01197",
+      "authors": [
+        "Yi-Fan Zhou",
+        "Tian-Shi Xu",
+        "Jue Hong",
+        "Ye Wu",
+        "Meng Li"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 361,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2603.02737",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference demands vast memory capacity and hierarchical memory structures, but conventional architectures suffer from excessive energy and latency costs due to frequent data movement across deep memory tiers. To address this, we propose a wafer-scale SRAM-based Computing-in-Memory (CIM) architecture that performs all LLM operations in situ within the first-level SRAM, eliminating off-chip data migration and achieving unprecedented energy efficiency. However, wafer-scale SRAM CIM presents multiple challenges due to the limited first-level memory capacity, which requires efficient compute-memory resource allocation. To enable efficient LLM execution on this architecture, we propose three key innovations: Token-Grained Pipelining – Conventional sequence-level pipelining suffers from underutilization due to varying input sequence lengths and batching policies. We introduce a fine-grained token-level pipeline that mitigates sequence length variations, enhancing the utilization of CIM cores while minimizing the storage capacity required for activation. Distributed Dynamic KV Cache Management – KV cache storage occupies significant memory in LLM inference. We optimize on-chip KV caching by decoupling CIM memory from compute assignment, leveraging fragmented SRAM CIM memory within already-allocated cores for efficient KV storage, and reducing dedicated memory overhead. Communication-Aware and Fault-Tolerant Core Mapping – Efficient execution on wafer-scale CIM requires optimal mapping from transformer blocks to CIM cores to minimize inter-(pipeline) stage communication while ensuring intra-stage compute locality. We design a network-on-wafer-aware mapping strategy that places pipeline stages in close proximity while also distributing large layers efficiently across multiple cores. This mapping accounts for core-level defects, improving fault tolerance in wafer-scale deployment. Experimental results demonstrate that Ouroboros achieves 4.1× average throughput improvement and 4.2× average energy efficiency gain over state-of-the-art systems, peaking at 9.1× throughput and 17× energy efficiency for the 13B model.",
+      "identifiers": [
+        "SemanticScholar:c426b1b033a0cdc1d3f62f83b1df85a8685314e6"
+      ],
+      "semantic_scholar_id": "c426b1b033a0cdc1d3f62f83b1df85a8685314e6",
+      "canonical_id": "arXiv:2603.02737",
+      "arxiv_id": "2603.02737",
+      "doi": "10.1145/3779212.3790197",
+      "authors": [
+        "Yi-Qi Liu",
+        "Yu-Dong Pan",
+        "Meng-Di Wang",
+        "Shi-Xin Zhao",
+        "Hao-Nan Zhu",
+        "Yi Han",
+        "Lei Zhang",
+        "Ying Wang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 241,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VisPCO: Visual Token Pruning Configuration Optimization via Budget-Aware Pareto-Frontier Learning for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.15188",
+      "year": 2026,
+      "published": "2026-04-16",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning methods effectively mitigate the quadratic computational growth caused by processing high-resolution images and video frames in vision-language models (VLMs). However, existing approaches rely on predefined pruning configurations without determining whether they achieve computation-performance optimality. In this work, we introduce , a novel framework that formulates visual token pruning as a Pareto configuration optimization problem to automatically identify optimal configurations. Our approach employs continuous relaxation and straight-through estimators to enable gradient-based search, solved via the Augmented Lagrangian method. Extensive experiments across 8 visual benchmarks demonstrate that effectively approximates the empirical Pareto frontier obtained through grid search and generalizes well across various pruning methods and VLM architectures. Furthermore, through learnable kernel functions, we investigate layer-wise pruning patterns and reveal that multi-step progressive pruning captures VLMs'hierarchical compression structure, achieving superior accuracy-efficiency trade-offs compared to single-layer approaches.",
+      "identifiers": [
+        "SemanticScholar:3426af264726155771f4b6851a51b3f55e05aa4c"
+      ],
+      "semantic_scholar_id": "3426af264726155771f4b6851a51b3f55e05aa4c",
+      "canonical_id": "arXiv:2604.15188",
+      "arxiv_id": "2604.15188",
+      "doi": "10.48550/arXiv.2604.15188",
+      "authors": [
+        "Hua-Wei Ji",
+        "Yuan Sun",
+        "Yuanhao Jin",
+        "Cheng Deng",
+        "Jia-Xin Ding",
+        "Luo-Yi Fu",
+        "Xin-Bing Wang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+      "source_url": "https://arxiv.org/abs/2408.07802",
+      "year": 2024,
+      "published": "2024-08-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Transformer networks are increasingly used in settings where low inference latency can improve the end-user experience and enable new applications. However, autoregressive inference is resource intensive and requires parallelism for efficiency. Parallelism introduces collective communication that is both expensive and represents a phase when hardware resources are underutilized. Towards mitigating this, Kraken is an evolution of the standard Transformer architecture that is designed to complement existing tensor parallelism schemes for efficient inference on multi-device systems. By introducing a fixed degree of intra-layer model parallelism, the architecture allows collective operations to be overlapped with compute, decreasing latency and increasing hardware utilization. When trained on OpenWebText, Kraken models reach a similar perplexity as standard Transformers while also preserving their language modeling capabilities when evaluated on the SuperGLUE benchmark. Importantly, when tested on multi-GPU systems using TensorRT-LLM engines, Kraken speeds up Time To First Token by a mean of 35.6% across a range of model sizes, context lengths, and degrees of tensor parallelism.",
+      "identifiers": [
+        "SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6"
+      ],
+      "semantic_scholar_id": "ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+      "canonical_id": "arXiv:2408.07802",
+      "arxiv_id": "2408.07802",
+      "doi": "10.48550/arXiv.2408.07802",
+      "authors": [
+        "R. Prabhakar",
+        "Hengrui Zhang",
+        "David Wentzlaff"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 807,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI transport libraries move bytes efficiently, but they commonly assume that buffers are already correctly allocated, placed, shared, registered, and safe under completion and teardown pressure. This paper presents dmaplane, a Linux kernel module that makes this missing layer explicit as buffer orchestration. dmaplane exposes a stable kernel UAPI via /dev/dmaplane and composes ring-based command channels, DMA buffer lifecycle management, dma-buf export for cross-device sharing, a kernel-space RDMA engine, NUMA-aware allocation and verification, credit-based flow control, low-overhead observability, and GPU memory integration via PCIe BAR pinning. We evaluate orchestration sensitivity with measurements of NUMA cross-node penalties at DRAM scale, completion-safe flow control under sustained RDMA load, and GPU BAR mapping tiers versus cudaMemcpy. We also demonstrate end-to-end disaggregated inference by transferring KV-cache chunks between two machines using RDMA WRITE WITH IMMEDIATE and reconstructing tensor views on the receiver. RDMA measurements use Soft-RoCE; we distinguish measured results from provider-independent properties by construction.",
+      "identifiers": [
+        "SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d"
+      ],
+      "semantic_scholar_id": "b0e3beb2db225170a5c2fda79710e5d20238195d",
+      "canonical_id": "arXiv:2603.10030",
+      "arxiv_id": "2603.10030",
+      "doi": "10.48550/arXiv.2603.10030",
+      "authors": [
+        "Marco Graziano"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 246,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "source_url": "https://arxiv.org/abs/2609.36800",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compiler backends are expensive to build and maintain as programming models, workloads, and accelerators evolve. We investigate whether large language models can replace the conventional optimizing and lowering pipeline, a process that we call AI lowering. We study AI lowering from Triton to NVIDIA PTX: an LLM agent translates Triton kernels directly into PTX. We build an environment that evaluates candidate PTX, and an agentic harness in which an LLM translates Triton kernels into PTX. Across twelve common kernels on Ada, Hopper, and Blackwell GPUs and ten kernels from recent ML papers, AI lowering achieves 0.83x-3.34x the performance of autotuned Triton. The largest gains come from transformations that Triton's lowering pipeline does not perform, such as decoding packed binary weights directly into Tensor Core operands (3.34x on BitDelta), assigning each thread a complete softmax row in tensor memory (1.37x on FlashAttention), and reusing overlapping convolution windows (up to 2.23x). These results rely on a robust evaluation harness with comprehensive verification support. We build on Volta, an existing PTX verifier, and substantially extend it to support modern GPU architectures by introducing support for Blackwell's tcgen05 Tensor Core interface. This requires modeling three architectural features: managed tensor memory, descriptor-based operand layouts, and asynchronous execution coordinated through commits, waits, memory barriers, and proxy fences. We discuss the challenges involved in formalizing them, as well as the current limitations. Our results suggest an emerging future in which AI compilers replace custom-written intermediate representations and checkers, reducing the time and engineering effort required to bring up software for new general-purpose and custom chips.",
+      "identifiers": [
+        "SemanticScholar:3fef8e5c34a13cd861a44f7126af8a213ffe3ea1"
+      ],
+      "semantic_scholar_id": "3fef8e5c34a13cd861a44f7126af8a213ffe3ea1",
+      "canonical_id": "arXiv:2609.36800",
+      "arxiv_id": "2609.36800",
+      "authors": [
+        "François Costa",
+        "Charly Castes",
+        "Thomas Bourgeat",
+        "Azalia Mirhoseini"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+      "identifiers": [
+        "SemanticScholar:64cc6645122436c28af6dd66c5d574f103bf089a"
+      ],
+      "semantic_scholar_id": "64cc6645122436c28af6dd66c5d574f103bf089a",
+      "canonical_id": "arXiv:2609.39334",
+      "arxiv_id": "2609.39334",
+      "authors": [
+        "Jinwoo Jeong",
+        "Woohyun Choi",
+        "Myeongjae Jeon",
+        "Jeongseob Ahn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
+      "source_url": "https://arxiv.org/abs/2505.21661",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we propose KPerfIR, a novel multilevel compiler-centric infrastructure to enable the development of customizable, extendable, and portable profiling tools tailored for modern artificial intelligence (AI) workloads on modern GPUs. Our approach integrates profiling capabilities directly into the compiler workflow, allowing profiling functionalities to be implemented as compiler passes, offering a programmable and reusable framework for performance analysis. This design bridges the gap between compilers and profilers, enabling fine-grained insights into complex optimization challenges such as overlapping the execution of fine-grained function units on GPUs. KPerfIR is integrated into the Triton infrastructure to highlight the power of a compiler-centric approach to advance performance analysis and optimization in the ever-evolving landscape of AI compilers. Our evaluation shows that our tool incurs low overhead (8.2%), provides accurate measurements (2% relative error), and delivers actionable insights into complicated GPU intra-kernel optimizations.",
+      "identifiers": [
+        "SemanticScholar:eeaa2d668c87354c75e5165df187775cd63bd66f"
+      ],
+      "semantic_scholar_id": "eeaa2d668c87354c75e5165df187775cd63bd66f",
+      "canonical_id": "arXiv:2505.21661",
+      "arxiv_id": "2505.21661",
+      "doi": "10.48550/arXiv.2505.21661",
+      "authors": [
+        "Yue Guan",
+        "Yuan-Wei Fang",
+        "Keren Zhou",
+        "Corbin Robeck",
+        "Manman Ren",
+        "Zhong-Kai Yu",
+        "Yufei Ding",
+        "Adnan Aziz"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 521,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+      "source_url": "https://arxiv.org/abs/2406.06571",
+      "year": 2024,
+      "published": "2024-06-03",
+      "venue": "European Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Models (LLMs) have achieved remarkable success in various fields, the efficiency of training and inference remains a major challenge. To address this issue, we propose SUBLLM, short for Subsampling-Upsampling-Bypass Large Language Model, an innovative architecture that extends the core decoder-only framework by incorporating subsampling, upsampling, and bypass modules. The subsampling modules are responsible for shortening the sequence, while the upsampling modules restore the sequence length, and the bypass modules enhance convergence. In comparison to LLaMA, the proposed SUBLLM exhibits significant enhancements in both training and inference speeds as well as memory usage, while maintaining competitive few-shot performance. During training, SUBLLM increases speeds by 26% and cuts memory by 10GB per GPU. In inference, it boosts speeds by up to 37% and reduces memory by 1GB per GPU. The training and inference speeds can be enhanced by 34% and 52% respectively when the context window is expanded to 8192. Our code is available at https://github.com/XiaoMi/subllm.",
+      "identifiers": [
+        "SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8"
+      ],
+      "semantic_scholar_id": "5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+      "canonical_id": "arXiv:2406.06571",
+      "arxiv_id": "2406.06571",
+      "doi": "10.48550/arXiv.2406.06571",
+      "authors": [
+        "Quandong Wang",
+        "Yuxuan Yuan",
+        "Xiao-Yu Yang",
+        "Rui-Ke Zhang",
+        "K. Zhao",
+        "Wei Liu",
+        "Jian Luan",
+        "Daniel Povey",
+        "Bin Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 879,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2512.13586",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.13586",
+        "id:SemanticScholar:bf3e93d83229d7acd95596d0cf92371d0f28c7b5",
+        "id:arXiv:2512.13586",
+        "title:refusion a diffusion large language model with parallel autoregressive decoding",
+        "url:https://arxiv.org/abs/2512.13586"
+      ],
+      "record": {
+        "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
+        "source_url": "https://arxiv.org/abs/2512.13586",
+        "year": 2025,
+        "published": "2025-12-15",
+        "venue": "arXiv.org",
+        "citation_count": 21,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Autoregressive models (ARMs) are hindered by slow sequential inference. While masked diffusion models (MDMs) offer a parallel alternative, they suffer from critical drawbacks: high computational overhead from precluding Key-Value (KV) caching, and incoherent generation arising from learning dependencies over an intractable space of token combinations. To address these limitations, we introduce \\textsc{ReFusion}, a novel masked diffusion model that integrates sequence reorganization into the causal attention framework. By elevating parallel decoding from the token level to a higher slot level, \\textsc{ReFusion} interleaves inter-slot diffusion-based selection with intra-slot autoregressive infilling, while reordering newly generated slots ahead of the remaining masks after each iteration. Consequently, this design simultaneously unlocks full KV cache reuse and reduces learning complexity from an intractable token combination space to a manageable slot-level permutation space. Extensive experiments on seven diverse benchmarks show that \\textsc{ReFusion} not only overwhelmingly surpasses prior MDMs with a 34\\% performance gain and an over 18$\\times$ speedup on average, but also bridges the performance gap to strong ARMs while maintaining a 2.33$\\times$ average speedup.",
+        "identifiers": [
+          "SemanticScholar:bf3e93d83229d7acd95596d0cf92371d0f28c7b5"
+        ],
+        "semantic_scholar_id": "bf3e93d83229d7acd95596d0cf92371d0f28c7b5",
+        "canonical_id": "arXiv:2512.13586",
+        "arxiv_id": "2512.13586",
+        "doi": "10.48550/arXiv.2512.13586",
+        "authors": [
+          "Jia-Nan Li",
+          "Jian Guan",
+          "Wei Wu",
+          "Chong Li"
+        ],
+        "priority": 121,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 21,
+          "citation_count": 21,
+          "total": 121,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 319,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.01197",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2511.01197",
+        "id:SemanticScholar:11ae21e0096558c8752984fe28f2d0b1ec9f4779",
+        "id:arXiv:2511.01197",
+        "title:cryptomoe privacypreserving and scalable mixture of experts inference via balanced expert routing",
+        "url:https://arxiv.org/abs/2511.01197"
+      ],
+      "record": {
+        "title": "CryptoMoE: Privacy-Preserving and Scalable Mixture of Experts Inference via Balanced Expert Routing",
+        "source_url": "https://arxiv.org/abs/2511.01197",
+        "year": 2025,
+        "published": "2025-11-03",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Private large language model (LLM) inference based on cryptographic primitives offers a promising path towards privacy-preserving deep learning. However, existing frameworks only support dense LLMs like LLaMA-1 and struggle to scale to mixture-of-experts (MoE) architectures. The key challenge comes from securely evaluating the dynamic routing mechanism in MoE layers, which may reveal sensitive input information if not fully protected. In this paper, we propose CryptoMoE, the first framework that enables private, efficient, and accurate inference for MoE-based models. CryptoMoE balances expert loads to protect expert routing information and proposes novel protocols for secure expert dispatch and combine. CryptoMoE also develops a confidence-aware token selection strategy and a batch matrix multiplication protocol to improve accuracy and efficiency further. Extensive experiments on DeepSeekMoE-16.4B, OLMoE-6.9B, and QWenMoE-14.3B show that CryptoMoE achieves $2.8\\sim3.5\\times$ end-to-end latency reduction and $2.9\\sim4.3\\times$ communication reduction over a dense baseline with minimum accuracy loss. We also adapt CipherPrune (ICLR'25) for MoE inference and demonstrate CryptoMoE can reduce the communication by up to $4.3 \\times$. Code is available at: https://github.com/PKU-SEC-Lab/CryptoMoE.",
+        "identifiers": [
+          "SemanticScholar:11ae21e0096558c8752984fe28f2d0b1ec9f4779"
+        ],
+        "semantic_scholar_id": "11ae21e0096558c8752984fe28f2d0b1ec9f4779",
+        "canonical_id": "arXiv:2511.01197",
+        "arxiv_id": "2511.01197",
+        "doi": "10.48550/arXiv.2511.01197",
+        "authors": [
+          "Yi-Fan Zhou",
+          "Tian-Shi Xu",
+          "Jue Hong",
+          "Ye Wu",
+          "Meng Li"
+        ],
+        "priority": 115,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 115,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 361,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.02737",
+      "identity_tokens": [
+        "id:DOI:10.1145/3779212.3790197",
+        "id:SemanticScholar:c426b1b033a0cdc1d3f62f83b1df85a8685314e6",
+        "id:arXiv:2603.02737",
+        "title:ouroboros waferscale sram cim with tokengrained pipelining for large language model inference",
+        "url:https://arxiv.org/abs/2603.02737"
+      ],
+      "record": {
+        "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
+        "source_url": "https://arxiv.org/abs/2603.02737",
+        "year": 2026,
+        "published": "2026-03-03",
+        "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) inference demands vast memory capacity and hierarchical memory structures, but conventional architectures suffer from excessive energy and latency costs due to frequent data movement across deep memory tiers. To address this, we propose a wafer-scale SRAM-based Computing-in-Memory (CIM) architecture that performs all LLM operations in situ within the first-level SRAM, eliminating off-chip data migration and achieving unprecedented energy efficiency. However, wafer-scale SRAM CIM presents multiple challenges due to the limited first-level memory capacity, which requires efficient compute-memory resource allocation. To enable efficient LLM execution on this architecture, we propose three key innovations: Token-Grained Pipelining – Conventional sequence-level pipelining suffers from underutilization due to varying input sequence lengths and batching policies. We introduce a fine-grained token-level pipeline that mitigates sequence length variations, enhancing the utilization of CIM cores while minimizing the storage capacity required for activation. Distributed Dynamic KV Cache Management – KV cache storage occupies significant memory in LLM inference. We optimize on-chip KV caching by decoupling CIM memory from compute assignment, leveraging fragmented SRAM CIM memory within already-allocated cores for efficient KV storage, and reducing dedicated memory overhead. Communication-Aware and Fault-Tolerant Core Mapping – Efficient execution on wafer-scale CIM requires optimal mapping from transformer blocks to CIM cores to minimize inter-(pipeline) stage communication while ensuring intra-stage compute locality. We design a network-on-wafer-aware mapping strategy that places pipeline stages in close proximity while also distributing large layers efficiently across multiple cores. This mapping accounts for core-level defects, improving fault tolerance in wafer-scale deployment. Experimental results demonstrate that Ouroboros achieves 4.1× average throughput improvement and 4.2× average energy efficiency gain over state-of-the-art systems, peaking at 9.1× throughput and 17× energy efficiency for the 13B model.",
+        "identifiers": [
+          "SemanticScholar:c426b1b033a0cdc1d3f62f83b1df85a8685314e6"
+        ],
+        "semantic_scholar_id": "c426b1b033a0cdc1d3f62f83b1df85a8685314e6",
+        "canonical_id": "arXiv:2603.02737",
+        "arxiv_id": "2603.02737",
+        "doi": "10.1145/3779212.3790197",
+        "authors": [
+          "Yi-Qi Liu",
+          "Yu-Dong Pan",
+          "Meng-Di Wang",
+          "Shi-Xin Zhao",
+          "Hao-Nan Zhu",
+          "Yi Han",
+          "Lei Zhang",
+          "Ying Wang"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 241,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.15188",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.15188",
+        "id:SemanticScholar:3426af264726155771f4b6851a51b3f55e05aa4c",
+        "id:arXiv:2604.15188",
+        "title:vispco visual token pruning configuration optimization via budgetaware paretofrontier learning for visionlanguage models",
+        "url:https://arxiv.org/abs/2604.15188"
+      ],
+      "record": {
+        "title": "VisPCO: Visual Token Pruning Configuration Optimization via Budget-Aware Pareto-Frontier Learning for Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2604.15188",
+        "year": 2026,
+        "published": "2026-04-16",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual token pruning methods effectively mitigate the quadratic computational growth caused by processing high-resolution images and video frames in vision-language models (VLMs). However, existing approaches rely on predefined pruning configurations without determining whether they achieve computation-performance optimality. In this work, we introduce , a novel framework that formulates visual token pruning as a Pareto configuration optimization problem to automatically identify optimal configurations. Our approach employs continuous relaxation and straight-through estimators to enable gradient-based search, solved via the Augmented Lagrangian method. Extensive experiments across 8 visual benchmarks demonstrate that effectively approximates the empirical Pareto frontier obtained through grid search and generalizes well across various pruning methods and VLM architectures. Furthermore, through learnable kernel functions, we investigate layer-wise pruning patterns and reveal that multi-step progressive pruning captures VLMs'hierarchical compression structure, achieving superior accuracy-efficiency trade-offs compared to single-layer approaches.",
+        "identifiers": [
+          "SemanticScholar:3426af264726155771f4b6851a51b3f55e05aa4c"
+        ],
+        "semantic_scholar_id": "3426af264726155771f4b6851a51b3f55e05aa4c",
+        "canonical_id": "arXiv:2604.15188",
+        "arxiv_id": "2604.15188",
+        "doi": "10.48550/arXiv.2604.15188",
+        "authors": [
+          "Hua-Wei Ji",
+          "Yuan Sun",
+          "Yuanhao Jin",
+          "Cheng Deng",
+          "Jia-Xin Ding",
+          "Luo-Yi Fu",
+          "Xin-Bing Wang"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 197,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2408.07802",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2408.07802",
+        "id:SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+        "id:arXiv:2408.07802",
+        "title:kraken inherently parallel transformers for efficient multidevice inference",
+        "url:https://arxiv.org/abs/2408.07802"
+      ],
+      "record": {
+        "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+        "source_url": "https://arxiv.org/abs/2408.07802",
+        "year": 2024,
+        "published": "2024-08-14",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Transformer networks are increasingly used in settings where low inference latency can improve the end-user experience and enable new applications. However, autoregressive inference is resource intensive and requires parallelism for efficiency. Parallelism introduces collective communication that is both expensive and represents a phase when hardware resources are underutilized. Towards mitigating this, Kraken is an evolution of the standard Transformer architecture that is designed to complement existing tensor parallelism schemes for efficient inference on multi-device systems. By introducing a fixed degree of intra-layer model parallelism, the architecture allows collective operations to be overlapped with compute, decreasing latency and increasing hardware utilization. When trained on OpenWebText, Kraken models reach a similar perplexity as standard Transformers while also preserving their language modeling capabilities when evaluated on the SuperGLUE benchmark. Importantly, when tested on multi-GPU systems using TensorRT-LLM engines, Kraken speeds up Time To First Token by a mean of 35.6% across a range of model sizes, context lengths, and degrees of tensor parallelism.",
+        "identifiers": [
+          "SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6"
+        ],
+        "semantic_scholar_id": "ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+        "canonical_id": "arXiv:2408.07802",
+        "arxiv_id": "2408.07802",
+        "doi": "10.48550/arXiv.2408.07802",
+        "authors": [
+          "R. Prabhakar",
+          "Hengrui Zhang",
+          "David Wentzlaff"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 807,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.10030",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.10030",
+        "id:SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d",
+        "id:arXiv:2603.10030",
+        "title:the dma streaming framework kernellevel buffer orchestration for highperformance ai data paths",
+        "url:https://arxiv.org/abs/2603.10030"
+      ],
+      "record": {
+        "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+        "source_url": "https://arxiv.org/abs/2603.10030",
+        "year": 2026,
+        "published": "2026-02-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "AI transport libraries move bytes efficiently, but they commonly assume that buffers are already correctly allocated, placed, shared, registered, and safe under completion and teardown pressure. This paper presents dmaplane, a Linux kernel module that makes this missing layer explicit as buffer orchestration. dmaplane exposes a stable kernel UAPI via /dev/dmaplane and composes ring-based command channels, DMA buffer lifecycle management, dma-buf export for cross-device sharing, a kernel-space RDMA engine, NUMA-aware allocation and verification, credit-based flow control, low-overhead observability, and GPU memory integration via PCIe BAR pinning. We evaluate orchestration sensitivity with measurements of NUMA cross-node penalties at DRAM scale, completion-safe flow control under sustained RDMA load, and GPU BAR mapping tiers versus cudaMemcpy. We also demonstrate end-to-end disaggregated inference by transferring KV-cache chunks between two machines using RDMA WRITE WITH IMMEDIATE and reconstructing tensor views on the receiver. RDMA measurements use Soft-RoCE; we distinguish measured results from provider-independent properties by construction.",
+        "identifiers": [
+          "SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d"
+        ],
+        "semantic_scholar_id": "b0e3beb2db225170a5c2fda79710e5d20238195d",
+        "canonical_id": "arXiv:2603.10030",
+        "arxiv_id": "2603.10030",
+        "doi": "10.48550/arXiv.2603.10030",
+        "authors": [
+          "Marco Graziano"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 246,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.36800",
+      "identity_tokens": [
+        "id:SemanticScholar:3fef8e5c34a13cd861a44f7126af8a213ffe3ea1",
+        "id:arXiv:2609.36800",
+        "title:ai as a compiler compiling triton kernels without the triton compiler",
+        "url:https://arxiv.org/abs/2609.36800"
+      ],
+      "record": {
+        "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+        "source_url": "https://arxiv.org/abs/2609.36800",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Compiler backends are expensive to build and maintain as programming models, workloads, and accelerators evolve. We investigate whether large language models can replace the conventional optimizing and lowering pipeline, a process that we call AI lowering. We study AI lowering from Triton to NVIDIA PTX: an LLM agent translates Triton kernels directly into PTX. We build an environment that evaluates candidate PTX, and an agentic harness in which an LLM translates Triton kernels into PTX. Across twelve common kernels on Ada, Hopper, and Blackwell GPUs and ten kernels from recent ML papers, AI lowering achieves 0.83x-3.34x the performance of autotuned Triton. The largest gains come from transformations that Triton's lowering pipeline does not perform, such as decoding packed binary weights directly into Tensor Core operands (3.34x on BitDelta), assigning each thread a complete softmax row in tensor memory (1.37x on FlashAttention), and reusing overlapping convolution windows (up to 2.23x). These results rely on a robust evaluation harness with comprehensive verification support. We build on Volta, an existing PTX verifier, and substantially extend it to support modern GPU architectures by introducing support for Blackwell's tcgen05 Tensor Core interface. This requires modeling three architectural features: managed tensor memory, descriptor-based operand layouts, and asynchronous execution coordinated through commits, waits, memory barriers, and proxy fences. We discuss the challenges involved in formalizing them, as well as the current limitations. Our results suggest an emerging future in which AI compilers replace custom-written intermediate representations and checkers, reducing the time and engineering effort required to bring up software for new general-purpose and custom chips.",
+        "identifiers": [
+          "SemanticScholar:3fef8e5c34a13cd861a44f7126af8a213ffe3ea1"
+        ],
+        "semantic_scholar_id": "3fef8e5c34a13cd861a44f7126af8a213ffe3ea1",
+        "canonical_id": "arXiv:2609.36800",
+        "arxiv_id": "2609.36800",
+        "authors": [
+          "François Costa",
+          "Charly Castes",
+          "Thomas Bourgeat",
+          "Azalia Mirhoseini"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39334",
+      "identity_tokens": [
+        "id:SemanticScholar:64cc6645122436c28af6dd66c5d574f103bf089a",
+        "id:arXiv:2609.39334",
+        "title:taming speculative search for testtime scaling in llm serving",
+        "url:https://arxiv.org/abs/2609.39334"
+      ],
+      "record": {
+        "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2609.39334",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+        "identifiers": [
+          "SemanticScholar:64cc6645122436c28af6dd66c5d574f103bf089a"
+        ],
+        "semantic_scholar_id": "64cc6645122436c28af6dd66c5d574f103bf089a",
+        "canonical_id": "arXiv:2609.39334",
+        "arxiv_id": "2609.39334",
+        "authors": [
+          "Jinwoo Jeong",
+          "Woohyun Choi",
+          "Myeongjae Jeon",
+          "Jeongseob Ahn"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.21661",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.21661",
+        "id:SemanticScholar:eeaa2d668c87354c75e5165df187775cd63bd66f",
+        "id:arXiv:2505.21661",
+        "title:kperfir towards an open and compilercentric ecosystem for gpu kernel performance tooling on modern ai workloads",
+        "url:https://arxiv.org/abs/2505.21661"
+      ],
+      "record": {
+        "title": "KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
+        "source_url": "https://arxiv.org/abs/2505.21661",
+        "year": 2025,
+        "published": "2025-05-27",
+        "venue": "arXiv.org",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this work, we propose KPerfIR, a novel multilevel compiler-centric infrastructure to enable the development of customizable, extendable, and portable profiling tools tailored for modern artificial intelligence (AI) workloads on modern GPUs. Our approach integrates profiling capabilities directly into the compiler workflow, allowing profiling functionalities to be implemented as compiler passes, offering a programmable and reusable framework for performance analysis. This design bridges the gap between compilers and profilers, enabling fine-grained insights into complex optimization challenges such as overlapping the execution of fine-grained function units on GPUs. KPerfIR is integrated into the Triton infrastructure to highlight the power of a compiler-centric approach to advance performance analysis and optimization in the ever-evolving landscape of AI compilers. Our evaluation shows that our tool incurs low overhead (8.2%), provides accurate measurements (2% relative error), and delivers actionable insights into complicated GPU intra-kernel optimizations.",
+        "identifiers": [
+          "SemanticScholar:eeaa2d668c87354c75e5165df187775cd63bd66f"
+        ],
+        "semantic_scholar_id": "eeaa2d668c87354c75e5165df187775cd63bd66f",
+        "canonical_id": "arXiv:2505.21661",
+        "arxiv_id": "2505.21661",
+        "doi": "10.48550/arXiv.2505.21661",
+        "authors": [
+          "Yue Guan",
+          "Yuan-Wei Fang",
+          "Keren Zhou",
+          "Corbin Robeck",
+          "Manman Ren",
+          "Zhong-Kai Yu",
+          "Yufei Ding",
+          "Adnan Aziz"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 521,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2406.06571",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2406.06571",
+        "id:SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+        "id:arXiv:2406.06571",
+        "title:subllm a novel efficient architecture with token sequence subsampling for llm",
+        "url:https://arxiv.org/abs/2406.06571"
+      ],
+      "record": {
+        "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+        "source_url": "https://arxiv.org/abs/2406.06571",
+        "year": 2024,
+        "published": "2024-06-03",
+        "venue": "European Conference on Artificial Intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While Large Language Models (LLMs) have achieved remarkable success in various fields, the efficiency of training and inference remains a major challenge. To address this issue, we propose SUBLLM, short for Subsampling-Upsampling-Bypass Large Language Model, an innovative architecture that extends the core decoder-only framework by incorporating subsampling, upsampling, and bypass modules. The subsampling modules are responsible for shortening the sequence, while the upsampling modules restore the sequence length, and the bypass modules enhance convergence. In comparison to LLaMA, the proposed SUBLLM exhibits significant enhancements in both training and inference speeds as well as memory usage, while maintaining competitive few-shot performance. During training, SUBLLM increases speeds by 26% and cuts memory by 10GB per GPU. In inference, it boosts speeds by up to 37% and reduces memory by 1GB per GPU. The training and inference speeds can be enhanced by 34% and 52% respectively when the context window is expanded to 8192. Our code is available at https://github.com/XiaoMi/subllm.",
+        "identifiers": [
+          "SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8"
+        ],
+        "semantic_scholar_id": "5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+        "canonical_id": "arXiv:2406.06571",
+        "arxiv_id": "2406.06571",
+        "doi": "10.48550/arXiv.2406.06571",
+        "authors": [
+          "Quandong Wang",
+          "Yuxuan Yuan",
+          "Xiao-Yu Yang",
+          "Rui-Ke Zhang",
+          "K. Zhao",
+          "Wei Liu",
+          "Jian Luan",
+          "Daniel Povey",
+          "Bin Wang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 879,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bc983a5e0d056dd1938ba3ef5e9eaefab2e776163ed490493e2a62ac88009d1c",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

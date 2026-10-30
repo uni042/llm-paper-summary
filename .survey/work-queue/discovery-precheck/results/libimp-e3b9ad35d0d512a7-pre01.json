@@ -1,0 +1,948 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e3b9ad35d0d512a7-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e3b9ad35d0d5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.10553",
+    "arXiv:2507.10059",
+    "arXiv:2602.08030",
+    "arXiv:2605.22269",
+    "arXiv:2606.15179",
+    "arXiv:2608.01718",
+    "arXiv:2608.27875",
+    "arXiv:2609.18005",
+    "arXiv:2609.19499",
+    "arXiv:2609.31291"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:53.463349+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.10553",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.10059",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08030",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.22269",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.15179",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.01718",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.27875",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.18005",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.19499",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.31291",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+      "source_url": "https://arxiv.org/abs/2605.22269",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long streaming video QA remains challenging due to growing visual tokens and limited reasoning length of large language models (LLMs). KV-caching stores the Key-Value (KV) of the historical tokens via LLM prefill and enables more efficient streaming QA. However, existing methods cache every one or two frames, causing redundant memory usage and losing fine-grained spatial details within frame or temporal contexts across frames. This paper proposes MuKV, a method that features a multi-grained KV cache compression module and a semi-hierarchical retrieval approach to improve both efficiency and accuracy for long streaming VideoQA. For the offline KV cache, MuKV extracts visual representations at patch-, frame-, and segment-levels. The multiple levels of granularity preserve both local cues and global temporal context, while maintaining efficiency with a dual signal token compression mechanism guided by self-attention and frequency. For online QA, MuKV designs a semi-hierarchical retrieval method to retrieve relevant KV caches for answer generation. Experiments on long-streaming VideoQA benchmarks show that MuKV significantly improves answer accuracy, without sacrificing memory and online QA efficiency. Moreover, our compression mechanism alone brings consistent benefits across answer accuracy, memory, and QA efficiency over baselines, showcasing highly effective contribution.",
+      "identifiers": [
+        "SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2"
+      ],
+      "semantic_scholar_id": "cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+      "canonical_id": "arXiv:2605.22269",
+      "arxiv_id": "2605.22269",
+      "doi": "10.48550/arXiv.2605.22269",
+      "authors": [
+        "Jun Xiao",
+        "Jiajun Chen",
+        "Tianxiang Sun",
+        "Xun Yang",
+        "Angela Yao"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2602.08030",
+      "year": 2026,
+      "published": "2026-02-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning models enhance problem-solving by scaling test-time compute, yet they face a critical paradox: excessive thinking tokens often degrade performance rather than improve it. We attribute this to a fundamental architectural flaw: standard LLMs operate as\"malloc-only\"engines, continuously accumulating valid and redundant steps alike without a mechanism to prune obsolete information. To break this cycle, we propose Free()LM, a model that introduces an intrinsic self-forgetting capability via the Free-Module, a plug-and-play LoRA adapter. By iteratively switching between reasoning and cleaning modes, Free()LM dynamically identifies and prunes useless context chunks, maintaining a compact and noise-free state. Extensive experiments show that Free()LM provides consistent improvements across all model scales (8B to 685B). It achieves a 3.3% average improvement over top-tier reasoning baselines, even establishing a new SOTA on IMOanswerBench using DeepSeek V3.2-Speciale. Most notably, in long-horizon tasks where the standard Qwen3-235B-A22B model suffers a total collapse (0% accuracy), Free()LM restores performance to 50%. Our findings suggest that sustainable intelligence requires the freedom to forget as much as the power to think.",
+      "identifiers": [
+        "SemanticScholar:4bc97dba841ff291ef59c77dc8b2b053366d79ff"
+      ],
+      "semantic_scholar_id": "4bc97dba841ff291ef59c77dc8b2b053366d79ff",
+      "canonical_id": "arXiv:2602.08030",
+      "arxiv_id": "2602.08030",
+      "doi": "10.48550/arXiv.2602.08030",
+      "authors": [
+        "Yi Zheng",
+        "Dongyang Ma",
+        "Tian Liang",
+        "Jia-Hao Xu",
+        "Xin-Ting Huang",
+        "Li-Hui Chen",
+        "Hai-Tao Mi",
+        "Yan Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 264,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LaCache: Robust Semantic Caching for LLM Serving",
+      "source_url": "https://arxiv.org/abs/2608.01718",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Semantic caching, reusing responses to answer semantically similar queries, has seen growing adoption in LLM serving, offering faster responses and reduced costs. Yet existing schemes are fundamentally vulnerable to cache-collision attacks, wherein an adversary pollutes the cache by injecting adversarial queries, corrupting responses to subsequent legitimate requests. We present LaCache, a simple yet principled redesign of semantic caching that provides provable defense against such attacks. The key insight is that while the adversary has full control over the adversarial query, it has far less control over the corresponding LLM-generated response, which must simultaneously satisfy multiple competing constraints. Thus, LaCache shifts the integrity check from the query to the response: rather than checking only the cache hit of a query, LaCache additionally checks the cache hit of its first $k$ speculatively decoded tokens. Analytically, we prove that LaCache detects any cache-collision attack that produces a semantically distinct response with provably high probability. Empirically, evaluation across diverse LLMs and benchmarks confirms that LaCache reduces attack hit rate to near zero while preserving over 90% of benign cache utility. To our best knowledge, this work is the first to exploit the inherent constraints on adversarial responses in cache-collision attacks to provide provable security, pointing to a promising direction for building robust semantic caching.",
+      "identifiers": [
+        "SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada"
+      ],
+      "semantic_scholar_id": "b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+      "canonical_id": "arXiv:2608.01718",
+      "arxiv_id": "2608.01718",
+      "authors": [
+        "Jiacheng Liang",
+        "Yuhui Wang",
+        "Tan-Qiu Jiang",
+        "Ting Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Softmax Reparameterization for Output-Head Quantization",
+      "source_url": "https://arxiv.org/abs/2609.31291",
+      "year": 2026,
+      "published": "2026-09-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vocabularies make output heads a substantial inference cost in small language models. We introduce softmax reparameterization, a post-training method that searches over functionally equivalent output heads before quantization. The method subtracts a scalar multiple of the vocabulary-row mean from every output row and selects the coefficient by validation KL. For linear-softmax heads, these shifts preserve full-precision predictions exactly and require no decoder retraining; a rank-one correction extends the construction to nonlinear logit paths. Across seven output heads and three quantizers, W4 gains are largest where baseline quantization substantially distorts predictions: test KL falls by 93% on XGLM under RTN and by 73--77% on Phi, BLOOM, and BLOOMZ under activation-weighted MSE. Heads with low baseline error change little; at W2, used as a compression stress test, benefits extend more broadly. On Phi, the gains persist under stronger GPTQ calibration; a separate untouched holdout reproduces the improvements on Phi and BLOOM. Frozen WikiText-selected coefficients also transfer without retuning to C4 and OpenWebMath. Residual analysis on Phi shows how fidelity can improve despite greater total logit error: the selected representative reduces error on likely outputs and lowers its Fisher-weighted cost. For shift-compatible heads, the shift adds no inference operation. With the decoder held in BF16, a packed W4 Phi output head reduces batch-one generation latency by 10.8%, and reparameterization preserves this speedup.",
+      "identifiers": [
+        "SemanticScholar:dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68"
+      ],
+      "semantic_scholar_id": "dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68",
+      "canonical_id": "arXiv:2609.31291",
+      "arxiv_id": "2609.31291",
+      "authors": [
+        "Asim Kadav",
+        "Christian Flores",
+        "C. Arora",
+        "Varun Kotte",
+        "Hong-Bo Zheng",
+        "Lan Yan",
+        "Priya Shanmugasundaram",
+        "T. King"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud Rag Under Document Isolation",
+      "source_url": "https://arxiv.org/abs/2606.15179",
+      "year": 2026,
+      "published": "2026-06-13",
+      "venue": "2026 IEEE International Conference on Web Services (ICWS)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Retrieval-augmented generation (RAG) has emerged as a pivotal technique for improving language models by incorporating external knowledge at inference time. As devicecloud collaborative inference makes it feasible to deploy small language models on edge devices, a new setting arises in which private documents remain on the device and public knowledge resides in the cloud. Privacy and policy constraints often forbid raw document exchange, creating a document-isolated dual-end RAG setting. However, existing methods rely on frequent remote synchronization and dense evidence transfer, limiting throughput under realistic latency and bandwidth conditions. To address this issue, we propose CONCORD, an asynchronous sparse aggregation framework for dual-end RAG under document isolation. CONCORD treats the cloud as an asynchronously arriving evidence source rather than a continuously synchronized co-generator. Specifically, we introduce waiting debt control to decide whether each decoding step should continue waiting for remote participation based on the observed return of waiting. We also design a certificate-guided minimal supplementation mechanism that requests only the remote evidence needed to determine the current greedy decision. Steps that consult the cloud preserve the same greedy token as dense dual-end aggregation, while the remaining steps commit locally without remote evidence. Experiments on Natural Questions and WikiText-2 show that CONCORD improves end-to-end throughput over baselines by $1.66 \\times$ and $2.15 \\times$, respectively, while reducing pertoken communication by over two orders of magnitude and maintaining comparable answer quality and perplexity.",
+      "identifiers": [
+        "SemanticScholar:4848b6e5f1943e98aacd5ca4a5729b06e7587b74"
+      ],
+      "semantic_scholar_id": "4848b6e5f1943e98aacd5ca4a5729b06e7587b74",
+      "canonical_id": "arXiv:2606.15179",
+      "arxiv_id": "2606.15179",
+      "doi": "10.1109/ICWS72778.2026.00134",
+      "authors": [
+        "Xuedong Hu",
+        "Zhi-Qing Tang",
+        "Zhi-Di Yao",
+        "Tian Wang",
+        "Wei-Jia Jia"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 139,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+      "source_url": "https://arxiv.org/abs/2608.27875",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has been widely adopted in LLM training and inference to reduce cost and improve efficiency. However, low-bit quantization of the \\emph{attention} module often introduces large errors at very low bit-widths, causing performance degradation. Existing methods mainly rely on smoothing techniques to handle outliers, while we propose a hybrid quantization design to better balance accuracy and efficiency. Specifically, we propose \\textbf{HyQuant}, an efficient hybrid quantization framework for LLM attention. HyQuant quantizes most attention states into low-bit formats while retaining a small set of vertical-line tokens and local-window states in high precision. These accuracy-critical regions are selected using lightweight vertical-line-aware attention-pattern signals, reducing quantization error with limited overhead. In the Prefill stage, HyQuant uses a hybrid-precision quantized attention operator that preserves vertical-line tokens and a local sliding window in full precision while quantizing the remaining context. In the Decode stage, HyQuant applies the same principle to KV-cache compression and fuses KV dequantization with attention computation to improve memory and hardware efficiency. Across diverse tasks, models, and datasets, HyQuant maintains nearly lossless accuracy with an extremely simple design, demonstrating the efficiency and practical feasibility of hybrid quantization for LLM attention. Code is available at: https://github.com/jerrysfls/HyQuant .",
+      "identifiers": [
+        "SemanticScholar:7f652a50b2fdc52927b17eb4dc7e25732c03b9f1"
+      ],
+      "semantic_scholar_id": "7f652a50b2fdc52927b17eb4dc7e25732c03b9f1",
+      "canonical_id": "arXiv:2608.27875",
+      "arxiv_id": "2608.27875",
+      "authors": [
+        "Jia-Rui Ding",
+        "Bin Xing",
+        "Yu Zhang",
+        "Dian Ding",
+        "Xiao-Dong Yi",
+        "Xian-Bin Ouyang",
+        "Fei-Hui Zhou",
+        "Kunquan Zhang",
+        "Zhengmeng Guo",
+        "Hao Pan",
+        "Guang-Tao Xue",
+        "Yi-Ming Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+      "source_url": "https://arxiv.org/abs/2609.18005",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model optimization is an active research area, spanning quantization of model weights, early-exit methods for skipping layers, and speculative decoding. Each track uses its own quality measures, typically an idiosyncratic benchmark score. Few approach the measurement precision required by other scientific disciplines. We propose a rigorous methodology for measuring output quality, suitable for cross-system and cross-technique comparison. We score outputs with an LLM as a judge, but calibrate the judge formally: we compare its scores on two ordinary runs of a model given the same prompts, verifying that it shows no systematic preference between statistically equivalent outputs and measuring its per-sample noise. Each design also includes a'null'condition, provably identical in distribution to the unmodified model, whose measured difference must be zero. With this one instrument we measure several acceleration techniques on the same prompts, so their quality costs can be compared. Perceived quality proves highly dependent on the domain of discourse. A 4-bit model was indistinguishable from its 16-bit original down to our design's +/-0.3-point resolution, in English prose and Chinese alike. At 3-bit precision the same prompts lost 0.5 points in English prose, 0.9 in Chinese, and 1.1 on multi-step math; early exit that cost 0.7 points on prose cost 2.5 on math, cutting correctly solved problems from 19 of 27 to 6. The pattern held for models from Alibaba and from Meta, but not its magnitude: the same quantizer cost Meta's model 1.8 points where it cost Alibaba's 0.7. A model's certainty about a token predicts how likely it is to differ from the full model's choice, but not how much that difference affects judged quality, so acceptance rules relying on certainty cannot distinguish errors that matter from errors that don't.",
+      "identifiers": [
+        "SemanticScholar:0be24a69fd3f403b922823de603dbe4ff5f08281"
+      ],
+      "semantic_scholar_id": "0be24a69fd3f403b922823de603dbe4ff5f08281",
+      "canonical_id": "arXiv:2609.18005",
+      "arxiv_id": "2609.18005",
+      "authors": [
+        "Jerry Kaplan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2609.19499",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling can improve large language model reasoning by generating and combining multiple candidate responses. In sampling-based methods, the inference budget is often described by the number of generated candidates, N. However, N tells us how many candidates are generated, not how they are executed. The same candidate budget can be produced in one batched generation call or split across several sequential calls with smaller batch sizes. We first study the effect of increasing N on reasoning accuracy using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts. As expected, increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B. However, accuracy alone does not show the systems cost of using a larger candidate budget. We therefore fix N = 8 and compare four generation schedules: 1x8, 2x4, 4x2, and 8x1, where axb denotes a generation calls with b candidates per call. We measure latency, throughput, GPU-hours, and gross GPU-device energy while keeping the total candidate count fixed. On A100 GPUs, eight serial calls use 4.64-4.86x as much gross GPU-device energy and have 5.77-6.12x the P95 latency of one batched call with eight candidates. The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.",
+      "identifiers": [
+        "SemanticScholar:a429cf6f1f9285849ceea67823d8824fe7661719"
+      ],
+      "semantic_scholar_id": "a429cf6f1f9285849ceea67823d8824fe7661719",
+      "canonical_id": "arXiv:2609.19499",
+      "arxiv_id": "2609.19499",
+      "authors": [
+        "Mobina Kashaniyan",
+        "Ali Jannesari"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GeLaCo: An Evolutionary Approach to Layer Compression",
+      "source_url": "https://arxiv.org/abs/2507.10059",
+      "year": 2025,
+      "published": "2025-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models have achieved remarkable performance across a large number of tasks, but face critical deployment and usage barriers due to substantial computational requirements. Model compression methods, which aim to reduce model size while preserving its capacity, are an important means to mitigate these issues. Promising approaches along these lines, such as structured pruning, typically require costly manual hyperparameter exploration or rely on local heuristics that may run the risk of ignoring better solutions. In this work we introduce GeLaCo, an evolutionary approach to LLM compression via layer collapse. Our approach supports an efficient exploration of the compression solution space via population-based search and a novel layer collapse formulation based on parametrized weight merging, with a fitness function based on similarity over residual updates and language modeling KL divergence. GeLaCo also supports both single and multi-objective evolutionary compression search, establishing the first Pareto front estimation along compression and quality axes. We evaluate GeLaCo solutions via both perplexity-based and generative evaluations over foundational and instruction-tuned models, outperforming state-of-the-art alternatives.",
+      "identifiers": [
+        "SemanticScholar:20726d2543f7ca4dcf213a25ee648e9e8e522481"
+      ],
+      "semantic_scholar_id": "20726d2543f7ca4dcf213a25ee648e9e8e522481",
+      "canonical_id": "arXiv:2507.10059",
+      "arxiv_id": "2507.10059",
+      "doi": "10.48550/arXiv.2507.10059",
+      "authors": [
+        "David Ponce",
+        "Thierry Etchegoyhen",
+        "J. del Ser"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 473,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SLaNC: Static LayerNorm Calibration",
+      "source_url": "https://arxiv.org/abs/2410.10553",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The ever increasing sizes of Large Language Models (LLMs) beyond hundreds of billions of parameters have generated enormous pressure on the manufacturers of dedicated hardware accelerators and made the innovative design of the latter one of the most rapidly expanding fields of the AI industry. Various approaches have been explored to enable efficient and accurate processing of LLMs on the available accelerators given their computational and storage limitations. Among these, various quantization techniques have become the main focus of the community as a means of reducing the compute, communication and storage requirements. Quantization to lower precision formats naturally poses a number of challenges caused by the limited range of the available value representations. When it comes to processing the popular Transformer models on hardware, one of the main issues becomes calculation of the LayerNorm simply because accumulation of the variance requires a much wider dynamic range than the hardware enables. In this article, we address this matter and propose a computationally-efficient scaling technique that can be easily applied to Transformer models during inference. Our method suggests a straightforward way of scaling the LayerNorm inputs based on the static weights of the immediately preceding linear layers. The scaling factors are computed offline, based solely on the linear layer weights, hence no latency or computational overhead is added during inference. Most importantly, our technique ensures that no numerical issues such as overflow or underflow could happen during the compute. This approach offers smooth, accurate and resource-effective inference across a wide range of hardware architectures. The article provides theoretical justification as well as supporting numerical simulations.",
+      "identifiers": [
+        "SemanticScholar:98c82adb76c494534c20ba4d8a346bf815886891"
+      ],
+      "semantic_scholar_id": "98c82adb76c494534c20ba4d8a346bf815886891",
+      "canonical_id": "arXiv:2410.10553",
+      "arxiv_id": "2410.10553",
+      "doi": "10.48550/arXiv.2410.10553",
+      "authors": [
+        "Mahsa Salmani",
+        "Nikita Trukhanov",
+        "I. Soloveychik"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 746,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.22269",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22269",
+        "id:SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+        "id:arXiv:2605.22269",
+        "title:mukv multigrained kv cache compression for long streaming video questionanswering",
+        "url:https://arxiv.org/abs/2605.22269"
+      ],
+      "record": {
+        "title": "MuKV: Multi-Grained KV Cache Compression for Long Streaming Video Question-Answering",
+        "source_url": "https://arxiv.org/abs/2605.22269",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long streaming video QA remains challenging due to growing visual tokens and limited reasoning length of large language models (LLMs). KV-caching stores the Key-Value (KV) of the historical tokens via LLM prefill and enables more efficient streaming QA. However, existing methods cache every one or two frames, causing redundant memory usage and losing fine-grained spatial details within frame or temporal contexts across frames. This paper proposes MuKV, a method that features a multi-grained KV cache compression module and a semi-hierarchical retrieval approach to improve both efficiency and accuracy for long streaming VideoQA. For the offline KV cache, MuKV extracts visual representations at patch-, frame-, and segment-levels. The multiple levels of granularity preserve both local cues and global temporal context, while maintaining efficiency with a dual signal token compression mechanism guided by self-attention and frequency. For online QA, MuKV designs a semi-hierarchical retrieval method to retrieve relevant KV caches for answer generation. Experiments on long-streaming VideoQA benchmarks show that MuKV significantly improves answer accuracy, without sacrificing memory and online QA efficiency. Moreover, our compression mechanism alone brings consistent benefits across answer accuracy, memory, and QA efficiency over baselines, showcasing highly effective contribution.",
+        "identifiers": [
+          "SemanticScholar:cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2"
+        ],
+        "semantic_scholar_id": "cd17bcb80c6cc1cb2661290e5ba84a915a16c2f2",
+        "canonical_id": "arXiv:2605.22269",
+        "arxiv_id": "2605.22269",
+        "doi": "10.48550/arXiv.2605.22269",
+        "authors": [
+          "Jun Xiao",
+          "Jiajun Chen",
+          "Tianxiang Sun",
+          "Xun Yang",
+          "Angela Yao"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08030",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08030",
+        "id:SemanticScholar:4bc97dba841ff291ef59c77dc8b2b053366d79ff",
+        "id:arXiv:2602.08030",
+        "title:free learning to forget in malloconly reasoning models",
+        "url:https://arxiv.org/abs/2602.08030"
+      ],
+      "record": {
+        "title": "Free(): Learning to Forget in Malloc-Only Reasoning Models",
+        "source_url": "https://arxiv.org/abs/2602.08030",
+        "year": 2026,
+        "published": "2026-02-08",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning models enhance problem-solving by scaling test-time compute, yet they face a critical paradox: excessive thinking tokens often degrade performance rather than improve it. We attribute this to a fundamental architectural flaw: standard LLMs operate as\"malloc-only\"engines, continuously accumulating valid and redundant steps alike without a mechanism to prune obsolete information. To break this cycle, we propose Free()LM, a model that introduces an intrinsic self-forgetting capability via the Free-Module, a plug-and-play LoRA adapter. By iteratively switching between reasoning and cleaning modes, Free()LM dynamically identifies and prunes useless context chunks, maintaining a compact and noise-free state. Extensive experiments show that Free()LM provides consistent improvements across all model scales (8B to 685B). It achieves a 3.3% average improvement over top-tier reasoning baselines, even establishing a new SOTA on IMOanswerBench using DeepSeek V3.2-Speciale. Most notably, in long-horizon tasks where the standard Qwen3-235B-A22B model suffers a total collapse (0% accuracy), Free()LM restores performance to 50%. Our findings suggest that sustainable intelligence requires the freedom to forget as much as the power to think.",
+        "identifiers": [
+          "SemanticScholar:4bc97dba841ff291ef59c77dc8b2b053366d79ff"
+        ],
+        "semantic_scholar_id": "4bc97dba841ff291ef59c77dc8b2b053366d79ff",
+        "canonical_id": "arXiv:2602.08030",
+        "arxiv_id": "2602.08030",
+        "doi": "10.48550/arXiv.2602.08030",
+        "authors": [
+          "Yi Zheng",
+          "Dongyang Ma",
+          "Tian Liang",
+          "Jia-Hao Xu",
+          "Xin-Ting Huang",
+          "Li-Hui Chen",
+          "Hai-Tao Mi",
+          "Yan Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 264,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01718",
+      "identity_tokens": [
+        "id:SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+        "id:arXiv:2608.01718",
+        "title:lacache robust semantic caching for llm serving",
+        "url:https://arxiv.org/abs/2608.01718"
+      ],
+      "record": {
+        "title": "LaCache: Robust Semantic Caching for LLM Serving",
+        "source_url": "https://arxiv.org/abs/2608.01718",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Semantic caching, reusing responses to answer semantically similar queries, has seen growing adoption in LLM serving, offering faster responses and reduced costs. Yet existing schemes are fundamentally vulnerable to cache-collision attacks, wherein an adversary pollutes the cache by injecting adversarial queries, corrupting responses to subsequent legitimate requests. We present LaCache, a simple yet principled redesign of semantic caching that provides provable defense against such attacks. The key insight is that while the adversary has full control over the adversarial query, it has far less control over the corresponding LLM-generated response, which must simultaneously satisfy multiple competing constraints. Thus, LaCache shifts the integrity check from the query to the response: rather than checking only the cache hit of a query, LaCache additionally checks the cache hit of its first $k$ speculatively decoded tokens. Analytically, we prove that LaCache detects any cache-collision attack that produces a semantically distinct response with provably high probability. Empirically, evaluation across diverse LLMs and benchmarks confirms that LaCache reduces attack hit rate to near zero while preserving over 90% of benign cache utility. To our best knowledge, this work is the first to exploit the inherent constraints on adversarial responses in cache-collision attacks to provide provable security, pointing to a promising direction for building robust semantic caching.",
+        "identifiers": [
+          "SemanticScholar:b29f18af17aef62e3d6603700f9cfc0ea49a9ada"
+        ],
+        "semantic_scholar_id": "b29f18af17aef62e3d6603700f9cfc0ea49a9ada",
+        "canonical_id": "arXiv:2608.01718",
+        "arxiv_id": "2608.01718",
+        "authors": [
+          "Jiacheng Liang",
+          "Yuhui Wang",
+          "Tan-Qiu Jiang",
+          "Ting Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 88,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.31291",
+      "identity_tokens": [
+        "id:SemanticScholar:dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68",
+        "id:arXiv:2609.31291",
+        "title:softmax reparameterization for outputhead quantization",
+        "url:https://arxiv.org/abs/2609.31291"
+      ],
+      "record": {
+        "title": "Softmax Reparameterization for Output-Head Quantization",
+        "source_url": "https://arxiv.org/abs/2609.31291",
+        "year": 2026,
+        "published": "2026-09-25",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large vocabularies make output heads a substantial inference cost in small language models. We introduce softmax reparameterization, a post-training method that searches over functionally equivalent output heads before quantization. The method subtracts a scalar multiple of the vocabulary-row mean from every output row and selects the coefficient by validation KL. For linear-softmax heads, these shifts preserve full-precision predictions exactly and require no decoder retraining; a rank-one correction extends the construction to nonlinear logit paths. Across seven output heads and three quantizers, W4 gains are largest where baseline quantization substantially distorts predictions: test KL falls by 93% on XGLM under RTN and by 73--77% on Phi, BLOOM, and BLOOMZ under activation-weighted MSE. Heads with low baseline error change little; at W2, used as a compression stress test, benefits extend more broadly. On Phi, the gains persist under stronger GPTQ calibration; a separate untouched holdout reproduces the improvements on Phi and BLOOM. Frozen WikiText-selected coefficients also transfer without retuning to C4 and OpenWebMath. Residual analysis on Phi shows how fidelity can improve despite greater total logit error: the selected representative reduces error on likely outputs and lowers its Fisher-weighted cost. For shift-compatible heads, the shift adds no inference operation. With the decoder held in BF16, a packed W4 Phi output head reduces batch-one generation latency by 10.8%, and reparameterization preserves this speedup.",
+        "identifiers": [
+          "SemanticScholar:dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68"
+        ],
+        "semantic_scholar_id": "dca1cc9a1d67cb0d9eae5eeb2923e858e53baa68",
+        "canonical_id": "arXiv:2609.31291",
+        "arxiv_id": "2609.31291",
+        "authors": [
+          "Asim Kadav",
+          "Christian Flores",
+          "C. Arora",
+          "Varun Kotte",
+          "Hong-Bo Zheng",
+          "Lan Yan",
+          "Priya Shanmugasundaram",
+          "T. King"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.15179",
+      "identity_tokens": [
+        "id:DOI:10.1109/icws72778.2026.00134",
+        "id:SemanticScholar:4848b6e5f1943e98aacd5ca4a5729b06e7587b74",
+        "id:arXiv:2606.15179",
+        "title:concord asynchronous sparse aggregation for devicecloud rag under document isolation",
+        "url:https://arxiv.org/abs/2606.15179"
+      ],
+      "record": {
+        "title": "CONCORD: Asynchronous Sparse Aggregation for Device-Cloud Rag Under Document Isolation",
+        "source_url": "https://arxiv.org/abs/2606.15179",
+        "year": 2026,
+        "published": "2026-06-13",
+        "venue": "2026 IEEE International Conference on Web Services (ICWS)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Retrieval-augmented generation (RAG) has emerged as a pivotal technique for improving language models by incorporating external knowledge at inference time. As devicecloud collaborative inference makes it feasible to deploy small language models on edge devices, a new setting arises in which private documents remain on the device and public knowledge resides in the cloud. Privacy and policy constraints often forbid raw document exchange, creating a document-isolated dual-end RAG setting. However, existing methods rely on frequent remote synchronization and dense evidence transfer, limiting throughput under realistic latency and bandwidth conditions. To address this issue, we propose CONCORD, an asynchronous sparse aggregation framework for dual-end RAG under document isolation. CONCORD treats the cloud as an asynchronously arriving evidence source rather than a continuously synchronized co-generator. Specifically, we introduce waiting debt control to decide whether each decoding step should continue waiting for remote participation based on the observed return of waiting. We also design a certificate-guided minimal supplementation mechanism that requests only the remote evidence needed to determine the current greedy decision. Steps that consult the cloud preserve the same greedy token as dense dual-end aggregation, while the remaining steps commit locally without remote evidence. Experiments on Natural Questions and WikiText-2 show that CONCORD improves end-to-end throughput over baselines by $1.66 \\times$ and $2.15 \\times$, respectively, while reducing pertoken communication by over two orders of magnitude and maintaining comparable answer quality and perplexity.",
+        "identifiers": [
+          "SemanticScholar:4848b6e5f1943e98aacd5ca4a5729b06e7587b74"
+        ],
+        "semantic_scholar_id": "4848b6e5f1943e98aacd5ca4a5729b06e7587b74",
+        "canonical_id": "arXiv:2606.15179",
+        "arxiv_id": "2606.15179",
+        "doi": "10.1109/ICWS72778.2026.00134",
+        "authors": [
+          "Xuedong Hu",
+          "Zhi-Qing Tang",
+          "Zhi-Di Yao",
+          "Tian Wang",
+          "Wei-Jia Jia"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 139,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.27875",
+      "identity_tokens": [
+        "id:SemanticScholar:7f652a50b2fdc52927b17eb4dc7e25732c03b9f1",
+        "id:arXiv:2608.27875",
+        "title:hyquant hybridprecision quantization for llm attention",
+        "url:https://arxiv.org/abs/2608.27875"
+      ],
+      "record": {
+        "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+        "source_url": "https://arxiv.org/abs/2608.27875",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization has been widely adopted in LLM training and inference to reduce cost and improve efficiency. However, low-bit quantization of the \\emph{attention} module often introduces large errors at very low bit-widths, causing performance degradation. Existing methods mainly rely on smoothing techniques to handle outliers, while we propose a hybrid quantization design to better balance accuracy and efficiency. Specifically, we propose \\textbf{HyQuant}, an efficient hybrid quantization framework for LLM attention. HyQuant quantizes most attention states into low-bit formats while retaining a small set of vertical-line tokens and local-window states in high precision. These accuracy-critical regions are selected using lightweight vertical-line-aware attention-pattern signals, reducing quantization error with limited overhead. In the Prefill stage, HyQuant uses a hybrid-precision quantized attention operator that preserves vertical-line tokens and a local sliding window in full precision while quantizing the remaining context. In the Decode stage, HyQuant applies the same principle to KV-cache compression and fuses KV dequantization with attention computation to improve memory and hardware efficiency. Across diverse tasks, models, and datasets, HyQuant maintains nearly lossless accuracy with an extremely simple design, demonstrating the efficiency and practical feasibility of hybrid quantization for LLM attention. Code is available at: https://github.com/jerrysfls/HyQuant .",
+        "identifiers": [
+          "SemanticScholar:7f652a50b2fdc52927b17eb4dc7e25732c03b9f1"
+        ],
+        "semantic_scholar_id": "7f652a50b2fdc52927b17eb4dc7e25732c03b9f1",
+        "canonical_id": "arXiv:2608.27875",
+        "arxiv_id": "2608.27875",
+        "authors": [
+          "Jia-Rui Ding",
+          "Bin Xing",
+          "Yu Zhang",
+          "Dian Ding",
+          "Xiao-Dong Yi",
+          "Xian-Bin Ouyang",
+          "Fei-Hui Zhou",
+          "Kunquan Zhang",
+          "Zhengmeng Guo",
+          "Hao Pan",
+          "Guang-Tao Xue",
+          "Yi-Ming Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 63,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18005",
+      "identity_tokens": [
+        "id:SemanticScholar:0be24a69fd3f403b922823de603dbe4ff5f08281",
+        "id:arXiv:2609.18005",
+        "title:a calibrated instrument for measuring how inference optimizations affect output quality",
+        "url:https://arxiv.org/abs/2609.18005"
+      ],
+      "record": {
+        "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+        "source_url": "https://arxiv.org/abs/2609.18005",
+        "year": 2026,
+        "published": "2026-09-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model optimization is an active research area, spanning quantization of model weights, early-exit methods for skipping layers, and speculative decoding. Each track uses its own quality measures, typically an idiosyncratic benchmark score. Few approach the measurement precision required by other scientific disciplines. We propose a rigorous methodology for measuring output quality, suitable for cross-system and cross-technique comparison. We score outputs with an LLM as a judge, but calibrate the judge formally: we compare its scores on two ordinary runs of a model given the same prompts, verifying that it shows no systematic preference between statistically equivalent outputs and measuring its per-sample noise. Each design also includes a'null'condition, provably identical in distribution to the unmodified model, whose measured difference must be zero. With this one instrument we measure several acceleration techniques on the same prompts, so their quality costs can be compared. Perceived quality proves highly dependent on the domain of discourse. A 4-bit model was indistinguishable from its 16-bit original down to our design's +/-0.3-point resolution, in English prose and Chinese alike. At 3-bit precision the same prompts lost 0.5 points in English prose, 0.9 in Chinese, and 1.1 on multi-step math; early exit that cost 0.7 points on prose cost 2.5 on math, cutting correctly solved problems from 19 of 27 to 6. The pattern held for models from Alibaba and from Meta, but not its magnitude: the same quantizer cost Meta's model 1.8 points where it cost Alibaba's 0.7. A model's certainty about a token predicts how likely it is to differ from the full model's choice, but not how much that difference affects judged quality, so acceptance rules relying on certainty cannot distinguish errors that matter from errors that don't.",
+        "identifiers": [
+          "SemanticScholar:0be24a69fd3f403b922823de603dbe4ff5f08281"
+        ],
+        "semantic_scholar_id": "0be24a69fd3f403b922823de603dbe4ff5f08281",
+        "canonical_id": "arXiv:2609.18005",
+        "arxiv_id": "2609.18005",
+        "authors": [
+          "Jerry Kaplan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.19499",
+      "identity_tokens": [
+        "id:SemanticScholar:a429cf6f1f9285849ceea67823d8824fe7661719",
+        "id:arXiv:2609.19499",
+        "title:sample count is not enough candidategeneration strategy shapes the energy and performance of llm testtime scaling",
+        "url:https://arxiv.org/abs/2609.19499"
+      ],
+      "record": {
+        "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+        "source_url": "https://arxiv.org/abs/2609.19499",
+        "year": 2026,
+        "published": "2026-09-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Test-time scaling can improve large language model reasoning by generating and combining multiple candidate responses. In sampling-based methods, the inference budget is often described by the number of generated candidates, N. However, N tells us how many candidates are generated, not how they are executed. The same candidate budget can be produced in one batched generation call or split across several sequential calls with smaller batch sizes. We first study the effect of increasing N on reasoning accuracy using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts. As expected, increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B. However, accuracy alone does not show the systems cost of using a larger candidate budget. We therefore fix N = 8 and compare four generation schedules: 1x8, 2x4, 4x2, and 8x1, where axb denotes a generation calls with b candidates per call. We measure latency, throughput, GPU-hours, and gross GPU-device energy while keeping the total candidate count fixed. On A100 GPUs, eight serial calls use 4.64-4.86x as much gross GPU-device energy and have 5.77-6.12x the P95 latency of one batched call with eight candidates. The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.",
+        "identifiers": [
+          "SemanticScholar:a429cf6f1f9285849ceea67823d8824fe7661719"
+        ],
+        "semantic_scholar_id": "a429cf6f1f9285849ceea67823d8824fe7661719",
+        "canonical_id": "arXiv:2609.19499",
+        "arxiv_id": "2609.19499",
+        "authors": [
+          "Mobina Kashaniyan",
+          "Ali Jannesari"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.10059",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.10059",
+        "id:SemanticScholar:20726d2543f7ca4dcf213a25ee648e9e8e522481",
+        "id:arXiv:2507.10059",
+        "title:gelaco an evolutionary approach to layer compression",
+        "url:https://arxiv.org/abs/2507.10059"
+      ],
+      "record": {
+        "title": "GeLaCo: An Evolutionary Approach to Layer Compression",
+        "source_url": "https://arxiv.org/abs/2507.10059",
+        "year": 2025,
+        "published": "2025-07-14",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models have achieved remarkable performance across a large number of tasks, but face critical deployment and usage barriers due to substantial computational requirements. Model compression methods, which aim to reduce model size while preserving its capacity, are an important means to mitigate these issues. Promising approaches along these lines, such as structured pruning, typically require costly manual hyperparameter exploration or rely on local heuristics that may run the risk of ignoring better solutions. In this work we introduce GeLaCo, an evolutionary approach to LLM compression via layer collapse. Our approach supports an efficient exploration of the compression solution space via population-based search and a novel layer collapse formulation based on parametrized weight merging, with a fitness function based on similarity over residual updates and language modeling KL divergence. GeLaCo also supports both single and multi-objective evolutionary compression search, establishing the first Pareto front estimation along compression and quality axes. We evaluate GeLaCo solutions via both perplexity-based and generative evaluations over foundational and instruction-tuned models, outperforming state-of-the-art alternatives.",
+        "identifiers": [
+          "SemanticScholar:20726d2543f7ca4dcf213a25ee648e9e8e522481"
+        ],
+        "semantic_scholar_id": "20726d2543f7ca4dcf213a25ee648e9e8e522481",
+        "canonical_id": "arXiv:2507.10059",
+        "arxiv_id": "2507.10059",
+        "doi": "10.48550/arXiv.2507.10059",
+        "authors": [
+          "David Ponce",
+          "Thierry Etchegoyhen",
+          "J. del Ser"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 473,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.10553",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.10553",
+        "id:SemanticScholar:98c82adb76c494534c20ba4d8a346bf815886891",
+        "id:arXiv:2410.10553",
+        "title:slanc static layernorm calibration",
+        "url:https://arxiv.org/abs/2410.10553"
+      ],
+      "record": {
+        "title": "SLaNC: Static LayerNorm Calibration",
+        "source_url": "https://arxiv.org/abs/2410.10553",
+        "year": 2024,
+        "published": "2024-10-14",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The ever increasing sizes of Large Language Models (LLMs) beyond hundreds of billions of parameters have generated enormous pressure on the manufacturers of dedicated hardware accelerators and made the innovative design of the latter one of the most rapidly expanding fields of the AI industry. Various approaches have been explored to enable efficient and accurate processing of LLMs on the available accelerators given their computational and storage limitations. Among these, various quantization techniques have become the main focus of the community as a means of reducing the compute, communication and storage requirements. Quantization to lower precision formats naturally poses a number of challenges caused by the limited range of the available value representations. When it comes to processing the popular Transformer models on hardware, one of the main issues becomes calculation of the LayerNorm simply because accumulation of the variance requires a much wider dynamic range than the hardware enables. In this article, we address this matter and propose a computationally-efficient scaling technique that can be easily applied to Transformer models during inference. Our method suggests a straightforward way of scaling the LayerNorm inputs based on the static weights of the immediately preceding linear layers. The scaling factors are computed offline, based solely on the linear layer weights, hence no latency or computational overhead is added during inference. Most importantly, our technique ensures that no numerical issues such as overflow or underflow could happen during the compute. This approach offers smooth, accurate and resource-effective inference across a wide range of hardware architectures. The article provides theoretical justification as well as supporting numerical simulations.",
+        "identifiers": [
+          "SemanticScholar:98c82adb76c494534c20ba4d8a346bf815886891"
+        ],
+        "semantic_scholar_id": "98c82adb76c494534c20ba4d8a346bf815886891",
+        "canonical_id": "arXiv:2410.10553",
+        "arxiv_id": "2410.10553",
+        "doi": "10.48550/arXiv.2410.10553",
+        "authors": [
+          "Mahsa Salmani",
+          "Nikita Trukhanov",
+          "I. Soloveychik"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 746,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ef96e1648d5e1ba766b947adcc3a965db3667564a183528ee6952d94a781aa7d",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

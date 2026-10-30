@@ -1,0 +1,501 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d8312691545baff5-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d8312691545b",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2310.16795",
+    "arXiv:2411.02820",
+    "arXiv:2503.05936",
+    "arXiv:2603.05800",
+    "arXiv:2607.22465",
+    "arXiv:2609.23314",
+    "arXiv:2609.29812",
+    "arXiv:2609.35465"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 3,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 3,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:38.696239+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2310.16795",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2310.16795"
+    },
+    {
+      "requested_id": "arXiv:2411.02820",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2411.02820"
+    },
+    {
+      "requested_id": "arXiv:2503.05936",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.05800",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2603.05800"
+    },
+    {
+      "requested_id": "arXiv:2607.22465",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.23314",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.29812",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.35465",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": null,
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, FlashLoop delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+      "identifiers": [
+        "SemanticScholar:97415bd104fa65efa04311bef0cae046f5d79849"
+      ],
+      "semantic_scholar_id": "97415bd104fa65efa04311bef0cae046f5d79849",
+      "canonical_id": "arXiv:2609.29812",
+      "arxiv_id": "2609.29812",
+      "authors": [
+        "Wan-Qi Yang",
+        "Shi-Wei Liu"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback",
+      "source_url": "https://arxiv.org/abs/2607.22465",
+      "year": 2026,
+      "published": "2026-07-24",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern enterprise agent deployments consist of a heterogeneous pool of large language models (LLMs) having diverse capabilities and cost. Existing model routing strategies optimize the quality-cost trade-off, while providing request-level static decisions. More recent solutions address agentic routing as a task-level selection with a serial verifier based router feedback loop. However, their fixed verifier suitable for homogeneous workloads may not generalize to heterogeneous batches of agentic tasks (example: coding, general conversational). Additionally, due to the verifier placement in the critical path of the loop, serving quality may be affected during multiple concurrent requests routing. To mitigate these issues, we present ORACLE. It is a concurrency-aware online routing mechanism that aligns adaptive routing with adaptive verification for feedback. ORACLE acts as a training-free drop-in'feedback loop'on top of any model-selection policy to first classify the task type and then dynamically assigns a task-appropriate verifier. Further, we develop a delayed feedback strategy for concurrent requests that largely removes verifier latency from the dispatch critical path. We then present a post-routing dispatch scheduler, namely DISC. DISC reserves each task's peak KV footprint at admission and dispatches to an alternate backend when the reward gain from reduced wait exceeds the reward loss from lower accuracy. Extensive evaluation on SWE-bench, tau2-bench, and Terminal-Bench 2.0 shows that ORACLE improves the accuracy-cost frontier by up to 7 percentage points over state-of-the-art routing baselines, while ORACLE with DISC improves program throughput by up to 1.8x. To facilitate reproducibility and support future development, we open-source the code-base of ORACLE at https://github.com/ORACLE-org/ORACLE.",
+      "identifiers": [
+        "SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641"
+      ],
+      "semantic_scholar_id": "a6a3bb7af915f79ce1f38a6215ee7fc6768f6641",
+      "canonical_id": "arXiv:2607.22465",
+      "arxiv_id": "2607.22465",
+      "authors": [
+        "Ritik Raj",
+        "Souvik Kundu",
+        "Dheemanth Joshi",
+        "Tushar Krishna"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 98,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+      "source_url": "https://arxiv.org/abs/2609.23314",
+      "year": 2026,
+      "published": "2026-09-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern LLMs with QK-normalization, gated attention, learned attention sinks, or logit softcapping exhibit weaker persistent attention sinks, on which existing KV cache eviction methods primarily rely. We observe that across these models, weaker sinks co-occur with greater value-vector dispersion relative to key-vector dispersion. Motivated by this value-side dispersion, we present ValueDiff, a value-geometric eviction that ranks tokens by the L2 deviation of their value vectors from the cache mean. The same score arises as the minimal-disturbance eviction under a max-entropy assumption about future attention. We evaluate under fixed cache budgets, with eviction at every block boundary during prefill and at every decoding step during generation. On RULER at a tight 2k token budget, ValueDiff retains 88-99% of dense across seven sink-suppressed models (best on 6 out of 7). On LongBench at the 4k budget, ValueDiff averages 92% retention across sink-suppressed models versus 83% for the strongest prior baseline. On MATH-500, ValueDiff is the strongest non-dense method on every sink-suppressed model tested at the 25% cache budget, outperforming prior methods by up to ~20 points on gated-attention models. Across all three benchmarks, value geometry emerges as the more reliable query-invariant eviction signal for sink-suppressed models.",
+      "identifiers": [
+        "SemanticScholar:7c548d4f33834087665e48a374cbc1707c204b7a"
+      ],
+      "semantic_scholar_id": "7c548d4f33834087665e48a374cbc1707c204b7a",
+      "canonical_id": "arXiv:2609.23314",
+      "arxiv_id": "2609.23314",
+      "authors": [
+        "Junyoung Park",
+        "Jungwook Choi",
+        "Min-Gu Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tetra: Serving Leech-Lattice Quantized LLMs at 2.7 Bits per Parameter",
+      "source_url": "https://arxiv.org/abs/2609.35465",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Leech-lattice quantization gives good quality at two bits per weight, but its codebooks hold more than 10^14 points, too many for a lookup table. Our earlier kernel expanded the codes at load time and read 4.804 bits per weight from GPU memory for 2 bits of code. We present Tetra, a new codebook on the same lattice. A 24-weight block still takes 48 bits, most of which index a 64-state trellis of the Golay code and one shared 16 KiB table. The kernel decodes a block with six table loads and two small lookups inside the matrix-vector product, and reads 2.148 bits per weight. For full models, we retrain one scale per matrix row, store the matrices that lose the most as 4-bit integers, and pay for them with 4-bit embedding tables. Our Qwen3-4B, 8B and 14B files hold 2.73, 2.70 and 2.73 bits per parameter over the whole model. They score 63.37, 69.58 and 75.66 on the full MMLU test set, 4.76, 4.21 and 2.46 points below 4-bit AWQ at 5.3 to 6.0 bits per parameter. They generate 113.8, 95.0 and 57.2 tokens per second in our engine. On GSM8K, through the served kernel, they lose 9.63, 4.62 and 3.26 points to FP16. At 4B our file scores 23.6 points above llama.cpp's IQ2_XXS (2.48 bits per parameter). Every number we measured for a table or figure comes from one NVIDIA L40S GPU. We preregistered the main experiments.",
+      "identifiers": [
+        "SemanticScholar:1e2e13da80c308a90314b9da8be797ba6ed6653f"
+      ],
+      "semantic_scholar_id": "1e2e13da80c308a90314b9da8be797ba6ed6653f",
+      "canonical_id": "arXiv:2609.35465",
+      "arxiv_id": "2609.35465",
+      "authors": [
+        "Pier-Jean Malandrino"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CASP: Compression of Large Multimodal Models Based on Attention Sparsity",
+      "source_url": "https://arxiv.org/abs/2503.05936",
+      "year": 2025,
+      "published": "2025-03-07",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we propose an extreme compression technique for Large Multimodal Models (LMMs). While previous studies have explored quantization as an efficient post-training compression method for Large Language Models (LLMs), low-bit compression for multimodal models remains under-explored. The redundant nature of inputs in multimodal models results in a highly sparse attention matrix. We theoretically and experimentally demonstrate that the attention matrix’s sparsity bounds the compression error of the Query and Key weight matrices. Based on this, we introduce CASP, a model compression technique for LMMs. Our approach performs a data-aware low-rank decomposition on the Query and Key weight matrix, followed by quantization across all layers based on an optimal bit allocation process. CASP is compatible with any quantization technique and enhances state-of-the-art 2-bit quantization methods (AQLM and QuIP#) by an average of 21% on image- and video-language benchmarks. The code is available here1.",
+      "identifiers": [
+        "SemanticScholar:0b6ede61117660bfdb8609da8e64bebd8ad159f5"
+      ],
+      "semantic_scholar_id": "0b6ede61117660bfdb8609da8e64bebd8ad159f5",
+      "canonical_id": "arXiv:2503.05936",
+      "arxiv_id": "2503.05936",
+      "doi": "10.1109/CVPR52734.2025.00875",
+      "authors": [
+        "Mohsen Gholami",
+        "Mohammad Akbari",
+        "K. Cannons",
+        "Yong Zhang"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 602,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.29812",
+      "identity_tokens": [
+        "id:SemanticScholar:97415bd104fa65efa04311bef0cae046f5d79849",
+        "id:arXiv:2609.29812",
+        "title:flashloop fast and memoryefficient looped transformers via lazy updates",
+        "url:https://arxiv.org/abs/2609.29812"
+      ],
+      "record": {
+        "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+        "source_url": "https://arxiv.org/abs/2609.29812",
+        "year": 2026,
+        "published": "2026-09-24",
+        "venue": null,
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, FlashLoop delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+        "identifiers": [
+          "SemanticScholar:97415bd104fa65efa04311bef0cae046f5d79849"
+        ],
+        "semantic_scholar_id": "97415bd104fa65efa04311bef0cae046f5d79849",
+        "canonical_id": "arXiv:2609.29812",
+        "arxiv_id": "2609.29812",
+        "authors": [
+          "Wan-Qi Yang",
+          "Shi-Wei Liu"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.22465",
+      "identity_tokens": [
+        "id:SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641",
+        "id:arXiv:2607.22465",
+        "title:oracle agentic ai orchestrator routing via adaptive verifier calibration feedback",
+        "url:https://arxiv.org/abs/2607.22465"
+      ],
+      "record": {
+        "title": "ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback",
+        "source_url": "https://arxiv.org/abs/2607.22465",
+        "year": 2026,
+        "published": "2026-07-24",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern enterprise agent deployments consist of a heterogeneous pool of large language models (LLMs) having diverse capabilities and cost. Existing model routing strategies optimize the quality-cost trade-off, while providing request-level static decisions. More recent solutions address agentic routing as a task-level selection with a serial verifier based router feedback loop. However, their fixed verifier suitable for homogeneous workloads may not generalize to heterogeneous batches of agentic tasks (example: coding, general conversational). Additionally, due to the verifier placement in the critical path of the loop, serving quality may be affected during multiple concurrent requests routing. To mitigate these issues, we present ORACLE. It is a concurrency-aware online routing mechanism that aligns adaptive routing with adaptive verification for feedback. ORACLE acts as a training-free drop-in'feedback loop'on top of any model-selection policy to first classify the task type and then dynamically assigns a task-appropriate verifier. Further, we develop a delayed feedback strategy for concurrent requests that largely removes verifier latency from the dispatch critical path. We then present a post-routing dispatch scheduler, namely DISC. DISC reserves each task's peak KV footprint at admission and dispatches to an alternate backend when the reward gain from reduced wait exceeds the reward loss from lower accuracy. Extensive evaluation on SWE-bench, tau2-bench, and Terminal-Bench 2.0 shows that ORACLE improves the accuracy-cost frontier by up to 7 percentage points over state-of-the-art routing baselines, while ORACLE with DISC improves program throughput by up to 1.8x. To facilitate reproducibility and support future development, we open-source the code-base of ORACLE at https://github.com/ORACLE-org/ORACLE.",
+        "identifiers": [
+          "SemanticScholar:a6a3bb7af915f79ce1f38a6215ee7fc6768f6641"
+        ],
+        "semantic_scholar_id": "a6a3bb7af915f79ce1f38a6215ee7fc6768f6641",
+        "canonical_id": "arXiv:2607.22465",
+        "arxiv_id": "2607.22465",
+        "authors": [
+          "Ritik Raj",
+          "Souvik Kundu",
+          "Dheemanth Joshi",
+          "Tushar Krishna"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 98,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.23314",
+      "identity_tokens": [
+        "id:SemanticScholar:7c548d4f33834087665e48a374cbc1707c204b7a",
+        "id:arXiv:2609.23314",
+        "title:valuediff valuegeometric kv cache eviction for sinksuppressed llms",
+        "url:https://arxiv.org/abs/2609.23314"
+      ],
+      "record": {
+        "title": "ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs",
+        "source_url": "https://arxiv.org/abs/2609.23314",
+        "year": 2026,
+        "published": "2026-09-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern LLMs with QK-normalization, gated attention, learned attention sinks, or logit softcapping exhibit weaker persistent attention sinks, on which existing KV cache eviction methods primarily rely. We observe that across these models, weaker sinks co-occur with greater value-vector dispersion relative to key-vector dispersion. Motivated by this value-side dispersion, we present ValueDiff, a value-geometric eviction that ranks tokens by the L2 deviation of their value vectors from the cache mean. The same score arises as the minimal-disturbance eviction under a max-entropy assumption about future attention. We evaluate under fixed cache budgets, with eviction at every block boundary during prefill and at every decoding step during generation. On RULER at a tight 2k token budget, ValueDiff retains 88-99% of dense across seven sink-suppressed models (best on 6 out of 7). On LongBench at the 4k budget, ValueDiff averages 92% retention across sink-suppressed models versus 83% for the strongest prior baseline. On MATH-500, ValueDiff is the strongest non-dense method on every sink-suppressed model tested at the 25% cache budget, outperforming prior methods by up to ~20 points on gated-attention models. Across all three benchmarks, value geometry emerges as the more reliable query-invariant eviction signal for sink-suppressed models.",
+        "identifiers": [
+          "SemanticScholar:7c548d4f33834087665e48a374cbc1707c204b7a"
+        ],
+        "semantic_scholar_id": "7c548d4f33834087665e48a374cbc1707c204b7a",
+        "canonical_id": "arXiv:2609.23314",
+        "arxiv_id": "2609.23314",
+        "authors": [
+          "Junyoung Park",
+          "Jungwook Choi",
+          "Min-Gu Lee"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 40,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.35465",
+      "identity_tokens": [
+        "id:SemanticScholar:1e2e13da80c308a90314b9da8be797ba6ed6653f",
+        "id:arXiv:2609.35465",
+        "title:tetra serving leechlattice quantized llms at 27 bits per parameter",
+        "url:https://arxiv.org/abs/2609.35465"
+      ],
+      "record": {
+        "title": "Tetra: Serving Leech-Lattice Quantized LLMs at 2.7 Bits per Parameter",
+        "source_url": "https://arxiv.org/abs/2609.35465",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Leech-lattice quantization gives good quality at two bits per weight, but its codebooks hold more than 10^14 points, too many for a lookup table. Our earlier kernel expanded the codes at load time and read 4.804 bits per weight from GPU memory for 2 bits of code. We present Tetra, a new codebook on the same lattice. A 24-weight block still takes 48 bits, most of which index a 64-state trellis of the Golay code and one shared 16 KiB table. The kernel decodes a block with six table loads and two small lookups inside the matrix-vector product, and reads 2.148 bits per weight. For full models, we retrain one scale per matrix row, store the matrices that lose the most as 4-bit integers, and pay for them with 4-bit embedding tables. Our Qwen3-4B, 8B and 14B files hold 2.73, 2.70 and 2.73 bits per parameter over the whole model. They score 63.37, 69.58 and 75.66 on the full MMLU test set, 4.76, 4.21 and 2.46 points below 4-bit AWQ at 5.3 to 6.0 bits per parameter. They generate 113.8, 95.0 and 57.2 tokens per second in our engine. On GSM8K, through the served kernel, they lose 9.63, 4.62 and 3.26 points to FP16. At 4B our file scores 23.6 points above llama.cpp's IQ2_XXS (2.48 bits per parameter). Every number we measured for a table or figure comes from one NVIDIA L40S GPU. We preregistered the main experiments.",
+        "identifiers": [
+          "SemanticScholar:1e2e13da80c308a90314b9da8be797ba6ed6653f"
+        ],
+        "semantic_scholar_id": "1e2e13da80c308a90314b9da8be797ba6ed6653f",
+        "canonical_id": "arXiv:2609.35465",
+        "arxiv_id": "2609.35465",
+        "authors": [
+          "Pier-Jean Malandrino"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.05936",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvpr52734.2025.00875",
+        "id:SemanticScholar:0b6ede61117660bfdb8609da8e64bebd8ad159f5",
+        "id:arXiv:2503.05936",
+        "title:casp compression of large multimodal models based on attention sparsity",
+        "url:https://arxiv.org/abs/2503.05936"
+      ],
+      "record": {
+        "title": "CASP: Compression of Large Multimodal Models Based on Attention Sparsity",
+        "source_url": "https://arxiv.org/abs/2503.05936",
+        "year": 2025,
+        "published": "2025-03-07",
+        "venue": "Computer Vision and Pattern Recognition",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this work, we propose an extreme compression technique for Large Multimodal Models (LMMs). While previous studies have explored quantization as an efficient post-training compression method for Large Language Models (LLMs), low-bit compression for multimodal models remains under-explored. The redundant nature of inputs in multimodal models results in a highly sparse attention matrix. We theoretically and experimentally demonstrate that the attention matrix’s sparsity bounds the compression error of the Query and Key weight matrices. Based on this, we introduce CASP, a model compression technique for LMMs. Our approach performs a data-aware low-rank decomposition on the Query and Key weight matrix, followed by quantization across all layers based on an optimal bit allocation process. CASP is compatible with any quantization technique and enhances state-of-the-art 2-bit quantization methods (AQLM and QuIP#) by an average of 21% on image- and video-language benchmarks. The code is available here1.",
+        "identifiers": [
+          "SemanticScholar:0b6ede61117660bfdb8609da8e64bebd8ad159f5"
+        ],
+        "semantic_scholar_id": "0b6ede61117660bfdb8609da8e64bebd8ad159f5",
+        "canonical_id": "arXiv:2503.05936",
+        "arxiv_id": "2503.05936",
+        "doi": "10.1109/CVPR52734.2025.00875",
+        "authors": [
+          "Mohsen Gholami",
+          "Mohammad Akbari",
+          "K. Cannons",
+          "Yong Zhang"
+        ],
+        "priority": 7,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 7,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 602,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:cc061cc27dcec35565c4789598515505d8f27a4f5a49d988b7bc322b10f38f9a",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

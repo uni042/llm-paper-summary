@@ -1,0 +1,883 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-9a042a25c88d3a87-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-9a042a25c88d",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.10912",
+    "arXiv:2501.05408",
+    "arXiv:2503.22196",
+    "arXiv:2506.23431",
+    "arXiv:2507.00797",
+    "arXiv:2601.01322",
+    "arXiv:2601.17702",
+    "arXiv:2603.25340",
+    "arXiv:2607.02391"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:38.030718+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.10912",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2501.05408",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.22196",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.23431",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.00797",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.01322",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.17702",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.25340",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.02391",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Large Language Model as Token Compressor and Decompressor",
+      "source_url": "https://arxiv.org/abs/2603.25340",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we study whether an off-the-shelf LLM can be adapted into a discrete, variable-length token compressor and decompressor for long-context processing. To this end, we design a self-expressive autoencoding framework that fine-tunes a pretrained LLM with lightweight LoRA adapters to map long texts into compact sequences of learned latent codes, termed Z-tokens, and to decode them back into natural language or task outputs. The resulting representation is content-adaptive: less predictable or information-dense segments can receive more Z-tokens, while redundant regions can be represented more compactly through a budget-aware length regularizer. Our method is evaluated on long-context datasets such as Wikipedia, CNN/DailyMail, HotpotQA, and QuALITY, showing that it preserves reconstruction quality and downstream performance while reducing effective context length, generation-stage memory usage, and end-to-end latency. This simple design supports both direct decoding from compressed contexts and autoregressive generation in the Z-token space, providing a practical interface for efficient long-context inference.",
+      "identifiers": [
+        "SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd"
+      ],
+      "semantic_scholar_id": "38a49095776064e6b8f8efa7f88594f65926bfdd",
+      "canonical_id": "arXiv:2603.25340",
+      "arxiv_id": "2603.25340",
+      "doi": "10.48550/arXiv.2603.25340",
+      "authors": [
+        "Wen-Bing Li",
+        "Zi-Kai Song",
+        "Jie-Lei Zhang",
+        "Tian Zhao",
+        "Jun-Kai Lin",
+        "Yiran Wang",
+        "Wei Yang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs",
+      "source_url": "https://arxiv.org/abs/2607.02391",
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference workloads are a rapidly growing contributor to data center energy consumption. Optimizing these deployments requires matching specific LLMs to the most efficient GPUs, but operators currently lack the tools to do so without exhaustively profiling each combination. While some predictive models exist, they still require profiling data and struggle to generalize to hardware unseen during training. To address this, we introduce \\textit{WattGPU}, featuring two predictive models for mean GPU power draw and Inter-Token Latency (ITL). Our approach leverages only publicly available LLM metadata and GPU specifications, eliminating the need for hardware access or profiling while enabling generalization to unseen NVIDIA server-grade GPUs and LLMs. We evaluate our models using rigorous leave-one-GPU-out and leave-one-LLM-out cross-validation on a dataset of 42 open-source LLMs (0.1B--27B parameters) and 8 GPUs under both offline and server scenarios. The mean power draw model achieves a median absolute percentage error of $\\leq3.4\\%$ for offline and $\\leq13.5\\%$ for server scenarios on unseen GPUs, while the latency model achieves $\\leq8.5\\%$ in server mode, both maintaining strong GPU ranking correlations for server scenarios (Kendall $\\tau\\geq0.76$). Compared to standard physically grounded baselines -- Load-Scaled Thermal Design Power (TDP) for power draw and roofline for latency -- our models reduce median absolute percentage error by approximately 4$\\times$ on unseen LLM-GPU combinations for server scenarios or approximately 2$\\times$ for completely unseen GPUs. WattGPU's data and code are publicly available at https://github.com/maufadel/wattgpu.",
+      "identifiers": [
+        "SemanticScholar:8c84192895af6dd9a94a129560860d034a39dd19"
+      ],
+      "semantic_scholar_id": "8c84192895af6dd9a94a129560860d034a39dd19",
+      "canonical_id": "arXiv:2607.02391",
+      "arxiv_id": "2607.02391",
+      "doi": "10.48550/arXiv.2607.02391",
+      "authors": [
+        "Mauricio Fadel Argerich",
+        "Jonathan Furst",
+        "M. Patiño-Martínez"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S3-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2601.17702",
+      "year": 2026,
+      "published": "2026-01-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly applied to multi-document and long-form inputs, yet long-context inference remains memory- and noise-inefficient. Key-value (KV) caching scales linearly with context length, while external retrieval methods often return lexically similar but causally irrelevant passages. We present S3-Attention, a memory-first inference-time framework that treats long-context processing as attention-aligned endogenous retrieval. S3-Attention decodes transient key and query projections into top-k sparse feature identifiers using lightweight sparse autoencoders, and constructs a CPU-based inverted index mapping features to token positions or spans during a single streaming scan. This design allows the KV cache to be discarded entirely and bounds GPU memory usage by the scan chunk size. At generation time, feature co-activation is used to retrieve compact evidence spans, optionally fused with BM25 for exact lexical matching. Under a unified LongBench evaluation protocol with fixed prompting, decoding, and matched token budgets, S3-Hybrid closely matches full-context inference across multiple model families and improves robustness in several information-dense settings. We also report an engineering limitation of the current prototype, which incurs higher wall-clock latency than optimized full-KV baselines, motivating future kernel-level optimization.",
+      "identifiers": [
+        "SemanticScholar:37daca792f2c2c6e335d92dfe3fc4d333d4bb95c"
+      ],
+      "semantic_scholar_id": "37daca792f2c2c6e335d92dfe3fc4d333d4bb95c",
+      "canonical_id": "arXiv:2601.17702",
+      "arxiv_id": "2601.17702",
+      "doi": "10.48550/arXiv.2601.17702",
+      "authors": [
+        "Qing-Sen Ma",
+        "Dian-Yun Wang",
+        "Yaoye Wang",
+        "Lechen Ning",
+        "Sujie Zhu",
+        "Xiaohan Zhang",
+        "Jiaming Lyu",
+        "Lin-Hao Ren",
+        "Zhenbo Xu",
+        "Zhao-Feng He"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.10912",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 52,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work on pruning large language models (LLMs) has shown that one can eliminate a large number of parameters without compromising performance, making pruning a promising strategy to reduce LLM model size. Existing LLM pruning strategies typically assign uniform pruning ratios across layers, limiting overall pruning ability; and recent work on layerwise pruning of LLMs is often based on heuristics that can easily lead to suboptimal performance. In this paper, we leverage Heavy-Tailed Self-Regularization (HT-SR) Theory, in particular the shape of empirical spectral densities (ESDs) of weight matrices, to design improved layerwise pruning ratios for LLMs. Our analysis reveals a wide variability in how well-trained, and thus relatedly how prunable, different layers of an LLM are. Based on this, we propose AlphaPruning, which uses shape metrics to allocate layerwise sparsity ratios in a more theoretically principled manner. AlphaPruning can be used in conjunction with multiple existing LLM pruning methods. Our empirical results show that AlphaPruning prunes LLaMA-7B to 80% sparsity while maintaining reasonable perplexity, marking a first in the literature on LLMs. We have open-sourced our code at https://github.com/haiquanlu/AlphaPruning.",
+      "identifiers": [
+        "SemanticScholar:46daae2a932aa02e307fd3317e9f3719c56d6010"
+      ],
+      "semantic_scholar_id": "46daae2a932aa02e307fd3317e9f3719c56d6010",
+      "canonical_id": "arXiv:2410.10912",
+      "arxiv_id": "2410.10912",
+      "doi": "10.48550/arXiv.2410.10912",
+      "authors": [
+        "Haiquan Lu",
+        "Ye-Fan Zhou",
+        "Shi-Wei Liu",
+        "Zhang-Yang Wang",
+        "Michael W. Mahoney",
+        "Yaoqing Yang"
+      ],
+      "priority": 62,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 52,
+        "citation_count": 52,
+        "total": 62,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 746,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+      "source_url": "https://arxiv.org/abs/2503.22196",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) encounter challenges in processing long sequences on edge devices due to the quadratic complexity of attention mechanisms and growing memory demands from Key-Value (KV) cache. Existing KV cache optimizations struggle with irreversible token eviction in long-output tasks, while alternative sequence modeling architectures prove costly to adopt within established Transformer infrastructure. We present EdgeInfinite, a memory-efficient solution for infinite contexts that integrates compressed memory into Transformer-based LLMs through a trainable memory-gating module. This approach maintains full compatibility with standard Transformer architectures, requiring fine-tuning only a small part of parameters, and enables selective activation of the memory-gating module for long and short context task routing. The experimental result shows that EdgeInfinite achieves comparable performance to baseline Transformer-based LLM on long context benchmarks while optimizing memory consumption and time to first token.",
+      "identifiers": [
+        "SemanticScholar:300207a7cc2644859813dbc477bec1e90b90a41a"
+      ],
+      "semantic_scholar_id": "300207a7cc2644859813dbc477bec1e90b90a41a",
+      "canonical_id": "arXiv:2503.22196",
+      "arxiv_id": "2503.22196",
+      "doi": "10.48550/arXiv.2503.22196",
+      "authors": [
+        "Jiyu Chen",
+        "Shuang Peng",
+        "Daxiong Luo",
+        "Fan Yang",
+        "Renshou Wu",
+        "Fangyuan Li",
+        "Xiao-Xin Chen"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 581,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs",
+      "source_url": "https://arxiv.org/abs/2501.05408",
+      "year": 2025,
+      "published": "2025-01-09",
+      "venue": "Symposium on Operating Systems Principles",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deep learning (DL) algorithms are often defined in terms of temporal relationships: a tensor at one timestep may depend on tensors from earlier or later timesteps. Such dynamic dependencies (and corresponding dynamic tensor shapes) are difficult to express and optimize: while eager DL systems support such dynamism, they cannot apply compiler-based optimizations; graph-based systems require static tensor shapes, which forces users to pad tensors or break-up programs into multiple static graphs. We describe Tempo, a new DL system that combines the dynamism of eager execution with the whole-program optimizations of graph-based compilation. Tempo achieves this through a declarative programming model with recurrent tensors, which include explicit temporal dimensions. Temporal dimensions can be indexed using symbolic expressions to express dynamic dependencies on past and future tensors. Based on this, Tempo constructs a symbolic dependence graph, which concisely encodes dynamic dependencies between operators, and applies whole-program optimizations, such as algebraic simplifications, vectorization, tiling, and fusion. By tiling dynamic dependencies into static-size blocks, Tempo can also reuse existing static code-generators. It then uses a polyhedral model to find a feasible execution schedule, which includes memory management operations. We show that Tempo achieves a 7× speedup over JAX for Llama-3.2-3B decoding; for reinforcement learning algorithms, Tempo achieves a 54× speedup, with 16× lower peak memory usage.",
+      "identifiers": [
+        "SemanticScholar:322b3d01a10bc4d649d4f415415328b9612ca6ce"
+      ],
+      "semantic_scholar_id": "322b3d01a10bc4d649d4f415415328b9612ca6ce",
+      "canonical_id": "arXiv:2501.05408",
+      "arxiv_id": "2501.05408",
+      "doi": "10.1145/3731569.3764840",
+      "authors": [
+        "Pedro F. Silvestre",
+        "Peter R. Pietzuch"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 659,
+        "matched_prestigious_venue": "Symposium on Operating Systems Principles"
+      }
+    },
+    {
+      "title": "LinMU: Multimodal Understanding Made Linear",
+      "source_url": "https://arxiv.org/abs/2601.01322",
+      "year": 2026,
+      "published": "2026-01-04",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern Vision-Language Models (VLMs) achieve impressive performance but are limited by the quadratic complexity of self-attention, which prevents their deployment on edge devices and makes their understanding of high-resolution images and long-context videos prohibitively expensive. To address this challenge, we introduce LinMU (Linear-complexity Multimodal Understanding), a VLM design that achieves linear complexity for the language model decoder without using any quadratic-complexity modules while maintaining the performance of global-attention-based VLMs. LinMU replaces every self-attention layer in the language model decoder with an M-MATE block: a dual-branch module that combines a bidirectional state-space model for global context (Flex-MA branch) with localized Swin-style window attention (Local-Swin branch) for adjacent correlations. To transform a pre-trained VLM into the LinMU architecture, we propose a three-stage distillation framework that (i) initializes both branches with self-attention weights and trains the Flex-MA branch alone, (ii) unfreezes the Local-Swin branch and fine-tunes it jointly with the Flex-MA branch, and (iii) unfreezes the remaining blocks and fine-tunes them using LoRA adapters, while regressing on hidden states and token-level logits of the frozen VLM teacher. On MMMU, TextVQA, LongVideoBench, Video-MME, and other benchmarks, LinMU matches the performance of teacher models, yet reduces Time-To-First-Token (TTFT) by up to 2.7$\\times$ and improves token throughput by up to 9.0$\\times$ on minute-length videos. Ablations confirm the importance of each distillation stage and the necessity of the two branches of the M-MATE block. The proposed framework demonstrates that state-of-the-art multimodal reasoning can be achieved without quadratic attention, thus opening up avenues for long-context VLMs that can deal with high-resolution images and long videos.",
+      "identifiers": [
+        "SemanticScholar:9ca056fff88e94606cd613be98704079b852c6d7"
+      ],
+      "semantic_scholar_id": "9ca056fff88e94606cd613be98704079b852c6d7",
+      "canonical_id": "arXiv:2601.01322",
+      "arxiv_id": "2601.01322",
+      "doi": "10.48550/arXiv.2601.01322",
+      "authors": [
+        "Hongjie Wang",
+        "N. Jha"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 299,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) excel in natural language processing tasks but pose significant computational and memory challenges for edge deployment due to their intensive resource demands. This work addresses the efficiency of LLM inference by algorithm-hardwaredataflow tri-optimizations. We propose a novel voting-based KV cache eviction algorithm, balancing hardware efficiency and algorithm accuracy by adaptively identifying unimportant kv vectors. From a dataflow perspective, we introduce a flexible-product dataflow and a runtime reconfigurable PE array for matrix-vector multiplication. The proposed approach effectively handles the diverse dimensional requirements and solves the challenges of incrementally varying sequence lengths. Additionally, an element-serial scheduling scheme is proposed for nonlinear operations, such as softmax and layer normalization (layernorm). Results demonstrate a substantial reduction in latency, accompanied by a significant decrease in hardware complexity, from $O(N)$ to $O(1)$. The proposed solution is realized in a custom-designed accelerator, VEDA, which outperforms existing hardware platforms. This research represents a significant advancement in LLM inference on resource-constrained edge devices, facilitating real-time processing, enhancing data privacy, and enabling model customization.",
+      "identifiers": [
+        "SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3"
+      ],
+      "semantic_scholar_id": "db1626ebc3be3839b33a174392ce4bdd044edfe3",
+      "canonical_id": "arXiv:2507.00797",
+      "arxiv_id": "2507.00797",
+      "doi": "10.1109/DAC63849.2025.11132861",
+      "authors": [
+        "Zhi-Can Wang",
+        "Hong-Xiang Fan",
+        "Haroon Waris",
+        "Gang Wang",
+        "Zhenyu Li",
+        "Jian-Fei Jiang",
+        "Ya-Nan Sun",
+        "Guang-Hui He"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 495,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+      "identifiers": [
+        "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+      ],
+      "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+      "canonical_id": "arXiv:2506.23431",
+      "arxiv_id": "2506.23431",
+      "doi": "10.48550/arXiv.2506.23431",
+      "authors": [
+        "Zixian Huang",
+        "Chenxu Niu",
+        "Yu Gu",
+        "Gengyang Xiao",
+        "Xin-Wei Huang",
+        "Gong Cheng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.25340",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25340",
+        "id:SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd",
+        "id:arXiv:2603.25340",
+        "title:large language model as token compressor and decompressor",
+        "url:https://arxiv.org/abs/2603.25340"
+      ],
+      "record": {
+        "title": "Large Language Model as Token Compressor and Decompressor",
+        "source_url": "https://arxiv.org/abs/2603.25340",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "In this paper, we study whether an off-the-shelf LLM can be adapted into a discrete, variable-length token compressor and decompressor for long-context processing. To this end, we design a self-expressive autoencoding framework that fine-tunes a pretrained LLM with lightweight LoRA adapters to map long texts into compact sequences of learned latent codes, termed Z-tokens, and to decode them back into natural language or task outputs. The resulting representation is content-adaptive: less predictable or information-dense segments can receive more Z-tokens, while redundant regions can be represented more compactly through a budget-aware length regularizer. Our method is evaluated on long-context datasets such as Wikipedia, CNN/DailyMail, HotpotQA, and QuALITY, showing that it preserves reconstruction quality and downstream performance while reducing effective context length, generation-stage memory usage, and end-to-end latency. This simple design supports both direct decoding from compressed contexts and autoregressive generation in the Z-token space, providing a practical interface for efficient long-context inference.",
+        "identifiers": [
+          "SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd"
+        ],
+        "semantic_scholar_id": "38a49095776064e6b8f8efa7f88594f65926bfdd",
+        "canonical_id": "arXiv:2603.25340",
+        "arxiv_id": "2603.25340",
+        "doi": "10.48550/arXiv.2603.25340",
+        "authors": [
+          "Wen-Bing Li",
+          "Zi-Kai Song",
+          "Jie-Lei Zhang",
+          "Tian Zhao",
+          "Jun-Kai Lin",
+          "Yiran Wang",
+          "Wei Yang"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.02391",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.02391",
+        "id:SemanticScholar:8c84192895af6dd9a94a129560860d034a39dd19",
+        "id:arXiv:2607.02391",
+        "title:wattgpu predicting inference power and latency on unseen gpus and llms",
+        "url:https://arxiv.org/abs/2607.02391"
+      ],
+      "record": {
+        "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs",
+        "source_url": "https://arxiv.org/abs/2607.02391",
+        "year": 2026,
+        "published": "2026-07-02",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) inference workloads are a rapidly growing contributor to data center energy consumption. Optimizing these deployments requires matching specific LLMs to the most efficient GPUs, but operators currently lack the tools to do so without exhaustively profiling each combination. While some predictive models exist, they still require profiling data and struggle to generalize to hardware unseen during training. To address this, we introduce \\textit{WattGPU}, featuring two predictive models for mean GPU power draw and Inter-Token Latency (ITL). Our approach leverages only publicly available LLM metadata and GPU specifications, eliminating the need for hardware access or profiling while enabling generalization to unseen NVIDIA server-grade GPUs and LLMs. We evaluate our models using rigorous leave-one-GPU-out and leave-one-LLM-out cross-validation on a dataset of 42 open-source LLMs (0.1B--27B parameters) and 8 GPUs under both offline and server scenarios. The mean power draw model achieves a median absolute percentage error of $\\leq3.4\\%$ for offline and $\\leq13.5\\%$ for server scenarios on unseen GPUs, while the latency model achieves $\\leq8.5\\%$ in server mode, both maintaining strong GPU ranking correlations for server scenarios (Kendall $\\tau\\geq0.76$). Compared to standard physically grounded baselines -- Load-Scaled Thermal Design Power (TDP) for power draw and roofline for latency -- our models reduce median absolute percentage error by approximately 4$\\times$ on unseen LLM-GPU combinations for server scenarios or approximately 2$\\times$ for completely unseen GPUs. WattGPU's data and code are publicly available at https://github.com/maufadel/wattgpu.",
+        "identifiers": [
+          "SemanticScholar:8c84192895af6dd9a94a129560860d034a39dd19"
+        ],
+        "semantic_scholar_id": "8c84192895af6dd9a94a129560860d034a39dd19",
+        "canonical_id": "arXiv:2607.02391",
+        "arxiv_id": "2607.02391",
+        "doi": "10.48550/arXiv.2607.02391",
+        "authors": [
+          "Mauricio Fadel Argerich",
+          "Jonathan Furst",
+          "M. Patiño-Martínez"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 120,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.17702",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.17702",
+        "id:SemanticScholar:37daca792f2c2c6e335d92dfe3fc4d333d4bb95c",
+        "id:arXiv:2601.17702",
+        "title:s3attentionattentionaligned endogenous retrieval for memorybounded longcontext inference",
+        "url:https://arxiv.org/abs/2601.17702"
+      ],
+      "record": {
+        "title": "S3-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference",
+        "source_url": "https://arxiv.org/abs/2601.17702",
+        "year": 2026,
+        "published": "2026-01-25",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models are increasingly applied to multi-document and long-form inputs, yet long-context inference remains memory- and noise-inefficient. Key-value (KV) caching scales linearly with context length, while external retrieval methods often return lexically similar but causally irrelevant passages. We present S3-Attention, a memory-first inference-time framework that treats long-context processing as attention-aligned endogenous retrieval. S3-Attention decodes transient key and query projections into top-k sparse feature identifiers using lightweight sparse autoencoders, and constructs a CPU-based inverted index mapping features to token positions or spans during a single streaming scan. This design allows the KV cache to be discarded entirely and bounds GPU memory usage by the scan chunk size. At generation time, feature co-activation is used to retrieve compact evidence spans, optionally fused with BM25 for exact lexical matching. Under a unified LongBench evaluation protocol with fixed prompting, decoding, and matched token budgets, S3-Hybrid closely matches full-context inference across multiple model families and improves robustness in several information-dense settings. We also report an engineering limitation of the current prototype, which incurs higher wall-clock latency than optimized full-KV baselines, motivating future kernel-level optimization.",
+        "identifiers": [
+          "SemanticScholar:37daca792f2c2c6e335d92dfe3fc4d333d4bb95c"
+        ],
+        "semantic_scholar_id": "37daca792f2c2c6e335d92dfe3fc4d333d4bb95c",
+        "canonical_id": "arXiv:2601.17702",
+        "arxiv_id": "2601.17702",
+        "doi": "10.48550/arXiv.2601.17702",
+        "authors": [
+          "Qing-Sen Ma",
+          "Dian-Yun Wang",
+          "Yaoye Wang",
+          "Lechen Ning",
+          "Sujie Zhu",
+          "Xiaohan Zhang",
+          "Jiaming Lyu",
+          "Lin-Hao Ren",
+          "Zhenbo Xu",
+          "Zhao-Feng He"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 278,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.10912",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.10912",
+        "id:SemanticScholar:46daae2a932aa02e307fd3317e9f3719c56d6010",
+        "id:arXiv:2410.10912",
+        "title:alphapruning using heavytailed self regularization theory for improved layerwise pruning of large language models",
+        "url:https://arxiv.org/abs/2410.10912"
+      ],
+      "record": {
+        "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+        "source_url": "https://arxiv.org/abs/2410.10912",
+        "year": 2024,
+        "published": "2024-10-14",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 52,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent work on pruning large language models (LLMs) has shown that one can eliminate a large number of parameters without compromising performance, making pruning a promising strategy to reduce LLM model size. Existing LLM pruning strategies typically assign uniform pruning ratios across layers, limiting overall pruning ability; and recent work on layerwise pruning of LLMs is often based on heuristics that can easily lead to suboptimal performance. In this paper, we leverage Heavy-Tailed Self-Regularization (HT-SR) Theory, in particular the shape of empirical spectral densities (ESDs) of weight matrices, to design improved layerwise pruning ratios for LLMs. Our analysis reveals a wide variability in how well-trained, and thus relatedly how prunable, different layers of an LLM are. Based on this, we propose AlphaPruning, which uses shape metrics to allocate layerwise sparsity ratios in a more theoretically principled manner. AlphaPruning can be used in conjunction with multiple existing LLM pruning methods. Our empirical results show that AlphaPruning prunes LLaMA-7B to 80% sparsity while maintaining reasonable perplexity, marking a first in the literature on LLMs. We have open-sourced our code at https://github.com/haiquanlu/AlphaPruning.",
+        "identifiers": [
+          "SemanticScholar:46daae2a932aa02e307fd3317e9f3719c56d6010"
+        ],
+        "semantic_scholar_id": "46daae2a932aa02e307fd3317e9f3719c56d6010",
+        "canonical_id": "arXiv:2410.10912",
+        "arxiv_id": "2410.10912",
+        "doi": "10.48550/arXiv.2410.10912",
+        "authors": [
+          "Haiquan Lu",
+          "Ye-Fan Zhou",
+          "Shi-Wei Liu",
+          "Zhang-Yang Wang",
+          "Michael W. Mahoney",
+          "Yaoqing Yang"
+        ],
+        "priority": 62,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 52,
+          "citation_count": 52,
+          "total": 62,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 746,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.22196",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.22196",
+        "id:SemanticScholar:300207a7cc2644859813dbc477bec1e90b90a41a",
+        "id:arXiv:2503.22196",
+        "title:edgeinfinite a memoryefficient infinitecontext transformer for edge devices",
+        "url:https://arxiv.org/abs/2503.22196"
+      ],
+      "record": {
+        "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+        "source_url": "https://arxiv.org/abs/2503.22196",
+        "year": 2025,
+        "published": "2025-03-28",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 7,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) encounter challenges in processing long sequences on edge devices due to the quadratic complexity of attention mechanisms and growing memory demands from Key-Value (KV) cache. Existing KV cache optimizations struggle with irreversible token eviction in long-output tasks, while alternative sequence modeling architectures prove costly to adopt within established Transformer infrastructure. We present EdgeInfinite, a memory-efficient solution for infinite contexts that integrates compressed memory into Transformer-based LLMs through a trainable memory-gating module. This approach maintains full compatibility with standard Transformer architectures, requiring fine-tuning only a small part of parameters, and enables selective activation of the memory-gating module for long and short context task routing. The experimental result shows that EdgeInfinite achieves comparable performance to baseline Transformer-based LLM on long context benchmarks while optimizing memory consumption and time to first token.",
+        "identifiers": [
+          "SemanticScholar:300207a7cc2644859813dbc477bec1e90b90a41a"
+        ],
+        "semantic_scholar_id": "300207a7cc2644859813dbc477bec1e90b90a41a",
+        "canonical_id": "arXiv:2503.22196",
+        "arxiv_id": "2503.22196",
+        "doi": "10.48550/arXiv.2503.22196",
+        "authors": [
+          "Jiyu Chen",
+          "Shuang Peng",
+          "Daxiong Luo",
+          "Fan Yang",
+          "Renshou Wu",
+          "Fangyuan Li",
+          "Xiao-Xin Chen"
+        ],
+        "priority": 17,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 7,
+          "citation_count": 7,
+          "total": 17,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 581,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2501.05408",
+      "identity_tokens": [
+        "id:DOI:10.1145/3731569.3764840",
+        "id:SemanticScholar:322b3d01a10bc4d649d4f415415328b9612ca6ce",
+        "id:arXiv:2501.05408",
+        "title:tempo compiled dynamic deep learning with symbolic dependence graphs",
+        "url:https://arxiv.org/abs/2501.05408"
+      ],
+      "record": {
+        "title": "Tempo: Compiled Dynamic Deep Learning with Symbolic Dependence Graphs",
+        "source_url": "https://arxiv.org/abs/2501.05408",
+        "year": 2025,
+        "published": "2025-01-09",
+        "venue": "Symposium on Operating Systems Principles",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deep learning (DL) algorithms are often defined in terms of temporal relationships: a tensor at one timestep may depend on tensors from earlier or later timesteps. Such dynamic dependencies (and corresponding dynamic tensor shapes) are difficult to express and optimize: while eager DL systems support such dynamism, they cannot apply compiler-based optimizations; graph-based systems require static tensor shapes, which forces users to pad tensors or break-up programs into multiple static graphs. We describe Tempo, a new DL system that combines the dynamism of eager execution with the whole-program optimizations of graph-based compilation. Tempo achieves this through a declarative programming model with recurrent tensors, which include explicit temporal dimensions. Temporal dimensions can be indexed using symbolic expressions to express dynamic dependencies on past and future tensors. Based on this, Tempo constructs a symbolic dependence graph, which concisely encodes dynamic dependencies between operators, and applies whole-program optimizations, such as algebraic simplifications, vectorization, tiling, and fusion. By tiling dynamic dependencies into static-size blocks, Tempo can also reuse existing static code-generators. It then uses a polyhedral model to find a feasible execution schedule, which includes memory management operations. We show that Tempo achieves a 7× speedup over JAX for Llama-3.2-3B decoding; for reinforcement learning algorithms, Tempo achieves a 54× speedup, with 16× lower peak memory usage.",
+        "identifiers": [
+          "SemanticScholar:322b3d01a10bc4d649d4f415415328b9612ca6ce"
+        ],
+        "semantic_scholar_id": "322b3d01a10bc4d649d4f415415328b9612ca6ce",
+        "canonical_id": "arXiv:2501.05408",
+        "arxiv_id": "2501.05408",
+        "doi": "10.1145/3731569.3764840",
+        "authors": [
+          "Pedro F. Silvestre",
+          "Peter R. Pietzuch"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 659,
+          "matched_prestigious_venue": "Symposium on Operating Systems Principles"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2601.01322",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.01322",
+        "id:SemanticScholar:9ca056fff88e94606cd613be98704079b852c6d7",
+        "id:arXiv:2601.01322",
+        "title:linmu multimodal understanding made linear",
+        "url:https://arxiv.org/abs/2601.01322"
+      ],
+      "record": {
+        "title": "LinMU: Multimodal Understanding Made Linear",
+        "source_url": "https://arxiv.org/abs/2601.01322",
+        "year": 2026,
+        "published": "2026-01-04",
+        "venue": "Trans. Mach. Learn. Res.",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modern Vision-Language Models (VLMs) achieve impressive performance but are limited by the quadratic complexity of self-attention, which prevents their deployment on edge devices and makes their understanding of high-resolution images and long-context videos prohibitively expensive. To address this challenge, we introduce LinMU (Linear-complexity Multimodal Understanding), a VLM design that achieves linear complexity for the language model decoder without using any quadratic-complexity modules while maintaining the performance of global-attention-based VLMs. LinMU replaces every self-attention layer in the language model decoder with an M-MATE block: a dual-branch module that combines a bidirectional state-space model for global context (Flex-MA branch) with localized Swin-style window attention (Local-Swin branch) for adjacent correlations. To transform a pre-trained VLM into the LinMU architecture, we propose a three-stage distillation framework that (i) initializes both branches with self-attention weights and trains the Flex-MA branch alone, (ii) unfreezes the Local-Swin branch and fine-tunes it jointly with the Flex-MA branch, and (iii) unfreezes the remaining blocks and fine-tunes them using LoRA adapters, while regressing on hidden states and token-level logits of the frozen VLM teacher. On MMMU, TextVQA, LongVideoBench, Video-MME, and other benchmarks, LinMU matches the performance of teacher models, yet reduces Time-To-First-Token (TTFT) by up to 2.7$\\times$ and improves token throughput by up to 9.0$\\times$ on minute-length videos. Ablations confirm the importance of each distillation stage and the necessity of the two branches of the M-MATE block. The proposed framework demonstrates that state-of-the-art multimodal reasoning can be achieved without quadratic attention, thus opening up avenues for long-context VLMs that can deal with high-resolution images and long videos.",
+        "identifiers": [
+          "SemanticScholar:9ca056fff88e94606cd613be98704079b852c6d7"
+        ],
+        "semantic_scholar_id": "9ca056fff88e94606cd613be98704079b852c6d7",
+        "canonical_id": "arXiv:2601.01322",
+        "arxiv_id": "2601.01322",
+        "doi": "10.48550/arXiv.2601.01322",
+        "authors": [
+          "Hongjie Wang",
+          "N. Jha"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 299,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.00797",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11132861",
+        "id:SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3",
+        "id:arXiv:2507.00797",
+        "title:veda efficient llm generation through votingbased kv cache eviction and dataflowflexible accelerator",
+        "url:https://arxiv.org/abs/2507.00797"
+      ],
+      "record": {
+        "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+        "source_url": "https://arxiv.org/abs/2507.00797",
+        "year": 2025,
+        "published": "2025-06-22",
+        "venue": "Design Automation Conference",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) excel in natural language processing tasks but pose significant computational and memory challenges for edge deployment due to their intensive resource demands. This work addresses the efficiency of LLM inference by algorithm-hardwaredataflow tri-optimizations. We propose a novel voting-based KV cache eviction algorithm, balancing hardware efficiency and algorithm accuracy by adaptively identifying unimportant kv vectors. From a dataflow perspective, we introduce a flexible-product dataflow and a runtime reconfigurable PE array for matrix-vector multiplication. The proposed approach effectively handles the diverse dimensional requirements and solves the challenges of incrementally varying sequence lengths. Additionally, an element-serial scheduling scheme is proposed for nonlinear operations, such as softmax and layer normalization (layernorm). Results demonstrate a substantial reduction in latency, accompanied by a significant decrease in hardware complexity, from $O(N)$ to $O(1)$. The proposed solution is realized in a custom-designed accelerator, VEDA, which outperforms existing hardware platforms. This research represents a significant advancement in LLM inference on resource-constrained edge devices, facilitating real-time processing, enhancing data privacy, and enabling model customization.",
+        "identifiers": [
+          "SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3"
+        ],
+        "semantic_scholar_id": "db1626ebc3be3839b33a174392ce4bdd044edfe3",
+        "canonical_id": "arXiv:2507.00797",
+        "arxiv_id": "2507.00797",
+        "doi": "10.1109/DAC63849.2025.11132861",
+        "authors": [
+          "Zhi-Can Wang",
+          "Hong-Xiang Fan",
+          "Haroon Waris",
+          "Gang Wang",
+          "Zhenyu Li",
+          "Jian-Fei Jiang",
+          "Ya-Nan Sun",
+          "Guang-Hui He"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 495,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.23431",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.23431",
+        "id:SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81",
+        "id:arXiv:2506.23431",
+        "title:pipelined decoder for efficient contextaware text generation",
+        "url:https://arxiv.org/abs/2506.23431"
+      ],
+      "record": {
+        "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+        "source_url": "https://arxiv.org/abs/2506.23431",
+        "year": 2025,
+        "published": "2025-06-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+        "identifiers": [
+          "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+        ],
+        "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+        "canonical_id": "arXiv:2506.23431",
+        "arxiv_id": "2506.23431",
+        "doi": "10.48550/arXiv.2506.23431",
+        "authors": [
+          "Zixian Huang",
+          "Chenxu Niu",
+          "Yu Gu",
+          "Gengyang Xiao",
+          "Xin-Wei Huang",
+          "Gong Cheng"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 488,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f2671f7b1d6558e49716a5972b97014d48362af5440fb2897f7392f2853fe018",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

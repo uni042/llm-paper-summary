@@ -1,0 +1,840 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-8d47204e5d96db21-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-8d47204e5d96",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.24963/ijcai.2026/237",
+    "arXiv:2412.11741",
+    "arXiv:2505.19812",
+    "arXiv:2510.06750",
+    "arXiv:2606.18681",
+    "arXiv:2609.01224",
+    "arXiv:2610.02713",
+    "arXiv:2610.10411",
+    "arXiv:2610.18642"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:38.459105+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.24963/ijcai.2026/237",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.11741",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.19812",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2510.06750",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.18681",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.01224",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.02713",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.10411",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.18642",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs",
+      "source_url": "https://arxiv.org/abs/2606.18681",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite their remarkable performance, Vision Language Models (VLMs) incur substantial computational overhead due to the large number of visual tokens. While diversity maximization has become a dominant strategy for token reduction, existing methods rely on cosine-based normalized similarity that discards magnitude information, failing to faithfully approximate the original feature representation and leading to suboptimal performance, particularly on compositional multi-skill reasoning tasks. In this paper, we introduce SPARE, a subspace reconstruction method that reformulates token pruning as a column subset selection problem and explicitly minimizes reconstruction error. By iteratively selecting tokens with large projection residuals, SPARE performs reconstruction-driven pruning beyond angular diversity. Moreover, we reveal a counterintuitive anti-relevance phenomenon: tokens with lower image-text relevance score can better preserve contextual information. Based on this finding, we incorporate anti-relevance into SPARE as an additional selection criterion to promote context-aware token selection. Extensive experiments across multiple VLMs and benchmarks demonstrate that SPARE consistently achieves state-of-the-art performance, with strong gains on compositional tasks. When applied to LLaVA, SPARE removes up to 94% of visual tokens while retaining 95% of the baseline performance, all in a fully training-free manner.",
+      "identifiers": [
+        "SemanticScholar:4284458c5a9a19ab41fdcc7131846e54149be698"
+      ],
+      "semantic_scholar_id": "4284458c5a9a19ab41fdcc7131846e54149be698",
+      "canonical_id": "arXiv:2606.18681",
+      "arxiv_id": "2606.18681",
+      "doi": "10.48550/arXiv.2606.18681",
+      "authors": [
+        "Jaeyeon Lee",
+        "Shun-Jie Wen",
+        "Dong-Wan Choi"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "S$^2$Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.01224",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning reduces the inference overhead of multimodal large language models (MLLMs) by retaining only a subset of visual tokens. Existing methods usually select tokens based on importance or redundancy. However, we observe that these criteria produce stable spatial biases across inputs and do not always outperform simple Uniform Grid sampling, highlighting the value of broad spatial coverage. Motivated by this, we propose S$^2$Prune, a training-free pruning method that preserves spatial coverage while adapting token density to local image structure. We first divide the image into regions and assign at least one token to each region to preserve coverage. The remaining token budget is then distributed according to Laplacian variation, giving more tokens to regions with richer structure. We then use Early Representation Change (ERC), computed from the first decoder block, to select representative tokens within each region. We evaluate S$^2$Prune across diverse settings and two MLLM architectures. On Qwen2.5-VL-7B-Instruct, it achieves the highest average accuracy among the evaluated training-free pruning methods. With only 32 of the original 576 visual tokens, it still retains 79.3% of the full-model performance. Code is available at https://github.com/yuanyuanjia71-spec/S2Prune.",
+      "identifiers": [
+        "SemanticScholar:613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72"
+      ],
+      "semantic_scholar_id": "613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72",
+      "canonical_id": "arXiv:2609.01224",
+      "arxiv_id": "2609.01224",
+      "authors": [
+        "Yuan-Yuan Jia",
+        "Shun-Pu Tang",
+        "Qian-Qian Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Multi-modal Long Context Learning for Training-free Adaptation",
+      "source_url": "https://arxiv.org/abs/2505.19812",
+      "year": 2025,
+      "published": "2025-05-26",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Traditional approaches to adapting multi-modal large language models (MLLMs) to new tasks have relied heavily on fine-tuning. This paper introduces Efficient Multi-Modal Long Context Learning (EMLoC), a novel training-free alternative that embeds demonstration examples directly into the model input. EMLoC offers a more efficient, flexible, and scalable solution for task adaptation. Because extremely lengthy inputs introduce prohibitive computational and memory overhead, EMLoC contributes a chunk-wise compression mechanism combined with layer-wise adaptive pruning. It condenses long-context multimodal inputs into compact, task-specific memory representations. By adaptively pruning tokens at each layer under a Jensen-Shannon divergence constraint, our method achieves a dramatic reduction in inference complexity without sacrificing performance. This approach is the first to seamlessly integrate compression and pruning techniques for multi-modal long-context learning, offering a scalable and efficient solution for real-world applications. Extensive experiments on diverse vision-language benchmarks demonstrate that EMLoC achieves performance on par with or superior to naive long-context approaches. Our results highlight the potential of EMLoC as a groundbreaking framework for efficient and flexible adaptation of multi-modal models in resource-constrained environments. Codes are publicly available at https://github.com/Zehong-Ma/EMLoC.",
+      "identifiers": [
+        "SemanticScholar:68317564a47bc88cf9856c69a27b13cd4ff88e8d"
+      ],
+      "semantic_scholar_id": "68317564a47bc88cf9856c69a27b13cd4ff88e8d",
+      "canonical_id": "arXiv:2505.19812",
+      "arxiv_id": "2505.19812",
+      "doi": "10.48550/arXiv.2505.19812",
+      "authors": [
+        "Zehong Ma",
+        "Shi-Liang Zhang",
+        "Long-Hui Wei",
+        "Qi Tian"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 522,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "SeGO: Sensitivity-Aware Golden Optimization for Large-Scale VLM Quantization",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/237",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Vision-Language Models (VLMs) faces memory and computational bottlenecks because of the massive parameters and intensive computations. While Post-Training Quantization (PTQ) can reduce these costs, existing methods often overlook the heterogeneity of multimodal input when applied to VLMs, leading to quantization accuracy degradation. In this paper, we categorize the Transformer linear layers into Expansion Space (responsible for feature expansion) and Projection Space (responsible for feature aggregation) and reveal a cross-modal structural sensitivity asymmetry in VLMs: The Expansion Space is more sensitive to quantization accuracy than the Projection Space in both LLM and ViT encoders. Based on this, we propose SeGO, a unified structural sensitivity-aware sparse optimization framework. First, it constructs search interval for scaling factors using channel-wise statistics of LLM and ViT weights to exclude invalid solutions. Then it applies scaling protection only to the sensitive Expansion Space while directly quantizing the robust Projection Space. Moreover, SeGO uses a Golden-Section Solver to speedup the search of optimal scaling factors. Experiments show that SeGO achieves the balance among model parameter amount, quantization accuracy and scaling factors' search efficiency on InternVL2 and LLaVA series. Under the W3/W4A16 configuration, SeGO improves the accuracy of 7B-26B models by 3.8%-17.3% and enhances calibration efficiency by dozens of times.",
+      "identifiers": [
+        "SemanticScholar:02f51f7ea3463a20e4a731b624d0daf3a23f2757"
+      ],
+      "semantic_scholar_id": "02f51f7ea3463a20e4a731b624d0daf3a23f2757",
+      "doi": "10.24963/ijcai.2026/237",
+      "canonical_id": "DOI:10.24963/ijcai.2026/237",
+      "authors": [
+        "Tian-Qi Zhao",
+        "Xin-Rui Cheng",
+        "Yang Su",
+        "Wei-Yi Lu",
+        "Zhao-Dong Zhang",
+        "Zhong-Jie Wang",
+        "Rui-Han Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
+      "source_url": "https://arxiv.org/abs/2610.02713",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most KV-cache compression methods classify attention heads once, either offline or during prefill, and keep this classification fixed throughout generation. Across three models (1.5B-8B) and three regimes (needle retrieval, long chain-of-thought, and multi-turn recall), we measure head behavior on four model-regime combinations and find that most heads change their reading behavior at least once during generation. We introduce WakeKV, a reactive residency policy that moves cooling heads to a recoverable CPU reservoir rather than freezing or permanently evicting their state. At matched memory or budget, WakeKV consistently improves miss rate over frozen classification and destructive eviction, evaluated across five model-regime combinations and over three cited baselines (SnapKV, uniform R-KV, and ReasonAlloc) across four eligible combinations. A FlexiCache/vLLM implementation on Mistral-7B confirms the benefit on real hardware, improving throughput while retaining LongBench quality.",
+      "identifiers": [
+        "SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46"
+      ],
+      "semantic_scholar_id": "17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
+      "canonical_id": "arXiv:2610.02713",
+      "arxiv_id": "2610.02713",
+      "authors": [
+        "Utkarsh Ranjan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+      "source_url": "https://arxiv.org/abs/2610.10411",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by using a low-cost draft model to propose tokens that the full-size target model verifies in parallel. Parallel and semi-autoregressive (semi- AR) drafters improve drafting efficiency by proposing an entire block in a single forward pass, but training them raises a new difficulty: the draft distribution for a given position depends on where the decoding round starts, and where rounds start depends on how many tokens earlier rounds accepted. Existing training objectives typically rely on block-local surrogates that ignore this cross-round coupling, and therefore do not directly optimize the global decoding efficiency. In this work, we develop a theoretical framework for training and evaluating these drafters by representing speculative decoding as a Markov reward process. This formulation yields the Expected Decoding Rounds (EDR) objective, which weights local rejection costs by state occupancies and exactly equals the expected number of decoding rounds. Unlike prior surrogate objectives, EDR introduces no auxiliary hyperparameters. We then derive an exact temporal-difference gradient that supports unbiased stochastic optimization from target-model rollouts. The same framework also yields an exact offline evaluator for round counts, enabling paired drafter comparisons on shared target rollouts without running speculative decoding. Finetuning two state-of-the- art drafters, DSpark and DFly, with EDR consistently improves mean accepted length and outperforms existing training objectives across nine benchmarks spanning math reasoning, code generation, and chat.",
+      "identifiers": [
+        "SemanticScholar:03c1c5f03f9455620d81cd322496dfa4557764ca"
+      ],
+      "semantic_scholar_id": "03c1c5f03f9455620d81cd322496dfa4557764ca",
+      "canonical_id": "arXiv:2610.10411",
+      "arxiv_id": "2610.10411",
+      "authors": [
+        "Yun-Xiao Zhao",
+        "Chang-Xiao Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2610.18642",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Key-Value (KV) cache constitutes a dominant source of memory consumption during large language model (LLM) inference, particularly in long-context and complex reasoning scenarios. Existing KV cache quantization methods have explored different compression granularities, including layer-wise precision adjustment and token-level information preservation. In practical deployment, however, the key challenge is not merely compression, but how to allocate limited quantization resources among heterogeneous precision preservation strategies under a fixed KV cache memory budget. We propose MultiAlloc, a profiling-guided precision allocation framework for KV cache quantization that adaptively distributes limited quantization resources between layer-wise precision enhancement and token-wise preservation. MultiAlloc employs lightweight offline profiling to characterize layer sensitivity and token importance, enabling adaptive precision allocation under a fixed memory constraint. Guided by the profiled memory--accuracy trade-off, it automatically derives an effective precision allocation strategy without online allocation search, and applies the resulting policy during inference. Extensive experiments on reasoning and long-context benchmarks demonstrate that MultiAlloc consistently improves over layer-wise, token-wise, and recent multi-granularity KV cache quantization methods under matched memory budgets across diverse models, including Mistral, Llama, DeepSeek-Qwen, and QwQ.",
+      "identifiers": [
+        "SemanticScholar:f32736cf1226c3dd3aaf0afab3192f7071ccf795"
+      ],
+      "semantic_scholar_id": "f32736cf1226c3dd3aaf0afab3192f7071ccf795",
+      "canonical_id": "arXiv:2610.18642",
+      "arxiv_id": "2610.18642",
+      "authors": [
+        "Yang Zhou",
+        "Zhi-Ping Wu",
+        "Run-Chang Jiang",
+        "Dong-Dong Ren",
+        "You-Fang Han",
+        "Wei Zhao",
+        "Dong-Qi Cai",
+        "Wen-Bin Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation",
+      "source_url": "https://arxiv.org/abs/2412.11741",
+      "year": 2024,
+      "published": "2024-12-16",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The emergence of long-context text applications utilizing large language models (LLMs) has presented significant scalability challenges, particularly in memory footprint. The linear growth of the Key-Value (KV) cache, which stores attention keys and values to reduce redundant computations, can significantly increase memory usage and may prevent models from functioning properly in memory-constrained environments. To address this issue, we propose a novel approach called Cache Sparse Representation (CSR), which converts the KV cache by transforming the dense Key-Value cache tensor into sparse indexes and weights, offering a more memory-efficient representation during LLM inference. Furthermore, we introduce NeuralDict, a novel neural network-based method to automatically generate the dictionary used in our sparse representation. Our extensive experiments demonstrate that CSR matches the performance of state-of-the-art KV cache quantization algorithms while ensuring robust functionality in memory-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:c8424bf742e789de1f7528d6ee418b5d8414b604"
+      ],
+      "semantic_scholar_id": "c8424bf742e789de1f7528d6ee418b5d8414b604",
+      "canonical_id": "arXiv:2412.11741",
+      "arxiv_id": "2412.11741",
+      "doi": "10.48550/arXiv.2412.11741",
+      "authors": [
+        "Hong-Xuan Zhang",
+        "Yao Zhao",
+        "Jiaqi Zheng",
+        "Chen-Yi Zhuang",
+        "Jin-Jie Gu",
+        "Guihai Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 683,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gold-Switch: Training-Free Superposition of Slow- and Fast- Thinking LLMs",
+      "source_url": "https://arxiv.org/abs/2510.06750",
+      "year": 2025,
+      "published": "2025-10-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) excel in structured tasks by emulating deliberate human reasoning but often suffer from overthinking, degrading performance and wasting resources. One possible baseline is to deploy both LLM and LRM, then route input by predicting whether it requires reasoning and may cause overthinking. However, deploying multiple models can be costly or impractical. We propose a superposed deployment strategy with a lightweight, training-free regulation to optimize inference by switching one model on and off. Instead of routing, we selectively unlearn from LRM at inference, scaling down computation while preserving reasoning. By analyzing the cumulative energy of singular values, we identify optimal low-rank projections to adjust reasoning just right.",
+      "identifiers": [
+        "SemanticScholar:bad2571c353850e699723c95d87ef8b4acd12f13"
+      ],
+      "semantic_scholar_id": "bad2571c353850e699723c95d87ef8b4acd12f13",
+      "canonical_id": "arXiv:2510.06750",
+      "arxiv_id": "2510.06750",
+      "doi": "10.48550/arXiv.2510.06750",
+      "authors": [
+        "Jaeseong Lee",
+        "Dayoung Kwon",
+        "Seung-won Hwang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 387,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.18681",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.18681",
+        "id:SemanticScholar:4284458c5a9a19ab41fdcc7131846e54149be698",
+        "id:arXiv:2606.18681",
+        "title:moving beyond diversity visual token pruning as subspace reconstruction for efficient vlms",
+        "url:https://arxiv.org/abs/2606.18681"
+      ],
+      "record": {
+        "title": "Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs",
+        "source_url": "https://arxiv.org/abs/2606.18681",
+        "year": 2026,
+        "published": "2026-06-17",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Despite their remarkable performance, Vision Language Models (VLMs) incur substantial computational overhead due to the large number of visual tokens. While diversity maximization has become a dominant strategy for token reduction, existing methods rely on cosine-based normalized similarity that discards magnitude information, failing to faithfully approximate the original feature representation and leading to suboptimal performance, particularly on compositional multi-skill reasoning tasks. In this paper, we introduce SPARE, a subspace reconstruction method that reformulates token pruning as a column subset selection problem and explicitly minimizes reconstruction error. By iteratively selecting tokens with large projection residuals, SPARE performs reconstruction-driven pruning beyond angular diversity. Moreover, we reveal a counterintuitive anti-relevance phenomenon: tokens with lower image-text relevance score can better preserve contextual information. Based on this finding, we incorporate anti-relevance into SPARE as an additional selection criterion to promote context-aware token selection. Extensive experiments across multiple VLMs and benchmarks demonstrate that SPARE consistently achieves state-of-the-art performance, with strong gains on compositional tasks. When applied to LLaVA, SPARE removes up to 94% of visual tokens while retaining 95% of the baseline performance, all in a fully training-free manner.",
+        "identifiers": [
+          "SemanticScholar:4284458c5a9a19ab41fdcc7131846e54149be698"
+        ],
+        "semantic_scholar_id": "4284458c5a9a19ab41fdcc7131846e54149be698",
+        "canonical_id": "arXiv:2606.18681",
+        "arxiv_id": "2606.18681",
+        "doi": "10.48550/arXiv.2606.18681",
+        "authors": [
+          "Jaeyeon Lee",
+          "Shun-Jie Wen",
+          "Dong-Wan Choi"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 135,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.01224",
+      "identity_tokens": [
+        "id:SemanticScholar:613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72",
+        "id:arXiv:2609.01224",
+        "title:s2prune spatially structured visual token pruning for multimodal large language models",
+        "url:https://arxiv.org/abs/2609.01224"
+      ],
+      "record": {
+        "title": "S$^2$Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
+        "source_url": "https://arxiv.org/abs/2609.01224",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual token pruning reduces the inference overhead of multimodal large language models (MLLMs) by retaining only a subset of visual tokens. Existing methods usually select tokens based on importance or redundancy. However, we observe that these criteria produce stable spatial biases across inputs and do not always outperform simple Uniform Grid sampling, highlighting the value of broad spatial coverage. Motivated by this, we propose S$^2$Prune, a training-free pruning method that preserves spatial coverage while adapting token density to local image structure. We first divide the image into regions and assign at least one token to each region to preserve coverage. The remaining token budget is then distributed according to Laplacian variation, giving more tokens to regions with richer structure. We then use Early Representation Change (ERC), computed from the first decoder block, to select representative tokens within each region. We evaluate S$^2$Prune across diverse settings and two MLLM architectures. On Qwen2.5-VL-7B-Instruct, it achieves the highest average accuracy among the evaluated training-free pruning methods. With only 32 of the original 576 visual tokens, it still retains 79.3% of the full-model performance. Code is available at https://github.com/yuanyuanjia71-spec/S2Prune.",
+        "identifiers": [
+          "SemanticScholar:613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72"
+        ],
+        "semantic_scholar_id": "613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72",
+        "canonical_id": "arXiv:2609.01224",
+        "arxiv_id": "2609.01224",
+        "authors": [
+          "Yuan-Yuan Jia",
+          "Shun-Pu Tang",
+          "Qian-Qian Yang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 59,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.19812",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.19812",
+        "id:SemanticScholar:68317564a47bc88cf9856c69a27b13cd4ff88e8d",
+        "id:arXiv:2505.19812",
+        "title:efficient multimodal long context learning for trainingfree adaptation",
+        "url:https://arxiv.org/abs/2505.19812"
+      ],
+      "record": {
+        "title": "Efficient Multi-modal Long Context Learning for Training-free Adaptation",
+        "source_url": "https://arxiv.org/abs/2505.19812",
+        "year": 2025,
+        "published": "2025-05-26",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 10,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Traditional approaches to adapting multi-modal large language models (MLLMs) to new tasks have relied heavily on fine-tuning. This paper introduces Efficient Multi-Modal Long Context Learning (EMLoC), a novel training-free alternative that embeds demonstration examples directly into the model input. EMLoC offers a more efficient, flexible, and scalable solution for task adaptation. Because extremely lengthy inputs introduce prohibitive computational and memory overhead, EMLoC contributes a chunk-wise compression mechanism combined with layer-wise adaptive pruning. It condenses long-context multimodal inputs into compact, task-specific memory representations. By adaptively pruning tokens at each layer under a Jensen-Shannon divergence constraint, our method achieves a dramatic reduction in inference complexity without sacrificing performance. This approach is the first to seamlessly integrate compression and pruning techniques for multi-modal long-context learning, offering a scalable and efficient solution for real-world applications. Extensive experiments on diverse vision-language benchmarks demonstrate that EMLoC achieves performance on par with or superior to naive long-context approaches. Our results highlight the potential of EMLoC as a groundbreaking framework for efficient and flexible adaptation of multi-modal models in resource-constrained environments. Codes are publicly available at https://github.com/Zehong-Ma/EMLoC.",
+        "identifiers": [
+          "SemanticScholar:68317564a47bc88cf9856c69a27b13cd4ff88e8d"
+        ],
+        "semantic_scholar_id": "68317564a47bc88cf9856c69a27b13cd4ff88e8d",
+        "canonical_id": "arXiv:2505.19812",
+        "arxiv_id": "2505.19812",
+        "doi": "10.48550/arXiv.2505.19812",
+        "authors": [
+          "Zehong Ma",
+          "Shi-Liang Zhang",
+          "Long-Hui Wei",
+          "Qi Tian"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 10,
+          "citation_count": 10,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 522,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.24963/ijcai.2026/237",
+      "identity_tokens": [
+        "id:DOI:10.24963/ijcai.2026/237",
+        "id:SemanticScholar:02f51f7ea3463a20e4a731b624d0daf3a23f2757",
+        "title:sego sensitivityaware golden optimization for largescale vlm quantization",
+        "url:https://doi.org/10.24963/ijcai.2026/237"
+      ],
+      "record": {
+        "title": "SeGO: Sensitivity-Aware Golden Optimization for Large-Scale VLM Quantization",
+        "source_url": "https://doi.org/10.24963/ijcai.2026/237",
+        "year": 2026,
+        "published": "2026-09-01",
+        "venue": "Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The deployment of Vision-Language Models (VLMs) faces memory and computational bottlenecks because of the massive parameters and intensive computations. While Post-Training Quantization (PTQ) can reduce these costs, existing methods often overlook the heterogeneity of multimodal input when applied to VLMs, leading to quantization accuracy degradation. In this paper, we categorize the Transformer linear layers into Expansion Space (responsible for feature expansion) and Projection Space (responsible for feature aggregation) and reveal a cross-modal structural sensitivity asymmetry in VLMs: The Expansion Space is more sensitive to quantization accuracy than the Projection Space in both LLM and ViT encoders. Based on this, we propose SeGO, a unified structural sensitivity-aware sparse optimization framework. First, it constructs search interval for scaling factors using channel-wise statistics of LLM and ViT weights to exclude invalid solutions. Then it applies scaling protection only to the sensitive Expansion Space while directly quantizing the robust Projection Space. Moreover, SeGO uses a Golden-Section Solver to speedup the search of optimal scaling factors. Experiments show that SeGO achieves the balance among model parameter amount, quantization accuracy and scaling factors' search efficiency on InternVL2 and LLaVA series. Under the W3/W4A16 configuration, SeGO improves the accuracy of 7B-26B models by 3.8%-17.3% and enhances calibration efficiency by dozens of times.",
+        "identifiers": [
+          "SemanticScholar:02f51f7ea3463a20e4a731b624d0daf3a23f2757"
+        ],
+        "semantic_scholar_id": "02f51f7ea3463a20e4a731b624d0daf3a23f2757",
+        "doi": "10.24963/ijcai.2026/237",
+        "canonical_id": "DOI:10.24963/ijcai.2026/237",
+        "authors": [
+          "Tian-Qi Zhao",
+          "Xin-Rui Cheng",
+          "Yang Su",
+          "Wei-Yi Lu",
+          "Zhao-Dong Zhang",
+          "Zhong-Jie Wang",
+          "Rui-Han Hu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 59,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.02713",
+      "identity_tokens": [
+        "id:SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
+        "id:arXiv:2610.02713",
+        "title:wakekv reactive reversible kv residency for heads that change their minds",
+        "url:https://arxiv.org/abs/2610.02713"
+      ],
+      "record": {
+        "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
+        "source_url": "https://arxiv.org/abs/2610.02713",
+        "year": 2026,
+        "published": "2026-10-02",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Most KV-cache compression methods classify attention heads once, either offline or during prefill, and keep this classification fixed throughout generation. Across three models (1.5B-8B) and three regimes (needle retrieval, long chain-of-thought, and multi-turn recall), we measure head behavior on four model-regime combinations and find that most heads change their reading behavior at least once during generation. We introduce WakeKV, a reactive residency policy that moves cooling heads to a recoverable CPU reservoir rather than freezing or permanently evicting their state. At matched memory or budget, WakeKV consistently improves miss rate over frozen classification and destructive eviction, evaluated across five model-regime combinations and over three cited baselines (SnapKV, uniform R-KV, and ReasonAlloc) across four eligible combinations. A FlexiCache/vLLM implementation on Mistral-7B confirms the benefit on real hardware, improving throughput while retaining LongBench quality.",
+        "identifiers": [
+          "SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46"
+        ],
+        "semantic_scholar_id": "17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
+        "canonical_id": "arXiv:2610.02713",
+        "arxiv_id": "2610.02713",
+        "authors": [
+          "Utkarsh Ranjan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.10411",
+      "identity_tokens": [
+        "id:SemanticScholar:03c1c5f03f9455620d81cd322496dfa4557764ca",
+        "id:arXiv:2610.10411",
+        "title:training parallel speculative draft models by directly minimizing expected decoding rounds",
+        "url:https://arxiv.org/abs/2610.10411"
+      ],
+      "record": {
+        "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+        "source_url": "https://arxiv.org/abs/2610.10411",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference by using a low-cost draft model to propose tokens that the full-size target model verifies in parallel. Parallel and semi-autoregressive (semi- AR) drafters improve drafting efficiency by proposing an entire block in a single forward pass, but training them raises a new difficulty: the draft distribution for a given position depends on where the decoding round starts, and where rounds start depends on how many tokens earlier rounds accepted. Existing training objectives typically rely on block-local surrogates that ignore this cross-round coupling, and therefore do not directly optimize the global decoding efficiency. In this work, we develop a theoretical framework for training and evaluating these drafters by representing speculative decoding as a Markov reward process. This formulation yields the Expected Decoding Rounds (EDR) objective, which weights local rejection costs by state occupancies and exactly equals the expected number of decoding rounds. Unlike prior surrogate objectives, EDR introduces no auxiliary hyperparameters. We then derive an exact temporal-difference gradient that supports unbiased stochastic optimization from target-model rollouts. The same framework also yields an exact offline evaluator for round counts, enabling paired drafter comparisons on shared target rollouts without running speculative decoding. Finetuning two state-of-the- art drafters, DSpark and DFly, with EDR consistently improves mean accepted length and outperforms existing training objectives across nine benchmarks spanning math reasoning, code generation, and chat.",
+        "identifiers": [
+          "SemanticScholar:03c1c5f03f9455620d81cd322496dfa4557764ca"
+        ],
+        "semantic_scholar_id": "03c1c5f03f9455620d81cd322496dfa4557764ca",
+        "canonical_id": "arXiv:2610.10411",
+        "arxiv_id": "2610.10411",
+        "authors": [
+          "Yun-Xiao Zhao",
+          "Chang-Xiao Cai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.18642",
+      "identity_tokens": [
+        "id:SemanticScholar:f32736cf1226c3dd3aaf0afab3192f7071ccf795",
+        "id:arXiv:2610.18642",
+        "title:multialloc budgetaware precision allocation for kv cache quantization",
+        "url:https://arxiv.org/abs/2610.18642"
+      ],
+      "record": {
+        "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+        "source_url": "https://arxiv.org/abs/2610.18642",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Key-Value (KV) cache constitutes a dominant source of memory consumption during large language model (LLM) inference, particularly in long-context and complex reasoning scenarios. Existing KV cache quantization methods have explored different compression granularities, including layer-wise precision adjustment and token-level information preservation. In practical deployment, however, the key challenge is not merely compression, but how to allocate limited quantization resources among heterogeneous precision preservation strategies under a fixed KV cache memory budget. We propose MultiAlloc, a profiling-guided precision allocation framework for KV cache quantization that adaptively distributes limited quantization resources between layer-wise precision enhancement and token-wise preservation. MultiAlloc employs lightweight offline profiling to characterize layer sensitivity and token importance, enabling adaptive precision allocation under a fixed memory constraint. Guided by the profiled memory--accuracy trade-off, it automatically derives an effective precision allocation strategy without online allocation search, and applies the resulting policy during inference. Extensive experiments on reasoning and long-context benchmarks demonstrate that MultiAlloc consistently improves over layer-wise, token-wise, and recent multi-granularity KV cache quantization methods under matched memory budgets across diverse models, including Mistral, Llama, DeepSeek-Qwen, and QwQ.",
+        "identifiers": [
+          "SemanticScholar:f32736cf1226c3dd3aaf0afab3192f7071ccf795"
+        ],
+        "semantic_scholar_id": "f32736cf1226c3dd3aaf0afab3192f7071ccf795",
+        "canonical_id": "arXiv:2610.18642",
+        "arxiv_id": "2610.18642",
+        "authors": [
+          "Yang Zhou",
+          "Zhi-Ping Wu",
+          "Run-Chang Jiang",
+          "Dong-Dong Ren",
+          "You-Fang Han",
+          "Wei Zhao",
+          "Dong-Qi Cai",
+          "Wen-Bin Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.11741",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.11741",
+        "id:SemanticScholar:c8424bf742e789de1f7528d6ee418b5d8414b604",
+        "id:arXiv:2412.11741",
+        "title:csrachieving 1 bit keyvalue cache via sparse representation",
+        "url:https://arxiv.org/abs/2412.11741"
+      ],
+      "record": {
+        "title": "CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation",
+        "source_url": "https://arxiv.org/abs/2412.11741",
+        "year": 2024,
+        "published": "2024-12-16",
+        "venue": "AAAI Conference on Artificial Intelligence",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The emergence of long-context text applications utilizing large language models (LLMs) has presented significant scalability challenges, particularly in memory footprint. The linear growth of the Key-Value (KV) cache, which stores attention keys and values to reduce redundant computations, can significantly increase memory usage and may prevent models from functioning properly in memory-constrained environments. To address this issue, we propose a novel approach called Cache Sparse Representation (CSR), which converts the KV cache by transforming the dense Key-Value cache tensor into sparse indexes and weights, offering a more memory-efficient representation during LLM inference. Furthermore, we introduce NeuralDict, a novel neural network-based method to automatically generate the dictionary used in our sparse representation. Our extensive experiments demonstrate that CSR matches the performance of state-of-the-art KV cache quantization algorithms while ensuring robust functionality in memory-constrained environments.",
+        "identifiers": [
+          "SemanticScholar:c8424bf742e789de1f7528d6ee418b5d8414b604"
+        ],
+        "semantic_scholar_id": "c8424bf742e789de1f7528d6ee418b5d8414b604",
+        "canonical_id": "arXiv:2412.11741",
+        "arxiv_id": "2412.11741",
+        "doi": "10.48550/arXiv.2412.11741",
+        "authors": [
+          "Hong-Xuan Zhang",
+          "Yao Zhao",
+          "Jiaqi Zheng",
+          "Chen-Yi Zhuang",
+          "Jin-Jie Gu",
+          "Guihai Chen"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 683,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2510.06750",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2510.06750",
+        "id:SemanticScholar:bad2571c353850e699723c95d87ef8b4acd12f13",
+        "id:arXiv:2510.06750",
+        "title:goldswitch trainingfree superposition of slow and fast thinking llms",
+        "url:https://arxiv.org/abs/2510.06750"
+      ],
+      "record": {
+        "title": "Gold-Switch: Training-Free Superposition of Slow- and Fast- Thinking LLMs",
+        "source_url": "https://arxiv.org/abs/2510.06750",
+        "year": 2025,
+        "published": "2025-10-08",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Models (LRMs) excel in structured tasks by emulating deliberate human reasoning but often suffer from overthinking, degrading performance and wasting resources. One possible baseline is to deploy both LLM and LRM, then route input by predicting whether it requires reasoning and may cause overthinking. However, deploying multiple models can be costly or impractical. We propose a superposed deployment strategy with a lightweight, training-free regulation to optimize inference by switching one model on and off. Instead of routing, we selectively unlearn from LRM at inference, scaling down computation while preserving reasoning. By analyzing the cumulative energy of singular values, we identify optimal low-rank projections to adjust reasoning just right.",
+        "identifiers": [
+          "SemanticScholar:bad2571c353850e699723c95d87ef8b4acd12f13"
+        ],
+        "semantic_scholar_id": "bad2571c353850e699723c95d87ef8b4acd12f13",
+        "canonical_id": "arXiv:2510.06750",
+        "arxiv_id": "2510.06750",
+        "doi": "10.48550/arXiv.2510.06750",
+        "authors": [
+          "Jaeseong Lee",
+          "Dayoung Kwon",
+          "Seung-won Hwang"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 387,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5186b1d6613fe2fb4bf508bc2a2021a6683ff66ded1470d877b5037d015883c6",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

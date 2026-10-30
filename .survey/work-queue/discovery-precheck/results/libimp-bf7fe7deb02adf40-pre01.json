@@ -1,0 +1,987 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-bf7fe7deb02adf40-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-bf7fe7deb02a",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2502.06139",
+    "arXiv:2511.00295",
+    "arXiv:2601.20467",
+    "arXiv:2604.08077",
+    "arXiv:2604.26378",
+    "arXiv:2606.24187",
+    "arXiv:2609.32395",
+    "arXiv:2609.34044",
+    "arXiv:2609.34558",
+    "arXiv:2609.38121"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f039b52acaa5ba0031a4abd3a4d06afd681e08ec",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T07:29:53.217311+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2502.06139",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2511.00295",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.20467",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.08077",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.26378",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.24187",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32395",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34558",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.38121",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "CtrlCoT: Dual-Granularity Chain-of-Thought Compression for Controllable Reasoning",
+      "source_url": "https://arxiv.org/abs/2601.20467",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Chain-of-thought (CoT) prompting improves LLM reasoning but incurs high latency and memory cost due to verbose traces, motivating CoT compression with preserved correctness. Existing methods either shorten CoTs at the semantic level, which is often conservative, or prune tokens aggressively, which can miss task-critical cues and degrade accuracy. Moreover, combining the two is non-trivial due to sequential dependency, task-agnostic pruning, and distribution mismatch. We propose \\textbf{CtrlCoT}, a dual-granularity CoT compression framework that harmonizes semantic abstraction and token-level pruning through three components: Hierarchical Reasoning Abstraction produces CoTs at multiple semantic granularities; Logic-Preserving Distillation trains a logic-aware pruner to retain indispensable reasoning cues (e.g., numbers and operators) across pruning ratios; and Distribution-Alignment Generation aligns compressed traces with fluent inference-time reasoning styles to avoid fragmentation. On MATH-500 with Qwen2.5-7B-Instruct, CtrlCoT uses 30.7\\% fewer tokens while achieving 7.6 percentage points higher than the strongest baseline, demonstrating more efficient and reliable reasoning. Our code will be publicly available at https://github.com/fanzhenxuan/Ctrl-CoT.",
+      "identifiers": [
+        "SemanticScholar:65119b500b6c4363f934af411b370caac3a21e2f"
+      ],
+      "semantic_scholar_id": "65119b500b6c4363f934af411b370caac3a21e2f",
+      "canonical_id": "arXiv:2601.20467",
+      "arxiv_id": "2601.20467",
+      "doi": "10.48550/arXiv.2601.20467",
+      "authors": [
+        "Zhen-Xuan Fan",
+        "Jie Cao",
+        "Yang Dai",
+        "Zhe-Qi Lv",
+        "Wen-Qiao Zhang",
+        "Zhong-Le Xie",
+        "Lu Peng",
+        "Beng Chin Ooi"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Fast and Effective Long Video Understanding of Multimodal Large Language Models via Adaptive Quasi-Gaussian Sampling",
+      "source_url": "https://arxiv.org/abs/2606.24187",
+      "year": 2026,
+      "published": "2026-06-23",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long video understanding remains a daunting challenge for Multimodal Large Language Models (MLLMs) due to the excessive computation and memory footprint. Thus, keyframe selection is often adopted to mitigate this shortcoming, which however still suffers from low flexibility and high noise due to its hard sampling principle. In this paper, we define video frame selection as a problem of Quasi-Gaussian Sampling, and propose an adaptive and training-free approach termed AdaQ. Inspired by the 3-$\\sigma$ rule of Gaussian distribution, the objective of AdaQ is to achieve the optimal 3-$\\sigma$ interval for different examples, i.e., a smaller 3-$\\sigma$ interval for the local query and a larger one for the global query, thereby facilitating robust and adaptive frame sampling. To validate AdaQ, we apply it to four MLLMs with three embedding models. The extensive experimental results not only show its obvious performance gains over the default MLLMs and the SOTA keyframe selection methods, e.g., helping Qwen3-VL-8B outperform GPT4o by 15.8% on average by using only 64 frames, but also confirm its superior robustness and high efficiency for long-video understanding, e.g., only 1 hyper-parameter needs to be set.",
+      "identifiers": [
+        "SemanticScholar:048a997fdfb9fabdefd014c6c39017640b00a8aa"
+      ],
+      "semantic_scholar_id": "048a997fdfb9fabdefd014c6c39017640b00a8aa",
+      "canonical_id": "arXiv:2606.24187",
+      "arxiv_id": "2606.24187",
+      "doi": "10.48550/arXiv.2606.24187",
+      "authors": [
+        "Kun Zhang",
+        "Chenxin Fang",
+        "Tao Chen",
+        "Baiyang Song",
+        "Yun-Hang Shen",
+        "Yi-Yi Zhou",
+        "Rongrong Ji"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 129,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LCIRC: A Recurrent Compression Approach for Efficient Long-form Context and Query Dependent Modeling in LLMs",
+      "source_url": "https://arxiv.org/abs/2502.06139",
+      "year": 2025,
+      "published": "2025-02-10",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While large language models (LLMs) excel in generating coherent and contextually rich outputs, their capacity to efficiently handle long-form contexts is limited by fixed-length position embeddings. Additionally, the computational cost of processing long sequences increases quadratically, making it challenging to extend context length. To address these challenges, we propose Long-form Context Injection with Recurrent Compression (LCIRC), a method that enables the efficient processing long-form sequences beyond the model's length limit through recurrent compression without retraining the entire model. We further introduce query dependent context modeling, which selectively compresses query-relevant information, ensuring that the model retains the most pertinent content. Our empirical results demonstrate that Query Dependent LCIRC (QD-LCIRC) significantly improves LLM's ability to manage extended contexts, making it well-suited for tasks that require both comprehensive context understanding and query relevance.",
+      "identifiers": [
+        "SemanticScholar:9fb2e1f56db824279dd856692b7e268a2fbde024"
+      ],
+      "semantic_scholar_id": "9fb2e1f56db824279dd856692b7e268a2fbde024",
+      "canonical_id": "arXiv:2502.06139",
+      "arxiv_id": "2502.06139",
+      "doi": "10.48550/arXiv.2502.06139",
+      "authors": [
+        "Sumin An",
+        "Junyoung Sung",
+        "Wonpyo Park",
+        "Chanjun Park",
+        "Paul Hongsuck Seo"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 627,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+      "source_url": "https://arxiv.org/abs/2604.08077",
+      "year": 2026,
+      "published": "2026-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+      "identifiers": [
+        "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+      ],
+      "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+      "canonical_id": "arXiv:2604.08077",
+      "arxiv_id": "2604.08077",
+      "doi": "10.48550/arXiv.2604.08077",
+      "authors": [
+        "Handong Li",
+        "Zi-Kang Liu",
+        "Long-Teng Guo",
+        "Tong-Tian Yue",
+        "Yepeng Tang",
+        "Xin-Xin Zhu",
+        "Chuanyang Zheng",
+        "Zi-Ming Wang",
+        "Zhi-Bin Wang",
+        "Jun Song",
+        "Chenglin Yu",
+        "Bo Zheng",
+        "Jing Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 204,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "CoQuant: Joint Weight-Activation Subspace Projection for Mixed-Precision LLMs",
+      "source_url": "https://arxiv.org/abs/2604.26378",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) has become an important technique for reducing the inference cost of Large Language Models (LLMs). While recent mixed-precision methods improve ultra-low bit quantization by preserving critical subspaces in high precision, they typically construct these subspaces relying solely on activation statistics. This ignores the fundamental nature of linear operations, where the output perturbation is jointly driven by both activation and weight quantization noise. In this paper, we propose CoQuant, a joint weight-activation subspace projection method. By theoretically modeling the expected output error, CoQuant formulates a closed-form weighted PCA solution that balances activation and weight covariances to select the optimal high-precision subspace. Extensive experiments on Llama-3.2 and Qwen2.5 models show that CoQuant consistently outperforms strong PTQ baselines in both WikiText perplexity and zero-shot common-sense reasoning accuracy. These results demonstrate that joint weight-activation subspace modeling provides a principled and effective direction for low-bit LLM quantization. The source code is available at https://github.com/Zachary5895/CoQuant.",
+      "identifiers": [
+        "SemanticScholar:5c42df8174888754596a90f82b371ec6fac7abc4"
+      ],
+      "semantic_scholar_id": "5c42df8174888754596a90f82b371ec6fac7abc4",
+      "canonical_id": "arXiv:2604.26378",
+      "arxiv_id": "2604.26378",
+      "doi": "10.48550/arXiv.2604.26378",
+      "authors": [
+        "Zhe Ding",
+        "Su Pan",
+        "Duowei Pan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+      "identifiers": [
+        "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+      ],
+      "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+      "canonical_id": "arXiv:2609.32395",
+      "arxiv_id": "2609.32395",
+      "authors": [
+        "Sheng-Yao Wang",
+        "Jiang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SCOPD: Sparse-Context On-Policy Self-Distillation for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.34044",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning vision-language models (VLMs) process images and videos as long sequences of visual tokens, making inference expensive. Training-free token pruning reduces this cost, but aggressive compression can sharply degrade performance, often attributed to irreversible loss of task-relevant visual information. We show that this explanation is incomplete. In a fixed-context Pass@K analysis, repeated sampling from the same pruned visual representation recovers many examples missed by greedy decoding, indicating that useful visual evidence can remain accessible but be used unreliably. We call this the representation-utilization gap. Motivated by this observation, we introduce SCOPD, a sparse-context on-policy self-distillation framework in which a student generates reasoning trajectories from pruned visual tokens while a privileged full-context teacher supervises the same on-policy prefixes. SCOPD requires no ground-truth responses, architectural changes, or additional inference-time computation. We further introduce SCOPD+, which uses a small visual-budget intervention to identify visually sensitive response positions and selectively distill them. At 10% visual-token retention, the Vanilla model retains 86.37% of its unpruned performance across 13 benchmarks. SCOPD raises this to 90.49%, while SCOPD+ further improves it to 92.43%. Across token budgets, benchmarks, and pruning operators, our results show that efficient reasoning depends not only on which visual information survives pruning, but also on how reliably the model learns to use it.",
+      "identifiers": [
+        "SemanticScholar:0f686e71256401f7c405a76b108ba0ae83d715b8"
+      ],
+      "semantic_scholar_id": "0f686e71256401f7c405a76b108ba0ae83d715b8",
+      "canonical_id": "arXiv:2609.34044",
+      "arxiv_id": "2609.34044",
+      "authors": [
+        "Ahmadreza Jeddi",
+        "En-Ming Zhang",
+        "Jasper Gerigk",
+        "H. Karaimer",
+        "Mozhgan Nasr Azadani",
+        "Jia-Yun Luo",
+        "M. Le",
+        "Gholamali Aminian",
+        "Hugo Buurmeijer",
+        "Yong-Chao Chen",
+        "Leonid Sigal",
+        "Igor Gilitschenski",
+        "K. Derpanis",
+        "Marco Pavone",
+        "Babak Taati"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ACPruner: Visual Token Pruning as Biased Attention Coverage Maximization in LVLMs",
+      "source_url": "https://arxiv.org/abs/2609.34558",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) face significant computational inefficiencies caused by the large number of visual tokens. Existing visual token pruning methods mainly focus on either retaining individually important tokens or selecting mutually diverse ones. In this work, we revisit visual token pruning from a coverage perspective and formulate it as a biased attention coverage maximization problem. The key idea is to select a compact token subset whose encoder-side outgoing attention can jointly cover the image while assigning higher coverage priority to more informative regions. From this perspective, we propose ACPruner, a training-free visual token pruning framework for efficient LVLM inference. ACPruner first estimates token importance by combining intra-modal saliency and inter-modal relevance, then derives token-wise coverage from attention patterns within the vision encoder, and finally performs greedy selection to maximize the proposed coverage objective. Extensive experiments across multiple LVLM backbones, including LLaVA-1.5-7B/13B, LLaVA-NeXT-7B/13B, Qwen2.5-VL-7B, and LLaVA-OneVision-7B, show that ACPruner consistently achieves strong performance retention while delivering substantial end-to-end inference speedups.",
+      "identifiers": [
+        "SemanticScholar:0ff4ac461892820ceab3955a75af3a670f569f2d"
+      ],
+      "semantic_scholar_id": "0ff4ac461892820ceab3955a75af3a670f569f2d",
+      "canonical_id": "arXiv:2609.34558",
+      "arxiv_id": "2609.34558",
+      "authors": [
+        "Xu Li",
+        "Yuxuan Liang",
+        "Yi Zheng",
+        "Zhe Liu",
+        "Xiao-Lei Chen",
+        "Hao-Tian Chen",
+        "Rui Zhu",
+        "Fan Shi",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms",
+      "source_url": "https://arxiv.org/abs/2609.38121",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache memory and bandwidth costs grow with context length and batch size, which limits efficient long-context inference. To address this bottleneck, we introduce WUSH-KV for low-bit KV-cache quantization. It adapts WUSH, which constructs a data-aware transform from the second-order statistics of both factors in a matrix product to reduce quantization error. WUSH-KV uses calibration data to construct separate key and value transforms, with the value transform folded into the model weights and the key transform applied after RoPE. The transforms can be paired with clipped quantizers. For one such quantizer, QuEST INT, we show that, under mild assumptions, the WUSH transform is near-optimal. With this quantizer, WUSH-KV reduces layerwise reconstruction error and achieves the lowest end-to-end perplexity among other tested transforms. For end-to-end evaluation, we integrate WUSH-KV into SGLang using OSCAR-style percentile-clipped affine quantization. At 2-bit, WUSH-KV performs comparably to or outperforms the OSCAR transform across all evaluated models and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:fe7c087a88fc59c5147e04981f6336ae1e315095"
+      ],
+      "semantic_scholar_id": "fe7c087a88fc59c5147e04981f6336ae1e315095",
+      "canonical_id": "arXiv:2609.38121",
+      "arxiv_id": "2609.38121",
+      "authors": [
+        "Jiale Chen",
+        "Vage Egiazarian",
+        "Eldar Kurtic",
+        "T. Hoefler",
+        "Dan Alistarh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "H-FA: A Hybrid Floating-Point and Logarithmic Approach to Hardware Accelerated FlashAttention",
+      "source_url": "https://arxiv.org/abs/2511.00295",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "IEEE Transactions on Circuits and Systems for Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have significantly advanced AI and machine learning through their powerful attention mechanism. However, computing attention on long sequences can become a computational bottleneck. FlashAttention mitigates this by fusing the softmax and matrix operations into a tiled computation pattern that decouples performance from sequence length. Though designed for GPUs, its simplicity also makes it well suited for direct hardware acceleration. To improve hardware implementation, we compute FlashAttention using a mixture of floating-point and fixed-point logarithm domain representations. Floating-point is used to compute attention scores from query and key matrices, while logarithmic computation simplifies the fused computation of softmax normalization and the multiplication with the value matrix. This transformation, called H-FA, replaces vector-wide floating-point multiplication and division operations by additions and subtractions implemented efficiently with fixed-point arithmetic in the logarithm domain. Exponential function evaluations are effectively omitted and fused with the rest operations, and the final result is directly returned to floating-point arithmetic without any additional hardware overhead. Hardware implementation results at 28nm demonstrate that H-FA achieves a 26.5% reduction in area and a 23.4% reduction in power, on average, compared to FlashAttention parallel hardware architectures built solely with floating-point datapaths, without hindering performance.",
+      "identifiers": [
+        "SemanticScholar:a30f0a47edf649e7aff46c281a37a72e1ae0e4e6"
+      ],
+      "semantic_scholar_id": "a30f0a47edf649e7aff46c281a37a72e1ae0e4e6",
+      "canonical_id": "arXiv:2511.00295",
+      "arxiv_id": "2511.00295",
+      "doi": "10.1109/TCASAI.2025.3630164",
+      "authors": [
+        "Kosmas Alexandridis",
+        "G. Dimitrakopoulos"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.20467",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.20467",
+        "id:SemanticScholar:65119b500b6c4363f934af411b370caac3a21e2f",
+        "id:arXiv:2601.20467",
+        "title:ctrlcot dualgranularity chainofthought compression for controllable reasoning",
+        "url:https://arxiv.org/abs/2601.20467"
+      ],
+      "record": {
+        "title": "CtrlCoT: Dual-Granularity Chain-of-Thought Compression for Controllable Reasoning",
+        "source_url": "https://arxiv.org/abs/2601.20467",
+        "year": 2026,
+        "published": "2026-01-28",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Chain-of-thought (CoT) prompting improves LLM reasoning but incurs high latency and memory cost due to verbose traces, motivating CoT compression with preserved correctness. Existing methods either shorten CoTs at the semantic level, which is often conservative, or prune tokens aggressively, which can miss task-critical cues and degrade accuracy. Moreover, combining the two is non-trivial due to sequential dependency, task-agnostic pruning, and distribution mismatch. We propose \\textbf{CtrlCoT}, a dual-granularity CoT compression framework that harmonizes semantic abstraction and token-level pruning through three components: Hierarchical Reasoning Abstraction produces CoTs at multiple semantic granularities; Logic-Preserving Distillation trains a logic-aware pruner to retain indispensable reasoning cues (e.g., numbers and operators) across pruning ratios; and Distribution-Alignment Generation aligns compressed traces with fluent inference-time reasoning styles to avoid fragmentation. On MATH-500 with Qwen2.5-7B-Instruct, CtrlCoT uses 30.7\\% fewer tokens while achieving 7.6 percentage points higher than the strongest baseline, demonstrating more efficient and reliable reasoning. Our code will be publicly available at https://github.com/fanzhenxuan/Ctrl-CoT.",
+        "identifiers": [
+          "SemanticScholar:65119b500b6c4363f934af411b370caac3a21e2f"
+        ],
+        "semantic_scholar_id": "65119b500b6c4363f934af411b370caac3a21e2f",
+        "canonical_id": "arXiv:2601.20467",
+        "arxiv_id": "2601.20467",
+        "doi": "10.48550/arXiv.2601.20467",
+        "authors": [
+          "Zhen-Xuan Fan",
+          "Jie Cao",
+          "Yang Dai",
+          "Zhe-Qi Lv",
+          "Wen-Qiao Zhang",
+          "Zhong-Le Xie",
+          "Lu Peng",
+          "Beng Chin Ooi"
+        ],
+        "priority": 106,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 106,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 275,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.24187",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.24187",
+        "id:SemanticScholar:048a997fdfb9fabdefd014c6c39017640b00a8aa",
+        "id:arXiv:2606.24187",
+        "title:towards fast and effective long video understanding of multimodal large language models via adaptive quasigaussian sampling",
+        "url:https://arxiv.org/abs/2606.24187"
+      ],
+      "record": {
+        "title": "Towards Fast and Effective Long Video Understanding of Multimodal Large Language Models via Adaptive Quasi-Gaussian Sampling",
+        "source_url": "https://arxiv.org/abs/2606.24187",
+        "year": 2026,
+        "published": "2026-06-23",
+        "venue": "arXiv.org",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long video understanding remains a daunting challenge for Multimodal Large Language Models (MLLMs) due to the excessive computation and memory footprint. Thus, keyframe selection is often adopted to mitigate this shortcoming, which however still suffers from low flexibility and high noise due to its hard sampling principle. In this paper, we define video frame selection as a problem of Quasi-Gaussian Sampling, and propose an adaptive and training-free approach termed AdaQ. Inspired by the 3-$\\sigma$ rule of Gaussian distribution, the objective of AdaQ is to achieve the optimal 3-$\\sigma$ interval for different examples, i.e., a smaller 3-$\\sigma$ interval for the local query and a larger one for the global query, thereby facilitating robust and adaptive frame sampling. To validate AdaQ, we apply it to four MLLMs with three embedding models. The extensive experimental results not only show its obvious performance gains over the default MLLMs and the SOTA keyframe selection methods, e.g., helping Qwen3-VL-8B outperform GPT4o by 15.8% on average by using only 64 frames, but also confirm its superior robustness and high efficiency for long-video understanding, e.g., only 1 hyper-parameter needs to be set.",
+        "identifiers": [
+          "SemanticScholar:048a997fdfb9fabdefd014c6c39017640b00a8aa"
+        ],
+        "semantic_scholar_id": "048a997fdfb9fabdefd014c6c39017640b00a8aa",
+        "canonical_id": "arXiv:2606.24187",
+        "arxiv_id": "2606.24187",
+        "doi": "10.48550/arXiv.2606.24187",
+        "authors": [
+          "Kun Zhang",
+          "Chenxin Fang",
+          "Tao Chen",
+          "Baiyang Song",
+          "Yun-Hang Shen",
+          "Yi-Yi Zhou",
+          "Rongrong Ji"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 129,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.06139",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.06139",
+        "id:SemanticScholar:9fb2e1f56db824279dd856692b7e268a2fbde024",
+        "id:arXiv:2502.06139",
+        "title:lcirc a recurrent compression approach for efficient longform context and query dependent modeling in llms",
+        "url:https://arxiv.org/abs/2502.06139"
+      ],
+      "record": {
+        "title": "LCIRC: A Recurrent Compression Approach for Efficient Long-form Context and Query Dependent Modeling in LLMs",
+        "source_url": "https://arxiv.org/abs/2502.06139",
+        "year": 2025,
+        "published": "2025-02-10",
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "While large language models (LLMs) excel in generating coherent and contextually rich outputs, their capacity to efficiently handle long-form contexts is limited by fixed-length position embeddings. Additionally, the computational cost of processing long sequences increases quadratically, making it challenging to extend context length. To address these challenges, we propose Long-form Context Injection with Recurrent Compression (LCIRC), a method that enables the efficient processing long-form sequences beyond the model's length limit through recurrent compression without retraining the entire model. We further introduce query dependent context modeling, which selectively compresses query-relevant information, ensuring that the model retains the most pertinent content. Our empirical results demonstrate that Query Dependent LCIRC (QD-LCIRC) significantly improves LLM's ability to manage extended contexts, making it well-suited for tasks that require both comprehensive context understanding and query relevance.",
+        "identifiers": [
+          "SemanticScholar:9fb2e1f56db824279dd856692b7e268a2fbde024"
+        ],
+        "semantic_scholar_id": "9fb2e1f56db824279dd856692b7e268a2fbde024",
+        "canonical_id": "arXiv:2502.06139",
+        "arxiv_id": "2502.06139",
+        "doi": "10.48550/arXiv.2502.06139",
+        "authors": [
+          "Sumin An",
+          "Junyoung Sung",
+          "Wonpyo Park",
+          "Chanjun Park",
+          "Paul Hongsuck Seo"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 627,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.08077",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.08077",
+        "id:SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa",
+        "id:arXiv:2604.08077",
+        "title:adaspark adaptive sparsity for efficient longvideo understanding",
+        "url:https://arxiv.org/abs/2604.08077"
+      ],
+      "record": {
+        "title": "AdaSpark: Adaptive Sparsity for Efficient Long-Video Understanding",
+        "source_url": "https://arxiv.org/abs/2604.08077",
+        "year": 2026,
+        "published": "2026-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Processing long-form videos with Video Large Language Models (Video-LLMs) is computationally prohibitive. Current efficiency methods often compromise fine-grained perception through irreversible information disposal or inhibit long-range temporal modeling via rigid, predefined sparse patterns. This paper introduces AdaSpark, an adaptive sparsity framework designed to address these limitations. AdaSpark first partitions video inputs into 3D spatio-temporal cubes. It then employs two co-designed, context-aware components: (1) Adaptive Cube-Selective Attention (AdaS-Attn), which adaptively selects a subset of relevant video cubes to attend for each query token, and (2) Adaptive Token-Selective FFN (AdaS-FFN), which selectively processes only the most salient tokens within each cube. An entropy-based (Top-p) selection mechanism adaptively allocates computational resources based on input complexity. Experiments demonstrate that AdaSpark significantly reduces computational load by up to 57% FLOPs while maintaining comparable performance to dense models and preserving fine-grained, long-range dependencies, as validated on challenging hour-scale video benchmarks.",
+        "identifiers": [
+          "SemanticScholar:26de9913033c9237a713e5aef5961f6c5c2d26fa"
+        ],
+        "semantic_scholar_id": "26de9913033c9237a713e5aef5961f6c5c2d26fa",
+        "canonical_id": "arXiv:2604.08077",
+        "arxiv_id": "2604.08077",
+        "doi": "10.48550/arXiv.2604.08077",
+        "authors": [
+          "Handong Li",
+          "Zi-Kang Liu",
+          "Long-Teng Guo",
+          "Tong-Tian Yue",
+          "Yepeng Tang",
+          "Xin-Xin Zhu",
+          "Chuanyang Zheng",
+          "Zi-Ming Wang",
+          "Zhi-Bin Wang",
+          "Jun Song",
+          "Chenglin Yu",
+          "Bo Zheng",
+          "Jing Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 204,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.26378",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.26378",
+        "id:SemanticScholar:5c42df8174888754596a90f82b371ec6fac7abc4",
+        "id:arXiv:2604.26378",
+        "title:coquant joint weightactivation subspace projection for mixedprecision llms",
+        "url:https://arxiv.org/abs/2604.26378"
+      ],
+      "record": {
+        "title": "CoQuant: Joint Weight-Activation Subspace Projection for Mixed-Precision LLMs",
+        "source_url": "https://arxiv.org/abs/2604.26378",
+        "year": 2026,
+        "published": "2026-04-29",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training quantization (PTQ) has become an important technique for reducing the inference cost of Large Language Models (LLMs). While recent mixed-precision methods improve ultra-low bit quantization by preserving critical subspaces in high precision, they typically construct these subspaces relying solely on activation statistics. This ignores the fundamental nature of linear operations, where the output perturbation is jointly driven by both activation and weight quantization noise. In this paper, we propose CoQuant, a joint weight-activation subspace projection method. By theoretically modeling the expected output error, CoQuant formulates a closed-form weighted PCA solution that balances activation and weight covariances to select the optimal high-precision subspace. Extensive experiments on Llama-3.2 and Qwen2.5 models show that CoQuant consistently outperforms strong PTQ baselines in both WikiText perplexity and zero-shot common-sense reasoning accuracy. These results demonstrate that joint weight-activation subspace modeling provides a principled and effective direction for low-bit LLM quantization. The source code is available at https://github.com/Zachary5895/CoQuant.",
+        "identifiers": [
+          "SemanticScholar:5c42df8174888754596a90f82b371ec6fac7abc4"
+        ],
+        "semantic_scholar_id": "5c42df8174888754596a90f82b371ec6fac7abc4",
+        "canonical_id": "arXiv:2604.26378",
+        "arxiv_id": "2604.26378",
+        "doi": "10.48550/arXiv.2604.26378",
+        "authors": [
+          "Zhe Ding",
+          "Su Pan",
+          "Duowei Pan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 184,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32395",
+      "identity_tokens": [
+        "id:SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634",
+        "id:arXiv:2609.32395",
+        "title:memory as a cache exact context reuse and deletion by construction",
+        "url:https://arxiv.org/abs/2609.32395"
+      ],
+      "record": {
+        "title": "Memory as a cache: Exact context reuse and deletion by construction",
+        "source_url": "https://arxiv.org/abs/2609.32395",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+        "identifiers": [
+          "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+        ],
+        "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+        "canonical_id": "arXiv:2609.32395",
+        "arxiv_id": "2609.32395",
+        "authors": [
+          "Sheng-Yao Wang",
+          "Jiang Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34044",
+      "identity_tokens": [
+        "id:SemanticScholar:0f686e71256401f7c405a76b108ba0ae83d715b8",
+        "id:arXiv:2609.34044",
+        "title:scopd sparsecontext onpolicy selfdistillation for efficient visionlanguage models",
+        "url:https://arxiv.org/abs/2609.34044"
+      ],
+      "record": {
+        "title": "SCOPD: Sparse-Context On-Policy Self-Distillation for Efficient Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2609.34044",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Reasoning vision-language models (VLMs) process images and videos as long sequences of visual tokens, making inference expensive. Training-free token pruning reduces this cost, but aggressive compression can sharply degrade performance, often attributed to irreversible loss of task-relevant visual information. We show that this explanation is incomplete. In a fixed-context Pass@K analysis, repeated sampling from the same pruned visual representation recovers many examples missed by greedy decoding, indicating that useful visual evidence can remain accessible but be used unreliably. We call this the representation-utilization gap. Motivated by this observation, we introduce SCOPD, a sparse-context on-policy self-distillation framework in which a student generates reasoning trajectories from pruned visual tokens while a privileged full-context teacher supervises the same on-policy prefixes. SCOPD requires no ground-truth responses, architectural changes, or additional inference-time computation. We further introduce SCOPD+, which uses a small visual-budget intervention to identify visually sensitive response positions and selectively distill them. At 10% visual-token retention, the Vanilla model retains 86.37% of its unpruned performance across 13 benchmarks. SCOPD raises this to 90.49%, while SCOPD+ further improves it to 92.43%. Across token budgets, benchmarks, and pruning operators, our results show that efficient reasoning depends not only on which visual information survives pruning, but also on how reliably the model learns to use it.",
+        "identifiers": [
+          "SemanticScholar:0f686e71256401f7c405a76b108ba0ae83d715b8"
+        ],
+        "semantic_scholar_id": "0f686e71256401f7c405a76b108ba0ae83d715b8",
+        "canonical_id": "arXiv:2609.34044",
+        "arxiv_id": "2609.34044",
+        "authors": [
+          "Ahmadreza Jeddi",
+          "En-Ming Zhang",
+          "Jasper Gerigk",
+          "H. Karaimer",
+          "Mozhgan Nasr Azadani",
+          "Jia-Yun Luo",
+          "M. Le",
+          "Gholamali Aminian",
+          "Hugo Buurmeijer",
+          "Yong-Chao Chen",
+          "Leonid Sigal",
+          "Igor Gilitschenski",
+          "K. Derpanis",
+          "Marco Pavone",
+          "Babak Taati"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34558",
+      "identity_tokens": [
+        "id:SemanticScholar:0ff4ac461892820ceab3955a75af3a670f569f2d",
+        "id:arXiv:2609.34558",
+        "title:acpruner visual token pruning as biased attention coverage maximization in lvlms",
+        "url:https://arxiv.org/abs/2609.34558"
+      ],
+      "record": {
+        "title": "ACPruner: Visual Token Pruning as Biased Attention Coverage Maximization in LVLMs",
+        "source_url": "https://arxiv.org/abs/2609.34558",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) face significant computational inefficiencies caused by the large number of visual tokens. Existing visual token pruning methods mainly focus on either retaining individually important tokens or selecting mutually diverse ones. In this work, we revisit visual token pruning from a coverage perspective and formulate it as a biased attention coverage maximization problem. The key idea is to select a compact token subset whose encoder-side outgoing attention can jointly cover the image while assigning higher coverage priority to more informative regions. From this perspective, we propose ACPruner, a training-free visual token pruning framework for efficient LVLM inference. ACPruner first estimates token importance by combining intra-modal saliency and inter-modal relevance, then derives token-wise coverage from attention patterns within the vision encoder, and finally performs greedy selection to maximize the proposed coverage objective. Extensive experiments across multiple LVLM backbones, including LLaVA-1.5-7B/13B, LLaVA-NeXT-7B/13B, Qwen2.5-VL-7B, and LLaVA-OneVision-7B, show that ACPruner consistently achieves strong performance retention while delivering substantial end-to-end inference speedups.",
+        "identifiers": [
+          "SemanticScholar:0ff4ac461892820ceab3955a75af3a670f569f2d"
+        ],
+        "semantic_scholar_id": "0ff4ac461892820ceab3955a75af3a670f569f2d",
+        "canonical_id": "arXiv:2609.34558",
+        "arxiv_id": "2609.34558",
+        "authors": [
+          "Xu Li",
+          "Yuxuan Liang",
+          "Yi Zheng",
+          "Zhe Liu",
+          "Xiao-Lei Chen",
+          "Hao-Tian Chen",
+          "Rui Zhu",
+          "Fan Shi",
+          "Xiang-Yang Xue"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.38121",
+      "identity_tokens": [
+        "id:SemanticScholar:fe7c087a88fc59c5147e04981f6336ae1e315095",
+        "id:arXiv:2609.38121",
+        "title:wushkv kv cache quantization with dataadaptive transforms",
+        "url:https://arxiv.org/abs/2609.38121"
+      ],
+      "record": {
+        "title": "WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms",
+        "source_url": "https://arxiv.org/abs/2609.38121",
+        "year": 2026,
+        "published": "2026-09-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV cache memory and bandwidth costs grow with context length and batch size, which limits efficient long-context inference. To address this bottleneck, we introduce WUSH-KV for low-bit KV-cache quantization. It adapts WUSH, which constructs a data-aware transform from the second-order statistics of both factors in a matrix product to reduce quantization error. WUSH-KV uses calibration data to construct separate key and value transforms, with the value transform folded into the model weights and the key transform applied after RoPE. The transforms can be paired with clipped quantizers. For one such quantizer, QuEST INT, we show that, under mild assumptions, the WUSH transform is near-optimal. With this quantizer, WUSH-KV reduces layerwise reconstruction error and achieves the lowest end-to-end perplexity among other tested transforms. For end-to-end evaluation, we integrate WUSH-KV into SGLang using OSCAR-style percentile-clipped affine quantization. At 2-bit, WUSH-KV performs comparably to or outperforms the OSCAR transform across all evaluated models and downstream tasks.",
+        "identifiers": [
+          "SemanticScholar:fe7c087a88fc59c5147e04981f6336ae1e315095"
+        ],
+        "semantic_scholar_id": "fe7c087a88fc59c5147e04981f6336ae1e315095",
+        "canonical_id": "arXiv:2609.38121",
+        "arxiv_id": "2609.38121",
+        "authors": [
+          "Jiale Chen",
+          "Vage Egiazarian",
+          "Eldar Kurtic",
+          "T. Hoefler",
+          "Dan Alistarh"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 31,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2511.00295",
+      "identity_tokens": [
+        "id:DOI:10.1109/tcasai.2025.3630164",
+        "id:SemanticScholar:a30f0a47edf649e7aff46c281a37a72e1ae0e4e6",
+        "id:arXiv:2511.00295",
+        "title:hfa a hybrid floatingpoint and logarithmic approach to hardware accelerated flashattention",
+        "url:https://arxiv.org/abs/2511.00295"
+      ],
+      "record": {
+        "title": "H-FA: A Hybrid Floating-Point and Logarithmic Approach to Hardware Accelerated FlashAttention",
+        "source_url": "https://arxiv.org/abs/2511.00295",
+        "year": 2025,
+        "published": "2025-10-31",
+        "venue": "IEEE Transactions on Circuits and Systems for Artificial Intelligence",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformers have significantly advanced AI and machine learning through their powerful attention mechanism. However, computing attention on long sequences can become a computational bottleneck. FlashAttention mitigates this by fusing the softmax and matrix operations into a tiled computation pattern that decouples performance from sequence length. Though designed for GPUs, its simplicity also makes it well suited for direct hardware acceleration. To improve hardware implementation, we compute FlashAttention using a mixture of floating-point and fixed-point logarithm domain representations. Floating-point is used to compute attention scores from query and key matrices, while logarithmic computation simplifies the fused computation of softmax normalization and the multiplication with the value matrix. This transformation, called H-FA, replaces vector-wide floating-point multiplication and division operations by additions and subtractions implemented efficiently with fixed-point arithmetic in the logarithm domain. Exponential function evaluations are effectively omitted and fused with the rest operations, and the final result is directly returned to floating-point arithmetic without any additional hardware overhead. Hardware implementation results at 28nm demonstrate that H-FA achieves a 26.5% reduction in area and a 23.4% reduction in power, on average, compared to FlashAttention parallel hardware architectures built solely with floating-point datapaths, without hindering performance.",
+        "identifiers": [
+          "SemanticScholar:a30f0a47edf649e7aff46c281a37a72e1ae0e4e6"
+        ],
+        "semantic_scholar_id": "a30f0a47edf649e7aff46c281a37a72e1ae0e4e6",
+        "canonical_id": "arXiv:2511.00295",
+        "arxiv_id": "2511.00295",
+        "doi": "10.1109/TCASAI.2025.3630164",
+        "authors": [
+          "Kosmas Alexandridis",
+          "G. Dimitrakopoulos"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 364,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:c2483568fffd4d52246784998ba2c8a3cf4825f1d7af5bc788bbb1e1358a4259",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
