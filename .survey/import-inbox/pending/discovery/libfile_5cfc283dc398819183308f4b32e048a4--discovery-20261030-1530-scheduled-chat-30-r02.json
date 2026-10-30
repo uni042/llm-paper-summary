@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r02",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415",
+      "identity_tokens": [
+        "SemanticScholar:de42c32bc69555bb18874f1cc47a96e0992c4415",
+        "DOI:10.18653/v1/2026.bigpicture-main.6",
+        "arXiv:2510.05364"
+      ],
+      "title": "Challenging Quadratic Attention - A Holistic View On the Rise of Alternative Language Model Architectures",
+      "reason": "ACL Anthology公式要旨は二次計算量の注意機構を代替する疎・準線形注意、RNN、SSM、ハイブリッド言語モデルを、計算量・メモリ量・ベンチマークと制約で比較するサーベイ。長文脈推論の効率的アーキテクチャに直接関連。独自GPUサービング速度の実験ではない。",
+      "source_url": "https://aclanthology.org/2026.bigpicture-main.6/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "Inference / Parallel and Non-Autoregressive Decoding",
+        "Sparse Attention"
+      ],
+      "worklist_rank": 14
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.48550/arXiv.2508.03351",
+      "identity_tokens": [
+        "DOI:10.48550/arXiv.2508.03351",
+        "arXiv:2508.03351"
+      ],
+      "title": "VLMQ: Efficient Post-Training Quantization for Large Vision-Language Models via Hessian Augmentation",
+      "reason": "arXiv一次要旨は、視覚トークンとテキストトークンの量的な非対称性を考慮した重要度重み付きHessianを用いるVLM向けPTQを提案。0.5B〜32Bの8ベンチマークで2ビット量子化時のMME-RealWorldを16.45%改善と報告。マルチモーダルLLMの推論メモリ削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2508.03351",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 15
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00078",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00078"
+      ],
+      "title": "FlashServe: Adaptive Kernel Provision for Quantized LLM Serving",
+      "reason": "EPFL公式研究記録に掲載された原著要旨は、要求量とバッチサイズの変動に合わせ量子化推論カーネルを切替えるFlashServeを提案。実行時間と切替費用を併せたモデル、非同期切替、事前準備を用い、静的量子化カーネル比で推論遅延9.0〜13.6%削減と報告。LLMサービング最適化に直接該当。",
+      "source_url": "https://infoscience.epfl.ch/entities/publication/7309972e-4d14-4d79-80dc-3abce7dae15d",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ASP-DAC66049.2026.11420717",
+      "identity_tokens": [
+        "DOI:10.1109/ASP-DAC66049.2026.11420717"
+      ],
+      "title": "CoLoRA: A Collaborative Scheduling Framework for Multi-Tenant LoRA LLM Inference",
+      "reason": "IEEE Xplore公式要旨は、複数利用者のLoRAアダプタを扱うLLM推論で、待ち時間・SLA・アダプタ常駐状況に基づく優先度、キャッシュ配置、バッチ編成を統合するCoLoRAを提案。比較条件でスループット56.5%増、オンライン要求P95遅延34%減を報告し、多テナントサービングに直接該当。",
+      "source_url": "https://doi.org/10.1109/ASP-DAC66049.2026.11420717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Many-adapter LoRA Serving"
+      ],
+      "worklist_rank": 18
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.21308",
+      "identity_tokens": [
+        "arXiv:2608.21308"
+      ],
+      "title": "Rethinking Expressivity and Efficiency in Test-Time Training",
+      "reason": "arXiv一次要旨は、長文脈向けTest-Time Trainingでトークン単位のfast-weight更新をチャンク並列化し、1.3Bまでのモデル学習と8倍長さ外挿で90%超のパスキー精度を報告。長文脈推論に関連するが、主要な速度評価は学習スループットであり、LLMサービングの実機decode速度が中心ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.21308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "Long-context Inference",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 19
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+      "identity_tokens": [
+        "SemanticScholar:13fa84b25b8960ae93b877e12551fc1d60d25739",
+        "arXiv:2605.03562"
+      ],
+      "title": "HeadQ: Model-Visible Distortion and a Prototype KV Quantizer-Corrector Codec",
+      "reason": "arXiv 2605.03562の現行公式ページは、KVの保存誤差でなく注意ロジットの誤差を最小化するHeadQを記述し、2ビットKV量子化のPPL改善を報告。ただし2026-05-19のv3で著者が倫理的懸念を理由に論文をwithdrawnと明記しており、本文PDFは現行版で利用不能。技術範囲は関連するが撤回済みであることを明示し、通常Research候補としての扱いは慎重に保留する。",
+      "source_url": "https://arxiv.org/abs/2605.03562",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 20
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:1dc981fcc9e78b4cfc21923892dd1e970356d52b",
+      "identity_tokens": [
+        "SemanticScholar:1dc981fcc9e78b4cfc21923892dd1e970356d52b"
+      ],
+      "title": "In-Batch Ensemble Drafting: Robust Speculative Decoding for LVLMs",
+      "reason": "ICLR 2025 Workshop論文の一次要旨は、視覚言語モデルの投機的復号で複数のドラフト方式をバッチ内で組み合わせるIbEDを提案。マルチモーダルドラフト比のblock efficiencyが平均6%、最大23%改善と報告。実際のwall-clock高速化とblock efficiencyは同義ではないが、LVLM推論高速化に直接関連。",
+      "source_url": "https://mlanthology.org/iclrw/2025/lee2025iclrw-inbatch/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 21
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.00914",
+      "identity_tokens": [
+        "arXiv:2608.00914"
+      ],
+      "title": "Augmented Backpressure for Decentralized Management of Agentic Networks",
+      "reason": "arXiv著者要旨は、エージェント型基盤モデルのサービスネットワークで要求キューとprefix/KV、検索文脈、expert warm stateを同時に考慮するMemory-Augmented Backpressureを提案。ルーティング、状態保持、処理割当の安定性・スループット保証を理論解析し、LLMサービスの状態依存スケジューリングに関連する。実GPUの性能改善ではなく理論モデルの結果である。",
+      "source_url": "https://arxiv.org/abs/2608.00914",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "KV Cache Optimization / Compression"
+      ],
+      "worklist_rank": 23
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.07819",
+      "identity_tokens": [
+        "arXiv:2606.07819"
+      ],
+      "title": "Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression",
+      "reason": "arXiv著者要旨は、層ごとの局所量子化誤差だけでなくモデル全体の誤差伝播を最適化し、構造枝刈りと混合精度PTQを同じ探索空間で同時に決める圧縮方式を提案。低ビットLLMのメモリ・推論計算効率を直接対象とするため関連。",
+      "source_url": "https://arxiv.org/abs/2606.07819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Structured Pruning"
+      ],
+      "worklist_rank": 24
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.02043",
+      "identity_tokens": [
+        "arXiv:2511.02043"
+      ],
+      "title": "Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants",
+      "reason": "arXiv一次要旨はPyTorchコンパイル経路に融合・タイル化を組み込み、FlexAttentionの静的テンプレートでは扱いにくいデータ依存注意もFlashAttention型カーネルへ変換するFlashlightを提案。LLM注意計算のGPUカーネル最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2511.02043",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:35:51+09:00",
+      "last_checked_at": "2026-10-30T15:35:51+09:00",
+      "linked_from": [
+        "Hardware Accelerators",
+        "Sparse Attention",
+        "Kernel Runtime Compilation"
+      ],
+      "worklist_rank": 25
+    }
+  ]
+}
