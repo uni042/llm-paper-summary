@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T21:08:08+00:00",
-  "record_count": 5562,
+  "updated_at": "2026-10-30T22:07:54+00:00",
+  "record_count": 5566,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85900,6 +85900,62 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Why Depth Matters in Parallelizable Sequence Models: A Lie Algebraic View"
+    },
+    "DOI:10.1016/j.neucom.2026.134183": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.neucom.2026.134183",
+      "identity_tokens": [
+        "DOI:10.1016/j.neucom.2026.134183",
+        "arXiv:2508.02381"
+      ],
+      "reason": "同一著者の一次arXiv前稿とNeurocomputing誌面書誌を照合。構造化枝刈り比率に応じたポリシー探索を性能予測器とエージェントで自動化し、Llama2-7B/3-8Bの評価で候補ポリシーの検証時間を98.02秒から1.52秒へ短縮（約64倍）と報告。これは枝刈りポリシー評価の高速化でありLLM本体の推論速度ではないためborderline。",
+      "first_checked_at": "2026-10-30T22:07:48+00:00",
+      "last_checked_at": "2026-10-30T22:07:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PPF: A framework for real-time adaptive pruning of large language models via performance prediction"
+    },
+    "arXiv:2507.09334": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2507.09334",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2507.09334",
+        "arXiv:2507.09334"
+      ],
+      "reason": "arXiv著者要旨を確認。3D MLLMのobject-centric視覚トークン冗長性に対し、Global Attention PredictionとSample-Adaptive Pruningで入力ごとの削減率を選択する。推論時トークン削減の直接手法だが、評価対象は3Dシーン理解に特化し、一般のLLMサービングへの適用やend-to-end遅延倍率は要旨から未確認のためborderline。",
+      "first_checked_at": "2026-10-30T22:07:48+00:00",
+      "last_checked_at": "2026-10-30T22:07:48+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Fast3D: Accelerating 3D Multi-modal Large Language Models for Efficient 3D Scene Understanding"
+    },
+    "arXiv:2508.04664": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.04664",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2508.04664",
+        "arXiv:2508.04664"
+      ],
+      "reason": "arXiv著者要旨を確認。文脈断片化、要約・隠蔽・復元、検索のツールでエージェントが作業文脈を能動的に整理し、長文推論の干渉を低減する。情報密度の低いベンチマークで品質改善を報告するが、主目的は認知・推論性能でありGPUサービングの遅延・KVメモリ・実行費用の実測改善は要旨にない。推論時文脈圧縮との接点はあるためborderline。",
+      "first_checked_at": "2026-10-30T22:07:53+00:00",
+      "last_checked_at": "2026-10-30T22:07:53+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Sculptor: Empowering LLMs with Cognitive Agency via Active Context Management"
+    },
+    "arXiv:2506.12876": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.12876",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2506.12876",
+        "arXiv:2506.12876"
+      ],
+      "reason": "arXiv著者要旨を確認。厳密N:M半構造化枝刈りマスクを、重みグループのカテゴリ分布から重複なしサンプリングで学習し、マスク学習用メモリを線形規模へ抑える。推論用疎行列を作る圧縮技術だが、主要貢献は枝刈りマスクの学習メモリと最適化安定性であり、LLM推論のend-to-end高速化値は要旨から未確認のためborderline。",
+      "first_checked_at": "2026-10-30T22:07:54+00:00",
+      "last_checked_at": "2026-10-30T22:07:54+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "MaskPro: Linear-Space Probabilistic Learning for Strict (N:M)-Sparsity on Large Language Models"
     }
   }
 }
