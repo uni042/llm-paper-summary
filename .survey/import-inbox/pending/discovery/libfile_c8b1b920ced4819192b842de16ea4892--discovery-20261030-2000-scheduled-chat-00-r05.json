@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2000-scheduled-chat-00/r05",
+  "reference_main_sha": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.03263",
+      "identity_tokens": [
+        "arXiv:2604.03263"
+      ],
+      "title": "LPC-SM: Local Predictive Coding and Sparse Memory for Long-Context Language Modeling",
+      "reason": "局所注意、持続記憶、予測誤差補正、疎な実行制御を組み合わせた158M規模の自己回帰アーキテクチャ。長文脈への潜在的効率性はあるが、要旨の評価は主に学習損失と4096トークンの継続診断で、LLM推論速度・キャッシュ効率の実測改善は示していない。",
+      "source_url": "https://arxiv.org/abs/2604.03263",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 136
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02805",
+      "identity_tokens": [
+        "arXiv:2607.02805"
+      ],
+      "title": "Training Hybrid Block Diffusion Language Models with Partial Bidirectionality",
+      "reason": "ブロック拡散LMの逆方向Mamba走査を現在の復号ブロック内に限定し、過去ブロックの状態を正確にキャッシュ可能にする。65K文脈で全系列DiffuMamba比19.7倍、262Kで注意型BDLM比3.7倍のスループットを報告し、長文脈拡散推論の状態再利用が中心。",
+      "source_url": "https://arxiv.org/abs/2607.02805",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 140
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.02170",
+      "identity_tokens": [
+        "arXiv:2603.02170"
+      ],
+      "title": "SageBwd: A Trainable Low-bit Attention",
+      "reason": "SageAttention系のINT8注意を学習の逆伝播へ拡張し、QK正規化・スコア勾配の量子化誤差・K平滑化の影響を検証する。低ビット注意カーネルの知見は推論にも関連するが、論文の主要評価は事前学習・微調整の安定性であり推論時高速化は直接測定していない。",
+      "source_url": "https://arxiv.org/abs/2603.02170",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 154
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.17954",
+      "identity_tokens": [
+        "arXiv:2605.17954"
+      ],
+      "title": "A More Word-like Image Tokenization for MLLMs",
+      "reason": "視覚パッチ埋込みを意味的まとまりへクラスタ化するDiVTで、画像複雑度に応じて視覚トークン数を可変にする。言語モデルや画像エンコーダを変更せず、マルチモーダル推論の入力トークン数・メモリ・遅延を削減する方式である。",
+      "source_url": "https://arxiv.org/abs/2605.17954",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 156
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.20474",
+      "identity_tokens": [
+        "arXiv:2606.20474"
+      ],
+      "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
+      "reason": "長い共有接頭辞を繰り返し使うエージェントのKVキャッシュを、Walsh-Hadamard回転とFP4近似、AMD CDNA4のscaled-MFMAで低ビット化。実際のClaude Code系トレースを用い、BF16比のSLO達成スループットをMiniMax-M2.5で2.71倍、Qwen3-235Bで4.38倍と報告する。",
+      "source_url": "https://arxiv.org/abs/2606.20474",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 157
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00365",
+      "identity_tokens": [
+        "arXiv:2606.00365"
+      ],
+      "title": "SPARQLe: Sub-Precision Activation Representation for Quantized LLM Inference",
+      "reason": "活性値の高位ビットが疎である性質を使い、下位ビットを密、高位ビットをビットマップ付き疎形式に分離して低精度演算器で計算する。BitNet 3B・Llama2 7B・Llama3 8Bでprefill遅延16～24.3%、decode遅延13.5～23.4%削減を報告。",
+      "source_url": "https://arxiv.org/abs/2606.00365",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 164
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.12422",
+      "identity_tokens": [
+        "arXiv:2510.12422"
+      ],
+      "title": "VideoLucy: Deep Memory Backtracking for Long Video Understanding",
+      "reason": "長時間動画の情報を階層的な記憶へ格納し、質問に応じて粗い時間範囲から細部へ遡るエージェント型検索を提案。密なフレーム説明を避ける設計は効率性と関連するが、要旨で中心に示される成果は長動画質問応答の精度で、推論時遅延や計算量の独立評価は確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.12422",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 168
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.11634",
+      "identity_tokens": [
+        "arXiv:2606.11634"
+      ],
+      "title": "Architecture-Aware Reinforcement Learning Makes Sliding-Window Attention Competitive in Math Reasoning",
+      "reason": "全注意モデルを窓注意へ変換した後、窓注意に適した推論系列を強化学習で獲得するSWARR。線形計算量の窓注意を推論へ利用する意義はあるが、中心寄与はSFT後の学習適応と数学推論精度の回復であり、推論カーネル・サービス性能の実測が主題ではない。",
+      "source_url": "https://arxiv.org/abs/2606.11634",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 169
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.19001",
+      "identity_tokens": [
+        "arXiv:2601.19001"
+      ],
+      "title": "FROST: Filtering Reasoning Outliers with Attention for Efficient Reasoning",
+      "reason": "推論モデルの注意重みから重要度の低い推論文を見つけて除去するFROSTを提案。Phi-4-Reasoningとgpt-oss-20bの4課題でトークン数平均69.68%削減、正解率26.70%改善を報告し、テスト時推論系列の冗長性削減が直接の目的。",
+      "source_url": "https://arxiv.org/abs/2601.19001",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 171
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.24574",
+      "identity_tokens": [
+        "arXiv:2512.24574"
+      ],
+      "title": "Understanding and Steering the Cognitive Behaviors of Reasoning Models at Test-Time",
+      "reason": "検証・バックトラック等の認知行動と相関する注意ヘッドを校正で特定し、推論時に隠れ表現を回転させて冗長な思考を抑えるCREST。追加学習不要で最大37.6%のトークン削減と最大17.5%の正解率改善を報告し、テスト時計算量制御に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2512.24574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 172
+    }
+  ]
+}
