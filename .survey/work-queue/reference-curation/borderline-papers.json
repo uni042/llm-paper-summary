@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T07:22:42+00:00",
-  "record_count": 5463,
+  "updated_at": "2026-10-30T07:57:13+00:00",
+  "record_count": 5465,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -84574,6 +84574,32 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Prefix-Denoising Consistency: Test-Time Verification for Diffusion Language Models"
+    },
+    "arXiv:2509.16875": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.16875",
+      "identity_tokens": [
+        "arXiv:2509.16875"
+      ],
+      "reason": "arXiv一次要旨は少数の代表トークンへの収縮で線形計算量を目指すContract-and-Broadcast Self-Attentionを提案。主な実験は視覚タスクであり、自己回帰LLMの推論配信や実機レイテンシを直接評価しないため境界的。",
+      "first_checked_at": "2026-10-30T07:57:13+00:00",
+      "last_checked_at": "2026-10-30T07:57:13+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Towards Interpretable and Efficient Attention: Compressing All by Contracting a Few"
+    },
+    "arXiv:2512.22147": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.22147",
+      "identity_tokens": [
+        "arXiv:2512.22147"
+      ],
+      "reason": "arXiv一次要旨は巨大アプリの全ビルドを避け、GPUホットスポットをMinimal Executable Programとして抽出しLLMで反復最適化する枠組みを提案。GPUカーネル最適化に関連するが、主実験はHPCアプリでありLLM推論特化の実測ではないため境界的。",
+      "first_checked_at": "2026-10-30T07:57:13+00:00",
+      "last_checked_at": "2026-10-30T07:57:13+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "GPU Kernel Optimization Beyond Full Builds: An LLM Framework with Minimal Executable Programs"
     }
   }
 }

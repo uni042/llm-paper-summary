@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30c8c52407f1d167-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2606.07632",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2606.07632",
+    "identity_tokens": [
+      "arXiv:2606.07632"
+    ],
+    "reason": "arXiv一次要旨はAIの訓練・推論・ハードウェア製造を含むライフサイクル全体の環境影響評価を提唱するposition paper。LLM推論アルゴリズム、メモリ管理、カーネル、配信制御の具体的技術は扱わず、サーベイの技術スコープ外。",
+    "first_checked_at": "2026-10-30T07:57:13+00:00",
+    "last_checked_at": "2026-10-30T07:57:13+00:00",
+    "linked_from": [],
+    "title": "Evaluation of ML Resource Utilization Requires Model Life Cycle Assessment"
+  },
+  "processed_at": "2026-10-30T07:57:14+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30c8c52407f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

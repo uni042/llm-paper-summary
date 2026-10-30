@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-30c8c52407f1d167-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.22147",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.22147",
+    "identity_tokens": [
+      "arXiv:2512.22147"
+    ],
+    "reason": "arXiv一次要旨は巨大アプリの全ビルドを避け、GPUホットスポットをMinimal Executable Programとして抽出しLLMで反復最適化する枠組みを提案。GPUカーネル最適化に関連するが、主実験はHPCアプリでありLLM推論特化の実測ではないため境界的。",
+    "first_checked_at": "2026-10-30T07:57:13+00:00",
+    "last_checked_at": "2026-10-30T07:57:13+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "GPU Kernel Optimization Beyond Full Builds: An LLM Framework with Minimal Executable Programs"
+  },
+  "processed_at": "2026-10-30T07:57:13+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-30c8c52407f1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
