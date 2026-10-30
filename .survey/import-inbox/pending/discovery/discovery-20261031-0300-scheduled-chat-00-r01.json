@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0300-scheduled-chat-00/r01",
+  "reference_main_sha": "d1e5a0640905b94e45b6ea15861b06bc7e3387a9",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.12721",
+      "identity_tokens": [
+        "arXiv:2510.12721"
+      ],
+      "title": "CARVQ: Corrective Adaptor with Group Residual Vector Quantization for LLM Embedding Compression",
+      "reason": "事後学習型の補正アダプタと群単位の残差ベクトル量子化を組み合わせ、LLaMA、Qwen、PhiなどのLLM埋め込み層を約1.6ビットまで圧縮する。埋め込み重みの記憶量とメモリ帯域を直接削減し、4ビット記憶を扱う機器でも実装可能とする推論メモリ最適化。",
+      "source_url": "https://arxiv.org/abs/2510.12721",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 489,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11592809",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11592809"
+      ],
+      "title": "Late Breaking Results: DAIQUIRI: Dynamic Quantization with Layer-wise Sensitivity Ranking for Hardware-Efficient LLMs",
+      "reason": "DATE 2026公式PDFの要旨・方法節では、HQQの3ビット基準モデルから各層を2ビットに置換して校正損失の増分を測定し、敏感な層だけ3ビットへ戻す。Llama-3.2-1Bで平均2.6ビットを使い、WikiText-2のPPL 7.18（均一3ビット7.13、均一2ビット13.29）を報告。LLM推論の精度・電力・遅延を直接最適化する。",
+      "source_url": "https://past.date-conference.com/proceedings-archive/2026/DATA/3036.pdf",
+      "body_check": "official_primary_pdf_abstract_and_method_screen; full_research_not_done",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 490,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19605",
+      "identity_tokens": [
+        "arXiv:2610.19605"
+      ],
+      "title": "PN-Mix: Pair-Norm Guided Mixed-Precision Key Cache Quantization for Efficient Long-Output LLM Inference",
+      "reason": "RoPEのチャネル対におけるクエリ・キーのノルム積を使い、注意ロジットへの量子化誤差寄与が大きいキー対へ高精度を配分する。重要対はprefill時に一度選定してdecode中に再利用し、平均2.26ビットで既存混合精度方式の2.32～2.39ビットに匹敵する精度を報告。KVキャッシュ帯域と容量の直接最適化。",
+      "source_url": "https://arxiv.org/abs/2610.19605",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 491,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05960",
+      "identity_tokens": [
+        "arXiv:2506.05960"
+      ],
+      "title": "AQUATIC-Diff: Additive Quantization for Truly Tiny Compressed Diffusion Models",
+      "reason": "加算型ベクトル量子化と専用カーネルを画像生成用のLDM-4／ImageNet拡散モデルへ適用し、W2A8・W4A8の生成品質と計算量を評価する。LLM量子化技術を参照しているが、論文の対象は画像拡散モデルの圧縮であり、生成LLMの推論・サービング効率への直接的貢献は確認できない。",
+      "source_url": "https://arxiv.org/abs/2506.05960",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06490",
+      "identity_tokens": [
+        "arXiv:2512.06490",
+        "DOI:10.1007/978-3-032-06697-8_33"
+      ],
+      "title": "Optimizing LLMs Using Quantization for Mobile Execution",
+      "reason": "Llama-3.2-3BをBitsAndBytesの4ビット事後量子化で68.66%縮小し、GGUF変換とAndroid上のTermux/Ollamaで動作確認する実践的な導入報告。端末LLM推論の実証は関連するが、新しい量子化アルゴリズム・推論カーネル・定量的な実行速度改善の提案は要旨から確認できず、システム研究としては境界的。",
+      "source_url": "https://arxiv.org/abs/2512.06490",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.17891",
+      "identity_tokens": [
+        "arXiv:2603.17891"
+      ],
+      "title": "RAMP: Reinforcement Adaptive Mixed Precision Quantization for Efficient On Device LLM Inference",
+      "reason": "オフポリシーSoft Actor-Criticで層別ビット幅を学習し、活性・重み・構造の11次元特徴に基づきモデルを跨いで割当を転移する。Scale Foldingで活性外れ値を重み側へ移し、Llama-2-7Bでは3.65実効ビット、3.68GB、PPL5.54と均一4ビットAWQの3.90GB・PPL5.60を比較。GGUF出力による端末推論を対象とする。",
+      "source_url": "https://arxiv.org/abs/2603.17891",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14530",
+      "identity_tokens": [
+        "arXiv:2605.14530"
+      ],
+      "title": "Mitigating Mask Prior Drift and Positional Attention Collapse in Large Diffusion Vision-Language Models",
+      "reason": "拡散型VLMの長文生成でマスク事前分布への隠れ状態の偏りと、反復アンマスク時の位置バイアスによる視覚トークン注意低下を分析し、Mask Prior SuppressionとMonotonic RoPE Scalingで生成品質を改善する。復号時の軽量な修正だが、主評価は反復・視覚接地の品質であり、推論速度・メモリ削減は要旨で示されない。",
+      "source_url": "https://arxiv.org/abs/2605.14530",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.02847",
+      "identity_tokens": [
+        "arXiv:2406.02847"
+      ],
+      "title": "Exact Conversion of In-Context Learning to Model Weights in Linearized-Attention Transformers",
+      "reason": "線形化TransformerでICLのデモ例を追加バイアス項へ厳密変換するICLCAを示し、通常TransformerのGPT-2には近似的な適用を検証する。長いプロンプトの事前統合につながる可能性はあるが、主貢献は数学的等価性と学習挙動であり、生成LLMサービングの実測高速化・メモリ削減は要旨にない。",
+      "source_url": "https://arxiv.org/abs/2406.02847",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 496,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl.a.746",
+      "identity_tokens": [
+        "DOI:10.1162/tacl.a.746",
+        "arXiv:2509.03405"
+      ],
+      "title": "LMEnt: A Suite for Analyzing Knowledge in Language Models from Pretraining Data to Representations",
+      "reason": "Wikipediaのエンティティ言及を注釈した事前学習コーパス、検索索引、12個のモデルと中間チェックポイントを公開し、事前学習中の知識獲得・忘却・編集可能性を分析する。推論時のメモリ管理・サービング・カーネル・量子化効率の技術的改善を目的としていないため対象外。",
+      "source_url": "https://arxiv.org/abs/2509.03405",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICCD63220.2024.00103",
+      "identity_tokens": [
+        "DOI:10.1109/ICCD63220.2024.00103"
+      ],
+      "title": "AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models",
+      "reason": "Yonsei大学の著者所属機関の一次要旨によれば、量子化感度の低いLLMモジュールはテンソル単位、敏感なモジュールは入力チャネル単位で量子化し、早期再構成と適応的二進数表現で後者の演算負荷を軽減する。専用アクセラレータと組み合わせ、先行LMアクセラレータ比4.19倍高速化・消費エネルギー63.16%削減を報告する。",
+      "source_url": "https://yonsei.elsevierpure.com/en/publications/airgun-adaptive-granularity-quantization-for-accelerating-large-l/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:05:12+09:00",
+      "last_checked_at": "2026-10-31T03:05:12+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
