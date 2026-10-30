@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T14:03:41.906982+00:00",
+  "generated_at": "2026-10-30T14:57:56.965233+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 7,
+  "count": 4,
   "worker_counts": {
-    "scheduled-chat-00": 2,
-    "scheduled-chat-30": 3,
-    "scheduled-chat-45": 2
+    "scheduled-chat-00": 1,
+    "scheduled-chat-30": 2,
+    "scheduled-chat-45": 1
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-00",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -33,33 +33,6 @@
         "16KB未満再監査: 手法説明量 553 < 700"
       ],
       "warnings": []
-    },
-    {
-      "path": "papers/inference/10-kv-cache-offload-recomputation/2026-96d0bc7068f2-adaptivekv-accelerating-kv-cache-offloading-with-a-bandwidth-adaptive-me.md",
-      "canonical_id": "DOI:10.1145/3821219",
-      "title": "AdaptiveKV: Accelerating KV Cache Offloading with a Bandwidth-Adaptive Memory Allocation Mechanism",
-      "file_bytes": 10421,
-      "source_sha256": "b567ecd24a6b929729be201f7e450f810d2dc44b6e3a93a7bdcdc5e8a9e40067",
-      "source_git_blob_sha": "71fd61aae1645a21c651c0c1fd2998b179dd9bbb",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.789025,
-      "quality_metrics": {
-        "body_chars": 1982,
-        "method_chars": 681,
-        "evaluation_chars": 117,
-        "limitation_chars": 167
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 本文説明量 1982 < 2200",
-        "16KB未満再監査: 手法説明量 681 < 700",
-        "16KB未満再監査: 評価説明量 117 < 500",
-        "16KB未満再監査: 日本語比率 78.9% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.9% < 警告基準 80%"
-      ]
     },
     {
       "path": "papers/inference/19-inference-evaluation-benchmarking/2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md",
@@ -102,26 +75,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md",
-      "canonical_id": "arXiv:2609.36654",
-      "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
-      "file_bytes": 16082,
-      "source_sha256": "8c59720dffebf784a8dd27bf1af3f45666297f485797145ab2f515851a3d3f35",
-      "source_git_blob_sha": "36425250fe651d4e9e6b3db956eacebb0ae7f37a",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.937706,
-      "quality_metrics": {
-        "body_chars": 3979,
-        "method_chars": 1105,
-        "evaluation_chars": 1131,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-e363df893fb4-mico-efficient-query-scheduling-for-multi-cloud-deployed-llm-inference-s.md",
       "canonical_id": "DOI:10.1007/s11432-024-4487-8",
       "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
@@ -137,26 +90,6 @@
         "method_chars": 1407,
         "evaluation_chars": 1094,
         "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2024-2406.16299-compensate-quantization-errors-make-weights-hierarchical-to-compensate-e.md",
-      "canonical_id": "arXiv:2406.16299",
-      "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
-      "file_bytes": 17011,
-      "source_sha256": "8a93103cdc974e558459fa8860f73242fe669215ddad19684b98b1b5d295b28b",
-      "source_git_blob_sha": "ae083748983409a074b0a8433e31d45d7111db6c",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.931246,
-      "quality_metrics": {
-        "body_chars": 3777,
-        "method_chars": 968,
-        "evaluation_chars": 1102,
-        "limitation_chars": 708
       },
       "mechanical_failures": [],
       "warnings": []
