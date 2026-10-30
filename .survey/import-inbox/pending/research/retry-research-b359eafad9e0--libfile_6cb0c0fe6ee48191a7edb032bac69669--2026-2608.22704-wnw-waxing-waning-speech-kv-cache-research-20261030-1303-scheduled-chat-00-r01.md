@@ -29,6 +29,8 @@ last_checked: "2026-10-30"
 worker_completed_at: "2026-10-30T13:03:00+09:00"
 worker_run_key: "20261030-1303-scheduled-chat-00/r01"
 reference_main_sha: "9cdedb45724603a8a0bc17376e35114493566d84"
+last_audited: null
+audit_version: 0
 ---
 # WnW：音声LLMのKVキャッシュを生成中にCPUから呼び戻す
 

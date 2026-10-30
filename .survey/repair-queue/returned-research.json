@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T04:53:07+00:00",
+  "generated_at": "2026-10-30T05:09:03+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1710,36 +1710,6 @@
       "worker_run_key": "20261029-2258-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.10355",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T15:27:02+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5645,
-        "body_paragraphs": 27,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7df5e281dbea--libfile_e13f0c48c03c8191bbd7287bbd4e90a7--2026-2609.10355-video-inference-efficiency-survey-research-20261029-2330-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-7df5e281dbea--libfile_e13f0c48c03c8191bbd7287bbd4e90a7--2026-2609.10355-video-inference-efficiency-survey-research-20261029-2330-scheduled-chat-3.json",
-      "worker_run_key": "20261029-2330-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.33135",
       "title": null,
       "source_url": null,
@@ -2411,66 +2381,9 @@
       "worker_run_key": "20261030-1230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2507.09071",
-      "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
-      "source_url": "https://arxiv.org/html/2507.09071v3",
-      "returned_at": "2026-10-30T04:49:37+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4621,
-        "body_paragraphs": 25,
-        "method_chars": 1742,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 559,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0a7f6d4e4cd08191a45514dc01bba42b--2025-2507.09071-blindsight-interimage-sparse-attention-research-20261030-1303-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_0a7f6d4e4cd08191a45514dc01bba42b--2025-2507.09071-blindsight-interimage-sparse-attention-research-20261030-1303-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "arXiv:2507.17417",
-      "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
-      "source_url": "https://arxiv.org/pdf/2507.17417",
-      "returned_at": "2026-10-30T04:49:39+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 125 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5041,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 125,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 125 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.22704",
-      "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
-      "source_url": "https://arxiv.org/html/2608.22704v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T04:49:41+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2495,11 +2408,68 @@
       "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
     },
     {
+      "canonical_id": "arXiv:2609.10355",
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/html/2609.10355",
+      "returned_at": "2026-10-30T05:08:18+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5106,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c9521f0dc7e48191a5b8750aefd1a4a4--2026-2609.10355-video-inference-efficiency-survey-research-20261030-1303-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c9521f0dc7e48191a5b8750aefd1a4a4--2026-2609.10355-video-inference-efficiency-survey-research-20261030-1303-scheduled-chat-00-r02.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r02"
+    },
+    {
+      "canonical_id": "arXiv:2507.09071",
+      "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2507.09071v3",
+      "returned_at": "2026-10-30T05:08:57+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4621,
+        "body_paragraphs": 25,
+        "method_chars": 1742,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 559,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3cd4ed897655--libfile_0a7f6d4e4cd08191a45514dc01bba42b--2025-2507.09071-blindsight-interimage-sparse-attention-research-20261030-1303-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3cd4ed897655--libfile_0a7f6d4e4cd08191a45514dc01bba42b--2025-2507.09071-blindsight-interimage-sparse-attention-research-20261030-1303-scheduled-c.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
+    },
+    {
       "canonical_id": "arXiv:2504.13989",
       "title": "Gradual Binary Search and Dimension Expansion: A general method for activation quantization in LLMs",
       "source_url": "https://arxiv.org/html/2504.13989v2",
-      "returned_at": "2026-10-30T04:51:02+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-30T05:08:59+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2520,8 +2490,38 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-scheduled-chat-00-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4576cec6c809--libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4576cec6c809--libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-schedule.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.17417",
+      "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2507.17417",
+      "returned_at": "2026-10-30T05:09:02+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 125 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5041,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 125,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 125 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a490d69e96fd--libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a490d69e96fd--libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-schedule.json",
       "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
     }
   ]
