@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.29",
+      "doi": "10.18653/v1/2025.findings-acl.29",
+      "identifiers": [
+        "DOI:10.18653/v1/2025.findings-acl.29"
+      ],
+      "title": "Variable Layerwise Quantization: A Simple and Effective Approach to Quantize LLMs",
+      "source_url": "https://aclanthology.org/2025.findings-acl.29/",
+      "authors": [
+        "Razvan-Gabriel Dumitru",
+        "Vikas Yadav",
+        "Rishabh Maheshwary",
+        "Paul Ioan Clotan",
+        "Sathwik Tejaswi Madhusudhan",
+        "Mihai Surdeanu"
+      ],
+      "published": "2025/7",
+      "year": 2025,
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACL公式要旨は層の入出力埋め込み差や大振幅重み数で重要度を測り、重要層に高ビットを割り当てる可変層別量子化を提案。優先順位に従う場合は25〜50%の層を低精度化しても性能維持するが、無作為順序では5〜10%にとどまる。推論向け混合精度圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-aaa7d7300acc",
+    "round": "libimp-aaa7d7300acc141f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-aaa7d7300acc141f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-aaa7d7300acc141f-pre01.json",
+    "receipt": "sha256:e4c76f240d699871b3c717cef8007a0fe7cdd18bfe42c48c81b057a9fa371d3e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-aaa7d7300acc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

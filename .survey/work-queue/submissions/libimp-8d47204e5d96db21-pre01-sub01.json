@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs",
+      "source_url": "https://arxiv.org/abs/2606.18681",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite their remarkable performance, Vision Language Models (VLMs) incur substantial computational overhead due to the large number of visual tokens. While diversity maximization has become a dominant strategy for token reduction, existing methods rely on cosine-based normalized similarity that discards magnitude information, failing to faithfully approximate the original feature representation and leading to suboptimal performance, particularly on compositional multi-skill reasoning tasks. In this paper, we introduce SPARE, a subspace reconstruction method that reformulates token pruning as a column subset selection problem and explicitly minimizes reconstruction error. By iteratively selecting tokens with large projection residuals, SPARE performs reconstruction-driven pruning beyond angular diversity. Moreover, we reveal a counterintuitive anti-relevance phenomenon: tokens with lower image-text relevance score can better preserve contextual information. Based on this finding, we incorporate anti-relevance into SPARE as an additional selection criterion to promote context-aware token selection. Extensive experiments across multiple VLMs and benchmarks demonstrate that SPARE consistently achieves state-of-the-art performance, with strong gains on compositional tasks. When applied to LLaVA, SPARE removes up to 94% of visual tokens while retaining 95% of the baseline performance, all in a fully training-free manner.",
+      "identifiers": [
+        "SemanticScholar:4284458c5a9a19ab41fdcc7131846e54149be698"
+      ],
+      "semantic_scholar_id": "4284458c5a9a19ab41fdcc7131846e54149be698",
+      "canonical_id": "arXiv:2606.18681",
+      "arxiv_id": "2606.18681",
+      "doi": "10.48550/arXiv.2606.18681",
+      "authors": [
+        "Jaeyeon Lee",
+        "Shun-Jie Wen",
+        "Dong-Wan Choi"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は視覚トークン削除を角度的多様性ではなく部分空間再構成誤差の最小化として定式化し、投影残差と画像・質問関連性を組み合わせるSPAREを提案。LLaVAで視覚トークン最大94%削減時に元性能95%維持と報告。VLM推論の視覚プリフィル圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "S$^2$Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.01224",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning reduces the inference overhead of multimodal large language models (MLLMs) by retaining only a subset of visual tokens. Existing methods usually select tokens based on importance or redundancy. However, we observe that these criteria produce stable spatial biases across inputs and do not always outperform simple Uniform Grid sampling, highlighting the value of broad spatial coverage. Motivated by this, we propose S$^2$Prune, a training-free pruning method that preserves spatial coverage while adapting token density to local image structure. We first divide the image into regions and assign at least one token to each region to preserve coverage. The remaining token budget is then distributed according to Laplacian variation, giving more tokens to regions with richer structure. We then use Early Representation Change (ERC), computed from the first decoder block, to select representative tokens within each region. We evaluate S$^2$Prune across diverse settings and two MLLM architectures. On Qwen2.5-VL-7B-Instruct, it achieves the highest average accuracy among the evaluated training-free pruning methods. With only 32 of the original 576 visual tokens, it still retains 79.3% of the full-model performance. Code is available at https://github.com/yuanyuanjia71-spec/S2Prune.",
+      "identifiers": [
+        "SemanticScholar:613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72"
+      ],
+      "semantic_scholar_id": "613f2d55a193eb6ffbb688204eb4fe6bfeb1ec72",
+      "canonical_id": "arXiv:2609.01224",
+      "arxiv_id": "2609.01224",
+      "authors": [
+        "Yuan-Yuan Jia",
+        "Shun-Pu Tang",
+        "Qian-Qian Yang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は各画像領域に最低1トークンを残し、Laplacian変動で残余予算を配分して初期デコーダの表現変化で代表トークンを選ぶS2Pruneを提案。Qwen2.5-VL-7Bで576視覚トークン中32個のみでも元性能79.3%を維持。MLLM推論の視覚トークン削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Multi-modal Long Context Learning for Training-free Adaptation",
+      "source_url": "https://arxiv.org/abs/2505.19812",
+      "year": 2025,
+      "published": "2025-05-26",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Traditional approaches to adapting multi-modal large language models (MLLMs) to new tasks have relied heavily on fine-tuning. This paper introduces Efficient Multi-Modal Long Context Learning (EMLoC), a novel training-free alternative that embeds demonstration examples directly into the model input. EMLoC offers a more efficient, flexible, and scalable solution for task adaptation. Because extremely lengthy inputs introduce prohibitive computational and memory overhead, EMLoC contributes a chunk-wise compression mechanism combined with layer-wise adaptive pruning. It condenses long-context multimodal inputs into compact, task-specific memory representations. By adaptively pruning tokens at each layer under a Jensen-Shannon divergence constraint, our method achieves a dramatic reduction in inference complexity without sacrificing performance. This approach is the first to seamlessly integrate compression and pruning techniques for multi-modal long-context learning, offering a scalable and efficient solution for real-world applications. Extensive experiments on diverse vision-language benchmarks demonstrate that EMLoC achieves performance on par with or superior to naive long-context approaches. Our results highlight the potential of EMLoC as a groundbreaking framework for efficient and flexible adaptation of multi-modal models in resource-constrained environments. Codes are publicly available at https://github.com/Zehong-Ma/EMLoC.",
+      "identifiers": [
+        "SemanticScholar:68317564a47bc88cf9856c69a27b13cd4ff88e8d"
+      ],
+      "semantic_scholar_id": "68317564a47bc88cf9856c69a27b13cd4ff88e8d",
+      "canonical_id": "arXiv:2505.19812",
+      "arxiv_id": "2505.19812",
+      "doi": "10.48550/arXiv.2505.19812",
+      "authors": [
+        "Zehong Ma",
+        "Shi-Liang Zhang",
+        "Long-Hui Wei",
+        "Qi Tian"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 522,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "arXiv一次要旨はマルチモーダルin-context学習の長いデモ入力をチャンク圧縮と層ごとのJensen-Shannon制約付きトークン枝刈りで削減するEMLoCを提案。追加学習なしで長文脈適応と推論時の計算・メモリ削減を両立。MLLMの入力圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SeGO: Sensitivity-Aware Golden Optimization for Large-Scale VLM Quantization",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/237",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The deployment of Vision-Language Models (VLMs) faces memory and computational bottlenecks because of the massive parameters and intensive computations. While Post-Training Quantization (PTQ) can reduce these costs, existing methods often overlook the heterogeneity of multimodal input when applied to VLMs, leading to quantization accuracy degradation. In this paper, we categorize the Transformer linear layers into Expansion Space (responsible for feature expansion) and Projection Space (responsible for feature aggregation) and reveal a cross-modal structural sensitivity asymmetry in VLMs: The Expansion Space is more sensitive to quantization accuracy than the Projection Space in both LLM and ViT encoders. Based on this, we propose SeGO, a unified structural sensitivity-aware sparse optimization framework. First, it constructs search interval for scaling factors using channel-wise statistics of LLM and ViT weights to exclude invalid solutions. Then it applies scaling protection only to the sensitive Expansion Space while directly quantizing the robust Projection Space. Moreover, SeGO uses a Golden-Section Solver to speedup the search of optimal scaling factors. Experiments show that SeGO achieves the balance among model parameter amount, quantization accuracy and scaling factors' search efficiency on InternVL2 and LLaVA series. Under the W3/W4A16 configuration, SeGO improves the accuracy of 7B-26B models by 3.8%-17.3% and enhances calibration efficiency by dozens of times.",
+      "identifiers": [
+        "SemanticScholar:02f51f7ea3463a20e4a731b624d0daf3a23f2757"
+      ],
+      "semantic_scholar_id": "02f51f7ea3463a20e4a731b624d0daf3a23f2757",
+      "doi": "10.24963/ijcai.2026/237",
+      "canonical_id": "DOI:10.24963/ijcai.2026/237",
+      "authors": [
+        "Tian-Qi Zhao",
+        "Xin-Rui Cheng",
+        "Yang Su",
+        "Wei-Yi Lu",
+        "Zhao-Dong Zhang",
+        "Zhong-Jie Wang",
+        "Rui-Han Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IJCAI公式要旨はVLMのExpansion/Projection空間で量子化感度が異なる点を利用し、感度が高いExpansionだけを保護して黄金分割探索でスケールを決めるSeGOを提案。InternVL2/LLaVAのW3/W4A16で7B〜26B精度を3.8〜17.3%改善、較正効率を数十倍改善と報告。VLM推論向けPTQに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
+      "source_url": "https://arxiv.org/abs/2610.02713",
+      "year": 2026,
+      "published": "2026-10-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Most KV-cache compression methods classify attention heads once, either offline or during prefill, and keep this classification fixed throughout generation. Across three models (1.5B-8B) and three regimes (needle retrieval, long chain-of-thought, and multi-turn recall), we measure head behavior on four model-regime combinations and find that most heads change their reading behavior at least once during generation. We introduce WakeKV, a reactive residency policy that moves cooling heads to a recoverable CPU reservoir rather than freezing or permanently evicting their state. At matched memory or budget, WakeKV consistently improves miss rate over frozen classification and destructive eviction, evaluated across five model-regime combinations and over three cited baselines (SnapKV, uniform R-KV, and ReasonAlloc) across four eligible combinations. A FlexiCache/vLLM implementation on Mistral-7B confirms the benefit on real hardware, improving throughput while retaining LongBench quality.",
+      "identifiers": [
+        "SemanticScholar:17eeff3ba3bc318ede19cb7ae928eb1c4325fb46"
+      ],
+      "semantic_scholar_id": "17eeff3ba3bc318ede19cb7ae928eb1c4325fb46",
+      "canonical_id": "arXiv:2610.02713",
+      "arxiv_id": "2610.02713",
+      "authors": [
+        "Utkarsh Ranjan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は生成途中で注意ヘッドの参照挙動が変化することを測定し、固定分類や破壊的削除の代わりに冷却したKVをCPUへ可逆退避するWakeKVを提案。FlexiCache/vLLMのMistral-7B実装でLongBench品質を維持しつつスループット改善を報告。KVキャッシュ階層メモリ管理に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8d47204e5d96",
+    "round": "libimp-8d47204e5d96db21-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8d47204e5d96db21-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8d47204e5d96db21-pre01.json",
+    "receipt": "sha256:5186b1d6613fe2fb4bf508bc2a2021a6683ff66ded1470d877b5037d015883c6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8d47204e5d96",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

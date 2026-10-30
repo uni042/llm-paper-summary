@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2603.10535",
+      "year": 2026,
+      "published": "2026-03-11",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reinforcement learning significantly enhances LLM capabilities but suffers from a critical issue: length inflation, where models adopt verbosity or inefficient reasoning to maximize rewards. Prior approaches struggle to address this challenge in a general and lossless manner, primarily because additive penalties introduce a compensatory effect that creates optimization shortcuts, while heuristic gating strategies lack generality beyond binary feedback. To bridge this gap, we present Group Relative Reward Rescaling (GR$^3$), which reframes length control as a multiplicative rescaling paradigm, effectively establishing a generalized, continuous, and reward-dependent gating mechanism. To further ensure lossless optimization, we incorporate group-relative regularization and advantage-aware calibration, which dynamically adapt length budgets to instance difficulty and preserve the advantage signal of high-quality trajectories. Empirically, across both RLHF and RLVR settings, GR$^3$~maintains training dynamics and downstream performance comparable to standard GRPO while significantly mitigating length inflation, outperforming state-of-the-art length-regularized baselines.",
+      "identifiers": [
+        "SemanticScholar:ce3dd925d735f2daa1a5e54d8fbc7cbdb5491a52"
+      ],
+      "semantic_scholar_id": "ce3dd925d735f2daa1a5e54d8fbc7cbdb5491a52",
+      "canonical_id": "arXiv:2603.10535",
+      "arxiv_id": "2603.10535",
+      "doi": "10.48550/arXiv.2603.10535",
+      "authors": [
+        "Zi-Chao Li",
+        "Jie Lou",
+        "FangCheng Dong",
+        "Zhi-Yuan Fan",
+        "Mengjie Ren",
+        "Hong-Yu Lin",
+        "Xian-Pei Han",
+        "De-Bing Zhang",
+        "Le Sun",
+        "Yaojie Lu",
+        "Xing Yu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 233,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はRLHF/RLVRで報酬最適化によりCoTが冗長化する問題に対し、乗法的報酬再スケーリングGR3と優位度較正で長さを制御。品質を維持しつつ生成長膨張を抑えるため、推論時のトークン消費量削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DocPrune:Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning",
+      "source_url": "https://arxiv.org/abs/2604.22281",
+      "year": 2026,
+      "published": "2026-04-24",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in vision-language models have demonstrated remarkable performance across diverse multi-modal tasks, including document question answering that leverages structured visual cues from text, tables, and figures. However, unlike natural images, document images contain large backgrounds and only sparse supporting evidence, leading to the inefficient consumption of substantial computational resources, especially for long documents. We observe that existing token-reduction methods for natural images and videos fall short in utilizing the structural sparsity unique to documents. To address this, we propose DocPrune, a training-free and progressive document token pruning framework designed for efficient long-document understanding. The proposed method preserves only the essential tokens for the task while removing unnecessary ones, such as background or question-irrelevant tokens. Moreover, it automatically selects the appropriate layers to initiate token pruning based on the model's level of comprehension. Our experiments on the M3DocRAG show that DocPrune improves throughput by 3.0x and 3.3x in the encoder and decoder, respectively, while boosting the F1 score by +1.0, achieving both higher accuracy and efficiency without any additional training.",
+      "identifiers": [
+        "SemanticScholar:b41e5cd1b1400a8a9a89e97607ade22236ef6f30"
+      ],
+      "semantic_scholar_id": "b41e5cd1b1400a8a9a89e97607ade22236ef6f30",
+      "canonical_id": "arXiv:2604.22281",
+      "arxiv_id": "2604.22281",
+      "doi": "10.48550/arXiv.2604.22281",
+      "authors": [
+        "Joonmyung Choi",
+        "Sanghyeok Lee",
+        "Jongha Kim",
+        "Sehyung Kim",
+        "Dohwan Ko",
+        "Jihyung Kil",
+        "Hyunwoo J. Kim"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 189,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は文書画像の背景・質問無関係トークンを除外し、モデル理解度に応じ枝刈り開始層を選ぶDocPruneを提案。M3DocRAGでencoder/decoderスループットを3.0倍・3.3倍に改善しF1を1.0ポイント向上。文書VLM推論の視覚トークン削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KForge: LLM-Driven Cross-Platform Kernel Generation for AI Accelerators",
+      "source_url": "https://arxiv.org/abs/2606.02963",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Production inference increasingly targets a heterogeneous mix of accelerators. Agentic pipelines interleave reasoning, tool calls, and multi-agent coordination, each with distinct compute and memory profiles. For optimal efficiency, each stage should run on the accelerator best suited to it. This creates a systems challenge: each pipeline now requires high-performance kernels across a growing set of hardware backends and programming models. Writing these kernels by hand is time-consuming, demands deep low-level expertise, and does not scale as kernel complexity grows. Recently, Large Language Models (LLMs) have been leveraged for automatic kernel generation, but challenges in low-level code generation and cross-backend generalization persist. We present KForge, a cross-platform framework built around an iterative refinement loop driven by two collaborating LLM-based agents: a generation agent that produces and progressively refines kernels using compilation and correctness feedback, and a performance-analysis agent that interprets profiling data, from programmatic APIs to GUI-based tools, and emits recommendations that steer the next round of synthesis. The loop alternates between functional passes, which drive a candidate to correctness, and optimization passes, which close the performance gap to hand-tuned baselines. We evaluate KForge on two backends with very different baseline reference availability. On NVIDIA B200, KForge achieves a 2.12$\\%$ improvement in end-to-end throughput compared to TensorRT-LLM on the gpt-oss-20b inference speed benchmark. On Intel Arc B580, KForge generates Triton kernels achieving a 5.13$\\times$ geometric mean speedup over the faster of PyTorch eager and torch.compile on 37 GEMM + tail-ops workloads from KernelBench Level 2, primarily via operator fusion and mixed-precision execution.",
+      "identifiers": [
+        "SemanticScholar:3bb08e77e3d58c73ae185079f5917e8396f461d2"
+      ],
+      "semantic_scholar_id": "3bb08e77e3d58c73ae185079f5917e8396f461d2",
+      "canonical_id": "arXiv:2606.02963",
+      "arxiv_id": "2606.02963",
+      "doi": "10.48550/arXiv.2606.02963",
+      "authors": [
+        "Taras Sereda",
+        "Burak Bartan",
+        "Ankita Nayak",
+        "Tom St. John",
+        "N. Serrino",
+        "Zain Asgar"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は異種AIアクセラレータ向けカーネル生成と性能解析を2つのLLMエージェントで反復するKForgeを提案。コンパイル・正確性フィードバックと実機プロファイルを組み合わせ、B200を含む複数バックエンドで評価。推論カーネル生成・移植の直接的なシステム貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2606.01790",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language-model-based graphical user interface (GUI) agents have shown broad automation capabilities, yet deployment is bottlenecked by a key-value (KV) cache that grows linearly with interaction steps. For instance, UI-TARS-1.5-7B consumes 76 GB of GPU memory on merely five screenshots, approaching the capacity of mainstream 80 GB accelerators. Existing KV compression methods share two structural assumptions: aggregating visual-token importance into a single shared saliency map, and applying a fixed top-B cutoff to the fused score distribution. Pilot measurements refute both: spatial specialization lives at the attention-subspace level and migrates across layers, while the score distribution drifts in shape along a trajectory. We propose STaR-KV (Spatio-Temporal Adaptive Re-weighting), a training-free KV cache compression framework that calibrates token importance along three axes: (i) subspace-aware scoring driven by online spatial mutual information; (ii) a temporal stability discount that suppresses redundant cache entries from persistently attended subspaces; and (iii) an entropy-derived temperature that adaptively reshapes the score distribution. Across four GUI benchmarks, STaR-KV achieves the strongest average accuracy among state-of-the-art KV compression methods (e.g., GUIKV, SnapKV) at matched budgets, with no compression-stage FLOPs overhead (-0.07%) and cutting peak GPU memory by nearly 40% at a 20% KV-cache budget. Code is available at https://github.com/kawhiiiileo/STaR-KV.",
+      "identifiers": [
+        "SemanticScholar:6a86296b7ef87e79d87f5f591864ac8b75b75d66"
+      ],
+      "semantic_scholar_id": "6a86296b7ef87e79d87f5f591864ac8b75b75d66",
+      "canonical_id": "arXiv:2606.01790",
+      "arxiv_id": "2606.01790",
+      "doi": "10.48550/arXiv.2606.01790",
+      "authors": [
+        "Yu-Hang Han",
+        "Wenzheng Yang",
+        "Yu-Jie Chen",
+        "Xiangqi Jin",
+        "Yao-Jie Zhang",
+        "Siteng Huang",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はGUIエージェントのスクリーンショット蓄積でKVが急増する問題に対し、注意部分空間別重要度・時間的冗長性・スコア分布エントロピーでKVを再重み付けするSTaR-KVを提案。KV予算20%でピークGPUメモリを約40%削減しGUI品質を維持。エージェント推論のKV圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TRiMS: Real-Time Tracking of Minimal Sufficient Length for Efficient Reasoning via RL",
+      "source_url": "https://arxiv.org/abs/2603.17449",
+      "year": 2026,
+      "published": "2026-03-18",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models achieve breakthroughs in complex reasoning via long chain-of-thought sequences. However, this often leads to severe reasoning inflation, causing substantial computational redundancy. To maximize Intelligence per Token, we introduce a theoretical metric, MSL-Minimal Sufficient Length. MSL rigorously characterizes the shortest reasoning length that preserves answer correctness. We provide a recursive definition based on independently sampled sequences and prove the existence of its limit, establishing the first measurable lower bound for reasoning-chain compression. Building on an analysis of mainstream CoT compression strategies, we identify key structural factors enabling a model to approach MSL. Based on these insights, we propose TRiMS which employs the GRPO algorithm in conjunction with MSL-based estimation during training, while mitigating instabilities during the training process through dynamic batch aggregation and advantage computation using batch-level standard deviation. TRiMS achieves over 80% CoT token reduction with a minor accuracy boost across all benchmarks.",
+      "identifiers": [
+        "SemanticScholar:818760579996e65efe42ba514ebcc809361e07d5"
+      ],
+      "semantic_scholar_id": "818760579996e65efe42ba514ebcc809361e07d5",
+      "canonical_id": "arXiv:2603.17449",
+      "arxiv_id": "2603.17449",
+      "doi": "10.48550/arXiv.2603.17449",
+      "authors": [
+        "Ting-Cheng Bian",
+        "Jin-Chang Luo",
+        "Ming-Ming Cheng",
+        "Jin-Yu Zhang",
+        "Xiaoling Xia",
+        "Nicole Li",
+        "Yan Tao",
+        "Haiwei Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は正答を保つ最小十分CoT長MSLを定式化し、GRPOで動的に推論長を制御するTRiMSを提案。複数ベンチマークでCoTトークン80%超削減し精度を小幅改善と報告。生成計算の削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d43906978f51",
+    "round": "libimp-d43906978f51223a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d43906978f51223a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d43906978f51223a-pre01.json",
+    "receipt": "sha256:ae8e7cfa34b5341afd7e90d09b2ce27942fe718c0448624e2447579f26c77621"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d43906978f51",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

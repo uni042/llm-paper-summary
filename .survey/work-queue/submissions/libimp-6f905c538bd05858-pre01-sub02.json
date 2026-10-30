@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Evidence-Driven Dynamic Visual Selector for Efficient Long Video Understanding",
+      "source_url": "https://arxiv.org/abs/2608.05780",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advancements in MLLM-based long-form video understanding have mitigated inference-time computational cost and limited context lengths by selecting query-relevant frames. However, existing approaches predominantly rely on external proxy scorers and rigid heuristic rules, inevitably suffering from misalignment with the target MLLM's intrinsic evidence and failing to accommodate the non-uniform spatiotemporal information density. In this paper, we propose a fine-grained dynamic visual selection framework named EviSelect, grounded in the target MLLM internal attention evidence. Our method efficiently probes visual evidence via sparse prefilling as a structured prior to guide distribution-aware dynamic sampling. Specifically, we efficiently approximate attention maps of the target MLLM using highly compressed visual inputs and sparse attention, well-aligned to the full counterpart. Conditioned on three complementary attention components derived from this prior, we design a lightweight selector that not only precisely locates query-relevant timestamps but also adaptively adjusts the local sampling rate and spatial resolution. To enable evidence-conditioned spatiotemporal sampling, we formulate the selector as a stochastic policy and optimize it via GRPO under a joint accuracy--efficiency reward. By rewarding correct predictions under lower visual cost through group-relative comparisons, our method encourages the policy to allocate computation dynamically according to the information density of each video. Across three long video understanding benchmarks, EviSelect achieves superior performance compared to existing methods while reducing selected visual tokens by about 50\\% and achieving a 3.9x end-to-end speedup.",
+      "identifiers": [
+        "SemanticScholar:9a2d0dbc593d57d887f49b359c81416d90a3deb4"
+      ],
+      "semantic_scholar_id": "9a2d0dbc593d57d887f49b359c81416d90a3deb4",
+      "canonical_id": "arXiv:2608.05780",
+      "arxiv_id": "2608.05780",
+      "authors": [
+        "Bo Zhang",
+        "Wenxin Wang",
+        "Feng Chen",
+        "Zhi-Hao Zhang",
+        "Zi-Xuan Wang",
+        "Changsheng Li",
+        "Yin-Jie Lei"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は対象MLLMの疎prefillで得た注意証拠を使い、動画の関連時刻・フレーム間隔・空間解像度を適応選択するEviSelectを提案。GRPOで精度と視覚計算コストを共同最適化し、長動画MLLMの視覚入力削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The Sparsity Whisperer",
+      "source_url": "https://arxiv.org/abs/2608.06630",
+      "year": 2026,
+      "published": "2026-08-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning reduces the inference cost of large language models, but existing criteria primarily preserve large activations or reconstruct layer outputs. We argue that this overlooks a key computation performed by particularly sparsity-sensitive neurons in the MLP up and gate projections: separating similar inputs into dissimilar outputs. This suggests that effective pruning should preserve not only activations, but also the differences between outputs more broadly. We introduce a family of difference-informed pruning methods built upon this principle. Wisp is a first-order, update-free method that scores weights using input-difference norms, and Wisp+ refines this score neuronwise using the input pairs each neuron separates most strongly. Finally, Whisper is a second-order method that uses a lightly regularized difference Hessian as its reconstruction objective. Across Llama 2 and 3.1 models from 7B to 405B parameters, our second-order variant consistently improves over strong reconstruction-based baselines, while our update-free variants improve over activation-aware baselines, especially in constrained settings. The improvements over Wanda and SparseGPT extend to structured sparsity, downstream evaluations, and other model families. Augmenting stronger techniques such as RIA and ALPS with our difference-informed criteria yields further improvements, shifting the overall accuracy-runtime frontier outward at negligible additional cost. These results suggest that preserving output differences is a broadly useful and composable signal for post-training LLM sparsification.",
+      "identifiers": [
+        "SemanticScholar:0dc5114ff4fbab93c587f6fa85d9946404ec83b5"
+      ],
+      "semantic_scholar_id": "0dc5114ff4fbab93c587f6fa85d9946404ec83b5",
+      "canonical_id": "arXiv:2608.06630",
+      "arxiv_id": "2608.06630",
+      "authors": [
+        "Linghao Kong",
+        "Inimai Subramanian",
+        "Micah Adler",
+        "Dan Alistarh",
+        "D. Gutfreund",
+        "N. Shavit"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 85,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMLPの類似入力を分離する能力を維持するよう差分情報に基づく枝刈り指標Wisp/Wisp+/Whisperを提案。Llama2/3.1の7B〜405BでWanda・SparseGPT等より品質と実行コストのPareto前線を改善。LLM推論向け疎性最適化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SPIMOE: Exploiting Hybrid Sparsity for Reasoning MoE Inference on Heterogeneous PIM Architectures",
+      "source_url": "https://arxiv.org/abs/2609.34612",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-reasoning Mixture-of-Experts (MoE) models expose two coupled inference bottlenecks: growing KV caches shift the critical path toward attention, while sparse expert activation causes load imbalance and low hardware utilization. Although Processing-in-Memory (PIM) offers a promising way to mitigate data movement overhead, existing PIM-based accelerators typically optimize attention or FFNs in isolation. We propose SPIMOE, the first co-design framework that exploits hybrid sparsity for efficient MoE inference on heterogeneous PIM architectures. SPIMOE combines adaptive expert routing with block-sparse attention and physical KV-cache eviction, and disaggregates attention and FFNs across SRAM-PIM and HBM-PIM. Static expert mapping and dynamic sub-batch scheduling further balance channel loads and overlap the two paths. Evaluations show that SPIMOE achieves up to $8.35\\times$ end-to-end speedup over an NVIDIA A100 GPU and $3.33\\times$ speedup in MoE FFN execution over PIMoE, while preserving reasoning accuracy comparable to full-attention baselines.",
+      "identifiers": [
+        "SemanticScholar:8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd"
+      ],
+      "semantic_scholar_id": "8ca5f42a6fb2abf92f404bde4d01a69ebe1980dd",
+      "canonical_id": "arXiv:2609.34612",
+      "arxiv_id": "2609.34612",
+      "doi": "10.1145/3831252.3834223",
+      "authors": [
+        "Ru-Bing Yang",
+        "Cen-Lin Duan",
+        "Ying-Jie Qi",
+        "Xiao-Lin He",
+        "Xiao Ma",
+        "Jian-Lei Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMoEの専門家疎性と注意のブロック疎性・KV物理削除を同時に活用し、SRAM-PIM/HBM-PIMに注意とFFNを分離するSPIMOEを提案。A100 GPU比E2E最大8.35倍、PIMoE比MoE FFN最大3.33倍と報告。PIMによる推論アクセラレーションに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6f905c538bd0",
+    "round": "libimp-6f905c538bd05858-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6f905c538bd05858-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6f905c538bd05858-pre01.json",
+    "receipt": "sha256:5c1d592c0bdba8a1510707caa0ad26d10a0b052ae3ac1683895cd0bf5d83aeb4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6f905c538bd0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

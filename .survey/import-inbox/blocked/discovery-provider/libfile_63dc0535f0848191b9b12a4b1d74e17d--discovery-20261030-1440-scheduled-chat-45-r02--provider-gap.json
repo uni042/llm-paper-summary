@@ -2,7 +2,7 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-45",
-  "run_key": "20261030-1440-scheduled-chat-45-discovery/r02",
+  "run_key": "20261030-1440-scheduled-chat-45-discovery/r02::provider-gap",
   "reference_main_sha": "d558130355ca0d462b4faa8cf7497ab83b7bc49b",
   "record_count": 1,
   "records": [
@@ -22,5 +22,10 @@
       "worklist_rank": 23,
       "origin": "discovery_worklist_abstract_review"
     }
+  ],
+  "parent_run_key": "20261030-1440-scheduled-chat-45-discovery/r02",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_63dc0535f0848191b9b12a4b1d74e17d--discovery-20261030-1440-scheduled-chat-45-r02.json",
+  "provider_gap_ids": [
+    "arXiv:2610.12133"
   ]
 }

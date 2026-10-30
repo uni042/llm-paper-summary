@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-30",
-  "run_key": "20261030-1530-scheduled-chat-30/r09",
+  "run_key": "20261030-1530-scheduled-chat-30/r09::provider-gap",
   "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
-  "record_count": 10,
+  "record_count": 8,
   "records": [
     {
       "classification": "accept",
@@ -96,41 +96,6 @@
       "worklist_rank": 121
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2512.10430",
-      "identity_tokens": [
-        "arXiv:2512.10430"
-      ],
-      "title": "T-pro 2.0: An Efficient Russian Hybrid-Reasoning Model and Playground",
-      "reason": "arXiv一次要旨はロシア語向けhybrid reasoning LLMとEAGLE型投機的復号パイプラインを公開し、デモで推論速度改善を示す。推論効率に関連する一方、主貢献はモデル・データセット・ベンチマークのリリースであり、一般化可能な新しいサービング方式の評価が中心ではないためborderline。",
-      "source_url": "https://arxiv.org/abs/2512.10430",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T15:41:00+09:00",
-      "last_checked_at": "2026-10-30T15:41:00+09:00",
-      "linked_from": [
-        "Speculative Decoding",
-        "Model Release"
-      ],
-      "worklist_rank": 122
-    },
-    {
-      "classification": "unrelated",
-      "canonical_id": "arXiv:2610.12514",
-      "identity_tokens": [
-        "arXiv:2610.12514"
-      ],
-      "title": "CORAL-KV: Compact Cross-Layer Prediction and Residual Coding for Autoregressive Video KV Caches",
-      "reason": "arXiv一次要旨は自己回帰動画拡散モデルのKVを層間予測・残差符号化で圧縮するCORAL-KVを提案。対象は動画生成モデルであり、LLM言語生成のKVキャッシュや推論サービングではないため今回の範囲外。",
-      "source_url": "https://arxiv.org/abs/2610.12514",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T15:41:00+09:00",
-      "last_checked_at": "2026-10-30T15:41:00+09:00",
-      "linked_from": [
-        "KV Cache Optimization / Compression"
-      ],
-      "worklist_rank": 124
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2402.08958",
       "identity_tokens": [
@@ -183,5 +148,17 @@
       ],
       "worklist_rank": 131
     }
+  ],
+  "parent_run_key": "20261030-1530-scheduled-chat-30/r09",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_98f44275d6b88191a5dc178ee05eb07c--discovery-20261030-1530-scheduled-chat-30-r09.json",
+  "provider_gap_ids": [
+    "arXiv:2402.08958",
+    "arXiv:2411.00853",
+    "arXiv:2505.12044",
+    "arXiv:2510.08647",
+    "arXiv:2602.02151",
+    "arXiv:2604.06970",
+    "arXiv:2606.07248",
+    "arXiv:2607.20434"
   ]
 }

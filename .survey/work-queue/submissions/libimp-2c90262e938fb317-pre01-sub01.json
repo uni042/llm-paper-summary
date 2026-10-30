@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2608.03812",
+      "year": 2026,
+      "published": "2026-08-04",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs substantial computational overhead, demanding aggressive token compression for efficient deployment. Existing methods often degrade at low token budgets: pre-LLM compression may discard structurally important and globally distributed evidence, whereas inner-LLM compression often underexploits query-conditioned audio-visual collaboration. To address these limitations, we propose OmniPack, a training-free framework that coordinates structural compression before the LLM with task-relevant semantic refinement within the LLM. Before the LLM, OmniPack removes structural redundancy through modality-specific importance, global coverage, and similarity-aware merging. After sufficient multimodal interaction, it further consolidates diverse, task-relevant representations through textual guidance and audio-visual collaboration. Extensive experiments on five benchmarks with three Omni-LLM backbones demonstrate that OmniPack consistently achieves the best performance-efficiency trade-off across diverse retention ratios, outperforming all existing methods. Notably, on Qwen2.5-Omni-7B, OmniPack preserves 98.0% of the original performance while reducing FLOPs to 16.7%, and still retains 92.9% of the original performance with only 6.8% of the original FLOPs.",
+      "identifiers": [
+        "SemanticScholar:45b56098933fe0c82b7a6489559ec073d3fb9ebe"
+      ],
+      "semantic_scholar_id": "45b56098933fe0c82b7a6489559ec073d3fb9ebe",
+      "canonical_id": "arXiv:2608.03812",
+      "arxiv_id": "2608.03812",
+      "authors": [
+        "Wan-Shun Su",
+        "Yang Shi",
+        "Fei Liu",
+        "Ziwen Yu",
+        "Yan Min",
+        "Zhuo-Ran Zhang",
+        "Qi-Xun Wang",
+        "Hao-Tian Wang",
+        "Shi-Xuan Liu",
+        "Yuan-Xing Zhang",
+        "Peng Wu",
+        "Cheng-Fu Huo",
+        "Liang Ding"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 87,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は音声・動画トークンの冗長性に対し、LLM投入前の構造圧縮と内部のタスク依存意味補正を連携する学習不要のOmniPackを提案。長い音声・動画文脈のOmni-LLM推論計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Vectorized FlashAttention with low-cost exponential computation in RISC-V vector processors",
+      "source_url": "https://arxiv.org/abs/2510.06834",
+      "year": 2025,
+      "published": "2025-10-08",
+      "venue": "Journal of Supercomputing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention is a core operation in numerous machine learning and artificial intelligence models. This work focuses on the acceleration of attention kernel using FlashAttention algorithm, in vector processors, particularly those based on the RISC-V instruction set architecture (ISA). This work represents the first effort to vectorize FlashAttention, minimizing scalar code and simplifying the computational complexity of evaluating exponentials needed by softmax used in attention. By utilizing a low-cost approximation for exponentials in floating-point arithmetic, we reduce the cost of computing the exponential function without the need to extend baseline vector ISA with new custom instructions. Also, appropriate tiling strategies are explored with the goal to improve memory locality. Experimental results highlight the scalability of our approach, demonstrating significant performance gains with the vectorized implementations when processing attention layers in practical applications.",
+      "identifiers": [
+        "SemanticScholar:fa5c2e81e09468df0a11822b4c0ce59560b9e5b7"
+      ],
+      "semantic_scholar_id": "fa5c2e81e09468df0a11822b4c0ce59560b9e5b7",
+      "canonical_id": "arXiv:2510.06834",
+      "arxiv_id": "2510.06834",
+      "doi": "10.1007/s11227-026-08322-x",
+      "authors": [
+        "Vasileios Titopoulos",
+        "Kosmas Alexandridis",
+        "G. Dimitrakopoulos"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 387,
+        "matched_prestigious_venue": "Supercomputing"
+      },
+      "reason": "arXiv一次要旨はRISC-Vベクトル命令でFlashAttentionのスカラー処理を減らし、softmax指数関数を低コスト近似しつつタイル化とメモリ局所性を最適化する。注意カーネルのハードウェア高速化に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression",
+      "source_url": "https://arxiv.org/abs/2609.26177",
+      "year": 2026,
+      "published": "2026-08-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Structured pruning of attention heads provides a hardware-friendly way to compress Transformer language models. However, existing methods for measuring head-level importance require calibration data, gradient computation, or Hessian estimation. These requirements add extra overhead and make the methods depend on the data. Our work presents Magnitude Profile (MP) scoring, a training-free criterion for head importance that identifies dispensable heads through statistical outlier detection on weight row norms. Heads whose projection weights fall within the population bulk are pruned, while heads exhibiting outlier norms, which carry disproportionate representational capacity, are preserved. Our work further gives MP-G, a variant that handles Grouped Query Attention (GQA) by distributing shared key-value group scores across associated query heads. Across five models evaluated on WikiText-2 perplexity at 12.5%-50% head sparsity, MP-G achieves the best perplexity on OPT-6.7B at all sparsity levels (18.46 at 12.5%, 27.87 at 25%, 152.0 at 50%). MP-G also gives the best results on RoBERTa-large at 12.5% and 25% sparsity, with perplexity values of 7.27 and 10.28, outperforming calibration-dependent baselines including Wanda-Head, SparseGPT-Head, and Gradient-Head. It requires zero forward passes, calibration samples, or gradient computation. At 50% sparsity, head pruning yields up to 16% parameter reduction with 50% attention FLOP savings. Our results show that weight-only statistical scoring can match or outperform data-dependent methods for structured head pruning, providing a practical, zero-cost criterion for Transformer compression.",
+      "identifiers": [
+        "SemanticScholar:5104e3f36db8e8d252033df614fe01275fbbcfc1"
+      ],
+      "semantic_scholar_id": "5104e3f36db8e8d252033df614fe01275fbbcfc1",
+      "canonical_id": "arXiv:2609.26177",
+      "arxiv_id": "2609.26177",
+      "authors": [
+        "Kasun Dewage",
+        "Marianna Pensky",
+        "Heranga K. Rathnasekara",
+        "Suranadi De Silva"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 80,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は注意ヘッドの投影重み行ノルムから外れ値ヘッドを識別し、校正データや勾配なしで不要ヘッドを構造削除するMP/MP-Gを提案。GQAの共有KV群にも対応し、LLM推論のパラメータ・演算削減に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-2c90262e938f",
+    "round": "libimp-2c90262e938fb317-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-2c90262e938fb317-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-2c90262e938fb317-pre01.json",
+    "receipt": "sha256:f39ef73d03125d66dba047199314c7b5ef6f666557bdf01bcae05bd00f3f2c49"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-2c90262e938f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

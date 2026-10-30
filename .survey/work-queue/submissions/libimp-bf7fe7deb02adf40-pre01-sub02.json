@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Memory as a cache: Exact context reuse and deletion by construction",
+      "source_url": "https://arxiv.org/abs/2609.32395",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The KV cache of a transformer entangles every token's representation with its entire prefix: a passage encoded once cannot be reused under a different prefix or removed without recomputing everything after it, so exact cache reuse is limited to shared prefixes. We present SMem, an architecture whose context representation is a cache by construction. A block-local encoder maps each block to memory rows independently of other blocks, and a reader conditions generation on their union through cross-attention. For every parameter setting, memory composes exactly at fixed block indices, deleting a block is an exact $O(b)$ update for $b$-token blocks, and the memory state is independent of the edit path. At $4\\times$ the training context, under the shared recipe, SMem retrieves planted needles beyond any trained-length window (exact match 0.14-0.28 at distances of 31 and 63 blocks), where learned-position, RoPE, and Block-Attention-style transformers all score at most 0.02. A fully cached context is served by computing one block alone at a near-constant 3.1-6.2 ms, whereas cold prefill grows with context; batched decode stores 34-38% fewer KV rows and runs 1.4-1.7$\\times$ faster when bandwidth-bound; and deletion beats suffix recomputation by 8.5$\\times$ at 512 blocks and 452$\\times$ at 4096 blocks (32-256$\\times$ the trained length, probing the cost model rather than a served regime). The cost is a perplexity gap of -4.7% to +2.8% (negative favors SMem) against a parameter-matched transformer with the same positional scheme, at 160M-1.5B on FineWeb-Edu across two recipes and a learning-rate search. SMem also composes with RoPE: at 160M and 410M the composite matches or leads the matched transformer and closes 29-59% of SMem's gap to a RoPE transformer. Dropping prefix entanglement thus keeps perplexity comparable while making the cache exactly composable and editable.",
+      "identifiers": [
+        "SemanticScholar:f9e4be791a9114741de53d11b83228345ffef634"
+      ],
+      "semantic_scholar_id": "f9e4be791a9114741de53d11b83228345ffef634",
+      "canonical_id": "arXiv:2609.32395",
+      "arxiv_id": "2609.32395",
+      "authors": [
+        "Sheng-Yao Wang",
+        "Jiang Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は各ブロックを接頭辞非依存に符号化し、読出器がcross-attentionで合成するSMemを提案。異なる接頭辞での厳密な再利用・削除が可能となり、帯域律速decode1.4〜1.7倍高速化、512ブロック削除で再計算比8.5倍改善などを報告。編集可能なLLM推論メモリに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SCOPD: Sparse-Context On-Policy Self-Distillation for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.34044",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning vision-language models (VLMs) process images and videos as long sequences of visual tokens, making inference expensive. Training-free token pruning reduces this cost, but aggressive compression can sharply degrade performance, often attributed to irreversible loss of task-relevant visual information. We show that this explanation is incomplete. In a fixed-context Pass@K analysis, repeated sampling from the same pruned visual representation recovers many examples missed by greedy decoding, indicating that useful visual evidence can remain accessible but be used unreliably. We call this the representation-utilization gap. Motivated by this observation, we introduce SCOPD, a sparse-context on-policy self-distillation framework in which a student generates reasoning trajectories from pruned visual tokens while a privileged full-context teacher supervises the same on-policy prefixes. SCOPD requires no ground-truth responses, architectural changes, or additional inference-time computation. We further introduce SCOPD+, which uses a small visual-budget intervention to identify visually sensitive response positions and selectively distill them. At 10% visual-token retention, the Vanilla model retains 86.37% of its unpruned performance across 13 benchmarks. SCOPD raises this to 90.49%, while SCOPD+ further improves it to 92.43%. Across token budgets, benchmarks, and pruning operators, our results show that efficient reasoning depends not only on which visual information survives pruning, but also on how reliably the model learns to use it.",
+      "identifiers": [
+        "SemanticScholar:0f686e71256401f7c405a76b108ba0ae83d715b8"
+      ],
+      "semantic_scholar_id": "0f686e71256401f7c405a76b108ba0ae83d715b8",
+      "canonical_id": "arXiv:2609.34044",
+      "arxiv_id": "2609.34044",
+      "authors": [
+        "Ahmadreza Jeddi",
+        "En-Ming Zhang",
+        "Jasper Gerigk",
+        "H. Karaimer",
+        "Mozhgan Nasr Azadani",
+        "Jia-Yun Luo",
+        "M. Le",
+        "Gholamali Aminian",
+        "Hugo Buurmeijer",
+        "Yong-Chao Chen",
+        "Leonid Sigal",
+        "Igor Gilitschenski",
+        "K. Derpanis",
+        "Marco Pavone",
+        "Babak Taati"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は視覚トークンを強く削減した際の品質低下を表現欠落だけでなく利用不安定性として分析し、疎文脈で生成した学生軌跡に全視覚文脈の教師が監督するSCOPDを提案。視覚トークン10%保持時の相対品質を86.37%から90.49%、SCOPD+で92.43%へ回復し、推論時追加計算なしで圧縮品質を改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ACPruner: Visual Token Pruning as Biased Attention Coverage Maximization in LVLMs",
+      "source_url": "https://arxiv.org/abs/2609.34558",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) face significant computational inefficiencies caused by the large number of visual tokens. Existing visual token pruning methods mainly focus on either retaining individually important tokens or selecting mutually diverse ones. In this work, we revisit visual token pruning from a coverage perspective and formulate it as a biased attention coverage maximization problem. The key idea is to select a compact token subset whose encoder-side outgoing attention can jointly cover the image while assigning higher coverage priority to more informative regions. From this perspective, we propose ACPruner, a training-free visual token pruning framework for efficient LVLM inference. ACPruner first estimates token importance by combining intra-modal saliency and inter-modal relevance, then derives token-wise coverage from attention patterns within the vision encoder, and finally performs greedy selection to maximize the proposed coverage objective. Extensive experiments across multiple LVLM backbones, including LLaVA-1.5-7B/13B, LLaVA-NeXT-7B/13B, Qwen2.5-VL-7B, and LLaVA-OneVision-7B, show that ACPruner consistently achieves strong performance retention while delivering substantial end-to-end inference speedups.",
+      "identifiers": [
+        "SemanticScholar:0ff4ac461892820ceab3955a75af3a670f569f2d"
+      ],
+      "semantic_scholar_id": "0ff4ac461892820ceab3955a75af3a670f569f2d",
+      "canonical_id": "arXiv:2609.34558",
+      "arxiv_id": "2609.34558",
+      "authors": [
+        "Xu Li",
+        "Yuxuan Liang",
+        "Yi Zheng",
+        "Zhe Liu",
+        "Xiao-Lei Chen",
+        "Hao-Tian Chen",
+        "Rui Zhu",
+        "Fan Shi",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は視覚トークン選択を注意カバレッジ最大化として定式化し、顕著性・質問関連性と視覚エンコーダ注意を用いたgreedy選択ACPrunerを提案。LLaVA、Qwen2.5-VLなどでE2E推論高速化と品質維持を報告。MLLM視覚プリフィル圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WUSH-KV: KV Cache Quantization with Data-Adaptive Transforms",
+      "source_url": "https://arxiv.org/abs/2609.38121",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV cache memory and bandwidth costs grow with context length and batch size, which limits efficient long-context inference. To address this bottleneck, we introduce WUSH-KV for low-bit KV-cache quantization. It adapts WUSH, which constructs a data-aware transform from the second-order statistics of both factors in a matrix product to reduce quantization error. WUSH-KV uses calibration data to construct separate key and value transforms, with the value transform folded into the model weights and the key transform applied after RoPE. The transforms can be paired with clipped quantizers. For one such quantizer, QuEST INT, we show that, under mild assumptions, the WUSH transform is near-optimal. With this quantizer, WUSH-KV reduces layerwise reconstruction error and achieves the lowest end-to-end perplexity among other tested transforms. For end-to-end evaluation, we integrate WUSH-KV into SGLang using OSCAR-style percentile-clipped affine quantization. At 2-bit, WUSH-KV performs comparably to or outperforms the OSCAR transform across all evaluated models and downstream tasks.",
+      "identifiers": [
+        "SemanticScholar:fe7c087a88fc59c5147e04981f6336ae1e315095"
+      ],
+      "semantic_scholar_id": "fe7c087a88fc59c5147e04981f6336ae1e315095",
+      "canonical_id": "arXiv:2609.38121",
+      "arxiv_id": "2609.38121",
+      "authors": [
+        "Jiale Chen",
+        "Vage Egiazarian",
+        "Eldar Kurtic",
+        "T. Hoefler",
+        "Dan Alistarh"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はK/Vそれぞれの二次統計から量子化誤差を抑える変換を構成し、V変換をモデル重みに折り込みK変換をRoPE後に適用するWUSH-KVを提案。SGLangに2bit KVを実装し、OSCAR変換と同等以上のPPL・タスク品質を報告。KVキャッシュ量子化の直接的な実装。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "H-FA: A Hybrid Floating-Point and Logarithmic Approach to Hardware Accelerated FlashAttention",
+      "source_url": "https://arxiv.org/abs/2511.00295",
+      "year": 2025,
+      "published": "2025-10-31",
+      "venue": "IEEE Transactions on Circuits and Systems for Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have significantly advanced AI and machine learning through their powerful attention mechanism. However, computing attention on long sequences can become a computational bottleneck. FlashAttention mitigates this by fusing the softmax and matrix operations into a tiled computation pattern that decouples performance from sequence length. Though designed for GPUs, its simplicity also makes it well suited for direct hardware acceleration. To improve hardware implementation, we compute FlashAttention using a mixture of floating-point and fixed-point logarithm domain representations. Floating-point is used to compute attention scores from query and key matrices, while logarithmic computation simplifies the fused computation of softmax normalization and the multiplication with the value matrix. This transformation, called H-FA, replaces vector-wide floating-point multiplication and division operations by additions and subtractions implemented efficiently with fixed-point arithmetic in the logarithm domain. Exponential function evaluations are effectively omitted and fused with the rest operations, and the final result is directly returned to floating-point arithmetic without any additional hardware overhead. Hardware implementation results at 28nm demonstrate that H-FA achieves a 26.5% reduction in area and a 23.4% reduction in power, on average, compared to FlashAttention parallel hardware architectures built solely with floating-point datapaths, without hindering performance.",
+      "identifiers": [
+        "SemanticScholar:a30f0a47edf649e7aff46c281a37a72e1ae0e4e6"
+      ],
+      "semantic_scholar_id": "a30f0a47edf649e7aff46c281a37a72e1ae0e4e6",
+      "canonical_id": "arXiv:2511.00295",
+      "arxiv_id": "2511.00295",
+      "doi": "10.1109/TCASAI.2025.3630164",
+      "authors": [
+        "Kosmas Alexandridis",
+        "G. Dimitrakopoulos"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 364,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v3一次要旨はFlashAttentionのQK計算を浮動小数、softmax正規化とPVを固定小数の対数領域で処理するH-FAを提案。28nmハードウェア実装で浮動小数のみの回路比面積26.5%、電力23.4%削減と報告。注意演算の推論向け専用回路に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-bf7fe7deb02a",
+    "round": "libimp-bf7fe7deb02adf40-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-bf7fe7deb02adf40-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-bf7fe7deb02adf40-pre01.json",
+    "receipt": "sha256:c2483568fffd4d52246784998ba2c8a3cf4825f1d7af5bc788bbb1e1358a4259"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-bf7fe7deb02a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

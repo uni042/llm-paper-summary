@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-00",
-  "run_key": "20261030-1605-scheduled-chat-00/r07",
+  "run_key": "20261030-1605-scheduled-chat-00/r07::provider-gap",
   "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
-  "record_count": 10,
+  "record_count": 8,
   "records": [
     {
       "classification": "accept",
@@ -35,36 +35,6 @@
       "last_checked_at": "2026-10-30T16:05:34+09:00",
       "linked_from": [],
       "worklist_rank": 371
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2605.25565",
-      "identity_tokens": [
-        "arXiv:2605.25565"
-      ],
-      "title": "RotMoLE: Enhancing Mixture of Low-Rank Experts through Rotational Gating Mechanism",
-      "reason": "arXiv一次要旨はLoRA専門家の重み付けに回転ゲートを加え、適応学習・表現力を高めるRotMoLEを提案。主たる評価は専門タスクへのPEFT適応であり、推論時のMoE routing通信・レイテンシ・メモリの直接改善は不明なため境界的。",
-      "source_url": "https://arxiv.org/abs/2605.25565",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T16:05:34+09:00",
-      "last_checked_at": "2026-10-30T16:05:34+09:00",
-      "linked_from": [],
-      "worklist_rank": 372
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2605.29517",
-      "identity_tokens": [
-        "arXiv:2605.29517"
-      ],
-      "title": "FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval",
-      "reason": "arXiv一次要旨はColBERT/ColPaliのMaxSim計算で巨大なquery×document類似度テンソルを作らず、融合GPUカーネルで正確なrerankingを行う。A100で推論ピークメモリをchunked実装比1.4〜2.6倍削減。ただし対象は検索器のスコア計算でありLLM本体の推論最適化ではないため境界的。",
-      "source_url": "https://arxiv.org/abs/2605.29517",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T16:05:34+09:00",
-      "last_checked_at": "2026-10-30T16:05:34+09:00",
-      "linked_from": [],
-      "worklist_rank": 374
     },
     {
       "classification": "accept",
@@ -156,5 +126,17 @@
       "linked_from": [],
       "worklist_rank": 388
     }
+  ],
+  "parent_run_key": "20261030-1605-scheduled-chat-00/r07",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_7ac909a5d6c48191b7651427a487e855--discovery-20261030-1605-scheduled-chat-00-r07.json",
+  "provider_gap_ids": [
+    "arXiv:2411.15707",
+    "arXiv:2512.05033",
+    "arXiv:2602.12113",
+    "arXiv:2605.04956",
+    "arXiv:2605.26118",
+    "arXiv:2609.33051",
+    "arXiv:2609.39358",
+    "arXiv:2610.30791"
   ]
 }

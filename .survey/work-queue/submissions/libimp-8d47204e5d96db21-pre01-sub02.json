@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+      "source_url": "https://arxiv.org/abs/2610.10411",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by using a low-cost draft model to propose tokens that the full-size target model verifies in parallel. Parallel and semi-autoregressive (semi- AR) drafters improve drafting efficiency by proposing an entire block in a single forward pass, but training them raises a new difficulty: the draft distribution for a given position depends on where the decoding round starts, and where rounds start depends on how many tokens earlier rounds accepted. Existing training objectives typically rely on block-local surrogates that ignore this cross-round coupling, and therefore do not directly optimize the global decoding efficiency. In this work, we develop a theoretical framework for training and evaluating these drafters by representing speculative decoding as a Markov reward process. This formulation yields the Expected Decoding Rounds (EDR) objective, which weights local rejection costs by state occupancies and exactly equals the expected number of decoding rounds. Unlike prior surrogate objectives, EDR introduces no auxiliary hyperparameters. We then derive an exact temporal-difference gradient that supports unbiased stochastic optimization from target-model rollouts. The same framework also yields an exact offline evaluator for round counts, enabling paired drafter comparisons on shared target rollouts without running speculative decoding. Finetuning two state-of-the- art drafters, DSpark and DFly, with EDR consistently improves mean accepted length and outperforms existing training objectives across nine benchmarks spanning math reasoning, code generation, and chat.",
+      "identifiers": [
+        "SemanticScholar:03c1c5f03f9455620d81cd322496dfa4557764ca"
+      ],
+      "semantic_scholar_id": "03c1c5f03f9455620d81cd322496dfa4557764ca",
+      "canonical_id": "arXiv:2610.10411",
+      "arxiv_id": "2610.10411",
+      "authors": [
+        "Yun-Xiao Zhao",
+        "Chang-Xiao Cai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は並列ドラフトの受理・拒否と次ラウンド開始位置の依存をMarkov報酬過程で表現し、期待デコードラウンド数EDRを厳密に最小化する学習目的とTD勾配を導出。投機的復号のターゲットforward回数削減に直接関係。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+      "source_url": "https://arxiv.org/abs/2610.18642",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Key-Value (KV) cache constitutes a dominant source of memory consumption during large language model (LLM) inference, particularly in long-context and complex reasoning scenarios. Existing KV cache quantization methods have explored different compression granularities, including layer-wise precision adjustment and token-level information preservation. In practical deployment, however, the key challenge is not merely compression, but how to allocate limited quantization resources among heterogeneous precision preservation strategies under a fixed KV cache memory budget. We propose MultiAlloc, a profiling-guided precision allocation framework for KV cache quantization that adaptively distributes limited quantization resources between layer-wise precision enhancement and token-wise preservation. MultiAlloc employs lightweight offline profiling to characterize layer sensitivity and token importance, enabling adaptive precision allocation under a fixed memory constraint. Guided by the profiled memory--accuracy trade-off, it automatically derives an effective precision allocation strategy without online allocation search, and applies the resulting policy during inference. Extensive experiments on reasoning and long-context benchmarks demonstrate that MultiAlloc consistently improves over layer-wise, token-wise, and recent multi-granularity KV cache quantization methods under matched memory budgets across diverse models, including Mistral, Llama, DeepSeek-Qwen, and QwQ.",
+      "identifiers": [
+        "SemanticScholar:f32736cf1226c3dd3aaf0afab3192f7071ccf795"
+      ],
+      "semantic_scholar_id": "f32736cf1226c3dd3aaf0afab3192f7071ccf795",
+      "canonical_id": "arXiv:2610.18642",
+      "arxiv_id": "2610.18642",
+      "authors": [
+        "Yang Zhou",
+        "Zhi-Ping Wu",
+        "Run-Chang Jiang",
+        "Dong-Dong Ren",
+        "You-Fang Han",
+        "Wei Zhao",
+        "Dong-Qi Cai",
+        "Wen-Bin Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はKVの固定メモリ予算下で、層ごとの高精度保持とトークン単位の重要情報保持に予算を割り当てるMultiAllocを提案。軽量な事前プロファイルで感度を評価し、オンライン探索なしに長文脈・推論ベンチマークで品質を改善。KVキャッシュ混合精度圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation",
+      "source_url": "https://arxiv.org/abs/2412.11741",
+      "year": 2024,
+      "published": "2024-12-16",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The emergence of long-context text applications utilizing large language models (LLMs) has presented significant scalability challenges, particularly in memory footprint. The linear growth of the Key-Value (KV) cache, which stores attention keys and values to reduce redundant computations, can significantly increase memory usage and may prevent models from functioning properly in memory-constrained environments. To address this issue, we propose a novel approach called Cache Sparse Representation (CSR), which converts the KV cache by transforming the dense Key-Value cache tensor into sparse indexes and weights, offering a more memory-efficient representation during LLM inference. Furthermore, we introduce NeuralDict, a novel neural network-based method to automatically generate the dictionary used in our sparse representation. Our extensive experiments demonstrate that CSR matches the performance of state-of-the-art KV cache quantization algorithms while ensuring robust functionality in memory-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:c8424bf742e789de1f7528d6ee418b5d8414b604"
+      ],
+      "semantic_scholar_id": "c8424bf742e789de1f7528d6ee418b5d8414b604",
+      "canonical_id": "arXiv:2412.11741",
+      "arxiv_id": "2412.11741",
+      "doi": "10.48550/arXiv.2412.11741",
+      "authors": [
+        "Hong-Xuan Zhang",
+        "Yao Zhao",
+        "Jiaqi Zheng",
+        "Chen-Yi Zhuang",
+        "Jin-Jie Gu",
+        "Guihai Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 683,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はKVキャッシュを密テンソルから疎なインデックス・重み表現へ変換し、NeuralDictで辞書を学習するCSRを提案。1bit相当のKV表現と既存量子化方式に匹敵する品質を目指し、長文脈推論のメモリ削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gold-Switch: Training-Free Superposition of Slow- and Fast- Thinking LLMs",
+      "source_url": "https://arxiv.org/abs/2510.06750",
+      "year": 2025,
+      "published": "2025-10-08",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) excel in structured tasks by emulating deliberate human reasoning but often suffer from overthinking, degrading performance and wasting resources. One possible baseline is to deploy both LLM and LRM, then route input by predicting whether it requires reasoning and may cause overthinking. However, deploying multiple models can be costly or impractical. We propose a superposed deployment strategy with a lightweight, training-free regulation to optimize inference by switching one model on and off. Instead of routing, we selectively unlearn from LRM at inference, scaling down computation while preserving reasoning. By analyzing the cumulative energy of singular values, we identify optimal low-rank projections to adjust reasoning just right.",
+      "identifiers": [
+        "SemanticScholar:bad2571c353850e699723c95d87ef8b4acd12f13"
+      ],
+      "semantic_scholar_id": "bad2571c353850e699723c95d87ef8b4acd12f13",
+      "canonical_id": "arXiv:2510.06750",
+      "arxiv_id": "2510.06750",
+      "doi": "10.48550/arXiv.2510.06750",
+      "authors": [
+        "Jaeseong Lee",
+        "Dayoung Kwon",
+        "Seung-won Hwang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 387,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は高速・熟考型の2モデル常駐や外部ルータの代わりに、単一LRMの低ランク方向を推論時に調節して過剰思考を抑えるGold-Switchを提案。追加学習なしに推論計算を制御するため、推論時のトークン・計算予算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8d47204e5d96",
+    "round": "libimp-8d47204e5d96db21-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8d47204e5d96db21-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8d47204e5d96db21-pre01.json",
+    "receipt": "sha256:5186b1d6613fe2fb4bf508bc2a2021a6683ff66ded1470d877b5037d015883c6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8d47204e5d96",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

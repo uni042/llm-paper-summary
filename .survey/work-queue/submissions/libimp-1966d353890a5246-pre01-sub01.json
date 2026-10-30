@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+      "source_url": "https://arxiv.org/abs/2604.12928",
+      "year": 2026,
+      "published": "2026-04-14",
+      "venue": "arXiv.org",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speech-to-speech language models have recently emerged to enhance the naturalness of conversational AI. In particular, full-duplex models are distinguished by their real-time interactivity, including handling of pauses, interruptions, and backchannels. However, improving their factuality remains an open challenge. While scaling the model size could address this gap, it would make real-time inference prohibitively expensive. In this work, we propose MoshiRAG, a modular approach that combines a compact full-duplex interface with selective retrieval to access more powerful knowledge sources. Our asynchronous framework enables the model to identify knowledge-demanding queries and ground its responses in external information. By leveraging the natural temporal gap between response onset and the delivery of core information, the retrieval process can be completed while maintaining a natural conversation flow. With this approach, MoshiRAG achieves factuality comparable to the best publicly released non-duplex speech language models while preserving the interactivity inherent to full-duplex systems. Moreover, our flexible design supports plug-and-play retrieval methods without retraining and demonstrates strong performance on out-of-domain mathematical reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:109df6b2f6f70f87d506b3819d0589578269ef23"
+      ],
+      "semantic_scholar_id": "109df6b2f6f70f87d506b3819d0589578269ef23",
+      "canonical_id": "arXiv:2604.12928",
+      "arxiv_id": "2604.12928",
+      "doi": "10.48550/arXiv.2604.12928",
+      "authors": [
+        "Chung-Ming Chien",
+        "Manu Orsini",
+        "E. Kharitonov",
+        "Neil Zeghidour",
+        "Karen Livescu",
+        "Alexandre Défossez"
+      ],
+      "priority": 120,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 120,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 199,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ICML 2026採択のarXiv v3要旨は、低遅延の全二重音声LMに外部検索を非同期に組み込み、発話開始から重要情報を話すまでの時間差に検索処理を重ねるMoshiRAGを提案。モデル巨大化を避けながらリアルタイム対話性と事実性を両立させる推論時パイプラインの寄与がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Diagnosing FP4 inference: a layer-wise and block-wise sensitivity analysis of NVFP4 and MXFP4",
+      "source_url": "https://arxiv.org/abs/2603.08747",
+      "year": 2026,
+      "published": "2026-03-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization addresses the high resource demand for large language models (LLMs) by alleviating memory pressure and bandwidth congestion and providing significantly scaled compute power with a tolerable impact on accuracy. Four-bit floating point (FP4), the lowest-precision format that preserves essential numerical properties such as exponent and sign, has begun to be adopted in cutting-edge architectures, including Blackwell and AMD CDNA, to support LLM quantization and reduce deployment costs. Although aggressive quantization can yield efficiency gains, the quantization sensitivity of within-transformer layers and whether these sensitivities generalize across existing FP4 formats and model scales remain underexplored. To elucidate quantization sensitivity, this study conducts a systematic analysis of two FP4 formats, MXFP4 and NVFP4, across three Qwen2.5 model scales (0.5B, 7B, and 14B), using controlled component-wise and block-wise isolation methodologies. We observe that MLP up- and down-projection layers consistently dominate in terms of sensitivity, while gate and attention projections are moderately and substantially less sensitive to FP4 quantization, respectively. We further find that sensitivity does not universally localize to the final blocks, but early blocks can be highly sensitive, particularly under MXFP4. Our results provide a diagnostic characterization of the inference behavior of FP4 across components, depths, and FP4 formats.",
+      "identifiers": [
+        "SemanticScholar:52896e5d725113e7feac16447453069107b571fd"
+      ],
+      "semantic_scholar_id": "52896e5d725113e7feac16447453069107b571fd",
+      "canonical_id": "arXiv:2603.08747",
+      "arxiv_id": "2603.08747",
+      "doi": "10.48550/arXiv.2603.08747",
+      "authors": [
+        "Musa Cim",
+        "Burak Topçu",
+        "M. T. Kandemir"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はQwen2.5の0.5B・7B・14Bを用いNVFP4とMXFP4の層・ブロック別量子化感度を分離測定。MLPのup/down射影が高感度で注意射影は相対的に低感度、MXFP4では初期ブロックも高感度になり得る。FP4推論精度の設計判断へ直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery: Sublinear Memory Growth for Efficient LLM Inference",
+      "source_url": "https://arxiv.org/abs/2512.11221",
+      "year": 2025,
+      "published": "2025-12-12",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery (ASR-KF-EGR), a training-free inference-time framework for efficient large language model generation. Our method introduces a reversible soft-freeze mechanism that temporarily suspends key-value (KV) updates for low-importance tokens identified within a sliding attention window. Unlike eviction-based approaches that permanently discard context, ASR-KF-EGR preserves all tokens in off-GPU storage and restores them on demand. We extend the framework with sublinear freeze scheduling, where freeze duration grows sublinearly with repeated low-importance detections, preventing over-aggressive compression. Preliminary experiments on LLaMA-3 8B demonstrate 55-67% reduction in active KV cache size while maintaining generation quality and passing needle-in-haystack retrieval tests. The method is architecture-agnostic, requires no fine-tuning, and provides a practical solution for memory-constrained deployment of long-context LLMs.",
+      "identifiers": [
+        "SemanticScholar:6507ed02af010a9422b8c1d2bf66e5a8b3e75d1a"
+      ],
+      "semantic_scholar_id": "6507ed02af010a9422b8c1d2bf66e5a8b3e75d1a",
+      "canonical_id": "arXiv:2512.11221",
+      "arxiv_id": "2512.11221",
+      "doi": "10.48550/arXiv.2512.11221",
+      "authors": [
+        "Adilet Metinov",
+        "Gulida M. Kudakeeva",
+        "Bolotbek uulu Nursultan",
+        "G. Kabaeva"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 322,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はスライディング注意窓で重要度が低いトークンのKV更新を一時停止し、全履歴をGPU外に保持して必要時に復元する可逆的なfreeze方式を提案。LLaMA-3 8Bで活動KVを55〜67%削減しneedle-in-haystack検索を維持した予備実験を報告。LLM推論時のメモリ管理に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Thinking Fast and Right: Balancing Accuracy and Reasoning Length with Adaptive Rewards",
+      "source_url": "https://arxiv.org/abs/2505.18298",
+      "year": 2025,
+      "published": "2025-05-23",
+      "venue": "arXiv.org",
+      "citation_count": 19,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated strong reasoning abilities in mathematical tasks, often enhanced through reinforcement learning (RL). However, RL-trained models frequently produce unnecessarily long reasoning traces -- even for simple queries -- leading to increased inference costs and latency. While recent approaches attempt to control verbosity by adding length penalties to the reward function, these methods rely on fixed penalty terms that are hard to tune and cannot adapt as the model's reasoning capability evolves, limiting their effectiveness. In this work, we propose an adaptive reward-shaping method that enables LLMs to\"think fast and right\"-- producing concise outputs without sacrificing correctness. Our method dynamically adjusts the reward trade-off between accuracy and response length based on model performance: when accuracy is high, the length penalty increases to encourage faster length reduction; when accuracy drops, the penalty is relaxed to preserve correctness. This adaptive reward accelerates early-stage length reduction while avoiding over-compression in later stages. Experiments across multiple datasets show that our approach consistently and dramatically reduces reasoning length while largely maintaining accuracy, offering a new direction for cost-efficient adaptive reasoning in large-scale language models.",
+      "identifiers": [
+        "SemanticScholar:0ba8cbebdbb3a91f984313d33e76fe5946b96ad4"
+      ],
+      "semantic_scholar_id": "0ba8cbebdbb3a91f984313d33e76fe5946b96ad4",
+      "canonical_id": "arXiv:2505.18298",
+      "arxiv_id": "2505.18298",
+      "doi": "10.48550/arXiv.2505.18298",
+      "authors": [
+        "Jinyan Su",
+        "C. Cardie"
+      ],
+      "priority": 19,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 19,
+        "citation_count": 19,
+        "total": 19,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 525,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は強化学習で長くなりがちなCoTに対し、正答率が高い間は長さペナルティを強め、正答率が下がると緩める適応的報酬設計を提案。推論品質を概ね維持しながら生成トークン数を削減し、推論時の遅延と計算費用を抑える。学習時の報酬設計が直接推論効率を改善するため収録対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WINDQuant: Weight-Informed Neural Decision-Making for Global Mixed-Precision LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2605.26660",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is an effective approach to reduce the memory footprint and inference cost of large language models (LLMs), yet maintaining performance in the ultra-low-bit regime remains challenging. Existing post-training methods often suffer from severe accuracy degradation, while quantization-aware training requires costly retraining and additional resources. Moreover, most mixed-precision strategies rely on coarse-grained or heuristic sensitivity analysis that overlooks fine-grained variations within weight matrices. We propose WINDQuant, a reinforcement-learning-based allocation controller for ultra-low-bit LLM quantization. Rather than introducing another low-level quantization operator, WINDQuant learns how to assign bit-widths and quantization treatments to fine-grained column chunks under a global storage budget. By operating at the column-chunk level, WINDQuant enables flexible and fine-grained precision assignment within layers under a global target bit-width. The implementation combines PPO with activation-aware calibration, lightweight per-unit quantizer fitting, and explicit effective-bit accounting of the learned mixed-precision plan. Experiments on LLaMA models demonstrate that WINDQuant achieves competitive performance in ultra-low-bit settings while reducing optimization overhead relative to retraining-based approaches, highlighting reinforcement learning as a practical controller for adaptive mixed-precision quantization.",
+      "identifiers": [
+        "SemanticScholar:1636a37dbb316d100254d5b97c4b660513bbaeda"
+      ],
+      "semantic_scholar_id": "1636a37dbb316d100254d5b97c4b660513bbaeda",
+      "canonical_id": "arXiv:2605.26660",
+      "arxiv_id": "2605.26660",
+      "doi": "10.48550/arXiv.2605.26660",
+      "authors": [
+        "P. Nguyen",
+        "Khoi M. Le",
+        "Cong-Duy T. Nguyen",
+        "A. Lưu",
+        "T. Nguyen",
+        "T. Quan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2要旨はPPOによる強化学習制御器が重み行列の列チャンクごとに量子化ビット幅と処理方式を割り当て、全体の保存容量制約と精度を調整するWINDQuantを提案。活性校正と実効ビット数の計上を含み、低ビットLLM推論のモデル容量・品質トレードオフへ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1966d353890a",
+    "round": "libimp-1966d353890a5246-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1966d353890a5246-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1966d353890a5246-pre01.json",
+    "receipt": "sha256:9dc19e68893596078bc05e34e6934aada19f41494b5d67f99da7e114afc0ddb0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1966d353890a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

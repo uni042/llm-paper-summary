@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.10640",
+      "year": 2026,
+      "published": "2026-07-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are costly at inference time because they must process long sequences of visual tokens. Existing token pruning methods often degrade under high compression by blindly discarding information, breaking spatial structure or collapsing diversity. We propose SpecFlow, a training-free framework that shifts the paradigm from destructive pruning to conservative condensation, strictly enforcing spatial coverage and statistical conservation to ensure stability. Treating visual tokens as nodes in a $k$NN graph, SpecFlow (i) computes a stable importance field via spectral heat flow to preserve structural coherence, (ii) allocates budgets via adaptive spatial partitioning to guarantee coverage, and (iii) aggregates discarded information into coreset sinks to maintain statistical conservation. The method is plug-and-play, requires no fine-tuning, and is compatible with FlashAttention. Experiments confirm that our SpecFlow outperforms SOTA methods across tasks, VLM architectures, and pruning ratios. Notably, LLaVA-1.5 with SpecFlow retains 95.6% of original performance despite pruning 88.9% of visual tokens, offering an exceptional efficiency-accuracy balance. Code is available at https://github.com/Lzy-dot/SpecFlow",
+      "identifiers": [
+        "SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16"
+      ],
+      "semantic_scholar_id": "95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+      "canonical_id": "arXiv:2607.10640",
+      "arxiv_id": "2607.10640",
+      "doi": "10.48550/arXiv.2607.10640",
+      "authors": [
+        "Zhao-Yang Li",
+        "Yanjun Li",
+        "Wangkai Li",
+        "Yujia Chen",
+        "Tianzhu Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は視覚トークンをkNNグラフとみなし、スペクトル熱流による重要度、空間予算、coreset sinkへの情報集約を組み合わせるSpecFlowを提案。LLaVA-1.5で視覚トークン88.9%削減時に元性能95.6%を維持。VLM推論の非破壊的視覚圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Allocation Before Ranking: Decoupled Token Compression for OmniLLMs",
+      "source_url": "https://arxiv.org/abs/2608.01665",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token compression in OmniLLMs is typically posed as a single saliency-ranking problem: score each multimodal token, keep the top-K. We argue this abstraction is mis-specified. The same attention score simultaneously decides two things: how much retained capacity each modality receives, and which tokens within a modality are kept. A shared top-K rule therefore inherits this audio-favoring allocation prior, spending retained capacity on audio before video tokens have a chance to compete. We propose Macer, a training-free compressor that first assigns explicit audio and video budgets, then performs allocation-normalized ranking within each modality at modality-specific shallow layers. Macer significantly reduces token cost while preserving accuracy across audio-grounded, audio--video joint, visual-dominant, and video-centric benchmarks. At 25 % retention, Macer preserves 98.7 % of full-token performance on Qwen2.5-Omni-7B and 97.3 % on Qwen2.5-Omni-3B. On Qwen2.5-Omni-7B, this 25 % setting reaches OmniZip-level performance at 45 % retention while using lower FLOPs. On OmniVinci-9B, the same allocation-before-ranking principle improves over shared top-K ranking by up to 12.9 points.",
+      "identifiers": [
+        "SemanticScholar:fb4863fd660b1bda468a813d006a2a2119c6a95b"
+      ],
+      "semantic_scholar_id": "fb4863fd660b1bda468a813d006a2a2119c6a95b",
+      "canonical_id": "arXiv:2608.01665",
+      "arxiv_id": "2608.01665",
+      "authors": [
+        "Zhenghui Guo",
+        "Yilin Yang",
+        "Yuanbin Man",
+        "Miao Yin",
+        "Wei-Dong Shi",
+        "Rabimba Karanjai",
+        "O. Gnawali",
+        "Cheng-Ming Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は音声と動画の注意スコアを一括ランキングすると音声に予算が偏る問題に対し、モダリティ別予算配分後に各内部でトークンを選ぶMacerを提案。Qwen2.5-Omni-7Bの25%保持で元性能98.7%を維持し、OmniZipの45%保持と同等の品質をより低FLOPsで達成。マルチモーダル推論入力圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2603.25385",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization techniques such as BitsAndBytes, AWQ, and GPTQ are widely used as a standard method in deploying large language models but often degrades accuracy when using low-bit representations, e.g., 4 bits. Low-rank correction methods (e.g., LQER, QERA, ASER) has been proposed to mitigate this issue, however, they restore all layers and insert error-correction modules into every decoder block, which increases latency and memory overhead. To address this limitation, we propose GlowQ, a group-shared low-rank approximation for quantized LLMs that caches a single shared right factor per input-sharing group and restores only the groups or layers that yield the highest accuracy benefit. GlowQ computes the high-precision projection once per input-sharing group and reuses it across its modules, reducing parameter and memory overhead, and retaining the expressivity of layer-specific corrections. We also propose a selective variant, GlowQ-S, that applies the cached shared module only where it provides the largest benefit. Compared with strong baselines, our approach reduces TTFB by (5.6%) and increases throughput by (9.6%) on average, while reducing perplexity on WikiText-2 by (0.17%) and increasing downstream accuracy by 0.42 percentage points. The selective model GlowQ-S further reduces latency, cutting TTFB by (23.4%) and increasing throughput by (37.4%), while maintaining accuracy within 0.2 percentage points on average. Code is available at https://github.com/ahnselim/GlowQ.",
+      "identifiers": [
+        "SemanticScholar:144713214950f337c2f9bc5867dd7d3c2c1dd973"
+      ],
+      "semantic_scholar_id": "144713214950f337c2f9bc5867dd7d3c2c1dd973",
+      "canonical_id": "arXiv:2603.25385",
+      "arxiv_id": "2603.25385",
+      "doi": "10.48550/arXiv.2603.25385",
+      "authors": [
+        "S. An",
+        "Ilhong Suh",
+        "Yeseong Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は量子化誤差を補正する低ランク射影の右因子を入力共有グループ内でキャッシュして再利用し、層ごとの重複補正を減らすGlowQを提案。選択的GlowQ-SでTTFB23.4%削減・スループット37.4%増加と報告。量子化LLM推論の補正計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ELSA: Exact Linear-Scan Attention for Fast and Memory-Light Vision Transformers",
+      "source_url": "https://arxiv.org/abs/2604.23798",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing attention accelerators often trade exact softmax semantics, depend on fused Tensor Core kernels, or incur sequential depth that limits FP32 throughput on long sequences. We present ELSA, an algorithmic reformulation of online softmax attention that (i) preserves exact softmax semantics in real arithmetic with a provable $\\mathcal{O}(u \\log n)$ FP32 relative error bound; (ii) casts the online softmax update as a prefix scan over an associative monoid $(m, S, W)$, yielding $O(n)$ extra memory and $O(\\log n)$ parallel depth; and (iii) is Tensor-Core independent, implemented in Triton and CUDA C++, and deployable as a drop-in replacement requiring no retraining or weight modification. Unlike FlashAttention-2/3, which rely on HMMA/GMMA Tensor Core instructions and provide no compatible FP32 path, ELSA operates identically on A100s and resourceconstrained edge devices such as Jetson TX2-making it the only hardware-agnostic exact-attention kernel that reduces parallel depth to $O(\\log n)$ at full precision. On A100 and Jetson TX2, ELSA delivers $1.3-3.5\\times$ FP32 speedup over memory-efficient SDPA on attention-only benchmarks (1K-16K tokens), $1.97-2.27\\times$ speedup on BERT benchmarks, and 17.8-20.2% throughput gains under LLaMA-13B offloading at $\\geq 32 K$ tokens. In FP16, ELSA approaches hardware-fused baselines at long sequences while retaining full FP32 capability, offering a unified kernel for highprecision inference across platforms. Our code and implementation is available at https://github.com/ming0531/ELSA.",
+      "identifiers": [
+        "SemanticScholar:1d2311ec84451e14856008a993ae9cb3b9530981"
+      ],
+      "semantic_scholar_id": "1d2311ec84451e14856008a993ae9cb3b9530981",
+      "canonical_id": "arXiv:2604.23798",
+      "arxiv_id": "2604.23798",
+      "doi": "10.1109/CVPRF71909.2026.00291",
+      "authors": [
+        "Chih-Chung Hsu",
+        "Xing-Chen Ma",
+        "Wo-Ting Liao",
+        "Chia-Ming Lee"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はオンラインsoftmax注意を結合的monoidのprefix scanとして再定式化し、O(n)追加メモリ・O(log n)並列深さを実現するELSAを提案。A100 FP32でSDPA比1.3〜3.5倍、Jetson TX2でも高速化し、LLaMA-13Bオフロードの実測も報告。注意カーネル最適化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "PhaseQuant: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+      "source_url": "https://arxiv.org/abs/2606.12487",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization (PTQ) is essential for efficient large language model (LLM) inference, but reliably quantizing activations remains challenging when weights, activations, and KV caches are all quantized to 4-bit precision. A key difficulty lies in massive activations, whose extreme values dominate the activation range and amplify quantization error. State-of-the-art methods mitigate massive activations through transformation-based smoothing, such as orthogonal rotations and affine scaling, but overlook the cross-layer dynamics of the residual stream. In this paper, we show that massive activations emerge and disappear in a phase-wise pattern across network depth, injecting abrupt updates into the residual stream. These updates cause the newly injected layer-wise signal to dominate the 4-bit quantization scale and weaken the accumulated residual information. To characterize this behavior, we introduce two metrics, the Update Dominance Ratio (UDR) and the Historical Retention Score (HRS), and show that static transformation-based smoothing cannot fully resolve the resulting dynamic quantization instability. Based on this analysis, we propose PhaseQuant, a phase-aware mixed-precision post-training quantization policy for activation quantization. PhaseQuant identifies quantization-sensitive layers from residual-stream dynamics and assigns 8-bit activation precision only to these layers, while keeping weights, KV caches, and all remaining activations at 4-bit precision. It can be directly integrated with strong PTQ baselines such as QuaRot, SpinQuant, and FlatQuant. Experiments on LLaMA-2 and LLaMA-3 show that PhaseQuant consistently improves perplexity and zero-shot QA performance under W4A4KV4 quantization, while achieving 1.05$\\times$--1.07$\\times$ throughput improvement with modest memory overhead. These results demonstrate a practical path toward robust low-bit LLM inference.",
+      "identifiers": [
+        "SemanticScholar:48e0051ae0ec82aca38f1faf069f18190ef9becc"
+      ],
+      "semantic_scholar_id": "48e0051ae0ec82aca38f1faf069f18190ef9becc",
+      "canonical_id": "arXiv:2606.12487",
+      "arxiv_id": "2606.12487",
+      "authors": [
+        "Zimo Zhao",
+        "Mao-Lin Wang",
+        "Bo-Wen Yu",
+        "Bo-Wen Liu",
+        "Xiao Han",
+        "Xiangyu Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv公式の題名はPhaseQuantであり、worklistのDynamicPTQとは表記が異なる。同一arXiv identityの最新版要旨は、残差ストリームで巨大活性が現れる層だけ活性8bitを割り当て、他の重み・KV・活性を4bitに維持するPhaseQuantを提案。QuaRot/SpinQuant等に統合できるため、推論向け混合精度PTQに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6f905c538bd0",
+    "round": "libimp-6f905c538bd05858-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6f905c538bd05858-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6f905c538bd05858-pre01.json",
+    "receipt": "sha256:5c1d592c0bdba8a1510707caa0ad26d10a0b052ae3ac1683895cd0bf5d83aeb4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6f905c538bd0",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

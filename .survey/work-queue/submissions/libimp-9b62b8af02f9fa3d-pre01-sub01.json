@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "WIDE: Boosting Adaptive LLM Inference via Token-level Dynamic Width Pruning",
+      "source_url": "https://arxiv.org/abs/2607.28418",
+      "year": 2026,
+      "published": "2026-07-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning is a promising approach for improving the efficiency of large language models (LLMs). Static structured pruning is hardware-friendly, but its input-agnostic computation allocation often degrades model quality at high sparsity. Dynamic pruning adapts computation to individual tokens, but coarse-grained layer-level routing limits allocation flexibility, and finer-grained decisions introduce irregular execution that can offset computational savings. To address these challenges, we present WIDE, the first end-to-end differentiable framework that combines token-wise structured dynamic width pruning with GPU kernel co-design for both prefill and decoding. WIDE uses differentiable routers to select GQA-aligned query-head groups and GPU-tile-aligned FFN-channel groups for each token. To execute these decisions efficiently, it reorders routing masks to cluster active tokens within each group, enabling hardware-agnostic block-level skipping and architecture-aware skipping of inactive loads and tensor-core operations. Experiments on the Llama3 and Qwen3 families demonstrate improved quality retention over representative static and dynamic pruning methods. At 50\\% target routing sparsity, WIDE improves Llama3.1-8B average zero-shot accuracy by up to 20.26 points over the strongest dynamic-depth baseline under calibration-only settings, while retaining 97.6\\%/88.2\\% of dense Qwen3-14B likelihood/generation performance after LoRA tuning. Separate latency benchmarks demonstrate end-to-end speedups of up to $1.68\\times$ for prefill and $1.55\\times$ for decoding over the dense baseline. These results demonstrate that pruning--kernel co-design pushes the frontier of token-wise dynamic structured pruning, combining improved quality retention with practical acceleration across both prefill and decoding. Our code is avaliable at \\url{https://github.com/EIT-NLP/LLM-Pruning/tree/main/WIDE}.",
+      "identifiers": [
+        "SemanticScholar:4adf2d6eb97d6758d97e8e9d2e064be694778bb7"
+      ],
+      "semantic_scholar_id": "4adf2d6eb97d6758d97e8e9d2e064be694778bb7",
+      "canonical_id": "arXiv:2607.28418",
+      "arxiv_id": "2607.28418",
+      "doi": "10.48550/arXiv.2607.28418",
+      "authors": [
+        "Hao-Zhe Hu",
+        "Hao Wu",
+        "Pei-Ran Yin",
+        "Chao Han",
+        "Yun-Pu Ma",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 92,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はトークンごとにGQAのquery-head群とFFNチャネル群を動的に選ぶ幅枝刈りと、GPUタイルに整合したカーネルを共同設計するWIDEを提案。prefillとdecode双方の推論計算削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling",
+      "source_url": "https://arxiv.org/abs/2608.02032",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern language models are built primarily from Transformers, recurrent models, and their hybrid architectures. Transformers rely on token-level attention memories, while recurrent models such as state space models (SSMs) and linear attention maintain compact recurrent states. These architectures are typically instantiated separately or interleaved at the layer level, leaving open whether a shared memory representation can support both recurrent compression and attention-style retrieval. We study this question through the state space duality (SSD) view of Mamba-2, where the SSM state can be interpreted as a compressed associative key--value (KV) cache. We observe that Mamba-2 decodes token-conditioned values from this state but does not decode token-conditioned keys. Based on this observation, we propose DART (Decoded Attention over Recurrent sTates), which retains the chunk state contributions produced by the Mamba-2 chunked scan as chunk state memories, decodes token-conditioned keys and values from these memories, and performs state-memory attention (SMA) over the resulting KV pairs. The retrieved output is then combined with the native Mamba-2 output through a gated residual connection. DART supports practical training by reusing the Mamba-2 chunked scan and implementing SMA as a FlashAttention-style computation. Our analysis and experiments show that DART substantially reduces the length-dependent inference cache compared with a matched attention baseline (e.g., $75\\%$ savings when the chunk size is $S=256$ and the state size is $N=128$). Compared with Mamba-2, DART substantially improves associative recall and retrieval while preserving general language-modeling quality.",
+      "identifiers": [
+        "SemanticScholar:e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28"
+      ],
+      "semantic_scholar_id": "e35dabe1db3ee12b2cdaaadd893cc28fb66dcf28",
+      "canonical_id": "arXiv:2608.02032",
+      "arxiv_id": "2608.02032",
+      "authors": [
+        "Yixiao Qian",
+        "Song Chen",
+        "Peng-Kai Wang",
+        "Jia-Xu Liu",
+        "Sheng-Ze Cai",
+        "Chao Xu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMamba-2のSSM状態を圧縮された連想KVキャッシュと解釈し、再帰状態からtoken条件付きキーと値を復元して注意型の検索を可能にするDARTを提案。長文脈でのコンパクトな状態と注意検索の両立を狙う効率的言語モデルアーキテクチャ研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Cross-Layer Error Compensation and Finite-Sample Feature-Statistics Matching for Extreme Low-Bit Quantization of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.14630",
+      "year": 2026,
+      "published": "2026-07-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Layer-wise post-training quantization of large language models minimizes each layer's reconstruction error in isolation, allowing quantization errors to accumulate across depth and causing severe degradation in extreme low-bit regimes. We formulate quantization as a joint optimization over the discrete codes and scales of all layers, driven by two mechanisms: (i) cross-layer error compensation, which maintains the network-level accumulated error through the recursion e_{l+1} = A_l e_l + q_l, with a propagation operator A_l derived from the layer's input differential and a local quantization residual q_l evaluated at teacher features; and (ii) finite-sample feature-statistics matching, which aligns means, projected covariances, and centered empirical kernels between the full-precision and quantized networks under relative normalization. We prove that instantiating the propagation operator as a finite difference of the quantized network makes the recursion exact for arbitrary nonlinear layers, enabling an efficient forward-difference implementation. Binary weights are optimized via a mirror-descent parameterization u = tanh(beta*z) with annealed inverse temperature and group-wise log-scales. On Qwen2.5-1.5B with 1.125-bit group-binary weights, error compensation alone reaches a perplexity ratio of 9.56 +/- 0.15 over the FP16 teacher, outperforming logit distillation (14.09 +/- 0.53; 32 percent relative, more than 8 sigma over 3 seeds) and layer-local reconstruction by two orders of magnitude. The same objective transfers unchanged to 4-bit quantization (1.060 vs. 1.088 for layer-local). Out-of-domain evaluations (C4, CNN/DailyMail) show the advantage of error compensation grows off-domain, while statistics matching keeps feature-statistics discrepancy low off-domain (0.42-0.88 vs. 1.41-2.99 without it), revealing a complementary division of labor between the two mechanisms.",
+      "identifiers": [
+        "SemanticScholar:ecb2f24b57fa50bfbd381ba72d6489587c5bb3af"
+      ],
+      "semantic_scholar_id": "ecb2f24b57fa50bfbd381ba72d6489587c5bb3af",
+      "canonical_id": "arXiv:2607.14630",
+      "arxiv_id": "2607.14630",
+      "doi": "10.48550/arXiv.2607.14630",
+      "authors": [
+        "Ryona Noda"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 106,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨は層ごとのPTQ誤差が深さ方向に累積する問題に対し、層間誤差伝播の補償と有限標本の特徴統計の整合を同時最適化する低ビットLLM量子化を提案。LLM配備時の重みメモリ削減に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accepted Prefixes Are Not All You Need: A Negative Result on PEFT-Based Block-Diffusion Drafting",
+      "source_url": "https://arxiv.org/abs/2607.12422",
+      "year": 2026,
+      "published": "2026-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive language model inference by using a cheap drafter to propose multiple future tokens and a target model to verify them. A common design goal is therefore to improve draft quality while reducing auxiliary parameters and systems overhead. We study a negative result for this direction through PEFT-BD, a same-backbone speculative decoding method in which a LoRA-like adapter acts as a block-diffusion drafter for an autoregressive verifier. PEFT-BD is motivated by several attractive properties: it avoids tokenizer mismatch, avoids loading a separate draft model, adds only a small number of trainable parameters, and uses a BD3LM-style denoising objective to propose a block of tokens in parallel. Despite these advantages, PEFT-BD does not yield a practical speedup in our Qwen3-0.6B experiments. Although the method obtains nontrivial accepted prefixes, profiling shows that each speculative step requires an adapter-enabled full-backbone draft pass followed by an adapter-disabled full-backbone verification pass. Thus, the drafter is parameter-efficient but not compute-efficient. Our results isolate a simple but important condition for successful speculative decoding: the drafter must be substantially cheaper to execute than the verifier. Longer accepted prefixes alone cannot compensate when draft computation remains verifier-scale.",
+      "identifiers": [
+        "SemanticScholar:38ca8558f610cea88b42a1d8e943eef9dcb75157"
+      ],
+      "semantic_scholar_id": "38ca8558f610cea88b42a1d8e943eef9dcb75157",
+      "canonical_id": "arXiv:2607.12422",
+      "arxiv_id": "2607.12422",
+      "doi": "10.48550/arXiv.2607.12422",
+      "authors": [
+        "Abdurrahman Javat",
+        "A. Kazakov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 108,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は同一バックボーンのLoRA型ブロック拡散ドラフトPEFT-BDを検証し、トークナイザ一致・追加モデル不要という利点にもかかわらず投機的復号の受理率と速度に負の結果が生じることを報告。効率的ドラフト設計の失敗条件を明らかにする直接的なLLM推論研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning. Our code is available at https://github.com/MAX-7237/MiCo.",
+      "identifiers": [
+        "SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf"
+      ],
+      "semantic_scholar_id": "1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+      "canonical_id": "arXiv:2609.34330",
+      "arxiv_id": "2609.34330",
+      "authors": [
+        "Ting-Hao Wang",
+        "Yi-Chen Guo",
+        "Qi-Zhe Zhang",
+        "Yuan Zhang",
+        "Wei-Min Ouyang",
+        "Rui Huang",
+        "Jia-Jun Cao",
+        "Si-Xiang Chen",
+        "Hao-Kai Jiang",
+        "Ji-Xin Wu",
+        "Zheng Lu",
+        "Bo-Fan Zhu",
+        "Ren-Yuan Li",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨は視覚トークンの冗長性に対し、意味消去モデルから導いた相互情報量被覆目的で、LLM投入前の候補選択とタスク依存選択を行う学習不要の2段階視覚トークン枝刈りMiCoを提案。MLLM推論計算量の削減が直接の対象。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9b62b8af02f9",
+    "round": "libimp-9b62b8af02f9fa3d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9b62b8af02f9fa3d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9b62b8af02f9fa3d-pre01.json",
+    "receipt": "sha256:1c53069bc8b17a768ace55b43a4647577cf31f36f336fd40986edd5956749221"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9b62b8af02f9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

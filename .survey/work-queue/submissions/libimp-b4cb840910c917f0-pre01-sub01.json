@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
+      "source_url": "https://arxiv.org/abs/2512.13586",
+      "year": 2025,
+      "published": "2025-12-15",
+      "venue": "arXiv.org",
+      "citation_count": 21,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Autoregressive models (ARMs) are hindered by slow sequential inference. While masked diffusion models (MDMs) offer a parallel alternative, they suffer from critical drawbacks: high computational overhead from precluding Key-Value (KV) caching, and incoherent generation arising from learning dependencies over an intractable space of token combinations. To address these limitations, we introduce \\textsc{ReFusion}, a novel masked diffusion model that integrates sequence reorganization into the causal attention framework. By elevating parallel decoding from the token level to a higher slot level, \\textsc{ReFusion} interleaves inter-slot diffusion-based selection with intra-slot autoregressive infilling, while reordering newly generated slots ahead of the remaining masks after each iteration. Consequently, this design simultaneously unlocks full KV cache reuse and reduces learning complexity from an intractable token combination space to a manageable slot-level permutation space. Extensive experiments on seven diverse benchmarks show that \\textsc{ReFusion} not only overwhelmingly surpasses prior MDMs with a 34\\% performance gain and an over 18$\\times$ speedup on average, but also bridges the performance gap to strong ARMs while maintaining a 2.33$\\times$ average speedup.",
+      "identifiers": [
+        "SemanticScholar:bf3e93d83229d7acd95596d0cf92371d0f28c7b5"
+      ],
+      "semantic_scholar_id": "bf3e93d83229d7acd95596d0cf92371d0f28c7b5",
+      "canonical_id": "arXiv:2512.13586",
+      "arxiv_id": "2512.13586",
+      "doi": "10.48550/arXiv.2512.13586",
+      "authors": [
+        "Jia-Nan Li",
+        "Jian Guan",
+        "Wei Wu",
+        "Chong Li"
+      ],
+      "priority": 121,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 21,
+        "citation_count": 21,
+        "total": 121,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 319,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2要旨は拡散LLMのKV再利用困難と並列生成時の不整合に対し、slot単位の拡散選択とslot内の自己回帰補完を交互に行うReFusionを提案。因果注意でKV再利用を可能にし、既存masked diffusion比平均18倍超、自己回帰モデル比平均2.33倍の高速化を報告。生成推論の実行方式に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CryptoMoE: Privacy-Preserving and Scalable Mixture of Experts Inference via Balanced Expert Routing",
+      "source_url": "https://arxiv.org/abs/2511.01197",
+      "year": 2025,
+      "published": "2025-11-03",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Private large language model (LLM) inference based on cryptographic primitives offers a promising path towards privacy-preserving deep learning. However, existing frameworks only support dense LLMs like LLaMA-1 and struggle to scale to mixture-of-experts (MoE) architectures. The key challenge comes from securely evaluating the dynamic routing mechanism in MoE layers, which may reveal sensitive input information if not fully protected. In this paper, we propose CryptoMoE, the first framework that enables private, efficient, and accurate inference for MoE-based models. CryptoMoE balances expert loads to protect expert routing information and proposes novel protocols for secure expert dispatch and combine. CryptoMoE also develops a confidence-aware token selection strategy and a batch matrix multiplication protocol to improve accuracy and efficiency further. Extensive experiments on DeepSeekMoE-16.4B, OLMoE-6.9B, and QWenMoE-14.3B show that CryptoMoE achieves $2.8\\sim3.5\\times$ end-to-end latency reduction and $2.9\\sim4.3\\times$ communication reduction over a dense baseline with minimum accuracy loss. We also adapt CipherPrune (ICLR'25) for MoE inference and demonstrate CryptoMoE can reduce the communication by up to $4.3 \\times$. Code is available at: https://github.com/PKU-SEC-Lab/CryptoMoE.",
+      "identifiers": [
+        "SemanticScholar:11ae21e0096558c8752984fe28f2d0b1ec9f4779"
+      ],
+      "semantic_scholar_id": "11ae21e0096558c8752984fe28f2d0b1ec9f4779",
+      "canonical_id": "arXiv:2511.01197",
+      "arxiv_id": "2511.01197",
+      "doi": "10.48550/arXiv.2511.01197",
+      "authors": [
+        "Yi-Fan Zhou",
+        "Tian-Shi Xu",
+        "Jue Hong",
+        "Ye Wu",
+        "Meng Li"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 361,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "NeurIPS 2025のarXiv v3要旨は秘密計算下のMoEでexpert routingの漏洩を防ぐ負荷均等化と安全なdispatch/combineを提案。DeepSeekMoE・OLMoE・QwenMoEを評価し、dense比較でE2E遅延2.8〜3.5倍、通信量2.9〜4.3倍削減を報告。MoEの推論通信とルーティングに直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2603.02737",
+      "year": 2026,
+      "published": "2026-03-03",
+      "venue": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference demands vast memory capacity and hierarchical memory structures, but conventional architectures suffer from excessive energy and latency costs due to frequent data movement across deep memory tiers. To address this, we propose a wafer-scale SRAM-based Computing-in-Memory (CIM) architecture that performs all LLM operations in situ within the first-level SRAM, eliminating off-chip data migration and achieving unprecedented energy efficiency. However, wafer-scale SRAM CIM presents multiple challenges due to the limited first-level memory capacity, which requires efficient compute-memory resource allocation. To enable efficient LLM execution on this architecture, we propose three key innovations: Token-Grained Pipelining – Conventional sequence-level pipelining suffers from underutilization due to varying input sequence lengths and batching policies. We introduce a fine-grained token-level pipeline that mitigates sequence length variations, enhancing the utilization of CIM cores while minimizing the storage capacity required for activation. Distributed Dynamic KV Cache Management – KV cache storage occupies significant memory in LLM inference. We optimize on-chip KV caching by decoupling CIM memory from compute assignment, leveraging fragmented SRAM CIM memory within already-allocated cores for efficient KV storage, and reducing dedicated memory overhead. Communication-Aware and Fault-Tolerant Core Mapping – Efficient execution on wafer-scale CIM requires optimal mapping from transformer blocks to CIM cores to minimize inter-(pipeline) stage communication while ensuring intra-stage compute locality. We design a network-on-wafer-aware mapping strategy that places pipeline stages in close proximity while also distributing large layers efficiently across multiple cores. This mapping accounts for core-level defects, improving fault tolerance in wafer-scale deployment. Experimental results demonstrate that Ouroboros achieves 4.1× average throughput improvement and 4.2× average energy efficiency gain over state-of-the-art systems, peaking at 9.1× throughput and 17× energy efficiency for the 13B model.",
+      "identifiers": [
+        "SemanticScholar:c426b1b033a0cdc1d3f62f83b1df85a8685314e6"
+      ],
+      "semantic_scholar_id": "c426b1b033a0cdc1d3f62f83b1df85a8685314e6",
+      "canonical_id": "arXiv:2603.02737",
+      "arxiv_id": "2603.02737",
+      "doi": "10.1145/3779212.3790197",
+      "authors": [
+        "Yi-Qi Liu",
+        "Yu-Dong Pan",
+        "Meng-Di Wang",
+        "Shi-Xin Zhao",
+        "Hao-Nan Zhu",
+        "Yi Han",
+        "Lei Zhang",
+        "Ying Wang"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 241,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ASPLOS 2026のarXiv一次要旨はwafer-scale SRAM CIMで外部メモリ移動を抑え、トークン単位パイプライン、分散動的KV配置、通信認識マッピングを組み合わせるOuroborosを提案。平均スループット4.1倍、エネルギー効率4.2倍、13Bモデルで最大9.1倍/17倍と報告。LLM推論ハードウェアに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VisPCO: Visual Token Pruning Configuration Optimization via Budget-Aware Pareto-Frontier Learning for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.15188",
+      "year": 2026,
+      "published": "2026-04-16",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning methods effectively mitigate the quadratic computational growth caused by processing high-resolution images and video frames in vision-language models (VLMs). However, existing approaches rely on predefined pruning configurations without determining whether they achieve computation-performance optimality. In this work, we introduce , a novel framework that formulates visual token pruning as a Pareto configuration optimization problem to automatically identify optimal configurations. Our approach employs continuous relaxation and straight-through estimators to enable gradient-based search, solved via the Augmented Lagrangian method. Extensive experiments across 8 visual benchmarks demonstrate that effectively approximates the empirical Pareto frontier obtained through grid search and generalizes well across various pruning methods and VLM architectures. Furthermore, through learnable kernel functions, we investigate layer-wise pruning patterns and reveal that multi-step progressive pruning captures VLMs'hierarchical compression structure, achieving superior accuracy-efficiency trade-offs compared to single-layer approaches.",
+      "identifiers": [
+        "SemanticScholar:3426af264726155771f4b6851a51b3f55e05aa4c"
+      ],
+      "semantic_scholar_id": "3426af264726155771f4b6851a51b3f55e05aa4c",
+      "canonical_id": "arXiv:2604.15188",
+      "arxiv_id": "2604.15188",
+      "doi": "10.48550/arXiv.2604.15188",
+      "authors": [
+        "Hua-Wei Ji",
+        "Yuan Sun",
+        "Yuanhao Jin",
+        "Cheng Deng",
+        "Jia-Xin Ding",
+        "Luo-Yi Fu",
+        "Xin-Bing Wang"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 197,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨はVLMの視覚トークン削減設定を計算予算と精度のPareto最適化問題として定式化。連続緩和と直通推定器を用いて層別の枝刈り位置・強度を探索し、8視覚ベンチマークでグリッド探索に近いPareto前線を再現。VLM推論計算削減の設計へ直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+      "source_url": "https://arxiv.org/abs/2408.07802",
+      "year": 2024,
+      "published": "2024-08-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Transformer networks are increasingly used in settings where low inference latency can improve the end-user experience and enable new applications. However, autoregressive inference is resource intensive and requires parallelism for efficiency. Parallelism introduces collective communication that is both expensive and represents a phase when hardware resources are underutilized. Towards mitigating this, Kraken is an evolution of the standard Transformer architecture that is designed to complement existing tensor parallelism schemes for efficient inference on multi-device systems. By introducing a fixed degree of intra-layer model parallelism, the architecture allows collective operations to be overlapped with compute, decreasing latency and increasing hardware utilization. When trained on OpenWebText, Kraken models reach a similar perplexity as standard Transformers while also preserving their language modeling capabilities when evaluated on the SuperGLUE benchmark. Importantly, when tested on multi-GPU systems using TensorRT-LLM engines, Kraken speeds up Time To First Token by a mean of 35.6% across a range of model sizes, context lengths, and degrees of tensor parallelism.",
+      "identifiers": [
+        "SemanticScholar:ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6"
+      ],
+      "semantic_scholar_id": "ec4be85aae5f7d9cfb81e35153e4f6bd672db7a6",
+      "canonical_id": "arXiv:2408.07802",
+      "arxiv_id": "2408.07802",
+      "doi": "10.48550/arXiv.2408.07802",
+      "authors": [
+        "R. Prabhakar",
+        "Hengrui Zhang",
+        "David Wentzlaff"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 807,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "arXiv v2要旨はTensor Parallelismのcollective通信を計算と重畳させるよう層内の固定並列度を組み込むKrakenアーキテクチャを提案。TensorRT-LLMを用いた複数GPU評価で平均TTFTを35.6%改善し、言語モデル品質を維持。分散推論時の通信隠蔽へ直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b4cb840910c9",
+    "round": "libimp-b4cb840910c917f0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b4cb840910c917f0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b4cb840910c917f0-pre01.json",
+    "receipt": "sha256:bc983a5e0d056dd1938ba3ef5e9eaefab2e776163ed490493e2a62ac88009d1c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b4cb840910c9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

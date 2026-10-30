@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "WaterKron and FlipFlop Hessian: Information-Theoretically Grounded Quantization with Kronecker-factored Hessians",
+      "source_url": "https://arxiv.org/abs/2609.14706",
+      "year": 2026,
+      "published": "2026-09-13",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How should a Kronecker-factored Hessian approximation be chosen for post-training quantization? We address this question through WaterKron, which combines two-sided GPTQ with row- and column-dependent waterfilling scales and entropy coding. We derive its high-rate distortion with respect to the full Hessian using an explicit Kronecker-Hessian mismatch factor $\\Phi$. This factor quantifies the asymptotic distortion penalty due to the Kronecker Hessian approximation and provides a criterion for selecting the factors optimally. Minimizing $\\Phi$ leads to a Gaussian covariance-fitting problem with classical ``flip-flop''updates. We thus give a rate-distortion justification for using the resulting FlipFlop Hessian in quantization. We evaluate it empirically, finding that the FlipFlop Hessian consistently improves KL divergence and perplexity over input-only, marginal, and Frobenius-based Hessian choices.",
+      "identifiers": [
+        "SemanticScholar:52b086b9c9b99d5753c0024e9e2b792148a28be2"
+      ],
+      "semantic_scholar_id": "52b086b9c9b99d5753c0024e9e2b792148a28be2",
+      "canonical_id": "arXiv:2609.14706",
+      "arxiv_id": "2609.14706",
+      "authors": [
+        "Johann Birnick",
+        "R. Saab"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨はKronecker分解Hessianの近似誤差を情報理論的な歪み係数で評価し、行列両側のGPTQと水充填型スケール、flip-flop更新を導出。入力のみ等のHessian近似よりKLとPPLを改善。LLMの推論向けPTQの理論と品質に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines",
+      "source_url": "https://arxiv.org/abs/2604.16734",
+      "year": 2026,
+      "published": "2026-04-17",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have recently demonstrated strong capabilities in understanding and generating responses from diverse visual inputs, including high-resolution images and long video sequences. As these models scale to richer visual representations, inference increasingly relies on storing large numbers of vision tokens in the key-value (KV) cache, making memory consumption a central bottleneck. Existing methods address this issue by identifying redundancy in vision tokens and compressing the cache, but such compression is typically applied only after all inputs are processed, resulting in high peak memory usage during the prefill stage. In this work, we show that MLLMs exhibit inherent structural regularities and representational redundancy that can be exploited to control memory growth throughout inference. Based on this insight, we propose a sequential input-compression mechanism that enforces a fixed memory budget by performing structure-aware key-value cache compression during the prefill process. This approach substantially reduces peak memory usage while maintaining generative performance with only minimal degradation, enabling more practical and memory-efficient multimodal inference.",
+      "identifiers": [
+        "SemanticScholar:8b6e0c1553449c9d5191ab4c3cf1252a77cd4653"
+      ],
+      "semantic_scholar_id": "8b6e0c1553449c9d5191ab4c3cf1252a77cd4653",
+      "canonical_id": "arXiv:2604.16734",
+      "arxiv_id": "2604.16734",
+      "doi": "10.48550/arXiv.2604.16734",
+      "authors": [
+        "Junwan Kim",
+        "Hyunkyung Bae"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 196,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨はMLLMのprefill中に視覚KVがピークメモリを増大させる点を対象に、全入力処理後ではなくprefill進行中に構造認識KV圧縮を行い、固定メモリ予算を守る方式を提案。生成品質を大きく損なわずピークメモリを削減するため、VLM推論のメモリ管理に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "1+1>2: A Synergistic Sparse and Low-Rank Compression Method for Large Language Models",
+      "source_url": "https://arxiv.org/abs/2510.26446",
+      "year": 2025,
+      "published": "2025-10-30",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable proficiency in language comprehension and generation; however, their widespread adoption is constrained by substantial bandwidth and computational demands. While pruning and low-rank approximation have each demonstrated promising performance individually, their synergy for LLMs remains underexplored. We introduce \\underline{S}ynergistic \\underline{S}parse and \\underline{L}ow-Rank \\underline{C}ompression (SSLC) methods for LLMs, which leverages the strengths of both techniques: low-rank approximation compresses the model by retaining its essential structure with minimal information loss, whereas sparse optimization eliminates non-essential weights, preserving those crucial for generalization. Based on theoretical analysis, we first formulate the low-rank approximation and sparse optimization as a unified problem and solve it by iterative optimization algorithm. Experiments on LLaMA and Qwen2.5 models (7B-70B) show that SSLC, without any additional training steps, consistently surpasses standalone methods, achieving state-of-the-arts results. Notably, SSLC compresses Qwen2.5 by 50\\% with no performance drop and achieves at least 1.63$\\times$ speedup, offering a practical solution for efficient LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6"
+      ],
+      "semantic_scholar_id": "c92523a93f90b8e9a1d2b5777e8b2b42ff6b35c6",
+      "canonical_id": "arXiv:2510.26446",
+      "arxiv_id": "2510.26446",
+      "doi": "10.18653/v1/2025.findings-emnlp.765",
+      "authors": [
+        "Zeliang Zong",
+        "Kai Zhang",
+        "Zhe-Yang Li",
+        "Wen-Ming Tan",
+        "Ye Ren",
+        "Yiyan Zhai",
+        "Ji-Lin Hu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 365,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "arXiv一次要旨は枝刈りと低ランク近似を一体の反復最適化として扱うSSLCを提案。LLaMA・Qwen2.5の7B〜70Bで追加学習なしの圧縮を評価し、Qwen2.5の50%圧縮で品質低下なし・少なくとも1.63倍の推論高速化を報告。推論向け重み圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Before Thinking, Learn to Decide: Proactive Routing for Efficient Visual Reasoning",
+      "source_url": "https://arxiv.org/abs/2606.30217",
+      "year": 2026,
+      "published": "2026-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large multimodal models have achieved strong reasoning on complex visual tasks, but their inference efficiency is often restricted by long chains of thought. A promising solution is to pair a small draft model with a large target model, enabling cooperative inference employing a routing signal that adaptively routes queries to either the draft or target model based on their difficulties for optimal efficiency and accuracy. Yet, the remaining bottleneck is to establish a reliable query difficulty signal under multimodal settings. Existing approaches designed for language models either rely on post-hoc token probabilities, which fall short in multimodal scenarios, or depend on supervised fine-tuning, which is a data-sensitive strategy. Both paradigms perform routing only after a complete output, and ignore whether the target model can actually solve the routed instances. To address this, we propose PRP, a Proactive Routing Paradigm that enables early decision-making by jointly evaluating the competence of both the draft and target models. Our Draft Rating Learning (DRL) equips the draft model with an internal confidence estimator, while Joint Rating Learning (JRL) predicts how well the target model can handle a given query, thereby prioritizing the allocation of samples it excels at rather than the hardest ones. These ratings enable fine-grained, instance-level \\textbf{Proactive Routing} and substantially accelerate inference without compromising overall performance. Extensive experiments across multiple multimodal reasoning benchmarks validate our effectiveness and efficiency.",
+      "identifiers": [
+        "SemanticScholar:8ed5f7eeea7248c4213f93fd4e3e84b314e39075"
+      ],
+      "semantic_scholar_id": "8ed5f7eeea7248c4213f93fd4e3e84b314e39075",
+      "canonical_id": "arXiv:2606.30217",
+      "arxiv_id": "2606.30217",
+      "doi": "10.48550/arXiv.2606.30217",
+      "authors": [
+        "Yinan Zhou",
+        "Haokun Lin",
+        "Yi-Chen Wu",
+        "Caifeng Shan",
+        "Zhe-Nan Sun",
+        "Yu-Xin Chen",
+        "Teng Wang",
+        "Chen Ma",
+        "Li Zhu",
+        "Shan Ying"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 123,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は視覚推論の質問に対し、ドラフトとターゲット両モデルの解答可能性を予測し、生成前に適切なモデルへルーティングするPRPを提案。単純な難易度判定ではなくモデル能力差を用いて推論資源を割り当てるため、MLLMのモデル選択による計算量削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "QuantForge: Discovering Residual Decompositions for MXFP4 Post-Training Quantization",
+      "source_url": "https://arxiv.org/abs/2609.34680",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Four-bit post-training quantization can reduce the memory demands of large language models, but preserving accuracy under strict MXFP4 W4A4 requires coordinating several design choices. Coordinate transforms change block-encoding errors, which in turn affect the residuals propagated through the network. The useful algorithmic decomposition is therefore not fully known before search. LLM-driven program evolution offers a way to explore these choices, but performance scores alone do not explain which design should change next. We introduce QuantForge, a PTQ discovery system that records competing explanations, selects controls that distinguish them, and checks that successor code implements the resulting conclusions. This residual compilation guides program revisions while retaining useful programs even when their original explanations are rejected. Remeasuring the revised program reveals the next error to address. This process discovers HiRes, a fixed MXFP4 quantizer that shapes coordinates, refines legal code assignments, and recovers errors along attention and MLP paths. Each stage acts on residuals measured after the preceding stage has executed. Across seven tasks, HiRes achieves the lowest seven-model Robust Fit (0.09300) and the lowest quantized Fit-7 at 32B. In matched-budget comparisons of LLM-driven program evolution, each with 240 evaluator calls, QuantForge reaches a held-out transfer target in six of eight runs, compared with three each for textual memory and reflection memory, and one for score-only evolution, despite evaluating fewer new programs. These results show that QuantForge improves the discovery of transferable PTQ algorithms by turning controlled evidence into subsequent program changes. We have open-sourced the QuantForge search framework.",
+      "identifiers": [
+        "SemanticScholar:9c70fbb08270465844b6991ea6e05b7e40e16cd1"
+      ],
+      "semantic_scholar_id": "9c70fbb08270465844b6991ea6e05b7e40e16cd1",
+      "canonical_id": "arXiv:2609.34680",
+      "arxiv_id": "2609.34680",
+      "authors": [
+        "Qiu-Lin Shang",
+        "Zhou-Tong Wu",
+        "Jie Hu",
+        "Kun Yuan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLLM駆動のプログラム進化で量子化誤差の仮説・反証を保持し、MXFP4 W4A4の座標変換、符号割当、残差回復を組み合わせるHiResを探索。7モデルのRobust Fitを評価し、巨大LLMの推論向け量子化精度を改善。量子化手法と自動設計の直接的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e7d11c05b23f",
+    "round": "libimp-e7d11c05b23f5ce7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e7d11c05b23f5ce7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e7d11c05b23f5ce7-pre01.json",
+    "receipt": "sha256:c00fed0726d86d9e295842ee4460c4d52bef74542c06e5b2a5e0a29cbcf4fa70"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e7d11c05b23f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

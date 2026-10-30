@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Large Language Model as Token Compressor and Decompressor",
+      "source_url": "https://arxiv.org/abs/2603.25340",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we study whether an off-the-shelf LLM can be adapted into a discrete, variable-length token compressor and decompressor for long-context processing. To this end, we design a self-expressive autoencoding framework that fine-tunes a pretrained LLM with lightweight LoRA adapters to map long texts into compact sequences of learned latent codes, termed Z-tokens, and to decode them back into natural language or task outputs. The resulting representation is content-adaptive: less predictable or information-dense segments can receive more Z-tokens, while redundant regions can be represented more compactly through a budget-aware length regularizer. Our method is evaluated on long-context datasets such as Wikipedia, CNN/DailyMail, HotpotQA, and QuALITY, showing that it preserves reconstruction quality and downstream performance while reducing effective context length, generation-stage memory usage, and end-to-end latency. This simple design supports both direct decoding from compressed contexts and autoregressive generation in the Z-token space, providing a practical interface for efficient long-context inference.",
+      "identifiers": [
+        "SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd"
+      ],
+      "semantic_scholar_id": "38a49095776064e6b8f8efa7f88594f65926bfdd",
+      "canonical_id": "arXiv:2603.25340",
+      "arxiv_id": "2603.25340",
+      "doi": "10.48550/arXiv.2603.25340",
+      "authors": [
+        "Wen-Bing Li",
+        "Zi-Kai Song",
+        "Jie-Lei Zhang",
+        "Tian Zhao",
+        "Jun-Kai Lin",
+        "Yiran Wang",
+        "Wei Yang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は既存LLMにLoRAを付け、長文を可変長の潜在Z-token列へ圧縮・復元する自己表現型符号化を提案。Wikipedia・HotpotQA等で文脈長、生成時メモリ、E2E遅延を削減しつつ品質を保持。長文脈推論の入力圧縮へ直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs",
+      "source_url": "https://arxiv.org/abs/2607.02391",
+      "year": 2026,
+      "published": "2026-07-02",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference workloads are a rapidly growing contributor to data center energy consumption. Optimizing these deployments requires matching specific LLMs to the most efficient GPUs, but operators currently lack the tools to do so without exhaustively profiling each combination. While some predictive models exist, they still require profiling data and struggle to generalize to hardware unseen during training. To address this, we introduce \\textit{WattGPU}, featuring two predictive models for mean GPU power draw and Inter-Token Latency (ITL). Our approach leverages only publicly available LLM metadata and GPU specifications, eliminating the need for hardware access or profiling while enabling generalization to unseen NVIDIA server-grade GPUs and LLMs. We evaluate our models using rigorous leave-one-GPU-out and leave-one-LLM-out cross-validation on a dataset of 42 open-source LLMs (0.1B--27B parameters) and 8 GPUs under both offline and server scenarios. The mean power draw model achieves a median absolute percentage error of $\\leq3.4\\%$ for offline and $\\leq13.5\\%$ for server scenarios on unseen GPUs, while the latency model achieves $\\leq8.5\\%$ in server mode, both maintaining strong GPU ranking correlations for server scenarios (Kendall $\\tau\\geq0.76$). Compared to standard physically grounded baselines -- Load-Scaled Thermal Design Power (TDP) for power draw and roofline for latency -- our models reduce median absolute percentage error by approximately 4$\\times$ on unseen LLM-GPU combinations for server scenarios or approximately 2$\\times$ for completely unseen GPUs. WattGPU's data and code are publicly available at https://github.com/maufadel/wattgpu.",
+      "identifiers": [
+        "SemanticScholar:8c84192895af6dd9a94a129560860d034a39dd19"
+      ],
+      "semantic_scholar_id": "8c84192895af6dd9a94a129560860d034a39dd19",
+      "canonical_id": "arXiv:2607.02391",
+      "arxiv_id": "2607.02391",
+      "doi": "10.48550/arXiv.2607.02391",
+      "authors": [
+        "Mauricio Fadel Argerich",
+        "Jonathan Furst",
+        "M. Patiño-Martínez"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 120,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IJCAI 2026 workshopのarXiv一次要旨は公開GPU仕様とLLMメタデータのみから電力とITLを予測するWattGPUを提案。42モデルと8GPUのleave-one-out検証で未見GPUの電力誤差中央値はoffline3.4%以下、server13.5%以下、server遅延誤差8.5%以下。推論GPU配置と電力最適化に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "S3-Attention:Attention-Aligned Endogenous Retrieval for Memory-Bounded Long-Context Inference",
+      "source_url": "https://arxiv.org/abs/2601.17702",
+      "year": 2026,
+      "published": "2026-01-25",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models are increasingly applied to multi-document and long-form inputs, yet long-context inference remains memory- and noise-inefficient. Key-value (KV) caching scales linearly with context length, while external retrieval methods often return lexically similar but causally irrelevant passages. We present S3-Attention, a memory-first inference-time framework that treats long-context processing as attention-aligned endogenous retrieval. S3-Attention decodes transient key and query projections into top-k sparse feature identifiers using lightweight sparse autoencoders, and constructs a CPU-based inverted index mapping features to token positions or spans during a single streaming scan. This design allows the KV cache to be discarded entirely and bounds GPU memory usage by the scan chunk size. At generation time, feature co-activation is used to retrieve compact evidence spans, optionally fused with BM25 for exact lexical matching. Under a unified LongBench evaluation protocol with fixed prompting, decoding, and matched token budgets, S3-Hybrid closely matches full-context inference across multiple model families and improves robustness in several information-dense settings. We also report an engineering limitation of the current prototype, which incurs higher wall-clock latency than optimized full-KV baselines, motivating future kernel-level optimization.",
+      "identifiers": [
+        "SemanticScholar:37daca792f2c2c6e335d92dfe3fc4d333d4bb95c"
+      ],
+      "semantic_scholar_id": "37daca792f2c2c6e335d92dfe3fc4d333d4bb95c",
+      "canonical_id": "arXiv:2601.17702",
+      "arxiv_id": "2601.17702",
+      "doi": "10.48550/arXiv.2601.17702",
+      "authors": [
+        "Qing-Sen Ma",
+        "Dian-Yun Wang",
+        "Yaoye Wang",
+        "Lechen Ning",
+        "Sujie Zhu",
+        "Xiaohan Zhang",
+        "Jiaming Lyu",
+        "Lin-Hao Ren",
+        "Zhenbo Xu",
+        "Zhao-Feng He"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 278,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は疎オートエンコーダでKey/Queryを特徴IDに変換し、CPU上の転置索引で証拠スパンを再検索するS3-Attentionを提案。GPUの全KVを破棄し、走査チャンク長でメモリ上限を抑える。一方現行試作は全KV方式よりwall-clock遅延が高いと明記。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+      "source_url": "https://arxiv.org/abs/2410.10912",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 52,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent work on pruning large language models (LLMs) has shown that one can eliminate a large number of parameters without compromising performance, making pruning a promising strategy to reduce LLM model size. Existing LLM pruning strategies typically assign uniform pruning ratios across layers, limiting overall pruning ability; and recent work on layerwise pruning of LLMs is often based on heuristics that can easily lead to suboptimal performance. In this paper, we leverage Heavy-Tailed Self-Regularization (HT-SR) Theory, in particular the shape of empirical spectral densities (ESDs) of weight matrices, to design improved layerwise pruning ratios for LLMs. Our analysis reveals a wide variability in how well-trained, and thus relatedly how prunable, different layers of an LLM are. Based on this, we propose AlphaPruning, which uses shape metrics to allocate layerwise sparsity ratios in a more theoretically principled manner. AlphaPruning can be used in conjunction with multiple existing LLM pruning methods. Our empirical results show that AlphaPruning prunes LLaMA-7B to 80% sparsity while maintaining reasonable perplexity, marking a first in the literature on LLMs. We have open-sourced our code at https://github.com/haiquanlu/AlphaPruning.",
+      "identifiers": [
+        "SemanticScholar:46daae2a932aa02e307fd3317e9f3719c56d6010"
+      ],
+      "semantic_scholar_id": "46daae2a932aa02e307fd3317e9f3719c56d6010",
+      "canonical_id": "arXiv:2410.10912",
+      "arxiv_id": "2410.10912",
+      "doi": "10.48550/arXiv.2410.10912",
+      "authors": [
+        "Haiquan Lu",
+        "Ye-Fan Zhou",
+        "Shi-Wei Liu",
+        "Zhang-Yang Wang",
+        "Michael W. Mahoney",
+        "Yaoqing Yang"
+      ],
+      "priority": 62,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 52,
+        "citation_count": 52,
+        "total": 62,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 746,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "NeurIPS 2024のarXiv一次要旨は重み行列の経験スペクトル密度とHeavy-Tailed Self-Regularizationに基づき層別の枝刈り率を割り当てるAlphaPruningを提案。LLaMA-7Bで80%の疎性を実現し、困惑度を一定程度維持。LLM推論用モデルの容量削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+      "source_url": "https://arxiv.org/abs/2503.22196",
+      "year": 2025,
+      "published": "2025-03-28",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) encounter challenges in processing long sequences on edge devices due to the quadratic complexity of attention mechanisms and growing memory demands from Key-Value (KV) cache. Existing KV cache optimizations struggle with irreversible token eviction in long-output tasks, while alternative sequence modeling architectures prove costly to adopt within established Transformer infrastructure. We present EdgeInfinite, a memory-efficient solution for infinite contexts that integrates compressed memory into Transformer-based LLMs through a trainable memory-gating module. This approach maintains full compatibility with standard Transformer architectures, requiring fine-tuning only a small part of parameters, and enables selective activation of the memory-gating module for long and short context task routing. The experimental result shows that EdgeInfinite achieves comparable performance to baseline Transformer-based LLM on long context benchmarks while optimizing memory consumption and time to first token.",
+      "identifiers": [
+        "SemanticScholar:300207a7cc2644859813dbc477bec1e90b90a41a"
+      ],
+      "semantic_scholar_id": "300207a7cc2644859813dbc477bec1e90b90a41a",
+      "canonical_id": "arXiv:2503.22196",
+      "arxiv_id": "2503.22196",
+      "doi": "10.48550/arXiv.2503.22196",
+      "authors": [
+        "Jiyu Chen",
+        "Shuang Peng",
+        "Daxiong Luo",
+        "Fan Yang",
+        "Renshou Wu",
+        "Fangyuan Li",
+        "Xiao-Xin Chen"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 581,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv一次要旨は標準Transformerに少数パラメータの学習で導入可能な圧縮メモリとゲートを追加し、短文・長文でゲートを選択するEdgeInfiniteを提案。エッジでの長文脈KV保持問題に対応し、長文品質を維持しながらメモリとTTFTを改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-9a042a25c88d",
+    "round": "libimp-9a042a25c88d3a87-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-9a042a25c88d3a87-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-9a042a25c88d3a87-pre01.json",
+    "receipt": "sha256:f2671f7b1d6558e49716a5972b97014d48362af5440fb2897f7392f2853fe018"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-9a042a25c88d",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

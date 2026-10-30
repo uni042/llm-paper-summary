@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI transport libraries move bytes efficiently, but they commonly assume that buffers are already correctly allocated, placed, shared, registered, and safe under completion and teardown pressure. This paper presents dmaplane, a Linux kernel module that makes this missing layer explicit as buffer orchestration. dmaplane exposes a stable kernel UAPI via /dev/dmaplane and composes ring-based command channels, DMA buffer lifecycle management, dma-buf export for cross-device sharing, a kernel-space RDMA engine, NUMA-aware allocation and verification, credit-based flow control, low-overhead observability, and GPU memory integration via PCIe BAR pinning. We evaluate orchestration sensitivity with measurements of NUMA cross-node penalties at DRAM scale, completion-safe flow control under sustained RDMA load, and GPU BAR mapping tiers versus cudaMemcpy. We also demonstrate end-to-end disaggregated inference by transferring KV-cache chunks between two machines using RDMA WRITE WITH IMMEDIATE and reconstructing tensor views on the receiver. RDMA measurements use Soft-RoCE; we distinguish measured results from provider-independent properties by construction.",
+      "identifiers": [
+        "SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d"
+      ],
+      "semantic_scholar_id": "b0e3beb2db225170a5c2fda79710e5d20238195d",
+      "canonical_id": "arXiv:2603.10030",
+      "arxiv_id": "2603.10030",
+      "doi": "10.48550/arXiv.2603.10030",
+      "authors": [
+        "Marco Graziano"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 246,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2要旨はLinuxカーネルのdmaplaneでDMAバッファ寿命管理、NUMA配置、RDMA、GPU BAR pinningを統合。2台間のKVキャッシュチャンクをRDMA WRITE WITH IMMEDIATEで転送して受信側のテンソルを復元するdisaggregated inferenceの実証を含む。GPU-CPU-ネットワーク間データ移動の基盤に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "source_url": "https://arxiv.org/abs/2609.36800",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Compiler backends are expensive to build and maintain as programming models, workloads, and accelerators evolve. We investigate whether large language models can replace the conventional optimizing and lowering pipeline, a process that we call AI lowering. We study AI lowering from Triton to NVIDIA PTX: an LLM agent translates Triton kernels directly into PTX. We build an environment that evaluates candidate PTX, and an agentic harness in which an LLM translates Triton kernels into PTX. Across twelve common kernels on Ada, Hopper, and Blackwell GPUs and ten kernels from recent ML papers, AI lowering achieves 0.83x-3.34x the performance of autotuned Triton. The largest gains come from transformations that Triton's lowering pipeline does not perform, such as decoding packed binary weights directly into Tensor Core operands (3.34x on BitDelta), assigning each thread a complete softmax row in tensor memory (1.37x on FlashAttention), and reusing overlapping convolution windows (up to 2.23x). These results rely on a robust evaluation harness with comprehensive verification support. We build on Volta, an existing PTX verifier, and substantially extend it to support modern GPU architectures by introducing support for Blackwell's tcgen05 Tensor Core interface. This requires modeling three architectural features: managed tensor memory, descriptor-based operand layouts, and asynchronous execution coordinated through commits, waits, memory barriers, and proxy fences. We discuss the challenges involved in formalizing them, as well as the current limitations. Our results suggest an emerging future in which AI compilers replace custom-written intermediate representations and checkers, reducing the time and engineering effort required to bring up software for new general-purpose and custom chips.",
+      "identifiers": [
+        "SemanticScholar:3fef8e5c34a13cd861a44f7126af8a213ffe3ea1"
+      ],
+      "semantic_scholar_id": "3fef8e5c34a13cd861a44f7126af8a213ffe3ea1",
+      "canonical_id": "arXiv:2609.36800",
+      "arxiv_id": "2609.36800",
+      "authors": [
+        "François Costa",
+        "Charly Castes",
+        "Thomas Bourgeat",
+        "Azalia Mirhoseini"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLLMエージェントがTritonカーネルをNVIDIA PTXへ直接変換するAI loweringを提案。Ada/Hopper/Blackwell上の共通カーネルとML論文由来のカーネルでautotuned Triton比0.83〜3.34倍、FlashAttentionで1.37倍の例を報告。GPU推論カーネルの生成と検証に直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling has recently emerged as a powerful approach for improving LLM reasoning by allocating additional computation during inference, substantially enhancing accuracy on challenging tasks such as mathematics and coding. To accelerate the exploration of reasoning paths, recent studies proposed speculative execution. However, we show that supporting speculative execution poses two unique challenges for LLM serving systems: (1) an explosion in the search space of candidate paths and (2) frequent, fine-grained verification tasks for candidates. To address these challenges, this paper proposes SpecScale, a serving system for efficient speculative execution. We introduce three techniques to reconcile the trade-off between latency and computational overhead: (1) early pruning of low-quality candidate paths, (2) deduplicating computation across redundant candidate paths, and (3) deferring fine-grained verification tasks. We evaluate SpecScale on challenging reasoning benchmarks, including MATH and Olympiad. Our results show that SpecScale significantly outperforms both non-speculative and recent speculative approaches, delivering substantial improvements in throughput and latency while preserving answer quality.",
+      "identifiers": [
+        "SemanticScholar:64cc6645122436c28af6dd66c5d574f103bf089a"
+      ],
+      "semantic_scholar_id": "64cc6645122436c28af6dd66c5d574f103bf089a",
+      "canonical_id": "arXiv:2609.39334",
+      "arxiv_id": "2609.39334",
+      "authors": [
+        "Jinwoo Jeong",
+        "Woohyun Choi",
+        "Myeongjae Jeon",
+        "Jeongseob Ahn"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はtest-time scalingの複数推論経路探索に伴う候補爆発と細粒度検証を課題として、SpecScaleサービングシステムを提案。低品質分岐の早期枝刈り、重複計算の共有、検証遅延でスループットとレイテンシを改善する。LLM推論時探索の実行基盤に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
+      "source_url": "https://arxiv.org/abs/2505.21661",
+      "year": 2025,
+      "published": "2025-05-27",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this work, we propose KPerfIR, a novel multilevel compiler-centric infrastructure to enable the development of customizable, extendable, and portable profiling tools tailored for modern artificial intelligence (AI) workloads on modern GPUs. Our approach integrates profiling capabilities directly into the compiler workflow, allowing profiling functionalities to be implemented as compiler passes, offering a programmable and reusable framework for performance analysis. This design bridges the gap between compilers and profilers, enabling fine-grained insights into complex optimization challenges such as overlapping the execution of fine-grained function units on GPUs. KPerfIR is integrated into the Triton infrastructure to highlight the power of a compiler-centric approach to advance performance analysis and optimization in the ever-evolving landscape of AI compilers. Our evaluation shows that our tool incurs low overhead (8.2%), provides accurate measurements (2% relative error), and delivers actionable insights into complicated GPU intra-kernel optimizations.",
+      "identifiers": [
+        "SemanticScholar:eeaa2d668c87354c75e5165df187775cd63bd66f"
+      ],
+      "semantic_scholar_id": "eeaa2d668c87354c75e5165df187775cd63bd66f",
+      "canonical_id": "arXiv:2505.21661",
+      "arxiv_id": "2505.21661",
+      "doi": "10.48550/arXiv.2505.21661",
+      "authors": [
+        "Yue Guan",
+        "Yuan-Wei Fang",
+        "Keren Zhou",
+        "Corbin Robeck",
+        "Manman Ren",
+        "Zhong-Kai Yu",
+        "Yufei Ding",
+        "Adnan Aziz"
+      ],
+      "priority": 7,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 7,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 521,
+        "matched_prestigious_venue": null
+      },
+      "reason": "OSDI 2025のarXiv一次要旨はTritonのコンパイラパスとしてGPUカーネルのプロファイラを実装できるKPerfIRを提案。計測オーバーヘッド8.2%、相対誤差2%を報告し、細粒度演算器の重畳など推論カーネル最適化に利用可能。LLM専用ではないが推論実装基盤に直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+      "source_url": "https://arxiv.org/abs/2406.06571",
+      "year": 2024,
+      "published": "2024-06-03",
+      "venue": "European Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While Large Language Models (LLMs) have achieved remarkable success in various fields, the efficiency of training and inference remains a major challenge. To address this issue, we propose SUBLLM, short for Subsampling-Upsampling-Bypass Large Language Model, an innovative architecture that extends the core decoder-only framework by incorporating subsampling, upsampling, and bypass modules. The subsampling modules are responsible for shortening the sequence, while the upsampling modules restore the sequence length, and the bypass modules enhance convergence. In comparison to LLaMA, the proposed SUBLLM exhibits significant enhancements in both training and inference speeds as well as memory usage, while maintaining competitive few-shot performance. During training, SUBLLM increases speeds by 26% and cuts memory by 10GB per GPU. In inference, it boosts speeds by up to 37% and reduces memory by 1GB per GPU. The training and inference speeds can be enhanced by 34% and 52% respectively when the context window is expanded to 8192. Our code is available at https://github.com/XiaoMi/subllm.",
+      "identifiers": [
+        "SemanticScholar:5120ab0be03baef18f5adace61ec9b7beb1eadc8"
+      ],
+      "semantic_scholar_id": "5120ab0be03baef18f5adace61ec9b7beb1eadc8",
+      "canonical_id": "arXiv:2406.06571",
+      "arxiv_id": "2406.06571",
+      "doi": "10.48550/arXiv.2406.06571",
+      "authors": [
+        "Quandong Wang",
+        "Yuxuan Yuan",
+        "Xiao-Yu Yang",
+        "Rui-Ke Zhang",
+        "K. Zhao",
+        "Wei Liu",
+        "Jian Luan",
+        "Daniel Povey",
+        "Bin Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 879,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ECAI 2024のarXiv v5要旨はdecoder-only LLMへsubsampling、upsampling、bypassを挿入し、中間系列長を短縮するSUBLLMを提案。LLaMA比較で推論速度最大37%改善、GPUあたりメモリ1GB削減、8,192文脈で推論速度52%改善と報告。推論時のトークン処理削減に直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b4cb840910c9",
+    "round": "libimp-b4cb840910c917f0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b4cb840910c917f0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b4cb840910c917f0-pre01.json",
+    "receipt": "sha256:bc983a5e0d056dd1938ba3ef5e9eaefab2e776163ed490493e2a62ac88009d1c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b4cb840910c9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

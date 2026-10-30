@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Learned Relay Representations for Forward-Thinking Discrete Diffusion Models",
+      "source_url": "https://arxiv.org/abs/2605.22967",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When Masked Diffusion Models (MDMs) generate sequences through iterative refinement, the rich internal computation over masked positions is discarded, forcing every subsequent refinement step to recompute the valuable internal information stored as model representations. To avoid a hard reset between denoising rounds, we propose Learned Relay Representations (Relay), a method that allows MDMs to be forward-thinking when denoising by explicitly learning how to propagate latent information for the benefit of future denoising steps. Relay introduces a differentiable per-token channel that passes information between forward passes and is trained via truncated backpropagation through time (BPTT). We show that this framework can be scaled to state-of-the-art Diffusion Language Models (DLMs), and is seamlessly compatible with techniques like block diffusion and KV caching. We first provide a thorough justification of the design choices in Relay on a challenging Sudoku-based planning task. We then scale Relay to Fast-dLLM v2, a state-of-the-art DLM, outperforming standard supervised finetuning on coding tasks while reducing inference latency by up to 32%. Our empirical results demonstrate that state-of-the-art DLMs can be explicitly trained to relay latent information forward across decoding steps, advancing the performance-latency Pareto frontier. We provide code for all our experiments.",
+      "identifiers": [
+        "SemanticScholar:bbf70c60e5bcfa2e0970babfa03bf51e1e7fc613"
+      ],
+      "semantic_scholar_id": "bbf70c60e5bcfa2e0970babfa03bf51e1e7fc613",
+      "canonical_id": "arXiv:2605.22967",
+      "arxiv_id": "2605.22967",
+      "doi": "10.48550/arXiv.2605.22967",
+      "authors": [
+        "Benjamin Rozonoyer",
+        "J. Minniti",
+        "Dhruvesh Patel",
+        "Neil Band",
+        "A. Bose",
+        "Tim G. J. Rudner",
+        "Andrew McCallum"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はマスク拡散言語モデルの各denoising反復で捨てられる内部表現を、学習可能なrelayチャネルで次反復へ引き継ぎ、再計算を抑える方法を提案。拡散LLMの反復推論効率に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2606.14782",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) achieve strong vision-language reasoning but incur large KV caches and high decoding latency with long visual contexts. Existing compression methods rely on observation window attention for stable token importance estimation, yet this aggregation can dilute sparse critical evidence and discard answer-relevant tokens under aggressive compression. We identify last query attention as a complementary signal for recovering such evidence, though its irrelevant signals may introduce additional noise. We propose BACON, a plug-and-play method that calibrates observation window attention with last query evidence while suppressing noise through intra-layer coherence and inter-layer persistence. Across diverse benchmarks, models, budgets, and compression methods, BACON improves multimodal KV-cache compression by 7.5% on average under the most aggressive budget, with gains up to 30.9%.",
+      "identifiers": [
+        "SemanticScholar:a9ab65c0dd1e42707d83ec0363939579dd0b9086"
+      ],
+      "semantic_scholar_id": "a9ab65c0dd1e42707d83ec0363939579dd0b9086",
+      "canonical_id": "arXiv:2606.14782",
+      "arxiv_id": "2606.14782",
+      "doi": "10.48550/arXiv.2606.14782",
+      "authors": [
+        "Tian-Hao Chen",
+        "Yuheng Wu",
+        "Ke-Lu Yao",
+        "Xiao-Gang Xu",
+        "Xiao-Bin Hu",
+        "Dong-Man Lee"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 142,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はマルチモーダル長文脈のKV圧縮で、観測窓の注意集約が重要な少数視覚トークンを見落とす問題に対し、最終クエリ注意と層間持続性で重要度を補正するBACONを提案。KV保持予算下の回答品質改善を直接扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Softmax Linear Attention: Reclaiming Global Competition",
+      "source_url": "https://arxiv.org/abs/2602.01744",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While linear attention reduces the quadratic complexity of standard Transformers to linear time, it often lags behind in expressivity due to the removal of softmax normalization. This omission eliminates \\emph{global competition}, a critical mechanism that enables models to sharply focus on relevant information amidst long-context noise. In this work, we propose \\textbf{Softmax Linear Attention (SLA)}, a framework designed to restore this competitive selection without sacrificing efficiency. By lifting the softmax operation from the token level to the head level, SLA leverages attention heads as coarse semantic slots, applying a competitive gating mechanism to dynamically select the most relevant subspaces. This reintroduces the ``winner-take-all''dynamics essential for precise retrieval and robust long-context understanding. Distinct from prior methods that focus on refining local kernel functions, SLA adopts a broader perspective by exploiting the higher-level multi-head aggregation structure. Extensive experiments demonstrate that SLA consistently enhances state-of-the-art linear baselines (RetNet, GLA, GDN) across language modeling and long-context benchmarks, particularly in challenging retrieval scenarios where it significantly boosts robustness against noise, validating its capability to restore precise focus while maintaining linear complexity.",
+      "identifiers": [
+        "SemanticScholar:ed091b29e1efc522c2a8a1844b5a0a56943ec237"
+      ],
+      "semantic_scholar_id": "ed091b29e1efc522c2a8a1844b5a0a56943ec237",
+      "canonical_id": "arXiv:2602.01744",
+      "arxiv_id": "2602.01744",
+      "doi": "10.48550/arXiv.2602.01744",
+      "authors": [
+        "Mingwei Xu",
+        "Xuan Lin",
+        "Xin Guo",
+        "Wan-Qing Xu",
+        "Wanyun Cui"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 270,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨は線形注意の計算効率を保ちつつ、softmaxをトークン間からヘッド間へ移すことで長文脈の競争的選択を復元するSLAを提案。二次注意の代替として長文脈メモリ・計算効率と品質のトレードオフを扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "OCGQuant: Outlier-Companion Grouping for NVFP4 Quantization",
+      "source_url": "https://arxiv.org/abs/2609.00066",
+      "year": 2026,
+      "published": "2026-08-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "NVFP4 is an efficient microscaling format for low-bit inference, but activation outliers can still degrade quantization accuracy within NVFP4 blocks. Within each quantization block, large activations can dominate the block scale, increasing the quantization error of the remaining values sharing the same scale. Existing post-training quantization (PTQ) methods mitigate outlier errors through strategies such as mixed precision, rotation, or residual compensation, but these approaches are either not specifically tailored to NVFP4 or introduce additional computation. In this work, we revisit NVFP4 from a channel-grouping perspective and define the reducible error incurred by remaining block values under the scale set by the block maximum as Collateral Quantization Error. Based on this insight, we propose OCGQuant, a post-training quantization method centered on Outlier-Companion Grouping (OCG), which adaptively pairs outlier channels with low-magnitude companion channels to improve NVFP4 activation block composition. Experiments on Llama3 and Qwen3 show that OCGQuant achieves the lowest WikiText-2 perplexity and highest average downstream accuracy among evaluated PTQ methods, while maintaining prefill speedup close to RTN and matching its peak decoding memory. Code is available at https://github.com/Eshamont/OCGQuant.",
+      "identifiers": [
+        "SemanticScholar:1ad7a4e9ab489b700e1f8d039fcaac943dbe4e07"
+      ],
+      "semantic_scholar_id": "1ad7a4e9ab489b700e1f8d039fcaac943dbe4e07",
+      "canonical_id": "arXiv:2609.00066",
+      "arxiv_id": "2609.00066",
+      "authors": [
+        "Yi-Shan Yao",
+        "Bin-Jun Li",
+        "Han-Ling Yi",
+        "Peng-Yue Li",
+        "Xiao-Qing Liu",
+        "Zi-Han Yang",
+        "Xiao-Tian Yu",
+        "Zhi-Wen Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨はNVFP4のブロック内活性外れ値が共有スケールを支配し、通常値の量子化誤差を増やす問題を定義。外れ値と近い値を同じブロックにまとめるチャネルグルーピングによりNVFP4低ビット推論の品質を改善するOCGQuantを提案し、LLM量子化の実装に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+      "source_url": "https://arxiv.org/abs/2609.33768",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent systems (MAS) have recently emerged as an effective approach for coordinating large language model (LLM)-based agents to solve complex tasks through structured interactions. In practice, MASs often handle a stream of heterogeneous and complex tasks, requiring agents to decompose each task and then self-organize and self-evolve to adapt to incoming tasks while sharing execution resources. However, most early approaches to MASs rely on centralized controllers or fixed coordination patterns, which can limit scalability or adaptability. In contrast, existing decentralized and dynamic MASs often require training dedicated routers or invoking LLMs for agent selection, resulting in substantial computational costs and coordination overhead. To address these challenges and enable efficient task-level self-organization and self-evolution for task- and workload-level collaboration, we propose Decentralized Expertise-Aware Load Serving (DEALS), a decentralized and low-complexity framework that enables agents to self-organize and dynamically route concurrent tasks for processing. Specifically, each agent maintains local queues of incoming tasks, and its router decides whether to process a task locally or forward it to a neighbor based on differences in backlog and success rate. Meanwhile, executors process independent tasks concurrently within and across agents, and partially solved tasks can be resumed by other agents. Experiments show that DEALS not only improves performance along multiple dimensions (e.g., answer accuracy and task throughput) in both homogeneous and heterogeneous agent pools, but also balances agent expertise and workload in a self-organized manner, enabling effective decentralized coordination.",
+      "identifiers": [
+        "SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b"
+      ],
+      "semantic_scholar_id": "c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+      "canonical_id": "arXiv:2609.33768",
+      "arxiv_id": "2609.33768",
+      "authors": [
+        "Jing-Hang Huang",
+        "Wen-Bin Wang",
+        "Yan-Chuan Yin",
+        "Alvaro Velasquez",
+        "Jia Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv著者要旨は多エージェントLLMで専用ルータの訓練やLLM呼出しによるエージェント選択の計算費を避け、専門性を考慮した分散タスク割当で負荷を分散するDEALSを提案。複数LLMエージェントのサービス効率と協調コストに直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-eefd7cd45810",
+    "round": "libimp-eefd7cd458107e8d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-eefd7cd458107e8d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-eefd7cd458107e8d-pre01.json",
+    "receipt": "sha256:331414cb1104799a21f2b0e32b8e6ec517df9994c81fc1de437c49fc43fadbd9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-eefd7cd45810",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

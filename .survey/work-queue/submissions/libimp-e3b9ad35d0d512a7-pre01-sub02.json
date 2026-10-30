@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "HyQuant: Hybrid-Precision Quantization for LLM Attention",
+      "source_url": "https://arxiv.org/abs/2608.27875",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization has been widely adopted in LLM training and inference to reduce cost and improve efficiency. However, low-bit quantization of the \\emph{attention} module often introduces large errors at very low bit-widths, causing performance degradation. Existing methods mainly rely on smoothing techniques to handle outliers, while we propose a hybrid quantization design to better balance accuracy and efficiency. Specifically, we propose \\textbf{HyQuant}, an efficient hybrid quantization framework for LLM attention. HyQuant quantizes most attention states into low-bit formats while retaining a small set of vertical-line tokens and local-window states in high precision. These accuracy-critical regions are selected using lightweight vertical-line-aware attention-pattern signals, reducing quantization error with limited overhead. In the Prefill stage, HyQuant uses a hybrid-precision quantized attention operator that preserves vertical-line tokens and a local sliding window in full precision while quantizing the remaining context. In the Decode stage, HyQuant applies the same principle to KV-cache compression and fuses KV dequantization with attention computation to improve memory and hardware efficiency. Across diverse tasks, models, and datasets, HyQuant maintains nearly lossless accuracy with an extremely simple design, demonstrating the efficiency and practical feasibility of hybrid quantization for LLM attention. Code is available at: https://github.com/jerrysfls/HyQuant .",
+      "identifiers": [
+        "SemanticScholar:7f652a50b2fdc52927b17eb4dc7e25732c03b9f1"
+      ],
+      "semantic_scholar_id": "7f652a50b2fdc52927b17eb4dc7e25732c03b9f1",
+      "canonical_id": "arXiv:2608.27875",
+      "arxiv_id": "2608.27875",
+      "authors": [
+        "Jia-Rui Ding",
+        "Bin Xing",
+        "Yu Zhang",
+        "Dian Ding",
+        "Xiao-Dong Yi",
+        "Xian-Bin Ouyang",
+        "Fei-Hui Zhou",
+        "Kunquan Zhang",
+        "Zhengmeng Guo",
+        "Hao Pan",
+        "Guang-Tao Xue",
+        "Yi-Ming Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は注意行列の縦線トークンと近傍窓だけ高精度に残し、他の注意状態を低ビット化するHyQuantを提案。prefillの混合精度注意とdecodeのKV圧縮・逆量子化融合を一貫して扱い、LLM注意の品質とメモリ・ハードウェア効率を両立。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+      "source_url": "https://arxiv.org/abs/2609.18005",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model optimization is an active research area, spanning quantization of model weights, early-exit methods for skipping layers, and speculative decoding. Each track uses its own quality measures, typically an idiosyncratic benchmark score. Few approach the measurement precision required by other scientific disciplines. We propose a rigorous methodology for measuring output quality, suitable for cross-system and cross-technique comparison. We score outputs with an LLM as a judge, but calibrate the judge formally: we compare its scores on two ordinary runs of a model given the same prompts, verifying that it shows no systematic preference between statistically equivalent outputs and measuring its per-sample noise. Each design also includes a'null'condition, provably identical in distribution to the unmodified model, whose measured difference must be zero. With this one instrument we measure several acceleration techniques on the same prompts, so their quality costs can be compared. Perceived quality proves highly dependent on the domain of discourse. A 4-bit model was indistinguishable from its 16-bit original down to our design's +/-0.3-point resolution, in English prose and Chinese alike. At 3-bit precision the same prompts lost 0.5 points in English prose, 0.9 in Chinese, and 1.1 on multi-step math; early exit that cost 0.7 points on prose cost 2.5 on math, cutting correctly solved problems from 19 of 27 to 6. The pattern held for models from Alibaba and from Meta, but not its magnitude: the same quantizer cost Meta's model 1.8 points where it cost Alibaba's 0.7. A model's certainty about a token predicts how likely it is to differ from the full model's choice, but not how much that difference affects judged quality, so acceptance rules relying on certainty cannot distinguish errors that matter from errors that don't.",
+      "identifiers": [
+        "SemanticScholar:0be24a69fd3f403b922823de603dbe4ff5f08281"
+      ],
+      "semantic_scholar_id": "0be24a69fd3f403b922823de603dbe4ff5f08281",
+      "canonical_id": "arXiv:2609.18005",
+      "arxiv_id": "2609.18005",
+      "authors": [
+        "Jerry Kaplan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は量子化・early exit・投機的復号の品質変化を同じプロンプトで比較するため、LLMジャッジの再現ノイズと同分布null条件を較正する計測方法を提案。4bitと16bitの差が±0.3点分解能以下の条件や3bitの多言語・数学での劣化を定量化。推論最適化の品質評価基盤に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Sample Count Is Not Enough: Candidate-Generation Strategy Shapes the Energy and Performance of LLM Test-Time Scaling",
+      "source_url": "https://arxiv.org/abs/2609.19499",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling can improve large language model reasoning by generating and combining multiple candidate responses. In sampling-based methods, the inference budget is often described by the number of generated candidates, N. However, N tells us how many candidates are generated, not how they are executed. The same candidate budget can be produced in one batched generation call or split across several sequential calls with smaller batch sizes. We first study the effect of increasing N on reasoning accuracy using Phi-3-mini and Qwen2.5-1.5B on 500 GSM8K prompts. As expected, increasing N from 1 to 8 improves accuracy by 8.4 percentage points for Phi-3-mini and 18.4 points for Qwen2.5-1.5B. However, accuracy alone does not show the systems cost of using a larger candidate budget. We therefore fix N = 8 and compare four generation schedules: 1x8, 2x4, 4x2, and 8x1, where axb denotes a generation calls with b candidates per call. We measure latency, throughput, GPU-hours, and gross GPU-device energy while keeping the total candidate count fixed. On A100 GPUs, eight serial calls use 4.64-4.86x as much gross GPU-device energy and have 5.77-6.12x the P95 latency of one batched call with eight candidates. The same pattern appears across three independently scheduled A100 nodes per model and in short-output SciQ/V100 experiments. These results show that candidate count alone is not enough to describe the systems cost of multi-candidate test-time scaling. When candidates are independent and memory allows it, fewer generation calls with larger batch sizes are more efficient. Evaluations should therefore report not only candidate count and accuracy, but also generation schedule and GPU-level systems metrics.",
+      "identifiers": [
+        "SemanticScholar:a429cf6f1f9285849ceea67823d8824fe7661719"
+      ],
+      "semantic_scholar_id": "a429cf6f1f9285849ceea67823d8824fe7661719",
+      "canonical_id": "arXiv:2609.19499",
+      "arxiv_id": "2609.19499",
+      "authors": [
+        "Mobina Kashaniyan",
+        "Ali Jannesari"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は同じ8候補生成でも1×8バッチと8×1逐次ではGPUエネルギーが4.64〜4.86倍、P95遅延が5.77〜6.12倍異なることをA100で実測。推論時多数候補生成のスケジューリングと消費電力の直接的なシステム評価。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "GeLaCo: An Evolutionary Approach to Layer Compression",
+      "source_url": "https://arxiv.org/abs/2507.10059",
+      "year": 2025,
+      "published": "2025-07-14",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models have achieved remarkable performance across a large number of tasks, but face critical deployment and usage barriers due to substantial computational requirements. Model compression methods, which aim to reduce model size while preserving its capacity, are an important means to mitigate these issues. Promising approaches along these lines, such as structured pruning, typically require costly manual hyperparameter exploration or rely on local heuristics that may run the risk of ignoring better solutions. In this work we introduce GeLaCo, an evolutionary approach to LLM compression via layer collapse. Our approach supports an efficient exploration of the compression solution space via population-based search and a novel layer collapse formulation based on parametrized weight merging, with a fitness function based on similarity over residual updates and language modeling KL divergence. GeLaCo also supports both single and multi-objective evolutionary compression search, establishing the first Pareto front estimation along compression and quality axes. We evaluate GeLaCo solutions via both perplexity-based and generative evaluations over foundational and instruction-tuned models, outperforming state-of-the-art alternatives.",
+      "identifiers": [
+        "SemanticScholar:20726d2543f7ca4dcf213a25ee648e9e8e522481"
+      ],
+      "semantic_scholar_id": "20726d2543f7ca4dcf213a25ee648e9e8e522481",
+      "canonical_id": "arXiv:2507.10059",
+      "arxiv_id": "2507.10059",
+      "doi": "10.48550/arXiv.2507.10059",
+      "authors": [
+        "David Ponce",
+        "Thierry Etchegoyhen",
+        "J. del Ser"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 473,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は重み統合を伴うlayer collapseと残差更新類似度・言語モデルKLを使った進化的探索で圧縮と品質のPareto前線を推定。基盤・指示調整LLMの生成評価を含み、配備用モデルサイズ削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SLaNC: Static LayerNorm Calibration",
+      "source_url": "https://arxiv.org/abs/2410.10553",
+      "year": 2024,
+      "published": "2024-10-14",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The ever increasing sizes of Large Language Models (LLMs) beyond hundreds of billions of parameters have generated enormous pressure on the manufacturers of dedicated hardware accelerators and made the innovative design of the latter one of the most rapidly expanding fields of the AI industry. Various approaches have been explored to enable efficient and accurate processing of LLMs on the available accelerators given their computational and storage limitations. Among these, various quantization techniques have become the main focus of the community as a means of reducing the compute, communication and storage requirements. Quantization to lower precision formats naturally poses a number of challenges caused by the limited range of the available value representations. When it comes to processing the popular Transformer models on hardware, one of the main issues becomes calculation of the LayerNorm simply because accumulation of the variance requires a much wider dynamic range than the hardware enables. In this article, we address this matter and propose a computationally-efficient scaling technique that can be easily applied to Transformer models during inference. Our method suggests a straightforward way of scaling the LayerNorm inputs based on the static weights of the immediately preceding linear layers. The scaling factors are computed offline, based solely on the linear layer weights, hence no latency or computational overhead is added during inference. Most importantly, our technique ensures that no numerical issues such as overflow or underflow could happen during the compute. This approach offers smooth, accurate and resource-effective inference across a wide range of hardware architectures. The article provides theoretical justification as well as supporting numerical simulations.",
+      "identifiers": [
+        "SemanticScholar:98c82adb76c494534c20ba4d8a346bf815886891"
+      ],
+      "semantic_scholar_id": "98c82adb76c494534c20ba4d8a346bf815886891",
+      "canonical_id": "arXiv:2410.10553",
+      "arxiv_id": "2410.10553",
+      "doi": "10.48550/arXiv.2410.10553",
+      "authors": [
+        "Mahsa Salmani",
+        "Nikita Trukhanov",
+        "I. Soloveychik"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 746,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は低精度ハードウェア上でLayerNorm分散計算の広い動的範囲が問題となる点に対し、直前の線形層の静的重みだけからオフラインでスケーリング係数を求める手法を提案。推論時に追加の較正遅延をほぼ持ち込まず低ビット実行を支援するため、推論カーネル数値処理に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e3b9ad35d0d5",
+    "round": "libimp-e3b9ad35d0d512a7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e3b9ad35d0d512a7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e3b9ad35d0d512a7-pre01.json",
+    "receipt": "sha256:ef96e1648d5e1ba766b947adcc3a965db3667564a183528ee6952d94a781aa7d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e3b9ad35d0d5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
