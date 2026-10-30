@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（114本）
+## 自動生成の論文一覧（115本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -403,6 +403,10 @@
 - **2025-05 · [Resource-Efficient Language Models: Quantization for Fast and Accessible Inference](2025-2505.08620-resource-efficient-language-models-quantization-for-fast-and-accessible-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、大規模言語モデルを一般利用者の限られた計算資源で動かすための後学習量子化を解説する文献レビューである。
+
+- **2025-05 · [ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads](2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  投機的復号は、小さなドラフトモデルが複数の候補トークンを先に生成し、大きな対象モデルがまとめて検証することで、出力分布の整合性を保ちながら複数トークンを進める方式である。ドラフト候補の精度が低いと検証時に棄却が増え、速度改善が小さくなる。
 
 - **2025-02 · [KVCrush: Key value cache size-reduction using similarity in head-behaviour](2025-2503.00022-kvcrush-key-value-cache-size-reduction-using-similarity-in-head-behaviou.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

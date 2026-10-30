@@ -34,6 +34,8 @@ repair_reason: "missing_worker_completed_at; publisher_bibliography_crosscheck"
 reference_main_sha: "36e5083fe7d51557a86aa77d397cd66820ac7f33"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # ResDecode：残差ヘッドでドラフト精度を改善する投機的復号

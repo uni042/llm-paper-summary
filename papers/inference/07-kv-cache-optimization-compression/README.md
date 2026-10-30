@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（427本）
+## 自動生成の論文一覧（428本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -666,6 +666,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Contiguity, Not Importance: Budgeted Repair of Stale KV Caches After Document Edits](2026-2609.17983-contiguity-budgeted-repair-stale-kv-cache.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   文書編集で古くなったKVは重要位置の散発再計算より編集直後を連続再計算する方が有効で、隣接依存なら13〜21倍高速にほぼ完全修復する。
+
+- **2026-09 · [CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models](2026-2609.05821-conduit-a-unified-residual-stream-restoration-framework-for-kv-cache-reu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  画像や文書を一度読み込んだ視覚言語モデルに別の質問を投げるとき、以前の視覚トークンのキー・値（KV）キャッシュを再利用できれば、画像の再処理を減らせる。しかし接頭辞に質問や指示が追加・変更されると、同じ画像であっても以前の計算結果は新しい文脈に対して古くなる。単純な全再計算は正確だが遅く、古いKVをそのまま使うと回答品質が下がる。
 
 - **2026-09 · [Compressing Long Context into Answer-Aligned Memory Embeddings for LLM Inference](2026-2609.25537-cmc.md)**  
   実装：[✓](https://github.com/mostafiz26/CMC) ・ リポジトリ内被引用：0  

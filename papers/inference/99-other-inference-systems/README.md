@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（865本）
+## 自動生成の論文一覧（867本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1345,6 +1345,10 @@
 - **2026-04 · [POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs](2026-2604.11627-points-long-adaptive-dual-mode-visual-reasoning-in-mllms.md)**  
   実装：[✓](https://anakin-skywalker-joseph.github.io/POINTS-Long-Webpage) ・ リポジトリ内被引用：0  
   WangらはPOINTS-Longを提案し、高精細な視覚情報を使うFocusモードと、圧縮された視覚情報だけを使うStandbyモードを同じモデルに持たせる。64フレームの動画では、Standbyが1フレーム8〜32トークン、合計512〜2,048トークンだけを使い、原著Table 1の相対平均97.7〜99.7%を維持する。
+
+- **2026-04 · [Optimal Decay Spectra for Linear Recurrences](2026-2604.07658-optimal-decay-spectra-for-linear-recurrences.md)**  
+  実装：[✓](https://github.com/SiLifen/PoST) ・ リポジトリ内被引用：0  
+  MambaやRWKV、線形注意を使う系列モデルは、過去の情報を固定次元の状態へまとめて保存することで、生成時に全トークンのキー・値キャッシュを保持する通常の注意機構より、系列長に対する状態メモリの増加を抑えられる。
 
 - **2026-04 · [NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization](2026-2604.18471-ni-sampling-accelerating-discrete-diffusion-sampling-by-token-order-opti.md)**  
   実装：[✓](https://github.com/imagination-research/NI-Sampling) ・ リポジトリ内被引用：0  
@@ -3149,6 +3153,10 @@
 - **2024-01 · [Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens](2024-2401.17377-infini-gram-scaling-unbounded-n-gram-language-models-to-a-trillion-token.md)**  
   実装：[✓](https://github.com/liujch1998/infini-gram) ・ リポジトリ内被引用：0  
   従来のn-gram方式は直前の数トークンしか参照しないため、長い固有表現や定型句を扱いにくかった。
+
+- **2024-01 · [Fast and Effective Weight Update for Pruned Large Language Models](2024-2401.02938-fast-and-effective-weight-update-for-pruned-large-language-models.md)**  
+  実装：[✓](https://github.com/fmfi-compbio/admm-pruning) ・ リポジトリ内被引用：0  
+  大規模言語モデルの重みを事後的に枝刈りする際には、重要度の低い重みをゼロにするだけでは、各層の出力が元モデルからずれてしまう。LLaMA-7Bの60%疎性ではWikiText2困惑度がSparseGPTの10.51に対して提案方式の9.22へ改善する。
 
 - **2023-12 · [A Performance Evaluation of a Quantized Large Language Model on Various Smartphones](2023-2312.12472-a-performance-evaluation-of-a-quantized-large-language-model-on-various-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

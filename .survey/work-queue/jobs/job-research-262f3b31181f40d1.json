@@ -35,10 +35,15 @@
   "selection_reason": "arXiv公開要旨の転記と書誌を照合。異なる接頭辞で同じ画像を再利用するVLMに対し、注意重みと値ノルム代理量を用いて再計算すべき視覚トークンを選ぶ学習不要のKV再利用方式。10%更新予算で複数VLMの平均品質97.0〜99.5%を保ち、TTFT最大2.99倍高速化を報告。",
   "semantic_scholar_id": "3324f33ad4a0328cbce11308a3a21e7ded09e7b3",
   "source_url": "https://arxiv.org/abs/2609.05821",
-  "status": "ready",
+  "status": "superseded",
   "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T11:12:34+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.05821-conduit-a-unified-residual-stream-restoration-framework-for-kv-cache-reu.md",
+  "represented_canonical_id": "arXiv:2609.05821",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
