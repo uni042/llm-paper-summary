@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-30T14:57:56.965233+00:00",
+  "generated_at": "2026-10-30T15:53:20.041295+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 4,
+  "count": 3,
   "worker_counts": {
     "scheduled-chat-00": 1,
-    "scheduled-chat-30": 2,
+    "scheduled-chat-30": 1,
     "scheduled-chat-45": 1
   },
   "entries": [
@@ -35,33 +35,13 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md",
-      "canonical_id": "DOI:10.26599/BDMA.2024.9020074",
-      "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
-      "file_bytes": 13350,
-      "source_sha256": "f56c6360ab7ce8b2aec82eee0530f80ca4d4bdeef7292dd261442283cdd6fa65",
-      "source_git_blob_sha": "9c6f812132c5f3183d67e8b6a999ad1c42351924",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.945758,
-      "quality_metrics": {
-        "body_chars": 3346,
-        "method_chars": 917,
-        "evaluation_chars": 706,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-41074c82c154-semantickv-a-semantics-driven-kv-cache-eviction-framework-for-efficient-.md",
       "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
       "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
       "file_bytes": 14285,
       "source_sha256": "8b9401751ea29651a76f1481b9275a559849dbea795f2b3c671b671b5f02fc69",
       "source_git_blob_sha": "0feeeb8a24dd0325ad5f958ae25b03ba89d57eeb",
-      "assigned_worker": "scheduled-chat-30",
+      "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
       "japanese_ratio": 0.951995,
