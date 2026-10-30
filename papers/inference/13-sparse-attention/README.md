@@ -480,6 +480,10 @@
   実装：[✓](https://github.com/howardhou/RWKV-X) ・ リポジトリ内被引用：3  
   RWKV-Xは、RWKV-7の線形再帰モデルに、長距離の証拠を選択して参照するTop-k Chunk Sparse 注意機構を周期的に挿入するハイブリッド言語モデルである。128K プリフィルではFlashAttention-3を使う密なTransformerとの比較で1.37倍の速度改善を報告する。
 
+- **2025-10 · [PureKV: Plug-and-Play KV Cache Optimization with Spatial-Temporal Sparse Attention for Vision-Language Large Models](2025-2510.25600-purekv-plug-and-play-kv-cache-optimization-with-spatial-temporal-sparse-.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  長い動画はフレームごとに多数の視覚トークンを持つため、事前入力（プリフィル）では注意計算量が増え、生成（デコード）では過去のKVを保持するメモリが増える。従来の重要度に基づくKV削除は、各層の注意スコアを集計して重要トークンを残す方式が多い。
+
 - **2025-10 · [Long-Context Modeling with Dynamic Hierarchical Sparse Attention for Memory-Constrained LLM Inference](2025-2510.24606-long-context-modeling-with-dynamic-hierarchical-sparse-attention-for-mem.md)**  
   実装：[✓](https://github.com/xiongsiheng/DHSA) ・ リポジトリ内被引用：2  
   動的 Hierarchical Sparse 注意機構（DHSA）は、長い入力に対する自己注意の計算を削減するため、注意行列のどこを残すかを入力内容に応じて予測する方式である。128K文脈で最大10.66倍という値はFlashAttention-2と比較した注意カーネル単体の速度である。
@@ -503,10 +507,6 @@
 - **2025-10 · [Understanding and Improving Length Generalization in Hierarchical Sparse Attention Models](2025-2510.17196-understanding-and-improving-length-generalization-in-hierarchical-sparse.md)**  
   実装：[✓](https://github.com/jacky-leng/length-generalizable-sparse-attention) ・ リポジトリ内被引用：1  
   長いコンテキストを扱うTransformerは、過去トークンの全KVを参照できる一方、文脈長の増加とともに注意計算・メモリ参照の費用が大きくなる。Sliding Window 注意機構（SWA）は局所窓へ制限することで負荷を抑えるが、窓の外にある事実を直接検索できない。
-
-- **2025-10 · [PureKV: Plug-and-Play KV Cache Optimization with Spatial-Temporal Sparse Attention for Vision-Language Large Models](2025-2510.25600-purekv-plug-and-play-kv-cache-optimization-with-spatial-temporal-sparse-.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  長い動画はフレームごとに多数の視覚トークンを持つため、事前入力（プリフィル）では注意計算量が増え、生成（デコード）では過去のKVを保持するメモリが増える。従来の重要度に基づくKV削除は、各層の注意スコアを集計して重要トークンを残す方式が多い。
 
 - **2025-10 · [Alleviating Forgetfulness of Linear Attention by Hybrid Sparse Attention and Contextualized Learnable Token Eviction](2025-2510.20787-alleviating-forgetfulness-of-linear-attention-by-hybrid-sparse-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

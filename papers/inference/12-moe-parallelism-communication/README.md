@@ -34,7 +34,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
 
 - **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
-  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：6  
+  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：7  
   NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
 
 - **2026-02 · [Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters](2026-2602.10604-step-3-5-flash-open-frontier-level-intelligence-with-11b-active-paramete.md)**  
@@ -194,7 +194,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 ### 2年前（2024-11〜2025-10）
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
-  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：27  
+  実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：28  
   Cometは、混合専門家モデル（Mixture-of-Experts; MoE）の専門家を複数GPUへ分散配置したときに生じる通信待ちを、専門家の行列計算と重ねて隠すための実行系である。著者らは8基のH800および8基のL20からなるGPU環境で、Mixtral-8×7B、Qwen2-MoE、Phi-3.5-MoEなどを評価した。
 
 - **2025-02 · [MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing](2025-2502.06643-moetuner-balanced-expert-placement-token-routing.md)**  
