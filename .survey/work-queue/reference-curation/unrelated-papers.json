@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-29T20:46:33+00:00",
-  "record_count": 12558,
+  "updated_at": "2026-10-30T01:54:40+00:00",
+  "record_count": 12559,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180772,6 +180772,19 @@
       "last_checked_at": "2026-10-29T20:46:33+00:00",
       "linked_from": [],
       "title": "Detection and Classification of Cetacean Echolocation Clicks using Image-based Object Detection Methods applied to Advanced Wavelet-based Transformations"
+    },
+    "arXiv:2410.04941": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.04941",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.04941",
+        "arXiv:2410.04941"
+      ],
+      "reason": "原著の一次要旨では、再学習せずにTransformerブロックを線形変換や恒等写像で置換するが、実験対象はViT・DINOv2・DeiTなどの視覚モデルとMNIST〜ImageNet-1kの画像認識である。生成LLMのprefill/decode、KVキャッシュ、サービング、推論実行基盤への適用や定量評価は要旨に存在しない。現行LLM推論システム調査の対象外として分類する。",
+      "first_checked_at": "2026-10-30T01:54:40+00:00",
+      "last_checked_at": "2026-10-30T01:54:40+00:00",
+      "linked_from": [],
+      "title": "TOAST: Transformer Optimization using Adaptive and Simple Transformations"
     }
   }
 }
