@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r11",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.27763",
+      "identity_tokens": [
+        "arXiv:2605.27763",
+        "DOI:10.48550/arXiv.2605.27763"
+      ],
+      "title": "A Paired Testing Protocol for Batch-Conditioned Refusal Robustness in LLM Serving",
+      "reason": "vLLMの通常バッチとbatch-invariant kernelで拒否応答の揺れを対比較し、バッチ条件による安全性ラベル変動を検証する。サービング実装の品質・再現性に関係するが、推論速度・メモリ・スループットの改善を目的とする研究ではない。",
+      "source_url": "https://arxiv.org/abs/2605.27763",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 340,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21349",
+      "identity_tokens": [
+        "arXiv:2601.21349",
+        "DOI:10.48550/arXiv.2601.21349"
+      ],
+      "title": "L2R: Low-Rank and Lipschitz-Controlled Routing for Mixture-of-Experts",
+      "reason": "低ランク共有潜在空間とLipschitz制御スコアでMoEルータの専門家選択を安定化する。OLMoEとViTで精度・ルーティング幾何を改善するが、一次要旨では推論速度・通信・expert配置の改善は直接測定していない。",
+      "source_url": "https://arxiv.org/abs/2601.21349",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 342,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.18995",
+      "identity_tokens": [
+        "arXiv:2604.18995",
+        "DOI:10.48550/arXiv.2604.18995"
+      ],
+      "title": "R²-dLLM: Accelerating Diffusion Large Language Models via Spatio-Temporal Redundancy Reduction",
+      "reason": "拡散LLMの空間的な信頼度クラスタと時間的に安定した予測の再マスクを削減するR²-dLLMを提案。訓練不要の復号規則と冗長性を意識したSFTを組み合わせ、品質を保ちながら復号ステップ数最大88%削減と報告する。",
+      "source_url": "https://arxiv.org/abs/2604.18995",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 343,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20390",
+      "identity_tokens": [
+        "arXiv:2511.20390",
+        "DOI:10.48550/arXiv.2511.20390"
+      ],
+      "title": "FREE: Uncertainty-Aware Autoregression for Parallel Diffusion Transformers",
+      "reason": "画像生成DiTの特徴時系列を軽量ドラフタで予測して検証する投機的画像拡散サンプリング方式。ImageNet 512²で最大2.25倍高速化を報告するが、対象は画像拡散であり生成LLMのテキスト推論ではない。",
+      "source_url": "https://arxiv.org/abs/2511.20390",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 344,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.27732",
+      "identity_tokens": [
+        "arXiv:2606.27732",
+        "DOI:10.48550/arXiv.2606.27732"
+      ],
+      "title": "Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation",
+      "reason": "左側文脈は因果注意とKVキャッシュで扱い、右側文脈は軽量な逆方向Mambaで圧縮して付加するR2LMを提案。Qwen3-1.7Bの継続事前学習後、batch servingで双方向dLLM比2.4～12.9倍、自己回帰基準比1.9～2.9倍のスループットを報告する。",
+      "source_url": "https://arxiv.org/abs/2606.27732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 346,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39358",
+      "identity_tokens": [
+        "arXiv:2609.39358",
+        "DOI:10.48550/arXiv.2609.39358"
+      ],
+      "title": "Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost",
+      "reason": "vLLM/SGLang/llama.cpp向けGalahadは文書ブロックのKV状態をバイト完全一致で保存・復元し、必要な節だけを検索する。Gemma4-31Bの97kトークン再利用試験で、3.0秒/問から検索併用時0.59～0.64秒/問へ改善と報告。比較には文脈収容条件の違いがある点を要本文確認。",
+      "source_url": "https://arxiv.org/abs/2609.39358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 347,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.04956",
+      "identity_tokens": [
+        "arXiv:2605.04956",
+        "DOI:10.48550/arXiv.2605.04956"
+      ],
+      "title": "KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels",
+      "reason": "LLM生成Tritonカーネル176課題の正確性とハードウェア効率を体系的に評価し、正しいカーネルの46.6%がPyTorch eagerより遅く、量子化課題は0/30成功と報告する。推論カーネル生成の品質・性能ベンチマークとして直接関連する。",
+      "source_url": "https://arxiv.org/abs/2605.04956",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 348,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.15707",
+      "identity_tokens": [
+        "arXiv:2411.15707",
+        "DOI:10.48550/arXiv.2411.15707"
+      ],
+      "title": "Nimbus: Secure and Efficient Two-Party Inference for Transformers",
+      "reason": "二者間秘匿Transformer推論で行列積とGELU/Softmaxの近似を高速化し、BERTのend-to-end推論で2.7～4.7倍改善する。秘匿推論技術として関連するが、評価は主にBERT識別推論であり生成LLMの逐次復号・KV管理は対象外。",
+      "source_url": "https://arxiv.org/abs/2411.15707",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 350,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.06222",
+      "identity_tokens": [
+        "arXiv:2603.06222",
+        "DOI:10.48550/arXiv.2603.06222"
+      ],
+      "title": "SPOT: Span-level Pause-of-Thought for Efficient and Interpretable Latent Reasoning in Large Language Models",
+      "reason": "CoTの長い思考区間をSinkhorn最適輸送でlatent pause tokenへ圧縮し、凍結言語ヘッドで潜在状態の解釈可能性を維持する。推論トークンを37.5%削減し、平均精度2.3ポイント改善したと報告する。",
+      "source_url": "https://arxiv.org/abs/2603.06222",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 356,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.22144",
+      "identity_tokens": [
+        "arXiv:2509.22144",
+        "DOI:10.48550/arXiv.2509.22144"
+      ],
+      "title": "From Long to Lean: Performance-aware and Adaptive Chain-of-Thought Compression via Multi-round Refinement",
+      "reason": "CoTを複数回の適応的な短縮で洗練し、短すぎる予算が逆に出力長を増やすtoken elasticityを考慮して停止深度を決めるMACCを提案。平均47トークン短縮と基準法比精度5.6%改善、遅延削減を報告する。",
+      "source_url": "https://arxiv.org/abs/2509.22144",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:38:42+09:00",
+      "last_checked_at": "2026-10-30T20:38:42+09:00",
+      "linked_from": [],
+      "worklist_rank": 359,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
