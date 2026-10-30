@@ -35,10 +35,15 @@
   "selection_reason": "arXiv要旨は推論中の冗長な自己肯定的反省文の先頭語に確率偏りを発見し、これを抑制してCoT出力長を短縮する手法。QwQ-32BやQwen3-32Bなどで学習なし18.7%、学習あり50.2%の長さ圧縮を報告し、vLLMなど推論フレームワークへ適用可能と記す。生成トークン数削減による推論コスト最適化に該当。",
   "semantic_scholar_id": "c39b542e2791539450a96778372e6d98909dc953",
   "source_url": "https://arxiv.org/abs/2506.12353",
-  "status": "ready",
+  "status": "superseded",
   "title": "Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T10:54:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md",
+  "represented_canonical_id": "arXiv:2506.12353",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（862本）
+## 自動生成の論文一覧（865本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -581,6 +581,10 @@
 - **2026-09 · [SemBridge: Compiling Consumer Observations into Cross-Stack Communication Plans](2026-2609.08231-sembridge-compiling-consumer-observations-into-cross-stack-communication-plans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   異種CUDA/NCCL–CANN/HCCL境界で消費者が必要とする観測結果を型付き契約へコンパイルし、不要な全logit転送をトークン投影へ縮約して結果通信を99.97%以上削減する通信計画器。
+
+- **2026-09 · [Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference](2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  NVFP4は、16個の重みを4ビットのE2M1形式で表し、各16個のまとまりにE4M3形式の共有スケールを割り当てる低精度表現である。Qwen3.5-397B-A17Bでは7評価課題を問題数で重み付けした正答回復率がBF16比99.35%、Llama-3.3-70B-Instructでは100.84%となる。
 
 - **2026-09 · [Reciprocal Guidance: Orchestrating Draft and Verify Budgets for Advancing the Diffusion-AR Self-Speculation Frontier](2026-2609.34388-reciprocal-guidance-orchestrating-draft-and-verify-budgets-for-advancing.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1489,6 +1493,10 @@
 - **2026-03 · [Mixture of Chapters: Scaling Learnt Memory in Transformers](2026-2603.21096-mixture-of-chapters-scaling-learnt-memory-in-transformers.md)**  
   実装：[✓](https://github.com/Tasmay-Tibrewal/Memory) ・ リポジトリ内被引用：0  
   Mixture of Chapters（MoC）は、言語モデルが事前学習で獲得する知識を、通常の重みとは別の学習可能な潜在記憶として保持し、入力に必要な部分だけを交差注意（cross-注意機構）で取り出す設計である。元のmain原稿にあった主要な正負両方の結果を維持し、計算量の内訳、選択単位、実施済み実験と将来計画の区別を明確化した。
+
+- **2026-03 · [Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method](2026-d621875e47b5-mitigating-the-impact-of-activation-smoothing-on-weights-a-channel-permu.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この結果、活性の分布は改善しても、重みの一部のチャネルが大きくなり、group-wise量子化の誤差が増えることがある。
 
 - **2026-03 · [MASQuant: Modality-Aware Smoothing Quantization for Multimodal Large Language Models](2026-2603.04800-masquant-modality-aware-smoothing-quantization-for-multimodal-large-lang.md)**  
   実装：[✓](https://github.com/alibaba/EfficientAI) ・ リポジトリ内被引用：0  
@@ -2567,6 +2575,10 @@
 - **2025-06 · [Fine-grained Token Allocation Via Operation Pruning for Efficient MLLMs](2025-2507.02909-fine-grained-token-allocation-via-operation-pruning-for-efficient-mllms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の視覚トークン枝刈りは、重要と判定した少数のトークンを残すが、どの層・どのモジュールも同じ数の視覚トークンを処理しがちである。LLaVA-NeXT-7Bの実験では、視覚トークンを一律に減らす比較方式より同一演算予算で精度を保ち、特定の強圧縮条件ではTFLOPs86%削減とプリフィル CUDA遅延83%削減を平均性能約1%低下で報告する。
+
+- **2025-06 · [Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models](2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  推論特化言語モデルは数学問題などに対して長い思考過程を生成する。その中には、既に正しい計算を終えたにもかかわらず「ちょっと待って、もう一度確認しよう」と先行内容を繰り返し肯定する部分がある。著者らはこの振る舞いを自己確認型反省（Self-Affirmation Reflection）として、誤りを発見して修正する反省と区別した。
 
 - **2025-06 · [Don't Pay Attention](2025-2506.11305-don-t-pay-attention.md)**  
   実装：[✓](https://github.com/rimads/avey-dpa) ・ リポジトリ内被引用：0  

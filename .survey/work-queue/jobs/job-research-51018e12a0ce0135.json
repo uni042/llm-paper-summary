@@ -35,10 +35,15 @@
   "selection_reason": "arXiv要旨はエージェントのプロンプト依存のモデル呼出・ツール実行を予測する分布的レイテンシーモデルを用い、GPU/CPUクラスタのルータ・スケーラを制御するSwarmXを提案。大規模実運用と128GPUテストベッドでtail latency最大61.5%削減、同一SLO下スループット最大2倍を報告。エージェント推論ワークフローの実行スケジューリングに直接該当。",
   "semantic_scholar_id": "fa47ca5b3860dac5032520e20a76bdfaae0d11f3",
   "source_url": "https://arxiv.org/abs/2606.21401",
-  "status": "ready",
+  "status": "superseded",
   "title": "SwarmX: Agentic Scheduling for Low-Latency Agentic Systems",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T10:54:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.21401-swarmx-agentic-scheduling-for-low-latency-agentic-systems.md",
+  "represented_canonical_id": "arXiv:2606.21401",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

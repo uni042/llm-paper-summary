@@ -35,10 +35,15 @@
   "selection_reason": "arXiv要旨はGPTQの後続列更新を再現してNVFP4のブロックスケールを選ぶSchur Replayを提案。量子化計算時のGPU/CPU/ディスク階層化と出力行並列化で巨大モデルを扱い、Qwen3.5-397B-A17BとLlama-3.3-70Bの量子化品質と処理時間を報告。推論向けNVFP4圧縮の実装に直接該当。",
   "semantic_scholar_id": "2195733c327eae514838c14186194ea2ed4cc031",
   "source_url": "https://arxiv.org/abs/2609.36654",
-  "status": "ready",
+  "status": "superseded",
   "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T10:54:59+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md",
+  "represented_canonical_id": "arXiv:2609.36654",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

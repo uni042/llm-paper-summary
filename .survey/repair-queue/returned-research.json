@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T10:38:22+00:00",
+  "generated_at": "2026-10-30T10:54:59+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 94,
+  "count": 95,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2408,8 +2408,8 @@
     },
     {
       "canonical_id": "arXiv:2610.07659",
-      "title": "DLoop: Looped Speculative Decoding",
-      "source_url": "https://arxiv.org/html/2610.07659v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T10:36:45+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-30",
@@ -2435,8 +2435,8 @@
     },
     {
       "canonical_id": "arXiv:2609.05821",
-      "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
-      "source_url": "https://arxiv.org/html/2609.05821v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T10:36:46+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2463,8 +2463,8 @@
     },
     {
       "canonical_id": "arXiv:2603.19296",
-      "title": "TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly",
-      "source_url": "https://arxiv.org/html/2603.19296v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T10:36:48+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2491,8 +2491,8 @@
     },
     {
       "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
-      "title": "Component-aware self-speculative decoding for hybrid language models: An architectural viability study",
-      "source_url": "https://arxiv.org/pdf/2605.01106",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T10:36:50+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2517,6 +2517,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-2026.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.5281/zenodo.22339206",
+      "title": "A Survey of Inference Processing Units for Large Language Model Inference: Chips, Systems, Algorithms, and Paradigms (2024–2026)",
+      "source_url": "https://zenodo.org/records/22339206",
+      "returned_at": "2026-10-30T10:53:19+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 229 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4791,
+        "body_paragraphs": 25,
+        "method_chars": 1857,
+        "method_paragraphs": 8,
+        "evaluation_chars": 229,
+        "limitation_chars": 587,
+        "insufficiency_flags": [
+          "評価説明量 229 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b46a7778785c819181dc1a96182ff9cd--2026-doi-10.5281-zenodo.22339206-ipu-survey-research-20261030-1904-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_b46a7778785c819181dc1a96182ff9cd--2026-doi-10.5281-zenodo.22339206-ipu-survey-research-20261030-1904-scheduled-chat-00-r02.json",
+      "worker_run_key": "20261030-1904-scheduled-chat-00/r02"
     }
   ]
 }

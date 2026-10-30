@@ -28,6 +28,8 @@ reference_main_sha: "6b0942fd32351ae5dfc03bf3acb6727c8e398cbd"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_worklist_rank: 28
+last_audited: null
+audit_version: 0
 ---
 # CHAMP-Q：活性平滑化が生む重みの量子化誤差をチャネル並べ替えで抑える
 
