@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（420本）
+## 自動生成の論文一覧（421本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -910,6 +910,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-05 · [Make Your LVLM KV Cache More Lightweight](2026-2605.00789-make-your-lvlm-kv-cache-more-lightweight.md)**  
   実装：[✓](https://github.com/howtoosee/LightKV) ・ リポジトリ内被引用：0  
   自己回帰復号では過去のキー・値（KV）を保存するため、視覚トークンが多いほどGPUメモリを消費する。LightKVが速度でも品質でもすべての比較方式に勝つわけではない。
+
+- **2026-05 · [KVCapsule: Efficient Sequential KV Cache Compression for Vision-Language Models with Asymmetric Redundancy](2026-2605.16439-kvcapsule-efficient-sequential-kv-cache-compression-for-vision-language-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  KVCapsuleは、視覚言語モデルの画像トークンが作る鍵・値キャッシュを、単に重要度の低いトークンから削除するのではなく、後で復元できる表現へ圧縮する手法である。五つの視覚言語モデルと画像・動画評価で、視覚KVを平均約60%削減しながら多くの品質指標を保つ。
 
 - **2026-05 · [KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference](2026-2605.12471-kv-fold-one-step-kv-cache-recurrence-for-long-context-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

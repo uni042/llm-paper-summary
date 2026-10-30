@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T00:19:31+00:00",
+  "generated_at": "2026-10-30T01:02:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 81,
+  "count": 84,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2153,6 +2153,92 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_04065b385d3481919bf9469c91bdc6ff--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261030-0747-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_04065b385d3481919bf9469c91bdc6ff--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261030-0747-scheduled-chat-45-r01.json",
       "worker_run_key": "20261030-0747-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.01962",
+      "title": "Post-Training Ternarization of Qwen3-4B: Capability, Effective Bit Budget, Storage Compression, and Deployment",
+      "source_url": "https://arxiv.org/html/2609.01962v1",
+      "returned_at": "2026-10-30T00:57:16+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 229 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6106,
+        "body_paragraphs": 31,
+        "method_chars": 1896,
+        "method_paragraphs": 9,
+        "evaluation_chars": 229,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 229 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_de9a85aac5b481918974a39724c0897d--2026-2609.01962-qwen3-4b-ternarization-under16kb-reaudit-20261030-0850-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_de9a85aac5b481918974a39724c0897d--2026-2609.01962-qwen3-4b-ternarization-under16kb-reaudit-20261030-0850-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-0847-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2511.00141",
+      "title": "FLoC: Facility Location-Based Efficient Visual Token Compression for Long Video Understanding",
+      "source_url": "https://arxiv.org/html/2511.00141v2",
+      "returned_at": "2026-10-30T00:57:18+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 163 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4906,
+        "body_paragraphs": 27,
+        "method_chars": 1406,
+        "method_paragraphs": 8,
+        "evaluation_chars": 163,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 163 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_281dca8e97dc8191b2347fa2a4537e01--2025-2511.00141-floc-facility-location-visual-token-selection-research-20261030-0858-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_281dca8e97dc8191b2347fa2a4537e01--2025-2511.00141-floc-facility-location-visual-token-selection-research-20261030-0858-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-0847-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2309.05210",
+      "title": "Understanding the Impact of Post-Training Quantization on Large Language Models",
+      "source_url": "https://arxiv.org/html/2309.05210v3",
+      "returned_at": "2026-10-30T00:58:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4164,
+        "body_paragraphs": 23,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4479d83a6ff08191b8c69133a9e7cc11--2023-2309.05210-ptq-temperature-speed-tradeoffs-research-20261030-0902-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4479d83a6ff08191b8c69133a9e7cc11--2023-2309.05210-ptq-temperature-speed-tradeoffs-research-20261030-0902-scheduled-chat-45-r02.json",
+      "worker_run_key": "20261030-0847-scheduled-chat-45/r02"
     }
   ]
 }

@@ -35,10 +35,15 @@
   "selection_reason": "KVCapsuleはVLMで画像トークンが長く密なKVを生む一方、テキストと異なる空間的冗長性を持つ点を利用し、逐次生成中のKVを非対称な冗長性に応じて圧縮する。VLMのキャッシュ容量と復号時負荷を対象とする。",
   "semantic_scholar_id": "11713650a4865474fc54d309268bb02c5c736023",
   "source_url": "https://arxiv.org/abs/2605.16439",
-  "status": "ready",
+  "status": "superseded",
   "title": "KVCapsule: Efficient Sequential KV Cache Compression for Vision-Language Models with Asymmetric Redundancy",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T01:02:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2605.16439-kvcapsule-efficient-sequential-kv-cache-compression-for-vision-language-.md",
+  "represented_canonical_id": "arXiv:2605.16439",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

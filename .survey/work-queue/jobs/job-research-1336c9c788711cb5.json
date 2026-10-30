@@ -35,10 +35,15 @@
   "selection_reason": "DOPはMLLMのモジュール×トークン群をoperationとして扱い、層深さに沿う演算剪定と検証集合の出力分布乖離を使って重要モジュールへトークン予算を再配分する。LLaVA-NeXT-7Bで実GPU遅延83%削減を報告し、マルチモーダル推論の実演算量削減に直接貢献する。",
   "semantic_scholar_id": "6bd66b02188145b471dc43a53cd1ccb78357f618",
   "source_url": "https://arxiv.org/abs/2507.02909",
-  "status": "ready",
+  "status": "superseded",
   "title": "Fine-grained Token Allocation Via Operation Pruning for Efficient MLLMs",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T01:02:53+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2507.02909-fine-grained-token-allocation-via-operation-pruning-for-efficient-mllms.md",
+  "represented_canonical_id": "arXiv:2507.02909",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
