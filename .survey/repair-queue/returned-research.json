@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T03:13:15+00:00",
+  "generated_at": "2026-10-30T03:23:02+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 88,
+  "count": 89,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1822,88 +1822,6 @@
       "worker_run_key": "20261030-0350-scheduled-chat-45/r04"
     },
     {
-      "canonical_id": "arXiv:2608.15454",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T21:38:01+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 329 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5314,
-        "body_paragraphs": 34,
-        "method_chars": 1611,
-        "method_paragraphs": 10,
-        "evaluation_chars": 329,
-        "limitation_chars": 421,
-        "insufficiency_flags": [
-          "評価説明量 329 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_874b5239b39c8191b678915c3e2832c7--2026-2608.15454-dynamic-multibyte-hierarchical-lm-research-20261030-0449-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_874b5239b39c8191b678915c3e2832c7--2026-2608.15454-dynamic-multibyte-hierarchical-lm-research-20261030-0449-scheduled-chat-45-r02.json",
-      "worker_run_key": "20261030-0449-scheduled-chat-45/r02"
-    },
-    {
-      "canonical_id": "arXiv:2601.14277",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T22:32:52+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5949,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1661,
-        "limitation_chars": 820,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.json",
-      "worker_run_key": "20261030-0630-scheduled-chat-30/r02"
-    },
-    {
-      "canonical_id": "arXiv:2511.00141",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T00:57:18+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 163 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4906,
-        "body_paragraphs": 27,
-        "method_chars": 1406,
-        "method_paragraphs": 8,
-        "evaluation_chars": 163,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 163 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_281dca8e97dc8191b2347fa2a4537e01--2025-2511.00141-floc-facility-location-visual-token-selection-research-20261030-0858-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_281dca8e97dc8191b2347fa2a4537e01--2025-2511.00141-floc-facility-location-visual-token-selection-research-20261030-0858-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-0847-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.01962",
       "title": null,
       "source_url": null,
@@ -2076,34 +1994,6 @@
       "worker_run_key": "20261030-0847-scheduled-chat-45/r02"
     },
     {
-      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408492",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T02:29:57+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5968,
-        "body_paragraphs": 34,
-        "method_chars": 1479,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1988767385cf--libfile_1a77f0d858188191afc5fcfee5803a44--2026-elora-hpca26-publication-repair-20261030-0449-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1988767385cf--libfile_1a77f0d858188191afc5fcfee5803a44--2026-elora-hpca26-publication-repair-20261030-0449-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-0449-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
       "title": null,
       "source_url": null,
@@ -2272,8 +2162,8 @@
     },
     {
       "canonical_id": "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
-      "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
-      "source_url": "https://raw.githubusercontent.com/oshindutta/TVAprune/main/Es_fomo__ICML__camera_ready.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T03:10:06+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2300,8 +2190,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
-      "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
-      "source_url": "https://shujiehan.github.io/_pages/files/cscwd26.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T03:10:08+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2328,8 +2218,8 @@
     },
     {
       "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
-      "title": "Minstrel: Application-Aware SLM Inference Optimization on Edge Devices",
-      "source_url": "https://openreview.net/pdf?id=hU2qsEQGYT",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T03:11:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2353,6 +2243,142 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-675ba57c6bf5--libfile_022c278381448191ad2ce4cd0fd7e58a--2025-minstrel-application-aware-slm-edge-inference-research-20261030-0358-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-675ba57c6bf5--libfile_022c278381448191ad2ce4cd0fd7e58a--2025-minstrel-application-aware-slm-edge-inference-research-20261030-0358-scheduled-chat-.json",
       "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408492",
+      "title": "ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving",
+      "source_url": "https://www.cse.ust.hk/~weiwa/papers/elora-hpca26.pdf",
+      "returned_at": "2026-10-30T03:22:52+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 424 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5028,
+        "body_paragraphs": 24,
+        "method_chars": 1047,
+        "method_paragraphs": 5,
+        "evaluation_chars": 424,
+        "limitation_chars": 360,
+        "insufficiency_flags": [
+          "評価説明量 424 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-7ccf131d63f7--libfile_0b219ba181608191899f0c059249557b--2026-doi-10.1109-hpca68181.2026.11408492-elora-returned-heading-repair-20261030-0600-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-7ccf131d63f7--libfile_0b219ba181608191899f0c059249557b--2026-doi-10.1109-hpca68181.2026.11408492-elora-returned-heading-repair-20261030-0600-sche.json",
+      "worker_run_key": "20261030-0600-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2601.14277",
+      "title": "Which Quantization Should I Use? A Unified Evaluation of llama.cpp Quantization on Llama-3.1-8B-Instruct",
+      "source_url": "https://arxiv.org/html/2601.14277v1",
+      "returned_at": "2026-10-30T03:22:54+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5949,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1661,
+        "limitation_chars": 820,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-a741243f8a93--libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-chat-30-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-a741243f8a93--libfile_a9272b994a508191ac8318ee8611bb22--2026-2601.14277-llamacpp-gguf-quantization-comparison-research-20261030-0630-scheduled-ch.json",
+      "worker_run_key": "20261030-0630-scheduled-chat-30/r02"
+    },
+    {
+      "canonical_id": "arXiv:2608.15454",
+      "title": "Dynamic Multi-Byte Prediction With Hierarchical Language Models",
+      "source_url": "https://arxiv.org/html/2608.15454v1",
+      "returned_at": "2026-10-30T03:22:56+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 329 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5314,
+        "body_paragraphs": 34,
+        "method_chars": 1611,
+        "method_paragraphs": 10,
+        "evaluation_chars": 329,
+        "limitation_chars": 421,
+        "insufficiency_flags": [
+          "評価説明量 329 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c09d4d7684b2--libfile_874b5239b39c8191b678915c3e2832c7--2026-2608.15454-dynamic-multibyte-hierarchical-lm-research-20261030-0449-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c09d4d7684b2--libfile_874b5239b39c8191b678915c3e2832c7--2026-2608.15454-dynamic-multibyte-hierarchical-lm-research-20261030-0449-scheduled-chat-4.json",
+      "worker_run_key": "20261030-0449-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "arXiv:2511.00141",
+      "title": "FLoC: Facility Location-Based Efficient Visual Token Compression for Long Video Understanding",
+      "source_url": "https://arxiv.org/html/2511.00141v2",
+      "returned_at": "2026-10-30T03:22:58+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 163 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4906,
+        "body_paragraphs": 27,
+        "method_chars": 1406,
+        "method_paragraphs": 8,
+        "evaluation_chars": 163,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 163 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c2ad09a24740--libfile_281dca8e97dc8191b2347fa2a4537e01--2025-2511.00141-floc-facility-location-visual-token-selection-research-20261030-0858-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c2ad09a24740--libfile_281dca8e97dc8191b2347fa2a4537e01--2025-2511.00141-floc-facility-location-visual-token-selection-research-20261030-0858-sche.json",
+      "worker_run_key": "20261030-0847-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2604.07874",
+      "title": "Valve: Production Online-Offline Inference Colocation with Jointly-Bounded Preemption Latency and Rate",
+      "source_url": "https://arxiv.org/html/2604.07874",
+      "returned_at": "2026-10-30T03:23:00+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 331 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5574,
+        "body_paragraphs": 33,
+        "method_chars": 2345,
+        "method_paragraphs": 14,
+        "evaluation_chars": 331,
+        "limitation_chars": 880,
+        "insufficiency_flags": [
+          "評価説明量 331 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-de9eca0e6349--libfile_92db80f5e04881919cffd2ba2000883d--2026-2604.07874-valve-online-offline-gpu-colocation-provenance-repair-20261030-0350-scheduled-chat-45-r03.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-de9eca0e6349--libfile_92db80f5e04881919cffd2ba2000883d--2026-2604.07874-valve-online-offline-gpu-colocation-provenance-repair-20261030-0350-sched.json",
+      "worker_run_key": "20261030-0350-scheduled-chat-45/r03"
     }
   ]
 }
