@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0448-scheduled-chat-45/r03",
+  "reference_main_sha": "924c21a9e73415dc41d04740cfdff282114a059a",
+  "round_status": "partial",
+  "target_count": 10,
+  "remaining_count": 5,
+  "partial_reason": "未処理候補のGitHub既存分類照合・一次資料検証が残るため、完成済み5件のみ保存。",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.01296",
+      "identity_tokens": [
+        "arXiv:2601.01296"
+      ],
+      "title": "Aggressive Compression Enables LLM Weight Theft",
+      "reason": "LLM重みのネットワーク流出を容易にする、復号コスト制約を緩めた16〜100倍の高圧縮と盗難リスクを分析するセキュリティ研究。圧縮技術自体はモデル圧縮に隣接するが、目的は推論の高速化・実用モデル品質維持ではなくexfiltrationリスクと対策の検証。サーベイの直接対象ではなくborderline。",
+      "source_url": "https://arxiv.org/abs/2601.01296",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:59:51+09:00",
+      "last_checked_at": "2026-10-31T04:59:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 213,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.04759",
+      "identity_tokens": [
+        "arXiv:2603.04759"
+      ],
+      "title": "Stacked from One: Multi-Scale Self-Injection for Context Window Extension",
+      "reason": "SharedLLMは同一基盤LLMから作る下位圧縮モデルと上位復号モデルを積み重ね、短文脈で学習したモデルへ多粒度の圧縮表現を低層で注入して長文脈を処理する。8K学習から128K超の入力へ一般化し、streaming方式比約2倍、encoder-decoder方式比約3倍の推論高速化を一次要旨で報告。長文脈のメモリ・計算最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2603.04759",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:59:51+09:00",
+      "last_checked_at": "2026-10-31T04:59:51+09:00",
+      "linked_from": [],
+      "worklist_rank": 246,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.00791",
+      "identity_tokens": [
+        "arXiv:2609.00791"
+      ],
+      "title": "Instella-MoE Technical Report",
+      "reason": "AMD MI300X/MI325X上でscratchから学習した総16B・active2.8Bの完全公開MoE言語モデルの技術報告。Gated MLA、FarSkip-Collective接続、複数段階の学習・後学習と実装・設定・データ公開を扱う。LLM MoEアーキテクチャと実装再現性に直接関連するが、性能比較は主として品質指標でありGPU throughputの定量比較と混同しない。",
+      "source_url": "https://arxiv.org/abs/2609.00791",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:58:49+09:00",
+      "last_checked_at": "2026-10-31T04:58:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 264,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.09536",
+      "identity_tokens": [
+        "arXiv:2605.09536"
+      ],
+      "title": "TAD: Temporal-Aware Trajectory Self-Distillation for Fast and Accurate Diffusion LLM",
+      "reason": "Diffusion LLMで1 forward当たり生成トークン数を増やすと精度が落ちる問題に対し、teacherのmask復元軌跡を残り復号ステップ数で近距離・遠距離に分け、hard CEとsoft KLでstudentを蒸留するTADを提案。LLaDAでQuality設定の平均精度46.2%→51.6%、Speed設定の平均AUP46.2→257.1を報告。並列復号の精度・速度トレードオフ改善に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.09536",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:58:49+09:00",
+      "last_checked_at": "2026-10-31T04:58:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 280,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.00357",
+      "identity_tokens": [
+        "arXiv:2603.00357"
+      ],
+      "title": "SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs",
+      "reason": "100k GPU超のLLM事前学習で頻発するノード故障に対し、データシャード冗長化と実行順序の適応変更で勾配同期中の故障を隠蔽するSPAReを提案。SimGrid離散事象シミュレーションで冗長性・チェックポイントを同時最適化し、最大60万GPU規模の設定で従来複製よりtime-to-trainを40〜50%短縮と報告。数値は大規模シミュレーションに基づく点を明記。",
+      "source_url": "https://arxiv.org/abs/2603.00357",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:58:49+09:00",
+      "last_checked_at": "2026-10-31T04:58:49+09:00",
+      "linked_from": [],
+      "worklist_rank": 328,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
