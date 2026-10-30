@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0200-scheduled-chat-00/r09",
+  "reference_main_sha": "bfbf4444d3e126ebc965c380558cb94e575463ae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.18237",
+      "identity_tokens": [
+        "arXiv:2506.18237"
+      ],
+      "title": "AdapThink: Adaptive Thinking Preferences for Reasoning Language Model",
+      "reason": "arXiv一次要旨は推論モデルの過剰な反省と早すぎる思考切替えを、モデル確信度と応答特性から反省関連語への報酬を動的調整するRL方式AdapThinkで抑制。問題難易度に応じた生成計算量の配分を直接対象とする。",
+      "source_url": "https://arxiv.org/abs/2506.18237",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 454,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.23625",
+      "identity_tokens": [
+        "arXiv:2509.23625"
+      ],
+      "title": "RIV: Recursive Introspection Mask Diffusion Vision Language Model",
+      "reason": "arXiv一次要旨は拡散VLMの出力を別の内省モデルが点検し、誤りと見なした位置を再マスクして再生成するRIVを提案。復号処理の改変ではあるが、主評価は自己修正による品質向上で、速度・トークン・メモリの削減効果は示されず境界的。",
+      "source_url": "https://arxiv.org/abs/2509.23625",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 456,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.03002",
+      "identity_tokens": [
+        "arXiv:2606.03002"
+      ],
+      "title": "Perplexity Can Miss SAE Feature Damage Under Quantization",
+      "reason": "arXiv一次要旨は量子化後のPPLが良好でもSparse Autoencoderの内部特徴が損なわれる現象をPythia/Gemmaで検証し、INT7でGemma活性特徴の18.7%が劣化した例を示す。量子化品質監査として有用だが、推論速度・メモリ削減の新手法ではないため保留。",
+      "source_url": "https://arxiv.org/abs/2606.03002",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 457,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.21834",
+      "identity_tokens": [
+        "arXiv:2609.21834"
+      ],
+      "title": "Beyond Shadow Weights: Quantization-Aware Training as Quantized-Endpoint Descent",
+      "reason": "arXiv一次要旨は量子化対応学習を全精度shadow重みではなく離散的な量子化後重みの状態遷移として分析し、全精度コピーを保持せず量子化コードを直接更新するQARを提案。LLM低ビット化の品質を維持しつつ学習時メモリを削減する、推論展開向けモデル圧縮技術。",
+      "source_url": "https://arxiv.org/abs/2609.21834",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 458,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.17739",
+      "identity_tokens": [
+        "arXiv:2508.17739"
+      ],
+      "title": "Speculative Safety-Aware Decoding",
+      "reason": "arXiv一次要旨は安全性を持つ小型モデルをドラフトに使い、元モデルとの一致度から安全性リスクを見積もり復号方式を切替えるSSDを提案。生成分布を統合しながら投機的サンプリングによる推論時間短縮も報告し、LLM復号方式の実行時最適化に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2508.17739",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 459,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.20193",
+      "identity_tokens": [
+        "arXiv:2605.20193"
+      ],
+      "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification",
+      "reason": "arXiv一次要旨は82件のインタビュー文字起こしに対する低ビットLLaMAの質的分析を、多段プロンプト検証で安定化する応用研究。量子化精度の比較はあるが、目的はインタビュー分析の正確性であり、推論カーネル・メモリ・スケジューリング等のシステム効率の新手法はない。",
+      "source_url": "https://arxiv.org/abs/2605.20193",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 461,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22730",
+      "identity_tokens": [
+        "arXiv:2601.22730"
+      ],
+      "title": "ImgCoT: Compressing Long Chain of Thought into Compact Visual Tokens for Efficient Reasoning of Large Language Model",
+      "reason": "arXiv一次要旨は長いテキストCoTを画像として描画して潜在視覚トークンへ圧縮し、構造的な推論情報を保持するImgCoTと、重要なテキスト推論ステップを一部残す混成版を提案。完全なCoTより少ないトークンで推論するため、生成時の推論文脈負荷削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2601.22730",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 464,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.26488",
+      "identity_tokens": [
+        "arXiv:2609.26488"
+      ],
+      "title": "Spoken Language Models that Think Aloud",
+      "reason": "arXiv一次要旨は音声言語モデルの思考処理と軽量な進捗発話を非同期ストリームに分け、推論中の無音待ちを減らすThinker-Talker方式を提案。最終回答が用意できた時点で進捗発話をキャンセルする実行時制御を備え、音声LLMの応答体感遅延を直接最適化する。",
+      "source_url": "https://arxiv.org/abs/2609.26488",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 465,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13165",
+      "identity_tokens": [
+        "arXiv:2605.13165"
+      ],
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+      "reason": "arXiv一次要旨はCoTをノード・分類・推論木に構造化し、最初の正しい結論ノードまでの最短接頭辞を残すECN方式で自己蒸留データを剪定するSTOPを提案。DeepSeek-R1蒸留モデルで正答率を概ね維持し生成トークン19.4〜42.4%削減と報告する推論計算効率化。",
+      "source_url": "https://arxiv.org/abs/2605.13165",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 470,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37818",
+      "identity_tokens": [
+        "arXiv:2609.37818"
+      ],
+      "title": "Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue",
+      "reason": "arXiv一次要旨は音声会話の音響手掛かりを隠れ状態で反復推論し、明示CoTを生成せず応答するLoopSLMを提案。CoT-SFT比較で生成トークン64.5%削減・遅延半減、Qwen3-Omni-Thinking比で一部会話指標において34倍低遅延と報告する音声LLMの推論高速化。",
+      "source_url": "https://arxiv.org/abs/2609.37818",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:09:06+09:00",
+      "last_checked_at": "2026-10-31T02:09:06+09:00",
+      "linked_from": [],
+      "worklist_rank": 473,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
