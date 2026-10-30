@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T16:56:39+00:00",
-  "record_count": 12618,
+  "updated_at": "2026-10-30T17:58:10+00:00",
+  "record_count": 12626,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181536,6 +181536,102 @@
       "last_checked_at": "2026-10-30T16:56:39+00:00",
       "linked_from": [],
       "title": "How Can Mamba Learn In Context with Outliers and Generalize Provably?"
+    },
+    "arXiv:2601.18302": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18302",
+      "identity_tokens": [
+        "arXiv:2601.18302"
+      ],
+      "reason": "Transformerの最終層前後の隠れ状態角度の急変を定量化し、事前学習時にJREG正則化で抑えて下流能力を改善する研究。主要操作はpretrainingの損失関数変更であり、推論時の層省略や計算量・メモリ削減は実証していない。",
+      "first_checked_at": "2026-10-30T17:58:00+00:00",
+      "last_checked_at": "2026-10-30T17:58:00+00:00",
+      "linked_from": [],
+      "title": "Suppressing Final Layer Hidden State Jumps in Transformer Pretraining"
+    },
+    "arXiv:2401.11471": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.11471",
+      "identity_tokens": [
+        "arXiv:2401.11471"
+      ],
+      "reason": "CNNの学習中に保存する中間特徴を減らすため、畳み込み層の計算順序を列単位から行単位へ再構成するデータフロー研究。対象はCNN訓練時メモリであり、LLMの推論・サービング・言語モデル圧縮への直接適用は示されない。",
+      "first_checked_at": "2026-10-30T17:58:01+00:00",
+      "last_checked_at": "2026-10-30T17:58:01+00:00",
+      "linked_from": [],
+      "title": "LR-CNN: Lightweight Row-centric Convolutional Neural Network Training for Memory Reduction"
+    },
+    "arXiv:2403.07711": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.07711",
+      "identity_tokens": [
+        "arXiv:2403.07711"
+      ],
+      "reason": "長時間動画を生成する拡散モデルに状態空間モデルを組み合わせる研究であり、タイトルに示された最終対象は動画生成。LLM推論サービング・言語モデルの実行効率化ではない。",
+      "first_checked_at": "2026-10-30T17:58:05+00:00",
+      "last_checked_at": "2026-10-30T17:58:05+00:00",
+      "linked_from": [],
+      "title": "SSM Meets Video Diffusion Models: Efficient Long-Term Video Generation with Structured State Spaces"
+    },
+    "DOI:10.1145/3774904.3792583": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774904.3792583",
+      "identity_tokens": [
+        "DOI:10.1145/3774904.3792583"
+      ],
+      "reason": "Hawkes過程を使ったイベント系列モデリングが対象で、タイトルからLLM推論・KVキャッシュ・サービング等への技術適用は示されない。",
+      "first_checked_at": "2026-10-30T17:58:05+00:00",
+      "last_checked_at": "2026-10-30T17:58:05+00:00",
+      "linked_from": [],
+      "title": "Mamba Hawkes Process for Event Sequence Modeling"
+    },
+    "arXiv:2405.03025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.03025",
+      "identity_tokens": [
+        "arXiv:2405.03025"
+      ],
+      "reason": "Mambaとattentionを用いる動画生成モデルであり、LLM推論の高速化ではなく動画合成が主題。",
+      "first_checked_at": "2026-10-30T17:58:06+00:00",
+      "last_checked_at": "2026-10-30T17:58:06+00:00",
+      "linked_from": [],
+      "title": "Matten: Video Generation with Mamba-Attention"
+    },
+    "arXiv:2401.04339": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.04339",
+      "identity_tokens": [
+        "arXiv:2401.04339"
+      ],
+      "reason": "量子化された画像拡散モデルの微調整時メモリ削減であり、LLM推論ではなく拡散モデルの学習効率が主題。",
+      "first_checked_at": "2026-10-30T17:58:06+00:00",
+      "last_checked_at": "2026-10-30T17:58:06+00:00",
+      "linked_from": [],
+      "title": "Memory-Efficient Fine-Tuning for Quantized Diffusion Model"
+    },
+    "arXiv:2505.19827": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19827",
+      "identity_tokens": [
+        "arXiv:2505.19827"
+      ],
+      "reason": "線形再帰ネットワークのGlorot初期化において幅nに対する長さO(√n)の系列で状態ノルムが不安定化する理論を示し、スペクトル半径を1未満に調整する初期化を提案。研究対象は学習初期化と数理的安定性であり、LLM推論時の処理・メモリ最適化は実証していない。",
+      "first_checked_at": "2026-10-30T17:58:08+00:00",
+      "last_checked_at": "2026-10-30T17:58:08+00:00",
+      "linked_from": [],
+      "title": "Revisiting Glorot Initialization for Long-Range Linear Recurrences"
+    },
+    "arXiv:2601.01299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.01299",
+      "identity_tokens": [
+        "arXiv:2601.01299"
+      ],
+      "reason": "arXiv一次要旨はランク・精度を実行時予算で選ぶ圧縮とロジットずれの証明を提案するが、主評価はImageNetのResNet-50とViT-B/16であり、LLM生成推論・KV・MoE・サービングへの実装・測定は示されない。現行LLM推論システム系統からは対象外。",
+      "first_checked_at": "2026-10-30T17:58:10+00:00",
+      "last_checked_at": "2026-10-30T17:58:10+00:00",
+      "linked_from": [],
+      "title": "T3C: Test-Time Tensor Compression with Consistency Guarantees"
     }
   }
 }

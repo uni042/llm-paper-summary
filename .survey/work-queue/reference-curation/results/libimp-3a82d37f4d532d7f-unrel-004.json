@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a82d37f4d532d7f-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2401.11471",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2401.11471",
+    "identity_tokens": [
+      "arXiv:2401.11471"
+    ],
+    "reason": "CNNの学習中に保存する中間特徴を減らすため、畳み込み層の計算順序を列単位から行単位へ再構成するデータフロー研究。対象はCNN訓練時メモリであり、LLMの推論・サービング・言語モデル圧縮への直接適用は示されない。",
+    "first_checked_at": "2026-10-30T17:58:01+00:00",
+    "last_checked_at": "2026-10-30T17:58:01+00:00",
+    "linked_from": [],
+    "title": "LR-CNN: Lightweight Row-centric Convolutional Neural Network Training for Memory Reduction"
+  },
+  "processed_at": "2026-10-30T17:58:01+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a82d37f4d53",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

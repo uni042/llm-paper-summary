@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a82d37f4d532d7f-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2405.05949",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2405.05949",
+    "identity_tokens": [
+      "arXiv:2405.05949"
+    ],
+    "reason": "画像エンコーダとMLP接続器にTop-K疎MoEを配置し、事前学習MLPからexpertを複製して視覚指示チューニングするCuMo。推論時の活性パラメータ増加を小さく抑える設計だが、要旨の主目的・評価はVQA等のモデル能力向上であり、推論速度・GPUメモリ・サービング効率の直接比較はない。",
+    "first_checked_at": "2026-10-30T17:57:59+00:00",
+    "last_checked_at": "2026-10-30T17:57:59+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts"
+  },
+  "processed_at": "2026-10-30T17:57:59+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a82d37f4d53",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

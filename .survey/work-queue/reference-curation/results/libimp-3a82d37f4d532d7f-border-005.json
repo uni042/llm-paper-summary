@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3a82d37f4d532d7f-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.02895",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.02895",
+    "identity_tokens": [
+      "arXiv:2512.02895"
+    ],
+    "reason": "情報密度に基づくデータ生成、カリキュラムSFT、マルチモーダルRLを組み合わせるモデル能力改善の後学習方式。5D並列学習・operator最適化・推論量子化にも言及するが、要旨の評価はMMBench/MMStar/MathVision/MathVistaの性能であり、推論効率化の独立技術・数値は主貢献として検証できない。",
+    "first_checked_at": "2026-10-30T17:58:00+00:00",
+    "last_checked_at": "2026-10-30T17:58:00+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "MindGPT-4ov: An Enhanced MLLM via a Multi-Stage Post-Training Paradigm"
+  },
+  "processed_at": "2026-10-30T17:58:00+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3a82d37f4d53",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
