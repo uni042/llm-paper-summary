@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r06",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.22196",
+      "identity_tokens": [
+        "arXiv:2503.22196",
+        "DOI:10.48550/arXiv.2503.22196"
+      ],
+      "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+      "reason": "標準Transformerに学習可能なメモリゲートと圧縮記憶を組み込み、長短文脈に応じてゲートを選択的に使う。既存のKV evictionと異なり長出力での情報欠落を避け、エッジLLMのメモリ占有とTTFTを改善する直接的な長文脈推論手法。",
+      "source_url": "https://arxiv.org/abs/2503.22196",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 260,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.10912",
+      "identity_tokens": [
+        "arXiv:2410.10912",
+        "DOI:10.48550/arXiv.2410.10912"
+      ],
+      "title": "AlphaPruning: Using Heavy-Tailed Self Regularization Theory for Improved Layer-wise Pruning of Large Language Models",
+      "reason": "重み行列の経験スペクトル密度と重尾自己正則化理論から層ごとの枝刈り率を決める。均一な削除率に比べて重要層を保護し、LLaMA-7Bの80%疎性でも一定の困惑度を維持すると報告する。推論向けモデル圧縮の枝刈り率割当方式。",
+      "source_url": "https://arxiv.org/abs/2410.10912",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 261,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.18417",
+      "identity_tokens": [
+        "arXiv:2603.18417",
+        "DOI:10.48550/arXiv.2603.18417"
+      ],
+      "title": "Self-Tuning Sparse Attention: Multi-Fidelity Hyperparameter Optimization for Transformer Acceleration",
+      "reason": "AFBS-BOはBayesian Optimizationと二分探索を併用し、層・ヘッドごとの疎注意ハイパーパラメータを系列長別の多忠実度評価で自動選択する。Llama-2-7Bでgrid search比3.4倍速く、評価回数8.8倍少なく調整したと報告。これは調整時間の改善であり推論スループット比と混同しない。",
+      "source_url": "https://arxiv.org/abs/2603.18417",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 262,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20578",
+      "identity_tokens": [
+        "arXiv:2603.20578",
+        "DOI:10.48550/arXiv.2603.20578"
+      ],
+      "title": "Context Cartography: Toward Structured Governance of Contextual Space in Large Language Model Systems",
+      "reason": "黒・灰・可視の三領域と七つの文脈操作子を定義し、Claude Code・Letta・MemOS等の文脈管理を概念的に整理する。LLM文脈長・外部記憶の運用に関係するが、一次要旨では実装した圧縮アルゴリズムの実測メモリ削減や遅延改善を提示していない。",
+      "source_url": "https://arxiv.org/abs/2603.20578",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 263,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.17254",
+      "identity_tokens": [
+        "arXiv:2506.17254",
+        "DOI:10.48550/arXiv.2506.17254"
+      ],
+      "title": "Near-Optimal Online Deployment and Routing for Streaming LLMs",
+      "reason": "StageRouteはモデル群の配置を保守窓単位で決め、オンライン要求を費用・スループット制約付きbanditでモデルへルーティングする。理論的regretをT^(2/3)の対数因子付きで抑え、実験でも費用予算の下でoracleに近い性能を報告するLLMサービング配置・経路制御。",
+      "source_url": "https://arxiv.org/abs/2506.17254",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 264,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.04653",
+      "identity_tokens": [
+        "arXiv:2504.04653",
+        "DOI:10.48550/arXiv.2504.04653"
+      ],
+      "title": "LEO-MINI: An Efficient Multimodal Large Language Model using Conditional Token Reduction and Mixture of Multi-Modal Experts",
+      "reason": "CoTRは視覚・テキスト・学習クエリの類似度を使って視覚トークンを削減し、MMoEはLoRAエキスパートを入力モダリティに応じて選ぶ。MLLMの推論計算量を削減しつつ視覚推論品質を保つための直接的なアーキテクチャ設計。",
+      "source_url": "https://arxiv.org/abs/2504.04653",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 265,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.05164",
+      "identity_tokens": [
+        "arXiv:2604.05164",
+        "DOI:10.48550/arXiv.2604.05164"
+      ],
+      "title": "Not All Turns Are Equally Hard: Adaptive Thinking Budgets For Efficient Multi-Turn Reasoning in Agents",
+      "reason": "TABは複数ターンの推論を逐次的な計算予算配分問題として定式化し、GRPOで簡単なターンの思考トークンを節約して難しいターンへ回す。エージェント課題でトークン最大35%削減、遅延最大30%削減を報告する。",
+      "source_url": "https://arxiv.org/abs/2604.05164",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 266,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.31268",
+      "identity_tokens": [
+        "arXiv:2605.31268",
+        "DOI:10.48550/arXiv.2605.31268"
+      ],
+      "title": "Mellum2 Technical Report",
+      "reason": "12B総パラメータ・2.5B活性MoEのコード向けモデルを紹介し、GQA・sliding-window attention・内蔵MTPドラフトを設計に採用する。推論効率の制約を考慮した技術報告として参考になるが、要旨の主貢献はモデル全体の訓練・評価であり独立したサービング高速化手法の検証ではない。",
+      "source_url": "https://arxiv.org/abs/2605.31268",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 267,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2310.10054",
+      "identity_tokens": [
+        "arXiv:2310.10054",
+        "DOI:10.48550/arXiv.2310.10054"
+      ],
+      "title": "NASH: A Simple Unified Framework of Structured Pruning for Accelerating Encoder-Decoder Language Models",
+      "reason": "encoderとdecoderの構造的枝刈りを分離し、生成速度に支配的なdecoder層を短縮しながらencoderを狭くする。生成品質と速度を比較したencoder-decoder言語モデルの推論向け構造的圧縮手法。",
+      "source_url": "https://arxiv.org/abs/2310.10054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 269,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.04257",
+      "identity_tokens": [
+        "arXiv:2603.04257",
+        "DOI:10.48550/arXiv.2603.04257"
+      ],
+      "title": "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory",
+      "reason": "完全な過去の相互作用を外部DBへ保存し、作業文脈には要約と安定した索引だけを残すMemexを提案。MemexRLで索引の作成・参照を学習し、長期エージェントで文脈計算量を有界に保ちながら成功率を改善する。LLM文脈メモリ削減と推論効率の直接的な技術的貢献。",
+      "source_url": "https://arxiv.org/abs/2603.04257",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:35:00+09:00",
+      "last_checked_at": "2026-10-30T20:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 271,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
