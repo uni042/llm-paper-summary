@@ -258,9 +258,19 @@ def merge_cached_metadata(record: dict[str, Any], cache: dict[str, Any]) -> dict
     cached = records.get(key) if key else None
     if not isinstance(cached, dict):
         return out
+    # Cached provider metadata is advisory.  Durable candidate/job metadata is
+    # authoritative for bibliographic identity: a provider alias collision must
+    # never rewrite the paper title, source URL, publication date, venue, or
+    # Semantic Scholar identity of an already-resolved record.  The cache may
+    # fill missing bibliographic fields, while citation observations remain
+    # refreshable because they are explicitly time-varying scoring metadata.
     for field in (
-        "published", "year", "venue", "citation_count", "citation_count_source",
-        "citation_count_checked_at", "semantic_scholar_id", "title", "source_url",
+        "published", "year", "venue", "semantic_scholar_id", "title", "source_url",
+    ):
+        if out.get(field) in (None, "") and cached.get(field) not in (None, ""):
+            out[field] = cached[field]
+    for field in (
+        "citation_count", "citation_count_source", "citation_count_checked_at",
     ):
         if cached.get(field) not in (None, ""):
             out[field] = cached[field]
