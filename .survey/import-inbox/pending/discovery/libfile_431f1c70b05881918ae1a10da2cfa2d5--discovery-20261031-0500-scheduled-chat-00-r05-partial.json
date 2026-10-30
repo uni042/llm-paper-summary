@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0500-scheduled-chat-00/r05",
+  "reference_main_sha": "9b549d8a9d6426cca023726866319ed0466aab04",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.20219",
+      "identity_tokens": [
+        "arXiv:2603.20219"
+      ],
+      "title": "Thinking into the Future: Latent Lookahead Training for Transformers",
+      "reason": "一次arXiv書誌・要旨では自己回帰モデルが次トークン確定前に隠れ状態を再帰的に戻して潜在的な先読みを行う学習法を提案。迷路・数独・ProsQAで通常自己回帰や非自己回帰より良い推論能力を示すが、複数の潜在forwardを追加するため推論速度やサービング効率の改善は示されず、現行サーベイとの関係は境界的。",
+      "source_url": "https://arxiv.org/abs/2603.20219",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:09:33+09:00",
+      "last_checked_at": "2026-10-31T05:09:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 375,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
