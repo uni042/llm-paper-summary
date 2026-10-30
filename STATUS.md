@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-30 23:31:47 JST**
+> 自動生成: **2026-10-30 23:54:39 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **582** |
 | 直近24hのResearch処理完了 | **216** |
 | 最終Research処理完了 | **10-30 22:15:00 JST** |
-| 最終Discovery探索完了 | **10-30 22:30:00 JST** |
+| 最終Discovery探索完了 | **10-30 23:34:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-30 10:04:02 JST（13時間27分前）** |
+| 最終maintenance完了 | **10-30 10:04:02 JST（13時間50分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **issues_found** |
 | health | **issues_found** |
@@ -136,19 +136,19 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **43** |
-| 直近6hのDiscovery run | **69** |
-| 直近6hのDiscovery本文確認・分類 | **576** |
+| 直近6hのResearch完了 | **39** |
+| 直近6hのDiscovery run | **77** |
+| 直近6hのDiscovery本文確認・分類 | **620** |
 | 最終Research完了 | **10-30 22:15:00 JST** |
-| 最終Discovery完了 | **10-30 22:30:00 JST** |
+| 最終Discovery完了 | **10-30 23:34:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-30 22:15:00 JST** / worker — / run 20261030-2202-scheduled-chat-00/r01 / 成果 **4件**
   - evidence: .survey/import-inbox/results/research/libfile_db7ece881ba081918fe15101e28d4626--2026-doi-10.1145-3821219-adaptivekv-under16kb-reaudit-20261030-2202-scheduled-chat-00-r01.json
-- Discovery: **10-30 22:30:00 JST** / worker scheduled-chat-30 / run 20261030-2230-scheduled-chat-30/r01
-  - 本文確認・分類 **10件** / accept **6件** / unrelated+borderline **4件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_08a52e9a7c688191ba81bf054c43d090--discovery-20261030-2230-scheduled-chat-30-r01.json
+- Discovery: **10-30 23:34:00 JST** / worker scheduled-chat-30 / run 20261030-2334-scheduled-chat-30/r03
+  - 本文確認・分類 **10件** / accept **4件** / unrelated+borderline **6件**
+  - evidence: .survey/import-inbox/pending/discovery/libfile_b080460c31e881918f4aa86a07278f4b--discovery-20261030-2334-scheduled-chat-30-r03-complete.json
 
 ### Codex探索成果の反映状況
 
