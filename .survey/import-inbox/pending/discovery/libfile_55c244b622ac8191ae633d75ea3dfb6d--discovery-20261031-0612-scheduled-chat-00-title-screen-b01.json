@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0612-scheduled-chat-00/title-screen-b01",
+  "reference_main_sha": "8621b24535e18ee7fcc6d3de3a2475c518c5d300",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.13183",
+      "identity_tokens": [
+        "arXiv:2506.13183"
+      ],
+      "title": "MT-PCR: Hybrid Mamba-Transformer Network with Spatial Serialization for Point Cloud Registration",
+      "reason": "タイトルで明示された研究対象は3次元点群の位置合わせであり、LLM推論サービング、メモリ管理、KVキャッシュ最適化の研究ではない。",
+      "source_url": "https://arxiv.org/abs/2506.13183",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 487,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.24624",
+      "identity_tokens": [
+        "arXiv:2509.24624"
+      ],
+      "title": "PrivMark: Private Large Language Models Watermarking with MPC",
+      "reason": "タイトルで明示された研究対象はMPCを用いるLLM透かしとプライバシー保護であり、推論実行の高速化やメモリ削減を主題としない。",
+      "source_url": "https://arxiv.org/abs/2509.24624",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}
