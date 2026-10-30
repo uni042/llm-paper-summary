@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2607.25818",
+      "year": 2026,
+      "published": "2026-07-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent multimodal large language models (MLLMs), such as Qwen2.5-VL and InternVL3, generate large numbers of vision tokens for high-resolution inputs, leading to substantial computational cost. Existing vision token pruning methods either depend on cross-modal attention and cannot prune before the prefill stage, or rely on diversity estimation with high computational overhead. We observe that attention scores from both vision and text tokens peak at modality separator tokens, suggesting that these separators bridge the two modalities. Based on this observation, we propose SepPrune, an efficient, training-free, plug-and-play pruning method that uses the separator token as a unified query to rank and select informative vision tokens. SepPrune reuses the LLM's built-in projection parameters and requires no architectural changes. Experiments on Qwen2.5-VL-7B show that SepPrune achieves state-of-the-art performance, retaining 96.3% of the original accuracy while removing 80.2% of vision tokens.",
+      "identifiers": [
+        "SemanticScholar:f0910f1c8dc4fe0348c933d63648864f4ea1bf53"
+      ],
+      "semantic_scholar_id": "f0910f1c8dc4fe0348c933d63648864f4ea1bf53",
+      "canonical_id": "arXiv:2607.25818",
+      "arxiv_id": "2607.25818",
+      "doi": "10.48550/arXiv.2607.25818",
+      "authors": [
+        "Yucheng Wang",
+        "Qi-Hui Zhu",
+        "Yang Liu",
+        "Xiaoyan Sun",
+        "Si-Ying Wu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 94,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨はMLLMのモダリティ区切りトークンを視覚トークン選別の共通クエリとして再利用し、prefill前に学習不要で視覚トークンを枝刈り。Qwen2.5-VL-7Bで視覚トークン80.2%削除時に元精度96.3%を維持と報告。視覚プリフィルの計算量・メモリ削減に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond One-Size-Fits-All: Sample-Adaptive Strategy Routing for Vision Token Pruning in MLLMs",
+      "source_url": "https://arxiv.org/abs/2609.10346",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) process hundreds or thousands of visual tokens per image, incurring prohibitive inference costs. While existing vision token pruning methods mitigate this overhead, they implicitly assume that a single fixed pruning strategy can be applied uniformly across all inputs. Our analysis further reveals that ranking pruning methods by average benchmark accuracy conceals substantial sample-wise complementarity: although the average-best strategy excels overall, alternative strategies prove superior on a significant fraction of individual samples. To harness this diversity, we propose VIP-Router, a lightweight VIsion Pruning Router that adaptively selects the pruning strategy predicted to be best suited to each input at a specified pruning level. Conditioned on low-cost visual and textual features, VIP-Router identifies the most suitable candidate strategy while retaining full-token inference as an option when pruning is predicted to be unfavorable. Evaluated on a curated suite of pruning-sensitive visual perception benchmarks, VTC-Bench Group A, VIP-Router consistently outperforms the best fixed strategy baseline across all reduction ratios, achieving a 26.9% relative improvement in average accuracy, and a 22.0% relative increase in average utility after accounting for realized token cost. Crucially, VIP-Router operates in a plug-and-play manner without modifying underlying pruning algorithms or model weights, introducing trainable parameters equivalent to merely 0.017\\% of the backbone. Furthermore, VIP-Router proves effective across various MLLM backbones and yields consistent gains on unseen benchmarks, highlighting the potential of sample adaptive routing for visual token pruning.",
+      "identifiers": [
+        "SemanticScholar:fc84ef2817fe33c4b89860bee7572e290b7c104d"
+      ],
+      "semantic_scholar_id": "fc84ef2817fe33c4b89860bee7572e290b7c104d",
+      "canonical_id": "arXiv:2609.10346",
+      "arxiv_id": "2609.10346",
+      "authors": [
+        "Hai-Jin Liang",
+        "P. Zhou",
+        "Zheng-Lin Wan",
+        "Wei Wang",
+        "Yang You",
+        "Wang-Bo Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は入力画像と質問に応じて既存視覚トークン枝刈り方式か全トークン推論を選択する軽量VIP-Routerを提案。VTC-Bench Group Aで固定方式比平均精度26.9%相対改善、実トークンコスト込みutility22.0%改善。MLLM推論時の入力依存圧縮ルーティングに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning",
+      "source_url": "https://arxiv.org/abs/2609.28717",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Models (LRMs) have achieved state-of-the-art performance in reasoning tasks by utilizing Chain-of-Thought (CoT) reasoning. To achieve fast execution speed, speculative reasoning techniques adopt a lightweight draft model for candidate token generation followed by process reward models (PRMs) for verification and a strong target model for refinements. This paper identifies that the existing speculative reasoning paradigm follows a strictly forward-only reasoning trajectory, which lacks robustness and can lead to severe error propagation if early reasoning steps are suboptimal. Furthermore, executing these disparate inference schemes, including sequential drafting and parallel verification on homogeneous GPU platforms, can lead to severe resource underutilization. To address this, we propose HeteroReason, an algorithm-hardware co-designed heterogeneous FPGA-GPU inference paradigm specifically tailored for LRM speculative reasoning. At the algorithmic level, we introduce a backtracking-enhanced workflow that enables the system to recover from low-quality states and explore alternative reasoning trajectories, significantly improving reasoning robustness. At the system level, the draft model is offloaded to the FPGA while deploying the PRM and target models on GPUs. A specialized workflow is optimized to achieve prefill-decode disaggregation, which exploits shadow synchronization to overlap GPU-side refinements with FPGA-side token updates to effectively hide synchronization latency. To mitigate inherent sequential constraints, we propose a step-ahead speculation and refinement scheduling scheme, transitioning the system from a sequential execution scheme to a parallel pipeline. Experimental evaluations show an average 4.2% accuracy improvement, with 1.01x-1.42x latency speedups and 1.25x-1.57x improvements in energy efficiency compared to homogeneous GPU baselines.",
+      "identifiers": [
+        "SemanticScholar:a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48"
+      ],
+      "semantic_scholar_id": "a2a37012c58e68b5fa19fb6dd486c7fbe3a81d48",
+      "canonical_id": "arXiv:2609.28717",
+      "arxiv_id": "2609.28717",
+      "authors": [
+        "Ze-Huan Zhang",
+        "Quan Deng",
+        "Zi-Bo Ren",
+        "H. Chen",
+        "Guo-Yu Li",
+        "Xu-Chun Hu",
+        "J. G. Coutinho",
+        "Ce Guo",
+        "W. Luk",
+        "Zhi-Qiang Que",
+        "Hong-Xiang Fan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨はLRMの投機的推論において、ドラフトをFPGAへ、PRM検証とtargetをGPUへ配置し、バックトラックとshadow同期・先読みパイプラインで推論資源の非対称性を利用。GPU同種構成比で遅延1.01〜1.42倍、エネルギー効率1.25〜1.57倍と報告。異種アクセラレータによる推論システム設計に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DLoop: Looped Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.07659",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates autoregressive generation in large language models. In each drafting stage, a lightweight draft model proposes tokens that the target model subsequently verifies. With increasingly capable draft models, we find that the target model frequently accepts all tokens produced in a drafting stage. A verification nevertheless follows each drafting stage, resulting in unnecessary target-model forward passes even when drafting could have continued. Adaptive draft length methods decide during decoding how many draft tokens precede a verification, but they raise the speedup only for autoregressive draft models. For a parallel draft model, drafting further requires target-model hidden states for draft tokens that have not been verified. We propose DLoop, a looped form of speculative decoding that adaptively performs multiple drafting stages before verification. DLoop continues drafting while the draft model remains confident and verifies all accumulated draft tokens together. Loop-aware training keeps the draft model reliable in the additional drafting stages by exposing it to its own hidden states for unverified draft tokens. By spending additional draft-model forward passes, DLoop reduces the number of target-model forward passes required for verification. Across diverse speculative decoding methods including EAGLE-3, DFlash, Domino, DSpark, and multi-token prediction modules, DLoop improves the wall-clock speedup by 5 to 41 percent while preserving lossless decoding. Code will be available at https://github.com/naver-ai/DLoop.",
+      "identifiers": [
+        "SemanticScholar:91706080538c3ae04b58a961c97a8aa48e1752d9"
+      ],
+      "semantic_scholar_id": "91706080538c3ae04b58a961c97a8aa48e1752d9",
+      "canonical_id": "arXiv:2610.07659",
+      "arxiv_id": "2610.07659",
+      "authors": [
+        "Geonmo Gu",
+        "Byeongho Heo",
+        "HeeJae Jun",
+        "Yoohoon Kang",
+        "Sang-Min Lee",
+        "Sangdoo Yun",
+        "Dongyoon Han"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2要旨はドラフトが高信頼な場合に検証前に複数ドラフト段階をループさせ、対象モデルの不要な検証forwardを削減。未検証トークンの隠れ状態を扱うloop-aware学習を導入し、EAGLE-3等に対してwall-clock速度を5〜41%改善し分布保存型復号を維持。推論デコードの直接的高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0e4c60946f8b",
+    "round": "libimp-0e4c60946f8b3c9f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0e4c60946f8b3c9f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0e4c60946f8b3c9f-pre01.json",
+    "receipt": "sha256:fa85501e3e336759661f472fd38f7c4ea8f2d714fe4924a6b5b042ea752ee6a7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0e4c60946f8b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Theory-optimal Quantization Based on Flatness",
+      "source_url": "https://arxiv.org/abs/2605.18800",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training quantization has emerged as a widely adopted technique for compressing and accelerating the inference of Large Language Models (LLMs). The primary challenges in LLMs quantization stem from activation outliers, which significantly degrade model performance especially at lower bit precision. While recent approaches attempt to mitigate outliers through linear transformations across feature dimensions, our analysis reveals that the transformed weights and activations still exhibit persistent outlier patterns with concentrated magnitude distributions. In this paper, we first model the mathematical relationship between quantization error and outliers, and then introduce a new metric Flatness to quantify the distribution of outliers. Based on this, we derive the theoretical optimal solution with respect to Flatness. Building on these insights, we propose Bidirectional Diagonal Quantization (BDQ), a novel post-training quantization framework that effectively disperses outlier patterns through optimized matrix transformations. BDQ strategically distributes outlier magnitudes across matrix dimensions via learned diagonal operations. Extensive experiments demonstrate that BDQ establishes a new quantization benchmark. It achieves less than 1\\% accuracy drop in W4A4 quantization on the LLaMA-3-8B model. In the more challenging W2A4KV16 experiment, compared to state-of-the-art approaches, BDQ reduces the performance gap by 39.1\\% on the DeepSeek-R1-Distill-LLaMA-70B model.",
+      "identifiers": [
+        "SemanticScholar:e9d48d0bdd801198cb602bb7819f22471f265914"
+      ],
+      "semantic_scholar_id": "e9d48d0bdd801198cb602bb7819f22471f265914",
+      "canonical_id": "arXiv:2605.18800",
+      "arxiv_id": "2605.18800",
+      "doi": "10.18653/v1/2026.acl-long.1767",
+      "authors": [
+        "Xiu-Sheng Huang",
+        "Zhe Li",
+        "Xuan-Wu Yin",
+        "Lu Wang",
+        "Ye-Quan Wang",
+        "Dong Li",
+        "E. Barsoum",
+        "Kang Liu"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "arXiv要旨は重み・活性の外れ値分布の平坦性を指標化し、双方向対角変換で外れ値を分散するBDQを提案。LLaMA-3-8BのW4A4で精度低下1%未満、DeepSeek-R1-Distill-LLaMA-70BのW2A4KV16で既存方式との差を39.1%縮小と報告。低ビット推論の品質維持に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Nice Fold or Hero Call: Learning Budget-Efficient Thinking under Policy-Dependent Solvability",
+      "source_url": "https://arxiv.org/abs/2605.11625",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large reasoning models (LRMs) improve problem solving through extended reasoning, but often misallocate test-time compute. Existing efficiency methods reduce cost by compressing reasoning traces or conditioning budget on perceived difficulty, yet read the resulting pass rate as a difficulty score, leaving the zero-return regime unmodeled. As a result, they overspend on queries beyond the model's capability while compressing hard-but-solvable ones that need deeper reasoning. In this work, we formulate adaptive reasoning as a computational investment under uncertainty, where budget follows the expected return of reasoning rather than perceived difficulty. To instantiate this principle, we propose Budget-Efficient Thinking (BET), a two-stage framework that combines behavioral cold-start with GRPO under an investment-cost-aware reward. By aligning solve-or-fold decisions with rollout-derived solvability, BET learns three behaviors: (1) short solve, answering easy queries concisely; (2) nice fold, abstaining early when continued reasoning has near-zero expected return; and (3) hero call, preserving sufficient compute for hard-but-solvable queries. Across seven benchmarks and three base models, BET reduces reasoning tokens by 54% while improving up to 3.2% accuracy, and transfers zero-shot to scientific QA and logical reasoning with comparable efficiency gains. Code is available at https://github.com/houqiii/BET",
+      "identifiers": [
+        "SemanticScholar:f49d943f1f9003492d2bbf03f4afb8b8de0faed4"
+      ],
+      "semantic_scholar_id": "f49d943f1f9003492d2bbf03f4afb8b8de0faed4",
+      "canonical_id": "arXiv:2605.11625",
+      "arxiv_id": "2605.11625",
+      "authors": [
+        "Zhaomeng Zhou",
+        "Lan Zhang",
+        "Jun-Yang Wang",
+        "Mu Yuan",
+        "Song-Lin Liu",
+        "Ting-Zhao Li",
+        "Yi-Qing Hu",
+        "Yu-Meng Zhao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は問題難度だけでなく解決可能性に応じて推論計算予算を配分するBETを提案。解決見込みが低ければ早期停止し、難しいが解決可能な問題には計算を残す。3基盤モデル・7ベンチマークで推論トークンを平均約55%削減し性能も改善。生成計算量の適応制御に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Focus-then-Context: Subject-Centric Progressive Visual Token Reduction for Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2605.20950",
+      "year": 2026,
+      "published": "2026-05-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) face a bottleneck of prohibitive computational costs arising from massive visual token sequences during inference. Existing vision token reduction methods alleviate this burden, but they unintentionally preserve the isolated visual subject strictly aligned with the user's query, which fails to substantially explore salient subjects and their contextual relationships. In this paper, we propose SPpruner, a subject-centric progressive reduction paradigm that emulates the \\textit{Focus-then-Context} mechanism of the human visual perception system. Specifically, we first construct a focus identification module to explicitly model the interplay between visual saliency and semantic relevance. Herein, it can excavate the comprehensive visual subject spectrum to ensure a high-fidelity representation of visual input. Subsequently, a context-aware structural scanning module is developed to aggregate contextual cues from neighboring regions. As such, it can effectively restore global relational dependencies to uphold the structural integrity of the preserved subjects. Extensive experiments demonstrate that our paradigm consistently outperforms SOTA methods, achieving up to 2.53 times speedup with only 22.2% of visual tokens retained in Qwen2.5-VL and a 67% FLOPs reduction on LLaVA with a negligible 0.6% accuracy drop.",
+      "identifiers": [
+        "SemanticScholar:d6b178cfef9038157beb9450f9ac8f6358197236"
+      ],
+      "semantic_scholar_id": "d6b178cfef9038157beb9450f9ac8f6358197236",
+      "canonical_id": "arXiv:2605.20950",
+      "arxiv_id": "2605.20950",
+      "doi": "10.48550/arXiv.2605.20950",
+      "authors": [
+        "Yu-Lin Zhao",
+        "Yun Wang",
+        "De-Hua Zheng",
+        "Bo-Rui Jiang",
+        "Zheng Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 163,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は視覚的顕著性と質問関連性で主体を抽出し、周辺文脈を補う段階的視覚トークン削減SPprunerを提案。Qwen2.5-VLで視覚トークン22.2%保持時に最大2.53倍高速化、LLaVAでFLOPs67%削減と精度低下0.6%を報告。VLM推論時の視覚プリフィル高速化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Recover-LoRA for Aggressive Quantization: Reclaiming Accuracy in 2-Bit Language Models via Low-Rank Adaptation with Knowledge Distillation on Synthetic Data",
+      "source_url": "https://arxiv.org/abs/2606.04238",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Aggressive weight quantization to 2-bit precision offers substantial throughput and memory gains for large language model (LLM) inference, but typically incurs severe accuracy degradation. These gains are particularly relevant for edge and on-device deployment, where memory capacity and bandwidth are primary constraints. In this work, we extend Recover-LoRA -- a lightweight, data-free accuracy recovery method originally developed for general model weight corruption -- to the setting of ultra-low-bit quantization. We propose a selective mixed-precision strategy in which only gate and up projection layers of the MLP are quantized to 2-bit (W2), while all other linear layers remain at higher precision, yielding a mixed-precision GateUp configuration. We demonstrate via roofline analysis across three model families (4B--20B) and two hardware platforms that a W4/W2-GateUp deployment (4-bit base with 2-bit gate/up) delivers 7.5--23.3\\% TPS improvement over uniform W4 depending on model and context length, while confining quantization error to a predictable subset of layers. We then apply Recover-LoRA -- training low-rank adapters on the quantized layers via logit distillation with synthetic data -- to recover accuracy lost from 2-bit quantization of the gate and up layers. In a case study on Qwen3-4B, Recover-LoRA achieves 80--95\\% accuracy recovery on 9 of 12 benchmarks, using only 10k synthetic training samples and no labeled data. We further demonstrate that synthetic data performs comparably to curated labeled data for distillation-based recovery, and that recovery generalizes to out-of-distribution evaluation tasks. Our results present Recover-LoRA as a practical post-quantization accuracy recovery tool for aggressive weight compression in deployment settings.",
+      "identifiers": [
+        "SemanticScholar:37e76155c2350c4d68de1a2098319a18c39a65de"
+      ],
+      "semantic_scholar_id": "37e76155c2350c4d68de1a2098319a18c39a65de",
+      "canonical_id": "arXiv:2606.04238",
+      "arxiv_id": "2606.04238",
+      "doi": "10.48550/arXiv.2606.04238",
+      "authors": [
+        "Devleena Das",
+        "Rajeev Patwari",
+        "Elliott Delaye",
+        "Ashish Sirasao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨はGate/Up射影のみW2、他をW4にする混合精度化で推論TPSを7.5〜23.3%改善し、合成データ蒸留LoRAで精度を回復。Qwen3-4Bの12評価中9件で80〜95%の精度回復を報告。極低ビット推論向け重み圧縮と精度回復の直接的貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SwarmX: Agentic Scheduling for Low-Latency Agentic Systems",
+      "source_url": "https://arxiv.org/abs/2606.21401",
+      "year": 2026,
+      "published": "2026-06-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic AI applications compose multiple model calls and tool executions, creating new scheduling challenges for GPU-CPU clusters. Their inference time and model-call structure often depend on prompt semantics, making conventional scheduling approaches ineffective for low-latency serving. This paper presents SwarmX, a system that implements agentic scheduling for low-latency agentic applications. SwarmX uses scheduling-specific neural predictors to capture prompt, device, runtime, and target-model features; exposes distributional predictions to routers and scalers for tail-aware decisions; and provides mechanisms for predictor training and online adaptation. These predictors and mechanisms are integrated into a scheduler-agent framework that provides a common substrate for integration with existing scheduling and model-serving infrastructure. We evaluate SwarmX using production deployment (nearly one thousand GPUs and one million CPU cores) and controlled experiments on a 128-GPU testbed. Across multi-agent code generation, deep research, and multimodal agentic workflows, SwarmX reduces tail latency by up to 61.5% compared to state-of-the-art schedulers and sustains up to 2x the throughput of production schedulers under the same SLO.",
+      "identifiers": [
+        "SemanticScholar:fa47ca5b3860dac5032520e20a76bdfaae0d11f3"
+      ],
+      "semantic_scholar_id": "fa47ca5b3860dac5032520e20a76bdfaae0d11f3",
+      "canonical_id": "arXiv:2606.21401",
+      "arxiv_id": "2606.21401",
+      "doi": "10.48550/arXiv.2606.21401",
+      "authors": [
+        "Ye-Qi Huang",
+        "Yan-Wei Ye",
+        "Guo-Min Chen",
+        "Wen-Yu Su",
+        "Bin Gong",
+        "Jialian Li",
+        "Zhan Lu",
+        "Yang-Shen Deng",
+        "Xuan Sun",
+        "Le Xu",
+        "Luo Mai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 133,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨はエージェントのプロンプト依存のモデル呼出・ツール実行を予測する分布的レイテンシーモデルを用い、GPU/CPUクラスタのルータ・スケーラを制御するSwarmXを提案。大規模実運用と128GPUテストベッドでtail latency最大61.5%削減、同一SLO下スループット最大2倍を報告。エージェント推論ワークフローの実行スケジューリングに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-38fc37a6ffc9",
+    "round": "libimp-38fc37a6ffc9e35f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-38fc37a6ffc9e35f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-38fc37a6ffc9e35f-pre01.json",
+    "receipt": "sha256:57b0728d16fba848de81dd5a03cdbd5bc11a26e701f0e5af9652b2fa57a3c4e1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-38fc37a6ffc9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

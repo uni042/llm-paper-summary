@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Oiso: Outlier-Isolated Data Format for Low-Bit Large Language Model Quantization",
+      "source_url": "https://doi.org/10.1109/TCAD.2025.3585023",
+      "year": 2026,
+      "published": "2026-02-01",
+      "venue": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The scale of large language models (LLMs) has steadily increased over time, leading to enhanced performance in multimodal understanding and complex reasoning, but with significant execution overhead on hardware. Quantization is a promising approach to reduce computation and memory overhead for LLM deployment. However, maintaining accuracy and efficiency simultaneously is challenging due to the presence of outliers. Moreover, low-bit quantization tends to deteriorate accuracy due to its limited precision. Existing outlier-aware quantization/hardware co-design methods split the sparse outliers from the normal values with dedicated encoding schemes. However, such separation produces a nonuniform data format for normal values and outliers, leading to additional hardware design and inefficient memory access. This article presents an outlier-isolated data format (Oiso) for low-bit LLM quantization called Oiso. Oiso is a unified representation for both outliers and normal values. It isolates the normal values from the outliers, which can reduce the impact of outliers on the normal values during the quantization process. Taking advantage of the uniform format, Oiso arithmetic can be performed using a homogeneous computational unit, and Oiso values can be stored in a standardized format. Hierarchical block encoding with a subblock alignment scheme is introduced to reduce the encoding cost and the hardware overhead. We introduce the Oiso architecture, equipped with Oiso processing elements and encoders tailored for Oiso arithmetic, realizing efficient low-bit LLM inference. Oiso quantization can push the limits of low-bit LLM quantization, and the Oiso accelerator outperforms the state-of-the-art outlieraware accelerator design with $1.26\\times $ performance improvement and 25% energy reduction.",
+      "identifiers": [
+        "SemanticScholar:5d33dbac67a065aa4eb4ad0c039093708610aff0"
+      ],
+      "semantic_scholar_id": "5d33dbac67a065aa4eb4ad0c039093708610aff0",
+      "doi": "10.1109/TCAD.2025.3585023",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3585023",
+      "authors": [
+        "Lan-Cheng Zou",
+        "Shuo Yin",
+        "Mingjun Li",
+        "Ming-Zi Wang",
+        "Chen Bai",
+        "Wenqian Zhao",
+        "Bei Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 271,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者公開IEEE論文の要旨で、外れ値と通常値を統一形式で符号化し階層ブロック符号化と専用演算器を組み合わせる低ビットLLM推論アクセラレータを提案。既存外れ値対応アクセラレータ比1.26倍の性能と25%のエネルギー削減を報告するため、推論向け量子化とハードウェアに直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2609.05821",
+      "year": 2026,
+      "published": "2026-09-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) often answer new questions about recurring visual content, where reusing the key-value (KV) cache can avoid re-encoding expensive visual prefixes. Exact-prefix reuse, however, fails when the same visual content appears under a changed prefix. Selective recomputation can recover quality under a small visual-token budget, but only when the right stale tokens are refreshed. Raw-attention selection can waste budget on high-attention tokens with small value-norm proxy scores and on query-irrelevant images. To address these failure modes, we propose CONDUIT, a training-free refresh policy that unifies single- and multi-image reuse as residual-stream restoration. Building on norm-weighted attention, CONDUIT ranks cached visual tokens using cached-key query attention and an accessible pre-output cached-value-norm proxy, then applies empirical image-level relevance amplification before one global selection. With one image, the coefficient is one and the rule reduces to intra-image token selection. The method preserves model architecture and weights, adding only a single query-conditioned scoring pass at inference. At a 10% refresh budget, CONDUIT achieves 97.0-99.5% of the corresponding full-prefill five-dataset average across three VLM backbones and leads budgeted methods on average; on the MMLongBench-Doc latency subset, it uses 13.5% of full-prefill FLOPs and achieves a 2.99x time-to-first-token speedup.",
+      "identifiers": [
+        "SemanticScholar:3324f33ad4a0328cbce11308a3a21e7ded09e7b3"
+      ],
+      "semantic_scholar_id": "3324f33ad4a0328cbce11308a3a21e7ded09e7b3",
+      "canonical_id": "arXiv:2609.05821",
+      "arxiv_id": "2609.05821",
+      "authors": [
+        "Peng-An Chen",
+        "Kai-Sheng Zheng",
+        "Liang Hong",
+        "Liang Yi",
+        "Ji-Yue Jiang",
+        "Jia-Yan Chen",
+        "Yi-Xuan Wang",
+        "Yi-Min Fan",
+        "Xin-Yuan Liu",
+        "Jia-Yi Li",
+        "Zhan-Qiu Zhang",
+        "Yi-Wen Guo",
+        "Yu Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 55,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv公開要旨の転記と書誌を照合。異なる接頭辞で同じ画像を再利用するVLMに対し、注意重みと値ノルム代理量を用いて再計算すべき視覚トークンを選ぶ学習不要のKV再利用方式。10%更新予算で複数VLMの平均品質97.0〜99.5%を保ち、TTFT最大2.99倍高速化を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
+      "source_url": "https://doi.org/10.26599/bdma.2024.9020074",
+      "year": 2025,
+      "published": "2025-08-01",
+      "venue": "Big Data Mining and Analytics",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:90967211ccf00a56488bfcd97c49e8b68bed5b0d"
+      ],
+      "semantic_scholar_id": "90967211ccf00a56488bfcd97c49e8b68bed5b0d",
+      "doi": "10.26599/bdma.2024.9020074",
+      "canonical_id": "DOI:10.26599/bdma.2024.9020074",
+      "authors": [
+        "Zi-Qian Zeng",
+        "Jiahong Yu",
+        "Qianshi Pang",
+        "Zihao Wang",
+        "Huiping Zhuang",
+        "Fan Yu",
+        "Hon-Gen Shao",
+        "Xiao-Feng Zou"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 455,
+        "matched_prestigious_venue": null
+      },
+      "reason": "出版社の一次要旨は、軽量ドラフトモデルに残差復号ヘッドを導入して長距離依存の表現不足を補い、投機的復号で複数トークンを並列候補化する手法を説明。MT-benchで自己回帰復号比最大3.2倍の速度向上を報告し、LLMデコード高速化が主目的。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching",
+      "source_url": "https://doi.org/10.24963/ijcai.2025/920",
+      "year": 2025,
+      "published": "2025-09-01",
+      "venue": "International Joint Conference on Artificial Intelligence",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recently, post-training quantization (PTQ) methods for large language models (LLMs) primarily focus on tackling the challenges caused by outliers. Scaling transformation has proven to be effective while how to enhance the performance of extremely low-bitwidth (e.g., 2-bit) PTQ under it remains largely unexplored. In this work, a new PTQ framework, namely MPPQ, is established. Specifically, MPPQ first proposes an enhanced reconstruction loss based on Mixed metric supervision to mitigate the distribution inconsistency caused by quantization while providing strong regularization for learnable parameters.\n\nSecondly, we introduce a Proxy-based adaptive rounding scheme in weight quantization, which replaces the round-to-nearest (RTN) function to minimize the overall quantization errors through element-wise scaling. Furthermore, a factor coarse Pre-searching mechanism is presented to ensure proper coordination between quantization and clipping patterns, while achieving optimal initialization of clipping factors before training.\n\nExtensive experiments show that MPPQ consistently outperforms state-of-the-art methods in low-bit quantization settings. For instance, the perplexity of WikiText2 can be dramatically reduced to 8.85 (3.9 ↓ vs 12.75 of the latest method, LRQuant) for the LLaMA-2-7B model, which is quantized with W4A4.",
+      "identifiers": [
+        "SemanticScholar:bbf4ae391cdc3a640fdd3acfc2af0c5a94e2ccfb"
+      ],
+      "semantic_scholar_id": "bbf4ae391cdc3a640fdd3acfc2af0c5a94e2ccfb",
+      "doi": "10.24963/ijcai.2025/920",
+      "canonical_id": "DOI:10.24963/ijcai.2025/920",
+      "authors": [
+        "Ming-Run Wei",
+        "Ye-Yu Yan",
+        "Dong Wang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 424,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IJCAI公式要旨は混合指標による再構成損失、重みのProxy-based adaptive rounding、クリッピング係数の事前探索を組み合わせる低ビットPTQを提案。LLaMA-2-7B W4A4でWikiText2 PPLを12.75から8.85へ改善し、推論向け圧縮に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8ddb5e97e8a1",
+    "round": "libimp-8ddb5e97e8a1a4a6-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8ddb5e97e8a1a4a6-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8ddb5e97e8a1a4a6-pre01.json",
+    "receipt": "sha256:4f81c26b9c5f9573d6fe3f9bc93a414b4df72f0b4b6a5466ebbcf61855d728b2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8ddb5e97e8a1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

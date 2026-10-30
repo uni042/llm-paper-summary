@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Quality Recovery for Quantized KV Caches via Low-Rank Attention Adaptation",
+      "source_url": "https://arxiv.org/abs/2609.04263",
+      "year": 2026,
+      "published": "2026-09-02",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit key--value (KV) caches reduce the memory required for autoregressive decoding, but the resulting quality loss depends on the model and quantizer. We keep the quantizer fixed and distill the floating-cache model's behavior into low-rank Q/K/V projection updates while the student executes a physically packed incremental cache. Across three seeds, 4-bit affine-cache adapters recover $54.24\\%\\pm2.47\\%$ of the held-out perplexity gap on TinyLlama-1.1B and $75.96\\%\\pm4.04\\%$ on Gemma-4-12B. On the same frozen NF4 Llama-3.1-8B base, one validation-selected run per quantizer recovers $60.42\\%$ under KIVI K2V2 and $37.61\\%$ under KVarN K4V2, while preserving 180-case associative retrieval. Gemma's score on an official 4K/8K RULER subset rises from 42.80 with the unadapted 4-bit cache to 48.33 after adaptation (46.15 floating), with substantial task heterogeneity. Finally, a 2-bit rank--token sweep reduces TinyLlama's 2-bit PPL from 576.10 to $11.4000\\pm0.0059$ across three seeds, versus 10.3988 floating, but restores only 11--12 of 180 retrieval cases. These results show that low-rank projection adaptation can recover held-out quality across fixed cache formats, while perplexity recovery need not restore long-context retrieval.",
+      "identifiers": [
+        "SemanticScholar:c6addd9324dfa850ada13ec5d2c13265bc9dbc9b"
+      ],
+      "semantic_scholar_id": "c6addd9324dfa850ada13ec5d2c13265bc9dbc9b",
+      "canonical_id": "arXiv:2609.04263",
+      "arxiv_id": "2609.04263",
+      "authors": [
+        "Seifeldin Abdellatif"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 58,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨はKVキャッシュ量子化器を固定し、Q/K/V射影に低ランク蒸留アダプタを学習して低ビットKVの品質低下を回復。4ビットでTinyLlamaとGemma-4のPPLギャップを54.24%・75.96%回復し、2ビットではPPL改善が長文検索の回復に直結しない負の結果も報告。量子化KVキャッシュの品質回復と推論メモリ効率に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2609.36654",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models make weight storage and memory traffic major inference costs, motivating low-precision formats that represent each weight with only a few bits. Such formats use a scale to map floating-point values into a small codebook; NVFP4 improves local range utilization by letting every 16 E2M1 weights share an E4M3 block scale. Choosing that scale is difficult in GPTQ because quantizing one column updates those that follow, so evaluating a block independently can misestimate its final reconstruction error. Large models pose a second challenge: full-precision weights, calibration activations, and second-order state cannot all remain on one accelerator, while assigning complete layers to devices leaves each time-consuming layer solve serial. We introduce \\emph{Schur Replay}, a scale-selection algorithm that reproduces the GPTQ updates caused by each block scale and scores the resulting block error after accounting for compensation from unquantized columns. Separately, our execution infrastructure keeps only the active layer resident, tiers activations across device, host, and disk, retires full-precision layers after export, and distributes independent output rows across tensor-parallel ranks. Together, the algorithm and infrastructure attain $99.35\\%$ and $100.84\\%$ question-weighted recovery from BF16 across seven benchmarks on Qwen3.5-397B-A17B and Llama-3.3-70B-Instruct. On the 397B model, the infrastructure reduces measured per-layer time by $15.17\\times$ over ModelOpt and $23.14\\times$ over LLM Compressor, with lower memory used per GPU.",
+      "identifiers": [
+        "SemanticScholar:2195733c327eae514838c14186194ea2ed4cc031"
+      ],
+      "semantic_scholar_id": "2195733c327eae514838c14186194ea2ed4cc031",
+      "canonical_id": "arXiv:2609.36654",
+      "arxiv_id": "2609.36654",
+      "authors": [
+        "Rui-Ying Ding",
+        "Jie Li",
+        "Kang He",
+        "Zi-Yan Liu",
+        "Cheng-Ru Song",
+        "Yue-Dong Xu",
+        "Yuan Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨はGPTQの後続列更新を再現してNVFP4のブロックスケールを選ぶSchur Replayを提案。量子化計算時のGPU/CPU/ディスク階層化と出力行並列化で巨大モデルを扱い、Qwen3.5-397B-A17BとLlama-3.3-70Bの量子化品質と処理時間を報告。推論向けNVFP4圧縮の実装に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-38fc37a6ffc9",
+    "round": "libimp-38fc37a6ffc9e35f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-38fc37a6ffc9e35f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-38fc37a6ffc9e35f-pre01.json",
+    "receipt": "sha256:57b0728d16fba848de81dd5a03cdbd5bc11a26e701f0e5af9652b2fa57a3c4e1"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-38fc37a6ffc9",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

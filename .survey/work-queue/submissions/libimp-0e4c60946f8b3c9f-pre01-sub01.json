@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Optimal Decay Spectra for Linear Recurrences",
+      "source_url": "https://arxiv.org/abs/2604.07658",
+      "year": 2026,
+      "published": "2026-04-08",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear recurrent models offer linear-time sequence processing but often suffer from suboptimal long-range memory. We trace this to the decay spectrum: for $N$ channels, random initialization collapses the minimum spectral gap to $O(N^{-2})$, yielding sub-exponential error $\\exp(-\\Omega(N/\\log N))$; linear spacing avoids collapse but degrades to $\\exp(-O(N/\\sqrt{T}))$, practically algebraic over long contexts. We introduce Position-Adaptive Spectral Tapering (PoST), an architecture-agnostic framework combining two mechanisms: (1) Spectral Reparameterization, which structurally enforces geometrically spaced log-decay rates, proven minimax optimal at rate $O(\\exp(-cN/\\log T))$; and (2) Position-Adaptive Scaling, the provably unique mechanism that eliminates the scale mismatch of static spectra (where only $N\\log t/\\log T$ of $N$ channels are effective at position $t$) by stretching the spectrum to the actual dependency range, sharpening the rate to $O(\\exp(-cN/\\log t))$. This scaling natively induces fractional invariance: the impulse response becomes scale-free, with channels interpolating between relative and absolute temporal coordinates. PoST integrates into any diagonal linear recurrence without overhead. We instantiate it across Mamba-2, RWKV-7, Gated DeltaNet, Gated Linear Attention, and RetNet. Pre-training at 180M-440M scales shows consistent zero-shot language modeling improvements, significant long-context retrieval gains for Mamba-2 (MQAR and NIAH), and competitive or improved performance across other architectures. Code: https://github.com/SiLifen/PoST.",
+      "identifiers": [
+        "SemanticScholar:372528760d0053f7edb32fd411c5d50b0938496a"
+      ],
+      "semantic_scholar_id": "372528760d0053f7edb32fd411c5d50b0938496a",
+      "canonical_id": "arXiv:2604.07658",
+      "arxiv_id": "2604.07658",
+      "doi": "10.48550/arXiv.2604.07658",
+      "authors": [
+        "Yang Cao"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 205,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は線形再帰の減衰スペクトルが長距離記憶を制限する問題に対し、幾何間隔の対数減衰率と位置適応スケーリングを組み合わせるPoSTを提案。Mamba-2、RWKV-7、Gated DeltaNet等に追加実行時オーバーヘッドなく統合し、長文脈検索とゼロショット言語モデルを改善。再帰型推論の状態表現と長文脈効率に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Token Importance to Conditional Removability: Rethinking Visual Token Pruning in Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2609.26484",
+      "year": 2026,
+      "published": "2026-09-22",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Training-free visual-token pruning often uses token importance, redundancy, or related selection criteria as proxies for safe removal. We show that these signals alone do not fully characterize removability, which is conditioned on both representation depth and the surrounding deletion set. Controlled interventions demonstrate that removing the same tokens at different depths produces substantially different downstream perturbations, while changing only the deletion context at a fixed depth alters candidate marginals and pruning-boundary decisions. These findings show that token importance alone cannot determine when a token is safely removable or how its removability changes under joint deletion. Motivated by this perspective, we propose CoRePrune, a training-free two-stage framework. Progressive Perturbation-Aware Visual Pruning refreshes deletion effects as visual representations evolve, while Set-Conditioned Refinement reevaluates candidate rescue benefits under the current deletion set after visual--text interaction. Across five multimodal large language model backbones covering standard images, high-resolution inputs, and video, CoRePrune preserves performance under aggressive token budgets. On Qwen3.5, with a final budget of 128 visual tokens, it retains 90.3% of dense-model performance while reducing aggregate prefill time by 51.0%.",
+      "identifiers": [
+        "SemanticScholar:9866dc0b92f687bd6f4d2a11a357ab4114cb6c84"
+      ],
+      "semantic_scholar_id": "9866dc0b92f687bd6f4d2a11a357ab4114cb6c84",
+      "canonical_id": "arXiv:2609.26484",
+      "arxiv_id": "2609.26484",
+      "authors": [
+        "Sheng-Li He",
+        "Yong-Chao Liang",
+        "Rou-Meng He",
+        "Jun-Jie Zeng",
+        "Ji-Yuan He",
+        "Xin Fang",
+        "Can Wu",
+        "Li Zheng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は視覚トークンの削除安全性が層深さと同時削除集合に依存する点を示し、段階的摂動推定と集合条件付き再評価を行うCoRePruneを提案。Qwen3.5で128視覚トークン予算時に密モデル品質の90.3%を維持しprefillを51.0%短縮。MLLMプリフィル計算削減の直接的手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Fast and Effective Weight Update for Pruned Large Language Models",
+      "source_url": "https://arxiv.org/abs/2401.02938",
+      "year": 2024,
+      "published": "2024-01-01",
+      "venue": "Trans. Mach. Learn. Res.",
+      "citation_count": 16,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pruning large language models (LLMs) is a challenging task due to their enormous size. The primary difficulty is fine-tuning the model after pruning, which is needed to recover the lost performance caused by dropping weights. Recent approaches have either ignored fine-tuning entirely, focusing on efficient pruning criteria, or attempted layer-wise weight updates, preserving the behavior of each layer. However, even layer-wise weight updates can be costly for LLMs, and previous works have resorted to various approximations. In our paper, we propose a fast and effective weight update algorithm for pruned layers based on the Alternating Direction Method of Multipliers (ADMM). We further extend it with a simple gradual pruning mask selection and achieve state-of-the-art pruning performance across a wide range of LLMs. Code is available at https://github.com/fmfi-compbio/admm-pruning.",
+      "identifiers": [
+        "SemanticScholar:6b4c299c26bdc9a81489121589b6ff70b9ebf403"
+      ],
+      "semantic_scholar_id": "6b4c299c26bdc9a81489121589b6ff70b9ebf403",
+      "canonical_id": "arXiv:2401.02938",
+      "arxiv_id": "2401.02938",
+      "authors": [
+        "V. Boza"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 16,
+        "citation_count": 16,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1033,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は枝刈り後のLLM品質回復のため、従来高価だった層別重み再調整をADMMに基づく高速更新で置き換え、漸進的な枝刈りマスク選択と併用。推論時の小型化を実現する枝刈り手法に直接関係するが、提案の更新計算自体は事前処理でありオンライン推論カーネルではない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models",
+      "source_url": "https://arxiv.org/abs/2506.12353",
+      "year": 2025,
+      "published": "2025-06-14",
+      "venue": "arXiv.org",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While recent advances in large reasoning models have demonstrated remarkable performance, efficient reasoning remains critical due to the rapid growth of output length. Existing optimization approaches highlights a tendency toward\"overthinking\", yet lack fine-grained analysis. In this work, we focus on Self-Affirmation Reflections: redundant reflective steps that affirm prior content and often occurs after the already correct reasoning steps. Observations of both original and optimized reasoning models reveal pervasive self-affirmation reflections. Notably, these reflections sometimes lead to longer outputs in optimized models than their original counterparts. Through detailed analysis, we uncover an intriguing pattern: compared to other reflections, the leading words (i.e., the first word of sentences) in self-affirmation reflections exhibit a distinct probability bias. Motivated by this insight, we can locate self-affirmation reflections and conduct a train-free experiment demonstrating that suppressing self-affirmation reflections reduces output length without degrading accuracy across multiple models (R1-Distill-Models, QwQ-32B, and Qwen3-32B). Furthermore, we also improve current train-based method by explicitly suppressing such reflections. In our experiments, we achieve length compression of 18.7\\% in train-free settings and 50.2\\% in train-based settings for R1-Distill-Qwen-1.5B. Moreover, our improvements are simple yet practical and can be directly applied to existing inference frameworks, such as vLLM. We believe that our findings will provide community insights for achieving more precise length compression and step-level efficient reasoning.",
+      "identifiers": [
+        "SemanticScholar:c39b542e2791539450a96778372e6d98909dc953"
+      ],
+      "semantic_scholar_id": "c39b542e2791539450a96778372e6d98909dc953",
+      "canonical_id": "arXiv:2506.12353",
+      "arxiv_id": "2506.12353",
+      "doi": "10.48550/arXiv.2506.12353",
+      "authors": [
+        "Kai-Yuan Liu",
+        "Chen Shen",
+        "Zhan-Wei Zhang",
+        "Jun-Jie Liu",
+        "Xiaosong Yuan",
+        "Jie-Ping Ye"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 503,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は推論中の冗長な自己肯定的反省文の先頭語に確率偏りを発見し、これを抑制してCoT出力長を短縮する手法。QwQ-32BやQwen3-32Bなどで学習なし18.7%、学習あり50.2%の長さ圧縮を報告し、vLLMなど推論フレームワークへ適用可能と記す。生成トークン数削減による推論コスト最適化に該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge-Cloud Networks",
+      "source_url": "https://arxiv.org/abs/2607.02522",
+      "year": 2026,
+      "published": "2026-05-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures are increasingly deployed across 6G edge--cloud networks, where sparse activation reduces the computational footprint of each inference to only a fraction of the full expert set. However, MoE inference in edge-cloud networks creates a tension between KV state locality and elastic expert dispatch. KV state relocation incurs substantial transfer overhead, while expert computation benefits from spreading across the network to exploit available capacity. This tension is amplified in multi-turn inference, where each turn extends the KV state that must persist across the dialogue. To this end, we present StateFlow, a distributed inference policy that decouples persistent KV state from transient sparse computation. StateFlow pins KV state at a sticky serving site for cross-turn reuse and jointly optimizes expert dispatch and aggregation placement across the network. We further implement a real-world testbed with kernel-level network emulation and experimental results show that StateFlow sustains more than $2\\times$ higher stable dialogue concurrency than the distributed baseline solutions and reduces turn-level p95 latency under multi-turn inference by 53.0\\%.",
+      "identifiers": [
+        "SemanticScholar:26168fb84cf9ee678f0f1bdc1ed8978c41500f4c"
+      ],
+      "semantic_scholar_id": "26168fb84cf9ee678f0f1bdc1ed8978c41500f4c",
+      "canonical_id": "arXiv:2607.02522",
+      "arxiv_id": "2607.02522",
+      "doi": "10.48550/arXiv.2607.02522",
+      "authors": [
+        "Bo Liu",
+        "Hai-Yuan Li",
+        "Yuelin Liu",
+        "Yu-Lei Wu",
+        "Rasheed Hussain",
+        "Shadi Moazzeni",
+        "D. Simeonidou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 177,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv要旨は多ターンMoE対話でKV状態を固定所有サイトに保持しつつ、疎なexpert演算をネットワークへ分散させるStateFlowを提案。ネットワークエミュレーション付き実機テストで安定対話同時実行数2倍超、ターンp95遅延53%削減を報告。KVの局所性とMoE専門家配置の共同最適化に該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0e4c60946f8b",
+    "round": "libimp-0e4c60946f8b3c9f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0e4c60946f8b3c9f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0e4c60946f8b3c9f-pre01.json",
+    "receipt": "sha256:fa85501e3e336759661f472fd38f7c4ea8f2d714fe4924a6b5b042ea752ee6a7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0e4c60946f8b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
