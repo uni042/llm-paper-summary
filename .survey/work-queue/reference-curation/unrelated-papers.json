@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T01:54:40+00:00",
-  "record_count": 12559,
+  "updated_at": "2026-10-30T03:53:35+00:00",
+  "record_count": 12560,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180785,6 +180785,20 @@
       "last_checked_at": "2026-10-30T01:54:40+00:00",
       "linked_from": [],
       "title": "TOAST: Transformer Optimization using Adaptive and Simple Transformations"
+    },
+    "arXiv:2408.12526": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2408.12526",
+      "identity_tokens": [
+        "arXiv:2408.12526",
+        "id:arXiv:2408.12526",
+        "url:https://arxiv.org/abs/2408.12526"
+      ],
+      "reason": "一次要旨で扱うのはBERT系の識別モデルを浅い複数studentへ蒸留するオンライン検索・テキストマイニング向けGPU推論。生成LLMの自己回帰decode、KV管理、推論サービングのボトルネックを扱わず、対象サーベイの中心である生成LLM推論高速化の直接研究ではない。worklistのEfficient GPU InferenceとarXiv書誌のLow-latency GPU Inferenceの表題差を記録。",
+      "first_checked_at": "2026-10-30T03:53:35+00:00",
+      "last_checked_at": "2026-10-30T03:53:35+00:00",
+      "linked_from": [],
+      "title": "Exploiting Student Parallelism for Low-latency GPU Inference of BERT-like Models in Online Services"
     }
   }
 }

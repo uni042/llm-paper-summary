@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T02:52:50+00:00",
-  "record_count": 5418,
+  "updated_at": "2026-10-30T03:53:34+00:00",
+  "record_count": 5419,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -83924,6 +83924,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "[SoK] Systematizing Inference Placement For Deep Learning Across Edge And Cloud Platforms: A Multi-Objective Optimization Perspective"
+    },
+    "arXiv:2310.09512": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2310.09512",
+      "identity_tokens": [
+        "arXiv:2310.09512",
+        "id:arXiv:2310.09512",
+        "url:https://arxiv.org/abs/2310.09512"
+      ],
+      "reason": "一次要旨でNAR-AMLPの線形時間・空間複雑度、入力依存射影、機械翻訳と音声合成への適用を確認。効率的な系列生成の構成要素としては関連するが、主評価はTTS/機械翻訳の非自己回帰モデルであり、LLMの自己回帰デコード、KV、サービングや大規模LLM実機推論の直接検証ではないためborderline。",
+      "first_checked_at": "2026-10-30T03:53:34+00:00",
+      "last_checked_at": "2026-10-30T03:53:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Attentive Multi-Layer Perceptron for Non-autoregressive Generation"
     }
   }
 }
