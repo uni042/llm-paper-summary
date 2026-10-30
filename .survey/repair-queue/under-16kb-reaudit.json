@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-30T01:48:51.400438+00:00",
+  "generated_at": "2026-10-30T02:17:10.020072+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 9,
+  "count": 8,
   "worker_counts": {
     "scheduled-chat-00": 3,
-    "scheduled-chat-30": 3,
+    "scheduled-chat-30": 2,
     "scheduled-chat-45": 3
   },
   "entries": [
@@ -161,26 +161,6 @@
         "method_chars": 1507,
         "evaluation_chars": 735,
         "limitation_chars": 629
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md",
-      "canonical_id": "DOI:10.32604/cmc.2026.078985",
-      "title": "Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors",
-      "file_bytes": 16868,
-      "source_sha256": "4181e227ea837a231e6c67649401468c6c8288fa7a511615d3a1663b76682ca6",
-      "source_git_blob_sha": "977e949453e8050e814a6bf04602814d0f7b11e4",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.912886,
-      "quality_metrics": {
-        "body_chars": 4379,
-        "method_chars": 1121,
-        "evaluation_chars": 1251,
-        "limitation_chars": 585
       },
       "mechanical_failures": [],
       "warnings": []
