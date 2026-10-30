@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0032-scheduled-chat-30/title-screen-b02",
+  "reference_main_sha": "41316ab7d0faa07b664b1d03afd404f7b8a996a8",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.01951",
+      "identity_tokens": [
+        "arXiv:2501.01951"
+      ],
+      "title": "MixGCN: Scalable GCN Training by Mixture of Parallelism and Mixture of Accelerators",
+      "reason": "タイトルが明示する対象はGraph Convolutional Networkの分散学習であり、生成LLM推論・サービングではない。",
+      "source_url": "https://arxiv.org/abs/2501.01951",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 323,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2303.02331",
+      "identity_tokens": [
+        "arXiv:2303.02331"
+      ],
+      "title": "Training-Free Acceleration of ViTs with Delayed Spatial Merging",
+      "reason": "タイトルが明示する対象はVision Transformerの視覚特徴処理で、LLM・MLLMの生成時推論ではない。単体ViTの加速研究として先行除外する。",
+      "source_url": "https://arxiv.org/abs/2303.02331",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 331,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3774934.3786445",
+      "identity_tokens": [
+        "DOI:10.1145/3774934.3786445"
+      ],
+      "title": "Elastor: Elastic and Efficient Model Partitioning and Checkpointing for Fault-Tolerant Distributed Training",
+      "reason": "タイトルが明示する対象は分散学習のpartitioningとcheckpointingであり、LLMの生成推論効率化・サービングではない。",
+      "source_url": "https://doi.org/10.1145/3774934.3786445",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T00:39:02+09:00",
+      "last_checked_at": "2026-10-31T00:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 332,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}
