@@ -1,0 +1,792 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-fb659cf6f7f565c4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-fb659cf6f7f5",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2506.10446",
+    "arXiv:2605.08813",
+    "arXiv:2605.08985",
+    "arXiv:2605.13165",
+    "arXiv:2605.22138",
+    "arXiv:2605.23074",
+    "arXiv:2608.22516",
+    "arXiv:2608.25115"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d4c1b168287778edd48c8d46a09dd0eb851805ae",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T14:01:43.223092+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2506.10446",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08813",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.08985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13165",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.22138",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.23074",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.22516",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.25115",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems",
+      "source_url": "https://arxiv.org/abs/2605.08813",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model-based Multi-Agent Systems (MAS) have demonstrated remarkable capabilities in complex tasks. However, manually designing optimal communication topologies is labor-intensive, while automated expansion methods often result in bloated structures with redundant agents, leading to excessive token consumption. To address this problem, we introduce \\textbf{AgentSlimming}, a plug-and-play compression framework for graph-structured multi-agent workflows. Motivated by pruning and quantization in neural networks, AgentSlimming compresses workflows by first estimating the importance score of each agent with a hybrid mechanism, and then removes redundant agents or replaces them with low-cost ones, where each operation is validated using a baseline-anchored acceptance rule to prevent performance collapse. Experiments show that AgentSlimming reduces average token cost by up to 78.9\\% with negligible performance degradation, and sometimes even improves accuracy, achieving a strong Pareto-optimal trade-off between cost and quality. \\textit{Our code is publicly available at https://github.com/CitrusYL/AgentSlimming",
+      "identifiers": [
+        "SemanticScholar:1d6916eb235e0a3e4b797a4a8bdac4fe74c54962"
+      ],
+      "semantic_scholar_id": "1d6916eb235e0a3e4b797a4a8bdac4fe74c54962",
+      "canonical_id": "arXiv:2605.08813",
+      "arxiv_id": "2605.08813",
+      "doi": "10.18653/v1/2026.acl-long.1387",
+      "authors": [
+        "Yulan Chen",
+        "Hao Peng",
+        "Jin-Yang Liu",
+        "Zichen Wen",
+        "Dong-Rui Liu",
+        "Lin-Feng Zhang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding",
+      "source_url": "https://arxiv.org/abs/2608.22516",
+      "year": 2026,
+      "published": "2026-08-23",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A long-video answer is evidence-supported only when the frames decoded from the video cover every event the answer depends on. Existing evaluations score final-answer correctness or predicted evidence intervals, but the frames a method decodes before answering are rarely audited, so correct answers can still rest on incomplete observation. We introduce VES-Bench, a 600-question benchmark of Temporal Ordering and Event Counting items over 348 public long videos. Each item carries a jointly necessary set of evidence intervals, letting us audit at three strictness levels whether a method's decoded frames cover every one of them. We also propose TRACE, a training-free agent that grounds answers in raw visual clips, builds an evidence bundle round by round, and stops only when the answer stabilises as the bundle grows and a final pass over the same clips returns the same answer. Under a same-backbone audit, TRACE answers 50.7% of questions correctly with at least two decoded frames inside every evidence interval, at 98.7 frames per question: over 10 points above uniform decoding at 128 frames (40.2%), and within 2.6 points of uniform decoding at 256 frames at 0.39x its frame cost, while reaching the highest answer accuracy in the audit (63.5%). TRACE also stays competitive on Video-MME (86.1), LVBench (75.6), and LongVideoBench (75.1).",
+      "identifiers": [
+        "SemanticScholar:a9b0c1bea96f3b97838a22fbe43888566903350b"
+      ],
+      "semantic_scholar_id": "a9b0c1bea96f3b97838a22fbe43888566903350b",
+      "canonical_id": "arXiv:2608.22516",
+      "arxiv_id": "2608.22516",
+      "authors": [
+        "Peng Liu",
+        "Jun-Bo Niu",
+        "Xiaoyan Hu",
+        "Zhong-Yu Shi",
+        "Zi-Tian Wang",
+        "Lin-Jiang Huang",
+        "Si Liu"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 68,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+      "source_url": "https://arxiv.org/abs/2605.08985",
+      "year": 2026,
+      "published": "2026-05-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual encoding constitutes a major computational bottleneck in Multimodal Large Language Models (MLLMs), especially for high-resolution image inputs. The prevailing practice typically adopts global encoding followed by post-ViT compression. Global encoding produces massive token sequences, while post-ViT compression incurs the full quadratic attention cost of the ViT before any token reduction takes place. In this work, we revisit this convention along two dimensions: the encoding strategy and visual token compression. First, controlled experiments show that slice-based encoding outperforms global encoding across benchmarks, suggesting that preserving local details through sliced views can be more beneficial than applying global attention for fine-grained perception. Second, we introduce intra-ViT early compression, which reduces tokens in shallow ViT layers and substantially lowers visual-encoding FLOPs while preserving downstream performance. By integrating intra-ViT compression into the slice-based encoding framework, we present LLaVA-UHD v4, an efficient and compute-controllable visual encoding scheme tailored for high-resolution inputs. Across a diverse set of benchmarks covering document understanding, OCR, and general VQA, LLaVA-UHD v4 reduces visual-encoding FLOPs by 55.8% while matching or even surpassing baseline performance. These results suggest that visual-encoding efficiency can be substantially improved without sacrificing downstream performance, providing a practical design direction for efficient high-resolution MLLMs. All model weights and code will be publicly released to support further research.",
+      "identifiers": [
+        "SemanticScholar:8ee8fa51c96c8b6cee07dd61f938e0ca873b64ea"
+      ],
+      "semantic_scholar_id": "8ee8fa51c96c8b6cee07dd61f938e0ca873b64ea",
+      "canonical_id": "arXiv:2605.08985",
+      "arxiv_id": "2605.08985",
+      "doi": "10.48550/arXiv.2605.08985",
+      "authors": [
+        "Kechen Fang",
+        "Yihua Qin",
+        "Chongyi Wang",
+        "Wenshuo Ma",
+        "Tianyu Yu",
+        "Yuan Yao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 174,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+      "source_url": "https://arxiv.org/abs/2605.22138",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How should an agent decide when and how to plan? A dominant approach builds agents as reactive policies with adaptive computation (e.g., chain-of-thought), trained end-to-end expecting planning to emerge implicitly. Without control over the presence, structure, or horizon of planning, these systems dramatically increase reasoning length, yielding inefficient token use without reliable accuracy gains. We argue efficient agentic reasoning benefits from decomposing decision-making into three systems: simulative reasoning (System II) grounding deliberation in future-state prediction via a world model; self-regulation (System III) deciding when and how deeply to plan via a learned configurator; and reactive execution (System I) handling fine-grained action. Simulative reasoning provides unified planning across diverse tasks without per-domain engineering, while self-regulation ensures the planner is invoked only when needed. To test this, we develop SR$^2$AM (Self-Regulated Simulative Reasoning Agentic LLM), realizing both as distinct stages within an LLM's chain-of-thought, with the LLM as world model. We explore two instantiations: recording decisions from a prompted multi-module system (v0.1) and reconstructing structured plans from traces of pretrained reasoning LLMs (v1.0), trained via supervised then reinforcement learning (RL). Across math, science, tabular analysis, and web information seeking, v0.1-8B and v1.0-30B achieve Pass@1 competitive with 120-355B and 685B-1T parameter systems respectively, while v1.0-30B uses 25.8-95.3% fewer reasoning tokens than comparable agentic LLMs. RL increases average planning horizon by 22.8% while planning frequency grows only 2.0%, showing it learns to plan further ahead rather than more often. More broadly, learned self-regulation instantiates a principle we expect to extend beyond planning to how agents govern their own learning and adaptation.",
+      "identifiers": [
+        "SemanticScholar:8a495d6c227c2b1fa40658a54a754beea4dd3694"
+      ],
+      "semantic_scholar_id": "8a495d6c227c2b1fa40658a54a754beea4dd3694",
+      "canonical_id": "arXiv:2605.22138",
+      "arxiv_id": "2605.22138",
+      "doi": "10.48550/arXiv.2605.22138",
+      "authors": [
+        "Ming-Kai Deng",
+        "Jinyu Hou",
+        "Lara S'a Neves",
+        "Varad Pimpalkhute",
+        "Taylor W. Killian",
+        "Zheng-Zhong Liu",
+        "E. Xing"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+      "source_url": "https://arxiv.org/abs/2608.25115",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets.In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose \\textbf{\\textsf{PACE}} (\\textbf{P}rioritized \\textbf{A}daptive \\textbf{C}overage of \\textbf{E}vidence), a training-free framework that combines \\textit{evidence frontloading} with \\textit{pressure-adaptive budgeting}. \\textsf{PACE} first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a $(1-1/e)$ approximation guarantee. \\textsf{PACE} then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that \\textsf{PACE} improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that \\textit{less can be more}: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.",
+      "identifiers": [
+        "SemanticScholar:32d6f5766d70595e661eb15b2354d84d923e8d48"
+      ],
+      "semantic_scholar_id": "32d6f5766d70595e661eb15b2354d84d923e8d48",
+      "canonical_id": "arXiv:2608.25115",
+      "arxiv_id": "2608.25115",
+      "authors": [
+        "Wei-Bin Cai",
+        "Reza Zafarani"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty",
+      "source_url": "https://arxiv.org/abs/2506.10446",
+      "year": 2025,
+      "published": "2025-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 20,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have demonstrated significant advancements in reasoning capabilities, performing well on various challenging benchmarks. Techniques like Chain-of-Thought prompting have been introduced to further improve reasoning. However, these approaches frequently generate longer outputs, which in turn increase computational latency. Although some methods use reinforcement learning to shorten reasoning, they often apply uniform penalties without considering the problem's complexity, leading to suboptimal outcomes. In this study, we seek to enhance the efficiency of LLM reasoning by promoting conciseness for simpler problems while preserving sufficient reasoning for more complex ones for accuracy, thus improving the model's overall performance. Specifically, we manage the model's reasoning efficiency by dividing the reward function and including a novel penalty for output length. Our approach has yielded impressive outcomes in benchmark evaluations across three datasets: GSM8K, MATH500, and AIME2024. For the comparatively simpler datasets GSM8K and MATH500, our method has effectively shortened output lengths while preserving or enhancing accuracy. On the more demanding AIME2024 dataset, our approach has resulted in improved accuracy.",
+      "identifiers": [
+        "SemanticScholar:010c508b6e23d253bb47934ea3433251d3aebc33"
+      ],
+      "semantic_scholar_id": "010c508b6e23d253bb47934ea3433251d3aebc33",
+      "canonical_id": "arXiv:2506.10446",
+      "arxiv_id": "2506.10446",
+      "doi": "10.48550/arXiv.2506.10446",
+      "authors": [
+        "Ze-Hui Ling",
+        "De-Shu Chen",
+        "Hong-Wei Zhang",
+        "Yi-Feng Jiao",
+        "Xin Guo",
+        "Yuan Cheng"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 20,
+        "citation_count": 20,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 505,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+      "source_url": "https://arxiv.org/abs/2605.13165",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought (Long CoT) reasoning improves performance on multi-step problems, but it also induces overthinking. This inefficiency is especially problematic in low-data fine-tuning regimes, where real applications adapt reasoning models with limited supervision and cannot rely on large-scale teacher distillation or heavy test-time control. To address this, we propose STOP (Structured On-policy Pruning), an on-policy algorithm for analyzing and pruning long-form reasoning traces. STOP constructs self-distilled traces from the model. Then it maps each trace into a structured reasoning interface through node segmentation, taxonomy annotation, and reasoning-tree construction. On top of this interface, we introduce ECN (Earliest Correct Node), which retains the shortest prefix ending at the earliest node. Experiments on DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-LLaMA-3-8B across GSM8K, Math 500, and AIME 2024 show that STOP reduces generated tokens by 19.4% to 42.4% while largely preserving accuracy in low-data fine-tuning. Beyond efficiency, our analyses show that STOP induces much smaller distributional shift than teacher-guided pruning, improves the structural efficiency of generated reasoning, and reallocates reasoning effort away from redundant verification and backtracking toward more productive exploration.",
+      "identifiers": [
+        "SemanticScholar:d81cae5e71303f0d510480e3721e2fc417935d04"
+      ],
+      "semantic_scholar_id": "d81cae5e71303f0d510480e3721e2fc417935d04",
+      "canonical_id": "arXiv:2605.13165",
+      "arxiv_id": "2605.13165",
+      "doi": "10.48550/arXiv.2605.13165",
+      "authors": [
+        "Chenjun Xu",
+        "Zhen-Nan Zhou",
+        "Zhan Su",
+        "Bill Howe",
+        "Lucy Lu Wang",
+        "Bing-Bing Wen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "PathCal: State-Aware Reflection-Marker Calibration for Efficient Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.23074",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Reasoning Language Models (LRMs) tackle complex tasks through test-time scaling, generating long-form Chain-of-Thought (CoT) trajectories during inference. These trajectories contain reflection markers such as wait, but, and alternatively, accompanying hesitation, revision, and alternative explorations. Recent test-time control methods use these markers to steer reasoning, but treating them as one coarse-grained category can obscure their distinct intervention effects. We study how marker identity and reasoning context shape these effects. Type-wise suppression produces different accuracy--length tradeoffs, while fixed-prefix interventions show that the relative benefit of continuation and revision varies across prefixes and tasks. Motivated by these findings, we introduce PathCal, a training-free controller that adjusts the strength of a fixed continuation bias using instantaneous competition among continuation, revision, and alternative-opening markers. It applies finite logit adjustments without additional model forward passes. An exact log-odds identity and frozen-prefix probes establish its local directional effect. Experiments show that PathCal improves the accuracy--length tradeoff in many mathematical reasoning settings and also reduces generation length in coding and multilingual mathematics.",
+      "identifiers": [
+        "SemanticScholar:867f7dbb3e894af1925e42cbebb405555edbd95a"
+      ],
+      "semantic_scholar_id": "867f7dbb3e894af1925e42cbebb405555edbd95a",
+      "canonical_id": "arXiv:2605.23074",
+      "arxiv_id": "2605.23074",
+      "authors": [
+        "Ling-Yu Jiang",
+        "Zirui Li",
+        "Ling-Yu Xu",
+        "Shuo Xing",
+        "Pei-Ran Li",
+        "Tsubasa Takahashi",
+        "Deng-Zhe Hou",
+        "Zheng-Zhong Tu",
+        "Kazunori D. Yamada",
+        "Fang-Zhou Lin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.08813",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.1387",
+        "id:SemanticScholar:1d6916eb235e0a3e4b797a4a8bdac4fe74c54962",
+        "id:arXiv:2605.08813",
+        "title:agentslimming towards efficient and costaware multiagent systems",
+        "url:https://arxiv.org/abs/2605.08813"
+      ],
+      "record": {
+        "title": "AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems",
+        "source_url": "https://arxiv.org/abs/2605.08813",
+        "year": 2026,
+        "published": "2026-05-09",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model-based Multi-Agent Systems (MAS) have demonstrated remarkable capabilities in complex tasks. However, manually designing optimal communication topologies is labor-intensive, while automated expansion methods often result in bloated structures with redundant agents, leading to excessive token consumption. To address this problem, we introduce \\textbf{AgentSlimming}, a plug-and-play compression framework for graph-structured multi-agent workflows. Motivated by pruning and quantization in neural networks, AgentSlimming compresses workflows by first estimating the importance score of each agent with a hybrid mechanism, and then removes redundant agents or replaces them with low-cost ones, where each operation is validated using a baseline-anchored acceptance rule to prevent performance collapse. Experiments show that AgentSlimming reduces average token cost by up to 78.9\\% with negligible performance degradation, and sometimes even improves accuracy, achieving a strong Pareto-optimal trade-off between cost and quality. \\textit{Our code is publicly available at https://github.com/CitrusYL/AgentSlimming",
+        "identifiers": [
+          "SemanticScholar:1d6916eb235e0a3e4b797a4a8bdac4fe74c54962"
+        ],
+        "semantic_scholar_id": "1d6916eb235e0a3e4b797a4a8bdac4fe74c54962",
+        "canonical_id": "arXiv:2605.08813",
+        "arxiv_id": "2605.08813",
+        "doi": "10.18653/v1/2026.acl-long.1387",
+        "authors": [
+          "Yulan Chen",
+          "Hao Peng",
+          "Jin-Yang Liu",
+          "Zichen Wen",
+          "Dong-Rui Liu",
+          "Lin-Feng Zhang"
+        ],
+        "priority": 112,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 112,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 174,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.22516",
+      "identity_tokens": [
+        "id:SemanticScholar:a9b0c1bea96f3b97838a22fbe43888566903350b",
+        "id:arXiv:2608.22516",
+        "title:trace temporal retrieval with anchored and convergent evidence for longhorizon video understanding",
+        "url:https://arxiv.org/abs/2608.22516"
+      ],
+      "record": {
+        "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding",
+        "source_url": "https://arxiv.org/abs/2608.22516",
+        "year": 2026,
+        "published": "2026-08-23",
+        "venue": null,
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A long-video answer is evidence-supported only when the frames decoded from the video cover every event the answer depends on. Existing evaluations score final-answer correctness or predicted evidence intervals, but the frames a method decodes before answering are rarely audited, so correct answers can still rest on incomplete observation. We introduce VES-Bench, a 600-question benchmark of Temporal Ordering and Event Counting items over 348 public long videos. Each item carries a jointly necessary set of evidence intervals, letting us audit at three strictness levels whether a method's decoded frames cover every one of them. We also propose TRACE, a training-free agent that grounds answers in raw visual clips, builds an evidence bundle round by round, and stops only when the answer stabilises as the bundle grows and a final pass over the same clips returns the same answer. Under a same-backbone audit, TRACE answers 50.7% of questions correctly with at least two decoded frames inside every evidence interval, at 98.7 frames per question: over 10 points above uniform decoding at 128 frames (40.2%), and within 2.6 points of uniform decoding at 256 frames at 0.39x its frame cost, while reaching the highest answer accuracy in the audit (63.5%). TRACE also stays competitive on Video-MME (86.1), LVBench (75.6), and LongVideoBench (75.1).",
+        "identifiers": [
+          "SemanticScholar:a9b0c1bea96f3b97838a22fbe43888566903350b"
+        ],
+        "semantic_scholar_id": "a9b0c1bea96f3b97838a22fbe43888566903350b",
+        "canonical_id": "arXiv:2608.22516",
+        "arxiv_id": "2608.22516",
+        "authors": [
+          "Peng Liu",
+          "Jun-Bo Niu",
+          "Xiaoyan Hu",
+          "Zhong-Yu Shi",
+          "Zi-Tian Wang",
+          "Lin-Jiang Huang",
+          "Si Liu"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 68,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.08985",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.08985",
+        "id:SemanticScholar:8ee8fa51c96c8b6cee07dd61f938e0ca873b64ea",
+        "id:arXiv:2605.08985",
+        "title:llavauhd v4 what makes efficient visual encoding in mllms",
+        "url:https://arxiv.org/abs/2605.08985"
+      ],
+      "record": {
+        "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+        "source_url": "https://arxiv.org/abs/2605.08985",
+        "year": 2026,
+        "published": "2026-05-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual encoding constitutes a major computational bottleneck in Multimodal Large Language Models (MLLMs), especially for high-resolution image inputs. The prevailing practice typically adopts global encoding followed by post-ViT compression. Global encoding produces massive token sequences, while post-ViT compression incurs the full quadratic attention cost of the ViT before any token reduction takes place. In this work, we revisit this convention along two dimensions: the encoding strategy and visual token compression. First, controlled experiments show that slice-based encoding outperforms global encoding across benchmarks, suggesting that preserving local details through sliced views can be more beneficial than applying global attention for fine-grained perception. Second, we introduce intra-ViT early compression, which reduces tokens in shallow ViT layers and substantially lowers visual-encoding FLOPs while preserving downstream performance. By integrating intra-ViT compression into the slice-based encoding framework, we present LLaVA-UHD v4, an efficient and compute-controllable visual encoding scheme tailored for high-resolution inputs. Across a diverse set of benchmarks covering document understanding, OCR, and general VQA, LLaVA-UHD v4 reduces visual-encoding FLOPs by 55.8% while matching or even surpassing baseline performance. These results suggest that visual-encoding efficiency can be substantially improved without sacrificing downstream performance, providing a practical design direction for efficient high-resolution MLLMs. All model weights and code will be publicly released to support further research.",
+        "identifiers": [
+          "SemanticScholar:8ee8fa51c96c8b6cee07dd61f938e0ca873b64ea"
+        ],
+        "semantic_scholar_id": "8ee8fa51c96c8b6cee07dd61f938e0ca873b64ea",
+        "canonical_id": "arXiv:2605.08985",
+        "arxiv_id": "2605.08985",
+        "doi": "10.48550/arXiv.2605.08985",
+        "authors": [
+          "Kechen Fang",
+          "Yihua Qin",
+          "Chongyi Wang",
+          "Wenshuo Ma",
+          "Tianyu Yu",
+          "Yuan Yao"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 174,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.22138",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22138",
+        "id:SemanticScholar:8a495d6c227c2b1fa40658a54a754beea4dd3694",
+        "id:arXiv:2605.22138",
+        "title:efficient agentic reasoning through selfregulated simulative planning",
+        "url:https://arxiv.org/abs/2605.22138"
+      ],
+      "record": {
+        "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+        "source_url": "https://arxiv.org/abs/2605.22138",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "How should an agent decide when and how to plan? A dominant approach builds agents as reactive policies with adaptive computation (e.g., chain-of-thought), trained end-to-end expecting planning to emerge implicitly. Without control over the presence, structure, or horizon of planning, these systems dramatically increase reasoning length, yielding inefficient token use without reliable accuracy gains. We argue efficient agentic reasoning benefits from decomposing decision-making into three systems: simulative reasoning (System II) grounding deliberation in future-state prediction via a world model; self-regulation (System III) deciding when and how deeply to plan via a learned configurator; and reactive execution (System I) handling fine-grained action. Simulative reasoning provides unified planning across diverse tasks without per-domain engineering, while self-regulation ensures the planner is invoked only when needed. To test this, we develop SR$^2$AM (Self-Regulated Simulative Reasoning Agentic LLM), realizing both as distinct stages within an LLM's chain-of-thought, with the LLM as world model. We explore two instantiations: recording decisions from a prompted multi-module system (v0.1) and reconstructing structured plans from traces of pretrained reasoning LLMs (v1.0), trained via supervised then reinforcement learning (RL). Across math, science, tabular analysis, and web information seeking, v0.1-8B and v1.0-30B achieve Pass@1 competitive with 120-355B and 685B-1T parameter systems respectively, while v1.0-30B uses 25.8-95.3% fewer reasoning tokens than comparable agentic LLMs. RL increases average planning horizon by 22.8% while planning frequency grows only 2.0%, showing it learns to plan further ahead rather than more often. More broadly, learned self-regulation instantiates a principle we expect to extend beyond planning to how agents govern their own learning and adaptation.",
+        "identifiers": [
+          "SemanticScholar:8a495d6c227c2b1fa40658a54a754beea4dd3694"
+        ],
+        "semantic_scholar_id": "8a495d6c227c2b1fa40658a54a754beea4dd3694",
+        "canonical_id": "arXiv:2605.22138",
+        "arxiv_id": "2605.22138",
+        "doi": "10.48550/arXiv.2605.22138",
+        "authors": [
+          "Ming-Kai Deng",
+          "Jinyu Hou",
+          "Lara S'a Neves",
+          "Varad Pimpalkhute",
+          "Taylor W. Killian",
+          "Zheng-Zhong Liu",
+          "E. Xing"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25115",
+      "identity_tokens": [
+        "id:SemanticScholar:32d6f5766d70595e661eb15b2354d84d923e8d48",
+        "id:arXiv:2608.25115",
+        "title:less can be more relieving rag bottlenecks via evidence frontloading and pressureadaptive budgeting",
+        "url:https://arxiv.org/abs/2608.25115"
+      ],
+      "record": {
+        "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+        "source_url": "https://arxiv.org/abs/2608.25115",
+        "year": 2026,
+        "published": "2026-08-25",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets.In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose \\textbf{\\textsf{PACE}} (\\textbf{P}rioritized \\textbf{A}daptive \\textbf{C}overage of \\textbf{E}vidence), a training-free framework that combines \\textit{evidence frontloading} with \\textit{pressure-adaptive budgeting}. \\textsf{PACE} first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a $(1-1/e)$ approximation guarantee. \\textsf{PACE} then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that \\textsf{PACE} improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that \\textit{less can be more}: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.",
+        "identifiers": [
+          "SemanticScholar:32d6f5766d70595e661eb15b2354d84d923e8d48"
+        ],
+        "semantic_scholar_id": "32d6f5766d70595e661eb15b2354d84d923e8d48",
+        "canonical_id": "arXiv:2608.25115",
+        "arxiv_id": "2608.25115",
+        "authors": [
+          "Wei-Bin Cai",
+          "Reza Zafarani"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 66,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.10446",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.10446",
+        "id:SemanticScholar:010c508b6e23d253bb47934ea3433251d3aebc33",
+        "id:arXiv:2506.10446",
+        "title:fast on the easy deep on the hard efficient reasoning via powered length penalty",
+        "url:https://arxiv.org/abs/2506.10446"
+      ],
+      "record": {
+        "title": "Fast on the Easy, Deep on the Hard: Efficient Reasoning via Powered Length Penalty",
+        "source_url": "https://arxiv.org/abs/2506.10446",
+        "year": 2025,
+        "published": "2025-06-12",
+        "venue": "arXiv.org",
+        "citation_count": 20,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have demonstrated significant advancements in reasoning capabilities, performing well on various challenging benchmarks. Techniques like Chain-of-Thought prompting have been introduced to further improve reasoning. However, these approaches frequently generate longer outputs, which in turn increase computational latency. Although some methods use reinforcement learning to shorten reasoning, they often apply uniform penalties without considering the problem's complexity, leading to suboptimal outcomes. In this study, we seek to enhance the efficiency of LLM reasoning by promoting conciseness for simpler problems while preserving sufficient reasoning for more complex ones for accuracy, thus improving the model's overall performance. Specifically, we manage the model's reasoning efficiency by dividing the reward function and including a novel penalty for output length. Our approach has yielded impressive outcomes in benchmark evaluations across three datasets: GSM8K, MATH500, and AIME2024. For the comparatively simpler datasets GSM8K and MATH500, our method has effectively shortened output lengths while preserving or enhancing accuracy. On the more demanding AIME2024 dataset, our approach has resulted in improved accuracy.",
+        "identifiers": [
+          "SemanticScholar:010c508b6e23d253bb47934ea3433251d3aebc33"
+        ],
+        "semantic_scholar_id": "010c508b6e23d253bb47934ea3433251d3aebc33",
+        "canonical_id": "arXiv:2506.10446",
+        "arxiv_id": "2506.10446",
+        "doi": "10.48550/arXiv.2506.10446",
+        "authors": [
+          "Ze-Hui Ling",
+          "De-Shu Chen",
+          "Hong-Wei Zhang",
+          "Yi-Feng Jiao",
+          "Xin Guo",
+          "Yuan Cheng"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 20,
+          "citation_count": 20,
+          "total": 20,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 505,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13165",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.13165",
+        "id:SemanticScholar:d81cae5e71303f0d510480e3721e2fc417935d04",
+        "id:arXiv:2605.13165",
+        "title:stop structured onpolicy pruning of longform reasoning in lowdata regimes",
+        "url:https://arxiv.org/abs/2605.13165"
+      ],
+      "record": {
+        "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+        "source_url": "https://arxiv.org/abs/2605.13165",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long chain-of-thought (Long CoT) reasoning improves performance on multi-step problems, but it also induces overthinking. This inefficiency is especially problematic in low-data fine-tuning regimes, where real applications adapt reasoning models with limited supervision and cannot rely on large-scale teacher distillation or heavy test-time control. To address this, we propose STOP (Structured On-policy Pruning), an on-policy algorithm for analyzing and pruning long-form reasoning traces. STOP constructs self-distilled traces from the model. Then it maps each trace into a structured reasoning interface through node segmentation, taxonomy annotation, and reasoning-tree construction. On top of this interface, we introduce ECN (Earliest Correct Node), which retains the shortest prefix ending at the earliest node. Experiments on DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-LLaMA-3-8B across GSM8K, Math 500, and AIME 2024 show that STOP reduces generated tokens by 19.4% to 42.4% while largely preserving accuracy in low-data fine-tuning. Beyond efficiency, our analyses show that STOP induces much smaller distributional shift than teacher-guided pruning, improves the structural efficiency of generated reasoning, and reallocates reasoning effort away from redundant verification and backtracking toward more productive exploration.",
+        "identifiers": [
+          "SemanticScholar:d81cae5e71303f0d510480e3721e2fc417935d04"
+        ],
+        "semantic_scholar_id": "d81cae5e71303f0d510480e3721e2fc417935d04",
+        "canonical_id": "arXiv:2605.13165",
+        "arxiv_id": "2605.13165",
+        "doi": "10.48550/arXiv.2605.13165",
+        "authors": [
+          "Chenjun Xu",
+          "Zhen-Nan Zhou",
+          "Zhan Su",
+          "Bill Howe",
+          "Lucy Lu Wang",
+          "Bing-Bing Wen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.23074",
+      "identity_tokens": [
+        "id:SemanticScholar:867f7dbb3e894af1925e42cbebb405555edbd95a",
+        "id:arXiv:2605.23074",
+        "title:pathcal stateaware reflectionmarker calibration for efficient reasoning",
+        "url:https://arxiv.org/abs/2605.23074"
+      ],
+      "record": {
+        "title": "PathCal: State-Aware Reflection-Marker Calibration for Efficient Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.23074",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Reasoning Language Models (LRMs) tackle complex tasks through test-time scaling, generating long-form Chain-of-Thought (CoT) trajectories during inference. These trajectories contain reflection markers such as wait, but, and alternatively, accompanying hesitation, revision, and alternative explorations. Recent test-time control methods use these markers to steer reasoning, but treating them as one coarse-grained category can obscure their distinct intervention effects. We study how marker identity and reasoning context shape these effects. Type-wise suppression produces different accuracy--length tradeoffs, while fixed-prefix interventions show that the relative benefit of continuation and revision varies across prefixes and tasks. Motivated by these findings, we introduce PathCal, a training-free controller that adjusts the strength of a fixed continuation bias using instantaneous competition among continuation, revision, and alternative-opening markers. It applies finite logit adjustments without additional model forward passes. An exact log-odds identity and frozen-prefix probes establish its local directional effect. Experiments show that PathCal improves the accuracy--length tradeoff in many mathematical reasoning settings and also reduces generation length in coding and multilingual mathematics.",
+        "identifiers": [
+          "SemanticScholar:867f7dbb3e894af1925e42cbebb405555edbd95a"
+        ],
+        "semantic_scholar_id": "867f7dbb3e894af1925e42cbebb405555edbd95a",
+        "canonical_id": "arXiv:2605.23074",
+        "arxiv_id": "2605.23074",
+        "authors": [
+          "Ling-Yu Jiang",
+          "Zirui Li",
+          "Ling-Yu Xu",
+          "Shuo Xing",
+          "Pei-Ran Li",
+          "Tsubasa Takahashi",
+          "Deng-Zhe Hou",
+          "Zheng-Zhong Tu",
+          "Kazunori D. Yamada",
+          "Fang-Zhou Lin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:5d150bb54e45d9fe6e13ab772455f24ef02c7b765473a1bc1ceae4318f462175",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

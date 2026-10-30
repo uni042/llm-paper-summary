@@ -1,0 +1,589 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d2d610b9637c4bc6-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d2d610b9637c",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2410.12187",
+    "arXiv:2507.04742",
+    "arXiv:2512.09010",
+    "arXiv:2603.26796",
+    "arXiv:2605.10414",
+    "arXiv:2605.13768"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d4c1b168287778edd48c8d46a09dd0eb851805ae",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T14:01:41.210892+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2410.12187",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.04742",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.09010",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.26796",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.10414",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.13768",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints",
+      "source_url": "https://arxiv.org/abs/2603.26796",
+      "year": 2026,
+      "published": "2026-03-25",
+      "venue": "CAIS",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We study the problem of routing queries to large language models (LLMs) under cost, GPU resources, and concurrency constraints. Prior per-query routing methods often fail to control batch-level cost, especially under non-uniform or adversarial batching. To address this, we propose a batch-level, resource-aware routing framework that jointly optimizes model assignment for each batch while respecting cost and model capacity limits. We further introduce a robust variant that accounts for uncertainty in predicted LLM performance, along with an offline instance allocation procedure that balances quality and throughput across multiple models. Experiments on two multi-task LLM benchmarks show that robustness improves accuracy by 1–14% over non-robust counterparts (depending on the performance estimator), batch-level routing outperforms per-query methods by up to 24% under adversarial batching, and optimized instance allocation yields additional gains of up to 3% compared to a non-optimized allocation, all while strictly controlling cost and GPU resource constraints.",
+      "identifiers": [
+        "SemanticScholar:4560307e867ec8e67a4b1477c4067242383699d7"
+      ],
+      "semantic_scholar_id": "4560307e867ec8e67a4b1477c4067242383699d7",
+      "canonical_id": "arXiv:2603.26796",
+      "arxiv_id": "2603.26796",
+      "doi": "10.1145/3786335.3813134",
+      "authors": [
+        "Jelena Markovic-Voronov",
+        "Kayhan Behdin",
+        "Yuanda Xu",
+        "Zhengze Zhou",
+        "Zhi-Peng Wang",
+        "R. Mazumder"
+      ],
+      "priority": 105,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 105,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 219,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "High-Rate Quantized Matrix Multiplication II",
+      "source_url": "https://arxiv.org/abs/2605.13768",
+      "year": 2026,
+      "published": "2026-05-13",
+      "venue": "IEEE BITS the Information Theory Magazine",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This is the second part of the work investigating quantized matrix multiplication (MatMul). In part I we considered the case of calibration-free quantization, whereas here we discuss the setting where covariance matrix $\\Sigma_X$ of the columns of the second factor is available. This setting arises in the ubiquitous task of weight-only post-training quantization of LLMs. Weight-only quantization is related to the problem of weighted mean squared error (WMSE) source coding, whose classical (reverse) waterfilling solution dictates how one should distribute rate between coordinates of the vector. We show how waterfilling can be used to improve practical LLM quantization algorithms (GPTQ), which at present allocate rate equally. A recent scheme (known as ``WaterSIC'') that only uses scalar INT quantizers is analyzed and its high-rate performance is shown to be (a) basis free (i.e., characterized by the determinant of $\\Sigma_X$ and, thus, unlike existing schemes, is immune to applying random rotations); and (b) within a multiplicative factor of $\\frac{2\\pi e}{12}$ (or 0.25 bit/entry) of the information-theoretic distortion limit. GPTQ's performance, in turn, is affected by the choice of basis, but for a random rotation and actual $\\Sigma_X$ from Llama-3-8B we find it to be within 0.1 bit (depending on the layer type) of WaterSIC, suggesting that GPTQ with random rotation is also near optimal, at least in the high-rate regime.",
+      "identifiers": [
+        "SemanticScholar:3782d434de2188191049ae8556e66209c1fdc4fd"
+      ],
+      "semantic_scholar_id": "3782d434de2188191049ae8556e66209c1fdc4fd",
+      "canonical_id": "arXiv:2605.13768",
+      "arxiv_id": "2605.13768",
+      "doi": "10.48550/arXiv.2605.13768",
+      "authors": [
+        "Or Ordentlich",
+        "Yury Polyanskiy"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 170,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Lossless Ultimate Vision Token Compression for VLMs",
+      "source_url": "https://arxiv.org/abs/2512.09010",
+      "year": 2025,
+      "published": "2025-12-09",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual language models encounter challenges in computational efficiency and latency, primarily due to the substantial redundancy in the token representations of high-resolution images and videos. Current attention/similarity-based compression algorithms suffer from either position bias or class imbalance, leading to significant accuracy degradation. They also fail to generalize to shallow LLM layers, which exhibit weaker cross-modal interactions. To address this, we extend token compression to the visual encoder through an effective iterative merging scheme that is orthogonal in spatial axes to accelerate the computation across the entire VLM. Furthermoer, we integrate a spectrum pruning unit into LLM through an attention/similarity-free low-pass filter, which gradually prunes redundant visual tokens and is fully compatible to modern FlashAttention. On this basis, we propose Lossless Ultimate Vision tokens Compression (LUVC) framework. LUVC systematically compresses visual tokens until complete elimination at the final layer of LLM, so that the high-dimensional visual features are gradually fused into the multimodal queries. The experiments show that LUVC achieves a 2 speedup inference in language model with negligible accuracy degradation, and the training-free characteristic enables immediate deployment across multiple VLMs.",
+      "identifiers": [
+        "SemanticScholar:9a4f0df352f74758fae707628e146fa9bfd1c344"
+      ],
+      "semantic_scholar_id": "9a4f0df352f74758fae707628e146fa9bfd1c344",
+      "canonical_id": "arXiv:2512.09010",
+      "arxiv_id": "2512.09010",
+      "doi": "10.48550/arXiv.2512.09010",
+      "authors": [
+        "De-Hua Zheng",
+        "Mouxiao Huang",
+        "Bo-Rui Jiang",
+        "Hailin Hu",
+        "Xing-Hao Chen"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 325,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Remember to Forget: Gated Adaptive Positional Encoding",
+      "source_url": "https://arxiv.org/abs/2605.10414",
+      "year": 2026,
+      "published": "2026-05-11",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Rotary Positional Encoding (RoPE) is widely used in modern large language models. However, when sequences are extended beyond the range seen during training, rotary phases can enter out-of-distribution regimes, leading to spurious long-range alignments, diffuse attention, and degraded retrieval. Existing remedies only partially address these failures, as they often trade local positional resolution for long-context stability. We propose GAPE (Gated Adaptive Positional Encoding), a drop-in augmentation for positional encodings that introduces a content-aware bias directly into the attention logits while preserving the rotary geometry. GAPE decouples distance-based suppression from token importance through a query-dependent gate that contracts irrelevant context and a key-dependent gate that preserves salient distant tokens. We show that weakly protected distant context is exponentially attenuated as a function of the query gate, while selected keys can remain accessible through landmark protection. We further show that GAPE can be implemented within standard scaled dot-product attention. Empirically, GAPE improves long-context robustness across controlled retrieval and language-modeling experiments, extrapolating up to 8x the training length. We further retrofit GAPE into a pretrained 7B model, maintaining performance on standard benchmarks and improving performance at the longest evaluated context. These results support adaptive context suppression as a complement to positional representation for long-context generalization.",
+      "identifiers": [
+        "SemanticScholar:77482ddcfec0727a0ca984c41abf5a67c05acb8c"
+      ],
+      "semantic_scholar_id": "77482ddcfec0727a0ca984c41abf5a67c05acb8c",
+      "canonical_id": "arXiv:2605.10414",
+      "arxiv_id": "2605.10414",
+      "doi": "10.48550/arXiv.2605.10414",
+      "authors": [
+        "Riccardo Ali",
+        "Alessio Borgi",
+        "Christopher Irwin",
+        "M. Severino",
+        "Pietro Liò"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 172,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Activation Steering for Chain-of-Thought Compression",
+      "source_url": "https://arxiv.org/abs/2507.04742",
+      "year": 2025,
+      "published": "2025-07-07",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 31,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel at complex reasoning when they include intermediate steps, known as\"chains of thought\"(CoTs). However, these rationales are often overly verbose, even for simple problems, leading to wasted context, increased latency, and higher energy consumption. We observe that verbose, English-heavy CoTs and concise, math-centric CoTs occupy distinct regions in the model's residual-stream activation space. By extracting and injecting a\"steering vector\"to transition between these modes, we can reliably shift generation toward more concise reasoning, effectively compressing CoTs without retraining. We formalize this approach as Activation-Steered Compression (ASC), an inference-time technique that shortens reasoning traces by directly modifying hidden representations. In addition, we provide a theoretical analysis of the impact of ASC on the output distribution, derived from a closed-form KL-divergence-bounded constraint to regulate steering strength. Using only 100 paired verbose and concise examples, ASC achieves up to 67.43% reduction in CoT length on MATH500 and GSM8K datasets, while maintaining accuracy across 7B, 8B, and 32B parameter models. As a training-free method, ASC introduces negligible runtime overhead and, on MATH500, delivers an average 2.73x speedup in end-to-end reasoning wall-clock time on an 8B model. This makes ASC a practical and efficient tool for streamlining the deployment of reasoning-capable LLMs in latency- or cost-sensitive settings. The code is available at: https://github.com/ArminAzizi98/ASC",
+      "identifiers": [
+        "SemanticScholar:49e2040f89d56c83a06ee9923ab8a2f6a52f50d3"
+      ],
+      "semantic_scholar_id": "49e2040f89d56c83a06ee9923ab8a2f6a52f50d3",
+      "canonical_id": "arXiv:2507.04742",
+      "arxiv_id": "2507.04742",
+      "doi": "10.48550/arXiv.2507.04742",
+      "authors": [
+        "Seyedarmin Azizi",
+        "Erfan Baghaei Potraghloo",
+        "Souvik Kundu",
+        "M. Pedram"
+      ],
+      "priority": 41,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 31,
+        "citation_count": 31,
+        "total": 41,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 480,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs",
+      "source_url": "https://arxiv.org/abs/2410.12187",
+      "year": 2024,
+      "published": "2024-10-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) excel in various tasks but face deployment challenges due to hardware constraints. We propose density-aware post-training weight-only quantization (DAQ), which has two stages: 1) density-centric alignment, which identifies the center of high-density weights and centers the dynamic range on this point to align high-density weight regions with floating-point high-precision regions; 2) learnable dynamic range adjustment, which adjusts the dynamic range by optimizing quantization parameters (i.e., scale and zero-point) based on the impact of weights on the model output. Experiments on LLaMA and LLaMA-2 show that DAQ consistently outperforms the best baseline method, reducing perplexity loss by an average of 22.8% on LLaMA and 19.6% on LLaMA-2. Our code is available at https://github.com/LuoYingSong/DAQ.",
+      "identifiers": [
+        "SemanticScholar:0304d11f052375a237f8a2401e73298e618e3198"
+      ],
+      "semantic_scholar_id": "0304d11f052375a237f8a2401e73298e618e3198",
+      "canonical_id": "arXiv:2410.12187",
+      "arxiv_id": "2410.12187",
+      "doi": "10.48550/arXiv.2410.12187",
+      "authors": [
+        "YING‐JIA Luo",
+        "Lingwei Chen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 744,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.26796",
+      "identity_tokens": [
+        "id:DOI:10.1145/3786335.3813134",
+        "id:SemanticScholar:4560307e867ec8e67a4b1477c4067242383699d7",
+        "id:arXiv:2603.26796",
+        "title:robust batchlevel query routing for large language models under cost and capacity constraints",
+        "url:https://arxiv.org/abs/2603.26796"
+      ],
+      "record": {
+        "title": "Robust Batch-Level Query Routing for Large Language Models under Cost and Capacity Constraints",
+        "source_url": "https://arxiv.org/abs/2603.26796",
+        "year": 2026,
+        "published": "2026-03-25",
+        "venue": "CAIS",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We study the problem of routing queries to large language models (LLMs) under cost, GPU resources, and concurrency constraints. Prior per-query routing methods often fail to control batch-level cost, especially under non-uniform or adversarial batching. To address this, we propose a batch-level, resource-aware routing framework that jointly optimizes model assignment for each batch while respecting cost and model capacity limits. We further introduce a robust variant that accounts for uncertainty in predicted LLM performance, along with an offline instance allocation procedure that balances quality and throughput across multiple models. Experiments on two multi-task LLM benchmarks show that robustness improves accuracy by 1–14% over non-robust counterparts (depending on the performance estimator), batch-level routing outperforms per-query methods by up to 24% under adversarial batching, and optimized instance allocation yields additional gains of up to 3% compared to a non-optimized allocation, all while strictly controlling cost and GPU resource constraints.",
+        "identifiers": [
+          "SemanticScholar:4560307e867ec8e67a4b1477c4067242383699d7"
+        ],
+        "semantic_scholar_id": "4560307e867ec8e67a4b1477c4067242383699d7",
+        "canonical_id": "arXiv:2603.26796",
+        "arxiv_id": "2603.26796",
+        "doi": "10.1145/3786335.3813134",
+        "authors": [
+          "Jelena Markovic-Voronov",
+          "Kayhan Behdin",
+          "Yuanda Xu",
+          "Zhengze Zhou",
+          "Zhi-Peng Wang",
+          "R. Mazumder"
+        ],
+        "priority": 105,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 105,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 219,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.13768",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.13768",
+        "id:SemanticScholar:3782d434de2188191049ae8556e66209c1fdc4fd",
+        "id:arXiv:2605.13768",
+        "title:highrate quantized matrix multiplication ii",
+        "url:https://arxiv.org/abs/2605.13768"
+      ],
+      "record": {
+        "title": "High-Rate Quantized Matrix Multiplication II",
+        "source_url": "https://arxiv.org/abs/2605.13768",
+        "year": 2026,
+        "published": "2026-05-13",
+        "venue": "IEEE BITS the Information Theory Magazine",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This is the second part of the work investigating quantized matrix multiplication (MatMul). In part I we considered the case of calibration-free quantization, whereas here we discuss the setting where covariance matrix $\\Sigma_X$ of the columns of the second factor is available. This setting arises in the ubiquitous task of weight-only post-training quantization of LLMs. Weight-only quantization is related to the problem of weighted mean squared error (WMSE) source coding, whose classical (reverse) waterfilling solution dictates how one should distribute rate between coordinates of the vector. We show how waterfilling can be used to improve practical LLM quantization algorithms (GPTQ), which at present allocate rate equally. A recent scheme (known as ``WaterSIC'') that only uses scalar INT quantizers is analyzed and its high-rate performance is shown to be (a) basis free (i.e., characterized by the determinant of $\\Sigma_X$ and, thus, unlike existing schemes, is immune to applying random rotations); and (b) within a multiplicative factor of $\\frac{2\\pi e}{12}$ (or 0.25 bit/entry) of the information-theoretic distortion limit. GPTQ's performance, in turn, is affected by the choice of basis, but for a random rotation and actual $\\Sigma_X$ from Llama-3-8B we find it to be within 0.1 bit (depending on the layer type) of WaterSIC, suggesting that GPTQ with random rotation is also near optimal, at least in the high-rate regime.",
+        "identifiers": [
+          "SemanticScholar:3782d434de2188191049ae8556e66209c1fdc4fd"
+        ],
+        "semantic_scholar_id": "3782d434de2188191049ae8556e66209c1fdc4fd",
+        "canonical_id": "arXiv:2605.13768",
+        "arxiv_id": "2605.13768",
+        "doi": "10.48550/arXiv.2605.13768",
+        "authors": [
+          "Or Ordentlich",
+          "Yury Polyanskiy"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 170,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.09010",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.09010",
+        "id:SemanticScholar:9a4f0df352f74758fae707628e146fa9bfd1c344",
+        "id:arXiv:2512.09010",
+        "title:towards lossless ultimate vision token compression for vlms",
+        "url:https://arxiv.org/abs/2512.09010"
+      ],
+      "record": {
+        "title": "Towards Lossless Ultimate Vision Token Compression for VLMs",
+        "source_url": "https://arxiv.org/abs/2512.09010",
+        "year": 2025,
+        "published": "2025-12-09",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visual language models encounter challenges in computational efficiency and latency, primarily due to the substantial redundancy in the token representations of high-resolution images and videos. Current attention/similarity-based compression algorithms suffer from either position bias or class imbalance, leading to significant accuracy degradation. They also fail to generalize to shallow LLM layers, which exhibit weaker cross-modal interactions. To address this, we extend token compression to the visual encoder through an effective iterative merging scheme that is orthogonal in spatial axes to accelerate the computation across the entire VLM. Furthermoer, we integrate a spectrum pruning unit into LLM through an attention/similarity-free low-pass filter, which gradually prunes redundant visual tokens and is fully compatible to modern FlashAttention. On this basis, we propose Lossless Ultimate Vision tokens Compression (LUVC) framework. LUVC systematically compresses visual tokens until complete elimination at the final layer of LLM, so that the high-dimensional visual features are gradually fused into the multimodal queries. The experiments show that LUVC achieves a 2 speedup inference in language model with negligible accuracy degradation, and the training-free characteristic enables immediate deployment across multiple VLMs.",
+        "identifiers": [
+          "SemanticScholar:9a4f0df352f74758fae707628e146fa9bfd1c344"
+        ],
+        "semantic_scholar_id": "9a4f0df352f74758fae707628e146fa9bfd1c344",
+        "canonical_id": "arXiv:2512.09010",
+        "arxiv_id": "2512.09010",
+        "doi": "10.48550/arXiv.2512.09010",
+        "authors": [
+          "De-Hua Zheng",
+          "Mouxiao Huang",
+          "Bo-Rui Jiang",
+          "Hailin Hu",
+          "Xing-Hao Chen"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 325,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.10414",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.10414",
+        "id:SemanticScholar:77482ddcfec0727a0ca984c41abf5a67c05acb8c",
+        "id:arXiv:2605.10414",
+        "title:remember to forget gated adaptive positional encoding",
+        "url:https://arxiv.org/abs/2605.10414"
+      ],
+      "record": {
+        "title": "Remember to Forget: Gated Adaptive Positional Encoding",
+        "source_url": "https://arxiv.org/abs/2605.10414",
+        "year": 2026,
+        "published": "2026-05-11",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Rotary Positional Encoding (RoPE) is widely used in modern large language models. However, when sequences are extended beyond the range seen during training, rotary phases can enter out-of-distribution regimes, leading to spurious long-range alignments, diffuse attention, and degraded retrieval. Existing remedies only partially address these failures, as they often trade local positional resolution for long-context stability. We propose GAPE (Gated Adaptive Positional Encoding), a drop-in augmentation for positional encodings that introduces a content-aware bias directly into the attention logits while preserving the rotary geometry. GAPE decouples distance-based suppression from token importance through a query-dependent gate that contracts irrelevant context and a key-dependent gate that preserves salient distant tokens. We show that weakly protected distant context is exponentially attenuated as a function of the query gate, while selected keys can remain accessible through landmark protection. We further show that GAPE can be implemented within standard scaled dot-product attention. Empirically, GAPE improves long-context robustness across controlled retrieval and language-modeling experiments, extrapolating up to 8x the training length. We further retrofit GAPE into a pretrained 7B model, maintaining performance on standard benchmarks and improving performance at the longest evaluated context. These results support adaptive context suppression as a complement to positional representation for long-context generalization.",
+        "identifiers": [
+          "SemanticScholar:77482ddcfec0727a0ca984c41abf5a67c05acb8c"
+        ],
+        "semantic_scholar_id": "77482ddcfec0727a0ca984c41abf5a67c05acb8c",
+        "canonical_id": "arXiv:2605.10414",
+        "arxiv_id": "2605.10414",
+        "doi": "10.48550/arXiv.2605.10414",
+        "authors": [
+          "Riccardo Ali",
+          "Alessio Borgi",
+          "Christopher Irwin",
+          "M. Severino",
+          "Pietro Liò"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 172,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.04742",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2507.04742",
+        "id:SemanticScholar:49e2040f89d56c83a06ee9923ab8a2f6a52f50d3",
+        "id:arXiv:2507.04742",
+        "title:activation steering for chainofthought compression",
+        "url:https://arxiv.org/abs/2507.04742"
+      ],
+      "record": {
+        "title": "Activation Steering for Chain-of-Thought Compression",
+        "source_url": "https://arxiv.org/abs/2507.04742",
+        "year": 2025,
+        "published": "2025-07-07",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 31,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) excel at complex reasoning when they include intermediate steps, known as\"chains of thought\"(CoTs). However, these rationales are often overly verbose, even for simple problems, leading to wasted context, increased latency, and higher energy consumption. We observe that verbose, English-heavy CoTs and concise, math-centric CoTs occupy distinct regions in the model's residual-stream activation space. By extracting and injecting a\"steering vector\"to transition between these modes, we can reliably shift generation toward more concise reasoning, effectively compressing CoTs without retraining. We formalize this approach as Activation-Steered Compression (ASC), an inference-time technique that shortens reasoning traces by directly modifying hidden representations. In addition, we provide a theoretical analysis of the impact of ASC on the output distribution, derived from a closed-form KL-divergence-bounded constraint to regulate steering strength. Using only 100 paired verbose and concise examples, ASC achieves up to 67.43% reduction in CoT length on MATH500 and GSM8K datasets, while maintaining accuracy across 7B, 8B, and 32B parameter models. As a training-free method, ASC introduces negligible runtime overhead and, on MATH500, delivers an average 2.73x speedup in end-to-end reasoning wall-clock time on an 8B model. This makes ASC a practical and efficient tool for streamlining the deployment of reasoning-capable LLMs in latency- or cost-sensitive settings. The code is available at: https://github.com/ArminAzizi98/ASC",
+        "identifiers": [
+          "SemanticScholar:49e2040f89d56c83a06ee9923ab8a2f6a52f50d3"
+        ],
+        "semantic_scholar_id": "49e2040f89d56c83a06ee9923ab8a2f6a52f50d3",
+        "canonical_id": "arXiv:2507.04742",
+        "arxiv_id": "2507.04742",
+        "doi": "10.48550/arXiv.2507.04742",
+        "authors": [
+          "Seyedarmin Azizi",
+          "Erfan Baghaei Potraghloo",
+          "Souvik Kundu",
+          "M. Pedram"
+        ],
+        "priority": 41,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 31,
+          "citation_count": 31,
+          "total": 41,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 480,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.12187",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.12187",
+        "id:SemanticScholar:0304d11f052375a237f8a2401e73298e618e3198",
+        "id:arXiv:2410.12187",
+        "title:daq densityaware posttraining weightonly quantization for llms",
+        "url:https://arxiv.org/abs/2410.12187"
+      ],
+      "record": {
+        "title": "DAQ: Density-Aware Post-Training Weight-Only Quantization For LLMs",
+        "source_url": "https://arxiv.org/abs/2410.12187",
+        "year": 2024,
+        "published": "2024-10-16",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) excel in various tasks but face deployment challenges due to hardware constraints. We propose density-aware post-training weight-only quantization (DAQ), which has two stages: 1) density-centric alignment, which identifies the center of high-density weights and centers the dynamic range on this point to align high-density weight regions with floating-point high-precision regions; 2) learnable dynamic range adjustment, which adjusts the dynamic range by optimizing quantization parameters (i.e., scale and zero-point) based on the impact of weights on the model output. Experiments on LLaMA and LLaMA-2 show that DAQ consistently outperforms the best baseline method, reducing perplexity loss by an average of 22.8% on LLaMA and 19.6% on LLaMA-2. Our code is available at https://github.com/LuoYingSong/DAQ.",
+        "identifiers": [
+          "SemanticScholar:0304d11f052375a237f8a2401e73298e618e3198"
+        ],
+        "semantic_scholar_id": "0304d11f052375a237f8a2401e73298e618e3198",
+        "canonical_id": "arXiv:2410.12187",
+        "arxiv_id": "2410.12187",
+        "doi": "10.48550/arXiv.2410.12187",
+        "authors": [
+          "YING‐JIA Luo",
+          "Lingwei Chen"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 744,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:6eca85ed54efd141c18097ed09d8e8bd87a44707937bfd47d4b0105e5ef7f689",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
