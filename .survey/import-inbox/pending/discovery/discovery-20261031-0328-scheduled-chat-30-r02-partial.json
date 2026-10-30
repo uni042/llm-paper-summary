@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0328-scheduled-chat-30/r02",
+  "reference_main_sha": "38e20f90b73412514652ec4ff03b1200c20b951c",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s42514-025-00240-3",
+      "identity_tokens": [
+        "DOI:10.1007/s42514-025-00240-3"
+      ],
+      "title": "Hiperti: high performance system for cross-platform code generation of transformer model inference based on MLIR",
+      "reason": "Springer出版社一次要旨でMLIRに基づくTransformer推論向けクロスプラットフォームコード生成HiperTIを確認。A100上GEMMはcuBLAS同等、attentionはTritonの約2倍、Hygon DCU Z100上attentionはPyTorch比平均20%向上と報告。モデル全体のend-to-end速度とは区別する。",
+      "source_url": "https://link.springer.com/article/10.1007/s42514-025-00240-3",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "round_status": "partial",
+  "target_count": 10
+}
