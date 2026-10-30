@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0612-scheduled-chat-00/r01",
+  "reference_main_sha": "8621b24535e18ee7fcc6d3de3a2475c518c5d300",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.63317/55jabgg3m92d",
+      "identity_tokens": [
+        "DOI:10.63317/55jabgg3m92d",
+        "ACL:2024.lrec-main.1089"
+      ],
+      "title": "On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization",
+      "reason": "ACL Anthologyの正式会議要旨を確認。タスク固有の校正データなしでTransformerの重み・活性の少なくとも95%をINT8へ量子化し、性能低下を0.02%以内に抑えるPTQ手順を報告する。モデル縮小と推論遅延削減を直接目的とするため推論用量子化に該当する。",
+      "source_url": "https://aclanthology.org/2024.lrec-main.1089/",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 370,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.02007",
+      "identity_tokens": [
+        "arXiv:2604.02007"
+      ],
+      "title": "Apriel-Reasoner: RL Post-Training for General-Purpose and Efficient Reasoning",
+      "reason": "一次要旨では15Bモデルを5領域でRL事後学習し、難度に応じた長さペナルティで推論列を30～50%短縮する。ただし主要貢献は学習レシピ・サンプリングと学習時の長さ制御で、サービング実装や実行時メモリ管理を直接改善する手法ではない。",
+      "source_url": "https://arxiv.org/abs/2604.02007",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 386,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.04953",
+      "identity_tokens": [
+        "arXiv:2506.04953"
+      ],
+      "title": "APVR: Hour-Level Long Video Understanding with Adaptive Pivot Visual Information Retrieval",
+      "reason": "一次要旨では長時間動画を対象に、問い合わせ拡張と時空間信頼度でpivot frameを選び、最大1024フレームから注意に基づき重要トークンを抽出する訓練不要の二段階検索を提案。動画MLLMの推論時メモリ壁を緩和し、LongVideoBench等で最大9.5%、4.6%、9.7%の性能改善を報告。推論時の視覚情報削減・検索に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2506.04953",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 412,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.03333",
+      "identity_tokens": [
+        "arXiv:2508.03333"
+      ],
+      "title": "CTTS: Collective Test-Time Scaling",
+      "reason": "一次要旨では複数LLMと複数報酬モデルの協調構成を探索し、7ベンチマークでBest-of-Nを4.82ポイント上回る性能を報告。主目的はテスト時に複数モデルを組み合わせて回答精度を上げることで、推論計算量・遅延・メモリの削減やサービング基盤最適化の実証ではない。",
+      "source_url": "https://arxiv.org/abs/2508.03333",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 413,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.20202",
+      "identity_tokens": [
+        "arXiv:2405.20202"
+      ],
+      "title": "One QuantLLM for ALL: Fine-tuning Quantized LLMs Once for Efficient Deployments",
+      "reason": "一次要旨では一度の学習で異なる量子化設定のサブネットを取り出せるonce-for-all方式をLLMへ拡張し、重み共有の干渉を分離しLoRAとサンプリング調整で複数展開条件への対応を容易にする。配備時のモデル圧縮に関連するが、中心は学習・再学習回数の削減であり実行時推論最適化への直接寄与は限定的。",
+      "source_url": "https://arxiv.org/abs/2405.20202",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 423,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.11477",
+      "identity_tokens": [
+        "arXiv:2406.11477",
+        "DOI:10.1162/COLI.a.581"
+      ],
+      "title": "How Can We Effectively Expand the Vocabulary of LLMs with 0.01GB of Target Language Text?",
+      "reason": "一次要旨では英語中心のトークナイザが非英語生成でトークン数と推論ステップを増やす問題を対象とし、対象言語30,000文（約0.01GB）から語彙拡張・埋め込み初期化・継続事前学習を比較する。少資源言語でも生成ステップ削減による推論高速化と性能維持を目的とし、推論効率に直接つながる。",
+      "source_url": "https://arxiv.org/abs/2406.11477",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02538",
+      "identity_tokens": [
+        "arXiv:2602.02538"
+      ],
+      "title": "Enhancing Post-Training Quantization via Future Activation Awareness",
+      "reason": "一次要旨では現在層のみの活性で決める量子化スケールがバイアスや誤差蓄積に弱い問題を、後続層の活性を参照するFuture-Aware Quantizationで改善する。複数将来層のwindow-wise previewと事前探索済み設定により校正ノイズ感度を抑え、逆伝播や再構築なしでLLMの事後量子化を改善する。エッジ推論向けモデル圧縮に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2602.02538",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.03810",
+      "identity_tokens": [
+        "arXiv:2505.03810"
+      ],
+      "title": "Grouped Sequency-arranged Rotation: Optimizing Rotation Transformation for Quantization for Free",
+      "reason": "一次要旨ではLLMの2bit級PTQで回転行列が十分に外れ値を分散できない問題に対し、Walsh-Hadamard変換のsequency順序と小ブロック対角構造で量子化誤差と外れ値影響を減らすGSRを提案する。追加学習なしで既存の学習型回転にも適用でき、低ビットLLM推論モデルの圧縮に直接該当する。",
+      "source_url": "https://arxiv.org/abs/2505.03810",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.08741",
+      "identity_tokens": [
+        "arXiv:2603.08741"
+      ],
+      "title": "The AetherFloat Family: Block-Scale-Free Quad-Radix Floating-Point Architectures for AI Accelerators",
+      "reason": "一次要旨ではLLM活性の大きな振幅に対するFP8の動的ブロックスケーリング回路の面積・電力負担を問題とし、4進スケーリングと明示仮数を備えるAetherFloat-8/16を提案。MAC単位で面積33.17%、総電力21.99%、クリティカルパス遅延11.73%の削減を報告する一方、AF8推論配備にはQATが必要と明記する。推論アクセラレータの数値形式・回路最適化に該当する。",
+      "source_url": "https://arxiv.org/abs/2603.08741",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.09425",
+      "identity_tokens": [
+        "arXiv:2411.09425"
+      ],
+      "title": "MARM: Unlocking the Future of Recommendation Systems through Memory Augmentation and Scalable Complexity",
+      "reason": "一次要旨では毎日500億件以上のユーザー標本を扱う推薦システムにおいて、FLOPsの制約を踏まえたキャッシュのスケーリング則とMemory Augmented Recommendation Modelを提案する。言語モデルのKVキャッシュやLLMサービングではなく、推薦モデル固有の推論・学習構造が主対象である。",
+      "source_url": "https://arxiv.org/abs/2411.09425",
+      "body_check": "primary_publisher_or_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:12:20+09:00",
+      "last_checked_at": "2026-10-31T06:12:20+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
