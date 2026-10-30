@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding",
+      "source_url": "https://arxiv.org/abs/2605.14310",
+      "year": 2026,
+      "published": "2026-05-14",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Streaming video understanding with large vision-language models (VLMs) requires a compact memory that can support future reasoning over an ever-growing visual history. A common solution is to compress the key-value (KV) cache, but existing streaming methods typically rely on local token-wise heuristics, such as recency, temporal redundancy, or saliency, which do not explicitly optimize whether the retained cache is representative of the accumulated history. We propose to view KV-cache compression as a coreset selection problem: rather than scoring tokens independently for retention, we select a small subset that covers the geometry of the accumulated visual cache. Our method operates in a joint KV representation and introduces a bicriteria objective that balances coverage in key and value spaces, preserving both retrieval structure and output-relevant information. To encourage a more diverse retained subset, we further introduce an orthogonality-driven diversity criterion that favors candidates contributing new directions beyond the current selection, and connect this criterion to log-determinant subset selection. Across four open-source VLMs and five long-video and streaming-video benchmarks, our method improves over heuristic streaming compression baselines under a fixed cache budget. These results highlight that representative coreset selection offers a more effective principle, than token-wise pruning, for memory-constrained streaming video understanding.",
+      "identifiers": [
+        "SemanticScholar:a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5"
+      ],
+      "semantic_scholar_id": "a12f0dbf0e3aa283dcaff96e26a9b5cf46594ea5",
+      "canonical_id": "arXiv:2605.14310",
+      "arxiv_id": "2605.14310",
+      "doi": "10.48550/arXiv.2605.14310",
+      "authors": [
+        "Ailar Mahdizadeh",
+        "Puria Azadi",
+        "Mu-Chen Li",
+        "Xiangteng He",
+        "Leonid Sigal"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 169,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。streaming video VLMのKV cache保持をtokenごとのsaliencyではなく、key/value空間の代表性と直交的な多様性を最適化するcoreset選択として定式化。4つのVLM・5つの長動画/streaming benchmarkで同一cache予算下の品質を改善する。MLLMの推論時KVメモリ圧縮に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "BUDDY: BUdget-Driven DYnamic Depth Routing for Adaptive Large Language Model Inference",
+      "source_url": "https://arxiv.org/abs/2606.09514",
+      "year": 2026,
+      "published": "2026-06-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) incur high inference cost due to their depth and parameter scale. Depth pruning can reduce latency by skipping redundant Transformer blocks, but existing methods (i) provide limited control under user-specific compute budgets and (ii) typically fix the routing path, failing to adapt as the context grows during decoding. We propose Buddy, a budget-driven dynamic depth routing framework. Buddy uses a lightweight Decision Module to score intermediate layers conditioned on the input and deterministically executes the top-k layers to satisfy a given budget. To support decode-time adaptation, Buddy reuses the first-layer KV cache as a low-overhead global context source and pools it together with the newest token representation before each routing decision. When no explicit budget is provided, an optional Budget Predictor estimates an input-dependent compute level to balance quality and efficiency. Experiments on Llama-family and Qwen models show that Buddy is competitive with strong static pruning baselines and often improves the accuracy-compute trade-off, while uniquely supporting strict budget control, decode-time rerouting, and multiple budgets within a single trained model.",
+      "identifiers": [
+        "SemanticScholar:ee3ec26f905b0d30a53b01fb82e6903765e396e0"
+      ],
+      "semantic_scholar_id": "ee3ec26f905b0d30a53b01fb82e6903765e396e0",
+      "canonical_id": "arXiv:2606.09514",
+      "arxiv_id": "2606.09514",
+      "doi": "10.48550/arXiv.2606.09514",
+      "authors": [
+        "Yu-Hua Zhou",
+        "Shaoqi Yu",
+        "Shi-Chao Weng",
+        "Chang-Hai Zhou",
+        "Ming Yin",
+        "Fei Yang",
+        "Ai-Min Pan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 144,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。入力と計算予算に応じて実行するTransformer layerを選択するDecision Moduleと、第一層KVを使うdecode-time reroutingを提案。Llama/Qwenで静的枝刈り法と比較し、単一モデル内で複数の厳密計算予算を満たす動的深さ制御を可能にする。生成時の層スキップと計算量管理に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "LatentIndex: Cross-Layer Sharing with Layer-Specific Selection for Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.04635",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces core-attention computation, but its indexers still incur repeated selection work and per-layer key-cache storage. Reusing selected indices across layers reduces this overhead but constrains multiple layers to the same token set. We introduce LatentIndex, which extends the latent-sharing principle of Multi-head Latent Attention across indexer layers. Each layer group constructs a shared latent cache from its first layer's hidden states, while layer-specific scoring enables independent token selection. Absorbing key decoders into queries enables direct scoring of the shared cache without reconstructing historical per-layer keys. We develop training-free calibration and investigate a training-aware instantiation of this principle. To balance quality and computation, a hierarchical selection (HS) variant lets followers independently refine a shared candidate set proposed by the anchor. With four-layer sharing, LatentIndex reduces logical indexer-cache storage by 61.1% on DeepSeek-V3.2. Across DeepSeek-V3.2 and GLM-5, training-free LatentIndex improves head-wise attention-mass recall over IndexCache by up to 3.28 percentage points while maintaining RULER and LongBench performance close to native DSA. HS further achieves 2.30-2.72 times decode indexer speedups over DSA across 8K-128K contexts, retaining most of LatentIndex's recall. LatentIndex offers a new perspective on cross-layer indexing: sharing continuous representations rather than discrete selections enables efficient reuse while preserving layer-specific token selection.",
+      "identifiers": [
+        "SemanticScholar:23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63"
+      ],
+      "semantic_scholar_id": "23fd98ed144ceaaa93e2e72be7a41cc3f0b24b63",
+      "canonical_id": "arXiv:2610.04635",
+      "arxiv_id": "2610.04635",
+      "authors": [
+        "Zhao-Hui Wang",
+        "Zhi-Xin Pan",
+        "Fan-Xu Meng",
+        "Mu-Han Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。sparse attentionのindexer cacheをlayer group間でlatent表現として共有しつつ、layer固有のtoken selectionを保持する。DeepSeek-V3.2で4層共有時のindexer cache保存量61.1%削減、DeepSeek-V3.2/GLM-5の8K〜128K文脈でdecode indexer最大2.72倍高速化を報告する。長文脈LLM推論のindexing overhead削減に直接関係する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD",
+      "source_url": "https://arxiv.org/abs/2610.06927",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache of autoregressive transformers grows linearly with context length and dominates memory at long context. Most training-free remedies evict low-importance tokens, an irreversible choice along the sequence axis. We instead keep every token and store it more cheaply along the\"feature\"axis. We therefore propose AttSVD, a new\"interpretable\"low-rank compression whose basis is derived from each prompt's own attention geometry: an online, per-prompt truncated SVD that keeps only the directions attention actually reads, cutting persistent per-head KV memory in proportion to the retained rank. We propose two decode-time caching strategies, accumulating and streaming, for short and long generation regimes. Furthermore, we propose two refinements that make compression adaptive. A per-matrix energy rule sizes the logit space and the attention mass independently. An attention-aware basis truncates only in the spaces attention actually reads, preserving both the attention logits and the attention output. The same factors also provide free, per-head interpretability insights into the effective rank and the geometry attention consumes. Across multiple models, on both an agentic benchmark and the full LongBench suite AttSVD stays on par with the dense cache while using up to 50% of the KV-cache memory.",
+      "identifiers": [
+        "SemanticScholar:df5b82211f4b447b2335e3daace6e4b55f7a4da3"
+      ],
+      "semantic_scholar_id": "df5b82211f4b447b2335e3daace6e4b55f7a4da3",
+      "canonical_id": "arXiv:2610.06927",
+      "arxiv_id": "2610.06927",
+      "authors": [
+        "Sara Abdali",
+        "Jongwoo Ko",
+        "Pashmina Cameron"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。token削除を行わず、prompt固有のattention幾何に基づくonline truncated SVDでKV特徴軸を低ランク圧縮する。生成長に応じたaccumulating/streaming decode cache方式を設け、agentic benchmarkとLongBenchでdense cacheに近い品質を維持しながらKVメモリ最大50%削減を報告する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "OVAL: Output-Aware Local Page Bases for KV Cache Retrieval",
+      "source_url": "https://arxiv.org/abs/2610.06686",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long context inference with large language models becomes increasingly expensive as attention must operate over an ever growing KV cache. Page sparse attention reduces this cost by representing each KV page compactly and retrieving only a subset for each query. Existing retrieval methods are designed to estimate attention scores or page relevance, but their objectives do not directly account for how approximation errors affect the resulting value weighted attention output. We introduce \\method{}, an output aware page encoding derived from the joint structure of keys and values while preserving the key information needed for accurate retrieval. \\method{} is training free and requires no additional value dependent statistics at inference time. Once constructed, its stored representation has the same size and decode time scoring cost as a key only spectral representation. Across long reasoning, long context understanding, and long generation benchmarks, \\method{} consistently improves over the key only spectral baseline and performs competitively with recent KV cache compression and retrieval methods. On long reasoning benchmarks, it achieves strong avg@\\(k\\) performance across model benchmark pairs, while matching or surpassing leading baselines on several long context understanding and generation settings with modest decoding overhead. Code is available at \\url{https://github.com/Ashkan13776/oval-kv}.",
+      "identifiers": [
+        "SemanticScholar:16b45397fe68d21ef5fb95e1cdb731e689e31253"
+      ],
+      "semantic_scholar_id": "16b45397fe68d21ef5fb95e1cdb731e689e31253",
+      "canonical_id": "arXiv:2610.06686",
+      "arxiv_id": "2610.06686",
+      "authors": [
+        "Ashkan Shahbazi",
+        "Chayne Thrash",
+        "Soheil Kolouri"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨。page sparse attentionのKVページ選択でkeyの類似性だけでなくvalue重み付きattention出力への誤差を考慮するoutput-aware page encodingを提案。training-freeで追加のdecode-time value統計を必要とせず、key-only spectral表現と同等の保存量・スコア計算コストでlong-context reasoning/generation品質を改善する。KV cache検索・疎attention推論に直接関連する。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-feca65a0b064",
+    "round": "libimp-feca65a0b064b686-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-feca65a0b064b686-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-feca65a0b064b686-pre01.json",
+    "receipt": "sha256:c9716717261e70c48bfd5c9d36373bf38e4a8bcffb367977ce773df792d7f0d7"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-feca65a0b064",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
