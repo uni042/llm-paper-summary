@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r01",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TCAD.2025.3585023",
+      "identity_tokens": [
+        "DOI:10.1109/TCAD.2025.3585023"
+      ],
+      "title": "Oiso: Outlier-Isolated Data Format for Low-Bit Large Language Model Quantization",
+      "reason": "著者公開IEEE論文の要旨で、外れ値と通常値を統一形式で符号化し階層ブロック符号化と専用演算器を組み合わせる低ビットLLM推論アクセラレータを提案。既存外れ値対応アクセラレータ比1.26倍の性能と25%のエネルギー削減を報告するため、推論向け量子化とハードウェアに直接該当。",
+      "source_url": "https://www.cse.cuhk.edu.hk/~byu/papers/J160-TCAD2026-Oiso.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 9
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICPADS67057.2025.11323033",
+      "identity_tokens": [
+        "DOI:10.1109/ICPADS67057.2025.11323033"
+      ],
+      "title": "Dispenser: Hierarchical KV Cache Management for Efficient LLM Generative Inference",
+      "reason": "著者所属大学の論文要旨は、トークンの意味類似性に基づくKVページ・ブロック分割と二段階検索で関連ブロックをロードする方式を記述。vLLM統合を想定し長期依存タスクで推論遅延2.1倍改善を報告。KVキャッシュ管理への直接的なシステム貢献。",
+      "source_url": "https://pure.korea.ac.kr/en/publications/dispenser-hierarchical-kv-cache-management-for-efficient-llm-gene/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "KV cache eviction / heavy hitters / sparse attention / efficient inference"
+      ],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.285",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.285"
+      ],
+      "title": "UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware",
+      "reason": "ACL公式要旨で、デバイスごとの受理率と検証時間からドラフトサイズを較正し、n-gram信頼度と木の展開を調整する追加学習不要の分布保存型投機的復号。7言語・7生成タスクで最大2.6倍の高速化を報告し、LLM推論高速化に直接該当。",
+      "source_url": "https://aclanthology.org/2026.acl-long.285/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "worklist_rank": 12
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.26599/bdma.2024.9020074",
+      "identity_tokens": [
+        "DOI:10.26599/bdma.2024.9020074"
+      ],
+      "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
+      "reason": "出版社の一次要旨は、軽量ドラフトモデルに残差復号ヘッドを導入して長距離依存の表現不足を補い、投機的復号で複数トークンを並列候補化する手法を説明。MT-benchで自己回帰復号比最大3.2倍の速度向上を報告し、LLMデコード高速化が主目的。",
+      "source_url": "https://www.sciopen.com/article/10.26599/BDMA.2024.9020074",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "Speculative Decoding"
+      ],
+      "worklist_rank": 13
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1038/s44387-026-00072-8",
+      "identity_tokens": [
+        "DOI:10.1038/s44387-026-00072-8"
+      ],
+      "title": "Phase transitions in large language model compression",
+      "reason": "Nature公式のPerspective要旨は、枝刈り・量子化・低ランク分解における構造的・数値的・代数的冗長性と圧縮臨界点を整理し、臨界点を意識した組合せ圧縮の枠組みを提案。LLM配備のメモリ削減に直接関連するが、個別推論サービング実装のベンチマーク論文ではないことを区別する。",
+      "source_url": "https://www.nature.com/articles/s44387-026-00072-8",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "Inference / Structured Model Compression and Pruning"
+      ],
+      "worklist_rank": 17
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.24963/ijcai.2025/920",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2025/920"
+      ],
+      "title": "MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching",
+      "reason": "IJCAI公式要旨は混合指標による再構成損失、重みのProxy-based adaptive rounding、クリッピング係数の事前探索を組み合わせる低ビットPTQを提案。LLaMA-2-7B W4A4でWikiText2 PPLを12.75から8.85へ改善し、推論向け圧縮に直接該当。",
+      "source_url": "https://ijcai.org/proceedings/2025/920",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 27
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TMC.2025.3628498",
+      "identity_tokens": [
+        "DOI:10.1109/TMC.2025.3628498"
+      ],
+      "title": "H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference",
+      "reason": "IEEE公式要旨は端末LLMの重量メモリ占有・OS重複・重みロードをボトルネックと特定。階層重み配置、ゼロコピーI/Oと計算の重畳、異種端末向け推論計画を提案し、ピークメモリ最大60%削減と遅延34〜94%改善を報告するため、オンデバイス推論メモリ最適化に直接該当。",
+      "source_url": "https://ieeexplore.ieee.org/document/11224632/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "CPUオフロード / 活性化疎性 / 階層メモリ"
+      ],
+      "worklist_rank": 32
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.19296",
+      "identity_tokens": [
+        "arXiv:2603.19296"
+      ],
+      "title": "TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly",
+      "reason": "arXiv原著要旨は、較正データに依存する既存活性対応量子化のドメインシフトを避けるため、推論時に入力プロンプトごとにオンライン較正して圧縮するTTQを提案。再学習不要で推論速度と量子化品質を改善する狙いであり、推論向け動的量子化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2603.19296",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "Quantization × MoE × Offload"
+      ],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.05821",
+      "identity_tokens": [
+        "arXiv:2609.05821"
+      ],
+      "title": "CONDUIT: A Unified Residual-Stream Restoration Framework for KV Cache Reuse in Vision-Language Models",
+      "reason": "arXiv公開要旨の転記と書誌を照合。異なる接頭辞で同じ画像を再利用するVLMに対し、注意重みと値ノルム代理量を用いて再計算すべき視覚トークンを選ぶ学習不要のKV再利用方式。10%更新予算で複数VLMの平均品質97.0〜99.5%を保ち、TTFT最大2.99倍高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2609.05821",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "KV-cache compression / attention-based token selection / long-context inference"
+      ],
+      "worklist_rank": 37
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.16722",
+      "identity_tokens": [
+        "arXiv:2406.16722"
+      ],
+      "title": "Venturing into Uncharted Waters: The Navigation Compass from Transformer to Mamba",
+      "reason": "arXiv原著要旨はMambaのSSM機構、Transformerとの混合構造、カーネル関数から見た理論的関係を広く整理するサーベイ。状態空間モデルの推論効率に関係するが、要旨は推論カーネル・オフロード・サービングの独立した実装最適化を主張していないため、推論システム中心の収録では境界的。",
+      "source_url": "https://arxiv.org/abs/2406.16722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:04:59+09:00",
+      "last_checked_at": "2026-10-30T15:04:59+09:00",
+      "linked_from": [
+        "state space models / selective SSM / recurrent inference / hardware-aware sequence modeling"
+      ],
+      "worklist_rank": 38
+    }
+  ]
+}
