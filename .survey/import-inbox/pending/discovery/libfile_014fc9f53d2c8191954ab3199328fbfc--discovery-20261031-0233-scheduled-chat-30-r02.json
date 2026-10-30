@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0233-scheduled-chat-30/r02",
+  "reference_main_sha": "60afd16624f4f1435a21e795ef399f73ef2a5a7d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.19827",
+      "identity_tokens": [
+        "arXiv:2505.19827"
+      ],
+      "title": "Revisiting Glorot Initialization for Long-Range Linear Recurrences",
+      "reason": "線形再帰ネットワークのGlorot初期化において幅nに対する長さO(√n)の系列で状態ノルムが不安定化する理論を示し、スペクトル半径を1未満に調整する初期化を提案。研究対象は学習初期化と数理的安定性であり、LLM推論時の処理・メモリ最適化は実証していない。",
+      "source_url": "https://arxiv.org/abs/2505.19827",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 475,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21436",
+      "identity_tokens": [
+        "arXiv:2610.21436"
+      ],
+      "title": "HyCo: Hybrid Drafting for Cost-Efficient Mobile-Cloud Speculative Decoding",
+      "reason": "Galaxy S26 UltraのNPUでサーバー側MTP headと小規模言語モデルを組み合わせてドラフト木を作るモバイル・クラウド投機的復号。Spec-BenchでサーバーGPU時間/出力tokenを38.6%削減、32K要約で29.2%削減。ε閾値による近似受理は厳密なtarget分布保存ではなく、厳密版の節約率27.7%/11.9%と区別する。",
+      "source_url": "https://arxiv.org/abs/2610.21436",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 485,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:13f2881902141fbd5b5a1babeeaa831c53c79a1e",
+      "identity_tokens": [
+        "SemanticScholar:13f2881902141fbd5b5a1babeeaa831c53c79a1e"
+      ],
+      "title": "LSH Tells You What To Discard: An Adaptive Locality-Sensitive Strategy for KV Cache Compression",
+      "reason": "LSH-Eはqueryと保存keyのガウス射影を二値化してHamming距離を比較し、attentionを計算する前に低類似度のKVを特定して置換する。軽量なGPU上の二値構造で復号ごとに更新し、論文は推論タスクの性能を維持しつつKVキャッシュ30〜70%圧縮を報告。LLM推論メモリ削減への直接的な貢献。",
+      "source_url": "https://openreview.net/pdf?id=0ZcQhdyI3n",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 486,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.02390",
+      "identity_tokens": [
+        "arXiv:2505.02390"
+      ],
+      "title": "Quantitative Analysis of Performance Drop in DeepSeek Model Quantization",
+      "reason": "DeepSeek-R1/V3の複数bit幅で量子化後の能力低下を測定し、FP8に対して4bitの劣化が小さい条件を報告。さらに動的3bitのDQ3KMを提案し、従来Q3KMより高品質で多くの課題ではQ4KMに近いとする。H100/A100/昇騰910B上の単一マシン配置可能性を検討する推論向け圧縮評価。",
+      "source_url": "https://arxiv.org/abs/2505.02390",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3737611.3776613",
+      "identity_tokens": [
+        "DOI:10.1145/3737611.3776613"
+      ],
+      "title": "Transformer-Based Resource and Stage-Aware Scheduling for Model-Parallel LLM Inference",
+      "reason": "prefill/decode別の計算・通信負荷、GPU異種性、リンク帯域を考慮し、ヒューリスティックとその模倣学習によるTransformerスケジューラを比較。8シナリオのシミュレーションでは低帯域条件で遅延最大50%削減、学習器は教師より3〜17%改善した場合があるが、高帯域のスループットでは連続バッチ処理が優勢。実機のvLLM本体測定ではなくシミュレーション比較。",
+      "source_url": "https://doi.org/10.1145/3737611.3776613",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.09975",
+      "identity_tokens": [
+        "arXiv:2604.09975"
+      ],
+      "title": "EncFormer: Secure and Efficient Transformer Inference over Encrypted Data",
+      "reason": "FHEとMPCを併用する暗号化Transformer推論において、Stage Compatible Patternsで暗号カーネル間の再梱包と方式変換を抑え、複素CKKS-MPC変換と非線形演算の通信を削減。GPT/BERT系の比較でオンラインMPC通信1.4〜30.4倍削減、エンドツーエンド遅延1.3〜9.8倍改善と報告。秘匿推論の実行効率化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2604.09975",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.08511",
+      "identity_tokens": [
+        "arXiv:2606.08511"
+      ],
+      "title": "Look Less, Reason More: Block-wise Attention Skipping for Efficient Multimodal LLMs",
+      "reason": "Visual-Skipは高解像度画像の視覚token同士のattentionが深い層で飽和する一方FFNは必要との観察から、tokenを消さず視覚attentionブロックを層ごとに飛ばす。few-shot校正で課題別の疎性経路を選び、各種MLLMで元性能の94.16〜100.31%を維持したと報告。推論時のattention計算削減を直接狙う。",
+      "source_url": "https://arxiv.org/abs/2606.08511",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.02126",
+      "identity_tokens": [
+        "arXiv:2602.02126"
+      ],
+      "title": "Two-Stage Grid Optimization for Group-wise Quantization of LLMs",
+      "reason": "GPTQの群スケールを入力統計に基づく群内再構成誤差最小化で初期化し、整数重み固定後に座標降下法と閉形式更新で層全体の再構成誤差を再最適化する。前層の量子化誤差伝播も取り込み、低オーバーヘッドで群単位量子化の品質を改善するLLM推論用重み圧縮技術。",
+      "source_url": "https://arxiv.org/abs/2602.02126",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.15671",
+      "identity_tokens": [
+        "arXiv:2609.15671"
+      ],
+      "title": "Don't Send What You Don't Need: Question-Guided Token Pruning as a Privacy Defense for Vision-Language Models",
+      "reason": "QPriv-VLは分割・連合VLM推論で送信前の画像tokenを質問関連度とDINOv2由来の機微性指標で評価し、Dynamic Threshold Predictorが各サンプルの保持率とmaskを一度に決定する。転送token数を減らしつつVQA品質とプライバシー攻撃耐性を評価し、推論時の通信量・情報露出の削減に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2609.15671",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICNP65844.2025.11192338",
+      "identity_tokens": [
+        "DOI:10.1109/ICNP65844.2025.11192338"
+      ],
+      "title": "PrivMLLM: Efficient Three-Party Multimodal Large Language Model Secure Inference Supported Prompt Privacy",
+      "reason": "入力を持つ二者とモデル提供者を含む三者秘密計算により、プロンプト・画像等の入力とモデル重みを同時に保護するMLLM推論方式。固定小数点演算最適化、線形/非線形の混合秘密共有、定数ラウンドのFSS埋め込み処理を導入し、Llama3.2-11B-visionで既存2PC/3PC実装に対する約16倍/8倍の高速化を報告。秘匿推論の通信・実行コスト削減が主貢献。",
+      "source_url": "https://ieeexplore.ieee.org/document/11192338/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:38:35+09:00",
+      "last_checked_at": "2026-10-31T02:38:35+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
