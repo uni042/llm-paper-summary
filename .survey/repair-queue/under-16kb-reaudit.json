@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T08:43:31.640295+00:00",
+  "generated_at": "2026-10-30T09:21:04.957858+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
@@ -62,30 +62,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md",
-      "canonical_id": "arXiv:2508.08435",
-      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
-      "file_bytes": 12875,
-      "source_sha256": "4abd8c32d5c0e64dd00eaf73165024a323fc78b66ecd0a3d674b4c03578f7118",
-      "source_git_blob_sha": "82fce7e6706477250ac7c47cdc28d1bf3edb1341",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.787576,
-      "quality_metrics": {
-        "body_chars": 3955,
-        "method_chars": 1773,
-        "evaluation_chars": 707,
-        "limitation_chars": 416
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 78.8% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 78.8% < 警告基準 80%"
-      ]
-    },
-    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-41074c82c154-semantickv-a-semantics-driven-kv-cache-eviction-framework-for-efficient-.md",
       "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
       "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
@@ -104,6 +80,30 @@
       },
       "mechanical_failures": [],
       "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md",
+      "canonical_id": "arXiv:2508.08435",
+      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
+      "file_bytes": 14593,
+      "source_sha256": "ef420f6886da20c0f9bf66d61175db2524abaa929e2f9f2eb94270b3a82434c3",
+      "source_git_blob_sha": "f18b158308a062bb78c6b5cdc6f13091118e44be",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "FAIL",
+      "japanese_ratio": 0.787576,
+      "quality_metrics": {
+        "body_chars": 3955,
+        "method_chars": 1773,
+        "evaluation_chars": 707,
+        "limitation_chars": 416
+      },
+      "mechanical_failures": [
+        "16KB未満再監査: 日本語比率 78.8% < 80%"
+      ],
+      "warnings": [
+        "日本語比率 78.8% < 警告基準 80%"
+      ]
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md",
