@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T00:46:31+00:00",
-  "paper_count": 3743,
+  "generated_at": "2026-10-30T01:00:02+00:00",
+  "paper_count": 3747,
   "edge_count": 50932,
   "citation_counts": {
     "papers/inference/01-offload-hierarchical-memory/2021-2101.06840-zero-offload-democratizing-billion-scale-model-training.md": 23,
@@ -680,6 +680,7 @@
     "papers/inference/05-speculative-decoding-moe/2026-2609.24150-acceptance-aware-draft-model-training-for-speculative-decoding.md": 0,
     "papers/inference/05-speculative-decoding-moe/2026-2609.24698-adapting-tree-structured-speculative-decoding-to-deepseek-v4-for-efficie.md": 0,
     "papers/inference/05-speculative-decoding-moe/2026-2609.26100-tss-target-side-sparsification-for-speculative-decoding-in-domain-specif.md": 0,
+    "papers/inference/05-speculative-decoding-moe/2026-2609.26638-diffusion-drafts-ar-verifies-accelerating-document-ocr-with-self-specula.md": 0,
     "papers/inference/05-speculative-decoding-moe/2026-2609.29364-nebulasd.md": 0,
     "papers/inference/05-speculative-decoding-moe/2026-2609.33184-resource-efficient-speculative-decoding-for-long-context-llm-serving.md": 0,
     "papers/inference/05-speculative-decoding-moe/2026-2609.33652-tsubame-tree-replay-for-diffusion-based-speculative-decoding.md": 0,
@@ -1436,6 +1437,7 @@
     "papers/inference/09-kernel-runtime-compilation/2026-2609.09208-shift-accumulate-attention-multiplier-free-query-key-products-for-transf.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.11356-taming-bitwise-behavior-gpu-tensor-core-kernels.md": 1,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.12379-forgemegakernel-a-general-framework-for-efficient-auto-regressive-model-.md": 0,
+    "papers/inference/09-kernel-runtime-compilation/2026-2609.13585-mkernel-fast-multi-gpu-multi-node-fused-kernels.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.15627-deepseek-v4-flash-on-amd-gfx90a-correctness-recovery-and-inference-performance-engineering.md": 0,
     "papers/inference/09-kernel-runtime-compilation/2026-2609.15810-vc-attention-value-smoothing-and-softmax-casting-for-low-bit-attention.md": 0,
@@ -1833,6 +1835,7 @@
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-778bb2a31fb4-throttll-em-predictive-gpu-throttling-for-energy-efficient-llm-inference.md": 11,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-8e0fd88d7ddc-windserve-efficient-phase-disaggregated-llm-serving-with-stream-based-dy.md": 10,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-a06f210bac8b-a-thermal-aware-workload-scheduler-for-high-performance-llm-inference-in.md": 1,
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-a2e6bfa9ec8a-splitquant-resource-efficient-llm-offline-serving-on-heterogeneous-gpus-.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-b801ff7cdf66-spaceserve-spatial-multiplexing-of-complementary-encoders-and-decoders-f.md": 0,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-dac9d9c660d5-learned-prefix-caching-for-efficient-llm-inference.md": 2,
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-ef9c70168212-maveriq-fingerprint-guided-extrapolation-and-fragmentation-aware-layerin.md": 0,
@@ -3586,6 +3589,7 @@
     "papers/inference/99-other-inference-systems/2026-2606.06087-latentskill-from-in-context-textual-skills-to-in-weight-latent-skills-fo.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.06574-skip-a-layer-or-loop-it-learning-program-of-layers-in-llms.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.07116-offq-taming-structured-outliers-in-llm-quantization-by-offsetting.md": 0,
+    "papers/inference/99-other-inference-systems/2026-2606.07618-scalesweep-accurate-nvfp4-post-training-quantization-of-llms-via-block-s.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.09659-end-to-end-context-compression-at-scale.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.10820-k-forcing-joint-next-k-token-decoding-via-push-forward-language-modeling.md": 0,
     "papers/inference/99-other-inference-systems/2026-2606.10935-clp-collocation-length-prediction-for-zero-loss-adaptive-multi-token-inf.md": 0,
@@ -14665,6 +14669,7 @@
       "papers/inference/99-other-inference-systems/2022-2211.05102-efficiently-scaling-transformer-inference.md",
       "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
     ],
+    "papers/inference/05-speculative-decoding-moe/2026-2609.26638-diffusion-drafts-ar-verifies-accelerating-document-ocr-with-self-specula.md": [],
     "papers/inference/05-speculative-decoding-moe/2026-2609.29364-nebulasd.md": [
       "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
       "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
@@ -27605,6 +27610,7 @@
       "papers/inference/19-inference-evaluation-benchmarking/2025-2502.10517-kernelbench-can-llms-write-efficient-gpu-kernels.md",
       "papers/inference/99-other-inference-systems/2022-2203.07814-competition-level-code-generation-with-alphacode.md"
     ],
+    "papers/inference/09-kernel-runtime-compilation/2026-2609.13585-mkernel-fast-multi-gpu-multi-node-fused-kernels.md": [],
     "papers/inference/09-kernel-runtime-compilation/2026-2609.13612-attnfuse-a-composable-dsl-for-compiling-attentions-to-fused-gpu-kernels.md": [
       "papers/inference/09-kernel-runtime-compilation/2018-1805.02867-online-normalizer-calculation-for-softmax.md",
       "papers/inference/09-kernel-runtime-compilation/2019-triton-an-intermediate-language-and-compiler-for-tiled-neural-network-computations.md",
@@ -34549,6 +34555,7 @@
       "papers/inference/11-llm-serving-scheduling-disaggregation/2024-2408.00741-dynamollm.md",
       "papers/inference/19-inference-evaluation-benchmarking/2024-ad611bbc0cdc-characterizing-power-management-opportunities-for-llms-in-the-cloud.md"
     ],
+    "papers/inference/11-llm-serving-scheduling-disaggregation/2025-a2e6bfa9ec8a-splitquant-resource-efficient-llm-offline-serving-on-heterogeneous-gpus-.md": [],
     "papers/inference/11-llm-serving-scheduling-disaggregation/2025-b801ff7cdf66-spaceserve-spatial-multiplexing-of-complementary-encoders-and-decoders-f.md": [
       "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
       "papers/inference/07-kv-cache-optimization-compression/2024-2409.09086-inf-mllm-efficient-streaming-inference.md",
@@ -59493,6 +59500,7 @@
       "papers/inference/99-other-inference-systems/2024-2402.17762-massive-activations-in-large-language-models.md",
       "papers/inference/99-other-inference-systems/2025-2509.22944-sinq-sinkhorn-normalized-quantization-for-calibration-free-low-precision.md"
     ],
+    "papers/inference/99-other-inference-systems/2026-2606.07618-scalesweep-accurate-nvfp4-post-training-quantization-of-llms-via-block-s.md": [],
     "papers/inference/99-other-inference-systems/2026-2606.09659-end-to-end-context-compression-at-scale.md": [
       "papers/inference/04-conditional-computation/2023-2310.06201-compressing-context-to-enhance-inference-efficiency-of-large-language-mo.md",
       "papers/inference/04-conditional-computation/2023-2310.06839-longllmlingua-accelerating-and-enhancing-llms-in-long-context-scenarios-.md",
