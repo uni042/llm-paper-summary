@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0128-scheduled-chat-30/r02",
+  "reference_main_sha": "163a9e35dcda90e98906efbe26ee51875b0ecc94",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.21770",
+      "identity_tokens": [
+        "arXiv:2510.21770",
+        "DOI:10.48550/arXiv.2510.21770"
+      ],
+      "title": "Numerical Fragility in Transformers: A Layer-wise Theory for Explaining, Forecasting, and Mitigating Instability",
+      "reason": "低精度Transformerのattention、LayerNorm、残差伝播に起因するforward誤差増幅を層別に予測し、FP32と低精度の差や安定化指標を検討する。Tiny-ViT中心の低精度学習安定性が主題で、生成LLMの量子化推論性能を直接評価していないためborderline。2026年PMLR版は題名と実験内容が変更されているため同一arXiv系列の版差を注意する。",
+      "source_url": "https://arxiv.org/abs/2510.21770",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 407,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.465",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.acl-long.465",
+        "arXiv:2412.12486"
+      ],
+      "title": "Boosting Long-Context Information Seeking via Query-Guided Activation Refilling",
+      "reason": "ACREは長文脈の全体情報を圧縮したL1 KVと詳細を保持するL2 KVの二層cacheを構築し、質問に応じてL2からL1へ関連activationを補充する。ACL2025一次要旨で長文脈情報探索の品質と効率の改善を報告し、推論時KVの選択的参照を直接最適化。arXiv:2412.12486の旧題名は同一著者論文の別名。",
+      "source_url": "https://aclanthology.org/2025.acl-long.465/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 428,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.09742",
+      "identity_tokens": [
+        "arXiv:2605.09742"
+      ],
+      "title": "TIDES: Implicit Time-Awareness in Selective State Space Models",
+      "reason": "TIDESはMambaの選択性と物理時間刻みを両立させるため、入力依存性を離散化stepから状態行列へ移す。一次要旨の実験はUEA時系列分類とPhysiome-ODE回帰、異常なサンプリング間隔への外挿であり、生成LLM推論・サービングの実装や計算削減を評価していない。タイトルだけではMamba関連に見えるため要旨確認後にunrelatedとした。",
+      "source_url": "https://arxiv.org/abs/2605.09742",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 430,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.18410",
+      "identity_tokens": [
+        "arXiv:2608.18410"
+      ],
+      "title": "Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies",
+      "reason": "RoleSubはOpenVLA-OFT-7Bの視覚・言語KV value表現を直交群へ分け、役割・言語条件routerで群単位に保持して総KVを元の9.2〜11.3%へ圧縮。LIBEROロボット制御ではトークン削減のみの比較より良いが、対象はVLA policyであり一般LLMテキスト推論への実証はないためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.18410",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 431,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.56553/popets-2026-0008",
+      "identity_tokens": [
+        "DOI:10.56553/popets-2026-0008"
+      ],
+      "title": "SPRINT: Scalable Secure & Differentially Private Inference for Transformers",
+      "reason": "SPRINTは差分プライバシー微調整済みRoBERTaのMPC秘匿推論に対し公開パラメータの平文処理、非線形近似、DP対応の最適化を統合する。PoPETs2026一次要旨でSHAFT比最大1.6倍推論高速化・通信1.6倍削減、平文との差1ポイント未満を報告。暗号化Transformer推論の直接的効率化。",
+      "source_url": "https://petsymposium.org/popets/2026/popets-2026-0008.php",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 449,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3772052.3772233",
+      "identity_tokens": [
+        "DOI:10.1145/3772052.3772233"
+      ],
+      "title": "Snap & Replay: A new way to analyze uarch-scale performance bottlenecks for ML accelerators",
+      "reason": "Googleの著者公開一次要旨に基づく。SnRは実稼働TPUから取得したトレースをマイクロアーキテクチャsimulatorで再生し、機械語レベルの停滞要因を特定する。実稼働LLMの通信collectiveを最大15%改善し、トークン生成レイテンシを最大4.1%短縮。ハードウェアを変更しない推論性能診断。",
+      "source_url": "https://research.google/pubs/snap-replay-a-new-way-to-analyze-uarch-scale-performance-bottlenecks-for-ml-accelerators/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 464,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.12199",
+      "identity_tokens": [
+        "arXiv:2606.12199"
+      ],
+      "title": "Which Speech Representation Better Matches Text-Native Reasoning? A Study of Speech-Text Alignment on Frame Rate and Representation",
+      "reason": "音声トークンとテキストの時間粒度不一致が音声LLMの推論品質を悪化させるとし、factorized FSQと非自己回帰音声headで50Hz〜2.08Hzの表現を比較。音声QAでは4.17Hzと中間層整合が最良と報告。入力トークン削減の示唆はあるが、主評価は音声表現と推論精度で、サービングTPSやメモリ削減の直接測定がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.12199",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 476,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.30032",
+      "identity_tokens": [
+        "arXiv:2609.30032"
+      ],
+      "title": "Trusted Model Environment for Private Semantic Computations",
+      "reason": "TMEはTEE内でLLMを動作させ、出力漏洩を抑えるadversarial training、information-flow control、remote attestationを組み合わせ、バッチ化により検証を償却する。一次全文で効率とスケーラビリティも評価するが、主貢献は秘密保護の意味計算primitiveでありLLM推論の一般的な速度・KV最適化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.30032",
+      "body_check": "primary_fulltext_screened",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 486,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:VV0hSE8AxCw",
+      "identity_tokens": [
+        "OpenReview:VV0hSE8AxCw",
+        "SemanticScholar:1db25a173e48992f385cb42e2862d28f23ad7e39"
+      ],
+      "title": "Sparse Token Transformer with Attention Back Tracking",
+      "reason": "ICLR 2023の著者公式実装に掲載された要旨に基づく。STTABTは最終予測への寄与をattention back-trackingで推定し、ApproxNetとConcrete maskingでencoder Transformerのtokenを枝刈りする。NLP/CV分類モデルで疎化と精度維持を検証するが、生成LLMのKVキャッシュやデコードサービングの直接実験ではないため境界的。",
+      "source_url": "https://github.com/gmlwns2000/sttabt",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T01:35:52+09:00",
+      "last_checked_at": "2026-10-31T01:35:52+09:00",
+      "linked_from": [],
+      "worklist_rank": 491,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562780",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562780"
+      ],
+      "title": "A Graph-Based Methodology for Dynamic KV-Cache Compression in Transformer Inference",
+      "reason": "KVエントリを動的類似グラフのnodeとして扱い、距離閾値とcentroid mergingで生成時cacheを圧縮する。著者の公開書誌要旨ではGPT-2/TinyLlamaで最大97%のメモリ削減、困惑度の小幅増加を報告。推論KV圧縮への直接寄与。ただしIEEE一次全文は取得できず、数値は著者要旨転載での確認に留まる。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562780",
+      "body_check": "author_abstract_reproduced_in_public_bibliography; publisher_fulltext_not_retrieved",
+      "first_checked_at": "2026-10-31T01:39:26+09:00",
+      "last_checked_at": "2026-10-31T01:39:26+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
