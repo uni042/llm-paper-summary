@@ -1,0 +1,623 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-804d728c9b62c1d0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-804d728c9b62",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2508.18177",
+    "arXiv:2601.21919",
+    "arXiv:2603.21105",
+    "arXiv:2604.02689",
+    "arXiv:2608.01847",
+    "arXiv:2610.20641"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T11:59:38.690854+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2508.18177",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.21919",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.21105",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.02689",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.01847",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.20641",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2601.21919",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inference overhead induced by redundant reasoning undermines the interactive experience and severely bottlenecks the deployment of Large Reasoning Models. Existing reinforcement learning (RL)-based solutions tackle this problem by coupling a length penalty with outcome-based rewards. This simplistic reward weighting struggles to reconcile brevity with accuracy, as enforcing brevity may compromise critical reasoning logic. In this work, we address this limitation by proposing a multi-agent RL framework that selectively penalizes redundant chunks, while preserving essential reasoning logic. Our framework, Self-Compression via MARL (SCMA), instantiates redundancy detection and evaluation through two specialized agents: \\textbf{a Segmentation Agent} for decomposing the reasoning process into logical chunks, and \\textbf{a Scoring Agent} for quantifying the significance of each chunk. The Segmentation and Scoring agents collaboratively define an importance-weighted length penalty during training, incentivizing \\textbf{a Reasoning Agent} to prioritize essential logic without introducing inference overhead during deployment. Empirical evaluations across model scales demonstrate that SCMA reduces response length by 11.1\\% to 39.0\\% while boosting accuracy by 4.33\\% to 10.02\\%. Furthermore, ablation studies and qualitative analysis validate that the synergistic optimization within the MARL framework fosters emergent behaviors, yielding more powerful LRMs compared to vanilla RL paradigms.",
+      "identifiers": [
+        "SemanticScholar:ac5067710f7cb7641dbb05f7c242cba74ac4337b"
+      ],
+      "semantic_scholar_id": "ac5067710f7cb7641dbb05f7c242cba74ac4337b",
+      "canonical_id": "arXiv:2601.21919",
+      "arxiv_id": "2601.21919",
+      "doi": "10.48550/arXiv.2601.21919",
+      "authors": [
+        "Yi-Qun Chen",
+        "Jin-Yuan Feng",
+        "Wei Yang",
+        "Meizhi Zhong",
+        "Zheng-Liang Shi",
+        "Rui Li",
+        "Xiaochi Wei",
+        "Yan Gao",
+        "Yi Wu",
+        "Yao Hu",
+        "Zhi-Qiang Pu",
+        "Jia-Xin Mao"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 274,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2603.21105",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) rely on dense visual tokens to capture fine-grained visual information, but processing all these tokens incurs substantial computational and memory overhead during inference. To address this issue, we propose ResPrune, a training-free visual token pruning framework that enables efficient LVLM inference by selecting a compact yet informative subset of visual tokens. ResPrune formulates visual token pruning as a subspace reconstruction problem and employs a greedy subspace expansion strategy guided by residual energy, allowing it to preserve the geometric structure of the original visual token space. To further incorporate cross modal alignment, the selection process is conditioned on textual relevance, encouraging the retention of tokens that are both informative and instruction-relevant. The proposed method is lightweight and model-agnostic, and can be seamlessly integrated into existing LVLM pipelines without retraining or architectural modifications. Extensive experiments on multiple LVLM backbones, including LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL, demonstrate that ResPrune consistently outperforms existing pruning approaches across a wide range of benchmarks, while achieving effective reductions in computation, memory consumption, and inference latency.",
+      "identifiers": [
+        "SemanticScholar:d8d6855727d59b8f55efe9cade6191b073037d6a"
+      ],
+      "semantic_scholar_id": "d8d6855727d59b8f55efe9cade6191b073037d6a",
+      "canonical_id": "arXiv:2603.21105",
+      "arxiv_id": "2603.21105",
+      "doi": "10.48550/arXiv.2603.21105",
+      "authors": [
+        "Xu Li",
+        "Yi Zheng",
+        "Yuxuan Liang",
+        "Zhe Liu",
+        "Xiao-Lei Chen",
+        "Hao-Tian Chen",
+        "Rui Zhu",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 222,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FOCUS: FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling",
+      "source_url": "https://arxiv.org/abs/2608.01847",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve remarkable performance but are expensive to deploy due to their enormous size. FP4 quantization, with formats such as MXFP4 and NVFP4, offers an appealing solution with native hardware support on modern accelerators. However, maintaining accuracy under FP4 precision remains difficult. A key bottleneck lies in scale optimization: existing methods tightly couple the quantization and dequantization scales, forcing both to conform to the discrete low-precision format required by hardware, such as E8M0 in MXFP4. Yet the quantization scale is never stored and need not obey this constraint, suggesting a significant untapped optimization space. In this work, we propose FOCUS, a post-training quantization framework with end-to-end scale learning for FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling. Coupled-Relaxation Scaling (CRS) relaxes the tight coupling between quantization and dequantization scales with a learnable full-precision coefficient, enabling more effective optimization without breaking hardware compliance. Dual-Granularity Scaling (DGS) further refines the quantization scale at a finer sub-block granularity, allowing more precise adaptation to local weight distributions. Experiments across multiple LLM families and benchmarks show that FOCUS achieves state-of-the-art FP4 accuracy under both MXFP4 and NVFP4 formats, while introducing no additional inference overhead. Code and quantized models will be released at https://github.com/tencent/AngelSlim.",
+      "identifiers": [
+        "SemanticScholar:ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f"
+      ],
+      "semantic_scholar_id": "ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f",
+      "canonical_id": "arXiv:2608.01847",
+      "arxiv_id": "2608.01847",
+      "authors": [
+        "Xiang-Long Yan",
+        "Hong Liu",
+        "Cheng-Zhu Bao",
+        "Tian-Ao Zhang",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs",
+      "source_url": "https://arxiv.org/abs/2604.02689",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Multimodal Large Language Models (MLLMs) have expanded reasoning capabilities into 3D domains, enabling fine-grained spatial understanding. However, the substantial size of 3D MLLMs and the high dimensionality of input features introduce considerable inference overhead, which limits practical deployment on resource constrained platforms. To overcome this limitation, this paper presents Efficient3D, a unified framework for visual token pruning that accelerates 3D MLLMs while maintaining competitive accuracy. The proposed framework introduces a Debiased Visual Token Importance Estimator (DVTIE) module, which considers the influence of shallow initial layers during attention aggregation, thereby producing more reliable importance predictions for visual tokens. In addition, an Adaptive Token Rebalancing (ATR) strategy is developed to dynamically adjust pruning strength based on scene complexity, preserving semantic completeness and maintaining balanced attention across layers. Together, they enable context-aware token reduction that maintains essential semantics with lower computation. Comprehensive experiments conducted on five representative 3D vision and language benchmarks, including ScanRefer, Multi3DRefer, Scan2Cap, ScanQA, and SQA3D, demonstrate that Efficient3D achieves superior performance compared with unpruned baselines, with a +2.57% CIDEr improvement on the Scan2Cap dataset. Therefore, Efficient3D provides a scalable and effective solution for efficient inference in 3D MLLMs. The code is released at: https://github.com/sol924/Efficient3D",
+      "identifiers": [
+        "SemanticScholar:4a4587acd7c72bc8b56f1476031e01b553957dcb"
+      ],
+      "semantic_scholar_id": "4a4587acd7c72bc8b56f1476031e01b553957dcb",
+      "canonical_id": "arXiv:2604.02689",
+      "arxiv_id": "2604.02689",
+      "doi": "10.1109/CVPRF71909.2026.00858",
+      "authors": [
+        "Yu-Hui Lin",
+        "Si-Yue Yu",
+        "Yu-Xing Yang",
+        "Guang-Liang Cheng",
+        "Ji-Min Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+      "source_url": "https://arxiv.org/abs/2610.20641",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought decoding is memory-bound: the KV cache of the generated tokens grows linearly with the test-time compute being spent. Evicting cache entries does not fix this, because a model never trained on a cache with entries removed generates longer, often up to the length limit. We instead train the model to compress its own output. AbridgeKV compresses each completed block of generated text into the KV entries of a few learned pause tokens. These are extra input tokens with trained embeddings that produce no output. Once the pause tokens have encoded the block, AbridgeKV frees the block's original cache; subsequent tokens attend to the pause tokens'KV entries in its place. Three novel choices make this work: the pause tokens'KV entries take positions inside the block they replace, the cache budget is allocated across layers according to the measured value of each layer's entries, and compression operates on relatively large blocks. On 446 competition problems from AIME, HMMT, AMC, BRUMO, CMIMC and SMT with 32K-token generations, keeping a quarter of the generated cache matches an identically trained full-KV model in accuracy and output length; the strongest published evictor at a matched budget writes far longer, and the closest trained compressor, retrained on the same data, loses 10 points. Served in vLLM, the cache is 3.5x smaller per sequence and a saturated H100 finishes a problem 3.2x faster than with full KV.",
+      "identifiers": [
+        "SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44"
+      ],
+      "semantic_scholar_id": "271342ba40609c271fec58fcafb0c444bcf23c44",
+      "canonical_id": "arXiv:2610.20641",
+      "arxiv_id": "2610.20641",
+      "authors": [
+        "Jack Cai",
+        "Lijie Yang",
+        "Vasilis Kontonis",
+        "Dimitris Papailiopoulos",
+        "Shivam Garg"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance",
+      "source_url": "https://arxiv.org/abs/2508.18177",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "Expert systems with applications",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visually impaired individuals face significant challenges in environmental perception. Traditional assistive technologies often lack adaptive intelligence, focusing on individual components rather than integrated systems. While Vision-Language Models (VLMs) offer a promising path to richer, integrated understanding, their deployment is severely limited by substantial computational requirements, demanding dozens of gigabytes of memory. To address these gaps in computational efficiency and integrated design, this study proposes a dual technological innovation framework: a cross-modal differentiated quantization framework for VLMs and a scene-aware vectorized memory multi-agent system. The quantization framework implements differentiated strategies, reducing memory from 38GB to 11.3GB. The multi-agent system uses vectorized memory and perception-memory-reasoning workflows to provide environmental information beyond the current view, achieving 2.83-3.52s latency to initial speech output. Experiments show the quantized 19B-parameter model only experiences a 2.05% performance drop on MMBench and maintains 63.7 accuracy on OCR-VQA (original: 64.9), outperforming smaller models with equivalent memory. This research advances computational efficiency and assistive technology, offering comprehensive assistance in scene perception, text recognition, and navigation.",
+      "identifiers": [
+        "SemanticScholar:0e7ae6b42102a13ded7d080c71c319af7a1eca22"
+      ],
+      "semantic_scholar_id": "0e7ae6b42102a13ded7d080c71c319af7a1eca22",
+      "canonical_id": "arXiv:2508.18177",
+      "arxiv_id": "2508.18177",
+      "doi": "10.48550/arXiv.2508.18177",
+      "authors": [
+        "Xiang-Xiang Wang",
+        "Xuan-Yu Wang",
+        "YiJia Luo",
+        "Yong-Bin Yu",
+        "Man-Ping Fan",
+        "Jing-Tao Zhang",
+        "Li-Yong Ren"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 431,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.21919",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.21919",
+        "id:SemanticScholar:ac5067710f7cb7641dbb05f7c242cba74ac4337b",
+        "id:arXiv:2601.21919",
+        "title:selfcompression of chainofthought via multiagent reinforcement learning",
+        "url:https://arxiv.org/abs/2601.21919"
+      ],
+      "record": {
+        "title": "Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning",
+        "source_url": "https://arxiv.org/abs/2601.21919",
+        "year": 2026,
+        "published": "2026-01-29",
+        "venue": "arXiv.org",
+        "citation_count": 13,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The inference overhead induced by redundant reasoning undermines the interactive experience and severely bottlenecks the deployment of Large Reasoning Models. Existing reinforcement learning (RL)-based solutions tackle this problem by coupling a length penalty with outcome-based rewards. This simplistic reward weighting struggles to reconcile brevity with accuracy, as enforcing brevity may compromise critical reasoning logic. In this work, we address this limitation by proposing a multi-agent RL framework that selectively penalizes redundant chunks, while preserving essential reasoning logic. Our framework, Self-Compression via MARL (SCMA), instantiates redundancy detection and evaluation through two specialized agents: \\textbf{a Segmentation Agent} for decomposing the reasoning process into logical chunks, and \\textbf{a Scoring Agent} for quantifying the significance of each chunk. The Segmentation and Scoring agents collaboratively define an importance-weighted length penalty during training, incentivizing \\textbf{a Reasoning Agent} to prioritize essential logic without introducing inference overhead during deployment. Empirical evaluations across model scales demonstrate that SCMA reduces response length by 11.1\\% to 39.0\\% while boosting accuracy by 4.33\\% to 10.02\\%. Furthermore, ablation studies and qualitative analysis validate that the synergistic optimization within the MARL framework fosters emergent behaviors, yielding more powerful LRMs compared to vanilla RL paradigms.",
+        "identifiers": [
+          "SemanticScholar:ac5067710f7cb7641dbb05f7c242cba74ac4337b"
+        ],
+        "semantic_scholar_id": "ac5067710f7cb7641dbb05f7c242cba74ac4337b",
+        "canonical_id": "arXiv:2601.21919",
+        "arxiv_id": "2601.21919",
+        "doi": "10.48550/arXiv.2601.21919",
+        "authors": [
+          "Yi-Qun Chen",
+          "Jin-Yuan Feng",
+          "Wei Yang",
+          "Meizhi Zhong",
+          "Zheng-Liang Shi",
+          "Rui Li",
+          "Xiaochi Wei",
+          "Yan Gao",
+          "Yi Wu",
+          "Yao Hu",
+          "Zhi-Qiang Pu",
+          "Jia-Xin Mao"
+        ],
+        "priority": 113,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 13,
+          "citation_count": 13,
+          "total": 113,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 274,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.21105",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.21105",
+        "id:SemanticScholar:d8d6855727d59b8f55efe9cade6191b073037d6a",
+        "id:arXiv:2603.21105",
+        "title:resprune textconditioned subspace reconstruction for visual token pruning in large visionlanguage models",
+        "url:https://arxiv.org/abs/2603.21105"
+      ],
+      "record": {
+        "title": "ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2603.21105",
+        "year": 2026,
+        "published": "2026-03-22",
+        "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Vision-Language Models (LVLMs) rely on dense visual tokens to capture fine-grained visual information, but processing all these tokens incurs substantial computational and memory overhead during inference. To address this issue, we propose ResPrune, a training-free visual token pruning framework that enables efficient LVLM inference by selecting a compact yet informative subset of visual tokens. ResPrune formulates visual token pruning as a subspace reconstruction problem and employs a greedy subspace expansion strategy guided by residual energy, allowing it to preserve the geometric structure of the original visual token space. To further incorporate cross modal alignment, the selection process is conditioned on textual relevance, encouraging the retention of tokens that are both informative and instruction-relevant. The proposed method is lightweight and model-agnostic, and can be seamlessly integrated into existing LVLM pipelines without retraining or architectural modifications. Extensive experiments on multiple LVLM backbones, including LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL, demonstrate that ResPrune consistently outperforms existing pruning approaches across a wide range of benchmarks, while achieving effective reductions in computation, memory consumption, and inference latency.",
+        "identifiers": [
+          "SemanticScholar:d8d6855727d59b8f55efe9cade6191b073037d6a"
+        ],
+        "semantic_scholar_id": "d8d6855727d59b8f55efe9cade6191b073037d6a",
+        "canonical_id": "arXiv:2603.21105",
+        "arxiv_id": "2603.21105",
+        "doi": "10.48550/arXiv.2603.21105",
+        "authors": [
+          "Xu Li",
+          "Yi Zheng",
+          "Yuxuan Liang",
+          "Zhe Liu",
+          "Xiao-Lei Chen",
+          "Hao-Tian Chen",
+          "Rui Zhu",
+          "Xiang-Yang Xue"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 222,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.01847",
+      "identity_tokens": [
+        "id:SemanticScholar:ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f",
+        "id:arXiv:2608.01847",
+        "title:focus fp4 optimization via coupledrelaxation and dualgranularity scaling",
+        "url:https://arxiv.org/abs/2608.01847"
+      ],
+      "record": {
+        "title": "FOCUS: FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling",
+        "source_url": "https://arxiv.org/abs/2608.01847",
+        "year": 2026,
+        "published": "2026-08-03",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) achieve remarkable performance but are expensive to deploy due to their enormous size. FP4 quantization, with formats such as MXFP4 and NVFP4, offers an appealing solution with native hardware support on modern accelerators. However, maintaining accuracy under FP4 precision remains difficult. A key bottleneck lies in scale optimization: existing methods tightly couple the quantization and dequantization scales, forcing both to conform to the discrete low-precision format required by hardware, such as E8M0 in MXFP4. Yet the quantization scale is never stored and need not obey this constraint, suggesting a significant untapped optimization space. In this work, we propose FOCUS, a post-training quantization framework with end-to-end scale learning for FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling. Coupled-Relaxation Scaling (CRS) relaxes the tight coupling between quantization and dequantization scales with a learnable full-precision coefficient, enabling more effective optimization without breaking hardware compliance. Dual-Granularity Scaling (DGS) further refines the quantization scale at a finer sub-block granularity, allowing more precise adaptation to local weight distributions. Experiments across multiple LLM families and benchmarks show that FOCUS achieves state-of-the-art FP4 accuracy under both MXFP4 and NVFP4 formats, while introducing no additional inference overhead. Code and quantized models will be released at https://github.com/tencent/AngelSlim.",
+        "identifiers": [
+          "SemanticScholar:ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f"
+        ],
+        "semantic_scholar_id": "ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f",
+        "canonical_id": "arXiv:2608.01847",
+        "arxiv_id": "2608.01847",
+        "authors": [
+          "Xiang-Long Yan",
+          "Hong Liu",
+          "Cheng-Zhu Bao",
+          "Tian-Ao Zhang",
+          "Guang-Hua Yu",
+          "Jian-Chen Zhu",
+          "Yu-Lun Zhang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 88,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.02689",
+      "identity_tokens": [
+        "id:DOI:10.1109/cvprf71909.2026.00858",
+        "id:SemanticScholar:4a4587acd7c72bc8b56f1476031e01b553957dcb",
+        "id:arXiv:2604.02689",
+        "title:efficient3d a unified framework for adaptive and debiased token reduction in 3d mllms",
+        "url:https://arxiv.org/abs/2604.02689"
+      ],
+      "record": {
+        "title": "Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs",
+        "source_url": "https://arxiv.org/abs/2604.02689",
+        "year": 2026,
+        "published": "2026-04-03",
+        "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in Multimodal Large Language Models (MLLMs) have expanded reasoning capabilities into 3D domains, enabling fine-grained spatial understanding. However, the substantial size of 3D MLLMs and the high dimensionality of input features introduce considerable inference overhead, which limits practical deployment on resource constrained platforms. To overcome this limitation, this paper presents Efficient3D, a unified framework for visual token pruning that accelerates 3D MLLMs while maintaining competitive accuracy. The proposed framework introduces a Debiased Visual Token Importance Estimator (DVTIE) module, which considers the influence of shallow initial layers during attention aggregation, thereby producing more reliable importance predictions for visual tokens. In addition, an Adaptive Token Rebalancing (ATR) strategy is developed to dynamically adjust pruning strength based on scene complexity, preserving semantic completeness and maintaining balanced attention across layers. Together, they enable context-aware token reduction that maintains essential semantics with lower computation. Comprehensive experiments conducted on five representative 3D vision and language benchmarks, including ScanRefer, Multi3DRefer, Scan2Cap, ScanQA, and SQA3D, demonstrate that Efficient3D achieves superior performance compared with unpruned baselines, with a +2.57% CIDEr improvement on the Scan2Cap dataset. Therefore, Efficient3D provides a scalable and effective solution for efficient inference in 3D MLLMs. The code is released at: https://github.com/sol924/Efficient3D",
+        "identifiers": [
+          "SemanticScholar:4a4587acd7c72bc8b56f1476031e01b553957dcb"
+        ],
+        "semantic_scholar_id": "4a4587acd7c72bc8b56f1476031e01b553957dcb",
+        "canonical_id": "arXiv:2604.02689",
+        "arxiv_id": "2604.02689",
+        "doi": "10.1109/CVPRF71909.2026.00858",
+        "authors": [
+          "Yu-Hui Lin",
+          "Si-Yue Yu",
+          "Yu-Xing Yang",
+          "Guang-Liang Cheng",
+          "Ji-Min Xiao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 210,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.20641",
+      "identity_tokens": [
+        "id:SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44",
+        "id:arXiv:2610.20641",
+        "title:abridgekv compressing long reasoning into the kv cache of learned pause tokens",
+        "url:https://arxiv.org/abs/2610.20641"
+      ],
+      "record": {
+        "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+        "source_url": "https://arxiv.org/abs/2610.20641",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long chain-of-thought decoding is memory-bound: the KV cache of the generated tokens grows linearly with the test-time compute being spent. Evicting cache entries does not fix this, because a model never trained on a cache with entries removed generates longer, often up to the length limit. We instead train the model to compress its own output. AbridgeKV compresses each completed block of generated text into the KV entries of a few learned pause tokens. These are extra input tokens with trained embeddings that produce no output. Once the pause tokens have encoded the block, AbridgeKV frees the block's original cache; subsequent tokens attend to the pause tokens'KV entries in its place. Three novel choices make this work: the pause tokens'KV entries take positions inside the block they replace, the cache budget is allocated across layers according to the measured value of each layer's entries, and compression operates on relatively large blocks. On 446 competition problems from AIME, HMMT, AMC, BRUMO, CMIMC and SMT with 32K-token generations, keeping a quarter of the generated cache matches an identically trained full-KV model in accuracy and output length; the strongest published evictor at a matched budget writes far longer, and the closest trained compressor, retrained on the same data, loses 10 points. Served in vLLM, the cache is 3.5x smaller per sequence and a saturated H100 finishes a problem 3.2x faster than with full KV.",
+        "identifiers": [
+          "SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44"
+        ],
+        "semantic_scholar_id": "271342ba40609c271fec58fcafb0c444bcf23c44",
+        "canonical_id": "arXiv:2610.20641",
+        "arxiv_id": "2610.20641",
+        "authors": [
+          "Jack Cai",
+          "Lijie Yang",
+          "Vasilis Kontonis",
+          "Dimitris Papailiopoulos",
+          "Shivam Garg"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2508.18177",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2508.18177",
+        "id:SemanticScholar:0e7ae6b42102a13ded7d080c71c319af7a1eca22",
+        "id:arXiv:2508.18177",
+        "title:sceneaware vectorized memory multiagent framework with crossmodal differentiated quantization vlms for visually impaired assistance",
+        "url:https://arxiv.org/abs/2508.18177"
+      ],
+      "record": {
+        "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance",
+        "source_url": "https://arxiv.org/abs/2508.18177",
+        "year": 2025,
+        "published": "2025-08-25",
+        "venue": "Expert systems with applications",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Visually impaired individuals face significant challenges in environmental perception. Traditional assistive technologies often lack adaptive intelligence, focusing on individual components rather than integrated systems. While Vision-Language Models (VLMs) offer a promising path to richer, integrated understanding, their deployment is severely limited by substantial computational requirements, demanding dozens of gigabytes of memory. To address these gaps in computational efficiency and integrated design, this study proposes a dual technological innovation framework: a cross-modal differentiated quantization framework for VLMs and a scene-aware vectorized memory multi-agent system. The quantization framework implements differentiated strategies, reducing memory from 38GB to 11.3GB. The multi-agent system uses vectorized memory and perception-memory-reasoning workflows to provide environmental information beyond the current view, achieving 2.83-3.52s latency to initial speech output. Experiments show the quantized 19B-parameter model only experiences a 2.05% performance drop on MMBench and maintains 63.7 accuracy on OCR-VQA (original: 64.9), outperforming smaller models with equivalent memory. This research advances computational efficiency and assistive technology, offering comprehensive assistance in scene perception, text recognition, and navigation.",
+        "identifiers": [
+          "SemanticScholar:0e7ae6b42102a13ded7d080c71c319af7a1eca22"
+        ],
+        "semantic_scholar_id": "0e7ae6b42102a13ded7d080c71c319af7a1eca22",
+        "canonical_id": "arXiv:2508.18177",
+        "arxiv_id": "2508.18177",
+        "doi": "10.48550/arXiv.2508.18177",
+        "authors": [
+          "Xiang-Xiang Wang",
+          "Xuan-Yu Wang",
+          "YiJia Luo",
+          "Yong-Bin Yu",
+          "Man-Ping Fan",
+          "Jing-Tao Zhang",
+          "Li-Yong Ren"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 431,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:13a792eaae3bdbd9bdc23054a5d9d20cbc7f10a30ef7381f26a9a00469f57871",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

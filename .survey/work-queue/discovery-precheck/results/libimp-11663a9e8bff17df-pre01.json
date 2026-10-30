@@ -1,0 +1,462 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-11663a9e8bff17df-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-11663a9e8bff",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2509.25176",
+    "arXiv:2601.03928",
+    "arXiv:2607.06906",
+    "arXiv:2609.39765"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T11:59:38.687974+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2509.25176",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.03928",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.06906",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.39765",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection",
+      "source_url": "https://arxiv.org/abs/2601.03928",
+      "year": 2026,
+      "published": "2026-01-07",
+      "venue": "arXiv.org",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) have shown remarkable performance in User Interface (UI) grounding tasks, driven by their ability to process increasingly high-resolution screenshots. However, screenshots are tokenized into thousands of visual tokens (e.g., about 4700 for 2K resolution), incurring significant computational overhead and diluting attention. In contrast, humans typically focus on regions of interest when interacting with UI. In this work, we pioneer the task of efficient UI grounding. Guided by practical analysis of the task's characteristics and challenges, we propose FocusUI, an efficient UI grounding framework that selects patches most relevant to the instruction while preserving positional continuity for precise grounding. FocusUI addresses two key challenges: (1) Eliminating redundant tokens in visual encoding. We construct patch-level supervision by fusing an instruction-conditioned score with a rule-based UI-graph score that down-weights large homogeneous regions to select distinct and instruction-relevant visual tokens. (2) Preserving positional continuity during visual token selection. We find that general visual token pruning methods suffer from severe accuracy degradation on UI grounding tasks due to broken positional information. We introduce a novel PosPad strategy, which compresses each contiguous sequence of dropped visual tokens into a single special marker placed at the sequence's last index to preserve positional continuity. Comprehensive experiments on four grounding benchmarks demonstrate that FocusUI surpasses GUI-specific baselines. On the ScreenSpot-Pro benchmark, FocusUI-7B achieves a performance improvement of 3.7% over GUI-Actor-7B. Even with only 30% visual token retention, FocusUI-7B drops by only 3.2% while achieving up to 1.44x faster inference and 17% lower peak GPU memory.",
+      "identifiers": [
+        "SemanticScholar:022a6b853a918ddaa7201b40e48d566fc797ed16"
+      ],
+      "semantic_scholar_id": "022a6b853a918ddaa7201b40e48d566fc797ed16",
+      "canonical_id": "arXiv:2601.03928",
+      "arxiv_id": "2601.03928",
+      "doi": "10.48550/arXiv.2601.03928",
+      "authors": [
+        "Ming-Yu Ouyang",
+        "Kevin Qinghong Lin",
+        "M. Shou",
+        "Hwee Tou Ng"
+      ],
+      "priority": 111,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 111,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 296,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
+      "source_url": "https://arxiv.org/abs/2607.06906",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic AI development today runs on token maxing: buying capability with tokens -- longer reasoning traces, more turns, wider tool payloads, bigger replayed contexts -- so tokens per task grow faster than task value. Falling per-token prices mask the pattern; total spend rises anyway. We argue the decisive lever against token maxing is the harness: the orchestration layer that assembles context, exposes tools, sequences turns, delegates work, and carries enterprise observability and governance. We isolate it with a controlled swap: 22 locked evaluation tasks, six foundation models (Claude Sonnet 4.6, Gemini 3.1, Gemini Flash 3.5, Qwen 3.6, GLM 5.1, Palmyra X6), changing only the orchestration layer -- a frozen conventional production loop versus the Writer Agent Harness. Holding models constant, the harness cuts blended cost per task 41% ($0.21->$0.12), median wall-clock 44% (48s->27s), and tokens per task 38% (14.2k->8.8k), with task-completion quality at parity (0.78->0.81, directional at this sample size). Efficiency is model-invariant -- every model gets cheaper (33-61%) -- while quality gains are capability-dependent: a model's gain correlates almost perfectly with its baseline strength (r=0.99, n=6), a phenomenon we term harness leverage. Quality per dollar rises 82%; task-completions per million tokens rise from 54.9 to 92.0. On this workload the orchestration layer moved cost per task more than the full spread of the model menu did. We formalize token economics at the orchestration layer (including effective input price under prompt caching), detail the six mechanism families behind the effect -- cache-shape discipline to failure-spend governance -- compare six widely used agent systems on the same axes, and argue the harness is the one component whose efficiency multiplies across every model an organization runs -- present and future.",
+      "identifiers": [
+        "SemanticScholar:fe2bbae7e476a769c58830adbcf5af073e2c2998"
+      ],
+      "semantic_scholar_id": "fe2bbae7e476a769c58830adbcf5af073e2c2998",
+      "canonical_id": "arXiv:2607.06906",
+      "arxiv_id": "2607.06906",
+      "doi": "10.48550/arXiv.2607.06906",
+      "authors": [
+        "M. Ali",
+        "A. Novik",
+        "Anji Boddupally",
+        "Artem Yavorskyi",
+        "C. Nickerson",
+        "Daniel Rica",
+        "Emily DuGranrut",
+        "Felix Leung",
+        "Garrett Prince",
+        "G. Barnett",
+        "Heath Robinson",
+        "Hosain Al Ahmad",
+        "Jesse Resnick",
+        "Juan Carlos Farah",
+        "Jyothi Swaroop Meruga",
+        "L. Kuznetsov",
+        "Luke Gorham",
+        "M. Schmoll",
+        "Michael Paciullo",
+        "Saumya Das",
+        "Sharath Sheripally",
+        "Tommy Griscom",
+        "Mykyta Osadchyi",
+        "Nehal Mantri",
+        "Nick Westrum",
+        "Olivia Benowitz",
+        "Parikshit Kulkarni",
+        "R. Chernyshov",
+        "R. Vasudev",
+        "Rohith Nadimpally",
+        "Vikas Gangadevi",
+        "Waseem AlShikh"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MemCodex: Self-Programming Hierarchical Memory for Language Agents",
+      "source_url": "https://arxiv.org/abs/2609.39765",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agent memory faces heterogeneous access needs: a single-hop question may require one piece of evidence, whereas a multi-hop question must combine evidence from multiple sources. Predefined memory workflows cannot adapt to these varying needs. Recent adaptive methods search or learn over memory components and their compositions, but the design space itself remains predefined. We introduce MemCodex, a self-evolving hierarchical memory system that organizes experience into executable memory programs for summaries, relational knowledge, reusable skills, and latent memory. Open-ended program evolution searches the open design space of layer programs by rewriting how each layer is constructed, indexed, retrieved, and routed, thereby adapting both within-layer implementations and cross-layer composition. At query time, reads traverse the hierarchy from coarse to fine and stop once sufficient evidence is found, descending to the original history when needed. We further develop MemArena, a unified runtime that places heterogeneous data and memory systems behind a common interface. MemCodex improves average task success by 10.1% relative to the strongest adaptive-memory baseline, while using 3.4x fewer context tokens and achieving 2.1x faster inference.",
+      "identifiers": [
+        "SemanticScholar:1ae9df31df8babdbf6d36dd73a6b27a8601c5233"
+      ],
+      "semantic_scholar_id": "1ae9df31df8babdbf6d36dd73a6b27a8601c5233",
+      "canonical_id": "arXiv:2609.39765",
+      "arxiv_id": "2609.39765",
+      "authors": [
+        "Xiaoqiang Wang",
+        "Bang Liu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SIRI: Scaling Iterative Reinforcement Learning with Interleaved Compression",
+      "source_url": "https://arxiv.org/abs/2509.25176",
+      "year": 2025,
+      "published": "2025-09-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We introduce SIRI, Scaling Iterative Reinforcement Learning with Interleaved Compression, a simple yet effective RL approach for Large Reasoning Models (LRMs) that enables more efficient and accurate reasoning. Existing studies have observed repetitive thinking patterns in LRMs, and attempts to reduce them often come at the cost of performance. In this paper, we show that this trade-off can be overcome through a training regime that iteratively alternates between compressing and expanding the reasoning budget, by dynamically adjusting the maximum rollout length during training. The compression phase cuts the rollout length, forcing the model to make precise and valuable decisions within a limited context, which effectively reduces redundant tokens and increases reasoning density. The expansion phase then relaxes the length limit, providing space for the model to explore and plan in long-horizon settings. Remarkably, we find that after each compression-expansion cycle, the model's performance improves even as its output length decreases, steadily pushing it closer to the Pareto frontier in the performance-efficiency trade-off. Training on DeepSeek-R1-Distill-Qwen-1.5B, SIRI-low improves performance on AIME24 by 43.2% while reducing token usage by 46.9% after three iterations, and SIRI-high achieves the highest accuracy compared to all other methods (Figure 1). Our findings shed light on the potential of periodically oscillating the LRM's output truncation length during training to dynamically balance exploration and efficiency in reasoning, converging towards an optimal\"sweet spot\"between the two. Our models are publicly available.",
+      "identifiers": [
+        "SemanticScholar:498a98386d007a2fdb88fabcd5f13b1f972697fc"
+      ],
+      "semantic_scholar_id": "498a98386d007a2fdb88fabcd5f13b1f972697fc",
+      "canonical_id": "arXiv:2509.25176",
+      "arxiv_id": "2509.25176",
+      "doi": "10.48550/arXiv.2509.25176",
+      "authors": [
+        "Hao Wen",
+        "Yushi Bai",
+        "Juan-Zi Li",
+        "Jie Tang"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 396,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.03928",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.03928",
+        "id:SemanticScholar:022a6b853a918ddaa7201b40e48d566fc797ed16",
+        "id:arXiv:2601.03928",
+        "title:focusui efficient ui grounding via positionpreserving visual token selection",
+        "url:https://arxiv.org/abs/2601.03928"
+      ],
+      "record": {
+        "title": "FocusUI: Efficient UI Grounding via Position-Preserving Visual Token Selection",
+        "source_url": "https://arxiv.org/abs/2601.03928",
+        "year": 2026,
+        "published": "2026-01-07",
+        "venue": "arXiv.org",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) have shown remarkable performance in User Interface (UI) grounding tasks, driven by their ability to process increasingly high-resolution screenshots. However, screenshots are tokenized into thousands of visual tokens (e.g., about 4700 for 2K resolution), incurring significant computational overhead and diluting attention. In contrast, humans typically focus on regions of interest when interacting with UI. In this work, we pioneer the task of efficient UI grounding. Guided by practical analysis of the task's characteristics and challenges, we propose FocusUI, an efficient UI grounding framework that selects patches most relevant to the instruction while preserving positional continuity for precise grounding. FocusUI addresses two key challenges: (1) Eliminating redundant tokens in visual encoding. We construct patch-level supervision by fusing an instruction-conditioned score with a rule-based UI-graph score that down-weights large homogeneous regions to select distinct and instruction-relevant visual tokens. (2) Preserving positional continuity during visual token selection. We find that general visual token pruning methods suffer from severe accuracy degradation on UI grounding tasks due to broken positional information. We introduce a novel PosPad strategy, which compresses each contiguous sequence of dropped visual tokens into a single special marker placed at the sequence's last index to preserve positional continuity. Comprehensive experiments on four grounding benchmarks demonstrate that FocusUI surpasses GUI-specific baselines. On the ScreenSpot-Pro benchmark, FocusUI-7B achieves a performance improvement of 3.7% over GUI-Actor-7B. Even with only 30% visual token retention, FocusUI-7B drops by only 3.2% while achieving up to 1.44x faster inference and 17% lower peak GPU memory.",
+        "identifiers": [
+          "SemanticScholar:022a6b853a918ddaa7201b40e48d566fc797ed16"
+        ],
+        "semantic_scholar_id": "022a6b853a918ddaa7201b40e48d566fc797ed16",
+        "canonical_id": "arXiv:2601.03928",
+        "arxiv_id": "2601.03928",
+        "doi": "10.48550/arXiv.2601.03928",
+        "authors": [
+          "Ming-Yu Ouyang",
+          "Kevin Qinghong Lin",
+          "M. Shou",
+          "Hwee Tou Ng"
+        ],
+        "priority": 111,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 111,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 296,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.06906",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.06906",
+        "id:SemanticScholar:fe2bbae7e476a769c58830adbcf5af073e2c2998",
+        "id:arXiv:2607.06906",
+        "title:the harness effect how orchestration design sets the token economics of enterprise agentic ai",
+        "url:https://arxiv.org/abs/2607.06906"
+      ],
+      "record": {
+        "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
+        "source_url": "https://arxiv.org/abs/2607.06906",
+        "year": 2026,
+        "published": "2026-07-08",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agentic AI development today runs on token maxing: buying capability with tokens -- longer reasoning traces, more turns, wider tool payloads, bigger replayed contexts -- so tokens per task grow faster than task value. Falling per-token prices mask the pattern; total spend rises anyway. We argue the decisive lever against token maxing is the harness: the orchestration layer that assembles context, exposes tools, sequences turns, delegates work, and carries enterprise observability and governance. We isolate it with a controlled swap: 22 locked evaluation tasks, six foundation models (Claude Sonnet 4.6, Gemini 3.1, Gemini Flash 3.5, Qwen 3.6, GLM 5.1, Palmyra X6), changing only the orchestration layer -- a frozen conventional production loop versus the Writer Agent Harness. Holding models constant, the harness cuts blended cost per task 41% ($0.21->$0.12), median wall-clock 44% (48s->27s), and tokens per task 38% (14.2k->8.8k), with task-completion quality at parity (0.78->0.81, directional at this sample size). Efficiency is model-invariant -- every model gets cheaper (33-61%) -- while quality gains are capability-dependent: a model's gain correlates almost perfectly with its baseline strength (r=0.99, n=6), a phenomenon we term harness leverage. Quality per dollar rises 82%; task-completions per million tokens rise from 54.9 to 92.0. On this workload the orchestration layer moved cost per task more than the full spread of the model menu did. We formalize token economics at the orchestration layer (including effective input price under prompt caching), detail the six mechanism families behind the effect -- cache-shape discipline to failure-spend governance -- compare six widely used agent systems on the same axes, and argue the harness is the one component whose efficiency multiplies across every model an organization runs -- present and future.",
+        "identifiers": [
+          "SemanticScholar:fe2bbae7e476a769c58830adbcf5af073e2c2998"
+        ],
+        "semantic_scholar_id": "fe2bbae7e476a769c58830adbcf5af073e2c2998",
+        "canonical_id": "arXiv:2607.06906",
+        "arxiv_id": "2607.06906",
+        "doi": "10.48550/arXiv.2607.06906",
+        "authors": [
+          "M. Ali",
+          "A. Novik",
+          "Anji Boddupally",
+          "Artem Yavorskyi",
+          "C. Nickerson",
+          "Daniel Rica",
+          "Emily DuGranrut",
+          "Felix Leung",
+          "Garrett Prince",
+          "G. Barnett",
+          "Heath Robinson",
+          "Hosain Al Ahmad",
+          "Jesse Resnick",
+          "Juan Carlos Farah",
+          "Jyothi Swaroop Meruga",
+          "L. Kuznetsov",
+          "Luke Gorham",
+          "M. Schmoll",
+          "Michael Paciullo",
+          "Saumya Das",
+          "Sharath Sheripally",
+          "Tommy Griscom",
+          "Mykyta Osadchyi",
+          "Nehal Mantri",
+          "Nick Westrum",
+          "Olivia Benowitz",
+          "Parikshit Kulkarni",
+          "R. Chernyshov",
+          "R. Vasudev",
+          "Rohith Nadimpally",
+          "Vikas Gangadevi",
+          "Waseem AlShikh"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 114,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.39765",
+      "identity_tokens": [
+        "id:SemanticScholar:1ae9df31df8babdbf6d36dd73a6b27a8601c5233",
+        "id:arXiv:2609.39765",
+        "title:memcodex selfprogramming hierarchical memory for language agents",
+        "url:https://arxiv.org/abs/2609.39765"
+      ],
+      "record": {
+        "title": "MemCodex: Self-Programming Hierarchical Memory for Language Agents",
+        "source_url": "https://arxiv.org/abs/2609.39765",
+        "year": 2026,
+        "published": "2026-09-30",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Agent memory faces heterogeneous access needs: a single-hop question may require one piece of evidence, whereas a multi-hop question must combine evidence from multiple sources. Predefined memory workflows cannot adapt to these varying needs. Recent adaptive methods search or learn over memory components and their compositions, but the design space itself remains predefined. We introduce MemCodex, a self-evolving hierarchical memory system that organizes experience into executable memory programs for summaries, relational knowledge, reusable skills, and latent memory. Open-ended program evolution searches the open design space of layer programs by rewriting how each layer is constructed, indexed, retrieved, and routed, thereby adapting both within-layer implementations and cross-layer composition. At query time, reads traverse the hierarchy from coarse to fine and stop once sufficient evidence is found, descending to the original history when needed. We further develop MemArena, a unified runtime that places heterogeneous data and memory systems behind a common interface. MemCodex improves average task success by 10.1% relative to the strongest adaptive-memory baseline, while using 3.4x fewer context tokens and achieving 2.1x faster inference.",
+        "identifiers": [
+          "SemanticScholar:1ae9df31df8babdbf6d36dd73a6b27a8601c5233"
+        ],
+        "semantic_scholar_id": "1ae9df31df8babdbf6d36dd73a6b27a8601c5233",
+        "canonical_id": "arXiv:2609.39765",
+        "arxiv_id": "2609.39765",
+        "authors": [
+          "Xiaoqiang Wang",
+          "Bang Liu"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2509.25176",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2509.25176",
+        "id:SemanticScholar:498a98386d007a2fdb88fabcd5f13b1f972697fc",
+        "id:arXiv:2509.25176",
+        "title:siri scaling iterative reinforcement learning with interleaved compression",
+        "url:https://arxiv.org/abs/2509.25176"
+      ],
+      "record": {
+        "title": "SIRI: Scaling Iterative Reinforcement Learning with Interleaved Compression",
+        "source_url": "https://arxiv.org/abs/2509.25176",
+        "year": 2025,
+        "published": "2025-09-29",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We introduce SIRI, Scaling Iterative Reinforcement Learning with Interleaved Compression, a simple yet effective RL approach for Large Reasoning Models (LRMs) that enables more efficient and accurate reasoning. Existing studies have observed repetitive thinking patterns in LRMs, and attempts to reduce them often come at the cost of performance. In this paper, we show that this trade-off can be overcome through a training regime that iteratively alternates between compressing and expanding the reasoning budget, by dynamically adjusting the maximum rollout length during training. The compression phase cuts the rollout length, forcing the model to make precise and valuable decisions within a limited context, which effectively reduces redundant tokens and increases reasoning density. The expansion phase then relaxes the length limit, providing space for the model to explore and plan in long-horizon settings. Remarkably, we find that after each compression-expansion cycle, the model's performance improves even as its output length decreases, steadily pushing it closer to the Pareto frontier in the performance-efficiency trade-off. Training on DeepSeek-R1-Distill-Qwen-1.5B, SIRI-low improves performance on AIME24 by 43.2% while reducing token usage by 46.9% after three iterations, and SIRI-high achieves the highest accuracy compared to all other methods (Figure 1). Our findings shed light on the potential of periodically oscillating the LRM's output truncation length during training to dynamically balance exploration and efficiency in reasoning, converging towards an optimal\"sweet spot\"between the two. Our models are publicly available.",
+        "identifiers": [
+          "SemanticScholar:498a98386d007a2fdb88fabcd5f13b1f972697fc"
+        ],
+        "semantic_scholar_id": "498a98386d007a2fdb88fabcd5f13b1f972697fc",
+        "canonical_id": "arXiv:2509.25176",
+        "arxiv_id": "2509.25176",
+        "doi": "10.48550/arXiv.2509.25176",
+        "authors": [
+          "Hao Wen",
+          "Yushi Bai",
+          "Juan-Zi Li",
+          "Jie Tang"
+        ],
+        "priority": 3,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 3,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 396,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:2dd9b1cb9fc4a649d62436ed22afa99387449765636c0130915eaa52c9ecc291",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

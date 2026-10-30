@@ -1,0 +1,425 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-4c65a20404b83cb3-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-4c65a20404b8",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2505.17331",
+    "arXiv:2512.11534",
+    "arXiv:2605.22138",
+    "arXiv:2608.25115"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 4,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "raw_search_result_count": 4,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 4,
+  "provider_progress": {
+    "requested_count": 4,
+    "status_counts": {
+      "allowed": 4,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T11:59:38.398123+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2505.17331",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.11534",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.22138",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.25115",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+      "source_url": "https://arxiv.org/abs/2605.22138",
+      "year": 2026,
+      "published": "2026-05-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "How should an agent decide when and how to plan? A dominant approach builds agents as reactive policies with adaptive computation (e.g., chain-of-thought), trained end-to-end expecting planning to emerge implicitly. Without control over the presence, structure, or horizon of planning, these systems dramatically increase reasoning length, yielding inefficient token use without reliable accuracy gains. We argue efficient agentic reasoning benefits from decomposing decision-making into three systems: simulative reasoning (System II) grounding deliberation in future-state prediction via a world model; self-regulation (System III) deciding when and how deeply to plan via a learned configurator; and reactive execution (System I) handling fine-grained action. Simulative reasoning provides unified planning across diverse tasks without per-domain engineering, while self-regulation ensures the planner is invoked only when needed. To test this, we develop SR$^2$AM (Self-Regulated Simulative Reasoning Agentic LLM), realizing both as distinct stages within an LLM's chain-of-thought, with the LLM as world model. We explore two instantiations: recording decisions from a prompted multi-module system (v0.1) and reconstructing structured plans from traces of pretrained reasoning LLMs (v1.0), trained via supervised then reinforcement learning (RL). Across math, science, tabular analysis, and web information seeking, v0.1-8B and v1.0-30B achieve Pass@1 competitive with 120-355B and 685B-1T parameter systems respectively, while v1.0-30B uses 25.8-95.3% fewer reasoning tokens than comparable agentic LLMs. RL increases average planning horizon by 22.8% while planning frequency grows only 2.0%, showing it learns to plan further ahead rather than more often. More broadly, learned self-regulation instantiates a principle we expect to extend beyond planning to how agents govern their own learning and adaptation.",
+      "identifiers": [
+        "SemanticScholar:8a495d6c227c2b1fa40658a54a754beea4dd3694"
+      ],
+      "semantic_scholar_id": "8a495d6c227c2b1fa40658a54a754beea4dd3694",
+      "canonical_id": "arXiv:2605.22138",
+      "arxiv_id": "2605.22138",
+      "doi": "10.48550/arXiv.2605.22138",
+      "authors": [
+        "Ming-Kai Deng",
+        "Jinyu Hou",
+        "Lara S'a Neves",
+        "Varad Pimpalkhute",
+        "Taylor W. Killian",
+        "Zheng-Zhong Liu",
+        "E. Xing"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+      "source_url": "https://arxiv.org/abs/2608.25115",
+      "year": 2026,
+      "published": "2026-08-25",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets.In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose \\textbf{\\textsf{PACE}} (\\textbf{P}rioritized \\textbf{A}daptive \\textbf{C}overage of \\textbf{E}vidence), a training-free framework that combines \\textit{evidence frontloading} with \\textit{pressure-adaptive budgeting}. \\textsf{PACE} first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a $(1-1/e)$ approximation guarantee. \\textsf{PACE} then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that \\textsf{PACE} improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that \\textit{less can be more}: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.",
+      "identifiers": [
+        "SemanticScholar:32d6f5766d70595e661eb15b2354d84d923e8d48"
+      ],
+      "semantic_scholar_id": "32d6f5766d70595e661eb15b2354d84d923e8d48",
+      "canonical_id": "arXiv:2608.25115",
+      "arxiv_id": "2608.25115",
+      "authors": [
+        "Wei-Bin Cai",
+        "Reza Zafarani"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 66,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ECHO-LLaMA: Efficient Caching for High-Performance LLaMA Training",
+      "source_url": "https://arxiv.org/abs/2505.17331",
+      "year": 2025,
+      "published": "2025-05-22",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces ECHO-LLaMA, an efficient LLaMA architecture designed to improve both the training speed and inference throughput of LLaMA architectures while maintaining its learning capacity. ECHO-LLaMA transforms LLaMA models into shared KV caching across certain layers, significantly reducing KV computational complexity while maintaining or improving language performance. Experimental results demonstrate that ECHO-LLaMA achieves up to 77\\% higher token-per-second throughput during training, up to 16\\% higher Model FLOPs Utilization (MFU), and up to 14\\% lower loss when trained on an equal number of tokens. Furthermore, on the 1.1B model, ECHO-LLaMA delivers approximately 7\\% higher test-time throughput compared to the baseline. By introducing a computationally efficient adaptation mechanism, ECHO-LLaMA offers a scalable and cost-effective solution for pretraining and finetuning large language models, enabling faster and more resource-efficient training without compromising performance.",
+      "identifiers": [
+        "SemanticScholar:5ae960eb76355eaeee14285150ce802dd63607e6"
+      ],
+      "semantic_scholar_id": "5ae960eb76355eaeee14285150ce802dd63607e6",
+      "canonical_id": "arXiv:2505.17331",
+      "arxiv_id": "2505.17331",
+      "doi": "10.48550/arXiv.2505.17331",
+      "authors": [
+        "Maryam Dialameh",
+        "Rezaul Karim",
+        "Hossein Rajabzadeh",
+        "O. M. Awad",
+        "Hyock Ju Kwon",
+        "Boxing Chen",
+        "Walid Ahmed",
+        "Yang Liu"
+      ],
+      "priority": 14,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 14,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 526,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "HFS: Holistic Query-Aware Frame Selection for Efficient Video Understanding",
+      "source_url": "https://arxiv.org/abs/2512.11534",
+      "year": 2025,
+      "published": "2025-12-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key frame selection is essentially a set-level optimization problem: the quality of the selected subset depends on the interactions among frames, rather than the score of any single frame. Existing methods generally exhibit three major limitations. Point-wise methods score each frame independently and ignore inter-frame dependencies. Although the training-free set-level methods explicitly model the inter-frame relationships, their selection criteria are fixed and cannot be adapted through downstream task feedback. Learnable methods can leverage data-driven training; however, they lack an explicit, differentiable set-quality objective and rely on offline-generated supervision signals. To address these limitations, we propose an end-to-end trainable and task-adaptive framework for frame selection. A Chain-of-Thought prompt conditions a Small Language Model (SLM) to extract task-specific latent query vectors, which are combined with multimodal features to enable dynamic, query-aware frame scoring. We further formulate a continuous set-level objective function that jointly accounts for relevance, coverage, and redundancy, enabling differentiable set-level optimization via Gumbel-TopK for selecting optimal frame combinations. Finally, we employ a student-teacher mutual learning strategy, in which the student selector (SLM) and teacher reasoner (MLLM) are trained to align their frame-importance distributions via KL divergence. Combined with cross-entropy loss, this design enables fully end-to-end optimization, eliminating reliance on static pseudo-labels. Experiments across multiple benchmarks, including Video-MME, LongVideoBench, MLVU, and NExT-QA, demonstrate that our method significantly outperforms existing frame-selection approaches.",
+      "identifiers": [
+        "SemanticScholar:b67c5b51eec9ec5d8dbb6004a9531f517c1eb36d"
+      ],
+      "semantic_scholar_id": "b67c5b51eec9ec5d8dbb6004a9531f517c1eb36d",
+      "canonical_id": "arXiv:2512.11534",
+      "arxiv_id": "2512.11534",
+      "authors": [
+        "Yiqing Yang",
+        "Yun Li",
+        "Dai-Qing Qi",
+        "Lehangyu Yang",
+        "Tian-Long Wang",
+        "Wen-Hao Zhang",
+        "Sheng Li",
+        "Kin-Man Lam"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 322,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2605.22138",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.22138",
+        "id:SemanticScholar:8a495d6c227c2b1fa40658a54a754beea4dd3694",
+        "id:arXiv:2605.22138",
+        "title:efficient agentic reasoning through selfregulated simulative planning",
+        "url:https://arxiv.org/abs/2605.22138"
+      ],
+      "record": {
+        "title": "Efficient Agentic Reasoning Through Self-Regulated Simulative Planning",
+        "source_url": "https://arxiv.org/abs/2605.22138",
+        "year": 2026,
+        "published": "2026-05-21",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "How should an agent decide when and how to plan? A dominant approach builds agents as reactive policies with adaptive computation (e.g., chain-of-thought), trained end-to-end expecting planning to emerge implicitly. Without control over the presence, structure, or horizon of planning, these systems dramatically increase reasoning length, yielding inefficient token use without reliable accuracy gains. We argue efficient agentic reasoning benefits from decomposing decision-making into three systems: simulative reasoning (System II) grounding deliberation in future-state prediction via a world model; self-regulation (System III) deciding when and how deeply to plan via a learned configurator; and reactive execution (System I) handling fine-grained action. Simulative reasoning provides unified planning across diverse tasks without per-domain engineering, while self-regulation ensures the planner is invoked only when needed. To test this, we develop SR$^2$AM (Self-Regulated Simulative Reasoning Agentic LLM), realizing both as distinct stages within an LLM's chain-of-thought, with the LLM as world model. We explore two instantiations: recording decisions from a prompted multi-module system (v0.1) and reconstructing structured plans from traces of pretrained reasoning LLMs (v1.0), trained via supervised then reinforcement learning (RL). Across math, science, tabular analysis, and web information seeking, v0.1-8B and v1.0-30B achieve Pass@1 competitive with 120-355B and 685B-1T parameter systems respectively, while v1.0-30B uses 25.8-95.3% fewer reasoning tokens than comparable agentic LLMs. RL increases average planning horizon by 22.8% while planning frequency grows only 2.0%, showing it learns to plan further ahead rather than more often. More broadly, learned self-regulation instantiates a principle we expect to extend beyond planning to how agents govern their own learning and adaptation.",
+        "identifiers": [
+          "SemanticScholar:8a495d6c227c2b1fa40658a54a754beea4dd3694"
+        ],
+        "semantic_scholar_id": "8a495d6c227c2b1fa40658a54a754beea4dd3694",
+        "canonical_id": "arXiv:2605.22138",
+        "arxiv_id": "2605.22138",
+        "doi": "10.48550/arXiv.2605.22138",
+        "authors": [
+          "Ming-Kai Deng",
+          "Jinyu Hou",
+          "Lara S'a Neves",
+          "Varad Pimpalkhute",
+          "Taylor W. Killian",
+          "Zheng-Zhong Liu",
+          "E. Xing"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 162,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.25115",
+      "identity_tokens": [
+        "id:SemanticScholar:32d6f5766d70595e661eb15b2354d84d923e8d48",
+        "id:arXiv:2608.25115",
+        "title:less can be more relieving rag bottlenecks via evidence frontloading and pressureadaptive budgeting",
+        "url:https://arxiv.org/abs/2608.25115"
+      ],
+      "record": {
+        "title": "Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting",
+        "source_url": "https://arxiv.org/abs/2608.25115",
+        "year": 2026,
+        "published": "2026-08-25",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Existing methods for improving Retrieval-Augmented Generation (RAG) efficiency mainly optimize downstream LLM generation, such as context compression or serving optimization. However, RAG is an end-to-end system, and its bottleneck can shift between upstream reranking and downstream generation under different serving loads and reranking budgets.In this paper, we first empirically characterize this shifting-bottleneck behavior and show that upstream reranking can become the dominant bottleneck under high query rates or large reranking budgets. Reducing the reranking budget can relieve this bottleneck, but it may also drop supporting evidence and degrade recall. To address this problem, we propose \\textbf{\\textsf{PACE}} (\\textbf{P}rioritized \\textbf{A}daptive \\textbf{C}overage of \\textbf{E}vidence), a training-free framework that combines \\textit{evidence frontloading} with \\textit{pressure-adaptive budgeting}. \\textsf{PACE} first reorders candidates by marginal evidence coverage, prioritizing documents that are query-relevant, complementary, and useful for forming multi-hop evidence chains. We show that this objective is monotone submodular, giving greedy selection a $(1-1/e)$ approximation guarantee. \\textsf{PACE} then dynamically adjusts the reranking budget according to the relative pressure of the reranker and the LLM. Experiments on three multi-hop QA datasets and online serving simulations show that \\textsf{PACE} improves evidence recall, reduces p95 latency under ranking-heavy workloads. More importantly, the two components together reveal that \\textit{less can be more}: an evidence-dense top-ranked candidates enable higher final recall with fewer reranked documents.",
+        "identifiers": [
+          "SemanticScholar:32d6f5766d70595e661eb15b2354d84d923e8d48"
+        ],
+        "semantic_scholar_id": "32d6f5766d70595e661eb15b2354d84d923e8d48",
+        "canonical_id": "arXiv:2608.25115",
+        "arxiv_id": "2608.25115",
+        "authors": [
+          "Wei-Bin Cai",
+          "Reza Zafarani"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 66,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.17331",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2505.17331",
+        "id:SemanticScholar:5ae960eb76355eaeee14285150ce802dd63607e6",
+        "id:arXiv:2505.17331",
+        "title:echollama efficient caching for highperformance llama training",
+        "url:https://arxiv.org/abs/2505.17331"
+      ],
+      "record": {
+        "title": "ECHO-LLaMA: Efficient Caching for High-Performance LLaMA Training",
+        "source_url": "https://arxiv.org/abs/2505.17331",
+        "year": 2025,
+        "published": "2025-05-22",
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces ECHO-LLaMA, an efficient LLaMA architecture designed to improve both the training speed and inference throughput of LLaMA architectures while maintaining its learning capacity. ECHO-LLaMA transforms LLaMA models into shared KV caching across certain layers, significantly reducing KV computational complexity while maintaining or improving language performance. Experimental results demonstrate that ECHO-LLaMA achieves up to 77\\% higher token-per-second throughput during training, up to 16\\% higher Model FLOPs Utilization (MFU), and up to 14\\% lower loss when trained on an equal number of tokens. Furthermore, on the 1.1B model, ECHO-LLaMA delivers approximately 7\\% higher test-time throughput compared to the baseline. By introducing a computationally efficient adaptation mechanism, ECHO-LLaMA offers a scalable and cost-effective solution for pretraining and finetuning large language models, enabling faster and more resource-efficient training without compromising performance.",
+        "identifiers": [
+          "SemanticScholar:5ae960eb76355eaeee14285150ce802dd63607e6"
+        ],
+        "semantic_scholar_id": "5ae960eb76355eaeee14285150ce802dd63607e6",
+        "canonical_id": "arXiv:2505.17331",
+        "arxiv_id": "2505.17331",
+        "doi": "10.48550/arXiv.2505.17331",
+        "authors": [
+          "Maryam Dialameh",
+          "Rezaul Karim",
+          "Hossein Rajabzadeh",
+          "O. M. Awad",
+          "Hyock Ju Kwon",
+          "Boxing Chen",
+          "Walid Ahmed",
+          "Yang Liu"
+        ],
+        "priority": 14,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 14,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 526,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.11534",
+      "identity_tokens": [
+        "id:SemanticScholar:b67c5b51eec9ec5d8dbb6004a9531f517c1eb36d",
+        "id:arXiv:2512.11534",
+        "title:hfs holistic queryaware frame selection for efficient video understanding",
+        "url:https://arxiv.org/abs/2512.11534"
+      ],
+      "record": {
+        "title": "HFS: Holistic Query-Aware Frame Selection for Efficient Video Understanding",
+        "source_url": "https://arxiv.org/abs/2512.11534",
+        "year": 2025,
+        "published": "2025-12-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key frame selection is essentially a set-level optimization problem: the quality of the selected subset depends on the interactions among frames, rather than the score of any single frame. Existing methods generally exhibit three major limitations. Point-wise methods score each frame independently and ignore inter-frame dependencies. Although the training-free set-level methods explicitly model the inter-frame relationships, their selection criteria are fixed and cannot be adapted through downstream task feedback. Learnable methods can leverage data-driven training; however, they lack an explicit, differentiable set-quality objective and rely on offline-generated supervision signals. To address these limitations, we propose an end-to-end trainable and task-adaptive framework for frame selection. A Chain-of-Thought prompt conditions a Small Language Model (SLM) to extract task-specific latent query vectors, which are combined with multimodal features to enable dynamic, query-aware frame scoring. We further formulate a continuous set-level objective function that jointly accounts for relevance, coverage, and redundancy, enabling differentiable set-level optimization via Gumbel-TopK for selecting optimal frame combinations. Finally, we employ a student-teacher mutual learning strategy, in which the student selector (SLM) and teacher reasoner (MLLM) are trained to align their frame-importance distributions via KL divergence. Combined with cross-entropy loss, this design enables fully end-to-end optimization, eliminating reliance on static pseudo-labels. Experiments across multiple benchmarks, including Video-MME, LongVideoBench, MLVU, and NExT-QA, demonstrate that our method significantly outperforms existing frame-selection approaches.",
+        "identifiers": [
+          "SemanticScholar:b67c5b51eec9ec5d8dbb6004a9531f517c1eb36d"
+        ],
+        "semantic_scholar_id": "b67c5b51eec9ec5d8dbb6004a9531f517c1eb36d",
+        "canonical_id": "arXiv:2512.11534",
+        "arxiv_id": "2512.11534",
+        "authors": [
+          "Yiqing Yang",
+          "Yun Li",
+          "Dai-Qing Qi",
+          "Lehangyu Yang",
+          "Tian-Long Wang",
+          "Wen-Hao Zhang",
+          "Sheng Li",
+          "Kin-Man Lam"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 322,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:85ce88d9a1fe5c4421ae08939f1c0a68c236f897a845d692f07864f3d0516ad5",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

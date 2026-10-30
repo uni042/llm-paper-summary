@@ -1,0 +1,793 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-f9984f17aa666daa-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-f9984f17aa66",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2503.01873",
+    "arXiv:2506.07416",
+    "arXiv:2601.07212",
+    "arXiv:2602.10953",
+    "arXiv:2604.03829",
+    "arXiv:2605.30832",
+    "arXiv:2609.18916",
+    "arXiv:2609.24847"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T11:59:39.233146+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2503.01873",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.07416",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.07212",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.10953",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.03829",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.30832",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.18916",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.24847",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "MI-PRUN: Optimize Large Language Model Pruning via Mutual Information",
+      "source_url": "https://arxiv.org/abs/2601.07212",
+      "year": 2026,
+      "published": "2026-01-12",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have become indispensable across various domains, but this comes at the cost of substantial computational and memory resources. Model pruning addresses this by removing redundant components from models. In particular, block pruning can achieve significant compression and inference acceleration. However, existing block pruning methods are often unstable and struggle to attain globally optimal solutions. In this paper, we propose a mutual information based pruning method MI-PRUN for LLMs. Specifically, we leverages mutual information to identify redundant blocks by evaluating transitions in hidden states. Additionally, we incorporate the Data Processing Inequality (DPI) to reveal the relationship between the importance of entire contiguous blocks and that of individual blocks. Moreover, we develop the Fast-Block-Select algorithm, which iteratively updates block combinations to achieve a globally optimal solution while significantly improving the efficiency. Extensive experiments across various models and datasets demonstrate the stability and effectiveness of our method.",
+      "identifiers": [
+        "SemanticScholar:51123810b81be9dbf03e1db312478c532adc90b5"
+      ],
+      "semantic_scholar_id": "51123810b81be9dbf03e1db312478c532adc90b5",
+      "canonical_id": "arXiv:2601.07212",
+      "arxiv_id": "2601.07212",
+      "doi": "10.48550/arXiv.2601.07212",
+      "authors": [
+        "Hao Zhang",
+        "Zhibin Zhang",
+        "Guang-Xin Wu",
+        "He Chen",
+        "Jia-Feng Guo",
+        "Xue-Qi Cheng"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Search or Accelerate: Confidence-Switched Position Beam Search for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.10953",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) generate text by iteratively denoising a masked sequence, repeatedly deciding which positions to commit at each step. Standard decoding follows a greedy rule: unmask the most confident positions, yet this local choice can lock the model into a suboptimal unmasking order, especially on reasoning-heavy prompts. We present SOAR, a training-free decoding algorithm that adapts its behavior to the model's uncertainty. When confidence is low, SOAR briefly widens the search over alternative unmasking decisions to avoid premature commitments; when confidence is high, it collapses the search and decodes many positions in parallel to reduce the number of denoising iterations. Across mathematical reasoning and code generation benchmarks (GSM8K, MBPP, HumanEval) on Dream-7B and LLaDA-8B, SOAR improves generation quality while maintaining competitive inference speed, offering a practical way to balance quality and efficiency in DLM decoding. Our Code is available at https://github.com/duterscmy/SOAR",
+      "identifiers": [
+        "SemanticScholar:930f348f5b96bff52314a3fc76a4102f3177318e"
+      ],
+      "semantic_scholar_id": "930f348f5b96bff52314a3fc76a4102f3177318e",
+      "canonical_id": "arXiv:2602.10953",
+      "arxiv_id": "2602.10953",
+      "doi": "10.48550/arXiv.2602.10953",
+      "authors": [
+        "Ming-Yu Cao",
+        "Alvaro H. C. Correia",
+        "Christos Louizos",
+        "Shi-Wei Liu",
+        "Lu Yin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 261,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "source_url": "https://arxiv.org/abs/2609.24847",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+      "identifiers": [
+        "SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326"
+      ],
+      "semantic_scholar_id": "a74c8a785b8ee75df581f0b6d99da779be35a326",
+      "canonical_id": "arXiv:2609.24847",
+      "arxiv_id": "2609.24847",
+      "authors": [
+        "G. Tombesi",
+        "William Baisi",
+        "Je Yang",
+        "Elisavet Lydia Alvanaki",
+        "Kevin J. Lee",
+        "Michael S. Lippe",
+        "Biruk B. Seyoum",
+        "Luca P. Carloni"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.30832",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Reasoning Models have significantly improved chain-of-thought (CoT) capabilities via reinforcement learning (RL). However, generated reasoning chains frequently suffer from structural redundancy (i.e., \\emph{overthinking}), incurring high computational overhead without improving answer correctness. Existing mitigation strategies typically rely on token-uniform length penalties, which provide coarse, segment-agnostic pressure toward shorter outputs and can inadvertently suppress useful reasoning alongside redundancy. To address this, we demonstrate that inefficiency concentrates in high-probability segments with low marginal utility. We derive a theoretical characterization of segment suboptimality under the correctness-length trade-off objective and propose \\textsc{SLAT} (Segment-Level Adaptive Trimming), an RL framework that selectively suppresses redundant segments based on this criterion. Empirical results on standard benchmarks indicate that \\textsc{SLAT} establishes a superior accuracy-efficiency Pareto frontier, reducing reasoning length by $50\\%$ relative to uncompressed baselines while maintaining competitive accuracy. Overall, our results suggest that theoretically grounded, segment-aware trimming is a promising direction for efficient CoT reasoning in large language models.",
+      "identifiers": [
+        "SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa"
+      ],
+      "semantic_scholar_id": "06fc6178df4128519609bcf459120c54ce1659aa",
+      "canonical_id": "arXiv:2605.30832",
+      "arxiv_id": "2605.30832",
+      "doi": "10.48550/arXiv.2605.30832",
+      "authors": [
+        "Jiangqi Yao",
+        "Xiong Luo",
+        "Ran Cheng",
+        "Kay Chen Tan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models suffer from large parameter counts, which create a significant memory bottleneck. Expert pruning is the most direct approach for reducing this parameter count, yet existing methods make pruning decisions for each expert independently, and assume experts'contributions are purely additive. In reality, expert usage in MoEs is inherently cooperative. We derive HOPE (Higher-Order Pruning of Experts), a second-order pruning objective which provably minimizes an upper bound on the error resulting from pruning. We show that REAP (a state-of-the-art first-order pruning method) is a special case of HOPE where interaction terms are ignored. Across three frontier MoE models (up to 122B parameters), two distinct calibration sets, and multiple benchmarks (including math, instruction following, coding, and an agentic suite), we demonstrate that HOPE produces better pruning decisions than existing methods, and its advantage is most pronounced at high pruning rates and on challenging agentic workloads. At 50% pruning, HOPE outperforms all baselines and achieves an average rank of 1.58 out of 5 methods (versus 2.42 for the next-best method, REAP), with gains of up to +6.1% on agentic coding. Over all conditions, HOPE again achieves the best average rank and surpasses every other method in the majority of head-to-head comparisons. By preserving cooperative expert structure that first-order methods ignore, HOPE enables aggressive compression with minimal degradation, particularly on complex tasks where diverse expert combinations are invoked over long sequences.",
+      "identifiers": [
+        "SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+      ],
+      "semantic_scholar_id": "d4a3433a065ad5e51888ac53242f33739c5e5660",
+      "canonical_id": "arXiv:2609.18916",
+      "arxiv_id": "2609.18916",
+      "authors": [
+        "Alex M. Tseng",
+        "Prannay Kaul",
+        "L. Zancato",
+        "Wei Xia",
+        "Stefan 0 Soatto"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mambalaya: Einsum-Based Fusion Optimizations on State-Space Models",
+      "source_url": "https://arxiv.org/abs/2604.03829",
+      "year": 2026,
+      "published": "2026-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mamba is an emerging, complex workload with various short-range and long-range dependencies, nonlinearities, and elementwise computations that are unable to run at near-peak speeds on modern hardware. Specifically, Mamba's complex dependency graph makes fusion across its full operator cascade difficult, leaving substantial inter-operator memory traffic on the table. To address these challenges, we propose Mambalaya, a novel reconfigurable accelerator that leverages fusion to overcome the limitations of Mamba. We use the recently proposed cascade-of-Einsums abstraction to characterize Mamba's full computational structure, then apply the extended Einsum framework to systematically explore inter-Einsum fusion opportunities. This principled approach yields a series of fusion mappings that reduce off-chip inter-Einsum traffic. These mappings are supported by the underlying Mambalaya architecture. Mambalaya achieves a layer performance speedup of 4.9$\\times$ for prefill and 1.9$\\times$ for generation over MARCA. In prefill-dominated scenarios, it achieves up to 1.5$\\times$ over a recent fine-grained, memory-aware fusion accelerator for Mamba.",
+      "identifiers": [
+        "SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3"
+      ],
+      "semantic_scholar_id": "03d89e5e083813143ff91c0b71627382984408c3",
+      "canonical_id": "arXiv:2604.03829",
+      "arxiv_id": "2604.03829",
+      "doi": "10.48550/arXiv.2604.03829",
+      "authors": [
+        "Toluwanimi O. Odemuyiwa",
+        "John D. Owens",
+        "J. Emer",
+        "Michael Pellauer"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LiteVLM: A Low-Latency Vision-Language Model Inference Pipeline for Resource-Constrained Environments",
+      "source_url": "https://arxiv.org/abs/2506.07416",
+      "year": 2025,
+      "published": "2025-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces an efficient Vision-Language Model (VLM) pipeline specifically optimized for deployment on embedded devices, such as those used in robotics and autonomous driving. The pipeline significantly reduces the computational overhead by jointly leveraging patch selection to filter irrelevant camera views, a token selection module to reduce input sequence length for the LLM, and speculative decoding to accelerate token generation. Evaluation on the NVIDIA DRIVE Thor platform for automonous driving application, our pipeline achieves $2.5\\times$ end-to-end latency reduction without compromising task accuracy. The speed-up further increases to $3.2\\times$ when applying FP8 post-training quantization. These results demonstrate our pipeline as a viable solution for enabling real-time VLM deployment in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:1743a914c940e5079fe3c10bdcc89a52d5ba4d9c"
+      ],
+      "semantic_scholar_id": "1743a914c940e5079fe3c10bdcc89a52d5ba4d9c",
+      "canonical_id": "arXiv:2506.07416",
+      "arxiv_id": "2506.07416",
+      "doi": "10.48550/arXiv.2506.07416",
+      "authors": [
+        "Jin Huang",
+        "Yu-Chao Jin",
+        "Le An",
+        "Josh Park"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Online Pseudo-average Shifting Attention(PASA) for Robust Low-precision LLM Inference: Algorithms and Numerical Analysis",
+      "source_url": "https://arxiv.org/abs/2503.01873",
+      "year": 2025,
+      "published": "2025-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention calculation is extremely time-consuming for long-sequence inference tasks, such as text or image/video generation, in large models. To accelerate this process, we developed a low-precision, mathematically-equivalent algorithm called PASA, based on Flash Attention. PASA introduces two novel techniques: online pseudo-average shifting and global recovering. These techniques enable the use of half-precision computation throughout the Flash Attention process without incurring overflow instability or unacceptable numerical accuracy loss. This algorithm enhances performance on memory-restricted AI hardware architectures, such as the Ascend Neural-network Processing Unit(NPU), by reducing data movement and increasing computational FLOPs. The algorithm is validated using both designed random benchmarks and real large models. We find that the large bias and amplitude of attention input data are critical factors contributing to numerical overflow ($>65504$ for half precision) in two different categories of large models (Qwen2-7B language models and Stable-Video-Diffusion multi-modal models). Specifically, overflow arises due to the large bias in the sequence dimension and the resonance mechanism between the query and key in the head dimension of the Stable-Video-Diffusion models. The resonance mechanism is defined as phase coincidence or 180-degree phase shift between query and key matrices. It will remarkably amplify the element values of attention score matrix. This issue also applies to the Qwen models. Additionally, numerical accuracy is assessed through root mean square error (RMSE) and by comparing the final generated texts and videos to those produced using high-precision attention.",
+      "identifiers": [
+        "SemanticScholar:4ab82054ff238ea993e7be78951c964ae731a7af"
+      ],
+      "semantic_scholar_id": "4ab82054ff238ea993e7be78951c964ae731a7af",
+      "canonical_id": "arXiv:2503.01873",
+      "arxiv_id": "2503.01873",
+      "doi": "10.48550/arXiv.2503.01873",
+      "authors": [
+        "Long Cheng",
+        "Qichen Liao",
+        "Fan Wu",
+        "Junlin Mu",
+        "Teng-Fei Han",
+        "Zhen-Qi Qiu",
+        "Lianqiang Li",
+        "Tianyi Liu",
+        "Fangzheng Miao",
+        "Ke Gao",
+        "Liang Wang",
+        "Zhen Zhang",
+        "Qian-De Yin"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 611,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.07212",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.07212",
+        "id:SemanticScholar:51123810b81be9dbf03e1db312478c532adc90b5",
+        "id:arXiv:2601.07212",
+        "title:miprun optimize large language model pruning via mutual information",
+        "url:https://arxiv.org/abs/2601.07212"
+      ],
+      "record": {
+        "title": "MI-PRUN: Optimize Large Language Model Pruning via Mutual Information",
+        "source_url": "https://arxiv.org/abs/2601.07212",
+        "year": 2026,
+        "published": "2026-01-12",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have become indispensable across various domains, but this comes at the cost of substantial computational and memory resources. Model pruning addresses this by removing redundant components from models. In particular, block pruning can achieve significant compression and inference acceleration. However, existing block pruning methods are often unstable and struggle to attain globally optimal solutions. In this paper, we propose a mutual information based pruning method MI-PRUN for LLMs. Specifically, we leverages mutual information to identify redundant blocks by evaluating transitions in hidden states. Additionally, we incorporate the Data Processing Inequality (DPI) to reveal the relationship between the importance of entire contiguous blocks and that of individual blocks. Moreover, we develop the Fast-Block-Select algorithm, which iteratively updates block combinations to achieve a globally optimal solution while significantly improving the efficiency. Extensive experiments across various models and datasets demonstrate the stability and effectiveness of our method.",
+        "identifiers": [
+          "SemanticScholar:51123810b81be9dbf03e1db312478c532adc90b5"
+        ],
+        "semantic_scholar_id": "51123810b81be9dbf03e1db312478c532adc90b5",
+        "canonical_id": "arXiv:2601.07212",
+        "arxiv_id": "2601.07212",
+        "doi": "10.48550/arXiv.2601.07212",
+        "authors": [
+          "Hao Zhang",
+          "Zhibin Zhang",
+          "Guang-Xin Wu",
+          "He Chen",
+          "Jia-Feng Guo",
+          "Xue-Qi Cheng"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 291,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.10953",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.10953",
+        "id:SemanticScholar:930f348f5b96bff52314a3fc76a4102f3177318e",
+        "id:arXiv:2602.10953",
+        "title:search or accelerate confidenceswitched position beam search for diffusion language models",
+        "url:https://arxiv.org/abs/2602.10953"
+      ],
+      "record": {
+        "title": "Search or Accelerate: Confidence-Switched Position Beam Search for Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2602.10953",
+        "year": 2026,
+        "published": "2026-02-11",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) generate text by iteratively denoising a masked sequence, repeatedly deciding which positions to commit at each step. Standard decoding follows a greedy rule: unmask the most confident positions, yet this local choice can lock the model into a suboptimal unmasking order, especially on reasoning-heavy prompts. We present SOAR, a training-free decoding algorithm that adapts its behavior to the model's uncertainty. When confidence is low, SOAR briefly widens the search over alternative unmasking decisions to avoid premature commitments; when confidence is high, it collapses the search and decodes many positions in parallel to reduce the number of denoising iterations. Across mathematical reasoning and code generation benchmarks (GSM8K, MBPP, HumanEval) on Dream-7B and LLaDA-8B, SOAR improves generation quality while maintaining competitive inference speed, offering a practical way to balance quality and efficiency in DLM decoding. Our Code is available at https://github.com/duterscmy/SOAR",
+        "identifiers": [
+          "SemanticScholar:930f348f5b96bff52314a3fc76a4102f3177318e"
+        ],
+        "semantic_scholar_id": "930f348f5b96bff52314a3fc76a4102f3177318e",
+        "canonical_id": "arXiv:2602.10953",
+        "arxiv_id": "2602.10953",
+        "doi": "10.48550/arXiv.2602.10953",
+        "authors": [
+          "Ming-Yu Cao",
+          "Alvaro H. C. Correia",
+          "Christos Louizos",
+          "Shi-Wei Liu",
+          "Lu Yin"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 261,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.24847",
+      "identity_tokens": [
+        "id:SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326",
+        "id:arXiv:2609.24847",
+        "title:spectra adaptive execution of speculative decoding on a runtimereconfigurable tiled architecture",
+        "url:https://arxiv.org/abs/2609.24847"
+      ],
+      "record": {
+        "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+        "source_url": "https://arxiv.org/abs/2609.24847",
+        "year": 2026,
+        "published": "2026-09-21",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+        "identifiers": [
+          "SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326"
+        ],
+        "semantic_scholar_id": "a74c8a785b8ee75df581f0b6d99da779be35a326",
+        "canonical_id": "arXiv:2609.24847",
+        "arxiv_id": "2609.24847",
+        "authors": [
+          "G. Tombesi",
+          "William Baisi",
+          "Je Yang",
+          "Elisavet Lydia Alvanaki",
+          "Kevin J. Lee",
+          "Michael S. Lippe",
+          "Biruk B. Seyoum",
+          "Luca P. Carloni"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 39,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.30832",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2605.30832",
+        "id:SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa",
+        "id:arXiv:2605.30832",
+        "title:slat segmentlevel adaptive trimming for efficient cot reasoning",
+        "url:https://arxiv.org/abs/2605.30832"
+      ],
+      "record": {
+        "title": "SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning",
+        "source_url": "https://arxiv.org/abs/2605.30832",
+        "year": 2026,
+        "published": "2026-05-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent advances in Large Reasoning Models have significantly improved chain-of-thought (CoT) capabilities via reinforcement learning (RL). However, generated reasoning chains frequently suffer from structural redundancy (i.e., \\emph{overthinking}), incurring high computational overhead without improving answer correctness. Existing mitigation strategies typically rely on token-uniform length penalties, which provide coarse, segment-agnostic pressure toward shorter outputs and can inadvertently suppress useful reasoning alongside redundancy. To address this, we demonstrate that inefficiency concentrates in high-probability segments with low marginal utility. We derive a theoretical characterization of segment suboptimality under the correctness-length trade-off objective and propose \\textsc{SLAT} (Segment-Level Adaptive Trimming), an RL framework that selectively suppresses redundant segments based on this criterion. Empirical results on standard benchmarks indicate that \\textsc{SLAT} establishes a superior accuracy-efficiency Pareto frontier, reducing reasoning length by $50\\%$ relative to uncompressed baselines while maintaining competitive accuracy. Overall, our results suggest that theoretically grounded, segment-aware trimming is a promising direction for efficient CoT reasoning in large language models.",
+        "identifiers": [
+          "SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa"
+        ],
+        "semantic_scholar_id": "06fc6178df4128519609bcf459120c54ce1659aa",
+        "canonical_id": "arXiv:2605.30832",
+        "arxiv_id": "2605.30832",
+        "doi": "10.48550/arXiv.2605.30832",
+        "authors": [
+          "Jiangqi Yao",
+          "Xiong Luo",
+          "Ran Cheng",
+          "Kay Chen Tan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 154,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.18916",
+      "identity_tokens": [
+        "id:SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660",
+        "id:arXiv:2609.18916",
+        "title:higherorder pruning of experts in mixtureofexperts language models",
+        "url:https://arxiv.org/abs/2609.18916"
+      ],
+      "record": {
+        "title": "Higher-order pruning of experts in mixture-of-experts language models",
+        "source_url": "https://arxiv.org/abs/2609.18916",
+        "year": 2026,
+        "published": "2026-09-16",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) language models suffer from large parameter counts, which create a significant memory bottleneck. Expert pruning is the most direct approach for reducing this parameter count, yet existing methods make pruning decisions for each expert independently, and assume experts'contributions are purely additive. In reality, expert usage in MoEs is inherently cooperative. We derive HOPE (Higher-Order Pruning of Experts), a second-order pruning objective which provably minimizes an upper bound on the error resulting from pruning. We show that REAP (a state-of-the-art first-order pruning method) is a special case of HOPE where interaction terms are ignored. Across three frontier MoE models (up to 122B parameters), two distinct calibration sets, and multiple benchmarks (including math, instruction following, coding, and an agentic suite), we demonstrate that HOPE produces better pruning decisions than existing methods, and its advantage is most pronounced at high pruning rates and on challenging agentic workloads. At 50% pruning, HOPE outperforms all baselines and achieves an average rank of 1.58 out of 5 methods (versus 2.42 for the next-best method, REAP), with gains of up to +6.1% on agentic coding. Over all conditions, HOPE again achieves the best average rank and surpasses every other method in the majority of head-to-head comparisons. By preserving cooperative expert structure that first-order methods ignore, HOPE enables aggressive compression with minimal degradation, particularly on complex tasks where diverse expert combinations are invoked over long sequences.",
+        "identifiers": [
+          "SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+        ],
+        "semantic_scholar_id": "d4a3433a065ad5e51888ac53242f33739c5e5660",
+        "canonical_id": "arXiv:2609.18916",
+        "arxiv_id": "2609.18916",
+        "authors": [
+          "Alex M. Tseng",
+          "Prannay Kaul",
+          "L. Zancato",
+          "Wei Xia",
+          "Stefan 0 Soatto"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.03829",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.03829",
+        "id:SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3",
+        "id:arXiv:2604.03829",
+        "title:mambalaya einsumbased fusion optimizations on statespace models",
+        "url:https://arxiv.org/abs/2604.03829"
+      ],
+      "record": {
+        "title": "Mambalaya: Einsum-Based Fusion Optimizations on State-Space Models",
+        "source_url": "https://arxiv.org/abs/2604.03829",
+        "year": 2026,
+        "published": "2026-04-04",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mamba is an emerging, complex workload with various short-range and long-range dependencies, nonlinearities, and elementwise computations that are unable to run at near-peak speeds on modern hardware. Specifically, Mamba's complex dependency graph makes fusion across its full operator cascade difficult, leaving substantial inter-operator memory traffic on the table. To address these challenges, we propose Mambalaya, a novel reconfigurable accelerator that leverages fusion to overcome the limitations of Mamba. We use the recently proposed cascade-of-Einsums abstraction to characterize Mamba's full computational structure, then apply the extended Einsum framework to systematically explore inter-Einsum fusion opportunities. This principled approach yields a series of fusion mappings that reduce off-chip inter-Einsum traffic. These mappings are supported by the underlying Mambalaya architecture. Mambalaya achieves a layer performance speedup of 4.9$\\times$ for prefill and 1.9$\\times$ for generation over MARCA. In prefill-dominated scenarios, it achieves up to 1.5$\\times$ over a recent fine-grained, memory-aware fusion accelerator for Mamba.",
+        "identifiers": [
+          "SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3"
+        ],
+        "semantic_scholar_id": "03d89e5e083813143ff91c0b71627382984408c3",
+        "canonical_id": "arXiv:2604.03829",
+        "arxiv_id": "2604.03829",
+        "doi": "10.48550/arXiv.2604.03829",
+        "authors": [
+          "Toluwanimi O. Odemuyiwa",
+          "John D. Owens",
+          "J. Emer",
+          "Michael Pellauer"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 209,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.07416",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.07416",
+        "id:SemanticScholar:1743a914c940e5079fe3c10bdcc89a52d5ba4d9c",
+        "id:arXiv:2506.07416",
+        "title:litevlm a lowlatency visionlanguage model inference pipeline for resourceconstrained environments",
+        "url:https://arxiv.org/abs/2506.07416"
+      ],
+      "record": {
+        "title": "LiteVLM: A Low-Latency Vision-Language Model Inference Pipeline for Resource-Constrained Environments",
+        "source_url": "https://arxiv.org/abs/2506.07416",
+        "year": 2025,
+        "published": "2025-06-09",
+        "venue": "arXiv.org",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "This paper introduces an efficient Vision-Language Model (VLM) pipeline specifically optimized for deployment on embedded devices, such as those used in robotics and autonomous driving. The pipeline significantly reduces the computational overhead by jointly leveraging patch selection to filter irrelevant camera views, a token selection module to reduce input sequence length for the LLM, and speculative decoding to accelerate token generation. Evaluation on the NVIDIA DRIVE Thor platform for automonous driving application, our pipeline achieves $2.5\\times$ end-to-end latency reduction without compromising task accuracy. The speed-up further increases to $3.2\\times$ when applying FP8 post-training quantization. These results demonstrate our pipeline as a viable solution for enabling real-time VLM deployment in resource-constrained environments.",
+        "identifiers": [
+          "SemanticScholar:1743a914c940e5079fe3c10bdcc89a52d5ba4d9c"
+        ],
+        "semantic_scholar_id": "1743a914c940e5079fe3c10bdcc89a52d5ba4d9c",
+        "canonical_id": "arXiv:2506.07416",
+        "arxiv_id": "2506.07416",
+        "doi": "10.48550/arXiv.2506.07416",
+        "authors": [
+          "Jin Huang",
+          "Yu-Chao Jin",
+          "Le An",
+          "Josh Park"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 508,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.01873",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2503.01873",
+        "id:SemanticScholar:4ab82054ff238ea993e7be78951c964ae731a7af",
+        "id:arXiv:2503.01873",
+        "title:online pseudoaverage shifting attentionpasa for robust lowprecision llm inference algorithms and numerical analysis",
+        "url:https://arxiv.org/abs/2503.01873"
+      ],
+      "record": {
+        "title": "Online Pseudo-average Shifting Attention(PASA) for Robust Low-precision LLM Inference: Algorithms and Numerical Analysis",
+        "source_url": "https://arxiv.org/abs/2503.01873",
+        "year": 2025,
+        "published": "2025-02-26",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Attention calculation is extremely time-consuming for long-sequence inference tasks, such as text or image/video generation, in large models. To accelerate this process, we developed a low-precision, mathematically-equivalent algorithm called PASA, based on Flash Attention. PASA introduces two novel techniques: online pseudo-average shifting and global recovering. These techniques enable the use of half-precision computation throughout the Flash Attention process without incurring overflow instability or unacceptable numerical accuracy loss. This algorithm enhances performance on memory-restricted AI hardware architectures, such as the Ascend Neural-network Processing Unit(NPU), by reducing data movement and increasing computational FLOPs. The algorithm is validated using both designed random benchmarks and real large models. We find that the large bias and amplitude of attention input data are critical factors contributing to numerical overflow ($>65504$ for half precision) in two different categories of large models (Qwen2-7B language models and Stable-Video-Diffusion multi-modal models). Specifically, overflow arises due to the large bias in the sequence dimension and the resonance mechanism between the query and key in the head dimension of the Stable-Video-Diffusion models. The resonance mechanism is defined as phase coincidence or 180-degree phase shift between query and key matrices. It will remarkably amplify the element values of attention score matrix. This issue also applies to the Qwen models. Additionally, numerical accuracy is assessed through root mean square error (RMSE) and by comparing the final generated texts and videos to those produced using high-precision attention.",
+        "identifiers": [
+          "SemanticScholar:4ab82054ff238ea993e7be78951c964ae731a7af"
+        ],
+        "semantic_scholar_id": "4ab82054ff238ea993e7be78951c964ae731a7af",
+        "canonical_id": "arXiv:2503.01873",
+        "arxiv_id": "2503.01873",
+        "doi": "10.48550/arXiv.2503.01873",
+        "authors": [
+          "Long Cheng",
+          "Qichen Liao",
+          "Fan Wu",
+          "Junlin Mu",
+          "Teng-Fei Han",
+          "Zhen-Qi Qiu",
+          "Lianqiang Li",
+          "Tianyi Liu",
+          "Fangzheng Miao",
+          "Ke Gao",
+          "Liang Wang",
+          "Zhen Zhang",
+          "Qian-De Yin"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 611,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:3a103b14a2c5b28f52f985941ee9c973c7748765ad6c9378dfbc20d18a7b7796",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
