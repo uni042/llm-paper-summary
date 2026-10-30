@@ -44,6 +44,8 @@ quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_job_source: "WORKLIST-45.md rank 47; previous partial r02"
 version_scope: "論文本文はPreprints.org 2026-08-11 v1。正式誌IEEE Access 2026-10-16の書誌は著者公式リポジトリで確認。補足資料の312件・1459割当は2026-09-19固定版。304件の原稿集計と混同しない。"
+last_audited: null
+audit_version: 0
 ---
 
 # 投機的復号を「生成→検証」からシステム共同設計へ拡張するサーベイ

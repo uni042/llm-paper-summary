@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（71本）
+## 自動生成の論文一覧（72本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -109,6 +109,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-08 · [Unified Lookup-Table Inference with Signed-Digit K/V Caches for Ternary LLMs](2026-2608.03229-unified-lookup-table-inference-with-signed-digit-k-v-caches-for-ternary-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   SALUTは三値重みの線形演算を高速化する参照表（LUT）演算器と、動的に生成される高精度KVキャッシュを処理する注意演算器が分離してしまう問題を解く。
+
+- **2026-08 · [The Joule Point: an Energy-Optimal Operating Point for AI Inference](2026-2609.27926-the-joule-point-an-energy-optimal-operating-point-for-ai-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし、GPUにはアイドルに近い状態でも必要な固定電力があり、高負荷領域では電力が処理速度より急激に増える。GPUを「A100を何枚割り当てるか」というハードウェア単位だけで扱うのではなく、(GPU種類、power cap) の組を動作点として扱う。
 
 - **2026-08 · [Spatial Prefix Caching for Wireless Edge LLM Inference: A Stochastic-Geometry and Queueing Framework](2026-2608.01126-spatial-prefix-caching-for-wireless-edge-llm-inference-a-stochastic-geom.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

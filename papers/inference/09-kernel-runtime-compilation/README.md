@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（220本）
+## 自動生成の論文一覧（221本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -309,6 +309,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-06 · [Approaching Shannon Bound with Lossless LLM Weight Compression](2026-2606.15789-shannon-bound-lossless-weight-compression.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   GEMMタイルごとにANSで重みを損失なく圧縮し、共有メモリへ復号しながらテンソルコア計算と重ねることで、Mixtral-176Bの最大バッチを20から95へ増やし、SGLangスループットを最大1.6倍にする。
+
+- **2026-06 · [APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing](2026-2606.08761-apex4-efficient-pure-w4a4-llm-inference-via-intra-sm-compute-rebalancing.md)**  
+  実装：[✓](https://github.com/APEX4-W4A4/APEX4-W4A4) ・ リポジトリ内被引用：0  
+  ところが、量子化精度を守るため重み・活性化を細かいグループへ分けると、各グループのINT32行列積結果に対してFP32スケールを適用しなければならない。
 
 - **2026-06 · [AgentCompile: An LLM-Guided Compiler for Direct CUDA Inference](2026-2606.07665-agentcompile-llm-guided-direct-cuda-inference.md)**  
   実装：[✓](https://github.com/veneno1213822/AgentCompile) ・ リポジトリ内被引用：0  

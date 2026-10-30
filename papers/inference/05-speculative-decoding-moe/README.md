@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（337本）
+## 自動生成の論文一覧（338本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -443,6 +443,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-10 · [From Positionwise Confidence to Prefix Scheduling: Verifier Skipping in Speculative Decoding](2026-2608.14787-from-positionwise-confidence-to-prefix-scheduling-verifier-skipping-in-s.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の投機的復号では、軽いドラフトモデルが提案した複数トークンを大きいターゲットモデルがまとめて検証する。
+
+- **2026-10 · [From Draft-Then-Verify to Systems Co-Design: A Survey of Speculative Decoding for Autoregressive Large Language Models](2026-186df873bd7f-from-draft-then-verify-to-systems-co-design-a-survey-of-speculative-deco.md)**  
+  実装：[✓](https://github.com/LifeIsSoSolong/awesome-speculative-decoding) ・ リポジトリ内被引用：0  
+  候補の枝分かれ、検証規則、KVキャッシュの巻き戻し、同時要求のバッチ処理、GPU間通信まで含めると、単純な「ドラフト方式別」分類では結果を比較しきれない。ここで詳しく検証した全文は2026年8月11日公開のPreprints.org v1であり、同じ論文の査読済みIEEE Access版が10月16日に公開されたことは著者の公式補足リポジトリで確認した。
 
 - **2026-10 · [DRelay: Global Draft Context for Prefix-Aware Parallel Speculative Decoding Repair](2026-2610.01439-drelay-global-draft-context-for-prefix-aware-parallel-speculative-decodi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

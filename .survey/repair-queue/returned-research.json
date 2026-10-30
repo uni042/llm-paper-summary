@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T06:46:21+00:00",
+  "generated_at": "2026-10-30T07:15:24+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1710,33 +1710,6 @@
       "worker_run_key": "20261029-2258-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "arXiv:2609.33135",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T16:02:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 232 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6052,
-        "body_paragraphs": 28,
-        "method_chars": 1673,
-        "method_paragraphs": 8,
-        "evaluation_chars": 232,
-        "limitation_chars": 846,
-        "insufficiency_flags": [
-          "評価説明量 232 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-5f603dc2f16a--libfile_afd2096e97648191930c7b4fb3b41da9--2026-2609.33135-mpfa-qk4pv8-blackwell-attention-research-20261029-2340-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-5f603dc2f16a--libfile_afd2096e97648191930c7b4fb3b41da9--2026-2609.33135-mpfa-qk4pv8-blackwell-attention-research-20261029-2340-scheduled-chat-45-.json",
-      "worker_run_key": "20261029-2340-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.10875",
       "title": null,
       "source_url": null,
@@ -1848,33 +1821,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3d123818f212--libfile_60f2817cdbd481918f0cd0479bf598e2--2026-faascale-mlsys26-bibliography-repair-20261030-0449-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-3d123818f212--libfile_60f2817cdbd481918f0cd0479bf598e2--2026-faascale-mlsys26-bibliography-repair-20261030-0449-scheduled-chat-45-r01.json",
       "worker_run_key": "20261030-0449-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2606.08761",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T02:41:47+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 370 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4972,
-        "body_paragraphs": 30,
-        "method_chars": 932,
-        "method_paragraphs": 5,
-        "evaluation_chars": 370,
-        "limitation_chars": 459,
-        "insufficiency_flags": [
-          "評価説明量 370 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4500d17091db--libfile_f2c89e935dc08191a249bcddbe15e382--2026-2606.08761-apex4-pure-w4a4-intra-sm-rebalancing-research-20261030-0449-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4500d17091db--libfile_f2c89e935dc08191a249bcddbe15e382--2026-2606.08761-apex4-pure-w4a4-intra-sm-rebalancing-research-20261030-0449-scheduled-cha.json",
-      "worker_run_key": "20261030-0449-scheduled-chat-45/r02"
     },
     {
       "canonical_id": "SemanticScholar:4dd0221f8b4f8daa0487aaab38fd9c4574ad3bb0",
@@ -2551,8 +2497,8 @@
     },
     {
       "canonical_id": "arXiv:2508.08435",
-      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
-      "source_url": "https://arxiv.org/pdf/2508.08435",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T06:40:06+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-00",
@@ -2576,6 +2522,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.json",
       "worker_run_key": "20261030-1400-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1007/s11432-024-4487-8",
+      "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
+      "source_url": "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf",
+      "returned_at": "2026-10-30T07:08:31+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6518,
+        "body_paragraphs": 29,
+        "method_chars": 1833,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261030-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.33135",
+      "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
+      "source_url": "https://arxiv.org/html/2609.33135",
+      "returned_at": "2026-10-30T07:13:22+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9994,
+        "body_paragraphs": 55,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 689,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
     }
   ]
 }

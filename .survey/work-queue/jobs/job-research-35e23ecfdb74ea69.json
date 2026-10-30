@@ -35,10 +35,15 @@
   "selection_reason": "APEX4はSM内Tensor Core/CUDA Coreの処理量比に合わせてINT4 GEMMの逆量子化粒度を調整する。vLLMに差し替え可能なカーネルを実装し、L40Sで最大1.66倍、RTX3090で1.78倍、A40で2.09倍のエンドツーエンド高速化を報告する直接的な推論カーネル研究。",
   "semantic_scholar_id": "6b77e12548561e4dad303e754b0c95d87af34000",
   "source_url": "https://arxiv.org/abs/2606.08761",
-  "status": "ready",
+  "status": "superseded",
   "title": "APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T07:15:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2606.08761-apex4-efficient-pure-w4a4-llm-inference-via-intra-sm-compute-rebalancing.md",
+  "represented_canonical_id": "arXiv:2606.08761",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

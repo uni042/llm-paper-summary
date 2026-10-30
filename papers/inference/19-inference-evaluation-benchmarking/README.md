@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（113本）
+## 自動生成の論文一覧（114本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -89,6 +89,10 @@
 - **2026-09 · [MassAlloc Attention: Let Attention Allocate Its Own Compute](2026-2609.32712-massalloc-attention-let-attention-allocate-its-own-compute.md)**  
   実装：[✓](https://github.com/HKUSTDial/flash-sparse-attention) ・ リポジトリ内被引用：0  
   MassAlloc 注意機構（MALA）は、長文脈で計算負荷が大きくなる自己注意のうち、クエリとキーの内積スコアを求めた後の処理を削減する方式である。原著は8基のH100を用いた128K系列の注意演算子ベンチマークで、全注意（Full 注意機構; FullAttn）に対し順伝播の遅延を2.2倍、逆伝播を3.0倍、復号を1.6倍改善したと報告する。
+
+- **2026-09 · [MaskCoFT: Masked Co-Adaptive Fine-Tuning for Memory-Efficient MoE Inference](2026-2609.34077-maskcoft-masked-co-adaptive-fine-tuning-for-memory-efficient-moe-inferen.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  GPUメモリが不足する場合は専門家をCPUへオフロードし、必要時にGPUへロードする。原著はMoE-OffloadingにおけるMixtral-8×7Bのデコード時間で、専門家ロードが86%、専門家計算が3%という分析を示す。
 
 - **2026-09 · [KREX: Concurrent Kernel Benchmarking on Shared GPUs via Region-Granular Exclusivity](2026-2609.30057-krex-concurrent-kernel-benchmarking-on-shared-gpus-via-region-granular-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
