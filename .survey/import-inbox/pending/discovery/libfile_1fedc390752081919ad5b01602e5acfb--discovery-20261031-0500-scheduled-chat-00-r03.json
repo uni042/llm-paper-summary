@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0500-scheduled-chat-00/r03",
+  "reference_main_sha": "9b549d8a9d6426cca023726866319ed0466aab04",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.02312",
+      "identity_tokens": [
+        "arXiv:2510.02312"
+      ],
+      "title": "KaVa: Latent Reasoning via Compressed KV-Cache Distillation",
+      "reason": "一次arXiv書誌・要旨では教師の圧縮KVキャッシュ表現を連続潜在トークンへ自己蒸留するKaVaを提案し、自然言語CoTの冗長性を抑えつつ潜在推論の精度を改善する。KVを学習信号として使うが、主貢献は学習時の推論蒸留であり実運用KVキャッシュ管理やデコード高速化の測定は要旨で確認できない。",
+      "source_url": "https://arxiv.org/abs/2510.02312",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 185,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.18428",
+      "identity_tokens": [
+        "arXiv:2405.18428"
+      ],
+      "title": "DiG: Scalable and Efficient Diffusion Models with Gated Linear Attention",
+      "reason": "一次arXiv書誌・要旨では画像生成Diffusion Transformerにサブ二次のGated Linear Attentionを導入するDiGを提案。1792解像度のDiG-S/2はDiT-S/2より2.5倍高速、GPUメモリ75.7%削減と報告する。注意演算の高速化手法は関連するが、対象は画像拡散モデルでLLMデコード・サービングでの検証はない。",
+      "source_url": "https://arxiv.org/abs/2405.18428",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 187,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.09503",
+      "identity_tokens": [
+        "arXiv:2605.09503"
+      ],
+      "title": "PermuQuant: Lowering Per-Group Quantization Error by Reordering Channels for Diffusion Models",
+      "reason": "一次arXiv書誌・要旨ではチャネルを重み・活性の二次モーメントで並べ替え、低bitグループ量子化誤差を抑えるPermuQuantを提案。FLUX.1-dev/RTX5090のW4A4 NVFP4で1ステップ最大1.7倍高速、DiTメモリ3.5倍削減と報告。量子化手法はLLMにも応用可能だが評価は画像拡散モデルに限定される。",
+      "source_url": "https://arxiv.org/abs/2605.09503",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 213,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.01560",
+      "identity_tokens": [
+        "arXiv:2610.01560"
+      ],
+      "title": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+      "reason": "一次arXiv書誌・要旨では音声言語モデルの潜在推論を複数候補分布と未来状態チャンクの同時予測で高速化し、問題難度に応じて思考量を変えるAURALを提案。Qwen2.5-OmniでCoT系基準に対し初回答トークンまで1.22秒から0.10秒、11.8倍短縮と報告。音声LLMの推論遅延と逐次forward回数を直接削減する。",
+      "source_url": "https://arxiv.org/abs/2610.01560",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 222,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.21069",
+      "identity_tokens": [
+        "arXiv:2601.21069"
+      ],
+      "title": "Any Orthogonal Transform Will Do: Range Reduction Explains Rotation-Based Quantization for Super-Resolution",
+      "reason": "一次arXiv書誌・要旨では超解像TransformerにおけるHadamard等の回転量子化が効く理由を、直交変換後のレンジ縮小と分布の正規化で検証する。45構成で回転後のPSNR改善を報告するが、実験は画像超解像に限定され、LLMの重み量子化や推論性能への適用は未確認。",
+      "source_url": "https://arxiv.org/abs/2601.21069",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 224,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.06078",
+      "identity_tokens": [
+        "arXiv:2606.06078"
+      ],
+      "title": "Knowledge Distillation for Visual Autoregressive Models",
+      "reason": "一次arXiv書誌・要旨では画像自己回帰生成の知識蒸留で長い生成系列と視覚トークン曖昧性が教師信号を劣化させる問題を分析し、学生生成サンプル上で選択的に教師を適用するVarKDを提案。モデル圧縮は隣接分野だが主対象は画像生成モデルの蒸留学習で、LLM推論システムの直接最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2606.06078",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 228,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.18502",
+      "identity_tokens": [
+        "arXiv:2606.18502"
+      ],
+      "title": "Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications",
+      "reason": "一次arXiv書誌・要旨では企業向けLLMマルチエージェントのドメイン適応に加え、投機的デコードとFP8量子化・校正を組み合わせた推論最適化を統合。企業ワークロードで品質維持と長尾頑健性を確保しつつスループット4.48倍改善を報告する。学習段階も含むが、推論サービング高速化を明示的に評価する。",
+      "source_url": "https://arxiv.org/abs/2606.18502",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 229,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2202.10870",
+      "identity_tokens": [
+        "arXiv:2202.10870"
+      ],
+      "title": "Socialformer: Social Network Inspired Long Document Modeling for Document Ranking",
+      "reason": "一次arXiv書誌・要旨では文書ランキング向けTransformerの遠距離結合を社会ネットワーク風の疎注意グラフで構成し、部分グラフ分割で計算を効率化するSocialformerを提案。疎注意の計算設計は関連するが、実験は文書ランキングであり生成LLMの長文脈推論・KVキャッシュでの検証はない。",
+      "source_url": "https://arxiv.org/abs/2202.10870",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:06:03+09:00",
+      "last_checked_at": "2026-10-31T05:06:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 230,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2108.02347",
+      "identity_tokens": [
+        "arXiv:2108.02347"
+      ],
+      "title": "FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention",
+      "reason": "一次arXiv書誌・要旨では近距離の帯行列注意と遠距離の低ランク注意に分解するFMMformerを提案。系列長に対する時間・メモリ計算量を線形にし、Long Range Arenaと言語モデリングで評価。LRAの5課題平均正解率は60.74%対標準Transformer 58.70%と報告。注意計算量・メモリの直接最適化に該当するが、大規模生成LLMサービング実測はない。",
+      "source_url": "https://arxiv.org/abs/2108.02347",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:50+09:00",
+      "last_checked_at": "2026-10-31T05:04:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 250,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.17445",
+      "identity_tokens": [
+        "arXiv:2403.17445"
+      ],
+      "title": "Incorporating Exponential Smoothing into MLP: A Simple but Effective Sequence Model",
+      "reason": "一次arXiv書誌・要旨では指数平滑化の状態空間モデルを要素単位MLPへ組み込み、パラメータ増分1%未満でLong Range Arena上S4に近い性能を報告する。系列モデルの簡素化という技術的接点はあるが、生成LLMの推論メモリ・デコード・サービング効率の実証は要旨から確認できない。",
+      "source_url": "https://arxiv.org/abs/2403.17445",
+      "body_check": "primary_arxiv_metadata_abstract_screen_only; body_not_read; retrieved_via_research_index",
+      "first_checked_at": "2026-10-31T05:04:50+09:00",
+      "last_checked_at": "2026-10-31T05:04:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 255,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
