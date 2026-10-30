@@ -1,33 +1,54 @@
 ---
-canonical_id: "DOI:10.1007/s11432-024-4487-8"
-title: "Mico: efficient query scheduling for multi-cloud deployed LLM inference service"
-summary: "複数クラウドのLLM推論で出力長予測に基づくクラウド間クエリ割当と、処理中バッチへ新クエリを挿入する反復単位スケジューリングを組み合わせる。GPT-2/GPT-Neo・A6000の評価で、3クラウド200要求・batch3ではKV長累積が44.89%減り、処理スループットは1.79倍。条件全体では最大2.22倍だが、クラウド間ネットワーク差や異種GPU性能は実験で固定され、実環境への一般化には制約がある。"
-list_summary: "Micoは出力長予測でクラウド間負荷を均衡化し、バッチ内の完了スロットへ新要求を挿入。KV占有量44.89%削減、スループット最大2.22倍。"
+canonical_id: DOI:10.1007/s11432-024-4487-8
+title: 'Mico: efficient query scheduling for multi-cloud deployed LLM inference service'
+summary: 複数クラウドのLLM推論で出力長予測に基づくクラウド間クエリ割当と、処理中バッチへ新クエリを挿入する反復単位スケジューリングを組み合わせる。GPT-2/GPT-Neo・A6000の評価で、3クラウド200要求・batch3ではKV長累積が44.89%減り、処理スループットは1.79倍。条件全体では最大2.22倍だが、クラウド間ネットワーク差や異種GPU性能は実験で固定され、実環境への一般化には制約がある。
+list_summary: Micoは出力長予測でクラウド間負荷を均衡化し、バッチ内の完了スロットへ新要求を挿入。KV占有量44.89%削減、スループット最大2.22倍。
 authors:
-  - "Peizhuang Cong"
-  - "Tong Yang"
-  - "Yuchao Zhang"
-  - "Wendong Wang"
-  - "Ke Xu"
-published: "2026-01-04"
-publication: "Science China Information Sciences, 69, 132102 (2026)"
-publication_type: "journal_article"
-publication_status: "published"
-source: "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf"
+- Peizhuang Cong
+- Tong Yang
+- Yuchao Zhang
+- Wendong Wang
+- Ke Xu
+published: '2026-01-04'
+publication: Science China Information Sciences, 69, 132102 (2026)
+publication_type: journal_article
+publication_status: published
+source: https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf
 sources:
-  - "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf"
-  - "https://link.springer.com/article/10.1007/s11432-024-4487-8"
-implementation: "DistilBERT 66Mの10区間出力長分類器、クラウド間トークン負荷配分、KV/attention-maskを調整した反復単位のバッチ補充。GPT-2とGPT-Neo、A6000 GPUを各ノードに用いたシミュレートされた2〜9クラウドの均質構成。"
+- https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf
+- https://link.springer.com/article/10.1007/s11432-024-4487-8
+implementation: DistilBERT 66Mの10区間出力長分類器、クラウド間トークン負荷配分、KV/attention-maskを調整した反復単位のバッチ補充。GPT-2とGPT-Neo、A6000 GPUを各ノードに用いたシミュレートされた2〜9クラウドの均質構成。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-30T14:00:00+09:00"
-worker_run_key: "20261030-1400-scheduled-chat-00/r01"
-reference_main_sha: "7a729bc330fcc071e9c221aa6cf016ba1d8bfb1b"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-30T14:00:00+09:00'
+worker_run_key: 20261030-1400-scheduled-chat-00/r01
+reference_main_sha: 7a729bc330fcc071e9c221aa6cf016ba1d8bfb1b
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2001.04589
+  arxiv_id: '2001.04589'
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2305.13144
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:1909.08053
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2010.05680
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1145/3688351.3689164
+- canonical_id: DOI:10.18653/v1/d19-1633
+- canonical_id: arXiv:1904.09324
+- canonical_id: DOI:10.1109/jiot.2024.3524255
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2307.07982
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 # Mico：出力トークン長予測とバッチ補充によるマルチクラウドLLM推論スケジューリング
 
