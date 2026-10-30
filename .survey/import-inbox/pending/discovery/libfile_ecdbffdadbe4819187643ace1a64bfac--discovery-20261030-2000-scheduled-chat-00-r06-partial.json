@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2000-scheduled-chat-00/r06",
+  "reference_main_sha": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.23265",
+      "identity_tokens": [
+        "arXiv:2607.23265"
+      ],
+      "title": "WaveZip: Wavelet-Driven Space-Time Decoupling for Video Token Condensation",
+      "reason": "長時間動画の視覚トークンを、時間方向1Dウェーブレットでフレーム予算へ配分し、空間方向2Dウェーブレットの高周波成分で重要領域を保持する。学習不要の動画VLM推論圧縮で、10倍圧縮時に元性能の99.6%を維持すると報告する。",
+      "source_url": "https://arxiv.org/abs/2607.23265",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 173
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.21858",
+      "identity_tokens": [
+        "arXiv:2609.21858"
+      ],
+      "title": "Watermarkable Multi-Draft Speculative Sampling via Poisson Processes",
+      "reason": "ポアソン過程を使った複数ドラフトの厳密な投機的サンプリングを設計し、ドラフト不変性と受理効率を保ったまま不偏ウォーターマークを埋め込めるようにする。生成分布の整合性と投機的復号の受理率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2609.21858",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 174
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.06274",
+      "identity_tokens": [
+        "arXiv:2509.06274"
+      ],
+      "title": "IPR: Intelligent Prompt Routing with User-Controlled Quality-Cost Trade-offs",
+      "reason": "ユーザーが指定する品質許容度に応じて、軽量品質推定器で適切なLLMへ要求を振り分けるIPRを提案。11モデル・150万件の品質注釈付きデータで評価し、クラウド配備で品質を維持しながら費用43.9%削減、ルーティング遅延150ms未満を報告する。",
+      "source_url": "https://arxiv.org/abs/2509.06274",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 175
+    }
+  ]
+}
