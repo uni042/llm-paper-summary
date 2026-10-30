@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Pair-In, Pair-Out: Latent Multi-Token Prediction for Efficient LLMs",
+      "source_url": "https://arxiv.org/abs/2605.27255",
+      "year": 2026,
+      "published": "2026-05-26",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought reasoning has made autoregressive decoding the dominant inference cost of modern large language models. Existing methods target either the input side (latent compression) or the output side (speculative decoding and multi-token prediction, MTP), but the two lines of work have been pursued independently. Moreover, output-side methods must incur an expensive verifier pass to validate the unreliable draft tokens predicted by MTP. To address these issues, we propose \\textbf{Pair-In, Pair-Out (PIPO)}, which unifies both sides by viewing a latent compressor and an MTP head as mirror-image operations: the compressor folds two input tokens into one latent representation, while the MTP head unfolds one hidden state into one additional output token. To remove the verifier cost without sacrificing reliability, PIPO trains a lightweight confidence head that decides whether draft tokens should be accepted. We observe that On-Policy Distillation (OPD) naturally matches the rejection-sampling criterion of speculative decoding, so the confidence head can be trained alongside OPD with negligible extra cost. Experiments on AIME 2025, GPQA-Diamond, LiveCodeBench v6, and LongBench v2 with Qwen3.5-4B and 9B backbones show that PIPO improves pass@4 over regular decoding by up to $+7.15$ points, while delivering up to $2.64\\times$ first-token-latency and $2.07\\times$ per-token-latency speedups. Project Page: GitHub.com/RedAI-Infra/PIPO.",
+      "identifiers": [
+        "SemanticScholar:b657b2500095da3f0412a885eaf894a48a99a135"
+      ],
+      "semantic_scholar_id": "b657b2500095da3f0412a885eaf894a48a99a135",
+      "canonical_id": "arXiv:2605.27255",
+      "arxiv_id": "2605.27255",
+      "doi": "10.48550/arXiv.2605.27255",
+      "authors": [
+        "Wen-Hui Tan",
+        "Minghao Li",
+        "Xiao-Qian Ma",
+        "Siqi Fan",
+        "Xiu-Sheng Huang",
+        "Liu-Jie Zhang",
+        "Rui-Hua Song",
+        "Wei-Hang Chen"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 157,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PIPOは入力側で2トークンを1潜在表現へ畳み込むcompressorと、出力側で追加トークンを展開するMTP headを組み合わせる。検証器の追加前向き計算を避けるため、on-policy distillationに沿って学習する信頼度headがdraft受理を判断する。Qwen3.5-4B/9Bの数学・コード等で、要旨は初回トークン遅延最大2.64倍、トークン間遅延最大2.07倍の改善を報告。LLM生成の直接的な高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs",
+      "source_url": "https://arxiv.org/abs/2606.14277",
+      "year": 2026,
+      "published": "2026-06-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) have achieved remarkable success across diverse multimodal tasks, yet their practical deployment remains constrained by the computational burden arising from lengthy visual tokens. While visual token pruning has emerged as a promising solution, existing methods suffer from a fundamental limitation: once tokens are pruned at a specific layer, they become inaccessible to all subsequent layers, leading to premature information loss that can compromise model performance. Through empirical studies, we observe that different layers exhibit distinct visual region focus, indicating a varying optimal token subset across layers. Motivated by this insight, we propose Adaptive Layer-wise Visual Token Selection (ALVTS), a novel framework that breaks away from the conventional static token pruning paradigm. ALVTS incorporates a lightweight token selector to identify and route important tokens for further processing, while allowing less important tokens to skip the layer, thus minimizing computational redundancy. These two streams of tokens are seamlessly reintegrated before being fed into subsequent layers, facilitating adaptive compression across the entire model. Grounded in our importance consistency constrained low-rank approximation, the proposed token selection module closely emulates the full attention mechanism, effectively capturing its essential patterns without requiring model retraining. Extensive experiments on LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL validate the effectiveness of our method. With an 89% token compression ratio, ALVTS retains 96.7% of the original model's accuracy, achieving a superior efficiency-accuracy trade-off for LVLM inference.",
+      "identifiers": [
+        "SemanticScholar:65e16ddacc0629277ee1aa176ef3288ccfba21c8"
+      ],
+      "semantic_scholar_id": "65e16ddacc0629277ee1aa176ef3288ccfba21c8",
+      "canonical_id": "arXiv:2606.14277",
+      "arxiv_id": "2606.14277",
+      "doi": "10.48550/arXiv.2606.14277",
+      "authors": [
+        "Yong-Rui Chen",
+        "Kai Zhang",
+        "Zeliang Zong",
+        "Yu-Chen Lu",
+        "Wen-Ming Tan",
+        "Ye Ren",
+        "Ji-Lin Hu"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ALVTSは視覚トークンを永久に捨てず、層ごとに重要なものだけを計算経路へ送り、残りはその層をskipさせて次層前に再結合する。低ランク近似に重要度整合性を課した軽量selectorを用い、LLaVA-1.5、LLaVA-NeXT、Qwen2.5-VLで評価。長い視覚トークンによるLVLMの推論計算量を削減する直接的な手法であり、層ごとの注目領域差を利用する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "Efficient and Trainable Language Model Test-Time Scaling via Local Branch Routing",
+      "source_url": "https://arxiv.org/abs/2606.25354",
+      "year": 2026,
+      "published": "2026-06-24",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Test-time scaling improves language-model reasoning, but existing approaches often face a difficult trade-off: long chain-of-thought sampling remains single-threaded, while sentence- or solution-level search can be computationally expensive and hard to train end-to-end. We introduce Local Branch Routing (LBR), a token-level test-time scaling framework that expands a small local lookahead tree, forwards all sampled branches through the language model, and uses a lightweight router to select the depth-1 subtree to commit. By routing over the hidden states of candidate local futures, LBR allows each token decision to use evidence beyond the root next-token distribution while avoiding full solution-level search. The resulting prune-shift-grow decoding process preserves discrete branch identities and defines a tractable tree-trajectory likelihood: newly grown nodes are counted when first sampled, and router decisions are assigned explicit probabilities. This enables end-to-end reinforcement learning with verifiable rewards, jointly optimizing the base model and router under the same likelihood-ratio principle as discrete-token RLVR. On synthetic hierarchical-planning tasks, LBR shows that post-candidate hidden states provide useful routing evidence. On mathematical reasoning benchmarks, LBR improves both Pass@1 and Pass@32 over discrete chain-of-thought, vanilla discrete-token RLVR, and RL-compatible soft-token branching baselines. These results suggest that lightweight local branching offers an efficient, trainable, and discrete form of language-model test-time scaling.",
+      "identifiers": [
+        "SemanticScholar:83be76299e061c8611ec467a9f436d0e812c93ae"
+      ],
+      "semantic_scholar_id": "83be76299e061c8611ec467a9f436d0e812c93ae",
+      "canonical_id": "arXiv:2606.25354",
+      "arxiv_id": "2606.25354",
+      "doi": "10.48550/arXiv.2606.25354",
+      "authors": [
+        "Yu-Tong Yin",
+        "Ming-Yu Jin",
+        "Jinmei Pan",
+        "Chang Yang",
+        "Zi-Jie Xia",
+        "D. Pai",
+        "Shuming Hu",
+        "Zhen Zhang",
+        "Chenyang Zhao",
+        "Jin-Man Zhao",
+        "Wu-Jiang Xu",
+        "Raymond L. Li",
+        "X. Wang",
+        "Julian J. McAuley",
+        "Zhao-Ran Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 128,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LBRは次トークン選択時に小規模な先読み木を展開し、候補枝の隠れ状態をrouterが評価して深さ1の部分木を確定する。prune-shift-grow操作と木の軌跡尤度を定義し、検証可能報酬による強化学習で基盤モデルとrouterを共同最適化する。通常の逐次CoTと全解探索の中間にある推論時の分岐計算・探索効率を扱い、数学推論でPass@1/32を比較する。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet",
+      "source_url": "https://arxiv.org/abs/2606.06034",
+      "year": 2026,
+      "published": "2026-06-04",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Matrix inversion in chunk-wise parallel linear attention is a major bottleneck for long-context modeling, particularly on NPUs, where forward-substitution-based methods exhibit limited parallelism and poor hardware utilization. We propose a fast, Matrix Multiplication (MatMul)-based algorithm tailored for strictly lower-triangular matrices arising in chunk-wise linear attention. Motivated by the rapid growth of Neumann-series terms and the diagonal concentration of the inverse matrix, we employ a truncated Neumann expansion with structural masking and parallel residual correction to eliminate sequential dependencies. We further extend our method to low-bits INT by mitigating the dynamic range expansion arising from repeated matrix power operations, and adapt the approximation order and residual step to the chunk size to minimize computational cost while preserving the model's accuracy. Experiments on Qwen3.5-family models demonstrate up to 5$\\times$ kernel-level speedup and a 20% reduction in decode-layer overhead, while preserving accuracy under both floating-point and low-precision inference. Our method offers an efficient and hardware-friendly solution for scalable linear attention.",
+      "identifiers": [
+        "SemanticScholar:92fc5b7d64606528ff5d71d5266e3ebdcfd7dd82"
+      ],
+      "semantic_scholar_id": "92fc5b7d64606528ff5d71d5266e3ebdcfd7dd82",
+      "canonical_id": "arXiv:2606.06034",
+      "arxiv_id": "2606.06034",
+      "doi": "10.48550/arXiv.2606.06034",
+      "authors": [
+        "Luo-Ming Zhang",
+        "Yuwei Ren",
+        "Kui Zhang",
+        "Tianyu Liu",
+        "Lingjuan Ge",
+        "Deng-Hao Li",
+        "M. H. Langston",
+        "Yin-Ruey Huang",
+        "Wei-Li Zeng",
+        "Liang Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      },
+      "reason": "chunk-wise線形注意の下三角行列逆行列計算を、逐次的な前進代入から、打切りNeumann級数・構造的mask・並列残差補正を用いた行列乗算へ置換する。低ビットINT時のダイナミックレンジ拡大にも対処し、chunk長に応じ近似次数を調整。Qwen3.5系の評価でカーネル最大5倍、デコード層オーバーヘッド20%削減を要旨で報告する。NPU向け推論カーネル最適化に直結。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+      "source_url": "https://arxiv.org/abs/2607.02963",
+      "year": 2026,
+      "published": "2026-07-03",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dense video captioning aims to generate temporally grounded descriptions of video events, benefiting both event-level video understanding and generation. In this domain, autoregressive video large language models have emerged as a prevalent paradigm due to their strong generative and cross-modal modeling capacity. However, generating dense captions under the token-by-token paradigm severely limits inference efficiency and hinders scalability as video length and event density increase. In this work, we propose a parallelized autoregressive framework that not only improves generation efficiency but also enhances temporally grounded captioning performance. Our key insight is to exploit the weak local dependencies across temporally distinct events to restructure the causal dependency graph, thereby enabling lossless parallel generation. Specifically, tokens with weak cross-event dependencies can be decoded in parallel, while tightly coupled tokens within each event retain sequential decoding to preserve local semantic coherence. To realize this insight, we introduce two key components for lossless parallel decoding: (1) a latent global planning mechanism that automatically learns the event-level structure and produces compact tokens encoding global inter-event causality while adaptively aggregating event-level audio-visual semantics, guiding subsequent dependency restructuring and parallel decoding; and (2) an event-factorized parallel decoding mechanism that effectively balances local focus with global inter-event awareness. Experiments on various benchmarks demonstrate the clear advantage of our approach in both efficiency and performance in omni-modal event grounding and captioning. Project website: https://github.com/showlab/PadCaptioner.",
+      "identifiers": [
+        "SemanticScholar:5c7ba153d99361674152ee87a7dbfe51401495b5"
+      ],
+      "semantic_scholar_id": "5c7ba153d99361674152ee87a7dbfe51401495b5",
+      "canonical_id": "arXiv:2607.02963",
+      "arxiv_id": "2607.02963",
+      "doi": "10.48550/arXiv.2607.02963",
+      "authors": [
+        "Wen-Zheng Zeng",
+        "Siyi Jiao",
+        "Chen Gao",
+        "Hwee Tou Ng",
+        "M. Shou"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 119,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長動画の密なキャプション生成で、別イベント間の弱い依存を利用し、イベント内の強い因果関係は逐次に保ちながらイベント間の生成を並列化する。潜在的な全体計画でイベント間の因果を圧縮し、event-factorized decoderが音声・映像に対応した説明を生成する。オムニモーダルVLMの自己回帰推論効率を直接改善する提案であり、アプリケーション固有だが対象範囲内。",
+      "library_body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3f10db6149cb",
+    "round": "libimp-3f10db6149cb5f7d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3f10db6149cb5f7d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3f10db6149cb5f7d-pre01.json",
+    "receipt": "sha256:b442dbd4b07543c42568b566716546c75b4d8aaef5ac18936e6f83cb39aca7b8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3f10db6149cb",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Edge Inference for Large Language Models With Pipeline Parallelism and Batching",
+      "source_url": "https://doi.org/10.1109/TCOMM.2026.3686718",
+      "year": 2026,
+      "published": null,
+      "venue": "IEEE Transactions on Communications",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Edge computing enables distributed inference for computation-intensive applications. However, the autoregressive nature and large model size of large language models (LLMs) pose challenges for their deployment in wireless edge networks. Existing edge inference methods mainly assume an equivalent delay for each token generation step, which fails to capture the dynamic computational and memory overhead incurred during the decoding process. This paper proposes a latency-sensitive wireless edge inference framework for LLMs, where tasks are grouped into multiple batches and processed in parallel by partitioning the LLM into multiple pipeline stages across heterogeneous edge GPUs. An accurate latency model is established, where the latency of each token generation step increases during the autoregressive generation process. Based on this model, the end-to-end inference latency is minimized, which is formulated as a joint optimization problem of bandwidth allocation, model partitioning, and batch scheduling subject to heterogeneous GPU memory constraints. To solve this NP-hard problem with coupled variables, we develop a polynomial-time alternating optimization algorithm that iteratively optimizes model partitioning and batch scheduling via dynamic programming. The closed-form solutions of wireless bandwidth allocation are derived. Extensive simulations show that our approach reduces latency by up to 42.1% versus state-of-the-art baselines across diverse edge scenarios.",
+      "identifiers": [
+        "SemanticScholar:99e8306d0823bccd84014994a3360afe0f9eb5b7"
+      ],
+      "semantic_scholar_id": "99e8306d0823bccd84014994a3360afe0f9eb5b7",
+      "doi": "10.1109/TCOMM.2026.3686718",
+      "canonical_id": "DOI:10.1109/TCOMM.2026.3686718",
+      "authors": [
+        "Jie Jiang",
+        "Zhi-Xiong Chen",
+        "Hyundung Shin",
+        "Arumgam Nallanathan"
+      ],
+      "priority": 3,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 3,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE出版社一次要旨によると、無線エッジGPU間でLLM層をパイプライン分割し、トークン生成につれて遅延が増える動的モデルの下でバッチと帯域を同時最適化する。異種GPU制約下で既存基準比最大42.1%の遅延削減をシミュレーションで報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "QMLFQ: A Quantization-based Queue Scheduling Framework for Efficient LLM Serving",
+      "source_url": "https://doi.org/10.1109/SWC62898.2024.00208",
+      "year": 2024,
+      "published": "2024-12-02",
+      "venue": "2024 IEEE Smart World Congress (SWC)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Fueled by advancements in Large Language Models (LLMs), applications like ChatGPT have ushered in a transformative era for AI-powered interactions. However, the computational demands of LLMs, characterized by their massive parameter size and intricate computations, pose a significant challenge to its model serving. Under high concurrency or resource-constrained scenarios, LLM service systems can experience substantial latency and potential crashes, jeopardizing user experience and system stability. To address this challenge, this paper presents a novel LLM serving framework that leverages dynamic queue scheduling and quantization switching to alleviate computational bottlenecks and reduce response latency. Specifically, we propose an enhanced scheduling algorithm based on the Multi-level Feedback Queue (MLFQ) that dynamically switches between various quantized-level models and prioritizes requests, thereby improving LLM inference parallelism and reducing job completion time (JCT) as well. Through extensive experiments conducted on open-source datasets, we demonstrate that our proposed approach effectively reduces JCTs compared to other leading baselines. This improvement in JCT ultimately leads to enhanced quality of service (QoS) for LLM-based applications.",
+      "identifiers": [
+        "SemanticScholar:a1ad5cafb8928b982722810cb5674d6b906e6292"
+      ],
+      "semantic_scholar_id": "a1ad5cafb8928b982722810cb5674d6b906e6292",
+      "doi": "10.1109/SWC62898.2024.00208",
+      "canonical_id": "DOI:10.1109/SWC62898.2024.00208",
+      "authors": [
+        "Jia-Lin Wu",
+        "Hao Dai",
+        "Jiashu Wu",
+        "Wenming Jin",
+        "Yang Wang"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 697,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE出版社一次要旨によると、multi-level feedback queueの優先度調整と要求ごとの量子化レベル切替を組み合わせ、同時要求時のLLMジョブ完了時間を削減する。生成品質との交換条件の定量値は要旨にないため本文確認が必要。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-81c0bf01365c",
+    "round": "libimp-81c0bf01365c8b82-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-81c0bf01365c8b82-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-81c0bf01365c8b82-pre01.json",
+    "receipt": "sha256:4748a8bce25ab3aa16cc9b158a88117a083f28d2c0be8faf16625e9c64ca08a3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-81c0bf01365c",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

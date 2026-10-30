@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MFS: An Efficient Model Family Serving System for LLMs",
+      "source_url": "https://doi.org/10.1145/3767295.3769355",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM serving providers typically offer a suite of structurally similar models, known as model families, such as the open-source Llama2 series featuring 7B, 13B, and 70B models. While numerous optimizations for LLM serving have been proposed, the potential for leveraging synergies between models within the same family has not been thoroughly explored. This paper introduces MFS, an innovative multi-tiered LLM model family serving system to exploit the structural similarities and parameter redundancies across different scales of models within a family. By utilizing a novel fine-tuning technique called Knowledge Precipitation, MFS restructures the largest model in a family to encapsulate smaller models within its architecture, enabling a unified multi-tiered serving pipeline. Based on the multi-tiered model, MFS realizes a highly parallelized tiered-level batching approach, significantly enhancing system efficiency. It also enables the sharing of intermediate features and KV-cache between models and facilitates multi-level sampling techniques during the inference phase. Experimental results demonstrate that MFS achieves substantial improvements over existing methods, including a 56.1% reduction in end-to-end token generation latency and a 47.8% decrease in GPU memory footprint without compromising the quality of generated content.",
+      "identifiers": [
+        "SemanticScholar:3bd0cdbcbeb6fb6c456a05b71d5287f02f59f197"
+      ],
+      "semantic_scholar_id": "3bd0cdbcbeb6fb6c456a05b71d5287f02f59f197",
+      "doi": "10.1145/3767295.3769355",
+      "canonical_id": "DOI:10.1145/3767295.3769355",
+      "authors": [
+        "Yunxuan Zhang",
+        "Hao Wang",
+        "Han Tian",
+        "Liu Yang",
+        "Xu-Dong Liao",
+        "Wen-Xue Li",
+        "Ping Yin",
+        "Bo-Wen Liu",
+        "Kai Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者所属HKUSTの一次要旨によると、同系列の異なるサイズのLLMを一つの階層モデルへ埋め込み、中間特徴・KVを共有しながらtier単位でバッチ処理する。end-to-end生成遅延56.1%減、GPUメモリ47.8%減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "How Speculative Can Speculative Decoding Be?",
+      "source_url": "https://doi.org/10.63317/3k5cxvg7k92d",
+      "year": 2024,
+      "published": "2024-05-01",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have drawn great attention from the field of natural language processing and beyond, due to their impressive capability of autoregressive modeling, yet bringing an obvious problem, i.e., the largely increased latency. An emerging idea to alleviate this problem is speculative decoding, which first uses a draft model to draft tokens autoregressively and then makes the target model verify these tokens in parallel. The draft model is typically smaller than the target model, and it essentially trades generation quality for speed. Thereby, speculative decoding can be viewed as a speculative game for the target model in term of verification failures. That is, the lengthy draft tokens proposed by the small draft models could fail in the verification stage. Naturally, a critical question arises: how speculative can speculative decoding be, or in other words, how small can an adequate draft model be and how large can an appropriate number of draft tokens be? This work aims to investigate these questions and demonstrate how the scale of the draft model and the number of draft tokens would have an impact on the overall latency of the speculative decoding. We theoretically show that neither of above two factors will be infinitely speculative. Namely, there is a certain turning point for each of them. We then empirically show that the scale of the draft model could be 10-20\\times smaller than the target model and the optimal number of draft tokens should lie in 3-5.",
+      "identifiers": [
+        "SemanticScholar:658cffcdb9b3618799c0703379ce71a26627fe90"
+      ],
+      "semantic_scholar_id": "658cffcdb9b3618799c0703379ce71a26627fe90",
+      "doi": "10.63317/3k5cxvg7k92d",
+      "canonical_id": "DOI:10.63317/3k5cxvg7k92d",
+      "authors": [
+        "Zhuo-Rui Liu",
+        "Chen Zhang",
+        "Da-Wei Song"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 912,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ACL Anthology一次要旨は投機的復号のドラフトモデル規模とドラフト長の最適点を理論・実験で調べる。ドラフトモデルはターゲット比10～20倍小型、ドラフト長は3～5トークン程度が望ましい条件を報告し、単純に小さく長くすれば速くなるわけではないことを示す。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
+      "source_url": "https://arxiv.org/abs/2503.05840",
+      "year": 2025,
+      "published": "2025-03-07",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Slim attention shrinks the context memory size by 2x for transformer models with MHA (multi-head attention), which can speed up inference by up to 2x for large context windows. Slim attention is an exact, mathematically identical implementation of the standard attention mechanism and therefore doesn't compromise model accuracy. In other words, slim attention losslessly compresses the context memory by a factor of 2. For encoder-decoder transformers, the context memory size can be reduced even further: For the Whisper models for example, slim attention reduces the context memory by 8x, which can speed up token generation by 5x for batch size 64 for example. And for the T5-11B model for example, the memory can be reduced by 32x because its MHA projection dimension is larger than the embedding dimension. See https://github.com/OpenMachine-ai/transformer-tricks for code and more transformer tricks, and https://www.youtube.com/watch?v=uVtk3B6YO4Y for this paper's YouTube video.",
+      "identifiers": [
+        "SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193"
+      ],
+      "semantic_scholar_id": "efa80a15a54b74b7fa8afc5419abff2be8f52193",
+      "canonical_id": "arXiv:2503.05840",
+      "arxiv_id": "2503.05840",
+      "authors": [
+        "Nils Graef",
+        "Andrew Wasielewski"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 602,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MHAのK射影からVを事前変換で再構成し、V-cache保存を不要にする数学的等価な注意実装。KVメモリを2倍削減し、長文脈decodeで最大2倍、Whisper等のencoder-decoderでさらに大きなキャッシュ削減を報告する。GQA/MQAへの一般化は別途検討が必要。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "InterLayer: Efficient Inference with Interleaved Scheduling and Layer-Specific Optimization",
+      "source_url": "https://doi.org/10.1109/ICME59968.2025.11209145",
+      "year": 2025,
+      "published": "2025-06-30",
+      "venue": "IEEE International Conference on Multimedia and Expo",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) and multimodal LLMs (MLLMs) are extensively used in latency-sensitive multimedia applications, with inference services typically offered by generative AI (GenAI) cloud service providers. However, switching between different LLMs or MLLMs on GPU servers for diverse user needs causes GPU computation stalls, leading to high cold-start latency. To address these challenges, we propose an efficient inference scheme. First, we analyze the layer-wise loading and execution characteristics and identify the root causes of GPU computation stalls. Then, we introduce InterLayer, leveraging fine-grained, compute-dependency-aware interleaved scheduling parallel transmission and layer-specific optimization to reduce GPU stalls. Additionally, we theoretically analyze the lower bound of GPU computation stalls using InterLayer. Experimental results show that InterLayer achieves a 2.4–4.9× acceleration over vLLM for multiple LLMs and MLLMs across diverse model architectures and hardware configurations, up to a 3.6× throughput improvement over vLLM, and up to 2.2× speedup over the latest state-of-the-art.",
+      "identifiers": [
+        "SemanticScholar:6c50e21616395c9a22f01adbafaa8b369c91ad84"
+      ],
+      "semantic_scholar_id": "6c50e21616395c9a22f01adbafaa8b369c91ad84",
+      "doi": "10.1109/ICME59968.2025.11209145",
+      "canonical_id": "DOI:10.1109/ICME59968.2025.11209145",
+      "authors": [
+        "Limin Cheng",
+        "Hang Qin",
+        "Shouxu Kuang",
+        "Xinyu Wang",
+        "Ling Li",
+        "Yan-Jun Wu",
+        "Chen Zhao"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": null
+      },
+      "reason": "論文要旨は複数LLMの切替時に生じるGPU計算停止を分析し、層別の重み転送・計算を依存関係を守りながらinterleaveする。vLLM比2.4～4.9倍の高速化、最大3.6倍のスループット改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0cd8cc8bfe34",
+    "round": "libimp-0cd8cc8bfe34333b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0cd8cc8bfe34333b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0cd8cc8bfe34333b-pre01.json",
+    "receipt": "sha256:134c763c7b9a07d61012675c0b13e5a9b689e27b84f496abe0a8b82ca4aea3c4"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0cd8cc8bfe34",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

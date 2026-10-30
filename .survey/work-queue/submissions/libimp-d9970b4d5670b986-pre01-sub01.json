@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LLM - CODEBOOK FOR EXTREME COMPRESSION OF LARGE LANGUAGE MODELS",
+      "source_url": "https://www.semanticscholar.org/paper/9825cf203d52b402539ecf6d8393164b55dd74fc",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:9825cf203d52b402539ecf6d8393164b55dd74fc"
+      ],
+      "semantic_scholar_id": "9825cf203d52b402539ecf6d8393164b55dd74fc",
+      "canonical_id": "SemanticScholar:9825cf203d52b402539ecf6d8393164b55dd74fc",
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ICLR 2024の著者投稿OpenReview一次原稿要旨を確認。Hessian-aware K-meansで重みを小型codebookへ写像し、非圧縮層をLoRAで補正するLLM-Codebookを提案。LLaMA-7BとVicuna-7Bを約2GBまで圧縮して基準性能の99%を維持したと報告する、LLM重み容量削減の直接的な技術貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d9970b4d5670",
+    "round": "libimp-d9970b4d5670b986-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d9970b4d5670b986-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d9970b4d5670b986-pre01.json",
+    "receipt": "sha256:f146e442333b4e83aa174055b8cafe8d036788aa7b8dda1d7045261f8f41ab7d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d9970b4d5670",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

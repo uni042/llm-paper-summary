@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PE-QAT: Parameter-Efficient Quantization-Aware Training for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-srw.63",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As large language models (LLMs) grow, their compute and memory demands become pro-hibitive for on-device deployment. Quantization is a crucial technique to shrink model footprint and accelerate inference, but aggressively low-bit weight-activation quantization schemes often sacrifice accuracy. Quantization Aware Training (QAT) is a commonly used paradigm to minimize quantization noise, but is extremely expensive to train and often un-scalable to large models. We introduce PE-QAT, a parameter-efficient framework targeting per-channel 4-bit weight-activation quantization of LLMs, which aims to preserve model accuracy while significantly reducing resource requirements. The proposed method freezes the base model and trains lightweight LoRA adapters by fake quantizing the merged-weight model, enabling PE-QAT to scale efficiently unlike full QAT. We apply fake quantization with Straight-Through Estimators (STE) to the merged weights, allowing the adapters to explicitly compensate for quantization noise during training. One of the biggest challenges with quantizing activations alongside weights is addressing outliers that are orders of magnitude larger than other activations, which in-flate quantization scales and suppress lower-magnitude values. To mitigate the impact of severe activation outliers, PE-QAT jointly learns per-channel smoothing factors and symmetric activation clipping thresholds. PE-QAT retains accuracy within 0.11 percentage points of the full-precision baseline on Llama-2-7B zero-shot tasks while training only 1.26% of total parameters.",
+      "identifiers": [
+        "SemanticScholar:cc6aa654a67ffa0de860d3a50db16a3139c0f200"
+      ],
+      "semantic_scholar_id": "cc6aa654a67ffa0de860d3a50db16a3139c0f200",
+      "doi": "10.18653/v1/2026.acl-srw.63",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-srw.63",
+      "authors": [
+        "Shresth Mishra"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL SRW公式PDFによると、凍結LLMとLoRAだけを更新し、merged weightをfake W4A4量子化して誤差を補償する。低bitモデルの品質維持に直接関係するが、native INT4 Tensor Coreの実機推論速度は別のCOLM workshop論文であり本論文の実測値と混同しない。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Task-aware Block Pruning with Output Distribution Signals for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-eacl.320",
+      "year": 2026,
+      "published": null,
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:6183f95b10fc0035b72238f1bffa60e8271e9324"
+      ],
+      "semantic_scholar_id": "6183f95b10fc0035b72238f1bffa60e8271e9324",
+      "doi": "10.18653/v1/2026.findings-eacl.320",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-eacl.320",
+      "authors": [
+        "Song-ha Jo",
+        "Youngrok Ko",
+        "Sang-goo Lee",
+        "J. Seol"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL Anthologyの一次要旨によると、各blockでearly-exitした出力分布の不確実性からタスク別のblock重要度を推定し、計算費用の高い感度解析を省くTaBPを提案。LLMの層削減と推論遅延削減を直接実証する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Layer-wise heterogeneity-guided heterogeneous pruning: An LLM compression method",
+      "source_url": "https://doi.org/10.1007/s44443-026-00724-4",
+      "year": 2026,
+      "published": "2026-04-30",
+      "venue": "Journal of King Saud University: Computer and Information Sciences",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have become foundational in modern natural language processing, enabling diverse applications such as conversational AI, code generation, and scientific discovery. Their massive parameter counts impose significant computational and memory demands, hindering deployment in resource-constrained environments. Network pruning has become a practical solution used to compress LLMs by removing their redundant parameters. However, existing LLM pruning methods are primarily designed based on either structured or unstructured pruning, typically applying a uniform pruning strategy across all layers, and they fail to account for the heterogeneous sensitivity of different layers to sparsification. In real-world deployment scenarios such as edge-device inference, there is a pressing need for pruning strategies that dynamically adjust sparsity strategies across layers to satisfy diverse requirements on latency, accuracy, and energy efficiency. In this work, we propose Layer-wise Heterogeneity-guided Heterogeneous Pruning (HHP), a method that adaptively combines structured and unstructured pruning across layers guided by each layer’s heterogeneity to compress LLMs while balancing inference performance and efficiency. HHP consists of two key components: (1) a layer-wise heterogeneity importance score that quantifies each layer’s sensitivity to different pruning granularities, and (2) an adaptive heterogeneous pruning method that uses this score select the appropriate pruning method for each layer. Experiments on LLaMA and other LLMs show that, at the 40% sparsity ratio, our method provides a controllable trade-off between performance and efficiency for pruned models.",
+      "identifiers": [
+        "SemanticScholar:c29afcd452b25b5005e8380606b3e67f59fd4bc4"
+      ],
+      "semantic_scholar_id": "c29afcd452b25b5005e8380606b3e67f59fd4bc4",
+      "doi": "10.1007/s44443-026-00724-4",
+      "canonical_id": "DOI:10.1007/s44443-026-00724-4",
+      "authors": [
+        "Zhi-Hao Yu",
+        "Zuxin Ma",
+        "Guowei Shen",
+        "Yi Chen",
+        "Chun Guo",
+        "Xiao-Qi Duan",
+        "Qing Qian",
+        "Yun-He Cui"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 183,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Springer出版社一次全文によると、各層の枝刈り感度に応じて構造的・非構造的枝刈り方式と疎性率を同時に割り当てるHHPを提案。LLaMA-2-7Bの40%疎性で品質と推論遅延の交換関係を調整する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "OASIS: Optimal Allocation Strategy for Inference Services in Cloud Environments",
+      "source_url": "https://doi.org/10.1145/3777911.3800633",
+      "year": 2026,
+      "published": "2026-05-03",
+      "venue": "ICPE Companion",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Provisioning language models as inference services can be significantly challenging to cloud providers because of the need to balance service-level objectives (SLOs) with capital and operational costs. The heterogeneous nature of user queries, combined with temporal variations in workload patterns and the high energy consumption of GPUs warrants an intelligent resource-allocation strategy. We present OASIS (Optimal Allocation Strategy for Inference Services), a comprehensive methodology that combines static and dynamic optimizations to provision inference services efficiently. OASIS employs a two-phase approach: (1) pre-deployment profiling to determine optimal parameter configurations for different query types across various hardware options, and (2) run-time query routing and dynamic provisioning based on observed workload patterns. We evaluate OASIS using real-world BurstGPT traces on NVIDIA A100 and H100 GPUs. Our results show that: (1) GPU frequency scaling from 1320 MHz to 855 MHz reduces power by 39% with only 7% throughput loss; (2) query type classification reveals long-input-short-output workloads achieve 2.1× higher throughput than short-input-long-output; (3) MIG-based multi-tenancy achieves 42-43% power reduction when running two models simultaneously; and (4) runtime adaptation on real campus traces achieves statistically significant 12.4% power reduction while maintaining SLO compliance and identical throughput.",
+      "identifiers": [
+        "SemanticScholar:d16ed319daadaa4adf3453c6f6024829b70ab408"
+      ],
+      "semantic_scholar_id": "d16ed319daadaa4adf3453c6f6024829b70ab408",
+      "doi": "10.1145/3777911.3800633",
+      "canonical_id": "DOI:10.1145/3777911.3800633",
+      "authors": [
+        "V. Mittal",
+        "Mohammed Baydoun",
+        "A. Mishra",
+        "P. Prakash",
+        "Gourav Rattihalli",
+        "A. Dhakal",
+        "Eitan Frachtenberg",
+        "Izzat El Hajj",
+        "Michail Faloutsos",
+        "D. Milojicic"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 180,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者公開一次PDFによると、A100/H100の事前プロファイルと要求種別別の動的ルーティング・MIG資源調整を組み合わせる。GPUクロック1320→855MHzで電力39%減・スループット7%減、実キャンパス負荷でSLOとスループットを維持して電力12.4%削減を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Sprint or Delve: A Distribution-Aware Approach to Efficient Reasoning",
+      "source_url": "https://doi.org/10.24963/ijcai.2026/653",
+      "year": 2026,
+      "published": "2026-09-01",
+      "venue": "Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reasoning chains in Large Language Models (LLMs) often exhibit heavy-tailed length distributions, yet existing efficiency methods rely on suboptimal linear penalties that suppress complex reasoning, limiting both accuracy and generalization. To address this, we first empirically observe that reasoning lengths are well approximated by a log-normal distribution, and provide an intuitive explanation for this phenomenon. Based on this insight, we propose the Powered Length Penalty (PLP), an adaptive regularizer that penalizes redundancy in short sequences while gradually reducing penalties for longer sequences, preserving deep reasoning. Trained solely on the elementary GSM8K dataset, PLP significantly improves reasoning efficiency by reducing inference costs on GSM8K and MATH500, while simultaneously enhancing accuracy on the challenging AIME2024 benchmark. Furthermore, PLP transfers effectively to diverse domains, including MMLU and GPQA. These results suggest that modeling reasoning length distributions and adapting penalties accordingly can mitigate the typical trade-off between efficiency and performance, enabling more reliable and cost-effective reasoning across tasks.",
+      "identifiers": [
+        "SemanticScholar:14ad86689aaa6cfb38e2a96b5cd7930661c6836f"
+      ],
+      "semantic_scholar_id": "14ad86689aaa6cfb38e2a96b5cd7930661c6836f",
+      "doi": "10.24963/ijcai.2026/653",
+      "canonical_id": "DOI:10.24963/ijcai.2026/653",
+      "authors": [
+        "Ze-Hui Ling",
+        "De-Shu Chen",
+        "Hong-Wei Zhang",
+        "Yi-Feng Jiao",
+        "Xin Guo",
+        "Zeng-Lin Xu",
+        "Yuan Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 59,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IJCAI公式一次要旨によると、CoT長の対数正規分布を考慮し、短い冗長推論を強く罰し長い難問推論を保護するPowered Length Penaltyを提案。GSM8K/MATH500の生成費用を削減し、AIME2024の精度を改善する推論トークン効率化手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5c0ba1aae5ba",
+    "round": "libimp-5c0ba1aae5bafb39-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5c0ba1aae5bafb39-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5c0ba1aae5bafb39-pre01.json",
+    "receipt": "sha256:4d023aa99f6ce762b708e04ca0bcdabc0e4c969092424bfb83a61b553852a2f5"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5c0ba1aae5ba",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
