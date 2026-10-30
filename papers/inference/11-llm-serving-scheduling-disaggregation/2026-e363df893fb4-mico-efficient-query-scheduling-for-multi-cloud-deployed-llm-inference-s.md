@@ -1,40 +1,61 @@
 ---
-canonical_id: "DOI:10.1007/s11432-024-4487-8"
-doi: "10.1007/s11432-024-4487-8"
-title: "Mico: efficient query scheduling for multi-cloud deployed LLM inference service"
-summary: "複数クラウドへ分散したLLM推論サービスについて、出力長の区間予測を用いたクラウド間のトークン負荷配分と、推論反復ごとの完了要求の入替えを組み合わせる。GPT-2/GPT-Neo・NVIDIA A6000の均質構成では、3クラウド・200要求・バッチ3で累積KV長44.89%削減、処理スループット1.79倍、別条件の最大値2.22倍を報告。ネットワーク差・異種GPU・実運用トレースは評価範囲外。"
-list_summary: "出力長予測に基づくクラウド間負荷分散と、反復単位のバッチ補充を統合したLLMサービング。"
+canonical_id: DOI:10.1007/s11432-024-4487-8
+doi: 10.1007/s11432-024-4487-8
+title: 'Mico: efficient query scheduling for multi-cloud deployed LLM inference service'
+summary: 複数クラウドへ分散したLLM推論サービスについて、出力長の区間予測を用いたクラウド間のトークン負荷配分と、推論反復ごとの完了要求の入替えを組み合わせる。GPT-2/GPT-Neo・NVIDIA A6000の均質構成では、3クラウド・200要求・バッチ3で累積KV長44.89%削減、処理スループット1.79倍、別条件の最大値2.22倍を報告。ネットワーク差・異種GPU・実運用トレースは評価範囲外。
+list_summary: 出力長予測に基づくクラウド間負荷分散と、反復単位のバッチ補充を統合したLLMサービング。
 authors:
-  - Peizhuang Cong
-  - Tong Yang
-  - Yuchao Zhang
-  - Wendong Wang
-  - Ke Xu
-published: "2026-01-04"
-publication: "Science China Information Sciences 69, 132102 (2026)"
+- Peizhuang Cong
+- Tong Yang
+- Yuchao Zhang
+- Wendong Wang
+- Ke Xu
+published: '2026-01-04'
+publication: Science China Information Sciences 69, 132102 (2026)
 publication_type: journal_article
 publication_status: published
-source: "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf"
+source: https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf
 sources:
-  - "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf"
-  - "https://doi.org/10.1007/s11432-024-4487-8"
-implementation: "DistilBERT 66M・10区間の応答長予測、推定トークン量によるクラウド間配分、完了要求のKVとattention maskを更新して同じバッチへ新要求を補充。GPT-2/GPT-Neo、A6000、均質2〜9クラウド構成で評価。"
+- https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf
+- https://doi.org/10.1007/s11432-024-4487-8
+implementation: DistilBERT 66M・10区間の応答長予測、推定トークン量によるクラウド間配分、完了要求のKVとattention maskを更新して同じバッチへ新要求を補充。GPT-2/GPT-Neo、A6000、均質2〜9クラウド構成で評価。
 code: null
-last_checked: "2026-10-31"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-31T01:28:23+09:00"
-worker_run_key: "20261031-0128-scheduled-chat-30/r01"
-reference_main_sha: "163a9e35dcda90e98906efbe26ee51875b0ecc94"
+last_checked: '2026-10-31'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-31T01:28:23+09:00'
+worker_run_key: 20261031-0128-scheduled-chat-30/r01
+reference_main_sha: 163a9e35dcda90e98906efbe26ee51875b0ecc94
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-under16kb_reaudit_target_path: "papers/inference/11-llm-serving-scheduling-disaggregation/2026-e363df893fb4-mico-efficient-query-scheduling-for-multi-cloud-deployed-llm-inference-s.md"
-under16kb_reaudit_source_git_blob_sha: "6ef392e3b828bb5d89f510265edf5187c626d43a"
-under16kb_reaudit_source_sha256: "ab5d881025811c22bfbd1f00e381a58ec482553362d7376eee00cd1b0e79d9cc"
-under16kb_reaudit_version: "2026-10-07-v1"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+under16kb_reaudit_target_path: papers/inference/11-llm-serving-scheduling-disaggregation/2026-e363df893fb4-mico-efficient-query-scheduling-for-multi-cloud-deployed-llm-inference-s.md
+under16kb_reaudit_source_git_blob_sha: 6ef392e3b828bb5d89f510265edf5187c626d43a
+under16kb_reaudit_source_sha256: ab5d881025811c22bfbd1f00e381a58ec482553362d7376eee00cd1b0e79d9cc
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
-last_audited: "2026-10-31"
+last_audited: '2026-10-31'
 audit_version: 2
-previous_import_quality_failure: "2026-10-30: evaluation_chars=0; limitation_chars=0 due to section headings not recognized by GitHub audit_paper_quality.py; headings corrected without altering research evidence"
+previous_import_quality_failure: '2026-10-30: evaluation_chars=0; limitation_chars=0 due to section headings not recognized by GitHub audit_paper_quality.py; headings corrected without altering research evidence'
+references:
+- canonical_id: arXiv:2001.04589
+  arxiv_id: '2001.04589'
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2305.13144
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:1909.08053
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2010.05680
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1145/3688351.3689164
+- canonical_id: DOI:10.18653/v1/d19-1633
+- canonical_id: arXiv:1904.09324
+- canonical_id: DOI:10.1109/jiot.2024.3524255
+- canonical_id: arXiv:2311.18677
+- canonical_id: arXiv:2307.07982
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # Mico：生成長予測と反復単位バッチ補充を組み合わせたマルチクラウドLLM推論
