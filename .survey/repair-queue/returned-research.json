@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T08:25:40+00:00",
+  "generated_at": "2026-10-30T08:39:38+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2183,33 +2183,6 @@
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2509.03136",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T05:45:46+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 310 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3146,
-        "body_paragraphs": 16,
-        "method_chars": 995,
-        "method_paragraphs": 4,
-        "evaluation_chars": 310,
-        "limitation_chars": 736,
-        "insufficiency_flags": [
-          "評価説明量 310 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_232e490ddb38819191f2a82e8e608cd4--2025-2509.03136-gvote-adaptive-kv-budget-research-20261030-1418-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_232e490ddb38819191f2a82e8e608cd4--2025-2509.03136-gvote-adaptive-kv-budget-research-20261030-1418-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.13832",
       "title": null,
       "source_url": null,
@@ -2350,34 +2323,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_7949ce35eb088191b9aed1f55fc6c6a4--2025-doi-10.1145-3731569.3764834-prefillonly-research-20261030-1431-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_7949ce35eb088191b9aed1f55fc6c6a4--2025-doi-10.1145-3731569.3764834-prefillonly-research-20261030-1431-scheduled-chat-30-r01.json",
       "worker_run_key": "20261030-1431-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2508.08435",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T06:40:06+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5020,
-        "body_paragraphs": 31,
-        "method_chars": 2103,
-        "method_paragraphs": 16,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.json",
-      "worker_run_key": "20261030-1400-scheduled-chat-00/r01"
     },
     {
       "canonical_id": "arXiv:2609.33135",
@@ -2522,8 +2467,8 @@
     },
     {
       "canonical_id": "arXiv:2510.11602",
-      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
-      "source_url": "https://arxiv.org/pdf/2510.11602",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T08:23:49+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -2548,6 +2493,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_dcd478df67cc8191b9aa8ffa85acb40a--2025-2510.11602-deconstructing-attention-research-20261030-1616-scheduled-chat-45-r02.json",
       "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "arXiv:2509.03136",
+      "title": "Adaptive KV-Cache Compression without Manually Setting Budget",
+      "source_url": "https://arxiv.org/pdf/2509.03136",
+      "returned_at": "2026-10-30T08:36:56+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 310 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3146,
+        "body_paragraphs": 16,
+        "method_chars": 995,
+        "method_paragraphs": 4,
+        "evaluation_chars": 310,
+        "limitation_chars": 736,
+        "insufficiency_flags": [
+          "評価説明量 310 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-05b28e9ce39e--libfile_232e490ddb38819191f2a82e8e608cd4--2025-2509.03136-gvote-adaptive-kv-budget-research-20261030-1418-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-05b28e9ce39e--libfile_232e490ddb38819191f2a82e8e608cd4--2025-2509.03136-gvote-adaptive-kv-budget-research-20261030-1418-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2508.08435",
+      "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
+      "source_url": "https://arxiv.org/pdf/2508.08435",
+      "returned_at": "2026-10-30T08:37:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5020,
+        "body_paragraphs": 31,
+        "method_chars": 2103,
+        "method_paragraphs": 16,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1d1efa1b9490--libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-1d1efa1b9490--libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-schedu.json",
+      "worker_run_key": "20261030-1400-scheduled-chat-00/r01"
     }
   ]
 }

@@ -29,6 +29,8 @@ worker_run_key: "20261030-1616-scheduled-chat-45/r02"
 reference_main_sha: "dcd875600edd459637c98aa8eb1f739b68d7633f"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+last_audited: null
+audit_version: 0
 ---
 
 # Deconstructing Attention：言語モデルに必要な注意機構の設計原理を分解する

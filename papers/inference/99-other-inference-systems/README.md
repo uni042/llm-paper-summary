@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（852本）
+## 自動生成の論文一覧（853本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2447,6 +2447,10 @@
 - **2025-08 · [GLASS: Global-Local Aggregation for Inference-time Sparsification of LLMs](2025-2508.14302-glass-global-local-aggregation-for-inference-time-sparsification-of-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   一方、GRIFFINなどの学習不要な方式は、プリフィル中に観測した活性から「生成中に使うニューロン」を決め、その固定マスクをデコードで再利用する。論文v2では、50% FFN疎化の長文生成でGRIFFINよりPPLを最大45.10%、Kullback–Leibler divergence（KLD）を最大25.73%減らした。
+
+- **2025-08 · [Fast weight programming and linear transformers: from machine learning to neurobiology](2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  この論文は新しいLLMサービングシステムのベンチマークではなく、行列を隠れ状態として持つ再帰型ニューラルネットワーク、Fast 重み Programmer（FWP）の技術的基礎を整理したPrimerである。
 
 - **2025-08 · [AdaptInfer: Adaptive Token Pruning for Vision-Language Model Inference via Dynamical Text Guidance](2025-2508.06084-adaptinfer-adaptive-token-pruning-for-vision-language-model-inference-vi.md)**  
   実装：[✓](https://github.com/weiczh02/AdaptInfer-base) ・ リポジトリ内被引用：0  

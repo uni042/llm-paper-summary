@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "62cdf79e9709de47e62bd383203c7263d855cb9909d893c27679445401fa21aa",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1d1efa1b9490--libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.md",
+  "canonical_id": "arXiv:2508.08435",
+  "worker_completed_at": "2026-10-30T14:00:00+09:00",
+  "worker_run_key": "20261030-1400-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5020,
+    "body_paragraphs": 31,
+    "method_chars": 2103,
+    "method_paragraphs": 16,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-30T08:37:36+00:00"
+}
