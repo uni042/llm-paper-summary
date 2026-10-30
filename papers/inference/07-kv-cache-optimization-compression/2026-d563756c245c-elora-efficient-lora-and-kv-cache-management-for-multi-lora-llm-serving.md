@@ -25,13 +25,13 @@ list_summary: LoRAと履歴KVの利用依存を木構造で表現し、GPU統一
 implementation: vLLM BlockManagerを改造し、LoRAと履歴KVを共通固定ブロックへ割当。依存木はCPU側に置き、100ms周期でキャッシュ入替えを評価。8B/34B/70Bに1/4/8台のH800を用い、チャット・翻訳・個人エージェントの実トレース由来ワークロードを測定。
 code: null
 last_checked: '2026-10-30'
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261030-2144-scheduled-chat-45/r03"
-worker_completed_at: "2026-10-30T22:00:20+09:00"
-reference_main_sha: "7bf16ccc96cf64101d277429abf70ca0b68aa157"
+worker_id: scheduled-chat-45
+worker_run_key: 20261030-2144-scheduled-chat-45/r03
+worker_completed_at: '2026-10-30T22:00:20+09:00'
+reference_main_sha: 7bf16ccc96cf64101d277429abf70ca0b68aa157
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
-scheduled_slot: "45"
+scheduled_slot: '45'
 original_worker_id: scheduled-chat-30
 original_worker_run_key: 20261030-0358-scheduled-chat-30/r02
 under16kb_reaudit_target_path: papers/inference/07-kv-cache-optimization-compression/2026-d563756c245c-elora-efficient-lora-and-kv-cache-management-for-multi-lora-llm-serving.md
@@ -39,9 +39,73 @@ under16kb_reaudit_source_git_blob_sha: 9c0459525f3e769d35c95b5cb373784e959435fc
 under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 repair_kind: quality_heading_repair
-repair_reason: "GitHub processor blocked_qualityの評価見出しを修正。原稿のHPCA一次評価・原source SHA・original provenanceを維持。"
+repair_reason: GitHub processor blocked_qualityの評価見出しを修正。原稿のHPCA一次評価・原source SHA・original provenanceを維持。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2308.16369
+  arxiv_id: '2308.16369'
+- canonical_id: arXiv:2312.11514
+  arxiv_id: '2312.11514'
+- canonical_id: arXiv:2308.08061
+  arxiv_id: '2308.08061'
+- canonical_id: arXiv:2310.18547
+- canonical_id: arXiv:2403.04132
+  arxiv_id: '2403.04132'
+- canonical_id: arXiv:2403.19708
+  arxiv_id: '2403.19708'
+- canonical_id: arXiv:2311.04934
+- canonical_id: arXiv:2106.09685
+  arxiv_id: '2106.09685'
+- canonical_id: arXiv:2307.13269
+  arxiv_id: '2307.13269'
+- canonical_id: arXiv:2411.17741
+  arxiv_id: '2411.17741'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2104.08691
+  arxiv_id: '2104.08691'
+- canonical_id: arXiv:2401.11240
+  arxiv_id: '2401.11240'
+- canonical_id: arXiv:2101.00190
+  arxiv_id: '2101.00190'
+- canonical_id: arXiv:2401.05459
+  arxiv_id: '2401.05459'
+- canonical_id: arXiv:2402.09353
+  arxiv_id: '2402.09353'
+- canonical_id: arXiv:2407.10627
+  arxiv_id: '2407.10627'
+- canonical_id: arXiv:2005.14165
+  arxiv_id: '2005.14165'
+- canonical_id: arXiv:2408.01050
+  arxiv_id: '2408.01050'
+- canonical_id: arXiv:1911.02150
+  arxiv_id: '1911.02150'
+- canonical_id: arXiv:1909.09586
+  arxiv_id: '1909.09586'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2407.18242
+  arxiv_id: '2407.18242'
+- canonical_id: arXiv:2405.16444
+  arxiv_id: '2405.16444'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2312.05516
+  arxiv_id: '2312.05516'
+- canonical_id: arXiv:2004.11867
+  arxiv_id: '2004.11867'
+- canonical_id: arXiv:1609.08144
+  arxiv_id: '1609.08144'
+- canonical_id: arXiv:2303.10512
+  arxiv_id: '2303.10512'
+- canonical_id: arXiv:2405.00732
+  arxiv_id: '2405.00732'
+- canonical_id: arXiv:2401.09670
+  arxiv_id: '2401.09670'
+- canonical_id: arXiv:2304.04675
+  arxiv_id: '2304.04675'
+references_checked_at: '2026-10-30'
+references_source: arxiv-html-reference-section
+references_total: 55
 ---
 
 # ELORA：LoRAとKVキャッシュの依存関係を統一管理するMulti-LoRAサービング
