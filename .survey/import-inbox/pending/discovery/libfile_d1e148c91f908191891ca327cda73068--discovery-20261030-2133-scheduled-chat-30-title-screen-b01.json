@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2133-scheduled-chat-30/title-screen-b01",
+  "reference_main_sha": "ecf707062b74c625f620d043e21fc44f1876633d",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1",
+      "identity_tokens": [
+        "SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1"
+      ],
+      "title": "Shenbi: A Multi-Precision Accelerator for Video Diffusion Models",
+      "reason": "タイトルが対象を動画拡散モデルの多精度アクセラレータと明示している。生成LLMのdecode、KV、MoEや言語モデル推論への適用はタイトルから読み取れないため対象外。本文・abstract未読。",
+      "source_url": "https://www.semanticscholar.org/paper/a97223331cab0e2573cc6322b3c4e19920995aa1",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-30T21:44:21+09:00",
+      "last_checked_at": "2026-10-30T21:44:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2608.03609",
+      "identity_tokens": [
+        "arXiv:2608.03609",
+        "DOI:10.48550/arXiv.2608.03609"
+      ],
+      "title": "Event-Aware Token Selection for Efficient Video Super-Resolution",
+      "reason": "タイトルが動画超解像のイベント認識トークン選択を研究対象と明示している。言語モデルの推論・サービング効率化ではないため対象外。本文・abstract未読。",
+      "source_url": "https://arxiv.org/abs/2608.03609",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-30T21:44:21+09:00",
+      "last_checked_at": "2026-10-30T21:44:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}
