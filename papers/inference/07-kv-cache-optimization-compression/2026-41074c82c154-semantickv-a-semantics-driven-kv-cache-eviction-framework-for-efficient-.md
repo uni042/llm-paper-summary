@@ -1,33 +1,50 @@
 ---
-canonical_id: 'DOI:10.1109/CSCWD68734.2026.11582397'
-doi: '10.1109/CSCWD68734.2026.11582397'
+canonical_id: DOI:10.1109/CSCWD68734.2026.11582397
+doi: 10.1109/CSCWD68734.2026.11582397
 title: 'SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference'
-summary: 'SemanticKVは長いプロンプトのprefillでクエリのL2ノルム上位を観測集合に選び、各注意ヘッドで重要な中間トークンを選択し、先頭と直近トークンを残すKV削減方式。20% KV保持時、Llama3.1-8BのInfiniteBench 64K平均はFull 25.85に対し23.99、72Kは26.50に対し25.21。56Kで約2.4倍のデコードスループット、112KでGPUメモリ58.24GB→40.98GBを報告。'
-list_summary: '長文脈prefillで高L2ノルムのクエリを抽出し、ヘッド別の注意重要度で中間KVを間引き、先頭・直近トークンを保護してメモリとデコード費用を抑える。'
+summary: SemanticKVは長いプロンプトのprefillでクエリのL2ノルム上位を観測集合に選び、各注意ヘッドで重要な中間トークンを選択し、先頭と直近トークンを残すKV削減方式。20% KV保持時、Llama3.1-8BのInfiniteBench 64K平均はFull 25.85に対し23.99、72Kは26.50に対し25.21。56Kで約2.4倍のデコードスループット、112KでGPUメモリ58.24GB→40.98GBを報告。
+list_summary: 長文脈prefillで高L2ノルムのクエリを抽出し、ヘッド別の注意重要度で中間KVを間引き、先頭・直近トークンを保護してメモリとデコード費用を抑える。
 authors:
-  - Meng Huang
-  - Baolong Wang
-  - Xiao Zhang
-  - Shujie Han
+- Meng Huang
+- Baolong Wang
+- Xiao Zhang
+- Shujie Han
 published: '2026-05-01'
-publication: '2026 IEEE 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD)'
+publication: 2026 IEEE 29th International Conference on Computer Supported Cooperative Work in Design (CSCWD)
 publication_type: conference
 publication_status: published
-source: 'https://shujiehan.github.io/_pages/files/cscwd26.pdf'
+source: https://shujiehan.github.io/_pages/files/cscwd26.pdf
 sources:
-  - 'https://shujiehan.github.io/_pages/files/cscwd26.pdf'
-  - 'https://doi.org/10.1109/CSCWD68734.2026.11582397'
-implementation: 'NACLのprefill KV evictionへ約210行の変更。PaddlePaddle上でクエリL2ノルム選択、FlashAttention-2によるヘッド別重要度計算。4台RTX 3090サーバーでLlama3.1-8B、Llama3.2-3B、Mistral-7Bを評価。'
+- https://shujiehan.github.io/_pages/files/cscwd26.pdf
+- https://doi.org/10.1109/CSCWD68734.2026.11582397
+implementation: NACLのprefill KV evictionへ約210行の変更。PaddlePaddle上でクエリL2ノルム選択、FlashAttention-2によるヘッド別重要度計算。4台RTX 3090サーバーでLlama3.1-8B、Llama3.2-3B、Mistral-7Bを評価。
 code: null
 last_checked: '2026-10-30'
 worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-30T07:57:22+09:00'
-worker_run_key: '20261030-0757-scheduled-chat-00/r02'
-reference_main_sha: '024991abbee1229900a7571d17055e5fae334950'
+worker_run_key: 20261030-0757-scheduled-chat-00/r02
+reference_main_sha: 024991abbee1229900a7571d17055e5fae334950
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.09054
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2507.06261
+  arxiv_id: '2507.06261'
+- canonical_id: arXiv:2404.14469
+- canonical_id: arXiv:2305.17118
+- canonical_id: arXiv:2402.02750
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2407.15891
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2305.13245
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.298
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 20
 ---
 
 # SemanticKV：クエリ活性とヘッド別重要度を使う長文脈KVキャッシュ削減
