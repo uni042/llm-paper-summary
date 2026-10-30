@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2100-scheduled-chat-00/r02",
+  "reference_main_sha": "e0467d1c8e9b0a95a23d70d32f2216cf00b5219c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02963",
+      "identity_tokens": [
+        "arXiv:2607.02963"
+      ],
+      "title": "Parallelized Autoregressive Decoding for Omni-Modal Dense Video Captioning",
+      "reason": "長動画の密なキャプション生成で、別イベント間の弱い依存を利用し、イベント内の強い因果関係は逐次に保ちながらイベント間の生成を並列化する。潜在的な全体計画でイベント間の因果を圧縮し、event-factorized decoderが音声・映像に対応した説明を生成する。オムニモーダルVLMの自己回帰推論効率を直接改善する提案であり、アプリケーション固有だが対象範囲内。",
+      "source_url": "https://arxiv.org/abs/2607.02963",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 178,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.14114",
+      "identity_tokens": [
+        "arXiv:2311.14114"
+      ],
+      "title": "SONIQ: System-Optimized Noise-Injected Ultra-Low-Precision Quantization with Full-Precision Parity",
+      "reason": "一次要旨では、推論時の整数演算を模したノイズを学習中に注入し、重み・活性のチャネル別混合ビット幅を選ぶSONIQを提案。CNNとTransformerで最大16倍・7倍の圧縮、CPUでINT8比最大7.3倍の高速化を報告する。ただしLLMを対象にした評価や生成時のKV・デコード挙動は要旨から確認できず、汎用低精度推論として関連するもののLLM固有性は限定的。",
+      "source_url": "https://arxiv.org/abs/2311.14114",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 179,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.29618",
+      "identity_tokens": [
+        "arXiv:2608.29618"
+      ],
+      "title": "Multi-Access Speculative Inference: Uplink or Downlink?",
+      "reason": "端末SLMが投機トークンを生成し、エッジLLMが並列検証するMulti-SPINの通信設計。棄却時の補正には語彙全体の確率分布が必要で、端末からdraft分布を上り送信する方式と、serverのtarget分布を下り送信する方式を端末ごとに切替える。ドラフト長・送信電力・UL/DL選択を共同最適化し、端末協調LLM推論の通信ボトルネックを直接扱う。",
+      "source_url": "https://arxiv.org/abs/2608.29618",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 183,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.14277",
+      "identity_tokens": [
+        "arXiv:2606.14277"
+      ],
+      "title": "One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs",
+      "reason": "ALVTSは視覚トークンを永久に捨てず、層ごとに重要なものだけを計算経路へ送り、残りはその層をskipさせて次層前に再結合する。低ランク近似に重要度整合性を課した軽量selectorを用い、LLaVA-1.5、LLaVA-NeXT、Qwen2.5-VLで評価。長い視覚トークンによるLVLMの推論計算量を削減する直接的な手法であり、層ごとの注目領域差を利用する。",
+      "source_url": "https://arxiv.org/abs/2606.14277",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 188,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.16944",
+      "identity_tokens": [
+        "arXiv:2608.16944"
+      ],
+      "title": "A Tight Linear Deterministic Competitive Ratio for Fully Online KV-Cache Scheduling",
+      "reason": "増大するKVキャッシュのメモリ制約下で、到着するLLM要求を非プリエンプティブにバッチ処理する完全オンラインスケジューリングの理論。決定的アルゴリズムの最良競争比がTheta(n)であることを上下界(n-1)/12とnで示し、長い要求と短い要求の到着順を利用した下界をLean 4で機械検証する。実機の高速化実験ではないが、LLMサービングのオンライン最悪時保証を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2608.16944",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 193,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.06473",
+      "identity_tokens": [
+        "arXiv:2609.06473"
+      ],
+      "title": "Steering Under Compression: Dose-Response, Capability Cost, and Failure Asymmetry in Quantized LLMs",
+      "reason": "7〜9Bの4モデルで重み専用INT8/NF4量子化とactivation steeringの相互作用を測定し、同じ行動変化量に対するGSM8K能力損失を比較する。NF4の基礎能力低下や推論長短縮の不連続な失敗を報告するが、主要貢献は挙動制御の頑健性・評価方法であり、推論遅延・メモリ・カーネル改善を提案するものではない。量子化の副作用分析として境界的に関連。",
+      "source_url": "https://arxiv.org/abs/2609.06473",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 200,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.27255",
+      "identity_tokens": [
+        "arXiv:2605.27255"
+      ],
+      "title": "Pair-In, Pair-Out: Latent Multi-Token Prediction for Efficient LLMs",
+      "reason": "PIPOは入力側で2トークンを1潜在表現へ畳み込むcompressorと、出力側で追加トークンを展開するMTP headを組み合わせる。検証器の追加前向き計算を避けるため、on-policy distillationに沿って学習する信頼度headがdraft受理を判断する。Qwen3.5-4B/9Bの数学・コード等で、要旨は初回トークン遅延最大2.64倍、トークン間遅延最大2.07倍の改善を報告。LLM生成の直接的な高速化。",
+      "source_url": "https://arxiv.org/abs/2605.27255",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 203,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.02134",
+      "identity_tokens": [
+        "arXiv:2608.02134"
+      ],
+      "title": "Messages, Not Tokens: Grounded Coresets for Faithful VLM Compression",
+      "reason": "GMCは視覚トークン単体のTop-K重要度ではなく、テキストqueryが消費する符号付きattention messageの集団を保持するcoresetを選ぶ。query-grounded、外観、座標情報で代表トークンを選び、破棄トークンの状態を代表へ移してから物理的に縮約する。Qwen2.5-VL-7Bでは要旨上、視覚トークン80.2%削減時にFull相対平均能力97.78%を維持し、デコーダのKV負荷を減らす。",
+      "source_url": "https://arxiv.org/abs/2608.02134",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 205,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.25354",
+      "identity_tokens": [
+        "arXiv:2606.25354"
+      ],
+      "title": "Efficient and Trainable Language Model Test-Time Scaling via Local Branch Routing",
+      "reason": "LBRは次トークン選択時に小規模な先読み木を展開し、候補枝の隠れ状態をrouterが評価して深さ1の部分木を確定する。prune-shift-grow操作と木の軌跡尤度を定義し、検証可能報酬による強化学習で基盤モデルとrouterを共同最適化する。通常の逐次CoTと全解探索の中間にある推論時の分岐計算・探索効率を扱い、数学推論でPass@1/32を比較する。",
+      "source_url": "https://arxiv.org/abs/2606.25354",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 206,
+      "origin": "discovery_worklist_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.06034",
+      "identity_tokens": [
+        "arXiv:2606.06034"
+      ],
+      "title": "When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet",
+      "reason": "chunk-wise線形注意の下三角行列逆行列計算を、逐次的な前進代入から、打切りNeumann級数・構造的mask・並列残差補正を用いた行列乗算へ置換する。低ビットINT時のダイナミックレンジ拡大にも対処し、chunk長に応じ近似次数を調整。Qwen3.5系の評価でカーネル最大5倍、デコード層オーバーヘッド20%削減を要旨で報告する。NPU向け推論カーネル最適化に直結。",
+      "source_url": "https://arxiv.org/abs/2606.06034",
+      "body_check": "abstract_screen_only; body_not_read; primary_arxiv_indexed_abstract_checked",
+      "first_checked_at": "2026-10-30T21:00:00+09:00",
+      "last_checked_at": "2026-10-30T21:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 212,
+      "origin": "discovery_worklist_abstract"
+    }
+  ]
+}
