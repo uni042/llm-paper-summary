@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（426本）
+## 自動生成の論文一覧（427本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1348,6 +1348,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-10 · [LouisKV: Efficient KV Cache Retrieval for Long Input-Output Sequences](2025-2510.11292-louiskv-efficient-kv-cache-retrieval-for-long-input-output-sequences.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   長文脈LLMでは、過去トークンのKeyとValueをKVキャッシュに保存することで自己回帰生成時の再計算を避ける。単一NVIDIA A6000上でArkvaleと比較したエンドツーエンド遅延の最大高速化は、長入力・短出力1.9倍、短入力・長出力2.9倍、長入力・長出力4.7倍である。
+
+- **2025-09 · [Adaptive KV-Cache Compression without Manually Setting Budget](2025-2509.03136-adaptive-kv-cache-compression-without-manually-setting-budget.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  提案の核は、現在のqueryだけに高い注意を払われたキーを残すのではなく、将来の複数queryが必要としそうなキーの和集合を近似することにある。
 
 - **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：2  
