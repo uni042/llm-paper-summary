@@ -35,10 +35,15 @@
   "selection_reason": "arXiv要旨はKVキャッシュ量子化器を固定し、Q/K/V射影に低ランク蒸留アダプタを学習して低ビットKVの品質低下を回復。4ビットでTinyLlamaとGemma-4のPPLギャップを54.24%・75.96%回復し、2ビットではPPL改善が長文検索の回復に直結しない負の結果も報告。量子化KVキャッシュの品質回復と推論メモリ効率に直接該当。",
   "semantic_scholar_id": "c6addd9324dfa850ada13ec5d2c13265bc9dbc9b",
   "source_url": "https://arxiv.org/abs/2609.04263",
-  "status": "ready",
+  "status": "superseded",
   "title": "Quality Recovery for Quantized KV Caches via Low-Rank Attention Adaptation",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T09:17:06+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2609.04263-quality-recovery-for-quantized-kv-caches-via-low-rank-attention-adaptati.md",
+  "represented_canonical_id": "arXiv:2609.04263",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

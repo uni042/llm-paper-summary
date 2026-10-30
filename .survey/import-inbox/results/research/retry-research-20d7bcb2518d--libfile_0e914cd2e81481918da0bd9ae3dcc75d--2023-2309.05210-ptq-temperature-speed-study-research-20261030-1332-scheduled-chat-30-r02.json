@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "868bd4287425cc08c649d40e57cec47fc9c02eca7fb463899863c0c083a59521",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-20d7bcb2518d--libfile_0e914cd2e81481918da0bd9ae3dcc75d--2023-2309.05210-ptq-temperature-speed-study-research-20261030-1332-scheduled-chat-30-r02.md",
+  "canonical_id": "arXiv:2309.05210",
+  "worker_completed_at": "2026-10-30T13:51:00+09:00",
+  "worker_run_key": "20261030-1332-scheduled-chat-30/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 7326,
+    "body_paragraphs": 48,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 976,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700"
+  ],
+  "processed_at": "2026-10-30T09:15:03+00:00"
+}

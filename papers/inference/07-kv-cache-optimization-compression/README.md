@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（425本）
+## 自動生成の論文一覧（426本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -566,6 +566,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2026-09 · [Residual Vector-based Reconstruction as Long-Context Recall Regardless of Context Window Size](2026-2609.12686-residual-vector-long-context-recall.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   長文書を事実単位の外部残差ベクトルへ変換し、質問時にFFN活性で選択注入して元トークン/KVなしに事実を再構成することで、文書長にほぼ依存しないGPU記憶量で長文脈recallを実現する。
+
+- **2026-09 · [Quality Recovery for Quantized KV Caches via Low-Rank Attention Adaptation](2026-2609.04263-quality-recovery-for-quantized-kv-caches-via-low-rank-attention-adaptati.md)**  
+  実装：[✓](https://github.com/saifmb0/kvlora) ・ リポジトリ内被引用：0  
+  キャッシュを4ビットや2ビットに量子化すれば保存量を減らせるが、量子化誤差が注意出力を変え、パープレキシティや長文脈検索の品質を落とす。
 
 - **2026-09 · [Preserving Provenance in Shared KV Caches for LLM Serving](2026-2609.38706-preserving-provenance-in-shared-kv-caches-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
