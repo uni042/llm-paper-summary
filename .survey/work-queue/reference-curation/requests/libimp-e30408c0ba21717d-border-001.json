@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-e30408c0ba21717d-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2507.22805",
+  "reason": "一次HTML全文のMethodologyとExperimentsを確認。CLIP/SigLIP/DINOv2/ConvNeXtの4視覚エンコーダをTop-2 MoE connectorと階層group attentionで融合し、Phi2/VicunaによるVQA・POPE・MME等の精度向上が主目的。Table 2でMoCHA Phi2は4.97B parameters、12014.64 GFLOPs、平均推論0.57秒と報告し、MoE-LLaVA Phi2の5.61B・7338.97 GFLOPs・0.41秒より重く遅い。より大きいLLaVA-v1.5 Vicuna-13Bの0.81秒よりは速いが、モデル規模が違う。推論計算費用の測定と疎expert選択があるため無関係とはしないが、サービング実行・KV管理・kernel高速化の独自機構はなく、主貢献は視覚表現の品質改善なのでborderline。",
+  "title": "MoCHA: Advanced Vision-Language Reasoning with MoE Connector and Hierarchical Group Attention",
+  "identity_tokens": [
+    "arxiv:2507.22805",
+    "doi:10.48550/arxiv.2507.22805"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e30408c0ba21",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
