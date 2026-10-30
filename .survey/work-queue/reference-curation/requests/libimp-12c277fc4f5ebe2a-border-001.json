@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-12c277fc4f5ebe2a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2512.18122",
+  "reason": "arXiv一次要旨はPDFからMarkdownへ直接変換するデコーダモデルで、PDFと生成文のn-gram重複を利用するCopy Lookup Decodingによりドラフトを作り、逐次トークン生成を削減する。推論高速化に関係するが、用途はPDF変換専用で汎用LLMサービングの性能評価ではないためborderline。",
+  "title": "Accelerating End-to-End PDF to Markdown Conversion Through Assisted Generation",
+  "identity_tokens": [
+    "arXiv:2512.18122"
+  ],
+  "linked_from": [
+    "Speculative Decoding",
+    "Document Processing"
+  ],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-12c277fc4f5e",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
