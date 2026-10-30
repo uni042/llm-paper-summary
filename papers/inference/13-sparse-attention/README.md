@@ -23,7 +23,7 @@
 - [11-llm-serving-scheduling-disaggregation](../11-llm-serving-scheduling-disaggregation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（161本）
+## 自動生成の論文一覧（162本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/13-sparse-attention/)
 
@@ -237,6 +237,10 @@
 - **2026-09 · [Efficient Agentic LLM Serving over SSD-based Sparse KV Storage](2026-2609.36938-efficient-agentic-llm-serving-over-ssd-based-sparse-kv-storage.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   過去の履歴を再計算しないためには鍵・値キャッシュを保持する必要があるが、全履歴を計算装置の高帯域メモリに置くと容量が不足する。後で正確な選択結果が得られた時点で予測漏れを補正するため、予測を外したトークンを黙って捨てる近似手法ではない。
+
+- **2026-09 · [CoWindow Attention: Full Causal Coverage Is a Collective Property](2026-2609.32704-cowindow-attention-full-causal-coverage-is-a-collective-property.md)**  
+  実装：[✓](https://github.com/HKUSTDial/flash-sparse-attention) ・ リポジトリ内被引用：0  
+  一方、全headを同じ局所窓へ制限するSliding Window 注意機構は、長距離情報へ直接アクセスできなくなる。8Kの連想記憶実験では、全注意89.97%に対しCoWAは89.73%であり、同じ一head当たり窓幅でも長距離窓を重複させる方式より良い。
 
 - **2026-09 · [CommunityKV: Efficient Long-Context Decoding via Graph Partitioning](2026-2610.00418-communitykv-efficient-long-context-decoding-via-graph-partitioning.md)**  
   実装：[✓](https://github.com/amazon-science/community-kv) ・ リポジトリ内被引用：0  

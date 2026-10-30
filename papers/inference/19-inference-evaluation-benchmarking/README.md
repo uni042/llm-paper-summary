@@ -1,5 +1,5 @@
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（111本）
+## 自動生成の論文一覧（113本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/19-inference-evaluation-benchmarking/)
 
@@ -220,7 +220,7 @@
 
 - **2026-04 · [Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors](2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  この論文は新しい量子化器や専用カーネルの提案ではない。著者はCPUオフロードの影響を受けた構成を除いた平均高速化を3.4倍と総括する。
+  本研究は新規の量子化アルゴリズムを提案するものではなく、既存の8ビット学習後量子化を一般的なノートPC向けGPUに適用した場合、モデルの収容可否、生成時間、生成文の一致度がどのように変化するかを実測する。著者の要旨はCPUオフロードの影響を受けた条件を除外した平均高速化を3.4倍と記すが、個別の表3は非常に不均一である。
 
 - **2026-04 · [On the Quantization Robustness of Diffusion Language Models in Coding Benchmarks](2026-2604.20079-on-the-quantization-robustness-of-diffusion-language-models-in-coding-be.md)**  
   実装：[✓](https://github.com/zinichakraborty/Diffusion-LLM-Quantization-Robustness) ・ リポジトリ内被引用：0  
@@ -230,6 +230,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   特に保持率1%など極端な条件では、複雑な既存手法が一様ランダム抽出より低い精度になることもある。
 
+- **2026-04 · [IWP: Token Pruning as Implicit Weight Pruning in Large Vision Language Models](2026-2604.00757-iwp-token-pruning-as-implicit-weight-pruning-in-large-vision-language-mo.md)**  
+  実装：[✓](https://github.com/jhtwosun/IWP) ・ リポジトリ内被引用：0  
+  視覚トークンを削る従来方式は、注意重みの大きいトークンを残す、埋込み表現が似たトークンをまとめるなどの経験的基準を使うことが多い。LLaVA-OneVision-7Bの88.9%削減条件では、全トークン時1.37秒から0.64秒へ実測レイテンシを短縮する一方、品質指標は95.9%から89.5%へ下がる。
+
 - **2026-04 · [ID-Selection: Importance-Diversity Based Visual Token Selection for Efficient LVLM Inference](2026-2604.05601-id-selection-importance-diversity-based-visual-token-selection-for-effic.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   候補N個からT個を残す計算量は概ねO(NT)であり、TがNより十分小さい強い圧縮で実用的とされる。LLaVA-1.5-7Bでは576個の視覚トークンを16個へ削減しても、9課題の集計で元モデルの91.8%の性能を維持する。
@@ -237,6 +241,10 @@
 - **2026-04 · [EvoComp: Learning Visual Token Compression for Multimodal Large Language Models via Semantic-Guided Evolutionary Labeling](2026-2604.17087-evocomp-learning-visual-token-compression-for-multimodal-large-language-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   プリフィル時の注意演算、鍵・値（KV）キャッシュ、入力列の読み込みが増え、初回応答の待ち時間が長くなる。EvoCompは、視覚トークンのうち質問への回答に必要なものだけを選び、下流LLMへ渡す系列長を減らす方式である。LLaVA-1.5-7Bでは576トークンを192に削減したとき、6ベンチマークの平均成績を元モデルの99.3%に保つ。
+
+- **2026-04 · [Efficient Multimodal Spatial Reasoning via Dynamic and Asymmetric Routing](2026-22e11514f14e-efficient-multimodal-spatial-reasoning-via-dynamic-and-asymmetric-routin.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  これにより複雑な空間関係を段階的に処理できるが、過去の中間トークンが自己回帰的に蓄積し、注意計算・KVキャッシュ・推論遅延を押し上げる。既存の固定率圧縮では、初期段階で必要な画像細部を落としたり、深い層ですでに冗長な視覚トークンを残したりする。
 
 - **2026-04 · [Comparative Characterization of KV Cache Management Strategies for LLM Inference](2026-2604.05012-comparative-characterization-kv-cache-management-strategies-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

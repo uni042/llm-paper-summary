@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "afb8e017896ba2375fe10a22a853415a8c31751f34be66f235955d80acac5dcc",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_b3115d0df374819199d72b06a5d34012--2026-doi-10.5220-0014919300004039-satoru-length-aware-batch-serving-research-20261030-1030-scheduled-chat-30-r01-v2.md",
+  "canonical_id": "DOI:10.5220/0014919300004039",
+  "worker_completed_at": "2026-10-30T10:38:59+09:00",
+  "worker_run_key": "20261030-1030-scheduled-chat-30/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 6120,
+    "body_paragraphs": 32,
+    "method_chars": 1845,
+    "method_paragraphs": 10,
+    "evaluation_chars": 226,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 226 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 226 < 500"
+  ],
+  "processed_at": "2026-10-30T02:08:43+00:00"
+}

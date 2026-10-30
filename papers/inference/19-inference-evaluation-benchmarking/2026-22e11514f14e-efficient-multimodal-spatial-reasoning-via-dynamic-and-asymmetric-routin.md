@@ -39,6 +39,8 @@ references:
   - canonical_id: arXiv:2406.05756
   - canonical_id: arXiv:2503.05179
   - canonical_id: arXiv:2407.14057
+last_audited: null
+audit_version: 0
 ---
 
 # DARE：層・推論hop・モダリティに適応する非対称トークン経路制御
