@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T09:21:04.957858+00:00",
+  "generated_at": "2026-10-30T10:57:16.102996+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 12,
   "worker_counts": {
-    "scheduled-chat-00": 3,
-    "scheduled-chat-30": 3,
-    "scheduled-chat-45": 2
+    "scheduled-chat-00": 4,
+    "scheduled-chat-30": 4,
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -62,6 +62,26 @@
       ]
     },
     {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md",
+      "canonical_id": "arXiv:2609.36654",
+      "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+      "file_bytes": 14264,
+      "source_sha256": "ad73a3a3dbc325025fe8a3affe5b571bdb3cb61b645ebb68d8c3d58d0e8e8e0b",
+      "source_git_blob_sha": "27da43c37bf2751b4609ccc408a352a99761d8e4",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.937706,
+      "quality_metrics": {
+        "body_chars": 3979,
+        "method_chars": 1105,
+        "evaluation_chars": 1131,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/07-kv-cache-optimization-compression/2026-41074c82c154-semantickv-a-semantics-driven-kv-cache-eviction-framework-for-efficient-.md",
       "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
       "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
@@ -77,6 +97,26 @@
         "method_chars": 1280,
         "evaluation_chars": 886,
         "limitation_chars": 385
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.21401-swarmx-agentic-scheduling-for-low-latency-agentic-systems.md",
+      "canonical_id": "arXiv:2606.21401",
+      "title": "SwarmX: Agentic Scheduling for Low-Latency Agentic Systems",
+      "file_bytes": 14389,
+      "source_sha256": "4266d5ed9e3787abed651102801c0f6680d63cef82eac964f932987075bb3539",
+      "source_git_blob_sha": "5c47c476b23d7ec3f82fdfb05c2921a3f9a473ba",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.938162,
+      "quality_metrics": {
+        "body_chars": 3700,
+        "method_chars": 1172,
+        "evaluation_chars": 554,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -104,6 +144,46 @@
       "warnings": [
         "日本語比率 78.8% < 警告基準 80%"
       ]
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2025-2506.12353-efficient-reasoning-through-suppression-of-self-affirmation-reflections-.md",
+      "canonical_id": "arXiv:2506.12353",
+      "title": "Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models",
+      "file_bytes": 15307,
+      "source_sha256": "f344d847c47fee35c386bf9447c3fc2446dafac83adb01e60c4e17feb773ca10",
+      "source_git_blob_sha": "d2bf3280f0f24c7a27eed402249903086a2a61d4",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.952897,
+      "quality_metrics": {
+        "body_chars": 4114,
+        "method_chars": 1044,
+        "evaluation_chars": 1190,
+        "limitation_chars": 582
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-d621875e47b5-mitigating-the-impact-of-activation-smoothing-on-weights-a-channel-permu.md",
+      "canonical_id": "DOI:10.1007/s44443-026-00541-9",
+      "title": "Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method",
+      "file_bytes": 15403,
+      "source_sha256": "8076918c43240e5424fe4ad8a4090b35e21d7e0488757a24ea9c76882991dd79",
+      "source_git_blob_sha": "ea179472d73a0b8a08633993eb934d755e26385f",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.828494,
+      "quality_metrics": {
+        "body_chars": 4119,
+        "method_chars": 1407,
+        "evaluation_chars": 1003,
+        "limitation_chars": 529
+      },
+      "mechanical_failures": [],
+      "warnings": []
     },
     {
       "path": "papers/inference/99-other-inference-systems/2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md",
