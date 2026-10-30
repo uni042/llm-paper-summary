@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "source_commit": "citation-backfill-working-tree",
-  "checked_at": "2026-10-30T14:25:59.118843+00:00",
-  "status": "issues_found",
+  "checked_at": "2026-10-30T15:45:15.506878+00:00",
+  "status": "passed",
   "scope": "repository-wide structural consistency",
-  "inventory_file_count": 67093,
-  "checked_file_count": 67093,
+  "inventory_file_count": 67108,
+  "checked_file_count": 67108,
   "missing_files": [],
   "working_changes": [],
   "checks": [
@@ -27,11 +27,5 @@
     "Runtime execution of arbitrary repository code"
   ],
   "external_url_count": 4309,
-  "findings": [
-    {
-      "code": "broken_local_link",
-      "path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2602.11958-ram-net-linear-time-sequence-modeling-with-sparsely-addressable-state.md",
-      "detail": "v_t−s_(t−1"
-    }
-  ]
+  "findings": []
 }
