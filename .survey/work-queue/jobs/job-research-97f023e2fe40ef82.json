@@ -35,10 +35,15 @@
   "selection_reason": "arXiv要旨はMLLMのモダリティ区切りトークンを視覚トークン選別の共通クエリとして再利用し、prefill前に学習不要で視覚トークンを枝刈り。Qwen2.5-VL-7Bで視覚トークン80.2%削除時に元精度96.3%を維持と報告。視覚プリフィルの計算量・メモリ削減に直接該当。",
   "semantic_scholar_id": "f0910f1c8dc4fe0348c933d63648864f4ea1bf53",
   "source_url": "https://arxiv.org/abs/2607.25818",
-  "status": "ready",
+  "status": "superseded",
   "title": "SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T10:03:24+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2607.25818-sepprune-a-separator-based-pruning-framework-for-efficient-multimodal-la.md",
+  "represented_canonical_id": "arXiv:2607.25818",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

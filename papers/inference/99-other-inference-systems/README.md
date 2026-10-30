@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（857本）
+## 自動生成の論文一覧（860本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -782,6 +782,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   従来の層スキップ手法は、経験的な層番号や余弦類似度などを用いて処理を省略していたが、表現が似ていることと出力品質が保たれることは同義ではない。
 
+- **2026-07 · [SepPrune: A Separator-based Pruning Framework for Efficient Multimodal Large Language Models](2026-2607.25818-sepprune-a-separator-based-pruning-framework-for-efficient-multimodal-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SepPruneはVLMの画像トークン直後に置かれるmodality separatorを単一queryとして用い、視覚トークンのkeyとの内積から重要度を線形時間で推定してLLM プリフィル前に削減する学習不要手法。
+
 - **2026-07 · [SelectInfer: Selective Neuron Loading and Computation for On-Device LLMs](2026-2607.18081-selectinfer-selective-neuron-loading-and-computation-for-on-device-llms.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   オフラインで重要FFNニューロンを選別して必要分だけロードし、入力ごとの活性で計算対象も絞ることで、端末LLMのメモリ量と計算量を独立に調整する方式。
@@ -1041,6 +1045,10 @@
 - **2026-05 · [Thinking as Compression: Your Reasoning Model is Secretly a Context Compressor](2026-2605.28713-thinking-as-compression-your-reasoning-model-is-secretly-a-context-compr.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   通常の文脈圧縮は、入力文から重要そうなトークン・文書片を選ぶか、別のモデルで固定長の潜在表現へ符号化する。主要実験では、Qwen3-8Bの回答系で4倍圧縮制約下の平均F1が65.12、完全一致率（EM）が51.17、8倍ではF1 65.42・EM 51.79である。
+
+- **2026-05 · [Theory-optimal Quantization Based on Flatness](2026-2605.18800-theory-optimal-quantization-based-on-flatness.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  低bitの重み・活性化量子化でoutlierが量子化誤差を拡大する問題を、行列の二方向の分布平坦化として捉える。LLaMA3-70BのW2A4KV16でFlatQuant比C4 PPLを19.64から16.39に改善し、A100のプリフィルで最大3.44倍の高速化を報告。
 
 - **2026-05 · [The Shape of Overthinking: Backtracking Bursts in Long Reasoning Traces](2026-2605.27965-the-shape-of-overthinking-backtracking-bursts-in-long-reasoning-traces.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -2359,6 +2367,10 @@
 - **2025-10 · [Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation](2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案法MHA-ESPは、質問に関連する例示を検索し、質問と例示の埋め込みを多頭注意で集約して、基盤モデルの埋め込み次元に揃えた少数の仮想トークンを作る。原著がいう最大約10倍の計算量削減は入力例示のトークン処理に関する演算量比較であり、実際の生成速度が常に10倍になるという意味ではない。
+
+- **2025-10 · [Entropy Meets Importance: A Unified Head Importance-Entropy Score for Stable and Efficient Transformer Pruning](2025-2510.13832-entropy-meets-importance-a-unified-head-importance-entropy-score-for-sta.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多頭注意の構造化枝刈りでは、学習済みTransformerの注意ヘッドを削除し、演算とKVキャッシュの潜在的な負担を減らす。一次論文の主実験はBERT-baseのGLUEであり、50%枝刈り時の平均品質・安定性の改善を示す。
 
 - **2025-10 · [ELUTQ: Optimizing Quantization Accuracy under LUT-Based Computation for Edge LLMs](2025-2510.19482-elutq-optimizing-quantization-accuracy-under-lut-based-computation-for-e.md)**  
   実装：[✓](https://github.com/Nkniexin/ELUTQ) ・ リポジトリ内被引用：0  
