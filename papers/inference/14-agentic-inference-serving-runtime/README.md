@@ -213,7 +213,7 @@
 
 - **2026-06 · [SwarmX: Agentic Scheduling for Low-Latency Agentic Systems](2026-2606.21401-swarmx-agentic-scheduling-for-low-latency-agentic-systems.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  単純なラウンドロビンや平均実行時間に基づく割当では、長い要求が特定のキューに集中し、遅延の裾が悪化しやすい。SwarmXは、プロンプトの意味、対象モデル、装置、実行時状態を組み合わせ、要求の推論時間と後続モデル呼び出し数の確率分布を予測するスケジューラである。
+  従来のクラスタ管理では、GPUの現在負荷や平均処理時間から次の要求を割り当て、一定の利用率や待ち行列長に応じてレプリカを増減することが多い。128基のNVIDIA H20を使うテストベッドでは、Deep ResearchのエンドツーエンドP95遅延をRay Core比61.5%削減した。
 
 - **2026-06 · [Streaming Communication in Multi-Agent Reasoning](2026-2606.05158-streaming-communication-in-multi-agent-reasoning.md)**  
   実装：[✓](https://github.com/EnVision-Research/StreamMA) ・ リポジトリ内被引用：0  

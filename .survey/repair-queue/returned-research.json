@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T13:43:32+00:00",
+  "generated_at": "2026-10-30T14:00:36+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 90,
+  "count": 87,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -2044,34 +2044,6 @@
       "worker_run_key": "20261030-1530-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2508.08435",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T08:37:36+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5020,
-        "body_paragraphs": 31,
-        "method_chars": 2103,
-        "method_paragraphs": 16,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1d1efa1b9490--libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-1d1efa1b9490--libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-schedu.json",
-      "worker_run_key": "20261030-1400-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3771563",
       "title": null,
       "source_url": null,
@@ -2324,62 +2296,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-2026.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1038/s44387-026-00072-8",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T13:15:20+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5965,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1098,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4f2f2cfa5519--libfile_109df3bbeca48191a5fcb18b2c0fb9d3--2026-doi-10.1038-s44387-026-00072-8-phase-transitions-under16kb-reaudit-20261030-2133-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4f2f2cfa5519--libfile_109df3bbeca48191a5fcb18b2c0fb9d3--2026-doi-10.1038-s44387-026-00072-8-phase-transitions-under16kb-reaudit-20261030-2133-sch.json",
-      "worker_run_key": "20261030-2133-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408492",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T13:15:21+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7718,
-        "body_paragraphs": 40,
-        "method_chars": 1483,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-550b670fcfd4--libfile_c3fe040e5a408191bf99c34862258ddf--2026-elora-under16kb-semantic-reaudit-20261030-2040-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-550b670fcfd4--libfile_c3fe040e5a408191bf99c34862258ddf--2026-elora-under16kb-semantic-reaudit-20261030-2040-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-2040-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "arXiv:2406.16299",

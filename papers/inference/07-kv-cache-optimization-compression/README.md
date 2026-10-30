@@ -455,7 +455,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2026-03 · [ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving](2026-d563756c245c-elora-efficient-lora-and-kv-cache-management-for-multi-lora-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
-  複数の低ランク適応（LoRA）を単一の基盤LLMで提供するサービスでは、リクエストに応じてアダプタを切り替えつつ、過去の会話のKVキャッシュを再利用する。著者らが測定したvLLMではGPU上のKVの平均42.4%がその状態だった。
+  ELORAは、複数のLoRAアダプタを一つの基盤LLMへ切り替えて提供するサービング環境で、GPUメモリのLoRAと履歴KVキャッシュを別々に管理することによる無駄を減らす方式である。著者らの観測では、vLLMのGPU内KVの平均42.4%が、対応LoRAが存在しないため直ちに利用できない「invalid KV」になる。
 
 - **2026-03 · [EchoKV: Efficient KV Cache Compression via Similarity-Based Reconstruction](2026-2603.22910-echokv-efficient-kv-cache-compression-via-similarity-based-reconstructio.md)**  
   実装：[✓](https://github.com/noforit/EchoKV) ・ リポジトリ内被引用：1  
@@ -1451,7 +1451,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 
 - **2025-04 · [SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices](2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
-  10億パラメータ未満の小型LLMは重み容量が小さいため端末側で動かしやすいが、長文脈ではKVキャッシュが重み以上のメモリを使うことがある。SubKVは小型LLMのKV分布を観察し、キーはチャネル別、値はトークン別に量子化する非対称な構成に、直近のFP16残差ウィンドウと先頭の注意機構 sink保護を追加する。
+  10億パラメータ前後の小型言語モデルは重み容量が比較的小さいが、生成が長くなると過去トークンの鍵・値（KV）キャッシュが増え、端末側のメモリを圧迫する。ZengらのSubKVは、鍵をチャネル別、値をトークン別に量子化する非対称な粒度を採用し、直近の重要なトークンと先頭の注意集中領域を高精度で残す。
 
 - **2025-03 · [Time and Memory Trade-off of KV-Cache Compression in Tensor Transformer Decoding](2025-2503.11108-time-and-memory-trade-off-of-kv-cache-compression-in-tensor-transformer-.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -1752,6 +1752,6 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 7年前（2019-11〜2020-10）
 
 - **2019-11 · [Fast Transformer Decoding: One Write-Head is All You Need](2019-1911.02150-multi-query-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：268  
+  実装：✓ ・ リポジトリ内被引用：267  
   複数問い合わせ注意（Multi-Query 注意機構; MQA）は、問い合わせ側の8ヘッドを維持したまま、鍵と値だけを全ヘッドで1組へ共有する。長い履歴を毎生成ステップで読む増分復号のメモリ転送を減らし、TPUv2でのWMT英独翻訳のデコーダ測定を46から3.8マイクロ秒／出力トークンへ短縮した。
 <!-- survey:auto:end -->
