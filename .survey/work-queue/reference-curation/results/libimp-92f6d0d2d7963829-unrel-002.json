@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-92f6d0d2d7963829-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "SemanticScholar:85bdd24a12dbd9794c6bf3c49cbc7ad48ce5a333",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "SemanticScholar:85bdd24a12dbd9794c6bf3c49cbc7ad48ce5a333",
+    "identity_tokens": [
+      "SemanticScholar:85bdd24a12dbd9794c6bf3c49cbc7ad48ce5a333"
+    ],
+    "reason": "動画拡散モデルの量子化であり、LLM生成推論システムの対象から明確に外れる。",
+    "first_checked_at": "2026-10-30T07:22:34+00:00",
+    "last_checked_at": "2026-10-30T07:22:34+00:00",
+    "linked_from": [],
+    "title": "DeltaQuant: 4-Bit Video Diffusion Models with Spatiotemporal Delta Smoothing"
+  },
+  "processed_at": "2026-10-30T07:22:34+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-92f6d0d2d796",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

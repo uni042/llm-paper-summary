@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T07:20:44+00:00",
-  "record_count": 12570,
+  "updated_at": "2026-10-30T07:22:40+00:00",
+  "record_count": 12578,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -180864,9 +180864,9 @@
       "identity_tokens": [
         "arXiv:2601.09212"
       ],
-      "reason": "タイトルが高速化対象を自己回帰画像生成と明記している。LLMテキスト生成に対する推論システムの貢献ではなく、画像生成タスク固有の投機的デコードを対象とする。",
+      "reason": "タイトル一覧の先行除外：自己回帰画像生成の高速化でありLLM生成推論を扱わない",
       "first_checked_at": "2026-10-30T07:20:30+00:00",
-      "last_checked_at": "2026-10-30T07:20:30+00:00",
+      "last_checked_at": "2026-10-30T07:22:38+00:00",
       "linked_from": [
         "Speculative Decoding"
       ],
@@ -180941,6 +180941,102 @@
         "KV Cache Optimization / Compression"
       ],
       "title": "CORAL-KV: Compact Cross-Layer Prediction and Residual Coding for Autoregressive Video KV Caches"
+    },
+    "arXiv:2406.19391": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2406.19391",
+      "identity_tokens": [
+        "arXiv:2406.19391"
+      ],
+      "reason": "画像の表現学習を主題とし、LLM生成推論の高速化・KV管理・サービングへの直接貢献を題名から確認できない。",
+      "first_checked_at": "2026-10-30T07:22:33+00:00",
+      "last_checked_at": "2026-10-30T07:22:33+00:00",
+      "linked_from": [],
+      "title": "Fibottention: Inceptive Visual Representation Learning with Diverse Attention Across Heads"
+    },
+    "SemanticScholar:85bdd24a12dbd9794c6bf3c49cbc7ad48ce5a333": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:85bdd24a12dbd9794c6bf3c49cbc7ad48ce5a333",
+      "identity_tokens": [
+        "SemanticScholar:85bdd24a12dbd9794c6bf3c49cbc7ad48ce5a333"
+      ],
+      "reason": "動画拡散モデルの量子化であり、LLM生成推論システムの対象から明確に外れる。",
+      "first_checked_at": "2026-10-30T07:22:34+00:00",
+      "last_checked_at": "2026-10-30T07:22:34+00:00",
+      "linked_from": [],
+      "title": "DeltaQuant: 4-Bit Video Diffusion Models with Spatiotemporal Delta Smoothing"
+    },
+    "arXiv:2511.15618": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.15618",
+      "identity_tokens": [
+        "arXiv:2511.15618"
+      ],
+      "reason": "3Dメッシュ合成の高速化が対象で、LLM言語生成・サービングではない。",
+      "first_checked_at": "2026-10-30T07:22:34+00:00",
+      "last_checked_at": "2026-10-30T07:22:34+00:00",
+      "linked_from": [],
+      "title": "FlashMesh: Faster and Better Autoregressive Mesh Synthesis via Structured Speculation"
+    },
+    "arXiv:2509.21689": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.21689",
+      "identity_tokens": [
+        "arXiv:2509.21689"
+      ],
+      "reason": "タンパク質配列生成を対象とし、LLM推論サービングではない。",
+      "first_checked_at": "2026-10-30T07:22:35+00:00",
+      "last_checked_at": "2026-10-30T07:22:35+00:00",
+      "linked_from": [],
+      "title": "SpecMER: Fast Protein Generation with K-mer Guided Speculative Decoding"
+    },
+    "arXiv:2605.15828": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.15828",
+      "identity_tokens": [
+        "arXiv:2605.15828"
+      ],
+      "reason": "タイトル一覧の先行除外：視覚幾何Transformerの量子化が対象でLLM固有の推論技術ではない",
+      "first_checked_at": "2026-10-30T07:22:39+00:00",
+      "last_checked_at": "2026-10-30T07:22:39+00:00",
+      "linked_from": [],
+      "title": "Not All Tasks Quantize Equally: Fisher-Guided Quantization for Visual Geometry Transformer"
+    },
+    "arXiv:2503.19731": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.19731",
+      "identity_tokens": [
+        "arXiv:2503.19731"
+      ],
+      "reason": "タイトル一覧の先行除外：拡散画像生成のサンプリング高速化でLLMの自己回帰推論ではない",
+      "first_checked_at": "2026-10-30T07:22:39+00:00",
+      "last_checked_at": "2026-10-30T07:22:39+00:00",
+      "linked_from": [],
+      "title": "PCM : Picard Consistency Model for Fast Parallel Sampling of Diffusion Models"
+    },
+    "DOI:10.1145/3805621.3807611": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1145/3805621.3807611",
+      "identity_tokens": [
+        "DOI:10.1145/3805621.3807611"
+      ],
+      "reason": "タイトル一覧の先行除外：地理空間モデルの配信でLLMサービングに直接該当しない",
+      "first_checked_at": "2026-10-30T07:22:40+00:00",
+      "last_checked_at": "2026-10-30T07:22:40+00:00",
+      "linked_from": [],
+      "title": "GeoServe: Leveraging Disaggregated Data Processing for Scalable Geospatial Model Serving"
+    },
+    "arXiv:2412.10730": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2412.10730",
+      "identity_tokens": [
+        "arXiv:2412.10730"
+      ],
+      "reason": "タイトル一覧の先行除外：画像分類向けxLSTMの事前学習でLLM推論システムではない",
+      "first_checked_at": "2026-10-30T07:22:40+00:00",
+      "last_checked_at": "2026-10-30T07:22:40+00:00",
+      "linked_from": [],
+      "title": "MAL: Cluster-Masked and Multi-Task Pretraining for Enhanced xLSTM Vision Performance"
     }
   }
 }

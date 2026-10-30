@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3f8637f72add0c33-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.29517",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.29517",
+    "identity_tokens": [
+      "arXiv:2605.29517"
+    ],
+    "reason": "arXiv一次要旨はColBERT/ColPaliのMaxSim計算で巨大なquery×document類似度テンソルを作らず、融合GPUカーネルで正確なrerankingを行う。A100で推論ピークメモリをchunked実装比1.4〜2.6倍削減。ただし対象は検索器のスコア計算でありLLM本体の推論最適化ではないため境界的。",
+    "first_checked_at": "2026-10-30T07:22:29+00:00",
+    "last_checked_at": "2026-10-30T07:22:29+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval"
+  },
+  "processed_at": "2026-10-30T07:22:29+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3f8637f72add",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

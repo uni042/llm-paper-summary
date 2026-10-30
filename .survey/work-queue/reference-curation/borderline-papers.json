@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T07:20:44+00:00",
-  "record_count": 5456,
+  "updated_at": "2026-10-30T07:22:42+00:00",
+  "record_count": 5463,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -84483,6 +84483,97 @@
       ],
       "borderline_recheck_count": 0,
       "title": "T-pro 2.0: An Efficient Russian Hybrid-Reasoning Model and Playground"
+    },
+    "arXiv:2406.00894": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.00894",
+      "identity_tokens": [
+        "arXiv:2406.00894"
+      ],
+      "reason": "arXiv v2要旨はManticoreで既存GPT系TransformerとMambaの事前学習済みブロックを射影器で結合し、微分可能なアーキテクチャ探索でハイブリッドを構成する。長距離タスクの性能改善は報告するが、推論時メモリ・速度・カーネル最適化の定量的な寄与は要旨で示されず、主題はモデル設計・再学習回避のため境界的。",
+      "first_checked_at": "2026-10-30T07:22:26+00:00",
+      "last_checked_at": "2026-10-30T07:22:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Pretrained Hybrids with MAD Skills"
+    },
+    "arXiv:2406.09347": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.09347",
+      "identity_tokens": [
+        "arXiv:2406.09347"
+      ],
+      "reason": "arXiv一次要旨はTransformerとRNNのindex lookup、近傍探索、Dyck言語等の表現能力と必要隠れ状態幅を理論比較する。固定状態のRNNで特定検索を行うには線形サイズが必要な一方、Transformerは対数幅で実現可能と示す。効率的再帰アーキテクチャの限界理解には有用だが、LLMサービングの実測や推論システム設計は主題でない。",
+      "first_checked_at": "2026-10-30T07:22:26+00:00",
+      "last_checked_at": "2026-10-30T07:22:26+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Separations in the Representational Capabilities of Transformers and Recurrent Architectures"
+    },
+    "arXiv:2605.25565": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25565",
+      "identity_tokens": [
+        "arXiv:2605.25565"
+      ],
+      "reason": "arXiv一次要旨はLoRA専門家の重み付けに回転ゲートを加え、適応学習・表現力を高めるRotMoLEを提案。主たる評価は専門タスクへのPEFT適応であり、推論時のMoE routing通信・レイテンシ・メモリの直接改善は不明なため境界的。",
+      "first_checked_at": "2026-10-30T07:22:29+00:00",
+      "last_checked_at": "2026-10-30T07:22:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "RotMoLE: Enhancing Mixture of Low-Rank Experts through Rotational Gating Mechanism"
+    },
+    "arXiv:2605.29517": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29517",
+      "identity_tokens": [
+        "arXiv:2605.29517"
+      ],
+      "reason": "arXiv一次要旨はColBERT/ColPaliのMaxSim計算で巨大なquery×document類似度テンソルを作らず、融合GPUカーネルで正確なrerankingを行う。A100で推論ピークメモリをchunked実装比1.4〜2.6倍削減。ただし対象は検索器のスコア計算でありLLM本体の推論最適化ではないため境界的。",
+      "first_checked_at": "2026-10-30T07:22:29+00:00",
+      "last_checked_at": "2026-10-30T07:22:29+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "FLASH-MAXSIM: IO-Aware Fused Kernels for Late-Interaction Retrieval"
+    },
+    "arXiv:2311.16620": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2311.16620",
+      "identity_tokens": [
+        "arXiv:2311.16620"
+      ],
+      "reason": "arXiv一次要旨はTransformerの長距離依存能力を滑らかさと局所性の帰納バイアスで改善し、Long Range Arenaで性能を検証する。追加学習パラメータと演算費用がほぼない改変だが、LLM推論の実機メモリ・レイテンシ・サービング改善は直接示さず、モデル表現力の研究として境界的。",
+      "first_checked_at": "2026-10-30T07:22:32+00:00",
+      "last_checked_at": "2026-10-30T07:22:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "On the Long Range Abilities of Transformers"
+    },
+    "arXiv:2603.15389": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.15389",
+      "identity_tokens": [
+        "arXiv:2603.15389"
+      ],
+      "reason": "arXiv v2一次要旨はPre-LN深層LLMの分散増幅と層の同一写像化を分析し、重み・注意・GQA・MoEの疎性が深さ利用率を改善すると示す。主な実験は学習時の深さスケーリングとタスク精度であり、推論時のスループット・メモリ削減を直接測定しないため境界的。",
+      "first_checked_at": "2026-10-30T07:22:35+00:00",
+      "last_checked_at": "2026-10-30T07:22:35+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "When Does Sparsity Mitigate the Curse of Depth in LLMs"
+    },
+    "arXiv:2608.25311": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.25311",
+      "identity_tokens": [
+        "arXiv:2608.25311"
+      ],
+      "reason": "arXiv一次要旨は拡散LMの初回生成を途中prefixで切り、残りを再生成したときの一貫性から正誤を検証するPDCを提案。同一計算予算の独立再生成より推論品質を改善するが、目的はtest-time verificationであり単位生成のレイテンシやメモリ削減が主題ではないため境界的。",
+      "first_checked_at": "2026-10-30T07:22:42+00:00",
+      "last_checked_at": "2026-10-30T07:22:42+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Prefix-Denoising Consistency: Test-Time Verification for Diffusion Language Models"
     }
   }
 }
