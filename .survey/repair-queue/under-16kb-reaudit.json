@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T02:32:33.766637+00:00",
+  "generated_at": "2026-10-30T04:06:41.533933+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 8,
+  "count": 6,
   "worker_counts": {
-    "scheduled-chat-00": 3,
+    "scheduled-chat-00": 2,
     "scheduled-chat-30": 2,
-    "scheduled-chat-45": 3
+    "scheduled-chat-45": 2
   },
   "entries": [
     {
@@ -97,50 +97,6 @@
         "method_chars": 1182,
         "evaluation_chars": 804,
         "limitation_chars": 947
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.01962-post-training-ternarization-of-qwen3-4b-capability-effective-bit-budget-.md",
-      "canonical_id": "arXiv:2609.01962",
-      "title": "Post-Training Ternarization of Qwen3-4B: Capability, Effective Bit Budget, Storage Compression, and Deployment",
-      "file_bytes": 16297,
-      "source_sha256": "81c43810e6efee6bdb608ac4b446e68cb52d2f212cff9923a534813c3088fb4d",
-      "source_git_blob_sha": "96394121fdc580fb5e8b4384b38de84afe4dc511",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "FAIL",
-      "japanese_ratio": 0.727319,
-      "quality_metrics": {
-        "body_chars": 5023,
-        "method_chars": 1435,
-        "evaluation_chars": 1143,
-        "limitation_chars": 512
-      },
-      "mechanical_failures": [
-        "16KB未満再監査: 日本語比率 72.7% < 80%"
-      ],
-      "warnings": [
-        "日本語比率 72.7% < 警告基準 80%"
-      ]
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2025-2509.18172-sbvr-summation-of-bitvector-representation-for-efficient-llm-quantizatio.md",
-      "canonical_id": "arXiv:2509.18172",
-      "title": "SBVR: Summation of BitVector Representation for Efficient LLM Quantization",
-      "file_bytes": 16432,
-      "source_sha256": "e45dbdccaaa90b5fad6a429af5fcb3870a516189bfa62ea57410d4352d05b499",
-      "source_git_blob_sha": "2e235b7f6d509d77bf66b6a37020e9120c7490ef",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.931452,
-      "quality_metrics": {
-        "body_chars": 4280,
-        "method_chars": 1507,
-        "evaluation_chars": 735,
-        "limitation_chars": 629
       },
       "mechanical_failures": [],
       "warnings": []
