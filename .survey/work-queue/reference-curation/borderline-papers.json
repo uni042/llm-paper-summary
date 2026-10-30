@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T06:57:21+00:00",
-  "record_count": 5424,
+  "updated_at": "2026-10-30T07:16:21+00:00",
+  "record_count": 5433,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -84006,6 +84006,123 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Venturing into Uncharted Waters: The Navigation Compass from Transformer to Mamba"
+    },
+    "arXiv:2505.13164": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.13164",
+      "identity_tokens": [
+        "arXiv:2505.13164"
+      ],
+      "reason": "arXiv一次要旨は高レート格子量子化の内積を多層階層化し、小さなLUTで復号する理論と歪み上界を示す。低ビット行列積には関連するが、LLM推論モデル・GPU/NPU実測やサービング評価は要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:15+00:00",
+      "last_checked_at": "2026-10-30T07:16:15+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "High-Rate Nested-Lattice Quantized Matrix Multiplication with Small Lookup Tables"
+    },
+    "arXiv:2608.24295": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.24295",
+      "identity_tokens": [
+        "arXiv:2608.24295"
+      ],
+      "reason": "arXiv一次要旨は推薦クエリ予測に特化した端末LLMを蒸留・低ビット化し、CoT長を62から14トークンへ削減するなど推論コストを制御。オンデバイス効率化に関係するが、主評価は推薦タスク品質で一般的LLM推論システムへの寄与が限定的なため境界的。",
+      "first_checked_at": "2026-10-30T07:16:15+00:00",
+      "last_checked_at": "2026-10-30T07:16:15+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "RecGPT-Mobile-V2 Technical Report"
+    },
+    "arXiv:2609.08977": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.08977",
+      "identity_tokens": [
+        "arXiv:2609.08977"
+      ],
+      "reason": "arXiv v3一次要旨はMiniCPM-o4.5に基づく双方向リアルタイム会話エージェントGanderを提案し、軽量応答側と複雑推論側の非同期協調・割り込み対応を実装。推論実行構造は関連するが、主評価は対話・ツール実行品質でありLLMサービングの定量的高速化は要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:17+00:00",
+      "last_checked_at": "2026-10-30T07:16:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Multimodal Duplex Interaction Agent"
+    },
+    "arXiv:2511.16964": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.16964",
+      "identity_tokens": [
+        "arXiv:2511.16964"
+      ],
+      "reason": "arXiv v2一次要旨はLLMエージェント群がPyTorch演算のコード最適化を行う際の探索・修正戦略を比較し、H100のKernelBenchでEager比平均2.88倍、torch.compile比1.85倍を報告。推論カーネル開発には関連するが、一般ML演算の評価でありLLMモデルE2Eの直接実測が要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:17+00:00",
+      "last_checked_at": "2026-10-30T07:16:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing PyTorch Inference with LLM-Based Multi-Agent Systems"
+    },
+    "arXiv:2603.23566": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.23566",
+      "identity_tokens": [
+        "arXiv:2603.23566"
+      ],
+      "reason": "arXiv v2一次要旨はAscend NPU向けカーネルとホストtilingの双方を実機フィードバックで最適化するエージェントを提案。101個の一般AscendC演算子で平均1.21倍を報告するが、LLM推論固有のカーネルやモデルE2Eの実測が要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:18+00:00",
+      "last_checked_at": "2026-10-30T07:16:18+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "AscendOptimizer: Episodic Agent for Ascend NPU Operator Optimization"
+    },
+    "arXiv:2405.17383": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.17383",
+      "identity_tokens": [
+        "arXiv:2405.17383"
+      ],
+      "reason": "arXiv一次要旨は線形注意・SSM・長畳み込み・線形RNNをExpand/Oscillation/Shrinkの共通モデルとして整理し、言語モデリングと検索精度を評価。線形時間推論の基礎に関係するが、要旨は推論実装の速度・メモリ削減やサービング評価を直接主張しないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:19+00:00",
+      "last_checked_at": "2026-10-30T07:16:19+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Unlocking the Secrets of Linear Complexity Sequence Model from A Unified Perspective"
+    },
+    "arXiv:2408.08567": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.08567",
+      "identity_tokens": [
+        "arXiv:2408.08567"
+      ],
+      "reason": "arXiv v3一次要旨は平滑化と行列スケッチで長系列注意を線形複雑度化するS3Attentionを提案。評価は主にLong Range Arenaと時系列予測で、現代LLMのdecodeカーネル・KVメモリ・E2E速度の直接評価は要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:21+00:00",
+      "last_checked_at": "2026-10-30T07:16:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "S$^3$Attention: Improving Long Sequence Attention with Smoothed Skeleton Sketching"
+    },
+    "arXiv:2405.08553": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.08553",
+      "identity_tokens": [
+        "arXiv:2405.08553"
+      ],
+      "reason": "arXiv v2一次要旨は注意ヘッド間を入力依存で動的合成するDCMHAを提案し、同程度の品質を約1.7〜2.0倍計算規模のTransformerに匹敵するモデルで実現。ただし中心は学習済みモデルの表現力と品質であり、実推論カーネル・サービングのレイテンシー評価は要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:21+00:00",
+      "last_checked_at": "2026-10-30T07:16:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Improving Transformers with Dynamically Composable Multi-Head Attention"
+    },
+    "arXiv:2606.07433": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.07433",
+      "identity_tokens": [
+        "arXiv:2606.07433"
+      ],
+      "reason": "arXiv一次要旨は動画MLLMの視覚処理・記憶・推論を体系化し、長動画の効率・ストリーミングメモリも整理する総説。関連領域を含むが、中心は動画理解全般の体系化であり、推論システム固有の新規実装・性能実測は要旨にないため境界的。",
+      "first_checked_at": "2026-10-30T07:16:21+00:00",
+      "last_checked_at": "2026-10-30T07:16:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Watch, Remember, Reason: Human-View Video Understanding with MLLMs"
     }
   }
 }

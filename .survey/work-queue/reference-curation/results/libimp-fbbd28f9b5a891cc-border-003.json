@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fbbd28f9b5a891cc-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.07433",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.07433",
+    "identity_tokens": [
+      "arXiv:2606.07433"
+    ],
+    "reason": "arXiv一次要旨は動画MLLMの視覚処理・記憶・推論を体系化し、長動画の効率・ストリーミングメモリも整理する総説。関連領域を含むが、中心は動画理解全般の体系化であり、推論システム固有の新規実装・性能実測は要旨にないため境界的。",
+    "first_checked_at": "2026-10-30T07:16:21+00:00",
+    "last_checked_at": "2026-10-30T07:16:21+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Watch, Remember, Reason: Human-View Video Understanding with MLLMs"
+  },
+  "processed_at": "2026-10-30T07:16:21+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fbbd28f9b5a8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
