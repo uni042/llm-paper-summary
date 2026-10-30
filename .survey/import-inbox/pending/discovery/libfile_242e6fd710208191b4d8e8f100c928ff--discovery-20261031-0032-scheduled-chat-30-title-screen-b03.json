@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0032-scheduled-chat-30/title-screen-b03",
+  "reference_main_sha": "41316ab7d0faa07b664b1d03afd404f7b8a996a8",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/TNNLS.2022.3185295",
+      "identity_tokens": [
+        "DOI:10.1109/TNNLS.2022.3185295"
+      ],
+      "title": "Hierarchical Graph Convolutional Networks for Structured Long Document Classification",
+      "reason": "タイトルの対象は文書分類向けGraph Convolutional Networkであり、生成LLMの推論・サービング最適化ではない。",
+      "source_url": "https://doi.org/10.1109/TNNLS.2022.3185295",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 424,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.11591/ijeecs.v41.i2.pp753-763",
+      "identity_tokens": [
+        "DOI:10.11591/ijeecs.v41.i2.pp753-763"
+      ],
+      "title": "RAC: a reusable adaptive convolution for CNN layer",
+      "reason": "タイトルの対象はCNN層のconvolutionであり、生成LLM推論に直接関係する内容が示されないため対象外。",
+      "source_url": "https://doi.org/10.11591/ijeecs.v41.i2.pp753-763",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 429,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16335",
+      "identity_tokens": [
+        "arXiv:2505.16335"
+      ],
+      "title": "FPQVAR: Floating Point Quantization for Visual Autoregressive Model with FPGA Hardware Co-design",
+      "reason": "タイトルの対象は画像の自己回帰生成モデルとFPGA設計であり、言語生成LLMやMLLMの推論システムではない。",
+      "source_url": "https://arxiv.org/abs/2505.16335",
+      "body_check": "title_screen_only; abstract_not_read; body_not_read",
+      "first_checked_at": "2026-10-31T00:40:24+09:00",
+      "last_checked_at": "2026-10-31T00:40:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 402,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}
