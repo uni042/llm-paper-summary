@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2000-scheduled-chat-00/r02",
+  "reference_main_sha": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.11184",
+      "identity_tokens": [
+        "arXiv:2602.11184",
+        "SemanticScholar:99738f798827c4e360223c4182a7a766c9a522df"
+      ],
+      "title": "KBVQ-MoE: KLT-guided SVD with Bias-Corrected Vector Quantization for MoE Large Language Models",
+      "reason": "MoEエキスパート間の冗長な重み成分をKLT誘導SVDで共有し、エキスパート固有残差だけをベクトル量子化した上でチャネル別アフィン補正を行う。Qwen1.5-MoE-A2.7Bの3ビット量子化で平均精度67.99、FP16の68.07に近い。推論時の超低ビット圧縮が直接の対象。",
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/5f868c3e0050f13ec82d3694df531de1-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 11
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34259",
+      "identity_tokens": [
+        "arXiv:2609.34259"
+      ],
+      "title": "QuantaSpike: Short-Window Spike-Driven Quantization for Large Language Models",
+      "reason": "短時間の発火窓でLLMの積和演算を置き換えるため、対数三値積分発火ニューロン、群適応利得、外れ値の選択的発火を組み合わせる。OPT・Llama-2等で推論精度と解析的な線形演算エネルギーを評価しており、低電力LLM推論に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.34259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 22
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.15070",
+      "identity_tokens": [
+        "arXiv:2606.15070"
+      ],
+      "title": "Stop When Further Reasoning Won't Help: Attention-State Adaptive Generation in Reasoning Models",
+      "reason": "推論モデルの注意分布から現在の思考状態を推定し、追加の推論が不要なとき生成方針を適応的に切り替える学習不要のASAGを提案。Qwen3-8Bで生成トークンを約40%減らし平均精度を3.2%改善したと報告し、テスト時推論計算量の制御が中心。",
+      "source_url": "https://arxiv.org/abs/2606.15070",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 30
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.16054",
+      "identity_tokens": [
+        "arXiv:2603.16054"
+      ],
+      "title": "inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference",
+      "reason": "LLMサービングのGPU台数・GPU種類・二系統分割を、M/G/c待ち行列解析と離散事象シミュレーションで同時に設計する。LMSYS・Azure等のトレースからP99 TTFTのSLOを満たす最小費用構成を探索し、推論基盤の容量計画に直接適用する。",
+      "source_url": "https://arxiv.org/abs/2603.16054",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 33
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36259",
+      "identity_tokens": [
+        "arXiv:2609.36259"
+      ],
+      "title": "CyFA: Linear Sequence Modeling with Relative-Time-Partitioned Memory",
+      "reason": "線形RNNの固定長状態を相対時間スロットに分け、学習した時計による巡回転送で古い鍵値連想の干渉を抑える。絶対時刻座標では二つのスカラー減衰型線形注意再帰へ変換でき、一定メモリの復号と効率的なチャンク学習を両立する。",
+      "source_url": "https://arxiv.org/abs/2609.36259",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 34
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28355",
+      "identity_tokens": [
+        "arXiv:2610.28355"
+      ],
+      "title": "Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding",
+      "reason": "投機的復号のドラフト学習で、正解トークン一点への確率ではなくドラフト・ターゲット分布の重なりから受理長に基づく位置重みと損失を導くD-PALを提案。Qwen3-4Bターゲットで平均受理長4.50→4.57などを報告し、推論時受理率とスループット改善を目的とする。",
+      "source_url": "https://arxiv.org/abs/2610.28355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 35
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14917",
+      "identity_tokens": [
+        "arXiv:2602.14917"
+      ],
+      "title": "BFS-PO: Best-First Search for Large Reasoning Models",
+      "reason": "最大エントロピーの分岐点へ戻る最良優先探索を強化学習中に用い、短い正答を学習させる方式。生成長短縮という推論効率上の効果はあるが、主たる技術的寄与はGRPO/DAPO系の学習探索・方策最適化であり、凍結中の学習手法との境界に位置する。",
+      "source_url": "https://arxiv.org/abs/2602.14917",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 38
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.24550",
+      "identity_tokens": [
+        "arXiv:2505.24550"
+      ],
+      "title": "A*-Thought: Efficient Reasoning via Bidirectional Compression for Low-Resource Settings",
+      "reason": "推論中の思考系列を探索木として表し、A*探索と双方向の重要度推定で情報密度の高い推論経路を選ぶ。QwQ-32Bの低予算条件で性能改善、高予算条件で出力長を約半減と報告しており、テスト時の推論予算制御に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2505.24550",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.21860",
+      "identity_tokens": [
+        "arXiv:2608.21860"
+      ],
+      "title": "ChainPrune: Evaluating and Reducing Redundancy in Long Chain-of-Thought Reasoning",
+      "reason": "長い思考系列を木へ統合して優越経路を選び、好みデータを構築した上でDPOと教師あり損失で学習する。推論時の冗長トークン削減を狙うが、要旨上の中心機構は訓練データ合成と選好学習であり、推論ランタイムの独立した最適化ではない。",
+      "source_url": "https://arxiv.org/abs/2608.21860",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20757",
+      "identity_tokens": [
+        "arXiv:2607.20757"
+      ],
+      "title": "GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries",
+      "reason": "Transformerの出力不変な内部対称性を利用し、学習時に回転基底を選んで活性外れ値を抑える。W4A4などの低ビット推論へ適用でき、LLaMA-2 7BでW4A4困惑度8.22→6.73を報告。学習中の基底選択が手段だが最終適用はLLM推論向け量子化。",
+      "source_url": "https://arxiv.org/abs/2607.20757",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:00:00+09:00",
+      "last_checked_at": "2026-10-30T20:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 45
+    }
+  ]
+}
