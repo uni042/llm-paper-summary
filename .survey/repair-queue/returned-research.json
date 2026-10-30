@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T02:29:59+00:00",
+  "generated_at": "2026-10-30T02:41:54+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1878,34 +1878,6 @@
       "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T20:06:37+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 142 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6035,
-        "body_paragraphs": 35,
-        "method_chars": 1193,
-        "method_paragraphs": 7,
-        "evaluation_chars": 142,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 142 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.10875",
       "title": null,
       "source_url": null,
@@ -1931,61 +1903,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_35885cf33c0081919d4fea4d64f6323c--2026-2605.10875-sol-tokenwise-compute-budget-policy-quality-repair-20261030-0350-scheduled-chat-45-r04.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_35885cf33c0081919d4fea4d64f6323c--2026-2605.10875-sol-tokenwise-compute-budget-policy-quality-repair-20261030-0350-scheduled-chat-45-r04.json",
       "worker_run_key": "20261030-0350-scheduled-chat-45/r04"
-    },
-    {
-      "canonical_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T20:57:42+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 219 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6220,
-        "body_paragraphs": 36,
-        "method_chars": 1411,
-        "method_paragraphs": 9,
-        "evaluation_chars": 219,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 219 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_60f2817cdbd481918f0cd0479bf598e2--2026-faascale-mlsys26-bibliography-repair-20261030-0449-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_60f2817cdbd481918f0cd0479bf598e2--2026-faascale-mlsys26-bibliography-repair-20261030-0449-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-0449-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "SemanticScholar:4dd0221f8b4f8daa0487aaab38fd9c4574ad3bb0",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T21:37:32+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6910,
-        "body_paragraphs": 34,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 2166,
-        "limitation_chars": 935,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_85d2568ce8bc8191bd86836341dab394--2024-sharedcontextbench-kv-reuse-multiturn-benchmark-research-20261030-0358-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_85d2568ce8bc8191bd86836341dab394--2024-sharedcontextbench-kv-reuse-multiturn-benchmark-research-20261030-0358-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "arXiv:2608.15454",
@@ -2153,61 +2070,6 @@
       "worker_run_key": "20261030-0847-scheduled-chat-45/r02"
     },
     {
-      "canonical_id": "arXiv:2606.08761",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T01:42:20+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 370 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4972,
-        "body_paragraphs": 30,
-        "method_chars": 932,
-        "method_paragraphs": 5,
-        "evaluation_chars": 370,
-        "limitation_chars": 459,
-        "insufficiency_flags": [
-          "評価説明量 370 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_f2c89e935dc08191a249bcddbe15e382--2026-2606.08761-apex4-pure-w4a4-intra-sm-rebalancing-research-20261030-0449-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_f2c89e935dc08191a249bcddbe15e382--2026-2606.08761-apex4-pure-w4a4-intra-sm-rebalancing-research-20261030-0449-scheduled-chat-45-r02.json",
-      "worker_run_key": "20261030-0449-scheduled-chat-45/r02"
-    },
-    {
-      "canonical_id": "DOI:10.5220/0014919300004039",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T02:08:43+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 226 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6120,
-        "body_paragraphs": 32,
-        "method_chars": 1845,
-        "method_paragraphs": 10,
-        "evaluation_chars": 226,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 226 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_b3115d0df374819199d72b06a5d34012--2026-doi-10.5220-0014919300004039-satoru-length-aware-batch-serving-research-20261030-1030-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_b3115d0df374819199d72b06a5d34012--2026-doi-10.5220-0014919300004039-satoru-length-aware-batch-serving-research-20261030-1030-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261030-1030-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.1145/3771563",
       "title": null,
       "source_url": null,
@@ -2239,8 +2101,8 @@
     },
     {
       "canonical_id": "arXiv:2509.25155",
-      "title": "Context-Driven Performance Modeling for Causal Inference Operators on Neural Processing Units",
-      "source_url": "https://arxiv.org/html/2509.25155",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:29:53+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-30",
@@ -2267,8 +2129,8 @@
     },
     {
       "canonical_id": "arXiv:2606.29223",
-      "title": "Depth Exploration for LLM Decoding",
-      "source_url": "https://arxiv.org/html/2606.29223",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:29:54+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2295,8 +2157,8 @@
     },
     {
       "canonical_id": "arXiv:2309.05210",
-      "title": "Understanding the Impact of Post-Training Quantization on Large Language Models",
-      "source_url": "https://arxiv.org/html/2309.05210v3",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:29:56+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-00",
@@ -2325,8 +2187,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/HPCA68181.2026.11408492",
-      "title": "ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving",
-      "source_url": "https://www.cse.ust.hk/~weiwa/papers/elora-hpca26.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:29:57+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-00",
@@ -2353,8 +2215,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/ACCESS.2026.3664226",
-      "title": "Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey",
-      "source_url": "https://doi.org/10.1109/ACCESS.2026.3664226",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:29:58+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-30",
@@ -2379,6 +2241,144 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-234d272cb3a9--libfile_04065b385d3481919bf9469c91bdc6ff--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261030-0747-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-234d272cb3a9--libfile_04065b385d3481919bf9469c91bdc6ff--2026-doi-10.1109-access.2026.3664226-agent-latency-survey-research-20261030-0747-schedule.json",
       "worker_run_key": "20261030-0747-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
+      "title": "FaaScale: Unlocking Fast LLM Scaling for Serverless Inference",
+      "source_url": "https://www.ruichuan.org/papers/faascale-mlsys26.pdf",
+      "returned_at": "2026-10-30T02:41:45+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 219 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6220,
+        "body_paragraphs": 36,
+        "method_chars": 1411,
+        "method_paragraphs": 9,
+        "evaluation_chars": 219,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 219 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3d123818f212--libfile_60f2817cdbd481918f0cd0479bf598e2--2026-faascale-mlsys26-bibliography-repair-20261030-0449-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-3d123818f212--libfile_60f2817cdbd481918f0cd0479bf598e2--2026-faascale-mlsys26-bibliography-repair-20261030-0449-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-0449-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2606.08761",
+      "title": "APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing",
+      "source_url": "https://arxiv.org/html/2606.08761v2",
+      "returned_at": "2026-10-30T02:41:47+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 370 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4972,
+        "body_paragraphs": 30,
+        "method_chars": 932,
+        "method_paragraphs": 5,
+        "evaluation_chars": 370,
+        "limitation_chars": 459,
+        "insufficiency_flags": [
+          "評価説明量 370 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4500d17091db--libfile_f2c89e935dc08191a249bcddbe15e382--2026-2606.08761-apex4-pure-w4a4-intra-sm-rebalancing-research-20261030-0449-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4500d17091db--libfile_f2c89e935dc08191a249bcddbe15e382--2026-2606.08761-apex4-pure-w4a4-intra-sm-rebalancing-research-20261030-0449-scheduled-cha.json",
+      "worker_run_key": "20261030-0449-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "SemanticScholar:4dd0221f8b4f8daa0487aaab38fd9c4574ad3bb0",
+      "title": "SharedContextBench: Evaluating Long-Context Methods in KV Cache Reuse",
+      "source_url": "https://neurips2024-enlsp.github.io/papers/paper_93.pdf",
+      "returned_at": "2026-10-30T02:41:49+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6910,
+        "body_paragraphs": 34,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 2166,
+        "limitation_chars": 935,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-473bd9d9fb8b--libfile_85d2568ce8bc8191bd86836341dab394--2024-sharedcontextbench-kv-reuse-multiturn-benchmark-research-20261030-0358-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-473bd9d9fb8b--libfile_85d2568ce8bc8191bd86836341dab394--2024-sharedcontextbench-kv-reuse-multiturn-benchmark-research-20261030-0358-scheduled-cha.json",
+      "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.5220/0014919300004039",
+      "title": "SATORU: Proactive Length-Aware Scheduling for High-Throughput Batch LLM Serving",
+      "source_url": "https://www.scitepress.org/publishedPapers/2026/149193/pdf/index.html",
+      "returned_at": "2026-10-30T02:41:51+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 226 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6120,
+        "body_paragraphs": 32,
+        "method_chars": 1845,
+        "method_paragraphs": 10,
+        "evaluation_chars": 226,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 226 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-52e8342ec269--libfile_b3115d0df374819199d72b06a5d34012--2026-doi-10.5220-0014919300004039-satoru-length-aware-batch-serving-research-20261030-1030-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-52e8342ec269--libfile_b3115d0df374819199d72b06a5d34012--2026-doi-10.5220-0014919300004039-satoru-length-aware-batch-serving-research-20261030-103.json",
+      "worker_run_key": "20261030-1030-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9",
+      "title": "OracleKV: Oracle Guidance for Question-Independent KV Cache Eviction",
+      "source_url": "https://openreview.net/pdf?id=KHM2YOGgX9",
+      "returned_at": "2026-10-30T02:41:53+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 142 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6035,
+        "body_paragraphs": 35,
+        "method_chars": 1193,
+        "method_paragraphs": 7,
+        "evaluation_chars": 142,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 142 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54b9b9c6e310--libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-54b9b9c6e310--libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r.json",
+      "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
     }
   ]
 }
