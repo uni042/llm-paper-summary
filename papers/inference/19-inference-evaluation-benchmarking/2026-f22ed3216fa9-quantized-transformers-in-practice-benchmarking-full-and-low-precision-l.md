@@ -1,39 +1,100 @@
 ---
-canonical_id: "DOI:10.32604/cmc.2026.078985"
-doi: "10.32604/cmc.2026.078985"
-title: "Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors"
-summary: "RTX 4070/4080 Laptop GPUでGPT-2、LLaMA-2-7B-Chat、Qwen1.5-1.8B-ChatのFP16とINT8学習後量子化を比較した実証研究。LLaMA-2の4070 FP16はCPUオフロードにより1244.29秒、INT8は18.63秒だった一方、4080のGPT-2ではINT8が1.10秒から2.01秒へ悪化する。50プロンプトの語彙一致と20プロンプトの人手参照文による評価を分離し、メモリ常駐・速度・文章品質の交換条件を検証する。"
-list_summary: "ノートPC向けRTX 4070/4080でFP16とINT8の生成時間・語彙一致を比較し、CPUオフロード回避の大幅改善と小型モデルのINT8低速化を切り分ける。"
+canonical_id: DOI:10.32604/cmc.2026.078985
+doi: 10.32604/cmc.2026.078985
+title: 'Quantized Transformers in Practice: Benchmarking Full- and Low-Precision LLMs across Two Processors'
+summary: RTX 4070/4080 Laptop GPUでGPT-2、LLaMA-2-7B-Chat、Qwen1.5-1.8B-ChatのFP16とINT8学習後量子化を比較した実証研究。LLaMA-2の4070 FP16はCPUオフロードにより1244.29秒、INT8は18.63秒だった一方、4080のGPT-2ではINT8が1.10秒から2.01秒へ悪化する。50プロンプトの語彙一致と20プロンプトの人手参照文による評価を分離し、メモリ常駐・速度・文章品質の交換条件を検証する。
+list_summary: ノートPC向けRTX 4070/4080でFP16とINT8の生成時間・語彙一致を比較し、CPUオフロード回避の大幅改善と小型モデルのINT8低速化を切り分ける。
 authors:
-  - "Simona-Vasilica Oprea"
-  - "Adela Bâra"
-published: "2026-04-09"
-publication: "Computers, Materials & Continua 87(3), article 91 (2026)"
-publication_type: "peer-reviewed journal article"
-publication_status: "published"
-source: "https://www.techscience.com/cmc/v87n3/66994/html"
+- Simona-Vasilica Oprea
+- Adela Bâra
+published: '2026-04-09'
+publication: Computers, Materials & Continua 87(3), article 91 (2026)
+publication_type: peer-reviewed journal article
+publication_status: published
+source: https://www.techscience.com/cmc/v87n3/66994/html
 sources:
-  - "https://www.techscience.com/cmc/v87n3/66994/html"
-  - "https://cdn.techscience.cn/files/cmc/2026/TSP_CMC-87-3/TSP_CMC_78985/TSP_CMC_78985.pdf"
-  - "https://doi.org/10.32604/cmc.2026.078985"
-implementation: "PyTorch 2.1.2、Transformers 4.38.2、BitsAndBytes 0.42.0、CUDA 12.1。torch_dtype=float16対load_in_8bit=True、device_map=auto、greedy、batch 1、最大256新規トークン。著者の実装公開URLは未確認。"
+- https://www.techscience.com/cmc/v87n3/66994/html
+- https://cdn.techscience.cn/files/cmc/2026/TSP_CMC-87-3/TSP_CMC_78985/TSP_CMC_78985.pdf
+- https://doi.org/10.32604/cmc.2026.078985
+implementation: PyTorch 2.1.2、Transformers 4.38.2、BitsAndBytes 0.42.0、CUDA 12.1。torch_dtype=float16対load_in_8bit=True、device_map=auto、greedy、batch 1、最大256新規トークン。著者の実装公開URLは未確認。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-30T10:34:40+09:00"
-worker_run_key: "20261030-1030-scheduled-chat-30/r01"
-reference_main_sha: "0f8dd11a63238fecb4933255b8bb9aac1c2905b6"
-under16kb_reaudit_target_path: "papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md"
-under16kb_reaudit_source_git_blob_sha: "977e949453e8050e814a6bf04602814d0f7b11e4"
-under16kb_reaudit_version: "2026-10-07-v1"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-30T10:34:40+09:00'
+worker_run_key: 20261030-1030-scheduled-chat-30/r01
+reference_main_sha: 0f8dd11a63238fecb4933255b8bb9aac1c2905b6
+under16kb_reaudit_target_path: papers/inference/19-inference-evaluation-benchmarking/2026-f22ed3216fa9-quantized-transformers-in-practice-benchmarking-full-and-low-precision-l.md
+under16kb_reaudit_source_git_blob_sha: 977e949453e8050e814a6bf04602814d0f7b11e4
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 returned_research_repair: true
-returned_research_reason: "既存mainのreturned修復稿を一次PDFと照合。旧再監査成果の固定source SHAが失効したため、現行sourceを基準に意味品質を再監査。"
-returned_research_blocked_git_blob_sha: "aae9e62a1470dfab0d9f15548d1fa932a87a39a2"
-last_audited: "2026-10-30"
+returned_research_reason: 既存mainのreturned修復稿を一次PDFと照合。旧再監査成果の固定source SHAが失効したため、現行sourceを基準に意味品質を再監査。
+returned_research_blocked_git_blob_sha: aae9e62a1470dfab0d9f15548d1fa932a87a39a2
+last_audited: '2026-10-30'
 audit_version: 1
+references:
+- canonical_id: DOI:10.18653/v1/2021.acl-long.334
+  doi: 10.18653/v1/2021.acl-long.334
+- canonical_id: arXiv:2208.07339
+- canonical_id: arXiv:2310.16836
+- canonical_id: DOI:10.18653/v1/2023
+  doi: 10.18653/v1/2023
+- canonical_id: DOI:10.3390/ai4040047
+  doi: 10.3390/ai4040047
+- canonical_id: DOI:10.53469/jtpes.2024.04(02).08
+  doi: 10.53469/jtpes.2024.04(02).08
+- canonical_id: DOI:10.1145/3486618
+  doi: 10.1145/3486618
+- canonical_id: DOI:10.13374/j.issn2095-9389.2022.12.27.004
+  doi: 10.13374/j.issn2095-9389.2022.12.27.004
+- canonical_id: DOI:10.1145/3487045
+  doi: 10.1145/3487045
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.102
+  doi: 10.18653/v1/2023.emnlp-main.102
+- canonical_id: arXiv:2211.10438
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.910
+  doi: 10.18653/v1/2023.emnlp-main.910
+- canonical_id: DOI:10.1109/tcsi.2024.3350661
+  doi: 10.1109/tcsi.2024.3350661
+- canonical_id: DOI:10.18653/v1/2022.findings-emnlp.240
+  doi: 10.18653/v1/2022.findings-emnlp.240
+- canonical_id: DOI:10.21437/interspeech.2022-413
+  doi: 10.21437/interspeech.2022-413
+- canonical_id: DOI:10.18653/v1/2022
+  doi: 10.18653/v1/2022
+- canonical_id: DOI:10.1371/journal.pone.0265621
+  doi: 10.1371/journal.pone.0265621
+- canonical_id: DOI:10.1007/s00530-023-01065-2
+  doi: 10.1007/s00530-023-01065-2
+- canonical_id: arXiv:2206.01861
+- canonical_id: DOI:10.1016/j.neunet.2023.12.001
+  doi: 10.1016/j.neunet.2023.12.001
+- canonical_id: arXiv:2212.09720
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.161
+  doi: 10.18653/v1/2023.emnlp-main.161
+- canonical_id: DOI:10.18653/v1/2023.findings-acl.511
+  doi: 10.18653/v1/2023.findings-acl.511
+- canonical_id: DOI:10.24818/18423264/59.3.25.06
+  doi: 10.24818/18423264/59.3.25.06
+- canonical_id: DOI:10.1016/j.neucom.2020.12.035
+  doi: 10.1016/j.neucom.2020.12.035
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.565
+  doi: 10.18653/v1/2023.emnlp-main.565
+- canonical_id: DOI:10.1109/lca.2024
+  doi: 10.1109/lca.2024
+- canonical_id: arXiv:2101.01321
+- canonical_id: DOI:10.18653/v1/2023.sustainlp-1.3
+  doi: 10.18653/v1/2023.sustainlp-1.3
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.617
+  doi: 10.18653/v1/2023.emnlp-main.617
+- canonical_id: DOI:10.1109/cvpr52729.2023.02170
+  doi: 10.1109/cvpr52729.2023.02170
+- canonical_id: DOI:10.1145/3579371.3589038
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 33
 ---
 
 # ノートPC向けRTX 4070/4080におけるFP16・INT8推論の実測と品質変化

@@ -1,46 +1,57 @@
 ---
 canonical_id: OpenReview:BQASoLmREU
-title: 'Efficient Multimodal Spatial Reasoning via Dynamic and Asymmetric Routing'
+title: Efficient Multimodal Spatial Reasoning via Dynamic and Asymmetric Routing
 authors:
-  - Yixian Shen
-  - Qi Bi
-  - Zihan Wang
-  - Zhiheng Yang
-  - Changshuo Wang
-  - Zhi Zhang
-  - Prayag Tiwari
-  - Andy D. Pimentel
-  - Anuj Pathania
-published: '2026-04'
+- Yixian Shen
+- Qi Bi
+- Zihan Wang
+- Zhiheng Yang
+- Changshuo Wang
+- Zhi Zhang
+- Prayag Tiwari
+- Andy D. Pimentel
+- Anuj Pathania
+published: 2026-04
 publication: ICLR 2026 Conference
 publication_type: conference
 publication_status: published
 source: https://proceedings.iclr.cc/paper_files/paper/2026/hash/4bd2ab7c614bc9ce646ba5559bb1fa67-Abstract-Conference.html
 sources:
-  - https://staff.fnwi.uva.nl/a.d.pimentel/artemis/ICLR26.pdf
-  - https://proceedings.iclr.cc/paper_files/paper/2026/hash/4bd2ab7c614bc9ce646ba5559bb1fa67-Abstract-Conference.html
-  - https://openreview.net/forum?id=BQASoLmREU
+- https://staff.fnwi.uva.nl/a.d.pimentel/artemis/ICLR26.pdf
+- https://proceedings.iclr.cc/paper_files/paper/2026/hash/4bd2ab7c614bc9ce646ba5559bb1fa67-Abstract-Conference.html
+- https://openreview.net/forum?id=BQASoLmREU
 openreview_id: BQASoLmREU
 semantic_scholar_id: ea9209764ac8824da3c193560c3915b080579c73
-list_summary: 'DAREは視覚・テキストトークンを層内／推論hop間で非対称に動的選別し、KVキャッシュ書込みも削減する。7つの空間推論評価で平均FLOPs40.37%、KV46.07%削減を報告。'
-summary: 'ICLR 2026のDAREは、マルチモーダルなVisualization-of-Thought推論の途中で蓄積する視覚・言語トークンを、モダリティ別の学習可能なルータとhop・層別の保留率で制御する。視覚情報が深層で言語側へ融合する傾向を利用し、浅層では視覚情報を軟保持し、深層では強く刈る。実行マスクにより非実行トークンのKV保存も省く。VolCano/Anole-7Bと7空間推論ベンチマークにおいて平均FLOPs40.37%・KV46.07%削減と精度維持・向上を報告するが、ルータ学習・モデル依存性・評価範囲に留意が必要。'
-implementation: '既存VolCano/Anole-7Bへモダリティ別線形ルータ、Gumbel-Softmax/straight-through学習、二段階視覚保持、hop-localなKV実行マスクを追加。'
-implementation_status: 'paper-method-verified; official-code-not-confirmed'
+list_summary: DAREは視覚・テキストトークンを層内／推論hop間で非対称に動的選別し、KVキャッシュ書込みも削減する。7つの空間推論評価で平均FLOPs40.37%、KV46.07%削減を報告。
+summary: ICLR 2026のDAREは、マルチモーダルなVisualization-of-Thought推論の途中で蓄積する視覚・言語トークンを、モダリティ別の学習可能なルータとhop・層別の保留率で制御する。視覚情報が深層で言語側へ融合する傾向を利用し、浅層では視覚情報を軟保持し、深層では強く刈る。実行マスクにより非実行トークンのKV保存も省く。VolCano/Anole-7Bと7空間推論ベンチマークにおいて平均FLOPs40.37%・KV46.07%削減と精度維持・向上を報告するが、ルータ学習・モデル依存性・評価範囲に留意が必要。
+implementation: 既存VolCano/Anole-7Bへモダリティ別線形ルータ、Gumbel-Softmax/straight-through学習、二段階視覚保持、hop-localなKV実行マスクを追加。
+implementation_status: paper-method-verified; official-code-not-confirmed
 code: null
 worker_id: scheduled-chat-00
-worker_run_key: '20261030-0904-scheduled-chat-00/r01'
+worker_run_key: 20261030-0904-scheduled-chat-00/r01
 worker_completed_at: '2026-10-30T09:04:00+09:00'
 last_checked: '2026-10-30'
 metadata_repaired_by: scheduled-chat-45
 metadata_repaired_at: '2026-10-30T09:55:14+09:00'
-metadata_repair_source: 'https://proceedings.iclr.cc/paper_files/paper/2026/hash/4bd2ab7c614bc9ce646ba5559bb1fa67-Abstract-Conference.html'
+metadata_repair_source: https://proceedings.iclr.cc/paper_files/paper/2026/hash/4bd2ab7c614bc9ce646ba5559bb1fa67-Abstract-Conference.html
 references:
-  - canonical_id: arXiv:2407.06135
-  - canonical_id: arXiv:2406.05756
-  - canonical_id: arXiv:2503.05179
-  - canonical_id: arXiv:2407.14057
+- canonical_id: arXiv:2502.04463
+  arxiv_id: '2502.04463'
+- canonical_id: arXiv:2403.06764
+- canonical_id: arXiv:2404.02258
+- canonical_id: arXiv:2410.04417
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2501.03895
+- canonical_id: arXiv:2412.13171
+- canonical_id: arXiv:2412.11664
+- canonical_id: arXiv:2304.08467
+- canonical_id: arXiv:2502.18600
+- canonical_id: arXiv:2412.18547
 last_audited: null
 audit_version: 0
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # DARE：層・推論hop・モダリティに適応する非対称トークン経路制御
