@@ -41,7 +41,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   演算子単位の多数カーネル起動をSM粒度の依存グラフへ分解し、単一常駐巨大カーネル内の分散スケジューラで演算・通信・タスク間パイプラインを重ね、vLLM/SGLang比で最大1.7倍の推論遅延改善を示す。
 
 - **2026-03 · [Mamba-3: Improved Sequence Modeling using State Space Principles](2026-2603.15569-mamba-3-improved-sequence-modeling-using-state-space-principles.md)**  
-  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/state-spaces/mamba) ・ リポジトリ内被引用：11  
   Mamba-3は、状態空間モデル（State Space モデル、SSM）を使う系列モデルを学習時の並列性だけでなく推論時の実行効率から設計し直す研究である。
 
 - **2025-12 · [SonicMoE: Accelerating MoE with IO and Tile-aware Optimizations](2025-2512.14080-sonicmoe-accelerating-moe-with-io-and-tile-aware-optimizations.md)**  
@@ -608,6 +608,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：✓ ・ リポジトリ内被引用：1  
   CCGQAはさらにGQA型の鍵・値ヘッド共有を潜在空間で行い、クエリの圧縮率 $C1$ とKVの圧縮率 $C2$ を分離する。H100上の融合カーネル評価では、隠れ次元2048、BF16、系列長16Kの事前処理で、CCAの4倍圧縮設定がMHA比約1.6〜1.7倍低遅延、逆伝播で約1.2〜1.3倍高速となる。
 
+- **2025-07 · [BlindSight: Harnessing Sparsity for Efficient Vision-Language Models](2025-2507.09071-blindsight-harnessing-sparsity-for-efficient-vision-language-models.md)**  
+  実装：[✓](https://anonymous.4open.science/r/BlindSight-AFDC) ・ リポジトリ内被引用：1  
+  各ヘッドをDense（密）、Sink（境界シンク）、Intra-Image（同じ画像内）、Intra-Image+Sink（画像内と境界シンク）の4種類へ割り当て、実行時には画像境界位置だけから固定的な疎注意マスクを作る。
+
 - **2025-06 · [EQuARX: Efficient Quantized AllReduce in XLA for Distributed Machine Learning Acceleration](2025-2506.17615-equarx-quantized-allreduce-xla.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   AllReduce内でブロック量子化と逆量子化を通信へ重ね、TPU/XLAの集団通信量を削減する方式。int8でBF16 AllReduce比最大1.8倍、Gemma 3 27Bプリフィル最大1.28倍を示す。
@@ -687,10 +691,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2025-07 · [Cloud Native System for LLM Inference Serving](2025-2507.18007-cloud-native-system-for-llm-inference-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   本研究は、LLM推論を一体のモデルプロセスとして固定配置する方式では、あるTransformer層だけが過負荷になってもモデル全体を複製するしかなく、必要な資源へ局所的に対処しにくいと指摘する。実験はLLaMA-2-13B、A100 80GBを備えた3ノードのKubernetesクラスタで行う。
-
-- **2025-07 · [BlindSight: Harnessing Sparsity for Efficient Vision-Language Models](2025-2507.09071-blindsight-harnessing-sparsity-for-efficient-vision-language-models.md)**  
-  実装：[✓](https://anonymous.4open.science/r/BlindSight-AFDC) ・ リポジトリ内被引用：0  
-  各ヘッドをDense（密）、Sink（境界シンク）、Intra-Image（同じ画像内）、Intra-Image+Sink（画像内と境界シンク）の4種類へ割り当て、実行時には画像境界位置だけから固定的な疎注意マスクを作る。
 
 - **2025-05 · [Turning LLM Activations Quantization-Friendly](2025-2506.01967-turning-llm-activations-quantization-friendly.md)**  
   実装：[✓](https://github.com/czakop/smooth-rot-exper) ・ リポジトリ内被引用：0  
@@ -857,7 +857,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
-  実装：[✓](https://github.com/AlibabaResearch/flash-llm) ・ リポジトリ内被引用：30  
+  実装：[✓](https://github.com/AlibabaResearch/flash-llm) ・ リポジトリ内被引用：31  
   Flash-LLMは、非構造枝刈りを施した大規模生成モデルの重みをGPUへ効率的に読み込むため、疎行列として転送し、GPU内部で密行列に戻してから行列演算器で計算する推論カーネルである。
 
 - **2023-10 · [QUIK: Towards End-to-end 4-Bit Inference on Generative Large Language Models](2023-2310.09259-quik-towards-end-to-end-4-bit-inference-on-generative-large-language-mod.md)**  
