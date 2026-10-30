@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "WhiteMatter: All-to-All Cross-Layer Connections via KV Source Mixing",
+      "source_url": "https://arxiv.org/abs/2608.18486",
+      "year": 2026,
+      "published": "2026-08-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "When generating text, a Transformer produces representations of past tokens at every layer, but each layer can normally use only representations from the same depth. This restriction prevents the model from fully reusing information it has already computed. We introduce WhiteMatter, which allows every layer to draw on past-token representations from any depth. A learned mixer selects the most useful depths for the current context and combines their representations into shared key-value (KV) cache channels. Sharing these channels across layers can reduce the cache size. Given the same number of training tokens, WhiteMatter with a full-size cache performs comparably to a standard Transformer with 50% more layers. With half the KV cache, WhiteMatter outperforms matched standard Transformers at two model scales, up to 1.3B parameters. Cross-layer connections, however, introduce dependencies that slow training and prompt processing. We address this problem with cyclic iteration, which updates interleaved groups of tokens in turn while processing the tokens within each group in parallel. On a reference model trained with exact autoregressive execution, cyclic iteration converges 12.5x faster than standard Jacobi iteration.",
+      "identifiers": [
+        "SemanticScholar:75c41579732ae953d61016dfc79231363f9ff23b"
+      ],
+      "semantic_scholar_id": "75c41579732ae953d61016dfc79231363f9ff23b",
+      "canonical_id": "arXiv:2608.18486",
+      "arxiv_id": "2608.18486",
+      "authors": [
+        "Wen-Bo Zhang",
+        "Xiang Ren"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 72,
+        "matched_prestigious_venue": null
+      },
+      "reason": "WhiteMatterはTransformerの各層が過去トークンの異なる深さの表現を共有KVチャネルへ混合できるようにするアーキテクチャ。学習したmixerが参照層を選び、同容量条件の表現再利用とKVキャッシュ半減を目指す。最大1.3Bのモデルで半量KVの比較評価を行う一方、層間依存により学習とprefillが遅くなるためcyclic iterationを導入する。実運用サービング速度の確証は限定的だが、推論KV容量削減に直接寄与する。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "EFQ-Softmax: Exp-Free Quantization for Softmax",
+      "source_url": "https://arxiv.org/abs/2609.09721",
+      "year": 2026,
+      "published": "2026-09-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit attention accelerates Transformer inference by moving the $QK^\\top$ and $PV$ matrix multiplications to FP8 or FP4 matrix engines. However, the softmax path often evaluates shifted-score exponentials in higher precision, forms a temporary probability block, and quantizes it before low-bit $PV$ multiplication. This exp-then-quantize path creates a mismatch between a high-precision probability producer and a low-bit matrix consumer. We propose EFQ-Softmax (Exp-Free Quantization for Softmax), a low-bit probability-generation method that directly maps shifted attention scores to block-scaled E2M1 operands. For each microscaling block, EFQ-Softmax selects an exponent-only scale from the local maximum, maps the shifted scores to a normalized residual domain, and generates nonnegative E2M1 probability codes using a single affine rule. The resulting operand is used consistently in both the $\\widetilde{P}V$ numerator update and the $\\widetilde{P}\\mathbf{1}$ denominator update. The FlashAttention-style row-maximum update, historical rescaling, high-precision accumulation, and final normalization remain unchanged. We evaluate end-to-end quality on Qwen3-8B, Qwen3-VL-8B-Instruct, and WAN2.2-TI2V-5B, and separately measure kernel-level performance on the A5 vector unit. EFQ-Softmax improves the Qwen3-8B seven-task mean from 0.6749 with MXFP4 to 0.6773 and the Qwen3-VL nine-task mean from 0.7826 to 0.8000. On WAN2.2, it maintains temporal consistency and visual quality comparable to the FP16 and MXFP4 baselines under VBench. On the A5 vector unit, EFQ-Softmax reduces the vector-stage latency of the fused probability-generation kernel by 40.33% on average across sequence lengths from 16K to 128K. These results show that direct low-bit probability generation can replace the conventional exp-then-quantize path while preserving end-to-end model quality.",
+      "identifiers": [
+        "SemanticScholar:4e09a92da580c19dfd0518905f0d5549a52bfc66"
+      ],
+      "semantic_scholar_id": "4e09a92da580c19dfd0518905f0d5549a52bfc66",
+      "canonical_id": "arXiv:2609.09721",
+      "arxiv_id": "2609.09721",
+      "authors": [
+        "Hao-Hui Han",
+        "Yu-Ming Wan",
+        "Hong-Ning Wang",
+        "Peng-Cheng Xie",
+        "Xiao Yan",
+        "R. You",
+        "Wencong Zhang Xi'an Jiaotong University",
+        "Huawei Technologies Co.",
+        "Ltd",
+        "Shandong University of Finance",
+        "Economics"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 51,
+        "matched_prestigious_venue": null
+      },
+      "reason": "EFQ-Softmaxは低bit attentionのSoftmax確率生成で高精度expを計算してからFP4へ量子化する経路を置換する。各microscaling blockの最大値から指数スケールを選び、scoreを正規化してE2M1確率符号を直接生成し、PV分子とP1分母に共通使用する。A5ベクトル演算器で16K〜128Kのkernel vector-stage遅延平均40.33%削減を報告し、低bit推論カーネルに直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-146aeafe0fc6",
+    "round": "libimp-146aeafe0fc664b4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-146aeafe0fc664b4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-146aeafe0fc664b4-pre01.json",
+    "receipt": "sha256:1596c5f9e8a40bfa1c70b0685b4a4ebbdbb71b05ca0f9095ce6eb39cd749c8cc"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-146aeafe0fc6",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

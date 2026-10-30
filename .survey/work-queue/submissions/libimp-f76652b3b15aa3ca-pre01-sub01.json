@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Kirin: Improving ANN efficiency with SNN Hybridization",
+      "source_url": "https://arxiv.org/abs/2602.08817",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Artificial neural networks (ANNs), particularly large language models (LLMs), demonstrate powerful inference capabilities but consume substantial energy. Conversely, spiking neural networks (SNNs) exhibit exceptional energy efficiency due to their binary and event-driven characteristics, thus motivating the study of ANN-to-SNN conversion. In this process, quantization plays a pivotal role, mapping LLMs'floating-point parameters to discrete SNN parameters via the temporal dimension of the time window. However, several challenges remain in the conversion process: (i) converting high bit-width quantization values into binary spikes requires longer time windows, increasing system latency; and (ii) the inherent trade-off between the information loss of single-spike schemes and the energy costs of multi-spike ones in SNN. To address these challenges, we propose Kirin, a integer and spike hybrid based SNN to achieve accuracy lossless ANN-to-SNN conversion with time and energy efficiency. Specifically, we first propose a Spike Matrix Hybridization strategy that encoding low bit-width parameters that leading to small time window size into binary spikes while preserving the rest in integer format, thereby reducing the overall latency of SNN execution. Second, we introduce a silence threshold mechanism to regulate the timing of single-spike firing, ensuring the output is mathematically equivalent to the LLM's output and preserves accuracy. Experimental results demonstrate that Kirin, under a W4A4\\&8 quantization setting, achieves near-FP16 accuracy while reducing energy consumption by up to 84.66\\% and shortening time steps by 93.75\\%.",
+      "identifiers": [
+        "SemanticScholar:d70755d8ca1899a87af233a20a856cf1b32fc155"
+      ],
+      "semantic_scholar_id": "d70755d8ca1899a87af233a20a856cf1b32fc155",
+      "canonical_id": "arXiv:2602.08817",
+      "arxiv_id": "2602.08817",
+      "doi": "10.48550/arXiv.2602.08817",
+      "authors": [
+        "Chenyu Wang",
+        "Zhang-Lu Yan",
+        "Zhi Zhou",
+        "Xu Chen",
+        "Weng-Fai Wong"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 263,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KirinはLLMを含む人工ニューラルネットをspiking neural networkへ変換する際、低bit部分のみbinary spikeへ変換し残りを整数で維持するSpike Matrix Hybridizationと発火タイミング制御を組み合わせる。W4A4&8設定でFP16に近い精度を維持し、エネルギー最大84.66%削減・time step 93.75%短縮を要旨で報告する。LLMの量子化・低電力推論へ直接関係するがGPU実測速度とは区別する。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Forward-Free Diffusion Language Models with BPTT-Free Looped Refinement",
+      "source_url": "https://arxiv.org/abs/2606.08357",
+      "year": 2026,
+      "published": "2026-06-06",
+      "venue": null,
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models generate text through iterative denoising, offering a powerful alternative to autoregressive generation. However, discrete language spaces lack a natural neighborhood structure for defining effective perturbations, motivating artificial corruption schemes in the forward process. Such prescribed forward processes often produce states that are mathematically convenient but misaligned with the drafts and errors encountered during generation, resulting in degraded sample quality. To address this limitation, we propose FReDA, a forward-free diffusion language model that eliminates the need for a hand-designed forward process. We formulate diffusion language modeling as recursive distribution refinement, in which model-generated drafts serve as implicit intermediate states and the learned refinement model progressively moves the draft distribution toward the target distribution. Training detaches the preceding refinement passes and backpropagates only through the final pass, avoiding backpropagation through time (BPTT) across refinement iterations while retaining standard backpropagation within the final Transformer pass. Concretely, FReDA refines drafts by proposing candidate sequences and either directly performing self-refinement or selecting among parallel candidates via Best-of-N refinement. With this design, FReDA is neighborhood-agnostic, sampler-adaptive, and compatible with flexible refinement parameterizations. Extensive evaluations in the sub-8B regime show that FReDA-4B outperforms larger diffusion base models on reasoning and coding benchmarks, achieving absolute gains of up to 15%, while reaching a 1.5-1.8x average speedup over diffusion baselines and scaling effectively with additional refinement computation.",
+      "identifiers": [
+        "SemanticScholar:c7f3b185aef2dac5df1d27bf4f8c910dfb436c9b"
+      ],
+      "semantic_scholar_id": "c7f3b185aef2dac5df1d27bf4f8c910dfb436c9b",
+      "canonical_id": "arXiv:2606.08357",
+      "arxiv_id": "2606.08357",
+      "authors": [
+        "Hao-Tian Sun",
+        "Ru-Shi Qiang",
+        "Yu-Qian Zheng",
+        "Bo Dai"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 146,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FReDAは拡散型言語モデルの人為的なforward破壊過程をなくし、モデル生成draftを反復的に改善する分布refinementを学習する。過去のrefinement passをdetachして最後のpassのみ逆伝播し、自己refinementまたはBest-of-Nを使う。要旨はsub-8Bモデルで拡散ベースライン比平均1.5〜1.8倍の生成高速化を報告し、生成推論効率に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models",
+      "source_url": "https://arxiv.org/abs/2605.15413",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Despite the remarkable success of transformer architectures in natural language processing, their scalability limitations remain poorly understood through systematic empirical analysis. This paper presents the first comprehensive large-scale evaluation of 118 transformer models across seven distinct architectural categories, revealing fundamental performance walls that manifest as hard deployment constraints. Our systematic benchmarking methodology uncovers a critical scalability crisis: while 88.1 % of models successfully process sequences up to 512 tokens, this drops dramatically to 44.9 % at 1024 tokens, with complete failure (0 %) at 2048 tokens. Through rigorous analysis of loading times, memory consumption, and computational efficiency across sequence lengths from 128 to 2048 tokens, we demonstrate that compressed models achieve superior parameter efficiency (649.2 tokens/sec/M parameters) compared to large generative models (12.5 tokens/ sec/M). Our findings challenge prevailing scaling assumptions and provide the first quantitative evidence that the theoretical $O\\left(n^{2}\\right)$ attention complexity translates into measurable performance walls. This work establishes new benchmarking methodologies for transformer evaluation and provides critical insights for practical deployment decisions in production environments.",
+      "identifiers": [
+        "SemanticScholar:9e7beabb3dad1a2e24d391d625da9054f28625a6"
+      ],
+      "semantic_scholar_id": "9e7beabb3dad1a2e24d391d625da9054f28625a6",
+      "canonical_id": "arXiv:2605.15413",
+      "arxiv_id": "2605.15413",
+      "doi": "10.1109/BigData66926.2025.11401965",
+      "authors": [
+        "Mahdi Naser Moghadasi",
+        "Faezeh Ghaderi"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 326,
+        "matched_prestigious_venue": null
+      },
+      "reason": "118のTransformerモデル・7アーキテクチャ群を対象に、sequence長に伴うロード時間、メモリ消費、token/secを測定する性能壁の実証研究。要旨は512token処理成功88.1%、1024で44.9%、2048で0%と報告し、圧縮モデルのparameter当たり生成速度を比較する。評価環境の一般化可能性は本文確認が必要だが、LLM推論実行資源・性能測定に直接関連する。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
+      "source_url": "https://arxiv.org/abs/2604.25903",
+      "year": 2026,
+      "published": "2026-04-28",
+      "venue": "Proc. ACM Softw. Eng.",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49× memory reduction, (2) time reduction up to 8-10× for clone detection, up to 3× for summarization, and 4–7× for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT’s design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
+      "identifiers": [
+        "SemanticScholar:2dbe5130935844d2fcc83bc8bbfbb7c08f5e8a78"
+      ],
+      "semantic_scholar_id": "2dbe5130935844d2fcc83bc8bbfbb7c08f5e8a78",
+      "canonical_id": "arXiv:2604.25903",
+      "arxiv_id": "2604.25903",
+      "doi": "10.1145/3797075",
+      "authors": [
+        "A. Alam",
+        "Palash Ranjan Roy",
+        "C. Roy",
+        "Banani Roy",
+        "Kevin A. Schneider"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 185,
+        "matched_prestigious_venue": null
+      },
+      "reason": "CTTはコードクローン検出・要約・コード生成を対象に、圧縮手順の順序を炭素費用も考慮して設計する複合圧縮パイプライン。encoder、encoder-decoder、decoder-onlyで評価し、要旨は最大49倍のメモリ削減、コード生成4〜7倍の時間短縮、CO2最大81%削減を報告する。個別手法の新規性と条件はResearchで確認が必要だが、推論時の圧縮・計算効率に直接寄与する。",
+      "library_body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f76652b3b15a",
+    "round": "libimp-f76652b3b15aa3ca-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f76652b3b15aa3ca-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f76652b3b15aa3ca-pre01.json",
+    "receipt": "sha256:0b769acc0dbecabca6810a25cd5c66dd4bd877522ca5cb1992d86503798e672a"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f76652b3b15a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
