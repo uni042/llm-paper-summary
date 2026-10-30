@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T10:57:16.102996+00:00",
+  "generated_at": "2026-10-30T11:14:54.494491+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 12,
+  "count": 15,
   "worker_counts": {
-    "scheduled-chat-00": 4,
-    "scheduled-chat-30": 4,
-    "scheduled-chat-45": 4
+    "scheduled-chat-00": 5,
+    "scheduled-chat-30": 5,
+    "scheduled-chat-45": 5
   },
   "entries": [
     {
@@ -62,20 +62,60 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md",
-      "canonical_id": "arXiv:2609.36654",
-      "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
-      "file_bytes": 14264,
-      "source_sha256": "ad73a3a3dbc325025fe8a3affe5b571bdb3cb61b645ebb68d8c3d58d0e8e8e0b",
-      "source_git_blob_sha": "27da43c37bf2751b4609ccc408a352a99761d8e4",
+      "path": "papers/inference/99-other-inference-systems/2024-2401.02938-fast-and-effective-weight-update-for-pruned-large-language-models.md",
+      "canonical_id": "arXiv:2401.02938",
+      "title": "Fast and Effective Weight Update for Pruned Large Language Models",
+      "file_bytes": 12875,
+      "source_sha256": "7c8429de1c741d1748960b9ac48cb8439efa6d56838478e35b5ce5677f800b80",
+      "source_git_blob_sha": "90a260ee6480e066e113b7dbbff774d822ec4e59",
+      "assigned_worker": "scheduled-chat-30",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.97312,
+      "quality_metrics": {
+        "body_chars": 3461,
+        "method_chars": 1078,
+        "evaluation_chars": 818,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/19-inference-evaluation-benchmarking/2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md",
+      "canonical_id": "DOI:10.26599/BDMA.2024.9020074",
+      "title": "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads",
+      "file_bytes": 13350,
+      "source_sha256": "f56c6360ab7ce8b2aec82eee0530f80ca4d4bdeef7292dd261442283cdd6fa65",
+      "source_git_blob_sha": "9c6f812132c5f3183d67e8b6a999ad1c42351924",
       "assigned_worker": "scheduled-chat-45",
       "semantic_status": "pending",
       "mechanical_status": "PASS",
-      "japanese_ratio": 0.937706,
+      "japanese_ratio": 0.945758,
       "quality_metrics": {
-        "body_chars": 3979,
-        "method_chars": 1105,
-        "evaluation_chars": 1131,
+        "body_chars": 3346,
+        "method_chars": 917,
+        "evaluation_chars": 706,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2604.07658-optimal-decay-spectra-for-linear-recurrences.md",
+      "canonical_id": "arXiv:2604.07658",
+      "title": "Optimal Decay Spectra for Linear Recurrences",
+      "file_bytes": 14199,
+      "source_sha256": "d31246a77ccb805e6aeafa5ce15bf4aa559197f2ab7498ec4b78db7c75febbdd",
+      "source_git_blob_sha": "733c904e1ed1f1881e214a787c12e78be55e8067",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.946439,
+      "quality_metrics": {
+        "body_chars": 3708,
+        "method_chars": 1171,
+        "evaluation_chars": 737,
         "limitation_chars": 0
       },
       "mechanical_failures": [],
@@ -97,26 +137,6 @@
         "method_chars": 1280,
         "evaluation_chars": 886,
         "limitation_chars": 385
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.21401-swarmx-agentic-scheduling-for-low-latency-agentic-systems.md",
-      "canonical_id": "arXiv:2606.21401",
-      "title": "SwarmX: Agentic Scheduling for Low-Latency Agentic Systems",
-      "file_bytes": 14389,
-      "source_sha256": "4266d5ed9e3787abed651102801c0f6680d63cef82eac964f932987075bb3539",
-      "source_git_blob_sha": "5c47c476b23d7ec3f82fdfb05c2921a3f9a473ba",
-      "assigned_worker": "scheduled-chat-45",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.938162,
-      "quality_metrics": {
-        "body_chars": 3700,
-        "method_chars": 1172,
-        "evaluation_chars": 554,
-        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
@@ -186,6 +206,26 @@
       "warnings": []
     },
     {
+      "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.21401-swarmx-agentic-scheduling-for-low-latency-agentic-systems.md",
+      "canonical_id": "arXiv:2606.21401",
+      "title": "SwarmX: Agentic Scheduling for Low-Latency Agentic Systems",
+      "file_bytes": 15432,
+      "source_sha256": "d065bd48d9edde4db46ed0b28cedb11f5179fcf975df537fb8a280861fc61199",
+      "source_git_blob_sha": "aa0197e83a75190b313835e576cad6514cf079d4",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.938162,
+      "quality_metrics": {
+        "body_chars": 3700,
+        "method_chars": 1172,
+        "evaluation_chars": 554,
+        "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
       "path": "papers/inference/99-other-inference-systems/2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md",
       "canonical_id": "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
       "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
@@ -201,6 +241,26 @@
         "method_chars": 1182,
         "evaluation_chars": 804,
         "limitation_chars": 947
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/99-other-inference-systems/2026-2609.36654-replay-the-curvature-accurate-and-scalable-nvfp4-quantization-for-large-.md",
+      "canonical_id": "arXiv:2609.36654",
+      "title": "Replay the Curvature: Accurate and Scalable NVFP4 Quantization for Large Language Model Inference",
+      "file_bytes": 16082,
+      "source_sha256": "8c59720dffebf784a8dd27bf1af3f45666297f485797145ab2f515851a3d3f35",
+      "source_git_blob_sha": "36425250fe651d4e9e6b3db956eacebb0ae7f37a",
+      "assigned_worker": "scheduled-chat-45",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.937706,
+      "quality_metrics": {
+        "body_chars": 3979,
+        "method_chars": 1105,
+        "evaluation_chars": 1131,
+        "limitation_chars": 0
       },
       "mechanical_failures": [],
       "warnings": []
