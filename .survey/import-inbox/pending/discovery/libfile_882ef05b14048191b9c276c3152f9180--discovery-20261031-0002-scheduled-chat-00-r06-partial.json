@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0002-scheduled-chat-00/r06",
+  "reference_main_sha": "67e9465d6a63dbfa3a71a8b8c1eb1142de42713c",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.06502",
+      "identity_tokens": [
+        "arXiv:2509.06502"
+      ],
+      "title": "FireRedChat: A Pluggable, Full-Duplex Voice Interaction System with Cascaded and Semi-Cascaded Implementations",
+      "reason": "arXiv一次要旨。話者別streaming VAD、意味的ターン終了検出、割り込み制御、対話管理を統合した音声LLM向け全二重会話システム。cascadedとsemi-cascadedの内部実装を比較し、遅延・誤割り込み・ターン終了精度を評価。音声LLMのリアルタイムサービングと実行パイプライン効率に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2509.06502",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:22:18+09:00",
+      "last_checked_at": "2026-10-31T00:22:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 481,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.27419",
+      "identity_tokens": [
+        "arXiv:2510.27419"
+      ],
+      "title": "DeepCompress: A Dual Reward Strategy for Dynamically Exploring and Compressing Reasoning Chains",
+      "reason": "arXiv一次要旨。問題の難易度を学習進行に応じて動的に推定し、簡単な問題は短いCoT、難問は探索的な長いCoTを報酬で促す二重報酬学習。数学ベンチマークで精度とtoken効率の同時改善を報告し、推論時のreasoning token予算制御に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2510.27419",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:22:18+09:00",
+      "last_checked_at": "2026-10-31T00:22:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 484,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.09683",
+      "identity_tokens": [
+        "arXiv:2607.09683"
+      ],
+      "title": "Ablation, Statistical Inference, and Validation for KV-Cache Compression",
+      "reason": "arXiv一次要旨。Turbo-QuantとSpectralQuantのKVキャッシュ圧縮を統計的に比較し、heavy-tailデータでeigenbasis方式が不安定となること、構造化データでは有利になることを述べる。ただし要旨末尾に「this is an abstract of the abstract thank you」という異常な文があり、具体的な生成LLM・実機速度・品質ベンチマークは確認できないため、一次本文の信頼性確認が必要なborderline。",
+      "source_url": "https://arxiv.org/abs/2607.09683",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:22:18+09:00",
+      "last_checked_at": "2026-10-31T00:22:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.07103",
+      "identity_tokens": [
+        "arXiv:2503.07103"
+      ],
+      "title": "Evaluating the Impact of Post-Training Quantization on Large Language Models for Code Generation",
+      "reason": "arXiv一次要旨。最大34Bのコード生成LLMを2〜8bitのPTQと校正データ種別で比較する再現・拡張評価。4bitでは元モデル比平均約70%メモリ削減で性能の有意な低下を観測せず、2〜3bitではコード特化校正が性能低下を緩和と報告。LLMの低ビット配備と品質・メモリのトレードオフに直接関連する。",
+      "source_url": "https://arxiv.org/abs/2503.07103",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T00:22:18+09:00",
+      "last_checked_at": "2026-10-31T00:22:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
