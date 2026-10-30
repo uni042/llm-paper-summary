@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-cd08186948b1ca00-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.22404",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.22404",
+    "identity_tokens": [
+      "arXiv:2603.22404"
+    ],
+    "reason": "異なる価格・性能のモデル提供者に推論予算を配分するモデル市場のarbitrageを分析し、SWE-benchでGPT-5 miniとDeepSeek v3.2の組合せが最大40%純利益率を生むと報告。推論時モデル選択とコスト管理に関連するが、主題は市場経済と収益でありLLMサービングエンジンの計算効率実測ではない。",
+    "first_checked_at": "2026-10-30T16:56:35+00:00",
+    "last_checked_at": "2026-10-30T16:56:35+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Computational Arbitrage in AI Model Markets"
+  },
+  "processed_at": "2026-10-30T16:56:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-cd08186948b1",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

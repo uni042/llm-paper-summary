@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e749c8b9ce878477-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2510.00399",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2510.00399",
+    "identity_tokens": [
+      "arXiv:2510.00399"
+    ],
+    "reason": "1層Mambaの線形注意と非線形ゲートについて、外れ値を含む入力例からのin-context learningと学習収束・一般化を理論解析する。Mambaの計算効率には言及するが、主貢献は分類タスクでの学習ダイナミクスと外れ値耐性の証明であり、推論ランタイムや圧縮・サービングの新規最適化はないため対象外。",
+    "first_checked_at": "2026-10-30T16:56:39+00:00",
+    "last_checked_at": "2026-10-30T16:56:39+00:00",
+    "linked_from": [],
+    "title": "How Can Mamba Learn In Context with Outliers and Generalize Provably?"
+  },
+  "processed_at": "2026-10-30T16:56:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e749c8b9ce87",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

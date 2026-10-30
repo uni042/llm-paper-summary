@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e749c8b9ce878477-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2601.22101",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2601.22101",
+    "identity_tokens": [
+      "arXiv:2601.22101"
+    ],
+    "reason": "FP8/INT4学習時の高精度master weightsを除去し、量子化誤差をoptimizer momentumへ戻す誤差補償で学習メモリを削減する研究。評価はTransformer・Gemma・Sparse MoEの事前学習と微調整であり、推論時の実行機構、サービング、KV管理、推論速度の直接的改善を提案・評価していないため、現在凍結された学習単独範囲として除外。",
+    "first_checked_at": "2026-10-30T16:56:39+00:00",
+    "last_checked_at": "2026-10-30T16:56:39+00:00",
+    "linked_from": [],
+    "title": "ECO: Quantized Training without Full-Precision Master Weights"
+  },
+  "processed_at": "2026-10-30T16:56:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e749c8b9ce87",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

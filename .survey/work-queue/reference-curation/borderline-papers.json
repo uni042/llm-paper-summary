@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T15:55:58+00:00",
-  "record_count": 5523,
+  "updated_at": "2026-10-30T16:56:38+00:00",
+  "record_count": 5531,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85392,6 +85392,110 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Intrinsic Structure as a Proxy for Saliency: SVD-Based Weight Preservation for Mixed-Precision Quantization in Large Language Models"
+    },
+    "arXiv:2604.27039": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.27039",
+      "identity_tokens": [
+        "arXiv:2604.27039"
+      ],
+      "reason": "LenVMは生成各ステップで残りトークン長を割引returnのvalue推定として予測し、正確な出力長制御や長さと品質の調整を可能にする。GSM8Kで固定200トークン予算より正解率を維持するが、主な評価は長さ制御・回答品質であり、実サービングのTPSや資源削減は直接検証していないため境界的。",
+      "first_checked_at": "2026-10-30T16:56:34+00:00",
+      "last_checked_at": "2026-10-30T16:56:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Length Value Model: Scalable Value Pretraining for Token-Level Length Modeling"
+    },
+    "arXiv:2605.13382": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.13382",
+      "identity_tokens": [
+        "arXiv:2605.13382"
+      ],
+      "reason": "BlockVLAはロボットVLAのaction生成をブロック単位の自己回帰とブロック内並列diffusionに分け、prefix KV再利用で通常の離散diffusion方式比3.3倍高速化を報告。推論最適化はあるが、評価対象がロボット制御policyであり一般LLM推論サービングへの適用を示していないため境界的。",
+      "first_checked_at": "2026-10-30T16:56:34+00:00",
+      "last_checked_at": "2026-10-30T16:56:34+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BlockVLA: Accelerating Autoregressive VLA via Block Diffusion Finetuning"
+    },
+    "arXiv:2605.12260": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.12260",
+      "identity_tokens": [
+        "arXiv:2605.12260"
+      ],
+      "reason": "PRISMは長期agent履歴のグラフ型メモリからquery intentに応じた経路探索、証拠圧縮、ゼロLLM段の適応routingを組み合わせ、LoCoMoで少ないcontext token予算と回答品質を両立する。推論入力のトークン費削減はあるが、中心はRAG側の情報検索・記憶でありLLM推論エンジン自体の最適化は弱い。",
+      "first_checked_at": "2026-10-30T16:56:35+00:00",
+      "last_checked_at": "2026-10-30T16:56:35+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "PRISM: Pareto-Efficient Retrieval over Intent-Aware Structured Memory for Long-Horizon Agents"
+    },
+    "arXiv:2603.22404": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.22404",
+      "identity_tokens": [
+        "arXiv:2603.22404"
+      ],
+      "reason": "異なる価格・性能のモデル提供者に推論予算を配分するモデル市場のarbitrageを分析し、SWE-benchでGPT-5 miniとDeepSeek v3.2の組合せが最大40%純利益率を生むと報告。推論時モデル選択とコスト管理に関連するが、主題は市場経済と収益でありLLMサービングエンジンの計算効率実測ではない。",
+      "first_checked_at": "2026-10-30T16:56:35+00:00",
+      "last_checked_at": "2026-10-30T16:56:35+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Computational Arbitrage in AI Model Markets"
+    },
+    "arXiv:2610.03123": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.03123",
+      "identity_tokens": [
+        "arXiv:2610.03123"
+      ],
+      "reason": "FORESIGHTは共有重み・入力encoder・KV cacheを持つ2つのSiamese LLM streamで、片方が動画を処理する間にもう片方が未来の知覚対象と計算密度を予測し、再学習なしにonline計算経路を変更する。Qwen3-VL-8BでStreamingBench等の品質改善を報告するが、要旨に実測レイテンシ削減やGPU計算量の削減率はなく効率改善の定量性が不足する。",
+      "first_checked_at": "2026-10-30T16:56:36+00:00",
+      "last_checked_at": "2026-10-30T16:56:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Foresight: planning future perception in streaming VLMs without retraining"
+    },
+    "arXiv:2602.05790": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.05790",
+      "identity_tokens": [
+        "arXiv:2602.05790"
+      ],
+      "reason": "LLMの重み専用量子化で入力共分散に適合するベクトル符号帳の代わりに、全ての入力統計に対してほぼ最適となる普遍符号帳の存在を証明する。ガウス重みで適応型とのレート差は次元当たり0.11ビット以下。ただし存在証明は非構成的で、実装可能な符号帳や実機推論高速化を示さないため境界候補。",
+      "first_checked_at": "2026-10-30T16:56:37+00:00",
+      "last_checked_at": "2026-10-30T16:56:37+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Price of metric universality in vector quantization is at most 0.11 bit"
+    },
+    "arXiv:2605.28691": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.28691",
+      "identity_tokens": [
+        "arXiv:2605.28691"
+      ],
+      "reason": "動画生成用Diffusion TransformerにSkiparse-2D疎注意、All-to-All一回で疎パターンを切り替えるSparse Sequence Parallelism、HiF8量子化を組み合わせる。系列並列の通信量75%削減とH200等での生成高速化を報告するが、対象は動画拡散モデルでLLM推論への直接評価はない。汎用注意・通信最適化との接点があるため境界候補。",
+      "first_checked_at": "2026-10-30T16:56:38+00:00",
+      "last_checked_at": "2026-10-30T16:56:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "OSP-Next: Efficient High-Quality Video Generation with Sparse Sequence Parallelism, HiF8 Quantization, and Reinforcement Learning"
+    },
+    "arXiv:2603.06738": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06738",
+      "identity_tokens": [
+        "arXiv:2603.06738"
+      ],
+      "reason": "超解像Transformerの相対位置バイアスを低ランク暗黙表現とチャネル連結に置換し、注意スコアの加算を内積化してFlashAttentionカーネルを利用可能にする。超解像で推論時間2.9倍改善と報告するが、LLM推論では未評価。一般的な注意カーネル互換化の設計は参考になるため境界候補。",
+      "first_checked_at": "2026-10-30T16:56:38+00:00",
+      "last_checked_at": "2026-10-30T16:56:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Rank-Factorized Implicit Neural Bias: Scaling Super-Resolution Transformer with FlashAttention"
     }
   }
 }
