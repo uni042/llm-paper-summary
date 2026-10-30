@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0432-scheduled-chat-30/r02",
+  "reference_main_sha": "e95b472665d0aa27c176a9c0c12874e540a53cf6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04242",
+      "identity_tokens": [
+        "arXiv:2609.04242"
+      ],
+      "title": "Training-Free Speech-Centric Omni Understanding with Frozen VLMs",
+      "reason": "TFOはWhisperで信頼度フィルタ済みの時刻付き転写を作り、凍結したVLMの言語入力へ渡して音声・動画理解を改善する。要旨の比較は56ベンチマーク・21言語の理解性能と学習不要の適応性が中心で、LLM推論の実行時間・KV・サービング・カーネル効率を改善する機構や実測は示していないため対象外。",
+      "source_url": "https://arxiv.org/abs/2609.04242",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 204,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02553",
+      "identity_tokens": [
+        "arXiv:2606.02553"
+      ],
+      "title": "LongLive-RAG: A General Retrieval-Augmented Framework for Long Video Generation",
+      "reason": "LongLive-RAGは自己回帰動画拡散モデルの長時間生成で外観が劣化する問題に対し、生成済みlatent履歴を検索し、Window Temporal Delta Lossで有意な時間変化を捉える。要旨の主指標は動画品質VBench-Longであり、LLM推論や生成システムの速度・メモリ効率改善ではない。動画生成の品質研究として対象外。",
+      "source_url": "https://arxiv.org/abs/2606.02553",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 205,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08817",
+      "identity_tokens": [
+        "arXiv:2602.08817"
+      ],
+      "title": "Kirin: Improving ANN efficiency with SNN Hybridization",
+      "reason": "KirinはLLMを含む人工ニューラルネットをspiking neural networkへ変換する際、低bit部分のみbinary spikeへ変換し残りを整数で維持するSpike Matrix Hybridizationと発火タイミング制御を組み合わせる。W4A4&8設定でFP16に近い精度を維持し、エネルギー最大84.66%削減・time step 93.75%短縮を要旨で報告する。LLMの量子化・低電力推論へ直接関係するがGPU実測速度とは区別する。",
+      "source_url": "https://arxiv.org/abs/2602.08817",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 227,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14159",
+      "identity_tokens": [
+        "arXiv:2602.14159"
+      ],
+      "title": "Synergistic Intra- and Cross-Layer Regularization Losses for MoE Expert Specialization",
+      "reason": "MoE専門家の重複を減らすため、同一tokenに対するSwiGLU活性の類似性を罰する層内損失と、隣接層のtop-kルーティング確率を結び付ける層間損失を追加する。Megatron-LM上の学習・zero-shot性能改善と経路安定化を報告し推論高速化にも言及するが、要旨の主貢献は学習時の正則化で、推論システムの実測・新runtimeは不明なためborderline。",
+      "source_url": "https://arxiv.org/abs/2602.14159",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 238,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.25903",
+      "identity_tokens": [
+        "arXiv:2604.25903"
+      ],
+      "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
+      "reason": "CTTはコードクローン検出・要約・コード生成を対象に、圧縮手順の順序を炭素費用も考慮して設計する複合圧縮パイプライン。encoder、encoder-decoder、decoder-onlyで評価し、要旨は最大49倍のメモリ削減、コード生成4〜7倍の時間短縮、CO2最大81%削減を報告する。個別手法の新規性と条件はResearchで確認が必要だが、推論時の圧縮・計算効率に直接寄与する。",
+      "source_url": "https://arxiv.org/abs/2604.25903",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 249,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22546",
+      "identity_tokens": [
+        "arXiv:2601.22546"
+      ],
+      "title": "Towards the Holographic Characteristic of LLMs for Efficient Short-text Generation",
+      "reason": "HOLOはLLMが生成初期に目的文のキーワードを捉える性質を利用し、短い生成ステップでキーワードを抽出した後、語彙制約付き並列テキスト生成で文章を完成させる。推論ステップ削減の可能性はあるが、一次要旨の主要評価は自動・人手品質指標であり、実測latencyや生成throughputの改善幅が示されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2601.22546",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 277,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.01935",
+      "identity_tokens": [
+        "arXiv:2605.01935"
+      ],
+      "title": "ViM-Q: Scalable Algorithm-Hardware Co-Design for Vision Mamba Model Inference on FPGA",
+      "reason": "ViM-QはVision Mambaの活性・重み量子化とFPGA上のLUT演算・状態空間モデルのパイプラインを協調設計し、ViM-tinyでRTX 3090比較の速度・電力改善を報告する。効率化手法は具体的だが対象は画像認識用Vision Mambaであり、LLM推論やMoEサービングへの適用実証は要旨にないため本サーベイでは対象外。",
+      "source_url": "https://arxiv.org/abs/2605.01935",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 279,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.15413",
+      "identity_tokens": [
+        "arXiv:2605.15413"
+      ],
+      "title": "Transformer Scalability Crisis: The First Comprehensive Empirical Analysis of Performance Walls in Modern Language Models",
+      "reason": "118のTransformerモデル・7アーキテクチャ群を対象に、sequence長に伴うロード時間、メモリ消費、token/secを測定する性能壁の実証研究。要旨は512token処理成功88.1%、1024で44.9%、2048で0%と報告し、圧縮モデルのparameter当たり生成速度を比較する。評価環境の一般化可能性は本文確認が必要だが、LLM推論実行資源・性能測定に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2605.15413",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 281,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.08357",
+      "identity_tokens": [
+        "arXiv:2606.08357"
+      ],
+      "title": "Forward-Free Diffusion Language Models with BPTT-Free Looped Refinement",
+      "reason": "FReDAは拡散型言語モデルの人為的なforward破壊過程をなくし、モデル生成draftを反復的に改善する分布refinementを学習する。過去のrefinement passをdetachして最後のpassのみ逆伝播し、自己refinementまたはBest-of-Nを使う。要旨はsub-8Bモデルで拡散ベースライン比平均1.5〜1.8倍の生成高速化を報告し、生成推論効率に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2606.08357",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:42:00+09:00",
+      "last_checked_at": "2026-10-31T04:42:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 282,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.03408",
+      "identity_tokens": [
+        "arXiv:2511.03408"
+      ],
+      "title": "Efficient Reasoning via Thought-Training and Thought-Free Inference",
+      "reason": "3TFは推論あり／なし両モードの混合学習とCoT付き追加学習によって、明示的な思考列を出力せず推論品質を保つようモデルを訓練する。生成される思考token削減は推論費用へ波及し得るが、要旨は学習方法とreasoning benchmarkの品質改善が中心で、実測サービング速度やruntime機構の改善は提示していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2511.03408",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T04:35:00+09:00",
+      "last_checked_at": "2026-10-31T04:35:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
