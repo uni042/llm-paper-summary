@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r02",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.07658",
+      "identity_tokens": [
+        "arXiv:2604.07658"
+      ],
+      "title": "Optimal Decay Spectra for Linear Recurrences",
+      "reason": "arXiv要旨は線形再帰の減衰スペクトルが長距離記憶を制限する問題に対し、幾何間隔の対数減衰率と位置適応スケーリングを組み合わせるPoSTを提案。Mamba-2、RWKV-7、Gated DeltaNet等に追加実行時オーバーヘッドなく統合し、長文脈検索とゼロショット言語モデルを改善。再帰型推論の状態表現と長文脈効率に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.07658",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 39
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2401.02938",
+      "identity_tokens": [
+        "arXiv:2401.02938"
+      ],
+      "title": "Fast and Effective Weight Update for Pruned Large Language Models",
+      "reason": "arXiv要旨は枝刈り後のLLM品質回復のため、従来高価だった層別重み再調整をADMMに基づく高速更新で置き換え、漸進的な枝刈りマスク選択と併用。推論時の小型化を実現する枝刈り手法に直接関係するが、提案の更新計算自体は事前処理でありオンライン推論カーネルではない。",
+      "source_url": "https://arxiv.org/abs/2401.02938",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 40
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.12353",
+      "identity_tokens": [
+        "arXiv:2506.12353"
+      ],
+      "title": "Efficient Reasoning Through Suppression of Self-Affirmation Reflections in Large Reasoning Models",
+      "reason": "arXiv要旨は推論中の冗長な自己肯定的反省文の先頭語に確率偏りを発見し、これを抑制してCoT出力長を短縮する手法。QwQ-32BやQwen3-32Bなどで学習なし18.7%、学習あり50.2%の長さ圧縮を報告し、vLLMなど推論フレームワークへ適用可能と記す。生成トークン数削減による推論コスト最適化に該当。",
+      "source_url": "https://arxiv.org/abs/2506.12353",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 41
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07659",
+      "identity_tokens": [
+        "arXiv:2610.07659"
+      ],
+      "title": "DLoop: Looped Speculative Decoding",
+      "reason": "arXiv v2要旨はドラフトが高信頼な場合に検証前に複数ドラフト段階をループさせ、対象モデルの不要な検証forwardを削減。未検証トークンの隠れ状態を扱うloop-aware学習を導入し、EAGLE-3等に対してwall-clock速度を5〜41%改善し分布保存型復号を維持。推論デコードの直接的高速化。",
+      "source_url": "https://arxiv.org/abs/2610.07659",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.28717",
+      "identity_tokens": [
+        "arXiv:2609.28717"
+      ],
+      "title": "HeteroReason: Heterogeneous FPGA-GPU Acceleration for Disaggregated Speculative Reasoning",
+      "reason": "arXiv要旨はLRMの投機的推論において、ドラフトをFPGAへ、PRM検証とtargetをGPUへ配置し、バックトラックとshadow同期・先読みパイプラインで推論資源の非対称性を利用。GPU同種構成比で遅延1.01〜1.42倍、エネルギー効率1.25〜1.57倍と報告。異種アクセラレータによる推論システム設計に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.28717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 43
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.26484",
+      "identity_tokens": [
+        "arXiv:2609.26484"
+      ],
+      "title": "From Token Importance to Conditional Removability: Rethinking Visual Token Pruning in Multimodal Large Language Models",
+      "reason": "arXiv要旨は視覚トークンの削除安全性が層深さと同時削除集合に依存する点を示し、段階的摂動推定と集合条件付き再評価を行うCoRePruneを提案。Qwen3.5で128視覚トークン予算時に密モデル品質の90.3%を維持しprefillを51.0%短縮。MLLMプリフィル計算削減の直接的手法。",
+      "source_url": "https://arxiv.org/abs/2609.26484",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 44
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02522",
+      "identity_tokens": [
+        "arXiv:2607.02522"
+      ],
+      "title": "Multi-Turn Distributed Inference with Mixture of Experts for 6G Edge-Cloud Networks",
+      "reason": "arXiv要旨は多ターンMoE対話でKV状態を固定所有サイトに保持しつつ、疎なexpert演算をネットワークへ分散させるStateFlowを提案。ネットワークエミュレーション付き実機テストで安定対話同時実行数2倍超、ターンp95遅延53%削減を報告。KVの局所性とMoE専門家配置の共同最適化に該当。",
+      "source_url": "https://arxiv.org/abs/2607.02522",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 47
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.25818",
+      "identity_tokens": [
+        "arXiv:2607.25818"
+      ],
+      "title": "SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models",
+      "reason": "arXiv要旨はMLLMのモダリティ区切りトークンを視覚トークン選別の共通クエリとして再利用し、prefill前に学習不要で視覚トークンを枝刈り。Qwen2.5-VL-7Bで視覚トークン80.2%削除時に元精度96.3%を維持と報告。視覚プリフィルの計算量・メモリ削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.25818",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 48
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.06362",
+      "identity_tokens": [
+        "arXiv:2503.06362"
+      ],
+      "title": "Adaptive Audio-Visual Speech Recognition via Matryoshka-Based Multimodal LLMs",
+      "reason": "arXiv要旨はAVSRの音声・映像表現をMatryoshka型の複数粒度に符号化し、計算予算に応じて入力トークン数を柔軟に選ぶLlama-MTSKを提案。入力圧縮と推論コストに関連するが、主評価は音声認識精度であり一般的なLLMサービング・KV管理・カーネル性能を直接検証していないため境界的。",
+      "source_url": "https://arxiv.org/abs/2503.06362",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 49
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.10346",
+      "identity_tokens": [
+        "arXiv:2609.10346"
+      ],
+      "title": "Beyond One-Size-Fits-All: Sample-Adaptive Strategy Routing for Vision Token Pruning in MLLMs",
+      "reason": "arXiv要旨は入力画像と質問に応じて既存視覚トークン枝刈り方式か全トークン推論を選択する軽量VIP-Routerを提案。VTC-Bench Group Aで固定方式比平均精度26.9%相対改善、実トークンコスト込みutility22.0%改善。MLLM推論時の入力依存圧縮ルーティングに直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.10346",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:07:10+09:00",
+      "last_checked_at": "2026-10-30T15:07:10+09:00",
+      "linked_from": [],
+      "worklist_rank": 50
+    }
+  ]
+}
