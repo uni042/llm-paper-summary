@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r14",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.01376",
+      "identity_tokens": [
+        "arXiv:2603.01376",
+        "DOI:10.48550/arXiv.2603.01376"
+      ],
+      "title": "3BASiL: An Algorithmic Framework for Sparse plus Low-Rank Compression of LLMs",
+      "reason": "LLM重みを疎行列と低ランク行列の和へ分解し、三ブロックADMMとTransformer出力整合の再構成で量子化・枝刈り後の品質を改善する。A100で圧縮準備時間2.5倍超短縮を報告するが、これは生成時TPSの改善値ではない。",
+      "source_url": "https://arxiv.org/abs/2603.01376",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 399,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.09130",
+      "identity_tokens": [
+        "arXiv:2602.09130",
+        "DOI:10.48550/arXiv.2602.09130"
+      ],
+      "title": "UniComp: A Unified Evaluation of Large Language Model Compression via Pruning, Quantization, and Distillation",
+      "reason": "枝刈り・量子化・蒸留の7手法を40超のデータセットで性能・信頼性・ハードウェア効率の三軸から評価するUniCompを提案。圧縮後の知識保持と推論能力低下・安全性低下の非一致を示す、推論圧縮の評価ベンチマーク研究。",
+      "source_url": "https://arxiv.org/abs/2602.09130",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 400,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.11215",
+      "identity_tokens": [
+        "arXiv:2605.11215",
+        "DOI:10.48550/arXiv.2605.11215"
+      ],
+      "title": "ReCoVer: Resilient LLM Pre-Training System via Fault-Tolerant Collective and Versatile Workload",
+      "reason": "512 GPUまでの事前学習で故障時もmicrobatch数を維持し、勾配の確率的等価性を守るReCoVerを提案。チェックポイント再開比2.23倍の有効スループットは学習時の値であり、LLM推論サービングではない。",
+      "source_url": "https://arxiv.org/abs/2605.11215",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 401,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2106.10207",
+      "identity_tokens": [
+        "arXiv:2106.10207",
+        "DOI:10.48550/arXiv.2106.10207"
+      ],
+      "title": "Distributed Deep Learning in Open Collaborations",
+      "reason": "ボランティア計算でSwAV/ALBERT事前学習を分散させる共同訓練の枠組み。高遅延・非対称帯域を扱うが、生成LLMの推論・KV・サービング最適化の直接評価はない。",
+      "source_url": "https://arxiv.org/abs/2106.10207",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 402,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.09897",
+      "identity_tokens": [
+        "arXiv:2504.09897",
+        "DOI:10.48550/arXiv.2504.09897"
+      ],
+      "title": "TAMP: Token-Adaptive Layerwise Pruning in Multimodal Large Language Models",
+      "reason": "マルチモーダルトークンの多様性に応じて層ごとの疎性率を変え、注意スコアで代表入力トークンを選ぶTAMPを提案。LLaVA-NeXT/VideoLLaMA2で既存枝刈り方式より品質を保ち、推論向けモデルサイズを削減する。",
+      "source_url": "https://arxiv.org/abs/2504.09897",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 403,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.02681",
+      "identity_tokens": [
+        "arXiv:2511.02681",
+        "DOI:10.48550/arXiv.2511.02681"
+      ],
+      "title": "Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes",
+      "reason": "微調整済みモデルの差分更新が低ランクかつ疎であることを利用し、特異ベクトルの重要度を考慮して更新差分を保存する。複数タスク版の保存容量を抑えるが、一次要旨で生成時メモリ帯域・速度改善を実証していないため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2511.02681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 404,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39138",
+      "identity_tokens": [
+        "arXiv:2609.39138",
+        "DOI:10.48550/arXiv.2609.39138"
+      ],
+      "title": "MoSE: Mode-Switching Expander for Mixed LLM Training and Inference",
+      "reason": "推論時のprefill-decode KV転送と学習時all-to-allの通信需要に合わせ、同じポート予算でexpanderネットワークの接続を切り替える。1024群のフローモデルで推論重視モードのKV通信費用平均90.8%減、P95 91.9%減を報告するが実機GPUクラスタの測定ではない。",
+      "source_url": "https://arxiv.org/abs/2609.39138",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 406,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.18799",
+      "identity_tokens": [
+        "arXiv:2505.18799",
+        "DOI:10.48550/arXiv.2505.18799"
+      ],
+      "title": "ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models",
+      "reason": "下流タスクの微調整で重要な注意ヘッドのみ更新し、学習する注意パラメータを10%に抑えるALPSを提案。削減対象はアラインメント訓練費用であり、推論時のモデル層・重み・トークン計算量を削除する手法ではない。",
+      "source_url": "https://arxiv.org/abs/2505.18799",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 407,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.11052",
+      "identity_tokens": [
+        "arXiv:2510.11052",
+        "DOI:10.48550/arXiv.2510.11052"
+      ],
+      "title": "Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by Refining Belief States",
+      "reason": "拡散LLMの未確定トークンを予測分布とmask embeddingの混合で保持し、信頼度とKL収束で確定・早期停止するLRDを提案。HumanEval等の品質を改善しながら最大10.6倍の復号高速化を報告する。",
+      "source_url": "https://arxiv.org/abs/2510.11052",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 409,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.03249",
+      "identity_tokens": [
+        "arXiv:2602.03249",
+        "DOI:10.48550/arXiv.2602.03249"
+      ],
+      "title": "Accordion-Thinking: Self-Regulated Step Summaries for Efficient and Readable LLM Reasoning",
+      "reason": "思考を途中で要約し旧トークンのKVを捨てるFold推論モードを学習させ、長いCoTの文脈依存を圧縮する。48GB GPUで正答率を保ちながらスループット3倍と報告する。",
+      "source_url": "https://arxiv.org/abs/2602.03249",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:40:59+09:00",
+      "last_checked_at": "2026-10-30T20:40:59+09:00",
+      "linked_from": [],
+      "worklist_rank": 410,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
