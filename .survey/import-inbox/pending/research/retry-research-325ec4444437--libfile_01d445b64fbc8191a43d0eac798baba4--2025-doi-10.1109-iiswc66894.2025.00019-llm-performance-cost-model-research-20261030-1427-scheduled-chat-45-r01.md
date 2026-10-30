@@ -34,6 +34,8 @@ reference_main_sha: "8a4c43d4d90ff181c263ce52251dd48734928dda"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_job_source: "WORKLIST-45.md rank 39"
+last_audited: null
+audit_version: 0
 ---
 # LLM性能・コスト統合モデル：FlashAttention、MoE、5D並列とチップレット製造費の共同探索
 
