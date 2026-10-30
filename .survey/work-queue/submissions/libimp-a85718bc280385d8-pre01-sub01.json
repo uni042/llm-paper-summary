@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts",
+      "source_url": "https://arxiv.org/abs/2607.20519",
+      "year": 2026,
+      "published": "2026-07-08",
+      "venue": "arXiv.org",
+      "citation_count": 15,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers increase test-time computation by repeatedly applying a shared recurrent block. Learned halting objectives in looped Transformers typically use a single exit distribution both as the inference-time stopping rule and as the training-time weighting of per-depth losses. This entangles exit selection with trajectory formation: the gate not only chooses which recurrent state to use, but also determines how strongly each intermediate state is supervised. Consequently, poor adaptive-compute performance can arise from the readout, the induced trajectory, or their interaction. We study adaptive depth in looped Transformers through this trajectory--readout lens, across controlled synthetic tasks (modular arithmetic and binary parity) and large-scale Ouro-1.4B and 2.6B checkpoints. We find that fixed-prior depth supervision, which shapes the trajectory without an input-dependent halting policy, produces difficulty-aware trajectories whose intermediate states expose useful stopping signals, and that simple post-hoc confidence readouts often match or outperform learned linear and MLP gates. Fitting gates on frozen trajectories localizes the failure: it appears to stem mainly from the trajectory induced by joint gate training rather than from limited gate expressivity. The same pattern is present in Ouro evaluations, where pretrained ponder gates are competitive but not uniformly Pareto-optimal, and measured latency confirms that the resulting reductions in average exit depth translate into practical inference-time savings. Our systematic diagnostic evaluation reframes adaptive depth in looped Transformers as a joint problem of trajectory formation and exit readout, rather than gate learning alone, highlighting a distinction that prior learned-halting work has often left implicit.",
+      "identifiers": [
+        "SemanticScholar:4beea7573b2d30a2c7d6d16ea8a337cdb1b3b6d6"
+      ],
+      "semantic_scholar_id": "4beea7573b2d30a2c7d6d16ea8a337cdb1b3b6d6",
+      "canonical_id": "arXiv:2607.20519",
+      "arxiv_id": "2607.20519",
+      "doi": "10.48550/arXiv.2607.20519",
+      "authors": [
+        "A. C. Popescu",
+        "Haitz Sáez de Ocáriz Borde",
+        "Pietro Liò"
+      ],
+      "priority": 115,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 15,
+        "citation_count": 15,
+        "total": 115,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 114,
+        "matched_prestigious_venue": null
+      },
+      "reason": "反復Transformerの停止ゲートと深さ別教師信号を分離して評価し、固定事前分布で形成した軌跡に対する事後信頼度readoutが学習済みゲートを上回る場合を示す。Ouro-1.4B/2.6Bで平均反復深さ減少が実測遅延削減に結び付くことを確認する適応計算研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs",
+      "source_url": "https://arxiv.org/abs/2603.14892",
+      "year": 2026,
+      "published": "2026-03-16",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (VLMs) achieve strong multimodal understanding capabilities by leveraging high-resolution visual inputs, but the resulting large number of visual tokens creates a major computational bottleneck. Recent work mitigates this issue through visual token compression, typically compressing tokens based on saliency, diversity, or a fixed combination of both. We observe that the distribution of semantic prominence varies substantially across samples, leading to different optimal trade-offs between local saliency preservation and global coverage. This observation suggests that applying a static compression strategy across all samples can be suboptimal. Motivated by this insight, we propose PromPrune, a sample-adaptive visual token selection framework composed of semantic prominence-aware budget allocation and a two-stage selection pipeline. Our method adaptively balances local saliency preservation and global coverage according to the semantic prominence distribution of each sample. By allocating token budgets between locally salient regions and globally diverse regions, our method maintains strong performance even under high compression ratios. On LLaVA-NeXT-7B, our approach reduces FLOPs by 88% and prefill latency by 22% while preserving 97.5% of the original accuracy.",
+      "identifiers": [
+        "SemanticScholar:faa85db05a91366428d6ec6ba2dcc1323e10335f"
+      ],
+      "semantic_scholar_id": "faa85db05a91366428d6ec6ba2dcc1323e10335f",
+      "canonical_id": "arXiv:2603.14892",
+      "arxiv_id": "2603.14892",
+      "doi": "10.48550/arXiv.2603.14892",
+      "authors": [
+        "Jaehoon Lee",
+        "Mingi Jung",
+        "Soohyuk Jang",
+        "Seung-Kwun Yoo",
+        "Dahuin Jung",
+        "Sungroh Yoon"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 228,
+        "matched_prestigious_venue": null
+      },
+      "reason": "サンプルごとの意味的顕著性に応じて局所重要度と全体カバレッジへ視覚トークン予算を動的配分するPromPruneを提案。LLaVA-NeXT-7BでFLOPs 88%削減、prefill遅延22%削減、元精度97.5%保持と報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "The Shadow Price of Reasoning: Economic Perspective on Optimal Budget Allocation for LLMs",
+      "source_url": "https://arxiv.org/abs/2606.03092",
+      "year": 2026,
+      "published": "2026-06-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Inference-time scaling has emerged as a critical avenue for enhancing Large Language Models'performance, yet real-world deployment is constrained by strict computational budgets. In this work, we formulate inference budget allocation as a global constrained optimization problem governed by economic principles. By modeling per-query reasoning utility with a shifted-surge function, we derive an optimal allocation policy based on a global shadow price that equilibrates marginal utility under resource scarcity. Based on this theory, we propose Constrained Latent-utility Equilibrium Allocation for Reasoning (CLEAR). It performs rational abandonment and reallocates resources from insolvent queries to solvable queries near their emergence thresholds. Extensive experiments on several reasoning tasks with different traffic streams demonstrate that CLEAR significantly improves the Pareto frontier of total token cost versus mean accuracy. In resource-scarce regimes, CLEAR achieves up to a 3x improvement in global accuracy compared to uniform allocation.",
+      "identifiers": [
+        "SemanticScholar:95deefc8dbbc797f5242b91984d117552e61e916"
+      ],
+      "semantic_scholar_id": "95deefc8dbbc797f5242b91984d117552e61e916",
+      "canonical_id": "arXiv:2606.03092",
+      "arxiv_id": "2606.03092",
+      "doi": "10.48550/arXiv.2606.03092",
+      "authors": [
+        "Xuerong Wan",
+        "Speed Zhu",
+        "Jianwei Cai",
+        "Guang Chen",
+        "Ximing Huang",
+        "Wiggin Zhou",
+        "Ming-Yang Sun"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 150,
+        "matched_prestigious_venue": null
+      },
+      "reason": "各要求の思考効用をshifted-surge関数でモデル化し、全体トークン予算の影価格に基づいて解けない要求から解ける要求へ計算を再配分するCLEARを提案。資源不足条件で一律予算配分比最大3倍の全体正解率を報告する推論時予算スケジューリング。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs",
+      "source_url": "https://arxiv.org/abs/2606.00543",
+      "year": 2026,
+      "published": "2026-05-30",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In Vision-Language Models (VLMs), high-resolution images produce a large number of visual tokens, resulting in high computational costs and KV-cache overhead during inference. To address this problem, we propose an Extreme Token Compression (ETC) framework that minimizes task loss when reducing the number of input tokens based on the principle of variational information distillation. Specifically, from an information-theoretic perspective, we show that minimizing task loss requires the compact representation to preserve the instruction-aware sufficient statistic of the task-relevant visual information for prediction. In practice, ETC leverages text-to-image cross-attention to weight the original visual features to approximate the latent instruction-aware predictive statistic. Moreover, ETC introduces a variational information distillation, enabling the compact representation to preserve the essential information to recover this predictive statistic. Experiments on LLaVA-1.5-7B and Qwen3-VL-2B show that ETC remains effective even under single-token compression, substantially reducing KV-cache overhead while retaining strong task performance.",
+      "identifiers": [
+        "SemanticScholar:00fcc09afaf04cd3d5b47940f5315d733fcc6808"
+      ],
+      "semantic_scholar_id": "00fcc09afaf04cd3d5b47940f5315d733fcc6808",
+      "canonical_id": "arXiv:2606.00543",
+      "arxiv_id": "2606.00543",
+      "doi": "10.48550/arXiv.2606.00543",
+      "authors": [
+        "Yi-Lin Gao",
+        "Hong-Chen Wei",
+        "Zhen-Zhong Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚情報を指示条件付きの予測に十分な統計量へ蒸留し、テキスト対画像のクロス注意と変分情報蒸留で少数の視覚トークンへ圧縮する。LLaVA-1.5-7BとQwen3-VL-2Bで単一トークンまで削減し、推論時KV負荷を抑える直接的なVLM圧縮手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "AWP: Activation-Aware Weight Pruning and Quantization with Projected Gradient Descent",
+      "source_url": "https://arxiv.org/abs/2506.10205",
+      "year": 2025,
+      "published": "2025-06-11",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "To address the enormous size of Large Language Models (LLMs), model compression methods, such as quantization and pruning, are often deployed, especially on edge devices. In this work, we focus on layer-wise post-training quantization and pruning. Drawing connections between activation-aware weight pruning and sparse approximation problems, and motivated by the success of Iterative Hard Thresholding (IHT), we propose a unified method for Activation-aware Weight pruning and quantization via Projected gradient descent (AWP). Our experiments demonstrate that AWP outperforms state-of-the-art LLM pruning and quantization methods. Theoretical convergence guarantees of the proposed method for pruning are also provided.",
+      "identifiers": [
+        "SemanticScholar:aa54f80c1c1f10861773a821ee56bc19c486de32"
+      ],
+      "semantic_scholar_id": "aa54f80c1c1f10861773a821ee56bc19c486de32",
+      "canonical_id": "arXiv:2506.10205",
+      "arxiv_id": "2506.10205",
+      "doi": "10.48550/arXiv.2506.10205",
+      "authors": [
+        "Jing Liu",
+        "T. Koike-Akino",
+        "Ye Wang",
+        "Hassan Mansour",
+        "Matthew Brand"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": null
+      },
+      "reason": "活性依存の重み枝刈りと量子化を射影勾配法で統一し、Iterative Hard Thresholdingとの関係を使って層別PTQを最適化する。枝刈りの収束保証とLLM圧縮品質の改善を提示する直接的な推論向けモデル圧縮法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a85718bc2803",
+    "round": "libimp-a85718bc280385d8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a85718bc280385d8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a85718bc280385d8-pre01.json",
+    "receipt": "sha256:154a802ae43ba2bfc8a05fa6a4e19cf52db9c6fbde50ba20cd0b9ca41381f639"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a85718bc2803",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

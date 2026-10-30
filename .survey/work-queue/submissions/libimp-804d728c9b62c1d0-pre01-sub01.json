@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning",
+      "source_url": "https://arxiv.org/abs/2601.21919",
+      "year": 2026,
+      "published": "2026-01-29",
+      "venue": "arXiv.org",
+      "citation_count": 13,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inference overhead induced by redundant reasoning undermines the interactive experience and severely bottlenecks the deployment of Large Reasoning Models. Existing reinforcement learning (RL)-based solutions tackle this problem by coupling a length penalty with outcome-based rewards. This simplistic reward weighting struggles to reconcile brevity with accuracy, as enforcing brevity may compromise critical reasoning logic. In this work, we address this limitation by proposing a multi-agent RL framework that selectively penalizes redundant chunks, while preserving essential reasoning logic. Our framework, Self-Compression via MARL (SCMA), instantiates redundancy detection and evaluation through two specialized agents: \\textbf{a Segmentation Agent} for decomposing the reasoning process into logical chunks, and \\textbf{a Scoring Agent} for quantifying the significance of each chunk. The Segmentation and Scoring agents collaboratively define an importance-weighted length penalty during training, incentivizing \\textbf{a Reasoning Agent} to prioritize essential logic without introducing inference overhead during deployment. Empirical evaluations across model scales demonstrate that SCMA reduces response length by 11.1\\% to 39.0\\% while boosting accuracy by 4.33\\% to 10.02\\%. Furthermore, ablation studies and qualitative analysis validate that the synergistic optimization within the MARL framework fosters emergent behaviors, yielding more powerful LRMs compared to vanilla RL paradigms.",
+      "identifiers": [
+        "SemanticScholar:ac5067710f7cb7641dbb05f7c242cba74ac4337b"
+      ],
+      "semantic_scholar_id": "ac5067710f7cb7641dbb05f7c242cba74ac4337b",
+      "canonical_id": "arXiv:2601.21919",
+      "arxiv_id": "2601.21919",
+      "doi": "10.48550/arXiv.2601.21919",
+      "authors": [
+        "Yi-Qun Chen",
+        "Jin-Yuan Feng",
+        "Wei Yang",
+        "Meizhi Zhong",
+        "Zheng-Liang Shi",
+        "Rui Li",
+        "Xiaochi Wei",
+        "Yan Gao",
+        "Yi Wu",
+        "Yao Hu",
+        "Zhi-Qiang Pu",
+        "Jia-Xin Mao"
+      ],
+      "priority": 113,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 13,
+        "citation_count": 13,
+        "total": 113,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 274,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SCMAは推論時の冗長な思考を減らすため、学習時にSegmentation AgentとScoring Agentで思考片の重要度を評価し、Reasoning Agentへ重要度付き長さ罰則を与える。推論時に追加エージェントを要せず、生成長を11.1～39.0%減らしつつ精度を4.33～10.02%改善したと報告する。学習法だが最終的な推論トークン予算削減が直接の目的。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "ResPrune: Text-Conditioned Subspace Reconstruction for Visual Token Pruning in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2603.21105",
+      "year": 2026,
+      "published": "2026-03-22",
+      "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) rely on dense visual tokens to capture fine-grained visual information, but processing all these tokens incurs substantial computational and memory overhead during inference. To address this issue, we propose ResPrune, a training-free visual token pruning framework that enables efficient LVLM inference by selecting a compact yet informative subset of visual tokens. ResPrune formulates visual token pruning as a subspace reconstruction problem and employs a greedy subspace expansion strategy guided by residual energy, allowing it to preserve the geometric structure of the original visual token space. To further incorporate cross modal alignment, the selection process is conditioned on textual relevance, encouraging the retention of tokens that are both informative and instruction-relevant. The proposed method is lightweight and model-agnostic, and can be seamlessly integrated into existing LVLM pipelines without retraining or architectural modifications. Extensive experiments on multiple LVLM backbones, including LLaVA-1.5, LLaVA-NeXT, and Qwen2.5-VL, demonstrate that ResPrune consistently outperforms existing pruning approaches across a wide range of benchmarks, while achieving effective reductions in computation, memory consumption, and inference latency.",
+      "identifiers": [
+        "SemanticScholar:d8d6855727d59b8f55efe9cade6191b073037d6a"
+      ],
+      "semantic_scholar_id": "d8d6855727d59b8f55efe9cade6191b073037d6a",
+      "canonical_id": "arXiv:2603.21105",
+      "arxiv_id": "2603.21105",
+      "doi": "10.48550/arXiv.2603.21105",
+      "authors": [
+        "Xu Li",
+        "Yi Zheng",
+        "Yuxuan Liang",
+        "Zhe Liu",
+        "Xiao-Lei Chen",
+        "Hao-Tian Chen",
+        "Rui Zhu",
+        "Xiang-Yang Xue"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 222,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LVLMの視覚トークンを残差エネルギーによる部分空間再構成とテキスト関連度の両方で選び、再学習不要で入力トークンを削減する。LLaVA-1.5、LLaVA-NeXT、Qwen2.5-VLで計算・メモリ・推論遅延を削減するため、直接的なマルチモーダルLLM推論効率化として採用。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "FOCUS: FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling",
+      "source_url": "https://arxiv.org/abs/2608.01847",
+      "year": 2026,
+      "published": "2026-08-03",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) achieve remarkable performance but are expensive to deploy due to their enormous size. FP4 quantization, with formats such as MXFP4 and NVFP4, offers an appealing solution with native hardware support on modern accelerators. However, maintaining accuracy under FP4 precision remains difficult. A key bottleneck lies in scale optimization: existing methods tightly couple the quantization and dequantization scales, forcing both to conform to the discrete low-precision format required by hardware, such as E8M0 in MXFP4. Yet the quantization scale is never stored and need not obey this constraint, suggesting a significant untapped optimization space. In this work, we propose FOCUS, a post-training quantization framework with end-to-end scale learning for FP4 Optimization via Coupled-Relaxation and Dual-Granularity Scaling. Coupled-Relaxation Scaling (CRS) relaxes the tight coupling between quantization and dequantization scales with a learnable full-precision coefficient, enabling more effective optimization without breaking hardware compliance. Dual-Granularity Scaling (DGS) further refines the quantization scale at a finer sub-block granularity, allowing more precise adaptation to local weight distributions. Experiments across multiple LLM families and benchmarks show that FOCUS achieves state-of-the-art FP4 accuracy under both MXFP4 and NVFP4 formats, while introducing no additional inference overhead. Code and quantized models will be released at https://github.com/tencent/AngelSlim.",
+      "identifiers": [
+        "SemanticScholar:ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f"
+      ],
+      "semantic_scholar_id": "ed2333fddd0c9ddbaec7665874f8e8e7cff99e0f",
+      "canonical_id": "arXiv:2608.01847",
+      "arxiv_id": "2608.01847",
+      "authors": [
+        "Xiang-Long Yan",
+        "Hong Liu",
+        "Cheng-Zhu Bao",
+        "Tian-Ao Zhang",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 88,
+        "matched_prestigious_venue": null
+      },
+      "reason": "FP4後量子化で、保存不要な量子化スケールをハードウェアのE8M0制約から緩和するCRSと、サブブロック単位でスケールを細分化するDGSを組み合わせる。MXFP4/NVFP4対応のまま追加推論時オーバーヘッドなしで低ビット精度を改善する直接的な推論圧縮手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs",
+      "source_url": "https://arxiv.org/abs/2604.02689",
+      "year": 2026,
+      "published": "2026-04-03",
+      "venue": "2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Multimodal Large Language Models (MLLMs) have expanded reasoning capabilities into 3D domains, enabling fine-grained spatial understanding. However, the substantial size of 3D MLLMs and the high dimensionality of input features introduce considerable inference overhead, which limits practical deployment on resource constrained platforms. To overcome this limitation, this paper presents Efficient3D, a unified framework for visual token pruning that accelerates 3D MLLMs while maintaining competitive accuracy. The proposed framework introduces a Debiased Visual Token Importance Estimator (DVTIE) module, which considers the influence of shallow initial layers during attention aggregation, thereby producing more reliable importance predictions for visual tokens. In addition, an Adaptive Token Rebalancing (ATR) strategy is developed to dynamically adjust pruning strength based on scene complexity, preserving semantic completeness and maintaining balanced attention across layers. Together, they enable context-aware token reduction that maintains essential semantics with lower computation. Comprehensive experiments conducted on five representative 3D vision and language benchmarks, including ScanRefer, Multi3DRefer, Scan2Cap, ScanQA, and SQA3D, demonstrate that Efficient3D achieves superior performance compared with unpruned baselines, with a +2.57% CIDEr improvement on the Scan2Cap dataset. Therefore, Efficient3D provides a scalable and effective solution for efficient inference in 3D MLLMs. The code is released at: https://github.com/sol924/Efficient3D",
+      "identifiers": [
+        "SemanticScholar:4a4587acd7c72bc8b56f1476031e01b553957dcb"
+      ],
+      "semantic_scholar_id": "4a4587acd7c72bc8b56f1476031e01b553957dcb",
+      "canonical_id": "arXiv:2604.02689",
+      "arxiv_id": "2604.02689",
+      "doi": "10.1109/CVPRF71909.2026.00858",
+      "authors": [
+        "Yu-Hui Lin",
+        "Si-Yue Yu",
+        "Yu-Xing Yang",
+        "Guang-Liang Cheng",
+        "Ji-Min Xiao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 210,
+        "matched_prestigious_venue": null
+      },
+      "reason": "3DマルチモーダルLLMの入力視覚トークンを、浅い層の偏りを補正するDVTIE重要度推定と場面複雑度で削減率を調整するATRで間引く。ScanRefer等5ベンチマークを評価し、Scan2CapではCIDErが2.57%改善したと報告する。推論時トークン数・計算負荷を直接削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+      "source_url": "https://arxiv.org/abs/2610.20641",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought decoding is memory-bound: the KV cache of the generated tokens grows linearly with the test-time compute being spent. Evicting cache entries does not fix this, because a model never trained on a cache with entries removed generates longer, often up to the length limit. We instead train the model to compress its own output. AbridgeKV compresses each completed block of generated text into the KV entries of a few learned pause tokens. These are extra input tokens with trained embeddings that produce no output. Once the pause tokens have encoded the block, AbridgeKV frees the block's original cache; subsequent tokens attend to the pause tokens'KV entries in its place. Three novel choices make this work: the pause tokens'KV entries take positions inside the block they replace, the cache budget is allocated across layers according to the measured value of each layer's entries, and compression operates on relatively large blocks. On 446 competition problems from AIME, HMMT, AMC, BRUMO, CMIMC and SMT with 32K-token generations, keeping a quarter of the generated cache matches an identically trained full-KV model in accuracy and output length; the strongest published evictor at a matched budget writes far longer, and the closest trained compressor, retrained on the same data, loses 10 points. Served in vLLM, the cache is 3.5x smaller per sequence and a saturated H100 finishes a problem 3.2x faster than with full KV.",
+      "identifiers": [
+        "SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44"
+      ],
+      "semantic_scholar_id": "271342ba40609c271fec58fcafb0c444bcf23c44",
+      "canonical_id": "arXiv:2610.20641",
+      "arxiv_id": "2610.20641",
+      "authors": [
+        "Jack Cai",
+        "Lijie Yang",
+        "Vasilis Kontonis",
+        "Dimitris Papailiopoulos",
+        "Shivam Garg"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長い思考の生成済み区間を学習済みpause token数個のKVへ圧縮し、元の生成区間のKVを解放する。層ごとに価値を測って予算配分し、vLLM/H100の飽和負荷では系列当たりキャッシュ3.5倍削減、問題完了3.2倍高速化を報告する。推論時KV占有と実測サービング速度へ直接寄与する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-804d728c9b62",
+    "round": "libimp-804d728c9b62c1d0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-804d728c9b62c1d0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-804d728c9b62c1d0-pre01.json",
+    "receipt": "sha256:13a792eaae3bdbd9bdc23054a5d9d20cbc7f10a30ef7381f26a9a00469f57871"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-804d728c9b62",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

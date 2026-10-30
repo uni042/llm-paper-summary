@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Mambalaya: Einsum-Based Fusion Optimizations on State-Space Models",
+      "source_url": "https://arxiv.org/abs/2604.03829",
+      "year": 2026,
+      "published": "2026-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mamba is an emerging, complex workload with various short-range and long-range dependencies, nonlinearities, and elementwise computations that are unable to run at near-peak speeds on modern hardware. Specifically, Mamba's complex dependency graph makes fusion across its full operator cascade difficult, leaving substantial inter-operator memory traffic on the table. To address these challenges, we propose Mambalaya, a novel reconfigurable accelerator that leverages fusion to overcome the limitations of Mamba. We use the recently proposed cascade-of-Einsums abstraction to characterize Mamba's full computational structure, then apply the extended Einsum framework to systematically explore inter-Einsum fusion opportunities. This principled approach yields a series of fusion mappings that reduce off-chip inter-Einsum traffic. These mappings are supported by the underlying Mambalaya architecture. Mambalaya achieves a layer performance speedup of 4.9$\\times$ for prefill and 1.9$\\times$ for generation over MARCA. In prefill-dominated scenarios, it achieves up to 1.5$\\times$ over a recent fine-grained, memory-aware fusion accelerator for Mamba.",
+      "identifiers": [
+        "SemanticScholar:03d89e5e083813143ff91c0b71627382984408c3"
+      ],
+      "semantic_scholar_id": "03d89e5e083813143ff91c0b71627382984408c3",
+      "canonical_id": "arXiv:2604.03829",
+      "arxiv_id": "2604.03829",
+      "doi": "10.48550/arXiv.2604.03829",
+      "authors": [
+        "Toluwanimi O. Odemuyiwa",
+        "John D. Owens",
+        "J. Emer",
+        "Michael Pellauer"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Mambaの演算列をeinsumのcascadeとして表現し、オフチップ転送を減らす融合マッピングと再構成可能な専用アクセラレータを提案。MARCA比でprefill 4.9倍、generation 1.9倍の層単位速度改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "LiteVLM: A Low-Latency Vision-Language Model Inference Pipeline for Resource-Constrained Environments",
+      "source_url": "https://arxiv.org/abs/2506.07416",
+      "year": 2025,
+      "published": "2025-06-09",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper introduces an efficient Vision-Language Model (VLM) pipeline specifically optimized for deployment on embedded devices, such as those used in robotics and autonomous driving. The pipeline significantly reduces the computational overhead by jointly leveraging patch selection to filter irrelevant camera views, a token selection module to reduce input sequence length for the LLM, and speculative decoding to accelerate token generation. Evaluation on the NVIDIA DRIVE Thor platform for automonous driving application, our pipeline achieves $2.5\\times$ end-to-end latency reduction without compromising task accuracy. The speed-up further increases to $3.2\\times$ when applying FP8 post-training quantization. These results demonstrate our pipeline as a viable solution for enabling real-time VLM deployment in resource-constrained environments.",
+      "identifiers": [
+        "SemanticScholar:1743a914c940e5079fe3c10bdcc89a52d5ba4d9c"
+      ],
+      "semantic_scholar_id": "1743a914c940e5079fe3c10bdcc89a52d5ba4d9c",
+      "canonical_id": "arXiv:2506.07416",
+      "arxiv_id": "2506.07416",
+      "doi": "10.48550/arXiv.2506.07416",
+      "authors": [
+        "Jin Huang",
+        "Yu-Chao Jin",
+        "Le An",
+        "Josh Park"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 508,
+        "matched_prestigious_venue": null
+      },
+      "reason": "カメラview選択、LLM入力トークン削減、投機的復号を組み合わせるエッジVLM推論パイプライン。NVIDIA DRIVE Thorでend-to-end遅延2.5倍削減、FP8 PTQ併用で3.2倍と報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Online Pseudo-average Shifting Attention(PASA) for Robust Low-precision LLM Inference: Algorithms and Numerical Analysis",
+      "source_url": "https://arxiv.org/abs/2503.01873",
+      "year": 2025,
+      "published": "2025-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention calculation is extremely time-consuming for long-sequence inference tasks, such as text or image/video generation, in large models. To accelerate this process, we developed a low-precision, mathematically-equivalent algorithm called PASA, based on Flash Attention. PASA introduces two novel techniques: online pseudo-average shifting and global recovering. These techniques enable the use of half-precision computation throughout the Flash Attention process without incurring overflow instability or unacceptable numerical accuracy loss. This algorithm enhances performance on memory-restricted AI hardware architectures, such as the Ascend Neural-network Processing Unit(NPU), by reducing data movement and increasing computational FLOPs. The algorithm is validated using both designed random benchmarks and real large models. We find that the large bias and amplitude of attention input data are critical factors contributing to numerical overflow ($>65504$ for half precision) in two different categories of large models (Qwen2-7B language models and Stable-Video-Diffusion multi-modal models). Specifically, overflow arises due to the large bias in the sequence dimension and the resonance mechanism between the query and key in the head dimension of the Stable-Video-Diffusion models. The resonance mechanism is defined as phase coincidence or 180-degree phase shift between query and key matrices. It will remarkably amplify the element values of attention score matrix. This issue also applies to the Qwen models. Additionally, numerical accuracy is assessed through root mean square error (RMSE) and by comparing the final generated texts and videos to those produced using high-precision attention.",
+      "identifiers": [
+        "SemanticScholar:4ab82054ff238ea993e7be78951c964ae731a7af"
+      ],
+      "semantic_scholar_id": "4ab82054ff238ea993e7be78951c964ae731a7af",
+      "canonical_id": "arXiv:2503.01873",
+      "arxiv_id": "2503.01873",
+      "doi": "10.48550/arXiv.2503.01873",
+      "authors": [
+        "Long Cheng",
+        "Qichen Liao",
+        "Fan Wu",
+        "Junlin Mu",
+        "Teng-Fei Han",
+        "Zhen-Qi Qiu",
+        "Lianqiang Li",
+        "Tianyi Liu",
+        "Fangzheng Miao",
+        "Ke Gao",
+        "Liang Wang",
+        "Zhen Zhang",
+        "Qian-De Yin"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 611,
+        "matched_prestigious_venue": null
+      },
+      "reason": "online pseudo-average shiftingとglobal recoveringでFP16注意のoverflowを避け、FlashAttention相当の演算を低精度で安定化するPASAを提案。Qwen2-7Bと動画拡散で65504超の数値不安定性を検証し、Ascend NPU向けデータ移動削減と計算効率改善を目的とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f9984f17aa66",
+    "round": "libimp-f9984f17aa666daa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f9984f17aa666daa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f9984f17aa666daa-pre01.json",
+    "receipt": "sha256:3a103b14a2c5b28f52f985941ee9c973c7748765ad6c9378dfbc20d18a7b7796"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f9984f17aa66",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

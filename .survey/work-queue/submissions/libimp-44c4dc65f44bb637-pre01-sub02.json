@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Two-Sided Matching for Batch-Aware LLM Request Scheduling in Edge Networks",
+      "source_url": "https://doi.org/10.1109/lcn65610.2025.11146293",
+      "year": 2025,
+      "published": "2025-10-13",
+      "venue": "IEEE Conference on Local Computer Networks",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:5f7a18ece15dbb35f4d2fc7c7660e6d7ccf23187"
+      ],
+      "semantic_scholar_id": "5f7a18ece15dbb35f4d2fc7c7660e6d7ccf23187",
+      "doi": "10.1109/lcn65610.2025.11146293",
+      "canonical_id": "DOI:10.1109/lcn65610.2025.11146293",
+      "authors": [
+        "Tan Li",
+        "Yanming Gong"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 382,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者所属大学の一次要旨によると、エッジLLMの複数サーバにおけるバッチ構成の相互依存を二面マッチングとして定式化し、Gale-Shapley安定割当と有益な交換でバッチ同質性を改善する。要求数と資源制約を変えたシミュレーションでQoS改善を示す推論要求スケジューリング研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-44c4dc65f44b",
+    "round": "libimp-44c4dc65f44bb637-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-44c4dc65f44bb637-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-44c4dc65f44bb637-pre01.json",
+    "receipt": "sha256:e80335b33c5b0e53177698fd29f9ed62495a0af26a0a4a5145664482c1365daa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-44c4dc65f44b",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

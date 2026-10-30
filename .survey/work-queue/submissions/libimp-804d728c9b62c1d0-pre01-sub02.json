@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance",
+      "source_url": "https://arxiv.org/abs/2508.18177",
+      "year": 2025,
+      "published": "2025-08-25",
+      "venue": "Expert systems with applications",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visually impaired individuals face significant challenges in environmental perception. Traditional assistive technologies often lack adaptive intelligence, focusing on individual components rather than integrated systems. While Vision-Language Models (VLMs) offer a promising path to richer, integrated understanding, their deployment is severely limited by substantial computational requirements, demanding dozens of gigabytes of memory. To address these gaps in computational efficiency and integrated design, this study proposes a dual technological innovation framework: a cross-modal differentiated quantization framework for VLMs and a scene-aware vectorized memory multi-agent system. The quantization framework implements differentiated strategies, reducing memory from 38GB to 11.3GB. The multi-agent system uses vectorized memory and perception-memory-reasoning workflows to provide environmental information beyond the current view, achieving 2.83-3.52s latency to initial speech output. Experiments show the quantized 19B-parameter model only experiences a 2.05% performance drop on MMBench and maintains 63.7 accuracy on OCR-VQA (original: 64.9), outperforming smaller models with equivalent memory. This research advances computational efficiency and assistive technology, offering comprehensive assistance in scene perception, text recognition, and navigation.",
+      "identifiers": [
+        "SemanticScholar:0e7ae6b42102a13ded7d080c71c319af7a1eca22"
+      ],
+      "semantic_scholar_id": "0e7ae6b42102a13ded7d080c71c319af7a1eca22",
+      "canonical_id": "arXiv:2508.18177",
+      "arxiv_id": "2508.18177",
+      "doi": "10.48550/arXiv.2508.18177",
+      "authors": [
+        "Xiang-Xiang Wang",
+        "Xuan-Yu Wang",
+        "YiJia Luo",
+        "Yong-Bin Yu",
+        "Man-Ping Fan",
+        "Jing-Tao Zhang",
+        "Li-Yong Ren"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 431,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚障害者支援を主用途とするが、19B級VLMのクロスモーダル差別化量子化を提案し、モデル占有メモリを38GBから11.3GBへ削減する。MMBenchの低下2.05%とOCR-VQA 64.9→63.7も報告しており、推論向け圧縮機構が独立した技術的貢献として確認できる。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-804d728c9b62",
+    "round": "libimp-804d728c9b62c1d0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-804d728c9b62c1d0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-804d728c9b62c1d0-pre01.json",
+    "receipt": "sha256:13a792eaae3bdbd9bdc23054a5d9d20cbc7f10a30ef7381f26a9a00469f57871"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-804d728c9b62",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

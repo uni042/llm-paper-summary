@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "POP: Prefill-Only Pruning for Efficient Large Model Inference",
+      "source_url": "https://arxiv.org/abs/2602.03295",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) and Vision-Language Models (VLMs) have demonstrated remarkable capabilities. However, their deployment is hindered by significant computational costs. Existing structured pruning methods, while hardware-efficient, often suffer from significant accuracy degradation. In this paper, we argue that this failure stems from a stage-agnostic pruning approach that overlooks the asymmetric roles between the prefill and decode stages. By introducing a virtual gate mechanism, our importance analysis reveals that deep layers are critical for next-token prediction (decode) but largely redundant for context encoding (prefill). Leveraging this insight, we propose Prefill-Only Pruning (POP), a stage-aware inference strategy that safely omits deep layers during the computationally intensive prefill stage while retaining the full model for the sensitive decode stage. To enable the transition between stages, we introduce independent Key-Value (KV) projections to maintain cache integrity, and a boundary handling strategy to ensure the accuracy of the first generated token. Extensive experiments on Llama-3.1, Qwen3-VL, and Gemma-3 across diverse modalities demonstrate that POP achieves up to 1.37$\\times$ speedup in prefill latency with minimal performance loss, effectively overcoming the accuracy-efficiency trade-off limitations of existing structured pruning methods.",
+      "identifiers": [
+        "SemanticScholar:698f327fd4d4deac1942416f3ce6efa2d5d1d287"
+      ],
+      "semantic_scholar_id": "698f327fd4d4deac1942416f3ce6efa2d5d1d287",
+      "canonical_id": "arXiv:2602.03295",
+      "arxiv_id": "2602.03295",
+      "doi": "10.48550/arXiv.2602.03295",
+      "authors": [
+        "Junhui He",
+        "Zhi-Hui Fu",
+        "Jun Wang",
+        "Qing'an Li"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "prefillでは深層の重要度が低くdecodeでは重要という非対称性に着目し、prefillだけ深層を省略するPOPを提案。独立KV射影と最初の生成トークンの境界処理でキャッシュ整合性を保ち、Llama-3.1/Qwen3-VL/Gemma-3でprefill遅延最大1.37倍改善を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Large Language Model as Token Compressor and Decompressor",
+      "source_url": "https://arxiv.org/abs/2603.25340",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we study whether an off-the-shelf LLM can be adapted into a discrete, variable-length token compressor and decompressor for long-context processing. To this end, we design a self-expressive autoencoding framework that fine-tunes a pretrained LLM with lightweight LoRA adapters to map long texts into compact sequences of learned latent codes, termed Z-tokens, and to decode them back into natural language or task outputs. The resulting representation is content-adaptive: less predictable or information-dense segments can receive more Z-tokens, while redundant regions can be represented more compactly through a budget-aware length regularizer. Our method is evaluated on long-context datasets such as Wikipedia, CNN/DailyMail, HotpotQA, and QuALITY, showing that it preserves reconstruction quality and downstream performance while reducing effective context length, generation-stage memory usage, and end-to-end latency. This simple design supports both direct decoding from compressed contexts and autoregressive generation in the Z-token space, providing a practical interface for efficient long-context inference.",
+      "identifiers": [
+        "SemanticScholar:38a49095776064e6b8f8efa7f88594f65926bfdd"
+      ],
+      "semantic_scholar_id": "38a49095776064e6b8f8efa7f88594f65926bfdd",
+      "canonical_id": "arXiv:2603.25340",
+      "arxiv_id": "2603.25340",
+      "doi": "10.48550/arXiv.2603.25340",
+      "authors": [
+        "Wen-Bing Li",
+        "Zi-Kai Song",
+        "Jie-Lei Zhang",
+        "Tian Zhao",
+        "Jun-Kai Lin",
+        "Yiran Wang",
+        "Wei Yang"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      },
+      "reason": "事前学習LLMにLoRAを加え、長文を可変長の離散Z-tokenへ自己符号化し、必要に応じて自然言語やタスク出力へ復号する。内容密度に応じてトークン予算を割り当て、長文脈の有効長・生成時メモリ・end-to-end遅延を削減する推論時文脈圧縮法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "SWAN-GPT: An Efficient and Scalable Approach for Long-Context Language Modeling",
+      "source_url": "https://arxiv.org/abs/2504.08719",
+      "year": 2025,
+      "published": "2025-04-11",
+      "venue": "arXiv.org",
+      "citation_count": 17,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a decoder-only Transformer architecture that robustly generalizes to sequence lengths substantially longer than those seen during training. Our model, SWAN-GPT, interleaves layers without positional encodings (NoPE) and sliding-window attention layers equipped with rotary positional encodings (SWA-RoPE). Experiments demonstrate strong performance on sequence lengths significantly longer than the training length without the need for additional long-context training. This robust length extrapolation is achieved through our novel architecture, enhanced by a straightforward dynamic scaling of attention scores during inference. In addition, SWAN-GPT is more computationally efficient than standard GPT architectures, resulting in cheaper training and higher throughput. Further, we demonstrate that existing pre-trained decoder-only models can be efficiently converted to the SWAN architecture with minimal continued training, enabling longer contexts. Overall, our work presents an effective approach for scaling language models to longer contexts in a robust and efficient manner.",
+      "identifiers": [
+        "SemanticScholar:628ae4d9274dc1848cb32dd14267abeeee5ef1ae"
+      ],
+      "semantic_scholar_id": "628ae4d9274dc1848cb32dd14267abeeee5ef1ae",
+      "canonical_id": "arXiv:2504.08719",
+      "arxiv_id": "2504.08719",
+      "doi": "10.48550/arXiv.2504.08719",
+      "authors": [
+        "Krishna C. Puvvada",
+        "Faisal Ladhak",
+        "Santiago Akle Serrano",
+        "Cheng-Ping Hsieh",
+        "Shantanu Acharya",
+        "Somshubra Majumdar",
+        "Fei Jia",
+        "Samuel Kriman",
+        "Simeng Sun",
+        "Dima Rekesh",
+        "Boris Ginsburg"
+      ],
+      "priority": 17,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 17,
+        "citation_count": 17,
+        "total": 17,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 567,
+        "matched_prestigious_venue": null
+      },
+      "reason": "位置符号化なしのNoPE層とRoPE付きsliding-window attention層を交互に置き、推論時の注意スコア動的スケーリングで学習時より長い文脈へ外挿する。標準GPTより安価な学習と高スループットを報告し、長文脈推論アーキテクチャとして直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "year": 2024,
+      "published": "2024-10-04",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained Transformers inherently possess the characteristic of sparse activation, where only a small fraction of the neurons are activated for each token. While sparse activation has been explored through post-training methods, its potential in pre-training remains untapped. In this work, we first study how activation properties change during pre-training. Our examination reveals that Transformers exhibit sparse activation throughout the majority of the pre-training process while the activation correlation keeps evolving as training progresses. Leveraging this observation, we propose Switchable Sparse-Dense Learning (SSD). SSD adaptively switches between the Mixtures-of-Experts (MoE) based sparse training and the conventional dense training during the pre-training process, leveraging the efficiency of sparse training and avoiding the static activation correlation of sparse training. Compared to dense training, SSD achieves comparable performance with identical model size and reduces pre-training costs. Moreover, the models trained with SSD can be directly used as MoE models for sparse inference and achieve the same performance as dense models with up to $2\\times$ faster inference speed. Codes are available at https://github.com/thunlp/moefication.",
+      "identifiers": [
+        "SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570"
+      ],
+      "semantic_scholar_id": "b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+      "canonical_id": "arXiv:2410.03440",
+      "arxiv_id": "2410.03440",
+      "doi": "10.48550/arXiv.2410.03440",
+      "authors": [
+        "Zhengyan Zhang",
+        "Chao-Jun Xiao",
+        "Qiujieli Qin",
+        "Yankai Lin",
+        "Zhiyuan Zeng",
+        "Xu Han",
+        "Zhi-Yuan Liu",
+        "Ruo-Bing Xie",
+        "Mao-Song Sun",
+        "Jie Zhou"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 756,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "学習中の活性疎性を観察し、MoE疎学習と密学習を切り替えるSSDを提案する。訓練費用削減が中心だが、生成したモデルはMoEとして疎推論に直接利用でき、同程度の品質で最大2倍の推論速度改善を報告するため推論圧縮にも関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Chain-of-Model Learning for Language Model",
+      "source_url": "https://arxiv.org/abs/2505.11820",
+      "year": 2025,
+      "published": "2025-05-17",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we propose a novel learning paradigm, termed Chain-of-Model (CoM), which incorporates the causal relationship into the hidden states of each layer as a chain style, thereby introducing great scaling efficiency in model training and inference flexibility in deployment. We introduce the concept of Chain-of-Representation (CoR), which formulates the hidden states at each layer as a combination of multiple sub-representations (i.e., chains) at the hidden dimension level. In each layer, each chain from the output representations can only view all of its preceding chains in the input representations. Consequently, the model built upon CoM framework can progressively scale up the model size by increasing the chains based on the previous models (i.e., chains), and offer multiple sub-models at varying sizes for elastic inference by using different chain numbers. Based on this principle, we devise Chain-of-Language-Model (CoLM), which incorporates the idea of CoM into each layer of Transformer architecture. Based on CoLM, we further introduce CoLM-Air by introducing a KV sharing mechanism, that computes all keys and values within the first chain and then shares across all chains. This design demonstrates additional extensibility, such as enabling seamless LM switching, prefilling acceleration and so on. Experimental results demonstrate our CoLM family can achieve comparable performance to the standard Transformer, while simultaneously enabling greater flexiblity, such as progressive scaling to improve training efficiency and offer multiple varying model sizes for elastic inference, paving a a new way toward building language models. Our code will be released in the future at: https://github.com/microsoft/CoLM.",
+      "identifiers": [
+        "SemanticScholar:fd312c7a18b26c114644b5245938cfaa1a5c308c"
+      ],
+      "semantic_scholar_id": "fd312c7a18b26c114644b5245938cfaa1a5c308c",
+      "canonical_id": "arXiv:2505.11820",
+      "arxiv_id": "2505.11820",
+      "doi": "10.48550/arXiv.2505.11820",
+      "authors": [
+        "Xiao-Hua Wang",
+        "Kai-Tao Song",
+        "Xu Tan",
+        "Huiqiang Jiang",
+        "Chengruidong Zhang",
+        "Yong-Liang Shen",
+        "Cen Lu",
+        "Zihao Li",
+        "Zi-Fan Song",
+        "Caihua Shan",
+        "Yansen Wang",
+        "Kan Ren",
+        "Xiao-Qing Zheng",
+        "Tao Qin",
+        "Yu-Qing Yang",
+        "Dongsheng Li",
+        "Lili Qiu"
+      ],
+      "priority": 13,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 13,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 531,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "隠れ次元を因果的な複数chainに分け、chain数に応じて複数サイズのモデルを同一重みから切り替えられるCoLMを提案する。CoLM-Airは最初のchainで計算したKVを後続chainへ共有し、可変計算量推論とprefill高速化に結び付ける。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c3086e29277e",
+    "round": "libimp-c3086e29277ea05d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c3086e29277ea05d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c3086e29277ea05d-pre01.json",
+    "receipt": "sha256:c0c24d319efbc2060f423ae7290a80ee3dc3fe48c48c0f2f2e012f52c84ffbc8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c3086e29277e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers",
+      "source_url": "https://arxiv.org/abs/2509.00935",
+      "year": 2025,
+      "published": "2025-08-31",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers have demonstrated strong performance across a wide range of sequence modeling tasks, but their quadratic attention complexity limits scalability to long sequences. Linear models such as Mamba and sliding-window attention (SWA) address this by mixing tokens through recurrent or localized operations with fixed-size memory, achieving efficient inference. However, these methods risk degrading performance on long sequences due to their inability to retain detailed information from distant tokens. We propose SCOUT (Segment Compression for Optimized Utility in Transformers), a hybrid architecture that compresses tokens locally within fixed-size segments and applies attention only over these compressed representations. Each token embedding is first enriched via a linear local mixer, Mamba or SWA, that integrates recent context. Then, instead of attending to all previous tokens, each token sparsely attends to a small number of compressed checkpoint tokens that summarize the input history. This design retains much of the expressivity of full attention while substantially reducing the computational and memory cost. By attending to compressed history rather than all previous tokens, SCOUT incurs slightly higher memory than purely linear models, but its growth rate remains sub-quadratic and far more scalable than that of full Transformers. We analyze SCOUT's computational and memory efficiency and evaluate it empirically on long-context language modeling and reasoning tasks. SCOUT with both Mamba and SWA mixers outperforms strong long-sequence baselines under the same computational budget, matches full-attention Transformers on language modeling and common-sense reasoning tasks at 400M and 1.3B scales. Moreover, our SCOUT achieves higher end-to-end throughput than SOTA models, while delivering comparable results on long sequence benchmarks.",
+      "identifiers": [
+        "SemanticScholar:475b1e6491fe4c23f47abfcaa5bbf92d22aaf034"
+      ],
+      "semantic_scholar_id": "475b1e6491fe4c23f47abfcaa5bbf92d22aaf034",
+      "canonical_id": "arXiv:2509.00935",
+      "arxiv_id": "2509.00935",
+      "doi": "10.48550/arXiv.2509.00935",
+      "authors": [
+        "A. Jafari",
+        "Yuhe Fan",
+        "Benyamin Jamialahmadi",
+        "Parsa Farinneya",
+        "Boxing Chen",
+        "Marzieh S. Tahaei"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 425,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MambaまたはSWAの局所ミキサで短距離情報を混ぜ、過去系列を圧縮したcheckpoint tokenへだけ疎注意を行う。400M/1.3Bの言語モデルで全注意に近い品質と高いend-to-endスループットを報告する長文脈推論アーキテクチャ。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8a718ea98137",
+    "round": "libimp-8a718ea98137b50c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8a718ea98137b50c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8a718ea98137b50c-pre01.json",
+    "receipt": "sha256:47871f550e9b6fae613a48800ed62cab84da64ac495cde603046163df39b14c0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8a718ea98137",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference",
+      "source_url": "https://arxiv.org/abs/2604.03950",
+      "year": 2026,
+      "published": "2026-04-05",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have demonstrated remarkable performance across a wide range of real-world tasks, but their inference cost remains prohibitively high due to the quadratic complexity of attention and the memory bandwidth limitations of high-precision operations. In this work, we present a low-bit mixed-precision attention kernel using the microscaling floating-point (MXFP) data format, utilizing the computing capability on next-generation GPU architectures. Our Diagonal-Tiled Mixed-Precision Attention (DMA) incorporates two kinds of low-bit computation at the tiling-level, and is a delicate fused kernel implemented using Triton, exploiting hardware-level parallelism and memory efficiency to enable fast and efficient inference without compromising model performance. Extensive empirical evaluations on NVIDIA B200 GPUs show that our kernel maintains generation quality with negligible degradation, and meanwhile achieves significant speedup by kernel fusion. We release our code at https://github.com/yifu-ding/MP-Sparse-Attn.",
+      "identifiers": [
+        "SemanticScholar:5fea8f9556464892a551abe25cc0b96a12c3482b"
+      ],
+      "semantic_scholar_id": "5fea8f9556464892a551abe25cc0b96a12c3482b",
+      "canonical_id": "arXiv:2604.03950",
+      "arxiv_id": "2604.03950",
+      "doi": "10.48550/arXiv.2604.03950",
+      "authors": [
+        "Yifu Ding",
+        "XinHao Zhang",
+        "Jin-Yang Guo"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 208,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MXFP形式の低ビット注意を対角tileごとに混合精度で計算するTriton融合カーネルを提案。NVIDIA B200で生成品質をほぼ維持しつつattention演算を高速化する、LLM推論カーネルに直接関係する研究。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs",
+      "source_url": "https://arxiv.org/abs/2502.00258",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance in natural language processing tasks, yet their massive size makes serving them inefficient and costly. Semi-structured pruning has emerged as an effective method for model acceleration, but existing approaches are suboptimal because they focus on local, layer-wise optimizations using heuristic rules, failing to leverage global feedback. We present ProxSparse, a learning-based framework for mask selection enabled by regularized optimization. ProxSparse transforms the rigid, non-differentiable mask selection process into a smoother optimization procedure, allowing gradual mask exploration with flexibility. ProxSparse does not involve additional weight updates once the mask is determined. Our extensive evaluations on 7 widely used models show that ProxSparse consistently outperforms previously proposed semi-structured mask selection methods with significant improvement, demonstrating the effectiveness of our learned approach towards semi-structured pruning.",
+      "identifiers": [
+        "SemanticScholar:a964d6d1e2e8c93d04a2b7e6da3d906537d537bc"
+      ],
+      "semantic_scholar_id": "a964d6d1e2e8c93d04a2b7e6da3d906537d537bc",
+      "canonical_id": "arXiv:2502.00258",
+      "arxiv_id": "2502.00258",
+      "doi": "10.48550/arXiv.2502.00258",
+      "authors": [
+        "Hongyi Liu",
+        "R. Saha",
+        "Zhen Jia",
+        "Youngsuk Park",
+        "Jiaji Huang",
+        "Shoham Sabach",
+        "Yu-Xiang Wang",
+        "George Karypis"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 637,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "半構造的枝刈りマスクを局所的ヒューリスティックでなく正則化最適化で滑らかに探索し、7モデルで既存マスク選択法を上回る。マスク決定後の追加重み更新を要さない推論向け構造的圧縮手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "PRISM: Parallel Residual Iterative Sequence Model",
+      "source_url": "https://arxiv.org/abs/2602.10796",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Generative sequence modeling faces a fundamental tension between the expressivity of Transformers and the efficiency of linear sequence models. Existing efficient architectures are theoretically bounded by shallow, single-step linear updates, while powerful iterative methods like Test-Time Training (TTT) break hardware parallelism due to two dimensions of serial dependency: token-level state reliance and step-level iteration loops. We propose PRISM (Parallel Residual Iterative Sequence Model) to resolve this tension. PRISM explicitly approximates the expressive gate-residual-direction iteration pattern of TTT in a parallelizable form. We employ a Write-Forget Decoupling strategy that isolates non-linearity within the injection operator. To bypass the serial dependency of explicit solvers, PRISM utilizes a two-stage proxy architecture: a short-convolution anchors the initial residual using local history energy, while a learned predictor estimates the refinement updates directly from the input. This design distills structural patterns associated with iterative correction into a parallelizable feedforward operator. Theoretically, we prove that this formulation achieves Rank-$L$ accumulation, structurally expanding the update scheme beyond the single-step Rank-$1$ bottleneck. Empirically, it achieves comparable performance to explicit optimization methods while achieving \\textbf{174x higher throughput}. Codes are available in https://github.com/gpr-prism/prism/.",
+      "identifiers": [
+        "SemanticScholar:a1219b64098c710fa81310b008a1de19a09b532c"
+      ],
+      "semantic_scholar_id": "a1219b64098c710fa81310b008a1de19a09b532c",
+      "canonical_id": "arXiv:2602.10796",
+      "arxiv_id": "2602.10796",
+      "doi": "10.48550/arXiv.2602.10796",
+      "authors": [
+        "Jie Jiang",
+        "Ke Cheng",
+        "Xin Xu",
+        "Mengyang Pang",
+        "Tianhao Lu",
+        "Jiaheng Li",
+        "Yue Liu",
+        "Yuan Wang",
+        "Jun Zhang",
+        "Huan Yu",
+        "Zhouchen Lin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 261,
+        "matched_prestigious_venue": null
+      },
+      "reason": "TTT型の反復残差更新を並列実行可能な短い畳み込みと学習済み更新予測器へ置換し、逐次依存を減らすPRISMを提案。明示的な反復最適化方式比174倍のスループットを報告する効率的生成系列モデルの設計。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Stable Geometry with Divergent Task Evidence for Efficient Long-Horizon Agent Compression",
+      "source_url": "https://arxiv.org/abs/2609.27332",
+      "year": 2026,
+      "published": "2026-09-23",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long horizon agents accumulate growing interaction histories that increase context and inference costs. We find that geometric redundancy alone is an insufficient criterion for safe compression. Although agent histories exhibit strong low dimensional structure, similar global geometry can preserve very different amounts of task evidence. At identical retained block counts, evidence aware selection raises next action Top 3 retention from 0.31 to 0.69, while centroid similarity remains 0.98. Controlled replacement further shows that action related information can be substantially altered while global geometric measures remain nearly unchanged. Motivated by this gap between geometry and evidence, we introduce Geometry Guided Evidence Preserving Memory (GEM), a training free compressor that protects task and execution evidence before using geometric residuals to complete coverage. GEM reduces mean combined token usage from 2.69M to 2.11M per task, a 21.4% reduction, while maintaining comparable task reward. Our results show that efficient agent history compression should optimize for preserved task evidence rather than geometric coverage alone.",
+      "identifiers": [
+        "SemanticScholar:bc83d9456bc548ccce1bb7f6000e2ec8d32dda28"
+      ],
+      "semantic_scholar_id": "bc83d9456bc548ccce1bb7f6000e2ec8d32dda28",
+      "canonical_id": "arXiv:2609.27332",
+      "arxiv_id": "2609.27332",
+      "authors": [
+        "Ming-Xuan Wang",
+        "Fei Luo",
+        "Bo Wang",
+        "Guo-Run Yao",
+        "Ying-Long Guo",
+        "Chao Ning",
+        "Hong-Yue Chen",
+        "Yan-Biao Ma",
+        "Jun-Gong Han"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 37,
+        "matched_prestigious_venue": null
+      },
+      "reason": "幾何的類似性だけでは重要なタスク証拠が失われる問題を示し、証拠を優先保護する訓練不要のGEM文脈圧縮を提案。エージェント1タスク当たり平均トークンを2.69Mから2.11Mへ21.4%削減しつつ報酬を維持する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity",
+      "source_url": "https://arxiv.org/abs/2505.07239",
+      "year": 2025,
+      "published": "2025-05-12",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "With the growing use of large language models (LLMs) hosted on cloud platforms to offer inference services, privacy concerns about the potential leakage of sensitive information are escalating. Secure Multi-Party Computation (MPC) is a promising solution to protect the privacy in LLM inference. However, MPC requires frequent inter-server communication, causing high performance overhead. Inspired by the prevalent activation sparsity of LLMs, where most neuron are not activated after non-linear activation functions, we propose an efficient private inference system, Comet. This system employs an accurate and fast predictor to predict the sparsity distribution of activation function output. Additionally, we introduce a new private inference protocol. It efficiently and securely avoids computations involving zero values by exploiting the spatial locality of the predicted sparsity distribution. While this computation-avoidance approach impacts the spatiotemporal continuity of KV cache entries, we address this challenge with a low-communication overhead cache refilling strategy that merges miss requests and incorporates a prefetching mechanism. Finally, we evaluate Comet on four common LLMs and compare it with six state-of-the-art private inference systems. Comet achieves a $1.87\\times-2.63\\times$ speedup and a $1.94\\times-2.64\\times$ communication reduction.",
+      "identifiers": [
+        "SemanticScholar:bd7f594215a228135936300690be7af689cd74c7"
+      ],
+      "semantic_scholar_id": "bd7f594215a228135936300690be7af689cd74c7",
+      "canonical_id": "arXiv:2505.07239",
+      "arxiv_id": "2505.07239",
+      "doi": "10.1109/SP61157.2025.00182",
+      "authors": [
+        "Guang Yan",
+        "Yuhui Zhang",
+        "Zimu Guo",
+        "Lu-Tan Zhao",
+        "Xiao-Jun Chen",
+        "Chen Wang",
+        "Wenhao Wang",
+        "Dan Meng",
+        "Rui Hou"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 536,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MPCを用いた秘密LLM推論で活性疎性を予測し、ゼロ値の計算・通信を回避するCometを提案。KVキャッシュの非連続性をrefillとprefetchで補い、4モデルで1.87～2.63倍高速化、通信量1.94～2.64倍削減を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f21ac32a6a1a",
+    "round": "libimp-f21ac32a6a1a217e-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f21ac32a6a1a217e-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f21ac32a6a1a217e-pre01.json",
+    "receipt": "sha256:1bd7d828cd80766cd598efa1de470b6fc1654ab0a56593a5186a45cd1260a9a0"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f21ac32a6a1a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

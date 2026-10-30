@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "MI-PRUN: Optimize Large Language Model Pruning via Mutual Information",
+      "source_url": "https://arxiv.org/abs/2601.07212",
+      "year": 2026,
+      "published": "2026-01-12",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have become indispensable across various domains, but this comes at the cost of substantial computational and memory resources. Model pruning addresses this by removing redundant components from models. In particular, block pruning can achieve significant compression and inference acceleration. However, existing block pruning methods are often unstable and struggle to attain globally optimal solutions. In this paper, we propose a mutual information based pruning method MI-PRUN for LLMs. Specifically, we leverages mutual information to identify redundant blocks by evaluating transitions in hidden states. Additionally, we incorporate the Data Processing Inequality (DPI) to reveal the relationship between the importance of entire contiguous blocks and that of individual blocks. Moreover, we develop the Fast-Block-Select algorithm, which iteratively updates block combinations to achieve a globally optimal solution while significantly improving the efficiency. Extensive experiments across various models and datasets demonstrate the stability and effectiveness of our method.",
+      "identifiers": [
+        "SemanticScholar:51123810b81be9dbf03e1db312478c532adc90b5"
+      ],
+      "semantic_scholar_id": "51123810b81be9dbf03e1db312478c532adc90b5",
+      "canonical_id": "arXiv:2601.07212",
+      "arxiv_id": "2601.07212",
+      "doi": "10.48550/arXiv.2601.07212",
+      "authors": [
+        "Hao Zhang",
+        "Zhibin Zhang",
+        "Guang-Xin Wu",
+        "He Chen",
+        "Jia-Feng Guo",
+        "Xue-Qi Cheng"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 291,
+        "matched_prestigious_venue": null
+      },
+      "reason": "隠れ状態遷移の相互情報量とデータ処理不等式を利用して、連続する層ブロックの冗長性を測り、Fast-Block-Selectで枝刈り対象を反復選択する。LLMの層削除による推論計算・メモリ削減に直接該当する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Search or Accelerate: Confidence-Switched Position Beam Search for Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2602.10953",
+      "year": 2026,
+      "published": "2026-02-11",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) generate text by iteratively denoising a masked sequence, repeatedly deciding which positions to commit at each step. Standard decoding follows a greedy rule: unmask the most confident positions, yet this local choice can lock the model into a suboptimal unmasking order, especially on reasoning-heavy prompts. We present SOAR, a training-free decoding algorithm that adapts its behavior to the model's uncertainty. When confidence is low, SOAR briefly widens the search over alternative unmasking decisions to avoid premature commitments; when confidence is high, it collapses the search and decodes many positions in parallel to reduce the number of denoising iterations. Across mathematical reasoning and code generation benchmarks (GSM8K, MBPP, HumanEval) on Dream-7B and LLaDA-8B, SOAR improves generation quality while maintaining competitive inference speed, offering a practical way to balance quality and efficiency in DLM decoding. Our Code is available at https://github.com/duterscmy/SOAR",
+      "identifiers": [
+        "SemanticScholar:930f348f5b96bff52314a3fc76a4102f3177318e"
+      ],
+      "semantic_scholar_id": "930f348f5b96bff52314a3fc76a4102f3177318e",
+      "canonical_id": "arXiv:2602.10953",
+      "arxiv_id": "2602.10953",
+      "doi": "10.48550/arXiv.2602.10953",
+      "authors": [
+        "Ming-Yu Cao",
+        "Alvaro H. C. Correia",
+        "Christos Louizos",
+        "Shi-Wei Liu",
+        "Lu Yin"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 261,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散LLMで信頼度が低い場合はunmask位置の候補探索を広げ、高い場合は多数位置を並列確定する訓練不要のSOARを提案。Dream-7B/LLaDA-8Bの数学・コード生成で品質と推論速度の両立を評価する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "source_url": "https://arxiv.org/abs/2609.24847",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+      "identifiers": [
+        "SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326"
+      ],
+      "semantic_scholar_id": "a74c8a785b8ee75df581f0b6d99da779be35a326",
+      "canonical_id": "arXiv:2609.24847",
+      "arxiv_id": "2609.24847",
+      "authors": [
+        "G. Tombesi",
+        "William Baisi",
+        "Je Yang",
+        "Elisavet Lydia Alvanaki",
+        "Kevin J. Lee",
+        "Michael S. Lippe",
+        "Biruk B. Seyoum",
+        "Luca P. Carloni"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的復号でGEMV/GEMMの計算密度が変動する問題に対し、tile内演算器とtile間並列度を動的に再構成するFPGA実装を提案。Pythia/SmolLM2/GPT-2で固定構成比tile再構成最大2.09倍、システム適応で追加1.25倍の改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.30832",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent advances in Large Reasoning Models have significantly improved chain-of-thought (CoT) capabilities via reinforcement learning (RL). However, generated reasoning chains frequently suffer from structural redundancy (i.e., \\emph{overthinking}), incurring high computational overhead without improving answer correctness. Existing mitigation strategies typically rely on token-uniform length penalties, which provide coarse, segment-agnostic pressure toward shorter outputs and can inadvertently suppress useful reasoning alongside redundancy. To address this, we demonstrate that inefficiency concentrates in high-probability segments with low marginal utility. We derive a theoretical characterization of segment suboptimality under the correctness-length trade-off objective and propose \\textsc{SLAT} (Segment-Level Adaptive Trimming), an RL framework that selectively suppresses redundant segments based on this criterion. Empirical results on standard benchmarks indicate that \\textsc{SLAT} establishes a superior accuracy-efficiency Pareto frontier, reducing reasoning length by $50\\%$ relative to uncompressed baselines while maintaining competitive accuracy. Overall, our results suggest that theoretically grounded, segment-aware trimming is a promising direction for efficient CoT reasoning in large language models.",
+      "identifiers": [
+        "SemanticScholar:06fc6178df4128519609bcf459120c54ce1659aa"
+      ],
+      "semantic_scholar_id": "06fc6178df4128519609bcf459120c54ce1659aa",
+      "canonical_id": "arXiv:2605.30832",
+      "arxiv_id": "2605.30832",
+      "doi": "10.48550/arXiv.2605.30832",
+      "authors": [
+        "Jiangqi Yao",
+        "Xiong Luo",
+        "Ran Cheng",
+        "Kay Chen Tan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 154,
+        "matched_prestigious_venue": null
+      },
+      "reason": "推論軌跡の高確率・低限界効用の冗長区間を選択的に短縮するsegment-aware RLのSLATを提案。CoT生成長を無圧縮比50%削減しつつ正答率を概ね維持するため、推論トークン予算削減に直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models suffer from large parameter counts, which create a significant memory bottleneck. Expert pruning is the most direct approach for reducing this parameter count, yet existing methods make pruning decisions for each expert independently, and assume experts'contributions are purely additive. In reality, expert usage in MoEs is inherently cooperative. We derive HOPE (Higher-Order Pruning of Experts), a second-order pruning objective which provably minimizes an upper bound on the error resulting from pruning. We show that REAP (a state-of-the-art first-order pruning method) is a special case of HOPE where interaction terms are ignored. Across three frontier MoE models (up to 122B parameters), two distinct calibration sets, and multiple benchmarks (including math, instruction following, coding, and an agentic suite), we demonstrate that HOPE produces better pruning decisions than existing methods, and its advantage is most pronounced at high pruning rates and on challenging agentic workloads. At 50% pruning, HOPE outperforms all baselines and achieves an average rank of 1.58 out of 5 methods (versus 2.42 for the next-best method, REAP), with gains of up to +6.1% on agentic coding. Over all conditions, HOPE again achieves the best average rank and surpasses every other method in the majority of head-to-head comparisons. By preserving cooperative expert structure that first-order methods ignore, HOPE enables aggressive compression with minimal degradation, particularly on complex tasks where diverse expert combinations are invoked over long sequences.",
+      "identifiers": [
+        "SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+      ],
+      "semantic_scholar_id": "d4a3433a065ad5e51888ac53242f33739c5e5660",
+      "canonical_id": "arXiv:2609.18916",
+      "arxiv_id": "2609.18916",
+      "authors": [
+        "Alex M. Tseng",
+        "Prannay Kaul",
+        "L. Zancato",
+        "Wei Xia",
+        "Stefan 0 Soatto"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE expertを独立に評価せず、二次相互作用を含む誤差上界に基づいて選ぶHOPEを提案。122BまでのMoEで50% expert枝刈り時に平均順位1.58/5、次善REAPの2.42/5を上回り、エージェントコーディングで最大6.1%改善と報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f9984f17aa66",
+    "round": "libimp-f9984f17aa666daa-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f9984f17aa666daa-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f9984f17aa666daa-pre01.json",
+    "receipt": "sha256:3a103b14a2c5b28f52f985941ee9c973c7748765ad6c9378dfbc20d18a7b7796"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f9984f17aa66",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

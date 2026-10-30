@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing",
+      "source_url": "https://arxiv.org/abs/2610.00465",
+      "year": 2026,
+      "published": "2026-09-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Next-generation large language models (LLMs) are expanding from the cloud to ubiquitous edge devices. However, edge devices typically either lack the memory to store increasingly large LLM weights or, even with enough memory, spend unaffordable energy on loading the weights. This raises our question: can an edge device run an LLM without storing or loading its weights, but receive them over the air and consume them on the fly? Inspired by wireless broadcasting, we present AIR-LLM, an LLM inference architecture for edge devices, which is composed of: (i) a central radio (e.g., 5G base stations) that broadcasts the LLM weights into the air, and (ii) the edge user that receives the weights and completes the general matrix-vector multiplication (GEMV) of LLM inference directly in the radio frequency (RF) domain using RF mixers. To further shorten the airtime, AIR-LLM exploits MIMO spatial multiplexing and proposes an energy-efficient precoder-postcoder pair on the edge to calibrate its own wireless channel. Since the central radio stays user-unaware, AIR-LLM is user-scalable so that one broadcast serves unlimited users within its coverage. We implement AIR-LLM on the NVIDIA Sionna ray-traced channels of two real-world urban scenes and the profiling of a real RF mixer. With a WikiText-2 perplexity degradation of 4.0% on LLaMA-3.1-8B, AIR-LLM saves the energy by 157.7x/40.4x against the FP16 and weight-only quantization baselines; with 20 users, its airtime is 104.1x/26.0x shorter, respectively.",
+      "identifiers": [
+        "SemanticScholar:18f820cededbe9c51406d158961567d3385be8bc"
+      ],
+      "semantic_scholar_id": "18f820cededbe9c51406d158961567d3385be8bc",
+      "canonical_id": "arXiv:2610.00465",
+      "arxiv_id": "2610.00465",
+      "authors": [
+        "Zhi-Hui Gao",
+        "Ting-Jun Chen",
+        "Dirk R. Englund"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "基地局からLLM重みを無線送信し、端末側のRF mixerで直接GEMVを実行する、重みをローカル保存しないエッジ推論アーキテクチャ。Sionna都市チャネルとRFミキサのプロファイルによる評価で、LLaMA-3.1-8BのWikiText-2困惑度4.0%悪化の下、FP16比157.7倍のエネルギー節約をモデル化。実都市実装の実測ではない点に留意。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing",
+      "source_url": "https://arxiv.org/abs/2503.12167",
+      "year": 2025,
+      "published": "2025-03-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While scaling laws have been continuously validated in large language models (LLMs) with increasing model parameters, the inherent tension between the inference demands of LLMs and the limited resources of edge devices poses a critical challenge to the development of edge intelligence. Recently, numerous small language models have emerged, aiming to distill the capabilities of LLMs into smaller footprints. However, these models often retain the fundamental architectural principles of their larger counterparts, still imposing considerable strain on the storage and bandwidth capacities of edge devices. In this paper, we introduce the PLM, a Peripheral Language Model, developed through a co-design process that jointly optimizes model architecture and edge system constraints. The PLM utilizes a Multi-head Latent Attention mechanism and employs the squared ReLU activation function to encourage sparsity, thereby reducing peak memory footprint during inference. During training, we collect and reorganize open-source datasets, implement a multi-phase training strategy, and empirically investigate the Warmup-Stable-Decay-Constant (WSDC) learning rate scheduler. Additionally, we incorporate Reinforcement Learning from Human Feedback (RLHF) by adopting the ARIES preference learning approach. Following a two-phase SFT process, this method yields performance gains of 2% in general tasks, 9% in the GSM8K task, and 11% in coding tasks. In addition to its novel architecture, evaluation results demonstrate that PLM outperforms existing small language models trained on publicly available data while maintaining the lowest number of activated parameters. Furthermore, deployment across various edge devices, including consumer-grade GPUs, mobile phones, and Raspberry Pis, validates PLM's suitability for peripheral applications. The PLM series models are publicly available at https://github.com/plm-team/PLM.",
+      "identifiers": [
+        "SemanticScholar:b23bcfec5cd63bdb4047bd70bb439798b0562553"
+      ],
+      "semantic_scholar_id": "b23bcfec5cd63bdb4047bd70bb439798b0562553",
+      "canonical_id": "arXiv:2503.12167",
+      "arxiv_id": "2503.12167",
+      "doi": "10.48550/arXiv.2503.12167",
+      "authors": [
+        "Cheng Deng",
+        "Luo-Yang Sun",
+        "Jiwen Jiang",
+        "Yong-Cheng Zeng",
+        "Xin-Jian Wu",
+        "Wen-Xin Zhao",
+        "Q. Xiao",
+        "Jia-Chuan Wang",
+        "Hao-Yang Li",
+        "Lei Chen",
+        "Lionel M. Ni",
+        "Hai-Feng Zhang",
+        "Jun Wang"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 594,
+        "matched_prestigious_venue": null
+      },
+      "reason": "エッジ向けのモデル・ハードウェア協調設計でMulti-head Latent Attentionと二乗ReLUの活性疎性を採用し、推論時ピークメモリと活性パラメータ数を抑える。携帯電話・Raspberry Pi・一般GPUでの展開を評価しており、小型LLM推論アーキテクチャに直接関連する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "year": 2025,
+      "published": "2025-05-05",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) achieve strong performance across tasks, but face storage and compute challenges on edge devices. We propose EntroLLM, a compression framework combining mixed quantization and entropy coding to reduce storage while preserving accuracy. We use a combination of unsigned and asymmetric quantization. Tensor-level quantization produces an entropy-reducing effect, increasing weight compressibility, and improving downstream Huffman encoding by $7\\times$ (8-bit) and $11.3\\times$ (4-bit) over state-of-the-art methods. Huffman coding further reduces memory bandwidth demands, while a parallel decoding strategy enables efficient weight retrieval with minimal latency. Experiments on edge-scale LLMs (smolLM-1.7B, phi3-mini-4k, mistral-7B) show up to $30\\%$ storage savings over uint8 and $65\\%$ over uint4 models, with $31.9-146.6\\%$ faster inference on memory-limited devices like the NVIDIA JETSON P3450. EntroLLM requires no retraining and is compatible with existing post-training quantization pipelines, making it practical for edge LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15"
+      ],
+      "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+      "canonical_id": "arXiv:2505.02380",
+      "arxiv_id": "2505.02380",
+      "doi": "10.1109/ICASSP55912.2026.11464777",
+      "authors": [
+        "Arnab Sanyal",
+        "G. Datta",
+        "Prithwish Mukherjee",
+        "Sandeep P. Chinchali",
+        "M. Orshansky"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 543,
+        "matched_prestigious_venue": null
+      },
+      "reason": "非対称量子化とHuffman符号化で重みのエントロピーを下げ、並列復号でエッジ端末のメモリ帯域負荷を抑える。SmolLM/Phi-3/Mistral-7Bなどでuint4比最大65%の保存量削減と、Jetson P3450等で31.9～146.6%の推論高速化を報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+      "identifiers": [
+        "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+      ],
+      "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+      "canonical_id": "arXiv:2506.23431",
+      "arxiv_id": "2506.23431",
+      "doi": "10.48550/arXiv.2506.23431",
+      "authors": [
+        "Zixian Huang",
+        "Chenxu Niu",
+        "Yu Gu",
+        "Gengyang Xiao",
+        "Xin-Wei Huang",
+        "Gong Cheng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 488,
+        "matched_prestigious_venue": null
+      },
+      "reason": "自己回帰モデルの逐次生成制約に対し、複数部分列を同時に開始し、各時刻でそれぞれ一トークンずつ並列生成するpipelined decoderを提案する。質問応答・要約・キーフレーズ生成で追加メモリを大きく増やさず生成速度を改善すると報告する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c3086e29277e",
+    "round": "libimp-c3086e29277ea05d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c3086e29277ea05d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c3086e29277ea05d-pre01.json",
+    "receipt": "sha256:c0c24d319efbc2060f423ae7290a80ee3dc3fe48c48c0f2f2e012f52c84ffbc8"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c3086e29277e",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
