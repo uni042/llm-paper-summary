@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0328-scheduled-chat-30/r01",
+  "reference_main_sha": "38e20f90b73412514652ec4ff03b1200c20b951c",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.04162",
+      "identity_tokens": [
+        "arXiv:2603.04162"
+      ],
+      "title": "Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model",
+      "reason": "Bielik-11Bを対象にQuIP#、SpinQuant+GPTQ、ButterflyQuant、QTIP、VPTQ、AQLMの極低ビット量子化を比較。QuIP# E8P12の22課題平均71.92%とIQ2_XXSの72.07%、モデル容量3.26GBと約2.6GB、自己回帰生成の崩壊例を一次要旨で確認。推論品質と容量の直接的な比較であり、推論時間の改善は未確認。",
+      "source_url": "https://arxiv.org/abs/2603.04162",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 216,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/CICC57935.2023.10121242",
+      "identity_tokens": [
+        "DOI:10.1109/CICC57935.2023.10121242"
+      ],
+      "title": "AI SoC Design Challenges in the Foundation Model Era",
+      "reason": "IEEE出版社の一次要旨はfoundation modelの大規模学習用SoC、データフロー、分散勾配同期、電気・エネルギー設計を中心に論じる総説。生成LLMの推論最適化を独立に評価した研究ではなく、現行推論効率化系統の範囲外。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/10121242",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 349,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.10413",
+      "identity_tokens": [
+        "arXiv:2505.10413"
+      ],
+      "title": "Hierarchical Document Refinement for Long-context Retrieval-augmented Generation",
+      "reason": "LongRefinerは二段階クエリ分析、文書の階層化、適応的な文書精製を組み合わせ、RAGの長い入力を圧縮。7つのQAデータセットで最良比較法に対して約10分の1の計算コスト・遅延を報告。モデル内部KV削減ではなく、生成前の文脈・入力トークン削減に分類。",
+      "source_url": "https://arxiv.org/abs/2505.10413",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 414,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2306.01841",
+      "identity_tokens": [
+        "arXiv:2306.01841"
+      ],
+      "title": "Binary and Ternary Natural Language Generation",
+      "reason": "重みの統計的量子化と活性のelastic quantizationで二値・三値Transformerのテキスト生成を実現。三値BART-baseのCNN/DailyMail R1は41で全精度との差3.9、理論的効率は16倍と報告。専用ハードウェアを前提とする効率見積りであり、一般GPU上の実測TPSとは区別する。",
+      "source_url": "https://arxiv.org/abs/2306.01841",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 416,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.14481",
+      "identity_tokens": [
+        "arXiv:2010.14481"
+      ],
+      "title": "Fast Interleaved Bidirectional Sequence Generation",
+      "reason": "左右同時生成するIBDecoderにより機械翻訳5課題と要約2課題で自己回帰比約2倍の復号高速化を報告。多方向・複数token同時生成では4〜11倍の速度向上と小幅の品質低下を報告。ただし2020年の翻訳・要約Transformerが主対象で、現代の大規模LLMサービングへの適用は未検証。",
+      "source_url": "https://arxiv.org/abs/2010.14481",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 419,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/COLCOM71387.2026.11703501",
+      "identity_tokens": [
+        "DOI:10.1109/COLCOM71387.2026.11703501",
+        "DOI:10.36227/techrxiv.177220011.12966071/v1"
+      ],
+      "title": "Empirical Analysis of Small Language Model Quantization for CPU-Only Cloud Infrastructure",
+      "reason": "著者公開TechRxiv一次プレプリントでLlama 3.2 1BとQwen 2.5 1.5BのCPU-only推論をQ4_K_M/Q8_0と高精度で比較。1.5Bの4bitが8bit比で最大120%のthroughput増と報告。小規模モデル・限定環境での結果であり、GPUや大規模LLMへ一般化しない。",
+      "source_url": "https://doi.org/10.36227/techrxiv.177220011.12966071/v1",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 428,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CISCE69494.2026.11504731",
+      "identity_tokens": [
+        "DOI:10.1109/CISCE69494.2026.11504731"
+      ],
+      "title": "Multi-Objective Scheduling for Large Language Model Inference with Prompt-Level Cost Prediction and SLO Awareness",
+      "reason": "IEEE出版社一次要旨でCAPSのprompt複雑度予測、グリッド炭素強度、GPUエネルギー、SLOに応じた3実行プールへのルーティングを確認。公開トレースに基づくシミュレーションで1,000生成token当たり平均炭素排出26.8%減、SLO達成率は比較法以上。実運用計測ではない。",
+      "source_url": "https://ieeexplore.ieee.org/document/11504731/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 432,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICCD63220.2024.00103",
+      "identity_tokens": [
+        "DOI:10.1109/ICCD63220.2024.00103"
+      ],
+      "title": "AirGun: Adaptive Granularity Quantization for Accelerating Large Language Models",
+      "reason": "著者所属大学の一次研究記録で、量子化感度の高いmoduleのみ入力チャネル単位、その他はtensor単位の量子化を適用するAirGunを確認。専用アクセラレータとの協調設計で既存LMアクセラレータ比4.19倍高速化、エネルギー63.16%削減を報告。専用ハードウェア条件付き。",
+      "source_url": "https://yonsei.elsevierpure.com/en/publications/airgun-adaptive-granularity-quantization-for-accelerating-large-l/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 496,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICEIC61013.2024.10457111",
+      "identity_tokens": [
+        "DOI:10.1109/ICEIC61013.2024.10457111"
+      ],
+      "title": "Searching Optimal Floating-Point Format for Sub-8-Bit Large Language Model Inference",
+      "reason": "ICEIC 2024のOpenReview一次要旨で、LLMの分布に合わせてdenormal表現と混合浮動小数点形式を設計し、8bit未満の量子化で言語モデリング・推論課題の品質低下を抑制する方法を確認。要旨に定量的なTPS・消費電力はなく実測性能は未確認。",
+      "source_url": "https://openreview.net/forum?id=Y3YXGSzhbY",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3689031.3696087",
+      "identity_tokens": [
+        "DOI:10.1145/3689031.3696087"
+      ],
+      "title": "SpaceFusion: Advanced Deep Learning Operator Fusion via Space-Mapping Graph",
+      "reason": "EuroSys 2025のACM一次要旨でSpace-Mapping Graphによる演算子間・内部依存の統合表現、spatial/temporal slicerによる融合schedule生成を確認。TransformerモデルでHugging Face基準平均3.54倍・最大8.79倍、手動FlashAttention実装比最大2.21倍を報告。LLM専用でなく一般Transformer演算子融合として位置付ける。",
+      "source_url": "https://doi.org/10.1145/3689031.3696087",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T03:35:43+09:00",
+      "last_checked_at": "2026-10-31T03:35:43+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "round_status": "complete",
+  "target_count": 10
+}
