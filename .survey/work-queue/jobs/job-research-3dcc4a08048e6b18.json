@@ -35,10 +35,15 @@
   "selection_reason": "KV圧縮の質問既知query-awareと再利用向け質問未知query-agnosticを、同一モデル・同一圧縮率・同一データで比較する監査。6方式と単純baselineをRULER/LongBenchで照合し、SnapKVが質問未知では先頭＋直近保持より劣る条件を示すため、KVキャッシュ圧縮の実運用評価に直接関係する。",
   "semantic_scholar_id": "1e5242ca16ea8e55f3972e4db0c79ef779124794",
   "source_url": "https://arxiv.org/abs/2607.11942",
-  "status": "ready",
+  "status": "superseded",
   "title": "How Query Visibility Changes KV-Cache Compression Rankings: A Matched-Budget Audit",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T04:53:05+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2026-2607.11942-how-query-visibility-changes-kv-cache-compression-rankings-a-matched-bud.md",
+  "represented_canonical_id": "arXiv:2607.11942",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

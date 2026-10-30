@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T04:14:45+00:00",
+  "generated_at": "2026-10-30T04:53:07+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 91,
+  "count": 94,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1627,34 +1627,6 @@
       "worker_run_key": "20261027-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2507.09071",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T20:41:37+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 156 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 7095,
-        "body_paragraphs": 37,
-        "method_chars": 2284,
-        "method_paragraphs": 12,
-        "evaluation_chars": 156,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 156 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-be250894dfdf--libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-be250894dfdf--libfile_d3bbebb956408191ac9d307e7ac422cc--2025-2507.09071-blindsight-vlm-interimage-sparse-attention-research-20261028-0430-schedul.json",
-      "worker_run_key": "20261028-0430-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "DOI:10.32604/cmc.2025.074034",
       "title": null,
       "source_url": null,
@@ -2383,8 +2355,8 @@
     },
     {
       "canonical_id": "arXiv:2510.19498",
-      "title": "Energy-Efficient and Dequantization-Free Q-LLMs: A Spiking Neural Network Approach to Salient Value Mitigation",
-      "source_url": "https://arxiv.org/html/2510.19498v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T04:14:43+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2411,8 +2383,8 @@
     },
     {
       "canonical_id": "DOI:10.1109/CSNT69054.2026.11502509",
-      "title": "Memory-Efficient Speculative Decoding for Large Language Model Inference on Commodity GPUs",
-      "source_url": "https://doi.org/10.1109/CSNT69054.2026.11502509",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T04:14:44+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2437,6 +2409,120 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-703540ccc498--libfile_6a9ecbb3c28881918df1799eef39f5eb--2026-doi-10.1109-csnt69054.2026.11502509-int8-speculative-commodity-gpu-research-20261030-1230-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-703540ccc498--libfile_6a9ecbb3c28881918df1799eef39f5eb--2026-doi-10.1109-csnt69054.2026.11502509-int8-speculative-commodity-gpu-research-20261030.json",
       "worker_run_key": "20261030-1230-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.09071",
+      "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
+      "source_url": "https://arxiv.org/html/2507.09071v3",
+      "returned_at": "2026-10-30T04:49:37+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4621,
+        "body_paragraphs": 25,
+        "method_chars": 1742,
+        "method_paragraphs": 9,
+        "evaluation_chars": 0,
+        "limitation_chars": 559,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_0a7f6d4e4cd08191a45514dc01bba42b--2025-2507.09071-blindsight-interimage-sparse-attention-research-20261030-1303-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_0a7f6d4e4cd08191a45514dc01bba42b--2025-2507.09071-blindsight-interimage-sparse-attention-research-20261030-1303-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2507.17417",
+      "title": "A Comprehensive Evaluation on Quantization Techniques for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2507.17417",
+      "returned_at": "2026-10-30T04:49:39+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 125 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5041,
+        "body_paragraphs": 29,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 125,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 125 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_4773195740408191be0f95d8462c7168--2025-2507.17417-comprehensive-llm-quantization-evaluation-research-20261030-1303-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2608.22704",
+      "title": "WnW: Waxing-and-Waning KV Cache for Long-Form Speech LLMs",
+      "source_url": "https://arxiv.org/html/2608.22704v2",
+      "returned_at": "2026-10-30T04:49:41+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 175 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5552,
+        "body_paragraphs": 31,
+        "method_chars": 1305,
+        "method_paragraphs": 8,
+        "evaluation_chars": 175,
+        "limitation_chars": 526,
+        "insufficiency_flags": [
+          "評価説明量 175 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_6cb0c0fe6ee48191a7edb032bac69669--2026-2608.22704-wnw-waxing-waning-speech-kv-cache-research-20261030-1303-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_6cb0c0fe6ee48191a7edb032bac69669--2026-2608.22704-wnw-waxing-waning-speech-kv-cache-research-20261030-1303-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "arXiv:2504.13989",
+      "title": "Gradual Binary Search and Dimension Expansion: A general method for activation quantization in LLMs",
+      "source_url": "https://arxiv.org/html/2504.13989v2",
+      "returned_at": "2026-10-30T04:51:02+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 117 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 4492,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 117,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 117 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8708f02da8388191a622c13bf5eed633--2025-2504.13989-gradual-binary-search-dimension-expansion-research-20261030-1303-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r01"
     }
   ]
 }
