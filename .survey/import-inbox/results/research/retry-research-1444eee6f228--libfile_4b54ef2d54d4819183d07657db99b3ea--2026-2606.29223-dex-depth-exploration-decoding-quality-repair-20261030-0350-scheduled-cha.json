@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "789bb3b8580a7fe640c73bbf975077a74c992d9e7f378b943ee5f3e1d910cabf",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1444eee6f228--libfile_4b54ef2d54d4819183d07657db99b3ea--2026-2606.29223-dex-depth-exploration-decoding-quality-repair-20261030-0350-scheduled-chat-45-r04.md",
+  "canonical_id": "arXiv:2606.29223",
+  "worker_completed_at": "2026-10-30T03:54:00+09:00",
+  "worker_run_key": "20261030-0350-scheduled-chat-45/r04",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5899,
+    "body_paragraphs": 33,
+    "method_chars": 1988,
+    "method_paragraphs": 10,
+    "evaluation_chars": 112,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 112 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 112 < 500"
+  ],
+  "processed_at": "2026-10-30T02:29:54+00:00"
+}
