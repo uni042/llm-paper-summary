@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（73本）
+## 自動生成の論文一覧（74本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -129,6 +129,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-08 · [HYDRA: A Heterogeneous Chiplet DSE Framework for Serving Dynamic Hybrid LLM Workloads](2026-2608.19395-hydra-a-heterogeneous-chiplet-dse-framework-for-serving-dynamic-hybrid-l.md)**  
   実装：[✓](https://github.com/ONQLin/hydra-cases-2026-artifact) ・ リポジトリ内被引用：0  
   HYDRAは、注意機構（注意機構）と状態空間モデル（State Space モデル、SSM）を混在させた大規模言語モデルの推論サービスに向けて、複数種類の計算・メモリチップレットをどう組み合わせ、配置し、実行時に使い分けるかを探索する設計空間探索（Design Space Exploration、DSE）基盤である。
+
+- **2026-08 · [Beyond Binary Priorities: Multi-Tier SLA Scheduling for Large Language Model Serving](2026-2608.16336-beyond-binary-priorities-multi-tier-sla-scheduling-for-large-language-mo.md)**  
+  実装：[✓](https://github.com/andersvestrum/llumnix_sim) ・ リポジトリ内被引用：0  
+  本論文は、Llumnixの二段階（高優先度・通常）の優先度管理を任意のK段階へ拡張し、LLMサービングにおけるSLA階層とKVキャッシュ容量の予約を同時に扱うスケジューラを提案する。均等分布1万リクエストではK=4がINFaaS+vLLM比でプリフィル平均8.23倍、エンドツーエンド P99 3.13倍、コスト-per-遅延 68%改善を示す。
 
 - **2026-08 · [BALANCE: Hybrid Autoregressive-Speculative LLM Inference at the Network Edge](2026-2608.05926-balance-hybrid-autoregressive-speculative-llm-inference-at-the-network-e.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

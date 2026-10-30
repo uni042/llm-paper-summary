@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T07:33:22+00:00",
+  "generated_at": "2026-10-30T07:57:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 96,
+  "count": 97,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1708,36 +1708,6 @@
       "worker_run_key": "20261030-0350-scheduled-chat-45/r04"
     },
     {
-      "canonical_id": "DOI:10.1145/3771563",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T02:11:09+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4587,
-        "body_paragraphs": 24,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_ff427a4939048191abf13ebf50dce3cb--2025-doi-10.1145-3771563-apple-silicon-inference-quantization-research-20261030-0645-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_ff427a4939048191abf13ebf50dce3cb--2025-doi-10.1145-3771563-apple-silicon-inference-quantization-research-20261030-0645-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-0645-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2606.29223",
       "title": null,
       "source_url": null,
@@ -2524,8 +2494,8 @@
     },
     {
       "canonical_id": "DOI:10.1007/s11432-024-4487-8",
-      "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
-      "source_url": "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T07:27:04+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2552,8 +2522,8 @@
     },
     {
       "canonical_id": "DOI:10.3390/fi17040185",
-      "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
-      "source_url": "https://doi.org/10.3390/fi17040185",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T07:27:06+00:00",
       "return_count": 5,
       "assigned_worker": "scheduled-chat-30",
@@ -2576,6 +2546,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-chat-45-r01.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3771563",
+      "title": "Benchmarking and Characterization of Large Language Model Inference on Apple Silicon",
+      "source_url": "https://arxiv.org/pdf/2508.08531",
+      "returned_at": "2026-10-30T07:52:36+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5166,
+        "body_paragraphs": 22,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 1668,
+        "limitation_chars": 708,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_39de33919610819196354c147caa9f89--2025-doi-10.1145-3771563-apple-silicon-llm-inference-quantization-characterization-research-20261030-1633-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_39de33919610819196354c147caa9f89--2025-doi-10.1145-3771563-apple-silicon-llm-inference-quantization-characterization-research-20261030-1633-scheduled-ch.json",
+      "worker_run_key": "20261030-1633-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2411.02795",
+      "title": "The Evolution of RWKV: Advancements in Efficient Language Modeling",
+      "source_url": "https://arxiv.org/html/2411.02795v1",
+      "returned_at": "2026-10-30T07:54:29+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5110,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 600,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.json",
+      "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
     }
   ]
 }

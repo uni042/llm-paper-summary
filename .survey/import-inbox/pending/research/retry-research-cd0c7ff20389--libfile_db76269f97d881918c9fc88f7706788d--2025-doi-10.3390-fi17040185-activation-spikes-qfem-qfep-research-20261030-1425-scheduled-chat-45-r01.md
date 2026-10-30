@@ -30,6 +30,8 @@ reference_main_sha: "8a4c43d4d90ff181c263ce52251dd48734928dda"
 quality_self_review_passed: true
 quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 research_job_source: "WORKLIST-45.md rank 36"
+last_audited: null
+audit_version: 0
 ---
 # Activation spikes：GLU型LLMの活性化量子化を阻害する局所スパイクと二つの回避策
 
