@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1605-scheduled-chat-00/r02",
+  "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.36800",
+      "identity_tokens": [
+        "arXiv:2609.36800"
+      ],
+      "title": "AI as a Compiler: Compiling Triton kernels without the Triton compiler",
+      "reason": "arXiv一次要旨はLLMエージェントがTritonカーネルをNVIDIA PTXへ直接変換するAI loweringを提案。Ada/Hopper/Blackwell上の共通カーネルとML論文由来のカーネルでautotuned Triton比0.83〜3.34倍、FlashAttentionで1.37倍の例を報告。GPU推論カーネルの生成と検証に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2609.36800",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 253
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.01197",
+      "identity_tokens": [
+        "arXiv:2511.01197"
+      ],
+      "title": "CryptoMoE: Privacy-Preserving and Scalable Mixture of Experts Inference via Balanced Expert Routing",
+      "reason": "NeurIPS 2025のarXiv v3要旨は秘密計算下のMoEでexpert routingの漏洩を防ぐ負荷均等化と安全なdispatch/combineを提案。DeepSeekMoE・OLMoE・QwenMoEを評価し、dense比較でE2E遅延2.8〜3.5倍、通信量2.9〜4.3倍削減を報告。MoEの推論通信とルーティングに直接関連。",
+      "source_url": "https://arxiv.org/abs/2511.01197",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.21661",
+      "identity_tokens": [
+        "arXiv:2505.21661"
+      ],
+      "title": "KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",
+      "reason": "OSDI 2025のarXiv一次要旨はTritonのコンパイラパスとしてGPUカーネルのプロファイラを実装できるKPerfIRを提案。計測オーバーヘッド8.2%、相対誤差2%を報告し、細粒度演算器の重畳など推論カーネル最適化に利用可能。LLM専用ではないが推論実装基盤に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2505.21661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.15188",
+      "identity_tokens": [
+        "arXiv:2604.15188"
+      ],
+      "title": "VisPCO: Visual Token Pruning Configuration Optimization via Budget-Aware Pareto-Frontier Learning for Vision-Language Models",
+      "reason": "arXiv一次要旨はVLMの視覚トークン削減設定を計算予算と精度のPareto最適化問題として定式化。連続緩和と直通推定器を用いて層別の枝刈り位置・強度を探索し、8視覚ベンチマークでグリッド探索に近いPareto前線を再現。VLM推論計算削減の設計へ直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.15188",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 260
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.10030",
+      "identity_tokens": [
+        "arXiv:2603.10030"
+      ],
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "reason": "arXiv v2要旨はLinuxカーネルのdmaplaneでDMAバッファ寿命管理、NUMA配置、RDMA、GPU BAR pinningを統合。2台間のKVキャッシュチャンクをRDMA WRITE WITH IMMEDIATEで転送して受信側のテンソルを復元するdisaggregated inferenceの実証を含む。GPU-CPU-ネットワーク間データ移動の基盤に直接関連。",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 267
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.06571",
+      "identity_tokens": [
+        "arXiv:2406.06571"
+      ],
+      "title": "SUBLLM: A Novel Efficient Architecture with Token Sequence Subsampling for LLM",
+      "reason": "ECAI 2024のarXiv v5要旨はdecoder-only LLMへsubsampling、upsampling、bypassを挿入し、中間系列長を短縮するSUBLLMを提案。LLaMA比較で推論速度最大37%改善、GPUあたりメモリ1GB削減、8,192文脈で推論速度52%改善と報告。推論時のトークン処理削減に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2406.06571",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 277
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2408.07802",
+      "identity_tokens": [
+        "arXiv:2408.07802"
+      ],
+      "title": "Kraken: Inherently Parallel Transformers For Efficient Multi-Device Inference",
+      "reason": "arXiv v2要旨はTensor Parallelismのcollective通信を計算と重畳させるよう層内の固定並列度を組み込むKrakenアーキテクチャを提案。TensorRT-LLMを用いた複数GPU評価で平均TTFTを35.6%改善し、言語モデル品質を維持。分散推論時の通信隠蔽へ直接関連。",
+      "source_url": "https://arxiv.org/abs/2408.07802",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 279
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39334",
+      "identity_tokens": [
+        "arXiv:2609.39334"
+      ],
+      "title": "Taming Speculative Search for Test-Time Scaling in LLM Serving",
+      "reason": "arXiv一次要旨はtest-time scalingの複数推論経路探索に伴う候補爆発と細粒度検証を課題として、SpecScaleサービングシステムを提案。低品質分岐の早期枝刈り、重複計算の共有、検証遅延でスループットとレイテンシを改善する。LLM推論時探索の実行基盤に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.39334",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 280
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.02737",
+      "identity_tokens": [
+        "arXiv:2603.02737"
+      ],
+      "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
+      "reason": "ASPLOS 2026のarXiv一次要旨はwafer-scale SRAM CIMで外部メモリ移動を抑え、トークン単位パイプライン、分散動的KV配置、通信認識マッピングを組み合わせるOuroborosを提案。平均スループット4.1倍、エネルギー効率4.2倍、13Bモデルで最大9.1倍/17倍と報告。LLM推論ハードウェアに直接該当。",
+      "source_url": "https://arxiv.org/abs/2603.02737",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.13586",
+      "identity_tokens": [
+        "arXiv:2512.13586"
+      ],
+      "title": "ReFusion: A Diffusion Large Language Model with Parallel Autoregressive Decoding",
+      "reason": "arXiv v2要旨は拡散LLMのKV再利用困難と並列生成時の不整合に対し、slot単位の拡散選択とslot内の自己回帰補完を交互に行うReFusionを提案。因果注意でKV再利用を可能にし、既存masked diffusion比平均18倍超、自己回帰モデル比平均2.33倍の高速化を報告。生成推論の実行方式に直接該当。",
+      "source_url": "https://arxiv.org/abs/2512.13586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 288
+    }
+  ]
+}
