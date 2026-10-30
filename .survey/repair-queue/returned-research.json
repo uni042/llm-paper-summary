@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T12:57:53+00:00",
+  "generated_at": "2026-10-30T13:15:24+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2326,39 +2326,11 @@
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2406.16299",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T11:56:56+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 481 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3751,
-        "body_paragraphs": 21,
-        "method_chars": 1079,
-        "method_paragraphs": 6,
-        "evaluation_chars": 481,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 481 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair-20261030-1943-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair-20261030-1943-scheduled-chat.json",
-      "worker_run_key": "20261030-1803-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "DOI:10.1038/s44387-026-00072-8",
       "title": "Phase transitions in large language model compression",
       "source_url": "https://www.nature.com/articles/s44387-026-00072-8",
-      "returned_at": "2026-10-30T12:52:44+00:00",
-      "return_count": 1,
+      "returned_at": "2026-10-30T13:15:20+00:00",
+      "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
       "reason": "blocked_quality",
       "failures": [
@@ -2377,16 +2349,16 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_109df3bbeca48191a5fcb18b2c0fb9d3--2026-doi-10.1038-s44387-026-00072-8-phase-transitions-under16kb-reaudit-20261030-2133-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_109df3bbeca48191a5fcb18b2c0fb9d3--2026-doi-10.1038-s44387-026-00072-8-phase-transitions-under16kb-reaudit-20261030-2133-scheduled-chat-30-r01-v2.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4f2f2cfa5519--libfile_109df3bbeca48191a5fcb18b2c0fb9d3--2026-doi-10.1038-s44387-026-00072-8-phase-transitions-under16kb-reaudit-20261030-2133-scheduled-chat-30-r01-v2.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-4f2f2cfa5519--libfile_109df3bbeca48191a5fcb18b2c0fb9d3--2026-doi-10.1038-s44387-026-00072-8-phase-transitions-under16kb-reaudit-20261030-2133-sch.json",
       "worker_run_key": "20261030-2133-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1109/HPCA68181.2026.11408492",
       "title": "ELORA: Efficient LoRA and KV Cache Management for Multi-LoRA LLM Serving",
       "source_url": "https://www.cse.ust.hk/~weiwa/papers/elora-hpca26.pdf",
-      "returned_at": "2026-10-30T12:54:38+00:00",
-      "return_count": 5,
+      "returned_at": "2026-10-30T13:15:21+00:00",
+      "return_count": 6,
       "assigned_worker": "scheduled-chat-00",
       "reason": "blocked_quality",
       "failures": [
@@ -2405,9 +2377,37 @@
           "限界説明量 0 < 推奨 120"
         ]
       },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c3fe040e5a408191bf99c34862258ddf--2026-elora-under16kb-semantic-reaudit-20261030-2040-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c3fe040e5a408191bf99c34862258ddf--2026-elora-under16kb-semantic-reaudit-20261030-2040-scheduled-chat-45-r01.json",
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-550b670fcfd4--libfile_c3fe040e5a408191bf99c34862258ddf--2026-elora-under16kb-semantic-reaudit-20261030-2040-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-550b670fcfd4--libfile_c3fe040e5a408191bf99c34862258ddf--2026-elora-under16kb-semantic-reaudit-20261030-2040-scheduled-chat-45-r01.json",
       "worker_run_key": "20261030-2040-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2406.16299",
+      "title": "Compensate Quantization Errors: Make Weights Hierarchical to Compensate Each Other",
+      "source_url": "https://arxiv.org/html/2406.16299v1",
+      "returned_at": "2026-10-30T13:15:23+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 481 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3751,
+        "body_paragraphs": 21,
+        "method_chars": 1079,
+        "method_paragraphs": 6,
+        "evaluation_chars": 481,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 481 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f79330e84fff--libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair-20261030-1943-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-f79330e84fff--libfile_98ab718b1ff48191be7e89431fc7632c--2024-2406.16299-lsi-under16kb-reaudit-20261030-1803-scheduled-chat-00-r01-metadata-repair.json",
+      "worker_run_key": "20261030-1803-scheduled-chat-00/r01"
     }
   ]
 }

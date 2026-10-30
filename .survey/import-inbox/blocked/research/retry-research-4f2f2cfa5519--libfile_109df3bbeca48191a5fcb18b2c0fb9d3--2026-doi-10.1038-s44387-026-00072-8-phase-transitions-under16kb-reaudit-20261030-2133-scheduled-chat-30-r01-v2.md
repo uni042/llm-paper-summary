@@ -39,6 +39,8 @@ quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
 reaudit_primary_verified_at: "2026-10-30T21:33:00+09:00"
 reaudit_primary_url: "https://www.researchgate.net/publication/400548736_Phase_transitions_in_large_language_model_compression"
 reaudit_note: "著者公開の正式誌面13ページを通読。図2〜8、本文式(5)、Table 3、方法別閾値と複合圧縮、品質と容量の比較、限界を照合。Natureのページはアクセス制限のため著者公開正式版を使用。"
+last_audited: null
+audit_version: 0
 ---
 
 # 大規模言語モデル圧縮の相転移：圧縮経路を臨界点の手前に設計する

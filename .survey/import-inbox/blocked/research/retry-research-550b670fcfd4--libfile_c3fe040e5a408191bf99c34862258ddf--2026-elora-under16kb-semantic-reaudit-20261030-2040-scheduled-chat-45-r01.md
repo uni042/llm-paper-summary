@@ -40,6 +40,8 @@ under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 repair_kind: under16kb_semantic_reaudit
 repair_reason: 現行mainの固定Git blob SHA照合後、HPCA 2026著者公開14ページの方式・評価・負の条件を再確認し、定量的な感度・比較・実装費用を補強。
+last_audited: null
+audit_version: 0
 ---
 
 # ELORA：LoRAとKVキャッシュの依存関係を統一管理するMulti-LoRAサービング
