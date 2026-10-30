@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（524本）
+## 自動生成の論文一覧（525本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -471,6 +471,10 @@
 - **2026-03 · [Token-Budget-Aware Pool Routing for Cost-Efficient LLM Inference](2026-2604.09613-token-budget-aware-pool-routing.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   短文・長文でvLLMプールを分離し、自己校正した総トークン予算で振り分けてGPU台数を約17〜39%削減するフリート経路制御。
+
+- **2026-03 · [TetriServe: Efficiently Serving Mixed DiT Workloads](2026-2510.01565-tetriserve-efficiently-serving-mixed-dit-workloads.md)**  
+  実装：[✓](https://github.com/DiT-Serving/TetriServe) ・ リポジトリ内被引用：1  
+  TetriServeは、要求のdenoising stepごとにGPU並列度を変えられるスケジューラを設計する。FLUX.1-devを8枚のH100、SD3 Mediumを4枚のA40で実測し、固定SP方式に対してSLO達成率を最大32%改善したと報告する。
 
 - **2026-03 · [TCM-Serve: Modality-aware Scheduling for Multimodal Large Language Model Inference](2026-2603.26498-rps-serve-modality-aware-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

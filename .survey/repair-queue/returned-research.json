@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T07:15:24+00:00",
+  "generated_at": "2026-10-30T07:33:22+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1681,35 +1681,6 @@
       "worker_run_key": "20261029-1530-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.3390/fi17040185",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T15:27:00+00:00",
-      "return_count": 4,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 137 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5384,
-        "body_paragraphs": 29,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 137,
-        "limitation_chars": 435,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 137 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-3692c9c844ea--libfile_8fb41192ac908191854ae8a6d3b5a770--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261029-2258-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-3692c9c844ea--libfile_8fb41192ac908191854ae8a6d3b5a770--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261029-2258-scheduled-.json",
-      "worker_run_key": "20261029-2258-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2605.10875",
       "title": null,
       "source_url": null,
@@ -2524,37 +2495,9 @@
       "worker_run_key": "20261030-1400-scheduled-chat-00/r01"
     },
     {
-      "canonical_id": "DOI:10.1007/s11432-024-4487-8",
-      "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
-      "source_url": "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf",
-      "returned_at": "2026-10-30T07:08:31+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "16KB未満再監査: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6518,
-        "body_paragraphs": 29,
-        "method_chars": 1833,
-        "method_paragraphs": 8,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261030-1530-scheduled-chat-30/r01"
-    },
-    {
       "canonical_id": "arXiv:2609.33135",
-      "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
-      "source_url": "https://arxiv.org/html/2609.33135",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T07:13:22+00:00",
       "return_count": 3,
       "assigned_worker": "scheduled-chat-45",
@@ -2578,6 +2521,61 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_c7b0e37787588191912c646b70a58fa1--2026-2609.33135-mpfa-blackwell-qk4pv8-research-20261030-1332-scheduled-chat-30-r01.json",
       "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1007/s11432-024-4487-8",
+      "title": "Mico: efficient query scheduling for multi-cloud deployed LLM inference service",
+      "source_url": "https://yangtonghome.github.io/uploads/Multi_Cloud_Query_Scheduling_SCIS2025.pdf",
+      "returned_at": "2026-10-30T07:27:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6518,
+        "body_paragraphs": 29,
+        "method_chars": 1833,
+        "method_paragraphs": 8,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8aed8f040ce8--libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-8aed8f040ce8--libfile_1276d7d43a808191922586e1b1fcc70d--2026-doi-10.1007-s11432-024-4487-8-mico-under16kb-reaudit-20261030-1530-scheduled-chat-30.json",
+      "worker_run_key": "20261030-1530-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "DOI:10.3390/fi17040185",
+      "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
+      "source_url": "https://doi.org/10.3390/fi17040185",
+      "returned_at": "2026-10-30T07:27:06+00:00",
+      "return_count": 5,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3424,
+        "body_paragraphs": 16,
+        "method_chars": 970,
+        "method_paragraphs": 4,
+        "evaluation_chars": 0,
+        "limitation_chars": 936,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
     }
   ]
 }

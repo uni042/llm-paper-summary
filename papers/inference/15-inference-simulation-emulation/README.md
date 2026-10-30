@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（72本）
+## 自動生成の論文一覧（73本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -259,6 +259,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2025-04 · [SplitReason: Learning To Offload Reasoning](2025-2504.16379-splitreason-learning-to-offload-reasoning.md)**  
   実装：[✓](https://github.com/abdelfattah-lab/SplitReason) ・ リポジトリ内被引用：1  
   大規模推論モデルは、数学問題などで長い思考連鎖（Chain-of-Thought; CoT）を生成する。思考の各トークンを高価な大型モデルで生成すると、逐次復号（デコード）の費用が大きくなる。一方、途中の式変形や説明のすべてが大型モデルを必要とするわけではない。基本構成は1.5Bパラメータの小型推論モデルと、8B・14B・32Bなどの大型推論モデルである。
+
+- **2025-04 · [MIST: A Co-Design Framework for Heterogeneous, Multi-Stage LLM Inference](2025-2504.09775-mist-a-co-design-framework-for-heterogeneous-multi-stage-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMサービングの性能は、モデルのプリフィルとデコードだけでなく、RAGの検索、KVキャッシュの再利用、ネットワーク転送、スケジューリング、異なるモデルを使う複数クライアントなどの組合せで決まる。しかし異なるベンダーを跨いだプリフィル/デコード（PD）分離を、実際の統一サービングスタックで検証できないことが多い。
 
 - **2024-11 · [Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format](2024-2411.15982-anda-unlocking-efficient-llm-inference-with-a-variable-length-grouped-ac.md)**  
   実装：✓ ・ リポジトリ内被引用：1  

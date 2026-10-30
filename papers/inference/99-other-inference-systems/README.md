@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（847本）
+## 自動生成の論文一覧（848本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -1281,6 +1281,10 @@
 - **2026-04 · [Sink-Token-Aware Pruning for Fine-Grained Video Understanding in Efficient Video LLMs](2026-2604.20937-sink-token-aware-pruning-for-fine-grained-video-understanding-in-efficie.md)**  
   実装：[✓](https://github.com/rlqja1107/SToP) ・ リポジトリ内被引用：0  
   従来の枝刈りは視覚符号化器の注意重みを重要度の代用として使うが、注意が高い位置に意味情報が多いとは限らない。
+
+- **2026-04 · [SimDiff: Depth Pruning via Similarity and Difference](2026-2604.19520-simdiff-depth-pruning-via-similarity-and-difference.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  SimDiffは、隣接層の隠れ状態について方向の違いと変化の大きさを別々に計算し、重み付きの重要度へ統合する。一次論文は25%剪定したLLaMA2-7Bで元モデルの10課題平均の91.44%を維持し、LLaMA3.1-8Bで12層を削った場合にA40上の生成スループット1.49倍を報告する。
 
 - **2026-04 · [Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving](2026-2604.14993-serving-chain-structured-jobs-with-large-memory-footprints-with-application-to-large-foundation-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
