@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PipeWeave: Synergizing Analytical and Learning Models for Unified GPU Performance Prediction",
+      "source_url": "https://arxiv.org/abs/2601.14910",
+      "year": 2026,
+      "published": "2026-01-21",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid expansion of Transformer-based large language models has dramatically increased the need for highperformance GPUs. As a result, there is growing demand for fast, accurate, and widely generalizable GPU performance models to support next-generation hardware selection and system-level exploration. However, current data-driven methods are limited, exhibiting poor generalization across hardware and inadequate modeling of complex production-level kernels common in modern inference stacks. To address these issues, we present PipeWeave, a unified GPU modeling framework. This approach first employs an analytical model to quantify a given kernel's demands on the GPU's heterogeneous instruction pipelines. These analytical features are then fed into a machine learning (ML) model to capture complex cross-pipeline interactions and resource dependencies, enabling high-fidelity performance prediction. Our evaluation across 11 GPU types from four generations of major architectures on two widely-used serving systems demonstrates that PipeWeave delivers high fidelity and strong generalizability. It achieves accurate predictions, with only 6.1% average error at the kernel level and 8.5% for end-to-end inference-reducing the error of state-of-the-art methods by $\\mathbf{6. 7} \\times$ and $\\mathbf{4. 4} \\times$, respectively. We also demonstrate PipeWeave's value “beyond simulation” by utilizing its performance ceiling to diagnose implementation shortcomings and guide the optimization of a production fused MoE Triton kernel, achieving up to $\\mathbf{1. 7} \\times$ speedup. Code is available online.11https://github.com/zksainx/pipeweave",
+      "identifiers": [
+        "SemanticScholar:a409a89806fb62f74ac27d17c4e60bc42bed0571"
+      ],
+      "semantic_scholar_id": "a409a89806fb62f74ac27d17c4e60bc42bed0571",
+      "canonical_id": "arXiv:2601.14910",
+      "arxiv_id": "2601.14910",
+      "doi": "10.1109/ISCA66397.2026.00126",
+      "authors": [
+        "Kai-Xuan Zhang",
+        "Yu Cui",
+        "Shu-Hao Zhang",
+        "Chutong Ding",
+        "Shi-You Qian",
+        "Lu-Ping Wang",
+        "Jian Cao",
+        "Guang-Tao Xue",
+        "Chenghuan Huang",
+        "Guo-Dong Yang",
+        "Li-Ping Zhang"
+      ],
+      "priority": 112,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 112,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 282,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "arXiv v2一次要旨はGPU命令パイプラインの解析特徴と機械学習を組み合わせ、LLMサービングのカーネル・E2E性能を予測するPipeWeaveを提案。11GPU種類でカーネル平均誤差6.1%、E2E推論8.5%を報告。推論性能予測とハードウェア構成最適化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "From Tokens to Energy Flexibility: Quantization-Enabled Demand Response for Data Centers with LLM Inference Workloads",
+      "source_url": "https://arxiv.org/abs/2606.18851",
+      "year": 2026,
+      "published": "2026-06-17",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid growth of large language model (LLM) inference is creating significant data-center loads that face increasing energy-management challenges under tightening grid conditions and demand response (DR) requirements. Conventional data-center energy management mainly relies on temporal and spatial workload shifting and campus-level energy asset scheduling, but it usually treats LLM inference demand as an aggregate load. As a result, these approaches fail to exploit the internal characteristics of LLM serving and therefore overlook the flexibility offered by LLM-specific techniques such as model quantization. To unlock this flexibility, this paper proposes a quantization-enabled energy management framework for grid-responsive LLM inference data centers. First, a quantization-to-power model is established to map each model--quantization configuration to a compact set of dispatchable parameters. Second, a two-stage quantization-enabled DR model is developed to account for model instance switching, request routing, and precision selection. Third, a multi-campus co-optimization method is introduced for DR participation by integrating grid-side electricity and carbon signals with the quantization-enabled DR model. Case studies show that the proposed framework reduces total data-center operating cost by 34.3\\% without curtailing served token volume, validating model quantization as an effective flexibility lever for grid-responsive LLM data-center energy management.",
+      "identifiers": [
+        "SemanticScholar:c2caf7546ed07612003016158296822be9772e8d"
+      ],
+      "semantic_scholar_id": "c2caf7546ed07612003016158296822be9772e8d",
+      "canonical_id": "arXiv:2606.18851",
+      "arxiv_id": "2606.18851",
+      "doi": "10.48550/arXiv.2606.18851",
+      "authors": [
+        "Bo-Jun Du",
+        "Xiao-Yi Fan",
+        "Er-Shun Du",
+        "Long Chen",
+        "Jianpei Han",
+        "Qing-Chun Hou",
+        "Ning Zhang",
+        "Chong-Qing Kang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 135,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLLMサービングの量子化レベルをデータセンターの需要応答資源として扱い、電力・炭素信号とインスタンス切替・ルーティングを共同最適化。提供トークン数を削減せず運用コスト34.3%削減を報告。推論精度選択とエネルギー運用に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "HiFA4: Training-Free 4-bit FlashAttention on Ascend HIF4 NPUs for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2607.04302",
+      "year": 2026,
+      "published": "2026-07-05",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present HiFA4, a post-training operator-level design that executes both QK^T and PV in FlashAttention as 4-bit HIF4 Cube GEMMs for LLM inference on Ascend NPUs, while maintaining the online softmax state in FP16. To our knowledge, HiFA4 is the first Ascend-HIF4-targeted design of this kind evaluated on standard NLP benchmarks. HiFA4 combines two mechanisms. Smooth-QK applies a calibration-static per-channel equivalent rescaling to Q and K after RoPE, transferring quantization difficulty from K to Q without per-tile online reduction at inference. P-Reordering accumulates the softmax normalizer from the same quantized attention weights P_hat used in the PV GEMM, rather than from a higher-precision reconstruction. We show that this inconsistent formulation introduces a coherent output-scaling error, and validate the effect on a Qwen3-8B Layer-0 MMLU trace, where all 3.6M measured attention tiles exhibit net probability-mass loss with median epsilon_bar = -0.064. P-Reordering also allows the normalizer to be fused into the PV Cube GEMM. Across five LLMs, HiFA4 reduces quantization-induced decision drift. On Qwen3-8B, it recovers 37.5% of the accuracy gap introduced by direct HIF4 quantization, narrows the sample-weighted accuracy loss from 1.12 pp to 0.70 pp, reduces BF16-inconsistent MMLU predictions from 16.3% to 8.2%, and cuts MMLU accuracy regressions by 57% (1071 to 465). On Gemma2-9B, mild smoothing keeps HiFA4 within 0.7 pp of BF16 while reducing MMLU regressions by 27%. On LLaMA3.1-8B, Mistral-7B, and Phi-4B, where Smooth-QK is disabled, P-Reordering with the adopted Q-Mean auxiliary still reduces full-set MMLU regressions by 41-52%. A preliminary instruction-scheduling analysis projects a 35.4% critical-path latency reduction relative to BF16 by fusing the softmax normalizer into the PV Cube GEMM; on-hardware validation is left to future work.",
+      "identifiers": [
+        "SemanticScholar:e9a272bb85fd92d86971dbf338ff93daf47168a6"
+      ],
+      "semantic_scholar_id": "e9a272bb85fd92d86971dbf338ff93daf47168a6",
+      "canonical_id": "arXiv:2607.04302",
+      "arxiv_id": "2607.04302",
+      "doi": "10.48550/arXiv.2607.04302",
+      "authors": [
+        "Huilin Dong",
+        "Yanzhao Li",
+        "Jie Gao",
+        "Chunlu Li",
+        "Zhiyuan Zhang",
+        "Yupeng Sun",
+        "Zhenyuan Chen",
+        "Zhiqiang Zou"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 117,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はAscend NPUのHIF4 4bit Cube GEMMでQK/PVを実行し、FP16 softmax状態とSmooth-QK・P-Reorderingで量子化誤差を抑えるHiFA4を提案。Qwen3-8Bで直接HIF4化による精度低下を37.5%回復し、FlashAttentionの低ビット推論実装に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration",
+      "source_url": "https://arxiv.org/abs/2608.17336",
+      "year": 2026,
+      "published": "2026-08-18",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context prefill in large language models (LLMs) incurs substantial computation and memory traffic because dense self-attention computes quadratic query-key scores. Existing methods either use a uniform low-precision path or select token interactions, leaving spatial precision routing over hardware-aligned score tiles outside fused dense attention. We introduce TileMix, a tile-centric precision-routing kernel that makes numerical precision an executable spatial decision over score-tile groups within fused dense attention. TileMix partitions the attention matrix into hardware-aligned score tiles, packs routing decisions into compact bitmasks, and dispatches each tile group through FP16 or INT8 score computation while both paths update a shared online-softmax state. Scalable precision grouping lets each routing bit govern multiple adjacent key tiles, preserving hardware-aligned compute tiles and compact metadata at long contexts. By routing all legal tile groups, TileMix preserves dense token connectivity, requires no training, and supports grouped-query attention, variable-length batches, and INT8 key/value caches. Across LongEval, LV-Eval, and A100 prefill benchmarks on LLaMA, Qwen, and Vicuna, TileMix recovers long-context quality lost under uniform INT8 and improves prefill throughput over FP16, yielding a controllable accuracy-efficiency frontier across model families. The implementation is available at https://github.com/HanzhiZhang-Ulrica/TileMix.",
+      "identifiers": [
+        "SemanticScholar:07f1586b25da74042beb7add74047468240c1065"
+      ],
+      "semantic_scholar_id": "07f1586b25da74042beb7add74047468240c1065",
+      "canonical_id": "arXiv:2608.17336",
+      "arxiv_id": "2608.17336",
+      "authors": [
+        "Han-Zhi Zhang",
+        "Qiao Zhang",
+        "Qing-Lei Cao",
+        "Heng Fan",
+        "Yan Huang",
+        "Ke-Wei Sha",
+        "Yun-He Feng"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 73,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は注意スコアをタイル単位でFP16/INT8へ振り分け、共有online-softmaxを維持するTileMixを提案。GQA・可変長・INT8 KVに対応し、LLaMA/Qwen/Vicunaの長文脈A100 prefillで均一INT8の品質低下を回復しFP16より高スループットを報告。推論注意カーネルの混合精度化に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Meeting SLOs, Slashing Hours: Automated Enterprise LLM Optimization with OptiKIT",
+      "source_url": "https://arxiv.org/abs/2601.20408",
+      "year": 2026,
+      "published": "2026-01-28",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Enterprise LLM deployment faces a critical scalability challenge: organizations must optimize models systematically to scale AI initiatives within constrained compute budgets, yet the specialized expertise required for manual optimization remains a niche and scarce skillset. This challenge is particularly evident in managing GPU utilization across heterogeneous infrastructure while enabling teams with diverse workloads and limited LLM optimization experience to deploy models efficiently. We present OPTIKIT, a distributed LLM optimization framework that democratizes model compression and tuning by automating complex optimization workflows for non-expert teams. OPTIKIT provides dynamic resource allocation, staged pipeline execution with automatic cleanup, and seamless enterprise integration. In production, it delivers more than 2x GPU throughput improvement while empowering application teams to achieve consistent performance improvements without deep LLM optimization expertise. We share both the platform design and key engineering insights into resource management, pipeline orchestration, and integration patterns that enable large-scale, production-grade democratization of model optimization. Finally, we open-source the system to enable external contributions and broader reproducibility.",
+      "identifiers": [
+        "SemanticScholar:19399404d63b33925b67e582c5378db57511be9b"
+      ],
+      "semantic_scholar_id": "19399404d63b33925b67e582c5378db57511be9b",
+      "canonical_id": "arXiv:2601.20408",
+      "arxiv_id": "2601.20408",
+      "doi": "10.48550/arXiv.2601.20408",
+      "authors": [
+        "Nicholas Santavas",
+        "Kareem Eissa",
+        "Patrycja Cieplicka",
+        "Piotr Florek",
+        "Matteo Nulli",
+        "S. Vasilev",
+        "Seyyed Hadi Hashemi",
+        "Antonios Gasteratos",
+        "Shahram Khadivi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 275,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv v2一次要旨は企業向けLLMの圧縮・調整を自動化し、動的GPU資源割当とパイプライン実行・清掃を統合するOptiKITを提案。実運用でGPUスループット2倍超改善を報告。LLM配備時の資源効率と実行基盤に直接該当。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-fbbd28f9b5a8",
+    "round": "libimp-fbbd28f9b5a891cc-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-fbbd28f9b5a891cc-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-fbbd28f9b5a891cc-pre01.json",
+    "receipt": "sha256:3d22a13556fe02e4798ef943f9ba7ebac060e483b319b90dc0274f84cb2f99a2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-fbbd28f9b5a8",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

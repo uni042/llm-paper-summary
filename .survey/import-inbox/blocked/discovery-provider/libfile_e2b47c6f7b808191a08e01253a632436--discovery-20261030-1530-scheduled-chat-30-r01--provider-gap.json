@@ -3,8 +3,8 @@
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-30",
   "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
-  "run_key": "20261030-1530-scheduled-chat-30/r01",
-  "record_count": 10,
+  "run_key": "20261030-1530-scheduled-chat-30/r01::provider-gap",
+  "record_count": 9,
   "records": [
     {
       "classification": "accept",
@@ -173,24 +173,19 @@
         "State Space Models"
       ],
       "worklist_rank": 12
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2609.36032",
-      "identity_tokens": [
-        "arXiv:2609.36032"
-      ],
-      "title": "TORQUE: Optimizing What (not) to Quantize Before and After Rotation",
-      "reason": "arXiv著者要旨はランダム回転の前後で高精度保持すべき外れ値座標を同一ビット予算の下で最適化し、量子化再構成誤差を減らす。KVキャッシュと活性の圧縮実験を含み推論効率と関連する一方、主対象は汎用ベクトル量子化と最近傍検索で、LLMサービング実機のスループット改善が主たる実証ではないためborderline。",
-      "source_url": "https://arxiv.org/abs/2609.36032",
-      "body_check": "abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-30T15:34:40+09:00",
-      "last_checked_at": "2026-10-30T15:34:40+09:00",
-      "linked_from": [
-        "Weight Quantization / Compression",
-        "KV Cache Optimization / Compression"
-      ],
-      "worklist_rank": 13
     }
+  ],
+  "parent_run_key": "20261030-1530-scheduled-chat-30/r01",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/libfile_e2b47c6f7b808191a08e01253a632436--discovery-20261030-1530-scheduled-chat-30-r01.json",
+  "provider_gap_ids": [
+    "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+    "arXiv:2303.08302",
+    "arXiv:2408.05636",
+    "arXiv:2501.19324",
+    "arXiv:2505.16162",
+    "arXiv:2507.06608",
+    "arXiv:2603.04592",
+    "arXiv:2606.02680",
+    "arXiv:2607.02574"
   ]
 }
