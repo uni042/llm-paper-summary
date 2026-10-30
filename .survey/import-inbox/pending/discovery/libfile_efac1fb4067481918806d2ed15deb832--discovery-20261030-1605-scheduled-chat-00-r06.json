@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1605-scheduled-chat-00/r06",
+  "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.17068",
+      "identity_tokens": [
+        "arXiv:2604.17068"
+      ],
+      "title": "Stability-Weighted Decoding for Diffusion Language Models",
+      "reason": "arXiv一次要旨は拡散LMの時系列的な予測分布のKL変化で未確定トークンの不安定性を測り、先走ったunmaskingを防ぐ学習不要のSWDを提案。既存score-based並列復号へ挿入でき、コード生成・数学推論で品質と復号挙動を評価する。拡散LMの推論デコード制御に直接関連。",
+      "source_url": "https://arxiv.org/abs/2604.17068",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 352
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2312.00960",
+      "identity_tokens": [
+        "arXiv:2312.00960"
+      ],
+      "title": "The Cost of Compression: Investigating the Impact of Compression on Parametric Knowledge in Language Models",
+      "reason": "arXiv一次要旨は枝刈り・量子化によるLLM圧縮がパラメータ知識に与える影響をLAMAとLM-HARNESSでモデル系列別に評価する。困惑度・一般精度だけでは見えない圧縮の品質損失を測定し、推論用モデル容量削減時の制約把握に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2312.00960",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 353
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.16376",
+      "identity_tokens": [
+        "arXiv:2501.16376"
+      ],
+      "title": "SwiftPrune: Hessian-Free Weight Pruning for Large Language Models",
+      "reason": "arXiv一次要旨はHessian計算を避ける寄与度ベースの重み重要度とEWMAによる並べ替え回避を組み合わせるSwiftPruneを提案。後学習の枝刈り処理を高速化し、推論向けLLMを軽量化する。枝刈りの事前処理効率と実行時疎性に直接関連。",
+      "source_url": "https://arxiv.org/abs/2501.16376",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 354
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.08891",
+      "identity_tokens": [
+        "arXiv:2606.08891"
+      ],
+      "title": "PALUTE: Processing-In-Memory Acceleration via Lookup Table for Edge LLM Inference",
+      "reason": "arXiv一次要旨はM3D DRAM内のLUT参照で量子化GEMMと非線形演算の除量子化・演算コストを削減するPALUTEを提案。近接メモリのLUT生成と階層メモリの配置スケジューリングを含み、エッジLLM推論アクセラレータへ直接寄与。",
+      "source_url": "https://arxiv.org/abs/2606.08891",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 355
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.20480",
+      "identity_tokens": [
+        "arXiv:2506.20480"
+      ],
+      "title": "GPTailor: Large Language Model Pruning Through Layer Cutting and Stitching",
+      "reason": "arXiv一次要旨は複数のファインチューニング済みLLMから層の削除・選択・マージをゼロ次最適化で探索するGPTailorを提案。単一モデルの構造化枝刈りを超え、能力を維持しながら推論時に扱う層・パラメータを削減する。",
+      "source_url": "https://arxiv.org/abs/2506.20480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 356
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2210.15523",
+      "identity_tokens": [
+        "arXiv:2210.15523"
+      ],
+      "title": "COST-EFF: Collaborative Optimization of Spatial and Temporal Efficiency with Slenderized Multi-exit Language Models",
+      "reason": "arXiv一次要旨はBERT系事前学習言語モデルを幅方向に細くし、入力難度に応じて途中層で予測するearly-exitを共同最適化するCOST-EFFを提案。動的推論の省計算に関連するが、主対象は分類系PLMであり自己回帰LLMの生成サービングへの直接実証はないため境界的。",
+      "source_url": "https://arxiv.org/abs/2210.15523",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 358
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.05542",
+      "identity_tokens": [
+        "arXiv:2512.05542"
+      ],
+      "title": "RoBoN: Routed Online Best-of-n for Test-Time Scaling with Multiple LLMs",
+      "reason": "arXiv一次要旨は複数LLMへbest-of-nの生成を逐次振り分け、rewardと出力間の合意度から次モデルを選ぶRoBoNを提案。同等の生成計算量で単一モデルbest-of-nより精度を改善するが、主たる目的は計算予算固定下の品質向上であり直接の速度・メモリ削減は限定的。",
+      "source_url": "https://arxiv.org/abs/2512.05542",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 361
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.04060",
+      "identity_tokens": [
+        "arXiv:2504.04060"
+      ],
+      "title": "VocalNet: Speech LLM with Multi-Token Prediction for Faster and High-Quality Generation",
+      "reason": "arXiv一次要旨は音声LLMにmulti-token predictionを導入し、音声生成の逐次トークン律速を緩和するVocalNet-1B/8Bを提案。実時間音声対話の遅延と品質を評価し、学習・推論コードを公開。音声LM推論高速化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2504.04060",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 362
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.06174",
+      "identity_tokens": [
+        "arXiv:2509.06174"
+      ],
+      "title": "From Long to Short: LLMs Excel at Trimming Own Reasoning Chains",
+      "reason": "arXiv一次要旨は長大な推論経路の過剰生成を抑えるEDIT（Efficient Dynamic Inference Trimming）を提案。制約誘導型生成で正しい短い思考経路を探索し、推論時の出力トークン数・計算量を削減する。",
+      "source_url": "https://arxiv.org/abs/2509.06174",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 364
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.07443",
+      "identity_tokens": [
+        "arXiv:2605.07443"
+      ],
+      "title": "RcLLM: Accelerating Generative Recommendation via Beyond-Prefix KV Caching",
+      "reason": "arXiv一次要旨は個人化推薦の非連続プロンプト断片を再利用するBeyond-Prefix KV Cacheを提案。ユーザー履歴キャッシュの複製、商品キャッシュの分散配置、類似度認識スケジューラと選択的注意でKV再計算を減らす。産業用LLM生成推論の配信遅延に直接関連。",
+      "source_url": "https://arxiv.org/abs/2605.07443",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 365
+    }
+  ]
+}
