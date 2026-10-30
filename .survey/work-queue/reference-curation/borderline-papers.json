@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T19:08:32+00:00",
-  "record_count": 5546,
+  "updated_at": "2026-10-30T20:07:32+00:00",
+  "record_count": 5550,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85692,6 +85692,58 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Exact Conversion of In-Context Learning to Model Weights in Linearized-Attention Transformers"
+    },
+    "arXiv:2609.33226": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.33226",
+      "identity_tokens": [
+        "arXiv:2609.33226"
+      ],
+      "reason": "Threaderは長期間の対話履歴をLLMで繰り返し要約する構築費用と情報損失を避け、元の会話を軽量な話題セグメントへ分割して多視点索引で検索する。要旨は回答精度・証拠再現率とmemory construction overheadの改善を報告するが、GPU推論エンジン、KV管理、トークン生成スループットの最適化ではなくエージェントの外部記憶検索が主題のためborderline。",
+      "first_checked_at": "2026-10-30T20:07:23+00:00",
+      "last_checked_at": "2026-10-30T20:07:23+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Memory Construction: Rethinking Memory Access for LLM-based Conversational Agents"
+    },
+    "arXiv:2602.14159": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2602.14159",
+      "identity_tokens": [
+        "arXiv:2602.14159"
+      ],
+      "reason": "MoE専門家の重複を減らすため、同一tokenに対するSwiGLU活性の類似性を罰する層内損失と、隣接層のtop-kルーティング確率を結び付ける層間損失を追加する。Megatron-LM上の学習・zero-shot性能改善と経路安定化を報告し推論高速化にも言及するが、要旨の主貢献は学習時の正則化で、推論システムの実測・新runtimeは不明なためborderline。",
+      "first_checked_at": "2026-10-30T20:07:32+00:00",
+      "last_checked_at": "2026-10-30T20:07:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Synergistic Intra- and Cross-Layer Regularization Losses for MoE Expert Specialization"
+    },
+    "arXiv:2601.22546": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.22546",
+      "identity_tokens": [
+        "arXiv:2601.22546"
+      ],
+      "reason": "HOLOはLLMが生成初期に目的文のキーワードを捉える性質を利用し、短い生成ステップでキーワードを抽出した後、語彙制約付き並列テキスト生成で文章を完成させる。推論ステップ削減の可能性はあるが、一次要旨の主要評価は自動・人手品質指標であり、実測latencyや生成throughputの改善幅が示されないためborderline。",
+      "first_checked_at": "2026-10-30T20:07:32+00:00",
+      "last_checked_at": "2026-10-30T20:07:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Towards the Holographic Characteristic of LLMs for Efficient Short-text Generation"
+    },
+    "arXiv:2511.03408": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2511.03408",
+      "identity_tokens": [
+        "arXiv:2511.03408"
+      ],
+      "reason": "3TFは推論あり／なし両モードの混合学習とCoT付き追加学習によって、明示的な思考列を出力せず推論品質を保つようモデルを訓練する。生成される思考token削減は推論費用へ波及し得るが、要旨は学習方法とreasoning benchmarkの品質改善が中心で、実測サービング速度やruntime機構の改善は提示していないためborderline。",
+      "first_checked_at": "2026-10-30T20:07:32+00:00",
+      "last_checked_at": "2026-10-30T20:07:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Reasoning via Thought-Training and Thought-Free Inference"
     }
   }
 }

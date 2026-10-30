@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f76652b3b15aa3ca-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2602.14159",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2602.14159",
+    "identity_tokens": [
+      "arXiv:2602.14159"
+    ],
+    "reason": "MoE専門家の重複を減らすため、同一tokenに対するSwiGLU活性の類似性を罰する層内損失と、隣接層のtop-kルーティング確率を結び付ける層間損失を追加する。Megatron-LM上の学習・zero-shot性能改善と経路安定化を報告し推論高速化にも言及するが、要旨の主貢献は学習時の正則化で、推論システムの実測・新runtimeは不明なためborderline。",
+    "first_checked_at": "2026-10-30T20:07:32+00:00",
+    "last_checked_at": "2026-10-30T20:07:32+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Synergistic Intra- and Cross-Layer Regularization Losses for MoE Expert Specialization"
+  },
+  "processed_at": "2026-10-30T20:07:32+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f76652b3b15a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

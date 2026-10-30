@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T19:08:33+00:00",
-  "record_count": 12646,
+  "updated_at": "2026-10-30T20:07:34+00:00",
+  "record_count": 12654,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181873,6 +181873,102 @@
       "last_checked_at": "2026-10-30T19:08:33+00:00",
       "linked_from": [],
       "title": "LMEnt: A Suite for Analyzing Knowledge in Language Models from Pretraining Data to Representations"
+    },
+    "arXiv:2605.05927": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.05927",
+      "identity_tokens": [
+        "arXiv:2605.05927"
+      ],
+      "reason": "TextPro-SLMはWhisperPro音声encoderのtext tokenと韻律埋め込みを言語モデルへ入力し、音声・テキスト間の表現差と韻律理解性能を改善する。要旨の評価は3B/7B音声モデルのmodality gapと理解性能が中心で、推論時間、メモリ、サービング、量子化等のシステム効率化への技術的寄与を示していないため対象外。",
+      "first_checked_at": "2026-10-30T20:07:23+00:00",
+      "last_checked_at": "2026-10-30T20:07:23+00:00",
+      "linked_from": [],
+      "title": "Minimizing Modality Gap from the Input Side: Your Speech LLM Can Be a Prosody-Aware Text LLM"
+    },
+    "arXiv:2504.21020": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2504.21020",
+      "identity_tokens": [
+        "arXiv:2504.21020"
+      ],
+      "reason": "CECSは文脈重要度重み付け、多段contrastive search、適応temperatureを用いて長文生成の一貫性・多様性・関連性を改善する。要旨で比較するのはBLEU、ROUGE、意味類似度などの出力品質であり、推論コスト、生成速度、GPU実装の改善は示されない。復号の品質研究であって推論システム効率化の対象外。",
+      "first_checked_at": "2026-10-30T20:07:24+00:00",
+      "last_checked_at": "2026-10-30T20:07:24+00:00",
+      "linked_from": [],
+      "title": "Context-Enhanced Contrastive Search for Improved LLM Text Generation"
+    },
+    "arXiv:2306.07050": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.07050",
+      "identity_tokens": [
+        "arXiv:2306.07050"
+      ],
+      "reason": "タイトルで研究対象が物体検出とインスタンス分割の画像認識タスクと明示されており、LLM推論・サービング・KV最適化等への直接寄与は記されていないためタイトル先行除外。要旨と本文は未読。",
+      "first_checked_at": "2026-10-30T20:07:27+00:00",
+      "last_checked_at": "2026-10-30T20:07:27+00:00",
+      "linked_from": [],
+      "title": "Revisiting Token Pruning for Object Detection and Instance Segmentation"
+    },
+    "arXiv:2404.11375": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.11375",
+      "identity_tokens": [
+        "arXiv:2404.11375"
+      ],
+      "reason": "タイトルでテキスト指示による人間動作の時間的グラウンディングを研究対象として明示する。LLM推論システムではなく動作理解・生成系の応用研究と判断してタイトル先行除外。要旨と本文は未読。",
+      "first_checked_at": "2026-10-30T20:07:28+00:00",
+      "last_checked_at": "2026-10-30T20:07:28+00:00",
+      "linked_from": [],
+      "title": "Text-Controlled Motion Mamba: Text-Instructed Temporal Grounding of Human Motion"
+    },
+    "DOI:10.1007/s10462-022-10166-9": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s10462-022-10166-9",
+      "identity_tokens": [
+        "DOI:10.1007/s10462-022-10166-9"
+      ],
+      "reason": "タイトルの対象は視覚知覚と知識ベースの学習・推論であり、LLMの生成推論・量子化・サービング等の技術的貢献は示されていないためタイトル先行除外。要旨と本文は未読。",
+      "first_checked_at": "2026-10-30T20:07:28+00:00",
+      "last_checked_at": "2026-10-30T20:07:28+00:00",
+      "linked_from": [],
+      "title": "Computational knowledge vision: paradigmatic knowledge based prescriptive learning and reasoning for perception and vision"
+    },
+    "arXiv:2609.04242": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.04242",
+      "identity_tokens": [
+        "arXiv:2609.04242"
+      ],
+      "reason": "TFOはWhisperで信頼度フィルタ済みの時刻付き転写を作り、凍結したVLMの言語入力へ渡して音声・動画理解を改善する。要旨の比較は56ベンチマーク・21言語の理解性能と学習不要の適応性が中心で、LLM推論の実行時間・KV・サービング・カーネル効率を改善する機構や実測は示していないため対象外。",
+      "first_checked_at": "2026-10-30T20:07:33+00:00",
+      "last_checked_at": "2026-10-30T20:07:33+00:00",
+      "linked_from": [],
+      "title": "Training-Free Speech-Centric Omni Understanding with Frozen VLMs"
+    },
+    "arXiv:2606.02553": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.02553",
+      "identity_tokens": [
+        "arXiv:2606.02553"
+      ],
+      "reason": "LongLive-RAGは自己回帰動画拡散モデルの長時間生成で外観が劣化する問題に対し、生成済みlatent履歴を検索し、Window Temporal Delta Lossで有意な時間変化を捉える。要旨の主指標は動画品質VBench-Longであり、LLM推論や生成システムの速度・メモリ効率改善ではない。動画生成の品質研究として対象外。",
+      "first_checked_at": "2026-10-30T20:07:33+00:00",
+      "last_checked_at": "2026-10-30T20:07:33+00:00",
+      "linked_from": [],
+      "title": "LongLive-RAG: A General Retrieval-Augmented Framework for Long Video Generation"
+    },
+    "arXiv:2605.01935": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.01935",
+      "identity_tokens": [
+        "arXiv:2605.01935"
+      ],
+      "reason": "ViM-QはVision Mambaの活性・重み量子化とFPGA上のLUT演算・状態空間モデルのパイプラインを協調設計し、ViM-tinyでRTX 3090比較の速度・電力改善を報告する。効率化手法は具体的だが対象は画像認識用Vision Mambaであり、LLM推論やMoEサービングへの適用実証は要旨にないため本サーベイでは対象外。",
+      "first_checked_at": "2026-10-30T20:07:34+00:00",
+      "last_checked_at": "2026-10-30T20:07:34+00:00",
+      "linked_from": [],
+      "title": "ViM-Q: Scalable Algorithm-Hardware Co-Design for Vision Mamba Model Inference on FPGA"
     }
   }
 }

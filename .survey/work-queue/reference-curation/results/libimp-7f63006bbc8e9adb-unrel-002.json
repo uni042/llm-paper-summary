@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-7f63006bbc8e9adb-unrel-002",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2404.11375",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2404.11375",
+    "identity_tokens": [
+      "arXiv:2404.11375"
+    ],
+    "reason": "タイトルでテキスト指示による人間動作の時間的グラウンディングを研究対象として明示する。LLM推論システムではなく動作理解・生成系の応用研究と判断してタイトル先行除外。要旨と本文は未読。",
+    "first_checked_at": "2026-10-30T20:07:28+00:00",
+    "last_checked_at": "2026-10-30T20:07:28+00:00",
+    "linked_from": [],
+    "title": "Text-Controlled Motion Mamba: Text-Instructed Temporal Grounding of Human Motion"
+  },
+  "processed_at": "2026-10-30T20:07:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-7f63006bbc8e",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
