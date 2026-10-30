@@ -1,0 +1,230 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2202-scheduled-chat-00/r02",
+  "reference_main_sha": "f62375f526e53e338a3ea74e689a900c4d224731",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.05505",
+      "identity_tokens": [
+        "arXiv:2601.05505"
+      ],
+      "title": "FlashMem: Distilling Intrinsic Latent Memory via Computation Reuse",
+      "reason": "FlashMemは推論中の最終隠れ状態と凍結済みKVをShared-KV Consolidatorで再利用してエージェントの潜在記憶を構築し、注意エントロピーに応じて統合を起動する。一次要旨では補助エンコーダの再計算を減らし推論遅延を5倍短縮したと報告。KV再利用と長期エージェント推論の直接的な計算最適化。",
+      "source_url": "https://arxiv.org/abs/2601.05505",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2310.01801-fastgen.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2406.02069-pyramidkv.md",
+        "papers/inference/99-other-inference-systems/2023-2304.08467-learning-to-compress-prompts-with-gist-tokens.md"
+      ],
+      "worklist_rank": 457,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.30519",
+      "identity_tokens": [
+        "arXiv:2605.30519"
+      ],
+      "title": "OmniMem: Scalable and Adaptive Memory Retrieval for Long Video Generation",
+      "reason": "OmniMemは長動画の自己回帰生成で、履歴KVの疎検索における局所偏重をAdaptive Window Exclusionで抑え、Query-Shared KV Selectionとヘッド別散在アクセスで選択KVの膨張を防ぐ。KV検索技術は転用可能だが、一次要旨の主評価は動画生成の動的度と一貫性で、言語モデルの生成推論は対象外のため境界的。",
+      "source_url": "https://arxiv.org/abs/2605.30519",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2023-2306.14048-h2o.md",
+        "papers/inference/07-kv-cache-optimization-compression/2023-2309.17453-streamingllm.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2401.18079-kvquant.md",
+        "papers/inference/07-kv-cache-optimization-compression/2024-2404.14469-snapkv.md",
+        "papers/inference/13-sparse-attention/2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md"
+      ],
+      "worklist_rank": 458,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.25669",
+      "identity_tokens": [
+        "arXiv:2607.25669"
+      ],
+      "title": "OmniDelta: Skill-Driven Budget Allocation for Token Compression in OmniLLMs",
+      "reason": "OmniDeltaは質問の音声・動画要求をスキルプールで推定してモダリティ間の保持トークン予算を配分し、音声区間・動画フレームの複雑度と時間冗長性で予算を再配分する。一次要旨ではQwen2.5-Omni-7Bの25%保持でGPUメモリ22%削減、E2E推論1.64倍高速化。マルチモーダルLLMのトークン圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2607.25669",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2024-2403.06764-an-image-is-worth-1-2-tokens-after-layer-2-plug-and-play-inference-accel.md",
+        "papers/inference/99-other-inference-systems/2024-2403.15388-llava-prumerge-adaptive-token-reduction-for-efficient-large-multimodal-m.md",
+        "papers/inference/99-other-inference-systems/2024-2410.04417-sparsevlm-visual-token-sparsification-for-efficient-vision-language-mode.md",
+        "papers/inference/99-other-inference-systems/2024-2411.15024-dycoke-dynamic-compression-of-tokens-for-fast-video-large-language-model.md",
+        "papers/inference/99-other-inference-systems/2026-2602.04804-omnisift-modality-asymmetric-token-compression-for-efficient-omni-modal-.md"
+      ],
+      "worklist_rank": 459,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/AETCSE69203.2026.11504013",
+      "identity_tokens": [
+        "DOI:10.1109/AETCSE69203.2026.11504013"
+      ],
+      "title": "Lightweight Large-Model Inference with Privacy Protection for Edge IoT Systems",
+      "reason": "エッジIoTのLLM/基盤モデル推論向けに混合精度量子化・構造化枝刈り・知識蒸留で小型studentを作り、プライバシー予算と端末負荷に応じてローカル・エッジ・クラウド経路を切り替える。一次要旨ではモデル保存容量80%以上削減、FP16基準のE2E推論遅延最大75%削減を報告。推論圧縮と分散配置の直接的システム貢献。",
+      "source_url": "https://doi.org/10.1109/AETCSE69203.2026.11504013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2305.11627-llm-pruner-on-the-structural-pruning-of-large-language-models.md"
+      ],
+      "worklist_rank": 460,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.22205",
+      "identity_tokens": [
+        "arXiv:2605.22205"
+      ],
+      "title": "Skill Weaving: Efficient LLM Improvement via Modular Skillpacks",
+      "reason": "SkillWeaveは固定メモリ予算下で分野別の軽量deltaモジュールskillpackを構成し、SkillZipで推論用の圧縮形式へ変換する。一次要旨では9B構成が32B単体モデルを複数課題で上回り、最大4倍の実行高速化を報告。主眼は分野特化能力だが、推論時メモリと低遅延のためのモジュール圧縮を明示するため収録対象。",
+      "source_url": "https://arxiv.org/abs/2605.22205",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2022-2211.10017-who-says-elephants-can-t-run-bringing-large-scale-moe-models-into-cloud-.md",
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md"
+      ],
+      "worklist_rank": 461,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2601.23157",
+      "identity_tokens": [
+        "arXiv:2601.23157"
+      ],
+      "title": "No More, No Less: Least-Privilege Language Models",
+      "reason": "Nested Least-Privilege Networksは推論時の到達可能な内部計算を権限として定義し、監視・割当・強制の三層でリクエスト別にrank制御する。一次要旨は能力抑制と安全な配備の権限・効用曲線を主目的とし、生成速度やサービング効率の直接的な定量改善を中心にしない。計算経路の制御技術は関連するためborderline。",
+      "source_url": "https://arxiv.org/abs/2601.23157",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+        "papers/inference/99-other-inference-systems/2024-2404.02258-mixture-of-depths-dynamically-allocating-compute-in-transformer-based-la.md",
+        "papers/survey/07-speculative-decoding/2024-2401.07851-speculative-decoding-survey.md"
+      ],
+      "worklist_rank": 462,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.18237",
+      "identity_tokens": [
+        "arXiv:2506.18237"
+      ],
+      "title": "AdapThink: Adaptive Thinking Preferences for Reasoning Language Model",
+      "reason": "AdapThinkはモデルの確信度と回答の特徴に応じて反省への移行語の報酬を調節し、解の正確さと多様性をエントロピー誘導で均衡させるRL後学習方式。一次要旨では数学推論の過剰な思考を抑えるが、主たる寄与は学習時の報酬・サンプリングで、推論ランタイムのスケジューリングや速度実測が主題ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2506.18237",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2024-2412.18547-token-budget-aware-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2025-2503.04697-l1-controlling-how-long-a-reasoning-model-thinks-with-reinforcement-lear.md"
+      ],
+      "worklist_rank": 463,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.16723",
+      "identity_tokens": [
+        "arXiv:2505.16723"
+      ],
+      "title": "LLM Fingerprinting via Semantically Conditioned Watermarks",
+      "reason": "特定の意味領域に属するプロンプトへの応答へ統計的な透かしを埋め込み、モデル所有権を検証するフィンガープリント手法。一次要旨の目的は量子化や微調整後にも残る識別信号の頑健性と秘匿性であり、推論時間・KV・メモリ・カーネル・サービング資源を最適化する技術的貢献は示されないため対象外。",
+      "source_url": "https://arxiv.org/abs/2505.16723",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2208.07339-llm-int8-8-bit-matrix-multiplication-for-transformers-at-scale.md",
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "worklist_rank": 464,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2509.23625",
+      "identity_tokens": [
+        "arXiv:2509.23625"
+      ],
+      "title": "RIV: Recursive Introspection Mask Diffusion Vision Language Model",
+      "reason": "RIVはマスク拡散VLMの生成結果を別のIntrospection Modelで誤り検出し、誤り位置を再マスクしてunmaskと内省を反復する。一次要旨は文法・論理誤りの自己修正とベンチマーク品質を評価し、反復回数削減や生成スループットの最適化を主目的としない。拡散VLMの推論機構には関連するが効率化の直接性が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2509.23625",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.15781-dkv-cache-delayed-kv-diffusion-language-models.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2505.22618-fast-dllm-kv-cache-parallel-decoding.md",
+        "papers/inference/07-kv-cache-optimization-compression/2025-2506.06295-dllm-cache-adaptive-caching.md",
+        "papers/inference/99-other-inference-systems/2025-2505.21467-flashdlm-accelerating-diffusion-language-model-inference.md",
+        "papers/inference/99-other-inference-systems/2026-2406.03736-your-absorbing-discrete-diffusion-secretly-models-the-conditional-distri.md"
+      ],
+      "worklist_rank": 465,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2606.03002",
+      "identity_tokens": [
+        "arXiv:2606.03002"
+      ],
+      "title": "Perplexity Can Miss SAE Feature Damage Under Quantization",
+      "reason": "Pythia-70MとGemma-2-2BでRTN量子化前後の活性を固定SAEへ通し、特徴相関で機能の生存率を測る。一次要旨ではGemmaのINT6で特徴生存率51.3%、損傷予測AUC0.92～0.97を報告。量子化の品質監査には有用だが、新しい低ビット推論方式やサービング高速化を提案しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2606.03002",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:13:00+09:00",
+      "last_checked_at": "2026-10-30T22:13:30+09:00",
+      "linked_from": [
+        "papers/inference/16-weight-quantization-compression/2022-2210.17323-gptq.md",
+        "papers/inference/16-weight-quantization-compression/2023-2306.00978-awq.md",
+        "papers/inference/99-other-inference-systems/2022-2211.10438-smoothquant-accurate-and-efficient-post-training-quantization-for-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2023-2301.00774-sparsegpt-massive-language-models-can-be-accurately-pruned-in-one-shot.md",
+        "papers/inference/99-other-inference-systems/2023-2306.11695-a-simple-and-effective-pruning-approach-for-large-language-models.md"
+      ],
+      "worklist_rank": 466,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
