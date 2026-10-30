@@ -32,6 +32,10 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
   実装：✓ ・ リポジトリ内被引用：3  
   CXLハイブリッドメモリ内のDRAM+NVMeをTB級の遠隔メモリとして公開し、重みと長文KVの予測可能なアクセスを多段DMA先読み・読出し優先I/Oで隠して、CPU DRAMを超える推論状態を保持する階層メモリ方式。
 
+- **2026-05 · [PALS: Power-Aware LLM Serving for Mixture-of-Experts Models](2026-2605.21427-pals-power-aware-moe-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  GPU電力上限とバッチ量を共同制御しエネルギー効率最大26.3%、サービス品質違反4–7倍改善。
+
 - **2026-01 · [Harvest: Opportunistic Peer-to-Peer GPU Caching for LLM Inference](2026-2602.00328-harvest-opportunistic-peer-to-peer-gpu-caching-for-llm-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   HarvestはNVLink接続された別GPUの空きHBMを一時キャッシュに使い、MoE重みやKVをホストDRAMから再取得する遅延を減らす。正本はCPUや再計算に残し、キャッシュ喪失にも耐える。
@@ -67,10 +71,6 @@ GPUメモリに収まらないLLMを動かすため、主に**model weightやMoE
 - **2026-05 · [TIDE: Efficient and Lossless MoE Diffusion LLM Inference with I/O-aware Expert Offload](2026-2605.20179-tide-io-aware-expert-offload.md)**  
   実装：[✓](https://github.com/ims-kdks/TIDE) ・ リポジトリ内被引用：2  
   拡散MoEで近接デノイズ段階の専門家活性が安定する性質を使い、専門家配置を数ステップごとだけ更新してCPU計算とPCIe転送を両方抑え、出力を変えず単一GPU推論を高速化する。
-
-- **2026-05 · [PALS: Power-Aware LLM Serving for Mixture-of-Experts Models](2026-2605.21427-pals-power-aware-moe-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：2  
-  GPU電力上限とバッチ量を共同制御しエネルギー効率最大26.3%、サービス品質違反4–7倍改善。
 
 - **2026-05 · [CRAFT: Fine-Grained Cost-Aware Expert Replication For Efficient Mixture-of-Experts Serving](2026-2603.28768-craft-cost-aware-expert-replication.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

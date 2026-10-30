@@ -1,51 +1,79 @@
 ---
-canonical_id: "DOI:10.1109/ACCESS.2026.3739598"
-title: "From Draft-Then-Verify to Systems Co-Design: A Survey of Speculative Decoding for Autoregressive Large Language Models"
-summary: "自己回帰LLMの投機的復号を、ドラフト生成元・候補形状・検証が保証する忠実性・実行時状態とサービングの4軸19分類で再整理するサーベイ。2026年7月20日までの候補1652件から版を統合して304研究を選び、手法プロファイルと4つの共同設計ゲートを提示した。9月19日の公開補足資料は312件・1459分類割当へ更新。実機高速化の新規ベンチマークではなく、検証規則・KV状態・資源費用をそろえない速度比較が危険であることを代表研究と分類集計から論じる。"
-list_summary: "投機的復号304研究をドラフト源・候補形状・検証保証・実行時処理の4軸19分類で比較し、状態整合性と総費用まで含めた共同設計基準を提示。"
+canonical_id: DOI:10.1109/ACCESS.2026.3739598
+title: 'From Draft-Then-Verify to Systems Co-Design: A Survey of Speculative Decoding for Autoregressive Large Language Models'
+summary: 自己回帰LLMの投機的復号を、ドラフト生成元・候補形状・検証が保証する忠実性・実行時状態とサービングの4軸19分類で再整理するサーベイ。2026年7月20日までの候補1652件から版を統合して304研究を選び、手法プロファイルと4つの共同設計ゲートを提示した。9月19日の公開補足資料は312件・1459分類割当へ更新。実機高速化の新規ベンチマークではなく、検証規則・KV状態・資源費用をそろえない速度比較が危険であることを代表研究と分類集計から論じる。
+list_summary: 投機的復号304研究をドラフト源・候補形状・検証保証・実行時処理の4軸19分類で比較し、状態整合性と総費用まで含めた共同設計基準を提示。
 authors:
-  - "Kaikai Zhao"
-  - "Zhaoxiang Liu"
-  - "Che Jiang"
-  - "Ping Chen"
-  - "Xin Wang"
-  - "Kai Tian"
-  - "Ning Wang"
-  - "Yuru Wang"
-  - "Yi Shen"
-  - "Jiangze Yan"
-  - "Minjie Hua"
-  - "Wenjing Zhang"
-  - "Xiang Wang"
-  - "Kai Wang"
-  - "Kaiyan Zhang"
-  - "Youbang Sun"
-  - "Ning Ding"
-  - "Shiguo Lian"
-  - "Bowen Zhou"
-published: "2026-10-16"
-publication: "IEEE Access, volume 14, pages 153987–154013 (2026); DOI:10.1109/ACCESS.2026.3739598"
-publication_type: "査読付き学術誌のサーベイ論文"
-publication_status: "published"
-doi: "10.1109/ACCESS.2026.3739598"
-source: "https://www.preprints.org/manuscript/202608.0746"
+- Kaikai Zhao
+- Zhaoxiang Liu
+- Che Jiang
+- Ping Chen
+- Xin Wang
+- Kai Tian
+- Ning Wang
+- Yuru Wang
+- Yi Shen
+- Jiangze Yan
+- Minjie Hua
+- Wenjing Zhang
+- Xiang Wang
+- Kai Wang
+- Kaiyan Zhang
+- Youbang Sun
+- Ning Ding
+- Shiguo Lian
+- Bowen Zhou
+published: '2026-10-16'
+publication: IEEE Access, volume 14, pages 153987–154013 (2026); DOI:10.1109/ACCESS.2026.3739598
+publication_type: 査読付き学術誌のサーベイ論文
+publication_status: published
+doi: 10.1109/ACCESS.2026.3739598
+source: https://www.preprints.org/manuscript/202608.0746
 sources:
-  - "https://www.preprints.org/manuscript/202608.0746"
-  - "https://doi.org/10.1109/ACCESS.2026.3739598"
-  - "https://github.com/LifeIsSoSolong/awesome-speculative-decoding"
-implementation: "文献探索・統合・分類とMethod Profilesを公開するサーベイ。2026-08-11公開プレプリントv1の本文を直接読解し、著者公式補足リポジトリの2026-10-16正式掲載告知とIEEE Access書誌を照合。公開プロファイルは2026-09-19固定スナップショットで312件。新規GPU推論エンジンの実装や著者自身の独立した速度実験ではない。IEEE正式版全文の図表差分は未検証。"
-code: "https://github.com/LifeIsSoSolong/awesome-speculative-decoding"
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-45"
-worker_run_key: "20261030-1440-scheduled-chat-45/r01"
-reference_main_sha: "7aafbd1f5bac546b2ed3b0b50821379fcfee8f2c"
-worker_completed_at: "2026-10-30T14:45:46+09:00"
+- https://www.preprints.org/manuscript/202608.0746
+- https://doi.org/10.1109/ACCESS.2026.3739598
+- https://github.com/LifeIsSoSolong/awesome-speculative-decoding
+implementation: 文献探索・統合・分類とMethod Profilesを公開するサーベイ。2026-08-11公開プレプリントv1の本文を直接読解し、著者公式補足リポジトリの2026-10-16正式掲載告知とIEEE Access書誌を照合。公開プロファイルは2026-09-19固定スナップショットで312件。新規GPU推論エンジンの実装や著者自身の独立した速度実験ではない。IEEE正式版全文の図表差分は未検証。
+code: https://github.com/LifeIsSoSolong/awesome-speculative-decoding
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-45
+worker_run_key: 20261030-1440-scheduled-chat-45/r01
+reference_main_sha: 7aafbd1f5bac546b2ed3b0b50821379fcfee8f2c
+worker_completed_at: '2026-10-30T14:45:46+09:00'
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-research_job_source: "WORKLIST-45.md rank 47; previous partial r02"
-version_scope: "論文本文はPreprints.org 2026-08-11 v1。正式誌IEEE Access 2026-10-16の書誌は著者公式リポジトリで確認。補足資料の312件・1459割当は2026-09-19固定版。304件の原稿集計と混同しない。"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+research_job_source: WORKLIST-45.md rank 47; previous partial r02
+version_scope: 論文本文はPreprints.org 2026-08-11 v1。正式誌IEEE Access 2026-10-16の書誌は著者公式リポジトリで確認。補足資料の312件・1459割当は2026-09-19固定版。304件の原稿集計と混同しない。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2401.10774
+  arxiv_id: '2401.10774'
+  doi: 10.18653/v1/2024.findings-acl.456
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2503.01840
+- canonical_id: arXiv:2501.01005
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2407.08608
+- canonical_id: arXiv:2306.00978
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2310.08461
+- canonical_id: arXiv:2509.18362
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: DOI:10.18653/v1/2025.findings-naacl.338
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:2406.16858
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:2402.12374
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2601.11580
+- canonical_id: arXiv:2311.08252
+- canonical_id: arXiv:2306.07629
+- canonical_id: arXiv:2310.07177
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # 投機的復号を「生成→検証」からシステム共同設計へ拡張するサーベイ
