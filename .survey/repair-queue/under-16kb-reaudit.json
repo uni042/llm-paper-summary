@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-10-30T12:03:44.984219+00:00",
+  "generated_at": "2026-10-30T13:01:53.692871+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 15,
+  "count": 12,
   "worker_counts": {
-    "scheduled-chat-00": 5,
-    "scheduled-chat-30": 5,
-    "scheduled-chat-45": 5
+    "scheduled-chat-00": 4,
+    "scheduled-chat-30": 4,
+    "scheduled-chat-45": 4
   },
   "entries": [
     {
@@ -19,7 +19,7 @@
       "file_bytes": 9952,
       "source_sha256": "8b78672dfd3367b0494e3c7598b7da2601580cb6b08f4395783b6fda1b12e681",
       "source_git_blob_sha": "c799f4294b018595eed9c724fc6829cf8353f2d3",
-      "assigned_worker": "scheduled-chat-45",
+      "assigned_worker": "scheduled-chat-30",
       "semantic_status": "pending",
       "mechanical_status": "FAIL",
       "japanese_ratio": 0.8674,
@@ -122,26 +122,6 @@
       "warnings": []
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2024-2401.02938-fast-and-effective-weight-update-for-pruned-large-language-models.md",
-      "canonical_id": "arXiv:2401.02938",
-      "title": "Fast and Effective Weight Update for Pruned Large Language Models",
-      "file_bytes": 14565,
-      "source_sha256": "32fb4a0ecbb6d58f3c6a1f88a7961255e6f55f6d4748c063480c514b091b1fcd",
-      "source_git_blob_sha": "97101445168b0eb9b717adf5b31848820cd5580a",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.97312,
-      "quality_metrics": {
-        "body_chars": 3461,
-        "method_chars": 1078,
-        "evaluation_chars": 818,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/99-other-inference-systems/2025-2508.08435-fast-weight-programming-and-linear-transformers-from-machine-learning-to.md",
       "canonical_id": "arXiv:2508.08435",
       "title": "Fast weight programming and linear transformers: from machine learning to neurobiology",
@@ -166,66 +146,6 @@
       ]
     },
     {
-      "path": "papers/inference/99-other-inference-systems/2026-2604.07658-optimal-decay-spectra-for-linear-recurrences.md",
-      "canonical_id": "arXiv:2604.07658",
-      "title": "Optimal Decay Spectra for Linear Recurrences",
-      "file_bytes": 15241,
-      "source_sha256": "ec83f8c78cd56950e8cac36ca908c23991a76d3684488d1daeaed28900ca1c7e",
-      "source_git_blob_sha": "c71be54438b3c2ef931451c5d921e8b046de4cb5",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.946439,
-      "quality_metrics": {
-        "body_chars": 3708,
-        "method_chars": 1171,
-        "evaluation_chars": 737,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/07-kv-cache-optimization-compression/2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md",
-      "canonical_id": "DOI:10.1002/spe.3422",
-      "title": "SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices",
-      "file_bytes": 15379,
-      "source_sha256": "78823dc899f8777a8f0e84a3c4160f730d4c6d6bd11a2a5e72af03284b2b87c9",
-      "source_git_blob_sha": "e1d551f2d856853a760f23a46513a782621578df",
-      "assigned_worker": "scheduled-chat-00",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.890432,
-      "quality_metrics": {
-        "body_chars": 4095,
-        "method_chars": 1360,
-        "evaluation_chars": 1149,
-        "limitation_chars": 540
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/99-other-inference-systems/2026-d621875e47b5-mitigating-the-impact-of-activation-smoothing-on-weights-a-channel-permu.md",
-      "canonical_id": "DOI:10.1007/s44443-026-00541-9",
-      "title": "Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method",
-      "file_bytes": 15403,
-      "source_sha256": "8076918c43240e5424fe4ad8a4090b35e21d7e0488757a24ea9c76882991dd79",
-      "source_git_blob_sha": "ea179472d73a0b8a08633993eb934d755e26385f",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.828494,
-      "quality_metrics": {
-        "body_chars": 4119,
-        "method_chars": 1407,
-        "evaluation_chars": 1003,
-        "limitation_chars": 529
-      },
-      "mechanical_failures": [],
-      "warnings": []
-    },
-    {
       "path": "papers/inference/14-agentic-inference-serving-runtime/2026-2606.21401-swarmx-agentic-scheduling-for-low-latency-agentic-systems.md",
       "canonical_id": "arXiv:2606.21401",
       "title": "SwarmX: Agentic Scheduling for Low-Latency Agentic Systems",
@@ -241,6 +161,26 @@
         "method_chars": 1172,
         "evaluation_chars": 554,
         "limitation_chars": 0
+      },
+      "mechanical_failures": [],
+      "warnings": []
+    },
+    {
+      "path": "papers/inference/07-kv-cache-optimization-compression/2025-cf4ae1fdc15a-subkv-quantizing-long-context-kv-cache-for-sub-billion-parameter-languag.md",
+      "canonical_id": "DOI:10.1002/spe.3422",
+      "title": "SubKV: Quantizing Long Context KV Cache for Sub-billion Parameter Language Models on Edge Devices",
+      "file_bytes": 15986,
+      "source_sha256": "2a9015c5c50d38afcaa3aab3e0f78746cffa156510554e1f98c459119c50c2f5",
+      "source_git_blob_sha": "e4e8e056075434b30e580ab1fe155d0b3e8d398e",
+      "assigned_worker": "scheduled-chat-00",
+      "semantic_status": "pending",
+      "mechanical_status": "PASS",
+      "japanese_ratio": 0.890432,
+      "quality_metrics": {
+        "body_chars": 4095,
+        "method_chars": 1360,
+        "evaluation_chars": 1149,
+        "limitation_chars": 540
       },
       "mechanical_failures": [],
       "warnings": []
