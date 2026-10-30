@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T09:39:39+00:00",
+  "generated_at": "2026-10-30T09:48:05+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -2071,35 +2071,6 @@
       "worker_run_key": "20261030-1230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2510.13832",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T05:45:48+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 481 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3181,
-        "body_paragraphs": 14,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 481,
-        "limitation_chars": 804,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 481 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_353761b32db08191ad4fc1716ad409f5--2025-2510.13832-hies-head-importance-entropy-pruning-research-20261030-1423-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_353761b32db08191ad4fc1716ad409f5--2025-2510.13832-hies-head-importance-entropy-pruning-research-20261030-1423-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "DOI:10.1016/j.compeleceng.2026.111505",
       "title": null,
       "source_url": null,
@@ -2127,34 +2098,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "arXiv:2604.07173",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T06:24:05+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 9811,
-        "body_paragraphs": 58,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 651,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-scheduled-chat-30-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-scheduled-chat-30-r01.json",
-      "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1145/3731569.3764834",
@@ -2213,35 +2156,6 @@
       "worker_run_key": "20261030-1530-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2411.02795",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T07:54:29+00:00",
-      "return_count": 1,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5110,
-        "body_paragraphs": 25,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 600,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.json",
-      "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
-    },
-    {
       "canonical_id": "arXiv:2509.03136",
       "title": null,
       "source_url": null,
@@ -2295,33 +2209,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-1d1efa1b9490--libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-scheduled-chat-00-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-1d1efa1b9490--libfile_8cefbf6268ac8191b8cbf447605efafe--2025-2508.08435-fast-weight-programming-linear-transformers-research-20261030-1400-schedu.json",
       "worker_run_key": "20261030-1400-scheduled-chat-00/r01"
-    },
-    {
-      "canonical_id": "DOI:10.3390/fi17040185",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T08:53:10+00:00",
-      "return_count": 6,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "長文定型文の再利用を検出: papers/inference/99-other-inference-systems/2025-2405.14428-mitigating-quantization-errors-due-to-activation-spikes-in-gated-linear-.md と 19 段落 / 4828文字 (94.8%) が完全一致"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5306,
-        "body_paragraphs": 22,
-        "method_chars": 1142,
-        "method_paragraphs": 5,
-        "evaluation_chars": 1774,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_311edb97a6908191b621473c99e5c3db--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-returned-repair-20261030-1633-scheduled-chat-30-r01-v2.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_311edb97a6908191b621473c99e5c3db--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-returned-repair-20261030-1633-scheduled-chat-30-r01-v2.json",
-      "worker_run_key": "20261030-1633-scheduled-chat-30/r01"
     },
     {
       "canonical_id": "DOI:10.1109/MICRO61859.2024.00105",
@@ -2464,8 +2351,8 @@
     },
     {
       "canonical_id": "arXiv:2609.33135",
-      "title": "MpFA: Hardware-Efficient Train-Free QK4V8 FlashAttention Kernels on Blackwell GPUs",
-      "source_url": "https://arxiv.org/html/2609.33135",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T09:39:29+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-45",
@@ -2491,38 +2378,9 @@
       "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.10355",
-      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
-      "source_url": "https://arxiv.org/html/2609.10355v1",
-      "returned_at": "2026-10-30T09:39:31+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5542,
-        "body_paragraphs": 24,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 665,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-609daeaac6e4--libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-609daeaac6e4--libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-1616-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.11602",
-      "title": "Deconstructing Attention: Investigating Design Principles for Effective Language Modeling",
-      "source_url": "https://arxiv.org/pdf/2510.11602",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T09:39:34+00:00",
       "return_count": 4,
       "assigned_worker": "scheduled-chat-00",
@@ -2550,8 +2408,8 @@
     },
     {
       "canonical_id": "arXiv:2609.32759",
-      "title": "The Extender: A Log-Structured Transformer",
-      "source_url": "https://arxiv.org/html/2609.32759",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T09:39:36+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2575,6 +2433,149 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-915b6d34a01d--libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled-chat-30-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-915b6d34a01d--libfile_474cb056a3fc8191bb8e7ec55912f345--2026-2609.32759-extender-log-structured-persistent-cache-research-20261030-1332-scheduled.json",
       "worker_run_key": "20261030-1332-scheduled-chat-30/r02"
+    },
+    {
+      "canonical_id": "arXiv:2604.07173",
+      "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+      "source_url": "https://arxiv.org/html/2604.07173",
+      "returned_at": "2026-10-30T09:48:00+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 9811,
+        "body_paragraphs": 58,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 651,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-bcbddf51d83b--libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-bcbddf51d83b--libfile_767a8f24893c8191aa8137f89e7a45ec--2026-2604.07173-infinilora-disaggregated-multi-lora-serving-research-20261030-1332-schedu.json",
+      "worker_run_key": "20261030-1332-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "arXiv:2510.13832",
+      "title": "Entropy Meets Importance: A Unified Head Importance–Entropy Score for Stable and Efficient Transformer Pruning",
+      "source_url": "https://arxiv.org/html/2510.13832v2",
+      "returned_at": "2026-10-30T09:48:01+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 481 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3181,
+        "body_paragraphs": 14,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 481,
+        "limitation_chars": 804,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 481 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c14b0818d5eb--libfile_353761b32db08191ad4fc1716ad409f5--2025-2510.13832-hies-head-importance-entropy-pruning-research-20261030-1423-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-c14b0818d5eb--libfile_353761b32db08191ad4fc1716ad409f5--2025-2510.13832-hies-head-importance-entropy-pruning-research-20261030-1423-scheduled-cha.json",
+      "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "DOI:10.3390/fi17040185",
+      "title": "Mitigating Quantization Errors Due to Activation Spikes in Gated Linear Unit-Based Large Language Models",
+      "source_url": "https://doi.org/10.3390/fi17040185",
+      "returned_at": "2026-10-30T09:48:02+00:00",
+      "return_count": 7,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3424,
+        "body_paragraphs": 16,
+        "method_chars": 970,
+        "method_paragraphs": 4,
+        "evaluation_chars": 0,
+        "limitation_chars": 936,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cd0c7ff20389--libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cd0c7ff20389--libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-.json",
+      "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2609.10355",
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/html/2609.10355",
+      "returned_at": "2026-10-30T09:48:03+00:00",
+      "return_count": 6,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5106,
+        "body_paragraphs": 32,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-cdcd024c6e36--libfile_c9521f0dc7e48191a5b8750aefd1a4a4--2026-2609.10355-video-inference-efficiency-survey-research-20261030-1303-scheduled-chat-00-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-cdcd024c6e36--libfile_c9521f0dc7e48191a5b8750aefd1a4a4--2026-2609.10355-video-inference-efficiency-survey-research-20261030-1303-scheduled-chat-0.json",
+      "worker_run_key": "20261030-1303-scheduled-chat-00/r02"
+    },
+    {
+      "canonical_id": "arXiv:2411.02795",
+      "title": "The Evolution of RWKV: Advancements in Efficient Language Modeling",
+      "source_url": "https://arxiv.org/html/2411.02795v1",
+      "returned_at": "2026-10-30T09:48:04+00:00",
+      "return_count": 2,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5110,
+        "body_paragraphs": 25,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 600,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-e23aa58d4dc4--libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.md",
+      "import_result_path": ".survey/import-inbox/results/research/retry-research-e23aa58d4dc4--libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.json",
+      "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
     }
   ]
 }

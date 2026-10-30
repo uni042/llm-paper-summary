@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "6339841f6a3ca4fa907ddde388cf4edb27117fdcb1f093a5335526b1b5de01bd",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c14b0818d5eb--libfile_353761b32db08191ad4fc1716ad409f5--2025-2510.13832-hies-head-importance-entropy-pruning-research-20261030-1423-scheduled-chat-45-r01.md",
+  "canonical_id": "arXiv:2510.13832",
+  "worker_completed_at": "2026-10-30T14:21:00+09:00",
+  "worker_run_key": "20261030-1408-scheduled-chat-45/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 3181,
+    "body_paragraphs": 14,
+    "method_chars": 0,
+    "method_paragraphs": 0,
+    "evaluation_chars": 481,
+    "limitation_chars": 804,
+    "insufficiency_flags": [
+      "手法説明量 0 < 700",
+      "評価説明量 481 < 500"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 手法説明量 0 < 700",
+    "説明不足トリガー: 評価説明量 481 < 500"
+  ],
+  "processed_at": "2026-10-30T09:48:01+00:00"
+}
