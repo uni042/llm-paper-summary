@@ -1,0 +1,834 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0cd8cc8bfe34333b-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0cd8cc8bfe34",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/icme59968.2025.11209145",
+    "DOI:10.1109/infocom59046.2026.11571651",
+    "DOI:10.1109/socc62300.2024.10737844",
+    "DOI:10.1109/southeastcon63549.2026.11476566",
+    "DOI:10.1145/3767295.3769355",
+    "DOI:10.18653/v1/2025.findings-emnlp.1054",
+    "DOI:10.18653/v1/2025.naacl-long.467",
+    "DOI:10.63317/3k5cxvg7k92d",
+    "arXiv:2503.05840"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "f62375f526e53e338a3ea74e689a900c4d224731",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T13:04:48.285334+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/icme59968.2025.11209145",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/infocom59046.2026.11571651",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/socc62300.2024.10737844",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/southeastcon63549.2026.11476566",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1145/3767295.3769355",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.findings-emnlp.1054",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2025.naacl-long.467",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.63317/3k5cxvg7k92d",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2503.05840",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "GenSched: Phase-Aware Generative Scheduling for LLM Inference in Heterogeneous Edge Networks",
+      "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571651",
+      "year": 2026,
+      "published": "2026-05-18",
+      "venue": "IEEE Conference on Computer Communications",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLM) on heterogeneous edge networks presents unique scheduling challenges due to the phase heterogeneity of inference workloads and dynamic resource constraints. Unlike traditional tasks with static resource footprints, LLM inference comprises compute-intensive prefill and memory-bandwidth-intensive decode phases, each exhibiting distinct hardware affinities. We propose GENSCHED, a generative scheduling framework that formulates phase-aware resource allocation as it learns the conditional distribution of feasible solutions. The framework combines a Mamba-based temporal encoder with a hybrid diffusion policy for joint server selection and resource allocation, augmented by feasibility projection to enforce strict Key-Value cache limits. Experiments on simulated heterogeneous edge clusters show that GENSCHED outperforms production baselines in both deadline compliance and Service Level Agreement satisfaction, with advantages increasing as the problem scales.",
+      "identifiers": [
+        "SemanticScholar:f65eb2c7f26ffe92a6ea3531693f0ee14ea078d3"
+      ],
+      "semantic_scholar_id": "f65eb2c7f26ffe92a6ea3531693f0ee14ea078d3",
+      "doi": "10.1109/INFOCOM59046.2026.11571651",
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571651",
+      "authors": [
+        "Heng-Li Jin",
+        "Shuo Li",
+        "Mark A. Gregory"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 165,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DeepServe: Hierarchical Model Placement and Dynamic Batching for Cost-Efficient Multi-Tenant LLM Inference at Scale",
+      "source_url": "https://doi.org/10.1109/SoutheastCon63549.2026.11476566",
+      "year": 2026,
+      "published": "2026-02-20",
+      "venue": "SoutheastCon",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference serving at scale presents critical challenges in multi-tenant cloud environments, where organizations must balance conflicting objectives of cost efficiency, response latency, and resource utilization across heterogeneous GPU infrastructure. Current serving systems employ static model placement strategies and homogeneous batching policies, resulting in $40 - 60 \\%$ GPU underutilization and $3-5 \\times$ cost inefficiency for variable workloads. We present DeepServe, a hierarchical model placement framework with dynamic batching that optimizes cost per served token across five GPU tiers (A100-80GB, A100-40GB, V100, L4, T4) and four model scales (7B-175B parameters). Our system integrates three key innovations: (1) Memoryaware hierarchical placement algorithm achieving 82% GPU utilization through optimal model-to-GPU assignment based on memory footprint and throughput profiles, (2) Adaptive continuous batching with SLA-aware scheduling attaining $3.8 \\times$ throughput improvement over sequential processing while maintaining P95 latency under 2.5 seconds, and (3) Multi-objective cost optimizer reducing inference cost by 47% compared to static provisioning through heterogeneous GPU selection. Evaluation on production-representative workloads with 50,000 requests demonstrates: P50 latency of 890 ms, P95 latency of $2.31 ~\\mathrm{s}, 79 \\%$ average GPU utilization, and $0.0012 cost per 1000 tokens-matching vLLM throughput benchmarks while achieving 47% cost reduction versus naive A100-only deployment.",
+      "identifiers": [
+        "SemanticScholar:6b1f9ccf53a1c4b6101f7c2ece735a0e887192cc"
+      ],
+      "semantic_scholar_id": "6b1f9ccf53a1c4b6101f7c2ece735a0e887192cc",
+      "doi": "10.1109/SoutheastCon63549.2026.11476566",
+      "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476566",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "P. Agarwal"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 252,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.467",
+      "year": 2025,
+      "published": null,
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) face a significant challenge due to the excessive computational and memory requirements of the commonly used Transformer architecture. While state space model (SSM) is a new type of foundational network architecture offering lower computational complexity, their performance has yet to fully rival that of Transformers. This paper introduces DenseSSM, a novel approach to enhance the flow of hidden information be-tween layers in SSMs. By selectively integrating shallow-layer hidden states into deeper layers, DenseSSM retains fine-grained information crucial for the final output. This incremental improvement maintains the training parallelizability and inference efficiency of SSMs while significantly boosting performance. The proposed method is broadly applicable to various SSM types, including Ret-Net and Mamba, and DenseSSM achieves significant performance improvements on public benchmarks, demonstrating its effectiveness and versatility.",
+      "identifiers": [
+        "SemanticScholar:b40f634c19ca59c8b8da641f898c2b41b9936f88"
+      ],
+      "semantic_scholar_id": "b40f634c19ca59c8b8da641f898c2b41b9936f88",
+      "doi": "10.18653/v1/2025.naacl-long.467",
+      "canonical_id": "DOI:10.18653/v1/2025.naacl-long.467",
+      "authors": [
+        "Wei He",
+        "Kai Han",
+        "Ye-Hui Tang",
+        "Cheng-Cheng Wang",
+        "Yujie Yang",
+        "Tian-Yu Guo",
+        "Yun-He Wang"
+      ],
+      "priority": 18,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 18,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Beyond Fixed-Length Calibration for Post-Training Compression of LLMs",
+      "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.1054",
+      "year": 2025,
+      "published": null,
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:f18067fdbd76221fb4aa33a26c88978a1571aecc"
+      ],
+      "semantic_scholar_id": "f18067fdbd76221fb4aa33a26c88978a1571aecc",
+      "doi": "10.18653/v1/2025.findings-emnlp.1054",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1054",
+      "authors": [
+        "Jaehoon Oh",
+        "Dokwan Oh"
+      ],
+      "priority": 15,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 15,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 486,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      }
+    },
+    {
+      "title": "Energy Cost Modelling for Optimizing Large Language Model Inference on Hardware Accelerators",
+      "source_url": "https://doi.org/10.1109/SOCC62300.2024.10737844",
+      "year": 2024,
+      "published": "2024-09-16",
+      "venue": "ACM Symposium on Cloud Computing",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rise of Large Language Models (LLMs) has significantly escalated the demand for efficient LLM inference, primarily fulfilled through cloud-based GPU computing. This approach, while effective, is associated with high energy consumption resulting in large operating expenses and considerable carbon footprints. In the meantime, growing privacy concerns advocate for inference on edge devices, which are constrained by a limited battery capacity. Both cloud and edge scenarios necessitate energy-efficient LLM inference strategies.This paper addresses the urgent need for energy-efficient inference by proposing an open-source framework designed to model LLM workloads on dedicated accelerators. Our framework facilitates early identification of energy bottlenecks through rapid modeling of the execution efficiency of a wide range of LLMs on diverse hardware architectures. Key innovations include a PyTorch-based generalized LLM template to easily generate custom workload graphs, extensions of the ZigZag design space exploration framework and techniques to significantly speed up simulation time at a negligible loss of accuracy. Using a representative hardware architecture, we conduct three case studies to reveal critical energy bottlenecks in Llama2-7B inference, revealing that 1) memory-bound computing in the decode stage is detrimental not only for the latency, but also for the energy cost; 2) aggressive weight-only quantization can reduce the energy cost by 4.6 × and shift the bottleneck from weight fetching to the attention mechanism; 3) in edge scenarios, the relative energy cost of the prefill stage is more significant, encouraging efforts to optimize both prefill and decode stage. Our framework is available open-source at github.com/KULeuven-MICAS/zigzag-llm.",
+      "identifiers": [
+        "SemanticScholar:a69f3736cab11e0bfd42915d83e35f0eb1e48244"
+      ],
+      "semantic_scholar_id": "a69f3736cab11e0bfd42915d83e35f0eb1e48244",
+      "doi": "10.1109/SOCC62300.2024.10737844",
+      "canonical_id": "DOI:10.1109/SOCC62300.2024.10737844",
+      "authors": [
+        "Robin Geens",
+        "Man Shi",
+        "Arne Symons",
+        "Chao Fang",
+        "Marian Verhelst"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 774,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MFS: An Efficient Model Family Serving System for LLMs",
+      "source_url": "https://doi.org/10.1145/3767295.3769355",
+      "year": 2026,
+      "published": "2026-04-26",
+      "venue": "European Conference on Computer Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM serving providers typically offer a suite of structurally similar models, known as model families, such as the open-source Llama2 series featuring 7B, 13B, and 70B models. While numerous optimizations for LLM serving have been proposed, the potential for leveraging synergies between models within the same family has not been thoroughly explored. This paper introduces MFS, an innovative multi-tiered LLM model family serving system to exploit the structural similarities and parameter redundancies across different scales of models within a family. By utilizing a novel fine-tuning technique called Knowledge Precipitation, MFS restructures the largest model in a family to encapsulate smaller models within its architecture, enabling a unified multi-tiered serving pipeline. Based on the multi-tiered model, MFS realizes a highly parallelized tiered-level batching approach, significantly enhancing system efficiency. It also enables the sharing of intermediate features and KV-cache between models and facilitates multi-level sampling techniques during the inference phase. Experimental results demonstrate that MFS achieves substantial improvements over existing methods, including a 56.1% reduction in end-to-end token generation latency and a 47.8% decrease in GPU memory footprint without compromising the quality of generated content.",
+      "identifiers": [
+        "SemanticScholar:3bd0cdbcbeb6fb6c456a05b71d5287f02f59f197"
+      ],
+      "semantic_scholar_id": "3bd0cdbcbeb6fb6c456a05b71d5287f02f59f197",
+      "doi": "10.1145/3767295.3769355",
+      "canonical_id": "DOI:10.1145/3767295.3769355",
+      "authors": [
+        "Yunxuan Zhang",
+        "Hao Wang",
+        "Han Tian",
+        "Liu Yang",
+        "Xu-Dong Liao",
+        "Wen-Xue Li",
+        "Ping Yin",
+        "Bo-Wen Liu",
+        "Kai Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 187,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "How Speculative Can Speculative Decoding Be?",
+      "source_url": "https://doi.org/10.63317/3k5cxvg7k92d",
+      "year": 2024,
+      "published": "2024-05-01",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have drawn great attention from the field of natural language processing and beyond, due to their impressive capability of autoregressive modeling, yet bringing an obvious problem, i.e., the largely increased latency. An emerging idea to alleviate this problem is speculative decoding, which first uses a draft model to draft tokens autoregressively and then makes the target model verify these tokens in parallel. The draft model is typically smaller than the target model, and it essentially trades generation quality for speed. Thereby, speculative decoding can be viewed as a speculative game for the target model in term of verification failures. That is, the lengthy draft tokens proposed by the small draft models could fail in the verification stage. Naturally, a critical question arises: how speculative can speculative decoding be, or in other words, how small can an adequate draft model be and how large can an appropriate number of draft tokens be? This work aims to investigate these questions and demonstrate how the scale of the draft model and the number of draft tokens would have an impact on the overall latency of the speculative decoding. We theoretically show that neither of above two factors will be infinitely speculative. Namely, there is a certain turning point for each of them. We then empirically show that the scale of the draft model could be 10-20\\times smaller than the target model and the optimal number of draft tokens should lie in 3-5.",
+      "identifiers": [
+        "SemanticScholar:658cffcdb9b3618799c0703379ce71a26627fe90"
+      ],
+      "semantic_scholar_id": "658cffcdb9b3618799c0703379ce71a26627fe90",
+      "doi": "10.63317/3k5cxvg7k92d",
+      "canonical_id": "DOI:10.63317/3k5cxvg7k92d",
+      "authors": [
+        "Zhuo-Rui Liu",
+        "Chen Zhang",
+        "Da-Wei Song"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 912,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
+      "source_url": "https://arxiv.org/abs/2503.05840",
+      "year": 2025,
+      "published": "2025-03-07",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Slim attention shrinks the context memory size by 2x for transformer models with MHA (multi-head attention), which can speed up inference by up to 2x for large context windows. Slim attention is an exact, mathematically identical implementation of the standard attention mechanism and therefore doesn't compromise model accuracy. In other words, slim attention losslessly compresses the context memory by a factor of 2. For encoder-decoder transformers, the context memory size can be reduced even further: For the Whisper models for example, slim attention reduces the context memory by 8x, which can speed up token generation by 5x for batch size 64 for example. And for the T5-11B model for example, the memory can be reduced by 32x because its MHA projection dimension is larger than the embedding dimension. See https://github.com/OpenMachine-ai/transformer-tricks for code and more transformer tricks, and https://www.youtube.com/watch?v=uVtk3B6YO4Y for this paper's YouTube video.",
+      "identifiers": [
+        "SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193"
+      ],
+      "semantic_scholar_id": "efa80a15a54b74b7fa8afc5419abff2be8f52193",
+      "canonical_id": "arXiv:2503.05840",
+      "arxiv_id": "2503.05840",
+      "authors": [
+        "Nils Graef",
+        "Andrew Wasielewski"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 602,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InterLayer: Efficient Inference with Interleaved Scheduling and Layer-Specific Optimization",
+      "source_url": "https://doi.org/10.1109/ICME59968.2025.11209145",
+      "year": 2025,
+      "published": "2025-06-30",
+      "venue": "IEEE International Conference on Multimedia and Expo",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) and multimodal LLMs (MLLMs) are extensively used in latency-sensitive multimedia applications, with inference services typically offered by generative AI (GenAI) cloud service providers. However, switching between different LLMs or MLLMs on GPU servers for diverse user needs causes GPU computation stalls, leading to high cold-start latency. To address these challenges, we propose an efficient inference scheme. First, we analyze the layer-wise loading and execution characteristics and identify the root causes of GPU computation stalls. Then, we introduce InterLayer, leveraging fine-grained, compute-dependency-aware interleaved scheduling parallel transmission and layer-specific optimization to reduce GPU stalls. Additionally, we theoretically analyze the lower bound of GPU computation stalls using InterLayer. Experimental results show that InterLayer achieves a 2.4–4.9× acceleration over vLLM for multiple LLMs and MLLMs across diverse model architectures and hardware configurations, up to a 3.6× throughput improvement over vLLM, and up to 2.2× speedup over the latest state-of-the-art.",
+      "identifiers": [
+        "SemanticScholar:6c50e21616395c9a22f01adbafaa8b369c91ad84"
+      ],
+      "semantic_scholar_id": "6c50e21616395c9a22f01adbafaa8b369c91ad84",
+      "doi": "10.1109/ICME59968.2025.11209145",
+      "canonical_id": "DOI:10.1109/ICME59968.2025.11209145",
+      "authors": [
+        "Limin Cheng",
+        "Hang Qin",
+        "Shouxu Kuang",
+        "Xinyu Wang",
+        "Ling Li",
+        "Yan-Jun Wu",
+        "Chen Zhao"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1109/infocom59046.2026.11571651",
+      "identity_tokens": [
+        "id:DOI:10.1109/infocom59046.2026.11571651",
+        "id:SemanticScholar:f65eb2c7f26ffe92a6ea3531693f0ee14ea078d3",
+        "title:gensched phaseaware generative scheduling for llm inference in heterogeneous edge networks",
+        "url:https://doi.org/10.1109/INFOCOM59046.2026.11571651"
+      ],
+      "record": {
+        "title": "GenSched: Phase-Aware Generative Scheduling for LLM Inference in Heterogeneous Edge Networks",
+        "source_url": "https://doi.org/10.1109/INFOCOM59046.2026.11571651",
+        "year": 2026,
+        "published": "2026-05-18",
+        "venue": "IEEE Conference on Computer Communications",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Deploying Large Language Models (LLM) on heterogeneous edge networks presents unique scheduling challenges due to the phase heterogeneity of inference workloads and dynamic resource constraints. Unlike traditional tasks with static resource footprints, LLM inference comprises compute-intensive prefill and memory-bandwidth-intensive decode phases, each exhibiting distinct hardware affinities. We propose GENSCHED, a generative scheduling framework that formulates phase-aware resource allocation as it learns the conditional distribution of feasible solutions. The framework combines a Mamba-based temporal encoder with a hybrid diffusion policy for joint server selection and resource allocation, augmented by feasibility projection to enforce strict Key-Value cache limits. Experiments on simulated heterogeneous edge clusters show that GENSCHED outperforms production baselines in both deadline compliance and Service Level Agreement satisfaction, with advantages increasing as the problem scales.",
+        "identifiers": [
+          "SemanticScholar:f65eb2c7f26ffe92a6ea3531693f0ee14ea078d3"
+        ],
+        "semantic_scholar_id": "f65eb2c7f26ffe92a6ea3531693f0ee14ea078d3",
+        "doi": "10.1109/INFOCOM59046.2026.11571651",
+        "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571651",
+        "authors": [
+          "Heng-Li Jin",
+          "Shuo Li",
+          "Mark A. Gregory"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 165,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/southeastcon63549.2026.11476566",
+      "identity_tokens": [
+        "id:DOI:10.1109/southeastcon63549.2026.11476566",
+        "id:SemanticScholar:6b1f9ccf53a1c4b6101f7c2ece735a0e887192cc",
+        "title:deepserve hierarchical model placement and dynamic batching for costefficient multitenant llm inference at scale",
+        "url:https://doi.org/10.1109/SoutheastCon63549.2026.11476566"
+      ],
+      "record": {
+        "title": "DeepServe: Hierarchical Model Placement and Dynamic Batching for Cost-Efficient Multi-Tenant LLM Inference at Scale",
+        "source_url": "https://doi.org/10.1109/SoutheastCon63549.2026.11476566",
+        "year": 2026,
+        "published": "2026-02-20",
+        "venue": "SoutheastCon",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) inference serving at scale presents critical challenges in multi-tenant cloud environments, where organizations must balance conflicting objectives of cost efficiency, response latency, and resource utilization across heterogeneous GPU infrastructure. Current serving systems employ static model placement strategies and homogeneous batching policies, resulting in $40 - 60 \\%$ GPU underutilization and $3-5 \\times$ cost inefficiency for variable workloads. We present DeepServe, a hierarchical model placement framework with dynamic batching that optimizes cost per served token across five GPU tiers (A100-80GB, A100-40GB, V100, L4, T4) and four model scales (7B-175B parameters). Our system integrates three key innovations: (1) Memoryaware hierarchical placement algorithm achieving 82% GPU utilization through optimal model-to-GPU assignment based on memory footprint and throughput profiles, (2) Adaptive continuous batching with SLA-aware scheduling attaining $3.8 \\times$ throughput improvement over sequential processing while maintaining P95 latency under 2.5 seconds, and (3) Multi-objective cost optimizer reducing inference cost by 47% compared to static provisioning through heterogeneous GPU selection. Evaluation on production-representative workloads with 50,000 requests demonstrates: P50 latency of 890 ms, P95 latency of $2.31 ~\\mathrm{s}, 79 \\%$ average GPU utilization, and $0.0012 cost per 1000 tokens-matching vLLM throughput benchmarks while achieving 47% cost reduction versus naive A100-only deployment.",
+        "identifiers": [
+          "SemanticScholar:6b1f9ccf53a1c4b6101f7c2ece735a0e887192cc"
+        ],
+        "semantic_scholar_id": "6b1f9ccf53a1c4b6101f7c2ece735a0e887192cc",
+        "doi": "10.1109/SoutheastCon63549.2026.11476566",
+        "canonical_id": "DOI:10.1109/SoutheastCon63549.2026.11476566",
+        "authors": [
+          "Tejas Pravinbhai Patel",
+          "P. Agarwal"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 252,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.naacl-long.467",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.naacl-long.467",
+        "id:SemanticScholar:b40f634c19ca59c8b8da641f898c2b41b9936f88",
+        "title:densessm state space models with dense hidden connection for efficient large language models",
+        "url:https://doi.org/10.18653/v1/2025.naacl-long.467"
+      ],
+      "record": {
+        "title": "DenseSSM: State Space Models with Dense Hidden Connection for Efficient Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2025.naacl-long.467",
+        "year": 2025,
+        "published": null,
+        "venue": "North American Chapter of the Association for Computational Linguistics",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) face a significant challenge due to the excessive computational and memory requirements of the commonly used Transformer architecture. While state space model (SSM) is a new type of foundational network architecture offering lower computational complexity, their performance has yet to fully rival that of Transformers. This paper introduces DenseSSM, a novel approach to enhance the flow of hidden information be-tween layers in SSMs. By selectively integrating shallow-layer hidden states into deeper layers, DenseSSM retains fine-grained information crucial for the final output. This incremental improvement maintains the training parallelizability and inference efficiency of SSMs while significantly boosting performance. The proposed method is broadly applicable to various SSM types, including Ret-Net and Mamba, and DenseSSM achieves significant performance improvements on public benchmarks, demonstrating its effectiveness and versatility.",
+        "identifiers": [
+          "SemanticScholar:b40f634c19ca59c8b8da641f898c2b41b9936f88"
+        ],
+        "semantic_scholar_id": "b40f634c19ca59c8b8da641f898c2b41b9936f88",
+        "doi": "10.18653/v1/2025.naacl-long.467",
+        "canonical_id": "DOI:10.18653/v1/2025.naacl-long.467",
+        "authors": [
+          "Wei He",
+          "Kai Han",
+          "Ye-Hui Tang",
+          "Cheng-Cheng Wang",
+          "Yujie Yang",
+          "Tian-Yu Guo",
+          "Yun-He Wang"
+        ],
+        "priority": 18,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 18,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 486,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2025.findings-emnlp.1054",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2025.findings-emnlp.1054",
+        "id:SemanticScholar:f18067fdbd76221fb4aa33a26c88978a1571aecc",
+        "title:beyond fixedlength calibration for posttraining compression of llms",
+        "url:https://doi.org/10.18653/v1/2025.findings-emnlp.1054"
+      ],
+      "record": {
+        "title": "Beyond Fixed-Length Calibration for Post-Training Compression of LLMs",
+        "source_url": "https://doi.org/10.18653/v1/2025.findings-emnlp.1054",
+        "year": 2025,
+        "published": null,
+        "venue": "Conference on Empirical Methods in Natural Language Processing",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:f18067fdbd76221fb4aa33a26c88978a1571aecc"
+        ],
+        "semantic_scholar_id": "f18067fdbd76221fb4aa33a26c88978a1571aecc",
+        "doi": "10.18653/v1/2025.findings-emnlp.1054",
+        "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1054",
+        "authors": [
+          "Jaehoon Oh",
+          "Dokwan Oh"
+        ],
+        "priority": 15,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 15,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 486,
+          "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/socc62300.2024.10737844",
+      "identity_tokens": [
+        "id:DOI:10.1109/socc62300.2024.10737844",
+        "id:SemanticScholar:a69f3736cab11e0bfd42915d83e35f0eb1e48244",
+        "title:energy cost modelling for optimizing large language model inference on hardware accelerators",
+        "url:https://doi.org/10.1109/SOCC62300.2024.10737844"
+      ],
+      "record": {
+        "title": "Energy Cost Modelling for Optimizing Large Language Model Inference on Hardware Accelerators",
+        "source_url": "https://doi.org/10.1109/SOCC62300.2024.10737844",
+        "year": 2024,
+        "published": "2024-09-16",
+        "venue": "ACM Symposium on Cloud Computing",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rise of Large Language Models (LLMs) has significantly escalated the demand for efficient LLM inference, primarily fulfilled through cloud-based GPU computing. This approach, while effective, is associated with high energy consumption resulting in large operating expenses and considerable carbon footprints. In the meantime, growing privacy concerns advocate for inference on edge devices, which are constrained by a limited battery capacity. Both cloud and edge scenarios necessitate energy-efficient LLM inference strategies.This paper addresses the urgent need for energy-efficient inference by proposing an open-source framework designed to model LLM workloads on dedicated accelerators. Our framework facilitates early identification of energy bottlenecks through rapid modeling of the execution efficiency of a wide range of LLMs on diverse hardware architectures. Key innovations include a PyTorch-based generalized LLM template to easily generate custom workload graphs, extensions of the ZigZag design space exploration framework and techniques to significantly speed up simulation time at a negligible loss of accuracy. Using a representative hardware architecture, we conduct three case studies to reveal critical energy bottlenecks in Llama2-7B inference, revealing that 1) memory-bound computing in the decode stage is detrimental not only for the latency, but also for the energy cost; 2) aggressive weight-only quantization can reduce the energy cost by 4.6 × and shift the bottleneck from weight fetching to the attention mechanism; 3) in edge scenarios, the relative energy cost of the prefill stage is more significant, encouraging efforts to optimize both prefill and decode stage. Our framework is available open-source at github.com/KULeuven-MICAS/zigzag-llm.",
+        "identifiers": [
+          "SemanticScholar:a69f3736cab11e0bfd42915d83e35f0eb1e48244"
+        ],
+        "semantic_scholar_id": "a69f3736cab11e0bfd42915d83e35f0eb1e48244",
+        "doi": "10.1109/SOCC62300.2024.10737844",
+        "canonical_id": "DOI:10.1109/SOCC62300.2024.10737844",
+        "authors": [
+          "Robin Geens",
+          "Man Shi",
+          "Arne Symons",
+          "Chao Fang",
+          "Marian Verhelst"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 774,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1145/3767295.3769355",
+      "identity_tokens": [
+        "id:DOI:10.1145/3767295.3769355",
+        "id:SemanticScholar:3bd0cdbcbeb6fb6c456a05b71d5287f02f59f197",
+        "title:mfs an efficient model family serving system for llms",
+        "url:https://doi.org/10.1145/3767295.3769355"
+      ],
+      "record": {
+        "title": "MFS: An Efficient Model Family Serving System for LLMs",
+        "source_url": "https://doi.org/10.1145/3767295.3769355",
+        "year": 2026,
+        "published": "2026-04-26",
+        "venue": "European Conference on Computer Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM serving providers typically offer a suite of structurally similar models, known as model families, such as the open-source Llama2 series featuring 7B, 13B, and 70B models. While numerous optimizations for LLM serving have been proposed, the potential for leveraging synergies between models within the same family has not been thoroughly explored. This paper introduces MFS, an innovative multi-tiered LLM model family serving system to exploit the structural similarities and parameter redundancies across different scales of models within a family. By utilizing a novel fine-tuning technique called Knowledge Precipitation, MFS restructures the largest model in a family to encapsulate smaller models within its architecture, enabling a unified multi-tiered serving pipeline. Based on the multi-tiered model, MFS realizes a highly parallelized tiered-level batching approach, significantly enhancing system efficiency. It also enables the sharing of intermediate features and KV-cache between models and facilitates multi-level sampling techniques during the inference phase. Experimental results demonstrate that MFS achieves substantial improvements over existing methods, including a 56.1% reduction in end-to-end token generation latency and a 47.8% decrease in GPU memory footprint without compromising the quality of generated content.",
+        "identifiers": [
+          "SemanticScholar:3bd0cdbcbeb6fb6c456a05b71d5287f02f59f197"
+        ],
+        "semantic_scholar_id": "3bd0cdbcbeb6fb6c456a05b71d5287f02f59f197",
+        "doi": "10.1145/3767295.3769355",
+        "canonical_id": "DOI:10.1145/3767295.3769355",
+        "authors": [
+          "Yunxuan Zhang",
+          "Hao Wang",
+          "Han Tian",
+          "Liu Yang",
+          "Xu-Dong Liao",
+          "Wen-Xue Li",
+          "Ping Yin",
+          "Bo-Wen Liu",
+          "Kai Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 187,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.63317/3k5cxvg7k92d",
+      "identity_tokens": [
+        "id:DOI:10.63317/3k5cxvg7k92d",
+        "id:SemanticScholar:658cffcdb9b3618799c0703379ce71a26627fe90",
+        "title:how speculative can speculative decoding be",
+        "url:https://doi.org/10.63317/3k5cxvg7k92d"
+      ],
+      "record": {
+        "title": "How Speculative Can Speculative Decoding Be?",
+        "source_url": "https://doi.org/10.63317/3k5cxvg7k92d",
+        "year": 2024,
+        "published": "2024-05-01",
+        "venue": "International Conference on Language Resources and Evaluation",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) have drawn great attention from the field of natural language processing and beyond, due to their impressive capability of autoregressive modeling, yet bringing an obvious problem, i.e., the largely increased latency. An emerging idea to alleviate this problem is speculative decoding, which first uses a draft model to draft tokens autoregressively and then makes the target model verify these tokens in parallel. The draft model is typically smaller than the target model, and it essentially trades generation quality for speed. Thereby, speculative decoding can be viewed as a speculative game for the target model in term of verification failures. That is, the lengthy draft tokens proposed by the small draft models could fail in the verification stage. Naturally, a critical question arises: how speculative can speculative decoding be, or in other words, how small can an adequate draft model be and how large can an appropriate number of draft tokens be? This work aims to investigate these questions and demonstrate how the scale of the draft model and the number of draft tokens would have an impact on the overall latency of the speculative decoding. We theoretically show that neither of above two factors will be infinitely speculative. Namely, there is a certain turning point for each of them. We then empirically show that the scale of the draft model could be 10-20\\times smaller than the target model and the optimal number of draft tokens should lie in 3-5.",
+        "identifiers": [
+          "SemanticScholar:658cffcdb9b3618799c0703379ce71a26627fe90"
+        ],
+        "semantic_scholar_id": "658cffcdb9b3618799c0703379ce71a26627fe90",
+        "doi": "10.63317/3k5cxvg7k92d",
+        "canonical_id": "DOI:10.63317/3k5cxvg7k92d",
+        "authors": [
+          "Zhuo-Rui Liu",
+          "Chen Zhang",
+          "Da-Wei Song"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 912,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2503.05840",
+      "identity_tokens": [
+        "id:SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193",
+        "id:arXiv:2503.05840",
+        "title:slim attention cut your context memory in half without loss kcache is all you need for mha",
+        "url:https://arxiv.org/abs/2503.05840"
+      ],
+      "record": {
+        "title": "Slim attention: cut your context memory in half without loss -- K-cache is all you need for MHA",
+        "source_url": "https://arxiv.org/abs/2503.05840",
+        "year": 2025,
+        "published": "2025-03-07",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Slim attention shrinks the context memory size by 2x for transformer models with MHA (multi-head attention), which can speed up inference by up to 2x for large context windows. Slim attention is an exact, mathematically identical implementation of the standard attention mechanism and therefore doesn't compromise model accuracy. In other words, slim attention losslessly compresses the context memory by a factor of 2. For encoder-decoder transformers, the context memory size can be reduced even further: For the Whisper models for example, slim attention reduces the context memory by 8x, which can speed up token generation by 5x for batch size 64 for example. And for the T5-11B model for example, the memory can be reduced by 32x because its MHA projection dimension is larger than the embedding dimension. See https://github.com/OpenMachine-ai/transformer-tricks for code and more transformer tricks, and https://www.youtube.com/watch?v=uVtk3B6YO4Y for this paper's YouTube video.",
+        "identifiers": [
+          "SemanticScholar:efa80a15a54b74b7fa8afc5419abff2be8f52193"
+        ],
+        "semantic_scholar_id": "efa80a15a54b74b7fa8afc5419abff2be8f52193",
+        "canonical_id": "arXiv:2503.05840",
+        "arxiv_id": "2503.05840",
+        "authors": [
+          "Nils Graef",
+          "Andrew Wasielewski"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 602,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icme59968.2025.11209145",
+      "identity_tokens": [
+        "id:DOI:10.1109/icme59968.2025.11209145",
+        "id:SemanticScholar:6c50e21616395c9a22f01adbafaa8b369c91ad84",
+        "title:interlayer efficient inference with interleaved scheduling and layerspecific optimization",
+        "url:https://doi.org/10.1109/ICME59968.2025.11209145"
+      ],
+      "record": {
+        "title": "InterLayer: Efficient Inference with Interleaved Scheduling and Layer-Specific Optimization",
+        "source_url": "https://doi.org/10.1109/ICME59968.2025.11209145",
+        "year": 2025,
+        "published": "2025-06-30",
+        "venue": "IEEE International Conference on Multimedia and Expo",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) and multimodal LLMs (MLLMs) are extensively used in latency-sensitive multimedia applications, with inference services typically offered by generative AI (GenAI) cloud service providers. However, switching between different LLMs or MLLMs on GPU servers for diverse user needs causes GPU computation stalls, leading to high cold-start latency. To address these challenges, we propose an efficient inference scheme. First, we analyze the layer-wise loading and execution characteristics and identify the root causes of GPU computation stalls. Then, we introduce InterLayer, leveraging fine-grained, compute-dependency-aware interleaved scheduling parallel transmission and layer-specific optimization to reduce GPU stalls. Additionally, we theoretically analyze the lower bound of GPU computation stalls using InterLayer. Experimental results show that InterLayer achieves a 2.4–4.9× acceleration over vLLM for multiple LLMs and MLLMs across diverse model architectures and hardware configurations, up to a 3.6× throughput improvement over vLLM, and up to 2.2× speedup over the latest state-of-the-art.",
+        "identifiers": [
+          "SemanticScholar:6c50e21616395c9a22f01adbafaa8b369c91ad84"
+        ],
+        "semantic_scholar_id": "6c50e21616395c9a22f01adbafaa8b369c91ad84",
+        "doi": "10.1109/ICME59968.2025.11209145",
+        "canonical_id": "DOI:10.1109/ICME59968.2025.11209145",
+        "authors": [
+          "Limin Cheng",
+          "Hang Qin",
+          "Shouxu Kuang",
+          "Xinyu Wang",
+          "Ling Li",
+          "Yan-Jun Wu",
+          "Chen Zhao"
+        ],
+        "priority": 0,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 0,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 487,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:134c763c7b9a07d61012675c0b13e5a9b689e27b84f496abe0a8b82ca4aea3c4",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
