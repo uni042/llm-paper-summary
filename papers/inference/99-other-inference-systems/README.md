@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（853本）
+## 自動生成の論文一覧（857本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -630,6 +630,10 @@
   実装：[✓](https://doi.org/10.5281/zenodo.21971227) ・ リポジトリ内被引用：0  
   コード補完のためにLLMをローカル実行する場合、モデルの正答率や生成速度だけでなく、入力文脈を処理するためのGPUエネルギーと、出力を逐次生成するためのGPUエネルギーを分けて評価する必要がある。量子化モデル、とくにQ4は同一モデル系のFP16に比べて省エネルギーな傾向があり、品質とエネルギーのPareto前線へ頻繁に現れる。
 
+- **2026-09 · [From Token Importance to Conditional Removability: Rethinking Visual Token Pruning in Multimodal Large Language Models](2026-2609.26484-from-token-importance-to-conditional-removability-rethinking-visual-toke.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  その観測に基づきCoRePruneを提案する。Qwen3.5-9Bで元の1024視覚トークンを最終128に削減した条件では、7指標をdense基準で正規化した平均相対性能90.3%を保持した。
+
 - **2026-09 · [From Position Risks to Block Survival: Faster Generation for Diffusion Language Models](2026-2609.33390-from-position-risks-to-block-survival-faster-generation-for-diffusion-la.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   拡散言語モデル（DLM）は複数の将来トークンを並列に提案できるため、自己回帰生成より少ないモデル評価回数で長い出力を作れる可能性がある。arXiv:2609.33390の原著ではI-DLM 8B/32Bを対象に、H200上の18条件で同規模I-DLM比の生成スループットを8Bで幾何平均22.7%、32Bで29.8%改善する。
@@ -882,6 +886,10 @@
   実装：[✓](https://github.com/tianyi-lab/PoLar) ・ リポジトリ内被引用：0  
   本論文は、学習済みの各層を関数とみなし、その呼出し順と回数を入力に応じて変える「層プログラム（Program-of-Layers; PoLar）」を提案する。Qwen1.5-MoE-A2.7B-Chatの24層を対象にした実測では、予測器・埋め込み器・候補探索を含む追加費用は合計3.05ミリ秒、通常の全層実行の0.8%だった。
 
+- **2026-06 · [Recover-LoRA for Aggressive Quantization: Reclaiming Accuracy in 2-Bit Language Models via Low-Rank Adaptation with Knowledge Distillation on Synthetic Data](2026-2606.04238-recover-lora-for-aggressive-quantization-reclaiming-accuracy-in-2-bit-la.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  LLMの重みを4ビットから2ビットへ圧縮すると、デコード時に重みをGPUメモリから読み出す帯域費用を減らせる。12ベンチマーク中9件で、量子化による教師との差の80〜95%を回復した。
+
 - **2026-06 · [Query-based Cross-Modal Projector Bolstering Mamba Multimodal LLM](2026-2606.04719-query-based-cross-modal-projector-bolstering-mamba-multimodal-llm.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   視覚言語モデルでは画像符号器が大量のパッチ特徴を生成し、それを言語モデルの入力トークンとして与える。Transformer型言語モデルでは長い入力が自己注意の計算量を増やす。問い合わせ型射影器とMamba言語モデルを学習・微調整したモデル構造そのものを比較している。
@@ -1089,6 +1097,10 @@
 - **2026-05 · [OccamToken: Efficient VLM Inference with Training-Free and Budget-Adaptive Token Pruning](2026-2605.29657-occamtoken-efficient-vlm-inference-with-training-free-and-budget-adaptiv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   従来の視覚トークン枝刈り（visual トークン 枝刈り）は、注意重みや特徴ベクトルの類似度で重要度を付け、得点の高い上位K個を残す方式が多い。高解像度のLLaVA-NeXTでは、元の2,880個から平均40個まで減らしても元モデルの集約性能の93.8%を維持する。
+
+- **2026-05 · [Nice Fold or Hero Call: Learning Budget-Efficient Thinking for Adaptive Reasoning](2026-2605.11625-nice-fold-or-hero-call-learning-budget-efficient-thinking-for-adaptive-r.md)**  
+  実装：[✓](https://github.com/houqiii/BET) ・ リポジトリ内被引用：0  
+  推論特化モデルは複雑な問題で長い思考系列を生成するが、長い思考が常に正答率を改善するわけではない。従来の一律な思考圧縮や問題難易度に応じた予算制御は、後者を十分に見分けられず、逆に「難しいが解ける」問題まで早期に切り上げてしまうことがある。
 
 - **2026-05 · [NCO: A Versatile Plug-in for Handling Negative Constraints in Decoding](2026-2605.10065-nco-a-versatile-plug-in-for-handling-negative-constraints-in-decoding.md)**  
   実装：[✓](https://github.com/hyundong98/NCO-Decoding) ・ リポジトリ内被引用：0  
@@ -2339,6 +2351,10 @@
 - **2025-10 · [HA-RAG: Hotness-Aware RAG Acceleration via Mixed Precision and Data Placement](2025-2510.20878-ha-rag-hotness-aware-rag-acceleration-via-mixed-precision-and-data-place.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   HA-RAGは、検索拡張生成（RAG）で繰り返し参照される外部文書のKVキャッシュを、検索頻度に応じた数値形式とメモリ階層の組合せで管理する推論システムである。
+
+- **2025-10 · [FLoC: Facility Location-Based Efficient Visual Token Compression for Long Video Understanding](2025-2511.00141-floc-facility-location-based-efficient-visual-token-compression-for-long.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FLoCは、長時間動画から抽出した大量の視覚トークンを、指定されたトークン数の予算内で代表性と多様性の両方を保つ部分集合へ圧縮する方式である。
 
 - **2025-10 · [Exemplar-Derived Soft Prompts for Efficient and Effective Domain Adaptation](2025-2510.05363-exemplar-derived-soft-prompts-for-efficient-and-effective-domain-adaptat.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

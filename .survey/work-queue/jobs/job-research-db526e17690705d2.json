@@ -35,10 +35,15 @@
   "selection_reason": "arXiv要旨はGate/Up射影のみW2、他をW4にする混合精度化で推論TPSを7.5〜23.3%改善し、合成データ蒸留LoRAで精度を回復。Qwen3-4Bの12評価中9件で80〜95%の精度回復を報告。極低ビット推論向け重み圧縮と精度回復の直接的貢献。",
   "semantic_scholar_id": "37e76155c2350c4d68de1a2098319a18c39a65de",
   "source_url": "https://arxiv.org/abs/2606.04238",
-  "status": "ready",
+  "status": "superseded",
   "title": "Recover-LoRA for Aggressive Quantization: Reclaiming Accuracy in 2-Bit Language Models via Low-Rank Adaptation with Knowledge Distillation on Synthetic Data",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T09:04:15+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2606.04238-recover-lora-for-aggressive-quantization-reclaiming-accuracy-in-2-bit-la.md",
+  "represented_canonical_id": "arXiv:2606.04238",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
