@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1605-scheduled-chat-00/r01",
+  "reference_main_sha": "fba71cd998a03c8e42e30fa045e8f69c76827721",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.00894",
+      "identity_tokens": [
+        "arXiv:2406.00894"
+      ],
+      "title": "Pretrained Hybrids with MAD Skills",
+      "reason": "arXiv v2要旨はManticoreで既存GPT系TransformerとMambaの事前学習済みブロックを射影器で結合し、微分可能なアーキテクチャ探索でハイブリッドを構成する。長距離タスクの性能改善は報告するが、推論時メモリ・速度・カーネル最適化の定量的な寄与は要旨で示されず、主題はモデル設計・再学習回避のため境界的。",
+      "source_url": "https://arxiv.org/abs/2406.00894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 223
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.11221",
+      "identity_tokens": [
+        "arXiv:2512.11221"
+      ],
+      "title": "Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery: Sublinear Memory Growth for Efficient LLM Inference",
+      "reason": "arXiv一次要旨はスライディング注意窓で重要度が低いトークンのKV更新を一時停止し、全履歴をGPU外に保持して必要時に復元する可逆的なfreeze方式を提案。LLaMA-3 8Bで活動KVを55〜67%削減しneedle-in-haystack検索を維持した予備実験を報告。LLM推論時のメモリ管理に直接該当。",
+      "source_url": "https://arxiv.org/abs/2512.11221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 227
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.26660",
+      "identity_tokens": [
+        "arXiv:2605.26660"
+      ],
+      "title": "WINDQuant: Weight-Informed Neural Decision-Making for Global Mixed-Precision LLM Quantization",
+      "reason": "arXiv v2要旨はPPOによる強化学習制御器が重み行列の列チャンクごとに量子化ビット幅と処理方式を割り当て、全体の保存容量制約と精度を調整するWINDQuantを提案。活性校正と実効ビット数の計上を含み、低ビットLLM推論のモデル容量・品質トレードオフへ直接寄与。",
+      "source_url": "https://arxiv.org/abs/2605.26660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.17470",
+      "identity_tokens": [
+        "arXiv:2405.17470"
+      ],
+      "title": "Athena: Efficient Block-Wise Post-Training Quantization for Large Language Models Using Second-Order Matrix Derivative Information",
+      "reason": "arXiv一次要旨は損失の二階行列微分情報を利用し、列・行ごとに重みをブロック化してHessianを更新しながら量子化するAthenaを提案。低ビット化による容量・計算負担の低減と精度維持を目的とするLLMの事後量子化研究であり、推論用モデル圧縮に直接関連。",
+      "source_url": "https://arxiv.org/abs/2405.17470",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 235
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2508.09471",
+      "identity_tokens": [
+        "arXiv:2508.09471"
+      ],
+      "title": "EGGS-PTP: An Expander-Graph Guided Structured Post-training Pruning Method for Large Language Models",
+      "reason": "arXiv一次要旨はexpander graphの情報伝達性を利用してN:M構造化枝刈りパターンを設計するEGGS-PTPを提案。複数LLMで従来の構造化枝刈りより精度を維持しつつ、メモリ削減と推論高速化を報告。N:M疎性に基づく実行効率へ直接寄与。",
+      "source_url": "https://arxiv.org/abs/2508.09471",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 236
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.12928",
+      "identity_tokens": [
+        "arXiv:2604.12928"
+      ],
+      "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+      "reason": "ICML 2026採択のarXiv v3要旨は、低遅延の全二重音声LMに外部検索を非同期に組み込み、発話開始から重要情報を話すまでの時間差に検索処理を重ねるMoshiRAGを提案。モデル巨大化を避けながらリアルタイム対話性と事実性を両立させる推論時パイプラインの寄与がある。",
+      "source_url": "https://arxiv.org/abs/2604.12928",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 239
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.09347",
+      "identity_tokens": [
+        "arXiv:2406.09347"
+      ],
+      "title": "Separations in the Representational Capabilities of Transformers and Recurrent Architectures",
+      "reason": "arXiv一次要旨はTransformerとRNNのindex lookup、近傍探索、Dyck言語等の表現能力と必要隠れ状態幅を理論比較する。固定状態のRNNで特定検索を行うには線形サイズが必要な一方、Transformerは対数幅で実現可能と示す。効率的再帰アーキテクチャの限界理解には有用だが、LLMサービングの実測や推論システム設計は主題でない。",
+      "source_url": "https://arxiv.org/abs/2406.09347",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 240
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.08747",
+      "identity_tokens": [
+        "arXiv:2603.08747"
+      ],
+      "title": "Diagnosing FP4 inference: a layer-wise and block-wise sensitivity analysis of NVFP4 and MXFP4",
+      "reason": "arXiv一次要旨はQwen2.5の0.5B・7B・14Bを用いNVFP4とMXFP4の層・ブロック別量子化感度を分離測定。MLPのup/down射影が高感度で注意射影は相対的に低感度、MXFP4では初期ブロックも高感度になり得る。FP4推論精度の設計判断へ直接関連。",
+      "source_url": "https://arxiv.org/abs/2603.08747",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 243
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.16045",
+      "identity_tokens": [
+        "arXiv:2510.16045"
+      ],
+      "title": "AMS-QUANT: Adaptive Mantissa Sharing for Floating-point Quantization",
+      "reason": "arXiv一次要旨は複数重みで仮数部の最下位ビットを共有し、非整数の実効ビット幅FP5.33・FP4.25を実現するAMS-Quantを提案。共有配置の探索とCUDA線形カーネルを実装し、FP16比でLLM decodeをそれぞれ2.8倍・3.2倍高速化と報告。低ビット表現と実機カーネルの両方に寄与。",
+      "source_url": "https://arxiv.org/abs/2510.16045",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 245
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.18298",
+      "identity_tokens": [
+        "arXiv:2505.18298"
+      ],
+      "title": "Thinking Fast and Right: Balancing Accuracy and Reasoning Length with Adaptive Rewards",
+      "reason": "arXiv一次要旨は強化学習で長くなりがちなCoTに対し、正答率が高い間は長さペナルティを強め、正答率が下がると緩める適応的報酬設計を提案。推論品質を概ね維持しながら生成トークン数を削減し、推論時の遅延と計算費用を抑える。学習時の報酬設計が直接推論効率を改善するため収録対象。",
+      "source_url": "https://arxiv.org/abs/2505.18298",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T16:05:34+09:00",
+      "last_checked_at": "2026-10-30T16:05:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 251
+    }
+  ]
+}
