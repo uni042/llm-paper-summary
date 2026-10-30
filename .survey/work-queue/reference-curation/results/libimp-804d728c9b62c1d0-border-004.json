@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-804d728c9b62c1d0-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2407.05489",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2407.05489",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2407.05489",
+      "arXiv:2407.05489"
+    ],
+    "reason": "RetNet・Mamba・注意を混ぜたMambaを翻訳課題で比較し、文・段落単位の翻訳品質、長さ外挿、固有名詞再現を調べる。状態空間モデルの線形再帰という効率的構造に関連するが、要旨で中心となる貢献は翻訳品質比較であり、LLM推論サービングや実測メモリ・遅延最適化ではない。",
+    "first_checked_at": "2026-10-30T11:54:46+00:00",
+    "last_checked_at": "2026-10-30T11:54:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "How Effective are State Space Models for Machine Translation?"
+  },
+  "processed_at": "2026-10-30T11:54:47+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-804d728c9b62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

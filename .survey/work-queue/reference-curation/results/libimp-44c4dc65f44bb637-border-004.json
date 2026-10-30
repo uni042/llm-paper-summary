@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-44c4dc65f44bb637-border-004",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.11713",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.11713",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2510.11713",
+      "arXiv:2510.11713"
+    ],
+    "reason": "長い推論途中で打ち切りや文脈変更を与え、推論予算制約と更新への頑健性を調べる。遅い段階での変更では精度が最大60%低下し、思考漏出・パニック・自己疑念などの失敗を分析する。推論予算設計への示唆はあるが、高速化機構の提案・実測サービング改善は主貢献ではない。",
+    "first_checked_at": "2026-10-30T11:54:41+00:00",
+    "last_checked_at": "2026-10-30T11:54:41+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Are Large Reasoning Models Interruptible?"
+  },
+  "processed_at": "2026-10-30T11:54:41+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-44c4dc65f44b",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

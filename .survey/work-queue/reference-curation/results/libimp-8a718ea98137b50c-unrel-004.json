@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a718ea98137b50c-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2312.11142",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2312.11142",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2312.11142",
+      "arXiv:2312.11142"
+    ],
+    "reason": "音声の自己教師あり表現学習における訓練・微調整・データ効率を整理するレビュー。LLM生成推論・KVキャッシュ・サービングの技術的改善を直接扱わず、対象外。",
+    "first_checked_at": "2026-10-30T11:54:49+00:00",
+    "last_checked_at": "2026-10-30T11:54:49+00:00",
+    "linked_from": [],
+    "title": "Efficiency-oriented approaches for self-supervised speech representation learning"
+  },
+  "processed_at": "2026-10-30T11:54:49+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a718ea98137",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

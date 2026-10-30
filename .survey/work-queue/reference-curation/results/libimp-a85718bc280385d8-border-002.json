@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-a85718bc280385d8-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2408.04585",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2408.04585",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2408.04585",
+      "arXiv:2408.04585"
+    ],
+    "reason": "Transformer++・GLA・MatMul-Free LMの効率と敵対的頑健性をGLUE/AdvGLUEで比較する。アーキテクチャ効率には関係するが、主な評価は分類品質・敵対的頑健性であり、生成LLMの実測復号速度やサービング効率は直接検証されていない。",
+    "first_checked_at": "2026-10-30T11:54:50+00:00",
+    "last_checked_at": "2026-10-30T11:54:50+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Towards Resilient and Efficient LLMs: A Comparative Study of Efficiency, Performance, and Adversarial Robustness"
+  },
+  "processed_at": "2026-10-30T11:54:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-a85718bc2803",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

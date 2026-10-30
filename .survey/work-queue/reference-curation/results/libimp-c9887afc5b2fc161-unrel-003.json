@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-c9887afc5b2fc161-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2511.20390",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2511.20390",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2511.20390",
+      "arXiv:2511.20390"
+    ],
+    "reason": "画像生成DiTの特徴時系列を軽量ドラフタで予測して検証する投機的画像拡散サンプリング方式。ImageNet 512²で最大2.25倍高速化を報告するが、対象は画像拡散であり生成LLMのテキスト推論ではない。",
+    "first_checked_at": "2026-10-30T11:54:54+00:00",
+    "last_checked_at": "2026-10-30T11:54:54+00:00",
+    "linked_from": [],
+    "title": "FREE: Uncertainty-Aware Autoregression for Parallel Diffusion Transformers"
+  },
+  "processed_at": "2026-10-30T11:54:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-c9887afc5b2f",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

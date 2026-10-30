@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-804d728c9b62c1d0-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2603.05413",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2603.05413",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2603.05413",
+      "arXiv:2603.05413"
+    ],
+    "reason": "Qwen3-OmniのDashScope・vLLM Thinkerのみ・Transformers全体実行の音声遅延を比較し、STT→LLM→TTSのストリーミング実装で初回音声755msを報告する。vLLMを用いた運用上の実測は有用だが、新規のLLMサービングアルゴリズムやカーネル最適化を主張する研究ではなくチュートリアル中心。",
+    "first_checked_at": "2026-10-30T11:54:46+00:00",
+    "last_checked_at": "2026-10-30T11:54:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Building Enterprise Realtime Voice Agents from Scratch: A Technical Tutorial"
+  },
+  "processed_at": "2026-10-30T11:54:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-804d728c9b62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

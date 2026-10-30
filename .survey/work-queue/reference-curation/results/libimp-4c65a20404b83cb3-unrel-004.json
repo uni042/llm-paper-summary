@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c65a20404b83cb3-unrel-004",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2604.12249",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2604.12249",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2604.12249",
+      "arXiv:2604.12249"
+    ],
+    "reason": "worklistの「Language Model Inference Optimization」系タイトルは誤対応。一次arXiv:2604.12249はAm/Cm/Bk/Cfの強相関電子構造の凝縮系物理研究であり、LLMとは無関係。誤題名をaliasにせずidentity書誌不整合として記録する。",
+    "first_checked_at": "2026-10-30T11:54:43+00:00",
+    "last_checked_at": "2026-10-30T11:54:43+00:00",
+    "linked_from": [],
+    "title": "Orbital-selective correlations and angular momentum coupling in heavy actinides Am, Cm, Bk, and Cf under pressure: A many-body perspective"
+  },
+  "processed_at": "2026-10-30T11:54:43+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c65a20404b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f21ac32a6a1a217e-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.21463",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.21463",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.21463",
+      "arXiv:2605.21463"
+    ],
+    "reason": "エージェントの状況に応じて別のLLMが必要な助言を生成し、不要な場合は生成を見送るようRLで学習する。Web操作の成功率を30%以上相対改善するが、主指標はタスク品質であり、LLM推論の計算量・メモリ・遅延削減は直接測定されていない。",
+    "first_checked_at": "2026-10-30T11:54:56+00:00",
+    "last_checked_at": "2026-10-30T11:54:56+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Mem-π: Adaptive Memory through Learning When and What to Generate"
+  },
+  "processed_at": "2026-10-30T11:54:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f21ac32a6a1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

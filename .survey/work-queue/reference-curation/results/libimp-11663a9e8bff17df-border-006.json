@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11663a9e8bff17df-border-006",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2605.19652",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2605.19652",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2605.19652",
+      "arXiv:2605.19652"
+    ],
+    "reason": "GPU tile言語のコンパイラコード生成バグ301件を分析し、shape/dtype/backend依存の誤計算・性能退行を分類する。LLM推論カーネルの検証基盤に間接的に有用だが、推論カーネル自体の高速化方式ではない。",
+    "first_checked_at": "2026-10-30T11:54:36+00:00",
+    "last_checked_at": "2026-10-30T11:54:36+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Characterizing Real-World Bugs in Tile Programs for Automated Bug Detection"
+  },
+  "processed_at": "2026-10-30T11:54:36+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11663a9e8bff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

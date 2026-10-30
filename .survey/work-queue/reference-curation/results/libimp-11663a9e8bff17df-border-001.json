@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-11663a9e8bff17df-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.23318",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.23318",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.23318",
+      "arXiv:2507.23318"
+    ],
+    "reason": "自動運転VLA向けに前景領域を保つMAE再構成型の視覚トークン枝刈りを提案し、nuScenesの計画性能を評価する。トークン削減機構はVLMへ転用可能だが、主対象は運転行動生成であり一般LLM推論の速度・KV改善は直接示されていない。",
+    "first_checked_at": "2026-10-30T11:54:35+00:00",
+    "last_checked_at": "2026-10-30T11:54:35+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "FastDriveVLA: Efficient End-to-End Driving via Plug-and-Play Reconstruction-based Token Pruning"
+  },
+  "processed_at": "2026-10-30T11:54:35+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-11663a9e8bff",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

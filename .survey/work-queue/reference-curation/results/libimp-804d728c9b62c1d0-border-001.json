@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-804d728c9b62c1d0-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.07880",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.07880",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2510.07880",
+      "arXiv:2510.07880"
+    ],
+    "reason": "TRACEで思考を最小の下位思考へ分解し、談話関係グラフからExplorerとLate Landingという過剰思考パターンを分析する。単純問題で長考モデルが5～20倍遅いと測定するが、推論エンジンの実行資源・KV・スケジューラを直接最適化する実装ではないため境界扱い。",
+    "first_checked_at": "2026-10-30T11:54:46+00:00",
+    "last_checked_at": "2026-10-30T11:54:46+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Do LLMs Really Need 10+ Thoughts for \"Find the Time 1000 Days Later\"? Towards Structural Understanding of LLM Overthinking"
+  },
+  "processed_at": "2026-10-30T11:54:46+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-804d728c9b62",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

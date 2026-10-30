@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T10:54:05+00:00",
-  "record_count": 12582,
+  "updated_at": "2026-10-30T11:54:57+00:00",
+  "record_count": 12596,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181083,6 +181083,188 @@
       "last_checked_at": "2026-10-30T10:54:05+00:00",
       "linked_from": [],
       "title": "Depth Adaptive Efficient Visual Autoregressive Modeling"
+    },
+    "arXiv:2604.06473": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.06473",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.06473",
+        "arXiv:2604.06473"
+      ],
+      "reason": "多変量時系列予測でchannel間注意を線形化し、予測誤差を改善するMICAを提案。生成LLMのテキスト推論やKVサービングを対象とせず、時系列予測特化の研究。",
+      "first_checked_at": "2026-10-30T11:54:36+00:00",
+      "last_checked_at": "2026-10-30T11:54:36+00:00",
+      "linked_from": [],
+      "title": "MICA: Multivariate Infini Compressive Attention for Time Series Forecasting"
+    },
+    "arXiv:2503.12461": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2503.12461",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2503.12461",
+        "arXiv:2503.12461"
+      ],
+      "reason": "Mamba/SSMを用いた画像圧縮のentropy modelingを改善する研究。評価は高解像度画像の符号化効率であり、LLM生成推論のモデル圧縮・速度改善ではない。",
+      "first_checked_at": "2026-10-30T11:54:37+00:00",
+      "last_checked_at": "2026-10-30T11:54:37+00:00",
+      "linked_from": [],
+      "title": "MambaIC: State Space Models for High-Performance Learned Image Compression"
+    },
+    "arXiv:2601.19178": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.19178",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.19178",
+        "arXiv:2601.19178"
+      ],
+      "reason": "推薦システムのユーザー間でKVを共有し、履歴KVを元サイズ0.8%まで圧縮するが、評価は系列推薦モデルに限定される。生成LLMのKVキャッシュ共有・推論サービングへの直接評価はない。",
+      "first_checked_at": "2026-10-30T11:54:37+00:00",
+      "last_checked_at": "2026-10-30T11:54:37+00:00",
+      "linked_from": [],
+      "title": "CollectiveKV: Decoupling and Sharing Collaborative Information in Sequential Recommendation"
+    },
+    "arXiv:2509.23873": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.23873",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.23873",
+        "arXiv:2509.23873"
+      ],
+      "reason": "EU PlaneとQ-Tuningで教師あり微調整データのサンプルとトークンを削り、SmolLM2-1.7Bで元データ12.5%でもSFT品質を改善する研究。削減対象は訓練データであり、推論時KVキャッシュ・生成トークン・サービング処理の最適化ではない。",
+      "first_checked_at": "2026-10-30T11:54:41+00:00",
+      "last_checked_at": "2026-10-30T11:54:41+00:00",
+      "linked_from": [],
+      "title": "Winning the Pruning Gamble: A Unified Approach to Joint Sample and Token Pruning for Efficient Supervised Fine-Tuning"
+    },
+    "arXiv:2509.04084": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2509.04084",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2509.04084",
+        "arXiv:2509.04084"
+      ],
+      "reason": "勾配差分を再利用して分散学習の頻繁なcheckpoint保存費用を削減する研究。最大89.2%の訓練時間削減は学習処理であり、LLM推論サービングを対象としない。",
+      "first_checked_at": "2026-10-30T11:54:43+00:00",
+      "last_checked_at": "2026-10-30T11:54:43+00:00",
+      "linked_from": [],
+      "title": "Optimizing Frequent Checkpointing via Low-Cost Differential for Distributed Training Systems"
+    },
+    "arXiv:2604.12249": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.12249",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2604.12249",
+        "arXiv:2604.12249"
+      ],
+      "reason": "worklistの「Language Model Inference Optimization」系タイトルは誤対応。一次arXiv:2604.12249はAm/Cm/Bk/Cfの強相関電子構造の凝縮系物理研究であり、LLMとは無関係。誤題名をaliasにせずidentity書誌不整合として記録する。",
+      "first_checked_at": "2026-10-30T11:54:43+00:00",
+      "last_checked_at": "2026-10-30T11:54:43+00:00",
+      "linked_from": [],
+      "title": "Orbital-selective correlations and angular momentum coupling in heavy actinides Am, Cm, Bk, and Cf under pressure: A many-body perspective"
+    },
+    "arXiv:2305.10947": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2305.10947",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2305.10947",
+        "arXiv:2305.10947"
+      ],
+      "reason": "汎用ニューラルネットワークの16bit学習とFP32との精度・計算速度比較を行う。低精度計算の背景としては有用だが、主対象は訓練であり生成LLMの推論高速化・KV・サービングへの直接評価はない。",
+      "first_checked_at": "2026-10-30T11:54:44+00:00",
+      "last_checked_at": "2026-10-30T11:54:44+00:00",
+      "linked_from": [],
+      "title": "Revisiting 16-bit Neural Network Training: A Practical Approach for Resource-Limited Learning"
+    },
+    "arXiv:2407.04208": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.04208",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2407.04208",
+        "arXiv:2407.04208"
+      ],
+      "reason": "画像分類用ViTの大規模教師から中間教師を自動選び、CIFAR/ImageNetで多段蒸留品質を改善する。生成LLMの推論システム・KV・サービング最適化の直接評価はない。",
+      "first_checked_at": "2026-10-30T11:54:44+00:00",
+      "last_checked_at": "2026-10-30T11:54:44+00:00",
+      "linked_from": [],
+      "title": "AMD: Automatic Multi-step Distillation of Large-scale Vision Models"
+    },
+    "arXiv:2603.08982": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.08982",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2603.08982",
+        "arXiv:2603.08982"
+      ],
+      "reason": "対象はWan2.2・HunyuanVideoなど動画拡散Transformerであり、注意ブロックの重心近似と誤差対費用比で選ぶルーティングにより動画生成を高速化する。生成LLMのKV管理・テキスト推論サービングへの直接評価はなく、現行のLLM推論サーベイの対象外。",
+      "first_checked_at": "2026-10-30T11:54:47+00:00",
+      "last_checked_at": "2026-10-30T11:54:47+00:00",
+      "linked_from": [],
+      "title": "SVG-EAR: Parameter-Free Linear Compensation for Sparse Video Generation via Error-aware Routing"
+    },
+    "arXiv:2601.15714": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.15714",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2601.15714",
+        "arXiv:2601.15714"
+      ],
+      "reason": "Zero-Error Horizonという正確性評価指標でLLMの単純計算失敗を分析する研究。木構造とonline softmaxで指標計算自体を最大一桁高速化するが、対象は評価手続きでありLLM生成推論サービングの効率化ではない。",
+      "first_checked_at": "2026-10-30T11:54:48+00:00",
+      "last_checked_at": "2026-10-30T11:54:48+00:00",
+      "linked_from": [],
+      "title": "Even GPT-5.2 Can't Count to Five: The Case for Zero-Error Horizons in Trustworthy LLMs"
+    },
+    "arXiv:2312.11142": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.11142",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2312.11142",
+        "arXiv:2312.11142"
+      ],
+      "reason": "音声の自己教師あり表現学習における訓練・微調整・データ効率を整理するレビュー。LLM生成推論・KVキャッシュ・サービングの技術的改善を直接扱わず、対象外。",
+      "first_checked_at": "2026-10-30T11:54:49+00:00",
+      "last_checked_at": "2026-10-30T11:54:49+00:00",
+      "linked_from": [],
+      "title": "Efficiency-oriented approaches for self-supervised speech representation learning"
+    },
+    "arXiv:2410.07531": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2410.07531",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2410.07531",
+        "arXiv:2410.07531"
+      ],
+      "reason": "FlashAttentionのdropout乱数生成を前段GEMMと重ね、GH100上のLlama3学習ブロックで1.22倍改善を示す研究。dropoutを有効化する学習時の演算重畳が対象で、通常dropoutを無効化するLLM推論サービングの直接最適化ではない。",
+      "first_checked_at": "2026-10-30T11:54:52+00:00",
+      "last_checked_at": "2026-10-30T11:54:52+00:00",
+      "linked_from": [],
+      "title": "Reducing the Cost of Dropout in Flash-Attention by Hiding RNG with GEMM"
+    },
+    "arXiv:2511.20390": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.20390",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2511.20390",
+        "arXiv:2511.20390"
+      ],
+      "reason": "画像生成DiTの特徴時系列を軽量ドラフタで予測して検証する投機的画像拡散サンプリング方式。ImageNet 512²で最大2.25倍高速化を報告するが、対象は画像拡散であり生成LLMのテキスト推論ではない。",
+      "first_checked_at": "2026-10-30T11:54:54+00:00",
+      "last_checked_at": "2026-10-30T11:54:54+00:00",
+      "linked_from": [],
+      "title": "FREE: Uncertainty-Aware Autoregression for Parallel Diffusion Transformers"
+    },
+    "arXiv:2501.13230": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2501.13230",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2501.13230",
+        "arXiv:2501.13230"
+      ],
+      "reason": "SSMをテンソル縮約順序最適化と畳み込み的構成で高速化するCentaurusを提案するが、評価は音声キーワード検出・雑音除去・ASRが中心。生成LLM推論の効率化を直接実証していないため対象外。",
+      "first_checked_at": "2026-10-30T11:54:57+00:00",
+      "last_checked_at": "2026-10-30T11:54:57+00:00",
+      "linked_from": [],
+      "title": "Let SSMs be ConvNets: State-space Modeling with Optimal Tensor Contractions"
     }
   }
 }

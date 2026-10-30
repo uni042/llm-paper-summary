@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-f21ac32a6a1a217e-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2512.07525",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2512.07525",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2512.07525",
+      "arXiv:2512.07525"
+    ],
+    "reason": "RoPEの複素内積の虚部を捨てず二成分の注意スコアへ組み込むことで長文脈の位置情報を改善する。長文脈品質の向上を示すが、一次要旨で推論速度・メモリ・KV占有の削減は主張されておらず、効率化との直接性は弱い。",
+    "first_checked_at": "2026-10-30T11:54:55+00:00",
+    "last_checked_at": "2026-10-30T11:54:55+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Beyond Real: Imaginary Extension of Rotary Position Embeddings for Long-Context LLMs"
+  },
+  "processed_at": "2026-10-30T11:54:56+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f21ac32a6a1a",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

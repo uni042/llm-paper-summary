@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-4c65a20404b83cb3-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2507.02917",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2507.02917",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2507.02917",
+      "arXiv:2507.02917"
+    ],
+    "reason": "Reservoir Computingの固定数の状態に対して注意を行い、系列長に対して線形計算量のEcho State Transformerを提案。評価は時系列分類・異常検知・予測であり、生成LLMの実測推論速度・品質は未確認。",
+    "first_checked_at": "2026-10-30T11:54:42+00:00",
+    "last_checked_at": "2026-10-30T11:54:42+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Echo State Transformer: Attention Over Finite Memories"
+  },
+  "processed_at": "2026-10-30T11:54:42+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-4c65a20404b8",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

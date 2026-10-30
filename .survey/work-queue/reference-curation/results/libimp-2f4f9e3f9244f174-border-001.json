@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-2f4f9e3f9244f174-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2606.03825",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2606.03825",
+    "identity_tokens": [
+      "arXiv:2606.03825"
+    ],
+    "reason": "入力依存の短い畳み込みをQ/K/Vや各線形層へ追加し、言語モデルの表現力と学習時の計算効率を改善するアーキテクチャ研究。Tritonカーネルを用いるが要旨の主な定量評価は学習損失・スケーリング則・学習時実装であり、推論サービングの実測改善は確認できないため境界的。",
+    "first_checked_at": "2026-10-30T11:54:39+00:00",
+    "last_checked_at": "2026-10-30T11:54:39+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Dynamic Short Convolutions Improve Transformers"
+  },
+  "processed_at": "2026-10-30T11:54:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-2f4f9e3f9244",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

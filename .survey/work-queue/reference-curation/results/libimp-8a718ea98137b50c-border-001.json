@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-8a718ea98137b50c-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2508.09505",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2508.09505",
+    "identity_tokens": [
+      "DOI:10.48550/arxiv.2508.09505",
+      "arXiv:2508.09505"
+    ],
+    "reason": "GraphGuardは分散GPU実装の出力が逐次モデルと一致するか、反復的な式書換えで静的に検証し、GPT/Llama-3の分散実装にも適用する。LLMサービングの正確性検証に関連するが、推論速度・メモリを直接削減するアルゴリズムではない。",
+    "first_checked_at": "2026-10-30T11:54:47+00:00",
+    "last_checked_at": "2026-10-30T11:54:47+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Verify Distributed Deep Learning Model Implementation Refinement with Iterative Relation Inference"
+  },
+  "processed_at": "2026-10-30T11:54:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-8a718ea98137",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
