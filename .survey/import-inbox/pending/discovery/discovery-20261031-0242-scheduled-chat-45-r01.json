@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "reference_main_sha": "90d8e77a4d07259b51f15525d3a9c16eff545029",
+  "run_key": "20261031-0242-scheduled-chat-45/r01",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.16782",
+      "identity_tokens": [
+        "arXiv:2502.16782"
+      ],
+      "title": "CipherPrune: Efficient and Scalable Private Transformer Inference",
+      "reason": "暗号化したTransformer推論の通信・計算負荷に対し、暗号文のまま重要度の低いトークンを層ごとに削り、残存トークンの重要度に応じて非線形近似の多項式次数も下げる。プロトコルを考慮した閾値探索を組み合わせ、128トークンで約6.1倍、512トークンで約10.6倍のprivate inference実行費用削減を報告。暗号化推論の直接的なシステム最適化。",
+      "source_url": "https://arxiv.org/abs/2502.16782",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 276,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.05822",
+      "identity_tokens": [
+        "arXiv:2106.05822"
+      ],
+      "title": "GroupBERT: Enhanced Transformer Architecture with Efficient Grouped Structures",
+      "reason": "BERT系の表現学習モデルに畳み込みモジュールとgrouped変換を組み込み、全結合層の計算量を減らす構造を提案。FLOPsと学習時間の効率は示すが、自己回帰LLMデコード、KV管理、実運用サービングの直接評価は一次要旨にない。一般Transformer効率化として境界的。",
+      "source_url": "https://arxiv.org/abs/2106.05822",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 312,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02347",
+      "identity_tokens": [
+        "arXiv:2608.02347"
+      ],
+      "title": "Mamba with Hierarchical Memory: Solving Representation Bottleneck in Long Sequence Modeling",
+      "reason": "固定容量のMamba再帰状態の表現不足を、段落意味を抽出する作業メモリと永続長期メモリで補うHMMを提案。Passkey Retrieval/LongBench-Eの品質向上34.3〜37.1%・1.6〜14.2%と追加パラメータ2%を報告するが、推論遅延やサービング資源の削減実測は一次要旨で示されないため、長文脈モデル構造の境界研究。",
+      "source_url": "https://arxiv.org/abs/2608.02347",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 314,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.24058",
+      "identity_tokens": [
+        "arXiv:2605.24058"
+      ],
+      "title": "Signs Beat Floats: Low-Rank Double-Binary Adaptation for On-Device Fine-Tuning",
+      "reason": "LoRAの低ランク行列2本を符号の二値表現とチャネル別スケールへ置換するLoRDBAを提案。未マージadapter-modeでアダプタ容量を10倍超削減し、rank16のprefill遅延増を最大8%に抑えると報告。主題はオンデバイス微調整だが、推論時のアダプタ常駐容量・ホットスワップ・prefill費用を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2605.24058",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 315,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06908",
+      "identity_tokens": [
+        "arXiv:2605.06908"
+      ],
+      "title": "Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents",
+      "reason": "LLMエージェントのtest-time追加rolloutが有益かを判断するゲートの方向が環境・backboneで逆転する問題を検証し、反実仮想探索から学習するDIALで成功率と計算費用のトレードオフを改善。適応的test-time計算には関連するが、推論基盤・GPU資源・サービングスケジューラの実装や実測は一次要旨にない。",
+      "source_url": "https://arxiv.org/abs/2605.06908",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 317,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.20666",
+      "identity_tokens": [
+        "arXiv:2505.20666"
+      ],
+      "title": "Continuous-Time Attention: PDE-Guided Mechanisms for Long-Sequence Transformers",
+      "reason": "Transformer注意重みを擬似時間上の拡散・波動・反応拡散PDEで進化させ、長距離依存と最適化安定性を改善する機構。長系列モデル効率との関連はあるが、一次要旨は品質・学習挙動を中心に説明し、実GPU推論速度、KV容量、メモリ帯域削減の具体的な検証を提示しない。",
+      "source_url": "https://arxiv.org/abs/2505.20666",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 335,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34565",
+      "identity_tokens": [
+        "arXiv:2609.34565"
+      ],
+      "title": "FlowState: Execution State as Memory for Long-Horizon LLM Agents",
+      "reason": "エージェント実行状態を意味付きノード・関係・ツール観測参照として保持し、ISUで逐次更新、PSAで必要時に履歴を段階的に再取得する。DeepSeek-V4-Flashを用いたMemoryArenaとτ³-Benchで成功率・pass率を4.55/13.95ポイント改善し、トークン消費を43.2/40.6%削減。エージェント実行時コンテキストの圧縮・オンデマンド読み出しに直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.34565",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 336,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.09304",
+      "identity_tokens": [
+        "arXiv:2503.09304"
+      ],
+      "title": "Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference",
+      "reason": "QLLMはMoEのexpert単位で低優先要求をプリエンプトし、iteration境界に縛られず高優先リクエストを先行実行する。A100でlatency-sensitive要求のTTFTを平均65.5倍改善し、最大7 requests/sでSLOを満たすと報告。head-of-line blockingを減らす直接的な推論スケジューリング。",
+      "source_url": "https://arxiv.org/abs/2503.09304",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 337,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.17101",
+      "identity_tokens": [
+        "arXiv:2503.17101"
+      ],
+      "title": "Large Language Model Compression via the Nested Activation-Aware Decomposition",
+      "reason": "NSVDは重み行列を活性化分布に応じて変換して外れ値を吸収し、再学習不要の低ランク分解精度を改善する。6モデル・3系列・8データセットで中高圧縮率や多言語タスクにおける精度を検証。推論展開向けのLLM重み圧縮技術に直接関連するが、一次要旨にはサービング実測はない。",
+      "source_url": "https://arxiv.org/abs/2503.17101",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 338,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.26926",
+      "identity_tokens": [
+        "arXiv:2608.26926"
+      ],
+      "title": "A Layer Importance Metric for Quantization Accounting for the Speed-Quality Trade-off in Autoregressive Models",
+      "reason": "小型自己回帰LLMの量子化対象層を、正規化SQNRによる情報保持スコアとroofline遅延モデルによる速度推定の複合指標で優先順位付けする。Gemma 3 1BのFFN・埋込層を重点対象とし、複数モデルで速度予測誤差約4%を報告。実行速度はモデル推定を含み、実測高速化そのものとは区別する。",
+      "source_url": "https://arxiv.org/abs/2608.26926",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:52:50+09:00",
+      "last_checked_at": "2026-10-31T02:52:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 353,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
