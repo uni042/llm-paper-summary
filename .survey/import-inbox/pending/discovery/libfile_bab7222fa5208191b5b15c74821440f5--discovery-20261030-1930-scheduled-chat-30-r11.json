@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1930-scheduled-chat-30/r11",
+  "reference_main_sha": "a85f495c62c68f768379567064b4228478c6b23b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.20427",
+      "identity_tokens": [
+        "arXiv:2608.20427"
+      ],
+      "title": "BF1: A Causal Dyadic Sparse-Attention Retrofit for Efficient Long-Context Transformers",
+      "reason": "局所・先頭ブロック・対数間隔の過去ブロックを組み合わせる因果的疎注意BF1を既存Qwenへ部分導入する。Blackwell RTX PRO 6000で32K時の層単位prefill最大10.91倍、8/28層を置換したモデルのTTFT最大15.3%改善を報告。部分置換ではモデル全体の漸近計算量が二乗のままである点も明示する。",
+      "source_url": "https://arxiv.org/abs/2608.20427",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 141,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2408.14909",
+      "identity_tokens": [
+        "arXiv:2408.14909"
+      ],
+      "title": "SpikingSSMs: Learning Long Sequences with Sparse and Parallel Spiking State Space Models",
+      "reason": "スパイキングニューロンと状態空間モデルを組み合わせ、疎なシナプス演算と並列学習を可能にするSpikingSSMs。WikiText-103の言語モデリングと長系列ベンチマークで評価するが、主な貢献はモデル学習・表現と学習高速化であり、現代LLMサービングの実測token/sやGPU推論効率は要旨で不明なため境界扱い。",
+      "source_url": "https://arxiv.org/abs/2408.14909",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 142,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.00311",
+      "identity_tokens": [
+        "arXiv:2608.00311"
+      ],
+      "title": "SeDeM: Selective Decompression of Hidden-State Memories for Long-Context Question Answering",
+      "reason": "長文脈を圧縮した隠れ状態ブロックとして保存し、質問に関係するブロックだけ選んで展開してdecoderへ渡すSeDeM。圧縮メモリから直接生成する方式の品質低下を避け、ICAE比でオンラインTTFTを1.74〜2.46倍短縮、decode処理量1.08〜1.10倍改善と報告。",
+      "source_url": "https://arxiv.org/abs/2608.00311",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 143,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20839",
+      "identity_tokens": [
+        "arXiv:2505.20839"
+      ],
+      "title": "FireQ: Fast INT4-FP8 Kernel and RoPE-aware Quantization for LLM Inference Acceleration",
+      "reason": "重み・KVをINT4、活性・クエリをFP8にし、INT4-FP8 GEMMとRoPE前後の量子化誤差平滑化を協調設計するFireQ。FlashAttention-3の三段prefillパイプラインも組み込み、QServe比でLlama2 FFN演算1.68倍、Llama3 prefill 1.26倍を報告。低精度推論カーネルの直接的な実装研究。",
+      "source_url": "https://arxiv.org/abs/2505.20839",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 145,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.33586",
+      "identity_tokens": [
+        "arXiv:2609.33586"
+      ],
+      "title": "Approximating Softmax in Pretrained LLMs: Model Sensitivity and Kernel Acceleration",
+      "reason": "B200で注意softmaxの指数関数演算がボトルネックとなる条件を分析し、row最大値を基準に粗い対数重み表現Rowmax-PoTとFlashAttention-4へのRowmax-H15実装を提案。FP8注意forwardのhost計測で因果8K時12.4%、非因果8K時25.8%短縮を報告。品質劣化とカーネル速度を分けて評価する。",
+      "source_url": "https://arxiv.org/abs/2609.33586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 146,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.18383",
+      "identity_tokens": [
+        "arXiv:2603.18383"
+      ],
+      "title": "From Servers to Sites: Compositional Power Trace Generation of LLM Inference for Infrastructure Planning",
+      "reason": "LLMのprefill/decode/idle状態遷移と状態別消費電力分布を合成し、GPUサーバーからラック・施設まで電力トレースを生成する方式。モデル・TP構成・GPU世代を変えてエネルギー誤差の中央値が多くの条件で5%未満と報告。LLM推論設備の電力・容量計画に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2603.18383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 147,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.38878",
+      "identity_tokens": [
+        "arXiv:2609.38878"
+      ],
+      "title": "Audio Token Attention Is Predictable Before the Language Model Runs",
+      "reason": "音声LLMのencoder出力から、言語モデル内部で後に受ける注意の順位を線形写像で事前予測するTriageを提案。言語モデル投入前に音声トークンを削減し、Qwen2.5-Omni-3Bの扱える音声長を約21.8分から62分へ拡大、5分ストリームのGPU同時処理数を最大4倍と報告。音声MLLMのprefill負荷削減に直接寄与。",
+      "source_url": "https://arxiv.org/abs/2609.38878",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 149,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.09703",
+      "identity_tokens": [
+        "arXiv:2608.09703"
+      ],
+      "title": "Matryoshka Language Model Suites",
+      "reason": "500M・1.5B・3Bなど入れ子のサブモデルを単一アーキテクチャ内で学習し、同じパラメータを共有するdraft/verifierの投機的復号へ利用する。独立学習したモデル群に比べ訓練計算36%削減、投機的復号スループット14〜26%改善を報告。モデル群の推論サービングとドラフト構成の直接的な最適化。",
+      "source_url": "https://arxiv.org/abs/2608.09703",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 150,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.07706",
+      "identity_tokens": [
+        "arXiv:2607.07706"
+      ],
+      "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+      "reason": "既存softmax注意を固定backboneのまま線形化する際、キー依存のrank1直交射影とdelta型状態更新が品質維持に重要なことを分析する。sink token・短い畳み込み・固定予算キャッシュルーティングで近似誤差を減らし、LLaMA/Qwen最大32Bの長文脈検索を評価する。推論時の固定状態注意へ移行する技術に関連。",
+      "source_url": "https://arxiv.org/abs/2607.07706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 151,
+      "origin": "discovery_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.05832",
+      "identity_tokens": [
+        "arXiv:2511.05832"
+      ],
+      "title": "Hilbert-Guided Sparse Local Attention",
+      "reason": "Hilbert曲線で画像トークンを並べ替えて2D局所注意のブロック疎性を高め、画像Transformerのウィンドウ注意を高速化する研究。一次要旨の評価対象は高解像度画像と視覚局所注意であり、生成LLMの言語推論やMLLMサービングの実証はないため対象外。",
+      "source_url": "https://arxiv.org/abs/2511.05832",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T19:41:54+09:00",
+      "last_checked_at": "2026-10-30T19:41:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 152,
+      "origin": "discovery_abstract_screen"
+    }
+  ]
+}
