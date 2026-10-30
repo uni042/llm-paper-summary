@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0646-scheduled-chat-45/r01",
+  "reference_main_sha": "80930221adf99c307c4e0b071bae5f73b890c67b",
+  "round_status": "complete",
+  "target_count": 10,
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539693",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539693"
+      ],
+      "title": "ACES: A Chiplet Architecture with Resource Partition and Dynamic Scheduling for Agentic LLMs",
+      "reason": "IEEE DATE 2026の原著要旨を確認。エージェント型LLMの対話単位で変動する演算・メモリ要求に対し、Swing Zonesを備えるチップレット接続構成と、トポロジーを考慮した配置、先行キャッシュ、資源再割当を組み合わせる。Llama-3 8Bのagentic-RAG由来負荷でDistServe系チップレット基準比2.33倍のスループット、平均対話遅延58%減を報告。推論サービングのハードウェア・スケジューリング協調最適化に直接該当。",
+      "source_url": "https://xplorestaging.ieee.org/document/11539693",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 337,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539390",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539390"
+      ],
+      "title": "Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling",
+      "reason": "DATE 2026原著PDFの要旨と導入を確認。DuetInferはVLMのテキスト専用・画像付き要求の前処理と視覚エンコードを分離して並行化し、重み重複をなくす共有メモリ管理と公平性を考慮したスケジューラをvLLMに組み込む。混合負荷でP99 TTFT最大33.7%、E2E遅延最大20%減と報告。VLM推論の実行系最適化そのもの。",
+      "source_url": "https://past.date-conference.com/proceedings-archive/2026/DATA/782.pdf",
+      "body_check": "publisher_fulltext_abstract_and_introduction_checked; evaluation_tables_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 372,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39138",
+      "identity_tokens": [
+        "arXiv:2609.39138"
+      ],
+      "title": "MoSE: Mode-Switching Expander for Mixed LLM Training and Inference",
+      "reason": "arXiv原著要旨を確認。P-D分離推論のKV転送と学習の集合通信で望ましいネットワーク構造が異なる問題に対し、同じ疎エッジ予算内で推論時はP-D直結を増やし、学習時はランダム正則expanderへ切替える。1024グループのフローレベルモデル・20シードで推論側KV通信コストの平均とP95を90.8%、91.9%削減。実機測定ではなくモデル評価だが、推論通信・配置の直接的最適化を含む。",
+      "source_url": "https://arxiv.org/abs/2609.39138",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 374,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.645",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.645"
+      ],
+      "title": "Revisiting Pruning vs Quantization for Small Language Models",
+      "reason": "ACL Anthologyの正式要旨を確認。0.5〜3.8Bの小型言語モデル6種、7言語・7下流タスクでSparseGPT/Wandaによる事後枝刈りとGPTQ/AWQによる量子化を比較。量子化は概してモデル忠実度・多言語perplexity・推論正答率の保持で有利だが、OpenBookQA等では優位性が縮小する。新カーネルの速度測定ではなく、端末配備向け圧縮方式選択に直接関わる実証研究。",
+      "source_url": "https://aclanthology.org/2025.findings-emnlp.645/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 376,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IPDPSW71298.2026.00091",
+      "identity_tokens": [
+        "DOI:10.1109/IPDPSW71298.2026.00091"
+      ],
+      "title": "ViSched: Reinforcement Learning-Based Scheduling for Vision-Language Model Inference on a Heterogeneous GPU Cluster",
+      "reason": "IPDPSW 2026の原著要旨転載を照合。ViSchedはPPOを用いて、異種GPUクラスタ上のVLM推論要求ごとに割当ノードとGPU数を共同決定し、TP度数をSLA圧力・クラスタ状態に合わせ動的調整する。単GPUの検出器から最大8GPUを用いる78B VLMまでを対象とする。RLは学習手段であり主貢献はオンライン推論スケジューリング。数値性能は要旨の確認範囲を超えて断定しない。",
+      "source_url": "https://doi.org/10.1109/IPDPSW71298.2026.00091",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 414,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539287",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539287"
+      ],
+      "title": "Lupin: Spatial Resource Stealing with Outlier-First Encoding for Mixed-Precision LLM Acceleration",
+      "reason": "DATE 2026公式プログラムの原著要旨を確認。LupinはLLM重みの外れ値を高精度で保持するため、通常値に割当てた記憶資源を再配分するOutlier-First Encodingを提案し、低精度MAC演算器のパイプライン停止を回避する。精度を維持しつつ2.02倍の高速化を報告。LLM推論向け量子化とアクセラレータの協調設計に直接関連。",
+      "source_url": "https://date26.date-conference.com/programme",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 420,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/CVPRF71909.2026.00817",
+      "identity_tokens": [
+        "DOI:10.1109/CVPRF71909.2026.00817"
+      ],
+      "title": "FraQAT: Quantization Aware Training with Fractional Bits",
+      "reason": "CVPR Findings 2026の原著要旨を確認。32bitから4bitまで分数ビット幅を経由して段階的に量子化するQAT方式を提案し、SD3.5、Sana、PixArt-Σ、FLUX.1-schnellなど画像生成拡散モデルのFIDとスマートフォン上Sana実行で評価する。量子化機構は言語モデルへ転用可能性があるが、原著要旨で直接検証される主対象は画像生成であり、LLM推論の実装・速度改善は確証できない。",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2026F/html/Morreale_FraQAT_Quantization_Aware_Training_with_Fractional_Bits_CVPRF_2026_paper.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 437,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TNSE.2026.3727990",
+      "identity_tokens": [
+        "DOI:10.1109/TNSE.2026.3727990"
+      ],
+      "title": "M-CSN: Joint Architecture and Flow Scheduling for Metro-Scale AI Fabric Based on Supernodes",
+      "reason": "IEEE TNSE 2026原著要旨の書誌転載を確認。都市域に分散したLLM推論supernode間で、100km級光伝搬遅延と12.8Tbps級のパイプライン並列通信がスイッチバッファを圧迫する問題を扱う。M-CSNはLOTUSのモデル駆動フロー・スケジューリングを都市域AI計算ファブリックに統合し、推論時通信の輻輳制御に直接取り組む。要旨だけで性能倍率を補わない。",
+      "source_url": "https://doi.org/10.1109/TNSE.2026.3727990",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 463,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/JSSC.2025.3571315",
+      "identity_tokens": [
+        "DOI:10.1109/JSSC.2025.3571315"
+      ],
+      "title": "A 22-nm 109.3-to-249.5-TFLOPS/W Outlier-Aware Floating-Point SRAM Compute-in-Memory Macro for Large Language Models",
+      "reason": "IEEE JSSC 2026の原著要旨転載を確認。22nmの512kB 8T SRAM OA-CIM試作で、BF16外れ値とINT4通常値を要素単位で混合処理する。LUT型MAC、指数比較を省くゲート、スパース読出し・重み符号化を設計し、INT4モード346.6TOPS/W、外れ値モード249.5TFLOPS/Wを報告。チップマクロのエネルギー効率でありLLM全体の生成速度と混同しない。",
+      "source_url": "https://ieeexplore.ieee.org/document/11016687/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 468,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562436",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562436"
+      ],
+      "title": "A Hardware-Software Co-design for LLMs with Exponent-Element Quantization Towards Compute-in-Memory",
+      "reason": "ISCAS 2026の原著要旨転載を確認。EEQは共有指数と低ビット整数要素で浮動小数点値を表し、量子化・逆量子化時の浮動小数点演算を省く。EEQ対応CIM周辺回路と行列積マッピングのシミュレータを共同設計し、Llama-2-7BのW6A6でFP16比の行列積実行時間40.8%、転送量41.4%減を報告。LLM推論向けハードウェア・量子化の直接的貢献。",
+      "source_url": "https://doi.org/10.1109/ISCAS66217.2026.11562436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T06:53:45+09:00",
+      "last_checked_at": "2026-10-31T06:53:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 470,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
