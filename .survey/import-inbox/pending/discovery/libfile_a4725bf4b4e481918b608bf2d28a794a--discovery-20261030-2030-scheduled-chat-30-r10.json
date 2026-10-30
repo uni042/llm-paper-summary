@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r10",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02570",
+      "identity_tokens": [
+        "arXiv:2604.02570",
+        "DOI:10.48550/arXiv.2604.02570"
+      ],
+      "title": "WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models",
+      "reason": "重み重要度を考慮した細粒度SVDと重み・活性量子化を組み合わせ、VLMで実測デコード速度1.8倍超を報告する。低ランク近似の理論的FLOPsだけでなく実際の実行遅延を改善する直接的な推論圧縮手法。",
+      "source_url": "https://arxiv.org/abs/2604.02570",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 323,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.03777",
+      "identity_tokens": [
+        "arXiv:2406.03777",
+        "DOI:10.48550/arXiv.2406.03777"
+      ],
+      "title": "Empirical Guidelines for Deploying LLMs onto Resource-constrained Edge Devices",
+      "reason": "資源制約のあるエッジでLLMの圧縮率・モデルサイズ・個人化データ量・RAGと微調整の選択を系統的にベンチマークする。新しいカーネルではないが、LLM展開の実測制約と圧縮方式の選択を直接評価するため推論システムの評価・ベンチマーク系統へ採用。",
+      "source_url": "https://arxiv.org/abs/2406.03777",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 324,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.08330",
+      "identity_tokens": [
+        "arXiv:2407.08330",
+        "DOI:10.48550/arXiv.2407.08330"
+      ],
+      "title": "HDT: Hierarchical Document Transformer",
+      "reason": "階層文書のanchor tokenと疎な多層注意を組み合わせ、サンプルごとに異なる疎パターンを扱うカーネルを開発する。計算・メモリ効率に関係するが、一次要旨の対象は階層文書理解であり、自己回帰LLM生成推論の速度・KV管理への直接評価は確認できない。",
+      "source_url": "https://arxiv.org/abs/2407.08330",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 325,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2009.06857",
+      "identity_tokens": [
+        "arXiv:2009.06857",
+        "DOI:10.48550/arXiv.2009.06857"
+      ],
+      "title": "Current Limitations of Language Models: What You Need is Retrieval",
+      "reason": "非因果モデル・効率的注意・再帰・条件付き計算・検索の性能計算量トレードオフを論じ、検索で長文脈を補う方向を提唱する。重要な初期の位置づけ論文だが、要旨では新しい実装と定量的なLLM推論高速化を実証していない。",
+      "source_url": "https://arxiv.org/abs/2009.06857",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 326,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.17836",
+      "identity_tokens": [
+        "arXiv:2601.17836",
+        "DOI:10.48550/arXiv.2601.17836"
+      ],
+      "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction",
+      "reason": "SparseCTRは推薦システムのクリック率予測に特化し、長期ユーザー行動列を三分岐疎注意で処理する。LLMを背景に言及するが、評価はCTR/CPMであり生成LLM推論システムとは対象が異なる。",
+      "source_url": "https://arxiv.org/abs/2601.17836",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 327,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2403.20262",
+      "identity_tokens": [
+        "arXiv:2403.20262",
+        "DOI:10.48550/arXiv.2403.20262"
+      ],
+      "title": "ELITR-Bench: A Meeting Assistant Benchmark for Long-Context Language Models",
+      "reason": "雑音を含む会議文字起こしからの長文脈QAを271問で評価し、12のLLMの品質・頑健性を比較する。長文脈推論の品質評価には有用だが、計算資源・速度・メモリ効率を評価するベンチマークではない。",
+      "source_url": "https://arxiv.org/abs/2403.20262",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 331,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.00053",
+      "identity_tokens": [
+        "arXiv:2607.00053",
+        "DOI:10.48550/arXiv.2607.00053"
+      ],
+      "title": "SWE-Router: Routing in Multi-turn Agentic Software Engineering Tasks",
+      "reason": "安価なモデルに数ターンの探索を行わせ、得られた途中軌跡から高価なモデルへ昇格するかを判断するSWE-Routerを提案。タスク説明だけによる静的ルーティングより費用効率を改善し、強いモデルの大部分の成功率を維持するエージェント推論時モデル選択手法。",
+      "source_url": "https://arxiv.org/abs/2607.00053",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 333,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.06454",
+      "identity_tokens": [
+        "arXiv:2602.06454",
+        "DOI:10.48550/arXiv.2602.06454"
+      ],
+      "title": "RelayGen: Intra-Generation Model Switching for Efficient Reasoning",
+      "reason": "長い思考の途中で難易度が変わる点を利用し、トークン確率差から低難度区間を検出して小型モデルへ継続生成を移す訓練不要のRelayGenを提案。投機的復号と併用すると精度低下2%未満でend-to-end最大2.2倍高速化と報告する。",
+      "source_url": "https://arxiv.org/abs/2602.06454",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 334,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04250",
+      "identity_tokens": [
+        "arXiv:2604.04250",
+        "DOI:10.48550/arXiv.2604.04250"
+      ],
+      "title": "CAWN: Continuous Acoustic Wave Networks for Autoregressive Language Modeling",
+      "reason": "複素phasorの位相蓄積と選択的共鳴で系列をO(L)に混合する連続モデルCAWNを提案。150Mモデルの試作では2百万トークンにわたりピークVRAM 8.72GBを維持すると報告する。ただし大規模LLMと同等品質での速度改善は未実証。",
+      "source_url": "https://arxiv.org/abs/2604.04250",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 336,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.18672",
+      "identity_tokens": [
+        "arXiv:2508.18672",
+        "DOI:10.48550/arXiv.2508.18672"
+      ],
+      "title": "Optimal Sparsity of Mixture-of-Experts Language Models for Reasoning Tasks",
+      "reason": "MoEの総パラメータ・活性FLOPs・routing top-kと推論品質の関係を学習予算固定で比較し、推論時活性計算量と推論精度のトレードオフを分析する。モデル設計には有用だが、中心は学習時スケーリング則でありサービング高速化の新規実装ではない。",
+      "source_url": "https://arxiv.org/abs/2508.18672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:37:58+09:00",
+      "last_checked_at": "2026-10-30T20:37:58+09:00",
+      "linked_from": [],
+      "worklist_rank": 338,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
