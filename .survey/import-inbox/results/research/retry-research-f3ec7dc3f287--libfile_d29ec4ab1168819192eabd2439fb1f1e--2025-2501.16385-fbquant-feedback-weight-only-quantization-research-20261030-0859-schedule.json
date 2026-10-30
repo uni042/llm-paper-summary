@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "2652f2808bcf541de3eee93523be14f051a766f8e574689b0c3934d102a76d09",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f3ec7dc3f287--libfile_d29ec4ab1168819192eabd2439fb1f1e--2025-2501.16385-fbquant-feedback-weight-only-quantization-research-20261030-0859-scheduled-chat-45-r02.md",
+  "canonical_id": "arXiv:2501.16385",
+  "worker_completed_at": "2026-10-30T09:00:15+09:00",
+  "worker_run_key": "20261030-0847-scheduled-chat-45/r02",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 4695,
+    "body_paragraphs": 23,
+    "method_chars": 1129,
+    "method_paragraphs": 6,
+    "evaluation_chars": 153,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 153 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "説明不足トリガー: 評価説明量 153 < 500"
+  ],
+  "processed_at": "2026-10-30T03:31:34+00:00"
+}
