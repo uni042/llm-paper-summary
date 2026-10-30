@@ -35,10 +35,15 @@
   "selection_reason": "StepPruneは画像トークンを固定top-Kで選ぶ代わりに、質問文と既選択トークンを条件とする逐次選択とSTOP動作で入力ごとの残存数を決める。学習時はノイズゲートで離散選択を近似し、推論時は不要トークンを言語モデルprefill前に物理削除するためMLLM推論遅延を直接削減する。",
   "semantic_scholar_id": "5bfb8fe103a572b7c99bc439edac4068a9e987b6",
   "source_url": "https://arxiv.org/abs/2609.13804",
-  "status": "ready",
+  "status": "superseded",
   "title": "StepPrune: Adaptive Sequential Visual Token Selection across Multimodal Large Language Models",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T01:28:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2609.13804-stepprune-adaptive-sequential-visual-token-selection-across-multimodal-l.md",
+  "represented_canonical_id": "arXiv:2609.13804",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

@@ -35,10 +35,15 @@
   "selection_reason": "ICBQは隣接Transformerブロックを一度だけ順次再構成する低ビットPTQの誤差伝播に対し、チャンク境界の二ブロック組を二度最適化する交互スケジュールを導入する。三値DBFと2・3ビットGPTQでLLM重み圧縮時のPPL劣化を評価する、推論用低ビット化に直結する技術であるためaccept。",
   "semantic_scholar_id": "43f11470f784c36df8c680c4eaf2cb534e14ea73",
   "source_url": "https://arxiv.org/abs/2608.09595",
-  "status": "ready",
+  "status": "superseded",
   "title": "From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T01:28:51+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2026-2608.09595-from-sweep-to-seam-interleaved-cross-block-post-training-quantization.md",
+  "represented_canonical_id": "arXiv:2608.09595",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

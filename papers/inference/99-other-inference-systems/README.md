@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（833本）
+## 自動生成の論文一覧（835本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -534,6 +534,10 @@
   実装：[✓](https://github.com/Dreamer-Toby/STEPQuant) ・ リポジトリ内被引用：0  
   Gated DeltaNetやKimi Delta 注意機構の状態は通常FP32で保持され、要求ごとに持続するため、重みを4ビットへ圧縮した後は状態プールの容量がサービングの律速となり得る。
 
+- **2026-09 · [StepPrune: Adaptive Sequential Visual Token Selection across Multimodal Large Language Models](2026-2609.13804-stepprune-adaptive-sequential-visual-token-selection-across-multimodal-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  多くの視覚言語モデルは、画像エンコーダが生成した数百〜数千個の視覚トークンをテキスト指示の前へ付けてLLMに入力する。これらの視覚prefixはプリフィルで全層を通るため、視覚側の冗長性が大きいと推論計算とKV容量の双方に負担をかける。StepPruneは視覚トークン保持を逐次的な意思決定問題として定義する。
+
 - **2026-09 · [SpliTEE: Improving LLM Inference on Trusted Hardware with Differentially Private GPU Outsourcing](2026-2609.15039-splitee-improving-llm-inference-on-trusted-hardware-with-differentially-private-gpu-outsourcing.md)**  
   実装：[✓](https://github.com/DPVault/SpliTEE) ・ リポジトリ内被引用：0  
   TEE内のLLM線形演算を差分プライバシーで保護してGPUへ委譲し、プロンプト漏洩を抑えつつCPU-only TDX推論を約2倍高速化する。
@@ -689,6 +693,10 @@
 - **2026-08 · [Learning What to Remember: Test-Time Training via Context Distillation](2026-2608.01672-learning-what-to-remember-test-time-training-via-context-distillation.md)**  
   実装：[✓](https://github.com/dangxingyu/ttcd) ・ リポジトリ内被引用：0  
   通常の全注意（full 注意機構）は長い履歴の情報を参照できる一方、長さに応じて注意計算と鍵・値（KV）キャッシュの費用が増える。760Mパラメータをゼロから学習したモデルのRULER針検索（6課題平均）では、32KトークンでIP-TTTの9.29%に対しIP-TTCDは21.96%。
+
+- **2026-08 · [From Sweep to Seam: Interleaved Cross-Block Post-Training Quantization](2026-2608.09595-from-sweep-to-seam-interleaved-cross-block-post-training-quantization.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Interleaved Cross-Block Quantization（ICBQ）は、学習済みLLMの重みを極低ビットへ圧縮する際、隣接Transformerブロックを再構成する最適化窓をどの順序で訪れるかを変更する方式である。
 
 - **2026-08 · [FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration](2026-2608.25062-flint-efficiently-leveraging-high-bandwidth-flash-for-capacity-scalable-llm-inference-acceleration.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
