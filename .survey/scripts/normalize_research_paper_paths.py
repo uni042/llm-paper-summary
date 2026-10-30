@@ -4,10 +4,29 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
 
 from paper_path_resolver import resolve_paper_path
+
+
+_LEGACY_DOI_SUFFIX_RE = re.compile(r"(?i)^DOI:.*[./](20\d{2}\.\d{4,5})$")
+_LEGACY_PATH_RE = re.compile(r"/2020-(20\d{2}\.\d{4,5})-")
+
+
+def needs_normalization(job: dict[str, Any]) -> bool:
+    if job.get("type") != "research":
+        return False
+    if job.get("paper_path") is None:
+        return _has_identity(job)
+    if job.get("arxiv_id"):
+        return False
+    canonical = str(job.get("canonical_id") or "").strip()
+    paper_path = str(job.get("paper_path") or "")
+    doi_match = _LEGACY_DOI_SUFFIX_RE.fullmatch(canonical)
+    path_match = _LEGACY_PATH_RE.search(paper_path)
+    return bool(doi_match and path_match and doi_match.group(1) == path_match.group(1))
 
 
 def _read_object(path: Path) -> dict[str, Any] | None:
@@ -30,9 +49,10 @@ def _has_identity(job: dict[str, Any]) -> bool:
 
 
 def normalize(repo_root: Path, *, apply: bool = False) -> dict[str, Any]:
-    """Fill missing Research ``paper_path`` fields without changing explicit paths.
+    """Fill missing paths and repair the legacy DOI-suffix/arXiv path bug.
 
-    The resolver intentionally uses the repository's final ``99-other`` inference
+    Explicit paths are otherwise preserved.  The resolver intentionally uses the
+    repository's final ``99-other`` inference
     bucket when discovery did not classify a paper. Jobs without any stable identity
     are reported and left untouched rather than receiving a collision-prone fabricated
     path.
@@ -59,14 +79,18 @@ def normalize(repo_root: Path, *, apply: bool = False) -> dict[str, Any]:
         if job is None or job.get("type") != "research":
             continue
         scanned += 1
-        if job.get("paper_path") is not None:
+        if not needs_normalization(job):
             continue
         relative = path.relative_to(repo_root).as_posix()
         if not _has_identity(job):
             unresolved_paths.append(relative)
             continue
         try:
-            paper_path = resolve_paper_path(job)
+            # The resolver preserves explicit paths by design.  Clear only the
+            # in-memory copy so legacy DOI-suffix/arXiv misparses are rebuilt.
+            source = dict(job)
+            source["paper_path"] = None
+            paper_path = resolve_paper_path(source)
         except (TypeError, ValueError):
             unresolved_paths.append(relative)
             continue
