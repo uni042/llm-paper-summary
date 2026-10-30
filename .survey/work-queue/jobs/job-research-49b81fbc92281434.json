@@ -35,10 +35,15 @@
   "selection_reason": "FBQuantは負帰還の考え方で重み再構成を量子化誤差に対して有界化し、補助枝による精度回復を安定化する。追加枝の推論時間を抑えるCUDAカーネルも設計し、端末上LLMの重み読出し帯域と低ビット精度を直接改善するためaccept。",
   "semantic_scholar_id": "4fa01315f74e9efed29f0ae581ae117d34b56e0a",
   "source_url": "https://arxiv.org/abs/2501.16385",
-  "status": "ready",
+  "status": "superseded",
   "title": "FBQuant: FeedBack Quantization for Large Language Models",
   "type": "research",
   "venue": "International Joint Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T08:54:16+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/16-weight-quantization-compression/2025-2501.16385-fbquant-feedback-quantization-for-large-language-models.md",
+  "represented_canonical_id": "arXiv:2501.16385",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

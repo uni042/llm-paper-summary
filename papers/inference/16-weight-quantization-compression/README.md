@@ -25,7 +25,7 @@
 - [08-edge-on-device-llm-systems](../08-edge-on-device-llm-systems/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（176本）
+## 自動生成の論文一覧（177本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/16-weight-quantization-compression/)
 
@@ -469,6 +469,10 @@
 - **2025-05 · [Optimal Formats for Weight Quantisation](2025-2505.12988-optimal-formats-for-weight-quantisation.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   低ビット重み量子化では、整数、浮動小数点、非一様コードブック、ブロック単位のスケーリング、外れ値の高精度保持など、数値表現の選択肢が多数ある。
+
+- **2025-01 · [FBQuant: FeedBack Quantization for Large Language Models](2025-2501.16385-fbquant-feedback-quantization-for-large-language-models.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FBQuantは、LLMの重みのみを3/4ビットへ量子化するときに生じる誤差を、LoRA型の低ランク副枝で補償する方式である。FBQuantは主枝の復元・行列積と副枝のup投影を一つのCUDAカーネルに融合し、追加レイテンシの約60%を削減する。
 
 ### 3年前（2023-11〜2024-10）
 
