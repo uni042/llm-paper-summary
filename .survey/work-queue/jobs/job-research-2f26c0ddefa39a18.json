@@ -35,10 +35,15 @@
   "selection_reason": "LiteStageは多段階推論の段階ごとに異なる層スキップ感度を考慮し、オフライン探索で段階別の層予算を配分し、オンラインの確信度に応じて不要な生成を早期終了する。小型LLMの推論遅延削減が直接目的なのでaccept。",
   "semantic_scholar_id": "17e1a2a999ab24708e58d3fbd286910121be91a5",
   "source_url": "https://arxiv.org/abs/2510.14211",
-  "status": "ready",
+  "status": "superseded",
   "title": "LiteStage: Latency-aware Layer Skipping for Multi-stage Reasoning",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T08:14:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2510.14211-litestage-latency-aware-layer-skipping-for-multi-stage-reasoning.md",
+  "represented_canonical_id": "arXiv:2510.14211",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

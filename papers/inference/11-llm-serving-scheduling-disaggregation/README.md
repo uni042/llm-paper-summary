@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（525本）
+## 自動生成の論文一覧（526本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1779,6 +1779,10 @@
 - **2025-05 · [Harmonia: End-to-End RAG Serving Optimization](2025-2505.07833-harmonia-end-to-end-rag-serving-optimization.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   Harmoniaは開発者のPythonワークフローからコンポーネント依存関係を抽出し、CPU/GPUとメモリを配置して、実行中の負荷や分岐頻度に応じて再配分する。
+
+- **2025-03 · [Alchemist: Towards the Design of Efficient Online Continual Learning System](2025-2503.01066-alchemist-towards-the-design-of-efficient-online-continual-learning-syst.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Alchemistは、LLMのサービングとオンライン継続学習を別々のGPUやプロセスで実行すると、サービングのプリフィルで既に計算した中間活性を学習側が再計算してしまうことに着目したシステムである。著者らの分析では、この重複した順伝播計算がオンライン学習時間の30～42%を占める。
 
 - **2025-01 · [Mixed-Precision Graph Neural Quantization for Low Bit Large Language Models](2025-2501.18154-mixed-precision-graph-neural-quantization-for-low-bit-large-language-mod.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

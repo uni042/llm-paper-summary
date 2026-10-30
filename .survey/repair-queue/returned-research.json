@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T07:57:10+00:00",
+  "generated_at": "2026-10-30T08:15:00+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -12,7 +12,7 @@
     ],
     "completion": "removed after a later imported/already_represented receipt for the same canonical_id"
   },
-  "count": 97,
+  "count": 95,
   "entries": [
     {
       "canonical_id": "arXiv:2608.21952",
@@ -1437,34 +1437,6 @@
       "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2503.01066",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-27T08:09:01+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 190 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6574,
-        "body_paragraphs": 37,
-        "method_chars": 2648,
-        "method_paragraphs": 13,
-        "evaluation_chars": 190,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 190 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-d7ad92acecfe--libfile_f9bad6adad74819189590e6f7b22d6c5--2025-2503.01066-alchemist-serving-activation-reuse-research-20261027-1345-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-d7ad92acecfe--libfile_f9bad6adad74819189590e6f7b22d6c5--2025-2503.01066-alchemist-serving-activation-reuse-research-20261027-1345-scheduled-chat-.json",
-      "worker_run_key": "20261027-1345-scheduled-chat-45/r01"
-    },
-    {
       "canonical_id": "arXiv:2510.11602",
       "title": null,
       "source_url": null,
@@ -2182,36 +2154,6 @@
       "worker_run_key": "20261030-1230-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "arXiv:2609.10355",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-30T05:08:18+00:00",
-      "return_count": 3,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700",
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5106,
-        "body_paragraphs": 32,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 0,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "評価説明量 0 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_c9521f0dc7e48191a5b8750aefd1a4a4--2026-2609.10355-video-inference-efficiency-survey-research-20261030-1303-scheduled-chat-00-r02.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_c9521f0dc7e48191a5b8750aefd1a4a4--2026-2609.10355-video-inference-efficiency-survey-research-20261030-1303-scheduled-chat-00-r02.json",
-      "worker_run_key": "20261030-1303-scheduled-chat-00/r02"
-    },
-    {
       "canonical_id": "arXiv:2309.05210",
       "title": null,
       "source_url": null,
@@ -2521,36 +2463,9 @@
       "worker_run_key": "20261030-1530-scheduled-chat-30/r01"
     },
     {
-      "canonical_id": "DOI:10.3390/fi17040185",
+      "canonical_id": "DOI:10.1145/3771563",
       "title": null,
       "source_url": null,
-      "returned_at": "2026-10-30T07:27:06+00:00",
-      "return_count": 5,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 3424,
-        "body_paragraphs": 16,
-        "method_chars": 970,
-        "method_paragraphs": 4,
-        "evaluation_chars": 0,
-        "limitation_chars": 936,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/libfile_db76269f97d881918c9fc88f7706788d--2025-doi-10.3390-fi17040185-activation-spikes-qfem-qfep-research-20261030-1425-scheduled-chat-45-r01.json",
-      "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
-    },
-    {
-      "canonical_id": "DOI:10.1145/3771563",
-      "title": "Benchmarking and Characterization of Large Language Model Inference on Apple Silicon",
-      "source_url": "https://arxiv.org/pdf/2508.08531",
       "returned_at": "2026-10-30T07:52:36+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2576,8 +2491,8 @@
     },
     {
       "canonical_id": "arXiv:2411.02795",
-      "title": "The Evolution of RWKV: Advancements in Efficient Language Modeling",
-      "source_url": "https://arxiv.org/html/2411.02795v1",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T07:54:29+00:00",
       "return_count": 1,
       "assigned_worker": "scheduled-chat-45",
@@ -2602,6 +2517,35 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_58fd4d35ee648191af566eb13060d58e--2024-2411.02795-rwkv-evolution-survey-research-20261030-1616-scheduled-chat-45-r02.json",
       "worker_run_key": "20261030-1616-scheduled-chat-45/r02"
+    },
+    {
+      "canonical_id": "arXiv:2609.10355",
+      "title": "Why Is Video Still So Expensive? A Survey of Inference-Efficiency Mechanisms in Video and Audiovisual LLMs",
+      "source_url": "https://arxiv.org/html/2609.10355v1",
+      "returned_at": "2026-10-30T08:12:59+00:00",
+      "return_count": 4,
+      "assigned_worker": "scheduled-chat-00",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 手法説明量 0 < 700",
+        "説明不足トリガー: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5542,
+        "body_paragraphs": 24,
+        "method_chars": 0,
+        "method_paragraphs": 0,
+        "evaluation_chars": 0,
+        "limitation_chars": 665,
+        "insufficiency_flags": [
+          "手法説明量 0 < 700",
+          "評価説明量 0 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cb2122e29834819191b8921eee8600f4--2026-2609.10355-videollm-efficiency-survey-research-20261030-1616-scheduled-chat-45-r01.json",
+      "worker_run_key": "20261030-1616-scheduled-chat-45/r01"
     }
   ]
 }

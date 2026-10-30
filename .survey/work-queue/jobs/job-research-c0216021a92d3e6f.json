@@ -35,10 +35,15 @@
   "selection_reason": "重みをSigma-Delta量子化とアップサンプリングで1bit/1.58bitへ変換し、層・線形演算別のオーバーサンプリング率を最適化する。OPTとLLaMAで極低ビット量子化の精度と計算効率を評価するためLLM推論圧縮に適合。",
   "semantic_scholar_id": "2e79df5ee8b80e276a388a7a523eae27373e0501",
   "source_url": "https://arxiv.org/abs/2510.03275",
-  "status": "ready",
+  "status": "superseded",
   "title": "SDQ-LLM: Sigma-Delta Quantization for 1-bit LLMs of any size",
   "type": "research",
   "venue": "European Conference on Artificial Intelligence",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T08:14:58+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2510.03275-sdq-llm-sigma-delta-quantization-for-1-bit-llms-of-any-size.md",
+  "represented_canonical_id": "arXiv:2510.03275",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
