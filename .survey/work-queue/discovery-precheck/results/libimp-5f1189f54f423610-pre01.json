@@ -1,0 +1,681 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5f1189f54f423610-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5f1189f54f42",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2504.07479",
+    "arXiv:2601.22787",
+    "arXiv:2602.08607",
+    "arXiv:2603.25385",
+    "arXiv:2607.10640",
+    "arXiv:2608.23167",
+    "arXiv:2609.06324"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 7,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 7,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T10:58:32.093602+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2504.07479",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2601.22787",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2602.08607",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.25385",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2607.10640",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.23167",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.06324",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Float8@2bits: Entropy Coding Enables Data-Free Model Compression",
+      "source_url": "https://arxiv.org/abs/2601.22787",
+      "year": 2026,
+      "published": "2026-01-30",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training compression is currently divided into two contrasting regimes. On the one hand, fast, data-free, and model-agnostic methods (e.g., NF4 or HQQ) offer maximum accessibility but suffer from functional collapse at extreme bit-rates below 4 bits. On the other hand, techniques leveraging calibration data or extensive recovery training achieve superior fidelity but impose high computational constraints and face uncertain robustness under data distribution shifts. We introduce EntQuant, a framework that unites the advantages of these distinct paradigms. By matching the performance of data-dependent methods with the speed and universality of data-free techniques, EntQuant enables practical utility in the extreme compression regime. Our method decouples numerical precision from storage cost via entropy coding, compressing a 70B parameter model in less than 10 minutes. We demonstrate that EntQuant does not only achieve state-of-the-art results on standard evaluation sets and models, but also retains functional performance on more complex benchmarks with instruction-tuned models, all at modest inference overhead.",
+      "identifiers": [
+        "SemanticScholar:0d1df9c6cc890700f54d9b8c9bd4430e77a9e1c6"
+      ],
+      "semantic_scholar_id": "0d1df9c6cc890700f54d9b8c9bd4430e77a9e1c6",
+      "canonical_id": "arXiv:2601.22787",
+      "arxiv_id": "2601.22787",
+      "doi": "10.48550/arXiv.2601.22787",
+      "authors": [
+        "P. Putzky",
+        "Martin Genzel",
+        "Mattes Mollenhauer",
+        "Sebastian Schulze",
+        "Thomas Wollmann",
+        "Stefan Dietzel"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2607.10640",
+      "year": 2026,
+      "published": "2026-07-12",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-Language Models (VLMs) are costly at inference time because they must process long sequences of visual tokens. Existing token pruning methods often degrade under high compression by blindly discarding information, breaking spatial structure or collapsing diversity. We propose SpecFlow, a training-free framework that shifts the paradigm from destructive pruning to conservative condensation, strictly enforcing spatial coverage and statistical conservation to ensure stability. Treating visual tokens as nodes in a $k$NN graph, SpecFlow (i) computes a stable importance field via spectral heat flow to preserve structural coherence, (ii) allocates budgets via adaptive spatial partitioning to guarantee coverage, and (iii) aggregates discarded information into coreset sinks to maintain statistical conservation. The method is plug-and-play, requires no fine-tuning, and is compatible with FlashAttention. Experiments confirm that our SpecFlow outperforms SOTA methods across tasks, VLM architectures, and pruning ratios. Notably, LLaVA-1.5 with SpecFlow retains 95.6% of original performance despite pruning 88.9% of visual tokens, offering an exceptional efficiency-accuracy balance. Code is available at https://github.com/Lzy-dot/SpecFlow",
+      "identifiers": [
+        "SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16"
+      ],
+      "semantic_scholar_id": "95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+      "canonical_id": "arXiv:2607.10640",
+      "arxiv_id": "2607.10640",
+      "doi": "10.48550/arXiv.2607.10640",
+      "authors": [
+        "Zhao-Yang Li",
+        "Yanjun Li",
+        "Wangkai Li",
+        "Yujia Chen",
+        "Tianzhu Zhang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 110,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "VocalNet-MDM: Accelerating Streaming Speech LLM via Self-Distilled Masked Diffusion Modeling",
+      "source_url": "https://arxiv.org/abs/2602.08607",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent Speech Large Language Models~(LLMs) have achieved impressive capabilities in end-to-end speech interaction. However, the prevailing autoregressive paradigm imposes strict serial constraints, limiting generation efficiency and introducing exposure bias. In this paper, we investigate Masked Diffusion Modeling~(MDM) as a non-autoregressive paradigm for speech LLMs and introduce VocalNet-MDM. To adapt MDM for streaming speech interaction, we address two critical challenges: training-inference mismatch and iterative overhead. We propose Hierarchical Block-wise Masking to align training objectives with the progressive masked states encountered during block diffusion decoding, and Iterative Self-Distillation to compress multi-step refinement into fewer steps for low-latency inference. Trained on a limited scale of only 6K hours of speech data, VocalNet-MDM achieves a 3.7$\\times$--10$\\times$ decoding speedup and reduces first-chunk latency by 34\\% compared to AR baselines. It maintains competitive recognition accuracy while achieving state-of-the-art text quality and speech naturalness, demonstrating that MDM is a promising and scalable alternative for low-latency, efficient speech LLMs.",
+      "identifiers": [
+        "SemanticScholar:271872655c952c3f5629407e76c999cacbb1579a"
+      ],
+      "semantic_scholar_id": "271872655c952c3f5629407e76c999cacbb1579a",
+      "canonical_id": "arXiv:2602.08607",
+      "arxiv_id": "2602.08607",
+      "doi": "10.48550/arXiv.2602.08607",
+      "authors": [
+        "Zi-Yang Cheng",
+        "Yu-Hao Wang",
+        "He-Yang Liu",
+        "Rong-Hua Wu",
+        "Qun-Shan Gu",
+        "Yan-Feng Wang",
+        "Yu Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 263,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
+      "source_url": "https://arxiv.org/abs/2603.25385",
+      "year": 2026,
+      "published": "2026-03-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization techniques such as BitsAndBytes, AWQ, and GPTQ are widely used as a standard method in deploying large language models but often degrades accuracy when using low-bit representations, e.g., 4 bits. Low-rank correction methods (e.g., LQER, QERA, ASER) has been proposed to mitigate this issue, however, they restore all layers and insert error-correction modules into every decoder block, which increases latency and memory overhead. To address this limitation, we propose GlowQ, a group-shared low-rank approximation for quantized LLMs that caches a single shared right factor per input-sharing group and restores only the groups or layers that yield the highest accuracy benefit. GlowQ computes the high-precision projection once per input-sharing group and reuses it across its modules, reducing parameter and memory overhead, and retaining the expressivity of layer-specific corrections. We also propose a selective variant, GlowQ-S, that applies the cached shared module only where it provides the largest benefit. Compared with strong baselines, our approach reduces TTFB by (5.6%) and increases throughput by (9.6%) on average, while reducing perplexity on WikiText-2 by (0.17%) and increasing downstream accuracy by 0.42 percentage points. The selective model GlowQ-S further reduces latency, cutting TTFB by (23.4%) and increasing throughput by (37.4%), while maintaining accuracy within 0.2 percentage points on average. Code is available at https://github.com/ahnselim/GlowQ.",
+      "identifiers": [
+        "SemanticScholar:144713214950f337c2f9bc5867dd7d3c2c1dd973"
+      ],
+      "semantic_scholar_id": "144713214950f337c2f9bc5867dd7d3c2c1dd973",
+      "canonical_id": "arXiv:2603.25385",
+      "arxiv_id": "2603.25385",
+      "doi": "10.48550/arXiv.2603.25385",
+      "authors": [
+        "S. An",
+        "Ilhong Suh",
+        "Yeseong Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 218,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Accelerating Diffusion Language Models via Structured Suffix Modeling",
+      "source_url": "https://arxiv.org/abs/2608.23167",
+      "year": 2026,
+      "published": "2026-08-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion Language Models (DLMs) exhibit strong parallel decoding capabilities by denoising multiple tokens in a single generation step. However, this parallelism comes with substantial computational overhead, as each step requires interactions with all suffix tokens. Existing methods typically reduce this cost by retaining only a local suffix window as a substitute for the full suffix. Despite their effectiveness, these methods overlook the structural heterogeneity across suffix regions and re-initialize suffix tokens with identical representations at each timestep. To this end, we propose a structured suffix modeling method for efficient DLM inference. Specifically, we divide the suffix into three regions, i.e., the local, middle, and tail regions, and retain different numbers of suffix tokens in each region according to their structural roles. Moreover, we incorporate the decoding results from the previous step into the suffix token representations at the current step, allowing them to carry evolving denoising information across generation steps. Notably, our method is training-free and orthogonal to several existing acceleration techniques, such as parallel decoding strategies and KV cache. Empirical results across multiple benchmarks on three DLMs demonstrate that our method can further accelerate DLM inference and improve performance in most cases. In particular, in long-sequence inference, our method achieves up to a \\(72.81\\times\\) speedup when combined with other acceleration techniques. Our code is available at https://github.com/zifengcheng/SSM.",
+      "identifiers": [
+        "SemanticScholar:db3c3ab9528f25ebf5a37dcb052457b6bdfe365b"
+      ],
+      "semantic_scholar_id": "db3c3ab9528f25ebf5a37dcb052457b6bdfe365b",
+      "canonical_id": "arXiv:2608.23167",
+      "arxiv_id": "2608.23167",
+      "authors": [
+        "Zi-Feng Cheng",
+        "Ke-Da Li",
+        "Zhiwei Jiang",
+        "Cong Wang",
+        "Fei Shen",
+        "Qing Gu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 67,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2609.06324",
+      "year": 2026,
+      "published": "2026-09-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Can a diffusion language model generate a coherent token block in one forward pass? Masked models already predict every position at once, but each prediction is the marginal distribution given the visible context, so the tokens can be mutually inconsistent and later steps revise those already committed. We introduce CONDOR (Coupled-Noise Distillation for One-Step Readout), trained from scratch to map different noise samples to different coherent blocks. Initially, random noise is not naturally paired with a target. Winner-take-all supervision lets different samples specialize, and self-distillation trains the one-pass output to match the refined coherent block. TinyStories experiments show diverse, coherent continuations over successive blocks, one forward pass each. Qualitative MNIST experiments show that the same approach can extend to multimodal generation, such as text-to-image and unconditional text-and-image generation.",
+      "identifiers": [
+        "SemanticScholar:d8ab20d5a3af6523e5ce6ffa9c0ce40e5cf1c183"
+      ],
+      "semantic_scholar_id": "d8ab20d5a3af6523e5ce6ffa9c0ce40e5cf1c183",
+      "canonical_id": "arXiv:2609.06324",
+      "arxiv_id": "2609.06324",
+      "authors": [
+        "Lin Yao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 54,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "UniCAIM: A Unified CAM/CIM Architecture with Static-Dynamic KV Cache Pruning for Efficient Long-Context LLM Inference",
+      "source_url": "https://arxiv.org/abs/2504.07479",
+      "year": 2025,
+      "published": "2025-04-10",
+      "venue": "Design Automation Conference",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have achieved impressive performance in various natural language processing (NLP) applications. However, the high memory and computation cost induced by the KV cache limits the inference efficiency, especially for long input sequences. Compute-in-memory (CIM)-based accelerators have been proposed for LLM acceleration with KV cache pruning. However, as existing accelerators only support static pruning with a fixed pattern or dynamic pruning with primitive implementations, they suffer from either high accuracy degradation or low efficiency. In this paper, we propose a ferroelectric FET (FeFET)-based unified content addressable memory (CAM) and CIM architecture, dubbed as UniCAIM. UniCAIM features simultaneous support for static and dynamic pruning with 3 computation modes: 1) in the CAM mode, UniCAIM enables approximate similarity measurement in $\\mathcal{O}(1)$ time for dynamic KV cache pruning with high energy efficiency; 2) in the charge-domain CIM mode, static pruning can be supported based on accumulative similarity score, which is much more flexible compared to fixed patterns; 3) in the current-domain mode, exact attention computation can be conducted with a subset of selected KV cache. We further propose a novel CAM/CIM cell design that leverages the multi-level characteristics of FeFETs for signed multibit storage of the KV cache and in-place attention computation. With extensive experimental results, we demonstrate UniCAIM can reduce the area-energy-delay product (AEDP) by $8.2 \\sim 831 \\times$ over the state-of-the-art CIM-based LLM accelerators at the circuit level, along with high accuracy comparable with dense attention at the application level, showing its great potential for efficient long-context LLM inference.",
+      "identifiers": [
+        "SemanticScholar:65b2c9808da0549290f0cad02648a68c0e6621de"
+      ],
+      "semantic_scholar_id": "65b2c9808da0549290f0cad02648a68c0e6621de",
+      "canonical_id": "arXiv:2504.07479",
+      "arxiv_id": "2504.07479",
+      "doi": "10.1109/DAC63849.2025.11133273",
+      "authors": [
+        "Wei-Kai Xu",
+        "Wen-Xuan Zeng",
+        "Qian-Qian Huang",
+        "Meng Li",
+        "Ruei-Hao Huang"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 568,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2601.22787",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2601.22787",
+        "id:SemanticScholar:0d1df9c6cc890700f54d9b8c9bd4430e77a9e1c6",
+        "id:arXiv:2601.22787",
+        "title:float82bits entropy coding enables datafree model compression",
+        "url:https://arxiv.org/abs/2601.22787"
+      ],
+      "record": {
+        "title": "Float8@2bits: Entropy Coding Enables Data-Free Model Compression",
+        "source_url": "https://arxiv.org/abs/2601.22787",
+        "year": 2026,
+        "published": "2026-01-30",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training compression is currently divided into two contrasting regimes. On the one hand, fast, data-free, and model-agnostic methods (e.g., NF4 or HQQ) offer maximum accessibility but suffer from functional collapse at extreme bit-rates below 4 bits. On the other hand, techniques leveraging calibration data or extensive recovery training achieve superior fidelity but impose high computational constraints and face uncertain robustness under data distribution shifts. We introduce EntQuant, a framework that unites the advantages of these distinct paradigms. By matching the performance of data-dependent methods with the speed and universality of data-free techniques, EntQuant enables practical utility in the extreme compression regime. Our method decouples numerical precision from storage cost via entropy coding, compressing a 70B parameter model in less than 10 minutes. We demonstrate that EntQuant does not only achieve state-of-the-art results on standard evaluation sets and models, but also retains functional performance on more complex benchmarks with instruction-tuned models, all at modest inference overhead.",
+        "identifiers": [
+          "SemanticScholar:0d1df9c6cc890700f54d9b8c9bd4430e77a9e1c6"
+        ],
+        "semantic_scholar_id": "0d1df9c6cc890700f54d9b8c9bd4430e77a9e1c6",
+        "canonical_id": "arXiv:2601.22787",
+        "arxiv_id": "2601.22787",
+        "doi": "10.48550/arXiv.2601.22787",
+        "authors": [
+          "P. Putzky",
+          "Martin Genzel",
+          "Mattes Mollenhauer",
+          "Sebastian Schulze",
+          "Thomas Wollmann",
+          "Stefan Dietzel"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 273,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2607.10640",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2607.10640",
+        "id:SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+        "id:arXiv:2607.10640",
+        "title:spectral heat flow for conservative token condensation in visionlanguage models",
+        "url:https://arxiv.org/abs/2607.10640"
+      ],
+      "record": {
+        "title": "Spectral Heat Flow for Conservative Token Condensation in Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2607.10640",
+        "year": 2026,
+        "published": "2026-07-12",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Vision-Language Models (VLMs) are costly at inference time because they must process long sequences of visual tokens. Existing token pruning methods often degrade under high compression by blindly discarding information, breaking spatial structure or collapsing diversity. We propose SpecFlow, a training-free framework that shifts the paradigm from destructive pruning to conservative condensation, strictly enforcing spatial coverage and statistical conservation to ensure stability. Treating visual tokens as nodes in a $k$NN graph, SpecFlow (i) computes a stable importance field via spectral heat flow to preserve structural coherence, (ii) allocates budgets via adaptive spatial partitioning to guarantee coverage, and (iii) aggregates discarded information into coreset sinks to maintain statistical conservation. The method is plug-and-play, requires no fine-tuning, and is compatible with FlashAttention. Experiments confirm that our SpecFlow outperforms SOTA methods across tasks, VLM architectures, and pruning ratios. Notably, LLaVA-1.5 with SpecFlow retains 95.6% of original performance despite pruning 88.9% of visual tokens, offering an exceptional efficiency-accuracy balance. Code is available at https://github.com/Lzy-dot/SpecFlow",
+        "identifiers": [
+          "SemanticScholar:95f53e77f7f779555bc959e6ff3ffa40056b2b16"
+        ],
+        "semantic_scholar_id": "95f53e77f7f779555bc959e6ff3ffa40056b2b16",
+        "canonical_id": "arXiv:2607.10640",
+        "arxiv_id": "2607.10640",
+        "doi": "10.48550/arXiv.2607.10640",
+        "authors": [
+          "Zhao-Yang Li",
+          "Yanjun Li",
+          "Wangkai Li",
+          "Yujia Chen",
+          "Tianzhu Zhang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 110,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.08607",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.08607",
+        "id:SemanticScholar:271872655c952c3f5629407e76c999cacbb1579a",
+        "id:arXiv:2602.08607",
+        "title:vocalnetmdm accelerating streaming speech llm via selfdistilled masked diffusion modeling",
+        "url:https://arxiv.org/abs/2602.08607"
+      ],
+      "record": {
+        "title": "VocalNet-MDM: Accelerating Streaming Speech LLM via Self-Distilled Masked Diffusion Modeling",
+        "source_url": "https://arxiv.org/abs/2602.08607",
+        "year": 2026,
+        "published": "2026-02-09",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent Speech Large Language Models~(LLMs) have achieved impressive capabilities in end-to-end speech interaction. However, the prevailing autoregressive paradigm imposes strict serial constraints, limiting generation efficiency and introducing exposure bias. In this paper, we investigate Masked Diffusion Modeling~(MDM) as a non-autoregressive paradigm for speech LLMs and introduce VocalNet-MDM. To adapt MDM for streaming speech interaction, we address two critical challenges: training-inference mismatch and iterative overhead. We propose Hierarchical Block-wise Masking to align training objectives with the progressive masked states encountered during block diffusion decoding, and Iterative Self-Distillation to compress multi-step refinement into fewer steps for low-latency inference. Trained on a limited scale of only 6K hours of speech data, VocalNet-MDM achieves a 3.7$\\times$--10$\\times$ decoding speedup and reduces first-chunk latency by 34\\% compared to AR baselines. It maintains competitive recognition accuracy while achieving state-of-the-art text quality and speech naturalness, demonstrating that MDM is a promising and scalable alternative for low-latency, efficient speech LLMs.",
+        "identifiers": [
+          "SemanticScholar:271872655c952c3f5629407e76c999cacbb1579a"
+        ],
+        "semantic_scholar_id": "271872655c952c3f5629407e76c999cacbb1579a",
+        "canonical_id": "arXiv:2602.08607",
+        "arxiv_id": "2602.08607",
+        "doi": "10.48550/arXiv.2602.08607",
+        "authors": [
+          "Zi-Yang Cheng",
+          "Yu-Hao Wang",
+          "He-Yang Liu",
+          "Rong-Hua Wu",
+          "Qun-Shan Gu",
+          "Yan-Feng Wang",
+          "Yu Wang"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 263,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2603.25385",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.25385",
+        "id:SemanticScholar:144713214950f337c2f9bc5867dd7d3c2c1dd973",
+        "id:arXiv:2603.25385",
+        "title:glowq groupshared lowrank approximation for quantized llms",
+        "url:https://arxiv.org/abs/2603.25385"
+      ],
+      "record": {
+        "title": "GlowQ: Group-Shared LOw-Rank Approximation for Quantized LLMs",
+        "source_url": "https://arxiv.org/abs/2603.25385",
+        "year": 2026,
+        "published": "2026-03-26",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization techniques such as BitsAndBytes, AWQ, and GPTQ are widely used as a standard method in deploying large language models but often degrades accuracy when using low-bit representations, e.g., 4 bits. Low-rank correction methods (e.g., LQER, QERA, ASER) has been proposed to mitigate this issue, however, they restore all layers and insert error-correction modules into every decoder block, which increases latency and memory overhead. To address this limitation, we propose GlowQ, a group-shared low-rank approximation for quantized LLMs that caches a single shared right factor per input-sharing group and restores only the groups or layers that yield the highest accuracy benefit. GlowQ computes the high-precision projection once per input-sharing group and reuses it across its modules, reducing parameter and memory overhead, and retaining the expressivity of layer-specific corrections. We also propose a selective variant, GlowQ-S, that applies the cached shared module only where it provides the largest benefit. Compared with strong baselines, our approach reduces TTFB by (5.6%) and increases throughput by (9.6%) on average, while reducing perplexity on WikiText-2 by (0.17%) and increasing downstream accuracy by 0.42 percentage points. The selective model GlowQ-S further reduces latency, cutting TTFB by (23.4%) and increasing throughput by (37.4%), while maintaining accuracy within 0.2 percentage points on average. Code is available at https://github.com/ahnselim/GlowQ.",
+        "identifiers": [
+          "SemanticScholar:144713214950f337c2f9bc5867dd7d3c2c1dd973"
+        ],
+        "semantic_scholar_id": "144713214950f337c2f9bc5867dd7d3c2c1dd973",
+        "canonical_id": "arXiv:2603.25385",
+        "arxiv_id": "2603.25385",
+        "doi": "10.48550/arXiv.2603.25385",
+        "authors": [
+          "S. An",
+          "Ilhong Suh",
+          "Yeseong Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 218,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2608.23167",
+      "identity_tokens": [
+        "id:SemanticScholar:db3c3ab9528f25ebf5a37dcb052457b6bdfe365b",
+        "id:arXiv:2608.23167",
+        "title:accelerating diffusion language models via structured suffix modeling",
+        "url:https://arxiv.org/abs/2608.23167"
+      ],
+      "record": {
+        "title": "Accelerating Diffusion Language Models via Structured Suffix Modeling",
+        "source_url": "https://arxiv.org/abs/2608.23167",
+        "year": 2026,
+        "published": "2026-08-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion Language Models (DLMs) exhibit strong parallel decoding capabilities by denoising multiple tokens in a single generation step. However, this parallelism comes with substantial computational overhead, as each step requires interactions with all suffix tokens. Existing methods typically reduce this cost by retaining only a local suffix window as a substitute for the full suffix. Despite their effectiveness, these methods overlook the structural heterogeneity across suffix regions and re-initialize suffix tokens with identical representations at each timestep. To this end, we propose a structured suffix modeling method for efficient DLM inference. Specifically, we divide the suffix into three regions, i.e., the local, middle, and tail regions, and retain different numbers of suffix tokens in each region according to their structural roles. Moreover, we incorporate the decoding results from the previous step into the suffix token representations at the current step, allowing them to carry evolving denoising information across generation steps. Notably, our method is training-free and orthogonal to several existing acceleration techniques, such as parallel decoding strategies and KV cache. Empirical results across multiple benchmarks on three DLMs demonstrate that our method can further accelerate DLM inference and improve performance in most cases. In particular, in long-sequence inference, our method achieves up to a \\(72.81\\times\\) speedup when combined with other acceleration techniques. Our code is available at https://github.com/zifengcheng/SSM.",
+        "identifiers": [
+          "SemanticScholar:db3c3ab9528f25ebf5a37dcb052457b6bdfe365b"
+        ],
+        "semantic_scholar_id": "db3c3ab9528f25ebf5a37dcb052457b6bdfe365b",
+        "canonical_id": "arXiv:2608.23167",
+        "arxiv_id": "2608.23167",
+        "authors": [
+          "Zi-Feng Cheng",
+          "Ke-Da Li",
+          "Zhiwei Jiang",
+          "Cong Wang",
+          "Fei Shen",
+          "Qing Gu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 67,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.06324",
+      "identity_tokens": [
+        "id:SemanticScholar:d8ab20d5a3af6523e5ce6ffa9c0ce40e5cf1c183",
+        "id:arXiv:2609.06324",
+        "title:a ticket from marginals to joints couplednoise distillation for onestep block generation in diffusion language models",
+        "url:https://arxiv.org/abs/2609.06324"
+      ],
+      "record": {
+        "title": "A Ticket from Marginals to Joints: Coupled-Noise Distillation for One-Step Block Generation in Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2609.06324",
+        "year": 2026,
+        "published": "2026-09-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Can a diffusion language model generate a coherent token block in one forward pass? Masked models already predict every position at once, but each prediction is the marginal distribution given the visible context, so the tokens can be mutually inconsistent and later steps revise those already committed. We introduce CONDOR (Coupled-Noise Distillation for One-Step Readout), trained from scratch to map different noise samples to different coherent blocks. Initially, random noise is not naturally paired with a target. Winner-take-all supervision lets different samples specialize, and self-distillation trains the one-pass output to match the refined coherent block. TinyStories experiments show diverse, coherent continuations over successive blocks, one forward pass each. Qualitative MNIST experiments show that the same approach can extend to multimodal generation, such as text-to-image and unconditional text-and-image generation.",
+        "identifiers": [
+          "SemanticScholar:d8ab20d5a3af6523e5ce6ffa9c0ce40e5cf1c183"
+        ],
+        "semantic_scholar_id": "d8ab20d5a3af6523e5ce6ffa9c0ce40e5cf1c183",
+        "canonical_id": "arXiv:2609.06324",
+        "arxiv_id": "2609.06324",
+        "authors": [
+          "Lin Yao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 54,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.07479",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11133273",
+        "id:SemanticScholar:65b2c9808da0549290f0cad02648a68c0e6621de",
+        "id:arXiv:2504.07479",
+        "title:unicaim a unified camcim architecture with staticdynamic kv cache pruning for efficient longcontext llm inference",
+        "url:https://arxiv.org/abs/2504.07479"
+      ],
+      "record": {
+        "title": "UniCAIM: A Unified CAM/CIM Architecture with Static-Dynamic KV Cache Pruning for Efficient Long-Context LLM Inference",
+        "source_url": "https://arxiv.org/abs/2504.07479",
+        "year": 2025,
+        "published": "2025-04-10",
+        "venue": "Design Automation Conference",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer-based large language models (LLMs) have achieved impressive performance in various natural language processing (NLP) applications. However, the high memory and computation cost induced by the KV cache limits the inference efficiency, especially for long input sequences. Compute-in-memory (CIM)-based accelerators have been proposed for LLM acceleration with KV cache pruning. However, as existing accelerators only support static pruning with a fixed pattern or dynamic pruning with primitive implementations, they suffer from either high accuracy degradation or low efficiency. In this paper, we propose a ferroelectric FET (FeFET)-based unified content addressable memory (CAM) and CIM architecture, dubbed as UniCAIM. UniCAIM features simultaneous support for static and dynamic pruning with 3 computation modes: 1) in the CAM mode, UniCAIM enables approximate similarity measurement in $\\mathcal{O}(1)$ time for dynamic KV cache pruning with high energy efficiency; 2) in the charge-domain CIM mode, static pruning can be supported based on accumulative similarity score, which is much more flexible compared to fixed patterns; 3) in the current-domain mode, exact attention computation can be conducted with a subset of selected KV cache. We further propose a novel CAM/CIM cell design that leverages the multi-level characteristics of FeFETs for signed multibit storage of the KV cache and in-place attention computation. With extensive experimental results, we demonstrate UniCAIM can reduce the area-energy-delay product (AEDP) by $8.2 \\sim 831 \\times$ over the state-of-the-art CIM-based LLM accelerators at the circuit level, along with high accuracy comparable with dense attention at the application level, showing its great potential for efficient long-context LLM inference.",
+        "identifiers": [
+          "SemanticScholar:65b2c9808da0549290f0cad02648a68c0e6621de"
+        ],
+        "semantic_scholar_id": "65b2c9808da0549290f0cad02648a68c0e6621de",
+        "canonical_id": "arXiv:2504.07479",
+        "arxiv_id": "2504.07479",
+        "doi": "10.1109/DAC63849.2025.11133273",
+        "authors": [
+          "Wei-Kai Xu",
+          "Wen-Xuan Zeng",
+          "Qian-Qian Huang",
+          "Meng Li",
+          "Ruei-Hao Huang"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 568,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a60a0ff830890628f3b2255ae0a4415bc25c7855eeb5639fba8aad5d88b99c16",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

@@ -1,0 +1,555 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-608ca969d07e8496-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-608ca969d07e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.18653/v1/2026.acl-long.403",
+    "arXiv:2410.03960",
+    "arXiv:2502.20576",
+    "arXiv:2602.06822",
+    "arXiv:2605.12193",
+    "arXiv:2608.28044",
+    "arXiv:2609.34330"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 7,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "raw_search_result_count": 7,
+  "retrieval_duplicate_filtered_count": 2,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 5,
+  "provider_progress": {
+    "requested_count": 7,
+    "status_counts": {
+      "allowed": 5,
+      "filtered_by_snapshot": 2,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T10:58:32.093016+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.403",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.03960",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:swiftkv fast prefilloptimized inference with knowledgepreserving model transformation"
+    },
+    {
+      "requested_id": "arXiv:2502.20576",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2502.20576"
+    },
+    {
+      "requested_id": "arXiv:2602.06822",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2605.12193",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2608.28044",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.34330",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+      "source_url": "https://arxiv.org/abs/2608.28044",
+      "year": 2026,
+      "published": "2026-08-28",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31x at context-512 to 1.17x at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+      "identifiers": [
+        "SemanticScholar:aaf46dc87740c49088dedc2036ecaa4814de3791"
+      ],
+      "semantic_scholar_id": "aaf46dc87740c49088dedc2036ecaa4814de3791",
+      "canonical_id": "arXiv:2608.28044",
+      "arxiv_id": "2608.28044",
+      "authors": [
+        "P. Vellaisamy",
+        "Vanessa Lam",
+        "Shawn Blanton",
+        "J. Shen"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 63,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+      "source_url": "https://arxiv.org/abs/2605.12193",
+      "year": 2026,
+      "published": "2026-05-12",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose Block-Filtered Long-Context Attention (BFLA), a training-free sparse prefill method that combines deterministic Lightning-style block indexing, query-tile sharing, and length-adaptive Ratio-$K$ selection with block-sparse execution. BFLA evaluates attention using the original Q/K/V, requires no retraining or per-model parameter retuning, and integrates with vLLM while preserving native decoding. For fixed Q/K/V, we bound local attention-output error in terms of the omitted attention mass, indexer-score distortion, retention budget, and query-tile sharing. Evaluations on Gemma4-E4B-IT, Qwen3.6-27B, Qwen3.8-27B, and Qwen3.8-Flash-Next across LongBench-v2, RULER, InfiniteBench, and Terminal Bench 2.1 show BFLA matches or even outperforms dense baselines. BFLA shows up to approximately $4\\times$ time-to-first-token and $3.72\\times$ end-to-end request speedups over the corresponding dense-prefill baselines. Comparisons with state-of-the-art FlashPrefill V2 and Qwen Sparse Attention also demonstrate that BFLA has better performance and efficiency trade-offs. These findings highlight the value of BFLA for the acceleration of long-context serving. Project website: https://github.com/Alicewithrabbit/BFLA.",
+      "identifiers": [
+        "SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80"
+      ],
+      "semantic_scholar_id": "7ad8414655ee444560a62378390cd60eafe97c80",
+      "canonical_id": "arXiv:2605.12193",
+      "arxiv_id": "2605.12193",
+      "authors": [
+        "Chong Wu",
+        "Brian K. Chen",
+        "Chu-Xu Song",
+        "She-Zheng Song",
+        "Zhenan Feng",
+        "Ren-Jie Xu",
+        "Hou-Wang Zhang",
+        "Jiawang Cao",
+        "Mao-Lin Che",
+        "Wen-Bo Zhu",
+        "Hong Yan"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 171,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SCVQ: Sparse-Compensated Vector Quantization for Large Language Models",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.403",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec"
+      ],
+      "semantic_scholar_id": "61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec",
+      "doi": "10.18653/v1/2026.acl-long.403",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.403",
+      "authors": [
+        "Zixuan Zhou",
+        "Yu-Jun Diao",
+        "Zichen Kong",
+        "De-Hua Ma",
+        "Zhenbo Xu",
+        "Pei-Pei Li",
+        "Zhao-Feng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 121,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+      "source_url": "https://arxiv.org/abs/2602.06822",
+      "year": 2026,
+      "published": "2026-02-06",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large foundation models (LFMs) achieve strong performance through scaling, yet current structural pruning methods derive fixed pruning decisions during inference, overlooking sparsity patterns that emerge in the autoregressive token generation. In this paper, we propose POP (Partition-guided Online Pruning), an efficient online structural pruning framework that enables context-conditioned dynamic pruning with minimal computational overhead. POP partitions model channels into retained, candidate, and pruned regions, where prefilling defines a coarse pruning partition, and the decoding stage generates a fine-grained mask within the candidate region, avoiding full-channel re-evaluation. The coarse pruning partition preserves consistently important weights, while the fine-grained masking provides context-conditioned variation during decoding. Moreover, POP is a lightweight, plug-and-play method that requires no preprocessing, including offline calibration, retraining, or learning predictors. Extensive evaluations across diverse LFMs, including large language models (LLMs), mixture-of-experts models (MoEs), and vision-language models (VLMs), demonstrate that POP consistently delivers higher accuracy than existing pruning approaches while incurring smaller computational overhead and minimizing inference latency.",
+      "identifiers": [
+        "SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8"
+      ],
+      "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+      "canonical_id": "arXiv:2602.06822",
+      "arxiv_id": "2602.06822",
+      "doi": "10.48550/arXiv.2602.06822",
+      "authors": [
+        "Yi Chen",
+        "Wonjin Shin",
+        "Shuhong Liu",
+        "Tho Mai",
+        "Jeongmo Lee",
+        "Chuan-Bo Hua",
+        "Kunlun Wang",
+        "Jun Liu",
+        "Jooyul Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 266,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+      "source_url": "https://arxiv.org/abs/2609.34330",
+      "year": 2026,
+      "published": "2026-09-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning. Our code is available at https://github.com/MAX-7237/MiCo.",
+      "identifiers": [
+        "SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf"
+      ],
+      "semantic_scholar_id": "1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+      "canonical_id": "arXiv:2609.34330",
+      "arxiv_id": "2609.34330",
+      "authors": [
+        "Ting-Hao Wang",
+        "Yi-Chen Guo",
+        "Qi-Zhe Zhang",
+        "Yuan Zhang",
+        "Wei-Min Ouyang",
+        "Rui Huang",
+        "Jia-Jun Cao",
+        "Si-Xiang Chen",
+        "Hao-Kai Jiang",
+        "Ji-Xin Wu",
+        "Zheng Lu",
+        "Bo-Fan Zhu",
+        "Ren-Yuan Li",
+        "Shang-Hang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 32,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2608.28044",
+      "identity_tokens": [
+        "id:SemanticScholar:aaf46dc87740c49088dedc2036ecaa4814de3791",
+        "id:arXiv:2608.28044",
+        "title:characterization of request and token energy costs for llm inference workloads on gpu platforms",
+        "url:https://arxiv.org/abs/2608.28044"
+      ],
+      "record": {
+        "title": "Characterization of Request and Token Energy Costs for LLM Inference Workloads on GPU Platforms",
+        "source_url": "https://arxiv.org/abs/2608.28044",
+        "year": 2026,
+        "published": "2026-08-28",
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) inference serving is priced by tokens, but GPU energy is consumed over inference windows. This accounting mismatch makes token-normalized metrics incomplete, since average output-token energy can decrease even when total request energy increases. We characterize this behavior with a decomposed energy model: a fixed one-time prefill with a fixed generation setup cost, while each output-token generation step adds marginal step energy. We evaluate this LLM inference energy model on NVIDIA H100 and H200 GPUs across dense and mixture-of-experts (MoE) models, reporting both request energy and token energy as functions of model type (M), phase (P), batch size (B), context length (C), and output length (N). For Llama-3.2-1B on H200 at batch-16 and context-4K, increasing output length from 10 to 512 tokens reduces token energy from 7.46 to 0.72 J/token while total batched inference-window energy increases from 1.19 to 5.93 kJ. Batching also reduces token energy, but the gain is context-bounded: at 10 output tokens, the batch-16 to batch-1 gain falls from 6.31x at context-512 to 1.17x at context-4K. MoE models amplify this effect: sparse routing and fragmented expert execution increase fixed energy at low concurrency, while batching spreads that energy across more generated tokens and substantially narrows the dense-vs.-MoE token-energy gap. These results show that energy-aware serving should jointly optimize both request energy and token energy, rather than only reducing per-token energy cost.",
+        "identifiers": [
+          "SemanticScholar:aaf46dc87740c49088dedc2036ecaa4814de3791"
+        ],
+        "semantic_scholar_id": "aaf46dc87740c49088dedc2036ecaa4814de3791",
+        "canonical_id": "arXiv:2608.28044",
+        "arxiv_id": "2608.28044",
+        "authors": [
+          "P. Vellaisamy",
+          "Vanessa Lam",
+          "Shawn Blanton",
+          "J. Shen"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 63,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2605.12193",
+      "identity_tokens": [
+        "id:SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80",
+        "id:arXiv:2605.12193",
+        "title:bfla blockfiltered longcontext attention mechanism",
+        "url:https://arxiv.org/abs/2605.12193"
+      ],
+      "record": {
+        "title": "BFLA: Block-Filtered Long-Context Attention Mechanism",
+        "source_url": "https://arxiv.org/abs/2605.12193",
+        "year": 2026,
+        "published": "2026-05-12",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose Block-Filtered Long-Context Attention (BFLA), a training-free sparse prefill method that combines deterministic Lightning-style block indexing, query-tile sharing, and length-adaptive Ratio-$K$ selection with block-sparse execution. BFLA evaluates attention using the original Q/K/V, requires no retraining or per-model parameter retuning, and integrates with vLLM while preserving native decoding. For fixed Q/K/V, we bound local attention-output error in terms of the omitted attention mass, indexer-score distortion, retention budget, and query-tile sharing. Evaluations on Gemma4-E4B-IT, Qwen3.6-27B, Qwen3.8-27B, and Qwen3.8-Flash-Next across LongBench-v2, RULER, InfiniteBench, and Terminal Bench 2.1 show BFLA matches or even outperforms dense baselines. BFLA shows up to approximately $4\\times$ time-to-first-token and $3.72\\times$ end-to-end request speedups over the corresponding dense-prefill baselines. Comparisons with state-of-the-art FlashPrefill V2 and Qwen Sparse Attention also demonstrate that BFLA has better performance and efficiency trade-offs. These findings highlight the value of BFLA for the acceleration of long-context serving. Project website: https://github.com/Alicewithrabbit/BFLA.",
+        "identifiers": [
+          "SemanticScholar:7ad8414655ee444560a62378390cd60eafe97c80"
+        ],
+        "semantic_scholar_id": "7ad8414655ee444560a62378390cd60eafe97c80",
+        "canonical_id": "arXiv:2605.12193",
+        "arxiv_id": "2605.12193",
+        "authors": [
+          "Chong Wu",
+          "Brian K. Chen",
+          "Chu-Xu Song",
+          "She-Zheng Song",
+          "Zhenan Feng",
+          "Ren-Jie Xu",
+          "Hou-Wang Zhang",
+          "Jiawang Cao",
+          "Mao-Lin Che",
+          "Wen-Bo Zhu",
+          "Hong Yan"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 171,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.403",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.403",
+        "id:SemanticScholar:61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec",
+        "title:scvq sparsecompensated vector quantization for large language models",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.403"
+      ],
+      "record": {
+        "title": "SCVQ: Sparse-Compensated Vector Quantization for Large Language Models",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.403",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec"
+        ],
+        "semantic_scholar_id": "61c4fa7825f5e261d1f98e38dded46b1b4d9c7ec",
+        "doi": "10.18653/v1/2026.acl-long.403",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.403",
+        "authors": [
+          "Zixuan Zhou",
+          "Yu-Jun Diao",
+          "Zichen Kong",
+          "De-Hua Ma",
+          "Zhenbo Xu",
+          "Pei-Pei Li",
+          "Zhao-Feng He"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 121,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2602.06822",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2602.06822",
+        "id:SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+        "id:arXiv:2602.06822",
+        "title:pop online structural pruning enables efficient inference of large foundation models",
+        "url:https://arxiv.org/abs/2602.06822"
+      ],
+      "record": {
+        "title": "POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models",
+        "source_url": "https://arxiv.org/abs/2602.06822",
+        "year": 2026,
+        "published": "2026-02-06",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large foundation models (LFMs) achieve strong performance through scaling, yet current structural pruning methods derive fixed pruning decisions during inference, overlooking sparsity patterns that emerge in the autoregressive token generation. In this paper, we propose POP (Partition-guided Online Pruning), an efficient online structural pruning framework that enables context-conditioned dynamic pruning with minimal computational overhead. POP partitions model channels into retained, candidate, and pruned regions, where prefilling defines a coarse pruning partition, and the decoding stage generates a fine-grained mask within the candidate region, avoiding full-channel re-evaluation. The coarse pruning partition preserves consistently important weights, while the fine-grained masking provides context-conditioned variation during decoding. Moreover, POP is a lightweight, plug-and-play method that requires no preprocessing, including offline calibration, retraining, or learning predictors. Extensive evaluations across diverse LFMs, including large language models (LLMs), mixture-of-experts models (MoEs), and vision-language models (VLMs), demonstrate that POP consistently delivers higher accuracy than existing pruning approaches while incurring smaller computational overhead and minimizing inference latency.",
+        "identifiers": [
+          "SemanticScholar:6adc07c64a98a11174b72e77714f6d4427a1e3a8"
+        ],
+        "semantic_scholar_id": "6adc07c64a98a11174b72e77714f6d4427a1e3a8",
+        "canonical_id": "arXiv:2602.06822",
+        "arxiv_id": "2602.06822",
+        "doi": "10.48550/arXiv.2602.06822",
+        "authors": [
+          "Yi Chen",
+          "Wonjin Shin",
+          "Shuhong Liu",
+          "Tho Mai",
+          "Jeongmo Lee",
+          "Chuan-Bo Hua",
+          "Kunlun Wang",
+          "Jun Liu",
+          "Jooyul Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 266,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.34330",
+      "identity_tokens": [
+        "id:SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+        "id:arXiv:2609.34330",
+        "title:mico mutual information coverage optimization through semantic erasure modeling for efficient mllm inference",
+        "url:https://arxiv.org/abs/2609.34330"
+      ],
+      "record": {
+        "title": "MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference",
+        "source_url": "https://arxiv.org/abs/2609.34330",
+        "year": 2026,
+        "published": "2026-09-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal large language models (MLLMs) have demonstrated impressive performance in multimodal understanding, but processing large numbers of visual tokens results in high computational costs. While many methods have been proposed to reduce the number of visual tokens, most of them rely on heuristics and are prone to discarding substantial visual information during pruning, leading to degradation in model performance. In this work, by using a semantic erasure model, we derive a general mutual information coverage objective from task log-loss and propose MiCo, a training-free two-stage pruning method. MiCo first uses visual signals to select a representative candidate pool before visual tokens enter the language model, then performs task-aware subset selection within it. At each stage, suitable observable proxies instantiate the derived objective as a monotone submodular coverage function, which MiCo greedily optimizes under the token budget. MiCo is evaluated on diverse MLLMs ranging from 7B to 13B parameters across a broad range of image and video benchmarks spanning general visual reasoning, fine-grained OCR and grounding, hallucination detection, and long-video understanding. MiCo consistently achieves the best performance across nearly all evaluated models under all pruning ratios. On LLaVA-NEXT-13B, MiCo uses only 5.6% visual tokens, retains 97.5% of baseline performance, and achieves a 3.8-fold inference speedup. Our experiments demonstrate the effectiveness of MiCo and our mutual information coverage objective for visual token pruning. Our code is available at https://github.com/MAX-7237/MiCo.",
+        "identifiers": [
+          "SemanticScholar:1a7cdbd5600103593b99b4f27b321a2b8c6c53cf"
+        ],
+        "semantic_scholar_id": "1a7cdbd5600103593b99b4f27b321a2b8c6c53cf",
+        "canonical_id": "arXiv:2609.34330",
+        "arxiv_id": "2609.34330",
+        "authors": [
+          "Ting-Hao Wang",
+          "Yi-Chen Guo",
+          "Qi-Zhe Zhang",
+          "Yuan Zhang",
+          "Wei-Min Ouyang",
+          "Rui Huang",
+          "Jia-Jun Cao",
+          "Si-Xiang Chen",
+          "Hao-Kai Jiang",
+          "Ji-Xin Wu",
+          "Zheng Lu",
+          "Bo-Fan Zhu",
+          "Ren-Yuan Li",
+          "Shang-Hang Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 32,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:24ef7a10dd6242e876a7d65a3d33095ffb3c30bb839946846e9ed067343db6cc",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

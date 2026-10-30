@@ -1,0 +1,380 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-e1ec68d90bfa57c4-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-e1ec68d90bfa",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1109/2575-8411.2026.00078",
+    "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+    "arXiv:2408.05636",
+    "arXiv:2501.19324",
+    "arXiv:2502.15075",
+    "arXiv:2505.16162",
+    "arXiv:2507.06608",
+    "arXiv:2607.02574"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": false,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "88e742bd76c4c3980b9b708f7d3925a0c055e53f",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 5,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 1,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 5,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-30T10:58:31.832751+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1109/2575-8411.2026.00078",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2408.05636",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:speculative diffusion decoding accelerating language generation through diffusion"
+    },
+    {
+      "requested_id": "arXiv:2501.19324",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2501.19324"
+    },
+    {
+      "requested_id": "arXiv:2502.15075",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.16162",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "title:knnssd enabling dynamic selfspeculative decoding via nearest neighbor layer set optimization"
+    },
+    {
+      "requested_id": "arXiv:2507.06608",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "identity_token",
+      "matched_token": "id:arXiv:2507.06608"
+    },
+    {
+      "requested_id": "arXiv:2607.02574",
+      "status": "filtered_by_snapshot",
+      "lookup_route": "semantic_scholar_batch",
+      "filter_reason": "rejection_ledger",
+      "matched_token": "id:arXiv:2607.02574"
+    }
+  ],
+  "results": [
+    {
+      "title": "Quantize What Counts: More for Keys, Less for Values",
+      "source_url": "https://arxiv.org/abs/2502.15075",
+      "year": 2025,
+      "published": "2025-02-20",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) suffer inference-time memory bottlenecks dominated by the attention Key-Value (KV) cache, which scales with model size and context length. While KV-cache quantization alleviates this cost, bit allocation between keys and values is often tuned heuristically, lacking theoretical grounding and generalizability. This paper proposes two theorems that anchor mixed-precision KV quantization in the intrinsic geometry of Transformer models. First, key projections systematically have larger spectral and Frobenius norms than value matrices, implying higher information density along the key path. Second, for any given memory budget, prioritizing precision for keys over values strictly reduces quantization error and better preserves accuracy. Empirical evaluations across various prominent LLMs and benchmarks show that key-favored allocations (e.g., 4-bit keys, 2-bit values) retain up to 98.3\\% accuracy compared to uniform allocations (e.g., 4-bit for both), while conserving memory. These results transform bit allocation from ad hoc tuning into a theoretically grounded, geometry-driven design principle for efficient LLM inference. Source code is available at https://github.com/mohsenhariri/spectral-kv.",
+      "identifiers": [
+        "SemanticScholar:d99ec0428aee7b8500a380918dc074968eac4e87"
+      ],
+      "semantic_scholar_id": "d99ec0428aee7b8500a380918dc074968eac4e87",
+      "canonical_id": "arXiv:2502.15075",
+      "arxiv_id": "2502.15075",
+      "doi": "10.18653/v1/2026.findings-acl.1314",
+      "authors": [
+        "Mohsen Hariri",
+        "Alan Luo",
+        "Wei-Cong Chen",
+        "Shao-Chen Zhong",
+        "Tianyi Zhang",
+        "Qi-Fan Wang",
+        "Xia Ben Hu",
+        "Xiao-Tian Han",
+        "Vipin Chaudhary"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 617,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "FlashServe: Adaptive Kernel Provision for Quantized LLM Serving",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00078",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE International Conference on Distributed Computing Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Quantization is widely adopted to reduce the memory footprint and computational overhead of large language models (LLMs). Existing LLM serving systems typically rely on a static quantized inference kernel, overlooking the fact that real-world workloads exhibit highly dynamic request rates and batch sizes. Our empirical analysis reveals two important findings in quantized LLM serving. First, the performance of different quantized inference kernels exhibits distinct sensitivity to batch size. Second, motivated by the potential of adaptive quantized inference kernel switching to exploit this performance diversity, switching between quantized inference kernels incurs a non-negligible overhead. These findings give rise to two key challenges: optimal kernel selection under dynamic workloads is difficult, and quantized inference kernel switching is expensive. To address these challenges, we propose FlashServe, a serving system for adaptive quantized inference kernel provisioning. First, FlashServe leverages a latency cost model of both inference and switching latency to guide the optimal quantized inference kernel selection. Second, FlashServe supports finegrained asynchronous kernel switching, which overlaps kernel execution with kernel switching. Finally, FlashServe proactively prepares kernel switching, allowing each kernel switching to be triggered immediately once its corresponding kernel execution completes. We implement a prototype of FlashServe and evaluate it on representative LLM workloads. Experimental results show that FlashServe reduces inference latency by $\\mathbf{9. 0 \\% - 1 3. 6 \\%}$ compared to static quantized baselines.",
+      "identifiers": [
+        "SemanticScholar:c3e5ad28603079cf720f928dea644dbb3bfeca0f"
+      ],
+      "semantic_scholar_id": "c3e5ad28603079cf720f928dea644dbb3bfeca0f",
+      "doi": "10.1109/2575-8411.2026.00078",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00078",
+      "authors": [
+        "Yuyan Chen",
+        "Hao-Dong Wang",
+        "Junyuan Liang",
+        "Wu-Hui Chen",
+        "Zi-Cong Hong",
+        "Song Guo",
+        "Ruiyan Zhuang",
+        "Yi Quan"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 151,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Snakes and Ladders: Accelerating State Space Model Inference with Speculative Decoding",
+      "source_url": "https://www.semanticscholar.org/paper/78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d"
+      ],
+      "semantic_scholar_id": "78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "canonical_id": "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "authors": [
+        "Yangchao Wu",
+        "Yonatan Dukler",
+        "Matthew Trager",
+        "A. Achille",
+        "Wei Xia",
+        "Stefan 0 Soatto",
+        "Ucla"
+      ],
+      "priority": 4,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 4,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2502.15075",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.1314",
+        "id:SemanticScholar:d99ec0428aee7b8500a380918dc074968eac4e87",
+        "id:arXiv:2502.15075",
+        "title:quantize what counts more for keys less for values",
+        "url:https://arxiv.org/abs/2502.15075"
+      ],
+      "record": {
+        "title": "Quantize What Counts: More for Keys, Less for Values",
+        "source_url": "https://arxiv.org/abs/2502.15075",
+        "year": 2025,
+        "published": "2025-02-20",
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) suffer inference-time memory bottlenecks dominated by the attention Key-Value (KV) cache, which scales with model size and context length. While KV-cache quantization alleviates this cost, bit allocation between keys and values is often tuned heuristically, lacking theoretical grounding and generalizability. This paper proposes two theorems that anchor mixed-precision KV quantization in the intrinsic geometry of Transformer models. First, key projections systematically have larger spectral and Frobenius norms than value matrices, implying higher information density along the key path. Second, for any given memory budget, prioritizing precision for keys over values strictly reduces quantization error and better preserves accuracy. Empirical evaluations across various prominent LLMs and benchmarks show that key-favored allocations (e.g., 4-bit keys, 2-bit values) retain up to 98.3\\% accuracy compared to uniform allocations (e.g., 4-bit for both), while conserving memory. These results transform bit allocation from ad hoc tuning into a theoretically grounded, geometry-driven design principle for efficient LLM inference. Source code is available at https://github.com/mohsenhariri/spectral-kv.",
+        "identifiers": [
+          "SemanticScholar:d99ec0428aee7b8500a380918dc074968eac4e87"
+        ],
+        "semantic_scholar_id": "d99ec0428aee7b8500a380918dc074968eac4e87",
+        "canonical_id": "arXiv:2502.15075",
+        "arxiv_id": "2502.15075",
+        "doi": "10.18653/v1/2026.findings-acl.1314",
+        "authors": [
+          "Mohsen Hariri",
+          "Alan Luo",
+          "Wei-Cong Chen",
+          "Shao-Chen Zhong",
+          "Tianyi Zhang",
+          "Qi-Fan Wang",
+          "Xia Ben Hu",
+          "Xiao-Tian Han",
+          "Vipin Chaudhary"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 617,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/2575-8411.2026.00078",
+      "identity_tokens": [
+        "id:DOI:10.1109/2575-8411.2026.00078",
+        "id:SemanticScholar:c3e5ad28603079cf720f928dea644dbb3bfeca0f",
+        "title:flashserve adaptive kernel provision for quantized llm serving",
+        "url:https://doi.org/10.1109/2575-8411.2026.00078"
+      ],
+      "record": {
+        "title": "FlashServe: Adaptive Kernel Provision for Quantized LLM Serving",
+        "source_url": "https://doi.org/10.1109/2575-8411.2026.00078",
+        "year": 2026,
+        "published": "2026-06-01",
+        "venue": "IEEE International Conference on Distributed Computing Systems",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Quantization is widely adopted to reduce the memory footprint and computational overhead of large language models (LLMs). Existing LLM serving systems typically rely on a static quantized inference kernel, overlooking the fact that real-world workloads exhibit highly dynamic request rates and batch sizes. Our empirical analysis reveals two important findings in quantized LLM serving. First, the performance of different quantized inference kernels exhibits distinct sensitivity to batch size. Second, motivated by the potential of adaptive quantized inference kernel switching to exploit this performance diversity, switching between quantized inference kernels incurs a non-negligible overhead. These findings give rise to two key challenges: optimal kernel selection under dynamic workloads is difficult, and quantized inference kernel switching is expensive. To address these challenges, we propose FlashServe, a serving system for adaptive quantized inference kernel provisioning. First, FlashServe leverages a latency cost model of both inference and switching latency to guide the optimal quantized inference kernel selection. Second, FlashServe supports finegrained asynchronous kernel switching, which overlaps kernel execution with kernel switching. Finally, FlashServe proactively prepares kernel switching, allowing each kernel switching to be triggered immediately once its corresponding kernel execution completes. We implement a prototype of FlashServe and evaluate it on representative LLM workloads. Experimental results show that FlashServe reduces inference latency by $\\mathbf{9. 0 \\% - 1 3. 6 \\%}$ compared to static quantized baselines.",
+        "identifiers": [
+          "SemanticScholar:c3e5ad28603079cf720f928dea644dbb3bfeca0f"
+        ],
+        "semantic_scholar_id": "c3e5ad28603079cf720f928dea644dbb3bfeca0f",
+        "doi": "10.1109/2575-8411.2026.00078",
+        "canonical_id": "DOI:10.1109/2575-8411.2026.00078",
+        "authors": [
+          "Yuyan Chen",
+          "Hao-Dong Wang",
+          "Junyuan Liang",
+          "Wu-Hui Chen",
+          "Zi-Cong Hong",
+          "Song Guo",
+          "Ruiyan Zhuang",
+          "Yi Quan"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 151,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+      "identity_tokens": [
+        "id:SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+        "title:snakes and ladders accelerating state space model inference with speculative decoding",
+        "url:https://www.semanticscholar.org/paper/78ef7ffcaf721ce31653636dc320f7ead131539d"
+      ],
+      "record": {
+        "title": "Snakes and Ladders: Accelerating State Space Model Inference with Speculative Decoding",
+        "source_url": "https://www.semanticscholar.org/paper/78ef7ffcaf721ce31653636dc320f7ead131539d",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d"
+        ],
+        "semantic_scholar_id": "78ef7ffcaf721ce31653636dc320f7ead131539d",
+        "canonical_id": "SemanticScholar:78ef7ffcaf721ce31653636dc320f7ead131539d",
+        "authors": [
+          "Yangchao Wu",
+          "Yonatan Dukler",
+          "Matthew Trager",
+          "A. Achille",
+          "Wei Xia",
+          "Stefan 0 Soatto",
+          "Ucla"
+        ],
+        "priority": 4,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 4,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:f54daaf3682d8b7e6cd8b36c12910941bf1ec64f8181aa64600cd98f816e3d60",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
