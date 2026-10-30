@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-2202-scheduled-chat-00/r05",
+  "reference_main_sha": "f62375f526e53e338a3ea74e689a900c4d224731",
+  "record_count": 5,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.25583",
+      "identity_tokens": [
+        "arXiv:2608.25583"
+      ],
+      "title": "GRIP: Granular Reward-Guided Parameter Interpolation for Efficient Reasoning",
+      "reason": "GRIPは同一構造の推論特化モデルと指示特化モデルのモジュールごとに学習可能な混合率を置き、元の両モデルを凍結して正確かつ簡潔な回答を報酬で最適化する。一次要旨は固定比率・探索型のモデル融合より良い正答率と生成効率の交換条件を示す。推論時トークン数と遅延を抑えるモデル構成法に直接該当。",
+      "source_url": "https://arxiv.org/abs/2608.25583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:20:00+09:00",
+      "last_checked_at": "2026-10-30T22:20:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2025-2503.16419-stop-overthinking-a-survey-on-efficient-reasoning-for-large-language-mod.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2025-2502.04463-training-language-models-to-reason-efficiently.md",
+        "papers/inference/99-other-inference-systems/2025-2502.09601-cot-valve-length-compressible-chain-of-thought-tuning.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md"
+      ],
+      "worklist_rank": 493,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04720",
+      "identity_tokens": [
+        "arXiv:2610.04720"
+      ],
+      "title": "WNet: Discrete Wavelets Transform for Efficient Token Mixing",
+      "reason": "WNetはTransformerエンコーダの自己注意を離散ウェーブレット変換によるトークン混合へ置換し、4,096トークンでトークンゲート型の学習速度2.7倍を報告する。一次要旨の対象はC4のマスク言語モデリングとGLUEのBERT系エンコーダで、自己回帰LLMの生成サービングを直接評価しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.04720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:20:00+09:00",
+      "last_checked_at": "2026-10-30T22:20:30+09:00",
+      "linked_from": [
+        "papers/inference/19-inference-evaluation-benchmarking/2026-2605.00292-caracal-causal-architecture-via-spectral-mixing.md",
+        "papers/inference/99-other-inference-systems/2020-2006.03236-funnel-transformer-filtering-out-sequential-redundancy-for-efficient-lan.md",
+        "papers/inference/99-other-inference-systems/2022-2105.03824-fnet-mixing-tokens-with-fourier-transforms.md",
+        "papers/inference/99-other-inference-systems/2023-2302.10866-hyena-hierarchy-towards-larger-convolutional-language-models.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18394-spectre-an-fft-based-efficient-drop-in-replacement-to-self-attention-for.md"
+      ],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.10716",
+      "identity_tokens": [
+        "arXiv:2506.10716"
+      ],
+      "title": "PREMISE: Scalable and Strategic Prompt Optimization for Efficient Mathematical Reasoning in Large Models",
+      "reason": "PREMISEはモデル重みを変更せず、推論トレースの診断と多目的テキスト探索で正答率を保ちながら冗長な思考を削減する。一次要旨はGSM8K・SVAMP・Math500でClaude/Geminiの正答率を維持または改善し、推論トークン最大87.5%削減、API費用69～82%削減を報告。ブラックボックスLLMの推論費用制御に直接該当。",
+      "source_url": "https://arxiv.org/abs/2506.10716",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:20:00+09:00",
+      "last_checked_at": "2026-10-30T22:20:30+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2501.19324-reward-guided-speculative-decoding-for-efficient-llm-reasoning.md",
+        "papers/inference/99-other-inference-systems/2024-2412.11664-c3ot-generating-shorter-chain-of-thought-without-compromising-effectiven.md",
+        "papers/inference/99-other-inference-systems/2024-2412.13171-compressed-chain-of-thought-efficient-reasoning-through-dense-representa.md",
+        "papers/inference/99-other-inference-systems/2025-2502.18600-chain-of-draft-thinking-faster-by-writing-less.md",
+        "papers/inference/99-other-inference-systems/2025-2502.21074-codi-compressing-chain-of-thought-into-continuous-space-via-self-distill.md"
+      ],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.22588",
+      "identity_tokens": [
+        "arXiv:2510.22588"
+      ],
+      "title": "UltraVoice: Scaling Fine-Grained Style-Controlled Speech Conversations for Spoken Dialogue Models",
+      "reason": "UltraVoiceは830時間超の音声対話データを作成し、感情・速度・音量・訛り等のスタイル制御を改善する。一次要旨の主な評価はMOSと指示追従率で、生成推論のメモリ・帯域・スケジューリング・速度を最適化する技術ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2510.22588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:20:00+09:00",
+      "last_checked_at": "2026-10-30T22:20:30+09:00",
+      "linked_from": [
+        "papers/inference/09-kernel-runtime-compilation/2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md",
+        "papers/inference/99-other-inference-systems/2024-2408.16725-mini-omni-language-models-can-hear-talk-while-thinking-in-streaming.md",
+        "papers/inference/99-other-inference-systems/2024-2409.06666-llama-omni-seamless-speech-interaction-with-large-language-models.md",
+        "papers/inference/99-other-inference-systems/2024-2410.00037-moshi-a-speech-text-foundation-model-for-real-time-dialogue.md",
+        "papers/inference/99-other-inference-systems/2025-2503.20215-qwen2-5-omni-technical-report.md"
+      ],
+      "worklist_rank": 496,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08678",
+      "identity_tokens": [
+        "arXiv:2610.08678"
+      ],
+      "title": "Secure Speculative Decoding for Large Language Models",
+      "reason": "SecureSDは投機復号の緩和検証で脱獄・プロンプト注入成功率が品質劣化より速く増えることを測定し、初期のdraftトークンだけ検証基準を厳しくする。一次要旨は安全性と効率・有用性の交換条件を扱い、投機復号そのものの受理規則を改良するため推論デコード技術に直接該当。",
+      "source_url": "https://arxiv.org/abs/2610.08678",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T22:20:00+09:00",
+      "last_checked_at": "2026-10-30T22:20:30+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2025-2502.20704-fuzzy-speculative-decoding-for-a-tunable-accuracy-runtime-tradeoff.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2512.11280-adasd-adaptive-speculative-decoding-for-efficient-language-model-inferen.md",
+        "papers/inference/05-speculative-decoding-moe/2026-2604.07622-diversed-relaxed-speculative-decoding-via-dynamic-ensemble-verification.md",
+        "papers/inference/99-other-inference-systems/2025-2501.19309-judge-decoding-faster-speculative-sampling-requires-going-beyond-model-a.md"
+      ],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
