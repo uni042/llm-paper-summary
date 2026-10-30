@@ -23,7 +23,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - [06-moe-quantization-compression](../06-moe-quantization-compression/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（216本）
+## 自動生成の論文一覧（217本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/)
 
@@ -193,6 +193,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2026-09 · [Programming AMD XDNA NPUs with Open-source Compiler Tools: A FlashAttention Case Study](2026-2609.21264-programming-amd-xdna-npus-with-open-source-compiler-tools-a-flashattenti.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   XDNAは複数の計算タイルと小さな局所メモリ、共有メモリタイル（MemTile）、外部メモリとの入出力を担うshimタイルから構成され、DMAとストリームの経路をソフトウェアが明示的に設計する。
+
+- **2026-09 · [mKernel: Fast Multi-GPU, Multi-Node Fused Kernels](2026-2609.13585-mkernel-fast-multi-gpu-multi-node-fused-kernels.md)**  
+  実装：[✓](https://github.com/uccl-project/mKernel) ・ リポジトリ内被引用：0  
+  しかし計算がまとまった出力を完成するまで通信を始められない場合、演算の途中で生じる細かな待ち時間を隠せない。計算と通信を一つの融合カーネルへまとめても、従来方式の多くは単一NVLink領域に限られる。
 
 - **2026-09 · [KV-Kaizen: Learning Context-Adaptive Cache Compression Choices](2026-2609.37988-kv-kaizen-learning-context-adaptive-cache-compression-choices.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

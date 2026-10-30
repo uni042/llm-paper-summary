@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（519本）
+## 自動生成の論文一覧（520本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -1703,6 +1703,10 @@
 - **2025-10 · [A Survey on Collaborating Small and Large Language Models for Performance, Cost-effectiveness, Cloud-edge Privacy, and Trustworthiness](2025-2510.13890-a-survey-on-collaborating-small-and-large-language-models-for-performanc.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   両者を単純に比較するのではなく、どの処理をどちらに割り当て、いつ結果を交換するかを設計対象とするのが協調方式である。
+
+- **2025-09 · [SplitQuant: Resource-Efficient LLM Offline Serving on Heterogeneous GPUs via Phase-Aware Model Partition and Adaptive Quantization](2025-a2e6bfa9ec8a-splitquant-resource-efficient-llm-offline-serving-on-heterogeneous-gpus-.md)**  
+  実装：[✓](https://github.com/tonyzhao-jt/LLM-PQ) ・ リポジトリ内被引用：0  
+  SplitQuantは、計算能力・メモリ容量・対応する低精度演算が異なるGPUを組み合わせたクラスタで、LLMのオフラインバッチ推論を効率化するシステムである。10種類のクラスタを用いた評価では最大2.34倍、平均1.61倍のスループット向上を報告する。
 
 - **2025-09 · [MACE: A Hybrid LLM Serving System with Colocated SLO-aware Continuous Retraining Alignment](2025-2510.03283-mace-a-hybrid-llm-serving-system-with-colocated-slo-aware-continuous-ret.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

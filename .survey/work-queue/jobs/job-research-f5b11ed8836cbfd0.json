@@ -35,10 +35,15 @@
   "selection_reason": "mKernelは計算タイルの生成と同時にNVLinkとノード間RDMAへ送る永続融合カーネルを実装し、SMを計算・通信へ動的配分する。テンソル・系列・専門家並列で通信待ちを減らし、H200 16GPUクラスタ2組でGEMM+AllReduceやRing Attentionを高速化する。",
   "semantic_scholar_id": "36a2122b15200ca57584beee0f04f565663718b8",
   "source_url": "https://arxiv.org/abs/2609.13585",
-  "status": "ready",
+  "status": "superseded",
   "title": "mKernel: Fast Multi-GPU, Multi-Node Fused Kernels",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T00:41:22+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/09-kernel-runtime-compilation/2026-2609.13585-mkernel-fast-multi-gpu-multi-node-fused-kernels.md",
+  "represented_canonical_id": "arXiv:2609.13585",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

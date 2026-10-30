@@ -28,6 +28,8 @@ worker_run_key: '20261030-0757-scheduled-chat-00/r01'
 reference_main_sha: '024991abbee1229900a7571d17055e5fae334950'
 quality_self_review_passed: true
 quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+last_audited: null
+audit_version: 0
 ---
 
 # SplitQuant：異種GPU上のLLMオフライン推論で層配置と混合精度を共同最適化

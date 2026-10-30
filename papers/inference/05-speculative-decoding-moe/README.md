@@ -5,7 +5,7 @@ Speculative decodingで1回のtarget LLM実行から複数tokenを確定し、�
 MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexpert数や重み転送量も増えやすいため、受理されそうなdraftだけを選ぶ、必要expertを先読みする、GPU常駐expertを優先する等の研究も含める。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（334本）
+## 自動生成の論文一覧（335本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/)
 
@@ -515,6 +515,10 @@ MoEではさらに、検証するtokenやbranchが増えるほど呼び出すexp
 - **2026-09 · [DScale: Scaling Block-Diffusion Speculative Decoding with Adaptive Verification](2026-2609.37532-dscale-scaling-block-diffusion-speculative-decoding-with-adaptive-verifi.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   DScaleは、ブロック拡散型の草案器が並列生成したトークン候補を、教師モデルが検証する際の実行効率を改善するサービング方式である。
+
+- **2026-09 · [Diffusion Drafts, AR Verifies: Accelerating Document OCR with Self-Speculative Decoding](2026-2609.26638-diffusion-drafts-ar-verifies-accelerating-document-ocr-with-self-specula.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  しかし同じステップで予測した位置は互いの確定値を見ていないため、各トークンが局所的にもっともらしくても、読み順が飛ぶ、語が重複する、表タグが閉じないなどの誤りが生じる。領域crop単位・SGLangのデコード-onlyでは777から3,057 トークン/s（3.94倍）である。
 
 - **2026-09 · [DEdit: Iterative Draft Editing for Speculative Decoding](2026-2609.38510-dedit-iterative-draft-editing-for-speculative-decoding.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
