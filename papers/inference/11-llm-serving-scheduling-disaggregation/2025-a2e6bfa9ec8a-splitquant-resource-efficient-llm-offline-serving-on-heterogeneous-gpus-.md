@@ -1,35 +1,70 @@
 ---
-canonical_id: 'DOI:10.1109/CLUSTER59342.2025.11186491'
-doi: '10.1109/CLUSTER59342.2025.11186491'
+canonical_id: DOI:10.1109/CLUSTER59342.2025.11186491
+doi: 10.1109/CLUSTER59342.2025.11186491
 title: 'SplitQuant: Resource-Efficient LLM Offline Serving on Heterogeneous GPUs via Phase-Aware Model Partition and Adaptive Quantization'
-summary: 'SplitQuantは異種GPUクラスタ上のオフラインLLM推論について、層ごとの量子化ビット幅、パイプライン分割、prefill/decode別マイクロバッチ数を共同最適化する。10クラスタで最大2.34倍、平均1.61倍のスループット向上を報告し、vLLMバックエンドの異種環境ではUniform比平均37%向上。レガシーGPU向け独自バックエンドとGurobiによる割当探索を併用し、品質劣化制約と最適化時間が適用上の条件となる。'
-list_summary: '異種GPUの計算・メモリ特性とLLMのprefill/decode差を考慮し、層配置・混合精度・マイクロバッチを共同探索するオフライン推論システム。'
+summary: SplitQuantは異種GPUクラスタ上のオフラインLLM推論について、層ごとの量子化ビット幅、パイプライン分割、prefill/decode別マイクロバッチ数を共同最適化する。10クラスタで最大2.34倍、平均1.61倍のスループット向上を報告し、vLLMバックエンドの異種環境ではUniform比平均37%向上。レガシーGPU向け独自バックエンドとGurobiによる割当探索を併用し、品質劣化制約と最適化時間が適用上の条件となる。
+list_summary: 異種GPUの計算・メモリ特性とLLMのprefill/decode差を考慮し、層配置・混合精度・マイクロバッチを共同探索するオフライン推論システム。
 authors:
-  - Juntao Zhao
-  - Borui Wan
-  - Yanghua Peng
-  - Haibin Lin
-  - Chuan Wu
+- Juntao Zhao
+- Borui Wan
+- Yanghua Peng
+- Haibin Lin
+- Chuan Wu
 published: '2025-09-02'
-publication: 'IEEE International Conference on Cluster Computing (CLUSTER 2025), pp. 1-11'
+publication: IEEE International Conference on Cluster Computing (CLUSTER 2025), pp. 1-11
 publication_type: conference
 publication_status: published
-source: 'https://i.cs.hku.hk/~cwu/papers/jtzhao-cluster25.pdf'
+source: https://i.cs.hku.hk/~cwu/papers/jtzhao-cluster25.pdf
 sources:
-  - 'https://i.cs.hku.hk/~cwu/papers/jtzhao-cluster25.pdf'
-  - 'https://doi.org/10.1109/CLUSTER59342.2025.11186491'
-  - 'https://github.com/tonyzhao-jt/LLM-PQ'
-implementation: 'vLLM v0.8.5.devの964行プラグイン、古いP100/T4向けPyTorchバックエンド4655行、Gurobi ILPを使うオフライン割当器1355行。prefill/decode別コストモデルと層の量子化感度指標を用い、GPU配置・量子化・マイクロバッチを探索。'
-code: 'https://github.com/tonyzhao-jt/LLM-PQ'
+- https://i.cs.hku.hk/~cwu/papers/jtzhao-cluster25.pdf
+- https://doi.org/10.1109/CLUSTER59342.2025.11186491
+- https://github.com/tonyzhao-jt/LLM-PQ
+implementation: vLLM v0.8.5.devの964行プラグイン、古いP100/T4向けPyTorchバックエンド4655行、Gurobi ILPを使うオフライン割当器1355行。prefill/decode別コストモデルと層の量子化感度指標を用い、GPU配置・量子化・マイクロバッチを探索。
+code: https://github.com/tonyzhao-jt/LLM-PQ
 last_checked: '2026-10-30'
 worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-30T07:57:22+09:00'
-worker_run_key: '20261030-0757-scheduled-chat-00/r01'
-reference_main_sha: '024991abbee1229900a7571d17055e5fae334950'
+worker_run_key: 20261030-0757-scheduled-chat-00/r01
+reference_main_sha: 024991abbee1229900a7571d17055e5fae334950
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:2312.07104
+- canonical_id: arXiv:1909.08053
+- canonical_id: SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38
+- canonical_id: arXiv:2306.00978
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:1810.04805
+  arxiv_id: '1810.04805'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2207.00032
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2308.16369
+- canonical_id: arXiv:2311.04939
+  arxiv_id: '2311.04939'
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2208.07339
+  arxiv_id: '2208.07339'
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2405.04532
+- canonical_id: arXiv:2306.03078
+- canonical_id: arXiv:2205.14135
+- canonical_id: arXiv:2311.11514
+- canonical_id: arXiv:2312.12456
+- canonical_id: arXiv:2403.01164
+- canonical_id: arXiv:2412.18934
+- canonical_id: arXiv:2502.07903
+- canonical_id: arXiv:2310.19102
+references_checked_at: '2026-10-30'
+references_source: primary-pdf-reference-section
+references_total: 54
 ---
 
 # SplitQuant：異種GPU上のLLMオフライン推論で層配置と混合精度を共同最適化
