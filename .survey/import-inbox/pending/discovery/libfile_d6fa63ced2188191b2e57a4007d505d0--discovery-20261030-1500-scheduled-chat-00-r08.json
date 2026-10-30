@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1500-scheduled-chat-00/r08",
+  "reference_main_sha": "2961ce802c7c010bf18836afa636780b500c3e8b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.18681",
+      "identity_tokens": [
+        "arXiv:2606.18681"
+      ],
+      "title": "Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs",
+      "reason": "arXiv v2一次要旨は視覚トークン削除を角度的多様性ではなく部分空間再構成誤差の最小化として定式化し、投影残差と画像・質問関連性を組み合わせるSPAREを提案。LLaVAで視覚トークン最大94%削減時に元性能95%維持と報告。VLM推論の視覚プリフィル圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.18681",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 118
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.19812",
+      "identity_tokens": [
+        "arXiv:2505.19812"
+      ],
+      "title": "Efficient Multi-modal Long Context Learning for Training-free Adaptation",
+      "reason": "arXiv一次要旨はマルチモーダルin-context学習の長いデモ入力をチャンク圧縮と層ごとのJensen-Shannon制約付きトークン枝刈りで削減するEMLoCを提案。追加学習なしで長文脈適応と推論時の計算・メモリ削減を両立。MLLMの入力圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2505.19812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 119
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.23566",
+      "identity_tokens": [
+        "arXiv:2603.23566"
+      ],
+      "title": "AscendOptimizer: Episodic Agent for Ascend NPU Operator Optimization",
+      "reason": "arXiv v2一次要旨はAscend NPU向けカーネルとホストtilingの双方を実機フィードバックで最適化するエージェントを提案。101個の一般AscendC演算子で平均1.21倍を報告するが、LLM推論固有のカーネルやモデルE2Eの実測が要旨にないため境界的。",
+      "source_url": "https://arxiv.org/abs/2603.23566",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 123
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02713",
+      "identity_tokens": [
+        "arXiv:2610.02713"
+      ],
+      "title": "WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds",
+      "reason": "arXiv一次要旨は生成途中で注意ヘッドの参照挙動が変化することを測定し、固定分類や破壊的削除の代わりに冷却したKVをCPUへ可逆退避するWakeKVを提案。FlexiCache/vLLMのMistral-7B実装でLongBench品質を維持しつつスループット改善を報告。KVキャッシュ階層メモリ管理に直接該当。",
+      "source_url": "https://arxiv.org/abs/2610.02713",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 124
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2412.11741",
+      "identity_tokens": [
+        "arXiv:2412.11741"
+      ],
+      "title": "CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation",
+      "reason": "arXiv一次要旨はKVキャッシュを密テンソルから疎なインデックス・重み表現へ変換し、NeuralDictで辞書を学習するCSRを提案。1bit相当のKV表現と既存量子化方式に匹敵する品質を目指し、長文脈推論のメモリ削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2412.11741",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 125
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18642",
+      "identity_tokens": [
+        "arXiv:2610.18642"
+      ],
+      "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+      "reason": "arXiv一次要旨はKVの固定メモリ予算下で、層ごとの高精度保持とトークン単位の重要情報保持に予算を割り当てるMultiAllocを提案。軽量な事前プロファイルで感度を評価し、オンライン探索なしに長文脈・推論ベンチマークで品質を改善。KVキャッシュ混合精度圧縮に直接該当。",
+      "source_url": "https://arxiv.org/abs/2610.18642",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 126
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.01224",
+      "identity_tokens": [
+        "arXiv:2609.01224"
+      ],
+      "title": "S$^2$Prune: Spatially Structured Visual Token Pruning for Multimodal Large Language Models",
+      "reason": "arXiv一次要旨は各画像領域に最低1トークンを残し、Laplacian変動で残余予算を配分して初期デコーダの表現変化で代表トークンを選ぶS2Pruneを提案。Qwen2.5-VL-7Bで576視覚トークン中32個のみでも元性能79.3%を維持。MLLM推論の視覚トークン削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2609.01224",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 129
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.06750",
+      "identity_tokens": [
+        "arXiv:2510.06750"
+      ],
+      "title": "Gold-Switch: Training-Free Superposition of Slow- and Fast-Thinking LLMs",
+      "reason": "arXiv一次要旨は高速・熟考型の2モデル常駐や外部ルータの代わりに、単一LRMの低ランク方向を推論時に調節して過剰思考を抑えるGold-Switchを提案。追加学習なしに推論計算を制御するため、推論時のトークン・計算予算削減に直接該当。",
+      "source_url": "https://arxiv.org/abs/2510.06750",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 130
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.10411",
+      "identity_tokens": [
+        "arXiv:2610.10411"
+      ],
+      "title": "Training Parallel Speculative Draft Models by Directly Minimizing Expected Decoding Rounds",
+      "reason": "arXiv一次要旨は並列ドラフトの受理・拒否と次ラウンド開始位置の依存をMarkov報酬過程で表現し、期待デコードラウンド数EDRを厳密に最小化する学習目的とTD勾配を導出。投機的復号のターゲットforward回数削減に直接関係。",
+      "source_url": "https://arxiv.org/abs/2610.10411",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 131
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.24963/ijcai.2026/237",
+      "identity_tokens": [
+        "DOI:10.24963/ijcai.2026/237"
+      ],
+      "title": "SeGO: Sensitivity-Aware Golden Optimization for Large-Scale VLM Quantization",
+      "reason": "IJCAI公式要旨はVLMのExpansion/Projection空間で量子化感度が異なる点を利用し、感度が高いExpansionだけを保護して黄金分割探索でスケールを決めるSeGOを提案。InternVL2/LLaVAのW3/W4A16で7B〜26B精度を3.8〜17.3%改善、較正効率を数十倍改善と報告。VLM推論向けPTQに直接該当。",
+      "source_url": "https://ijcai.org/proceedings/2026/237",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:13:41+09:00",
+      "last_checked_at": "2026-10-30T15:13:41+09:00",
+      "linked_from": [],
+      "worklist_rank": 132
+    }
+  ]
+}
