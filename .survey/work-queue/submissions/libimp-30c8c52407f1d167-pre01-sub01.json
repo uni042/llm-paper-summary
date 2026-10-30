@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Select to Think: Unlocking SLM Potential with Local Sufficiency",
+      "source_url": "https://arxiv.org/abs/2604.26940",
+      "year": 2026,
+      "published": "2026-04-29",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Small language models (SLMs) offer efficient deployment, yet they often lag behind their larger counterparts (LLMs) in reasoning. Existing remedies either invoke an LLM at points of reasoning divergence, incurring substantial latency and cost, or rely on standard distillation, which is limited by the SLM's capacity to accurately mimic the LLM's complex generative distribution. We address this dilemma by identifying local sufficiency: at divergence points, the LLM's preferred token often resides within the SLM's top-K next-token predictions, even when failing to emerge as the SLM top-1 choice. We therefore propose Select to Think (S2T), which reframes the LLM's role from open-ended generation to selection among the SLM's proposals, simplifying the supervision signal to discrete candidate rankings. Leveraging this, we introduce S2T-Local, which distills the selection logic into the SLM, empowering it to perform autonomous re-ranking without inference-time LLM dependency. Empirically, a 1.5B SLM's top-8 candidates contain the 32B LLM's choice with a 95% hit rate, and S2T-Local improves the 1.5B SLM's Math Avg. over greedy decoding by 24.1% relative gain, matching the efficacy of 8-path self-consistency with single-trajectory efficiency.",
+      "identifiers": [
+        "SemanticScholar:260f8c06823fffd6ae52cd9a93966e245ff54736"
+      ],
+      "semantic_scholar_id": "260f8c06823fffd6ae52cd9a93966e245ff54736",
+      "canonical_id": "arXiv:2604.26940",
+      "arxiv_id": "2604.26940",
+      "doi": "10.48550/arXiv.2604.26940",
+      "authors": [
+        "Wenxuan Ye",
+        "Yang-Yang Zhang",
+        "Xue-Li An",
+        "Georg Carle",
+        "Yun-Pu Ma"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 184,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は小型モデルのtop-Kに大規模モデルが選ぶトークンが含まれる局所充足性を利用し、SLMの候補再ランキングへ蒸留するS2T-Localを提案。推論時に大規模モデルを呼ばずに推論精度を改善し、低コストのSLM配信に寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SPECTRA: Adaptive Execution of Speculative Decoding on a Runtime-Reconfigurable Tiled Architecture",
+      "source_url": "https://arxiv.org/abs/2609.24847",
+      "year": 2026,
+      "published": "2026-09-21",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM inference on edge devices is constrained by computational and memory resources, making efficient autoregressive decoding challenging. Speculative decoding alleviates this bottleneck by generating tokens with a smaller draft model and verifying multiple tokens in parallel with a batched target model pass. However, verification introduces a runtime-dependent intermediate regime between memory-bound general matrix-vector (GEMV) operations in decoding and compute-bound general matrix-matrix (GEMM) operations in prefill, as its arithmetic intensity varies with speculation length and acceptance rate. We present SPECTRA, a runtime-reconfigurable tiled architecture that sustains high utilization across the full speculative decoding pipeline. Within each tile, the compute engine switches between systolic execution for GEMMs and vector-lane execution for GEMVs. Across tiles, SPECTRA dynamically adapts computation parallelism by selecting tile count, kernel partitioning, and communication pattern. Both tile-level and system-level reconfiguration operate on a per-kernel basis, enabling efficient execution across these diverse regimes. Evaluated on a 20-tile FPGA prototype across the Pythia, SmolLM2, and GPT-2 families, SPECTRA achieves up to $2.09\\times$ speedup from tile-level reconfiguration and a further $1.25\\times$ gain from system-level adaptability over fixed designs.",
+      "identifiers": [
+        "SemanticScholar:a74c8a785b8ee75df581f0b6d99da779be35a326"
+      ],
+      "semantic_scholar_id": "a74c8a785b8ee75df581f0b6d99da779be35a326",
+      "canonical_id": "arXiv:2609.24847",
+      "arxiv_id": "2609.24847",
+      "authors": [
+        "G. Tombesi",
+        "William Baisi",
+        "Je Yang",
+        "Elisavet Lydia Alvanaki",
+        "Kevin J. Lee",
+        "Michael S. Lippe",
+        "Biruk B. Seyoum",
+        "Luca P. Carloni"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 39,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は投機的復号のdraft/verifyでGEMVとGEMMの計算特性が変わる問題に対し、tile内のsystolic/vectorモードとtile間並列度を切り替えるSPECTRAを提案。エッジLLMの投機的復号ハードウェアに直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Higher-order pruning of experts in mixture-of-experts language models",
+      "source_url": "https://arxiv.org/abs/2609.18916",
+      "year": 2026,
+      "published": "2026-09-16",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) language models suffer from large parameter counts, which create a significant memory bottleneck. Expert pruning is the most direct approach for reducing this parameter count, yet existing methods make pruning decisions for each expert independently, and assume experts'contributions are purely additive. In reality, expert usage in MoEs is inherently cooperative. We derive HOPE (Higher-Order Pruning of Experts), a second-order pruning objective which provably minimizes an upper bound on the error resulting from pruning. We show that REAP (a state-of-the-art first-order pruning method) is a special case of HOPE where interaction terms are ignored. Across three frontier MoE models (up to 122B parameters), two distinct calibration sets, and multiple benchmarks (including math, instruction following, coding, and an agentic suite), we demonstrate that HOPE produces better pruning decisions than existing methods, and its advantage is most pronounced at high pruning rates and on challenging agentic workloads. At 50% pruning, HOPE outperforms all baselines and achieves an average rank of 1.58 out of 5 methods (versus 2.42 for the next-best method, REAP), with gains of up to +6.1% on agentic coding. Over all conditions, HOPE again achieves the best average rank and surpasses every other method in the majority of head-to-head comparisons. By preserving cooperative expert structure that first-order methods ignore, HOPE enables aggressive compression with minimal degradation, particularly on complex tasks where diverse expert combinations are invoked over long sequences.",
+      "identifiers": [
+        "SemanticScholar:d4a3433a065ad5e51888ac53242f33739c5e5660"
+      ],
+      "semantic_scholar_id": "d4a3433a065ad5e51888ac53242f33739c5e5660",
+      "canonical_id": "arXiv:2609.18916",
+      "arxiv_id": "2609.18916",
+      "authors": [
+        "Alex M. Tseng",
+        "Prannay Kaul",
+        "L. Zancato",
+        "Wei Xia",
+        "Stefan 0 Soatto"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMoE expertの相互作用を考慮する二階の枝刈り目的HOPEを提案。従来の独立expert評価を一般化し、最大122BのMoEで高枝刈り率の品質保持を改善。MoE推論のモデル容量削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios",
+      "source_url": "https://arxiv.org/abs/2605.06185",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models perform well on short- and medium-length video understanding but still struggle to maintain coherent event memory and recover long-range relationships in ultra-long videos. End-to-end methods are limited by visual-token growth and context length, while fixed-segment retrieval often fragments complete events and weakens state-transition modeling.We propose Event-Causal RAG (EC-RAG), a lightweight retrieval-augmented framework for ultra-long and streaming video reasoning. A dual visual-audio sentinel mechanism segments video streams into semantically complete events, represented as State-Event-State (SES) structures that organize observable pre-event states, central events, and post-event states as event-local causal transitions. These transitions are stored in dual vector-graph memory and temporally connected through entity-consistent trajectories. During question answering, bidirectional graph retrieval recovers relevant predecessor and successor events, and answers are generated using both structured memory and the corresponding video evidence.We further introduce ECV-1H, an hour-scale long-video QA benchmark dedicated to directed event-causal reasoning, with all source videos exceeding one hour. It covers over 150 hours of untrimmed video and contains 1,251 fully human-annotated QA pairs. EC-RAG improves overall accuracy by 4.96\\%--11.67\\% across three open-source video foundation models and achieves consistent gains across public datasets. On a single RTX 5090 GPU with 32 GB of memory, EC-RAG can continuously process videos while maintaining controlled streaming memory usage.",
+      "identifiers": [
+        "SemanticScholar:89d420e90d6e36a09aac6fb412eef2340deb7b9d"
+      ],
+      "semantic_scholar_id": "89d420e90d6e36a09aac6fb412eef2340deb7b9d",
+      "canonical_id": "arXiv:2605.06185",
+      "arxiv_id": "2605.06185",
+      "doi": "10.48550/arXiv.2605.06185",
+      "authors": [
+        "P. Yan",
+        "Yu Zhao",
+        "Liang Xie",
+        "Juntong Qi",
+        "Mingming Wang",
+        "Er-Wei Yin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は長動画を音声・映像sentinelで意味的イベントへ分割し、状態-イベント-状態のグラフ記憶から関連部分を検索するEC-RAGを提案。長動画を全トークンとしてLLMに入力する負荷を避ける推論時の検索・文脈管理に関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Uncertainty-gated selection for block-sparse attention",
+      "source_url": "https://arxiv.org/abs/2607.07724",
+      "year": 2026,
+      "published": "2026-07-04",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block-sparse attention scales long-context language models by replacing the O(N^2) softmax with a per-query top-k selection over key blocks. This cutoff is myopic: when the k-th and (k+1)-th blocks are nearly tied in score, the selector commits without spending extra budget, and a dropped block carrying answer evidence is unrecoverable downstream. We propose a value-of-information router that measures, for each query, how decisively the top-k cut was made, and doubles the kept set for the queries where that gap is smallest; the rule is backbone-agnostic and stacks with existing block-scoring methods such as Quest. On LongBench-v2 medium at n=215 (the entire dataset subset), router-on-Quest reaches paired recall 0.75 vs. top-k 0.47 -- +28 pp over the SSA-style baseline (McNemar p<0.01) -- and lands within 2 pp of dense on RULER NIAH multikey at the same context. The lift reproduces on four models from three architectures (Qwen2.5, Mistral-Nemo, Qwen3.6). At 128K, the router preserves 0.81 and 0.89 of dense accuracy on Qwen2.5-7B-1M and Qwen3.6 (vs. SSA-style top-k at 0.09 on the former) while the fused selection-plus-kernel pipeline runs at 0.62x and 0.80x dense wall time.",
+      "identifiers": [
+        "SemanticScholar:e160d63ad098ca82680e4af816c822cba8e70a0a"
+      ],
+      "semantic_scholar_id": "e160d63ad098ca82680e4af816c822cba8e70a0a",
+      "canonical_id": "arXiv:2607.07724",
+      "arxiv_id": "2607.07724",
+      "doi": "10.48550/arXiv.2607.07724",
+      "authors": [
+        "Thomas Rossi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 118,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はblock-sparse attentionのtop-k境界のスコア差が小さいQueryだけ選択ブロック数を倍増するvalue-of-information routerを提案。Questと併用してLongBench-v2でpaired recallを0.47から0.75へ改善し、128Kでdenseの0.62〜0.80倍のwall timeと報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-30c8c52407f1",
+    "round": "libimp-30c8c52407f1d167-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-30c8c52407f1d167-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-30c8c52407f1d167-pre01.json",
+    "receipt": "sha256:008bac6a9cc18cdfce1478278685bc05e3dce0ac80da116820199940f0ad9c90"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-30c8c52407f1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

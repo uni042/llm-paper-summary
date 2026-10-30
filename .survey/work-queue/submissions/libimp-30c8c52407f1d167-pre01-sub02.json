@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Trident: Unifying Guarded Dispatch and Host Execution for PyTorch Triton Workloads",
+      "source_url": "https://arxiv.org/abs/2609.37241",
+      "year": 2026,
+      "published": "2026-09-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "User-written Triton kernels enable high-performance GPU computation within PyTorch, but their end-to-end latency can remain dominated by host-side orchestration, especially when device execution is short. Although torch.compile can generate native host wrappers for captured graphs, each invocation still passes through runtime-managed specialization lookup, guard evaluation, and preparation before reaching the wrapper. We present Trident, a compiler backend that removes this recurring overhead from the specialization cache-hit path. Trident introduces the Specialization Cache Module (SCM), which compiles guarded specialization selection, argument and execution-environment preparation, and host execution for multiple specializations into a single executable module. An invocation enters the SCM once, remains in compiled code when a specialization matches, and returns to Python only when a new specialization must be compiled. Built on Torch-MLIR, Trident lowers guards and host-side orchestration to native code while retaining calls to optimized runtime implementations of supported ATen operators. Our evalu- ation on two LLMs shows that Trident achieves up to a 1.47x speedup in model-level end-to-end latency over eager execution and up to 1.68x over torch.compile.",
+      "identifiers": [
+        "SemanticScholar:a0a7b24c92fa336a7eb35ef1ae4a3251dc23240e"
+      ],
+      "semantic_scholar_id": "a0a7b24c92fa336a7eb35ef1ae4a3251dc23240e",
+      "canonical_id": "arXiv:2609.37241",
+      "arxiv_id": "2609.37241",
+      "authors": [
+        "Jin-Jie Liu",
+        "Xiao-Yan Liu",
+        "Shu-Han Zhang",
+        "Wen-Jian Sun",
+        "Rui-Lin Yang",
+        "Chun-Lei Men",
+        "Yong-Hua Lin",
+        "Shao-Hua Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 31,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はTritonカーネル呼出し時のPython・specialization guard・引数準備のhost側負荷をnative SCMへ統合するTridentを提案。短いGPUカーネルで支配的になりがちなCPU dispatch遅延を削減する実行基盤で、LLM推論カーネルへ関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "BestServe: Serving Strategies with Optimal Goodput in Collocation and Disaggregation Architectures",
+      "source_url": "https://arxiv.org/abs/2506.05871",
+      "year": 2025,
+      "published": "2025-06-06",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving large language models (LLMs) to millions of users requires efficient resource allocation and parallelism strategies. It is a labor intensive trial-and-error process to find such a strategy. We present BestServe, a novel framework for ranking serving strategies by estimating goodput under various operating scenarios. Supporting both collocated and disaggregated architectures, BestServe leverages an inference simulator built on an adapted roofline model and CPU-GPU dispatch dynamics. Our framework determines the optimal strategy in minutes on a single standard CPU, eliminating the need for costly benchmarking, while achieving predictions within a $20\\%$ error margin. It appeals to be practical for rapid deployment planning because of its lightweight design and strong extensibility.",
+      "identifiers": [
+        "SemanticScholar:e5c9446479bf411d3b03fe73ffab1e46f124d2a6"
+      ],
+      "semantic_scholar_id": "e5c9446479bf411d3b03fe73ffab1e46f124d2a6",
+      "canonical_id": "arXiv:2506.05871",
+      "arxiv_id": "2506.05871",
+      "doi": "10.48550/arXiv.2506.05871",
+      "authors": [
+        "Xiannan Hu",
+        "Tianyou Zeng",
+        "Xiao-Ming Yuan",
+        "Liwei Song",
+        "Guang-Yuan Zhang",
+        "Bangzheng He"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 511,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はcollocated/disaggregated LLM servingのgoodputをroofline・CPU-GPU dispatchを使う軽量シミュレータで推定し、運用構成をランキングするBestServeを提案。標準CPUで数分で推定し、実測との誤差20%以内を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-30c8c52407f1",
+    "round": "libimp-30c8c52407f1d167-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-30c8c52407f1d167-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-30c8c52407f1d167-pre01.json",
+    "receipt": "sha256:008bac6a9cc18cdfce1478278685bc05e3dce0ac80da116820199940f0ad9c90"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-30c8c52407f1",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

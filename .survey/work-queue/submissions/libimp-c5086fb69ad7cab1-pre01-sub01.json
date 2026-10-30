@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Understanding Dynamic Compute Allocation in Recurrent Transformers",
+      "source_url": "https://arxiv.org/abs/2602.08864",
+      "year": 2026,
+      "published": "2026-02-09",
+      "venue": "arXiv.org",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Token-level adaptive computation seeks to reduce inference cost by allocating more computation to harder tokens and less to easier ones. However, prior work is primarily evaluated on natural-language benchmarks using task-level metrics, where token-level difficulty is unobservable and confounded with architectural factors, making it unclear whether compute allocation truly aligns with underlying complexity. We address this gap through three contributions. First, we introduce a complexity-controlled evaluation paradigm using algorithmic and synthetic language tasks with parameterized difficulty, enabling direct testing of token-level compute allocation. Second, we propose ANIRA, a unified recurrent Transformer framework that supports per-token variable-depth computation while isolating compute allocation decisions from other model factors. Third, we use this framework to conduct a systematic analysis of token-level adaptive computation across alignment with complexity, generalization, and decision timing. Our results show that compute allocation aligned with task complexity can emerge without explicit difficulty supervision, but such alignment does not imply algorithmic generalization: models fail to extrapolate to unseen input sizes despite allocating additional computation. We further find that early compute decisions rely on static structural cues, whereas online halting more closely tracks algorithmic execution state.",
+      "identifiers": [
+        "SemanticScholar:ad81ecea14b3034c1910dd51a35e87e9cc9648b6"
+      ],
+      "semantic_scholar_id": "ad81ecea14b3034c1910dd51a35e87e9cc9648b6",
+      "canonical_id": "arXiv:2602.08864",
+      "arxiv_id": "2602.08864",
+      "doi": "10.48550/arXiv.2602.08864",
+      "authors": [
+        "Ibraheem Muhammad Moosa",
+        "S. Lohit",
+        "Ye Wang",
+        "Moitreya Chatterjee",
+        "Wenpeng Yin"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 263,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はトークン難度と可変深さ計算を分離評価するANIRA再帰Transformerと合成課題の評価法を提案。トークンごとに必要な演算量を割り当てるadaptive computationの有効性を検証し、条件付き推論計算削減に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Two-Stage GPU Kernel Tuner Combining Semantic Refactoring and Search-Based Optimization",
+      "source_url": "https://arxiv.org/abs/2601.12698",
+      "year": 2026,
+      "published": "2026-01-19",
+      "venue": "arXiv.org",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "GPU code optimization is a key performance bottleneck for HPC workloads as well as large-model training and inference. Although compiler optimizations and hand-written kernels can partially alleviate this issue, achieving near-hardware-limit performance still relies heavily on manual code refactoring and parameter tuning. Recent progress in LLM-agent-based kernel generation and optimization has been reported, yet many approaches primarily focus on direct code rewriting, where parameter choices are often implicit and hard to control, or require human intervention, leading to unstable performance gains. This paper introduces a template-based rewriting layer on top of an agent-driven iterative loop: kernels are semantically refactored into explicitly parameterizable templates, and template parameters are then optimized via search-based autotuning, yielding more stable and higher-quality speedups. Experiments on a set of real-world kernels demonstrate speedups exceeding 3x in the best case. We extract representative CUDA kernels from SGLang as evaluation targets; the proposed agentic tuner iteratively performs templating, testing, analysis, and planning, and leverages profiling feedback to execute constrained parameter search under hardware resource limits. Compared to agent-only direct rewriting, the template-plus-search design significantly reduces the randomness of iterative optimization, making the process more interpretable and enabling a more systematic approach toward high-performance configurations. The proposed method can be further extended to OpenCL, HIP, and other backends to deliver automated performance optimization for real production workloads.",
+      "identifiers": [
+        "SemanticScholar:9d245e874eae3f5942d306199ff93ccf30e1165c"
+      ],
+      "semantic_scholar_id": "9d245e874eae3f5942d306199ff93ccf30e1165c",
+      "canonical_id": "arXiv:2601.12698",
+      "arxiv_id": "2601.12698",
+      "doi": "10.48550/arXiv.2601.12698",
+      "authors": [
+        "Qiuyi Qu",
+        "Yi-Cheng Sui",
+        "Yufei Sun",
+        "Rui Chen",
+        "Xiaofei Zhang",
+        "Yuzhi Zhang",
+        "Hao-Fen Wang",
+        "Ge Lan"
+      ],
+      "priority": 106,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 106,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 284,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はLLMエージェントによるCUDAカーネルの意味的テンプレート化と探索ベースのautotuningを組み合わせる二段階GPUチューナを提案。SGLang由来のCUDAカーネルを含む実験で最大3倍超の高速化を報告。LLM推論カーネル最適化へ直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models",
+      "source_url": "https://arxiv.org/abs/2602.12618",
+      "year": 2025,
+      "published": "2025-12-08",
+      "venue": "BigData Congress [Services Society]",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) incur significant computational cost from processing numerous vision tokens through all LLM layers. Prior pruning methods operate either before the LLM, limiting generality due to diverse encoder-projector designs or within the LLM using heuristics that are incompatible with FlashAttention. We take a different approach: rather than identifying unimportant tokens, we treat the LLM itself as the optimal guide for compression. Observing that deeper layers naturally transmit vision-to-text information, we introduce attention-driven self-compression, a simple, architecture-agnostic method that progressively reduces vision tokens using only the LLM's attention mechanism. Our method applies uniform token downsampling at selected layers, forming bottlenecks that encourage the model to reorganize and compress information into the remaining tokens. It requires no score computation, auxiliary modules, or attention modification, and remains fully compatible with FlashAttention. Applied to LLaVA-1.5, it reduces FLOPs by $\\sim 56.5 \\%$ while pruning $\\sim 66.7 \\%$ of vision tokens, retaining $\\sim 98.2 \\%$ of the original performance. Across multiple benchmarks, it outperforms prior pruning approaches in both efficiency and accuracy. Crucially, under high compression ratios, our method remains robust while heuristicbased techniques degrade sharply.",
+      "identifiers": [
+        "SemanticScholar:d9c75a3516464a30d87691f77bdb83523927423b"
+      ],
+      "semantic_scholar_id": "d9c75a3516464a30d87691f77bdb83523927423b",
+      "canonical_id": "arXiv:2602.12618",
+      "arxiv_id": "2602.12618",
+      "doi": "10.1109/BigData66926.2025.11402394",
+      "authors": [
+        "Omer Faruk Deniz",
+        "Rui Mao",
+        "Ruochen Li",
+        "Yapeng Tian",
+        "Latifur Khan"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 326,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨はMLLM内部の注意機構だけを用いて視覚トークンを層別に減らすADSCを提案。追加スコア計算やattention改造を必要とせずFlashAttentionと両立し、視覚トークンのLLM層内計算を削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "SwiftVLM: Efficient Vision-Language Model Inference via Cross-Layer Token Bypass",
+      "source_url": "https://arxiv.org/abs/2602.03134",
+      "year": 2026,
+      "published": "2026-02-03",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning is a promising approach for reducing the computational cost of vision-language models (VLMs), and existing methods often rely on early pruning decisions to improve efficiency. While effective on coarse-grained reasoning tasks, they suffer from significant performance degradation on tasks requiring fine-grained visual details. Through layer-wise analysis, we reveal substantial discrepancies in visual token importance across layers, showing that tokens deemed unimportant at shallow layers can later become highly relevant for text-conditioned reasoning. To avoid irreversible critical information loss caused by premature pruning, we introduce a new pruning paradigm, termed bypass, which preserves unselected visual tokens and forwards them to subsequent pruning stages for re-evaluation. Building on this paradigm, we propose SwiftVLM, a simple and training-free method that performs pruning at model-specific layers with strong visual token selection capability, while enabling independent pruning decisions across layers. Experiments across multiple VLMs and benchmarks demonstrate that SwiftVLM consistently outperforms existing pruning strategies, achieving superior accuracy-efficiency trade-offs and more faithful visual token selection behavior.",
+      "identifiers": [
+        "SemanticScholar:265ae9e70cf6f22be4974aa37a846d47db9cb71b"
+      ],
+      "semantic_scholar_id": "265ae9e70cf6f22be4974aa37a846d47db9cb71b",
+      "canonical_id": "arXiv:2602.03134",
+      "arxiv_id": "2602.03134",
+      "doi": "10.48550/arXiv.2602.03134",
+      "authors": [
+        "Chen Qian",
+        "Xinran Yu",
+        "Danyang Li",
+        "Guoxuan Chi",
+        "Zheng Yang",
+        "Qiang Ma",
+        "Xin Miao"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 269,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は浅い層で不要とされた視覚トークンが後段で重要になる問題に対し、破棄せず後段の再評価へ迂回させるSwiftVLMを提案。学習不要の層別視覚トークン選択で細粒度画像推論の精度と計算削減を両立。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Litespark Inference For CPUs: Ultra-Fast SIMD Framework for Ternary (1.58-bit) Language Models",
+      "source_url": "https://arxiv.org/abs/2605.06485",
+      "year": 2026,
+      "published": "2026-05-07",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) have transformed artificial intelligence, but their computational requirements remain prohibitive for most users. Standard inference demands expensive datacenter GPUs or cloud API access, leaving over one billion personal computers underutilized for AI workloads. Ternary models offer a path forward: their weights are constrained to {-1, 0, +1}, theoretically eliminating the need for floating-point multiplication. However, existing frameworks fail to exploit this structure, treating ternary models as dense floating-point networks. We address this gap with custom SIMD kernels that replace matrix multiplication with simple addition and subtraction operations, targeting the integer dot product instructions available on modern CPUs. Our implementation, Litespark-Inference, is pip-installable and integrates directly with Hugging-Face, achieving 18.15x higher throughput, 7.15x faster time-to-first-token and 6.03x memory reduction compared to standard PyTorch inference on Apple Silicon, with comparable or higher throughput speedups up to 95.81x on Intel and AMD processors.",
+      "identifiers": [
+        "SemanticScholar:e124f4e35248b90ba1be9517053c3bc0c5fd2c87"
+      ],
+      "semantic_scholar_id": "e124f4e35248b90ba1be9517053c3bc0c5fd2c87",
+      "canonical_id": "arXiv:2605.06485",
+      "arxiv_id": "2605.06485",
+      "authors": [
+        "Nii Osae Osae Dade",
+        "Tony Morri",
+        "M. H. Rahat",
+        "Sayandip Pal",
+        "Rickston Pinto"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 176,
+        "matched_prestigious_venue": null
+      },
+      "reason": "arXiv一次要旨は三値重みの乗算を整数加減算に置き換えるSIMDカーネルLitesparkを提案。Apple SiliconのPyTorch比でスループット18.15倍、TTFT7.15倍、メモリ6.03倍削減と報告。低ビットLLMのCPU推論に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c5086fb69ad7",
+    "round": "libimp-c5086fb69ad7cab1-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c5086fb69ad7cab1-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c5086fb69ad7cab1-pre01.json",
+    "receipt": "sha256:06426eb800a993e000aa4fc940d83eebbc683b6f83a83d252626570760de4901"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c5086fb69ad7",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
