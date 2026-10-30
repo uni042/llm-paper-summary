@@ -2,9 +2,9 @@
   "schema_version": 2,
   "artifact_type": "discovery_run",
   "worker_id": "scheduled-chat-30",
-  "run_key": "20261031-0233-scheduled-chat-30/r05",
+  "run_key": "20261031-0233-scheduled-chat-30/r05::provider-gap",
   "reference_main_sha": "60afd16624f4f1435a21e795ef399f73ef2a5a7d",
-  "record_count": 10,
+  "record_count": 7,
   "records": [
     {
       "classification": "accept",
@@ -39,22 +39,6 @@
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2407.09527",
-      "identity_tokens": [
-        "arXiv:2407.09527"
-      ],
-      "title": "BitNet b1.58 Reloaded: State-of-the-art Performance Also on Smaller Networks",
-      "reason": "10万〜4800万パラメータの小型言語/画像モデルで1.58bit量子化認識学習を検証し、中央値を使うBitNet変種を提案。小型モデルでの低ビット重みの実現性は推論メモリ削減に関連するが、主評価は学習法と精度で、LLMサービングや実測推論速度は対象外。",
-      "source_url": "https://arxiv.org/abs/2407.09527",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T02:47:08+09:00",
-      "last_checked_at": "2026-10-31T02:47:08+09:00",
-      "linked_from": [],
-      "worklist_rank": 209,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "arXiv:2603.04162",
       "identity_tokens": [
@@ -71,22 +55,6 @@
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
-      "classification": "borderline",
-      "canonical_id": "DOI:10.18653/v1/2026.acl-long.51",
-      "identity_tokens": [
-        "DOI:10.18653/v1/2026.acl-long.51"
-      ],
-      "title": "Exploring Attention Attractors in Large Language Models",
-      "reason": "ACL 2026の一次論文はattention attractorが先行文脈を集約する機能、層・token分布、活性次元との関係を分析。低意味語をKVに残すだけで多くの長文脈・ストリーミング課題の性能を保てるという補助実験もあるが、主貢献は機構解明であり、独立した推論エンジンや速度改善の定量評価ではない。",
-      "source_url": "https://aclanthology.org/2026.acl-long.51/",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T02:47:08+09:00",
-      "last_checked_at": "2026-10-31T02:47:08+09:00",
-      "linked_from": [],
-      "worklist_rank": 217,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
       "classification": "accept",
       "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043916",
       "identity_tokens": [
@@ -100,22 +68,6 @@
       "last_checked_at": "2026-10-31T02:47:08+09:00",
       "linked_from": [],
       "worklist_rank": 219,
-      "origin": "discovery_worklist_primary_abstract_screen"
-    },
-    {
-      "classification": "borderline",
-      "canonical_id": "arXiv:2608.10416",
-      "identity_tokens": [
-        "arXiv:2608.10416"
-      ],
-      "title": "Riemann GeoResolver: A Non-Euclidean Attention Framework from Euclidean Resolver to Hyperbolic-Spherical Geometry",
-      "reason": "逆距離attentionをユークリッドから双曲・球面測地へ拡張し、検索回路分離・学習収束・effective rankの理論を提示。O(1) per-tokenを含む演算子と双曲メモリ圧縮を主張するが、要旨ではLLM実機の実行速度・メモリ・品質の統合比較を確認できないため、理論的な推論効率化候補として境界判定。",
-      "source_url": "https://arxiv.org/abs/2608.10416",
-      "body_check": "primary_abstract_screen_only; body_not_read",
-      "first_checked_at": "2026-10-31T02:47:08+09:00",
-      "last_checked_at": "2026-10-31T02:47:08+09:00",
-      "linked_from": [],
-      "worklist_rank": 236,
       "origin": "discovery_worklist_primary_abstract_screen"
     },
     {
@@ -166,5 +118,16 @@
       "worklist_rank": 260,
       "origin": "discovery_worklist_primary_abstract_screen"
     }
+  ],
+  "parent_run_key": "20261031-0233-scheduled-chat-30/r05",
+  "provider_gap_from": ".survey/import-inbox/waiting/discovery/discovery-20261031-0233-scheduled-chat-30-r05.json",
+  "provider_gap_ids": [
+    "DOI:10.1109/iscas56072.2025.11043916",
+    "arXiv:2603.04162",
+    "arXiv:2604.04493",
+    "arXiv:2605.24019",
+    "arXiv:2608.21265",
+    "arXiv:2609.39740",
+    "arXiv:2609.40127"
   ]
 }

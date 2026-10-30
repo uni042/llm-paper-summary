@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Integer Unit-Based Outlier-Aware LLM Accelerator Preserving Numerical Accuracy of FP-FP GEMM",
+      "source_url": "https://doi.org/10.23919/DATE64628.2025.10992868",
+      "year": 2025,
+      "published": "2025-03-31",
+      "venue": "Design, Automation and Test in Europe",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The proliferation of large language models (LLMs) has significantly heightened the importance of quantization to alleviate the computational burden given the surge in the number of parameters. However, quantization often targets a subset of a LLM and relies on the floating-point (FP) arithmetic for matrix multiplication of specific subsets, leading to performance and energy overhead. Additionally, to compensate for the quality degradation incurred by quantization, retraining methods are frequently employed, demanding significant efforts and resources. This paper proposes OwL-P, an outlier-aware LLM inference accelerator which preserves the numerical accuracy of FP arithmetic while enhancing hardware efficiency with an integer (INT)-based arithmetic unit for general matrix multiplication (GEMM), through the use of a shared exponent and efficient management of outlier data. It also mitigates off-chip bandwidth requirements by employing a compressed number format. The proposed number format leverages outliers and shared exponents to facilitate the compression of both model weights and activations. We evaluate this work across 10 different transformer-based benchmarks, and the results demonstrate that the proposed integer-based LLM accelerator achieves an average 2.70x performance gain and 3.57 x energy savings while maintaining the numerical accuracy of the FP arithmetic.",
+      "identifiers": [
+        "SemanticScholar:8339c1fb255dc2dc981e107d7fac8d4db1a8e1e0"
+      ],
+      "semantic_scholar_id": "8339c1fb255dc2dc981e107d7fac8d4db1a8e1e0",
+      "doi": "10.23919/DATE64628.2025.10992868",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10992868",
+      "authors": [
+        "Jehun Lee",
+        "Jae-Joon Kim"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 578,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Seoul National Universityの著者所属機関掲載の一次要旨によると、OwL-Pは外れ値と共有指数を管理する圧縮数値形式で重み・活性の帯域を抑え、浮動小数点演算の数値精度を保ちながら整数演算器でGEMMを処理するLLM推論アクセラレータ。10種のTransformerベンチマークで平均2.70倍の性能向上、3.57倍のエネルギー削減を報告しており、推論ハードウェア効率への直接的貢献がある。",
+      "library_body_check": "primary_institutional_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c795605be5b3",
+    "round": "libimp-c795605be5b30512-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c795605be5b30512-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c795605be5b30512-pre01.json",
+    "receipt": "sha256:2fa249fc29616470e9554d811bd632a08c72d8b108bdaeb1c4f736a54a46b02f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c795605be5b3",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

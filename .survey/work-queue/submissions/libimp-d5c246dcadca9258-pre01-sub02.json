@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Large Language Model Compression via the Nested Activation-Aware Decomposition",
+      "source_url": "https://arxiv.org/abs/2503.17101",
+      "year": 2025,
+      "published": "2025-03-21",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In this paper, we tackle the critical challenge of compressing large language models (LLMs) to facilitate their practical deployment and broader adoption. We introduce a novel post-training compression paradigm that focuses on low-rank decomposition of LLM weights. Our analysis identifies two main challenges in this task: the variability in LLM activation distributions and handling unseen activations from different datasets and models. To address these challenges, we propose a nested activation-aware framework (NSVD) for LLMs, a training-free approach designed to enhance the accuracy of low-rank decompositions by managing activation outliers through transforming the weight matrix based on activation distribution and the original weight matrix. This method allows for the absorption of outliers into the transformed weight matrix, improving decomposition accuracy. Our comprehensive evaluation across eight datasets and six models from three distinct LLM families demonstrates the superiority of NSVD over current state-of-the-art methods, especially at medium to large compression ratios or in multilingual and multitask settings.",
+      "identifiers": [
+        "SemanticScholar:5a3061fd78dcdcfc2fb3f663670c863e3c293b6b"
+      ],
+      "semantic_scholar_id": "5a3061fd78dcdcfc2fb3f663670c863e3c293b6b",
+      "canonical_id": "arXiv:2503.17101",
+      "arxiv_id": "2503.17101",
+      "doi": "10.48550/arXiv.2503.17101",
+      "authors": [
+        "Jun Lu",
+        "Tianyi Xu",
+        "Bill Ding",
+        "David Li",
+        "Yu Kang"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 588,
+        "matched_prestigious_venue": null
+      },
+      "reason": "NSVDは重み行列を活性化分布に応じて変換して外れ値を吸収し、再学習不要の低ランク分解精度を改善する。6モデル・3系列・8データセットで中高圧縮率や多言語タスクにおける精度を検証。推論展開向けのLLM重み圧縮技術に直接関連するが、一次要旨にはサービング実測はない。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d5c246dcadca",
+    "round": "libimp-d5c246dcadca9258-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d5c246dcadca9258-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d5c246dcadca9258-pre01.json",
+    "receipt": "sha256:af6d0e232c6c0fb2092efd936156f1ef60f0acc4a8ce9e84ea03db385d02d3fe"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d5c246dcadca",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

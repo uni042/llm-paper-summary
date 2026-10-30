@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "RCP: Representation Consistency Pruner for Mitigating Distribution Shift in Large Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2604.04972",
+      "year": 2026,
+      "published": "2026-04-04",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Vision-Language Models (LVLMs) suffer from prohibitive inference costs due to the massive number of visual tokens processed by the language decoder. Existing pruning methods often lead to significant performance degradation because the irreversible removal of visual tokens causes a distribution shift in the hidden states that deviates from the pre-trained full-token regime. To address this, we propose Representation Consistency Pruner, which we refer to as RCP, as a novel framework that integrates cumulative visual token pruning with a delayed repair mechanism. Specifically, we introduce a cross-attention pruner that leverages the intrinsic attention of the LLM as a baseline to predict cumulative masks, ensuring consistent and monotonic token reduction across layers. To compensate for the resulting information loss, we design a delayed repair adapter denoted as DRA, which caches the essence of pruned tokens and applies FiLM-based modulation specifically to the answer generation tokens. We employ a repair loss to match the first and second-order statistics of the pruned representations with a full-token teacher. RCP is highly efficient because it trains only lightweight plug-in modules while allowing for physical token discarding at inference. Extensive experiments on LVLM benchmarks demonstrate that RCP removes up to 88.9\\% of visual tokens and reduces FLOPs by up to 85.7\\% with only a marginal average accuracy drop, and outperforms prior methods that avoid fine-tuning the original model on several widely used benchmarks.",
+      "identifiers": [
+        "SemanticScholar:08bef870440ad5323a79e178df04255d9ef56912"
+      ],
+      "semantic_scholar_id": "08bef870440ad5323a79e178df04255d9ef56912",
+      "canonical_id": "arXiv:2604.04972",
+      "arxiv_id": "2604.04972",
+      "doi": "10.48550/arXiv.2604.04972",
+      "authors": [
+        "Jian-Wei Zhang",
+        "Chao-Ning Zhang",
+        "Si-Han Cao",
+        "Wangkun Liu",
+        "Peng-Cheng Zheng",
+        "Jia-Xin Huang",
+        "Cai-Yan Qin",
+        "Ya-Qiong Ye",
+        "Wei Dong",
+        "Yang Yang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 209,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RCPはLLM内部attentionを基に視覚tokenの累積maskを予測して段階的に物理削除し、削除tokenの情報をキャッシュした軽量Delayed Repair Adapterで回答tokenをFiLM変調する。一次要旨では視覚token最大88.9%削減、FLOPs最大85.7%削減、平均精度低下は小さいと報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "EventPrune: Cascaded Event-Assisted Token Pruning for Efficient First-Person Dynamic Spatial Reasoning",
+      "source_url": "https://arxiv.org/abs/2605.19506",
+      "year": 2026,
+      "published": "2026-05-19",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "First-person dynamic spatial reasoning requires models to track continuous motion and precise geometric structure, but the quadratic attention cost of Transformer-based Video-LLMs makes dense visual tokens computationally expensive. Existing token pruning paradigms predominantly rely on discrete static snapshots, failing to preserve the motion and geometric cues essential for reasoning. We propose Event Cascade Pruning (ECP), to our knowledge the first training-free framework that leverages the high-frequency motion cues from event cameras as a continuous event-guided motion prior to guide token selection. ECP combines three stages: Event-Triggered Causal Sampling to anchor motion-informative keyframes, Event-guided Motion Saliency Filtering to suppress event-inactive visual tokens, and Event-Attention Ranking Fusion to calibrate spatial attention with motion-salient dynamics. With 80% visual token reduction, ECP outperforms the full-token baseline (37.62% vs. 36.31%) while achieving 1.89x inference speedup and 52% GFLOPs reduction. We further introduce ESR-Real, the first real-world RGB-event benchmark for first-person spatial reasoning, where ECP improves accuracy by 2.68 percentage points over full-token baselines.",
+      "identifiers": [
+        "SemanticScholar:cd19e811c17d962ada8fa9ec0a0b402f17ad35f4"
+      ],
+      "semantic_scholar_id": "cd19e811c17d962ada8fa9ec0a0b402f17ad35f4",
+      "canonical_id": "arXiv:2605.19506",
+      "arxiv_id": "2605.19506",
+      "doi": "10.48550/arXiv.2605.19506",
+      "authors": [
+        "Peng-Tao Ma",
+        "Ziliang Zhou",
+        "Ci-Yu Ruan",
+        "Hao-Yang Wang",
+        "Kaiyuan Li",
+        "Zihang Gong",
+        "Wen-Hua Ding",
+        "Chen Gao",
+        "Jin-Gao Xu",
+        "Xinlei Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 164,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Event Cascade Pruningはevent cameraの高頻度運動信号を用いてVideo-LLMのkeyframe選択、動きに乏しいtokenの除外、attention順位との融合を行う学習不要の3段階方式。視覚token80%削減時に精度37.62%対全token36.31%、推論1.89倍高速化、GFLOPs52%削減を報告。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Boosting Embodied AI Agents through Perception-Generation Disaggregation and Asynchronous Pipeline Execution",
+      "source_url": "https://arxiv.org/abs/2509.09560",
+      "year": 2025,
+      "published": "2025-09-11",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Embodied AI systems operate in dynamic environments, requiring seamless integration of perception and generation modules to process high-frequency input and output demands. Traditional sequential computation patterns, while effective in ensuring accuracy, face significant limitations in achieving the necessary\"thinking\"frequency for real-world applications. In this work, we present Auras, an algorithm-system co-designed inference framework to optimize the inference frequency of embodied AI agents. Auras disaggregates the perception and generation and provides controlled pipeline parallelism for them to achieve high and stable throughput. Faced with the data staleness problem that appears when the parallelism is increased, Auras establishes a public context for perception and generation to share, thereby promising the accuracy of embodied agents. Experimental results show that Auras improves throughput by 2.54x on average while achieving 102.7% of the original accuracy, demonstrating its efficacy in overcoming the constraints of sequential computation and providing high throughput.",
+      "identifiers": [
+        "SemanticScholar:615f1a22cd632792cdbbb410897a77dddf6f52a6"
+      ],
+      "semantic_scholar_id": "615f1a22cd632792cdbbb410897a77dddf6f52a6",
+      "canonical_id": "arXiv:2509.09560",
+      "arxiv_id": "2509.09560",
+      "doi": "10.48550/arXiv.2509.09560",
+      "authors": [
+        "Shulai Zhang",
+        "Ao Xu",
+        "Quan Chen",
+        "Han Zhao",
+        "Wei-Hao Cui",
+        "Ningxin Zheng",
+        "Hai-Bin Lin",
+        "Xin Liu",
+        "Min-Yi Guo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 414,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Aurasは身体化AIエージェントのperceptionとgenerationを分離し、非同期パイプラインで実行頻度を上げる。並列化による情報の陳腐化を共通contextで緩和し、逐次基準比で平均2.54倍のthroughput、基準の102.7%の精度を報告。エージェント推論パイプラインの直接的なシステム最適化。",
+      "library_body_check": "primary_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8a1c1b228116",
+    "round": "libimp-8a1c1b2281162105-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8a1c1b2281162105-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8a1c1b2281162105-pre01.json",
+    "receipt": "sha256:bc76b7d96ecfc83925b8a83fe768b60e98e3c1d29873f5ac267bdde70f6da32d"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8a1c1b228116",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
