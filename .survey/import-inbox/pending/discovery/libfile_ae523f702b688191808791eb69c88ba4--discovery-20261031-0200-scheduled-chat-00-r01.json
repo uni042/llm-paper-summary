@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0200-scheduled-chat-00/r01",
+  "reference_main_sha": "bfbf4444d3e126ebc965c380558cb94e575463ae",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.02391",
+      "identity_tokens": [
+        "arXiv:2607.02391"
+      ],
+      "title": "WattGPU: Predicting Inference Power and Latency on Unseen GPUs and LLMs",
+      "reason": "arXiv一次要旨は42種類のLLMと8種類のGPUを用い、公開モデル仕様とGPU仕様だけから未知構成の平均消費電力とトークン間遅延を予測すると説明。実機プロファイルなしで推論配置の電力・遅延を見積もる直接的な推論インフラ技術。",
+      "source_url": "https://arxiv.org/abs/2607.02391",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 264,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.02790",
+      "identity_tokens": [
+        "arXiv:2502.02790"
+      ],
+      "title": "Leveraging the true depth of LLMs",
+      "reason": "arXiv一次要旨では、隣接するTransformer層の組を並列評価するよう計算グラフを再構成し、再学習なしでLlama 2 7Bのスループットを1.19倍、平均ベンチマーク精度を1.5%低下と報告。推論の層実行依存を短縮する具体的な方式。",
+      "source_url": "https://arxiv.org/abs/2502.02790",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 267,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14557",
+      "identity_tokens": [
+        "arXiv:2607.14557"
+      ],
+      "title": "Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation",
+      "reason": "arXiv一次要旨では拡散型マルチモーダルLLMの最初のノイズ除去段階でMLP活性の疎性変化から有効出力境界を検出し、余分なEOSパディング後続を一括切断するSeerを提案。動的長バッチ実行を組み合わせ最大約31倍のスループット向上を報告し、推論処理削減に直結する。",
+      "source_url": "https://arxiv.org/abs/2607.14557",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 268,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29875",
+      "identity_tokens": [
+        "arXiv:2609.29875"
+      ],
+      "title": "When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression",
+      "reason": "arXiv一次要旨はエージェントの過去推論ブロックを凍結代理モデルのエントロピーで選別し、行動・ツール呼出し・観測を残して文脈を圧縮するICLRを提案。260タスクで入力トークン25.5%、出力14.4%、キャッシュ読出し33.3%を削減し、長期エージェント推論コストを直接削減する。",
+      "source_url": "https://arxiv.org/abs/2609.29875",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 269,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.19368",
+      "identity_tokens": [
+        "arXiv:2607.19368"
+      ],
+      "title": "Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing",
+      "reason": "arXiv一次要旨によればKrylov部分空間とランダム特徴から暗黙の注意カーネルの主要成分を近似し、SimHashで類似トークンをまとめて長い入力をモデル投入前に圧縮する。低圧縮率では軽量チャンク化、高圧縮率ではスペクトル経路が品質を保つと検証し、プリフィル負荷に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2607.19368",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 270,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.22175",
+      "identity_tokens": [
+        "arXiv:2506.22175"
+      ],
+      "title": "MPipeMoE: Memory Efficient MoE for Pre-trained Models with Adaptive Pipeline Parallelism",
+      "reason": "arXiv一次要旨で、MoE学習を細分化して適応パイプライン化し活性・一時バッファを再利用、8台のDGX A100で学習速度最大2.8倍・メモリ最大47%削減を報告。対象は明示的に学習時のパイプラインで、推論サービングへの実装・効果は要旨で確認できないため凍結範囲として保留。",
+      "source_url": "https://arxiv.org/abs/2506.22175",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 275,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.22175",
+      "identity_tokens": [
+        "arXiv:2606.22175"
+      ],
+      "title": "StickyInvoc: Rethinking Task Models for High-throughput Workflows in the LLM Era",
+      "reason": "arXiv一次要旨で、LLMモデルを毎タスク読み直す代わりにstickyタスクがGPU/CPU/ディスクの常駐状態を保持し、invocationタスクが継承して推論するHPC実行モデルを提案。15万推論の検証ワークフローで20GPU時3.6倍高速化を報告し、LLM推論起動・モデルロードの重複を削減する。",
+      "source_url": "https://arxiv.org/abs/2606.22175",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 277,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.22646",
+      "identity_tokens": [
+        "arXiv:2608.22646"
+      ],
+      "title": "CAI-DLLM: Convergence Aware Inference for Diffusion Language Models",
+      "reason": "arXiv一次要旨は最初のノイズ除去段階の信頼度から容易なトークンを先に確定し、難しい位置に追加反復を割当てる訓練不要の拡散LLM復号を提案。LLaDAとDreamで最大18.2倍・13.1倍の実時間高速化例と、難しい推論課題で精度低下最大4.4ポイントを報告。",
+      "source_url": "https://arxiv.org/abs/2608.22646",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 280,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.11120",
+      "identity_tokens": [
+        "arXiv:2506.11120"
+      ],
+      "title": "SDMPrune: Self-Distillation MLP Pruning for Efficient Large Language Models",
+      "reason": "arXiv一次要旨は元LLMの出力分布を利用した自己蒸留損失で剪定勾配を改善し、注意層よりパラメータの多いMLPを重点剪定する方式を提示。実行時ベンチマークの定量値は要旨にないが、LLM重み容量の削減と推論展開費用低減を直接目的とするモデル圧縮手法。",
+      "source_url": "https://arxiv.org/abs/2506.11120",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 281,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20466",
+      "identity_tokens": [
+        "arXiv:2607.20466"
+      ],
+      "title": "JAXBench: Benchmarking Autonomous TPU Kernel Optimization",
+      "reason": "arXiv一次要旨でLlama-3.1、DeepSeek-V3、Mixtral、Mamba-2などから抽出した17演算とKernelBench由来33演算の計50件をTPUネイティブで検証。Paged/Ragged Attentionを含むTPUカーネル最適化と生成コードの正確性・高速化を測る基盤であり、推論カーネルの実装評価に直接関係する。",
+      "source_url": "https://arxiv.org/abs/2607.20466",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:02:17+09:00",
+      "last_checked_at": "2026-10-31T02:02:17+09:00",
+      "linked_from": [],
+      "worklist_rank": 284,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
