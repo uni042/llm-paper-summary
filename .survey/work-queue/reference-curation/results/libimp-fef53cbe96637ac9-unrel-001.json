@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-fef53cbe96637ac9-unrel-001",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2506.05960",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2506.05960",
+    "identity_tokens": [
+      "arXiv:2506.05960"
+    ],
+    "reason": "加算型ベクトル量子化と専用カーネルを画像生成用のLDM-4／ImageNet拡散モデルへ適用し、W2A8・W4A8の生成品質と計算量を評価する。LLM量子化技術を参照しているが、論文の対象は画像拡散モデルの圧縮であり、生成LLMの推論・サービング効率への直接的貢献は確認できない。",
+    "first_checked_at": "2026-10-30T19:08:33+00:00",
+    "last_checked_at": "2026-10-30T19:08:33+00:00",
+    "linked_from": [],
+    "title": "AQUATIC-Diff: Additive Quantization for Truly Tiny Compressed Diffusion Models"
+  },
+  "processed_at": "2026-10-30T19:08:33+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-fef53cbe9663",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

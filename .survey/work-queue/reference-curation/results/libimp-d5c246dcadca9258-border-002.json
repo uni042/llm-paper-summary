@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-d5c246dcadca9258-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2608.02347",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2608.02347",
+    "identity_tokens": [
+      "arXiv:2608.02347"
+    ],
+    "reason": "固定容量のMamba再帰状態の表現不足を、段落意味を抽出する作業メモリと永続長期メモリで補うHMMを提案。Passkey Retrieval/LongBench-Eの品質向上34.3〜37.1%・1.6〜14.2%と追加パラメータ2%を報告するが、推論遅延やサービング資源の削減実測は一次要旨で示されないため、長文脈モデル構造の境界研究。",
+    "first_checked_at": "2026-10-30T19:08:27+00:00",
+    "last_checked_at": "2026-10-30T19:08:27+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Mamba with Hierarchical Memory: Solving Representation Bottleneck in Long Sequence Modeling"
+  },
+  "processed_at": "2026-10-30T19:08:28+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-d5c246dcadca",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

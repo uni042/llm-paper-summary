@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T17:58:00+00:00",
-  "record_count": 5534,
+  "updated_at": "2026-10-30T19:08:32+00:00",
+  "record_count": 5546,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85535,6 +85535,163 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "MindGPT-4ov: An Enhanced MLLM via a Multi-Stage Post-Training Paradigm"
+    },
+    "arXiv:2407.09527": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09527",
+      "identity_tokens": [
+        "arXiv:2407.09527"
+      ],
+      "reason": "10万〜4800万パラメータの小型言語/画像モデルで1.58bit量子化認識学習を検証し、中央値を使うBitNet変種を提案。小型モデルでの低ビット重みの実現性は推論メモリ削減に関連するが、主評価は学習法と精度で、LLMサービングや実測推論速度は対象外。",
+      "first_checked_at": "2026-10-30T19:08:13+00:00",
+      "last_checked_at": "2026-10-30T19:08:13+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "BitNet b1.58 Reloaded: State-of-the-art Performance Also on Smaller Networks"
+    },
+    "DOI:10.18653/v1/2026.acl-long.51": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.51",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.51"
+      ],
+      "reason": "ACL 2026の一次論文はattention attractorが先行文脈を集約する機能、層・token分布、活性次元との関係を分析。低意味語をKVに残すだけで多くの長文脈・ストリーミング課題の性能を保てるという補助実験もあるが、主貢献は機構解明であり、独立した推論エンジンや速度改善の定量評価ではない。",
+      "first_checked_at": "2026-10-30T19:08:13+00:00",
+      "last_checked_at": "2026-10-30T19:08:13+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Exploring Attention Attractors in Large Language Models"
+    },
+    "arXiv:2608.10416": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.10416",
+      "identity_tokens": [
+        "arXiv:2608.10416"
+      ],
+      "reason": "逆距離attentionをユークリッドから双曲・球面測地へ拡張し、検索回路分離・学習収束・effective rankの理論を提示。O(1) per-tokenを含む演算子と双曲メモリ圧縮を主張するが、要旨ではLLM実機の実行速度・メモリ・品質の統合比較を確認できないため、理論的な推論効率化候補として境界判定。",
+      "first_checked_at": "2026-10-30T19:08:14+00:00",
+      "last_checked_at": "2026-10-30T19:08:14+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Riemann GeoResolver: A Non-Euclidean Attention Framework from Euclidean Resolver to Hyperbolic-Spherical Geometry"
+    },
+    "arXiv:2502.06567": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.06567",
+      "identity_tokens": [
+        "arXiv:2502.06567"
+      ],
+      "reason": "量子化後のモデルに対するmembership inference securityを漸近解析し、PTQのプライバシー脆弱性を比較する指標を提案。量子化による推論コスト削減と安全性のトレードオフに関連するが、実験対象は合成データ・創薬など一般MLで、LLM推論性能やサービング技術の実証はない。",
+      "first_checked_at": "2026-10-30T19:08:17+00:00",
+      "last_checked_at": "2026-10-30T19:08:17+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Membership Inference Risks in Quantized Models: A Theoretical and Empirical Study"
+    },
+    "arXiv:2106.05822": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2106.05822",
+      "identity_tokens": [
+        "arXiv:2106.05822"
+      ],
+      "reason": "BERT系の表現学習モデルに畳み込みモジュールとgrouped変換を組み込み、全結合層の計算量を減らす構造を提案。FLOPsと学習時間の効率は示すが、自己回帰LLMデコード、KV管理、実運用サービングの直接評価は一次要旨にない。一般Transformer効率化として境界的。",
+      "first_checked_at": "2026-10-30T19:08:27+00:00",
+      "last_checked_at": "2026-10-30T19:08:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "GroupBERT: Enhanced Transformer Architecture with Efficient Grouped Structures"
+    },
+    "arXiv:2608.02347": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02347",
+      "identity_tokens": [
+        "arXiv:2608.02347"
+      ],
+      "reason": "固定容量のMamba再帰状態の表現不足を、段落意味を抽出する作業メモリと永続長期メモリで補うHMMを提案。Passkey Retrieval/LongBench-Eの品質向上34.3〜37.1%・1.6〜14.2%と追加パラメータ2%を報告するが、推論遅延やサービング資源の削減実測は一次要旨で示されないため、長文脈モデル構造の境界研究。",
+      "first_checked_at": "2026-10-30T19:08:27+00:00",
+      "last_checked_at": "2026-10-30T19:08:27+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mamba with Hierarchical Memory: Solving Representation Bottleneck in Long Sequence Modeling"
+    },
+    "arXiv:2605.06908": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.06908",
+      "identity_tokens": [
+        "arXiv:2605.06908"
+      ],
+      "reason": "LLMエージェントのtest-time追加rolloutが有益かを判断するゲートの方向が環境・backboneで逆転する問題を検証し、反実仮想探索から学習するDIALで成功率と計算費用のトレードオフを改善。適応的test-time計算には関連するが、推論基盤・GPU資源・サービングスケジューラの実装や実測は一次要旨にない。",
+      "first_checked_at": "2026-10-30T19:08:28+00:00",
+      "last_checked_at": "2026-10-30T19:08:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Same Signal, Opposite Meaning: Direction-Informed Adaptive Learning for LLM Agents"
+    },
+    "arXiv:2505.20666": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2505.20666",
+      "identity_tokens": [
+        "arXiv:2505.20666"
+      ],
+      "reason": "Transformer注意重みを擬似時間上の拡散・波動・反応拡散PDEで進化させ、長距離依存と最適化安定性を改善する機構。長系列モデル効率との関連はあるが、一次要旨は品質・学習挙動を中心に説明し、実GPU推論速度、KV容量、メモリ帯域削減の具体的な検証を提示しない。",
+      "first_checked_at": "2026-10-30T19:08:28+00:00",
+      "last_checked_at": "2026-10-30T19:08:28+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Continuous-Time Attention: PDE-Guided Mechanisms for Long-Sequence Transformers"
+    },
+    "arXiv:2010.14481": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2010.14481",
+      "identity_tokens": [
+        "arXiv:2010.14481"
+      ],
+      "reason": "左右同時生成するIBDecoderにより機械翻訳5課題と要約2課題で自己回帰比約2倍の復号高速化を報告。多方向・複数token同時生成では4〜11倍の速度向上と小幅の品質低下を報告。ただし2020年の翻訳・要約Transformerが主対象で、現代の大規模LLMサービングへの適用は未検証。",
+      "first_checked_at": "2026-10-30T19:08:30+00:00",
+      "last_checked_at": "2026-10-30T19:08:30+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Fast Interleaved Bidirectional Sequence Generation"
+    },
+    "arXiv:2512.06490": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.06490",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-032-06697-8_33",
+        "arXiv:2512.06490"
+      ],
+      "reason": "Llama-3.2-3BをBitsAndBytesの4ビット事後量子化で68.66%縮小し、GGUF変換とAndroid上のTermux/Ollamaで動作確認する実践的な導入報告。端末LLM推論の実証は関連するが、新しい量子化アルゴリズム・推論カーネル・定量的な実行速度改善の提案は要旨から確認できず、システム研究としては境界的。",
+      "first_checked_at": "2026-10-30T19:08:31+00:00",
+      "last_checked_at": "2026-10-30T19:08:31+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Optimizing LLMs Using Quantization for Mobile Execution"
+    },
+    "arXiv:2605.14530": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.14530",
+      "identity_tokens": [
+        "arXiv:2605.14530"
+      ],
+      "reason": "拡散型VLMの長文生成でマスク事前分布への隠れ状態の偏りと、反復アンマスク時の位置バイアスによる視覚トークン注意低下を分析し、Mask Prior SuppressionとMonotonic RoPE Scalingで生成品質を改善する。復号時の軽量な修正だが、主評価は反復・視覚接地の品質であり、推論速度・メモリ削減は要旨で示されない。",
+      "first_checked_at": "2026-10-30T19:08:32+00:00",
+      "last_checked_at": "2026-10-30T19:08:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Mitigating Mask Prior Drift and Positional Attention Collapse in Large Diffusion Vision-Language Models"
+    },
+    "arXiv:2406.02847": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2406.02847",
+      "identity_tokens": [
+        "arXiv:2406.02847"
+      ],
+      "reason": "線形化TransformerでICLのデモ例を追加バイアス項へ厳密変換するICLCAを示し、通常TransformerのGPT-2には近似的な適用を検証する。長いプロンプトの事前統合につながる可能性はあるが、主貢献は数学的等価性と学習挙動であり、生成LLMサービングの実測高速化・メモリ削減は要旨にない。",
+      "first_checked_at": "2026-10-30T19:08:32+00:00",
+      "last_checked_at": "2026-10-30T19:08:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Exact Conversion of In-Context Learning to Model Weights in Linearized-Attention Transformers"
     }
   }
 }

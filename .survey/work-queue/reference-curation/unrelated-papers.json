@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T17:58:10+00:00",
-  "record_count": 12626,
+  "updated_at": "2026-10-30T19:08:33+00:00",
+  "record_count": 12646,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181632,6 +181632,247 @@
       "last_checked_at": "2026-10-30T17:58:10+00:00",
       "linked_from": [],
       "title": "T3C: Test-Time Tensor Compression with Consistency Guarantees"
+    },
+    "DOI:10.1002/wcms.1725": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1002/wcms.1725",
+      "identity_tokens": [
+        "DOI:10.1002/wcms.1725"
+      ],
+      "reason": "分子科学でのTransformer応用を概観する論文であり、LLMの推論エンジン・実行効率化とは異なる対象。",
+      "first_checked_at": "2026-10-30T19:08:15+00:00",
+      "last_checked_at": "2026-10-30T19:08:15+00:00",
+      "linked_from": [],
+      "title": "Transformer technology in molecular science"
+    },
+    "DOI:10.1038/s42256-026-01281-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1038/s42256-026-01281-1",
+      "identity_tokens": [
+        "DOI:10.1038/s42256-026-01281-1"
+      ],
+      "reason": "音声の理解・発話に関する汎用聴覚能力を主題とし、タイトルからLLM推論時の計算量・メモリ・サービング最適化の直接的な技術対象は示されない。",
+      "first_checked_at": "2026-10-30T19:08:15+00:00",
+      "last_checked_at": "2026-10-30T19:08:15+00:00",
+      "linked_from": [],
+      "title": "Towards general auditory intelligence for machine listening and speaking"
+    },
+    "arXiv:2405.02670": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2405.02670",
+      "identity_tokens": [
+        "arXiv:2405.02670"
+      ],
+      "reason": "状態空間モデルのデータ依存汎化境界を解析し、初期化スケーリングと学習正則化によって時系列入力の出力安定性・汎化を改善する研究。主目的はSSMの学習アルゴリズムと理論であり、LLMの推論速度・KV/状態圧縮・実行時資源最適化は評価していない。",
+      "first_checked_at": "2026-10-30T19:08:18+00:00",
+      "last_checked_at": "2026-10-30T19:08:18+00:00",
+      "linked_from": [],
+      "title": "From Generalization Analysis to Optimization Designs for State Space Models"
+    },
+    "arXiv:2505.09558": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.09558",
+      "identity_tokens": [
+        "arXiv:2505.09558"
+      ],
+      "reason": "音声対話のIQ/EQ評価に向けたrewardモデルとChatReward-30Kの構築、音声対話品質の評価改善が主題。要旨はQwen2.5-Omniに対する評価精度の向上を示すが、音声LLM推論の計算削減やサービング効率化の研究ではない。",
+      "first_checked_at": "2026-10-30T19:08:18+00:00",
+      "last_checked_at": "2026-10-30T19:08:18+00:00",
+      "linked_from": [],
+      "title": "WavReward: Spoken Dialogue Models With Generalist Reward Evaluators"
+    },
+    "arXiv:2407.06136": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2407.06136",
+      "identity_tokens": [
+        "arXiv:2407.06136"
+      ],
+      "reason": "Mambaを用いて画像のfew-shot class-incremental learningにおける旧クラス保持と新クラス適応を両立する二重SSM projectorと選択的scanを提案。miniImageNet/CIFAR-100/CUB-200の分類精度が中心で、LLM推論・サービング最適化ではない。",
+      "first_checked_at": "2026-10-30T19:08:19+00:00",
+      "last_checked_at": "2026-10-30T19:08:19+00:00",
+      "linked_from": [],
+      "title": "Mamba-FSCIL: Dynamic Adaptation with Selective State Space Model for Few-Shot Class-Incremental Learning"
+    },
+    "arXiv:2604.18842": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.18842",
+      "identity_tokens": [
+        "arXiv:2604.18842"
+      ],
+      "reason": "画像モデルの複数データセット学習で、MoE expertへのドメイン割当を線形計画と階層丸めで決め、希少ドメインの表現を改善するGEM-DINO。評価は画像ドメイン汎化とfew-shot適応で、LLM推論時のMoE routing高速化・負荷分散は主題ではない。",
+      "first_checked_at": "2026-10-30T19:08:19+00:00",
+      "last_checked_at": "2026-10-30T19:08:19+00:00",
+      "linked_from": [],
+      "title": "Multi-Domain Learning with Global Expert Mapping"
+    },
+    "arXiv:2605.21070": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.21070",
+      "identity_tokens": [
+        "arXiv:2605.21070"
+      ],
+      "reason": "タイトル先行除外：系列分類Transformerの自己事前学習と注意学習の分析で、生成LLM推論効率化の対象外。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:21+00:00",
+      "last_checked_at": "2026-10-30T19:08:21+00:00",
+      "linked_from": [],
+      "title": "Towards Understanding Self-Pretraining for Sequence Classification"
+    },
+    "SemanticScholar:5271353b3eeccd342536818b59105d04d70942da": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:5271353b3eeccd342536818b59105d04d70942da",
+      "identity_tokens": [
+        "SemanticScholar:5271353b3eeccd342536818b59105d04d70942da"
+      ],
+      "reason": "タイトル先行除外：LLM学習の活性再計算と並列化が主題で推論対象外。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:22+00:00",
+      "last_checked_at": "2026-10-30T19:08:22+00:00",
+      "linked_from": [],
+      "title": "Accelerating the Training of Large Language Models using Efficient Activation Rematerialization and Optimal Hybrid Parallelism"
+    },
+    "SemanticScholar:3997fea366e4458d9652ac7db7159fcbe96cb598": {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:3997fea366e4458d9652ac7db7159fcbe96cb598",
+      "identity_tokens": [
+        "SemanticScholar:3997fea366e4458d9652ac7db7159fcbe96cb598"
+      ],
+      "reason": "タイトル先行除外：LLM強化学習の計算資源確保・学習費用が主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:22+00:00",
+      "last_checked_at": "2026-10-30T19:08:22+00:00",
+      "linked_from": [],
+      "title": "RLBoost: Harvesting Preemptible Cloud Resources for Cost-Efficient Reinforcement Learning on LLMs"
+    },
+    "arXiv:2604.24088": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.24088",
+      "identity_tokens": [
+        "arXiv:2604.24088"
+      ],
+      "reason": "タイトル先行除外：tensor parallel LLM学習の中間tensor通信圧縮が主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:23+00:00",
+      "last_checked_at": "2026-10-30T19:08:23+00:00",
+      "linked_from": [],
+      "title": "TACO: Efficient Communication Compression of Intermediate Tensors for Scalable Tensor-Parallel LLM Training"
+    },
+    "arXiv:2309.12578": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2309.12578",
+      "identity_tokens": [
+        "arXiv:2309.12578"
+      ],
+      "reason": "タイトル先行除外：Transformerの疎学習が主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:23+00:00",
+      "last_checked_at": "2026-10-30T19:08:23+00:00",
+      "linked_from": [],
+      "title": "SPION: Layer-Wise Sparse Training of Transformer via Convolutional Flood Filling"
+    },
+    "DOI:10.1109/ton.2026.3734207": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ton.2026.3734207",
+      "identity_tokens": [
+        "DOI:10.1109/ton.2026.3734207"
+      ],
+      "reason": "タイトル先行除外：spot GPUを用いたLLM学習が主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:24+00:00",
+      "last_checked_at": "2026-10-30T19:08:24+00:00",
+      "linked_from": [],
+      "title": "Witcher: Training Large Language Models With Heterogeneous Spot GPUs in Data Centers"
+    },
+    "arXiv:2505.12832": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.12832",
+      "identity_tokens": [
+        "arXiv:2505.12832"
+      ],
+      "reason": "タイトル先行除外：分散学習方式DDP/FSDP/parameter serverの評価が主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:24+00:00",
+      "last_checked_at": "2026-10-30T19:08:24+00:00",
+      "linked_from": [],
+      "title": "Performance Characterization of Distributed Deep Learning Strategies: A Quantitative Evaluation of DDP, FSDP, and Parameter Server Architectures on GPU Clusters"
+    },
+    "arXiv:2211.16648": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2211.16648",
+      "identity_tokens": [
+        "arXiv:2211.16648"
+      ],
+      "reason": "タイトル先行除外：分散deep learning学習クラスタ設計が主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:25+00:00",
+      "last_checked_at": "2026-10-30T19:08:25+00:00",
+      "linked_from": [],
+      "title": "COMET: A Comprehensive Cluster Design Methodology for Distributed Deep Learning Training"
+    },
+    "arXiv:2602.17634": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.17634",
+      "identity_tokens": [
+        "arXiv:2602.17634"
+      ],
+      "reason": "タイトル先行除外：時系列予測foundation modelの設計で生成LLM推論と異なる。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:25+00:00",
+      "last_checked_at": "2026-10-30T19:08:25+00:00",
+      "linked_from": [],
+      "title": "Reverso: Efficient Time Series Foundation Models for Zero-shot Forecasting"
+    },
+    "arXiv:2605.18750": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2605.18750",
+      "identity_tokens": [
+        "arXiv:2605.18750"
+      ],
+      "reason": "タイトル先行除外：pipeline parallel学習runtimeが主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:26+00:00",
+      "last_checked_at": "2026-10-30T19:08:26+00:00",
+      "linked_from": [],
+      "title": "A Readiness-Driven Runtime for Pipeline-Parallel Training under Runtime Variability"
+    },
+    "arXiv:2409.09245": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.09245",
+      "identity_tokens": [
+        "arXiv:2409.09245"
+      ],
+      "reason": "タイトル先行除外：任意精度・疎性のニューラルネット学習が主題。一次本文・要旨は未読であり、再判定可能。",
+      "first_checked_at": "2026-10-30T19:08:26+00:00",
+      "last_checked_at": "2026-10-30T19:08:26+00:00",
+      "linked_from": [],
+      "title": "Robust Training of Neural Networks at Arbitrary Precision and Sparsity"
+    },
+    "DOI:10.1109/cicc57935.2023.10121242": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/cicc57935.2023.10121242",
+      "identity_tokens": [
+        "DOI:10.1109/cicc57935.2023.10121242"
+      ],
+      "reason": "IEEE出版社の一次要旨はfoundation modelの大規模学習用SoC、データフロー、分散勾配同期、電気・エネルギー設計を中心に論じる総説。生成LLMの推論最適化を独立に評価した研究ではなく、現行推論効率化系統の範囲外。",
+      "first_checked_at": "2026-10-30T19:08:31+00:00",
+      "last_checked_at": "2026-10-30T19:08:31+00:00",
+      "linked_from": [],
+      "title": "AI SoC Design Challenges in the Foundation Model Era"
+    },
+    "arXiv:2506.05960": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.05960",
+      "identity_tokens": [
+        "arXiv:2506.05960"
+      ],
+      "reason": "加算型ベクトル量子化と専用カーネルを画像生成用のLDM-4／ImageNet拡散モデルへ適用し、W2A8・W4A8の生成品質と計算量を評価する。LLM量子化技術を参照しているが、論文の対象は画像拡散モデルの圧縮であり、生成LLMの推論・サービング効率への直接的貢献は確認できない。",
+      "first_checked_at": "2026-10-30T19:08:33+00:00",
+      "last_checked_at": "2026-10-30T19:08:33+00:00",
+      "linked_from": [],
+      "title": "AQUATIC-Diff: Additive Quantization for Truly Tiny Compressed Diffusion Models"
+    },
+    "DOI:10.1162/tacl.a.746": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1162/tacl.a.746",
+      "identity_tokens": [
+        "DOI:10.1162/tacl.a.746",
+        "arXiv:2509.03405"
+      ],
+      "reason": "Wikipediaのエンティティ言及を注釈した事前学習コーパス、検索索引、12個のモデルと中間チェックポイントを公開し、事前学習中の知識獲得・忘却・編集可能性を分析する。推論時のメモリ管理・サービング・カーネル・量子化効率の技術的改善を目的としていないため対象外。",
+      "first_checked_at": "2026-10-30T19:08:33+00:00",
+      "last_checked_at": "2026-10-30T19:08:33+00:00",
+      "linked_from": [],
+      "title": "LMEnt: A Suite for Analyzing Knowledge in Language Models from Pretraining Data to Representations"
     }
   }
 }
