@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（860本）
+## 自動生成の論文一覧（862本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -662,6 +662,10 @@
   実装：✓ ・ リポジトリ内被引用：0  
   soft context compressionは文書を短い連続embeddingへ置き換え、デコーダがそのembeddingから回答する方式である。教師の失敗を模倣せず、結果報酬から改善を探索する点が重要である。
 
+- **2026-09 · [Beyond One-Size-Fits-All: Sample-Adaptive Strategy Routing for Vision Token Pruning in MLLMs](2026-2609.10346-beyond-one-size-fits-all-sample-adaptive-strategy-routing-for-vision-tok.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  VIP-Routerは画像と質問ごとにFastV、VisionZip、PruMerge+、DART、無圧縮Fullから最適なvisual-トークン 枝刈り方針を選ぶ軽量ルータ。枝刈り-sensitiveなVTC-Bench Group Aでは5保持率平均accuracy 40.35%→51.19%、utility 30.88→37.68。
+
 - **2026-08 · [VoiceMem: Streaming Dual-Brain Memory for Real-Time Interaction](2026-2608.26005-voicemem-streaming-dual-brain-memory-for-real-time-interaction.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   VoiceMemは、音声対話システムの過去会話記憶を、応答を遅らせずに少数の関連記憶へ絞るための索引・更新・検索方式である。
@@ -1313,6 +1317,10 @@
 - **2026-04 · [Serving Chain-structured Jobs with Large Memory Footprints with Application to Large Foundation Model Serving](2026-2604.14993-serving-chain-structured-jobs-with-large-memory-footprints-with-application-to-large-foundation-model-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分散パイプライン型の大規模言語モデル推論を、モデルブロック配置、鍵値キャッシュ容量配分、オンライン負荷分散からなるサーバ鎖構成問題として定式化し、実サービング評価で平均応答時間を六十三から七十七パーセント削減する。
+
+- **2026-04 · [SA-ANT: Efficient Low-Bit Group-Wise Quantization for Large Language Models via Sign-Asymmetric Adaptive Numeric Type](2026-4afc6233177a-sa-ant-efficient-low-bit-group-wise-quantization-for-large-language-mode.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  3ビットなどの低ビット重み量子化では、各グループの重み分布に量子化点をどれだけ合わせられるかが品質を大きく左右する。Qwen2.5-0.5Bの5つのゼロショットタスク平均正答率は、BitModの46.44%に対しSA-ANT-L47.52%、SA-ANT-P50.36%となった。
 
 - **2026-04 · [RouteLMT: Learned Sample Routing for Hybrid LLM Translation Deployment](2026-2604.22520-routelmt-learned-sample-routing-for-hybrid-llm-translation-deployment.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
