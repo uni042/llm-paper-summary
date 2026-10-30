@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261030-1904-scheduled-chat-00/r01",
+  "reference_main_sha": "6b0942fd32351ae5dfc03bf3acb6727c8e398cbd",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2302.13475",
+      "identity_tokens": [
+        "arXiv:2302.13475",
+        "arxiv:2302.13475"
+      ],
+      "title": "Elementwise Language Representation",
+      "reason": "UTF-8バイトをelementwise埋込みに変換して語彙埋込みパラメータを減らす表現方式。本文§5の主評価はBERT/ALBERT/CANINEの特許文書マルチラベル分類で、BERTのembeddingパラメータを大幅削減する一方、生成LLMのデコード・KVキャッシュ・推論サービング速度は評価しない。モデル圧縮との概念的関連はあるが、本調査の直接的な推論システム寄与は弱い。",
+      "source_url": "https://arxiv.org/html/2302.13475",
+      "body_check": "research_fulltext_relevance_review: arXiv本文のelementwise埋込みの構成、§5の特許分類データセットと§6のモデル・tokenization比較を読解。推論システムの実測は対象外。",
+      "first_checked_at": "2026-10-30T19:04:52+09:00",
+      "last_checked_at": "2026-10-30T19:04:52+09:00",
+      "linked_from": [],
+      "origin": "research_postread_relevance",
+      "worklist_rank": 57
+    }
+  ]
+}
