@@ -11,8 +11,9 @@ from typing import Any, Mapping
 import paper_taxonomy
 
 DEFAULT_INFERENCE_DIR = "papers/inference/99-other-inference-systems"
-_ARXIV_ID_RE = re.compile(r"(?i)(?:arxiv:)?(\d{4}\.\d{4,5})(?:v\d+)?$")
-_ARXIV_URL_RE = re.compile(r"(?i)arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?:[?#].*)?$")
+_ARXIV_CANONICAL_RE = re.compile(r"(?i)^arxiv:(\d{4}\.\d{4,5})(?:v\d+)?$")
+_ARXIV_BARE_RE = re.compile(r"(?i)^(\d{4}\.\d{4,5})(?:v\d+)?$")
+_ARXIV_URL_RE = re.compile(r"(?i)arxiv\.org/(?:abs|html|pdf)/(\d{4}\.\d{4,5})(?:v\d+)?(?:\.pdf)?(?:[?#].*)?$")
 _YEAR_RE = re.compile(r"\b(20\d{2})\b")
 
 
@@ -26,13 +27,21 @@ def validate_paper_path(value: Any) -> str:
 
 
 def _arxiv_id(record: Mapping[str, Any]) -> str | None:
-    for key in ("canonical_id", "arxiv_id"):
-        value = record.get(key)
-        if not isinstance(value, str):
-            continue
-        match = _ARXIV_ID_RE.search(value.strip())
+    # Canonical IDs must carry the arXiv namespace explicitly.  Treating an
+    # arbitrary trailing "YYYY.NNNNN" as an arXiv ID misclassifies IEEE-style
+    # DOIs such as DOI:10.1109/ISCA66397.2026.00037.
+    canonical = record.get("canonical_id")
+    if isinstance(canonical, str):
+        match = _ARXIV_CANONICAL_RE.fullmatch(canonical.strip())
         if match:
             return match.group(1)
+
+    arxiv_id = record.get("arxiv_id")
+    if isinstance(arxiv_id, str):
+        match = _ARXIV_BARE_RE.fullmatch(arxiv_id.strip())
+        if match:
+            return match.group(1)
+
     for key in ("source_url", "source"):
         value = record.get(key)
         if not isinstance(value, str):
