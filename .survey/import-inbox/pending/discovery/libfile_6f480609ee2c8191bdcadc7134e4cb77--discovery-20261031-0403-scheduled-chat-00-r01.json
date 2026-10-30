@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0403-scheduled-chat-00/r01",
+  "reference_main_sha": "0f43d27232cc19ba1bd6d72acd30f9e8981c5d0b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/isca66397.2026.00176",
+      "identity_tokens": [
+        "DOI:10.1109/isca66397.2026.00176"
+      ],
+      "title": "UniCore: A Bit-Width Scalable GEMM Unit for Unified LLM Inference",
+      "reason": "UniCoreは複数ビット幅のLLM GEMMを統一するハードウェア・ソフトウェア協調設計。加算器スライスから合成するS-FPMA、誤差補償パイプライン、分布適応浮動小数点DynFPを組み合わせ、従来のbit-composable乗算器比でW4A4/W4A8/W8A8の面積効率1.24〜3.95倍、W16A16で最大5.26倍を報告。推論計算機構と量子化精度への直接寄与。",
+      "source_url": "https://ieeexplore.ieee.org/document/11617931/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 4,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/jiot.2026.3669144",
+      "identity_tokens": [
+        "DOI:10.1109/jiot.2026.3669144"
+      ],
+      "title": "SEC: Enabling MLLMs for Low-Latency IoT Video Analysis via Semantic-Aware Edge-Cloud Collaboration",
+      "reason": "SECはIoT動画のMLLM推論を対象に、エッジ側でタスクに応じた意味的キーフレーム選択を行って通信量を削減し、クラウド側で木構造の適応的投機デコードにより生成を並列化する。4種の動画理解ベンチマークで実配備を想定したエンドツーエンド遅延低下と精度改善を報告。マルチモーダル推論システムに直接関連。",
+      "source_url": "https://ieeexplore.ieee.org/document/11417857/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 7,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ipdps65963.2026.00037",
+      "identity_tokens": [
+        "DOI:10.1109/ipdps65963.2026.00037"
+      ],
+      "title": "VoLLM: Smoothness-aware Serving of LLM-powered Voice Q&A via Adaptive Preemption",
+      "reason": "VoLLMは音声対話LLMのトークン間遅延と発話の滑らかさを重視したサービング。オフライン遅延上限制約プロファイラ、オンライン時間予算適応プリエンプション、音声・LLMモジュール別の状態付きバッチ実行を組み合わせる。IEEE Computer Societyの原著要旨は複数NVIDIA GPUで平均応答遅延を最大92.7%削減し流暢な出力を保証すると報告。",
+      "source_url": "https://store.computer.org/csdl/proceedings-article/ipdps/2026/060200a321/2hJUtmKgYlq",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 14,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icccs69761.2026.11613211",
+      "identity_tokens": [
+        "DOI:10.1109/icccs69761.2026.11613211"
+      ],
+      "title": "SHOQ: Stability-Aware Hierarchical Quantization by Identifying Critical Outliers for LLMs",
+      "reason": "SHOQは外れ値重みの重要度を一様に扱わず、多様なサンプリングとベイズ最適化、チャネル内相対寄与により重要度の安定頻度を推定する。その頻度に応じFP16/INT8/INT4を3段階配分し、非外れ値には活性値規模に応じたINT4群量子化を適用。LLaMA系列で同ビット幅のGPTQ/AWQ/SpQRに対するPPLとゼロショット精度改善を報告。",
+      "source_url": "https://ieeexplore.ieee.org/document/11613211/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 19,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/iwqos70441.2026.11661192",
+      "identity_tokens": [
+        "DOI:10.1109/iwqos70441.2026.11661192"
+      ],
+      "title": "Dynamic Hot Expert Replication with Load and Topology-Aware Joint Gating for Distributed MoE Inference",
+      "reason": "DETAGは分散MoE推論におけるホットexpertの負荷偏りとノード間通信を抑える。必要に応じ複製する動的ホットexpertプールと、EMA平滑化負荷・通信トポロジー費用を同時考慮するjoint gatingを導入。複数GPUノードで既存MoE推論方式比最大2.54倍の高速化を報告。",
+      "source_url": "https://ieeexplore.ieee.org/document/11661192/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 24,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/isdfs69419.2026.11459120",
+      "identity_tokens": [
+        "DOI:10.1109/isdfs69419.2026.11459120"
+      ],
+      "title": "Distributed Adaptive Speculative Decoding: Accelerating Large Language Model Inference With Context-Aware Draft Selection",
+      "reason": "DASDは入力文脈に応じたdraftモデルの軽量ルーティング、複数GPUでのdraft生成と検証の非同期パイプライン、受理率に応じた投機長調整を統合する。NVIDIA A4000とLlama-3-8Bの評価で通常自己回帰比2.6〜2.8倍、固定投機比15〜20%改善、マルチGPU遅延42%削減を報告。IEEE原著要旨では出力品質同等とする。",
+      "source_url": "https://ieeexplore.ieee.org/document/11459120/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 25,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icicse66971.2025.11430117",
+      "identity_tokens": [
+        "DOI:10.1109/icicse66971.2025.11430117"
+      ],
+      "title": "SwiftServe: Efficient Disaggregated LLM Inference Serving via Hierarchical Max-Flow in Heterogeneous GPUs and Network",
+      "reason": "SwiftServeは異種GPUとネットワークリンクを含むprefill/decode分離サービング配置を、段階的max-flowと制約付き混合整数非線形最適化として扱う。階層交互max-flow最適化で計算能力とKV転送費用を考慮した資源配置を決め、既存方式比で最大1.68倍のスループット、最大2.25倍の遅延低減を報告。",
+      "source_url": "https://ieeexplore.ieee.org/document/11430117/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 31,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/imcec66174.2025.11331709",
+      "identity_tokens": [
+        "DOI:10.1109/imcec66174.2025.11331709"
+      ],
+      "title": "AASQ-GPT: Accurate Activation Static Quantization Towards Generative Pre-Trained Transformer",
+      "reason": "AASQ-GPTは推論高速化に有利な静的activation量子化の誤差を、活性値の一部を量子化した後に未量子化部分を調整する方式で抑制する。追加推論オーバーヘッドや再学習なしで従来min-max方式より同ビット幅の量子化品質を改善し、複数規模のLLMで静的量子化精度の優位性を報告。速度の定量倍率は原著要旨にない。",
+      "source_url": "https://ieeexplore.ieee.org/document/11331709/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 38,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/tvlsi.2026.3658251",
+      "identity_tokens": [
+        "DOI:10.1109/tvlsi.2026.3658251"
+      ],
+      "title": "LOgIQ: Log-Domain Optimization for Hardware-Efficient Inference and Quantization of Transformers",
+      "reason": "LOgIQのLogiMACは重みを対数領域で符号化し、乗算器やLUTを使わないシフト演算とMAC内デコードで量子化処理を行う。2B〜8Bの7種類のLLM、3400万超生成トークンで検証し、整数演算基準比で回路面積1.8倍削減、power-gated時の動的電力5.9倍削減を報告。ハードウェア効率化への直接寄与。",
+      "source_url": "https://ieeexplore.ieee.org/document/11399922/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 44,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/cacml68972.2026.11507008",
+      "identity_tokens": [
+        "DOI:10.1109/cacml68972.2026.11507008"
+      ],
+      "title": "Progressive Structural Pruning for Large Language Models: Loss-Aware Decay with RoPE-Pair-Aware Pruning",
+      "reason": "PSPは学習中の滑らかな係数減衰、損失急増時の減衰停止、RoPE対を保つ末尾剪定によりQwen3-4Bを1.70Bへ構造圧縮する。一次要旨では1.26Bトークン・約2400ステップで58%パラメータ削減と精度保持を評価するが、主要貢献は学習時の剪定と精度回復であり、推論レイテンシ・メモリ実測やサービング実装の寄与が示されないため凍結中の学習単独最適化としてborderline。",
+      "source_url": "https://ieeexplore.ieee.org/document/11507008/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore_or_IEEE_Computer_Society",
+      "first_checked_at": "2026-10-31T04:12:00+09:00",
+      "last_checked_at": "2026-10-31T04:12:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 59,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "round_status": "complete",
+  "target_count": 10
+}
