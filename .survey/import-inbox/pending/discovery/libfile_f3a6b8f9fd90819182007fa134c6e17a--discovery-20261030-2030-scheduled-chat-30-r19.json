@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-2030-scheduled-chat-30/r19",
+  "reference_main_sha": "8b839f7ace173e40c9f4ef604efc2f4322c07ac1",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.20193",
+      "identity_tokens": [
+        "arXiv:2605.20193",
+        "DOI:10.48550/arXiv.2605.20193"
+      ],
+      "title": "Improving Quantized Model Performance in Qualitative Analysis with Multi-Pass Prompt Verification",
+      "reason": "LLaMA-3.1-8Bの8/4/3/2bit量子化で質的分析の誤りを比較し、複数回プロンプト検証で幻覚を減らす。圧縮後品質の参考になるが、追加検証で推論計算量を減らす研究ではなく、定量的な速度改善も示されていない。",
+      "source_url": "https://arxiv.org/abs/2605.20193",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 482,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.35232",
+      "identity_tokens": [
+        "arXiv:2609.35232",
+        "DOI:10.48550/arXiv.2609.35232"
+      ],
+      "title": "Beyond Selection: Token Parameterization for Extreme Visual Token Compression",
+      "reason": "Bracoは基底変換・座標埋込み・直交再パラメータ化・空間残差で視覚トークンを極端に圧縮する。23～64倍圧縮で精度を保ち、prefill FLOPs84.2～86.7%削減、end-to-end最大約36%高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2609.35232",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 483,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.20755",
+      "identity_tokens": [
+        "arXiv:2605.20755",
+        "DOI:10.48550/arXiv.2605.20755"
+      ],
+      "title": "DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action",
+      "reason": "音声入力・音声出力・action/tool callを160ms chunkの同一時間軸で並列生成し、発話中の計画・ツール実行を外部cascadeなしで統合する。実測速度比は要旨にないが、全二重音声LLMの低遅延推論アーキテクチャとして直接関連する。",
+      "source_url": "https://arxiv.org/abs/2605.20755",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 485,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.12202",
+      "identity_tokens": [
+        "arXiv:2502.12202",
+        "DOI:10.48550/arXiv.2502.12202"
+      ],
+      "title": "To Think or Not to Think: Exploring the Unthinking Vulnerability in Large Reasoning Models",
+      "reason": "特殊区切りトークンでLRMの思考を迂回するUnthinking脆弱性を分析し、Monitoring of Thoughtで冗長・危険な思考を動的終了する。推論トークン削減に関係するが、主貢献は安全性攻撃・防御であり、定量的な速度評価は要本文確認。worklistの旧題名BoTとは同一arXiv。",
+      "source_url": "https://arxiv.org/abs/2502.12202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 486,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2507.18061",
+      "identity_tokens": [
+        "arXiv:2507.18061",
+        "DOI:10.48550/arXiv.2507.18061"
+      ],
+      "title": "TELEVAL: A Benchmark Designed for Spoken Language Models in Chinese Interactive Scenarios",
+      "reason": "中国語音声LLMの対話適切性・音響変動下の意味精度を評価するベンチマーク。品質と音声理解が中心であり、推論時遅延・メモリ・計算効率の評価ではない。",
+      "source_url": "https://arxiv.org/abs/2507.18061",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 487,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.22267",
+      "identity_tokens": [
+        "arXiv:2603.22267",
+        "DOI:10.48550/arXiv.2603.22267"
+      ],
+      "title": "TiCo: Time-Controllable Spoken Dialogue Model",
+      "reason": "発話時間を指定する音声モデルでSpoken Time MarkerとRLにより目標時間への追従を改善する。発話長制御は推論予算と関連するが、主指標は音声持続時間の誤差であり、推論計算量やTTFAの削減ではない。worklistの旧題名と現行題名は同一arXiv。",
+      "source_url": "https://arxiv.org/abs/2603.22267",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 489,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.13165",
+      "identity_tokens": [
+        "arXiv:2605.13165",
+        "DOI:10.48550/arXiv.2605.13165"
+      ],
+      "title": "STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes",
+      "reason": "自分の推論軌跡をノード分割し、最初に正答へ至るEarliest Correct Nodeまでの接頭辞だけを残すSTOPを提案。DeepSeek-R1-Distill系で推論生成トークン19.4～42.4%削減し精度を概ね保持する。",
+      "source_url": "https://arxiv.org/abs/2605.13165",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 492,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08813",
+      "identity_tokens": [
+        "arXiv:2605.08813",
+        "DOI:10.48550/arXiv.2605.08813"
+      ],
+      "title": "AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems",
+      "reason": "複数エージェントのグラフから重要度の低いagentを除き、安価なモデルへ置換する。品質維持の受理則を使い、平均トークン費用を最大78.9%削減するLLM推論オーケストレーション圧縮。",
+      "source_url": "https://arxiv.org/abs/2605.08813",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.22516",
+      "identity_tokens": [
+        "arXiv:2608.22516",
+        "DOI:10.48550/arXiv.2608.22516"
+      ],
+      "title": "TRACE: Temporal Retrieval with Anchored and Convergent Evidence for Long-Horizon Video Understanding",
+      "reason": "長動画QAで必要な証拠区間を満たすまでフレームを適応的に復号し、回答安定性で停止するTRACEを提案。98.7フレーム/問で256フレーム均一復号に近い精度を0.39倍のフレーム費用で達成する。",
+      "source_url": "https://arxiv.org/abs/2608.22516",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.08985",
+      "identity_tokens": [
+        "arXiv:2605.08985",
+        "DOI:10.48550/arXiv.2605.08985"
+      ],
+      "title": "LLaVA-UHD v4: What Makes Efficient Visual Encoding in MLLMs?",
+      "reason": "高解像度画像をslice単位で符号化し、ViT浅層で早期に視覚トークンを圧縮する。従来のViT後圧縮では節約できなかったエンコーダ演算を削減し、視覚符号化FLOPs55.8%減を報告する。",
+      "source_url": "https://arxiv.org/abs/2605.08985",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T20:44:33+09:00",
+      "last_checked_at": "2026-10-30T20:44:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 496,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
