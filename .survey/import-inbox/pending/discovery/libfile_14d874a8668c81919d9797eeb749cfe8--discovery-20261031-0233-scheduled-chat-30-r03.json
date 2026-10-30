@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0233-scheduled-chat-30/r03",
+  "reference_main_sha": "60afd16624f4f1435a21e795ef399f73ef2a5a7d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2405.05949",
+      "identity_tokens": [
+        "arXiv:2405.05949"
+      ],
+      "title": "CuMo: Scaling Multimodal LLM with Co-Upcycled Mixture-of-Experts",
+      "reason": "画像エンコーダとMLP接続器にTop-K疎MoEを配置し、事前学習MLPからexpertを複製して視覚指示チューニングするCuMo。推論時の活性パラメータ増加を小さく抑える設計だが、要旨の主目的・評価はVQA等のモデル能力向上であり、推論速度・GPUメモリ・サービング効率の直接比較はない。",
+      "source_url": "https://arxiv.org/abs/2405.05949",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 297,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "identity_tokens": [
+        "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033"
+      ],
+      "title": "Enabling Efficient GPU Communication over Multiple NICs with FuseLink",
+      "reason": "FuseLinkはGPUとNICの静的結合によるホットスポットを、サーバー内高速リンク経由でGPUが別NICへトラフィックを中継する仕組みで回避し、NCCLへ透過統合する。USENIX OSDI 2025の一次要旨はGPU間最大212GB/s、LLMサービングの初回token遅延1.04〜2.73倍改善を報告。分散LLM推論の通信効率に直接該当。",
+      "source_url": "https://www.usenix.org/conference/osdi25/presentation/ren",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 319,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2503.10200",
+      "identity_tokens": [
+        "arXiv:2503.10200"
+      ],
+      "title": "LVAgent: Long Video Understanding by Multi-Round Dynamical Collaboration of MLLM Agents",
+      "reason": "長時間動画の質問応答でモデルライブラリから複数MLLMエージェントを選び、時間区間検索・回答共有・反省によってチームを動的更新するLVAgent。検索の計算効率への言及はあるが、主要な成果はLongVideoBenchの正答率向上（+13.3ポイント）で、推論資源や実行速度の直接最適化は主眼ではない。",
+      "source_url": "https://arxiv.org/abs/2503.10200",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 321,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.15252",
+      "identity_tokens": [
+        "arXiv:2505.15252"
+      ],
+      "title": "An Efficient Private GPT Never Autoregressively Decodes",
+      "reason": "秘匿GPTの逐次復号コストを避けるため公開GPTで候補token列を生成し、暗号プロトコル上の秘密モデルでまとめて受理検証する方式。暗号向け私的サンプリングと蒸留による公開/秘密モデル整合を使い、3組のモデルとネットワーク条件で通常の安全復号比2.1〜6.0倍高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2505.15252",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 322,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11202",
+      "identity_tokens": [
+        "arXiv:2605.11202"
+      ],
+      "title": "Continuous Discovery of Vulnerabilities in LLM Serving Systems with Fuzzing",
+      "reason": "GRIEFはKV共有・バッチ・投機的復号・adapterを含むLLM推論エンジンへ時系列の並行リクエストを投入するgreybox fuzzer。crash・hang・性能異常・silent output corruptionを検出し、vLLM/SGLangで15件の脆弱性、うち10件開発者確認・2件CVEを報告。推論サービングの状態共有・隔離・信頼性の直接的システム研究。",
+      "source_url": "https://arxiv.org/abs/2605.11202",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 325,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.11232",
+      "identity_tokens": [
+        "arXiv:2605.11232"
+      ],
+      "title": "Rethinking LLMOps for Fraud and AML: Building a Compliance-Grade LLM Serving Stack",
+      "reason": "AML業務の共通prefixと短いJSON出力を活用し、PagedAttention、prefix cache、adapter/prompt長に応じたbatching、speculative decoding、prefill/decode分離等を組み合わせる業務特化サービングスタック。公開合成AML負荷では処理量612〜650から3600 req/h、P99遅延31〜38秒から6.4〜8.7秒を報告。汎用新アルゴリズムというより既存機構の統合・負荷適応だが推論サービングの実測最適化に該当。",
+      "source_url": "https://arxiv.org/abs/2605.11232",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 326,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2601.18302",
+      "identity_tokens": [
+        "arXiv:2601.18302"
+      ],
+      "title": "Suppressing Final Layer Hidden State Jumps in Transformer Pretraining",
+      "reason": "Transformerの最終層前後の隠れ状態角度の急変を定量化し、事前学習時にJREG正則化で抑えて下流能力を改善する研究。主要操作はpretrainingの損失関数変更であり、推論時の層省略や計算量・メモリ削減は実証していない。",
+      "source_url": "https://arxiv.org/abs/2601.18302",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 333,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2401.11471",
+      "identity_tokens": [
+        "arXiv:2401.11471"
+      ],
+      "title": "LR-CNN: Lightweight Row-centric Convolutional Neural Network Training for Memory Reduction",
+      "reason": "CNNの学習中に保存する中間特徴を減らすため、畳み込み層の計算順序を列単位から行単位へ再構成するデータフロー研究。対象はCNN訓練時メモリであり、LLMの推論・サービング・言語モデル圧縮への直接適用は示されない。",
+      "source_url": "https://arxiv.org/abs/2401.11471",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 339,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2512.02895",
+      "identity_tokens": [
+        "arXiv:2512.02895"
+      ],
+      "title": "MindGPT-4ov: An Enhanced MLLM via a Multi-Stage Post-Training Paradigm",
+      "reason": "情報密度に基づくデータ生成、カリキュラムSFT、マルチモーダルRLを組み合わせるモデル能力改善の後学習方式。5D並列学習・operator最適化・推論量子化にも言及するが、要旨の評価はMMBench/MMStar/MathVision/MathVistaの性能であり、推論効率化の独立技術・数値は主貢献として検証できない。",
+      "source_url": "https://arxiv.org/abs/2512.02895",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 342,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.14277",
+      "identity_tokens": [
+        "arXiv:2607.14277"
+      ],
+      "title": "Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making",
+      "reason": "凍結LLM/VLMの生成途中のhidden-state軌跡を軽量なCapability/Resolution headへ入力し、強いモデルへの委譲、ツール利用、回答・棄権等を早期決定する。小型/大型モデルのルーティングでAndroidWorldの大型モデル使用を最大90.7%削減し、他課題でも27〜53%削減を報告。推論時のモデル選択と実行費用を直接最適化。",
+      "source_url": "https://arxiv.org/abs/2607.14277",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:43:18+09:00",
+      "last_checked_at": "2026-10-31T02:43:18+09:00",
+      "linked_from": [],
+      "worklist_rank": 347,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
