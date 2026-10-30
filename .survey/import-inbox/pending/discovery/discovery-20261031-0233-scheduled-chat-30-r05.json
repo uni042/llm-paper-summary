@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0233-scheduled-chat-30/r05",
+  "reference_main_sha": "60afd16624f4f1435a21e795ef399f73ef2a5a7d",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.04493",
+      "identity_tokens": [
+        "arXiv:2604.04493"
+      ],
+      "title": "SLaB: Sparse-Lowrank-Binary Decomposition for Efficient Large Language Models",
+      "reason": "SLaBは各線形層の重みを疎行列・低rank行列・二値行列の3成分へ分解し、activation-awareな枝刈りスコアで再学習なしに圧縮する。Llama系で50%圧縮時のPPLを既存法比最大36%改善、ゼロショット精度最大8.98ポイント改善を報告。LLM重み・計算圧縮の直接技術。",
+      "source_url": "https://arxiv.org/abs/2604.04493",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 200,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.24019",
+      "identity_tokens": [
+        "arXiv:2605.24019"
+      ],
+      "title": "MGVQ: Synergizing Multi-dimensional Sensitivity-Aware and Gradient-Hessian Fusion for Vector Quantization",
+      "reason": "VLMの視覚/言語側の重み分布差に対応する感度誘導型mixed-precision vector quantizationと、勾配・Hessianの双方を用いる量子化誤差補償を組み合わせる。LLaVA-OneVision/InternVL2/Qwen2-VLで検証し、2bitのInternVL2-26Bで既存PTQ比71.4%対67.0%と報告。エッジ向けVLM重み圧縮。",
+      "source_url": "https://arxiv.org/abs/2605.24019",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 203,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09527",
+      "identity_tokens": [
+        "arXiv:2407.09527"
+      ],
+      "title": "BitNet b1.58 Reloaded: State-of-the-art Performance Also on Smaller Networks",
+      "reason": "10万〜4800万パラメータの小型言語/画像モデルで1.58bit量子化認識学習を検証し、中央値を使うBitNet変種を提案。小型モデルでの低ビット重みの実現性は推論メモリ削減に関連するが、主評価は学習法と精度で、LLMサービングや実測推論速度は対象外。",
+      "source_url": "https://arxiv.org/abs/2407.09527",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 209,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.04162",
+      "identity_tokens": [
+        "arXiv:2603.04162"
+      ],
+      "title": "Bielik-Q2-Sharp: A Comparative Study of Extreme 2-bit Quantization Methods for a Polish 11B Language Model",
+      "reason": "ポーランド語Bielik-11BでQuIP#/SpinQuant+GPTQ/ButterflyQuant/QTIP/VPTQ/AQLMの6方式を共通校正・Hessian条件で比較。最良QuIP#は22課題で71.92%（IQ2XXS 72.07%）を3.26GBで達成し、回転型では尤度評価が良好でも自己回帰生成が破綻する現象を記録。極低bit推論圧縮の実用比較。",
+      "source_url": "https://arxiv.org/abs/2603.04162",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 216,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.51",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2026.acl-long.51"
+      ],
+      "title": "Exploring Attention Attractors in Large Language Models",
+      "reason": "ACL 2026の一次論文はattention attractorが先行文脈を集約する機能、層・token分布、活性次元との関係を分析。低意味語をKVに残すだけで多くの長文脈・ストリーミング課題の性能を保てるという補助実験もあるが、主貢献は機構解明であり、独立した推論エンジンや速度改善の定量評価ではない。",
+      "source_url": "https://aclanthology.org/2026.acl-long.51/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 217,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043916",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS56072.2025.11043916"
+      ],
+      "title": "XNC: XOR and NOT-Based Lossless Compression for Optimizing Unquantized Embedding Layers in Large Language Models",
+      "reason": "XNCは小型LLMでFP16のまま残されるembedding層に隣接16bitブロックのXOR/NOTを適用し、情報損失なしに実効9bit表現へ圧縮する。著者機関公開の一次要旨ではembedding層平均1.34倍圧縮、4bit LLM全体サイズ平均9.91%削減、圧縮4サイクル/復元3サイクルを報告。",
+      "source_url": "https://pure.seoultech.ac.kr/en/publications/xnc-xor-and-not-based-lossless-compression-for-optimizing-unquant/",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 219,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.10416",
+      "identity_tokens": [
+        "arXiv:2608.10416"
+      ],
+      "title": "Riemann GeoResolver: A Non-Euclidean Attention Framework from Euclidean Resolver to Hyperbolic-Spherical Geometry",
+      "reason": "逆距離attentionをユークリッドから双曲・球面測地へ拡張し、検索回路分離・学習収束・effective rankの理論を提示。O(1) per-tokenを含む演算子と双曲メモリ圧縮を主張するが、要旨ではLLM実機の実行速度・メモリ・品質の統合比較を確認できないため、理論的な推論効率化候補として境界判定。",
+      "source_url": "https://arxiv.org/abs/2608.10416",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 236,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.21265",
+      "identity_tokens": [
+        "arXiv:2608.21265"
+      ],
+      "title": "Memory Augmentation Unlocks Efficient Chain-of-Thought Reasoning",
+      "reason": "履歴の思考トレースから再利用可能な推論パターン・制約を記憶にまとめ、短縮CoDのprefill側補助文脈として取り出す学習不要のMemory-Augmented Compression。GSM8K/MATH/BBH/MMLU-SciでCoDより精度を改善し、通常CoT比1.14〜1.49倍の遅延高速化を報告。生成推論tokenの削減に直結。",
+      "source_url": "https://arxiv.org/abs/2608.21265",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 255,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.39740",
+      "identity_tokens": [
+        "arXiv:2609.39740"
+      ],
+      "title": "LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation",
+      "reason": "長文脈推論の内部ステップをTHINK/RECALL/EXITの潜在行動として制御し、反実仮想分岐で各行動の出力寄与を評価する蒸留方式。fast-weight memoryからの想起と追加思考の選択を学習し、1.4Bモデルで長文脈基準法比5.9倍の高速化を報告。推論時の内部計算量と記憶アクセスを最適化。",
+      "source_url": "https://arxiv.org/abs/2609.39740",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 256,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.40127",
+      "identity_tokens": [
+        "arXiv:2609.40127"
+      ],
+      "title": "Learning Functional Subspaces for Neural Network Compression",
+      "reason": "各線形層の除去部分空間を出力KL等の全体目的で共同学習するLSPを提案。圧縮後は標準の低rank重みへ融合し、attentionでは共有の狭いlatentをKVとして保存する。Llama-2-7Bの70%圧縮でPPL 10.9対既存13.3、少バッチdecode最大1.6倍、128k文脈の重み+KV合計メモリ13.5倍削減を報告。",
+      "source_url": "https://arxiv.org/abs/2609.40127",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T02:47:08+09:00",
+      "last_checked_at": "2026-10-31T02:47:08+09:00",
+      "linked_from": [],
+      "worklist_rank": 260,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
