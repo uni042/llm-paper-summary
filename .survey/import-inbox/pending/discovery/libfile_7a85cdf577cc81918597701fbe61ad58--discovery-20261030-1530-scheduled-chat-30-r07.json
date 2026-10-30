@@ -1,0 +1,187 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261030-1530-scheduled-chat-30/r07",
+  "reference_main_sha": "0ff1d41771eec8ce05901d1254d9bb38fd49b7a7",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.13533",
+      "identity_tokens": [
+        "arXiv:2502.13533"
+      ],
+      "title": "Train Small, Infer Large: Memory-Efficient LoRA Training for Large Language Models",
+      "reason": "arXiv一次要旨は大きなLLMを枝刈りした小型モデルでLoRA微調整し、アダプタを元の大きなモデルへ復元するLoRAMを提案。主目的は微調整時のGPUメモリ削減であり、生成推論の速度・KV・サービング最適化ではないため対象外。",
+      "source_url": "https://arxiv.org/abs/2502.13533",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "Fine-tuning / Training Efficiency"
+      ],
+      "worklist_rank": 84
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.18701",
+      "identity_tokens": [
+        "arXiv:2410.18701"
+      ],
+      "title": "BATON: Enhancing Batch-wise Inference Efficiency for Large Language Models via Dynamic Re-batching",
+      "reason": "arXiv一次要旨は固定バッチと既存反復単位補充の不要計算を分析し、prefill中の新規要求挿入を効率化する動的再バッチ化BATONを提案。LLMサービングのバッチスケジューリングとGPU利用率改善に直接該当。",
+      "source_url": "https://arxiv.org/abs/2410.18701",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 86
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.29734",
+      "identity_tokens": [
+        "arXiv:2605.29734"
+      ],
+      "title": "HTAM: Hierarchical Transition-Attended Memory for Operator Optimization",
+      "reason": "arXiv一次要旨はLLMを用いてGPU演算子のコードを自動生成・最適化する際、過去の最適化経験を粗粒度から細粒度へ階層的に記憶・検索するHTAMを提案。GPUカーネル改善と関連するが、主たる貢献はLLM支援コード探索であり、生成LLMの推論サービング性能を直接改善する方法ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2605.29734",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "Hardware Accelerators",
+        "Kernel Optimization"
+      ],
+      "worklist_rank": 87
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.16592",
+      "identity_tokens": [
+        "arXiv:2610.16592"
+      ],
+      "title": "Prorsa: Unleashing the Potential of Prefill-Decode Disaggregation in Agentic Reinforcement Learning",
+      "reason": "arXiv一次要旨はエージェントRLのrolloutでprefillとdecodeが交互に混在する特性を利用し、PD分離と段階別並列化でrollout処理を高速化するProrsaを提案。推論処理自体の効率化を扱うが、用途はオンラインLLMサービスよりRL学習中のデータ生成であるためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.16592",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Agentic Reinforcement Learning"
+      ],
+      "worklist_rank": 88
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.20359",
+      "identity_tokens": [
+        "arXiv:2608.20359"
+      ],
+      "title": "Self-Speculation for Faster Reasoning Models",
+      "reason": "arXiv一次要旨は長いCoT推論の途中状態をドラフト生成に再利用する学習不要のSelf-Speculation for Reasoning (SSR)を提案。推論トレースの構造を利用して対話型LLMの生成遅延を減らす直接的な投機的復号研究。",
+      "source_url": "https://arxiv.org/abs/2608.20359",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Reasoning LLM Inference"
+      ],
+      "worklist_rank": 90
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32831",
+      "identity_tokens": [
+        "arXiv:2609.32831"
+      ],
+      "title": "UniCache: Task- and Type-Aware KV Cache Compression for Unified Multimodal Models",
+      "reason": "arXiv一次要旨は理解・生成・編集を統合したマルチモーダルモデルで、タスクとKVの種類ごとに重要度が変わることを踏まえ、KV圧縮ポリシーを切替えるUniCacheを提案。マルチモーダルLLMの長文脈メモリ削減に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.32831",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "KV Cache Optimization / Compression",
+        "Multimodal LLM Inference"
+      ],
+      "worklist_rank": 91
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.30820",
+      "identity_tokens": [
+        "arXiv:2609.30820"
+      ],
+      "title": "Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness",
+      "reason": "arXiv一次要旨は反復共有重みのLooped Transformerで、非残差loop入口のINT4誤差が反復により増幅されるfeedback exposureと、単一ステップ校正が後続反復を捉えないcalibration blindnessを分析。低ビット推論配備における量子化失敗条件を直接扱う。",
+      "source_url": "https://arxiv.org/abs/2609.30820",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 92
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.07139",
+      "identity_tokens": [
+        "arXiv:2501.07139"
+      ],
+      "title": "FlexQuant: Elastic Quantization Framework for Locally Hosted LLM on Edge Devices",
+      "reason": "arXiv一次要旨はメモリ共有型エッジ機器で使用可能メモリが変動する状況に対し、複数の量子化モデルを低ストレージ費用で準備し、モデル精度・容量を切替えるFlexQuantを提案。既存法比31倍の選択肢、15倍の粒度、10倍の保存量削減を報告し、端末LLM推論の配備効率に直接該当。",
+      "source_url": "https://arxiv.org/abs/2501.07139",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression",
+        "Edge LLM Inference"
+      ],
+      "worklist_rank": 93
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.34538",
+      "identity_tokens": [
+        "arXiv:2609.34538"
+      ],
+      "title": "Shallow Queries, Mature Values: Depth-Asynchronous Self-Speculation for Looped Transformers",
+      "reason": "arXiv一次要旨はLooped TransformerでQ/Kが浅い反復深度でも成熟する一方Vは深い反復が必要な非対称性を利用し、浅いドラフトに成熟した値を与えるDepth-Asynchronous Self-Speculationを提案。自己投機的復号による生成高速化に直接関連する。",
+      "source_url": "https://arxiv.org/abs/2609.34538",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "Speculative Decoding",
+        "Alternative Language Model Architectures"
+      ],
+      "worklist_rank": 94
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.23125",
+      "identity_tokens": [
+        "arXiv:2609.23125"
+      ],
+      "title": "Perplexity Cost Understates What Activation Quantisation Breaks",
+      "reason": "arXiv一次要旨は活性量子化の品質をPPLだけで評価すると、誘導・検索などの能力劣化を見落とすことを12モデル・780比較で分析。低ビットLLM配備の品質監査に関連するが、新しい高速化方式やメモリ削減カーネルの提案ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.23125",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-30T15:39:45+09:00",
+      "last_checked_at": "2026-10-30T15:39:45+09:00",
+      "linked_from": [
+        "Weight Quantization / Compression"
+      ],
+      "worklist_rank": 97
+    }
+  ]
+}
