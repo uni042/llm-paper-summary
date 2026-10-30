@@ -35,10 +35,15 @@
   "selection_reason": "MBSは英語偏重の校正データが多言語LLM圧縮で低資源言語を劣化させる問題に対し、事前学習時の言語分布に比例した校正サンプリングを行う。BLOOMの事後圧縮品質を言語別に検証し、多言語推論モデルの圧縮品質維持へ直接貢献する。",
   "semantic_scholar_id": "6d546f497eeb199f8eb11bdae5e9e1cb1f718ffe",
   "source_url": "https://arxiv.org/abs/2404.04748",
-  "status": "ready",
+  "status": "superseded",
   "title": "Multilingual Brain Surgeon: Large Language Models Can Be Compressed Leaving No Language behind",
   "type": "research",
   "venue": "International Conference on Language Resources and Evaluation",
   "workflow_version": 10,
-  "year": 2024
+  "year": 2024,
+  "superseded_at": "2026-10-30T03:00:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/99-other-inference-systems/2025-2404.04748-multilingual-brain-surgeon-large-language-models-can-be-compressed-leavi.md",
+  "represented_canonical_id": "arXiv:2404.04748",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

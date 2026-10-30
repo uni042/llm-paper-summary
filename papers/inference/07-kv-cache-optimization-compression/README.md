@@ -16,7 +16,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 方向は異なるが、いずれも**KV cacheがdecode時のmemory容量やmemory bandwidthのボトルネックになることを直接緩和する**研究として扱う。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（421本）
+## 自動生成の論文一覧（422本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/)
 
@@ -1336,6 +1336,10 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 - **2025-08 · [PiKV: KV Cache Management System for Mixture of Experts](2025-2508.06526-pikv-kv-cache-management-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/NoakLiu/PiKV) ・ リポジトリ内被引用：2  
   混合専門家モデルのKVを専門家単位に分散し、選択・圧縮・保持判断を統合する設計。第3版本文には独立した実測評価節がない。
+
+- **2025-08 · [GraphKV: Breaking the Static Selection Paradigm with Graph-Based KV Cache Eviction](2025-2509.00388-graphkv-breaking-the-static-selection-paradigm-with-graph-based-kv-cache.md)**  
+  実装：✓ ・ リポジトリ内被引用：2  
+  GraphKVは、長文脈のKVキャッシュ削減で「注意スコアの上位をそのまま残すと、互いに似た情報を持つトークンが重複して選ばれる」という問題を扱う。一方、QMSumのデコード遅延はPyramidKV単独5.133秒に対して併用5.265秒と2.5%悪化しており、すべての既存方式を高速化するという主張は成立しない。
 
 - **2025-07 · [Multi-matrix Factorization Attention](2025-98e1f6bbeb53-multi-matrix-factorization-attention.md)**  
   実装：✓ ・ リポジトリ内被引用：2  

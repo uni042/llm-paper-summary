@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T02:41:54+00:00",
+  "generated_at": "2026-10-30T03:00:10+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1682,33 +1682,6 @@
       "worker_run_key": "20261028-2145-scheduled-chat-45/r01"
     },
     {
-      "canonical_id": "arXiv:2603.16514",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T01:24:18+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-45",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 0 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 5624,
-        "body_paragraphs": 31,
-        "method_chars": 1556,
-        "method_paragraphs": 9,
-        "evaluation_chars": 0,
-        "limitation_chars": 676,
-        "insufficiency_flags": [
-          "評価説明量 0 < 500"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-c06866c15c9a--libfile_ed45552ae3408191bfdbb2d4961290f0--2026-2603.16514-fleetopt-gpu-fleet-provisioning-research-20261029-0900-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-c06866c15c9a--libfile_ed45552ae3408191bfdbb2d4961290f0--2026-2603.16514-fleetopt-gpu-fleet-provisioning-research-20261029-0900-scheduled-chat-00-.json",
-      "worker_run_key": "20261029-0900-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2610.01950",
       "title": null,
       "source_url": null,
@@ -1734,34 +1707,6 @@
       "blocked_path": ".survey/import-inbox/blocked/research/libfile_83edae65276881918e066a6728d9d20f--2026-2610.01950-moe-core-coordinated-expert-residency-research-20261029-1530-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/libfile_83edae65276881918e066a6728d9d20f--2026-2610.01950-moe-core-coordinated-expert-residency-research-20261029-1530-scheduled-chat-30-r01.json",
       "worker_run_key": "20261029-1530-scheduled-chat-30/r01"
-    },
-    {
-      "canonical_id": "arXiv:2509.00388",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-29T09:12:11+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-00",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 評価説明量 432 < 500"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 4996,
-        "body_paragraphs": 26,
-        "method_chars": 1322,
-        "method_paragraphs": 8,
-        "evaluation_chars": 432,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "評価説明量 432 < 500",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-4d88501a8cb7--libfile_7c754ed8ea00819188219d9b3f526999--2025-2509.00388-graphkv-similarity-decay-eviction-research-20261029-1647-scheduled-chat-45-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-4d88501a8cb7--libfile_7c754ed8ea00819188219d9b3f526999--2025-2509.00388-graphkv-similarity-decay-eviction-research-20261029-1647-scheduled-chat-4.json",
-      "worker_run_key": "20261029-1647-scheduled-chat-45/r01"
     },
     {
       "canonical_id": "DOI:10.3390/fi17040185",
@@ -2244,8 +2189,8 @@
     },
     {
       "canonical_id": "SemanticScholar:183d712c62ae566cd9150f3b360c7de9ead96d14",
-      "title": "FaaScale: Unlocking Fast LLM Scaling for Serverless Inference",
-      "source_url": "https://www.ruichuan.org/papers/faascale-mlsys26.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:41:45+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2272,8 +2217,8 @@
     },
     {
       "canonical_id": "arXiv:2606.08761",
-      "title": "APEX4: Efficient Pure W4A4 LLM Inference via Intra-SM Compute Rebalancing",
-      "source_url": "https://arxiv.org/html/2606.08761v2",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:41:47+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2299,8 +2244,8 @@
     },
     {
       "canonical_id": "SemanticScholar:4dd0221f8b4f8daa0487aaab38fd9c4574ad3bb0",
-      "title": "SharedContextBench: Evaluating Long-Context Methods in KV Cache Reuse",
-      "source_url": "https://neurips2024-enlsp.github.io/papers/paper_93.pdf",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:41:49+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-30",
@@ -2326,8 +2271,8 @@
     },
     {
       "canonical_id": "DOI:10.5220/0014919300004039",
-      "title": "SATORU: Proactive Length-Aware Scheduling for High-Throughput Batch LLM Serving",
-      "source_url": "https://www.scitepress.org/publishedPapers/2026/149193/pdf/index.html",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:41:51+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2354,8 +2299,8 @@
     },
     {
       "canonical_id": "SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9",
-      "title": "OracleKV: Oracle Guidance for Question-Independent KV Cache Eviction",
-      "source_url": "https://openreview.net/pdf?id=KHM2YOGgX9",
+      "title": null,
+      "source_url": null,
       "returned_at": "2026-10-30T02:41:53+00:00",
       "return_count": 2,
       "assigned_worker": "scheduled-chat-45",
@@ -2379,6 +2324,62 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-54b9b9c6e310--libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-54b9b9c6e310--libfile_144d35b76ea481918a8808c06024fdf4--2025-oraclekv-question-independent-kv-eviction-research-20261030-0358-scheduled-chat-30-r.json",
       "worker_run_key": "20261030-0358-scheduled-chat-30/r01"
+    },
+    {
+      "canonical_id": "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
+      "title": "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
+      "source_url": "https://raw.githubusercontent.com/oshindutta/TVAprune/main/Es_fomo__ICML__camera_ready.pdf",
+      "returned_at": "2026-10-30T02:52:47+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 0 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 5271,
+        "body_paragraphs": 28,
+        "method_chars": 1677,
+        "method_paragraphs": 10,
+        "evaluation_chars": 0,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 0 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.json",
+      "worker_run_key": "20261030-1055-scheduled-chat-00/r01"
+    },
+    {
+      "canonical_id": "DOI:10.1109/CSCWD68734.2026.11582397",
+      "title": "SemanticKV: A Semantics-Driven KV Cache Eviction Framework for Efficient Long Prompt LLM Inference",
+      "source_url": "https://shujiehan.github.io/_pages/files/cscwd26.pdf",
+      "returned_at": "2026-10-30T02:52:49+00:00",
+      "return_count": 1,
+      "assigned_worker": "scheduled-chat-45",
+      "reason": "blocked_quality",
+      "failures": [
+        "16KB未満再監査: 評価説明量 416 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 6686,
+        "body_paragraphs": 35,
+        "method_chars": 1881,
+        "method_paragraphs": 10,
+        "evaluation_chars": 416,
+        "limitation_chars": 0,
+        "insufficiency_flags": [
+          "評価説明量 416 < 500",
+          "限界説明量 0 < 推奨 120"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/libfile_cafbe42327e4819198ac990d8e8350ee--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-reaudit-20261030-1132-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261030-1132-scheduled-chat-30/r01"
     }
   ]
 }

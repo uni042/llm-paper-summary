@@ -3,7 +3,7 @@
 複数requestを複数GPU / nodeで処理するLLM servingについて、request順、batch、prefill / decodeのGPU配分、KV再利用・転送、request移動などを調整し、latencyとresource効率を改善する研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（521本）
+## 自動生成の論文一覧（522本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/)
 
@@ -673,6 +673,10 @@
 - **2026-09 · [Disaggregated Quantization: Specializing LLM Prefill and Decode](2026-2609.26333-disaggregated-quantization-prefill-decode.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   分離量子化（Disaggregated Quantization; DQ）は、両段階に同じ量子化形式を強制せず、プリフィルには演算器が高速に扱えるNVFP4等、復号には2〜3ビット級の重みのみ量子化を割り当てる。
+
+- **2026-09 · [Denoising Surface: Modeling and Predicting Inference Cost for Diffusion LLM Serving](2026-2610.00499-denoising-surface-modeling-and-predicting-inference-cost-for-diffusion-l.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  著者らは、各ブロック・ステップが実行される確率を表すDenoising Workload Surface（DWS）をプロンプトから予測し、GPU構成に応じて計測した一ステップ当たり費用と合成する。LLaDA2.0-miniでの予測費用MAEは355.24msで、出力長ベース887.97ms、総denoisingステップ数ベース517.04msより小さい。
 
 - **2026-09 · [Decoupling Readiness from Release for Tail-Aware Scheduling of Agentic LLM Workflows](2026-2609.10964-decoupling-readiness-from-release-tail-aware-agentic-llm-scheduling.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

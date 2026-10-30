@@ -35,10 +35,15 @@
   "selection_reason": "DWSは拡散LLMの出力ブロック×復元ステップという二次元実行分布を予測し、要求ごとの不均一な計算量を推定する。CPUで動く軽量予測器を使うSJFスケジューラがオンライン対話のE2E遅延を最大1.92倍改善するという、拡散LLMサービングの直接的なコスト推定・スケジューリング研究。",
   "semantic_scholar_id": "465783e3faba20fc7a473102fb824d20934ad550",
   "source_url": "https://arxiv.org/abs/2610.00499",
-  "status": "ready",
+  "status": "superseded",
   "title": "Denoising Surface: Modeling and Predicting Inference Cost for Diffusion LLM Serving",
   "type": "research",
   "venue": null,
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T03:00:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/11-llm-serving-scheduling-disaggregation/2026-2610.00499-denoising-surface-modeling-and-predicting-inference-cost-for-diffusion-l.md",
+  "represented_canonical_id": "arXiv:2610.00499",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

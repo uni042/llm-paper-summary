@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "artifact_type": "research",
+  "status": "blocked_quality",
+  "source_sha256": "9a4e4c696ec68a2b01e29fdbc746516e1525044a9ee10b0bc1700f9c7cf24e94",
+  "normalized_source_sha256": null,
+  "japanese_normalized": false,
+  "blocked_path": ".survey/import-inbox/blocked/research/libfile_8df8c7421a7481918dc0076df7b386ac--2024-tva-prune-under16kb-reaudit-20261030-1055-scheduled-chat-00-r01.md",
+  "canonical_id": "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference",
+  "worker_completed_at": "2026-10-30T10:55:26+09:00",
+  "worker_run_key": "20261030-1055-scheduled-chat-00/r01",
+  "quality_metrics": {
+    "quality_gate_version": "2026-10-07-v1",
+    "body_chars": 5271,
+    "body_paragraphs": 28,
+    "method_chars": 1677,
+    "method_paragraphs": 10,
+    "evaluation_chars": 0,
+    "limitation_chars": 0,
+    "insufficiency_flags": [
+      "評価説明量 0 < 500",
+      "限界説明量 0 < 推奨 120"
+    ]
+  },
+  "failures": [
+    "16KB未満再監査: 評価説明量 0 < 500"
+  ],
+  "processed_at": "2026-10-30T02:52:47+00:00"
+}

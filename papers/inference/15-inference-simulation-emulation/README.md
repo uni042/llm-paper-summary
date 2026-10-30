@@ -23,7 +23,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - [09-kernel-runtime-compilation](../09-kernel-runtime-compilation/)
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（70本）
+## 自動生成の論文一覧（71本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
@@ -181,6 +181,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 - **2026-03 · [Temperature-Aware Scheduling of LLM Inference in Large-Scale Geo-Distributed Edge Data Centers with Distributed Optimization](2026-2603.07810-temperature-aware-scheduling-of-llm-inference-in-large-scale-geo-distrib.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   地理的に離れた複数のデータセンターへ大規模言語モデル（LLM）の推論要求を割り振るとき、要求の到着場所、GPUの処理能力、通信遅延だけでなく、各拠点の外気温も運用費を左右する。本論文は、これらをLLM推論要求の配置問題に統合する。ただし原著は主要結果をSplitwise比で正規化した図として示し、本文中に個別指標の絶対値・改善率・信頼区間を列挙していない。
+
+- **2026-03 · [FleetOpt: Analytical Fleet Provisioning for LLM Inference with Compress-and-Route as Implementation Mechanism](2026-2603.16514-fleetopt-analytical-fleet-provisioning-for-llm-inference-with-compress-a.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  FleetOptは、長文脈LLM推論のGPUをすべて最大入力長に合わせて確保すると、多くの短い要求に対してKVキャッシュ枠が過大になる問題を扱う。境界をわずかに超えた要求は、推論エンジンへ入れる前にゲートウェイで文章を抽出圧縮し、短文脈プールへ移せるようにする。
 
 - **2026-02 · [TriGen: NPU Architecture for End-to-End Acceleration of Large Language Models based on SW-HW Co-Design](2026-2602.12962-trigen-npu-architecture-for-end-to-end-acceleration-of-large-language-mo.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

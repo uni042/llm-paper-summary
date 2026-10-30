@@ -35,10 +35,15 @@
   "selection_reason": "FleetOptはプロンプト長CDFとP99 TTFT制約から短文脈・長文脈GPUプールの最小費用を解析し、境界付近の要求を入口で抽出圧縮して経路を最適化する。3つの実トレースで均一プール比GPU費用6～82%削減を報告するLLMフリート配備方式。",
   "semantic_scholar_id": "7456b3e46832bf1985b781f14c46c9dd40b70e05",
   "source_url": "https://arxiv.org/abs/2603.16514",
-  "status": "ready",
+  "status": "superseded",
   "title": "FleetOpt: Analytical Fleet Provisioning for LLM Inference with Compress-and-Route as Implementation Mechanism",
   "type": "research",
   "venue": "arXiv.org",
   "workflow_version": 10,
-  "year": 2026
+  "year": 2026,
+  "superseded_at": "2026-10-30T03:00:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/15-inference-simulation-emulation/2026-2603.16514-fleetopt-analytical-fleet-provisioning-for-llm-inference-with-compress-a.md",
+  "represented_canonical_id": "arXiv:2603.16514",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }

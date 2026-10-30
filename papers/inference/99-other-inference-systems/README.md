@@ -3,7 +3,7 @@
 推論効率化を主目的とするが、現時点では他の系統へ自然に入らず、**独立系統を作るほど同種研究がまだ集まっていない手法**を置く。ここに論文が増えて共通した問題設定・主要技術・評価軸が見えてきた場合は、新しい系統へ分割する。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（836本）
+## 自動生成の論文一覧（837本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/99-other-inference-systems/)
 
@@ -2507,6 +2507,10 @@
 - **2025-05 · [PreMoE: Proactive Inference for Efficient Mixture-of-Experts](2025-2505.17639-premoe-proactive-inference-for-efficient-mixture-of-experts.md)**  
   実装：[✓](https://github.com/JarvisPei/PreMoe) ・ リポジトリ内被引用：0  
   Mixture-of-Experts（MoE）は1トークン当たり一部の専門家（専門家）だけを実行するが、通常のサービングでは全専門家の重みをGPU/NPUメモリに常駐させる必要がある。PreMoEは、利用する領域をあらかじめ決められるなら、その領域で重要な専門家だけを残した小型MoEを、元モデルのルータlogitから再学習なしで事前構築する方式である。
+
+- **2025-05 · [Multilingual Brain Surgeon: Large Language Models Can be Compressed Leaving No Language Behind](2025-2404.04748-multilingual-brain-surgeon-large-language-models-can-be-compressed-leavi.md)**  
+  実装：[✓](https://github.com/X-LANCE/MBS) ・ リポジトリ内被引用：0  
+  Multilingual Brain Surgeon（MBS）は、LLMの重み量子化や枝刈りで使うキャリブレーションデータを英語だけから選ぶと、事前学習時に割合が小さい言語の品質が大きく悪化する問題を扱う。
 
 - **2025-05 · [LCD: Advancing Extreme Low-Bit Clustering for Large Language Models via Knowledge Distillation](2025-2506.12038-lcd-advancing-extreme-low-bit-clustering-for-large-language-models-via-k.md)**  
   実装：✓ ・ リポジトリ内被引用：0  

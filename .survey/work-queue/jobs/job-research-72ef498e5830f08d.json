@@ -35,10 +35,15 @@
   "selection_reason": "GraphKVはKVトークンを頂点、類似性を辺とするグラフ上で減衰信号を伝播し、推論中に重要度を更新する。SnapKV・PyramidKVへ組み込めるKV削除方式であり、長文脈推論のキャッシュ保持選択への直接的な技術貢献。",
   "semantic_scholar_id": "78b7bcf6a08a663cacd26b92b9568a777743f53f",
   "source_url": "https://arxiv.org/abs/2509.00388",
-  "status": "ready",
+  "status": "superseded",
   "title": "GraphKV: Breaking the Static Selection Paradigm with Graph-Based KV Cache Eviction",
   "type": "research",
   "venue": "Conference on Empirical Methods in Natural Language Processing",
   "workflow_version": 10,
-  "year": 2025
+  "year": 2025,
+  "superseded_at": "2026-10-30T03:00:08+00:00",
+  "superseded_reason": "paper_already_represented",
+  "represented_paper_path": "papers/inference/07-kv-cache-optimization-compression/2025-2509.00388-graphkv-breaking-the-static-selection-paradigm-with-graph-based-kv-cache.md",
+  "represented_canonical_id": "arXiv:2509.00388",
+  "reconciled_by": "reconcile_represented_research_jobs.py"
 }
