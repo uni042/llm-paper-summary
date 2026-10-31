@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-2306-scheduled-chat-00/r01",
+  "reference_main_sha": "d4ceb3cac80bfa42cc8d35dd6f2c3cf4299a1e36",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3649329.3655982",
+      "identity_tokens": [
+        "doi:10.1145/3649329.3655982",
+        "title:tsacc an efficient tempo spatial similarity aware accelerator for attention acceleration"
+      ],
+      "title": "TSAcc: An Efficient Tempo-Spatial Similarity Aware Accelerator for Attention Acceleration",
+      "reason": "DAC 2024の出版社一次要旨を確認。連続する文・入力間のtoken/head類似性をonline-offline予測し、後続入力で類似token/headのAttention計算を省略、先行入力の特徴をコピーして復元する。予測・復元専用ハードウェアを設計し、SpAtten比8.5倍、Sanger比2.7倍、GTX 1080Ti比14.1倍、Xeon CPU比64.9倍の高速化を報告。NLPのAttention推論高速化と専用アクセラレータの双方に直接該当するためaccept。ただし汎用LLMの自己回帰デコード全体の高速化とは同一視しない。",
+      "source_url": "https://doi.org/10.1145/3649329.3655982",
+      "body_check": "publisher_primary_abstract_read; fulltext_not_read",
+      "first_checked_at": "2026-10-31T23:07:01+09:00",
+      "last_checked_at": "2026-10-31T23:07:01+09:00",
+      "linked_from": [
+        "worklist:scheduled-chat-00:rank-304"
+      ],
+      "worklist_rank": 304,
+      "origin": "discovery_worklist",
+      "source_type": "ACM DAC 2024 publisher abstract",
+      "publication": "DAC 2024"
+    }
+  ]
+}
