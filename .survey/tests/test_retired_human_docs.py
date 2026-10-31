@@ -1,3 +1,5 @@
+"""Regression guards for Library-first worker-procedure ownership."""
+
 import unittest
 from pathlib import Path
 
