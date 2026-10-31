@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261101-0143-scheduled-chat-30/r02",
+  "reference_main_sha": "49a728d7fc5b8c515d3253e76fa9a12e96965de2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:70c8a633874d458b582ad7f0fb059704defe22ef",
+      "identity_tokens": [
+        "SemanticScholar:70c8a633874d458b582ad7f0fb059704defe22ef",
+        "URL:https://openreview.net/forum?id=XUgM4M4Aua"
+      ],
+      "title": "Class-aware Initialization of Early Exits for Pre-training Large Language Models",
+      "reason": "WANT@ICML 2024で公開された著者原稿は、LLMの早期終了ヘッドをトークン別の中間表現平均とクラス確率で初期化し、追加事前学習前の次トークン予測精度を改善する。初期精度は従来初期化の最大約5倍と報告するが、研究の主目的は早期終了ヘッドの学習コスト削減であり、完成モデルの実推論レイテンシ・メモリ削減は直接評価していない。推論時の早期終了に隣接するが中心対象ではないため微妙判定。",
+      "source_url": "https://openreview.net/pdf?id=XUgM4M4Aua",
+      "body_check": "OpenReview掲載の著者一次PDFと著者公式論文一覧を確認。本文の評価指標は次トークン予測精度であり、推論速度実測と混同しない。",
+      "first_checked_at": "2026-11-01T01:46:36+09:00",
+      "last_checked_at": "2026-11-01T01:46:36+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 215; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "worklist_rank": 215,
+      "origin": "discovery_worklist_primary_source_screen"
+    }
+  ]
+}
