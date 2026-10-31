@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Accelerating language giants: A survey of optimization strategies for LLM inference on hardware platforms",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103690",
+      "year": 2026,
+      "published": "2026-03-01",
+      "venue": "Journal of systems architecture",
+      "citation_count": 7,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:440130c1cfc8526e8cbc9a8a17bfd7cb7c1f1c08"
+      ],
+      "semantic_scholar_id": "440130c1cfc8526e8cbc9a8a17bfd7cb7c1f1c08",
+      "doi": "10.1016/j.sysarc.2026.103690",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103690",
+      "authors": [
+        "Young Chan Kim",
+        "Seok Kyu Yoon",
+        "Soohee Han",
+        "C. Park",
+        "Jun Oh Park",
+        "Junha Ko",
+        "Hyun Kim"
+      ],
+      "priority": 107,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 7,
+        "citation_count": 7,
+        "total": 107,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 244,
+        "matched_prestigious_venue": null
+      },
+      "reason": "出版社の書誌と大学機関リポジトリの一次要旨を照合。decoder-only LLM推論の高速化を対象に、GPU・FPGA・ASIC・PIMなどハードウェア別の最適化レベルで、Transformerブロック内演算子最適化とブロック実行全体のシステム最適化を分類・比較するレビュー。推論計算・メモリ資源の削減が直接の調査対象であり、収録範囲に合致する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-a991a863b946",
+    "round": "libimp-a991a863b946a2b3-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-a991a863b946a2b3-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-a991a863b946a2b3-pre01.json",
+    "receipt": "sha256:39af60796f109f0b37a29d6d6119066468cecf9c05ccab735fb33d56df7cfb61"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-a991a863b946",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
