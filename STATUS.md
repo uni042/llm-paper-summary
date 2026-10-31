@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-31 16:44:25 JST**
+> 自動生成: **2026-10-31 16:56:10 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,9 +13,9 @@
 |---|---:|
 | 収録候補論文数 | **572** |
 | 未claim Research job | **572** |
-| 直近24hのResearch処理完了 | **50** |
+| 直近24hのResearch処理完了 | **49** |
 | 最終Research処理完了 | **10-31 01:48:57 JST** |
-| 最終Discovery探索完了 | **10-31 14:43:00 JST** |
+| 最終Discovery探索完了 | **10-31 16:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-31 11:47:56 JST（4時間56分前）** |
+| 最終maintenance完了 | **10-31 11:47:56 JST（5時間8分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **13** |
-| 直近6hのDiscovery本文確認・分類 | **49** |
+| 直近6hのDiscovery run | **14** |
+| 直近6hのDiscovery本文確認・分類 | **51** |
 | 最終Research完了 | **10-31 01:48:57 JST** |
-| 最終Discovery完了 | **10-31 14:43:00 JST** |
+| 最終Discovery完了 | **10-31 16:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-31 01:48:57 JST** / worker scheduled-chat-45 / run 20261031-0148-scheduled-chat-45/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_065a1884c270819192c5254078e8caf3--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-semantic-reaudit-20261031-0148-scheduled-chat-45-r01.json
-- Discovery: **10-31 14:43:00 JST** / worker scheduled-chat-45 / run 20261031-1443-scheduled-chat-45/r01
+- Discovery: **10-31 16:00:00 JST** / worker scheduled-chat-00 / run 20261031-1600-scheduled-chat-00/r01
   - 本文確認・分類 **2件** / accept **0件** / unrelated+borderline **2件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_9c8d58b9a9708191aaf1467c584462f6--discovery-20261031-1443-scheduled-chat-45-r01-partial.json
+  - evidence: .survey/import-inbox/pending/discovery/libfile_34dc5e5e818c8191b28fad2d2770f3f6--discovery-20261031-1600-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
