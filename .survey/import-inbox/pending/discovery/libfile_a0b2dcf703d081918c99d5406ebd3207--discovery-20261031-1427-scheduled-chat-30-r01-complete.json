@@ -1,0 +1,192 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-1427-scheduled-chat-30/r01",
+  "reference_main_sha": "15aa5e57ab5525ce0de827a66e44386bab0be83a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:15fab62c8afba1b16af81a095cfefb329c100671",
+      "identity_tokens": [
+        "SemanticScholar:15fab62c8afba1b16af81a095cfefb329c100671",
+        "https://www.usenix.org/conference/atc25/presentation/bartolomeo"
+      ],
+      "title": "On-Demand Container Partitioning for Distributed ML",
+      "reason": "USENIX ATC 2025の公式要旨を確認。2DFSは機械学習モデルを分割して配布するための二次元ファイルシステムで、OCI互換のbuilder・registry・階層キャッシュを備え、モデル部品の更新とコンテナイメージ再構築を効率化する。14モデルの評価でビルド時間最大56倍、キャッシュ効率最大25倍の改善を報告。ただし主な対象は一般の分散MLモデル配置であり、LLM推論のKVキャッシュ・サービングスケジューラ・生成速度を直接最適化した実証ではないためborderline。",
+      "source_url": "https://www.usenix.org/conference/atc25/presentation/bartolomeo",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:31:20+09:00",
+      "last_checked_at": "2026-10-31T14:31:20+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 278; distributed ML deployment / inference infrastructure"
+      ],
+      "worklist_rank": 278
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2411.08212",
+      "identity_tokens": [
+        "arXiv:2411.08212",
+        "SemanticScholar:9928a2eb9e7d861e71cab7f36c01ac80f8572dcc",
+        "DOI:10.48550/arXiv.2411.08212"
+      ],
+      "title": "PERFT: Parameter-Efficient Routed Fine-Tuning for Mixture-of-Expert Model",
+      "reason": "著者のarXiv一次要旨を確認。PERFTはOLMoE-1B-7BとMixtral-8×7BのMoEに、独立ルータを持つLoRA等のパラメータ効率的適応モジュールを組み込み、常識・算術推論タスクへのfine-tuning性能を比較する研究。主たる貢献と評価は学習・適応時のルーティングと性能であり、LLM推論ランタイムの高速化、サービング、KV管理の技術的改善を示さないため、現在凍結されている学習中心範囲としてunrelated。",
+      "source_url": "https://arxiv.org/abs/2411.08212",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:31:20+09:00",
+      "last_checked_at": "2026-10-31T14:31:20+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 282; MoE / training"
+      ],
+      "worklist_rank": 282
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.01308",
+      "identity_tokens": [
+        "arXiv:2607.01308",
+        "DOI:10.48550/arXiv.2607.01308"
+      ],
+      "title": "Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning",
+      "reason": "arXiv一次要旨を確認。複数エージェントが生成した推論時KVキャッシュを統合する際の連結順序依存を、キーの平均ノルムに基づくCanonicalMergeで決定的順序へ変換し、内容アドレス付き断片集合の和集合によって重複配信を吸収するCvRDT状態として扱う。Qwen3-1.7B/4BのKV状態で順序入替後のバイト一致を確認し、HotpotQA等で品質を評価。分散エージェント推論の実行時キャッシュ統合・重複排除に直接寄与するためaccept。ただしwall-clock推論高速化の実測が一次要旨にあるとは扱わない。",
+      "source_url": "https://arxiv.org/abs/2607.01308",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:31:20+09:00",
+      "last_checked_at": "2026-10-31T14:31:20+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 307; KV cache / multi-agent inference"
+      ],
+      "worklist_rank": 307
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582",
+      "identity_tokens": [
+        "SemanticScholar:30da917265a05aa44447d01988b8929f1a363582",
+        "OpenReview:YgvIjdzR4C"
+      ],
+      "title": "Sequence Learning from Continuous Streams of Data",
+      "reason": "ICLR 2026投稿のOpenReview一次PDFの要旨を確認。自然な順序を保つmulti-stream sequence learningと、持続的隠れ状態を持つGLRUベースのMemoraを提案し、シャッフルした短い独立チャンクによる学習と比較して連続系列学習の改善を示す。主な貢献は訓練データ提示方法と学習アーキテクチャであり、LLMの推論サービングや実行時カーネル、推論レイテンシの最適化を直接検証しないためunrelated。",
+      "source_url": "https://openreview.net/pdf?id=YgvIjdzR4C",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:31:20+09:00",
+      "last_checked_at": "2026-10-31T14:31:20+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 351; streaming sequence learning"
+      ],
+      "worklist_rank": 351
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.4230/DagRep.14.7.153",
+      "identity_tokens": [
+        "DOI:10.4230/DagRep.14.7.153",
+        "SemanticScholar:f629f105cd08a15ee6020ecec65b9e184327cf14"
+      ],
+      "title": "Resource-Efficient Machine Learning (Dagstuhl Seminar 24311)",
+      "reason": "Dagstuhl Reportsの公式書誌・要旨を確認。ML全般の資源効率について、データ準備、再学習、アクセラレータ、HW/SW協調設計、低遅延サービングの議論をまとめたセミナー報告。LLM推論・KV管理・量子化・スケジューラ等について新規手法の具体的提案と評価を行う一次研究ではなく、一般的な議論の報告であるためunrelated。",
+      "source_url": "https://drops.dagstuhl.de/entities/document/10.4230/DagRep.14.7.153",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:33:15+09:00",
+      "last_checked_at": "2026-10-31T14:33:15+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 67; identity and title individually verified"
+      ],
+      "worklist_rank": 67
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+      "identity_tokens": [
+        "SemanticScholar:832ea2a654c22f11f3c64aed4e9340fc99abf803",
+        "https://subq.ai/docs/subq-1-1-small-model-card.pdf"
+      ],
+      "title": "SubQ-1.1-Small Technical Report",
+      "reason": "Subquadratic社の一次技術報告と公式モデルカードを確認。Subquadratic Sparse Attention（SSA）は内容依存の疎注意を用い、系列長に対する計算量・メモリ量を線形に近づける設計。公式測定では100万トークン条件でdense attention比64.5倍少ない計算量、FlashAttention-2比でattention単層56倍高速と報告。長文LLM推論カーネルの直接的効率化なのでaccept。ただし全モデルend-to-end速度や第三者再現結果とは区別し、企業一次報告の値として記録。",
+      "source_url": "https://subq.ai/docs/subq-1-1-small-model-card.pdf",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:33:15+09:00",
+      "last_checked_at": "2026-10-31T14:33:15+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 115; identity and title individually verified"
+      ],
+      "worklist_rank": 115
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:bcb436a91252538ff023130c235220a571061b62",
+      "identity_tokens": [
+        "SemanticScholar:bcb436a91252538ff023130c235220a571061b62",
+        "OpenReview:6UurSaf08jx"
+      ],
+      "title": "Subformer: A Parameter Reduced Transformer",
+      "reason": "著者のOpenReview一次要旨を確認。SubformerはSandwich型パラメータ共有とself-attentive embedding factorization（SAFE）を組み合わせ、機械翻訳・要約・言語モデルでTransformer比40〜70%のパラメータ削減を評価。モデルの保存サイズ・重み共有は推論メモリ効率に関係するが、主要対象は旧世代encoder-decoderの学習とモデル設計で、LLMサービングや推論時間の直接評価がないためborderline。",
+      "source_url": "https://openreview.net/forum?id=6UurSaf08jx",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:33:15+09:00",
+      "last_checked_at": "2026-10-31T14:33:15+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 165; identity and title individually verified"
+      ],
+      "worklist_rank": 165
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:ad63539cb6f200d789a7def3e6a387a1e3d8a0a7",
+      "identity_tokens": [
+        "SemanticScholar:ad63539cb6f200d789a7def3e6a387a1e3d8a0a7",
+        "https://mlanthology.org/neuripsw/2024/brown2024neuripsw-llm/"
+      ],
+      "title": "How Does LLM Compression Affect Weight Exfiltration Attacks?",
+      "reason": "NeurIPS 2024 SoLaRワークショップ公開要旨を確認。推論効率のためではなく、LLM重みの不正持出しに特化した圧縮と攻撃成功確率を研究し、最大16倍の圧縮により流出時間を短縮できるリスクを報告。主眼はモデル重みのセキュリティと攻撃可能性であり、推論サービング・実行時最適化の対象外としてunrelated。",
+      "source_url": "https://mlanthology.org/neuripsw/2024/brown2024neuripsw-llm/",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:33:15+09:00",
+      "last_checked_at": "2026-10-31T14:33:15+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 221; identity and title individually verified"
+      ],
+      "worklist_rank": 221
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.06291",
+      "identity_tokens": [
+        "arXiv:2608.06291",
+        "SemanticScholar:c773e50a7a381b7ef71350ff914b4c01d9e4fefd",
+        "DOI:10.48550/arXiv.2608.06291"
+      ],
+      "title": "BaKron: Efficient Quantization with Kronecker-Factored Hessians",
+      "reason": "arXiv一次要旨を確認。GPTQ系の二側Kronecker因子化Hessianに基づく重み量子化で、反対角線並列処理と分割統治を組み合わせ、m×n重み行列の計算量をO(m²n²)からO(mn(m+n))へ削減し、逐次段数O(m+n)を実現。低ビットモデル圧縮の事後量子化を実用化する直接技術としてaccept。速度向上は量子化アルゴリズムの処理であり、LLMトークン生成の高速化実測とは区別。論文改題履歴FastKronの別名にも注意。",
+      "source_url": "https://arxiv.org/abs/2608.06291",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:33:15+09:00",
+      "last_checked_at": "2026-10-31T14:33:15+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 223; identity and title individually verified"
+      ],
+      "worklist_rank": 223
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:23c569d8cf5e2c4f580c6691871150023011279f",
+      "identity_tokens": [
+        "SemanticScholar:23c569d8cf5e2c4f580c6691871150023011279f",
+        "OpenReview:wpK4IMJfdX"
+      ],
+      "title": "Reasoning Without Self-Doubt: More Efficient Chain-of-Thought Through Certainty Probing",
+      "reason": "ICLR 2025ワークショップ著者公開一次論文の要旨を確認。Dynasor-CoTは推論途中で回答をprobeし、回答の一貫性を用いて冗長なCoT生成を早期停止するtraining-free手法。数学問題で最大29%の出力トークン削減を報告するが、バッチ化したLLMサービングやGPU実行時間の実測は一次要旨から確認できない。推論トークン予算管理と関連するものの、推論基盤への直接性は限定的なのでborderline。",
+      "source_url": "https://openreview.net/pdf?id=wpK4IMJfdX",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:33:15+09:00",
+      "last_checked_at": "2026-10-31T14:33:15+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 226; identity and title individually verified"
+      ],
+      "worklist_rank": 226
+    }
+  ]
+}
