@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1006-scheduled-chat-00/r04",
+  "reference_main_sha": "0522eb616eb21eb0aa9ae8540f181f2ce5464fc0",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/frobt.2025.1518965",
+      "identity_tokens": [
+        "DOI:10.3389/frobt.2025.1518965"
+      ],
+      "title": "A survey of model compression techniques: past, present, and future",
+      "reason": "Frontiers公式一次abstractを確認。量子化・pruning・low-rank decomposition・蒸留を横断してモデル圧縮と配備制約を整理するmini review。LLM推論の技術背景として有用だが、個別のLLM serving最適化を提案・検証する一次システム研究ではないためborderline。",
+      "source_url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1518965/full",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:17:33+09:00",
+      "last_checked_at": "2026-10-31T10:17:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 107,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.06787",
+      "identity_tokens": [
+        "arXiv:2402.06787",
+        "DOI:10.48550/arXiv.2402.06787"
+      ],
+      "title": "ForestColl: Throughput-Optimal Collective Communications on Heterogeneous Network Fabrics",
+      "reason": "arXiv一次要旨を確認。異種GPU・ネットワークのcollective通信に対し、broadcast/aggregation spanning treeを多項式時間で生成するthroughput-optimalスケジューリングを提案。AMD MI250、NVIDIA DGX A100/H100で通信ライブラリとの比較とLLM trainingへの適用を評価。分散LLM推論の通信基盤へ応用可能だが、LLM推論サービングでのTP/EP速度改善は直接測定していないためborderline。worklist表題をarXiv正式表題に正規化。",
+      "source_url": "https://arxiv.org/abs/2402.06787",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:17:33+09:00",
+      "last_checked_at": "2026-10-31T10:17:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 166,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2406.02547",
+      "identity_tokens": [
+        "arXiv:2406.02547"
+      ],
+      "title": "Leveraging Visual Tokens for Extended Text Contexts in Multi-Modal Learning",
+      "reason": "arXiv一次要旨を確認。VisInContextは長いテキスト文脈を視覚トークン表現で処理し、マルチモーダルLLMの学習・推論両段階でGPUメモリとFLOPsを削減する。56B MoEでpretrainingのテキスト文脈長を256から2048へ拡張してもほぼ同等のFLOPsを報告。推論計算・メモリ節約に直接関連するためaccept。ただし要旨にない実測TTFT倍率は断定しない。",
+      "source_url": "https://arxiv.org/abs/2406.02547",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:17:33+09:00",
+      "last_checked_at": "2026-10-31T10:17:33+09:00",
+      "linked_from": [],
+      "worklist_rank": 182,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
