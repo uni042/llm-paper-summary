@@ -4,6 +4,7 @@
 This module is deliberately conservative:
 - only real paper files under papers/{inference,training,survey} count;
 - stable identifiers/source URLs and exact declared paper_path are accepted;
+- a unique normalized title + publication year may bridge publisher/arXiv aliases;
 - title-only fuzzy matching is never used to close a Research job.
 
 Normal-chat/Library imports can therefore make a paper represented without
@@ -54,6 +55,30 @@ def _write_json(path: Path, value: dict[str, Any]) -> None:
         tmp.write(text)
         staged = Path(tmp.name)
     staged.replace(path)
+
+
+def _publication_year(record: dict[str, Any], path: Path | None = None) -> int | None:
+    for key in ("year", "published", "publication"):
+        value = str(record.get(key) or "").strip()
+        match = re.search(r"\b(19|20)\d{2}\b", value)
+        if match:
+            return int(match.group(0))
+    if path is not None:
+        match = re.match(r"(19|20)\d{2}-", path.name)
+        if match:
+            return int(match.group(0)[:-1])
+    return None
+
+
+def _title_year_key(title: Any, year: Any) -> str | None:
+    normalized = paper_identity.norm_title(title)
+    try:
+        numeric_year = int(year)
+    except (TypeError, ValueError):
+        numeric_year = None
+    if not normalized or numeric_year is None or not (1900 <= numeric_year <= 2100):
+        return None
+    return f"{numeric_year}:{normalized}"
 
 
 def _inferred_paper_record(path: Path, repo_root: Path) -> dict[str, Any] | None:
@@ -123,6 +148,7 @@ def _inferred_paper_record(path: Path, repo_root: Path) -> dict[str, Any] | None
         "identifiers": identifiers,
         "stable_identity_tokens": stable_tokens,
         "title": title,
+        "year": _publication_year(record, path),
     }
 
 
@@ -137,8 +163,10 @@ def build_paper_index(repo_root: Path) -> dict[str, Any]:
     by_path: dict[str, dict[str, Any]] = {}
     by_identifier: dict[str, dict[str, Any]] = {}
     by_token: dict[str, dict[str, Any]] = {}
+    by_title_year: dict[str, dict[str, Any]] = {}
     identifier_conflicts: dict[str, list[dict[str, Any]]] = {}
     token_conflicts: dict[str, list[dict[str, Any]]] = {}
+    title_year_conflicts: dict[str, list[dict[str, Any]]] = {}
     paper_count = 0
 
     def add_lookup(
@@ -184,6 +212,9 @@ def build_paper_index(repo_root: Path) -> dict[str, Any]:
                 )
             for token in paper["stable_identity_tokens"]:
                 add_lookup(by_token, token_conflicts, token, paper)
+            title_year = _title_year_key(paper.get("title"), paper.get("year"))
+            if title_year:
+                add_lookup(by_title_year, title_year_conflicts, title_year, paper)
 
     registry = paper_retirement_registry.load_registry(repo_root)
     for retired in registry["records"].values():
@@ -203,8 +234,10 @@ def build_paper_index(repo_root: Path) -> dict[str, Any]:
         "by_path": by_path,
         "by_identifier": by_identifier,
         "by_token": by_token,
+        "by_title_year": by_title_year,
         "identifier_conflicts": identifier_conflicts,
         "token_conflicts": token_conflicts,
+        "title_year_conflicts": title_year_conflicts,
         "paper_count": paper_count,
     }
 
@@ -245,7 +278,17 @@ def match_represented_research_job(
             "Research job identity resolves to multiple represented papers: "
             + ", ".join(sorted(matches))
         )
-    return dict(next(iter(matches.values()))) if matches else None
+    if matches:
+        return dict(next(iter(matches.values())))
+
+    job_year = _publication_year(job)
+    title_year = _title_year_key(job.get("title"), job_year)
+    if not title_year:
+        return None
+    if title_year in (paper_index.get("title_year_conflicts") or {}):
+        return None
+    paper = (paper_index.get("by_title_year") or {}).get(title_year)
+    return dict(paper) if isinstance(paper, dict) else None
 
 
 def effective_status(job: dict[str, Any], paper_index: dict[str, Any]) -> str:
