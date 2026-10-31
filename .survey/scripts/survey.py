@@ -69,6 +69,26 @@ def norm_id(value):
     return value
 
 
+def paper_identifiers(meta):
+    """Return every stable paper identifier declared in frontmatter."""
+    cid = meta.get("canonical_id")
+    if not cid:
+        raise ValueError("Missing canonical_id")
+    ids = [norm_id(cid)]
+    for key, prefix in [("arxiv_id", "arXiv:"), ("doi", "DOI:"), ("openreview_id", "OpenReview:")]:
+        if meta.get(key):
+            ids.append(norm_id(prefix + str(meta[key])))
+    explicit = meta.get("identifiers") or []
+    if isinstance(explicit, str):
+        explicit = [explicit]
+    if not isinstance(explicit, (list, tuple, set)):
+        raise ValueError("identifiers must be a list of stable IDs")
+    for value in explicit:
+        if value:
+            ids.append(norm_id(value))
+    return sorted(set(ids))
+
+
 def papers():
     """All repository paper families used by the canonical identity index.
 
@@ -91,10 +111,7 @@ def papers():
         cid = meta.get("canonical_id")
         if not cid:
             raise ValueError("Missing canonical_id: " + rel)
-        ids = [norm_id(cid)]
-        for key, prefix in [("arxiv_id", "arXiv:"), ("doi", "DOI:"), ("openreview_id", "OpenReview:")]:
-            if meta.get(key):
-                ids.append(norm_id(prefix + str(meta[key])))
+        ids = paper_identifiers(meta)
         records.append({
             "canonical_id": norm_id(cid),
             "path": rel,
