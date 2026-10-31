@@ -125,7 +125,7 @@ def _discovery_run_time_from_key(value: Any):
 def _worker_from_run_key(value: Any) -> str:
     text = str(value or "").strip()
     for worker_id in _CURRENT_SCHEDULED_WORKERS:
-        if text.endswith(worker_id):
+        if re.search(rf"{re.escape(worker_id)}(?=$|[/:-])", text):
             return worker_id
     return ""
 
