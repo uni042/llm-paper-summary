@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Accelerating Inference in Lightweight Language Models Using Speculative Decoding and Quantization",
+      "source_url": "https://doi.org/10.1109/ICECST66106.2025.11307590",
+      "year": 2025,
+      "published": "2025-10-23",
+      "venue": "2025 2nd International Conference on Electronic Circuits and Signaling Technologies (ICECST)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models demonstrate state-of-theart performance in natural language processing tasks but face significant deployment challenges due to high inference latency and memory requirements in resource-constrained environments. This paper investigates inference-time optimization techniques for the DistilGPT2 model by implementing and evaluating three approaches: INT8 post-training quantization, speculative decoding via layer skipping, and a hybrid combination of both methods. Experiments conducted on Google Colab using standard CPU/GPU configurations reveal that INT8 quantization and speculative decoding individually reduce inference time by approximately 29 %, while the hybrid approach achieves a 57 % speedup with minimal impact on output quality, as measured by perplexity evaluation (55.03 across all modes). These findings demonstrate that combining lightweight optimization strategies can significantly enhance language model inference efficiency on limited hardware without requiring model retraining, making advanced language models more accessible for edge deployment and resource-limited academic environments.",
+      "identifiers": [
+        "SemanticScholar:e8b159680895ccbd80ae7ec33f6a299f6a136489"
+      ],
+      "semantic_scholar_id": "e8b159680895ccbd80ae7ec33f6a299f6a136489",
+      "doi": "10.1109/ICECST66106.2025.11307590",
+      "canonical_id": "DOI:10.1109/ICECST66106.2025.11307590",
+      "authors": [
+        "R. P",
+        "A. B",
+        "G. R",
+        "S. C"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 373,
+        "matched_prestigious_venue": null
+      },
+      "reason": "共著者Sachith Cの本人掲載研究説明と書誌索引の原著要旨転載を照合。DistilGPT2の推論を対象にINT8事後量子化とlayer skippingによるself-speculative decodingを別々・併用で比較し、単独約29%の推論時間短縮、併用で57%高速化、perplexity 55.03の維持を報告。小規模モデル・Google Colab上の評価に限定されるが、生成推論の低ビット化と投機的復号の直接的最適化であるためaccept。",
+      "library_body_check": "coauthor_self_published_summary_and_original_abstract_reproduced_in_index; publisher_fulltext_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-af2fed987a73",
+    "round": "libimp-af2fed987a73d89b-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-af2fed987a73d89b-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-af2fed987a73d89b-pre01.json",
+    "receipt": "sha256:87184a485786fc52510f46364999acdf9c9c9f9fd61b2537641130caf7b43bd9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-af2fed987a73",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
