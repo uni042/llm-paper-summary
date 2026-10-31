@@ -33,14 +33,10 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/22-diffusion-decoding-efficiency/)
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
-
-- **2025-11 · [From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models](2025-2511.21103-from-bits-to-rounds-parallel-decoding-with-exploration-for-diffusion-lan.md)**  
-  実装：✓ ・ リポジトリ内被引用：5  
-  通常の自己回帰モデルとは異なり、左から一語ずつ確定する必要がないため、並列復号によって生成の反復回数を減らせる可能性がある。実験ではGSM8K、MATH、HumanEval、MMLU-Proを対象に、同程度の正答率で必要なモデル順伝播回数を26〜61%削減する代表結果を示す。
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2025-12 · [Learning Unmasking Policies for Diffusion Language Models](2025-2512.09106-learning-unmasking-policies-for-diffusion-language-models.md)**  
   実装：[✓](https://github.com/apple/ml-rl-dllm) ・ リポジトリ内被引用：3  
@@ -62,11 +58,7 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
   実装：✓ ・ リポジトリ内被引用：1  
   投機的 Correctionは、拡散言語モデル（Diffusion Language モデル、DLM）が持つ双方向の修正能力を、実際の文章生成へ生かすための二段階復号方式である。flash–flashではGSM8Kの正答率を0.848から0.899へ改善し、同じ問題集合のモデル実行時間を18.77秒から15.96秒へ短縮した。
 
-- **2025-11 · [Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models](2025-2512.02044-beyond-confidence-adaptive-and-coherent-decoding-for-diffusion-language-.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  本論文は、整合的文脈復号（coherent contextual デコード; CCD）を提案する。ステップ数の比は3.48倍で、得点差は3.91ポイントである。
-
-### 直近12か月・未被引用（2025-11〜2026-10）
+### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-09 · [Early-Bird Decoding: Accelerating Diffusion LLMs with Learnable Block Sizes and Parallel Sampling](2026-2609.16450-early-bird-decoding-accelerating-diffusion-llms-with-learnable-block-siz.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -80,9 +72,17 @@ Include inference-time methods whose primary mechanism schedules, selects, branc
   実装：[✓](https://github.com/viiika/Prism) ・ リポジトリ内被引用：0  
   Prismは、階層的軌跡探索（Hierarchical Trajectory Search; HTS）、部分再マスクによる局所分岐（Local Branching via Partial Remasking）、自己検証フィードバック（Self-Verified Feedback; SVF）を統合する。
 
-### 2年前（2024-11〜2025-10）
+### 2年前（2024-12〜2025-11）
 
 - **2025-06 · [Accelerating Diffusion Large Language Models with SlowFast Sampling: The Three Golden Principles](2025-2506.10848-accelerating-diffusion-large-language-models-with-slowfast-sampling-the-three-golden-principles.md)**  
   実装：[✓](https://github.com/LiangrunFlora/Slow-Fast-Sampling) ・ リポジトリ内被引用：17  
   単独の信頼度閾値だけではなく、連続区間の終端が最近の複数反復で安定したかを検査し、探索段階（Slow）から高速段階（Fast）へ切り替える。原著図2のGPQA・8-shot・生成長1024という特定条件では、LLaDAの通常復号が1.60トークン/秒、SlowFast単独が25.00トークン/秒で15.63倍となる。
+
+- **2025-11 · [From Bits to Rounds: Parallel Decoding with Exploration for Diffusion Language Models](2025-2511.21103-from-bits-to-rounds-parallel-decoding-with-exploration-for-diffusion-lan.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  通常の自己回帰モデルとは異なり、左から一語ずつ確定する必要がないため、並列復号によって生成の反復回数を減らせる可能性がある。実験ではGSM8K、MATH、HumanEval、MMLU-Proを対象に、同程度の正答率で必要なモデル順伝播回数を26〜61%削減する代表結果を示す。
+
+- **2025-11 · [Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models](2025-2512.02044-beyond-confidence-adaptive-and-coherent-decoding-for-diffusion-language-.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  本論文は、整合的文脈復号（coherent contextual デコード; CCD）を提案する。ステップ数の比は3.48倍で、得点差は3.91ポイントである。
 <!-- survey:auto:end -->

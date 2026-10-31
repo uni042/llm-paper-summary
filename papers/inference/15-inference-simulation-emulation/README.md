@@ -27,10 +27,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/15-inference-simulation-emulation/)
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure](2026-2602.23036-llmservingsim-2-heterogeneous-disaggregated-simulator.md)**  
   実装：[✓](https://github.com/casys-kaist/LLMServingSim) ・ リポジトリ内被引用：12  
@@ -76,7 +76,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：1  
   著者は、事前に人手や大規模モデルで検証した回答を持つ静的キャッシュと、通常の要求を処理しながら生成回答を保存する動的キャッシュを分離する構成を前提とする。原著のトレース駆動シミュレーションでは、会話要求における静的由来回答の割合が8.2%から19.4%、検索要求では2.2%から8.6%へ増えた。
 
-### 直近12か月・未被引用（2025-11〜2026-10）
+### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-10 · [ePACT: Energy-Performance-Aware Commitment Tracking for LLM Serving](2026-2610.01784-epact-energy-performance-aware-commitment-tracking-for-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -226,19 +226,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   DCOは、複数の人工知能演算コアが共有する最終段キャッシュ（last-level キャッシュ、LLC）を、単なる過去のアクセス時刻ではなく、演算グラフから分かるテンソルの参照予定回数とデータフローに従って管理する提案である。論文v2のHTML本文は従来LRUに対する最大1.90倍の速度向上を記す。
 
-- **2025-11 · [Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism](2025-832f2fc32711-multiplexed-heterogeneous-llm-serving-via-stage-aligned-parallelism.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  ParaFlexは、規模や必要メモリが異なる複数の大規模言語モデル（LLM）を、同じGPU群上で効率よく同時提供するための推論サービングシステムである。原著は異種モデルの混合負荷で、テンソル並列型の多重化と比べ中央値遅延を最大63%削減、処理量を最大4.7倍に改善し、共有パイプライン型の既存方式に対して処理量を最大1.6倍に改善したと報告する。
-
-- **2025-11 · [From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models](2025-2511.02248-from-models-to-operators-rethinking-autoscaling-granularity-for-large-ge.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  大規模言語モデルの推論基盤では、負荷に応じてモデル全体の複製を増減することが一般的である。各演算子に異なる複製数、バッチ、並列度を割り当て、最後にGPUへ配置する。
-
-### 2年前（2024-11〜2025-10）
-
-- **2024-11 · [APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving](2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md)**  
-  実装：[✓](https://github.com/microsoft/apex_plus) ・ リポジトリ内被引用：13  
-  APEXは、大規模言語モデル（LLM）を複数GPUで提供する際に、どの並列化方式を組み合わせるべきかを実機へ総当たりで配備せず、CPU上のシミュレーションで比較するシステムである。
+### 2年前（2024-12〜2025-11）
 
 - **2025-07 · [Rethinking LLM Inference Bottlenecks: Insights from Latent Attention and Mixture-of-Experts](2025-2507.15465-rethinking-llm-inference-bottlenecks-insights-from-latent-attention-and-.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -256,10 +244,6 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/puddingfjz/vllm) ・ リポジトリ内被引用：3  
   本研究が対象とするのは、あらかじめ処理する要求集合が分かっているオフライン推論であり、複数の大規模言語モデル（LLM）を一つのアプリケーション内で使う状況である。単一モデルの要求順序を最適化するだけでは、モデル間のGPU分配を決められない。SamuLLMはこれらを一つの計画問題として扱う。
 
-- **2024-11 · [DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution](2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md)**  
-  実装：[✓](https://github.com/yueyang130/DeeR-VLA) ・ リポジトリ内被引用：3  
-  DeeR-VLA（動的 Early-Exit for Robotic Multimodal Large Language Models）は、画像と自然言語の指示からロボットの行動を決める視覚・言語・行動モデルに、複数の中間出口（early exit）を設ける推論時の計算資源配分方式である。
-
 - **2025-10 · [LLM.265: Video Codecs are Secretly Tensor Codecs](2025-5a2b2924d4e3-llm-265-video-codecs-are-secretly-tensor-codecs.md)**  
   実装：[✓](https://github.com/Entropy-xcy/llm.265) ・ リポジトリ内被引用：2  
   大規模言語モデル（LLM）の推論では、重み、鍵・値キャッシュ（KV キャッシュ）、パイプライン並列（パイプライン parallelism）の段間活性値を保持・転送する費用が大きい。従来の低ビット量子化は重みやKVキャッシュなど個別の対象に特化し、校正データや量子化方式の選択を必要とする場合が多い。
@@ -272,9 +256,13 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：1  
   LLMサービングの性能は、モデルのプリフィルとデコードだけでなく、RAGの検索、KVキャッシュの再利用、ネットワーク転送、スケジューリング、異なるモデルを使う複数クライアントなどの組合せで決まる。しかし異なるベンダーを跨いだプリフィル/デコード（PD）分離を、実際の統一サービングスタックで検証できないことが多い。
 
-- **2024-11 · [Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format](2024-2411.15982-anda-unlocking-efficient-llm-inference-with-a-variable-length-grouped-ac.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  AndaはこのFP-INT行列積を対象に、活性値の格納形式、各演算モジュールへ割り当てる精度、専用回路の三つを共同最適化する研究である。
+- **2025-11 · [Multiplexed Heterogeneous LLM Serving via Stage-Aligned Parallelism](2025-832f2fc32711-multiplexed-heterogeneous-llm-serving-via-stage-aligned-parallelism.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  ParaFlexは、規模や必要メモリが異なる複数の大規模言語モデル（LLM）を、同じGPU群上で効率よく同時提供するための推論サービングシステムである。原著は異種モデルの混合負荷で、テンソル並列型の多重化と比べ中央値遅延を最大63%削減、処理量を最大4.7倍に改善し、共有パイプライン型の既存方式に対して処理量を最大1.6倍に改善したと報告する。
+
+- **2025-11 · [From Models to Operators: Rethinking Autoscaling Granularity for Large Generative Models](2025-2511.02248-from-models-to-operators-rethinking-autoscaling-granularity-for-large-ge.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  大規模言語モデルの推論基盤では、負荷に応じてモデル全体の複製を増減することが一般的である。各演算子に異なる複製数、バッチ、並列度を割り当て、最後にGPUへ配置する。
 
 - **2025-09 · [SAIL: SRAM-Accelerated LLM Inference System with Lookup-Table-based GEMV](2025-2509.25853-sail-sram-accelerated-llm-inference-system-with-lookup-table-based-gemv.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -296,11 +284,7 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：✓ ・ リポジトリ内被引用：0  
   本論文は、LLMサービングの基本単位を「プロンプトを受け取ってトークン列を返すリクエスト」から、LLM推論プログラム（LLM Inference Program, LIP）へ変えるというシステム設計を提案する。
 
-- **2024-11 · [MAS-Attention: Memory-Aware Stream Processing for Attention Acceleration on Resource-Constrained Edge Devices](2024-2411.17720-mas-attention-memory-aware-stream-processing-for-attention-acceleration-.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  MAS-注意機構は、演算資源とオンチップ記憶容量が限られる端末向けニューラル演算器において、正確な注意機構を高速化する計算配置方式である。著者らは、改変TileFlow・Timeloop・Accelergyによる端末向け演算器のシミュレーションで、FLATに対する注意演算サイクルの最大2.75倍の高速化、最大54.03%の推定消費エネルギー削減を報告した。
-
-### 3年前（2023-11〜2024-10）
+### 3年前（2023-12〜2024-11）
 
 - **2024-05 · [Vidur: A Large-Scale Simulation Framework For LLM Inference](2024-2405.05465-vidur-a-large-scale-simulation-framework-for-llm-inference.md)**  
   実装：[✓](https://github.com/microsoft/vidur) ・ リポジトリ内被引用：60  
@@ -314,6 +298,10 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/casys-kaist/llmservingsim) ・ リポジトリ内被引用：14  
   大規模言語モデルの推論基盤では、GPUや専用演算器の設計だけでなく、到着する要求の分布、バッチ化、KVキャッシュ管理、複数装置へのモデル分割が性能を左右する。論文は実GPU上の推論基盤に対する性能傾向の誤差を平均14.7%程度に抑え、既存の演算器シミュレータに対して34.7〜491倍の高速化を報告する。
 
+- **2024-11 · [APEX: An Extensible and Dynamism-Aware Simulator for Automated Parallel Execution in LLM Serving](2024-2411.17651-apex-an-extensible-and-dynamism-aware-simulator-for-automated-parallel-e.md)**  
+  実装：[✓](https://github.com/microsoft/apex_plus) ・ リポジトリ内被引用：13  
+  APEXは、大規模言語モデル（LLM）を複数GPUで提供する際に、どの並列化方式を組み合わせるべきかを実機へ総当たりで配備せず、CPU上のシミュレーションで比較するシステムである。
+
 - **2024-06 · [Demystifying AI Platform Design for Distributed Inference of Next-Generation LLM models](2024-2406.01698-demystifying-ai-platform-design-for-distributed-inference-of-next-generation-llm-models.md)**  
   実装：[✓](https://github.com/abhibambhaniya/GenZ-LLM-Analyzer) ・ リポジトリ内被引用：9  
   演算子-階層 ルーフラインと集合通信通信モデルでLLM構造・推論提供最適化・分散方式から計算/メモリ/ネットワーク要件を逆算するGenZ。
@@ -326,19 +314,31 @@ LLM推論・サービング基盤を実GPU実行の代わりに離散事象、�
   実装：[✓](https://github.com/microsoft/T-MAC/tree/LUTTensorCore_ISCA25) ・ リポジトリ内被引用：6  
   重みを1〜4ビットに量子化した大規模言語モデル（LLM）では、重みの転送量は小さくなる一方、活性化はFP16やINT8など比較的高い精度で保持される。ISCA 2025の原著は、従来のLUTアクセラレータに比べて計算密度とエネルギー効率を1.44倍改善し、低ビットLLMの推論をモデル単位のシミュレーションで2.06〜5.51倍高速化したと報告する。
 
-### 4年前（2022-11〜2023-10）
+- **2024-11 · [DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution](2024-2411.02359-deer-vla-dynamic-inference-of-multimodal-large-language-models-for-effic.md)**  
+  実装：[✓](https://github.com/yueyang130/DeeR-VLA) ・ リポジトリ内被引用：3  
+  DeeR-VLA（動的 Early-Exit for Robotic Multimodal Large Language Models）は、画像と自然言語の指示からロボットの行動を決める視覚・言語・行動モデルに、複数の中間出口（early exit）を設ける推論時の計算資源配分方式である。
+
+- **2024-11 · [Anda: Unlocking Efficient LLM Inference with a Variable-Length Grouped Activation Data Format](2024-2411.15982-anda-unlocking-efficient-llm-inference-with-a-variable-length-grouped-ac.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  AndaはこのFP-INT行列積を対象に、活性値の格納形式、各演算モジュールへ割り当てる精度、専用回路の三つを共同最適化する研究である。
+
+- **2024-11 · [MAS-Attention: Memory-Aware Stream Processing for Attention Acceleration on Resource-Constrained Edge Devices](2024-2411.17720-mas-attention-memory-aware-stream-processing-for-attention-acceleration-.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  MAS-注意機構は、演算資源とオンチップ記憶容量が限られる端末向けニューラル演算器において、正確な注意機構を高速化する計算配置方式である。著者らは、改変TileFlow・Timeloop・Accelergyによる端末向け演算器のシミュレーションで、FLATに対する注意演算サイクルの最大2.75倍の高速化、最大54.03%の推定消費エネルギー削減を報告した。
+
+### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling](2023-2c2071afa90d-sia-heterogeneity-aware-goodput-optimized-ml-cluster-scheduling.md)**  
   実装：[✓](https://github.com/siasosp23/artifacts) ・ リポジトリ内被引用：4  
   Siaは、GPUの種類が混在する深層学習訓練クラスタで、各ジョブへ割り当てるGPUの種類・台数・バッチサイズを同時に決めるスケジューラである。原著は、44GPUの実機クラスタで既存のPolluxより平均ジョブ完了時間を約35〜50%、Gavelより約50%短縮したと報告する。
 
-### 7年前（2019-11〜2020-10）
+### 7年前（2019-12〜2020-11）
 
 - **2020-02 · [A3: Accelerating Attention Mechanisms in Neural Networks with Approximation](2020-2002.10941-a3-accelerating-attention-mechanisms-in-neural-networks-with-approximati.md)**  
   実装：✓ ・ リポジトリ内被引用：21  
   通常の注意機構は、クエリベクトルと全キー行の内積を求め、softmaxで正規化し、値ベクトルを重み付き合成する。保守的設定は近似によるタスク精度の低下をおおむね1%に抑える一方、積極的設定はおおむね8%の精度低下を伴う。
 
-### 9年前（2017-11〜2018-10）
+### 9年前（2017-12〜2018-11）
 
 - **2017-12 · [Ray: A Distributed Framework for Emerging AI Applications](2017-1712.05889-ray-a-distributed-framework-for-emerging-ai-applications.md)**  
   実装：[✓](https://github.com/ray-project/ray) ・ リポジトリ内被引用：20  

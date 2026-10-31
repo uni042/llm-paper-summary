@@ -9,16 +9,14 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/training/01-training-offload-memory-systems/)
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
-- **2025-11 · [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md)**  
-  実装：[✓](https://github.com/Sabiha1225/10cache) ・ リポジトリ内被引用：1  
-  10Cacheは、LLMを単一GPUで学習するときに不足するGPUメモリを、CPU主記憶とNVMeストレージで補いながら、テンソルの移動待ちを抑える仕組みである。従来のオフロード方式では、モデルの重み、勾配、最適化状態をGPUから外へ移して容量制限を緩和するが、必要になる直前まで低速階層に置いたままだとGPUが読み戻しを待ち、計算器が遊休する。
+該当なし。
 
-### 直近12か月・未被引用（2025-11〜2026-10）
+### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-04 · [Efficient Training on Multiple Consumer GPUs with RoundPipe](2026-2604.27085-efficient-training-on-multiple-consumer-gpus-with-roundpipe.md)**  
   実装：[✓](https://github.com/thustorage/RoundPipe) ・ リポジトリ内被引用：0  
@@ -32,7 +30,7 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   実装：✓ ・ リポジトリ内被引用：0  
   同一層の重みを複数マイクロバッチ間で再利用し、層間活性値の転送増加と引き換えに重み・勾配の反復転送を抑える。さらに最適化器の一部を次の学習反復へ遅延させ、計算とSSD入出力の重畳範囲を広げる。
 
-### 2年前（2024-11〜2025-10）
+### 2年前（2024-12〜2025-11）
 
 - **2025-06 · [Cost-Efficient LLM Training with Lifetime-Aware Tensor Offloading via GPUDirect Storage](2025-2506.06472-cost-efficient-llm-training-with-lifetime-aware-tensor-offloading-via-gpudirect-.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
@@ -50,7 +48,11 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   実装：✓ ・ リポジトリ内被引用：2  
   大規模言語モデルを微調整する際、モデル重み・勾配・最適化器状態をNVMe SSDへ退避すると、GPUの専用メモリ容量を超える学習が可能になる。論文はZeRO-Infinity系の比較でピークシステムメモリを平均55.7%削減し、128GiB RAMの構成で扱える文脈長を16,384から131,072へ、あるいはバッチを4から32へ増やせる条件を報告する。
 
-### 3年前（2023-11〜2024-10）
+- **2025-11 · [10Cache: Heterogeneous Resource-Aware Tensor Caching and Migration for LLM Training](2025-2511.14124-10cache-heterogeneous-resource-aware-tensor-caching-and-migration-for-llm-traini.md)**  
+  実装：[✓](https://github.com/Sabiha1225/10cache) ・ リポジトリ内被引用：1  
+  10Cacheは、LLMを単一GPUで学習するときに不足するGPUメモリを、CPU主記憶とNVMeストレージで補いながら、テンソルの移動待ちを抑える仕組みである。従来のオフロード方式では、モデルの重み、勾配、最適化状態をGPUから外へ移して容量制限を緩和するが、必要になる直前まで低速階層に置いたままだとGPUが読み戻しを待ち、計算器が遊休する。
+
+### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [Smart-Infinity: Fast Large Language Model Training using Near-Storage Processing on a Real System](2024-2403.06664-smart-infinity-fast-large-language-model-training-using-near-storage-processing-.md)**  
   実装：[✓](https://github.com/AIS-SNU/smart-infinity) ・ リポジトリ内被引用：15  
@@ -64,19 +66,19 @@ LLMの学習・追加学習（fine-tuning）では、順伝播で作る活性値
   実装：[✓](https://github.com/gulang2019/LSP-Offload) ・ リポジトリ内被引用：2  
   特徴は、単に固定の低ランク更新を使うのではなく、射影器の非零位置と係数を少量のデータで学習し、勾配の推定誤差が大きくなった場合に部分空間を更新することである。原論文は4GBのノートPC GPUで13億パラメータ級、24GBのRTX 4090で67億パラメータ級の微調整を示す。
 
-### 4年前（2022-11〜2023-10）
+### 4年前（2022-12〜2023-11）
 
 - **2023-10 · [G10: Enabling An Efficient Unified GPU Memory and Storage Architecture with Smart Tensor Migrations](2023-2310.09443-g10-enabling-an-efficient-unified-gpu-memory-and-storage-architecture-with-smart.md)**  
   実装：[✓](https://github.com/platformxlab/G10) ・ リポジトリ内被引用：6  
   G10が扱う問題は、深層学習の一反復で保持する全テンソルの容量がGPU搭載メモリを超えても、各演算器がその瞬間に使うテンソルの集合はずっと小さい、という差をどう利用するかである。SSDの容量が十分でも帯域と遅延はGPUメモリと大きく異なるため、無計画な退避は処理率を落とす。
 
-### 5年前（2021-11〜2022-10）
+### 6年前（2020-12〜2021-11）
 
 - **2021-11 · [ZeRO-Infinity: Breaking the GPU Memory Wall for Extreme Scale Deep Learning](2021-2104.07857-zero-infinity-breaking-the-gpu-memory-wall-for-extreme-scale-deep-learning.md)**  
   実装：[✓](https://github.com/deepspeedai/DeepSpeed) ・ リポジトリ内被引用：66  
   ZeRO-Infinityは、ゼロ冗長最適化器（Zero Redundancy Optimizer、ZeRO）の第3段階で全モデル状態をデータ並列プロセス間に分割する設計を、GPUの高帯域メモリだけでなくCPUの主記憶、さらに不揮発性メモリ接続のSSD（NVMe SSD）へ拡張する。
 
-### 7年前（2019-11〜2020-10）
+### 7年前（2019-12〜2020-11）
 
 - **2020-05 · [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](2019-1910.02054-zero.md)**  
   実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：117  

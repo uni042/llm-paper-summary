@@ -28,14 +28,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/12-moe-parallelism-communication/)
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
-
-- **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
-  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：7  
-  NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters](2026-2602.10604-step-3-5-flash-open-frontier-level-intelligence-with-11b-active-paramete.md)**  
   実装：[✓](https://github.com/stepfun-ai/Step-3.5-Flash) ・ リポジトリ内被引用：5  
@@ -93,7 +89,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：1  
   エキスパートストリーミングは専門家重みをチップレット間の細粒度マイクロスライスへ分け、高負荷・低負荷専門家を組み合わせてDDR読込、チップレット転送、計算を重ね、オンチップ容量不足を緩和する。
 
-### 直近12か月・未被引用（2025-11〜2026-10）
+### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-09 · [Scaling Inference Prefill with High-Radix Photonic Interconnects](2026-2609.01821-scaling-inference-prefill-high-radix-photonic-interconnects.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -187,11 +183,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：0  
   本研究の貢献は、新しいMoEルータを学習することではなく、既存の推論実装における負荷集中の発生条件、サービス品質への波及、専門家配置の防御効果の限界を測ることである。
 
-- **2025-11 · [DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication](2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md)**  
-  実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  
-  DMA-Latteは、AMD Instinct MI300Xの既存DMAハードウェアに備わる放送（broadcast）、交換（swap）、同一エンジンでの連続コピー（back-to-back copy）、依存条件付き事前発行（prelaunch）を組み合わせ、小粒度転送の非データ移動費用を削減する方式である。
-
-### 2年前（2024-11〜2025-10）
+### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts](2025-2502.19811-comet-fine-grained-computation-communication-overlapping-for-mixture-of-experts.md)**  
   実装：[✓](https://github.com/bytedance/flux) ・ リポジトリ内被引用：28  
@@ -217,9 +209,9 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/CASE-Lab-UMD/Capacity-Aware-MoE) ・ リポジトリ内被引用：8  
   専門家並列（専門家 Parallelism; EP）では、平均トークン数が同じでも一部専門家に負荷が集中すると、その専門家を担当するGPUが同期点を支配する。Capacity-Aware Inferenceは各専門家へ容量上限を設け、低ゲートスコアの超過トークンを落とすか、同一GPU上の追加候補専門家へ逃がすことでこのストラグラー効果を抑える。
 
-- **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
+- **2025-11 · [GPU-Initiated Networking for NCCL](2025-2511.15076-gpu-initiated-networking-for-nccl.md)**  
+  実装：[✓](https://github.com/NVIDIA/nccl) ・ リポジトリ内被引用：7  
+  NCCL 2.28へGPUカーネルからRDMAを直接起動できるGINを追加し、直接GPU→NICとCPU代理を同一APIで切替。DeepEPのMoE通信をNVSHMEM相当の性能でNCCLへ統合する。
 
 - **2025-10 · [Collective Communication for 100k+ GPUs](2025-2510.20171-collective-communication-for-100k-gpus.md)**  
   実装：[✓](https://github.com/meta-pytorch/torchcomms/tree/main/comms/ncclx) ・ リポジトリ内被引用：6  
@@ -257,11 +249,15 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：1  
   共有部分をテンソル並列化して細粒度MoEの重複メモリを減らし、少数専門家で草稿生成した後に完全専門家設定でKVキャッシュを修整して復号を高速化する。
 
+- **2025-11 · [DMA-Latte: Expanding the Reach of DMA Offloads to Latency-bound ML Communication](2025-2511.06605-dma-latte-expanding-the-reach-of-dma-offloads-to-latency-bound-ml-commun.md)**  
+  実装：[✓](https://github.com/AMDResearch/AMD-DMA-Latte) ・ リポジトリ内被引用：0  
+  DMA-Latteは、AMD Instinct MI300Xの既存DMAハードウェアに備わる放送（broadcast）、交換（swap）、同一エンジンでの連続コピー（back-to-back copy）、依存条件付き事前発行（prelaunch）を組み合わせ、小粒度転送の非データ移動費用を削減する方式である。
+
 - **2025-07 · [Photonic Fabric Platform for AI Accelerators](2025-2507.14000-photonic-fabric-platform-for-ai-accelerators.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
   提案のPhotonic Fabric Appliance（PFA）は、HBM3EとDDR5を含むメモリモジュールを光スイッチで接続し、16モジュール構成で最大32TBの共有メモリと115Tbpsの全対全デジタル交換を想定する。
 
-### 3年前（2023-11〜2024-10）
+### 3年前（2023-12〜2024-11）
 
 - **2024-08 · [LongVILA: Scaling Long-Context Visual Language Models for Long Videos](2024-2408.10188-longvila-scaling-long-context-visual-language-models-for-long-videos.md)**  
   実装：[✓](https://github.com/NVlabs/VILA) ・ リポジトリ内被引用：27  
@@ -271,6 +267,10 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：15  
   混合専門家モデル（Mixture of エキスパート; MoE）を複数GPUで実行する専門家並列では、各トークンを選択された専門家のGPUへ送る全対全通信（全対全）が不可欠となる。従来のtop-2 MoEでは、ルーティング、入力整列、全対全送信、専門家計算、全対全返送、出力整列が依存鎖上で続く。
 
+- **2024-11 · [Communication Compression for Tensor Parallel LLM Inference](2024-2411.09510-communication-compression-for-tensor-parallel-llm-inference.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  テンソル並列の部分活性値を集合通信直前に細粒度量子化し、低帯域8×L4ではLlama2-70BのTTFTを最大約2.08倍改善する一方、高帯域A100では逆効果になる条件も示す。
+
 - **2024-10 · [EPS-MoE: Expert Pipeline Scheduler for Cost-Efficient MoE Inference](2024-2410.12247-eps-moe-expert-pipeline-scheduler-for-cost-efficient-moe-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   専門家単位にトークンを水平 分割し、負荷別GEMM選択とSM制限で全対全通信通信を計算へ重畳するMoE向け専門家 パイプライン スケジューラ。
@@ -279,7 +279,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/YJHMITWEB/ExFlow) ・ リポジトリ内被引用：7  
   混合専門家（Mixture of エキスパート、MoE）型の大規模言語モデルでは、各層のルータがトークンを少数の専門家へ割り当てる。論文のA100クラスタ評価では、8～64専門家を持つGPT型MoEモデルに対し全対全通信時間を最大67%削減し、推論処理量を最大2.2倍に改善した。
 
-### 4年前（2022-11〜2023-10）
+### 4年前（2022-12〜2023-11）
 
 - **2023-03 · [Towards MoE Deployment: Mitigating Inefficiencies in Mixture-of-Expert (MoE) Inference](2023-2303.06182-towards-moe-deployment-mitigating-inefficiencies-in-mixture-of-experts.md)**  
   実装：✓ ・ リポジトリ内被引用：29  
@@ -289,7 +289,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：7  
   大規模言語モデル（LLM）を多数のGPUで学習する場合、重みや勾配、最適化器状態を分割してメモリ使用量を下げるZeRO-3は、各層の計算時に必要な重みを集め直す。ZeRO++は前向き重みをINT8に圧縮して0.5M、逆向き重みをノード内で再構成してノード間0、勾配をINT4で通信して0.25Mにする。
 
-### 5年前（2021-11〜2022-10）
+### 5年前（2021-12〜2022-11）
 
 - **2022-06 · [Tutel: Adaptive Mixture-of-Experts at Scale](2022-2206.03382-tutel-adaptive-mixture-of-experts-at-scale.md)**  
   実装：[✓](https://github.com/microsoft/tutel) ・ リポジトリ内被引用：46  
@@ -299,7 +299,7 @@ MoEの専門家並列、テンソル並列との混成、all-to-all通信、専�
   実装：✓ ・ リポジトリ内被引用：36  
   Linaは、分散した混合専門家モデル（Mixture of エキスパート、MoE）の通信を、学習と推論で異なる原因に分解して高速化するシステムである。論文の事前計測では、全対全通信が処理段階時間の平均34.1%、ある層の順伝播時間の74.9%を占め、通信中のGPU演算器利用率は平均3.7%にとどまった。
 
-### 6年前（2020-11〜2021-10）
+### 6年前（2020-12〜2021-11）
 
 - **2021-01 · [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](2021-2101.03961-switch-transformers-scaling-to-trillion-parameter-models-with-simple-and.md)**  
   実装：[✓](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py) ・ リポジトリ内被引用：276  

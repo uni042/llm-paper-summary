@@ -19,18 +19,18 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/training/02-distributed-heterogeneous-moe-training/)
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 該当なし。
 
-### 直近12か月・未被引用（2025-11〜2026-10）
+### 直近12か月・未被引用（2025-12〜2026-11）
 
 該当なし。
 
-### 2年前（2024-11〜2025-10）
+### 2年前（2024-12〜2025-11）
 
 - **2025-04 · [MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core](2025-2504.14960-moe-parallel-folding-heterogeneous-parallelism-mappings-for-efficient-large-scal.md)**  
   実装：[✓](https://github.com/NVIDIA/Megatron-LM) ・ リポジトリ内被引用：6  
@@ -48,25 +48,25 @@ CPUやSSDへモデルを退避することが中心の研究は `01-training-off
   実装：[✓](https://github.com/Supercomputing-System-AI-Lab/X-MoE) ・ リポジトリ内被引用：1  
   計算量を抑えながら専門家の組合せを増やせる反面、分配・回収するトークン活性値が増え、学習用GPUのメモリとノード間通信が律速になる。X-MoEはこの学習上の問題に対し、ゼロ埋めを排したトークン格納（PFT）、ノード間の重複回避分配（RBD）、MoE層専用の系列分割（SSMB）を統合する。
 
-### 3年前（2023-11〜2024-10）
+### 3年前（2023-12〜2024-11）
 
 - **2024-04 · [Lancet: Accelerating Mixture-of-Experts Training via Whole Graph Computation-Communication Overlapping](2024-2404.19429-lancet.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
   MoE学習の全対全通信をエキスパートだけでなく非MoE計算と重み勾配計算まで学習グラフ全体で重ね、最大1.3倍高速化する。
 
-### 4年前（2022-11〜2023-10）
+### 4年前（2022-12〜2023-11）
 
 - **2023-04 · [FlexMoE: Scaling Large-scale Sparse Pre-trained Model Training via Dynamic Device Placement](2023-2304.03946-flexmoe-scaling-large-scale-sparse-pre-trained-model-training-via-dynamic-device.md)**  
   実装：✓ ・ リポジトリ内被引用：24  
   この疎な計算は理論上、パラメータを増やしても一トークン当たりの演算量を抑えられるが、複数のGPUに専門家を分散した学習ではトークンの偏りが大きな問題になる。FlexMoEはモデル側のトークン選択を変えず、同じ専門家の複製を複数GPUに配置し、実際の負荷に合わせて複製数と配置を調整する。
 
-### 6年前（2020-11〜2021-10）
+### 6年前（2020-12〜2021-11）
 
 - **2021-09 · [Scalable and Efficient MoE Training for Multitask Multilingual Models](2021-2109.10465-scalable-efficient-moe-training.md)**  
   実装：[✓](https://github.com/microsoft/DeepSpeed) ・ リポジトリ内被引用：30  
   専門家並列とZeRO/CPUオフロード等の多次元並列を統合してMoEを3.5兆パラメータ超へ拡張し、ランダムトークン選択や専門家枝刈りで学習・推論効率も改善するDeepSpeed MoE。
 
-### 7年前（2019-11〜2020-10）
+### 7年前（2019-12〜2020-11）
 
 - **2020-06 · [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](2020-2006.16668-gshard.md)**  
   実装：✓ ・ リポジトリ内被引用：294  

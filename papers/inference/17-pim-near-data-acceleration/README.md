@@ -28,10 +28,10 @@
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/17-pim-near-data-acceleration/)
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-03 · [PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-Based Long-Context LLM Inference System](2026-ff07d7af9733-pimphony-overcoming-bandwidth-and-capacity-inefficiency-in-pim-based-long-context-llm-inference-system.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -45,15 +45,7 @@
   実装：✓ ・ リポジトリ内被引用：2  
   重みとKVキャッシュを計算機能付き三次元NANDに置き、短文脈用の共置型と長文脈用の分離型を使い分けて、フラッシュ内注意計算とページ配置を最適化する。
 
-- **2025-11 · [LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs](2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md)**  
-  実装：[✓](https://github.com/LUT-FPGA/LUT-LLM) ・ リポジトリ内被引用：2  
-  活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。
-
-- **2025-11 · [Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing](2025-2511.12286-sangam-chiplet-based-dram-pim-accelerator-with-cxl-integration-for-llm-i.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  LLMの復号段階では、一つの出力トークンを作るたびに大きな重み行列と過去のKVキャッシュを読み出す。バッチが小さいと行列積は実質的に行列とベクトルの積になり、GPUの大量の演算器を十分に使えないまま外部メモリの帯域が律速になる。GPUを使わずに推論する構成と、計算集約的な処理をGPUへ任せる協調構成の両方を設計対象とする。
-
-### 直近12か月・未被引用（2025-11〜2026-10）
+### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-09 · [LLM Inference in a Flash!](2026-2609.16161-llm-inference-in-a-flash.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -107,7 +99,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   視覚入力で膨らむKVキャッシュと演算重みをDRAM・RRAMへ役割分担し、近メモリ実行と局所性を保つ演算融合で端末MLLM推論のデータ移動を抑える設計を示す。
 
-### 2年前（2024-11〜2025-10）
+### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving](2025-stratum-system-hardware-co-design-with-tiered-monolithic-3d-stackable-dram-for-efficient-moe-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：12  
@@ -129,9 +121,17 @@
   実装：✓ ・ リポジトリ内被引用：5  
   KV容量と注意帯域を同時拡張できるDIMM-PIMへデコード注意を分離し、GPU全結合層と重畳してHBM-PIM比最大5.15倍のスループットを得る。
 
+- **2025-11 · [LUT-LLM: Efficient Large Language Model Inference with Memory-based Computations on FPGAs](2025-2511.06174-lut-llm-efficient-large-language-model-inference-with-memory-based-computations-on-fpgas.md)**  
+  実装：[✓](https://github.com/LUT-FPGA/LUT-LLM) ・ リポジトリ内被引用：2  
+  活性値・重み共同ベクトル量子化で線形層を2次元表引きへ変換し、AMD V80上のQwen3 1.7BでGPU比1.10〜3.29倍高速化を示す。
+
 - **2025-03 · [Reimagining Memory Access for LLM Inference: Compression-Aware Memory Controller Design](2025-2503.18869-reimagining-memory-access-for-llm-inference-compression-aware-memory-controller-design.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
   重みとKVキャッシュをビットプレーン・チャネル単位に再配置して無損失圧縮を効かせ、動的量子化時は必要ビットだけを読むメモリ制御器で容量・帯域・エネルギーを同時に削減する。
+
+- **2025-11 · [Sangam: Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing](2025-2511.12286-sangam-chiplet-based-dram-pim-accelerator-with-cxl-integration-for-llm-i.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  LLMの復号段階では、一つの出力トークンを作るたびに大きな重み行列と過去のKVキャッシュを読み出す。バッチが小さいと行列積は実質的に行列とベクトルの積になり、GPUの大量の演算器を十分に使えないまま外部メモリの帯域が律速になる。GPUを使わずに推論する構成と、計算集約的な処理をGPUへ任せる協調構成の両方を設計対象とする。
 
 - **2025-09 · [HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference](2025-2509.12993-hpim-heterogeneous-processing-in-memory-based-accelerator-for-large-lang.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -141,7 +141,7 @@
   実装：✓ ・ リポジトリ内被引用：0  
   MVDRAMは、メモリそのものを演算資源にすることで、大規模言語モデル（LLM）の逐次生成における重み読み出しを減らす実機システムである。著者らはXilinx Alveo U200上のメモリ制御器と市販DDR4-2400モジュール4枚で実験し、2ビットLlama2-13Bのトークン生成処理量をCPU基準比2.18倍、4ビットでは1.31倍にした。
 
-### 3年前（2023-11〜2024-10）
+### 3年前（2023-12〜2024-11）
 
 - **2024-03 · [NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing](2024-2403.00579-neupims-npu-pim-heterogeneous-acceleration-for-batched-llm-inferencing.md)**  
   実装：[✓](https://github.com/casys-kaist/NeuPIMs) ・ リポジトリ内被引用：30  
@@ -163,13 +163,13 @@
   実装：✓ ・ リポジトリ内被引用：1  
   LLM学習・推論を対象に、演算融合、KVメモリ管理、連続バッチ、事前入力と復号の分離、MoE、注意近似、投機的復号、量子化・疎性、PIM/CIMなどをアルゴリズムとハードウェアの協調設計という軸で整理する2024年のレビュー。
 
-### 4年前（2022-11〜2023-10）
+### 4年前（2022-12〜2023-11）
 
 - **2023-08 · [Samsung PIM/PNM for Transformer based AI: Energy Efficiency on PIM/PNM Cluster](2023-0a1390643d73-samsung-pim-pnm-for-transformer-based-ai-energy-efficiency-on-pim-pnm-cl.md)**  
   実装：✓ ・ リポジトリ内被引用：4  
   この研究は、SamsungがHot Chips 35で公開した、メモリ内処理（processing-in-メモリ、PIM）とメモリ近傍処理（processing-near-メモリ、PNM）のシステム実装報告である。
 
-### 5年前（2021-11〜2022-10）
+### 5年前（2021-12〜2022-11）
 
 - **2022-04 · [TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer](2022-392657209cc9-transpim-a-memory-based-acceleration-via-software-hardware-co-design-for.md)**  
   実装：✓ ・ リポジトリ内被引用：19  

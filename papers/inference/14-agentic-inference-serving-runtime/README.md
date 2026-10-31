@@ -28,10 +28,10 @@
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/14-agentic-inference-serving-runtime/)
 
-分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-11〜2026-10**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
+分類は相互排他的。直近12か月は公開年月ベース（現在は **2025-12〜2026-11**）。直近12か月でリポジトリ内被引用が1件以上ある論文は注目枠へ分離し、それ以前は現在月から12か月単位の「2年前」「3年前」…に分け、各区分内を引用数順に並べる。「リポジトリ内被引用」は収録済み別論文の一次資料の参考文献欄を構造化した `references` から、同一リポジトリ内論文への参照を数える。
 「実装」は論文メタデータで明示されたコード／実装情報のみを表示し、未確認は `—` とする。
 
-### 注目：直近12か月・リポジトリ内で被引用（2025-11〜2026-10）
+### 注目：直近12か月・リポジトリ内で被引用（2025-12〜2026-11）
 
 - **2026-02 · [ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System](2026-2602.13692-thunderagent-a-simple-fast-and-program-aware-agentic-inference-system.md)**  
   実装：[✓](https://github.com/ThunderAgent-org/ThunderAgent) ・ リポジトリ内被引用：21  
@@ -48,10 +48,6 @@
 - **2026-03 · [Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective](2026-2603.16104-efficient-llm-serving-agentic-workflows-helium.md)**  
   実装：[✓](https://github.com/mlsys-io/helium_demo) ・ リポジトリ内被引用：7  
   エージェントワークフローを問い合わせ計画として解析し、共通部分削除、結果・KVの先行キャッシュ、接頭辞構造を見た費用認識スケジューリングを統合して、KVFlow比最大1.56倍、複合Tradingで最大1.34倍高速化する。
-
-- **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
-  実装：✓ ・ リポジトリ内被引用：7  
-  反実仮想故障注入で脆弱節点へだけ検証器を置き、検証中に後続処理を投機実行して必要時だけ巻き戻すSherlock。平均精度+18.3%、検証費用-26.0%、検証完了時間最大-48.7%。
 
 - **2026-07 · [Agentic Coding in the Wild: Characterizing GitHub Copilot Traces at Production Scale](2026-2608.00101-agentic-coding-production-scale-characterization.md)**  
   実装：✓ ・ リポジトリ内被引用：6  
@@ -80,10 +76,6 @@
 - **2026-05 · [Irminsul: MLA-Native Position-Independent Caching for Agentic LLM Serving](2026-2605.05696-irminsul-mla-native-position-independent-caching-for-agentic-llm-serving.md)**  
   実装：✓ ・ リポジトリ内被引用：3  
   Irminsulは、複数ターンのエージェント型LLMサービングで、トークン内容は同じなのにプロンプト内の位置が変わるためKVキャッシュを再利用できない問題を扱う。システム変数、検索文書、ツール出力、会話の圧縮結果が途中に挿入されると、残りの大部分が以前と同じ内容でも、最初の不一致以降は再計算になる。
-
-- **2025-11 · [Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows](2025-2511.20975-aragog-just-in-time-model-routing-for-scalable-serving-of-agentic-workfl.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
-  エージェント型ワークフローは、生成、批評、修正、ツール呼び出し、結果統合などを有向非巡回グラフ（Directed Acyclic Graph; DAG）で結んだ実行系列である。
 
 - **2026-03 · [AVO: Agentic Variation Operators for Autonomous Evolutionary Search](2026-2603.24517-avo-agentic-variation-operators-for-autonomous-evolutionary-search.md)**  
   実装：✓ ・ リポジトリ内被引用：2  
@@ -117,11 +109,7 @@
   実装：[✓](https://github.com/dorcha-inc/orla) ・ リポジトリ内被引用：1  
   分類段階をQwen3-4B、重い段階をQwen3-8Bへ割り当てた異種構成は、単一Qwen3-8Bの比較対象に対し壁時計時間38%、平均完了時間60%、推定推論費用35%を削減した。
 
-- **2025-11 · [Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse](2025-2511.00413-tree-training-accelerating-agentic-llms-training-via-shared-prefix-reuse.md)**  
-  実装：✓ ・ リポジトリ内被引用：1  
-  エージェント型大規模言語モデルの学習軌跡が共有接頭辞を持つ木になることを利用し、各枝を独立学習する際の順伝播・逆伝播の重複を除く。深さ優先直列化、木に沿った注意・状態伝播、枝数に応じた損失重み付け、微分可能な分割境界を組み合わせ、学習目的を保ちながら計算を一度にする。
-
-### 直近12か月・未被引用（2025-11〜2026-10）
+### 直近12か月・未被引用（2025-12〜2026-11）
 
 - **2026-09 · [Speculative Macro Commit for Faster Tool-Using Agents](2026-2609.03236-speculative-macro-commit-for-faster-tool-using-agents.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -291,19 +279,7 @@
   実装：[✓](https://github.com/robinren03/agserve) ・ リポジトリ内被引用：0  
   従来の単純な接頭辞一致キャッシュや最近使用順の退避では、この特徴を活かしにくい。NeurIPS 2025の実機評価では、AWエージェントでGPT-4oと近い品質を16.5%の費用で達成し、同一費用の費用・品質曲線に対して1.8倍の品質を報告する。
 
-- **2025-11 · [Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving](2025-2511.01633-graph-cot-multi-agent-efficient-serving.md)**  
-  実装：✓ ・ リポジトリ内被引用：0  
-  Graph-CoTを分類・推論・行動・検索へ分業し、頂点単位KV再利用、優先度追い出し、検索と生成の重畳を組み合わせ、遅延最大90.3%減・スループット最大15.1倍を報告。
-
-- **2025-11 · [O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents](2025-2511.13593-o-mem-omni-memory-system-for-personalized-long-horizon-self-evolving-age.md)**  
-  実装：[✓](https://github.com/OPPO-PersonalAI/O-Mem) ・ リポジトリ内被引用：0  
-  過去の対話を意味的に近い断片へまとめ、質問に近い断片だけ検索する従来方式にも問題がある。主な結果は、長期対話ベンチマークLoCoMoのGPT-4.1条件でF1がLangMemの48.72から51.67へ、人物記憶のPERSONAMEMでA-Memの59.42から62.99へ改善したことである。
-
-- **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
-  実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：0  
-  機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
-
-### 2年前（2024-11〜2025-10）
+### 2年前（2024-12〜2025-11）
 
 - **2025-07 · [KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows](2025-2507.07400-kvflow.md)**  
   実装：✓ ・ リポジトリ内被引用：51  
@@ -337,6 +313,10 @@
   実装：[✓](https://github.com/naimengye/speculative-action) ・ リポジトリ内被引用：9  
   本研究は、LLMを使うエージェント（agentic systems）が環境へ問い合わせを行うたびに待機し、その結果を見てから次の操作を決めるという逐次的なツール呼び出しの待ち時間を短縮する。通常の投機的復号（投機的復号）は、小型モデルが次のトークンを予測し、対象モデルがそれを検証することで生成を高速化する。
 
+- **2025-11 · [Sherlock: Reliable and Efficient Agentic Workflow Execution](2025-2511.00330-sherlock-reliable-and-efficient-agentic-workflow-execution.md)**  
+  実装：✓ ・ リポジトリ内被引用：7  
+  反実仮想故障注入で脆弱節点へだけ検証器を置き、検証中に後続処理を投機実行して必要時だけ巻き戻すSherlock。平均精度+18.3%、検証費用-26.0%、検証完了時間最大-48.7%。
+
 - **2025-10 · [FlowMesh: A Service Fabric for Composable LLM Workflows](2025-2510.26913-flowmesh-a-service-fabric-for-composable-llm-workflows.md)**  
   実装：✓ ・ リポジトリ内被引用：7  
   LLMワークフローをDAG演算子へ分解し、完全一致の重複排除・実行互換バッチ化・異種GPU配置・無状態ワーカーを一体化して、金銭コスト1.8〜3.8倍、エネルギー1.3〜2.0倍の改善を示す。
@@ -353,6 +333,14 @@
   実装：[✓](https://github.com/guanyilin428/Dynamic-Speculative-Planning) ・ リポジトリ内被引用：4  
   動的 投機的 Planning（DSP）は、大規模言語モデル（LLM）を用いたエージェントが一連の計画・操作を逐次生成する際、弱い近似エージェントが未来の複数ステップを先読みし、強い対象エージェントが並列に検証することで全体の完了時間を短縮する方式である。
 
+- **2025-11 · [Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows](2025-2511.20975-aragog-just-in-time-model-routing-for-scalable-serving-of-agentic-workfl.md)**  
+  実装：✓ ・ リポジトリ内被引用：3  
+  エージェント型ワークフローは、生成、批評、修正、ツール呼び出し、結果統合などを有向非巡回グラフ（Directed Acyclic Graph; DAG）で結んだ実行系列である。
+
+- **2025-11 · [Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse](2025-2511.00413-tree-training-accelerating-agentic-llms-training-via-shared-prefix-reuse.md)**  
+  実装：✓ ・ リポジトリ内被引用：1  
+  エージェント型大規模言語モデルの学習軌跡が共有接頭辞を持つ木になることを利用し、各枝を独立学習する際の順伝播・逆伝播の重複を除く。深さ優先直列化、木に沿った注意・状態伝播、枝数に応じた損失重み付け、微分可能な分割境界を組み合わせ、学習目的を保ちながら計算を一度にする。
+
 - **2025-10 · [Staircase Streaming for Low-Latency Multi-Agent Inference](2025-2510.05059-staircase-streaming-for-low-latency-multi-agent-inference.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   前段の提案者が最初の8トークン程度を生成した時点で集約者を起動し、後続の生成と集約を重ねる。提案者の全出力を待たないため、MoAでTTFTを10.6秒から0.47秒、MADで6.70秒から0.45秒へ削減する条件がある。
@@ -360,4 +348,16 @@
 - **2025-09 · [Nova: Real-Time Agentic Vision-Language Model Serving with Adaptive Cross-Stage Parallelization](2025-2509.21301-nova-real-time-agentic-vision-language-model-serving-with-adaptive-cross.md)**  
   実装：✓ ・ リポジトリ内被引用：1  
   Novaは、画面画像を見て操作命令を生成する視覚言語エージェント（Vision-Language モデル agent、VLMエージェント）を、単一のGPUで低遅延に提供する推論基盤である。さらに、画像符号器の全重みをGPUへ常駐させず、CPUメモリから層ごとに先読みする。
+
+- **2025-11 · [Scaling Graph Chain-of-Thought Reasoning: A Multi-Agent Framework with Efficient LLM Serving](2025-2511.01633-graph-cot-multi-agent-efficient-serving.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  Graph-CoTを分類・推論・行動・検索へ分業し、頂点単位KV再利用、優先度追い出し、検索と生成の重畳を組み合わせ、遅延最大90.3%減・スループット最大15.1倍を報告。
+
+- **2025-11 · [O-Mem: Omni Memory System for Personalized, Long Horizon, Self-Evolving Agents](2025-2511.13593-o-mem-omni-memory-system-for-personalized-long-horizon-self-evolving-age.md)**  
+  実装：[✓](https://github.com/OPPO-PersonalAI/O-Mem) ・ リポジトリ内被引用：0  
+  過去の対話を意味的に近い断片へまとめ、質問に近い断片だけ検索する従来方式にも問題がある。主な結果は、長期対話ベンチマークLoCoMoのGPT-4.1条件でF1がLangMemの48.72から51.67へ、人物記憶のPERSONAMEMでA-Memの59.42から62.99へ改善したことである。
+
+- **2025-11 · [AccelOpt: A Self-Improving LLM Agentic System for AI Accelerator Kernel Optimization](2025-2511.15915-accelopt-a-self-improving-llm-agentic-system-for-ai-accelerator-kernel-o.md)**  
+  実装：[✓](https://github.com/zhang677/AccelOpt) ・ リポジトリ内被引用：0  
+  機械学習演算カーネルの実行速度は、同じ演算を表すコードでも、タイル形状、メモリ配置、命令選択、演算融合、パイプラインの設計によって大きく変わる。理論ピークに対する平均達成率は、Trainium 1で49%から61%、Trainium 2で45%から59%へ改善した。
 <!-- survey:auto:end -->
