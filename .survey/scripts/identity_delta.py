@@ -36,14 +36,7 @@ def paper_record(relpath: str) -> dict:
     path = ROOT / relpath
     meta, _ = survey.front(path)
     cid = survey.norm_id(meta["canonical_id"])
-    ids = [cid]
-    for key, prefix in [
-        ("arxiv_id", "arXiv:"),
-        ("doi", "DOI:"),
-        ("openreview_id", "OpenReview:"),
-    ]:
-        if meta.get(key):
-            ids.append(survey.norm_id(prefix + str(meta[key])))
+    ids = survey.paper_identifiers(meta)
     return {
         "schema_version": 1,
         "canonical_id": cid,
