@@ -1,0 +1,190 @@
+{
+  "run_key": "20261031-1230-scheduled-chat-30/r01",
+  "worker_id": "scheduled-chat-30",
+  "round": "r01",
+  "mode": "discovery",
+  "status": "complete",
+  "record_count": 10,
+  "records": [
+    {
+      "canonical_id": "DOI:10.23919/DATE69613.2026.11539329",
+      "identity_tokens": [
+        "DOI:10.23919/DATE69613.2026.11539329"
+      ],
+      "title": "AO-BFP: An Adaptive Mixed-Precision and Outlier-Aware Block Floating-Point Accelerator for Large Language Model Inference",
+      "classification": "accept",
+      "reason": "LLM推論の混合精度・外れ値対応BFP量子化とbit-serial再構成可能アクセラレータを協調設計する直接的な推論効率化研究。IEEE DATE 2026の出版社一次要旨ではANT/OliVe/BitMoDに対してそれぞれ1.61/1.39/1.11倍の高速化を報告。異なる比較系の値であり一般的なGPU実行速度には外挿しない。本文・評価設定の詳細は未精査。",
+      "source_url": "https://doi.org/10.23919/DATE69613.2026.11539329",
+      "body_check": "IEEE Xplore出版社一次要旨を確認。本文全体は未読。",
+      "linked_from": [
+        "WORKLIST-30.md rank 190; Weight Quantization / Compression"
+      ],
+      "worklist_rank": 190,
+      "first_checked_at": "2026-10-31T12:34:20+09:00",
+      "last_checked_at": "2026-10-31T12:34:20+09:00"
+    },
+    {
+      "canonical_id": "arXiv:2411.09111",
+      "identity_tokens": [
+        "arXiv:2411.09111",
+        "SemanticScholar:0f8416693b3fc1bc42166a574328a10decdcaf6b"
+      ],
+      "title": "Reducing Reasoning Costs: The Path of Optimization for Chain of Thought via Sparse Attention Mechanism",
+      "classification": "borderline",
+      "reason": "推論時CoTの計算削減を目的としたsparse attentionとGiantRabbitの実験であり技術的には近い。一方、arXiv一次要旨の比較対象は外部のo1 Previewで、同一モデル・同一実行基盤の制御比較、実測GPUメモリ/throughput、再現可能な推論性能は要旨から確認できない。一般的な推論エンジン高速化としての証拠が限定的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2411.09111",
+      "body_check": "arXiv公式v8要旨と投稿履歴を確認。本文未読。worklistのSemanticScholar identityをarXiv identityに正規化。",
+      "linked_from": [
+        "WORKLIST-30.md rank 306; inference-early-exit, inference-systems"
+      ],
+      "worklist_rank": 306,
+      "first_checked_at": "2026-10-31T12:34:20+09:00",
+      "last_checked_at": "2026-10-31T12:34:20+09:00"
+    },
+    {
+      "canonical_id": "SemanticScholar:c4bc2ea83fd0bd21bd3e0fefd78ca0dbb25449f2",
+      "identity_tokens": [
+        "SemanticScholar:c4bc2ea83fd0bd21bd3e0fefd78ca0dbb25449f2"
+      ],
+      "title": "Prophet: An LLM Inference Engine Optimized For Head-of-Line Blocking",
+      "classification": "accept",
+      "reason": "Stanford大学ホストの著者一次PDFに基づく。iteration単位のスケジューリング、prefill/decodeの分離、SRPT/MLFQ優先度制御を組み合わせ、head-of-line blockingによるLLMサービング遅延を直接扱う。TTFT・TPOT・JCTで評価するが、一次要旨に数値改善率は記載されていない。授業プロジェクトの原稿であり査読済み論文としては扱わない。",
+      "source_url": "https://www.scs.stanford.edu/24sp-cs244b/projects/Prophet_An_LLM_Inference_Engine_Optimized_For_Head_of_Line_Blocking.pdf",
+      "body_check": "Stanford公式ドメインに置かれた著者一次PDFのAbstract・Introductionを確認。全文精査は未実施。",
+      "linked_from": [
+        "WORKLIST-30.md rank 313; LLM Serving / Scheduling / Disaggregation"
+      ],
+      "worklist_rank": 313,
+      "first_checked_at": "2026-10-31T12:34:20+09:00",
+      "last_checked_at": "2026-10-31T12:34:20+09:00"
+    },
+    {
+      "canonical_id": "SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f",
+      "identity_tokens": [
+        "SemanticScholar:57ca2300b616bd1c4ccc05e7e9649d7088fa823f",
+        "OpenReview:ZZ4tcxJvux"
+      ],
+      "title": "E²-RAG: Towards Editable Efficient RAG by Editing Compressed KV Caches",
+      "classification": "accept",
+      "reason": "COLM 2025査読済み一次PDF。RAG文書チャンクの圧縮KVをINSERT/DELETE/UPDATEで直接編集し、再計算に対して編集約40倍高速、標準RAGに対して生成約3倍高速、QA品質1〜5%低下を報告。編集時間と生成時間を混同しない。",
+      "source_url": "https://openreview.net/pdf?id=ZZ4tcxJvux",
+      "body_check": "OpenReviewの著者論文PDFと著者公式コードのAbstractを確認。全文精査未実施。",
+      "linked_from": [
+        "WORKLIST-30.md rank 138; LLM KV Cache / Efficient RAG"
+      ],
+      "worklist_rank": 138,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.3390/jlpea15010008",
+      "identity_tokens": [
+        "DOI:10.3390/jlpea15010008"
+      ],
+      "title": "Optimizing BFloat16 Deployment of Tiny Transformers on Ultra-Low Power Extreme Edge SoCs",
+      "classification": "borderline",
+      "reason": "BF16のRISC-VマルチコアMCU向けattention kernel、tiling、pruningを実機評価。tinyLLAMAで1219 tokens/sと平均57mWを報告。ただし小規模TinyML/SLM中心で7B級LLMやGPUの評価ではなく、220倍はnaive CのMHSA kernel比である。一般LLMサービングへ直接外挿できないためborderline。",
+      "source_url": "https://www.mdpi.com/2079-9268/15/1/8",
+      "body_check": "MDPI出版社の一次要旨・実験節を確認。tinyLLAMAと他のMobileBert/TinyViT評価を区別。",
+      "linked_from": [
+        "WORKLIST-30.md rank 159; Edge / On-device Inference"
+      ],
+      "worklist_rank": 159,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3779212.3790174",
+      "identity_tokens": [
+        "DOI:10.1145/3779212.3790174"
+      ],
+      "title": "I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention",
+      "classification": "accept",
+      "reason": "ASPLOS 2026のACM出版社一次要旨。長系列exact self-attentionのI/O下界を導き、tiling・3層通信計算overlap・softmax並列化を統合したAttenIOアクセラレータ。評価条件下で既存法比1.6〜8.8倍の高速化を報告。attention kernelの改善でありLLM全体の同倍率改善ではない。",
+      "source_url": "https://doi.org/10.1145/3779212.3790174",
+      "body_check": "ACM公式一次要旨と著者所属研究室の論文ページを確認。全文未読。",
+      "linked_from": [
+        "WORKLIST-30.md rank 228; Attention Hardware Acceleration"
+      ],
+      "worklist_rank": 228,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    },
+    {
+      "canonical_id": "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6",
+      "identity_tokens": [
+        "SemanticScholar:0d44c22c05f777b6f269846c4c6ebfff98747ea6"
+      ],
+      "title": "Accelerating On-Device LLM Inference via Activation-guided FFN Distillation on Raspberry Pi",
+      "classification": "accept",
+      "reason": "CVPRW 2026公式一次要旨。Raspberry Pi上のautoregressive LLM推論をkernel単位でプロファイルしFFNがボトルネックと特定、activation-guided FFN distillationで中間次元を削減する直接的エッジ推論最適化。本文未読のため速度改善率は記載しない。",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2026W/MAI/html/Moon_Accelerating_On-Device_LLM_Inference_via_Activation-guided_FFN_Distillation_on_Raspberry_CVPRW_2026_paper.html",
+      "body_check": "CVF Open Access公式Abstract確認。全評価条件は未精査。",
+      "linked_from": [
+        "WORKLIST-30.md rank 255; Edge LLM / FFN Distillation"
+      ],
+      "worklist_rank": 255,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2024.findings-emnlp.896",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2024.findings-emnlp.896",
+        "arXiv:2404.15420",
+        "SemanticScholar:0a67ea2eb99ed714c97215d131aec03917531d85"
+      ],
+      "title": "XC-Cache: Cross-Attending to Cached Context for Efficient LLM Inference",
+      "classification": "accept",
+      "reason": "EMNLP 2024 FindingsのACL Anthology一次要旨。decoder-only Llama 2へcross-attention層を追加し、参照文書を圧縮したcontextで条件付き生成。標準KV cachingに比べてメモリ使用量を約2桁削減と報告。実測token/sの倍率とは区別。",
+      "source_url": "https://aclanthology.org/2024.findings-emnlp.896/",
+      "body_check": "ACL Anthology公式AbstractとarXiv identityを照合。全文未読。",
+      "linked_from": [
+        "WORKLIST-30.md rank 295; Context Caching / RAG"
+      ],
+      "worklist_rank": 295,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    },
+    {
+      "canonical_id": "SemanticScholar:1d51b9b46e651f3415d8a68d6ac38fa75d1b2133",
+      "identity_tokens": [
+        "SemanticScholar:1d51b9b46e651f3415d8a68d6ac38fa75d1b2133",
+        "ACL:2025.coling-main.575"
+      ],
+      "title": "Flashback: Memory Mechanism for Enhancing Memory Efficiency and Speed in Deep Sequential Models",
+      "classification": "borderline",
+      "reason": "COLING 2025のACL Anthology一次要旨。Transformer/Mambaへ微分可能なFlashback記憶機構を組み込み、The Pileで次token予測・速度・メモリを評価。ただし学習時の勾配保持問題も主要課題であり、現行LLM推論サービングでの実測高速化は要旨から確認できないためborderline。",
+      "source_url": "https://aclanthology.org/2025.coling-main.575/",
+      "body_check": "ACL Anthology公式Abstract確認。全文未読。",
+      "linked_from": [
+        "WORKLIST-30.md rank 343; Linear/Recurrent LM / Memory"
+      ],
+      "worklist_rank": 343,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    },
+    {
+      "canonical_id": "SemanticScholar:0bc56b6500b3eece739cb48d60f9f26c9d805010",
+      "identity_tokens": [
+        "SemanticScholar:0bc56b6500b3eece739cb48d60f9f26c9d805010",
+        "ACL:2026.unlp-1.15"
+      ],
+      "title": "Dictionary-Based Speculative Decoding for Non-Latin-Script Languages",
+      "classification": "accept",
+      "reason": "UNLP 2026のACL Anthology一次要旨。学習不要の静的n-gram辞書をdraftに使うDictSpecをvLLMプラグインとして実装し、3B〜70Bのモデルでウクライナ語・クリミアタタール語を評価。制御されたemulationでverification step最大1.65倍削減、live vLLMでhybrid最大1.76倍高速化を報告。純粋DictSpecの実機改善は小さいと明記。",
+      "source_url": "https://aclanthology.org/2026.unlp-1.15/",
+      "body_check": "ACL Anthology公式Abstractと著者PDFの限界節を確認。",
+      "linked_from": [
+        "WORKLIST-30.md rank 354; Speculative Decoding / Multilingual"
+      ],
+      "worklist_rank": 354,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    }
+  ],
+  "notes": "全10件の一次要旨とGitHub import inbox / precheck /既存論文のidentityを照合。旧r01 partialは検証後archiveへ移す。",
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "reference_main_sha": "f457f59e7ae70f076190854f699514b64d16a6b2"
+}
