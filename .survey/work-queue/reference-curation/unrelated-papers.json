@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-31T11:43:35+00:00",
-  "record_count": 12664,
+  "updated_at": "2026-10-31T17:58:48+00:00",
+  "record_count": 12665,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182094,6 +182094,20 @@
         "WORKLIST-00.md rank 205"
       ],
       "title": "S³-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants"
+    },
+    "arXiv:2312.00662": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2312.00662",
+      "identity_tokens": [
+        "arXiv:2312.00662"
+      ],
+      "reason": "arXiv一次本文は、既存Transformerの注意を非パラメトリック変分ベイズモデルとして再解釈し、学習なしの正則化で分布外汎化を改善する研究。推論時の速度・メモリ・エネルギー削減、量子化・枝刈り、サービング実装を主眼とせず、研究ライブラリの推論効率化系統には直接該当しない。",
+      "first_checked_at": "2026-10-31T17:58:48+00:00",
+      "last_checked_at": "2026-10-31T17:58:48+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 197; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "title": "Nonparametric Variational Regularisation of Pretrained Transformers"
     }
   }
 }

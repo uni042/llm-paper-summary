@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-054eb19c9ba65374-border-002",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1282",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1282",
+    "identity_tokens": [
+      "DOI:10.18653/v1/2025.findings-emnlp.1282"
+    ],
+    "reason": "ACL Anthology一次要旨はMoEルータの選択品質を強化学習で改善し、経路摂動に基づく優位性信号と専門家の過度な特化を防ぐ重なり制約を提案。要約・QA・言語モデル性能と経路品質を評価するが、実際の推論スループット・GPU利用率・サービングスケジューリングの改善は主張していない。MoE推論の隣接技術として微妙判定。",
+    "first_checked_at": "2026-10-31T17:58:47+00:00",
+    "last_checked_at": "2026-10-31T17:58:47+00:00",
+    "linked_from": [
+      "WORKLIST-30.md rank 312; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Exploration-Driven Reinforcement Learning for Expert Routing Improvement in Mixture-of-Experts Language Models"
+  },
+  "processed_at": "2026-10-31T17:58:48+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-054eb19c9ba6",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

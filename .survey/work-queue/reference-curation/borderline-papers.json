@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-31T08:46:52+00:00",
-  "record_count": 5574,
+  "updated_at": "2026-10-31T17:58:47+00:00",
+  "record_count": 5575,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86064,6 +86064,21 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Performance Testing and Analysis of Token Generation for LLMs Based on MaaS (Model-as-a-Service)"
+    },
+    "DOI:10.18653/v1/2025.findings-emnlp.1282": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.18653/v1/2025.findings-emnlp.1282",
+      "identity_tokens": [
+        "DOI:10.18653/v1/2025.findings-emnlp.1282"
+      ],
+      "reason": "ACL Anthology一次要旨はMoEルータの選択品質を強化学習で改善し、経路摂動に基づく優位性信号と専門家の過度な特化を防ぐ重なり制約を提案。要約・QA・言語モデル性能と経路品質を評価するが、実際の推論スループット・GPU利用率・サービングスケジューリングの改善は主張していない。MoE推論の隣接技術として微妙判定。",
+      "first_checked_at": "2026-10-31T17:58:47+00:00",
+      "last_checked_at": "2026-10-31T17:58:47+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 312; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Exploration-Driven Reinforcement Learning for Expert Routing Improvement in Mixture-of-Experts Language Models"
     }
   }
 }
