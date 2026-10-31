@@ -1,0 +1,161 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1f0ac26b4ec2b321-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1f0ac26b4ec2",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2305.19533"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "13fc56f09eb8d3f105099a60af333caea45f247c",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-31T21:04:01.603837+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2305.19533",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Lightening-Transformer: A Dynamically-Operated Optically-Interconnected Photonic Transformer Accelerator",
+      "source_url": "https://arxiv.org/abs/2305.19533",
+      "year": 2023,
+      "published": "2023-05-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 61,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The wide adoption and significant computing resource cost of attention-based transformers, e.g., Vision Transformers and large language models, have driven the demand for efficient hardware accelerators. While electronic accelerators have been commonly used, there is a growing interest in exploring photonics as an alternative technology due to its high energy efficiency and ultra-fast processing speed. Photonic accelerators have demonstrated promising results for convolutional neural networks (CNNs) workloads, which predominantly rely on weight-static linear operations. However, they encounter challenges when it comes to efficiently supporting attention-based Transformer architectures, raising questions about the applicability of photonics to advanced machine-learning tasks. The primary hurdle lies in their inefficiency in handling the unique workloads inherent to Transformers, i.e., dynamic and full-range tensor multiplication. In this work, we propose Lightening-Transformer, the first light-empowered, high-performance, and energy-efficient photonic Transformer accelerator. To overcome the fundamental limitation of existing photonic tensor core designs, we introduce a novel dynamically-operated photonic tensor core, DPTC, consisting of a crossbar array of interference-based optical vector dot-product engines, supporting highly parallel, dynamic, and full-range matrix multiplication. Furthermore, we design a dedicated accelerator that integrates our novel photonic computing cores with photonic interconnects for inter-core data broadcast, fully unleashing the power of optics. The comprehensive evaluation demonstrates that Lightening-Transformer achieves >2.6x energy and > 12 x latency reductions compared to prior photonic accelerators and delivers the lowest energy cost and 2 to 3 orders of magnitude lower energy-delay product compared to the electronic Transformer accelerator, all while maintaining digital-comparable accuracy. Our work highlights the immense potential of photonics for efficient hardware accelerators, particularly for advanced machine-learning workloads, such as Transformer-backboned large language models (LLM). Our implementation is available at https://github.com/zhuhanqing/Lightening-Transformer.",
+      "identifiers": [
+        "SemanticScholar:1a468046a70b88c95528ab546d78374597c82531"
+      ],
+      "semantic_scholar_id": "1a468046a70b88c95528ab546d78374597c82531",
+      "canonical_id": "arXiv:2305.19533",
+      "arxiv_id": "2305.19533",
+      "doi": "10.1109/HPCA57654.2024.00059",
+      "authors": [
+        "Hanqing Zhu",
+        "Jiaqi Gu",
+        "Hanrui Wang",
+        "Zi-Xuan Jiang",
+        "Zhe-Kai Zhang",
+        "R. Tang",
+        "Chenghao Feng",
+        "Song Han",
+        "Ray T. Chen",
+        "David Z. Pan"
+      ],
+      "priority": 71,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 61,
+        "citation_count": 61,
+        "total": 71,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1249,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2305.19533",
+      "identity_tokens": [
+        "id:DOI:10.1109/hpca57654.2024.00059",
+        "id:SemanticScholar:1a468046a70b88c95528ab546d78374597c82531",
+        "id:arXiv:2305.19533",
+        "title:lighteningtransformer a dynamicallyoperated opticallyinterconnected photonic transformer accelerator",
+        "url:https://arxiv.org/abs/2305.19533"
+      ],
+      "record": {
+        "title": "Lightening-Transformer: A Dynamically-Operated Optically-Interconnected Photonic Transformer Accelerator",
+        "source_url": "https://arxiv.org/abs/2305.19533",
+        "year": 2023,
+        "published": "2023-05-31",
+        "venue": "International Symposium on High-Performance Computer Architecture",
+        "citation_count": 61,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The wide adoption and significant computing resource cost of attention-based transformers, e.g., Vision Transformers and large language models, have driven the demand for efficient hardware accelerators. While electronic accelerators have been commonly used, there is a growing interest in exploring photonics as an alternative technology due to its high energy efficiency and ultra-fast processing speed. Photonic accelerators have demonstrated promising results for convolutional neural networks (CNNs) workloads, which predominantly rely on weight-static linear operations. However, they encounter challenges when it comes to efficiently supporting attention-based Transformer architectures, raising questions about the applicability of photonics to advanced machine-learning tasks. The primary hurdle lies in their inefficiency in handling the unique workloads inherent to Transformers, i.e., dynamic and full-range tensor multiplication. In this work, we propose Lightening-Transformer, the first light-empowered, high-performance, and energy-efficient photonic Transformer accelerator. To overcome the fundamental limitation of existing photonic tensor core designs, we introduce a novel dynamically-operated photonic tensor core, DPTC, consisting of a crossbar array of interference-based optical vector dot-product engines, supporting highly parallel, dynamic, and full-range matrix multiplication. Furthermore, we design a dedicated accelerator that integrates our novel photonic computing cores with photonic interconnects for inter-core data broadcast, fully unleashing the power of optics. The comprehensive evaluation demonstrates that Lightening-Transformer achieves >2.6x energy and > 12 x latency reductions compared to prior photonic accelerators and delivers the lowest energy cost and 2 to 3 orders of magnitude lower energy-delay product compared to the electronic Transformer accelerator, all while maintaining digital-comparable accuracy. Our work highlights the immense potential of photonics for efficient hardware accelerators, particularly for advanced machine-learning workloads, such as Transformer-backboned large language models (LLM). Our implementation is available at https://github.com/zhuhanqing/Lightening-Transformer.",
+        "identifiers": [
+          "SemanticScholar:1a468046a70b88c95528ab546d78374597c82531"
+        ],
+        "semantic_scholar_id": "1a468046a70b88c95528ab546d78374597c82531",
+        "canonical_id": "arXiv:2305.19533",
+        "arxiv_id": "2305.19533",
+        "doi": "10.1109/HPCA57654.2024.00059",
+        "authors": [
+          "Hanqing Zhu",
+          "Jiaqi Gu",
+          "Hanrui Wang",
+          "Zi-Xuan Jiang",
+          "Zhe-Kai Zhang",
+          "R. Tang",
+          "Chenghao Feng",
+          "Song Han",
+          "Ray T. Chen",
+          "David Z. Pan"
+        ],
+        "priority": 71,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 61,
+          "citation_count": 61,
+          "total": 71,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1249,
+          "matched_prestigious_venue": "High-Performance Computer Architecture"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:ebd25b6fd2e900142629d405793b9bbdf3fff11170159a499017a9a010818389",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
