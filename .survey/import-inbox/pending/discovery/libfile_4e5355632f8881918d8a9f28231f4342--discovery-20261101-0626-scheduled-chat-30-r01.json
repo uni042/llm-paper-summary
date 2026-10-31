@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261101-0626-scheduled-chat-30/r01",
+  "reference_main_sha": "924a25204b5d48841bf7bdc39265b41d800a618e",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408572",
+      "identity_tokens": [
+        "DOI:10.1109/HPCA68181.2026.11408572"
+      ],
+      "title": "TENET-v2: Applying Relation-Centric Notation to Model and Optimize Data Swizzle in the Cache of Modern NPU",
+      "reason": "HPCA 2026公式会議要旨を確認。TENET-v2（会議プログラム要旨では旧名称SnakeMan）は、NPUキャッシュのデータswizzleに対し、relation-centric notationでアクセスパターンを表現し、非飽和時の解析モデルと飽和時の早期終了付きシミュレーションを組み合わせてキャッシュ挙動を予測・最適化する。公式会議要旨では複数DNN上のA100 GPUで従来テンソルプログラム最適化器比最大1.5倍の改善を報告。ただしLLM推論やLLMサービングを特定対象とする検証ではなく、汎用NPU/GPUキャッシュ最適化の研究であるため、LLM推論カーネル最適化との接点はあるが直接的なLLMシステム貢献は未確認としてborderline。IEEE掲載版と会議プログラムの要旨には手法名・評価指標の差異があり、ここでは会議公式要旨に基づく記述のみ採用。",
+      "source_url": "https://2026.hpca-conf.org/details/hpca-2026-main-conference/61/SnakeMan-Applying-Relation-centric-Notation-to-Model-and-Optimize-Data-Swizzle-in-th",
+      "body_check": "primary_conference_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T06:30:03+09:00",
+      "last_checked_at": "2026-11-01T06:30:03+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 500",
+        "https://doi.org/10.1109/HPCA68181.2026.11408572",
+        "https://xplorestaging.ieee.org/document/11408572"
+      ],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_conference_abstract_screen"
+    }
+  ]
+}
