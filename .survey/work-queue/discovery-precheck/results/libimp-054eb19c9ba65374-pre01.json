@@ -1,0 +1,798 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-054eb19c9ba65374-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-054eb19c9ba6",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "DOI:10.1038/s41598-025-92586-5",
+    "DOI:10.1109/icassp49660.2025.10890445",
+    "DOI:10.18653/v1/2026.acl-long.819",
+    "DOI:10.18653/v1/2026.findings-acl.1335",
+    "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+    "arXiv:2412.15127",
+    "arXiv:2502.00046",
+    "arXiv:2610.01892"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 8,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "33e6e70aa4016f325f6843481bfbfc4fe2b4bfc3",
+  "raw_search_result_count": 8,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 8,
+  "provider_progress": {
+    "requested_count": 8,
+    "status_counts": {
+      "allowed": 8,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-10-31T18:03:32.155194+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "DOI:10.1038/s41598-025-92586-5",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.1109/icassp49660.2025.10890445",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.acl-long.819",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "DOI:10.18653/v1/2026.findings-acl.1335",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2412.15127",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2502.00046",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.01892",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Efficient self-attention with smart pruning for sustainable large language models",
+      "source_url": "https://doi.org/10.1038/s41598-025-92586-5",
+      "year": 2025,
+      "published": "2025-03-24",
+      "venue": "Scientific Reports",
+      "citation_count": 42,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have revolutionized artificial intelligence by enabling multitasking across diverse fields. However, their high computational demands result in significant environmental impacts, particularly in terms of energy and water consumption. This paper addresses these issues by proposing an innovative compression approach to reducing LLM sizes. We focus on compressing the internal transformer layers, which are critical contributors to LLMs’ computational complexity. Our approach combines new mathematical and structural key methods for model compression. We begin by applying Forward Propagation Pruning (FPP) to compress the embedding and feed-forward layers, utilizing a weight freezing and zeroing technique for suspected unused parameters. This reduces the number of trainable parameters, accelerating the overall training process and enabling faster convergence. Second, the Weight Matrix Folding method is introduced to efficiently prune the self-attention layer matrices in a simple and efficient mathematical model. This method integrates Identical Row Compression (IRC) to optimize the compression of the Query and Key matrices, alongside Diagonal Weight Compression (DWC), which reformulates the Value matrix into a diagonal structure. Consequently, this technique significantly diminishes parameter variability across the three metrics, enhancing consistency and performance while simplifying complexity. The compression approach is evaluated on three language modeling datasets and eight widely used classification datasets, comparing it to various pruning methods. Our method successfully compresses transformer layers by 99% and linear layers by 70%, resulting in an overall model compression of around 70%, while maintaining nearly the same accuracy. Notably, with moderate compression rates of 20% to 40%, model performance not only remained stable but even improved. This leads to substantial reductions in memory usage and computational demands, making LLMs more resource-efficient and highlighting the potential to optimize them for a more sustainable AI future.",
+      "identifiers": [
+        "SemanticScholar:6a75b227672ac3ee14e1167f8f6498c7e0abe122"
+      ],
+      "semantic_scholar_id": "6a75b227672ac3ee14e1167f8f6498c7e0abe122",
+      "doi": "10.1038/s41598-025-92586-5",
+      "canonical_id": "DOI:10.1038/s41598-025-92586-5",
+      "authors": [
+        "S. Belhaouari",
+        "Insaf Kraidia"
+      ],
+      "priority": 42,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 42,
+        "citation_count": 42,
+        "total": 42,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 586,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.819",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ",",
+      "identifiers": [
+        "SemanticScholar:8a96a258869f452a46f85b9f42f660f6c6520d63"
+      ],
+      "semantic_scholar_id": "8a96a258869f452a46f85b9f42f660f6c6520d63",
+      "doi": "10.18653/v1/2026.acl-long.819",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.819",
+      "authors": [
+        "Fan Li",
+        "Yu Gu",
+        "Zhigang Wang",
+        "Fangling Leng",
+        "Zheng-Hao Liu",
+        "Ge Yu"
+      ],
+      "priority": 12,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 12,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "CLARO: Controlled Attribute-Driven Reasoning Optimization for Efficient Chain-of-Thought",
+      "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1335",
+      "year": 2026,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models exhibit strong reasoning capabilities but often require significant computational resources due to verbose, un-structured Chain-of-Thought outputs. Recent approaches guide reasoning length through to-ken penalties or truncation, risking the omission of necessary steps. We posit that conciseness should be an emergent property of structured thought, rather than a result of artificially forced brevity. To this end, we first demonstrate that Attribute-Guided Prompting , a lightweight zero-shot strategy, improves reasoning performance while reducing inference cost. Building on this foundation, we introduce C ontro l led A ttribute-Driven R easoning O ptimization ( CLARO ), a reinforcement learning framework designed to internalize these benefits. CLARO guides models to embed high-quality structural attributes, such as read-ability, math density, syntactic compression, and low redundancy, within a user-defined to-ken budget. The proposed method outperforms state-of-the-art baselines across diverse benchmarks, yielding accuracy gains of up to 63.6%, demonstrating that guiding generated output language structure enhances reasoning. Overall, our findings establish that optimizing the thought process structure refines reasoning efficacy, with computational efficiency emerging as a derivative benefit of a clearer thought process. Code and models are available at https://github.com/odedsc/CLARO .",
+      "identifiers": [
+        "SemanticScholar:0f9dbe92a4aa652fc6cbfb9e0abf69b185ccf936"
+      ],
+      "semantic_scholar_id": "0f9dbe92a4aa652fc6cbfb9e0abf69b185ccf936",
+      "doi": "10.18653/v1/2026.findings-acl.1335",
+      "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1335",
+      "authors": [
+        "Oded Schlesinger",
+        "Young Kyung Kim",
+        "Matías Di Martino",
+        "Guillermo Sapiro"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 122,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+      "source_url": "https://arxiv.org/abs/2610.01892",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal agents commonly generate free-form reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from these reasoning candidates based on their likelihoods given the current context, without requiring an auxiliary task head. Using pre-specified reasoning traces enables parallel scoring, where teacher-forced prefilling computes token likelihoods concurrently within and across candidates using a shared context KV cache. We evaluate SSR on seven multimodal search benchmarks using 2B and 4B models. Across multiple reinforcement learning objectives and supervised fine-tuning, SSR delivers significant efficiency gains without sacrificing task performance. SSR achieves an average success rate competitive with leading search agents of the same scale, while reducing per-turn reasoning latency by over 90% and total per-question model inference latency by 28-54%. Project page: https://zfy0314.github.io/ssr-webpage/.",
+      "identifiers": [
+        "SemanticScholar:c62b40fb4ec78581ecc3dc05d17c858cb377c8ae"
+      ],
+      "semantic_scholar_id": "c62b40fb4ec78581ecc3dc05d17c858cb377c8ae",
+      "canonical_id": "arXiv:2610.01892",
+      "arxiv_id": "2610.01892",
+      "authors": [
+        "Feiyu Zhu",
+        "Xiao-Yu Zhu",
+        "Ji-Qian Yang",
+        "Rui-Jie Yang",
+        "Arnab Mondal",
+        "Yan-Cheng Wang",
+        "Xin-Ke Deng",
+        "Jean Oh",
+        "Reid G. Simmons",
+        "Joerg Liebelt",
+        "Xiang Kong",
+        "Zhong-Yu Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LoRATEE: A Secure and Efficient Inference Framework for Multi-Tenant LoRA LLMs Based on TEE",
+      "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890445",
+      "year": 2025,
+      "published": "2025-04-06",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 9,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-Rank Adaptation (LoRA) is a parameter-efficient fine-tuning approach that adaptes pre-trained Large Language Models (LLMs) to multi-tenant tasks by generating a variety of LoRA adapters. However, this approach faces significant security challenges and is particularly susceptible to malicious servers stealing model parameters and sensitive data. Existing research on addressing security risks in multi-tenant environments remains constrained and insufficient. This paper explores the security challenges and proposes the LoRATEE framework, which embeds LoRA adapters within a server-side Trusted Execution Environment (TEE) and employs a lightweight One-Time Pad (OTP) encryption mechanism to ensure secure data transmission. Additionally, we design a dynamic LoRA adapter prefetching mechanism to reduce I/O latency. Moreover, a LoRA adapter module equivalence-sharing strategy based on Parameter-Efficient Fine-Tuning (PEFT) and minimalist design principles was introduced to optimize adapters loading. Experimental results show that LoRATEE maintains inference efficiency while securing multi-tenant LoRA LLMs systems.",
+      "identifiers": [
+        "SemanticScholar:6814d707b0e1f550baebde21c6753d0d7e2f6996"
+      ],
+      "semantic_scholar_id": "6814d707b0e1f550baebde21c6753d0d7e2f6996",
+      "doi": "10.1109/ICASSP49660.2025.10890445",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890445",
+      "authors": [
+        "Zechao Lin",
+        "Sisi Zhang",
+        "Xing-Bin Wang",
+        "Yulan Su",
+        "Yan Wang",
+        "Rui Hou",
+        "Dan Meng"
+      ],
+      "priority": 9,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 9,
+        "citation_count": 9,
+        "total": 9,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 573,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Optimization Strategies for Enhancing Resource Efficiency in Transformers & Large Language Models",
+      "source_url": "https://arxiv.org/abs/2502.00046",
+      "year": 2025,
+      "published": "2025-01-16",
+      "venue": "International Conference on Performance Engineering",
+      "citation_count": 5,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Advancements in Natural Language Processing are heavily reliant on Transformer architectures, whose improvements come at substantial resource costs due to ever-growing model sizes. This study explores optimization techniques, including quantization, knowledge distillation, and pruning, focusing on energy and computational efficiency while retaining performance. Among standalone methods, 4-Bit quantization significantly reduces energy use with minimal accuracy loss. Hybrid approaches, like NVIDIA's Minitron approach combining KD and structured pruning, further demonstrate promising trade-offs between size reduction and accuracy retention. A novel optimization framework is introduced, offering a flexible framework for comparing various methods. Through the investigation of these compression methods, we provide valuable insights for developing more sustainable and efficient LLMs, shining a light on the often-ignored concern of energy efficiency.",
+      "identifiers": [
+        "SemanticScholar:ce68fb6929a08d7c29d0ec9a17b42b10f33b733a"
+      ],
+      "semantic_scholar_id": "ce68fb6929a08d7c29d0ec9a17b42b10f33b733a",
+      "canonical_id": "arXiv:2502.00046",
+      "arxiv_id": "2502.00046",
+      "doi": "10.1145/3676151.3719379",
+      "authors": [
+        "T. Wallace",
+        "Naser Ezzati-jivan",
+        "Beatrice Ombuki-Berman"
+      ],
+      "priority": 5,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 5,
+        "citation_count": 5,
+        "total": 5,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 653,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Enabling Efﬁcient GPU Communication over Multiple NICs with FuseLink",
+      "source_url": "https://www.semanticscholar.org/paper/b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "year": null,
+      "published": null,
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033"
+      ],
+      "semantic_scholar_id": "b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "canonical_id": "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "authors": [
+        "Zheng-Hang Ren",
+        "Yuxuan Li",
+        "Zi-Long Wang",
+        "Xinyang Huang",
+        "Wen-Xue Li",
+        "Kai-Qiang Xu",
+        "Xu-Dong Liao",
+        "Yijun Sun",
+        "Bowen Liu",
+        "Han Tian",
+        "Junxue Zhang",
+        "Mingfei Wang",
+        "Zhi-Zhen Zhong",
+        "Gu-Yue Liu",
+        "Ying Zhang",
+        "Kai Chen"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Adaptive Pruning for Large Language Models with Structural Importance Awareness",
+      "source_url": "https://arxiv.org/abs/2412.15127",
+      "year": 2024,
+      "published": "2024-12-19",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The recent advancements in large language models (LLMs) have significantly improved language understanding and generation capabilities. However, it is difficult to deploy LLMs on resource-constrained edge devices due to their high computational and storage resource demands. To address this issue, we propose a novel LLM model pruning method, namely structurally-aware adaptive pruning (SAAP), to significantly reduce the computational and memory costs while maintaining model performance. We first define an adaptive importance fusion metric to evaluate the importance of all coupled structures in LLMs by considering their homoscedastic uncertainty. Then, we rank the importance of all modules to determine the specific layers that should be pruned to meet particular performance requirements. Furthermore, we develop a new group fine-tuning strategy to improve the inference efficiency of LLMs. Finally, we evaluate the proposed SAAP method on multiple LLMs across two common tasks, i.e., zero-shot classification and text generation. Experimental results show that our SAAP method outperforms several state-of-the-art baseline methods, achieving 2.17%, 2.37%, and 2.39% accuracy gains on LLaMA-7B, Vicuna-7B, and LLaMA-13B. Additionally, SAAP improves the token generation speed by 5%, showcasing its practical advantages in resource-constrained scenarios.",
+      "identifiers": [
+        "SemanticScholar:ad8f3df4ae56cff9c12aa81392a584f461561542"
+      ],
+      "semantic_scholar_id": "ad8f3df4ae56cff9c12aa81392a584f461561542",
+      "canonical_id": "arXiv:2412.15127",
+      "arxiv_id": "2412.15127",
+      "doi": "10.48550/arXiv.2412.15127",
+      "authors": [
+        "Hao-Tian Zheng",
+        "Jinke Ren",
+        "Yushan Sun",
+        "Rui-Chen Zhang",
+        "Wenbo Zhang",
+        "Zhen Li",
+        "D. Niyato",
+        "Shu-Guang Cui",
+        "Ya-Tong Han"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 681,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:DOI:10.1038/s41598-025-92586-5",
+      "identity_tokens": [
+        "id:DOI:10.1038/s41598-025-92586-5",
+        "id:SemanticScholar:6a75b227672ac3ee14e1167f8f6498c7e0abe122",
+        "title:efficient selfattention with smart pruning for sustainable large language models",
+        "url:https://doi.org/10.1038/s41598-025-92586-5"
+      ],
+      "record": {
+        "title": "Efficient self-attention with smart pruning for sustainable large language models",
+        "source_url": "https://doi.org/10.1038/s41598-025-92586-5",
+        "year": 2025,
+        "published": "2025-03-24",
+        "venue": "Scientific Reports",
+        "citation_count": 42,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have revolutionized artificial intelligence by enabling multitasking across diverse fields. However, their high computational demands result in significant environmental impacts, particularly in terms of energy and water consumption. This paper addresses these issues by proposing an innovative compression approach to reducing LLM sizes. We focus on compressing the internal transformer layers, which are critical contributors to LLMs’ computational complexity. Our approach combines new mathematical and structural key methods for model compression. We begin by applying Forward Propagation Pruning (FPP) to compress the embedding and feed-forward layers, utilizing a weight freezing and zeroing technique for suspected unused parameters. This reduces the number of trainable parameters, accelerating the overall training process and enabling faster convergence. Second, the Weight Matrix Folding method is introduced to efficiently prune the self-attention layer matrices in a simple and efficient mathematical model. This method integrates Identical Row Compression (IRC) to optimize the compression of the Query and Key matrices, alongside Diagonal Weight Compression (DWC), which reformulates the Value matrix into a diagonal structure. Consequently, this technique significantly diminishes parameter variability across the three metrics, enhancing consistency and performance while simplifying complexity. The compression approach is evaluated on three language modeling datasets and eight widely used classification datasets, comparing it to various pruning methods. Our method successfully compresses transformer layers by 99% and linear layers by 70%, resulting in an overall model compression of around 70%, while maintaining nearly the same accuracy. Notably, with moderate compression rates of 20% to 40%, model performance not only remained stable but even improved. This leads to substantial reductions in memory usage and computational demands, making LLMs more resource-efficient and highlighting the potential to optimize them for a more sustainable AI future.",
+        "identifiers": [
+          "SemanticScholar:6a75b227672ac3ee14e1167f8f6498c7e0abe122"
+        ],
+        "semantic_scholar_id": "6a75b227672ac3ee14e1167f8f6498c7e0abe122",
+        "doi": "10.1038/s41598-025-92586-5",
+        "canonical_id": "DOI:10.1038/s41598-025-92586-5",
+        "authors": [
+          "S. Belhaouari",
+          "Insaf Kraidia"
+        ],
+        "priority": 42,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 42,
+          "citation_count": 42,
+          "total": 42,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 586,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.acl-long.819",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.819",
+        "id:SemanticScholar:8a96a258869f452a46f85b9f42f660f6c6520d63",
+        "title:towards efficient and effective diffusion language model inference via semanticaware adaptive denoising",
+        "url:https://doi.org/10.18653/v1/2026.acl-long.819"
+      ],
+      "record": {
+        "title": "Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising",
+        "source_url": "https://doi.org/10.18653/v1/2026.acl-long.819",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": ",",
+        "identifiers": [
+          "SemanticScholar:8a96a258869f452a46f85b9f42f660f6c6520d63"
+        ],
+        "semantic_scholar_id": "8a96a258869f452a46f85b9f42f660f6c6520d63",
+        "doi": "10.18653/v1/2026.acl-long.819",
+        "canonical_id": "DOI:10.18653/v1/2026.acl-long.819",
+        "authors": [
+          "Fan Li",
+          "Yu Gu",
+          "Zhigang Wang",
+          "Fangling Leng",
+          "Zheng-Hao Liu",
+          "Ge Yu"
+        ],
+        "priority": 12,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 12,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 122,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.18653/v1/2026.findings-acl.1335",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.findings-acl.1335",
+        "id:SemanticScholar:0f9dbe92a4aa652fc6cbfb9e0abf69b185ccf936",
+        "title:claro controlled attributedriven reasoning optimization for efficient chainofthought",
+        "url:https://doi.org/10.18653/v1/2026.findings-acl.1335"
+      ],
+      "record": {
+        "title": "CLARO: Controlled Attribute-Driven Reasoning Optimization for Efficient Chain-of-Thought",
+        "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.1335",
+        "year": 2026,
+        "published": null,
+        "venue": "Annual Meeting of the Association for Computational Linguistics",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models exhibit strong reasoning capabilities but often require significant computational resources due to verbose, un-structured Chain-of-Thought outputs. Recent approaches guide reasoning length through to-ken penalties or truncation, risking the omission of necessary steps. We posit that conciseness should be an emergent property of structured thought, rather than a result of artificially forced brevity. To this end, we first demonstrate that Attribute-Guided Prompting , a lightweight zero-shot strategy, improves reasoning performance while reducing inference cost. Building on this foundation, we introduce C ontro l led A ttribute-Driven R easoning O ptimization ( CLARO ), a reinforcement learning framework designed to internalize these benefits. CLARO guides models to embed high-quality structural attributes, such as read-ability, math density, syntactic compression, and low redundancy, within a user-defined to-ken budget. The proposed method outperforms state-of-the-art baselines across diverse benchmarks, yielding accuracy gains of up to 63.6%, demonstrating that guiding generated output language structure enhances reasoning. Overall, our findings establish that optimizing the thought process structure refines reasoning efficacy, with computational efficiency emerging as a derivative benefit of a clearer thought process. Code and models are available at https://github.com/odedsc/CLARO .",
+        "identifiers": [
+          "SemanticScholar:0f9dbe92a4aa652fc6cbfb9e0abf69b185ccf936"
+        ],
+        "semantic_scholar_id": "0f9dbe92a4aa652fc6cbfb9e0abf69b185ccf936",
+        "doi": "10.18653/v1/2026.findings-acl.1335",
+        "canonical_id": "DOI:10.18653/v1/2026.findings-acl.1335",
+        "authors": [
+          "Oded Schlesinger",
+          "Young Kyung Kim",
+          "Matías Di Martino",
+          "Guillermo Sapiro"
+        ],
+        "priority": 11,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 11,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 122,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.01892",
+      "identity_tokens": [
+        "id:SemanticScholar:c62b40fb4ec78581ecc3dc05d17c858cb377c8ae",
+        "id:arXiv:2610.01892",
+        "title:selectionbased structured reasoning toward efficient multimodal search agents",
+        "url:https://arxiv.org/abs/2610.01892"
+      ],
+      "record": {
+        "title": "Selection-Based Structured Reasoning: Toward Efficient Multimodal Search Agents",
+        "source_url": "https://arxiv.org/abs/2610.01892",
+        "year": 2026,
+        "published": "2026-10-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multimodal agents commonly generate free-form reasoning before each action. For small models, limited model capacity can result in lengthy reasoning that provides little useful guidance for action generation while incurring substantial inference cost. To address this challenge, we introduce Selection-based Structured Reasoning (SSR), a framework that reformulates reasoning as selection instead of open-ended generation. SSR represents recurring high-level reasoning as pre-specified, reusable natural-language candidates. At each turn, the model selects from these reasoning candidates based on their likelihoods given the current context, without requiring an auxiliary task head. Using pre-specified reasoning traces enables parallel scoring, where teacher-forced prefilling computes token likelihoods concurrently within and across candidates using a shared context KV cache. We evaluate SSR on seven multimodal search benchmarks using 2B and 4B models. Across multiple reinforcement learning objectives and supervised fine-tuning, SSR delivers significant efficiency gains without sacrificing task performance. SSR achieves an average success rate competitive with leading search agents of the same scale, while reducing per-turn reasoning latency by over 90% and total per-question model inference latency by 28-54%. Project page: https://zfy0314.github.io/ssr-webpage/.",
+        "identifiers": [
+          "SemanticScholar:c62b40fb4ec78581ecc3dc05d17c858cb377c8ae"
+        ],
+        "semantic_scholar_id": "c62b40fb4ec78581ecc3dc05d17c858cb377c8ae",
+        "canonical_id": "arXiv:2610.01892",
+        "arxiv_id": "2610.01892",
+        "authors": [
+          "Feiyu Zhu",
+          "Xiao-Yu Zhu",
+          "Ji-Qian Yang",
+          "Rui-Jie Yang",
+          "Arnab Mondal",
+          "Yan-Cheng Wang",
+          "Xin-Ke Deng",
+          "Jean Oh",
+          "Reid G. Simmons",
+          "Joerg Liebelt",
+          "Xiang Kong",
+          "Zhong-Yu Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:DOI:10.1109/icassp49660.2025.10890445",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp49660.2025.10890445",
+        "id:SemanticScholar:6814d707b0e1f550baebde21c6753d0d7e2f6996",
+        "title:loratee a secure and efficient inference framework for multitenant lora llms based on tee",
+        "url:https://doi.org/10.1109/ICASSP49660.2025.10890445"
+      ],
+      "record": {
+        "title": "LoRATEE: A Secure and Efficient Inference Framework for Multi-Tenant LoRA LLMs Based on TEE",
+        "source_url": "https://doi.org/10.1109/ICASSP49660.2025.10890445",
+        "year": 2025,
+        "published": "2025-04-06",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 9,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-Rank Adaptation (LoRA) is a parameter-efficient fine-tuning approach that adaptes pre-trained Large Language Models (LLMs) to multi-tenant tasks by generating a variety of LoRA adapters. However, this approach faces significant security challenges and is particularly susceptible to malicious servers stealing model parameters and sensitive data. Existing research on addressing security risks in multi-tenant environments remains constrained and insufficient. This paper explores the security challenges and proposes the LoRATEE framework, which embeds LoRA adapters within a server-side Trusted Execution Environment (TEE) and employs a lightweight One-Time Pad (OTP) encryption mechanism to ensure secure data transmission. Additionally, we design a dynamic LoRA adapter prefetching mechanism to reduce I/O latency. Moreover, a LoRA adapter module equivalence-sharing strategy based on Parameter-Efficient Fine-Tuning (PEFT) and minimalist design principles was introduced to optimize adapters loading. Experimental results show that LoRATEE maintains inference efficiency while securing multi-tenant LoRA LLMs systems.",
+        "identifiers": [
+          "SemanticScholar:6814d707b0e1f550baebde21c6753d0d7e2f6996"
+        ],
+        "semantic_scholar_id": "6814d707b0e1f550baebde21c6753d0d7e2f6996",
+        "doi": "10.1109/ICASSP49660.2025.10890445",
+        "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890445",
+        "authors": [
+          "Zechao Lin",
+          "Sisi Zhang",
+          "Xing-Bin Wang",
+          "Yulan Su",
+          "Yan Wang",
+          "Rui Hou",
+          "Dan Meng"
+        ],
+        "priority": 9,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 9,
+          "citation_count": 9,
+          "total": 9,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 573,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2502.00046",
+      "identity_tokens": [
+        "id:DOI:10.1145/3676151.3719379",
+        "id:SemanticScholar:ce68fb6929a08d7c29d0ec9a17b42b10f33b733a",
+        "id:arXiv:2502.00046",
+        "title:optimization strategies for enhancing resource efficiency in transformers large language models",
+        "url:https://arxiv.org/abs/2502.00046"
+      ],
+      "record": {
+        "title": "Optimization Strategies for Enhancing Resource Efficiency in Transformers & Large Language Models",
+        "source_url": "https://arxiv.org/abs/2502.00046",
+        "year": 2025,
+        "published": "2025-01-16",
+        "venue": "International Conference on Performance Engineering",
+        "citation_count": 5,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Advancements in Natural Language Processing are heavily reliant on Transformer architectures, whose improvements come at substantial resource costs due to ever-growing model sizes. This study explores optimization techniques, including quantization, knowledge distillation, and pruning, focusing on energy and computational efficiency while retaining performance. Among standalone methods, 4-Bit quantization significantly reduces energy use with minimal accuracy loss. Hybrid approaches, like NVIDIA's Minitron approach combining KD and structured pruning, further demonstrate promising trade-offs between size reduction and accuracy retention. A novel optimization framework is introduced, offering a flexible framework for comparing various methods. Through the investigation of these compression methods, we provide valuable insights for developing more sustainable and efficient LLMs, shining a light on the often-ignored concern of energy efficiency.",
+        "identifiers": [
+          "SemanticScholar:ce68fb6929a08d7c29d0ec9a17b42b10f33b733a"
+        ],
+        "semantic_scholar_id": "ce68fb6929a08d7c29d0ec9a17b42b10f33b733a",
+        "canonical_id": "arXiv:2502.00046",
+        "arxiv_id": "2502.00046",
+        "doi": "10.1145/3676151.3719379",
+        "authors": [
+          "T. Wallace",
+          "Naser Ezzati-jivan",
+          "Beatrice Ombuki-Berman"
+        ],
+        "priority": 5,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 5,
+          "citation_count": 5,
+          "total": 5,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 653,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+      "identity_tokens": [
+        "id:SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+        "title:enabling efficient gpu communication over multiple nics with fuselink",
+        "url:https://www.semanticscholar.org/paper/b61919d6e75bc5d913cf6cd40efd19a43cec8033"
+      ],
+      "record": {
+        "title": "Enabling Efﬁcient GPU Communication over Multiple NICs with FuseLink",
+        "source_url": "https://www.semanticscholar.org/paper/b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+        "year": null,
+        "published": null,
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": null,
+        "identifiers": [
+          "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033"
+        ],
+        "semantic_scholar_id": "b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+        "canonical_id": "SemanticScholar:b61919d6e75bc5d913cf6cd40efd19a43cec8033",
+        "authors": [
+          "Zheng-Hang Ren",
+          "Yuxuan Li",
+          "Zi-Long Wang",
+          "Xinyang Huang",
+          "Wen-Xue Li",
+          "Kai-Qiang Xu",
+          "Xu-Dong Liao",
+          "Yijun Sun",
+          "Bowen Liu",
+          "Han Tian",
+          "Junxue Zhang",
+          "Mingfei Wang",
+          "Zhi-Zhen Zhong",
+          "Gu-Yue Liu",
+          "Ying Zhang",
+          "Kai Chen"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": null,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2412.15127",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2412.15127",
+        "id:SemanticScholar:ad8f3df4ae56cff9c12aa81392a584f461561542",
+        "id:arXiv:2412.15127",
+        "title:adaptive pruning for large language models with structural importance awareness",
+        "url:https://arxiv.org/abs/2412.15127"
+      ],
+      "record": {
+        "title": "Adaptive Pruning for Large Language Models with Structural Importance Awareness",
+        "source_url": "https://arxiv.org/abs/2412.15127",
+        "year": 2024,
+        "published": "2024-12-19",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The recent advancements in large language models (LLMs) have significantly improved language understanding and generation capabilities. However, it is difficult to deploy LLMs on resource-constrained edge devices due to their high computational and storage resource demands. To address this issue, we propose a novel LLM model pruning method, namely structurally-aware adaptive pruning (SAAP), to significantly reduce the computational and memory costs while maintaining model performance. We first define an adaptive importance fusion metric to evaluate the importance of all coupled structures in LLMs by considering their homoscedastic uncertainty. Then, we rank the importance of all modules to determine the specific layers that should be pruned to meet particular performance requirements. Furthermore, we develop a new group fine-tuning strategy to improve the inference efficiency of LLMs. Finally, we evaluate the proposed SAAP method on multiple LLMs across two common tasks, i.e., zero-shot classification and text generation. Experimental results show that our SAAP method outperforms several state-of-the-art baseline methods, achieving 2.17%, 2.37%, and 2.39% accuracy gains on LLaMA-7B, Vicuna-7B, and LLaMA-13B. Additionally, SAAP improves the token generation speed by 5%, showcasing its practical advantages in resource-constrained scenarios.",
+        "identifiers": [
+          "SemanticScholar:ad8f3df4ae56cff9c12aa81392a584f461561542"
+        ],
+        "semantic_scholar_id": "ad8f3df4ae56cff9c12aa81392a584f461561542",
+        "canonical_id": "arXiv:2412.15127",
+        "arxiv_id": "2412.15127",
+        "doi": "10.48550/arXiv.2412.15127",
+        "authors": [
+          "Hao-Tian Zheng",
+          "Jinke Ren",
+          "Yushan Sun",
+          "Rui-Chen Zhang",
+          "Wenbo Zhang",
+          "Zhen Li",
+          "D. Niyato",
+          "Shu-Guang Cui",
+          "Ya-Tong Han"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 681,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:a4a9841cd83a88750a31ee613565e2d5b84fe78149aa4bb029aafb170a56f8d1",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
