@@ -1,0 +1,198 @@
+{
+  "run_key": "20261101-0003-scheduled-chat-00/r02",
+  "worker_id": "scheduled-chat-00",
+  "round": 2,
+  "mode": "Discovery",
+  "status": "complete",
+  "record_count": 10,
+  "records": [
+    {
+      "canonical_id": "DOI:10.61784/adsj3036",
+      "identity_tokens": [
+        "DOI:10.61784/adsj3036"
+      ],
+      "title": "TEAS: Token- and Energy-Aware Autoscaling for Cost-Efficient LLM Serving",
+      "classification": "accept",
+      "reason": "prefill/decodeを重み付けしたeffective token数を負荷指標とし、cold startに対応する先読み予測、burstiness適応headroom、起動エネルギーを考慮したscale-in hysteresisを統合。原著全文のtrace-drivenシミュレーションではAzure実トレースの8倍リプレイと派生ワークロードを評価し、code-8xのSLO達成率99.8%対HPA-Util67.6%、ただし費用156.66ドル対42.72ドルと高い。平滑負荷ではTEASがHPAより26%高コスト。実GPUクラスタ実測ではなく、fluid queueと線形電力モデルのシミュレーションに限定。",
+      "source_url": "https://www.researchgate.net/publication/410653127_TEAS_TOKEN-_AND_ENERGY-AWARE_AUTOSCALING_FOR_COST-EFFICIENT_LLM_SERVING",
+      "body_check": "掲載原著全文のAbstract、Methods、Table 2/3、Limitationsを確認。出版社サイト原本は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 9; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 9,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TENCON66050.2025.11375380",
+      "identity_tokens": [
+        "DOI:10.1109/TENCON66050.2025.11375380"
+      ],
+      "title": "Efficient Task Scheduling Algorithms for Decentralized Large Language Model Serving",
+      "classification": "accept",
+      "reason": "DePIN上の分散GPUにLLMの各層を割り当てるタスクスケジューリングを、改良greedy最短路IGHSPAと動的計画法DPTSAで最適化。IEEE出版社要旨のシミュレーションでは既存GHSPAおよびIGHSPA比でTPOTを最大47.50%/35.50%改善、アルゴリズム実行時間を最大99.95%/35.00%改善と報告。GPU実機サービスのエンドツーエンド計測と混同しない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11375380/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 354; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 354,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICEECT61758.2024.10739061",
+      "identity_tokens": [
+        "DOI:10.1109/ICEECT61758.2024.10739061"
+      ],
+      "title": "Scaling Up the Transformers: A Survey of Training and Inference Optimization Techniques",
+      "classification": "borderline",
+      "reason": "Transformerの正則化、並列化、ハイブリッドアーキテクチャ、弱教師あり学習、CNN-Transformerや音響イベント検出を概観する総説。推論最適化への言及はあるが主眼は広範なNLP/学習技術であり、LLM生成サービングの具体的な性能評価は含まれないためborderline。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/10739061/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 355; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 355,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/INFOCOM59046.2026.11571360",
+      "identity_tokens": [
+        "DOI:10.1109/INFOCOM59046.2026.11571360"
+      ],
+      "title": "Robust Prewarming Orchestration for Multi-Model Elastic Inference under Traffic Uncertainty",
+      "classification": "accept",
+      "reason": "SCOPEは複数モデルがGPU poolを共有する際のweight事前ロードとインスタンス起動を、到着率の不確実性集合とsojourn-time保証の下で共同最適化する。キューイング制約を線形化・双対化してMILPに定式化。IEEE出版社要旨の数値実験ではweight loading volumeを64〜83%削減し、robust prewarm hit rate98%を報告。LLM限定の実機ベンチマークとは記載されていない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11571360/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 390; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 390,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TNSM.2026.3734530",
+      "identity_tokens": [
+        "DOI:10.1109/TNSM.2026.3734530"
+      ],
+      "title": "RoQuant: Resilient LLM Service Provisioning and Resource Management in Soft-Error-Prone Satellite Networks",
+      "classification": "accept",
+      "reason": "衛星エッジで放射線由来soft errorを想定し、重み行列ごとの故障脆弱性、SAPS混合精度構成、DoRA適応とPACT clippingを統合する。IEEE正式要旨のBER=1e-6評価でQwen2.5-1.5B/3B、Llama3.2-3BのFP16比encoded-weight容量を52.6/54.4/49.2%削減し、service delayは10.6/12.4/17.0%増。これは耐障害性・容量のトレードオフであり速度改善ではない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11695265/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 389; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 389,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/PRAI67447.2025.11412576",
+      "identity_tokens": [
+        "DOI:10.1109/PRAI67447.2025.11412576"
+      ],
+      "title": "An Efficient Swin Transformer Architecture Based on Grouped Query Attention",
+      "classification": "borderline",
+      "reason": "画像処理用Swin TransformerへGrouped Query Attentionを導入し、KV head共有でメモリと推論時間の削減を狙うSwinGQA。IEEE出版社要旨ではMHAとMQAの間の速度・品質選択を示すが、生成LLMやautoregressive KV cacheでの性能は直接評価しないためborderline。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11412576/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 265; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 265,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/BigData66926.2025.11402021",
+      "identity_tokens": [
+        "DOI:10.1109/BigData66926.2025.11402021"
+      ],
+      "title": "A Theoretical Framework Bridging Attention and SVM Optimization Dynamics and Sparsity",
+      "classification": "unrelated",
+      "reason": "attentionに対する勾配降下の漸近方向とSVMの関係を理論的に解析し、ロジスティック損失のLipschitz性と学習上の疎性を説明する。推論時の疎注意実装、GPU効率、KVキャッシュ圧縮や生成速度の評価を扱わないため現行推論効率サーベイからは除外。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11402021/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 274; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 274,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ICFEC69006.2026.00010",
+      "identity_tokens": [
+        "DOI:10.1109/ICFEC69006.2026.00010"
+      ],
+      "title": "LLMEdger: Phase-Aware Model Parallelism Scheduler for LLM Inference on Edge",
+      "classification": "accept",
+      "reason": "エッジCPUクラスタでprefillとdecodeそれぞれの通信・計算特性に合わせてpipeline/tensor parallelismの構成を切替。FLAN-T5-XXL 11Bを単一ノードに収まらない環境で評価し、非phase-aware方式比最大14.95%のレイテンシ短縮、単一ノード比最大2.12倍高速化をIEEE出版社要旨で報告。CPU edge cluster固有の比較であり一般的なGPUサービング性能とは区別。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11619227/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 286; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 286,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/UBMK63289.2024.10773573",
+      "identity_tokens": [
+        "DOI:10.1109/UBMK63289.2024.10773573"
+      ],
+      "title": "Adaptive Batch Budget for LLM Inference",
+      "classification": "accept",
+      "reason": "vLLM上でprefillとdecodeの要求比率に応じてバッチの計算予算を動的に調整し、TPOT・スループットとTTFTのトレードオフを改善する。IEEE正式要旨ではLlama2-7B-chatを使った比較で性能改善を報告するが、具体的な数値や再現条件は要旨から確定できないため倍率を記載しない。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/10773573/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 191; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 191,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3737447",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3737447"
+      ],
+      "title": "When and How to Rotate: Loss Design and Activation Granularity for Rotation-Based Vision Model Quantization",
+      "classification": "unrelated",
+      "reason": "回転型PTQの学習目的と活性化量子化粒度を8種類の視覚モデルで比較。RT-DETR、RF-DETR、Mask R-CNN、DeiT、Swin、ViT、ResNet、MobileNetを評価するが、生成LLMの重み量子化・推論性能は評価していない。IEEE正式要旨の本文確認に基づきunrelated。",
+      "source_url": "https://ieeexplore.ieee.org/abstract/document/11712264/",
+      "body_check": "IEEE出版社正式要旨を確認。原著本文は未取得。",
+      "linked_from": [
+        "WORKLIST-00.md rank 87; fixed main 127cdfb2d2d7f657937a244cf26a2ebc7ae076c1"
+      ],
+      "worklist_rank": 87,
+      "first_checked_at": "2026-11-01T00:12:53+09:00",
+      "last_checked_at": "2026-11-01T00:12:53+09:00"
+    }
+  ],
+  "github_main_sha": "127cdfb2d2d7f657937a244cf26a2ebc7ae076c1",
+  "notes": [
+    "r01 Library再取得・全バイト・SHA256検証成功後にr02を開始。",
+    "新規10 identity。GitHub検索でDOIと別名を照合。IEEE公式要旨、TEASは掲載原著全文を確認。",
+    "GitHub import inboxへ最終同一性判定を委譲。"
+  ],
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "reference_main_sha": "127cdfb2d2d7f657937a244cf26a2ebc7ae076c1",
+  "original_run_key": "20261101-0003-scheduled-chat-00",
+  "normalization": {
+    "by": "scheduled-chat-45",
+    "at": "2026-11-01T00:49:32+09:00",
+    "method": "add_missing_top_level_schema_and_unique_round_run_key_only",
+    "source_filename": "discovery-20261101-0003-scheduled-chat-00-r02.json",
+    "source_sha256": "1e2f439715b08bcf23b40a58f8fb5c5bd2a4d7a9b98c8353579302392756ede8",
+    "source_record_count": 10
+  }
+}
