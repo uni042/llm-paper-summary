@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0845-scheduled-chat-45/r01",
+  "reference_main_sha": "c826a511d8491244e46a8ba321420907b0c311a1",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103690",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103690"
+      ],
+      "title": "Accelerating language giants: A survey of optimization strategies for LLM inference on hardware platforms",
+      "reason": "出版社の書誌と大学機関リポジトリの一次要旨を照合。decoder-only LLM推論の高速化を対象に、GPU・FPGA・ASIC・PIMなどハードウェア別の最適化レベルで、Transformerブロック内演算子最適化とブロック実行全体のシステム最適化を分類・比較するレビュー。推論計算・メモリ資源の削減が直接の調査対象であり、収録範囲に合致する。",
+      "source_url": "https://doi.org/10.1016/j.sysarc.2026.103690",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T08:49:19+09:00",
+      "last_checked_at": "2026-10-31T08:49:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 230
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01299",
+      "identity_tokens": [
+        "arXiv:2511.01299"
+      ],
+      "title": "Towards General Auditory Intelligence: Large Multimodal Models for Machine Listening and Speaking",
+      "reason": "arXiv一次要旨では音声理解、音声生成、発話対話、音声映像理解の4領域における音声ネイティブ基盤モデルの能力・課題をレビューする。推論カーネル、KVメモリ、サービング、圧縮の技術改善を主要貢献として扱わないため、対象外。",
+      "source_url": "https://arxiv.org/abs/2511.01299",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T08:49:19+09:00",
+      "last_checked_at": "2026-10-31T08:49:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 180
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00025",
+      "identity_tokens": [
+        "arXiv:2403.00025"
+      ],
+      "title": "On the Challenges and Opportunities in Generative AI",
+      "reason": "arXiv一次要旨では画像・文章・動画・分子を含む深層生成モデルの汎用性、信頼性、普及を阻む未解決課題を俯瞰し、研究課題を提案する。LLMの推論実行時資源やサービング機構を設計・評価する研究ではないため、対象外。",
+      "source_url": "https://arxiv.org/abs/2403.00025",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T08:49:19+09:00",
+      "last_checked_at": "2026-10-31T08:49:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 250
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1049/ein2.70016",
+      "identity_tokens": [
+        "DOI:10.1049/ein2.70016"
+      ],
+      "title": "Optimising Time Series Forecasting Transformers to Linear Complexity",
+      "reason": "出版社Wileyの一次要旨・本文を照合。電力・エネルギー時系列予測用Transformerに対し、周波数特徴を用いたMA-LSHで系列を固定長チャンクへまとめ、チャンク内注意と全域特徴蒸留で計算・メモリを線形化する。効率化技術ではあるが、検証対象は時系列予測であり、LLM推論・サービングへの直接適用や評価がないため、現行サーベイでは対象外。",
+      "source_url": "https://doi.org/10.1049/ein2.70016",
+      "body_check": "publisher_abstract_and_method_sections_read; body_partially_read",
+      "first_checked_at": "2026-10-31T08:49:19+09:00",
+      "last_checked_at": "2026-10-31T08:49:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 300
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s12555-025-0127-1",
+      "identity_tokens": [
+        "DOI:10.1007/s12555-025-0127-1"
+      ],
+      "title": "Reinforced Intelligence Through Active Interaction in Real World: A Survey on Embodied AI",
+      "reason": "著者所属大学の一次書誌・要旨を照合。実世界でのembodied AIを対象に、基盤モデルによる高水準計画、affordance学習、強化学習・模倣学習によるロボット制御、SSM利用の展望を総覧する。LLM推論の実行基盤・キャッシュ・通信・量子化の技術評価を主題としないため、対象外。",
+      "source_url": "https://doi.org/10.1007/s12555-025-0127-1",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T08:49:19+09:00",
+      "last_checked_at": "2026-10-31T08:49:19+09:00",
+      "linked_from": [],
+      "worklist_rank": 350
+    }
+  ]
+}
