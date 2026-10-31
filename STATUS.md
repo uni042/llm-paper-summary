@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-31 23:35:31 JST**
+> 自動生成: **2026-10-31 23:47:40 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **572** |
 | 直近24hのResearch処理完了 | **3** |
 | 最終Research処理完了 | **10-31 01:48:57 JST** |
-| 最終Discovery探索完了 | **10-31 21:57:00 JST** |
+| 最終Discovery探索完了 | **10-31 23:06:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-31 11:47:56 JST（11時間47分前）** |
+| 最終maintenance完了 | **10-31 11:47:56 JST（11時間59分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **11** |
-| 直近6hのDiscovery本文確認・分類 | **18** |
+| 直近6hのDiscovery run | **12** |
+| 直近6hのDiscovery本文確認・分類 | **19** |
 | 最終Research完了 | **10-31 01:48:57 JST** |
-| 最終Discovery完了 | **10-31 21:57:00 JST** |
+| 最終Discovery完了 | **10-31 23:06:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-31 01:48:57 JST** / worker scheduled-chat-45 / run 20261031-0148-scheduled-chat-45/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_065a1884c270819192c5254078e8caf3--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-semantic-reaudit-20261031-0148-scheduled-chat-45-r01.json
-- Discovery: **10-31 21:57:00 JST** / worker scheduled-chat-00 / run 20261031-2157-scheduled-chat-00/r01
-  - 本文確認・分類 **3件** / accept **3件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_0f2d7f2e388481918de2dd74b32259e3--discovery-20261031-2157-scheduled-chat-00-r01-partial.json
+- Discovery: **10-31 23:06:00 JST** / worker scheduled-chat-00 / run 20261031-2306-scheduled-chat-00/r01
+  - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/pending/discovery/libfile_b0039c324c4c819180512b3d63e27145--discovery-20261031-2306-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
@@ -316,11 +316,11 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 件数 |
 |---|---:|
-| 成功result未照合のimmutable submission | **353** |
+| 成功result未照合のimmutable submission | **354** |
 | └ Research | **72** |
 | └ Audit | **2** |
 | └ Discovery | **143** |
-| └ Other/Unknown | **136** |
+| └ Other/Unknown | **137** |
 
 ### 厳格検証が未成立のcompleted job
 
