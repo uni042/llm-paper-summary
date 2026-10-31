@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-0940-scheduled-chat-45/r01",
+  "reference_main_sha": "6409195d4934afad32411e7abfc038e57e197ee2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2411.02327",
+      "identity_tokens": [
+        "arXiv:2411.02327"
+      ],
+      "title": "PPLLaVA: Varied Video Sequence Understanding With Prompt Guidance",
+      "reason": "arXiv一次要旨を確認。PPLLaVAは動画LLMの冗長な視覚トークンを、CLIPによる視覚・指示の整合、指示依存の畳み込み型pooling、長い対話指示に対応するclip context extensionで圧縮する。1024視覚contextで画像・動画ベンチマークの品質と優れたthroughputを報告し、動画の長さが数秒から数時間の条件を対象とする。生成LLMの視覚入力トークン数と推論処理量を直接削減する機構なのでaccept。ただし要旨には同一条件でのthroughput倍率の具体値はなく、数値を捏造しない。",
+      "source_url": "https://arxiv.org/abs/2411.02327",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:44:39+09:00",
+      "last_checked_at": "2026-10-31T09:44:39+09:00",
+      "linked_from": [],
+      "worklist_rank": 454,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
