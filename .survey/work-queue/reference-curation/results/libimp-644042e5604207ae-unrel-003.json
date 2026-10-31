@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-644042e5604207ae-unrel-003",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "DOI:10.1109/comst.2026.3682638",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "DOI:10.1109/comst.2026.3682638",
+    "identity_tokens": [
+      "DOI:10.1109/comst.2026.3682638"
+    ],
+    "reason": "原著要旨の公開転載を確認。6G以降の無線アクセス・物理層処理を省電力化するためのDNN剪定・量子化・知識蒸留のサーベイで、対象は無線インテリジェンスのPHY/UE/edgeモデル。LLMの生成推論・サービングシステムは直接の評価対象ではないためunrelated。",
+    "first_checked_at": "2026-10-31T08:46:53+00:00",
+    "last_checked_at": "2026-10-31T08:46:53+00:00",
+    "linked_from": [],
+    "title": "Model Compression for Sustainable AI in xG Wireless Networks: Recent Advances, Challenges, and Future Directions"
+  },
+  "processed_at": "2026-10-31T08:46:54+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-644042e56042",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

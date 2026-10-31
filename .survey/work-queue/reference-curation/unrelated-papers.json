@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-31T02:09:39+00:00",
-  "record_count": 12661,
+  "updated_at": "2026-10-31T08:46:53+00:00",
+  "record_count": 12663,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182054,6 +182054,31 @@
       "last_checked_at": "2026-10-31T02:09:39+00:00",
       "linked_from": [],
       "title": "The Information Pathways Hypothesis: Transformers are Dynamic Self-Ensembles"
+    },
+    "arXiv:2210.06640": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.06640",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2210.06640",
+        "arXiv:2210.06640"
+      ],
+      "reason": "arXiv原著要旨を確認。主題は深層学習全般の訓練計算量を減らすアルゴリズムの分類、訓練パイプラインのボトルネックと評価規範であり、LLMの生成推論・KVキャッシュ・サービングランタイムを直接最適化する研究ではない。",
+      "first_checked_at": "2026-10-31T08:46:53+00:00",
+      "last_checked_at": "2026-10-31T08:46:53+00:00",
+      "linked_from": [],
+      "title": "Compute-Efficient Deep Learning: Algorithmic Trends and Opportunities"
+    },
+    "DOI:10.1109/comst.2026.3682638": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/comst.2026.3682638",
+      "identity_tokens": [
+        "DOI:10.1109/comst.2026.3682638"
+      ],
+      "reason": "原著要旨の公開転載を確認。6G以降の無線アクセス・物理層処理を省電力化するためのDNN剪定・量子化・知識蒸留のサーベイで、対象は無線インテリジェンスのPHY/UE/edgeモデル。LLMの生成推論・サービングシステムは直接の評価対象ではないためunrelated。",
+      "first_checked_at": "2026-10-31T08:46:53+00:00",
+      "last_checked_at": "2026-10-31T08:46:53+00:00",
+      "linked_from": [],
+      "title": "Model Compression for Sustainable AI in xG Wireless Networks: Recent Advances, Challenges, and Future Directions"
     }
   }
 }

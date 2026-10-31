@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-31T03:44:21+00:00",
-  "record_count": 5573,
+  "updated_at": "2026-10-31T08:46:52+00:00",
+  "record_count": 5574,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86051,6 +86051,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "ChainPrune: Evaluating and Reducing Redundancy in Long Chain-of-Thought Reasoning"
+    },
+    "DOI:10.1109/hpcc67675.2025.00205": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/hpcc67675.2025.00205",
+      "identity_tokens": [
+        "DOI:10.1109/hpcc67675.2025.00205"
+      ],
+      "reason": "IEEE Xplore原著要旨を確認。DeepSeekの複数版・規模についてDeepSeek、BaiLian、Volcengine、Qianfan、Siliconflow、TencentCloudの6 MaaSプラットフォームを6か月間測定し、token生成速度・応答遅延などの統一的な性能評価指標を提案する。推論サービス性能測定には関係するが、推論高速化機構の新規提案は主目的ではないためborderline。",
+      "first_checked_at": "2026-10-31T08:46:52+00:00",
+      "last_checked_at": "2026-10-31T08:46:52+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Performance Testing and Analysis of Token Generation for LLMs Based on MaaS (Model-as-a-Service)"
     }
   }
 }
