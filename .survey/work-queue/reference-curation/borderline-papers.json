@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-30T22:07:54+00:00",
-  "record_count": 5566,
+  "updated_at": "2026-10-31T02:09:38+00:00",
+  "record_count": 5572,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -85956,6 +85956,87 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "MaskPro: Linear-Space Probabilistic Learning for Strict (N:M)-Sparsity on Large Language Models"
+    },
+    "DOI:10.3389/frobt.2025.1518965": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.3389/frobt.2025.1518965",
+      "identity_tokens": [
+        "DOI:10.3389/frobt.2025.1518965"
+      ],
+      "reason": "Frontiers公式一次abstractを確認。量子化・pruning・low-rank decomposition・蒸留を横断してモデル圧縮と配備制約を整理するmini review。LLM推論の技術背景として有用だが、個別のLLM serving最適化を提案・検証する一次システム研究ではないためborderline。",
+      "first_checked_at": "2026-10-31T02:09:32+00:00",
+      "last_checked_at": "2026-10-31T02:09:32+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A survey of model compression techniques: past, present, and future"
+    },
+    "arXiv:2402.06787": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.06787",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.06787",
+        "arXiv:2402.06787"
+      ],
+      "reason": "arXiv一次要旨を確認。異種GPU・ネットワークのcollective通信に対し、broadcast/aggregation spanning treeを多項式時間で生成するthroughput-optimalスケジューリングを提案。AMD MI250、NVIDIA DGX A100/H100で通信ライブラリとの比較とLLM trainingへの適用を評価。分散LLM推論の通信基盤へ応用可能だが、LLM推論サービングでのTP/EP速度改善は直接測定していないためborderline。worklist表題をarXiv正式表題に正規化。",
+      "first_checked_at": "2026-10-31T02:09:33+00:00",
+      "last_checked_at": "2026-10-31T02:09:33+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "ForestColl: Throughput-Optimal Collective Communications on Heterogeneous Network Fabrics"
+    },
+    "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0",
+      "identity_tokens": [
+        "OpenReview:4nV383120k",
+        "SemanticScholar:85fba50933400633e58ecc9aef35658e2389fcf0"
+      ],
+      "reason": "著者公開OpenReview原著PDFのabstractを確認。圧縮後LLMの性能回復についてLoRA等PEFTと動的promptingをLlama/OPTで比較し、入力ごとの複数prompt選択により低い追加推論遅延で品質回復できると報告。推論時のコスト・圧縮性能に接点はあるが、主要指標は理解精度回復で、GPU throughput・KV削減等の直接的サービング最適化は限定的なためborderline。",
+      "first_checked_at": "2026-10-31T02:09:38+00:00",
+      "last_checked_at": "2026-10-31T02:09:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Simple LLM Compression Recovery Using Dynamic Prompting with Theoretical Analysis"
+    },
+    "arXiv:2607.20484": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.20484",
+      "identity_tokens": [
+        "arXiv:2607.20484"
+      ],
+      "reason": "ICML 2026 PMLR公式一次abstractを確認。長文でのattention sink・局所注意に伴うrepresentation collapseをスペクトル解析し、parameter-free Triangular Boxと軽量ゲートのTRSP side-pathでNoLiMaの8倍文脈外挿精度を83%維持する。長文能力・表現安定性の改善が中心で、実推論の計算量・TTFT・メモリ削減の定量評価は要旨にないためborderline。",
+      "first_checked_at": "2026-10-31T02:09:38+00:00",
+      "last_checked_at": "2026-10-31T02:09:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "The Devil is in the Spectrum: Mitigating Representation Collapse in LLMs via Topologically Regularized Side-Path"
+    },
+    "arXiv:2409.14993": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2409.14993",
+      "identity_tokens": [
+        "DOI:10.1109/tcsvt.2025.3635224",
+        "arXiv:2409.14993"
+      ],
+      "reason": "arXiv一次要旨を確認。マルチモーダルLLM、diffusion、AR/diffusion統合、dense/MoE構成とデータセットを総覧するsurvey。推論・生成の方式比較には間接的に関連するが、LLM serving最適化・カーネル・低遅延化の一次実験はないためborderline。worklist表題と正式表題を正規化。",
+      "first_checked_at": "2026-10-31T02:09:38+00:00",
+      "last_checked_at": "2026-10-31T02:09:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Multi-modal Generative AI: Multi-modal LLMs, Diffusions, and the Unification"
+    },
+    "DOI:10.1109/tai.2025.3563144": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tai.2025.3563144",
+      "identity_tokens": [
+        "DOI:10.1109/tai.2025.3563144"
+      ],
+      "reason": "著者所属Khalifa Universityの一次研究成果abstractを確認。attentionのhead/block sparsityと近似を組み合わせるHybrid Dynamic Pruningおよびedge/server向け専用コプロセッサHDPAを設計し、複数Transformerでattention演算の遅延・energy・throughputを比較。生成LLMのデコード/サービング専用評価が要旨で確認できないためborderline。",
+      "first_checked_at": "2026-10-31T02:09:38+00:00",
+      "last_checked_at": "2026-10-31T02:09:38+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Efficient Transformer Inference Through Hybrid Dynamic Pruning"
     }
   }
 }

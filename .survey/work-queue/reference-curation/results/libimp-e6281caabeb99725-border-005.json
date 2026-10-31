@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-e6281caabeb99725-border-005",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "DOI:10.1109/tai.2025.3563144",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "DOI:10.1109/tai.2025.3563144",
+    "identity_tokens": [
+      "DOI:10.1109/tai.2025.3563144"
+    ],
+    "reason": "著者所属Khalifa Universityの一次研究成果abstractを確認。attentionのhead/block sparsityと近似を組み合わせるHybrid Dynamic Pruningおよびedge/server向け専用コプロセッサHDPAを設計し、複数Transformerでattention演算の遅延・energy・throughputを比較。生成LLMのデコード/サービング専用評価が要旨で確認できないためborderline。",
+    "first_checked_at": "2026-10-31T02:09:38+00:00",
+    "last_checked_at": "2026-10-31T02:09:38+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "Efficient Transformer Inference Through Hybrid Dynamic Pruning"
+  },
+  "processed_at": "2026-10-31T02:09:39+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-e6281caabeb9",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

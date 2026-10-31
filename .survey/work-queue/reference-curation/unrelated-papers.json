@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-31T00:43:43+00:00",
-  "record_count": 12660,
+  "updated_at": "2026-10-31T02:09:39+00:00",
+  "record_count": 12661,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182041,6 +182041,19 @@
       "last_checked_at": "2026-10-31T00:43:43+00:00",
       "linked_from": [],
       "title": "Reinforced Intelligence Through Active Interaction in Real World: A Survey on Embodied AI"
+    },
+    "arXiv:2306.01705": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2306.01705",
+      "identity_tokens": [
+        "DOI:10.1145/3580305.3599520",
+        "arXiv:2306.01705"
+      ],
+      "reason": "arXiv一次要旨を確認。Transformer内の情報経路をstochastically subsampled self-attentionで学習時に間引き、training時attentionのメモリ・計算量を4–8倍削減する学習・正則化手法。推論時のLLMデコード・サービング削減を直接検証していない学習専用研究のためunrelated。",
+      "first_checked_at": "2026-10-31T02:09:39+00:00",
+      "last_checked_at": "2026-10-31T02:09:39+00:00",
+      "linked_from": [],
+      "title": "The Information Pathways Hypothesis: Transformers are Dynamic Self-Ensembles"
     }
   }
 }
