@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Efficient LLM Inference via Activation-Aware Weight Quantization: System Integration and Performance Analysis",
+      "source_url": "https://doi.org/10.1109/ISIBER68248.2026.11469970",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "2026 International Seminar on Intelligent Business and Edge-Computing Research (ISIBER)",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid scaling of large language models (LLMs) has driven extraordinary gains in natural language understanding and generation, but at the cost of substantial compute and memory demands. Efficient deployment of such models remains a central challenge for both academic and industrial systems. This paper presents a comprehensive evaluation of activation-aware weight quantization (AWQ) applied to modern transformer architectures within the vLLM serving framework. We benchmark FP16 and 4-bit quantized inference for the OPT and Mistral model families, analyzing latency, throughput, and memory utilization under varying prompt lengths and batch sizes. Results demonstrate that AWQ achieves up to $\\text{5 0 \\%}$ GPU memory reduction and approximately 60% throughput improvement with minimal impact on output quality, validating AWQ as a practical compression strategy for real-world deployment. The integration of quantization with efficient serving engines like vLLM enables research-grade LLMs on mid-range GPUs without accuracy compromise, highlighting the potential for sustainable, accessible, and scalable LLM inference across hardware tiers.",
+      "identifiers": [
+        "SemanticScholar:9b1b51cee88b0c24ed11ff16b2690608ae8756d7"
+      ],
+      "semantic_scholar_id": "9b1b51cee88b0c24ed11ff16b2690608ae8756d7",
+      "doi": "10.1109/ISIBER68248.2026.11469970",
+      "canonical_id": "DOI:10.1109/ISIBER68248.2026.11469970",
+      "authors": [
+        "Tejas Pravinbhai Patel",
+        "Gajendra Babu Thokala",
+        "Sandeep Shivam",
+        "Chandrashekhar Medicherla",
+        "Vinay R Soni",
+        "Arun Kumar Elengovan",
+        "Isan Sahoo",
+        "Chaitanya Kulkarni"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 247,
+        "matched_prestigious_venue": null
+      },
+      "reason": "原著論文の公開PDFに掲載された要旨を確認。vLLM上でOPTとMistralのFP16対AWQ 4bitをプロンプト長・バッチサイズ別に測定し、GPUメモリ最大約50%減、スループット約60%向上を報告。既知AWQ手法のシステム評価が中心で新規量子化法ではないが、LLM推論実装の定量評価として適合する。",
+      "library_body_check": "author_uploaded_original_pdf_abstract_read; body_partially_inspected",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "title": "Accelerating Cold Starts of On-Device LLMs via Multi-Source Inference-Aware Parameter Loading",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00022",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "IEEE International Conference on Distributed Computing Systems",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) deployed on edge devices suffer from severe cold-start latency, making time to first token (TTFT) the primary determinant of user-perceived responsiveness. On resource-constrained edge platforms, TTFT is dominated by model parameter loading. Limited local storage bandwidth and mmap-based lazy paging significantly delay bringing model weights into memory, even though faster network links are often available. To address this, we present CoLLM, a multisource and inference-aware loading framework that accelerates cold starts for on-device LLMs. CoLLM replaces page-faultdriven loading with an explicit, inference-aware I/O manager that aggregates bandwidth from local storage and neighboring edge devices, and overlaps parameter loading with inference execution. For Mixture-of-Experts (MoE) models, CoLLM further prioritizes the on-demand loading of activated experts to avoid unnecessary I/O. We implement CoLLM on llama.cpp and evaluate it on a real-world edge testbed. Across multiple dense and MoE LLMs under cold-start conditions, CoLLM improves parameter loading throughput by $\\mathbf{1. 6 4} \\boldsymbol{\\times} \\mathbf{- 2. 1 0} \\boldsymbol{\\times}$ and reduces TTFT by $43-82 \\%$, demonstrating that collaboratively and inferenceaware loading model parameters from neighboring edge devices effectively overcomes cold-start latency. Our implementation is released as open source.",
+      "identifiers": [
+        "SemanticScholar:3af854bcac0c9cfa726a4b19a454d7f138d08620"
+      ],
+      "semantic_scholar_id": "3af854bcac0c9cfa726a4b19a454d7f138d08620",
+      "doi": "10.1109/2575-8411.2026.00022",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00022",
+      "authors": [
+        "Shucheng Li",
+        "Zhenfeng Wang",
+        "Fei Zeng",
+        "Zhan-Xin Li",
+        "Peng Yang",
+        "Feng Lyu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "原著要旨の公開転載を確認。CoLLMはllama.cpp上でmmapの遅延ページングに代えて推論順序を考慮した明示I/O管理を行い、近隣edge端末とローカルストレージの帯域を集約、MoEでは活性expertのロードを優先する。実機edge評価で重みロード帯域1.64～2.10倍、TTFT43～82%削減を報告。オンデバイスLLMのコールドスタート最適化に直接適合。",
+      "library_body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "title": "Bandwidth-Efficient Exact Sampling for Distributed Speculative Decoding of LLMs via Two-Stage Rejection Sampling",
+      "source_url": "https://doi.org/10.1109/ICCA69928.2026.11618065",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "2026 IEEE 20th International Conference on Control and Automation (ICCA)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Distributed Speculative Decoding (DSD) has emerged as a promising paradigm to reduce the serving costs of Large Language Models (LLMs) by offloading the drafting process to edge devices. However, the communication overhead required to synchronize probability distributions between the cloud server and the edge client creates a significant bottleneck, particularly in bandwidth-limited environments. Existing solutions often resort to lossy compression methods, which degrade the probabilistic integrity required for complex reasoning tasks. In this paper, we propose a novel two-stage rejection sampling framework. Our approach exploits the heavy-tailed nature of residual probability distributions by partitioning the vocabulary into a dominant “Head” and a sparse “Tail.” By prioritizing the transmission of the Head and employing a hierarchical rejection sampling scheme, we drastically reduce data transmission while mathematically guaranteeing exact sampling from the target distribution. Experimental results show that our method effectively alleviates bandwidth pressure and accelerates inference without compromising the model's reasoning fidelity.",
+      "identifiers": [
+        "SemanticScholar:071041c61096d060a53624cd9a4439041385dbf8"
+      ],
+      "semantic_scholar_id": "071041c61096d060a53624cd9a4439041385dbf8",
+      "doi": "10.1109/ICCA69928.2026.11618065",
+      "canonical_id": "DOI:10.1109/ICCA69928.2026.11618065",
+      "authors": [
+        "Zhong-Huan Tang",
+        "Wei Gong",
+        "Minghui Liwang",
+        "Miao Kang",
+        "Li Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "原著要旨の公開転載を確認。edgeドラフトとcloud検証を分離した分散投機的復号で、確率分布の通信が律速となる問題に対し、残差分布をHead/Tailに分けた二段階棄却サンプリングを提案。通信量を減らしつつターゲット分布からの厳密サンプリングを数学的に保証し、帯域制約下の推論加速を報告。分散投機的復号に直接適合。",
+      "library_body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "title": "StarkServe: A Framework for Elastic Serverless LLM Inference at the Extreme Edge",
+      "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661267",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Workshop on Quality of Service",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Deploying Large Language Models (LLMs) at the extreme edge is hindered by severe resource constraints. While serverless computing offers scale-to-zero efficiency, existing request-level frameworks cannot accommodate the stateful, compute-intensive nature of LLMs. Achieving true elasticity requires Token-Level Statelessness, currently bottlenecked by static model redundancy, rigid GPU allocation, and high statemigration I/O overhead. We propose StarkServe, a serverless inference system that co-designs hardware-aware algorithms with system-level scheduling. StarkServe employs an adaptive skipping mechanism to dynamically prune redundant sublayers at runtime, a multi-tenant GPU runtime enabling fine-grained spatial multiplexing, and an elastic state dispatcher that orchestrates anticipatory KV cache movement to overlap I/O with computation. Experimental results demonstrate that StarkServe significantly reduces end-to-end latency and memory footprint compared to state-of-the-art serverless baselines while preserving generation quality.",
+      "identifiers": [
+        "SemanticScholar:75f903e7cb3ac48fdcd22a1889bde4ab55e64349"
+      ],
+      "semantic_scholar_id": "75f903e7cb3ac48fdcd22a1889bde4ab55e64349",
+      "doi": "10.1109/IWQoS70441.2026.11661267",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661267",
+      "authors": [
+        "Ming-Xuan Zhang",
+        "Xiao-Feng Hou",
+        "Jia-Cheng Liu",
+        "Chang Liu",
+        "Xin-Kai Wang",
+        "Chao Li",
+        "Min-Yi Guo",
+        "Haneul Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 152,
+        "matched_prestigious_venue": null
+      },
+      "reason": "原著要旨の公開転載と著者の採録情報を確認。StarkServeはedgeのserverless LLMに対し、推論時の冗長サブレイヤー適応スキップ、GPU空間多重化、KVキャッシュを先回り移送するelastic state dispatcherを組み合わせる。既存serverless方式比でE2E遅延とメモリ削減を報告するが、公開要旨に定量的な倍率はない。LLM推論サービングのスケジューリング・状態移送に直接適合。",
+      "library_body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "title": "Stage-aware LLM-SLM collaboration for agentic tasks via joint routing and verification",
+      "source_url": "https://doi.org/10.1016/j.ipm.2026.105065",
+      "year": null,
+      "published": null,
+      "venue": "Information Processing & Management",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": null,
+      "identifiers": [
+        "SemanticScholar:ccff3afb6afbf6dd9c93658e0a259fc50d157b0b"
+      ],
+      "semantic_scholar_id": "ccff3afb6afbf6dd9c93658e0a259fc50d157b0b",
+      "doi": "10.1016/j.ipm.2026.105065",
+      "canonical_id": "DOI:10.1016/j.ipm.2026.105065",
+      "authors": [
+        "Qingwen Yang",
+        "Jiawei Tang",
+        "Xuejing Li",
+        "Tiezheng Guo",
+        "Yanyi Liu",
+        "Fei-Yu Qu",
+        "Yingyou Wen"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": null,
+        "matched_prestigious_venue": null
+      },
+      "reason": "原著要旨の公開転載を確認。RoVerはagentの各実行段階をMDPとして扱い、Routerで72B LLMと1.7B SLMを動的選択し、Verifierと失敗時fallbackで品質を維持する。ALFWorldで成功率86.8%、平均活性パラメータ/トークン71.1%削減、API-Bank-lv3でエンドツーエンド遅延38.7%減を報告。LLM/SLM推論ルーティングと計算コスト低減に直接関連。",
+      "library_body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_individual_abstract"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-644042e56042",
+    "round": "libimp-644042e5604207ae-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-644042e5604207ae-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-644042e5604207ae-pre01.json",
+    "receipt": "sha256:d216eaaa3914c50e024613a5b7f075a068d6016dd0484a5156d29864b91a5982"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-644042e56042",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
