@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1006-scheduled-chat-00/r01",
+  "reference_main_sha": "0522eb616eb21eb0aa9ae8540f181f2ce5464fc0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-1356",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1356"
+      ],
+      "title": "Principled Model Routing for Unknown Mixtures of Source Domains",
+      "reason": "NeurIPS 2025の出版元一次要旨を確認。未知の複数ソースドメイン混合に対して入力を専門モデルへ振り分けるmultiple-source domain adaptationアルゴリズムを提案し、ドメイン別regret境界と精度保証を示す。ただし対象は一般MLモデルの精度最適化で、LLM推論の遅延・GPU資源・モデルロード・SLO等のサービング効率評価はないためborderline。",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2025/hash/39c60dda48ebf0a2e5dda52ce08eb5c8-Abstract-Conference.html",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 402,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.22577",
+      "identity_tokens": [
+        "arXiv:2608.22577",
+        "SemanticScholar:03502452ecfb49e419a9847236db0812b24a07a5"
+      ],
+      "title": "CausalCache: Conditional High-Fidelity Restoration for Long-Horizon GUI Agents",
+      "reason": "arXiv一次要旨を確認。GUIエージェントの過去イベントをテキスト要約で保持し、限られたB枚の履歴スクリーンショット枠を条件付き効用で再配分する。履歴画像トークンのみを変更するHGKV adapterと予算対応selectorを用い、モバイルの記憶依存タスクで成功率改善を報告。固定視覚コンテキスト予算の効率的利用に関連するが、処理時間・token数・GPUメモリ削減の実測は主要成果ではなく、性能改善の中心はタスク成功率のためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.22577",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 408,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726",
+      "identity_tokens": [
+        "SemanticScholar:7d043e034224dc21c21b5edd3a622251e2fd7726",
+        "OpenReview:o8ZGNn9LpN"
+      ],
+      "title": "SpecTr++: Improved transport plans for speculative decoding of large language models",
+      "reason": "著者公開のOpenReview原著PDF冒頭と一次abstractを確認。SpecTr++は複数ドラフト候補の検証で、出力分布を維持しながら採択率を改善する最適輸送planを設計し、既存SpecTrを改善する。語彙サイズに関する計算量を維持する方向で輸送planを最適化する投機的復号の直接的アルゴリズム貢献であるためaccept。実LLMの壁時計速度倍率は今回確認範囲で断定しない。",
+      "source_url": "https://openreview.net/pdf?id=o8ZGNn9LpN",
+      "body_check": "primary_openreview_pdf_abstract_and_intro_screen; full_body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 409,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1631/FITEE.2300684",
+      "identity_tokens": [
+        "DOI:10.1631/FITEE.2300684"
+      ],
+      "title": "Automatic parallelism strategy generation with minimal memory redundancy",
+      "reason": "Springer出版元の一次abstractを確認。演算子ごとの冗長メモリ費用モデルと整数線形計画により分散深層学習の並列学習戦略を自動生成し、Megatron-LMの学習戦略比で最大67%のメモリ削減を報告。実装と指標はmulti-dimensional parallel trainingに限定され、LLM推論・サービングへの直接適用を示さないため凍結中の学習専用領域としてunrelated。",
+      "source_url": "https://link.springer.com/article/10.1631/FITEE.2300684",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 439,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:df2b9ba93735783ff1bb3ec8943b57172c9c49a6",
+      "identity_tokens": [
+        "SemanticScholar:df2b9ba93735783ff1bb3ec8943b57172c9c49a6"
+      ],
+      "title": "ZeRO from Scratch: Evaluating Memory Savings, Communication Overhead, and Bandwidth Sensitivity",
+      "reason": "Stanford大学の著者公開一次PDF要旨を確認。ZeRO stages 0–3の分散学習実装を再現し、optimizer state・gradient・parameter shardingのメモリ削減と通信帯域制限下のtraining throughputを比較する。評価対象はLLM学習の最適化で、推論時KVキャッシュやデコード・サービングへの適用がないためunrelated。",
+      "source_url": "https://www.scs.stanford.edu/26wi-cs244c/proj/ZeRO.pdf",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 447,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2506.19847",
+      "identity_tokens": [
+        "arXiv:2506.19847"
+      ],
+      "title": "Orthogonal Finetuning Made Scalable",
+      "reason": "arXiv一次要旨を確認。OFTv2はorthogonal finetuningを重み中心の行列積から入力中心のmatrix-free計算へ変え、Cayley–Neumann近似と併せて学習を最大10倍高速化、GPUメモリを3分の1へ削減する。量子化済み基盤モデルのfinetuningにも対応するが、主指標は学習時の速度・メモリ・安定性で推論サービングの実測はないためborderline。",
+      "source_url": "https://arxiv.org/abs/2506.19847",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 481,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.12102",
+      "identity_tokens": [
+        "arXiv:2402.12102"
+      ],
+      "title": "Is It a Free Lunch for Removing Outliers during Pretraining?",
+      "reason": "arXiv一次要旨を確認。量子化を難しくするactivation/weight外れ値を事前学習時に除去するoutlier-free softmaxの全精度性能劣化を見いだし、系列長に依存しない正規化へ修正して因果言語モデルのpretrainingを可能にする。推論向け量子化容易性との接点はあるが、量子化推論の遅延・メモリ・精度を直接比較した主要成果ではなく学習手法が中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2402.12102",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 494,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2404.19543",
+      "identity_tokens": [
+        "arXiv:2404.19543"
+      ],
+      "title": "RAG and RAU: A Survey on Retrieval-Augmented Language Model in Natural Language Processing",
+      "reason": "arXiv一次要旨を確認。RAGとRAUの構成要素、分類、NLP応用、頑健性・正確性・関連性の評価法を整理するサーベイ。計算効率の限界には言及するが、検索・生成サービングのキャッシュ・スケジューリング・計算最適化を一次実験で提案検証した研究ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2404.19543",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 496,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11165",
+      "identity_tokens": [
+        "arXiv:2505.11165"
+      ],
+      "title": "Maximizing Asynchronicity in Event-based Neural Networks",
+      "reason": "arXiv一次要旨を確認。イベントカメラの非同期入力をevent-by-event特徴へ変換するEVAを提案し、DVS128-Gesture・N-Carsの認識とGen1の物体検出を評価する。言語モデルの線形注意を着想として使うが最終適用先はイベント視覚認識であり、LLM推論やサービング効率への直接寄与はないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2505.11165",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 498,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29545",
+      "identity_tokens": [
+        "arXiv:2609.29545"
+      ],
+      "title": "ERRAND: Budgeted Maintenance of Agent Memory",
+      "reason": "arXiv一次要旨を確認。環境変化で古くなるエージェントの知識項目を、限られたtool-use action予算の下で価値対費用に応じて再検証するERRANDを提案。2種類の変動環境で同じ行動予算下のタスク成功を比較し、無制限再検証より少ない行動で高い成功を報告。エージェントの外部行動コスト管理に関連するが、LLM推論token・KV・GPU実行最適化の直接計測はないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.29545",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
