@@ -62,12 +62,20 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         # Historical implementations and developer/worker prose are archived, not live.
         self.assertFalse((ROOT / ".survey/legacy").exists())
         for rel in (
+            "PAPER-ADDITION-WORKFLOW.md",
             ".survey/import-inbox/README.md",
             ".survey/repair-queue/README.md",
             ".survey/survey-state/identity-deltas/README.md",
         ):
             with self.subTest(retired=rel):
                 self.assertFalse((ROOT / rel).exists(), rel)
+
+        active_router_refs = [
+            path.relative_to(ROOT).as_posix()
+            for path in sorted((ROOT / ".survey/scripts").glob("*.py"))
+            if "worker-router" in path.read_text(encoding="utf-8")
+        ]
+        self.assertEqual([], active_router_refs)
         self.assertNotIn("](.survey/docs/survey-workflow/", (ROOT / "README.md").read_text(encoding="utf-8"))
 
     def test_retired_compatibility_and_one_shot_repair_files_are_absent(self):
