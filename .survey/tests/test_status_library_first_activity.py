@@ -33,7 +33,7 @@ class LibraryFirstStatusTests(unittest.TestCase):
                     "status": "imported",
                     "canonical_id": "arXiv:2609.99999",
                     "worker_completed_at": "2026-10-03T14:40:00+09:00",
-                    "worker_run_key": "20261003-1440-scheduled-chat-30",
+                    "worker_run_key": "20261003-1440-scheduled-chat-30/r01",
                     "processed_at": "2026-10-03T05:45:00+00:00",
                 },
             )
@@ -62,6 +62,7 @@ class LibraryFirstStatusTests(unittest.TestCase):
             self.assertIn("| 直近6hのResearch完了 | **1** |", text)
             self.assertIn("| 直近6hのDiscovery run | **1** |", text)
             self.assertIn("| 直近6hのDiscovery本文確認・分類 | **10** |", text)
+            self.assertIn("worker scheduled-chat-30 / run 20261003-1440-scheduled-chat-30/r01", text)
             self.assertIn("run 20261003-1445-scheduled-chat-45", text)
             self.assertIn("## 件数サマリー（旧immutable transport診断）", text)
             self.assertIn("## 詳細証拠（旧immutable transport）", text)
