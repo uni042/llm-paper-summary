@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-30T21:07:57+00:00",
-  "record_count": 12656,
+  "updated_at": "2026-10-31T00:43:43+00:00",
+  "record_count": 12660,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -181993,6 +181993,54 @@
       "last_checked_at": "2026-10-30T21:07:57+00:00",
       "linked_from": [],
       "title": "Adapting a Language Model While Preserving its General Knowledge"
+    },
+    "arXiv:2511.01299": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2511.01299",
+      "identity_tokens": [
+        "arXiv:2511.01299"
+      ],
+      "reason": "arXiv一次要旨では音声理解、音声生成、発話対話、音声映像理解の4領域における音声ネイティブ基盤モデルの能力・課題をレビューする。推論カーネル、KVメモリ、サービング、圧縮の技術改善を主要貢献として扱わないため、対象外。",
+      "first_checked_at": "2026-10-31T00:43:41+00:00",
+      "last_checked_at": "2026-10-31T00:43:41+00:00",
+      "linked_from": [],
+      "title": "Towards General Auditory Intelligence: Large Multimodal Models for Machine Listening and Speaking"
+    },
+    "arXiv:2403.00025": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2403.00025",
+      "identity_tokens": [
+        "arXiv:2403.00025"
+      ],
+      "reason": "arXiv一次要旨では画像・文章・動画・分子を含む深層生成モデルの汎用性、信頼性、普及を阻む未解決課題を俯瞰し、研究課題を提案する。LLMの推論実行時資源やサービング機構を設計・評価する研究ではないため、対象外。",
+      "first_checked_at": "2026-10-31T00:43:42+00:00",
+      "last_checked_at": "2026-10-31T00:43:42+00:00",
+      "linked_from": [],
+      "title": "On the Challenges and Opportunities in Generative AI"
+    },
+    "DOI:10.1049/ein2.70016": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1049/ein2.70016",
+      "identity_tokens": [
+        "DOI:10.1049/ein2.70016"
+      ],
+      "reason": "出版社Wileyの一次要旨・本文を照合。電力・エネルギー時系列予測用Transformerに対し、周波数特徴を用いたMA-LSHで系列を固定長チャンクへまとめ、チャンク内注意と全域特徴蒸留で計算・メモリを線形化する。効率化技術ではあるが、検証対象は時系列予測であり、LLM推論・サービングへの直接適用や評価がないため、現行サーベイでは対象外。",
+      "first_checked_at": "2026-10-31T00:43:42+00:00",
+      "last_checked_at": "2026-10-31T00:43:42+00:00",
+      "linked_from": [],
+      "title": "Optimising Time Series Forecasting Transformers to Linear Complexity"
+    },
+    "DOI:10.1007/s12555-025-0127-1": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1007/s12555-025-0127-1",
+      "identity_tokens": [
+        "DOI:10.1007/s12555-025-0127-1"
+      ],
+      "reason": "著者所属大学の一次書誌・要旨を照合。実世界でのembodied AIを対象に、基盤モデルによる高水準計画、affordance学習、強化学習・模倣学習によるロボット制御、SSM利用の展望を総覧する。LLM推論の実行基盤・キャッシュ・通信・量子化の技術評価を主題としないため、対象外。",
+      "first_checked_at": "2026-10-31T00:43:43+00:00",
+      "last_checked_at": "2026-10-31T00:43:43+00:00",
+      "linked_from": [],
+      "title": "Reinforced Intelligence Through Active Interaction in Real World: A Survey on Embodied AI"
     }
   }
 }
