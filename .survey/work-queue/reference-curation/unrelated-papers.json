@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-31T20:56:09+00:00",
-  "record_count": 12666,
+  "updated_at": "2026-10-31T22:56:37+00:00",
+  "record_count": 12669,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182122,6 +182122,51 @@
         "WORKLIST-30.md rank 262"
       ],
       "title": "STRONGHOLD: Fast and Affordable Billion-Scale Deep Learning Model Training"
+    },
+    "DOI:10.1109/incet64471.2025.11140308": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/incet64471.2025.11140308",
+      "identity_tokens": [
+        "DOI:10.1109/incet64471.2025.11140308"
+      ],
+      "reason": "タイトルはLLMの生成テキストの改善を研究目的として明示し、LLM推論のスループット・遅延・メモリ管理・量子化・サービング最適化などのシステム貢献を示していない。タイトル段階で対象外とした。出版社一次要旨と本文は未取得であり、速度や品質の実験結果については判断していない。",
+      "first_checked_at": "2026-10-31T22:56:30+00:00",
+      "last_checked_at": "2026-10-31T22:56:30+00:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 482"
+      ],
+      "title": "Contextual Contrastive Search for Improved Text Generations in Large Language Models"
+    },
+    "arXiv:2402.09900": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2402.09900",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2402.09900",
+        "arXiv:2402.09900"
+      ],
+      "reason": "arXiv原著のv4要旨（2026-08-27改訂）を確認。部分観測マルコフ決定過程での再帰的強化学習を対象とし、RNN・線形再帰モデルの更新則をモノイドとして定式化するmemoroidsにより、軌跡のバッチ化、サンプル効率、獲得報酬および再帰損失の実装を改善する研究。LLM推論サービング、KVキャッシュ、LLM推論カーネル、GPU実行やLLM学習システムの性能改善を直接検証する研究ではないためunrelated。一次abstractのみを確認し本文は未読。",
+      "first_checked_at": "2026-10-31T22:56:32+00:00",
+      "last_checked_at": "2026-10-31T22:56:32+00:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 500",
+        "https://doi.org/10.48550/arXiv.2402.09900"
+      ],
+      "title": "Recurrent Reinforcement Learning with Memoroids"
+    },
+    "DOI:10.52202/079017-1645": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.52202/079017-1645",
+      "identity_tokens": [
+        "DOI:10.52202/079017-1645"
+      ],
+      "reason": "NeurIPS 2024公式一次要旨を確認。Vision Mambaの画像認識で内部・外部の隠れ状態の予測相関を分析し、認識性能を下げる状態の欠陥を特定して修復する手法である。主目的・検証対象は視覚認識精度とモデルの状態分析で、LLM推論のサービング、メモリ、推論カーネル、実行時間や電力の改善を直接扱わないためunrelated。Mambaの線形計算量への一般的言及はあるが、本論文固有の推論システム高速化の実証ではない。",
+      "first_checked_at": "2026-10-31T22:56:37+00:00",
+      "last_checked_at": "2026-10-31T22:56:37+00:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 396",
+        "https://doi.org/10.52202/079017-1645"
+      ],
+      "title": "Vision Mamba Mender"
     }
   }
 }
