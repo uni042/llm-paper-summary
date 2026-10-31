@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-31 13:52:38 JST**
+> 自動生成: **2026-10-31 14:00:51 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -11,9 +11,9 @@
 
 | 指標 | 現在値 |
 |---|---:|
-| 収録候補論文数 | **582** |
-| 未claim Research job | **582** |
-| 直近24hのResearch処理完了 | **82** |
+| 収録候補論文数 | **580** |
+| 未claim Research job | **580** |
+| 直近24hのResearch処理完了 | **69** |
 | 最終Research処理完了 | **10-31 01:48:57 JST** |
 | 最終Discovery探索完了 | **10-31 12:41:00 JST** |
 | 整合性異常 | **0** |
@@ -41,9 +41,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| canonical_id確認済みの一意な候補論文 | **582** |
+| canonical_id確認済みの一意な候補論文 | **580** |
 | canonical_idなしの候補Research job | **0** |
-| 非終端Research job合計 | **582** |
+| 非終端Research job合計 | **580** |
 
 `canonical_id` がないjobは同一論文か別論文かを直接証明できないため、候補論文数へ推定加算しません。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-31 11:47:56 JST（2時間4分前）** |
+| 最終maintenance完了 | **10-31 11:47:56 JST（2時間12分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,8 +137,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **30** |
-| 直近6hのDiscovery本文確認・分類 | **136** |
+| 直近6hのDiscovery run | **26** |
+| 直近6hのDiscovery本文確認・分類 | **111** |
 | 最終Research完了 | **10-31 01:48:57 JST** |
 | 最終Discovery完了 | **10-31 12:41:00 JST** |
 
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/libfile_065a1884c270819192c5254078e8caf3--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-semantic-reaudit-20261031-0148-scheduled-chat-45-r01.json
 - Discovery: **10-31 12:41:00 JST** / worker scheduled-chat-45 / run 20261031-1241-scheduled-chat-45/r01
   - 本文確認・分類 **3件** / accept **0件** / unrelated+borderline **3件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_dccb4d72c1348191811695de72e1ae71--discovery-20261031-1241-scheduled-chat-45-r01-partial.json
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_dccb4d72c1348191811695de72e1ae71--discovery-20261031-1241-scheduled-chat-45-r01-partial.json
 
 ### Codex探索成果の反映状況
 
@@ -288,7 +288,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | status | 件数 |
 |---|---:|
-| ready | **582** |
+| ready | **580** |
 
 ### 候補の重複・識別情報欠損
 
