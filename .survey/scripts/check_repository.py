@@ -36,6 +36,17 @@ REQUIRED_PAPER_METADATA = (
     "code", "last_checked", "last_audited", "audit_version",
 )
 
+RETIRED_HUMAN_GUIDE_PATHS = {
+    "PAPER-ADDITION-WORKFLOW.md",
+    "PAPER-ADDITION-DETAILS.md",
+    "PAPER-SELECTION-FLOW.md",
+    "AUTOMATION-TOOLS.md",
+}
+RETIRED_HUMAN_GUIDE_PREFIXES = (
+    ".survey/docs/",
+    "docs/superpowers/",
+)
+
 
 def raw_path_bytes(path):
     if path.is_symlink():
@@ -88,7 +99,7 @@ def check(root, inventory):
         if path not in files:
             issue("required_runtime_path_missing", path, "Required by current runtime")
     for name in files:
-        if name.startswith(".survey/docs/") or name.startswith("docs/superpowers/"):
+        if name in RETIRED_HUMAN_GUIDE_PATHS or name.startswith(RETIRED_HUMAN_GUIDE_PREFIXES):
             issue("retired_human_guide_on_main", name, "Human-facing procedures belong in Library")
     json_objects = {}
     canonical_ids = {}
