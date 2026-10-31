@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-10-31T17:58:47+00:00",
-  "record_count": 5575,
+  "updated_at": "2026-10-31T20:56:07+00:00",
+  "record_count": 5576,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86079,6 +86079,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Exploration-Driven Reinforcement Learning for Expert Routing Improvement in Mixture-of-Experts Language Models"
+    },
+    "DOI:10.1109/tcad.2024.3513265": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/tcad.2024.3513265",
+      "identity_tokens": [
+        "DOI:10.1109/tcad.2024.3513265"
+      ],
+      "reason": "著者所属の香港中文大学が公開する原著要旨を確認。ViTの入力解像度に応じて線形射影とself-attentionの双方が律速となる問題に対し、SpQuantで重みのoffline疎化、入力のonline疎化、注意確率の精度選択を行い、SQArchで疎行列積・混合精度のシストリック配列を設計する。Transformer演算カーネルへの転用可能性はあるが、要旨での対象は画像用ViTでありLLM推論・サービングへの実測適用を確認できないためborderline。",
+      "first_checked_at": "2026-10-31T20:56:07+00:00",
+      "last_checked_at": "2026-10-31T20:56:07+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 287"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Vision Transformer Acceleration via a Versatile Attention Optimization Framework"
     }
   }
 }

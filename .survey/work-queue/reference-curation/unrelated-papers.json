@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-31T17:58:48+00:00",
-  "record_count": 12665,
+  "updated_at": "2026-10-31T20:56:09+00:00",
+  "record_count": 12666,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182108,6 +182108,20 @@
         "WORKLIST-30.md rank 197; main 49a728d7fc5b8c515d3253e76fa9a12e96965de2"
       ],
       "title": "Nonparametric Variational Regularisation of Pretrained Transformers"
+    },
+    "DOI:10.1109/sc41404.2022.00076": {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/sc41404.2022.00076",
+      "identity_tokens": [
+        "DOI:10.1109/sc41404.2022.00076"
+      ],
+      "reason": "タイトルが明示する対象は十億規模深層学習モデルのtraining高速化であり、LLMの推論・サービング・実行時KVキャッシュ・推論向けメモリ管理を対象とする研究とは示されていない。学習専用最適化は現在の収録範囲で凍結中のためタイトル段階でunrelated。要旨・本文の主張や数値は未確認。",
+      "first_checked_at": "2026-10-31T20:56:09+00:00",
+      "last_checked_at": "2026-10-31T20:56:09+00:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 262"
+      ],
+      "title": "STRONGHOLD: Fast and Affordable Billion-Scale Deep Learning Model Training"
     }
   }
 }
