@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261101-0443-scheduled-chat-45/r01",
+  "reference_main_sha": "62939ca2418e5cd94bb9d90a09f850dde21a88dc",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661114",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS70441.2026.11661114"
+      ],
+      "title": "UPServe: Backend Agnostic Proxy for Black-box Heterogeneous LLM Scheduling",
+      "reason": "IEEE公式abstractに基づく。UPServeは異種GPU・推論エンジンを内部改造せず扱うステートレスLLMサービングの透明プロキシ。prefill/decodeの段階別コストモデル、ハードウェア速度を正規化するスコア型スケジューリング、Phase-Aware Weighted Least Connectionsを組み合わせ、異種環境でP99 TTFTを最大2.6倍、P99 TPOTを最大2.1倍改善し、総スループット最大16%向上、要求あたりスケジューリングオーバーヘッド0.3ms未満と報告。LLM推論のルーティングとSLO・スループット最適化に直接貢献するためaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11661114/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 11"
+      ],
+      "worklist_rank": 11,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS66217.2026.11562248",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS66217.2026.11562248"
+      ],
+      "title": "UniMAC: Multi-Precision MAC with a Unified Computing Architecture for Efficient Large Language Model Inference",
+      "reason": "IEEE公式abstractに基づく。UniMACは整数、浮動小数点、FP-INT混合演算を単一データパスに統合する多精度MACアーキテクチャ。General-Purpose Data PartitioningとIterative Neighbor Grouping Schedulingを用い、長文LLM推論のact-to-act計算に対してon-the-fly探索を利用するFP16加速モードも備える。既存方式比でFP8のエネルギー効率最大3.9倍、FP16 act-to-act計算で最大2倍と報告。推論アクセラレータの直接的な演算効率化なのでaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11562248/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 61"
+      ],
+      "worklist_rank": 61,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/TASLPRO.2025.3613948",
+      "identity_tokens": [
+        "DOI:10.1109/TASLPRO.2025.3613948"
+      ],
+      "title": "MixPQ: Joint Pruning and Quantization for Speech and Language Foundation Models Compression",
+      "reason": "IEEE公式abstractに基づく。MixPQは言語・音声基盤モデルに対し、ヘッセ行列感度を利用する層別混合スパース剪定と、外れ値比率を使った列別混合精度量子化を組み合わせる。剪定で2倍圧縮、4bit量子化で性能を維持し、音声認識では実効2.12bit相当・約16倍圧縮でWER悪化1%未満を報告。要旨は推論速度・メモリ利点にも言及するが具体的な速度倍率は記載していない。基盤モデルの圧縮・推論メモリ効率への直接的手法なのでaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11190051/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 78"
+      ],
+      "worklist_rank": 78,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AIBDF67964.2025.11440879",
+      "identity_tokens": [
+        "DOI:10.1109/AIBDF67964.2025.11440879"
+      ],
+      "title": "Double Phase Decaying Reasoning: Phase-Aware RL for Accuracy–Token Efficiency",
+      "reason": "IEEE公式abstractに基づく。DPDRは推論過程をthinkingとsolutionの2段階に分け、正答ゲート付き減衰報酬と柔らかな長さペナルティでChain-of-Thoughtの冗長トークンを抑える強化学習手法。精度を保ちながら生成トークンを減らすが、主眼は学習・推論方策の最適化で、GPU実行・KVキャッシュ・実測サービング遅延・スループットの改善を要旨から直接確認できない。推論時計算量への接点はあるためborderline。",
+      "source_url": "https://ieeexplore.ieee.org/document/11440879/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 149"
+      ],
+      "worklist_rank": 149,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/icassp55912.2026.11460785",
+      "identity_tokens": [
+        "DOI:10.1109/icassp55912.2026.11460785"
+      ],
+      "title": "ECM: Enhancing Compressibility of Quantized Vision Encoder and LLM for Large Vision-Language Models",
+      "reason": "IEEE公式abstractに基づく。ECMはVLMの言語モデルだけを量子化すると視覚エンコーダがメモリボトルネックになる問題に対し、両コンポーネントを一体で圧縮する。適応的量子化粒度と重みスケーリングを組み合わせ、量子化済み重みに可逆圧縮を追加。視覚エンコーダ1.34倍、LLM1.25倍の圧縮比を報告し、FP16 VLMやLLMのみ量子化したVLMに対するメモリ使用量削減も示す。マルチモーダル推論のモデル格納・メモリ効率へ直接寄与するためaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11460785/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 170"
+      ],
+      "worklist_rank": 170,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICVRV67992.2025.00022",
+      "identity_tokens": [
+        "DOI:10.1109/ICVRV67992.2025.00022"
+      ],
+      "title": "MultiPrune: Extreme Compression of Visual Tokens for Large Multimodal Models via Training-Free Multi-Cue Pruning",
+      "reason": "IEEE公式abstractに基づく。MultiPruneはMLLMの視覚トークンを注意スコア、トークン類似度、情報エントロピーの3種類の手掛かりで多段階に剪定する学習不要方式。11データセットで元の視覚トークンの12.5%だけを残す極端な圧縮でも、精度低下を約1.38%に抑えると報告。追加学習・モデル構造変更なしで視覚入力の推論計算を減らす直接的なトークン圧縮手法なのでaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11410258/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 175"
+      ],
+      "worklist_rank": 175,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103912",
+      "identity_tokens": [
+        "DOI:10.1016/j.sysarc.2026.103912"
+      ],
+      "title": "DARS: An algorithm-hardware co-design framework for accelerating sparse attention via dynamic adaptive hierarchical Top-K pruning",
+      "reason": "Elsevier ScienceDirect公式abstractに基づく。DARSは注意行を小グループへ分割し適応的Top-K剪定で規則的な疎構造を生成するアルゴリズムと、低精度の剪定・索引生成エンジンDPEおよび高精度の疎注意演算エンジンSACEを協調設計。BERTで77.7～91.6%、Bloomで90.3～91.2%の疎性を示し、評価精度やPPLを維持したままGPUやSpAtten/Sangerより高いスループットを報告（具体的倍率は要旨に未記載）。LLM注意カーネル・専用ハードウェアの直接的な効率化なのでaccept。",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S1383762126002304",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 178"
+      ],
+      "worklist_rank": 178,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/CIML69155.2026.11692797",
+      "identity_tokens": [
+        "DOI:10.1109/CIML69155.2026.11692797"
+      ],
+      "title": "A Dual-Roofline Runtime Model for Capacity Planning in Shared-Backend LLM Multi-Agent Social Simulation: A Case Study of AgentSociety",
+      "reason": "IEEE公式abstractに基づく。AgentSocietyの複数エージェントが共有vLLMバックエンドを使う際、認知段階とメッセージ段階を別のRoofline領域として表し、両段階間の待ち行列項を加える実行時間モデルを提案。5～500エージェントでvLLM平均サービス時間が0.30秒から1.63秒へ増えるボトルネックを観測し、モデルの平均絶対誤差0.7%（線形モデル8.6%）を報告。500エージェント時の複製数設計にも適用する。LLMサービングの容量計画・共有推論基盤の計測に直接寄与するためaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11692797/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 323"
+      ],
+      "worklist_rank": 323,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICME57554.2024.10688073",
+      "identity_tokens": [
+        "DOI:10.1109/ICME57554.2024.10688073"
+      ],
+      "title": "Efficient Speech-to-Text Translation: Progressive Pruning for Accelerated Speech Pre-trained Model",
+      "reason": "IEEE公式abstractに基づく。音声翻訳向け事前学習済み音声エンコーダの系列長を、注意スコアに基づく重要度と固定・段階的剪定率で層ごとに削減する。出力トークン55%減、性能低下0.7%、エンコーディング最大1.76倍高速化を報告。ただし対象は音声翻訳の音声エンコーダであり、LLM生成推論・サービング・KVキャッシュ等への直接的な適用や評価は示されないため、現行LLM推論システム範囲ではunrelated。",
+      "source_url": "https://ieeexplore.ieee.org/document/10688073/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 385"
+      ],
+      "worklist_rank": 385,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3689031.3717489",
+      "identity_tokens": [
+        "DOI:10.1145/3689031.3717489"
+      ],
+      "title": "NeuStream: Bridging Deep Learning Serving and Stream Processing",
+      "reason": "ACM Digital Library公式の著者abstractに基づく。NeuStreamは条件分岐・反復を含む複数サブモデル実行をストリーム処理モジュールへ分解し、モジュール単位の細粒度バッチ化とSLO制約下の二段階スケジューリングで要求割当・資源配分を最適化するサービング基盤。LLMと拡散モデルを含むDNN実行で従来サービングシステムよりgoodputを改善したと報告（要旨に定量倍率なし）。LLMを含む推論基盤の直接的な実行・スケジューリング技術なのでaccept。",
+      "source_url": "https://dl.acm.org/doi/10.1145/3689031.3717489",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T04:52:27+09:00",
+      "last_checked_at": "2026-11-01T04:52:27+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 470"
+      ],
+      "worklist_rank": 470,
+      "origin": "discovery_worklist_primary_publisher_abstract_screen"
+    }
+  ]
+}
