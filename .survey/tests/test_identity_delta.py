@@ -31,6 +31,9 @@ class IdentityDeltaTests(unittest.TestCase):
         self.paper.write_text("""---
 canonical_id: arXiv:2607.02043
 arxiv_id: 2607.02043
+identifiers:
+- DOI:10.5555/kairos
+- SemanticScholar:kairos-paper-id
 title: Kairos
 summary: test
 source: https://arxiv.org/abs/2607.02043
@@ -49,10 +52,14 @@ body
         self.assertTrue(out.endswith("arxiv/2607.02043.json"))
         hit = self.delta.logical_lookup("arXiv:2607.02043")
         self.assertEqual(hit[0], "arXiv:2607.02043")
+        self.assertEqual(self.delta.logical_lookup("DOI:10.5555/kairos")[0], "arXiv:2607.02043")
+        self.assertEqual(self.delta.logical_lookup("SemanticScholar:kairos-paper-id")[0], "arXiv:2607.02043")
         self.assertEqual(self.delta.validate_all(), 1)
         self.assertEqual(self.delta.compact(), 1)
         base = json.loads((self.survey.ROOT / "survey-state/paper-identity-index.json").read_text())
         self.assertIn("arXiv:2607.02043", base["papers"])
+        self.assertEqual(base["identifier_to_canonical"]["DOI:10.5555/kairos"], "arXiv:2607.02043")
+        self.assertEqual(base["identifier_to_canonical"]["SemanticScholar:kairos-paper-id"], "arXiv:2607.02043")
         self.assertEqual(self.delta.validate_all(), 0)
 
     def test_survey_papers_participate_in_identity_snapshot(self):
