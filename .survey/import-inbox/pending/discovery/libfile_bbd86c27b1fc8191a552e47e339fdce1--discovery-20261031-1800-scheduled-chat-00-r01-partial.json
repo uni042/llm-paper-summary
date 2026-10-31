@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1800-scheduled-chat-00/r01",
+  "reference_main_sha": "af301305e9e38b68475a4d13bc8fb214037af772",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2409.14307",
+      "identity_tokens": [
+        "arXiv:2409.14307",
+        "DOI:10.48550/arXiv.2409.14307"
+      ],
+      "title": "DilateQuant: Accurate and Efficient Diffusion Quantization via Weight Dilation",
+      "reason": "arXiv一次要旨は画像生成用拡散モデルの低ビット量子化学習（Weight Dilation、Temporal Parallel Quantizer、Block-wise Knowledge Distillation）を対象とする。LLMの生成推論・サービング・学習システムを対象にした研究ではない。拡散モデル一般の圧縮技術が転用できる可能性はあるが、本文要旨は言語モデルへの適用を報告しないため本サーベイの直接対象外。",
+      "source_url": "https://arxiv.org/abs/2409.14307",
+      "body_check": "abstract_screen_only; body_not_read; arxiv_primary_abstract_verified; arxiv_v3_2025-07-09",
+      "first_checked_at": "2026-10-31T18:03:15+09:00",
+      "last_checked_at": "2026-10-31T18:03:15+09:00",
+      "linked_from": "重み専用量子化 / 推論カーネル",
+      "worklist_rank": 479,
+      "worklist_identity": "DOI:10.48550/arXiv.2409.14307",
+      "source_evidence": {
+        "title": "DilateQuant: Accurate and Efficient Diffusion Quantization via Weight Dilation",
+        "url": "https://arxiv.org/abs/2409.14307",
+        "arxiv_submitted": "2024-09-22",
+        "arxiv_last_revised": "2025-07-09",
+        "primary_abstract_checked": true,
+        "fulltext_read": false
+      }
+    }
+  ]
+}
