@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-31T08:46:53+00:00",
-  "record_count": 12663,
+  "updated_at": "2026-10-31T11:43:35+00:00",
+  "record_count": 12664,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182079,6 +182079,21 @@
       "last_checked_at": "2026-10-31T08:46:53+00:00",
       "linked_from": [],
       "title": "Model Compression for Sustainable AI in xG Wireless Networks: Recent Advances, Challenges, and Future Directions"
+    },
+    "arXiv:2609.09852": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2609.09852",
+      "identity_tokens": [
+        "DOI:10.48550/arxiv.2609.09852",
+        "arXiv:2609.09852"
+      ],
+      "reason": "タイトルに明示される研究対象は科学音声アシスタントの能力評価ベンチマークであり、LLM推論システムの高速化・省メモリ化・サービングではない。タイトル先行除外として記録し、通常Discovery 10件ノルマには算入しない。",
+      "first_checked_at": "2026-10-31T11:43:35+00:00",
+      "last_checked_at": "2026-10-31T11:43:35+00:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 205"
+      ],
+      "title": "S³-Bench: Evaluating Speech Interaction Models as Scientific Voice Assistants"
     }
   }
 }
