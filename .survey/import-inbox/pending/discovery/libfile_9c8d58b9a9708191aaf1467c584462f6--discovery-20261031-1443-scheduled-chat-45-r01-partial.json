@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-1443-scheduled-chat-45/r01",
+  "reference_main_sha": "025c37ab00611b290549cf8329c1e1e543963f2a",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-5113",
+      "identity_tokens": [
+        "DOI:10.52202/085713-5113",
+        "https://proceedings.nips.cc/paper_files/paper/2025/hash/e067d57f9f113dc49dadcfefce1738d6-Abstract-Conference.html"
+      ],
+      "title": "VETA-DiT: Variance-Equalized and Temporally Adaptive Quantization for Efficient 4-bit Diffusion Transformers",
+      "reason": "NeurIPS 2025の公式要旨を確認。VETA-DiTは拡散Transformerのチャネル間分散をKarhunen–Loève変換で均一化し、反復デノイズ中の活性分布の時間変動に応じて量子化が難しい時刻を適応的に校正する。W4A4でDiT-XL/2やPixArt-Σの画像生成品質を評価している。一方、対象は画像・動画生成のDiTであり、自己回帰LLMのデコード速度、KVキャッシュ、サービング効率の直接検証はない。低ビット量子化の周辺技術として関連するが、現行LLM推論サーベイへの直接性は弱いためborderline。",
+      "source_url": "https://proceedings.nips.cc/paper_files/paper/2025/hash/e067d57f9f113dc49dadcfefce1738d6-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:48:42+09:00",
+      "last_checked_at": "2026-10-31T14:48:42+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 42"
+      ],
+      "worklist_rank": 42
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.01663",
+      "identity_tokens": [
+        "arXiv:2411.01663",
+        "SemanticScholar:36a0e72c2b0ea3bfefcbc1d6f8bdcf09f8ed569e",
+        "https://arxiv.org/abs/2411.01663"
+      ],
+      "title": "Unlocking the Theory Behind Scaling 1-Bit Neural Networks",
+      "reason": "arXivの一次要旨を確認。1ビット重みを持つ2層線形ネットワークの学習ダイナミクスをNeural Tangent Kernelの枠組みで解析し、幅を増やした際の学習損失の収束と全精度ネットワークとの一般化差を理論的に扱う。1-bit LLMを動機とし低精度モデル設計の基礎にはなるが、主要な貢献は学習収束・スケーリング則の証明で、LLM推論ランタイム、カーネル、メモリ使用量や実測サービング速度の改善手法を提示しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2411.01663",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T14:48:42+09:00",
+      "last_checked_at": "2026-10-31T14:48:42+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 59; SemanticScholar:36a0e72c2b0ea3bfefcbc1d6f8bdcf09f8ed569e"
+      ],
+      "worklist_rank": 59
+    }
+  ],
+  "round_status": "partial",
+  "round_target": 10
+}
