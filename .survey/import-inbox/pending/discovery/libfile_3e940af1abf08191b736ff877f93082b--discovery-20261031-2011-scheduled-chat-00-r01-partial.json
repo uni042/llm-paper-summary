@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-2011-scheduled-chat-00/r01",
+  "reference_main_sha": "9f640b3925935684ee6aebf9df137ccaa8b78ebe",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.21875",
+      "identity_tokens": [
+        "arXiv:2506.21875",
+        "DOI:10.48550/arXiv.2506.21875"
+      ],
+      "title": "WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild",
+      "reason": "arXiv原著v3の本文（導入、データ構築、評価方法、実験結果）を確認。1,100の音声対話クエリを用い、ノイズ、韻律、発話品質などSpeechLLMの対話能力を評価するベンチマーク。推論実装の速度・KVキャッシュ・メモリ・スループットを最適化する研究ではなく、対象サーベイのLLM推論システムから外れる。worklistの旧題「Benchmarking Audio LLMs in Natural Speech Conversation」は原著の正式題と不一致だがarXiv識別子は一致。",
+      "source_url": "https://arxiv.org/html/2506.21875v3",
+      "body_check": "primary_fulltext_read: arxiv HTML v3 sections 1-4, main results Table 2; no inference system optimization evaluated",
+      "first_checked_at": "2026-10-31T20:16:44+09:00",
+      "last_checked_at": "2026-10-31T20:16:44+09:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 200",
+        "DOI:10.48550/arXiv.2506.21875"
+      ],
+      "worklist_rank": 200,
+      "official_paper_url": "https://arxiv.org/abs/2506.21875"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "OpenReview:VrowJCm6FY",
+      "identity_tokens": [
+        "OpenReview:VrowJCm6FY",
+        "SemanticScholar:e6257f7df5d0f68f89b85232291768969a16dc8a"
+      ],
+      "title": "Multi-stream Sequence Learning",
+      "reason": "ICML 2025 ES-FoMo-IIIワークショップ原著PDFの本文（手法、GLRU/ Memoraの設計、TinyStories/FineWebEdu/DNAの実験、限界）を確認。長いデータ列をIIDで切断せず連続ストリームとして学習し、状態保持型の軽量リカレントモデルMemora/GLRUで長期依存を扱う。推論時は固定サイズの再帰状態を利用できるため推論アーキテクチャへの周辺的関連性はあるが、論文の主題は学習手順と品質改善で、LLM生成時の実測レイテンシ・スループット・KVメモリ削減を示していない。実験モデルは最大120Mパラメータであり、大規模LLM推論性能への外挿は不可。よってborderline。",
+      "source_url": "https://openreview.net/pdf?id=VrowJCm6FY",
+      "body_check": "primary_fulltext_read: OpenReview workshop paper PDF sections 1-5, Table 1-2 and experimental figures; not an LLM serving benchmark",
+      "first_checked_at": "2026-10-31T20:16:44+09:00",
+      "last_checked_at": "2026-10-31T20:16:44+09:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 352",
+        "SemanticScholar:e6257f7df5d0f68f89b85232291768969a16dc8a"
+      ],
+      "worklist_rank": 352,
+      "official_paper_url": "https://openreview.net/forum?id=VrowJCm6FY"
+    }
+  ],
+  "round_status": "partial",
+  "notes": "開始時候補在庫572件（600未満のためDiscovery固定）。worklist 500候補からGitHubの受信箱、precheck、既存成果およびLibraryを照合。既処理候補は補充せずskip。一次原著本文を読めた新規2件のみ通常分類。rank100,309,258は原著全文未取得で未分類。"
+}
