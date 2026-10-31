@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261101-0456-scheduled-chat-00/r01",
+  "reference_main_sha": "cdeee875389375951abbb2705a67e1733f4d05dc",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21428",
+      "identity_tokens": [
+        "arXiv:2606.21428",
+        "DOI:10.48550/arXiv.2606.21428"
+      ],
+      "title": "Does Mixture-of-Experts Actually Help Inference on Consumer and Edge Hardware? An Empirical Study",
+      "reason": "arXiv一次要旨は、OLMoE-1B-7B（総6.9B・active 1.3B）とdenseモデル3種をApple M2 Pro／Jetson Orin Nano 8GB上のllama.cppで比較し、生成スループット・ピークメモリ・端末エネルギーを測定する。active規模が近いdenseモデル比でMoEはM2 Pro約10%、Jetson約31%低速、Jetsonのtoken当たり消費エネルギーは2.1倍と報告。decodeグラフのnode別計測でrouter計算がMoEブロック時間の9%未満とし、総パラメータ常駐量・expert dispatch・KVキャッシュ圧力が実装上の制約になると分析する。LLM推論実機のメモリ／性能／電力特性への直接的計測貢献があるためaccept。1モデル・2端末・単一runtimeの結果で一般化には制約がある。",
+      "source_url": "https://arxiv.org/abs/2606.21428",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T20:00:34Z",
+      "last_checked_at": "2026-10-31T20:00:34Z",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 120",
+        "https://arxiv.org/abs/2606.21428"
+      ],
+      "worklist_rank": 120,
+      "origin": "discovery_worklist_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.14005",
+      "identity_tokens": [
+        "arXiv:2609.14005",
+        "DOI:10.48550/arXiv.2609.14005"
+      ],
+      "title": "StepAudio 3 Realtime Technical Report",
+      "reason": "arXiv原著v3の一次要旨は、音声対話のDeep Perception、Seamless Duplex、発話と非公開推論を並行させるThink-While-Speaking、非同期tool実行を扱うVoice Agentを報告する。発話中の推論並行化は応答遅延・リアルタイム対話に関連するが、主な評価はStepAudioChat 73.0、MMSU 90.6、Full-Duplex Bench 98.9、τ-Voice成功率56.0%など対話能力・音声タスク品質であり、推論サービングのTTFT/TPOT・GPUメモリ・スループットの直接的システム改善を一次要旨から確証できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.14005",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T20:00:34Z",
+      "last_checked_at": "2026-10-31T20:00:34Z",
+      "linked_from": [
+        "worker-worklist-00 discovery_review rank 342",
+        "https://arxiv.org/abs/2609.14005"
+      ],
+      "worklist_rank": 342,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
