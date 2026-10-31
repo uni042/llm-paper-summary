@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-1648-scheduled-chat-45/r02",
+  "reference_main_sha": "e2dfb597d4a97bd38bdcbb9eed0c788d9021e6ed",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/JIOT.2026.3675866",
+      "identity_tokens": [
+        "DOI:10.1109/JIOT.2026.3675866"
+      ],
+      "title": "A Comprehensive Survey on Large Language Model Compression for Artificial Intelligence Applications in Edge Systems",
+      "reason": "著者論文の公開原著要旨を確認。edge端末でのLLM推論を実現する量子化・剪定・知識蒸留を、cloud-edge協調と異種端末のハイブリッド構成から整理し、4層のソフトウェア・ハードウェア協調設計とoverhead-awareな配置最適化を検討するサーベイ。個別の高速化アルゴリズムの新規実装ではないが、edge LLM推論の圧縮・配置・システム設計を直接対象とするためaccept。",
+      "source_url": "https://doi.org/10.1109/JIOT.2026.3675866",
+      "body_check": "author_public_original_abstract_read; body_not_read",
+      "first_checked_at": "2026-10-31T16:55:34+09:00",
+      "last_checked_at": "2026-10-31T16:55:34+09:00",
+      "linked_from": [],
+      "worklist_rank": 124,
+      "origin": "discovery_worklist_individual_abstract"
+    }
+  ]
+}
