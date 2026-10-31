@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1006-scheduled-chat-00/r02",
+  "reference_main_sha": "0522eb616eb21eb0aa9ae8540f181f2ce5464fc0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.07129",
+      "identity_tokens": [
+        "arXiv:2609.07129"
+      ],
+      "title": "Line-Coupled Language Model",
+      "reason": "arXiv由来の著者一次要旨を確認。行ごとに次のトークンを並列予測するLine-Coupled Language Modelを提案し、行単位でずらしたRoPEと共有因果文脈で1回のforwardに複数行を進める。881Mモデルで2.94 content tokens/forward（AR基準1.00）、検証loss 2.44対2.39。forward当たりの並列生成効率の直接研究としてaccept。ただしwall-clock速度向上の実測はこの要旨からは断定できない。",
+      "source_url": "https://arxiv.org/abs/2609.07129",
+      "body_check": "arxiv-derived_primary_abstract_screen; arxiv_site_direct_access_unavailable; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 337,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2104.09393",
+      "identity_tokens": [
+        "arXiv:2104.09393"
+      ],
+      "title": "Improving Transformer-Kernel Ranking Model Using Conformer and Query Term Independence",
+      "reason": "arXiv一次要旨を確認。Transformer-Kernel/TKLの長文検索ランキングをConformer層・query-term independence・明示的term matchingで改良し、TREC 2020のNDCG@10を比較する。効率的検索エンコーダー設計に接点があるが、生成LLMの推論デコードやサービングGPU・KVキャッシュ評価はないためborderline。",
+      "source_url": "https://arxiv.org/abs/2104.09393",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 364,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1609/aaai.v38i16.29722",
+      "identity_tokens": [
+        "DOI:10.1609/aaai.v38i16.29722"
+      ],
+      "title": "Beyond Attention: Breaking the Limits of Transformer Context Length with Recurrent Memory",
+      "reason": "AAAI公式一次abstractを確認。事前学習済みTransformerへrecurrent memory tokenとセグメント間再帰を付与し、長文処理の計算量を入力長に対し線形にスケールさせ、最大200万トークンの情報保持・検索精度とlanguage modelingのperplexityを評価。長文コンテキスト計算効率の直接研究としてaccept。実際のサービングスループット倍率は未確認。",
+      "source_url": "https://ojs.aaai.org/index.php/AAAI/article/view/29722",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 370,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06485",
+      "identity_tokens": [
+        "arXiv:2605.06485",
+        "DOI:10.48550/arXiv.2605.06485"
+      ],
+      "title": "Litespark Inference For CPUs: Ultra-Fast SIMD Framework for Ternary (1.58-bit) Language Models",
+      "reason": "arXiv一次要旨を確認。ternary重み{-1,0,+1}向けのCPU SIMDカスタムカーネルで行列積を加減算中心に置換する推論フレームワーク。著者報告ではPyTorch比Apple Siliconでthroughput 18.15倍、TTFT 7.15倍、メモリ6.03倍削減、Intel/AMDで最大95.81倍のthroughput。CPUローカルLLM推論効率に直接寄与するためaccept。worklist表題とarXiv正式表題が異なるため正式表題に正規化した。",
+      "source_url": "https://arxiv.org/abs/2605.06485",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 371,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2411.16991",
+      "identity_tokens": [
+        "arXiv:2411.16991"
+      ],
+      "title": "Dynamic Self-Distillation via Previous Mini-batches for Fine-tuning Small Language Models",
+      "reason": "arXiv一次要旨を確認。前mini-batchのlogitsをteacher代わりに用い、蒸留影響と温度を動的調整するDynSDPBを提案し、BERT・LLaMA系のNLU/NLGタスクでfine-tuning性能を評価。圧縮・小型化への間接接点はあるが、推論の速度・メモリ・サービング性能を直接改善・評価していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2411.16991",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 374,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1007/s11227-025-06993-6",
+      "identity_tokens": [
+        "DOI:10.1007/s11227-025-06993-6"
+      ],
+      "title": "An efficient quantized GEMV implementation for large language models inference with matrix core",
+      "reason": "Springer公式一次abstractを確認。量子化LLM推論で支配的なGEMVのdequantization・低演算密度の問題に対し、vectorized prefetch・Matrix Coreカーネル・atomicAdd最適化を組み合わせる。AMD MI210で複数形状の量子化GEMVおよびLLM end-to-end推論を比較し改善を報告。直接的な推論カーネル研究としてaccept。倍率は原著本文未取得のため記載しない。",
+      "source_url": "https://link.springer.com/article/10.1007/s11227-025-06993-6",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 375,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.10447",
+      "identity_tokens": [
+        "arXiv:2608.10447"
+      ],
+      "title": "Towards Efficient Reasoning in LLM-Based Recommender Systems via Model Merging",
+      "reason": "arXiv一次要旨を検索索引経由で確認。slow-thinking/fast-thinkingのLLM推薦モデルをattention head単位の係数で学習不要にmergeするREAMを提案。3ベンチマークで推薦精度を維持しつつreasoning出力長を最大24.3%削減。生成トークン削減という推論コストに直接寄与するためaccept。ただし実測のwall-clock速度改善は要旨からは断定しない。",
+      "source_url": "https://arxiv.org/abs/2608.10447",
+      "body_check": "arxiv_index_primary_abstract_screen; arxiv_direct_access_disabled; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 385,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.02307",
+      "identity_tokens": [
+        "arXiv:2306.02307"
+      ],
+      "title": "Finding the SWEET Spot: Analysis and Improvement of Adaptive Inference in Low Resource Settings",
+      "reason": "arXiv一次要旨を確認。early-exitとmulti-modelによる難易度依存の適応推論を比較し、各exitの重み更新を分離するSWEETで低資源NLP分類の速度-精度曲線を改善する。推論計算量削減手法だが対象は分類器のadaptive inferenceで、生成LLMの逐次デコードやサービング評価はないためborderline。",
+      "source_url": "https://arxiv.org/abs/2306.02307",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 389,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/FCN66513.2025.11296658",
+      "identity_tokens": [
+        "DOI:10.1109/FCN66513.2025.11296658"
+      ],
+      "title": "Joint Request Batching and Worker Assignment in AI-RAN Edge Inference Systems",
+      "reason": "IEEE Xplore公式一次abstractを確認。AI-RANエッジの複数ユーザーLLM推論で、到着時刻と異種deadlineを考慮したbatch形成・worker割当をMDPに定式化し、DRLでSLO内完了リクエスト比率を改善する。LLM serving schedulingとSLO goodputに直接寄与するためaccept。評価はシミュレーションであり実GPU実機実験と混同しない。",
+      "source_url": "https://doi.org/10.1109/FCN66513.2025.11296658",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 390,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "SemanticScholar:43d7e36606bd78191484c2a84980c7e20b8243ca",
+      "identity_tokens": [
+        "SemanticScholar:43d7e36606bd78191484c2a84980c7e20b8243ca"
+      ],
+      "title": "Distributional Quantization of Large Language Models",
+      "reason": "著者・研究指導先が公開する原著PDFのabstractを確認。LLM重みをブロック分割し、Gaussian/Beta/Student-t分布のquantile binsと数値最適化で4-bit量子化する。LLaMA-2のWikiText-2 perplexityを検証し、NF4同等容量で再構成誤差の低減を報告。モデル格納量を抑えた量子化推論の直接研究としてaccept。ただしGPU実行速度向上は示していない。",
+      "source_url": "https://www.cee.org/sites/default/files/rsi/Papers/Cholakov_Radostin.pdf",
+      "body_check": "primary_author_hosted_pdf_abstract_screen; body_not_fully_read",
+      "first_checked_at": "2026-10-31T10:13:03+09:00",
+      "last_checked_at": "2026-10-31T10:13:03+09:00",
+      "linked_from": [],
+      "worklist_rank": 423,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
