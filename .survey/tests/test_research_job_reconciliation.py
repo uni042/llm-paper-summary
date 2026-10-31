@@ -148,6 +148,72 @@ class ResearchJobReconciliationTests(unittest.TestCase):
             self.assertEqual(payloads["00"]["research_audit"]["ready_total"], 1)
             self.assertEqual(payloads["30"]["research_audit"]["ready_total"], 1)
 
+    def test_unique_same_year_title_alias_is_superseded(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            represented_path = _write_paper(repo)
+            paper_path = repo / represented_path
+            paper_text = paper_path.read_text(encoding="utf-8")
+            paper_text = paper_text.replace(
+                'title: "Represented Paper"\n',
+                'title: "Represented Paper"\npublished: "2026-09-01"\n',
+            )
+            paper_path.write_text(paper_text, encoding="utf-8")
+
+            job_path = repo / ".survey/work-queue/jobs/job-research-publisher-alias.json"
+            _write_json(
+                job_path,
+                {
+                    "job_id": "job-research-publisher-alias",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "DOI:10.5555/represented-paper",
+                    "title": "Represented Paper",
+                    "year": 2026,
+                },
+            )
+
+            result = research_job_reconciliation.reconcile(
+                repo,
+                timestamp="2026-10-31T00:00:00+00:00",
+            )
+
+            self.assertEqual(result["changed"], 1)
+            job = json.loads(job_path.read_text(encoding="utf-8"))
+            self.assertEqual(job["status"], "superseded")
+            self.assertEqual(job["represented_paper_path"], represented_path)
+
+    def test_same_title_different_year_is_not_superseded(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            repo = Path(td)
+            represented_path = _write_paper(repo)
+            paper_path = repo / represented_path
+            paper_text = paper_path.read_text(encoding="utf-8")
+            paper_text = paper_text.replace(
+                'title: "Represented Paper"\n',
+                'title: "Represented Paper"\npublished: "2026-09-01"\n',
+            )
+            paper_path.write_text(paper_text, encoding="utf-8")
+
+            job_path = repo / ".survey/work-queue/jobs/job-research-other-year.json"
+            _write_json(
+                job_path,
+                {
+                    "job_id": "job-research-other-year",
+                    "type": "research",
+                    "status": "ready",
+                    "canonical_id": "DOI:10.5555/other-paper",
+                    "title": "Represented Paper",
+                    "year": 2025,
+                },
+            )
+
+            result = research_job_reconciliation.reconcile(repo)
+
+            self.assertEqual(result["changed"], 0)
+            job = json.loads(job_path.read_text(encoding="utf-8"))
+            self.assertEqual(job["status"], "ready")
+
     def test_reconcile_is_idempotent(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             repo = Path(td)
