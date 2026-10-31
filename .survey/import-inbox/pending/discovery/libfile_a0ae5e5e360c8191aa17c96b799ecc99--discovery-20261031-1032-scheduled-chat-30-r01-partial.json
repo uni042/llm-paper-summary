@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-1032-scheduled-chat-30/r01",
+  "reference_main_sha": "974840e4020901396f92aef493a17dd6d78efec8",
+  "record_count": 4,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.06577",
+      "identity_tokens": [
+        "arXiv:2603.06577",
+        "DOI:10.48550/arXiv.2603.06577"
+      ],
+      "title": "Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion",
+      "reason": "マスク型離散拡散モデルでテキスト・音声・画像のany-to-any理解と生成を統一するモデルアーキテクチャを提案。一次要旨の評価はマルチモーダル能力ベンチマーク中心で、サービング実装、KV管理、実測レイテンシ・スループット改善の直接証拠はない。並列復号に関係するため境界的だが、推論システム論文としてacceptする根拠は不足。",
+      "source_url": "https://arxiv.org/abs/2603.06577",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:39:02+09:00",
+      "last_checked_at": "2026-10-31T10:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 180,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01666",
+      "identity_tokens": [
+        "arXiv:2606.01666",
+        "DOI:10.48550/arXiv.2606.01666"
+      ],
+      "title": "DOT-MoE: Differentiable Optimal Transport for MoEfication",
+      "reason": "事前学習済みdense LLMのFFNニューロンをSinkhorn-Knoppによる微分可能な最適輸送で容量制約付きexpertに分割し、STEでtoken-to-expert routingと共同最適化。一次要旨は元denseモデルの性能約90%を維持しながらactive parameterを50%削減と報告。実行時に活性化する計算量を削るMoE推論向け圧縮への直接的技術貢献としてaccept。ただし要旨から実測トークン毎秒改善は断定しない。",
+      "source_url": "https://arxiv.org/abs/2606.01666",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:39:02+09:00",
+      "last_checked_at": "2026-10-31T10:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 234,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2501.16337",
+      "identity_tokens": [
+        "arXiv:2501.16337",
+        "DOI:10.48550/arXiv.2501.16337"
+      ],
+      "title": "Explore Activation Sparsity in Recurrent LLMs for Energy-Efficient Neuromorphic Computing",
+      "reason": "R-LLMの活性値を学習不要の低コスト閾値化で疎化し、ニューロモルフィックSENECAプロセッサでのエネルギー・レイテンシ改善をハードウェアシミュレーションで評価。OPTへの一般化も一次要旨で報告。エッジLLM推論の計算削減と実行ハードウェアへの直接的貢献としてaccept。実機デプロイ実測とシミュレーションを混同しない。",
+      "source_url": "https://arxiv.org/abs/2501.16337",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:39:02+09:00",
+      "last_checked_at": "2026-10-31T10:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 373,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2604.15167",
+      "identity_tokens": [
+        "arXiv:2604.15167",
+        "DOI:10.48550/arXiv.2604.15167"
+      ],
+      "title": "When Flat Minima Fail: Characterizing INT4 Quantization Collapse After FP32 Convergence",
+      "reason": "Pythia-160mの154訓練checkpointに校正不要INT4プローブを適用し、FP32 perplexity収束後にINT4量子化誤差が増大する現象を分析。INT4 gapが11%から517%に増える一方INT8は安定と一次要旨で報告。低ビット推論の品質確保には関連するが、主な貢献は訓練経過と量子化頑健性の診断・学習率介入で、実行時のカーネル・サービング高速化は示していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2604.15167",
+      "body_check": "primary_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T10:39:02+09:00",
+      "last_checked_at": "2026-10-31T10:39:02+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
