@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-0901-scheduled-chat-00/r02",
+  "reference_main_sha": "8eea0c6e02fcca1b93bd9c24cc9cab211651b500",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2205.12476",
+      "identity_tokens": [
+        "arXiv:2205.12476"
+      ],
+      "title": "Leveraging Locality in Abstractive Text Summarization",
+      "reason": "arXiv一次要旨を確認。長文要約における二乗メモリの自己注意を避けるため、局所性で分割した入力ページごとにencoder/decoderを適用し、効率的attentionの強いベースラインと性能を比較する。推論時のメモリ効率化には直接関係するが、検証は旧来の抽象型要約seq2seqモデルに限定され、現代の生成LLMのKVキャッシュ・サービング・長文脈推論への直接評価がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2205.12476",
+      "body_check": "primary_arxiv_abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:06:04+09:00",
+      "last_checked_at": "2026-10-31T09:06:04+09:00",
+      "linked_from": [],
+      "worklist_rank": 401,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1007/978-3-031-35995-8_39",
+      "identity_tokens": [
+        "DOI:10.1007/978-3-031-35995-8_39"
+      ],
+      "title": "A Contrastive Self-distillation BERT with Kernel Alignment-Based Inference",
+      "reason": "ICCS2023公式会議サイトで公開された著者原稿を確認。CsdBERTは浅い分類器へのcontrastive/self-distillation学習と、推論時のcentered kernel alignmentによる早期終了判定を組み合わせる。GLUE/ELUEで95%の性能を維持し4倍の高速化を報告。推論計算量削減は明確だが、BERT系分類タスクが対象であり、自己回帰LLMのトークン生成・サービングに直接対応しないためborderline。",
+      "source_url": "https://www.iccs-meeting.org/archive/iccs2023/papers/140730563.pdf",
+      "body_check": "primary_conference_fulltext_and_abstract_checked; non_generative_bert",
+      "first_checked_at": "2026-10-31T09:06:04+09:00",
+      "last_checked_at": "2026-10-31T09:06:04+09:00",
+      "linked_from": [],
+      "worklist_rank": 396,
+      "origin": "discovery_worklist_primary_fulltext_screen"
+    }
+  ]
+}
