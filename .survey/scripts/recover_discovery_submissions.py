@@ -219,7 +219,7 @@ def _recovery_failure_result(source_submission: str, sub: dict, exc: Exception) 
         "next_action": "Do not replay this immutable submission unchanged; create a fresh canonical Discovery round if work remains.",
         "recovery_steps": [
             "Preserve the failed immutable submission and this result for audit evidence.",
-            "Use the current worker-router and workflow-produced precheck result to create a new submission when retry is appropriate.",
+            "Use the current Library-first worker procedure and the workflow-produced precheck result to create a new submission when retry is appropriate.",
             "Continue recovery of unrelated Discovery submissions; this isolated submission must not poison the queue.",
         ],
         "submitted_job_id": sub.get("job_id") if isinstance(sub.get("job_id"), str) else None,
