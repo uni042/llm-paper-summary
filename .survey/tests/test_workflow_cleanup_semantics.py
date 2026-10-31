@@ -129,6 +129,8 @@ class WorkflowCleanupSemanticsTests(unittest.TestCase):
         self.assertIn("REQUIRED_RUNTIME_PATHS", checker)
         self.assertNotIn('".survey/docs/survey-workflow/worker-router.md"', checker)
         self.assertIn("retired_human_guide_on_main", checker)
+        self.assertIn('"PAPER-ADDITION-WORKFLOW.md"', checker)
+        self.assertIn("RETIRED_HUMAN_GUIDE_PATHS", checker)
         self.assertNotIn(".survey/docs/survey-workflow/fallback-routing.md", checker)
         self.assertNotIn(".survey/docs/survey-workflow/backlog-resilience.md", checker)
 
