@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261101-0233-scheduled-chat-30/r01",
+  "reference_main_sha": "196b3a840780606864af5ed1869e538ba8ffd39d",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.eswa.2026.133192",
+      "identity_tokens": [
+        "DOI:10.1016/j.eswa.2026.133192",
+        "URL:https://openreview.net/pdf?id=u0G565Jd3C"
+      ],
+      "title": "Semantic-aware pruning of large language models via neuron importance explanation",
+      "reason": "著者原稿の一次本文は、入力プロンプトの意味に応じて構造化枝刈りマスクを切り替えるSeAPを提案する。較正データから局所・大域ニューロン重要度を統合して候補マスクを作り、軽量BERTルータがprefill前にマスクを選択する。LLaMA-2/3・Qwen2・Phi-2で言語モデル性能を保ちながらメモリと推論遅延の低減を評価しており、LLM推論の実行効率に直接関係する。OpenReview著者原稿と出版社正式版の差異は未照合であり、数値倍率は断定しない。",
+      "source_url": "https://openreview.net/pdf?id=u0G565Jd3C",
+      "body_check": "OpenReview著者一次PDF（ICLR 2026投稿版）の要旨・導入・方式説明を確認。出版社正式版全文は未取得。",
+      "first_checked_at": "2026-11-01T02:37:45+09:00",
+      "last_checked_at": "2026-11-01T02:37:45+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 244; main 196b3a840780606864af5ed1869e538ba8ffd39d"
+      ],
+      "worklist_rank": 244,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:c49c292e1fb1d215c88828a52134b7ccfa52be44",
+      "identity_tokens": [
+        "SemanticScholar:c49c292e1fb1d215c88828a52134b7ccfa52be44",
+        "URL:https://openreview.net/forum?id=VGnOJhd5Q1q"
+      ],
+      "title": "Sparse Attention with Learning-to-Hash",
+      "reason": "ICLR 2022一次論文は、LSHによる疎注意でqueryとkeyを同一空間へ写す仮定を問題視し、別々の学習可能なハッシュ関数とattention utility指標を用いるLHAを提案する。注意計算の計算量をO(N²)からO(N^1.5)へ減らし、WikiText-103、GLUE、Long-Range-Arenaで検証する。推論時の疎注意最適化として関連するが、現在の大規模生成LLMのKV-cache・デコード・サービング性能は直接評価していないため境界判定。",
+      "source_url": "https://openreview.net/pdf?id=VGnOJhd5Q1q",
+      "body_check": "ICLR 2022正式一次PDFの要旨・導入・計算量説明を確認。LLMサービング評価は本文の確認範囲で見当たらず、生成LLM性能への外挿は行わない。",
+      "first_checked_at": "2026-11-01T02:37:45+09:00",
+      "last_checked_at": "2026-11-01T02:37:45+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 258; main 196b3a840780606864af5ed1869e538ba8ffd39d"
+      ],
+      "worklist_rank": 258,
+      "origin": "discovery_worklist_primary_source_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/SIBGRAPI67909.2025.11223371",
+      "identity_tokens": [
+        "DOI:10.1109/SIBGRAPI67909.2025.11223371",
+        "URL:https://arturjordao.github.io/Files/Papers/SIBGRAPI_2025_CarolinaTavares.pdf"
+      ],
+      "title": "Tiny Titans: Efficient Large Vision, Language and Multimodal Models through Pruning",
+      "reason": "SIBGRAPI 2025の著者一次原稿は、構造化・非構造化枝刈りの理論、GreenAI指標、コンピュータビジョン・LLMへの適用実習をまとめるチュートリアルである。LLM枝刈りの実装教材は含むが、独自のLLM推論カーネル、サービング方式や新規の定量的性能改善を主張する一次実験研究ではない。効率化の背景資料としては関連するが、研究成果の中心収録対象としては境界的。",
+      "source_url": "https://arturjordao.github.io/Files/Papers/SIBGRAPI_2025_CarolinaTavares.pdf",
+      "body_check": "著者公式一次PDFの要旨・導入・チュートリアル目的と公式コードリポジトリを確認。",
+      "first_checked_at": "2026-11-01T02:37:45+09:00",
+      "last_checked_at": "2026-11-01T02:37:45+09:00",
+      "linked_from": [
+        "WORKLIST-30.md rank 278; main 196b3a840780606864af5ed1869e538ba8ffd39d"
+      ],
+      "worklist_rank": 278,
+      "origin": "discovery_worklist_primary_source_screen"
+    }
+  ],
+  "status": "partial"
+}
