@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1103-scheduled-chat-00/r02",
+  "reference_main_sha": "d20c9452987408640516def91a821d917cb352e4",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICECST66106.2025.11307590",
+      "identity_tokens": [
+        "DOI:10.1109/ICECST66106.2025.11307590"
+      ],
+      "title": "Accelerating Inference in Lightweight Language Models Using Speculative Decoding and Quantization",
+      "reason": "共著者Sachith Cの本人掲載研究説明と書誌索引の原著要旨転載を照合。DistilGPT2の推論を対象にINT8事後量子化とlayer skippingによるself-speculative decodingを別々・併用で比較し、単独約29%の推論時間短縮、併用で57%高速化、perplexity 55.03の維持を報告。小規模モデル・Google Colab上の評価に限定されるが、生成推論の低ビット化と投機的復号の直接的最適化であるためaccept。",
+      "source_url": "https://doi.org/10.1109/ICECST66106.2025.11307590",
+      "source_abstract_url": "https://in.linkedin.com/in/sachith-c-b75b08293",
+      "body_check": "coauthor_self_published_summary_and_original_abstract_reproduced_in_index; publisher_fulltext_not_read",
+      "first_checked_at": "2026-10-31T11:08:57+09:00",
+      "last_checked_at": "2026-10-31T11:08:57+09:00",
+      "linked_from": [],
+      "worklist_rank": 139,
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "source_limitations": "IEEE出版社原文は取得不可。共著者自身の掲載要旨・二次書誌転載で照合。"
+    }
+  ],
+  "round_status": "partial",
+  "round_target": 10
+}
