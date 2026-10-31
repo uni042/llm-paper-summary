@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-1745-scheduled-chat-45/r01",
+  "reference_main_sha": "531fc514dfb38bc9ce29febd6164eb40d9fa9171",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240835",
+      "identity_tokens": [
+        "DOI:10.1109/ICCAD66269.2025.11240835"
+      ],
+      "title": "DANCE: Dual-Side Agile N:M Sparse Compressed Digital CiM Accelerator for Efficient Compound AI",
+      "reason": "ICCAD 2025のIEEE Xplore出版社一次要旨を確認。Compound AIにおけるLLMルータと小規模expertモデルのメモリ転送負荷を対象に、重み・活性化双方のN:M疎性を選択する回路と、細粒度剪定・外れ値対応量子化を統合したdigital compute-in-memoryアクセラレータDANCEを提案。従来のdigital CiM基準でResNet-18/CIFAR-100は最大4.36倍のエネルギー効率（精度低下1%未満）、Llama-7B/WikiText-2は最大2.59倍（perplexity増加0.5未満）と報告。GPUサービング全体の速度改善ではなくCiMアクセラレータ比較である点に注意。LLM推論用量子化・メモリ階層・専用ハードウェアの直接的寄与としてaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11240835/",
+      "body_check": "primary_publisher_IEEE_Xplore_abstract_read; full_body_not_read",
+      "first_checked_at": "2026-10-31T17:47:15+09:00",
+      "last_checked_at": "2026-10-31T17:47:15+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 95; current main 531fc514dfb38bc9ce29febd6164eb40d9fa9171"
+      ],
+      "worklist_rank": 95,
+      "origin": "discovery_worklist_individual_abstract"
+    }
+  ]
+}
