@@ -1,0 +1,32 @@
+{
+  "run_key": "20261031-1230-scheduled-chat-30/r02",
+  "worker_id": "scheduled-chat-30",
+  "round": "r02",
+  "mode": "discovery",
+  "status": "partial",
+  "record_count": 1,
+  "records": [
+    {
+      "canonical_id": "SemanticScholar:ad0089b49c921400d97294156dad05b46240e10d",
+      "identity_tokens": [
+        "SemanticScholar:ad0089b49c921400d97294156dad05b46240e10d",
+        "OpenReview:TGWzg86kYv"
+      ],
+      "title": "Contextual Sparsity as a Tool for Mechanistic Understanding of Retrieval in Hybrid Foundation Models",
+      "classification": "borderline",
+      "reason": "ICLR 2025 SLLM workshopの著者一次PDF。RecurrentGemma-2Bのneedle retrievalでself-attention 10 headsのうち2 headsを残すだけでretrieval品質を維持できると報告。主眼はattentionの機構解釈であり、LLM推論時の実測レイテンシやメモリ削減の直接評価は確認できないためborderline。",
+      "source_url": "https://openreview.net/pdf/8827517c2eb5391e066460189d61c06d1443825e.pdf",
+      "body_check": "OpenReview公式著者PDFのAbstractを確認。全文未読。",
+      "linked_from": [
+        "WORKLIST-30.md rank 352; Hybrid Foundation Models / Sparsity"
+      ],
+      "worklist_rank": 352,
+      "first_checked_at": "2026-10-31T12:38:56+09:00",
+      "last_checked_at": "2026-10-31T12:38:56+09:00"
+    }
+  ],
+  "notes": "r01検証後に第2ラウンドへ着手。",
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "reference_main_sha": "f457f59e7ae70f076190854f699514b64d16a6b2"
+}
