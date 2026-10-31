@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-10-31 15:58:50 JST**
+> 自動生成: **2026-10-31 16:25:30 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,7 +13,7 @@
 |---|---:|
 | 収録候補論文数 | **572** |
 | 未claim Research job | **572** |
-| 直近24hのResearch処理完了 | **61** |
+| 直近24hのResearch処理完了 | **59** |
 | 最終Research処理完了 | **10-31 01:48:57 JST** |
 | 最終Discovery探索完了 | **10-31 14:43:00 JST** |
 | 整合性異常 | **0** |
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **10-31 11:47:56 JST（4時間10分前）** |
+| 最終maintenance完了 | **10-31 11:47:56 JST（4時間37分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,8 +137,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **22** |
-| 直近6hのDiscovery本文確認・分類 | **98** |
+| 直近6hのDiscovery run | **15** |
+| 直近6hのDiscovery本文確認・分類 | **54** |
 | 最終Research完了 | **10-31 01:48:57 JST** |
 | 最終Discovery完了 | **10-31 14:43:00 JST** |
 
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/libfile_065a1884c270819192c5254078e8caf3--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-semantic-reaudit-20261031-0148-scheduled-chat-45-r01.json
 - Discovery: **10-31 14:43:00 JST** / worker scheduled-chat-45 / run 20261031-1443-scheduled-chat-45/r01
   - 本文確認・分類 **2件** / accept **0件** / unrelated+borderline **2件**
-  - evidence: .survey/import-inbox/pending/discovery/libfile_9c8d58b9a9708191aaf1467c584462f6--discovery-20261031-1443-scheduled-chat-45-r01-partial.json
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_9c8d58b9a9708191aaf1467c584462f6--discovery-20261031-1443-scheduled-chat-45-r01-partial.json
 
 ### Codex探索成果の反映状況
 
