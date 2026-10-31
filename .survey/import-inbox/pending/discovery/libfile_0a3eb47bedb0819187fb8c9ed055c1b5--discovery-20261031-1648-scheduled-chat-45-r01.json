@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-1648-scheduled-chat-45/r01",
+  "reference_main_sha": "e2dfb597d4a97bd38bdcbb9eed0c788d9021e6ed",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.23919/DATE64628.2025.10993001",
+      "identity_tokens": [
+        "DOI:10.23919/DATE64628.2025.10993001"
+      ],
+      "title": "Late Breaking Results: AFS: Improving Accuracy of Quantized Mamba via Aggressive Forgetting Strategy",
+      "reason": "DATE 2025公式セッション要旨を確認。Mambaの状態忘却過程で生じる外れ値が線形量子化精度を低下させる問題に対し、追加計算を要しないAggressive Forgetting Strategy (AFS)を提案し、量子化Mambaの推論精度を従来法比最大21.5倍改善と報告。SSMの低精度推論効率に直接関連する。",
+      "source_url": "https://date25.date-conference.com/programme",
+      "body_check": "primary_conference_abstract_read; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 388,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2210.06640",
+      "identity_tokens": [
+        "arXiv:2210.06640",
+        "DOI:10.48550/arXiv.2210.06640"
+      ],
+      "title": "Compute-Efficient Deep Learning: Algorithmic Trends and Opportunities",
+      "reason": "arXiv原著要旨を確認。主題は深層学習全般の訓練計算量を減らすアルゴリズムの分類、訓練パイプラインのボトルネックと評価規範であり、LLMの生成推論・KVキャッシュ・サービングランタイムを直接最適化する研究ではない。",
+      "source_url": "https://arxiv.org/abs/2210.06640",
+      "body_check": "primary_arxiv_abstract_read; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 245,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.5220/0014920500004039",
+      "identity_tokens": [
+        "DOI:10.5220/0014920500004039"
+      ],
+      "title": "MoE-Pipe: A Pipelined MoE Model Loading Framework for Reducing the Cold Start Delays in Serverless Inference",
+      "reason": "CLOSER 2026出版社の原著要旨とPDFを確認。MoEの疎なexpert活性を利用し、CPU-GPU、GPU間、GPU内の各段でexpert重みのロードと推論演算を重畳するMoE-Pipeを提案。ロード時間約65%を隠蔽し、エンドツーエンド遅延最大1.85倍、TTFT最大約2倍の改善を報告。serverless MoE推論のコールドスタート最適化として直接適合する。",
+      "source_url": "https://www.scitepress.org/PublishedPapers/2026/149205/",
+      "body_check": "primary_publisher_abstract_and_pdf_checked",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 269,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISIBER68248.2026.11469970",
+      "identity_tokens": [
+        "DOI:10.1109/ISIBER68248.2026.11469970"
+      ],
+      "title": "Efficient LLM Inference via Activation-Aware Weight Quantization: System Integration and Performance Analysis",
+      "reason": "原著論文の公開PDFに掲載された要旨を確認。vLLM上でOPTとMistralのFP16対AWQ 4bitをプロンプト長・バッチサイズ別に測定し、GPUメモリ最大約50%減、スループット約60%向上を報告。既知AWQ手法のシステム評価が中心で新規量子化法ではないが、LLM推論実装の定量評価として適合する。",
+      "source_url": "https://doi.org/10.1109/ISIBER68248.2026.11469970",
+      "body_check": "author_uploaded_original_pdf_abstract_read; body_partially_inspected",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 182,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/HPCC67675.2025.00205",
+      "identity_tokens": [
+        "DOI:10.1109/HPCC67675.2025.00205"
+      ],
+      "title": "Performance Testing and Analysis of Token Generation for LLMs Based on MaaS (Model-as-a-Service)",
+      "reason": "IEEE Xplore原著要旨を確認。DeepSeekの複数版・規模についてDeepSeek、BaiLian、Volcengine、Qianfan、Siliconflow、TencentCloudの6 MaaSプラットフォームを6か月間測定し、token生成速度・応答遅延などの統一的な性能評価指標を提案する。推論サービス性能測定には関係するが、推論高速化機構の新規提案は主目的ではないためborderline。",
+      "source_url": "https://doi.org/10.1109/HPCC67675.2025.00205",
+      "body_check": "primary_ieee_abstract_read; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 197,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.ipm.2026.105065",
+      "identity_tokens": [
+        "DOI:10.1016/j.ipm.2026.105065"
+      ],
+      "title": "Stage-aware LLM-SLM collaboration for agentic tasks via joint routing and verification",
+      "reason": "原著要旨の公開転載を確認。RoVerはagentの各実行段階をMDPとして扱い、Routerで72B LLMと1.7B SLMを動的選択し、Verifierと失敗時fallbackで品質を維持する。ALFWorldで成功率86.8%、平均活性パラメータ/トークン71.1%削減、API-Bank-lv3でエンドツーエンド遅延38.7%減を報告。LLM/SLM推論ルーティングと計算コスト低減に直接関連。",
+      "source_url": "https://doi.org/10.1016/j.ipm.2026.105065",
+      "body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 177,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/COMST.2026.3682638",
+      "identity_tokens": [
+        "DOI:10.1109/COMST.2026.3682638"
+      ],
+      "title": "Model Compression for Sustainable AI in xG Wireless Networks: Recent Advances, Challenges, and Future Directions",
+      "reason": "原著要旨の公開転載を確認。6G以降の無線アクセス・物理層処理を省電力化するためのDNN剪定・量子化・知識蒸留のサーベイで、対象は無線インテリジェンスのPHY/UE/edgeモデル。LLMの生成推論・サービングシステムは直接の評価対象ではないためunrelated。",
+      "source_url": "https://doi.org/10.1109/COMST.2026.3682638",
+      "body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 239,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00022",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00022"
+      ],
+      "title": "Accelerating Cold Starts of On-Device LLMs via Multi-Source Inference-Aware Parameter Loading",
+      "reason": "原著要旨の公開転載を確認。CoLLMはllama.cpp上でmmapの遅延ページングに代えて推論順序を考慮した明示I/O管理を行い、近隣edge端末とローカルストレージの帯域を集約、MoEでは活性expertのロードを優先する。実機edge評価で重みロード帯域1.64～2.10倍、TTFT43～82%削減を報告。オンデバイスLLMのコールドスタート最適化に直接適合。",
+      "source_url": "https://doi.org/10.1109/2575-8411.2026.00022",
+      "body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 244,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ICCA69928.2026.11618065",
+      "identity_tokens": [
+        "DOI:10.1109/ICCA69928.2026.11618065"
+      ],
+      "title": "Bandwidth-Efficient Exact Sampling for Distributed Speculative Decoding of LLMs via Two-Stage Rejection Sampling",
+      "reason": "原著要旨の公開転載を確認。edgeドラフトとcloud検証を分離した分散投機的復号で、確率分布の通信が律速となる問題に対し、残差分布をHead/Tailに分けた二段階棄却サンプリングを提案。通信量を減らしつつターゲット分布からの厳密サンプリングを数学的に保証し、帯域制約下の推論加速を報告。分散投機的復号に直接適合。",
+      "source_url": "https://doi.org/10.1109/ICCA69928.2026.11618065",
+      "body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 22,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/IWQoS70441.2026.11661267",
+      "identity_tokens": [
+        "DOI:10.1109/IWQoS70441.2026.11661267"
+      ],
+      "title": "StarkServe: A Framework for Elastic Serverless LLM Inference at the Extreme Edge",
+      "reason": "原著要旨の公開転載と著者の採録情報を確認。StarkServeはedgeのserverless LLMに対し、推論時の冗長サブレイヤー適応スキップ、GPU空間多重化、KVキャッシュを先回り移送するelastic state dispatcherを組み合わせる。既存serverless方式比でE2E遅延とメモリ削減を報告するが、公開要旨に定量的な倍率はない。LLM推論サービングのスケジューリング・状態移送に直接適合。",
+      "source_url": "https://doi.org/10.1109/IWQoS70441.2026.11661267",
+      "body_check": "published_original_abstract_reproduced_by_index; body_not_read",
+      "first_checked_at": "2026-10-31T16:54:16+09:00",
+      "last_checked_at": "2026-10-31T16:54:16+09:00",
+      "linked_from": [],
+      "worklist_rank": 287,
+      "origin": "discovery_worklist_individual_abstract"
+    }
+  ]
+}
