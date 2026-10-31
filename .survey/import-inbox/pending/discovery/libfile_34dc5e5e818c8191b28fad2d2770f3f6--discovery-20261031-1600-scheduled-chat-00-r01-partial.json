@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1600-scheduled-chat-00/r01",
+  "reference_main_sha": "0431efc6a95ddc20ca11ccccb0dd2cff54eab021",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2502.07244",
+      "identity_tokens": [
+        "arXiv:2502.07244",
+        "DOI:10.48550/arXiv.2502.07244"
+      ],
+      "title": "Linear Transformers as VAR Models: Aligning Autoregressive Attention Mechanisms with Autoregressive Forecasting",
+      "reason": "arXiv原著要旨で、線形注意層を動的ベクトル自己回帰（VAR）として解釈し、多層構成を時系列予測の自己回帰目的へ整合させるSAMoVARを提案していることを確認。最終評価対象は多変量時系列予測の精度・解釈可能性・計算効率であり、LLMの生成推論・サービング・KVキャッシュ・GPU実行基盤を直接改善する研究ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2502.07244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T16:05:28+09:00",
+      "last_checked_at": "2026-10-31T16:05:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 414,
+      "origin": "discovery_worklist_individual_abstract"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01",
+      "identity_tokens": [
+        "SemanticScholar:a46b72dafe4c465550ddfc1423c68b84a15a8d01"
+      ],
+      "title": "DiT-Pruner: Pruning Diffusion Transformer Models for Text-to-Image Synthesis Using Human Preference Scores",
+      "reason": "著者所属ETRIの正式公開要旨とECCV 2024 Green Foundation Modelsワークショップの原著PDFで、PixArt-Σを用いたテキスト画像生成専用Diffusion Transformerの層を、人間の画像選好スコアに基づいて剪定し画像生成品質を比較する研究と確認。LLM剪定を先行例として引用するが提案・実験の対象は画像生成DiTであり、言語モデルの推論システム最適化ではないためunrelated。",
+      "source_url": "https://ksp.etri.re.kr/ksp/article/read?id=69363",
+      "primary_fulltext_url": "https://green-fomo.github.io/ECCV2024/static/papers/14.pdf",
+      "body_check": "primary_abstract_screen_only; primary_pdf_abstract_read; body_not_read",
+      "first_checked_at": "2026-10-31T16:05:28+09:00",
+      "last_checked_at": "2026-10-31T16:05:28+09:00",
+      "linked_from": [],
+      "worklist_rank": 420,
+      "origin": "discovery_worklist_individual_abstract"
+    }
+  ]
+}
