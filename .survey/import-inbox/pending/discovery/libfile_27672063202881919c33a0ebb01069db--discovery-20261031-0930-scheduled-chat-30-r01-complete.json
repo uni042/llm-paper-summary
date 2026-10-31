@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261031-0930-scheduled-chat-30/r01",
+  "reference_main_sha": "22918cdbecc12d38a31c719d5100b3c54dacc140",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ACCESS.2026.3680045",
+      "identity_tokens": [
+        "DOI:10.1109/ACCESS.2026.3680045"
+      ],
+      "title": "UDP: Up-or-Down Precision Quantization for Large Language Models via Evolutionary Search",
+      "reason": "著者公開のIEEE Access採録原稿の要旨を確認。UDPはAWQ/SmoothQuant/QoQ等のPTQを前提に、各層の低/高精度をメモリ容量・レイテンシ制約内で選ぶmixed-precision配置をKLD感度と遺伝的探索で決定する。Llama/Mistralの評価に加えOmniServe上のLLMサービングでp95 TTFT・GPUメモリを測定しており、量子化精度と推論実行費用の直接的最適化なのでaccept。",
+      "source_url": "https://doi.org/10.1109/ACCESS.2026.3680045",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 366,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.06485",
+      "identity_tokens": [
+        "arXiv:2605.06485"
+      ],
+      "title": "Litespark Inference on Consumer CPUs: Custom SIMD Kernels for Ternary Neural Networks",
+      "reason": "arXiv一次要旨と公開本文を確認。Litespark-Inferenceは三値重みをCPUのNEON SDOT/AVX-VNNI等の整数SIMD演算に写像し、標準PyTorchの密行列演算を避けるLLM推論カーネルを提供する。BitNet b1.58でTTFT・トークン毎秒・メモリを測定しており、推論実装に直接寄与するためaccept。arXiv表示の冒頭要旨と本文内の最新性能値に差があるため、Research段階で版・ベンチマーク条件を再確認する。",
+      "source_url": "https://arxiv.org/abs/2605.06485",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 372,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.10447",
+      "identity_tokens": [
+        "arXiv:2608.10447"
+      ],
+      "title": "Towards Efficient Reasoning in LLM-Based Recommender Systems via Model Merging",
+      "reason": "arXiv一次要旨では、推薦タスク向けslow-thinking LLMとfast-thinking LLMの重みをattention head単位で融合し、重要な推論根拠を守りつつ生成するreasoning traceを最大24.3%短縮するREAMを提案する。生成トークン数削減は推論費用に関連するが、評価は推薦精度と説明の簡潔さが中心で、LLMサービングのスループットやカーネル・KVメモリを直接改善する機構ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.10447",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 386,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2306.02307",
+      "identity_tokens": [
+        "arXiv:2306.02307"
+      ],
+      "title": "Finding the SWEET Spot: Analysis and Improvement of Adaptive Inference in Low Resource Settings",
+      "reason": "arXiv一次要旨を確認。SWEETは小規模な学習データ環境でearly-exitとmulti-model推論を比較し、early-exitの共有重みが引き起こす勾配競合を避けるため出口分類器に別々の重みを割り当て、速度・精度のトレードオフを改善する。実行時の適応計算量削減に関係するが、評価対象はNLP分類器であり、現代の自己回帰LLMの生成デコード・サービング評価がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2306.02307",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:35:54+09:00",
+      "last_checked_at": "2026-10-31T09:35:54+09:00",
+      "linked_from": [],
+      "worklist_rank": 390,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.52202/085713-1356",
+      "identity_tokens": [
+        "DOI:10.52202/085713-1356"
+      ],
+      "title": "Principled Model Routing for Unknown Mixtures of Source Domains",
+      "reason": "NeurIPS 2025の一次要旨では、未知の混合ドメインで複数の領域特化モデルから入力ごとの適切なモデルを選ぶ問題をmultiple-source domain adaptationとして定式化し、ソースドメインのregretに基づく理論保証を与える。推論時のモデルルーティングに接点はあるが、LLMの推論遅延、GPU資源、サービング費用を最適化する機構・評価は一次要旨で示されず、一般的なモデル選択理論が主目的なのでborderline。",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2025/hash/39c60dda48ebf0a2e5dda52ce08eb5c8-Abstract-Conference.html",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:34:09+09:00",
+      "last_checked_at": "2026-10-31T09:34:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 403,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2506.19847",
+      "identity_tokens": [
+        "arXiv:2506.19847"
+      ],
+      "title": "Orthogonal Finetuning Made Scalable",
+      "reason": "arXivとEMNLP 2025一次要旨を確認。OFTv2は重み中心の行列積を入力中心の行列ベクトル演算へ変更し、Cayley–Neumannパラメータ化で直交fine-tuningを最大10倍高速化し学習時GPUメモリを3分の1程度にする。評価対象はfinetuning計算と学習安定性であり、LLMの生成推論サービングやデコード高速化を直接評価していないため凍結中の学習単独最適化としてunrelated。",
+      "source_url": "https://arxiv.org/abs/2506.19847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:34:09+09:00",
+      "last_checked_at": "2026-10-31T09:34:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 482,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2402.12102",
+      "identity_tokens": [
+        "arXiv:2402.12102"
+      ],
+      "title": "Is It a Free Lunch for Removing Outliers during Pretraining?",
+      "reason": "arXiv一次要旨では、量子化時に問題となる重み・活性のoutlierを事前学習中に抑制する既存softmax変更がfull-precision性能を悪化させると指摘し、系列長に不変な正規化へ修正してcausal language modelの事前学習へ適用する。低ビット推論の品質維持と技術的に関連するが、主たる提案・検証は事前学習手法であり、推論時の量子化カーネル・メモリ・レイテンシ改善は要旨で確証できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2402.12102",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:34:09+09:00",
+      "last_checked_at": "2026-10-31T09:34:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 495,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2404.19543",
+      "identity_tokens": [
+        "arXiv:2404.19543"
+      ],
+      "title": "RAG and RAU: A Survey on Retrieval-Augmented Language Model in Natural Language Processing",
+      "reason": "arXiv一次要旨はRetrieval-Augmented Generation/Understandingの分類、retrieverとlanguage modelの構成、翻訳・対話・知識集約タスクの応用、および頑健性・正確性・関連性の評価を整理するサーベイ。計算効率を将来課題として言及するが、LLM推論カーネル、KVキャッシュ、サービング、オフロードの具体的なシステム最適化を調査の中心にしていないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2404.19543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:34:09+09:00",
+      "last_checked_at": "2026-10-31T09:34:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2505.11165",
+      "identity_tokens": [
+        "arXiv:2505.11165"
+      ],
+      "title": "Maximizing Asynchronicity in Event-based Neural Networks",
+      "reason": "arXiv一次要旨はイベントカメラの非同期イベント列を学習表現へ変換するEVA（Event Asynchronous representation learning）を提案し、DVS128-Gesture/N-Carsの認識とGen1の物体検出で評価する。言語モデルのlinear attentionと自己教師あり学習から着想を得るが、最終用途はイベントベース視覚認識・検出であり、LLMの生成推論・サービングは対象外なのでunrelated。",
+      "source_url": "https://arxiv.org/abs/2505.11165",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:34:09+09:00",
+      "last_checked_at": "2026-10-31T09:34:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 499,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.29545",
+      "identity_tokens": [
+        "arXiv:2609.29545"
+      ],
+      "title": "ERRAND: Budgeted Maintenance of Agent Memory",
+      "reason": "arXiv一次要旨は、固定された事前知識を使うエージェントが環境変化で陳腐化した情報を再検証する際、行動予算と情報価値のshadow priceを使って再確認を選ぶERRANDを提案する。二つの変化するtool-use環境で同一行動予算下の達成率改善を報告する。エージェント実行時のメモリ維持コストには関連するが、LLMモデルのKVメモリ、推論カーネル、GPU/CPUサービング性能を直接最適化する研究ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2609.29545",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T09:34:09+09:00",
+      "last_checked_at": "2026-10-31T09:34:09+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
