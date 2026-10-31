@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Last But Not Least: Boundary Attention CalibratiON for Multimodal KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2606.14782",
+      "year": 2026,
+      "published": "2026-06-10",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multimodal Large Language Models (MLLMs) achieve strong vision-language reasoning but incur large KV caches and high decoding latency with long visual contexts. Existing compression methods rely on observation window attention for stable token importance estimation, yet this aggregation can dilute sparse critical evidence and discard answer-relevant tokens under aggressive compression. We identify last query attention as a complementary signal for recovering such evidence, though its irrelevant signals may introduce additional noise. We propose BACON, a plug-and-play method that calibrates observation window attention with last query evidence while suppressing noise through intra-layer coherence and inter-layer persistence. Across diverse benchmarks, models, budgets, and compression methods, BACON improves multimodal KV-cache compression by 7.5% on average under the most aggressive budget, with gains up to 30.9%.",
+      "identifiers": [
+        "SemanticScholar:a9ab65c0dd1e42707d83ec0363939579dd0b9086"
+      ],
+      "semantic_scholar_id": "a9ab65c0dd1e42707d83ec0363939579dd0b9086",
+      "canonical_id": "arXiv:2606.14782",
+      "arxiv_id": "2606.14782",
+      "doi": "10.48550/arXiv.2606.14782",
+      "authors": [
+        "Tian-Hao Chen",
+        "Yuheng Wu",
+        "Ke-Lu Yao",
+        "Xiao-Gang Xu",
+        "Xiao-Bin Hu",
+        "Dong-Man Lee"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "マルチモーダルLLMの長い視覚文脈に対するKVキャッシュ圧縮で、観測窓内の注意集約が重要な疎な視覚証拠を希釈する問題を扱うBACONを提案。最終クエリの注意情報を補助信号として使い、層内一貫性と層間持続性で雑音を抑えて保持トークンを選択する。最も厳しい圧縮予算で既存圧縮手法への適用により平均7.5%、最大30.9%の改善を一次要旨が報告。KV保持・視覚トークン削減に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Softmax Linear Attention: Reclaiming Global Competition",
+      "source_url": "https://arxiv.org/abs/2602.01744",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "While linear attention reduces the quadratic complexity of standard Transformers to linear time, it often lags behind in expressivity due to the removal of softmax normalization. This omission eliminates \\emph{global competition}, a critical mechanism that enables models to sharply focus on relevant information amidst long-context noise. In this work, we propose \\textbf{Softmax Linear Attention (SLA)}, a framework designed to restore this competitive selection without sacrificing efficiency. By lifting the softmax operation from the token level to the head level, SLA leverages attention heads as coarse semantic slots, applying a competitive gating mechanism to dynamically select the most relevant subspaces. This reintroduces the ``winner-take-all''dynamics essential for precise retrieval and robust long-context understanding. Distinct from prior methods that focus on refining local kernel functions, SLA adopts a broader perspective by exploiting the higher-level multi-head aggregation structure. Extensive experiments demonstrate that SLA consistently enhances state-of-the-art linear baselines (RetNet, GLA, GDN) across language modeling and long-context benchmarks, particularly in challenging retrieval scenarios where it significantly boosts robustness against noise, validating its capability to restore precise focus while maintaining linear complexity.",
+      "identifiers": [
+        "SemanticScholar:ed091b29e1efc522c2a8a1844b5a0a56943ec237"
+      ],
+      "semantic_scholar_id": "ed091b29e1efc522c2a8a1844b5a0a56943ec237",
+      "canonical_id": "arXiv:2602.01744",
+      "arxiv_id": "2602.01744",
+      "doi": "10.48550/arXiv.2602.01744",
+      "authors": [
+        "Mingwei Xu",
+        "Xuan Lin",
+        "Xin Guo",
+        "Wan-Qing Xu",
+        "Wanyun Cui"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 271,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形注意のトークン軸softmax省略によって失われる選択的な大域競合を、注意ヘッド間softmaxによる競合ゲートとして復元するSoftmax Linear Attentionを提案。RetNet、GLA、GDN系の言語モデリングと長文脈検索で改善を報告し、系列長に対する線形計算量と定数サイズ状態を維持する構成を検証。長文脈LLMの注意機構と推論状態効率に直接関係するが、実運用サービング性能は要本文精査。",
+      "library_body_check": "primary_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries",
+      "source_url": "https://arxiv.org/abs/2607.20757",
+      "year": 2026,
+      "published": "2026-07-22",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers are known to have internal continuous symmetries that leave outputs invariant, while modifying quantization. GaugeQuant leverages this in-training by introducing a LogSumExp term to the loss that breaks the symmetries, thus selecting a basis that minimizes activation outliers. A stop-gradient operator ensures that only rotation matrices are updated, yielding the language modeling objective completely unaltered. Our requires no specific calibration data, no quantization simulation, and adds negligible training overhead. With the LLaMA-2 7B model under W4A4 quantization with group size 128, perplexity drops from 8.22 to 6.73, competing with post-training methods that require frozen models and calibration datasets. Under W4A16, perplexity drops from 11.16 to 5.45. Code is available at https://github.com/MPedraBento/gauge-quant.",
+      "identifiers": [
+        "SemanticScholar:f80d2c39daf306de6a34b7d46a580fa2b74a1faa"
+      ],
+      "semantic_scholar_id": "f80d2c39daf306de6a34b7d46a580fa2b74a1faa",
+      "canonical_id": "arXiv:2607.20757",
+      "arxiv_id": "2607.20757",
+      "doi": "10.48550/arXiv.2607.20757",
+      "authors": [
+        "M. P. Bento",
+        "João Seabra"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 101,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformer内部の出力不変な連続対称性を利用し、学習時にLogSumExp正則化とstop-gradientを使って活性化外れ値を抑える量子化向け基底を選択するGaugeQuantを提案。キャリブレーションデータや量子化シミュレーションを必要とせず、LLaMA-2 7BのW4A4・group size 128でPPL 8.22→6.73、W4A16で11.16→5.45と一次要旨が報告。学習時の基底最適化が低bit推論品質へ直結するため量子化・圧縮系に関連する。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "Beyond the Point Mass: Acceptance-Derived Weights and Distributional Losses for Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.28355",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In speculative decoding, a lightweight draft model proposes tokens that the target model verifies in parallel, speeding up generation without changing the target distribution. D-PACE (Wu et al., 2026) trains such drafters with a loss that weights each position by its contribution to the expected accepted length. Both its weights and its cross-entropy (CE) loss use only the draft's probability of the recorded target token, treating the target as a point mass. Under rejection sampling, however, a sampled draft token is accepted with probability equal to the overlap of the draft and target distributions, one minus their total variation (TV). We derive D-PAL (Dynamic Position-wise Acceptance Loss) from the exact expected accepted length, using this overlap as the acceptance signal. This yields overlap-based position weights with log acceptance (LA) as the per-position loss, and the objective reduces to D-PACE for a point-mass target. Since the weights are detached, any per-position loss can replace LA in practice. We show that forward KL divergence and R\\'enyi divergence of order 1/2 match or exceed LA, and that R\\'enyi-1/2 provably bounds the true acceptance rate from above and below. Replacing CE with R\\'enyi-1/2 improves acceptance length under both D-PACE's weights and ours. On six benchmarks with a Qwen3-4B target, D-PAL raises mean acceptance length over D-PACE from 4.50 to 4.57 at T=0 and from 4.20 to 4.28 at T=1, and consistently achieves higher throughput at both temperatures.",
+      "identifiers": [
+        "SemanticScholar:0a9396a43370956ebadd897c5da2a6c9bee4fefe"
+      ],
+      "semantic_scholar_id": "0a9396a43370956ebadd897c5da2a6c9bee4fefe",
+      "canonical_id": "arXiv:2610.28355",
+      "arxiv_id": "2610.28355",
+      "authors": [
+        "Tian-Yu Wu",
+        "Zhuo-Hang Wang",
+        "Jonathan Geuter",
+        "Yu-Rong Yao",
+        "Wei-Fan Jiang",
+        "Cheng-Xi Zhang",
+        "Ju Li",
+        "Min-Lan Yu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 11,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投機的復号のドラフト学習で、従来D-PACEの正解トークンへの一点質量近似を改め、draftとtargetの確率分布の重なり（1−全変動距離）から受理率に対応する位置重みを導出するD-PALを提案。Rényi-1/2損失の採用でQwen3-4Bをtargetとする6ベンチマークの平均受理長がD-PACE比T=0で4.50→4.57、T=1で4.20→4.28へ改善し、スループットも改善したと一次論文が報告。ドラフト受理率を通じて生成推論効率に直接関係する。",
+      "library_body_check": "primary_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "title": "ClusterAttn: KV Cache Compression under Intrinsic Attention Clustering",
+      "source_url": "https://doi.org/10.18653/v1/2025.acl-long.703",
+      "year": 2025,
+      "published": null,
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "citation_count": 10,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention can effectively alleviate the significant demands on memory when large language models (LLMs) process long contexts. Existing methods typically apply the same sparse pattern across different attention heads and inputs. However, this uniform approach fails to capture the inherent diversity of attention patterns within LLMs — the intrinsic attention clustering. To address this, we pro-pose ClusterAttn, a training-free sparse attention method that provides an efficient prompt cache compression scheme under intrinsic attention clustering for efficient LLM inference. Our findings show that attention heads consistently focus on specific clusters of the prompt during decoding, a pattern detectable from an observation window at the prompt’s end. Clus-terAttn adaptively fits these clusters utilizing a density-based attention clustering algorithm, thus compressing the KV cache of the prompt. Evaluations on different models across various benchmarks demonstrate ClusterAttn’s superior compression rates and efficiency. By utilizing only 1024 tokens, it can reduce memory usage by 10%–65%, resulting in a latency reduction of 12%–23% and a throughput increase of 2.6–4.8 times, all with nearly no accuracy loss. Additionally, ClusterAttn can handle up to 128k context on a single A100-80GB GPU, outperforming existing methods.",
+      "identifiers": [
+        "SemanticScholar:75f8c6cff4e5e2179891ef7d281eca2609875eac"
+      ],
+      "semantic_scholar_id": "75f8c6cff4e5e2179891ef7d281eca2609875eac",
+      "doi": "10.18653/v1/2025.acl-long.703",
+      "canonical_id": "DOI:10.18653/v1/2025.acl-long.703",
+      "authors": [
+        "Minwei Zhang",
+        "Hai-Feng Sun",
+        "Jing-Yu Wang",
+        "Shaolong Li",
+        "Wan-Yi Ning",
+        "Qi Qi",
+        "Zirui Zhuang",
+        "Jian-Xin Liao"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 10,
+        "citation_count": 10,
+        "total": 20,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "ACL 2025一次出版要旨によれば、注意ヘッドごとにプロンプト内で注目するトークン群が異なる内在的クラスタ構造を観測窓から検出し、密度ベースの注意クラスタリングでprompt KV cacheを適応圧縮する訓練不要のClusterAttnを提案。1024トークン保持でメモリ10〜65%削減、遅延12〜23%短縮、スループット2.6〜4.8倍、単一A100 80GBで128k文脈対応を報告。LLM推論のKVキャッシュ管理に直接関係する。",
+      "library_body_check": "primary_publisher_or_arxiv_abstract_screen; body_not_exhaustively_reviewed",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b6774e96ece4",
+    "round": "libimp-b6774e96ece4554d-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b6774e96ece4554d-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b6774e96ece4554d-pre01.json",
+    "receipt": "sha256:b7dd1d7500bbaa5cfce843c87072ab49a16fef2d46a4b17bf759165232924be6"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b6774e96ece4",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
