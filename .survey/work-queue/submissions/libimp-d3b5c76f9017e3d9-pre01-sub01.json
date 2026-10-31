@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LEGO: Supporting LLM-Enhanced Games with One Gaming GPU",
+      "source_url": "https://doi.org/10.1109/HPCA68181.2026.11408477",
+      "year": 2026,
+      "published": "2026-01-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Artificial intelligence (AI) has been increasingly applied to gaming, with large language models (LLMs) playing a key role in character control. However, efficiently co-locating game rendering and LLM inference on one GPU presents challenges due to resource constraints, diverse latency requirements, and fine-grained task scheduling. We propose LEGO, an algorithm-system co-design that enables the efficient co-location of LLM inference and game rendering tasks. Algorithmwise, LEGO features a resource-oriented layer-skipping adaptor, which distills knowledge from skipped layers to reduce computational demand while maintaining inference accuracy. System-wise, LEGO proposes a headroom-maximizing LLM scheduler, which dynamically partitions inference tasks to utilize available rendering headroom. Evaluations on an Nvidia RTX 4090 show that LEGO meets latency targets in all scenarios, improves rendering headroom utilization by up to 28.6 %, and reduces LLM inference accuracy loss by up to 86.3 % compared to current layer-skipping approaches.",
+      "identifiers": [
+        "SemanticScholar:2a0cf56d372d768e806bdc6c575deac40b39a6af"
+      ],
+      "semantic_scholar_id": "2a0cf56d372d768e806bdc6c575deac40b39a6af",
+      "doi": "10.1109/HPCA68181.2026.11408477",
+      "canonical_id": "DOI:10.1109/HPCA68181.2026.11408477",
+      "authors": [
+        "Han Zhao",
+        "Wei-Hao Cui",
+        "Ze-Shen Zhang",
+        "Wen-Hao Zhang",
+        "Jiangtong Li",
+        "Quan Chen",
+        "Pu Pang",
+        "Zi-Jun Li",
+        "Zhenhua Han",
+        "Yu-Qing Yang",
+        "Min-Yi Guo"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 273,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "HPCA 2026公式プログラム掲載の著者要旨を確認。単一のRTX 4090上でゲーム描画とLLM推論を同居させ、描画の空き計算資源を使うheadroom-maximizingスケジューラと、スキップ層の知識を蒸留するresource-oriented layer-skipping adaptorを組み合わせる。公式要旨は描画headroom利用率28.8%改善、比較方式に対するLLM推論精度51.4%改善、評価シナリオでの遅延目標達成を報告。ゲーム応用に限定されるがGPU資源共存・LLM推論スケジューリングへの直接貢献があるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Compress Large Language Models via Collaboration Between Learning and Matrix Approximation",
+      "source_url": "https://doi.org/10.52202/085713-2027",
+      "year": 2025,
+      "published": null,
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": ".",
+      "identifiers": [
+        "SemanticScholar:fbbdae67b92f82aa52ad0be5bd2f72a2d393cb79"
+      ],
+      "semantic_scholar_id": "fbbdae67b92f82aa52ad0be5bd2f72a2d393cb79",
+      "doi": "10.52202/085713-2027",
+      "canonical_id": "DOI:10.52202/085713-2027",
+      "authors": [
+        "Yuesen Liao",
+        "Zhiwei Li",
+        "Bin-Rui Wu",
+        "Zihao Cheng",
+        "Sunhang Zhao",
+        "Shuaiting Chen",
+        "Weizhong Zhang"
+      ],
+      "priority": 11,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 11,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 487,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "NeurIPS 2025公式要旨を確認。LLM重みを疎行列と低ランク行列の和で近似する際、外側の確率的双レベル最適化で層別疎度と行列別保持ランクを学習し、内側をQRベースの行列近似で高速に解く。Phi-3とLlama-2/3で評価し、疎度50%でもゼロショット精度の95%超を維持、推論最大2倍高速化を報告。LLM圧縮と実推論速度への直接貢献があるためaccept。倍率は論文条件下の最大値。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Enabling Decoder-only Language Model Inference on a CNN Accelerator",
+      "source_url": "https://doi.org/10.1109/ICCAD66269.2025.11240951",
+      "year": 2025,
+      "published": "2025-10-26",
+      "venue": "2025 IEEE/ACM International Conference On Computer Aided Design (ICCAD)",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The remarkable success of Transformer architectures in Natural Language Processing (NLP) has led to increased demand for embedded systems capable of efficiently handling NLP tasks along with traditional vision tasks based on Convolutional Neural Networks (CNNs) or Vision Transformers. Given that CNN accelerators are already widely adopted commercially, this paper investigates the feasibility of leveraging existing CNN accelerators to handle NLP workloads—particularly decoder-only language models—thus avoiding the high cost of developing dedicated NLP hardware. However, direct use of CNN accelerators for language model poses several challenges due to the distinct characteristics of this network. These include non-computational operations in attention layers, such as head merging/splitting and tensor transpositions, as well as the need for floating point precision in nonlinear operations such as Softmax and RMSNorm, which CNN accelerators typically do not support. Furthermore, inference throughput drops significantly during the generation phase due to memory-bound operations, in contrast to the compute-bound nature of convolution. To address these challenges, we propose a set of minimal hardware extensions to existing CNN accelerators to enable efficient decoder-only Transformer inference. We propose a method to execute multi-head attention layers without relying on dedicated reshaping hardware and augment the architecture with a lightweight SIMD coprocessor to handle non-linear operations. Additionally, we present techniques to improve power efficiency during the generation stage. Our experimental results demonstrate that even low-power CNN accelerators can achieve NLP inference throughput comparable to GPUs, opening a promising path toward versatile and cost-effective embedded AI hardware.",
+      "identifiers": [
+        "SemanticScholar:78866fb0a19f637c1da5a70fe08c4a07eee48bba"
+      ],
+      "semantic_scholar_id": "78866fb0a19f637c1da5a70fe08c4a07eee48bba",
+      "doi": "10.1109/ICCAD66269.2025.11240951",
+      "canonical_id": "DOI:10.1109/ICCAD66269.2025.11240951",
+      "authors": [
+        "Seongwoo Choi",
+        "Hyunsu Moh",
+        "Changjae Yi",
+        "J. Choi",
+        "Soonhoi Ha"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 370,
+        "matched_prestigious_venue": null
+      },
+      "reason": "IEEE Xploreの出版社公式要旨と著者所属機関（ソウル大学）の論文書誌・要旨を確認。既存CNNアクセラレータでdecoder-only言語モデルを動かすため、Attentionのhead結合/分割・転置を専用reshapingハードウェアなしで処理し、Softmax/RMSNorm等の非線形処理には軽量SIMDコプロセッサを追加する。メモリ律速の生成段階の電力効率も改善する最小限のハードウェア拡張を提案しており、組込みLLM推論アクセラレータへの直接的貢献としてaccept。GPU並みの推論スループットという要旨の主張を超えた具体倍率は記載しない。",
+      "library_body_check": "abstract_screen_only; body_not_read; official_publisher_abstract_and_author_institution_metadata",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d3b5c76f9017",
+    "round": "libimp-d3b5c76f9017e3d9-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d3b5c76f9017e3d9-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d3b5c76f9017e3d9-pre01.json",
+    "receipt": "sha256:a861b8ebb1abadc19481bf5b862c24a521eb05f3d8b17c629b42112191fe6f3b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d3b5c76f9017",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
