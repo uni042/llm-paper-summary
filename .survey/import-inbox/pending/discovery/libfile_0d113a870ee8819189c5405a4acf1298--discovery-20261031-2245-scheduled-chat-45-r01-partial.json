@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-2245-scheduled-chat-45/r01",
+  "reference_main_sha": "4a6b566fb9f831b42400ebe9fa8bd123b6ddc291",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3777471",
+      "identity_tokens": [
+        "DOI:10.1145/3777471"
+      ],
+      "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators",
+      "reason": "著者の公式業績一覧と原著PDFの要旨（公開ミラーに掲載された原稿抜粋）を照合。SPADEはLLMの活性化外れ値を考慮し、通常値をINT4、少数の外れ値をINT8で表すメタデータ付き可変長符号化と、シストリックアレイ上での並列復号・演算を協調設計する。原著要旨は面積オーバーヘッド3.66%、符号化型アクセラレータの比較方式に対する最大4.88倍の高速化と70.5%のエネルギー削減を報告する。汎用GPUサービングの倍率ではなく専用LLMアクセラレータ条件の比較である。LLM推論ハードウェア効率への直接的技術貢献があるためaccept。",
+      "source_url": "https://doi.org/10.1145/3777471",
+      "body_check": "original_author_paper_abstract_in_pdf_preview_mirror; author_bibliography_verified; publisher_page_access_blocked; full_body_not_read",
+      "first_checked_at": "2026-10-31T22:49:44+09:00",
+      "last_checked_at": "2026-10-31T22:49:44+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 101; DOI:10.1145/3777471; SPADE accelerator"
+      ],
+      "worklist_rank": 101,
+      "additional_primary_url": "https://mxhx7199.github.io/publications/",
+      "original_paper_preview_url": "https://paperity.org/p/376818405/rethinking-variable-length-encoding-exploiting-bit-sparsity-for-parallel-decoding-in-llm",
+      "notes": "原著PDFの要旨・冒頭を公開ミラーで確認。出版社サイトは403。一次原稿の内容としてのみ利用し、全文を読んだとは扱わない。"
+    }
+  ]
+}
