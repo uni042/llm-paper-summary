@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1904-scheduled-chat-00/r01",
+  "reference_main_sha": "50addada74ee2c714ee806c56976f872c4cf2a2a",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00111",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00111"
+      ],
+      "title": "BridgeLoRA: Privacy-Preserving Collaborative Skip-Layer Connectors for Efficient Transformer Fine-Tuning at the Edge",
+      "reason": "LLMのエッジ・クラウド協調微調整を対象に、複数の凍結Transformer層をまたぐskip connectorを用いて通信同期回数をO(L)からO(L/d)へ削減する。著者公開の公式実装・論文紹介ではLlama-3.2-3Bで2.7%のパラメータのみ学習し検証損失1.47（標準LoRAは1.66）と報告する。ただし中心的貢献はプライバシー保護型分散fine-tuningで、生成時推論の速度・サービング・メモリ削減を直接実証した論文ではないためborderline。",
+      "source_url": "https://github.com/vimeto/bridge-lora",
+      "body_check": "著者公開の公式実装READMEおよび著者公式研究紹介の要旨相当部分を確認。論文PDF全文・評価表は未読。",
+      "first_checked_at": "2026-10-31T19:07:26+09:00",
+      "last_checked_at": "2026-10-31T19:07:26+09:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 414",
+        "DOI:10.1109/2575-8411.2026.00111"
+      ],
+      "worklist_rank": 414,
+      "official_paper_url": "https://doi.org/10.1109/2575-8411.2026.00111"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01240",
+      "identity_tokens": [
+        "arXiv:2608.01240",
+        "DOI:10.48550/arXiv.2608.01240"
+      ],
+      "title": "DeltaFlow: Noise-Adaptive Bidirectional Gated Delta Networks for Embedded Language Flows",
+      "reason": "連続潜在表現を反復的にdenoiseする言語生成モデルELFの非因果full attentionを、noise-adaptiveな双方向Gated Delta Networkへ置換する推論計算最適化。層間で走査方向を交替するDeltaFlow-Aと各層で双方向走査を併合するDeltaFlow-Pを設計し、Temporal State Consistencyでノイズ水準間の状態を安定化。arXiv一次要旨ではOpenWebTextの32-step SDE生成でPPL 24.218→21.228、16k長のdenoiser-only benchmarkで2.72倍のthroughputを報告。推論速度への直接的な技術貢献があるためaccept。2.72倍はend-to-end生成速度ではない。",
+      "source_url": "https://arxiv.org/abs/2608.01240",
+      "body_check": "arXiv原著の公開書誌・一次abstractを検索結果の原文として確認（arXivページ直接openは一時的に取得不可）。本文・評価表は未読。",
+      "first_checked_at": "2026-10-31T19:07:26+09:00",
+      "last_checked_at": "2026-10-31T19:07:26+09:00",
+      "linked_from": [
+        "WORKLIST-00.md rank 500",
+        "state space models / selective SSM / recurrent inference"
+      ],
+      "worklist_rank": 500
+    }
+  ],
+  "round_status": "partial",
+  "notes": "Discovery title scan 500件。前回rank478の続きrank479-500とrank400-475の未処理候補を照合。既処理・受信箱待機・precheck済みのidentityをskip。一次資料を確証できた2件のみ分類。"
+}
