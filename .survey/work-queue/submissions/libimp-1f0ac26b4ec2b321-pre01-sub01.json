@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Lightening-Transformer: A Dynamically-Operated Optically-Interconnected Photonic Transformer Accelerator",
+      "source_url": "https://arxiv.org/abs/2305.19533",
+      "year": 2023,
+      "published": "2023-05-31",
+      "venue": "International Symposium on High-Performance Computer Architecture",
+      "citation_count": 61,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The wide adoption and significant computing resource cost of attention-based transformers, e.g., Vision Transformers and large language models, have driven the demand for efficient hardware accelerators. While electronic accelerators have been commonly used, there is a growing interest in exploring photonics as an alternative technology due to its high energy efficiency and ultra-fast processing speed. Photonic accelerators have demonstrated promising results for convolutional neural networks (CNNs) workloads, which predominantly rely on weight-static linear operations. However, they encounter challenges when it comes to efficiently supporting attention-based Transformer architectures, raising questions about the applicability of photonics to advanced machine-learning tasks. The primary hurdle lies in their inefficiency in handling the unique workloads inherent to Transformers, i.e., dynamic and full-range tensor multiplication. In this work, we propose Lightening-Transformer, the first light-empowered, high-performance, and energy-efficient photonic Transformer accelerator. To overcome the fundamental limitation of existing photonic tensor core designs, we introduce a novel dynamically-operated photonic tensor core, DPTC, consisting of a crossbar array of interference-based optical vector dot-product engines, supporting highly parallel, dynamic, and full-range matrix multiplication. Furthermore, we design a dedicated accelerator that integrates our novel photonic computing cores with photonic interconnects for inter-core data broadcast, fully unleashing the power of optics. The comprehensive evaluation demonstrates that Lightening-Transformer achieves >2.6x energy and > 12 x latency reductions compared to prior photonic accelerators and delivers the lowest energy cost and 2 to 3 orders of magnitude lower energy-delay product compared to the electronic Transformer accelerator, all while maintaining digital-comparable accuracy. Our work highlights the immense potential of photonics for efficient hardware accelerators, particularly for advanced machine-learning workloads, such as Transformer-backboned large language models (LLM). Our implementation is available at https://github.com/zhuhanqing/Lightening-Transformer.",
+      "identifiers": [
+        "SemanticScholar:1a468046a70b88c95528ab546d78374597c82531"
+      ],
+      "semantic_scholar_id": "1a468046a70b88c95528ab546d78374597c82531",
+      "canonical_id": "arXiv:2305.19533",
+      "arxiv_id": "2305.19533",
+      "doi": "10.1109/HPCA57654.2024.00059",
+      "authors": [
+        "Hanqing Zhu",
+        "Jiaqi Gu",
+        "Hanrui Wang",
+        "Zi-Xuan Jiang",
+        "Zhe-Kai Zhang",
+        "R. Tang",
+        "Chenghao Feng",
+        "Song Han",
+        "Ray T. Chen",
+        "David Z. Pan"
+      ],
+      "priority": 71,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 61,
+        "citation_count": 61,
+        "total": 71,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1249,
+        "matched_prestigious_venue": "High-Performance Computer Architecture"
+      },
+      "reason": "arXivの同一IDの現行v3一次要旨を確認。worklistの旧題名DOTAから改題された同著者の光学Transformerアクセラレータ研究。干渉型光学ベクトル内積エンジンのcrossbarからなる動的光学テンソルコアと光インターコネクトを設計し、Transformerの動的・全範囲行列積を高速化する。一次要旨は従来の光学アクセラレータ比でエネルギー消費を2.6倍超、遅延を12倍超削減したと報告し、LLMも対象ワークロードとして明示する。推論アクセラレータの実行効率に直接寄与するためaccept。",
+      "library_body_check": "primary_arxiv_v3_abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1f0ac26b4ec2",
+    "round": "libimp-1f0ac26b4ec2b321-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1f0ac26b4ec2b321-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1f0ac26b4ec2b321-pre01.json",
+    "receipt": "sha256:ebd25b6fd2e900142629d405793b9bbdf3fff11170159a499017a9a010818389"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1f0ac26b4ec2",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
