@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261031-2145-scheduled-chat-45/r01",
+  "reference_main_sha": "1a598905c2d3a2e784ed1a6c9f220ab1e884c7a2",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2604.11364",
+      "identity_tokens": [
+        "arXiv:2604.11364"
+      ],
+      "title": "The Missing Knowledge Layer in Cognitive Architectures for AI Agents",
+      "reason": "著者のarXiv一次要旨は、AIエージェントのKnowledge/Memory/Wisdom/Intelligenceの4層を異なる永続化・忘却・更新規則で設計する認知アーキテクチャ提案を扱う。Python/Rustの実装可能性には言及するが、LLM推論のGPU実行、KVキャッシュ最適化、推論レイテンシ、スループット、量子化、サービング効率の技術的改善や直接評価を主題としないため、推論システムのサーベイ対象外。",
+      "source_url": "https://arxiv.org/abs/2604.11364",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-10-31T21:53:32+09:00",
+      "last_checked_at": "2026-10-31T21:53:32+09:00",
+      "linked_from": [
+        "WORKLIST-45.md rank 500; AI agent memory / cognitive architecture"
+      ],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_abstract_review"
+    }
+  ]
+}
