@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261031-1006-scheduled-chat-00/title-screen-b01",
+  "reference_main_sha": "0522eb616eb21eb0aa9ae8540f181f2ce5464fc0",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2111.05897",
+      "identity_tokens": [
+        "arXiv:2111.05897",
+        "SemanticScholar:c3e342aa82f5d64da62bba9282fe3d603b5a253b"
+      ],
+      "title": "Persia: A Hybrid System Scaling Deep Learning-based Recommenders up to 100 Trillion Parameters",
+      "reason": "タイトルに対象がdeep-learning recommenderの100兆パラメータ規模の学習システムと明示され、LLM推論・サービングではないためタイトル先行除外。abstract・本文の読解を判定根拠として扱わない。",
+      "source_url": "https://arxiv.org/abs/2111.05897",
+      "body_check": "title_screen_only; abstract_seen_for_identity_validation_not_used_for_classification; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 497,
+      "origin": "discovery_worklist_title_sweep"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2603.25463",
+      "identity_tokens": [
+        "arXiv:2603.25463"
+      ],
+      "title": "CIAR: Interval-based Collaborative Decoding for Image Generation Acceleration",
+      "reason": "タイトルに画像生成の高速化と明示され、言語モデルの生成・推論サービングを対象としないためタイトル先行除外。abstract・本文の読解を判定根拠として扱わない。",
+      "source_url": "https://arxiv.org/abs/2603.25463",
+      "body_check": "title_screen_only; abstract_seen_for_identity_validation_not_used_for_classification; body_not_read",
+      "first_checked_at": "2026-10-31T10:10:40+09:00",
+      "last_checked_at": "2026-10-31T10:10:40+09:00",
+      "linked_from": [],
+      "worklist_rank": 500,
+      "origin": "discovery_worklist_title_sweep"
+    }
+  ]
+}
