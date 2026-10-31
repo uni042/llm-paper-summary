@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Rethinking Variable-Length Encoding: Exploiting Bit Sparsity for Parallel Decoding in LLM Accelerators",
+      "source_url": "https://doi.org/10.1145/3777471",
+      "year": 2025,
+      "published": "2025-12-01",
+      "venue": "ACM Transactions on Architecture and Code Optimization (TACO)",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer-based large language models (LLMs) have achieved remarkable success. However, their growing size presents challenges due to the increasing mismatch between model scale and hardware capacity. Model compression techniques have been proposed to address this issue, but existing methods often struggle to cope with the large dynamic range of model parameters, including both activations and weights. Additionally, current outlier-aware encoding schemes introduce complex logic, which limits their effectiveness in both compression ratio and hardware efficiency. To overcome these challenges, we propose SPADE, a co-designed algorithm–architecture solution for post-training quantized INT8 large language models, introducing a hybrid-precision encoding scheme. SPADE employs variable-length data representation guided by metadata, enabling local, value-dependent encoding with only 3.66% hardware area overhead while delivering up to 4.88× speedup and 70.5% energy reduction compared with state-of-the-art encoding-based accelerators. Our key insight is that only a small portion of activations are outliers that require high-precision such as INT8, while the vast majority can be accurately represented with INT4. This allows us to exploit the sparsity of high-significance bits across the data. By assigning an identifier bit to each data element, SPADE dynamically selects between compact INT4 encoding for normal values and higher INT8 encoding for rare outliers, eliminating unnecessary bit-width and reducing data redundancy. Moreover, we analyze the limitations of existing variable-length encoding methods, which typically require serialization and deserialization due to uncertainty in the precision format of loaded data blocks. SPADE integrates precision information directly into its encoding rules, enabling parallel decoding and computation on systolic arrays. This design significantly boosts computational throughput and helps realize the theoretical performance advantages of structured encoding. We evaluate SPADE-based accelerators against state-of-the-art encoding-based accelerators, and our results demonstrate that the SPADE-based accelerator achieves up to 4.88× speedup and 70.5% energy reduction, while maintaining superior model accuracy. The codes are available at https://github.com/jlsbz/SPADE.",
+      "identifiers": [
+        "SemanticScholar:f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d"
+      ],
+      "semantic_scholar_id": "f2cf48e4432794e5d7f6a43be25fbda6f8f4da8d",
+      "doi": "10.1145/3777471",
+      "canonical_id": "DOI:10.1145/3777471",
+      "authors": [
+        "Ning Yang",
+        "Fang-Xin Liu",
+        "Jun-Jie Wang",
+        "Chen-Yang Guan",
+        "Zong-Wu Wang",
+        "Junping Zhao",
+        "Li Jiang",
+        "Hai-Bing Guan"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 334,
+        "matched_prestigious_venue": null
+      },
+      "reason": "著者の公式業績一覧と原著PDFの要旨（公開ミラーに掲載された原稿抜粋）を照合。SPADEはLLMの活性化外れ値を考慮し、通常値をINT4、少数の外れ値をINT8で表すメタデータ付き可変長符号化と、シストリックアレイ上での並列復号・演算を協調設計する。原著要旨は面積オーバーヘッド3.66%、符号化型アクセラレータの比較方式に対する最大4.88倍の高速化と70.5%のエネルギー削減を報告する。汎用GPUサービングの倍率ではなく専用LLMアクセラレータ条件の比較である。LLM推論ハードウェア効率への直接的技術貢献があるためaccept。",
+      "library_body_check": "original_author_paper_abstract_in_pdf_preview_mirror; author_bibliography_verified; publisher_page_access_blocked; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-e96979765430",
+    "round": "libimp-e96979765430847f-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-e96979765430847f-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-e96979765430847f-pre01.json",
+    "receipt": "sha256:f68836778e9bc7f2b0b2b1a2d2bd963725bd468e4c2736404dfa02ace82d7ad3"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-e96979765430",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
