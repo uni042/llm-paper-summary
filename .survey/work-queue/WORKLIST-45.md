@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-01T17:23:32+00:00`
+Generated: `2026-11-01T17:51:42+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -400,7 +400,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 317 | 101 | 4 | 7 | arXiv:2603.00357 | SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs | 2026-02-27 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2603.00357) |
 | 318 | 10 | 4 | 7 | DOI:10.1038/s41598-026-49583-z | Gated transformer with shallow decoder for machine translation | 2026-04-24 | Scientific Reports | 0 | 7 |  | [source](https://doi.org/10.1038/s41598-026-49583-z) |
 | 319 | 8 | 4 | 7 | arXiv:2510.14961 | Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models | 2025-10-16 | arXiv.org | 8 | 7 | Diffusion LLM Inference, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2510.14961) |
-| 320 | 1 | 4 | 7 | arXiv:2405.15346 | BiSup: Bidirectional Quantization Error Suppression for Large Language Models | 2024-05-24 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression | [source](https://arxiv.org/abs/2405.15346) |
+| 320 | 1 | 4 | 7 | DOI:10.1145/3775043.3775047 | Idle Consumer GPUs as a Complement to Enterprise Hardware for LLM Inference: Performance, Cost and Carbon Analysis | 2025-09-17 | AIBC | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, llm-serving-scheduling-disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://doi.org/10.1145/3775043.3775047) |
 | 321 | 10 | 4 | 7 | DOI:10.18653/v1/2026.findings-eacl.320 | Task-aware Block Pruning with Output Distribution Signals for Large Language Models | 2026 | Conference of the European Chapter of the Association for Computational Linguistics | 0 | 7 | Conditional Computation | [source](https://doi.org/10.18653/v1/2026.findings-eacl.320) |
 | 322 | 104 | 4 | 7 | arXiv:2603.06222 | SPOT: Span-level Pause-of-Thought for Efficient and Interpretable Latent Reasoning in Large Language Models | 2026-03-06 | Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 | 4 | 7 | Conditional Computation | [source](https://arxiv.org/abs/2603.06222) |
 | 323 | 2 | 4 | 7 | arXiv:2503.20362 | Self-ReS: Self-Reflection in Large Vision-Language Models for Long Video Understanding | 2025-03-26 | IEEE International Conference on Multimedia and Expo | 2 | 7 | Inference / Multimodal Long-Context Memory Compression, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2503.20362) |

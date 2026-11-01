@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-01T17:23:31+00:00`
+Generated: `2026-11-01T17:51:42+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -400,8 +400,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 317 | 101 | 4 | 7 | DOI:10.1109/IPDPS65963.2026.00083 | Beyond Throughput: Performance and Energy Insights of LLM Inference Across AI Accelerators | 2026-05-25 | IEEE International Parallel and Distributed Processing Symposium | 1 | 7 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/IPDPS65963.2026.00083) |
 | 318 | 20 | 4 | 7 | DOI:10.1109/DAC56929.2023.10247993 | Efficient Transformer Inference with Statically Structured Sparse Attention | 2023-07-09 | Design Automation Conference | 20 | 7 | Sparse Attention, sparse attention / long-context Transformer | [source](https://doi.org/10.1109/DAC56929.2023.10247993) |
 | 319 | 10 | 4 | 7 | arXiv:2609.34861 | When Text Matters: Design Principles for Visual Token Pruning in Vision-Language Model | 2026-09-28 |  | 0 | 7 |  | [source](https://arxiv.org/abs/2609.34861) |
-| 320 | 1 | 4 | 7 | DOI:10.1145/3775043.3775047 | Idle Consumer GPUs as a Complement to Enterprise Hardware for LLM Inference: Performance, Cost and Carbon Analysis | 2025-09-17 | AIBC | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, llm-serving-scheduling-disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://doi.org/10.1145/3775043.3775047) |
-| 321 | 0 | 4 | 7 | DOI:10.1109/AANN66429.2025.11257670 | A Survey on Visual Token Compression for Efficient Vision-Language Models | 2025-08-15 | 2025 5th International Conference on Advanced Algorithms and Neural Networks (AANN) | 0 | 7 | inference-systems | [source](https://doi.org/10.1109/AANN66429.2025.11257670) |
+| 320 | 1 | 4 | 7 | DOI:10.1109/AANN66429.2025.11257670 | A Survey on Visual Token Compression for Efficient Vision-Language Models | 2025-08-15 | 2025 5th International Conference on Advanced Algorithms and Neural Networks (AANN) | 1 | 7 | inference-systems | [source](https://doi.org/10.1109/AANN66429.2025.11257670) |
+| 321 | 1 | 4 | 7 | arXiv:2503.17101 | Large Language Model Compression via the Nested Activation-Aware Decomposition | 2025-03-21 | arXiv.org | 1 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2503.17101) |
 | 322 | 0 | 4 | 7 | SemanticScholar:bcf4003639957f66421e086d2e21d97d310fb34c | Performance Evaluation of LLM Inference Engines |  |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 推論エンジン／推論基盤, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/bcf4003639957f66421e086d2e21d97d310fb34c) |
 | 323 | 10 | 4 | 7 | arXiv:2608.25068 | SHIFT-LLM: Distribution Shift Correction in Depth-Pruned LLMs | 2026-08-25 |  | 0 | 7 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2608.25068) |
 | 324 | 101 | 4 | 7 | arXiv:2602.00686 | Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching | 2026-01-31 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2602.00686) |

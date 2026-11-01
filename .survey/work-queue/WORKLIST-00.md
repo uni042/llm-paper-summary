@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-01T17:23:31+00:00`
+Generated: `2026-11-01T17:51:42+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -402,7 +402,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 318 | 59 | 4 | 7 | DOI:10.48550/arXiv.2305.19533 | DOTA: A Dynamically-Operated Photonic Tensor Core for Energy-Efficient Transformer Accelerator | 2023-05-31 | arXiv.org | 59 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, Sparse Attention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.48550/arXiv.2305.19533) |
 | 319 | 10 | 4 | 7 | arXiv:2609.34565 | FlowState: Execution State as Memory for Long-Horizon LLM Agents | 2026-09-28 |  | 0 | 7 | 07-kv-cache-optimization-compression, agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.34565) |
 | 320 | 6 | 4 | 7 | arXiv:2503.09304 | Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference | 2025-03-12 | EuroMLSys | 6 | 7 | KVキャッシュ再利用／圧縮／ネットワーク転送, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2503.09304) |
-| 321 | 1 | 4 | 7 | arXiv:2503.17101 | Large Language Model Compression via the Nested Activation-Aware Decomposition | 2025-03-21 | arXiv.org | 1 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2503.17101) |
+| 321 | 1 | 4 | 7 | arXiv:2405.15346 | BiSup: Bidirectional Quantization Error Suppression for Large Language Models | 2024-05-24 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression | [source](https://arxiv.org/abs/2405.15346) |
 | 322 | 0 | 4 | 7 | SemanticScholar:4a222a27a944539c5ffbb4cc44cf7de5663b57d3 | Dependency-Aware Semi-Structured Sparsity: Declining Roles of Outliers in Pruning GLU-based LLMs |  |  | 0 | 7 | 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://www.semanticscholar.org/paper/4a222a27a944539c5ffbb4cc44cf7de5663b57d3) |
 | 323 | 10 | 4 | 7 | DOI:10.1109/CIML69155.2026.11692797 | A Dual-Roofline Runtime Model for Capacity Planning in Shared-Backend LLM Multi-Agent Social Simulation: A Case Study of AgentSociety | 2026-03-01 | 2026 International Conference on Computational Intelligence and Machine Learning (CIML) | 0 | 7 | LLM Serving / Scheduling / Disaggregation, LLM配信／スケジューリング／分離, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/CIML69155.2026.11692797) |
 | 324 | 116 | 4 | 7 | arXiv:2602.08382 | Dynamic Long Context Reasoning over Compressed Memory via End-to-End Reinforcement Learning | 2026-02-09 | Annual Meeting of the Association for Computational Linguistics | 6 | 7 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, agentic inference / persistent memory | [source](https://arxiv.org/abs/2602.08382) |
