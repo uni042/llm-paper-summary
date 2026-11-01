@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-02 02:45:08 JST**
+> 自動生成: **2026-11-02 03:13:32 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **572** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **10-31 01:48:57 JST** |
-| 最終Discovery探索完了 | **11-02 00:56:00 JST** |
+| 最終Discovery探索完了 | **11-02 02:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -101,14 +101,14 @@
 | provider巡回可能 | **3818** |
 | provider巡回不能 | **7** |
 | 1周以上完了 | **3799** |
-| 巡回中 | **20** |
+| 巡回中 | **19** |
 | 未巡回 | **0** |
-| 今回run開始時due | **23** |
+| 今回run開始時due | **20** |
 | 前方引用から保持中の未処理候補 | **68495** |
-| エラー状態保持seed | **20** |
+| エラー状態保持seed | **19** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-02 01:56:39 JST**
+- state最終更新: **11-02 03:04:15 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-01 11:45:28 JST（14時間59分前）** |
+| 最終maintenance完了 | **11-01 11:45:28 JST（15時間28分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -138,17 +138,17 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 |---|---:|
 | 直近6hのResearch完了 | **0** |
 | 直近6hのDiscovery run | **6** |
-| 直近6hのDiscovery本文確認・分類 | **7** |
+| 直近6hのDiscovery本文確認・分類 | **8** |
 | 最終Research完了 | **10-31 01:48:57 JST** |
-| 最終Discovery完了 | **11-02 00:56:00 JST** |
+| 最終Discovery完了 | **11-02 02:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-31 01:48:57 JST** / worker scheduled-chat-45 / run 20261031-0148-scheduled-chat-45/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_065a1884c270819192c5254078e8caf3--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-semantic-reaudit-20261031-0148-scheduled-chat-45-r01.json
-- Discovery: **11-02 00:56:00 JST** / worker scheduled-chat-00 / run 20261102-0056-scheduled-chat-00/title-screen-b01
-  - 本文確認・分類 **1件** / accept **0件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_b112333e870c8191bbd8029f78e57c81--discovery-20261102-0056-scheduled-chat-00-title-screen-b01.json
+- Discovery: **11-02 02:00:00 JST** / worker scheduled-chat-00 / run 20261102-0200-scheduled-chat-00/r01
+  - 本文確認・分類 **2件** / accept **2件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_ce6c430418688191966c498f87e96301--discovery-20261102-0200-scheduled-chat-00-r01-partial.json
 
 ### Codex探索成果の反映状況
 
