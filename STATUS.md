@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-02 07:35:16 JST**
+> 自動生成: **2026-11-02 07:48:55 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **572** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **10-31 01:48:57 JST** |
-| 最終Discovery探索完了 | **11-02 06:28:00 JST** |
+| 最終Discovery探索完了 | **11-02 07:29:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-01 11:45:28 JST（19時間49分前）** |
+| 最終maintenance完了 | **11-01 11:45:28 JST（20時間3分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **6** |
-| 直近6hのDiscovery本文確認・分類 | **7** |
+| 直近6hのDiscovery run | **9** |
+| 直近6hのDiscovery本文確認・分類 | **17** |
 | 最終Research完了 | **10-31 01:48:57 JST** |
-| 最終Discovery完了 | **11-02 06:28:00 JST** |
+| 最終Discovery完了 | **11-02 07:29:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **10-31 01:48:57 JST** / worker scheduled-chat-45 / run 20261031-0148-scheduled-chat-45/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/libfile_065a1884c270819192c5254078e8caf3--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-semantic-reaudit-20261031-0148-scheduled-chat-45-r01.json
-- Discovery: **11-02 06:28:00 JST** / worker scheduled-chat-30 / run 20261102-0628-scheduled-chat-30/r01
-  - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/libfile_65f8bc0a714c819199af7712cd38d050--discovery-20261102-0628-scheduled-chat-30-r01-partial.json
+- Discovery: **11-02 07:29:00 JST** / worker scheduled-chat-30 / run 20261102-0729-scheduled-chat-30/r01
+  - 本文確認・分類 **6件** / accept **2件** / unrelated+borderline **4件**
+  - evidence: .survey/import-inbox/pending/discovery/libfile_a2a228ea0b74819190b59f5e909a9b9f--discovery-20261102-0729-scheduled-chat-30-r01-partial.json
 
 ### Codex探索成果の反映状況
 
