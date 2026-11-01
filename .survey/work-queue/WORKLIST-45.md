@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-01T03:04:14+00:00`
+Generated: `2026-11-01T04:10:47+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -44,7 +44,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 25 | 5 | research | SemanticScholar:a7357f16453d8c3e07aca694efa00df6f2e4352c | Optimizing Transformers with Approximate Computing for Faster, Smaller and more Accurate NLP Models | [primary](https://www.semanticscholar.org/paper/a7357f16453d8c3e07aca694efa00df6f2e4352c) | `papers/inference/99-other-inference-systems/2020-7a4de3412575-optimizing-transformers-with-approximate-computing-for-faster-smaller-and-more-accurate-nlp-models.md` |
 | 26 | 4 | research | arXiv:2505.20320 | Less Context, Same Performance: A RAG Framework for Resource-Efficient LLM-Based Clinical NLP | [primary](https://arxiv.org/abs/2505.20320) | `papers/inference/99-other-inference-systems/2025-2505.20320-less-context-same-performance-a-rag-framework-for-resource-efficient-llm-based-clinical-nlp.md` |
 | 27 | 3 | research | DOI:10.24963/ijcai.2025/920 | MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching | [primary](https://doi.org/10.24963/ijcai.2025/920) | `papers/inference/99-other-inference-systems/2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.md` |
-| 28 | 2 | research | DOI:10.1109/DAC63849.2025.11132542 | KVO-LLM: Boosting Long-Context Generation Throughput for Batched LLM Inference | [primary](https://doi.org/10.1109/DAC63849.2025.11132542) | `papers/inference/99-other-inference-systems/2025-745f22b0e76c-kvo-llm-boosting-long-context-generation-throughput-for-batched-llm-inference.md` |
+| 28 | 2 | research | DOI:10.1109/ICCAD66269.2025.11240926 | OA-LAMA: An Outlier-Adaptive LLM Inference Accelerator with Memory-Aligned Mixed-Precision Group Quantization | [primary](https://doi.org/10.1109/ICCAD66269.2025.11240926) | `papers/inference/99-other-inference-systems/2025-c85b578c6e6c-oa-lama-an-outlier-adaptive-llm-inference-accelerator-with-memory-aligned-mixed-precision-group-quantization.md` |
 | 29 | 2 | research | arXiv:2211.08842 | Fast and Accurate FSA System Using ELBERT: An Efficient and Lightweight BERT | [primary](https://arxiv.org/abs/2211.08842) | `papers/inference/99-other-inference-systems/2022-2211.08842-fast-and-accurate-fsa-system-using-elbert-an-efficient-and-lightweight-bert.md` |
 | 30 | 1 | research | DOI:10.1109/ACCESS.2026.3664084 | SpinOut: Enhanced Rotation-Based Quantization for LLM by Outlier Injection | [primary](https://doi.org/10.1109/ACCESS.2026.3664084) | `papers/inference/99-other-inference-systems/0000-37ef6fc2c5f7-spinout-enhanced-rotation-based-quantization-for-llm-by-outlier-injection.md` |
 | 31 | 1 | research | DOI:10.1016/j.neunet.2025.108332 | OOPS: Outlier-aware and quadratic programming based structured pruning for large language models | [primary](https://doi.org/10.1016/j.neunet.2025.108332) | `papers/inference/99-other-inference-systems/2025-7e5144a7016d-oops-outlier-aware-and-quadratic-programming-based-structured-pruning-for-large-language-models.md` |

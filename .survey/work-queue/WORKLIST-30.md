@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-01T03:04:14+00:00`
+Generated: `2026-11-01T04:10:47+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -44,7 +44,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 25 | 5 | research | DOI:10.1184/R1/14402450.V1 | Machine Learning Parallelism Could Be Adaptive, Composable and Automated | [primary](https://doi.org/10.1184/R1/14402450.V1) | `papers/inference/99-other-inference-systems/2021-90dad454771a-machine-learning-parallelism-could-be-adaptive-composable-and-automated.md` |
 | 26 | 4 | research | DOI:10.1016/j.inffus.2025.103774 | GF-SVD: Global knowledge-infused singular value decomposition of large language models | [primary](https://doi.org/10.1016/j.inffus.2025.103774) | `papers/inference/99-other-inference-systems/2025-1cd06dbd7016-gf-svd-global-knowledge-infused-singular-value-decomposition-of-large-language-models.md` |
 | 27 | 3 | research | arXiv:2510.19498 | Energy-Efficient and Dequantization-Free Q-LLMs: A Spiking Neural Network Approach to Salient Value Mitigation | [primary](https://arxiv.org/abs/2510.19498) | `papers/inference/99-other-inference-systems/2025-2510.19498-energy-efficient-and-dequantization-free-q-llms-a-spiking-neural-network-approach-to-salient-value-mitigation.md` |
-| 28 | 2 | research | DOI:10.1109/ICCAD66269.2025.11240926 | OA-LAMA: An Outlier-Adaptive LLM Inference Accelerator with Memory-Aligned Mixed-Precision Group Quantization | [primary](https://doi.org/10.1109/ICCAD66269.2025.11240926) | `papers/inference/99-other-inference-systems/2025-c85b578c6e6c-oa-lama-an-outlier-adaptive-llm-inference-accelerator-with-memory-aligned-mixed-precision-group-quantization.md` |
+| 28 | 3 | research | arXiv:2210.17114 | QuaLA-MiniLM: a Quantized Length Adaptive MiniLM | [primary](https://arxiv.org/abs/2210.17114) | `papers/inference/99-other-inference-systems/2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.md` |
 | 29 | 2 | research | DOI:10.1109/COMPSAC61105.2024.00066 | Effective Compression of Language Models by Combining Pruning and Knowledge Distillation | [primary](https://doi.org/10.1109/COMPSAC61105.2024.00066) | `papers/inference/99-other-inference-systems/2024-97e7b2d71adc-effective-compression-of-language-models-by-combining-pruning-and-knowledge-distillation.md` |
 | 30 | 2 | research | SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c | CaR: An Efficient KV Cache Reuse System for Large Language Model Inference | [primary](https://www.semanticscholar.org/paper/61599f7d6d202fa5b7cd1055dd194f2182ef773c) | `papers/inference/99-other-inference-systems/0000-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.md` |
 | 31 | 1 | research | DOI:10.1109/ACCESS.2026.3680126 | QubitCache: Quantum-Inspired Probabilistic Attention Preservation for KV-Cache Compression | [primary](https://doi.org/10.1109/ACCESS.2026.3680126) | `papers/inference/99-other-inference-systems/0000-29c02edd6481-qubitcache-quantum-inspired-probabilistic-attention-preservation-for-kv-cache-compression.md` |
