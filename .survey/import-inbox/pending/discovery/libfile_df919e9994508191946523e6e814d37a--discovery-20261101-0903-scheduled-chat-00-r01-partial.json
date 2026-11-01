@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261101-0903-scheduled-chat-00/r01",
+  "reference_main_sha": "bcb8d5c792ccd758453a505d55f6b7eb5e0c6044",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3754598.3754660",
+      "identity_tokens": [
+        "DOI:10.1145/3754598.3754660"
+      ],
+      "title": "SmartBlock: Adaptive Block Floating Point Quantization for Efficient DNN Acceleration",
+      "reason": "ACM出版社の原著要旨を確認。外れ値の少ないテンソル領域には大きなBFPブロックを、外れ値の多い領域には小さなブロックを用いる動的ブロックサイズ量子化と、ブロックサイズ情報を仮数に埋め込む符号化、可変ブロック長を扱う統合処理要素（PE）を提案する。CNNおよびTransformerを含む6モデルでWinAcc、Bucket、FASTと比較した推論用DNNアクセラレータ研究であり、LLM専用の生成推論・サービング・KVキャッシュの直接評価は原著要旨に記載されていない。LLM推論向け量子化ハードウェアとの技術的接点はあるが、LLM固有の適用根拠が不足するためborderline。",
+      "source_url": "https://dl.acm.org/doi/10.1145/3754598.3754660",
+      "body_check": "publisher_primary_abstract_and_introduction_screen; full_paper_not_reviewed",
+      "first_checked_at": "2026-11-01T09:09:24+09:00",
+      "last_checked_at": "2026-11-01T09:09:24+09:00",
+      "linked_from": [],
+      "worklist_rank": 489,
+      "origin": "discovery_worklist",
+      "source_type": "publisher_primary",
+      "worklist_source_url": "https://doi.org/10.1145/3754598.3754660"
+    }
+  ]
+}
