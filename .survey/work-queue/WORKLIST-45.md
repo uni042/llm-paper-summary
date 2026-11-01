@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-01T12:43:23+00:00`
+Generated: `2026-11-01T13:27:30+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -540,7 +540,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 457 | 101 | 4 | 4 | arXiv:2607.09683 | Ablation, Statistical Inference, and Validation for KV-Cache Compression | 2026-06-14 | arXiv.org | 1 | 4 | KV Cache Optimization / Compression, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化 | [source](https://arxiv.org/abs/2607.09683) |
 | 458 | 6 | 4 | 4 | arXiv:2409.10644 | Improving Multi-candidate Speculative Decoding | 2024-09-16 | ENLSP | 6 | 4 | 99-other-inference-systems, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2409.10644) |
 | 459 | 12 | 4 | 4 | DOI:10.18653/v1/2025.emnlp-main.408 | MLWQ: Efficient Small Language Model Deployment via Multi-Level Weight Quantization | 2025 | Conference on Empirical Methods in Natural Language Processing | 2 | 4 | Weight Quantization / Compression, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.18653/v1/2025.emnlp-main.408) |
-| 460 | 110 | 4 | 4 | DOI:10.1109/JSSC.2025.3571315 | A 22-nm 109.3-to-249.5-TFLOPS/W Outlier-Aware Floating-Point SRAM Compute-in-Memory Macro for Large Language Models | 2026-02-01 | IEEE Journal of Solid-State Circuits | 10 | 4 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://doi.org/10.1109/JSSC.2025.3571315) |
+| 460 | 113 | 4 | 4 | DOI:10.1109/JSSC.2025.3571315 | A 22-nm 109.3-to-249.5-TFLOPS/W Outlier-Aware Floating-Point SRAM Compute-in-Memory Macro for Large Language Models | 2026-02-01 | IEEE Journal of Solid-State Circuits | 13 | 4 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://doi.org/10.1109/JSSC.2025.3571315) |
 | 461 | 22 | 4 | 4 | DOI:10.1145/3603269.3610856 | Poster: PipeLLM: Pipeline LLM Inference on Heterogeneous Devices with Sequence Slicing | 2023-09-01 | Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication | 22 | 4 |  | [source](https://doi.org/10.1145/3603269.3610856) |
 | 462 | 10 | 4 | 4 | DOI:10.1109/ISCAS66217.2026.11562436 | A Hardware-Software Co-design for LLMs with Exponent-Element Quantization Towards Compute-in-Memory | 2026-05-24 | International Symposium on Circuits and Systems | 0 | 4 | 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ISCAS66217.2026.11562436) |
 | 463 | 10 | 4 | 4 | arXiv:2610.19605 | PN-Mix: Pair-Norm Guided Mixed-Precision Key Cache Quantization for Efficient Long-Output LLM Inference | 2026-10-14 |  | 0 | 4 | 07-kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.19605) |
