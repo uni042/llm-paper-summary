@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0200-scheduled-chat-00/r01",
+  "reference_main_sha": "5842d1b5851644e01c5b023d7f077e101fdac8eb",
+  "record_count": 2,
+  "round_status": "partial",
+  "target_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/infocom59046.2026.11571558",
+      "identity_tokens": [
+        "DOI:10.1109/infocom59046.2026.11571558"
+      ],
+      "title": "Task Profiling and Draft Model Selection for Accelerating Distributed Speculative Decoding",
+      "reason": "D-PROMISEはエッジ・クラウド分散投機的デコードにおいて、タスクをエントロピーと推論強度から4類型へ分類し、タスク別draftモデルの受理率履歴、端末の計算負荷と無線チャネル状態を使って要求単位でdraft実行端末と投機長を選ぶ。IEEE出版社の一次要旨は、実測ハードウェア・ネットワーク特性に基づくトレース駆動シミュレーションでタスク非依存方式より推論速度が最大45%向上したと報告。LLMの分散推論遅延・投機デコードの直接最適化なのでaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11571558/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore",
+      "first_checked_at": "2026-11-02T02:02:28+09:00",
+      "last_checked_at": "2026-11-02T02:02:28+09:00",
+      "linked_from": [
+        "papers/inference/05-speculative-decoding-moe/2022-2211.17192-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2023-2302.01318-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2024-2401.15077-eagle-feature-speculative-sampling.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2505.08600-automatic-task-detection-and-heterogeneous-llm-speculative-decoding.md",
+        "papers/inference/05-speculative-decoding-moe/2025-2506.19830-scaling-speculative-decoding-with-lookahead-reasoning.md"
+      ],
+      "worklist_rank": 206,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/bigcom61073.2023.00044",
+      "identity_tokens": [
+        "DOI:10.1109/bigcom61073.2023.00044"
+      ],
+      "title": "LMIE-BERT: A Learnable Method for Inter-Layer Ensembles to Accelerate Inference of BERT-Style Pre-trained Models",
+      "reason": "LMIE-BERTはBERT系事前学習モデルの推論時早期終了において、中間分類器へ前層と現層の情報を学習可能な層間アンサンブルとして取り込み、単純な早期終了で高い高速化率ほど精度が崩れる問題を緩和する。IEEE出版社の一次要旨は複数タスクで原モデル精度の90%超を維持しながら推論4倍高速化と報告。生成LLMではなくエンコーダ型BERT系が直接対象だが、既収録のBERT早期終了・条件付き計算系統と同種の推論実行機構に直接寄与するためaccept（生成LLMへの移植可能性はResearchで別途検証）。",
+      "source_url": "https://ieeexplore.ieee.org/document/10415602/",
+      "body_check": "primary_publisher_abstract_screen_only; body_not_read; source=IEEE_Xplore",
+      "first_checked_at": "2026-11-02T02:02:28+09:00",
+      "last_checked_at": "2026-11-02T02:02:28+09:00",
+      "linked_from": [
+        "papers/inference/99-other-inference-systems/2019-1905.10650-are-sixteen-heads-really-better-than-one.md",
+        "papers/inference/99-other-inference-systems/2019-1909.05840-q-bert-hessian-based-ultra-low-precision-quantization-of-bert.md",
+        "papers/inference/99-other-inference-systems/2019-1910.06188-q8bert-quantized-8bit-bert.md",
+        "papers/inference/99-other-inference-systems/2020-2002.08307-compressing-bert-studying-the-effects-of-weight-pruning-on-transfer-lear.md",
+        "papers/inference/99-other-inference-systems/2020-2004.02178-fastbert-a-self-distilling-bert-with-adaptive-inference-time.md",
+        "papers/inference/99-other-inference-systems/2020-2004.12993-deebert-dynamic-early-exiting-for-accelerating-bert-inference.md",
+        "papers/inference/99-other-inference-systems/2020-2006.04152-bert-loses-patience-fast-and-robust-inference-with-early-exit.md",
+        "papers/inference/99-other-inference-systems/2020-2012.14682-cascadebert-accelerating-inference-of-pre-trained-language-models-via-ca.md",
+        "papers/inference/99-other-inference-systems/2021-3c0f54f14532-berxit-early-exiting-for-bert-with-better-fine-tuning-and-extension-to-r.md"
+      ],
+      "worklist_rank": 271,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
