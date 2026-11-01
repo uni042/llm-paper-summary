@@ -1,0 +1,26 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261102-0628-scheduled-chat-30/r01",
+  "reference_main_sha": "38a2aa806c6cd88babaf997c68ea4faf82deb99b",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3787330.3787361",
+      "identity_tokens": [
+        "DOI:10.1145/3787330.3787361"
+      ],
+      "title": "TokenSkipping: A Practical and Robust KV Cache Pruning Method for Long-Context LLM Inference",
+      "reason": "著者Narupol Hongthaiの一次公開実装README（na-ho/TokenSkipping）を確認。Llama-3-8B-Instructを用いる長文脈LLM推論のKVキャッシュ保持・剪定ポリシー(tskip)を実装し、full/window(FIFO)/L2-norm prune/attention-based等と比較するthroughput・KVメモリ・perplexity測定ハーネスを提供する。推論時のKVキャッシュ圧縮・保持制御を直接扱うためaccept。出版社原著abstract/PDFは取得できず、論文本文・報告された性能数値は未検証。Research段階で原著全文確認が必要。",
+      "source_url": "https://github.com/na-ho/TokenSkipping",
+      "body_check": "primary_author_repository_readme_screen_only; publisher_abstract_unavailable; body_not_read",
+      "first_checked_at": "2026-11-02T06:28:21+09:00",
+      "last_checked_at": "2026-11-02T06:28:21+09:00",
+      "linked_from": [],
+      "worklist_rank": 307,
+      "origin": "discovery_worklist_primary_author_repository_screen"
+    }
+  ]
+}
