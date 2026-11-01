@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-01T20:38:46+00:00`
+Generated: `2026-11-01T21:33:50+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -77,8 +77,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126410** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120265** / 監査再投入 **0** / 機械規則適用後 **122885** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126411** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120266** / 監査再投入 **0** / 機械規則適用後 **122886** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -233,7 +233,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 149 | 102 | 5 | 9 | arXiv:2605.17954 | A More Word-like Image Tokenization for MLLMs | 2026-05-18 | arXiv.org | 2 | 9 | 12-multimodal-inference, Conditional Computation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2605.17954) |
 | 150 | 10 | 5 | 9 | arXiv:2608.05780 | Evidence-Driven Dynamic Visual Selector for Efficient Long Video Understanding | 2026-08-06 |  | 0 | 9 | inference-systems, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2608.05780) |
 | 151 | 0 | 5 | 8 | DOI:10.1109/TCCN.2026.3722837 | Workflow-Aware Expert Routing for Distributed LLM Serving Over the Edge-Cloud Continuum | 2026 | IEEE Transactions on Cognitive Communications and Networking | 0 | 8 | Adaptive Expert Computation / Compression, LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/TCCN.2026.3722837) |
-| 152 | 103 | 5 | 8 | DOI:10.1109/CCWC67433.2026.11393769 | Large Language Model Deployment on Resource-Constrained Edge Devices: A Practitioner's Survey | 2026-01-05 | Computing and Communication Workshop and Conference | 3 | 8 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 投機的復号 / 無損失復号高速化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/CCWC67433.2026.11393769) |
+| 152 | 104 | 5 | 8 | DOI:10.1109/CCWC67433.2026.11393769 | Large Language Model Deployment on Resource-Constrained Edge Devices: A Practitioner's Survey | 2026-01-05 | Computing and Communication Workshop and Conference | 4 | 8 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 投機的復号 / 無損失復号高速化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/CCWC67433.2026.11393769) |
 | 153 | 10 | 5 | 8 | arXiv:2605.28760 | Inference-Native Zeroth-Order Optimization for LLMs | 2026-05-27 |  | 0 | 8 | LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.28760) |
 | 154 | 9 | 5 | 8 | DOI:10.1109/ICASSP49660.2025.10890445 | LoRATEE: A Secure and Efficient Inference Framework for Multi-Tenant LoRA LLMs Based on TEE | 2025-04-06 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 9 | 8 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, inference-systems, llm-serving-scheduling-disaggregation, multi-tenant LoRA serving / CPU-assisted inference / rank-aware scheduling | [source](https://doi.org/10.1109/ICASSP49660.2025.10890445) |
 | 155 | 10 | 5 | 8 | DOI:10.1109/TC.2025.3626449 | MI-LLM: Multiplier-Free LLM Inference on Commodity Processing-in-Memory Hardware | 2026-02-01 | IEEE transactions on computers | 0 | 8 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/TC.2025.3626449) |
