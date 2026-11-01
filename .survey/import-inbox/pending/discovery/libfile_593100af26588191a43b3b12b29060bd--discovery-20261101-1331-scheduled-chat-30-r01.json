@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261101-1331-scheduled-chat-30/r01",
+  "reference_main_sha": "6f1a05478347f197df369ad61d84d0dbd496d289",
+  "record_count": 1,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.5753/eniac.2025.12304",
+      "identity_tokens": [
+        "DOI:10.5753/eniac.2025.12304"
+      ],
+      "title": "Accelerating RAG Systems: A Performance-Oriented Systematic Mapping",
+      "reason": "SBCのENIAC 2025公式掲載ページおよび公開PDF本文（12ページ、237–248頁）を一次資料として確認。Kitchenham/Chartersの系統的文献調査手順とParsifalを用い、ACM Digital Library、IEEE Xplore、ScienceDirect、Scopus、arXiv、Google Scholarの6情報源からRAGのTTFT・遅延・KVキャッシュ・推論性能最適化研究を選別。本文では147件の候補から34件を最終対象と記し、KVキャッシュ再利用・圧縮、非同期検索、GPU実行、パイプライン最適化を整理し、TTFT/throughputの測定標準化不足と多言語評価の欠落を指摘。LLM推論・サービングシステムの性能最適化が調査の直接主題でありaccept。ただし本文4節の選別フローに「全文審査53件から30件除外した結果34件」と算術的に一致しない記述（53-30=23）があり、34件の母数と採択フローは後続Researchで原表・PRISMA図を再監査する必要がある。引用された他論文の高速化倍率は本論文自身の測定結果ではなく、二次引用値として扱う。",
+      "source_url": "https://sol.sbc.org.br/index.php/eniac/article/view/38722",
+      "primary_fulltext_url": "https://sol.sbc.org.br/index.php/eniac/article/download/38722/38495/",
+      "body_check": "official_SBC_publisher_fulltext_read_sections_1_to_5_including_methods_results_conclusion; internal_study_count_arithmetic_inconsistency_flagged",
+      "first_checked_at": "2026-11-01T13:38:50+09:00",
+      "last_checked_at": "2026-11-01T13:38:50+09:00",
+      "linked_from": [],
+      "worklist_rank": 173,
+      "origin": "discovery_worklist",
+      "source_type": "publisher_primary_fulltext"
+    }
+  ]
+}
