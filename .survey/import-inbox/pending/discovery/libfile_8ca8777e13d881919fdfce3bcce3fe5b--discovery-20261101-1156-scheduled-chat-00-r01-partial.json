@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261101-1156-scheduled-chat-00/r01",
+  "reference_main_sha": "774aad42a6e65a463af5b446a2fcf24a5448ae9d",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2602.11543",
+      "identity_tokens": [
+        "arXiv:2602.11543",
+        "DOI:10.48550/arXiv.2602.11543",
+        "SemanticScholar:1312194cd2479a0a6df0080ff82eb7ff8a776a7f"
+      ],
+      "title": "Pretraining A Large Language Model using Distributed GPUs: A Memory-Efficient Decentralized Paradigm",
+      "reason": "arXiv v3の一次要旨では、SPESはMoE事前学習時に各ノードが一部のexpertだけを更新して周期的に同期し、expert-merging warm-upで学習データ利用の偏りを緩和する。16台の48GB GPUで2Bモデルを事前学習し、7B/9Bへ拡張した評価も学習のメモリ効率と分散学習性能である。LLM生成推論・サービング時の実行効率、KVキャッシュ、デコード最適化の手法・評価は一次要旨にない。現行サーベイの学習単独最適化凍結範囲としてunrelated。",
+      "source_url": "https://arxiv.org/abs/2602.11543",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-01T12:00:04+09:00",
+      "last_checked_at": "2026-11-01T12:00:04+09:00",
+      "linked_from": [],
+      "worklist_rank": 263,
+      "origin": "discovery_worklist_abstract_screen"
+    }
+  ]
+}
