@@ -1,0 +1,177 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0757-scheduled-chat-00/r01",
+  "reference_main_sha": "59988a7b8251e7851fb1f8617d76831f0cb9da1a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1145/3675417.3675487",
+      "identity_tokens": [
+        "id:DOI:10.1145/3675417.3675487"
+      ],
+      "title": "Advances and Challenges in Large Model Compression: A Survey",
+      "reason": "ACM原著要旨は画像・音声・テキストを横断する大規模ニューラルネットの圧縮技術、応用、課題を総説する。モデル圧縮は推論メモリと計算量に関係するが、LLM推論ランタイム固有の量子化カーネル、KVキャッシュ、スケジューリング等の新規機構や具体的評価を主張していない。一般的な圧縮総説として境界的。",
+      "source_url": "https://doi.org/10.1145/3675417.3675487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "worklist_rank": 131,
+      "linked_from_count_observed": 2
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ICASSP49660.2025.10890757",
+      "identity_tokens": [
+        "id:DOI:10.1109/ICASSP49660.2025.10890757"
+      ],
+      "title": "Trimformer: A Novel Sequence Compression Mechanism with Local Attention",
+      "reason": "IEEE一次要旨は長系列の学習負荷を下げるtrim attentionを提案し、主な実験はVision Transformerによる画像分類である。LLMの自回帰推論、サービング、KV管理への実証的適用は要旨にないため対象外。タイトルだけでなく要旨を確認して判定。",
+      "source_url": "https://ieeexplore.ieee.org/document/10890757",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "worklist_rank": 177,
+      "linked_from_count_observed": 1
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "DOI:10.1109/ETAI68332.2026.11485199",
+      "identity_tokens": [
+        "id:DOI:10.1109/ETAI68332.2026.11485199"
+      ],
+      "title": "Neural Network Quantization Based on 4-Bit Bivariate Lookup Table Activation",
+      "reason": "IEEE一次要旨は4-bit CNN向け二変数LUT活性化とチャネル再配置を提案する。評価対象はResNet-18/ImageNetとYOLOv5s/Pascal VOCで、LLMやTransformer推論の実装・評価ではない。一般的な画像認識向け量子化のため対象外。",
+      "source_url": "https://ieeexplore.ieee.org/document/11485199",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "worklist_rank": 214,
+      "linked_from_count_observed": 0
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/EI268505.2025.11425606",
+      "identity_tokens": [
+        "id:DOI:10.1109/EI268505.2025.11425606"
+      ],
+      "title": "Decoupled Analysis of DVFS Effects in Prefill and Decode Stages of Large Language Model Inference",
+      "reason": "IEEE一次要旨はLLM推論のprefillとdecodeを分離し、DVFSによる性能と電力・エネルギー効率をワークロード条件別に測定する。両段階の周波数感度が異なることを示し、段階認識の電力制御方針へ直接結びつける。LLMサービングの実行時エネルギー最適化に直接関係するためaccept。",
+      "source_url": "https://ieeexplore.ieee.org/document/11425606",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "worklist_rank": 313,
+      "linked_from_count_observed": 0
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1109/AANN66429.2025.11257670",
+      "identity_tokens": [
+        "id:DOI:10.1109/AANN66429.2025.11257670"
+      ],
+      "title": "A Survey on Visual Token Compression for Efficient Vision-Language Models",
+      "reason": "IEEE一次要旨はVLMの視覚トークン削減をmerging・pruning・hybridの3系統に分類し、圧縮率とマルチモーダル性能のトレードオフを整理する。推論コスト低減に直接関係する一方、独自の圧縮方式やサービング実装を提案する一次システム研究ではないためborderline。",
+      "source_url": "https://ieeexplore.ieee.org/document/11257670",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "worklist_rank": 320,
+      "linked_from_count_observed": 1
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.1016/j.future.2025.108352",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.future.2025.108352"
+      ],
+      "title": "TPQA: Efficient attention architecture with task-aware pattern-guided quantization",
+      "reason": "Elsevier一次要旨はタスク別にattention headの寄与を見て精度を配分し、データ再配置とattention-weights-stationaryアクセラレータを設計する。最大2.1倍の高速化、3.4倍のエネルギー効率を報告するが、要旨の対象は一般的Transformerであり生成LLMサービングでの適用条件が不明確。推論カーネルに隣接する技術としてborderline。",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0167739X25006466",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "worklist_rank": 338,
+      "linked_from_count_observed": 1
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1016/j.sysarc.2026.103839",
+      "identity_tokens": [
+        "id:DOI:10.1016/j.sysarc.2026.103839"
+      ],
+      "title": "AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs",
+      "reason": "Elsevier一次要旨はAscend 910BでINT4重みをロード時にFP16へ復号してGEMMに融合し、Catlassと階層メモリGM/UB/L1/L0を活用する。OPT由来FFN形状でLUT-GEMM比平均5.24倍の高速化を報告する。LLM推論カーネルとメモリ転送削減への直接的な技術貢献があるためaccept。",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1383762126001578",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_worklist_primary_abstract_screen",
+      "worklist_rank": 339,
+      "linked_from_count_observed": 0
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40293",
+      "identity_tokens": [
+        "id:arXiv:2610.40293",
+        "id:DOI:10.48550/arXiv.2610.40293"
+      ],
+      "title": "MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads",
+      "reason": "著者原著はマルチエージェント協調をLLMサービングのワークロード生成規則として扱い、composable stagesとHierarchical Semantic Tracesで依存関係・実現された要求・合法的なrelease条件を保持する。タスク完了SLOとGPU/NPU計測を対応づけるベンチマーク基盤であり、単なるエージェント性能評価でなくサービング性能評価の技術的貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40293",
+      "body_check": "primary_abstract_and_introduction_screened; full_evaluation_not_audited",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_recent_primary_source"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40305",
+      "identity_tokens": [
+        "id:arXiv:2610.40305",
+        "id:DOI:10.48550/arXiv.2610.40305"
+      ],
+      "title": "Rimuru: Unified Memory Management for Modern LLM Serving via Elastic Expert Offloading",
+      "reason": "著者原著はMoE expert重みとattention stateの固定メモリ区画を廃し、異なるページ粒度を持つmemory viewとmulti-level page allocatorで共有GPUページを弾力的に再配分する。非連続expert重みを参照する融合MoE kernelとworkload-aware adjusterをvLLM上に実装し、負荷時のスループットとTTFTを評価しているためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40305",
+      "body_check": "primary_abstract_and_introduction_screened; full_evaluation_not_audited",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_recent_primary_source"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39852",
+      "identity_tokens": [
+        "id:arXiv:2610.39852",
+        "id:DOI:10.48550/arXiv.2610.39852"
+      ],
+      "title": "DWISE: Denoising Workload-Informed Scheduling Engine",
+      "reason": "著者原著は拡散LLMのdenoisingラウンド数が要求ごとに異なる点に着目し、prompt特徴で初期推定し最初のdenoising hidden stateで残作業量を更新する。prefillとdecodeをblock単位の同じ残作業指標でスケジュールし、SGLang実装で平均5.4倍のend-to-end遅延短縮を報告する。dLLMサービングの直接的なスケジューラ研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39852",
+      "body_check": "primary_abstract_and_introduction_screened; full_evaluation_not_audited",
+      "first_checked_at": "2026-11-02T08:05:39+09:00",
+      "last_checked_at": "2026-11-02T08:05:39+09:00",
+      "linked_from": [],
+      "origin": "discovery_recent_primary_source"
+    }
+  ]
+}
