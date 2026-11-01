@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Dynamic Scheduling for AI Accelerators via TISA",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00174",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern AI accelerators suffer from low utilization because static compile-time schedules cannot adapt to runtime variability or coordinate heterogeneous units effectively. This paper presents a semantics-aware dynamic tile scheduling framework that restores the missing runtime semantics required for adaptive execution. It co-designs three synergistic components, including a semantics-preserving compiler that maintains operator boundaries and dependency types through lowering, a tile-level instruction set (TISA) that encodes typed dependencies, resource intents, and tile-level memory ranges, and a conflictaware runtime scheduler that uses these semantics to dynamically reorder tiles, resolve contention, and overlap execution across tensor, vector, and DMA units. This design unifies software semantics and hardware scheduling, enabling cross-operator and cross-iteration parallelism beyond static approaches. Across ResNet50, BERT, GPT-J, and LLaMA2, our work achieves 1.52-1.92× speedups over the baseline, delivering 1.14-1.63× additional improvement over strong static tile-level pipeline scheduling; on FlashAttention-3 (head dim 128), it improves hardware utilization by 26.4% versus the state-of-the-art H100 implementation. Ablation studies further show that semantics preservation alone yields $1.2 \\times$ gains, confirming the independent value of restoring scheduling information to runtime.",
+      "identifiers": [
+        "SemanticScholar:2700eb792bfdeeee75f494260fbc581656d69006"
+      ],
+      "semantic_scholar_id": "2700eb792bfdeeee75f494260fbc581656d69006",
+      "doi": "10.1109/ISCA66397.2026.00174",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00174",
+      "authors": [
+        "Guanghui Song",
+        "Xiaoqiang Dan",
+        "Chengke Wang",
+        "Fei Liu",
+        "Wen-Yuan Lv",
+        "Zhongzhou Jiang",
+        "Jian-Jian Guan",
+        "Teng Lu",
+        "Lin Tao",
+        "Cheng Li",
+        "Weixing Pan",
+        "Wei Huang",
+        "Zirong Shen",
+        "Yi Yang",
+        "Hui Liu",
+        "Jie Zhao"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 153,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "著者が公開したISCA 2026一次発表資料を確認。静的タイルスケジュールが失う演算子境界、型付き依存、リソース要求、タイルメモリ範囲をTISA命令・意味保存コンパイラ・競合認識動的スケジューラに保持し、tensor/vector/DMAを安全に重畳実行する。Epoch上のGPT-J単一ブロックはnaive比1.74倍、LLaMA2単一ブロックは1.92倍（強いstatic比はそれぞれ1.63倍、1.14倍）。Epoch対A100のLLM prefill/decode比較もあり、推論実行時間とアクセラレータ利用率の直接改善を評価しているためaccept。異種ハードウェアの性能比較はTISA単独効果と混同しない。",
+      "library_body_check": "primary_author_presentation_review; published_paper_abstract_not_directly_accessible; paper_fulltext_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_worklist_primary_author_presentation"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-97258c8ed741",
+    "round": "libimp-97258c8ed741c9e7-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 1,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-97258c8ed741c9e7-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-97258c8ed741c9e7-pre01.json",
+    "receipt": "sha256:084991a5db8ac8e936025b312bdd7ebb4c23a8f52a5e447befc4355cec3703fa"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-97258c8ed741",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
