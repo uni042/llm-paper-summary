@@ -1,0 +1,202 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0804-scheduled-chat-00/r01",
+  "reference_main_sha": "b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80",
+  "round_status": "complete",
+  "round_target": 10,
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.16162",
+      "identity_tokens": [
+        "arXiv:2505.16162"
+      ],
+      "title": "KNN-SSD: Enabling Dynamic Self-Speculative Decoding via Nearest Neighbor Layer Set Optimization",
+      "reason": "自己投機デコードでdraftモデルを作る層スキップの最適組合せが入力ドメイン変化に弱い問題に対し、K近傍探索で入力のドメインに適したskip層集合を選択する。追加パラメータや訓練を必要としないdraft経路の適応により、複数モデル・タスクでLLM推論を1.3〜1.6倍高速化したと報告。投機デコードの直接的な推論実装改善であるためaccept。",
+      "source_url": "https://arxiv.org/abs/2505.16162",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 5,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2505.16162v2"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2511.02043",
+      "identity_tokens": [
+        "arXiv:2511.02043"
+      ],
+      "title": "Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants",
+      "reason": "PyTorchコンパイル過程でattentionプログラムを融合・タイル化し、静的テンプレートに依存せずFlashAttention型カーネルを生成する。FlexAttentionで表現できる変種に加えてデータ依存のattention式を対象とし、比較可能または上回るカーネル性能を報告。LLM推論attentionの演算実装に直接貢献するためaccept。ただし要旨に一律のend-to-end高速化倍率はない。",
+      "source_url": "https://arxiv.org/abs/2511.02043",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 20,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2511.02043v4"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29812",
+      "identity_tokens": [
+        "arXiv:2609.29812"
+      ],
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "reason": "同じTransformerブロックを反復するloopedモデルで、反復ごとに増えるattention計算とKVキャッシュを削減する。反復が進むほど更新トークンが疎になり、attention列差分とKV残差が圧縮しやすい性質を利用し、token-sparse更新・疎attention・KV残差量子化を組み合わせる。複数loopedモデルで最大1.64倍のend-to-end高速化、最大6倍のKVメモリ削減を報告し、推論効率に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 28,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2609.29812v2"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.22465",
+      "identity_tokens": [
+        "arXiv:2607.22465"
+      ],
+      "title": "ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback",
+      "reason": "異種LLMを用いるagenticタスクで、タスク種別に応じて検証器を選び、検証のフィードバックをdispatchのクリティカルパスから遅延させる。DISCスケジューラは入場時に最大KV占有を予約し、待ち時間減少による利得が精度低下を上回る場合は別backendへ振り分ける。SWE-bench等で品質・費用フロンティア最大7ポイント改善、DISC併用でプログラムthroughput最大1.8倍と報告。LLM推論ルーティング・KV資源管理への直接寄与があるためaccept。",
+      "source_url": "https://arxiv.org/abs/2607.22465",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 30,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2607.22465v4"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.16054",
+      "identity_tokens": [
+        "arXiv:2603.16054"
+      ],
+      "title": "inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference",
+      "reason": "LLMサービングGPU fleetの台数・GPU種別・二系統分割を、M/G/c待ち行列モデルと離散事象シミュレーションを併用して設計する。LMSYS、Azureおよび合成agentトレースのトークン長分布、ルーティング、A10G/A100/H100の性能モデルを使い、P99 TTFTのSLOを満たす最小費用構成を探索する。推論インフラの容量設計・スケジューリングへ直接貢献するためaccept。ただし論文はwork in progressで実機不要のモデル評価が中心。",
+      "source_url": "https://arxiv.org/abs/2603.16054",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 32,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2603.16054v1"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.14217",
+      "identity_tokens": [
+        "arXiv:2605.14217"
+      ],
+      "title": "PreFT: Prefill-only finetuning for efficient inference",
+      "reason": "個別ユーザー向けLoRA/ReFTアダプタをprefillにだけ適用し、decodeでは破棄することで、複数adapter同居時のdecode側throughput低下を抑える。vLLM上の実装を公開し、Llama 3.1 70Bで512 adapter同時提供時に従来PEFT比1.9倍のthroughputを報告。SFTの評価損失悪化はrank増加で補える一方、RLでは標準PEFTに近い性能を報告。推論時のadapter処理を直接変えるためaccept。",
+      "source_url": "https://arxiv.org/abs/2605.14217",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 35,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2605.14217v1"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.22324",
+      "identity_tokens": [
+        "arXiv:2603.22324"
+      ],
+      "title": "DAQ: Delta-Aware Quantization for Post-Training LLM Weight Compression",
+      "reason": "post-training後の重みと基盤モデルとの差分ΔWに着目し、通常の重み再構成誤差最小化に代えて符号保存率と余弦類似度でΔWの方向を保つデータ不要PTQを提案する。FP8のpilot評価では標準量子化で失われるスタイル固有能力を回復し、一般性能も維持したと報告。推論重みの圧縮手法への直接的な技術貢献があるためaccept。ただし要旨にdecode速度やメモリ実測の定量改善はない。",
+      "source_url": "https://arxiv.org/abs/2603.22324",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 44,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2603.22324v1"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.37538",
+      "identity_tokens": [
+        "arXiv:2609.37538"
+      ],
+      "title": "AVSG: Accelerated Vectorized Sparse Gather for Efficient KV Cache Offload in Sparse-Attention LLM Serving",
+      "reason": "動的疎attentionで選択したKVをCPU側から毎step転送する問題に対し、HBMに残るKVのvectorized hash照合、NPUコア間のmiss転送均等化、寿命に基づくHBM buffer管理を実装する。実要求では8K entry bufferで94.83%のhit率、実運用データのserving stackでoutput token時間39%短縮・throughput1.27倍を報告。KVオフロードの転送と再利用を直接最適化するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.37538",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 47,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2609.37538v1"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.11998",
+      "identity_tokens": [
+        "arXiv:2609.11998"
+      ],
+      "title": "Fixed State, Long Reach: What a Constant-Size Cache Buys Block Diffusion at Scale",
+      "reason": "block diffusion言語モデルのキャッシュをattention由来の系列長比例KVから状態空間モデルの固定長状態へ置き換え、block-causal学習目的でキャッシュを近似でなく正確な計算にする。3Bのattention/Mamba/hybridを300B tokenで学習した比較で、256k文脈のMamba cacheはattention比で単一stream throughput2.6倍、メモリ11分の1、latency4.3分の1と報告。推論時キャッシュと生成実行に直接貢献するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.11998",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 48,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2609.11998v1"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2508.15371",
+      "identity_tokens": [
+        "arXiv:2508.15371"
+      ],
+      "title": "Confidence-Modulated Speculative Decoding for Large Language Models",
+      "reason": "CM-ASDはdraft分布のentropy/marginで投機長と検証閾値を適応調整する。一次PDF本文のWMT翻訳表では固定SpecDec(k=25)が5.1/5.5/4.6/4.8倍に対しCM-ASDは4.7/5.0/4.2/4.4倍で、比較対象の固定SpecDec(k=25)より速くない。CNN/DailyMailでもSpecDec 5.1倍、CM-ASD 4.0倍で、ROUGE-1は43.11対41.90。緩和検証はtarget分布を厳密保存しないため、推論効率に関連するが新方式の優位性と品質保証が限定的でborderline。",
+      "source_url": "https://arxiv.org/abs/2508.15371",
+      "body_check": "primary_pdf_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 60,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/pdf/2508.15371"
+    }
+  ]
+}
