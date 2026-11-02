@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2100-scheduled-chat-00/r02",
+  "reference_main_sha": "d421f2728239cd9ded2137ba6832c7b0543879c4",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21390",
+      "identity_tokens": [
+        "arXiv:2610.21390"
+      ],
+      "title": "PriorityFEC: Deadline-Aware Streaming FEC for KV-Cache Handoff in Edge Multi-Agent Systems",
+      "reason": "Edgeのmulti-agent LLMで前段agentのKVを次のagentへ渡す際、無線リンクの損失とTTFT締切のため全KV転送が間に合わない問題を扱う。重要度の高いKV blockを先に送るutility-aware streamと、受信feedbackに基づき期限までにrepair packetを配置するStreaming FECを統合するPriorityFECを提案。Qwen2.5-7BとLlama-3.1-8Bの分散edge serving試作で、厳しい期限下ほど既存転送方式よりタスク品質が良いと報告。KV再利用とネットワーク転送の直接最適化なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21390",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:03:50+09:00",
+      "last_checked_at": "2026-11-02T21:03:50+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24005",
+      "identity_tokens": [
+        "arXiv:2610.24005"
+      ],
+      "title": "PACE: Pareto-Adaptive Compression for Efficient Native MLLMs",
+      "reason": "ViTを持たず画像patchを直接token化するnative MLLM向けに、空間の縦横軸ごとにattention重要度を推定し、Multimodal-RoPEと整合する視覚token削減を行うPACEを提案。保持性能・推論効率・空間網羅性のPareto最適化で層とtoken保持率を選ぶ。NeurIPS 2026採択版の一次要旨では視覚tokenを25〜50%保持して性能を概ね維持し、FLOPsを2倍超削減と報告。推論token数と計算量の直接改善なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24005",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T21:03:50+09:00",
+      "last_checked_at": "2026-11-02T21:03:50+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
