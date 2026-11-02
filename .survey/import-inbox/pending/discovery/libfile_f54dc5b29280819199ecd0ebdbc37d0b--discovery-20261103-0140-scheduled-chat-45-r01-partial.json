@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261103-0140-scheduled-chat-45/r01",
+  "reference_main_sha": "8b3dccaaf91e057f51020f106376b3b2ed50b440",
+  "record_count": 1,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2204.03276",
+      "identity_tokens": [
+        "arXiv:2204.03276"
+      ],
+      "title": "PALBERT: Teaching ALBERT to Ponder",
+      "reason": "ALBERT/RoBERTaの入力ごとの必要計算層数を変える早期終了機構を検討し、PonderNetの退出層サンプリングがもたらす分散を、決定論的Q-exit基準と改訂アーキテクチャで抑える。GLUE分類タスクでPABEEとの比較とLambda層のablationを報告。推論時の計算削減に技術的接点はあるが、主対象はエンコーダ型NLPモデルの分類・早期終了であり、生成LLMのデコード、KVキャッシュ、サービングへの直接的評価・最適化は確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2204.03276",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:46:13+09:00",
+      "last_checked_at": "2026-11-03T01:46:13+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/8576375e59a681405df07a2237e99bc943bf346d/.survey/work-queue/WORKLIST-45.md"
+      ],
+      "worklist_rank": 500,
+      "origin": "worker_worklist_45"
+    }
+  ]
+}
