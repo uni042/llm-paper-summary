@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-10-31T22:56:37+00:00",
-  "record_count": 12669,
+  "updated_at": "2026-11-02T00:55:50+00:00",
+  "record_count": 12670,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182167,6 +182167,20 @@
         "https://doi.org/10.52202/079017-1645"
       ],
       "title": "Vision Mamba Mender"
+    },
+    "arXiv:2610.24349": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.24349",
+      "identity_tokens": [
+        "arXiv:2610.24349",
+        "id:DOI:10.48550/arXiv.2610.24349",
+        "id:arXiv:2610.24349"
+      ],
+      "reason": "一次arXiv要旨で対象はvision-language-action、video-action、world action modelのリアルタイムphysical AI policyであり、LIBERO-10のロボット操作成功率やJetson AGX Thor/RTX5090での推論遅延を評価する。kernel融合とstate reuseは汎用的だが、LLM自回帰生成、KVキャッシュ、MoE/LLM servingへの実証的適用は示されないため、今回のLLM推論システムサーベイではunrelated。タイトルだけでなく要旨を確認して判定。",
+      "first_checked_at": "2026-11-02T00:55:50+00:00",
+      "last_checked_at": "2026-11-02T00:55:50+00:00",
+      "linked_from": [],
+      "title": "FlashRT-PAI: Fast Kernels Are Not Fast Pipelines for Physical AI Inference"
     }
   }
 }

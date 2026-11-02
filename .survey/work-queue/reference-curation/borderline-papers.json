@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-01T19:53:49+00:00",
-  "record_count": 5577,
+  "updated_at": "2026-11-02T00:55:49+00:00",
+  "record_count": 5579,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86107,6 +86107,36 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Federated and edge learning for large language models"
+    },
+    "arXiv:2608.01250": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.01250",
+      "identity_tokens": [
+        "arXiv:2608.01250",
+        "id:DOI:10.48550/arXiv.2608.01250",
+        "id:arXiv:2608.01250"
+      ],
+      "reason": "既存のchunked prefillがLLM推論GPUのピーク電力を下げるのではなく電力変化率（ramp rate）を平滑化することを実電力トレースから測定し、負荷とreserve procurementへの影響をモデル化する。著者要旨では高負荷で高速ランプ対応予備力の必要量を推定24%削減、2GPUのdense 14Bで約36%削減と報告。推論スケジューリングのエネルギー特性として関連するが、新規のLLM推論高速化アルゴリズム自体の提案ではなく電力系統の影響分析が中心のためborderline。",
+      "first_checked_at": "2026-11-02T00:55:43+00:00",
+      "last_checked_at": "2026-11-02T00:55:43+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Smoothing the Ramp, Not the Peak: Scheduling-Induced Power Dynamics of LLM Inference and Their Grid-Scale Consequences"
+    },
+    "arXiv:2610.30798": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.30798",
+      "identity_tokens": [
+        "arXiv:2610.30798",
+        "id:DOI:10.48550/arXiv.2610.30798",
+        "id:arXiv:2610.30798"
+      ],
+      "reason": "TritonのCPU側MLIR/LLVMコンパイル処理にRowhammer bit flipを起こし、正しい出力を保つが非最適なGPU kernelを生成・disk cacheさせてLLMサービングを持続的に遅くするLLVMhammer攻撃を研究する。著者要旨はRTX4090/RX7900XTXと複数LLMで推論遅延4～16%増を報告。推論kernelの脆弱性と性能劣化に関係するが、新規推論高速化手法でなく攻撃・セキュリティ研究なのでborderline。",
+      "first_checked_at": "2026-11-02T00:55:49+00:00",
+      "last_checked_at": "2026-11-02T00:55:49+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Amplifying Latency and Cost of LLM Inference via Rowhammer Attack"
     }
   }
 }
