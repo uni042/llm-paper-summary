@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261102-1525-scheduled-chat-30/r03",
+  "reference_main_sha": "ee716ae60fd44ea0b1fb55565eef6e202c16126a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.27963",
+      "identity_tokens": [
+        "id:arXiv:2608.27963",
+        "id:DOI:10.48550/arXiv.2608.27963"
+      ],
+      "title": "SABER: Stability-Aware Early Exit for LLM Reasoning via Adversarial Branch Probing",
+      "reason": "推論中の中間解答が安定したかを、意味的に摂動した短い対抗分岐と通常分岐の結果整合性で推定し、安定なら推論を早期終了するSABERを提案する。全trajectoryを伸ばして一致確認する方式と異なり、軽量probeで停止可否を判断する。複数の推論ベンチマーク・モデルで解答精度を概ね維持しながら推論token消費を平均30.2〜39.8%削減と報告するため、実行時tokenコスト削減に直接寄与する方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2608.27963",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 171,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25155",
+      "identity_tokens": [
+        "id:arXiv:2603.25155",
+        "id:DOI:10.48550/arXiv.2603.25155"
+      ],
+      "title": "Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models",
+      "reason": "3D医用画像を扱うマルチモーダルLLMで、instructionに応じて視覚token長を変えるスケジューリングと、離散的token削除を学習可能にする代理勾配・勾配復元を提案する。医用VQAで学習・推論の計算資源を削減しつつ精度を改善したと報告する。医療領域に特化するが、VLM推論時のtoken圧縮機構を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2603.25155",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 173,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.22281",
+      "identity_tokens": [
+        "id:arXiv:2604.22281",
+        "id:DOI:10.48550/arXiv.2604.22281"
+      ],
+      "title": "DocPrune:Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning",
+      "reason": "長文書画像で背景や質問無関係tokenが大量の計算を消費する問題に対し、背景・質問関連性・モデル理解度から削除tokenと削除開始層を選ぶ訓練不要のDocPruneを提案する。M3DocRAGでencoder throughput3.0倍、decoder throughput3.3倍、F1を1.0ポイント改善と報告する。VLM文書推論の計算効率化へ直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2604.22281",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 174,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.10297",
+      "identity_tokens": [
+        "id:arXiv:2609.10297",
+        "id:DOI:10.48550/arXiv.2609.10297"
+      ],
+      "title": "TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents",
+      "reason": "GUI agentの連続スクリーンショットをKVへ保存するとき、将来の操作に必要な視覚情報を不可逆に捨てないよう、画面layout prior・指示関連性・特徴多様性から単調に縮小可能なtoken順序を作る。空間coverage修復と古いframeのKV単調縮小により再encodeを避け、6種類のGUI benchmarkでtight budget下の精度維持とcache節約を検証する。agentic VLM推論のcache reuseとメモリ・TTFT削減を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.10297",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 181,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.16944",
+      "identity_tokens": [
+        "id:arXiv:2608.16944",
+        "id:DOI:10.48550/arXiv.2608.16944"
+      ],
+      "title": "A Tight Linear Deterministic Competitive Ratio for Fully Online KV-Cache Scheduling",
+      "reason": "成長するKV cache制約のもとで非プリエンプティブLLM要求をオンラインbatchingする問題を理論解析し、決定的アルゴリズムの最良競合比がTheta(n)であることを上下界で示す。下界は先行長要求と後続短要求の配置によるもので、Lean 4で機械検証している。LLMサービングの制約を直接対象とするが、実用スケジューラの新規実装や速度測定は主題ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2608.16944",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 183,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.11221",
+      "identity_tokens": [
+        "id:arXiv:2512.11221",
+        "id:DOI:10.48550/arXiv.2512.11221"
+      ],
+      "title": "Adaptive Soft Rolling KV Freeze with Entropy-Guided Recovery: Sublinear Memory Growth for Efficient LLM Inference",
+      "reason": "注意窓で重要度が低いtokenのKV更新を一時停止し、捨てずにGPU外へ保存して必要時に復元する可逆soft-freezeを提案する。重要度が低い判定の繰り返しに応じてfreeze時間を劣線形に延長し、過度な圧縮を抑える。LLaMA-3 8Bの予備実験でactive KVを55〜67%削減し検索品質を維持したと報告する。検証規模は予備的だが、推論時の階層KV管理を直接改善するためaccept。",
+      "source_url": "https://arxiv.org/abs/2512.11221",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 184,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.20507",
+      "identity_tokens": [
+        "id:arXiv:2607.20507",
+        "id:DOI:10.48550/arXiv.2607.20507"
+      ],
+      "title": "CacheSpec: Finding the Sweet Spot for Small Models in Large Language Models",
+      "reason": "worklist上の旧題MiniCacheではなく、arXiv原著の現行タイトルはCacheSpec。Program-of-Thoughts型の計算手順を再利用可能なprogram cacheに変え、小モデルにcache-hit時の変数抽出とtarget LLM向け投機的draft生成の二役を担わせる。WebShop等でlatency最大約3.1倍、並列serving throughput約2.8倍の改善を報告する。LLM推論cacheとdraftingの実行最適化としてacceptし、題名変更は同一arXiv identityへ統合する。",
+      "source_url": "https://arxiv.org/abs/2607.20507",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 186,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21869",
+      "identity_tokens": [
+        "id:arXiv:2606.21869",
+        "id:DOI:10.48550/arXiv.2606.21869"
+      ],
+      "title": "The Language-Energy Divide: Measuring Energy Costs of Multilingual LLM Inference",
+      "reason": "多言語LLM推論のenergy消費をml.energyで実測し、言語によるoutput token当たり電力量の最大8.3倍差と、固定要求集合の総電力量の最大179倍差を報告する。希少scriptでのtoken当たり消費増と低資源言語での出力token数増の二要因を分離し、モデル・hardware・タスク間で比較する。新規kernelではないが、servingの電力性能を直接計測するシステム評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.21869",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 187,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.02816",
+      "identity_tokens": [
+        "id:arXiv:2604.02816",
+        "id:DOI:10.48550/arXiv.2604.02816"
+      ],
+      "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
+      "reason": "W4A4等の低bit VLMで意味重要度だけによるtoken pruningがactivation outlierを削除して量子化誤差を増やす問題を示し、group別の量子化誤差推定とoutlier強度を意味関連度へ統合する。LLaVA系で視覚token保持12.5%の条件でも単純併用baselineより精度2.24ポイント改善したと報告する。量子化と視覚token削減の推論時共同最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2604.02816",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 188,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.06034",
+      "identity_tokens": [
+        "id:arXiv:2606.06034",
+        "id:DOI:10.48550/arXiv.2606.06034"
+      ],
+      "title": "When Good Enough Is Optimal: Multiplication-Only Matrix Inversion Approximation for Quantized Gated DeltaNet",
+      "reason": "chunk-wise線形注意の厳密下三角行列逆計算を、構造mask付きNeumann級数の打切りと並列残差補正によりMatMul中心へ変換する。INT低bitでは行列冪で拡大するdynamic rangeに対応し、chunk長に応じて近似次数と残差補正を調整する。Qwen3.5系でkernel最大5倍、decode層overhead20%減を報告し、線形注意推論のNPU親和的な直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.06034",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:30:29+09:00",
+      "last_checked_at": "2026-11-02T15:30:29+09:00",
+      "linked_from": [],
+      "worklist_rank": 200,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
