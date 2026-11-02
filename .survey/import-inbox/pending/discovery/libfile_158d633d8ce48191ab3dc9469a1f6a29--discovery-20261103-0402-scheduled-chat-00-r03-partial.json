@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0402-scheduled-chat-00/r03",
+  "reference_main_sha": "8b0702a18bbc4d353c368b78ee81c916ba45a714",
+  "record_count": 3,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30450",
+      "identity_tokens": [
+        "arXiv:2610.30450"
+      ],
+      "title": "Same Beliefs, Different Policies: Learning Reusable Representations for Early Stopping in LLM Reasoning",
+      "reason": "BELTはfrozen reasoning LLMのhidden stateから現時点と将来の回答のbeliefを予測し、token単価と独立に学習したfeatureへ軽量線形stop policyを適用する。Qwen3-1.7Bで生成token41%、OLMo-3-7B-Thinkで51%削減し、5種のOOD数学benchmark平均で精度低下なしと報告。推論計算量削減へ直接貢献。",
+      "source_url": "https://arxiv.org/abs/2610.30450",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:10:19+09:00",
+      "last_checked_at": "2026-11-03T04:10:19+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.27981",
+      "identity_tokens": [
+        "arXiv:2610.27981"
+      ],
+      "title": "Adaptive Stopping of Streamed Reasoning for Language Model Agents",
+      "reason": "StreamStopは推論モデルのhidden stateへアクセスせず、出力途中のreasoning text prefixを軽量readerとstop headで評価する。prefix別の最終action一致を教師にoffline学習し、割引率により推論時の品質・token予算tradeoffを調整。WebShopのQwen3.8-27Bでepisode当たりreasoning token42%削減し、観測task successはほぼ同程度と報告。",
+      "source_url": "https://arxiv.org/abs/2610.27981",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:10:19+09:00",
+      "last_checked_at": "2026-11-03T04:10:19+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35971",
+      "identity_tokens": [
+        "arXiv:2610.35971"
+      ],
+      "title": "Continue or Restart? The Limits of Early Failure Prediction in Coding Agents",
+      "reason": "coding agentの早期失敗予測による計算削減を147002 traceで検証した負の結果。20k token時点の同一task内識別AUCは約0.50で、restart判断の改善は主にtask難易度間の配分による。75k token capの全4設定および224設定中216で、restartせず継続する方が高いsolve rateかつ低い平均token costだったと報告。安易な早期停止の効率上の限界を示す直接的研究。",
+      "source_url": "https://arxiv.org/abs/2610.35971",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T04:10:19+09:00",
+      "last_checked_at": "2026-11-03T04:10:19+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
