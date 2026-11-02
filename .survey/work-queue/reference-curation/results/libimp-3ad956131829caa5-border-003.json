@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3ad956131829caa5-border-003",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.27945",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.27945",
+    "identity_tokens": [
+      "arXiv:2610.27945"
+    ],
+    "reason": "Transformers、vLLM、OpenAI APIを使うGitHub 5,398リポジトリの設定実態を調査し、345,117件の明示的option指定を分析。設定数の中央値はTransformers 2、vLLM/OpenAI 4、複数option組合せの56.8～61.6%が1リポジトリのみと報告。LLM推論システムの運用知見として関連するが、新しいサービングアルゴリズムや性能改善手法を提示していないためborderline。",
+    "first_checked_at": "2026-11-02T08:58:50+00:00",
+    "last_checked_at": "2026-11-02T08:58:50+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "How Developers Configure LLM Inference: A Large-Scale Study of Real-World Practices"
+  },
+  "processed_at": "2026-11-02T08:58:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad956131829",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

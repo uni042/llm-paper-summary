@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-02T05:57:32+00:00",
-  "record_count": 12673,
+  "updated_at": "2026-11-02T08:58:52+00:00",
+  "record_count": 12675,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182229,6 +182229,30 @@
         "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
       ],
       "title": "AsyncHZP: Hierarchical ZeRO Parallelism with Asynchronous Scheduling for Scalable LLM Training"
+    },
+    "arXiv:2610.41039": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41039",
+      "identity_tokens": [
+        "arXiv:2610.41039"
+      ],
+      "reason": "fine-tuningされたMoEのexpert経路に残る構造的記憶をrouting/logitから推定し、分散配置時の漏洩と攻撃可能性を分析するセキュリティ研究。MoEの推論時routingに触れるものの、スループット・レイテンシ・KV・オフロード・量子化など推論効率の最適化を提案・評価していないためunrelated。単なるタイトル除外ではなく著者一次要旨の手法と評価目的を確認して判断した。",
+      "first_checked_at": "2026-11-02T08:58:51+00:00",
+      "last_checked_at": "2026-11-02T08:58:51+00:00",
+      "linked_from": [],
+      "title": "Characterizing Recoverable Expert-Utilization Signatures in Fine-Tuned Mixture-of-Experts LLMs"
+    },
+    "arXiv:2610.38620": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.38620",
+      "identity_tokens": [
+        "arXiv:2610.38620"
+      ],
+      "reason": "JevActはagentのツール実行前にドメインポリシーと状態を照合し、prefill-only decision modelで不適切な操作を検知して修正を促す。11種類のagentで信頼性向上を評価するが、主眼はagent安全性・タスク完遂でありLLM推論サービングの性能最適化を示していないためunrelated。prefill-onlyという実装上の工夫だけでは推論効率研究とは扱わない。",
+      "first_checked_at": "2026-11-02T08:58:52+00:00",
+      "last_checked_at": "2026-11-02T08:58:52+00:00",
+      "linked_from": [],
+      "title": "Think Before You Act: Decision Gate for LLM Agents"
     }
   }
 }

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3ad956131829caa5-unrel-005",
+  "request_operation": "mark_unrelated",
+  "classification": "unrelated",
+  "canonical_id": "arXiv:2610.38620",
+  "record": {
+    "classification": "unrelated",
+    "canonical_id": "arXiv:2610.38620",
+    "identity_tokens": [
+      "arXiv:2610.38620"
+    ],
+    "reason": "JevActはagentのツール実行前にドメインポリシーと状態を照合し、prefill-only decision modelで不適切な操作を検知して修正を促す。11種類のagentで信頼性向上を評価するが、主眼はagent安全性・タスク完遂でありLLM推論サービングの性能最適化を示していないためunrelated。prefill-onlyという実装上の工夫だけでは推論効率研究とは扱わない。",
+    "first_checked_at": "2026-11-02T08:58:52+00:00",
+    "last_checked_at": "2026-11-02T08:58:52+00:00",
+    "linked_from": [],
+    "title": "Think Before You Act: Decision Gate for LLM Agents"
+  },
+  "processed_at": "2026-11-02T08:58:52+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad956131829",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": null,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

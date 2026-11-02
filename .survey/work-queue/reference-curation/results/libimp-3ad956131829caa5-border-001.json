@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-3ad956131829caa5-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.40613",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.40613",
+    "identity_tokens": [
+      "arXiv:2610.40613"
+    ],
+    "reason": "透かし付き生成を投機復号へ統合し、棄却されたdraft tokenの置換後も同じ鍵による透かしを保つ。仮想鍵のcopula結合と追加のexponential raceで分布を保ち、acceptance rateを維持しつつ検出率を改善。主目的は出力由来追跡・透かしの検出性能で、推論速度・メモリ削減の新方式ではない。ただし投機復号の検証処理に直接関係し追加遅延を生じないと報告するためborderline。",
+    "first_checked_at": "2026-11-02T08:58:50+00:00",
+    "last_checked_at": "2026-11-02T08:58:50+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races"
+  },
+  "processed_at": "2026-11-02T08:58:50+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-3ad956131829",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

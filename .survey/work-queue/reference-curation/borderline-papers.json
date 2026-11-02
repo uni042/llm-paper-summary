@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-02T05:57:36+00:00",
-  "record_count": 5591,
+  "updated_at": "2026-11-02T08:58:51+00:00",
+  "record_count": 5595,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86328,6 +86328,58 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Hiding Tool Latency in On-Device Cascaded Voice Agent through Speculative Execution"
+    },
+    "arXiv:2610.40613": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40613",
+      "identity_tokens": [
+        "arXiv:2610.40613"
+      ],
+      "reason": "透かし付き生成を投機復号へ統合し、棄却されたdraft tokenの置換後も同じ鍵による透かしを保つ。仮想鍵のcopula結合と追加のexponential raceで分布を保ち、acceptance rateを維持しつつ検出率を改善。主目的は出力由来追跡・透かしの検出性能で、推論速度・メモリ削減の新方式ではない。ただし投機復号の検証処理に直接関係し追加遅延を生じないと報告するためborderline。",
+      "first_checked_at": "2026-11-02T08:58:50+00:00",
+      "last_checked_at": "2026-11-02T08:58:50+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races"
+    },
+    "arXiv:2610.27945": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.27945",
+      "identity_tokens": [
+        "arXiv:2610.27945"
+      ],
+      "reason": "Transformers、vLLM、OpenAI APIを使うGitHub 5,398リポジトリの設定実態を調査し、345,117件の明示的option指定を分析。設定数の中央値はTransformers 2、vLLM/OpenAI 4、複数option組合せの56.8～61.6%が1リポジトリのみと報告。LLM推論システムの運用知見として関連するが、新しいサービングアルゴリズムや性能改善手法を提示していないためborderline。",
+      "first_checked_at": "2026-11-02T08:58:50+00:00",
+      "last_checked_at": "2026-11-02T08:58:50+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "How Developers Configure LLM Inference: A Large-Scale Study of Real-World Practices"
+    },
+    "arXiv:2610.38983": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38983",
+      "identity_tokens": [
+        "arXiv:2610.38983"
+      ],
+      "reason": "低精度Triton/CUDA kernelの検証で固定atol/rtolが誤検知・見逃しを生む問題に対し、丸め誤差を追跡するper-element受理領域を生成するnumoracleを提案。vLLM/Unsloth/Liger由来13演算子を検証し、RTX PRO 6000上のeffective mutant 124個中116個を検出。低精度推論kernelの品質保証に間接的に寄与するが、LLM推論自体の速度・メモリを改善する方法ではないためborderline。",
+      "first_checked_at": "2026-11-02T08:58:50+00:00",
+      "last_checked_at": "2026-11-02T08:58:50+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Beyond atol and rtol: Sound Test Oracles for Low-Precision GPU Kernels"
+    },
+    "arXiv:2610.37778": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.37778",
+      "identity_tokens": [
+        "arXiv:2610.37778"
+      ],
+      "reason": "投機復号のdiffusion drafterがブロック内の先行tokenを見ずに予測するため、verifier条件付き教師分布との不一致が生じる。MDraftは同じcontextから複数draft blockを生成し、各prefixでのverifier分布を統合してdistillationし受理長を改善する。推論時のdraft構造・手順は変更しないため直接のserving最適化ではなく、学習側から投機復号の効率を間接改善する研究としてborderline。",
+      "first_checked_at": "2026-11-02T08:58:51+00:00",
+      "last_checked_at": "2026-11-02T08:58:51+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Multi-Draft On-Policy Distillation for Diffusion Drafters"
     }
   }
 }
