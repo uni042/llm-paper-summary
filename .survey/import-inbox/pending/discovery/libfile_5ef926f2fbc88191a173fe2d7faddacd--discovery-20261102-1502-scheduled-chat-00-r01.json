@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1502-scheduled-chat-00/r01",
+  "reference_main_sha": "357f8194940596257db08909b36df50d77494b26",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40541",
+      "identity_tokens": [
+        "id:arXiv:2610.40541",
+        "id:DOI:10.48550/arXiv.2610.40541"
+      ],
+      "title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
+      "reason": "LLMのprefill隠れ状態から出力token数を予測するサービング・スケジューリング基盤について、自己回帰生成の停止時刻を確率過程として解析する。停止確率が出力途中で変化するため予測誤差に不可避の下限があることを導き、モデル・データ・samplingを固定した比較ではMLP、FiLM、MoE型予測器の誤差がその限界に近づくと示す。要求長予測に基づくスケジューラの評価設計へ直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40541",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24355",
+      "identity_tokens": [
+        "id:arXiv:2610.24355",
+        "id:DOI:10.48550/arXiv.2610.24355"
+      ],
+      "title": "Koi: Evidence-Guided, Self-Calibrating Planning for Multi-Cloud, Heterogeneous LLM Inference Fleets",
+      "reason": "異種GPUと複数クラウドにまたがるLLM推論fleetのアクセラレータ、並列化方式、レプリカ数、配置を共同最適化するKoiを提案。RLMによる仮説生成を、KV容量圧迫・通信負荷・遅延などの因果グラフと決定論的評価器で制約し、実際の配備から計画を自己較正する。異種クラスタで最強比較対象比goodput 1.18倍、token当たり費用20%削減を報告し、サービング配置の直接的なシステム貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24355",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39621",
+      "identity_tokens": [
+        "id:arXiv:2610.39621",
+        "id:DOI:10.48550/arXiv.2610.39621"
+      ],
+      "title": "The Real Cost of Context: Predicting Compute Time and Energy Consumption in LLM Prefill and Decode Phases",
+      "reason": "agentic LLMの入力文脈長と出力長を変化させ、prefill/decode別の計算時間とエネルギーを系統的に計測し、一般化線形モデルで推定する。decodeは出力長にほぼ線形、prefillは入力長に対する線形・二次成分を持ち、長い入力を無視した出力tokenだけの電力推定が不十分であることを示す。推論基盤の負荷・エネルギーモデリングへ直接使える計測方式なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39621",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.36576",
+      "identity_tokens": [
+        "id:arXiv:2610.36576",
+        "id:DOI:10.48550/arXiv.2610.36576"
+      ],
+      "title": "Less is more: learning what to profile for GPU kernel optimization",
+      "reason": "AutoProfilerはGPUカーネル最適化用LLMに与えるprofiling項目を固定せず、REWRITE/SPLITで決定木を学習し、KernelBenchで限られたprofiling予算下の最適化を改善する。ただし要旨上の主要目的は汎用GPUカーネルの自動最適化エージェントであり、LLM推論の特定演算やサービング実装での性能検証は示されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.36576",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37200",
+      "identity_tokens": [
+        "id:arXiv:2610.37200",
+        "id:DOI:10.48550/arXiv.2610.37200"
+      ],
+      "title": "PipeLink: Contract-Guided Linking of GPU Kernel Components",
+      "reason": "GPU SM内のloader、GEMM mainloop、epilogue等をLTOオブジェクトと資源契約に分割し、結合時に共有メモリ・barrier・warp・register配置を共同解決するPipeLinkを提案。Hopper/Blackwellの51構成で一体コンパイル比0.2%以内の性能を維持し、CuTe attentionをThunderKittens decode megakernelへ組み込むとdecodeが2.16倍高速化する。推論attention kernelの再利用と融合を直接改善するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37200",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34971",
+      "identity_tokens": [
+        "id:arXiv:2610.34971",
+        "id:DOI:10.48550/arXiv.2610.34971"
+      ],
+      "title": "SVD-Attention: Efficiently Analyzing Attention Blocks in Transformers",
+      "reason": "各attention headのQK相互作用行列をSVD分解し、特異値とtoken間活性分散で利用されるモードを診断するSVD-Attentionを提案。7モデル・5タスクで冗長headの層位置がタスク依存であると示し、単独のFLOPs削減は0.8–1.5%、weight pruning併用で8–11%と報告。ただし著者自身が圧縮実装でなく分析ツールと位置付け、推論runtimeの実測高速化は要旨で示さないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.34971",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14389",
+      "identity_tokens": [
+        "id:arXiv:2610.14389",
+        "id:DOI:10.48550/arXiv.2610.14389"
+      ],
+      "title": "Measuring the Inference Energy Efficiency of Open-Weight LLMs across Benchmarks, Reasoning Modes, and Hardware",
+      "reason": "86個のopen-weight LLM checkpointを7 benchmark・6種のハードウェアで実測し、品質と推論消費エネルギーのPareto関係を分析する。性能が同等以上の別構成に比べ中央値2.6–4.8倍のエネルギーを費やす構成が多く、thinking有効化は平均約3.7倍、FP8化は品質を大きく変えずエネルギーを約25%削減する。実測hardware・推論モード・token予算に依存するサービング効率のベンチマーク研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.14389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39846",
+      "identity_tokens": [
+        "id:arXiv:2610.39846",
+        "id:DOI:10.48550/arXiv.2610.39846"
+      ],
+      "title": "TokWatt: an open, boundary-annotated database of AI inference energy, from chat answers to agents",
+      "reason": "2023–2026年の13情報源からAI推論エネルギー推定134件を集約し、chat、推論回答、動画生成、coding agent等20タスクについて計測境界を統一するTokWattデータベースを構築する。施設込み換算では短いchat回答0.34Wh、推論回答4.7Whなどの参考値を提示する。ただし新規のLLM推論runtime、スケジューラ、量子化方式の改善ではなくエネルギー会計の資料集であるためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39846",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07191",
+      "identity_tokens": [
+        "id:arXiv:2610.07191",
+        "id:DOI:10.48550/arXiv.2610.07191",
+        "id:DOI:10.1145/3831599.3840344"
+      ],
+      "title": "Agentic Design Space Exploration for Joint Hardware Configuration Selection and Mapping of AI Inference Workloads on Heterogeneous Edge SoCs",
+      "reason": "TraceDSEはIntel Meteor LakeのCPU/GPU/NPUへAI推論タスクを割り当て、core数・周波数も同時に決めるDSEをLLM提案器と実行trace解析criticで反復する。4種のAI推論workloadでNSGA-II比最大35%、Bayesian最適化比最大68%のPareto hypervolume改善、hardware評価回数6–9分の1を報告。ただし要旨ではLLM自体の推論最適化を実証しておらず、対象は汎用エッジAI配置のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.07191",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.38228",
+      "identity_tokens": [
+        "id:arXiv:2610.38228",
+        "id:DOI:10.48550/arXiv.2610.38228"
+      ],
+      "title": "The Endgame of FSDP Communication: Layout-Aware Collectives on Copy Engines, RDMA, and NVSwitch",
+      "reason": "FSDP2でのall-gather/reduce-scatterのlayout変換をゼロコピーcollectiveで解消するTIDEを提案し、Llama-3.1 70B等の分散学習step時間を64 GPUで最大27.1%削減する。対象処理はパラメータ・勾配同期を含む学習時のcollectiveであり、推論サービングやdecode・prefillの実行高速化への適用は要旨で示されない。現行の推論中心・学習単独凍結範囲によりunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.38228",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
