@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r04",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28441",
+      "identity_tokens": [
+        "id:arXiv:2610.28441",
+        "id:DOI:10.48550/arXiv.2610.28441"
+      ],
+      "title": "Stratified Sparse Attention: Reducing the Sparse-to-Dense Gap at Extreme Sparsity",
+      "reason": "Stratified Sparse Attentionは重要KVを決定論的に取得し、残りをproxy注意scoreに基づく層化サンプリングで選び、包含確率による補正で失われる注意質量を回復する。3B～27Bの5モデル、RULER/LongBench/LOFT/AIMEで同等疎性の既存法より品質改善し、50倍疎性のRULER-HARD 128Kで精度63.8%→69.3%。CUDA kernelで1M文脈のdecodeがFlashInfer比最大2.96倍を報告。",
+      "source_url": "https://arxiv.org/abs/2610.28441",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11245",
+      "identity_tokens": [
+        "id:arXiv:2610.11245",
+        "id:DOI:10.48550/arXiv.2610.11245"
+      ],
+      "title": "Read What Matters: Query-Adaptive Quantization for KV Caches",
+      "reason": "ReadKVはKVを段階的に復元できるprogressive codeで保存し、decode queryごとにKey channelとValue tokenの取得bit数を注意分布に応じて配分する。保存bit数と実際に読み出すbit数を分離し、減少限界利益の仮定下で最適配分を導出。6モデルで8bit保存・平均4bit取得時のC4 perplexity増加0.66%以下、A10Gの限定単層8K実験ではTurboQuant比39%低遅延を報告。",
+      "source_url": "https://arxiv.org/abs/2610.11245",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17202",
+      "identity_tokens": [
+        "id:arXiv:2610.17202",
+        "id:DOI:10.48550/arXiv.2610.17202"
+      ],
+      "title": "MLAfication: Efficiently Enabling High-Fidelity MLA for Modern LLMs",
+      "reason": "MLAficationはQKNorm対応のcalibrated KNorm、少数パラメータ蒸留、寄与度ベースPartial-RoPE、活性化を考慮したKV初期化でGQA/MHAモデルをMLAへ変換する。MoE/QKNormを持つ現代的モデルにも適用し、Qwen3-30B-A3BでBF16 GQA比サービングthroughput最大5.35倍、4bit KV併用時KV容量94.73%削減を報告。推論KV削減のモデル変換手法としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13202",
+      "identity_tokens": [
+        "id:arXiv:2610.13202",
+        "id:DOI:10.48550/arXiv.2610.13202"
+      ],
+      "title": "S³R: Fast and Faithful RL Rollouts via Self-Sparse Speculative Decoding",
+      "reason": "S³RはRLVRの長文脈rolloutを疎注意でdraftし、full attentionで厳密検証することでdense policyと同じ応答分布を維持する。group-relative RLでは疎な分布の事後reweightingで学習更新を正しく戻せない点を示し、KVの繰り返しoffloadを抑えるschedulerを併用。Qwen3の長文脈数理推論でautoregressive rollout比end-to-end訓練throughput約1.35～1.39倍と報告。推論実行の高速化が主構成要素のためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.13202",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19292",
+      "identity_tokens": [
+        "id:arXiv:2610.19292",
+        "id:DOI:10.48550/arXiv.2610.19292"
+      ],
+      "title": "Whose turn is it? Context-guided model routing for stateful agents",
+      "reason": "ステートフルなエージェントのmodel routingを単発requestでなくuser-turn単位で判断し、セッション履歴、モデル能力差、prompt cache切替コストを考慮する。SheetCopilot/SpreadsheetBench 2の複数ターン評価で、同じ小型モデル委譲率なら履歴参照によりpass率が向上し、高価なモデル固定から1ポイント以内の品質を維持。長いセッションで安価モデルのタスク費用優位が6.8倍から3.2倍へ縮小することも示す。",
+      "source_url": "https://arxiv.org/abs/2610.19292",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06597",
+      "identity_tokens": [
+        "id:arXiv:2610.06597",
+        "id:DOI:10.48550/arXiv.2610.06597"
+      ],
+      "title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
+      "reason": "HEARはエージェントharnessのワークフロー依存・context寿命と、推論engineのqueue/KV/負荷状態を双方向に伝えるprotocolで、最適化ポリシーと通信意味論を分離する。cache-aware実行とrole別mode選択を実装し、4種類の会話・研究エージェントベンチでbatch最大1.61倍、SCBench中央値TTFT 2.23倍短縮、BrowseComp-Plus/DeepResearchBenchでend-to-end最大1.23/2.45倍を報告。",
+      "source_url": "https://arxiv.org/abs/2610.06597",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35230",
+      "identity_tokens": [
+        "id:arXiv:2610.35230",
+        "id:DOI:10.48550/arXiv.2610.35230"
+      ],
+      "title": "Context Is Not Free: Carbon-Aware LLM Routing for Multi-Turn LLM Web Services across Geo-Distributed Data Centers",
+      "reason": "CarbonRouterは複数ターン会話のKV cacheが元の地域・GPUに残るため、低炭素地域への移動が履歴再計算を生むことをコストに含める。モデル・GPU種類・地域を同時選択し、直後に元へ戻る可能性が高い移動を抑えるgateを用いる。5モデル・3GPU・4地域のトレース駆動評価で既存FairCarbon比CO₂平均16.1%削減、30ターン超では23.1%削減を報告。",
+      "source_url": "https://arxiv.org/abs/2610.35230",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19822",
+      "identity_tokens": [
+        "id:arXiv:2610.19822",
+        "id:DOI:10.48550/arXiv.2610.19822"
+      ],
+      "title": "JointServe: Serving Multi-Model Agents on Memory-Constrained GPUs",
+      "reason": "JointServeはメモリ制約GPUで複数モデルを使うエージェントの重みshardとKV blockを同一の常駐予算で管理する。呼出し元の出力streamから次モデルの意図を検知してprefetchし、部分的なk*層常駐と転送優先制御で生存セッションのKVを守る。whole-model swap最良方式比セッション完了時間21.7%短縮、SWE-bench/tau-bench/OSWorld再生で最大49%短縮、SLO達成率2.8～24.5%から76.8～100%へ改善を報告。",
+      "source_url": "https://arxiv.org/abs/2610.19822",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.27583",
+      "identity_tokens": [
+        "id:arXiv:2610.27583",
+        "id:DOI:10.48550/arXiv.2610.27583"
+      ],
+      "title": "TeCoP: Accelerating Diffusion Large Language Model Decoding via Tentative Context Pipelining",
+      "reason": "TeCoPは拡散LLMで未確定でも安定した予測を次blockの暫定contextとして利用し、block間のstaggered pipelineとdraft-verifyを行う学習不要decoder。commitはconfidenceと安定性で制御する。LLaDA/Dreamの4モデルでforward評価回数最大87%削減、元の非cache decoder比throughput最大7.50倍、cache併用では11.77倍を報告し、平均cache利用時精度低下は1ポイント以内。",
+      "source_url": "https://arxiv.org/abs/2610.27583",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33008",
+      "identity_tokens": [
+        "id:arXiv:2610.33008",
+        "id:DOI:10.48550/arXiv.2610.33008"
+      ],
+      "title": "TraceQuery: learning what to recompute from full-denoising trajectory in diffusion language models",
+      "reason": "TraceQueryは拡散LLMのKV再利用誤差を隠れ表現差分でなく、完全denoising軌跡からの逸脱として捉える。完全軌跡を教師信号にして、次に更新すべき少数の未確定位置を予測し、その位置だけfresh計算してbackboneに確定位置を選ばせる。cache-based方式より高い品質・計算量trade-offと複数モデル系列への汎化を報告。推論時の部分再計算最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33008",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:06:22+09:00",
+      "last_checked_at": "2026-11-02T10:06:22+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
