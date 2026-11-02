@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-02T11:57:50+00:00`
+Generated: `2026-11-02T12:20:08+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126401** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120257** / 監査再投入 **0** / 機械規則適用後 **122876** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126403** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120259** / 監査再投入 **0** / 機械規則適用後 **122878** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -179,7 +179,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 96 | 10 | 6 | 7 | DOI:10.1016/j.neucom.2026.134181 | DyToS: Budget-aware dynamic token scheduling for efficient multi-modal large language models | 2026-06-01 | Neurocomputing | 0 | 7 | Conditional Computation, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://doi.org/10.1016/j.neucom.2026.134181) |
 | 97 | 20 | 6 | 7 | DOI:10.52202/085713-0868 | OpenMMEgo: Enhancing Egocentric Understanding for LMMs with Open Weights and Data | 2025 | Neural Information Processing Systems | 10 | 7 | Conditional Computation, Inference / Multimodal Long-Context Memory Compression | [source](https://doi.org/10.52202/085713-0868) |
 | 98 | 1 | 6 | 7 | DOI:10.48550/arXiv.2504.01407 | TimeSearch: Hierarchical Video Search with Spotlight and Reflection for Human-like Long Video Understanding | 2025-04-02 | arXiv.org | 1 | 7 | Inference / Multimodal Long-Context Memory Compression | [source](https://doi.org/10.48550/arXiv.2504.01407) |
-| 99 | 10 | 6 | 6 | arXiv:2610.11750 | Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding | 2026-10-08 |  | 0 | 6 |  | [source](https://arxiv.org/abs/2610.11750) |
+| 99 | 10 | 6 | 6 | arXiv:2610.11750 | Where Draft Trees Lose Target Mass: Exit-Guided Speculative Decoding | 2026-10-08 |  | 0 | 7 |  | [source](https://arxiv.org/abs/2610.11750) |
 | 100 | 106 | 6 | 6 | arXiv:2512.03673 | ConvRot: Rotation-Based Plug-and-Play 4-bit Quantization for Diffusion Transformers | 2025-12-03 | arXiv.org | 6 | 6 | arXiv:2405.16406のICLR 2025採録版。, inference-systems, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2512.03673) |
 | 101 | 0 | 6 | 6 | DOI:10.1109/CloudCom67567.2025.11331377 | QER: Quantized Low-Rank Error Reconstructor for LLM Low-Bitwidth Quantization | 2025-11-14 | International Conference on Cloud Computing | 0 | 6 | arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.1109/CloudCom67567.2025.11331377) |
 | 102 | 101 | 6 | 6 | arXiv:2603.24680 | ReDiPrune: Relevance-Diversity Pre-Projection Token Pruning for Efficient Multimodal LLMs | 2026-03-25 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2603.24680) |
