@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0804-scheduled-chat-00/r02",
+  "reference_main_sha": "b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80",
+  "round_status": "partial",
+  "round_target": 10,
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.23961",
+      "identity_tokens": [
+        "arXiv:2606.23961"
+      ],
+      "title": "Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets",
+      "reason": "KV cacheの不可逆なstreaming evictionでtop-Kが一度下位になった重要tokenを永久消去する問題に対し、Nexusはattention rowの短い反復walkでbridge blockの重要度を推定し、重み付きreservoir samplingで保持確率を与える。一次HTML本文の方法・LongBench/RULER評価を確認。Llama3.1-8B、Llama3.2-1B、Qwen3-8B、H200単体、block size32、window16、walk depth3で、80% KV削除時にLongBenchのdenseとの差が約1ポイントで、SnapKV/PyramidKV/H2O/MorphKVを比較。推論KV削除へ直接貢献するためaccept。ただし確率的保持と追加score計算の実装負荷があり、生成全体の速度改善を要旨のメモリ倍率から推定してはならない。",
+      "source_url": "https://arxiv.org/abs/2606.23961",
+      "body_check": "primary_html_method_and_evaluation_read",
+      "first_checked_at": "2026-11-03T08:10:05+09:00",
+      "last_checked_at": "2026-11-03T08:10:05+09:00",
+      "linked_from": [
+        "https://github.com/uni042/llm-paper-summary/blob/b1ddf8263e2cf6ae84dba6d412c52ab0870d3e80/.survey/work-queue/WORKLIST-00.md"
+      ],
+      "worklist_rank": 61,
+      "origin": "discovery_worklist_primary_arxiv_abstract",
+      "primary_body_url": "https://arxiv.org/html/2606.23961v1"
+    }
+  ]
+}
