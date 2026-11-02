@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0038-scheduled-chat-30/r01",
+  "reference_main_sha": "4b7b7f8555bb75041a67a43abace9824e183efa6",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32610",
+      "identity_tokens": [
+        "arXiv:2609.32610"
+      ],
+      "title": "KV-Lingo: Learning KV-Cache Translators with Distillation",
+      "reason": "異なるLLM間で互換性のないKVキャッシュを、対象モデル各層に対応する線形写像で変換するKV-Lingo。元モデルのKVと対象モデルの本来のKVでの予測分布の差を蒸留で小さくする。モデル切替時に対象モデルのprefillをやり直す代わりに変換と1回のdecodeで済ませ、著者らはQwen同士の64-token文脈で切替後TTFTを9.6倍、H100の32K文脈で最大29倍短縮と報告。これはモデル切替後のTTFTであり全リクエスト速度ではない。LLM推論時のcross-model KV再利用に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2609.32610",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06479",
+      "identity_tokens": [
+        "arXiv:2610.06479"
+      ],
+      "title": "Behavior-Preserving KV Cache Compression",
+      "reason": "KV削除を過去attention質量だけで判定すると次トークンの出力分布を損なう問題に対し、削除候補ごとの圧縮後logitsを事前forward統計から近似し、フルKV時とのKL divergenceで削除影響を評価する学習不要方式。個々の候補に対する追加masked forwardを回避し、保持KV予算が等しい条件で特に強圧縮時の下流品質を改善。圧縮時の追加計算はあるが評価条件内でfull-cache推論よりend-to-end高速化すると要旨は報告しており、推論KV圧縮の直接手法としてaccept。倍率は要旨にないため記載しない。",
+      "source_url": "https://arxiv.org/abs/2610.06479",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39999",
+      "identity_tokens": [
+        "arXiv:2610.39999"
+      ],
+      "title": "PhOSv1: Efficient Scaling of Model Sleeping on a Single Server for Autoscaling with GPU-Context Deduplication",
+      "reason": "vLLMやSGLangのmodel sleepingは高速scale-upを実現する一方、休眠中もCUDA contextと共通kernel binaryがモデル数に比例してGPUメモリを消費する。PhOSv1は各engineのcontext割当を中央daemonへAPI remotingし、driver contextと重複binaryを共有して休眠モデル数を増やす。要旨ではvLLM sleep相当のscale-up時間を維持し、GPUメモリとmulti-model serving性能を改善すると報告。具体的な改善倍率は要旨にない。LLM servingのモデル切替・autoscalingに直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39999",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40477",
+      "identity_tokens": [
+        "arXiv:2610.40477"
+      ],
+      "title": "Can We Rely on Language Models to Orchestrate Services across the Edge-Cloud Continuum?",
+      "reason": "edge-cloud環境のサービス配置、診断、設定、修復をLMが支援する39研究を、LMの責務・権限・制約・実証証拠の5軸で整理するレビュー。対象はLMを運用意思決定の補助ツールとして使うサービスオーケストレーションであり、LLM自身の推論実行、KVメモリ、サービングエンジンの効率化を提案・評価していない。推論効率サーベイの収録範囲外としてunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40477",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38196",
+      "identity_tokens": [
+        "arXiv:2610.38196"
+      ],
+      "title": "GearUp: DAG-aware Acceleration for Serverless Inference Serving via Slack-guided Pre-loading",
+      "reason": "serverless ML推論DAGで、各ノードのlibrary・モデル重み・CUDA kernelロードを上流実行のslackへ前倒しし、probabilistic keep-aliveでcold-startとメモリ消費を調整するGearUp。L40S上のAMBER Alert・FINRA-MLワークフローでSMIless比中央値遅延64.5%・75.9%削減を報告するが、要旨の実験対象は汎用ML推論DAGで、LLM serving固有のprefill/decodeやKV最適化ではない。推論ランタイム設計に応用可能だが範囲境界としてborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38196",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36383",
+      "identity_tokens": [
+        "arXiv:2610.36383"
+      ],
+      "title": "From Generation to Scoring: Scaling LLM-Based Semantic Labeling at LinkedIn",
+      "reason": "LinkedInのLLMラベリングで、候補ごとのYES/NOをリストとして自己回帰生成する方式を、prefill-onlyの1-tokenスコアリングに変更。Multiple-Item Scoringで多数候補を1系列へ格納し候補間attentionを遮断して独立性を保つ。SGLangへMISサポートを実装し、1秒p99遅延制約下でモデルサービングthroughputを1.9倍、offlineで1.24倍にしたと報告。生成をスコアリングに置換する実運用LLM推論高速化のためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.36383",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35509",
+      "identity_tokens": [
+        "arXiv:2610.35509"
+      ],
+      "title": "Governing Enterprise AI Traffic at Scale: Design and Operation of a Policy-Driven, Multi-Vendor LLM Gateway on Envoy",
+      "reason": "PayPalのCosmos LLM Gatewayは、認証・予算・policy等のI/O待ち制御を外部処理サービスに分離し、streaming bodyに同期的な外部呼出しを挟まないRust WebAssemblyフィルタでformat変換、token計測、prompt-cache shapingを行う。2026年9月時点で1日約2000億token、100超モデルを扱い、合成upstreamで2つの4-vCPUインスタンス・2200 req/s超時のgateway追加遅延中央値4ms/p99 11msと報告。GPU推論kernelの研究ではないがLLM serving request pathの実装・性能評価を含むためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.35509",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.34006",
+      "identity_tokens": [
+        "arXiv:2610.34006"
+      ],
+      "title": "InferScale: Kubernetes-Native Predictive Autoscaling for SLO-Aware AI Inference",
+      "reason": "Kubernetes HPAの起動遅延とtenant競合に対し、需要予測、SLO状態、burst処理、優先度別headroomを組み合わせるInferScale。Azure Kubernetes Service上のResNet-50 ONNX（cold start 21秒）でSLO遵守率を47.8%±1.5%から65.3%±9.0%へ改善。対象は画像モデル推論で、LLMのKV cache・長文生成・prefill/decodeに固有の評価はない。一般的な推論autoscaling知見としてborderline。",
+      "source_url": "https://arxiv.org/abs/2610.34006",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40000",
+      "identity_tokens": [
+        "arXiv:2610.40000"
+      ],
+      "title": "NORmal: Architecting 3D Ferroelectric NOR Flash as Main Memory -- From Co-Fabricated BEOL Arrays to 200B-Class Multi-Agent LLMs in a Smartphone",
+      "reason": "3D FeNOR flashの3-bit MLCと書換耐久性の高いSLCをBEOLで混載し、7.5ns未満のsensingを実測したアレイを、DRAM emulation bridgeで既存LPDDR6バスのbyte-addressable memory rankとして使うNORmal。200B級LLMの重みと長期agent stateを可変性・寿命別に配置し、256K超文脈のagent traceを用いたserving-level simulationでUFS offload比8.9〜28.0倍、HBF比2.8〜6.3倍と報告。実測はFeNORアレイ特性で、スマホで200B実機動作した証拠ではない。推論向けメモリ階層の直接研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40000",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.39222",
+      "identity_tokens": [
+        "arXiv:2610.39222"
+      ],
+      "title": "When Does Heterogeneity Pay Off? Understanding GPU-WSE System Complementarity",
+      "reason": "GPUとwafer-scale engine（WSE）の計算・メモリ・通信構造の違いについて階層benchmarkと解析性能モデルを構築し、異種実行が利益を生む条件と通信等の追加コストで逆効果になる条件を評価する。AI acceleratorの異種システム設計には関連するが、一次要旨は特定LLM推論・KV管理・MoE servingへの適用や定量的token性能を示していないため、LLM推論効率への直接性が弱いborderline。",
+      "source_url": "https://arxiv.org/abs/2610.39222",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:42:59+09:00",
+      "last_checked_at": "2026-11-03T00:42:59+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.DC/recent"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
