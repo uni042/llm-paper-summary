@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261103-0456-scheduled-chat-00/r02",
+  "reference_main_sha": "9e99193ea17fa62e2c1025ac1636dab9813da643",
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15921",
+      "identity_tokens": [
+        "arXiv:2610.15921"
+      ],
+      "title": "Fast and Accurate: Improving Personalized LLM Performance by Semantic Concentration Inspired Workload Split between RAG and Fine-Tuning",
+      "reason": "PURは個人履歴の意味的に集中したcore情報をoffline PEFTへ、分散したperipheral情報をRAGへ振り分け、online時はcore queryでRAGを省略する。複数user/taskの比較で最良対照より推論遅延14.4〜46.6%減と生成品質改善を報告。パーソナライズ用途に限定されるが、オンライン検索の選択的省略による推論runtimeの直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.15921",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T05:01:32+09:00",
+      "last_checked_at": "2026-11-03T05:01:32+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/2026-10"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_processed_screen"
+    }
+  ]
+}
