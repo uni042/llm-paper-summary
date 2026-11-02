@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Queuing for Inference: Dynamic Memory Footprints and Costly Preemption",
+      "source_url": "https://arxiv.org/abs/2610.33923",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modeling inference workloads for transformer-based neural networks poses unique challenges due to their dynamic memory footprints, head-of-line blocking caused by heavy-tailed request distributions, and memory-dependent preemption overhead arising from the need to load/unload cache state. In this paper, we introduce a new queuing model that captures the impacts of these features on system stability and scheduling design. We show that the Gittins-index policy, which minimizes mean response time in the standard M/G/1 setting, can incur substantial preemption overhead in our model. Motivated by this limitation, we propose the Multi-Level-Priority-Threshold (MLPT) policy, that limits preemption while preserving priority for short jobs. We characterize the mean response time under MLPT and provide empirical rules-of-thumb to solve the resulting threshold-optimization problem. Our key observation is that optimal scheduling is a balance between reducing the response times of shorter jobs and limiting the overhead incurred when preemption occurs. These results provide a theoretical framework for understanding scheduling in memory constrained queuing systems for inference tasks.",
+      "identifiers": [
+        "SemanticScholar:9d3f12e5448a38afe8fffd21503b5008effeda9e"
+      ],
+      "semantic_scholar_id": "9d3f12e5448a38afe8fffd21503b5008effeda9e",
+      "canonical_id": "arXiv:2610.33923",
+      "arxiv_id": "2610.33923",
+      "authors": [
+        "Jia-Hui Ni",
+        "Vishrant Tripathi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Transformer推論で要求のKVメモリが時間とともに増え、preemption時のcache退避/復元が追加費用となることを明示した待ち行列モデルを構築する。従来M/G/1で平均応答時間を最小化するGittins-indexでもpreemption過多になり得ると示し、短い要求を優先しつつ閾値でpreemptionを制限するMulti-Level-Priority-Threshold (MLPT)を提案する。著者要旨は平均応答時間の解析と閾値最適化の経験則を示すが具体的な実機speedupは主張していない。推論メモリ制約下のスケジューリング理論としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Request-Adaptive Execution for Efficient Hybrid LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.37432",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid large language models (LLMs) have emerged as a promising way to combine the modeling capability of the Attention mechanism with the efficiency of state space models (SSMs). However, most existing hybrid LLMs still inherit a static design philosophy: once the Attention-to-SSM layout is chosen, every request must follow the same hybrid execution. This one-layout-fits-all design is inefficient for real-world serving workloads, where different requests rely on contextual information in different ways. This paper presents Morph, a serving system that co-designs the model architecture and runtime for request-adaptive hybrid LLM inference. Its model architecture pairs Attention and SSM layers within each block and uses prefill-oriented gating to select a request-specific layout that remains fixed throughout decoding. Its serving runtime preserves batching efficiency under divergent layer choices through selective batching and enables correct prefix reuse through hybrid-aware context caching. Experiments on six datasets show that Morph achieves a better quality-efficiency trade-off than existing static hybrid baselines. System-level evaluation further shows that Morph improves the serving throughput by up to 3.87x over baselines while substantially reducing inference latency.",
+      "identifiers": [
+        "SemanticScholar:0ee615c279ff9dee0bac5fccd8e7207b65e866ae"
+      ],
+      "semantic_scholar_id": "0ee615c279ff9dee0bac5fccd8e7207b65e866ae",
+      "canonical_id": "arXiv:2610.37432",
+      "arxiv_id": "2610.37432",
+      "authors": [
+        "Fa-Hao Chen",
+        "Xu-Zhe Yan",
+        "Qi Zhang",
+        "Peng Li",
+        "Dong-Xiao Yu",
+        "Song Guo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Attention/SSM混合モデルの層構成を全要求で固定する代わりに、prefillで要求ごとのゲートを決め、decode中は選択構成を固定するMorphを提案する。要求間で層選択が異なってもselective batchingで効率を維持し、hybrid-aware context cacheで正しいprefix reuseを可能にする。著者要旨は6データセットで品質/効率のtradeoff改善と、静的hybrid baseline比最大3.87倍のサービングthroughputを報告。条件付き計算とruntimeの協調設計としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2610.37989",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference has become an operational workload that fleets must provision, monitor, and bill against latency service-level objectives (SLOs). A single throughput number cannot answer the questions operators actually face, because generative serving couples two phases with very different service characteristics, continuous batching reshapes the effective service process, and user-visible tail latency can degrade long before aggregate throughput saturates. We present GAUSS, a workload-aware analytical and Monte-Carlo simulator that predicts the full distributions of time-to-first-token (TTFT) and time-between-tokens (TBT), together with the sustainable request rate, for a given workload, engine, and accelerator. GAUSS pairs calibrated, phase-specific latency surfaces for prefill and decode with a Lindley-recurrence model of queueing under stochastic arrivals and estimates performance by ensemble Monte-Carlo sampling rather than by replaying a single trace. This lets GAUSS reason about workloads, routing policies, and hardware that have never been deployed, and to capture the latency tails that trace-driven simulators systematically under-sample. We describe the model and show how it supports operating-point selection, traffic segmentation, and shortest-remaining-processing-time scheduling capacity questions that trace-driven simulators cannot address.",
+      "identifiers": [
+        "SemanticScholar:0171f8a62e15d943e424eedf99d6d0adb8413d22"
+      ],
+      "semantic_scholar_id": "0171f8a62e15d943e424eedf99d6d0adb8413d22",
+      "canonical_id": "arXiv:2610.37989",
+      "arxiv_id": "2610.37989",
+      "authors": [
+        "Srikant Bharadwaj",
+        "Ankur Mallick",
+        "S. Mastorakis",
+        "Anjaly Parayil",
+        "D. Deshmukh",
+        "Victor Ruehle"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "prefillとdecodeの異なる処理時間、continuous batching、確率的到着、待ち行列を組み合わせ、TTFT/TBTの分布と持続可能な到着率を予測するサービング性能モデルを提案する。フェーズ別の較正遅延曲面、Lindley再帰によるqueueing、ensemble Monte-Carloを用い、単一トレース再生では過小評価しやすいtail latencyと未配備構成の容量計画を扱う。一次要旨に数値の実測精度・速度向上は記載されないが、LLMサービング容量設計・SLO予測の直接的手法としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices",
+      "source_url": "https://arxiv.org/abs/2610.38210",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only, lossy quantization substantially reduces the storage and memory requirements for serving large language models (LLMs), but the growing key-value (KV) cache remains a bottleneck for long-context inference on personal devices. We present Group-Adaptive Additive Codec (GAAC), a lossless KV compression and serving system that exploits exponent redundancy to reduce storage and accelerate attention without introducing KV approximation. GAAC encodes BF16 exponents using calibrated per-channel base-plus-offset codes over contiguous ranges. GAAC adapts code widths across small groups while preserving KV values bit-for-bit. A fused attention kernel reconstructs KV tiles on the fly, avoiding full-cache decompression. Block-wise compression and fixed-capacity slots support incremental cache updates and paged serving. Across five tested models, GAAC achieves 1.405-1.407$\\times$ lossless BF16 KV compression. We also study compression performance on low-precision tensors FP8 E4M3 caches ( 1.09-1.14$\\times$) and E5M2 caches (1.25-1.30$\\times$). On NVIDIA DGX Spark, GAAC accelerates decode attention at a 64K-token context by 1.19-1.27$\\times$ and end-to-end W4A16 decode steps by 1.04-1.15$\\times$. In serving, it reduces resident KV memory by approximately 26% and increases aggregate throughput by 13-29% under comparable KV-memory budgets. On Apple M4, GAAC achieves 1.02-1.25$\\times$ attention speedups, demonstrating portability beyond NVIDIA GPUs.",
+      "identifiers": [
+        "SemanticScholar:b23a996a3fa94769ae25e158dd419ca31c1efc81"
+      ],
+      "semantic_scholar_id": "b23a996a3fa94769ae25e158dd419ca31c1efc81",
+      "canonical_id": "arXiv:2610.38210",
+      "arxiv_id": "2610.38210",
+      "authors": [
+        "Yi-Pin Guo",
+        "Arun George",
+        "Siddharth Joshi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      },
+      "reason": "BF16 KVの指数分布の冗長性を利用し、channelごとに較正したbase-plus-offset符号をgroup単位で可変長選択してKV値をbit-exactに圧縮する。fused attention kernelがKV tileを逐次復元し、全キャッシュの展開を回避する。著者要旨は5モデルでBF16 KVを1.405～1.407倍に可逆圧縮、DGX Sparkの64K contextでdecode attention1.19～1.27倍、サービング集約throughput13～29%改善を報告。個人向けGPUのKVメモリと帯域削減の直接的な実装研究としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-212c69c1a2dd",
+    "round": "libimp-212c69c1a2ddb0f8-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-212c69c1a2ddb0f8-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-212c69c1a2ddb0f8-pre01.json",
+    "receipt": "sha256:0d42cd9a8368d93c70ae4f9c44f83949f66ce3c5159491ae90241be3b83806b2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-212c69c1a2dd",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
