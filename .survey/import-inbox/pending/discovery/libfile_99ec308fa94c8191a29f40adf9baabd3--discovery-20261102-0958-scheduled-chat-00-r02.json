@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0958-scheduled-chat-00/r02",
+  "reference_main_sha": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17959",
+      "identity_tokens": [
+        "id:arXiv:2610.17959",
+        "id:DOI:10.48550/arXiv.2610.17959"
+      ],
+      "title": "Virtual Head Attention",
+      "reason": "VHAはKV group内のqueryに近単位変換を加えるQ Premixと、低ランク残差I+ABᵀによるLinear Postmixでvirtual head多様性を回復する。非線形操作を含まないため推論時に前後の線形射影へ折り畳め、GQA-2の既存推論カーネルを利用できる。GQA-8比でKV容量を4分の1にし、10B-A1B MoEのRULER平均は8K～128Kで84.4対GQAの73.0を報告。推論KV削減とモデル設計の直接的な貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:02:52+09:00",
+      "last_checked_at": "2026-11-02T10:02:52+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14686",
+      "identity_tokens": [
+        "id:arXiv:2610.14686",
+        "id:DOI:10.48550/arXiv.2610.14686"
+      ],
+      "title": "Vesta: Queueing-Aware LLM Scheduling for Real-World Workloads",
+      "reason": "Vestaはエージェントの複数ターン要求でKVの権威保持ノードを固定しつつ、実際の実行先を要求ごとに選ぶ。待ち行列、prefix再利用、転送、混雑による外部性を目的関数に組み込み、KV locality優先による局所キュー滞留を回避する。実エージェントワークロードのPD共置で既存scheduler比throughput 14.0%改善、平均TTFT 57.8%短縮、PD分離でP99 TTFT最大29.0%短縮を報告。",
+      "source_url": "https://arxiv.org/abs/2610.14686",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24179",
+      "identity_tokens": [
+        "id:arXiv:2610.24179",
+        "id:DOI:10.48550/arXiv.2610.24179"
+      ],
+      "title": "KVCompass: A Discovery Plane for Internet-Scale Prefix Cache Sharing in LLM Serving",
+      "reason": "KVCompassは地域をまたぐLLM prefix KVの保有者が変動するため、通常のキーから配置が決まるDHTとは異なる発見問題を解く。prefix identityと配置を分離し、edgeで定数時間のローカル表参照を行ってKV再利用、負荷、地理的距離を両立させるworkerを選ぶ。64 workerシミュレーションと3大陸14 worker実機でP99 TTFTを基準方式比1.3～14倍短縮、throughput最大4.7倍を報告。",
+      "source_url": "https://arxiv.org/abs/2610.24179",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11358",
+      "identity_tokens": [
+        "id:arXiv:2610.11358",
+        "id:DOI:10.48550/arXiv.2610.11358"
+      ],
+      "title": "RaReCache: Bridging the Gap in Cross-Model KV Cache Reuse via Rank disagreement-based Selective Recomputation",
+      "reason": "RaReCacheは異なるサイズのモデル間でKVを線形変換すると、情報量の高い一部tokenに誤差が集中する点を利用する。変換後KVの低支持方向エネルギーからrank disagreementを計測し、重要tokenだけtargetで再計算する。Qwen3-0.6B→14Bの23倍サイズ差で30%再計算によりtarget精度95～99%を維持し、prefill最大3.04倍、単GPUオンラインthroughput1.8倍を報告。",
+      "source_url": "https://arxiv.org/abs/2610.11358",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04875",
+      "identity_tokens": [
+        "id:arXiv:2610.04875",
+        "id:DOI:10.48550/arXiv.2610.04875"
+      ],
+      "title": "SpecFold: Folding Multi-Branch Redundancy for Faster Speculative Decoding in Diffusion Language Models",
+      "reason": "SpecFoldは拡散LLMの複数branch投機検証で、親branchから少数tokenだけmask解除した子branchの隠れ状態が類似することに着目する。token別residual gating、folded attention/FFNで親計算を再利用し、Tritonの疎なmulti-branch実行へ落とし込む。2系列5モデル・5ベンチマークでSpiffy比最大1.64倍、通常decode比最大1.99倍のthroughputを報告。",
+      "source_url": "https://arxiv.org/abs/2610.04875",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.31819",
+      "identity_tokens": [
+        "id:arXiv:2610.31819",
+        "id:DOI:10.48550/arXiv.2610.31819"
+      ],
+      "title": "Speculative Diffusion is a Tale of Two Tradeoffs",
+      "reason": "拡散drafterのdenoising effortと、検証時に分布一致をどこまで緩めるかという2軸を同時に動かし、推論速度と出力品質のPareto frontierを測る。両軸の調整が単一stepの拡散draftより有利な領域を示すが、要旨は速度・品質の性質を調べる分析が中心で、独立したサービング実装やシステムカーネル最適化の実証は限定的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.31819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24722",
+      "identity_tokens": [
+        "id:arXiv:2610.24722",
+        "id:DOI:10.48550/arXiv.2610.24722"
+      ],
+      "title": "PV-Decoding: Progressive Verification Decoding with Decode Gating for Diffusion Language Models",
+      "reason": "PV-Decodingは拡散LLMのmask位置を信頼度閾値2つで直接確定・投機・未確定に分け、投機部分を1/2/複数batchの段階的検証で処理する。GSM8K/MBPP/HumanEvalで通常confidence decode比の逐次forward回数を8～37%減らし、最大精度低下1.3%、Dream-7BのGSM8Kでは1/2batchでthroughput 7.0～13.6%改善を報告。",
+      "source_url": "https://arxiv.org/abs/2610.24722",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.10929",
+      "identity_tokens": [
+        "id:arXiv:2610.10929",
+        "id:DOI:10.48550/arXiv.2610.10929"
+      ],
+      "title": "Speedbumps: Rejection Attacks on Speculative Decoding",
+      "reason": "Speedbumpsはdraftとtargetの受理率を下げる敵対的suffixを構築し、投機デコードの計算コストを増大させる拒否攻撃を分析する。accept prefix長を確率的に推定するSpeedbump-Pと分布重なりを利用するSpeedbump-Dを提示し、場合によって通常自己回帰より遅くなることを示す。性能堅牢性の評価として有用だが、高速化システムの提案ではなく攻撃分析中心のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.10929",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35023",
+      "identity_tokens": [
+        "id:arXiv:2610.35023",
+        "id:DOI:10.48550/arXiv.2610.35023"
+      ],
+      "title": "BellowsKV: One Latent for Many Layers, Expanded on Demand",
+      "reason": "BellowsKVは隣接層のKVそのものより入力隠れ状態の方が似ていることを利用し、複数層の入力hidden stateをtoken当たり1個の共有latentへ写像する。層固有projectionでK/Vを復元し、latentを低bit量子化または共通evictionする。Llama-3.1-8B、Mistral-7B、Qwen2.5-7Bで3.6倍圧縮時にfull cache精度約99%、13～14倍時も97～98%維持を報告。",
+      "source_url": "https://arxiv.org/abs/2610.35023",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34824",
+      "identity_tokens": [
+        "id:arXiv:2610.34824",
+        "id:DOI:10.48550/arXiv.2610.34824"
+      ],
+      "title": "SPARTA: A Sparse Ternary LLM Accelerator with Adaptive Attention and Unified Datapath for Long-Context Edge Inference",
+      "reason": "SPARTAは三値重みのSpMM/SpMVとbit-serial attentionを共有演算器に載せ、prefill/decodeで異なる疎性を利用するphase-aware dataflowを設計する。ページ単位Top-kとtoken単位Top-pでK/Vアクセスを減らし、KVトラフィックをfull attention比4.1～4.8倍削減する。Jetson AGX Orin比の生成throughput 3.9倍、end-to-endエネルギー効率8.3倍を報告。ただし注意疎化によるタスク依存の品質損失がある。",
+      "source_url": "https://arxiv.org/abs/2610.34824",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T10:04:17+09:00",
+      "last_checked_at": "2026-11-02T10:04:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
