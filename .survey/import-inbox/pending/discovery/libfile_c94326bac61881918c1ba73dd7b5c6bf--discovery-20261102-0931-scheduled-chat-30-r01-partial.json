@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261102-0931-scheduled-chat-30/r01",
+  "reference_main_sha": "f6b097ee5128fe835fb857f9087c5297b20d15c8",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043916",
+      "identity_tokens": [
+        "id:DOI:10.1109/ISCAS56072.2025.11043916"
+      ],
+      "title": "XNC: XOR and NOT-Based Lossless Compression for Optimizing Unquantized Embedding Layers in Large Language Models",
+      "reason": "小規模LLMを4bit量子化してもFP16で残るembedding層を対象に、隣接16bitブロック間のXORとNOTを用いた可逆圧縮を提案。著者所属大学の公開原著abstractではembedding層の平均圧縮率1.34倍、4bit量子化LLM全体のモデルサイズ平均9.91%減、圧縮4サイクル・展開3サイクルと報告する。LLM推論時の重み・embedding容量削減とハードウェア実装に直接関係するためaccept。性能数値は著者の報告値であり独立再現ではない。",
+      "source_url": "https://pure.seoultech.ac.kr/en/publications/xnc-xor-and-not-based-lossless-compression-for-optimizing-unquant/",
+      "body_check": "institutional_author_abstract_only; original_full_text_not_read",
+      "first_checked_at": "2026-11-02T09:36:52+09:00",
+      "last_checked_at": "2026-11-02T09:36:52+09:00",
+      "linked_from": [],
+      "origin": "scheduled_chat_30_worklist_rank_212_primary_institutional_abstract_after_alias_and_inbox_search"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1145/3789240.3822607",
+      "identity_tokens": [
+        "id:DOI:10.1145/3789240.3822607"
+      ],
+      "title": "xSwitch: An Adaptive O-E-integrated Interconnect for Scale-up Networks",
+      "reason": "LLMのMoE推論におけるexpert間all-to-all通信を対象に、光回線交換(OCS)層と縮小した電気パケット交換(EPS)層を縦方向に統合するscale-up interconnectを提案。トラフィックの安定したxPU間は光直結、変動する通信はEPS経由とする。著者が公開した原著本文とabstractではMoE推論のTTFT・TPOTを評価し、O/Eポート比2:1で全EPSベースラインとの平均遅延差をTTFT 1.96%、TPOT 0.59%に抑えたと報告。推論サービングの通信基盤最適化に直接関係するためaccept。数値は著者報告であり独立再現ではない。",
+      "source_url": "https://www.researchgate.net/publication/407308050_xSwitch_An_Adaptive_O-E-integrated_Interconnect_for_Scale-up_Networks",
+      "body_check": "author_uploaded_original_full_text_and_abstract_read",
+      "first_checked_at": "2026-11-02T09:36:52+09:00",
+      "last_checked_at": "2026-11-02T09:36:52+09:00",
+      "linked_from": [],
+      "origin": "scheduled_chat_30_worklist_rank_397_author_uploaded_primary_full_text_after_identity_inbox_search"
+    }
+  ]
+}
