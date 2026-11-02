@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r05",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22579",
+      "identity_tokens": [
+        "id:arXiv:2610.22579",
+        "id:DOI:10.48550/arXiv.2610.22579"
+      ],
+      "title": "MemLLM: End-to-end In-Storage Acceleration of On-device Retrieval-Augmented Generation using Precomputed KV Caches",
+      "reason": "端末内RAGで事前計算KVをSSDからGPUへ運ぶI/O壁に対し、SSD NAND channel別acceleratorでattention処理をstorage側へ移すMemLLMを提案。疎更新用fused recomputation-query kernelとfilterでNAND読出しを削減し、SRAM reduction engineでDRAM-less処理とPCIe転送量の定数化を狙う。一次要旨は8 RAG dataset・6端末内LLMでGPU baseline比平均4.06倍のend-to-end高速化を報告。SSD内計算によるLLM推論高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.22579",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23503",
+      "identity_tokens": [
+        "id:arXiv:2610.23503",
+        "id:DOI:10.48550/arXiv.2610.23503"
+      ],
+      "title": "HBFSim: A Simulator for Exploring HBF in Memory Hierarchies for LLMs",
+      "reason": "HBMに近い帯域と大容量を持つHigh Bandwidth FlashのNAND特有の遅延・書込み寿命を、LLM serving frontendとflash内部動作を組み合わせたevent-driven simulator HBFSimで評価。一次要旨はLlama-3.1-70B/Qwen3-235B-A22BのdecodeでHBFがhost DRAM比11～19倍高速なデータ供給を示し、HBMはHBFのcacheよりKV保持へ割り当てる方が有利と報告。実機ではなくsimulationである点を明示した上でLLMメモリ階層設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25431",
+      "identity_tokens": [
+        "id:arXiv:2610.25431",
+        "id:DOI:10.48550/arXiv.2610.25431"
+      ],
+      "title": "MOSAIC: Multi-Objective Search for Allocating Inference Cache Across LLM Decoder Layers",
+      "reason": "長文脈LLMのKV eviction方式へ一律のlayer予算を与える代わりに、精度と平均cache budgetのPareto frontierを探索して層別KV予算を決めるMOSAICを提案。一次要旨はLlama-3-8B/Mistral-7Bと4 eviction方式で154設定中146設定が一律配分より高精度、同じ精度を最大75%少ないKV容量で達成と報告。LLM推論時のKV容量割当としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25431",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26849",
+      "identity_tokens": [
+        "id:arXiv:2610.26849",
+        "id:DOI:10.48550/arXiv.2610.26849"
+      ],
+      "title": "SARP: An On-SSD Index for KVCache with Fast Prefix Matching and Recovery",
+      "reason": "LLMサービングのprefix KV再利用でglobal indexがクラッシュすると全KV再計算が必要になる問題に対し、連続block metadataをsegment化し、疎なin-memory routing directoryとfilterでSSD上の候補segmentを絞るSARPを提案。一次要旨は4種類のmulti-turn/agentic workloadで再起動時復元8.0～77.5倍高速、既存SSD index比request throughput最大66.6倍を報告。SSD階層KV cacheの耐障害性とprefix検索性能に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.26849",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30868",
+      "identity_tokens": [
+        "id:arXiv:2610.30868",
+        "id:DOI:10.48550/arXiv.2610.30868"
+      ],
+      "title": "uGDS: A User-Space Development Kit for High-Performance GPU Direct Storage",
+      "reason": "GPU Direct Storageのkernel制御経路・batch順序制約・非公開engineを解消するため、NVMe commandをuser-spaceで管理しpayloadをPCIe P2P DMA転送するuGDSを提案。CUDA/HIPでcuFile互換APIとqueue分離を提供する。一次要旨はLMCache統合でmedian TTFT最大62.7%短縮、serving goodput最大2.63倍向上を報告。汎用I/O基盤だがLLM KV SSD offload実測を伴うためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.30868",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28620",
+      "identity_tokens": [
+        "id:arXiv:2610.28620",
+        "id:DOI:10.48550/arXiv.2610.28620"
+      ],
+      "title": "Weight Placement Is Not Enough: Synchronization in Multi-Node CPU Decoding of Ternary LLMs",
+      "reason": "三値LLMの複数NUMA node CPU decodeでは重みの局所配置だけでは帯域を使い切れず、thread barrier待ちがtoken時間の20～48%を占めると計測。node-local weightを保持しつつcolumn splitで遅いthread待ちを減らす方式を検証する。一次要旨は2世代Xeonでikllama比DRAM-bound decodeを1.5～2.1倍高速化し、精度を維持してenergy/tokenも削減と報告。CPU三値LLM推論の同期・並列化最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.28620",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15640",
+      "identity_tokens": [
+        "id:arXiv:2610.15640",
+        "id:DOI:10.48550/arXiv.2610.15640"
+      ],
+      "title": "Context-Aware Precision Scheduling for Small Language Models",
+      "reason": "端末内SLMで文脈長に応じてKV読出しが増えると、重みprecisionを固定する最適化は崩れる。tensor感度と文脈長別の実測latency modelを組み合わせ、精度/遅延制約下で複数weight formatを切替えるscheduleを事前構築する。一次要旨はlaptop GPUで実際にscheduleを実行し、tool-use全応答時間・正解率を評価。KV量子化誤差も精度予算へ組み込むLLM推論時の動的precision選択としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.15640",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18143",
+      "identity_tokens": [
+        "id:arXiv:2610.18143",
+        "id:DOI:10.48550/arXiv.2610.18143"
+      ],
+      "title": "RadixFlow: Filling Execution Bubbles in Prefix-Cached Hybrid LLM Serving",
+      "reason": "prefix共有するhybrid linear-attention LLMでは、recurrent stateの生成待ちconsumerがschedulerのwaiting scanを止め、独立requestのbatch slotまで空く問題を扱う。RadixFlowはprefix一致とstate ready判定を分離し、未準備consumerだけを次roundへ送り独立requestを継続投入する。一次要旨は5 hybrid modelで平均latency3～24%削減、worker round11～44%削減を報告。LLM serving schedulerのhead-of-line blocking解消としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.18143",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21594",
+      "identity_tokens": [
+        "id:arXiv:2610.21594",
+        "id:DOI:10.48550/arXiv.2610.21594"
+      ],
+      "title": "LoopAhead: Speculating Ahead for Faster Decoding in Looped Language Models",
+      "reason": "共有Transformer層を反復するLoopLMの投機復号で、早いloopの特徴から軽量drafterが複数将来tokenを予測し、深いloopのfeedbackで誤ったbranchを早期停止し、full-depth modelが最終確定するLoopAheadを提案。一次要旨はtarget分布を保持しつつ通常自回帰decode比最大7.82倍の高速化を報告。LoopLM専用speculative decodingとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21594",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20503",
+      "identity_tokens": [
+        "id:arXiv:2610.20503",
+        "id:DOI:10.48550/arXiv.2610.20503"
+      ],
+      "title": "ReaDy: Recurrent States as Dynamic Context for Speculative Drafting in Hybrid Linear Attention Large Language Models",
+      "reason": "hybrid linear attention LLMのrecurrent stateをdraft位置別の追加contextとして読み出し、low-rank state readとfused operatorでI/O負荷を抑えるReaDyを提案。DSpark型parallel backboneに位置別query readerを加え、軽量な2段階適応でdraftを改善する。一次要旨はQwen3.8-27B/B200単体で平均3.16倍のdecode speedup、DSpark比throughput7.97%・受理長8.50%増を報告。hybrid LLMの投機復号高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.20503",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:13:48+09:00",
+      "last_checked_at": "2026-11-02T14:13:48+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
