@@ -1,0 +1,146 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0328-scheduled-chat-30/r01",
+  "reference_main_sha": "10d2f2358b84dee482879cc904d75aa9619f1228",
+  "record_count": 8,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.25317",
+      "identity_tokens": [
+        "arXiv:2604.25317",
+        "https://arxiv.org/abs/2604.25317"
+      ],
+      "title": "FusionCIM: Accelerating LLM Inference with Fusion-Driven Computing-in-Memory Architecture",
+      "reason": "FusionCIMはLLM attentionのQK転置積とPV集約を異なるCIM演算様式へ割り当て、QO-stationary dataflowでKV再読出しを抑制し、online softmaxの再スケーリングも削減するハードウェア協調設計。LLaMA-3で従来CIMアクセラレータ比最大1.98倍高速・3.86倍の省エネルギー、システム29.4 TOPS/Wを一次abstractが報告。専用CIM設計の比較値であり既存GPUにソフトウェアだけで適用できる高速化ではない。LLM推論のデータ移動・計算最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2604.25317",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.10372",
+      "identity_tokens": [
+        "arXiv:2509.10372",
+        "https://arxiv.org/abs/2509.10372"
+      ],
+      "title": "MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness",
+      "reason": "bit-sliceの反復性を使うGEMM演算省略、上位bit-slice疎性を利用した重みアクセス削減、段階的bit予測によるKV読出し削減を統合するLLM向けアクセラレータ。26ベンチマークでA100比9.43倍高速・31.1倍エネルギー効率を報告。ただし専用ハードウェア対汎用GPUの比較であり同一GPU上のランタイム最適化とは異なる。演算・重み・KVの3ボトルネックを直接削減するためaccept。",
+      "source_url": "https://arxiv.org/abs/2509.10372",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2605.00519",
+      "identity_tokens": [
+        "arXiv:2605.00519",
+        "https://arxiv.org/abs/2605.00519"
+      ],
+      "title": "Silicon Showdown: Performance, Efficiency, and Ecosystem Barriers in Consumer-Grade LLM Inference",
+      "reason": "消費者向けNVIDIA GPUとApple Siliconの70B級ローカルLLM推論を比較する実測システム研究。RTX 5090上でNVFP4がBF16比151対92 token/s（約1.6倍）を示す一方、backendと起動遅延にトレードオフがある。VRAM不足時のPCIeオフロードで推論throughputが大幅低下し、統合メモリ機との実装上の差を分析。特定構成・測定条件依存で普遍的な優劣を証明するものではないが、量子化・オフロード・ランタイム選定の推論性能実測に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2605.00519",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.15210",
+      "identity_tokens": [
+        "arXiv:2606.15210",
+        "https://arxiv.org/abs/2606.15210"
+      ],
+      "title": "Generation Quality-Latency Tradeoff-Aware Inference Offloading for Multimodal LLMs in Cloud-Edge Continuum",
+      "reason": "QLMIOはマルチモーダルLLMのcloud/edge実行配置を生成品質と応答遅延の双方で最適化するオフロード制御を提案。自作の実cloud-edge協調環境とMIOBenchで評価し、比較対象比最大58.14%の遅延削減とcloud-onlyに匹敵するタスク完了率を報告。数値は当該テストベッド条件でありLLM内部kernel高速化ではない。MLLM推論の配置・レイテンシ最適化に直接該当。",
+      "source_url": "https://arxiv.org/abs/2606.15210",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.17175",
+      "identity_tokens": [
+        "arXiv:2607.17175",
+        "https://arxiv.org/abs/2607.17175"
+      ],
+      "title": "LMEdge: QoS-Aware LLM Inference Orchestration on Edge Clusters",
+      "reason": "LMEdgeは異種edgeクラスタ上でモデルfamily・サイズ・量子化精度・配置先を問い合わせごとに選択するQoS-aware推論オーケストレーション。応答遅延、精度、メモリ、ネットワークの制約をBILPと軽量近似法で扱い、59,000超の構成測定データと57インスタンスのKubernetesテストベッドで評価。比較2方式より遅延・resource利用・serving ratioが改善と報告するがabstractには統一倍率がない。LLM推論運用の直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2607.17175",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.13159",
+      "identity_tokens": [
+        "arXiv:2609.13159",
+        "https://arxiv.org/abs/2609.13159"
+      ],
+      "title": "MobiBench: Benchmarking LLMs for On-Device Performance",
+      "reason": "llama.cppに対象を限定し、モバイル/edge機器上の小型LLMについて精度、prefill/decode速度、TTFT、メモリ、バッテリーを同一評価系で比較するベンチマーク。推論効率の測定基盤として関連するが、abstractでは新規のKV圧縮・kernel・scheduler等の高速化方式を提案せず、定量的な性能改善値もない。測定・選定の補助研究としてborderline。",
+      "source_url": "https://arxiv.org/abs/2609.13159",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2603.23640",
+      "identity_tokens": [
+        "arXiv:2603.23640",
+        "https://arxiv.org/abs/2603.23640"
+      ],
+      "title": "LLM Inference at the Edge: Mobile, NPU, and GPU Performance Efficiency Trade-offs Under Sustained Load",
+      "reason": "Qwen2.5-1.5Bの4bit版をRaspberry Pi/Hailo-10H、Galaxy S24 Ultra、iPhone 16 Pro、RTX4050搭載ノートで258-token固定prompt・20回反復により比較。スマートフォンのthermal throttling、NPUの帯域制約、RTX4050の電力制約を分離し、RTX4050 131.7 tok/s・34.1W、Hailo 6.9 tok/s・2W未満を報告。新規推論最適化方式ではなく単一モデル・単一prompt条件の計測研究であるためborderline。",
+      "source_url": "https://arxiv.org/abs/2603.23640",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2607.21602",
+      "identity_tokens": [
+        "arXiv:2607.21602",
+        "https://arxiv.org/abs/2607.21602"
+      ],
+      "title": "Transferable Latency Prediction for Fast LLM Screening on Heterogeneous Edge Devices",
+      "reason": "edge LLM配備候補の実測を減らすため、ハードウェア・ランタイム・モデル・prompt特徴と動的telemetryを統合しprefill/decode別遅延を予測する手法。Pixel 8/8 Proで静的特徴のみの予測器よりR²が改善し、端末間calibrationで負のR²から0.94前後へ改善する例を示す。推論実行そのものの高速化ではなく事前のモデル/デバイス選定・profiling費用削減が主題なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2607.21602",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T03:32:07+09:00",
+      "last_checked_at": "2026-11-03T03:32:07+09:00",
+      "linked_from": [],
+      "origin": "supplemental_primary_arxiv_after_worklist_dedupe_screen",
+      "worklist_rank": null
+    }
+  ]
+}
