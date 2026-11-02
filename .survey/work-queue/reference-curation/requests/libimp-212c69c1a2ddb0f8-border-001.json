@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-212c69c1a2ddb0f8-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2608.01250",
+  "reason": "既存のchunked prefillがLLM推論GPUのピーク電力を下げるのではなく電力変化率（ramp rate）を平滑化することを実電力トレースから測定し、負荷とreserve procurementへの影響をモデル化する。著者要旨では高負荷で高速ランプ対応予備力の必要量を推定24%削減、2GPUのdense 14Bで約36%削減と報告。推論スケジューリングのエネルギー特性として関連するが、新規のLLM推論高速化アルゴリズム自体の提案ではなく電力系統の影響分析が中心のためborderline。",
+  "title": "Smoothing the Ramp, Not the Peak: Scheduling-Induced Power Dynamics of LLM Inference and Their Grid-Scale Consequences",
+  "identity_tokens": [
+    "id:arXiv:2608.01250",
+    "id:DOI:10.48550/arXiv.2608.01250"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-212c69c1a2dd",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
