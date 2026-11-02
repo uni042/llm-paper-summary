@@ -1,0 +1,220 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2300-scheduled-chat-00/r04",
+  "reference_main_sha": "ff6ee3508f82c9dc0df28ab30cb461f0366a3e9b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.11748",
+      "identity_tokens": [
+        "arXiv:2610.11748"
+      ],
+      "title": "DEX: Digit-Level Early Exit for Energy-Efficient MSDF Neural Network Inference",
+      "reason": "most-significant-digit-first演算を使い、符号判定で打ち切れるReLU・segmentation headと低位桁省略/枝刈りを組み合わせるINT8 U-Net向けアクセラレータ。BraTSの残差U-Netでdigit cycleを38.38%削減し、DiceはFP基準81.20%に対し80.58%。推論ハードウェアの動的計算削減だが対象は脳腫瘍セグメンテーション専用CNNでLLMではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.11748",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41700",
+      "identity_tokens": [
+        "arXiv:2610.41700"
+      ],
+      "title": "Provisioning Networks for AI Supercomputers: A Trace-Driven Study of Performance Sensitivity at Unprecedented Scale",
+      "reason": "最大4096 GPUのtrainingおよびinference workloadのNCCL scheduleと依存関係をtraceから分解し、LogGPモデル下の線形計画でnetwork latency・bandwidth・jitterへの感度境界を推定する。LogGOPSimや実機と照合し、bandwidth増強が効く領域と効果が薄い領域を示す。大規模推論通信の配置設計には関連するが、LLM専用のserving改善や実際のend-to-end速度の定量比較は要旨にないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41700",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41707",
+      "identity_tokens": [
+        "arXiv:2610.41707"
+      ],
+      "title": "Ordered Chaos: Towards Adaptive Multipath Load Balancing with Precise Fast Loss Detection",
+      "reason": "datacenterのECMPとpacket sprayingの間で、ordered subflowを維持するReactive Subflow Sprayingと1 RTT以内のPrecise Fast Loss Detectionを提案。simulation・AI/HPC workload・DPU prototypeでtail flow completion最大3倍改善、timeout recovery最大99%減、collective/training通信最大35%高速化と報告。分散推論通信に応用可能なnetwork substrateだが評価の主軸は一般datacenter/学習通信でLLM serving特化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41707",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2604.26103",
+      "identity_tokens": [
+        "arXiv:2604.26103"
+      ],
+      "title": "AMMA: A Multi-Chiplet Memory-Centric Architecture for Low-Latency 1M Context Attention Serving",
+      "reason": "GPU中心のdecode attentionがmemory-boundとなる問題に対し、GPU計算dieをHBM近傍処理cubeへ置き換え、logic-dieのdecode用マイクロアーキテクチャ、二段hybrid parallelism、die間collective順序の最適化を組み合わせるmulti-chiplet AMMAを提案。100万token級contextでH100比attention latency15.5倍低減、エネルギー6.9倍削減と報告。長文LLM推論attentionの専用memory-centric hardware設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2604.26103",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41369",
+      "identity_tokens": [
+        "arXiv:2610.41369"
+      ],
+      "title": "BlindStep: A Secure One-Step Kernel for Privacy-Preserving Collaborative Reasoning",
+      "reason": "二者間MPCの候補frontier結合・top-K選択を秘匿する固定形状online kernelを定式化し、MP-SPDZのshare方式とranking方式6実装を比較。LANでB-QueueがH-Queueより6〜7倍速く通信40倍減と報告するが、対象は暗号プロトコルのMPC演算でありLLM推論kernel・GPU attention・KVやMoEの最適化を扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41369",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41056",
+      "identity_tokens": [
+        "arXiv:2610.41056"
+      ],
+      "title": "Accept Changes, Reject Attacks: Robust Memory Management for LLM Agents",
+      "reason": "LLM agentの長期memory更新において情報更新とprompt injectionによる汚染の両方を扱うmanagerを、evidence-conditioned accuracyで評価。合成episodeでmanagerを一度finetuneすると3 backboneの全categoryで指標が改善し、全体ECAが未調整版の2倍超と報告。agent memoryの管理方式は関連するが主指標は正確性・攻撃耐性で、保存容量・retrieval latency・推論token費用の削減は示さないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41056",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41669",
+      "identity_tokens": [
+        "arXiv:2610.41669"
+      ],
+      "title": "Supervised and LLM-Augmented Cardinality Estimation for Similarity Queries on Knowledge Graphs",
+      "reason": "knowledge graph similarity queryのcardinalityを推定するSCE-KGを提案し、LLMは学習用query生成器として利用。star/chain queryの95パーセンタイル予測誤差を37〜40倍改善、online overheadはquery実行時間の0.05%未満と報告するが、対象はDB query optimizerでありLLMモデル自体の推論・サービング高速化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41669",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.19092",
+      "identity_tokens": [
+        "arXiv:2601.19092"
+      ],
+      "title": "TIRx: A Unified Tile Primitive ML Compiler Across Heterogeneous Backends",
+      "reason": "GPU/AIアクセラレータ向けML compilerで、実行参加teamの粒度を表すexecution scope、named axesとshard/replica/offsetを用いたtensor layout、backendに応じてtile primitiveへloweringするdispatchを統合。複数GPU世代とAIアクセラレータでvendor水準のkernel性能を報告し、手書きnative codeを減らす。attention/GEMM等の推論kernel開発にも直接使える汎用compiler基盤としてaccept。ただし一次要旨に具体的LLM token/s倍率はない。",
+      "source_url": "https://arxiv.org/abs/2601.19092",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.26034",
+      "identity_tokens": [
+        "arXiv:2603.26034"
+      ],
+      "title": "AgentCollab: A Self-Evaluation-Driven Collaboration Paradigm for Efficient LLM Agents",
+      "reason": "LLM agentの長期tool実行で小型モデルの低費用と大型モデルの推論堅牢性を両立するため、自己反省信号から進捗停滞を検出して強いreasoning tierへ制御を移し、失敗履歴に応じて累積的に追加計算を配分する。小型/大型2層モデル構成で複数agent benchmarkのaccuracy-efficiency Pareto frontier改善を報告。推論呼出しのモデル選択とtest-time compute配分を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2603.26034",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.36991",
+      "identity_tokens": [
+        "arXiv:2610.36991"
+      ],
+      "title": "SpectRAG: Weighted Chunk Graphs for Token-Budgeted Context Selection in Multi-Hop Retrieval-Augmented Generation",
+      "reason": "RAGのchunkをsemantic・文書隣接・entity・引用等で結ぶweighted graphにして、hybrid seed検索、graph拡張、spectral relevance伝播、固定token予算内のcontext選択を行う。MultiHopRAGなどでevidence回収と回答品質を改善するが、graph計算の追加費用と初期precision低下のtrade-offも記載。token budgetの管理には関連するが、実際の推論latencyや総token削減の優位性を一次要旨で確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.36991",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:17:29+09:00",
+      "last_checked_at": "2026-11-02T23:17:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AR/new",
+        "https://arxiv.org/list/cs.NI/new",
+        "https://arxiv.org/list/cs.PL/new",
+        "https://arxiv.org/list/cs.CR/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
