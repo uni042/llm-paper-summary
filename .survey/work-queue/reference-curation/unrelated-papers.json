@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "unrelated",
   "purpose": "Durable exclusions for papers judged unrelated during structured-reference Discovery curation.",
-  "updated_at": "2026-11-02T00:55:50+00:00",
-  "record_count": 12670,
+  "updated_at": "2026-11-02T05:57:32+00:00",
+  "record_count": 12673,
   "records": {
     "arXiv:2303.08774": {
       "classification": "unrelated",
@@ -182181,6 +182181,54 @@
       "last_checked_at": "2026-11-02T00:55:50+00:00",
       "linked_from": [],
       "title": "FlashRT-PAI: Fast Kernels Are Not Fast Pipelines for Physical AI Inference"
+    },
+    "arXiv:2610.22347": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.22347",
+      "identity_tokens": [
+        "arXiv:2610.22347",
+        "id:DOI:10.48550/arXiv.2610.22347",
+        "id:arXiv:2610.22347"
+      ],
+      "reason": "少数stepの自己回帰動画生成器で、中間denoise推定が十分なtokenを早期確定し残りのdenoiseを省略するSpeculative Forcingを提案。一次要旨はLongLiveやLingbot-Worldの動画・world生成でfps改善を評価するが、対象は映像生成器のdenoisingであり、LLMのtoken復号・サービング・KV圧縮の改善を検証していないため現行LLM推論サーベイ対象外。",
+      "first_checked_at": "2026-11-02T05:57:30+00:00",
+      "last_checked_at": "2026-11-02T05:57:30+00:00",
+      "linked_from": [],
+      "title": "Speculative Forcing for Efficient Autoregressive Video Generation"
+    },
+    "arXiv:2606.01143": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2606.01143",
+      "identity_tokens": [
+        "arXiv:2606.01143",
+        "id:DOI:10.48550/arXiv.2606.01143",
+        "id:arXiv:2606.01143"
+      ],
+      "reason": "原著arXivの一次要旨を確認。共有prompt prefixのforward/backwardを複数のRL rolloutごとに繰り返す訓練コストを削減するため、訓練スケジュール内でKVを保存し、suffixの勾配を集約してprefix backwardを後で実行する。評価はverlのRL訓練stepとactor updateであり、デプロイ済みLLMのprefill/decode、推論サービング、推論時KVキャッシュ管理を改善する研究ではない。KV cacheという語があっても用途は学習専用のためunrelated。",
+      "first_checked_at": "2026-11-02T05:57:31+00:00",
+      "last_checked_at": "2026-11-02T05:57:31+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "PrefixFlow: Training-Time KV Caching for Schedule-Level Prefix Reuse in LLM RL Training"
+    },
+    "arXiv:2510.20111": {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2510.20111",
+      "identity_tokens": [
+        "arXiv:2510.20111",
+        "id:DOI:10.48550/arXiv.2510.20111",
+        "id:arXiv:2510.20111"
+      ],
+      "reason": "原著arXivの一次要旨を確認。ZeROに基づくパラメータ・勾配・optimizer stateの階層的reshardingとall-gather/reduce-scatterの非同期化によって、Dense/MoEの大規模LLM訓練を高速化する。訓練時の通信・メモリ・optimizer state管理が主題であり、推論実行時のserving、decode、KV cache、expert placementの評価ではないため現行の推論系サーベイ対象外。",
+      "first_checked_at": "2026-11-02T05:57:32+00:00",
+      "last_checked_at": "2026-11-02T05:57:32+00:00",
+      "linked_from": [
+        "Training Offload / Memory Systems",
+        "分散学習 / 混合専門家モデル / 自動シャーディング / SPMD"
+      ],
+      "title": "AsyncHZP: Hierarchical ZeRO Parallelism with Asynchronous Scheduling for Scalable LLM Training"
     }
   }
 }

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-02T01:56:03+00:00",
-  "record_count": 5580,
+  "updated_at": "2026-11-02T05:57:36+00:00",
+  "record_count": 5591,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86152,6 +86152,182 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "KPage: Cross-Block Page Compaction for Hardware-Efficient Sparse Attention"
+    },
+    "arXiv:2610.08688": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.08688",
+      "identity_tokens": [
+        "arXiv:2610.08688",
+        "id:DOI:10.48550/arXiv.2610.08688",
+        "id:arXiv:2610.08688"
+      ],
+      "reason": "BERT-Tiny、MobileBERT、MiniLM、Electra、DeBERTaの小型encoder LMを対象に、RISC-Vのbatch matrix multiplication address生成用instruction extensionとcompiler loop unrollingを組み合わせる。一次要旨はASIC面積6.79%増の専用命令で15.39～21.74%性能改善、全体推論最大2.19倍を報告。edge transformer kernel最適化だが自回帰LLM decode/servingの実証がないためborderline。",
+      "first_checked_at": "2026-11-02T05:57:20+00:00",
+      "last_checked_at": "2026-11-02T05:57:20+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "A Framework for Accelerating Transformer Inference on RISC-V for Edge AI"
+    },
+    "arXiv:2610.05273": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05273",
+      "identity_tokens": [
+        "arXiv:2610.05273",
+        "id:DOI:10.48550/arXiv.2610.05273",
+        "id:arXiv:2610.05273"
+      ],
+      "reason": "VLA robot制御の視覚tokenを固定層で削除せず、action-to-visual attentionが安定した層をcalibrationから選び、強attention tokenと周辺contextを保護するSAPruneを提案。一次要旨は視覚token87.5%削減・推論最大1.718倍高速と報告。LLM系visual token圧縮と技術的に隣接するが主評価はrobot action predictionで自回帰LLM servingではないためborderline。",
+      "first_checked_at": "2026-11-02T05:57:21+00:00",
+      "last_checked_at": "2026-11-02T05:57:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "When and What to Prune? Stage-Aware Visual Token Pruning for Efficient VLA"
+    },
+    "arXiv:2610.22146": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22146",
+      "identity_tokens": [
+        "arXiv:2610.22146",
+        "id:DOI:10.48550/arXiv.2610.22146",
+        "id:arXiv:2610.22146"
+      ],
+      "reason": "VLAの各robot stepでtask-to-vision attentionと重要度分布のinverse-Simpson指標から視覚token予算を動的調整するFastVLAを提案。一次要旨はLLM backbone FLOPs35～59%削減、action latency9～32%短縮、実robotで20%短縮を報告。視覚token圧縮は参考になるが主対象がrobot control loopでLLM推論servingへの直接評価がないためborderline。",
+      "first_checked_at": "2026-11-02T05:57:21+00:00",
+      "last_checked_at": "2026-11-02T05:57:21+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "FastVLA: Task-Conditioned and Temporally Adaptive Visual Token Compression for Efficient Vision-Language-Action Models"
+    },
+    "arXiv:2610.20588": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.20588",
+      "identity_tokens": [
+        "arXiv:2610.20588",
+        "id:DOI:10.48550/arXiv.2610.20588",
+        "id:arXiv:2610.20588"
+      ],
+      "reason": "MLP neuronとattention headを共通のimportance scaleでrankし、既存Transformerを再学習なしで計算予算に応じてelasticに削減する。一次要旨は27のvision/text encoderで最大60% sparsity、ViT-B/16のGPU throughput最大1.80倍を報告。モデル圧縮・推論速度への適用はあるが主評価はencoderとvisionで自回帰LLM生成の実測がないためborderline。",
+      "first_checked_at": "2026-11-02T05:57:22+00:00",
+      "last_checked_at": "2026-11-02T05:57:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Your Transformer Is Secretly Elastic"
+    },
+    "arXiv:2610.04093": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04093",
+      "identity_tokens": [
+        "arXiv:2610.04093",
+        "id:DOI:10.48550/arXiv.2610.04093",
+        "id:arXiv:2610.04093"
+      ],
+      "reason": "mask付きdense演算でなく非zero接続だけをCOO SpMM CUDA kernelで処理するSNACKを提案。一次要旨は高sparsityの小batchでkernel最大7倍、単層inferenceでdense比2倍高速と報告し、GPT-2 training memory削減も評価する。LLM kernelへの転用余地はあるが主たるend-to-end推論評価はgraph型モデルでLLM decode/servingの改善は未実証のためborderline。",
+      "first_checked_at": "2026-11-02T05:57:22+00:00",
+      "last_checked_at": "2026-11-02T05:57:22+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Beyond Masked Sparsity: SNACK Enables Truly Sparse Neural Networks on GPU"
+    },
+    "arXiv:2608.02608": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2608.02608",
+      "identity_tokens": [
+        "arXiv:2608.02608",
+        "id:DOI:10.48550/arXiv.2608.02608",
+        "id:arXiv:2608.02608"
+      ],
+      "reason": "arXiv原著要旨と著者公開全文の要点を確認。LLM推論をクラウドから端末・企業内エッジへ移す分離原則、端末クラスPAC/CAW、熱適応量子化、マルチテナントKV割当、モデル配布など8要素の参照アーキテクチャを提案する。10億人の利用を想定した年19TWh節電・CO2 7.3Mt削減はモデル仮定に基づく試算であり、実機導入やサービングベンチマークでの検証値ではない。LLM推論インフラ設計との関連は強いが、実装・実測の技術的裏付けが限定される構想・標準化提案としてborderline。",
+      "first_checked_at": "2026-11-02T05:57:28+00:00",
+      "last_checked_at": "2026-11-02T05:57:28+00:00",
+      "linked_from": [
+        "LLM Serving / Scheduling / Disaggregation",
+        "Offload / Hierarchical Memory",
+        "large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Separating Intelligence from Inference: A Standard for Edge-Native AI Computing"
+    },
+    "SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6": {
+      "classification": "borderline",
+      "canonical_id": "SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6",
+      "identity_tokens": [
+        "SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6",
+        "id:SemanticScholar:4de76b074b39cb77614f40d5c70a06924a37c7f6"
+      ],
+      "reason": "ICML 2024の公式PMLR一次要旨を確認。Transformerの注意に長距離畳み込み・SSM由来のlocalityとsmoothnessの帰納バイアスを追加し、Long Range Arenaで長距離依存の性能を改善、追加学習パラメータを不要とする。長文脈attention構造と計算効率の技術的関連はあるが、原著要旨の主評価はLRAの予測性能であり、現代のLLM autoregressive decoding、KV cache、serving throughputや実機レイテンシを直接評価した研究ではない。attention系の隣接研究としてborderline。",
+      "first_checked_at": "2026-11-02T05:57:31+00:00",
+      "last_checked_at": "2026-11-02T05:57:31+00:00",
+      "linked_from": [
+        "sparse attention / long-context Transformer",
+        "注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Viewing Transformers Through the Lens of Long Convolutions Layers"
+    },
+    "DOI:10.12142/ztetj.202402003": {
+      "classification": "borderline",
+      "canonical_id": "DOI:10.12142/ztetj.202402003",
+      "identity_tokens": [
+        "DOI:10.12142/ztetj.202402003",
+        "id:DOI:10.12142/ZTETJ.202402003",
+        "id:SemanticScholar:990cca64e27b0c29c80ae4aa6920db01913cc92f"
+      ],
+      "reason": "出版元ZTE Technology Journalの2024年4月号公式原著（英語abstractと中国語本文）を確認。LLMの技術進化を「推論効率」と「モデル能力」の二経路に分け、前者では分散推論・演算最適化・メモリアクセス・量子化、後者ではMoE・SSM等のモデル構造を概観する。LLM推論システムの方法を広く紹介する点は関連するが、推論サービングの特定手法や独自の実測改善を中心とした研究ではなく、広範なアルゴリズム概説なのでborderline。worklistのSemanticScholar identityを出版社が明示するDOIへ正規化した。",
+      "first_checked_at": "2026-11-02T05:57:33+00:00",
+      "last_checked_at": "2026-11-02T05:57:33+00:00",
+      "linked_from": [
+        "07-kv-cache-optimization-compression",
+        "LLM Serving / Scheduling / Disaggregation",
+        "Weight Quantization / Compression",
+        "inference-systems"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Review of Evolution of Large Language Model Algorithms"
+    },
+    "arXiv:2610.24328": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.24328",
+      "identity_tokens": [
+        "arXiv:2610.24328",
+        "id:DOI:10.48550/arXiv.2610.24328",
+        "id:arXiv:2610.24328"
+      ],
+      "reason": "CPU/GPU initiated RDMAを通信library非依存でoperation単位に追跡するSigmaTraceを提案。一次要旨はNCCL 128GPUで1.3% overhead、RCCL 1024GPUで2%未満、MoE inferenceでnode間traffic 2.13倍の偏りを検出したと報告。MoE推論通信の分析に有用だが主要成果は汎用RDMA profilingでLLM固有のschedulerやthroughput改善を提示していないためborderline。",
+      "first_checked_at": "2026-11-02T05:57:35+00:00",
+      "last_checked_at": "2026-11-02T05:57:35+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "SigmaTrace: Library-Agnostic Observability for CPU/GPU-Initiated RDMA Communication"
+    },
+    "arXiv:2610.09894": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.09894",
+      "identity_tokens": [
+        "arXiv:2610.09894",
+        "id:DOI:10.48550/arXiv.2610.09894",
+        "id:arXiv:2610.09894"
+      ],
+      "reason": "database queryのpredicateとmetadataから推論前にTransformer FFN sliceを選ぶQCATSを提案し、offline expert構築、query単位routing、CPU/GPU非同期pipelineとbatchingを組み合わせる。一次要旨はBERT-base/Qwen-0.6Bの4予測query workloadでlatency最大4.42倍削減と報告。推論runtimeに関係するが対象はDB内predictive queryで自回帰LLM servingではないためborderline。",
+      "first_checked_at": "2026-11-02T05:57:35+00:00",
+      "last_checked_at": "2026-11-02T05:57:35+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "QCATS: Query Context-Aware Transformer Slicing for Efficient Predictive Query Processing"
+    },
+    "arXiv:2610.07641": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.07641",
+      "identity_tokens": [
+        "arXiv:2610.07641",
+        "id:DOI:10.48550/arXiv.2610.07641",
+        "id:arXiv:2610.07641"
+      ],
+      "reason": "Android音声agentでASRの部分仮説からtool callを先読みして音声入力中に実行し、結果をcacheしてLLM promptへ挿入する。自己訂正時はrule-based検証で誤結果を除外する。一次要旨は実機のfirst-audio中央値を5.79秒から4.60秒へ短縮と報告。agent全体の応答遅延には寄与するがLLM自体の推論・KV/weight計算は変更しないためborderline。",
+      "first_checked_at": "2026-11-02T05:57:36+00:00",
+      "last_checked_at": "2026-11-02T05:57:36+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "Hiding Tool Latency in On-Device Cascaded Voice Agent through Speculative Execution"
     }
   }
 }
