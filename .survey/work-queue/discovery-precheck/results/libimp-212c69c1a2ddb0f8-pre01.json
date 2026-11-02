@@ -1,0 +1,846 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-212c69c1a2ddb0f8-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-212c69c1a2dd",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.14571",
+    "arXiv:2610.17689",
+    "arXiv:2610.23787",
+    "arXiv:2610.24365",
+    "arXiv:2610.29527",
+    "arXiv:2610.33923",
+    "arXiv:2610.37432",
+    "arXiv:2610.37989",
+    "arXiv:2610.38210"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "289552474aa320e0664b5cfdf2e6087cc159fc0a",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-02T01:03:47.848437+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.14571",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17689",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.23787",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.24365",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.29527",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.33923",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37432",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.37989",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.38210",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Dissecting the Carbon-SLO Tension in Geo-Distributed LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.14571",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) inference is driving a growing share of datacenter carbon emissions. Although carbon-aware scheduling can reduce these emissions in geo-distributed datacenters by exploiting the spatiotemporal variations in grid carbon intensity, the latency-sensitive nature of LLM serving constrains this design space. While prior studies investigate the carbon savings achievable through spatial scheduling, they oversimplify the dynamics of modern inference engines, such as queueing and continuous batching, which strongly shape inference latency. We address this issue by designing and evaluating a latency-centric, geo-distributed inference simulator, calibrated with hardware-grounded latency and power measurements, that reproduces these dynamics and enables the study of carbon savings under strict service-level objectives (SLOs). We then formulate a series of SLO- and carbon-aware schedulers of increasing sophistication, from per-request heuristics to batch-level optimization: (i) a greedy heuristic, (ii) an integer linear programming (ILP)-based scheduler jointly assigning batches of requests, (iii) an iterative ILP-based solution projecting its own assignments back into the load estimates to capture load coupling, and (iv) a facility mixed-integer linear programming (MILP) scheduler pricing the energy of batched requests collectively rather than in isolation. Across three LLMs under MLPerf SLOs and varying system loads, the MILP-based option offers the best carbon-SLO balance, reducing carbon emissions by up to 60% relative to the round-robin policy, with an average SLO violation of 3%. Our characterization further shows that savings grow with the spread of carbon intensity across datacenters and shrink as system load increases, while SLO attainment depends on how frequently schedulers receive datacenters'load updates.",
+      "identifiers": [
+        "SemanticScholar:dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1"
+      ],
+      "semantic_scholar_id": "dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1",
+      "canonical_id": "arXiv:2610.14571",
+      "arxiv_id": "2610.14571",
+      "authors": [
+        "Burak Topçu",
+        "Musa Cim",
+        "Zuhal Ozturk",
+        "M. T. Kandemir"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Stable Token-level Scheduling for Serverless LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.17689",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serverless inference is emerging as an efficient deployment model for Large Language Models (LLMs) due to its ability to elastically scale resources, improve GPU utilization through resource sharing, and reduce infrastructure costs. However, existing approaches primarily optimize time to first token (TTFT) while overlooking inter-token latency (ITL), a key determinant of user experience during response generation. We observe that LLM inference comprises a computation-intensive prefill stage and a bandwidth-bound decode stage, where admitting new requests can disrupt ongoing decoding and increase latency. To address this, we propose Token Window Pacing (TWP), a closed-loop scheduling framework that leverages runtime feedback from ITL, queue depth, and workload characteristics to regulate request admission at the token level instead of the batch level. TWP dynamically adjusts a selfregulating token window and incorporates chunk-based prefill to minimize interference from incoming requests. Experiments on realistic serverless workloads show that TWP delivers stable TTFT, significantly reduces latency spikes, lowers P99 tail latency, minimizes ITL variation, and improves throughput by up to 45% over ServerlessLLM and 58% over conventional schedulers. These results demonstrate that feedback-driven tokenlevel scheduling enables stable, high-throughput serverless LLM inference without modifying the underlying model.",
+      "identifiers": [
+        "SemanticScholar:84513bc45205cd6bd73ad2a5d75015b284509f3a"
+      ],
+      "semantic_scholar_id": "84513bc45205cd6bd73ad2a5d75015b284509f3a",
+      "canonical_id": "arXiv:2610.17689",
+      "arxiv_id": "2610.17689",
+      "authors": [
+        "Hardi Ashishbhai Desai",
+        "K. BalajiN",
+        "Sourav Kanti Addya"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DLite: History-free Speculative Decoding for Agentic AI",
+      "source_url": "https://arxiv.org/abs/2610.23787",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding has become a mainstream technique for accelerating large language model (LLM) inference by using a lightweight draft model to generate candidate tokens that are subsequently verified by the target model. However, agentic workloads introduce long and continuously evolving contexts and frequent multi-turn interactions. Under such workloads, we observe that existing draft models suffer from up to an 80% degradation in acceptance length, while maintaining their historical KV cache introduces substantial system overhead. In this paper, we identify the growing historical context as a common source of both problems and introduce DLite, a history-free speculative decoding framework for agentic AI. DLite directly reuses contextual hidden states from the target model and performs local speculative prediction without explicitly maintaining the historical context, transforming an increasingly complex modeling problem into local simple prediction problem. A lightweight sequential head further restores intra-block causal dependencies with low overhead. To effectively train this heterogeneous history-free architecture, we introduce a tailored two-stage training strategy. Experiments on general-purpose, long-context and agentic workloads show that DLite achieves 2-6 acceptance length and outperforms the state-of-the-art speculative decoding method, DSpark, up to 70%.",
+      "identifiers": [
+        "SemanticScholar:9cb4eaf05345fa18505d0fb53d2076448718428f"
+      ],
+      "semantic_scholar_id": "9cb4eaf05345fa18505d0fb53d2076448718428f",
+      "canonical_id": "arXiv:2610.23787",
+      "arxiv_id": "2610.23787",
+      "authors": [
+        "Jia-Ming Xu",
+        "Han-Zhen Wang",
+        "Tian-Lang Zhao",
+        "Jie-Wen Xiao",
+        "Cheng-Ze Yuan",
+        "Jia-Yi Pan",
+        "Yong-Kang Zhou",
+        "Jian-Cai Ye",
+        "Yu Wang",
+        "Guo-Hao Dai"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FlashMap: Flow Map Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.24365",
+      "year": 2026,
+      "published": "2026-10-17",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight drafter to propose a block of tokens that the target model verifies in one parallel pass. Autoregressive drafters generate this block one token at a time, whereas block diffusion drafters such as DFlash generate it in one pass, making drafting faster. However, these diffusion drafters predict each token independently, ignoring dependencies between tokens in the block. We introduce FlashMap, a continuous flow drafter that conditions a flow map language model on the target model's hidden states and generates the whole block in one forward pass while capturing inter-token dependencies. On Qwen3-8B, FlashMap is faster than a matched DFlash baseline on every benchmark, with 7% higher average speedup and up to 6.1x lossless acceleration.",
+      "identifiers": [
+        "SemanticScholar:3569a3ae399ae36ea1af7aff045a1ed1400b4276"
+      ],
+      "semantic_scholar_id": "3569a3ae399ae36ea1af7aff045a1ed1400b4276",
+      "canonical_id": "arXiv:2610.24365",
+      "arxiv_id": "2610.24365",
+      "authors": [
+        "Jeff Shen",
+        "Zhejian Zhou",
+        "Ryan Lee",
+        "Jonathan May",
+        "Shirley Ho"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 16,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RCSD: Reinforcement and Continual Learning for Domain-Specific Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.29527",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates large language model inference by employing a compact draft model to propose candidate tokens that are verified in parallel by a target model. Conventional training relies on soft-label distillation, which forces the draft model to mimic the target's full output distribution, including high-entropy regions that degrade acceptance rates and increase early rejection risk. We propose RCSD (Reinforcement and Continual Learning for Speculative Decoding), a training framework that aligns draft model optimization with the system-level objective of maximizing acceptance length. RCSD leverages naturally occurring accepted and rejected sequences during speculative inference to construct implicit preference pairs, with masked loss to avoid penalizing target-aligned tokens. Evaluated across multiple benchmarks, RCSD improves average acceptance length by 35% over HASS and achieves 1.35x faster end-to-end inference than HASS on practical workloads, without compromising generation quality.",
+      "identifiers": [
+        "SemanticScholar:f6fa585754ff9aaf0022a353361b02e80340f727"
+      ],
+      "semantic_scholar_id": "f6fa585754ff9aaf0022a353361b02e80340f727",
+      "canonical_id": "arXiv:2610.29527",
+      "arxiv_id": "2610.29527",
+      "authors": [
+        "Ming-Kang Liu",
+        "Wei-Ming Meng",
+        "P. Jiao",
+        "Jia-Wei Zhang",
+        "Tian-Yuan Liu",
+        "Jun-Yan Li",
+        "Li-Chen Pang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Queuing for Inference: Dynamic Memory Footprints and Costly Preemption",
+      "source_url": "https://arxiv.org/abs/2610.33923",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modeling inference workloads for transformer-based neural networks poses unique challenges due to their dynamic memory footprints, head-of-line blocking caused by heavy-tailed request distributions, and memory-dependent preemption overhead arising from the need to load/unload cache state. In this paper, we introduce a new queuing model that captures the impacts of these features on system stability and scheduling design. We show that the Gittins-index policy, which minimizes mean response time in the standard M/G/1 setting, can incur substantial preemption overhead in our model. Motivated by this limitation, we propose the Multi-Level-Priority-Threshold (MLPT) policy, that limits preemption while preserving priority for short jobs. We characterize the mean response time under MLPT and provide empirical rules-of-thumb to solve the resulting threshold-optimization problem. Our key observation is that optimal scheduling is a balance between reducing the response times of shorter jobs and limiting the overhead incurred when preemption occurs. These results provide a theoretical framework for understanding scheduling in memory constrained queuing systems for inference tasks.",
+      "identifiers": [
+        "SemanticScholar:9d3f12e5448a38afe8fffd21503b5008effeda9e"
+      ],
+      "semantic_scholar_id": "9d3f12e5448a38afe8fffd21503b5008effeda9e",
+      "canonical_id": "arXiv:2610.33923",
+      "arxiv_id": "2610.33923",
+      "authors": [
+        "Jia-Hui Ni",
+        "Vishrant Tripathi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Request-Adaptive Execution for Efficient Hybrid LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.37432",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid large language models (LLMs) have emerged as a promising way to combine the modeling capability of the Attention mechanism with the efficiency of state space models (SSMs). However, most existing hybrid LLMs still inherit a static design philosophy: once the Attention-to-SSM layout is chosen, every request must follow the same hybrid execution. This one-layout-fits-all design is inefficient for real-world serving workloads, where different requests rely on contextual information in different ways. This paper presents Morph, a serving system that co-designs the model architecture and runtime for request-adaptive hybrid LLM inference. Its model architecture pairs Attention and SSM layers within each block and uses prefill-oriented gating to select a request-specific layout that remains fixed throughout decoding. Its serving runtime preserves batching efficiency under divergent layer choices through selective batching and enables correct prefix reuse through hybrid-aware context caching. Experiments on six datasets show that Morph achieves a better quality-efficiency trade-off than existing static hybrid baselines. System-level evaluation further shows that Morph improves the serving throughput by up to 3.87x over baselines while substantially reducing inference latency.",
+      "identifiers": [
+        "SemanticScholar:0ee615c279ff9dee0bac5fccd8e7207b65e866ae"
+      ],
+      "semantic_scholar_id": "0ee615c279ff9dee0bac5fccd8e7207b65e866ae",
+      "canonical_id": "arXiv:2610.37432",
+      "arxiv_id": "2610.37432",
+      "authors": [
+        "Fa-Hao Chen",
+        "Xu-Zhe Yan",
+        "Qi Zhang",
+        "Peng Li",
+        "Dong-Xiao Yu",
+        "Song Guo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving",
+      "source_url": "https://arxiv.org/abs/2610.37989",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) inference has become an operational workload that fleets must provision, monitor, and bill against latency service-level objectives (SLOs). A single throughput number cannot answer the questions operators actually face, because generative serving couples two phases with very different service characteristics, continuous batching reshapes the effective service process, and user-visible tail latency can degrade long before aggregate throughput saturates. We present GAUSS, a workload-aware analytical and Monte-Carlo simulator that predicts the full distributions of time-to-first-token (TTFT) and time-between-tokens (TBT), together with the sustainable request rate, for a given workload, engine, and accelerator. GAUSS pairs calibrated, phase-specific latency surfaces for prefill and decode with a Lindley-recurrence model of queueing under stochastic arrivals and estimates performance by ensemble Monte-Carlo sampling rather than by replaying a single trace. This lets GAUSS reason about workloads, routing policies, and hardware that have never been deployed, and to capture the latency tails that trace-driven simulators systematically under-sample. We describe the model and show how it supports operating-point selection, traffic segmentation, and shortest-remaining-processing-time scheduling capacity questions that trace-driven simulators cannot address.",
+      "identifiers": [
+        "SemanticScholar:0171f8a62e15d943e424eedf99d6d0adb8413d22"
+      ],
+      "semantic_scholar_id": "0171f8a62e15d943e424eedf99d6d0adb8413d22",
+      "canonical_id": "arXiv:2610.37989",
+      "arxiv_id": "2610.37989",
+      "authors": [
+        "Srikant Bharadwaj",
+        "Ankur Mallick",
+        "S. Mastorakis",
+        "Anjaly Parayil",
+        "D. Deshmukh",
+        "Victor Ruehle"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices",
+      "source_url": "https://arxiv.org/abs/2610.38210",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Weight-only, lossy quantization substantially reduces the storage and memory requirements for serving large language models (LLMs), but the growing key-value (KV) cache remains a bottleneck for long-context inference on personal devices. We present Group-Adaptive Additive Codec (GAAC), a lossless KV compression and serving system that exploits exponent redundancy to reduce storage and accelerate attention without introducing KV approximation. GAAC encodes BF16 exponents using calibrated per-channel base-plus-offset codes over contiguous ranges. GAAC adapts code widths across small groups while preserving KV values bit-for-bit. A fused attention kernel reconstructs KV tiles on the fly, avoiding full-cache decompression. Block-wise compression and fixed-capacity slots support incremental cache updates and paged serving. Across five tested models, GAAC achieves 1.405-1.407$\\times$ lossless BF16 KV compression. We also study compression performance on low-precision tensors FP8 E4M3 caches ( 1.09-1.14$\\times$) and E5M2 caches (1.25-1.30$\\times$). On NVIDIA DGX Spark, GAAC accelerates decode attention at a 64K-token context by 1.19-1.27$\\times$ and end-to-end W4A16 decode steps by 1.04-1.15$\\times$. In serving, it reduces resident KV memory by approximately 26% and increases aggregate throughput by 13-29% under comparable KV-memory budgets. On Apple M4, GAAC achieves 1.02-1.25$\\times$ attention speedups, demonstrating portability beyond NVIDIA GPUs.",
+      "identifiers": [
+        "SemanticScholar:b23a996a3fa94769ae25e158dd419ca31c1efc81"
+      ],
+      "semantic_scholar_id": "b23a996a3fa94769ae25e158dd419ca31c1efc81",
+      "canonical_id": "arXiv:2610.38210",
+      "arxiv_id": "2610.38210",
+      "authors": [
+        "Yi-Pin Guo",
+        "Arun George",
+        "Siddharth Joshi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.14571",
+      "identity_tokens": [
+        "id:SemanticScholar:dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1",
+        "id:arXiv:2610.14571",
+        "title:dissecting the carbonslo tension in geodistributed llm serving",
+        "url:https://arxiv.org/abs/2610.14571"
+      ],
+      "record": {
+        "title": "Dissecting the Carbon-SLO Tension in Geo-Distributed LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.14571",
+        "year": 2026,
+        "published": "2026-10-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Model (LLM) inference is driving a growing share of datacenter carbon emissions. Although carbon-aware scheduling can reduce these emissions in geo-distributed datacenters by exploiting the spatiotemporal variations in grid carbon intensity, the latency-sensitive nature of LLM serving constrains this design space. While prior studies investigate the carbon savings achievable through spatial scheduling, they oversimplify the dynamics of modern inference engines, such as queueing and continuous batching, which strongly shape inference latency. We address this issue by designing and evaluating a latency-centric, geo-distributed inference simulator, calibrated with hardware-grounded latency and power measurements, that reproduces these dynamics and enables the study of carbon savings under strict service-level objectives (SLOs). We then formulate a series of SLO- and carbon-aware schedulers of increasing sophistication, from per-request heuristics to batch-level optimization: (i) a greedy heuristic, (ii) an integer linear programming (ILP)-based scheduler jointly assigning batches of requests, (iii) an iterative ILP-based solution projecting its own assignments back into the load estimates to capture load coupling, and (iv) a facility mixed-integer linear programming (MILP) scheduler pricing the energy of batched requests collectively rather than in isolation. Across three LLMs under MLPerf SLOs and varying system loads, the MILP-based option offers the best carbon-SLO balance, reducing carbon emissions by up to 60% relative to the round-robin policy, with an average SLO violation of 3%. Our characterization further shows that savings grow with the spread of carbon intensity across datacenters and shrink as system load increases, while SLO attainment depends on how frequently schedulers receive datacenters'load updates.",
+        "identifiers": [
+          "SemanticScholar:dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1"
+        ],
+        "semantic_scholar_id": "dff8276708cbc3b9b7b80f5508c91ea7ea91ccd1",
+        "canonical_id": "arXiv:2610.14571",
+        "arxiv_id": "2610.14571",
+        "authors": [
+          "Burak Topçu",
+          "Musa Cim",
+          "Zuhal Ozturk",
+          "M. T. Kandemir"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17689",
+      "identity_tokens": [
+        "id:SemanticScholar:84513bc45205cd6bd73ad2a5d75015b284509f3a",
+        "id:arXiv:2610.17689",
+        "title:stable tokenlevel scheduling for serverless llm inference",
+        "url:https://arxiv.org/abs/2610.17689"
+      ],
+      "record": {
+        "title": "Stable Token-level Scheduling for Serverless LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.17689",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serverless inference is emerging as an efficient deployment model for Large Language Models (LLMs) due to its ability to elastically scale resources, improve GPU utilization through resource sharing, and reduce infrastructure costs. However, existing approaches primarily optimize time to first token (TTFT) while overlooking inter-token latency (ITL), a key determinant of user experience during response generation. We observe that LLM inference comprises a computation-intensive prefill stage and a bandwidth-bound decode stage, where admitting new requests can disrupt ongoing decoding and increase latency. To address this, we propose Token Window Pacing (TWP), a closed-loop scheduling framework that leverages runtime feedback from ITL, queue depth, and workload characteristics to regulate request admission at the token level instead of the batch level. TWP dynamically adjusts a selfregulating token window and incorporates chunk-based prefill to minimize interference from incoming requests. Experiments on realistic serverless workloads show that TWP delivers stable TTFT, significantly reduces latency spikes, lowers P99 tail latency, minimizes ITL variation, and improves throughput by up to 45% over ServerlessLLM and 58% over conventional schedulers. These results demonstrate that feedback-driven tokenlevel scheduling enables stable, high-throughput serverless LLM inference without modifying the underlying model.",
+        "identifiers": [
+          "SemanticScholar:84513bc45205cd6bd73ad2a5d75015b284509f3a"
+        ],
+        "semantic_scholar_id": "84513bc45205cd6bd73ad2a5d75015b284509f3a",
+        "canonical_id": "arXiv:2610.17689",
+        "arxiv_id": "2610.17689",
+        "authors": [
+          "Hardi Ashishbhai Desai",
+          "K. BalajiN",
+          "Sourav Kanti Addya"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.23787",
+      "identity_tokens": [
+        "id:SemanticScholar:9cb4eaf05345fa18505d0fb53d2076448718428f",
+        "id:arXiv:2610.23787",
+        "title:dlite historyfree speculative decoding for agentic ai",
+        "url:https://arxiv.org/abs/2610.23787"
+      ],
+      "record": {
+        "title": "DLite: History-free Speculative Decoding for Agentic AI",
+        "source_url": "https://arxiv.org/abs/2610.23787",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding has become a mainstream technique for accelerating large language model (LLM) inference by using a lightweight draft model to generate candidate tokens that are subsequently verified by the target model. However, agentic workloads introduce long and continuously evolving contexts and frequent multi-turn interactions. Under such workloads, we observe that existing draft models suffer from up to an 80% degradation in acceptance length, while maintaining their historical KV cache introduces substantial system overhead. In this paper, we identify the growing historical context as a common source of both problems and introduce DLite, a history-free speculative decoding framework for agentic AI. DLite directly reuses contextual hidden states from the target model and performs local speculative prediction without explicitly maintaining the historical context, transforming an increasingly complex modeling problem into local simple prediction problem. A lightweight sequential head further restores intra-block causal dependencies with low overhead. To effectively train this heterogeneous history-free architecture, we introduce a tailored two-stage training strategy. Experiments on general-purpose, long-context and agentic workloads show that DLite achieves 2-6 acceptance length and outperforms the state-of-the-art speculative decoding method, DSpark, up to 70%.",
+        "identifiers": [
+          "SemanticScholar:9cb4eaf05345fa18505d0fb53d2076448718428f"
+        ],
+        "semantic_scholar_id": "9cb4eaf05345fa18505d0fb53d2076448718428f",
+        "canonical_id": "arXiv:2610.23787",
+        "arxiv_id": "2610.23787",
+        "authors": [
+          "Jia-Ming Xu",
+          "Han-Zhen Wang",
+          "Tian-Lang Zhao",
+          "Jie-Wen Xiao",
+          "Cheng-Ze Yuan",
+          "Jia-Yi Pan",
+          "Yong-Kang Zhou",
+          "Jian-Cai Ye",
+          "Yu Wang",
+          "Guo-Hao Dai"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.24365",
+      "identity_tokens": [
+        "id:SemanticScholar:3569a3ae399ae36ea1af7aff045a1ed1400b4276",
+        "id:arXiv:2610.24365",
+        "title:flashmap flow map speculative decoding",
+        "url:https://arxiv.org/abs/2610.24365"
+      ],
+      "record": {
+        "title": "FlashMap: Flow Map Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.24365",
+        "year": 2026,
+        "published": "2026-10-17",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model (LLM) inference by using a lightweight drafter to propose a block of tokens that the target model verifies in one parallel pass. Autoregressive drafters generate this block one token at a time, whereas block diffusion drafters such as DFlash generate it in one pass, making drafting faster. However, these diffusion drafters predict each token independently, ignoring dependencies between tokens in the block. We introduce FlashMap, a continuous flow drafter that conditions a flow map language model on the target model's hidden states and generates the whole block in one forward pass while capturing inter-token dependencies. On Qwen3-8B, FlashMap is faster than a matched DFlash baseline on every benchmark, with 7% higher average speedup and up to 6.1x lossless acceleration.",
+        "identifiers": [
+          "SemanticScholar:3569a3ae399ae36ea1af7aff045a1ed1400b4276"
+        ],
+        "semantic_scholar_id": "3569a3ae399ae36ea1af7aff045a1ed1400b4276",
+        "canonical_id": "arXiv:2610.24365",
+        "arxiv_id": "2610.24365",
+        "authors": [
+          "Jeff Shen",
+          "Zhejian Zhou",
+          "Ryan Lee",
+          "Jonathan May",
+          "Shirley Ho"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 16,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.29527",
+      "identity_tokens": [
+        "id:SemanticScholar:f6fa585754ff9aaf0022a353361b02e80340f727",
+        "id:arXiv:2610.29527",
+        "title:rcsd reinforcement and continual learning for domainspecific speculative decoding",
+        "url:https://arxiv.org/abs/2610.29527"
+      ],
+      "record": {
+        "title": "RCSD: Reinforcement and Continual Learning for Domain-Specific Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.29527",
+        "year": 2026,
+        "published": "2026-10-21",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates large language model inference by employing a compact draft model to propose candidate tokens that are verified in parallel by a target model. Conventional training relies on soft-label distillation, which forces the draft model to mimic the target's full output distribution, including high-entropy regions that degrade acceptance rates and increase early rejection risk. We propose RCSD (Reinforcement and Continual Learning for Speculative Decoding), a training framework that aligns draft model optimization with the system-level objective of maximizing acceptance length. RCSD leverages naturally occurring accepted and rejected sequences during speculative inference to construct implicit preference pairs, with masked loss to avoid penalizing target-aligned tokens. Evaluated across multiple benchmarks, RCSD improves average acceptance length by 35% over HASS and achieves 1.35x faster end-to-end inference than HASS on practical workloads, without compromising generation quality.",
+        "identifiers": [
+          "SemanticScholar:f6fa585754ff9aaf0022a353361b02e80340f727"
+        ],
+        "semantic_scholar_id": "f6fa585754ff9aaf0022a353361b02e80340f727",
+        "canonical_id": "arXiv:2610.29527",
+        "arxiv_id": "2610.29527",
+        "authors": [
+          "Ming-Kang Liu",
+          "Wei-Ming Meng",
+          "P. Jiao",
+          "Jia-Wei Zhang",
+          "Tian-Yuan Liu",
+          "Jun-Yan Li",
+          "Li-Chen Pang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 12,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.33923",
+      "identity_tokens": [
+        "id:SemanticScholar:9d3f12e5448a38afe8fffd21503b5008effeda9e",
+        "id:arXiv:2610.33923",
+        "title:queuing for inference dynamic memory footprints and costly preemption",
+        "url:https://arxiv.org/abs/2610.33923"
+      ],
+      "record": {
+        "title": "Queuing for Inference: Dynamic Memory Footprints and Costly Preemption",
+        "source_url": "https://arxiv.org/abs/2610.33923",
+        "year": 2026,
+        "published": "2026-10-24",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Modeling inference workloads for transformer-based neural networks poses unique challenges due to their dynamic memory footprints, head-of-line blocking caused by heavy-tailed request distributions, and memory-dependent preemption overhead arising from the need to load/unload cache state. In this paper, we introduce a new queuing model that captures the impacts of these features on system stability and scheduling design. We show that the Gittins-index policy, which minimizes mean response time in the standard M/G/1 setting, can incur substantial preemption overhead in our model. Motivated by this limitation, we propose the Multi-Level-Priority-Threshold (MLPT) policy, that limits preemption while preserving priority for short jobs. We characterize the mean response time under MLPT and provide empirical rules-of-thumb to solve the resulting threshold-optimization problem. Our key observation is that optimal scheduling is a balance between reducing the response times of shorter jobs and limiting the overhead incurred when preemption occurs. These results provide a theoretical framework for understanding scheduling in memory constrained queuing systems for inference tasks.",
+        "identifiers": [
+          "SemanticScholar:9d3f12e5448a38afe8fffd21503b5008effeda9e"
+        ],
+        "semantic_scholar_id": "9d3f12e5448a38afe8fffd21503b5008effeda9e",
+        "canonical_id": "arXiv:2610.33923",
+        "arxiv_id": "2610.33923",
+        "authors": [
+          "Jia-Hui Ni",
+          "Vishrant Tripathi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37432",
+      "identity_tokens": [
+        "id:SemanticScholar:0ee615c279ff9dee0bac5fccd8e7207b65e866ae",
+        "id:arXiv:2610.37432",
+        "title:requestadaptive execution for efficient hybrid llm inference",
+        "url:https://arxiv.org/abs/2610.37432"
+      ],
+      "record": {
+        "title": "Request-Adaptive Execution for Efficient Hybrid LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.37432",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid large language models (LLMs) have emerged as a promising way to combine the modeling capability of the Attention mechanism with the efficiency of state space models (SSMs). However, most existing hybrid LLMs still inherit a static design philosophy: once the Attention-to-SSM layout is chosen, every request must follow the same hybrid execution. This one-layout-fits-all design is inefficient for real-world serving workloads, where different requests rely on contextual information in different ways. This paper presents Morph, a serving system that co-designs the model architecture and runtime for request-adaptive hybrid LLM inference. Its model architecture pairs Attention and SSM layers within each block and uses prefill-oriented gating to select a request-specific layout that remains fixed throughout decoding. Its serving runtime preserves batching efficiency under divergent layer choices through selective batching and enables correct prefix reuse through hybrid-aware context caching. Experiments on six datasets show that Morph achieves a better quality-efficiency trade-off than existing static hybrid baselines. System-level evaluation further shows that Morph improves the serving throughput by up to 3.87x over baselines while substantially reducing inference latency.",
+        "identifiers": [
+          "SemanticScholar:0ee615c279ff9dee0bac5fccd8e7207b65e866ae"
+        ],
+        "semantic_scholar_id": "0ee615c279ff9dee0bac5fccd8e7207b65e866ae",
+        "canonical_id": "arXiv:2610.37432",
+        "arxiv_id": "2610.37432",
+        "authors": [
+          "Fa-Hao Chen",
+          "Xu-Zhe Yan",
+          "Qi Zhang",
+          "Peng Li",
+          "Dong-Xiao Yu",
+          "Song Guo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.37989",
+      "identity_tokens": [
+        "id:SemanticScholar:0171f8a62e15d943e424eedf99d6d0adb8413d22",
+        "id:arXiv:2610.37989",
+        "title:gauss a workloadaware analytical and montecarlo simulator for llm inference serving",
+        "url:https://arxiv.org/abs/2610.37989"
+      ],
+      "record": {
+        "title": "GAUSS: A Workload-Aware Analytical and Monte-Carlo Simulator for LLM Inference Serving",
+        "source_url": "https://arxiv.org/abs/2610.37989",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) inference has become an operational workload that fleets must provision, monitor, and bill against latency service-level objectives (SLOs). A single throughput number cannot answer the questions operators actually face, because generative serving couples two phases with very different service characteristics, continuous batching reshapes the effective service process, and user-visible tail latency can degrade long before aggregate throughput saturates. We present GAUSS, a workload-aware analytical and Monte-Carlo simulator that predicts the full distributions of time-to-first-token (TTFT) and time-between-tokens (TBT), together with the sustainable request rate, for a given workload, engine, and accelerator. GAUSS pairs calibrated, phase-specific latency surfaces for prefill and decode with a Lindley-recurrence model of queueing under stochastic arrivals and estimates performance by ensemble Monte-Carlo sampling rather than by replaying a single trace. This lets GAUSS reason about workloads, routing policies, and hardware that have never been deployed, and to capture the latency tails that trace-driven simulators systematically under-sample. We describe the model and show how it supports operating-point selection, traffic segmentation, and shortest-remaining-processing-time scheduling capacity questions that trace-driven simulators cannot address.",
+        "identifiers": [
+          "SemanticScholar:0171f8a62e15d943e424eedf99d6d0adb8413d22"
+        ],
+        "semantic_scholar_id": "0171f8a62e15d943e424eedf99d6d0adb8413d22",
+        "canonical_id": "arXiv:2610.37989",
+        "arxiv_id": "2610.37989",
+        "authors": [
+          "Srikant Bharadwaj",
+          "Ankur Mallick",
+          "S. Mastorakis",
+          "Anjaly Parayil",
+          "D. Deshmukh",
+          "Victor Ruehle"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.38210",
+      "identity_tokens": [
+        "id:SemanticScholar:b23a996a3fa94769ae25e158dd419ca31c1efc81",
+        "id:arXiv:2610.38210",
+        "title:gaac lossless kv compression for bandwidthefficient llm inference on personal devices",
+        "url:https://arxiv.org/abs/2610.38210"
+      ],
+      "record": {
+        "title": "GAAC: Lossless KV Compression for Bandwidth-Efficient LLM Inference on Personal Devices",
+        "source_url": "https://arxiv.org/abs/2610.38210",
+        "year": 2026,
+        "published": "2026-10-28",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Weight-only, lossy quantization substantially reduces the storage and memory requirements for serving large language models (LLMs), but the growing key-value (KV) cache remains a bottleneck for long-context inference on personal devices. We present Group-Adaptive Additive Codec (GAAC), a lossless KV compression and serving system that exploits exponent redundancy to reduce storage and accelerate attention without introducing KV approximation. GAAC encodes BF16 exponents using calibrated per-channel base-plus-offset codes over contiguous ranges. GAAC adapts code widths across small groups while preserving KV values bit-for-bit. A fused attention kernel reconstructs KV tiles on the fly, avoiding full-cache decompression. Block-wise compression and fixed-capacity slots support incremental cache updates and paged serving. Across five tested models, GAAC achieves 1.405-1.407$\\times$ lossless BF16 KV compression. We also study compression performance on low-precision tensors FP8 E4M3 caches ( 1.09-1.14$\\times$) and E5M2 caches (1.25-1.30$\\times$). On NVIDIA DGX Spark, GAAC accelerates decode attention at a 64K-token context by 1.19-1.27$\\times$ and end-to-end W4A16 decode steps by 1.04-1.15$\\times$. In serving, it reduces resident KV memory by approximately 26% and increases aggregate throughput by 13-29% under comparable KV-memory budgets. On Apple M4, GAAC achieves 1.02-1.25$\\times$ attention speedups, demonstrating portability beyond NVIDIA GPUs.",
+        "identifiers": [
+          "SemanticScholar:b23a996a3fa94769ae25e158dd419ca31c1efc81"
+        ],
+        "semantic_scholar_id": "b23a996a3fa94769ae25e158dd419ca31c1efc81",
+        "canonical_id": "arXiv:2610.38210",
+        "arxiv_id": "2610.38210",
+        "authors": [
+          "Yi-Pin Guo",
+          "Arun George",
+          "Siddharth Joshi"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 5,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0d42cd9a8368d93c70ae4f9c44f83949f66ce3c5159491ae90241be3b83806b2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
