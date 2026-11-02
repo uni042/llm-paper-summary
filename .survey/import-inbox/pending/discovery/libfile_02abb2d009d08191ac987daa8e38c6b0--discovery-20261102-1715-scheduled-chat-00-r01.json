@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1715-scheduled-chat-00/r01",
+  "reference_main_sha": "2da7f363d174ce51d4719a50f91babafc24c88b0",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.18925",
+      "identity_tokens": [
+        "arXiv:2610.18925"
+      ],
+      "title": "CacheSmith: Accurate RAG Serving under Latency SLOs with Adaptive KV Reuse",
+      "reason": "RAGでchunk単位に事前生成したKVを連結するとcross-chunk attentionが欠落する問題に対し、WarmUp/Probe/Patchの3段階で必要なトークンを再計算し、要求ごとの残りTTFT余裕を考慮してバッチと再計算予算を共同制御する。vLLM実装、RTX PRO 6000 96GBを1～2基使用し、LLaMA-3.1-8B/Qwen3-32Bの4タスクでquality-gated SLO達成率最大27.5%改善、P99 TTFT最大86%短縮を報告。KV再利用・サービング制御を直接改善するためaccept。最大値は全条件平均ではない。",
+      "source_url": "https://arxiv.org/abs/2610.18925",
+      "body_check": "abstract_and_body_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40613",
+      "identity_tokens": [
+        "arXiv:2610.40613"
+      ],
+      "title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races",
+      "reason": "透かし付き生成を投機復号へ統合し、棄却されたdraft tokenの置換後も同じ鍵による透かしを保つ。仮想鍵のcopula結合と追加のexponential raceで分布を保ち、acceptance rateを維持しつつ検出率を改善。主目的は出力由来追跡・透かしの検出性能で、推論速度・メモリ削減の新方式ではない。ただし投機復号の検証処理に直接関係し追加遅延を生じないと報告するためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40613",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36520",
+      "identity_tokens": [
+        "arXiv:2610.36520"
+      ],
+      "title": "Folding Attention Biases into Keys Makes Compacted KV Caches Run on Standard Kernels",
+      "reason": "Attention Matchingの圧縮KVは残存keyごとにlogit biasを必要とし、標準FlashAttentionやvLLM PagedAttentionでは扱えない。文脈queryから求めた各headの方向へbiasをkeyベクトルに折り込むことで、通常のkey/value形状と標準kernelを維持する。無改造vLLMのKV connector経由で動作を確認し、同じper-head容量でQuALITY/LongHealthの14条件中13条件は元のAM精度と統計的に同等と報告。KV圧縮の実運用互換性を直接改善するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.36520",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36950",
+      "identity_tokens": [
+        "arXiv:2610.36950"
+      ],
+      "title": "DCKV: Learned Transform Coding of the Prompt KV Cache in Hybrid Language Models",
+      "reason": "hybrid attentionモデルのprompt KVを再利用・転送する際の保存容量を削減するため、変換・量子化・entropy modelを凍結した生成モデルの出力品質と符号長に対してend-to-end学習するcodecを提案。Qwen3.5-2Bでbf16比55倍超圧縮時に長文脈3評価の低下最大1.8ポイント、100倍超で最大3.6ポイントと報告。圧縮率はKV部分の値であり、モデル全体メモリの削減率ではない。KV転送・保存の効率に直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.36950",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41039",
+      "identity_tokens": [
+        "arXiv:2610.41039"
+      ],
+      "title": "Characterizing Recoverable Expert-Utilization Signatures in Fine-Tuned Mixture-of-Experts LLMs",
+      "reason": "fine-tuningされたMoEのexpert経路に残る構造的記憶をrouting/logitから推定し、分散配置時の漏洩と攻撃可能性を分析するセキュリティ研究。MoEの推論時routingに触れるものの、スループット・レイテンシ・KV・オフロード・量子化など推論効率の最適化を提案・評価していないためunrelated。単なるタイトル除外ではなく著者一次要旨の手法と評価目的を確認して判断した。",
+      "source_url": "https://arxiv.org/abs/2610.41039",
+      "body_check": "abstract_screen_only",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.27945",
+      "identity_tokens": [
+        "arXiv:2610.27945"
+      ],
+      "title": "How Developers Configure LLM Inference: A Large-Scale Study of Real-World Practices",
+      "reason": "Transformers、vLLM、OpenAI APIを使うGitHub 5,398リポジトリの設定実態を調査し、345,117件の明示的option指定を分析。設定数の中央値はTransformers 2、vLLM/OpenAI 4、複数option組合せの56.8～61.6%が1リポジトリのみと報告。LLM推論システムの運用知見として関連するが、新しいサービングアルゴリズムや性能改善手法を提示していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.27945",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.38983",
+      "identity_tokens": [
+        "arXiv:2610.38983"
+      ],
+      "title": "Beyond atol and rtol: Sound Test Oracles for Low-Precision GPU Kernels",
+      "reason": "低精度Triton/CUDA kernelの検証で固定atol/rtolが誤検知・見逃しを生む問題に対し、丸め誤差を追跡するper-element受理領域を生成するnumoracleを提案。vLLM/Unsloth/Liger由来13演算子を検証し、RTX PRO 6000上のeffective mutant 124個中116個を検出。低精度推論kernelの品質保証に間接的に寄与するが、LLM推論自体の速度・メモリを改善する方法ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.38983",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.38620",
+      "identity_tokens": [
+        "arXiv:2610.38620"
+      ],
+      "title": "Think Before You Act: Decision Gate for LLM Agents",
+      "reason": "JevActはagentのツール実行前にドメインポリシーと状態を照合し、prefill-only decision modelで不適切な操作を検知して修正を促す。11種類のagentで信頼性向上を評価するが、主眼はagent安全性・タスク完遂でありLLM推論サービングの性能最適化を示していないためunrelated。prefill-onlyという実装上の工夫だけでは推論効率研究とは扱わない。",
+      "source_url": "https://arxiv.org/abs/2610.38620",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.37778",
+      "identity_tokens": [
+        "arXiv:2610.37778"
+      ],
+      "title": "Multi-Draft On-Policy Distillation for Diffusion Drafters",
+      "reason": "投機復号のdiffusion drafterがブロック内の先行tokenを見ずに予測するため、verifier条件付き教師分布との不一致が生じる。MDraftは同じcontextから複数draft blockを生成し、各prefixでのverifier分布を統合してdistillationし受理長を改善する。推論時のdraft構造・手順は変更しないため直接のserving最適化ではなく、学習側から投機復号の効率を間接改善する研究としてborderline。",
+      "source_url": "https://arxiv.org/abs/2610.37778",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37033",
+      "identity_tokens": [
+        "arXiv:2610.37033"
+      ],
+      "title": "p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM-RAG Pipeline",
+      "reason": "RAGでLLM rerankerを繰り返す証拠集合選択をQUBOとして定式化し、28nm試作SRAMデジタルcompute-in-memory Ising回路で類似度計算とannealingを実行。0.16mm²・0.41mWのmacroを示し、選択エネルギー推定がLLM baseline比6桁超低く、評価対象のquery総エネルギー67%削減を報告。LLM生成kernelそのものではないが、RAG推論pipelineの選択段階をnear-memory hardwareで高速・省電力化する直接的システム研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37033",
+      "body_check": "abstract_and_introduction_checked",
+      "first_checked_at": "2026-11-02T17:15:05+09:00",
+      "last_checked_at": "2026-11-02T17:15:05+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
