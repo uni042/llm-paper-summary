@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2300-scheduled-chat-00/r03",
+  "reference_main_sha": "ff6ee3508f82c9dc0df28ab30cb461f0366a3e9b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.40752",
+      "identity_tokens": [
+        "arXiv:2610.40752"
+      ],
+      "title": "PathoJev: Efficient Pathology Decisions from Shared Visual Context",
+      "reason": "病理whole-slideで複数質問を独立に生成する代わりに視覚prefixを一度符号化し、質問suffixをbatch評価、hybrid backboneのrecurrent stateを再利用する。WSI-Benchで9B版がSlideChat比9.1倍高速、8質問でprefix個別計算比6.9倍/5.9倍、64質問で11.2倍/8.9倍と報告。病理特化のdecision modelだが、共有prefix・状態再利用とbatch化による言語系マルチモーダル推論の直接高速化を評価しているためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.40752",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41389",
+      "identity_tokens": [
+        "arXiv:2610.41389"
+      ],
+      "title": "Parse Before You Execute: Efficient Spatial Reasoning with Executable Primitives",
+      "reason": "VLMの空間推論tool chainで無制約なコード生成・再試行がAPI費用と遅延を増やす問題に対し、Frame/Entity/State/Metricの型付き要求へ先にparseし、必要な幾何APIだけ実行、Verifierが十分性を判定して早期終了または局所修復するPEPSを提案。一次要旨では強いtool-integrated baselineに対して推論精度向上とrefinement round・API cost・end-to-end latencyの削減を報告するが具体倍率は示していない。agent推論時の実行回数と外部API費用の直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41389",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41992",
+      "identity_tokens": [
+        "arXiv:2610.41992"
+      ],
+      "title": "MoETok: Sparse Expert Routing for 1D Visual Tokenizers",
+      "reason": "視覚tokenizerのqueryをContent/Detail役割に分け、token表現に応じてsparse expertへルーティングする1D visual tokenizerを提案。dense tokenizerとactive computationを揃えた比較で再構成・意味表現・自己回帰画像生成の品質を改善し、ImageNetやDPG-Benchなどで評価。MoE routingの実装は関連するが、主眼は視覚生成品質であり推論GPU時間やexpert常駐メモリの削減は一次要旨で実証されていないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41992",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41426",
+      "identity_tokens": [
+        "arXiv:2610.41426"
+      ],
+      "title": "FlexReader: Towards Adaptive Decoding Paths for Efficient Arbitrary-Length Scene Text Recognition",
+      "reason": "scene text recognitionでsub-string perceptionと複数文字の並列decode blockを組み合わせ、信頼度に応じてstrideを変えるAdaptive Prefix Decodingを提案。長い文字列や湾曲文字を含むbenchmarkでautoregressive decoding比最大6倍のdecode高速化を報告。可変step復号の仕組みは一般的な並列推論に関連するが対象が専用OCRモデルでLLM生成ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41426",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41618",
+      "identity_tokens": [
+        "arXiv:2610.41618"
+      ],
+      "title": "Attention Maps Know When to Think: Training-Free Difficulty-Aware Chain-of-Thought for Reasoning Segmentation",
+      "reason": "MLLMのreasoning segmentationで常時CoTを使うと不要な推論tokenが発生し性能も悪化する問題に対し、attention map entropyで難度を推定しCoT発動を選択するDA-CoTを提案。誤判断時はBidirectional Rethinkingで推論方針を反転する。一次要旨ではreasoning segmentation benchmarkでSOTA精度と推論効率改善を報告するが、token削減率やlatency数値は示していない。MLLMの適応的test-time compute配分の直接方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41618",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.42141",
+      "identity_tokens": [
+        "arXiv:2610.42141"
+      ],
+      "title": "RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory",
+      "reason": "凍結robot policyを囲むagent harnessをcoding modelがrollout診断に基づき反復修正し、操作順・視覚tool・持続memoryの使い方を自動設計する。未見sceneで成功率9.7%→43.3%、未見taskで12.7%→40.2%と報告。harnessによるtool選択とmemory管理はagent runtimeに隣接するが目的はロボット操作の成功率で、推論速度・token/メモリ費用の削減は要旨で評価されないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.42141",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32417",
+      "identity_tokens": [
+        "arXiv:2610.32417"
+      ],
+      "title": "Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents",
+      "reason": "ローカル量子化LLM agentで1 token当たりの省エネルギーがtask完了当たりの省エネルギーを保証しないことを、29 agent task・6 family、4/8bitの2モデル、A100とllama.cppで測定。4bitは通常token当たり消費電力を下げるが追加tokenと再試行によって完了task当たり最大3.5倍のエネルギーを要する場合を報告。量子化精度とagent実行予算の選択に直接関わる推論システム評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.32417",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.26439",
+      "identity_tokens": [
+        "arXiv:2606.26439"
+      ],
+      "title": "TileMaxSim: Roofline Regimes and Compression Limits for Fused GPU MaxSim Scoring",
+      "reason": "ColBERT型multi-vector retrievalのMaxSim fused GPU kernelで、query/document形状によりmemory-boundからcompute-boundへ遷移するroofline境界を測定。H100 FP16 ridge 295.4 FLOP/byte、DRAM traffic model誤差0.003%を確認。PQ圧縮で転送bytesを15.9倍削減しても依存gatherが65億回残り、tensor core FP16比3倍遅くなる条件を示す。28形状で3 kernelを比較しFP32参照と照合。RAG検索kernelの実装・メモリ帯域と依存アクセスのボトルネックを直接評価するためaccept。",
+      "source_url": "https://arxiv.org/abs/2606.26439",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.00845",
+      "identity_tokens": [
+        "arXiv:2610.00845"
+      ],
+      "title": "Is Your AI Fast Enough to Run a Fusion Reactor?",
+      "reason": "核融合制御のmicrosecond応答を対象にCPU最適化実装とOpenVINO/XLA/TVM等の推論engine、GPUを比較。DIII-Dの小型modelでCPU単一coreは99%の制御cycleで3.6マイクロ秒以内、A100は28マイクロ秒と報告し、複数model同時実行も検討。推論engine選択のシステム評価ではあるがLLMや生成系モデルのservingではなく専用リアルタイム制御モデルなのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.00845",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41485",
+      "identity_tokens": [
+        "arXiv:2610.41485"
+      ],
+      "title": "BDNet: Fast-slow thinking is all you need",
+      "reason": "ImageNet-1K画像分類用の階層的特徴抽出器BDNetを提案し、4段の参照bufferと低rank残差演算で画像分類の頑健性を評価。推論時の演算量がtoken数に線形と説明するが、対象は専用画像分類backboneの設計・精度でありLLM/MLLM推論、KV、GPU serving、量子化・MoEの直接技術を示さないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41485",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:15:12+09:00",
+      "last_checked_at": "2026-11-02T23:15:12+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CV/new",
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
