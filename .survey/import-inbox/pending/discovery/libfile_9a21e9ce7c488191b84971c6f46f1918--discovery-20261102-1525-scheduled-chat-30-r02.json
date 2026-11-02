@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261102-1525-scheduled-chat-30/r02",
+  "reference_main_sha": "ee716ae60fd44ea0b1fb55565eef6e202c16126a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2510.18525",
+      "identity_tokens": [
+        "id:arXiv:2510.18525",
+        "id:DOI:10.48550/arXiv.2510.18525"
+      ],
+      "title": "From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing",
+      "reason": "SPEQはfull modelの重みbitの一部を共有して低精度draft modelを作り、別モデルの訓練・保存費用を避ける投機的デコード方式である。指数再マッピングとparameter sharingに加え、draftとverificationを両方処理する再構成可能な演算器配列を提案する。15モデル・タスクの比較でFP16比2.07倍、Olive比1.53倍、Tender比1.45倍の速度を報告し、推論用アルゴリズム・ハードウェア共同設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2510.18525",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 140,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.01665",
+      "identity_tokens": [
+        "id:arXiv:2608.01665",
+        "id:DOI:10.48550/arXiv.2608.01665"
+      ],
+      "title": "Allocation Before Ranking: Decoupled Token Compression for OmniLLMs",
+      "reason": "音声と映像tokenを共通top-K注意スコアで選ぶと音声に保持枠が偏る問題に対し、Macerはまずモダリティごとの明示的token予算を割り当て、その後に浅い層で各モダリティ内の重要度を正規化して選別する。訓練不要でQwen2.5-Omni-7Bの保持率25%時にfull-token性能98.7%、3Bでは97.3%を維持したと報告する。OmniLLMの実行token数を直接削減するためaccept。",
+      "source_url": "https://arxiv.org/abs/2608.01665",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 148,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.23167",
+      "identity_tokens": [
+        "id:arXiv:2608.23167",
+        "id:DOI:10.48550/arXiv.2608.23167"
+      ],
+      "title": "Accelerating Diffusion Language Models via Structured Suffix Modeling",
+      "reason": "拡散言語モデルの各denoisingステップでsuffix全体へ注意する計算負荷を減らすため、suffixをlocal・middle・tailの3領域に分け、領域の役割に応じて残すtoken数を変える。前ステップの復号結果を次ステップのsuffix表現へ反映し、毎回同一初期値へ戻す情報損失を避ける。3種類のDLMで訓練不要の推論加速を検証し、他の加速法との併用時に長系列で最大72.81倍を報告するが、単独手法の倍率とは区別する。推論計算削減に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2608.23167",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 153,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.18653/v1/2026.acl-long.1631",
+      "identity_tokens": [
+        "id:DOI:10.18653/v1/2026.acl-long.1631"
+      ],
+      "title": "Octopus: Gated Selective Attention for Memory-Bounded Long-Context Inference in Large Language Models",
+      "reason": "Octopusは事前学習済みTransformerの注意層へGated Selective Attentionを追加し、各時点で価値の高いKV状態のみを学習済みゲートで保持することで、文脈長に比例して増えるKV cacheを固定予算へ制限する。Adobe Researchが公開したACL 2026の原著要旨では、同じメモリ制約下の線形化ベースラインに対してGSM8Kで36ポイント超の改善を報告する。推論時のKV保持と長文脈メモリ制約へ直接寄与するためaccept。",
+      "source_url": "https://doi.org/10.18653/v1/2026.acl-long.1631",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 155,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.00365",
+      "identity_tokens": [
+        "id:arXiv:2606.00365",
+        "id:DOI:10.48550/arXiv.2606.00365"
+      ],
+      "title": "SPARQLe: Sub-Precision Activation Representation for Quantized LLM Inference",
+      "reason": "量子化LLMのactivationを下位k bitの密tensorと上位k bitの疎tensor、precision bitmapへ分解して表現し、k bit演算器上で高い実効精度を維持しながらメモリ転送を減らす。MSB疎性を高める軽量手法と専用acceleratorを組み合わせ、BitNet 3B・Llama2 7B・Llama3 8Bでprefill遅延16〜24.3%、decode遅延13.5〜23.4%削減を報告する。低bit推論の表現・ハードウェア直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.00365",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 156,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.12487",
+      "identity_tokens": [
+        "id:arXiv:2606.12487",
+        "id:DOI:10.48550/arXiv.2606.12487"
+      ],
+      "title": "DynamicPTQ: Mitigating Activation Quantization Collapse via Residual-Stream Dynamics",
+      "reason": "W4A4KV4のactivation量子化で層間残差streamの大きな更新が過去の特徴を丸め誤差で壊す問題をJump RatioとHistorical Feature SNRで分析する。DynamicPTQはこの指標で量子化感度の高い層だけactivationを8bitにし、他層のactivation・重み・KVは4bitのまま維持する。QuaRot・SpinQuant・FlatQuantへ追加でき、LLaMA-2/3でperplexity・ゼロショットQAを改善しthroughputを1.05〜1.07倍にしたと報告する。推論用混合精度量子化の直接技術としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.12487",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 160,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01790",
+      "identity_tokens": [
+        "id:arXiv:2606.01790",
+        "id:DOI:10.48550/arXiv.2606.01790"
+      ],
+      "title": "STaR-KV: Spatio-Temporal Adaptive Re-weighting for KV Cache Compression in GUI Vision-Language Models",
+      "reason": "GUI操作VLMで画面履歴に比例して増えるKV cacheを、注意部分空間ごとの空間相互情報量、時間的な安定性割引、entropy由来の温度調整で圧縮する。全head共通のsaliency mapと固定top-B閾値の欠点を解消し、4つのGUIベンチマークで同一予算のGUIKV/SnapKVより平均精度を改善、KV予算20%でpeak GPU memoryを約40%削減と報告する。推論時の視覚KV保持選択の直接技術としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.01790",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 165,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.20706",
+      "identity_tokens": [
+        "id:arXiv:2601.20706",
+        "id:DOI:10.48550/arXiv.2601.20706"
+      ],
+      "title": "NPU Design for Diffusion Language Model Inference",
+      "reason": "拡散型LLMの双方向注意・ブロックKV更新・反復top-k samplingは自己回帰LLM向けNPUと適合しないため、専用ISA・compiler・sampling実行モデル・KV量子化用Block-Adaptive Online Smoothingを備えたNPUを設計する。7nmで合成したRTLと解析・cycle-accurate・精度シミュレータの三系統を提示し、物理ハードウェアとの照合を述べる。実行時メモリ階層とsamplingを対象とした拡散LLM推論アクセラレータの直接貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2601.20706",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 167,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.24156",
+      "identity_tokens": [
+        "id:arXiv:2606.24156",
+        "id:DOI:10.48550/arXiv.2606.24156"
+      ],
+      "title": "Accelerating Multimodal Large Language Models with Prior-Corrected Token Reduction",
+      "reason": "PriorTRはマルチモーダルLLMの視覚token削減で、指示がなくても高く出るtask-agnosticな注意priorと、実際の指示による追加注意を区別する。null tokenを注意block内の指示非依存probeとして使い、単一forward passでpriorとposteriorを推定してtoken重要度を補正する。複数MLLM・ベンチマークで強い訓練不要baselineより精度と効率のトレードオフを改善したと報告し、推論token削減の直接手法としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.24156",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 168,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2402.08644",
+      "identity_tokens": [
+        "id:arXiv:2402.08644",
+        "id:DOI:10.48550/arXiv.2402.08644"
+      ],
+      "title": "Tandem Transformers for Inference Efficient LLMs",
+      "reason": "小さな自己回帰モデルへ大モデルのブロック処理で得た表現への注意を許すTandem Transformerを提案し、小モデルの次token予測を補強する。PaLM2-BisonとGeckoの組合せではGecko単体より次token精度3.3%増、同等下流性能のPaLM2-Otter比1.16倍の速度を報告する。さらにSPEED型投機的デコードへ組み込み、通常のGecko draft比約1.14倍高速化したと報告するため、直接的な推論効率化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2402.08644",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:29:45+09:00",
+      "last_checked_at": "2026-11-02T15:29:45+09:00",
+      "linked_from": [],
+      "worklist_rank": 169,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
