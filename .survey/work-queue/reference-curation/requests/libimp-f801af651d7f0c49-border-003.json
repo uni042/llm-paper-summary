@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-f801af651d7f0c49-border-003",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.07641",
+  "reason": "Android音声agentでASRの部分仮説からtool callを先読みして音声入力中に実行し、結果をcacheしてLLM promptへ挿入する。自己訂正時はrule-based検証で誤結果を除外する。一次要旨は実機のfirst-audio中央値を5.79秒から4.60秒へ短縮と報告。agent全体の応答遅延には寄与するがLLM自体の推論・KV/weight計算は変更しないためborderline。",
+  "title": "Hiding Tool Latency in On-Device Cascaded Voice Agent through Speculative Execution",
+  "identity_tokens": [
+    "id:arXiv:2610.07641",
+    "id:DOI:10.48550/arXiv.2610.07641"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-f801af651d7f",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}

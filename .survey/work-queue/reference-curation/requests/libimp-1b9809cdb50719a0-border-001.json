@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-1b9809cdb50719a0-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.05273",
+  "reason": "VLA robot制御の視覚tokenを固定層で削除せず、action-to-visual attentionが安定した層をcalibrationから選び、強attention tokenと周辺contextを保護するSAPruneを提案。一次要旨は視覚token87.5%削減・推論最大1.718倍高速と報告。LLM系visual token圧縮と技術的に隣接するが主評価はrobot action predictionで自回帰LLM servingではないためborderline。",
+  "title": "When and What to Prune? Stage-Aware Visual Token Pruning for Efficient VLA",
+  "identity_tokens": [
+    "id:arXiv:2610.05273",
+    "id:DOI:10.48550/arXiv.2610.05273"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-1b9809cdb507",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
