@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The large KV-cache size of modern LLMs creates a barrier to efficient deployment. Recent work has explored replacing attention layers'RoPE positional embeddings with alternative decay-based mechanisms, which can then be used to prune KV-cache during inference. However, these decay functions have limited expressivity, and in practice devolve into sliding-window-like eviction patterns. In this work, we propose a unifying framework for complementary and novel decay mechanisms, capturing complex key statistics and interactions while preserving expressive RoPE embeddings and Softmax attention. The resulting Universal Attention is a highly expressive and end-to-end trainable architecture, whose composite decay mechanism acts as a natural, $\\textit{adaptive}$ pruning criterion, removing tokens that contribute least to attention computation. Experimentally, Universal Attention achieves state-of-the-art $10\\times$ compression on natural language and synthetic task data, while $\\textit{improving}$ downstream performance compared to both state-of-the-art baselines and unpruned oracles. It further demonstrates superior long-context generalization with unprecedented $25\\times$ compression at length 16k.",
+      "identifiers": [
+        "SemanticScholar:08e34e7d2661f393dd477c436f348a7a772fa5b9"
+      ],
+      "semantic_scholar_id": "08e34e7d2661f393dd477c436f348a7a772fa5b9",
+      "canonical_id": "arXiv:2610.09051",
+      "arxiv_id": "2610.09051",
+      "authors": [
+        "Davis Wertheimer",
+        "Hao-Chen Shen",
+        "Ahan Gupta",
+        "Derrick Liu",
+        "Yu-Chin-Fa-Bian Lim",
+        "M. Srivatsa",
+        "R. Ganti",
+        "Min-Jia Zhang",
+        "Nai-Gang Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Universal AttentionはRoPEとsoftmaxを維持しながら複数のdecay機構を統合して学習し、重要度の低いtokenを自然にpruneする自己剪定attentionを提案する。従来の単純なdecayがsliding-windowに近づく問題を改善し、自然言語・合成タスクで10倍KV圧縮と品質向上、16K長文脈で25倍圧縮を報告。推論時KV容量削減を目的としたモデル設計としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "PageWeaver: KV-Guided Query Unions for Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.11201",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Dynamic sparse attention limits the KV pages selected by each query, but a small support does not necessarily yield efficient GPU work. Query unions share page loads and populate Tensor Core tiles; their cost depends on which queries are grouped together. We present PageWeaver, an execution design that uses selected-page affinity to assemble query groups while preserving each query's original support and complete output ownership. A bounded GPU search produces query IDs, and an ID-aware two-CTA kernel consumes them without materializing reordered Q tensors or cross-page partial outputs. A direct KV-page union implementation provides a complementary design study of nonlocal reuse and reduction cost. With FP8 KV throughout, the H200 Union8 implementation achieves a 1.70x geometric-mean complete-call speedup over the measured FlashInfer path on six captures. Online regrouping further lowers latency by 3.26-7.66% on five selected 64K-context captures. Whole-model prefill throughput is 7.88-14.36% above the tested native path; the incremental regrouping benefit is smaller, with observed median gains of 0.47-0.73% at 32K/64K and regressions at 8K. A B300 comparison identifies cases where preparation cost and a stronger native kernel remove the advantage. These results separate execution-group reuse from the complete cost of exploiting it online.",
+      "identifiers": [
+        "SemanticScholar:fc055a9710a79db30c6f4be66cbff218a194c19d"
+      ],
+      "semantic_scholar_id": "fc055a9710a79db30c6f4be66cbff218a194c19d",
+      "canonical_id": "arXiv:2610.11201",
+      "arxiv_id": "2610.11201",
+      "authors": [
+        "Zhi-Yuan Li",
+        "Zi-Han Li",
+        "Ze-Fang Yuan",
+        "Lei Wang",
+        "Hao Wang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "PageWeaverはqueryごとの選択KV pageの重なりを使ってquery群を構成し、Tensor Core tileの充填とKV page再利用を両立する。GPU上のbounded searchでquery IDを生成し、ID-aware two-CTA kernelでQ再配置やcross-page中間出力を避ける。H200のFP8 KVでFlashInfer比complete-call幾何平均1.70倍、whole-model prefill throughput7.88～14.36%改善を報告。ただしB300では準備コストが利点を相殺する条件がある。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "DeferKV: Rethinking Eviction Timing for One-Shot KV Cache Compression",
+      "source_url": "https://arxiv.org/abs/2610.06286",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context large language models (LLMs) have demonstrated strong capabilities across a wide range of tasks, but the growing KV cache introduces substantial memory and inference overhead. Existing one-shot KV cache compression methods typically commit to irreversible eviction immediately after prefill, before any signal from actual generation becomes available. Our quantitative analysis shows that early queries from the actual generation stage provide attention signals that are more consistent with subsequent decode attention, with the largest single-step gain occurring at the prefill-decode boundary. Based on this observation, we propose DeferKV, which moves the eviction decision from the end of prefill to the first real decoding step and temporally combines prompt-side and decode-side observations, thereby better aligning KV importance estimation with subsequent generation requirements. DeferKV requires no additional training, draft model, or future-query prediction module, making it simple and easy to deploy. Experiments on LongBench, RULER, and Needle-in-a-Haystack demonstrate that DeferKV consistently improves model performance under KV cache compression while maintaining low inference latency.",
+      "identifiers": [
+        "SemanticScholar:4e393d6a08c4d141a84537fb34cd602b65c7d847"
+      ],
+      "semantic_scholar_id": "4e393d6a08c4d141a84537fb34cd602b65c7d847",
+      "canonical_id": "arXiv:2610.06286",
+      "arxiv_id": "2610.06286",
+      "authors": [
+        "Zhe Wang",
+        "Jia-Kai Li",
+        "Yu-Jia Sun",
+        "Rong-Zheng Wang",
+        "Shuang Liang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "DeferKVはprefill直後にKVを不可逆破棄する既存one-shot方式を見直し、実際の最初のdecode queryの注意分布を得てから重要度を推定・evictionする。prompt側とdecode側の観測を時系列で組み合わせ、学習・draft・将来query予測を必要としない。LongBench/RULER/Needleで圧縮下の性能改善と低遅延を報告し、KV eviction timingの直接改善としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SPIN: Shadow Predictive Indexer for Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.09025",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Indexer-based sparse attention reduces the cost of core attention by passing only a fixed, small number of important tokens to it. However, the indexer must still score the entire KV cache at every decoding step. This scoring overhead becomes a major bottleneck as the context length grows. We propose SPIN (Shadow Predictive Indexer) to reduce this indexer overhead. SPIN uses lightweight, history-based prediction to identify important KV blocks, avoiding the need to score the full KV cache at every decoding step. SPIN treats KV blocks and speculative decoding as first-class design and implementation considerations. Across extensive evaluations on long-context and agentic benchmarks, SPIN achieves 30-40% sparsity while preserving task quality. In end-to-end vLLM serving, SPIN improves output throughput by up to 14.9% and reduces median inter-token latency by up to 13.2%.",
+      "identifiers": [
+        "SemanticScholar:7e7b80e3695b50b0bb06278abb1073fed7691d4a"
+      ],
+      "semantic_scholar_id": "7e7b80e3695b50b0bb06278abb1073fed7691d4a",
+      "canonical_id": "arXiv:2610.09025",
+      "arxiv_id": "2610.09025",
+      "authors": [
+        "Yao Fu",
+        "Jian Chang",
+        "Ritchie Zhao",
+        "B. Long",
+        "Yue-Ying Li",
+        "Mahdi Kamani",
+        "Samkit Jain",
+        "Rahul Raman",
+        "T. Safavi",
+        "Shreya Gupta",
+        "Parsa Ashrafi Fashi",
+        "Minseok Lee",
+        "Julien Demouth",
+        "B. Rouhani"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SPINはsparse attentionでcore attention自体は軽くなってもindexerが毎token全KVをscoreする問題に対し、過去の履歴から重要KV blockを予測しfull scoringを省く。投機デコードとKV block単位の実装を考慮し、長文脈・エージェント評価でタスク品質を維持しながら30～40%の疎性を実現。vLLMサービングでoutput throughput最大14.9%改善、中央値ITL最大13.2%短縮を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "QUILT: Rethinking Sparse-Attention Prefill through Shared Query Execution",
+      "source_url": "https://arxiv.org/abs/2610.11134",
+      "year": 2026,
+      "published": "2026-10-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces the cost of long-context attention, but existing kernels typically process queries independently, repeatedly loading and dequantizing KV entries shared across queries. We observe substantial overlap in the KV entries selected by neighboring queries, creating opportunities for cross-query reuse. We present QUILT, a workload-aware sparse-attention execution mechanism that jointly processes neighboring queries and reuses shared KV entries to reduce redundant memory traffic and computation. QUILT introduces Shift-and-Compare Set Decomposition (SCSD), which transforms irregular set operations into regular data-parallel primitives suitable for modern accelerators, and pipelines SCSD with attention computation to hide its overhead. Cascaded sharing captures reuse hierarchically at multiple granularities. A tile-aware execution strategy balances sharing granularity with hardware tile utilization and selectively removes low-importance query-specific tails to eliminate underutilized tiles. We evaluate QUILT on LongBench using GLM-5.3 and DeepSeek-3.2 under both tensor and sequence parallelism. Compared with the state-of-the-art sparse-attention kernel, QUILT reduces average kernel latency by up to 55.1% and processed KV data by up to 55.9%, while reducing time-to-first-token (TTFT) latency by up to 36.8% with negligible accuracy degradation.",
+      "identifiers": [
+        "SemanticScholar:0683788412136a4a0f57cd663abf1a66bb2eb999"
+      ],
+      "semantic_scholar_id": "0683788412136a4a0f57cd663abf1a66bb2eb999",
+      "canonical_id": "arXiv:2610.11134",
+      "arxiv_id": "2610.11134",
+      "authors": [
+        "Zhen-Duo Zhao",
+        "Qi-Hui Zhou",
+        "Ming-Cong Song",
+        "Zhi-Yi Chen",
+        "Chuang-Guan Ye",
+        "Feng-Fan Hou",
+        "Ze-Qun Gong",
+        "Jing Li",
+        "Hong-Jie Si",
+        "Guo-Ping Long"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 25,
+        "matched_prestigious_venue": null
+      },
+      "reason": "QUILTは近傍query間で選択KVが重複することを利用し、Shift-and-Compare Set Decompositionで不規則な集合演算を並列primitiveに変換し、attentionとパイプライン化する。tile-aware groupingと多段共有により、GLM-5.3/DeepSeek-3.2のLongBench評価でsparse attention kernel遅延最大55.1%、KV処理量最大55.9%、TTFT最大36.8%削減を報告。GPU sparse prefill実行方式の直接改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b62240d73537",
+    "round": "libimp-b62240d73537253a-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b62240d73537253a-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b62240d73537253a-pre01.json",
+    "receipt": "sha256:a3f0cbebf12ad527292c864e0f2ae182aa210efdf926bdbe6f3800e03f44066f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b62240d73537",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
