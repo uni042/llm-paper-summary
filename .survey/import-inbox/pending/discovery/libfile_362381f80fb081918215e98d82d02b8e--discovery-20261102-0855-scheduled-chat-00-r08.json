@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r08",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08268",
+      "identity_tokens": [
+        "id:arXiv:2610.08268",
+        "id:DOI:10.48550/arXiv.2610.08268"
+      ],
+      "title": "DySCo: Dynamic Sharding for Collaborative Edge-Cloud LLM Inference with Depth-Synchronized Batching",
+      "reason": "端末ごとにLLMのedge/cloud分割位置が異なると、cloud側のmodel層深度が一致せずbatch化できない問題に対し、resident shardの範囲実行と、異なる要求を最深の共通suffixへ進めてbatch化するdepth-synchronized batchingを提案する。KVは各実行側に保持する。著者要旨は平均8同時要求でFIFO比throughput275%、同一splitだけのbatch比48%改善を報告。edge/cloud協調推論runtimeとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.08268",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14255",
+      "identity_tokens": [
+        "id:arXiv:2610.14255",
+        "id:DOI:10.48550/arXiv.2610.14255"
+      ],
+      "title": "Simulate Before You Scale: High-Fidelity LLM Inference Planning Without GPUs",
+      "reason": "admission・routing・batching・prefill/decode・KV管理・preemptionをCPU-only離散イベントシミュレータBLISへ統合し、モデル/GPUごとの個別profileなしでphase別遅延曲面を予測する。著者要旨は6モデル・3GPUの36実験でend-to-end誤差中央値6.7%、実実行比約200倍のシミュレーション速度と報告。llm-dへ反映された2政策の実機検証も主張する。LLMサービング容量計画・スケジューラ設計の直接的手法としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.14255",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.12242",
+      "identity_tokens": [
+        "id:arXiv:2610.12242",
+        "id:DOI:10.48550/arXiv.2610.12242"
+      ],
+      "title": "TokenRouter: Efficient Serving System for Token-Level LLM Routing",
+      "reason": "生成tokenごとに異なるLLMへ処理を振り分ける際、既存の単一LLM前提runtimeでstep同期とbatch admissionが遅れる問題に対し、request-centricなAPIとモデルごとの非同期subserverを分離する。subserverのdelayed batchingパラメータはthroughputモデルから決める。著者要旨は複数routing方式とモデル組合せで既存方式比decode throughput2.01～64.15倍と報告。複数LLMの細粒度routing実装としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.12242",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17795",
+      "identity_tokens": [
+        "id:arXiv:2610.17795",
+        "id:DOI:10.48550/arXiv.2610.17795"
+      ],
+      "title": "Quota-Based Aging for Prediction-Guided Scheduling in LLM Serving",
+      "reason": "生成長予測に基づくshort-first schedulingは長要求を飢餓させるため、quota制約とdebtに基づくaging昇格を組み合わせるQBAを提案する。chunked prefill、decode優先batch、token budget、KV-safe admissionを模擬したevent-driven simulatorでFCFS等と比較し、長要求のtail latencyを抑えつつ平均遅延改善を保つと著者要旨が報告。具体的倍率は要旨にない。LLM serving schedulerの公平性と遅延tradeoffに直接関係するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17795",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23532",
+      "identity_tokens": [
+        "id:arXiv:2610.23532",
+        "id:DOI:10.48550/arXiv.2610.23532"
+      ],
+      "title": "Exploiting the Flexibility of LLM Inference for Frequency Regulation Service",
+      "reason": "LLM推論クラスタを電力系統の周波数調整可能な負荷として扱い、要求のreplica配置とtoken単位資源配分を階層MDPで制御する。ミリ秒の推論制御と秒単位の周波数信号をreward redistribution networkで接続し、mean-field近似で多数replicaへ拡張する。著者要旨は実データに基づくシミュレーションでSLOを損なわず周波数調整信号を追従したと報告。推論サービングの電力制御・token schedulingの直接的方式としてaccept。ただし性能値はシミュレーション。",
+      "source_url": "https://arxiv.org/abs/2610.23532",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.35336",
+      "identity_tokens": [
+        "id:arXiv:2610.35336",
+        "id:DOI:10.48550/arXiv.2610.35336"
+      ],
+      "title": "One Megakernel is Not Enough: Predicting Where to Cut for Streaming Inference",
+      "reason": "単一megakernelへの最大融合が必ずしも最良ではないと示し、通常graph profileと単体kernel測定から複数megakernelへの分割点を予測する。著者要旨はNH-TTS、Qwen3-TTS、Llama-1Bの13条件で最良構成を選択し、NH-TTSでmonolith比TTFA21.4%減・throughput28%増と報告。LLM系の推論kernel融合に関連するが、主たる定量効果は音声生成モデルで示されており汎用LLM自回帰推論への直接性は限定的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.35336",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.35309",
+      "identity_tokens": [
+        "id:arXiv:2610.35309",
+        "id:DOI:10.48550/arXiv.2610.35309"
+      ],
+      "title": "Shared Context, Separate Engines: Stateful Streaming Inference for Multimodal LLMs on Edge SoCs",
+      "reason": "CPU/GPU/NPUを持つedge SoCでMLLMのstreaming ingestionと回答を重ねる際、backend固有KVに履歴が束縛される問題に対し論理historyをengine別KVから分離する。stateful streamingと並列query生成を組み合わせ、予測完了時刻で実行engineを選ぶSDEPを提案。著者要旨はM4 Maxでlive-stream p95 TTFT76%削減、backlog throughput最大35%増、RK3588でも改善を報告。端末内マルチモーダル推論runtimeとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.35309",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.04956",
+      "identity_tokens": [
+        "id:arXiv:2610.04956",
+        "id:DOI:10.48550/arXiv.2610.04956"
+      ],
+      "title": "From Overloaded to Guaranteed: High-Throughput Multi-SLO Enforcement for LoRA-Assisted On-Premise LLM Deployment",
+      "reason": "限られたGPU上で複数LoRAサービスを動かすとLoRA演算の競合とbatch schedulerの硬直性がSLO違反を生む。HALOはGPU SMを分割してbaseとLoRA計算を重ね、要求ごとの残りslackに応じて緊急要求を優先し余剰予算でtraffic shapingする。著者要旨は既存方式よりthroughputを上げSLO違反を抑えると報告するが具体的改善率は未記載。複数LoRAのオンプレサービング方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.04956",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26131",
+      "identity_tokens": [
+        "id:arXiv:2610.26131",
+        "id:DOI:10.48550/arXiv.2610.26131"
+      ],
+      "title": "A Hybrid GPU and Processing-Near-Memory Architecture with Shared DRAM for Efficient Prefill-Decode Disaggregation",
+      "reason": "prefillはGPU計算、decodeはメモリ帯域を主に使うという資源非対称性に対し、HBM logic dieへ軽量PNMを置き共有HBM interfaceを通じてdecode全体をPNMで実行するDuoPDを提案する。GPU prefillとPNM decodeを同時に走らせ、TSV帯域共有と階層データ配置を設計する。著者要旨はserver規模モデルで通常PD分離比end-to-end throughput最大2.23倍と報告。GPU/near-memory協調推論architectureとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.26131",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30206",
+      "identity_tokens": [
+        "id:arXiv:2610.30206",
+        "id:DOI:10.48550/arXiv.2610.30206"
+      ],
+      "title": "MoEZip: Routing-Aware KV Cache Compression for Sparse Mixture-of-Experts LLMs",
+      "reason": "MoEではKV追い出しがattentionだけでなく次tokenのexpert routingも変化させ得る点に着目し、routing分布のFisher情報から摂動感度を評価してattention重要度と統合するMoEZipを提案する。著者要旨はKV保持率10%でLongBench/RULERの従来最高方式比平均+24/+20点、score比2.3/4.9倍と報告。MoEの品質を保つKV圧縮としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.30206",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:07:47+09:00",
+      "last_checked_at": "2026-11-02T09:07:47+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
