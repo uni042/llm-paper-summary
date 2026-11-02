@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0125-scheduled-chat-30/r01",
+  "reference_main_sha": "0319dfd76c0cf50d83db309ba01e9cd48d3ffb69",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41672",
+      "identity_tokens": [
+        "arXiv:2610.41672"
+      ],
+      "title": "Understanding the Energy Cost of Quantized Agents on Shared GPUs",
+      "reason": "A100 40/80GBで複数agentがGPUとcacheを共有する際の量子化・同時実行数・完了task当たりエネルギーを計測。4 agentでcache競合がない条件では4bit重み/16bit活性化は8bit重み/8bit活性化より同一callのエネルギー10〜25%減だが、実際のagent runでは追加作業と完了減少で検証済み完了当たり49%増。40GBでcache競合がある16 agentでは4bitの利点があり、cache制限は完了当たり34%増。LLM servingのprecision、cache容量、admissionを実測しておりaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41672",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.PF/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.42030",
+      "identity_tokens": [
+        "arXiv:2610.42030"
+      ],
+      "title": "There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?",
+      "reason": "既存の事前学習モデルにlayer loopを追加する際のパラメータ数・メモリ不変とtoken当たりFLOPs増加を等パラメータ/等FLOPs基準で比較。Qwen3/Qwen3.5の0.8B〜9Bでは0.8Bのみ両基準を上回り、4B/9Bは非loopモデルにも劣る。推論計算量対品質の負の結果として設計判断に有用だが、serving実測のtoken/sやlatency改善を提案するものではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.42030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41822",
+      "identity_tokens": [
+        "arXiv:2610.41822"
+      ],
+      "title": "Trainable Vector Quantization for Large Language Models",
+      "reason": "LLM重みのvector quantizationをstraight-through推定とtrainable latent weightで勾配最適化し、block単位蒸留で低bit時の品質低下を回復するTVQ。複数のVQ方式に適用し、LLaMA2-70Bで2bit量子化時にQA benchmark精度低下約1%と報告。重みの圧縮によるモデル常駐メモリ削減を直接対象とするためaccept。ただしabstractは実測decode速度やメモリ実数を提示せず、品質指標を主に報告している点は留保。",
+      "source_url": "https://arxiv.org/abs/2610.41822",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41366",
+      "identity_tokens": [
+        "arXiv:2610.41366"
+      ],
+      "title": "What We Keep of What We Forget: Replacement Operators and Routing Semantics in Training-Free MoE Expert Pruning",
+      "reason": "MoEのtraining-free expert pruningで除去expertの代替演算とrouter gateのscaleを分離して比較。OLMoE、DeepSeek-V2-Lite、Moonlight等でsurvivor gateの再正規化だけで0.8〜8.5pt品質悪化する条件を示す。50% pruning時の低rank tilted noviceは定数代替比でOLMoE +3.45pt、Moonlight +1.37pt、追加parameter 1.2〜1.8%と報告。expert数削減による推論重み容量と経路の直接設計問題なのでaccept。ただしabstractにthroughput/VRAM実測値はない。",
+      "source_url": "https://arxiv.org/abs/2610.41366",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41661",
+      "identity_tokens": [
+        "arXiv:2610.41661"
+      ],
+      "title": "When Steering Shifts Discourse: Identifying and Intervening on Discourse-Level Changes due to Activation Steering in LLMs",
+      "reason": "activation steeringが文体・根拠提示・曖昧性に生む副作用を測定し、補償vectorで意図しない言説変化の約78%を回復しつつ目的のsteering挙動を約93%保持すると報告。inference-timeという語は生成時の挙動制御を意味し、計算削減・GPUメモリ・serving latencyの評価はないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41661",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41698",
+      "identity_tokens": [
+        "arXiv:2610.41698"
+      ],
+      "title": "Precision--Recall Trade-off on the Inference Level for LLMs in Grammatical Error Correction",
+      "reason": "文法誤り訂正でrepetition penaltyを変えることにより適合率と再現率のトレードオフを制御するdecode設定の実験。inference-levelは出力品質の制御を意味し、投機decodeやkernel最適化、token/s・TTFTの改善ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41698",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.42000",
+      "identity_tokens": [
+        "arXiv:2610.42000"
+      ],
+      "title": "Less Loss, Fixed Weights: Logit Corrections for Forgetting",
+      "reason": "instruction fine-tuning後の忘却による言語モデルloss悪化を固定vocabulary biasとtemperatureで補正。14組の1B〜7Bモデルでbias単独の回復推定は10%未満、temperature併用で最大36%と報告。生成logit補正によるモデル品質回復であり、計算・メモリ・サービング効率の改善は扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.42000",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40934",
+      "identity_tokens": [
+        "arXiv:2610.40934"
+      ],
+      "title": "A Theoretical Framework for Understanding and Building \"Any-task inference\" Capable Foundation Models",
+      "reason": "any-task inferenceをtaskと入力からlabel予測を返すzero-shot的能力として形式定義し、encoder/model/decoder分解と誤差項を導く理論研究。ここでのinferenceはタスク予測の意味であり、LLM推論ランタイム、計算量、KV cache、throughputを扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40934",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41743",
+      "identity_tokens": [
+        "arXiv:2610.41743"
+      ],
+      "title": "Task Vectors Can Be Linearly Decomposed into Interpretable and Controllable Components",
+      "reason": "LLM task vectorをTask Recognition、Task Learning、残差に分解し、Bayesian optimizationでsteeringの分類性能を改善。主眼は表現解釈と出力制御で、実行計算量・token/s・メモリ・推論エンジンの改善は示されないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41743",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41391",
+      "identity_tokens": [
+        "arXiv:2610.41391"
+      ],
+      "title": "Comparative Evaluation of LLM-Based Review Paradigms for Academic Paper Quality Assessment",
+      "reason": "LLM査読の5方式、3入力表現、3モデルを比較。直接絶対評価は比較ランキングと同等の人間評価との順位相関を示し、基準率を揃えた補正後はElo比較方式より高い一致をAPI call数24%で達成。LLM workflowのcall削減と費用効率には関連するが、LLMサービングエンジン自体のTTFT、throughput、GPUメモリは評価せず、学術査読品質が主目的のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41391",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T01:30:05+09:00",
+      "last_checked_at": "2026-11-03T01:30:05+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
