@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r03",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.39931",
+      "identity_tokens": [
+        "id:arXiv:2610.39931",
+        "id:DOI:10.48550/arXiv.2610.39931"
+      ],
+      "title": "Low-Bit GDN Recurrent-State Quantization: Global Gradient-aware Allocation and Pure-Write Sliding Windows",
+      "reason": "Qwen3.5系のgated delta recurrent stateを低bit化する際の長い推論出力と誤差蓄積に対し、gradient感度でhead別bit幅を割り当てるGGAと最近の書込みをFP8で保持して後で低bit状態へ統合するPure-Write窓を提案。一次要旨はQwen3.5-4B/9Bの7課題でSTEPQuant@4よりGGA+PW-S8がmacro scoreを38.39/41.21ポイント改善し、冗長生成も減らすと報告。ハイブリッドLLMの推論stateメモリ削減としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.39931",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.14745",
+      "identity_tokens": [
+        "id:arXiv:2610.14745",
+        "id:DOI:10.48550/arXiv.2610.14745"
+      ],
+      "title": "SAGE: Pushing 2-Bit Vector-Quantized LLMs toward Real-World Usability",
+      "reason": "重みの2bit vector quantizationで感度の高いchannelを保護するEnergy-Stratified Groupingと、matrix別に方向codebook/半径精度へbit予算を割り当てるAdaptive Bit Splitを提案。一次要旨はQwen3-30B-A3BでBF16平均scoreの95.3%を維持し、専用CUDA kernelでFP16比最大2.55倍の非streaming end-to-end高速化を報告。MoEを含むLLMの実用低bit推論としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.14745",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.27699",
+      "identity_tokens": [
+        "id:arXiv:2610.27699",
+        "id:DOI:10.48550/arXiv.2610.27699"
+      ],
+      "title": "E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks",
+      "reason": "E8格子を暗黙の8次元codebookとして用い、明示codebook探索を省いた2bit QATを提案。2bit本体と疎な拡張符号で格子点を保持する。一次要旨はQwen3.6-35B-A3Bで4課題平均が全精度と同等、表現memoryを80%削減し、各形式の最大可能batchでBF16比1.97倍のdecode throughputを報告。学習手法を用いるが成果はMoE LLM推論の2bit重み圧縮・decode高速化に直接適用するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.27699",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07026",
+      "identity_tokens": [
+        "id:arXiv:2610.07026",
+        "id:DOI:10.48550/arXiv.2610.07026"
+      ],
+      "title": "Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking",
+      "reason": "Jetson Orin NXとRaspberry Pi 5で2～5B instruction LLMを完全offline動作させるvoice-first stackと量子化benchmarkを提示。一次要旨は4形式の量子化を比較し、Q4KMが精度と容量の妥協点、Jetson上のgemma-4-E2B-itで28.8 token/s、Pi5上では3モデルが16GB memory制約内に収まると報告。ASRも含むがdecode throughput・chat latency・memory・powerを測る端末内LLM推論の実証としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07026",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21257",
+      "identity_tokens": [
+        "id:arXiv:2610.21257",
+        "id:DOI:10.48550/arXiv.2610.21257"
+      ],
+      "title": "Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference",
+      "reason": "base-√2の4bit重み量子化格子と整数activationを組み合わせ、静的channel scaleへ校正時補正を吸収し、1加算器による√2近似で整数shift-add演算を実現するFPoTを提案。一次要旨はLlama-3-8BのW4A4で通常PoT比zero-shot commonsense scoreを8.72%改善、uniform integer baseline比低下0.4ポイントと報告。専用PEのゲート削減を狙うLLM低bit推論のhardware/software co-designとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21257",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17436",
+      "identity_tokens": [
+        "id:arXiv:2610.17436",
+        "id:DOI:10.48550/arXiv.2610.17436"
+      ],
+      "title": "SchemaWeaver: Accelerating On-Device Mobile Agentic AI via Schema-Guided Parallel LLM Decoding",
+      "reason": "スマートフォン上のtool-calling LLMの逐次decodeを、tool schemaの制約から複数tokenを同一passで生成するschema-guided parallel decodingへ変換する。モデル再学習や重み変更を必要としない。一次要旨は複数のmobile SoCとLLM familyで従来手法比tool-call latency最大3.9倍短縮を報告。帯域制約の強い端末内LLM復号を直接高速化するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.26660",
+      "identity_tokens": [
+        "id:arXiv:2610.26660",
+        "id:DOI:10.48550/arXiv.2610.26660"
+      ],
+      "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
+      "reason": "GUI agentの連続prompt間で共通部分を再利用するため、hybrid linear attentionのrecurrent stateを入力分岐位置でcheckpointし、NPU matrix unit上のprefillと短いtailでの投機rollback state生成を両立するTandemを提案。llama.cppに実装し、一次要旨はSnapdragon 8 Eliteでtext画面説明のstep latency30%、screenshotで16%、text step energy33%削減、待機電力0.76→0.22Wを報告。端末内agentic LLMの状態再利用・NPU推論runtimeとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.26660",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07086",
+      "identity_tokens": [
+        "id:arXiv:2610.07086",
+        "id:DOI:10.48550/arXiv.2610.07086"
+      ],
+      "title": "SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding",
+      "reason": "複数tool callや引数fieldを逐次生成する遅延を減らすため、将来slotの値を並列にdraftし、実際の出力prefixに対してtarget modelがまとめて検証し、誤ったtokenだけ修正するSchemaFillを提案。一次要旨はGlaive/BFCLでautoregressive decode比最大4.05倍のend-to-end throughputを報告。tool schemaを利用した厳密検証付きLLM推論高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07086",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20392",
+      "identity_tokens": [
+        "id:arXiv:2610.20392",
+        "id:DOI:10.48550/arXiv.2610.20392"
+      ],
+      "title": "FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding",
+      "reason": "短文脈で学習した投機drafterの長文脈劣化に対し、近傍の正確な位置を維持し遠方tokenを同一位置のfar memoryとして扱うtraining-free FOLDを提案。遠方memory内attentionを鋭くし、局所窓との相対重みを別制御する。一次要旨は6 target-drafter組、最大256K tokenのbenchmarkで最良条件の自回帰比speedupを2.08倍から4.22倍へ伸ばしたと報告。長文脈LLMの投機復号の直接的改善としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.20392",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23455",
+      "identity_tokens": [
+        "id:arXiv:2610.23455",
+        "id:DOI:10.48550/arXiv.2610.23455"
+      ],
+      "title": "HydraLLM: Adaptive Width Slicing for Elastic Text and Vision-Language Models",
+      "reason": "MQA attention head数を変えるとembedding・attention・FFN・出力headの有効幅も連動するnested subnetworkを単一重みから構成し、重要度順reorderと蒸留付きelastic訓練で複数推論予算に対応するHydraLLMを提案。一次要旨は25%のheadだけを使う場合にfull-width比token generation throughputを75.3%向上と報告。LLM/VLMの端末・GPU資源に応じた推論幅制御としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23455",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:11:21+09:00",
+      "last_checked_at": "2026-11-02T14:11:21+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
