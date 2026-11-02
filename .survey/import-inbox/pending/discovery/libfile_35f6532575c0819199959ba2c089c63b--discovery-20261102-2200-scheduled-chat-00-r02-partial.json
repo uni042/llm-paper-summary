@@ -1,0 +1,46 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2200-scheduled-chat-00/r02",
+  "reference_main_sha": "d89bb8b8f78df007f72980015082cb445716244d",
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41040",
+      "identity_tokens": [
+        "arXiv:2610.41040"
+      ],
+      "title": "Capability-Grounded Agentic Planning",
+      "reason": "agentのtool catalogをPDDLへ決定的に変換し、LLMが要求をgoalへ変換した後、古典プランナが実行可能なtool呼出し計画を作る。実行中の引数根拠と検証も制約し、ToolSandbox等で標準tool-calling agent比最大28.9ポイントの成功率改善。試行錯誤的なLLM呼出しの抑制につながり得るが、一次要旨にLLM呼出し回数・推論時間・費用の実測削減はなく、主評価はタスク成功率のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41040",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:01:26+09:00",
+      "last_checked_at": "2026-11-02T22:01:26+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40939",
+      "identity_tokens": [
+        "arXiv:2610.40939"
+      ],
+      "title": "The First Few Tokens Matter: Understanding Chain-of-Thought Controllability",
+      "reason": "推論冒頭のCoT tokenにおけるentropy collapseを調べ、最初の1 tokenをprefillする方法と頻出開始tokenを禁止する方法でCoTの内容制御率を34〜41ポイント改善。推論時のtoken介入を扱うが、狙いはCoT監視可能性・生成制御であり、デコード高速化、計算削減、メモリ管理、servingの新規技術を示すものではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40939",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T22:01:26+09:00",
+      "last_checked_at": "2026-11-02T22:01:26+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_duplicate_screen"
+    }
+  ]
+}
