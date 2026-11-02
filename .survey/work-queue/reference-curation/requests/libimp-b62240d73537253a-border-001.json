@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "request_id": "libimp-b62240d73537253a-border-001",
+  "operation": "mark_borderline",
+  "canonical_id": "arXiv:2610.28096",
+  "reason": "KPageは3D video Transformerの部分充填blockを論理境界をまたいで16行単位のKV pageへ詰め直し、HBMに再配置テンソルを実体化せずにtileを埋める。NVIDIA Block-Sparse Attention比でforward kernel幾何平均1.77倍、部分blockを含む3D layoutで2.29倍を報告。疎注意カーネルの設計は推論系統に関連するが、主要評価は動画TransformerでありLLMサービングそのものを対象としないためborderline。",
+  "title": "KPage: Cross-Block Page Compaction for Hardware-Efficient Sparse Attention",
+  "identity_tokens": [
+    "id:arXiv:2610.28096",
+    "id:DOI:10.48550/arXiv.2610.28096"
+  ],
+  "linked_from": [],
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-b62240d73537",
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false
+}
