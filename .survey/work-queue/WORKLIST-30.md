@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-02T09:42:52+00:00`
+Generated: `2026-11-02T10:53:53+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -387,7 +387,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 304 | 12 | 4 | 8 | arXiv:2505.15252 | An Efficient Private GPT Never Autoregressively Decodes | 2025-05-21 | International Conference on Machine Learning | 2 | 8 | 99-other-inference-systems, Speculative Decoding, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://arxiv.org/abs/2505.15252) |
 | 305 | 10 | 4 | 8 | arXiv:2609.33051 | SketchSSM: Write to the Full State, Read from a Compact Sketch | 2026-09-27 |  | 0 | 8 | LLM Serving / Scheduling / Disaggregation, Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。 | [source](https://arxiv.org/abs/2609.33051) |
 | 306 | 10 | 4 | 7 | arXiv:2610.30791 | Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving | 2026-10-22 |  | 0 | 7 | 10-kv-cache-offload-recomputation, 10-kv-キャッシュ-オフロード-recomputation, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, KVキャッシュ階層メモリ・SSD/HBFオフロード・フラッシュ特性評価, hardware-accelerators, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2610.30791) |
-| 307 | 101 | 4 | 7 | arXiv:2605.11202 | Continuous Discovery of Vulnerabilities in LLM Serving Systems with Fuzzing | 2026-05-11 | arXiv.org | 1 | 7 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, MoE inference systems / expert parallelism / model compression / knowledge distillation, Speculative Decoding, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2605.11202) |
+| 307 | 102 | 4 | 7 | arXiv:2605.11202 | Continuous Discovery of Vulnerabilities in LLM Serving Systems with Fuzzing | 2026-05-11 | arXiv.org | 2 | 7 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, MoE inference systems / expert parallelism / model compression / knowledge distillation, Speculative Decoding, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2605.11202) |
 | 308 | 10 | 4 | 7 | arXiv:2605.11232 | Rethinking LLMOps for Fraud and AML: Building a Compliance-Grade LLM Serving Stack | 2026-05-11 | arXiv.org | 0 | 7 | LLM Serving / Scheduling / Disaggregation, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2605.11232) |
 | 309 | 10 | 4 | 7 | DOI:10.1109/EITCE70137.2026.11634352 | Adapting FlexLLMGen to Qwen3 Dense and Mixture-of-Experts Models | 2026-06-01 | 2026 10th International Conference on Electronic Information Technology and Computer Engineering (EITCE) | 0 | 7 | LLM Serving / Scheduling / Disaggregation, MoE offloading / high-throughput inference / module-based batching, MoE専門家オフロード / 混合精度 / 専門家キャッシュ, Offload / Hierarchical Memory, オフロード／階層メモリ | [source](https://doi.org/10.1109/EITCE70137.2026.11634352) |
 | 310 | 102 | 4 | 7 | arXiv:2604.15464 | Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU | 2026-04-16 | arXiv.org | 2 | 7 | 07-kv-cache-optimization-compression, LLM Serving / Scheduling / Disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.15464) |
