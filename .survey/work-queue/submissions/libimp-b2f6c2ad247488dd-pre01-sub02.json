@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.19819",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of Retrieval-Augmented Generation (RAG) and long-context LLMs has shifted the computational burden toward the prefill phase---the initial stage where the model processes all input tokens in parallel before generating a response---yet its energy impact remains poorly characterised. We investigate the contradiction between massive hardware-level power spikes and the sub-linear marginal cost of input tokens reported in system-level studies. Through high-resolution telemetry of Llama-3.1 and Qwen-2 models on NVIDIA A100 hardware, we identify the efficiency threshold where $O(n^2)$ attention complexity overcomes GPU parallelisation. Our results quantify how optimised memory orchestration (PagedAttention) delays this scaling bottleneck across three orders of context scaling, yielding up to an 8.9$\\times$ energy efficiency advantage at 112,000 tokens compared to standard baselines. Furthermore, we characterise the energy disparity between input and output tokens, demonstrating that optimised serving (vLLM) causes this ratio to narrow (from $\\approx$850$\\times$ to 750$\\times$) as context scales due to high decode efficiency, whereas unoptimised baselines show a much smaller, roughly constant gap ($\\approx$150--230$\\times$) because their prefill is itself expensive. This work establishes context-scaling laws that differentiate engine-level optimisations from inherent model constraints, providing an empirical framework for sustainable LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878"
+      ],
+      "semantic_scholar_id": "ac97f288e45548f84026bacb4fa4b21ccabc2878",
+      "canonical_id": "arXiv:2610.19819",
+      "arxiv_id": "2610.19819",
+      "authors": [
+        "Boris Ruf",
+        "Marcin Detyniecki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RAGや長文脈で増えるprefill入力tokenのエネルギーを、Llama-3.1/Qwen-2とNVIDIA A100の高分解能電力計測で特徴付ける。PagedAttentionを用いた最適化サービングは112K tokenで標準方式比最大8.9倍のエネルギー効率を示し、入力と出力tokenのエネルギー比もengineで変化すると報告。推論時のprefill・decodeエネルギーと実装差を直接計測しているためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Prism Attention: Proposal-Refined Index Sharing Mechanism for Efficient LLMs Inference",
+      "source_url": "https://arxiv.org/abs/2610.22985",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding in large language models (LLMs) is increasingly bottlenecked by the memory and computation required to attend over an ever-growing Key-Value (KV) cache at each autoregressive step. Although token-level sparse attention reduces this burden by restricting computation to a small subset of relevant past tokens, its practical gains are often offset by repeatedly recomputing layer-wise sparse indices as the context grows. A common remedy is to share sparse indices across layers by computing them only at designated anchor layers, but such static reuse ignores the layer-wise evolution of attention patterns, causing the reused indices to progressively deviate from the layer-specific optima and incur substantial attention loss. By revisiting cross-layer sparsity from the perspective of attention dynamics, we find that inter-layer salient token shift is highly localized: although the exact top-$\\kappa$ indices differ across layers, the core high-attention tokens remain stable, with changes concentrated near the expanded boundary of previously selected regions. Motivated by this, we propose Prism Attention, a proposal-refined sparse attention framework. It replaces rigid cross-layer index reuse with a coarse-to-fine strategy, preserving layer-wise adaptability while retaining the efficiency benefits of cross-layer sharing. Extensive experiments show that Prism Attention achieves state-of-the-art performance among mainstream sparse attention methods on both reasoning and long-context benchmarks, while attaining a $3.4\\times$ end-to-end decoding speedup over FlashAttention at 128K context length.",
+      "identifiers": [
+        "SemanticScholar:e0d3f6fd574d906f44edaacc1241127f64851ce6"
+      ],
+      "semantic_scholar_id": "e0d3f6fd574d906f44edaacc1241127f64851ce6",
+      "canonical_id": "arXiv:2610.22985",
+      "arxiv_id": "2610.22985",
+      "authors": [
+        "Zhen-Xu Tian",
+        "Ke-Bin Liu",
+        "Zheng-Wu Yang",
+        "Yi Su",
+        "Qing-Qing Dang",
+        "Yan-Gang Sha",
+        "Kai-Peng Deng",
+        "Dian-Hai Yu",
+        "Yan-Jun Ma",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "層を跨いで疎attention indexを再利用すると重要token集合がずれる問題に対し、anchor層の候補indexを後続層で局所的に精緻化するPrism Attentionを提案。選択tokenの中心は安定し変化が境界付近に集中するという観測に基づき、層別適応性とindex再計算削減を両立する。一次要旨は128K文脈でFlashAttention比3.4倍のend-to-end decode高速化と推論・長文脈benchmarkでの精度維持を報告。LLM sparse attentionの直接的な推論高速化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Less is more: learning what to profile for GPU kernel optimization",
+      "source_url": "https://arxiv.org/abs/2610.36576",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have recently shown strong potential for automatically optimizing GPU kernels, yet their effectiveness depends critically on the hardware information available to the kernel optimization model. Existing systems typically rely on predefined profiling strategies, leaving what to profile largely outside the optimization process. We show that effective profiling is not simply about collecting more information: increasing the number of profiling metrics does not monotonically improve kernel optimization, while the most useful profiling information varies across kernels. Our theoretical analysis further shows that, under such heterogeneous profiling utility, kernel-conditioned selection can outperform any single fixed profiling configuration. Motivated by this observation, we propose AutoProfiler, a feedback-driven framework for learning a deterministic profiling tree from optimization feedback. The tree is iteratively refined through REWRITE and SPLIT operations, with an LLM generating candidate modifications and empirical evaluation determining their acceptance. Once constructed, the tree quickly gathers the required profiling information for any kernel, allowing the LLM rewriter to be invoked only once. Experiments on KernelBench show that our approach improves kernel optimization over fixed profiling configurations under constrained profiling budgets. These results suggest that hardware profiling should evolve from static metric collection toward profiling reasoning, making profiling itself a new dimension for improving kernel optimization. The codes are available at https://github.com/Satissss/AutoProfiler.",
+      "identifiers": [
+        "SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6"
+      ],
+      "semantic_scholar_id": "1b68c0c28d7cdea39255d6c3a493da21474123d6",
+      "canonical_id": "arXiv:2610.36576",
+      "arxiv_id": "2610.36576",
+      "authors": [
+        "Yi-Han Wang",
+        "Pei-Yu Liu",
+        "Run-Yu Chen",
+        "Wei Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMによるGPU kernel書換えに必要な性能カウンタを固定せず、kernel別にREWRITE/SPLITで決定木を学習してprofiling項目を選択するAutoProfilerを提案。構築後はkernelごとの最小限のprofile情報を取得してLLM rewriterを一度呼ぶ設計。一次要旨はKernelBenchで固定profiling構成より制約予算下のkernel最適化が改善したと報告。推論kernelを含むGPU実装最適化の直接的基盤としてaccept（LLMサービングでのend-to-end評価は要確認）。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+      "source_url": "https://arxiv.org/abs/2610.39418",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear recurrences are emerging as practical alternatives to softmax attention in large language models, appearing in both standalone and hybrid architectures. However, despite their rapid emergence, low-precision inference remains much less developed for these models than for softmax attention. During prefill, chunkwise-parallel algorithms cast much of the recurrence as dense matrix multiplications, suggesting a natural path to low-precision execution. Simply quantizing these operations in their native form, however, can be fragile. In this work, we identify functional invariances that preserve the full-precision computation while making the operands more amenable to quantization. Building on this observation, we introduce LinQuant, a framework for low-precision recurrent prefill based on seven such invariances, including rotations, diagonal rescalings, and alternative placements of recurrent decay and write factors. We derive when these transformations remain valid across common recurrence families spanning linear, gated, and delta-rule updates, and show that they provide complementary degrees of freedom for improving low-precision accuracy. Finally, we translate this framework to production by augmenting SSDi8, an existing low-precision prefill pipeline for Mamba-2, with the applicable invariances. LinQuant improves perplexity at matched latency on Mamba-2 1.3B, 2.7B, and 8B and Nemotron-H 8B, demonstrating the practical utility of invariance-based quantization for recurrent models.",
+      "identifiers": [
+        "SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77"
+      ],
+      "semantic_scholar_id": "8f81b4b69923a160adbf5657819f20fc72fc3b77",
+      "canonical_id": "arXiv:2610.39418",
+      "arxiv_id": "2610.39418",
+      "authors": [
+        "Neehal Tumma",
+        "Philipp Nazari",
+        "Rohan Cherukuri",
+        "Daniela Rus",
+        "T. Konstantin Rusch"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形・gated・delta-ruleの再帰演算で、計算結果を保存する回転・対角scale・decay/write配置変更など7種の不変変換を導出し、低精度prefillの数値誤差を低減する。既存SSDi8のMamba-2 prefillへ適用し、一次要旨はMamba-2 1.3B/2.7B/8BとNemotron-H 8Bで同等latency時のperplexity改善を報告。ハイブリッドLLMの推論量子化・prefill kernelに直接関係するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b2f6c2ad2474",
+    "round": "libimp-b2f6c2ad247488dd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b2f6c2ad247488dd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b2f6c2ad247488dd-pre01.json",
+    "receipt": "sha256:80957c7731c135a81d1f9b850c4a037078a99e85575d9ee1c3fa31081aa31660"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b2f6c2ad2474",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

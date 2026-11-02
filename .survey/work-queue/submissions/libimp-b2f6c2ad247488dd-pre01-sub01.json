@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+      "source_url": "https://arxiv.org/abs/2610.22543",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) promise parallel text generation, but in practice face an unresolved speed-quality trade-off. Exact decoding fills in only one masked position per model pass, while faster multi-token decoding schemes are lossy. Speculative decoding is the standard lossless acceleration for autoregressive models. However, it does not transfer directly to DLMs, which must choose both what to generate and where. We show that this order is the missing piece: the model's own predictions from the previous pass already give the right token at 92-100% of positions, but not which position comes next. Based on this observation, we introduce Speculating Positions Order Trajectory (SPOT), which learns to predict this order. A 0.62M-parameter model reads only the target's output distributions and proposes a tree of candidate continuations, and the target verifies all of them in a single pass by checking whether each equals its own next state. On the verification side, our analysis shows that prior block-diffusion verification approaches either assume $T=0$ or a sequential proposal interface. To support tree-based speculation at any temperature, we propose using coupled-noise match verification for diffusion blocks, following shared-Gumbel-noise coupling approaches. Our comprehensive experiments show that SPOT cuts target passes by up to 6.8x and reaches up to 3.2x the throughput of standard decoding, beating the calibrated and training-free drafting baselines in every task and budget at $T=0$ and $T=1$. In addition, we show that the learned drafter transfers across models, demonstrating successful transfer across six different DLMs. Project page: https://eliezer318.github.io/SPOT-dLLM/",
+      "identifiers": [
+        "SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e"
+      ],
+      "semantic_scholar_id": "53fabe548469afe2e36c742cc83c76db3ac0b32e",
+      "canonical_id": "arXiv:2610.22543",
+      "arxiv_id": "2610.22543",
+      "authors": [
+        "Eliezer Shlomi",
+        "Eliron Rahimi",
+        "Avi Mendelson",
+        "Chaim Baskin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルの投機復号で、tokenだけでなく確定させる位置の順序を予測する0.62MパラメータのSPOT drafterを提案。target出力分布から位置順序と候補木を生成し、共有Gumbel雑音を用いたstate一致で厳密検証する。一次要旨はSDAR-8Bでtarget実行回数最大6.8倍削減、標準復号比最大3.4倍throughput、SPOT-Setsで閾値復号比平均59%増を報告。生成分布を維持する拡散LLM推論高速化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
+      "source_url": "https://arxiv.org/abs/2610.04277",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "New AI accelerators arrive before the kernels that make them fast, because peak kernel performance requires architecture-specific expertise in operand pipelines and data-movement techniques. Coding agents can now write, compile, and tune kernels on their own, so they could greatly accelerate kernel development and optimization. What agents produce depends on the interfaces they are given. These interfaces may expose a machine's raw capabilities or encode the known-good methods for exploiting its hardware features efficiently. We test the performance impact of these two interfaces on Intel GPUs through controlled experiments with three coding models on three kernels. With raw SYCL and execution feedback, Opus 4.8, the strongest of the three models tested, writes a single-GPU GEMM kernel reaching only 57.5% of Intel's tuned oneDNN library. We present SyclKittens, a hardware-aware tile programming model for Intel GPUs that encodes these known-good methods, so its operations place operands in matrix-engine layouts, prefetch through the L1 cache, and communicate over the fabric that links GPU stacks into a node. With SyclKittens under the same agent, task, and feedback budget, the agent reaches 82.1%, showing that encoded methods turn hardware capabilities into performance. Workload-specific policies stay programmable, and engineers and agents jointly refine these schedules in SyclKittens to build a kernel suite that reaches ~96% of oneDNN in geometric mean across GEMM shapes. The suite runs Llama-3.1-8B inference 1.59x faster than torch.compile on one GPU and up to 2.91x faster than a matched multi-GPU decode path on Intel's oneCCL. SyclKittens is open source and available at https://github.com/intel/SyclKittens.",
+      "identifiers": [
+        "SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad"
+      ],
+      "semantic_scholar_id": "70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+      "canonical_id": "arXiv:2610.04277",
+      "arxiv_id": "2610.04277",
+      "authors": [
+        "Ye-Hong Jiang",
+        "Sheng Chen",
+        "Fang-Wen Fu",
+        "Yen-Kuang Chen",
+        "Xin-Min Tian",
+        "Stuart H. Sul",
+        "Simran Arora"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Intel GPUのmatrix-engineレイアウト、L1 prefetch、GPU stack間通信をtile APIへ埋め込んだSyclKittensを提案し、kernel実装の探索空間を構造化する。一次要旨はGEMMでoneDNN比57.5%から82.1%へ、手動調整を含むkernel suiteで96%へ到達し、Llama-3.1-8B推論がtorch.compile比単一GPUで1.59倍、複数GPU decodeでoneCCL比最大2.91倍高速と報告。LLM推論kernelの具体的runtime/実装としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
+      "source_url": "https://arxiv.org/abs/2610.04473",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving an LLM means setting dozens of inference-time knobs, from per-layer KV retention to per-layer expert counts. Practice sets them with mechanism-specific heuristics that return a single operating point and do not scale to layer-wise search spaces. We recast inference configuration as constrained multi-objective black-box optimization and build InferOpt, a reusable search framework that requires only variable bounds, a deterministic resource cost, and an evaluation hook. InferOpt searches on a frozen sampled proxy set, rejects over-budget candidates before any model call, tightens the budget adaptively, and re-validates Pareto representatives on full-scale dataset. One pipeline covers a 28-dimensional continuous KV space (Qwen2.5-7B) and a 26-dimensional discrete MoE space (DeepSeek-V2-Lite). On KV, post-prefill pruning cuts the 16K cache by 64.4% and TPOT by 22.9--48.5%, and the searched layer-wise budget by InferOpt beats a matched uniform budget by 7.3% and 14.0% of the Full KV reference points. On MoE, a searched top-k schedule by InferOpt removes 43.0% of routed token--expert pairs while staying within 0.59 points of the default, closer than the matched-budget baselines. Against Random Search, NSGA-II, and MOTPE, InferOpt leads on both spaces, taking the best proxy hypervolume and the lowest retention on KV and staying closest to the uncompressed reference at the lowest experts on MoE.",
+      "identifiers": [
+        "SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9"
+      ],
+      "semantic_scholar_id": "f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+      "canonical_id": "arXiv:2610.04473",
+      "arxiv_id": "2610.04473",
+      "authors": [
+        "Qi Chen",
+        "Ying-Ying Cheng",
+        "Zhao Sun",
+        "Li Zhou",
+        "Fan Zhang",
+        "Jie Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KV保持率の層別連続値とMoE expert数の層別離散値を共通の制約付き多目的black-box最適化で探索する。予算超過構成をモデル実行前に除外し、proxy集合で探索したPareto解を本評価で再検証する。一次要旨はQwen2.5-7Bの16K KVを64.4%削減しTPOTを22.9～48.5%短縮、DeepSeek-V2-Liteでtoken-expert対を43.0%削減したと報告。KV圧縮・MoE推論の具体的設定最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.08373",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Energy-efficient LLM serving requires minimizing serving GPU energy while meeting latency and throughput service-level objectives (SLOs). Attention--FFN disaggregation (AFD) enables separate resource allocation and operating controls for attention and expert computation, but their energy effects remain coupled through the execution pipeline. Realizing its energy-saving potential therefore requires navigating a hierarchical configuration space in which deployment structures constrain admissible controls and shape their end-to-end effects. Finding low-energy configurations that meet SLOs is challenging because physical evaluations are costly and only a small fraction of candidates can be measured. We present Energy-Oriented Configuration Optimization (ECO), which jointly searches deployment structures and their admissible operating controls under a limited measurement budget. ECO constructs a structure-aware energy prior from calibrated stage behavior and pipeline dependencies, then learns residual prediction errors with a Gaussian process. Its cost-aware constrained Bayesian optimization prioritizes measurements according to expected energy improvement while accounting for SLO feasibility, execution success, and evaluation cost, and returns the lowest-energy measured feasible configuration. Across all 16 scenarios on A6000 and A100 with Qwen and DeepSeek, ECO's frozen configurations, evaluated on disjoint requests, reduce serving energy by 40.5\\% and increase output token rate by 20.7\\% on average relative to baselines while meeting target SLOs. Across the 8 A6000 scenarios, its selected feasible energy averages 33.1\\% below generic constrained Bayesian optimization and 25.8\\% below genetic search.",
+      "identifiers": [
+        "SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012"
+      ],
+      "semantic_scholar_id": "ab020c3f5a77dfc49200de60e9c6dba675db6012",
+      "canonical_id": "arXiv:2610.08373",
+      "arxiv_id": "2610.08373",
+      "authors": [
+        "Qing-Yun Zou",
+        "Bin Gao",
+        "Zhuo-Bin Huang",
+        "Weng-Fai Wong",
+        "Tulika Mitra",
+        "Bing-Sheng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "AttentionとFFNを別GPU群に置くAFDサービングの配置・GPU動作周波数・電力制限を、パイプライン段階のエネルギー事前モデルとGaussian process残差補正を組み合わせて共同探索する。著者の一次要旨はA6000/A100、Qwen/DeepSeekの16条件で、固定した構成を別リクエストで評価し、既定構成比平均40.5%のエネルギー削減と20.7%の出力token率増加を報告。SLOを制約とする実推論サービング構成探索でありaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Joint Subspace Sparse Attention for Efficient Long-Context Decoding",
+      "source_url": "https://arxiv.org/abs/2610.19026",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces the KV-cache traffic that dominates long-context LLM decoding, but practical methods largely operate at coarse granularity. Token-level selection offers finer control, yet presents two challenges: low-dimensional scoring may lose query--key structure needed for accurate ranking, while gathering scattered selected tokens can offset the resulting latency benefit. We introduce Joint Subspace Sparse Attention (JSSA) to address both challenges. For selection quality, JSSA learns a shared low-dimensional query--key subspace by minimizing token-score preservation error. We upper-bound the resulting non-convex objective with a tractable marginal objective that admits a closed-form spectral solution; direct refinement of the exact objective provides no measurable improvement in the tested settings. For execution efficiency, we develop a gather-free token-level indexed-attention kernel that supports distinct per-KV-head selections under the standard grouped-query attention (GQA) KV-cache layout. Across standard GQA, hybrid sliding-window/global attention, and Multi-head Latent Attention (MLA) models, JSSA consistently remains close to full-KV accuracy while avoiding the substantial generation-length inflation and architecture-dependent failures observed with competing methods. On an NVIDIA B200 GPU, JSSA achieves up to $6.43\\times$ the decoding throughput of full-KV attention at 128K context. JSSA achieves reasoning accuracy comparable to model-native DSA without model training and reaches 96--99\\% of its decoding throughput even at 700B scale large models.",
+      "identifiers": [
+        "SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2"
+      ],
+      "semantic_scholar_id": "f517f8a0f32aafbf5e4d400ca45ddd24353e8be2",
+      "canonical_id": "arXiv:2610.19026",
+      "arxiv_id": "2610.19026",
+      "authors": [
+        "Jiwon Song",
+        "Yoon Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "長文脈decodeのtoken単位KV選択に対し、query/keyスコアを保つ共有低次元部分空間をspectral解で学習し、GQAのhead別選択をgather-free indexed attention kernelで実行するJSSAを提案。一次要旨はGQA/滑動窓/MLAでfull-KVに近い精度を保ち、B200の128K文脈でfull-KV比最大6.43倍decode throughputを報告。KV traffic削減とGPU kernelの共同設計としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b2f6c2ad2474",
+    "round": "libimp-b2f6c2ad247488dd-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b2f6c2ad247488dd-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b2f6c2ad247488dd-pre01.json",
+    "receipt": "sha256:80957c7731c135a81d1f9b850c4a037078a99e85575d9ee1c3fa31081aa31660"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b2f6c2ad2474",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

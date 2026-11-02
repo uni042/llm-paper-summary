@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Persistent Memory in Multi-Agent LLM Inference: What It Costs, What It Buys, and When You Can Tell",
+      "source_url": "https://arxiv.org/abs/2610.07782",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Decomposing long-context inference across cooperating agents bounds the active KV cache per call rather than total evidence, which matters when KV-cache memory binds. Many such systems add a persistent tier storing and recalling reasoning traces, usually validated by an ablation reporting an accuracy gain. We measure both on one three-tier agent architecture. Decomposition delivers: peak KV working set of 14.3 MiB per query against 35.5 and 35.3 MiB for single-pass and retrieval-augmented baselines. The persistent tier does not: across eight controlled dataset pairs at n=100 per arm it costs +0.368 MiB [+0.167, +0.590] of peak cache and produces no detectable accuracy change (+0.015, 95% CI [-0.011, +0.046]). We argue the null is structural: single-question benchmarks supply each item with its own evidence and score it independently, and correctness requires resetting stored traces between conditions, so recall has nothing informative to retrieve. Reaching it took four measurement corrections -- three inflating the apparent benefit, the fourth making an effect that size look resolvable -- none visible in the results table. We give the conditions an agent-memory ablation must satisfy and detection procedures that need no knowledge of the specific defect.",
+      "identifiers": [
+        "SemanticScholar:6085f30247c7db70bf119bb42c37fcfd01f0a8bb"
+      ],
+      "semantic_scholar_id": "6085f30247c7db70bf119bb42c37fcfd01f0a8bb",
+      "canonical_id": "arXiv:2610.07782",
+      "arxiv_id": "2610.07782",
+      "authors": [
+        "Ho-Chan Son",
+        "Kyu J. Han",
+        "Jaehan Koh",
+        "Xiao-Wu Dai",
+        "Wen-Lu Xu",
+        "Guang Cheng"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      },
+      "reason": "協調agentへ長文脈を分割するとcallごとのKV working setを小さくできる一方、persistent reasoning traceの追加効果は測定条件に依存することを検証。一次要旨は単一pass/RAGのpeak KV 35.5/35.3MiBに対し分割agentが14.3MiB、persistent tierはKVを0.368MiB増やし正解率の有意改善を示さなかったと報告。LLM agent推論のKV memoryと評価設計に直接関係する負の結果としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing",
+      "source_url": "https://arxiv.org/abs/2610.09778",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Reproducible benchmarking of Large Language Model (LLM) inference is challenging because repeated measurements can vary with execution and system state. We present the Sequential Isolation Methodology, a controlled benchmarking and regression-testing protocol designed to reduce between-run measurement variance while deliberately varying workload concurrency. We evaluate three representative open-source LLMs on an NVIDIA A100 80GB GPU using vLLM 0.9.1 across six context sizes and eight concurrency levels, with five repetitions per configuration. The final protocol reduces average coefficient of variation (CV) from 15.2% in the least controlled methodology stage to 2.2% under the final protocol; using CV computed across the five repetition-level median (P50) TTFT values per configuration, 113 of 144 configurations (78.5%) achieve CV below 3%. The measurements also show a marked latency transition between 200 and 500 concurrent users on the tested stack and descriptive differences in P99 latency across the three models. We additionally provide an explicit cost break-even model with sensitivity to API pricing. The protocol is intended to provide a stable reference for reproducible comparison and regression testing rather than to predict absolute behavior under uncontrolled production traffic. Infrastructure-as-Code and benchmark scripts support replication of the experimental environment.",
+      "identifiers": [
+        "SemanticScholar:d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57"
+      ],
+      "semantic_scholar_id": "d2346ff0d17a1189c1f8c3e0b095423f0c1e4e57",
+      "canonical_id": "arXiv:2610.09778",
+      "arxiv_id": "2610.09778",
+      "authors": [
+        "Arnold Olympio",
+        "Juan Manuel Servera Bondroit",
+        "Wael Abdelmalek",
+        "Guang Lu",
+        "João G. Carvalho"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM serving性能の繰返し計測でsystem stateと並列度によるばらつきを分離するSequential Isolation Methodologyを提案。A100/vLLM 0.9.1、3 LLM、6文脈長、8同時実行数で5回ずつ計測し、一次要旨はTTFT P50の反復CVを15.2%から2.2%へ低減、144設定中113でCV3%未満を報告。推論サービングbenchmarkの再現性向上としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "LatLM: Line-Parallel Language Models with Deferred Commitment",
+      "source_url": "https://arxiv.org/abs/2610.23951",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Line-parallel language models advance multiple lines concurrently for substantial speedups. However, frameworks like the Line-Coupled Language Model (LCLM) enforce a fixed commitment schedule across lines. Because dependencies vary within text, a fixed schedule cannot hold back a line whose prerequisites remain uncomputed, forcing premature commitments and cascading reasoning errors. To address this limitation, we introduce the Lattice Language Model (LatLM), making commitment schedules an adaptive decoding-time choice. Text occupies a 2D lattice where eligible frontier tokens are scored each round; a policy commits confident candidates while deferring unready ones for extended context. One forward pass supervises entire sampled trajectories via 2D causal masking, while an append-only cache retains exact states. At 482M parameters, we establish two findings. (1) LatLM matches a data- and capacity-matched autoregressive model on held-out text when decoded sequentially, while its adaptive parallel decoder achieves near-autoregressive accuracy on independent-line tasks using 25--41% as many decoding rounds. (2) When cross-line dependencies cause LCLM's fixed schedule to fail, deferred commitment substantially improves accuracy while retaining parallelism where dependencies permit. On mixed dependency chains, LatLM achieves 96.5% accuracy versus LCLM's 78.5%, using fewer than half the decoding rounds of the autoregressive baseline.",
+      "identifiers": [
+        "SemanticScholar:1ffcab6cf3ea98ad78ec31145b012a1985afd334"
+      ],
+      "semantic_scholar_id": "1ffcab6cf3ea98ad78ec31145b012a1985afd334",
+      "canonical_id": "arXiv:2610.23951",
+      "arxiv_id": "2610.23951",
+      "authors": [
+        "Shao-Rong Zhang",
+        "Shi-Yuan Li",
+        "Long-Xuan Yu",
+        "G. V. Steeg"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数lineを並列生成する言語モデルで固定commit scheduleが依存未解決のtokenを早期確定する問題に対し、2次元lattice上のfrontierを評価して確信度に応じcommitを遅延するLatLMを提案。append-only cacheで確定状態を保持し、2D causal maskで学習する。一次要旨は482Mモデルで独立line課題を自回帰比25～41%のround数で解き、混合依存鎖ではLCLM比精度96.5%対78.5%と報告。新規parallel LM decoding方式としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "The Price of Precision: A Calibrated Cost Model for Mixed-Precision LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.15629",
+      "year": 2026,
+      "published": "2026-10-11",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Choosing a mixed-precision configuration for large language model (LLM) serving trades speed against accuracy. Allocators that use average bit-width or a memory budget as a speed proxy can miss changes in the resource that limits execution. We argue that served speed can be limited by compute, weight loading, or key-value (KV) cache access, depending on the phase, batch size, and context length. A byte-based proxy does not capture all of these costs, so fewer bits do not always mean faster serving. To address this gap, we build a cost model that accounts for the binding resource and use it in two ways. First, as a predictor: given a configuration and operating point, it estimates serving latency using constants calibrated for the model, GPU, and serving stack. We evaluate its accuracy across three hardware classes. Second, as an allocator: we combine modeled time costs with measured per-tensor accuracy costs and use a dynamic program to select a configuration under a latency or accuracy budget. We compare its configurations against byte-aware and sensitivity-only allocation.",
+      "identifiers": [
+        "SemanticScholar:ac8770ba88aedabfce5d4f80313831dcc0f061ee"
+      ],
+      "semantic_scholar_id": "ac8770ba88aedabfce5d4f80313831dcc0f061ee",
+      "canonical_id": "arXiv:2610.15629",
+      "arxiv_id": "2610.15629",
+      "authors": [
+        "Mukund Athmaram",
+        "Manoj Rao",
+        "Liang Ma"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 22,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLMのmixed precisionで平均bit数を速度の代理とすると、prefill/decode・batch・文脈に応じたcompute/weight/KVの律速変化を見逃す。モデル・GPU・serving stackでcalibrateしたlatency modelとtensor別accuracy costを組み合わせ、動的計画法でlatency/精度予算下のbit配分を選ぶ。一次要旨は3 hardware classで予測精度とbyte-aware等との配分比較を報告。推論速度を意識した量子化設定の直接的最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "FreeSolo: Linear-time Sparse Attention with Zero-Shot Length Extrapolation",
+      "source_url": "https://arxiv.org/abs/2610.17191",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-time sequence models typically store long-context information in a recurrent state. A fixed-size state limits how much information can be stored, while hybrid architectures that add full attention for better recall incur quadratic sequence cost. Alternatively, sparse attention with continued pretraining (CPT) can extend the effective context length. Generalization beyond the trained length remains challenging, however, and CPT can be costly. We introduce FreeSolo, a native sparse attention mechanism with a short-range sliding window branch and a long-range branch that selects keypoint cells for direct token attention. Its linear-time variant, FS-L, learns to prune the prefix before query-dependent selection through short CPT. FS-B searches balanced trees with $O(N\\log^2 N)$ algorithmic cost including radix-sort construction. FreeSolo demonstrates better zero-shot length extrapolation than the baselines without long-context fine-tuning.",
+      "identifiers": [
+        "SemanticScholar:27114cce572b9563757ae1f863015cdec88cc484"
+      ],
+      "semantic_scholar_id": "27114cce572b9563757ae1f863015cdec88cc484",
+      "canonical_id": "arXiv:2610.17191",
+      "arxiv_id": "2610.17191",
+      "authors": [
+        "Ze-Kun Shi",
+        "Alastair J. A. Price"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "固定長recurrent stateの記憶容量とfull attentionの二次計算を両立するため、短距離sliding-window branchと長距離keypoint-cell選択branchを持つFreeSoloを提案。FS-Lは短いcontinued pretrainingでprefixを事前pruneしてquery依存選択し、FS-Bはbalanced treeを探索する。一次要旨は長文脈fine-tuningなしで既存法よりzero-shot length extrapolationが良いと報告。LLM長文脈sparse attentionの推論計算削減としてaccept（実測decode速度は要旨未報告）。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-f801af651d7f",
+    "round": "libimp-f801af651d7f0c49-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-f801af651d7f0c49-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-f801af651d7f0c49-pre01.json",
+    "receipt": "sha256:35eaacd6394e2748d484bf4bc752d36ff55e79e7b2e8930ed1157bd58b3e5ca9"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-f801af651d7f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

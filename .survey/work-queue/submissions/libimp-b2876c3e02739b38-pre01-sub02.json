@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "DualQuant: Dual-scale Calibration-free Weight-and-Activation Quantization for LLMs",
+      "source_url": "https://arxiv.org/abs/2610.13767",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit inference on accelerators with native 4-bit support requires quantizing both weights and activations to realize the full throughput gains these formats provide. While post-training weight quantization has been extensively studied, activation quantization remains considerably more challenging and typically requires calibration data. In this work, we introduce DUALQUANT, a dual-scale, calibration-free post-training quantization framework that directly minimizes the weight-reconstruction Mean Squared Error (MSE) and, as an immediate by-product, yields per-channel activation rescalings prior to activation quantization. Our key observation is that the scaling factors obtained by minimizing weight-reconstruction error provide effective activation rescalings, enabling competitive activation quantization without calibration data. We formulate DUALQUANT as a non-differentiable weight-reconstruction problem and develop an efficient solver based on variable splitting and block coordinate descent, where each subproblem admits a closed-form update. DUALQUANT provides a unified algorithm supporting a wide range of formats, including the full MX family and NVFP4. To our knowledge, DUALQUANT is the first dual-scaling method to formally support MX and NV block formats. Across Llama and Qwen models evaluated on WikiText-2, C4, and zero-shot downstream tasks, DUALQUANT matches or exceeds the accuracy of calibration-based SmoothQuant across most models and formats, and substantially outperforms calibration-free baselines, with large gains for MX and NV block formats. We validate these gains with a real packed W4A4 inference path for Llama-3.1-8B on an RTX 4090. The resulting implementation closely matches the accuracy of fake quantization while delivering up to 2.61x memory reduction and up to 2.46x throughput speedup over BF16.",
+      "identifiers": [
+        "SemanticScholar:d8f756392b3d17c3a917f43ceff551746d5572a8"
+      ],
+      "semantic_scholar_id": "d8f756392b3d17c3a917f43ceff551746d5572a8",
+      "canonical_id": "arXiv:2610.13767",
+      "arxiv_id": "2610.13767",
+      "authors": [
+        "Mahsa Salmani",
+        "Sayeh Sharify",
+        "Hesham Mostafa"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 24,
+        "matched_prestigious_venue": null
+      },
+      "reason": "weight再構成MSEを最小化する二重scaleを求めるとactivationのchannel別再scaleも得られる性質を利用し、calibration data不要でW4A4等へPTQするDUALQUANTを提案。MX/NVFP4 block formatを統一的に扱い、variable splittingとblock coordinate descentで解く。一次要旨はRTX4090のLlama-3.1-8B実packed W4A4推論でBF16比memory最大2.61倍削減、throughput最大2.46倍向上を報告。実装を伴う低ビットLLM推論としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "LoopQuant: Accurate and Efficient Post-Training Quantization for Looped Transformers",
+      "source_url": "https://arxiv.org/abs/2610.16368",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Language Models (LoopLMs) improve parameter efficiency by recursively reusing shared Transformer modules, yet their repeated computation over evolving recurrent states poses new challenges for low-bit deployment. Existing post-training quantization (PTQ) methods, largely designed for feed-forward Transformers, fail to account for cross-loop activation dynamics, heterogeneous loop sensitivity, and recursive error propagation, leading to substantial performance degradation at low precision. To address these challenges, we propose LoopQuant, a loop-aware PTQ framework for accurate and efficient low-bit quantization of LoopLMs. LoopQuant is built on three core components: 1) Cross-Loop Distribution Canonicalization (CLDC) learns a shared quantization-friendly representation across recurrent states while preserving parameter sharing; 2) Interaction-Aware Loop-wise Precision Allocation (ILPA) allocates activation precision under a fixed bit budget by modeling task-level loop sensitivity and cross-loop interactions; and 3) Loop-Conditioned Task Calibration (LCTC) further aligns quantized inference with the low-bit recursive trajectory through lightweight task-space calibration. Extensive experiments across LoopLM architectures demonstrate that LoopQuant consistently outperforms existing low-bit PTQ methods. On Ouro-2.6B, LoopQuant under W4A4 surpasses all W4A8 baselines in performance, while reducing model memory by 65.3% with only 3.4% additional storage overhead over naive INT4 and achieving a 1.7 times decoding speedup over BF16. These results demonstrate a strong balance among accuracy, compression, and inference efficiency, providing a practical and deployment-friendly solution for low-bit LoopLM inference. The code is available at [https://github.com/Kishon-zzx/LoopQuant].",
+      "identifiers": [
+        "SemanticScholar:0d3e2c75117b17ce7e634f26d88ff89cc68897e2"
+      ],
+      "semantic_scholar_id": "0d3e2c75117b17ce7e634f26d88ff89cc68897e2",
+      "canonical_id": "arXiv:2610.16368",
+      "arxiv_id": "2610.16368",
+      "authors": [
+        "Zhi-Xiong Zhao",
+        "Zu-Kang Xu",
+        "Xing Hu",
+        "Li-Feng Liu",
+        "Guang-Yu Sun",
+        "Da-Wei Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "共有Transformer blockを繰返すLoopLMのactivation分布変化と量子化誤差の再帰増幅に対し、loop横断の分布正規化、loop別precision配分、task calibrationを組み合わせるPTQ方式。一次要旨はOuro-2.6BのW4A4でW4A8 baselineを上回り、BF16比model memory 65.3%削減とdecode 1.7倍高速化を報告。再帰型LLMの低ビット推論に直接適用するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "PACE: Periodic and Channel-Aligned Encoding of Four-Bit Recurrent States",
+      "source_url": "https://arxiv.org/abs/2610.29545",
+      "year": 2026,
+      "published": "2026-10-21",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear-attention language models keep their context in a recurrent state of fixed size, where an inference system stores one copy of this state for every sequence it decodes at the same time. Storing the state at lower precision therefore lets more sequences share an accelerator. Existing state quantizers round the state after every generated token and report that four bits lose accuracy unless the bit width is raised or the model is fine-tuned.\\par We introduce PACE, a post-hoc four-bit state quantizer. PACE rounds the state only once every few generated tokens, as chunked kernels already do once per chunk during prefill, and keeps the tokens generated in between in a small buffer. Rounding less often reduces the error that accumulates in the state. Additionally, we find that the large entries of the gated-delta state gather in columns, because some channels of the update written at each token remain large across many tokens. PACE therefore shares each quantization scale within one column. It also keeps the heads that retain rounding error longest at eight bits. On four hybrid models from 4B to 35B parameters, PACE with mixed four- and eight-bit heads is competitive with eight-bit DAMP on the three larger models at about two thirds of its memory, PACE with four-bit heads throughout scores higher than Q-Mamba at equal memory, and rounding every few tokens preserves the decoding speedup of the buffer.",
+      "identifiers": [
+        "SemanticScholar:08a21c66a3b898d9fff359c371edef5f84a9a51a"
+      ],
+      "semantic_scholar_id": "08a21c66a3b898d9fff359c371edef5f84a9a51a",
+      "canonical_id": "arXiv:2610.29545",
+      "arxiv_id": "2610.29545",
+      "authors": [
+        "Patrick Haller",
+        "Filipe Laitenberger",
+        "Alan Akbik"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 12,
+        "matched_prestigious_venue": null
+      },
+      "reason": "線形attention型LLMがsequenceごとに保持する固定長recurrent stateを、毎tokenでなく数tokenおきに丸め、間のtokenを小bufferへ置くPACEを提案。更新値の大きいchannelに合わせて列単位scaleを共有し、誤差が残るheadのみ8bit保持する。一次要旨は4B～35Bのhybrid modelで4/8bit混合stateが8bit DAMPに近い精度を約2/3のmemoryで維持し、bufferを使ったdecode高速化も保持すると報告。推論stateの容量・速度最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "INTRA: Interleaved Non-contiguous Token spaRse Attention",
+      "source_url": "https://arxiv.org/abs/2610.34056",
+      "year": 2026,
+      "published": "2026-10-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers achieve strong performance across modalities but are bottlenecked by the quadratic cost of attention. Sparse attention can reduce this cost, but effective sparsity must preserve useful long-range communication and map well to GPU hardware. We introduce INTRA--Interleaved Non-contiguous Token spaRse Attention--a hardware-aware static sparse attention design based on a relay-communication view under Computational Query Set (CQS) constraints. Rather than directly covering all token-to-token interactions within each sparse layer, INTRA uses complementary sparse groups to provide short mediated communication paths across layers. Scatter forms relay groups that sample broadly across local neighborhoods, while Gather reconnects these groups in subsequent layers. Under a partition model, this structure guides CQS-compatible sparse patterns with global reachability. Our CQS-aware FlashAttention-style kernel computes structured indices at runtime, loads selected non-contiguous tokens, and packs them densely for computation. On an A100, INTRA achieves a $1.53\\times$ speedup in $2K$ FLUX.1-dev generation, with better measured image quality than evaluated CLEAR configurations after LoRA self-distillation. On LLaMA-3.1-8B, it improves long-context prefill efficiency with strong teacher-forced retrieval performance under matched LoRA adaptation. Attention-only benchmarks further show up to $8.4\\times$ and $10.4\\times$ speedups over MoBA and density-constrained NSA, respectively. Code is available at https://github.com/NovTi/INTRA.",
+      "identifiers": [
+        "SemanticScholar:3d2c1215d966570d57040bc8721ea61fc09519d7"
+      ],
+      "semantic_scholar_id": "3d2c1215d966570d57040bc8721ea61fc09519d7",
+      "canonical_id": "arXiv:2610.34056",
+      "arxiv_id": "2610.34056",
+      "authors": [
+        "Yuxuan Xia",
+        "Wenbo Lu",
+        "Shao-Yi Zheng",
+        "Sheng-Jie Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 8,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Scatter/Gatherの補完的な非連続token群を複数層で組み合わせ、局所sparse attentionでも長距離情報を中継する静的パターンINTRAを提案。CQS制約に合わせたFlashAttention型kernelが非連続indexを実行時に生成・密にpackする。一次要旨はLLaMA-3.1-8Bの長文脈prefill効率とteacher-forced retrievalの維持を示し、attention microbenchmarkでMoBA比最大8.4倍高速と報告。FLUX画像生成評価も含むがLLM prefill kernelにも直接適用されるためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-b2876c3e0273",
+    "round": "libimp-b2876c3e02739b38-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-b2876c3e02739b38-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-b2876c3e02739b38-pre01.json",
+    "receipt": "sha256:f0c8a41865676b915adcdcd1e552123a9eb5807f0390db8406e67cf82b0f9d68"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-b2876c3e0273",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

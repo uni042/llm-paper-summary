@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "God Does Not Play Dice: Enforcing Batch Invariance in Agentic Kernel Generation",
+      "source_url": "https://arxiv.org/abs/2610.36623",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving systems dynamically batch user requests for GPU execution, so the same request may be processed alongside different requests across runs. If the GPU kernels lack batch invariance (BI), this changing batch context can alter the numerical output for an unchanged input, undermining reproducibility. Existing kernel generation agents focus on correctness and efficiency but \\emph{overlook BI}. We find 19 confirmed BI violations among 83 batch-applicable released artifacts. To address this limitation, we propose \\tool, which combines contract-guided static dependency analysis with dynamic validation of bitwise consistency across batch contexts. \\tool is designed as a plug-in component for general kernel agents, allowing their original optimization capabilities to be reused while adding BI enforcement. We integrate it as successive acceptance gates in the optimization loop, rejecting structurally risky or dynamically non-invariant candidates before performance benchmarking and returning feedback to the agent. Experiments across three agent frameworks under baseline and BI-aware generation on real world LLM serving tasks show that \\tool improves the BI pass rate from 67.6\\% to 91.9\\% while retaining 91.8\\% of the baseline geometric mean speedup. These results demonstrate that \\tool can be incorporated into kernel optimization by agents as an additional reliability objective alongside correctness and speed.",
+      "identifiers": [
+        "SemanticScholar:8b684cc5a1c70deb08ec8ec941e7f1bf87814c20"
+      ],
+      "semantic_scholar_id": "8b684cc5a1c70deb08ec8ec941e7f1bf87814c20",
+      "canonical_id": "arXiv:2610.36623",
+      "arxiv_id": "2610.36623",
+      "authors": [
+        "You-Wei Bao",
+        "Cheng-Peng Wang",
+        "Si-Min Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LLM servingのdynamic batchingでは同じrequestが別の同時batchに入ると非batch-invariant kernelが数値結果を変える問題に対し、kernel生成agentへ静的依存解析とbatch別bitwise一致の動的検証gateを追加する。一次要旨は83公開artifact中19のBI違反を確認し、3 agent frameworkでBI pass率67.6%から91.9%へ改善、従来のgeometric mean speedupの91.8%を維持と報告。LLM推論kernelの再現性保証としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-1b9809cdb507",
+    "round": "libimp-1b9809cdb50719a0-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 6,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-1b9809cdb50719a0-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-1b9809cdb50719a0-pre01.json",
+    "receipt": "sha256:8c8a52c5f4faa81a65b030e10da835a12d60940d4f614ab4a2908972389fdfb2"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-1b9809cdb507",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

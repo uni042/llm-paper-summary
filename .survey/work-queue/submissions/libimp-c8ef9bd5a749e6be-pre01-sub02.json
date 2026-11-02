@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Adaptive Multi-Token Prediction: How far should we go?",
+      "source_url": "https://arxiv.org/abs/2610.28619",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-token prediction (MTP) can accelerate language-model decoding by drafting several tokens and verifying them in a single target-model pass. However, the best speculation horizon changes with context: longer drafts offer greater amortization when reliable, but can waste compute on suffixes discarded after a rejection. Unlike autoregressive drafting, where a stopping rule can decide token by token, MTP must fix the horizon before drafting, as all heads fire in the same forward pass. We therefore formulate horizon selection as an online control problem, using verification feedback to learn how far the draft can be trusted in each context, and introduce Adaptive Multi-Token Prediction (AMTP): a lightweight controller that requires no retraining and leaves the exact verifier unchanged. To guide horizon selection, we characterize the expected number of tokens committed at each horizon via acceptance survival, the probability that a draft prefix is fully accepted. Before each round, AMTP predicts how far the draft is likely to survive and picks the horizon with the highest expected tokens per second, learning freely from every verification pass. Theoretically, we show that any online learner's prediction error translates into throughput regret against the best horizon for each context, and in turn into a bound on wall-clock completion time. With online gradient descent, this regret is sublinear. Across five draft-target pairings built on Llama-3.1-8B-Instruct with Medusa heads, Meta's MTP models, and Qwen3-4B-Inst-2507-MTP, evaluated on AIME 2025 and GSM8K, AMTP decodes up to 4.1x faster than standard decoding and matches or outperforms the fixed window in 8 of 10 settings, with throughput gains of up to 10%.",
+      "identifiers": [
+        "SemanticScholar:d20738c834c67f8c4ad93fd60d62ee509aebf5e3"
+      ],
+      "semantic_scholar_id": "d20738c834c67f8c4ad93fd60d62ee509aebf5e3",
+      "canonical_id": "arXiv:2610.28619",
+      "arxiv_id": "2610.28619",
+      "authors": [
+        "E. Anand",
+        "M. Parwani",
+        "Xin-Yuan Cao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MTP投機復号で同時に実行するdraft head数を固定すると受理率低下時に無駄が増えるため、verification結果からprefix受理生存確率を学習し、次passの最適horizonをオンライン選択するAMTPを提案。target verifierを変更せず、regretとwall-clockの理論保証を示す。一次要旨はLlama/Qwenの5組で通常復号比最大4.1倍、固定窓比10%までthroughput改善を報告。LLM speculative decoding runtimeの直接的改善としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Rescuing Your Pruning: Rethinking Visual Token Pruning and Post-Training Recovery in MLLMs",
+      "source_url": "https://arxiv.org/abs/2610.33688",
+      "year": 2026,
+      "published": "2026-10-24",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Visual token pruning substantially reduces the inference cost of multimodal large language models (MLLMs), yet existing methods are mostly training-free and plug-and-play. They treat the resulting performance drop as an inevitable cost of compression and pursue increasingly complex pruning rules. We rethink this view through two questions: how much of the loss can post-training rescue, and, building on this recovery, how can joint compression push pruning to its limit? We curate a 282K-sample post-training mixture covering general VQA, reasoning, OCR, and grounding, and post-train 36 configurations that drop or merge tokens under a unified protocol. Post-training rescues most of the loss, even for OCR and grounding, and its adaptation gain in closing the gap between the pruned and the dense model grows as the budget tightens. For joint compression, we find that the vision encoder, not the LLM, dominates prefill time in native-resolution MLLMs, so where tokens are removed matters more than how many: keeping 40% of tokens at the encoder runs faster than keeping 10% at the projector. Our best configuration prunes the encoder lightly and the projector aggressively, leaves the LLM intact, and keeps general understanding and reasoning at the dense level. It accelerates the LLM stage by 3.49x but the end-to-end time-to-first-token by only 1.54x, showing that LLM-stage speedups overstate end-to-end gains. We hope these findings offer insights for future research on joint visual token compression. Our data, protocol, and code will be released.",
+      "identifiers": [
+        "SemanticScholar:7dc410a1013da45e94a059ac1de962ea2f059a4d"
+      ],
+      "semantic_scholar_id": "7dc410a1013da45e94a059ac1de962ea2f059a4d",
+      "canonical_id": "arXiv:2610.33688",
+      "arxiv_id": "2610.33688",
+      "authors": [
+        "Pei-Ran Yin",
+        "Hao Wu",
+        "Zi-Hao Yang",
+        "Hao-Zhe Hu",
+        "Xu-Dong Wang",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MLLMの視覚token削減による精度低下をpost-trainingで回復し、削減位置によるend-to-end性能差を36構成で調べる。282K sampleでOCR・grounding等も補正し、encoder側40%保持の方がprojector側10%保持より高速な例を報告。一次要旨ではLLM stageが3.49倍高速でも全体TTFTは1.54倍に留まる。視覚encoderとLLM prefillのボトルネック分離を実証する推論圧縮研究としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Don't Ask the LLM: Visual Token Pruning with Spectral Structure and Semantic Relevance",
+      "source_url": "https://arxiv.org/abs/2610.38303",
+      "year": 2026,
+      "published": "2026-10-28",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large vision-language models (LVLMs) represent images and videos as long visual-token sequences, substantially increasing inference costs. These costs motivate visual-token pruning, whose effectiveness depends on both what signal is used for selection and when that signal becomes available. Our analysis reveals complementary limitations: visual-side [CLS] attention produces scattered, background-biased selections under aggressive compression, while stronger query-conditioned signals become available after substantial computation within the large language model (LLM). This raises a natural question: can structurally coherent, query-aware token selection be performed before consulting the LLM? We therefore propose ST-Pruner (Spectral-Textual Pruner), a training-free framework for pre-LLM visual-token selection. It combines attention-independent spectral saliency with inverted patch-text similarity through parameter-free multiplicative fusion. Across diverse LVLMs, ST-Pruner retains over 95% of full-token performance using at most 11.1% of visual tokens and achieves a 3.2x end-to-end speedup on LLaVA-NeXT. Code is available at https://github.com/sejong-rcv/ST-Pruner.",
+      "identifiers": [
+        "SemanticScholar:257f367f6a93b2c4eb16a5018f0dd9086da05c1b"
+      ],
+      "semantic_scholar_id": "257f367f6a93b2c4eb16a5018f0dd9086da05c1b",
+      "canonical_id": "arXiv:2610.38303",
+      "arxiv_id": "2610.38303",
+      "authors": [
+        "Intaek Shin",
+        "Geuntaek Lim",
+        "Sungjune Park",
+        "Yuk-Yung Choi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 5,
+        "matched_prestigious_venue": null
+      },
+      "reason": "visual-side CLS attentionだけでは背景tokenが残り、LLM内部のquery条件付きscoreは取得が遅い問題に対し、LLM実行前にspectral saliencyと逆向きpatch-text類似度を乗算統合するST-Prunerを提案。一次要旨は多様なLVLMで視覚token最大11.1%保持でもfull-token性能95%超を維持し、LLaVA-NeXTでend-to-end 3.2倍高速化を報告。LLM prefill前の視覚token削減としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-c8ef9bd5a749",
+    "round": "libimp-c8ef9bd5a749e6be-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-c8ef9bd5a749e6be-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-c8ef9bd5a749e6be-pre01.json",
+    "receipt": "sha256:c33553fe8a20c8a72c701ce5d59f522021f5ffeddea292f78c50b5297336af87"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-c8ef9bd5a749",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

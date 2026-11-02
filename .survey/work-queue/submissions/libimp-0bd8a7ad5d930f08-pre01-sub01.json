@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.07086",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents interact with external systems by generating structured tool calls. Given a user request, conversational context, and a catalog of tool schemas, a tool-calling model must select tools and generate their arguments, potentially producing multiple calls in a single response. Standard autoregressive decoding generates these calls token by token, incurring substantial latency for requests involving multiple calls or many argument fields. The explicit argument structure offers opportunities for parallel generation, but later argument values may depend on preceding fields and calls, so independently generated values can differ from the target model's output. We present SchemaFill, a framework for efficient LLM tool calling through slot-parallel speculative decoding. SchemaFill generates future slot values concurrently as candidates, without requiring advance knowledge of the actual call sequence or argument values. Candidates spanning multiple fields and calls are concatenated for verification by the target model under the actual output prefix. Only verified tokens are committed, and the target supplies corrections when candidates disagree. This applies target verification while exploiting parallelism across slots and calls. On Glaive and BFCL, SchemaFill achieves up to a 4.05$\\times$ improvement in end-to-end throughput over autoregressive decoding. Code is available at https://github.com/Czzzk/SchemaFill.",
+      "identifiers": [
+        "SemanticScholar:62dc544c66fa2860c6f1f84def2b5c06a743f528"
+      ],
+      "semantic_scholar_id": "62dc544c66fa2860c6f1f84def2b5c06a743f528",
+      "canonical_id": "arXiv:2610.07086",
+      "arxiv_id": "2610.07086",
+      "authors": [
+        "Zhi-Kai Chen",
+        "Song-Yan Li",
+        "De-Chuan Zhan",
+        "Han-Jia Ye"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数tool callや引数fieldを逐次生成する遅延を減らすため、将来slotの値を並列にdraftし、実際の出力prefixに対してtarget modelがまとめて検証し、誤ったtokenだけ修正するSchemaFillを提案。一次要旨はGlaive/BFCLでautoregressive decode比最大4.05倍のend-to-end throughputを報告。tool schemaを利用した厳密検証付きLLM推論高速化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking",
+      "source_url": "https://arxiv.org/abs/2610.07026",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Offline AI Modules workstream enables practical, low-power, and community-accessible deployment of voice-first AI systems that operate fully offline. Designed for African language communities where speech is the dominant mode of interaction and internet connectivity is unreliable or absent, the workstream delivers three reinforcing components: a modular voice-first offline architecture, a low-cost hardware reference bill of materials, and a reproducible quantization and a reproducible quantization and benchmarking pipeline for instruction-tuned language models in the 2-5B parameter class. This paper presents the first end-to-end benchmark evaluation of the stack across two hardware tiers: an NVIDIA Jetson Orin NX (TierB) and a Raspberry Pi5 (TierA). Three instruction-tuned models are evaluated across four quantization formats, assessed for deployment metrics (decode throughput, chat latency, memory, power) and multilingual quality (topic classification accuracy on MasakhaNEWS across English, Hausa, Igbo, Nigerian Pidgin, and Yoruba; per-language perplexity drift). Speech recognition is evaluated using Ethio-ASR on Amharic and Oromo across both tiers. The principal finding is that Q4_K_M quantization represents the best size-to-quality trade-off for deployment on both tiers: gemma-4-E2B-it achieves 28.8t/s decode throughput and 89.2% topic classification accuracy at Q4_K_M on TierB, while all three models run within the 16GB memory budget on TierA.",
+      "identifiers": [
+        "SemanticScholar:7f8a5327ba47b27da1116f1fc343ad7c7836dd4f"
+      ],
+      "semantic_scholar_id": "7f8a5327ba47b27da1116f1fc343ad7c7836dd4f",
+      "canonical_id": "arXiv:2610.07026",
+      "arxiv_id": "2610.07026",
+      "authors": [
+        "Sunday Afariogun",
+        "Odunolaoluwa Jenrola",
+        "Zeinab Nezami"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Jetson Orin NXとRaspberry Pi 5で2～5B instruction LLMを完全offline動作させるvoice-first stackと量子化benchmarkを提示。一次要旨は4形式の量子化を比較し、Q4KMが精度と容量の妥協点、Jetson上のgemma-4-E2B-itで28.8 token/s、Pi5上では3モデルが16GB memory制約内に収まると報告。ASRも含むがdecode throughput・chat latency・memory・powerを測る端末内LLM推論の実証としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SAGE: Pushing 2-Bit Vector-Quantized LLMs toward Real-World Usability",
+      "source_url": "https://arxiv.org/abs/2610.14745",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extreme low-bit weight-only quantization is an effective approach to reducing the deployment costs of large language models. Below 3 bits, scalar quantization often suffers severe accuracy loss, while vector quantization (VQ) better preserves accuracy through more expressive joint encoding. However, existing VQ methods still exhibit substantial degradation on real-world tasks, and two design challenges remain underexplored: (1) protecting sensitive weight channels within jointly encoded vectors; and (2) allocating a fixed bit budget among representation components, such as direction and radius, to suit different weight matrices. To address these challenges, we propose SAGE: Split Adaptation and Grouping by Energy for weight-only vector quantization. First, Energy-Stratified Grouping (ESG) couples channel grouping with activation-weighted fitting, grouping channels from different energy tiers within each subvector to prioritize sensitive channels. Second, Adaptive Bit Split (ABS) balances direction-codebook capacity and radius precision per matrix, selecting the split with the lowest activation-weighted reconstruction error under a fixed budget. Across benchmarks covering knowledge, mathematics, code generation, instruction following, and tool use, SAGE achieves state-of-the-art performance in the 2-bit quantization setting. On Qwen3-30B-A3B, it retains 95.3% of the BF16 model's average benchmark score. With our custom-designed CUDA kernel, SAGE delivers up to a 2.55-fold non-streaming end-to-end speedup over FP16. The code is available at https://github.com/Zincwolf/sage.",
+      "identifiers": [
+        "SemanticScholar:35cb4ea371bbbee56901c59b276af051ea50a837"
+      ],
+      "semantic_scholar_id": "35cb4ea371bbbee56901c59b276af051ea50a837",
+      "canonical_id": "arXiv:2610.14745",
+      "arxiv_id": "2610.14745",
+      "authors": [
+        "Xiang-Long Yan",
+        "Ze-Nan Wu",
+        "Ke-Wei Zhang",
+        "Kai-Cheng Yang",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重みの2bit vector quantizationで感度の高いchannelを保護するEnergy-Stratified Groupingと、matrix別に方向codebook/半径精度へbit予算を割り当てるAdaptive Bit Splitを提案。一次要旨はQwen3-30B-A3BでBF16平均scoreの95.3%を維持し、専用CUDA kernelでFP16比最大2.55倍の非streaming end-to-end高速化を報告。MoEを含むLLMの実用低bit推論としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "SchemaWeaver: Accelerating On-Device Mobile Agentic AI via Schema-Guided Parallel LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2610.17436",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) on mobile devices can act as agents that call external software tools to complete complex tasks, but the major challenge of supporting on-device mobile agentic AI with LLMs is the long latency of LLM tool calling on mobile devices. In particular, the decode phase is the main contributor of such long latency, but is hard to speed up on mobile processors as it is bound by memory bandwidth rather than compute power. To address this limitation, in this paper we present SchemaWeaver, a new on-device mobile agentic AI technique that enforces schema-guided parallel decoding in the decode phase of LLM tool calling, to reduce its latency by producing multiple tokens in each decode pass. SchemaWeaver can be generically applied to the LLM inference engine on mobile devices without involving any training efforts or changes on LLMs, and our experiment results on major mobile SoCs and LLM families show that SchemaWeaver can reduce the LLM tool calling latency by up to 3.9 times, compared to the competitive baselines.",
+      "identifiers": [
+        "SemanticScholar:f30f2d257338b7ced9f97195fd9d529585e9d717"
+      ],
+      "semantic_scholar_id": "f30f2d257338b7ced9f97195fd9d529585e9d717",
+      "canonical_id": "arXiv:2610.17436",
+      "arxiv_id": "2610.17436",
+      "authors": [
+        "Boyuan Yang",
+        "Wei Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      },
+      "reason": "スマートフォン上のtool-calling LLMの逐次decodeを、tool schemaの制約から複数tokenを同一passで生成するschema-guided parallel decodingへ変換する。モデル再学習や重み変更を必要としない。一次要旨は複数のmobile SoCとLLM familyで従来手法比tool-call latency最大3.9倍短縮を報告。帯域制約の強い端末内LLM復号を直接高速化するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.20392",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM generation through lightweight drafting and parallel verification. It is particularly promising for long inputs, where KV-cache access costs can be amortized over multiple accepted tokens. Yet most drafters are trained on short sequences and degrade on long inputs, while long-context training is costly. Existing training-free approaches restrict the context window, rescale positions, or augment recent context with retrieved distant entries. Drafters, however, read target hidden states that already encode contextual and positional information, and their lightweight architecture makes full-history attention affordable. We propose FOLD, a training-free method that preserves exact local positions and treats all distant entries as far memory at a shared position. To counter attention dilution as the memory grows, we sharpen attention within it to emphasize relevant entries while separately controlling its total weight relative to the local window. Across six target-drafter pairs and diverse benchmarks of up to 256K tokens, FOLD predominantly delivers the highest speedup, with the best case more than doubling the speedup over autoregressive decoding, from 2.08$\\times$ to 4.22$\\times$.",
+      "identifiers": [
+        "SemanticScholar:229844c33c53be3410bb4ab56f78d3049b8847a2"
+      ],
+      "semantic_scholar_id": "229844c33c53be3410bb4ab56f78d3049b8847a2",
+      "canonical_id": "arXiv:2610.20392",
+      "arxiv_id": "2610.20392",
+      "authors": [
+        "Shu-Xuan Li",
+        "Jia-Liang Kang",
+        "Yang-Hao Zhou",
+        "Zi-Ye Zhu",
+        "Xiao Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "短文脈で学習した投機drafterの長文脈劣化に対し、近傍の正確な位置を維持し遠方tokenを同一位置のfar memoryとして扱うtraining-free FOLDを提案。遠方memory内attentionを鋭くし、局所窓との相対重みを別制御する。一次要旨は6 target-drafter組、最大256K tokenのbenchmarkで最良条件の自回帰比speedupを2.08倍から4.22倍へ伸ばしたと報告。長文脈LLMの投機復号の直接的改善としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0bd8a7ad5d93",
+    "round": "libimp-0bd8a7ad5d930f08-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0bd8a7ad5d930f08-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0bd8a7ad5d930f08-pre01.json",
+    "receipt": "sha256:0b2e1e818039836648ab3489372d1f0ddd715da8efc811e3a386a84297583281"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0bd8a7ad5d93",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

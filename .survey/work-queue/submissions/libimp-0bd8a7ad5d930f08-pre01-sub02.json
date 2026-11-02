@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.21257",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demand efficient inference, where the multiply-accumulate (MAC) operations in linear projections dominate compute and energy cost. Post-training quantization (PTQ) reduces this cost by mapping weights and activations to low-bit integers. Power-of-Two (PoT) weight quantization promises efficient multiplier-free LLM inference via shift-add logic, but suffers significant accuracy degradation at low bitwidths due to its coarse base-2 quantization grid. We introduce Fractional PoT (FPoT), a base-$\\sqrt{2}$ (half-octave) fractional PoT grid that achieves practical 4-bit weight quantization while preserving a fully integer shift-add datapath. The method combines (i) the base-$\\sqrt{2}$ weight grid with uniform integer activations, (ii) a calibration-time grid-alignment refinement absorbed into the static per-channel scale, and (iii) a lightweight 1-adder $\\sqrt{2}$ approximation whose error is absorbed during weight calibration via approximate-grid quantization, yielding a processing element (PE) with significantly fewer gates than a 4-bit integer multiplier. On Llama-3-8B with 4-bit weight and activation quantization, FPoT improves zero-shot commonsense reasoning performance by 8.72% relative to the PoT baseline, while maintaining performance close to the uniform integer baseline, with only a negligible 0.4%p degradation. These results hold across various configurations spanning seven models and three bit-widths. Furthermore, FPoT can be integrated with state-of-the-art LLM PTQ methods, demonstrating framework-agnostic applicability.",
+      "identifiers": [
+        "SemanticScholar:674784b26dfb366d34e247716deb1ab9d3b8f117"
+      ],
+      "semantic_scholar_id": "674784b26dfb366d34e247716deb1ab9d3b8f117",
+      "canonical_id": "arXiv:2610.21257",
+      "arxiv_id": "2610.21257",
+      "authors": [
+        "Sunghyun Wee",
+        "Geunjae Choi",
+        "Hyeonjin Kim",
+        "Suyoung Kim",
+        "N. Kwak"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      },
+      "reason": "base-√2の4bit重み量子化格子と整数activationを組み合わせ、静的channel scaleへ校正時補正を吸収し、1加算器による√2近似で整数shift-add演算を実現するFPoTを提案。一次要旨はLlama-3-8BのW4A4で通常PoT比zero-shot commonsense scoreを8.72%改善、uniform integer baseline比低下0.4ポイントと報告。専用PEのゲート削減を狙うLLM低bit推論のhardware/software co-designとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "HydraLLM: Adaptive Width Slicing for Elastic Text and Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.23455",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs and LVLMs are increasingly deployed across heterogeneous hardware, ranging from data-center GPUs to resource-constrained edge devices. Their fixed-size architectures limit the ability to reuse a single model across deployment settings with different compute, latency, and model-size targets. We introduce HydraLLM, an elastic MQA-based architecture. Its number of active attention heads determines the effective widths of the embeddings, attention projections, feed-forward layers, and the output head, forming a nested family of subnetworks within a single parameter set. We introduce a static-to-elastic conversion pipeline that, starting from a pre-trained model checkpoint, includes importance-driven weight reordering and stochastic subnetwork training with knowledge distillation. We extend this principle to multimodal inference through an elastic projection module whose output width follows the active text width. HydraLLM covers a wider range of active parameter configurations than FFN-only elastic architectures. With 75% of heads active, HydraLLM achieves 2.2 percentage points higher TriviaQA accuracy than a state-of-the-art nested baseline configuration which has 17.25% more parameters. With 50% of heads active, our multimodal model achieves a CLIPScore comparable to that of the 7$\\times$ larger Gemma 3 4B model. With only 25% of heads active, HydraLLM increases token-generation throughput by 75.3% over the full-width configuration.",
+      "identifiers": [
+        "SemanticScholar:6e8bb6d261d7c4a3e6008028ae67586c72088513"
+      ],
+      "semantic_scholar_id": "6e8bb6d261d7c4a3e6008028ae67586c72088513",
+      "canonical_id": "arXiv:2610.23455",
+      "arxiv_id": "2610.23455",
+      "authors": [
+        "Oscar Kemme",
+        "Janek Haberer",
+        "Ali Hojjat",
+        "Olaf Landsiedel"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MQA attention head数を変えるとembedding・attention・FFN・出力headの有効幅も連動するnested subnetworkを単一重みから構成し、重要度順reorderと蒸留付きelastic訓練で複数推論予算に対応するHydraLLMを提案。一次要旨は25%のheadだけを使う場合にfull-width比token generation throughputを75.3%向上と報告。LLM/VLMの端末・GPU資源に応じた推論幅制御としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
+      "source_url": "https://arxiv.org/abs/2610.26660",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Smartphone GUI agents complete tasks in mobile apps by repeatedly reading the screen and asking a model for the next action. Mobile neural processing units (NPUs) enable local execution, keeping screen contents on the phone, but model latency accumulates with every action. Hybrid linear attention models reduce memory requirements, yet reusing their recurrent state requires checkpoints at the appropriate input positions. Agent requests retain instructions but rewrite recent history, so checkpoint policies designed for chat continuation can miss reusable prefixes. Retaining rollback states for speculative decoding can also move prompt processing off the NPU's matrix unit, adding overhead that outweighs decoding savings on short action outputs. A loaded model can further hold the NPU awake between tasks. We present Tandem, a runtime for hybrid GUI agents on mobile NPUs. Tandem saves recurrent state where consecutive prompts diverge, allowing later requests to reuse previously processed context. It keeps most prefill on the matrix unit and produces rollback states through a short per-token tail. Its verification kernel reads each weight block once for all proposed tokens. Between request bursts, Tandem releases NPU power votes without unloading the model. We implement Tandem in llama.cpp and evaluate it on recorded agent interactions across two Snapdragon generations. On a Snapdragon 8 Elite, Tandem reduces per-step latency by 30% for text-based screen descriptions and 16% for screenshots relative to llama.cpp's fastest NPU configuration, reduces energy per text step by 33%, and lowers standby power with the model loaded from 0.76 to 0.22 W.",
+      "identifiers": [
+        "SemanticScholar:12102076ffdeed5d91d69558a3d84360fea9c782"
+      ],
+      "semantic_scholar_id": "12102076ffdeed5d91d69558a3d84360fea9c782",
+      "canonical_id": "arXiv:2610.26660",
+      "arxiv_id": "2610.26660",
+      "authors": [
+        "Zhuo-Min Chen",
+        "Jing-Chao Ni",
+        "Xu Zheng",
+        "Yong Chen",
+        "Mo Sha",
+        "Wei Cheng",
+        "Dong-Sheng Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      },
+      "reason": "GUI agentの連続prompt間で共通部分を再利用するため、hybrid linear attentionのrecurrent stateを入力分岐位置でcheckpointし、NPU matrix unit上のprefillと短いtailでの投機rollback state生成を両立するTandemを提案。llama.cppに実装し、一次要旨はSnapdragon 8 Eliteでtext画面説明のstep latency30%、screenshotで16%、text step energy33%削減、待機電力0.76→0.22Wを報告。端末内agentic LLMの状態再利用・NPU推論runtimeとしてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks",
+      "source_url": "https://arxiv.org/abs/2610.27699",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit quantization reduces the memory footprint of large language models, but preserving accuracy with efficient training remains challenging. Scalar quantization encodes weights independently, while explicit-codebook vector quantization introduces costly search during training. We propose E8-QAT, a 2-bit quantization-aware training framework that uses the $E_8$ lattice as an implicit eight-dimensional codebook. It jointly quantizes weight groups through arithmetic projection without storing or searching an explicit codebook during the training forward pass. A 2-bit core encoding and sparse extension preserve the selected lattice points exactly, adding less than 0.1\\% to core index storage. On Qwen3.6-35B-A3B, E8-QAT matches the performance of the full-precision model in terms of the average score across the four tasks. E8-QAT improves over the state-of-the-art baseline by 2.03\\% on IFEval and by 1.51\\% on LiveCodeBench, under the same data, schedule, and bit width. The 2-bit representation reduces peak memory by 80\\% and supports a $4\\times$ larger batch. At each representation's largest feasible batch, E8-QAT reaches $1.97\\times$ the decoding throughput of BF16.",
+      "identifiers": [
+        "SemanticScholar:fa61e572d47adb2a4c88c0bcc921436e3267fd41"
+      ],
+      "semantic_scholar_id": "fa61e572d47adb2a4c88c0bcc921436e3267fd41",
+      "canonical_id": "arXiv:2610.27699",
+      "arxiv_id": "2610.27699",
+      "authors": [
+        "Xinyu Lei",
+        "Hong Huang",
+        "Jie-Bin Zhang",
+        "Hong-Yu Li",
+        "Jin-Long Song",
+        "De-Cheng Wu",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Su-Jian Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      },
+      "reason": "E8格子を暗黙の8次元codebookとして用い、明示codebook探索を省いた2bit QATを提案。2bit本体と疎な拡張符号で格子点を保持する。一次要旨はQwen3.6-35B-A3Bで4課題平均が全精度と同等、表現memoryを80%削減し、各形式の最大可能batchでBF16比1.97倍のdecode throughputを報告。学習手法を用いるが成果はMoE LLM推論の2bit重み圧縮・decode高速化に直接適用するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "title": "Low-Bit GDN Recurrent-State Quantization: Global Gradient-aware Allocation and Pure-Write Sliding Windows",
+      "source_url": "https://arxiv.org/abs/2610.39931",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention stores historical information in a recurrent state of fixed size, providing a compact memory representation for long-context inference. Reducing state precision further lowers per-request storage requirements, but quantized writeback errors enter subsequent recurrences, degrade prediction quality on long-reasoning tasks, and can be accompanied by repetitive generation and excessively long outputs. We propose Global Gradient-aware Allocation (GGA) and the Pure-Write Sliding Window (PW) to address precision allocation and recent-information maintenance. GGA combines candidate quantization residuals with gradient sensitivity to future prediction loss to allocate head bit widths under a model-wide mixed-precision budget. PW independently maintains recent pure writes as FP8 vector pairs, propagates them through the full GDN state transition, and merges them into the low-bit historical state only after they leave the window. Across seven evaluations on Qwen3.5-4B/9B, GGA allocation alone improves over STEPQuant@4 by 19.48/29.84 percentage points. Adding PW-S8 yields seven-task macro-averages of 69.83%/78.63%, improving over STEPQuant@4 by 38.39/41.21 percentage points, respectively. Both precision reallocation and window maintenance improve task scores while mitigating excessively long outputs: at @6, GGA reduces mean generation length, averaged equally across tasks, by 10.45%/14.65% relative to STEPQuant; adding PW-S8 to GGA@4 further reduces mean generation length by 32.32%/36.77%. Comparisons at similar storage budgets further show that using additional capacity to maintain recent writes yields higher task scores and shorter mean outputs than solely increasing the bit width of the accumulated state.",
+      "identifiers": [
+        "SemanticScholar:124e929f24cc0744ec2162ee0823cb9fb9fee161"
+      ],
+      "semantic_scholar_id": "124e929f24cc0744ec2162ee0823cb9fb9fee161",
+      "canonical_id": "arXiv:2610.39931",
+      "arxiv_id": "2610.39931",
+      "authors": [
+        "Qing-Hang Huang",
+        "Xu-Chu Huang",
+        "Xun-Zhao Yin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Qwen3.5系のgated delta recurrent stateを低bit化する際の長い推論出力と誤差蓄積に対し、gradient感度でhead別bit幅を割り当てるGGAと最近の書込みをFP8で保持して後で低bit状態へ統合するPure-Write窓を提案。一次要旨はQwen3.5-4B/9Bの7課題でSTEPQuant@4よりGGA+PW-S8がmacro scoreを38.39/41.21ポイント改善し、冗長生成も減らすと報告。ハイブリッドLLMの推論stateメモリ削減としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-0bd8a7ad5d93",
+    "round": "libimp-0bd8a7ad5d930f08-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-0bd8a7ad5d930f08-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-0bd8a7ad5d930f08-pre01.json",
+    "receipt": "sha256:0b2e1e818039836648ab3489372d1f0ddd715da8efc811e3a386a84297583281"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-0bd8a7ad5d93",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
