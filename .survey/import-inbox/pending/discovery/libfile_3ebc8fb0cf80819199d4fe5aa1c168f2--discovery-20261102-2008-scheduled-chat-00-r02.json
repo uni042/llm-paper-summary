@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2008-scheduled-chat-00/r02",
+  "reference_main_sha": "662d56906772abf7e37cb04f76c6eefe0ad7bb23",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41480",
+      "identity_tokens": [
+        "arXiv:2610.41480"
+      ],
+      "title": "KV-Cache Patching: Tracing How and Where Fine-Tuned Behaviors Arise",
+      "reason": "LoRA微調整モデルと基盤モデルのKVを相互移植し、ドイツ語応答やmisalignment等の振る舞いが一部転移・抑制されること、system prompt/chat templateの位置が重要なことを分析。KVを扱うが目的は解釈可能性・微調整効果の所在の解明であり、キャッシュ容量・推論速度・実行時メモリ管理を最適化する技術ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41480",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41574",
+      "identity_tokens": [
+        "arXiv:2610.41574"
+      ],
+      "title": "BYOD: Build Your Own DLM - Efficient Autoregressive-to-Diffusion Language Model Conversion",
+      "reason": "Gemma 2/Llama 3.1/Qwen2.5/Ministralの既存ARモデルをLoRAのみで拡散型言語モデルへ変換するレシピを提示し、各25,000 iterationを単一GPUで3.1〜4.0時間で実施。並列生成可能なモデル形態に接点はあるが、主貢献は学習・変換効率と生成品質であり、実際のLLMサービング性能改善は未確認。推論系統との境界候補としてborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41574",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40974",
+      "identity_tokens": [
+        "arXiv:2610.40974"
+      ],
+      "title": "Fewer Heads, Fewer Memories: Pruning Redundant Attention Heads Suppresses Verbatim Memorisation",
+      "reason": "GPT-2-XLの冗長attention headを推論前に729個無効化し、記憶済み文字列の逐語再生数を91.5%減らす一方でWikiText-103 PPLが0.92改善する結果を報告。head pruningは実行量削減へ応用可能だが、この論文の主目的と評価はプライバシー・暗記抑制であり実測推論速度やメモリ削減を示していないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40974",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.42084",
+      "identity_tokens": [
+        "arXiv:2610.42084"
+      ],
+      "title": "RangeSWA: Training-Free Length Extrapolation for Continuous Diffusion Language Models",
+      "reason": "連続拡散型言語モデルの学習時より長い生成で生じる反復・意味ドリフトを、local sliding-window attention、遠隔block要約、動的内容検索と位置再マップで抑制する。denoising段階に応じたwindow制御を行い、複数CDLMで生成PPLと反復率改善を報告。長文生成時のattention文脈アクセスを直接変更する推論時手法でありaccept。ただしabstractには実測速度改善値はない。",
+      "source_url": "https://arxiv.org/abs/2610.42084",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.42112",
+      "identity_tokens": [
+        "arXiv:2610.42112"
+      ],
+      "title": "Subquadratic Attention with a Hierarchical Tree-Structured Indexer",
+      "reason": "Zyphra Hierarchical Attention（ZHA）はKVのkey要約を階層木へ再帰圧縮し、queryが上から辿って候補keyを疎に取得する。索引探索を含め系列長に対してsubquadraticとなる設計で、最大6段木や100万token超の長文評価・性能モデルを提示。既存モデルへ短期KL蒸留を要するが、長文推論attention計算量を直接削減するためaccept。数億tokenは将来可能性で実測達成ではない。",
+      "source_url": "https://arxiv.org/abs/2610.42112",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.42128",
+      "identity_tokens": [
+        "arXiv:2610.42128"
+      ],
+      "title": "DecisionRank: On-Policy Distillation for Decision-Model Rerankers",
+      "reason": "生成LLMがdocument ID列を出力するrerankingを、first-tokenの選択スコアを直接予測するdecision modelへ置換し、item-space on-policy distillationで教師の順位情報を移す。8B版は生成型listwise方式に対しTREC DLで24.5倍、BRIGHTで16.7倍高速と報告。学習方法も含むが推論時autoregressive decodingを省略する実測高速化が中心でありaccept。",
+      "source_url": "https://arxiv.org/abs/2610.42128",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.42148",
+      "identity_tokens": [
+        "arXiv:2610.42148"
+      ],
+      "title": "Flide: Accelerating Decision Inference with Exact State Forking",
+      "reason": "Jev等のdecision modelで分岐ごとにprefix再計算が発生する問題に対し、ForkAttentionが論理的なrequest treeを単一のflattened token streamへ写像し、GPU常駐indexで標準attentionとGated DeltaNetの状態分岐を正確に処理する。過去checkpointからの再開も実装し、公開hybrid/decisionモデルでvLLM・SGLang比最大9.5倍のquery高速化を報告。推論runtimeの直接改善。",
+      "source_url": "https://arxiv.org/abs/2610.42148",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.42018",
+      "identity_tokens": [
+        "arXiv:2610.42018"
+      ],
+      "title": "Asynchronous Flow Map Language Models",
+      "reason": "非自己回帰のone-step生成を実現するasynchronous flow map言語モデルを提案。tokenごとのdenoising時刻スケジュールをflow-map蒸留へ内包し、全tokenを1 forwardで生成する。SudokuとGSM8K由来code生成でone-step品質を評価するが、既存LLMのサービング高速化・実測latency/throughputやKV削減は示さないため、推論並列化の関連研究としてborderline。",
+      "source_url": "https://arxiv.org/abs/2610.42018",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41704",
+      "identity_tokens": [
+        "arXiv:2610.41704"
+      ],
+      "title": "GraphNIAH: A Benchmark for Long-Context Reasoning over Real-World Graphs",
+      "reason": "実論文の引用関係から長文脈graph探索問題を自動構成するbenchmark。GPT-5.6/Gemini-3/Qwen3.5を含む8モデルで長い推論経路ほど精度が低下することを示す。長文脈推論性能の評価には関連するが、attention/KV/servingを効率化する方式自体は提案しないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41704",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40847",
+      "identity_tokens": [
+        "arXiv:2610.40847"
+      ],
+      "title": "The Generative Gap Between Speculative Drafter and Continuous Diffusion Language Model",
+      "reason": "CDLM（LangFlow）と投機draft由来のDSpark Markov/RNN headをtarget検証なしの単独生成に揃えて比較。長さ16/128/1024のOpenWebText生成でGenPPL・MAUVEを分析し、128/1024ではLangFlowの品質優位を報告。draft構造に関連するが受理率や実際の投機復号高速化を測定せず、生成品質の比較が主眼のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.40847",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T20:10:38+09:00",
+      "last_checked_at": "2026-11-02T20:10:38+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.CL/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
