@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r07",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07742",
+      "identity_tokens": [
+        "id:arXiv:2610.07742",
+        "id:DOI:10.48550/arXiv.2610.07742"
+      ],
+      "title": "Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling",
+      "reason": "LLMのFlashAttention/FlashDecoding型kernelで代数変形とGPU schedulingを同時探索すると空間が巨大になるため、symbolic shapeのgraph superoptimizationと具体shapeのtile schedulingを分離するCleave compilerを提案。複数reductionを持つgraphをiterative tilingとhorizontal fusionで統合する。一次要旨はLLM subgraphで最良baseline比平均1.6倍kernel高速化、Mirage比compile時間平均5.9倍短縮、実serving traceでFlashInfer FA2/FA3比1.4/1.7倍を報告。LLM推論kernel compilationとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07742",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.36623",
+      "identity_tokens": [
+        "id:arXiv:2610.36623",
+        "id:DOI:10.48550/arXiv.2610.36623"
+      ],
+      "title": "God Does Not Play Dice: Enforcing Batch Invariance in Agentic Kernel Generation",
+      "reason": "LLM servingのdynamic batchingでは同じrequestが別の同時batchに入ると非batch-invariant kernelが数値結果を変える問題に対し、kernel生成agentへ静的依存解析とbatch別bitwise一致の動的検証gateを追加する。一次要旨は83公開artifact中19のBI違反を確認し、3 agent frameworkでBI pass率67.6%から91.9%へ改善、従来のgeometric mean speedupの91.8%を維持と報告。LLM推論kernelの再現性保証としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.36623",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34436",
+      "identity_tokens": [
+        "id:arXiv:2610.34436",
+        "id:DOI:10.48550/arXiv.2610.34436"
+      ],
+      "title": "Prefix Keys and Values Matter Late: RIPE Caching for Self-Speculative Decoding in Looped Language Models",
+      "reason": "LoopLMのKV cacheがloop数Rに比例する問題に対し、深いloopのKVが重要で前段loopは最終planeへ収束する観測を使い、最終planeだけを基本保持し最近tokenのみ全深度保持するRIPEを提案。一次要旨はHuginnの1024-tokenで64-position windowがfull cacheの11.9%容量に抑え、self-speculative speedupを2.09倍から2.58倍へ改善と報告。LoopLM推論時のKVメモリ削減としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.34436",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06996",
+      "identity_tokens": [
+        "id:arXiv:2610.06996",
+        "id:DOI:10.48550/arXiv.2610.06996"
+      ],
+      "title": "Mask-Guided KV Cache Eviction in Block Diffusion Language Models",
+      "reason": "block diffusion LLMのKV選択と将来block用evictionを、現blockと次blockのmask queryでtoken重要度を評価するMaskAheadで統合する。Q-MaskAheadは低bit KV上で選択・attentionを直接実行。一次要旨は長文脈QAでKV memoryを平均9.5倍削減しF1低下1.2点、量子化版は20.1倍削減で2.3点低下、batch32でend-to-end 1.23倍高速と報告。拡散LLM推論KV管理としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.06996",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.10381",
+      "identity_tokens": [
+        "id:arXiv:2610.10381",
+        "id:DOI:10.48550/arXiv.2610.10381"
+      ],
+      "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+      "reason": "LoopLMでloop間KVが類似する性質を利用し、最終loop KVを基準に残りloopを2bit residualとして保存するResidualQuantを提案。least-squares scaling・回転・loop別mixed precisionで復元誤差を抑える。一次要旨は理論KV容量80.7%削減、RTX5090の固定batch decode最大3.66倍高速、batch拡大でpeak throughput最大5.38倍を報告。LoopLMのKV量子化と実推論高速化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.10381",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08341",
+      "identity_tokens": [
+        "id:arXiv:2610.08341",
+        "id:DOI:10.48550/arXiv.2610.08341"
+      ],
+      "title": "DIPrune: Task-Aware Token Pruning with Dual Importance for Efficient Multimodal Language Models",
+      "reason": "MLLMのtraining-free視覚token削減で浅い層のsaliencyが深層で重要となるtokenを隠す問題に対し、task loss歪みの上界から層内静的saliencyと層間semantic evolutionをrankで統合するDIPruneを提案。一次要旨はLLaVA/Qwen-VLで既存方式を上回る性能と報告。具体的推論時token pruningとしてaccept。ただし要旨にend-to-end速度の数値はない。",
+      "source_url": "https://arxiv.org/abs/2610.08341",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05273",
+      "identity_tokens": [
+        "id:arXiv:2610.05273",
+        "id:DOI:10.48550/arXiv.2610.05273"
+      ],
+      "title": "When and What to Prune? Stage-Aware Visual Token Pruning for Efficient VLA",
+      "reason": "VLA robot制御の視覚tokenを固定層で削除せず、action-to-visual attentionが安定した層をcalibrationから選び、強attention tokenと周辺contextを保護するSAPruneを提案。一次要旨は視覚token87.5%削減・推論最大1.718倍高速と報告。LLM系visual token圧縮と技術的に隣接するが主評価はrobot action predictionで自回帰LLM servingではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.05273",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.22146",
+      "identity_tokens": [
+        "id:arXiv:2610.22146",
+        "id:DOI:10.48550/arXiv.2610.22146"
+      ],
+      "title": "FastVLA: Task-Conditioned and Temporally Adaptive Visual Token Compression for Efficient Vision-Language-Action Models",
+      "reason": "VLAの各robot stepでtask-to-vision attentionと重要度分布のinverse-Simpson指標から視覚token予算を動的調整するFastVLAを提案。一次要旨はLLM backbone FLOPs35～59%削減、action latency9～32%短縮、実robotで20%短縮を報告。視覚token圧縮は参考になるが主対象がrobot control loopでLLM推論servingへの直接評価がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.22146",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.20588",
+      "identity_tokens": [
+        "id:arXiv:2610.20588",
+        "id:DOI:10.48550/arXiv.2610.20588"
+      ],
+      "title": "Your Transformer Is Secretly Elastic",
+      "reason": "MLP neuronとattention headを共通のimportance scaleでrankし、既存Transformerを再学習なしで計算予算に応じてelasticに削減する。一次要旨は27のvision/text encoderで最大60% sparsity、ViT-B/16のGPU throughput最大1.80倍を報告。モデル圧縮・推論速度への適用はあるが主評価はencoderとvisionで自回帰LLM生成の実測がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.20588",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.04093",
+      "identity_tokens": [
+        "id:arXiv:2610.04093",
+        "id:DOI:10.48550/arXiv.2610.04093"
+      ],
+      "title": "Beyond Masked Sparsity: SNACK Enables Truly Sparse Neural Networks on GPU",
+      "reason": "mask付きdense演算でなく非zero接続だけをCOO SpMM CUDA kernelで処理するSNACKを提案。一次要旨は高sparsityの小batchでkernel最大7倍、単層inferenceでdense比2倍高速と報告し、GPT-2 training memory削減も評価する。LLM kernelへの転用余地はあるが主たるend-to-end推論評価はgraph型モデルでLLM decode/servingの改善は未実証のためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.04093",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:16:17+09:00",
+      "last_checked_at": "2026-11-02T14:16:17+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
