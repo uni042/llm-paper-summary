@@ -1,0 +1,58 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r08",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20136",
+      "identity_tokens": [
+        "id:arXiv:2610.20136",
+        "id:DOI:10.48550/arXiv.2610.20136"
+      ],
+      "title": "Seeing at the Edge: Energy Characterization of Vision-Language Model Inference on Edge Platforms",
+      "reason": "Qwen2-VL-2Bとtext-only siblingをRaspberry Pi5/Hailo-10H NPUおよびJetson Orin Nano Superで動かし、request固定energyと出力token数に比例するenergyを分離計測する。一次要旨はPiのNPU offloadで生成token当たりenergyを約3分の1に削減し、Jetson GPUとPi NPUの有利不利が出力約40 tokenで逆転すると報告。端末内VLM/LLM推論のenergy・thermal・latencyの実測比較としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.20136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:17:19+09:00",
+      "last_checked_at": "2026-11-02T14:17:19+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19382",
+      "identity_tokens": [
+        "id:arXiv:2610.19382",
+        "id:DOI:10.48550/arXiv.2610.19382"
+      ],
+      "title": "ixi-sLM: On-Device sLM for AI Call Agent Service",
+      "reason": "1GiB memoryと通話中latency/熱制約下で韓国語1.2B sLMをNPU推論へ移植する。通話頻度でvocabularyとembedding/LM headを縮小し、speech tokenizationを再適合、activation感度に基づくmodule別mixed precisionを用いる。一次要旨は803MiBモデル、CPU比通話energy23%、cloud LLMのtask-weighted品質94%を報告し、Qualcomm/Apple NPUでproduction展開したとする。実端末でのSLM圧縮・推論システムとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.19382",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:17:19+09:00",
+      "last_checked_at": "2026-11-02T14:17:19+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.08688",
+      "identity_tokens": [
+        "id:arXiv:2610.08688",
+        "id:DOI:10.48550/arXiv.2610.08688"
+      ],
+      "title": "A Framework for Accelerating Transformer Inference on RISC-V for Edge AI",
+      "reason": "BERT-Tiny、MobileBERT、MiniLM、Electra、DeBERTaの小型encoder LMを対象に、RISC-Vのbatch matrix multiplication address生成用instruction extensionとcompiler loop unrollingを組み合わせる。一次要旨はASIC面積6.79%増の専用命令で15.39～21.74%性能改善、全体推論最大2.19倍を報告。edge transformer kernel最適化だが自回帰LLM decode/servingの実証がないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.08688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:17:19+09:00",
+      "last_checked_at": "2026-11-02T14:17:19+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
