@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-45",
+  "run_key": "20261103-0011-scheduled-chat-45/r01",
+  "reference_main_sha": "43b91a565b0607345702934cdf587b86a5128518",
+  "record_count": 5,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.01563",
+      "identity_tokens": [
+        "arXiv:2606.01563"
+      ],
+      "title": "MomentKV: Closing the Directional Gap in KV Cache Eviction for Long-Context Inference",
+      "reason": "KV削除時に残存トークンと削除トークンの注意出力方向がほぼ直交し、削除注意質量が小さくても出力誤差が増幅する問題を解析する。MomentKVは削除済みキー・値の個数、平均、値とキーの共分散を固定容量で保持し、削除判断と復号時の一次近似補正に利用する。LongBench・RULERでLLaMA-3.1-8B-InstructとQwen3-4B-Instructを評価し、著者らは複数キャッシュ予算で比較方式を上回ると報告。KVメモリ削減と推論品質維持に直接寄与するためaccept。要旨にはend-to-end速度改善倍率の記載はなく推測しない。",
+      "source_url": "https://arxiv.org/abs/2606.01563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:16:00+09:00",
+      "last_checked_at": "2026-11-03T00:16:00+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.10899",
+      "identity_tokens": [
+        "arXiv:2603.10899"
+      ],
+      "title": "LookaheadKV: Fast and Accurate KV Cache Eviction by Glimpsing into the Future without Generation",
+      "reason": "将来応答のdraft生成でKV重要度を推定する従来方式は追加生成費用が高い。LookaheadKVは学習可能な特殊トークンと選択的LoRAを用いて将来の注意重要度を予測し、draft応答を実際には生成せずprefill時に保持KVを決定する。長文脈ベンチマークで品質を維持しつつ、著者らはeviction処理費用を最大14.5倍削減と報告。これは削除判定の費用であり、end-to-end推論全体の14.5倍高速化ではない。推論時KV圧縮とTTFTの直接最適化のためaccept。",
+      "source_url": "https://arxiv.org/abs/2603.10899",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:16:00+09:00",
+      "last_checked_at": "2026-11-03T00:16:00+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.10238",
+      "identity_tokens": [
+        "arXiv:2602.10238"
+      ],
+      "title": "Learning to Evict from Key-Value Cache",
+      "reason": "KVキャッシュ削除を過去attentionスコアのヒューリスティックではなく、将来復号での有用性を順位付けする強化学習問題として定式化する。KV Policy（KVP）はヘッドごとの軽量エージェントを事前生成トレースから学習し、キー・値ベクトルだけで任意の保持予算に対する削除順位を決める。RULERとOASST2-4kで既存方式を上回り、LongBench等へのzero-shot転移も報告する。既存LLMの再学習・追加推論を必要としないKV削除方式としてaccept。要旨には確定した速度倍率がないため記載しない。",
+      "source_url": "https://arxiv.org/abs/2602.10238",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:16:00+09:00",
+      "last_checked_at": "2026-11-03T00:16:00+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.20515",
+      "identity_tokens": [
+        "arXiv:2602.20515"
+      ],
+      "title": "FAST-Prefill: FPGA Accelerated Sparse Attention for Long Context LLM Prefill",
+      "reason": "動的疎注意のprefillでは疎インデックス生成と不規則なKV参照がメモリ律速になる。FAST-PrefillはFPGA上で中間テンソルを作らないストリーム型インデックス生成、KVブロック生存期間を考慮した二層キャッシュ、DSPとLUTビットプレーン演算を併用する行列演算器を設計する。Alveo U280、Llama/Qwen、4K〜128K文脈、batch 1でNVIDIA A5000実装比TTFT最大2.5倍、エネルギー効率4.5倍と著者らは報告。異なるハードウェア比較である点を保持し、長文脈LLM prefillアクセラレータとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2602.20515",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:16:00+09:00",
+      "last_checked_at": "2026-11-03T00:16:00+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.08005",
+      "identity_tokens": [
+        "arXiv:2602.08005"
+      ],
+      "title": "DeltaKV: Residual-Based KV Cache Compression via Long-Range Similarity",
+      "reason": "長距離のKV表現間に類似性があることを利用し、過去トークンの参照表現と差分残差に分解してKVを圧縮する。本文ではResidualKVの名称も用い、Sparse-vLLMに疎・不規則KV配置を扱うメモリ管理とカーネルを実装する。著者らはLongBench・SCBench・AIMEで品質をほぼ維持しながらKV容量を元の29%に減らし、長文脈でvLLM比最大2倍のthroughputを報告。容量と実行速度を同時に改善するLLM推論システムとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2602.08005",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T00:16:00+09:00",
+      "last_checked_at": "2026-11-03T00:16:00+09:00",
+      "linked_from": [],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_search_after_worklist_reuse_screen"
+    }
+  ]
+}
