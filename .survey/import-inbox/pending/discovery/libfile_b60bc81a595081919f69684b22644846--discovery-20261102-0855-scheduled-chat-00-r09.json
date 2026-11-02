@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r09",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28223",
+      "identity_tokens": [
+        "id:arXiv:2610.28223",
+        "id:DOI:10.48550/arXiv.2610.28223"
+      ],
+      "title": "Local Inference of LLMs on Long Contexts: A Data Systems Perspective",
+      "reason": "単一ユーザーの長文脈ローカルLLM推論を複数世代GPUで測定し、容量不足だけでなくself-attentionのGPU資源利用率、KV paging、同期・cache挙動が律速することを示す。著者要旨は最新GPUが必ずしも良く活用されないという観察とデータ管理観点の改善提案を報告する。新runtimeの実装提案ではないが長文脈推論の一次性能特性評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.28223",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32638",
+      "identity_tokens": [
+        "id:arXiv:2610.32638",
+        "id:DOI:10.48550/arXiv.2610.32638"
+      ],
+      "title": "InferSlice: A Reference Architecture for SLO-driven LLM Inference over a Telco Wide-Area Network",
+      "reason": "通信事業者の地理分散WAN上でnetwork slicing、GPU partitioning、elastic serving、監視を統合したLLM推論reference architectureをJOINER UK実網で評価する。著者要旨はreplicationは配置に比較的鈍感だがメモリに制約され、pipeline parallelは近距離～中距離跨ぎに耐える一方、tensor parallelとprefill/decode分離は単一subnet hopを越えると成立しにくいと報告。実WANの推論配置・SLO評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.32638",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02732",
+      "identity_tokens": [
+        "id:arXiv:2610.02732",
+        "id:DOI:10.48550/arXiv.2610.02732"
+      ],
+      "title": "ServeTwin: A Benchmark-Validated Simulator for Distributed LLM Architecture Exploration",
+      "reason": "prefill/decode分離とagentの多ターンを含むLLM serving loopを、ハードウェアprofile不要のiSTAGE分析トレースとstateful閉ループsimulatorで再現する。vLLM互換interfaceで既存benchmarkを変更せず実行できる。著者要旨はInferenceXのthroughput/latency曲線を平均誤差3.6%、LMBenchmark多ターン性能を9.9%誤差で予測したと報告。分散推論システム設計の直接的な性能モデルとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.02732",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.16013",
+      "identity_tokens": [
+        "id:arXiv:2610.16013",
+        "id:DOI:10.48550/arXiv.2610.16013"
+      ],
+      "title": "Online Batching with Lookahead: Adversarial Limits and Stochastic Gains",
+      "reason": "固定batch容量・固定処理時間の単一serverで、将来到着を有限長だけ先読みできるonline batchingの総flow time最小化を理論解析する。敵対的到着では先読みがあってもoffline最適との一定の隔たりが残り、Poisson到着では窓長とともに差が指数的に縮むと示す。実request trace実験もあるが一次要旨ではLLM特有のKV cache、prefill/decode、continuous batchingをモデル化していない。一般推論batch理論として関連するがLLM推論固有性が弱いためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.16013",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07348",
+      "identity_tokens": [
+        "id:arXiv:2610.07348",
+        "id:DOI:10.48550/arXiv.2610.07348"
+      ],
+      "title": "Stepped MoE: Segment-Level Routing with Configurable Inference Complexity",
+      "reason": "1つのMoEモデルで1B～4B活性パラメータの複数運用点を実現するため、contextと目標効率に条件づけたelastic nested subnetworkとsparse expert routingを組み合わせる。著者要旨は知識集約benchmarkで同規模denseより2～5%精度改善、静的方式と同等のlatencyを報告し、共有重みにより端末disk容量も節約する。端末推論時の計算予算可変化を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07348",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21378",
+      "identity_tokens": [
+        "id:arXiv:2610.21378",
+        "id:DOI:10.48550/arXiv.2610.21378"
+      ],
+      "title": "DPA-MoE: A Runtime Precision Control Framework for MoE Inference",
+      "reason": "MoE expertごとに固定bit幅を使う代わりに、SharedScale AnyBCQのprefix復号可能なweight chunkとoffline残差profileを使い、runtime router gate scoreに応じて各expertへchunk予算を配分する。再訓練/再符号化なしに有効精度を変更できる。著者要旨はQwen3-30B-A3BとDeepSeekMoE-16Bで同予算の均等割当よりKL/精度が改善し、prototypeの定常throughput負担は小さいと報告。MoE推論の動的精度制御としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.37442",
+      "identity_tokens": [
+        "id:arXiv:2610.37442",
+        "id:DOI:10.48550/arXiv.2610.37442"
+      ],
+      "title": "CRISP: Co-designing Pruning and Scheduling for Efficient MoE Inference on Edge Servers",
+      "reason": "edge上のMoEではexpert転送が支配的で、expert組合せ頻度と寄与度が偏る。CRISPはneuronを重要度順に並べて1つのexpertに複数実行幅を持たせ、hot/warm/cold組合せ別の幅と転送/計算重畳をjoint schedulingする。著者要旨はMixtral8x7BとDeepSeekMoE16Bで同メモリ予算のthroughput最大2.1倍、full-width比精度低下3.6%以内と報告。edge MoEのpruning/runtime協調としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.37442",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.16890",
+      "identity_tokens": [
+        "id:arXiv:2610.16890",
+        "id:DOI:10.48550/arXiv.2610.16890"
+      ],
+      "title": "FORGE: Procedural Weight Generation for Sparse MoE Inference",
+      "reason": "MoE expert FFNのHBMからのweight読込を削減するため、各SM内のRotor Generation Unitで少量のseed/rotorパラメータからweight tileを生成するhardware方式。著者要旨は5モデルでFFN層30%置換の推計として同GPU数のsystem throughput1.3～2.8倍、短文脈latency1.10～1.15倍改善、KV容量1.2～2.6倍増を報告する一方、精度低下を明記する。SystemVerilog実装/検証済みだがシステム改善値は推計である点を区別してaccept。",
+      "source_url": "https://arxiv.org/abs/2610.16890",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.17586",
+      "identity_tokens": [
+        "id:arXiv:2610.17586",
+        "id:DOI:10.48550/arXiv.2610.17586"
+      ],
+      "title": "High-Throughput LLM-Based Compression and What It Takes: A Systems Study of Inference Engines and Entropy Coding Optimizations",
+      "reason": "LLMのnext-token分布を算術符号化へ使うテキスト圧縮を高速化するため、複数streamのpipelined codingとlogit取得をTransformers、vLLM、TensorRT-LLMで比較する。著者要旨は従来Transformers実装比18.84倍の圧縮処理高速化、A100で181KB/sと報告。推論engineの実装評価を含むが最終目的はLLMサービングや生成decodeではなくデータ圧縮のthroughputなのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.17586",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08231",
+      "identity_tokens": [
+        "id:arXiv:2610.08231",
+        "id:DOI:10.48550/arXiv.2610.08231"
+      ],
+      "title": "OSFP4: Joint Optimization of Diagonal Smoothing and Block Scales for NVFP4 Quantization",
+      "reason": "LLMのNVFP4量子化で対角smoothingとblock scaleを別々に選ぶのでなく、量子化行列積の誤差を最小化するよう共同最適化する。round-to-nearestとGPTQ式逐次補正の両方を考慮し、multiplicative-dither FP4の解析を利用する。著者要旨は評価した量子化方式で最高の平均精度を保ち、vendor NVFP4のprefill throughputの約94～97%を維持すると報告。推論FP4の品質/性能tradeoffを直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.08231",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:08:46+09:00",
+      "last_checked_at": "2026-11-02T09:08:46+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
