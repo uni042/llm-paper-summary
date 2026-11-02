@@ -1,0 +1,925 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-0bd8a7ad5d930f08-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-0bd8a7ad5d93",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.07026",
+    "arXiv:2610.07086",
+    "arXiv:2610.14745",
+    "arXiv:2610.17436",
+    "arXiv:2610.20392",
+    "arXiv:2610.21257",
+    "arXiv:2610.23455",
+    "arXiv:2610.26660",
+    "arXiv:2610.27699",
+    "arXiv:2610.39931"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "baf388b28f5080a9b008ac124e1c02f44d1dbaba",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-02T06:07:43.540539+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.07026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07086",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.14745",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.17436",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.20392",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.21257",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.23455",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.26660",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.27699",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39931",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.07086",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLM agents interact with external systems by generating structured tool calls. Given a user request, conversational context, and a catalog of tool schemas, a tool-calling model must select tools and generate their arguments, potentially producing multiple calls in a single response. Standard autoregressive decoding generates these calls token by token, incurring substantial latency for requests involving multiple calls or many argument fields. The explicit argument structure offers opportunities for parallel generation, but later argument values may depend on preceding fields and calls, so independently generated values can differ from the target model's output. We present SchemaFill, a framework for efficient LLM tool calling through slot-parallel speculative decoding. SchemaFill generates future slot values concurrently as candidates, without requiring advance knowledge of the actual call sequence or argument values. Candidates spanning multiple fields and calls are concatenated for verification by the target model under the actual output prefix. Only verified tokens are committed, and the target supplies corrections when candidates disagree. This applies target verification while exploiting parallelism across slots and calls. On Glaive and BFCL, SchemaFill achieves up to a 4.05$\\times$ improvement in end-to-end throughput over autoregressive decoding. Code is available at https://github.com/Czzzk/SchemaFill.",
+      "identifiers": [
+        "SemanticScholar:62dc544c66fa2860c6f1f84def2b5c06a743f528"
+      ],
+      "semantic_scholar_id": "62dc544c66fa2860c6f1f84def2b5c06a743f528",
+      "canonical_id": "arXiv:2610.07086",
+      "arxiv_id": "2610.07086",
+      "authors": [
+        "Zhi-Kai Chen",
+        "Song-Yan Li",
+        "De-Chuan Zhan",
+        "Han-Jia Ye"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking",
+      "source_url": "https://arxiv.org/abs/2610.07026",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The Offline AI Modules workstream enables practical, low-power, and community-accessible deployment of voice-first AI systems that operate fully offline. Designed for African language communities where speech is the dominant mode of interaction and internet connectivity is unreliable or absent, the workstream delivers three reinforcing components: a modular voice-first offline architecture, a low-cost hardware reference bill of materials, and a reproducible quantization and a reproducible quantization and benchmarking pipeline for instruction-tuned language models in the 2-5B parameter class. This paper presents the first end-to-end benchmark evaluation of the stack across two hardware tiers: an NVIDIA Jetson Orin NX (TierB) and a Raspberry Pi5 (TierA). Three instruction-tuned models are evaluated across four quantization formats, assessed for deployment metrics (decode throughput, chat latency, memory, power) and multilingual quality (topic classification accuracy on MasakhaNEWS across English, Hausa, Igbo, Nigerian Pidgin, and Yoruba; per-language perplexity drift). Speech recognition is evaluated using Ethio-ASR on Amharic and Oromo across both tiers. The principal finding is that Q4_K_M quantization represents the best size-to-quality trade-off for deployment on both tiers: gemma-4-E2B-it achieves 28.8t/s decode throughput and 89.2% topic classification accuracy at Q4_K_M on TierB, while all three models run within the 16GB memory budget on TierA.",
+      "identifiers": [
+        "SemanticScholar:7f8a5327ba47b27da1116f1fc343ad7c7836dd4f"
+      ],
+      "semantic_scholar_id": "7f8a5327ba47b27da1116f1fc343ad7c7836dd4f",
+      "canonical_id": "arXiv:2610.07026",
+      "arxiv_id": "2610.07026",
+      "authors": [
+        "Sunday Afariogun",
+        "Odunolaoluwa Jenrola",
+        "Zeinab Nezami"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SAGE: Pushing 2-Bit Vector-Quantized LLMs toward Real-World Usability",
+      "source_url": "https://arxiv.org/abs/2610.14745",
+      "year": 2026,
+      "published": "2026-10-10",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Extreme low-bit weight-only quantization is an effective approach to reducing the deployment costs of large language models. Below 3 bits, scalar quantization often suffers severe accuracy loss, while vector quantization (VQ) better preserves accuracy through more expressive joint encoding. However, existing VQ methods still exhibit substantial degradation on real-world tasks, and two design challenges remain underexplored: (1) protecting sensitive weight channels within jointly encoded vectors; and (2) allocating a fixed bit budget among representation components, such as direction and radius, to suit different weight matrices. To address these challenges, we propose SAGE: Split Adaptation and Grouping by Energy for weight-only vector quantization. First, Energy-Stratified Grouping (ESG) couples channel grouping with activation-weighted fitting, grouping channels from different energy tiers within each subvector to prioritize sensitive channels. Second, Adaptive Bit Split (ABS) balances direction-codebook capacity and radius precision per matrix, selecting the split with the lowest activation-weighted reconstruction error under a fixed budget. Across benchmarks covering knowledge, mathematics, code generation, instruction following, and tool use, SAGE achieves state-of-the-art performance in the 2-bit quantization setting. On Qwen3-30B-A3B, it retains 95.3% of the BF16 model's average benchmark score. With our custom-designed CUDA kernel, SAGE delivers up to a 2.55-fold non-streaming end-to-end speedup over FP16. The code is available at https://github.com/Zincwolf/sage.",
+      "identifiers": [
+        "SemanticScholar:35cb4ea371bbbee56901c59b276af051ea50a837"
+      ],
+      "semantic_scholar_id": "35cb4ea371bbbee56901c59b276af051ea50a837",
+      "canonical_id": "arXiv:2610.14745",
+      "arxiv_id": "2610.14745",
+      "authors": [
+        "Xiang-Long Yan",
+        "Ze-Nan Wu",
+        "Ke-Wei Zhang",
+        "Kai-Cheng Yang",
+        "Yu-Lun Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 23,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SchemaWeaver: Accelerating On-Device Mobile Agentic AI via Schema-Guided Parallel LLM Decoding",
+      "source_url": "https://arxiv.org/abs/2610.17436",
+      "year": 2026,
+      "published": "2026-10-12",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) on mobile devices can act as agents that call external software tools to complete complex tasks, but the major challenge of supporting on-device mobile agentic AI with LLMs is the long latency of LLM tool calling on mobile devices. In particular, the decode phase is the main contributor of such long latency, but is hard to speed up on mobile processors as it is bound by memory bandwidth rather than compute power. To address this limitation, in this paper we present SchemaWeaver, a new on-device mobile agentic AI technique that enforces schema-guided parallel decoding in the decode phase of LLM tool calling, to reduce its latency by producing multiple tokens in each decode pass. SchemaWeaver can be generically applied to the LLM inference engine on mobile devices without involving any training efforts or changes on LLMs, and our experiment results on major mobile SoCs and LLM families show that SchemaWeaver can reduce the LLM tool calling latency by up to 3.9 times, compared to the competitive baselines.",
+      "identifiers": [
+        "SemanticScholar:f30f2d257338b7ced9f97195fd9d529585e9d717"
+      ],
+      "semantic_scholar_id": "f30f2d257338b7ced9f97195fd9d529585e9d717",
+      "canonical_id": "arXiv:2610.17436",
+      "arxiv_id": "2610.17436",
+      "authors": [
+        "Boyuan Yang",
+        "Wei Gao"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 21,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding",
+      "source_url": "https://arxiv.org/abs/2610.20392",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding accelerates LLM generation through lightweight drafting and parallel verification. It is particularly promising for long inputs, where KV-cache access costs can be amortized over multiple accepted tokens. Yet most drafters are trained on short sequences and degrade on long inputs, while long-context training is costly. Existing training-free approaches restrict the context window, rescale positions, or augment recent context with retrieved distant entries. Drafters, however, read target hidden states that already encode contextual and positional information, and their lightweight architecture makes full-history attention affordable. We propose FOLD, a training-free method that preserves exact local positions and treats all distant entries as far memory at a shared position. To counter attention dilution as the memory grows, we sharpen attention within it to emphasize relevant entries while separately controlling its total weight relative to the local window. Across six target-drafter pairs and diverse benchmarks of up to 256K tokens, FOLD predominantly delivers the highest speedup, with the best case more than doubling the speedup over autoregressive decoding, from 2.08$\\times$ to 4.22$\\times$.",
+      "identifiers": [
+        "SemanticScholar:229844c33c53be3410bb4ab56f78d3049b8847a2"
+      ],
+      "semantic_scholar_id": "229844c33c53be3410bb4ab56f78d3049b8847a2",
+      "canonical_id": "arXiv:2610.20392",
+      "arxiv_id": "2610.20392",
+      "authors": [
+        "Shu-Xuan Li",
+        "Jia-Liang Kang",
+        "Yang-Hao Zhou",
+        "Zi-Ye Zhu",
+        "Xiao Yang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.21257",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) demand efficient inference, where the multiply-accumulate (MAC) operations in linear projections dominate compute and energy cost. Post-training quantization (PTQ) reduces this cost by mapping weights and activations to low-bit integers. Power-of-Two (PoT) weight quantization promises efficient multiplier-free LLM inference via shift-add logic, but suffers significant accuracy degradation at low bitwidths due to its coarse base-2 quantization grid. We introduce Fractional PoT (FPoT), a base-$\\sqrt{2}$ (half-octave) fractional PoT grid that achieves practical 4-bit weight quantization while preserving a fully integer shift-add datapath. The method combines (i) the base-$\\sqrt{2}$ weight grid with uniform integer activations, (ii) a calibration-time grid-alignment refinement absorbed into the static per-channel scale, and (iii) a lightweight 1-adder $\\sqrt{2}$ approximation whose error is absorbed during weight calibration via approximate-grid quantization, yielding a processing element (PE) with significantly fewer gates than a 4-bit integer multiplier. On Llama-3-8B with 4-bit weight and activation quantization, FPoT improves zero-shot commonsense reasoning performance by 8.72% relative to the PoT baseline, while maintaining performance close to the uniform integer baseline, with only a negligible 0.4%p degradation. These results hold across various configurations spanning seven models and three bit-widths. Furthermore, FPoT can be integrated with state-of-the-art LLM PTQ methods, demonstrating framework-agnostic applicability.",
+      "identifiers": [
+        "SemanticScholar:674784b26dfb366d34e247716deb1ab9d3b8f117"
+      ],
+      "semantic_scholar_id": "674784b26dfb366d34e247716deb1ab9d3b8f117",
+      "canonical_id": "arXiv:2610.21257",
+      "arxiv_id": "2610.21257",
+      "authors": [
+        "Sunghyun Wee",
+        "Geunjae Choi",
+        "Hyeonjin Kim",
+        "Suyoung Kim",
+        "N. Kwak"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "HydraLLM: Adaptive Width Slicing for Elastic Text and Vision-Language Models",
+      "source_url": "https://arxiv.org/abs/2610.23455",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "LLMs and LVLMs are increasingly deployed across heterogeneous hardware, ranging from data-center GPUs to resource-constrained edge devices. Their fixed-size architectures limit the ability to reuse a single model across deployment settings with different compute, latency, and model-size targets. We introduce HydraLLM, an elastic MQA-based architecture. Its number of active attention heads determines the effective widths of the embeddings, attention projections, feed-forward layers, and the output head, forming a nested family of subnetworks within a single parameter set. We introduce a static-to-elastic conversion pipeline that, starting from a pre-trained model checkpoint, includes importance-driven weight reordering and stochastic subnetwork training with knowledge distillation. We extend this principle to multimodal inference through an elastic projection module whose output width follows the active text width. HydraLLM covers a wider range of active parameter configurations than FFN-only elastic architectures. With 75% of heads active, HydraLLM achieves 2.2 percentage points higher TriviaQA accuracy than a state-of-the-art nested baseline configuration which has 17.25% more parameters. With 50% of heads active, our multimodal model achieves a CLIPScore comparable to that of the 7$\\times$ larger Gemma 3 4B model. With only 25% of heads active, HydraLLM increases token-generation throughput by 75.3% over the full-width configuration.",
+      "identifiers": [
+        "SemanticScholar:6e8bb6d261d7c4a3e6008028ae67586c72088513"
+      ],
+      "semantic_scholar_id": "6e8bb6d261d7c4a3e6008028ae67586c72088513",
+      "canonical_id": "arXiv:2610.23455",
+      "arxiv_id": "2610.23455",
+      "authors": [
+        "Oscar Kemme",
+        "Janek Haberer",
+        "Ali Hojjat",
+        "Olaf Landsiedel"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
+      "source_url": "https://arxiv.org/abs/2610.26660",
+      "year": 2026,
+      "published": "2026-10-19",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Smartphone GUI agents complete tasks in mobile apps by repeatedly reading the screen and asking a model for the next action. Mobile neural processing units (NPUs) enable local execution, keeping screen contents on the phone, but model latency accumulates with every action. Hybrid linear attention models reduce memory requirements, yet reusing their recurrent state requires checkpoints at the appropriate input positions. Agent requests retain instructions but rewrite recent history, so checkpoint policies designed for chat continuation can miss reusable prefixes. Retaining rollback states for speculative decoding can also move prompt processing off the NPU's matrix unit, adding overhead that outweighs decoding savings on short action outputs. A loaded model can further hold the NPU awake between tasks. We present Tandem, a runtime for hybrid GUI agents on mobile NPUs. Tandem saves recurrent state where consecutive prompts diverge, allowing later requests to reuse previously processed context. It keeps most prefill on the matrix unit and produces rollback states through a short per-token tail. Its verification kernel reads each weight block once for all proposed tokens. Between request bursts, Tandem releases NPU power votes without unloading the model. We implement Tandem in llama.cpp and evaluate it on recorded agent interactions across two Snapdragon generations. On a Snapdragon 8 Elite, Tandem reduces per-step latency by 30% for text-based screen descriptions and 16% for screenshots relative to llama.cpp's fastest NPU configuration, reduces energy per text step by 33%, and lowers standby power with the model loaded from 0.76 to 0.22 W.",
+      "identifiers": [
+        "SemanticScholar:12102076ffdeed5d91d69558a3d84360fea9c782"
+      ],
+      "semantic_scholar_id": "12102076ffdeed5d91d69558a3d84360fea9c782",
+      "canonical_id": "arXiv:2610.26660",
+      "arxiv_id": "2610.26660",
+      "authors": [
+        "Zhuo-Min Chen",
+        "Jing-Chao Ni",
+        "Xu Zheng",
+        "Yong Chen",
+        "Mo Sha",
+        "Wei Cheng",
+        "Dong-Sheng Luo"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks",
+      "source_url": "https://arxiv.org/abs/2610.27699",
+      "year": 2026,
+      "published": "2026-10-20",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Low-bit quantization reduces the memory footprint of large language models, but preserving accuracy with efficient training remains challenging. Scalar quantization encodes weights independently, while explicit-codebook vector quantization introduces costly search during training. We propose E8-QAT, a 2-bit quantization-aware training framework that uses the $E_8$ lattice as an implicit eight-dimensional codebook. It jointly quantizes weight groups through arithmetic projection without storing or searching an explicit codebook during the training forward pass. A 2-bit core encoding and sparse extension preserve the selected lattice points exactly, adding less than 0.1\\% to core index storage. On Qwen3.6-35B-A3B, E8-QAT matches the performance of the full-precision model in terms of the average score across the four tasks. E8-QAT improves over the state-of-the-art baseline by 2.03\\% on IFEval and by 1.51\\% on LiveCodeBench, under the same data, schedule, and bit width. The 2-bit representation reduces peak memory by 80\\% and supports a $4\\times$ larger batch. At each representation's largest feasible batch, E8-QAT reaches $1.97\\times$ the decoding throughput of BF16.",
+      "identifiers": [
+        "SemanticScholar:fa61e572d47adb2a4c88c0bcc921436e3267fd41"
+      ],
+      "semantic_scholar_id": "fa61e572d47adb2a4c88c0bcc921436e3267fd41",
+      "canonical_id": "arXiv:2610.27699",
+      "arxiv_id": "2610.27699",
+      "authors": [
+        "Xinyu Lei",
+        "Hong Huang",
+        "Jie-Bin Zhang",
+        "Hong-Yu Li",
+        "Jin-Long Song",
+        "De-Cheng Wu",
+        "Guang-Hua Yu",
+        "Jian-Chen Zhu",
+        "Su-Jian Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 13,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Low-Bit GDN Recurrent-State Quantization: Global Gradient-aware Allocation and Pure-Write Sliding Windows",
+      "source_url": "https://arxiv.org/abs/2610.39931",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear attention stores historical information in a recurrent state of fixed size, providing a compact memory representation for long-context inference. Reducing state precision further lowers per-request storage requirements, but quantized writeback errors enter subsequent recurrences, degrade prediction quality on long-reasoning tasks, and can be accompanied by repetitive generation and excessively long outputs. We propose Global Gradient-aware Allocation (GGA) and the Pure-Write Sliding Window (PW) to address precision allocation and recent-information maintenance. GGA combines candidate quantization residuals with gradient sensitivity to future prediction loss to allocate head bit widths under a model-wide mixed-precision budget. PW independently maintains recent pure writes as FP8 vector pairs, propagates them through the full GDN state transition, and merges them into the low-bit historical state only after they leave the window. Across seven evaluations on Qwen3.5-4B/9B, GGA allocation alone improves over STEPQuant@4 by 19.48/29.84 percentage points. Adding PW-S8 yields seven-task macro-averages of 69.83%/78.63%, improving over STEPQuant@4 by 38.39/41.21 percentage points, respectively. Both precision reallocation and window maintenance improve task scores while mitigating excessively long outputs: at @6, GGA reduces mean generation length, averaged equally across tasks, by 10.45%/14.65% relative to STEPQuant; adding PW-S8 to GGA@4 further reduces mean generation length by 32.32%/36.77%. Comparisons at similar storage budgets further show that using additional capacity to maintain recent writes yields higher task scores and shorter mean outputs than solely increasing the bit width of the accumulated state.",
+      "identifiers": [
+        "SemanticScholar:124e929f24cc0744ec2162ee0823cb9fb9fee161"
+      ],
+      "semantic_scholar_id": "124e929f24cc0744ec2162ee0823cb9fb9fee161",
+      "canonical_id": "arXiv:2610.39931",
+      "arxiv_id": "2610.39931",
+      "authors": [
+        "Qing-Hang Huang",
+        "Xu-Chu Huang",
+        "Xun-Zhao Yin"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.07086",
+      "identity_tokens": [
+        "id:SemanticScholar:62dc544c66fa2860c6f1f84def2b5c06a743f528",
+        "id:arXiv:2610.07086",
+        "title:schemafill efficient llm tool calling via slotparallel speculative decoding",
+        "url:https://arxiv.org/abs/2610.07086"
+      ],
+      "record": {
+        "title": "SchemaFill: Efficient LLM Tool Calling via Slot-Parallel Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.07086",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLM agents interact with external systems by generating structured tool calls. Given a user request, conversational context, and a catalog of tool schemas, a tool-calling model must select tools and generate their arguments, potentially producing multiple calls in a single response. Standard autoregressive decoding generates these calls token by token, incurring substantial latency for requests involving multiple calls or many argument fields. The explicit argument structure offers opportunities for parallel generation, but later argument values may depend on preceding fields and calls, so independently generated values can differ from the target model's output. We present SchemaFill, a framework for efficient LLM tool calling through slot-parallel speculative decoding. SchemaFill generates future slot values concurrently as candidates, without requiring advance knowledge of the actual call sequence or argument values. Candidates spanning multiple fields and calls are concatenated for verification by the target model under the actual output prefix. Only verified tokens are committed, and the target supplies corrections when candidates disagree. This applies target verification while exploiting parallelism across slots and calls. On Glaive and BFCL, SchemaFill achieves up to a 4.05$\\times$ improvement in end-to-end throughput over autoregressive decoding. Code is available at https://github.com/Czzzk/SchemaFill.",
+        "identifiers": [
+          "SemanticScholar:62dc544c66fa2860c6f1f84def2b5c06a743f528"
+        ],
+        "semantic_scholar_id": "62dc544c66fa2860c6f1f84def2b5c06a743f528",
+        "canonical_id": "arXiv:2610.07086",
+        "arxiv_id": "2610.07086",
+        "authors": [
+          "Zhi-Kai Chen",
+          "Song-Yan Li",
+          "De-Chuan Zhan",
+          "Han-Jia Ye"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 28,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07026",
+      "identity_tokens": [
+        "id:SemanticScholar:7f8a5327ba47b27da1116f1fc343ad7c7836dd4f",
+        "id:arXiv:2610.07026",
+        "title:offline ai modules voicefirst offline architecture hardware reference stack quantization and benchmarking",
+        "url:https://arxiv.org/abs/2610.07026"
+      ],
+      "record": {
+        "title": "Offline AI Modules: Voice-First Offline Architecture, Hardware Reference Stack, Quantization and Benchmarking",
+        "source_url": "https://arxiv.org/abs/2610.07026",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The Offline AI Modules workstream enables practical, low-power, and community-accessible deployment of voice-first AI systems that operate fully offline. Designed for African language communities where speech is the dominant mode of interaction and internet connectivity is unreliable or absent, the workstream delivers three reinforcing components: a modular voice-first offline architecture, a low-cost hardware reference bill of materials, and a reproducible quantization and a reproducible quantization and benchmarking pipeline for instruction-tuned language models in the 2-5B parameter class. This paper presents the first end-to-end benchmark evaluation of the stack across two hardware tiers: an NVIDIA Jetson Orin NX (TierB) and a Raspberry Pi5 (TierA). Three instruction-tuned models are evaluated across four quantization formats, assessed for deployment metrics (decode throughput, chat latency, memory, power) and multilingual quality (topic classification accuracy on MasakhaNEWS across English, Hausa, Igbo, Nigerian Pidgin, and Yoruba; per-language perplexity drift). Speech recognition is evaluated using Ethio-ASR on Amharic and Oromo across both tiers. The principal finding is that Q4_K_M quantization represents the best size-to-quality trade-off for deployment on both tiers: gemma-4-E2B-it achieves 28.8t/s decode throughput and 89.2% topic classification accuracy at Q4_K_M on TierB, while all three models run within the 16GB memory budget on TierA.",
+        "identifiers": [
+          "SemanticScholar:7f8a5327ba47b27da1116f1fc343ad7c7836dd4f"
+        ],
+        "semantic_scholar_id": "7f8a5327ba47b27da1116f1fc343ad7c7836dd4f",
+        "canonical_id": "arXiv:2610.07026",
+        "arxiv_id": "2610.07026",
+        "authors": [
+          "Sunday Afariogun",
+          "Odunolaoluwa Jenrola",
+          "Zeinab Nezami"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.14745",
+      "identity_tokens": [
+        "id:SemanticScholar:35cb4ea371bbbee56901c59b276af051ea50a837",
+        "id:arXiv:2610.14745",
+        "title:sage pushing 2bit vectorquantized llms toward realworld usability",
+        "url:https://arxiv.org/abs/2610.14745"
+      ],
+      "record": {
+        "title": "SAGE: Pushing 2-Bit Vector-Quantized LLMs toward Real-World Usability",
+        "source_url": "https://arxiv.org/abs/2610.14745",
+        "year": 2026,
+        "published": "2026-10-10",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Extreme low-bit weight-only quantization is an effective approach to reducing the deployment costs of large language models. Below 3 bits, scalar quantization often suffers severe accuracy loss, while vector quantization (VQ) better preserves accuracy through more expressive joint encoding. However, existing VQ methods still exhibit substantial degradation on real-world tasks, and two design challenges remain underexplored: (1) protecting sensitive weight channels within jointly encoded vectors; and (2) allocating a fixed bit budget among representation components, such as direction and radius, to suit different weight matrices. To address these challenges, we propose SAGE: Split Adaptation and Grouping by Energy for weight-only vector quantization. First, Energy-Stratified Grouping (ESG) couples channel grouping with activation-weighted fitting, grouping channels from different energy tiers within each subvector to prioritize sensitive channels. Second, Adaptive Bit Split (ABS) balances direction-codebook capacity and radius precision per matrix, selecting the split with the lowest activation-weighted reconstruction error under a fixed budget. Across benchmarks covering knowledge, mathematics, code generation, instruction following, and tool use, SAGE achieves state-of-the-art performance in the 2-bit quantization setting. On Qwen3-30B-A3B, it retains 95.3% of the BF16 model's average benchmark score. With our custom-designed CUDA kernel, SAGE delivers up to a 2.55-fold non-streaming end-to-end speedup over FP16. The code is available at https://github.com/Zincwolf/sage.",
+        "identifiers": [
+          "SemanticScholar:35cb4ea371bbbee56901c59b276af051ea50a837"
+        ],
+        "semantic_scholar_id": "35cb4ea371bbbee56901c59b276af051ea50a837",
+        "canonical_id": "arXiv:2610.14745",
+        "arxiv_id": "2610.14745",
+        "authors": [
+          "Xiang-Long Yan",
+          "Ze-Nan Wu",
+          "Ke-Wei Zhang",
+          "Kai-Cheng Yang",
+          "Yu-Lun Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 23,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.17436",
+      "identity_tokens": [
+        "id:SemanticScholar:f30f2d257338b7ced9f97195fd9d529585e9d717",
+        "id:arXiv:2610.17436",
+        "title:schemaweaver accelerating ondevice mobile agentic ai via schemaguided parallel llm decoding",
+        "url:https://arxiv.org/abs/2610.17436"
+      ],
+      "record": {
+        "title": "SchemaWeaver: Accelerating On-Device Mobile Agentic AI via Schema-Guided Parallel LLM Decoding",
+        "source_url": "https://arxiv.org/abs/2610.17436",
+        "year": 2026,
+        "published": "2026-10-12",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models (LLMs) on mobile devices can act as agents that call external software tools to complete complex tasks, but the major challenge of supporting on-device mobile agentic AI with LLMs is the long latency of LLM tool calling on mobile devices. In particular, the decode phase is the main contributor of such long latency, but is hard to speed up on mobile processors as it is bound by memory bandwidth rather than compute power. To address this limitation, in this paper we present SchemaWeaver, a new on-device mobile agentic AI technique that enforces schema-guided parallel decoding in the decode phase of LLM tool calling, to reduce its latency by producing multiple tokens in each decode pass. SchemaWeaver can be generically applied to the LLM inference engine on mobile devices without involving any training efforts or changes on LLMs, and our experiment results on major mobile SoCs and LLM families show that SchemaWeaver can reduce the LLM tool calling latency by up to 3.9 times, compared to the competitive baselines.",
+        "identifiers": [
+          "SemanticScholar:f30f2d257338b7ced9f97195fd9d529585e9d717"
+        ],
+        "semantic_scholar_id": "f30f2d257338b7ced9f97195fd9d529585e9d717",
+        "canonical_id": "arXiv:2610.17436",
+        "arxiv_id": "2610.17436",
+        "authors": [
+          "Boyuan Yang",
+          "Wei Gao"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 21,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.20392",
+      "identity_tokens": [
+        "id:SemanticScholar:229844c33c53be3410bb4ab56f78d3049b8847a2",
+        "id:arXiv:2610.20392",
+        "title:fold positionfree far memory with local order for longcontext speculative decoding",
+        "url:https://arxiv.org/abs/2610.20392"
+      ],
+      "record": {
+        "title": "FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding",
+        "source_url": "https://arxiv.org/abs/2610.20392",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Speculative decoding accelerates LLM generation through lightweight drafting and parallel verification. It is particularly promising for long inputs, where KV-cache access costs can be amortized over multiple accepted tokens. Yet most drafters are trained on short sequences and degrade on long inputs, while long-context training is costly. Existing training-free approaches restrict the context window, rescale positions, or augment recent context with retrieved distant entries. Drafters, however, read target hidden states that already encode contextual and positional information, and their lightweight architecture makes full-history attention affordable. We propose FOLD, a training-free method that preserves exact local positions and treats all distant entries as far memory at a shared position. To counter attention dilution as the memory grows, we sharpen attention within it to emphasize relevant entries while separately controlling its total weight relative to the local window. Across six target-drafter pairs and diverse benchmarks of up to 256K tokens, FOLD predominantly delivers the highest speedup, with the best case more than doubling the speedup over autoregressive decoding, from 2.08$\\times$ to 4.22$\\times$.",
+        "identifiers": [
+          "SemanticScholar:229844c33c53be3410bb4ab56f78d3049b8847a2"
+        ],
+        "semantic_scholar_id": "229844c33c53be3410bb4ab56f78d3049b8847a2",
+        "canonical_id": "arXiv:2610.20392",
+        "arxiv_id": "2610.20392",
+        "authors": [
+          "Shu-Xuan Li",
+          "Jia-Liang Kang",
+          "Yang-Hao Zhou",
+          "Zi-Ye Zhu",
+          "Xiao Yang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.21257",
+      "identity_tokens": [
+        "id:SemanticScholar:674784b26dfb366d34e247716deb1ab9d3b8f117",
+        "id:arXiv:2610.21257",
+        "title:fractional poweroftwo quantization for efficient and effective multiplierfree llm inference",
+        "url:https://arxiv.org/abs/2610.21257"
+      ],
+      "record": {
+        "title": "Fractional Power-of-Two Quantization for Efficient and Effective Multiplier-Free LLM Inference",
+        "source_url": "https://arxiv.org/abs/2610.21257",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) demand efficient inference, where the multiply-accumulate (MAC) operations in linear projections dominate compute and energy cost. Post-training quantization (PTQ) reduces this cost by mapping weights and activations to low-bit integers. Power-of-Two (PoT) weight quantization promises efficient multiplier-free LLM inference via shift-add logic, but suffers significant accuracy degradation at low bitwidths due to its coarse base-2 quantization grid. We introduce Fractional PoT (FPoT), a base-$\\sqrt{2}$ (half-octave) fractional PoT grid that achieves practical 4-bit weight quantization while preserving a fully integer shift-add datapath. The method combines (i) the base-$\\sqrt{2}$ weight grid with uniform integer activations, (ii) a calibration-time grid-alignment refinement absorbed into the static per-channel scale, and (iii) a lightweight 1-adder $\\sqrt{2}$ approximation whose error is absorbed during weight calibration via approximate-grid quantization, yielding a processing element (PE) with significantly fewer gates than a 4-bit integer multiplier. On Llama-3-8B with 4-bit weight and activation quantization, FPoT improves zero-shot commonsense reasoning performance by 8.72% relative to the PoT baseline, while maintaining performance close to the uniform integer baseline, with only a negligible 0.4%p degradation. These results hold across various configurations spanning seven models and three bit-widths. Furthermore, FPoT can be integrated with state-of-the-art LLM PTQ methods, demonstrating framework-agnostic applicability.",
+        "identifiers": [
+          "SemanticScholar:674784b26dfb366d34e247716deb1ab9d3b8f117"
+        ],
+        "semantic_scholar_id": "674784b26dfb366d34e247716deb1ab9d3b8f117",
+        "canonical_id": "arXiv:2610.21257",
+        "arxiv_id": "2610.21257",
+        "authors": [
+          "Sunghyun Wee",
+          "Geunjae Choi",
+          "Hyeonjin Kim",
+          "Suyoung Kim",
+          "N. Kwak"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.23455",
+      "identity_tokens": [
+        "id:SemanticScholar:6e8bb6d261d7c4a3e6008028ae67586c72088513",
+        "id:arXiv:2610.23455",
+        "title:hydrallm adaptive width slicing for elastic text and visionlanguage models",
+        "url:https://arxiv.org/abs/2610.23455"
+      ],
+      "record": {
+        "title": "HydraLLM: Adaptive Width Slicing for Elastic Text and Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2610.23455",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "LLMs and LVLMs are increasingly deployed across heterogeneous hardware, ranging from data-center GPUs to resource-constrained edge devices. Their fixed-size architectures limit the ability to reuse a single model across deployment settings with different compute, latency, and model-size targets. We introduce HydraLLM, an elastic MQA-based architecture. Its number of active attention heads determines the effective widths of the embeddings, attention projections, feed-forward layers, and the output head, forming a nested family of subnetworks within a single parameter set. We introduce a static-to-elastic conversion pipeline that, starting from a pre-trained model checkpoint, includes importance-driven weight reordering and stochastic subnetwork training with knowledge distillation. We extend this principle to multimodal inference through an elastic projection module whose output width follows the active text width. HydraLLM covers a wider range of active parameter configurations than FFN-only elastic architectures. With 75% of heads active, HydraLLM achieves 2.2 percentage points higher TriviaQA accuracy than a state-of-the-art nested baseline configuration which has 17.25% more parameters. With 50% of heads active, our multimodal model achieves a CLIPScore comparable to that of the 7$\\times$ larger Gemma 3 4B model. With only 25% of heads active, HydraLLM increases token-generation throughput by 75.3% over the full-width configuration.",
+        "identifiers": [
+          "SemanticScholar:6e8bb6d261d7c4a3e6008028ae67586c72088513"
+        ],
+        "semantic_scholar_id": "6e8bb6d261d7c4a3e6008028ae67586c72088513",
+        "canonical_id": "arXiv:2610.23455",
+        "arxiv_id": "2610.23455",
+        "authors": [
+          "Oscar Kemme",
+          "Janek Haberer",
+          "Ali Hojjat",
+          "Olaf Landsiedel"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.26660",
+      "identity_tokens": [
+        "id:SemanticScholar:12102076ffdeed5d91d69558a3d84360fea9c782",
+        "id:arXiv:2610.26660",
+        "title:tandem serving hybrid linearattention gui agents on mobile npus",
+        "url:https://arxiv.org/abs/2610.26660"
+      ],
+      "record": {
+        "title": "Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs",
+        "source_url": "https://arxiv.org/abs/2610.26660",
+        "year": 2026,
+        "published": "2026-10-19",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Smartphone GUI agents complete tasks in mobile apps by repeatedly reading the screen and asking a model for the next action. Mobile neural processing units (NPUs) enable local execution, keeping screen contents on the phone, but model latency accumulates with every action. Hybrid linear attention models reduce memory requirements, yet reusing their recurrent state requires checkpoints at the appropriate input positions. Agent requests retain instructions but rewrite recent history, so checkpoint policies designed for chat continuation can miss reusable prefixes. Retaining rollback states for speculative decoding can also move prompt processing off the NPU's matrix unit, adding overhead that outweighs decoding savings on short action outputs. A loaded model can further hold the NPU awake between tasks. We present Tandem, a runtime for hybrid GUI agents on mobile NPUs. Tandem saves recurrent state where consecutive prompts diverge, allowing later requests to reuse previously processed context. It keeps most prefill on the matrix unit and produces rollback states through a short per-token tail. Its verification kernel reads each weight block once for all proposed tokens. Between request bursts, Tandem releases NPU power votes without unloading the model. We implement Tandem in llama.cpp and evaluate it on recorded agent interactions across two Snapdragon generations. On a Snapdragon 8 Elite, Tandem reduces per-step latency by 30% for text-based screen descriptions and 16% for screenshots relative to llama.cpp's fastest NPU configuration, reduces energy per text step by 33%, and lowers standby power with the model loaded from 0.76 to 0.22 W.",
+        "identifiers": [
+          "SemanticScholar:12102076ffdeed5d91d69558a3d84360fea9c782"
+        ],
+        "semantic_scholar_id": "12102076ffdeed5d91d69558a3d84360fea9c782",
+        "canonical_id": "arXiv:2610.26660",
+        "arxiv_id": "2610.26660",
+        "authors": [
+          "Zhuo-Min Chen",
+          "Jing-Chao Ni",
+          "Xu Zheng",
+          "Yong Chen",
+          "Mo Sha",
+          "Wei Cheng",
+          "Dong-Sheng Luo"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 14,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.27699",
+      "identity_tokens": [
+        "id:SemanticScholar:fa61e572d47adb2a4c88c0bcc921436e3267fd41",
+        "id:arXiv:2610.27699",
+        "title:e8qat efficient 2bit quantizationaware training with implicit lattice codebooks",
+        "url:https://arxiv.org/abs/2610.27699"
+      ],
+      "record": {
+        "title": "E8-QAT: Efficient 2-Bit Quantization-Aware Training with Implicit Lattice Codebooks",
+        "source_url": "https://arxiv.org/abs/2610.27699",
+        "year": 2026,
+        "published": "2026-10-20",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Low-bit quantization reduces the memory footprint of large language models, but preserving accuracy with efficient training remains challenging. Scalar quantization encodes weights independently, while explicit-codebook vector quantization introduces costly search during training. We propose E8-QAT, a 2-bit quantization-aware training framework that uses the $E_8$ lattice as an implicit eight-dimensional codebook. It jointly quantizes weight groups through arithmetic projection without storing or searching an explicit codebook during the training forward pass. A 2-bit core encoding and sparse extension preserve the selected lattice points exactly, adding less than 0.1\\% to core index storage. On Qwen3.6-35B-A3B, E8-QAT matches the performance of the full-precision model in terms of the average score across the four tasks. E8-QAT improves over the state-of-the-art baseline by 2.03\\% on IFEval and by 1.51\\% on LiveCodeBench, under the same data, schedule, and bit width. The 2-bit representation reduces peak memory by 80\\% and supports a $4\\times$ larger batch. At each representation's largest feasible batch, E8-QAT reaches $1.97\\times$ the decoding throughput of BF16.",
+        "identifiers": [
+          "SemanticScholar:fa61e572d47adb2a4c88c0bcc921436e3267fd41"
+        ],
+        "semantic_scholar_id": "fa61e572d47adb2a4c88c0bcc921436e3267fd41",
+        "canonical_id": "arXiv:2610.27699",
+        "arxiv_id": "2610.27699",
+        "authors": [
+          "Xinyu Lei",
+          "Hong Huang",
+          "Jie-Bin Zhang",
+          "Hong-Yu Li",
+          "Jin-Long Song",
+          "De-Cheng Wu",
+          "Guang-Hua Yu",
+          "Jian-Chen Zhu",
+          "Su-Jian Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 13,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39931",
+      "identity_tokens": [
+        "id:SemanticScholar:124e929f24cc0744ec2162ee0823cb9fb9fee161",
+        "id:arXiv:2610.39931",
+        "title:lowbit gdn recurrentstate quantization global gradientaware allocation and purewrite sliding windows",
+        "url:https://arxiv.org/abs/2610.39931"
+      ],
+      "record": {
+        "title": "Low-Bit GDN Recurrent-State Quantization: Global Gradient-aware Allocation and Pure-Write Sliding Windows",
+        "source_url": "https://arxiv.org/abs/2610.39931",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear attention stores historical information in a recurrent state of fixed size, providing a compact memory representation for long-context inference. Reducing state precision further lowers per-request storage requirements, but quantized writeback errors enter subsequent recurrences, degrade prediction quality on long-reasoning tasks, and can be accompanied by repetitive generation and excessively long outputs. We propose Global Gradient-aware Allocation (GGA) and the Pure-Write Sliding Window (PW) to address precision allocation and recent-information maintenance. GGA combines candidate quantization residuals with gradient sensitivity to future prediction loss to allocate head bit widths under a model-wide mixed-precision budget. PW independently maintains recent pure writes as FP8 vector pairs, propagates them through the full GDN state transition, and merges them into the low-bit historical state only after they leave the window. Across seven evaluations on Qwen3.5-4B/9B, GGA allocation alone improves over STEPQuant@4 by 19.48/29.84 percentage points. Adding PW-S8 yields seven-task macro-averages of 69.83%/78.63%, improving over STEPQuant@4 by 38.39/41.21 percentage points, respectively. Both precision reallocation and window maintenance improve task scores while mitigating excessively long outputs: at @6, GGA reduces mean generation length, averaged equally across tasks, by 10.45%/14.65% relative to STEPQuant; adding PW-S8 to GGA@4 further reduces mean generation length by 32.32%/36.77%. Comparisons at similar storage budgets further show that using additional capacity to maintain recent writes yields higher task scores and shorter mean outputs than solely increasing the bit width of the accumulated state.",
+        "identifiers": [
+          "SemanticScholar:124e929f24cc0744ec2162ee0823cb9fb9fee161"
+        ],
+        "semantic_scholar_id": "124e929f24cc0744ec2162ee0823cb9fb9fee161",
+        "canonical_id": "arXiv:2610.39931",
+        "arxiv_id": "2610.39931",
+        "authors": [
+          "Qing-Hang Huang",
+          "Xu-Chu Huang",
+          "Xun-Zhao Yin"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:0b2e1e818039836648ab3489372d1f0ddd715da8efc811e3a386a84297583281",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

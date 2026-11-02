@@ -1,0 +1,850 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-b2f6c2ad247488dd-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-b2f6c2ad2474",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.04277",
+    "arXiv:2610.04473",
+    "arXiv:2610.08373",
+    "arXiv:2610.19026",
+    "arXiv:2610.19819",
+    "arXiv:2610.22543",
+    "arXiv:2610.22985",
+    "arXiv:2610.36576",
+    "arXiv:2610.39418"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "baf388b28f5080a9b008ac124e1c02f44d1dbaba",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-02T06:07:12.895324+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.04277",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.04473",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.08373",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19026",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.19819",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.22543",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.22985",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36576",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.39418",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+      "source_url": "https://arxiv.org/abs/2610.22543",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) promise parallel text generation, but in practice face an unresolved speed-quality trade-off. Exact decoding fills in only one masked position per model pass, while faster multi-token decoding schemes are lossy. Speculative decoding is the standard lossless acceleration for autoregressive models. However, it does not transfer directly to DLMs, which must choose both what to generate and where. We show that this order is the missing piece: the model's own predictions from the previous pass already give the right token at 92-100% of positions, but not which position comes next. Based on this observation, we introduce Speculating Positions Order Trajectory (SPOT), which learns to predict this order. A 0.62M-parameter model reads only the target's output distributions and proposes a tree of candidate continuations, and the target verifies all of them in a single pass by checking whether each equals its own next state. On the verification side, our analysis shows that prior block-diffusion verification approaches either assume $T=0$ or a sequential proposal interface. To support tree-based speculation at any temperature, we propose using coupled-noise match verification for diffusion blocks, following shared-Gumbel-noise coupling approaches. Our comprehensive experiments show that SPOT cuts target passes by up to 6.8x and reaches up to 3.2x the throughput of standard decoding, beating the calibrated and training-free drafting baselines in every task and budget at $T=0$ and $T=1$. In addition, we show that the learned drafter transfers across models, demonstrating successful transfer across six different DLMs. Project page: https://eliezer318.github.io/SPOT-dLLM/",
+      "identifiers": [
+        "SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e"
+      ],
+      "semantic_scholar_id": "53fabe548469afe2e36c742cc83c76db3ac0b32e",
+      "canonical_id": "arXiv:2610.22543",
+      "arxiv_id": "2610.22543",
+      "authors": [
+        "Eliezer Shlomi",
+        "Eliron Rahimi",
+        "Avi Mendelson",
+        "Chaim Baskin"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 18,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
+      "source_url": "https://arxiv.org/abs/2610.04277",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "New AI accelerators arrive before the kernels that make them fast, because peak kernel performance requires architecture-specific expertise in operand pipelines and data-movement techniques. Coding agents can now write, compile, and tune kernels on their own, so they could greatly accelerate kernel development and optimization. What agents produce depends on the interfaces they are given. These interfaces may expose a machine's raw capabilities or encode the known-good methods for exploiting its hardware features efficiently. We test the performance impact of these two interfaces on Intel GPUs through controlled experiments with three coding models on three kernels. With raw SYCL and execution feedback, Opus 4.8, the strongest of the three models tested, writes a single-GPU GEMM kernel reaching only 57.5% of Intel's tuned oneDNN library. We present SyclKittens, a hardware-aware tile programming model for Intel GPUs that encodes these known-good methods, so its operations place operands in matrix-engine layouts, prefetch through the L1 cache, and communicate over the fabric that links GPU stacks into a node. With SyclKittens under the same agent, task, and feedback budget, the agent reaches 82.1%, showing that encoded methods turn hardware capabilities into performance. Workload-specific policies stay programmable, and engineers and agents jointly refine these schedules in SyclKittens to build a kernel suite that reaches ~96% of oneDNN in geometric mean across GEMM shapes. The suite runs Llama-3.1-8B inference 1.59x faster than torch.compile on one GPU and up to 2.91x faster than a matched multi-GPU decode path on Intel's oneCCL. SyclKittens is open source and available at https://github.com/intel/SyclKittens.",
+      "identifiers": [
+        "SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad"
+      ],
+      "semantic_scholar_id": "70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+      "canonical_id": "arXiv:2610.04277",
+      "arxiv_id": "2610.04277",
+      "authors": [
+        "Ye-Hong Jiang",
+        "Sheng Chen",
+        "Fang-Wen Fu",
+        "Yen-Kuang Chen",
+        "Xin-Min Tian",
+        "Stuart H. Sul",
+        "Simran Arora"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
+      "source_url": "https://arxiv.org/abs/2610.04473",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving an LLM means setting dozens of inference-time knobs, from per-layer KV retention to per-layer expert counts. Practice sets them with mechanism-specific heuristics that return a single operating point and do not scale to layer-wise search spaces. We recast inference configuration as constrained multi-objective black-box optimization and build InferOpt, a reusable search framework that requires only variable bounds, a deterministic resource cost, and an evaluation hook. InferOpt searches on a frozen sampled proxy set, rejects over-budget candidates before any model call, tightens the budget adaptively, and re-validates Pareto representatives on full-scale dataset. One pipeline covers a 28-dimensional continuous KV space (Qwen2.5-7B) and a 26-dimensional discrete MoE space (DeepSeek-V2-Lite). On KV, post-prefill pruning cuts the 16K cache by 64.4% and TPOT by 22.9--48.5%, and the searched layer-wise budget by InferOpt beats a matched uniform budget by 7.3% and 14.0% of the Full KV reference points. On MoE, a searched top-k schedule by InferOpt removes 43.0% of routed token--expert pairs while staying within 0.59 points of the default, closer than the matched-budget baselines. Against Random Search, NSGA-II, and MOTPE, InferOpt leads on both spaces, taking the best proxy hypervolume and the lowest retention on KV and staying closest to the uncompressed reference at the lowest experts on MoE.",
+      "identifiers": [
+        "SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9"
+      ],
+      "semantic_scholar_id": "f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+      "canonical_id": "arXiv:2610.04473",
+      "arxiv_id": "2610.04473",
+      "authors": [
+        "Qi Chen",
+        "Ying-Ying Cheng",
+        "Zhao Sun",
+        "Li Zhou",
+        "Fan Zhang",
+        "Jie Sun"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 30,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.08373",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Energy-efficient LLM serving requires minimizing serving GPU energy while meeting latency and throughput service-level objectives (SLOs). Attention--FFN disaggregation (AFD) enables separate resource allocation and operating controls for attention and expert computation, but their energy effects remain coupled through the execution pipeline. Realizing its energy-saving potential therefore requires navigating a hierarchical configuration space in which deployment structures constrain admissible controls and shape their end-to-end effects. Finding low-energy configurations that meet SLOs is challenging because physical evaluations are costly and only a small fraction of candidates can be measured. We present Energy-Oriented Configuration Optimization (ECO), which jointly searches deployment structures and their admissible operating controls under a limited measurement budget. ECO constructs a structure-aware energy prior from calibrated stage behavior and pipeline dependencies, then learns residual prediction errors with a Gaussian process. Its cost-aware constrained Bayesian optimization prioritizes measurements according to expected energy improvement while accounting for SLO feasibility, execution success, and evaluation cost, and returns the lowest-energy measured feasible configuration. Across all 16 scenarios on A6000 and A100 with Qwen and DeepSeek, ECO's frozen configurations, evaluated on disjoint requests, reduce serving energy by 40.5\\% and increase output token rate by 20.7\\% on average relative to baselines while meeting target SLOs. Across the 8 A6000 scenarios, its selected feasible energy averages 33.1\\% below generic constrained Bayesian optimization and 25.8\\% below genetic search.",
+      "identifiers": [
+        "SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012"
+      ],
+      "semantic_scholar_id": "ab020c3f5a77dfc49200de60e9c6dba675db6012",
+      "canonical_id": "arXiv:2610.08373",
+      "arxiv_id": "2610.08373",
+      "authors": [
+        "Qing-Yun Zou",
+        "Bin Gao",
+        "Zhuo-Bin Huang",
+        "Weng-Fai Wong",
+        "Tulika Mitra",
+        "Bing-Sheng He"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Joint Subspace Sparse Attention for Efficient Long-Context Decoding",
+      "source_url": "https://arxiv.org/abs/2610.19026",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention reduces the KV-cache traffic that dominates long-context LLM decoding, but practical methods largely operate at coarse granularity. Token-level selection offers finer control, yet presents two challenges: low-dimensional scoring may lose query--key structure needed for accurate ranking, while gathering scattered selected tokens can offset the resulting latency benefit. We introduce Joint Subspace Sparse Attention (JSSA) to address both challenges. For selection quality, JSSA learns a shared low-dimensional query--key subspace by minimizing token-score preservation error. We upper-bound the resulting non-convex objective with a tractable marginal objective that admits a closed-form spectral solution; direct refinement of the exact objective provides no measurable improvement in the tested settings. For execution efficiency, we develop a gather-free token-level indexed-attention kernel that supports distinct per-KV-head selections under the standard grouped-query attention (GQA) KV-cache layout. Across standard GQA, hybrid sliding-window/global attention, and Multi-head Latent Attention (MLA) models, JSSA consistently remains close to full-KV accuracy while avoiding the substantial generation-length inflation and architecture-dependent failures observed with competing methods. On an NVIDIA B200 GPU, JSSA achieves up to $6.43\\times$ the decoding throughput of full-KV attention at 128K context. JSSA achieves reasoning accuracy comparable to model-native DSA without model training and reaches 96--99\\% of its decoding throughput even at 700B scale large models.",
+      "identifiers": [
+        "SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2"
+      ],
+      "semantic_scholar_id": "f517f8a0f32aafbf5e4d400ca45ddd24353e8be2",
+      "canonical_id": "arXiv:2610.19026",
+      "arxiv_id": "2610.19026",
+      "authors": [
+        "Jiwon Song",
+        "Yoon Kim",
+        "Jae-Joon Kim"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
+      "source_url": "https://arxiv.org/abs/2610.19819",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The rapid adoption of Retrieval-Augmented Generation (RAG) and long-context LLMs has shifted the computational burden toward the prefill phase---the initial stage where the model processes all input tokens in parallel before generating a response---yet its energy impact remains poorly characterised. We investigate the contradiction between massive hardware-level power spikes and the sub-linear marginal cost of input tokens reported in system-level studies. Through high-resolution telemetry of Llama-3.1 and Qwen-2 models on NVIDIA A100 hardware, we identify the efficiency threshold where $O(n^2)$ attention complexity overcomes GPU parallelisation. Our results quantify how optimised memory orchestration (PagedAttention) delays this scaling bottleneck across three orders of context scaling, yielding up to an 8.9$\\times$ energy efficiency advantage at 112,000 tokens compared to standard baselines. Furthermore, we characterise the energy disparity between input and output tokens, demonstrating that optimised serving (vLLM) causes this ratio to narrow (from $\\approx$850$\\times$ to 750$\\times$) as context scales due to high decode efficiency, whereas unoptimised baselines show a much smaller, roughly constant gap ($\\approx$150--230$\\times$) because their prefill is itself expensive. This work establishes context-scaling laws that differentiate engine-level optimisations from inherent model constraints, providing an empirical framework for sustainable LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878"
+      ],
+      "semantic_scholar_id": "ac97f288e45548f84026bacb4fa4b21ccabc2878",
+      "canonical_id": "arXiv:2610.19819",
+      "arxiv_id": "2610.19819",
+      "authors": [
+        "Boris Ruf",
+        "Marcin Detyniecki"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prism Attention: Proposal-Refined Index Sharing Mechanism for Efficient LLMs Inference",
+      "source_url": "https://arxiv.org/abs/2610.22985",
+      "year": 2026,
+      "published": "2026-10-16",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-context decoding in large language models (LLMs) is increasingly bottlenecked by the memory and computation required to attend over an ever-growing Key-Value (KV) cache at each autoregressive step. Although token-level sparse attention reduces this burden by restricting computation to a small subset of relevant past tokens, its practical gains are often offset by repeatedly recomputing layer-wise sparse indices as the context grows. A common remedy is to share sparse indices across layers by computing them only at designated anchor layers, but such static reuse ignores the layer-wise evolution of attention patterns, causing the reused indices to progressively deviate from the layer-specific optima and incur substantial attention loss. By revisiting cross-layer sparsity from the perspective of attention dynamics, we find that inter-layer salient token shift is highly localized: although the exact top-$\\kappa$ indices differ across layers, the core high-attention tokens remain stable, with changes concentrated near the expanded boundary of previously selected regions. Motivated by this, we propose Prism Attention, a proposal-refined sparse attention framework. It replaces rigid cross-layer index reuse with a coarse-to-fine strategy, preserving layer-wise adaptability while retaining the efficiency benefits of cross-layer sharing. Extensive experiments show that Prism Attention achieves state-of-the-art performance among mainstream sparse attention methods on both reasoning and long-context benchmarks, while attaining a $3.4\\times$ end-to-end decoding speedup over FlashAttention at 128K context length.",
+      "identifiers": [
+        "SemanticScholar:e0d3f6fd574d906f44edaacc1241127f64851ce6"
+      ],
+      "semantic_scholar_id": "e0d3f6fd574d906f44edaacc1241127f64851ce6",
+      "canonical_id": "arXiv:2610.22985",
+      "arxiv_id": "2610.22985",
+      "authors": [
+        "Zhen-Xu Tian",
+        "Ke-Bin Liu",
+        "Zheng-Wu Yang",
+        "Yi Su",
+        "Qing-Qing Dang",
+        "Yan-Gang Sha",
+        "Kai-Peng Deng",
+        "Dian-Hai Yu",
+        "Yan-Jun Ma",
+        "Jun-Tao Li",
+        "Min Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 17,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Less is more: learning what to profile for GPU kernel optimization",
+      "source_url": "https://arxiv.org/abs/2610.36576",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models have recently shown strong potential for automatically optimizing GPU kernels, yet their effectiveness depends critically on the hardware information available to the kernel optimization model. Existing systems typically rely on predefined profiling strategies, leaving what to profile largely outside the optimization process. We show that effective profiling is not simply about collecting more information: increasing the number of profiling metrics does not monotonically improve kernel optimization, while the most useful profiling information varies across kernels. Our theoretical analysis further shows that, under such heterogeneous profiling utility, kernel-conditioned selection can outperform any single fixed profiling configuration. Motivated by this observation, we propose AutoProfiler, a feedback-driven framework for learning a deterministic profiling tree from optimization feedback. The tree is iteratively refined through REWRITE and SPLIT operations, with an LLM generating candidate modifications and empirical evaluation determining their acceptance. Once constructed, the tree quickly gathers the required profiling information for any kernel, allowing the LLM rewriter to be invoked only once. Experiments on KernelBench show that our approach improves kernel optimization over fixed profiling configurations under constrained profiling budgets. These results suggest that hardware profiling should evolve from static metric collection toward profiling reasoning, making profiling itself a new dimension for improving kernel optimization. The codes are available at https://github.com/Satissss/AutoProfiler.",
+      "identifiers": [
+        "SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6"
+      ],
+      "semantic_scholar_id": "1b68c0c28d7cdea39255d6c3a493da21474123d6",
+      "canonical_id": "arXiv:2610.36576",
+      "arxiv_id": "2610.36576",
+      "authors": [
+        "Yi-Han Wang",
+        "Pei-Yu Liu",
+        "Run-Yu Chen",
+        "Wei Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+      "source_url": "https://arxiv.org/abs/2610.39418",
+      "year": 2026,
+      "published": "2026-10-29",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Linear recurrences are emerging as practical alternatives to softmax attention in large language models, appearing in both standalone and hybrid architectures. However, despite their rapid emergence, low-precision inference remains much less developed for these models than for softmax attention. During prefill, chunkwise-parallel algorithms cast much of the recurrence as dense matrix multiplications, suggesting a natural path to low-precision execution. Simply quantizing these operations in their native form, however, can be fragile. In this work, we identify functional invariances that preserve the full-precision computation while making the operands more amenable to quantization. Building on this observation, we introduce LinQuant, a framework for low-precision recurrent prefill based on seven such invariances, including rotations, diagonal rescalings, and alternative placements of recurrent decay and write factors. We derive when these transformations remain valid across common recurrence families spanning linear, gated, and delta-rule updates, and show that they provide complementary degrees of freedom for improving low-precision accuracy. Finally, we translate this framework to production by augmenting SSDi8, an existing low-precision prefill pipeline for Mamba-2, with the applicable invariances. LinQuant improves perplexity at matched latency on Mamba-2 1.3B, 2.7B, and 8B and Nemotron-H 8B, demonstrating the practical utility of invariance-based quantization for recurrent models.",
+      "identifiers": [
+        "SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77"
+      ],
+      "semantic_scholar_id": "8f81b4b69923a160adbf5657819f20fc72fc3b77",
+      "canonical_id": "arXiv:2610.39418",
+      "arxiv_id": "2610.39418",
+      "authors": [
+        "Neehal Tumma",
+        "Philipp Nazari",
+        "Rohan Cherukuri",
+        "Daniela Rus",
+        "T. Konstantin Rusch"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.22543",
+      "identity_tokens": [
+        "id:SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e",
+        "id:arXiv:2610.22543",
+        "title:on the spot enhancing speculative decoding for diffusion language models via commitorder prediction",
+        "url:https://arxiv.org/abs/2610.22543"
+      ],
+      "record": {
+        "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+        "source_url": "https://arxiv.org/abs/2610.22543",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) promise parallel text generation, but in practice face an unresolved speed-quality trade-off. Exact decoding fills in only one masked position per model pass, while faster multi-token decoding schemes are lossy. Speculative decoding is the standard lossless acceleration for autoregressive models. However, it does not transfer directly to DLMs, which must choose both what to generate and where. We show that this order is the missing piece: the model's own predictions from the previous pass already give the right token at 92-100% of positions, but not which position comes next. Based on this observation, we introduce Speculating Positions Order Trajectory (SPOT), which learns to predict this order. A 0.62M-parameter model reads only the target's output distributions and proposes a tree of candidate continuations, and the target verifies all of them in a single pass by checking whether each equals its own next state. On the verification side, our analysis shows that prior block-diffusion verification approaches either assume $T=0$ or a sequential proposal interface. To support tree-based speculation at any temperature, we propose using coupled-noise match verification for diffusion blocks, following shared-Gumbel-noise coupling approaches. Our comprehensive experiments show that SPOT cuts target passes by up to 6.8x and reaches up to 3.2x the throughput of standard decoding, beating the calibrated and training-free drafting baselines in every task and budget at $T=0$ and $T=1$. In addition, we show that the learned drafter transfers across models, demonstrating successful transfer across six different DLMs. Project page: https://eliezer318.github.io/SPOT-dLLM/",
+        "identifiers": [
+          "SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e"
+        ],
+        "semantic_scholar_id": "53fabe548469afe2e36c742cc83c76db3ac0b32e",
+        "canonical_id": "arXiv:2610.22543",
+        "arxiv_id": "2610.22543",
+        "authors": [
+          "Eliezer Shlomi",
+          "Eliron Rahimi",
+          "Avi Mendelson",
+          "Chaim Baskin"
+        ],
+        "priority": 101,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 101,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 18,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04277",
+      "identity_tokens": [
+        "id:SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+        "id:arXiv:2610.04277",
+        "title:syclkittens a tile programming model for programmers and coding agents on intel gpus",
+        "url:https://arxiv.org/abs/2610.04277"
+      ],
+      "record": {
+        "title": "SyclKittens: A Tile Programming Model for Programmers and Coding Agents on Intel GPUs",
+        "source_url": "https://arxiv.org/abs/2610.04277",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "New AI accelerators arrive before the kernels that make them fast, because peak kernel performance requires architecture-specific expertise in operand pipelines and data-movement techniques. Coding agents can now write, compile, and tune kernels on their own, so they could greatly accelerate kernel development and optimization. What agents produce depends on the interfaces they are given. These interfaces may expose a machine's raw capabilities or encode the known-good methods for exploiting its hardware features efficiently. We test the performance impact of these two interfaces on Intel GPUs through controlled experiments with three coding models on three kernels. With raw SYCL and execution feedback, Opus 4.8, the strongest of the three models tested, writes a single-GPU GEMM kernel reaching only 57.5% of Intel's tuned oneDNN library. We present SyclKittens, a hardware-aware tile programming model for Intel GPUs that encodes these known-good methods, so its operations place operands in matrix-engine layouts, prefetch through the L1 cache, and communicate over the fabric that links GPU stacks into a node. With SyclKittens under the same agent, task, and feedback budget, the agent reaches 82.1%, showing that encoded methods turn hardware capabilities into performance. Workload-specific policies stay programmable, and engineers and agents jointly refine these schedules in SyclKittens to build a kernel suite that reaches ~96% of oneDNN in geometric mean across GEMM shapes. The suite runs Llama-3.1-8B inference 1.59x faster than torch.compile on one GPU and up to 2.91x faster than a matched multi-GPU decode path on Intel's oneCCL. SyclKittens is open source and available at https://github.com/intel/SyclKittens.",
+        "identifiers": [
+          "SemanticScholar:70605bee23d4d66f1976da76a53b97dd8ce9aaad"
+        ],
+        "semantic_scholar_id": "70605bee23d4d66f1976da76a53b97dd8ce9aaad",
+        "canonical_id": "arXiv:2610.04277",
+        "arxiv_id": "2610.04277",
+        "authors": [
+          "Ye-Hong Jiang",
+          "Sheng Chen",
+          "Fang-Wen Fu",
+          "Yen-Kuang Chen",
+          "Xin-Min Tian",
+          "Stuart H. Sul",
+          "Simran Arora"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.04473",
+      "identity_tokens": [
+        "id:SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+        "id:arXiv:2610.04473",
+        "title:inferopt constrained multiobjective search for llm inference configurations",
+        "url:https://arxiv.org/abs/2610.04473"
+      ],
+      "record": {
+        "title": "InferOpt: Constrained Multi-Objective Search for LLM Inference Configurations",
+        "source_url": "https://arxiv.org/abs/2610.04473",
+        "year": 2026,
+        "published": "2026-10-03",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Serving an LLM means setting dozens of inference-time knobs, from per-layer KV retention to per-layer expert counts. Practice sets them with mechanism-specific heuristics that return a single operating point and do not scale to layer-wise search spaces. We recast inference configuration as constrained multi-objective black-box optimization and build InferOpt, a reusable search framework that requires only variable bounds, a deterministic resource cost, and an evaluation hook. InferOpt searches on a frozen sampled proxy set, rejects over-budget candidates before any model call, tightens the budget adaptively, and re-validates Pareto representatives on full-scale dataset. One pipeline covers a 28-dimensional continuous KV space (Qwen2.5-7B) and a 26-dimensional discrete MoE space (DeepSeek-V2-Lite). On KV, post-prefill pruning cuts the 16K cache by 64.4% and TPOT by 22.9--48.5%, and the searched layer-wise budget by InferOpt beats a matched uniform budget by 7.3% and 14.0% of the Full KV reference points. On MoE, a searched top-k schedule by InferOpt removes 43.0% of routed token--expert pairs while staying within 0.59 points of the default, closer than the matched-budget baselines. Against Random Search, NSGA-II, and MOTPE, InferOpt leads on both spaces, taking the best proxy hypervolume and the lowest retention on KV and staying closest to the uncompressed reference at the lowest experts on MoE.",
+        "identifiers": [
+          "SemanticScholar:f7f1ca13427d1d6c01a7a0f7067bba247bf132c9"
+        ],
+        "semantic_scholar_id": "f7f1ca13427d1d6c01a7a0f7067bba247bf132c9",
+        "canonical_id": "arXiv:2610.04473",
+        "arxiv_id": "2610.04473",
+        "authors": [
+          "Qi Chen",
+          "Ying-Ying Cheng",
+          "Zhao Sun",
+          "Li Zhou",
+          "Fan Zhang",
+          "Jie Sun"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 30,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.08373",
+      "identity_tokens": [
+        "id:SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012",
+        "id:arXiv:2610.08373",
+        "title:eco energyoriented configuration optimization for attention ffn disaggregated llm serving",
+        "url:https://arxiv.org/abs/2610.08373"
+      ],
+      "record": {
+        "title": "ECO: Energy-Oriented Configuration Optimization for Attention FFN Disaggregated LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.08373",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Energy-efficient LLM serving requires minimizing serving GPU energy while meeting latency and throughput service-level objectives (SLOs). Attention--FFN disaggregation (AFD) enables separate resource allocation and operating controls for attention and expert computation, but their energy effects remain coupled through the execution pipeline. Realizing its energy-saving potential therefore requires navigating a hierarchical configuration space in which deployment structures constrain admissible controls and shape their end-to-end effects. Finding low-energy configurations that meet SLOs is challenging because physical evaluations are costly and only a small fraction of candidates can be measured. We present Energy-Oriented Configuration Optimization (ECO), which jointly searches deployment structures and their admissible operating controls under a limited measurement budget. ECO constructs a structure-aware energy prior from calibrated stage behavior and pipeline dependencies, then learns residual prediction errors with a Gaussian process. Its cost-aware constrained Bayesian optimization prioritizes measurements according to expected energy improvement while accounting for SLO feasibility, execution success, and evaluation cost, and returns the lowest-energy measured feasible configuration. Across all 16 scenarios on A6000 and A100 with Qwen and DeepSeek, ECO's frozen configurations, evaluated on disjoint requests, reduce serving energy by 40.5\\% and increase output token rate by 20.7\\% on average relative to baselines while meeting target SLOs. Across the 8 A6000 scenarios, its selected feasible energy averages 33.1\\% below generic constrained Bayesian optimization and 25.8\\% below genetic search.",
+        "identifiers": [
+          "SemanticScholar:ab020c3f5a77dfc49200de60e9c6dba675db6012"
+        ],
+        "semantic_scholar_id": "ab020c3f5a77dfc49200de60e9c6dba675db6012",
+        "canonical_id": "arXiv:2610.08373",
+        "arxiv_id": "2610.08373",
+        "authors": [
+          "Qing-Yun Zou",
+          "Bin Gao",
+          "Zhuo-Bin Huang",
+          "Weng-Fai Wong",
+          "Tulika Mitra",
+          "Bing-Sheng He"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19026",
+      "identity_tokens": [
+        "id:SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2",
+        "id:arXiv:2610.19026",
+        "title:joint subspace sparse attention for efficient longcontext decoding",
+        "url:https://arxiv.org/abs/2610.19026"
+      ],
+      "record": {
+        "title": "Joint Subspace Sparse Attention for Efficient Long-Context Decoding",
+        "source_url": "https://arxiv.org/abs/2610.19026",
+        "year": 2026,
+        "published": "2026-10-13",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sparse attention reduces the KV-cache traffic that dominates long-context LLM decoding, but practical methods largely operate at coarse granularity. Token-level selection offers finer control, yet presents two challenges: low-dimensional scoring may lose query--key structure needed for accurate ranking, while gathering scattered selected tokens can offset the resulting latency benefit. We introduce Joint Subspace Sparse Attention (JSSA) to address both challenges. For selection quality, JSSA learns a shared low-dimensional query--key subspace by minimizing token-score preservation error. We upper-bound the resulting non-convex objective with a tractable marginal objective that admits a closed-form spectral solution; direct refinement of the exact objective provides no measurable improvement in the tested settings. For execution efficiency, we develop a gather-free token-level indexed-attention kernel that supports distinct per-KV-head selections under the standard grouped-query attention (GQA) KV-cache layout. Across standard GQA, hybrid sliding-window/global attention, and Multi-head Latent Attention (MLA) models, JSSA consistently remains close to full-KV accuracy while avoiding the substantial generation-length inflation and architecture-dependent failures observed with competing methods. On an NVIDIA B200 GPU, JSSA achieves up to $6.43\\times$ the decoding throughput of full-KV attention at 128K context. JSSA achieves reasoning accuracy comparable to model-native DSA without model training and reaches 96--99\\% of its decoding throughput even at 700B scale large models.",
+        "identifiers": [
+          "SemanticScholar:f517f8a0f32aafbf5e4d400ca45ddd24353e8be2"
+        ],
+        "semantic_scholar_id": "f517f8a0f32aafbf5e4d400ca45ddd24353e8be2",
+        "canonical_id": "arXiv:2610.19026",
+        "arxiv_id": "2610.19026",
+        "authors": [
+          "Jiwon Song",
+          "Yoon Kim",
+          "Jae-Joon Kim"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 20,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.19819",
+      "identity_tokens": [
+        "id:SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878",
+        "id:arXiv:2610.19819",
+        "title:the cost of context profiling the energy footprint of input tokens in large language models",
+        "url:https://arxiv.org/abs/2610.19819"
+      ],
+      "record": {
+        "title": "The Cost of Context: Profiling the Energy Footprint of Input Tokens in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2610.19819",
+        "year": 2026,
+        "published": "2026-10-14",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The rapid adoption of Retrieval-Augmented Generation (RAG) and long-context LLMs has shifted the computational burden toward the prefill phase---the initial stage where the model processes all input tokens in parallel before generating a response---yet its energy impact remains poorly characterised. We investigate the contradiction between massive hardware-level power spikes and the sub-linear marginal cost of input tokens reported in system-level studies. Through high-resolution telemetry of Llama-3.1 and Qwen-2 models on NVIDIA A100 hardware, we identify the efficiency threshold where $O(n^2)$ attention complexity overcomes GPU parallelisation. Our results quantify how optimised memory orchestration (PagedAttention) delays this scaling bottleneck across three orders of context scaling, yielding up to an 8.9$\\times$ energy efficiency advantage at 112,000 tokens compared to standard baselines. Furthermore, we characterise the energy disparity between input and output tokens, demonstrating that optimised serving (vLLM) causes this ratio to narrow (from $\\approx$850$\\times$ to 750$\\times$) as context scales due to high decode efficiency, whereas unoptimised baselines show a much smaller, roughly constant gap ($\\approx$150--230$\\times$) because their prefill is itself expensive. This work establishes context-scaling laws that differentiate engine-level optimisations from inherent model constraints, providing an empirical framework for sustainable LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:ac97f288e45548f84026bacb4fa4b21ccabc2878"
+        ],
+        "semantic_scholar_id": "ac97f288e45548f84026bacb4fa4b21ccabc2878",
+        "canonical_id": "arXiv:2610.19819",
+        "arxiv_id": "2610.19819",
+        "authors": [
+          "Boris Ruf",
+          "Marcin Detyniecki"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.22985",
+      "identity_tokens": [
+        "id:SemanticScholar:e0d3f6fd574d906f44edaacc1241127f64851ce6",
+        "id:arXiv:2610.22985",
+        "title:prism attention proposalrefined index sharing mechanism for efficient llms inference",
+        "url:https://arxiv.org/abs/2610.22985"
+      ],
+      "record": {
+        "title": "Prism Attention: Proposal-Refined Index Sharing Mechanism for Efficient LLMs Inference",
+        "source_url": "https://arxiv.org/abs/2610.22985",
+        "year": 2026,
+        "published": "2026-10-16",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long-context decoding in large language models (LLMs) is increasingly bottlenecked by the memory and computation required to attend over an ever-growing Key-Value (KV) cache at each autoregressive step. Although token-level sparse attention reduces this burden by restricting computation to a small subset of relevant past tokens, its practical gains are often offset by repeatedly recomputing layer-wise sparse indices as the context grows. A common remedy is to share sparse indices across layers by computing them only at designated anchor layers, but such static reuse ignores the layer-wise evolution of attention patterns, causing the reused indices to progressively deviate from the layer-specific optima and incur substantial attention loss. By revisiting cross-layer sparsity from the perspective of attention dynamics, we find that inter-layer salient token shift is highly localized: although the exact top-$\\kappa$ indices differ across layers, the core high-attention tokens remain stable, with changes concentrated near the expanded boundary of previously selected regions. Motivated by this, we propose Prism Attention, a proposal-refined sparse attention framework. It replaces rigid cross-layer index reuse with a coarse-to-fine strategy, preserving layer-wise adaptability while retaining the efficiency benefits of cross-layer sharing. Extensive experiments show that Prism Attention achieves state-of-the-art performance among mainstream sparse attention methods on both reasoning and long-context benchmarks, while attaining a $3.4\\times$ end-to-end decoding speedup over FlashAttention at 128K context length.",
+        "identifiers": [
+          "SemanticScholar:e0d3f6fd574d906f44edaacc1241127f64851ce6"
+        ],
+        "semantic_scholar_id": "e0d3f6fd574d906f44edaacc1241127f64851ce6",
+        "canonical_id": "arXiv:2610.22985",
+        "arxiv_id": "2610.22985",
+        "authors": [
+          "Zhen-Xu Tian",
+          "Ke-Bin Liu",
+          "Zheng-Wu Yang",
+          "Yi Su",
+          "Qing-Qing Dang",
+          "Yan-Gang Sha",
+          "Kai-Peng Deng",
+          "Dian-Hai Yu",
+          "Yan-Jun Ma",
+          "Jun-Tao Li",
+          "Min Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 17,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36576",
+      "identity_tokens": [
+        "id:SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6",
+        "id:arXiv:2610.36576",
+        "title:less is more learning what to profile for gpu kernel optimization",
+        "url:https://arxiv.org/abs/2610.36576"
+      ],
+      "record": {
+        "title": "Less is more: learning what to profile for GPU kernel optimization",
+        "source_url": "https://arxiv.org/abs/2610.36576",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language models have recently shown strong potential for automatically optimizing GPU kernels, yet their effectiveness depends critically on the hardware information available to the kernel optimization model. Existing systems typically rely on predefined profiling strategies, leaving what to profile largely outside the optimization process. We show that effective profiling is not simply about collecting more information: increasing the number of profiling metrics does not monotonically improve kernel optimization, while the most useful profiling information varies across kernels. Our theoretical analysis further shows that, under such heterogeneous profiling utility, kernel-conditioned selection can outperform any single fixed profiling configuration. Motivated by this observation, we propose AutoProfiler, a feedback-driven framework for learning a deterministic profiling tree from optimization feedback. The tree is iteratively refined through REWRITE and SPLIT operations, with an LLM generating candidate modifications and empirical evaluation determining their acceptance. Once constructed, the tree quickly gathers the required profiling information for any kernel, allowing the LLM rewriter to be invoked only once. Experiments on KernelBench show that our approach improves kernel optimization over fixed profiling configurations under constrained profiling budgets. These results suggest that hardware profiling should evolve from static metric collection toward profiling reasoning, making profiling itself a new dimension for improving kernel optimization. The codes are available at https://github.com/Satissss/AutoProfiler.",
+        "identifiers": [
+          "SemanticScholar:1b68c0c28d7cdea39255d6c3a493da21474123d6"
+        ],
+        "semantic_scholar_id": "1b68c0c28d7cdea39255d6c3a493da21474123d6",
+        "canonical_id": "arXiv:2610.36576",
+        "arxiv_id": "2610.36576",
+        "authors": [
+          "Yi-Han Wang",
+          "Pei-Yu Liu",
+          "Run-Yu Chen",
+          "Wei Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.39418",
+      "identity_tokens": [
+        "id:SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77",
+        "id:arXiv:2610.39418",
+        "title:linquant functional invariances for lowprecision linear recurrences",
+        "url:https://arxiv.org/abs/2610.39418"
+      ],
+      "record": {
+        "title": "LinQuant: Functional Invariances for Low-Precision Linear Recurrences",
+        "source_url": "https://arxiv.org/abs/2610.39418",
+        "year": 2026,
+        "published": "2026-10-29",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Linear recurrences are emerging as practical alternatives to softmax attention in large language models, appearing in both standalone and hybrid architectures. However, despite their rapid emergence, low-precision inference remains much less developed for these models than for softmax attention. During prefill, chunkwise-parallel algorithms cast much of the recurrence as dense matrix multiplications, suggesting a natural path to low-precision execution. Simply quantizing these operations in their native form, however, can be fragile. In this work, we identify functional invariances that preserve the full-precision computation while making the operands more amenable to quantization. Building on this observation, we introduce LinQuant, a framework for low-precision recurrent prefill based on seven such invariances, including rotations, diagonal rescalings, and alternative placements of recurrent decay and write factors. We derive when these transformations remain valid across common recurrence families spanning linear, gated, and delta-rule updates, and show that they provide complementary degrees of freedom for improving low-precision accuracy. Finally, we translate this framework to production by augmenting SSDi8, an existing low-precision prefill pipeline for Mamba-2, with the applicable invariances. LinQuant improves perplexity at matched latency on Mamba-2 1.3B, 2.7B, and 8B and Nemotron-H 8B, demonstrating the practical utility of invariance-based quantization for recurrent models.",
+        "identifiers": [
+          "SemanticScholar:8f81b4b69923a160adbf5657819f20fc72fc3b77"
+        ],
+        "semantic_scholar_id": "8f81b4b69923a160adbf5657819f20fc72fc3b77",
+        "canonical_id": "arXiv:2610.39418",
+        "arxiv_id": "2610.39418",
+        "authors": [
+          "Neehal Tumma",
+          "Philipp Nazari",
+          "Rohan Cherukuri",
+          "Daniela Rus",
+          "T. Konstantin Rusch"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 4,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:80957c7731c135a81d1f9b850c4a037078a99e85575d9ee1c3fa31081aa31660",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

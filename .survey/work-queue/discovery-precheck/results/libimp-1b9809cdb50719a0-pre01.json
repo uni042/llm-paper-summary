@@ -1,0 +1,585 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-1b9809cdb50719a0-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-1b9809cdb507",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2610.06996",
+    "arXiv:2610.07742",
+    "arXiv:2610.08341",
+    "arXiv:2610.10381",
+    "arXiv:2610.34436",
+    "arXiv:2610.36623"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 6,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "baf388b28f5080a9b008ac124e1c02f44d1dbaba",
+  "raw_search_result_count": 6,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 6,
+  "provider_progress": {
+    "requested_count": 6,
+    "status_counts": {
+      "allowed": 6,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-02T06:07:18.972571+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2610.06996",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07742",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.08341",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.10381",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.34436",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36623",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+      "source_url": "https://arxiv.org/abs/2610.10381",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers improve parameter efficiency by applying shared Transformer blocks over recurrent loops, increasing computational depth without increasing the parameter count. However, KV cache memory still scales with loop count, becoming a key memory bottleneck that limits batch size and inference throughput. KV cache quantization can alleviate this bottleneck, but existing methods often suffer substantial accuracy degradation at aggressive low-precision regimes. We observe that looped Transformers offer a unique opportunity: KV states across loops are highly similar. Based on this observation, we propose ResidualQuant, which uses the final-loop KV states as a reference and represents the remaining loops with low-precision residuals. Our method further combines least-square scaling and rotation-based quantization, as well as loop-wise mixed precision, to enable accurate quantization down to INT2 while retaining efficient reconstruction. Across multiple looped Transformer models and mathematical reasoning and code generation benchmarks, ResidualQuant consistently improves the accuracy-memory tradeoff over state-of-the-art rotation-based KV quantization. In particular, our method retains accuracy close to BF16 under mixed-precision settings while reducing theoretical KV storage by 80.7%, achieving up to 13.0% higher accuracy than the rotation-based baseline at nearly the same memory budget. On an RTX 5090, reduced KV memory traffic improves fixed-batch decode throughput by up to 3.66x, while the smaller memory footprint enables up to 8x larger batches, improving peak throughput by up to 5.38x.",
+      "identifiers": [
+        "SemanticScholar:26afff57155b8417bd402cce55aac3ebac24fa6a"
+      ],
+      "semantic_scholar_id": "26afff57155b8417bd402cce55aac3ebac24fa6a",
+      "canonical_id": "arXiv:2610.10381",
+      "arxiv_id": "2610.10381",
+      "authors": [
+        "Hee-jung Kim",
+        "Junyoung Lee",
+        "SangLyul Cho",
+        "Dong-Su Han",
+        "Insu Han",
+        "Sehoon Kim"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Mask-Guided KV Cache Eviction in Block Diffusion Language Models",
+      "source_url": "https://arxiv.org/abs/2610.06996",
+      "year": 2026,
+      "published": "2026-10-04",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Block diffusion language models keep a large key-value (KV) cache throughout generation and attend to it at every denoising step, limiting both memory capacity and generation speed. Reducing these costs requires deciding which past tokens to use for denoising the current block (selection) and which to keep in memory for future blocks (eviction). We propose MaskAhead, a training-free method that solves both tasks with a single mask-query-based ranking mechanism. Current-block masks guide selection, while probes of upcoming masked blocks guide eviction. Both rank KV entries by their estimated contribution to the attention output. Our quantized variant, Q-MaskAhead, computes selection and attention directly from low-bit KV, largely preserving the selected entries. Experiments on Fast-dLLM-v2, DreamReasoner, and LLaDA2.0-mini cover long-generation reasoning, long-prompt question answering, and needle-in-a-haystack retrieval. On long-prompt QA, MaskAhead reduces KV memory by $9.5\\times$ on average with a 1.2-point mean F1 loss relative to dense inference. Q-MaskAhead increases the reduction to $20.1\\times$ with a 2.3-point mean F1 loss. In a batch-32 systems profile, MaskAhead achieves $1.23\\times$ end-to-end and $1.68\\times$ decode-stage speedups over dense inference.",
+      "identifiers": [
+        "SemanticScholar:8f0e5fa54934d400c7b5cd9b71df24c81cf20d7d"
+      ],
+      "semantic_scholar_id": "8f0e5fa54934d400c7b5cd9b71df24c81cf20d7d",
+      "canonical_id": "arXiv:2610.06996",
+      "arxiv_id": "2610.06996",
+      "authors": [
+        "G. Molodtsov",
+        "Ekaterina Alimaskina",
+        "Е. И. Усков",
+        "A. Zagitov",
+        "A. Beznosikov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling",
+      "source_url": "https://arxiv.org/abs/2610.07742",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Optimized kernels such as FlashAttention and FlashDecoding are crucial for accelerating today's large models. Most of them are handwritten by experts because existing ML compilers cannot match their efficiency. Producing such kernels requires fusing computations with multiple reductions, which requires both algebraic transformation of the computation graph and operator scheduling of the transformed graph. Unfortunately, searching the two jointly yields a space too large to navigate. We propose Cleave, an ML compiler built on symbolic decoupling: Cleave discovers transformations by performing superoptimization on a graph with symbolic shapes, and then schedules each resulting graph on concrete shapes. Representing shapes as symbols makes equivalence checking cheap and lets a new Split operator, with a symbolic split count, parallelize along a reduction dimension. Cleave's scheduler fuses graphs with multiple reductions through iterative tiling and horizontal fusion. Evaluation on common LLM subgraphs shows that Cleave generates kernels up to 2.8x faster than the best baseline (1.6x on average) and reduces compilation time by 5.9x on average compared to Mirage. For dynamic workloads captured from production serving traces, Cleave compiles each operator once and achieves geometric mean speedups of 1.4x and 1.7x over FlashInfer's handwritten FA2 and FA3 backends. Cleave's code is available at: https://github.com/nyu-systems/cleave",
+      "identifiers": [
+        "SemanticScholar:1deb184e99692bb3c42b1b58f98ffbcd208baace"
+      ],
+      "semantic_scholar_id": "1deb184e99692bb3c42b1b58f98ffbcd208baace",
+      "canonical_id": "arXiv:2610.07742",
+      "arxiv_id": "2610.07742",
+      "authors": [
+        "David Pissarra",
+        "Jinkun Lin",
+        "Hai-Tian Jiang",
+        "Aurojit Panda",
+        "Jin-Yang Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DIPrune: Task-Aware Token Pruning with Dual Importance for Efficient Multimodal Language Models",
+      "source_url": "https://arxiv.org/abs/2610.08341",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Recent training-free pruning approaches for Multimodal Large Language Models (MLLMs) effectively cut computational overhead by exploiting visual redundancy or text-vision attention. However, they frequently suffer from semantic degradation due to their task-agnostic design or unreliable attention estimates. Based on our empirical analysis, we have found that this issue arises because salient tokens in shallow layers persistently suppress emerging semantic ones through numerical inertia, leading to premature discarding of signals crucial for deep reasoning. To address the aforementioned issue, from the task-oriented aspects, we first reformulate training-free pruning as a minimization of the distortion in the final task loss and derive a tractable, token-wise upper bound to serve as a surrogate objective. Specifically, this formulation inherently reveals a previously neglected inter-layer term that accounts for gradients across layers. Accordingly, for the implementation, we propose DIPrune, a rank-based framework that employs a dual importance scoring mechanism to jointly optimize intra-layer static feature saliency and inter-layer dynamic semantic evolution. Extensive experiments on LLaVA and Qwen-VL demonstrate that DIPrune consistently achieves state-of-the-art results.",
+      "identifiers": [
+        "SemanticScholar:0a47f69e303d946104d9938b40ced7b2827a92c2"
+      ],
+      "semantic_scholar_id": "0a47f69e303d946104d9938b40ced7b2827a92c2",
+      "canonical_id": "arXiv:2610.08341",
+      "arxiv_id": "2610.08341",
+      "authors": [
+        "Shuo Yang",
+        "Chang-Bai Li",
+        "Lin-Lin Yang",
+        "Huo-Bin Tan",
+        "Rongyu Chen",
+        "Tong-Fei Chen",
+        "Tian Wang",
+        "Sheng Xu",
+        "Bao-Chang Zhang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Prefix Keys and Values Matter Late: RIPE Caching for Self-Speculative Decoding in Looped Language Models",
+      "source_url": "https://arxiv.org/abs/2610.34436",
+      "year": 2026,
+      "published": "2026-10-25",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "A looped language model runs one block of layers $R$ times per token, so its key-value (KV) cache holds $R$ planes per recurrent layer, and self-speculative decoding (draft with a few loops, verify with all $R$) reads them all. We find that prefix keys and values matter late: at equal perturbation size, loops 25-32 are $e^{15.0}$ (Huginn-0125) and $e^{12.8}$ (Raven-Llama) times more sensitive than loops 2-9, and the planes approach the last one geometrically, at 0.88 and 0.81 per loop. Whether the deepest plane alone suffices then depends on how ripe the late planes are: on Raven, storing only it is indistinguishable from a bf16-to-fp32 change; on Huginn, 1% of positions carry 74% of its error. We turn this into RIPE, which stores the deepest plane everywhere except a window of recent positions kept at full depth. On Huginn, a 64-position window removes 89% of the tail positions at 11.9% of the full cache's memory (1024-token context), and any window at least as long as the draft block makes batched verification block-independent by construction. Nine pre-registered GPU batches back these results. Simple models of acceptance, decoding cost and memory, two of them checked on held-out measurements, account for the measured self-speculative speed-ups ($2.09\\times$ with the full cache, $2.58\\times$ with the deepest plane) and decompose the $2.24\\times$ fixed-memory throughput gain of one shared plane.",
+      "identifiers": [
+        "SemanticScholar:fa8414cf25df372d3877696a5fa4fd42eeec49b4"
+      ],
+      "semantic_scholar_id": "fa8414cf25df372d3877696a5fa4fd42eeec49b4",
+      "canonical_id": "arXiv:2610.34436",
+      "arxiv_id": "2610.34436",
+      "authors": [
+        "De-Zhen Lu",
+        "Run-Guo Li",
+        "Zi-Xiang Ni"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 8,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "God Does Not Play Dice: Enforcing Batch Invariance in Agentic Kernel Generation",
+      "source_url": "https://arxiv.org/abs/2610.36623",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language model (LLM) serving systems dynamically batch user requests for GPU execution, so the same request may be processed alongside different requests across runs. If the GPU kernels lack batch invariance (BI), this changing batch context can alter the numerical output for an unchanged input, undermining reproducibility. Existing kernel generation agents focus on correctness and efficiency but \\emph{overlook BI}. We find 19 confirmed BI violations among 83 batch-applicable released artifacts. To address this limitation, we propose \\tool, which combines contract-guided static dependency analysis with dynamic validation of bitwise consistency across batch contexts. \\tool is designed as a plug-in component for general kernel agents, allowing their original optimization capabilities to be reused while adding BI enforcement. We integrate it as successive acceptance gates in the optimization loop, rejecting structurally risky or dynamically non-invariant candidates before performance benchmarking and returning feedback to the agent. Experiments across three agent frameworks under baseline and BI-aware generation on real world LLM serving tasks show that \\tool improves the BI pass rate from 67.6\\% to 91.9\\% while retaining 91.8\\% of the baseline geometric mean speedup. These results demonstrate that \\tool can be incorporated into kernel optimization by agents as an additional reliability objective alongside correctness and speed.",
+      "identifiers": [
+        "SemanticScholar:8b684cc5a1c70deb08ec8ec941e7f1bf87814c20"
+      ],
+      "semantic_scholar_id": "8b684cc5a1c70deb08ec8ec941e7f1bf87814c20",
+      "canonical_id": "arXiv:2610.36623",
+      "arxiv_id": "2610.36623",
+      "authors": [
+        "You-Wei Bao",
+        "Cheng-Peng Wang",
+        "Si-Min Chen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2610.10381",
+      "identity_tokens": [
+        "id:SemanticScholar:26afff57155b8417bd402cce55aac3ebac24fa6a",
+        "id:arXiv:2610.10381",
+        "title:residualquant kv cache quantization for looped transformers with 2bit residuals",
+        "url:https://arxiv.org/abs/2610.10381"
+      ],
+      "record": {
+        "title": "ResidualQuant: KV Cache Quantization for Looped Transformers with 2-Bit Residuals",
+        "source_url": "https://arxiv.org/abs/2610.10381",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped Transformers improve parameter efficiency by applying shared Transformer blocks over recurrent loops, increasing computational depth without increasing the parameter count. However, KV cache memory still scales with loop count, becoming a key memory bottleneck that limits batch size and inference throughput. KV cache quantization can alleviate this bottleneck, but existing methods often suffer substantial accuracy degradation at aggressive low-precision regimes. We observe that looped Transformers offer a unique opportunity: KV states across loops are highly similar. Based on this observation, we propose ResidualQuant, which uses the final-loop KV states as a reference and represents the remaining loops with low-precision residuals. Our method further combines least-square scaling and rotation-based quantization, as well as loop-wise mixed precision, to enable accurate quantization down to INT2 while retaining efficient reconstruction. Across multiple looped Transformer models and mathematical reasoning and code generation benchmarks, ResidualQuant consistently improves the accuracy-memory tradeoff over state-of-the-art rotation-based KV quantization. In particular, our method retains accuracy close to BF16 under mixed-precision settings while reducing theoretical KV storage by 80.7%, achieving up to 13.0% higher accuracy than the rotation-based baseline at nearly the same memory budget. On an RTX 5090, reduced KV memory traffic improves fixed-batch decode throughput by up to 3.66x, while the smaller memory footprint enables up to 8x larger batches, improving peak throughput by up to 5.38x.",
+        "identifiers": [
+          "SemanticScholar:26afff57155b8417bd402cce55aac3ebac24fa6a"
+        ],
+        "semantic_scholar_id": "26afff57155b8417bd402cce55aac3ebac24fa6a",
+        "canonical_id": "arXiv:2610.10381",
+        "arxiv_id": "2610.10381",
+        "authors": [
+          "Hee-jung Kim",
+          "Junyoung Lee",
+          "SangLyul Cho",
+          "Dong-Su Han",
+          "Insu Han",
+          "Sehoon Kim"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.06996",
+      "identity_tokens": [
+        "id:SemanticScholar:8f0e5fa54934d400c7b5cd9b71df24c81cf20d7d",
+        "id:arXiv:2610.06996",
+        "title:maskguided kv cache eviction in block diffusion language models",
+        "url:https://arxiv.org/abs/2610.06996"
+      ],
+      "record": {
+        "title": "Mask-Guided KV Cache Eviction in Block Diffusion Language Models",
+        "source_url": "https://arxiv.org/abs/2610.06996",
+        "year": 2026,
+        "published": "2026-10-04",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Block diffusion language models keep a large key-value (KV) cache throughout generation and attend to it at every denoising step, limiting both memory capacity and generation speed. Reducing these costs requires deciding which past tokens to use for denoising the current block (selection) and which to keep in memory for future blocks (eviction). We propose MaskAhead, a training-free method that solves both tasks with a single mask-query-based ranking mechanism. Current-block masks guide selection, while probes of upcoming masked blocks guide eviction. Both rank KV entries by their estimated contribution to the attention output. Our quantized variant, Q-MaskAhead, computes selection and attention directly from low-bit KV, largely preserving the selected entries. Experiments on Fast-dLLM-v2, DreamReasoner, and LLaDA2.0-mini cover long-generation reasoning, long-prompt question answering, and needle-in-a-haystack retrieval. On long-prompt QA, MaskAhead reduces KV memory by $9.5\\times$ on average with a 1.2-point mean F1 loss relative to dense inference. Q-MaskAhead increases the reduction to $20.1\\times$ with a 2.3-point mean F1 loss. In a batch-32 systems profile, MaskAhead achieves $1.23\\times$ end-to-end and $1.68\\times$ decode-stage speedups over dense inference.",
+        "identifiers": [
+          "SemanticScholar:8f0e5fa54934d400c7b5cd9b71df24c81cf20d7d"
+        ],
+        "semantic_scholar_id": "8f0e5fa54934d400c7b5cd9b71df24c81cf20d7d",
+        "canonical_id": "arXiv:2610.06996",
+        "arxiv_id": "2610.06996",
+        "authors": [
+          "G. Molodtsov",
+          "Ekaterina Alimaskina",
+          "Е. И. Усков",
+          "A. Zagitov",
+          "A. Beznosikov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 29,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07742",
+      "identity_tokens": [
+        "id:SemanticScholar:1deb184e99692bb3c42b1b58f98ffbcd208baace",
+        "id:arXiv:2610.07742",
+        "title:cleave scaling tensor program optimization via decoupled algebraic search and operator scheduling",
+        "url:https://arxiv.org/abs/2610.07742"
+      ],
+      "record": {
+        "title": "Cleave: Scaling Tensor Program Optimization via Decoupled Algebraic Search and Operator Scheduling",
+        "source_url": "https://arxiv.org/abs/2610.07742",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Optimized kernels such as FlashAttention and FlashDecoding are crucial for accelerating today's large models. Most of them are handwritten by experts because existing ML compilers cannot match their efficiency. Producing such kernels requires fusing computations with multiple reductions, which requires both algebraic transformation of the computation graph and operator scheduling of the transformed graph. Unfortunately, searching the two jointly yields a space too large to navigate. We propose Cleave, an ML compiler built on symbolic decoupling: Cleave discovers transformations by performing superoptimization on a graph with symbolic shapes, and then schedules each resulting graph on concrete shapes. Representing shapes as symbols makes equivalence checking cheap and lets a new Split operator, with a symbolic split count, parallelize along a reduction dimension. Cleave's scheduler fuses graphs with multiple reductions through iterative tiling and horizontal fusion. Evaluation on common LLM subgraphs shows that Cleave generates kernels up to 2.8x faster than the best baseline (1.6x on average) and reduces compilation time by 5.9x on average compared to Mirage. For dynamic workloads captured from production serving traces, Cleave compiles each operator once and achieves geometric mean speedups of 1.4x and 1.7x over FlashInfer's handwritten FA2 and FA3 backends. Cleave's code is available at: https://github.com/nyu-systems/cleave",
+        "identifiers": [
+          "SemanticScholar:1deb184e99692bb3c42b1b58f98ffbcd208baace"
+        ],
+        "semantic_scholar_id": "1deb184e99692bb3c42b1b58f98ffbcd208baace",
+        "canonical_id": "arXiv:2610.07742",
+        "arxiv_id": "2610.07742",
+        "authors": [
+          "David Pissarra",
+          "Jinkun Lin",
+          "Hai-Tian Jiang",
+          "Aurojit Panda",
+          "Jin-Yang Li"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.08341",
+      "identity_tokens": [
+        "id:SemanticScholar:0a47f69e303d946104d9938b40ced7b2827a92c2",
+        "id:arXiv:2610.08341",
+        "title:diprune taskaware token pruning with dual importance for efficient multimodal language models",
+        "url:https://arxiv.org/abs/2610.08341"
+      ],
+      "record": {
+        "title": "DIPrune: Task-Aware Token Pruning with Dual Importance for Efficient Multimodal Language Models",
+        "source_url": "https://arxiv.org/abs/2610.08341",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Recent training-free pruning approaches for Multimodal Large Language Models (MLLMs) effectively cut computational overhead by exploiting visual redundancy or text-vision attention. However, they frequently suffer from semantic degradation due to their task-agnostic design or unreliable attention estimates. Based on our empirical analysis, we have found that this issue arises because salient tokens in shallow layers persistently suppress emerging semantic ones through numerical inertia, leading to premature discarding of signals crucial for deep reasoning. To address the aforementioned issue, from the task-oriented aspects, we first reformulate training-free pruning as a minimization of the distortion in the final task loss and derive a tractable, token-wise upper bound to serve as a surrogate objective. Specifically, this formulation inherently reveals a previously neglected inter-layer term that accounts for gradients across layers. Accordingly, for the implementation, we propose DIPrune, a rank-based framework that employs a dual importance scoring mechanism to jointly optimize intra-layer static feature saliency and inter-layer dynamic semantic evolution. Extensive experiments on LLaVA and Qwen-VL demonstrate that DIPrune consistently achieves state-of-the-art results.",
+        "identifiers": [
+          "SemanticScholar:0a47f69e303d946104d9938b40ced7b2827a92c2"
+        ],
+        "semantic_scholar_id": "0a47f69e303d946104d9938b40ced7b2827a92c2",
+        "canonical_id": "arXiv:2610.08341",
+        "arxiv_id": "2610.08341",
+        "authors": [
+          "Shuo Yang",
+          "Chang-Bai Li",
+          "Lin-Lin Yang",
+          "Huo-Bin Tan",
+          "Rongyu Chen",
+          "Tong-Fei Chen",
+          "Tian Wang",
+          "Sheng Xu",
+          "Bao-Chang Zhang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 27,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.34436",
+      "identity_tokens": [
+        "id:SemanticScholar:fa8414cf25df372d3877696a5fa4fd42eeec49b4",
+        "id:arXiv:2610.34436",
+        "title:prefix keys and values matter late ripe caching for selfspeculative decoding in looped language models",
+        "url:https://arxiv.org/abs/2610.34436"
+      ],
+      "record": {
+        "title": "Prefix Keys and Values Matter Late: RIPE Caching for Self-Speculative Decoding in Looped Language Models",
+        "source_url": "https://arxiv.org/abs/2610.34436",
+        "year": 2026,
+        "published": "2026-10-25",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "A looped language model runs one block of layers $R$ times per token, so its key-value (KV) cache holds $R$ planes per recurrent layer, and self-speculative decoding (draft with a few loops, verify with all $R$) reads them all. We find that prefix keys and values matter late: at equal perturbation size, loops 25-32 are $e^{15.0}$ (Huginn-0125) and $e^{12.8}$ (Raven-Llama) times more sensitive than loops 2-9, and the planes approach the last one geometrically, at 0.88 and 0.81 per loop. Whether the deepest plane alone suffices then depends on how ripe the late planes are: on Raven, storing only it is indistinguishable from a bf16-to-fp32 change; on Huginn, 1% of positions carry 74% of its error. We turn this into RIPE, which stores the deepest plane everywhere except a window of recent positions kept at full depth. On Huginn, a 64-position window removes 89% of the tail positions at 11.9% of the full cache's memory (1024-token context), and any window at least as long as the draft block makes batched verification block-independent by construction. Nine pre-registered GPU batches back these results. Simple models of acceptance, decoding cost and memory, two of them checked on held-out measurements, account for the measured self-speculative speed-ups ($2.09\\times$ with the full cache, $2.58\\times$ with the deepest plane) and decompose the $2.24\\times$ fixed-memory throughput gain of one shared plane.",
+        "identifiers": [
+          "SemanticScholar:fa8414cf25df372d3877696a5fa4fd42eeec49b4"
+        ],
+        "semantic_scholar_id": "fa8414cf25df372d3877696a5fa4fd42eeec49b4",
+        "canonical_id": "arXiv:2610.34436",
+        "arxiv_id": "2610.34436",
+        "authors": [
+          "De-Zhen Lu",
+          "Run-Guo Li",
+          "Zi-Xiang Ni"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 8,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36623",
+      "identity_tokens": [
+        "id:SemanticScholar:8b684cc5a1c70deb08ec8ec941e7f1bf87814c20",
+        "id:arXiv:2610.36623",
+        "title:god does not play dice enforcing batch invariance in agentic kernel generation",
+        "url:https://arxiv.org/abs/2610.36623"
+      ],
+      "record": {
+        "title": "God Does Not Play Dice: Enforcing Batch Invariance in Agentic Kernel Generation",
+        "source_url": "https://arxiv.org/abs/2610.36623",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large language model (LLM) serving systems dynamically batch user requests for GPU execution, so the same request may be processed alongside different requests across runs. If the GPU kernels lack batch invariance (BI), this changing batch context can alter the numerical output for an unchanged input, undermining reproducibility. Existing kernel generation agents focus on correctness and efficiency but \\emph{overlook BI}. We find 19 confirmed BI violations among 83 batch-applicable released artifacts. To address this limitation, we propose \\tool, which combines contract-guided static dependency analysis with dynamic validation of bitwise consistency across batch contexts. \\tool is designed as a plug-in component for general kernel agents, allowing their original optimization capabilities to be reused while adding BI enforcement. We integrate it as successive acceptance gates in the optimization loop, rejecting structurally risky or dynamically non-invariant candidates before performance benchmarking and returning feedback to the agent. Experiments across three agent frameworks under baseline and BI-aware generation on real world LLM serving tasks show that \\tool improves the BI pass rate from 67.6\\% to 91.9\\% while retaining 91.8\\% of the baseline geometric mean speedup. These results demonstrate that \\tool can be incorporated into kernel optimization by agents as an additional reliability objective alongside correctness and speed.",
+        "identifiers": [
+          "SemanticScholar:8b684cc5a1c70deb08ec8ec941e7f1bf87814c20"
+        ],
+        "semantic_scholar_id": "8b684cc5a1c70deb08ec8ec941e7f1bf87814c20",
+        "canonical_id": "arXiv:2610.36623",
+        "arxiv_id": "2610.36623",
+        "authors": [
+          "You-Wei Bao",
+          "Cheng-Peng Wang",
+          "Si-Min Chen"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 6,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:8c8a52c5f4faa81a65b030e10da835a12d60940d4f614ab4a2908972389fdfb2",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
