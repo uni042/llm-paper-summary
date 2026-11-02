@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0632-scheduled-chat-30/r01",
+  "reference_main_sha": "0629e5491f7797949749f70ef0d18340074a8de2",
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41333",
+      "identity_tokens": [
+        "arXiv:2610.41333"
+      ],
+      "title": "StrictPRMBench: A Replayable Evaluation Benchmark for Auditing Fixed-Score PRM Aggregation",
+      "reason": "PRMによる数学的推論のbest-of-N候補選択について、推論ステップの固定スコアを積・幾何平均で集約する規則を比較する再現可能な監査プロトコル。7 scoring checkpoint×2 benchmarkの14条件で積集約の削除介入後選択不安定性が幾何平均より高く、平均差+0.0965と報告。推論時の候補選択に関係するが、GPU実行、LLM serving、KV cache、推論レイテンシの最適化を提案・実測した研究ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41333",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T06:37:32+09:00",
+      "last_checked_at": "2026-11-03T06:37:32+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40871",
+      "identity_tokens": [
+        "arXiv:2610.40871"
+      ],
+      "title": "TensorSSM: Memorizing Spatial Position in Dynamic State Space for Tensor Core Generation",
+      "reason": "TensorSSMの「tensor core」はGPU Tensor Core演算器ではなく、汎用高次元テンソル分解の因子表現を指す。座標列をK進数規則で構成し、動的SSMの隠れ状態にモード間空間依存性を記憶してテンソル再構成精度と保存効率を改善するImplicit Neural Representation。LLM推論、サービング、アクセラレータkernel、KV圧縮の研究ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40871",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T06:37:32+09:00",
+      "last_checked_at": "2026-11-03T06:37:32+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41563",
+      "identity_tokens": [
+        "arXiv:2610.41563"
+      ],
+      "title": "ORION: An Outcome-Driven LLM Advisor for RL-Based Multi-Domain 6G Slice Placement",
+      "reason": "6G通信ネットワークの仮想ネットワーク機能配置とslice admissionが対象。2つのLLM agentがサービス要求と配置計画を作り、RL coordinatorがドメイン間配置を選ぶ。検証済み成否を記録するepisodic memoryによりslice admissionが4.6〜11.5ポイント向上したという結果であり、LLMモデルの推論処理、GPU配置、推論サービング効率を最適化した研究ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41563",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T06:37:32+09:00",
+      "last_checked_at": "2026-11-03T06:37:32+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
