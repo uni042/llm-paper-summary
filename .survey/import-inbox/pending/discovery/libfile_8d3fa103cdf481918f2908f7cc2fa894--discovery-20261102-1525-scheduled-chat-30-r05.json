@@ -1,0 +1,180 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261102-1525-scheduled-chat-30/r05",
+  "reference_main_sha": "ee716ae60fd44ea0b1fb55565eef6e202c16126a",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.25340",
+      "identity_tokens": [
+        "id:arXiv:2603.25340",
+        "id:DOI:10.48550/arXiv.2603.25340"
+      ],
+      "title": "Large Language Model as Token Compressor and Decompressor",
+      "reason": "既存LLMをLoRAで微調整して可変長の離散潜在Z-token列へ長文を符号化し、元の自然言語や下流回答へ復号する自己表現autoencoderを提案する。内容の情報密度に応じてtoken数を割り当てるbudget-aware長さ正則化により、Wikipedia・HotpotQA等で再構成と回答品質を保ちながら有効文脈長・生成時メモリ・end-to-end遅延を減らすと報告する。長文脈推論の圧縮実装としてaccept。",
+      "source_url": "https://arxiv.org/abs/2603.25340",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 237,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.07740",
+      "identity_tokens": [
+        "id:arXiv:2607.07740",
+        "id:DOI:10.48550/arXiv.2607.07740"
+      ],
+      "title": "Jet-Long: Efficient Long-Context Extension with Dynamic Bifocal RoPE",
+      "reason": "通常RoPEを厳密に保つ近傍窓と、文脈長に応じて倍率を動的変更する遠距離窓を統合するBifocal RoPEで、微調整なしの長文脈拡張を行う。包含排除型attention mergeとon-the-fly回転補正をCuTeへ融合し、H100の長文脈prefillでFlashAttention-2比最大1.39倍、単batch生成overhead4%以下を報告する。Qwen3系で128K文脈まで評価し、推論時の長文脈kernel実装へ直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2607.07740",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 239,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2503.22196",
+      "identity_tokens": [
+        "id:arXiv:2503.22196",
+        "id:DOI:10.48550/arXiv.2503.22196"
+      ],
+      "title": "EdgeInfinite: A Memory-Efficient Infinite-Context Transformer for Edge Devices",
+      "reason": "edge端末でTransformerのKV cacheが長文脈に伴って増える問題に対し、学習可能なmemory-gating moduleを既存Transformerへ追加して圧縮記憶を統合する。少数parameterのみを微調整し、短文脈と長文脈でmemory gateを選択的に有効化する。長文脈benchmarkで基準品質に近い性能を維持しつつmemory使用量とTTFTを改善と報告するため、推論用記憶管理としてaccept。",
+      "source_url": "https://arxiv.org/abs/2503.22196",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 240,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.00797",
+      "identity_tokens": [
+        "id:arXiv:2507.00797",
+        "id:DOI:10.48550/arXiv.2507.00797"
+      ],
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "reason": "複数評価信号による投票型KV cache evictionで不要なKVを選び、可変系列長・行列ベクトル演算へ対応する柔軟なdataflowと再構成可能なPE arrayを組み合わせるVEDA acceleratorを提案する。softmax・layernorm向けelement-serial schedulingも設計し、edge LLM生成のlatencyとhardware complexity削減を報告する。KV選別とhardware実行を共同最適化する直接的な推論研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 246,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16825",
+      "identity_tokens": [
+        "id:arXiv:2606.16825",
+        "id:DOI:10.48550/arXiv.2606.16825"
+      ],
+      "title": "Tying the Loop -- Tied Expert Layers in Mixture-of-Experts Language Models",
+      "reason": "MoEの連続Transformer層でexpert parameterを共有しつつ、各層のroutingとattentionは独立に保つExpert Tyingを提案する。OLMoE・Qwen3・DeepSeek型MoEで事前学習実験を行い、perplexityや下流品質の悪化をほぼ生じさせずexpert主体のparameter memoryを約半分にできると報告する。主評価は事前学習だが、推論時にも常駐expert weight量を直接削減するarchitectureなのでaccept。",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 247,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2601.22132",
+      "identity_tokens": [
+        "id:arXiv:2601.22132",
+        "id:DOI:10.48550/arXiv.2601.22132"
+      ],
+      "title": "Pay for Hints, Not Answers: LLM Shepherding for Cost-Efficient Inference",
+      "reason": "SLMへ全回答を作らせる前にLLMから短い先頭ヒントのみ取得し、必要性とヒント長を二段予測器で決めるLLM Shepherdingを提案する。数学・コード生成でヒントがLLM全回答の10〜30%でもSLM精度が改善し、LLM単独より費用42〜94%減、routing/cascading比で同精度の費用最大2.8倍削減を報告する。推論時のモデル協調とtoken予算を直接制御するためaccept。",
+      "source_url": "https://arxiv.org/abs/2601.22132",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 249,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2607.13500",
+      "identity_tokens": [
+        "id:arXiv:2607.13500",
+        "id:DOI:10.48550/arXiv.2607.13500"
+      ],
+      "title": "Attention-Free and Lightweight Token Reduction for Efficient Vision-Language Models",
+      "reason": "VLMの視覚token削減でattention map依存や全token対の類似度計算が推論負荷になる問題に対し、特徴entropyから重要度を測り、変換後の一貫性で類似tokenを近傍へ並べてstride抽出する軽量なplug-and-play方式を提案する。複数VLM benchmarkで強い圧縮率でも精度・効率の良好なバランスを報告し、推論時の視覚token削減を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2607.13500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 250,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2509.00935",
+      "identity_tokens": [
+        "id:arXiv:2509.00935",
+        "id:DOI:10.48550/arXiv.2509.00935"
+      ],
+      "title": "SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers",
+      "reason": "Mambaまたはsliding-window attentionによる局所mixingの後、固定長segmentを圧縮checkpoint tokenへ変換し、各tokenが圧縮履歴だけに疎attentionするSCOUT architectureを提案する。400M・1.3B規模で同等計算予算の長系列baselineより良い性能、full attentionに近い言語モデル・常識推論品質と高いend-to-end throughputを報告する。推論用の低複雑度注意architectureとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2509.00935",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 251,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.02790",
+      "identity_tokens": [
+        "id:arXiv:2502.02790",
+        "id:DOI:10.48550/arXiv.2502.02790"
+      ],
+      "title": "Leveraging the true depth of LLMs",
+      "reason": "LLMの隣接層が部分的に交換・削除可能な性質を利用し、連続する層ペアを並列評価できるよう計算graphを再構成する。再訓練なしのLlama 2 7Bでthroughput1.19倍、平均benchmark精度1.5%低下を報告し、軽量fine-tuningで一部精度を回復できると示す。層間実行の並列化による推論高速化を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2502.02790",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 252,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2608.13057",
+      "identity_tokens": [
+        "id:arXiv:2608.13057",
+        "id:DOI:10.48550/arXiv.2608.13057"
+      ],
+      "title": "TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes",
+      "reason": "MoE expert parallel servingでGPUごとのtoken数や活性expert数だけを均等化しても、weight streaming支配とGEMM tile丸め支配が混在すると最遅GPU時間を最小化できない。TEMPOはmax-affine時間モデルに基づくmakespan最適化dispatcherをSGLangへ統合し、Qwen3-235Bの8GPU試験でthroughput4〜6%増、p99 latency約15.6%減を報告する。DeepSeek-V3では通信律速のため改善しない限界も明示し、実測に基づくMoE推論負荷分散としてaccept。",
+      "source_url": "https://arxiv.org/abs/2608.13057",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:32:15+09:00",
+      "last_checked_at": "2026-11-02T15:32:15+09:00",
+      "linked_from": [],
+      "worklist_rank": 253,
+      "origin": "discovery_worklist_primary_abstract_screen"
+    }
+  ]
+}
