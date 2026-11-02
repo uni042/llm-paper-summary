@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-02T17:34:50+00:00`
+Generated: `2026-11-02T18:15:13+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -435,8 +435,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 352 | 32 | 4 | 6 | arXiv:2302.06117 | The Framework Tax: Disparities Between Inference Efficiency in Research and Deployment | 2023-02-13 | Conference on Empirical Methods in Natural Language Processing | 22 | 6 | 99-other-inference-systems | [source](https://arxiv.org/abs/2302.06117) |
 | 353 | 102 | 4 | 6 | DOI:10.1109/JIOT.2026.3654102 | Adaptive Pruning for Large Language Models With Structural Importance Awareness | 2026-04-01 | IEEE Internet of Things Journal | 2 | 6 | Structured Pruning / Architecture Search | [source](https://doi.org/10.1109/JIOT.2026.3654102) |
 | 354 | 101 | 4 | 6 | arXiv:2602.12618 | Vision Token Reduction via Attention-Driven Self-Compression for Efficient Multimodal Large Language Models | 2025-12-08 | BigData Congress [Services Society] | 1 | 6 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.12618) |
-| 355 | 12 | 4 | 6 | arXiv:2505.22757 | Pre-Training Curriculum for Multi-Token Prediction in Language Models | 2025-05-28 | Annual Meeting of the Association for Computational Linguistics | 2 | 6 | Conditional Computation, Speculative Decoding, inference-systems | [source](https://arxiv.org/abs/2505.22757) |
-| 356 | 10 | 4 | 6 | arXiv:2606.04594 | Ekka: Automated Diagnosis of Silent Errors in LLM Inference | 2026-06-03 | arXiv.org | 0 | 6 | LLM Serving / Scheduling / Disaggregation, 大規模言語モデル推論サービング／装置内演算スケジューリング, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.04594) |
+| 355 | 101 | 4 | 6 | arXiv:2608.21142 | COEC: Calibrated Orthogonal-Equivalence Compensation for Structured Pruning of Large Language Models | 2026-08-21 |  | 1 | 6 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2608.21142) |
+| 356 | 10 | 4 | 6 | DOI:10.1145/3767295.3803611 | PointShuffler: Accelerating Point Cloud Neural Networks on General-Purpose GPUs | 2026-04-26 | European Conference on Computer Systems | 0 | 6 | 02-hardware-accelerators, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ動的メモリ管理／PagedAttention代替, KVキャッシュ最適化／適応圧縮, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1145/3767295.3803611) |
 | 357 | 9 | 4 | 6 | arXiv:2104.09393 | Improving Transformer-Kernel Ranking Model Using Conformer and Query Term Independence | 2021-04-19 | Annual International ACM SIGIR Conference on Research and Development in Information Retrieval | 9 | 6 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2104.09393) |
 | 358 | 1 | 4 | 6 | DOI:10.1109/ACCESS.2026.3680045 | UDP: Up-or-Down Precision Quantization for Large Language Models via Evolutionary Search | 2026 | IEEE Access | 1 | 6 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ACCESS.2026.3680045) |
 | 359 | 1 | 4 | 6 | arXiv:2507.09010 | Hybrid Systolic Array Accelerator with Optimized Dataflow for Edge Large Language Model Inference | 2025-07-11 | International Symposium on Low Power Electronics and Design | 1 | 6 | 16-weight-quantization-compression, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2507.09010) |
