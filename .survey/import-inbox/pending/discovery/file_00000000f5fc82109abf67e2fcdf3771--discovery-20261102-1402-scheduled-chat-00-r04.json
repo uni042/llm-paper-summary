@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1402-scheduled-chat-00/r04",
+  "reference_main_sha": "afab2f7def975f91b7e54f8737fc55697c6becbf",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24102",
+      "identity_tokens": [
+        "id:arXiv:2610.24102",
+        "id:DOI:10.48550/arXiv.2610.24102"
+      ],
+      "title": "Hierarchical and Query-Aware Visual Token Pruning for High-Resolution LVLMs",
+      "reason": "高解像度LVLMのthumbnailと多数cropから生じる視覚tokenを、LLM block実行前にsample/crop/tokenの3階層でquery条件付き選択するtraining-free方式。画像複雑度で総予算を決め、cropごとの文・画像類似度とtokenのcross-modal alignmentを局所・大域saliencyと統合する。一次要旨はLLaVA-NeXT-7Bで25% token保持時に性能98.0%維持、推論throughput 2倍を報告。マルチモーダルLLMのprefill計算削減としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24102",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.38303",
+      "identity_tokens": [
+        "id:arXiv:2610.38303",
+        "id:DOI:10.48550/arXiv.2610.38303"
+      ],
+      "title": "Don't Ask the LLM: Visual Token Pruning with Spectral Structure and Semantic Relevance",
+      "reason": "visual-side CLS attentionだけでは背景tokenが残り、LLM内部のquery条件付きscoreは取得が遅い問題に対し、LLM実行前にspectral saliencyと逆向きpatch-text類似度を乗算統合するST-Prunerを提案。一次要旨は多様なLVLMで視覚token最大11.1%保持でもfull-token性能95%超を維持し、LLaVA-NeXTでend-to-end 3.2倍高速化を報告。LLM prefill前の視覚token削減としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.38303",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33688",
+      "identity_tokens": [
+        "id:arXiv:2610.33688",
+        "id:DOI:10.48550/arXiv.2610.33688"
+      ],
+      "title": "Rescuing Your Pruning: Rethinking Visual Token Pruning and Post-Training Recovery in MLLMs",
+      "reason": "MLLMの視覚token削減による精度低下をpost-trainingで回復し、削減位置によるend-to-end性能差を36構成で調べる。282K sampleでOCR・grounding等も補正し、encoder側40%保持の方がprojector側10%保持より高速な例を報告。一次要旨ではLLM stageが3.49倍高速でも全体TTFTは1.54倍に留まる。視覚encoderとLLM prefillのボトルネック分離を実証する推論圧縮研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.33688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22099",
+      "identity_tokens": [
+        "id:arXiv:2610.22099",
+        "id:DOI:10.48550/arXiv.2610.22099"
+      ],
+      "title": "TIPS: A Tiny Inference-time Policy for Scaling in Diffusion Language Models",
+      "reason": "拡散LLMの各denoising passで可視化・再maskする位置を、約600Kパラメータのcontrollerがconfidence特徴から決定するTIPSを提案。LLM本体を固定し、supervised warmupと最終正解報酬のRLでpolicyを学習する。一次要旨はLLaDA-8B-Instruct、32回のdecoder評価予算でGSM8K/MATH-500のmicro平均精度58.46/57.97%を報告。推論時計算予算と品質の制御を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.22099",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.28619",
+      "identity_tokens": [
+        "id:arXiv:2610.28619",
+        "id:DOI:10.48550/arXiv.2610.28619"
+      ],
+      "title": "Adaptive Multi-Token Prediction: How far should we go?",
+      "reason": "MTP投機復号で同時に実行するdraft head数を固定すると受理率低下時に無駄が増えるため、verification結果からprefix受理生存確率を学習し、次passの最適horizonをオンライン選択するAMTPを提案。target verifierを変更せず、regretとwall-clockの理論保証を示す。一次要旨はLlama/Qwenの5組で通常復号比最大4.1倍、固定窓比10%までthroughput改善を報告。LLM speculative decoding runtimeの直接的改善としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.28619",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.15514",
+      "identity_tokens": [
+        "id:arXiv:2610.15514",
+        "id:DOI:10.48550/arXiv.2610.15514"
+      ],
+      "title": "SARATHI: Decoupled Data-Free Probing and Adaptive Reconstruction for Structured LLM Pruning",
+      "reason": "構造化LLM pruningでneuron選択と重み再構成が同一calibration setへ依存する問題に対し、重み幾何に基づくdata-free NMF残差部分空間probeで選択し、局所calibrationを用いるAdaptive OBSで重みを復元するSARATHIを提案。一次要旨はlayerあたりpeak O(d²) memory、6モデル・15～40% sparsityで既存法と同等以上のperplexity・zero-shot精度を報告。dense演算を保った推論計算・重量削減を狙うためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.15514",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.11284",
+      "identity_tokens": [
+        "id:arXiv:2610.11284",
+        "id:DOI:10.48550/arXiv.2610.11284"
+      ],
+      "title": "DynaTE: Accelerating Diffusion LLMs via Dynamic Token Execution",
+      "reason": "拡散LLMの反復decodeで更新価値の低いtoken計算を省き、稼働token数に合わせてPE arrayを再構成するhardware/software co-design。局所依存tokenの更新をFLDDで絞り、Merge-Split-Merge dataflowとstreaming vocabulary engineで不規則実行を吸収する。一次要旨は2種類のdLLMで既存accelerator比2.05～2.78倍高速・2.99～3.93倍energy効率と報告。拡散LLM推論acceleratorとしてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.11284",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25519",
+      "identity_tokens": [
+        "id:arXiv:2610.25519",
+        "id:DOI:10.48550/arXiv.2610.25519"
+      ],
+      "title": "ATEST: Adaptive Resource-Aware Test-Time Scaling for LLM Inference",
+      "reason": "LLMの複数回答samplingにおいてquery難度とGPU負荷によるエネルギー単価変動を考慮し、複数sampleの多数決安定度とlive GPU状態から停止判断するATEST-Onlineを提案。一次要旨はPhi-3-mini/A100の4 datasetでエネルギー予算超過なし、GSM8K高負荷では60.0%精度・保留0%を報告。精度・energy・latencyの推論時資源配分を直接制御するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25519",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17530",
+      "identity_tokens": [
+        "id:arXiv:2610.17530",
+        "id:DOI:10.48550/arXiv.2610.17530"
+      ],
+      "title": "TwinPrune: Density-Aware Two-Phase Token Pruning for Vision-Language Models",
+      "reason": "VLMのprefillでは視覚tokenのbipartite merge、decodeではKV evictionへ同一空間密度signalを使うTwinPruneを提案。prefillだけを評価するfirst-token課題ではdecode時KV除去の影響が測れないという評価上の落とし穴も検証する。一次要旨は高解像度token選択100倍高速、TextVQAで12.5% KV保持時にH2O比9.6点の精度向上を報告。VLM推論のprefill/decode両段階の圧縮としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17530",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24740",
+      "identity_tokens": [
+        "id:arXiv:2610.24740",
+        "id:DOI:10.48550/arXiv.2610.24740"
+      ],
+      "title": "Are We Evaluating VLM Token Pruning Right? Looking Beyond Accuracy and Token Count",
+      "reason": "VLM視覚token pruningを単純な残存token数・平均accuracyで比較すると重要token選択の質と実際のend-to-end speedupを誤判定する問題を扱う。Random-Pass@kで無作為削除でも解ける例を区別し、Preservation-Constrained Speedupで共通の精度保持条件下の最大実測高速化を比較するPAA-Benchを提案。一次要旨は8方式・3 backbone・9 benchmarkで速度順位が精度制約により変わると報告。推論圧縮の性能評価基盤としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24740",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T14:12:30+09:00",
+      "last_checked_at": "2026-11-02T14:12:30+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
