@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "CacheSmith: Accurate RAG Serving under Latency SLOs with Adaptive KV Reuse",
+      "source_url": "https://arxiv.org/abs/2610.18925",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "This paper presents CacheSmith, a KV cache reuse system for RAG prefill that maximizes quality-gated SLO attainment. While context caching lowers prefill latency by reusing precomputed KV states for retrieved chunks, it misses cross-chunk attention that a full prefill would compute over concatenated inputs. Prior selective recomputation schemes tackle this problem but enforce static, one-size-fits-all configurations that fail to effectively handle request heterogeneity or dynamic latency budgets. CacheSmith decomposes selective recomputation into a three-phase workflow of WarmUp, Probe, and Patch that can be dynamically configured to exploit a wide range of cost-accuracy trade-offs. At serving time, an SLO-aware scheduler in CacheSmith forms batches to mitigate inter-request interference during layer-by-layer prefill, while a budget-aware planner configures recomputation phases across the batch to maximize the number of requests satisfying both generation quality and latency targets. Both components make fast, solver-free decisions over profiled cost-accuracy bands. On four benchmarks across varying arrival rates and burstiness levels, CacheSmith improves quality-gated SLO attainment by up to 27.5%, over four state-of-the-art baselines.",
+      "identifiers": [
+        "SemanticScholar:11ba5f9fabd62c9965b16366538dce82e114fd41"
+      ],
+      "semantic_scholar_id": "11ba5f9fabd62c9965b16366538dce82e114fd41",
+      "canonical_id": "arXiv:2610.18925",
+      "arxiv_id": "2610.18925",
+      "authors": [
+        "Xinyue Ma",
+        "Dayeol Lee",
+        "Aashaka Shah",
+        "Myeongjae Jeon"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 20,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RAGでchunk単位に事前生成したKVを連結するとcross-chunk attentionが欠落する問題に対し、WarmUp/Probe/Patchの3段階で必要なトークンを再計算し、要求ごとの残りTTFT余裕を考慮してバッチと再計算予算を共同制御する。vLLM実装、RTX PRO 6000 96GBを1～2基使用し、LLaMA-3.1-8B/Qwen3-32Bの4タスクでquality-gated SLO達成率最大27.5%改善、P99 TTFT最大86%短縮を報告。KV再利用・サービング制御を直接改善するためaccept。最大値は全条件平均ではない。",
+      "library_body_check": "abstract_and_body_checked",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Folding Attention Biases into Keys Makes Compacted KV Caches Run on Standard Kernels",
+      "source_url": "https://arxiv.org/abs/2610.36520",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Attention Matching (AM) compacts a KV cache by keeping some keys per head, refitting their values and adding a bias to each kept key's logit. FlashAttention and vLLM's paged caches have no input for it. We fold the bias into the keys along one closed-form direction per head, fitted on context queries, giving a plain cache with AM's size and head dimension and the model's own query path; the output error is bounded by how far each query's projection on that direction is from 1. With equal per-head budgets, unmodified vLLM serves folded caches through a KV connector, matching Hugging Face's answers on all 51 Qwen3-4B questions and its greedy output on 180 of 200 Qwen3-14B LongBench samples. With equal budgets on QuALITY (Qwen3-1.7B, 4B, 8B, Llama-3.1-8B) and LongHealth (three Qwen3 models), the fold is within noise of AM's accuracy in 13 of 14 settings, with lower KL to the full cache than dropping the bias in all 12 where both ran. Under the published per-head budgets, on Qwen3-4B, its Instruct-2507 variant and Llama-3.1-8B, it is within noise of AM in 9 of 10, no longer beats dropping the bias in KL, and the two each win once in accuracy.",
+      "identifiers": [
+        "SemanticScholar:4841668cc99c371def194a734614bc51e5568df4"
+      ],
+      "semantic_scholar_id": "4841668cc99c371def194a734614bc51e5568df4",
+      "canonical_id": "arXiv:2610.36520",
+      "arxiv_id": "2610.36520",
+      "authors": [
+        "Utkarsh Kanwat"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Attention Matchingの圧縮KVは残存keyごとにlogit biasを必要とし、標準FlashAttentionやvLLM PagedAttentionでは扱えない。文脈queryから求めた各headの方向へbiasをkeyベクトルに折り込むことで、通常のkey/value形状と標準kernelを維持する。無改造vLLMのKV connector経由で動作を確認し、同じper-head容量でQuALITY/LongHealthの14条件中13条件は元のAM精度と統計的に同等と報告。KV圧縮の実運用互換性を直接改善するためaccept。",
+      "library_body_check": "abstract_and_introduction_checked",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "DCKV: Learned Transform Coding of the Prompt KV Cache in Hybrid Language Models",
+      "source_url": "https://arxiv.org/abs/2610.36950",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid language models keep a key-value (KV) cache only in their few full-attention layers, but this cache is still the part of a prompt's state that grows with the prompt and that must be stored or moved to reuse it. We present DCKV, a differentiable codec for the KV cache and the first KV-cache codec that is trained end to end. Its transform, its quantizer and its entropy models, which are conditioned on the prompt tokens and on already decoded neighbouring positions, are optimized together against the frozen language model, both for the code length that the entropy models assign and for the change of the model's output. On Qwen3.5-2B, DCKV stores a compressed token in more than 55 times fewer bytes than bf16 at a loss of at most 1.8 points on three long-context benchmarks, and in more than 100 times fewer bytes at a loss of at most 3.6 points.",
+      "identifiers": [
+        "SemanticScholar:e3021d1f5f43f0f5865cca94ae1410c675a333ae"
+      ],
+      "semantic_scholar_id": "e3021d1f5f43f0f5865cca94ae1410c675a333ae",
+      "canonical_id": "arXiv:2610.36950",
+      "arxiv_id": "2610.36950",
+      "authors": [
+        "Egor Maximov",
+        "Aleksei Merkelov",
+        "Vasiliy Alekseev",
+        "Ivan Krivorotov",
+        "В. К. Беляев",
+        "Nikita Arsenin",
+        "Д. Ю. Бочаров",
+        "A. Goncharov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "hybrid attentionモデルのprompt KVを再利用・転送する際の保存容量を削減するため、変換・量子化・entropy modelを凍結した生成モデルの出力品質と符号長に対してend-to-end学習するcodecを提案。Qwen3.5-2Bでbf16比55倍超圧縮時に長文脈3評価の低下最大1.8ポイント、100倍超で最大3.6ポイントと報告。圧縮率はKV部分の値であり、モデル全体メモリの削減率ではない。KV転送・保存の効率に直接関係するためaccept。",
+      "library_body_check": "abstract_and_introduction_checked",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "p-DCIM: A 28nm Probabilistic SRAM DCIM based Ising Machine for Near-Memory Context Selection in LLM-RAG Pipeline",
+      "source_url": "https://arxiv.org/abs/2610.37033",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We present a fabricated SRAM DCIM Ising machine that performs set-level context selection for large language model (LLM) with retrieval-augmented generation (RAG). In RAG, the evidence-selection stage is increasingly delegated to repeated language-model reranking, which adds substantial energy to the inference pipeline. We reformulate evidence selection as a quadratic unconstrained binary optimization (QUBO) problem and solve it on a dual-mode digital compute-in-memory (DCIM) macro: the same multiply-and-accumulate datapath computes the embedding-similarity scores that populate the QUBO coefficients and evaluates the per-spin Hamiltonian differences that drive the anneal. The annealing temperature is set by a digital plane-count control along with the SRAM pseudo-read random bit flips, giving graded cooling entirely from on-chip digital configuration. The macro is taped-out in a 28 nm process [0.16 mm2, 0.41 mW] and is proposed to be integrated as part of the logic base-die in hybrid high-bandwidth memory (HBM) and high-bandwidth flash (HBF) stacks in a GPU package, where only the selected passage identifiers return to the host. Replacing the language-model selection pass with the near-memory Ising solver yields a macro normalized selection-energy estimate more than six orders of magnitude lower than the LLM-based baseline and reduces the evaluated total energy per query by 67%, while maintaining comparable token-level F1 on the evaluated examples.",
+      "identifiers": [
+        "SemanticScholar:a5740d38a141cce56dade5e3920f5426d64e43f4"
+      ],
+      "semantic_scholar_id": "a5740d38a141cce56dade5e3920f5426d64e43f4",
+      "canonical_id": "arXiv:2610.37033",
+      "arxiv_id": "2610.37033",
+      "authors": [
+        "Madhav Vadlamani",
+        "Rahul Singh",
+        "Yu-Yao Kong",
+        "Hao-Mei Liu",
+        "Zheng Zhang",
+        "Shi-Meng Yu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 6,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RAGでLLM rerankerを繰り返す証拠集合選択をQUBOとして定式化し、28nm試作SRAMデジタルcompute-in-memory Ising回路で類似度計算とannealingを実行。0.16mm²・0.41mWのmacroを示し、選択エネルギー推定がLLM baseline比6桁超低く、評価対象のquery総エネルギー67%削減を報告。LLM生成kernelそのものではないが、RAG推論pipelineの選択段階をnear-memory hardwareで高速・省電力化する直接的システム研究としてaccept。",
+      "library_body_check": "abstract_and_introduction_checked",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3ad956131829",
+    "round": "libimp-3ad956131829caa5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 4,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3ad956131829caa5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3ad956131829caa5-pre01.json",
+    "receipt": "sha256:5def2f3c77bbcf2f22d841da689c6d1da5a91ad92165eb57bd890ca3e4609574"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3ad956131829",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
