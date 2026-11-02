@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-02T03:40:04+00:00`
+Generated: `2026-11-02T04:38:16+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -147,7 +147,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 63 | 11 | 6 | 11 | arXiv:2503.09387 | VideoScan: Enabling Efficient Streaming Video Understanding via Frame-level Semantic Carriers | 2025-03-12 | arXiv.org | 11 | 11 | 11-llm-serving-scheduling-disaggregation, Inference / Multimodal Long-Context Memory Compression, KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2503.09387) |
 | 64 | 103 | 6 | 10 | arXiv:2606.24286 | AVOC: Enhancing Hour-Level Audio-Video Understanding in Omni-Modal LLMs via Retrieval-Inspired Token Compression | 2026-06-23 | arXiv.org | 3 | 10 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2606.24286) |
 | 65 | 10 | 6 | 10 | arXiv:2609.18005 | A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality | 2026-09-16 |  | 0 | 10 | Conditional Computation, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.18005) |
-| 66 | 1 | 6 | 10 | DOI:10.1109/COINS65080.2025.11125768 | LiM Pruner: Efficient Pruning for Large Language-in-Memory Models | 2025-08-04 | Coins | 1 | 10 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/COINS65080.2025.11125768) |
+| 66 | 2 | 6 | 10 | arXiv:2507.10059 | GeLaCo: An Evolutionary Approach to Layer Compression | 2025-07-14 | arXiv.org | 2 | 10 | Weight Quantization / Compression, inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2507.10059) |
 | 67 | 10 | 6 | 10 | arXiv:2608.20359 | Self-Speculation for Faster Reasoning Models | 2026-06-17 |  | 0 | 10 | Conditional Computation, LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.20359) |
 | 68 | 101 | 6 | 9 | arXiv:2609.32831 | UniCache: Task- and Type-Aware KV Cache Compression for Unified Multimodal Models | 2026-09-26 |  | 1 | 9 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2609.32831) |
 | 69 | 101 | 6 | 9 | arXiv:2609.30820 | Quantizing Looped Transformers: Feedback Exposure and Calibration Blindness | 2026-09-25 |  | 1 | 9 | arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.30820) |
