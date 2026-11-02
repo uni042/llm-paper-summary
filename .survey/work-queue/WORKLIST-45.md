@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-02T20:19:23+00:00`
+Generated: `2026-11-02T21:17:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -576,10 +576,10 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 493 | 5 | 4 | 4 | SemanticScholar:e5dcf34235f384371dc498bf3879e531322da252 | Sparsity-Aware Protocol for ZK-friendly ML Models: Shedding Lights on Practical ZKML | 2024 | IACR Cryptology ePrint Archive | 5 | 4 | Weight Quantization / Compression | [source](https://www.semanticscholar.org/paper/e5dcf34235f384371dc498bf3879e531322da252) |
 | 494 | 155 | 4 | 4 | arXiv:2109.02492 | DialogLM: Pre-trained Model for Long Dialogue Understanding and Summarization | 2021-09-06 | AAAI Conference on Artificial Intelligence | 155 | 4 | inference-systems | [source](https://arxiv.org/abs/2109.02492) |
 | 495 | 103 | 4 | 4 | arXiv:2603.29437 | SeGPruner: Semantic-Geometric Visual Token Pruner for 3D Question Answering | 2026-03-31 | arXiv.org | 3 | 4 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2603.29437) |
-| 496 | 102 | 4 | 4 | arXiv:2608.01240 | DeltaFlow: Noise-Adaptive Bidirectional Gated Delta Networks for Embedded Language Flows | 2026-08-02 |  | 2 | 4 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2608.01240) |
-| 497 | 101 | 4 | 4 | arXiv:2604.11364 | The Missing Knowledge Layer in Cognitive Architectures for AI Agents | 2026-04-13 | arXiv.org | 1 | 4 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2604.11364) |
-| 498 | 20 | 4 | 4 | DOI:10.1109/HPCA68181.2026.11408572 | TENET-v2: Applying Relation-Centric Notation to Model and Optimize Data Swizzle in the Cache of Modern NPU | 2026-01-31 | International Symposium on High-Performance Computer Architecture | 0 | 4 | GPU Kernel Framework, inference-systems | [source](https://doi.org/10.1109/HPCA68181.2026.11408572) |
-| 499 | 10 | 4 | 4 | DOI:10.1109/AIRC69745.2026.11631461 | Inductor-TV: Formal Methods for the Pytorch Compiler | 2026-04-01 | 2026 7th International Conference on Artificial Intelligence, Robotics, and Control (AIRC) | 0 | 4 | PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/AIRC69745.2026.11631461) |
+| 496 | 101 | 4 | 4 | arXiv:2512.16136 | Lotus: Optimizing Disaggregated Transactions with Disaggregated Locks | 2025-12-18 | arXiv.org | 1 | 4 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2512.16136) |
+| 497 | 101 | 4 | 4 | arXiv:2606.01016 | PolySpeech-100: A Large-Scale Benchmark for Speech Understanding Across 100+ Languages and Dialects | 2026-05-31 | Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 | 1 | 4 |  | [source](https://arxiv.org/abs/2606.01016) |
+| 498 | 13 | 4 | 4 | SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5 | Experiential Networked Intelligence (ENI); Study on AI Agents based Next-generation Network Slicing |  |  | 13 | 4 | speculative decoding / draft-model design, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://www.semanticscholar.org/paper/6be9b34dbb51fecb84021b2a711ac183f372f7b5) |
+| 499 | 10 | 4 | 4 | DOI:10.1109/ICDCSW72724.2026.00038 | Fleet-Level Optimization for Heterogeneous Device Provisioning in ML Model Deployments | 2026-06-01 | International Conference on Distributed Computing Systems Workshops | 0 | 4 | LLM Serving / Scheduling / Disaggregation, 大規模言語モデル推論サービング／装置内演算スケジューリング | [source](https://doi.org/10.1109/ICDCSW72724.2026.00038) |
 | 500 | 10 | 4 | 4 | DOI:10.18653/v1/2026.acl-long.1542 | Anchoring the Cache: Mitigating Contextual Hallucination in KV-Compressed Long-Context Summarization | 2026 | Annual Meeting of the Association for Computational Linguistics | 0 | 4 | KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://doi.org/10.18653/v1/2026.acl-long.1542) |
 
 ## Machine-readable

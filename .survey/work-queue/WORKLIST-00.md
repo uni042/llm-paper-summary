@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-02T20:19:23+00:00`
+Generated: `2026-11-02T21:17:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -578,10 +578,10 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 494 | 2 | 4 | 4 | DOI:10.1109/ACCESS.2026.3659051 | A Survey on the Expanding Scope and Interdisciplinary Opportunities for Processing-in-Memory Techniques | 2026 | IEEE Access | 2 | 4 | inference-systems | [source](https://doi.org/10.1109/ACCESS.2026.3659051) |
 | 495 | 111 | 4 | 4 | arXiv:2607.00862 | CAT: Confidence-Adaptive Thinking for Efficient Reasoning of Large Reasoning Models | 2026-07-01 | Annual Meeting of the Association for Computational Linguistics | 1 | 4 |  | [source](https://arxiv.org/abs/2607.00862) |
 | 496 | 103 | 4 | 4 | arXiv:2605.12992 | SpikeProphecy: A Large-Scale Benchmark for Autoregressive Neural Population Forecasting | 2026-05-13 | arXiv.org | 3 | 4 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2605.12992) |
-| 497 | 101 | 4 | 4 | arXiv:2512.16136 | Lotus: Optimizing Disaggregated Transactions with Disaggregated Locks | 2025-12-18 | arXiv.org | 1 | 4 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2512.16136) |
-| 498 | 101 | 4 | 4 | arXiv:2606.01016 | PolySpeech-100: A Large-Scale Benchmark for Speech Understanding Across 100+ Languages and Dialects | 2026-05-31 | Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 | 1 | 4 |  | [source](https://arxiv.org/abs/2606.01016) |
-| 499 | 13 | 4 | 4 | SemanticScholar:6be9b34dbb51fecb84021b2a711ac183f372f7b5 | Experiential Networked Intelligence (ENI); Study on AI Agents based Next-generation Network Slicing |  |  | 13 | 4 | speculative decoding / draft-model design, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 投機的復号・オンライン適応・知識蒸留 | [source](https://www.semanticscholar.org/paper/6be9b34dbb51fecb84021b2a711ac183f372f7b5) |
-| 500 | 10 | 4 | 4 | DOI:10.1109/ICDCSW72724.2026.00038 | Fleet-Level Optimization for Heterogeneous Device Provisioning in ML Model Deployments | 2026-06-01 | International Conference on Distributed Computing Systems Workshops | 0 | 4 | LLM Serving / Scheduling / Disaggregation, 大規模言語モデル推論サービング／装置内演算スケジューリング | [source](https://doi.org/10.1109/ICDCSW72724.2026.00038) |
+| 497 | 101 | 4 | 4 | arXiv:2602.01485 | Predicting and improving test-time scaling laws via reward tail-guided search | 2026-02-01 | arXiv.org | 1 | 4 |  | [source](https://arxiv.org/abs/2602.01485) |
+| 498 | 23 | 4 | 4 | arXiv:2310.09436 | Sub-network Discovery and Soft-masking for Continual Learning of Mixed Tasks | 2023-10-13 | Conference on Empirical Methods in Natural Language Processing | 13 | 4 | 03-model-compression-pruning | [source](https://arxiv.org/abs/2310.09436) |
+| 499 | 11 | 4 | 4 | arXiv:2508.09350 | Flow-SLM: Joint Learning of Linguistic and Acoustic Information for Spoken Language Modeling | 2025-08-12 | Automatic Speech Recognition & Understanding | 11 | 4 | Training / Optimizer State Quantization and Memory Reduction, speech-language-model / streaming-multimodal-generation | [source](https://arxiv.org/abs/2508.09350) |
+| 500 | 10 | 4 | 4 | DOI:10.1109/ICEIC69189.2026.11386008 | GDE: Grid-based Diversity Enhancement for Efficient Vision Token Selection in VLMs | 2026-01-18 | International Conference on Electronics, Information and Communications | 0 | 4 |  | [source](https://doi.org/10.1109/ICEIC69189.2026.11386008) |
 
 ## Machine-readable
 

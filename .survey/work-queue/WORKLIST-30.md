@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-02T20:19:23+00:00`
+Generated: `2026-11-02T21:17:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -576,11 +576,11 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 493 | 10 | 4 | 4 | arXiv:2610.32057 | HyScale: Scaling Long-Context Training for Learned Sparse Attention | 2026-10-23 |  | 0 | 4 | Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。 | [source](https://arxiv.org/abs/2610.32057) |
 | 494 | 1 | 4 | 4 | arXiv:2511.12500 | Iris: First-Class Multi-GPU Programming Experience in Triton | 2025-11-16 | arXiv.org | 1 | 4 | GPU Kernel Framework, inference-systems, kernel-runtime-compilation | [source](https://arxiv.org/abs/2511.12500) |
 | 495 | 109 | 4 | 4 | arXiv:2602.20913 | LongVideo-R1: Smart Navigation for Low-cost Long Video Understanding | 2026-02-24 | arXiv.org | 9 | 4 |  | [source](https://arxiv.org/abs/2602.20913) |
-| 496 | 102 | 4 | 4 | DOI:10.1109/WACV61042.2026.00246 | Revisiting Retentive Networks for Fast Range-View 3D LiDAR Semantic Segmentation | 2026-03-06 | IEEE Workshop/Winter Conference on Applications of Computer Vision | 2 | 4 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://doi.org/10.1109/WACV61042.2026.00246) |
-| 497 | 101 | 4 | 4 | arXiv:2602.01485 | Predicting and improving test-time scaling laws via reward tail-guided search | 2026-02-01 | arXiv.org | 1 | 4 |  | [source](https://arxiv.org/abs/2602.01485) |
-| 498 | 23 | 4 | 4 | arXiv:2310.09436 | Sub-network Discovery and Soft-masking for Continual Learning of Mixed Tasks | 2023-10-13 | Conference on Empirical Methods in Natural Language Processing | 13 | 4 | 03-model-compression-pruning | [source](https://arxiv.org/abs/2310.09436) |
-| 499 | 11 | 4 | 4 | arXiv:2508.09350 | Flow-SLM: Joint Learning of Linguistic and Acoustic Information for Spoken Language Modeling | 2025-08-12 | Automatic Speech Recognition & Understanding | 11 | 4 | Training / Optimizer State Quantization and Memory Reduction, speech-language-model / streaming-multimodal-generation | [source](https://arxiv.org/abs/2508.09350) |
-| 500 | 10 | 4 | 4 | DOI:10.1109/ICEIC69189.2026.11386008 | GDE: Grid-based Diversity Enhancement for Efficient Vision Token Selection in VLMs | 2026-01-18 | International Conference on Electronics, Information and Communications | 0 | 4 |  | [source](https://doi.org/10.1109/ICEIC69189.2026.11386008) |
+| 496 | 102 | 4 | 4 | arXiv:2608.01240 | DeltaFlow: Noise-Adaptive Bidirectional Gated Delta Networks for Embedded Language Flows | 2026-08-02 |  | 2 | 4 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2608.01240) |
+| 497 | 101 | 4 | 4 | arXiv:2604.11364 | The Missing Knowledge Layer in Cognitive Architectures for AI Agents | 2026-04-13 | arXiv.org | 1 | 4 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2604.11364) |
+| 498 | 20 | 4 | 4 | DOI:10.1109/HPCA68181.2026.11408572 | TENET-v2: Applying Relation-Centric Notation to Model and Optimize Data Swizzle in the Cache of Modern NPU | 2026-01-31 | International Symposium on High-Performance Computer Architecture | 0 | 4 | GPU Kernel Framework, inference-systems | [source](https://doi.org/10.1109/HPCA68181.2026.11408572) |
+| 499 | 10 | 4 | 4 | DOI:10.1109/AIRC69745.2026.11631461 | Inductor-TV: Formal Methods for the Pytorch Compiler | 2026-04-01 | 2026 7th International Conference on Artificial Intelligence, Robotics, and Control (AIRC) | 0 | 4 | PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/AIRC69745.2026.11631461) |
+| 500 | 10 | 4 | 4 | DOI:10.1109/WACV61042.2026.00246 | Revisiting Retentive Networks for Fast Range-View 3D LiDAR Semantic Segmentation | 2026-03-06 | IEEE Workshop/Winter Conference on Applications of Computer Vision | 0 | 4 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://doi.org/10.1109/WACV61042.2026.00246) |
 
 ## Machine-readable
 
