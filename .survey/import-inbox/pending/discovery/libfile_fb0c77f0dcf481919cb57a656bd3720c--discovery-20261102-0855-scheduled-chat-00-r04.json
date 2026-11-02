@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r04",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.07457",
+      "identity_tokens": [
+        "id:arXiv:2610.07457",
+        "id:DOI:10.48550/arXiv.2610.07457"
+      ],
+      "title": "AlignQuant: Tile-Aligned Mixed-Precision Quantization for Efficient LLM Generation",
+      "reason": "GPUで扱いやすい2次元weight tileを精度配分・圧縮格納・実行の共通単位にし、チャネル内の量子化感度差を活かす。prefill/decode両フェーズのgradient重み付き出力摂動で混合精度を較正し、同じpacked weightをINT8計算向けphase別kernelで再利用する。著者要旨は3B～14Bの4モデル・3GPU・最大64K contextでBF16比最大2.50倍の生成速度を報告。量子化とGPU実行形状の共同設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.07457",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32243",
+      "identity_tokens": [
+        "id:arXiv:2610.32243",
+        "id:DOI:10.48550/arXiv.2610.32243"
+      ],
+      "title": "BiLoCo: Binary Low-Rank Corrections for Post-Training Quantization",
+      "reason": "FP4 PTQの誤差補正を高精度SVD低ランク行列でなく、±1符号のbinary低ランク因子で表す。rank当たりの格納量を16分の1に抑え、FP4 GEMMをtensor core、補正をCUDA coreで同一kernel内に並列実行する。著者要旨は4B～72B LLMでメモリを合わせたSVDQuant同等以上の品質、B300のbatch1でrank512までFP4単独GEMM比11%以内の実行遅延と報告。量子化誤差補正とカーネルの直接的貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.32243",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25675",
+      "identity_tokens": [
+        "id:arXiv:2610.25675",
+        "id:DOI:10.48550/arXiv.2610.25675"
+      ],
+      "title": "LIRQuant: An Efficient Locally Isolated Rotation Quantization Method for Large Language Models",
+      "reason": "W4A4KV4など低ビット推論のactivation outlierに対し、感度の高いチャネルだけ学習可能な回転、残りは軽量な固定回転を適用する局所分離型PTQを提案する。著者要旨はLlama3-8Bの較正25分、ピークGPUメモリ20.3GB、fused inference kernelによるFP16比prefill最大2.3倍、メモリ3.5倍削減を報告。推論圧縮と実行kernelへの明確な適用があるためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25675",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17321",
+      "identity_tokens": [
+        "id:arXiv:2610.17321",
+        "id:DOI:10.48550/arXiv.2610.17321"
+      ],
+      "title": "GPU Goldmines: Tunable WebGPU Kernels for Edge LLM Inference",
+      "reason": "WebGPUのブラウザ/端末間でkernel性能が変わる問題に対し、GEMM、GEMV、flash attentionの実装指定・実行・autotuningと、過去の形状・デバイス別測定DBを組み合わせる。著者要旨ではLlama/Qwen形状でONNX Runtime比7.0倍、llama.cpp WebGPU kernel比1.41倍の幾何平均GEMM性能、llama.cppのchat prefillで1.48倍のend-to-end改善を報告。端末内LLM推論kernel最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17321",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21249",
+      "identity_tokens": [
+        "id:arXiv:2610.21249",
+        "id:DOI:10.48550/arXiv.2610.21249"
+      ],
+      "title": "Characterizing Predictability-Latency Trade-offs of KV-Cache SSD Offloading in LMCache for LLM Serving Systems",
+      "reason": "LMCache 0.3.0のbuffered I/O/page cache構成と0.3.16のprefix dedup/O_DIRECT構成を4種類の複数セッションworkloadで観測比較する。著者要旨ではpage cacheを消すと旧方式は約1GBのSSD readを683msで発行し、新方式は重複promptで書込1.62GB→11.75MBへ減る一方、暖機済みTTFTが27→93msへ悪化する条件も報告。方式提案より実装比較だがSSD KV offloadの再現性・遅延tradeoffを実測する直接的なシステム評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21249",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21241",
+      "identity_tokens": [
+        "id:arXiv:2610.21241",
+        "id:DOI:10.48550/arXiv.2610.21241"
+      ],
+      "title": "Range: Decoupling KV-Cache Reuse Granularity from Storage Work",
+      "reason": "KV接頭部の細粒度再利用がstorage object数に比例するlookup、I/O発行、GPU搬送等の制御費用を生む問題に対し、Range ticketとbyte stripe、GPU transfer bankで物理バッチ処理量にのみ費用が比例するよう設計する。vLLM/LMCacheへ組込み、著者要旨は6GiB復元でobject数32倍変化に対しTTFTを1.79～1.80秒へ維持、従来LMCacheは2.12→3.01秒と報告。KV offloadとSSD階層の直接的実装研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21241",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.21500",
+      "identity_tokens": [
+        "id:arXiv:2610.21500",
+        "id:DOI:10.48550/arXiv.2610.21500"
+      ],
+      "title": "When the KV Cache Is Slower Than the GPU: Scaling Remote KV Tiers for Context-Parallel Prefill",
+      "reason": "8xB300上のGLM-5.3/MLA/PCP8で遠隔KV tierのhitが再計算より遅くなり得る問題を測定する。著者要旨では16K promptのp99 TTFTが3.96→17.3秒へ悪化し、hit当たりの固定費用と帯域の損益分岐を定式化。PCP rank別KV分割、非同期転送、client stall修正によりhit-heavy traceのp99を83.32→0.67秒へ改善し、prefill throughputを14%増と報告。遠隔KVの実装/性能境界を直接扱うためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.21500",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.24499",
+      "identity_tokens": [
+        "id:arXiv:2610.24499",
+        "id:DOI:10.48550/arXiv.2610.24499"
+      ],
+      "title": "TideKV: Delayed KV Eviction via Layer-Wise Chunked Prefill for Memory-Efficient Long-Context LLM Inference",
+      "reason": "全promptをprefillしてからKVを圧縮すると構築時の一時メモリが大きく、chunkごとの早期追い出しは全prompt情報を見ずに選択する問題に対し、層優先で全chunkを処理し各層終了時にのみKVを削除する。著者要旨はA100の64Kで構築時一時メモリ83.89%削減、RTX4090の64KでTTFT増加1.06%に留め128K prefillを可能にしたと報告。長文脈推論のcache構築時メモリ最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.24499",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34731",
+      "identity_tokens": [
+        "id:arXiv:2610.34731",
+        "id:DOI:10.48550/arXiv.2610.34731"
+      ],
+      "title": "MCF: A Memory- and Communication-Aware Co-Designed Framework for Long-Context LLM Inference",
+      "reason": "長文脈のchunked prefill初期に余剰メモリへ再利用KVを複製し、進行につれて冗長コピーを解放してdecode用shardへ移行するMARSと、KV shardを固定しqueryをworker間で移動するdecode方式を組み合わせる。さらにFPGA compute-NICでmetadata-driven KV routingとcollectiveを処理する。著者要旨はTTFT/throughput/scalability改善を主張するが具体的倍率は示していない。長文脈LLM推論の通信・KV配置協調設計としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.34731",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03027",
+      "identity_tokens": [
+        "id:arXiv:2610.03027",
+        "id:DOI:10.48550/arXiv.2610.03027"
+      ],
+      "title": "Tailoring the Quantization Space for 1-Bit KV Cache Compression",
+      "reason": "KV cacheの1-bit vector quantizationでcentroid数が不足する問題に対し、query誘導のchannel重み、head間正規化、共分散を考慮したchannel groupingで量子化空間を整えるTaSQを提案する。RoPE互換の変換をprojection重みとcodebookへ吸収し、従来VQ lookupの構造を保つ。著者要旨はRTX6000 Ada/SGLang実装でBF16比batch最大14倍、ピークthroughput1.87倍を報告。KV圧縮と推論servingへの直接的貢献としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.03027",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:03:49+09:00",
+      "last_checked_at": "2026-11-02T09:03:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
