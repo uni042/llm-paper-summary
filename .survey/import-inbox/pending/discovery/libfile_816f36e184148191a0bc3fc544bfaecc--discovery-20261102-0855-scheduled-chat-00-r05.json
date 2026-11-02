@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-0855-scheduled-chat-00/r05",
+  "reference_main_sha": "2e6165d8492a62e3317901512a9adc0d8e0c4cac",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.23935",
+      "identity_tokens": [
+        "id:arXiv:2610.23935",
+        "id:DOI:10.48550/arXiv.2610.23935"
+      ],
+      "title": "Factorization-Guided Training and Inference for Diffusion-Drafted Speculative Decoding",
+      "reason": "拡散draftの平均受理長が増えてもearly rejectionや1ラウンド遅延の増大でthroughputが上がらない問題に対し、DScoutは学習損失を受理包含・重み・予測に分解し、mixed-horizon学習と受理重み付けを行う。推論時は平均受理長/ラウンド遅延を最大化するdraft depth、target conditioning、block幅を選ぶ。著者要旨はQwen3-4B/8Bで通常AR比3.84/4.14倍、SOTA比平均speedup9.1/7.1%増と報告。投機復号の実行効率へ直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.23935",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22877",
+      "identity_tokens": [
+        "id:arXiv:2610.22877",
+        "id:DOI:10.48550/arXiv.2610.22877"
+      ],
+      "title": "BS-Spec: BFP-Based Bit-Sharing for Self-Speculative LLM Decoding with LUT-Driven Mixed-Precision Acceleration",
+      "reason": "別draftモデルを持たずBFP target重みとKVの上位bitだけを部分読出しして複数精度のdraftを構成する。ワークロード別に最適な重み/KV精度を較正し、LUTを使う可変精度BFPアクセラレータでdraftとtargetを実行する。著者要旨は通常AR decode比最大1.9倍、比較対象のbit-sharing self-speculative方式より平均67.2%高いspeedupを報告。投機復号と専用hardwareの共同最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.22877",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.34440",
+      "identity_tokens": [
+        "id:arXiv:2610.34440",
+        "id:DOI:10.48550/arXiv.2610.34440"
+      ],
+      "title": "Speculative Decoding for Mixture-of-Experts Models: Expert Bytes, Kernel Bandwidth and the Best Draft Length",
+      "reason": "MoE投機検証のexpert重複をdeduplicateすれば必ず速いという単純な見方に対し、kernelごとの読込byte数/実効帯域と固定時間から検証時間を予測し、受理率に応じた最適draft長を解析する。llama.cpp Metal/CUDAとMLX-LMで、dedupは5～8token以上のpassでのみ有利か全く有利でない場合があると報告。Leanによる一部定理検証と測定比較を伴い、MoE投機長の性能モデル・実装判断に直接寄与するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.34440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.33379",
+      "identity_tokens": [
+        "id:arXiv:2610.33379",
+        "id:DOI:10.48550/arXiv.2610.33379"
+      ],
+      "title": "One Call Ahead: Packed Self-Speculative Decoding with Diffusion Drafting",
+      "reason": "ARと拡散draftを同一ネットワークで行う自己投機復号の2回の逐次model callを、現在のdraft検証と次draft生成を同じcallにpackingして1回へ減らす。以前の1-call方式が投機幅に対し入力長二乗になるのに対し、Packed-SSは線形長で処理しtarget分布を保持する。著者要旨はNemotron3B/8BとSetDLM1.7Bのgreedy decodeで2-call方式と既存1-call方式よりthroughputとwall timeが改善したと報告。具体的倍率は要旨未記載。",
+      "source_url": "https://arxiv.org/abs/2610.33379",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20865",
+      "identity_tokens": [
+        "id:arXiv:2610.20865",
+        "id:DOI:10.48550/arXiv.2610.20865"
+      ],
+      "title": "Long-Context Drafting Does Not Require Long-Context Drafters",
+      "reason": "超長文脈でdraft側の全履歴attention費用が増えて投機復号の利益が失われる問題に対し、target hidden stateから長期情報を受け取るdraftは自身の長い履歴を必ずしも保持しなくてよいと主張する。既存の短文脈draftを凍結し、draft attention cacheの上限固定とRoPE位置の訓練範囲への再基準化を推論時だけ適用する。著者要旨は3組のtarget/draft・5コーパスで4K～200万tokenまで短文脈時のspeedupを維持すると報告。KV管理と投機復号の直接的方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.20865",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.02953",
+      "identity_tokens": [
+        "id:arXiv:2610.02953",
+        "id:DOI:10.48550/arXiv.2610.02953"
+      ],
+      "title": "SlimKV: Joint Token-Feature KV Cache Compression with Reconstruction-Free Beacon Attention",
+      "reason": "token削減と特徴次元削減を同時に行うKV圧縮。低rank-aware学習で長文脈をbeacon記憶へ集約し、layerごとにrankを割り当て、beacon keyに対するRoPEを外してlatent空間のままattentionを計算し復元遅延を避ける。著者要旨はLongBenchで4～32倍圧縮、128Kでattention最大7.34倍、end-to-end decode最大3.38倍を報告。KV容量と演算費用の直接的最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.02953",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.08378",
+      "identity_tokens": [
+        "id:arXiv:2610.08378",
+        "id:DOI:10.48550/arXiv.2610.08378"
+      ],
+      "title": "Lachesis: Lifetime-Aware KV Cache Placement for Agent Serving across HBM and High-Bandwidth Flash",
+      "reason": "高帯域flashは大容量KV保存に適するが書込耐久性が制約となる。Lachesisはagent harnessの時間的・構造的・worker間のKV寿命情報を使い、短寿命KVをHBMへ、長寿命KVをHBFへ配置し不要blockを早期解放する。著者要旨のトレース駆動シミュレーションではHBM-first比flash寿命1.19～3.13倍、3.3～12.2 device-yearと報告。実flashの耐久試験ではないがKV階層配置と寿命最適化の具体的研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.08378",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.12338",
+      "identity_tokens": [
+        "id:arXiv:2610.12338",
+        "id:DOI:10.48550/arXiv.2610.12338"
+      ],
+      "title": "VFold: Symmetry-Aware Cross-Layer Value Cache Compression",
+      "reason": "長文脈LLMのKV容量を抑えるため、層間value cacheの対称性を利用した共有/統合を提案する。architecture変更やdecode時の重い復元を避けつつ、key pruningや高圧縮量子化と組み合わせられると著者要旨が主張する。要旨には具体的な圧縮倍率・速度数値がないため定量評価はResearch時に検証が必要だが、value cacheの層間冗長性を直接利用する推論メモリ方式としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.12338",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.22863",
+      "identity_tokens": [
+        "id:arXiv:2610.22863",
+        "id:DOI:10.48550/arXiv.2610.22863"
+      ],
+      "title": "Understanding KV Residency in Production-Scale Agentic LLM Workloads",
+      "reason": "Microsoft M365のDeep Research等4種類、計1.21億超のmodel callを使いagentic sessionのKV滞留・再利用を定量化する。著者要旨ではDeep Researchの約80%のcontext tokenがprefix cache hitで、全live sessionのピークKVをHBM保持するには推計501.8TBが必要。1時間idle上限で必要容量を3.6倍減らし、int4へ段階的縮退するMRRで逼迫時の再計算率を下げる。LLMサービングのKV residency/配置の大規模一次トレース評価としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.22863",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.03203",
+      "identity_tokens": [
+        "id:arXiv:2610.03203",
+        "id:DOI:10.48550/arXiv.2610.03203"
+      ],
+      "title": "AFORE: Attention-FFN Disaggregation with Overlapped Reconfiguration of Experts",
+      "reason": "AttentionとFFNを別GPU poolへ分けるMoEサービングではFFN stageのexpert偏りが全体遅延を律速する。AFOREはupcoming microbatchのexpert需要を早期に把握し、前のmicrobatch実行中にNVLink expert移行を重ねるmigration-aware schedulingとprefetchを提案する。著者要旨は110B MoE/4動的workloadで最強比較方式比output throughput10.1～17.6%増、P95 ITL7.1～9.5%減と報告。MoE分離実行の動的配置・通信最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.03203",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T09:04:49+09:00",
+      "last_checked_at": "2026-11-02T09:04:49+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
