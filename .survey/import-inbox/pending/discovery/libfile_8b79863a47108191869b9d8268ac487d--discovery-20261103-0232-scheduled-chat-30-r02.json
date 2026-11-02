@@ -1,0 +1,190 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "run_key": "20261103-0232-scheduled-chat-30/r02",
+  "reference_main_sha": "ceae730f9ef5ffba98c2d323111c1e57585d29ed",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40959",
+      "identity_tokens": [
+        "arXiv:2610.40959"
+      ],
+      "title": "P-ContextBench: From Personal Fact Recall to Personalized Agent Behavior",
+      "reason": "100人の合成ペルソナ、10,088の隠れた事実、4,810の検証例から、LLMの個人文脈理解・時系列状態追跡・制約遵守を評価するベンチマーク。モデル能力と安全性の評価が中心で、推論時メモリ管理、検索高速化、配信インフラの具体的改善を提示しないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40959",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41169",
+      "identity_tokens": [
+        "arXiv:2610.41169"
+      ],
+      "title": "ImplicitHop: Evaluating knowledge integration across context and memory",
+      "reason": "LLMが文脈に与えられた知識と事前学習重みに埋め込まれた知識を多段推論で統合する能力を、グラフ・知識合成の二つのベンチマークで比較。文脈知識の方が重み知識より長い推論連鎖で有利という観察は長文脈設計に隣接するが、KVキャッシュ容量、推論速度、サービングの最適化を直接扱わないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41169",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41375",
+      "identity_tokens": [
+        "arXiv:2610.41375"
+      ],
+      "title": "From the Zoo to the BULLPEN: Sample-Efficient LLM Profiling via Multi-Channel Model Embeddings",
+      "reason": "BULLPENはLLMの回答本文・正答パターン・質問を併用してモデル特性を埋め込み化し、260の公開モデルのプロファイリングを少数の質問で実施。400問だけで全24,118問の評価の91%以上の予測能力を維持し、評価用推論計算量を1.3%に削減。LLM評価ワークロードの計算削減として関連するが、通常の生成推論サービングやKV・実行エンジンの最適化ではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41375",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40992",
+      "identity_tokens": [
+        "arXiv:2610.40992"
+      ],
+      "title": "Can Personal Requirements Become Supervision for Planning?",
+      "reason": "食事・疾患・服薬制約を守るLLM計画エージェントNouraで、実行可能な仕様を用いた監督学習と多日間食事計画を評価。Qwen3-14Bの計画合格率を24.0%から72.5%に上げると報告するが、貢献は個人向け健康計画のタスク品質と学習であり、LLM推論実行の効率化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40992",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41688",
+      "identity_tokens": [
+        "arXiv:2610.41688"
+      ],
+      "title": "When the Past Shapes Action: Understanding Embodied Memory",
+      "reason": "ロボット・身体性AIの長期行動における記憶を6要件と8アーキテクチャで分類するサーベイ。空間記憶、視覚記憶、経験記憶の意思決定上の役割を扱うが、LLM推論のGPUメモリ階層・KV・サービングの具体的システム技術は扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41688",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41909",
+      "identity_tokens": [
+        "arXiv:2610.41909"
+      ],
+      "title": "Structure-Aware Skill Retrieval and Arbitration for Optimization Modeling",
+      "reason": "自然言語の数理最適化問題を解くLLMエージェントArchORで、構造署名とJaccard重なりを使った技能検索・再順位付け・選択規則を提案し、5ベンチマークの解答精度を改善。対象は最適化問題の技能再利用と回答正確性で、LLM推論エンジンの高速化・メモリ節約・分散配信ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41909",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40914",
+      "identity_tokens": [
+        "arXiv:2610.40914"
+      ],
+      "title": "No Channels Left Behind: Understanding Diffusion Acceleration through Residual Gates",
+      "reason": "画像拡散Transformerの学習加速でAdaLN-Zeroの残差ゲートの参加率が変わる現象を解析し、教師不要の正則化でImageNet 256x256のFIDを改善。ここでのaccelerationは画像生成モデルの学習収束を指し、LLMの生成推論速度やサービング最適化を扱わないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40914",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41387",
+      "identity_tokens": [
+        "arXiv:2610.41387"
+      ],
+      "title": "Anomalies as Residuals: Cauchy Displacement Networks",
+      "reason": "表形式データの近傍異常検知を単一隠れ層のCauchyネットワークで近似し、CPUで1万queryを数ミリ秒で採点する高速化を提案。速度改善はあるが対象はKNN系異常検知で、LLMのトークン生成・KV・推論サービングとは別分野のためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41387",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.40956",
+      "identity_tokens": [
+        "arXiv:2610.40956"
+      ],
+      "title": "Monte Carlo Random Walk Kernel",
+      "reason": "グラフ間random walk kernelをMonte Carloで近似し、固定期待歩長の下で1組あたりO(m)のサンプル計算へ置き換えるグラフカーネル手法。実験対象は合成・実グラフのGram行列で、Transformer推論カーネルやLLMサービングの高速化ではないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.40956",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.41244",
+      "identity_tokens": [
+        "arXiv:2610.41244"
+      ],
+      "title": "A Unified Framework for Probability Estimation of Data-Dependent Events",
+      "reason": "標本依存事象の確率推定を一般化し、Good–Turing推定量、安定性、VC次元・相互情報量による誤差界を導出する統計学理論。モデル推論時の実行効率・メモリ・GPU・分散処理には技術的寄与がないためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.41244",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-03T02:37:51+09:00",
+      "last_checked_at": "2026-11-03T02:37:51+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
