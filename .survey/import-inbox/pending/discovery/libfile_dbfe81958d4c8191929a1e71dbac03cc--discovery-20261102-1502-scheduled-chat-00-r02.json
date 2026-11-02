@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-1502-scheduled-chat-00/r02",
+  "reference_main_sha": "357f8194940596257db08909b36df50d77494b26",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20136",
+      "identity_tokens": [
+        "id:arXiv:2610.20136",
+        "id:DOI:10.48550/arXiv.2610.20136"
+      ],
+      "title": "Seeing at the Edge: Energy Characterization of Vision-Language Model Inference on Edge Platforms",
+      "reason": "Raspberry Pi 5/Hailo-10H NPUとJetson Orin Nano SuperでQwen2-VL-2B-Instructの全機器エネルギー、遅延、温度を実測する。PiのNPU offloadはCPU実行比で出力token当たりエネルギーを約3分の2削減し、Jetson GPUは短い回答、Pi NPUは約40tokenを超える回答で効率がよいという交差を示す。VLM推論のhardware配置とエネルギー特性を定量化するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.20136",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.25519",
+      "identity_tokens": [
+        "id:arXiv:2610.25519",
+        "id:DOI:10.48550/arXiv.2610.25519"
+      ],
+      "title": "ATEST: Adaptive Resource-Aware Test-Time Scaling for LLM Inference",
+      "reason": "GPU混雑時に同じ4サンプル回答のエネルギーが最大4.1倍になる観測を受け、複数回答によるtest-time scalingの追加サンプル価値とGPU消費電力を同時に推定して停止するATESTを提案。オンライン版は回答多数決の安定性とGPU負荷から逐次予算を調整し、A100のGSM8K高負荷で60.0%正答・deferralなしを報告。推論実行時の資源制御・エネルギーSLOへの直接寄与があるためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.25519",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.32279",
+      "identity_tokens": [
+        "id:arXiv:2610.32279",
+        "id:DOI:10.48550/arXiv.2610.32279"
+      ],
+      "title": "TranSAGE: Automating Spatial Accelerator Generation for Large-Scale Transformer Models",
+      "reason": "大規模Transformer向け空間アクセラレータを、複数演算のpipelineとdataflowを共同最適化してRTL生成するTranSAGEを提案。動的計画法で演算グラフを分割し、パイプラインに適した演算群・データフローを設計空間探索する。4種類のLLMで商用GPU/NPU比最大2.41倍throughput、13.04倍energy efficiencyを報告しており、LLM推論専用ハードウェアの直接的研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.32279",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.20637",
+      "identity_tokens": [
+        "id:arXiv:2610.20637",
+        "id:DOI:10.48550/arXiv.2610.20637"
+      ],
+      "title": "Expanding Attention: A Taylor-Series Route to Linear-Time Transformers with a Fixed Number of Recurrent States",
+      "reason": "softmax注意の指数核をTaylor展開し、有限個のテンソル冪内積へ分解して履歴を固定個数のrecurrent stateへ畳み込む。各tokenでrank-one更新、chunk間加算が可能なためprefill並列scanと文脈長に依存しないdecodeを狙う。要旨ではN=8192で20.8倍、N=65536のdecodeで76倍を報告する一方、高次展開は状態幅が組合せ的に増加する。推論attention計算量の直接削減としてaccept。",
+      "source_url": "https://arxiv.org/abs/2610.20637",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.13474",
+      "identity_tokens": [
+        "id:arXiv:2610.13474",
+        "id:DOI:10.48550/arXiv.2610.13474"
+      ],
+      "title": "CompileMask: Bridging the Gap Between Expressiveness and Efficiency in Attention Masking",
+      "reason": "実行時メタデータで決まる複雑なattention maskを、MaskSpec DSLで記述し、オフライン解析でmask専用preprocess kernelを生成するCompileMaskを提案。オンラインではbatch metadataから小さなExecution Descriptorを作り、attention kernelが境界値比較だけで可視性を判定する。従来のpredicate方式の前処理負荷と固定区間方式の表現力制約を両立し、最大3.8倍高速化を報告するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.13474",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.05062",
+      "identity_tokens": [
+        "id:arXiv:2610.05062",
+        "id:DOI:10.48550/arXiv.2610.05062"
+      ],
+      "title": "Beyond LLM Serving: Characterizing Vision-Language-Action Workloads for Embodied AI System Design",
+      "reason": "VLAモデル4種をedge GPU serverと車載SoC 2種で計測し、batch=1のロボット制御周期における遅延・電力・制御精度のトレードオフを43,200 closed-loop episodeで評価する。LLMサービングのbatch最適化とは異なるVLA固有の推論実行特性が中心であり、共通するGPU runtime示唆はあるがLLM生成サービングへの直接貢献は限定的なためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.05062",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.32229",
+      "identity_tokens": [
+        "id:arXiv:2610.32229",
+        "id:DOI:10.48550/arXiv.2610.32229"
+      ],
+      "title": "Training an MoE LLM in MXFP4: How We Closed the Gap to BF16",
+      "reason": "GPT-OSS-20B MoEのMXFP4学習を安定化するALTO recipeで、Hadamard変換、stochastic rounding、重みde-oscillationを組み合わせてBF16との学習loss差を縮める。評価はMLPerf Small MoE TrainingとAMD MI300X上のsimulated MXFP4 training kernelであり、著者はwall-clock高速化を未最適化と明記する。推論実行・サービングの寄与を示さない学習専用のためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.32229",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.09894",
+      "identity_tokens": [
+        "id:arXiv:2610.09894",
+        "id:DOI:10.48550/arXiv.2610.09894"
+      ],
+      "title": "QCATS: Query Context-Aware Transformer Slicing for Efficient Predictive Query Processing",
+      "reason": "データベース内の予測クエリに対してpredicateと統計情報からFFN expert sliceを事前選択し、非同期CPU-GPU pipelineとrouting-aware batchingを組み合わせるQCATSを提案。BERT-baseとQwen-0.6Bを用いる4種の予測クエリで最大4.42倍の遅延短縮を報告。ただし対象はDBのquery-granularity推論であり一般LLM生成サービングへの検証はないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.09894",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.22975",
+      "identity_tokens": [
+        "id:arXiv:2610.22975",
+        "id:DOI:10.48550/arXiv.2610.22975"
+      ],
+      "title": "Sink-Sparse Hybrid Attention for Efficient Inference in T2I/T2V Diffusion Transformers",
+      "reason": "テキスト画像・動画生成のDiffusion Transformerで、校正時に抽出したsink maskを固定再利用し、pooled KV branchを加えてdenoising attentionを疎化する。Wan2.1-T2VとZ-Image-Turboで約1.54–1.57倍の生成高速化を報告するが、対象は画像・動画DiTの推論でありLLM言語生成サービングへの適用は示されないため現行スコープではunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.22975",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    },
+    {
+      "classification": "unrelated",
+      "canonical_id": "arXiv:2610.21129",
+      "identity_tokens": [
+        "id:arXiv:2610.21129",
+        "id:DOI:10.48550/arXiv.2610.21129"
+      ],
+      "title": "Sparse Attention for Video Generation Acceleration via Growing Sparsity and Reduced Search",
+      "reason": "動画生成DiTのdenoising過程でattentionが次第に集中する性質を利用し、Top-p sparsityを段階的に高め、初期に見つけたblock候補だけを再探索するGSRSを提案。HunyuanVideo/Wan 2.1で1.55–2.21倍の高速化を報告するが、LLMのtoken-by-token言語生成・KVサービングではなく動画生成の専用最適化であるためunrelated。",
+      "source_url": "https://arxiv.org/abs/2610.21129",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T15:02:55+09:00",
+      "last_checked_at": "2026-11-02T15:02:55+09:00",
+      "linked_from": [],
+      "origin": "discovery_external_primary_abstract_screen_after_worklist_duplicate_skip"
+    }
+  ]
+}
