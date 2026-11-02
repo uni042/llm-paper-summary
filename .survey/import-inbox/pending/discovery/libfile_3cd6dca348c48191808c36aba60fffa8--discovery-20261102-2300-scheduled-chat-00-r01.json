@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "run_key": "20261102-2300-scheduled-chat-00/r01",
+  "reference_main_sha": "ff6ee3508f82c9dc0df28ab30cb461f0366a3e9b",
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41420",
+      "identity_tokens": [
+        "arXiv:2610.41420"
+      ],
+      "title": "SparseGDN: Chunk Sparse in Linear Attention",
+      "reason": "Gated Delta Networksの長文prefillで、chunk内の密なDelta solveとrecurrent state更新が律速になる問題に対し、隣接block solverと入力依存の更新イベント選択を組み合わせる。Qwen3.5-4B/9B、4K〜128K文脈のRULER評価で平均約29%のrecurrent eventを残し、選択器の費用込みでnative FLA比1.50〜1.94倍のGDN core prefill高速化を報告。LLM推論カーネルと状態メモリの直接最適化。",
+      "source_url": "https://arxiv.org/abs/2610.41420",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41460",
+      "identity_tokens": [
+        "arXiv:2610.41460"
+      ],
+      "title": "RetryRoute: Retry-Aware Model Routing for Agentic Image Editing Services",
+      "reason": "画像編集agentの再試行において失敗履歴に依存した成功率を推定し、モデルの再利用・上位モデルへの切替・打切りをqueue待ち時間込みで計画する。6つの編集モデルで再試行成功率が初回の17〜53%になるsticky failureを観測し、GPU testbedのSLO内編集完了率を既存最良比5.0〜6.3ポイント改善。サービングroutingの技術はあるが主対象が画像編集モデルでLLM推論そのものではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41460",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.42030",
+      "identity_tokens": [
+        "arXiv:2610.42030"
+      ],
+      "title": "There Is No Free Loop: When Does Looping a Trained Model Pay for Its Inference Compute?",
+      "reason": "学習済みLLMへ重み共有loopを追加するとパラメータ・保存サイズは増えない一方、生成token当たり計算量は追加層mと元層Nに応じて約(N+m)/N倍となる。この費用を同パラメータと同推論FLOPsの2基準でQwen3/Qwen3.5の0.8B〜9Bに比較し、両基準を上回ったのは0.8Bだけ、4B/9Bは非loopの同学習モデルに勝てないと報告。推論計算予算に対する構造選択の負の実証結果として直接有用。",
+      "source_url": "https://arxiv.org/abs/2610.42030",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41751",
+      "identity_tokens": [
+        "arXiv:2610.41751"
+      ],
+      "title": "Latent-Lens: Visual Perception in Small Language Models Through Latent Communication",
+      "reason": "独立に事前学習したVLMと小型言語モデルの間でテキストではなく潜在状態を受け渡すcodecを提案。VLM状態をSLM埋込へ写すencoderと視覚prefixに注意を向けるLoRA decoderを約160万パラメータで学習し、CLEVR/GQAの正解率を同LoRA予算のテキスト通信より改善。情報損失の改善が中心で、推論レイテンシやメモリ削減を一次要旨で確認できないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41751",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41408",
+      "identity_tokens": [
+        "arXiv:2610.41408"
+      ],
+      "title": "SACQ: Structure-Aware Codebook Quantization for Ultra-Low-Bit Vision-Language-Action Models",
+      "reason": "VLAモデルの言語・行動重みに対し、演算の役割と入力統計を反映したcodebook適合、最終行動誤差による層別混合bit配分、二段階の量子化後補正を組み合わせる。GR00T N1.7で1.5bit時にLIBERO平均成功率93.85%とモデルメモリ4.83倍削減、INT8活性化と低精度attention併用時にBF16比1.51倍高速を報告。ロボットVLA用途だが言語系重みの推論量子化・メモリ/速度改善を直接評価するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.41408",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41819",
+      "identity_tokens": [
+        "arXiv:2610.41819"
+      ],
+      "title": "ElTab: Elastically Looped Tabular Transformers",
+      "reason": "表形式予測用Transformerの実行深さを単一モデル内で可変にするため、ランダムに選んだearly exitへ学習時監督を与える。30のOpenML分類datasetで深さ別6モデル相当の性能を単一モデルで再現し、TabPFN型12層基準と同等の性能を推論FLOPs25%削減で達成したと報告。推論予算適応は関連するが対象が表形式モデルでLLMサービングではないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41819",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41720",
+      "identity_tokens": [
+        "arXiv:2610.41720"
+      ],
+      "title": "UpLoop: Training Looped Transformers via Upcycling at No Extra Pretraining Compute",
+      "reason": "重み共有loopを持つTransformerを、浅いモデルから層コピーで成長させ、初期に節約した学習FLOPsを後段の反復実行へ再配分するupcycling学習スケジュール。1.3Bで22下流課題の平均scoreを22.99から27.52へ改善するが、比較の主軸は等学習FLOPsであり推論token当たりの反復計算費用削減は示していない。学習専用最適化が中心なのでborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41720",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41994",
+      "identity_tokens": [
+        "arXiv:2610.41994"
+      ],
+      "title": "DAMI: Dual-Axis Memory Initialization for Enhanced Long-Context Retrieval in Gated Linear Attention",
+      "reason": "Gated DeltaNet系の状態保持時間を決めるA_logとdt_biasが学習後も初期値と強く相関する観測に基づき、head間の幾何級数的時間尺度と層間の入力感度profileを初期化する。GDN/KDA/GDN2/Mamba-2/RWKV-7のRULER型長文検索精度を乱数初期化比5.29〜16.71ポイント改善。recurrent memory設計に関連するが、主貢献は学習時初期化と精度であり実行速度・状態容量の削減を示さないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41994",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.41236",
+      "identity_tokens": [
+        "arXiv:2610.41236"
+      ],
+      "title": "Experts Exhibit Structured Redundancy: Structure-Preserving Expert Pruning for Mixture-of-Experts Large Language Models",
+      "reason": "MoE expert出力の低いeffective rankと分布modeの重複を利用し、router重みを事前重要度として使いながらexpert集合全体の構造を保つgreedy pruningを提案。PEEPは重み付き射影energy、DCEPは分布coverage誤差を基準とする。DeepSeek-V2-LiteとQwen3-30B-A3Bでexpert保持率75%/50%の比較において多数のbenchmarkで既存pruning法を上回り平均性能が最良と報告。推論常駐expertメモリ削減の直接手法。",
+      "source_url": "https://arxiv.org/abs/2610.41236",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41089",
+      "identity_tokens": [
+        "arXiv:2610.41089"
+      ],
+      "title": "CIRCE Divines LLM Task Complexity from Constraint Structure",
+      "reason": "安価なLLMで課題を制約中間表現へ変換し、制約graphをGNNで符号化してLLM回答正解可能性を事前推定する。SAT・論理・数学を含む7つの推論benchmarkと4モデルで、既存最良比較に対しNLLを0.465から0.423へ、AUROCを0.691から0.727へ改善。モデルroutingやtest-time compute配分への応用を動機づけるが、実際のserving latency/費用改善の実証は要旨にないためborderline。",
+      "source_url": "https://arxiv.org/abs/2610.41089",
+      "body_check": "abstract_screen_only; body_not_read",
+      "first_checked_at": "2026-11-02T23:11:29+09:00",
+      "last_checked_at": "2026-11-02T23:11:29+09:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.LG/new",
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "worklist_rank": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ]
+}
