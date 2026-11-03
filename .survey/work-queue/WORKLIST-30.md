@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-03T17:08:04+00:00`
+Generated: `2026-11-03T18:19:40+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -153,7 +153,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 70 | 4 | 6 | 9 | arXiv:2412.03599 | CPTQuant - A Novel Mixed Precision Post-Training Quantization Techniques for Large Language Models | 2024-12-03 | arXiv.org | 4 | 9 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2412.03599) |
 | 71 | 10 | 6 | 9 | arXiv:2608.01185 | 3DZip: Spatial-Aware Feature Diversity-Guided Token Compression for 3D Question Answering | 2026-08-02 |  | 0 | 9 | 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2608.01185) |
 | 72 | 2 | 6 | 9 | SemanticScholar:e545797fd29206a6b77f26fa89f17401f5f365b5 | ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents | 2026 | Trans. Mach. Learn. Res. | 2 | 9 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://www.semanticscholar.org/paper/e545797fd29206a6b77f26fa89f17401f5f365b5) |
-| 73 | 102 | 6 | 9 | arXiv:2608.11152 | Scheduling Mixed RL Rollouts Beyond Prefix Locality | 2026-08-11 |  | 2 | 9 | 11-llm-serving-scheduling-disaggregation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.11152) |
+| 73 | 102 | 6 | 9 | arXiv:2608.11152 | Scheduling Mixed RL Rollouts Beyond Prefix Locality | 2026-08-11 | arXiv.org | 2 | 9 | 11-llm-serving-scheduling-disaggregation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.11152) |
 | 74 | 0 | 6 | 9 | SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8 | V ESTIGE KV: T HE N O PE-MLA KV C ACHE C ARRIES I TS O WN E VICTION S IGNAL IN A V ESTIGIAL B RANCH |  |  | 0 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://www.semanticscholar.org/paper/c4a54a26100d339d10c59db6b8cc56ac481534c8) |
 | 75 | 20 | 6 | 8 | arXiv:2604.15732 | Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving | 2026-04-17 | EuroMLSys@EuroSys | 0 | 9 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, Long-context serving / KV cache benchmark, inference-systems | [source](https://arxiv.org/abs/2604.15732) |
 | 76 | 15 | 6 | 8 | arXiv:2406.17404 | Make Some Noise: Unlocking Language Model Parallel Inference Capability through Noisy Training | 2024-06-25 | Conference on Empirical Methods in Natural Language Processing | 5 | 8 | Speculative Decoding, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2406.17404) |

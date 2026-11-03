@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-03T17:08:04+00:00`
+Generated: `2026-11-03T18:19:40+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -344,7 +344,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 260 | 10 | 4 | 9 | DOI:10.1109/ICPADS67057.2025.11323105 | LISLLM: Long Context Inference of Large Language Models with Short KV Cache | 2025-12-14 | International Conference on Parallel and Distributed Systems | 0 | 9 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ICPADS67057.2025.11323105) |
 | 261 | 15 | 4 | 9 | arXiv:2506.22175 | MPipeMoE: Memory Efficient MoE for Pre-trained Models with Adaptive Pipeline Parallelism | 2023-05-01 | IEEE International Parallel and Distributed Processing Symposium | 15 | 9 | MoE inference systems / expert parallelism / model compression / knowledge distillation, 分散MoE学習 / ZeRO / CPUオフロード / 多次元並列, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2506.22175) |
 | 262 | 10 | 4 | 9 | DOI:10.1145/3767295.3769355 | MFS: An Efficient Model Family Serving System for LLMs | 2026-04-26 | European Conference on Computer Systems | 0 | 9 | KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation, 投機的デコード / 分布保存型デコード高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1145/3767295.3769355) |
-| 263 | 8 | 4 | 9 | arXiv:2505.07239 | Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity | 2025-05-12 | IEEE Symposium on Security and Privacy | 8 | 9 | 99-other-inference-systems, CPUオフロード / 活性化疎性 / 階層メモリ, inference-systems | [source](https://arxiv.org/abs/2505.07239) |
+| 263 | 9 | 4 | 9 | arXiv:2505.07239 | Comet: Accelerating Private Inference for Large Language Model by Predicting Activation Sparsity | 2025-05-12 | IEEE Symposium on Security and Privacy | 9 | 9 | 99-other-inference-systems, CPUオフロード / 活性化疎性 / 階層メモリ, inference-systems | [source](https://arxiv.org/abs/2505.07239) |
 | 264 | 32 | 4 | 9 | arXiv:2502.16782 | CipherPrune: Efficient and Scalable Private Transformer Inference | 2025-02-24 | International Conference on Learning Representations | 22 | 9 | 99-other-inference-systems, Conditional Computation, Sparse Attention | [source](https://arxiv.org/abs/2502.16782) |
 | 265 | 10 | 4 | 9 | arXiv:2603.27965 | ExFusion: Efficient Transformer Training via Multi-Experts Fusion | 2026-03-30 | IEEE transactions on multimedia | 0 | 9 | MoE routing / expert choice / heterogeneous conditional computation, inference-systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2603.27965) |
 | 266 | 2 | 4 | 9 | arXiv:2406.00030 | Large Language Model Pruning | 2024-05-24 | arXiv.org | 2 | 9 |  | [source](https://arxiv.org/abs/2406.00030) |
