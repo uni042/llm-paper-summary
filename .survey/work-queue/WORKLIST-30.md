@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-03T14:12:30+00:00`
+Generated: `2026-11-03T14:49:19+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -215,7 +215,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 132 | 0 | 5 | 10 | arXiv:2511.00295 | H-FA: A Hybrid Floating-Point and Logarithmic Approach to Hardware Accelerated FlashAttention | 2025-10-31 | IEEE Transactions on Circuits and Systems for Artificial Intelligence | 0 | 10 | flashattention-asic-fused-exponential-vector-multiplication, sparse attention / long-context Transformer, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2511.00295) |
 | 133 | 104 | 5 | 10 | arXiv:2608.03812 | OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models | 2026-08-04 |  | 4 | 10 |  | [source](https://arxiv.org/abs/2608.03812) |
 | 134 | 10 | 5 | 10 | arXiv:2609.26177 | Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression | 2026-08-11 |  | 0 | 10 | Inference / Structured Model Compression and Pruning, Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2609.26177) |
-| 135 | 114 | 5 | 10 | arXiv:2512.14256 | TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips | 2025-12-16 | International Symposium on High-Performance Computer Architecture | 4 | 11 | Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers, serving-scheduling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.14256) |
+| 135 | 116 | 5 | 10 | arXiv:2512.14256 | TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips | 2025-12-16 | International Symposium on High-Performance Computer Architecture | 6 | 11 | Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers, serving-scheduling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.14256) |
 | 136 | 10 | 5 | 10 | DOI:10.48550/arXiv.2603.09221 | Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control | 2026-03-10 | arXiv.org | 0 | 10 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://doi.org/10.48550/arXiv.2603.09221) |
 | 137 | 10 | 5 | 10 | arXiv:2609.36954 | Purlin: Separating Orchestration from the Datapath of Collectives | 2026-09-29 |  | 0 | 11 | LLM Serving / Scheduling / Disaggregation, kernel-runtime-compilation | [source](https://arxiv.org/abs/2609.36954) |
 | 138 | 114 | 5 | 9 | arXiv:2605.04075 | RetentiveKV: State-Space Memory for Uncertainty-Aware Multimodal KV Cache Eviction | 2026-04-14 | Annual Meeting of the Association for Computational Linguistics | 4 | 9 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2605.04075) |
