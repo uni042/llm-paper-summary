@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-03T13:49:20+00:00`
+Generated: `2026-11-03T14:12:30+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126432** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120286** / 監査再投入 **0** / 機械規則適用後 **122907** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126441** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120295** / 監査再投入 **0** / 機械規則適用後 **122916** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -436,7 +436,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 353 | 102 | 4 | 6 | DOI:10.48550/arXiv.2602.05243 | CORP: Closed-Form One-shot Representation-Preserving Structured Pruning for Vision Transformers | 2026-02-05 | arXiv.org | 2 | 6 | post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.48550/arXiv.2602.05243) |
 | 354 | 101 | 4 | 6 | arXiv:2606.04594 | Ekka: Automated Diagnosis of Silent Errors in LLM Inference | 2026-06-03 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, 大規模言語モデル推論サービング／装置内演算スケジューリング, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.04594) |
 | 355 | 12 | 4 | 6 | arXiv:2505.22757 | Pre-Training Curriculum for Multi-Token Prediction in Language Models | 2025-05-28 | Annual Meeting of the Association for Computational Linguistics | 2 | 6 | Conditional Computation, Speculative Decoding, inference-systems | [source](https://arxiv.org/abs/2505.22757) |
-| 356 | 10 | 4 | 6 | arXiv:2608.02341 | Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference | 2026-08-03 |  | 0 | 6 | Expert Prefetch, MoE専門家オフロード / 混合精度 / 専門家キャッシュ, オフロード／階層メモリ | [source](https://arxiv.org/abs/2608.02341) |
+| 356 | 10 | 4 | 6 | arXiv:2608.02341 | Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference | 2026-08-03 | arXiv.org | 0 | 6 | Expert Prefetch, MoE専門家オフロード / 混合精度 / 専門家キャッシュ, オフロード／階層メモリ | [source](https://arxiv.org/abs/2608.02341) |
 | 357 | 8 | 4 | 6 | arXiv:2405.02267 | Structural Pruning of Pre-trained Language Models via Neural Architecture Search | 2024-05-03 | Trans. Mach. Learn. Res. | 8 | 6 | 03-model-compression-pruning, Weight Quantization / Compression | [source](https://arxiv.org/abs/2405.02267) |
 | 358 | 1 | 4 | 6 | DOI:10.63317/55jabgg3m92d | On the Way to Lossless Compression of Language Transformers: Exploring Cross-Domain Properties of Quantization | 2024-05-01 | International Conference on Language Resources and Evaluation | 1 | 6 | post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.63317/55jabgg3m92d) |
 | 359 | 114 | 4 | 6 | arXiv:2405.18137 | Exploiting LLM Quantization | 2024-05-28 | Neural Information Processing Systems | 104 | 6 | KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2405.18137) |

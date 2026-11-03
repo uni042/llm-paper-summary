@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-03T13:49:20+00:00`
+Generated: `2026-11-03T14:12:30+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126432** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120286** / 監査再投入 **0** / 機械規則適用後 **122907** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126441** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120295** / 監査再投入 **0** / 機械規則適用後 **122916** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -155,7 +155,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 72 | 2 | 6 | 9 | SemanticScholar:e545797fd29206a6b77f26fa89f17401f5f365b5 | ZipAct: Zipping Interaction History into a Compact State for Efficient LLM Agents | 2026 | Trans. Mach. Learn. Res. | 2 | 9 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://www.semanticscholar.org/paper/e545797fd29206a6b77f26fa89f17401f5f365b5) |
 | 73 | 102 | 6 | 9 | arXiv:2608.11152 | Scheduling Mixed RL Rollouts Beyond Prefix Locality | 2026-08-11 |  | 2 | 9 | 11-llm-serving-scheduling-disaggregation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.11152) |
 | 74 | 0 | 6 | 9 | SemanticScholar:c4a54a26100d339d10c59db6b8cc56ac481534c8 | V ESTIGE KV: T HE N O PE-MLA KV C ACHE C ARRIES I TS O WN E VICTION S IGNAL IN A V ESTIGIAL B RANCH |  |  | 0 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://www.semanticscholar.org/paper/c4a54a26100d339d10c59db6b8cc56ac481534c8) |
-| 75 | 20 | 6 | 8 | arXiv:2604.15732 | Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving | 2026-04-17 | EuroMLSys@EuroSys | 0 | 8 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, Long-context serving / KV cache benchmark, inference-systems | [source](https://arxiv.org/abs/2604.15732) |
+| 75 | 20 | 6 | 8 | arXiv:2604.15732 | Accuracy Is Speed: Towards Long-Context-Aware Routing for Distributed LLM Serving | 2026-04-17 | EuroMLSys@EuroSys | 0 | 9 | 11-llm-serving-scheduling-disaggregation, LLM Serving / Scheduling / Disaggregation, Long-context serving / KV cache benchmark, inference-systems | [source](https://arxiv.org/abs/2604.15732) |
 | 76 | 15 | 6 | 8 | arXiv:2406.17404 | Make Some Noise: Unlocking Language Model Parallel Inference Capability through Noisy Training | 2024-06-25 | Conference on Empirical Methods in Natural Language Processing | 5 | 8 | Speculative Decoding, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2406.17404) |
 | 77 | 2 | 6 | 8 | DOI:10.1145/3735452.3735523 | SPARQ: An Accelerator Architecture for Large Language Models with Joint Sparsity and Quantization Techniques | 2025-06-13 | ACM SIGPLAN Conference on Languages, Compilers, and Tools for Embedded Systems | 2 | 8 | 16-weight-quantization-compression, Weight Quantization / Compression, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1145/3735452.3735523) |
 | 78 | 10 | 6 | 8 | arXiv:2609.34977 | SPIDER: Multi-Layer Semantic Token Pruning and Adaptive Sub-Layer Skipping in Multimodal Large Language Models. | 2026-09-17 | IEEE Transactions on Pattern Analysis and Machine Intelligence | 0 | 8 | Conditional Computation | [source](https://arxiv.org/abs/2609.34977) |
@@ -215,7 +215,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 132 | 0 | 5 | 10 | arXiv:2511.00295 | H-FA: A Hybrid Floating-Point and Logarithmic Approach to Hardware Accelerated FlashAttention | 2025-10-31 | IEEE Transactions on Circuits and Systems for Artificial Intelligence | 0 | 10 | flashattention-asic-fused-exponential-vector-multiplication, sparse attention / long-context Transformer, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2511.00295) |
 | 133 | 104 | 5 | 10 | arXiv:2608.03812 | OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models | 2026-08-04 |  | 4 | 10 |  | [source](https://arxiv.org/abs/2608.03812) |
 | 134 | 10 | 5 | 10 | arXiv:2609.26177 | Magnitude Profile Pruning: Calibration-Free Structured Attention Head Removal for Transformer Compression | 2026-08-11 |  | 0 | 10 | Inference / Structured Model Compression and Pruning, Weight Quantization / Compression, inference-systems | [source](https://arxiv.org/abs/2609.26177) |
-| 135 | 114 | 5 | 10 | arXiv:2512.14256 | TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips | 2025-12-16 | International Symposium on High-Performance Computer Architecture | 4 | 10 | Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers, serving-scheduling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.14256) |
+| 135 | 114 | 5 | 10 | arXiv:2512.14256 | TEMP: A Memory Efficient Physical-Aware Tensor Partition-Mapping Framework on Wafer-Scale Chips | 2025-12-16 | International Symposium on High-Performance Computer Architecture | 4 | 11 | Ring Attention / sequence parallelism / exact distributed attention, distributed attention / sequence parallelism / blockwise attention / long-context transformers, serving-scheduling, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2512.14256) |
 | 136 | 10 | 5 | 10 | DOI:10.48550/arXiv.2603.09221 | Beyond Test-Time Training: Learning to Reason via Hardware-Efficient Optimal Control | 2026-03-10 | arXiv.org | 0 | 10 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://doi.org/10.48550/arXiv.2603.09221) |
 | 137 | 10 | 5 | 10 | arXiv:2609.36954 | Purlin: Separating Orchestration from the Datapath of Collectives | 2026-09-29 |  | 0 | 11 | LLM Serving / Scheduling / Disaggregation, kernel-runtime-compilation | [source](https://arxiv.org/abs/2609.36954) |
 | 138 | 114 | 5 | 9 | arXiv:2605.04075 | RetentiveKV: State-Space Memory for Uncertainty-Aware Multimodal KV Cache Eviction | 2026-04-14 | Annual Meeting of the Association for Computational Linguistics | 4 | 9 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2605.04075) |
