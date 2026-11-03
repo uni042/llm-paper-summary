@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-03T20:38:41+00:00`
+Generated: `2026-11-03T21:24:45+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -334,7 +334,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 251 | 10 | 4 | 10 | DOI:10.1109/ASAP65064.2025.00031 | ELLIE: Energy-Efficient LLM Inference at the Edge Via Prefill-Decode Splitting | 2025-07-28 | IEEE International Conference on Application-Specific Systems, Architectures, and Processors | 10 | 10 | 07-kv-cache-optimization-compression, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, on-device LLM / heterogeneous inference / NPU offloading, survey-edge-llm | [source](https://doi.org/10.1109/ASAP65064.2025.00031) |
 | 252 | 0 | 4 | 10 | arXiv:2509.00935 | SCOUT: Toward Sub-Quadratic Attention via Segment Compression for Optimized Utility in Transformers | 2025-08-31 | arXiv.org | 0 | 10 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 選択的状態空間モデル・Mamba長文脈推論・動的トークン間引き | [source](https://arxiv.org/abs/2509.00935) |
 | 253 | 7 | 4 | 10 | arXiv:2502.02790 | Leveraging the true depth of LLMs | 2025-02-05 | Trans. Mach. Learn. Res. | 7 | 10 | Sparse Attention, Speculative Decoding | [source](https://arxiv.org/abs/2502.02790) |
-| 254 | 101 | 4 | 10 | arXiv:2608.13057 | TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes | 2026-08-13 |  | 1 | 10 | Adaptive Expert Computation / Compression, その他システム研究, オフロード／階層メモリ, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2608.13057) |
+| 254 | 101 | 4 | 10 | arXiv:2608.13057 | TEMPO: Makespan-Aware Expert-Parallel Load Balancing Across Memory- and Compute-Bound Regimes | 2026-08-13 | arXiv.org | 1 | 10 | Adaptive Expert Computation / Compression, その他システム研究, オフロード／階層メモリ, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2608.13057) |
 | 255 | 10 | 4 | 10 | arXiv:2609.29875 | When Can Agents Forget Their Reasoning? ICLR for Long-Horizon Agent Context Compression | 2026-09-24 |  | 0 | 10 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems | [source](https://arxiv.org/abs/2609.29875) |
 | 256 | 10 | 4 | 10 | arXiv:2607.19368 | Spectral-LSH: Sub-Quadratic Prompt Compression via Krylov-Projected Locality-Sensitive Hashing | 2026-06-12 | arXiv.org | 0 | 10 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2607.19368) |
 | 257 | 32 | 4 | 10 | SemanticScholar:c49c292e1fb1d215c88828a52134b7ccfa52be44 | Sparse Attention with Learning to Hash | 2022 | International Conference on Learning Representations | 22 | 10 | inference-systems, sparse attention / long-context Transformer | [source](https://www.semanticscholar.org/paper/c49c292e1fb1d215c88828a52134b7ccfa52be44) |
