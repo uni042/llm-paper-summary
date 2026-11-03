@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-03T09:34:10+00:00`
+Generated: `2026-11-03T10:31:13+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -434,7 +434,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 350 | 101 | 4 | 6 | arXiv:2609.18916 | Higher-order pruning of experts in mixture-of-experts language models | 2026-09-16 |  | 1 | 6 | MoE expert pruning / expert importance estimation / iterative pruning / post-pruning correction, inference-systems, moe-training-scaling-law-and-router-dynamics | [source](https://arxiv.org/abs/2609.18916) |
 | 351 | 0 | 4 | 6 | DOI:10.1109/TENCON66050.2025.11375380 | Efficient Task Scheduling Algorithms for Decentralized Large Language Model Serving | 2025-10-27 | IEEE Region 10 Conference | 0 | 6 | LLM Serving / Scheduling / Disaggregation, survey-edge-llm | [source](https://doi.org/10.1109/TENCON66050.2025.11375380) |
 | 352 | 1 | 4 | 6 | DOI:10.1109/ICEECT61758.2024.10739061 | Scaling Up the Transformers: A Survey of Training and Inference Optimization Techniques | 2024-08-29 | 2024 International Conference on Electrical Electronics and Computing Technologies (ICEECT) | 1 | 6 | Transformer inference runtime and variable-length request batching, sparse attention / long-context Transformer | [source](https://doi.org/10.1109/ICEECT61758.2024.10739061) |
-| 353 | 103 | 4 | 6 | arXiv:2601.07212 | MI-PRUN: Optimize Large Language Model Pruning via Mutual Information | 2026-01-12 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 3 | 6 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2601.07212) |
+| 353 | 103 | 4 | 6 | DOI:10.1109/JIOT.2026.3654102 | Adaptive Pruning for Large Language Models With Structural Importance Awareness | 2026-04-01 | IEEE Internet of Things Journal | 3 | 6 | Structured Pruning / Architecture Search | [source](https://doi.org/10.1109/JIOT.2026.3654102) |
 | 354 | 102 | 4 | 6 | arXiv:2602.10953 | Search or Accelerate: Confidence-Switched Position Beam Search for Diffusion Language Models | 2026-02-11 | arXiv.org | 2 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2602.10953) |
 | 355 | 101 | 4 | 6 | arXiv:2608.03112 | Adaptive Two-Stage Visual Token Pruning for Efficient Inference in Video-Language Models | 2026-08-04 |  | 1 | 6 | 07-kv-cache-optimization-compression | [source](https://arxiv.org/abs/2608.03112) |
 | 356 | 10 | 4 | 6 | DOI:10.1109/LANMAN69841.2026.11623563 | Improving the Performance of LLM Inference: Understanding the Role of CUDA Graphs | 2026-06-01 | IEEE Workshop on Local and Metropolitan Area Networks | 0 | 6 | LLM Serving / Scheduling / Disaggregation, マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://doi.org/10.1109/LANMAN69841.2026.11623563) |
