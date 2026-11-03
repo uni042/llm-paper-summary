@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-02T08:58:51+00:00",
-  "record_count": 5595,
+  "updated_at": "2026-11-03T12:00:07+00:00",
+  "record_count": 5597,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86380,6 +86380,36 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Multi-Draft On-Policy Distillation for Diffusion Drafters"
+    },
+    "arXiv:2610.41375": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.41375",
+      "identity_tokens": [
+        "arXiv:2610.41375"
+      ],
+      "reason": "260 open-weight LLMの回答文・正誤・質問からmodel embeddingを構築し、400問（全24,118問の1.3%の推論計算量）でfull-pool性能の91%以上を維持するmodel profiling法。大量のbenchmark inference costを削減するが、実際のLLM request servingやKV/カーネルの高速化ではなくmodel選定前の評価効率が主題のためborderline。",
+      "first_checked_at": "2026-11-03T12:00:07+00:00",
+      "last_checked_at": "2026-11-03T12:00:07+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "From the Zoo to the BULLPEN: Sample-Efficient LLM Profiling via Multi-Channel Model Embeddings"
+    },
+    "arXiv:2610.40831": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2610.40831",
+      "identity_tokens": [
+        "arXiv:2610.40831"
+      ],
+      "reason": "異種AIモデルの推論を仕入れ・再販するmarketplaceで、費用と性能に応じたモデル割当を最適化する問題のNP困難性と、逓減収益条件下の効率的解法・少数probeでの性能推定を示す。推論費用に関係するが、LLMサービングの実装・latency・throughput・memoryの最適化ではなく経済的allocationが主題のためborderline。",
+      "first_checked_at": "2026-11-03T12:00:07+00:00",
+      "last_checked_at": "2026-11-03T12:00:07+00:00",
+      "linked_from": [
+        "https://arxiv.org/list/cs.AI/new"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Circumventing the Computational Hardness of Computational Arbitrage"
     }
   }
 }

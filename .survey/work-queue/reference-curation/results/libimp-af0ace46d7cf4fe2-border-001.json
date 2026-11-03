@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-af0ace46d7cf4fe2-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2610.41375",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2610.41375",
+    "identity_tokens": [
+      "arXiv:2610.41375"
+    ],
+    "reason": "260 open-weight LLMの回答文・正誤・質問からmodel embeddingを構築し、400問（全24,118問の1.3%の推論計算量）でfull-pool性能の91%以上を維持するmodel profiling法。大量のbenchmark inference costを削減するが、実際のLLM request servingやKV/カーネルの高速化ではなくmodel選定前の評価効率が主題のためborderline。",
+    "first_checked_at": "2026-11-03T12:00:07+00:00",
+    "last_checked_at": "2026-11-03T12:00:07+00:00",
+    "linked_from": [
+      "https://arxiv.org/list/cs.AI/new"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "From the Zoo to the BULLPEN: Sample-Efficient LLM Profiling via Multi-Channel Model Embeddings"
+  },
+  "processed_at": "2026-11-03T12:00:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-af0ace46d7cf",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
