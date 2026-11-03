@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-03T04:16:24+00:00`
+Generated: `2026-11-03T05:18:56+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -19,7 +19,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 |---:|---:|---|---|---|---|---|
 | 1 | 111 | research | DOI:10.1109/HPCA68181.2026.11408518 | FACE: Fully Overlapped PD Scheduling and Multi-Level Architecture Co-Exploration on Wafer | [primary](https://doi.org/10.1109/HPCA68181.2026.11408518) | `papers/inference/99-other-inference-systems/2026-f1463c925128-face-fully-overlapped-pd-scheduling-and-multi-level-architecture-co-exploration-on-wafer.md` |
 | 2 | 109 | research | DOI:10.1145/3771563 | Benchmarking and Characterization of Large Language Model Inference on Apple Silicon | [primary](https://doi.org/10.1145/3771563) | `papers/inference/99-other-inference-systems/2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.md` |
-| 3 | 103 | research | DOI:10.1145/3779212.3790246 | SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference | [primary](https://doi.org/10.1145/3779212.3790246) | `papers/inference/99-other-inference-systems/2026-92272744585e-swiftspec-disaggregated-speculative-decoding-and-fused-kernels-for-low-latency-llm-inference.md` |
+| 3 | 103 | research | DOI:10.1016/j.neunet.2026.108900 | Towards efficient language giants: A comprehensive survey on structural optimizations and compression techniques for large language models | [primary](https://doi.org/10.1016/j.neunet.2026.108900) | `papers/inference/99-other-inference-systems/2026-8e83bad2bef0-towards-efficient-language-giants-a-comprehensive-survey-on-structural-optimizations-and-compression-techniques-for-larg.md` |
 | 4 | 101 | research | DOI:10.1016/j.future.2026.108646 | HALO: A heterogeneous accelerator for low-latency and energy-efficient edge LLM inference | [primary](https://doi.org/10.1016/j.future.2026.108646) | `papers/inference/99-other-inference-systems/2026-e7b88cc3b7f9-halo-a-heterogeneous-accelerator-for-low-latency-and-energy-efficient-edge-llm-inference.md` |
 | 5 | 101 | research | arXiv:2603.19296 | TTQ: Activation-Aware Test-Time Quantization to Accelerate LLM Inference On The Fly | [primary](https://arxiv.org/abs/2603.19296) | `papers/inference/99-other-inference-systems/2026-2603.19296-ttq-activation-aware-test-time-quantization-to-accelerate-llm-inference-on-the-fly.md` |
 | 6 | 74 | audit | arXiv:2503.03777 | FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference | [primary](https://arxiv.org/abs/2503.03777) | `papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md` |

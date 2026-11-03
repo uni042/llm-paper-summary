@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-03T04:16:24+00:00`
+Generated: `2026-11-03T05:18:56+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -18,8 +18,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
 | 1 | 110 | research | DOI:10.1109/SP63933.2026.00048 | Euston: Efficient and User-Friendly Secure Transformer Inference with Non-Interactivity | [primary](https://doi.org/10.1109/SP63933.2026.00048) | `papers/inference/99-other-inference-systems/2026-4c2aa25dfaba-euston-efficient-and-user-friendly-secure-transformer-inference-with-non-interactivity.md` |
-| 2 | 106 | research | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | [primary](https://doi.org/10.1109/TMC.2025.3628498) | `papers/inference/99-other-inference-systems/2026-bc7a7d9ac7fa-h2o-heterogeneity-aware-hierarchical-orchestration-for-memory-efficient-on-device-llm-inference.md` |
-| 3 | 103 | research | DOI:10.1016/j.neunet.2026.108900 | Towards efficient language giants: A comprehensive survey on structural optimizations and compression techniques for large language models | [primary](https://doi.org/10.1016/j.neunet.2026.108900) | `papers/inference/99-other-inference-systems/2026-8e83bad2bef0-towards-efficient-language-giants-a-comprehensive-survey-on-structural-optimizations-and-compression-techniques-for-larg.md` |
+| 2 | 104 | research | DOI:10.1109/TON.2025.3645806 | Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling | [primary](https://doi.org/10.1109/TON.2025.3645806) | `papers/inference/99-other-inference-systems/0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.md` |
+| 3 | 102 | research | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | [primary](https://doi.org/10.1109/TMC.2025.3628498) | `papers/inference/99-other-inference-systems/2026-bc7a7d9ac7fa-h2o-heterogeneity-aware-hierarchical-orchestration-for-memory-efficient-on-device-llm-inference.md` |
 | 4 | 101 | research | DOI:10.1007/s11831-026-10598-4 | Building Expert Small Models: A Comprehensive Survey of Model Compression, Knowledge Distillation, and Augmented Inference | [primary](https://doi.org/10.1007/s11831-026-10598-4) | `papers/inference/99-other-inference-systems/2026-328ede95d0dd-building-expert-small-models-a-comprehensive-survey-of-model-compression-knowledge-distillation-and-augmented-inference.md` |
 | 5 | 101 | research | DOI:10.1145/3774934.3786428 | JanusQuant: Accurate and Efficient 2-bit KV Cache Quantization for Long-Context Inference | [primary](https://doi.org/10.1145/3774934.3786428) | `papers/inference/99-other-inference-systems/2026-4a165b0e4585-janusquant-accurate-and-efficient-2-bit-kv-cache-quantization-for-long-context-inference.md` |
 | 6 | 72 | audit | arXiv:2504.03775 | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | [primary](https://arxiv.org/abs/2504.03775) | `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md` |
