@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-03T21:24:45+00:00`
+Generated: `2026-11-03T21:52:13+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -19,7 +19,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 |---:|---:|---|---|---|---|---|
 | 1 | 110 | research | DOI:10.1109/SP63933.2026.00048 | Euston: Efficient and User-Friendly Secure Transformer Inference with Non-Interactivity | [primary](https://doi.org/10.1109/SP63933.2026.00048) | `papers/inference/99-other-inference-systems/2026-4c2aa25dfaba-euston-efficient-and-user-friendly-secure-transformer-inference-with-non-interactivity.md` |
 | 2 | 104 | research | DOI:10.1109/TON.2025.3645806 | Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling | [primary](https://doi.org/10.1109/TON.2025.3645806) | `papers/inference/99-other-inference-systems/0000-669983a19a92-optimizing-mixture-of-experts-inference-time-via-model-deployment-and-communication-scheduling.md` |
-| 3 | 102 | research | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | [primary](https://doi.org/10.1109/TMC.2025.3628498) | `papers/inference/99-other-inference-systems/2026-bc7a7d9ac7fa-h2o-heterogeneity-aware-hierarchical-orchestration-for-memory-efficient-on-device-llm-inference.md` |
+| 3 | 102 | research | DOI:10.1016/j.future.2026.108646 | HALO: A heterogeneous accelerator for low-latency and energy-efficient edge LLM inference | [primary](https://doi.org/10.1016/j.future.2026.108646) | `papers/inference/99-other-inference-systems/2026-e7b88cc3b7f9-halo-a-heterogeneous-accelerator-for-low-latency-and-energy-efficient-edge-llm-inference.md` |
 | 4 | 101 | research | DOI:10.1007/s11831-026-10598-4 | Building Expert Small Models: A Comprehensive Survey of Model Compression, Knowledge Distillation, and Augmented Inference | [primary](https://doi.org/10.1007/s11831-026-10598-4) | `papers/inference/99-other-inference-systems/2026-328ede95d0dd-building-expert-small-models-a-comprehensive-survey-of-model-compression-knowledge-distillation-and-augmented-inference.md` |
 | 5 | 101 | research | DOI:10.1109/ISSCC49663.2026.11408953 | A 28nm Speculative-Decoding LLM Processor Achieving 105-to-685µs/Token Latency for Billion-Parameter Models | [primary](https://doi.org/10.1109/ISSCC49663.2026.11408953) | `papers/inference/99-other-inference-systems/2026-fa8532638842-a-28nm-speculative-decoding-llm-processor-achieving-105-to-685s-token-latency-for-billion-parameter-models.md` |
 | 6 | 74 | audit | arXiv:2503.03777 | FlexInfer: Breaking Memory Constraint via Flexible and Efficient Offloading for On-Device LLM Inference | [primary](https://arxiv.org/abs/2503.03777) | `papers/inference/01-offload-hierarchical-memory/2025-2503.03777-flexinfer-flexible-efficient-on-device-offloading.md` |

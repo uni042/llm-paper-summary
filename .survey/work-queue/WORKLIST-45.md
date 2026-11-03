@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-03T21:24:45+00:00`
+Generated: `2026-11-03T21:52:13+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -19,7 +19,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 |---:|---:|---|---|---|---|---|
 | 1 | 109 | research | DOI:10.1016/j.adhoc.2025.104080 | Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference | [primary](https://doi.org/10.1016/j.adhoc.2025.104080) | `papers/inference/99-other-inference-systems/2026-611c010063f8-collaborative-deployment-of-large-ai-models-on-the-edge-a-microservice-approach-to-heterogeneous-training-and-quantized.md` |
 | 2 | 103 | research | DOI:10.1145/3779212.3790246 | SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference | [primary](https://doi.org/10.1145/3779212.3790246) | `papers/inference/99-other-inference-systems/2026-92272744585e-swiftspec-disaggregated-speculative-decoding-and-fused-kernels-for-low-latency-llm-inference.md` |
-| 3 | 102 | research | DOI:10.1109/TSIPN.2026.3654839 | Graph Neural Networks Improve Quantized Transformers by Incorporating Global Relationships | [primary](https://doi.org/10.1109/TSIPN.2026.3654839) | `papers/inference/99-other-inference-systems/0000-fb5850200763-graph-neural-networks-improve-quantized-transformers-by-incorporating-global-relationships.md` |
+| 3 | 102 | research | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | [primary](https://doi.org/10.1109/TMC.2025.3628498) | `papers/inference/99-other-inference-systems/2026-bc7a7d9ac7fa-h2o-heterogeneity-aware-hierarchical-orchestration-for-memory-efficient-on-device-llm-inference.md` |
 | 4 | 101 | research | DOI:10.1145/3788550.3794877 | ASTL: An Adaptive Serving Stack for LLMs to Balance Utilization and Tail Latency | [primary](https://doi.org/10.1145/3788550.3794877) | `papers/inference/99-other-inference-systems/2026-4acabaa0051a-astl-an-adaptive-serving-stack-for-llms-to-balance-utilization-and-tail-latency.md` |
 | 5 | 101 | research | DOI:10.1145/3774934.3786428 | JanusQuant: Accurate and Efficient 2-bit KV Cache Quantization for Long-Context Inference | [primary](https://doi.org/10.1145/3774934.3786428) | `papers/inference/99-other-inference-systems/2026-4a165b0e4585-janusquant-accurate-and-efficient-2-bit-kv-cache-quantization-for-long-context-inference.md` |
 | 6 | 72 | audit | arXiv:2504.03775 | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | [primary](https://arxiv.org/abs/2504.03775) | `papers/inference/11-llm-serving-scheduling-disaggregation/2025-2504.03775-flowkv-low-latency-transfer-load-aware.md` |
