@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Dynamical Memory Transformer: Selective Recurrent Memories with Constant Cost Attention",
+      "source_url": "https://arxiv.org/abs/2610.41850",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformers retain an explicit history of the sequence, allowing attention to directly retrieve past representations. However, the size of the KV-Cache and the cost of a new token increase with the context length. State Space Models compress the past into a fixed-size recurrent state, at the cost of reduced addressability. We present the Dynamical Memory Transformer (DMT), a hybrid architecture that separates sequence encoding from information reading. The encoder uses several memory units, each implemented by a dynamical system with a complex diagonal recurrent matrix. An input-dependent leak rate controls their updates. The decoder then uses attention to read and combine their outputs, without going through the token history. The formulation of the recurrence allows an associative scan with O(T ) total work and O(log T ) parallel depth, with fixed dimensions. During autoregressive inference, the recurrent states and the convolution cache remain fixed in size. We compare DMT with Mamba and Transformer on cognitive and language modeling tasks, and show its strengths and limitations: DMT achieves the best results on several cognitive tasks and language modeling performance close to that of Transformer, but remains behind Mamba in language modeling. On selective copy, DMT also shows stronger length extrapolation than Mamba and Transformer. These results demonstrate that parallel dynamical memory units are a promising mechanism for retaining and using information over sequences.",
+      "identifiers": [
+        "SemanticScholar:208a655b5ca4d42915b53feba2f01c8daee6f2ee"
+      ],
+      "semantic_scholar_id": "208a655b5ca4d42915b53feba2f01c8daee6f2ee",
+      "canonical_id": "arXiv:2610.41850",
+      "arxiv_id": "2610.41850",
+      "authors": [
+        "Y. Bendi-Ouis",
+        "X. Hinaut"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数の複素対角recurrent memory unitで系列を符号化し、decoderはtoken履歴のKVではなく固定個数のmemory出力へattentionするDMT。入力依存leak rateとassociative scanにより総work O(T)、並列深さO(log T)、autoregressive生成中のrecurrent stateとconvolution cacheが定数サイズ。Transformerに近い言語モデル性能を示すがMambaには劣る条件も報告。長文推論時のメモリ定数化へ直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "ACCT: Asymmetric Cross-LLM Context Transfer",
+      "source_url": "https://arxiv.org/abs/2610.42116",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "In real-world deployments, large language model (LLM) systems are increasingly evolving from single-model invocation toward heterogeneous deployments in which different models are dynamically invoked for inference. When the same context is reused across models, however, each newly selected target model typically has to process it again, repeatedly incurring substantial computational costs. Therefore, we propose ACCT (Asymmetric Cross-LLM Context Transfer), which targets KV cache transfer between models of different scales within the same model family. ACCT transforms the KV cache produced by a source model into sparse KV states that can be directly consumed by a target model, thereby enabling cross-model reuse of context computation and decoupling context computation from downstream inference. ACCT consists of three lightweight components: the Cartographer identifies query-relevant context tokens for each target layer and KV head; the Allocator determines how many context tokens each target layer and KV head retains under a shared total KV budget; and the Compiler transforms selected source KV into sparse target KV. The target model can therefore perform inference using the transferred KV without reprocessing the original context. We evaluate ACCT in two complementary settings comprising five general-capability benchmarks and six highly context-dependent tasks. Experiments show that ACCT matches or exceeds the target model's original inference performance even when reducing the KV cache size by 75%. At a context length of approximately 19K tokens, ACCT's KV conversion achieves a 6.5-21.2 times speedup over target context prefill. These results demonstrate the feasibility of transferring context computation across models under a limited KV budget.",
+      "identifiers": [
+        "SemanticScholar:05fcd53fe3a6231c1e921872db510e9bde74b757"
+      ],
+      "semantic_scholar_id": "05fcd53fe3a6231c1e921872db510e9bde74b757",
+      "canonical_id": "arXiv:2610.42116",
+      "arxiv_id": "2610.42116",
+      "authors": [
+        "Yu-Zhe Liu",
+        "Hao-Lin Tian",
+        "Tonghan Wang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "同系列で規模が異なるsource/target LLM間のKVを再利用するため、Cartographerがquery関連tokenを選び、Allocatorがlayer/head別予算を配分し、Compilerがsparse target KVへ変換する。target側の元文脈prefillを省き、KVを75%削減しても元の推論品質を維持・改善する条件を示す。約19K contextで変換処理がtarget prefillより6.5〜21.2倍高速。推論時cross-model cache再利用の直接貢献。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    },
+    {
+      "title": "Latent Sparse Attention: Towards Subquadratic Ultra-Long Context Attention",
+      "source_url": "https://arxiv.org/abs/2610.42147",
+      "year": 2026,
+      "published": "2026-10-30",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Agentic workflows are increasingly shifting towards long-horizon tasks, such as open-ended scientific work, where models benefit from long context windows. However, at ultra-long context (above 1M tokens), full attention is prohibitively expensive. A promising approach is sparse attention, in which a dedicated indexer selects a subset of keys for the attention. Yet current methods of indexing either still have quadratic cost in context size or lose accuracy at ultra-long context scale. We address this with Latent Sparse Attention (LSA), an efficient attention method that maintains accuracy at ultra-long context. In LSA, keys are hierarchically clustered in a learned latent space, and queries score the hierarchy of clusters instead of scoring every key, making prefill, decode and training faster at long context. We propose two variants, Distilled-LSA (D-LSA), which can be applied to pre-trained models via distillation, and Native-LSA (N-LSA), which is trained natively on the next-token loss alone. On GLM-5.3-FLASH (QWEN-3.8-27B) at 10M tokens, D-LSA speeds up one attention layer by 22.7x (72.4x) in prefill and 4.6x (42.5x) in decode over its original sparse attention (full attention), while keeping similar accuracy across a variety of tasks. N-LSA matches the accuracy of full attention with a training speedup of 1.6x per layer at 128k tokens. LSA offers practical and efficient attention for models to benefit from ultra-long context.",
+      "identifiers": [
+        "SemanticScholar:2fe5fb0b1071a1441b18decf5969f16732c63751"
+      ],
+      "semantic_scholar_id": "2fe5fb0b1071a1441b18decf5969f16732c63751",
+      "canonical_id": "arXiv:2610.42147",
+      "arxiv_id": "2610.42147",
+      "authors": [
+        "Aleš Kubíček",
+        "Andrea Caciolai",
+        "Liang-Zu Peng",
+        "Sukrit Sumant",
+        "Benjamin Hoover",
+        "Fraser Greenlee",
+        "R. Battleday",
+        "Radim Urban",
+        "T. Hoefler",
+        "James C. R. Whittington"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 4,
+        "matched_prestigious_venue": null
+      },
+      "reason": "Latent Sparse Attentionはkeyを学習潜在空間で階層cluster化し、queryが全keyではなくcluster階層を探索する。D-LSAは既存モデルへの蒸留適用、N-LSAはnative学習。GLM-5.3-FLASH（Qwen3.8-27B）10M tokenでattention単一layerのprefillが元sparse比22.7倍、decodeが4.6倍高速と報告（full attention比は72.4/42.5倍）。end-to-end推論全体の倍率ではない。超長文推論attentionの直接改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null,
+      "origin": "supplemental_primary_arxiv_after_worklist_reuse_screen"
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-af0ace46d7cf",
+    "round": "libimp-af0ace46d7cf4fe2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-af0ace46d7cf4fe2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-af0ace46d7cf4fe2-pre01.json",
+    "receipt": "sha256:45671320cfaa056c60a128ee290fe146dfd37989b1f2e1ad3263b213de4c3a06"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-af0ace46d7cf",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
