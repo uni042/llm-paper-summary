@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-03T10:31:13+00:00`
+Generated: `2026-11-03T11:38:14+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -469,7 +469,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 385 | 102 | 4 | 6 | arXiv:2606.17999 | VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination | 2026-06-16 | arXiv.org | 2 | 6 | inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・特徴キャッシュ・KVキャッシュ・並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2606.17999) |
 | 386 | 1 | 4 | 6 | DOI:10.1016/j.sysarc.2025.103548 | A new fixed-point simulation methodology for on-device AI based on large language models | 2025-11-01 | Journal of systems architecture | 1 | 6 | CPUオフロード / 活性化疎性 / 階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.sysarc.2025.103548) |
 | 387 | 47 | 4 | 6 | arXiv:2509.02785 | DrDiff: Dynamic Routing Diffusion with Hierarchical Attention for Breaking the Efficiency-Quality Trade-off | 2025-09-02 | Conference on Empirical Methods in Natural Language Processing | 37 | 6 | sparse attention / long-context Transformer, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2509.02785) |
-| 388 | 3 | 4 | 6 | DOI:10.1007/978-3-031-35995-8_39 | A Contrastive Self-distillation BERT with Kernel Alignment-Based Inference | 2023-01-01 | International Conference on Conceptual Structures | 3 | 6 |  | [source](https://doi.org/10.1007/978-3-031-35995-8_39) |
+| 388 | 3 | 4 | 6 | DOI:10.1007/978-3-031-35995-8_39 | A Contrastive Self-distillation BERT with Kernel Alignment-Based Inference | 2023 | International Conference on Conceptual Structures | 3 | 6 |  | [source](https://doi.org/10.1007/978-3-031-35995-8_39) |
 | 389 | 111 | 4 | 6 | arXiv:2606.30553 | COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices | 2026-06-01 | International Symposium on Computer Architecture | 1 | 6 | cpu-offload, inference-systems | [source](https://arxiv.org/abs/2606.30553) |
 | 390 | 106 | 4 | 6 | arXiv:2604.04930 | Early Stopping for Large Reasoning Models via Confidence Dynamics | 2026-04-06 | arXiv.org | 6 | 6 | Conditional Computation | [source](https://arxiv.org/abs/2604.04930) |
 | 391 | 101 | 4 | 6 | arXiv:2603.02226 | Efficient Sparse Selective-Update RNNs for Long-Range Sequence Modeling | 2026-02-11 | arXiv.org | 1 | 6 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2603.02226) |
@@ -555,7 +555,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 471 | 14 | 4 | 4 | DOI:10.18653/v1/2024.findings-emnlp.1001 | ATQ: Activation Transformation forWeight-Activation Quantization of Large Language Models | 2024 | Conference on Empirical Methods in Natural Language Processing | 4 | 4 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.18653/v1/2024.findings-emnlp.1001) |
 | 472 | 0 | 4 | 4 | DOI:10.1007/s42514-025-00240-3 | Hiperti: high performance system for cross-platform code generation of transformer model inference based on MLIR | 2025-11-19 | CCF Transactions on High Performance Computing | 0 | 4 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1007/s42514-025-00240-3) |
 | 473 | 5 | 4 | 4 | DOI:10.1145/3689031.3696087 | SpaceFusion: Advanced Deep Learning Operator Fusion via Space-Mapping Graph | 2025-03-30 | European Conference on Computer Systems | 5 | 4 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1145/3689031.3696087) |
-| 474 | 102 | 4 | 4 | DOI:10.1016/j.jbi.2026.104988 | PEER: Towards reliable and efficient inference via Patience-Based Early Exiting with Rejection | 2026-01-20 | Journal of Biomedical Informatics | 2 | 4 |  | [source](https://doi.org/10.1016/j.jbi.2026.104988) |
+| 474 | 101 | 4 | 4 | DOI:10.1016/j.jbi.2026.104988 | PEER: Towards reliable and efficient inference via Patience-Based Early Exiting with Rejection | 2026-01-20 | Journal of Biomedical Informatics | 1 | 4 |  | [source](https://doi.org/10.1016/j.jbi.2026.104988) |
 | 475 | 12 | 4 | 4 | DOI:10.48550/arXiv.2409.14307 | DilateQuant: Accurate and Efficient Diffusion Quantization via Weight Dilation | 2024-09-21 | arXiv.org | 12 | 4 | 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.48550/arXiv.2409.14307) |
 | 476 | 10 | 4 | 4 | arXiv:2609.09721 | EFQ-Softmax: Exp-Free Quantization for Softmax | 2026-09-09 |  | 0 | 4 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.09721) |
 | 477 | 4 | 4 | 4 | DOI:10.1109/ACCESS.2025.3609798 | QuantEdge: A Hybrid Quantization Approach for Optimized AI Deployment Across Edge Devices | 2025-01-01 | IEEE Access | 4 | 4 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://doi.org/10.1109/ACCESS.2025.3609798) |
