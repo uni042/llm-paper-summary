@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-03 11:10:02 JST**
+> 自動生成: **2026-11-03 11:32:28 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -101,14 +101,14 @@
 | provider巡回可能 | **3818** |
 | provider巡回不能 | **7** |
 | 1周以上完了 | **3799** |
-| 巡回中 | **48** |
+| 巡回中 | **51** |
 | 未巡回 | **0** |
-| 今回run開始時due | **136** |
+| 今回run開始時due | **157** |
 | 前方引用から保持中の未処理候補 | **68508** |
-| エラー状態保持seed | **48** |
+| エラー状態保持seed | **51** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-03 09:56:47 JST**
+- state最終更新: **11-03 11:07:06 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-03 10:20:22 JST（49分前）** |
+| 最終maintenance完了 | **11-03 10:20:22 JST（1時間12分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,8 +137,8 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **7** |
-| 直近6hのDiscovery本文確認・分類 | **36** |
+| 直近6hのDiscovery run | **5** |
+| 直近6hのDiscovery本文確認・分類 | **23** |
 | 最終Research完了 | **10-31 01:48:57 JST** |
 | 最終Discovery完了 | **11-03 08:04:00 JST** |
 
