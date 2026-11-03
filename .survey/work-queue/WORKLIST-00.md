@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-03T08:25:21+00:00`
+Generated: `2026-11-03T08:41:51+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -77,8 +77,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126425** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120280** / 監査再投入 **0** / 機械規則適用後 **122900** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126426** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120280** / 監査再投入 **0** / 機械規則適用後 **122901** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -141,7 +141,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 57 | 10 | 6 | 13 | arXiv:2606.10944 | Express Language Modeling | 2026-06-09 | arXiv.org | 0 | 13 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, inference-systems, kv-cache-optimization-compression, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.10944) |
 | 58 | 101 | 6 | 12 | arXiv:2608.02947 | ATFlash: Per-RoPE-Wavelength Attention Windows for Compute/Memory-Efficient LLM Inference | 2026-08-03 |  | 1 | 12 | 02-hardware-accelerators, KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, long-context inference / dynamic sparse attention / prefill acceleration, 位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2608.02947) |
 | 59 | 101 | 6 | 12 | arXiv:2606.13862 | SuperThoughts: Reasoning Tokens in Superposition | 2026-06-11 | arXiv.org | 1 | 12 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems | [source](https://arxiv.org/abs/2606.13862) |
-| 60 | 2 | 6 | 11 | arXiv:2508.15371 | Confidence-Modulated Speculative Decoding for Large Language Models | 2025-08-21 | 2025 IEEE 6th India Council International Subsections Conference (INDISCON) | 2 | 11 | Inference / Parallel and Non-Autoregressive Decoding, inference-systems, speculative decoding / draft-model design, 投機的デコード / 分布保存型デコード高速化, 投機的デコード / 知識蒸留 / ドラフトモデル整合, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2508.15371) |
+| 60 | 2 | 6 | 11 | arXiv:2508.15371 | Confidence-Modulated Speculative Decoding for Large Language Models | 2025-08-21 | 2025 IEEE 6th India Council International Subsections Conference (INDISCON) | 2 | 12 | Inference / Parallel and Non-Autoregressive Decoding, inference-systems, speculative decoding / draft-model design, 投機的デコード / 分布保存型デコード高速化, 投機的デコード / 知識蒸留 / ドラフトモデル整合, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2508.15371) |
 | 61 | 101 | 6 | 11 | arXiv:2606.23961 | Forget Without Compromise: Nexus Sampling for Streaming KV-Cache Eviction Under Fixed Budgets | 2026-06-22 | arXiv.org | 1 | 11 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV-cache compression / attention-based token selection / long-context inference, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2606.23961) |
 | 62 | 10 | 6 | 11 | arXiv:2608.24973 | Resource-Efficient Pruning for Transformer via Low-Rank Importance Estimation | 2026-08-25 | IEEE Transactions on Emerging Topics in Computational Intelligence | 0 | 11 | Inference / Structured Model Compression and Pruning, inference-systems, survey-transformer-compression-inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2608.24973) |
 | 63 | 11 | 6 | 11 | arXiv:2503.09387 | VideoScan: Enabling Efficient Streaming Video Understanding via Frame-level Semantic Carriers | 2025-03-12 | arXiv.org | 11 | 11 | 11-llm-serving-scheduling-disaggregation, Inference / Multimodal Long-Context Memory Compression, KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2503.09387) |
@@ -447,7 +447,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 363 | 34 | 4 | 6 | arXiv:2405.05525 | Ditto: Quantization-aware Secure Inference of Transformers upon MPC | 2024-05-09 | International Conference on Machine Learning | 24 | 6 | 99-other-inference-systems, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2405.05525) |
 | 364 | 10 | 4 | 6 | DOI:10.23919/DATE69613.2026.11539390 | Toward Parallel Serving for Vision-Language Models via Modal Decoupling and Scheduling | 2026-04-20 | Design, Automation and Test in Europe | 0 | 6 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.23919/DATE69613.2026.11539390) |
 | 365 | 10 | 4 | 6 | arXiv:2606.03328 | Rethinking Calibration for High-Sparsity LLM Pruning: From Single Sources to Capability Coverage | 2026-06-02 | arXiv.org | 0 | 6 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2606.03328) |
-| 366 | 3 | 4 | 6 | DOI:10.1145/3746027.3755526 | ASTER: Adaptive Dynamic Layer-Skipping for Efficient Transformer Inference via Markov Decision Process | 2025-10-27 | ACM Multimedia | 3 | 6 | Conditional Computation | [source](https://doi.org/10.1145/3746027.3755526) |
+| 366 | 3 | 4 | 6 | DOI:10.1145/3746027.3755526 | ASTER: Adaptive Dynamic Layer-Skipping for Efficient Transformer Inference via Markov Decision Process | 2025-10-27 | ACM Multimedia | 3 | 7 | Conditional Computation | [source](https://doi.org/10.1145/3746027.3755526) |
 | 367 | 1 | 4 | 6 | arXiv:2411.16991 | Dynamic Self-Distillation via Previous Mini-batches for Fine-tuning Small Language Models | 2024-11-25 | arXiv.org | 1 | 6 | weight-quantization-compression | [source](https://arxiv.org/abs/2411.16991) |
 | 368 | 16 | 4 | 6 | DOI:10.18653/v1/2025.findings-emnlp.645 | Revisiting Pruning vs Quantization for Small Language Models | 2025 | Conference on Empirical Methods in Natural Language Processing | 6 | 6 | Weight Quantization / Compression, edge-on-device-llm-systems, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.18653/v1/2025.findings-emnlp.645) |
 | 369 | 10 | 4 | 6 | arXiv:2510.11052 | Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by Refining Belief States | 2025-10-13 | arXiv.org | 10 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2510.11052) |

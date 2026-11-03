@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-03T08:25:21+00:00`
+Generated: `2026-11-03T08:41:51+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126425** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120280** / 監査再投入 **0** / 機械規則適用後 **122900** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126426** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120280** / 監査再投入 **0** / 機械規則適用後 **122901** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -125,7 +125,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 42 | 13 | 7 | 7 | DOI:10.52202/085713-5113 | VETA-DiT: Variance-Equalized and Temporally Adaptive Quantization for Efficient 4-bit Diffusion Transformers | 2025 | Neural Information Processing Systems | 3 | 7 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.52202/085713-5113) |
 | 43 | 10 | 7 | 7 | DOI:10.18653/v1/2026.acl-long.403 | SCVQ: Sparse-Compensated Vector Quantization for Large Language Models | 2026 | Annual Meeting of the Association for Computational Linguistics | 0 | 7 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.18653/v1/2026.acl-long.403) |
 | 44 | 10 | 7 | 7 | arXiv:2609.34330 | MiCo: Mutual Information Coverage Optimization through Semantic Erasure Modeling for Efficient MLLM Inference | 2026-09-28 |  | 0 | 7 |  | [source](https://arxiv.org/abs/2609.34330) |
-| 45 | 29 | 6 | 25 | arXiv:2410.03960 | SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation | 2024-10-04 | Conference on Empirical Methods in Natural Language Processing | 19 | 25 | 07-kv-cache-optimization-compression, Conditional Computation, KV Cache Optimization / Compression, KV cache compression / cross-layer state merging, KV cache quantization / long-context inference / activation compression, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, Speculative Decoding, inference-systems, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, long-context inference / dynamic sparse attention / prefill acceleration, survey-speculative-decoding, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2410.03960) |
+| 45 | 29 | 6 | 25 | arXiv:2410.03960 | SwiftKV: Fast Prefill-Optimized Inference with Knowledge-Preserving Model Transformation | 2024-10-04 | Conference on Empirical Methods in Natural Language Processing | 19 | 26 | 07-kv-cache-optimization-compression, Conditional Computation, KV Cache Optimization / Compression, KV cache compression / cross-layer state merging, KV cache quantization / long-context inference / activation compression, LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, Speculative Decoding, inference-systems, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, long-context inference / dynamic sparse attention / prefill acceleration, survey-speculative-decoding, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2410.03960) |
 | 46 | 10 | 6 | 21 | arXiv:2602.06822 | POP: Online Structural Pruning Enables Efficient Inference of Large Foundation Models | 2026-02-06 | arXiv.org | 0 | 21 | CPUオフロード / 活性化疎性 / 階層メモリ, Conditional Computation, Inference / Structured Model Compression and Pruning, MoE routing / expert choice / heterogeneous conditional computation, inference-systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2602.06822) |
 | 47 | 102 | 6 | 18 | arXiv:2608.02032 | DART: Decoded Attention over Recurrent States for Efficient Long-Context Sequence Modeling | 2026-08-03 |  | 2 | 18 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2608.02032) |
 | 48 | 106 | 6 | 17 | arXiv:2603.17946 | CARE: Covariance-Aware and Rank-Enhanced Decomposition for Enabling Multi-Head Latent Attention | 2026-03-18 | arXiv.org | 6 | 17 | 07-kv-cache-optimization-compression, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2603.17946) |
