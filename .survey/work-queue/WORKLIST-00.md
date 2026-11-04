@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-04T08:31:45+00:00`
+Generated: `2026-11-04T09:32:44+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -18,7 +18,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
 | 1 | 112 | research | DOI:10.1109/HPCA68181.2026.11408518 | FACE: Fully Overlapped PD Scheduling and Multi-Level Architecture Co-Exploration on Wafer | [primary](https://doi.org/10.1109/HPCA68181.2026.11408518) | `papers/inference/99-other-inference-systems/2026-f1463c925128-face-fully-overlapped-pd-scheduling-and-multi-level-architecture-co-exploration-on-wafer.md` |
-| 2 | 109 | research | DOI:10.1145/3771563 | Benchmarking and Characterization of Large Language Model Inference on Apple Silicon | [primary](https://doi.org/10.1145/3771563) | `papers/inference/99-other-inference-systems/2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.md` |
+| 2 | 108 | research | DOI:10.1016/j.adhoc.2025.104080 | Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference | [primary](https://doi.org/10.1016/j.adhoc.2025.104080) | `papers/inference/99-other-inference-systems/2026-611c010063f8-collaborative-deployment-of-large-ai-models-on-the-edge-a-microservice-approach-to-heterogeneous-training-and-quantized.md` |
 | 3 | 103 | research | DOI:10.1016/j.neunet.2026.108900 | Towards efficient language giants: A comprehensive survey on structural optimizations and compression techniques for large language models | [primary](https://doi.org/10.1016/j.neunet.2026.108900) | `papers/inference/99-other-inference-systems/2026-8e83bad2bef0-towards-efficient-language-giants-a-comprehensive-survey-on-structural-optimizations-and-compression-techniques-for-larg.md` |
 | 4 | 102 | research | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | [primary](https://doi.org/10.1109/TMC.2025.3628498) | `papers/inference/99-other-inference-systems/2026-bc7a7d9ac7fa-h2o-heterogeneity-aware-hierarchical-orchestration-for-memory-efficient-on-device-llm-inference.md` |
 | 5 | 101 | research | DOI:10.1145/3788550.3794877 | ASTL: An Adaptive Serving Stack for LLMs to Balance Utilization and Tail Latency | [primary](https://doi.org/10.1145/3788550.3794877) | `papers/inference/99-other-inference-systems/2026-4acabaa0051a-astl-an-adaptive-serving-stack-for-llms-to-balance-utilization-and-tail-latency.md` |

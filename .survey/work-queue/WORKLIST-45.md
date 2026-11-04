@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-04T08:31:45+00:00`
+Generated: `2026-11-04T09:32:44+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -17,7 +17,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 109 | research | DOI:10.1016/j.adhoc.2025.104080 | Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference | [primary](https://doi.org/10.1016/j.adhoc.2025.104080) | `papers/inference/99-other-inference-systems/2026-611c010063f8-collaborative-deployment-of-large-ai-models-on-the-edge-a-microservice-approach-to-heterogeneous-training-and-quantized.md` |
+| 1 | 109 | research | DOI:10.1145/3771563 | Benchmarking and Characterization of Large Language Model Inference on Apple Silicon | [primary](https://doi.org/10.1145/3771563) | `papers/inference/99-other-inference-systems/2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.md` |
 | 2 | 103 | research | DOI:10.1145/3779212.3790246 | SwiftSpec: Disaggregated Speculative Decoding and Fused Kernels for Low-Latency LLM Inference | [primary](https://doi.org/10.1145/3779212.3790246) | `papers/inference/99-other-inference-systems/2026-92272744585e-swiftspec-disaggregated-speculative-decoding-and-fused-kernels-for-low-latency-llm-inference.md` |
 | 3 | 102 | research | DOI:10.1016/j.future.2026.108646 | HALO: A heterogeneous accelerator for low-latency and energy-efficient edge LLM inference | [primary](https://doi.org/10.1016/j.future.2026.108646) | `papers/inference/99-other-inference-systems/2026-e7b88cc3b7f9-halo-a-heterogeneous-accelerator-for-low-latency-and-energy-efficient-edge-llm-inference.md` |
 | 4 | 101 | research | DOI:10.1007/s11831-026-10598-4 | Building Expert Small Models: A Comprehensive Survey of Model Compression, Knowledge Distillation, and Augmented Inference | [primary](https://doi.org/10.1007/s11831-026-10598-4) | `papers/inference/99-other-inference-systems/2026-328ede95d0dd-building-expert-small-models-a-comprehensive-survey-of-model-compression-knowledge-distillation-and-augmented-inference.md` |
