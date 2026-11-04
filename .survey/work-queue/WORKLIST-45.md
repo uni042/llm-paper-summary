@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-04T04:22:32+00:00`
+Generated: `2026-11-04T05:21:05+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -46,11 +46,11 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 27 | 3 | research | DOI:10.24963/ijcai.2025/920 | MPPQ: Enhancing Post-Training Quantization for LLMs via Mixed Supervision, Proxy Rounding, and Pre-Searching | [primary](https://doi.org/10.24963/ijcai.2025/920) | `papers/inference/99-other-inference-systems/2025-39681c9463ae-mppq-enhancing-post-training-quantization-for-llms-via-mixed-supervision-proxy-rounding-and-pre-searching.md` |
 | 28 | 3 | research | arXiv:2210.17114 | QuaLA-MiniLM: a Quantized Length Adaptive MiniLM | [primary](https://arxiv.org/abs/2210.17114) | `papers/inference/99-other-inference-systems/2022-2210.17114-quala-minilm-a-quantized-length-adaptive-minilm.md` |
 | 29 | 2 | research | DOI:10.1109/DAC63849.2025.11132542 | KVO-LLM: Boosting Long-Context Generation Throughput for Batched LLM Inference | [primary](https://doi.org/10.1109/DAC63849.2025.11132542) | `papers/inference/99-other-inference-systems/2025-745f22b0e76c-kvo-llm-boosting-long-context-generation-throughput-for-batched-llm-inference.md` |
-| 30 | 2 | research | SemanticScholar:285c703584d797e71885a6cf3ce87864bbba8ab9 | OracleKV: Oracle Guidance for Question-Independent KV Cache Eviction | [primary](https://www.semanticscholar.org/paper/285c703584d797e71885a6cf3ce87864bbba8ab9) | `papers/inference/99-other-inference-systems/0000-598fc6b87732-oraclekv-oracle-guidance-for-question-independent-kv-cache-eviction.md` |
-| 31 | 1 | research | DOI:10.1109/ACCESS.2026.3680126 | QubitCache: Quantum-Inspired Probabilistic Attention Preservation for KV-Cache Compression | [primary](https://doi.org/10.1109/ACCESS.2026.3680126) | `papers/inference/99-other-inference-systems/0000-29c02edd6481-qubitcache-quantum-inspired-probabilistic-attention-preservation-for-kv-cache-compression.md` |
-| 32 | 1 | research | DOI:10.3724/2096-7004.di.2025.0077 | Lightweighting Large Models: A Review of Model Compression Techniques | [primary](https://doi.org/10.3724/2096-7004.di.2025.0077) | `papers/inference/99-other-inference-systems/2025-63d5bd54b66a-lightweighting-large-models-a-review-of-model-compression-techniques.md` |
-| 33 | 1 | research | DOI:10.1109/DAC63849.2025.11133343 | DIAS: Distance-based Attention Sparsity for Ultra-Long-Sequence Transformer with Tree-like Processing-in-Memory Architecture | [primary](https://doi.org/10.1109/DAC63849.2025.11133343) | `papers/inference/99-other-inference-systems/2025-e81faa560bf5-dias-distance-based-attention-sparsity-for-ultra-long-sequence-transformer-with-tree-like-processing-in-memory-architect.md` |
-| 34 | 1 | research | DOI:10.32604/cmc.2025.074034 | Unlocking Edge Fine-Tuning: A Sample-Efficient Language-Empowered Split Fine-Tuning Framework | [primary](https://doi.org/10.32604/cmc.2025.074034) | `papers/inference/99-other-inference-systems/0000-e0f5024d7632-unlocking-edge-fine-tuning-a-sample-efficient-language-empowered-split-fine-tuning-framework.md` |
+| 30 | 2 | research | SemanticScholar:61599f7d6d202fa5b7cd1055dd194f2182ef773c | CaR: An Efficient KV Cache Reuse System for Large Language Model Inference | [primary](https://www.semanticscholar.org/paper/61599f7d6d202fa5b7cd1055dd194f2182ef773c) | `papers/inference/99-other-inference-systems/0000-e4d953294da1-car-an-efficient-kv-cache-reuse-system-for-large-language-model-inference.md` |
+| 31 | 1 | research | DOI:10.1016/j.neunet.2025.108332 | OOPS: Outlier-aware and quadratic programming based structured pruning for large language models | [primary](https://doi.org/10.1016/j.neunet.2025.108332) | `papers/inference/99-other-inference-systems/2025-7e5144a7016d-oops-outlier-aware-and-quadratic-programming-based-structured-pruning-for-large-language-models.md` |
+| 32 | 1 | research | DOI:10.1145/3759441.3759448 | EMPIRIC: Exploring Missing Pieces in KV Cache Compression for Reducing Computation, Storage, and Latency in Long-Context LLM Inference | [primary](https://doi.org/10.1145/3759441.3759448) | `papers/inference/99-other-inference-systems/2025-1efbe4ec3d0b-empiric-exploring-missing-pieces-in-kv-cache-compression-for-reducing-computation-storage-and-latency-in-long-context-ll.md` |
+| 33 | 1 | research | arXiv:2505.21835 | TuneComp: Joint Fine-tuning and Compression for Large Foundation Models | [primary](https://arxiv.org/abs/2505.21835) | `papers/inference/99-other-inference-systems/2025-2505.21835-tunecomp-joint-fine-tuning-and-compression-for-large-foundation-models.md` |
+| 34 | 1 | research | DOI:10.1109/COMPSAC61105.2024.00066 | Effective Compression of Language Models by Combining Pruning and Knowledge Distillation | [primary](https://doi.org/10.1109/COMPSAC61105.2024.00066) | `papers/inference/99-other-inference-systems/2024-97e7b2d71adc-effective-compression-of-language-models-by-combining-pruning-and-knowledge-distillation.md` |
 | 35 | 1 | research | SemanticScholar:4fdaec07b7afbdee4a62c98d37a7c04c499de79a | Learned Token Pruning for Efficient Transformer Inference | [primary](https://www.semanticscholar.org/paper/4fdaec07b7afbdee4a62c98d37a7c04c499de79a) | `papers/inference/99-other-inference-systems/0000-5260ab1fc25f-learned-token-pruning-for-efficient-transformer-inference.md` |
 | 36 | 1 | research | SemanticScholar:4dd0221f8b4f8daa0487aaab38fd9c4574ad3bb0 | SharedContextBench: Evaluating Long-Context Methods in KV Cache Reuse | [primary](https://www.semanticscholar.org/paper/4dd0221f8b4f8daa0487aaab38fd9c4574ad3bb0) | `papers/inference/99-other-inference-systems/0000-3aef77f50cef-sharedcontextbench-evaluating-long-context-methods-in-kv-cache-reuse.md` |
 | 37 | 1 | research | SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e | Minstrel: Application-Aware SLM Inference Optimization on Edge Devices | [primary](https://www.semanticscholar.org/paper/ea787530a21d09f9cc7db101f900cda209efcf1e) | `papers/inference/99-other-inference-systems/0000-f9ba29b597aa-minstrel-application-aware-slm-inference-optimization-on-edge-devices.md` |
@@ -76,8 +76,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126488** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120339** / 監査再投入 **0** / 機械規則適用後 **122961** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126492** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120343** / 監査再投入 **0** / 機械規則適用後 **122965** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
