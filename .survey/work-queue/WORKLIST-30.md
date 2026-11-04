@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-04T15:09:31+00:00`
+Generated: `2026-11-04T16:06:05+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -259,7 +259,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 176 | 104 | 5 | 7 | arXiv:2604.22281 | DocPrune:Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning | 2026-04-24 | arXiv.org | 4 | 7 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2604.22281) |
 | 177 | 10 | 5 | 7 | DOI:10.1109/ICVRV67992.2025.00022 | MultiPrune: Extreme Compression of Visual Tokens for Large Multimodal Models via Training-Free Multi-Cue Pruning | 2025-12-19 | International Conference on Virtual Reality and Visualization | 0 | 7 | Conditional Computation, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮 | [source](https://doi.org/10.1109/ICVRV67992.2025.00022) |
 | 178 | 4 | 5 | 7 | arXiv:2508.18177 | Scene-Aware Vectorized Memory Multi-Agent Framework with Cross-Modal Differentiated Quantization VLMs for Visually Impaired Assistance | 2025-08-25 | Expert systems with applications | 4 | 7 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, weight-activation-quantization-outlier-decomposition, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2508.18177) |
-| 179 | 1 | 5 | 7 | DOI:10.1016/j.ipm.2026.105065 | Stage-aware LLM-SLM collaboration for agentic tasks via joint routing and verification |  | Information Processing & Management | 1 | 7 | LLM routing、hybrid inference、quality-aware model selection, Speculative Decoding, inference-systems, survey-speculative-decoding, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1016/j.ipm.2026.105065) |
+| 179 | 10 | 5 | 7 | DOI:10.1016/j.ipm.2026.105065 | Stage-aware LLM-SLM collaboration for agentic tasks via joint routing and verification | 2026-07-25 | Information Processing & Management | 0 | 7 | LLM routing、hybrid inference、quality-aware model selection, Speculative Decoding, inference-systems, survey-speculative-decoding, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1016/j.ipm.2026.105065) |
 | 180 | 101 | 5 | 7 | DOI:10.1016/j.sysarc.2026.103912 | DARS: An algorithm-hardware co-design framework for accelerating sparse attention via dynamic adaptive hierarchical Top-K pruning | 2026-10-01 | Journal of systems architecture | 1 | 7 | Sparse Attention, inference-systems | [source](https://doi.org/10.1016/j.sysarc.2026.103912) |
 | 181 | 101 | 5 | 7 | arXiv:2606.00437 | EST-PRM: Stress-Testing Process Reward Models Before They Become Load-Bearing | 2026-05-30 | arXiv.org | 1 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2606.00437) |
 | 182 | 42 | 5 | 7 | arXiv:2409.03231 | State-space models are accurate and efficient neural operators for dynamical systems | 2024-09-05 | Neural Networks | 42 | 7 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2409.03231) |
