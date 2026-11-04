@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-04T20:32:59+00:00`
+Generated: `2026-11-04T21:33:16+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -254,7 +254,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 171 | 10 | 5 | 7 | DOI:10.1109/ASP-DAC66049.2026.11420818 | When Low-Rank Meets Mixed-Precision: Training-Free Joint Compression for Efficient LLM Inference | 2026-01-19 | Asia and South Pacific Design Automation Conference | 0 | 7 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.1109/ASP-DAC66049.2026.11420818) |
 | 172 | 20 | 5 | 7 | DOI:10.18653/v1/2025.acl-long.97 | Root Defense Strategies: Ensuring Safety of LLM at the Decoding Level | 2025 | Annual Meeting of the Association for Computational Linguistics | 10 | 7 | Speculative Decoding, Weight Quantization / Compression, inference-systems, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.18653/v1/2025.acl-long.97) |
 | 173 | 0 | 5 | 7 | SemanticScholar:fc980a84b196f514bfdb96d882306b2139177c20 | Enhancing Delta Compression in LLMs via SVD-based Quantization Error Minimization |  |  | 0 | 7 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/fc980a84b196f514bfdb96d882306b2139177c20) |
-| 174 | 10 | 5 | 7 | arXiv:2605.09100 | GRC: Unifying Reasoning-Driven Generation, Retrieval and Compression | 2026-05-09 | arXiv.org | 0 | 7 | LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2605.09100) |
+| 174 | 101 | 5 | 7 | arXiv:2609.28769 | Xtrace: High-Fidelity GPU Intra-Kernel Tracing via Binary-Level Instruction Splicing | 2026-09-23 |  | 1 | 7 | inference-systems, その他システム研究, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.28769) |
 | 175 | 10 | 5 | 7 | arXiv:2609.31224 | Acoustic-to-Text KV Compression for Full-Duplex Speech Models | 2026-09-25 |  | 0 | 7 | 07-kv-cache-optimization-compression, KV Cache Compression / Long Context, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://arxiv.org/abs/2609.31224) |
 | 176 | 110 | 5 | 7 | arXiv:2603.25155 | Photon: Speedup Volume Understanding with Efficient Multimodal Large Language Models | 2026-03-26 | arXiv.org | 10 | 7 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2603.25155) |
 | 177 | 104 | 5 | 7 | arXiv:2604.22281 | DocPrune:Efficient Document Question Answering via Background, Question, and Comprehension-aware Token Pruning | 2026-04-24 | arXiv.org | 4 | 7 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2604.22281) |
