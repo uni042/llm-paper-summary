@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-04T05:21:05+00:00`
+Generated: `2026-11-04T06:29:48+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -17,7 +17,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 111 | research | DOI:10.1109/HPCA68181.2026.11408518 | FACE: Fully Overlapped PD Scheduling and Multi-Level Architecture Co-Exploration on Wafer | [primary](https://doi.org/10.1109/HPCA68181.2026.11408518) | `papers/inference/99-other-inference-systems/2026-f1463c925128-face-fully-overlapped-pd-scheduling-and-multi-level-architecture-co-exploration-on-wafer.md` |
+| 1 | 112 | research | DOI:10.1109/HPCA68181.2026.11408518 | FACE: Fully Overlapped PD Scheduling and Multi-Level Architecture Co-Exploration on Wafer | [primary](https://doi.org/10.1109/HPCA68181.2026.11408518) | `papers/inference/99-other-inference-systems/2026-f1463c925128-face-fully-overlapped-pd-scheduling-and-multi-level-architecture-co-exploration-on-wafer.md` |
 | 2 | 109 | research | DOI:10.1145/3771563 | Benchmarking and Characterization of Large Language Model Inference on Apple Silicon | [primary](https://doi.org/10.1145/3771563) | `papers/inference/99-other-inference-systems/2025-1112a5ba6dee-benchmarking-and-characterization-of-large-language-model-inference-on-apple-silicon.md` |
 | 3 | 103 | research | DOI:10.1016/j.neunet.2026.108900 | Towards efficient language giants: A comprehensive survey on structural optimizations and compression techniques for large language models | [primary](https://doi.org/10.1016/j.neunet.2026.108900) | `papers/inference/99-other-inference-systems/2026-8e83bad2bef0-towards-efficient-language-giants-a-comprehensive-survey-on-structural-optimizations-and-compression-techniques-for-larg.md` |
 | 4 | 102 | research | DOI:10.1109/TMC.2025.3628498 | H2O: Heterogeneity-Aware Hierarchical Orchestration for Memory-Efficient On-Device LLM Inference | [primary](https://doi.org/10.1109/TMC.2025.3628498) | `papers/inference/99-other-inference-systems/2026-bc7a7d9ac7fa-h2o-heterogeneity-aware-hierarchical-orchestration-for-memory-efficient-on-device-llm-inference.md` |
@@ -456,7 +456,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 372 | 104 | 4 | 6 | arXiv:2605.06350 | Is Escalation Worth It? On the Depth of LLM Cascades | 2026-05-07 |  | 4 | 6 | 多段LLM推論・確率的費用制約・無ラベル閾値最適化 | [source](https://arxiv.org/abs/2605.06350) |
 | 373 | 10 | 4 | 6 | arXiv:2610.02670 | LEAP: Learning Efficient Action Proposals For LLM Agents | 2026-10-02 |  | 0 | 7 | llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.02670) |
 | 374 | 101 | 4 | 6 | arXiv:2602.02071 | BAPS: A Fine-Grained Low-Precision Scheme for Softmax in Attention via Block-Aware Precision reScaling | 2026-02-02 | arXiv.org | 1 | 6 | flashattention-asic-fused-exponential-vector-multiplication, post-training quantization / second-order compression / weight-only LLM inference, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2602.02071) |
-| 375 | 36 | 4 | 6 | DOI:10.1109/HPCA56546.2023.10071077 | MPress: Democratizing Billion-Scale Model Training on Multi-GPU Servers via Memory-Saving Inter-Operator Parallelism | 2023-02-01 | International Symposium on High-Performance Computer Architecture | 26 | 7 | Training Offload / Memory Systems | [source](https://doi.org/10.1109/HPCA56546.2023.10071077) |
+| 375 | 32 | 4 | 6 | DOI:10.1109/HPCA56546.2023.10071077 | MPress: Democratizing Billion-Scale Model Training on Multi-GPU Servers via Memory-Saving Inter-Operator Parallelism | 2023-02-01 | International Symposium on High-Performance Computer Architecture | 22 | 7 | Training Offload / Memory Systems | [source](https://doi.org/10.1109/HPCA56546.2023.10071077) |
 | 376 | 7 | 4 | 6 | arXiv:2510.01394 | Optimal Stopping vs Best-of-N for Inference Time Optimization | 2025-10-01 | arXiv.org | 7 | 6 | speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2510.01394) |
 | 377 | 102 | 4 | 6 | arXiv:2605.26106 | Looped Diffusion Language Models | 2026-05-25 | arXiv.org | 2 | 6 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion | [source](https://arxiv.org/abs/2605.26106) |
 | 378 | 101 | 4 | 6 | arXiv:2609.00224 | QTEA: Ternary LLMs with Sparse Residual Salient Weight and By-Column Optimization | 2026-08-31 |  | 1 | 6 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2609.00224) |
