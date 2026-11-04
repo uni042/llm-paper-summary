@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-04T11:58:22+00:00`
+Generated: `2026-11-04T12:45:25+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -421,7 +421,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 338 | 2 | 4 | 7 | DOI:10.1088/2632-2153/addc33 | WEISS: Wasserstein efficient sampling strategy for LLMs in drug design | 2025-05-22 | Machine Learning: Science and Technology | 2 | 7 | Inference / Parallel and Non-Autoregressive Decoding, Speculative Decoding, inference-systems, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1088/2632-2153/addc33) |
 | 339 | 101 | 4 | 7 | arXiv:2606.14350 | Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems | 2026-06-12 | IEEE International Conference on Cloud Computing | 1 | 7 | LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2606.14350) |
 | 340 | 4 | 4 | 7 | arXiv:2510.01581 | Think Right: Learning to Mitigate Under-Over Thinking via Adaptive, Attentive Compression | 2025-10-02 | arXiv.org | 4 | 7 |  | [source](https://arxiv.org/abs/2510.01581) |
-| 341 | 114 | 4 | 7 | arXiv:2602.07854 | Geometry-Aware Rotary Position Embedding for Consistent Video World Model | 2026-02-08 | arXiv.org | 14 | 7 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2602.07854) |
+| 341 | 116 | 4 | 7 | arXiv:2602.07854 | Geometry-Aware Rotary Position Embedding for Consistent Video World Model | 2026-02-08 | arXiv.org | 16 | 7 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2602.07854) |
 | 342 | 102 | 4 | 7 | arXiv:2602.22543 | Ruyi2 Technical Report | 2026-02-26 | arXiv.org | 2 | 7 | Conditional Computation, 投機的デコード / 分布保存型デコード高速化 | [source](https://arxiv.org/abs/2602.22543) |
 | 343 | 101 | 4 | 7 | arXiv:2605.30832 | SLAT: Segment-Level Adaptive Trimming for Efficient CoT Reasoning | 2026-05-29 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2605.30832) |
 | 344 | 23 | 4 | 7 | arXiv:2305.11916 | F-PABEE: Flexible-Patience-Based Early Exiting For Single-Label and Multi-Label Text Classification Tasks | 2023-05-21 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 23 | 7 |  | [source](https://arxiv.org/abs/2305.11916) |
