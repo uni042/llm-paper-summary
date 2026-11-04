@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-04T22:58:09+00:00`
+Generated: `2026-11-04T23:43:08+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -170,7 +170,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 86 | 0 | 6 | 8 | SemanticScholar:3966c8baf94f2bc1340c8c0be7de3526e2b2930a | C OMPOSING K NOWLEDGE AND C OMPRESSION I NTER - VENTIONS FOR L ANGUAGE M ODELS |  |  | 0 | 8 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://www.semanticscholar.org/paper/3966c8baf94f2bc1340c8c0be7de3526e2b2930a) |
 | 87 | 10 | 6 | 7 | arXiv:2610.18642 | MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization | 2026-10-13 |  | 0 | 7 | 07-kv-cache-optimization-compression, Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2610.18642) |
 | 88 | 104 | 6 | 7 | arXiv:2602.04361 | SparVAR: Exploring Sparsity in Visual AutoRegressive Modeling for Training-Free Acceleration | 2026-02-04 | Computer Vision and Pattern Recognition | 4 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2602.04361) |
-| 89 | 114 | 6 | 7 | arXiv:2605.05023 | CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels | 2026-05-06 | Annual Meeting of the Association for Computational Linguistics | 4 | 7 | 02-hardware-accelerators, 03-attention-kernels, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.05023) |
+| 89 | 115 | 6 | 7 | arXiv:2605.05023 | CuBridge: An LLM-Based Framework for Understanding and Reconstructing High-Performance Attention Kernels | 2026-05-06 | Annual Meeting of the Association for Computational Linguistics | 5 | 7 | 02-hardware-accelerators, 03-attention-kernels, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.05023) |
 | 90 | 16 | 6 | 7 | arXiv:2511.13223 | TokenSqueeze: Performance-Preserving Compression for Reasoning LLMs | 2025-11-17 | Neural Information Processing Systems | 6 | 7 |  | [source](https://arxiv.org/abs/2511.13223) |
 | 91 | 0 | 6 | 7 | DOI:10.1109/HPCC67675.2025.00060 | VIFMM: Custom RISC-V Vector Instructions with INT-FP Mixed-Precision Computing for Accelerating LLM Inference | 2025-08-13 | IEEE International Conference on High Performance Computing and Communications | 0 | 7 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, survey-transformer-compression-inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/HPCC67675.2025.00060) |
 | 92 | 10 | 6 | 7 | arXiv:2602.02151 | Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization | 2026-02-02 | arXiv.org | 0 | 7 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2602.02151) |
