@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-04T03:24:43+00:00`
+Generated: `2026-11-04T04:22:32+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -77,8 +77,8 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **126486** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **120338** / 監査再投入 **0** / 機械規則適用後 **122959** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **126488** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **120339** / 監査再投入 **0** / 機械規則適用後 **122961** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -248,7 +248,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **57**
 | 164 | 105 | 5 | 8 | arXiv:2604.00886 | PixelPrune: Pixel-Level Adaptive Visual Token Reduction via Predictive Coding | 2026-04-01 | arXiv.org | 5 | 8 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.00886) |
 | 165 | 101 | 5 | 8 | arXiv:2609.21858 | Watermarkable Multi-Draft Speculative Sampling via Poisson Processes | 2026-09-18 |  | 1 | 8 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.21858) |
 | 166 | 0 | 5 | 8 | SemanticScholar:bcb436a91252538ff023130c235220a571061b62 | SUBFORMER: A PARAMETER REDUCED TRANS- | 2020 |  | 0 | 8 | Inference / Parallel and Non-Autoregressive Decoding | [source](https://www.semanticscholar.org/paper/bcb436a91252538ff023130c235220a571061b62) |
-| 167 | 10 | 5 | 7 | arXiv:2608.15943 | KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs | 2026-08-16 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism | [source](https://arxiv.org/abs/2608.15943) |
+| 167 | 10 | 5 | 7 | arXiv:2608.15943 | KV-Pipe: On the Relation Between KV Sharing and Pipeline Parallel Efficiency in LLMs | 2026-08-16 | arXiv.org | 0 | 7 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism | [source](https://arxiv.org/abs/2608.15943) |
 | 168 | 102 | 5 | 7 | arXiv:2606.02963 | KForge: LLM-Driven Cross-Platform Kernel Generation for AI Accelerators | 2026-06-01 | arXiv.org | 2 | 7 | PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.02963) |
 | 169 | 5 | 5 | 7 | DOI:10.1145/3770748 | Enhancing Domain-Specific Code Completion via Collaborative Inference with Large and Small Language Models | 2025-10-03 | ACM Transactions on Software Engineering and Methodology | 5 | 7 | inference-systems, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1145/3770748) |
 | 170 | 2 | 5 | 7 | arXiv:2511.08128 | Sentence-Anchored Gist Compression for Long-Context LLMs | 2025-11-11 | arXiv.org | 2 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, inference-systems | [source](https://arxiv.org/abs/2511.08128) |
