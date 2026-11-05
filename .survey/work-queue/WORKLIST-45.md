@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-05T02:21:13+00:00`
+Generated: `2026-11-05T03:09:17+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -368,7 +368,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 285 | 0 | 4 | 9 | arXiv:2506.12035 | MARché: Fast Masked Autoregressive Image Generation with Cache-Aware Attention | 2025-05-22 | arXiv.org | 0 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2506.12035) |
 | 286 | 13 | 4 | 9 | SemanticScholar:15fab62c8afba1b16af81a095cfefb329c100671 | On-Demand Container Partitioning for Distributed ML | 2025 | USENIX Annual Technical Conference | 3 | 9 | LLM Serving / Scheduling / Disaggregation, MoE inference systems / expert parallelism / model compression / knowledge distillation, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://www.semanticscholar.org/paper/15fab62c8afba1b16af81a095cfefb329c100671) |
 | 287 | 10 | 4 | 9 | arXiv:2609.27332 | Stable Geometry with Divergent Task Evidence for Efficient Long-Horizon Agent Compression | 2026-09-23 |  | 0 | 9 | 07-kv-cache-optimization-compression, Conditional Computation, LLM Serving / Scheduling / Disaggregation, inference-systems | [source](https://arxiv.org/abs/2609.27332) |
-| 288 | 101 | 4 | 9 | arXiv:2607.01308 | Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning | 2026-07-01 | arXiv.org | 1 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, agent serving / KV-cache reuse / latent communication / DAG workflows | [source](https://arxiv.org/abs/2607.01308) |
+| 288 | 101 | 4 | 9 | arXiv:2605.27494 | Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer? | 2026-05-26 | arXiv.org | 1 | 9 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2605.27494) |
 | 289 | 10 | 4 | 9 | arXiv:2606.08804 | Q-Delta: Beyond Key-Value Associative State Evolution | 2026-06-07 | arXiv.org | 0 | 9 | inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2606.08804) |
 | 290 | 1 | 4 | 9 | DOI:10.1109/JSTSP.2025.3568224 | Reconstruct the Pruned Model Without Retraining | 2025-10-01 | IEEE Journal on Selected Topics in Signal Processing | 1 | 9 | post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.1109/JSTSP.2025.3568224) |
 | 291 | 101 | 4 | 8 | arXiv:2608.24004 | AgentSpec: Speculative Decoding for Batch Inference of LLM Agents | 2026-08-25 | arXiv.org | 1 | 8 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding / Draft Model Architecture, llm-serving-scheduling-disaggregation, survey-speculative-decoding, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2608.24004) |

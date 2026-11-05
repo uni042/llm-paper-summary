@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-05T02:21:13+00:00`
+Generated: `2026-11-05T03:09:17+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -368,7 +368,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 285 | 0 | 4 | 9 | arXiv:2502.12784 | SparkAttention: high-performance multi-head attention for large models on Volta GPU architecture | 2025-02-01 | CCF Transactions on High Performance Computing | 0 | 9 | LLM Serving / Scheduling / Disaggregation, Transformer inference runtime and variable-length request batching, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2502.12784) |
 | 286 | 101 | 4 | 9 | arXiv:2608.06146 | PaDoc: Layout-Grounded Parallel Decoding for Document Parsing | 2026-08-06 |  | 1 | 9 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.06146) |
 | 287 | 10 | 4 | 9 | arXiv:2608.15810 | Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State | 2026-08-16 | arXiv.org | 0 | 10 | Quantization × MoE × Offload, kv-cache-offload-recomputation, offload-hierarchical-memory, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2608.15810) |
-| 288 | 101 | 4 | 9 | arXiv:2605.27494 | Grounded Cache Routing for Retrieval-Augmented Generation: When Is It Safe to Reuse an Answer? | 2026-05-26 | arXiv.org | 1 | 9 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2605.27494) |
+| 288 | 102 | 4 | 9 | arXiv:2607.01308 | Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning | 2026-07-01 | arXiv.org | 2 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, agent serving / KV-cache reuse / latent communication / DAG workflows | [source](https://arxiv.org/abs/2607.01308) |
 | 289 | 15 | 4 | 9 | arXiv:2410.07172 | Glider: Global and Local Instruction-Driven Expert Router | 2024-10-09 | Conference on Empirical Methods in Natural Language Processing | 5 | 9 | Adaptive Expert Computation / Compression, Mixture-of-Experts / differentiable routing / parameter merging / modular learning, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2410.07172) |
 | 290 | 10 | 4 | 9 | arXiv:2609.05760 | RAGMark: A Comprehensive Framework for Benchmarking Retrieval-Augmented Generation Systems | 2026-09-04 |  | 0 | 9 | LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2609.05760) |
 | 291 | 102 | 4 | 8 | arXiv:2610.09051 | A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention | 2026-10-06 |  | 2 | 8 | 99-other-inference-systems, kv-cache-optimization-compression, 選択的状態空間モデル・Mamba長文脈推論・動的トークン間引き | [source](https://arxiv.org/abs/2610.09051) |
