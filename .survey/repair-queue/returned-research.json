@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact_type": "returned_research_queue",
-  "generated_at": "2026-10-30T18:51:00+00:00",
+  "generated_at": "2026-11-05T02:52:43+00:00",
   "policy": {
     "priority": "before normal Research/Discovery work",
     "assignment": "sha256(canonical_id)[0] mod 3",
@@ -1190,34 +1190,6 @@
       "worker_run_key": "20261023-0400-scheduled-chat-00/r02"
     },
     {
-      "canonical_id": "arXiv:2603.16440",
-      "title": null,
-      "source_url": null,
-      "returned_at": "2026-10-24T22:08:23+00:00",
-      "return_count": 2,
-      "assigned_worker": "scheduled-chat-30",
-      "reason": "blocked_quality",
-      "failures": [
-        "説明不足トリガー: 手法説明量 0 < 700"
-      ],
-      "quality_metrics": {
-        "quality_gate_version": "2026-10-07-v1",
-        "body_chars": 6117,
-        "body_paragraphs": 31,
-        "method_chars": 0,
-        "method_paragraphs": 0,
-        "evaluation_chars": 1216,
-        "limitation_chars": 0,
-        "insufficiency_flags": [
-          "手法説明量 0 < 700",
-          "限界説明量 0 < 推奨 120"
-        ]
-      },
-      "blocked_path": ".survey/import-inbox/blocked/research/retry-research-8b753138687b--libfile_e1c5fb5de1f08191966f7b0609e90c2a--2026-2603.16440-capability-guided-compression-critical-evaluation-research-20261024-2200-scheduled-chat-00-r01.md",
-      "import_result_path": ".survey/import-inbox/results/research/retry-research-8b753138687b--libfile_e1c5fb5de1f08191966f7b0609e90c2a--2026-2603.16440-capability-guided-compression-critical-evaluation-research-20261024-2200-.json",
-      "worker_run_key": "20261024-2200-scheduled-chat-00/r01"
-    },
-    {
       "canonical_id": "arXiv:2608.20375",
       "title": null,
       "source_url": null,
@@ -2240,6 +2212,33 @@
       "blocked_path": ".survey/import-inbox/blocked/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-20261030-1430-scheduled-chat-45-r01.md",
       "import_result_path": ".survey/import-inbox/results/research/retry-research-f7357efd88a6--libfile_4bbd0e4c7e888191baab0485cda000c7--2026-doi-10.1016-j.compeleceng.2026.111505-component-aware-self-speculation-research-2026.json",
       "worker_run_key": "20261030-1408-scheduled-chat-45/r01"
+    },
+    {
+      "canonical_id": "arXiv:2603.16440",
+      "title": "Capability-Guided Compression: Toward Interpretability-Aware Budget Allocation for Large Language Models",
+      "source_url": "https://arxiv.org/pdf/2603.16440",
+      "returned_at": "2026-11-05T02:52:41+00:00",
+      "return_count": 3,
+      "assigned_worker": "scheduled-chat-30",
+      "reason": "blocked_quality",
+      "failures": [
+        "説明不足トリガー: 評価説明量 145 < 500"
+      ],
+      "quality_metrics": {
+        "quality_gate_version": "2026-10-07-v1",
+        "body_chars": 3293,
+        "body_paragraphs": 16,
+        "method_chars": 1246,
+        "method_paragraphs": 6,
+        "evaluation_chars": 145,
+        "limitation_chars": 597,
+        "insufficiency_flags": [
+          "評価説明量 145 < 500"
+        ]
+      },
+      "blocked_path": ".survey/import-inbox/blocked/research/file_000000006adc81f6b7d815354746d03c--2026-2603.16440-cgc-returned-repair-20261105-0030-scheduled-chat-30-r01.md",
+      "import_result_path": ".survey/import-inbox/results/research/file_000000006adc81f6b7d815354746d03c--2026-2603.16440-cgc-returned-repair-20261105-0030-scheduled-chat-30-r01.json",
+      "worker_run_key": "20261105-0030-scheduled-chat-30/r01"
     }
   ]
 }
