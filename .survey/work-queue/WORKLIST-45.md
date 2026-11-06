@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-06T13:53:00+00:00`
+Generated: `2026-11-06T14:41:46+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -482,7 +482,7 @@ ready総数: **169** / 未claim総数: **169** / このworker向け: **56**
 | 399 | 10 | 4 | 6 | arXiv:2606.03328 | Rethinking Calibration for High-Sparsity LLM Pruning: From Single Sources to Capability Coverage | 2026-06-02 | arXiv.org | 0 | 6 | post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2606.03328) |
 | 400 | 2 | 4 | 6 | arXiv:2501.16337 | Explore Activation Sparsity in Recurrent LLMs for Energy-Efficient Neuromorphic Computing | 2025-01-09 | International Conference on Artificial Intelligence Circuits and Systems | 2 | 6 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2501.16337) |
 | 401 | 0 | 4 | 6 | DOI:10.1109/TMM.2025.3639997 | EEformer: Early Exiting for Transformer With Global-Local Exits and Progressive Fine-Tuning | 2026 | IEEE transactions on multimedia | 0 | 6 |  | [source](https://doi.org/10.1109/TMM.2025.3639997) |
-| 402 | 13 | 4 | 6 | DOI:10.1007/s11227-025-06993-6 | An efficient quantized GEMV implementation for large language models inference with matrix core | 2025-02-01 | Journal of Supercomputing | 3 | 6 | Weight Quantization / Compression, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://doi.org/10.1007/s11227-025-06993-6) |
+| 402 | 12 | 4 | 6 | DOI:10.1007/s11227-025-06993-6 | An efficient quantized GEMV implementation for large language models inference with matrix core | 2025-02-01 | Journal of Supercomputing | 2 | 6 | Weight Quantization / Compression, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://doi.org/10.1007/s11227-025-06993-6) |
 | 403 | 0 | 4 | 6 | SemanticScholar:9b3ef7912c35fb4e92318993a1d208e723e3e5b8 | InsNeXt: Training Scalable Insertion-Based Language Models From Scratch |  |  | 0 | 6 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/9b3ef7912c35fb4e92318993a1d208e723e3e5b8) |
 | 404 | 104 | 4 | 6 | arXiv:2605.06350 | Is Escalation Worth It? On the Depth of LLM Cascades | 2026-05-07 |  | 4 | 6 | 多段LLM推論・確率的費用制約・無ラベル閾値最適化 | [source](https://arxiv.org/abs/2605.06350) |
 | 405 | 10 | 4 | 6 | arXiv:2610.33008 | TraceQuery: learning what to recompute from full-denoising trajectory in diffusion language models | 2026-10-07 |  | 0 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.33008) |
