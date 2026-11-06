@@ -1,6 +1,6 @@
 # 推論システム研究
 
-収録論文: **3786本**。
+収録論文: **3787本**。
 
 推論・serving・decoding・実行時memory / I/O・on-device実行など、**modelを使って出力を生成する段階の効率化**を目的とする研究を収録する。
 
@@ -34,7 +34,7 @@
 <!-- survey:auto:start -->
 ## 自動生成の収録状況
 
-推論論文：**3786本**。
+推論論文：**3787本**。
 [この区分だけ検索](https://uni042.github.io/llm-paper-summary/inference/)
 
 | 系統 | 本数 | 検索 |
@@ -46,7 +46,7 @@
 | [05-speculative-decoding-moe](05-speculative-decoding-moe/README.md) | 339 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/05-speculative-decoding-moe/) |
 | [06-moe-quantization-compression](06-moe-quantization-compression/README.md) | 28 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/06-moe-quantization-compression/) |
 | [07-kv-cache-optimization-compression](07-kv-cache-optimization-compression/README.md) | 430 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/07-kv-cache-optimization-compression/) |
-| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 83 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
+| [08-edge-on-device-llm-systems](08-edge-on-device-llm-systems/README.md) | 84 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/) |
 | [09-kernel-runtime-compilation](09-kernel-runtime-compilation/README.md) | 221 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/09-kernel-runtime-compilation/) |
 | [10-kv-cache-offload-recomputation](10-kv-cache-offload-recomputation/README.md) | 121 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/10-kv-cache-offload-recomputation/) |
 | [11-llm-serving-scheduling-disaggregation](11-llm-serving-scheduling-disaggregation/README.md) | 526 | [この系統を検索](https://uni042.github.io/llm-paper-summary/inference/11-llm-serving-scheduling-disaggregation/) |

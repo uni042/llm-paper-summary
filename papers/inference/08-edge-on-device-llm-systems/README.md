@@ -3,7 +3,7 @@
 スマートフォン、個人PC、edge deviceなど、**VRAM・RAM・memory bandwidth・電力に厳しい制約がある環境でLLMを実行する**ためのsystem研究をまとめる。
 
 <!-- survey:auto:start -->
-## 自動生成の論文一覧（83本）
+## 自動生成の論文一覧（84本）
 
 [この系統だけ検索](https://uni042.github.io/llm-paper-summary/inference/08-edge-on-device-llm-systems/)
 
@@ -271,6 +271,10 @@
 - **2025-10 · [ECVL-ROUTER: Scenario-Aware Routing for Vision-Language Models](2025-2510.27256-ecvl-router-scenario-aware-routing-for-vision-language-models.md)**  
   実装：[✓](https://anonymous.4open.science/r/ECVL-Router-977D) ・ リポジトリ内被引用：0  
   大規模なクラウドVLMは難しい質問に強い反面、すべての質問をクラウドで処理すると、単純な画像説明にも大きなモデルの計算費用と応答待ち時間がかかる。そこで、問い合わせごとに処理先を決める「モデルルーティング」が推論サービングの重要な設計問題になる。
+
+- **2025-09 · [Context-Driven Performance Modeling for Causal Inference Operators on Neural Processing Units](2025-2509.25155-context-driven-performance-modeling-for-causal-inference-operators-on-ne.md)**  
+  実装：✓ ・ リポジトリ内被引用：0  
+  本論文は、長い文脈を扱う言語モデルの演算を小型端末の神経処理装置（NPU）へ移したとき、理論計算量が小さい方式ほど速いとは限らない問題を検証する。論文の表VIでは長文条件の標準因果注意が停止率96.7%、キャッシュ効率7.7%であるのに対し、Toeplitzは別の長さ条件で停止率36.4%、キャッシュ効率87.9%を示す。
 
 - **2025-08 · [Efficient Edge LLMs Deployment via HessianAware Quantization and CPU GPU Collaborative](2025-2508.07329-efficient-edge-llms-deployment-via-hessianaware-quantization-and-cpu-gpu.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
