@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-07 00:23:23 JST**
+> 自動生成: **2026-11-07 00:54:23 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **572** |
 | 未claim Research job | **572** |
-| 直近24hのResearch処理完了 | **0** |
-| 最終Research処理完了 | **10-31 01:48:57 JST** |
+| 直近24hのResearch処理完了 | **1** |
+| 最終Research処理完了 | **11-07 00:27:29 JST** |
 | 最終Discovery探索完了 | **11-03 08:04:00 JST** |
 | 整合性異常 | **0** |
 
@@ -101,14 +101,14 @@
 | provider巡回可能 | **3818** |
 | provider巡回不能 | **7** |
 | 1周以上完了 | **3799** |
-| 巡回中 | **234** |
+| 巡回中 | **237** |
 | 未巡回 | **0** |
-| 今回run開始時due | **635** |
+| 今回run開始時due | **644** |
 | 前方引用から保持中の未処理候補 | **69448** |
-| エラー状態保持seed | **214** |
+| エラー状態保持seed | **217** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-06 23:35:50 JST**
+- state最終更新: **11-07 00:44:50 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-06 12:42:41 JST（11時間40分前）** |
+| 最終maintenance完了 | **11-06 12:42:41 JST（12時間11分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **0** |
+| 直近6hのResearch完了 | **1** |
 | 直近6hのDiscovery run | **0** |
 | 直近6hのDiscovery本文確認・分類 | **0** |
-| 最終Research完了 | **10-31 01:48:57 JST** |
+| 最終Research完了 | **11-07 00:27:29 JST** |
 | 最終Discovery完了 | **11-03 08:04:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **10-31 01:48:57 JST** / worker scheduled-chat-45 / run 20261031-0148-scheduled-chat-45/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/libfile_065a1884c270819192c5254078e8caf3--2026-doi-10.1109-cscwd68734.2026.11582397-semantickv-under16kb-semantic-reaudit-20261031-0148-scheduled-chat-45-r01.json
+- Research: **11-07 00:27:29 JST** / worker scheduled-chat-30 / run 20261107-0030-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/file_00000000bda881f5a275262f082a42ca--2026-cachenotes-returned-repair-20261107-0030-scheduled-chat-30-r01.json
 - Discovery: **11-03 08:04:00 JST** / worker scheduled-chat-00 / run 20261103-0804-scheduled-chat-00/r01
   - 本文確認・分類 **10件** / accept **9件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/waiting/discovery/libfile_18bc072fd26c8191aa11ef2e47383a1a--discovery-20261103-0804-scheduled-chat-00-reviewed-r01.json
