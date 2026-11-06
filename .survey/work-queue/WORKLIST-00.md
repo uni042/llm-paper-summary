@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-06T22:23:51+00:00`
+Generated: `2026-11-06T23:27:10+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -17,7 +17,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 | # | score | 種別 | identity | title | source | 想定配置先 |
 |---:|---:|---|---|---|---|---|
-| 1 | 112 | research | DOI:10.1109/HPCA68181.2026.11408518 | FACE: Fully Overlapped PD Scheduling and Multi-Level Architecture Co-Exploration on Wafer | [primary](https://doi.org/10.1109/HPCA68181.2026.11408518) | `papers/inference/99-other-inference-systems/2026-f1463c925128-face-fully-overlapped-pd-scheduling-and-multi-level-architecture-co-exploration-on-wafer.md` |
+| 1 | 111 | research | DOI:10.1109/SP63933.2026.00048 | Euston: Efficient and User-Friendly Secure Transformer Inference with Non-Interactivity | [primary](https://doi.org/10.1109/SP63933.2026.00048) | `papers/inference/99-other-inference-systems/2026-4c2aa25dfaba-euston-efficient-and-user-friendly-secure-transformer-inference-with-non-interactivity.md` |
 | 2 | 108 | research | DOI:10.1016/j.adhoc.2025.104080 | Collaborative deployment of Large AI Models on the edge: A microservice approach to heterogeneous training and quantized inference | [primary](https://doi.org/10.1016/j.adhoc.2025.104080) | `papers/inference/99-other-inference-systems/2026-611c010063f8-collaborative-deployment-of-large-ai-models-on-the-edge-a-microservice-approach-to-heterogeneous-training-and-quantized.md` |
 | 3 | 103 | research | DOI:10.1016/j.neunet.2026.108900 | Towards efficient language giants: A comprehensive survey on structural optimizations and compression techniques for large language models | [primary](https://doi.org/10.1016/j.neunet.2026.108900) | `papers/inference/99-other-inference-systems/2026-8e83bad2bef0-towards-efficient-language-giants-a-comprehensive-survey-on-structural-optimizations-and-compression-techniques-for-larg.md` |
 | 4 | 102 | research | DOI:10.1109/ACCESS.2026.3677249 | Context-Aware Autoscaling for Cost-Efficient Large Language Model Inference With Prefix Cache Integration | [primary](https://doi.org/10.1109/ACCESS.2026.3677249) | `papers/inference/99-other-inference-systems/0000-71f805ea1154-context-aware-autoscaling-for-cost-efficient-large-language-model-inference-with-prefix-cache-integration.md` |
