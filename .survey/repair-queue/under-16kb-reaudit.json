@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-11-06T19:56:51.719735+00:00",
+  "generated_at": "2026-11-07T05:53:59.971131+00:00",
   "schema_version": 1,
   "queue_kind": "under_16kb_semantic_reaudit",
   "queue_version": "2026-10-07-v1",
   "threshold_bytes_exclusive": 16000,
   "minimum_japanese_ratio": 0.8,
-  "count": 2,
+  "count": 1,
   "worker_counts": {
     "scheduled-chat-00": 1,
-    "scheduled-chat-30": 1,
+    "scheduled-chat-30": 0,
     "scheduled-chat-45": 0
   },
   "entries": [
@@ -32,26 +32,6 @@
       "mechanical_failures": [
         "16KB未満再監査: 手法説明量 553 < 700"
       ],
-      "warnings": []
-    },
-    {
-      "path": "papers/inference/08-edge-on-device-llm-systems/2025-2509.25155-context-driven-performance-modeling-for-causal-inference-operators-on-ne.md",
-      "canonical_id": "arXiv:2509.25155",
-      "title": "Context-Driven Performance Modeling for Causal Inference Operators on Neural Processing Units",
-      "file_bytes": 12052,
-      "source_sha256": "c07fb35933049c6c036078e9de894943aacfbc968c2cbde0739ab7bedfbe0c5d",
-      "source_git_blob_sha": "3bbc47fdc2cdbbcda8b559008573a062f07c28ba",
-      "assigned_worker": "scheduled-chat-30",
-      "semantic_status": "pending",
-      "mechanical_status": "PASS",
-      "japanese_ratio": 0.91922,
-      "quality_metrics": {
-        "body_chars": 3096,
-        "method_chars": 1054,
-        "evaluation_chars": 892,
-        "limitation_chars": 0
-      },
-      "mechanical_failures": [],
       "warnings": []
     }
   ]
