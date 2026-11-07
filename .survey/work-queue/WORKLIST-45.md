@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-07T04:44:35+00:00`
+Generated: `2026-11-07T05:40:01+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -243,7 +243,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 160 | 1 | 5 | 9 | arXiv:2510.18525 | From Quarter to All: Accelerating Speculative LLM Decoding via Floating-Point Exponent Remapping and Parameter Sharing | 2025-10-21 | arXiv.org | 1 | 9 | Speculative Decoding, post-training quantization / second-order compression / weight-only LLM inference, 投機的復号 / 無損失復号高速化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2510.18525) |
 | 161 | 101 | 5 | 9 | arXiv:2601.20317 | VersaQ-3D: Architecture Support for Visual Geometry Grounded Transformers via Versatile Quantization | 2026-01-28 |  | 1 | 9 | arXiv:2405.16406のICLR 2025採録版。, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2601.20317) |
 | 162 | 26 | 5 | 9 | arXiv:2505.19481 | Win Fast or Lose Slow: Balancing Speed and Accuracy in Latency-Sensitive Decisions of LLMs | 2025-05-26 | Neural Information Processing Systems | 16 | 9 | 16-weight-quantization-compression, KV cache quantization / long-context inference / activation compression, LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2505.19481) |
-| 163 | 110 | 5 | 9 | DOI:10.1093/nsr/nwaf551 | Neuromorphic spike-based large language model | 2025-12-04 | National Science Review | 10 | 9 | LLM Serving / Scheduling / Disaggregation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1093/nsr/nwaf551) |
+| 163 | 103 | 5 | 9 | DOI:10.1093/nsr/nwaf551 | Neuromorphic spike-based large language model | 2025-12-04 | National Science Review | 3 | 9 | LLM Serving / Scheduling / Disaggregation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1093/nsr/nwaf551) |
 | 164 | 10 | 5 | 9 | arXiv:2610.10990 | Omni-Diffusion-Distill: Few-Step Distillation of Unified Multimodal Diffusion Large Language Models | 2026-10-07 |  | 0 | 9 | Diffusion LLM Inference, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2610.10990) |
 | 165 | 101 | 5 | 9 | arXiv:2607.07706 | The Key to Going Linear: Analysis-Driven Transformer Linearization | 2026-07-08 | arXiv.org | 1 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2607.07706) |
 | 166 | 101 | 5 | 9 | arXiv:2603.04460 | VSPrefill: Vertical-Slash Sparse Attention with Lightweight Indexing for Long-Context Prefilling | 2026-03-03 | arXiv.org | 1 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.04460) |
