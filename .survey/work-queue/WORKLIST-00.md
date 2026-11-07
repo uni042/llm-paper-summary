@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-07T06:16:42+00:00`
+Generated: `2026-11-07T06:40:12+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -441,9 +441,9 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 358 | 10 | 4 | 7 | arXiv:2609.01613 | Skim and Skip: Hierarchical Adaptive Inference for Efficient Multimodal Retrieval | 2026-06-24 |  | 0 | 7 |  | [source](https://arxiv.org/abs/2609.01613) |
 | 359 | 116 | 4 | 7 | arXiv:2607.20519 | Adaptive Depth in Looped Transformers: Diagnosing Learned Halting Gates and Trajectory Readouts | 2026-07-08 | arXiv.org | 16 | 7 | Conditional Computation | [source](https://arxiv.org/abs/2607.20519) |
 | 360 | 102 | 4 | 7 | arXiv:2607.14277 | Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making | 2026-07-15 | arXiv.org | 2 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2607.14277) |
-| 361 | 43 | 4 | 7 | arXiv:2302.10360 | Optical Transformers | 2023-02-20 | Trans. Mach. Learn. Res. | 43 | 7 | Weight Quantization / Compression, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency | [source](https://arxiv.org/abs/2302.10360) |
-| 362 | 10 | 4 | 7 | DOI:10.23919/DATE69613.2026.11539693 | ACES: A Chiplet Architecture with Resource Partition and Dynamic Scheduling for Agentic LLMs | 2026-04-20 | Design, Automation and Test in Europe | 0 | 7 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, LLM Serving / Scheduling / Disaggregation, agentic serving / workflow-aware scheduling / memory-aware dispatch | [source](https://doi.org/10.23919/DATE69613.2026.11539693) |
-| 363 | 10 | 4 | 7 | arXiv:2609.07129 | Line-Coupled Language Model | 2026-09-07 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2609.07129) |
+| 361 | 101 | 4 | 7 | arXiv:2609.07129 | Line-Coupled Language Model | 2026-09-07 |  | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2609.07129) |
+| 362 | 15 | 4 | 7 | arXiv:2505.21189 | Exploring the Hidden Capacity of LLMs for One-Step Text Generation | 2025-05-27 | Conference on Empirical Methods in Natural Language Processing | 5 | 7 | Inference / Parallel and Non-Autoregressive Decoding, KV cache memory management / streaming inference / attention sinks / length extrapolation, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2505.21189) |
+| 363 | 10 | 4 | 7 | arXiv:2603.05087 | PromptTuner: SLO-Aware Elastic System for LLM Prompt Tuning | 2026-03-05 | arXiv.org | 0 | 7 | 05-kv-cache-compression-management, LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2603.05087) |
 | 364 | 116 | 4 | 7 | arXiv:2606.20954 | Learning What Not to Forget: Long-Horizon Agent Memory from a Few Kilobytes of Learning | 2026-06-18 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: Industry Track | 6 | 7 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling | [source](https://arxiv.org/abs/2606.20954) |
 | 365 | 101 | 4 | 7 | arXiv:2603.14892 | Balancing Saliency and Coverage: Semantic Prominence-Aware Budgeting for Visual Token Compression in VLMs | 2026-03-16 | arXiv.org | 1 | 7 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2603.14892) |
 | 366 | 14 | 4 | 7 | arXiv:2505.17020 | CrossLMM: Decoupling Long Video Sequences from LMMs via Dual Cross-Attention Mechanisms | 2025-05-22 | arXiv.org | 14 | 7 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2505.17020) |

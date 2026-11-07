@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-07T06:16:42+00:00`
+Generated: `2026-11-07T06:40:12+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -441,8 +441,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 358 | 0 | 4 | 7 | arXiv:2402.15991 | C3: Confidence Calibration Model Cascade for Inference-Efficient Cross-Lingual Natural Language Understanding | 2024-02-25 | arXiv.org | 0 | 7 |  | [source](https://arxiv.org/abs/2402.15991) |
 | 359 | 106 | 4 | 7 | DOI:10.48550/arXiv.2606.30005 | LLM Agents Are Latent Context Managers: Eliciting Self-Managed Context via a Proprioceptive Dashboard | 2026-06-29 | arXiv.org | 6 | 7 | 07-kv-cache-optimization-compression, 99-other-inference-systems, Inference / Agent Memory and Context Management, agent context management / virtual memory / demand paging / prompt compression / working-set management, agentic inference / persistent memory | [source](https://doi.org/10.48550/arXiv.2606.30005) |
 | 360 | 101 | 4 | 7 | arXiv:2606.03092 | The Shadow Price of Reasoning: Economic Perspective on Optimal Budget Allocation for LLMs | 2026-06-02 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory | [source](https://arxiv.org/abs/2606.03092) |
-| 361 | 15 | 4 | 7 | arXiv:2505.21189 | Exploring the Hidden Capacity of LLMs for One-Step Text Generation | 2025-05-27 | Conference on Empirical Methods in Natural Language Processing | 5 | 7 | Inference / Parallel and Non-Autoregressive Decoding, KV cache memory management / streaming inference / attention sinks / length extrapolation, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2505.21189) |
-| 362 | 10 | 4 | 7 | arXiv:2603.05087 | PromptTuner: SLO-Aware Elastic System for LLM Prompt Tuning | 2026-03-05 | arXiv.org | 0 | 7 | 05-kv-cache-compression-management, LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2603.05087) |
+| 361 | 42 | 4 | 7 | arXiv:2505.03739 | VITA-Audio: Fast Interleaved Cross-Modal Token Generation for Efficient Large Speech-Language Model | 2025-05-06 | arXiv.org | 42 | 7 | Speculative Decoding, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2505.03739) |
+| 362 | 10 | 4 | 7 | arXiv:2512.23145 | Reservoir Computing inspired Matrix Multiplication-free Language Model | 2025-12-29 | arXiv.org | 0 | 7 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2512.23145) |
 | 363 | 1 | 4 | 7 | DOI:10.1109/ESIC64052.2025.10962699 | Mamba-Hybrid Language Models: Advancing Detection of AI-Generated Text in Academic Contexts | 2025-02-08 | Educational Sciences International Conference | 1 | 7 |  | [source](https://doi.org/10.1109/ESIC64052.2025.10962699) |
 | 364 | 104 | 4 | 7 | arXiv:2604.06330 | STDec: Spatio-Temporal Stability Guided Decoding for dLLMs | 2026-04-07 | arXiv.org | 4 | 9 | Diffusion LLM Inference, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2604.06330) |
 | 365 | 101 | 4 | 7 | arXiv:2609.36651 | FocusVTC: Efficient and High-Performance Visual Text Compression with Adaptive Resolution | 2026-09-29 |  | 1 | 7 | LLM Serving / Scheduling / Disaggregation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.36651) |
