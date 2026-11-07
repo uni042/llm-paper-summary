@@ -452,11 +452,11 @@ source: https://arxiv.org/abs/2609.12345
             current.parent.mkdir(parents=True)
             moved_path = current.relative_to(root).as_posix()
             old.write_text(
-                f"# Moved\\n\\nThis paper record moved to {moved_path}.\\n",
+                f"# Moved\n\nThis paper record moved to {moved_path}.\n",
                 encoding="utf-8",
             )
             current.write_text(
-                "---\\ncanonical_id: arXiv:2608.21952\\n---\\n# Published\\n",
+                "---\ncanonical_id: arXiv:2608.21952\n---\n# Published\n",
                 encoding="utf-8",
             )
             results = root / ".survey/import-inbox/results/research"
@@ -477,14 +477,14 @@ source: https://arxiv.org/abs/2609.12345
 
             # The destination must be the same canonical paper.
             current.write_text(
-                "---\\ncanonical_id: arXiv:2608.00001\\n---\\n# Other\\n",
+                "---\ncanonical_id: arXiv:2608.00001\n---\n# Other\n",
                 encoding="utf-8",
             )
             self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
 
             # A redirect alone must not silence a different quality failure.
             current.write_text(
-                "---\\ncanonical_id: arXiv:2608.21952\\n---\\n# Published\\n",
+                "---\ncanonical_id: arXiv:2608.21952\n---\n# Published\n",
                 encoding="utf-8",
             )
             payload["failures"] = ["説明不足トリガー: 手法説明量 100 < 700"]
@@ -498,7 +498,7 @@ source: https://arxiv.org/abs/2609.12345
                 "と 16 段落 / 3794文字 (100.0%) が完全一致"
             ]
             receipt.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
-            old.write_text("# Moved\\nFollow elsewhere\\n", encoding="utf-8")
+            old.write_text("# Moved\nFollow elsewhere\n", encoding="utf-8")
             self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
 
     def test_returned_research_queue_is_idempotent_when_entries_do_not_change(self) -> None:
