@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-07T10:42:35+00:00`
+Generated: `2026-11-07T11:46:36+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127368** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121176** / 監査再投入 **0** / 機械規則適用後 **123833** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127491** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121293** / 監査再投入 **0** / 機械規則適用後 **123950** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -113,7 +113,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 30 | 10 | 7 | 19 | arXiv:2610.13328 | DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving | 2026-10-09 |  | 0 | 19 | LLM serving scheduling / chunked prefill / MoE inference, MoE serving / expert offloading / prefill-only serving, MoE専門家オフロード / 混合精度 / 専門家キャッシュ, Quantization × MoE × Offload, offload-hierarchical-memory | [source](https://arxiv.org/abs/2610.13328) |
 | 31 | 0 | 7 | 19 | SemanticScholar:4f8f2c068c9edbdee22e7705302a829fe8bdd3fe | Understanding and Optimizing Multi-Stage AI Inference Pipelines |  |  | 0 | 19 | KVキャッシュ再利用／圧縮／ネットワーク転送, LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism, Speculative Decoding, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/4f8f2c068c9edbdee22e7705302a829fe8bdd3fe) |
 | 32 | 10 | 7 | 15 | arXiv:2610.36355 | WAKMan: Workload Aware KVCache Manager | 2026-10-26 |  | 0 | 15 | Adaptive Replacement Cache (ARC)をvLLMのprefix KV-キャッシュ blockの追い出しへ適用。比較系統はLRUと固定1:1分割のDBL。, KV Cache Optimization / Compression, KVキャッシュ退避・分散接頭辞キャッシュ・SmartNICオフロード, LLMサービング・スケジューリング・KVキャッシュ保持, agentic LLM serving / prefix caching / hierarchical KV cache / workflow-aware scheduling, kv-cache-offload-recomputation, prefix caching・LLM scheduling・KV eviction・queue-aware serving | [source](https://arxiv.org/abs/2610.36355) |
-| 33 | 10 | 7 | 14 | arXiv:2609.32759 | The Extender: A Log-Structured Transformer | 2026-09-26 |  | 0 | 14 | 07-kv-cache-optimization-compression, KV cache compression / cross-layer state merging, KVキャッシュ・注意アーキテクチャ, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, post-training quantization / second-order compression / weight-only LLM inference, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2609.32759) |
+| 33 | 10 | 7 | 14 | arXiv:2610.18451 | FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving | 2026-10-13 |  | 0 | 14 | LLM inference serving / parameter-centric GPU memory management, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.18451) |
 | 34 | 10 | 7 | 13 | arXiv:2606.21848 | Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers | 2026-06-20 | arXiv.org | 0 | 13 | 07-kv-cache-optimization-compression, KV Cache Optimization / Compression, KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2606.21848) |
 | 35 | 17 | 7 | 12 | DOI:10.18653/v1/2025.acl-long.486 | Faster Speculative Decoding via Effective Draft Decoder with Pruned Candidate Tree | 2025 | Annual Meeting of the Association for Computational Linguistics | 7 | 12 | Conditional Computation, Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.18653/v1/2025.acl-long.486) |
 | 36 | 7 | 7 | 12 | arXiv:2503.05936 | CASP: Compression of Large Multimodal Models Based on Attention Sparsity | 2025-03-07 | Computer Vision and Pattern Recognition | 7 | 12 | KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2503.05936) |

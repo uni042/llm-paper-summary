@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-07T10:42:35+00:00`
+Generated: `2026-11-07T11:46:36+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127368** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121176** / 監査再投入 **0** / 機械規則適用後 **123833** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127491** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121293** / 監査再投入 **0** / 機械規則適用後 **123950** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -112,7 +112,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 29 | 23 | 7 | 19 | DOI:10.52202/085713-4538 | Discovering Important Experts for Mixture-of-Experts Models Pruning Through a Theoretical Perspective | 2025 | Neural Information Processing Systems | 13 | 19 | 08-moe-inference-routing, Adaptive Expert Computation / Compression, LLM Serving / Scheduling / Disaggregation, MoE compression / task-agnostic expert pruning / expert merging / representation similarity, MoE inference / expert offloading / lookup-table reparameterization / storage hierarchy, Quantization × MoE × Offload, inference-systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.52202/085713-4538) |
 | 30 | 33 | 7 | 19 | SemanticScholar:f0ef64f2f51cc5274f9a3b1c3b01cd2ca1874444 | QMoE: Sub-1-Bit Compression of Trillion Parameter Models | 2024 | Conference on Machine Learning and Systems | 23 | 19 | MoE inference / expert pruning / language-specific expert specialization, MoE inference / on-device LLM / expert offloading / expert caching, MoE inference / task-specific expert pruning / sparse-to-dense conversion, MoE routing / expert choice / heterogeneous conditional computation, Quantization × MoE × Offload, Weight Quantization / Compression, inference-systems, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/f0ef64f2f51cc5274f9a3b1c3b01cd2ca1874444) |
 | 31 | 0 | 7 | 16 | SemanticScholar:dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a | A Multi-Engine Dataflow for MoE Decoding on Scratchpad-Based Tensor Accelerators |  |  | 0 | 15 | Expert Prefetch, LLM Serving / Scheduling / Disaggregation, MoE compression / expert matrix decomposition / shared basis reparameterization, MoE inference systems / expert parallelism / model compression / knowledge distillation, inference-systems, オフロード／階層メモリ | [source](https://www.semanticscholar.org/paper/dbf0cf38ddff26e2c78d410a3ba51431b8c51f0a) |
-| 32 | 10 | 7 | 14 | arXiv:2610.18451 | FastEEP: Fast Intra-Instance Elastic Scaling for Expert-Parallel MoE Serving | 2026-10-13 |  | 0 | 14 | LLM inference serving / parameter-centric GPU memory management, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.18451) |
+| 32 | 10 | 7 | 14 | arXiv:2609.27470 | DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video | 2026-09-23 |  | 0 | 16 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2609.27470) |
 | 33 | 0 | 7 | 13 | SemanticScholar:63fef87d8b4d717736cfd4be45e57189e18f6472 | DroidSpeak: KV Cache Sharing for Efficient Multi-LLM Serving |  |  | 0 | 13 | KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ管理・CPUオフロード・動的先読み・疎な注意計算, LLM Serving / Scheduling / Disaggregation, inference-systems, kv-cache-offload-recomputation | [source](https://www.semanticscholar.org/paper/63fef87d8b4d717736cfd4be45e57189e18f6472) |
 | 34 | 10 | 7 | 12 | arXiv:2609.23314 | ValueDiff: Value-Geometric KV Cache Eviction for Sink-Suppressed LLMs | 2026-09-20 |  | 0 | 14 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, kv-cache-optimization-compression, on-device LLM / heterogeneous inference / NPU offloading, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.23314) |
 | 35 | 106 | 7 | 12 | arXiv:2603.22911 | ForestPrune: High-Ratio Visual Token Compression for Video Multimodal Large Language Models via Spatial-Temporal Forest Modeling | 2026-03-24 | 2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF) | 6 | 13 |  | [source](https://arxiv.org/abs/2603.22911) |
