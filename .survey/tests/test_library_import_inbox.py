@@ -443,6 +443,64 @@ source: https://arxiv.org/abs/2609.12345
             receipt.write_text(json.dumps(base, ensure_ascii=False), encoding="utf-8")
             self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
 
+    def test_returned_research_queue_follows_only_verified_moved_papers(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            old = root / "papers/inference/99-other-inference-systems/old.md"
+            current = root / "papers/inference/16-weight-quantization-compression/new.md"
+            old.parent.mkdir(parents=True)
+            current.parent.mkdir(parents=True)
+            moved_path = current.relative_to(root).as_posix()
+            old.write_text(
+                f"# Moved\\n\\nThis paper record moved to {moved_path}.\\n",
+                encoding="utf-8",
+            )
+            current.write_text(
+                "---\\ncanonical_id: arXiv:2608.21952\\n---\\n# Published\\n",
+                encoding="utf-8",
+            )
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            receipt = results / "blocked.json"
+            payload = {
+                "status": "blocked_quality",
+                "canonical_id": "arXiv:2608.21952",
+                "processed_at": "2026-10-07T09:00:00+00:00",
+                "failures": [
+                    "長文定型文の再利用を検出: "
+                    "papers/inference/99-other-inference-systems/old.md "
+                    "と 16 段落 / 3794文字 (100.0%) が完全一致"
+                ],
+            }
+            receipt.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 0)
+
+            # The destination must be the same canonical paper.
+            current.write_text(
+                "---\\ncanonical_id: arXiv:2608.00001\\n---\\n# Other\\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+            # A redirect alone must not silence a different quality failure.
+            current.write_text(
+                "---\\ncanonical_id: arXiv:2608.21952\\n---\\n# Published\\n",
+                encoding="utf-8",
+            )
+            payload["failures"] = ["説明不足トリガー: 手法説明量 100 < 700"]
+            receipt.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
+            # Unknown redirect formats never qualify as proven duplicates.
+            payload["failures"] = [
+                "長文定型文の再利用を検出: "
+                "papers/inference/99-other-inference-systems/old.md "
+                "と 16 段落 / 3794文字 (100.0%) が完全一致"
+            ]
+            receipt.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            old.write_text("# Moved\\nFollow elsewhere\\n", encoding="utf-8")
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
     def test_returned_research_queue_is_idempotent_when_entries_do_not_change(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
