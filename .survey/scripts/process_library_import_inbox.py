@@ -628,8 +628,8 @@ def _proven_existing_duplicate(repo_root: Path, canonical_id: str, failures: lis
                 break
             if published_text.lstrip().startswith("# Moved"):
                 redirect = re.fullmatch(
-                    r"# Moved\\s+This paper record moved to "
-                    r"(papers/(?:inference|training|survey)/[^\\s]+\\.md)\\.",
+                    r"# Moved\s+This paper record moved to "
+                    r"(papers/(?:inference|training|survey)/[^\s]+\.md)\.",
                     published_text.strip(),
                 )
                 if redirect is None:
