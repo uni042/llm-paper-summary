@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.16054",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sizing a GPU fleet for LLM inference is harder than it looks. The obvious questions -- how many GPUs, which type, where to split a two-pool fleet -- have no closed-form answers. They depend on the full token-length distribution, the routing policy, and queueing dynamics that turn ugly under heavy-tailed workloads. Existing tools optimize per-engine configuration for a fixed GPU count; none of them address the upstream question of how many GPUs to buy and how to arrange them. inference-fleet-sim fills that gap. It combines analytical M/G/c queueing with discrete-event simulation (DES) to find the minimum-cost fleet configuration that empirically meets a P99 TTFT SLO. It includes a physics-informed GPU performance model covering A10G, A100, and H100 across monolithic, two-pool-routed, and disaggregated topologies, all without requiring access to real hardware. We run the tool on seven fleet-planning scenarios drawn from two public workload traces (LMSYS, Azure) and one synthetic agent-heavy trace. Each one surfaces a result that simple analysis gets wrong -- the right split threshold, the cheapest GPU type, whether an apparently idle fleet is actually broken -- and shows why joint simulation of queueing, routing, and hardware is necessary to find it.",
+      "identifiers": [
+        "SemanticScholar:47675ecc9a7aad8b85c3249949be7445a4d1ffdb"
+      ],
+      "semantic_scholar_id": "47675ecc9a7aad8b85c3249949be7445a4d1ffdb",
+      "canonical_id": "arXiv:2603.16054",
+      "arxiv_id": "2603.16054",
+      "doi": "10.48550/arXiv.2603.16054",
+      "authors": [
+        "Hua-Min Chen",
+        "Xun-Zhuo Liu",
+        "Yu-Han Liu",
+        "Jun-Chen Jiang",
+        "Bo-Wei He",
+        "Xue Liu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 235,
+        "matched_prestigious_venue": null
+      },
+      "reason": "M/G/c待ち行列と離散事象シミュレーションを組み合わせ、P99 TTFT SLOを満たす最小費用GPUフリートを探索。A10G/A100/H100と一体型・分離型配置、公開トレースを評価するLLM推論基盤計画手法。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DoSA: Dots Sparse Attention",
+      "source_url": "https://arxiv.org/abs/2610.13990",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": null,
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sparse attention visits few keys, yet finding them can still require scoring every key with every indexer head. We introduce DoSA (Dots Sparse Attention), a lossless method for making this computation conditional while preserving exact token selection. Its central observation is that Top-K selection requires sufficient evidence to reject a candidate, not necessarily its full score. A seed set supplies a lower bound on the winning threshold. Nonnegative head projections and joint residual bounds upper-bound positive contributions, while activation-informed aggregation bounds the magnitude subtracted by negative heads. The certificate directs full scoring toward candidates that remain eligible; exact-score filtering further reduces writeback and selection work. We establish the certificate and its exact-selection conditions, and analyze how geometry and selection margins govern its effectiveness. Our GPU implementation accelerates the complete Indexer by up to 2.74 times over SGLang and 1.69 times over LiteTopK across English, Chinese, and code workloads. End-to-end evaluation on GLM-5.2 and DeepSeek-V3.2 achieves up to 1.94 times and 1.50 times time-to-first-token speedups over the two baselines, respectively.",
+      "identifiers": [
+        "SemanticScholar:dc56c39ddbaa1ce6195f051e5c444d3e670cb74d"
+      ],
+      "semantic_scholar_id": "dc56c39ddbaa1ce6195f051e5c444d3e670cb74d",
+      "canonical_id": "arXiv:2610.13990",
+      "arxiv_id": "2610.13990",
+      "authors": [
+        "Fan-Xu Meng",
+        "Tao-Song Fang"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 42,
+        "matched_prestigious_venue": null
+      },
+      "reason": "索引ヘッドによる全候補スコア計算を避け、勝者閾値の下界と各候補の上界による証明で不要な計算を省く。Top-K選択の厳密性を保持し、GPU IndexerはSGLang比最大2.74倍、GLM-5.2のTTFTは最大1.94倍高速化。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Data Driven Optimization of GPU efficiency for Distributed LLM Adapter Serving",
+      "source_url": "https://arxiv.org/abs/2602.24044",
+      "year": 2026,
+      "published": "2026-02-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Model (LLM) adapters enable low-cost model specialization, but introduce complex caching and scheduling challenges in distributed serving systems where hundreds of adapters must be hosted concurrently. While prior work has largely focused on latency and throughput optimization, minimizing GPU resource requirements through near-peak utilization remains largely underexplored. This paper presents a data-driven pipeline that, for a given workload, computes an adapter placement that serves the workload with the minimum number of GPUs while avoiding request starvation and GPU memory errors. To that end, the approach identifies the maximum feasible throughput attainable on each GPU by leveraging accurate performance predictions learned from real serving behavior. The proposed pipeline integrates three components: (i) a Digital Twin (DT) tailored to LLM-adapter serving, (ii) a distilled machine learning (ML) model trained on DT-generated data, and (iii) a greedy placement algorithm that exploits ML-based performance estimates to maximize GPU efficiency. The DT emulates real system dynamics with high fidelity, achieving below 5% throughput estimation error while executing up to 90x faster than full LLM benchmarking across both predictable and unpredictable workloads. The learned ML models further accelerate performance estimation with marginal accuracy degradation, enabling scalable optimization. Experimental results demonstrate that the pipeline substantially improves GPU efficiency, reducing the number of GPUs required to sustain target workloads by 60\\% on average across the evaluated scenarios. Beyond GPU efficiency, the pipeline can be adapted to alternative objectives, such as latency minimization, highlighting its versatility for future large-scale LLM serving infrastructures.",
+      "identifiers": [
+        "SemanticScholar:493241a0c893fb9ebf29f48dc08d2036a1ad1673"
+      ],
+      "semantic_scholar_id": "493241a0c893fb9ebf29f48dc08d2036a1ad1673",
+      "canonical_id": "arXiv:2602.24044",
+      "arxiv_id": "2602.24044",
+      "doi": "10.48550/arXiv.2602.24044",
+      "authors": [
+        "F. Agulló",
+        "J. Oliveras",
+        "Chen Wang",
+        "Alberto Gutierrez-Torre",
+        "Olivier Tardieu",
+        "Alaa Youssef",
+        "Jordi Torres",
+        "Josep Ll. Berral"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 253,
+        "matched_prestigious_venue": null
+      },
+      "reason": "分散LLMアダプタサービングのGPU台数を削減するため、デジタルツイン、学習済み性能予測、貪欲配置を統合。評価負荷でGPU必要数を平均60%削減、デジタルツインのスループット推定誤差は5%未満。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2606.21848",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer architectures form the foundation of modern natural language processing, yet the Key-Value (KV) cache introduces substantial memory and bandwidth overhead during long-context generation, increasingly bottlenecking large-scale deployment. We propose Keyless Attention, a novel attention mechanism that replaces the conventional key projection with a dedicated value-space routing projection, eliminating key representations from the attention computation entirely and yielding a Value-Only Cache that reduces KV-cache memory by 50% while improving decode throughput. Experiments across multiple models and architectures demonstrate that Keyless Attention achieves comparable perplexity and downstream task performance to standard QKV attention, while consistently reducing KV-cache memory by 50%. Furthermore, Keyless Attention exhibits slower validation loss degradation after the best epoch, indicating improved robustness against overfitting. Ablation studies confirm that the dedicated value-space routing projection is critical, with Keyless Attention outperforming KV-sharing methods that eliminate the key cache without replacing its routing role. Experiments in the pretraining regime further confirm the viability of Keyless Attention in industrial settings.",
+      "identifiers": [
+        "SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe"
+      ],
+      "semantic_scholar_id": "935ca66fc96f37f77103a1a73a19c886572db4fe",
+      "canonical_id": "arXiv:2606.21848",
+      "arxiv_id": "2606.21848",
+      "doi": "10.48550/arXiv.2606.21848",
+      "authors": [
+        "Xin Gao",
+        "Xing Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 140,
+        "matched_prestigious_venue": null
+      },
+      "reason": "従来のkey射影をvalue空間での専用ルーティング射影へ置換し、key表現をキャッシュしない。KVキャッシュ容量を50%削減し、言語モデルの困惑度と下流性能を概ね維持。推論時メモリ・帯域削減に直接寄与。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DuoRate: Two-Rate Per-Expert Precision Allocation for Mixture-of-Experts Serving",
+      "source_url": "https://arxiv.org/abs/2610.13328",
+      "year": 2026,
+      "published": "2026-10-09",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serving a Mixture-of-Experts (MoE) model pays for expert precision twice: the resident footprint pays for every expert the router can reach, while each batch-one decode step pays only for the experts it selects. These are two different rate functionals over the same per-expert widths, yet published per-expert MoE allocators constrain only the first. We call the difference the store-read gap; in the released BitsMoE checkpoint, 2.54 bits per weight (bpw) of storage become 7.50 bpw of decode traffic. We propose DuoRate, which stores once and reads per workload. Offline, it stores one uniform tier of a prefix-readable weight stream and bakes a distortion tensor. Online, it profiles a workload's own prefill without labels and solves a Lagrangian rate-distortion allocation under the decode functional; routing frequency provably cancels from every per-expert decision, and the solve costs one dot product per expert and a bisection. A deployment therefore keeps a single artifact that prefill reads at the stored rate and decode reads at the workload's own rate. On Qwen3-30B-A3B, DuoRate reading 2.3 bpw exceeds every 2-bit-class baseline by 6.3 to 47.0 points of average accuracy, and at 2.9 bpw it matches 4-bit formats that read 1.4-1.6 bpw more. The advantage is largest under long decoding: on GSM8K, DuoRate at 2.9 bpw matches or exceeds every 4-bit format and trails BF16 by only 0.25 points, and at 2.6 bpw it still matches or exceeds the 4.5-bit NF4 and FP4. Against controls in its own format, the allocation alone is worth 0.07-0.11 bpw of read rate. Code will be released upon publication.",
+      "identifiers": [
+        "SemanticScholar:f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294"
+      ],
+      "semantic_scholar_id": "f802554d8ffe5d9a0121f0e7b7ecfa9e84cf2294",
+      "canonical_id": "arXiv:2610.13328",
+      "arxiv_id": "2610.13328",
+      "authors": [
+        "Meng-Qi Guo",
+        "Zhe Wei",
+        "Yuan Yuan",
+        "Jiunn Bin Lim",
+        "Bo Pan",
+        "Michael Bi Mi"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 29,
+        "matched_prestigious_venue": null
+      },
+      "reason": "MoE専門家重みの保存ビット幅と実際のdecode読出ビット幅の乖離を扱う。prefix-readable重み列を保存し、prefillの負荷統計で専門家別読出率を最適化。Qwen3-30B-A3Bで2.3bpw読出時に2-bit級基準比平均正解率6.3～47.0ポイント改善。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-8cb888962e38",
+    "round": "libimp-8cb888962e38f021-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-8cb888962e38f021-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-8cb888962e38f021-pre01.json",
+    "receipt": "sha256:2c2d8858505f607fb6f45e29a50ed6b75f65897ee1c19ba21ff746c273cac58c"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-8cb888962e38",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
