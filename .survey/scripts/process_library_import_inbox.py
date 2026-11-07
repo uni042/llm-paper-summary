@@ -616,14 +616,33 @@ def _proven_existing_duplicate(repo_root: Path, canonical_id: str, failures: lis
         if not match:
             continue
         published = (repo_root / match.group(1)).resolve()
-        if not published.is_relative_to(repo_root.resolve()) or not published.is_file():
-            continue
-        try:
-            meta = parse_frontmatter(published.read_text(encoding="utf-8"))
-        except (OSError, UnicodeError, ValueError):
-            continue
-        if str(meta.get("canonical_id") or "").strip().casefold() == canonical_id.casefold():
-            return True
+        # A historical duplicate can later be replaced by a "# Moved" stub.
+        # Follow only the repository's exact moved-paper format, and still
+        # require the destination's canonical ID to match before suppressing.
+        for _ in range(4):
+            if not published.is_relative_to(repo_root.resolve()) or not published.is_file():
+                break
+            try:
+                published_text = published.read_text(encoding="utf-8")
+            except (OSError, UnicodeError):
+                break
+            if published_text.lstrip().startswith("# Moved"):
+                redirect = re.fullmatch(
+                    r"# Moved\\s+This paper record moved to "
+                    r"(papers/(?:inference|training|survey)/[^\\s]+\\.md)\\.",
+                    published_text.strip(),
+                )
+                if redirect is None:
+                    break
+                published = (repo_root / redirect.group(1)).resolve()
+                continue
+            try:
+                meta = parse_frontmatter(published_text)
+            except ValueError:
+                break
+            if str(meta.get("canonical_id") or "").strip().casefold() == canonical_id.casefold():
+                return True
+            break
     return False
 
 
