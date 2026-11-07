@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-07 14:33:31 JST**
+> 自動生成: **2026-11-07 14:51:17 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **571** |
 | 未claim Research job | **571** |
-| 直近24hのResearch処理完了 | **3** |
-| 最終Research処理完了 | **11-07 03:30:00 JST** |
+| 直近24hのResearch処理完了 | **4** |
+| 最終Research処理完了 | **11-07 11:31:51 JST** |
 | 最終Discovery探索完了 | **11-03 08:04:00 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-07 12:18:13 JST（2時間15分前）** |
+| 最終maintenance完了 | **11-07 12:18:13 JST（2時間33分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -136,16 +136,16 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 
 | 指標 | 現在値 |
 |---|---:|
-| 直近6hのResearch完了 | **0** |
+| 直近6hのResearch完了 | **1** |
 | 直近6hのDiscovery run | **0** |
 | 直近6hのDiscovery本文確認・分類 | **0** |
-| 最終Research完了 | **11-07 03:30:00 JST** |
+| 最終Research完了 | **11-07 11:31:51 JST** |
 | 最終Discovery完了 | **11-03 08:04:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-07 03:30:00 JST** / worker scheduled-chat-30 / run 20261107-0330-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/file_000000008bf081f683b2156e160539c8--2025-2509.25155-npu-causal-operators-returned-repair-20261107-0330-scheduled-chat-30-r01.json
+- Research: **11-07 11:31:51 JST** / worker scheduled-chat-30 / run 20261107-1127-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/file_0000000070c48206b18d002cfee076fe--2025-2509.25155-npu-causal-operators-under16kb-reaudit-20261107-1130-scheduled-chat-30-r01.json
 - Discovery: **11-03 08:04:00 JST** / worker scheduled-chat-00 / run 20261103-0804-scheduled-chat-00/r01
   - 本文確認・分類 **10件** / accept **9件** / unrelated+borderline **1件**
   - evidence: .survey/import-inbox/waiting/discovery/libfile_18bc072fd26c8191aa11ef2e47383a1a--discovery-20261103-0804-scheduled-chat-00-reviewed-r01.json
