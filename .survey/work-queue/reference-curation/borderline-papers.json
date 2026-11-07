@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-03T12:00:07+00:00",
-  "record_count": 5597,
+  "updated_at": "2026-11-07T21:03:43+00:00",
+  "record_count": 5598,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86410,6 +86410,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Circumventing the Computational Hardness of Computational Arbitrage"
+    },
+    "arXiv:2407.09941": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2407.09941",
+      "identity_tokens": [
+        "arXiv:2407.09941"
+      ],
+      "reason": "構造化行列ミキサと双方向SSMの理論・非因果タスクを主対象とする。準分離行列のサブ二次計算は関連するが、要旨での実証はGLUE・ImageNetであり、自己回帰LLM推論サービングへの直接改善は未確認。",
+      "first_checked_at": "2026-11-07T21:03:43+00:00",
+      "last_checked_at": "2026-11-07T21:03:43+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 38"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Hydra: Bidirectional State Space Models Through Generalized Matrix Mixers"
     }
   }
 }
