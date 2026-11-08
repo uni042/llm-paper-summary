@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-08T04:41:58+00:00`
+Generated: `2026-11-08T05:22:55+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -425,9 +425,9 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 342 | 10 | 4 | 7 | arXiv:2603.21862 | Holistic Scaling Laws for Optimal Mixture-of-Experts Architecture Optimization | 2026-03-23 | arXiv.org | 0 | 7 | 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2603.21862) |
 | 343 | 102 | 4 | 7 | arXiv:2604.15464 | Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU | 2026-04-16 | arXiv.org | 2 | 7 | 07-kv-cache-optimization-compression, LLM Serving / Scheduling / Disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.15464) |
 | 344 | 10 | 4 | 7 | DOI:10.1109/EI268505.2025.11425606 | Decoupled Analysis of DVFS Effects in Prefill and Decode Stages of Large Language Model Inference | 2025-12-05 | 2025 IEEE 9th Conference on Energy Internet and Energy System Integration (EI2) | 0 | 7 | LLM Serving / Scheduling / Disaggregation, LLM serving / energy management / cluster scheduling / dynamic reconfiguration, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/EI268505.2025.11425606) |
-| 345 | 10 | 4 | 7 | arXiv:2606.27732 | Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation | 2026-06-26 | arXiv.org | 0 | 7 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, speculative-parallel-decoding, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2606.27732) |
-| 346 | 10 | 4 | 7 | arXiv:2609.39358 | Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost | 2026-09-30 |  | 0 | 7 | KV Cache Offload / Recomputation, KVキャッシュ再利用／圧縮／ネットワーク転送, LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2609.39358) |
-| 347 | 0 | 4 | 7 | DOI:10.1109/JSTQE.2026.3715241 | Intra-Matrix Flexible Optical-Electronic Configuration Algorithms for Energy-Efficient Large Language Model Inference | 2026 | IEEE Journal of Selected Topics in Quantum Electronics | 0 | 7 | LLM Serving / Scheduling / Disaggregation, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/JSTQE.2026.3715241) |
+| 345 | 10 | 4 | 7 | arXiv:2605.08885 | Compact SO(3) Equivariant Atomistic Foundation Models via Structural Pruning | 2026-05-09 | arXiv.org | 0 | 7 | inference-systems | [source](https://arxiv.org/abs/2605.08885) |
+| 346 | 10 | 4 | 7 | arXiv:2609.35394 | Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline | 2026-09-28 |  | 0 | 8 |  | [source](https://arxiv.org/abs/2609.35394) |
+| 347 | 1 | 4 | 7 | arXiv:2506.23025 | Spectra 1.1: Scaling Laws and Efficient Inference for Ternary Language Models | 2025-06-28 | arXiv.org | 1 | 7 | Offload / Hierarchical Memory, Weight Quantization / Compression, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://arxiv.org/abs/2506.23025) |
 | 348 | 102 | 4 | 7 | arXiv:2608.26574 | Dependency-Aware Revocable Decoding for Efficient Diffusion Large Language Model Inference | 2026-08-27 | arXiv.org | 2 | 8 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2608.26574) |
 | 349 | 101 | 4 | 7 | arXiv:2603.00357 | SPARe: Stacked Parallelism with Adaptive Reordering for Fault-Tolerant LLM Pretraining Systems with 100k+ GPUs | 2026-02-27 | arXiv.org | 1 | 7 |  | [source](https://arxiv.org/abs/2603.00357) |
 | 350 | 12 | 4 | 7 | DOI:10.1109/DAC56929.2023.10247993 | Efficient Transformer Inference with Statically Structured Sparse Attention | 2023-07-09 | Design Automation Conference | 12 | 7 | Sparse Attention, sparse attention / long-context Transformer | [source](https://doi.org/10.1109/DAC56929.2023.10247993) |

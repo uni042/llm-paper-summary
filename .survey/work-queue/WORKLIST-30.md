@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-08T04:41:58+00:00`
+Generated: `2026-11-08T05:22:55+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -425,8 +425,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 342 | 105 | 4 | 7 | arXiv:2604.18995 | R2-dLLM: Accelerating Diffusion Large Language Models via Spatio-Temporal Redundancy Reduction | 2026-04-21 | arXiv.org | 5 | 8 | 11-llm-serving-scheduling-disaggregation, Diffusion LLM Inference, diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2604.18995) |
 | 343 | 14 | 4 | 7 | arXiv:2505.18232 | Two-Stage Regularization-Based Structured Pruning for LLMs | 2025-05-23 | Annual Meeting of the Association for Computational Linguistics | 4 | 7 | inference-systems, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化 | [source](https://arxiv.org/abs/2505.18232) |
 | 344 | 10 | 4 | 7 | DOI:10.1109/HPSC69479.2026.00019 | Optimization of the Generation Phase in Post-Training of Large Language Models Based on RLHF | 2026-05-01 | International Conference on High Performance Scientific Computing | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/HPSC69479.2026.00019) |
-| 345 | 10 | 4 | 7 | arXiv:2609.34683 | AgentPerfBench: A Benchmarking and Evaluation Suite for Inference Performance of Agentic LLMs | 2026-09-28 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.34683) |
-| 346 | 10 | 4 | 7 | arXiv:2610.28620 | Weight Placement Is Not Enough: Synchronization in Multi-Node CPU Decoding of Ternary LLMs | 2026-10-20 |  | 0 | 7 | LLM推論カーネル融合／メガカーネル／GPUコンパイラ・ランタイム, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.28620) |
+| 345 | 10 | 4 | 7 | arXiv:2606.27732 | Bifocal Diffusion Language Models: Asymmetric Bidirectional Context for Parallel Generation | 2026-06-26 | arXiv.org | 0 | 7 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, speculative-parallel-decoding, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2606.27732) |
+| 346 | 10 | 4 | 7 | arXiv:2609.39358 | Working Around the Compute Ceiling: Byte-Exact Memory in Galahad Makes LLM Reading a One-Time Cost LLM Reading a One-Time Cost | 2026-09-30 |  | 0 | 7 | KV Cache Offload / Recomputation, KVキャッシュ再利用／圧縮／ネットワーク転送, LLM Serving / Scheduling / Disaggregation, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2609.39358) |
 | 347 | 116 | 4 | 7 | arXiv:2605.04956 | KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels | 2026-05-06 | arXiv.org | 16 | 7 | inference-systems | [source](https://arxiv.org/abs/2605.04956) |
 | 348 | 102 | 4 | 7 | arXiv:2609.34565 | FlowState: Execution State as Memory for Long-Horizon LLM Agents | 2026-09-28 |  | 2 | 7 | 07-kv-cache-optimization-compression, agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.34565) |
 | 349 | 101 | 4 | 7 | arXiv:2610.11573 | Memory Type Varies: Empowering LLM Agents for Long-Term Memory with Diverse Strategies | 2026-10-08 |  | 1 | 7 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2610.11573) |
