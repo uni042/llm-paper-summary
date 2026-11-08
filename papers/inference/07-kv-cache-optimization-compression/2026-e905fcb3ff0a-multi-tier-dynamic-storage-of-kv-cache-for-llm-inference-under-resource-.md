@@ -1,34 +1,81 @@
 ---
-canonical_id: "DOI:10.1007/s40747-025-02200-4"
-doi: "10.1007/s40747-025-02200-4"
-title: "Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions"
-summary: "MTDSはGPUのVRAM・ホストDRAM・SSDを用いる階層型KVキャッシュ管理で、再利用と再計算の選択、複数GPU間のPCIe転送優先順位、DRAMからSSDへの適応的退避を統合する。4基のNVIDIA A10、64GB DRAM、2TB SSDで、vLLM、Mooncake、LMCacheと比較し、ShareGPT負荷でvLLM比の初回トークン遅延を25～31%削減した。大きなモデルではDRAM容量圧迫により利得が縮小する。"
-list_summary: "限られたGPUメモリとPCIe帯域を持つエッジ環境で、KVキャッシュの再利用可否・転送優先度・DRAM退避を協調制御し、初回トークン遅延を削減する階層記憶管理方式。"
+canonical_id: DOI:10.1007/s40747-025-02200-4
+doi: 10.1007/s40747-025-02200-4
+title: Multi-tier dynamic storage of KV cache for LLM inference under resource-constrained conditions
+summary: MTDSはGPUのVRAM・ホストDRAM・SSDを用いる階層型KVキャッシュ管理で、再利用と再計算の選択、複数GPU間のPCIe転送優先順位、DRAMからSSDへの適応的退避を統合する。4基のNVIDIA A10、64GB DRAM、2TB SSDで、vLLM、Mooncake、LMCacheと比較し、ShareGPT負荷でvLLM比の初回トークン遅延を25～31%削減した。大きなモデルではDRAM容量圧迫により利得が縮小する。
+list_summary: 限られたGPUメモリとPCIe帯域を持つエッジ環境で、KVキャッシュの再利用可否・転送優先度・DRAM退避を協調制御し、初回トークン遅延を削減する階層記憶管理方式。
 authors:
-  - Junliang Wang
-  - Jiaqi Hu
-  - Qingping Cao
-  - Yuanrui Zhu
-  - Xiancheng Lin
-published: "2026-01-27"
-publication: "Complex & Intelligent Systems 12, article 104 (2026)"
-publication_type: "journal"
-publication_status: "published"
-source: "https://link.springer.com/article/10.1007/s40747-025-02200-4"
+- Junliang Wang
+- Jiaqi Hu
+- Qingping Cao
+- Yuanrui Zhu
+- Xiancheng Lin
+published: '2026-01-27'
+publication: Complex & Intelligent Systems 12, article 104 (2026)
+publication_type: journal
+publication_status: published
+source: https://link.springer.com/article/10.1007/s40747-025-02200-4
 sources:
-  - "https://link.springer.com/article/10.1007/s40747-025-02200-4"
-  - "https://doi.org/10.1007/s40747-025-02200-4"
-implementation: "著者らがPyTorchとPythonで実装し、vLLMのモデル実行部へ統合して評価。GPUとDRAM間のKV転送は共有メモリと専用I/Oスレッドを使用する。論文から公開されたMTDS実装リポジトリの公式URLは確認できない。"
+- https://link.springer.com/article/10.1007/s40747-025-02200-4
+- https://doi.org/10.1007/s40747-025-02200-4
+implementation: 著者らがPyTorchとPythonで実装し、vLLMのモデル実行部へ統合して評価。GPUとDRAM間のKV転送は共有メモリと専用I/Oスレッドを使用する。論文から公開されたMTDS実装リポジトリの公式URLは確認できない。
 code: null
-last_checked: "2026-10-22"
-worker_id: "scheduled-chat-45"
-worker_completed_at: "2026-10-22T01:49:20+09:00"
-worker_run_key: "20261022-0145-scheduled-chat-45/r01"
-reference_main_sha: "cdfca928211a5dcc63c33326f361b674eb54e79a"
+last_checked: '2026-10-22'
+worker_id: scheduled-chat-45
+worker_completed_at: '2026-10-22T01:49:20+09:00'
+worker_run_key: 20261022-0145-scheduled-chat-45/r01
+reference_main_sha: cdfca928211a5dcc63c33326f361b674eb54e79a
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1109/icws62655.2024.00099
+  doi: 10.1109/icws62655.2024.00099
+- canonical_id: DOI:10.1145/3773075
+  doi: 10.1145/3773075
+- canonical_id: DOI:10.1145/3581783.3611823
+  doi: 10.1145/3581783.3611823
+- canonical_id: arXiv:2407.11550
+  arxiv_id: '2407.11550'
+- canonical_id: DOI:10.1109/tc.2025.3558009
+  doi: 10.1109/tc.2025.3558009
+- canonical_id: DOI:10.1145/3620666.3651362
+  doi: 10.1145/3620666.3651362
+- canonical_id: DOI:10.1007/s10462-024-10888-y
+  doi: 10.1007/s10462-024-10888-y
+- canonical_id: DOI:10.1109/cloud67622.2025.00029
+  doi: 10.1109/cloud67622.2025.00029
+- canonical_id: arXiv:2210.17223
+- canonical_id: arXiv:2407.12866
+  arxiv_id: '2407.12866'
+- canonical_id: DOI:10.1145/3651890.3672274
+- canonical_id: DOI:10.1109/jetcas.2025.3568716
+  doi: 10.1109/jetcas.2025.3568716
+- canonical_id: DOI:10.1145/3620665.3640383
+  doi: 10.1145/3620665.3640383
+- canonical_id: arXiv:2312.12456
+- canonical_id: arXiv:2407.21255
+  doi: 10.1145/3676641.3715983
+- canonical_id: DOI:10.1145/3552326.3587438
+  doi: 10.1145/3552326.3587438
+- canonical_id: arXiv:2509.09961
+  arxiv_id: '2509.09961'
+- canonical_id: arXiv:2305.05920
+  arxiv_id: '2305.05920'
+- canonical_id: DOI:10.1145/3474085.3475482
+  doi: 10.1145/3474085.3475482
+- canonical_id: DOI:10.1109/jiot.2024
+  doi: 10.1109/jiot.2024
+- canonical_id: DOI:10.1145/3726302.3729936
+  doi: 10.1145/3726302.3729936
+- canonical_id: arXiv:2410.11845
+  doi: 10.1145/3719664
+- canonical_id: OpenReview:KHM2YOGgX9
+  openreview_id: KHM2YOGgX9
+references_checked_at: '2026-11-08'
+references_source: primary-pdf-reference-section
+references_total: 46
 ---
 
 # MTDS：資源制約下のLLM推論に向けたKVキャッシュ階層記憶制御
