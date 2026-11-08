@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-08T16:06:33+00:00`
+Generated: `2026-11-08T16:24:27+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -502,7 +502,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 419 | 10 | 4 | 6 | arXiv:2610.37642 | Metacognitive Decoding: Efficient Inference for Diffusion Language Agents | 2026-10-27 |  | 0 | 6 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2610.37642) |
 | 420 | 1 | 4 | 6 | arXiv:2505.15909 | Is (Selective) Round-To-Nearest Quantization All You Need? | 2025-05-21 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2505.15909) |
 | 421 | 102 | 4 | 6 | arXiv:2606.17999 | VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination | 2026-06-16 | arXiv.org | 2 | 8 | inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・特徴キャッシュ・KVキャッシュ・並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2606.17999) |
-| 422 | 1 | 4 | 6 | DOI:10.1016/j.sysarc.2025.103548 | A new fixed-point simulation methodology for on-device AI based on large language models | 2025-11-01 | Journal of systems architecture | 1 | 6 | CPUオフロード / 活性化疎性 / 階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.sysarc.2025.103548) |
+| 422 | 2 | 4 | 6 | DOI:10.1016/j.sysarc.2025.103548 | A new fixed-point simulation methodology for on-device AI based on large language models | 2025-11-01 | Journal of systems architecture | 2 | 6 | CPUオフロード / 活性化疎性 / 階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.sysarc.2025.103548) |
 | 423 | 101 | 4 | 6 | arXiv:2609.39765 | MemCodex: Self-Programming Hierarchical Memory for Language Agents | 2026-09-30 |  | 1 | 6 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39765) |
 | 424 | 3 | 4 | 6 | DOI:10.1007/978-3-031-35995-8_39 | A Contrastive Self-distillation BERT with Kernel Alignment-Based Inference | 2023 | International Conference on Conceptual Structures | 3 | 6 |  | [source](https://doi.org/10.1007/978-3-031-35995-8_39) |
 | 425 | 111 | 4 | 6 | arXiv:2606.30553 | COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices | 2026-06-01 | International Symposium on Computer Architecture | 1 | 6 | cpu-offload, inference-systems | [source](https://arxiv.org/abs/2606.30553) |
