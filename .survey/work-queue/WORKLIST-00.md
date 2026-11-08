@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-08T10:21:38+00:00`
+Generated: `2026-11-08T10:44:59+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -451,7 +451,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 368 | 5 | 4 | 7 | arXiv:2506.05871 | BestServe: Serving Strategies with Optimal Goodput in Collocation and Disaggregation Architectures | 2025-06-06 | arXiv.org | 5 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2506.05871) |
 | 369 | 26 | 4 | 7 | arXiv:2509.03871 | A Comprehensive Survey on Trustworthiness in Reasoning with Large Language Models | 2025-09-04 | arXiv.org | 26 | 7 |  | [source](https://arxiv.org/abs/2509.03871) |
 | 370 | 101 | 4 | 7 | arXiv:2605.11111 | ShardTensor: Domain Parallelism for Scientific Machine Learning | 2026-05-11 | arXiv.org | 1 | 7 | PyTorch 2 torch.compileの設計と評価を報告する論文。, distributed attention / sequence parallelism / blockwise attention / long-context transformers, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.11111) |
-| 371 | 10 | 4 | 7 | DOI:10.1016/j.sysarc.2026.103839 | AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs | 2026-08-01 | Journal of systems architecture | 0 | 7 | large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, on-device LLM / heterogeneous inference / NPU offloading, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.sysarc.2026.103839) |
+| 371 | 10 | 4 | 7 | DOI:10.1016/j.future.2025.108352 | TPQA: Efficient attention architecture with task-aware pattern-guided quantization | 2025-12-01 | Future generations computer systems | 0 | 7 | Sparse Attention, long-context inference / dynamic sparse attention / prefill acceleration, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.future.2025.108352) |
 | 372 | 4 | 4 | 7 | arXiv:2510.01581 | Think Right: Learning to Mitigate Under-Over Thinking via Adaptive, Attentive Compression | 2025-10-02 | arXiv.org | 4 | 7 |  | [source](https://arxiv.org/abs/2510.01581) |
 | 373 | 116 | 4 | 7 | arXiv:2602.07854 | Geometry-Aware Rotary Position Embedding for Consistent Video World Model | 2026-02-08 | arXiv.org | 16 | 7 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention | [source](https://arxiv.org/abs/2602.07854) |
 | 374 | 102 | 4 | 7 | arXiv:2602.22543 | Ruyi2 Technical Report | 2026-02-26 | arXiv.org | 2 | 7 | Conditional Computation, 投機的デコード / 分布保存型デコード高速化 | [source](https://arxiv.org/abs/2602.22543) |

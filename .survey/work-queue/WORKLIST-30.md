@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-08T10:21:38+00:00`
+Generated: `2026-11-08T10:44:59+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -451,7 +451,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 368 | 4 | 4 | 7 | arXiv:2506.10205 | AWP: Activation-Aware Weight Pruning and Quantization with Projected Gradient Descent | 2025-06-11 | arXiv.org | 4 | 7 | post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2506.10205) |
 | 369 | 2 | 4 | 7 | DOI:10.1088/2632-2153/addc33 | WEISS: Wasserstein efficient sampling strategy for LLMs in drug design | 2025-05-22 | Machine Learning: Science and Technology | 2 | 7 | Inference / Parallel and Non-Autoregressive Decoding, Speculative Decoding, inference-systems, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.1088/2632-2153/addc33) |
 | 370 | 101 | 4 | 7 | arXiv:2606.14350 | Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems | 2026-06-12 | IEEE International Conference on Cloud Computing | 1 | 7 | LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2606.14350) |
-| 371 | 10 | 4 | 7 | arXiv:2610.06361 | Capability-Driven Self-Evolution of Agent Memory | 2026-10-05 |  | 0 | 7 | Inference / Agent Memory and Context Management, agentic inference / persistent memory | [source](https://arxiv.org/abs/2610.06361) |
+| 371 | 10 | 4 | 7 | DOI:10.1016/j.sysarc.2026.103839 | AscQLUT: A decode-fused INT4 GEMM Kernel for Ascend NPUs | 2026-08-01 | Journal of systems architecture | 0 | 7 | large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, on-device LLM / heterogeneous inference / NPU offloading, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.sysarc.2026.103839) |
 | 372 | 1 | 4 | 7 | arXiv:2407.18601 | Reorganizing attention-space geometry with expressive attention | 2024-07-26 |  | 1 | 7 | inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2407.18601) |
 | 373 | 104 | 4 | 7 | arXiv:2604.26940 | Select to Think: Unlocking SLM Potential with Local Sufficiency | 2026-04-29 | arXiv.org | 4 | 7 | inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2604.26940) |
 | 374 | 102 | 4 | 7 | arXiv:2604.22577 | QuantClaw: Precision Where It Matters for OpenClaw | 2026-04-24 | arXiv.org | 2 | 8 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2604.22577) |
