@@ -1,26 +1,13 @@
 {
   "schema_version": 3,
-  "checked_at": "2026-11-08T00:16:24.795909+00:00",
+  "checked_at": "2026-11-08T02:45:23.831333+00:00",
   "mode": "apply",
   "job_retention_days": 7,
   "transport_retention_days": 1,
-  "candidate_count": 10,
-  "candidate_counts_by_kind": {
-    "terminal_job": 10
-  },
-  "deleted_count": 10,
-  "deleted": [
-    ".survey/work-queue/jobs/job-research-03a0e3cf706ddb8b.json",
-    ".survey/work-queue/jobs/job-research-1aa659d89d8c144d.json",
-    ".survey/work-queue/jobs/job-research-1b38b34bd4f516f9.json",
-    ".survey/work-queue/jobs/job-research-2bb79eca69053f75.json",
-    ".survey/work-queue/jobs/job-research-6ddbf33391a6c608.json",
-    ".survey/work-queue/jobs/job-research-a672ddbaf3af3582.json",
-    ".survey/work-queue/jobs/job-research-aee70f0b3c5dd213.json",
-    ".survey/work-queue/jobs/job-research-b7a2adb5677451d0.json",
-    ".survey/work-queue/jobs/job-research-e25f91c599edf0f1.json",
-    ".survey/work-queue/jobs/job-research-fd4197a6698b6ebb.json"
-  ],
+  "candidate_count": 0,
+  "candidate_counts_by_kind": {},
+  "deleted_count": 0,
+  "deleted": [],
   "skipped": [
     {
       "path": ".survey/work-queue/submissions/libimp-015dddfd0caf85e1-pre01-sub01.json",
@@ -184,6 +171,14 @@
     },
     {
       "path": ".survey/work-queue/submissions/libimp-5253284e10b4f67b-pre01-sub01.json",
+      "reason": "submission_not_settled"
+    },
+    {
+      "path": ".survey/work-queue/submissions/libimp-5334a5e2c8df8c21-pre01-sub01.json",
+      "reason": "submission_not_settled"
+    },
+    {
+      "path": ".survey/work-queue/submissions/libimp-5334a5e2c8df8c21-pre01-sub02.json",
       "reason": "submission_not_settled"
     },
     {
