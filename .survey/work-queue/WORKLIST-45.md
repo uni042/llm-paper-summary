@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-08T07:28:21+00:00`
+Generated: `2026-11-08T08:10:25+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -384,7 +384,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 301 | 102 | 4 | 9 | arXiv:2601.23027 | Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning | 2026-01-30 | arXiv.org | 2 | 9 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2601.23027) |
 | 302 | 10 | 4 | 9 | arXiv:2609.10372 | PACE: Perceived-Latency-Aware Cascading Service Routing and Filler Control for QoE-Efficient Retrieval-Augmented Dialogue Serving | 2026-09-09 |  | 0 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.10372) |
 | 303 | 0 | 4 | 9 | arXiv:2502.12784 | SparkAttention: high-performance multi-head attention for large models on Volta GPU architecture | 2025-02-01 | CCF Transactions on High Performance Computing | 0 | 9 | LLM Serving / Scheduling / Disaggregation, Transformer inference runtime and variable-length request batching, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2502.12784) |
-| 304 | 101 | 4 | 9 | arXiv:2608.06146 | PaDoc: Layout-Grounded Parallel Decoding for Document Parsing | 2026-08-06 |  | 1 | 9 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.06146) |
+| 304 | 101 | 4 | 9 | arXiv:2608.06146 | PaDoc: Layout-Grounded Parallel Decoding for Document Parsing | 2026-08-06 | arXiv.org | 1 | 9 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.06146) |
 | 305 | 10 | 4 | 9 | arXiv:2608.15810 | Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State | 2026-08-16 | arXiv.org | 0 | 10 | Quantization × MoE × Offload, kv-cache-offload-recomputation, offload-hierarchical-memory, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2608.15810) |
 | 306 | 102 | 4 | 9 | arXiv:2607.01308 | Cache Merging as a Convergent Replicated State for Multi-Agent Latent Reasoning | 2026-07-01 | arXiv.org | 2 | 9 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, agent serving / KV-cache reuse / latent communication / DAG workflows | [source](https://arxiv.org/abs/2607.01308) |
 | 307 | 101 | 4 | 9 | arXiv:2610.28577 | Cache Engineering for Agents | 2026-10-20 |  | 1 | 9 | agentic serving / KV cache eviction / persistent multi-turn serving, kv-cache-low-rank-channel-compression, kv-cache-offloading, llm-serving-scheduling-disaggregation, 位置非依存キャッシュ / PagedAttention / 階層KVキャッシュ | [source](https://arxiv.org/abs/2610.28577) |
