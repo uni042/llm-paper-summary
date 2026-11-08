@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-07T21:03:43+00:00",
-  "record_count": 5598,
+  "updated_at": "2026-11-08T01:05:07+00:00",
+  "record_count": 5599,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86425,6 +86425,21 @@
       ],
       "borderline_recheck_count": 0,
       "title": "Hydra: Bidirectional State Space Models Through Generalized Matrix Mixers"
+    },
+    "arXiv:2510.13170": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2510.13170",
+      "identity_tokens": [
+        "arXiv:2510.13170"
+      ],
+      "reason": "思考連鎖の教師あり・強化学習ファインチューニングを認知的なSix Thinking Hatsに沿って分類するサーベイ。LLM学習には関連するが、推論高速化や計算資源削減の直接評価が主題ではない。",
+      "first_checked_at": "2026-11-08T01:05:07+00:00",
+      "last_checked_at": "2026-11-08T01:05:07+00:00",
+      "linked_from": [
+        "worker-worklist-00 discovery rank 98"
+      ],
+      "borderline_recheck_count": 0,
+      "title": "Putting on the Thinking Hats: A Survey on Chain of Thought Fine-tuning from the Perspective of Human Reasoning Mechanism"
     }
   }
 }

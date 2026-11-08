@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-5334a5e2c8df8c21-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2510.13170",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2510.13170",
+    "identity_tokens": [
+      "arXiv:2510.13170"
+    ],
+    "reason": "思考連鎖の教師あり・強化学習ファインチューニングを認知的なSix Thinking Hatsに沿って分類するサーベイ。LLM学習には関連するが、推論高速化や計算資源削減の直接評価が主題ではない。",
+    "first_checked_at": "2026-11-08T01:05:07+00:00",
+    "last_checked_at": "2026-11-08T01:05:07+00:00",
+    "linked_from": [
+      "worker-worklist-00 discovery rank 98"
+    ],
+    "borderline_recheck_count": 0,
+    "title": "Putting on the Thinking Hats: A Survey on Chain of Thought Fine-tuning from the Perspective of Human Reasoning Mechanism"
+  },
+  "processed_at": "2026-11-08T01:05:07+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-5334a5e2c8df",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}
