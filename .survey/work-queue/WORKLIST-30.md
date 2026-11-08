@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-08T20:27:10+00:00`
+Generated: `2026-11-08T20:44:24+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -202,7 +202,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 119 | 10 | 6 | 7 | arXiv:2611.02508 | AttentionIndex: Accelerating Learned Sparse Attention with a Causal Inverted-File Index | 2026-11-02 |  | 0 | 7 | 13-sparse-attention, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2611.02508) |
 | 120 | 10 | 6 | 7 | arXiv:2603.13438 | Draft-and-Target Sampling for Video Generation Policy | 2026-03-13 | arXiv.org | 0 | 7 | Speculative Decoding, survey-speculative-decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2603.13438) |
 | 121 | 1 | 6 | 7 | arXiv:2412.11741 | CSR:Achieving 1 Bit Key-Value Cache via Sparse Representation | 2024-12-16 | AAAI Conference on Artificial Intelligence | 1 | 7 | 07-kv-cache-optimization-compression, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, KVキャッシュ最適化／適応圧縮, inference-systems | [source](https://arxiv.org/abs/2412.11741) |
-| 122 | 10 | 6 | 6 | arXiv:2610.12570 | Contextual Correction of Parallel Drafts for Speculative Decoding | 2026-10-08 |  | 0 | 6 | inference-systems, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号 / LLMサービング・ベンチマーク | [source](https://arxiv.org/abs/2610.12570) |
+| 122 | 101 | 6 | 6 | arXiv:2610.12570 | Contextual Correction of Parallel Drafts for Speculative Decoding | 2026-10-08 |  | 1 | 6 | inference-systems, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号 / LLMサービング・ベンチマーク | [source](https://arxiv.org/abs/2610.12570) |
 | 123 | 10 | 6 | 6 | DOI:10.1109/IWCMC69287.2026.11579993 | Semantics-Aware Scheduling for Low-Latency LLM Serving in Heterogeneous Computing Networks | 2026-06-01 | International Conference on Wireless Communications and Mobile Computing | 0 | 6 | LLMサービング／スケジューリング, LLMサービング／予測型スケジューリング, inference-systems | [source](https://doi.org/10.1109/IWCMC69287.2026.11579993) |
 | 124 | 2 | 6 | 6 | arXiv:2405.13358 | AdpQ: A Zero-shot Calibration Free Adaptive Post Training Quantization Method for LLMs | 2024-05-22 | arXiv.org | 2 | 6 | Weight Quantization / Compression, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2405.13358) |
 | 125 | 101 | 6 | 6 | DOI:10.3389/fcomp.2026.1873627 | Formal schedulability analysis for LLM inference: TTFT and TBT deadline guarantees via response-time theory | 2026-06-29 | Frontiers of Computer Science | 1 | 6 | LLM Serving / Scheduling / Disaggregation, LLM serving / energy management / cluster scheduling / dynamic reconfiguration | [source](https://doi.org/10.3389/fcomp.2026.1873627) |
