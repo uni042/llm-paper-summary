@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-08T13:46:43+00:00`
+Generated: `2026-11-08T14:21:23+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -333,7 +333,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 250 | 36 | 5 | 5 | arXiv:2506.12860 | QFFT, Question-Free Fine-Tuning for Adaptive Reasoning | 2025-06-15 | Neural Information Processing Systems | 26 | 5 |  | [source](https://arxiv.org/abs/2506.12860) |
 | 251 | 3 | 5 | 5 | arXiv:2508.20293 | Beacon: Post-Training Quantization With Integrated Grid Selection | 2025-08-27 | IEEE Signal Processing Letters | 3 | 5 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2508.20293) |
 | 252 | 102 | 5 | 5 | arXiv:2604.10946 | Learning to Adapt: In-Context Learning Beyond Stationarity | 2026-04-13 | arXiv.org | 2 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2604.10946) |
-| 253 | 10 | 5 | 5 | arXiv:2606.18502 | Towards Scalable Customization and Deployment of Multi-Agent Systems for Enterprise Applications | 2026-06-16 | arXiv.org | 0 | 5 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2606.18502) |
+| 253 | 10 | 5 | 5 | arXiv:2604.15764 | When Do Early-Exit Networks Generalize? A PAC-Bayesian Theory of Adaptive Depth | 2026-04-17 | arXiv.org | 0 | 5 | Conditional Computation | [source](https://arxiv.org/abs/2604.15764) |
 | 254 | 0 | 5 | 5 | SemanticScholar:23c569d8cf5e2c4f580c6691871150023011279f | R EASONING W ITHOUT S ELF -D OUBT : M ORE E FFI - CIENT C HAIN - OF -T HOUGHT T HROUGH C ERTAINTY P ROBING |  |  | 0 | 5 | LLM Serving / Scheduling / Disaggregation, LLM serving scheduling / chunked prefill / iteration-level scheduling / pipeline parallelism | [source](https://www.semanticscholar.org/paper/23c569d8cf5e2c4f580c6691871150023011279f) |
 | 255 | 4 | 4 | 21 | arXiv:2503.12167 | PLM: Efficient Peripheral Language Models Hardware-Co-Designed for Ubiquitous Computing | 2025-03-15 | arXiv.org | 4 | 21 | 03-attention-kernels, CPUオフロード / 活性化疎性 / 階層メモリ, Edge／on-device MoE, LLM Serving / Scheduling / Disaggregation, edge-on-device-llm-systems, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, survey-edge-llm, オフロード／階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2503.12167) |
 | 256 | 4 | 4 | 18 | DOI:10.1109/TCCN.2026.3694872 | Efficient Edge Deployment of Mixture-of-Experts Models With Hybrid Expert Quantization | 2026 | IEEE Transactions on Cognitive Communications and Networking | 4 | 18 | Adaptive Expert Computation / Compression, CPUオフロード / 活性化疎性 / 階層メモリ, Edge／on-device MoE, KV Cache Optimization / Compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, MoE inference / on-device LLM / expert offloading / expert caching, MoE inference / task-specific expert pruning / sparse-to-dense conversion, Quantization × MoE × Offload, オフロード／階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/TCCN.2026.3694872) |
