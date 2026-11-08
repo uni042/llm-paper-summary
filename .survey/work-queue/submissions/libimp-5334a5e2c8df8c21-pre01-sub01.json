@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "LatentLLM: Activation-Aware Transform to Multi-Head Latent Attention",
+      "source_url": "https://doi.org/10.1609/aaai.v40i27.39425",
+      "year": 2026,
+      "published": "2026-03-14",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern foundation models such as large language models (LLMs) require a massive amount of computational and memory resources. We propose a new framework to convert such LLMs into a reduced-dimension latent structure. Our method extends a local activation-aware tensor decomposition to a global attention-aware joint tensor decomposition. Our framework can significantly improve the model accuracy over the existing model compression methods when reducing the latent dimension to realize computationally/memory-efficient LLMs. We show the benefit on several benchmark including multi-modal reasoning tasks.",
+      "identifiers": [
+        "SemanticScholar:4796adda0ddc0dc7c8ceeccf8240a777bd9b0677"
+      ],
+      "semantic_scholar_id": "4796adda0ddc0dc7c8ceeccf8240a777bd9b0677",
+      "doi": "10.1609/aaai.v40i27.39425",
+      "canonical_id": "DOI:10.1609/aaai.v40i27.39425",
+      "authors": [
+        "T. Koike-Akino",
+        "Xiang-Yu Chen",
+        "Jing Liu",
+        "Ye Wang",
+        "P. Wang",
+        "Matthew Brand"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 239,
+        "matched_prestigious_venue": null
+      },
+      "reason": "活性値と注意構造を考慮した結合テンソル分解により既存LLMを低次元潜在注意構造へ変換する。計算・メモリ効率化を目的とし、AAAI公式要旨でモデル圧縮性能を確認。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "AdaptR1: Reinforcement Learning Based Adaptive Interleaved Thinking in Multi-hop Question Answering",
+      "source_url": "https://arxiv.org/abs/2605.31062",
+      "year": 2026,
+      "published": "2026-05-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable performance in complex reasoning tasks through Chain-of-Thought (CoT) prompting. However, this approach often leads to ``over-thinking,''where models generate unnecessarily long reasoning traces for simple queries and incur avoidable inference cost. While recent work has explored adaptive reasoning, existing methods typically make a single query-level decision about whether to reason. This overlooks the dynamic nature of multi-step tasks, where the need for explicit reasoning varies across intermediate stages. To address this limitation, we introduce AdaptR1, a Reinforcement Learning (RL) based framework for adaptive interleaved thinking in multi-hop Question Answering (QA). Unlike previous approaches that require Supervised Fine-Tuning (SFT) for cold-start initialization, AdaptR1 uses a fully RL-based strategy with a quality-gated efficiency reward to dynamically allocate reasoning budgets at each step. Under the Graph-R1 setting, AdaptR1 reduces average think tokens by 69.71\\%, with a 90.35\\% reduction on HotpotQA, while maintaining performance comparable to or better than standard baselines. Furthermore, our analysis reveals that overthinking in multi-hop reasoning is not uniformly distributed but occurs predominantly during the initial planning stages, highlighting the effectiveness of step-wise adaptive budget allocation.",
+      "identifiers": [
+        "SemanticScholar:61988edfa1728f01dc59e9645eba7d318b3a9ed7"
+      ],
+      "semantic_scholar_id": "61988edfa1728f01dc59e9645eba7d318b3a9ed7",
+      "canonical_id": "arXiv:2605.31062",
+      "arxiv_id": "2605.31062",
+      "doi": "10.48550/arXiv.2605.31062",
+      "authors": [
+        "Yu-Xin Wang",
+        "Jia-Hao Lu",
+        "Qi-Feng Wu",
+        "Shi-Cheng Fang",
+        "Chuan-Yuan Tan",
+        "Yi-Ning Zheng",
+        "Xuan-Jing Huang",
+        "Xi-Peng Qiu"
+      ],
+      "priority": 101,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 101,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 163,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多段QAの各推論ステップで思考トークン予算を強化学習により調整する。Graph-R1条件で平均思考トークン69.71%削減し、品質を維持または改善と一次要旨に記載。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Revisiting Adaptive Rounding with Vectorized Reparameterization for LLM Quantization",
+      "source_url": "https://arxiv.org/abs/2602.02151",
+      "year": 2026,
+      "published": "2026-02-02",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Adaptive Rounding has emerged as an alternative to round-to-nearest (RTN) for post-training quantization by enabling cross-element error cancellation. Yet, dense and element-wise rounding matrices are prohibitively expensive for billion-parameter large language models (LLMs). We revisit adaptive rounding from an efficiency perspective and propose VQRound, a parameter-efficient optimization framework that reparameterizes the rounding matrix into a compact codebook. Unlike low-rank alternatives, VQRound minimizes the element-wise worst-case error under $L_\\infty$ norm, which is critical for handling heavy-tailed weight distributions in LLMs. Beyond reparameterization, we identify rounding initialization as a decisive factor and develop a lightweight end-to-end finetuning pipeline that optimizes codebooks across all layers using only 128 samples. Extensive experiments on OPT, LLaMA, LLaMA2, and Qwen3 models demonstrate that VQRound achieves better convergence than traditional adaptive rounding at the same number of steps while using as little as 0.2% of the trainable parameters. Our results show that adaptive rounding can be made both scalable and fast-fitting. The code is available at https://github.com/zhoustan/VQRound.",
+      "identifiers": [
+        "SemanticScholar:28f3d916a10062b3a7dd4628708c5adfca77c505"
+      ],
+      "semantic_scholar_id": "28f3d916a10062b3a7dd4628708c5adfca77c505",
+      "canonical_id": "arXiv:2602.02151",
+      "arxiv_id": "2602.02151",
+      "doi": "10.48550/arXiv.2602.02151",
+      "authors": [
+        "Yuli Zhou",
+        "Qingxuan Chen",
+        "Luca Benini",
+        "Guo-Lei Sun",
+        "Yawei Li"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 279,
+        "matched_prestigious_venue": null
+      },
+      "reason": "VQRoundは丸め行列を小型コードブックに再パラメータ化し、L∞誤差を重視したLLM事後量子化を行う。128サンプルの微調整、従来比0.2%の学習パラメータでの最適化を一次要旨で確認。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "CoVeR: Coverage-Based Token Pruning for Multi-View 3D Reasoning in VLMs",
+      "source_url": "https://arxiv.org/abs/2609.08345",
+      "year": 2026,
+      "published": "2026-09-08",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Representing a 3D scene as multi-view images allows 2D VLMs to reason in 3D by reusing priors from pre-training, sidestepping the scarcity of annotated 3D data. However, it produces thousands of redundant visual tokens whose cost grows with every view. Existing visual token pruners fall into two families, each limited in the 3D multi-view setting. Learned importance methods rank tokens by attention or encoder features; because redundancy here is fundamentally spatial, they keep near-duplicate tokens from a few prominent regions and leave most of the scene unrepresented. Voxelization methods improve spatial coverage but cannot enforce an exact token budget and saturate as multi-view observations overlap in 3D, capping retention well below the target. We show that spatial coverage is associated with 3D reasoning performance and introduce CoVeR, a deterministic, training-free selector that uses only token coordinates, with no learned signals. CoVeR selects tokens that collectively cover every region of the scene, and solves the limitations of both families: it enforces an exact per-scene budget, breaks the voxelization saturation plateau, and avoids the near-duplicate selections of learned importance. Extensive experiments show CoVeR outperforms prior SOTAs on all three 3D reasoning benchmarks and generalizes as a plug-and-play module tested across four VLMs. Notably, with only $\\approx$8% of visual tokens, it preserves 93.5% of full-token performance, surpassing SOTA by 3.9 percentage points on average across benchmarks.",
+      "identifiers": [
+        "SemanticScholar:998c049d56b14758126b699c347b7cc1bf55e151"
+      ],
+      "semantic_scholar_id": "998c049d56b14758126b699c347b7cc1bf55e151",
+      "canonical_id": "arXiv:2609.08345",
+      "arxiv_id": "2609.08345",
+      "authors": [
+        "Nhat-Tan Bui",
+        "Varshini Elangovan",
+        "Arun Reddy Anugu",
+        "Sreyas Mohan",
+        "Wei Ye",
+        "Di-Lin Wang",
+        "J.-Q. Huang",
+        "Rakesh Ranjan",
+        "Aviral Chharia",
+        "Fernando de la Torre"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 61,
+        "matched_prestigious_venue": null
+      },
+      "reason": "多視点3D入力の視覚トークンを空間被覆に基づき訓練不要で選択し、厳密なトークン予算を満たす。一次arXiv要旨で約8%のトークン保持時に元性能の93.5%を維持と報告。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Nucleus Speculative Decoding: Plausibility-Aware Verification Beyond Exact Distribution",
+      "source_url": "https://arxiv.org/abs/2610.07822",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Speculative decoding (SD) accelerates autoregressive generation by letting a lightweight draft model propose tokens that a target model verifies in parallel. However, its standard acceptance rule, designed for exact distribution correction, rejects tokens to which the draft assigns excess probability, even when the target finds them highly plausible: over half of the rejected tokens lie inside the target's own nucleus. Since verification dominates the cost of SD, these rejections waste its most expensive operation. We introduce Nucleus Speculative Decoding (NSD), a plausibility-aware verification rule that accepts a draft token if it passes the standard test or belongs to the target nucleus, while keeping SD's residual correction and bonus sampling unchanged. NSD requires no training or extra forward passes and is compatible with any drafting mechanism. Because it preserves SD's recovery rule, its deviation from the target distribution can be characterized exactly: we prove that the single-step total variation error equals the draft's excess probability inside the target nucleus, which is precisely NSD's gain in acceptance probability. NSD thus trades fidelity for acceptance at an exact one-to-one rate, and we further derive sequence-level fidelity bounds. Across six target models and five mathematical reasoning and code generation benchmarks, NSD achieves the highest throughput among all compared methods, with speedups of up to $5.16\\times$ over autoregressive decoding and $3.15\\times$ over standard SD, while improving accuracy over SD on five of the six models and nearly halving verification time per output token. Our code is available at https://github.com/EIT-NLP/Nucleus-Speculative-Decoding.",
+      "identifiers": [
+        "SemanticScholar:80d792af6aecdbc491398cfa12fafbaf3f03b889"
+      ],
+      "semantic_scholar_id": "80d792af6aecdbc491398cfa12fafbaf3f03b889",
+      "canonical_id": "arXiv:2610.07822",
+      "arxiv_id": "2610.07822",
+      "authors": [
+        "Shu-Hao Li",
+        "Fang-Hua Ye",
+        "Wan-Yu Lin",
+        "Tian-Yu Yuan",
+        "Xiao-Yu Shen"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 33,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ターゲットモデルのnucleus内にあるdraftトークンを追加受理する緩和型投機復号。元分布との乖離に理論上限を与え、通常復号比最大5.16倍、標準投機復号比最大3.15倍のスループット改善を報告。厳密分布保存ではない点に注意。",
+      "library_body_check": "primary_abstract_screened; full_body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-5334a5e2c8df",
+    "round": "libimp-5334a5e2c8df8c21-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 8,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-5334a5e2c8df8c21-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-5334a5e2c8df8c21-pre01.json",
+    "receipt": "sha256:ec6bebb847f38a9ffe4c0e648fb92aad76272a734e1429df8f3fb2590ddf1a8e"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-5334a5e2c8df",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
