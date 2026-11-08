@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-09 00:21:22 JST**
+> 自動生成: **2026-11-09 00:50:46 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **571** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-07 11:31:51 JST** |
-| 最終Discovery探索完了 | **11-08 09:00:00 JST** |
+| 最終Discovery探索完了 | **11-09 00:30:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -51,9 +51,9 @@
 
 | 指標 | 件数 |
 |---|---:|
-| 探索候補総数 | **148999** |
+| 探索候補総数 | **149001** |
 | 処理済み | **21911** |
-| 未処理Discovery候補 | **127088** |
+| 未処理Discovery候補 | **127090** |
 | 収録済み | **3819** |
 | Research / Audit候補へ昇格済み | **168** |
 | 無関係として除外 | **12537** |
@@ -63,14 +63,14 @@
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **127088** |
+| 未処理候補（フィルタ前） | **127090** |
 | 機械規則による暫定隔離 | **2157** |
 | 拡張機械規則による追加隔離 | **1379** |
-| 機械規則通過後 | **123552** |
-| 系統内前方引用スコアによる選抜保留 | **117374** |
-| 暫定隔離合計 | **120910** |
+| 機械規則通過後 | **123554** |
+| 系統内前方引用スコアによる選抜保留 | **117376** |
+| 暫定隔離合計 | **120912** |
 | **読解可能候補（隔離後）** | **6178** |
-| 前方引用が同一系統で2本以上の候補 | **11779** |
+| 前方引用が同一系統で2本以上の候補 | **11780** |
 | 前方引用が同一系統で3本以上の候補 | **4193** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
@@ -88,8 +88,8 @@
 - 全数との差は暫定隔離数。元候補・引用プール・relevance判定台帳は削除せず、現在の候補identityから再計算する。
 
 - 消化率: **14.7%**
-- 現在の生在庫: 後方references **58804件** / 前方引用 **69602件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **127692件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 現在の生在庫: 後方references **58804件** / 前方引用 **69604件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
+- 前方・後方を統合してidentity重複を除いた未処理面は **127694件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -101,14 +101,14 @@
 | provider巡回可能 | **3819** |
 | provider巡回不能 | **7** |
 | 1周以上完了 | **3800** |
-| 巡回中 | **323** |
+| 巡回中 | **299** |
 | 未巡回 | **0** |
 | 今回run開始時due | **329** |
-| 前方引用から保持中の未処理候補 | **69602** |
-| エラー状態保持seed | **302** |
+| 前方引用から保持中の未処理候補 | **69604** |
+| エラー状態保持seed | **278** |
 
 - 初回カバレッジ完了率: **99.5%**
-- state最終更新: **11-08 23:31:29 JST**
+- state最終更新: **11-09 00:42:56 JST**
 - 1周完了後も年齢別cadenceで先頭ページから再巡回し、後から増えた被引用論文を補足します。
 
 ## 日次メンテナンス状態
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-08 12:00:04 JST（12時間21分前）** |
+| 最終maintenance完了 | **11-08 12:00:04 JST（12時間50分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **0** |
-| 直近6hのDiscovery本文確認・分類 | **0** |
+| 直近6hのDiscovery run | **1** |
+| 直近6hのDiscovery本文確認・分類 | **10** |
 | 最終Research完了 | **11-07 11:31:51 JST** |
-| 最終Discovery完了 | **11-08 09:00:00 JST** |
+| 最終Discovery完了 | **11-09 00:30:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-07 11:31:51 JST** / worker scheduled-chat-30 / run 20261107-1127-scheduled-chat-30/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/file_0000000070c48206b18d002cfee076fe--2025-2509.25155-npu-causal-operators-under16kb-reaudit-20261107-1130-scheduled-chat-30-r01.json
-- Discovery: **11-08 09:00:00 JST** / worker scheduled-chat-00 / run 20261108-0900-scheduled-chat-00/r01
-  - 本文確認・分類 **10件** / accept **9件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/waiting/discovery/file_000000004a248206b89ca2fcf4c1de30--discovery-20261108-0900-scheduled-chat-00-r01-exact.json
+- Discovery: **11-09 00:30:00 JST** / worker scheduled-chat-30 / run 20261109-0030-scheduled-chat-30/r01
+  - 本文確認・分類 **10件** / accept **10件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/file_00000000030081f58b380825a8f3f568--discovery-20261109-0030-scheduled-chat-30-r01.json
 
 ### Codex探索成果の反映状況
 
