@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-09T13:35:33+00:00`
+Generated: `2026-11-09T14:49:02+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -463,7 +463,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 380 | 10 | 4 | 7 | arXiv:2611.03899 | EpiLoRA: Fusing Many LoRA Adapters into Low-Precision GEMMs for Serving and RL | 2026-11-02 |  | 0 | 7 | 02-hardware-accelerators, kv-cache-offload-recomputation, llm-serving-scheduling-disaggregation, many-adapter LLM serving / LoRA serving / inference scheduling, moe-inference-expert-placement-caching | [source](https://arxiv.org/abs/2611.03899) |
 | 381 | 4 | 4 | 7 | arXiv:2511.13274 | KForge: Program Synthesis for Diverse AI Hardware Accelerators | 2025-11-17 | arXiv.org | 4 | 8 | 02-hardware-accelerators, LLM Serving / Scheduling / Disaggregation, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2511.13274) |
 | 382 | 106 | 4 | 7 | arXiv:2605.29662 | SAFE-Pruner: Semantic Attention-Guided Future-Aware Token Pruning for Efficient Vision-Language-Action Manipulation | 2026-05-28 | arXiv.org | 6 | 7 | LLM Serving / Scheduling / Disaggregation, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.29662) |
-| 383 | 101 | 4 | 7 | arXiv:2610.06361 | Capability-Driven Self-Evolution of Agent Memory | 2026-10-05 |  | 1 | 7 | Inference / Agent Memory and Context Management, agentic inference / persistent memory | [source](https://arxiv.org/abs/2610.06361) |
+| 383 | 101 | 4 | 7 | arXiv:2606.14350 | Design Methodology and Performance Trade-offs Management for Distributed and Compound AI Systems | 2026-06-12 | IEEE International Conference on Cloud Computing | 1 | 7 | LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection | [source](https://arxiv.org/abs/2606.14350) |
 | 384 | 10 | 4 | 7 | arXiv:2610.36153 | Stratum: Repository Memory for Coding Agents Beyond the Context Window | 2026-10-26 |  | 0 | 7 | 10-kv-cache-offload-recomputation, KV Cache Offload / Recomputation, Long-context serving / KV cache benchmark | [source](https://arxiv.org/abs/2610.36153) |
 | 385 | 0 | 4 | 7 | SemanticScholar:1d51b9b46e651f3415d8a68d6ac38fa75d1b2133 | Flashback: Memory Mechanism for Enhancing Memory Efficiency and Speed in Deep Sequential Models | 2025 | International Conference on Computational Linguistics | 0 | 7 | sparse attention / long-context Transformer, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/1d51b9b46e651f3415d8a68d6ac38fa75d1b2133) |
 | 386 | 104 | 4 | 7 | arXiv:2609.14005 | StepAudio 3 Realtime Technical Report | 2026-09-12 |  | 4 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.14005) |
