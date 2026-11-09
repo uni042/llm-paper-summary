@@ -32,6 +32,8 @@ worker_completed_at: "2026-11-09T16:47:00+09:00"
 quality_self_review_version: "2026-10-07"
 quality_self_review_passed: true
 returned_research_repair: true
+last_audited: null
+audit_version: 0
 ---
 
 # Keeping up with Large Language Models：演算・通信・費用を統合したLLMシステムモデル
