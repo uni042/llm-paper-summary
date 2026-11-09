@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-10 06:40:32 JST**
+> 自動生成: **2026-11-10 06:55:31 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -13,8 +13,8 @@
 |---|---:|
 | 収録候補論文数 | **571** |
 | 未claim Research job | **571** |
-| 直近24hのResearch処理完了 | **0** |
-| 最終Research処理完了 | **11-07 11:31:51 JST** |
+| 直近24hのResearch処理完了 | **1** |
+| 最終Research処理完了 | **11-09 15:32:38 JST** |
 | 最終Discovery探索完了 | **11-09 00:30:00 JST** |
 | 整合性異常 | **0** |
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-09 12:04:32 JST（18時間36分前）** |
+| 最終maintenance完了 | **11-09 12:04:32 JST（18時間50分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -139,13 +139,13 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 直近6hのResearch完了 | **0** |
 | 直近6hのDiscovery run | **0** |
 | 直近6hのDiscovery本文確認・分類 | **0** |
-| 最終Research完了 | **11-07 11:31:51 JST** |
+| 最終Research完了 | **11-09 15:32:38 JST** |
 | 最終Discovery完了 | **11-09 00:30:00 JST** |
 
 ### 最新Library-first run
 
-- Research: **11-07 11:31:51 JST** / worker scheduled-chat-30 / run 20261107-1127-scheduled-chat-30/r01 / 成果 **1件**
-  - evidence: .survey/import-inbox/results/research/file_0000000070c48206b18d002cfee076fe--2025-2509.25155-npu-causal-operators-under16kb-reaudit-20261107-1130-scheduled-chat-30-r01.json
+- Research: **11-09 15:32:38 JST** / worker scheduled-chat-30 / run 20261109-1530-scheduled-chat-30/r01 / 成果 **1件**
+  - evidence: .survey/import-inbox/results/research/file_00000000d7b88230867dd25614c61dbc--2024-2412.10319-scbench-returned-repair-20261109-1530-scheduled-chat-30-r01.json
 - Discovery: **11-09 00:30:00 JST** / worker scheduled-chat-30 / run 20261109-0030-scheduled-chat-30/r01
   - 本文確認・分類 **10件** / accept **10件** / unrelated+borderline **0件**
   - evidence: .survey/import-inbox/waiting/discovery/file_00000000030081f58b380825a8f3f568--discovery-20261109-0030-scheduled-chat-30-r01.json
