@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-09T09:01:17+00:00`
+Generated: `2026-11-09T09:33:11+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -293,7 +293,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 210 | 1 | 5 | 7 | DOI:10.1109/ICASSP49660.2025.10890757 | Trimformer: A Novel Sequence Compression Mechanism with Local Attention | 2025-04-06 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 1 | 7 | inference-systems | [source](https://doi.org/10.1109/ICASSP49660.2025.10890757) |
 | 211 | 113 | 5 | 7 | arXiv:2601.21919 | Self-Compression of Chain-of-Thought via Multi-Agent Reinforcement Learning | 2026-01-29 | arXiv.org | 13 | 7 |  | [source](https://arxiv.org/abs/2601.21919) |
 | 212 | 114 | 5 | 7 | arXiv:2603.06577 | Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion | 2026-03-06 | arXiv.org | 14 | 7 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2603.06577) |
-| 213 | 101 | 5 | 7 | arXiv:2606.14277 | One Layer's Trash is Another Layer's Treasure: Adaptive Layer-wise Visual Token Selection in LVLMs | 2026-06-12 | Computer Vision and Pattern Recognition | 1 | 7 |  | [source](https://arxiv.org/abs/2606.14277) |
+| 213 | 101 | 5 | 7 | arXiv:2606.00437 | EST-PRM: Stress-Testing Process Reward Models Before They Become Load-Bearing | 2026-05-30 | arXiv.org | 1 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2606.00437) |
 | 214 | 10 | 5 | 7 | arXiv:2604.02689 | Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs | 2026-04-03 | 2026 IEEE/CVF Conference on Computer Vision and Pattern Recognition- FINDINGS Track (CVPRF) | 0 | 7 | 12-multimodal-inference | [source](https://arxiv.org/abs/2604.02689) |
 | 215 | 10 | 5 | 7 | arXiv:2610.23290 | CoTA++: Understanding the Repeat Curse in dMLLMs from an Information Flow Perspective | 2026-10-16 |  | 0 | 7 | diffusion LLM inference / adaptive feature caching / KV cache / parallel denoising, diffusion language model inference / KV cache / training-free acceleration, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2610.23290) |
 | 216 | 0 | 5 | 7 | arXiv:2509.09560 | Boosting Embodied AI Agents through Perception-Generation Disaggregation and Asynchronous Pipeline Execution | 2025-09-11 | arXiv.org | 0 | 8 | 99-other-inference-systems, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2509.09560) |
