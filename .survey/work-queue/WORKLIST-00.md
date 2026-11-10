@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-10T06:33:40+00:00`
+Generated: `2026-11-10T06:54:15+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127779** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121567** / 監査再投入 **0** / 機械規則適用後 **124231** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127783** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121571** / 監査再投入 **0** / 機械規則適用後 **124235** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -118,9 +118,9 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 35 | 10 | 7 | 19 | DOI:10.1109/IWQoS70441.2026.11661192 | Dynamic Hot Expert Replication with Load and Topology-Aware Joint Gating for Distributed MoE Inference | 2026-06-01 | International Workshop on Quality of Service | 0 | 19 | 12-moe-parallelism-communication, Expert Prefetch, LLM Serving / Scheduling / Disaggregation, MoE inference systems / expert parallelism / model compression / knowledge distillation, MoE推論／エキスパート並列／エキスパート配置／全対全通信／負荷分散, inference-systems, moe-parallelism-communication, その他システム研究, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://doi.org/10.1109/IWQoS70441.2026.11661192) |
 | 36 | 107 | 7 | 17 | DOI:10.1109/ISDFS69419.2026.11459120 | Distributed Adaptive Speculative Decoding: Accelerating Large Language Model Inference With Context-Aware Draft Selection | 2026-03-19 | International Symposium on Digital Forensics and Security | 7 | 17 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, Weight Quantization / Compression, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/ISDFS69419.2026.11459120) |
 | 37 | 10 | 7 | 14 | arXiv:2609.27470 | DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video | 2026-09-23 | arXiv.org | 0 | 16 | KV cache compression / training-free eviction / attention sink / FlashAttention-compatible inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2609.27470) |
-| 38 | 10 | 7 | 13 | arXiv:2606.21848 | Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers | 2026-06-20 | arXiv.org | 0 | 13 | 07-kv-cache-optimization-compression, KV Cache Optimization / Compression, KVキャッシュ動的メモリ管理／PagedAttention代替, LLM Serving / Scheduling / Disaggregation, large-scale LLM inference / tensor partitioning / TPU serving / KV-cache memory efficiency, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2606.21848) |
-| 39 | 10 | 7 | 12 | arXiv:2610.30791 | Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving | 2026-10-22 |  | 0 | 12 | 10-kv-cache-offload-recomputation, 10-kv-キャッシュ-オフロード-recomputation, KV Cache Offload / Recomputation, KV cache offload / SSD swapping / GPU Direct Storage, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, KVキャッシュ階層メモリ・SSD/HBFオフロード・フラッシュ特性評価, hardware-accelerators, inference-systems, kv-cache-offload-recomputation | [source](https://arxiv.org/abs/2610.30791) |
-| 40 | 10 | 7 | 12 | arXiv:2610.20641 | AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens | 2026-10-07 |  | 0 | 13 | KV Cache Optimization / Compression, inference-systems | [source](https://arxiv.org/abs/2610.20641) |
+| 38 | 10 | 7 | 13 | arXiv:2610.20641 | AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens | 2026-10-07 |  | 0 | 14 | KV Cache Optimization / Compression, inference-systems | [source](https://arxiv.org/abs/2610.20641) |
+| 39 | 0 | 7 | 13 | SemanticScholar:fe22cc7753feefb1e27d108ff5cb1c84ab365540 | T EST - TIME SCALING MEETS ASSOCIATIVE MEMORY : C HALLENGES IN SUBQUADRATIC MODELS |  |  | 0 | 14 | LLM Serving / Scheduling / Disaggregation, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://www.semanticscholar.org/paper/fe22cc7753feefb1e27d108ff5cb1c84ab365540) |
+| 40 | 17 | 7 | 12 | DOI:10.18653/v1/2025.acl-long.486 | Faster Speculative Decoding via Effective Draft Decoder with Pruned Candidate Tree | 2025 | Annual Meeting of the Association for Computational Linguistics | 7 | 12 | Conditional Computation, Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.18653/v1/2025.acl-long.486) |
 | 41 | 7 | 7 | 12 | arXiv:2503.05936 | CASP: Compression of Large Multimodal Models Based on Attention Sparsity | 2025-03-07 | Computer Vision and Pattern Recognition | 7 | 12 | KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2503.05936) |
 | 42 | 10 | 7 | 11 | arXiv:2610.36950 | DCKV: Learned Transform Coding of the Prompt KV Cache in Hybrid Language Models | 2026-10-27 |  | 0 | 11 | KV Cache Offload / Recomputation, KV Cache Optimization / Compression, KV cache quantization / entropy coding / long-context serving / attention kernel co-design | [source](https://arxiv.org/abs/2610.36950) |
 | 43 | 102 | 7 | 10 | arXiv:2610.22543 | On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction | 2026-10-15 |  | 2 | 10 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 投機的復号 / EAGLE, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.22543) |
