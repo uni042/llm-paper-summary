@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "operation": "reference_relevance_result",
+  "ok": true,
+  "request_id": "libimp-ea546c599b64c251-border-001",
+  "request_operation": "mark_borderline",
+  "classification": "borderline",
+  "canonical_id": "arXiv:2609.27470",
+  "record": {
+    "classification": "borderline",
+    "canonical_id": "arXiv:2609.27470",
+    "identity_tokens": [
+      "arXiv:2609.27470"
+    ],
+    "reason": "ゲート付き線形注意の再帰状態の変化量を使い、質問到着前に長時間動画のフレームKVを削減する。KV管理手法として技術的関連はあるが、主評価対象は動画言語モデルの動画ストリーミングであり、一般LLM推論での有効性は要確認。",
+    "first_checked_at": "2026-11-10T19:50:57+00:00",
+    "last_checked_at": "2026-11-10T19:50:57+00:00",
+    "linked_from": [],
+    "borderline_recheck_count": 0,
+    "title": "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video"
+  },
+  "processed_at": "2026-11-10T19:50:57+00:00",
+  "worker_id": "library-import-inbox",
+  "run_key": "library-import-ea546c599b64",
+  "scheduled_slot": null,
+  "actual_invocation_start": null,
+  "source_precheck_request_id": null,
+  "reconsidered_from_borderline": false,
+  "borderline_recheck_count": 0,
+  "next_action": "CONTINUE_DISCOVERY_EVALUATION",
+  "instructions": "The canonical relevance ledger is updated. Continue the current Discovery round; do not re-evaluate or submit this classified candidate."
+}

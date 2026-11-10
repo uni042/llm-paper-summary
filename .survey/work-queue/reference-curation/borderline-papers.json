@@ -2,8 +2,8 @@
   "schema_version": 1,
   "classification": "borderline",
   "purpose": "Default exclusions for papers judged borderline during structured-reference Discovery curation; entries may be explicitly reconsidered later.",
-  "updated_at": "2026-11-10T10:47:03+00:00",
-  "record_count": 5602,
+  "updated_at": "2026-11-10T19:50:57+00:00",
+  "record_count": 5603,
   "records": {
     "DOI:10.48550/arxiv.2505.09388": {
       "classification": "borderline",
@@ -86482,6 +86482,19 @@
       "linked_from": [],
       "borderline_recheck_count": 0,
       "title": "Nonlinear Bipolar Compensation: Handling Outliers in Post-Training Quantization"
+    },
+    "arXiv:2609.27470": {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2609.27470",
+      "identity_tokens": [
+        "arXiv:2609.27470"
+      ],
+      "reason": "ゲート付き線形注意の再帰状態の変化量を使い、質問到着前に長時間動画のフレームKVを削減する。KV管理手法として技術的関連はあるが、主評価対象は動画言語モデルの動画ストリーミングであり、一般LLM推論での有効性は要確認。",
+      "first_checked_at": "2026-11-10T19:50:57+00:00",
+      "last_checked_at": "2026-11-10T19:50:57+00:00",
+      "linked_from": [],
+      "borderline_recheck_count": 0,
+      "title": "DeltaS: Reading the Gated Linear Attention State for KV Cache Eviction in Streaming Video"
     }
   }
 }
