@@ -382,6 +382,7 @@ source: https://arxiv.org/abs/2609.12345
             self.assertEqual(queue["count"], 1)
             entry = queue["entries"][0]
             self.assertEqual(entry["title"], "Returned Paper")
+            self.assertEqual(entry["source_url"], "https://arxiv.org/abs/2609.12345")
             self.assertEqual(entry["return_count"], 1)
             self.assertIn(entry["assigned_worker"], inbox.REPAIR_WORKERS)
 
