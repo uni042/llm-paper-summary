@@ -132,6 +132,61 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
             self.assertEqual(result["completed"], 1)
             crossref.assert_called_once_with("DOI:10.3390/electronics15112475")
 
+    def test_metadata_pdf_urls_keep_primary_pdf_and_exclude_non_pdf(self) -> None:
+        meta = {
+            "source": "https://danyangzhuo.com/papers/MICRO25-LLM265.pdf",
+            "sources": [
+                "https://danyangzhuo.com/papers/MICRO25-LLM265.pdf",
+                "https://aclanthology.org/2026.findings-acl.1521/",
+                "https://ojs.aaai.org/index.php/AAAI/article/download/34567/36722",
+                "https://127.0.0.1/secret.pdf",
+                "http://example.org/unsafe.pdf",
+            ],
+        }
+        self.assertEqual(
+            recovery.metadata_primary_pdf_urls(meta),
+            [
+                "https://danyangzhuo.com/papers/MICRO25-LLM265.pdf",
+                "https://ojs.aaai.org/index.php/AAAI/article/download/34567/36722",
+            ],
+        )
+
+    def test_partial_audit_with_date_but_no_total_is_retried_from_own_pdf(self) -> None:
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            paper = root / "papers/inference/example/paper.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text("placeholder", encoding="utf-8")
+            meta = {
+                "canonical_id": "DOI:10.1145/3725843.3756078",
+                "source": "https://danyangzhuo.com/papers/MICRO25-LLM265.pdf",
+                "references": [{"canonical_id": "arXiv:2210.17323"}],
+                "references_checked_at": "2026-10-22",
+                "references_source": "selected_primary_pdf_references",
+                # No references_total: insufficient for coverage_report PASS.
+            }
+            primary_url = meta["source"]
+            with (
+                patch.object(recovery, "load_records", return_value=[]),
+                patch.object(recovery, "alias_index", return_value={}),
+                patch.object(recovery, "paper_paths", return_value=[paper]),
+                patch.object(recovery, "front", return_value=(meta, "")),
+                patch.object(recovery, "primary_pdf_urls", return_value=[]),
+                patch.object(recovery, "pdf_text", return_value="dummy full paper") as pdf,
+                patch.object(recovery, "reference_section", return_value="References example"),
+                patch.object(
+                    recovery, "references_from_section",
+                    return_value=([{"canonical_id": "arXiv:2210.17323"}], 34),
+                ),
+                patch.object(recovery, "coverage_report", return_value={"summary": {"incomplete": 0}}),
+            ):
+                result = recovery.backfill(root, limit=1, apply=False)
+            self.assertEqual(result["attempted"], 1)
+            self.assertEqual(result["completed"], 1)
+            pdf.assert_called_once_with(primary_url)
+            self.assertEqual(meta["references_total"], 34)
+
     def test_bibtex_blocks_keep_complete_entries(self) -> None:
         text = """
 @article{first,
