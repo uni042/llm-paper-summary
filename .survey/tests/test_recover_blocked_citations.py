@@ -103,6 +103,35 @@ class RecoverBlockedCitationsTest(unittest.TestCase):
         self.assertIn("Example Repository Paper", entries[0]["text"])
         self.assertIn("api.crossref.org", url)
 
+    def test_non_acm_doi_uses_publisher_deposited_crossref_fallback(self) -> None:
+        from tempfile import TemporaryDirectory
+
+        with TemporaryDirectory() as folder:
+            root = Path(folder)
+            paper = root / "papers/inference/example/paper.md"
+            paper.parent.mkdir(parents=True)
+            paper.write_text("placeholder", encoding="utf-8")
+            meta = {
+                "canonical_id": "DOI:10.3390/electronics15112475",
+                "title": "A publisher DOI paper with a deposited bibliography",
+            }
+            with (
+                patch.object(recovery, "load_records", return_value=[]),
+                patch.object(recovery, "alias_index", return_value={}),
+                patch.object(recovery, "paper_paths", return_value=[paper]),
+                patch.object(recovery, "front", return_value=(meta, "")),
+                patch.object(recovery, "primary_pdf_urls", return_value=[]),
+                patch.object(
+                    recovery, "crossref_reference_entries",
+                    return_value=([{"text": "A. Author 2025 DOI:10.1000/example", "hrefs": []}], "https://api.crossref.org/works/example"),
+                ) as crossref,
+                patch.object(recovery, "coverage_report", return_value={"summary": {"incomplete": 0}}),
+            ):
+                result = recovery.backfill(root, limit=1, apply=False)
+            self.assertEqual(result["attempted"], 1)
+            self.assertEqual(result["completed"], 1)
+            crossref.assert_called_once_with("DOI:10.3390/electronics15112475")
+
     def test_bibtex_blocks_keep_complete_entries(self) -> None:
         text = """
 @article{first,
