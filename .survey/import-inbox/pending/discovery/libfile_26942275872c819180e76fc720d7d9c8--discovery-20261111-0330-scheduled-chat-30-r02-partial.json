@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261111-0330-scheduled-chat-30/r02",
+  "reference_main_sha": "fb9d78caf29753fd8c1334d08ac415cc6926c0e7",
+  "candidate_inventory": 571,
+  "record_count": 2,
+  "partial_round": true,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/2575-8411.2026.00078",
+      "identity_tokens": [
+        "DOI:10.1109/2575-8411.2026.00078"
+      ],
+      "title": "FlashServe: Adaptive Kernel Provision for Quantized LLM Serving",
+      "reason": "量子化LLM推論でバッチサイズに応じた最適カーネルが変化し、カーネル切替にも遅延が生じる問題を扱う。推論と切替の遅延コストモデル、非同期切替、切替の先行準備を組み合わせ、著者は静的量子化カーネル構成比9.0～13.6%の推論遅延削減を報告。推論ランタイムのカーネル選択に直接関連。",
+      "source_url": "https://infoscience.epfl.ch/entities/publication/7309972e-4d14-4d79-80dc-3abce7dae15d",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 21,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T03:34:55+09:00",
+      "last_checked_at": "2026-11-11T03:34:55+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ASP-DAC66049.2026.11420717",
+      "identity_tokens": [
+        "DOI:10.1109/ASP-DAC66049.2026.11420717"
+      ],
+      "title": "CoLoRA: A Collaborative Scheduling Framework for Multi-Tenant LoRA LLM Inference",
+      "reason": "複数テナントのLoRA推論に対して待ち時間・アダプタ常駐・SLA緊急度による優先度、アダプタキャッシュ、GPU負荷対応バッチング、統合フィードバックを共同最適化する。IEEE出版社の一次要旨では従来方式比スループット56.5%増、オンライン要求P95遅延34%減と報告。LoRAサービングのスケジューリングに直接関連。",
+      "source_url": "https://doi.org/10.1109/ASP-DAC66049.2026.11420717",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 22,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T03:34:55+09:00",
+      "last_checked_at": "2026-11-11T03:34:55+09:00"
+    }
+  ]
+}
