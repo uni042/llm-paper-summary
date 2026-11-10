@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-10T06:54:15+00:00`
+Generated: `2026-11-10T07:50:33+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -336,7 +336,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 253 | 10 | 5 | 5 | DOI:10.1109/ETAI68332.2026.11485199 | Neural Network Quantization Based on 4-Bit Bivariate Lookup Table Activation* | 2026-03-06 | 2026 5th International Conference on Electronics Technology and Artificial Intelligence (ETAI) | 0 | 6 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://doi.org/10.1109/ETAI68332.2026.11485199) |
 | 254 | 20 | 5 | 5 | DOI:10.1109/ISCA66397.2026.00174 | Dynamic Scheduling for AI Accelerators via TISA | 2026-06-01 | International Symposium on Computer Architecture | 0 | 5 | GPU Kernel Framework, PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems | [source](https://doi.org/10.1109/ISCA66397.2026.00174) |
 | 255 | 10 | 5 | 5 | arXiv:2603.10030 | The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths | 2026-02-26 | arXiv.org | 0 | 5 | LLM Serving / Distributed Communication, LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2603.10030) |
-| 256 | 102 | 5 | 5 | arXiv:2605.17260 | LiteFrame: Efficient Vision Encoders Unlock Frame Scaling in Video LLMs | 2026-05-17 | arXiv.org | 2 | 6 |  | [source](https://arxiv.org/abs/2605.17260) |
+| 256 | 104 | 5 | 5 | arXiv:2610.01560 | AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models | 2026-10-01 |  | 4 | 5 |  | [source](https://arxiv.org/abs/2610.01560) |
 | 257 | 10 | 5 | 5 | arXiv:2605.25954 | Step-TP: A Grounded, Step-Level Dataset with Chain-of-Thought Reasoning for LLM-Guided Tensor Program Optimization | 2026-05-25 | Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 | 0 | 5 | inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.25954) |
 | 258 | 10 | 5 | 5 | arXiv:2610.19232 | Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion | 2026-10-13 |  | 0 | 5 | adaptive-expert-computation-compression, dense-to-MoE restructuring / activation sparsity / analytical routing / hierarchical MoE | [source](https://arxiv.org/abs/2610.19232) |
 | 259 | 10 | 5 | 5 | arXiv:2602.18846 | DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference | 2026-02-21 | arXiv.org | 0 | 5 |  | [source](https://arxiv.org/abs/2602.18846) |
@@ -497,7 +497,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 414 | 2 | 4 | 6 | arXiv:2505.18799 | ALPS: Attention Localization and Pruning Strategy for Efficient Alignment of Large Language Models | 2025-05-24 | arXiv.org | 2 | 6 |  | [source](https://arxiv.org/abs/2505.18799) |
 | 415 | 0 | 4 | 6 | arXiv:2511.02681 | Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes | 2025-11-04 | arXiv.org | 0 | 6 |  | [source](https://arxiv.org/abs/2511.02681) |
 | 416 | 12 | 4 | 6 | DOI:10.18653/v1/2026.acl-long.819 | Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising | 2026 | Annual Meeting of the Association for Computational Linguistics | 2 | 7 | Diffusion LLM Inference, LLM Serving / Scheduling / Disaggregation, inference-systems, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://doi.org/10.18653/v1/2026.acl-long.819) |
-| 417 | 107 | 4 | 6 | arXiv:2602.08864 | Understanding Dynamic Compute Allocation in Recurrent Transformers | 2026-02-09 | arXiv.org | 7 | 6 |  | [source](https://arxiv.org/abs/2602.08864) |
+| 417 | 108 | 4 | 6 | arXiv:2602.03249 | Accordion-Thinking: Self-Regulated Step Summaries for Efficient and Readable LLM Reasoning | 2026-02-03 | arXiv.org | 8 | 6 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, sparse attention / KV-cache bandwidth reduction | [source](https://arxiv.org/abs/2602.03249) |
 | 418 | 10 | 4 | 6 | arXiv:2606.30944 | Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation | 2026-06-29 | arXiv.org | 0 | 6 |  | [source](https://arxiv.org/abs/2606.30944) |
 | 419 | 0 | 4 | 6 | arXiv:2511.13147 | OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs | 2025-11-17 | AAAI Conference on Artificial Intelligence | 0 | 7 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2511.13147) |
 | 420 | 101 | 4 | 6 | arXiv:2606.29350 | Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs | 2026-06-28 | arXiv.org | 1 | 6 | 小型VLA・視覚トークン削減・非同期ロボット推論, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.29350) |
