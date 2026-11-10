@@ -1,0 +1,844 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-ea546c599b64c251-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-ea546c599b64",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2504.03717",
+    "arXiv:2603.16054",
+    "arXiv:2604.16395",
+    "arXiv:2609.33768",
+    "arXiv:2610.07350",
+    "arXiv:2610.20641",
+    "arXiv:2610.22543",
+    "arXiv:2610.36950",
+    "arXiv:2611.02230"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 9,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "59afe5fd406cbb107faf4339021af31d1cf599d2",
+  "raw_search_result_count": 9,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 9,
+  "provider_progress": {
+    "requested_count": 9,
+    "status_counts": {
+      "allowed": 9,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-10T19:58:33.737678+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2504.03717",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2603.16054",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2604.16395",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.33768",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.07350",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.20641",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.22543",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.36950",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2611.02230",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.16054",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sizing a GPU fleet for LLM inference is harder than it looks. The obvious questions -- how many GPUs, which type, where to split a two-pool fleet -- have no closed-form answers. They depend on the full token-length distribution, the routing policy, and queueing dynamics that turn ugly under heavy-tailed workloads. Existing tools optimize per-engine configuration for a fixed GPU count; none of them address the upstream question of how many GPUs to buy and how to arrange them. inference-fleet-sim fills that gap. It combines analytical M/G/c queueing with discrete-event simulation (DES) to find the minimum-cost fleet configuration that empirically meets a P99 TTFT SLO. It includes a physics-informed GPU performance model covering A10G, A100, and H100 across monolithic, two-pool-routed, and disaggregated topologies, all without requiring access to real hardware. We run the tool on seven fleet-planning scenarios drawn from two public workload traces (LMSYS, Azure) and one synthetic agent-heavy trace. Each one surfaces a result that simple analysis gets wrong -- the right split threshold, the cheapest GPU type, whether an apparently idle fleet is actually broken -- and shows why joint simulation of queueing, routing, and hardware is necessary to find it.",
+      "identifiers": [
+        "SemanticScholar:47675ecc9a7aad8b85c3249949be7445a4d1ffdb"
+      ],
+      "semantic_scholar_id": "47675ecc9a7aad8b85c3249949be7445a4d1ffdb",
+      "canonical_id": "arXiv:2603.16054",
+      "arxiv_id": "2603.16054",
+      "doi": "10.48550/arXiv.2603.16054",
+      "authors": [
+        "Hua-Min Chen",
+        "Xun-Zhuo Liu",
+        "Yu-Han Liu",
+        "Jun-Chen Jiang",
+        "Bo-Wei He",
+        "Xue Liu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+      "source_url": "https://arxiv.org/abs/2604.16395",
+      "year": 2026,
+      "published": "2026-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context retrieval systems for LLM inference face a critical challenge: high retrieval latency creates a fundamental tension between waiting for complete context (poor time-to-first-token) and proceeding without it (reduced quality). Streaming context incrementally--overlapping retrieval with inference--can mitigate this latency, but doing so with concurrent requests introduces new challenges: requests contend for GPU compute and memory, and scheduling must adapt to dynamic context arrivals. We present Stream2LLM, a streaming-aware LLM serving system for concurrent prefill-decode disaggregated deployments. Stream2LLM introduces adaptive scheduling and preemption for two distinct retrieval patterns: append-mode (progressive context accumulation) and update-mode (iterative refinement with cache invalidation). It decouples scheduling decisions from resource acquisition, enabling flexible preemption strategies guided by hardware-specific cost models, and uses longest common prefix matching to minimize redundant computation when input changes dynamically. To evaluate Stream2LLM, we collect two large-scale, real-world streaming workloads based on web crawling and approximate nearest neighbor search. Our evaluation demonstrates that streaming architecture delivers up to 11x TTFT improvements, with cost-aware scheduling providing critical benefits under memory pressure, all while maintaining throughput parity with non-streaming baselines. Code: https://github.com/rajveerb/stream2llm/tree/mlsys_artifact",
+      "identifiers": [
+        "SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88"
+      ],
+      "semantic_scholar_id": "3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+      "canonical_id": "arXiv:2604.16395",
+      "arxiv_id": "2604.16395",
+      "doi": "10.48550/arXiv.2604.16395",
+      "authors": [
+        "Rajveer Bachkaniwala",
+        "Cheng Luo",
+        "R. So",
+        "Divya Mahajan",
+        "Ke-Xin Rong"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+      "source_url": "https://arxiv.org/abs/2610.22543",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) promise parallel text generation, but in practice face an unresolved speed-quality trade-off. Exact decoding fills in only one masked position per model pass, while faster multi-token decoding schemes are lossy. Speculative decoding is the standard lossless acceleration for autoregressive models. However, it does not transfer directly to DLMs, which must choose both what to generate and where. We show that this order is the missing piece: the model's own predictions from the previous pass already give the right token at 92-100% of positions, but not which position comes next. Based on this observation, we introduce Speculating Positions Order Trajectory (SPOT), which learns to predict this order. A 0.62M-parameter model reads only the target's output distributions and proposes a tree of candidate continuations, and the target verifies all of them in a single pass by checking whether each equals its own next state. On the verification side, our analysis shows that prior block-diffusion verification approaches either assume $T=0$ or a sequential proposal interface. To support tree-based speculation at any temperature, we propose using coupled-noise match verification for diffusion blocks, following shared-Gumbel-noise coupling approaches. Our comprehensive experiments show that SPOT cuts target passes by up to 6.8x and reaches up to 3.2x the throughput of standard decoding, beating the calibrated and training-free drafting baselines in every task and budget at $T=0$ and $T=1$. In addition, we show that the learned drafter transfers across models, demonstrating successful transfer across six different DLMs. Project page: https://eliezer318.github.io/SPOT-dLLM/",
+      "identifiers": [
+        "SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e"
+      ],
+      "semantic_scholar_id": "53fabe548469afe2e36c742cc83c76db3ac0b32e",
+      "canonical_id": "arXiv:2610.22543",
+      "arxiv_id": "2610.22543",
+      "authors": [
+        "Eliezer Shlomi",
+        "Eliron Rahimi",
+        "Avi Mendelson",
+        "Chaim Baskin"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+      "source_url": "https://arxiv.org/abs/2609.33768",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent systems (MAS) have recently emerged as an effective approach for coordinating large language model (LLM)-based agents to solve complex tasks through structured interactions. In practice, MASs often handle a stream of heterogeneous and complex tasks, requiring agents to decompose each task and then self-organize and self-evolve to adapt to incoming tasks while sharing execution resources. However, most early approaches to MASs rely on centralized controllers or fixed coordination patterns, which can limit scalability or adaptability. In contrast, existing decentralized and dynamic MASs often require training dedicated routers or invoking LLMs for agent selection, resulting in substantial computational costs and coordination overhead. To address these challenges and enable efficient task-level self-organization and self-evolution for task- and workload-level collaboration, we propose Decentralized Expertise-Aware Load Serving (DEALS), a decentralized and low-complexity framework that enables agents to self-organize and dynamically route concurrent tasks for processing. Specifically, each agent maintains local queues of incoming tasks, and its router decides whether to process a task locally or forward it to a neighbor based on differences in backlog and success rate. Meanwhile, executors process independent tasks concurrently within and across agents, and partially solved tasks can be resumed by other agents. Experiments show that DEALS not only improves performance along multiple dimensions (e.g., answer accuracy and task throughput) in both homogeneous and heterogeneous agent pools, but also balances agent expertise and workload in a self-organized manner, enabling effective decentralized coordination.",
+      "identifiers": [
+        "SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b"
+      ],
+      "semantic_scholar_id": "c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+      "canonical_id": "arXiv:2609.33768",
+      "arxiv_id": "2609.33768",
+      "doi": "10.48550/arXiv.2609.33768",
+      "authors": [
+        "Jing-Hang Huang",
+        "Wen-Bin Wang",
+        "Yan-Chuan Yin",
+        "Alvaro Velasquez",
+        "Jia Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Trajectory-Retrieval Speculative Decoding: When Does a Model's Own History Help?",
+      "source_url": "https://arxiv.org/abs/2610.07350",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought reasoning increases sequential decoding cost while creating a growing history of potentially reusable continuations. We investigate when this history supplies useful drafts and complements an existing drafter. Controlled source comparisons reveal trajectory-specific reuse, motivating our method Trajectory-Local Adaptive Retrieval (TLAR). TLAR retrieves approximately matched continuations from the current trajectory and uses recent verification outcomes to adapt retrieval activation and candidate width. TLAR combines retrieved continuations with model-generated drafts in a shared candidate tree, preserving the target model's output distribution through exact verification. Across code debugging, mathematics, and open-ended writing, our evaluation connects source reuse, incremental acceptance, and execution cost. Combining TLAR with strong retrieval baselines improves token acceptance under matched verification budgets and increases end-to-end throughput over the draft-model baseline. These findings support generated trajectories as runtime memory for adaptive inference.",
+      "identifiers": [
+        "SemanticScholar:89f3e1d21cf2cdf1294c5ac970724e710a54a811"
+      ],
+      "semantic_scholar_id": "89f3e1d21cf2cdf1294c5ac970724e710a54a811",
+      "canonical_id": "arXiv:2610.07350",
+      "arxiv_id": "2610.07350",
+      "authors": [
+        "Yu-Yang Dai",
+        "Yu-Shun Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+      "source_url": "https://arxiv.org/abs/2610.20641",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought decoding is memory-bound: the KV cache of the generated tokens grows linearly with the test-time compute being spent. Evicting cache entries does not fix this, because a model never trained on a cache with entries removed generates longer, often up to the length limit. We instead train the model to compress its own output. AbridgeKV compresses each completed block of generated text into the KV entries of a few learned pause tokens. These are extra input tokens with trained embeddings that produce no output. Once the pause tokens have encoded the block, AbridgeKV frees the block's original cache; subsequent tokens attend to the pause tokens'KV entries in its place. Three novel choices make this work: the pause tokens'KV entries take positions inside the block they replace, the cache budget is allocated across layers according to the measured value of each layer's entries, and compression operates on relatively large blocks. On 446 competition problems from AIME, HMMT, AMC, BRUMO, CMIMC and SMT with 32K-token generations, keeping a quarter of the generated cache matches an identically trained full-KV model in accuracy and output length; the strongest published evictor at a matched budget writes far longer, and the closest trained compressor, retrained on the same data, loses 10 points. Served in vLLM, the cache is 3.5x smaller per sequence and a saturated H100 finishes a problem 3.2x faster than with full KV.",
+      "identifiers": [
+        "SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44"
+      ],
+      "semantic_scholar_id": "271342ba40609c271fec58fcafb0c444bcf23c44",
+      "canonical_id": "arXiv:2610.20641",
+      "arxiv_id": "2610.20641",
+      "authors": [
+        "Jack Cai",
+        "Lijie Yang",
+        "Vasilis Kontonis",
+        "Dimitris Papailiopoulos",
+        "Shivam Garg"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "DCKV: Learned Transform Coding of the Prompt KV Cache in Hybrid Language Models",
+      "source_url": "https://arxiv.org/abs/2610.36950",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid language models keep a key-value (KV) cache only in their few full-attention layers, but this cache is still the part of a prompt's state that grows with the prompt and that must be stored or moved to reuse it. We present DCKV, a differentiable codec for the KV cache and the first KV-cache codec that is trained end to end. Its transform, its quantizer and its entropy models, which are conditioned on the prompt tokens and on already decoded neighbouring positions, are optimized together against the frozen language model, both for the code length that the entropy models assign and for the change of the model's output. On Qwen3.5-2B, DCKV stores a compressed token in more than 55 times fewer bytes than bf16 at a loss of at most 1.8 points on three long-context benchmarks, and in more than 100 times fewer bytes at a loss of at most 3.6 points.",
+      "identifiers": [
+        "SemanticScholar:e3021d1f5f43f0f5865cca94ae1410c675a333ae"
+      ],
+      "semantic_scholar_id": "e3021d1f5f43f0f5865cca94ae1410c675a333ae",
+      "canonical_id": "arXiv:2610.36950",
+      "arxiv_id": "2610.36950",
+      "authors": [
+        "Egor Maximov",
+        "Aleksei Merkelov",
+        "Vasiliy Alekseev",
+        "Ivan Krivorotov",
+        "В. К. Беляев",
+        "Nikita Arsenin",
+        "Д. Ю. Бочаров",
+        "A. Goncharov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Who Should Score the Cache? Mid-Depth Layers Are the Best Judges of KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2611.02230",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) cache eviction methods rank tokens by attention scores, and each layer scores its own cache. To our knowledge, no eviction method asks which layer should score. We find, across twenty-one models, that the depth of the scoring layer governs eviction quality. On the eighteen models with per-layer caches, spanning 0.5B to 109B, long-context retrieval accuracy collapses at shallow layers, peaks between 0.4 and 0.75 of depth, and degrades at the last layer. The curve arises because a layer judges tokens well only once it has used the question to find the answer, which takes several layers. Modeling eviction as a top-$k$ cut, we compute answer survival probability from prefill attention and reproduce the measured curves. This approach selects the scoring layer using calibration prompts with known answers, and the selected layer is the best layer measured on most models and never significantly below it. It improves on the own-layer default on sixteen of the eighteen models, with significant gains on seven, all at 14B or below, while on larger models the default is already close to the best mid-depth layer. Scoring every cache from the selected layer while keeping one set of tokens for all heads also beats per-head SnapKV by 18 to 43 points on five models up to 14B under tight budgets. This gain carries over to financial filings at 32K context, all at the same memory budget, with no extra forward pass. The same curve explains a penalty in shared-cache models, where several layers read one cache and the layer that writes it scores by default. On Gemma-4-E2B the writer is shallow and loses 28 points to a mid-depth reader at a 10% budget. We also find that in open-book question answering (LongBench) no mid-depth layer beats the own-layer default.",
+      "identifiers": [
+        "SemanticScholar:4ce2372117f65e8c229ddddc8197cd272e3d3884"
+      ],
+      "semantic_scholar_id": "4ce2372117f65e8c229ddddc8197cd272e3d3884",
+      "canonical_id": "arXiv:2611.02230",
+      "arxiv_id": "2611.02230",
+      "authors": [
+        "E. Серегина"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+      "source_url": "https://arxiv.org/abs/2504.03717",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+      "identifiers": [
+        "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+      ],
+      "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+      "canonical_id": "arXiv:2504.03717",
+      "arxiv_id": "2504.03717",
+      "doi": "10.48550/arXiv.2504.03717",
+      "authors": [
+        "Yong-Yi Yang",
+        "Jian-Yang Gao",
+        "Wei Hu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 591,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2603.16054",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2603.16054",
+        "id:SemanticScholar:47675ecc9a7aad8b85c3249949be7445a4d1ffdb",
+        "id:arXiv:2603.16054",
+        "title:inferencefleetsim a queueingtheorygrounded fleet capacity planner for llm inference",
+        "url:https://arxiv.org/abs/2603.16054"
+      ],
+      "record": {
+        "title": "inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference",
+        "source_url": "https://arxiv.org/abs/2603.16054",
+        "year": 2026,
+        "published": "2026-03-17",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Sizing a GPU fleet for LLM inference is harder than it looks. The obvious questions -- how many GPUs, which type, where to split a two-pool fleet -- have no closed-form answers. They depend on the full token-length distribution, the routing policy, and queueing dynamics that turn ugly under heavy-tailed workloads. Existing tools optimize per-engine configuration for a fixed GPU count; none of them address the upstream question of how many GPUs to buy and how to arrange them. inference-fleet-sim fills that gap. It combines analytical M/G/c queueing with discrete-event simulation (DES) to find the minimum-cost fleet configuration that empirically meets a P99 TTFT SLO. It includes a physics-informed GPU performance model covering A10G, A100, and H100 across monolithic, two-pool-routed, and disaggregated topologies, all without requiring access to real hardware. We run the tool on seven fleet-planning scenarios drawn from two public workload traces (LMSYS, Azure) and one synthetic agent-heavy trace. Each one surfaces a result that simple analysis gets wrong -- the right split threshold, the cheapest GPU type, whether an apparently idle fleet is actually broken -- and shows why joint simulation of queueing, routing, and hardware is necessary to find it.",
+        "identifiers": [
+          "SemanticScholar:47675ecc9a7aad8b85c3249949be7445a4d1ffdb"
+        ],
+        "semantic_scholar_id": "47675ecc9a7aad8b85c3249949be7445a4d1ffdb",
+        "canonical_id": "arXiv:2603.16054",
+        "arxiv_id": "2603.16054",
+        "doi": "10.48550/arXiv.2603.16054",
+        "authors": [
+          "Hua-Min Chen",
+          "Xun-Zhuo Liu",
+          "Yu-Han Liu",
+          "Jun-Chen Jiang",
+          "Bo-Wei He",
+          "Xue Liu"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 238,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2604.16395",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2604.16395",
+        "id:SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+        "id:arXiv:2604.16395",
+        "title:stream2llm overlap context streaming and prefill for reduced timetofirsttoken ttft",
+        "url:https://arxiv.org/abs/2604.16395"
+      ],
+      "record": {
+        "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+        "source_url": "https://arxiv.org/abs/2604.16395",
+        "year": 2026,
+        "published": "2026-03-29",
+        "venue": "arXiv.org",
+        "citation_count": 3,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Context retrieval systems for LLM inference face a critical challenge: high retrieval latency creates a fundamental tension between waiting for complete context (poor time-to-first-token) and proceeding without it (reduced quality). Streaming context incrementally--overlapping retrieval with inference--can mitigate this latency, but doing so with concurrent requests introduces new challenges: requests contend for GPU compute and memory, and scheduling must adapt to dynamic context arrivals. We present Stream2LLM, a streaming-aware LLM serving system for concurrent prefill-decode disaggregated deployments. Stream2LLM introduces adaptive scheduling and preemption for two distinct retrieval patterns: append-mode (progressive context accumulation) and update-mode (iterative refinement with cache invalidation). It decouples scheduling decisions from resource acquisition, enabling flexible preemption strategies guided by hardware-specific cost models, and uses longest common prefix matching to minimize redundant computation when input changes dynamically. To evaluate Stream2LLM, we collect two large-scale, real-world streaming workloads based on web crawling and approximate nearest neighbor search. Our evaluation demonstrates that streaming architecture delivers up to 11x TTFT improvements, with cost-aware scheduling providing critical benefits under memory pressure, all while maintaining throughput parity with non-streaming baselines. Code: https://github.com/rajveerb/stream2llm/tree/mlsys_artifact",
+        "identifiers": [
+          "SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88"
+        ],
+        "semantic_scholar_id": "3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+        "canonical_id": "arXiv:2604.16395",
+        "arxiv_id": "2604.16395",
+        "doi": "10.48550/arXiv.2604.16395",
+        "authors": [
+          "Rajveer Bachkaniwala",
+          "Cheng Luo",
+          "R. So",
+          "Divya Mahajan",
+          "Ke-Xin Rong"
+        ],
+        "priority": 103,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 3,
+          "citation_count": 3,
+          "total": 103,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 226,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.22543",
+      "identity_tokens": [
+        "id:SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e",
+        "id:arXiv:2610.22543",
+        "title:on the spot enhancing speculative decoding for diffusion language models via commitorder prediction",
+        "url:https://arxiv.org/abs/2610.22543"
+      ],
+      "record": {
+        "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+        "source_url": "https://arxiv.org/abs/2610.22543",
+        "year": 2026,
+        "published": "2026-10-15",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Diffusion language models (DLMs) promise parallel text generation, but in practice face an unresolved speed-quality trade-off. Exact decoding fills in only one masked position per model pass, while faster multi-token decoding schemes are lossy. Speculative decoding is the standard lossless acceleration for autoregressive models. However, it does not transfer directly to DLMs, which must choose both what to generate and where. We show that this order is the missing piece: the model's own predictions from the previous pass already give the right token at 92-100% of positions, but not which position comes next. Based on this observation, we introduce Speculating Positions Order Trajectory (SPOT), which learns to predict this order. A 0.62M-parameter model reads only the target's output distributions and proposes a tree of candidate continuations, and the target verifies all of them in a single pass by checking whether each equals its own next state. On the verification side, our analysis shows that prior block-diffusion verification approaches either assume $T=0$ or a sequential proposal interface. To support tree-based speculation at any temperature, we propose using coupled-noise match verification for diffusion blocks, following shared-Gumbel-noise coupling approaches. Our comprehensive experiments show that SPOT cuts target passes by up to 6.8x and reaches up to 3.2x the throughput of standard decoding, beating the calibrated and training-free drafting baselines in every task and budget at $T=0$ and $T=1$. In addition, we show that the learned drafter transfers across models, demonstrating successful transfer across six different DLMs. Project page: https://eliezer318.github.io/SPOT-dLLM/",
+        "identifiers": [
+          "SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e"
+        ],
+        "semantic_scholar_id": "53fabe548469afe2e36c742cc83c76db3ac0b32e",
+        "canonical_id": "arXiv:2610.22543",
+        "arxiv_id": "2610.22543",
+        "authors": [
+          "Eliezer Shlomi",
+          "Eliron Rahimi",
+          "Avi Mendelson",
+          "Chaim Baskin"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 26,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.33768",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.33768",
+        "id:SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+        "id:arXiv:2609.33768",
+        "title:deals decentralized expertiseaware load serving for multiagent llm systems",
+        "url:https://arxiv.org/abs/2609.33768"
+      ],
+      "record": {
+        "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+        "source_url": "https://arxiv.org/abs/2609.33768",
+        "year": 2026,
+        "published": "2026-09-27",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Multi-agent systems (MAS) have recently emerged as an effective approach for coordinating large language model (LLM)-based agents to solve complex tasks through structured interactions. In practice, MASs often handle a stream of heterogeneous and complex tasks, requiring agents to decompose each task and then self-organize and self-evolve to adapt to incoming tasks while sharing execution resources. However, most early approaches to MASs rely on centralized controllers or fixed coordination patterns, which can limit scalability or adaptability. In contrast, existing decentralized and dynamic MASs often require training dedicated routers or invoking LLMs for agent selection, resulting in substantial computational costs and coordination overhead. To address these challenges and enable efficient task-level self-organization and self-evolution for task- and workload-level collaboration, we propose Decentralized Expertise-Aware Load Serving (DEALS), a decentralized and low-complexity framework that enables agents to self-organize and dynamically route concurrent tasks for processing. Specifically, each agent maintains local queues of incoming tasks, and its router decides whether to process a task locally or forward it to a neighbor based on differences in backlog and success rate. Meanwhile, executors process independent tasks concurrently within and across agents, and partially solved tasks can be resumed by other agents. Experiments show that DEALS not only improves performance along multiple dimensions (e.g., answer accuracy and task throughput) in both homogeneous and heterogeneous agent pools, but also balances agent expertise and workload in a self-organized manner, enabling effective decentralized coordination.",
+        "identifiers": [
+          "SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b"
+        ],
+        "semantic_scholar_id": "c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+        "canonical_id": "arXiv:2609.33768",
+        "arxiv_id": "2609.33768",
+        "doi": "10.48550/arXiv.2609.33768",
+        "authors": [
+          "Jing-Hang Huang",
+          "Wen-Bin Wang",
+          "Yan-Chuan Yin",
+          "Alvaro Velasquez",
+          "Jia Liu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 44,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.07350",
+      "identity_tokens": [
+        "id:SemanticScholar:89f3e1d21cf2cdf1294c5ac970724e710a54a811",
+        "id:arXiv:2610.07350",
+        "title:trajectoryretrieval speculative decoding when does a models own history help",
+        "url:https://arxiv.org/abs/2610.07350"
+      ],
+      "record": {
+        "title": "Trajectory-Retrieval Speculative Decoding: When Does a Model's Own History Help?",
+        "source_url": "https://arxiv.org/abs/2610.07350",
+        "year": 2026,
+        "published": "2026-10-05",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long chain-of-thought reasoning increases sequential decoding cost while creating a growing history of potentially reusable continuations. We investigate when this history supplies useful drafts and complements an existing drafter. Controlled source comparisons reveal trajectory-specific reuse, motivating our method Trajectory-Local Adaptive Retrieval (TLAR). TLAR retrieves approximately matched continuations from the current trajectory and uses recent verification outcomes to adapt retrieval activation and candidate width. TLAR combines retrieved continuations with model-generated drafts in a shared candidate tree, preserving the target model's output distribution through exact verification. Across code debugging, mathematics, and open-ended writing, our evaluation connects source reuse, incremental acceptance, and execution cost. Combining TLAR with strong retrieval baselines improves token acceptance under matched verification budgets and increases end-to-end throughput over the draft-model baseline. These findings support generated trajectories as runtime memory for adaptive inference.",
+        "identifiers": [
+          "SemanticScholar:89f3e1d21cf2cdf1294c5ac970724e710a54a811"
+        ],
+        "semantic_scholar_id": "89f3e1d21cf2cdf1294c5ac970724e710a54a811",
+        "canonical_id": "arXiv:2610.07350",
+        "arxiv_id": "2610.07350",
+        "authors": [
+          "Yu-Yang Dai",
+          "Yu-Shun Dong"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 36,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.20641",
+      "identity_tokens": [
+        "id:SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44",
+        "id:arXiv:2610.20641",
+        "title:abridgekv compressing long reasoning into the kv cache of learned pause tokens",
+        "url:https://arxiv.org/abs/2610.20641"
+      ],
+      "record": {
+        "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+        "source_url": "https://arxiv.org/abs/2610.20641",
+        "year": 2026,
+        "published": "2026-10-07",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Long chain-of-thought decoding is memory-bound: the KV cache of the generated tokens grows linearly with the test-time compute being spent. Evicting cache entries does not fix this, because a model never trained on a cache with entries removed generates longer, often up to the length limit. We instead train the model to compress its own output. AbridgeKV compresses each completed block of generated text into the KV entries of a few learned pause tokens. These are extra input tokens with trained embeddings that produce no output. Once the pause tokens have encoded the block, AbridgeKV frees the block's original cache; subsequent tokens attend to the pause tokens'KV entries in its place. Three novel choices make this work: the pause tokens'KV entries take positions inside the block they replace, the cache budget is allocated across layers according to the measured value of each layer's entries, and compression operates on relatively large blocks. On 446 competition problems from AIME, HMMT, AMC, BRUMO, CMIMC and SMT with 32K-token generations, keeping a quarter of the generated cache matches an identically trained full-KV model in accuracy and output length; the strongest published evictor at a matched budget writes far longer, and the closest trained compressor, retrained on the same data, loses 10 points. Served in vLLM, the cache is 3.5x smaller per sequence and a saturated H100 finishes a problem 3.2x faster than with full KV.",
+        "identifiers": [
+          "SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44"
+        ],
+        "semantic_scholar_id": "271342ba40609c271fec58fcafb0c444bcf23c44",
+        "canonical_id": "arXiv:2610.20641",
+        "arxiv_id": "2610.20641",
+        "authors": [
+          "Jack Cai",
+          "Lijie Yang",
+          "Vasilis Kontonis",
+          "Dimitris Papailiopoulos",
+          "Shivam Garg"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 34,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.36950",
+      "identity_tokens": [
+        "id:SemanticScholar:e3021d1f5f43f0f5865cca94ae1410c675a333ae",
+        "id:arXiv:2610.36950",
+        "title:dckv learned transform coding of the prompt kv cache in hybrid language models",
+        "url:https://arxiv.org/abs/2610.36950"
+      ],
+      "record": {
+        "title": "DCKV: Learned Transform Coding of the Prompt KV Cache in Hybrid Language Models",
+        "source_url": "https://arxiv.org/abs/2610.36950",
+        "year": 2026,
+        "published": "2026-10-27",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Hybrid language models keep a key-value (KV) cache only in their few full-attention layers, but this cache is still the part of a prompt's state that grows with the prompt and that must be stored or moved to reuse it. We present DCKV, a differentiable codec for the KV cache and the first KV-cache codec that is trained end to end. Its transform, its quantizer and its entropy models, which are conditioned on the prompt tokens and on already decoded neighbouring positions, are optimized together against the frozen language model, both for the code length that the entropy models assign and for the change of the model's output. On Qwen3.5-2B, DCKV stores a compressed token in more than 55 times fewer bytes than bf16 at a loss of at most 1.8 points on three long-context benchmarks, and in more than 100 times fewer bytes at a loss of at most 3.6 points.",
+        "identifiers": [
+          "SemanticScholar:e3021d1f5f43f0f5865cca94ae1410c675a333ae"
+        ],
+        "semantic_scholar_id": "e3021d1f5f43f0f5865cca94ae1410c675a333ae",
+        "canonical_id": "arXiv:2610.36950",
+        "arxiv_id": "2610.36950",
+        "authors": [
+          "Egor Maximov",
+          "Aleksei Merkelov",
+          "Vasiliy Alekseev",
+          "Ivan Krivorotov",
+          "В. К. Беляев",
+          "Nikita Arsenin",
+          "Д. Ю. Бочаров",
+          "A. Goncharov"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 14,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2611.02230",
+      "identity_tokens": [
+        "id:SemanticScholar:4ce2372117f65e8c229ddddc8197cd272e3d3884",
+        "id:arXiv:2611.02230",
+        "title:who should score the cache middepth layers are the best judges of kvcache eviction",
+        "url:https://arxiv.org/abs/2611.02230"
+      ],
+      "record": {
+        "title": "Who Should Score the Cache? Mid-Depth Layers Are the Best Judges of KV-Cache Eviction",
+        "source_url": "https://arxiv.org/abs/2611.02230",
+        "year": 2026,
+        "published": "2026-11-01",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Key-value (KV) cache eviction methods rank tokens by attention scores, and each layer scores its own cache. To our knowledge, no eviction method asks which layer should score. We find, across twenty-one models, that the depth of the scoring layer governs eviction quality. On the eighteen models with per-layer caches, spanning 0.5B to 109B, long-context retrieval accuracy collapses at shallow layers, peaks between 0.4 and 0.75 of depth, and degrades at the last layer. The curve arises because a layer judges tokens well only once it has used the question to find the answer, which takes several layers. Modeling eviction as a top-$k$ cut, we compute answer survival probability from prefill attention and reproduce the measured curves. This approach selects the scoring layer using calibration prompts with known answers, and the selected layer is the best layer measured on most models and never significantly below it. It improves on the own-layer default on sixteen of the eighteen models, with significant gains on seven, all at 14B or below, while on larger models the default is already close to the best mid-depth layer. Scoring every cache from the selected layer while keeping one set of tokens for all heads also beats per-head SnapKV by 18 to 43 points on five models up to 14B under tight budgets. This gain carries over to financial filings at 32K context, all at the same memory budget, with no extra forward pass. The same curve explains a penalty in shared-cache models, where several layers read one cache and the layer that writes it scores by default. On Gemma-4-E2B the writer is shallow and loses 28 points to a mid-depth reader at a 10% budget. We also find that in open-book question answering (LongBench) no mid-depth layer beats the own-layer default.",
+        "identifiers": [
+          "SemanticScholar:4ce2372117f65e8c229ddddc8197cd272e3d3884"
+        ],
+        "semantic_scholar_id": "4ce2372117f65e8c229ddddc8197cd272e3d3884",
+        "canonical_id": "arXiv:2611.02230",
+        "arxiv_id": "2611.02230",
+        "authors": [
+          "E. Серегина"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 9,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.03717",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.03717",
+        "id:SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+        "id:arXiv:2504.03717",
+        "title:raana a fast flexible and dataefficient posttraining quantization algorithm",
+        "url:https://arxiv.org/abs/2504.03717"
+      ],
+      "record": {
+        "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+        "source_url": "https://arxiv.org/abs/2504.03717",
+        "year": 2025,
+        "published": "2025-03-29",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+        "identifiers": [
+          "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+        ],
+        "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+        "canonical_id": "arXiv:2504.03717",
+        "arxiv_id": "2504.03717",
+        "doi": "10.48550/arXiv.2504.03717",
+        "authors": [
+          "Yong-Yi Yang",
+          "Jian-Yang Gao",
+          "Wei Hu"
+        ],
+        "priority": 8,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 8,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 591,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:1311aed496f551f88443d86b14c6693a285e5f6702893682f38588d8b4b0ec29",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
