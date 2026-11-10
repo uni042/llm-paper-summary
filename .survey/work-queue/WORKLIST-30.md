@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-10T11:09:15+00:00`
+Generated: `2026-11-10T11:30:20+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127828** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121614** / 監査再投入 **0** / 機械規則適用後 **124278** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127830** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121616** / 監査再投入 **0** / 機械規則適用後 **124280** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -573,7 +573,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 490 | 20 | 4 | 5 | arXiv:2605.13165 | STOP: Structured On-Policy Pruning of Long-Form Reasoning in Low-Data Regimes | 2026-05-13 | Conference on Empirical Methods in Natural Language Processing | 0 | 5 |  | [source](https://arxiv.org/abs/2605.13165) |
 | 491 | 0 | 4 | 5 | SemanticScholar:a97223331cab0e2573cc6322b3c4e19920995aa1 | Shenbi: accelerating video diﬀusion models with INT8-attention |  |  | 0 | 5 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://www.semanticscholar.org/paper/a97223331cab0e2573cc6322b3c4e19920995aa1) |
 | 492 | 112 | 4 | 5 | arXiv:2605.08813 | AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems | 2026-05-09 | Annual Meeting of the Association for Computational Linguistics | 2 | 5 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2605.08813) |
-| 493 | 102 | 4 | 5 | arXiv:2606.12199 | Which Speech Representation Better Matches Text-Native Reasoning? A Study of Speech-Text Alignment on Frame Rate and Representation | 2026-06-10 | arXiv.org | 2 | 5 |  | [source](https://arxiv.org/abs/2606.12199) |
+| 493 | 102 | 4 | 5 | arXiv:2606.12199 | Which Speech Representation Better Matches Text-Native Reasoning? A Study of Speech-Text Alignment on Frame Rate and Representation | 2026-06-10 | Interspeech | 2 | 5 |  | [source](https://arxiv.org/abs/2606.12199) |
 | 494 | 101 | 4 | 5 | arXiv:2602.11748 | Think Longer to Explore Deeper: Learn to Explore In-Context via Length-Incentivized Reinforcement Learning | 2026-02-12 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2602.11748) |
 | 495 | 101 | 4 | 5 | arXiv:2605.22138 | Efficient Agentic Reasoning Through Self-Regulated Simulative Planning | 2026-05-21 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2605.22138) |
 | 496 | 60 | 4 | 5 | arXiv:2409.19613 | Hybrid Mamba for Few-Shot Segmentation | 2024-09-29 | Neural Information Processing Systems | 50 | 5 | 99-other-inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2409.19613) |
