@@ -247,7 +247,9 @@ def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
         canonical = str(meta.get("canonical_id") or "").strip()
         aid = normalize_arxiv(meta.get("arxiv_id")) or normalize_arxiv(canonical)
         pdf_urls = primary_pdf_urls(canonical)
-        if not pdf_urls and not aid:
+        # A publisher-deposited Crossref bibliography is a valid fallback for any DOI,
+        # not only the ACM DOI prefix that has a deterministic PDF endpoint.
+        if not pdf_urls and not aid and not canonical.startswith("DOI:"):
             continue
         if limit > 0 and attempted >= limit:
             break
