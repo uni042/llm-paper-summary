@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "year": 2024,
+      "published": "2024-10-04",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained Transformers inherently possess the characteristic of sparse activation, where only a small fraction of the neurons are activated for each token. While sparse activation has been explored through post-training methods, its potential in pre-training remains untapped. In this work, we first study how activation properties change during pre-training. Our examination reveals that Transformers exhibit sparse activation throughout the majority of the pre-training process while the activation correlation keeps evolving as training progresses. Leveraging this observation, we propose Switchable Sparse-Dense Learning (SSD). SSD adaptively switches between the Mixtures-of-Experts (MoE) based sparse training and the conventional dense training during the pre-training process, leveraging the efficiency of sparse training and avoiding the static activation correlation of sparse training. Compared to dense training, SSD achieves comparable performance with identical model size and reduces pre-training costs. Moreover, the models trained with SSD can be directly used as MoE models for sparse inference and achieve the same performance as dense models with up to $2\\times$ faster inference speed. Codes are available at https://github.com/thunlp/moefication.",
+      "identifiers": [
+        "SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570"
+      ],
+      "semantic_scholar_id": "b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+      "canonical_id": "arXiv:2410.03440",
+      "arxiv_id": "2410.03440",
+      "doi": "10.48550/arXiv.2410.03440",
+      "authors": [
+        "Zhengyan Zhang",
+        "Chao-Jun Xiao",
+        "Qiujieli Qin",
+        "Yankai Lin",
+        "Zhiyuan Zeng",
+        "Xu Han",
+        "Zhi-Yuan Liu",
+        "Ruo-Bing Xie",
+        "Mao-Song Sun",
+        "Jie Zhou"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 767,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      },
+      "reason": "Switchable Sparse-Dense LearningでMoE型疎学習とdense学習を切り替え、事前学習コストを低減。学習済みモデルは疎推論で最大2倍高速と著者報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) excel in natural language processing tasks but pose significant computational and memory challenges for edge deployment due to their intensive resource demands. This work addresses the efficiency of LLM inference by algorithm-hardwaredataflow tri-optimizations. We propose a novel voting-based KV cache eviction algorithm, balancing hardware efficiency and algorithm accuracy by adaptively identifying unimportant kv vectors. From a dataflow perspective, we introduce a flexible-product dataflow and a runtime reconfigurable PE array for matrix-vector multiplication. The proposed approach effectively handles the diverse dimensional requirements and solves the challenges of incrementally varying sequence lengths. Additionally, an element-serial scheduling scheme is proposed for nonlinear operations, such as softmax and layer normalization (layernorm). Results demonstrate a substantial reduction in latency, accompanied by a significant decrease in hardware complexity, from $O(N)$ to $O(1)$. The proposed solution is realized in a custom-designed accelerator, VEDA, which outperforms existing hardware platforms. This research represents a significant advancement in LLM inference on resource-constrained edge devices, facilitating real-time processing, enhancing data privacy, and enabling model customization.",
+      "identifiers": [
+        "SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3"
+      ],
+      "semantic_scholar_id": "db1626ebc3be3839b33a174392ce4bdd044edfe3",
+      "canonical_id": "arXiv:2507.00797",
+      "arxiv_id": "2507.00797",
+      "doi": "10.1109/DAC63849.2025.11132861",
+      "authors": [
+        "Zhi-Can Wang",
+        "Hong-Xiang Fan",
+        "Haroon Waris",
+        "Gang Wang",
+        "Zhen-Yu Li",
+        "Jian-Fei Jiang",
+        "Ya-Nan Sun",
+        "Guang-Hui He"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": null
+      },
+      "reason": "投票型KV削除と可変データフロー、再構成可能PE配列を組み合わせたエッジLLM推論アクセラレータ。遅延・ハードウェア複雑度の改善を著者報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Resource-efficient Inference with Foundation Model Programs",
+      "source_url": "https://arxiv.org/abs/2504.07247",
+      "year": 2025,
+      "published": "2025-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inference-time resource costs of large language and vision models present a growing challenge in production deployments. We propose the use of foundation model programs, i.e., programs that can invoke foundation models with varying resource costs and performance, as an approach to this problem. Specifically, we present a method that translates a task into a program, then learns a policy for resource allocation that, on each input, selects foundation model\"backends\"for each program module. The policy uses smaller, cheaper backends to handle simpler subtasks, while allowing more complex subtasks to leverage larger, more capable models. We evaluate the method on two new\"streaming\"visual question-answering tasks in which a system answers a question on a sequence of inputs, receiving ground-truth feedback after each answer. Compared to monolithic multi-modal models, our implementation achieves up to 98% resource savings with minimal accuracy loss, demonstrating its potential for scalable and resource-efficient multi-modal inference.",
+      "identifiers": [
+        "SemanticScholar:b98e8c85acaba62519f333b51bd5ba9827794b48"
+      ],
+      "semantic_scholar_id": "b98e8c85acaba62519f333b51bd5ba9827794b48",
+      "canonical_id": "arXiv:2504.07247",
+      "arxiv_id": "2504.07247",
+      "doi": "10.48550/arXiv.2504.07247",
+      "authors": [
+        "Lun-Yiu Nie",
+        "Zhi-Min Ding",
+        "Kevin Yu",
+        "Marco Cheung",
+        "Christopher Jermaine",
+        "Swarat Chaudhuri"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 580,
+        "matched_prestigious_venue": null
+      },
+      "reason": "タスクを複数モデル呼出しのプログラムへ変換し、入力ごとに安価なバックエンドを選ぶポリシーを学習。ストリーミングVQAで最大98%の資源節約と著者報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "year": 2025,
+      "published": "2025-05-05",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) achieve strong performance across tasks, but face storage and compute challenges on edge devices. We propose EntroLLM, a compression framework combining mixed quantization and entropy coding to reduce storage while preserving accuracy. We use a combination of unsigned and asymmetric quantization. Tensor-level quantization produces an entropy-reducing effect, increasing weight compressibility, and improving downstream Huffman encoding by $7\\times$ (8-bit) and $11.3\\times$ (4-bit) over state-of-the-art methods. Huffman coding further reduces memory bandwidth demands, while a parallel decoding strategy enables efficient weight retrieval with minimal latency. Experiments on edge-scale LLMs (smolLM-1.7B, phi3-mini-4k, mistral-7B) show up to $30\\%$ storage savings over uint8 and $65\\%$ over uint4 models, with $31.9-146.6\\%$ faster inference on memory-limited devices like the NVIDIA JETSON P3450. EntroLLM requires no retraining and is compatible with existing post-training quantization pipelines, making it practical for edge LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15"
+      ],
+      "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+      "canonical_id": "arXiv:2505.02380",
+      "arxiv_id": "2505.02380",
+      "doi": "10.1109/ICASSP55912.2026.11464777",
+      "authors": [
+        "Arnab Sanyal",
+        "G. Datta",
+        "Prithwish Mukherjee",
+        "Sandeep P. Chinchali",
+        "M. Orshansky"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 554,
+        "matched_prestigious_venue": null
+      },
+      "reason": "混合量子化とHuffman符号化で重み保存容量と帯域を削減。SmolLM、Phi-3、Mistralで評価し、Jetson P3450等で推論31.9〜146.6%高速化と著者報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+      "identifiers": [
+        "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+      ],
+      "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+      "canonical_id": "arXiv:2506.23431",
+      "arxiv_id": "2506.23431",
+      "doi": "10.48550/arXiv.2506.23431",
+      "authors": [
+        "Zixian Huang",
+        "Chenxu Niu",
+        "Yu Gu",
+        "Gengyang Xiao",
+        "Xin-Wei Huang",
+        "Gong Cheng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 499,
+        "matched_prestigious_venue": null
+      },
+      "reason": "生成系列を複数部分列に分割し、一定遅延で各部分列の生成を開始して並列化。QA、要約、キーフレーズ生成で品質を概ね維持しつつ高速化を報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d2ba1de56e8f",
+    "round": "libimp-d2ba1de56e8fd1e2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d2ba1de56e8fd1e2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d2ba1de56e8fd1e2-pre01.json",
+    "receipt": "sha256:e7364b049d8402fafca8cbec0c8edaf540a73026394330f1c868e03facab3dbe"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d2ba1de56e8f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
