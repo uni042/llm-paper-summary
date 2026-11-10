@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD",
+      "source_url": "https://arxiv.org/abs/2610.06927",
+      "year": 2026,
+      "published": "2026-10-03",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The key-value (KV) cache of autoregressive transformers grows linearly with context length and dominates memory at long context. Most training-free remedies evict low-importance tokens, an irreversible choice along the sequence axis. We instead keep every token and store it more cheaply along the\"feature\"axis. We therefore propose AttSVD, a new\"interpretable\"low-rank compression whose basis is derived from each prompt's own attention geometry: an online, per-prompt truncated SVD that keeps only the directions attention actually reads, cutting persistent per-head KV memory in proportion to the retained rank. We propose two decode-time caching strategies, accumulating and streaming, for short and long generation regimes. Furthermore, we propose two refinements that make compression adaptive. A per-matrix energy rule sizes the logit space and the attention mass independently. An attention-aware basis truncates only in the spaces attention actually reads, preserving both the attention logits and the attention output. The same factors also provide free, per-head interpretability insights into the effective rank and the geometry attention consumes. Across multiple models, on both an agentic benchmark and the full LongBench suite AttSVD stays on par with the dense cache while using up to 50% of the KV-cache memory.",
+      "identifiers": [
+        "SemanticScholar:df5b82211f4b447b2335e3daace6e4b55f7a4da3"
+      ],
+      "semantic_scholar_id": "df5b82211f4b447b2335e3daace6e4b55f7a4da3",
+      "canonical_id": "arXiv:2610.06927",
+      "arxiv_id": "2610.06927",
+      "authors": [
+        "Sara Abdali",
+        "Jongwoo Ko",
+        "Pashmina Cameron"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 38,
+        "matched_prestigious_venue": null
+      },
+      "reason": "不可逆なトークン削除ではなく、プロンプトごとのattention幾何からオンラインSVDの低ランク基底を求め、全トークンを残したままKV特徴次元を圧縮する。accumulating/streamingの2方式とattention-awareな基底選択を提示。一次要旨はLongBench等で密なキャッシュと同程度の性能を保ちながらKVメモリを最大50%削減と報告。LLM推論メモリ最適化に直接該当するためaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Stable Token-level Scheduling for Serverless LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.17689",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Serverless inference is emerging as an efficient deployment model for Large Language Models (LLMs) due to its ability to elastically scale resources, improve GPU utilization through resource sharing, and reduce infrastructure costs. However, existing approaches primarily optimize time to first token (TTFT) while overlooking inter-token latency (ITL), a key determinant of user experience during response generation. We observe that LLM inference comprises a computation-intensive prefill stage and a bandwidth-bound decode stage, where admitting new requests can disrupt ongoing decoding and increase latency. To address this, we propose Token Window Pacing (TWP), a closed-loop scheduling framework that leverages runtime feedback from ITL, queue depth, and workload characteristics to regulate request admission at the token level instead of the batch level. TWP dynamically adjusts a selfregulating token window and incorporates chunk-based prefill to minimize interference from incoming requests. Experiments on realistic serverless workloads show that TWP delivers stable TTFT, significantly reduces latency spikes, lowers P99 tail latency, minimizes ITL variation, and improves throughput by up to 45% over ServerlessLLM and 58% over conventional schedulers. These results demonstrate that feedback-driven tokenlevel scheduling enables stable, high-throughput serverless LLM inference without modifying the underlying model.",
+      "identifiers": [
+        "SemanticScholar:84513bc45205cd6bd73ad2a5d75015b284509f3a"
+      ],
+      "semantic_scholar_id": "84513bc45205cd6bd73ad2a5d75015b284509f3a",
+      "canonical_id": "arXiv:2610.17689",
+      "arxiv_id": "2610.17689",
+      "authors": [
+        "Hardi Ashishbhai Desai",
+        "K. BalajiN",
+        "Sourav Kanti Addya"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "サーバレスLLM推論で新規要求の投入が既存decodeのトークン間遅延を乱す問題を扱う。Token Window Pacingは実測ITL、待ち行列長、負荷特性からトークン単位の受入れ枠をフィードバック制御し、chunked prefillと併用する。一次要旨はServerlessLLM比最大45%、従来スケジューラ比最大58%のスループット改善を報告。推論サービングの直接的な高速化研究なのでaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-3ca28d8ed7e5",
+    "round": "libimp-3ca28d8ed7e509d5-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-3ca28d8ed7e509d5-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-3ca28d8ed7e509d5-pre01.json",
+    "receipt": "sha256:c18c14fc1ba4a0faaed78ab2e18b0ed043b1708ea0adebdc6e1480768bbe5d94"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-3ca28d8ed7e5",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

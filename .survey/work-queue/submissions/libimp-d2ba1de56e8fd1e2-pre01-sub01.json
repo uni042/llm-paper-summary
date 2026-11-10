@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "Tying the Loop - Tied Expert Layers in Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "year": 2026,
+      "published": "2026-06-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures efficiently scale Large Language Models (LLMs) by activating only a small fraction of their experts per token, yet the full parameter count - dominated by the expert parameters - must be held in training and inference memory. To address this, we introduce Expert Tying, an architectural modification that shares expert parameters across consecutive transformer layers while preserving independent, layer-wise routing and attention. We evaluate this approach across common, state-of-the-art architectures, including OLMoE, Qwen3, and DeepSeek-style MoEs. Our pretraining experiments demonstrate that tying experts can reduce memory footprint by almost 2x at virtually no degradation in perplexity or downstream quality. By exploiting the parameter redundancy inherent in MoE pathways, our method provides a highly favorable compute-to-memory trade-off, advancing efficient training and scaling of next-generation LLMs.",
+      "identifiers": [
+        "SemanticScholar:a0c74570a4cf010b5f08e1ce68d79e5519efa912"
+      ],
+      "semantic_scholar_id": "a0c74570a4cf010b5f08e1ce68d79e5519efa912",
+      "canonical_id": "arXiv:2606.16825",
+      "arxiv_id": "2606.16825",
+      "doi": "10.48550/arXiv.2606.16825",
+      "authors": [
+        "Martin Jaggi"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      },
+      "reason": "連続Transformer層でexpert重みを共有しつつroutingとattentionを層別維持。OLMoE/Qwen3/DeepSeek型で品質を概ね維持しメモリを約半減と著者報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.32961",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLM agents tackle longer tasks, they increasingly compress growing histories of reasoning, actions, and tool outputs. Compression can reduce token use, but it also changes the information available for later decisions. Existing agentic harnesses bundle decisions about what to compress, when to compress, and how much to remove into fixed policies. A systematic characterization is needed to disentangle these decisions and reveal how each affects task success and execution cost. We systematically vary these decisions across three open-weight models on SWE-bench Verified and Terminal-Bench 1.0. Across nearly 35,000 agent runs, we measure task success, token use, end-to-end latency, and estimated cost. We find that fewer tokens need not mean faster or cheaper execution: on Terminal-Bench with Qwen, policies using roughly one-third as many tokens can take 20-80% longer than the uncompressed agent. Policies with similar overall success can solve different tasks, while the same policy can perform quite differently across models. Our results motivate evaluating compression by its effects on agent execution and tailoring policies to the task, model, and workload.",
+      "identifiers": [
+        "SemanticScholar:496d3cf4a25ee814d9b992d82afe3f11232482a9"
+      ],
+      "semantic_scholar_id": "496d3cf4a25ee814d9b992d82afe3f11232482a9",
+      "canonical_id": "arXiv:2609.32961",
+      "arxiv_id": "2609.32961",
+      "doi": "10.48550/arXiv.2609.32961",
+      "authors": [
+        "Ritul Satish",
+        "Prasoon Sinha",
+        "Akiho Kawada",
+        "N. Yadwadkar"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      },
+      "reason": "約3.5万エージェント実行で圧縮方法・発火条件・深度を比較。トークンを約3分の1にしても実行時間が20〜80%増える条件を確認。コスト・遅延評価に直接関連。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The large KV-cache size of modern LLMs creates a barrier to efficient deployment. Recent work has explored replacing attention layers'RoPE positional embeddings with alternative decay-based mechanisms, which can then be used to prune KV-cache during inference. However, these decay functions have limited expressivity, and in practice devolve into sliding-window-like eviction patterns. In this work, we propose a unifying framework for complementary and novel decay mechanisms, capturing complex key statistics and interactions while preserving expressive RoPE embeddings and Softmax attention. The resulting Universal Attention is a highly expressive and end-to-end trainable architecture, whose composite decay mechanism acts as a natural, $\\textit{adaptive}$ pruning criterion, removing tokens that contribute least to attention computation. Experimentally, Universal Attention achieves state-of-the-art $10\\times$ compression on natural language and synthetic task data, while $\\textit{improving}$ downstream performance compared to both state-of-the-art baselines and unpruned oracles. It further demonstrates superior long-context generalization with unprecedented $25\\times$ compression at length 16k.",
+      "identifiers": [
+        "SemanticScholar:08e34e7d2661f393dd477c436f348a7a772fa5b9"
+      ],
+      "semantic_scholar_id": "08e34e7d2661f393dd477c436f348a7a772fa5b9",
+      "canonical_id": "arXiv:2610.09051",
+      "arxiv_id": "2610.09051",
+      "authors": [
+        "Davis Wertheimer",
+        "Hao-Chen Shen",
+        "Ahan Gupta",
+        "Derrick Liu",
+        "Yu Chin Fabian Lim",
+        "M. Srivatsa",
+        "R. Ganti",
+        "Min-Jia Zhang",
+        "Nai-Gang Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RoPEとSoftmaxを保持する複合減衰機構を学習し、寄与の低いKVを適応的に除去。自然言語等で10倍圧縮、16k長文で25倍圧縮と著者報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention",
+      "source_url": "https://arxiv.org/abs/2108.02347",
+      "year": 2021,
+      "published": "2021-08-05",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 43,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose FMMformers, a class of efficient and flexible transformers inspired by the celebrated fast multipole method (FMM) for accelerating interacting particle simulation. FMM decomposes particle-particle interaction into near-field and far-field components and then performs direct and coarse-grained computation, respectively. Similarly, FMMformers decompose the attention into near-field and far-field attention, modeling the near-field attention by a banded matrix and the far-field attention by a low-rank matrix. Computing the attention matrix for FMMformers requires linear complexity in computational time and memory footprint with respect to the sequence length. In contrast, standard transformers suffer from quadratic complexity. We analyze and validate the advantage of FMMformers over the standard transformer on the Long Range Arena and language modeling benchmarks. FMMformers can even outperform the standard transformer in terms of accuracy by a significant margin. For instance, FMMformers achieve an average classification accuracy of $60.74\\%$ over the five Long Range Arena tasks, which is significantly better than the standard transformer's average accuracy of $58.70\\%$.",
+      "identifiers": [
+        "SemanticScholar:37abe53ed31caa23ae833b2e67bb4aa1892e8d25"
+      ],
+      "semantic_scholar_id": "37abe53ed31caa23ae833b2e67bb4aa1892e8d25",
+      "canonical_id": "arXiv:2108.02347",
+      "arxiv_id": "2108.02347",
+      "doi": "10.48550/arXiv.2108.02347",
+      "authors": [
+        "T. Nguyen",
+        "Vai Suliafu",
+        "S. Osher",
+        "Long Chen",
+        "Bao Wang"
+      ],
+      "priority": 53,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 43,
+        "citation_count": 43,
+        "total": 53,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1923,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      },
+      "reason": "近傍を帯行列、遠方を低ランク行列で近似し、系列長に対する注意計算とメモリを線形化。Long Range Arenaで平均60.74%対通常Transformer58.70%と著者報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Accelerating Language Model Workflows with Prompt Choreography",
+      "source_url": "https://arxiv.org/abs/2512.23049",
+      "year": 2025,
+      "published": "2025-12-28",
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n Large language models are increasingly deployed in multi-agent workflows. We introduce Prompt Choreography, a framework that efficiently executes LLM workflows by maintaining a dynamic, global KV cache. Each LLM call can attend to an arbitrary, reordered subset of previously encoded messages. Parallel calls are supported. Though caching messages’ encodings sometimes gives different results from re-encoding them in a new context, we show in diverse settings that fine-tuning the LLM to work with the cache can help it mimic the original results. Prompt Choreography significantly reduces per-message latency (2.0–6.2× faster time-to-first-token) and achieves substantial end-to-end speedups (>2.2×) in some workflows dominated by redundant computation.",
+      "identifiers": [
+        "SemanticScholar:24726cf89e6fb62a04452b705b39cf05741053fa"
+      ],
+      "semantic_scholar_id": "24726cf89e6fb62a04452b705b39cf05741053fa",
+      "canonical_id": "arXiv:2512.23049",
+      "arxiv_id": "2512.23049",
+      "doi": "10.48550/arXiv.2512.23049",
+      "authors": [
+        "Цзункинг Бай",
+        "Jason Eisner"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 317,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      },
+      "reason": "メッセージの再順序付き参照を許すグローバルKVキャッシュを用い、並列LLM呼出しと重複prefill削減を実現。TTFT 2.0〜6.2倍、特定ワークフローでE2E 2.2倍超と報告。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-d2ba1de56e8f",
+    "round": "libimp-d2ba1de56e8fd1e2-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 10,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-d2ba1de56e8fd1e2-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-d2ba1de56e8fd1e2-pre01.json",
+    "receipt": "sha256:e7364b049d8402fafca8cbec0c8edaf540a73026394330f1c868e03facab3dbe"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-d2ba1de56e8f",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

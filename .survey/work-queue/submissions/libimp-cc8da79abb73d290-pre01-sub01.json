@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, FlashLoop delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+      "identifiers": [
+        "SemanticScholar:97415bd104fa65efa04311bef0cae046f5d79849"
+      ],
+      "semantic_scholar_id": "97415bd104fa65efa04311bef0cae046f5d79849",
+      "canonical_id": "arXiv:2609.29812",
+      "arxiv_id": "2609.29812",
+      "doi": "10.48550/arXiv.2609.29812",
+      "authors": [
+        "Wan-Qi Yang",
+        "Shi-Wei Liu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      },
+      "reason": "同一Transformerブロックを反復するLooped Transformerの冗長計算・KVキャッシュ増大に対し、トークン疎更新、疎attention、ループ間KV残差の低bit量子化を組み合わせる学習不要な推論方式。一次要旨は精度を保ち最大1.64倍のE2E高速化、最大6倍のKVメモリ削減を報告。推論効率の直接研究としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2606.21848",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer architectures form the foundation of modern natural language processing, yet the Key-Value (KV) cache introduces substantial memory and bandwidth overhead during long-context generation, increasingly bottlenecking large-scale deployment. We propose Keyless Attention, a novel attention mechanism that replaces the conventional key projection with a dedicated value-space routing projection, eliminating key representations from the attention computation entirely and yielding a Value-Only Cache that reduces KV-cache memory by 50% while improving decode throughput. Experiments across multiple models and architectures demonstrate that Keyless Attention achieves comparable perplexity and downstream task performance to standard QKV attention, while consistently reducing KV-cache memory by 50%. Furthermore, Keyless Attention exhibits slower validation loss degradation after the best epoch, indicating improved robustness against overfitting. Ablation studies confirm that the dedicated value-space routing projection is critical, with Keyless Attention outperforming KV-sharing methods that eliminate the key cache without replacing its routing role. Experiments in the pretraining regime further confirm the viability of Keyless Attention in industrial settings.",
+      "identifiers": [
+        "SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe"
+      ],
+      "semantic_scholar_id": "935ca66fc96f37f77103a1a73a19c886572db4fe",
+      "canonical_id": "arXiv:2606.21848",
+      "arxiv_id": "2606.21848",
+      "doi": "10.48550/arXiv.2606.21848",
+      "authors": [
+        "Xin Gao",
+        "Xing Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      },
+      "reason": "従来のKey投影をValue空間のルーティング投影に置き換えてKey表現を不要にし、Value-onlyキャッシュを実現。一次要旨では5モデル中4モデルで従来attentionと同等以上のperplexityを達成し、KVキャッシュ使用量を50%削減。推論メモリ・帯域の直接最適化としてaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.30791",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV caching reduces the serving cost of large language models (LLMs), but the growing KV cache footprint is increasingly exceeds GPU and host-memory capacity. Therefore, people use SSD to expand the KV cache storage capacity with high I/O bandwidth. However, in production LLM workload, such as multi-round conversation and LLM agents, the total amount of KV cache writes significantly exceeds SSD capacity, shortening SSD lifetime from years to months. To improve SSD lifetime, a natural solution is to reduce the KV cache writes by gating the KV cache writes via historical access patterns. However, that significantly lowers the KV cache hit rate (and increase the LLM serving cost) since KV caches from different attention types might have identical historical access pattern but different future access patterns. Our insight is that, to reduce KV cache writes without hurting KV cache hit rate, one need to not only consider the access pattern, but also application-level information such as the attention type of KV cache. Leveraging this observation, we propose Gandalf , the first SSD KV cache offloading system with SSD life time awareness. Gandalf prioritize the admission of full-attention KV cache into SSD over the cache generated by other types of attention, which significantly increases SSD lifetime without sacrificing cache hit rate. Our evaluation shows that Gandalf extends the SSD lifetime by 7.3X on average, while having negligible impact on cache hit rate across multiple workload traces and wide range of hardware capacity. Gandalf design can be extended to other flash-based storage, such as High Bandwidth Flash (HBF).",
+      "identifiers": [
+        "SemanticScholar:d15e994e398c46ff3a14a075c2e53621640af9b3"
+      ],
+      "semantic_scholar_id": "d15e994e398c46ff3a14a075c2e53621640af9b3",
+      "canonical_id": "arXiv:2610.30791",
+      "arxiv_id": "2610.30791",
+      "authors": [
+        "M. A. Irawan",
+        "Kun-Tai Du",
+        "Jia-Yi Yao",
+        "Dongjoo Seo",
+        "Yu-Yang Huang",
+        "Haryadi S. Gunawi",
+        "Jun-Chen Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      },
+      "reason": "SSDへKVキャッシュを退避する際の書込寿命を目的関数に含め、過去の参照頻度だけでなくattention種類に基づきSSD入場を調整。一次要旨は複数ワークロードトレースでキャッシュヒット率への影響を小さく保ちつつSSD寿命を平均7.3倍延長と報告。SSDを活用するLLM推論基盤の直接研究なのでaccept。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-cc8da79abb73",
+    "round": "libimp-cc8da79abb73d290-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 3,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-cc8da79abb73d290-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-cc8da79abb73d290-pre01.json",
+    "receipt": "sha256:b9f57587f2877cdada4c9c2c7a07efb3287c4781267341d8d248024eb278ac3b"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-cc8da79abb73",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
