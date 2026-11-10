@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-10T13:18:09+00:00`
+Generated: `2026-11-10T13:45:22+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127906** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121688** / 監査再投入 **0** / 機械規則適用後 **124356** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127925** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121706** / 監査再投入 **0** / 機械規則適用後 **124373** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -106,10 +106,10 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 23 | 101 | 8 | 13 | arXiv:2607.22465 | ORACLE: Agentic AI Orchestrator Routing Via Adaptive Verifier Calibration Feedback | 2026-07-24 | arXiv.org | 1 | 13 | 14-agentic-inference-serving-runtime, LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection, llm-serving-scheduling-disaggregation, マルチモデルLLMサービング / GPUプーリング / 自動スケーリング | [source](https://arxiv.org/abs/2607.22465) |
 | 24 | 0 | 8 | 11 | SemanticScholar:1dc981fcc9e78b4cfc21923892dd1e970356d52b | I N - BATCH E NSEMBLE D RAFTING : R OBUST S PECULA - TIVE D ECODING FOR LVLM S |  |  | 0 | 11 | 99-other-inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的デコード / 知識蒸留 / ドラフトモデル整合, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/1dc981fcc9e78b4cfc21923892dd1e970356d52b) |
 | 25 | 10 | 8 | 10 | DOI:10.1109/IPDPS65963.2026.00058 | Near-Zero Cost KV Cache Compression for Large Language Model Inference | 2026-05-25 | IEEE International Parallel and Distributed Processing Symposium | 0 | 10 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.1109/IPDPS65963.2026.00058) |
-| 26 | 10 | 8 | 10 | arXiv:2610.12338 | VFold: Symmetry-Aware Cross-Layer Value Cache Compression | 2026-10-08 |  | 0 | 10 | 02-hardware-accelerators, 07-kv-cache-optimization-compression, KV Cache Optimization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2610.12338) |
-| 27 | 10 | 8 | 10 | arXiv:2610.28369 | Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs | 2026-10-20 |  | 0 | 10 | adaptive-expert-computation-compression, fine-grained MoE inference / expert skipping / expert pruning / serving efficiency, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2610.28369) |
-| 28 | 10 | 8 | 9 | arXiv:2610.20392 | FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding | 2026-10-14 |  | 0 | 9 | inference-systems, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号 / LLMサービング・ベンチマーク, 長文LLM推論、疎注意、自己投機復号、鍵値キャッシュ選択 | [source](https://arxiv.org/abs/2610.20392) |
-| 29 | 10 | 8 | 9 | DOI:10.1109/ICCCS69761.2026.11613211 | SHOQ: Stability-Aware Hierarchical Quantization by Identifying Critical Outliers for LLMs | 2026-04-01 | International Conference on Communication, Computing & Security | 0 | 9 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ICCCS69761.2026.11613211) |
+| 26 | 10 | 8 | 10 | arXiv:2610.17689 | Stable Token-level Scheduling for Serverless LLM Inference | 2026-10-13 |  | 0 | 10 | llm-serving-scheduling-disaggregation, serverless LLM cold-start / model loading / GPU memory reuse | [source](https://arxiv.org/abs/2610.17689) |
+| 27 | 10 | 8 | 10 | arXiv:2610.02713 | WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds | 2026-10-02 |  | 0 | 10 | 07-kv-cache-optimization-compression, KV Cache Offload / Recomputation, KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.02713) |
+| 28 | 10 | 8 | 9 | arXiv:2610.06927 | AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD | 2026-10-03 |  | 0 | 9 | 07-kv-cache-optimization-compression, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.06927) |
+| 29 | 101 | 8 | 9 | DOI:10.23919/DATE69613.2026.11539596 | BOLD-Q: Blockwise Outlier-aware Logarithmic Dual-Bias Quantization for Hardware-Efficient LLM Inference | 2026-04-20 | Design, Automation and Test in Europe | 1 | 9 | 16-weight-quantization-compression, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.23919/DATE69613.2026.11539596) |
 | 30 | 8 | 8 | 9 | arXiv:2504.03717 | RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm | 2025-03-29 | arXiv.org | 8 | 10 | arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2504.03717) |
 | 31 | 103 | 8 | 9 | arXiv:2604.16395 | Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT) | 2026-03-29 | arXiv.org | 3 | 9 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2604.16395) |
 | 32 | 1 | 8 | 8 | DOI:10.23919/DATE64628.2025.10992868 | Integer Unit-Based Outlier-Aware LLM Accelerator Preserving Numerical Accuracy of FP-FP GEMM | 2025-03-31 | Design, Automation and Test in Europe | 1 | 8 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.23919/DATE64628.2025.10992868) |

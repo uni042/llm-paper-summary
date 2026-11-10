@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-10T13:18:09+00:00`
+Generated: `2026-11-10T13:45:22+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127906** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121688** / 監査再投入 **0** / 機械規則適用後 **124356** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127925** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121706** / 監査再投入 **0** / 機械規則適用後 **124373** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -106,10 +106,10 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 23 | 2 | 8 | 13 | SemanticScholar:0227a06cf53bb54a11393ddd8d52dce1ee1cdce6 | xDeepServe: Model-as-a-Service on Huawei CloudMatrix384 xDeepServe Team @ Huawei |  |  | 2 | 12 | LLM Serving / Scheduling / Disaggregation, Offload / Hierarchical Memory, heterogeneous inference / attention offloading / operator disaggregation / distributed LLM serving, kv-cache-offload-recomputation, llm-serving-scheduling-disaggregation, post-training quantization / second-order compression / weight-only LLM inference | [source](https://www.semanticscholar.org/paper/0227a06cf53bb54a11393ddd8d52dce1ee1cdce6) |
 | 24 | 0 | 8 | 11 | SemanticScholar:978af19cb401afdd4f3b1302052773fb7811c434 | L EARNING W HAT M ATTERS : S UPERVISING S PARSE A TTENTION R OUTING WITH C AUSAL E VIDENCE S ETS |  |  | 0 | 11 | KV cache eviction / heavy hitters / sparse attention / efficient inference, inference-systems, long-context inference / dynamic sparse attention / prefill acceleration, 疎注意 / KVキャッシュ選択 / 長文脈推論, 疎注意／長文脈学習 | [source](https://www.semanticscholar.org/paper/978af19cb401afdd4f3b1302052773fb7811c434) |
 | 25 | 10 | 8 | 10 | arXiv:2610.29210 | Understanding Target Probability Reuse in Speculative Decoding | 2026-10-21 |  | 0 | 11 | inference-systems, speculative decoding / parallel drafting / diffusion-inspired language modeling, speculative-decoding, 投機的復号 / EAGLE, 投機的復号・並列ドラフト・対象分布保存・推論スケジューリング | [source](https://arxiv.org/abs/2610.29210) |
-| 26 | 101 | 8 | 10 | arXiv:2608.00914 | Augmented Backpressure for Decentralized Management of Agentic Networks | 2026-08-02 | arXiv.org | 1 | 10 | LLM Serving / Scheduling / Disaggregation, LLMサービング・スケジューリング・KVキャッシュ保持 | [source](https://arxiv.org/abs/2608.00914) |
-| 27 | 10 | 8 | 9 | DOI:10.23919/DATE69613.2026.11539704 | Boosting the Performance of Tree-Based Speculative Decoding of LLMs on FPGAs | 2026-04-20 | Design, Automation and Test in Europe | 0 | 9 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.23919/DATE69613.2026.11539704) |
-| 28 | 10 | 8 | 9 | arXiv:2606.07819 | Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression | 2026-06-05 | arXiv.org | 0 | 10 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2606.07819) |
-| 29 | 10 | 8 | 9 | arXiv:2610.17689 | Stable Token-level Scheduling for Serverless LLM Inference | 2026-10-13 |  | 0 | 9 | llm-serving-scheduling-disaggregation, serverless LLM cold-start / model loading / GPU memory reuse | [source](https://arxiv.org/abs/2610.17689) |
+| 26 | 10 | 8 | 10 | arXiv:2610.12338 | VFold: Symmetry-Aware Cross-Layer Value Cache Compression | 2026-10-08 |  | 0 | 10 | 02-hardware-accelerators, 07-kv-cache-optimization-compression, KV Cache Optimization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2610.12338) |
+| 27 | 10 | 8 | 10 | arXiv:2610.28369 | Don't Skip the Baseline: A Controlled Comparison of Dynamic Expert Skipping in MoEs | 2026-10-20 |  | 0 | 10 | adaptive-expert-computation-compression, fine-grained MoE inference / expert skipping / expert pruning / serving efficiency, 適応的エキスパート計算・圧縮 / マルチモーダルMoE推論 / 動的エキスパート省略 | [source](https://arxiv.org/abs/2610.28369) |
+| 28 | 10 | 8 | 9 | arXiv:2610.20392 | FOLD: Position-Free Far Memory with Local Order for Long-Context Speculative Decoding | 2026-10-14 |  | 0 | 9 | inference-systems, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号 / LLMサービング・ベンチマーク, 長文LLM推論、疎注意、自己投機復号、鍵値キャッシュ選択 | [source](https://arxiv.org/abs/2610.20392) |
+| 29 | 10 | 8 | 9 | DOI:10.1109/ICCCS69761.2026.11613211 | SHOQ: Stability-Aware Hierarchical Quantization by Identifying Critical Outliers for LLMs | 2026-04-01 | International Conference on Communication, Computing & Security | 0 | 9 | Weight Quantization / Compression, inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1109/ICCCS69761.2026.11613211) |
 | 30 | 7 | 8 | 9 | arXiv:2511.02043 | Flashlight: PyTorch Compiler Extensions to Accelerate Attention Variants | 2025-11-03 | arXiv.org | 7 | 10 | 02-hardware-accelerators, LLM Serving / Scheduling / Disaggregation, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2511.02043) |
 | 31 | 10 | 8 | 9 | DOI:10.1109/2575-8411.2026.00046 | Prism: Proactive Workload-Aware Optimization for Hybrid-Service in LMaaS Systems | 2026-06-01 | IEEE International Conference on Distributed Computing Systems | 0 | 9 | LLM Serving / Scheduling / Disaggregation, LLMサービング／予測型スケジューリング, llm-serving-scheduling-disaggregation | [source](https://doi.org/10.1109/2575-8411.2026.00046) |
 | 32 | 10 | 8 | 8 | arXiv:2609.34259 | QuantaSpike: Short-Window Spike-Driven Quantization for Large Language Models | 2026-09-28 |  | 0 | 9 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2609.34259) |
@@ -439,7 +439,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 356 | 10 | 4 | 7 | arXiv:2609.35394 | Rethinking Visual Token Compression for Video Large Language Models: A Simple Yet Strong Baseline | 2026-09-28 | arXiv.org | 0 | 8 |  | [source](https://arxiv.org/abs/2609.35394) |
 | 357 | 10 | 4 | 7 | arXiv:2610.28620 | Weight Placement Is Not Enough: Synchronization in Multi-Node CPU Decoding of Ternary LLMs | 2026-10-20 |  | 0 | 7 | LLM推論カーネル融合／メガカーネル／GPUコンパイラ・ランタイム, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2610.28620) |
 | 358 | 116 | 4 | 7 | arXiv:2605.04956 | KernelBenchX: A Comprehensive Benchmark for Evaluating LLM-Generated GPU Kernels | 2026-05-06 | arXiv.org | 16 | 7 | inference-systems | [source](https://arxiv.org/abs/2605.04956) |
-| 359 | 102 | 4 | 7 | arXiv:2609.34565 | FlowState: Execution State as Memory for Long-Horizon LLM Agents | 2026-09-28 |  | 2 | 7 | 07-kv-cache-optimization-compression, agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.34565) |
+| 359 | 102 | 4 | 7 | arXiv:2609.34565 | FlowState: Execution State as Memory for Long-Horizon LLM Agents | 2026-09-28 | arXiv.org | 2 | 7 | 07-kv-cache-optimization-compression, agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.34565) |
 | 360 | 101 | 4 | 7 | arXiv:2610.11573 | Memory Type Varies: Empowering LLM Agents for Long-Term Memory with Diverse Strategies | 2026-10-08 |  | 1 | 7 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2610.11573) |
 | 361 | 12 | 4 | 7 | arXiv:2510.14961 | Efficient Parallel Samplers for Recurrent-Depth Models and Their Connection to Diffusion Language Models | 2025-10-16 | arXiv.org | 12 | 7 | Diffusion LLM Inference, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2510.14961) |
 | 362 | 10 | 4 | 7 | arXiv:2610.27583 | TeCoP: Accelerating Diffusion Large Language Model Decoding via Tentative Context Pipelining | 2026-10-20 |  | 0 | 7 | Diffusion LLM Inference, diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://arxiv.org/abs/2610.27583) |

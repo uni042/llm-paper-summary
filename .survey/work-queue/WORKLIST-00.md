@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-10T13:18:09+00:00`
+Generated: `2026-11-10T13:45:22+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127906** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121688** / 監査再投入 **0** / 機械規則適用後 **124356** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127925** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121706** / 監査再投入 **0** / 機械規則適用後 **124373** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -107,9 +107,9 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 24 | 111 | 8 | 11 | DOI:10.1109/ISCA66397.2026.00168 | PowerWeave: Unlocking Energy-Efficient ML on GPUs with OS-Level Spatial Power Management | 2026-06-01 | International Symposium on Computer Architecture | 1 | 11 | KV Cache Offload / Recomputation, LLM Serving / Scheduling / Disaggregation, LLM serving / energy management / cluster scheduling / dynamic reconfiguration, LLM serving / prefill-decode disaggregation, inference-systems, serving-scheduling | [source](https://doi.org/10.1109/ISCA66397.2026.00168) |
 | 25 | 0 | 8 | 11 | SemanticScholar:e56474be2ecd67a734319fbe422eb8ea5c4b1bb0 | A1: A SYNCHRONOUS T EST -T IME S CALING VIA C ON - FORMAL P REDICTION |  |  | 0 | 11 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://www.semanticscholar.org/paper/e56474be2ecd67a734319fbe422eb8ea5c4b1bb0) |
 | 26 | 101 | 8 | 10 | DOI:10.1145/3774904.3792337 | Energy-Efficient and Dequantization-Free Quantization of LLMs: A Spiking Neural Network Approach to Salient Value Mitigation | 2026-04-12 | The Web Conference | 1 | 10 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1145/3774904.3792337) |
-| 27 | 10 | 8 | 10 | arXiv:2610.02713 | WakeKV: Reactive, Reversible KV Residency for Heads That Change Their Minds | 2026-10-02 |  | 0 | 10 | 07-kv-cache-optimization-compression, KV Cache Offload / Recomputation, KV Cache Optimization / Compression, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.02713) |
-| 28 | 10 | 8 | 9 | arXiv:2610.06927 | AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD | 2026-10-03 |  | 0 | 9 | 07-kv-cache-optimization-compression, kv-cache-optimization-compression | [source](https://arxiv.org/abs/2610.06927) |
-| 29 | 101 | 8 | 9 | DOI:10.23919/DATE69613.2026.11539596 | BOLD-Q: Blockwise Outlier-aware Logarithmic Dual-Bias Quantization for Hardware-Efficient LLM Inference | 2026-04-20 | Design, Automation and Test in Europe | 1 | 9 | 16-weight-quantization-compression, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.23919/DATE69613.2026.11539596) |
+| 27 | 101 | 8 | 10 | arXiv:2608.00914 | Augmented Backpressure for Decentralized Management of Agentic Networks | 2026-08-02 | arXiv.org | 1 | 10 | LLM Serving / Scheduling / Disaggregation, LLMサービング・スケジューリング・KVキャッシュ保持 | [source](https://arxiv.org/abs/2608.00914) |
+| 28 | 10 | 8 | 9 | DOI:10.23919/DATE69613.2026.11539704 | Boosting the Performance of Tree-Based Speculative Decoding of LLMs on FPGAs | 2026-04-20 | Design, Automation and Test in Europe | 0 | 9 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://doi.org/10.23919/DATE69613.2026.11539704) |
+| 29 | 10 | 8 | 9 | arXiv:2606.07819 | Joint Structural Pruning and Mixed-Precision Quantization for LLM Compression | 2026-06-05 | arXiv.org | 0 | 10 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。, inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://arxiv.org/abs/2606.07819) |
 | 30 | 10 | 8 | 9 | arXiv:2610.42112 | Subquadratic Attention with a Hierarchical Tree-Structured Indexer | 2026-10-30 |  | 0 | 9 | 13-sparse-attention, inference-systems | [source](https://arxiv.org/abs/2610.42112) |
 | 31 | 101 | 8 | 9 | arXiv:2610.13990 | DoSA: Dots Sparse Attention | 2026-09-26 |  | 1 | 9 | 13-sparse-attention, KVキャッシュ圧縮・疎注意・階層メモリ・長文脈MoE推論, Qwen3.8-Flash-Nextのモデル設計・推論効率に関する技術報告。, 疎注意／長文脈学習 | [source](https://arxiv.org/abs/2610.13990) |
 | 32 | 10 | 8 | 8 | arXiv:2611.00588 | TVP: TV is Almost All You Need for Speculative Decoding | 2026-10-31 |  | 0 | 8 | inference-systems, speculative-decoding, 投機的デコード、並列ブロックドラフタ、DFlash、受理率指向学習。, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2611.00588) |
@@ -365,7 +365,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 282 | 51 | 4 | 11 | arXiv:2108.02347 | FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention | 2021-08-05 | Neural Information Processing Systems | 41 | 11 | inference-systems, sparse attention / long-context Transformer | [source](https://arxiv.org/abs/2108.02347) |
 | 283 | 10 | 4 | 11 | DOI:10.1016/j.eswa.2026.133192 | Semantic-aware pruning of large language models via neuron importance explanation | 2026-06-01 | Expert systems with applications | 0 | 11 | 09-model-compression-pruning, inference-systems | [source](https://doi.org/10.1016/j.eswa.2026.133192) |
 | 284 | 10 | 4 | 11 | arXiv:2608.21265 | Memory Augmentation Unlocks Efficient Chain-of-Thought Reasoning | 2026-08-21 | arXiv.org | 0 | 11 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.21265) |
-| 285 | 101 | 4 | 11 | arXiv:2609.39740 | LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation | 2026-09-30 |  | 1 | 12 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39740) |
+| 285 | 101 | 4 | 11 | arXiv:2609.39740 | LatentHarness: Learning Latent Actions for Memory and Reasoning via Counterfactual Policy Distillation | 2026-09-30 | arXiv.org | 1 | 12 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39740) |
 | 286 | 10 | 4 | 11 | SemanticScholar:09356987f273c3c6d74e9ac35d4894a188566b04 | S HARED C ONTEXT , S EPARATE E NGINES : S TREAMING V ISION –L ANGUAGE I NFERENCE ON E DGE S O C S | 2026-10-26 |  | 0 | 11 | KV Cache Offload / Recomputation, on-device LLM / heterogeneous inference / NPU offloading | [source](https://www.semanticscholar.org/paper/09356987f273c3c6d74e9ac35d4894a188566b04) |
 | 287 | 5 | 4 | 10 | arXiv:2507.00797 | VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator | 2025-06-22 | Design Automation Conference | 5 | 10 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, Sparse Attention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2507.00797) |
 | 288 | 104 | 4 | 10 | arXiv:2606.16825 | Tying the Loop - Tied Expert Layers in Mixture-of-Experts Language Models | 2026-06-15 | arXiv.org | 4 | 10 | MoE routing / expert choice / heterogeneous conditional computation, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://arxiv.org/abs/2606.16825) |
@@ -515,7 +515,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 432 | 1 | 4 | 6 | arXiv:2505.15909 | Is (Selective) Round-To-Nearest Quantization All You Need? | 2025-05-21 | arXiv.org | 1 | 6 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2505.15909) |
 | 433 | 102 | 4 | 6 | arXiv:2606.17999 | VoidPadding: Let [VOID] Handle Padding in Masked Diffusion Language Models so that [EOS] Can Focus on Semantic Termination | 2026-06-16 | arXiv.org | 2 | 8 | inference-systems, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号, 拡散型LLM推論・特徴キャッシュ・KVキャッシュ・並列復号, 拡散型LLM推論・鍵値キャッシュ・疎注意・動的破棄 | [source](https://arxiv.org/abs/2606.17999) |
 | 434 | 2 | 4 | 6 | DOI:10.1016/j.sysarc.2025.103548 | A new fixed-point simulation methodology for on-device AI based on large language models | 2025-11-01 | Journal of systems architecture | 2 | 6 | CPUオフロード / 活性化疎性 / 階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://doi.org/10.1016/j.sysarc.2025.103548) |
-| 435 | 101 | 4 | 6 | arXiv:2609.39765 | MemCodex: Self-Programming Hierarchical Memory for Language Agents | 2026-09-30 |  | 1 | 6 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39765) |
+| 435 | 101 | 4 | 6 | arXiv:2609.39765 | MemCodex: Self-Programming Hierarchical Memory for Language Agents | 2026-09-30 | arXiv.org | 1 | 6 | agentic inference / persistent memory | [source](https://arxiv.org/abs/2609.39765) |
 | 436 | 3 | 4 | 6 | DOI:10.1007/978-3-031-35995-8_39 | A Contrastive Self-distillation BERT with Kernel Alignment-Based Inference | 2023 | International Conference on Conceptual Structures | 3 | 6 |  | [source](https://doi.org/10.1007/978-3-031-35995-8_39) |
 | 437 | 111 | 4 | 6 | arXiv:2606.30553 | COSM: A Cooperative Scheduling Framework for Concurrent PIM and CPU Execution on Mobile Devices | 2026-06-01 | International Symposium on Computer Architecture | 1 | 6 | cpu-offload, inference-systems | [source](https://arxiv.org/abs/2606.30553) |
 | 438 | 107 | 4 | 6 | arXiv:2602.11683 | ThinkRouter: Efficient Reasoning via Routing Thinking between Latent and Discrete Spaces | 2026-02-12 | arXiv.org | 7 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2602.11683) |
