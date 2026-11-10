@@ -1,0 +1,149 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-2100-scheduled-chat-00/r01",
+  "reference_main_sha": "fbd24263ab5af2c973b97c5eba1ccdfc04a83c1a",
+  "mode": "Discovery",
+  "partial_round": true,
+  "record_count": 4,
+  "records": [
+    {
+      "canonical_id": "arXiv:2505.11820",
+      "title": "Chain-of-Model Learning for Language Model",
+      "classification": "accept",
+      "reason": "Transformer各層の隠れ次元を因果的なchainに分割するCoM/CoLM。使用chain数を変えるelastic inferenceと、先頭chainで計算したKVを共有するCoLM-Airによりprefill効率化を狙う。一次要旨には具体的な推論速度改善率がなくResearchで確認が必要。",
+      "source_url": "https://arxiv.org/abs/2505.11820",
+      "worklist_rank": 267,
+      "body_check": "primary_abstract_only; body_not_read",
+      "identity_tokens": [
+        "arXiv:2505.11820",
+        "DOI:10.48550/arXiv.2505.11820"
+      ],
+      "first_checked_at": "2026-11-10T21:00:00+09:00",
+      "last_checked_at": "2026-11-10T21:00:00+09:00",
+      "linked_from": []
+    },
+    {
+      "canonical_id": "arXiv:2603.02737",
+      "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
+      "classification": "accept",
+      "reason": "wafer-scale SRAM computing-in-memoryによりオフチップ移動を抑制し、token粒度パイプライン、分散動的KV管理、通信考慮配置を統合。著者報告の平均スループット4.1倍・エネルギー効率4.2倍、13B最大9.1倍・17倍は比較条件を本文で検証する必要がある。",
+      "source_url": "https://arxiv.org/abs/2603.02737",
+      "worklist_rank": 268,
+      "body_check": "primary_abstract_only; body_not_read",
+      "identity_tokens": [
+        "arXiv:2603.02737",
+        "DOI:10.48550/arXiv.2603.02737"
+      ],
+      "first_checked_at": "2026-11-10T21:00:00+09:00",
+      "last_checked_at": "2026-11-10T21:00:00+09:00",
+      "linked_from": []
+    },
+    {
+      "canonical_id": "arXiv:2610.00465",
+      "title": "AIR-LLM: Broadcasting AI Weights over Radio for Memory-Free Edge LLM Inference via RF Computing",
+      "classification": "accept",
+      "reason": "基地局から重みを無線配信し、端末側RFミキサでGEMVを実行する特殊なedge LLM構成。Sionna都市シーンと実RF mixer profilingによる評価で、LLaMA-3.1-8BのWikiText-2 perplexity劣化4.0%条件下、FP16/weight-only量子化比エネルギー157.7/40.4倍削減と著者報告。シミュレーション・モデル化に依存する点に注意。",
+      "source_url": "https://arxiv.org/abs/2610.00465",
+      "worklist_rank": 269,
+      "body_check": "primary_abstract_only; body_not_read",
+      "identity_tokens": [
+        "arXiv:2610.00465",
+        "DOI:10.48550/arXiv.2610.00465"
+      ],
+      "first_checked_at": "2026-11-10T21:00:00+09:00",
+      "last_checked_at": "2026-11-10T21:00:00+09:00",
+      "linked_from": []
+    },
+    {
+      "canonical_id": "arXiv:2509.19645",
+      "title": "Are We Scaling the Right Thing? A System Perspective on Test-Time Scaling",
+      "classification": "accept",
+      "reason": "test-time scalingを計算量最適性だけでなくレイテンシ・token単価・tensor parallelism・投機復号のシステム指標から評価する問題提起と予備分析。新しい高速化アルゴリズムの定量実証ではなく、system-aware TTSの評価方法論として採用。",
+      "source_url": "https://arxiv.org/abs/2509.19645",
+      "worklist_rank": 273,
+      "body_check": "primary_abstract_only; body_not_read",
+      "identity_tokens": [
+        "arXiv:2509.19645",
+        "DOI:10.48550/arXiv.2509.19645"
+      ],
+      "first_checked_at": "2026-11-10T21:00:00+09:00",
+      "last_checked_at": "2026-11-10T21:00:00+09:00",
+      "linked_from": []
+    }
+  ],
+  "skipped": [
+    {
+      "canonical_id": "arXiv:2510.17196",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2505.07861",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2508.08289",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2404.04759",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2509.17428",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2606.29223",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2309.05210",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2609.10355",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3725338",
+      "reason": "completed Library manuscript not found; later receipt unverified; defer"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "reason": "retry_deferred_no_new_evidence; method_chars 553 < 700"
+    },
+    {
+      "canonical_id": "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a",
+      "reason": "primary source not yet verified; defer"
+    },
+    {
+      "canonical_id": "arXiv:2505.11415",
+      "reason": "withdrawn duplicate; previously excluded"
+    }
+  ],
+  "next_rank": 270,
+  "candidate_inventory": 571,
+  "round_complete": false,
+  "identity_uniqueness_global": "not_fully_verified",
+  "returned_research_count": 11,
+  "returned_research_later_receipts_verified": false,
+  "library_global_sha256_verified": false,
+  "next_identity": "DOI:10.1109/HPCA68181.2026.11408526",
+  "attempted_independent_candidates": [
+    "arXiv:2505.11820",
+    "arXiv:2603.02737",
+    "arXiv:2610.00465",
+    "arXiv:2509.19645"
+  ]
+}
