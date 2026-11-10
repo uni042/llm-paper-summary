@@ -1,0 +1,29 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261111-0703-scheduled-chat-00/r01",
+  "reference_main_sha": "e928c9ea0cce79420dde8ac86aa46d766f1acd3f",
+  "candidate_inventory": 571,
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.20776",
+      "identity_tokens": ["arXiv:2505.20776", "DOI:10.48550/arXiv.2505.20776"],
+      "title": "SpecExtend: A Drop-in Enhancement for Speculative Decoding of Long Sequences",
+      "reason": "長文で投機的復号の速度が劣化する問題に対し、FlashAttentionとHybrid Tree Attentionでprefill・検証を効率化し、target側attention scoreを用いるCross-model Retrievalでdraft側KVキャッシュを選択。16K要約で最大2.84倍、長文推論で最大3.86倍の高速化を著者が報告。推論アルゴリズム・KVキャッシュ最適化に直接関連。",
+      "source_url": "https://arxiv.org/abs/2505.20776",
+      "body_check": "primary_abstract_verified; prior_run_reported_fulltext_read_not_revalidated_this_run",
+      "worklist_rank": 7,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T07:03:33+09:00",
+      "last_checked_at": "2026-11-11T07:03:33+09:00"
+    }
+  ],
+  "round_complete": false,
+  "skipped": [{"rank": 1, "reason": "not_checked_this_run"}, {"rank": 2, "reason": "not_checked_this_run"}, {"rank": 3, "reason": "not_checked_this_run"}, {"rank": 4, "reason": "not_checked_this_run"}, {"rank": 5, "reason": "not_checked_this_run"}, {"rank": 6, "reason": "not_checked_this_run"}],
+  "next_rank": 10,
+  "identity_uniqueness_global": "not_fully_verified; GitHub import inbox authoritative"
+}
