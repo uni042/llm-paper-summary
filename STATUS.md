@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-11 04:47:08 JST**
+> 自動生成: **2026-11-11 04:53:09 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -52,26 +52,26 @@
 | 指標 | 件数 |
 |---|---:|
 | 探索候補総数 | **149435** |
-| 処理済み | **21914** |
-| 未処理Discovery候補 | **127521** |
+| 処理済み | **21915** |
+| 未処理Discovery候補 | **127520** |
 | 収録済み | **3819** |
 | Research / Audit候補へ昇格済み | **168** |
 | 無関係として除外 | **12537** |
-| 微妙として除外 | **5390** |
+| 微妙として除外 | **5391** |
 
 ### 探索候補の事前フィルタリング（可逆）
 
 | 判定段階 | 件数 |
 |---|---:|
-| 未処理候補（フィルタ前） | **127521** |
+| 未処理候補（フィルタ前） | **127520** |
 | 機械規則による暫定隔離 | **2165** |
 | 拡張機械規則による追加隔離 | **1382** |
-| 機械規則通過後 | **123974** |
-| 系統内前方引用スコアによる選抜保留 | **117775** |
-| 暫定隔離合計 | **121322** |
+| 機械規則通過後 | **123973** |
+| 系統内前方引用スコアによる選抜保留 | **117774** |
+| 暫定隔離合計 | **121321** |
 | **読解可能候補（隔離後）** | **6199** |
-| 前方引用が同一系統で2本以上の候補 | **11957** |
-| 前方引用が同一系統で3本以上の候補 | **4278** |
+| 前方引用が同一系統で2本以上の候補 | **11956** |
+| 前方引用が同一系統で3本以上の候補 | **4277** |
 
 - 選抜順: **同一系統の前方引用本数（最多系統）→系統内引用合計→技術的関連語→従来の優先度**。
 - 可逆選抜: **quarantine** / 機械規則通過候補から **5.0%** / 目標 **6199件**（監査復活枠なし）。
@@ -89,7 +89,7 @@
 
 - 消化率: **14.7%**
 - 現在の生在庫: 後方references **58811件** / 前方引用 **70043件**。後方候補を優先し、前方プールは後方プールに存在する同一identityを保持しません。
-- 前方・後方を統合してidentity重複を除いた未処理面は **128123件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
+- 前方・後方を統合してidentity重複を除いた未処理面は **128122件**。そこから既にResearch / Audit候補へ昇格したidentityを除いた値が上表の未処理Discovery候補です。
 - 処理済み = 収録済み + Research / Audit候補へ昇格済み + 無関係 + 微妙。前方引用・後方referencesの出自は区別せず、DOI/arXiv/title aliasを統合して数えます。
 - STATUS生成時にpaper実体、Research/Audit job、relevance台帳、現在の前方/後方候補からゼロベースで再計算します。
 
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-10 09:46:22 JST（19時間0分前）** |
+| 最終maintenance完了 | **11-10 09:46:22 JST（19時間6分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -148,7 +148,7 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
   - evidence: .survey/import-inbox/results/research/file_00000000d7b88230867dd25614c61dbc--2024-2412.10319-scbench-returned-repair-20261109-1530-scheduled-chat-30-r01.json
 - Discovery: **11-11 04:30:00 JST** / worker scheduled-chat-30 / run 20261111-0430-scheduled-chat-30/r01
   - 本文確認・分類 **10件** / accept **9件** / unrelated+borderline **1件**
-  - evidence: .survey/import-inbox/pending/discovery/file_0000000047308210960da509f9e8249b--discovery-20261111-0430-scheduled-chat-30-r01.json
+  - evidence: .survey/import-inbox/waiting/discovery/file_0000000047308210960da509f9e8249b--discovery-20261111-0430-scheduled-chat-30-r01.json
 
 ### Codex探索成果の反映状況
 
