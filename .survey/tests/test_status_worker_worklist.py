@@ -243,5 +243,59 @@ class WorkerWorklistIdentityTests(unittest.TestCase):
         self.assertEqual(len(identities), len(set(identities)))
 
 
+    def test_large_worklist_is_fetchable_and_lossless(self):
+        module = _load()
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            output = root / ".survey/work-queue"
+            payloads = {}
+            for slot in ("00", "30", "45"):
+                rows = [
+                    {
+                        "rank": i + 1,
+                        "source_rank": i * 3 + 1,
+                        "assigned_worker": f"scheduled-chat-{slot}",
+                        "canonical_id": f"arXiv:2501.{i:05d}",
+                        "title": f"LLM serving candidate {i}",
+                        "priority": 30,
+                        "source_url": f"https://arxiv.org/abs/2501.{i:05d}",
+                        "linked_from": [f"papers/inference/long-lineage/{j:03d}/" + ("x" * 40) for j in range(40)],
+                    }
+                    for i in range(500)
+                ]
+                payloads[slot] = {
+                    "schema_version": 2, "worker_id": f"scheduled-chat-{slot}",
+                    "research_audit": {
+                        "ready_total": 0, "claimable_total": 0, "displayed": 0, "rows": [],
+                    },
+                    "discovery_review": {
+                        "pending_total": 500, "prefilter": {}, "displayed": 500, "rows": rows,
+                    },
+                }
+            results = module.write_outputs(root, payloads, output_dir=output)
+            for slot in ("00", "30", "45"):
+                main_path = output / f"worker-worklist-{slot}.json"
+                self.assertLess(main_path.stat().st_size, 1024 * 1024)
+                view = json.loads(main_path.read_text(encoding="utf-8"))
+                self.assertEqual(view["discovery_review"]["displayed"], 500)
+                self.assertEqual(len(view["discovery_review"]["rows"]), 500)
+                self.assertEqual(len(view["discovery_review"]["rows"][0]["linked_from"]), 4)
+                self.assertEqual(view["discovery_review"]["rows"][0]["linked_from_count"], 40)
+                restored = []
+                for relpath in view["discovery_review"]["full_row_shards"]:
+                    shard = json.loads((output / relpath).read_text(encoding="utf-8"))
+                    self.assertEqual(shard["record_count"], len(shard["rows"]))
+                    restored.extend(shard["rows"])
+                self.assertEqual(restored, payloads[slot]["discovery_review"]["rows"])
+                self.assertEqual(len(restored), 500)
+                self.assertEqual(
+                    results[slot]["discovery_review"]["full_rows_sha256"],
+                    view["discovery_review"]["full_rows_sha256"],
+                )
+            before = (output / "worker-worklist-45.json").read_bytes()
+            module.write_outputs(root, payloads, output_dir=output)
+            self.assertEqual(before, (output / "worker-worklist-45.json").read_bytes())
+
+
 if __name__ == "__main__":
     unittest.main()
