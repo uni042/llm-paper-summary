@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AbridgeKV: Compressing Long Reasoning into the KV Cache of Learned Pause Tokens",
+      "source_url": "https://arxiv.org/abs/2610.20641",
+      "year": 2026,
+      "published": "2026-10-07",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought decoding is memory-bound: the KV cache of the generated tokens grows linearly with the test-time compute being spent. Evicting cache entries does not fix this, because a model never trained on a cache with entries removed generates longer, often up to the length limit. We instead train the model to compress its own output. AbridgeKV compresses each completed block of generated text into the KV entries of a few learned pause tokens. These are extra input tokens with trained embeddings that produce no output. Once the pause tokens have encoded the block, AbridgeKV frees the block's original cache; subsequent tokens attend to the pause tokens'KV entries in its place. Three novel choices make this work: the pause tokens'KV entries take positions inside the block they replace, the cache budget is allocated across layers according to the measured value of each layer's entries, and compression operates on relatively large blocks. On 446 competition problems from AIME, HMMT, AMC, BRUMO, CMIMC and SMT with 32K-token generations, keeping a quarter of the generated cache matches an identically trained full-KV model in accuracy and output length; the strongest published evictor at a matched budget writes far longer, and the closest trained compressor, retrained on the same data, loses 10 points. Served in vLLM, the cache is 3.5x smaller per sequence and a saturated H100 finishes a problem 3.2x faster than with full KV.",
+      "identifiers": [
+        "SemanticScholar:271342ba40609c271fec58fcafb0c444bcf23c44"
+      ],
+      "semantic_scholar_id": "271342ba40609c271fec58fcafb0c444bcf23c44",
+      "canonical_id": "arXiv:2610.20641",
+      "arxiv_id": "2610.20641",
+      "authors": [
+        "Jack Cai",
+        "Lijie Yang",
+        "Vasilis Kontonis",
+        "Dimitris Papailiopoulos",
+        "Shivam Garg"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 34,
+        "matched_prestigious_venue": null
+      },
+      "reason": "生成済み長文推論ブロックを学習されたpause tokenのKVへ圧縮し、元ブロックのKVを解放する。層別予算配分とブロック位置を保持する設計により、長い思考過程を伴うLLM推論のKVメモリを削減する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DCKV: Learned Transform Coding of the Prompt KV Cache in Hybrid Language Models",
+      "source_url": "https://arxiv.org/abs/2610.36950",
+      "year": 2026,
+      "published": "2026-10-27",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Hybrid language models keep a key-value (KV) cache only in their few full-attention layers, but this cache is still the part of a prompt's state that grows with the prompt and that must be stored or moved to reuse it. We present DCKV, a differentiable codec for the KV cache and the first KV-cache codec that is trained end to end. Its transform, its quantizer and its entropy models, which are conditioned on the prompt tokens and on already decoded neighbouring positions, are optimized together against the frozen language model, both for the code length that the entropy models assign and for the change of the model's output. On Qwen3.5-2B, DCKV stores a compressed token in more than 55 times fewer bytes than bf16 at a loss of at most 1.8 points on three long-context benchmarks, and in more than 100 times fewer bytes at a loss of at most 3.6 points.",
+      "identifiers": [
+        "SemanticScholar:e3021d1f5f43f0f5865cca94ae1410c675a333ae"
+      ],
+      "semantic_scholar_id": "e3021d1f5f43f0f5865cca94ae1410c675a333ae",
+      "canonical_id": "arXiv:2610.36950",
+      "arxiv_id": "2610.36950",
+      "authors": [
+        "Egor Maximov",
+        "Aleksei Merkelov",
+        "Vasiliy Alekseev",
+        "Ivan Krivorotov",
+        "В. К. Беляев",
+        "Nikita Arsenin",
+        "Д. Ю. Бочаров",
+        "A. Goncharov"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 14,
+        "matched_prestigious_venue": null
+      },
+      "reason": "ハイブリッド言語モデルのfull-attention層に残るプロンプトKVを、変換・量子化・エントロピーモデルを同時学習する符号化器で圧縮する。KV転送・保存コストとモデル出力誤差を共同最適化する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Who Should Score the Cache? Mid-Depth Layers Are the Best Judges of KV-Cache Eviction",
+      "source_url": "https://arxiv.org/abs/2611.02230",
+      "year": 2026,
+      "published": "2026-11-01",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Key-value (KV) cache eviction methods rank tokens by attention scores, and each layer scores its own cache. To our knowledge, no eviction method asks which layer should score. We find, across twenty-one models, that the depth of the scoring layer governs eviction quality. On the eighteen models with per-layer caches, spanning 0.5B to 109B, long-context retrieval accuracy collapses at shallow layers, peaks between 0.4 and 0.75 of depth, and degrades at the last layer. The curve arises because a layer judges tokens well only once it has used the question to find the answer, which takes several layers. Modeling eviction as a top-$k$ cut, we compute answer survival probability from prefill attention and reproduce the measured curves. This approach selects the scoring layer using calibration prompts with known answers, and the selected layer is the best layer measured on most models and never significantly below it. It improves on the own-layer default on sixteen of the eighteen models, with significant gains on seven, all at 14B or below, while on larger models the default is already close to the best mid-depth layer. Scoring every cache from the selected layer while keeping one set of tokens for all heads also beats per-head SnapKV by 18 to 43 points on five models up to 14B under tight budgets. This gain carries over to financial filings at 32K context, all at the same memory budget, with no extra forward pass. The same curve explains a penalty in shared-cache models, where several layers read one cache and the layer that writes it scores by default. On Gemma-4-E2B the writer is shallow and loses 28 points to a mid-depth reader at a 10% budget. We also find that in open-book question answering (LongBench) no mid-depth layer beats the own-layer default.",
+      "identifiers": [
+        "SemanticScholar:4ce2372117f65e8c229ddddc8197cd272e3d3884"
+      ],
+      "semantic_scholar_id": "4ce2372117f65e8c229ddddc8197cd272e3d3884",
+      "canonical_id": "arXiv:2611.02230",
+      "arxiv_id": "2611.02230",
+      "authors": [
+        "E. Серегина"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 9,
+        "matched_prestigious_venue": null
+      },
+      "reason": "KV削除の重要度スコアを算出する層を検討し、中間深度層が長文検索タスクで有利となることを多モデルで検証する。各層自身のスコアに代えて校正で選んだ層のスコアを使うキャッシュ管理法を扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "RaanA: A Fast, Flexible, and Data-Efficient Post-Training Quantization Algorithm",
+      "source_url": "https://arxiv.org/abs/2504.03717",
+      "year": 2025,
+      "published": "2025-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Post-training Quantization (PTQ) has become a widely used technique for improving inference efficiency of large language models (LLMs). However, existing PTQ methods generally suffer from crucial limitations such as heavy calibration data requirements and inflexible choice of target number of bits. In this paper, we propose RaanA, a unified PTQ framework that overcomes these challenges by introducing two novel components: 1) RaBitQ-H, a variant of a randomized vector quantization method RaBitQ, designed for fast, accurate, and highly efficient quantization; and 2) AllocateBits, an algorithm that optimally allocates bit-widths across layers based on their quantization sensitivity. RaanA achieves competitive performance with state-of-the-art quantization methods while being extremely fast, requiring minimal calibration data, and enabling flexible bit allocation. Extensive experiments demonstrate RaanA's efficacy in balancing efficiency and accuracy. The code is publicly available at https://github.com/FFTYYY/RaanA .",
+      "identifiers": [
+        "SemanticScholar:89b9a9af122c7400e3fc9c9807c5576f10b9906c"
+      ],
+      "semantic_scholar_id": "89b9a9af122c7400e3fc9c9807c5576f10b9906c",
+      "canonical_id": "arXiv:2504.03717",
+      "arxiv_id": "2504.03717",
+      "doi": "10.48550/arXiv.2504.03717",
+      "authors": [
+        "Yong-Yi Yang",
+        "Jian-Yang Gao",
+        "Wei Hu"
+      ],
+      "priority": 8,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 8,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 591,
+        "matched_prestigious_venue": null
+      },
+      "reason": "RaBitQ-Hによる高速なランダム化ベクトル量子化とAllocateBitsによる層別感度に応じたビット割当を組み合わせ、少量の校正データでLLMの学習後量子化を行う。推論時の重みメモリ削減と精度維持を直接対象とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ea546c599b64",
+    "round": "libimp-ea546c599b64c251-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 2,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ea546c599b64c251-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ea546c599b64c251-pre01.json",
+    "receipt": "sha256:1311aed496f551f88443d86b14c6693a285e5f6702893682f38588d8b4b0ec29"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ea546c599b64",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

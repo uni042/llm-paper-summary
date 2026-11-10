@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "PN-Mix: Pair-Norm Guided Mixed-Precision Key Cache Quantization for Efficient Long-Output LLM Inference",
+      "source_url": "https://arxiv.org/abs/2610.19605",
+      "year": 2026,
+      "published": "2026-10-14",
+      "venue": "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long-output inference in large language models suffers from severe KV cache memory and bandwidth bottlenecks. While KV cache quantization alleviates this issue, low-bit quantization (e.g., 2-bit) severely degrades model accuracy. Recent mixed-precision key-cache quantization methods mitigate this degradation by allocating higher precision to important key channels, but estimate channel saliency using only key statistics. Through attention logit perturbation analysis at the RoPE channel-pair level, we show that quantization errors in channel pairs with large query--key pair-norm products contribute significantly to logit variation. Based on this insight, we propose PN-Mix, a mixed-precision key-cache quantization method for RoPE-based decoder-only LLMs, which allocates higher precision to salient channel pairs identified once during the prefill stage and reused throughout decoding. Across standard reasoning, code-generation, and AIME benchmarks, PN-Mix with 2.26-bit average precision achieves comparable or better average accuracy than prior mixed-precision methods using 2.32--2.39 bits. Furthermore, in our Pareto sweep, PN-Mix degrades gracefully down to 1.5 bits, whereas the compared baselines exhibit sharper performance drops below 2.25 bits.",
+      "identifiers": [
+        "SemanticScholar:398c42d4cc572ba693210f1d0f62ce2784981512"
+      ],
+      "semantic_scholar_id": "398c42d4cc572ba693210f1d0f62ce2784981512",
+      "canonical_id": "arXiv:2610.19605",
+      "arxiv_id": "2610.19605",
+      "doi": "10.18653/2026.emnlp-main.1265",
+      "authors": [
+        "Gi-joong Song",
+        "Sungjoo Yoo"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 27,
+        "matched_prestigious_venue": "Empirical Methods in Natural Language Processing"
+      },
+      "reason": "RoPEのquery/keyチャネル対ノルム積で重要なkeyチャネル対を選び、prefill時に混合精度を割り当ててdecode全体で再利用する。長い出力を伴うLLMのKVキャッシュ量子化と精度維持を扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "UltraSketchLLM: Sub-1-Bit LLM Compression via Sketch and Hardware-Friendly Operators",
+      "source_url": "https://arxiv.org/abs/2506.17255",
+      "year": 2025,
+      "published": "2025-06-08",
+      "venue": "Design Automation Conference",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models (LLMs) require larger GPU memory size these days, necessitating efficient and extreme weight compression methods. Existing compression methods are either theoretically limited by 1 bit per weight or face severe performance degradation and inefficiency. To deploy LLMs in resource-constrained scenarios, we introduce UltraSketchLLM, compressing LLMs with data sketch. It reduces peak GPU memory footprint with a high compression rate down to 0.5 bit per weight. Combined with hardware-friendly implementation, UltraSketchLLM keeps tolerable performance degradation and extremely low latency overhead with 14.9× speedup compared to naive sketch solution.",
+      "identifiers": [
+        "SemanticScholar:3d3f808fac6efd310e9552ab4c064be7f3199262"
+      ],
+      "semantic_scholar_id": "3d3f808fac6efd310e9552ab4c064be7f3199262",
+      "canonical_id": "arXiv:2506.17255",
+      "arxiv_id": "2506.17255",
+      "doi": "10.1145/3770743.3804314",
+      "authors": [
+        "Su-Nan Zou",
+        "Xu Sun",
+        "Zi-Yun Zhang",
+        "Guo-Jie Luo"
+      ],
+      "priority": 0,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 0,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 520,
+        "matched_prestigious_venue": null
+      },
+      "reason": "重要度に応じてスケッチ表現へ重みを集約し、インデックス表を用いずに0.5bit/weightまでの極低ビット圧縮を目指す。Llama-3.2-1Bの圧縮評価を持ち、エッジLLMの重みメモリ削減に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-6271186d61bc",
+    "round": "libimp-6271186d61bcdb7c-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 2,
+    "round_submission_count": 1,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-6271186d61bcdb7c-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-6271186d61bcdb7c-pre01.json",
+    "receipt": "sha256:cfebc56a6671257c8c120f65a034b38d53ac1133d0e02292cdf5e3cb01fef531"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-6271186d61bc",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "inference-fleet-sim: A Queueing-Theory-Grounded Fleet Capacity Planner for LLM Inference",
+      "source_url": "https://arxiv.org/abs/2603.16054",
+      "year": 2026,
+      "published": "2026-03-17",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Sizing a GPU fleet for LLM inference is harder than it looks. The obvious questions -- how many GPUs, which type, where to split a two-pool fleet -- have no closed-form answers. They depend on the full token-length distribution, the routing policy, and queueing dynamics that turn ugly under heavy-tailed workloads. Existing tools optimize per-engine configuration for a fixed GPU count; none of them address the upstream question of how many GPUs to buy and how to arrange them. inference-fleet-sim fills that gap. It combines analytical M/G/c queueing with discrete-event simulation (DES) to find the minimum-cost fleet configuration that empirically meets a P99 TTFT SLO. It includes a physics-informed GPU performance model covering A10G, A100, and H100 across monolithic, two-pool-routed, and disaggregated topologies, all without requiring access to real hardware. We run the tool on seven fleet-planning scenarios drawn from two public workload traces (LMSYS, Azure) and one synthetic agent-heavy trace. Each one surfaces a result that simple analysis gets wrong -- the right split threshold, the cheapest GPU type, whether an apparently idle fleet is actually broken -- and shows why joint simulation of queueing, routing, and hardware is necessary to find it.",
+      "identifiers": [
+        "SemanticScholar:47675ecc9a7aad8b85c3249949be7445a4d1ffdb"
+      ],
+      "semantic_scholar_id": "47675ecc9a7aad8b85c3249949be7445a4d1ffdb",
+      "canonical_id": "arXiv:2603.16054",
+      "arxiv_id": "2603.16054",
+      "doi": "10.48550/arXiv.2603.16054",
+      "authors": [
+        "Hua-Min Chen",
+        "Xun-Zhuo Liu",
+        "Yu-Han Liu",
+        "Jun-Chen Jiang",
+        "Bo-Wei He",
+        "Xue Liu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 238,
+        "matched_prestigious_venue": null
+      },
+      "reason": "M/G/c待ち行列解析と離散イベントシミュレーションを組み合わせ、P99 TTFTのSLOを満たす最小費用のGPU構成、ルーティング、prefill/decode分離構成を探索する。LLM推論基盤の容量設計に直接関係する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)",
+      "source_url": "https://arxiv.org/abs/2604.16395",
+      "year": 2026,
+      "published": "2026-03-29",
+      "venue": "arXiv.org",
+      "citation_count": 3,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Context retrieval systems for LLM inference face a critical challenge: high retrieval latency creates a fundamental tension between waiting for complete context (poor time-to-first-token) and proceeding without it (reduced quality). Streaming context incrementally--overlapping retrieval with inference--can mitigate this latency, but doing so with concurrent requests introduces new challenges: requests contend for GPU compute and memory, and scheduling must adapt to dynamic context arrivals. We present Stream2LLM, a streaming-aware LLM serving system for concurrent prefill-decode disaggregated deployments. Stream2LLM introduces adaptive scheduling and preemption for two distinct retrieval patterns: append-mode (progressive context accumulation) and update-mode (iterative refinement with cache invalidation). It decouples scheduling decisions from resource acquisition, enabling flexible preemption strategies guided by hardware-specific cost models, and uses longest common prefix matching to minimize redundant computation when input changes dynamically. To evaluate Stream2LLM, we collect two large-scale, real-world streaming workloads based on web crawling and approximate nearest neighbor search. Our evaluation demonstrates that streaming architecture delivers up to 11x TTFT improvements, with cost-aware scheduling providing critical benefits under memory pressure, all while maintaining throughput parity with non-streaming baselines. Code: https://github.com/rajveerb/stream2llm/tree/mlsys_artifact",
+      "identifiers": [
+        "SemanticScholar:3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88"
+      ],
+      "semantic_scholar_id": "3e6831c3e49458660fdb5dc2a4fcc65d9ee19c88",
+      "canonical_id": "arXiv:2604.16395",
+      "arxiv_id": "2604.16395",
+      "doi": "10.48550/arXiv.2604.16395",
+      "authors": [
+        "Rajveer Bachkaniwala",
+        "Cheng Luo",
+        "R. So",
+        "Divya Mahajan",
+        "Ke-Xin Rong"
+      ],
+      "priority": 103,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 3,
+        "citation_count": 3,
+        "total": 103,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 226,
+        "matched_prestigious_venue": null
+      },
+      "reason": "検索コンテキストが段階的に到着する状況で取得とprefillを重畳し、append/updateの二つの更新形式に対応する適応スケジューリングとプリエンプションを提案する。分離型LLMサービングの初回トークン遅延を対象とする。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "On the SPOT: Enhancing Speculative Decoding for Diffusion Language Models via Commit-Order Prediction",
+      "source_url": "https://arxiv.org/abs/2610.22543",
+      "year": 2026,
+      "published": "2026-10-15",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Diffusion language models (DLMs) promise parallel text generation, but in practice face an unresolved speed-quality trade-off. Exact decoding fills in only one masked position per model pass, while faster multi-token decoding schemes are lossy. Speculative decoding is the standard lossless acceleration for autoregressive models. However, it does not transfer directly to DLMs, which must choose both what to generate and where. We show that this order is the missing piece: the model's own predictions from the previous pass already give the right token at 92-100% of positions, but not which position comes next. Based on this observation, we introduce Speculating Positions Order Trajectory (SPOT), which learns to predict this order. A 0.62M-parameter model reads only the target's output distributions and proposes a tree of candidate continuations, and the target verifies all of them in a single pass by checking whether each equals its own next state. On the verification side, our analysis shows that prior block-diffusion verification approaches either assume $T=0$ or a sequential proposal interface. To support tree-based speculation at any temperature, we propose using coupled-noise match verification for diffusion blocks, following shared-Gumbel-noise coupling approaches. Our comprehensive experiments show that SPOT cuts target passes by up to 6.8x and reaches up to 3.2x the throughput of standard decoding, beating the calibrated and training-free drafting baselines in every task and budget at $T=0$ and $T=1$. In addition, we show that the learned drafter transfers across models, demonstrating successful transfer across six different DLMs. Project page: https://eliezer318.github.io/SPOT-dLLM/",
+      "identifiers": [
+        "SemanticScholar:53fabe548469afe2e36c742cc83c76db3ac0b32e"
+      ],
+      "semantic_scholar_id": "53fabe548469afe2e36c742cc83c76db3ac0b32e",
+      "canonical_id": "arXiv:2610.22543",
+      "arxiv_id": "2610.22543",
+      "authors": [
+        "Eliezer Shlomi",
+        "Eliron Rahimi",
+        "Avi Mendelson",
+        "Chaim Baskin"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 26,
+        "matched_prestigious_venue": null
+      },
+      "reason": "拡散言語モデルのマスク位置確定順序を小型モデルで予測し、候補木を対象モデルで一括検証するSPOTを提案する。任意温度での共有ノイズ結合による検証を扱い、拡散型言語生成の推論速度を改善する。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DEALS: Decentralized Expertise-Aware Load Serving for Multi-Agent LLM Systems",
+      "source_url": "https://arxiv.org/abs/2609.33768",
+      "year": 2026,
+      "published": "2026-09-27",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Multi-agent systems (MAS) have recently emerged as an effective approach for coordinating large language model (LLM)-based agents to solve complex tasks through structured interactions. In practice, MASs often handle a stream of heterogeneous and complex tasks, requiring agents to decompose each task and then self-organize and self-evolve to adapt to incoming tasks while sharing execution resources. However, most early approaches to MASs rely on centralized controllers or fixed coordination patterns, which can limit scalability or adaptability. In contrast, existing decentralized and dynamic MASs often require training dedicated routers or invoking LLMs for agent selection, resulting in substantial computational costs and coordination overhead. To address these challenges and enable efficient task-level self-organization and self-evolution for task- and workload-level collaboration, we propose Decentralized Expertise-Aware Load Serving (DEALS), a decentralized and low-complexity framework that enables agents to self-organize and dynamically route concurrent tasks for processing. Specifically, each agent maintains local queues of incoming tasks, and its router decides whether to process a task locally or forward it to a neighbor based on differences in backlog and success rate. Meanwhile, executors process independent tasks concurrently within and across agents, and partially solved tasks can be resumed by other agents. Experiments show that DEALS not only improves performance along multiple dimensions (e.g., answer accuracy and task throughput) in both homogeneous and heterogeneous agent pools, but also balances agent expertise and workload in a self-organized manner, enabling effective decentralized coordination.",
+      "identifiers": [
+        "SemanticScholar:c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b"
+      ],
+      "semantic_scholar_id": "c5ff5ca8f49fe760d94d6fc9778165758bfd5d4b",
+      "canonical_id": "arXiv:2609.33768",
+      "arxiv_id": "2609.33768",
+      "doi": "10.48550/arXiv.2609.33768",
+      "authors": [
+        "Jing-Hang Huang",
+        "Wen-Bin Wang",
+        "Yan-Chuan Yin",
+        "Alvaro Velasquez",
+        "Jia Liu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 44,
+        "matched_prestigious_venue": null
+      },
+      "reason": "複数LLMエージェントのローカル待ち行列と成功率の差を使い、タスクを隣接エージェントへ動的に転送する分散ルーティング方式を提案する。共有実行資源の負荷分散とタスクスループットを扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Trajectory-Retrieval Speculative Decoding: When Does a Model's Own History Help?",
+      "source_url": "https://arxiv.org/abs/2610.07350",
+      "year": 2026,
+      "published": "2026-10-05",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Long chain-of-thought reasoning increases sequential decoding cost while creating a growing history of potentially reusable continuations. We investigate when this history supplies useful drafts and complements an existing drafter. Controlled source comparisons reveal trajectory-specific reuse, motivating our method Trajectory-Local Adaptive Retrieval (TLAR). TLAR retrieves approximately matched continuations from the current trajectory and uses recent verification outcomes to adapt retrieval activation and candidate width. TLAR combines retrieved continuations with model-generated drafts in a shared candidate tree, preserving the target model's output distribution through exact verification. Across code debugging, mathematics, and open-ended writing, our evaluation connects source reuse, incremental acceptance, and execution cost. Combining TLAR with strong retrieval baselines improves token acceptance under matched verification budgets and increases end-to-end throughput over the draft-model baseline. These findings support generated trajectories as runtime memory for adaptive inference.",
+      "identifiers": [
+        "SemanticScholar:89f3e1d21cf2cdf1294c5ac970724e710a54a811"
+      ],
+      "semantic_scholar_id": "89f3e1d21cf2cdf1294c5ac970724e710a54a811",
+      "canonical_id": "arXiv:2610.07350",
+      "arxiv_id": "2610.07350",
+      "authors": [
+        "Yu-Yang Dai",
+        "Yu-Shun Dong"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 36,
+        "matched_prestigious_venue": null
+      },
+      "reason": "同一推論軌跡の過去の続きを近似検索し、最近の検証結果から検索使用と候補幅を調整するTLARを提案する。ドラフトモデル候補と共有候補木で組み合わせ、対象モデルの分布を保持した投機的復号を扱う。",
+      "library_body_check": "abstract_screen_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-ea546c599b64",
+    "round": "libimp-ea546c599b64c251-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 9,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-ea546c599b64c251-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-ea546c599b64c251-pre01.json",
+    "receipt": "sha256:1311aed496f551f88443d86b14c6693a285e5f6702893682f38588d8b4b0ec29"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-ea546c599b64",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
