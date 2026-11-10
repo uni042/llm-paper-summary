@@ -404,6 +404,51 @@ source: https://arxiv.org/abs/2609.12345
             )
             self.assertEqual(persisted["entries"], [])
 
+    def test_returned_research_queue_discards_stale_blocked_after_verified_import(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            results = root / ".survey/import-inbox/results/research"
+            results.mkdir(parents=True)
+            paper_rel = "papers/inference/01-offload-hierarchical-memory/published.md"
+            paper = root / paper_rel
+            paper.parent.mkdir(parents=True)
+            canonical = "arXiv:2209.01188"
+            (results / "older-success.json").write_text(
+                json.dumps({
+                    "status": "imported",
+                    "canonical_id": canonical,
+                    "paper_path": paper_rel,
+                    "processed_at": "2026-10-27T16:39:45+00:00",
+                }),
+                encoding="utf-8",
+            )
+            (results / "later-blocked.json").write_text(
+                json.dumps({
+                    "status": "blocked_quality",
+                    "canonical_id": canonical,
+                    "processed_at": "2026-10-27T17:00:37+00:00",
+                    "failures": ["説明不足トリガー: 評価説明量 131 < 500"],
+                }, ensure_ascii=False),
+                encoding="utf-8",
+            )
+
+            # An import receipt alone must not hide an outstanding repair.
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+            paper.write_text(
+                "---\\ncanonical_id: arXiv:2209.01188\\n---\\n# Published\\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 0)
+            # A paper with the wrong identity is not completion evidence.
+            paper.write_text(
+                "---\\ncanonical_id: arXiv:2209.01189\\n---\\n# Other\\n",
+                encoding="utf-8",
+            )
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+            # A forged or mismatched path does not count, even if the ID matches.
+            paper.unlink()
+            self.assertEqual(inbox.sync_returned_research_queue(root)["count"], 1)
+
     def test_returned_research_queue_skips_only_proven_published_duplicates(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
