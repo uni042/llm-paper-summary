@@ -1,0 +1,320 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-cc8da79abb73d290-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-cc8da79abb73",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2606.21848",
+    "arXiv:2609.29812",
+    "arXiv:2610.30791"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 3,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d6d8f7b9b560cceb0dea15a8eff2a12954f129ce",
+  "raw_search_result_count": 3,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 3,
+  "provider_progress": {
+    "requested_count": 3,
+    "status_counts": {
+      "allowed": 3,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-10T22:31:37.489066+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2606.21848",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.29812",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.30791",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "year": 2026,
+      "published": "2026-09-24",
+      "venue": "arXiv.org",
+      "citation_count": 8,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, FlashLoop delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+      "identifiers": [
+        "SemanticScholar:97415bd104fa65efa04311bef0cae046f5d79849"
+      ],
+      "semantic_scholar_id": "97415bd104fa65efa04311bef0cae046f5d79849",
+      "canonical_id": "arXiv:2609.29812",
+      "arxiv_id": "2609.29812",
+      "doi": "10.48550/arXiv.2609.29812",
+      "authors": [
+        "Wan-Qi Yang",
+        "Shi-Wei Liu"
+      ],
+      "priority": 108,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 8,
+        "citation_count": 8,
+        "total": 108,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 47,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+      "source_url": "https://arxiv.org/abs/2606.21848",
+      "year": 2026,
+      "published": "2026-06-20",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Transformer architectures form the foundation of modern natural language processing, yet the Key-Value (KV) cache introduces substantial memory and bandwidth overhead during long-context generation, increasingly bottlenecking large-scale deployment. We propose Keyless Attention, a novel attention mechanism that replaces the conventional key projection with a dedicated value-space routing projection, eliminating key representations from the attention computation entirely and yielding a Value-Only Cache that reduces KV-cache memory by 50% while improving decode throughput. Experiments across multiple models and architectures demonstrate that Keyless Attention achieves comparable perplexity and downstream task performance to standard QKV attention, while consistently reducing KV-cache memory by 50%. Furthermore, Keyless Attention exhibits slower validation loss degradation after the best epoch, indicating improved robustness against overfitting. Ablation studies confirm that the dedicated value-space routing projection is critical, with Keyless Attention outperforming KV-sharing methods that eliminate the key cache without replacing its routing role. Experiments in the pretraining regime further confirm the viability of Keyless Attention in industrial settings.",
+      "identifiers": [
+        "SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe"
+      ],
+      "semantic_scholar_id": "935ca66fc96f37f77103a1a73a19c886572db4fe",
+      "canonical_id": "arXiv:2606.21848",
+      "arxiv_id": "2606.21848",
+      "doi": "10.48550/arXiv.2606.21848",
+      "authors": [
+        "Xin Gao",
+        "Xing Xu"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 143,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving",
+      "source_url": "https://arxiv.org/abs/2610.30791",
+      "year": 2026,
+      "published": "2026-10-22",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "KV caching reduces the serving cost of large language models (LLMs), but the growing KV cache footprint is increasingly exceeds GPU and host-memory capacity. Therefore, people use SSD to expand the KV cache storage capacity with high I/O bandwidth. However, in production LLM workload, such as multi-round conversation and LLM agents, the total amount of KV cache writes significantly exceeds SSD capacity, shortening SSD lifetime from years to months. To improve SSD lifetime, a natural solution is to reduce the KV cache writes by gating the KV cache writes via historical access patterns. However, that significantly lowers the KV cache hit rate (and increase the LLM serving cost) since KV caches from different attention types might have identical historical access pattern but different future access patterns. Our insight is that, to reduce KV cache writes without hurting KV cache hit rate, one need to not only consider the access pattern, but also application-level information such as the attention type of KV cache. Leveraging this observation, we propose Gandalf , the first SSD KV cache offloading system with SSD life time awareness. Gandalf prioritize the admission of full-attention KV cache into SSD over the cache generated by other types of attention, which significantly increases SSD lifetime without sacrificing cache hit rate. Our evaluation shows that Gandalf extends the SSD lifetime by 7.3X on average, while having negligible impact on cache hit rate across multiple workload traces and wide range of hardware capacity. Gandalf design can be extended to other flash-based storage, such as High Bandwidth Flash (HBF).",
+      "identifiers": [
+        "SemanticScholar:d15e994e398c46ff3a14a075c2e53621640af9b3"
+      ],
+      "semantic_scholar_id": "d15e994e398c46ff3a14a075c2e53621640af9b3",
+      "canonical_id": "arXiv:2610.30791",
+      "arxiv_id": "2610.30791",
+      "authors": [
+        "M. A. Irawan",
+        "Kun-Tai Du",
+        "Jia-Yi Yao",
+        "Dongjoo Seo",
+        "Yu-Yang Huang",
+        "Haryadi S. Gunawi",
+        "Jun-Chen Jiang"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 19,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2609.29812",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.29812",
+        "id:SemanticScholar:97415bd104fa65efa04311bef0cae046f5d79849",
+        "id:arXiv:2609.29812",
+        "title:flashloop fast and memoryefficient looped transformers via lazy updates",
+        "url:https://arxiv.org/abs/2609.29812"
+      ],
+      "record": {
+        "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+        "source_url": "https://arxiv.org/abs/2609.29812",
+        "year": 2026,
+        "published": "2026-09-24",
+        "venue": "arXiv.org",
+        "citation_count": 8,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Looped Transformers have attracted substantial attention as a parameter-efficient approach to increasing computational depth through repeated application of shared Transformer blocks. However, their practical advantages over conventional Transformers remain under debate: each additional loop incurs another Transformer pass and requires caching another set of KV states, causing inference FLOPs and KV-cache memory to grow continuously with loop depth. This overhead becomes particularly severe at large loop counts and long context, preventing the parameter efficiency of Looped Transformers from translating into practical inference efficiency. In this paper, we find that much of the additional computation and storage introduced by looping is redundant. As recurrence proceeds, state changes become increasingly concentrated on a small subset of tokens; attention-output differences are dominated by a sparse and stable subset of key columns; and KV residuals between adjacent loops become progressively more amenable to low-bit quantization. Building on these observations, we introduce FlashLoop, a training-free inference framework that reduces cross-loop redundancy through token-sparse updates, sparse attention, and KV-residual quantization. Across several Looped Transformers models, FlashLoop delivers lossless accuracy while achieving up to 1.64$\\times$ end-to-end speedup and up to 6$\\times$ KV-cache memory reduction, substantially improving the practicality of scaling Looped Transformers to greater computational depths and longer context.",
+        "identifiers": [
+          "SemanticScholar:97415bd104fa65efa04311bef0cae046f5d79849"
+        ],
+        "semantic_scholar_id": "97415bd104fa65efa04311bef0cae046f5d79849",
+        "canonical_id": "arXiv:2609.29812",
+        "arxiv_id": "2609.29812",
+        "doi": "10.48550/arXiv.2609.29812",
+        "authors": [
+          "Wan-Qi Yang",
+          "Shi-Wei Liu"
+        ],
+        "priority": 108,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 8,
+          "citation_count": 8,
+          "total": 108,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 47,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2606.21848",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.21848",
+        "id:SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe",
+        "id:arXiv:2606.21848",
+        "title:keyless attention valuespace routing and valueonly caching for efficient transformers",
+        "url:https://arxiv.org/abs/2606.21848"
+      ],
+      "record": {
+        "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+        "source_url": "https://arxiv.org/abs/2606.21848",
+        "year": 2026,
+        "published": "2026-06-20",
+        "venue": "arXiv.org",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Transformer architectures form the foundation of modern natural language processing, yet the Key-Value (KV) cache introduces substantial memory and bandwidth overhead during long-context generation, increasingly bottlenecking large-scale deployment. We propose Keyless Attention, a novel attention mechanism that replaces the conventional key projection with a dedicated value-space routing projection, eliminating key representations from the attention computation entirely and yielding a Value-Only Cache that reduces KV-cache memory by 50% while improving decode throughput. Experiments across multiple models and architectures demonstrate that Keyless Attention achieves comparable perplexity and downstream task performance to standard QKV attention, while consistently reducing KV-cache memory by 50%. Furthermore, Keyless Attention exhibits slower validation loss degradation after the best epoch, indicating improved robustness against overfitting. Ablation studies confirm that the dedicated value-space routing projection is critical, with Keyless Attention outperforming KV-sharing methods that eliminate the key cache without replacing its routing role. Experiments in the pretraining regime further confirm the viability of Keyless Attention in industrial settings.",
+        "identifiers": [
+          "SemanticScholar:935ca66fc96f37f77103a1a73a19c886572db4fe"
+        ],
+        "semantic_scholar_id": "935ca66fc96f37f77103a1a73a19c886572db4fe",
+        "canonical_id": "arXiv:2606.21848",
+        "arxiv_id": "2606.21848",
+        "doi": "10.48550/arXiv.2606.21848",
+        "authors": [
+          "Xin Gao",
+          "Xing Xu"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 143,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.30791",
+      "identity_tokens": [
+        "id:SemanticScholar:d15e994e398c46ff3a14a075c2e53621640af9b3",
+        "id:arXiv:2610.30791",
+        "title:gandalf flash shall not die increasing flash storage lifetime for kv cache offloading in llm serving",
+        "url:https://arxiv.org/abs/2610.30791"
+      ],
+      "record": {
+        "title": "Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving",
+        "source_url": "https://arxiv.org/abs/2610.30791",
+        "year": 2026,
+        "published": "2026-10-22",
+        "venue": null,
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "KV caching reduces the serving cost of large language models (LLMs), but the growing KV cache footprint is increasingly exceeds GPU and host-memory capacity. Therefore, people use SSD to expand the KV cache storage capacity with high I/O bandwidth. However, in production LLM workload, such as multi-round conversation and LLM agents, the total amount of KV cache writes significantly exceeds SSD capacity, shortening SSD lifetime from years to months. To improve SSD lifetime, a natural solution is to reduce the KV cache writes by gating the KV cache writes via historical access patterns. However, that significantly lowers the KV cache hit rate (and increase the LLM serving cost) since KV caches from different attention types might have identical historical access pattern but different future access patterns. Our insight is that, to reduce KV cache writes without hurting KV cache hit rate, one need to not only consider the access pattern, but also application-level information such as the attention type of KV cache. Leveraging this observation, we propose Gandalf , the first SSD KV cache offloading system with SSD life time awareness. Gandalf prioritize the admission of full-attention KV cache into SSD over the cache generated by other types of attention, which significantly increases SSD lifetime without sacrificing cache hit rate. Our evaluation shows that Gandalf extends the SSD lifetime by 7.3X on average, while having negligible impact on cache hit rate across multiple workload traces and wide range of hardware capacity. Gandalf design can be extended to other flash-based storage, such as High Bandwidth Flash (HBF).",
+        "identifiers": [
+          "SemanticScholar:d15e994e398c46ff3a14a075c2e53621640af9b3"
+        ],
+        "semantic_scholar_id": "d15e994e398c46ff3a14a075c2e53621640af9b3",
+        "canonical_id": "arXiv:2610.30791",
+        "arxiv_id": "2610.30791",
+        "authors": [
+          "M. A. Irawan",
+          "Kun-Tai Du",
+          "Jia-Yi Yao",
+          "Dongjoo Seo",
+          "Yu-Yang Huang",
+          "Haryadi S. Gunawi",
+          "Jun-Chen Jiang"
+        ],
+        "priority": 10,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 0,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 10,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 19,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:b9f57587f2877cdada4c9c2c7a07efb3287c4781267341d8d248024eb278ac3b",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}

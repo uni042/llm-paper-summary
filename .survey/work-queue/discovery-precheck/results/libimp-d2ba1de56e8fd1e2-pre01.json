@@ -1,0 +1,970 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-d2ba1de56e8fd1e2-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-d2ba1de56e8f",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2108.02347",
+    "arXiv:2410.03440",
+    "arXiv:2504.07247",
+    "arXiv:2505.02380",
+    "arXiv:2506.23431",
+    "arXiv:2507.00797",
+    "arXiv:2512.23049",
+    "arXiv:2606.16825",
+    "arXiv:2609.32961",
+    "arXiv:2610.09051"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 10,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d6d8f7b9b560cceb0dea15a8eff2a12954f129ce",
+  "raw_search_result_count": 10,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 10,
+  "provider_progress": {
+    "requested_count": 10,
+    "status_counts": {
+      "allowed": 10,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-10T22:31:37.626213+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2108.02347",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2410.03440",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2504.07247",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2505.02380",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2506.23431",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2507.00797",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2512.23049",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2606.16825",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2609.32961",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    },
+    {
+      "requested_id": "arXiv:2610.09051",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "Tying the Loop - Tied Expert Layers in Mixture-of-Experts Language Models",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "year": 2026,
+      "published": "2026-06-15",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Mixture-of-Experts (MoE) architectures efficiently scale Large Language Models (LLMs) by activating only a small fraction of their experts per token, yet the full parameter count - dominated by the expert parameters - must be held in training and inference memory. To address this, we introduce Expert Tying, an architectural modification that shares expert parameters across consecutive transformer layers while preserving independent, layer-wise routing and attention. We evaluate this approach across common, state-of-the-art architectures, including OLMoE, Qwen3, and DeepSeek-style MoEs. Our pretraining experiments demonstrate that tying experts can reduce memory footprint by almost 2x at virtually no degradation in perplexity or downstream quality. By exploiting the parameter redundancy inherent in MoE pathways, our method provides a highly favorable compute-to-memory trade-off, advancing efficient training and scaling of next-generation LLMs.",
+      "identifiers": [
+        "SemanticScholar:a0c74570a4cf010b5f08e1ce68d79e5519efa912"
+      ],
+      "semantic_scholar_id": "a0c74570a4cf010b5f08e1ce68d79e5519efa912",
+      "canonical_id": "arXiv:2606.16825",
+      "arxiv_id": "2606.16825",
+      "doi": "10.48550/arXiv.2606.16825",
+      "authors": [
+        "Martin Jaggi"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 148,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+      "source_url": "https://arxiv.org/abs/2609.32961",
+      "year": 2026,
+      "published": "2026-09-26",
+      "venue": "arXiv.org",
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As LLM agents tackle longer tasks, they increasingly compress growing histories of reasoning, actions, and tool outputs. Compression can reduce token use, but it also changes the information available for later decisions. Existing agentic harnesses bundle decisions about what to compress, when to compress, and how much to remove into fixed policies. A systematic characterization is needed to disentangle these decisions and reveal how each affects task success and execution cost. We systematically vary these decisions across three open-weight models on SWE-bench Verified and Terminal-Bench 1.0. Across nearly 35,000 agent runs, we measure task success, token use, end-to-end latency, and estimated cost. We find that fewer tokens need not mean faster or cheaper execution: on Terminal-Bench with Qwen, policies using roughly one-third as many tokens can take 20-80% longer than the uncompressed agent. Policies with similar overall success can solve different tasks, while the same policy can perform quite differently across models. Our results motivate evaluating compression by its effects on agent execution and tailoring policies to the task, model, and workload.",
+      "identifiers": [
+        "SemanticScholar:496d3cf4a25ee814d9b992d82afe3f11232482a9"
+      ],
+      "semantic_scholar_id": "496d3cf4a25ee814d9b992d82afe3f11232482a9",
+      "canonical_id": "arXiv:2609.32961",
+      "arxiv_id": "2609.32961",
+      "doi": "10.48550/arXiv.2609.32961",
+      "authors": [
+        "Ritul Satish",
+        "Prasoon Sinha",
+        "Akiho Kawada",
+        "N. Yadwadkar"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 45,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "year": 2026,
+      "published": "2026-10-06",
+      "venue": null,
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The large KV-cache size of modern LLMs creates a barrier to efficient deployment. Recent work has explored replacing attention layers'RoPE positional embeddings with alternative decay-based mechanisms, which can then be used to prune KV-cache during inference. However, these decay functions have limited expressivity, and in practice devolve into sliding-window-like eviction patterns. In this work, we propose a unifying framework for complementary and novel decay mechanisms, capturing complex key statistics and interactions while preserving expressive RoPE embeddings and Softmax attention. The resulting Universal Attention is a highly expressive and end-to-end trainable architecture, whose composite decay mechanism acts as a natural, $\\textit{adaptive}$ pruning criterion, removing tokens that contribute least to attention computation. Experimentally, Universal Attention achieves state-of-the-art $10\\times$ compression on natural language and synthetic task data, while $\\textit{improving}$ downstream performance compared to both state-of-the-art baselines and unpruned oracles. It further demonstrates superior long-context generalization with unprecedented $25\\times$ compression at length 16k.",
+      "identifiers": [
+        "SemanticScholar:08e34e7d2661f393dd477c436f348a7a772fa5b9"
+      ],
+      "semantic_scholar_id": "08e34e7d2661f393dd477c436f348a7a772fa5b9",
+      "canonical_id": "arXiv:2610.09051",
+      "arxiv_id": "2610.09051",
+      "authors": [
+        "Davis Wertheimer",
+        "Hao-Chen Shen",
+        "Ahan Gupta",
+        "Derrick Liu",
+        "Yu Chin Fabian Lim",
+        "M. Srivatsa",
+        "R. Ganti",
+        "Min-Jia Zhang",
+        "Nai-Gang Wang"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 35,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention",
+      "source_url": "https://arxiv.org/abs/2108.02347",
+      "year": 2021,
+      "published": "2021-08-05",
+      "venue": "Neural Information Processing Systems",
+      "citation_count": 43,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "We propose FMMformers, a class of efficient and flexible transformers inspired by the celebrated fast multipole method (FMM) for accelerating interacting particle simulation. FMM decomposes particle-particle interaction into near-field and far-field components and then performs direct and coarse-grained computation, respectively. Similarly, FMMformers decompose the attention into near-field and far-field attention, modeling the near-field attention by a banded matrix and the far-field attention by a low-rank matrix. Computing the attention matrix for FMMformers requires linear complexity in computational time and memory footprint with respect to the sequence length. In contrast, standard transformers suffer from quadratic complexity. We analyze and validate the advantage of FMMformers over the standard transformer on the Long Range Arena and language modeling benchmarks. FMMformers can even outperform the standard transformer in terms of accuracy by a significant margin. For instance, FMMformers achieve an average classification accuracy of $60.74\\%$ over the five Long Range Arena tasks, which is significantly better than the standard transformer's average accuracy of $58.70\\%$.",
+      "identifiers": [
+        "SemanticScholar:37abe53ed31caa23ae833b2e67bb4aa1892e8d25"
+      ],
+      "semantic_scholar_id": "37abe53ed31caa23ae833b2e67bb4aa1892e8d25",
+      "canonical_id": "arXiv:2108.02347",
+      "arxiv_id": "2108.02347",
+      "doi": "10.48550/arXiv.2108.02347",
+      "authors": [
+        "T. Nguyen",
+        "Vai Suliafu",
+        "S. Osher",
+        "Long Chen",
+        "Bao Wang"
+      ],
+      "priority": 53,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 43,
+        "citation_count": 43,
+        "total": 53,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 1923,
+        "matched_prestigious_venue": "Neural Information Processing Systems"
+      }
+    },
+    {
+      "title": "Accelerating Language Model Workflows with Prompt Choreography",
+      "source_url": "https://arxiv.org/abs/2512.23049",
+      "year": 2025,
+      "published": "2025-12-28",
+      "venue": "Transactions of the Association for Computational Linguistics",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "\n Large language models are increasingly deployed in multi-agent workflows. We introduce Prompt Choreography, a framework that efficiently executes LLM workflows by maintaining a dynamic, global KV cache. Each LLM call can attend to an arbitrary, reordered subset of previously encoded messages. Parallel calls are supported. Though caching messages’ encodings sometimes gives different results from re-encoding them in a new context, we show in diverse settings that fine-tuning the LLM to work with the cache can help it mimic the original results. Prompt Choreography significantly reduces per-message latency (2.0–6.2× faster time-to-first-token) and achieves substantial end-to-end speedups (>2.2×) in some workflows dominated by redundant computation.",
+      "identifiers": [
+        "SemanticScholar:24726cf89e6fb62a04452b705b39cf05741053fa"
+      ],
+      "semantic_scholar_id": "24726cf89e6fb62a04452b705b39cf05741053fa",
+      "canonical_id": "arXiv:2512.23049",
+      "arxiv_id": "2512.23049",
+      "doi": "10.48550/arXiv.2512.23049",
+      "authors": [
+        "Цзункинг Бай",
+        "Jason Eisner"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 317,
+        "matched_prestigious_venue": "Association for Computational Linguistics"
+      }
+    },
+    {
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "year": 2024,
+      "published": "2024-10-04",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Pre-trained Transformers inherently possess the characteristic of sparse activation, where only a small fraction of the neurons are activated for each token. While sparse activation has been explored through post-training methods, its potential in pre-training remains untapped. In this work, we first study how activation properties change during pre-training. Our examination reveals that Transformers exhibit sparse activation throughout the majority of the pre-training process while the activation correlation keeps evolving as training progresses. Leveraging this observation, we propose Switchable Sparse-Dense Learning (SSD). SSD adaptively switches between the Mixtures-of-Experts (MoE) based sparse training and the conventional dense training during the pre-training process, leveraging the efficiency of sparse training and avoiding the static activation correlation of sparse training. Compared to dense training, SSD achieves comparable performance with identical model size and reduces pre-training costs. Moreover, the models trained with SSD can be directly used as MoE models for sparse inference and achieve the same performance as dense models with up to $2\\times$ faster inference speed. Codes are available at https://github.com/thunlp/moefication.",
+      "identifiers": [
+        "SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570"
+      ],
+      "semantic_scholar_id": "b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+      "canonical_id": "arXiv:2410.03440",
+      "arxiv_id": "2410.03440",
+      "doi": "10.48550/arXiv.2410.03440",
+      "authors": [
+        "Zhengyan Zhang",
+        "Chao-Jun Xiao",
+        "Qiujieli Qin",
+        "Yankai Lin",
+        "Zhiyuan Zeng",
+        "Xu Han",
+        "Zhi-Yuan Liu",
+        "Ruo-Bing Xie",
+        "Mao-Song Sun",
+        "Jie Zhou"
+      ],
+      "priority": 16,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 16,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 767,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    },
+    {
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "year": 2025,
+      "published": "2025-06-22",
+      "venue": "Design Automation Conference",
+      "citation_count": 6,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) excel in natural language processing tasks but pose significant computational and memory challenges for edge deployment due to their intensive resource demands. This work addresses the efficiency of LLM inference by algorithm-hardwaredataflow tri-optimizations. We propose a novel voting-based KV cache eviction algorithm, balancing hardware efficiency and algorithm accuracy by adaptively identifying unimportant kv vectors. From a dataflow perspective, we introduce a flexible-product dataflow and a runtime reconfigurable PE array for matrix-vector multiplication. The proposed approach effectively handles the diverse dimensional requirements and solves the challenges of incrementally varying sequence lengths. Additionally, an element-serial scheduling scheme is proposed for nonlinear operations, such as softmax and layer normalization (layernorm). Results demonstrate a substantial reduction in latency, accompanied by a significant decrease in hardware complexity, from $O(N)$ to $O(1)$. The proposed solution is realized in a custom-designed accelerator, VEDA, which outperforms existing hardware platforms. This research represents a significant advancement in LLM inference on resource-constrained edge devices, facilitating real-time processing, enhancing data privacy, and enabling model customization.",
+      "identifiers": [
+        "SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3"
+      ],
+      "semantic_scholar_id": "db1626ebc3be3839b33a174392ce4bdd044edfe3",
+      "canonical_id": "arXiv:2507.00797",
+      "arxiv_id": "2507.00797",
+      "doi": "10.1109/DAC63849.2025.11132861",
+      "authors": [
+        "Zhi-Can Wang",
+        "Hong-Xiang Fan",
+        "Haroon Waris",
+        "Gang Wang",
+        "Zhen-Yu Li",
+        "Jian-Fei Jiang",
+        "Ya-Nan Sun",
+        "Guang-Hui He"
+      ],
+      "priority": 6,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 6,
+        "citation_count": 6,
+        "total": 6,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 506,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Resource-efficient Inference with Foundation Model Programs",
+      "source_url": "https://arxiv.org/abs/2504.07247",
+      "year": 2025,
+      "published": "2025-04-09",
+      "venue": "arXiv.org",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "The inference-time resource costs of large language and vision models present a growing challenge in production deployments. We propose the use of foundation model programs, i.e., programs that can invoke foundation models with varying resource costs and performance, as an approach to this problem. Specifically, we present a method that translates a task into a program, then learns a policy for resource allocation that, on each input, selects foundation model\"backends\"for each program module. The policy uses smaller, cheaper backends to handle simpler subtasks, while allowing more complex subtasks to leverage larger, more capable models. We evaluate the method on two new\"streaming\"visual question-answering tasks in which a system answers a question on a sequence of inputs, receiving ground-truth feedback after each answer. Compared to monolithic multi-modal models, our implementation achieves up to 98% resource savings with minimal accuracy loss, demonstrating its potential for scalable and resource-efficient multi-modal inference.",
+      "identifiers": [
+        "SemanticScholar:b98e8c85acaba62519f333b51bd5ba9827794b48"
+      ],
+      "semantic_scholar_id": "b98e8c85acaba62519f333b51bd5ba9827794b48",
+      "canonical_id": "arXiv:2504.07247",
+      "arxiv_id": "2504.07247",
+      "doi": "10.48550/arXiv.2504.07247",
+      "authors": [
+        "Lun-Yiu Nie",
+        "Zhi-Min Ding",
+        "Kevin Yu",
+        "Marco Cheung",
+        "Christopher Jermaine",
+        "Swarat Chaudhuri"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 580,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "year": 2025,
+      "published": "2025-05-05",
+      "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) achieve strong performance across tasks, but face storage and compute challenges on edge devices. We propose EntroLLM, a compression framework combining mixed quantization and entropy coding to reduce storage while preserving accuracy. We use a combination of unsigned and asymmetric quantization. Tensor-level quantization produces an entropy-reducing effect, increasing weight compressibility, and improving downstream Huffman encoding by $7\\times$ (8-bit) and $11.3\\times$ (4-bit) over state-of-the-art methods. Huffman coding further reduces memory bandwidth demands, while a parallel decoding strategy enables efficient weight retrieval with minimal latency. Experiments on edge-scale LLMs (smolLM-1.7B, phi3-mini-4k, mistral-7B) show up to $30\\%$ storage savings over uint8 and $65\\%$ over uint4 models, with $31.9-146.6\\%$ faster inference on memory-limited devices like the NVIDIA JETSON P3450. EntroLLM requires no retraining and is compatible with existing post-training quantization pipelines, making it practical for edge LLM deployment.",
+      "identifiers": [
+        "SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15"
+      ],
+      "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+      "canonical_id": "arXiv:2505.02380",
+      "arxiv_id": "2505.02380",
+      "doi": "10.1109/ICASSP55912.2026.11464777",
+      "authors": [
+        "Arnab Sanyal",
+        "G. Datta",
+        "Prithwish Mukherjee",
+        "Sandeep P. Chinchali",
+        "M. Orshansky"
+      ],
+      "priority": 2,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 2,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 554,
+        "matched_prestigious_venue": null
+      }
+    },
+    {
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "year": 2025,
+      "published": "2025-06-29",
+      "venue": "arXiv.org",
+      "citation_count": 1,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+      "identifiers": [
+        "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+      ],
+      "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+      "canonical_id": "arXiv:2506.23431",
+      "arxiv_id": "2506.23431",
+      "doi": "10.48550/arXiv.2506.23431",
+      "authors": [
+        "Zixian Huang",
+        "Chenxu Niu",
+        "Yu Gu",
+        "Gengyang Xiao",
+        "Xin-Wei Huang",
+        "Gong Cheng"
+      ],
+      "priority": 1,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 0,
+        "citations": 1,
+        "citation_count": 1,
+        "total": 1,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 499,
+        "matched_prestigious_venue": null
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2606.16825",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2606.16825",
+        "id:SemanticScholar:a0c74570a4cf010b5f08e1ce68d79e5519efa912",
+        "id:arXiv:2606.16825",
+        "title:tying the loop tied expert layers in mixtureofexperts language models",
+        "url:https://arxiv.org/abs/2606.16825"
+      ],
+      "record": {
+        "title": "Tying the Loop - Tied Expert Layers in Mixture-of-Experts Language Models",
+        "source_url": "https://arxiv.org/abs/2606.16825",
+        "year": 2026,
+        "published": "2026-06-15",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Mixture-of-Experts (MoE) architectures efficiently scale Large Language Models (LLMs) by activating only a small fraction of their experts per token, yet the full parameter count - dominated by the expert parameters - must be held in training and inference memory. To address this, we introduce Expert Tying, an architectural modification that shares expert parameters across consecutive transformer layers while preserving independent, layer-wise routing and attention. We evaluate this approach across common, state-of-the-art architectures, including OLMoE, Qwen3, and DeepSeek-style MoEs. Our pretraining experiments demonstrate that tying experts can reduce memory footprint by almost 2x at virtually no degradation in perplexity or downstream quality. By exploiting the parameter redundancy inherent in MoE pathways, our method provides a highly favorable compute-to-memory trade-off, advancing efficient training and scaling of next-generation LLMs.",
+        "identifiers": [
+          "SemanticScholar:a0c74570a4cf010b5f08e1ce68d79e5519efa912"
+        ],
+        "semantic_scholar_id": "a0c74570a4cf010b5f08e1ce68d79e5519efa912",
+        "canonical_id": "arXiv:2606.16825",
+        "arxiv_id": "2606.16825",
+        "doi": "10.48550/arXiv.2606.16825",
+        "authors": [
+          "Martin Jaggi"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 148,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2609.32961",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2609.32961",
+        "id:SemanticScholar:496d3cf4a25ee814d9b992d82afe3f11232482a9",
+        "id:arXiv:2609.32961",
+        "title:beyond token savings a systematic study of context compression in llm agents",
+        "url:https://arxiv.org/abs/2609.32961"
+      ],
+      "record": {
+        "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+        "source_url": "https://arxiv.org/abs/2609.32961",
+        "year": 2026,
+        "published": "2026-09-26",
+        "venue": "arXiv.org",
+        "citation_count": 4,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As LLM agents tackle longer tasks, they increasingly compress growing histories of reasoning, actions, and tool outputs. Compression can reduce token use, but it also changes the information available for later decisions. Existing agentic harnesses bundle decisions about what to compress, when to compress, and how much to remove into fixed policies. A systematic characterization is needed to disentangle these decisions and reveal how each affects task success and execution cost. We systematically vary these decisions across three open-weight models on SWE-bench Verified and Terminal-Bench 1.0. Across nearly 35,000 agent runs, we measure task success, token use, end-to-end latency, and estimated cost. We find that fewer tokens need not mean faster or cheaper execution: on Terminal-Bench with Qwen, policies using roughly one-third as many tokens can take 20-80% longer than the uncompressed agent. Policies with similar overall success can solve different tasks, while the same policy can perform quite differently across models. Our results motivate evaluating compression by its effects on agent execution and tailoring policies to the task, model, and workload.",
+        "identifiers": [
+          "SemanticScholar:496d3cf4a25ee814d9b992d82afe3f11232482a9"
+        ],
+        "semantic_scholar_id": "496d3cf4a25ee814d9b992d82afe3f11232482a9",
+        "canonical_id": "arXiv:2609.32961",
+        "arxiv_id": "2609.32961",
+        "doi": "10.48550/arXiv.2609.32961",
+        "authors": [
+          "Ritul Satish",
+          "Prasoon Sinha",
+          "Akiho Kawada",
+          "N. Yadwadkar"
+        ],
+        "priority": 104,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 4,
+          "citation_count": 4,
+          "total": 104,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 45,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2610.09051",
+      "identity_tokens": [
+        "id:SemanticScholar:08e34e7d2661f393dd477c436f348a7a772fa5b9",
+        "id:arXiv:2610.09051",
+        "title:a selfpruning transformer extreme kvcache compression with universal attention",
+        "url:https://arxiv.org/abs/2610.09051"
+      ],
+      "record": {
+        "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+        "source_url": "https://arxiv.org/abs/2610.09051",
+        "year": 2026,
+        "published": "2026-10-06",
+        "venue": null,
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The large KV-cache size of modern LLMs creates a barrier to efficient deployment. Recent work has explored replacing attention layers'RoPE positional embeddings with alternative decay-based mechanisms, which can then be used to prune KV-cache during inference. However, these decay functions have limited expressivity, and in practice devolve into sliding-window-like eviction patterns. In this work, we propose a unifying framework for complementary and novel decay mechanisms, capturing complex key statistics and interactions while preserving expressive RoPE embeddings and Softmax attention. The resulting Universal Attention is a highly expressive and end-to-end trainable architecture, whose composite decay mechanism acts as a natural, $\\textit{adaptive}$ pruning criterion, removing tokens that contribute least to attention computation. Experimentally, Universal Attention achieves state-of-the-art $10\\times$ compression on natural language and synthetic task data, while $\\textit{improving}$ downstream performance compared to both state-of-the-art baselines and unpruned oracles. It further demonstrates superior long-context generalization with unprecedented $25\\times$ compression at length 16k.",
+        "identifiers": [
+          "SemanticScholar:08e34e7d2661f393dd477c436f348a7a772fa5b9"
+        ],
+        "semantic_scholar_id": "08e34e7d2661f393dd477c436f348a7a772fa5b9",
+        "canonical_id": "arXiv:2610.09051",
+        "arxiv_id": "2610.09051",
+        "authors": [
+          "Davis Wertheimer",
+          "Hao-Chen Shen",
+          "Ahan Gupta",
+          "Derrick Liu",
+          "Yu Chin Fabian Lim",
+          "M. Srivatsa",
+          "R. Ganti",
+          "Min-Jia Zhang",
+          "Nai-Gang Wang"
+        ],
+        "priority": 102,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 100,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 102,
+          "is_fresh": true,
+          "is_recent_cited": true,
+          "freshness_age_days": 35,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2108.02347",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2108.02347",
+        "id:SemanticScholar:37abe53ed31caa23ae833b2e67bb4aa1892e8d25",
+        "id:arXiv:2108.02347",
+        "title:fmmformer efficient and flexible transformer via decomposed nearfield and farfield attention",
+        "url:https://arxiv.org/abs/2108.02347"
+      ],
+      "record": {
+        "title": "FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention",
+        "source_url": "https://arxiv.org/abs/2108.02347",
+        "year": 2021,
+        "published": "2021-08-05",
+        "venue": "Neural Information Processing Systems",
+        "citation_count": 43,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "We propose FMMformers, a class of efficient and flexible transformers inspired by the celebrated fast multipole method (FMM) for accelerating interacting particle simulation. FMM decomposes particle-particle interaction into near-field and far-field components and then performs direct and coarse-grained computation, respectively. Similarly, FMMformers decompose the attention into near-field and far-field attention, modeling the near-field attention by a banded matrix and the far-field attention by a low-rank matrix. Computing the attention matrix for FMMformers requires linear complexity in computational time and memory footprint with respect to the sequence length. In contrast, standard transformers suffer from quadratic complexity. We analyze and validate the advantage of FMMformers over the standard transformer on the Long Range Arena and language modeling benchmarks. FMMformers can even outperform the standard transformer in terms of accuracy by a significant margin. For instance, FMMformers achieve an average classification accuracy of $60.74\\%$ over the five Long Range Arena tasks, which is significantly better than the standard transformer's average accuracy of $58.70\\%$.",
+        "identifiers": [
+          "SemanticScholar:37abe53ed31caa23ae833b2e67bb4aa1892e8d25"
+        ],
+        "semantic_scholar_id": "37abe53ed31caa23ae833b2e67bb4aa1892e8d25",
+        "canonical_id": "arXiv:2108.02347",
+        "arxiv_id": "2108.02347",
+        "doi": "10.48550/arXiv.2108.02347",
+        "authors": [
+          "T. Nguyen",
+          "Vai Suliafu",
+          "S. Osher",
+          "Long Chen",
+          "Bao Wang"
+        ],
+        "priority": 53,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 43,
+          "citation_count": 43,
+          "total": 53,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 1923,
+          "matched_prestigious_venue": "Neural Information Processing Systems"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2512.23049",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2512.23049",
+        "id:SemanticScholar:24726cf89e6fb62a04452b705b39cf05741053fa",
+        "id:arXiv:2512.23049",
+        "title:accelerating language model workflows with prompt choreography",
+        "url:https://arxiv.org/abs/2512.23049"
+      ],
+      "record": {
+        "title": "Accelerating Language Model Workflows with Prompt Choreography",
+        "source_url": "https://arxiv.org/abs/2512.23049",
+        "year": 2025,
+        "published": "2025-12-28",
+        "venue": "Transactions of the Association for Computational Linguistics",
+        "citation_count": 0,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "\n Large language models are increasingly deployed in multi-agent workflows. We introduce Prompt Choreography, a framework that efficiently executes LLM workflows by maintaining a dynamic, global KV cache. Each LLM call can attend to an arbitrary, reordered subset of previously encoded messages. Parallel calls are supported. Though caching messages’ encodings sometimes gives different results from re-encoding them in a new context, we show in diverse settings that fine-tuning the LLM to work with the cache can help it mimic the original results. Prompt Choreography significantly reduces per-message latency (2.0–6.2× faster time-to-first-token) and achieves substantial end-to-end speedups (>2.2×) in some workflows dominated by redundant computation.",
+        "identifiers": [
+          "SemanticScholar:24726cf89e6fb62a04452b705b39cf05741053fa"
+        ],
+        "semantic_scholar_id": "24726cf89e6fb62a04452b705b39cf05741053fa",
+        "canonical_id": "arXiv:2512.23049",
+        "arxiv_id": "2512.23049",
+        "doi": "10.48550/arXiv.2512.23049",
+        "authors": [
+          "Цзункинг Бай",
+          "Jason Eisner"
+        ],
+        "priority": 20,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 10,
+          "prestigious_venue": 10,
+          "citations": 0,
+          "citation_count": 0,
+          "total": 20,
+          "is_fresh": true,
+          "is_recent_cited": false,
+          "freshness_age_days": 317,
+          "matched_prestigious_venue": "Association for Computational Linguistics"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2410.03440",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2410.03440",
+        "id:SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+        "id:arXiv:2410.03440",
+        "title:exploring the benefit of activation sparsity in pretraining",
+        "url:https://arxiv.org/abs/2410.03440"
+      ],
+      "record": {
+        "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+        "source_url": "https://arxiv.org/abs/2410.03440",
+        "year": 2024,
+        "published": "2024-10-04",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Pre-trained Transformers inherently possess the characteristic of sparse activation, where only a small fraction of the neurons are activated for each token. While sparse activation has been explored through post-training methods, its potential in pre-training remains untapped. In this work, we first study how activation properties change during pre-training. Our examination reveals that Transformers exhibit sparse activation throughout the majority of the pre-training process while the activation correlation keeps evolving as training progresses. Leveraging this observation, we propose Switchable Sparse-Dense Learning (SSD). SSD adaptively switches between the Mixtures-of-Experts (MoE) based sparse training and the conventional dense training during the pre-training process, leveraging the efficiency of sparse training and avoiding the static activation correlation of sparse training. Compared to dense training, SSD achieves comparable performance with identical model size and reduces pre-training costs. Moreover, the models trained with SSD can be directly used as MoE models for sparse inference and achieve the same performance as dense models with up to $2\\times$ faster inference speed. Codes are available at https://github.com/thunlp/moefication.",
+        "identifiers": [
+          "SemanticScholar:b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570"
+        ],
+        "semantic_scholar_id": "b05f83a8ce4bb92cf2f830dae29d6e2f61a1b570",
+        "canonical_id": "arXiv:2410.03440",
+        "arxiv_id": "2410.03440",
+        "doi": "10.48550/arXiv.2410.03440",
+        "authors": [
+          "Zhengyan Zhang",
+          "Chao-Jun Xiao",
+          "Qiujieli Qin",
+          "Yankai Lin",
+          "Zhiyuan Zeng",
+          "Xu Han",
+          "Zhi-Yuan Liu",
+          "Ruo-Bing Xie",
+          "Mao-Song Sun",
+          "Jie Zhou"
+        ],
+        "priority": 16,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 16,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 767,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2507.00797",
+      "identity_tokens": [
+        "id:DOI:10.1109/dac63849.2025.11132861",
+        "id:SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3",
+        "id:arXiv:2507.00797",
+        "title:veda efficient llm generation through votingbased kv cache eviction and dataflowflexible accelerator",
+        "url:https://arxiv.org/abs/2507.00797"
+      ],
+      "record": {
+        "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+        "source_url": "https://arxiv.org/abs/2507.00797",
+        "year": 2025,
+        "published": "2025-06-22",
+        "venue": "Design Automation Conference",
+        "citation_count": 6,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) excel in natural language processing tasks but pose significant computational and memory challenges for edge deployment due to their intensive resource demands. This work addresses the efficiency of LLM inference by algorithm-hardwaredataflow tri-optimizations. We propose a novel voting-based KV cache eviction algorithm, balancing hardware efficiency and algorithm accuracy by adaptively identifying unimportant kv vectors. From a dataflow perspective, we introduce a flexible-product dataflow and a runtime reconfigurable PE array for matrix-vector multiplication. The proposed approach effectively handles the diverse dimensional requirements and solves the challenges of incrementally varying sequence lengths. Additionally, an element-serial scheduling scheme is proposed for nonlinear operations, such as softmax and layer normalization (layernorm). Results demonstrate a substantial reduction in latency, accompanied by a significant decrease in hardware complexity, from $O(N)$ to $O(1)$. The proposed solution is realized in a custom-designed accelerator, VEDA, which outperforms existing hardware platforms. This research represents a significant advancement in LLM inference on resource-constrained edge devices, facilitating real-time processing, enhancing data privacy, and enabling model customization.",
+        "identifiers": [
+          "SemanticScholar:db1626ebc3be3839b33a174392ce4bdd044edfe3"
+        ],
+        "semantic_scholar_id": "db1626ebc3be3839b33a174392ce4bdd044edfe3",
+        "canonical_id": "arXiv:2507.00797",
+        "arxiv_id": "2507.00797",
+        "doi": "10.1109/DAC63849.2025.11132861",
+        "authors": [
+          "Zhi-Can Wang",
+          "Hong-Xiang Fan",
+          "Haroon Waris",
+          "Gang Wang",
+          "Zhen-Yu Li",
+          "Jian-Fei Jiang",
+          "Ya-Nan Sun",
+          "Guang-Hui He"
+        ],
+        "priority": 6,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 6,
+          "citation_count": 6,
+          "total": 6,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 506,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2504.07247",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2504.07247",
+        "id:SemanticScholar:b98e8c85acaba62519f333b51bd5ba9827794b48",
+        "id:arXiv:2504.07247",
+        "title:resourceefficient inference with foundation model programs",
+        "url:https://arxiv.org/abs/2504.07247"
+      ],
+      "record": {
+        "title": "Resource-efficient Inference with Foundation Model Programs",
+        "source_url": "https://arxiv.org/abs/2504.07247",
+        "year": 2025,
+        "published": "2025-04-09",
+        "venue": "arXiv.org",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "The inference-time resource costs of large language and vision models present a growing challenge in production deployments. We propose the use of foundation model programs, i.e., programs that can invoke foundation models with varying resource costs and performance, as an approach to this problem. Specifically, we present a method that translates a task into a program, then learns a policy for resource allocation that, on each input, selects foundation model\"backends\"for each program module. The policy uses smaller, cheaper backends to handle simpler subtasks, while allowing more complex subtasks to leverage larger, more capable models. We evaluate the method on two new\"streaming\"visual question-answering tasks in which a system answers a question on a sequence of inputs, receiving ground-truth feedback after each answer. Compared to monolithic multi-modal models, our implementation achieves up to 98% resource savings with minimal accuracy loss, demonstrating its potential for scalable and resource-efficient multi-modal inference.",
+        "identifiers": [
+          "SemanticScholar:b98e8c85acaba62519f333b51bd5ba9827794b48"
+        ],
+        "semantic_scholar_id": "b98e8c85acaba62519f333b51bd5ba9827794b48",
+        "canonical_id": "arXiv:2504.07247",
+        "arxiv_id": "2504.07247",
+        "doi": "10.48550/arXiv.2504.07247",
+        "authors": [
+          "Lun-Yiu Nie",
+          "Zhi-Min Ding",
+          "Kevin Yu",
+          "Marco Cheung",
+          "Christopher Jermaine",
+          "Swarat Chaudhuri"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 580,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2505.02380",
+      "identity_tokens": [
+        "id:DOI:10.1109/icassp55912.2026.11464777",
+        "id:SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+        "id:arXiv:2505.02380",
+        "title:entrollm entropy encoded weight compression for efficient large language model inference on edge devices",
+        "url:https://arxiv.org/abs/2505.02380"
+      ],
+      "record": {
+        "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+        "source_url": "https://arxiv.org/abs/2505.02380",
+        "year": 2025,
+        "published": "2025-05-05",
+        "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+        "citation_count": 2,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) achieve strong performance across tasks, but face storage and compute challenges on edge devices. We propose EntroLLM, a compression framework combining mixed quantization and entropy coding to reduce storage while preserving accuracy. We use a combination of unsigned and asymmetric quantization. Tensor-level quantization produces an entropy-reducing effect, increasing weight compressibility, and improving downstream Huffman encoding by $7\\times$ (8-bit) and $11.3\\times$ (4-bit) over state-of-the-art methods. Huffman coding further reduces memory bandwidth demands, while a parallel decoding strategy enables efficient weight retrieval with minimal latency. Experiments on edge-scale LLMs (smolLM-1.7B, phi3-mini-4k, mistral-7B) show up to $30\\%$ storage savings over uint8 and $65\\%$ over uint4 models, with $31.9-146.6\\%$ faster inference on memory-limited devices like the NVIDIA JETSON P3450. EntroLLM requires no retraining and is compatible with existing post-training quantization pipelines, making it practical for edge LLM deployment.",
+        "identifiers": [
+          "SemanticScholar:4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15"
+        ],
+        "semantic_scholar_id": "4e934d8b161dd7e566e9aa45b0d1c4bc715e1b15",
+        "canonical_id": "arXiv:2505.02380",
+        "arxiv_id": "2505.02380",
+        "doi": "10.1109/ICASSP55912.2026.11464777",
+        "authors": [
+          "Arnab Sanyal",
+          "G. Datta",
+          "Prithwish Mukherjee",
+          "Sandeep P. Chinchali",
+          "M. Orshansky"
+        ],
+        "priority": 2,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 2,
+          "citation_count": 2,
+          "total": 2,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 554,
+          "matched_prestigious_venue": null
+        }
+      }
+    },
+    {
+      "primary_identity": "id:arXiv:2506.23431",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2506.23431",
+        "id:SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81",
+        "id:arXiv:2506.23431",
+        "title:pipelined decoder for efficient contextaware text generation",
+        "url:https://arxiv.org/abs/2506.23431"
+      ],
+      "record": {
+        "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+        "source_url": "https://arxiv.org/abs/2506.23431",
+        "year": 2025,
+        "published": "2025-06-29",
+        "venue": "arXiv.org",
+        "citation_count": 1,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "As the basis of generative AI, an autoregressive model requires the generation of a new token depending on all the previously generated tokens, which brings high quality but also restricts the model to generate tokens one by one, forming a bottleneck limiting the generation speed. In this paper, we propose a new decoder architecture that efficiently generates text in parallel for context-aware generation tasks. Our proposed pipelined decoder initiates the generation of multiple subsequences simultaneously, and, at each time-step, it generates a new token for each subsequence to realize parallelism. Experiments on multiple text generation tasks, including question answering, text summarization, and keyphrase generation, show that our pipelined decoder significantly improves the generation speed without a significant loss of generation quality or additional memory consumption.",
+        "identifiers": [
+          "SemanticScholar:219aa76732cfc06409522c8610cb60b1d5a81c81"
+        ],
+        "semantic_scholar_id": "219aa76732cfc06409522c8610cb60b1d5a81c81",
+        "canonical_id": "arXiv:2506.23431",
+        "arxiv_id": "2506.23431",
+        "doi": "10.48550/arXiv.2506.23431",
+        "authors": [
+          "Zixian Huang",
+          "Chenxu Niu",
+          "Yu Gu",
+          "Gengyang Xiao",
+          "Xin-Wei Huang",
+          "Gong Cheng"
+        ],
+        "priority": 1,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 0,
+          "citations": 1,
+          "citation_count": 1,
+          "total": 1,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 499,
+          "matched_prestigious_venue": null
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:e7364b049d8402fafca8cbec0c8edaf540a73026394330f1c868e03facab3dbe",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
