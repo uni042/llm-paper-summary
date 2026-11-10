@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-10T11:30:20+00:00`
+Generated: `2026-11-10T12:20:21+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -497,7 +497,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 414 | 0 | 4 | 6 | arXiv:2511.02681 | Optimal Singular Damage: Efficient LLM Inference in Low Storage Regimes | 2025-11-04 | arXiv.org | 0 | 6 |  | [source](https://arxiv.org/abs/2511.02681) |
 | 415 | 12 | 4 | 6 | DOI:10.18653/v1/2026.acl-long.819 | Towards Efficient and Effective Diffusion Language Model Inference via Semantic-Aware Adaptive Denoising | 2026 | Annual Meeting of the Association for Computational Linguistics | 2 | 7 | Diffusion LLM Inference, LLM Serving / Scheduling / Disaggregation, inference-systems, 拡散LLM推論 / 近似KVキャッシュ / 細粒度トークン更新 / 復号順序制御, 拡散型LLM推論 / 近似KVキャッシュ / 並列復号 | [source](https://doi.org/10.18653/v1/2026.acl-long.819) |
 | 416 | 108 | 4 | 6 | arXiv:2602.03249 | Accordion-Thinking: Self-Regulated Step Summaries for Efficient and Readable LLM Reasoning | 2026-02-03 | arXiv.org | 8 | 6 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KV cache quantization / long-context inference / activation compression, KVキャッシュ圧縮 / 量子化 / 推論メモリ最適化, sparse attention / KV-cache bandwidth reduction | [source](https://arxiv.org/abs/2602.03249) |
-| 417 | 10 | 4 | 6 | arXiv:2606.30944 | Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation | 2026-06-29 | arXiv.org | 0 | 6 |  | [source](https://arxiv.org/abs/2606.30944) |
+| 417 | 101 | 4 | 6 | arXiv:2606.30944 | Preserving Speech-to-Text LLM Capabilities in Speech-to-Speech Generation | 2026-06-29 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2606.30944) |
 | 418 | 0 | 4 | 6 | arXiv:2511.13147 | OTARo: Once Tuning for All Precisions toward Robust On-Device LLMs | 2025-11-17 | AAAI Conference on Artificial Intelligence | 0 | 7 | arXiv:2405.16406のICLR 2025採録版。, post-training quantization / second-order compression / weight-only LLM inference, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2511.13147) |
 | 419 | 101 | 4 | 6 | arXiv:2606.29350 | Fast Enough to Act: Spatio-Temporal Visual Token Merging for Low-Latency Robotic VLMs and VLAs | 2026-06-28 | arXiv.org | 1 | 6 | 小型VLA・視覚トークン削減・非同期ロボット推論, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2606.29350) |
 | 420 | 10 | 4 | 6 | arXiv:2610.11302 | iCATS: Fast Video Generation via Interaction-Aware Sparse Attention and Timestep-Adaptive Sparsity | 2026-10-08 |  | 0 | 6 | 02-hardware-accelerators, inference-systems | [source](https://arxiv.org/abs/2610.11302) |
