@@ -1,0 +1,200 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-2300-scheduled-chat-00/r01",
+  "reference_main_sha": "0e312b2f336bd4fdc6fb86ebaf59a9ef5d96c69b",
+  "candidate_inventory": 571,
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2505.02380",
+      "identity_tokens": [
+        "arXiv:2505.02380",
+        "DOI:10.48550/arXiv.2505.02380"
+      ],
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "reason": "混合量子化とHuffman符号化で重み保存容量と帯域を削減。SmolLM、Phi-3、Mistralで評価し、Jetson P3450等で推論31.9〜146.6%高速化と著者報告。",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 274,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2504.07247",
+      "identity_tokens": [
+        "arXiv:2504.07247",
+        "DOI:10.48550/arXiv.2504.07247"
+      ],
+      "title": "Resource-efficient Inference with Foundation Model Programs",
+      "reason": "タスクを複数モデル呼出しのプログラムへ変換し、入力ごとに安価なバックエンドを選ぶポリシーを学習。ストリーミングVQAで最大98%の資源節約と著者報告。",
+      "source_url": "https://arxiv.org/abs/2504.07247",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 275,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2410.03440",
+      "identity_tokens": [
+        "arXiv:2410.03440",
+        "DOI:10.48550/arXiv.2410.03440"
+      ],
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "reason": "Switchable Sparse-Dense LearningでMoE型疎学習とdense学習を切り替え、事前学習コストを低減。学習済みモデルは疎推論で最大2倍高速と著者報告。",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 276,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2506.23431",
+      "identity_tokens": [
+        "arXiv:2506.23431",
+        "DOI:10.48550/arXiv.2506.23431"
+      ],
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "reason": "生成系列を複数部分列に分割し、一定遅延で各部分列の生成を開始して並列化。QA、要約、キーフレーズ生成で品質を概ね維持しつつ高速化を報告。",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 278,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.09051",
+      "identity_tokens": [
+        "arXiv:2610.09051",
+        "DOI:10.48550/arXiv.2610.09051"
+      ],
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "reason": "RoPEとSoftmaxを保持する複合減衰機構を学習し、寄与の低いKVを適応的に除去。自然言語等で10倍圧縮、16k長文で25倍圧縮と著者報告。",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 279,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2512.23049",
+      "identity_tokens": [
+        "arXiv:2512.23049",
+        "DOI:10.48550/arXiv.2512.23049"
+      ],
+      "title": "Accelerating Language Model Workflows with Prompt Choreography",
+      "reason": "メッセージの再順序付き参照を許すグローバルKVキャッシュを用い、並列LLM呼出しと重複prefill削減を実現。TTFT 2.0〜6.2倍、特定ワークフローでE2E 2.2倍超と報告。",
+      "source_url": "https://arxiv.org/abs/2512.23049",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 280,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.32961",
+      "identity_tokens": [
+        "arXiv:2609.32961",
+        "DOI:10.48550/arXiv.2609.32961"
+      ],
+      "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+      "reason": "約3.5万エージェント実行で圧縮方法・発火条件・深度を比較。トークンを約3分の1にしても実行時間が20〜80%増える条件を確認。コスト・遅延評価に直接関連。",
+      "source_url": "https://arxiv.org/abs/2609.32961",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 281,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2108.02347",
+      "identity_tokens": [
+        "arXiv:2108.02347",
+        "DOI:10.48550/arXiv.2108.02347"
+      ],
+      "title": "FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention",
+      "reason": "近傍を帯行列、遠方を低ランク行列で近似し、系列長に対する注意計算とメモリを線形化。Long Range Arenaで平均60.74%対通常Transformer58.70%と著者報告。",
+      "source_url": "https://arxiv.org/abs/2108.02347",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 282,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2507.00797",
+      "identity_tokens": [
+        "arXiv:2507.00797",
+        "DOI:10.48550/arXiv.2507.00797"
+      ],
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "reason": "投票型KV削除と可変データフロー、再構成可能PE配列を組み合わせたエッジLLM推論アクセラレータ。遅延・ハードウェア複雑度の改善を著者報告。",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 287,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.16825",
+      "identity_tokens": [
+        "arXiv:2606.16825",
+        "DOI:10.48550/arXiv.2606.16825"
+      ],
+      "title": "Tying the Loop -- Tied Expert Layers in Mixture-of-Experts Language Models",
+      "reason": "連続Transformer層でexpert重みを共有しつつroutingとattentionを層別維持。OLMoE/Qwen3/DeepSeek型で品質を概ね維持しメモリを約半減と著者報告。",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 288,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:07:23+09:00",
+      "last_checked_at": "2026-11-10T23:07:23+09:00"
+    }
+  ],
+  "round_complete": true,
+  "source_artifact_sha256": "5087f341afcda4756c7501ac2f60cbbf402e8809402ac8a84363a3352271a179",
+  "correction_reason": "Normalize Library discovery artifact v1 to v2 per github-import-procedure; source bytes preserved in legacy",
+  "skipped": [
+    {
+      "rank": 277,
+      "reason": "primary_abstract_unavailable"
+    },
+    {
+      "rank": 283,
+      "reason": "publisher_abstract_unavailable"
+    },
+    {
+      "rank": 284,
+      "reason": "primary_abstract_unavailable"
+    },
+    {
+      "rank": 285,
+      "reason": "not_yet_checked"
+    },
+    {
+      "rank": 286,
+      "reason": "not_yet_checked"
+    }
+  ],
+  "next_rank": 289,
+  "identity_uniqueness_global": "not_fully_verified; GitHub import inbox authoritative",
+  "source_check_time_note": "Original v1 file has no per-record check timestamps; first_checked_at and last_checked_at use the original Library file modified_at as documented fallback, not a verified first read time."
+}
