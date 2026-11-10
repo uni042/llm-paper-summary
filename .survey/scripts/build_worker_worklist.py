@@ -12,6 +12,8 @@ materializes all three dedicated worker surfaces, including :45.
 from __future__ import annotations
 
 import argparse
+import copy
+import hashlib
 import json
 import tempfile
 from datetime import datetime, timezone
@@ -674,25 +676,73 @@ def _paths(output_dir: Path, worker: str) -> tuple[Path, Path]:
     )
 
 
+def _compact_json(value: Any) -> str:
+    """Serialize a fetchable JSON view without whitespace expansion."""
+    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n"
+
+
+def _fetchable_worklist_view(
+    payload: dict[str, Any], worker: str, *, shard_size: int = 100,
+) -> tuple[dict[str, Any], list[tuple[str, list[dict[str, Any]]]]]:
+    """Keep the selection index readable while preserving full lineage in shards.
+
+    The complete Discovery rows are immutable, rebuildable selection evidence.
+    Only large linked_from arrays are abbreviated in the main JSON; callers
+    can retrieve the same ranked rows from the named sidecar shards.
+    """
+    view = copy.deepcopy(payload)
+    original_rows = payload["discovery_review"]["rows"]
+    view["discovery_review"]["full_rows_sha256"] = hashlib.sha256(
+        _compact_json(original_rows).encode("utf-8")
+    ).hexdigest()
+    shards: list[tuple[str, list[dict[str, Any]]]] = []
+    for offset in range(0, len(original_rows), shard_size):
+        chunk = original_rows[offset:offset + shard_size]
+        relpath = (
+            f"worklist-shards/worker-worklist-{worker}-discovery-"
+            f"r{offset + 1:04d}-r{offset + len(chunk):04d}.json"
+        )
+        shards.append((relpath, chunk))
+        for item in view["discovery_review"]["rows"][offset:offset + shard_size]:
+            links = item.get("linked_from")
+            if isinstance(links, list) and len(links) > 4:
+                item["linked_from_count"] = len(links)
+                item["linked_from"] = links[:4]
+                item["linked_from_truncated"] = True
+                item["linked_from_shard"] = relpath
+    view["discovery_review"]["full_row_shards"] = [name for name, _ in shards]
+    return view, shards
+
+
 def write_outputs(root: Path, payloads: dict[str, dict[str, Any]], *, output_dir: Path) -> dict[str, dict[str, Any]]:
     base = output_dir if output_dir.is_absolute() else root / output_dir
     final: dict[str, dict[str, Any]] = {}
     for worker in WORKERS:
         json_path, markdown_path = _paths(base, worker)
-        payload = payloads[worker]
+        view, shards = _fetchable_worklist_view(payloads[worker], worker)
         old = _read(json_path, {})
         old_cmp = dict(old) if isinstance(old, dict) else {}
         old_cmp.pop("generated_at", None)
         generated = (
             str(old.get("generated_at") or _now())
-            if old_cmp == payload
+            if old_cmp == view
             else _now()
         )
-        worker_payload = {"generated_at": generated, **payload}
-        _write_text(
-            json_path,
-            json.dumps(worker_payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
-        )
+        worker_payload = {"generated_at": generated, **view}
+        # Publish every full-data sidecar before the lightweight primary view.
+        for relpath, rows in shards:
+            first_rank = rows[0]["rank"]
+            last_rank = rows[-1]["rank"]
+            _write_text(
+                base / relpath,
+                _compact_json({
+                    "schema_version": 1, "worker_id": f"scheduled-chat-{worker}",
+                    "generated_at": generated,
+                    "first_rank": first_rank, "last_rank": last_rank,
+                    "record_count": len(rows), "rows": rows,
+                }),
+            )
+        _write_text(json_path, _compact_json(worker_payload))
         _write_text(markdown_path, render_markdown(worker_payload, worker) + "\n")
         final[worker] = worker_payload
     return final
