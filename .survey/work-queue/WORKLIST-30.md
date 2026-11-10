@@ -1,7 +1,7 @@
 # Scheduled worker :30 worklist
 
 Worker: `scheduled-chat-30`  
-Generated: `2026-11-10T20:12:07+00:00`
+Generated: `2026-11-10T20:52:47+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -391,7 +391,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 308 | 0 | 4 | 9 | DOI:10.5220/0014920500004039 | MoE-Pipe: A Pipelined MoE Model Loading Framework for Reducing the Cold Start Delays in Serverless Inference | 2026 | International Conference on Cloud Computing and Services Science | 0 | 9 | LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation, オフロード／階層メモリ, サーバーレスLLMサービング／コールドスタート／パイプライン並列／耐障害推論, 分散学習 / 混合専門家モデル / 自動シャーディング / SPMD | [source](https://doi.org/10.5220/0014920500004039) |
 | 309 | 7 | 4 | 9 | arXiv:2406.05678 | SinkLoRA: Enhanced Efficiency and Chat Capabilities for Long-Context Large Language Models | 2024-06-09 | arXiv.org | 7 | 9 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, KVキャッシュ最適化／適応圧縮, sparse attention / long-context Transformer, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2406.05678) |
 | 310 | 101 | 4 | 9 | arXiv:2604.03950 | Diagonal-Tiled Mixed-Precision Attention for Efficient Low-Bit MXFP Inference | 2026-04-05 | arXiv.org | 1 | 9 | LLM Serving / Scheduling / Disaggregation, Weight Quantization / Compression, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2604.03950) |
-| 311 | 1 | 4 | 9 | DOI:10.1109/BIGCOM61073.2023.00044 | LMIE-BERT: A Learnable Method for Inter-Layer Ensembles to Accelerate Inference of BERT-Style Pre-trained Models | 2023-08-04 | International Conference on Big Data Computing and Communications | 1 | 9 |  | [source](https://doi.org/10.1109/BIGCOM61073.2023.00044) |
+| 311 | 2 | 4 | 9 | DOI:10.1109/BIGCOM61073.2023.00044 | LMIE-BERT: A Learnable Method for Inter-Layer Ensembles to Accelerate Inference of BERT-Style Pre-trained Models | 2023-08-04 | International Conference on Big Data Computing and Communications | 2 | 9 |  | [source](https://doi.org/10.1109/BIGCOM61073.2023.00044) |
 | 312 | 101 | 4 | 9 | arXiv:2602.06527 | HyPER: Bridging Exploration and Exploitation for Scalable LLM Reasoning with Hypothesis Path Expansion and Reduction | 2026-02-06 | arXiv.org | 1 | 9 | inference-systems | [source](https://arxiv.org/abs/2602.06527) |
 | 313 | 102 | 4 | 9 | arXiv:2601.23027 | Divide-and-Conquer CoT: RL for Reducing Latency via Parallel Reasoning | 2026-01-30 | arXiv.org | 2 | 9 | LLM Serving / Scheduling / Disaggregation, Speculative Decoding, inference-systems, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2601.23027) |
 | 314 | 10 | 4 | 9 | arXiv:2609.10372 | PACE: Perceived-Latency-Aware Cascading Service Routing and Filler Control for QoE-Efficient Retrieval-Augmented Dialogue Serving | 2026-09-09 |  | 0 | 9 | KV cache memory management / streaming inference / attention sinks / length extrapolation, LLM Serving / Scheduling / Disaggregation, LLM routing、hybrid inference、quality-aware model selection, 投機的復号 / 無損失復号高速化, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2609.10372) |
