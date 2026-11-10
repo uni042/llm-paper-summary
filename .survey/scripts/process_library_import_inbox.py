@@ -721,6 +721,16 @@ def sync_returned_research_queue(repo_root: Path) -> dict[str, Any]:
                     source_url = str(meta.get("source") or "").strip() or None
                 except Exception:
                     pass
+        # Older blocked payload files can be removed after a failed import.
+        # Do not repeatedly fetch an obsolete 404 as if it were the primary
+        # paper. Reconstruct only deterministic canonical landing URLs.
+        if source_url is None:
+            if canonical_id.startswith("arXiv:"):
+                source_url = "https://arxiv.org/abs/" + canonical_id.split(":", 1)[1]
+            elif canonical_id.startswith("DOI:"):
+                source_url = "https://doi.org/" + canonical_id.split(":", 1)[1]
+            elif canonical_id.startswith("OpenReview:"):
+                source_url = "https://openreview.net/forum?id=" + canonical_id.split(":", 1)[1]
         entries.append(
             {
                 "canonical_id": canonical_id,
