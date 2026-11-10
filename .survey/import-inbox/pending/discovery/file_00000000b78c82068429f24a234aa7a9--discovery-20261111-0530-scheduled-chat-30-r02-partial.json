@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261111-0530-scheduled-chat-30/r02",
+  "reference_main_sha": "17b0655ed20ed48e32bdb647c3c2689f15938b57",
+  "candidate_inventory": 571,
+  "record_count": 3,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2606.21848",
+      "identity_tokens": [
+        "arXiv:2606.21848",
+        "DOI:10.48550/arXiv.2606.21848"
+      ],
+      "title": "Keyless Attention: Value-Space Routing and Value-Only Caching for Efficient Transformers",
+      "reason": "従来のKey投影をValue空間のルーティング投影に置き換えてKey表現を不要にし、Value-onlyキャッシュを実現。一次要旨では5モデル中4モデルで従来attentionと同等以上のperplexityを達成し、KVキャッシュ使用量を50%削減。推論メモリ・帯域の直接最適化としてaccept。",
+      "source_url": "https://arxiv.org/abs/2606.21848",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 38,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T05:30:00+09:00",
+      "last_checked_at": "2026-11-11T05:30:00+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.30791",
+      "identity_tokens": [
+        "arXiv:2610.30791",
+        "DOI:10.48550/arXiv.2610.30791"
+      ],
+      "title": "Gandalf: Flash Shall Not Die! Increasing Flash Storage Lifetime for KV Cache Offloading in LLM Serving",
+      "reason": "SSDへKVキャッシュを退避する際の書込寿命を目的関数に含め、過去の参照頻度だけでなくattention種類に基づきSSD入場を調整。一次要旨は複数ワークロードトレースでキャッシュヒット率への影響を小さく保ちつつSSD寿命を平均7.3倍延長と報告。SSDを活用するLLM推論基盤の直接研究なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.30791",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 39,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T05:30:00+09:00",
+      "last_checked_at": "2026-11-11T05:30:00+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2609.29812",
+      "identity_tokens": [
+        "arXiv:2609.29812",
+        "DOI:10.48550/arXiv.2609.29812"
+      ],
+      "title": "FlashLoop: Fast and Memory-Efficient Looped Transformers via Lazy Updates",
+      "reason": "同一Transformerブロックを反復するLooped Transformerの冗長計算・KVキャッシュ増大に対し、トークン疎更新、疎attention、ループ間KV残差の低bit量子化を組み合わせる学習不要な推論方式。一次要旨は精度を保ち最大1.64倍のE2E高速化、最大6倍のKVメモリ削減を報告。推論効率の直接研究としてaccept。",
+      "source_url": "https://arxiv.org/abs/2609.29812",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 40,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T05:30:00+09:00",
+      "last_checked_at": "2026-11-11T05:30:00+09:00"
+    }
+  ]
+}
