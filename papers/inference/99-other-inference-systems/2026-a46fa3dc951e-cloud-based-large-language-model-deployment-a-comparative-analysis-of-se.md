@@ -1,29 +1,83 @@
 ---
-canonical_id: "DOI:10.18267/j.aip.313"
-doi: "10.18267/j.aip.313"
-title: "Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures"
+canonical_id: DOI:10.18267/j.aip.313
+doi: 10.18267/j.aip.313
+title: 'Cloud-Based Large Language Model Deployment: A Comparative Analysis of Serverless and Bring-Your-Own-Container Architectures'
 authors:
-  - Mateusz Ploskonka
-published: "2026-06-12"
-publication: "Acta Informatica Pragensia, 15(2), 601–620 (2026)"
-publication_type: "査読付きジャーナル論文"
-publication_status: "Published"
-source: "https://doi.org/10.18267/j.aip.313"
+- Mateusz Ploskonka
+published: '2026-06-12'
+publication: Acta Informatica Pragensia, 15(2), 601–620 (2026)
+publication_type: 査読付きジャーナル論文
+publication_status: Published
+source: https://doi.org/10.18267/j.aip.313
 sources:
-  - "https://aip.vse.cz/pdfs/aip/2026/02/15.pdf"
-  - "https://doi.org/10.18267/j.aip.313"
-summary: "32種類の公開LLMを対象に、専有推論環境の時間課金と管理型サーバーレスのモデル提供状況・可観測性を比較した実証研究。Belebele正答率とモデル規模の対数回帰はR²=0.727、調査時点でサーバーレスから利用できるモデルは11/32、SageMakerとBedrockの公開運用指標は42種類以上対約12種類だった。速度改善アルゴリズムではなく、配備判断に必要なコスト・利用可能性・診断情報の制約を定量化する。"
-list_summary: "32モデルのBelebele精度とクラウド時間費用、サーバーレス提供率、運用指標を比較し、小型モデルの費用効率と管理型APIの可観測性不足を定量化した配備評価。"
-implementation: "公開クラウドサービスを使った比較・計測研究。主たる推論性能比較はAmazon SageMaker JumpStartホスト型エンドポイント、提供可否はAmazon Bedrock・Azure Serverless・Hugging Face互換事業者、指標比較はSageMaker対Bedrockの仕様表に基づく。独自推論カーネルやスケジューラは実装しない。"
-implementation_status: "evaluation-study"
+- https://aip.vse.cz/pdfs/aip/2026/02/15.pdf
+- https://doi.org/10.18267/j.aip.313
+summary: 32種類の公開LLMを対象に、専有推論環境の時間課金と管理型サーバーレスのモデル提供状況・可観測性を比較した実証研究。Belebele正答率とモデル規模の対数回帰はR²=0.727、調査時点でサーバーレスから利用できるモデルは11/32、SageMakerとBedrockの公開運用指標は42種類以上対約12種類だった。速度改善アルゴリズムではなく、配備判断に必要なコスト・利用可能性・診断情報の制約を定量化する。
+list_summary: 32モデルのBelebele精度とクラウド時間費用、サーバーレス提供率、運用指標を比較し、小型モデルの費用効率と管理型APIの可観測性不足を定量化した配備評価。
+implementation: 公開クラウドサービスを使った比較・計測研究。主たる推論性能比較はAmazon SageMaker JumpStartホスト型エンドポイント、提供可否はAmazon Bedrock・Azure Serverless・Hugging Face互換事業者、指標比較はSageMaker対Bedrockの仕様表に基づく。独自推論カーネルやスケジューラは実装しない。
+implementation_status: evaluation-study
 code: null
-last_checked: "2026-10-28"
-worker_completed_at: "2026-10-28T20:01:00+09:00"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261028-2001-scheduled-chat-00/r01"
-reference_main_sha: "bc593786efc25ce547fc8ee619bd444e259e2459"
+last_checked: '2026-10-28'
+worker_completed_at: '2026-10-28T20:01:00+09:00'
+worker_id: scheduled-chat-00
+worker_run_key: 20261028-2001-scheduled-chat-00/r01
+reference_main_sha: bc593786efc25ce547fc8ee619bd444e259e2459
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2403.02310
+- canonical_id: DOI:10.18653/v1/2024.acl-long.44
+  doi: 10.18653/v1/2024.acl-long.44
+- canonical_id: arXiv:2510.09665
+  doi: 10.48550/arxiv.2510.09665
+- canonical_id: arXiv:2307.08691
+- canonical_id: DOI:10.52202/068431-1189
+  doi: 10.52202/068431-1189
+- canonical_id: DOI:10.1145/3731569.3764815
+  doi: 10.1145/3731569.3764815
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2401.14351
+- canonical_id: DOI:10.48550/arxiv.2001.08361
+  doi: 10.48550/arxiv.2001.08361
+- canonical_id: arXiv:2512.22219
+  doi: 10.48550/arxiv.2512.22219
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2512.03416
+  doi: 10.48550/arxiv.2512.03416
+- canonical_id: arXiv:2211.17192
+- canonical_id: DOI:10.21203/rs.3.rs-4887385/v1
+  doi: 10.21203/rs.3.rs-4887385/v1
+- canonical_id: arXiv:2407.12391
+  doi: 10.1109/hpec62836.2024.10938426
+- canonical_id: DOI:10.1145/3714983.3714987
+  doi: 10.1145/3714983.3714987
+- canonical_id: arXiv:2510.11938
+  doi: 10.1145/3767295.3769316
+- canonical_id: DOI:10.1145/3533378
+  doi: 10.1145/3533378
+- canonical_id: DOI:10.1145/3503222.3507709
+  doi: 10.1145/3503222.3507709
+- canonical_id: DOI:10.3389/fcomp.2025.1523699
+  doi: 10.3389/fcomp.2025.1523699
+- canonical_id: DOI:10.48550/arxiv.2505.16697
+  doi: 10.48550/arxiv.2505.16697
+- canonical_id: DOI:10.55056/jec.1000
+  doi: 10.55056/jec.1000
+- canonical_id: DOI:10.1038/s42256-025-01137-0
+  doi: 10.1038/s42256-025-01137-0
+- canonical_id: arXiv:2507.18007
+  doi: 10.48550/arxiv.2507.18007
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1145/3721323.3724838
+  doi: 10.1145/3721323.3724838
+- canonical_id: DOI:10.52202/079017-2000
+  doi: 10.52202/079017-2000
+- canonical_id: arXiv:2404.14294
+  doi: 10.48550/arxiv.2404.14294
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 33
 ---
 
 ## 書誌と研究の位置付け

@@ -1,35 +1,69 @@
 ---
-canonical_id: "DOI:10.3390/electronics15112475"
-title: "Toward Scalable LLM-Based Multi-Agent Collaboration: A Dynamic Task Graph Approach with Asynchronous Parallel Execution"
-summary: "DynTaskMASは、複数の大規模言語モデルエージェントを連携させる際、実行中に変わるタスク依存関係を有向グラフで管理し、実行可能な部分タスクを非同期投入するとともに、意味的に必要な文脈だけを転送する複合LLM実行基盤である。Llama-3.1-8BをTensorRT-LLMで提供する4枚のRTX 3090環境において、逐次実行に比べてタスク全体の完了時間を21.3～33.0%短縮した。一方、モデル呼び出し単位の遅延は96±4から99±5ミリ秒と改善せず、同時実行の代償としてKVキャッシュ平均占有量は4.3から11.7GBへ増えた。"
-list_summary: "動的タスク依存グラフ、非同期エージェント投入、意味選別型文脈配送を組み合わせ、LLM呼び出し自体を高速化せずに複合タスク完了時間を21.3～33.0%削減する一方、KVキャッシュ同時占有量を増やす。"
+canonical_id: DOI:10.3390/electronics15112475
+title: 'Toward Scalable LLM-Based Multi-Agent Collaboration: A Dynamic Task Graph Approach with Asynchronous Parallel Execution'
+summary: DynTaskMASは、複数の大規模言語モデルエージェントを連携させる際、実行中に変わるタスク依存関係を有向グラフで管理し、実行可能な部分タスクを非同期投入するとともに、意味的に必要な文脈だけを転送する複合LLM実行基盤である。Llama-3.1-8BをTensorRT-LLMで提供する4枚のRTX 3090環境において、逐次実行に比べてタスク全体の完了時間を21.3～33.0%短縮した。一方、モデル呼び出し単位の遅延は96±4から99±5ミリ秒と改善せず、同時実行の代償としてKVキャッシュ平均占有量は4.3から11.7GBへ増えた。
+list_summary: 動的タスク依存グラフ、非同期エージェント投入、意味選別型文脈配送を組み合わせ、LLM呼び出し自体を高速化せずに複合タスク完了時間を21.3～33.0%削減する一方、KVキャッシュ同時占有量を増やす。
 authors:
-  - "Junwei Yu"
-  - "Yepeng Ding"
-  - "Jiani Dai"
-  - "Junjun Zheng"
-  - "Jingchi Wu"
-  - "Hiroyuki Sato"
-published: "2026-06-04"
-publication: "Electronics, 15(11), 2475 (2026)"
-publication_type: "査読付き学術誌論文"
-publication_status: "published"
-source: "https://www.mdpi.com/2079-9292/15/11/2475"
+- Junwei Yu
+- Yepeng Ding
+- Jiani Dai
+- Junjun Zheng
+- Jingchi Wu
+- Hiroyuki Sato
+published: '2026-06-04'
+publication: Electronics, 15(11), 2475 (2026)
+publication_type: 査読付き学術誌論文
+publication_status: published
+source: https://www.mdpi.com/2079-9292/15/11/2475
 sources:
-  - "https://www.mdpi.com/2079-9292/15/11/2475"
-  - "https://doi.org/10.3390/electronics15112475"
-doi: "10.3390/electronics15112475"
+- https://www.mdpi.com/2079-9292/15/11/2475
+- https://doi.org/10.3390/electronics15112475
+doi: 10.3390/electronics15112475
 code: null
-implementation: "4基のNVIDIA RTX 3090とTensorRT-LLM 0.7.1、Llama-3.1-8Bで実験した複合エージェント実行基盤。論文はvLLM等へのバックエンド差替え可能性を述べるが、公式実装リポジトリの公開URLは一次資料から確認できなかった。"
-last_checked: "2026-10-23"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-23T23:03:48+09:00"
-worker_run_key: "20261023-2256-scheduled-chat-00/r01"
-reference_main_sha: "527caa3afc08a648d93958c1cbf54c50e6cd4e77"
+implementation: 4基のNVIDIA RTX 3090とTensorRT-LLM 0.7.1、Llama-3.1-8Bで実験した複合エージェント実行基盤。論文はvLLM等へのバックエンド差替え可能性を述べるが、公式実装リポジトリの公開URLは一次資料から確認できなかった。
+last_checked: '2026-10-23'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-23T23:03:48+09:00'
+worker_run_key: 20261023-2256-scheduled-chat-00/r01
+reference_main_sha: 527caa3afc08a648d93958c1cbf54c50e6cd4e77
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1145/3586183.3606763
+  doi: 10.1145/3586183.3606763
+- canonical_id: DOI:10.1007/s11704-024-40231-1
+  doi: 10.1007/s11704-024-40231-1
+- canonical_id: DOI:10.1007/s11432-024-4222-0
+  doi: 10.1007/s11432-024-4222-0
+- canonical_id: DOI:10.18653/v1/2024.acl-long.810
+  doi: 10.18653/v1/2024.acl-long.810
+- canonical_id: DOI:10.3390/electronics15102187
+  doi: 10.3390/electronics15102187
+- canonical_id: DOI:10.1109/lcn60385.2024.10639641
+  doi: 10.1109/lcn60385.2024.10639641
+- canonical_id: DOI:10.3390/electronics15112270
+  doi: 10.3390/electronics15112270
+- canonical_id: DOI:10.1109/ispa67752.2025.00198
+  doi: 10.1109/ispa67752.2025.00198
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.1609/icaps.v35i1.36130
+  doi: 10.1609/icaps.v35i1.36130
+- canonical_id: arXiv:2310.02170
+- canonical_id: DOI:10.1016/s0167-5060(08)70356-x
+  doi: 10.1016/s0167-5060(08)70356-x
+- canonical_id: DOI:10.1006/jpdc.1999.1578
+  doi: 10.1006/jpdc.1999.1578
+- canonical_id: DOI:10.1109/71.993206
+  doi: 10.1109/71.993206
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: DOI:10.1109/mc.2022.3148714
+  doi: 10.1109/mc.2022.3148714
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 41
 ---
 
 # DynTaskMAS：動的タスクグラフと非同期並列実行による複合LLMエージェントの実行最適化

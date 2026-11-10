@@ -1,33 +1,50 @@
 ---
-canonical_id: "DOI:10.1109/ISDFS69419.2026.11458958"
-title: "Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems"
-summary: "AdaptiScaleは要求の難易度を推定し、容易な要求は貪欲復号、難しい要求はbest-of-Nや木探索へ配分するテスト時計算量適応型のLLM推論スケジューラである。グローバルな資源割当、戦略別バッチ化、データ・パイプライン並列の切替を組み合わせ、Mistral-7B/A4000の評価では中負荷の処理量を42.7から51.3要求/秒へ改善した。GSM8K正答率は固定best-of-16の65.1%に対し67.2%、費用は1000要求当たり0.85から0.52ドルである。ただし4ノードの90%効率は単一GPUの時分割模擬であり、論文の2.1倍費用効率という表現は掲載費用の比率と一致しない。"
-list_summary: "要求難易度に応じて推論時サンプル数とクラスタ資源を割り当てるAdaptiScaleを評価し、実GPU単体の性能と4ノード時分割模擬の限界を区別する。"
+canonical_id: DOI:10.1109/ISDFS69419.2026.11458958
+title: Compute-Optimal Resource Allocation for Distributed Large Language Model Inference in Cloud-Scale Intelligent Systems
+summary: AdaptiScaleは要求の難易度を推定し、容易な要求は貪欲復号、難しい要求はbest-of-Nや木探索へ配分するテスト時計算量適応型のLLM推論スケジューラである。グローバルな資源割当、戦略別バッチ化、データ・パイプライン並列の切替を組み合わせ、Mistral-7B/A4000の評価では中負荷の処理量を42.7から51.3要求/秒へ改善した。GSM8K正答率は固定best-of-16の65.1%に対し67.2%、費用は1000要求当たり0.85から0.52ドルである。ただし4ノードの90%効率は単一GPUの時分割模擬であり、論文の2.1倍費用効率という表現は掲載費用の比率と一致しない。
+list_summary: 要求難易度に応じて推論時サンプル数とクラスタ資源を割り当てるAdaptiScaleを評価し、実GPU単体の性能と4ノード時分割模擬の限界を区別する。
 authors:
-  - "Tejas Pravinbhai Patel"
-  - "Sandeep Shivam"
-  - "Viswanathan Ranganathan"
-published: "2026-03-19"
-publication: "2026 14th International Symposium on Digital Forensics and Security (ISDFS)"
-publication_type: "conference"
-publication_status: "published"
-doi: "10.1109/ISDFS69419.2026.11458958"
-source: "https://doi.org/10.1109/ISDFS69419.2026.11458958"
+- Tejas Pravinbhai Patel
+- Sandeep Shivam
+- Viswanathan Ranganathan
+published: '2026-03-19'
+publication: 2026 14th International Symposium on Digital Forensics and Security (ISDFS)
+publication_type: conference
+publication_status: published
+doi: 10.1109/ISDFS69419.2026.11458958
+source: https://doi.org/10.1109/ISDFS69419.2026.11458958
 sources:
-  - "https://doi.org/10.1109/ISDFS69419.2026.11458958"
-  - "https://www.researchgate.net/publication/403640207_Compute-Optimal_Resource_Allocation_for_Distributed_Large_Language_Model_Inference_in_Cloud-Scale_Intelligent_Systems"
-implementation: "Mistral-7B-v0.1とNVIDIA A4000 16GBを用いた推論、単一GPUの時分割プロセスによる4ノード模擬。著者はvLLM拡張を主張するが公開実装の具体的URLは本文から独立確認できなかった。"
+- https://doi.org/10.1109/ISDFS69419.2026.11458958
+- https://www.researchgate.net/publication/403640207_Compute-Optimal_Resource_Allocation_for_Distributed_Large_Language_Model_Inference_in_Cloud-Scale_Intelligent_Systems
+implementation: Mistral-7B-v0.1とNVIDIA A4000 16GBを用いた推論、単一GPUの時分割プロセスによる4ノード模擬。著者はvLLM拡張を主張するが公開実装の具体的URLは本文から独立確認できなかった。
 code: null
-last_checked: "2026-10-22"
-worker_id: "scheduled-chat-45"
-worker_completed_at: "2026-10-22T09:57:00+09:00"
-worker_run_key: "20261022-0945-scheduled-chat-45/r01"
-reference_main_sha: "d25a355629740b22fe4a42b3333e82cb31b8a383"
+last_checked: '2026-10-22'
+worker_id: scheduled-chat-45
+worker_completed_at: '2026-10-22T09:57:00+09:00'
+worker_run_key: 20261022-0945-scheduled-chat-45/r01
+reference_main_sha: d25a355629740b22fe4a42b3333e82cb31b8a383
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-research_scope: "distributed LLM serving / test-time scaling / adaptive compute allocation"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+research_scope: distributed LLM serving / test-time scaling / adaptive compute allocation
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2408.03314
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2104.04473
+- canonical_id: arXiv:2311.11514
+- canonical_id: arXiv:2302.11665
+- canonical_id: DOI:10.1109/icaic67076.2026.11395673
+  doi: 10.1109/icaic67076.2026.11395673
+- canonical_id: DOI:10.1109/icaic67076.2026.11395695
+  doi: 10.1109/icaic67076.2026.11395695
+- canonical_id: DOI:10.18653/v1/2024.acl-long.510
+  doi: 10.18653/v1/2024.acl-long.510
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 28
 ---
 
 # AdaptiScale：推論時の難易度に応じた計算資源配分と分散サービング

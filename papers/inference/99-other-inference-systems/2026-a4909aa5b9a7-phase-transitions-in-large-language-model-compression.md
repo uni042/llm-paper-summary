@@ -1,50 +1,131 @@
 ---
-canonical_id: "DOI:10.1038/s44387-026-00072-8"
-doi: "10.1038/s44387-026-00072-8"
-title: "Phase transitions in large language model compression"
-summary: "量子化、構造的・非構造的枝刈り、低ランク分解を強めた際に品質が急落する臨界点を実験曲線から推定し、複数の圧縮軸を安全領域内で組み合わせるPerspective。LLaMA-2-7Bの3ビット量子化・35%枝刈り・5%低ランク分解で1.89GB、WikiText-2困惑度6.91〜6.92を報告。ただし普遍的閾値と実機速度改善は未実証。"
-list_summary: "圧縮率と品質の曲線から崩壊の臨界点を推定し、量子化・枝刈り・低ランク分解を組み合わせて単独圧縮の限界を回避する。"
+canonical_id: DOI:10.1038/s44387-026-00072-8
+doi: 10.1038/s44387-026-00072-8
+title: Phase transitions in large language model compression
+summary: 量子化、構造的・非構造的枝刈り、低ランク分解を強めた際に品質が急落する臨界点を実験曲線から推定し、複数の圧縮軸を安全領域内で組み合わせるPerspective。LLaMA-2-7Bの3ビット量子化・35%枝刈り・5%低ランク分解で1.89GB、WikiText-2困惑度6.91〜6.92を報告。ただし普遍的閾値と実機速度改善は未実証。
+list_summary: 圧縮率と品質の曲線から崩壊の臨界点を推定し、量子化・枝刈り・低ランク分解を組み合わせて単独圧縮の限界を回避する。
 authors:
-  - "Ziyang Ma"
-  - "Zuchao Li"
-  - "Lefei Zhang"
-  - "Gui-Song Xia"
-  - "Bo Du"
-  - "Liangpei Zhang"
-  - "Dacheng Tao"
-published: "2026-02-06"
-publication: "npj Artificial Intelligence 2, article 21 (2026)"
-publication_type: "journal_perspective"
-publication_status: "published"
-source: "https://www.nature.com/articles/s44387-026-00072-8"
+- Ziyang Ma
+- Zuchao Li
+- Lefei Zhang
+- Gui-Song Xia
+- Bo Du
+- Liangpei Zhang
+- Dacheng Tao
+published: '2026-02-06'
+publication: npj Artificial Intelligence 2, article 21 (2026)
+publication_type: journal_perspective
+publication_status: published
+source: https://www.nature.com/articles/s44387-026-00072-8
 sources:
-  - "https://www.nature.com/articles/s44387-026-00072-8"
-  - "https://www.researchgate.net/publication/400548736_Phase_transitions_in_large_language_model_compression"
-  - "https://github.com/whucs21Mzy/Model-Phase-Transitions"
-code: "https://github.com/whucs21Mzy/Model-Phase-Transitions"
-implementation: "LLaMA-2-7B中心の構造的・非構造的枝刈り、GGUF量子化、ASVD等の低ランク分解を個別・複合評価。Qwen2.5、Gemma-3、LLaMA-3.1等にも対象を拡張。WikiText-2困惑度、ARC、MMLU、PIQA、HellaSwag、WinoGrande、BoolQ、CNN/DailyMail要約品質など。"
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-45"
-scheduled_slot: "45"
-worker_run_key: "20261030-2144-scheduled-chat-45/r03"
-worker_completed_at: "2026-10-30T22:00:20+09:00"
-reference_main_sha: "7bf16ccc96cf64101d277429abf70ca0b68aa157"
-under16kb_reaudit_target_path: "papers/inference/99-other-inference-systems/2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md"
-under16kb_reaudit_source_git_blob_sha: "c16aeb153b86310a57dba6201f0de67d90abc15b"
-under16kb_reaudit_source_sha256: "b7b82bb0a000bf876e989198ea9f655d863a50f11e9d695b9f8bb5f3ec58163f"
-under16kb_reaudit_version: "2026-10-07-v1"
+- https://www.nature.com/articles/s44387-026-00072-8
+- https://www.researchgate.net/publication/400548736_Phase_transitions_in_large_language_model_compression
+- https://github.com/whucs21Mzy/Model-Phase-Transitions
+code: https://github.com/whucs21Mzy/Model-Phase-Transitions
+implementation: LLaMA-2-7B中心の構造的・非構造的枝刈り、GGUF量子化、ASVD等の低ランク分解を個別・複合評価。Qwen2.5、Gemma-3、LLaMA-3.1等にも対象を拡張。WikiText-2困惑度、ARC、MMLU、PIQA、HellaSwag、WinoGrande、BoolQ、CNN/DailyMail要約品質など。
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-45
+scheduled_slot: '45'
+worker_run_key: 20261030-2144-scheduled-chat-45/r03
+worker_completed_at: '2026-10-30T22:00:20+09:00'
+reference_main_sha: 7bf16ccc96cf64101d277429abf70ca0b68aa157
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2026-a4909aa5b9a7-phase-transitions-in-large-language-model-compression.md
+under16kb_reaudit_source_git_blob_sha: c16aeb153b86310a57dba6201f0de67d90abc15b
+under16kb_reaudit_source_sha256: b7b82bb0a000bf876e989198ea9f655d863a50f11e9d695b9f8bb5f3ec58163f
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-reaudit_primary_verified_at: "2026-10-30T21:33:00+09:00"
-reaudit_primary_url: "https://www.researchgate.net/publication/400548736_Phase_transitions_in_large_language_model_compression"
-reaudit_note: "著者公開の正式誌面13ページを通読。図2〜8、本文式(5)、Table 3、方法別閾値と複合圧縮、品質と容量の比較、限界を照合。Natureのページはアクセス制限のため著者公開正式版を使用。"
-repair_kind: "quality_heading_repair"
-repair_reason: "GitHub processor blocked_quality: method/evaluation/limitation section heading not recognized; preserved full original text and source identity"
-original_worker_id: "scheduled-chat-30"
-original_worker_run_key: "20261030-2133-scheduled-chat-30/r01"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+reaudit_primary_verified_at: '2026-10-30T21:33:00+09:00'
+reaudit_primary_url: https://www.researchgate.net/publication/400548736_Phase_transitions_in_large_language_model_compression
+reaudit_note: 著者公開の正式誌面13ページを通読。図2〜8、本文式(5)、Table 3、方法別閾値と複合圧縮、品質と容量の比較、限界を照合。Natureのページはアクセス制限のため著者公開正式版を使用。
+repair_kind: quality_heading_repair
+repair_reason: 'GitHub processor blocked_quality: method/evaluation/limitation section heading not recognized; preserved full original text and source identity'
+original_worker_id: scheduled-chat-30
+original_worker_run_key: 20261030-2133-scheduled-chat-30/r01
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.18653/v1/n19-1423
+  doi: 10.18653/v1/n19-1423
+- canonical_id: DOI:10.1109/mc.2022.3148714
+  doi: 10.1109/mc.2022.3148714
+- canonical_id: DOI:10.48550/arxiv.2001.08361
+  doi: 10.48550/arxiv.2001.08361
+- canonical_id: DOI:10.1038/s42256-023-00626-4
+  doi: 10.1038/s42256-023-00626-4
+- canonical_id: DOI:10.1038/s41467-025-61040-5
+  doi: 10.1038/s41467-025-61040-5
+- canonical_id: DOI:10.18653/v1/2025.naacl-long.217
+  doi: 10.18653/v1/2025.naacl-long.217
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2210.17323
+- canonical_id: DOI:10.1609/aaai.v37i9.26304
+  doi: 10.1609/aaai.v37i9.26304
+- canonical_id: DOI:10.1162/tacl_a_00704
+  doi: 10.1162/tacl_a_00704
+- canonical_id: arXiv:2312.11983
+  doi: 10.1609/aaai.v38i10.28960
+- canonical_id: arXiv:2403.03853
+  doi: 10.18653/v1/2025.findings-acl.1035
+- canonical_id: arXiv:2310.06694
+- canonical_id: arXiv:2403.17887
+- canonical_id: arXiv:2305.11627
+- canonical_id: arXiv:2306.11695
+- canonical_id: arXiv:2309.10285
+  doi: 10.14778/3626292.3626303
+- canonical_id: arXiv:2301.00774
+- canonical_id: DOI:10.20944/preprints202310.1487.v2
+  doi: 10.20944/preprints202310.1487.v2
+- canonical_id: arXiv:2401.02938
+  doi: 10.48550/arxiv.2401.02938
+- canonical_id: arXiv:2310.08915
+- canonical_id: arXiv:2305.18403
+  doi: 10.18653/v1/2024.findings-acl.178
+- canonical_id: DOI:10.1109/cvpr.2018.00286
+  doi: 10.1109/cvpr.2018.00286
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2305.17888
+  doi: 10.18653/v1/2024.findings-acl.26
+- canonical_id: DOI:10.1109/ijcnn60899.2024.10650109
+  doi: 10.1109/ijcnn60899.2024.10650109
+- canonical_id: DOI:10.1109/cvpr.2019.00881
+  doi: 10.1109/cvpr.2019.00881
+- canonical_id: DOI:10.48550/arxiv.2205.01068
+  doi: 10.48550/arxiv.2205.01068
+- canonical_id: DOI:10.48550/arxiv.2501.12948
+  doi: 10.48550/arxiv.2501.12948
+- canonical_id: arXiv:2312.05821
+  doi: 10.48550/arxiv.2312.05821
+- canonical_id: arXiv:2306.11222
+- canonical_id: DOI:10.18653/v1/2025.naacl-long.291
+  doi: 10.18653/v1/2025.naacl-long.291
+- canonical_id: DOI:10.48550/arxiv.2307.09288
+  doi: 10.48550/arxiv.2307.09288
+- canonical_id: DOI:10.48550/arxiv.2407.10671
+  doi: 10.48550/arxiv.2407.10671
+- canonical_id: DOI:10.48550/arxiv.2503.19786
+  doi: 10.48550/arxiv.2503.19786
+- canonical_id: DOI:10.48550/arxiv.1803.05457
+  doi: 10.48550/arxiv.1803.05457
+- canonical_id: DOI:10.18653/v1/2024.acl-long.130
+  doi: 10.18653/v1/2024.acl-long.130
+- canonical_id: DOI:10.1609/aaai.v39i16.33923
+  doi: 10.1609/aaai.v39i16.33923
+- canonical_id: arXiv:2204.00408
+  doi: 10.18653/v1/2022.acl-long.107
+- canonical_id: DOI:10.1609/aaai.v34i05.6239
+  doi: 10.1609/aaai.v34i05.6239
+- canonical_id: DOI:10.1145/3474381
+  doi: 10.1145/3474381
+- canonical_id: DOI:10.18653/v1/p19-1472
+  doi: 10.18653/v1/p19-1472
+- canonical_id: DOI:10.48550/arxiv.2402.02834
+  doi: 10.48550/arxiv.2402.02834
+- canonical_id: arXiv:2401.15024
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 67
 ---
 
 # 大規模言語モデル圧縮の相転移：圧縮経路を臨界点の手前に設計する

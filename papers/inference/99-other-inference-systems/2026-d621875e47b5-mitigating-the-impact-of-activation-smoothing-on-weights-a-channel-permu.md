@@ -1,45 +1,115 @@
 ---
-canonical_id: "DOI:10.1007/s44443-026-00541-9"
-title: "Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method"
-summary: "CHAMP-QはW4A8量子化で活性値の極端な外れ値をHNSにより強度別に平滑化し、平滑化に伴って重み側に生じる群内分散の増大をMFCPのチャネル並べ替えで抑える。LLaMA-2-7BでWikiText2困惑度6.1461、5タスク平均67.65%、LLaMA-1-30Bで最大1.74倍のピークメモリ削減。小バッチでの速度改善は1.04〜1.08倍にとどまり、バッチ8の7Bでは全体1.29倍。"
-list_summary: "活性の外れ値強度別平滑化と、重みチャネルの特徴量による群内再配置を組み合わせ、4ビット重み・8ビット活性の精度を維持する。"
+canonical_id: DOI:10.1007/s44443-026-00541-9
+title: 'Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method'
+summary: CHAMP-QはW4A8量子化で活性値の極端な外れ値をHNSにより強度別に平滑化し、平滑化に伴って重み側に生じる群内分散の増大をMFCPのチャネル並べ替えで抑える。LLaMA-2-7BでWikiText2困惑度6.1461、5タスク平均67.65%、LLaMA-1-30Bで最大1.74倍のピークメモリ削減。小バッチでの速度改善は1.04〜1.08倍にとどまり、バッチ8の7Bでは全体1.29倍。
+list_summary: 活性の外れ値強度別平滑化と、重みチャネルの特徴量による群内再配置を組み合わせ、4ビット重み・8ビット活性の精度を維持する。
 authors:
-  - "Yanyao Guan"
-  - "Yunhe Cui"
-  - "Langtao Zhao"
-  - "Guowei Shen"
-  - "Yi Chen"
-  - "Chun Guo"
-published: "2026-03-05"
-publication: "Journal of King Saud University - Computer and Information Sciences 38, article 341 (2026)"
-publication_type: "journal"
-publication_status: "published"
-source: "https://link.springer.com/article/10.1007/s44443-026-00541-9"
+- Yanyao Guan
+- Yunhe Cui
+- Langtao Zhao
+- Guowei Shen
+- Yi Chen
+- Chun Guo
+published: '2026-03-05'
+publication: Journal of King Saud University - Computer and Information Sciences 38, article 341 (2026)
+publication_type: journal
+publication_status: published
+source: https://link.springer.com/article/10.1007/s44443-026-00541-9
 sources:
-  - "https://link.springer.com/article/10.1007/s44443-026-00541-9"
-  - "https://doi.org/10.1007/s44443-026-00541-9"
-implementation: "W4A8、重み群量子化の標準group size 1024、活性dynamic per-token、Pileから512サンプル各512トークンで校正。NVIDIA A6000 48GB、PyTorch/CUDA、B=1/8、1024トークン入力＋512生成。LLaMA-1/2、Qwen2.5、T5を評価。"
+- https://link.springer.com/article/10.1007/s44443-026-00541-9
+- https://doi.org/10.1007/s44443-026-00541-9
+implementation: W4A8、重み群量子化の標準group size 1024、活性dynamic per-token、Pileから512サンプル各512トークンで校正。NVIDIA A6000 48GB、PyTorch/CUDA、B=1/8、1024トークン入力＋512生成。LLaMA-1/2、Qwen2.5、T5を評価。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-30"
-scheduled_slot: "30"
-worker_completed_at: "2026-10-30T21:00:00+09:00"
-worker_run_key: "20261030-2054-scheduled-chat-30/r01"
-reference_main_sha: "6e6f5e7897a25970c591eda99119ef9df48e61dd"
-original_worker_id: "scheduled-chat-00"
-original_worker_run_key: "20261030-1904-scheduled-chat-00/r02"
-under16kb_reaudit_target_path: "papers/inference/99-other-inference-systems/2026-d621875e47b5-mitigating-the-impact-of-activation-smoothing-on-weights-a-channel-permu.md"
-under16kb_reaudit_source_git_blob_sha: "ea179472d73a0b8a08633993eb934d755e26385f"
-under16kb_reaudit_source_sha256: "8076918c43240e5424fe4ad8a4090b35e21d7e0488757a24ea9c76882991dd79"
-under16kb_reaudit_version: "2026-10-07-v1"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-30
+scheduled_slot: '30'
+worker_completed_at: '2026-10-30T21:00:00+09:00'
+worker_run_key: 20261030-2054-scheduled-chat-30/r01
+reference_main_sha: 6e6f5e7897a25970c591eda99119ef9df48e61dd
+original_worker_id: scheduled-chat-00
+original_worker_run_key: 20261030-1904-scheduled-chat-00/r02
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2026-d621875e47b5-mitigating-the-impact-of-activation-smoothing-on-weights-a-channel-permu.md
+under16kb_reaudit_source_git_blob_sha: ea179472d73a0b8a08633993eb934d755e26385f
+under16kb_reaudit_source_sha256: 8076918c43240e5424fe4ad8a4090b35e21d7e0488757a24ea9c76882991dd79
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-reaudit_primary_verified_at: "2026-10-30T21:00:00+09:00"
-reaudit_primary_url: "https://link.springer.com/article/10.1007/s44443-026-00541-9"
-reaudit_note: "出版社公開の一次全文§4〜6、Table 1〜12、Fig. 1/4/6、実装条件、負の結果を確認。mainの既存原稿の機構・数値・限界を保持して拡充。"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+reaudit_primary_verified_at: '2026-10-30T21:00:00+09:00'
+reaudit_primary_url: https://link.springer.com/article/10.1007/s44443-026-00541-9
+reaudit_note: 出版社公開の一次全文§4〜6、Table 1〜12、Fig. 1/4/6、実装条件、負の結果を確認。mainの既存原稿の機構・数値・限界を保持して拡充。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2404.00456
+  doi: 10.52202/079017-3180
+- canonical_id: DOI:10.1609/aaai.v34i05.6239
+  doi: 10.1609/aaai.v34i05.6239
+- canonical_id: arXiv:2307.13304
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2408.11743
+  arxiv_id: '2408.11743'
+  doi: 10.1145/3710848.3710871
+- canonical_id: arXiv:2101.00027
+  arxiv_id: '2101.00027'
+- canonical_id: DOI:10.1145/3579371.3589038
+  doi: 10.1145/3579371.3589038
+- canonical_id: arXiv:2501.13987
+  arxiv_id: '2501.13987'
+- canonical_id: DOI:10.1109/cvpr.2018.00286
+  doi: 10.1109/cvpr.2018.00286
+- canonical_id: arXiv:2607.27704
+  doi: 10.1109/jetcas.2025.3558300
+- canonical_id: arXiv:2211.10017
+  arxiv_id: '2211.10017'
+  doi: 10.48550/arxiv.2211.10017
+- canonical_id: arXiv:2306.02272
+  doi: 10.1609/aaai.v38i12.29237
+- canonical_id: arXiv:2406.01721
+  doi: 10.52202/079017-2786
+- canonical_id: OpenReview:FIplmUWdm3
+  openreview_id: FIplmUWdm3
+- canonical_id: arXiv:2405.16406
+  arxiv_id: '2405.16406'
+- canonical_id: arXiv:1609.07843
+  arxiv_id: '1609.07843'
+- canonical_id: DOI:10.18653/v1/p18-2124
+  doi: 10.18653/v1/p18-2124
+- canonical_id: DOI:10.1609/aaai.v34i05.6399
+  doi: 10.1609/aaai.v34i05.6399
+- canonical_id: DOI:10.18653/v1/p17-1099
+  doi: 10.18653/v1/p17-1099
+- canonical_id: arXiv:2308.13137
+  openreview_id: 8Wuvhh0LYW
+- canonical_id: arXiv:1909.05840
+  doi: 10.1609/aaai.v34i05.6409
+- canonical_id: DOI:10.18653/v1/d13-1170
+  doi: 10.18653/v1/d13-1170
+- canonical_id: arXiv:2302.13971
+  arxiv_id: '2302.13971'
+  doi: 10.48550/arxiv.2302.13971
+- canonical_id: arXiv:2402.04396
+- canonical_id: DOI:10.18653/v1/w18-5446
+  doi: 10.18653/v1/w18-5446
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.102
+  doi: 10.18653/v1/2023.emnlp-main.102
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2206.01861
+- canonical_id: arXiv:2304.01089
+  arxiv_id: '2304.01089'
+  doi: 10.48550/arxiv.2304.01089
+- canonical_id: DOI:10.18653/v1/p19-1472
+  doi: 10.18653/v1/p19-1472
+- canonical_id: arXiv:2406.09904
+  arxiv_id: '2406.09904'
+  doi: 10.48550/arxiv.2406.09904
+- canonical_id: arXiv:2310.19102
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 39
 ---
 
 # CHAMP-Q：活性平滑化が重み量子化へ与える悪影響をチャネル再配置で抑える

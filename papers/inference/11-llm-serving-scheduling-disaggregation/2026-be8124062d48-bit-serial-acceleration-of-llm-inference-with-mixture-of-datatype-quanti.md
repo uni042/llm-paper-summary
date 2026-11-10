@@ -1,35 +1,90 @@
 ---
-canonical_id: "DOI:10.1109/TC.2025.3628193"
-title: "Bit-serial Acceleration of LLM Inference with Mixture-of-Datatype Quantization"
-summary: "BitMoDは、3/4ビット浮動小数点形式の冗長な負のゼロをグループ別の特殊値に置換し、重みとKVキャッシュを低誤差で量子化する。統一ビット直列表現、整数化した縮尺係数の逐次逆量子化、推論時KV量子化回路を備える専用アクセラレータを設計し、単一バッチの端末推論と大バッチのサービングを評価する。"
-list_summary: "グループごとに特殊値を選ぶ3/4ビット量子化と統一ビット直列演算回路を組み合わせ、重み・KVキャッシュ双方を低精度化して推論速度と電力効率を改善する。"
+canonical_id: DOI:10.1109/TC.2025.3628193
+title: Bit-serial Acceleration of LLM Inference with Mixture-of-Datatype Quantization
+summary: BitMoDは、3/4ビット浮動小数点形式の冗長な負のゼロをグループ別の特殊値に置換し、重みとKVキャッシュを低誤差で量子化する。統一ビット直列表現、整数化した縮尺係数の逐次逆量子化、推論時KV量子化回路を備える専用アクセラレータを設計し、単一バッチの端末推論と大バッチのサービングを評価する。
+list_summary: グループごとに特殊値を選ぶ3/4ビット量子化と統一ビット直列演算回路を組み合わせ、重み・KVキャッシュ双方を低精度化して推論速度と電力効率を改善する。
 authors:
-  - "Yuzong Chen"
-  - "Chi-Chih Chang"
-  - "Xilai Dai"
-  - "Ahmed F. AbouElhamayed"
-  - "Marta Andronic"
-  - "George A. Constantinides"
-  - "Mohamed S. Abdelfattah"
-published: "2026-02-01"
-publication: "IEEE Transactions on Computers, vol. 75, no. 2, pp. 567-581"
-publication_type: "journal"
-publication_status: "published"
-source: "https://spiral.imperial.ac.uk/bitstreams/9e16fb03-ceaf-4258-ab61-8948949c2eca/download"
+- Yuzong Chen
+- Chi-Chih Chang
+- Xilai Dai
+- Ahmed F. AbouElhamayed
+- Marta Andronic
+- George A. Constantinides
+- Mohamed S. Abdelfattah
+published: '2026-02-01'
+publication: IEEE Transactions on Computers, vol. 75, no. 2, pp. 567-581
+publication_type: journal
+publication_status: published
+source: https://spiral.imperial.ac.uk/bitstreams/9e16fb03-ceaf-4258-ab61-8948949c2eca/download
 sources:
-  - "https://spiral.imperial.ac.uk/bitstreams/9e16fb03-ceaf-4258-ab61-8948949c2eca/download"
-  - "https://doi.org/10.1109/TC.2025.3628193"
-implementation: "PyTorchによる量子化精度検証と、ビット直列PEアレイ、オンラインKV量子化器、メモリ階層を持つ専用アクセラレータの設計・ハードウェア評価。先行するHPCA 2025版の公開コードは存在するが、雑誌拡張版のKV量子化回路まで含む再現実装と同一とは確認できない。"
+- https://spiral.imperial.ac.uk/bitstreams/9e16fb03-ceaf-4258-ab61-8948949c2eca/download
+- https://doi.org/10.1109/TC.2025.3628193
+implementation: PyTorchによる量子化精度検証と、ビット直列PEアレイ、オンラインKV量子化器、メモリ階層を持つ専用アクセラレータの設計・ハードウェア評価。先行するHPCA 2025版の公開コードは存在するが、雑誌拡張版のKV量子化回路まで含む再現実装と同一とは確認できない。
 code: null
-last_checked: "2026-10-21"
-worker_completed_at: "2026-10-21T03:37:00+09:00"
-worker_run_key: "20261021-0330-scheduled-chat-30/r01"
-worker_id: "scheduled-chat-30"
-reference_main_sha: "aed138df0d0c2e5b8e1fedc5a2daeccfd1c519db"
+last_checked: '2026-10-21'
+worker_completed_at: '2026-10-21T03:37:00+09:00'
+worker_run_key: 20261021-0330-scheduled-chat-30/r01
+worker_id: scheduled-chat-30
+reference_main_sha: aed138df0d0c2e5b8e1fedc5a2daeccfd1c519db
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1109/mm.2024.3373763
+  doi: 10.1109/mm.2024.3373763
+- canonical_id: arXiv:2306.00978
+- canonical_id: arXiv:2308.13137
+- canonical_id: DOI:10.1109/hpca61900.2025.00084
+  doi: 10.1109/hpca61900.2025.00084
+- canonical_id: arXiv:2402.02750
+- canonical_id: DOI:10.52202/079017-0040
+  doi: 10.52202/079017-0040
+- canonical_id: arXiv:2403.05527
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2403.09054
+- canonical_id: DOI:10.52202/079017-3180
+  doi: 10.52202/079017-3180
+- canonical_id: arXiv:2310.19102
+- canonical_id: arXiv:2402.16363
+- canonical_id: DOI:10.1109/hpca57654.2024.00064
+  doi: 10.1109/hpca57654.2024.00064
+- canonical_id: DOI:10.1109/micro56248.2022.00095
+  doi: 10.1109/micro56248.2022.00095
+- canonical_id: DOI:10.1145/3579371.3589038
+  doi: 10.1145/3579371.3589038
+- canonical_id: arXiv:2110.02861
+- canonical_id: DOI:10.1145/3579371.3589351
+  doi: 10.1145/3579371.3589351
+- canonical_id: arXiv:2312.08583
+- canonical_id: DOI:10.18653/v1/2021.emnlp-main.98
+  doi: 10.18653/v1/2021.emnlp-main.98
+- canonical_id: DOI:10.1109/micro.2016.7783722
+  doi: 10.1109/micro.2016.7783722
+- canonical_id: DOI:10.1109/hpca57654.2024.00062
+  doi: 10.1109/hpca57654.2024.00062
+- canonical_id: DOI:10.1109/micro61859.2024.00048
+  doi: 10.1109/micro61859.2024.00048
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2206.01861
+- canonical_id: DOI:10.1145/3466752.3480106
+  doi: 10.1145/3466752.3480106
+- canonical_id: arXiv:2502.18755
+  doi: 10.1109/hpca61900.2025.00086
+- canonical_id: DOI:10.18653/v1/p19-1472
+  doi: 10.18653/v1/p19-1472
+- canonical_id: DOI:10.1609/aaai.v34i05.6399
+  doi: 10.1609/aaai.v34i05.6399
+- canonical_id: DOI:10.1609/aaai.v34i05.6239
+  doi: 10.1609/aaai.v34i05.6239
+- canonical_id: DOI:10.1109/lca.2020.2973991
+  doi: 10.1109/lca.2020.2973991
+- canonical_id: DOI:10.1145/3085572
+  doi: 10.1145/3085572
+- canonical_id: arXiv:2405.04532
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 48
 ---
 # BitMoD：混合数値形式のビット直列演算によるLLM推論高速化
 

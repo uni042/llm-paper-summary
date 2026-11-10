@@ -1,36 +1,71 @@
 ---
-canonical_id: 'DOI:10.23919/DATE69613.2026.11539270'
-doi: '10.23919/DATE69613.2026.11539270'
+canonical_id: DOI:10.23919/DATE69613.2026.11539270
+doi: 10.23919/DATE69613.2026.11539270
 title: 'SA-ANT: Efficient Low-Bit Group-Wise Quantization for Large Language Models via Sign-Asymmetric Adaptive Numeric Type'
-summary: 'SA-ANTはLLM重みの小グループが正負非対称・非一様・ゼロ近傍集中という性質を持つことに着目し、3ビット8値の量子化グリッドを正負別の単調増分列で組み立てる。16種類のSA-ANT-Lと64種類のSA-ANT-Pをオフラインでグループ別選択し、専用デコーダでINT4/INT5へ変換してINT8活性と乗算する。Qwen2.5-0.5Bの5タスク平均はBitMod46.44%、SA-ANT-L47.52%、P50.36%。28nm合成コアの面積・電力はLがBitModより7.84%/7.80%小さいが、Pは大きい。実GPU生成速度ではない。'
-list_summary: '正負別の非対称な3ビット量子化グリッドをグループごとに選ぶSA-ANT。Qwen2.5-0.5Bの5タスク平均はSA-ANT-P50.36%でBitMod46.44%を上回るが、ハードウェア面積・電力の改善はL構成。'
+summary: SA-ANTはLLM重みの小グループが正負非対称・非一様・ゼロ近傍集中という性質を持つことに着目し、3ビット8値の量子化グリッドを正負別の単調増分列で組み立てる。16種類のSA-ANT-Lと64種類のSA-ANT-Pをオフラインでグループ別選択し、専用デコーダでINT4/INT5へ変換してINT8活性と乗算する。Qwen2.5-0.5Bの5タスク平均はBitMod46.44%、SA-ANT-L47.52%、P50.36%。28nm合成コアの面積・電力はLがBitModより7.84%/7.80%小さいが、Pは大きい。実GPU生成速度ではない。
+list_summary: 正負別の非対称な3ビット量子化グリッドをグループごとに選ぶSA-ANT。Qwen2.5-0.5Bの5タスク平均はSA-ANT-P50.36%でBitMod46.44%を上回るが、ハードウェア面積・電力の改善はL構成。
 authors:
-  - Xinkuang Geng
-  - Siting Liu
-  - Hui Wang
-  - Jie Han
-  - Honglan Jiang
-published: '2026-04'
-publication: '2026 Design, Automation & Test in Europe Conference (DATE 2026)'
+- Xinkuang Geng
+- Siting Liu
+- Hui Wang
+- Jie Han
+- Honglan Jiang
+published: 2026-04
+publication: 2026 Design, Automation & Test in Europe Conference (DATE 2026)
 publication_type: conference
 publication_status: published
-source: 'https://past.date-conference.com/proceedings-archive/2026/DATA/1613.pdf'
+source: https://past.date-conference.com/proceedings-archive/2026/DATA/1613.pdf
 sources:
-  - 'https://past.date-conference.com/proceedings-archive/2026/DATA/1613.pdf'
-  - 'https://doi.org/10.23919/DATE69613.2026.11539270'
-implementation: '3ビット重みをオフラインでグループ幅32の16/64種類の符号非対称量子化グリッドへ変換。SA-ANT-LはINT4×INT8、PはINT5×INT8へ復号して128×32乗算器アレイで処理。面積と電力はTSMC 28nm/500MHz/0.9Vの合成・波形ベース評価。'
+- https://past.date-conference.com/proceedings-archive/2026/DATA/1613.pdf
+- https://doi.org/10.23919/DATE69613.2026.11539270
+implementation: 3ビット重みをオフラインでグループ幅32の16/64種類の符号非対称量子化グリッドへ変換。SA-ANT-LはINT4×INT8、PはINT5×INT8へ復号して128×32乗算器アレイで処理。面積と電力はTSMC 28nm/500MHz/0.9Vの合成・波形ベース評価。
 code: null
 last_checked: '2026-10-30'
 worker_id: scheduled-chat-45
 original_worker_id: scheduled-chat-30
 worker_completed_at: '2026-10-30T17:58:00+09:00'
-worker_run_key: '20261030-1747-scheduled-chat-45/r01'
-repair_of_worker_run_key: '20261030-1734-scheduled-chat-30/r02'
-reference_main_sha: '9f5100b46635e4ae67523f2760b4a7344a48bba5'
+worker_run_key: 20261030-1747-scheduled-chat-45/r01
+repair_of_worker_run_key: 20261030-1734-scheduled-chat-30/r02
+reference_main_sha: 9f5100b46635e4ae67523f2760b4a7344a48bba5
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1109/mm.2024.3373763
+  doi: 10.1109/mm.2024.3373763
+- canonical_id: arXiv:2210.17323
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2308.13137
+- canonical_id: DOI:10.1145/3579371.3589351
+  doi: 10.1145/3579371.3589351
+- canonical_id: arXiv:2502.18755
+  doi: 10.1109/hpca61900.2025.00086
+- canonical_id: DOI:10.1109/hpca61900.2025.00084
+  doi: 10.1109/hpca61900.2025.00084
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.39
+  doi: 10.18653/v1/2023.emnlp-main.39
+- canonical_id: DOI:10.1109/micro56248.2022.00095
+  doi: 10.1109/micro56248.2022.00095
+- canonical_id: DOI:10.1145/3579371.3589038
+  doi: 10.1145/3579371.3589038
+- canonical_id: DOI:10.23919/date58400.2024.10546652
+  doi: 10.23919/date58400.2024.10546652
+- canonical_id: DOI:10.1145/3649329.3656516
+  doi: 10.1145/3649329.3656516
+- canonical_id: DOI:10.18653/v1/2021.emnlp-main.98
+  doi: 10.18653/v1/2021.emnlp-main.98
+- canonical_id: DOI:10.21236/ada273556
+  doi: 10.21236/ada273556
+- canonical_id: DOI:10.18653/v1/p16-1144
+  doi: 10.18653/v1/p16-1144
+- canonical_id: DOI:10.1609/aaai.v34i05.6239
+  doi: 10.1609/aaai.v34i05.6239
+- canonical_id: DOI:10.18653/v1/p19-1472
+  doi: 10.18653/v1/p19-1472
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 31
 ---
 
 ## 概要

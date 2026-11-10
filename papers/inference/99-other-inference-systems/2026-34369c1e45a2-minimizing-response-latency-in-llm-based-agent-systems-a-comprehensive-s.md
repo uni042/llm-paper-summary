@@ -1,31 +1,328 @@
 ---
-canonical_id: "DOI:10.1109/ACCESS.2026.3664226"
-title: "Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey"
-summary: "LLMエージェントのエンドツーエンド遅延を、基盤LLM推論、エージェント計画・ツール呼出し、システム基盤、マルチエージェント通信の4層で分類するサーベイ。NVIDIA L4上のQwen2.5-7B-InstructでINT4の50トークン生成時間が15.48秒から6.29秒へ短縮し、KVキャッシュ有効化でTPOTが80.57msから58.25msへ改善する一方、TTFTは79.04msから192.44msへ悪化する。"
-list_summary: "エージェントの遅延をLLM推論・計画/ツール・インフラ・複数エージェントの4層で整理。L4実験で量子化・KVの利点とTTFT悪化を区別。"
+canonical_id: DOI:10.1109/ACCESS.2026.3664226
+title: 'Minimizing Response Latency in LLM-Based Agent Systems: A Comprehensive Survey'
+summary: LLMエージェントのエンドツーエンド遅延を、基盤LLM推論、エージェント計画・ツール呼出し、システム基盤、マルチエージェント通信の4層で分類するサーベイ。NVIDIA L4上のQwen2.5-7B-InstructでINT4の50トークン生成時間が15.48秒から6.29秒へ短縮し、KVキャッシュ有効化でTPOTが80.57msから58.25msへ改善する一方、TTFTは79.04msから192.44msへ悪化する。
+list_summary: エージェントの遅延をLLM推論・計画/ツール・インフラ・複数エージェントの4層で整理。L4実験で量子化・KVの利点とTTFT悪化を区別。
 authors:
-  - "Gyeongmuk Park"
-  - "Seonghyeon Lee"
-  - "Yeonsu Park"
-published: "2026-02-12"
-publication: "IEEE Access, 14, 26140-26168 (2026)"
-publication_type: "journal_article"
-publication_status: "published"
-source: "https://doi.org/10.1109/ACCESS.2026.3664226"
+- Gyeongmuk Park
+- Seonghyeon Lee
+- Yeonsu Park
+published: '2026-02-12'
+publication: IEEE Access, 14, 26140-26168 (2026)
+publication_type: journal_article
+publication_status: published
+source: https://doi.org/10.1109/ACCESS.2026.3664226
 sources:
-  - "https://www.researchgate.net/publication/400740891_Minimizing_Response_Latency_in_LLM-Based_Agent_Systems_A_Comprehensive_Survey"
-  - "https://research.knu.ac.kr/en/publications/minimizing-response-latency-in-llm-based-agent-systems-a-comprehe/"
-implementation: "文献分類に加えNVIDIA L4 24GB、Xeon 8 vCPU、RAM32GB、PyTorch2.9.1、Transformers4.47.0、Qwen2.5-7B-Instructで50トークンgreedy生成の量子化・KV比較を行う。MetaGPT等の比較値は引用元の報告であり著者独自の再現実験とは区別する。"
+- https://www.researchgate.net/publication/400740891_Minimizing_Response_Latency_in_LLM-Based_Agent_Systems_A_Comprehensive_Survey
+- https://research.knu.ac.kr/en/publications/minimizing-response-latency-in-llm-based-agent-systems-a-comprehe/
+implementation: 文献分類に加えNVIDIA L4 24GB、Xeon 8 vCPU、RAM32GB、PyTorch2.9.1、Transformers4.47.0、Qwen2.5-7B-Instructで50トークンgreedy生成の量子化・KV比較を行う。MetaGPT等の比較値は引用元の報告であり著者独自の再現実験とは区別する。
 code: null
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-worker_completed_at: "2026-10-30T14:00:00+09:00"
-worker_run_key: "20261030-1400-scheduled-chat-00/r01"
-reference_main_sha: "7a729bc330fcc071e9c221aa6cf016ba1d8bfb1b"
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+worker_completed_at: '2026-10-30T14:00:00+09:00'
+worker_run_key: 20261030-1400-scheduled-chat-00/r01
+reference_main_sha: 7a729bc330fcc071e9c221aa6cf016ba1d8bfb1b
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2309.14365
+  arxiv_id: '2309.14365'
+- canonical_id: DOI:10.1007/s11432-024-4222-0
+  doi: 10.1007/s11432-024-4222-0
+- canonical_id: arXiv:2404.04442
+  arxiv_id: '2404.04442'
+- canonical_id: DOI:10.1007/978-3-031-82039-7_9
+  doi: 10.1007/978-3-031-82039-7_9
+- canonical_id: arXiv:2312.14878
+  arxiv_id: '2312.14878'
+- canonical_id: DOI:10.1145/3754448
+  doi: 10.1145/3754448
+- canonical_id: arXiv:2306.11980
+  arxiv_id: '2306.11980'
+- canonical_id: arXiv:2402.01742
+  arxiv_id: '2402.01742'
+- canonical_id: arXiv:2309.14945
+  arxiv_id: '2309.14945'
+- canonical_id: arXiv:2401.03428
+  arxiv_id: '2401.03428'
+- canonical_id: arXiv:2205.00445
+  arxiv_id: '2205.00445'
+- canonical_id: arXiv:2402.02716
+  arxiv_id: '2402.02716'
+- canonical_id: DOI:10.1109/icsa-c63560.2024.00028
+  doi: 10.1109/icsa-c63560.2024.00028
+- canonical_id: DOI:10.1145/3748302
+  doi: 10.1145/3748302
+- canonical_id: arXiv:2312.17259
+  arxiv_id: '2312.17259'
+- canonical_id: DOI:10.18653/v1/2025.findings-naacl.205
+  doi: 10.18653/v1/2025.findings-naacl.205
+- canonical_id: arXiv:2308.03427
+  arxiv_id: '2308.03427'
+- canonical_id: DOI:10.1007/s11704-024-40231-1
+  doi: 10.1007/s11704-024-40231-1
+- canonical_id: arXiv:2401.05459
+  arxiv_id: '2401.05459'
+- canonical_id: DOI:10.18653/v1/2024.findings-naacl.184
+  doi: 10.18653/v1/2024.findings-naacl.184
+- canonical_id: arXiv:2311.17541
+  arxiv_id: '2311.17541'
+- canonical_id: DOI:10.24963/ijcai.2024/890
+  doi: 10.24963/ijcai.2024/890
+- canonical_id: DOI:10.1145/3712003
+  doi: 10.1145/3712003
+- canonical_id: arXiv:2311.16542
+  arxiv_id: '2311.16542'
+- canonical_id: arXiv:2311.08152
+  arxiv_id: '2311.08152'
+- canonical_id: DOI:10.18653/v1/2024.emnlp-main.929
+  doi: 10.18653/v1/2024.emnlp-main.929
+- canonical_id: arXiv:2310.03659
+  arxiv_id: '2310.03659'
+- canonical_id: DOI:10.18653/v1/2024.acl-long.371
+  doi: 10.18653/v1/2024.acl-long.371
+- canonical_id: DOI:10.1007/s44267-025-00093-y
+  doi: 10.1007/s44267-025-00093-y
+- canonical_id: DOI:10.18653/v1/2024.acl-long.215
+  doi: 10.18653/v1/2024.acl-long.215
+- canonical_id: arXiv:2401.09670
+- canonical_id: arXiv:2404.16053
+  arxiv_id: '2404.16053'
+- canonical_id: DOI:10.1109/vis47514.2020.00034
+  doi: 10.1109/vis47514.2020.00034
+- canonical_id: DOI:10.1371/journal.pone.0248690
+  doi: 10.1371/journal.pone.0248690
+- canonical_id: DOI:10.1109/jproc.2022.3190205
+  doi: 10.1109/jproc.2022.3190205
+- canonical_id: DOI:10.1109/mwc.001.1900279
+  doi: 10.1109/mwc.001.1900279
+- canonical_id: DOI:10.18653/v1/2024.emnlp-industry.27
+  doi: 10.18653/v1/2024.emnlp-industry.27
+- canonical_id: arXiv:2403.02310
+- canonical_id: arXiv:2006.02464
+- canonical_id: arXiv:2404.14294
+  arxiv_id: '2404.14294'
+- canonical_id: arXiv:2311.03687
+  arxiv_id: '2311.03687'
+- canonical_id: arXiv:2305.05920
+  arxiv_id: '2305.05920'
+- canonical_id: arXiv:2401.11181
+  arxiv_id: '2401.11181'
+- canonical_id: arXiv:2312.00678
+  arxiv_id: '2312.00678'
+- canonical_id: arXiv:2403.16971
+  arxiv_id: '2403.16971'
+- canonical_id: DOI:10.1016/j.arcontrol.2024.100983
+  doi: 10.1016/j.arcontrol.2024.100983
+- canonical_id: DOI:10.1109/compas60761.2024.10795949
+  doi: 10.1109/compas60761.2024.10795949
+- canonical_id: DOI:10.1016/j.nlp.2024.100075
+  doi: 10.1016/j.nlp.2024.100075
+- canonical_id: DOI:10.1016/j.ijdrr.2025.105800
+  doi: 10.1016/j.ijdrr.2025.105800
+- canonical_id: DOI:10.1016/j.jjimei.2025.100347
+  doi: 10.1016/j.jjimei.2025.100347
+- canonical_id: arXiv:2402.11489
+  arxiv_id: '2402.11489'
+- canonical_id: DOI:10.1109/mcom.002.2400106
+  doi: 10.1109/mcom.002.2400106
+- canonical_id: arXiv:2401.10910
+  arxiv_id: '2401.10910'
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: DOI:10.52202/079017-2193
+  doi: 10.52202/079017-2193
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: arXiv:2312.12456
+  doi: 10.1145/3694715.3695964
+- canonical_id: arXiv:2205.14135
+- canonical_id: DOI:10.18653/v1/2023.findings-emnlp.205
+  doi: 10.18653/v1/2023.findings-emnlp.205
+- canonical_id: arXiv:2402.16713
+  arxiv_id: '2402.16713'
+- canonical_id: DOI:10.1145/3637528.3671650
+  doi: 10.1145/3637528.3671650
+- canonical_id: arXiv:2310.05029
+  arxiv_id: '2310.05029'
+- canonical_id: arXiv:2306.03604
+  arxiv_id: '2306.03604'
+- canonical_id: arXiv:1312.3455
+  arxiv_id: '1312.3455'
+- canonical_id: arXiv:1610.07459
+  arxiv_id: '1610.07459'
+- canonical_id: DOI:10.1145/3458817.3476142
+  doi: 10.1145/3458817.3476142
+- canonical_id: arXiv:2008.07171
+  arxiv_id: '2008.07171'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: DOI:10.1109/iwqos57198.2023.10188785
+  doi: 10.1109/iwqos57198.2023.10188785
+- canonical_id: DOI:10.1109/ispass51385.2021.00033
+  doi: 10.1109/ispass51385.2021.00033
+- canonical_id: arXiv:2402.01869
+  arxiv_id: '2402.01869'
+- canonical_id: DOI:10.18653/v1/2024.emnlp-main.436
+  doi: 10.18653/v1/2024.emnlp-main.436
+- canonical_id: arXiv:2310.02170
+  arxiv_id: '2310.02170'
+- canonical_id: arXiv:2402.01108
+  arxiv_id: '2402.01108'
+- canonical_id: arXiv:2401.00625
+  arxiv_id: '2401.00625'
+- canonical_id: arXiv:2401.14351
+  arxiv_id: '2401.14351'
+- canonical_id: DOI:10.1145/3714983.3714987
+  doi: 10.1145/3714983.3714987
+- canonical_id: DOI:10.18653/v1/2020.emnlp-demos.6
+  doi: 10.18653/v1/2020.emnlp-demos.6
+- canonical_id: arXiv:2404.01744
+  arxiv_id: '2404.01744'
+- canonical_id: DOI:10.1145/3773075
+  doi: 10.1145/3773075
+- canonical_id: arXiv:2404.14897
+  arxiv_id: '2404.14897'
+- canonical_id: arXiv:2402.15758
+  arxiv_id: '2402.15758'
+- canonical_id: ACL:2024.acl-long.681
+  doi: 10.18653/v1/2024.acl-long.681
+- canonical_id: DOI:10.1007/978-3-031-85747-8_2
+  doi: 10.1007/978-3-031-85747-8_2
+- canonical_id: arXiv:2308.04623
+  arxiv_id: '2308.04623'
+- canonical_id: arXiv:2306.14048
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2311.01544
+  doi: 10.18653/v1/2024.naacl-long.377
+- canonical_id: arXiv:2402.06082
+  arxiv_id: '2402.06082'
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.794
+  doi: 10.18653/v1/2023.emnlp-main.794
+- canonical_id: DOI:10.18653/v1/2024.findings-acl.295
+  doi: 10.18653/v1/2024.findings-acl.295
+- canonical_id: DOI:10.18653/v1/2024.acl-long.623
+  doi: 10.18653/v1/2024.acl-long.623
+- canonical_id: DOI:10.18653/v1/2024.acl-long.270
+  doi: 10.18653/v1/2024.acl-long.270
+- canonical_id: arXiv:2401.09486
+  arxiv_id: '2401.09486'
+- canonical_id: arXiv:2401.10444
+  arxiv_id: '2401.10444'
+- canonical_id: DOI:10.65109/zdxp6361
+  doi: 10.65109/zdxp6361
+- canonical_id: arXiv:2402.15538
+  arxiv_id: '2402.15538'
+- canonical_id: arXiv:2402.11550
+  arxiv_id: '2402.11550'
+- canonical_id: DOI:10.1109/rtss59052.2023.00023
+  doi: 10.1109/rtss59052.2023.00023
+- canonical_id: arXiv:2312.17515
+  arxiv_id: '2312.17515'
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.507
+  doi: 10.18653/v1/2023.emnlp-main.507
+- canonical_id: arXiv:2308.12519
+  arxiv_id: '2308.12519'
+- canonical_id: arXiv:2305.17126
+- canonical_id: arXiv:2006.14666
+  arxiv_id: '2006.14666'
+- canonical_id: arXiv:2308.05960
+  arxiv_id: '2308.05960'
+- canonical_id: arXiv:2310.08535
+  arxiv_id: '2310.08535'
+- canonical_id: arXiv:2401.16577
+  arxiv_id: '2401.16577'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2201.05596
+- canonical_id: DOI:10.1109/icra57147.2024.10610676
+  doi: 10.1109/icra57147.2024.10610676
+- canonical_id: arXiv:2212.00714
+  arxiv_id: '2212.00714'
+- canonical_id: DOI:10.1007/978-3-319-21404-7_26
+  doi: 10.1007/978-3-319-21404-7_26
+- canonical_id: DOI:10.1109/lcomm.2020.3004523
+  doi: 10.1109/lcomm.2020.3004523
+- canonical_id: arXiv:2310.05187
+  arxiv_id: '2310.05187'
+- canonical_id: arXiv:2311.17329
+  arxiv_id: '2311.17329'
+- canonical_id: DOI:10.1109/comst.2021.3061435
+  doi: 10.1109/comst.2021.3061435
+- canonical_id: DOI:10.1109/infocom53939.2023.10229049
+  doi: 10.1109/infocom53939.2023.10229049
+- canonical_id: DOI:10.1609/aaai.v34i04.5957
+  doi: 10.1609/aaai.v34i04.5957
+- canonical_id: DOI:10.5555/3291168.3291210
+  doi: 10.5555/3291168.3291210
+- canonical_id: DOI:10.1145/3539606
+  doi: 10.1145/3539606
+- canonical_id: arXiv:2307.08691
+- canonical_id: arXiv:2401.01312
+  arxiv_id: '2401.01312'
+- canonical_id: DOI:10.1109/tcss.2025.3637527
+  doi: 10.1109/tcss.2025.3637527
+- canonical_id: DOI:10.18653/v1/2025.findings-naacl.448
+  doi: 10.18653/v1/2025.findings-naacl.448
+- canonical_id: DOI:10.18653/v1/2024.acl-long.705
+  doi: 10.18653/v1/2024.acl-long.705
+- canonical_id: DOI:10.18653/v1/2024.findings-acl.294
+  doi: 10.18653/v1/2024.findings-acl.294
+- canonical_id: DOI:10.1016/j.cag.2025.104338
+  doi: 10.1016/j.cag.2025.104338
+- canonical_id: DOI:10.1145/3640771.3643717
+  doi: 10.1145/3640771.3643717
+- canonical_id: DOI:10.1109/lra.2024.3390588
+  doi: 10.1109/lra.2024.3390588
+- canonical_id: DOI:10.1609/aaai.v37i10.26389
+  doi: 10.1609/aaai.v37i10.26389
+- canonical_id: arXiv:2312.13925
+  arxiv_id: '2312.13925'
+- canonical_id: DOI:10.1109/jiot.2022.3229125
+  doi: 10.1109/jiot.2022.3229125
+- canonical_id: arXiv:2102.08307
+  arxiv_id: '2102.08307'
+- canonical_id: arXiv:2205.04461
+  arxiv_id: '2205.04461'
+- canonical_id: arXiv:1512.04343
+  arxiv_id: '1512.04343'
+- canonical_id: DOI:10.1080/17477778.2022.2043792
+  doi: 10.1080/17477778.2022.2043792
+- canonical_id: arXiv:2402.01968
+  arxiv_id: '2402.01968'
+- canonical_id: DOI:10.18653/v1/2024.acl-long.810
+  doi: 10.18653/v1/2024.acl-long.810
+- canonical_id: arXiv:2305.15695
+  arxiv_id: '2305.15695'
+- canonical_id: DOI:10.1038/s41467-025-63913-1
+  doi: 10.1038/s41467-025-63913-1
+- canonical_id: arXiv:2311.01609
+  arxiv_id: '2311.01609'
+- canonical_id: DOI:10.1109/tac.2020.2992563
+  doi: 10.1109/tac.2020.2992563
+- canonical_id: DOI:10.1109/cog57401.2023.10333247
+  doi: 10.1109/cog57401.2023.10333247
+- canonical_id: arXiv:2404.11483
+  arxiv_id: '2404.11483'
+- canonical_id: DOI:10.1109/mwc.016.2300600
+  doi: 10.1109/mwc.016.2300600
+- canonical_id: DOI:10.18653/v1/2025.findings-naacl.339
+  doi: 10.18653/v1/2025.findings-naacl.339
+- canonical_id: arXiv:2305.13144
+- canonical_id: DOI:10.1109/bigdata62323.2024.10826121
+  doi: 10.1109/bigdata62323.2024.10826121
+- canonical_id: arXiv:2310.18813
+  arxiv_id: '2310.18813'
+- canonical_id: arXiv:2308.12908
+  arxiv_id: '2308.12908'
+- canonical_id: DOI:10.1016/j.future.2025.107873
+  doi: 10.1016/j.future.2025.107873
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 186
 ---
 # LLMエージェントの応答遅延：推論・ツール・システム・協調の4層分析
 

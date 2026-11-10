@@ -1,41 +1,57 @@
 ---
-canonical_id: "title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference"
-title: "Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference"
-summary: "TVA-Pruneは全先行層への依存を考慮した変分情報ボトルネックのマスクで隠れ次元、FFN、注意ヘッドを構造的に削減し、GQAの共有関係を保ったままGPU Tensor Coreに適した行列寸法へ調整する。A100でLLaMA-2-7Bの困惑度5.11→14.15と品質が低下する一方、推論速度は1.8倍となる。LoRA後は困惑度9.58。"
-list_summary: "前層全体の情報を利用する変分マスクでLLMの構造を削減し、GQAの共有ヘッドとGPUの演算ブロックに合わせた調整によって実測速度を改善する。"
+canonical_id: title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference
+title: Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference
+summary: TVA-Pruneは全先行層への依存を考慮した変分情報ボトルネックのマスクで隠れ次元、FFN、注意ヘッドを構造的に削減し、GQAの共有関係を保ったままGPU Tensor Coreに適した行列寸法へ調整する。A100でLLaMA-2-7Bの困惑度5.11→14.15と品質が低下する一方、推論速度は1.8倍となる。LoRA後は困惑度9.58。
+list_summary: 前層全体の情報を利用する変分マスクでLLMの構造を削減し、GQAの共有ヘッドとGPUの演算ブロックに合わせた調整によって実測速度を改善する。
 authors:
-  - "Oshin Dutta"
-  - "Ritvik Gupta"
-  - "Sumeet Agarwal"
-published: "2024-07-01"
-publication: "ICML 2024 Workshop on Efficient Systems for Foundation Models II"
-publication_type: "workshop"
-publication_status: "published"
-source: "https://raw.githubusercontent.com/oshindutta/TVAprune/main/Es_fomo__ICML__camera_ready.pdf"
+- Oshin Dutta
+- Ritvik Gupta
+- Sumeet Agarwal
+published: '2024-07-01'
+publication: ICML 2024 Workshop on Efficient Systems for Foundation Models II
+publication_type: workshop
+publication_status: published
+source: https://raw.githubusercontent.com/oshindutta/TVAprune/main/Es_fomo__ICML__camera_ready.pdf
 sources:
-  - "https://raw.githubusercontent.com/oshindutta/TVAprune/main/Es_fomo__ICML__camera_ready.pdf"
-  - "https://github.com/oshindutta/TVAprune"
-  - "https://www.researchgate.net/publication/383218239_Efficient_LLM_Pruning_with_Global_Token-Dependency_Awareness_and_Hardware-Adapted_Inference"
-code: "https://github.com/oshindutta/TVAprune"
-implementation: "C4から5000サンプル、長さ512の校正データでVIBマスクを学習。A100 40GB上でLLaMA、LLaMA-2、Mistral、LLaMA-3の枝刈り、追加LoRA学習、WikiText2と6ゼロショット課題を評価する。"
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-00"
-scheduled_slot: "00"
-worker_run_key: "20261030-1803-scheduled-chat-00/r01"
-reference_main_sha: "36e5083fe7d51557a86aa77d397cd66820ac7f33"
+- https://raw.githubusercontent.com/oshindutta/TVAprune/main/Es_fomo__ICML__camera_ready.pdf
+- https://github.com/oshindutta/TVAprune
+- https://www.researchgate.net/publication/383218239_Efficient_LLM_Pruning_with_Global_Token-Dependency_Awareness_and_Hardware-Adapted_Inference
+code: https://github.com/oshindutta/TVAprune
+implementation: C4から5000サンプル、長さ512の校正データでVIBマスクを学習。A100 40GB上でLLaMA、LLaMA-2、Mistral、LLaMA-3の枝刈り、追加LoRA学習、WikiText2と6ゼロショット課題を評価する。
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-00
+scheduled_slot: '00'
+worker_run_key: 20261030-1803-scheduled-chat-00/r01
+reference_main_sha: 36e5083fe7d51557a86aa77d397cd66820ac7f33
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-under16kb_reaudit_target_path: "papers/inference/99-other-inference-systems/2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md"
-under16kb_reaudit_source_git_blob_sha: "6ecb1314bea0bd1ad51cf06808c0882bfc0b10ff"
-under16kb_reaudit_source_sha256: "46c5d1e13cf56e49024efd99078bc69dfbe9c9be4c8303a269fe039692f1049c"
-under16kb_reaudit_version: "2026-10-07-v1"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2024-614ce03da14c-efficient-llm-pruning-with-global-token-dependency-awareness-and-hardwar.md
+under16kb_reaudit_source_git_blob_sha: 6ecb1314bea0bd1ad51cf06808c0882bfc0b10ff
+under16kb_reaudit_source_sha256: 46c5d1e13cf56e49024efd99078bc69dfbe9c9be4c8303a269fe039692f1049c
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
-last_audited: "2026-10-30"
+last_audited: '2026-10-30'
 audit_version: 1
-worker_completed_at: 2026-10-30T19:50:10+09:00
+worker_completed_at: 2026-10-30 19:50:10+09:00
 metadata_repair_worker_id: scheduled-chat-45
 metadata_repair_run_key: 20261030-1943-scheduled-chat-45/r01
-metadata_repair_checked_at: 2026-10-30T19:50:10+09:00
+metadata_repair_checked_at: 2026-10-30 19:50:10+09:00
+references:
+- canonical_id: arXiv:2305.13245
+  arxiv_id: '2305.13245'
+- canonical_id: title:Efficient LLM Pruning with Global Token-Dependency Awareness and Hardware-Adapted Inference
+- canonical_id: arXiv:2303.06865
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.298
+- canonical_id: arXiv:2312.11983
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2402.12374
+- canonical_id: arXiv:2306.11695
+- canonical_id: arXiv:2310.17157
+- canonical_id: arXiv:2305.11627
+- canonical_id: arXiv:2204.00408
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # TVA-Prune：トークン依存とGPUの行列形状を考慮した構造的枝刈り
