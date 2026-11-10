@@ -1,6 +1,6 @@
 # LLM論文サーベイ 稼働状況
 
-> 自動生成: **2026-11-11 01:19:59 JST**
+> 自動生成: **2026-11-11 01:25:05 JST**
 
 このページは **耐久保存された直接証拠だけ** から毎回ゼロベースで生成します。
 `run-ledger.json`、`next-jobs.json`、`discovery-state.json`、旧 `STATUS.md` の値は判定に使いません。
@@ -15,7 +15,7 @@
 | 未claim Research job | **571** |
 | 直近24hのResearch処理完了 | **0** |
 | 最終Research処理完了 | **11-09 15:32:38 JST** |
-| 最終Discovery探索完了 | **11-11 00:30:00 JST** |
+| 最終Discovery探索完了 | **11-10 23:00:00 JST** |
 | 整合性異常 | **0** |
 
 ## 16KB未満論文サマリーの再監査
@@ -116,7 +116,7 @@
 | 指標 | 現在値 |
 |---|---:|
 | maintenance pending | **false** |
-| 最終maintenance完了 | **11-10 09:46:22 JST（15時間33分前）** |
+| 最終maintenance完了 | **11-10 09:46:22 JST（15時間38分前）** |
 | 最終maintenance status | **issues_found** |
 | consistency | **passed** |
 | health | **issues_found** |
@@ -137,18 +137,18 @@ maintenance固有の値は `maintenance-cycle.json` を正本とし、通常のj
 | 指標 | 現在値 |
 |---|---:|
 | 直近6hのResearch完了 | **0** |
-| 直近6hのDiscovery run | **2** |
-| 直近6hのDiscovery本文確認・分類 | **11** |
+| 直近6hのDiscovery run | **1** |
+| 直近6hのDiscovery本文確認・分類 | **10** |
 | 最終Research完了 | **11-09 15:32:38 JST** |
-| 最終Discovery完了 | **11-11 00:30:00 JST** |
+| 最終Discovery完了 | **11-10 23:00:00 JST** |
 
 ### 最新Library-first run
 
 - Research: **11-09 15:32:38 JST** / worker scheduled-chat-30 / run 20261109-1530-scheduled-chat-30/r01 / 成果 **1件**
   - evidence: .survey/import-inbox/results/research/file_00000000d7b88230867dd25614c61dbc--2024-2412.10319-scbench-returned-repair-20261109-1530-scheduled-chat-30-r01.json
-- Discovery: **11-11 00:30:00 JST** / worker scheduled-chat-30 / run 20261111-0030-scheduled-chat-30/r01
-  - 本文確認・分類 **1件** / accept **1件** / unrelated+borderline **0件**
-  - evidence: .survey/import-inbox/waiting/discovery/file_0000000058a48210b8b307b3409a2e0f--discovery-20261111-0030-scheduled-chat-30-r01.json
+- Discovery: **11-10 23:00:00 JST** / worker scheduled-chat-00 / run 20261110-2300-scheduled-chat-00/r01
+  - 本文確認・分類 **10件** / accept **10件** / unrelated+borderline **0件**
+  - evidence: .survey/import-inbox/waiting/discovery/libfile_3bee94b3630081919b0ef26ff3d2a763--discovery-20261110-2300-scheduled-chat-00-r01.json
 
 ### Codex探索成果の反映状況
 
