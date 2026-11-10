@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-10T13:45:22+00:00`
+Generated: `2026-11-10T14:07:44+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -310,7 +310,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 227 | 0 | 5 | 6 | DOI:10.63317/3mnfp3i37gy2 | Distribution-aware Low-bitwidth Quantization for Large Language Models | 2026 | International Conference on Language Resources and Evaluation | 0 | 6 | inference-systems, post-training quantization / second-order compression / weight-only LLM inference | [source](https://doi.org/10.63317/3mnfp3i37gy2) |
 | 228 | 121 | 5 | 6 | arXiv:2605.22718 | WorldKV: Efficient World Memory with World Retrieval and Compression | 2026-05-21 | arXiv.org | 21 | 6 | KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation, 疎注意 / KVキャッシュ選択 / 長文脈推論 | [source](https://arxiv.org/abs/2605.22718) |
 | 229 | 10 | 5 | 6 | arXiv:2608.02134 | Messages, Not Tokens: Grounded Coresets for Faithful VLM Compression | 2026-08-03 |  | 0 | 6 |  | [source](https://arxiv.org/abs/2608.02134) |
-| 230 | 118 | 5 | 6 | arXiv:2604.12928 | MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models | 2026-04-14 | arXiv.org | 18 | 6 |  | [source](https://arxiv.org/abs/2604.12928) |
+| 230 | 123 | 5 | 6 | arXiv:2604.12928 | MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models | 2026-04-14 | arXiv.org | 23 | 6 |  | [source](https://arxiv.org/abs/2604.12928) |
 | 231 | 15 | 5 | 6 | arXiv:2506.09061 | EdgeProfiler: A Fast Profiling Framework for Lightweight LLMs on Edge Using Analytical Model | 2025-06-06 | International Conference on Machine Learning and Applications | 5 | 6 | Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, オフロード／階層メモリ, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2506.09061) |
 | 232 | 10 | 5 | 6 | arXiv:2610.40847 | The Generative Gap Between Speculative Drafter and Continuous Diffusion Language Model | 2026-10-29 |  | 0 | 6 | diffusion language models / masked diffusion / parallel decoding / AR-to-diffusion conversion, inference-systems, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.40847) |
 | 233 | 104 | 5 | 6 | DOI:10.48550/arXiv.2603.21465 | DRTriton: Large-Scale Synthetic Data Reinforcement Learning for Triton Kernel Generation | 2026-03-23 | arXiv.org | 4 | 6 | PyTorch 2 torch.compileの設計と評価を報告する論文。, inference-systems, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.48550/arXiv.2603.21465) |
