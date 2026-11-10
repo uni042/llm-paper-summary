@@ -35,6 +35,7 @@ from backfill_citations import (
     fetch_bytes,
     load_state,
     normalize_title,
+    source_archive_references,
     replace_frontmatter,
     save_state,
 )
@@ -330,6 +331,18 @@ def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
                 success = True
             except Exception as exc:
                 errors.append(f"arXiv HTML references: {type(exc).__name__}: {exc}")
+
+        # Some source archives have a compiled .bbl (or source-embedded
+        # bibitems) rather than a standalone .bib database.
+        if not success and aid:
+            try:
+                entries, source_label = source_archive_references(aid)
+                references = entries_to_references(entries, aliases, title_targets)
+                total = len(entries)
+                source_url = f"https://arxiv.org/e-print/{aid}"
+                success = True
+            except Exception as exc:
+                errors.append(f"arXiv compiled source references: {type(exc).__name__}: {exc}")
 
         # Withdrawn arXiv versions may still retain a formal .bib source file.
         if not success and aid:
