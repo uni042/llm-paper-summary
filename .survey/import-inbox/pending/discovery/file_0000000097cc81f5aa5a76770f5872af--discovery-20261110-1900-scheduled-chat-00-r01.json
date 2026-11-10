@@ -1,0 +1,231 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-1900-scheduled-chat-00/r01",
+  "reference_main_sha": "89982bd1d8ce198a19387b4b386a89d808768b95",
+  "candidate_inventory": 571,
+  "record_count": 10,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCAS56072.2025.11043916",
+      "identity_tokens": [
+        "DOI:10.1109/ISCAS56072.2025.11043916"
+      ],
+      "title": "XNC: XOR and NOT-Based Lossless Compression for Optimizing Unquantized Embedding Layers in Large Language Models",
+      "reason": "隣接16-bitブロックへのXOR/NOT演算で非量子化embeddingを損失なしに圧縮。著者所属機関の公開要旨によるとembedding平均1.34倍圧縮、4-bit量子化LLM全体でサイズ9.91%減。",
+      "source_url": "https://pure.seoultech.ac.kr/en/publications/xnc-xor-and-not-based-lossless-compression-for-optimizing-unquant/",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 251
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2502.15077",
+      "identity_tokens": [
+        "arXiv:2502.15077",
+        "DOI:10.48550/arXiv.2502.15077"
+      ],
+      "title": "Hardware-Friendly Static Quantization Method for Video Diffusion Transformers",
+      "reason": "OpenSora動画拡散Transformerに対するステップ別較正を用いた静的PTQ。LLMではなく動画生成の量子化なので関連は間接的。",
+      "source_url": "https://arxiv.org/abs/2502.15077",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 252
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00174",
+      "identity_tokens": [
+        "DOI:10.1109/ISCA66397.2026.00174"
+      ],
+      "title": "Dynamic Scheduling for AI Accelerators via TISA",
+      "reason": "演算依存関係とメモリ範囲を保持したタイル単位の動的スケジューリング。GPT-JやLLaMA2を含む評価で1.52–1.92倍高速化と報告。会議論文要旨を確認。",
+      "source_url": "https://www1.eurekamag.com/research/109/525/109525005.php",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 254
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2603.10030",
+      "identity_tokens": [
+        "arXiv:2603.10030",
+        "DOI:10.48550/arXiv.2603.10030"
+      ],
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "reason": "LinuxカーネルのDMA buffer/RDMA/NUMA統合基盤dmaplane。KVキャッシュをRDMAで別ホストへ転送する分離推論を実演。Soft-RoCE計測と設計上の保証を区別している。",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 255
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.01560",
+      "identity_tokens": [
+        "arXiv:2610.01560",
+        "DOI:10.48550/arXiv.2610.01560"
+      ],
+      "title": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+      "reason": "潜在推論の将来状態をチャンク予測して逐次forwardを削減。Qwen2.5-Omniで初回回答トークン1.22秒から0.10秒、11.8倍短縮と報告。",
+      "source_url": "https://arxiv.org/abs/2610.01560",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 256
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.25954",
+      "identity_tokens": [
+        "arXiv:2605.25954",
+        "DOI:10.48550/arXiv.2605.25954"
+      ],
+      "title": "Step-TP: A Grounded, Step-Level Dataset with Chain-of-Thought Reasoning for LLM-Guided Tensor Program Optimization",
+      "reason": "TVM TIRに変換可能な中間表現と逐次変換の教師データを提供。カーネル最適化を支援するが、LLM推論高速化自体の実測値は一次要旨にない。",
+      "source_url": "https://arxiv.org/abs/2605.25954",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 257
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.19232",
+      "identity_tokens": [
+        "arXiv:2610.19232",
+        "DOI:10.48550/arXiv.2610.19232"
+      ],
+      "title": "Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion",
+      "reason": "dense FFNのMoE変換時、層ごと・トークンごとの活性expert予算を配分。25% FFN利用率でLlama2/3とQwen2.5のperplexityを一様配分より改善。",
+      "source_url": "https://arxiv.org/abs/2610.19232",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 258
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2602.18846",
+      "identity_tokens": [
+        "arXiv:2602.18846",
+        "DOI:10.48550/arXiv.2602.18846"
+      ],
+      "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+      "reason": "視覚encoder側の冗長トークン統合とLLM内部のテキスト誘導枝刈りを組合せる。LLaVA-1.5-7Bで視覚トークン67%減でも基準精度99%以上を保持と報告。",
+      "source_url": "https://arxiv.org/abs/2602.18846",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 259
+    },
+    {
+      "classification": "borderline",
+      "canonical_id": "arXiv:2605.16423",
+      "identity_tokens": [
+        "arXiv:2605.16423",
+        "DOI:10.48550/arXiv.2605.16423"
+      ],
+      "title": "Nonlinear Bipolar Compensation: Handling Outliers in Post-Training Quantization",
+      "reason": "量子化誤差と外れ値を非線形双極対数変換して軽量線形層で補償する一般モデルPTQ。LLM固有の推論評価は要旨で確認できない。",
+      "source_url": "https://arxiv.org/abs/2605.16423",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 260
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2405.13938",
+      "identity_tokens": [
+        "arXiv:2405.13938",
+        "DOI:10.48550/arXiv.2405.13938"
+      ],
+      "title": "eXmY: A Data Type and Technique for Arbitrary Bit Precision Quantization",
+      "reason": "3/5/6/7/9bit等の任意bit幅・指数仮数配分を扱う圧縮型。SIMD/TPU/GPUベクトル処理対応の符号化・復号により重みや活性を圧縮しメモリ・転送量削減。",
+      "source_url": "https://arxiv.org/abs/2405.13938",
+      "body_check": "primary_abstract_only; body_not_read",
+      "first_checked_at": "2026-11-10T19:00:00+09:00",
+      "last_checked_at": "2026-11-10T19:00:00+09:00",
+      "linked_from": [],
+      "worklist_rank": 261
+    }
+  ],
+  "round_complete": true,
+  "identity_uniqueness_global": "not_fully_verified",
+  "skipped": [
+    {
+      "canonical_id": "DOI:10.1145/3725338",
+      "reason": "no completed Library research manuscript found; receipt follow-up unverified; defer"
+    },
+    {
+      "canonical_id": "arXiv:2510.17196",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2505.07861",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2508.08289",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2404.04759",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2509.17428",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2606.29223",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2309.05210",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2609.10355",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "reason": "retry_deferred_no_new_evidence; method_chars 553 < 700; primary re-audit pending"
+    },
+    {
+      "canonical_id": "DOI:10.1109/ETAI68332.2026.11485199",
+      "reason": "primary abstract not verified; rank 253 deferred"
+    }
+  ],
+  "next_rank": 262,
+  "next_identity": "arXiv:2604.10946",
+  "returned_research_count": 11,
+  "returned_research_later_receipts_verified": false,
+  "library_global_sha256_verified": false
+}
