@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-10T09:12:41+00:00`
+Generated: `2026-11-10T10:04:44+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -296,7 +296,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 213 | 42 | 5 | 7 | arXiv:2409.03231 | State-space models are accurate and efficient neural operators for dynamical systems | 2024-09-05 | Neural Networks | 42 | 7 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2409.03231) |
 | 214 | 10 | 5 | 7 | arXiv:2609.10297 | TRACE: Trajectory-robust Admission with Evidence Ordering for Efficient GUI Agents | 2026-09-09 |  | 0 | 7 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2609.10297) |
 | 215 | 10 | 5 | 7 | arXiv:2610.35023 | BellowsKV: One Latent for Many Layers, Expanded on Demand | 2026-10-26 |  | 0 | 7 | 10-kv-cache-offload-recomputation, KV Cache Optimization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2610.35023) |
-| 216 | 10 | 5 | 6 | arXiv:2610.23787 | DLite: History-free Speculative Decoding for Agentic AI | 2026-10-16 |  | 0 | 6 | inference-systems, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号・ブロック拡散提案・検証器中間表現の再利用 | [source](https://arxiv.org/abs/2610.23787) |
+| 216 | 101 | 5 | 6 | arXiv:2610.23787 | DLite: History-free Speculative Decoding for Agentic AI | 2026-10-16 |  | 1 | 6 | inference-systems, speculative-decoding, 投機的デコードにおける自己回帰ドラフトと並列ドラフトの折衷, 投機的復号 / EAGLE, 投機的復号・ブロック拡散提案・検証器中間表現の再利用 | [source](https://arxiv.org/abs/2610.23787) |
 | 217 | 10 | 5 | 6 | arXiv:2610.20175 | TreeSpark: Learning to Draft the Trees You Verify for Speculative Decoding | 2026-10-14 |  | 0 | 6 | inference-systems, speculative-decoding, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.20175) |
 | 218 | 10 | 5 | 6 | arXiv:2610.40292 | DolphinRouting: Cluster-Level Binary Routing for Disaggregated LLM Inference Serving | 2026-10-29 |  | 0 | 6 | disaggregated LLM serving / request routing / learned scheduling, kernel-runtime-compilation, llm-serving-scheduling-disaggregation, prefill-decode disaggregation / attention offloading / LLM serving | [source](https://arxiv.org/abs/2610.40292) |
 | 219 | 0 | 5 | 6 | DOI:10.1109/CCSB63463.2024.10735473 | Crowd: An KV Cache Eviction Policy Which Uses Crowd Information to Select Evicted Key-Value Pairs | 2024-09-06 | 2024 4th International Conference on Computer Science and Blockchain (CCSB) | 0 | 6 | 07-kv-cache-optimization-compression, KV cache eviction / heavy hitters / sparse attention / efficient inference, KV cache memory management / streaming inference / attention sinks / length extrapolation | [source](https://doi.org/10.1109/CCSB63463.2024.10735473) |
