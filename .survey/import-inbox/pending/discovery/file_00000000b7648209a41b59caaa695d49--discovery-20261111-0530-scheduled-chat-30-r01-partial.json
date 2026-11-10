@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-30",
+  "scheduled_slot": "30",
+  "run_key": "20261111-0530-scheduled-chat-30/r01",
+  "reference_main_sha": "17b0655ed20ed48e32bdb647c3c2689f15938b57",
+  "candidate_inventory": 571,
+  "record_count": 2,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.17689",
+      "identity_tokens": [
+        "arXiv:2610.17689",
+        "DOI:10.48550/arXiv.2610.17689"
+      ],
+      "title": "Stable Token-level Scheduling for Serverless LLM Inference",
+      "reason": "サーバレスLLM推論で新規要求の投入が既存decodeのトークン間遅延を乱す問題を扱う。Token Window Pacingは実測ITL、待ち行列長、負荷特性からトークン単位の受入れ枠をフィードバック制御し、chunked prefillと併用する。一次要旨はServerlessLLM比最大45%、従来スケジューラ比最大58%のスループット改善を報告。推論サービングの直接的な高速化研究なのでaccept。",
+      "source_url": "https://arxiv.org/abs/2610.17689",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 26,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T05:30:00+09:00",
+      "last_checked_at": "2026-11-11T05:30:00+09:00"
+    },
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2610.06927",
+      "identity_tokens": [
+        "arXiv:2610.06927",
+        "DOI:10.48550/arXiv.2610.06927"
+      ],
+      "title": "AttSVD:Prompt-Adaptive Low-Rank KV Cache Compression via Attention-Guided SVD",
+      "reason": "不可逆なトークン削除ではなく、プロンプトごとのattention幾何からオンラインSVDの低ランク基底を求め、全トークンを残したままKV特徴次元を圧縮する。accumulating/streamingの2方式とattention-awareな基底選択を提示。一次要旨はLongBench等で密なキャッシュと同程度の性能を保ちながらKVメモリを最大50%削減と報告。LLM推論メモリ最適化に直接該当するためaccept。",
+      "source_url": "https://arxiv.org/abs/2610.06927",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 28,
+      "linked_from": [],
+      "first_checked_at": "2026-11-11T05:30:00+09:00",
+      "last_checked_at": "2026-11-11T05:30:00+09:00"
+    }
+  ]
+}
