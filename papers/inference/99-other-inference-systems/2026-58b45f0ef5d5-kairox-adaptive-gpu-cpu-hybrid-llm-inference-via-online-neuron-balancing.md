@@ -1,36 +1,100 @@
 ---
-canonical_id: 'SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325'
+canonical_id: SemanticScholar:4f3a8bd3272ef6d0c18342038f811b00c7bae325
 title: 'Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing'
-summary: 'Kairoxは、LLMのFFN活性化を隣接層から先読みし、共活性化ニューロン群の重みをCPUメモリとGPUメモリ間でオンライン再配置するハイブリッド推論基盤である。時間的活性化モメンタムとCPU/I/O停滞フィードバックにより転送とCPU計算の競合を調整し、RTX 3080 Ti／4090を用いた疎活性化モデルの実機評価で、標準生成のllama.cpp比最大7.53／7.57倍のスループットを報告する。予測に伴う品質変化と低疎性モデルへの一般化には注意が必要。'
-list_summary: 'FFNの次層活性化予測、時間的活性化モメンタム、CPU/I/O負荷帰還でGPU常駐ニューロンを更新し、消費者向けPCのLLM推論を高速化する。'
+summary: Kairoxは、LLMのFFN活性化を隣接層から先読みし、共活性化ニューロン群の重みをCPUメモリとGPUメモリ間でオンライン再配置するハイブリッド推論基盤である。時間的活性化モメンタムとCPU/I/O停滞フィードバックにより転送とCPU計算の競合を調整し、RTX 3080 Ti／4090を用いた疎活性化モデルの実機評価で、標準生成のllama.cpp比最大7.53／7.57倍のスループットを報告する。予測に伴う品質変化と低疎性モデルへの一般化には注意が必要。
+list_summary: FFNの次層活性化予測、時間的活性化モメンタム、CPU/I/O負荷帰還でGPU常駐ニューロンを更新し、消費者向けPCのLLM推論を高速化する。
 authors:
-  - Yapeng Jiang
-  - Minghao Gan
-  - Zicong Hong
-  - Wuhui Chen
-  - Junyuan Liang
-  - Yue Yu
-  - Meng Guo
-  - Zibin Zheng
-published: '2026-07'
-publication: '20th USENIX Symposium on Operating Systems Design and Implementation (OSDI 2026), pp. 1839-1856'
-publication_type: '査読付き国際会議論文'
-publication_status: 'Published'
-source: 'https://www.usenix.org/system/files/osdi26-jiang-yapeng.pdf'
+- Yapeng Jiang
+- Minghao Gan
+- Zicong Hong
+- Wuhui Chen
+- Junyuan Liang
+- Yue Yu
+- Meng Guo
+- Zibin Zheng
+published: 2026-07
+publication: 20th USENIX Symposium on Operating Systems Design and Implementation (OSDI 2026), pp. 1839-1856
+publication_type: 査読付き国際会議論文
+publication_status: Published
+source: https://www.usenix.org/system/files/osdi26-jiang-yapeng.pdf
 sources:
-  - 'https://www.usenix.org/system/files/osdi26-jiang-yapeng.pdf'
-  - 'https://www.usenix.org/conference/osdi26/presentation/jiang-yapeng'
-implementation: 'llama.cppを基盤に約5,700行のC++/CUDAを追加した実装。CUDAとAVXの疎演算カーネル、非同期I/O executor、予測器とキャッシュ制御を実装。Neuralink比較方式は著者による中核機構の再実装。公式コード公開URLは確認した一次資料から特定できない。'
+- https://www.usenix.org/system/files/osdi26-jiang-yapeng.pdf
+- https://www.usenix.org/conference/osdi26/presentation/jiang-yapeng
+implementation: llama.cppを基盤に約5,700行のC++/CUDAを追加した実装。CUDAとAVXの疎演算カーネル、非同期I/O executor、予測器とキャッシュ制御を実装。Neuralink比較方式は著者による中核機構の再実装。公式コード公開URLは確認した一次資料から特定できない。
 code: null
-worker_id: 'scheduled-chat-30'
-worker_run_key: '20261028-0230-scheduled-chat-30/r01'
+worker_id: scheduled-chat-30
+worker_run_key: 20261028-0230-scheduled-chat-30/r01
 worker_completed_at: '2026-10-28T02:35:00+09:00'
 last_checked: '2026-10-28'
-reference_main_sha: 'ae765f79b8c091ddf2127e2849418aaa83793d1f'
+reference_main_sha: ae765f79b8c091ddf2127e2849418aaa83793d1f
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:1803.08375
+  arxiv_id: '1803.08375'
+- canonical_id: arXiv:2312.11514
+- canonical_id: arXiv:2407.06204
+- canonical_id: arXiv:2307.13304
+- canonical_id: arXiv:2508.11269
+  arxiv_id: '2508.11269'
+- canonical_id: arXiv:2510.09665
+  arxiv_id: '2510.09665'
+- canonical_id: arXiv:1710.09282
+  arxiv_id: '1710.09282'
+- canonical_id: arXiv:2502.06888
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2407.21783
+  arxiv_id: '2407.21783'
+- canonical_id: arXiv:2502.20727
+  arxiv_id: '2502.20727'
+- canonical_id: DOI:10.1145/3600006.3613165
+- canonical_id: arXiv:1507.02822
+  arxiv_id: '1507.02822'
+- canonical_id: arXiv:2401.11240
+  arxiv_id: '2401.11240'
+- canonical_id: arXiv:2210.06313
+  arxiv_id: '2210.06313'
+- canonical_id: arXiv:2310.17157
+- canonical_id: arXiv:2312.15234
+- canonical_id: arXiv:2407.00079
+- canonical_id: arXiv:2407.18921
+- canonical_id: arXiv:2002.05202
+  arxiv_id: '2002.05202'
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2406.06562
+  arxiv_id: '2406.06562'
+- canonical_id: arXiv:2312.12456
+- canonical_id: arXiv:2406.05955
+  arxiv_id: '2406.05955'
+- canonical_id: arXiv:2507.20984
+  arxiv_id: '2507.20984'
+- canonical_id: arXiv:2403.20306
+  arxiv_id: '2403.20306'
+- canonical_id: arXiv:2310.11453
+  arxiv_id: '2310.11453'
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2407.05858
+- canonical_id: arXiv:2402.11295
+  arxiv_id: '2402.11295'
+- canonical_id: arXiv:2403.05156
+  arxiv_id: '2403.05156'
+- canonical_id: arXiv:2206.01861
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2506.10470
+  arxiv_id: '2506.10470'
+- canonical_id: arXiv:2205.01068
+  arxiv_id: '2205.01068'
+- canonical_id: arXiv:2310.08915
+  arxiv_id: '2310.08915'
+- canonical_id: arXiv:2110.01786
+- canonical_id: arXiv:2505.05950
+  arxiv_id: '2505.05950'
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 62
 ---
 
 ## 書誌と研究上の位置づけ

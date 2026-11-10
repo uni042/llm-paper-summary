@@ -343,7 +343,7 @@ weightやexpert全般を含む汎用memory hierarchyは `Offload / Hierarchical 
 ### 2年前（2024-12〜2025-11）
 
 - **2025-10 · [LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference](2025-2510.09665-lmcache.md)**  
-  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：135  
+  実装：[✓](https://github.com/LMCache/LMCache) ・ リポジトリ内被引用：136  
   LMCacheはKVを独立オブジェクトとしてページ集約し、複数要求・推論エンジン・保存階層間で検索／転送し、接頭辞再計算とGPU・I/O待ちを減らす基盤。
 
 - **2025-02 · [KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse](2025-2502.16002-kvlink.md)**  

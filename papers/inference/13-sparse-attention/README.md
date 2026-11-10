@@ -381,11 +381,11 @@
 ### 2年前（2024-12〜2025-11）
 
 - **2025-02 · [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](2025-2502.11089-native-sparse-attention-hardware-aligned-and-natively-trainable-sparse-a.md)**  
-  実装：✓ ・ リポジトリ内被引用：149  
+  実装：✓ ・ リポジトリ内被引用：150  
   Native Sparse 注意機構（NSA）は、長文脈Transformerの注意演算を、圧縮した長距離文脈、入力依存で選んだ重要ブロック、直近の局所窓という三つの枝に分ける疎注意方式である。注意カーネルは64K文脈で順伝播最大9.0倍、逆伝播最大6.0倍の実測高速化を報告する。
 
 - **2025-02 · [MoBA: Mixture of Block Attention for Long-Context LLMs](2025-2502.13189-moba.md)**  
-  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：101  
+  実装：[✓](https://github.com/MoonshotAI/MoBA) ・ リポジトリ内被引用：102  
   MoBAは各問い合わせが関連KVブロックを動的選択するMoE型疎注意で、1M文脈の品質を完全注意に近く保ちつつ注意層前処理を最大6.5倍高速化する。
 
 - **2025-02 · [FlexPrefill: A Context-Aware Sparse Attention Mechanism for Efficient Long-Sequence Inference](2025-2502.20766-flexprefill-a-context-aware-sparse-attention-mechanism-for-efficient-long-context-inference.md)**  
@@ -558,13 +558,13 @@
   実装：[✓](https://github.com/microsoft/MInference) ・ リポジトリ内被引用：198  
   注意ヘッドを3種の疎パターンへ割り当て、入力ごとの重要位置を動的推定して長文脈プリフィルを専用GPUカーネルで高速化する。
 
+- **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
+  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：79  
+  Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
+
 - **2024-09 · [RetrievalAttention: Accelerating Long-Context LLM Inference via Vector Retrieval](2024-2409.10516-retrievalattention-accelerating-long-context-llm-inference-via-vector-re.md)**  
   実装：✓ ・ リポジトリ内被引用：79  
   RetrievalAttentionは、長文脈の大規模言語モデルが自己回帰復号で過去のすべての鍵値を走査する負担を、現在の質問に重要なトークンだけを動的に検索することで減らす手法である。しかし注意の質問と鍵は異なる重み行列で射影され、ベクトル分布がずれるため、一般的な索引をそのまま使うと高い再現率を得るために鍵の30～50%を走査しなければならない。
-
-- **2024-10 · [SeerAttention: Learning Intrinsic Sparse Attention in Your LLMs](2024-2410.13276-seerattention.md)**  
-  実装：[✓](https://github.com/microsoft/SeerAttention) ・ リポジトリ内被引用：78  
-  Q/Kからブロック単位の重要度を学習する軽量ゲートとブロック疎FlashAttentionを組み合わせ、長文プリフィルの注意計算を動的に削減する。
 
 - **2024-06 · [Loki: Low-Rank Keys for Efficient Sparse Attention](2024-2406.02542-loki-low-rank-keys-for-efficient-sparse-attention.md)**  
   実装：[✓](https://github.com/hpcgroup/loki) ・ リポジトリ内被引用：52  
@@ -617,15 +617,15 @@
   LM-Infiniteは、短い系列で学習した大規模言語モデルを追加学習なしで長文脈へ外挿するため、推論時の注意範囲と位置距離の扱いだけを変更する方式である。論文は元の完全注意に対してデコードを約2.7倍高速化し、GPUメモリを最大7.5倍削減したと報告する。
 
 - **2023-07 · [LongNet: Scaling Transformers to 1,000,000,000 Tokens](2023-2307.02486-longnet-scaling-transformers-to-1-000-000-000-tokens.md)**  
-  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：43  
+  実装：[✓](https://aka.ms/LongNet) ・ リポジトリ内被引用：44  
   LongNetは、自己注意の計算量が系列長Nの二乗で増える問題を、拡張注意（dilated 注意機構）で解くTransformer変種である。
 
 - **2023-05 · [Landmark Attention: Random-Access Infinite Context Length for Transformers](2023-2305.16300-landmark-attention-random-access-infinite-context-length-for-transformer.md)**  
-  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：41  
+  実装：[✓](https://github.com/epfml/landmark-attention) ・ リポジトリ内被引用：42  
   目印注意（Landmark 注意機構）は、長い文章を一定長のブロックに分け、それぞれの末尾へ特別な目印トークンを挿入し、注意機構そのものに「どの過去ブロックを読み戻すべきか」を学習させる方式である。また、LLaMA-7Bを長さ512の文脈で15,000ステップ微調整した実験では、32Kを超える入力から埋め込んだ合言葉を検索できることを示した。
 
 - **2023-05 · [Dynamic Context Pruning for Efficient and Interpretable Autoregressive Transformers](2023-2305.15805-dynamic-context-pruning-for-efficient-and-interpretable-autoregressive-transformers.md)**  
-  実装：[✓](https://github.com/sanagno/adaptively_sparse_attention) ・ リポジトリ内被引用：31  
+  実装：[✓](https://github.com/sanagno/adaptively_sparse_attention) ・ リポジトリ内被引用：32  
   動的 Context 枝刈りは、生成の途中で「今後のトークンが参照する価値が低い」と学習した過去トークンを、注意対象とキー・バリュー（Key-Value; KV）キャッシュから動的に削除する。固定窓のように距離だけで落とさず、層ごとの学習可能な相互作用スコアで削除時点を決める。
 
 - **2023-10 · [HyperAttention: Long-context Attention in Near-Linear Time](2023-2310.05869-hyperattention-long-context-attention-in-near-linear-time.md)**  
@@ -653,7 +653,7 @@
 ### 6年前（2020-12〜2021-11）
 
 - **2020-12 · [SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning](2020-2012.09852-spatten-efficient-sparse-attention-architecture-with-cascade-token-and-head-pruning.md)**  
-  実装：✓ ・ リポジトリ内被引用：70  
+  実装：✓ ・ リポジトリ内被引用：71  
   累積注意確率とヘッド出力から重要トークン・ヘッドを動的にカスケード枝刈りし、確率分布に応じた段階的量子化と専用top-k回路で注意の計算・DRAM転送を同時に削減する。
 
 - **2021-10 · [Sanger: A Co-Design Framework for Enabling Sparse Attention using Reconfigurable Architecture](2021-0aaecf5ce8bb-sanger-a-co-design-framework-for-enabling-sparse-attention-using-reconfi.md)**  
@@ -672,26 +672,26 @@
   実装：✓ ・ リポジトリ内被引用：6  
   DSAは、入力ごとに異なる重要な注意位置を安価に予測し、残した位置に限り通常の注意計算を行うことで、密な注意の表現力を可能な限り維持しつつ計算を減らす。90%の注意重みを除く設定で、最初から学習したDSAの三課題平均精度は57.48%、同条件の密なTransformerは56.79%だった。
 
+- **2021-05 · [Poolingformer: Long Document Modeling with Pooling Attention](2021-2105.04371-poolingformer-long-document-modeling-with-pooling-attention.md)**  
+  実装：✓ ・ リポジトリ内被引用：5  
+  本論文は、長文を処理する変換器（Transformer）の自己注意を、近い単語を精密に参照する第一段と、遠い単語を圧縮して参照する第二段に分ける「Poolingformer」を提案する。
+
 - **2021-10 · [Scatterbrain: Unifying Sparse and Low-rank Attention Approximation](2021-2110.15343-scatterbrain-unifying-sparse-and-low-rank-attention-approximation.md)**  
   実装：[✓](https://github.com/HazyResearch/scatterbrain) ・ リポジトリ内被引用：4  
   Scatterbrainは、長い系列を処理するTransformerの注意機構を近似する際、疎な重要位置だけを計算する方法と、注意行列を低ランク構造で近似する方法を競合する選択肢ではなく、相補的な成分として同時利用する研究である。
 
-- **2021-05 · [Poolingformer: Long Document Modeling with Pooling Attention](2021-2105.04371-poolingformer-long-document-modeling-with-pooling-attention.md)**  
-  実装：✓ ・ リポジトリ内被引用：4  
-  本論文は、長文を処理する変換器（Transformer）の自己注意を、近い単語を精密に参照する第一段と、遠い単語を圧縮して参照する第二段に分ける「Poolingformer」を提案する。
-
 - **2021-03 · [A Practical Survey on Faster and Lighter Transformers](2021-2103.14636-a-practical-survey-on-faster-and-lighter-transformers.md)**  
-  実装：✓ ・ リポジトリ内被引用：3  
+  実装：✓ ・ リポジトリ内被引用：4  
   本論文は、Transformerの注意機構が系列長に対して二次の計算・記憶費用を持つという問題を起点に、モデル一般に使える効率化とTransformer固有の構造を変更する効率化を区別して、研究成果を整理した文献調査である。
 
 ### 7年前（2019-12〜2020-11）
 
 - **2020-07 · [Big Bird: Transformers for Longer Sequences](2020-2007.14062-big-bird-transformers-for-longer-sequences.md)**  
-  実装：✓ ・ リポジトリ内被引用：231  
+  実装：✓ ・ リポジトリ内被引用：233  
   Big Birdは、系列長に対して二次の計算・メモリ費用が生じる完全自己注意を、局所窓、ランダム接続、少数の大域トークンからなる疎注意へ置き換える長文処理モデルである。各位置が全位置を直接参照する代わりに、近傍の限られた位置、ランダムに選んだ遠距離位置、全体と接続する大域位置だけを見る。論文は同程度のハードウェアで従来より最大8倍長い系列を扱えると報告する。
 
 - **2020-01 · [Reformer: The Efficient Transformer](2020-2001.04451-reformer-the-efficient-transformer.md)**  
-  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：180  
+  実装：[✓](https://github.com/google/trax/tree/master/trax/models/reformer) ・ リポジトリ内被引用：184  
   第一の制約は、全トークン対の内積を求める標準自己注意が系列長の二乗に比例する計算を要することである。
 
 - **2020-03 · [Efficient Content-Based Sparse Attention with Routing Transformers](2020-2003.05997-efficient-content-based-sparse-attention-with-routing-transformers.md)**  

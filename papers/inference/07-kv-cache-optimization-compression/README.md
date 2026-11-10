@@ -1484,7 +1484,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   KIVIは、自己注意の鍵・値キャッシュ（KV キャッシュ）を追加学習なしで2ビットに圧縮する方式である。Llama-2-7Bを用いた単一A100 80GBの実機実験では、ピークメモリ（モデル重みを含む）が最大2.6分の1となり、同程度のメモリ上限で最大4倍のバッチを処理できる。
 
 - **2024-05 · [DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model](2024-2405.04434-deepseek-v2-mla.md)**  
-  実装：✓ ・ リポジトリ内被引用：338  
+  実装：✓ ・ リポジトリ内被引用：340  
   通常の多頭注意（Multi-Head 注意機構; MHA）では、系列長が伸びるほどKVキャッシュが線形に増え、GPU高帯域メモリ（High Bandwidth メモリ; HBM）に置ける同時要求数や最大文脈長を圧迫する。
 
 - **2024-06 · [PyramidKV: Dynamic KV Cache Compression based on Pyramidal Information Funneling](2024-2406.02069-pyramidkv.md)**  
@@ -1559,13 +1559,13 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   実装：✓ ・ リポジトリ内被引用：53  
   本稿は、Luohe Shi、Hongyi Zhang、Yao Yao、Zuchao Li、Hai Zhaoによる鍵・値キャッシュ（Key-Value Cache、以下KVキャッシュ）の最適化手法に関する総説を、2024年11月20日の第4版を一次資料として再監査した解説である。
 
+- **2024-02 · [Get More with LESS: Synthesizing Recurrence with KV Cache Compression for Efficient LLM Inference](2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md)**  
+  実装：[✓](https://github.com/hdong920/LESS) ・ リポジトリ内被引用：51  
+  LESSは、キー・値キャッシュ（Key-Value Cache; KVキャッシュ）の追い出しを「残すか捨てるか」の二択にしない。重要なトークンは従来どおり疎KVキャッシュへ明示的に残し、追い出すトークンは固定サイズの低ランク状態へ順次圧縮する。次の注意計算では両方を合成するため、疎キャッシュから消えたトークンにも低解像度ながら参照経路が残る。
+
 - **2024-10 · [Not All Heads Matter: A Head-Level KV Cache Compression Method with Integrated Retrieval and Reasoning](2024-2410.19258-not-all-heads-matter-a-head-level-kv-cache-compression-method-with-integ.md)**  
   実装：[✓](https://github.com/FYYFU/HeadKV) ・ リポジトリ内被引用：50  
   従来の圧縮方式は、最近の注意得点を利用して残すトークンを選んだり、層ごとに予算を変えたりする。論文は文脈QAの代表条件で元キャッシュの約1.5%を保持しながら完全キャッシュ性能の97%を得たと報告するが、これは全タスク・全モデルで97%という保証ではない。
-
-- **2024-02 · [Get More with LESS: Synthesizing Recurrence with KV Cache Compression for Efficient LLM Inference](2024-2402.09398-get-more-with-less-synthesizing-recurrence-with-kv-cache-compression-for-efficient-llm-inference.md)**  
-  実装：[✓](https://github.com/hdong920/LESS) ・ リポジトリ内被引用：50  
-  LESSは、キー・値キャッシュ（Key-Value Cache; KVキャッシュ）の追い出しを「残すか捨てるか」の二択にしない。重要なトークンは従来どおり疎KVキャッシュへ明示的に残し、追い出すトークンは固定サイズの低ランク状態へ順次圧縮する。次の注意計算では両方を合成するため、疎キャッシュから消えたトークンにも低解像度ながら参照経路が残る。
 
 - **2024-03 · [QAQ: Quality Adaptive Quantization for LLM KV Cache](2024-2403.04643-qaq-quality-adaptive-quantization-for-llm-kv-cache.md)**  
   実装：[✓](https://github.com/ClubieDong/KVCacheQuantization) ・ リポジトリ内被引用：49  
@@ -1684,7 +1684,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   Locretは、長文脈LLMの推論で大きくなるキー・バリューキャッシュ（KVキャッシュ）を、必要な情報だけ残して逐次削除する方式である。原著は、Phi-3-mini-128Kで最大20倍超、Llama-3.1-8B-instructで8倍超のKV圧縮を報告する。
 
 - **2024-09 · [Small Language Models: Survey, Measurements, and Insights](2024-2409.15790-small-language-models-survey-measurements-and-insights.md)**  
-  実装：[✓](https://github.com/UbiquitousLearning/SLM_Survey) ・ リポジトリ内被引用：10  
+  実装：[✓](https://github.com/UbiquitousLearning/SLM_Survey) ・ リポジトリ内被引用：11  
   推論を高速化する新しいアルゴリズムを提案する論文ではない。同程度のパラメータ数でもQwen2-0.5Bの初回トークン時間はQwen1.5-0.5Bの1.46倍であり、Qwen1.5-0.5Bはパラメータが25.4%多いにもかかわらずJetson上では31.9%速い。
 
 - **2024-09 · [Inf-MLLM: Efficient Streaming Inference of Multimodal Large Language Models on a Single GPU](2024-2409.09086-inf-mllm-efficient-streaming-inference.md)**  
@@ -1726,11 +1726,11 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
 ### 4年前（2022-12〜2023-11）
 
 - **2023-09 · [Efficient Streaming Language Models with Attention Sinks](2023-2309.17453-streamingllm.md)**  
-  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：691  
+  実装：[✓](https://github.com/mit-han-lab/streaming-llm) ・ リポジトリ内被引用：693  
   先頭数トークンを注意シンクとして固定保持し、直近トークンだけをローリングKVキャッシュに残すことで、再学習なしに一定メモリで400万トークン超のストリーミング生成を安定化する。
 
 - **2023-06 · [H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models](2023-2306.14048-h2o.md)**  
-  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：657  
+  実装：[✓](https://github.com/FMInference/H2O) ・ リポジトリ内被引用：659  
   累積注意のヘビーヒッターと最新トークンを動的保持し、20%程度のKV予算で品質を維持しながらメモリ・スループットを改善する。
 
 - **2023-05 · [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](2023-2305.13245-gqa.md)**  
@@ -1742,7 +1742,7 @@ CPU DRAM・別GPUのHBM・storageへKVを置く方法や、attention計算をGPU
   FastGenは注意ヘッドごとの構造を一度だけ診断してKVキャッシュ保持方針を変え、追加学習なしでメモリ削減と長系列生成の高速化を両立する。
 
 - **2023-05 · [Scissorhands: Exploiting the Persistence of Importance Hypothesis for LLM KV Cache Compression at Test Time](2023-2305.17118-scissorhands.md)**  
-  実装：✓ ・ リポジトリ内被引用：239  
+  実装：✓ ・ リポジトリ内被引用：240  
   Scissorhandsは、過去の注意重みが大きかったトークンは将来の生成でも高い注意を受けやすいという「重要性の持続性仮説（Persistence of Importance Hypothesis）」を提案する。
 
 - **2023-06 · [Augmenting Language Models with Long-Term Memory](2023-2306.07174-augmenting-language-models-with-long-term-memory.md)**  

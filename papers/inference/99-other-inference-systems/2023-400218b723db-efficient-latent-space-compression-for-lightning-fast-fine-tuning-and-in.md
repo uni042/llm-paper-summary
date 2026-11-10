@@ -1,44 +1,89 @@
 ---
 canonical_id: DOI:10.3390/make5030045
 doi: 10.3390/make5030045
-title: 'Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models'
+title: Efficient Latent Space Compression for Lightning-Fast Fine-Tuning and Inference of Transformer-Based Models
 authors:
-  - Ala Alam Falaki
-  - Robin Gras
+- Ala Alam Falaki
+- Robin Gras
 published: '2023-07-30'
-publication: 'Machine Learning and Knowledge Extraction 5(3), 847–867 (2023)'
+publication: Machine Learning and Knowledge Extraction 5(3), 847–867 (2023)
 publication_type: journal-paper
 publication_status: peer-reviewed
 source: https://www.mdpi.com/2504-4990/5/3/45
 sources:
-  - https://www.mdpi.com/2504-4990/5/3/45
-  - https://doi.org/10.3390/make5030045
+- https://www.mdpi.com/2504-4990/5/3/45
+- https://doi.org/10.3390/make5030045
 code: https://github.com/AlaFalaki/compressedBART
-implementation: 'BART-baseなどのencoder出力を事前学習済み6層線形autoencoderで圧縮し、圧縮後の次元に合わせてdecoderを再学習。NVIDIA V100 32GBで要約・翻訳・分類を比較。'
-summary: 'encoder出力の隠れ次元を事前学習済みautoencoderで縮め、その潜在次元に合わせてdecoderを小型化するseq2seq圧縮方式。BART-baseの要約ではdecoder約96Mから40M、推論時間5時間9分から2時間20分となる一方、ROUGE-1は相対4.5%低下した。翻訳では推論改善9%、分類では実質的な改善がない。'
-list_summary: '事前学習済みautoencoderでencoder表現を圧縮してBARTのdecoderを小型化。要約は約2.2倍高速だが、翻訳の利得は小さく分類には有効でない。'
+implementation: BART-baseなどのencoder出力を事前学習済み6層線形autoencoderで圧縮し、圧縮後の次元に合わせてdecoderを再学習。NVIDIA V100 32GBで要約・翻訳・分類を比較。
+summary: encoder出力の隠れ次元を事前学習済みautoencoderで縮め、その潜在次元に合わせてdecoderを小型化するseq2seq圧縮方式。BART-baseの要約ではdecoder約96Mから40M、推論時間5時間9分から2時間20分となる一方、ROUGE-1は相対4.5%低下した。翻訳では推論改善9%、分類では実質的な改善がない。
+list_summary: 事前学習済みautoencoderでencoder表現を圧縮してBARTのdecoderを小型化。要約は約2.2倍高速だが、翻訳の利得は小さく分類には有効でない。
 last_checked: '2026-10-28'
 worker_id: scheduled-chat-45
 scheduled_slot: '45'
-worker_run_key: '20261029-0345-scheduled-chat-45/r02'
+worker_run_key: 20261029-0345-scheduled-chat-45/r02
 worker_completed_at: '2026-10-29T03:56:36+09:00'
 reference_main_sha: 0fd4b6f1183da15e8d643c43ed273db344a9c978
 under16kb_reaudit_target_path: papers/inference/99-other-inference-systems/2023-400218b723db-efficient-latent-space-compression-for-lightning-fast-fine-tuning-and-in.md
 under16kb_reaudit_source_git_blob_sha: 2e86739723600f6408e2fbad9cca96ee90e06f69
 under16kb_reaudit_source_sha256: 9acc85ee971de6988a9edf4e288f72479149541f5b10ff0819e07ab5956f07e7
-under16kb_reaudit_version: '2026-10-07-v1'
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 references:
-  - canonical_id: DOI:10.3390/make5030045
-    doi: 10.3390/make5030045
-  - canonical_id: arXiv:1910.13461
-    arxiv_id: '1910.13461'
-references_checked_at: '2026-10-28'
-references_source: 'publisher-primary-article'
+- canonical_id: DOI:10.1109/icmla55696.2022.00030
+  doi: 10.1109/icmla55696.2022.00030
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: DOI:10.18653/v1/p19-1355
+  doi: 10.18653/v1/p19-1355
+- canonical_id: arXiv:2101.03961
+- canonical_id: DOI:10.18653/v1/2020.acl-main.703
+  doi: 10.18653/v1/2020.acl-main.703
+- canonical_id: DOI:10.1016/j.neucom.2013.09.055
+  doi: 10.1016/j.neucom.2013.09.055
+- canonical_id: DOI:10.18653/v1/2022.acl-long.207
+  doi: 10.18653/v1/2022.acl-long.207
+- canonical_id: DOI:10.1162/tacl_a_00343
+  doi: 10.1162/tacl_a_00343
+- canonical_id: DOI:10.18653/v1/d18-1045
+  doi: 10.18653/v1/d18-1045
+- canonical_id: DOI:10.18653/v1/2020.coling-main.287
+  doi: 10.18653/v1/2020.coling-main.287
+- canonical_id: DOI:10.18653/v1/2021.acl-long.227
+  doi: 10.18653/v1/2021.acl-long.227
+- canonical_id: DOI:10.1145/1150402.1150464
+  doi: 10.1145/1150402.1150464
+- canonical_id: arXiv:2002.08307
+  doi: 10.18653/v1/2020.repl4nlp-1.18
+- canonical_id: arXiv:1905.10650
+- canonical_id: DOI:10.18653/v1/2020.emnlp-main.259
+  doi: 10.18653/v1/2020.emnlp-main.259
+- canonical_id: arXiv:2109.04838
+  doi: 10.18653/v1/2021.emnlp-main.829
+- canonical_id: arXiv:2007.14062
+- canonical_id: arXiv:2001.04451
+- canonical_id: DOI:10.18653/v1/2020.acl-main.195
+  doi: 10.18653/v1/2020.acl-main.195
+- canonical_id: arXiv:2011.14203
+  doi: 10.1145/3466752.3480095
+- canonical_id: DOI:10.1162/neco.1997.9.8.1735
+  doi: 10.1162/neco.1997.9.8.1735
+- canonical_id: DOI:10.1109/5.726791
+  doi: 10.1109/5.726791
+- canonical_id: DOI:10.1007/s11263-007-0075-7
+  doi: 10.1007/s11263-007-0075-7
+- canonical_id: DOI:10.3115/1073083.1073135
+  doi: 10.3115/1073083.1073135
+- canonical_id: DOI:10.18653/v1/n18-1065
+  doi: 10.18653/v1/n18-1065
+- canonical_id: DOI:10.18653/v1/w16-2301
+  doi: 10.18653/v1/w16-2301
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
 last_audited: null
 audit_version: 0
+references_total: 55
 ---
 
 # Efficient Latent Space Compression：潜在表現の圧縮と小型デコーダによるseq2seq推論高速化

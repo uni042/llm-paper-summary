@@ -2,36 +2,25 @@
 canonical_id: DOI:10.1145/3725843.3756078
 doi: 10.1145/3725843.3756078
 title: 'LLM.265: Video Codecs are Secretly Tensor Codecs'
-summary: >-
-  LLM.265はH.264/H.265などの動画符号化器を大規模言語モデルの重み、KVキャッシュ、
-  パイプライン通信の活性値を圧縮する汎用テンソル符号化器として再利用する方式。
-  GPUのNVENC/NVDECを利用し、校正不要かつ平均2.88ビットなど非整数の実効ビット率を実現。
-  LLaMA-3-70Bの128k文脈では重み・KVを2.9ビット、通信活性値を3.5ビットに圧縮し、
-  四基の8GB機器での推論を提示する。PIQAは81.5%から80.7%へ低下し、
-  WikiText-2の困惑度は7.28から7.77へ悪化。既存GPUの動画エンジンは約1.1GB/sに
-  制限され、ハードウェア改善の効果は合成・シミュレーションを含む。
-list_summary: >-
-  GPU動画エンジンをLLMの重み・KVキャッシュ・通信活性値の圧縮に転用し、70Bモデルの長文脈推論のメモリ容量と通信帯域を削減する方式。
+summary: LLM.265はH.264/H.265などの動画符号化器を大規模言語モデルの重み、KVキャッシュ、 パイプライン通信の活性値を圧縮する汎用テンソル符号化器として再利用する方式。 GPUのNVENC/NVDECを利用し、校正不要かつ平均2.88ビットなど非整数の実効ビット率を実現。 LLaMA-3-70Bの128k文脈では重み・KVを2.9ビット、通信活性値を3.5ビットに圧縮し、 四基の8GB機器での推論を提示する。PIQAは81.5%から80.7%へ低下し、 WikiText-2の困惑度は7.28から7.77へ悪化。既存GPUの動画エンジンは約1.1GB/sに 制限され、ハードウェア改善の効果は合成・シミュレーションを含む。
+list_summary: GPU動画エンジンをLLMの重み・KVキャッシュ・通信活性値の圧縮に転用し、70Bモデルの長文脈推論のメモリ容量と通信帯域を削減する方式。
 authors:
-  - Ceyu Xu
-  - Yongji Wu
-  - Xinyu Yang
-  - Beidi Chen
-  - Matthew Lentz
-  - Danyang Zhuo
-  - Lisa Wu Wills
+- Ceyu Xu
+- Yongji Wu
+- Xinyu Yang
+- Beidi Chen
+- Matthew Lentz
+- Danyang Zhuo
+- Lisa Wu Wills
 published: '2025-10-17'
-publication: '58th IEEE/ACM International Symposium on Microarchitecture (MICRO 2025)'
+publication: 58th IEEE/ACM International Symposium on Microarchitecture (MICRO 2025)
 publication_type: conference
 publication_status: published
 source: https://danyangzhuo.com/papers/MICRO25-LLM265.pdf
 sources:
-  - https://danyangzhuo.com/papers/MICRO25-LLM265.pdf
-  - https://doi.org/10.1145/3725843.3756078
-implementation: >-
-  GPUに搭載されたNVENC/NVDEC動画符号化・復号化エンジンを利用する。
-  LLaMA-2-7B、LLaMA-3-70Bの重み、KVキャッシュ、パイプライン通信活性値を評価。
-  専用三機能符号化器の設計はASIC合成・配置配線とシミュレーションによる検討を含む。
+- https://danyangzhuo.com/papers/MICRO25-LLM265.pdf
+- https://doi.org/10.1145/3725843.3756078
+implementation: GPUに搭載されたNVENC/NVDEC動画符号化・復号化エンジンを利用する。 LLaMA-2-7B、LLaMA-3-70Bの重み、KVキャッシュ、パイプライン通信活性値を評価。 専用三機能符号化器の設計はASIC合成・配置配線とシミュレーションによる検討を含む。
 code: https://github.com/Entropy-xcy/llm.265
 last_checked: '2026-10-22'
 worker_id: scheduled-chat-00
@@ -41,13 +30,121 @@ reference_main_sha: 45ada827660f092b36cfe5500eacbb8b15e5e017
 quality_self_review_passed: true
 quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 references:
-  - canonical_id: arXiv:2210.17323
-  - canonical_id: arXiv:2306.00978
-  - canonical_id: arXiv:2404.00456
-references_checked_at: '2026-10-22'
-references_source: 'primary_pdf_selected_references; not exhaustive'
+- canonical_id: DOI:10.1145/3620665.3640366
+  arxiv_id: '2312.06632'
+- canonical_id: arXiv:2401.15024
+  arxiv_id: '2401.15024'
+- canonical_id: arXiv:2404.00456
+  arxiv_id: '2404.00456'
+- canonical_id: arXiv:2502.13923
+  arxiv_id: '2502.13923'
+- canonical_id: arXiv:2307.13304
+- canonical_id: arXiv:1604.00981
+  arxiv_id: '1604.00981'
+- canonical_id: DOI:10.1109/mse.2017.7945071
+  doi: 10.1109/mse.2017.7945071
+- canonical_id: arXiv:1803.05457
+  arxiv_id: '1803.05457'
+- canonical_id: arXiv:2412.19437
+  arxiv_id: '2412.19437'
+- canonical_id: arXiv:2208.07339
+  arxiv_id: '2208.07339'
+- canonical_id: arXiv:2305.14314
+  arxiv_id: '2305.14314'
+- canonical_id: arXiv:2402.09398
+  arxiv_id: '2402.09398'
+- canonical_id: arXiv:2010.11929
+  arxiv_id: '2010.11929'
+- canonical_id: arXiv:2210.17323
+  arxiv_id: '2210.17323'
+- canonical_id: arXiv:2101.00027
+  arxiv_id: '2101.00027'
+- canonical_id: DOI:10.5281/zenodo.10256836
+  doi: 10.5281/zenodo.10256836
+- canonical_id: arXiv:2208.14286
+  arxiv_id: '2208.14286'
+- canonical_id: arXiv:1510.00149
+  arxiv_id: '1510.00149'
+- canonical_id: DOI:10.1145/3341301.3359646
+  arxiv_id: '1806.03377'
+- canonical_id: SemanticScholar:d79a26226393f687ddbc375e32055b40b8ad8d38
+- canonical_id: arXiv:2306.07629
+  arxiv_id: '2306.07629'
+- canonical_id: DOI:10.1145/3620665.3640356
+  doi: 10.1145/3620665.3640356
+- canonical_id: DOI:10.1145/3725843.3756078
+  arxiv_id: '2104.06069'
+- canonical_id: arXiv:2306.00978
+  arxiv_id: '2306.00978'
+- canonical_id: arXiv:1712.01887
+  arxiv_id: '1712.01887'
+- canonical_id: arXiv:2405.04532
+  arxiv_id: '2405.04532'
+- canonical_id: arXiv:2310.16836
+- canonical_id: arXiv:2307.06281
+  arxiv_id: '2307.06281'
+- canonical_id: arXiv:2305.17888
+  arxiv_id: '2305.17888'
+- canonical_id: arXiv:2405.16406
+  arxiv_id: '2405.16406'
+- canonical_id: arXiv:2402.19173
+  arxiv_id: '2402.19173'
+- canonical_id: DOI:10.1109/tcsvt.2003.815173
+  doi: 10.1109/tcsvt.2003.815173
+- canonical_id: arXiv:1609.07843
+  arxiv_id: '1609.07843'
+- canonical_id: arXiv:1809.02789
+  arxiv_id: '1809.02789'
+- canonical_id: arXiv:2108.08877
+  arxiv_id: '2108.08877'
+- canonical_id: arXiv:2303.08774
+  arxiv_id: '2303.08774'
+- canonical_id: arXiv:2405.20835
+  arxiv_id: '2405.20835'
+- canonical_id: arXiv:2310.05421
+  arxiv_id: '2310.05421'
+- canonical_id: DOI:10.1109/micro56248.2022.00073
+  doi: 10.1109/micro56248.2022.00073
+- canonical_id: arXiv:2009.03393
+  arxiv_id: '2009.03393'
+- canonical_id: arXiv:2310.10537
+  arxiv_id: '2310.10537'
+- canonical_id: arXiv:2308.12950
+  arxiv_id: '2308.12950'
+- canonical_id: DOI:10.1109/tcsvt.2012.2221191
+  doi: 10.1109/tcsvt.2012.2221191
+- canonical_id: arXiv:2404.11912
+  arxiv_id: '2404.11912'
+- canonical_id: arXiv:2306.11695
+  arxiv_id: '2306.11695'
+- canonical_id: arXiv:2410.09426
+  arxiv_id: '2410.09426'
+- canonical_id: arXiv:2102.02888
+  arxiv_id: '2102.02888'
+- canonical_id: arXiv:2307.09288
+  arxiv_id: '2307.09288'
+- canonical_id: arXiv:2402.04396
+  arxiv_id: '2402.04396'
+- canonical_id: arXiv:1804.07461
+  arxiv_id: '1804.07461'
+- canonical_id: arXiv:2206.07682
+  arxiv_id: '2206.07682'
+- canonical_id: DOI:10.1109/ispass57527.2023.00035
+  doi: 10.1109/ispass57527.2023.00035
+- canonical_id: arXiv:2211.10438
+  arxiv_id: '2211.10438'
+- canonical_id: arXiv:2402.11295
+  arxiv_id: '2402.11295'
+- canonical_id: arXiv:1905.07830
+  arxiv_id: '1905.07830'
+- canonical_id: arXiv:1905.11881
+  arxiv_id: '1905.11881'
+- canonical_id: arXiv:2306.14048
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
 last_audited: null
 audit_version: 0
+references_total: 89
 ---
 
 # LLM.265：動画符号化器を汎用テンソル圧縮器として使うLLM推論基盤

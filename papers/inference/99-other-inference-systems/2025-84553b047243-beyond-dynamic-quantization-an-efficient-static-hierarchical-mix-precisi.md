@@ -1,36 +1,56 @@
 ---
-canonical_id: "DOI:10.18653/v1/2025.emnlp-industry.175"
-title: "Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression"
+canonical_id: DOI:10.18653/v1/2025.emnlp-industry.175
+title: 'Beyond Dynamic Quantization: An Efficient Static Hierarchical Mix-precision Framework for Near-Lossless LLM Compression'
 authors:
-  - Yi Zhang
-  - Kai Zhang
-  - Zheyang Li
-  - Wenming Tan
-  - Ye Ren
-  - Jilin Hu
-published: "2025-11"
-publication: "Proceedings of EMNLP 2025: Industry Track, pp. 2573–2587"
-publication_type: "conference-paper"
-publication_status: "published"
-source: "https://aclanthology.org/2025.emnlp-industry.175.pdf"
+- Yi Zhang
+- Kai Zhang
+- Zheyang Li
+- Wenming Tan
+- Ye Ren
+- Jilin Hu
+published: 2025-11
+publication: 'Proceedings of EMNLP 2025: Industry Track, pp. 2573–2587'
+publication_type: conference-paper
+publication_status: published
+source: https://aclanthology.org/2025.emnlp-industry.175.pdf
 sources:
-  - "https://aclanthology.org/2025.emnlp-industry.175.pdf"
-  - "https://aclanthology.org/2025.emnlp-industry.175/"
-doi: "10.18653/v1/2025.emnlp-industry.175"
-summary: "SHMQはLLMの静的混合精度量子化を、層間の高精度予算配分、層内の重要チャネル選択、感度選択と並べ替えの分離という3段階で設計する。128件×2048トークンの較正データを用いたW4.8A8条件で、Qwen2.5-7B-Instructの6課題平均75.58%（FP16は75.71%）を達成。単一GPUの線形層ではFP16比1.83〜4.21倍、NOVATEK NT98690 NPUの線形層では16ビット整数基準比2.77〜2.81倍の高速化を報告するが、LLM全体の生成速度を同倍率で測定した結果ではない。"
-list_summary: "静的W4A8/W8A8混合量子化で、層別感度配分・チャネル選択・分布を揃える並べ替えを統合。Qwen2.5-7Bの6課題平均75.58%対FP16 75.71%、層単位の実機速度を評価。"
-lineage: "04-quantization"
-implementation: "事後量子化。Fisher近似と活性共分散による層・チャネル感度の較正、静的W4A8/W8A8混合精度、前段演算へのチャネル並べ替え融合を説明。単一GPU線形層とNOVATEK NT98690 NPUの層単位遅延を報告。公式コードの公開URLは一次資料から確認できない。"
+- https://aclanthology.org/2025.emnlp-industry.175.pdf
+- https://aclanthology.org/2025.emnlp-industry.175/
+doi: 10.18653/v1/2025.emnlp-industry.175
+summary: SHMQはLLMの静的混合精度量子化を、層間の高精度予算配分、層内の重要チャネル選択、感度選択と並べ替えの分離という3段階で設計する。128件×2048トークンの較正データを用いたW4.8A8条件で、Qwen2.5-7B-Instructの6課題平均75.58%（FP16は75.71%）を達成。単一GPUの線形層ではFP16比1.83〜4.21倍、NOVATEK NT98690 NPUの線形層では16ビット整数基準比2.77〜2.81倍の高速化を報告するが、LLM全体の生成速度を同倍率で測定した結果ではない。
+list_summary: 静的W4A8/W8A8混合量子化で、層別感度配分・チャネル選択・分布を揃える並べ替えを統合。Qwen2.5-7Bの6課題平均75.58%対FP16 75.71%、層単位の実機速度を評価。
+lineage: 04-quantization
+implementation: 事後量子化。Fisher近似と活性共分散による層・チャネル感度の較正、静的W4A8/W8A8混合精度、前段演算へのチャネル並べ替え融合を説明。単一GPU線形層とNOVATEK NT98690 NPUの層単位遅延を報告。公式コードの公開URLは一次資料から確認できない。
 code: null
-last_checked: "2026-10-29"
-worker_id: "scheduled-chat-30"
-worker_completed_at: "2026-10-29T16:30:00+09:00"
-worker_run_key: "20261029-1630-scheduled-chat-30/r01"
-reference_main_sha: "420e7a10656dcc97db404b9dbcfd90c54c7e4662"
+last_checked: '2026-10-29'
+worker_id: scheduled-chat-30
+worker_completed_at: '2026-10-29T16:30:00+09:00'
+worker_run_key: 20261029-1630-scheduled-chat-30/r01
+reference_main_sha: 420e7a10656dcc97db404b9dbcfd90c54c7e4662
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2211.10438
+- canonical_id: arXiv:2406.01721
+- canonical_id: arXiv:2308.13137
+- canonical_id: arXiv:2306.03078
+- canonical_id: arXiv:2405.14917
+- canonical_id: arXiv:2403.12544
+- canonical_id: arXiv:2405.15025
+- canonical_id: arXiv:2301.00774
+- canonical_id: arXiv:2409.16694
+- canonical_id: arXiv:2310.19102
+- canonical_id: arXiv:2309.17453
+- canonical_id: arXiv:2402.02446
+- canonical_id: arXiv:2405.16406
+- canonical_id: arXiv:2404.00456
+- canonical_id: arXiv:2402.17762
+- canonical_id: arXiv:2306.07629
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 3
 ---
 
 # SHMQ：静的混合精度量子化を層間・層内の感度で設計する

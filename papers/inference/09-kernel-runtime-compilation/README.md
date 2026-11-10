@@ -731,11 +731,11 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   従来のFlashAttention系列は、注意重みの巨大な中間行列を高帯域メモリ（HBM）に書き戻さず、共有メモリとレジスタ内でタイルごとに処理することでメモリ転送を削減した。
 
 - **2024-04 · [PyTorch 2: Faster Machine Learning Through Dynamic Python Bytecode Transformation and Graph Compilation](2024-d5ec11366816-pytorch-2-faster-machine-learning-through-dynamic-python-bytecode-transf.md)**  
-  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：50  
+  実装：[✓](https://github.com/pytorch/pytorch) ・ リポジトリ内被引用：51  
   Pythonの即時実行の柔軟性を残して演算グラフを実行時に取り出し、TritonやC++へコンパイルする仕組みを設計・評価した。
 
 - **2024-06 · [S-LoRA: Serving Thousands of Concurrent LoRA Adapters](2024-2311.03285-s-lora-serving-thousands-of-concurrent-lora-adapters.md)**  
-  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：42  
+  実装：[✓](https://github.com/S-LoRA/S-LoRA) ・ リポジトリ内被引用：43  
   しかし、数千の個別化モデルを同時提供する場合、アダプタの保存先、要求ごとの重み切替、系列長に応じて伸びる鍵・値キャッシュ、異なる低ランク行列を使う要求のバッチ化が問題になる。アダプタを基盤モデルへ統合して個別のモデル重みを作る方式では、基盤部分を要求間で共有してまとめて計算する機会を失う。
 
 - **2024-04 · [CATS: Contextually-Aware Thresholding for Sparsity in Large Language Models](2024-2404.08763-cats-contextually-aware-thresholding-for-sparsity-in-large-language-mode.md)**  
@@ -814,6 +814,10 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   実装：[✓](https://github.com/SqueezeBits/QUICK) ・ リポジトリ内被引用：3  
   4ビットに量子化した大規模言語モデルでは、重みの保存容量を減らせても、行列積の際には高精度の活性値と掛け合わせるために重みを半精度へ戻す処理が必要になる。原著の行列積単体の比較ではバッチ256でAutoAWQのカーネル比1.33〜1.91倍、モデル生成の比較では最大1.94倍の処理量を報告した。
 
+- **2024-06 · [Optimized Speculative Sampling for GPU Hardware Accelerators](2024-2406.11016-optimized-speculative-sampling-for-gpu-hardware-accelerators.md)**  
+  実装：[✓](https://github.com/dwgnr/optimized-speculative-sampling) ・ リポジトリ内被引用：2  
+  投機的復号では、小型のドラフトモデルが生成した複数の候補トークンを大型のターゲットモデルが並列に検証する。確率的な投機的標本化（投機的 sampling）では、ドラフト分布とターゲット分布から候補の受理確率を計算し、拒否した位置では補正分布から再標本化する。本論文は、モデルを変更せず、投機的標本化の検証・補正部分をGPU向けに再実装する。
+
 - **2024-11 · [Freeze-Omni: A Smart and Low Latency Speech-to-speech Dialogue Model with Frozen LLM](2024-2411.00774-freeze-omni-a-smart-and-low-latency-speech-to-speech-dialogue-model-with.md)**  
   実装：[✓](https://github.com/VITA-MLLM/Freeze-Omni) ・ リポジトリ内被引用：1  
   さらに、音声認識、文章生成、音声合成を独立したシステムとして直列に接続すると、応答開始までの待ち時間が積み重なる。主要結果として、音声入力によるWebQuestionsの正答率は44.73%で、同じ基盤LLMに文章を入力した45.13%と近い。
@@ -821,10 +825,6 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 - **2024-10 · [MatMamba: A Matryoshka State Space Model](2024-2410.06718-matmamba-a-matryoshka-state-space-model.md)**  
   実装：[✓](https://github.com/ScaledFoundations/MatMamba) ・ リポジトリ内被引用：1  
   MatMambaは最大サイズのモデルの先頭部分に小さなモデルのパラメータを含める構造を採り、複数の粒度を共同学習することで、モデルの再学習なしにサイズを選べるようにする。原著§4.1.2は計算量を55%減らしつつ、検索精度の低下を0.5%未満に抑えた例を報告する。
-
-- **2024-06 · [Optimized Speculative Sampling for GPU Hardware Accelerators](2024-2406.11016-optimized-speculative-sampling-for-gpu-hardware-accelerators.md)**  
-  実装：[✓](https://github.com/dwgnr/optimized-speculative-sampling) ・ リポジトリ内被引用：1  
-  投機的復号では、小型のドラフトモデルが生成した複数の候補トークンを大型のターゲットモデルが並列に検証する。確率的な投機的標本化（投機的 sampling）では、ドラフト分布とターゲット分布から候補の受理確率を計算し、拒否した位置では補正分布から再標本化する。本論文は、モデルを変更せず、投機的標本化の検証・補正部分をGPU向けに再実装する。
 
 - **2024-11 · [TATAA: Programmable Mixed-Precision Transformer Acceleration with a Transformable Arithmetic Architecture](2024-2411.03697-tataa-programmable-mixed-precision-transformer-acceleration-with-a-trans.md)**  
   実装：✓ ・ リポジトリ内被引用：0  
@@ -845,15 +845,15 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 4年前（2022-12〜2023-11）
 
 - **2023-07 · [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](2023-2307.08691-flashattention-2.md)**  
-  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：517  
+  実装：[✓](https://github.com/Dao-AILab/flash-attention) ・ リポジトリ内被引用：518  
   初代FlashAttentionのオンライン・ソフトマックスとタイル分割を保ちつつ、行列積以外の演算とブロック・ワープ間の仕事分割を再設計し、A100で理論演算性能の最大73%と初代比約2倍の高速化を達成する。
 
 - **2023-10 · [Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time](2023-2310.17157-deja-vu-contextual-sparsity-for-efficient-llms-at-inference-time.md)**  
-  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：109  
+  実装：[✓](https://github.com/FMInference/DejaVu) ・ リポジトリ内被引用：111  
   密なモデルから常に同じ重みを削除する静的枝刈りでは、入力に応じて必要な知識が変わるため、文章生成や文脈内学習の品質を損ない得る。
 
 - **2023-11 · [FlashDecoding++: Faster Large Language Model Inference on GPUs](2023-2311.01282-flashdecoding-faster-large-language-model-inference-on-gpus.md)**  
-  実装：✓ ・ リポジトリ内被引用：51  
+  実装：✓ ・ リポジトリ内被引用：52  
   FlashDecoding++は、自己回帰型の大規模言語モデルで一語ずつ出力する復号段階を、GPUの演算資源とメモリ階層に合わせて高速化する推論エンジンである。論文が分離した三つの障害は、長い注意系列を分割したときの部分ソフトマックス結合同期、少数トークンを入力する細長い行列積のゼロ埋め、行列形状とGPUの種類を無視する固定実行方式である。
 
 - **2023-09 · [Flash-LLM: Enabling Cost-Effective and Highly-Efficient Large Generative Model Inference with Unstructured Sparsity](2023-2309.10285-flash-llm-enabling-cost-effective-and-highly-efficient-large-generative-.md)**  
@@ -879,7 +879,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
 ### 5年前（2021-12〜2022-11）
 
 - **2022-05 · [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](2022-2205.14135-flashattention.md)**  
-  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：723  
+  実装：[✓](https://github.com/HazyResearch/flash-attention) ・ リポジトリ内被引用：725  
   タイル化、オンラインsoftmax、逆伝播時再計算により二次元注意行列の高帯域メモリ往復を避ける厳密注意カーネル。
 
 - **2022-06 · [LUT-GEMM: Quantized Matrix Multiplication based on LUTs for Efficient Inference in Large-Scale Generative Language Models](2022-2206.09557-lut-gemm-quantized-matrix-multiplication-based-on-luts-for-efficient-inf.md)**  
@@ -891,7 +891,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   提案はNVIDIAの推論エンジンFasterTransformerを拡張し、専門家番号でトークンを基数ソートする経路、CUTLASSの複数行列積統合、重みだけの4/8ビット量子化を行列積の中で復号する処理、翻訳完了文をバッチから除く処理を組み合わせる。
 
 - **2022-10 · [ByteTransformer: A High-Performance Transformer Boosted for Variable-Length Inputs](2022-2210.03052-bytetransformer-a-high-performance-transformer-boosted-for-variable-leng.md)**  
-  実装：[✓](https://github.com/bytedance/ByteTransformer) ・ リポジトリ内被引用：5  
+  実装：[✓](https://github.com/bytedance/ByteTransformer) ・ リポジトリ内被引用：6  
   ByteTransformerは、バッチに混在する長さの異なる文章をBERT系のTransformerへ入力する際、最長文章に合わせたゼロ埋め（padding）で発生する計算とGPUメモリ転送の無駄を削減する推論実装である。論文の重要性は、入力の有効トークンだけを扱う表現と、注意計算の実行形態を一体で設計した点にある。
 
 ### 6年前（2020-12〜2021-11）
@@ -925,7 +925,7 @@ GPUカーネル生成・融合・メガカーネル化・JIT/グラフ実行・�
   深層学習の演算を高速なGPUカーネルにするには、数式を記述するだけでは足りない。入力配列のどの部分をまとめて読み出し、何回再利用し、どのスレッドに配り、いつ共有メモリへ移すかによって性能が大きく変わる。既存のcuBLASやcuDNNが対象とする標準演算なら高性能な実装を利用できるが、新しい行列演算や不規則な参照を伴う演算では、そのまま使えない。
 
 - **2019-10 · [Structured Pruning of Large Language Models](2019-1910.04732-structured-pruning-of-large-language-models.md)**  
-  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：37  
+  実装：[✓](https://github.com/asappresearch/flop) ・ リポジトリ内被引用：38  
   FLOP（Factorized Low-rank Pruning、因子化低ランク枝刈り）は、重みを個別にゼロ化する非構造的な枝刈りでは、パラメータ数を減らしても一般的な計算装置で速度が上がりにくいという問題に取り組む。
 
 ### 9年前（2017-12〜2018-11）
