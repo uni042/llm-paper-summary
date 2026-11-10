@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-10T23:23:45+00:00`
+Generated: `2026-11-10T23:45:54+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **128175** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121943** / 監査再投入 **0** / 機械規則適用後 **124621** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **128176** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121944** / 監査再投入 **0** / 機械規則適用後 **124622** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -467,7 +467,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 384 | 1 | 4 | 7 | arXiv:2407.18601 | Reorganizing attention-space geometry with expressive attention | 2024-07-26 |  | 1 | 7 | inference-systems, state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2407.18601) |
 | 385 | 106 | 4 | 7 | arXiv:2609.14005 | StepAudio 3 Realtime Technical Report | 2026-09-12 | arXiv.org | 6 | 7 | Speculative Decoding, 投機的デコード / 分布保存型デコード高速化, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2609.14005) |
 | 386 | 102 | 4 | 7 | arXiv:2604.22577 | QuantClaw: Precision Where It Matters for OpenClaw | 2026-04-24 | arXiv.org | 2 | 9 | Weight Quantization / Compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2604.22577) |
-| 387 | 101 | 4 | 7 | arXiv:2609.17416 | Never Stop Thinking: Continuous-Time Language Agents | 2026-07-11 |  | 1 | 7 | LLM Serving / Scheduling / Disaggregation, エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング | [source](https://arxiv.org/abs/2609.17416) |
+| 387 | 101 | 4 | 7 | arXiv:2609.17416 | Never Stop Thinking: Continuous-Time Language Agents | 2026-07-11 | arXiv.org | 1 | 7 | LLM Serving / Scheduling / Disaggregation, エージェント型大規模言語モデル配信／投機的道具実行／言語モデル・道具共同スケジューリング | [source](https://arxiv.org/abs/2609.17416) |
 | 388 | 23 | 4 | 7 | arXiv:2305.11916 | F-PABEE: Flexible-Patience-Based Early Exiting For Single-Label and Multi-Label Text Classification Tasks | 2023-05-21 | IEEE International Conference on Acoustics, Speech, and Signal Processing | 23 | 7 |  | [source](https://arxiv.org/abs/2305.11916) |
 | 389 | 10 | 4 | 7 | arXiv:2605.06185 | Event-Causal RAG: A Retrieval-Augmented Generation Framework for Long Video Reasoning in Complex Scenarios | 2026-05-07 | arXiv.org | 0 | 7 | KV cache compression / cross-layer state merging, KVキャッシュ再利用／圧縮／ネットワーク転送, KVキャッシュ最適化／適応圧縮 | [source](https://arxiv.org/abs/2605.06185) |
 | 390 | 10 | 4 | 7 | arXiv:2606.30288 | VisReflect: Latent Visual Reflection for Fine-Grained Perception in Long Visual Context | 2026-06-29 | European Conference on Computer Vision | 0 | 7 | Inference / Multimodal Long-Context Memory Compression | [source](https://arxiv.org/abs/2606.30288) |
