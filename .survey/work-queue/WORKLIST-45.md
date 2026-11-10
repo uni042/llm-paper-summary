@@ -1,7 +1,7 @@
 # Scheduled worker :45 worklist
 
 Worker: `scheduled-chat-45`  
-Generated: `2026-11-10T10:04:44+00:00`
+Generated: `2026-11-10T10:27:30+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127784** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121572** / 監査再投入 **0** / 機械規則適用後 **124236** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127831** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121616** / 監査再投入 **0** / 機械規則適用後 **124281** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -570,7 +570,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 487 | 2 | 4 | 5 | DOI:10.48550/arXiv.2511.21397 | Do Reasoning Vision-Language Models Inversely Scale in Test-Time Compute? A Distractor-centric Empirical Analysis | 2025 | arXiv.org | 2 | 5 |  | [source](https://doi.org/10.48550/arXiv.2511.21397) |
 | 488 | 111 | 4 | 5 | arXiv:2605.28873 | Pre-Registering the Detectable Effect: A Paired-MDE Budget for 4-bit Quantization Benchmarks, with a Pilot Audit | 2026-05-25 | arXiv.org | 11 | 5 | 大規模言語モデル重み量子化 / 混合精度 / 疎量子化, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2605.28873) |
 | 489 | 103 | 4 | 5 | arXiv:2603.22815 | Focus, Don't Prune: Identifying Instruction-Relevant Regions for Information-Rich Image Understanding | 2026-03-24 | arXiv.org | 3 | 5 | 12-multimodal-inference | [source](https://arxiv.org/abs/2603.22815) |
-| 490 | 101 | 4 | 5 | arXiv:2608.26432 | SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning | 2026-08-26 |  | 1 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.26432) |
+| 490 | 101 | 4 | 5 | arXiv:2608.26432 | SpeechGym: An Audio-Native Gym for Training Voice Agents via Reinforcement Learning | 2026-08-26 | arXiv.org | 1 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.26432) |
 | 491 | 12 | 4 | 5 | DOI:10.18653/v1/2026.acl-long.25 | Your Reasoning Model Knows What Counts: Self-Guided Chain-of-Thought Pruning for Efficient Reasoning | 2026 | Annual Meeting of the Association for Computational Linguistics | 2 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://doi.org/10.18653/v1/2026.acl-long.25) |
 | 492 | 0 | 4 | 5 | SemanticScholar:df2b9ba93735783ff1bb3ec8943b57172c9c49a6 | ZeRO from Scratch: Evaluating Memory Savings, Communication Overhead, and Bandwidth Sensitivity |  |  | 0 | 5 | 大規模モデル学習／分散学習メモリ最適化／DeepSpeed | [source](https://www.semanticscholar.org/paper/df2b9ba93735783ff1bb3ec8943b57172c9c49a6) |
 | 493 | 112 | 4 | 5 | arXiv:2606.08684 | BLUE: Toward Better Language Use in Efficient Vision-Language-Action Models for Autonomous Driving | 2026-06-07 | Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing | 2 | 6 |  | [source](https://arxiv.org/abs/2606.08684) |

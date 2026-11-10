@@ -1,7 +1,7 @@
 # Scheduled worker :00 worklist
 
 Worker: `scheduled-chat-00`  
-Generated: `2026-11-10T10:04:44+00:00`
+Generated: `2026-11-10T10:27:30+00:00`
 
 このページはこのworker専用の再構築可能な選択索引です。他のScheduled worker用ページとは候補を重複させません（十分な在庫がある場合）。
 正本は `.survey/work-queue/jobs/`、claim、論文実体、relevance ledgerです。処理直前に最新正本を再確認してください。
@@ -76,8 +76,8 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 
 ## リスト入り判定待ち Discovery候補
 
-未判定総数: **127784** / このworker向け: **500**
-事前選別: **quarantine** / 暫定隔離 **121572** / 監査再投入 **0** / 機械規則適用後 **124236** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
+未判定総数: **127831** / このworker向け: **500**
+事前選別: **quarantine** / 暫定隔離 **121616** / 監査再投入 **0** / 機械規則適用後 **124281** / 選抜率 **5.0%** （候補の正本は保持。隔離はunrelated判定ではない）
 
 | # | priority | 系統内引用最多 | 系統内引用合計 | identity | title | published | venue | 全被引用 | 参照関係 | 系統候補 | source |
 |---:|---:|---:|---:|---|---|---|---|---:|---:|---|---|
@@ -251,7 +251,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 168 | 10 | 5 | 9 | DOI:10.1109/ICIC68258.2025.11413215 | Low-Rank SVD Compression for Memory-Efficient Transformer Attention | 2025-12-10 | International Conference on Intelligent Computing | 0 | 9 | KV cache quantization / long-context inference / activation compression, distributed attention / sequence parallelism / blockwise attention / long-context transformers, inference-systems, 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://doi.org/10.1109/ICIC68258.2025.11413215) |
 | 169 | 102 | 5 | 9 | arXiv:2602.01410 | SNIP: An Adaptive Mixed Precision Framework for Subbyte Large Language Model Training | 2026-02-01 | International Conference on Architectural Support for Programming Languages and Operating Systems | 2 | 9 | PyTorch 2 torch.compileの設計と評価を報告する論文。, Weight Quantization / Compression, post-training quantization / second-order compression / weight-only LLM inference, 大規模モデル学習／分散学習メモリ最適化／DeepSpeed, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2602.01410) |
 | 170 | 42 | 5 | 9 | DOI:10.1038/s41598-025-92586-5 | Efficient self-attention with smart pruning for sustainable large language models | 2025-03-24 | Scientific Reports | 42 | 9 | Inference / Structured Model Compression and Pruning, survey-transformer-compression-inference, weight-quantization-compression | [source](https://doi.org/10.1038/s41598-025-92586-5) |
-| 171 | 10 | 5 | 9 | arXiv:2609.38878 | Audio Token Attention Is Predictable Before the Language Model Runs | 2026-09-30 |  | 0 | 9 | KV-cache compression / attention-based token selection / long-context inference | [source](https://arxiv.org/abs/2609.38878) |
+| 171 | 10 | 5 | 9 | arXiv:2609.38878 | Audio Token Attention Is Predictable Before the Language Model Runs | 2026-09-30 | arXiv.org | 0 | 9 | KV-cache compression / attention-based token selection / long-context inference | [source](https://arxiv.org/abs/2609.38878) |
 | 172 | 10 | 5 | 9 | arXiv:2608.09703 | Matryoshka Language Model Suites | 2026-08-10 | arXiv.org | 0 | 9 | Conditional Computation, Speculative Decoding, 投機的復号 / EAGLE, 投機的復号 / 無損失復号高速化 | [source](https://arxiv.org/abs/2608.09703) |
 | 173 | 10 | 5 | 9 | arXiv:2610.26660 | Tandem: Serving Hybrid Linear-Attention GUI Agents on Mobile NPUs | 2026-10-19 |  | 0 | 9 | 08-edge-on-device-llm-systems, inference-systems, on-device LLM / heterogeneous inference / NPU offloading, 投機的復号 / EAGLE | [source](https://arxiv.org/abs/2610.26660) |
 | 174 | 10 | 5 | 9 | arXiv:2605.17985 | SAFE-SVD: Sensitivity-Aware Fidelity-Enforcing SVD for Physics Foundation Models | 2026-05-18 | arXiv.org | 0 | 9 | inference-systems, weight-quantization-compression, 重み専用量子化 / 推論カーネル | [source](https://arxiv.org/abs/2605.17985) |
@@ -319,7 +319,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 236 | 1 | 5 | 6 | DOI:10.1109/lcn65610.2025.11146293 | Two-Sided Matching for Batch-Aware LLM Request Scheduling in Edge Networks | 2025-10-13 | IEEE Conference on Local Computer Networks | 1 | 8 | 09-batching-scheduling-serving, LLM Serving / Scheduling, inference-systems, survey-edge-llm | [source](https://doi.org/10.1109/lcn65610.2025.11146293) |
 | 237 | 21 | 5 | 6 | arXiv:2505.10118 | Why 1 + 1 < 1 in Visual Token Pruning: Beyond Naive Integration via Multi-Objective Balanced Covering | 2025-05-15 | Neural Information Processing Systems | 11 | 6 | 07-kv-cache-optimization-compression | [source](https://arxiv.org/abs/2505.10118) |
 | 238 | 120 | 5 | 6 | arXiv:2604.06787 | When Is Thinking Enough? Early Exit via Sufficiency Assessment for Efficient Reasoning | 2026-04-08 | Annual Meeting of the Association for Computational Linguistics | 10 | 6 | Conditional Computation | [source](https://arxiv.org/abs/2604.06787) |
-| 239 | 101 | 5 | 6 | arXiv:2609.34247 | SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents | 2026-09-28 |  | 1 | 6 |  | [source](https://arxiv.org/abs/2609.34247) |
+| 239 | 101 | 5 | 6 | arXiv:2609.34247 | SALMONN-duo: Adaptive Dual-System Coordination for Full-Duplex Voice Agents | 2026-09-28 | arXiv.org | 1 | 6 |  | [source](https://arxiv.org/abs/2609.34247) |
 | 240 | 19 | 5 | 6 | arXiv:2505.18298 | Thinking Fast and Right: Balancing Accuracy and Reasoning Length with Adaptive Rewards | 2025-05-23 | arXiv.org | 19 | 6 |  | [source](https://arxiv.org/abs/2505.18298) |
 | 241 | 10 | 5 | 6 | arXiv:2607.25792 | The Model in the Middle: Toward AI-Native Real-Time Communication | 2026-07-28 | arXiv.org | 0 | 6 | LLM Serving / Scheduling / Disaggregation, llm-serving-scheduling-disaggregation | [source](https://arxiv.org/abs/2607.25792) |
 | 242 | 10 | 5 | 6 | arXiv:2611.03992 | FlagRot: Selective Rotation for Low-Bit KV Caches | 2026-11-02 |  | 0 | 6 | 07-kv-cache-optimization-compression, arXiv:2405.16406のICLR 2025採録版。 | [source](https://arxiv.org/abs/2611.03992) |
@@ -567,7 +567,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 484 | 10 | 4 | 5 | arXiv:2610.10871 | Sparse Attention Is Matrix Approximation, Not Choosing from a Bag of Values | 2026-10-07 |  | 0 | 5 | inference-systems | [source](https://arxiv.org/abs/2610.10871) |
 | 485 | 1 | 4 | 5 | DOI:10.1145/3599957.3606231 | FulltextAttention: Full-text Classification of Scientific Papers Using Combined Model of BiGRU and Bahdanau Attention | 2023-08-06 | Research in Adaptive and Convergent Systems | 1 | 5 | inference-systems, sparse attention / long-context Transformer | [source](https://doi.org/10.1145/3599957.3606231) |
 | 486 | 114 | 4 | 5 | arXiv:2605.20755 | DuplexSLA: A Full-Duplex Spoken Language Model with Synchronized Speech, Language, and Action | 2026-05-20 |  | 14 | 5 |  | [source](https://arxiv.org/abs/2605.20755) |
-| 487 | 10 | 4 | 5 | arXiv:2609.26488 | Spoken Language Models that Think Aloud | 2026-09-22 |  | 0 | 5 |  | [source](https://arxiv.org/abs/2609.26488) |
+| 487 | 10 | 4 | 5 | arXiv:2609.26488 | Spoken Language Models that Think Aloud | 2026-09-22 | arXiv.org | 0 | 5 |  | [source](https://arxiv.org/abs/2609.26488) |
 | 488 | 1 | 4 | 5 | arXiv:2510.07355 | AV-EMO-Reasoning: Benchmarking Emotional Reasoning Capabilities in Omni-modal LLMS with Audio-visual Cues | 2025-10-08 | arXiv.org | 1 | 5 |  | [source](https://arxiv.org/abs/2510.07355) |
 | 489 | 108 | 4 | 5 | DOI:10.1109/ijcnn69854.2026.11729328 | Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation | 2026-06-01 | IEEE International Joint Conference on Neural Network | 8 | 1 |  | [source](https://doi.org/10.1109/ijcnn69854.2026.11729328) |
 | 490 | 102 | 4 | 5 | arXiv:2607.04118 | Parametric Memory Decoding for Zero-Shot Routing in LoRA-Based External Parametric Memory | 2026-07-05 | arXiv.org | 2 | 5 |  | [source](https://arxiv.org/abs/2607.04118) |
@@ -575,7 +575,7 @@ ready総数: **168** / 未claim総数: **168** / このworker向け: **56**
 | 492 | 10 | 4 | 5 | DOI:10.1109/ISPASS69572.2026.00073 | Power Ranger: A Comprehensive Framework for GPU Power Characterization | 2026-04-26 | IEEE International Symposium on Performance Analysis of Systems and Software | 0 | 5 | LLM serving / energy management / cluster scheduling / dynamic reconfiguration, inference-systems | [source](https://doi.org/10.1109/ISPASS69572.2026.00073) |
 | 493 | 116 | 4 | 5 | arXiv:2607.06540 | Hierarchical Acoustic-Semantic Modeling: Modality Separation and Semantic Coherence for Full-Duplex SLMs | 2026-07-07 | Annual Meeting of the Association for Computational Linguistics | 6 | 5 |  | [source](https://arxiv.org/abs/2607.06540) |
 | 494 | 102 | 4 | 5 | arXiv:2605.14310 | CoRDS: Coreset-based Representative and Diverse Selection for Streaming Video Understanding | 2026-05-14 | arXiv.org | 2 | 6 |  | [source](https://arxiv.org/abs/2605.14310) |
-| 495 | 102 | 4 | 5 | arXiv:2609.37818 | Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue | 2026-09-29 |  | 2 | 5 |  | [source](https://arxiv.org/abs/2609.37818) |
+| 495 | 102 | 4 | 5 | arXiv:2609.37818 | Thinking in Depth, Speaking Directly: Recurrent Latent Reasoning for Paralinguistically Grounded Spoken Dialogue | 2026-09-29 | arXiv.org | 2 | 5 |  | [source](https://arxiv.org/abs/2609.37818) |
 | 496 | 101 | 4 | 5 | arXiv:2605.10414 | Remember to Forget: Gated Adaptive Positional Encoding | 2026-05-11 | arXiv.org | 1 | 5 | 正確な注意計算 / 入出力指向注意 / GPUカーネル最適化 / FlashAttention, 注意カーネル最適化 / 入出力認識アルゴリズム / 長文脈 / GPUメモリ階層 | [source](https://arxiv.org/abs/2605.10414) |
 | 497 | 101 | 4 | 5 | arXiv:2608.25115 | Less can be More: Relieving RAG Bottlenecks via Evidence Frontloading and Pressure-Adaptive Budgeting | 2026-08-25 |  | 1 | 5 | LLM Serving / Scheduling / Disaggregation | [source](https://arxiv.org/abs/2608.25115) |
 | 498 | 34 | 4 | 5 | arXiv:2406.02923 | P-Spikessm: Harnessing Probabilistic Spiking State Space Models for Long-Range Dependency Tasks | 2024-06-05 | International Conference on Learning Representations | 24 | 5 | state space models / selective SSM / recurrent inference / hardware-aware sequence modeling | [source](https://arxiv.org/abs/2406.02923) |
