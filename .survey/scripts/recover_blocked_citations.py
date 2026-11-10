@@ -27,7 +27,7 @@ import tarfile
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 from backfill_citations import (
     entries_to_references,
@@ -113,6 +113,41 @@ def primary_pdf_urls(canonical_id: str) -> list[str]:
 
     urls.extend(PRIMARY_PDF_FALLBACKS.get(canonical_id, []))
     return list(dict.fromkeys(urls))
+
+
+def metadata_primary_pdf_urls(meta: dict[str, Any]) -> list[str]:
+    """Reuse explicitly recorded paper PDF endpoints before external lookups.
+
+    The repository's own sources are primary evidence. Only HTTPS links with a
+    PDF-shaped path are passed to the PDF parser; article landing pages, arbitrary
+    query URLs, and local addresses are not treated as PDFs.
+    """
+    sources = [meta.get("source")] + list(meta.get("sources") or [])
+    results: list[str] = []
+    for value in sources:
+        if not isinstance(value, str):
+            continue
+        url = value.strip().strip("'\\\"")
+        try:
+            parsed = urlsplit(url)
+        except ValueError:
+            continue
+        if parsed.scheme != "https" or not parsed.hostname:
+            continue
+        host = parsed.hostname.lower()
+        if host in {"localhost", "127.0.0.1", "::1"} or host.endswith(".local"):
+            continue
+        part = parsed.path.lower()
+        if not (
+            part.endswith(".pdf")
+            or "/pdf/" in part
+            or part.startswith("/pdf/")
+            or "/article/download/" in part
+            or "/publishedpapers/" in part and "/pdf/" in part
+        ):
+            continue
+        results.append(url)
+    return list(dict.fromkeys(results))
 
 
 def bibtex_blocks(text: str) -> list[str]:
@@ -241,14 +276,22 @@ def backfill(repo_root: Path, limit: int, apply: bool) -> dict[str, Any]:
     for path in paper_paths(repo_root):
         rel = path.relative_to(repo_root).as_posix()
         meta, _ = front(path)
-        if isinstance(meta.get("references"), list) and meta.get("references_checked_at"):
+        # Match the exact citation coverage contract. A historical partial
+        # references list may have a checked_at date but lack the total count;
+        # such files must be revisited from their primary bibliography.
+        if (
+            isinstance(meta.get("references"), list)
+            and meta.get("references_checked_at")
+            and meta.get("references_source")
+            and isinstance(meta.get("references_total"), int)
+        ):
             continue
 
         canonical = str(meta.get("canonical_id") or "").strip()
         aid = normalize_arxiv(meta.get("arxiv_id")) or normalize_arxiv(canonical)
-        pdf_urls = primary_pdf_urls(canonical)
-        # A publisher-deposited Crossref bibliography is a valid fallback for any DOI,
-        # not only the ACM DOI prefix that has a deterministic PDF endpoint.
+        pdf_urls = list(dict.fromkeys(primary_pdf_urls(canonical) + metadata_primary_pdf_urls(meta)))
+        # Crossref publisher-deposited references are a fallback for any DOI.
+        # Non-DOI papers with an explicit primary PDF are eligible too.
         if not pdf_urls and not aid and not canonical.startswith("DOI:"):
             continue
         if limit > 0 and attempted >= limit:
