@@ -1,49 +1,112 @@
 ---
-canonical_id: "DOI:10.26599/BDMA.2024.9020074"
-doi: "10.26599/BDMA.2024.9020074"
-title: "ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads"
-summary: "ResDecodeは全履歴エンコーダと残差デコードヘッドで投機的復号のドラフト精度を高める。Vicuna-7Bの先頭ヘッドTop-1はMedusaの0.52から0.85へ改善し、Vicuna-33BのMT-benchでは通常サンプリング設定で最大3.35倍、貪欲復号で3.21倍の速度比を報告する。ただし追加学習・文脈エンコーダ・木検証の費用があり、長い候補列で利得が飽和する。"
-list_summary: "全履歴エンコーダと残差ヘッドで投機的復号の候補精度を高め、Vicuna-33BのMT-benchで条件付き最大3.35倍を報告。"
+canonical_id: DOI:10.26599/BDMA.2024.9020074
+doi: 10.26599/BDMA.2024.9020074
+title: 'ResDecode: Accelerating Large Language Models Inference via Residual Decoding Heads'
+summary: ResDecodeは全履歴エンコーダと残差デコードヘッドで投機的復号のドラフト精度を高める。Vicuna-7Bの先頭ヘッドTop-1はMedusaの0.52から0.85へ改善し、Vicuna-33BのMT-benchでは通常サンプリング設定で最大3.35倍、貪欲復号で3.21倍の速度比を報告する。ただし追加学習・文脈エンコーダ・木検証の費用があり、長い候補列で利得が飽和する。
+list_summary: 全履歴エンコーダと残差ヘッドで投機的復号の候補精度を高め、Vicuna-33BのMT-benchで条件付き最大3.35倍を報告。
 authors:
-  - "Ziqian Zeng"
-  - "Jiahong Yu"
-  - "Qianshi Pang"
-  - "Zihao Wang"
-  - "Huiping Zhuang"
-  - "Fan Yu"
-  - "Hongen Shao"
-  - "Xiaofeng Zou"
-published: "2025-05-12"
-publication: "Big Data Mining and Analytics 8(4), 779–793 (2025)"
-publication_type: "journal"
-publication_status: "published"
-source: "https://www.sciopen.com/article/10.26599/BDMA.2024.9020074"
+- Ziqian Zeng
+- Jiahong Yu
+- Qianshi Pang
+- Zihao Wang
+- Huiping Zhuang
+- Fan Yu
+- Hongen Shao
+- Xiaofeng Zou
+published: '2025-05-12'
+publication: Big Data Mining and Analytics 8(4), 779–793 (2025)
+publication_type: journal
+publication_status: published
+source: https://www.sciopen.com/article/10.26599/BDMA.2024.9020074
 sources:
-  - "https://www.sciopen.com/article/10.26599/BDMA.2024.9020074"
-  - "https://www.researchgate.net/publication/394200867_ResDecode_Accelerating_Large_Language_Models_Inference_via_Residual_Decoding_Heads"
-  - "https://ieeexplore.ieee.org/document/11002449"
-code: "https://github.com/ZeroNLP/ResDecode"
-implementation: "ShareGPT約70,000対話で軽量ドラフトを学習し、Vicuna-7B/13B/33B、LLaMA-2-chat-7B/13BでMT-bench、Vicuna-bench、GSM8K、Spec-Benchを比較。全履歴エンコーダ、残差ヘッド、ドラフト木、対象モデル検証を使用。"
-last_checked: "2026-10-30"
-worker_id: "scheduled-chat-45"
-scheduled_slot: "45"
-worker_run_key: "20261030-2345-scheduled-chat-45/r01"
-worker_completed_at: "2026-10-30T23:52:00+09:00"
-reference_main_sha: "b6fa9e40e03f6a5bfbc4f24d664ace090e66681b"
-original_worker_id: "scheduled-chat-45"
-original_worker_run_key: "20261030-1848-scheduled-chat-45/r01"
-under16kb_reaudit_target_path: "papers/inference/19-inference-evaluation-benchmarking/2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md"
-under16kb_reaudit_source_git_blob_sha: "9c6f812132c5f3183d67e8b6a999ad1c42351924"
-under16kb_reaudit_source_sha256: "f56c6360ab7ce8b2aec82eee0530f80ca4d4bdeef7292dd261442283cdd6fa65"
-under16kb_reaudit_version: "2026-10-07-v1"
+- https://www.sciopen.com/article/10.26599/BDMA.2024.9020074
+- https://www.researchgate.net/publication/394200867_ResDecode_Accelerating_Large_Language_Models_Inference_via_Residual_Decoding_Heads
+- https://ieeexplore.ieee.org/document/11002449
+code: https://github.com/ZeroNLP/ResDecode
+implementation: ShareGPT約70,000対話で軽量ドラフトを学習し、Vicuna-7B/13B/33B、LLaMA-2-chat-7B/13BでMT-bench、Vicuna-bench、GSM8K、Spec-Benchを比較。全履歴エンコーダ、残差ヘッド、ドラフト木、対象モデル検証を使用。
+last_checked: '2026-10-30'
+worker_id: scheduled-chat-45
+scheduled_slot: '45'
+worker_run_key: 20261030-2345-scheduled-chat-45/r01
+worker_completed_at: '2026-10-30T23:52:00+09:00'
+reference_main_sha: b6fa9e40e03f6a5bfbc4f24d664ace090e66681b
+original_worker_id: scheduled-chat-45
+original_worker_run_key: 20261030-1848-scheduled-chat-45/r01
+under16kb_reaudit_target_path: papers/inference/19-inference-evaluation-benchmarking/2025-098116cbc05e-resdecode-accelerating-large-language-models-inference-via-residual-deco.md
+under16kb_reaudit_source_git_blob_sha: 9c6f812132c5f3183d67e8b6a999ad1c42351924
+under16kb_reaudit_source_sha256: f56c6360ab7ce8b2aec82eee0530f80ca4d4bdeef7292dd261442283cdd6fa65
+under16kb_reaudit_version: 2026-10-07-v1
 under16kb_reaudit_passed: true
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
-reaudit_primary_verified_at: "2026-10-30T23:50:00+09:00"
-reaudit_primary_url: "https://www.researchgate.net/publication/394200867_ResDecode_Accelerating_Large_Language_Models_Inference_via_Residual_Decoding_Heads"
-reaudit_note: "出版社書誌と原著全文の手法・Table 2〜6・Figure 4〜7を照合。元稿の3.35倍を貪欲復号の値と誤記した箇所を、Table 2のTypical設定3.35倍／Greedy設定3.21倍に修正。コードURLを原著記載に基づき補完し、失敗条件・比較設定を区別した。"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
+reaudit_primary_verified_at: '2026-10-30T23:50:00+09:00'
+reaudit_primary_url: https://www.researchgate.net/publication/394200867_ResDecode_Accelerating_Large_Language_Models_Inference_via_Residual_Decoding_Heads
+reaudit_note: 出版社書誌と原著全文の手法・Table 2〜6・Figure 4〜7を照合。元稿の3.35倍を貪欲復号の値と誤記した箇所を、Table 2のTypical設定3.35倍／Greedy設定3.21倍に修正。コードURLを原著記載に基づき補完し、失敗条件・比較設定を区別した。
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.1007/978-981-13-7311-4
+  doi: 10.1007/978-981-13-7311-4
+- canonical_id: DOI:10.1109/jas.2023.123753
+  doi: 10.1109/jas.2023.123753
+- canonical_id: DOI:10.1007/s13042-024-02323-z
+  doi: 10.1007/s13042-024-02323-z
+- canonical_id: arXiv:1911.02150
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2211.17192
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2401.10774
+- canonical_id: DOI:10.18653/v1/p19-1356
+  doi: 10.18653/v1/p19-1356
+- canonical_id: DOI:10.1162/tacl_a_00349
+  doi: 10.1162/tacl_a_00349
+- canonical_id: DOI:10.18653/v1/2023.findings-emnlp.257
+  doi: 10.18653/v1/2023.findings-emnlp.257
+- canonical_id: DOI:10.1109/tnnls.2024.3389714
+  doi: 10.1109/tnnls.2024.3389714
+- canonical_id: DOI:10.1109/hpca53966.2022.00039
+  doi: 10.1109/hpca53966.2022.00039
+- canonical_id: DOI:10.1109/tpami.2021.3090167
+  doi: 10.1109/tpami.2021.3090167
+- canonical_id: DOI:10.1016/j.dcan.2022.06.014
+  doi: 10.1016/j.dcan.2022.06.014
+- canonical_id: DOI:10.1057/s41599-024-03611-3
+  doi: 10.1057/s41599-024-03611-3
+- canonical_id: DOI:10.18653/v1/2024.findings-acl.437
+  doi: 10.18653/v1/2024.findings-acl.437
+- canonical_id: arXiv:2310.15141
+- canonical_id: DOI:10.1109/tpds.2018.2794343
+  doi: 10.1109/tpds.2018.2794343
+- canonical_id: DOI:10.1007/s13042-024-02446-3
+  doi: 10.1007/s13042-024-02446-3
+- canonical_id: DOI:10.1109/tnnls.2022.3140238
+  doi: 10.1109/tnnls.2022.3140238
+- canonical_id: DOI:10.1109/access.2024.3363469
+  doi: 10.1109/access.2024.3363469
+- canonical_id: DOI:10.1109/tsg.2024.3373256
+  doi: 10.1109/tsg.2024.3373256
+- canonical_id: DOI:10.1109/tpami.2021.3066410
+  doi: 10.1109/tpami.2021.3066410
+- canonical_id: arXiv:2305.09781
+  doi: 10.1145/3620666.3651335
+- canonical_id: arXiv:2310.08461
+- canonical_id: arXiv:2302.07863
+- canonical_id: arXiv:2310.07177
+- canonical_id: DOI:10.18653/v1/2023.acl-long.689
+  doi: 10.18653/v1/2023.acl-long.689
+- canonical_id: arXiv:2310.12072
+- canonical_id: DOI:10.18653/v1/2024.acl-long.607
+  doi: 10.18653/v1/2024.acl-long.607
+- canonical_id: arXiv:2312.11462
+- canonical_id: DOI:10.18653/v1/2023.semeval-1.210
+  doi: 10.18653/v1/2023.semeval-1.210
+- canonical_id: arXiv:2401.07851
+  doi: 10.18653/v1/2024.findings-acl.456
+- canonical_id: arXiv:2402.02057
+- canonical_id: arXiv:2402.05109
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 47
 ---
 
 # ResDecode：全履歴と残差ヘッドによる高精度ドラフトを用いた投機的復号

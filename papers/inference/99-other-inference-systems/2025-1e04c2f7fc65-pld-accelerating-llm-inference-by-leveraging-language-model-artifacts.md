@@ -1,34 +1,50 @@
 ---
-canonical_id: "DOI:10.18653/v1/2025.findings-naacl.338"
-title: "PLD+: Accelerating LLM Inference by Leveraging Language Model Artifacts"
-summary: "PLD+は入力文脈から複製可能な連続トークン列を推測して大規模言語モデルの生成を高速化するPrompt Lookup Decodingの改良法である。最後の生成トークンに一致する文脈中の位置を列挙した後、推論中に既に得られた中間隠れ状態の余弦類似度、または複製に寄与する注意ヘッドのスコアで候補位置を再順位付けし、選択した後続列をターゲットモデルで一括検証する。A100 80GB上のVicuna-7B/13B/33Bを用いた5種の入力誘導タスクでは、特にコード編集・テキスト編集で既存の学習不要な方式を上回った。Vicuna-7Bのgreedyでは長文編集で5.16倍、要約で3.39倍の自己回帰比高速化を報告するが、自由対話やサンプリング時の改善は小さく、入力出力の重複に依存する。"
-list_summary: "入力中の複製候補を注意・隠れ状態で再順位付けし、追加ドラフトモデルなしで投機的復号を高速化。編集系タスクで有効だが入力出力重複が前提。"
+canonical_id: DOI:10.18653/v1/2025.findings-naacl.338
+title: 'PLD+: Accelerating LLM Inference by Leveraging Language Model Artifacts'
+summary: PLD+は入力文脈から複製可能な連続トークン列を推測して大規模言語モデルの生成を高速化するPrompt Lookup Decodingの改良法である。最後の生成トークンに一致する文脈中の位置を列挙した後、推論中に既に得られた中間隠れ状態の余弦類似度、または複製に寄与する注意ヘッドのスコアで候補位置を再順位付けし、選択した後続列をターゲットモデルで一括検証する。A100 80GB上のVicuna-7B/13B/33Bを用いた5種の入力誘導タスクでは、特にコード編集・テキスト編集で既存の学習不要な方式を上回った。Vicuna-7Bのgreedyでは長文編集で5.16倍、要約で3.39倍の自己回帰比高速化を報告するが、自由対話やサンプリング時の改善は小さく、入力出力の重複に依存する。
+list_summary: 入力中の複製候補を注意・隠れ状態で再順位付けし、追加ドラフトモデルなしで投機的復号を高速化。編集系タスクで有効だが入力出力重複が前提。
 authors:
-  - "Shwetha Somasundaram"
-  - "Anirudh Phukan"
-  - "Apoorv Saxena"
-published: "2025-04-29"
-publication: "Findings of the Association for Computational Linguistics: NAACL 2025, pp. 6090–6104"
-publication_type: "査読付き国際会議論文（Findings）"
-publication_status: "published"
-doi: "10.18653/v1/2025.findings-naacl.338"
-source: "https://aclanthology.org/2025.findings-naacl.338.pdf"
+- Shwetha Somasundaram
+- Anirudh Phukan
+- Apoorv Saxena
+published: '2025-04-29'
+publication: 'Findings of the Association for Computational Linguistics: NAACL 2025, pp. 6090–6104'
+publication_type: 査読付き国際会議論文（Findings）
+publication_status: published
+doi: 10.18653/v1/2025.findings-naacl.338
+source: https://aclanthology.org/2025.findings-naacl.338.pdf
 sources:
-  - "https://aclanthology.org/2025.findings-naacl.338.pdf"
-  - "https://aclanthology.org/2025.findings-naacl.338/"
-implementation: "既存のSpec-Bench推論実装を基にVicuna-1.3系列、Llama-2-Chat系列、Mistral-7B-Instructで評価。候補探索と中間状態による再順位付け、単一ターゲットモデルの一括検証を実装。NVIDIA A100 80GB、CUDA 12.2、PyTorch 2.0.1で実験。論文本文でPLD+専用の公式実装公開先は確認できず、再現には中間状態の取得・保持と候補照合の実装が必要。"
+- https://aclanthology.org/2025.findings-naacl.338.pdf
+- https://aclanthology.org/2025.findings-naacl.338/
+implementation: 既存のSpec-Bench推論実装を基にVicuna-1.3系列、Llama-2-Chat系列、Mistral-7B-Instructで評価。候補探索と中間状態による再順位付け、単一ターゲットモデルの一括検証を実装。NVIDIA A100 80GB、CUDA 12.2、PyTorch 2.0.1で実験。論文本文でPLD+専用の公式実装公開先は確認できず、再現には中間状態の取得・保持と候補照合の実装が必要。
 code: null
-last_checked: "2026-10-27"
-worker_id: "scheduled-chat-30"
-worker_run_key: "20261027-1833-scheduled-chat-30/r01"
-worker_completed_at: "2026-10-27T18:36:25+09:00"
-reference_main_sha: "be40dbf111b68804bb82eff7148448a1b92ddafd"
+last_checked: '2026-10-27'
+worker_id: scheduled-chat-30
+worker_run_key: 20261027-1833-scheduled-chat-30/r01
+worker_completed_at: '2026-10-27T18:36:25+09:00'
+reference_main_sha: be40dbf111b68804bb82eff7148448a1b92ddafd
 worklist_rank: 75
 research_job_id: null
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: arXiv:2402.05109
+  arxiv_id: '2402.05109'
+- canonical_id: arXiv:2401.07851
+- canonical_id: arXiv:2309.08168
+- canonical_id: arXiv:2401.10774
+- canonical_id: arXiv:2307.05908
+- canonical_id: arXiv:2402.02057
+- canonical_id: DOI:10.48550/arxiv.2302.01318
+- canonical_id: arXiv:2401.15077
+- canonical_id: arXiv:1811.03115
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2311.08252
+references_checked_at: '2026-11-10'
+references_source: primary-pdf-reference-section
+references_total: 1
 ---
 
 # PLD+：言語モデルの中間表現を利用する入力複製型の投機的復号

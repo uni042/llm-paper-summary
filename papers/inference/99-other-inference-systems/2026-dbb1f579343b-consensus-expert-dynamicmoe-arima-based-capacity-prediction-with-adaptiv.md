@@ -1,33 +1,111 @@
 ---
-canonical_id: 'DOI:10.1007/s44196-026-01236-9'
+canonical_id: DOI:10.1007/s44196-026-01236-9
 title: 'Consensus-Expert DynamicMoE: ARIMA-based Capacity Prediction with Adaptive Load Balancing for Sparse Models'
-summary: '共通知識を扱う共有専門家と、個別の入力特徴を扱う専門家を分離した混合専門家モデルにおいて、各専門家の過去の負荷系列からARIMAで次の負荷を予測し、容量を動的配分するとともに予測誤差を含む損失関数で過度の均等化を抑える手法。Switch Transformer-base-8を用いたGLUEの9指標平均は従来構成の80.5から81.6へ改善した。ただし単一A100での小規模モデル学習評価であり、分散推論の速度向上を示したものではない。'
-list_summary: '共有専門家を持つMoEの各専門家の負荷をARIMAで予測し、動的容量と予測誤差を考慮した負荷損失でトークン溢れと過度な均等化を抑制する。'
+summary: 共通知識を扱う共有専門家と、個別の入力特徴を扱う専門家を分離した混合専門家モデルにおいて、各専門家の過去の負荷系列からARIMAで次の負荷を予測し、容量を動的配分するとともに予測誤差を含む損失関数で過度の均等化を抑える手法。Switch Transformer-base-8を用いたGLUEの9指標平均は従来構成の80.5から81.6へ改善した。ただし単一A100での小規模モデル学習評価であり、分散推論の速度向上を示したものではない。
+list_summary: 共有専門家を持つMoEの各専門家の負荷をARIMAで予測し、動的容量と予測誤差を考慮した負荷損失でトークン溢れと過度な均等化を抑制する。
 authors:
-  - 'Jia-Lin Wen'
-  - 'Xiao-Jun Li'
-  - 'Jun-Ping Yao'
-  - 'Hai-Feng Sun'
-  - 'Xiang-Rui An'
+- Jia-Lin Wen
+- Xiao-Jun Li
+- Jun-Ping Yao
+- Hai-Feng Sun
+- Xiang-Rui An
 published: '2026-03-12'
-publication: 'International Journal of Computational Intelligence Systems 19, article 157 (2026)'
-publication_type: '査読付き学術誌論文'
-publication_status: 'published'
-source: 'https://link.springer.com/article/10.1007/s44196-026-01236-9'
+publication: International Journal of Computational Intelligence Systems 19, article 157 (2026)
+publication_type: 査読付き学術誌論文
+publication_status: published
+source: https://link.springer.com/article/10.1007/s44196-026-01236-9
 sources:
-  - 'https://link.springer.com/article/10.1007/s44196-026-01236-9'
-  - 'https://link.springer.com/content/pdf/10.1007/s44196-026-01236-9.pdf'
-implementation: 'T5-baseを基にしたSwitch Transformer-base-8/16/32で共有専門家・個別専門家の経路選択とARIMA負荷予測を組み合わせ、単一NVIDIA A100上でGLUE評価。公式実装リポジトリは原著から確認できなかった。'
+- https://link.springer.com/article/10.1007/s44196-026-01236-9
+- https://link.springer.com/content/pdf/10.1007/s44196-026-01236-9.pdf
+implementation: T5-baseを基にしたSwitch Transformer-base-8/16/32で共有専門家・個別専門家の経路選択とARIMA負荷予測を組み合わせ、単一NVIDIA A100上でGLUE評価。公式実装リポジトリは原著から確認できなかった。
 code: null
 last_checked: '2026-10-23'
-worker_id: 'scheduled-chat-00'
+worker_id: scheduled-chat-00
 worker_completed_at: '2026-10-23T11:00:58+09:00'
-worker_run_key: '20261023-1100-scheduled-chat-00/r01'
-reference_main_sha: '1d002b50d74417b22d432b2910c0b44c44811d00'
+worker_run_key: 20261023-1100-scheduled-chat-00/r01
+reference_main_sha: 1d002b50d74417b22d432b2910c0b44c44811d00
 quality_self_review_passed: true
-quality_self_review_version: 'PAPER-QUALITY-GUIDE-2026-10-07'
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.48550/arxiv.2408.01319
+  doi: 10.48550/arxiv.2408.01319
+- canonical_id: DOI:10.1145/3677052.3698628
+  doi: 10.1145/3677052.3698628
+- canonical_id: DOI:10.1038/s41586-023-06291-2
+  doi: 10.1038/s41586-023-06291-2
+- canonical_id: arXiv:2202.08906
+  doi: 10.48550/arxiv.2202.08906
+- canonical_id: DOI:10.36227/techrxiv.172055626.64129172/v1
+  doi: 10.36227/techrxiv.172055626.64129172/v1
+- canonical_id: DOI:10.1109/iccea62105.2024.10604245
+  doi: 10.1109/iccea62105.2024.10604245
+- canonical_id: arXiv:2412.14219
+  doi: 10.48550/arxiv.2412.14219
+- canonical_id: DOI:10.1109/iccv51070.2023.01591
+  doi: 10.1109/iccv51070.2023.01591
+- canonical_id: DOI:10.1109/ijcnn60899.2024.10650737
+  doi: 10.1109/ijcnn60899.2024.10650737
+- canonical_id: arXiv:2310.01334
+  doi: 10.48550/arxiv.2310.01334
+- canonical_id: DOI:10.22541/au.172479156.65470023/v1
+  doi: 10.22541/au.172479156.65470023/v1
+- canonical_id: DOI:10.48550/arxiv.2408.06793
+  doi: 10.48550/arxiv.2408.06793
+- canonical_id: DOI:10.48550/arxiv.2401.06066
+  doi: 10.48550/arxiv.2401.06066
+- canonical_id: DOI:10.48550/arxiv.2406.18219
+  doi: 10.48550/arxiv.2406.18219
+- canonical_id: DOI:10.18653/v1/2024.emnlp-main.215
+  doi: 10.18653/v1/2024.emnlp-main.215
+- canonical_id: arXiv:2403.18926
+  doi: 10.18653/v1/2024.findings-acl.694
+- canonical_id: DOI:10.18653/v1/2023.emnlp-main.230
+  doi: 10.18653/v1/2023.emnlp-main.230
+- canonical_id: DOI:10.48550/arxiv.2409.14107
+  doi: 10.48550/arxiv.2409.14107
+- canonical_id: arXiv:2402.14800
+  doi: 10.18653/v1/2024.acl-long.334
+- canonical_id: DOI:10.48550/arxiv.2402.12656
+  doi: 10.48550/arxiv.2402.12656
+- canonical_id: DOI:10.48550/arxiv.2312.07035
+  doi: 10.48550/arxiv.2312.07035
+- canonical_id: DOI:10.48550/arxiv.2404.15045
+  doi: 10.48550/arxiv.2404.15045
+- canonical_id: arXiv:2202.09368
+  doi: 10.52202/068431-0515
+- canonical_id: arXiv:2006.16668
+- canonical_id: arXiv:2101.03961
+  doi: 10.48550/arxiv.2101.03961
+- canonical_id: DOI:10.1109/cluster52292.2023.00015
+  doi: 10.1109/cluster52292.2023.00015
+- canonical_id: DOI:10.48550/arxiv.2405.04434
+  doi: 10.48550/arxiv.2405.04434
+- canonical_id: DOI:10.1109/tpds.2025.3539297
+  doi: 10.1109/tpds.2025.3539297
+- canonical_id: DOI:10.48550/arxiv.2404.16914
+  doi: 10.48550/arxiv.2404.16914
+- canonical_id: DOI:10.1109/dcoss-iot61029.2024.00078
+  doi: 10.1109/dcoss-iot61029.2024.00078
+- canonical_id: DOI:10.1016/j.knosys.2018.10.041
+  doi: 10.1016/j.knosys.2018.10.041
+- canonical_id: DOI:10.3390/fi15080255
+  doi: 10.3390/fi15080255
+- canonical_id: arXiv:2406.13233
+  doi: 10.48550/arxiv.2406.13233
+- canonical_id: DOI:10.18653/v1/w18-5446
+  doi: 10.18653/v1/w18-5446
+- canonical_id: DOI:10.1609/aaai.v37i11.26617
+  doi: 10.1609/aaai.v37i11.26617
+- canonical_id: DOI:10.1145/3669940.3707272
+  doi: 10.1145/3669940.3707272
+- canonical_id: DOI:10.18653/v1/2024.acl-long.696
+  doi: 10.18653/v1/2024.acl-long.696
+- canonical_id: arXiv:2006.04152
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 43
 ---
 
 # Consensus-Expert DynamicMoE：負荷予測と共有専門家によるMoEの学習時容量制御

@@ -1,35 +1,95 @@
 ---
-canonical_id: "DOI:10.1109/SoutheastCon63549.2026.11476301"
-title: "Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing"
-summary: "エッジ・中位・クラウドの三階層で大規模言語モデルへの要求を振り分けるため、要求難度・優先度・各階層の利用率を離散化した状態からQ学習で振り分け先を選ぶ。公開推論トレースに基づく5,000件の合成要求を用いた数値シミュレーションで、ラウンドロビン比の平均遅延51.18%減・総費用70.08%減を報告する一方、利用率優先方式より遅延・費用・SLO違反率が悪化し、回答品質は事前設定した階層別精度からの計算値である。"
-list_summary: "三階層LLM要求ルーティングを表形式Q学習で適応化する研究。5,000件の合成トレースではラウンドロビンより低費用だが、利用率優先方式に対して遅延と費用が増加する。"
+canonical_id: DOI:10.1109/SoutheastCon63549.2026.11476301
+title: Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing
+summary: エッジ・中位・クラウドの三階層で大規模言語モデルへの要求を振り分けるため、要求難度・優先度・各階層の利用率を離散化した状態からQ学習で振り分け先を選ぶ。公開推論トレースに基づく5,000件の合成要求を用いた数値シミュレーションで、ラウンドロビン比の平均遅延51.18%減・総費用70.08%減を報告する一方、利用率優先方式より遅延・費用・SLO違反率が悪化し、回答品質は事前設定した階層別精度からの計算値である。
+list_summary: 三階層LLM要求ルーティングを表形式Q学習で適応化する研究。5,000件の合成トレースではラウンドロビンより低費用だが、利用率優先方式に対して遅延と費用が増加する。
 authors:
-  - "Tejas Pravinbhai Patel"
-  - "Chaitanya Kulkarni"
-  - "Sandeep Shivam"
-  - "Amit Kumar Padhy"
-  - "Viswanathan Ranganathan"
-  - "Siva Rama Krishna Varma Bayyavarapu"
-published: "2026-04-20"
+- Tejas Pravinbhai Patel
+- Chaitanya Kulkarni
+- Sandeep Shivam
+- Amit Kumar Padhy
+- Viswanathan Ranganathan
+- Siva Rama Krishna Varma Bayyavarapu
+published: '2026-04-20'
 published_year: 2026
-publication: "SoutheastCon 2026"
-publication_type: "会議論文"
-publication_status: "published"
-source: "https://doi.org/10.1109/SoutheastCon63549.2026.11476301"
+publication: SoutheastCon 2026
+publication_type: 会議論文
+publication_status: published
+source: https://doi.org/10.1109/SoutheastCon63549.2026.11476301
 sources:
-  - "https://doi.org/10.1109/SoutheastCon63549.2026.11476301"
-  - "https://www.researchgate.net/publication/404016304_Adaptive_Load_Balancing_for_Multi-Tier_LLM_Inference_with_Dynamic_Model_Routing"
+- https://doi.org/10.1109/SoutheastCon63549.2026.11476301
+- https://www.researchgate.net/publication/404016304_Adaptive_Load_Balancing_for_Multi-Tier_LLM_Inference_with_Dynamic_Model_Routing
 code: null
-implementation: "論文はPython 3.10/NumPy 1.24の離散イベント的数値シミュレーションを記載。実GPUサーバーの測定、公開再現実装、実運用デプロイは本文で確認できない。"
-last_checked: "2026-10-22"
-worker_completed_at: "2026-10-22T17:00:00+09:00"
-worker_id: "scheduled-chat-00"
-worker_run_key: "20261022-1658-scheduled-chat-00/r01"
-reference_main_sha: "f6cadc2f4f7511d9551db1ec35a75d2766589f28"
+implementation: 論文はPython 3.10/NumPy 1.24の離散イベント的数値シミュレーションを記載。実GPUサーバーの測定、公開再現実装、実運用デプロイは本文で確認できない。
+last_checked: '2026-10-22'
+worker_completed_at: '2026-10-22T17:00:00+09:00'
+worker_id: scheduled-chat-00
+worker_run_key: 20261022-1658-scheduled-chat-00/r01
+reference_main_sha: f6cadc2f4f7511d9551db1ec35a75d2766589f28
 quality_self_review_passed: true
-quality_self_review_version: "PAPER-QUALITY-GUIDE-2026-10-07"
+quality_self_review_version: PAPER-QUALITY-GUIDE-2026-10-07
 last_audited: null
 audit_version: 0
+references:
+- canonical_id: DOI:10.52202/075280-2020
+  doi: 10.52202/075280-2020
+- canonical_id: DOI:10.1145/3600006.3613165
+  doi: 10.1145/3600006.3613165
+- canonical_id: DOI:10.5555/3600237.3600268
+- canonical_id: arXiv:2211.05102
+- canonical_id: arXiv:2207.00032
+  doi: 10.1109/sc41404.2022.00051
+- canonical_id: arXiv:2303.06865
+- canonical_id: arXiv:2006.02464
+- canonical_id: arXiv:1909.08053
+- canonical_id: arXiv:2211.17192
+- canonical_id: arXiv:2305.05176
+- canonical_id: DOI:10.1109/jiot.2016.2579198
+  doi: 10.1109/jiot.2016.2579198
+- canonical_id: DOI:10.1109/mc.2017.9
+  doi: 10.1109/mc.2017.9
+- canonical_id: DOI:10.1109/jproc.2019.2918951
+  doi: 10.1109/jproc.2019.2918951
+- canonical_id: DOI:10.1145/3093336.3037698
+  doi: 10.1145/3093336.3037698
+- canonical_id: arXiv:2302.11665
+- canonical_id: arXiv:2401.09670
+- canonical_id: DOI:10.1145/3005745.3005750
+  doi: 10.1145/3005745.3005750
+- canonical_id: DOI:10.1145/3341302.3342080
+  doi: 10.1145/3341302.3342080
+- canonical_id: DOI:10.1145/3098822.3098843
+  doi: 10.1145/3098822.3098843
+- canonical_id: DOI:10.1145/2741948.2741964
+  doi: 10.1145/2741948.2741964
+- canonical_id: DOI:10.1145/1519065.1519068
+  doi: 10.1145/1519065.1519068
+- canonical_id: DOI:10.1023/a:1022676722315
+  doi: 10.1023/a:1022676722315
+- canonical_id: DOI:10.1145/2408776.2408794
+  doi: 10.1145/2408776.2408794
+- canonical_id: DOI:10.1038/nature14236
+  doi: 10.1038/nature14236
+- canonical_id: DOI:10.13140/rg.2.2.18893.74727
+  doi: 10.13140/rg.2.2.18893.74727
+- canonical_id: DOI:10.1109/4236.769420
+  doi: 10.1109/4236.769420
+- canonical_id: DOI:10.1109/cloud.2011.42
+  doi: 10.1109/cloud.2011.42
+- canonical_id: DOI:10.1007/978-3-030-60990-0_12
+  doi: 10.1007/978-3-030-60990-0_12
+- canonical_id: arXiv:2408.00741
+- canonical_id: DOI:10.52202/068431-2198
+  doi: 10.52202/068431-2198
+- canonical_id: DOI:10.52202/068431-1269
+  doi: 10.52202/068431-1269
+- canonical_id: DOI:10.1145/2486001.2486014
+  doi: 10.1145/2486001.2486014
+- canonical_id: DOI:10.1145/3230543.3230545
+  doi: 10.1145/3230543.3230545
+references_checked_at: '2026-11-10'
+references_source: crossref-deposited-reference-metadata
+references_total: 57
 ---
 
 # Adaptive Load Balancing for Multi-Tier LLM Inference with Dynamic Model Routing
