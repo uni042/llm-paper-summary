@@ -1,0 +1,157 @@
+{
+  "schema_version": 3,
+  "operation": "precheck_discovery_candidates",
+  "ok": true,
+  "request_id": "libimp-5b83acd47c4ecf2c-pre01",
+  "collector_id": "library-candidate-intake",
+  "run_key": "library-import-5b83acd47c4e",
+  "axis": "library-candidate-intake",
+  "provider": "candidate_id_lookup",
+  "source_url": "identifier://approved-public-apis",
+  "mode": "explicit_identifiers",
+  "identifiers": [
+    "arXiv:2502.00258"
+  ],
+  "reconsider_identifiers": [],
+  "target_unseen": 1,
+  "page_size": null,
+  "pages_fetched": 1,
+  "next_cursor": null,
+  "target_reached": true,
+  "provider_exhausted": true,
+  "max_pages_reached": false,
+  "stop_reason": "EXPLICIT_IDENTIFIERS_PROCESSED",
+  "evaluation_allowed": true,
+  "decision": "READY_FOR_EVALUATION",
+  "snapshot_source_commit": "d6d8f7b9b560cceb0dea15a8eff2a12954f129ce",
+  "raw_search_result_count": 1,
+  "retrieval_duplicate_filtered_count": 0,
+  "represented_paper_match_filtered_count": 0,
+  "rejection_ledger_filtered_count": 0,
+  "intra_batch_duplicate_filtered_count": 0,
+  "unresolved_identity_count": 0,
+  "unseen_result_count": 1,
+  "provider_progress": {
+    "requested_count": 1,
+    "status_counts": {
+      "allowed": 1,
+      "filtered_by_snapshot": 0,
+      "provider_unresolved": 0,
+      "provider_error": 0,
+      "intra_batch_duplicate": 0
+    },
+    "lookup_routes": [
+      "semantic_scholar_batch"
+    ]
+  },
+  "progress_observed_at": "2026-11-10T22:31:37.581363+00:00",
+  "preload_id": null,
+  "preload_seed": false,
+  "preload_cache_used": false,
+  "preload_cached_pages_used": 0,
+  "preload_live_pages_fetched": 0,
+  "preload_source_request_id": null,
+  "candidate_statuses": [
+    {
+      "requested_id": "arXiv:2502.00258",
+      "status": "allowed",
+      "lookup_route": "semantic_scholar_batch"
+    }
+  ],
+  "results": [
+    {
+      "title": "ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs",
+      "source_url": "https://arxiv.org/abs/2502.00258",
+      "year": 2025,
+      "published": "2025-01-31",
+      "venue": "International Conference on Machine Learning",
+      "citation_count": 11,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance in natural language processing tasks, yet their massive size makes serving them inefficient and costly. Semi-structured pruning has emerged as an effective method for model acceleration, but existing approaches are suboptimal because they focus on local, layer-wise optimizations using heuristic rules, failing to leverage global feedback. We present ProxSparse, a learning-based framework for mask selection enabled by regularized optimization. ProxSparse transforms the rigid, non-differentiable mask selection process into a smoother optimization procedure, allowing gradual mask exploration with flexibility. ProxSparse does not involve additional weight updates once the mask is determined. Our extensive evaluations on 7 widely used models show that ProxSparse consistently outperforms previously proposed semi-structured mask selection methods with significant improvement, demonstrating the effectiveness of our learned approach towards semi-structured pruning.",
+      "identifiers": [
+        "SemanticScholar:a964d6d1e2e8c93d04a2b7e6da3d906537d537bc"
+      ],
+      "semantic_scholar_id": "a964d6d1e2e8c93d04a2b7e6da3d906537d537bc",
+      "canonical_id": "arXiv:2502.00258",
+      "arxiv_id": "2502.00258",
+      "doi": "10.48550/arXiv.2502.00258",
+      "authors": [
+        "Hongyi Liu",
+        "R. Saha",
+        "Zhen Jia",
+        "Youngsuk Park",
+        "Jia-Ji Huang",
+        "Shoham Sabach",
+        "Yu-Xiang Wang",
+        "George Karypis"
+      ],
+      "priority": 21,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 0,
+        "prestigious_venue": 10,
+        "citations": 11,
+        "citation_count": 11,
+        "total": 21,
+        "is_fresh": false,
+        "is_recent_cited": false,
+        "freshness_age_days": 648,
+        "matched_prestigious_venue": "International Conference on Machine Learning"
+      }
+    }
+  ],
+  "allowed_records": [
+    {
+      "primary_identity": "id:arXiv:2502.00258",
+      "identity_tokens": [
+        "id:DOI:10.48550/arxiv.2502.00258",
+        "id:SemanticScholar:a964d6d1e2e8c93d04a2b7e6da3d906537d537bc",
+        "id:arXiv:2502.00258",
+        "title:proxsparse regularized learning of semistructured sparsity masks for pretrained llms",
+        "url:https://arxiv.org/abs/2502.00258"
+      ],
+      "record": {
+        "title": "ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs",
+        "source_url": "https://arxiv.org/abs/2502.00258",
+        "year": 2025,
+        "published": "2025-01-31",
+        "venue": "International Conference on Machine Learning",
+        "citation_count": 11,
+        "citation_count_source": "semantic_scholar",
+        "abstract": "Large Language Models (LLMs) have demonstrated exceptional performance in natural language processing tasks, yet their massive size makes serving them inefficient and costly. Semi-structured pruning has emerged as an effective method for model acceleration, but existing approaches are suboptimal because they focus on local, layer-wise optimizations using heuristic rules, failing to leverage global feedback. We present ProxSparse, a learning-based framework for mask selection enabled by regularized optimization. ProxSparse transforms the rigid, non-differentiable mask selection process into a smoother optimization procedure, allowing gradual mask exploration with flexibility. ProxSparse does not involve additional weight updates once the mask is determined. Our extensive evaluations on 7 widely used models show that ProxSparse consistently outperforms previously proposed semi-structured mask selection methods with significant improvement, demonstrating the effectiveness of our learned approach towards semi-structured pruning.",
+        "identifiers": [
+          "SemanticScholar:a964d6d1e2e8c93d04a2b7e6da3d906537d537bc"
+        ],
+        "semantic_scholar_id": "a964d6d1e2e8c93d04a2b7e6da3d906537d537bc",
+        "canonical_id": "arXiv:2502.00258",
+        "arxiv_id": "2502.00258",
+        "doi": "10.48550/arXiv.2502.00258",
+        "authors": [
+          "Hongyi Liu",
+          "R. Saha",
+          "Zhen Jia",
+          "Youngsuk Park",
+          "Jia-Ji Huang",
+          "Shoham Sabach",
+          "Yu-Xiang Wang",
+          "George Karypis"
+        ],
+        "priority": 21,
+        "priority_breakdown": {
+          "policy": "candidate-priority-v2",
+          "freshness": 0,
+          "prestigious_venue": 10,
+          "citations": 11,
+          "citation_count": 11,
+          "total": 21,
+          "is_fresh": false,
+          "is_recent_cited": false,
+          "freshness_age_days": 648,
+          "matched_prestigious_venue": "International Conference on Machine Learning"
+        }
+      }
+    }
+  ],
+  "receipt": "sha256:bb576f1041f6117e2159bd88f0e259f1e4ecca0c80c5d486aaf1df6e986b9451",
+  "next_action": "Evaluate only records in results[] and reference this result_path/receipt from submit_discovery_round. Resolve provider_error and provider_unresolved candidates separately; neither status authorizes removal."
+}
