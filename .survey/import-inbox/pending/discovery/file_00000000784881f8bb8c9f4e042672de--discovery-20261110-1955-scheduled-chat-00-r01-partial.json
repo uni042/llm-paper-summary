@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-1955-scheduled-chat-00/r01",
+  "reference_main_sha": "8d8a2b05805feec9630c8cb1b6429240adfe08d7",
+  "mode": "Discovery",
+  "partial_round": true,
+  "record_count": 1,
+  "records": [
+    {
+      "canonical_id": "arXiv:2604.15764",
+      "title": "When Do Early-Exit Networks Generalize? A PAC-Bayesian Theory of Adaptive Depth",
+      "reason": "適応的深さ・早期退出の汎化理論。推論2–8倍高速化は早期退出一般の背景説明であり本論文の実測高速化ではない。6アーキテクチャ7ベンチマークでPAC-Bayes boundのtightnessを検証するがLLM推論実測は一次要旨にない。",
+      "classification": "borderline",
+      "source_url": "https://arxiv.org/abs/2604.15764",
+      "worklist_rank": 263,
+      "body_check": "primary_abstract_only; body_not_read",
+      "identity_tokens": [
+        "arXiv:2604.15764",
+        "DOI:10.48550/arXiv.2604.15764"
+      ],
+      "first_checked_at": "2026-11-10T19:55:24+09:00",
+      "last_checked_at": "2026-11-10T19:55:24+09:00",
+      "linked_from": []
+    }
+  ],
+  "skipped": [
+    {
+      "canonical_id": "arXiv:2510.17196",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2505.07861",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2508.08289",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.18653/v1/2025.findings-acl.1035",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2404.04759",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2509.17428",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2606.29223",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "SemanticScholar:ea787530a21d09f9cc7db101f900cda209efcf1e",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2309.05210",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "arXiv:2609.10355",
+      "reason": "existing_library_completed_repair; later receipt unverified; avoid duplicate"
+    },
+    {
+      "canonical_id": "DOI:10.1145/3725338",
+      "reason": "completed Library manuscript not found; later receipt unverified; defer"
+    },
+    {
+      "canonical_id": "DOI:10.1109/TPDS.2025.3590014",
+      "reason": "retry_deferred_no_new_evidence; method_chars 553 < 700"
+    },
+    {
+      "canonical_id": "arXiv:2505.11415",
+      "reason": "withdrawn duplicate of arXiv:2412.07067; not counted"
+    }
+  ],
+  "next_rank": 264,
+  "candidate_inventory": 571,
+  "round_complete": false,
+  "identity_uniqueness_global": "not_fully_verified",
+  "returned_research_count": 11,
+  "returned_research_later_receipts_verified": false,
+  "library_global_sha256_verified": false,
+  "next_identity": "SemanticScholar:2250dcb979f60ed25bfe6c7ba3e62c758dd0273a"
+}
