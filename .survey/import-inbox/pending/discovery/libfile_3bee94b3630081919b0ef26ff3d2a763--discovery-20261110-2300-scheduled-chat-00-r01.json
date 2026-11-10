@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "artifact_type": "discovery_round",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-2300-scheduled-chat-00/r01",
+  "reference_main_sha": "0e312b2f336bd4fdc6fb86ebaf59a9ef5d96c69b",
+  "record_count": 10,
+  "records": [
+    {
+      "rank": 274,
+      "canonical_id": "arXiv:2505.02380",
+      "title": "EntroLLM: Entropy Encoded Weight Compression for Efficient Large Language Model Inference on Edge Devices",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2505.02380",
+      "reason_ja": "混合量子化とHuffman符号化で重み保存容量と帯域を削減。SmolLM、Phi-3、Mistralで評価し、Jetson P3450等で推論31.9〜146.6%高速化と著者報告。"
+    },
+    {
+      "rank": 275,
+      "canonical_id": "arXiv:2504.07247",
+      "title": "Resource-efficient Inference with Foundation Model Programs",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2504.07247",
+      "reason_ja": "タスクを複数モデル呼出しのプログラムへ変換し、入力ごとに安価なバックエンドを選ぶポリシーを学習。ストリーミングVQAで最大98%の資源節約と著者報告。"
+    },
+    {
+      "rank": 276,
+      "canonical_id": "arXiv:2410.03440",
+      "title": "Exploring the Benefit of Activation Sparsity in Pre-training",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2410.03440",
+      "reason_ja": "Switchable Sparse-Dense LearningでMoE型疎学習とdense学習を切り替え、事前学習コストを低減。学習済みモデルは疎推論で最大2倍高速と著者報告。"
+    },
+    {
+      "rank": 278,
+      "canonical_id": "arXiv:2506.23431",
+      "title": "Pipelined Decoder for Efficient Context-Aware Text Generation",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2506.23431",
+      "reason_ja": "生成系列を複数部分列に分割し、一定遅延で各部分列の生成を開始して並列化。QA、要約、キーフレーズ生成で品質を概ね維持しつつ高速化を報告。"
+    },
+    {
+      "rank": 279,
+      "canonical_id": "arXiv:2610.09051",
+      "title": "A Self-Pruning Transformer: Extreme KV-Cache Compression with Universal Attention",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2610.09051",
+      "reason_ja": "RoPEとSoftmaxを保持する複合減衰機構を学習し、寄与の低いKVを適応的に除去。自然言語等で10倍圧縮、16k長文で25倍圧縮と著者報告。"
+    },
+    {
+      "rank": 280,
+      "canonical_id": "arXiv:2512.23049",
+      "title": "Accelerating Language Model Workflows with Prompt Choreography",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2512.23049",
+      "reason_ja": "メッセージの再順序付き参照を許すグローバルKVキャッシュを用い、並列LLM呼出しと重複prefill削減を実現。TTFT 2.0〜6.2倍、特定ワークフローでE2E 2.2倍超と報告。"
+    },
+    {
+      "rank": 281,
+      "canonical_id": "arXiv:2609.32961",
+      "title": "Beyond Token Savings: A Systematic Study of Context Compression in LLM Agents",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2609.32961",
+      "reason_ja": "約3.5万エージェント実行で圧縮方法・発火条件・深度を比較。トークンを約3分の1にしても実行時間が20〜80%増える条件を確認。コスト・遅延評価に直接関連。"
+    },
+    {
+      "rank": 282,
+      "canonical_id": "arXiv:2108.02347",
+      "title": "FMMformer: Efficient and Flexible Transformer via Decomposed Near-field and Far-field Attention",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2108.02347",
+      "reason_ja": "近傍を帯行列、遠方を低ランク行列で近似し、系列長に対する注意計算とメモリを線形化。Long Range Arenaで平均60.74%対通常Transformer58.70%と著者報告。"
+    },
+    {
+      "rank": 287,
+      "canonical_id": "arXiv:2507.00797",
+      "title": "VEDA: Efficient LLM Generation Through Voting-based KV Cache Eviction and Dataflow-flexible Accelerator",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2507.00797",
+      "reason_ja": "投票型KV削除と可変データフロー、再構成可能PE配列を組み合わせたエッジLLM推論アクセラレータ。遅延・ハードウェア複雑度の改善を著者報告。"
+    },
+    {
+      "rank": 288,
+      "canonical_id": "arXiv:2606.16825",
+      "title": "Tying the Loop -- Tied Expert Layers in Mixture-of-Experts Language Models",
+      "classification": "accept",
+      "source_url": "https://arxiv.org/abs/2606.16825",
+      "reason_ja": "連続Transformer層でexpert重みを共有しつつroutingとattentionを層別維持。OLMoE/Qwen3/DeepSeek型で品質を概ね維持しメモリを約半減と著者報告。"
+    }
+  ],
+  "skips": [
+    {
+      "rank": 277,
+      "reason": "primary_abstract_unavailable"
+    },
+    {
+      "rank": 283,
+      "reason": "publisher_abstract_unavailable"
+    },
+    {
+      "rank": 284,
+      "reason": "primary_abstract_unavailable"
+    },
+    {
+      "rank": 285,
+      "reason": "not_yet_checked"
+    },
+    {
+      "rank": 286,
+      "reason": "not_yet_checked"
+    }
+  ],
+  "next_rank": 289,
+  "verification_status": "pending_library_retrieval"
+}
