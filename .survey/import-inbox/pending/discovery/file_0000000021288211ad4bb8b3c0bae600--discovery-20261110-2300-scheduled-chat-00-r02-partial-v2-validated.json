@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "artifact_type": "discovery_run",
+  "worker_id": "scheduled-chat-00",
+  "scheduled_slot": "00",
+  "run_key": "20261110-2300-scheduled-chat-00/r02",
+  "reference_main_sha": "0e312b2f336bd4fdc6fb86ebaf59a9ef5d96c69b",
+  "candidate_inventory": 571,
+  "record_count": 1,
+  "records": [
+    {
+      "classification": "accept",
+      "canonical_id": "arXiv:2502.00258",
+      "identity_tokens": [
+        "arXiv:2502.00258",
+        "DOI:10.48550/arXiv.2502.00258"
+      ],
+      "title": "ProxSparse: Regularized Learning of Semi-Structured Sparsity Masks for Pretrained LLMs",
+      "reason": "正則化最適化により非微分な半構造化疎マスク選択を滑らかな探索問題に変換。7モデルで従来マスク選択法より優れると著者報告。マスク決定後の追加重み更新は不要。",
+      "source_url": "https://arxiv.org/abs/2502.00258",
+      "body_check": "abstract_screen_only; body_not_read",
+      "worklist_rank": 291,
+      "linked_from": [],
+      "first_checked_at": "2026-11-10T23:08:10+09:00",
+      "last_checked_at": "2026-11-10T23:08:10+09:00"
+    }
+  ],
+  "round_complete": false,
+  "source_artifact_sha256": "3d62d6677bd8c604ba14276349f402acf4103c85d44afd64efd6dfb1fd9bcc45",
+  "correction_reason": "Normalize Library discovery artifact v1 to v2 per github-import-procedure; source bytes preserved in legacy",
+  "skipped": [
+    {
+      "rank": 289,
+      "reason": "primary_abstract_unavailable"
+    },
+    {
+      "rank": 290,
+      "reason": "not_yet_checked"
+    }
+  ],
+  "next_rank": 290,
+  "identity_uniqueness_global": "not_fully_verified; GitHub import inbox authoritative",
+  "source_check_time_note": "Original v1 file has no per-record check timestamps; first_checked_at and last_checked_at use the original Library file modified_at as documented fallback, not a verified first read time."
+}
