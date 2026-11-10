@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "operation": "submit_discovery_round",
+  "candidates": [
+    {
+      "title": "AURAL: Adaptive Latent Reasoning with Joint Chunk for Speech Language Models",
+      "source_url": "https://arxiv.org/abs/2610.01560",
+      "year": 2026,
+      "published": "2026-10-01",
+      "venue": null,
+      "citation_count": 4,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Model intelligence and fast response jointly shape the quality of interaction with speech language models, yet remain difficult to achieve together. Explicit chain-of-thought (CoT) improves reasoning and audio understanding, but generating intermediate reasoning tokens delays responses. Describing fine-grained acoustic cues further lengthens CoT and increases latency. Latent reasoning can reduce this overhead, yet existing methods often trail CoT and remain limited by single-path supervision and reasoning budgets that do not adapt to problem difficulty. We introduce AURAL, which models a distribution over multiple plausible reasoning continuations in latent space and jointly predicts chunks of future states to reduce sequential forward passes and reasoning latency. To provide initial supervision for latent reasoning, we construct AuralReason-683K: 683K bilingual speech utterances (about 1,000 hours) with concise CoT for emotion recognition, empathetic dialogue, and general reasoning. AURAL-RL then explores beyond these traces, rewarding concise reasoning that yields high-quality answers and adapting reasoning effort to each problem. Across two backbones, AURAL-RL achieves performance comparable to CoT-RL, with larger gains over the respective supervised checkpoints on most metrics. Analysis further shows that harder questions elicit more latent reasoning steps. On Qwen2.5-Omni, it reduces time to the first answer token by 11.8x, from 1.22 to 0.10 s, versus 0.05 s for direct answering.",
+      "identifiers": [
+        "SemanticScholar:7d8616b85607a0dced00976a49f8250432de9dcb"
+      ],
+      "semantic_scholar_id": "7d8616b85607a0dced00976a49f8250432de9dcb",
+      "canonical_id": "arXiv:2610.01560",
+      "arxiv_id": "2610.01560",
+      "authors": [
+        "Yu-Xiang Wang",
+        "Kun-Yu Feng",
+        "Yuan-Cheng Wang",
+        "Zihang Liu",
+        "Sheng-Bo Cai",
+        "Qin-Ke Ni",
+        "Wan Lin",
+        "Tao Feng",
+        "Ying Shen",
+        "Ming-Hao Hsu",
+        "Zhi-Xian Zhao",
+        "Li-Qiang Zhang",
+        "T.-K. Sun",
+        "Steve Yves",
+        "Zhi-Zheng Wu"
+      ],
+      "priority": 104,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 4,
+        "citation_count": 4,
+        "total": 104,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 40,
+        "matched_prestigious_venue": null
+      },
+      "reason": "潜在推論の将来状態をチャンク予測して逐次forwardを削減。Qwen2.5-Omniで初回回答トークン1.22秒から0.10秒、11.8倍短縮と報告。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "DUET-VLM: Dual stage Unified Efficient Token reduction for VLM Training and Inference",
+      "source_url": "https://arxiv.org/abs/2602.18846",
+      "year": 2026,
+      "published": "2026-02-21",
+      "venue": "Computer Vision and Pattern Recognition",
+      "citation_count": 2,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Vision-language models (VLMs) have achieved remarkable multimodal understanding and reasoning capabilities, yet remain computationally expensive due to dense visual tokenization. Existing efficiency approaches either merge redundant visual tokens or drop them progressively in language backbone, often trading accuracy for speed. In this work, we propose DUET-VLM, a versatile plug-and-play dual compression framework that consists of (a) vision-only redundancy aware compression of vision encoder's output into information-preserving tokens, followed by (b) layer-wise, salient text-guided dropping of visual tokens within the language backbone to progressively prune less informative tokens. This coordinated token management enables aggressive compression while retaining critical semantics. On LLaVA-1.5-7B, our approach maintains over 99% of baseline accuracy with 67% fewer tokens, and still retains>97% even at 89% reduction. With this dual-stage compression during training, it achieves 99.7% accuracy at 67% and 97.6% at 89%, surpassing prior SoTA visual token reduction methods across multiple benchmarks. When integrated into Video-LLaVA-7B, it even surpasses the baseline -- achieving>100% accuracy with a substantial 53.1% token reduction and retaining 97.6% accuracy under an extreme 93.4% setting. These results highlight end-to-end training with DUET-VLM, enabling robust adaptation to reduced visual (image/video) input without sacrificing accuracy, producing compact yet semantically rich representations within the same computational budget. Our code is available at https://github.com/AMD-AGI/DUET-VLM.",
+      "identifiers": [
+        "SemanticScholar:74e761e84ff67a06ee13533fb866ea0f429a29ed"
+      ],
+      "semantic_scholar_id": "74e761e84ff67a06ee13533fb866ea0f429a29ed",
+      "canonical_id": "arXiv:2602.18846",
+      "arxiv_id": "2602.18846",
+      "doi": "10.48550/arXiv.2602.18846",
+      "authors": [
+        "Aditya Singh",
+        "Hitesh Kandala",
+        "P. Brahma",
+        "Zi-Cheng Liu",
+        "E. Barsoum"
+      ],
+      "priority": 102,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 100,
+        "prestigious_venue": 0,
+        "citations": 2,
+        "citation_count": 2,
+        "total": 102,
+        "is_fresh": true,
+        "is_recent_cited": true,
+        "freshness_age_days": 262,
+        "matched_prestigious_venue": null
+      },
+      "reason": "視覚encoder側の冗長トークン統合とLLM内部のテキスト誘導枝刈りを組合せる。LLaVA-1.5-7Bで視覚トークン67%減でも基準精度99%以上を保持と報告。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Dynamic Scheduling for AI Accelerators via TISA",
+      "source_url": "https://doi.org/10.1109/ISCA66397.2026.00174",
+      "year": 2026,
+      "published": "2026-06-01",
+      "venue": "International Symposium on Computer Architecture",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Modern AI accelerators suffer from low utilization because static compile-time schedules cannot adapt to runtime variability or coordinate heterogeneous units effectively. This paper presents a semantics-aware dynamic tile scheduling framework that restores the missing runtime semantics required for adaptive execution. It co-designs three synergistic components, including a semantics-preserving compiler that maintains operator boundaries and dependency types through lowering, a tile-level instruction set (TISA) that encodes typed dependencies, resource intents, and tile-level memory ranges, and a conflictaware runtime scheduler that uses these semantics to dynamically reorder tiles, resolve contention, and overlap execution across tensor, vector, and DMA units. This design unifies software semantics and hardware scheduling, enabling cross-operator and cross-iteration parallelism beyond static approaches. Across ResNet50, BERT, GPT-J, and LLaMA2, our work achieves 1.52-1.92× speedups over the baseline, delivering 1.14-1.63× additional improvement over strong static tile-level pipeline scheduling; on FlashAttention-3 (head dim 128), it improves hardware utilization by 26.4% versus the state-of-the-art H100 implementation. Ablation studies further show that semantics preservation alone yields $1.2 \\times$ gains, confirming the independent value of restoring scheduling information to runtime.",
+      "identifiers": [
+        "SemanticScholar:2700eb792bfdeeee75f494260fbc581656d69006"
+      ],
+      "semantic_scholar_id": "2700eb792bfdeeee75f494260fbc581656d69006",
+      "doi": "10.1109/ISCA66397.2026.00174",
+      "canonical_id": "DOI:10.1109/ISCA66397.2026.00174",
+      "authors": [
+        "Guanghui Song",
+        "Xiaoqiang Dan",
+        "Chengke Wang",
+        "Fei Liu",
+        "Wen-Yuan Lv",
+        "Zhongzhou Jiang",
+        "Jian-Jian Guan",
+        "Teng Lu",
+        "Lin Tao",
+        "Cheng Li",
+        "Weixing Pan",
+        "Wei Huang",
+        "Zirong Shen",
+        "Yi Yang",
+        "Hui Liu",
+        "Jie Zhao"
+      ],
+      "priority": 20,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 10,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 20,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 162,
+        "matched_prestigious_venue": "International Symposium on Computer Architecture"
+      },
+      "reason": "演算依存関係とメモリ範囲を保持したタイル単位の動的スケジューリング。GPT-JやLLaMA2を含む評価で1.52–1.92倍高速化と報告。会議論文要旨を確認。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "The DMA Streaming Framework: Kernel-Level Buffer Orchestration for High-Performance AI Data Paths",
+      "source_url": "https://arxiv.org/abs/2603.10030",
+      "year": 2026,
+      "published": "2026-02-26",
+      "venue": "arXiv.org",
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "AI transport libraries move bytes efficiently, but they commonly assume that buffers are already correctly allocated, placed, shared, registered, and safe under completion and teardown pressure. This paper presents dmaplane, a Linux kernel module that makes this missing layer explicit as buffer orchestration. dmaplane exposes a stable kernel UAPI via /dev/dmaplane and composes ring-based command channels, DMA buffer lifecycle management, dma-buf export for cross-device sharing, a kernel-space RDMA engine, NUMA-aware allocation and verification, credit-based flow control, low-overhead observability, and GPU memory integration via PCIe BAR pinning. We evaluate orchestration sensitivity with measurements of NUMA cross-node penalties at DRAM scale, completion-safe flow control under sustained RDMA load, and GPU BAR mapping tiers versus cudaMemcpy. We also demonstrate end-to-end disaggregated inference by transferring KV-cache chunks between two machines using RDMA WRITE WITH IMMEDIATE and reconstructing tensor views on the receiver. RDMA measurements use Soft-RoCE; we distinguish measured results from provider-independent properties by construction.",
+      "identifiers": [
+        "SemanticScholar:b0e3beb2db225170a5c2fda79710e5d20238195d"
+      ],
+      "semantic_scholar_id": "b0e3beb2db225170a5c2fda79710e5d20238195d",
+      "canonical_id": "arXiv:2603.10030",
+      "arxiv_id": "2603.10030",
+      "doi": "10.48550/arXiv.2603.10030",
+      "authors": [
+        "Marco Graziano"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 257,
+        "matched_prestigious_venue": null
+      },
+      "reason": "LinuxカーネルのDMA buffer/RDMA/NUMA統合基盤dmaplane。KVキャッシュをRDMAで別ホストへ転送する分離推論を実演。Soft-RoCE計測と設計上の保証を区別している。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    },
+    {
+      "title": "Spectral-MoE: Heterogeneous Per-Layer Expert Utilization in Dense-to-MoE Conversion",
+      "source_url": "https://arxiv.org/abs/2610.19232",
+      "year": 2026,
+      "published": "2026-10-13",
+      "venue": null,
+      "citation_count": 0,
+      "citation_count_source": "semantic_scholar",
+      "abstract": "Large language models impose substantial memory demands and arithmetic costs during inference. Dense-to-mixture-of-experts (MoE) conversion is a model optimization technique that aims to reduce these arithmetic costs. Dense-to-MoE conversion partitions pretrained feed-forward network (FFN) neurons into experts and selects a subset for each token. Leading methods fall into two categories: analytic methods produce a converted model quickly using heuristics, while learning methods produce a model much more slowly by optimizing via gradients. Both approaches, however, fix the same active expert count, or\"utilization,\"at every layer. We introduce Spectral-MoE, which learns to allocate a utilization budget heterogeneously across layers. Its name draws a metaphor between separating a dense FFN into experts and separating a light beam into its spectrum. Spectral-MoE consists of two distinct approaches: a static approach that uses a single per-layer scalar which is shared across tokens, and a dynamic approach which emits a per-token schedule. We demonstrate that both allocators improve performance over uniform on both the analytic-based and learning-based SOTA dense-to-MoE methods. At 25% FFN utilization, dynamic allocation reduces WikiText-2 perplexity relative to uniform by 1.04, 2.96, and 2.71 points on the learned base for Llama-2-7B, Llama-3-8B, and Qwen2.5-7B, respectively. The corresponding reductions on the analytic base are 2.45, 6.26, and 2.17 points. On the learned base, dynamic allocation improves six-task mean accuracy over uniform by an average of 1.5, 4.2, and 3.6 percentage points across the three models at FFN utilizations of 12.5%, 25%, and 50%, respectively. These results establish per-layer expert utilization as a novel optimization axis in dense-to-MoE conversion.",
+      "identifiers": [
+        "SemanticScholar:14fa858cdba951990cda677861a341af8d39dab7"
+      ],
+      "semantic_scholar_id": "14fa858cdba951990cda677861a341af8d39dab7",
+      "canonical_id": "arXiv:2610.19232",
+      "arxiv_id": "2610.19232",
+      "authors": [
+        "Zachary Broveak",
+        "Christian Kubicka",
+        "Thierry Tambe"
+      ],
+      "priority": 10,
+      "priority_breakdown": {
+        "policy": "candidate-priority-v2",
+        "freshness": 10,
+        "prestigious_venue": 0,
+        "citations": 0,
+        "citation_count": 0,
+        "total": 10,
+        "is_fresh": true,
+        "is_recent_cited": false,
+        "freshness_age_days": 28,
+        "matched_prestigious_venue": null
+      },
+      "reason": "dense FFNのMoE変換時、層ごと・トークンごとの活性expert予算を配分。25% FFN利用率でLlama2/3とQwen2.5のperplexityを一様配分より改善。",
+      "library_body_check": "primary_abstract_only; body_not_read",
+      "library_source_run_file": null
+    }
+  ],
+  "discovery_stats": {
+    "run_key": "library-import-52edc47acd8a",
+    "round": "libimp-52edc47acd8ae3d4-pre01",
+    "axis": "library-candidate-intake",
+    "trigger": "explicit_user_request",
+    "candidate_count": 7,
+    "round_submission_count": 2,
+    "round_submission_index": 1,
+    "query_summary": "ChatGPT Libraryで本文確認・分類済みのaccept候補をID照合して取り込む。"
+  },
+  "discovery_precheck": {
+    "request_id": "libimp-52edc47acd8ae3d4-pre01",
+    "result_path": ".survey/work-queue/discovery-precheck/results/libimp-52edc47acd8ae3d4-pre01.json",
+    "receipt": "sha256:7888021b6b8793893c14d4dd86b78215f977616b2efeec2852690d4469d9942f"
+  },
+  "user_directed_request": {
+    "request_id": "library-import-52edc47acd8a",
+    "summary": "ChatGPT Libraryに保存済みのDiscovery判定をGitHub正規候補へ取り込む。"
+  }
+}
